@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e38803c8cbe8b9bdee9a9365127d5f7e7866f7d
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971865"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207143"
 ---
 # <a name="controls-by-function"></a>Controles por função
 
@@ -551,7 +551,7 @@ Veja Elemento de mídia.
 
 ### <a name="navigationview"></a>NavigationView
 
-Um contêiner adaptável e o modelo de navegação flexível que implementa o painel de navegação esquerdo, a navegação superior e o padrão das guias.
+Um contêiner adaptável e o modelo de navegação flexível que implementa o painel de navegação à esquerda, a navegação superior e o padrão das guias.
 
 Referência: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 

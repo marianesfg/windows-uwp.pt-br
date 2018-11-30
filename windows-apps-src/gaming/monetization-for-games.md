@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, monetização
 ms.localizationpriority: medium
 ms.openlocfilehash: 91545116b0d7eae107021cc52ee05d299257518c
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965403"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207416"
 ---
 #  <a name="monetization-for-games"></a>Monetização para jogos
 
@@ -102,7 +102,7 @@ Para criar um pacote que possa ser carregado na Loja:
 2. Na página __Visão geral do painel__ ou __Todos os aplicativos__, clique no aplicativo com o qual você deseja trabalhar. Se você ainda não tiver criado um envio de aplicativo, clique em __Criar um novo aplicativo__ e reserve um nome.
 3. Na página __Visão geral do aplicativo__, clique em __Iniciar seu envio__.
 4. Configure esse novo envio. Na página de envio:
-    * Clique em __Preço e disponibilidade__. Na seção __visibilidade__ , escolha '__Ocultar este aplicativo e evitar a aquisição...__' para garantir que apenas a equipe de desenvolvimento tem acesso ao jogo. Para saber mais detalhes, vá até [Distribuição e visibilidade](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility).
+    * Clique em __Preço e disponibilidade__. Na seção __visibilidade__ , escolha '__Ocultar este aplicativo e evitar a aquisição...__"para garantir que apenas a equipe de desenvolvimento tem acesso ao jogo. Para saber mais detalhes, vá até [Distribuição e visibilidade](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility).
     * Clique em __Propriedades__. Na seção __Categoria e subcategoria__, escolha __Jogos__ e uma subcategoria indicada para o jogo.
     * Clique em __Age ratings__. Preencha o questionário com precisão.
     * Clique em __Pacotes__. Carregue o pacote do jogo criado na etapa anterior.

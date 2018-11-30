@@ -7,11 +7,11 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 444243bdb1d50146ba54af4f1417103566f97f93
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964495"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207475"
 ---
 # <a name="app-submissions"></a>Envios de aplicativos
 
@@ -23,7 +23,7 @@ Você pode iniciar o envio quando seu aplicativo estiver completo e pronto para 
 > [!NOTE]
 > Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) ativa no [Partner Center](https://partner.microsoft.com/dashboard) para enviar aplicativos na Microsoft Store.
 
-Depois que o aplicativo for publicado, você pode publicar uma versão atualizada criando outro envio no Partner Center. Criar um novo envio permite fazer e publicar quaisquer mudanças necessárias, caso você esteja carregando novos pacotes ou apenas alterando detalhes, como o preço ou a categoria. Para criar um novo envio para um aplicativo publicado, clique em **Atualizar** ao lado do envio mais recente mostrado na página de **Visão geral** . Você também pode [Remover um aplicativo da loja](guidance-for-app-package-management.md#removing-an-app-from-the-store) se você precisar fazer isso (e, em seguida, torná-lo disponível novamente mais tarde, se você quiser).
+Depois que o aplicativo for publicado, você pode publicar uma versão atualizada criando outro envio no Partner Center. Criar um novo envio permite fazer e publicar quaisquer mudanças necessárias, caso você esteja carregando novos pacotes ou apenas alterando detalhes, como o preço ou a categoria. Para criar um novo envio para um aplicativo publicado, clique em **Atualizar** ao lado do envio mais recente mostrado na página de **Visão geral** . Você também pode [Remover um aplicativo da loja](guidance-for-app-package-management.md#removing-an-app-from-the-store) se você precisar fazer isso (e, em seguida, disponibilizá-lo novamente mais tarde, se você quiser).
 
 > [!NOTE]
 > Esta seção da documentação descreve como criar um envio de aplicativo no Partner Center. Opcionalmente, você poderá usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de apps.
@@ -35,7 +35,7 @@ Depois que o aplicativo for publicado, você pode publicar uma versão atualizad
 
 Aqui estão os detalhes que você pode fornecer quando for criar um envio de aplicativo, com links para mais informações.
 
-Os itens que você será solicitado a fornecer ou especificar são indicados abaixo. Algumas áreas são opcionais ou têm valores padrão fornecidos que podem ser alterados conforme desejar. Você não precisa trabalhar com essas seções na ordem listados aqui.
+Os itens que você será solicitado a fornecer ou especificar são indicados abaixo. Algumas áreas são opcionais ou têm valores padrão fornecidos que podem ser alterados conforme desejar. Você não precisa trabalhar com essas seções na ordem listada aqui.
 
 ### <a name="pricing-and-availability-page"></a>Página de preços e disponibilidade
 | Nome do campo                    | Observações                                       | Para obter mais informações                                                             |
@@ -99,7 +99,7 @@ Você precisará de todas as informações obrigatórias para pelo menos um dos 
 | **Imagem do Windows 10 e Xbox (16:9 Arte de super-herói)**     | Recomendações        | [Windows 10 e Xbox imagem (16:9 arte de super-herói)
 ] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
 | **Imagens do Xbox**     | Necessário para a exibição correta se você publicar no Xbox        | [Imagens do Xbox
-] (aplicativo capturas de tela e images.md #-imagens do xbox) |
+] (aplicativo capturas de tela e images.md #xbox-imagens) |
 | **Campos complementares**  | Opcional                                    | [Campos complementares](create-app-store-listings.md#supplemental-fields) 
 | **Termos de pesquisa**              | Opcional                                    | [Termos de pesquisa](create-app-store-listings.md#search-terms)         |
 | **Informações sobre direitos autorais e marcas registradas** | Opcional                                 | [Informações sobre direitos autorais e marcas registradas](create-app-store-listings.md#copyright-and-trademark-info) |

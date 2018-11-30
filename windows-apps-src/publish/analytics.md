@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, uwp, análises, relatórios, painel, aplicativos, dados, métricas
 ms.localizationpriority: medium
 ms.openlocfilehash: f6a6d79745ec98af2c7f562297092eea3feda659
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964565"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8211150"
 ---
 # <a name="analyze-app-performance"></a>Analisar o desempenho do aplicativo
 
 Você pode visualizar análises detalhadas de seus aplicativos no [Partner Center](https://partner.microsoft.com/dashboard). Estatísticas e gráficos permitem que você saiba como está andamento de seus aplicativos, desde quantos clientes você conseguiu até como eles estão usando seu aplicativo e o que eles têm a dizer sobre ele. Você também pode encontrar métricas sobre a integridade do aplicativo, o uso de anúncios e muito mais.
 
-Você pode exibir relatórios analíticos diretamente no Partner Center ou [baixar os relatórios necessários](download-analytic-reports.md) para analisar os dados offline. Também fornecemos várias maneiras para você para [acessar seus dados analíticos fora do Partner Center](#outside).
+Você pode exibir relatórios analíticos diretamente no Partner Center ou [baixar os relatórios necessários](download-analytic-reports.md) para analisar os dados offline. Nós também fornecemos várias maneiras para você para [acessar seus dados analíticos fora do Partner Center](#outside).
 
 ## <a name="view-key-analytics-for-all-your-apps"></a>Exibir análises chave para todos os aplicativos
 
