@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6954f935440f75a728c3f3601ade884bbee7b6bc
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969199"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207643"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>Criar um aplicativo "Hello world" em C++ c++ /CX
 
@@ -25,7 +25,7 @@ Com o Microsoft Visual Studio2017, você pode usar C++ c++ /CX para desenvolver 
 
 ## <a name="before-you-start"></a>Antes de começar
 
--   Para concluir este tutorial, você deve usar o Visual StudioCommunity 2017, ou uma das versões que não são da comunidade do Visual Studio2017, em um computador que está executando o Windows 10. Para baixá-los, veja [Obter as ferramentas](http://go.microsoft.com/fwlink/p/?LinkId=532666).
+-   Para concluir este tutorial, você deve usar Visual StudioCommunity 2017, ou uma das versões que não são da comunidade do Visual Studio2017, em um computador que esteja executando o Windows 10. Para baixá-los, veja [Obter as ferramentas](http://go.microsoft.com/fwlink/p/?LinkId=532666).
 -   Presumimos que você tenha uma compreensão básica de C++ c++ /CX, XAML e os conceitos na [Visão geral de XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595).
 -   Pressupomos que você esteja usando o layout de janela padrão no Visual Studio. Para redefinir o layout padrão, na barra de menus, escolha **Janela** > **Redefinir Layout da Janela**.
 
@@ -117,7 +117,7 @@ Se você examinar o código em App.xaml.h, App.xaml.cpp no projeto compartilhado
 
 **Classes ref**
 
-Quase todas as classes do Windows Runtime, o que inclui todos os tipos na API do Windows (controles XAML, as páginas em seu aplicativo, a própria classe App, todos os objetos de dispositivo e de rede, todos os tipos de contêineres) são declaradas como uma **classe ref **. (Alguns tipos do Windows são **classe de valor** ou **estrutura de valor**). Uma classe ref é consumível de qualquer linguagem. No C++ c++ /CX, o tempo de vida desses tipos é regido pelos referência automática de referências (não coleta de lixo) para que você nunca exclui explicitamente esses objetos. Você também pode criar suas próprias classes ref.
+Quase todas as classes do Windows Runtime, o que inclui todos os tipos na API do Windows (controles XAML, as páginas em seu aplicativo, a própria classe App, todos os objetos de dispositivo e de rede, todos os tipos de contêineres) são declaradas como uma **classe ref **. (Alguns tipos do Windows são **classe de valor** ou **estrutura de valor**). Uma classe ref é consumível de qualquer linguagem. No C++ c++ /CX, o tempo de vida desses tipos é controlado por referência automática de referências (não coleta de lixo) para que você nunca exclui explicitamente esses objetos. Você também pode criar suas próprias classes ref.
 
 ```cpp
 namespace HelloWorld
@@ -307,7 +307,7 @@ No aplicativo, você pode digitar no [**TextBox**](https://msdn.microsoft.com/li
 
 Qual tema você deve usar? Fica a seu critério. Em nossa perspectiva, para aplicativos que exibem sobretudo imagens ou vídeo, recomendamos o uso do tema escuro. Já para aplicativos que contêm muito texto, recomendamos o uso do tema claro. Se você estiver usando um esquema de cores personalizado, use o tema que combina melhor com a aparência do seu aplicativo. No restante deste tutorial, usamos o tema claro nas capturas de tela.
 
-**Observação**o tema é aplicado quando o aplicativo é iniciado e não pode ser alterado enquanto o aplicativo estiver em execução.
+**Observação**o tema é aplicado quando o aplicativo é iniciado e não pode ser alterado enquanto o aplicativo é executado.
 
 ### <a name="using-system-styles"></a>Usando estilos do sistema
 

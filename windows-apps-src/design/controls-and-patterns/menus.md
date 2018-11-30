@@ -14,11 +14,11 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 9edf7bcb2ad76ed02887dfffc3e72d0d47f5aa1a
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971444"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8201300"
 ---
 # <a name="menus-and-context-menus"></a>Menus e menus de contexto
 
@@ -44,7 +44,7 @@ Menus e menus de contexto servem para organizar comandos; Para exibir conteúdo 
 
 Para mostrar um menu em um submenu anexado a um elemento de interface do usuário na tela, use o controle MenuFlyout para hospedar seus itens de menu. Você pode chamar um submenu de menu como um menu regular ou como um menu de contexto. Um submenu de menu hospeda um menu de nível superior único (e submenus opcionais).
 
-Para mostrar um conjunto de vários menus de nível superior em uma linha horizontal, use uma barra de menu. Você normalmente posicionar a barra de menu na parte superior da janela do aplicativo.
+Para mostrar um conjunto de vários menus de nível superior em uma linha horizontal, use uma barra de menu. Você normalmente posiciona a barra de menu na parte superior da janela do aplicativo.
 
 ### <a name="menubar-vs-commandbar"></a>Barra de menus versus CommandBar
 
@@ -70,14 +70,14 @@ Você também pode usar uma barra de menus em conjunto com um CommandBar. Use a 
 
 ## <a name="menus-vs-context-menus"></a>Menus x menus de contexto
 
-Menus e menus de contexto são semelhantes a aparência e o que eles podem conter. Na verdade, você pode usar o mesmo controle, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para criá-los. A diferença é como você permitir que o usuário acessá-lo.
+Menus e menus de contexto são semelhantes em termos de aparência e o que eles podem conter. Na verdade, você pode usar o mesmo controle, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para criá-los. A diferença é como você permitir que o usuário acessá-lo.
 
 Quando você deve usar um menu ou um menu de contexto?
 
 - Se o elemento host for um botão ou outro elemento de comando cuja função principal é apresentar comandos adicionais, use um menu.
 - Se o elemento host for outro tipo de elemento que tenha outra finalidade principal (como apresentar texto ou imagem), use um menu de contexto.
 
-Por exemplo, use um menu em um botão para fornecer a filtragem e opções para obter uma lista de classificação. Nesse cenário, a principal finalidade do controle de botão é fornecer acesso a um menu.
+Por exemplo, use um menu em um botão para fornecer filtragem e opções para obter uma lista de classificação. Nesse cenário, a principal finalidade do controle de botão é fornecer acesso a um menu.
 
 ![Exemplo de menu no Mail](images/Mail_Menu.png)
 
@@ -90,7 +90,7 @@ Se você quiser adicionar comandos (como recortar, copiar e colar) a um elemento
 - Têm um único ponto de entrada (um menu Arquivo na parte superior da tela, por exemplo) que sempre é exibido.
 - Geralmente são ligados a um botão ou um item de menu pai.
 - São invocados por clique com o botão esquerdo (ou uma ação equivalente, como tocar com o dedo).
-- São associados a um elemento por meio de suas propriedades de [submenu](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) ou [Flyoutbase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) ou agrupadas em uma barra de menu na parte superior da janela do aplicativo.
+- São associados a um elemento por meio de suas propriedades de [submenu](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) ou [Flyoutbase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) ou agrupados em uma barra de menu na parte superior da janela do aplicativo.
 
 ### <a name="context-menus"></a>Menus de contexto
 
@@ -206,7 +206,7 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 }
 ````
 
-### <a name="light-dismiss"></a>Ignorar
+### <a name="light-dismiss"></a>Ignorar rapidamente
 
 Os controles light dismiss, como menus, menus de contexto e outros submenus, prendem o foco do teclado ou gamepad dentro da interface do usuário transitória até serem ignorados. Para fornecer uma indicação visual para esse comportamento, os controles light dismiss no Xbox desenharão uma sobreposição que esmaece a visibilidade da interface do usuário fora do escopo. Esse comportamento pode ser modificado com a propriedade [LightDismissOverlayMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx). Por padrão, as interfaces do usuário transitórias desenham a sobreposição de ignorar no Xbox (**Automático**), mas não em outras famílias de dispositivos, mas os aplicativos podem optar por forçar a sobreposição como sempre **Ativada** ou **Desativada**.
 
@@ -223,7 +223,7 @@ Você pode usar os mesmos elementos para criar menus em uma barra de menu como u
 ![Exemplo de uma barra de menu](images/menu-bar-submenu.png)
 
 > [!NOTE]
-> Este exemplo mostra como somente criar a estrutura de interface do usuário, mas não mostrar a implementação de qualquer um dos comandos.
+> Este exemplo mostra apenas como criar a estrutura de interface do usuário, mas não mostrar a implementação de qualquer um dos comandos.
 
 ```xaml
 <MenuBar>

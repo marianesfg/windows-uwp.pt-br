@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9940367054ae8771355012492434e12aa97d43ad
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971005"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8202273"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Processar quadros de mídia com o MediaFrameReader
 
@@ -48,7 +48,7 @@ Muitos aplicativos que processam quadros de mídia precisam obter quadros de vá
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-Você também pode criar um [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) usando [**deviceinformation. Createwatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) e o valor retornado do [**mediaframesourcegroup. Getdeviceselector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) para receber notificações quando a origem de quadro disponíveis grupos no dispositivo mudar, por exemplo, quando uma câmera externa é conectada. Para obter mais informações, consulte [**Enumerar dispositivos**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
+Você também pode criar um [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) usando [**deviceinformation. Createwatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) e o valor retornado do [**mediaframesourcegroup. Getdeviceselector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) para receber notificações quando a fonte de quadro disponíveis grupos no dispositivo mudar, por exemplo, quando uma câmera externa é conectada. Para obter mais informações, consulte [**Enumerar dispositivos**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
 
 Um [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) tem uma coleção de objetos [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) que descrevem as origens de quadro incluídas no grupo. Depois de recuperar os grupos de origens de quadro disponíveis no dispositivo, você pode selecionar o grupo que expõe as origens nas quais você está interessado.
 

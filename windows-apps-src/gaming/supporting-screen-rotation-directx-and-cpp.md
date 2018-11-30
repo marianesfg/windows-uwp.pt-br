@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, orientação da tela, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: eb86cfaefe7112d408a17a54bf4f4b482c218be8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965333"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8205888"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>Oferecendo suporte à orientação de tela (DirectX e C++)
 
@@ -19,7 +19,7 @@ ms.locfileid: "7965333"
 
 Seu aplicativo UWP (Plataforma Universal do Windows) pode dar suporte a várias orientações de tela quando você manipula o evento [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268). Aqui, vamos discutir as práticas recomendadas para manipular a rotação da tela em seu aplicativo UWP DirectX, para que o hardware gráfico do dispositivo Windows 10 são usados de forma eficiente e efetiva.
 
-Antes de começar, lembre-se de que o hardware gráfico sempre emite dados em pixel da mesma maneira, independentemente da orientação do dispositivo. Os dispositivos Windows 10 podem determinar sua orientação de exibição atual (com algum tipo de sensor ou com uma alternância de software) e permitir que os usuários alterem as configurações de vídeo. Por isso, Windows 10 em si controla a rotação das imagens para assegurar que elas fiquem "verticais" com base na orientação do dispositivo. Por padrão, seu aplicativo recebe a notificação de que algo mudou na orientação, por exemplo, o tamanho de uma janela. Quando isso acontece, o Windows 10 imediatamente gira a imagem para exibição final. Para três as quatro orientações de tela específicas (explicadas posteriormente), o Windows 10 usa recursos gráficos adicionais e computação para exibir a imagem final.
+Antes de começar, lembre-se de que o hardware gráfico sempre emite dados em pixel da mesma maneira, independentemente da orientação do dispositivo. Os dispositivos Windows 10 podem determinar sua orientação de exibição atual (com algum tipo de sensor ou com uma alternância de software) e permitir que os usuários alterem as configurações de vídeo. Por isso, Windows 10 em si controla a rotação das imagens para assegurar que elas fiquem "verticais" com base na orientação do dispositivo. Por padrão, seu aplicativo recebe a notificação de que algo mudou na orientação, por exemplo, o tamanho de uma janela. Quando isso acontece, o Windows 10 imediatamente gira a imagem para exibição final. Para três das quatro orientações de tela específicas (explicadas posteriormente), Windows 10 usa recursos gráficos adicionais e computação para exibir a imagem final.
 
 Para aplicativos UWP DirectX, o objeto [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/dn264258) inclui os dados básicos de orientação de exibição que seu aplicativo pode consultar. A orientação padrão é *paisagem*, em que a largura em pixels da exibição é maior que a altura; a orientação alternativa é *retrato*, onde a exibição é girada a 90 graus nas duas direções e a largura torna-se menor que a altura.
 
@@ -366,7 +366,7 @@ Agora, apresente a cadeia de permuta.
 ## <a name="reduce-the-rotation-delay-by-using-corewindowresizemanager"></a>Reduzir o atraso de rotação usando CoreWindowResizeManager
 
 
-Por padrão, Windows 10 fornece uma breve, mas considerável de tempo para qualquer aplicativo, independentemente do modelo de aplicativo ou idioma, para concluir a rotação da imagem. Entretanto, há chances de que quando seu aplicativo executa o cálculo de rotação usando uma das técnicas descritas aqui, ele será feito bem antes desse período ser encerrado. Você gostaria de recuperar o tempo e concluir a animação, certo? É nesse ponto que o [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603) entra.
+Por padrão, Windows 10 fornece uma breve, mas considerável para qualquer aplicativo, independentemente do modelo de aplicativo ou idioma, para concluir a rotação da imagem. Entretanto, há chances de que quando seu aplicativo executa o cálculo de rotação usando uma das técnicas descritas aqui, ele será feito bem antes desse período ser encerrado. Você gostaria de recuperar o tempo e concluir a animação, certo? É nesse ponto que o [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603) entra.
 
 Veja como usar o [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603): quando um evento [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) é acionado, chame o [**CoreWindowResizeManager::GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/hh404170) no manipulador para o evento obter uma instância do **CoreWindowResizeManager** e, quando o layout da nova orientação for concluído e apresentado, chame [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605) para permitir que o Windows saiba que ele pode concluir a animação de rotação e exiba a tela do aplicativo.
 
@@ -386,7 +386,7 @@ Quando um usuário gira a orientação da tela, Windows 10 mostra uma animação
 -   Windows 10 mantém a imagem durante o tempo que leva para recriar o novo layout. Esse é o período que você gostaria de reduzir, porque seu aplicativo provavelmente não precisará dele inteiro.
 -   Quando a janela do layout expira, ou quando uma notificação da conclusão de layout e recebida, o Windows gira a imagem e efetua fading cruzado de zooms para nova orientação.
 
-Conforme sugerido no terceiro marcador, quando um aplicativo chama [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605), Windows 10 interrompe o período de tempo limite, conclui a animação de rotação e retorna o controle ao seu aplicativo, que agora está apresentando a nova orientação de exibição. O efeito geral é que seu aplicativo agora está um pouco mais fluido, responsivo e eficiente!
+Conforme sugerido no terceiro marcador, quando um aplicativo chama [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605), Windows 10 interrompe o período de tempo limite, conclui a animação de rotação e devolve o controle para seu aplicativo, que agora está apresentando a nova orientação de exibição. O efeito geral é que seu aplicativo agora está um pouco mais fluido, responsivo e eficiente!
 
 ## <a name="appendix-a-applying-matrices-for-screen-rotation-2-d"></a>Apêndice A: Aplicando métricas para rotação da tela (2-D)
 

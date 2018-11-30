@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4733edba06b7042c436918e882556f86dfa00071
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993602"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207525"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnóstico das condições de erro do componente do Tempo de Execução do Windows
 
@@ -81,7 +81,7 @@ Na UWP, os métodos sobrecarregados só podem ter o mesmo número de parâmetros
 | Número do erro | Texto da mensagem                                                                                                                                                                      |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | WME1059      | Vários {0}-parâmetro sobrecargas de '{1}. {2}' são decoradas com defaultoverloadattribute.                                                            |
-| WME1085      | O {0}-parâmetro sobrecargas de {1}. {2} deve ter exatamente um método especificado como a sobrecarga padrão decorando-a com defaultoverloadattribute. |
+| WME1085      | O {0}-parâmetro sobrecargas de {1}. {2} deve ter exatamente um método especificado como a sobrecarga padrão decorando-o com defaultoverloadattribute. |
 
  
 
@@ -207,7 +207,7 @@ Na UWP, os parâmetros devem ser somente leitura ou somente gravação. Os parâ
 | WME1101      | Método '{0}'tem um parâmetro'{1}' que é uma matriz, e que tem {2} e {3}. No Tempo de Execução do Windows, os parâmetros de matriz de conteúdo devem ser legíveis ou graváveis. Remova um dos atributos de '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | WME1102      | Método '{0}'tem um parâmetro de saída'{1}' que é uma matriz, mas que tem {2}. No Tempo de Execução do Windows, o conteúdo das matrizes de saída é gravável. Remova o atributo de '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | WME1103      | Método '{0}'tem um parâmetro'{1}' que é uma matriz, e que tem um InAttribute ou OutAttribute. No Windows Runtime, parâmetros de matriz devem ter {2} ou {3}. Remova esses atributos ou os substitua pelo atributo de Tempo de Execução do Windows apropriado, se necessário.                                                                                                                                                                                                                                                                                                                                                                                          |
-| WME1104      | Método '{0}'tem um parâmetro'{1}' que não é uma matriz, e que tem uma {2} ou {3}. Tempo de execução do Windows não dá suporte à marcação de parâmetros não matriz com {2} ou {3}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| WME1104      | Método '{0}'tem um parâmetro'{1}' que não é uma matriz, e que tem uma {2} ou um {3}. Tempo de execução do Windows não dá suporte à marcação de parâmetros não matriz com {2} ou {3}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | WME1105      | Método '{0}'tem um parâmetro'{1}' com um InAttribute ou OutAttribute. O Tempo de Execução do Windows não dá suporte à marcação de parâmetros com System.Runtime.InteropServices.InAttribute ou System.Runtime.InteropServices.OutAttribute. Leve em consideração a remoção de System.Runtime.InteropServices.InAttribute e substitua System.Runtime.InteropServices.OutAttribute pelo modificador 'out' em vez disso. Método '{0}'tem um parâmetro'{1}' com um InAttribute ou OutAttribute. O Tempo de Execução do Windows só dá suporte à marcação de parâmetros ByRef com System.Runtime.InteropServices.OutAttribute e não a outros usos desses atributos. |
 | WME1106      | Método '{0}'tem um parâmetro'{1}' que é uma matriz. No Tempo de Execução do Windows, o conteúdo dos parâmetros de matriz deve ser legível ou gravável. Aplique {2} ou {3} a '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
@@ -236,7 +236,7 @@ Na UWP, os valores de retorno são considerados parâmetros de saída e os nomes
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> **Observação**se você alterar o nome do valor de retorno e o novo nome colidir com o nome de outro parâmetro, você receberá o erro WME1091.
+> **Observação**se você alterar o nome do valor de retorno e o novo nome colide com o nome de outro parâmetro, você receberá o erro WME1091.
 
 O código JavaScript pode acessar os parâmetros de saída de um método por nome, inclusive o valor de retorno. Por exemplo, consulte o atributo [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx).
 

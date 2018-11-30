@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, aplicativo de demonstração varejo
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d6baaff5ca2af781e72c9b4643fa1ea0624e0eb
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965612"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8204458"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>Adicionar recursos de demonstração (RDX) de varejo ao seu aplicativo
 
@@ -21,9 +21,9 @@ Quando os clientes estão em uma loja de varejo, eles esperam poder experimentar
 
 Você pode configurar seu aplicativo para fornecer experiências diferentes enquanto nos modos _normal_ ou de _varejo_ . Por exemplo, se o aplicativo é iniciado com um processo de configuração, você pode ignorar no modo de varejo e preencher o aplicativo com as configurações de dados e o padrão de exemplo para que eles podem ir para a direita em.
 
-Da perspectiva de nossos clientes, há apenas um aplicativo. Para ajudar os clientes a distinção entre os dois modos, é recomendável que enquanto seu aplicativo está no modo de varejo, ele mostra a palavra "Retail" com destaque na barra de título ou em um local adequado.
+Da perspectiva de nossos clientes, há apenas um aplicativo. Para ajudar os clientes distinguir entre os dois modos, é recomendável que enquanto seu aplicativo está no modo de varejo, ele mostra a palavra "Retail" com destaque na barra de título ou em um local indicado.
 
-Além dos requisitos de Microsoft Store para aplicativos, aplicativos com reconhecimento RDX também devem ser compatíveis com a instalação RDX, limpeza e processos de atualização para garantir que os clientes tenham uma experiência consistentemente positiva na loja de revenda.
+Além dos requisitos de Microsoft Store para aplicativos, aplicativos com reconhecimento RDX também devem ser compatíveis com a instalação RDX, limpeza e processos de atualização para garantir que os clientes tenham uma experiência consistentemente positiva na loja de varejo.
 
 ## <a name="design-principles"></a>Princípios do design
 
@@ -37,15 +37,15 @@ Além dos requisitos de Microsoft Store para aplicativos, aplicativos com reconh
 
 ## <a name="technical-requirements"></a>Requisitos técnicos
 
-Como aplicativos com reconhecimento RDX se destinam a demostrar o melhor do seu aplicativo para clientes comerciais, eles devem atender aos requisitos técnicos e respeitem regulamentações de privacidade que a Microsoft Store tem para todos os aplicativos de experiência de demonstração de revenda.
+Como aplicativos com reconhecimento RDX se destinam a demostrar o melhor do seu aplicativo para clientes comerciais, eles devem atender aos requisitos técnicos e respeitem regulamentações de privacidade que tenha a Microsoft Store para todos os aplicativos de experiência de demonstração de revenda.
 
 Isso pode ser usado como uma lista de verificação para ajudar você a se preparar para o processo de validação e esclarecimento no processo de teste. Esses requisitos precisam ser mantidos, não apenas para o processo de validação, mas para todo o tempo de vida do aplicativo de experiência de demonstração de revenda; desde que o aplicativo continue em execução nos dispositivos de demonstração de revenda.
 
 ### <a name="critical-requirements"></a>Requisitos críticos
 
-Aplicativos com reconhecimento RDX que não atendam a esses requisitos críticos serão removidos de todos os dispositivos de demonstração de revenda assim que possível.
+Aplicativos com reconhecimento RDX que não atenderem a esses requisitos críticos serão removidos de todos os dispositivos de demonstração de revenda assim que possível.
 
-* **Não solicitar informações de identificação pessoais (PII)**. Isso inclui informações de logon, informações de conta da Microsoft ou contato detalhes.
+* **Não solicite informações de identificação pessoais (PII)**. Isso inclui informações de logon, informações de conta da Microsoft ou contato detalhes.
 
 * **Experiência livre de erros**. O aplicativo deve ser executado sem erros. Além disso, nenhum pop-up de erro ou notificação deve ser mostrado para clientes que usem os dispositivos de demonstração de revenda. Erros se refletem negativamente no aplicativo em si, sua marca, marca do dispositivo, marca do fabricante do dispositivo e marca da Microsoft.
 
@@ -53,17 +53,17 @@ Aplicativos com reconhecimento RDX que não atendam a esses requisitos críticos
 
 ### <a name="high-priority-requirements"></a>Requisitos de alta prioridade
 
-Aplicativos com reconhecimento RDX que não atendam a esses requisitos de alta prioridade precisam ser investigados em busca de uma correção imediata. Se nenhuma correção imediata for encontrada, esse aplicativo poderá ser removido de todos os dispositivos de demonstração de revenda.
+Aplicativos com reconhecimento RDX que não atenderem a esses requisitos de alta prioridade precisam ser investigados em busca de uma correção imediata. Se nenhuma correção imediata for encontrada, esse aplicativo poderá ser removido de todos os dispositivos de demonstração de revenda.
 
 * **Memorable experiência offline**. Seu aplicativo precisa apresentar uma excelente experiência offline porque cerca de 50% dos dispositivos permanecem offline em locais de revenda. Isso é para garantir que os clientes que interajam com o aplicativo offline ainda sejam capazes de ter uma experiência significativa e positiva.
 
-* **Experiência de conteúdo atualizado**. Seu aplicativo nunca deve ser solicitar atualizações on-line. Se as atualizações forem necessárias, deve ser executadas silenciosamente.
+* **Experiência de conteúdo atualizado**. Seu aplicativo nunca deve ser solicitar atualizações quando on-line. Se as atualizações forem necessárias, deve ser executadas silenciosamente.
 
 * **Nenhuma comunicação anônima**. Como um cliente usando um dispositivo de demonstração de revenda é um usuário anônimo, ele não devem ser capaz de mensagem ou o compartilhamento de conteúdo do dispositivo.
 
-* **Fornecer experiências consistentes, usando o processo de limpeza**. Todos os clientes devem ter a mesma experiência quando usarem um dispositivo de demonstração de revenda. Seu aplicativo deve usar o [processo de limpeza](#clean-up-process) para retornar ao mesmo estado padrão depois de cada uso. Não queremos que o próximo cliente veja o que o cliente para trás. Isso inclui placares, conquistas e desbloqueios.
+* **Fornecer experiências consistentes, usando o processo de limpeza**. Todos os clientes devem ter a mesma experiência quando usarem um dispositivo de demonstração de revenda. Seu aplicativo deve usar o [processo de limpeza](#clean-up-process) para retornar ao mesmo estado padrão depois de cada uso. Não queremos que o próximo cliente veja o que o cliente deixou. Isso inclui placares, conquistas e desbloqueios.
 
-* **Conteúdo apropriado à idade**. Todo o conteúdo do aplicativo precisa ser um adolescente ou inferior categoria de classificação. Para saber mais, consulte [obter classificados como seu aplicativo pelo IARC](https://www.globalratings.com/for-developers.aspx) e [classificações ESRB](https://www.esrb.org/ratings/ratings_guide.aspx).
+* **Conteúdo apropriado à idade**. Todo o conteúdo do aplicativo precisa ser um adolescente ou inferior categoria de classificação. Para saber mais, consulte [Obtendo classificados como seu aplicativo pelo IARC](https://www.globalratings.com/for-developers.aspx) e [classificações ESRB](https://www.esrb.org/ratings/ratings_guide.aspx).
 
 ### <a name="medium-priority-requirements"></a>Requisitos de prioridade média
 
@@ -243,7 +243,7 @@ Etapa 2: instalação
 
 ### <a name="store-data-across-user-sessions"></a>Armazenar dados entre sessões de usuário
 
-Para armazenar dados entre sessões de usuário, você pode armazenar informações em __ApplicationData.Current.TemporaryFolder__ como o processo de limpeza padrão não exclui automaticamente dados nessa pasta. Observe que as informações armazenadas usando *LocalState* são excluídas durante o processo de limpeza.
+Para armazenar dados entre sessões de usuário, você pode armazenar informações em __ApplicationData.Current.TemporaryFolder__ porque o processo de limpeza padrão não exclui automaticamente dados nessa pasta. Observe que as informações armazenadas usando *LocalState* são excluídas durante o processo de limpeza.
 
 ### <a name="customize-the-cleanup-process"></a>Personalizar o processo de limpeza
 
@@ -264,7 +264,7 @@ Etapa 1: Declare o serviço _Microsoft-RetailDemo-Cleanup_ no manifesto do aplic
 
 ```
 
-Etapa 2: Implemente a lógica de limpeza personalizada sob a função de caso _AppdataCleanup_ usando o modelo de exemplo abaixo.
+Etapa 2: Implemente a lógica de limpeza personalizada na função case _AppdataCleanup_ usando o modelo de exemplo abaixo.
 ``` CSharp
 using System;
 using System.IO;

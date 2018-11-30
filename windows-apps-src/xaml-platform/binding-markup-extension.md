@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: b197ea668ec73711b7a9c63e516b4ec9a5f54d62
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970326"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8206063"
 ---
 # <a name="binding-markup-extension"></a>Extensão de marcação {Binding}
 
@@ -80,7 +80,7 @@ Para saber mais sobre a sintaxe de cadeia de caracteres para um caminho de propr
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | Especifica um valor a ser exibido quando o valor de origem é solucionado, mas é explicitamente **null**. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | Especifica o tempo das atualizações da fonte de associação. Se não estiver especificado, o padrão é **Default**. |
 
-**Observação**se você estiver convertendo a marcação de **{x: Bind}** para **{Binding}**, lembre-se das diferenças valores padrão para a propriedade de **modo** .
+**Observação**se você estiver convertendo a marcação de **{x: Bind}** para **{Binding}**, lembre-se das diferenças em default valores para a propriedade **Mode** .
 
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) e **ConverterLanguage** estão todos relacionados à situação de conversão de um valor ou tipo de uma fonte de associação a um tipo ou valor que é compatível com a propriedade do destino da associação. Para saber mais, veja a seção "Conversões de dados" em [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
