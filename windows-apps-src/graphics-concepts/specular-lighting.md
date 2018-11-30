@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f28f1f46cfd34ee1aab614c57dc99019dbd6111
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8206507"
+ms.locfileid: "8324764"
 ---
 # <a name="specular-lighting"></a>Iluminação especular
 
@@ -39,8 +39,8 @@ As variáveis, seus tipos e seus intervalos são:
 | Parâmetro    | Valor padrão | Tipo                                                             | Descrição                                                                                            |
 |--------------|---------------|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Cₛ           | (0,0,0,0)     | Transparência de vermelho, verde, azul e alfa (valores de ponto flutuante) | Cor especular.                                                                                        |
-| soma          | N/A           | N/D                                                              | Referência do componente especular cada da luz.                                                          |
-| N            | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z)                    | Normal de vértice.                                                                                         |
+| soma          | N/D           | N/D                                                              | Referência do componente especular cada da luz.                                                          |
+| N            | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z)                    | Normal de vértice.                                                                                         |
 | H            | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z)                    | Vetor de metade. Consulte a seção sobre o vetor de metade.                                                |
 | <sup>P</sup> | 0.0           | Ponto flutuante                                                   | Potência de reflexão especular. Intervalo é 0 até + infinito                                                     |
 | Lₛ           | (0,0,0,0)     | Transparência de vermelho, verde, azul e alfa (valores de ponto flutuante) | Cor especular clara.                                                                                  |
@@ -76,7 +76,7 @@ O vetor de metade (H) existe situado entre dois vetores: o vetor de um vértice 
 |-----------------|---------------|-----------------------------------------------|--------------------------------------------------------------|
 | Cₚ              | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição da câmera.                                             |
 | Vₚ              | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição do vértice.                                             |
-| L<sub>dir</sub> | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Vetor de direção da posição de vértice para a posição da luz. |
+| L<sub>dir</sub> | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Vetor de direção da posição de vértice para a posição da luz. |
 
  
 
