@@ -13,11 +13,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: ef472863550b7d17836dc7f47e2fe789c9ca7fbc
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8204244"
+ms.locfileid: "8339854"
 ---
 # <a name="command-bar-flyout"></a>Submenu da barra de comandos
 
