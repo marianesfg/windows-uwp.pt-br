@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ddeee438e946dd28a78d59d163f59cb1114aa65
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8208157"
+ms.locfileid: "8331716"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Portabilidade do Windows Runtime 8.x XAML e da interface do usuário para a UWP
 
@@ -438,7 +438,7 @@ Em um aplicativo do Windows Runtime 8. x, quando o aplicativo é desativado e re
 
 Em um aplicativo da loja do Windows Phone e em um aplicativo do Windows 10, a exibição reduzida é ignorada quando o botão Voltar é pressionado. Para um aplicativo do Windows Runtime 8. x, não há processamento nenhum botão Voltar integrado, logo a pergunta não se aplica.
 
-## <a name="settings"></a>Settings
+## <a name="settings"></a>Configurações
 
 A classe de **SettingsPane** do tempo de execução do Windows 8. x não é adequada para Windows 10. Em vez disso, além de criar uma página de configurações, você deve oferecer aos usuários uma forma de acessá-la dentro do aplicativo. Recomendamos expor essa página de configurações do aplicativo no nível superior, como o último item fixo no painel de navegação, mas aqui está todo o conjunto de opções.
 

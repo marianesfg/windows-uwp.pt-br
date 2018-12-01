@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de coleção da Microsoft Store, providenciado, consumível
 ms.localizationpriority: medium
 ms.openlocfilehash: e3271dd26a4e7eaa23d63efa3b75cf321480528d
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8207909"
+ms.locfileid: "8331027"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>Declarar produtos consumíveis como providenciados
 

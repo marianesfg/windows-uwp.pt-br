@@ -3,11 +3,11 @@ title: Referência de API HTTP do monitor do Portal de Dispositivos
 description: Saiba como acessar o tráfego HTTP do aplicativo focado em um Xbox.
 ms.localizationpriority: medium
 ms.openlocfilehash: 81de2a2a3194384e9c5de1c5c45a827e4d965c91
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8195600"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8334400"
 ---
 # <a name="http-monitor-api-reference"></a>Referência de API do monitor de HTTP   
 Você pode acessar o tráfego HTTP em tempo real para o aplicativo focado usando essa API se o monitor HTTP tiver sido habilitado no console do Xbox, marcando a caixa na Dev Home.
