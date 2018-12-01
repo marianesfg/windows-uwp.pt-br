@@ -7,11 +7,11 @@ ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d8729826c2f372b3d3b5607ce828aaf515e47f3d
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8189946"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8336563"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>Tutorial: Suporte ao Surface Dial (e a outros dispositivos de roda de rolagem) no aplicativo UWP
 

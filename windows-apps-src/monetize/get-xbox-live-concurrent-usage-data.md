@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, uso simultâneo
 ms.localizationpriority: medium
 ms.openlocfilehash: 40d35b45065566db22aef791a94faa1cc0fa5c62
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8217545"
+ms.locfileid: "8338179"
 ---
 # <a name="get-xbox-live-concurrent-usage-data"></a>Obter dados de uso simultâneo do Xbox Live
 
