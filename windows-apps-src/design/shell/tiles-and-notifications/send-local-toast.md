@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, enviar notificações do sistema, notificações, enviar notificações, notificações do sistema, como fazer, guia de início rápido, introdução, exemplo de código, passo a passo
 ms.localizationpriority: medium
-ms.openlocfilehash: dd7dfb621d84a3ce1d934c358ab60683caee9238
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.openlocfilehash: 410e8121aecfe13805586c9287f62444f80a1b1b
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8215680"
+ms.locfileid: "8343847"
 ---
 # <a name="send-a-local-toast-notification"></a>Enviar uma notificação do sistema local
 
@@ -361,7 +361,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 Quando você especifica a ativação em segundo plano na notificação do sistema (ou em um botão de notificação do sistema), a tarefa em segundo plano será executada em vez de ativar o aplicativo em primeiro plano.
 
-Para saber mais sobre tarefas em segundo plano, consulte [Suporte ao aplicativo com tarefas em segundo plano](/launch-resume/support-your-app-with-background-tasks.md).
+Para saber mais sobre tarefas em segundo plano, consulte [Suporte ao aplicativo com tarefas em segundo plano](/windows/uwp/launch-resume/support-your-app-with-background-tasks).
 
 Se você estiver usando a compilação 14393 ou posterior, você pode usar tarefas em segundo plano em processamento, o que simplifica as ações. Observe que tarefas em segundo plano em processamento não são executadas em versões mais antigas do Windows. Vamos usar uma tarefa em segundo plano em processamento nesse exemplo de código.
 
