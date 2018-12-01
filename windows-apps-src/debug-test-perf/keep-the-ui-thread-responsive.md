@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cd5df1d22189698f6544af4ab72c09425531602
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.openlocfilehash: 0bc555030c2f5202e5c128c1d1a2fe45b5b71b4b
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8214781"
+ms.locfileid: "8347423"
 ---
 # <a name="keep-the-ui-thread-responsive"></a>Manter o thread de interface do usuário responsivo
 
@@ -50,7 +50,7 @@ Um exemplo de trabalho que pode ser realizado em um thread de segundo plano é o
 ```csharp
 public class AsyncExample
 {
-    private async void NextMove-Click(object sender, RoutedEventArgs e)
+    private async void NextMove_Click(object sender, RoutedEventArgs e)
     {
         // The await causes the handler to return immediately.
         await System.Threading.Tasks.Task.Run(() => ComputeNextMove());
@@ -71,7 +71,7 @@ public class AsyncExample
 > public class Example
 > {
 >     // ...
->     private async void NextMove-Click(object sender, RoutedEventArgs e)
+>     private async void NextMove_Click(object sender, RoutedEventArgs e)
 >     {
 >         await Task.Run(() => ComputeNextMove());
 >         // Update the UI with results
@@ -87,7 +87,7 @@ public class AsyncExample
 > ```vb
 > Public Class Example
 >     ' ...
->     Private Async Sub NextMove-Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+>     Private Async Sub NextMove_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 >         Await Task.Run(Function() ComputeNextMove())
 >         ' update the UI with results
 >     End Sub
@@ -99,7 +99,7 @@ public class AsyncExample
 > End Class
 > ```
 
-Neste exemplo, o manipulador `NextMove-Click` retornará em **await** para manter o thread de interface do usuário responsivo. Mas a execução seleciona esse manipulador novamente depois que `ComputeNextMove` (que é executado em um thread em segundo plano) é concluído. O restante do código no manipulador atualiza a interface do usuário com os resultados.
+Neste exemplo, o manipulador `NextMove_Click` retornará em **await** para manter o thread de interface do usuário responsivo. Mas a execução seleciona esse manipulador novamente depois que `ComputeNextMove` (que é executado em um thread em segundo plano) é concluído. O restante do código no manipulador atualiza a interface do usuário com os resultados.
 
 > **Observação**também é uma API [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) e [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) para a UWP, que pode ser usada em cenários semelhantes. Para obter mais informações, consulte [Programação threading e assíncrona](https://msdn.microsoft.com/library/windows/apps/Mt187340).
 

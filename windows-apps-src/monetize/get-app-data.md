@@ -6,12 +6,12 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, dados do aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 54f5989f0aa2fb5eeed26f16ab9e07671e26832c
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.openlocfilehash: 23e392e2064a2a48089d1efadd1461c146e0d343
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8198749"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8348818"
 ---
 # <a name="get-app-data"></a>Obter dados de app
 
@@ -19,44 +19,12 @@ Use os seguintes métodos na API de envio da Microsoft Store para obter dados de
 
 Antes de usar esses métodos, o aplicativo já deve existir na sua conta do Partner Center. Para criar ou gerenciar envios de aplicativos, consulte os métodos em [Gerenciar envios de aplicativo](manage-app-submissions.md).
 
-<table>
-<colgroup>
-<col width="10%" />
-<col width="30%" />
-<col width="60%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Método</th>
-<th align="left">URI</th>
-<th align="left">Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications</td>
-<td align="left"><a href="get-all-apps.md">Obter dados para todos os seus apps</a></td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}</td>
-<td align="left"><a href="get-an-app.md">Obter dados de um app específico</a></td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts</td>
-<td align="left"><a href="get-add-ons-for-an-app.md">Obter complementos para um app</a></td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights</td>
-<td align="left"><a href="get-flights-for-an-app.md">Obter pacotes de pré-lançamento de um app</a></td>
-</tr>
-</tbody>
-</table>
-
-<span/>
+| Método | URI                                                                                             | Descrição                                                 |
+|------- |------------------------------------------------------------------------------------------------ |------------------------------------------------------------ |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [Obter dados para todos os seus apps](get-all-apps.md)               |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [Obter dados de um app específico](get-an-app.md)                |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [Obter complementos para um app](get-add-ons-for-an-app.md)         |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [Obter pacotes de pré-lançamento de um app](get-flights-for-an-app.md) |
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -180,13 +148,12 @@ Esse recurso fornece informações sobre um envio. O exemplo a seguir demonstra 
 
 Este recurso tem os seguintes valores.
 
-| Valor           | Tipo    | Descrição                 |
-|-----------------|---------|------------------------------|
-| id            | string  | A ID do envio.    |
-| resourceLocation   | string  | Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do envio.            |
- 
-<span/>
+| Valor              | Tipo   | Descrição               |
+|--------------------|--------|---------------------------|
+| id                 | string | A ID do envio. |
+| resourceLocation   | string | Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do envio. |
 
+ 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)

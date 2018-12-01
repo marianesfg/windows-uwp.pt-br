@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 72c7459c-420a-4da9-8afa-191a846185a5
 ms.localizationpriority: medium
 ms.openlocfilehash: d05528ecf4408a7e7483b909b75722037c6528b7
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8207057"
+ms.locfileid: "8347815"
 ---
 # <a name="xbox-live-sandbox-api-reference"></a>Referência de API da área restrita do Xbox Live   
 Você pode obter e definir a área restrita do Xbox Live usando essa API REST.

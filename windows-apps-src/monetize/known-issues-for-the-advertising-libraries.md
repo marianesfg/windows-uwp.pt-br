@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, problemas conhecidos, solução de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b32b390cc4ca6af5b03a22e30323ded5aeac516
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.openlocfilehash: 3df88af638886e6bbda9b2f2f2065809da319532
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8217281"
+ms.locfileid: "8344642"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conhecidos e solução de problemas para anúncios em aplicativos
 
@@ -46,7 +46,7 @@ Há muitos motivos para você não ver anúncios, incluindo erros de rede. Outro
 
 * Se você criou uma nova ID de unidade de anúncios na última meia hora, talvez você não a veja até que os servidores propaguem novos dados por meio do sistema. Os IDs existentes que tenham mostrado anúncios antes devem mostrar anúncios imediatamente.
 
-Se você pode ver anúncios de teste no aplicativo, seu código está funcionando e é capaz de exibir anúncios. Se você tiver problemas, entre em contato com o [suporte do produto](https://developer.microsoft.com/en-us/windows/support). Nessa página, escolha **Anúncios em Apps**.
+Se você pode ver anúncios de teste no aplicativo, seu código está funcionando e é capaz de exibir anúncios. Se você tiver problemas, entre em contato com o [suporte do produto](https://developer.microsoft.com/en-us/windows/support). Nessa página, escolha **entre em contato conosco**.
 
 Você também pode postar uma pergunta no [fórum](http://go.microsoft.com/fwlink/p/?LinkId=401266).
 
