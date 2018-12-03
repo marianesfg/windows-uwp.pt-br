@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de compra na Microsoft Store, assinaturas
 ms.localizationpriority: medium
 ms.openlocfilehash: b568531ce0807ebc5be0d27a78b94547e8473ae6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328112"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472433"
 ---
 # <a name="get-subscriptions-for-a-user"></a>Obter assinaturas para um usuário
 
@@ -114,7 +114,7 @@ Cada objeto na matriz *itens* contém os seguintes valores.
 | Renovar automaticamente | Booliano |  Indica se a assinatura está configurada para renovar automaticamente no final do período de inscrição atual.   |
 | beneficiário | cadeia |  A ID do beneficiário do direito associado a esta subscrição.   |
 | expirationTime | cadeia | A data e a hora em que a assinatura expirará, no formato ISO 8601. Este campo só está disponível quando a assinatura está em certos estados. O tempo de expiração geralmente indica quando o estado atual expira. Por exemplo, para uma assinatura ativa, a data de validade indica quando ocorrerá a próxima renovação automática.    |
-| expirationTimeWithGrace | string | A data e hora que a assinatura expirará incluindo o período de cortesia, no formato ISO 8601. Esse valor indica quando o usuário perde o acesso à assinatura após a assinatura tem não pôde ser renovada automaticamente.    |
+| expirationTimeWithGrace | string | A data e hora que a assinatura expirará incluindo o período de cortesia, no formato ISO 8601. Esse valor indica quando o usuário perde o acesso à assinatura depois que a assinatura não pôde ser renovada automaticamente.    |
 | id | cadeia |  A ID da assinatura. Use esse valor para indicar qual delas você deseja modificar ao chamar o método [alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md).    |
 | isTrial | Booliano |  Indica se a assinatura é uma versão de avaliação.     |
 | lastModified | cadeia |  A data e hora em que a assinatura foi modificada pela última vez, no formato ISO 8601.      |

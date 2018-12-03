@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, arquivo, propriedades
 ms.localizationpriority: medium
 ms.openlocfilehash: 772abd3696850be202593c582e6338a04de38537
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350873"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472453"
 ---
 # <a name="fast-access-to-file-properties-in-uwp"></a>Acesso rápido às propriedades de arquivo UWP 
 
@@ -18,7 +18,7 @@ Saiba como coletar rapidamente uma lista de arquivos e respectivas propriedades 
 
 Pré-requisitos 
 - **Programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**  você pode aprender a escrever aplicativos assíncronos em c# ou Visual Basic, consulte [chamar APIs assíncronas em c# ou Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).     Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps). 
-- **Permissões de acesso a bibliotecas**  o código nestes exemplos exige a funcionalidade de **picturesLibrary** , mas o local do arquivo pode exigir uma funcionalidade diferente, ou nenhum recurso de todo o tempo. Para saber mais, consulte [Permissões de acesso a arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions). 
+- **Permissões de acesso a bibliotecas**  o código nestes exemplos exige a funcionalidade **picturesLibrary** , mas o local do arquivo pode exigir uma funcionalidade diferente, ou nenhum recurso de todo o tempo. Para saber mais, consulte [Permissões de acesso a arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions). 
 - **Enumeração simples de arquivos**  Este exemplo usa [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) para definir algumas propriedades avançadas de enumeração. Para saber mais sobre como obter uma lista simples de arquivos para um diretório menor, consulte [Enumerar e consultar arquivos e pastas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders). 
 
 ## <a name="usage"></a>Uso  
