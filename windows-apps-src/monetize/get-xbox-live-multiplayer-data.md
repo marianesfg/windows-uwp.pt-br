@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, multijogador
 ms.localizationpriority: medium
 ms.openlocfilehash: 74f1a64bde32fe68a51527527a0b049d811d0853
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8337096"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8459262"
 ---
 # <a name="get-xbox-live-multiplayer-data"></a>Obter dados de multijogador do Xbox Live
 

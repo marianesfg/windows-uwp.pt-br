@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, recebimentos, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: b71d55d71a63060a66265051fafc8bdf7313e77b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342961"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8461884"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para verificar compras de produtos
 
