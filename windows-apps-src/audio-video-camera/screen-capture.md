@@ -2,16 +2,16 @@
 title: Captura de tela
 description: O namespace Windows.Graphics.Capture fornece APIs para adquirir quadros de uma tela ou de uma janela de aplicativo para criar fluxos de vídeo ou instantâneos para criar experiências colaborativas e interativas.
 ms.assetid: 349C959D-9C74-44E7-B5F6-EBDB5CA87B9F
-ms.date: 10/09/2018
+ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, captura de tela
 ms.localizationpriority: medium
-ms.openlocfilehash: 14273f919cacfb27671ba72022ab6c8ff0a2f0ef
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.openlocfilehash: db32db6b293dce4210bebee139e05447da996b42
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328452"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470760"
 ---
 # <a name="screen-capture"></a>Captura de tela
 
@@ -20,7 +20,7 @@ A partir do Windows 10, versão 1803, o namespace [Windows.Graphics.Capture](htt
 Com a captura de tela, os desenvolvedores chamam a interface do usuário do sistema para que os usuários finais selecionem a tela ou a janela do aplicativo para captura, e uma borda de notificação amarela é desenhada pelo sistema ao redor do item capturado ativamente. No caso de várias sessões de captura simultânea, uma borda amarela é desenhada em volta de cada item sendo capturado.
 
 > [!NOTE]
-> A captura de tela APIs são suportadas apenas em desktops e fones de ouvido imersivos do Windows Mixed Reality.
+> APIs de captura de tela são suportadas apenas em desktops e fones de ouvido imersivos do Windows Mixed Reality.
 
 ## <a name="add-the-screen-capture-capability"></a>Adicionar a funcionalidade de captura de tela
 
@@ -28,9 +28,9 @@ As APIs encontradas no namespace **Graphics** exigem uma funcionalidade geral pa
     
 1. Abra **Package. appxmanifest** no **Gerenciador de soluções**.
 2. Selecione a guia **Recursos**.
-3. Verifique a **captura de elementos gráficos**.
+3. Verifique a **captura de gráfico**.
 
-![Captura de elementos gráficos](images/screen-capture-1.png)
+![Captura de gráfico](images/screen-capture-1.png)
 
 ## <a name="launch-the-system-ui-to-start-screen-capture"></a>Iniciar o interface do usuário do sistema para iniciar a captura de tela
 
@@ -68,7 +68,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Como esse é o código de interface do usuário, ele deve ser chamado no thread da interface do usuário. Se você estiver chamada dele em code-behind para uma página do seu aplicativo (por exemplo, **MainPage.xaml.cs**) isso é feito para você automaticamente, mas se não, você pode forçar para ser executada no thread da interface do usuário com o código a seguir:
+Como esse é o código de interface do usuário, ele deve ser chamado no thread da interface do usuário. Se você estiver chamando-o em code-behind para uma página do seu aplicativo (por exemplo, **MainPage.xaml.cs**) isso é feito para você automaticamente, mas se não, você pode forçar a ser executado no thread da interface do usuário com o código a seguir:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -166,7 +166,7 @@ Quando **Recreate** é chamado, todos os quadros existentes são descartados. Is
 O trecho de código a seguir está um exemplo de ponta a ponta de como implementar a captura de tela em um aplicativo UWP. Neste exemplo, temos um botão no front-end que, quando clicado, chama o método **Button_ClickAsync** .
 
 > [!NOTE]
-> Este trecho de código usa [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), uma biblioteca para renderização de gráficos 2D. Consulte a documentação para obter informações sobre como defini-lo para seu projeto.
+> Este trecho de código usa [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), uma biblioteca para renderização de gráficos 2D. Consulte a documentação para obter informações sobre como configurá-lo para seu projeto.
 
 ```cs
 using Microsoft.Graphics.Canvas;
@@ -383,6 +383,10 @@ namespace WindowsGraphicsCapture
     }
 }
 ```
+
+## <a name="record-a-video"></a>Gravar um vídeo
+
+Se você quiser gravar um vídeo do seu aplicativo, você pode fazer isso com mais facilidade com o [namespace apprecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording). Isso faz parte do SDK, de extensão da área de trabalho para que ela funcione somente na área de trabalho e requer que você adicione uma referência a ele no seu projeto. Consulte a [Visão geral de famílias de dispositivo](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) para obter mais informações.
 
 ## <a name="see-also"></a>Veja também
 

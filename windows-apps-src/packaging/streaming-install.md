@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, uwp, instalação, de streaming de instalação de aplicativo uwp de streaming
 ms.localizationpriority: medium
 ms.openlocfilehash: 3fa33410be31b1732a04c51d14dbbd114e1f5e0c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344662"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466976"
 ---
 # <a name="uwp-app-streaming-install"></a>Instalação de streaming de aplicativo UWP
 A instalação de streaming da Plataforma Universal do Windows (UWP) permite que você especifique as partes do seu aplicativo que você gostaria que a Microsoft Store baixasse primeiro. Quando os arquivos essenciais do aplicativo são baixados primeiro, o usuário pode iniciar e interagir com o aplicativo enquanto o resto termina de fazer o download em segundo plano. 
 
-Para usar a instalação de Streaming de aplicativo do UWP, você precisará dividir arquivos do seu aplicativo em seções. Para fazer isso, você criará um mapa de grupo de conteúdo, que é um arquivo XML que é empacotado com seu aplicativo, permitindo que você definir prioridade do download e ordem. Consulte o tópico links abaixo para obter mais informações.
+Para usar a instalação de Streaming UWP, você precisará dividir arquivos do seu aplicativo em seções. Para fazer isso, você criará um mapa de grupo de conteúdo, que é um arquivo XML que é empacotado com seu aplicativo, permitindo que você definir a prioridade de download e a ordem. Consulte o tópico links abaixo para obter mais informações.
 
-Para obter um guia completo sobre como adicionar a instalação de Streaming de aplicativo do UWP ao seu aplicativo UWP, confira esta [série de blogs](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).
+Para obter um guia completo sobre como adicionar a instalação de Streaming UWP ao seu aplicativo UWP, confira esta [série de blogs](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).
 
 | Tópico | Descrição | 
 |-------|-------------|

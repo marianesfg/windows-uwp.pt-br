@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a8b32abae4938081610db2cfc2ded25adadab95d
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336027"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467930"
 ---
 # <a name="create-add-on-store-listings"></a>Criar listagens de complementos da Store
 
@@ -23,7 +23,7 @@ Ao enviar um complemento no [Partner Center](https://partner.microsoft.com/dashb
 
 ## <a name="store-listing-languages"></a>Idiomas da listagem da Loja
 
-Antes de poder inserir informações da listagem da Store, você precisa especificar um ou mais [idiomas](supported-languages.md). Você deve preencher a página **listagem da Loja** para pelo menos um idioma. É recomendável criar listagens da loja para cada idioma seu aplicativo oferece suporte.
+Antes de poder inserir informações da listagem da Store, você precisa especificar um ou mais [idiomas](supported-languages.md). Você deve preencher a página **listagem da Loja** para pelo menos um idioma. É recomendável criar listagens da loja para cada idioma que seu aplicativo oferece suporte.
 
 Na seção **Listagem da Store** de envio do complemento, clique em **Adicionar/remover idiomas** e, em seguida, clique em **Gerenciar idiomas** na próxima página. Marque as caixas de seleção dos idiomas que você deseja adicionar e depois clique em **Atualizar**. Os idiomas selecionados serão exibidos na seção **Idiomas de listagem da Store** da página.
 

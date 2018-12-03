@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b0747dd3b8992ab456bdb00a4dc7157211eb8ba
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8349515"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470489"
 ---
 # <a name="get-file-properties"></a>Obter propriedades do arquivo
 
@@ -45,7 +45,7 @@ Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo
 
 Muitas propriedades de nível superior são acessadas como membros da classe [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). Essas propriedades incluem atributos do arquivo, tipo de conteúdo, data de criação, nome para exibição, tipo de arquivo etc.
 
-**Observação**Lembre-se de declarar a funcionalidade de **picturesLibrary** .
+**Observação**Lembre-se de declarar a funcionalidade **picturesLibrary** .
 
  
 

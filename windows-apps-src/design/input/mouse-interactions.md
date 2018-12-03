@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ad801dee43607b4fb6e75bd30f612682e1214ff
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336732"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465455"
 ---
 # <a name="mouse-interactions"></a>Interações por mouse
 
@@ -96,7 +96,7 @@ Responda à entrada do mouse em seus aplicativos manipulando os mesmos eventos d
 
 Use eventos [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) para implementar funcionalidade de entrada básica sem a necessidade de gravar código para cada dispositivo de entrada de ponteiro. No entanto, você ainda pode aproveitar as funcionalidades especiais de cada dispositivo (como eventos do botão de rolagem do mouse) usando os eventos de ponteiro, gesto e manipulação desse objeto.
 
-**Exemplos:** Consulte essa funcionalidade em ação em nossas [amostras de aplicativos](https://go.microsoft.com/fwlink/p/?LinkID=264996).
+**Exemplos:** Consulte essa funcionalidade em ação em nossos [exemplos de aplicativo](https://go.microsoft.com/fwlink/p/?LinkID=264996).
 
 
 - [Entrada: exemplo de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
