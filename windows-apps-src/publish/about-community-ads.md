@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8acf83e2b39ece5fcd46c3d89d921e4f3013b67
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334945"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478102"
 ---
 # <a name="about-community-ads"></a>Sobre anúncios de comunidade
 
@@ -19,7 +19,7 @@ Se seu aplicativo [exibe anúncios em faixa ou anúncios intersticiais em faixa]
 
 Veja como este programa funciona:
 
-* Depois que você aceitação anúncios de comunidade conforme descrito a seguir, você pode [criar uma campanha publicitária de comunidade gratuita](create-an-ad-campaign-for-your-app.md). Em seguida, o seu aplicativo compartilhará espaço publicitário promocional com outros desenvolvedores que também aceitarão de anúncios de comunidade. Seu aplicativo mostrará anúncios para os aplicativos publicados por outros desenvolvedores que participam em anúncios de comunidade, e seus aplicativos exibirão anúncios para seu aplicativo.
+* Depois que você aceitação anúncios de comunidade conforme descrito a seguir, você pode [criar uma campanha publicitária de comunidade gratuita](create-an-ad-campaign-for-your-app.md). Em seguida, o seu aplicativo compartilhará espaço publicitário promocional com outros desenvolvedores que também aceitarão de anúncios da comunidade. Seu aplicativo mostrará anúncios para os aplicativos publicados por outros desenvolvedores que participam em anúncios de comunidade, e seus aplicativos exibirão anúncios para seu aplicativo.
 * Ganhe créditos para o espaço de anúncio promocional em outros aplicativos, mostrando anúncios de comunidade em seu aplicativo. Os créditos são calculados de acordo com o seguinte processo:
   * Para cada país ou região em que um aplicativo que serve anúncios da comunidade está disponível, o valor de eCPM (custo efetivo por mil impressões) da taxa do mercado atual para o país ou a região é multiplicado pelo número de solicitações de anúncios da comunidade feitas pelo seu aplicativo nesse país ou região. Esse valor corresponde aos créditos que você ganhou para o seu aplicativo nesse país ou nessa região.
   * Seus créditos totais acumulados por um determinado tempo são iguais à soma de todos os créditos obtidos em cada país ou região para cada um dos seus aplicativos que está servindo anúncios da comunidade.
@@ -33,10 +33,10 @@ Antes de criar uma campanha publicitária de comunidade para um dos seus aplicat
 Para aceitar anúncios da comunidade para um aplicativo UWP:
 
 1. Selecione uma unidade de anúncio que você está usando no aplicativo e role para baixo para **configurações de controle**.
-2. Se **Permitir que a Microsoft otimizar minhas configurações** estiver selecionado, anúncios de comunidade são habilitados para sua unidade publicitária automaticamente. Caso contrário, selecione a configuração de linha de base ou uma configuração específicas de mercado na lista suspensa **destino** e, em seguida, marque a caixa de **anúncios da Microsoft Community** na lista de **outras redes de anúncios** .
+2. Se **Permitir que a Microsoft otimizar minhas configurações** estiver selecionado, anúncios de comunidade são habilitados para sua unidade publicitária automaticamente. Caso contrário, selecione a configuração de linha de base ou uma configuração específicas de mercado na lista suspensa **destino** e, em seguida, marque a caixa de **anúncios da comunidade da Microsoft** na lista de **outras redes de anúncios** .
 
     > [!NOTE]
-    > Você pode usar os campos de **Peso** para especificar a proporção de anúncios que você deseja mostrar da redes pagas e de outras redes de anúncios, incluindo anúncios de comunidade.
+    > Você pode usar os campos de **Peso** para especificar a proporção de anúncios que você deseja mostrar de redes pagas e de outras redes de anúncios, incluindo anúncios de comunidade.
 
 Você não precisa republicar o aplicativo depois de fazer suas seleções. Depois de aceitar, você poderá selecionar **Anúncio de comunidade (gratuito)** como o tipo de campanha ao [criar uma campanha publicitária ](create-an-ad-campaign-for-your-app.md).
 

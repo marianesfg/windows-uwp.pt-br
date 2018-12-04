@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, campanhas, promover
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ece97d2e2cf96d2905902fd563f1de9027aa64a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333384"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478341"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Criar uma campanha publicitária para seu app
 
-Você pode criar campanhas publicitárias no [Partner Center](https://partner.microsoft.com/dashboard) para promover seu aplicativo e ampliar seus usuários base. Por padrão, escolheremos o público-alvo para seus anúncios com base nas configurações do aplicativo no Partner Center, mas, opcionalmente, você pode definir seu próprio público. Você também pode usar um conjunto padrão de modelos de anúncios ou carregar seus próprios designs de anúncios. Para obter mais detalhes sobre campanhas publicitárias, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md).
+Você pode criar campanhas publicitárias no [Partner Center](https://partner.microsoft.com/dashboard) para ajudar a promover seu aplicativo e ampliar a base de seu usuário. Por padrão, escolheremos o público-alvo para seus anúncios com base nas configurações do aplicativo no Partner Center, mas, opcionalmente, você pode definir seu próprio público. Você também pode usar um conjunto padrão de modelos de anúncios ou carregar seus próprios designs de anúncios. Para obter mais detalhes sobre campanhas publicitárias, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md).
 
 Você pode criar campanhas publicitárias somente para aplicativos que passaram na fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md).
 
@@ -50,7 +50,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 
     * Se você recebeu um cupom de um representante da Microsoft para pagar uma campanha publicitária, clique em **Usar um cupom**, insira o código do cupom e clique em **Aplicar** para aplicar o cupom à campanha.
 
-    Ao terminar, clique em **Salvar e avançar** para ir até a etapa **Público**. Esta etapa não está disponível para campanhas de anúncios internos, pois veiculados somente em seus próprios aplicativos.
+    Ao terminar, clique em **Salvar e avançar** para ir até a etapa **Público**. Esta etapa não está disponível para campanhas de anúncios internos, pois são executados somente em seus próprios aplicativos.
 
 9.  Na página **Público**, mostraremos as configurações de público recomendadas para a campanha. Como opção, você pode ajustar essas informações:
     * **Países/regiões**: escolha até cinco países ou regiões em que você deseja que o anúncio apareça. Para obter uma lista de países ou regiões com suporte, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md#where-will-my-ad-appear).
