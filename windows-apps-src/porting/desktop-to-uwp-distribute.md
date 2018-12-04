@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: 9fe216b70b7c10f254c0e3b7b18275a72d46215c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340232"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475618"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Distribuir um aplicativo da área de trabalho empacotado
 
@@ -25,7 +25,7 @@ Publicar seu aplicativo da área de trabalho empacotado para a Microsoft Store o
 
 A [Microsoft Store](https://www.microsoft.com/store/apps) é uma maneira conveniente para que seus clientes obtenham o aplicativo.
 
-Publica seu aplicativo na Microsoft Store para atingir um público maior. Além disso, clientes organizacionais podem adquirir seu aplicativo para distribuição interna em suas organizações por meio da [Microsoft Store para empresas](https://www.microsoft.com/business-store).
+Publica seu aplicativo na Microsoft Store para atingir um público maior. Além disso, clientes organizacionais podem adquirir seu aplicativo para distribuição interna em suas organizações através de [Da Microsoft Store para empresas](https://www.microsoft.com/business-store).
 
 Caso planeje publicar na Microsoft Store, você verá algumas perguntas adicionais como parte do processo de envio. Isso ocorre porque o manifesto do pacote declara uma funcionalidade restrita denominada **runFullTrust** e precisamos aprovar o uso desse recurso pelo aplicativo. Você pode ler mais sobre esse requisito aqui: [Funcionalidade restrita](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
@@ -42,7 +42,7 @@ Se você preferir distribuir seu aplicativo sem utilizar a loja, você pode dist
 
 Isso pode fazer sentido se você deseja ter mais controle sobre a experiência de distribuição ou se você não quiser se envolver com o processo de certificação da Microsoft Store.
 
-Para distribuir seu aplicativo para outros dispositivos sem colocá-lo na loja, você precisa obter um certificado, assinar seu aplicativo usando esse certificado e, em seguida, fazer o sideload seu aplicativo para esses dispositivos.
+Para distribuir seu aplicativo para outros dispositivos sem colocá-lo na loja, você precisa obter um certificado, assinar seu aplicativo usando esse certificado e, em seguida, sideload seu aplicativo para esses dispositivos.
 
 Você pode [criar um certificado](../packaging/create-certificate-package-signing.md) ou obtê-lo de um fornecedor popular, como o [Verisign](https://www.verisign.com/).
 
@@ -84,7 +84,7 @@ Vamos falar sobre cada uma dessas tarefas. Vamos começar com a migração de da
 
 ### <a name="migrate-user-data"></a>Migrar dados do usuário
 
-Caso você queira adicionar código que migra os dados do usuário, é melhor executar esse código somente quando o aplicativo é iniciado pela primeira vez. Antes de migrar os dados dos usuários, exiba uma caixa de diálogo para o usuário explicando o que está acontecendo, por que é recomendável e o que vai acontecer com seus dados existentes.
+Se você vai adicionar código que migra os dados do usuário, é melhor executar esse código somente quando o aplicativo é iniciado pela primeira vez. Antes de migrar os dados dos usuários, exiba uma caixa de diálogo para o usuário explicando o que está acontecendo, por que é recomendável e o que vai acontecer com seus dados existentes.
 
 Aqui está um exemplo de como você pode fazer isso em um aplicativo empacotado com base em .NET.
 

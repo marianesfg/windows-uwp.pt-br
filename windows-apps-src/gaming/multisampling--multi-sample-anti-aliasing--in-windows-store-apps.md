@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, várias amostras, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c1634af8589a97f5070ff85909fe12ab16bf8d6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325252"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476881"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span>Multisampling nos apps UWP (Plataforma Universal do Windows)
 
@@ -30,7 +30,7 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
 
 1.  Chame [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) para descobrir quais formatos DXGI podem ser usados com o multisampling. Forneça os formatos de destino de renderização que seu jogo pode usar. O destino de renderização e o destino de resolução devem usar o mesmo formato. Portanto, verifique [**D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RENDERTARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476134) e **D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RESOLVE**.
 
-    **Nível de recurso 9:** Embora o nível de recurso 9 dispositivos [garantirem suporte para formatos de destino de renderização com várias amostras](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), suporte não é garantido para destinos de resolução multisample. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
+    **Nível de recurso 9:** Embora o nível de recurso 9 dispositivos [garantir suporte para formatos de destino de renderização com várias amostras](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), suporte não é garantido para destinos de resolução multisample. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
 
     O código a seguir verifica o suporte a multisampling para todos os valores de DXGI\_FORMAT:
 

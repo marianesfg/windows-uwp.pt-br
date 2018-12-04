@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 076e4b0ddf30a23271bbb6b488f235f7233b28c2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351623"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473806"
 ---
 # <a name="segoe-mdl2-icons"></a>Ícones Segoe MDL2
 
@@ -43,7 +43,7 @@ Todos os glifos na fonte **Segoe MDL2 Assets** têm a mesma largura fixa com uma
 Vários ícones também têm formulários espelhados disponíveis para uso em idiomas que usam a direção de texto da direita para esquerda como árabe, farsi e hebraico.
 
 ## <a name="using-the-icons"></a>Usando os ícones
-Se você estiver desenvolvendo um aplicativo em c# /VB/c + + e XAML, você pode usar os glifos específicos de Segoe MDL2 Assets com a [enumeração de símbolo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
+Se você estiver desenvolvendo um aplicativo em c#/VB/C++ e XAML, você pode usar os glifos específicos de Segoe MDL2 Assets com a [enumeração de símbolo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
@@ -63,7 +63,7 @@ Você também pode usar o recurso estático `SymbolThemeFontFamily` acessar **Se
 
 ## <a name="how-do-i-get-this-font"></a>Como obtenho essa fonte?
 * No Windows 10: Não que precisa fazer nada, a fonte vem com o Windows.
-* Em um Mac, você precisará baixar e instalar a fonte: <a href="https://aka.ms/SegoeFonts">Obtenha a Segoe UI e fontes de ícones MDL2</a>
+* Em um Mac, você precisará baixar e instalar a fonte: <a href="https://aka.ms/SegoeFonts">obter a Segoe UI e fontes de ícones MDL2</a>
 
 ## <a name="icon-list"></a>Lista de ícones
 Tenha em mente que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que podemos mostrar aqui. Muitos ícones são destinados a finalidades específicas e não são normalmente usados em qualquer outro lugar.

@@ -7,11 +7,11 @@ keywords: windows 10, uwp, anúncios, publicidade, AdControl, AdMediatorControl,
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
 ms.openlocfilehash: adac5cfdb1b4a10674fb7173e5b84a86b509f130
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8339405"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475275"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Atualizar seu aplicativo para as bibliotecas mais recentes de anúncios em faixa
 
@@ -27,7 +27,7 @@ Antes desse SDK ser lançado, nós fornecemos anteriormente a classe **AdControl
 
 * Quando o **AdControl** no aplicativo solicitar um novo anúncio, o evento **ErrorOccurred** do controle será acionado e a propriedade **ErrorCode** dos argumentos de evento terá o valor **NoAdAvailable**.
 
-* Quaisquer unidades de publicidade associadas ao aplicativo serão desativadas. Você não pode remover essas unidades desativadas da sua conta do Centro de DePartnerv. Se você atualizar o aplicativo para usar um [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp), ignore essas unidades de anúncio e crie novas.
+* Quaisquer unidades de publicidade associadas ao aplicativo serão desativadas. Você não pode remover essas unidades desativadas da sua conta do DePartnerv. Se você atualizar o aplicativo para usar um [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp), ignore essas unidades de anúncio e crie novas.
 
 * Os anúncios em faixa também não serão mais disponibilizados para qualquer unidade de anúncio usada em mais de um aplicativo. Certifique-se de que suas unidades de anúncio serão usadas em um único aplicativo.
 

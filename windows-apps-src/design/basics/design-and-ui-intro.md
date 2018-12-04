@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 0006d20c1db7da16b885e82fb3f066b081e27349
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336365"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475730"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introdução ao design de aplicativos UWP
 
@@ -30,7 +30,7 @@ Aplicativos UWP executados em todos os [dispositivos Windows 10](../devices/inde
 
 ![mesmo aplicativo em vários dispositivos](images/universal-image-1.jpg)
 
-UWP ajuda ajustando automaticamente elementos de interface do usuário para que ele estiverem legível e fácil de interagir com em todos os dispositivos e tamanhos de tela.
+UWP ajuda ajustando automaticamente os elementos de interface do usuário para que ele estiverem legível e fácil de interagir com em todos os dispositivos e tamanhos de tela.
 
 Quando seu aplicativo é executado em um dispositivo, o sistema usa um algoritmo para normalizar a forma como os elementos da interface do usuário são exibidos na tela. Esse algoritmo de dimensionamento leva em conta a distância de visualização e a densidade da tela (pixels por polegada) para otimizar o tamanho percebido (em vez do tamanho físico). O algoritmo de dimensionamento garante que uma fonte de 24 px no Surface Hub a 3 m de distância seja tão legível para o usuário quanto uma fonte de 24 px no telefone de 5" a alguns centímetros de distância.
 

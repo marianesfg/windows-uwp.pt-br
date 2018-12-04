@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e73452cdcb02798d4ebd225b48272ab77c40fef9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326056"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476058"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Baixar e instalar atualizações de pacote a partir da Store
 
@@ -200,7 +200,7 @@ Quando você cria um envio de pacote no Partner Center para um aplicativo destin
 
 Para marcar um envio de pacote como obrigatório:
 
-1. Entre no [Partner Center](https://partner.microsoft.com/dashboard) e navegue até a página de visão geral do seu aplicativo.
+1. Entre no [Partner Center](https://partner.microsoft.com/dashboard) e navegue até a página de visão geral do aplicativo.
 2. Clique no nome do envio que contém a atualização de pacote que você deseja tornar obrigatória.
 3. Navegue até a página **Pacotes** do envio. Na parte inferior dessa página, selecione **Make this update mandatory** e, em seguida, escolha o dia e hora em que a atualização de pacote e se tornará obrigatória. Essa opção se aplica a todos os pacotes UWP no envio.
 

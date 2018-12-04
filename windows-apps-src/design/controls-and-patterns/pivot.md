@@ -11,11 +11,11 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 48aff6bd0b5f6ce955168bdc5faef67b7f43925e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334256"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475671"
 ---
 # <a name="pivot"></a>Pivô
 
@@ -45,14 +45,14 @@ O controle de pivô, assim como [NavigationView](navigationview.md), sublinha o 
 
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
-Para alcançar comuns de navegação superior e padrões de guias, é recomendável usar o [NavigationView](navigationview.md), que se adapte a diferentes tamanhos de tela automaticamente e permite a personalização maior.
+Para alcançar comuns de navegação superior e padrões de guias, recomendamos usar o [NavigationView](navigationview.md), que se adapte a diferentes tamanhos de tela automaticamente e permite a personalização maior.
 
-No entanto, se sua navegação requer dedo toque, recomendamos usar o pivô.
+No entanto, se sua navegação requer o dedo por toque, recomendamos usar o pivô.
 
 Principais diferenças entre os controles NavigationView e pivô são o comportamento de excedentes padrão e a API de navegação:
 
-- Estouro carrosséis itens, enquanto o NavigationView usa um menu suspenso de estouro para que os usuários possam ver todos os itens de pivô.
-- Pivot manipula a navegação entre as seções de conteúdo, enquanto NavigationView permite mais controle sobre o comportamento de navegação.
+- Estouro carrosséis estouro de itens, enquanto o NavigationView usa um menu suspenso para que os usuários possam ver todos os itens de pivô.
+- Pivot manipula a navegação entre seções de conteúdo, enquanto NavigationView permite mais controle sobre o comportamento de navegação.
 
 ## <a name="use-navigationview-instead-of-pivot"></a>Usar o NavigationView em vez de pivô
 
@@ -112,7 +112,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Esse código imita a experiência de navegação interna do controle de pivô, menos a experiência de toque dedo entre seções de conteúdo. No entanto, como você pode ver, você também pode personalizar vários pontos, incluindo a transição animada, parâmetros de navegação e recursos de pilha.
+Esse código imita a experiência de navegação interna do controle de pivô, menos a experiência de toque-passar o dedo entre seções de conteúdo. No entanto, como você pode ver, você também pode personalizar vários pontos, incluindo a transição animada, parâmetros de navegação e recursos da pilha.
 
 ## <a name="create-a-pivot-control"></a>Criar um controle de pivô
 

@@ -1,24 +1,22 @@
 ---
 title: Instalação do aplicativo UWP a partir de um Servidor Web do Azure
 description: Este tutorial demonstra como configurar um servidor Web do Azure. Verifique se o aplicativo Web pode hospedar pacotes de aplicativo host, invocar e usar o Instalador de aplicativo de maneira eficaz.
-ms.date: 09/30/2018
+ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais, servidor Web do Azure
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f0e4fe6cd2b05c2de4648a410ba43ce27e48922
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.openlocfilehash: 074a8e9941d4314bb35c28b0ee296e9d86fa23a5
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325628"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469207"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Instalar um aplicativo UWP a partir de um aplicativo Web do Azure
 
 O aplicativo do Instalador de aplicativo permite que desenvolvedores e profissionais do setor de TI distribuam aplicativos do Windows 10 hospedando-os em sua própria Rede de disponibilização de conteúdo (CDN. Isso é útil para empresas que não desejam ou precisam publicar seus aplicativos na Microsoft Store, mas ainda querem aproveitar a plataforma de empacotamento e implantação do Windows 10.
 
 Este tópico descreve as etapas para configurar um servidor Web do Azure para pacotes de aplicativo UWP do host e como usar o Instalador de aplicativo para instalar os pacotes de aplicativo.
-
-Neste tutorial, veremos como configurar um servidor IIS para verificar localmente se o aplicativo da Web pode hospedar corretamente os pacotes de aplicativos, invocar e usar o aplicativo de Instalador de aplicativo de forma eficiente. Também há tutoriais para hospedar seus aplicativos Web corretamente nos serviços Web populares na nuvem no campo (Azure e AWS) para garantir que ele atendam aos requisitos de instalação Web do Instalador de aplicativo. Este tutorial passo a passo não exige nenhum conhecimento e é muito fácil de seguir. 
 
 ## <a name="setup"></a>Configuração
 

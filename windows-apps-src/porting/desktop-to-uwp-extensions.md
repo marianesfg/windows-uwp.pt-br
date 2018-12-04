@@ -8,17 +8,17 @@ keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: 19ae09190b916fdaae68a67a2b9c11caa20d30e2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342848"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473613"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Integrar seu aplicativo da área de trabalho empacotado com o Windows 10
 
 Use extensões para integrar seu aplicativo da área de trabalho empacotado com o Windows 10 de maneiras predefinidas.
 
-Por exemplo, use uma extensão para criar uma exceção de firewall, faça seu aplicativo o aplicativo padrão para um tipo de arquivo ou aponte telas para a versão empacotada do seu aplicativo. Para usar uma extensão, basta adicionar alguns XML ao arquivo de manifesto do pacote do seu aplicativo. Nenhum código é necessário.
+Por exemplo, use uma extensão para criar uma exceção de firewall, tornar seu aplicativo o aplicativo padrão para um tipo de arquivo ou aponte telas para a versão empacotada do seu aplicativo. Para usar uma extensão, basta adicionar alguns XML ao arquivo de manifesto do pacote do seu aplicativo. Nenhum código é necessário.
 
 Este tópico descreve essas extensões e as tarefas que você pode executar usando-as.
 
@@ -28,7 +28,7 @@ Ajude na transição dos usuários para o aplicativo empacotado.
 
 * [Aponte os blocos Iniciar e os botões da barra de tarefas existentes para o seu app empacotado](#point)
 * [Faça com que seu aplicativo empacotado abrir arquivos em vez de seu aplicativo da área de trabalho](#make)
-* [Associe seu aplicativo empacotado um conjunto de tipos de arquivo](#associate)
+* [Associe seu aplicativo empacotado um conjunto de tipos de arquivos](#associate)
 * [Adicione opções aos menus de contexto dos arquivos que possuem um determinado tipo de arquivo](#add)
 * [Abra certos tipos de arquivos diretamente usando um URL](#open)
 
@@ -120,7 +120,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 |-------|-------------|
 |Categoria |Sempre ``windows.fileTypeAssociation``.
 |Nome |Uma Id exclusiva para o seu aplicativo. Essa Id é usada internamente para gerar um [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) com hash associado à sua associação de tipo de arquivo. Você pode usar este Id para gerenciar as alterações nas versões futuras do seu aplicativo. |
-|MigrationProgId |O [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que descreve o aplicativo, o componente e a versão do aplicativo da área de trabalho do qual você quer herdar associações de arquivo.|
+|MigrationProgId |O [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que descreve o aplicativo, o componente e a versão do aplicativo da área de trabalho do qual você quer herdar associações de arquivos.|
 
 #### <a name="example"></a>Exemplo
 
@@ -152,9 +152,9 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 <a id="associate" />
 
-### <a name="associate-your-packaged-application-with-a-set-of-file-types"></a>Associe seu aplicativo empacotado um conjunto de tipos de arquivo
+### <a name="associate-your-packaged-application-with-a-set-of-file-types"></a>Associe seu aplicativo empacotado um conjunto de tipos de arquivos
 
-Seu aplicativo empacotado pode ser associado com extensões de tipo de arquivo. Se um usuário clica um arquivo e, em seguida, selecionar a opção **Abrir com** , seu aplicativo aparece na lista de sugestões.
+Seu aplicativo empacotado pode ser associado com extensões de tipo de arquivo. Se um usuário clica um arquivo e, em seguida, seleciona a opção **Abrir com** , seu aplicativo aparecerá na lista de sugestões.
 
 #### <a name="xml-namespace"></a>Namespace XML
 
@@ -242,8 +242,8 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 |Categoria | Sempre ``windows.fileTypeAssociation``.
 |Nome |Uma Id exclusiva para o seu aplicativo. |
 |Verb |O nome que aparece no menu de contexto do Explorador de arquivos. Essa sequência é localizável usando ```ms-resource```.|
-|Id |A Id exclusiva do verbo. Se seu aplicativo for um aplicativo UWP, isso é passado ao seu aplicativo como parte de seus argumentos de evento de ativação para que ele possa manipular a seleção do usuário adequadamente. Se seu aplicativo for um app empacotado totalmente confiável, ele receberá parâmetros (veja o próximo marcador). |
-|Parâmetros |A lista de parâmetros de argumento e valores associados ao verbo. Se seu aplicativo for um app empacotado totalmente confiável, esses parâmetros são passados para o aplicativo como argumentos de evento quando o aplicativo for ativado. Você pode personalizar o comportamento do seu aplicativo com base em diferentes verbos de ativação. Se uma variável pode conter um caminho de arquivo, envolva o valor do parâmetro entre aspas. Isso evitará quaisquer problemas que aconteçam nos casos em que o caminho inclua espaços. Se seu aplicativo for um aplicativo UWP, você não pode passar parâmetros. O aplicativo recebe o Id em vez disso (veja a bala anterior).|
+|Id |A Id exclusiva do verbo. Se seu aplicativo for um aplicativo UWP, isso é passado ao seu aplicativo como parte de seus argumentos de evento de ativação para que ele possa manipular a seleção do usuário adequadamente. Se seu aplicativo for um aplicativo empacotado totalmente confiável, ele receberá parâmetros (veja o próximo marcador). |
+|Parâmetros |A lista de parâmetros de argumento e valores associados ao verbo. Se seu aplicativo for um aplicativo empacotado totalmente confiável, esses parâmetros são passados para o aplicativo como argumentos de evento quando o aplicativo for ativado. Você pode personalizar o comportamento do seu aplicativo com base em diferentes verbos de ativação. Se uma variável pode conter um caminho de arquivo, envolva o valor do parâmetro entre aspas. Isso evitará quaisquer problemas que aconteçam nos casos em que o caminho inclua espaços. Se seu aplicativo for um aplicativo UWP, você não pode passar parâmetros. O aplicativo recebe o Id em vez disso (veja a bala anterior).|
 |Estendido |Especifica que o verbo só aparece se o usuário mostrar o menu de contexto segurando a tecla **Shift** antes de clicar com o botão direito no arquivo. Esse atributo é opcional e o padrão é um valor **False** (por exemplo, mostrar sempre o verbo) se não listado. Você especifica esse comportamento individualmente para cada verbo (exceto para "Abrir", que sempre será **False**).|
 
 #### <a name="example"></a>Exemplo
@@ -342,7 +342,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 ### <a name="create-firewall-exception-for-your-app"></a>Criar a exceção de firewall para o seu aplicativo
 
-Se seu aplicativo precisar de comunicação através de uma porta, você pode adicionar seu aplicativo à lista de exceções do firewall.
+Se seu aplicativo precisar de comunicação através de uma porta, você pode adicionar seu aplicativo à lista de exceções de firewall.
 
 #### <a name="xml-namespace"></a>Namespace XML
 
@@ -1090,7 +1090,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
 Se seu aplicativo estiver aberto quando os usuários instalarem uma atualização para ele, o aplicativo será fechado.
 
-Se você quiser desse aplicativo ser reiniciado após a atualização, chame a função [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) em cada processo que você deseja reiniciar.
+Se você quiser que esse aplicativo ser reiniciado após a atualização, chame a função [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) em cada processo que você deseja reiniciar.
 
 Cada janela ativa em seu aplicativo recebe uma mensagem [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) . Neste ponto, seu aplicativo pode chamar a função [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) novamente para atualizar a linha de comando, se necessário.
 
@@ -1107,15 +1107,15 @@ Depois que a atualização for concluída, seu aplicativo for reiniciado.
 
 Integre-se com outros aplicativos, inicie outros processos ou compartilhe informações.
 
-* [Fazer com que seu aplicativo apareça como o destino de impressão em aplicativos que dão suporte à impressão](#printing)
+* [Fazer com que seu aplicativo apareça como o destino de impressão em aplicativos que dão suporte a impressão](#printing)
 * [Compartilhe fontes com outros aplicativos do Windows](#fonts)
 * [Inicie um processo Win32 a partir de um aplicativo Universal Windows Platform (UWP)](#win32-process)
 
 <a id="printing" />
 
-### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>Fazer com que seu aplicativo apareça como o destino de impressão em aplicativos que dão suporte à impressão
+### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>Fazer com que seu aplicativo apareça como o destino de impressão em aplicativos que dão suporte a impressão
 
-Os usuários desejarem imprimir dados de outro aplicativo, como o bloco de notas, você pode fazer com que seu aplicativo apareça como um alvo de impressão na lista de destinos de impressão disponíveis do aplicativo.
+Os usuários desejarem imprimir dados de outro aplicativo, como o bloco de notas, você pode fazer com que seu aplicativo seja exibido como destino de impressão na lista de destinos de impressão disponíveis do aplicativo.
 
 Você precisará modificar seu aplicativo para que ele receba dados de impressão no formato XML Paper Specification (XPS).
 
@@ -1264,7 +1264,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Package>
 ```
 
-Esta extensão pode ser útil se você quiser criar uma interface do usuário de plataforma Universal do Windows que é executado em todos os dispositivos, mas desejar componentes do seu aplicativo Win32 continuem funcionando com confiança total.
+Essa extensão pode ser útil se você quiser criar uma interface do usuário de plataforma Universal do Windows que é executado em todos os dispositivos, mas quiser que os componentes de seu aplicativo Win32 continuem funcionando com confiança total.
 
 Basta crie um pacote de aplicativo do Windows para seu aplicativo Win32. Em seguida, adicione esta extensão ao arquivo de pacote do seu aplicativo UWP. Essas extensões indicam que você deseja iniciar um arquivo executável no pacote de aplicativo do Windows.  Se você quiser se comunicar entre seu aplicativo UWP e seu aplicativo Win32, você pode configurar um ou mais [serviços de aplicativo](../launch-resume/app-services.md) para fazer isso. Você pode ler mais sobre esse cenário [aqui ](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).
 

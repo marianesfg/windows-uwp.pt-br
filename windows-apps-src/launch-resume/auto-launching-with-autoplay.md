@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 714da78a8860eec92bce9389185f52a58e45b44e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350936"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473342"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>Iniciando automaticamente com a Reprodução Automática
 
@@ -432,7 +432,7 @@ CustomEvent=AutoPlayCustomEventQuickstart
 2.  Abra o arquivo Package.appxmanifest e selecione a guia **Funcionalidades**. Selecione a funcionalidade **Armazenamento Removível**. Isso dá ao aplicativo acesso aos arquivos e pastas em dispositivos de armazenamento removíveis.
 3.  No arquivo de manifesto, selecione a guia **Declarações**. Na lista suspensa **Declarações Disponíveis**, selecione **Conteúdo de Reprodução Automática** e clique em **Adicionar**. Selecione o novo item **Conteúdo da Reprodução Automática** que foi adicionado à lista **Declarações Suportadas**.
 
-    **Observação**como alternativa, você também pode optar por adicionar uma declaração de **Dispositivo de reprodução automática** para seu evento de reprodução automática personalizado.  
+    **Observação**como alternativa, você também pode optar por adicionar uma declaração do **Dispositivo de reprodução automática** para seu evento de reprodução automática personalizado.  
 4.  Na seção **Ações de Inicialização** para a declaração de evento **Conteúdo de Reprodução Automática**, insira os valores da tabela abaixo na primeira ação de inicialização.
 5.  Na lista suspensa **Declarações Disponíveis**, selecione **Associações de Tipo de Arquivo** e clique em **Adicionar**. Nas Propriedades da nova declaração **Associações de Tipo de Arquivo**, defina o campo **Nome de Exibição** como **Mostrar Arquivos .ms** e o campo **Nome** como **ms\_association**. Na seção **Tipos de Arquivo com Suporte**, clique em **Adicionar Novo**. Defina o campo **Tipo de Arquivo** como **.ms**. Para eventos de conteúdo, a Reprodução Automática não mostra os tipos de arquivo que não estejam explicitamente associados ao seu aplicativo.
 6.  Salve e feche o arquivo de manifesto.

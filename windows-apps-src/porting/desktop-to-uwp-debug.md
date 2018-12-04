@@ -8,19 +8,19 @@ keywords: windows 10, uwp
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ms.openlocfilehash: 20351737e17dce7654385d6843280005cae9800c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325974"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473846"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Executar, depurar e testar um aplicativo da área de trabalho empacotado
 
-Execute seu aplicativo empacotado e ver sua aparência sem ter que assiná-lo. Em seguida, defina pontos de interrupção e percorra o código. Quando você estiver pronto para testar seu aplicativo em um ambiente de produção, assinar seu aplicativo e, em seguida, instalá-lo. Este tópico mostra como fazer cada uma dessas coisas.
+Execute seu aplicativo empacotado e ver sua aparência sem ter que assiná-lo. Em seguida, defina pontos de interrupção e percorra o código. Quando você estiver pronto para testar seu aplicativo em um ambiente de produção, assinar o aplicativo e instalá-lo. Este tópico mostra como fazer cada uma dessas coisas.
 
 <a id="run-app" />
 
-## <a name="run-your-application"></a>Executar seu aplicativo
+## <a name="run-your-application"></a>Executar o aplicativo
 
 Você pode executar seu aplicativo para testá-lo localmente sem precisar obter um certificado e assiná-lo. Como executar o aplicativo depende de qual ferramenta você usou para criar o pacote.
 
@@ -40,7 +40,7 @@ Para iniciar seu aplicativo, encontre-o no menu Iniciar do Windows.
 ![Aplicativo empacotado no menu Iniciar](images/desktop-to-uwp/converted-app-installed.png)
 
 > [!NOTE]
-> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade em que você instale seu aplicativo empacotado para deve estar formatada no formato NTFS.
+> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade em que você instale seu aplicativo empacotado para deve ser formatada para o formato NTFS.
 
 ## <a name="debug-your-app"></a>Depurar seu aplicativo
 
@@ -68,9 +68,9 @@ Se você fizer alterações ao seu aplicativo para corrigir bugs, reempacote-o u
 
 ### <a name="debug-the-entire-application-lifecycle"></a>Depurar o ciclo de vida inteiro do aplicativo
 
-Em alguns casos, convém controle refinado sobre o processo de depuração, incluindo a capacidade de depurar seu aplicativo antes de começar.
+Em alguns casos, convém controle refinado sobre o processo de depuração, incluindo a capacidade de depurar seu aplicativo antes que ele inicie.
 
-Você pode usar o [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) para obter controle total sobre o ciclo de vida do aplicativo incluindo suspensão, retomada e encerramento do aplicativo.
+Você pode usar o [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) para obter controle total sobre o ciclo de vida do aplicativo incluindo suspensão, retomada e encerramento.
 
 O [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) está incluso no SDK do Windows.
 

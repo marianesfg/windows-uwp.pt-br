@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, listagem, descrição, página da store, notas de versão, título
 ms.localizationpriority: medium
 ms.openlocfilehash: a913c522450a8d28c03066c922df2e3e2972f92f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323460"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469874"
 ---
 # <a name="create-app-store-listings"></a>Criar listagens da Store do app
 
@@ -23,7 +23,7 @@ Muitos dos campos em uma **listagem da Store** são opcionais, mas sugerimos que
 > [!TIP]
 > Você pode, opcionalmente, [Importar e exportar listagens da loja](import-and-export-store-listings.md) se você prefere inserir as informações de listagem offline em um arquivo. csv, em vez de fornecer informações e carregando arquivos diretamente no Partner Center. O uso da opção de importar e exportar pode ser especialmente útil se você tiver listagens em vários idiomas, já que ele permite fazer várias atualizações ao mesmo tempo. 
 
-Se seu aplicativo publicado anteriormente é compatível com o Windows 8. x e/ou Windows Phone 8. x ou versões anteriores, você pode [criar listagens da loja específicas de plataforma](create-platform-specific-store-listings.md) para mostrar aos clientes. 
+Se seu aplicativo publicado anteriormente é compatível com o Windows 8. x e/ou Windows Phone 8. x ou anterior, você pode [criar listagens da loja específicas de plataforma](create-platform-specific-store-listings.md) para mostrar aos clientes. 
 
 ## <a name="store-listing-languages"></a>Idiomas da listagem da Loja
 
@@ -40,7 +40,7 @@ Quando terminar de fazer suas seleções, clique em **Salvar** para retornar à 
 
 ## <a name="add-and-edit-store-listing-info"></a>Adicionar e editar informações de listagem da loja
 
-Para editar uma listagem da loja, selecione o nome do idioma na página de visão geral do envio. Você deve editar cada idioma separadamente, a menos que você escolha exportar suas listagens da loja e trabalhar offline e, em seguida, importe todos os dados de listagem ao mesmo tempo. Para obter mais informações sobre como isso funciona, consulte [Importar e exportar listagens da loja](import-and-export-store-listings.md).
+Para editar uma listagem da loja, selecione o nome do idioma na página de visão geral do envio. Você deve editar cada idioma separadamente, a menos que você escolha exportar suas listagens da loja e trabalhar offline e, em seguida, importar todos os dados de listagem ao mesmo tempo. Para obter mais informações sobre como isso funciona, consulte [Importar e exportar listagens da loja](import-and-export-store-listings.md).
 
 Os campos disponíveis são descritos abaixo.
 
@@ -48,12 +48,12 @@ Os campos disponíveis são descritos abaixo.
 
 Essa caixa de lista suspensa permite que você especifique qual nome deve ser usado na listagem da loja (se você tiver reservado mais de um nome para o aplicativo).
 
-Se você tiver carregado pacotes no mesmo idioma como o armazenamento de listagem você trabalha no, o nome usado nesses pacotes será selecionado. Se você precisar renomear [o aplicativo](manage-app-names.md#rename-an-app-that-has-already-been-published) depois que ele já tiver sido publicado, você pode selecionar um nome diferente reservado aqui quando você cria um novo envio, após ter carregado os pacotes que usam o novo nome.
+Se você tiver carregado pacotes no mesmo idioma como o armazenamento de listagem que você está trabalhando no, o nome usado nesses pacotes será selecionado. Se você precisar renomear [o aplicativo](manage-app-names.md#rename-an-app-that-has-already-been-published) depois que ele já tiver sido publicado, você pode selecionar um nome diferente reservado aqui quando você cria um novo envio, depois que você tiver carregado pacotes que usam o novo nome.
 
-Se você ainda não tiver carregado pacotes para o idioma você está trabalhando e você já reservou mais de um nome, você precisará selecionar um dos nomes de aplicativo reservados, já que não existe um pacote associado nesse idioma no qual obter o nome.
+Se você ainda não tiver carregado pacotes para o idioma que você está trabalhando e reservados mais de um nome, você precisará selecionar um dos nomes de aplicativo reservados, pois não há um pacote associado nesse idioma no qual obter o nome.
 
 > [!NOTE]
-> O **nome do produto** que você selecionar somente se aplica a listagem da loja no idioma estiver trabalhando em. Ela não afeta o nome exibido quando um usuário instala o aplicativo; Esse nome é proveniente o manifesto do pacote que é instalado. Para evitar confusão, é recomendável que os pacotes e listagem da loja de cada idioma usem o mesmo nome.
+> O **nome do produto** que você selecionar somente se aplica a listagem da loja no idioma estiver trabalhando em. Ela não afeta o nome exibido quando um usuário instala o aplicativo; Esse nome vem de manifesto do pacote que é instalado. Para evitar confusão, recomendamos que os pacotes e listagem da loja de cada idioma usem o mesmo nome.
 
 ## <a name="description"></a>Descrição
 

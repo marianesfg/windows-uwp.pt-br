@@ -6,22 +6,22 @@ ms.topic: article
 keywords: windows 10, uwp, azure ad, locatário do azure, locatário do aad, locatário do azure ad, gerenciamento de locatário, locatários
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f807799740d7e832da2f6a6fa3ea63e00deaee4
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8332080"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8474687"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a>Associar o Azure Active Directory à sua conta do Partner Center
 
 Em ordem para [Adicionar e gerenciar usuários da conta](add-users-groups-and-azure-ad-applications.md), você deve primeiro associar sua conta do Partner Center Azure Active Directory da sua organização. 
 
-[Partner Center](https://partner.microsoft.com/dashboard) aproveita o Azure AD para contas de vários usuários acesso e gerenciamento. Se sua organização já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem Azure AD. Caso contrário, você pode criar um novo inquilino do Azure AD no Partner Center sem nenhum custo adicional.
+[Partner Center](https://partner.microsoft.com/dashboard) aproveita o Azure AD para contas de vários usuários acesso e gerenciamento. Se sua organização já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem Azure AD. Caso contrário, você pode criar um novo inquilino do Azure AD dentro do Partner Center sem nenhum custo adicional.
 
 > [!TIP]
 > Este tópico é específico para o programa de desenvolvedor de aplicativos do Windows no [Partner Center](https://partner.microsoft.com/dashboard), mas a associação de um locatário e gerenciamento de usuários funcionam da mesma forma para contas no programa de aplicativo de área de trabalho do Windows (consulte o [Programa de aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) obter mais informações) e no programa de desenvolvedor de Hardware do Windows (onde referências para a função **gerente** também se aplicariam a contas de Hardware com a função de **administrador** ; consulte [Administração do painel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) para obter mais informações).
 
-Um único locatário do Azure AD pode ser associado a várias contas do Partner Center. Você só precisa ter um locatário do Azure AD associado à sua conta do Partner Center para adicionar vários usuários da conta, mas você também tem a opção de adicionar vários locatários do Azure AD para uma única conta do Partner Center. Qualquer usuário com a função **gerente** de conta do Partner Center terá a opção de adicionar e remover locatários do Azure AD da conta.
+Um único locatário do Azure AD pode ser associado a várias contas do Partner Center. Você só precisa ter um locatário do Azure AD associado à sua conta do Partner Center para adicionar vários usuários da conta, mas você também tem a opção de adicionar vários locatários do Azure AD para uma única conta do Partner Center. Qualquer usuário com a função **gerente** na conta do Partner Center terá a opção de adicionar e remover locatários do Azure AD da conta.
 
 > [!IMPORTANT]
 > Depois de associar sua conta do Partner Center com seu locatário Azure AD, para adicionar e gerenciar usuários de contas nesse locatário, você precisará entrar no Partner Center como um usuário no mesmo locatário que tem a função **gerente** .
@@ -74,7 +74,7 @@ Qualquer usuário que tenha a função **gerente** para uma conta do Partner Cen
 > [!IMPORTANT]
 > Quando você remove um locatário, todos os usuários que foram adicionados à conta do parceiro do locatário não será capazes de entrar conta. 
 
-Para remover um locatário, encontre o nome na página **locatários** (nas **configurações da conta**) e selecione **Remover**. Você precisará confirmar que deseja remover o locatário. Depois que você fizer isso, nenhum usuário que poderão acessar a conta do Partner Center e qualquer permissões que você configurou para os usuários serão removidas.
+Para remover um locatário, encontre o nome na página **locatários** (nas **configurações da conta**) e selecione **Remover**. Você precisará confirmar que deseja remover o locatário. Depois que você fizer isso, nenhum usuário nesse locatário não poderão entrar na conta do Partner Center e as permissões que você configurou para esses usuários serão removidas.
 
 > [!TIP]
 > Você não pode remover um locatário se estiver atualmente conectado ao Partner Center usando uma conta no mesmo locatário. Para remover um locatário, você deve entrar Partner Center como um **gerente** para outro locatário que esteja associado à conta. Se houver apenas um locatário associado com a conta, esse locatário só poderá ser removido após o acesso à conta da Microsoft que abriu a conta.
