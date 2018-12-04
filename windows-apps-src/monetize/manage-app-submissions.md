@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 7aabaa932c8bd21baf81970564b15421931ad39f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347188"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482201"
 ---
 # <a name="manage-app-submissions"></a>Gerenciar envios de aplicativo
 
 A API de envio da Microsoft Store oferece métodos que é possível usar para gerenciar envios dos aplicativos, inclusive distribuições de pacote graduais. Para obter uma introdução à API de envio da Microsoft Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
 > [!IMPORTANT]
-> Se você usar a API de envio da Microsoft Store para criar um envio para um aplicativo, certifique-se de fazer outras alterações no envio somente usando a API, em vez de Partner Center. Se você usar o Partner Center para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
+> Se você usar a API de envio da Microsoft Store para criar um envio para um aplicativo, certifique-se de fazer outras alterações no envio somente usando a API, em vez do Partner Center. Se você usar o Partner Center para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
 
 > [!IMPORTANT]
 > Você não pode usar essa API para publicar os envios de [compras de volume por meio da Microsoft Store para Empresas e da Microsoft Store para Educação](../publish/organizational-licensing.md) ou publicar os envios de [aplicativos LOB](../publish/distribute-lob-apps-to-enterprises.md) diretamente para empresas. Para esses dois cenários, você deve usar o Partner Center para publicar o envio.
@@ -139,7 +139,7 @@ Para criar um envio de um aplicativo, siga este processo.
 
     Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
 
-7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar monitorando o progresso do envio usando o método anterior ou visitando o Partner Center.
+7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar a monitorar o progresso do envio usando o método anterior ou visitando o Partner Center.
 
 <span id="manage-gradual-package-rollout">
 
@@ -388,7 +388,7 @@ Esse recurso contém informações de venda de um aplicativo.
 > [!IMPORTANT]
 > O recurso **Venda** não tem mais suporte, e atualmente você não pode acessar nem modificar os dados de venda de um envio de aplicativo usando a API de envio da Microsoft Store. No futuro, atualizaremos a API de envio da Microsoft Store para apresentar uma nova maneira de acessar programaticamente as informações de vendas para envios de aplicativo.
 >    * Depois de chamar o [método GET para obter um envio de aplicativo](get-an-app-submission.md), o valor de *sales* estará vazio. Você pode continuar a usar o Partner Center para obter os dados de venda de seu envio de aplicativo.
->    * Ao chamar o [método PUT para atualizar um envio de aplicativo](update-an-app-submission.md), as informações no valor de *sales* serão ignoradas. Você pode continuar a usar o Partner Center para modificar os dados de venda de seu envio de aplicativo.
+>    * Ao chamar o [método PUT para atualizar um envio de aplicativo](update-an-app-submission.md), as informações no valor de *sales* serão ignoradas. Você pode continuar a usar o Partner Center para alterar os dados de venda de seu envio de aplicativo.
 
 Esse recurso tem os valores a seguir.
 
@@ -458,7 +458,7 @@ Esse recurso contém dados de imagem e ícone para uma listagem do aplicativo. P
 
 ### <a name="gaming-options-resource"></a>Recurso de opções de jogo
 
-Esse recurso contém configurações relacionadas a jogo para o app. Os valores nesse recurso correspondem às [configurações do jogo](../publish/enter-app-properties.md#game-settings) para envios no Partner Center.
+Esse recurso contém configurações relacionadas a jogo para o app. Os valores nesse recurso correspondem às [configurações de jogo](../publish/enter-app-properties.md#game-settings) para envios no Partner Center.
 
 ```json
 {
@@ -637,7 +637,7 @@ Esse recurso contém [configurações de distribuição de pacote](#manage-gradu
 | fallbackSubmissionId    |  string   |  A ID da submissão que será recebido por clientes que não recebem os pacotes de lançamento gradual.   |          
 
 > [!NOTE]
-> Os valores *packageRolloutStatus* e *fallbackSubmissionId* são atribuídos pelo Centro de parceiro e não devem ser definidos pelo desenvolvedor. Se você incluir esses valores no corpo da solicitação, esses valores serão ignorados.
+> Os valores *packageRolloutStatus* e *fallbackSubmissionId* são atribuídos pelo Centro de parceiros e não devem ser definidos pelo desenvolvedor. Se você incluir esses valores no corpo da solicitação, esses valores serão ignorados.
 
 <span id="trailer-object" />
 

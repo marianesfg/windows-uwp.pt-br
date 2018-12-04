@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, impressão
 ms.localizationpriority: medium
 ms.openlocfilehash: 16fca2fc98450375ec2dcf7a0d10775b2bba1bf2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8351068"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485272"
 ---
 # <a name="customize-the-print-preview-ui"></a>Personalizar a interface do usuário para visualização de impressão
 
@@ -48,7 +48,7 @@ Essas opções são definidas na classe [**StandardPrintTaskOptions**](https://m
 
 No entanto, as modificações feitas com o uso desse método só afetam a interface do usuário para visualização de impressão. O usuário sempre pode acessar todas as opções com suporte na impressora tocando em **Mais configurações** na interface do usuário para visualização de impressão.
 
-**Observação**embora seu aplicativo possa especificar qualquer opção de impressão a ser exibido, apenas aquelas que têm suporte na impressora selecionada são mostradas na interface do usuário para visualização de impressão. A interface do usuário para impressão não mostrará nenhuma opção para a qual não haja suporte na impressora selecionada.
+**Observação**Embora o seu aplicativo pode especificar qualquer opção de impressão a ser exibido, apenas aquelas que têm suporte na impressora selecionada são mostradas na visualização de impressão da interface do usuário. A interface do usuário para impressão não mostrará nenhuma opção para a qual não haja suporte na impressora selecionada.
 
  
 
@@ -96,7 +96,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**Importante**chamar ( [**displayedoptions. Clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)) remove todas as opções de impressão da interface do usuário, incluindo o link **mais configurações** de visualização de impressão. Não deixe de acrescentar as opções que você quer mostrar na interface de usuário para visualização de impressão.
+**Importante**chamada ( [**displayedoptions. Clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)) remove todas as opções de impressão da interface do usuário, incluindo o link **mais configurações** de visualização de impressão. Não deixe de acrescentar as opções que você quer mostrar na interface de usuário para visualização de impressão.
 
 ### <a name="specify-default-options"></a>Especificar opções padrão
 

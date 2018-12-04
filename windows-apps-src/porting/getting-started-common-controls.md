@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 05cf78d7dec260b990d2ce71662e3db6eb07d07f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8327979"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482431"
 ---
 # <a name="getting-started-common-controls"></a>Introdução: controles comuns
 
 
 ## <a name="common-controls-list"></a>Lista de controles comuns
 
-Na seção anterior, você trabalhou com apenas dois controles: botões e blocos de texto. É claro, há muito mais controles que estão disponíveis para você. Aqui estão alguns controles comuns que você usará em seus aplicativos e seus equivalentes do iOS. Os controles de iOS estão listados em ordem alfabética, perto dos controles da Plataforma Universal do Windows (UWP) mais similares.
+Na seção anterior, você trabalhou com apenas dois controles: botões e blocos de texto. Obviamente, há muito mais controles que estão disponíveis para você. Aqui estão alguns controles comuns que você usará em seus aplicativos e seus equivalentes do iOS. Os controles de iOS estão listados em ordem alfabética, perto dos controles da Plataforma Universal do Windows (UWP) mais similares.
 
 O que há de mais inteligente com relação aos controles UWP é que eles podem perceber em qual tipo de dispositivo estão sendo executados e mudar a aparência e a funcionalidade deles de acordo. Por exemplo, se seu projeto usa o controle [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/br211681), é bastante inteligente ele se otimizar para ter aparência e comportamento diferentes em um desktop e em um telefone. Você não precisa fazer nada: os controles se ajustam no tempo de execução.
 
@@ -30,7 +30,7 @@ O que há de mais inteligente com relação aos controles UWP é que eles podem 
 | Seletor de data (UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
 | Visualização de imagem (UIImageView) | [Imagem](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Consulte também [Image and ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |
 | Rótulo (UILabel) | [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) <br/> Consulte também [Guia de início rápido: exibindo texto](https://msdn.microsoft.com/library/windows/apps/xaml/hh700392) |
-| Visualização de mapa (MKMapView) e representante de visualização de mapa (MKMapViewDelegate) | Consulte [Bing mapas para aplicativos UWP](http://go.microsoft.com/fwlink/p/?LinkId=263496) |
+| Visualização de mapa (MKMapView) e representante de visualização de mapa (MKMapViewDelegate) | Consulte [Bing Maps para aplicativos UWP](http://go.microsoft.com/fwlink/p/?LinkId=263496) |
 | Controlador de navegação (UINavigationController) e representante de controlador de navegação (UINavigationControllerDelegate) | [Frame](https://msdn.microsoft.com/library/windows/apps/br242682) <br/> Consulte também [Navegação](https://msdn.microsoft.com/library/windows/apps/mt187344) |
 | Controle de página (UIPageControl) | [Page](https://msdn.microsoft.com/library/windows/apps/br227503) <br/> Consulte também [Navegação](https://msdn.microsoft.com/library/windows/apps/mt187344) |
 | Visualização de seletor (UIPickerView) e representante de visualização de seletor (UIPickerViewDelegate) | [ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348) <br/> Consulte também [Adicionando caixas de combinação e caixas de listagem](https://msdn.microsoft.com/library/windows/apps/xaml/hh780616) |

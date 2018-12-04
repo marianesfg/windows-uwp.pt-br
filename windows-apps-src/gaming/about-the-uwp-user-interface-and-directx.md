@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, directx, objeto de app
 ms.localizationpriority: medium
 ms.openlocfilehash: e12ad6ce221440e8840006b3883980721b899ae6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324553"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484937"
 ---
 # <a name="the-app-object-and-directx"></a>Objeto de aplicativo e DirectX
 
@@ -32,7 +32,7 @@ Primeiramente, vejamos os namespaces do Windows Runtime que você deve incluir (
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **Observação**  se você não estiver desenvolvendo um aplicativo UWP, use os componentes de interface do usuário fornecidos nas bibliotecas específicas de JavaScript ou XAML e namespaces em vez dos tipos fornecidos nesses namespaces.
+> **Observação**  se você não estiver desenvolvendo um aplicativo UWP, use os componentes de interface do usuário fornecidos em bibliotecas específicas de JavaScript ou XAML e namespaces em vez dos tipos fornecidos nesses namespaces.
 
  
 

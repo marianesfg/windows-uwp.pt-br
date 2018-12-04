@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, direct3d 9, direct3d 11, alterações
 ms.localizationpriority: medium
 ms.openlocfilehash: ecdd8591efb3920d2cfe333aa8ec02c65c1a1465
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328857"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8486634"
 ---
 # <a name="important-changes-from-direct3d-9-to-direct3d-11"></a>Alterações importantes do Direct3D 9 para o Direct3D 11
 
@@ -105,7 +105,7 @@ Todos os sombreadores são escritos em HLSL usando um perfil que corresponde a u
 
 O Direct3D 9 gerenciava as restrições de sombreadores usando uma matriz compartilhada com SetVertexShaderConstant e SetPixelShaderConstant. O Direct3D 11 usa buffers constantes, que são recursos como um buffer de vértice ou índice. Os buffers constantes são projetados para atualização eficiente. Em vez de as constantes do sombreador serem organizadas em uma matriz global, você deve organizá-las em agrupamentos lógicos e gerenciá-las por meio de um ou mais buffers constantes. Ao fazer a portabilidade de um jogo do Direct3D 9 para Direct3D 11, planeje a organização dos buffers constantes de modo a atualizá-los corretamente. Por exemplo, agrupe constantes do sombreador que não sejam atualizadas a cada quadro e um buffer constante separado, para que você não precise carregar constantemente esses dados no adaptador gráfico juntamente com constantes mais dinâmicas do sombreador.
 
-> **Observação**  aplicativos mais Direct3D 9 amplo uso de sombreadores, mas às vezes usava o comportamento de funções fixas herdados. O Direct3D 11 usa apenas um modelo de sombreamento programável. Os recursos de funções fixas herdadas do Direct3D 9 foram preteridos.
+> **Observação**  aplicativos mais Direct3D 9 amplo uso de sombreadores, mas às vezes usava o comportamento de função fixa herdados. O Direct3D 11 usa apenas um modelo de sombreamento programável. Os recursos de funções fixas herdadas do Direct3D 9 foram preteridos.
 
  
 

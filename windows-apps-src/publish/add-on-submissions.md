@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, cra, compra realizada em aplicativo, produto no aplicativo, envio de cra
 ms.localizationpriority: medium
 ms.openlocfilehash: 3dc3e9b928c544b8552abc6c289c682694f623c0
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347208"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484051"
 ---
 # <a name="add-on-submissions"></a>Envios de complemento
 
 Complementos (também às vezes conhecidos como produtos no aplicativo) são itens suplementares para seu aplicativo que podem ser comprados pelos clientes. Um complemento pode ser um divertido novo recurso, um novo nível de jogo ou qualquer coisa que você acha que manterá os usuários envolvidos. Os complementos não são somente uma ótima forma de ganhar dinheiro, eles também ajudam a direcionar a interação e o compromisso do cliente.
 
-Complementos são publicados por meio [Do Partner Center](https://partner.microsoft.com/dashboard)e exigem que você tenha uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100)ativa. Você também precisará [habilitar os complementos](../monetize/in-app-purchases-and-trials.md) no código de seu aplicativo.
+Complementos são publicados por meio [Do Partner Center](https://partner.microsoft.com/dashboard)e exigem que você tenha uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100)de ativa. Você também precisará [habilitar os complementos](../monetize/in-app-purchases-and-trials.md) no código de seu aplicativo.
 
 A primeira etapa no processo de envio de complemento é criar o complemento no Partner Center, [Definindo o tipo de produto e a ID do produto](set-your-add-on-product-id.md). Depois disso, você criará um envio para que seu complemento possa ser adquirido através da Microsoft Store. Você pode enviar um complemento ao mesmo tempo em que [envia seu aplicativo](app-submissions.md) ou pode trabalhar nele de forma independente. E você pode fazer [atualizações](#updating-an-add-on-after-publication) nos complementos depois que o aplicativo estiver na Store, sem precisar reenviar o aplicativo.
 
@@ -83,9 +83,9 @@ Quando você terminar de inserir essas informações, clique em **Enviar para a 
 
 Você pode fazer alterações em um complemento publicado a qualquer momento. Alterações de complemento são enviadas e publicadas independentemente do seu aplicativo, portanto, você geralmente não precisa atualizar o aplicativo inteiro para fazer alterações em um complemento, como atualizar o preço ou a descrição.
 
-Para enviar atualizações, acesse a página do add-on no Partner Center e clique em **Atualizar**. Isso criará um novo envio para o complemento, usando as informações do seu envio anterior como ponto de partida. Faça as alterações que você deseja como e clique em **Enviar à loja**.
+Para enviar atualizações, acesse a página do complemento no Partner Center e clique em **Atualizar**. Isso criará um novo envio para o complemento, usando as informações do seu envio anterior como um ponto de partida. Faça as alterações que você deseja, como e clique em **Enviar à loja**.
 
 Se quiser remover um complemento oferecido anteriormente, você poderá fazer isso criando um novo envio e alterando a opção [Distribuição e visibilidade](set-add-on-pricing-and-availability.md) para **Oculto na Microsoft Store** com a opção **Interromper aquisição**. Não se esqueça de atualizar o código do aplicativo conforme necessário para também remover referências ao complemento (especialmente se seu aplicativo publicado anteriormente dá suporte ao Windows 8.1 anterior; essa configuração de visibilidade não se aplica a esses clientes).
 
 > [!IMPORTANT]
-> Se seu aplicativo publicado anteriormente está disponível para clientes no Windows 8. x, você deverá criar e publicar um novo envio de aplicativo para tornar as atualizações de complemento visíveis aos clientes. Da mesma forma, se você adicionar novos complementos a um aplicativo destinado ao Windows 8.x depois que o aplicativo for publicado, deverá atualizar o código do seu aplicativo para fazer referência a esses complementos e, em seguida, reenviar o aplicativo. Caso contrário, os novos complementos não serão visíveis aos clientes no Windows 8.x.
+> Se seu aplicativo publicado anteriormente está disponível para clientes no Windows 8. x, você precisará criar e publicar um novo envio de aplicativo para tornar as atualizações de complemento visíveis aos clientes. Da mesma forma, se você adicionar novos complementos a um aplicativo destinado ao Windows 8.x depois que o aplicativo for publicado, deverá atualizar o código do seu aplicativo para fazer referência a esses complementos e, em seguida, reenviar o aplicativo. Caso contrário, os novos complementos não serão visíveis aos clientes no Windows 8.x.

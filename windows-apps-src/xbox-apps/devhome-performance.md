@@ -8,16 +8,16 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-performance.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 589084a7da23b037fe61ea5e4c9e52dffb1c29be
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333870"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485222"
 ---
 # <a name="performance-page-dev-home"></a>Página de desempenho (Dev Home)
    
   
-A página de **desempenho** de Dev Home simula várias condições de uso de CPU para fins de solução de problemas e atividade de disco.   
+A página de **desempenho** de Dev Home simula vários atividade do disco e condições de uso de CPU para fins de solução de problemas.   
  ![Página de desempenho de Dev Home](images/devhome_performance.png)   
   
 A página de **desempenho** contém os seguintes painéis:   

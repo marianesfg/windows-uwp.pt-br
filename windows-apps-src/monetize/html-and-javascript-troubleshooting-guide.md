@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, solução de problemas, HTML, javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 01e2781b64629e24cba9b4ac02629a79ee4d998b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330480"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484214"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>Guia de solução de problemas em HTML e JavaScript
 
@@ -46,7 +46,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     </head>
     ```
 
-3.  Verifique a ID do aplicativo e a ID de unidade publicitária. Esses IDs devem coincidir com o ID do aplicativo e a ID de unidade de anúncio que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncios em seu aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+3.  Verifique a ID do aplicativo e a ID de unidade publicitária. Esses IDs devem coincidir com a ID do aplicativo e a ID da unidade de anúncio que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncios em seu aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` html
@@ -271,7 +271,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     });  
     ```
 
-4.  Verifique a ID do aplicativo e a ID de unidade de anúncios. Esses IDs devem coincidir com o ID do aplicativo e a ID de unidade de anúncio que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncios em seu aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+4.  Verifique a ID do aplicativo e a ID de unidade de anúncios. Esses IDs devem coincidir com a ID do aplicativo e a ID da unidade de anúncio que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncios em seu aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` javascript

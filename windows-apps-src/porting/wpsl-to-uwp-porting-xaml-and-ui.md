@@ -1,5 +1,5 @@
 ---
-description: A prática de definição da interface do usuário na forma de marcação XAML declarativa traduz extremamente bem do WindowsPhone Silverlight para aplicativos da plataforma Universal do Windows (UWP).
+description: A prática de definição da interface do usuário na forma de marcação XAML declarativa traduz extremamente bem do WindowsPhone Silverlight para aplicativos de plataforma Universal do Windows (UWP).
 title: Portando WindowsPhone Silverlight XAML e a interface do usuário para UWP
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
 ms.date: 02/08/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 153d73a75b48d61cb490a903c6657c42638c6674
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326208"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484413"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Portando WindowsPhone Silverlight XAML e a interface do usuário para UWP
 
@@ -19,7 +19,7 @@ ms.locfileid: "8326208"
 
 O tópico anterior foi [Solução de problemas](wpsl-to-uwp-troubleshooting.md).
 
-A prática de definição da interface do usuário na forma de marcação XAML declarativa traduz extremamente bem do WindowsPhone Silverlight para aplicativos da plataforma Universal do Windows (UWP). Você descobrirá que grandes seções da sua marcação serão compatíveis assim que tiver atualizado as referências de chave de recurso do sistema, alterado alguns nomes de tipo de elemento e alterado "clr-namespace" para "using". Muito do código imperativo na sua camada de apresentação (modelos de exibição e o código que manipula os elementos da interface do usuário) também serão simples de portar.
+A prática de definição da interface do usuário na forma de marcação XAML declarativa traduz extremamente bem do WindowsPhone Silverlight para aplicativos de plataforma Universal do Windows (UWP). Você descobrirá que grandes seções da sua marcação serão compatíveis assim que tiver atualizado as referências de chave de recurso do sistema, alterado alguns nomes de tipo de elemento e alterado "clr-namespace" para "using". Muito do código imperativo na sua camada de apresentação (modelos de exibição e o código que manipula os elementos da interface do usuário) também serão simples de portar.
 
 ## <a name="a-first-look-at-the-xaml-markup"></a>Primeira análise da marcação XAML
 
@@ -68,19 +68,19 @@ Seus modelos de exibição são um lugar onde há código imperativo que referen
     return new BitmapImage(new Uri(this.CoverImagePath, UriKind.Relative));
 ```
 
-**BitmapImage** está no namespace **Imaging** no WindowsPhone Silverlight e usar uma diretiva no mesmo arquivo permite **BitmapImage** seja usado sem qualificação de namespace como no trecho acima. Em casos assim, é possível clicar com o botão direito do mouse no nome do tipo (**BitmapImage**) no Visual Studio e usar o comando **Resolver** no menu de contexto para adicionar uma nova diretiva de namespace ao arquivo. Nesse caso, o namespace [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) é adicionado, que é onde o tipo está na UWP. É possível remover a diretiva de uso de **System.Windows.Media.Imaging**, e bastará fazer isso para portar código como no trecho acima. Quando terminar, você terá removido todos os namespaces WindowsPhone Silverlight.
+**BitmapImage** está no namespace **Imaging** no WindowsPhone Silverlight e usar uma diretiva no mesmo arquivo permite que **BitmapImage** ser usado sem qualificação de namespace como no trecho acima. Em casos assim, é possível clicar com o botão direito do mouse no nome do tipo (**BitmapImage**) no Visual Studio e usar o comando **Resolver** no menu de contexto para adicionar uma nova diretiva de namespace ao arquivo. Nesse caso, o namespace [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) é adicionado, que é onde o tipo está na UWP. É possível remover a diretiva de uso de **System.Windows.Media.Imaging**, e bastará fazer isso para portar código como no trecho acima. Quando terminar, você terá removido todos os namespaces WindowsPhone Silverlight.
 
 Em casos simples como este, onde você está mapeando os tipos em um namespace antigo para os mesmos tipos em um novo, é possível usar o comando **Localizar e Substituir** do Visual Studio para fazer alterações em massa em seu código-fonte. O comando **Resolver** é uma ótima maneira de descobrir o novo namespace do tipo. Como outro exemplo, você pode substituir todos os "System.Windows" por "Windows.UI.Xaml". Essencialmente, isso portará todas as diretivas using e todos os nomes de tipo totalmente qualificados que fazem referência a esse namespace.
 
 Assim que todas as diretivas using antigas forem removidas e as novas adicionadas, você poderá usar o comando **Organizar Usos** do Visual Studio para classificar suas diretivas e remover as não utilizadas.
 
-Às vezes, corrigir o código imperativo será tão secundário quanto alterar um tipo de parâmetro. Em outras ocasiões, você precisará usar APIs UWP em vez de .NET APIs para aplicativos do Windows Runtime 8. x. Para identificar quais APIs têm suporte, use o restante deste guia de portabilidade em combinação com [Visão geral de aplicativos do .NET para o Windows Runtime 8. x](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx) e a [referência de tempo de execução do Windows](https://msdn.microsoft.com/library/windows/apps/br211377).
+Às vezes, corrigir o código imperativo será tão secundário quanto alterar um tipo de parâmetro. Outras vezes, você precisará usar APIs UWP em vez de .NET APIs para aplicativos do Windows Runtime 8. x. Para identificar quais APIs têm suporte, use o restante deste guia de portabilidade em combinação com a [Visão geral de aplicativos do .NET para o Windows Runtime 8. x](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx) e a [referência de tempo de execução do Windows](https://msdn.microsoft.com/library/windows/apps/br211377).
 
 E, se você só quiser chegar ao estágio onde o seu projeto é compilado, poderá comentar ou apagar qualquer código não essencial. Em seguida, itere, um problema por vez, e consulte os seguintes tópicos desta seção (e o tópico anterior: [Solução de problemas](wpsl-to-uwp-troubleshooting.md)), até que todos os problemas de compilação e do tempo de execução sejam corrigidos e a portabilidade seja concluída.
 
 ## <a name="adaptiveresponsive-ui"></a>Interface do usuário responsiva/adaptável
 
-Como seu aplicativo do Windows 10 pode ser executado em uma potencialmente ampla variedade de dispositivos — cada um com seu próprio tamanho da tela e resolução — você vai querer ir além das etapas mínimas para portar seu aplicativo e você vai querer adaptar sua interface do usuário para ter a melhor aparência nesses dispositivos. Você pode usar o recurso adaptável do Gerenciador de Estado Visual para detectar dinamicamente o tamanho da janela e mudar o layout em resposta, e um exemplo de como fazer isso é mostrado na seção [Interface do usuário adaptável](wpsl-to-uwp-case-study-bookstore2.md) no tópico do estudo de caso Bookstore2.
+Como seu aplicativo Windows 10 pode ser executado em uma potencialmente grande variedade de dispositivos — cada um com seu próprio tamanho da tela e resolução — você vai querer ir além das etapas mínimas para portar seu aplicativo e você vai querer adaptar sua interface do usuário para ter a melhor aparência nesses dispositivos. Você pode usar o recurso adaptável do Gerenciador de Estado Visual para detectar dinamicamente o tamanho da janela e mudar o layout em resposta, e um exemplo de como fazer isso é mostrado na seção [Interface do usuário adaptável](wpsl-to-uwp-case-study-bookstore2.md) no tópico do estudo de caso Bookstore2.
 
 ## <a name="alarms-and-reminders"></a>Alarmes e lembretes
 
@@ -196,10 +196,10 @@ Aplicativos WindowsPhone Silverlight usam controles definidos nos namespaces **M
 | Classe ControlTiltEffect.TiltEffect | As animações da biblioteca de animações UWP são inseridas nos estilos padrão dos controles comuns. Veja [Animando ações de ponteiro](https://msdn.microsoft.com/library/windows/apps/xaml/jj649432). |
 | LongListSelector com dados agrupados | O LongListSelector do WindowsPhone Silverlight funciona de duas maneiras, que podem ser usadas em conjunto. Primeiro, ele é capaz de exibir dados agrupados por uma chave, por exemplo, uma lista de nomes agrupados pela letra inicial. Segundo, é capaz de aplicar "zoom" entre duas exibições semânticas: a lista agrupada de itens (por exemplo, nomes) e uma lista somente com as próprias chaves de grupo (por exemplo, letras iniciais). Com a UWP, você pode exibir dados agrupados com as [Diretrizes de controles de exibição de grade e de lista](https://msdn.microsoft.com/library/windows/apps/mt186889). |
 | LongListSelector com dados simples | Por motivos de desempenho, no caso de listas muito longas, é recomendável LongListSelector em vez de um WindowsPhone Silverlight caixa de listagem até mesmo para dados simples não agrupados. Em um aplicativo UWP, [GridView](https://msdn.microsoft.com/library/windows/apps/br242705) são preferíveis para listas longas de itens, sejam dados receptivos a agrupamento ou não. |
-| Panorama | O controle de Panorama do WindowsPhone Silverlight é mapeado para as [diretrizes para controles hub nos aplicativos do Windows Runtime 8. x](https://msdn.microsoft.com/library/windows/apps/dn449149) e diretrizes para controle hub. <br/> Observe que um controle de Panorama encapsula da última seção à primeira, e sua imagem da tela de fundo se move na paralaxe em relação às seções. As seções [Hub](https://msdn.microsoft.com/library/windows/apps/dn251843) não encapsulam, e a paralaxe não é usada. |
+| Panorama | O controle de Panorama do Silverlight WindowsPhone mapeia para as [diretrizes para controles hub nos aplicativos do Windows Runtime 8. x](https://msdn.microsoft.com/library/windows/apps/dn449149) e diretrizes para controle hub. <br/> Observe que um controle de Panorama encapsula da última seção à primeira, e sua imagem da tela de fundo se move na paralaxe em relação às seções. As seções [Hub](https://msdn.microsoft.com/library/windows/apps/dn251843) não encapsulam, e a paralaxe não é usada. |
 | Pivô | O equivalente UWP de controle WindowsPhone Silverlight pivô é [Pivot](https://msdn.microsoft.com/library/windows/apps/dn608241). Ele está disponível para todas as famílias de dispositivos. |
 
-**Observação**  o estado visual PointerOver é relevante em estilos/modelos personalizados em aplicativos do Windows 10, mas não em aplicativos WindowsPhone Silverlight. Há outros motivos por que seus estilos/modelos personalizados existentes podem não ser apropriados para aplicativos do Windows 10, incluindo as chaves de recurso de sistema estiver usando, alterações conjuntos de estados visuais usados e as melhorias de desempenho aos estilos padrão do Windows 10 / modelos. É recomendável que você edite uma cópia nova do modelo padrão do controle para Windows 10 e reaplique a personalização de estilo e modelo a ela.
+**Observação**  o estado visual PointerOver é relevante em estilos/modelos personalizados em aplicativos do Windows 10, mas não em aplicativos WindowsPhone Silverlight. Há outros motivos por que seus estilos/modelos personalizados existentes podem não ser apropriados para aplicativos do Windows 10, incluindo chaves de recurso do sistema estiver usando, alterações conjuntos de estados visuais usados e as melhorias de desempenho aos estilos padrão do Windows 10 / modelos. É recomendável que você edite uma cópia nova de um modelo padrão de controle para Windows 10 e reaplique a personalização de estilo e modelo a ela.
 
 Para saber mais sobre controles da UWP, consulte [Controles por função](https://msdn.microsoft.com/library/windows/apps/mt185405), [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406) e [Diretrizes para controles](https://msdn.microsoft.com/library/windows/apps/dn611856).
 
@@ -209,7 +209,7 @@ Existem algumas diferenças na linguagem de design entre aplicativos WindowsPhon
 
 ## <a name="localization-and-globalization"></a>Localização e globalização
 
-Para cadeias de caracteres localizadas, você pode reutilizar o arquivo. resx do projeto do WindowsPhone Silverlight em seu projeto de aplicativo UWP. Copie o arquivo, adicione-o ao projeto e renomeie-o para Resources.resw de forma que o mecanismo de pesquisa o encontre por padrão. Defina **Ação de Compilação** como **PRIResource** e **Copiar para Diretório de Saída** como **Não copiar**. Você pode usar as cadeias de caracteres na marcação especificando o atributo **X:UID** em seus elementos XAML. Consulte [Guia de início rápido: usando recursos de cadeia de caracteres](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
+Para cadeias de caracteres localizadas, você pode reutilizar o arquivo. resx do projeto do WindowsPhone Silverlight no projeto de aplicativo UWP. Copie o arquivo, adicione-o ao projeto e renomeie-o para Resources.resw de forma que o mecanismo de pesquisa o encontre por padrão. Defina **Ação de Compilação** como **PRIResource** e **Copiar para Diretório de Saída** como **Não copiar**. Você pode usar as cadeias de caracteres na marcação especificando o atributo **X:UID** em seus elementos XAML. Consulte [Guia de início rápido: usando recursos de cadeia de caracteres](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 
 Aplicativos WindowsPhone Silverlight usam a classe **CultureInfo** para ajudar a globalizar um aplicativo. Os aplicativos UWP usam MRT (Modern Resource Technology), que permite o carregamento dinâmico de recursos do aplicativo (localização, escala e tema) no tempo de execução e na superfície de design do Visual Studio. Para saber mais, veja [Diretrizes para arquivos, dados e globalização](https://msdn.microsoft.com/library/windows/apps/dn611859).
 
@@ -225,7 +225,7 @@ WindowsPhone Silverlight tem a propriedade **OpacityMask** , mas essa propriedad
 
 ![um bitmap com reconhecimento de tema](images/wpsl-to-uwp-case-studies/wpsl-to-uwp-theme-aware-bitmap.png)
 
-Em um aplicativo de WindowsPhone Silverlight, a técnica é usar uma máscara alfa (na forma de um bitmap) como o **OpacityMask** para um **retângulo** preenchido com o pincel de primeiro plano:
+Em um aplicativo WindowsPhone Silverlight, a técnica é usar uma máscara alfa (na forma de um bitmap) como o **OpacityMask** para um **retângulo** preenchido com o pincel de primeiro plano:
 
 ```xml
     <Rectangle Fill="{StaticResource PhoneForegroundBrush}" Width="26" Height="26">
@@ -249,7 +249,7 @@ Uma abordagem mais geral, que é apropriada caso haja diferenças entre o formul
     <Image Source="Assets/winrt_check.png" Stretch="None"/>
 ```
 
-WindowsPhone Silverlight, a propriedade **UIElement. Clip** pode ser qualquer forma que você possa expressar com uma **geometria** e normalmente é serializada na marcação XAML na minilinguagem **StreamGeometry** . Na UWP, o tipo da propriedade [**Clip**](https://msdn.microsoft.com/library/windows/apps/br208919) é [**RectangleGeometry**](https://msdn.microsoft.com/library/windows/apps/br210259), portanto, você só pode recortar uma região retangular. Permitir que um retângulo seja definido usando minilinguagem seria muito permissivo. Assim, para fazer a portabilidade de uma região de recorte na marcação, substitua a sintaxe do atributo **Clip** e transformá-la em uma sintaxe de elemento de propriedade semelhante à seguinte:
+WindowsPhone Silverlight, a propriedade **UIElement. Clip** pode ser qualquer forma que você possa expressar com uma **geometria** e normalmente é serializada na marcação XAML no idioma mini **StreamGeometry** . Na UWP, o tipo da propriedade [**Clip**](https://msdn.microsoft.com/library/windows/apps/br208919) é [**RectangleGeometry**](https://msdn.microsoft.com/library/windows/apps/br210259), portanto, você só pode recortar uma região retangular. Permitir que um retângulo seja definido usando minilinguagem seria muito permissivo. Assim, para fazer a portabilidade de uma região de recorte na marcação, substitua a sintaxe do atributo **Clip** e transformá-la em uma sintaxe de elemento de propriedade semelhante à seguinte:
 
 ```xml
     <UIElement.Clip>
@@ -279,7 +279,7 @@ Em um aplicativo UWP, você chama o método [**Frame.Navigate**](https://msdn.mi
     rootFrame.Navigate(typeof(AnotherPage)/*, parameter*/);
 ```
 
-Defina a página de inicialização para um aplicativo WindowsPhone Silverlight em WMAppManifest. XML:
+Você pode definir a página de inicialização para um aplicativo WindowsPhone Silverlight em WMAppManifest. XML:
 
 ```xml
     <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
@@ -313,7 +313,7 @@ Texto (ou tipografia) é um aspecto importante de um aplicativo UWP e, durante a
 
 Estilos de sistema TextBlock para aplicativos do Windows 10
 
-Em um aplicativo de WindowsPhone Silverlight, a família de fontes padrão é Segoe WP. Em um aplicativo do Windows 10, a família de fontes padrão é Segoe UI. Como resultado, as métricas de fonte em seu aplicativo podem parecer diferentes. Se você deseja reproduzir a aparência do texto WindowsPhone Silverlight, você pode definir suas próprias métricas usando propriedades como [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) e [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362). Para obter mais informações, consulte [Diretrizes para fontes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) e [Crie aplicativos UWP](http://dev.windows.com/design).
+Em um aplicativo do WindowsPhone Silverlight, a família de fontes padrão é Segoe WP. Em um aplicativo do Windows 10, a família de fontes padrão é Segoe UI. Como resultado, as métricas de fonte em seu aplicativo podem parecer diferentes. Se você deseja reproduzir a aparência do texto WindowsPhone Silverlight, você pode definir suas próprias métricas usando propriedades como [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) e [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362). Para obter mais informações, consulte [Diretrizes para fontes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) e [Crie aplicativos UWP](http://dev.windows.com/design).
 
 ## <a name="theme-changes"></a>Alterações de tema
 
@@ -362,15 +362,15 @@ Consulte [Trabalhando com blocos, selos e notificações do sistema](https://msd
 
 ## <a name="view-or-effective-pixels-viewing-distance-and-scale-factors"></a>Pixels de exibição ou efetivos, distância de exibição e fatores de escala
 
-Aplicativos WindowsPhone Silverlight e aplicativos do Windows 10 são diferentes na forma como abstraem o tamanho e o layout dos elementos da interface do usuário do tamanho físico real e resolução de dispositivos. Um aplicativo WindowsPhone Silverlight usa pixels de exibição para fazer isso. Com o Windows 10, o conceito de pixels de exibição foi refinado em de pixels efetivos. Aqui está uma explicação sobre esse termo, seu significado, e o valor extra que ele oferece.
+Aplicativos WindowsPhone Silverlight e aplicativos do Windows 10 são diferentes na forma como abstraem o tamanho e o layout dos elementos de interface do usuário real tamanho físico e resolução de dispositivos. Um aplicativo WindowsPhone Silverlight usa pixels de exibição para fazer isso. Com o Windows 10, o conceito de pixels de exibição foi refinado em de pixels efetivos. Aqui está uma explicação sobre esse termo, seu significado, e o valor extra que ele oferece.
 
 O termo "resolução" refere-se a uma medida da densidade de pixels e não, como comumente se pensa, uma contagem de pixels. "Resolução efetiva" é a maneira como os pixels físicos que compõem uma imagem ou um glifo são resolvidos para o olho dadas as diferenças na distância de exibição e no tamanho físico de pixels do dispositivo (a densidade de pixels sendo a recíproca do tamanho físico de pixels). A resolução efetiva é uma boa métrica para criar uma experiência porque é centrada no usuário. Ao compreender todos os fatores e controlar o tamanho dos elementos da interface do usuário, você poderá melhorar a experiência do usuário.
 
-Para um aplicativo WindowsPhone Silverlight, todas as telas de telefone têm exatamente 480 pixels de exibição largos, sem exceção, independentemente de quantos pixels físicos a tela tenha, ou que sua densidade de pixels ou seu tamanho físico. Isso significa que um elemento de **imagem** com `Width="48"` será exatamente um décimo da largura da tela de qualquer telefone que possa executar o aplicativo WindowsPhone Silverlight.
+Para um aplicativo WindowsPhone Silverlight, todas as telas de telefone têm exatamente 480 pixels de exibição largos, sem exceção, independentemente de quantos pixels físicos a tela tem, ou que sua densidade de pixels ou seu tamanho físico. Isso significa que um elemento de **imagem** com `Width="48"` será exatamente um décimo da largura da tela de qualquer telefone que possa executar o aplicativo do WindowsPhone Silverlight.
 
 Para um aplicativo do Windows 10, *não* o caso que todos os dispositivos têm um número fixo de pixels efetivos de largura. Isso é provavelmente óbvio, devido à ampla variedade de dispositivos em que um aplicativo UWP pode ser executado. Os diferentes dispositivos têm um número diferente de pixels efetivos de largura, desde 320 epx para os dispositivos menores até 1024 epx para um monitor de tamanho moderado, e muito além disso para larguras muito maiores. Você só precisa continuar a usar elementos de dimensionamento automático e painéis de layout dinâmicos como você sempre fez. Também haverá alguns casos em que você definirá as propriedades dos elementos da interface do usuário para um tamanho fixo na marcação XAML. Um fator de escala é aplicado automaticamente ao aplicativo dependendo do dispositivo em que é executado e das configurações de exibição feitas pelo usuário. E esse fator de escala serve para que qualquer elemento da interface do usuário com um tamanho fixo continue apresentando um alvo de toque (e leitura) de tamanho mais ou menos constante para o usuário em diversos tamanhos de tela. E, com o layout dinâmico, a interface do usuário não será simplesmente dimensionada opticamente em dispositivos diferentes. Em vez disso, ela fará o que for necessário para ajustar a quantidade apropriada de conteúdo ao espaço disponível.
 
-Como 480 antes era a largura fixa no modo de exibição pixels para uma tela dimensionados pelo telefone e esse valor agora é geralmente menores em pixels efetivos, uma regra prática é Multiplicar qualquer dimensão em sua marcação de aplicativo do WindowsPhone Silverlight por um fator de 0,8.
+Como 480 antes era a largura fixa no modo de exibição pixels para uma tela de telefone médias e esse valor agora é geralmente menores em pixels efetivos, uma regra prática é Multiplicar qualquer dimensão em sua marcação de aplicativo do WindowsPhone Silverlight por um fator de 0,8.
 
 Para que seu aplicativo tenha a melhor experiência em todas as telas, recomendamos que você crie cada ativo de bitmap em um intervalo de tamanhos, cada um adequado a um fator de escala específico. O fornecimento de ativos em escala de 100%, 200% e 400% (nessa ordem de prioridade) trará excelentes resultados na maioria dos casos em todos os fatores de escala intermediários.
 

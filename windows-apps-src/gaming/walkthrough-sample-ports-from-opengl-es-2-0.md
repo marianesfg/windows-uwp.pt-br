@@ -4,11 +4,11 @@ description: Este conjunto de tópicos mostra várias situações de portabilida
 ms.assetid: 07390da1-83f3-7fbb-5696-d1da3a2bc870
 ms.localizationpriority: medium
 ms.openlocfilehash: 7aefd725c1a73bac3212bf80036462c9bcb7dcc9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8349541"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8486561"
 ---
 # <a name="walkthrough-sample-ports-from-opengl-es-20"></a>Passo a passo - exemplos de portabilidade do OpenGL ES 2.0
 

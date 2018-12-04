@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 012827165aaa4067c9844af0491afb77a53c5f50
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335835"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8486515"
 ---
 # <a name="staticresource-markup-extension"></a>Extensão de marcação {StaticResource}
 
@@ -38,7 +38,7 @@ Fornece um valor para qualquer atributo XAML analisando uma referência a um rec
 
 As regras pelas quais **StaticResource** é resolvido para um item em um dicionário de recursos não estão descritas neste tópico. Isso depende de a referência e o recurso existirem ou não em um modelo, de os dicionários de recursos mesclados serem usados ou não e assim por diante. Para obter mais informações sobre como definir recursos e como usar adequadamente um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), incluindo o exemplo de código, consulte [Referências aos recursos ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
 
-**Importante**  um **StaticResource** não deve tentar fazer uma referência direta a um recurso que é definido lexicalmente mais fundo no arquivo XAML. Não é possível fazer isso. Mesmo se a referência de encaminhamento não falhar, tentar fazê-la acarreta uma penalidade de desempenho. Para obter melhores resultados, ajuste a composição dos seus dicionários de recursos de maneira que seja possível evitar referências de encaminhamento.
+**Importante**  um **StaticResource** não deve tentar fazer uma referência direta a um recurso que está definido lexicalmente mais fundo no arquivo XAML. Não é possível fazer isso. Mesmo se a referência de encaminhamento não falhar, tentar fazê-la acarreta uma penalidade de desempenho. Para obter melhores resultados, ajuste a composição dos seus dicionários de recursos de maneira que seja possível evitar referências de encaminhamento.
 
 Tentar especificar um **StaticResource** para uma chave incapaz de resolver gera uma exceção de análise de XAML em tempo de execução. As ferramentas de design também podem apresentar avisos ou erros.
 
