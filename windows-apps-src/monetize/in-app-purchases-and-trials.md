@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, avaliações, consumível, durável, assinatura
 ms.localizationpriority: medium
 ms.openlocfilehash: 9891205d4fdc8110cb727fb5caabbff6c5f4f948
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326516"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484270"
 ---
 # <a name="in-app-purchases-and-trials"></a>Compras e avaliações no aplicativo
 
@@ -158,7 +158,7 @@ Para excluir ou limitar recursos em uma versão de avaliação do seu aplicativo
 
 Se seu app usa APIs no namespace **Windows.Services.Store** para implementar compras no aplicativo ou a funcionalidade de avaliação, você deve publicar seu aplicativo na Microsoft Store e baixá-lo em seu dispositivo de desenvolvimento para usar sua licença de teste. Siga este processo para testar seu código:
 
-1. Se seu aplicativo ainda não estiver publicado e disponibilizado na loja, certifique-se de que seu aplicativo atende aos requisitos mínimos do [Kit de certificação de aplicativo do Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) , [enviar seu aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center e verifique se que o aplicativo passa pelo processo de certificação. Você pode [configurar seu app para que ele não possa ser descoberto na Store](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) durante os testes. Observe a configuração adequada de [pacotes de pré-lançamento](../publish/package-flights.md). Incorretamente configurado pacote de pré-lançamento pode não estar poderá ser baixado.
+1. Se seu aplicativo ainda não estiver publicado e disponibilizado na loja, certifique-se de que seu aplicativo atende aos requisitos mínimos do [Kit de certificação de aplicativo do Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) , [enviar seu aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center e verifique se que o aplicativo passa pelo processo de certificação. Você pode [configurar seu app para que ele não possa ser descoberto na Store](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) durante os testes. Observe a configuração adequada de [pacotes de pré-lançamento](../publish/package-flights.md). Incorretamente configurado pacote de pré-lançamento pode não ser poderá ser baixado.
 
 2. Em seguida, certifique-se de que você tenha concluído o seguinte:
 
@@ -259,7 +259,7 @@ Para produtos com SKUs e disponibilidades, as SKUs e as disponibilidades também
 Se você quiser disponibilizar um complemento para seus clientes no contexto do seu aplicativo, você deve [Inserir uma ID de produto exclusiva](../publish/set-your-add-on-product-id.md#product-id) para seu complemento quando você [criar o envio do complemento](../publish/add-on-submissions.md) no Partner Center. Você pode usar essa ID do produto (product ID) para fazer referência ao complemento em seu código, embora os cenários específicos nos quais você poderá usar a ID do produto dependerão do namespace usado para compras no aplicativo do seu app.
 
 > [!NOTE]
-> A ID do produto que você digita no Partner Center para um complemento é diferente [ID da loja do complemento](#store-ids). A ID da loja é gerada pelo Partner Center.
+> A ID do produto que você insere no Partner Center para um complemento é diferente [ID da loja do complemento](#store-ids). A ID da loja é gerada pelo Partner Center.
 
 ### <a name="apps-that-use-the-windowsservicesstore-namespace"></a>Apps que usam o namespace Windows.Services.Store
 

@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f64a290443ed5e45a5379b13f70dcc1ea2f57fa9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8345511"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485365"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Iniciar o aplicativo da Microsoft Store
 
 
 
-Este tópico descreve o esquema de URI **ms-windows-store:**. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo da Microsoft Store para páginas específicas na loja usando o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
+Este tópico descreve o esquema de URI **ms-windows-store:**. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo Microsoft Store para páginas específicas na loja usando o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
 
 Este exemplo mostra como abrir o armazenamento para a página de jogos:
 
@@ -41,7 +41,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 <tr>
 <td rowspan="4">Inicia a página de detalhes (PDP) de um produto. <p>O ID da Loja é recomendado para clientes no Windows 10 e funcionará em todas as versões de sistema operacional, mas as maneiras anteriores de fazer isso (ex: PFN) ainda têm suporte.</p>
-<p>Esses valores podem ser encontrados no [Partner Center](https://partner.microsoft.com/dashboard) na página <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">identidade do aplicativo</a> na seção de gerenciamento do aplicativo para cada aplicativo.</p>
+<p>Esses valores podem ser encontrados no [Partner Center](https://partner.microsoft.com/dashboard) na página <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">identidade do aplicativo</a> na seção Gerenciamento do aplicativo para cada aplicativo.</p>
 </td>
 <td>
 ID da Loja <p>(Recomendado)</p>

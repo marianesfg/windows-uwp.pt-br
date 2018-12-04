@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d40e921f999381421a5a6ce422e019e7db58bbd
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336047"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484851"
 ---
 # <a name="feedback-report"></a>Relatório de comentários
 
@@ -24,10 +24,10 @@ Incentivar os clientes a fornecerem comentários sobre seu aplicativo é uma ót
 
 Você pode usar a API de comentários no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que os clientes [iniciem diretamente o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele usando o aplicativo de Hub de Feedback. Por isso, você poderá ver comentários de clientes nesse relatório, mesmo se você tiver não solicitado comentários especificamente de dentro de seu aplicativo.
 
-Feedback também pode ser útil ao usar [pacotes de pré-lançamento](package-flights.md), pois o relatório de **comentários** mostra o pacote específico que cada cliente tinha instalado em seu dispositivo quando deixou os comentários.
+Comentários também podem ser útil ao usar o [pacote de pré-lançamento](package-flights.md), pois o relatório de **comentários** mostra o pacote específico que cada cliente tinha instalado em seu dispositivo quando deixou os comentários.
 
 > [!TIP]
-> Para visualizar rapidamente avaliações, classificações e comentários do usuário em todos os seus aplicativos nos últimos 30 dias, expanda **interagir** no menu de navegação esquerdo e selecione **avaliações e comentários.** 
+> Para visualizar rapidamente avaliações, classificações e comentários do usuário em todos os seus aplicativos nos últimos 30 dias, expanda **envolver** no menu de navegação esquerdo e selecione **avaliações e comentários.** 
 
 
 ## <a name="apply-filters"></a>Aplicar filtros
@@ -54,7 +54,7 @@ Nesse relatório, você encontrará os comentários individuais deixados por seu
 - **Mais populares**: mostra os comentários que tiveram votos a favor por outros clientes nos últimos sete dias, começando com os comentários que obtiveram a atividade mais recente.
 - **Mais recentes**: mostra todos os comentários, começando com os comentários deixados mais recentemente.
 
-Ao lado de cada comentário, você verá a data em que os comentários foram deixados e o tipo de comentário. Você também verá o mercado do cliente, o pacote específico que foi instalado no dispositivo que eles foram usado quando deixaram os comentários, o tipo do dispositivo e **Do Windows Insider** se o cliente que enviou os comentários for um membro do Windows Insider programa.
+Ao lado de cada comentário, você verá a data em que os comentários foram deixados e o tipo de comentário. Você também verá o mercado do cliente, o pacote específico que foi instalado no dispositivo que eles foram usado quando deixaram os comentários, o tipo do dispositivo e **Do Windows Insider** se o cliente enviou os comentários for um membro do Windows Insider programa.
 
 Você também verá uma opção para [responder aos comentários](respond-to-customer-feedback.md).
 

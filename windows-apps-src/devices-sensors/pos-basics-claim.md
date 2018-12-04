@@ -1,18 +1,18 @@
 ---
-title: Dispositivo de PointOfService declarem e habilitar o modelo
+title: Dispositivo de PointOfService reivindicar e habilitar o modelo
 description: Saiba mais sobre a declaração de PointOfService e habilitar o modelo
 ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 7169848084b587793ba1537ea3d6ad78d31892d5
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340724"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485092"
 ---
-# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de ponto de serviço declarem e habilitar o modelo
+# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de ponto de serviço reivindicar e habilitar o modelo
 
 ## <a name="claiming-for-exclusive-use"></a>Declaração para uso exclusivo
 
@@ -47,7 +47,7 @@ A ação de declaração simplesmente estabelece um direitos exclusivos para o d
 |ClaimedPosPrinter | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.disableasyc) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.isenabled) |
 |
 
-¹ Display de balcão não exige que você habilitar explicitamente o dispositivo para operações de e/s.  Permitindo que é executada automaticamente pelas APIs do LineDisplay PointOfService que executa e/s.
+¹ Display de balcão não exige que você habilitar explicitamente o dispositivo para operações de e/s.  Habilitar é executada automaticamente pelas APIs do LineDisplay PointOfService que executa e/s.
 
 ## <a name="code-sample-claim-and-enable"></a>Exemplo de código: reivindicar e habilitar
 

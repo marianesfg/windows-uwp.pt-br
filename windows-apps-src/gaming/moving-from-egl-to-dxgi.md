@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, egl, dxgi, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 1279d5100aa00e1b94d7d56b472a0574d22c3416
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8337272"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8486293"
 ---
 # <a name="compare-egl-code-to-dxgi-and-direct3d"></a>Comparar código EGL com DXGI e Direct3D
 
@@ -47,7 +47,7 @@ Assim como o EGL, a DXGI e o Direct3D fornecem APIs para os seguintes comportame
 -   Renderização em destinos específicos (como texturas).
 -   Atualização da superfície de exibição da janela com os resultados da renderização com recursos gráficos.
 
-Para ver o processo Direct3D básico para configuração do pipeline gráfico, confira o modelo aplicativo DirectX 11 (Universal Windows) no Microsoft Visual Studio2015. A classe de renderização básica nele é um bom parâmetro para a configuração da infraestrutura de elementos gráficos do Direct3D 11 e para a configuração de recursos básicos nela, bem como para o suporte a recursos de aplicativos da Plataforma Universal do Windows (UWP), como a rotação da tela.
+Para ver o processo Direct3D básico para configuração do pipeline de elementos gráficos, confira o modelo aplicativo DirectX 11 (Universal Windows) no Microsoft Visual Studio2015. A classe de renderização básica nele é um bom parâmetro para a configuração da infraestrutura de elementos gráficos do Direct3D 11 e para a configuração de recursos básicos nela, bem como para o suporte a recursos de aplicativos da Plataforma Universal do Windows (UWP), como a rotação da tela.
 
 O EGL tem pouquíssimas APIs relativas ao Direct3D 11, e navegar nele pode ser difícil se você não conhece a nomenclatura e os jargões específicos à plataforma. Consulte um panorama simples para você se orientar.
 
@@ -392,7 +392,7 @@ Em um aplicativo UWP, você pode fechar a CoreWindow com [**CoreWindow::Close**]
 | eglDestroySurface                | N/D. Os recursos gráficos são limpos quando a CoreWindow do aplicativo UWP é fechada pela plataforma.                                                                                                                                                                                                                                                                                                                                                                                                 |
 | eglGetCurrentDisplay             | Chame [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) para obter uma referência à janela do aplicativo principal da janela atual.                                                                                                                                                                                                                                                                                                                                                         |
 | eglGetCurrentSurface             | Isso é a [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) atual. Geralmente, isso é analisado como o objeto do renderizador.                                                                                                                                                                                                                                                                                                                                                         |
-| eglGetError                      | Os erros são obtidos como HRESULTs retornados pela maioria dos métodos nas interfaces DirectX. Se o método não retorna um HRESULT, chame [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360). Para converter um erro do sistema em anHRESULTvalue, use o[**HRESULT\_FROM\_WIN32**](https://msdn.microsoft.com/library/windows/desktop/ms680746)macro.                                                                                                                                                                                                  |
+| eglGetError                      | Os erros são obtidos como HRESULTs retornados pela maioria dos métodos nas interfaces DirectX. Se o método não retorna um HRESULT, chame [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360). Para converter um erro de sistema em anHRESULTvalue, use o[**HRESULT\_FROM\_WIN32**](https://msdn.microsoft.com/library/windows/desktop/ms680746)macro.                                                                                                                                                                                                  |
 | eglInitialize                    | Chame [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) para obter uma referência à janela do aplicativo principal da janela atual.                                                                                                                                                                                                                                                                                                                                                         |
 | eglMakeCurrent                   | Defina um destino de renderização para desenhar no contexto atual com [**ID3D11DeviceContext1::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464).                                                                                                                                                                                                                                                                                                                                  |
 | eglQueryContext                  | N/D. No entanto, você pode adquirir destinos de renderização de uma instância [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575), bem como alguns dados de configuração. (Siga o link da lista de métodos disponíveis.)                                                                                                                                                                                                                                                                                           |

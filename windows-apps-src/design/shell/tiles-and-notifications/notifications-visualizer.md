@@ -8,18 +8,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e2bb5a450aebdf38f3d4f1a710f3537544dcddd6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342669"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485182"
 ---
 # <a name="notifications-visualizer"></a>Visualizador de notificações
 
  
 
 
-Visualizador de notificações é um novo aplicativo da plataforma Universal do Windows (UWP) [na loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores a criar blocos dinâmicos adaptáveis e notificações do sistema interativas para Windows 10.
+Visualizador de notificações é um novo aplicativo da plataforma Universal do Windows (UWP) [na loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores a projetar blocos dinâmicos adaptáveis e notificações do sistema interativas para Windows 10.
 
 
 ## <a name="overview"></a>Visão geral

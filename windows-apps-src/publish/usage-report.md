@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp, uso, evento personalizado, relatório, telemetria, sessões de usuário
 ms.localizationpriority: medium
 ms.openlocfilehash: 0d0be1399ebc00ffda57ecf27a72be994fa994ce
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324714"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8486584"
 ---
 # <a name="usage-report"></a>Relatório de uso
 
 
-O relatório de **uso** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja como os clientes no Windows 10 (incluindo o Xbox) estão usando seu aplicativo e mostra informações sobre eventos personalizados definidos por você. Você pode exibir esses dados no Partner Center, ou [baixar o relatório](download-analytic-reports.md) para exibição offline.
+O relatório de **uso** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja como os clientes no Windows 10 (incluindo o Xbox) estão usando seu aplicativo e mostra informações sobre eventos personalizados definidos por você. Você pode exibir esses dados no Partner Center ou [baixar o relatório](download-analytic-reports.md) para exibição offline.
 
 
 ## <a name="apply-filters"></a>Aplicar filtros
@@ -48,10 +48,10 @@ Este gráfico tem guias separadas que você pode exibir, mostrando o uso por dia
 - **Retenção**: mostra o total de **DAU/MAU** (usuários diários ativos/usuários mensais ativos) durante o período selecionado.
 - **Previsão de rotatividade**: mostra quantos usuários propensos têm probabilidade de pararem de usar seu aplicativo em breve, com base no uso recente.
 
-Quando o **30d** período é selecionado, você poderá ver marcadores em círculo ao exibir as guias de **usuários**, **dispositivos**ou **duração** . Eles representam um aumento significativo ou diminuir em um determinado valor acreditamos que você vai querer saber sobre. A data em que o círculo é exibido representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
+Quando o **30d** o período de tempo é selecionado, você poderá ver marcadores em círculo ao exibir as guias **duração** , **dispositivos**ou **usuários**. Eles representam um aumento significativo ou diminuir um valor determinado que acreditamos que você vai querer saber sobre. A data em que o círculo é exibido representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
 
 > [!TIP]
-> Você pode exibir mais informações relacionadas a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
+> Você pode exibir mais insights relacionados a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
 
 
 ## <a name="user-sessions"></a>Sessões de usuário

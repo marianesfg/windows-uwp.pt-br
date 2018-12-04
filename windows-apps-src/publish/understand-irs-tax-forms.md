@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, tributação, irs, receita federal dos Estados Unidos
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a5e70278d655bce4ced48b33c4711762a7cce7f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346665"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485796"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft
 
@@ -23,28 +23,28 @@ A seguir, explicaremos mais sobre esses formulários, inclusive quem os receber�
 
 | Formulário fiscal da Receita Federal dos EUA | Descrição | Disponibilidade |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Relacionado a atividade de vendas e/ou pagamentos feitos a você pela participação em marketplaces da Microsoft | Formulários impressos serão protocolados até na ou antes de **31 de janeiro**, e cópias em. PDF serão disponibilizadas no [Partner Center](https://partner.microsoft.com/dashboard) (no **configurações da conta > perfil fiscal**) ao mesmo tempo |
-|1042-S | Relacionado a pagamentos feitos a você que estão sujeitos à retenção de imposto dos Estados Unidos | Formulários impressos serão protocolados até na ou antes de **15 de março**e cópias em. PDF serão disponibilizadas no Partner Center (no **configurações da conta > perfil fiscal**) ao mesmo tempo |
+|1099-MISC, 1099-K | Relacionado a atividade de vendas e/ou pagamentos feitos a você pela participação em marketplaces da Microsoft | Formulários impressos serão protocolados até em ou antes de **31 de janeiro**, e cópias em. PDF serão disponibilizadas no [Partner Center](https://partner.microsoft.com/dashboard) (no **configurações da conta > perfil fiscal**) ao mesmo tempo |
+|1042-S | Relacionado a pagamentos feitos a você que estão sujeitos à retenção de imposto dos Estados Unidos | Formulários impressos serão protocolados até em ou antes de **15 de março**e cópias em. PDF serão disponibilizadas no Partner Center (no **configurações da conta > perfil fiscal**) ao mesmo tempo |
 
 > [!NOTE]
 > O endereço que usamos nos formulários de imposto da Receita Federal dos EUA vem do endereço em seu [perfil de imposto](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Se seu endereço mudou, atualize-o em seu **Perfil fiscal**.
 
-Os formulários de imposto serão enviados a você do endereço a seguir:
+Os formulários fiscais serão enviados a você do endereço a seguir:
 
 **Cidadãos dos EUA:**
 <table>
 <tr><th>Grupo de negócios</th><th>Entidade legal</th><th>Address</th></tr>
 <tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond WA 98052 EUA</td></tr>
-<tr><td>Publicidade</td><td>A Microsoft Online Inc.</td><td>6100 Neil estrada<br>Reno, NV 89511 EUA</td></tr>
+<tr><td>Publicidade</td><td>Microsoft Online Inc.</td><td>6100 Neil estrada<br>Reno, NV 89511 EUA</td></tr>
 <table> 
 
 **Cidadãos fora dos EUA:**
 <table>
 <tr><th>Grupo de negócios</th><th>Entidade legal</th><th>Address</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Irlanda operações limitado (pagamento é feito pela Microsoft Corporation via Microsoft Irlanda atuando como intermediário qualificado para a Microsoft Corporation)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;comercial&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
-<tr><td>Publicidade *</td><td>Microsoft Irlanda operações limitado (pagamento é feito pela Microsoft Online Inc. via Microsoft Irlanda atuando como agente de pagamento para a Microsoft Online Inc.)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;comercial&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
-<tr><td>Publicidade</td><td>A Microsoft Online Inc.</td><td>6100 Neil estrada<br>Reno, NV 89511 EUA</td></tr>
-<tr><td colspan="3">* Cidadãos dos seguintes países/regiões lucro receita de publicidade serão pagos por meio do Microsoft Irlanda operações limitado: Áustria, Bélgica, Bulgária, Croácia, Chipre, República Tcheca, Dinamarca, Estônia, Finlândia, França, Alemanha, Grécia, Hungria, Irlanda, Ilha de Man, Itália, Letônia, Liechtenstein, Lituânia, Luxemburgo, Malta, Mônaco, países baixos, Noruega, Polônia, Portugal, Romênia, Eslováquia, Eslovênia, África do Sul, Espanha, Suécia, Suíça, Reino Unido</td></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Irlanda Operations Limited (pagamento é feito pela Microsoft Corporation via Microsoft Irlanda atuando como intermediário qualificado para a Microsoft Corporation)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;empresas&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
+<tr><td>Publicidade *</td><td>Microsoft Irlanda Operations Limited (pagamento é feito pela Microsoft Online Inc. por meio do Microsoft Irlanda atuando como agente de pagamento para a Microsoft Online Inc.)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;empresas&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
+<tr><td>Publicidade</td><td>Microsoft Online Inc.</td><td>6100 Neil estrada<br>Reno, NV 89511 EUA</td></tr>
+<tr><td colspan="3">* Cidadãos dos seguintes países lucro receita de publicidade serão pagos por meio do Microsoft Irlanda operações limitado: Áustria, Bélgica, Bulgária, Croácia, Chipre, República Tcheca, Dinamarca, Estônia, Finlândia, França, Alemanha, Grécia, Hungria, Irlanda, Ilha de Man, Itália, Letônia, Liechtenstein, Lituânia, Luxemburgo, Malta, Mônaco, países baixos, Noruega, Polônia, Portugal, Romênia, Eslováquia, Eslovênia, África do Sul, Espanha, Suécia, Suíça, Reino Unido</td></tr>
 </table>
 
 ## <a name="for-developers-located-in-the-united-states"></a>Para desenvolvedores localizados nos Estados Unidos

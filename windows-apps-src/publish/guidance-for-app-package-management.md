@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0548ae9f9b3b33808cd7420eb542bcbac6a1a431
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340193"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8486263"
 ---
 # <a name="guidance-for-app-package-management"></a>Orientação para gerenciamento do pacote de aplicativo
 
@@ -48,12 +48,12 @@ Observe que todos os clientes que já têm o aplicativo ainda poderão usá-lo e
 Depois de tornar o aplicativo indisponível, você ainda verá no Partner Center. Se optar por oferecer o aplicativo aos clientes novamente, você poderá clicar em **Tornar aplicativo disponível** na página Visão geral do aplicativo. Depois que você confirmar, o aplicativo estará disponível a novos clientes (a menos que esteja restrito pelas configurações no seu último envio) dentro de algumas horas.
 
 > [!NOTE]
-> Se você quer manter seu aplicativo disponível, mas não quer continuar oferecendo-o aos novos clientes em uma determinada versão de sistema operacional, crie um novo envio e remova todos os pacotes da versão do sistema operacional na qual deseja impedir novas aquisições. Por exemplo, se antes você tinha pacotes para Windows Phone 8.1 e Windows 10, e você não deseja continuar oferecendo o aplicativo para novos clientes no WindowsPhone8.1, remova todos os seus pacotes WindowsPhone8.1 do envio. Depois que a atualização for publicada, não há novos clientes no WindowsPhone8.1 será capazes de adquirir o aplicativo, embora os clientes que já o tenham possam continuar a usá-lo). No entanto, o aplicativo ainda estará disponível para novos clientes no Windows 10.
+> Se você quer manter seu aplicativo disponível, mas não quer continuar oferecendo-o aos novos clientes em uma determinada versão de sistema operacional, crie um novo envio e remova todos os pacotes da versão do sistema operacional na qual deseja impedir novas aquisições. Por exemplo, se antes você tinha pacotes para Windows Phone 8.1 e Windows 10 e você não deseja continuar oferecendo o aplicativo para novos clientes no WindowsPhone8.1, remova todos os seus pacotes WindowsPhone8.1 do envio. Depois que a atualização for publicada, não há novos clientes no WindowsPhone8.1 será capazes de adquirir o aplicativo, embora os clientes que já o tenham possam continuar a usá-lo). No entanto, o aplicativo ainda estará disponível para novos clientes no Windows 10.
 
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>Removendo pacotes para uma família de dispositivos com suporte anterior
 
-Se você remover todos os pacotes para uma determinada [família de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) de que seu aplicativo suportado anteriormente, você será solicitado a confirmar que isso é sua intenção para poder salvar suas alterações na página **pacotes** .
+Se você remover todos os pacotes para uma determinada [família de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) de que seu aplicativo anteriormente compatível, você será solicitado a confirmar que isso é sua intenção para poder salvar suas alterações na página de **pacotes** .
 
 Quando você publica um envio que remove todos os pacotes que podem ser executado em uma família de dispositivos que seu aplicativo suporte anteriormente, novos clientes não poderão adquirir o aplicativo nessa família. Você sempre pode publicar outra atualização posteriormente para fornecer pacotes para essa família de dispositivos novamente.
 
@@ -64,11 +64,11 @@ Lembre-se de que mesmo se você remover todos os pacotes que dão suporte a uma 
 
 ## <a name="adding-packages-for-windows10-to-a-previously-published-app"></a>Adicionando pacotes para Windows 10 para um aplicativo publicado anteriormente
 
-Se você tiver um aplicativo na loja que incluído apenas os pacotes para Windows 8. x e/ou Windows Phone 8. x e você deseja atualizar seu aplicativo para Windows 10, crie um novo envio e adicione seus pacotes de .msixupload ou. appxupload UWP durante a etapa de [pacotes](upload-app-packages.md) . Depois que seu aplicativo passa pelo processo de certificação, o pacote UWP também estará disponível para novas aquisições pelos clientes no Windows 10.
+Se você tiver um aplicativo na loja que incluído apenas os pacotes para Windows 8. x e/ou Windows Phone 8. x e você desejar atualizar seu aplicativo para Windows 10, crie um novo envio e adicione seus pacotes de .msixupload ou. appxupload UWP durante a etapa de [pacotes](upload-app-packages.md) . Depois que seu aplicativo passa pelo processo de certificação, o pacote UWP também estará disponível para novas aquisições pelos clientes no Windows 10.
 
 > [!NOTE]
-> Depois que um cliente no Windows 10 obtiver seu pacote UWP, não é possível reverter esse cliente para usar um pacote de qualquer versão anterior do sistema operacional. 
+> Depois que um cliente no Windows 10 obtiver seu pacote UWP, você não pode reverter esse cliente para usar um pacote de qualquer versão anterior do sistema operacional. 
 
-Observe que o número de versão de seus pacotes do Windows 10 deve ser maior do que aqueles para pacotes Windows8, Windows 8.1 e/ou Windows Phone 8.1 que você usou. Para saber mais, veja [Numeração de versão do pacote](package-version-numbering.md).
+Observe que o número de versão de seus pacotes do Windows 10 deve ser maior do que aqueles para pacotes qualquer Windows8, Windows 8.1 e/ou Windows Phone 8.1 que você usou. Para saber mais, veja [Numeração de versão do pacote](package-version-numbering.md).
 
 Para obter mais informações sobre como empacotar aplicativos UWP para a Microsoft Store, consulte [Empacotando aplicativos](../packaging/index.md).

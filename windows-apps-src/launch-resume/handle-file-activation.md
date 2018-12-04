@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: abe77526a7ac12bc905839065913dd59d70fdf62
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324807"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482045"
 ---
 # <a name="handle-file-activation"></a>Tratar a ativação do arquivo
 
@@ -125,7 +125,7 @@ void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEv
 
 Recomendamos que você crie um novo XAML **quadro** para cada evento de ativação que abre uma nova página. Dessa forma, o backstack de navegação para o novo quadro XAML não contém nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso. Se você decidir usar um único **quadro** de XAML para inicialização e contratos de arquivo, você deve limpar as páginas do diário de navegação do **quadro**antes de navegar para uma nova página.
 
-Quando seu aplicativo é iniciado por ativação de arquivo, você deve considerar incluindo da interface do usuário que permite ao usuário voltar para o início da página do aplicativo.
+Quando seu aplicativo é iniciado por ativação de arquivo, você deve considerar incluindo a interface do usuário que permite ao usuário voltar para o início da página do aplicativo.
 
 ## <a name="remarks"></a>Comentários
 
