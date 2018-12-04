@@ -9,11 +9,11 @@ ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4b9b5f08be695d803e9254e5801ac63b2889e1c9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8337046"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465415"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empacotar um aplicativo da área de trabalho manualmente
 
@@ -131,7 +131,7 @@ Preencha este modelo com informações que descrevem o seu aplicativo.
 
 ### <a name="application-element"></a>Elemento do aplicativo
 
-Para aplicativos da área de trabalho que você cria um pacote, o ``EntryPoint`` atributo do elemento Application é sempre ``Windows.FullTrustApplication``.
+Para aplicativos da área de trabalho que você criar um pacote, o ``EntryPoint`` atributo do elemento Application é sempre ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>

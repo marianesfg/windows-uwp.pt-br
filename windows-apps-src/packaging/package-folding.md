@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, empacotamento, layout do pacote, pacote do ativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 9241ffeb6b232c5b5be3098b114f6c7bf00bcf0d
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346033"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472886"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>Desenvolvendo com os pacotes de ativo e dobramento de pacote 
 
@@ -43,7 +43,7 @@ C:\Program Files\WindowsApps\
 `-- …(other apps)
 ```
 
-Observe que o pacote do aplicativo arquivos que não são aplicáveis ao usuário não será instalado (x86 e pacotes de alemão). 
+Observe que o pacote do aplicativo arquivos que não são aplicáveis para o usuário não será instalado (x86 e pacotes de alemão). 
 
 Para este usuário, o executável principal do jogo estará dentro da pasta **MyGame_1.0_x64** e será executado a partir daí e ele terá acesso, normalmente, apenas aos arquivos dentro dessa pasta. Para acessar os arquivos na pasta **MyGame_1.0_language-fr**, você precisaria usar as APIs de MRT ou as APIs PackageManager. As APIs de MRT podem selecionar automaticamente o arquivo mais apropriado dos idiomas instalados, você pode encontrar mais informações sobre APIs de MRT em [Windows.ApplicationModel.Resources.Core](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core). Como alternativa, você pode encontrar o local de instalação do pacote de idiomas francês usando a [Classe PackageManager](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager). Você nunca deve assumir o local de instalação dos pacotes do seu aplicativo, pois isso pode mudar e pode variar entre os usuários. 
 

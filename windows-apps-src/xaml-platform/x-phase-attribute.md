@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6def088b3e7f6410f12d1b2e411bcb547c90a09a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335881"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465642"
 ---
 # <a name="xphase-attribute"></a>atributo x:Phase
 
@@ -79,5 +79,5 @@ Números de fase não precisam ser contíguos e são os mesmos do valor de [**Co
 
 O atributo Phase afeta apenas associações [{x: Bind}](x-bind-markup-extension.md), não associações [{Binding}](binding-markup-extension.md).
 
-O atributo Phase será aplicado somente quando o modelo de item for renderizado, usando um controle que está ciente do atributo Phase. Para Windows 10, isso significa [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). O atributo Phase não será aplicado aos modelos de dados usados em outros controles de item, ou para outros cenários, como as seções [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) ou [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843), nesses casos, todos os elementos de interface do usuário serão dados associados ao mesmo tempo.
+O atributo Phase será aplicado somente quando o modelo de item for renderizado, usando um controle que está ciente do atributo Phase. Para Windows 10, o que significa o [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). O atributo Phase não será aplicado aos modelos de dados usados em outros controles de item, ou para outros cenários, como as seções [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) ou [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843), nesses casos, todos os elementos de interface do usuário serão dados associados ao mesmo tempo.
 

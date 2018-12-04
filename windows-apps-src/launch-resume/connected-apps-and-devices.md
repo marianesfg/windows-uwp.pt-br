@@ -3,15 +3,15 @@ title: Apps e dispositivos conectados (projeto Roma)
 description: Esta seção descreve como usar a plataforma de Sistemas Remotos para descobrir dispositivos remotos, iniciar um app em um dispositivo remoto e comunicar-se com um serviço de app em um dispositivo remoto.
 ms.date: 06/08/2018
 ms.topic: article
-keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, project rome
+keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
 ms.openlocfilehash: 79decdcb420e7d1b5cb732a354ccddb1ce5b7404
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471894"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>Apps e dispositivos conectados (projeto Roma)
 

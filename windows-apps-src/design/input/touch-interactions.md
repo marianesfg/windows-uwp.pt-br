@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b662a7689f0b0b24fc3f70a9fbc143d4268d2cb8
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344728"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471654"
 ---
 # <a name="touch-interactions"></a>Interações por toque
 
@@ -74,13 +74,13 @@ A tabela a seguir mostra algumas das diferenças entre os dispositivos de entrad
 
 
 
-**Observação**  entrada indireta recebeu a vantagem de mais de 25 anos de refinamento. Recursos como dicas de ferramentas disparadas por focalização foram projetadas para solucionar a exploração da interface do usuário especificamente para entradas por touchpad, mouse, caneta e teclado. Elementos da interface do usuário como esses foram reprojetados para uma experiência avançada fornecida pela entrada de toque, sem comprometer a experiência do usuário para outros dispositivos.
+**Observação**  entrada indireta teve a vantagem de mais de 25 anos de refinamento. Recursos como dicas de ferramentas disparadas por focalização foram projetadas para solucionar a exploração da interface do usuário especificamente para entradas por touchpad, mouse, caneta e teclado. Elementos da interface do usuário como esses foram reprojetados para uma experiência avançada fornecida pela entrada de toque, sem comprometer a experiência do usuário para outros dispositivos.
 
  
 
 ## <a name="use-touch-feedback"></a>Usar comentário por toque
 
-O feedback visual apropriado durante as interações com o seu aplicativo ajuda os usuários a reconhecer, aprender e adaptar-se a como suas interações são interpretadas pelo aplicativo e o Windowsplatform. O feedback visual pode indicar interações bem-sucedidas, retransmitir o status do sistema, aprimorar o sentido de controle, reduzir erros, ajudar os usuários a entenderem o sistema e os dispositivos de entrada, além de estimular a interação.
+O feedback visual apropriado durante as interações com o seu aplicativo ajuda os usuários a reconhecer, aprender e se adaptar a como suas interações são interpretadas pelo aplicativo e o Windowsplatform. O feedback visual pode indicar interações bem-sucedidas, retransmitir o status do sistema, aprimorar o sentido de controle, reduzir erros, ajudar os usuários a entenderem o sistema e os dispositivos de entrada, além de estimular a interação.
 
 A resposta visual é importante quando o usuário recorre à entrada por toque em atividades que exigem exatidão e precisão com base no local. A exibição do feedback sempre que a entrada por toque for detectada ajudará o usuário a entender as regras de direcionamento personalizadas definidas pelo aplicativo e seus respectivos controles.
 

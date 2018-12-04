@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais
 ms.localizationpriority: medium
 ms.openlocfilehash: c90fffeee7003159f58cf2e108286f4fe7732fd6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333777"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472833"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>Instalar um conjunto relacionado usando um arquivo do Instalador de Aplicativo
 

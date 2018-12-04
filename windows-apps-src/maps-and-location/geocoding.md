@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, geocodificação, mapa, localização
 ms.localizationpriority: medium
 ms.openlocfilehash: e8b0efe39578974090844a4224055821c29f8ced
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8352400"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471534"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>Executar geocódigo e geocódigo reverso
 
 Este guia mostra como converter endereços em localizações geográficas (geocódigo) e converta localizações geográficas em endereços (geocódigo reverso) chamando os métodos da classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) no Maps [** **](https://msdn.microsoft.com/library/windows/apps/dn636979)namespace.
 
 > [!TIP]
-> Para saber mais sobre como usar mapas em seu aplicativo, baixe a amostra [MapControl](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) do [repositório de amostras universais do Windows](hhttps://github.com/Microsoft/Windows-universal-samples) no GitHub.
+> Para saber mais sobre como usar mapas em seu aplicativo, baixe o exemplo [MapControl](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) do [repositório de amostras universais do Windows](hhttps://github.com/Microsoft/Windows-universal-samples) no GitHub.
 
 As classes envolvidas na geocodificação e geocodificação reversa são organizadas da seguinte maneira.
 

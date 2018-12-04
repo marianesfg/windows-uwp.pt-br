@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, depuração, teste, desempenho
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f58485b6f6829b9eec0495cce088304b181a2b1
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8339792"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472856"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implantando e depurando aplicativos UWP
 
 
 Este artigo apresenta as etapas para abordar vários destinos de depuração e implantação.
 
-Microsoft Visual Studio permite que você implante e depure seus aplicativos da plataforma Universal do Windows (UWP) em uma variedade de dispositivos Windows 10. O Visual Studio manipulará o processo de criação e registro do aplicativo no dispositivo de destino.
+Microsoft Visual Studio permite que você implantar e depurar seus aplicativos da plataforma Universal do Windows (UWP) em uma variedade de dispositivos Windows 10. O Visual Studio manipulará o processo de criação e registro do aplicativo no dispositivo de destino.
 
 ## <a name="picking-a-deployment-target"></a>Selecionando um destino de implantação
 
@@ -30,7 +30,7 @@ Para escolher um destino, vá para a lista suspensa de destino de depuração pr
 -   **Máquina Local** implantará o aplicativo no computador de desenvolvimento atual. Essa opção estará disponível apenas se a **Versão Mínima da Plataforma de Destino** de seu aplicativo for menor ou igual ao sistema operacional no computador de desenvolvimento.
 -   A **Máquina Remota** permitirá que você especifique um destino remoto para implantar o aplicativo. Mais informações sobre a implantação em um computador remoto podem ser encontradas em [Especificando um dispositivo remoto](#specifying-a-remote-device).
 -   O **Dispositivo** implantará o aplicativo em um dispositivo conectado USB. O dispositivo deve ser desbloqueado pelo desenvolvedor e ter a tela desbloqueada.
--   Um destino de **Emulador** será inicializado e implantará o aplicativo em um emulador com a configuração especificada no nome. Emuladores estão somente disponíveis no Hyper-V habilitada computadores que executam o Windows 8.1 ou posterior.
+-   Um destino de **Emulador** será inicializado e implantará o aplicativo em um emulador com a configuração especificada no nome. Emuladores estão apenas disponíveis no Hyper-V habilitada computadores que executam o Windows 8.1 ou posterior.
 
 
 ## <a name="debugging-deployed-apps"></a>Depurando aplicativos implantados
@@ -45,7 +45,7 @@ A seleção de **Não iniciar, mas sim depurar meu código quando iniciar** far�
 Os aplicativos UWP podem ser desenvolvidos e compilados no Windows 8.1 ou posterior, mas exigem que o Windows 10 seja executado. Se você estiver desenvolvendo um aplicativo UWP em um computador Windows 8.1, poderá depurar remotamente um aplicativo UWP em execução em outro dispositivo Windows 10, desde que os computadores host e de destino estejam na mesma LAN. Para fazer isso, baixe e instale as [Ferramentas Remotas para Visual Studio](https://www.visualstudio.com/downloads/) em ambos os computadores. A versão instalada deve corresponder à versão existente do Visual Studio que você instalou, e a arquitetura que você selecionar (x86, x64) também deverá corresponder à do aplicativo de destino.   
 
 ## <a name="package-layout"></a>Layout de pacote
-A partir do Visual Studio 2015 atualização 3, adicionamos a opção para desenvolvedores especificar o caminho de layout para aplicativos UWP. Isso determina onde o layout de pacote é copiado para o disco quando você compila seu aplicativo. Por padrão, essa propriedade é definida em relação ao diretório raiz do projeto. Se você não modificar essa propriedade, o comportamento permanecerá o mesmo para versões anteriores do Visual Studio.
+A partir do Visual Studio 2015 atualização 3, adicionamos a opção para desenvolvedores especificar o caminho de layout para seus aplicativos UWP. Isso determina onde o layout de pacote é copiado para o disco quando você compila seu aplicativo. Por padrão, essa propriedade é definida em relação ao diretório raiz do projeto. Se você não modificar essa propriedade, o comportamento permanecerá o mesmo para versões anteriores do Visual Studio.
 
 Esta propriedade pode ser modificada na propriedade **Debug** do projeto.
 
@@ -65,7 +65,7 @@ Para especificar um computador remoto para aplicativos do C# ou Microsoft Visual
 
 ![Caixa de Diálogo Conexões Remotas](images/debug-remote-connections.png)
 
-Para retornar a essa caixa de diálogo, você pode abrir as propriedades do projeto e vá para a guia **depuração** . A partir daí, marque **Localizar** próxima **máquina remota:**
+Para retornar a essa caixa de diálogo, você pode abrir as propriedades do projeto e vá para a guia **depuração** . A partir daí, selecione **Localizar** lado **máquina remota:**
 
 ![Guia de depuração](images/debug-remote-machine-config.png)
 
@@ -177,7 +177,7 @@ Você não pode selecionar **manter todos os arquivos no dispositivo** ao regist
 > [!NOTE]
 > **Registrar o layout de rede** é atualmente suportado no Xbox executando a Atualização de Aniversário do Windows 10 e os computadores executando a Atualização do Windows 10 para Criadores.
 
-O dispositivo remoto, o layout é registrado no seguinte local padrão dependendo da família: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` - esse é um link simbólico para o **caminho do registro do pacote** do computador não usa um link simbólico e em vez disso, registra diretamente o pacote ** caminho do registro**
+O dispositivo remoto, o layout é registrado no seguinte local padrão dependendo da família: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` - esse é um link simbólico para o **caminho do pacote de registro** do computador não usa um link simbólico e em vez disso, registra diretamente o pacote ** caminho do registro**
 
 
 ## <a name="debugging-options"></a>Opções de depuração

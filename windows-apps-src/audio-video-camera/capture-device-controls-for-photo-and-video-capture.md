@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 303cbd5e87db773324cd98447df6d99dc6de5a0c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328295"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471967"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>Controles manuais da câmera para a captura de fotos e vídeos
 
@@ -335,7 +335,7 @@ Em um dispositivo habilitado para multitoque, um cenário típico é ajustar o f
 
 No manipulador para o evento **ManipulationDelta**, atualize o fator de zoom com base na alteração do gesto de pinçagem do usuário. O valor [**ManipulationDelta.Scale**](https://msdn.microsoft.com/library/windows/apps/br242016) representa a mudança de escala do gesto de pinçagem, de forma que um pequeno aumento no tamanho da pinçagem seja um número um pouco maior que 1,0 e uma pequena queda no tamanho seja um número um pouco menor que 1,0. Neste exemplo, o valor atual do controle de zoom é multiplicado pelo delta da escala.
 
-Antes de configurar o fator de zoom, certifique-se de que o valor não seja menor que o valor mínimo compatível com o dispositivo, conforme indicado pela propriedade [**ZoomControl.Min**](https://msdn.microsoft.com/library/windows/apps/dn633817). Além disso, certifique-se de que o valor seja menor que ou igual ao valor [**ZoomControl.Max**](https://msdn.microsoft.com/library/windows/apps/dn608150). Por fim, você deve garantir que o fator de zoom seja um múltiplo do tamanho da etapa de zoom compatível com o dispositivo, conforme indicado pela propriedade [**etapa**](https://msdn.microsoft.com/library/windows/apps/dn633818) . Se o fator de zoom não atender a esses requisitos, uma exceção será lançada quando você tentar definir o nível de zoom no dispositivo de captura.
+Antes de configurar o fator de zoom, certifique-se de que o valor não seja menor que o valor mínimo compatível com o dispositivo, conforme indicado pela propriedade [**ZoomControl.Min**](https://msdn.microsoft.com/library/windows/apps/dn633817). Além disso, certifique-se de que o valor seja menor que ou igual ao valor [**ZoomControl.Max**](https://msdn.microsoft.com/library/windows/apps/dn608150). Por fim, você deve garantir que o fator de zoom é um múltiplo do tamanho da etapa de zoom compatível com o dispositivo, conforme indicado pela propriedade [**etapa**](https://msdn.microsoft.com/library/windows/apps/dn633818) . Se o fator de zoom não atender a esses requisitos, uma exceção será lançada quando você tentar definir o nível de zoom no dispositivo de captura.
 
 Defina o nível de zoom no dispositivo de captura criando um novo objeto [**ZoomSettings**](https://msdn.microsoft.com/library/windows/apps/dn926722). Defina a propriedade [**Mode**](https://msdn.microsoft.com/library/windows/apps/dn926723) como [**ZoomTransitionMode.Smooth**](https://msdn.microsoft.com/library/windows/apps/dn926726) e a propriedade [**Value**](https://msdn.microsoft.com/library/windows/apps/dn926724) como o fator de zoom desejado. Por fim, chame [**ZoomControl.Configure**](https://msdn.microsoft.com/library/windows/apps/dn926719) para definir o novo valor de zoom no dispositivo. O dispositivo fará a transição suavemente para o novo valor de zoom.
 

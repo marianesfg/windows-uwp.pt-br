@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-settings.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a0a94a7a8e22ee63cb126bb50ad1c74837c4f55
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330380"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473563"
 ---
 # <a name="settings-page-dev-home"></a>Página de configurações (Dev Home)
    
@@ -37,7 +37,7 @@ A página **configurações** contém os seguintes painéis:
 ## <a name="console-settings"></a>Configurações do console  
    
   
-O painel de **configurações do Console** fornece uma exibição "em um relance" de informações e configurações do console. Você pode usar essas ferramentas para exibir e editar o nome do host do console, área restrita e configurações de teclas de acesso de segurança.   
+O painel de **configurações do Console** fornece uma exibição "em um relance" de configurações do console e informações. Você pode usar essas ferramentas para exibir e editar o nome do host do console, área restrita e configurações de teclas de acesso de segurança.   
   
 <a id="ID4EOB"></a>
 
@@ -46,7 +46,7 @@ O painel de **configurações do Console** fornece uma exibição "em um relance
 ## <a name="os-recovery-update-settings"></a>Configurações de atualização de recuperação do sistema operacional  
    
   
-O painel de **recuperação do sistema operacional atualizar configurações** configura configurações de atualização automática do console. Observe que as alterações para essas configurações pode levar até 24 horas para entrar em vigor.   
+O painel de **recuperação do sistema operacional atualizar configurações** configura as configurações de atualização automática do console. Observe que as alterações dessas configurações pode levar até 24 horas para entrar em vigor.   
   
 <a id="ID4EYB"></a>
 
@@ -64,7 +64,7 @@ O painel do **Visual Studio** é usado para Emparelhe o console com o Visual Stu
 ## <a name="debug-settings"></a>Configurações de depuração  
    
   
-O painel de **configurações de depuração** é usado para exibir e ativar/desativar comuns configurações de depuração.   
+O painel de **configurações de depuração** é usado para exibir e alternar comuns configurações de depuração.   
   
 <a id="ID4EMC"></a>
 

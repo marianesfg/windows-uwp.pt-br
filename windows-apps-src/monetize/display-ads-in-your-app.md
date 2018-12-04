@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, faixa, controle de anúncio, intersticial
 ms.localizationpriority: medium
 ms.openlocfilehash: baf26335ccdf34c8403cc15ecc1e68527d92e90e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333414"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471754"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Apresentar anúncios em seu app com o SDK do Microsoft Advertising
 
-Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP (Plataforma Universal do Windows) para Windows 10 usando o SDK do Microsoft Advertising. Nossa plataforma de monetização de anúncios oferece uma variedade de formatos de anúncio que pode ser integrada perfeitamente em seu controle de aplicativos e oferece suporte com várias redes de anúncios conhecidas. Nossa plataforma está em conformidade com o OpenRTB, 2. x grande, MRAID 2 e 3 VPAID padrões e é compatível com MOAT e IAS. 
+Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP (Plataforma Universal do Windows) para Windows 10 usando o SDK do Microsoft Advertising. Nossa plataforma de monetização de anúncios oferece uma variedade de formatos de anúncio que pode ser integrada perfeitamente em seu controle de aplicativos e dá suporte com várias redes de anúncios conhecidas. Nossa plataforma está em conformidade com a OpenRTB, 2. x grande, MRAID 2 e 3 VPAID padrões e é compatível com MOAT e IAS. 
 
 <br/>
 
@@ -90,7 +90,7 @@ Para obter instruções e exemplos de código, consulte [este artigo](native-ads
 
 ## <a name="step-3-create-an-ad-unit-and-configure-mediation"></a>Etapa 3: criar uma unidade publicitária e configurar a mediação
 
-Depois que você terminar de testar seu aplicativo e estiver pronto para enviá-lo para a loja, crie uma unidade publicitária na página de [anúncios no app](../publish/in-app-ads.md) no Partner Center. Em seguida, atualize o código do aplicativo para usar essa unidade publicitária para o aplicativo receba anúncios ativos. Para obter mais informações, consulte [Configurar unidades publicitárias no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+Depois que você terminar de testar seu aplicativo e você estará pronto para enviá-lo para a loja, crie uma unidade publicitária na página de [anúncios no app](../publish/in-app-ads.md) no Partner Center. Em seguida, atualize o código do aplicativo para usar essa unidade publicitária para o aplicativo receba anúncios ativos. Para obter mais informações, consulte [Configurar unidades publicitárias no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
 Por padrão, o aplicativo exibirá anúncios da rede da Microsoft para anúncios pagos. Para maximizar a receita do anúncio, você pode habilitar o [controle de anúncios](ad-mediation-service.md) da unidade publicitária para exibir anúncios de outras redes de publicidade pagas, como o Taboola e o Smaato. Você também pode aumentar os recursos de promoção de apps ao veicular anúncios de campanhas promocionais de aplicativos da Microsoft.
 
@@ -100,7 +100,7 @@ Para começar a usar o controle de anúncios em seu aplicativo UWP, [definir con
 
 Após a conclusão do desenvolvimento de seu aplicativo com anúncios, você pode [enviar seu aplicativo atualizado](https://docs.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center para disponibilizá-lo na loja. Os apps que exibem anúncios devem atender aos requisitos adicionais especificados na [seção 10.10 das Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) e no [Anexo E do Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
 
-Depois que seu aplicativo for publicado e disponibilizado na loja, você pode revisar os [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no Partner Center e continuar a fazer alterações em suas configurações de mediação para otimizar o desempenho de seus anúncios. Sua receita de publicidade está incluída no seu [resumo de pagamento](../publish/payout-summary.md).
+Depois que seu aplicativo for publicado e disponibilizado na loja, você pode analisar seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no Partner Center e continuar a fazer alterações em suas configurações de controle para otimizar o desempenho de seus anúncios. Sua receita de publicidade está incluída no seu [resumo de pagamento](../publish/payout-summary.md).
 
 <span id="additional-help" />
 

@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: aa6e93196d30c15374129eee7714604cfab7b82e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323630"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471524"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>Suporte a blocos e notificações do sistema para idioma, escala e alto contraste
 
-Seu blocos e notificações do sistema podem carregar cadeias de caracteres e imagens personalizadas para idioma de exibição, [fator de escala de exibição](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), alto contraste e outros contextos de tempo de execução. Para obter informações sobre como usar os qualificadores nos nomes de seus arquivos de recurso, consulte [Personalizar os recursos para idioma, escala e outros qualificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md) e [logotipos e ícones de aplicativos](/windows/uwp/design/style/app-icons-and-logos).
+Seu blocos e notificações do sistema podem carregar cadeias de caracteres e imagens personalizadas para idioma de exibição, [fator de escala de exibição](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), alto contraste e outros contextos de tempo de execução. Para obter informações sobre como usar os qualificadores nos nomes de seus arquivos de recurso, consulte [Personalizar os recursos para idioma, escala e outros qualificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md) e [ícones e logotipos](/windows/uwp/design/style/app-icons-and-logos).
 
 Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../../globalizing/globalizing-portal.md).
 

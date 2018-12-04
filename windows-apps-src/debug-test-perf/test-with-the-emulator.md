@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ee38abfb28aad8d6a3ce073a947580b3df29593
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342838"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473520"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Testar com o Emulador Microsoft para Windows 10 Mobile
 
@@ -45,11 +45,11 @@ Para verificar os requisitos de BIOS, confira [Como habilitar Hyper-V para o emu
 
 Para verificar os requisitos de RAM e do sistema operacional, no Painel de Controle, selecione **Sistema e Segurança**e, em seguida, selecione **Sistema**.
 
-Microsoft Emulator para Windows 10 Mobile requer o Visual Studio 2015 ou posterior; ele não é compatível com versões anteriores do Visual Studio.
+Microsoft Emulator para Windows 10 Mobile requer o Visual Studio 2015 ou posterior; não é compatível com versões anteriores do Visual Studio.
 
 O Emulador da Microsoft para Windows 10 Mobile não pode carregar aplicativos direcionados à versão de sistema operacional do Windows Phone que seja anterior ao Windows Phone 7.1.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalação, desinstalação e executar o emulador
+## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalar, desinstalar e executar o emulador
 
 ### <a name="installing"></a>Instalar
 O Emulador da Microsoft para Windows 10 Mobile é fornecido como parte do SDK do Windows 10. O SDK do Windows 10 e o emulador podem ser instalados como parte da instalação do Visual Studio. Confira a [Página de transferência do Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
@@ -452,7 +452,7 @@ A aba **cartão SD** utiliza uma pasta no computador de desenvolvimento para sim
         -   Se você clicar em **Cancelar sincronização** enquanto a operação de sincronização está em progresso, o cartão é ejetado e os resultados da operação de sincronização são incompletas.
     -   O botão **Ejetar cartão SD** altera para **Inserir cartão SD**.
 
-> **Observação**cartão SD uma como usado pelo telefone é formatado com o sistema de arquivos FAT32, 32GB é o tamanho máximo.
+> **Observação**cartão SD uma pois usado pelo telefone é formatado com o sistema de arquivos FAT32, 32GB é o tamanho máximo.
 
 A velocidade de leitura e escrita para o cartão SD simulado é projetada para imitar as velocidades do mundo real. Acessar o cartão SD é mais lento do que acessar o disco rígido do computador.
 
@@ -621,11 +621,11 @@ A seguir estão os problemas conhecidos com o emulador, com as formas sugeridas 
 
 ### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>Mensagem de erro: "Falha ao remover o comutador Ethernet virtual"
 
-Em determinadas situações, inclusive depois de atualizar para uma versão de pré-lançamento novo do Windows 10, um comutador de rede virtual associado ao emulador pode entrem em um estado onde ele não pode ser excluído pela interface do usuário.
+Em determinadas situações, inclusive depois de atualizar para uma versão de pré-lançamento do Windows 10 novo, um comutador de rede virtual associado ao emulador pode obter em um estado no qual ele não pode ser excluído pela interface do usuário.
 
 Para recuperar o sistema dessa situação, execute "netcfg -d" em um prompt de comando de administrador: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. Quando a execução do comando for concluída, reinicie o computador para concluir o processo de recuperação.
 
-**Observação**esse comando excluirá todos os dispositivos de redes, não apenas aqueles associados ao emulador. Quando o computador for reiniciado, todos os dispositivos de hardware em rede serão descobertos automaticamente.
+**Observação**esse comando excluirá todos os dispositivos de rede, não apenas aqueles associados ao emulador. Quando o computador for reiniciado, todos os dispositivos de hardware em rede serão descobertos automaticamente.
  
 ### <a name="unable-to-launch-the-emulators"></a>Não é possível iniciar os emuladores
 

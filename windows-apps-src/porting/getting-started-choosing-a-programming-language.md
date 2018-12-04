@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a9544c1eecc4c1a86552d053694872743a17142c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8337192"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465140"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a>Introdução: escolhendo uma linguagem de programação
 
@@ -24,7 +24,7 @@ Você pode desenvolver usando C++, C#, Microsoft Visual Basic e JavaScript. O Ja
 
 Apesar de nosso foco ser a linguagem C# neste artigo, as outras linguagens oferecem benefícios exclusivos, que convém explorar. Por exemplo, se o desempenho do aplicativo for uma preocupação prioritária, principalmente para gráficos intensos, então C++ pode ser a escolha certa. A versão Microsoft .NET do Visual Basic é excelente para desenvolvedores de aplicativos do Visual Basic. JavaScript com HTML5 é ótimo para quem vem de uma experiência de desenvolvimento da Web. Para obter mais informações, consulte um destes artigos:
 
--   [Criar seu primeiro aplicativo UWP em C++](../get-started/create-a-basic-windows-10-app-in-cpp.md)
+-   [Criar seu primeiro aplicativo UWP usando C++](../get-started/create-a-basic-windows-10-app-in-cpp.md)
 -   [Criar seu primeiro aplicativo UWP usando c# ou Visual Basic](../get-started/create-a-hello-world-app-xaml-universal.md)
 -   [Criar seu primeiro aplicativo UWP usando JavaScript](../get-started/create-a-hello-world-app-js-uwp.md)
 

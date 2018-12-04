@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a5e3a29a252b091b1e52dbea5fa7af5058488ed5
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325140"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473583"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Armazenar e recuperar configurações e outros dados de aplicativo
 
@@ -168,7 +168,7 @@ Os dados de roaming de um aplicativo estarão disponíveis na nuvem desde que se
 -   Não use roaming em dados de aplicativo específicos de um dispositivo. Algumas informações são pertinentes apenas localmente, como um nome de caminho para um recurso de arquivo local. Se você decidir usar um perfil móvel nas informações locais, certifique-se de que o aplicativo possa se recuperar se as informações não forem válidas no dispositivo secundário.
 -   Não use perfis móveis em grandes conjuntos de dados de aplicativos. Há um limite na quantidade de dados à qual um aplicativo pode aplicar roaming; use a propriedade [**RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625) para atingir essa quantidade máxima. Se um aplicativo atingir esse limite, o roaming não poderá ser usado em nenhum dado até que o tamanho do armazenamento de dados do aplicativo deixe de exceder o limite. Ao projetar seu aplicativo, considere como definir um limite para dados maiores, para que eles não ultrapassem o limite. Por exemplo, se para salvar o estado de um jogo for preciso 10 KB, o aplicativo deverá apenas permitir o armazenamento de até 10 jogos.
 -   Não use o perfil móvel para dados que dependerem da sincronização instantânea. O Windows não garante uma sincronização instantânea; o uso de roaming poderá sofrer um atraso significativo se um usuário estiver offline em uma rede de alta latência. Assegure-se de que sua interface do usuário não dependa da sincronização instantânea.
--   Não use o roaming para dados alterados com frequência. Por exemplo: se o aplicativo acompanhar informações que mudarem frequentemente, como a posição em um música por segundos, não armazene essas informações como dados de uso do perfil móvel do aplicativo. Em vez disso, escolha uma representação menos frequente que ainda represente uma boa experiência do usuário, como uma música que estiver tocando no momento.
+-   Não use roaming para dados alterados com frequência. Por exemplo: se o aplicativo acompanhar informações que mudarem frequentemente, como a posição em um música por segundos, não armazene essas informações como dados de uso do perfil móvel do aplicativo. Em vez disso, escolha uma representação menos frequente que ainda represente uma boa experiência do usuário, como uma música que estiver tocando no momento.
 
 ### <a name="roaming-pre-requisites"></a>Pré-requisitos do uso do roaming
 

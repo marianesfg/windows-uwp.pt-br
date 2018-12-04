@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 920ff8e295959ad6ea66cdb3b673217ff19b89e2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348150"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471604"
 ---
 # <a name="storyboarded-animations"></a>Animações de storyboard
 
@@ -149,7 +149,7 @@ Para saber mais sobre os valores [**Duration**](https://msdn.microsoft.com/libra
 
 ### <a name="fromtoby-are-nullable"></a>From/To/By permitem valor nulo
 
-Mencionamos anteriormente que você pode omitir **From**, **To** ou **By** e, assim, usar valores não animados atuais como substitutos de um valor ausente. Não é possível adivinhar as propriedades **From**, **To** ou **By** de uma animação. Por exemplo, o tipo da propriedade [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) não é [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Em vez disso, é um [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) para **Double**. Além disso, seu valor padrão é **null**, não 0. É com esse valor **null** que o sistema de animação distingue que você não definiu especificamente um valor para uma propriedade **From**, **To** ou **By**. Extensões de componente VisualC + + (C++ c++ /CX) não tem um tipo de **Nullable** , ele usará [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) em vez disso.
+Mencionamos anteriormente que você pode omitir **From**, **To** ou **By** e, assim, usar valores não animados atuais como substitutos de um valor ausente. Não é possível adivinhar as propriedades **From**, **To** ou **By** de uma animação. Por exemplo, o tipo da propriedade [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) não é [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Em vez disso, é um [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) para **Double**. Além disso, seu valor padrão é **null**, não 0. É com esse valor **null** que o sistema de animação distingue que você não definiu especificamente um valor para uma propriedade **From**, **To** ou **By**. Extensões de componente VisualC + + (C++ c++ /CX) não tem um tipo **Nullable** , ele usará [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) em vez disso.
 
 ### <a name="other-properties-of-an-animation"></a>Outras propriedades de uma animação
 
