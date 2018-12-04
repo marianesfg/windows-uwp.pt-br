@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4fac02f892c66a1bcf0b08986ae00a3a162b44ca
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335201"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476511"
 ---
 # <a name="playready-drm"></a>DRM do PlayReady
 
@@ -398,16 +398,16 @@ A tabela a seguir descreve a implementação do DRM do PlayReady para Windows 10
 Antes de começar a criar seu aplicativo UWP protegido pelo PlayReady, o seguinte software deve ser instalado no sistema:
 
 -   Windows 10.
--   Se você estiver compilando alguma das amostras para o DRM do PlayReady para aplicativos UWP, você deve usar o Microsoft Visual Studio2015 ou posterior para compilar as amostras. Você ainda pode usar o Microsoft Visual Studio2013 para compilar qualquer uma das amostras do DRM do PlayReady para aplicativos de armazenamento do Windows 8.1.
+-   Se você estiver compilando alguma das amostras para o DRM do PlayReady para aplicativos UWP, você deve usar o Microsoft Visual Studio2015 ou posterior para compilar as amostras. Você ainda pode usar o Microsoft Visual Studio2013 para compilar qualquer uma das amostras do DRM do PlayReady para aplicativos do Windows 8.1 da loja.
 
 <!--This is no longer available-->
 <!--If you are planning to play back MPEG-2/H.262 content on your app, you must also download and install [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876).-->
 
 ## <a name="playready-uwp-app-migration-guide"></a>Guia de migração de aplicativos UWP da PlayReady
 
-Esta seção inclui informações sobre como migrar seus aplicativos existentes do PlayReady Windows 8. x Store para Windows 10.
+Esta seção inclui informações sobre como migrar seus aplicativos existentes do PlayReady Windows 8. x da loja para Windows 10.
 
-O namespace para aplicativos UWP do PlayReady no Windows 10 foi alterado de **Microsoft.Media.PlayReadyClient** para [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454). Isso significa que você precisará pesquisar e substituir o namespace antigo pelo novo em seu código. Você ainda fará referência a um arquivo winmd. Ele faz parte do winmd nos sistema operacional do Windows 10. Ele está em windows.winmd como parte do SDK do Windows do TH. Para UWP, ele está referenciado em windows.foundation.univeralappcontract.winmd.
+O namespace para aplicativos UWP do PlayReady no Windows 10 foi alterado de **Microsoft.Media.PlayReadyClient** para [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454). Isso significa que você precisará pesquisar e substituir o namespace antigo pelo novo em seu código. Você ainda fará referência a um arquivo winmd. Ele é parte do winmd no sistema operacional Windows 10. Ele está em windows.winmd como parte do SDK do Windows do TH. Para UWP, ele está referenciado em windows.foundation.univeralappcontract.winmd.
 
 Para reproduzir conteúdo HD (alta definição) (1080p) e UHD (ultra-alta definição) protegido por PlayReady, será necessário implementar o DRM de hardware do PlayReady. Para obter mais informações sobre como implementar o DRM de hardware do PlayReady, consulte [DRM de hardware](hardware-drm.md).
 
@@ -511,10 +511,10 @@ Para obter uma implementação de exemplo de parada segura, consulte o arquivo s
 
 ## <a name="use-playready-drm-on-xbox-one"></a>Usar PlayReady DRM em Xbox One
 
-Para usar PlayReady DRM em um aplicativo UWP no Xbox One, você primeiro precisará registrar sua conta do [Partner Center](https://partner.microsoft.com/dashboard) que você está usando para publicar o aplicativo para autorização a fim de usar o PlayReady. É possível fazer isso de duas maneiras:
+Para usar PlayReady DRM em um aplicativo UWP no Xbox One, você primeiro precisará registrar sua conta do [Partner Center](https://partner.microsoft.com/dashboard) que você está usando para publicar o aplicativo autorização usar o PlayReady. É possível fazer isso de duas maneiras:
 
 * Fazer o contato na Microsoft solicitar permissão.
-* Solicitar autorização enviando o seu nome de conta e a empresa do Partner Center para [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com).
+* Solicitar autorização enviando seu nome de conta e a empresa do Partner Center para [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com).
 
 Depois de receber a autorização, você precisará incluir um `<DeviceCapability>` adicional para o manifesto do aplicativo. Você precisará adicioná-lo manualmente porque não há configuração disponível no momento no Designer de Manifesto do Aplicativo. Siga estas etapas para configurá-lo:
 

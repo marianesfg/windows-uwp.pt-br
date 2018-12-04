@@ -1,16 +1,16 @@
 ---
 description: Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) e objetos do C++/WinRT.
 title: Interoperabilidade entre C++/WinRT e ABI
-ms.date: 05/21/2018
+ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, interoperabilidade, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: 6597846ae96b498a7b0068151a33cf31d17511d5
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.openlocfilehash: 1f84debc3fdf421db8f734d1c2184355d0508c8b
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8343393"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476610"
 ---
 # <a name="interop-between-cwinrt-and-the-abi"></a>Interoperabilidade entre C++/WinRT e ABI
 
@@ -70,11 +70,14 @@ Este tópico serve nos casos em que você desejar fazer a portabilidade ou inter
 Para fins de segurança e praticidade, nas conversões em ambas as direções, você pode simplesmente usar [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr), [**com_ptr::as**](/uwp/cpp-ref-for-winrt/com-ptr#comptras-function) e [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function). Veja um exemplo de código (com base no modelo de projeto do **Aplicativo de console**), que também ilustra como você pode usar aliases de namespace para as ilhas diferentes a fim de solucionar possíveis conflitos de namespace entre as projeção do C++/WinRT e o ABI.
 
 ```cppwinrt
+// pch.h
+#pragma once
+#include <windows.foundation.h>
+#include <unknwn.h>
+#include "winrt/Windows.Foundation.h"
+
 // main.cpp
 #include "pch.h"
-
-#include <windows.foundation.h>
-#include <winrt/Windows.Foundation.h>
 
 namespace winrt
 {
@@ -93,11 +96,11 @@ int main()
     winrt::Uri uri(L"http://aka.ms/cppwinrt");
 
     // Convert to an ABI type.
-    winrt::com_ptr<abi::IStringable> ptr = uri.as<abi::IStringable>();
+    winrt::com_ptr<abi::IStringable> ptr{ uri.as<abi::IStringable>() };
 
     // Convert from an ABI type.
     uri = ptr.as<winrt::Uri>();
-    winrt::IStringable uriAsIStringable = ptr.as<winrt::IStringable>();
+    winrt::IStringable uriAsIStringable{ ptr.as<winrt::IStringable>() };
 }
 ```
 
@@ -106,7 +109,7 @@ As implementações das funções **as** chamam a [**QueryInterface**](https://m
 ```cppwinrt
 int main()
 {
-    ...
+    // The code in main() already shown above remains here.
 
     // Lower-level conversions that only call AddRef.
 
@@ -124,10 +127,10 @@ int main()
 Estas são outras técnicas de conversão de nível inferior similares, mas que usam ponteiros brutos para tipos de interface ABI (aqueles definidos pelos cabeçalhos do SDK do Windows) no momento.
 
 ```cppwinrt
-    ...
+    // The code in main() already shown above remains here.
 
     // Copy to an owning raw ABI pointer with copy_to_abi.
-    abi::IStringable* owning = nullptr;
+    abi::IStringable* owning{ nullptr };
     winrt::copy_to_abi(uri, *reinterpret_cast<void**>(&owning));
 
     // Copy from a raw ABI pointer.
@@ -139,12 +142,12 @@ Estas são outras técnicas de conversão de nível inferior similares, mas que 
 Nas conversões de nível inferior, que apenas copiam endereços, você pode usar as funções auxiliares [**winrt::get_abi**](/uwp/cpp-ref-for-winrt/get-abi), [**winrt::detach_abi**](/uwp/cpp-ref-for-winrt/detach-abi) e [**winrt::attach_abi**](/uwp/cpp-ref-for-winrt/attach-abi).
 
 ```cppwinrt
-    ...
+    // The code in main() already shown above remains here.
 
     // Lowest-level conversions that only copy addresses
 
     // Convert to a non-owning ABI object with get_abi.
-    abi::IStringable* non_owning = static_cast<abi::IStringable*>(winrt::get_abi(uri));
+    abi::IStringable* non_owning{ static_cast<abi::IStringable*>(winrt::get_abi(uri)) };
     WINRT_ASSERT(non_owning);
 
     // Avoid interlocks this way.
@@ -178,11 +181,14 @@ Como vimos, não é necessário ter uma função auxiliar para converter um obje
 Este é um exemplo de código que mostra essa função auxiliar na prática.
 
 ```cppwinrt
+// pch.h
+#pragma once
+#include <windows.foundation.h>
+#include <unknwn.h>
+#include "winrt/Windows.Foundation.h"
+
 // main.cpp
 #include "pch.h"
-
-#include <windows.foundation.h>
-#include <winrt/Windows.Foundation.h>
 #include <iostream>
 
 using namespace winrt;
@@ -217,13 +223,13 @@ int main()
     std::wcout << "C++/WinRT: " << uri.Domain().c_str() << std::endl;
 
     // Convert to an ABI type.
-    winrt::com_ptr<abi::IUriRuntimeClass> ptr = uri.as<abi::IUriRuntimeClass>();
+    winrt::com_ptr<abi::IUriRuntimeClass> ptr{ uri.as<abi::IUriRuntimeClass>() };
     winrt::hstring domain;
-    winrt::check_hresult(ptr->get_Domain(put_abi(domain)));
+    winrt::check_hresult(ptr->get_Domain(reinterpret_cast<HSTRING*>(put_abi(domain))));
     std::wcout << "ABI: " << domain.c_str() << std::endl;
 
     // Convert from an ABI type.
-    winrt::Uri uri_from_abi = convert_from_abi<winrt::Uri>(ptr.get());
+    winrt::Uri uri_from_abi{ convert_from_abi<winrt::Uri>(ptr.get()) };
 
     WINRT_ASSERT(uri.Domain() == uri_from_abi.Domain());
     WINRT_ASSERT(uri == uri_from_abi);

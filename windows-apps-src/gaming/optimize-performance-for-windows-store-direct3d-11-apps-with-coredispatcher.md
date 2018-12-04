@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, latência de entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 537dd6e9d3f300666a0692b66f422ce00dd68460
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346403"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476904"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Otimizar a latência de entrada para jogos em DirectX da Plataforma Universal do Windows (UWP)
 
@@ -233,7 +233,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-O modelo de **DirectX 11 and XAML App (Universal Windows)** no Microsoft Visual Studio2015 separa o loop de jogo em vários threads de modo semelhante. Ele usa o objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) para iniciar um thread dedicado a manipular a entrada e também cria um thread de renderização independente do thread de interface do usuário XAML. Para obter mais detalhes sobre esses modelos, leia [Create a Universal Windows Platform and DirectX game project from a template](user-interface.md).
+O modelo de **aplicativo XAML (Universal Windows) DirectX 11 e** no Microsoft Visual Studio2015 separa o loop de jogo em vários threads de modo semelhante. Ele usa o objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) para iniciar um thread dedicado a manipular a entrada e também cria um thread de renderização independente do thread de interface do usuário XAML. Para obter mais detalhes sobre esses modelos, leia [Create a Universal Windows Platform and DirectX game project from a template](user-interface.md).
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>Maneiras adicionais de reduzir a latência de entrada
 

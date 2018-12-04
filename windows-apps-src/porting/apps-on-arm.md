@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10 s, sempre conectado, ARM, ARM64, emulação x86
 ms.localizationpriority: medium
 ms.openlocfilehash: bdbd0e4f3ab2d060cdb0b2519117e4f14725347f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8477611"
 ---
 # <a name="windows-10-on-arm"></a>Windows 10 em execução no ARM
 Originalmente, o Windows 10 (diferente do Windows 10 Mobile) pode ser executado somente em computadores que foram equipados com processadores x86 e x64. Agora, a área de trabalho do Windows 10 (edições Pro e S) pode ser executada em computadores com processadores ARM64 e a Fall Creators Update. A natureza de economia de energia da arquitetura de CPU do ARM permite que esses computadores tenham bateria o dia todo e ofereçam suporte para redes de dados móveis. Esses computadores fornecerão ótima compatibilidade de aplicativos e permitirão que você execute aplicativos win32 x86 existentes sem modificação. Ex. Adobe Reader. Para obter mais informações ou demonstração, veja o [vídeo do Channel 9 para o computador sempre conectado](https://channel9.msdn.com/Events/Build/2017/P4171). 

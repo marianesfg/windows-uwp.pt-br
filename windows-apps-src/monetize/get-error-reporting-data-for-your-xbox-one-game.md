@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros
 ms.localizationpriority: medium
 ms.openlocfilehash: f9ae7c75fb332e910aa1b63712cf0d230172afd3
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326869"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476368"
 ---
 # <a name="get-error-reporting-data-for-your-xbox-one-game"></a>Obter dados de relatório para seu Xbox One erros jogo
 
-Use este método na API de análise da Microsoft Store para obter dados de relatório de erros agregados jogo para seu Xbox One ingerido por meio do Portal de desenvolvedor do Xbox (XDP) e está disponível no painel do Centro de parceiro de análise XDP.
+Use este método na API de análise da Microsoft Store para obter dados de relatório de erros agregados para seu Xbox One jogo ingerido por meio do Portal de desenvolvedor do Xbox (XDP) e está disponível no painel do Centro de parceiro de análise XDP.
 
 Você pode recuperar informações de erro adicionais usando os métodos de [obter detalhes de um erro em seu Xbox One jogo](get-details-for-an-error-in-your-xbox-one-game.md), [obter o rastreamento de pilha de um erro em seu Xbox One jogo](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)e [baixar o arquivo CAB para um erro em seu jogo Xbox One](download-the-cab-file-for-an-error-in-your-xbox-one-game.md) .
 
@@ -47,7 +47,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A ID do produto do jogo Xbox One para o qual você está recuperando dados de relatório de erros. Para obter a ID do produto do jogo, navegue até seu jogo no Portal de Desenvolvedor do Xbox (XDP) e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de integridade do relatório de análise do Partner Center do Windows, a ID do produto estará incluída no arquivo. tsv. |  Sim  |
+| applicationId | string | A ID do produto do jogo Xbox One para o qual você está recuperando dados de relatório de erros. Para obter a ID do produto do jogo, navegue até seu jogo no Portal de Desenvolvedor do Xbox (XDP) e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de integridade do relatório de análise do Partner Center do Windows, a ID do produto está incluída no arquivo. tsv. |  Sim  |
 | startDate | date | A data de início no intervalo de datas dos dados do relatório de erros a serem recuperados. O padrão é a data atual. Se *aggregationLevel* for **day**, **week** ou **month**, esse parâmetro deverá especificar uma data no formato ```mm/dd/yyyy```. Se *aggregationLevel* for **hour**, esse parâmetro poderá especificar uma data no formato ```mm/dd/yyyy``` ou uma data e hora no formato ```yyyy-mm-dd hh:mm:ss```.  |  Não  |
 | endDate | date | A data de término no intervalo de datas dos dados do relatório de erros a serem recuperados. O padrão é a data atual. Se *aggregationLevel* for **day**, **week** ou **month**, esse parâmetro deverá especificar uma data no formato ```mm/dd/yyyy```. Se *aggregationLevel* for **hour**, esse parâmetro poderá especificar uma data no formato ```mm/dd/yyyy``` ou uma data e hora no formato ```yyyy-mm-dd hh:mm:ss```. |  Não  |
 | top | int | O número de linhas de dados a serem retornadas na solicitação. O valor máximo e o valor padrão; se não forem especificados, será 10.000. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
@@ -88,8 +88,8 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|---------------------|
-| date            | string  | A primeira data no intervalo de datas dos dados do erro no formato ```yyyy-mm-dd```. Se a solicitação especificar um único dia, o valor será essa data. Se a solicitação especificar um intervalo de datas maior, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas. Para solicitações que especificam um valor de *aggregationLevel* de **hora**, esse valor também inclui um valor de hora no formato ```hh:mm:ss``` no fuso horário local no qual ocorreu o erro.  |
-| applicationId   | string  | A ID do produto do jogo Xbox One para o qual você deseja recuperar dados de erro.   |
+| date            | string  | A primeira data no intervalo de datas dos dados do erro no formato ```yyyy-mm-dd```. Se a solicitação especificar um único dia, o valor será essa data. Se a solicitação especificar um intervalo de datas maior, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas. Para solicitações que especificam um valor de **hora**de *aggregationLevel* , esse valor também inclui um valor de hora no formato ```hh:mm:ss``` no fuso horário local no qual ocorreu o erro.  |
+| applicationId   | string  | A ID do produto do jogo Xbox One para o qual você deseja recuperar dados de erros.   |
 | applicationName | string  | O nome de exibição do jogo.   |
 | failureName     | string  | O nome de falha, que é composto de quatro partes: uma ou mais classes de problema, um código de verificação de bug/exceção, o nome da imagem em que ocorreu a falha e o nome da função associada.  |
 | failureHash     | string  | O identificador exclusivo do erro.   |
@@ -98,7 +98,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | osRelease       | string  |  Uma das seguintes cadeias de caracteres que especifica a versão do sistema operacional Windows 10 ou anel de liberação (como uma subpopulação na versão do sistema operacional) no qual ocorreu o erro.<p/><ul><li><strong>Versão1507</strong></li><li><strong>Versão1511</strong></li><li><strong>Versão1607</strong></li><li><strong>Versão1703</strong></li><li><strong>Versão1709</strong></li><li><strong>Versão1803</strong></li><li><strong>Versão prévia de lançamento</strong></li><li><strong>Participante do Programa Windows Insider - Modo Rápido</strong></li><li><strong>Participante do Programa Windows Insider - Modo Lento</strong></li></ul><p>Se a versão do sistema operacional ou anel de liberação de versão de pré-lançamento for desconhecida, este campo terá o valor <strong>Desconhecido</strong>.</p>    |
 | eventType       | string  | Uma das seguintes cadeias de caracteres:<ul><li>**falha**</li><li>**travar**</li><li>**Falha de memória**</li></ul>      |
 | market          | string  | O código de país ISO 3166 do mercado do dispositivo.   |
-| deviceType      | string  | O tipo de dispositivo no qual o erro ocorreu. Isso é sempre o valor **Console**.    |
+| deviceType      | string  | O tipo de dispositivo no qual o erro ocorreu. Isso é sempre o valor do **Console**.    |
 | packageName     | string  | O pacote exclusivo nome do jogo que está associado esse erro.      |
 | packageVersion  | string  | A versão do pacote do jogo que está associado esse erro.   |
 | deviceCount     | número inteiro | O número de dispositivos exclusivos que correspondem a esse erro para o nível de agregação especificado.  |

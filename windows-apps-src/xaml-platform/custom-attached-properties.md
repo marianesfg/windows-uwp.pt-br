@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: a92e1ad1c5bfb3960950b976da46ca16490d097e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344827"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8477113"
 ---
 # <a name="custom-attached-properties"></a>Propriedades anexadas personalizadas
 
@@ -39,10 +39,10 @@ Se estiver definindo a propriedade anexada estritamente para uso em outros tipos
 
 Defina sua propriedade anexada como uma propriedade de dependência declarando uma propriedade **public** **static** **readonly** do tipo [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362). Essa propriedade é definida com o uso do valor de retorno do método [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833). O nome da propriedade deve coincidir com o nome da propriedade anexada especificada como o parâmetro **RegisterAttached** *name*, com a cadeia de caracteres "Property" acrescentada ao final. Esta é a convenção estabelecida para nomeação das entidades de propriedades de dependência em relação às propriedades que representam.
 
-A diferença da área principal para definição de uma propriedade anexada personalizada em relação à propriedade de dependência personalizada está na forma como você define acessadores ou wrappers. Em vez de usar a técnica de wrapper descrita em [Propriedades de dependência personalizadas](custom-dependency-properties.md), você também deve fornecer estático **obter * * * PropertyName* e **Definir * * * PropertyName* métodos acessadores para a propriedade anexada. Os acessadores são usados principalmente pelo analisador XAML, embora qualquer outro chamador também possa usá-los para definir cenários não XAML.
+A diferença da área principal para definição de uma propriedade anexada personalizada em relação à propriedade de dependência personalizada está na forma como você define acessadores ou wrappers. Em vez de usar a técnica de wrapper descrita em [Propriedades de dependência personalizadas](custom-dependency-properties.md), você também deve fornecer estático **obter * * * PropertyName* e **Definir * * * PropertyName* métodos como acessadores para a propriedade anexada. Os acessadores são usados principalmente pelo analisador XAML, embora qualquer outro chamador também possa usá-los para definir cenários não XAML.
 
 > [!IMPORTANT]
-> Se você não definir os acessadores corretamente, o processador XAML não pode acessar a propriedade anexada e qualquer pessoa que tenta usá-lo provavelmente receberá um erro do analisador XAML. Além disso, as ferramentas de design e codificação normalmente dependem das convenções "\*Property" para nomeação de identificadores, quando elas encontram um propriedade de dependência personalizada em um assembly referenciado.
+> Se você não definir os acessadores corretamente, o processador XAML não pode acessar a propriedade anexada e qualquer pessoa que tenta usá-lo, provavelmente receberá um erro do analisador XAML. Além disso, as ferramentas de design e codificação normalmente dependem das convenções "\*Property" para nomeação de identificadores, quando elas encontram um propriedade de dependência personalizada em um assembly referenciado.
 
 ## <a name="accessors"></a>Acessadores
 
@@ -73,7 +73,7 @@ O objeto *target* pode ser de um tipo mais específico na sua implementação, m
 
 Este exemplo de código mostra o registro de propriedade de dependência (usando o método [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833)) e também os acessadores **Get** e **Set** para uma propriedade anexada personalizada. No exemplo, o nome da propriedade anexada é `IsMovable`. Portanto, os nomes dos acessadores devem ser `GetIsMovable` e `SetIsMovable`. O proprietário da propriedade anexada é uma classe de serviço denominada `GameService` que não tem uma interface do usuário própria; sua finalidade é apenas fornecer os serviços de propriedade anexada quando for usada a propriedade anexada **GameService.IsMovable**.
 
-Definindo a propriedade anexada em C++ c++ /CX é um pouco mais complexa. Você precisa decidir como fatorar entre o cabeçalho e o arquivo de código. Além disso, você deve expor o identificador como uma propriedade com apenas um acessador **get**, pelos motivos abordados em [Propriedades de dependência personalizadas](custom-dependency-properties.md). No C++ c++ /CX, você deve definir essa relação propriedade-campo explicitamente em vez de confiar na palavra de **readonly** .NET e implícitas fazendo de propriedades simples. Você também precisa executar o registro da propriedade anexada em uma função auxiliar que é executada apenas uma vez, quando o aplicativo é iniciado pela primeira vez, mas antes de qualquer página XAML que precisa da propriedade anexada seja carregada. O local típico para chamar as funções do auxiliar de registro da propriedade para qualquer e toda dependência ou propriedades anexadas está dentro do construtor **App** / [**Application**](https://msdn.microsoft.com/library/windows/apps/br242325) no código de seu arquivo app.xaml.
+Definindo a propriedade anexada em C++ c++ /CX é um pouco mais complexo. Você precisa decidir como fatorar entre o cabeçalho e o arquivo de código. Além disso, você deve expor o identificador como uma propriedade com apenas um acessador **get**, pelos motivos abordados em [Propriedades de dependência personalizadas](custom-dependency-properties.md). No C++ c++ /CX, você deve definir essa relação propriedade-campo explicitamente em vez de confiar na palavra de **readonly** .NET e implícitas fazendo de propriedades simples. Você também precisa executar o registro da propriedade anexada em uma função auxiliar que é executada apenas uma vez, quando o aplicativo é iniciado pela primeira vez, mas antes de qualquer página XAML que precisa da propriedade anexada seja carregada. O local típico para chamar as funções do auxiliar de registro da propriedade para qualquer e toda dependência ou propriedades anexadas está dentro do construtor **App** / [**Application**](https://msdn.microsoft.com/library/windows/apps/br242325) no código de seu arquivo app.xaml.
 
 ```csharp
 public class GameService : DependencyObject
@@ -230,7 +230,7 @@ Se estiver definindo a propriedade em um elemento que também está no mesmo nam
 ```
 
 > [!NOTE]
-> Se você estiver escrevendo uma UI XAML com C++, você deve incluir o cabeçalho para o tipo personalizado que define a propriedade anexada, sempre que uma página XAML usa esse tipo. Cada página XAML tem um cabeçalho code-behind .xaml.h associado. É aí que você deve incluir (usando **\#include**) o cabeçalho da definição do tipo de proprietário da propriedade anexada.
+> Se você estiver escrevendo uma UI XAML com C++, você deve incluir o cabeçalho para o tipo personalizado que define a propriedade anexada, a qualquer momento que uma página XAML usa esse tipo. Cada página XAML tem um cabeçalho code-behind .xaml.h associado. É aí que você deve incluir (usando **\#include**) o cabeçalho da definição do tipo de proprietário da propriedade anexada.
 
 ## <a name="value-type-of-a-custom-attached-property"></a>Tipo de valor de uma propriedade anexada personalizada
 
@@ -249,7 +249,7 @@ A função principal de um [**Canvas**](https://msdn.microsoft.com/library/windo
 
 Para ser um painel prático, [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) tem um comportamento que substitui os métodos [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) e [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) de nível de estrutura. É aí que **Canvas** realmente verifica se há valores de propriedades anexadas em seus filhos. Parte dos padrões **Measure** e **Arrange** é um loop que itera sobre qualquer conteúdo, e um painel tem a propriedade [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) que torna explícito o que é deve ser considerado o filho de um painel. Assim, o **Canvas** o comportamento do layout itera através desses filhos e faz chamadas de [**Canvas.GetLeft**](https://msdn.microsoft.com/library/windows/apps/br209269) e [**Canvas.GetTop**](https://msdn.microsoft.com/library/windows/apps/br209270) estáticas em cada filho para ver se essas propriedades anexadas contêm um valor que não é padrão (o padrão é 0). Esses valores são usados para posicionar absolutamente cada filho no espaço de layout disponível de **Canvas** de acordo com os valores específicos fornecidos por cada filho e confirmados usando **Arrange**.
 
-O código será semelhante este pseudocódigo.
+O código parece com este pseudocódigo.
 
 ```syntax
 protected override Size ArrangeOverride(Size finalSize)

@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: e6938807a589337489f07f5865e02a580a72dae2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350509"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476451"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>Indexadores específicos de formato do MakePri.exe
 
 Este tópico descreve os indexadores específicos de formato usados pela ferramenta [MakePri.exe](compile-resources-manually-with-makepri.md) para gerar seu índice de recursos.
 
 > [!NOTE]
-> MakePri.exe é instalado ao verificar a opção de **SDK do Windows para aplicativos gerenciados do UWP** ao instalar o Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe é instalado quando você verificar a opção do **SDK do Windows para aplicativos gerenciados do UWP** ao instalar o Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 O MakePri.exe é normalmente usado com o comando `new`, `versioned` ou `resourcepack`. Consulte [Opções de linha de comando do MakePri.exe](makepri-exe-command-options.md). Nesses casos, ele indexa os arquivos de origem para gerar um índice de recursos. O MakePri.exe usa vários indexadores individuais para ler diferentes arquivos de recurso de origem ou contêineres de recursos. O indexador mais simples é o indexador de pasta, que indexa o conteúdo de uma pasta, como imagens `.jpg` ou `.png`.
 

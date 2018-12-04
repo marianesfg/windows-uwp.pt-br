@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, contatos, calendário, compromissos, mensagens de email
 ms.localizationpriority: medium
 ms.openlocfilehash: a2ccf75796140723270e49a7b967ce234d41baf1
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8341064"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8477397"
 ---
 # <a name="contacts-my-people-and-calendar"></a>Contatos, Minhas Pessoas e calendário
 

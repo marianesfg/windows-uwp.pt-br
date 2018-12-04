@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 90447f63cf28660eaffc0dff4e28524f8ef4372a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8331514"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8477080"
 ---
 # <a name="vat-info"></a>Informações sobre IVA
 
 
-Se for solicitado que você forneça um número de ID de IVA durante o processo de registro do Partner Center, aqui estão algumas informações para você começar.
+Se você for solicitado a fornecer um número de ID de IVA durante o processo de registro do Partner Center, aqui estão algumas informações para você começar.
 
 ## <a name="understanding-vat-numbers"></a>Noções básicas sobre números de IVA
 
