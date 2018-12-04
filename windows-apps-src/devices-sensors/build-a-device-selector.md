@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 01a4bfc2ec4c1d442058dbb6009065541f93cc7f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8341944"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466147"
 ---
 # <a name="build-a-device-selector"></a>Criar um seletor de dispositivo
 
@@ -62,7 +62,7 @@ A tabela a seguir lista os operadores AQS e os tipos de parâmetros a que dão s
 
 > **Dica**você pode especificar **Nulo** para **COP\_EQUAL** ou **COP\_NOTEQUAL**. Isso se traduz em uma propriedade sem valor ou cujo valor não existe. No AQS, você especifica **NULL** usando colchetes vazios \[\].
 
-> **Importante**ao usar os operadores **COP\_VALUE\_CONTAINS** e **COP\_VALUE\_NOTCONTAINS** , se comportam de forma diferente com cadeias de caracteres e matrizes de cadeia de caracteres. No caso de uma cadeia de caracteres, o sistema fará uma pesquisa sem diferenciação de maiúsculas de minúsculas para ver se o dispositivo contém a cadeia de caracteres indicada como uma subcadeia de caracteres. No caso de uma matriz de cadeia de caracteres, as subcadeias de caracteres não são pesquisadas. Com a matriz de cadeia de caracteres, a matriz é pesquisada para ver se ela contém a cadeia de caracteres especificada inteira. Não é possível pesquisar uma matriz de cadeia de caracteres para verificar se os elementos na matriz contém uma subcadeia de caracteres.
+> **Importante**ao usar os operadores **COP\_VALUE\_CONTAINS** e **COP\_VALUE\_NOTCONTAINS** , eles se comportam de forma diferente com cadeias de caracteres e matrizes de cadeia de caracteres. No caso de uma cadeia de caracteres, o sistema fará uma pesquisa sem diferenciação de maiúsculas de minúsculas para ver se o dispositivo contém a cadeia de caracteres indicada como uma subcadeia de caracteres. No caso de uma matriz de cadeia de caracteres, as subcadeias de caracteres não são pesquisadas. Com a matriz de cadeia de caracteres, a matriz é pesquisada para ver se ela contém a cadeia de caracteres especificada inteira. Não é possível pesquisar uma matriz de cadeia de caracteres para verificar se os elementos na matriz contém uma subcadeia de caracteres.
 
 Se você não puder criar uma cadeia de caracteres de filtro AQS única que analise seus resultados de forma apropriada, poderá filtrar os resultados depois de recebê-los. Entretanto, se você escolher fazer isso, recomendamos que limite os resultados da sua cadeia de caracteres de filtro AQS inicial o quanto puder quando a fornecer para as APIs [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459). Isso ajudará a melhorar o desempenho do seu aplicativo.
 

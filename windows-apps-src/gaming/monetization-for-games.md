@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, monetização
 ms.localizationpriority: medium
 ms.openlocfilehash: 91545116b0d7eae107021cc52ee05d299257518c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335344"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467633"
 ---
 #  <a name="monetization-for-games"></a>Monetização para jogos
 
@@ -53,7 +53,7 @@ Compras no jogo são produtos comprados dentro de um jogo. Eles também são gen
 
 É possível criar dois tipos de complementos na loja: _duráveis_ ou _consumíveis_. Duráveis são itens que persistem por um período especificado e que só podem ser comprados uma vez até expirarem. Consumíveis são itens que podem ser comprados e usados reiteradas vezes.
 
-Ao criar consumíveis, decida como deseja acompanhá-los &mdash; ou seja, se eles são _gerenciados pelo desenvolvedor_ ou _gerenciados pela Loja_ (esse recurso estará disponível a partir do Windows 10, versão 1607). Com um consumível gerenciado pelo desenvolvedor, você é responsável por controlar o saldo do item para o jogador; com um consumível gerenciado pela loja, a Microsoft Store acompanha do saldo do item para você. Para obter mais informações, consulte [Visão geral dos complementos consumíveis](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
+Ao criar consumíveis, decida como deseja acompanhá-los &mdash; ou seja, se eles são _gerenciados pelo desenvolvedor_ ou _gerenciados pela Loja_ (esse recurso estará disponível a partir do Windows 10, versão 1607). Com um consumível gerenciado pelo desenvolvedor, você é responsável por manter o controle do saldo do item para o jogador; com um consumível gerenciado pela loja, a Microsoft Store acompanha do saldo do item para você. Para obter mais informações, consulte [Visão geral dos complementos consumíveis](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
 
 ### <a name="create-in-game-purchases"></a>Criar compras no jogo
 
@@ -102,7 +102,7 @@ Para criar um pacote que possa ser carregado na Loja:
 2. Na página __Visão geral do painel__ ou __Todos os aplicativos__, clique no aplicativo com o qual você deseja trabalhar. Se você ainda não tiver criado um envio de aplicativo, clique em __Criar um novo aplicativo__ e reserve um nome.
 3. Na página __Visão geral do aplicativo__, clique em __Iniciar seu envio__.
 4. Configure esse novo envio. Na página de envio:
-    * Clique em __Preço e disponibilidade__. Na seção __visibilidade__ , escolha '__Ocultar este aplicativo e evitar a aquisição...__"para garantir que apenas a equipe de desenvolvimento tem acesso ao jogo. Para saber mais detalhes, vá até [Distribuição e visibilidade](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility).
+    * Clique em __Preço e disponibilidade__. Na seção __visibilidade__ , escolha '__Ocultar este aplicativo e evitar a aquisição...__' para garantir que apenas a equipe de desenvolvimento tem acesso ao jogo. Para saber mais detalhes, vá até [Distribuição e visibilidade](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility).
     * Clique em __Propriedades__. Na seção __Categoria e subcategoria__, escolha __Jogos__ e uma subcategoria indicada para o jogo.
     * Clique em __Age ratings__. Preencha o questionário com precisão.
     * Clique em __Pacotes__. Carregue o pacote do jogo criado na etapa anterior.

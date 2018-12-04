@@ -7,17 +7,17 @@ keywords: windows 10, uwp, notificações direcionadas, notificações por push,
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 902a8d84c2a0cfa1549c4c3926e838e9bb8ed9c4
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324123"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470320"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificações para clientes do seu aplicativo
 
 Interagir com seus clientes no momento certo e com a mensagem certa é essencial para o sucesso como um desenvolvedor de aplicativos. As notificações podem incentivar os clientes a executar uma ação, como classificar um aplicativo, comprar um complemento, experimentar um novo recurso ou baixar outro aplicativo (talvez gratuitamente com um [código promocional](generate-promotional-codes.md) fornecido por você).
 
-[Partner Center](https://partner.microsoft.com/dashboard) fornece uma controlada por dados plataforma de interação de cliente, você pode usar para enviar notificações para todos os clientes do seu aplicativo ou direcionadas apenas a um subconjunto de clientes do seu aplicativo do Windows 10 que atendem aos critérios definidos em um cliente [ segmento](create-customer-segments.md). Você também pode criar uma notificação a serem enviadas para os clientes de mais de um dos seus aplicativos.
+O [Partner Center](https://partner.microsoft.com/dashboard) fornece uma controlada por dados plataforma de envolvimento de cliente, você pode usar para enviar notificações para todos os clientes do seu aplicativo, ou direcionadas apenas a um subconjunto de clientes do seu aplicativo do Windows 10 que atendem aos critérios definidos em um cliente [ segmento](create-customer-segments.md). Você também pode criar uma notificação para ser enviada para os clientes de mais de um dos seus aplicativos.
 
 > [!IMPORTANT]
 > Essas notificações podem ser usadas somente com aplicativos UWP.
@@ -50,7 +50,7 @@ Siga estas etapas para criar uma notificação no Partner Center e enviá-lo par
 1. No [Partner Center](https://partner.microsoft.com/dashboard), expanda a seção de **interagir** e, em seguida, selecione **as notificações**.
 2. Na página **Notificações**, selecione **Nova notificação**.
 3. Na seção **Selecionar um modelo** , escolha o [tipo de notificação](#notification-template-types) que você deseja enviar e, em seguida, clique em **Okey**.
-4. Na próxima página, use o menu suspenso para escolher um **Único aplicativo** ou **Vários aplicativos** para qual (quais) você deseja gerar uma notificação. Você pode selecionar apenas aplicativos que foram [configurados para receber notificações usando o Microsoft Store Services SDK](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+4. Na próxima página, use o menu suspenso para escolher um **Único aplicativo** ou **Vários aplicativos** para qual (quais) você deseja gerar uma notificação. Você pode selecionar apenas os aplicativos que foram [configurados para receber notificações usando o Microsoft Store Services SDK](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 5. Na seção **Configurações de notificação**, escolha um **Nome** para a sua notificação e, se aplicável, escolha o **Grupo de clientes** para o qual você deseja enviar a notificação. (As notificações enviadas para vários aplicativos só podem ser enviadas para todos os clientes desses aplicativos). Se você quiser usar um segmento que você ainda não criou, selecione **Criar novo grupo de cliente**. Observe que serão necessárias 24 horas para que você possa usar um novo segmento para notificações. Para obter mais informações, consulte [Criar segmentos de clientes](create-customer-segments.md).
 6. Se você quiser especificar quando a notificação deverá ser enviada, desmarque a caixa de seleção **Enviar a notificação imediatamente** e escolha uma data e uma hora específicas (no horário UTC para todos os clientes, a menos que você especifique o uso do fuso horário local de cada cliente).
 7. Se você quiser que a notificação expire em algum momento, limpe a caixa de seleção **Notificação nunca expira** e escolha data e hora de expiração específicas (em UTC).
@@ -114,7 +114,7 @@ Você pode avaliar quão bem está interagindo com seus clientes por meio de cad
 
 ### <a name="to-view-notification-performance"></a>Para exibir o desempenho de notificação
 
-Quando você tiver configurado a notificação e seu aplicativo para medir o desempenho de notificação conforme descrito acima, você pode ver quão bem suas notificações.
+Quando você tiver configurado a notificação e seu aplicativo para medir o desempenho de notificação conforme descrito acima, você pode ver o quão bem suas notificações.
 
 Para analisar os dados detalhados para cada notificação:
 
@@ -134,7 +134,7 @@ Para analisar os dados de atividade do usuário para todas as suas notificaçõe
 2.  Na página de **notificações** , clique na guia **Analisar** . Este guia exibe os seguintes dados:
     * Modos de exibição de gráfico dos vários estados de ação do usuário para suas notificações do sistema e notificações da Central de ações.
     * Modos de exibição de mapa de mundo o clique por meio de taxas para suas notificações do sistema e a ação de centro de notificações.
-3. Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é 30D (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode expandir **filtros** para filtrar todos os dados por aplicativo e no mercado.
+3. Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é 30D (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode expandir **filtros** para filtrar todos os dados por aplicativo e mercado.
 
 ## <a name="translate-your-notifications"></a>Traduza suas notificações
 

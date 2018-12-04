@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b1dd9859775821b067f6db7299ccbcfb6d121b6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347384"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473623"
 ---
 # <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>Adicionar um InkToolbar a um app de escrita à tinta da Plataforma Universal do Windows (UWP)
 

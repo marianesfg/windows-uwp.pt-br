@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, complementos, cra, durável, consumível, assinatura, tipo de produto, id do produto, compra realizada em aplicativo, produto no aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 51807b96d80245b8dc5b22f1f376f603285d518a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8352060"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467042"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Definir seu tipo de produto e ID do produto (product ID) do complemento
 
@@ -40,7 +40,7 @@ Se o complemento puder ser comprado, usado (consumido) e depois recomprado, voc�
 
 Há dois tipos de complementos para consumo:
 - **Consumível gerenciado pelo desenvolvedor**: o saldo e o cumprimento devem ser gerenciados no aplicativo. Compatível com todas as versões do sistema operacional.
-- **Consumível gerenciado pela Loja:** O saldo será acompanhado pela Microsoft em todos os dispositivos do cliente nos quais o Windows 10, versão 1607, ou posterior esteja em execução; não compatível em versões anteriores do sistema operacional. Para usar essa opção, o produto pai deve ser compilado usando-se o SDK do Windows 10 versão 14393 ou posterior. Observe também que você não poderá enviar um complemento consumível gerenciado pela loja para a loja até o produto pai ter sido publicado (embora você possa criar o envio no Partner Center e começar a trabalhar na qualquer momento). Você deverá inserir a quantidade para o complemento consumível gerenciado pela Loja na etapa **Propriedades** do envio.
+- **Consumível gerenciado pela Loja:** O saldo será acompanhado pela Microsoft em todos os dispositivos do cliente nos quais o Windows 10, versão 1607, ou posterior esteja em execução; não compatível em versões anteriores do sistema operacional. Para usar essa opção, o produto pai deve ser compilado usando-se o SDK do Windows 10 versão 14393 ou posterior. Observe também que você não pode enviar um complemento consumível gerenciado pela loja para a loja até o produto pai ter sido publicado (embora você possa criar o envio no Partner Center e começar a trabalhar na qualquer momento). Você deverá inserir a quantidade para o complemento consumível gerenciado pela Loja na etapa **Propriedades** do envio.
 
 ### <a name="subscription"></a>Assinatura
 

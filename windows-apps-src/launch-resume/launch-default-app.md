@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 143aa8310cdfe9dd5f0be29bf07f03c23293a647
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8338841"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466019"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Iniciar o app padrão de um URI
 
@@ -244,4 +244,4 @@ Use o **msnweather:** esquema de URI para iniciar o aplicativo de previsão do t
 
 | Esquema de URI | Resultados |
 |------------|---------|
-| msnweather://Forecast?la= \[latitude\] & lo = \ [longitude\] | Inicia o aplicativo de previsão do tempo na página de previsão com base em um coordenadas da localização geográfica.<br>`latitude` refere-se a latitude do local.<br> `longitude` refere-se a longitude do local.<br> |
+| msnweather://Forecast?la= \[latitude\] & lo = \ [longitude\] | Inicia o aplicativo de previsão do tempo na página de previsão com base em um coordenadas da localização geográfica.<br>`latitude` refere-se para o latitude da localização.<br> `longitude` refere-se à longitude do local.<br> |

@@ -12,11 +12,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: a75136f26aa6cfa330e4118e6709b0b4d4be4054
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342267"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8474004"
 ---
 # <a name="handle-app-activation"></a>Tratar a ativação do app
 
@@ -264,7 +264,7 @@ Se o valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/wi
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> Os aplicativos podem pular a inicialização se já houver conteúdo definido na janela atual. Você pode verificar a propriedade [**Tileid**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar se o aplicativo foi iniciado em principal ou um bloco secundário e, com base nisso, decidir se deve apresentar uma nova ou não retomar a experiência de aplicativo.
+> Os aplicativos podem pular a inicialização se já houver conteúdo definido na janela atual. Você pode verificar a propriedade [**Tileid**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar se o aplicativo foi iniciado em principal ou um bloco secundário e, com base nisso, decidir se você deve apresentar uma nova ou não retomar a experiência de aplicativo.
 
 ## <a name="important-apis"></a>APIs Importantes
 * [Windows.ApplicationModel.Activation](https://msdn.microsoft.com/library/windows/apps/br224766)

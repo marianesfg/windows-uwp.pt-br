@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, análise do Xbox, análise do Xbox em tempo real, estatística do Xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: ae9bacd88f957954c5cd1d3f6ccd6d3c04a568a2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8327015"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470284"
 ---
 # <a name="xbox-analytics-report"></a>Relatório de análise do Xbox
 
@@ -19,7 +19,7 @@ O relatório de **análise do Xbox** no [Partner Center](https://partner.microso
 > [!IMPORTANT]
 > Você só verá esse relatório se estiver publicando um jogo para Xbox ou um jogo que usa os serviços Xbox Live. Para fazer isso, você deve passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do [ ID@Xbox programa](../xbox-live/developer-program-overview.md#id). Jogos publicados por meio do [Programa de criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) não são visíveis no momento nesse relatório.
 
-Você pode exibir o relatório de **análise do Xbox** do menu de navegação esquerdo para o seu jogo, expandindo **Analisar** e selecionar a **análise do Xbox**.  Você pode exibir esses dados no Partner Center, ou [baixar o relatório](download-analytic-reports.md) para exibição offline.
+Você pode exibir o relatório de **análise do Xbox** do menu de navegação esquerdo para o seu jogo, expandindo **Analisar** e selecionar a **análise do Xbox**.  Você pode exibir esses dados no Partner Center ou [baixar o relatório](download-analytic-reports.md) para exibição offline.
 
 
 ## <a name="overview-tab"></a>Guia Visão geral

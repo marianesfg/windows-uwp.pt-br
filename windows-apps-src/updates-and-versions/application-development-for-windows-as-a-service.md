@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
 ms.openlocfilehash: e0a0bef4496e9b6aa327a8da404e88bcbd791e70
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324169"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468940"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Desenvolvimento de apps para Windows como serviço
 
@@ -28,11 +28,11 @@ As compilações distribuídas como Programa Windows Insider fornecem à equipe 
 
 Embora a Microsoft libere versões de pré-lançamento compiladas para o participante do programa Windows Insider, a Microsoft publicará amplamente dois tipos de versões do Windows 10 ao público em base contínua:
 
-**Atualizações de recursos** instalam as versões mais recentes de novos recursos, experiências e funcionalidades em dispositivos que já estão executando o Windows 10. Como as atualizações de recursos contém uma cópia completa do Windows, elas são também o que os clientes usar para instalar o Windows 10 em dispositivos existentes que executam o Windows 7 ou Windows 8.1 e em novos dispositivos onde não há nenhum sistema operacional está instalado. A Microsoft espera publicar atualizações semestralmente. 
+**Atualizações de recursos** instalar as versões mais recentes de novos recursos, experiências e funcionalidades em dispositivos que já estão executando o Windows 10. Como as atualizações de recursos contém uma cópia completa do Windows, elas são também o que os clientes usam para instalar o Windows 10 em dispositivos existentes que executam o Windows 7 ou Windows 8.1 e em novos dispositivos onde não há nenhum sistema operacional está instalado. A Microsoft espera publicar atualizações semestralmente. 
 
 **Atualizações de qualidade** entregam resoluções de problemas de segurança e outras correções de bugs importantes. As atualizações de qualidade serão fornecidas para melhorar cada recurso atualmente no suporte, em uma frequência de uma ou mais vezes por mês. A Microsoft continuará a publicar atualizações de qualidade no processo de atualização das terças-feiras (algumas vezes referida como Patch da terça-feira) Além disso, a Microsoft pode publicar atualizações de qualidade adicionais para Windows 10 fora do processo de atualização das terças-feiras quando for necessário para atender as necessidades do cliente.
 
-Durante o desenvolvimento do Windows 10, a Microsoft simplificou o ciclo de liberação e engenharia de produto do Windows para que podemos entregar os recursos, experiências e funcionalidades que os clientes queriam de forma mais rápida do que nunca. Também criamos novas formas para entregar e instalar as atualizações de recursos e as atualizações de qualidade que simplificam as implantações e gerenciamento existente, ampliando a base de funcionários que podem ficar atualizados com as mais recentes funcionalidades e experiências do Windows e um custo de propriedade menor. Portanto, implementamos novas opções de manutenção – chamadas de canal semestral e canal de manutenção a longo prazo (LTSC) – que fornecem soluções pragmáticas para manter mais dispositivos mais atualizados nos ambientes corporativos que era possível anteriormente.
+Durante o desenvolvimento do Windows 10, a Microsoft simplificou o ciclo de liberação e engenharia de produto do Windows para que podemos entregar os recursos, experiências e funcionalidades que os clientes queriam de mais rapidamente do que nunca. Também criamos novas formas para entregar e instalar as atualizações de recursos e as atualizações de qualidade que simplificam as implantações e gerenciamento existente, ampliando a base de funcionários que podem ficar atualizados com as mais recentes funcionalidades e experiências do Windows e um custo de propriedade menor. Portanto, implementamos novas opções de manutenção – chamadas de canal semestral e canal de manutenção a longo prazo (LTSC) – que fornecem soluções pragmáticas para manter mais dispositivos mais atualizados nos ambientes corporativos que era possível anteriormente.
 
 A tabela a seguir mostra descreve os vários canais de manutenção e seus atributos chaves.
 
@@ -79,7 +79,7 @@ As seções a seguir contêm algumas práticas recomendadas que a Microsoft reco
 
 ### <a name="windows-version-check"></a>Verificação de versão do Windows
 
-Versão do sistema operacional foi incrementada com o Windows 10. Isso significa que o número de versão interno foi alterado para 10.0. Como sempre, não medimos esforços para manter a compatibilidade de aplicativos e dispositivos após uma mudança de versão do sistema operacional. Para a maioria das categorias de aplicativos (sem nenhuma dependência de kernel), a mudança não afetará negativamente a funcionalidade do aplicativo e os aplicativos existentes continuarão a funcionar bem no Windows 10.
+Versão do sistema operacional foi incrementada com o Windows 10. Isso significa que o número de versão interno foi alterado para 10.0. Como sempre, não medimos esforços para manter a compatibilidade de aplicativos e dispositivos após uma mudança de versão do sistema operacional. Para a maioria das categorias de aplicativos (sem nenhuma dependência de kernel), a mudança não afetará negativamente a funcionalidade do aplicativo, e os aplicativos existentes continuarão a funcionar bem no Windows 10.
 
 A manifestação dessa alteração é específica do aplicativo. Isso significa que qualquer aplicativo que verifica especificamente para a versão do sistema operacional obterá um número de versão superior, que pode levar a uma ou mais das seguintes situações:
 -   Os instaladores de aplicativos podem não ser capazes de instalar o aplicativo e os aplicativos talvez não consigam iniciar.
@@ -138,7 +138,7 @@ Depois de ter atualizado para uma compilação liberada de versão de pré-lanç
 
 **Teste de atualização:** Verificar se seu aplicativo funciona após a atualização de uma versão de nível inferior do Windows (isto é, Windows 7 ou Windows 8.1) para Windows 10. Seu aplicativo não deve provocar reversões durante a atualização e deve continuar a funcionar como esperado após a atualização — isso é essencial para obter uma experiência perfeita de atualização.
 
-**Teste de reinstalação:** Certifique-se de que a funcionalidade do aplicativo possa ser restaurada por meio da reinstalação do seu aplicativo após a atualização do computador para Windows 10 de um sistema operacional de nível inferior. Se seu aplicativo não passar no teste de atualização e você não for capaz de reduzir a causa desses problemas, é possível que uma reinstalação possa restaurar a perda de funcionalidade. Passar em um teste de reinstalação indica que partes do aplicativo podem não ter sido migradas para o Windows 10.
+**Teste de reinstalação:** Certifique-se de que a funcionalidade do aplicativo possa ser restaurada por meio da reinstalação do seu aplicativo após a atualização do computador para Windows 10 de um sistema operacional de baixo nível. Se seu aplicativo não passar no teste de atualização e você não for capaz de reduzir a causa desses problemas, é possível que uma reinstalação possa restaurar a perda de funcionalidade. Passar em um teste de reinstalação indica que partes do aplicativo podem não ter sido migradas para o Windows 10.
 
 **Teste de recursos do dispositivo\\sistema operacional:** certifique-se de que seu aplicativo funciona como esperado se seu aplicativo depende da funcionalidade específica no sistema operacional. Áreas comuns para testes incluem o seguinte, geralmente em relação a uma seleção de modelos de computador comumente usados para garantir uma cobertura:
 -   Áudio

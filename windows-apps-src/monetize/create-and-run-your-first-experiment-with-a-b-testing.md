@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, testes comparativos, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: 8dba9095326c01029e14742c98c1c368b896dfb8
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8352070"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467901"
 ---
 # <a name="create-and-run-your-first-experiment"></a>Criar e executar seu primeiro experimento
 
@@ -58,7 +58,7 @@ Para seguir este passo a passo, você deve ter uma conta do Partner Center e voc
 
 ## <a name="create-the-experiment-in-partner-center"></a>Criar o experimento no Partner Center
 
-1. Retornar à página de projeto de **Experimentos de clique de botão** no Partner Center.
+1. Retorne para a página de projeto **Experimentos de clique de botão** no Partner Center.
 2. Na seção **Experimentos**, clique no botão **Novo experimento**.
 3. Na seção **Detalhes do experimento**, digite o nome **Otimizar cliques de botão** no campo **Nome do experimento**.
 4. Na seção **Evento de visualização**, digite **userViewedButton** no campo **Nome do evento de visualização**. Observe que esse nome corresponde à cadeia de caracteres de evento de visualização ao qual você conectou o código que você adicionou na seção anterior.
@@ -88,7 +88,7 @@ Para seguir este passo a passo, você deve ter uma conta do Partner Center e voc
 Aguarde várias horas depois de concluir a seção anterior e, em seguida, siga estas etapas para analisar os resultados do seu experimento e concluir o processo.
 
 > [!NOTE]
-> Assim que você ativa um experimento, Partner Center começa imediatamente a coletar dados de quaisquer aplicativos que sejam instrumentados para registrar dados para o seu experimento. No entanto, pode levar várias horas para dados do experimento apareçam no Partner Center.
+> Assim que você ativa um experimento, Partner Center começa imediatamente a coletar dados de quaisquer aplicativos que sejam instrumentados para registrar os dados de seu experimento. No entanto, pode levar várias horas para dados do experimento apareçam no Partner Center.
 
 1. No Partner Center, retorne à página **experimentação** para seu aplicativo.
 2. Na seção **Experimentos ativos**, clique em **Otimizar cliques de botão** para acessar a página desse experimento.

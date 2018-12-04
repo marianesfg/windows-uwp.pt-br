@@ -7,24 +7,24 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, testes A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e5c0d0ca1b1d771df2b224cc41ec5a37e267bc9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328439"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470988"
 ---
 # <a name="manage-your-experiment-in-partner-center"></a>Gerenciar seu experimento no Partner Center
 
-Depois de [definir seu experimento no Partner Center](define-your-experiment-in-the-dev-center-dashboard.md) e [codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md), você estará pronto para ativar seu experimento e usar o Partner Center para analisar os resultados de seu experimento. Depois de obter todos os dados de que precisa, você pode encerrar seu experimento e escolher se deseja continuar usando os valores variáveis de variação do controle em todos os seus aplicativos ou alternar para usar os valores variáveis em uma das outras variações.
+Depois de você [definir seu experimento no Partner Center](define-your-experiment-in-the-dev-center-dashboard.md) e [codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md), você estará pronto para ativar seu experimento e usar o Partner Center para analisar os resultados de seu experimento. Depois de obter todos os dados de que precisa, você pode encerrar seu experimento e escolher se deseja continuar usando os valores variáveis de variação do controle em todos os seus aplicativos ou alternar para usar os valores variáveis em uma das outras variações.
 
 > [!NOTE]
-> Quando você ativa um experimento, Partner Center começa imediatamente a coletar dados de quaisquer aplicativos que sejam instrumentados para registrar dados para o seu experimento. No entanto, pode levar várias horas para dados do experimento apareçam no Partner Center.
+> Quando você ativa um experimento, Partner Center começa imediatamente a coletar dados de quaisquer aplicativos que sejam instrumentados para registrar os dados de seu experimento. No entanto, pode levar várias horas para dados do experimento apareçam no Partner Center.
 
 Para um guia passo a passo que demonstra o processo de criação e execução de um experimento de ponta a ponta, veja [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
 ## <a name="activate-your-experiment"></a>Ativar seu experimento
 
-Quando estiver satisfeito com os parâmetros de seu experimento no Partner Center e tiver atualizado o código do aplicativo, você estará pronto para ativar seu experimento para poder iniciar a coleta de dados de experimento do seu aplicativo. Quando o experimento está ativo, seu aplicativo pode recuperar os valores de variação e relatar eventos de exibição e conversão para o Partner Center.
+Quando estiver satisfeito com os parâmetros de seu experimento no Partner Center e você atualizou o código do aplicativo, você estará pronto para ativar seu experimento para poder iniciar a coleta de dados de experimento do seu aplicativo. Quando o experimento está ativo, seu aplicativo pode recuperar os valores de variação e relatar eventos de exibição e conversão para o Partner Center.
 
 1. Entre no [Partner Center](https://partner.microsoft.com/dashboard).
 2. Em **Seus aplicativos**, selecione o aplicativo com o experimento que você deseja ativar.

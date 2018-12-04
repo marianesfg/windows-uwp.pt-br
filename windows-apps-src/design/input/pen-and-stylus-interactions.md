@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 22477ab0facfcb67d44057a91c7c3a49df57f8b9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8345107"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471395"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Interações com caneta e Windows Ink em apps UWP
 
@@ -30,7 +30,7 @@ Otimize seu aplicativo da Plataforma Universal do Windows (UWP) para entrada de 
 | Vídeos |   |
 | --- | --- |
 | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Ink-in-Your-UWP-App/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Events/Ignite/2016/BRK2060/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
-| *Usando escrita à tinta em seu aplicativo UWP* | *Usar Windows caneta e tinta para criar enterpriseapps mais envolvente* |
+| *Usando escrita à tinta em seu aplicativo UWP* | *Usar a caneta e o Windows Ink para criar enterpriseapps mais envolvente* |
 
 A plataforma Windows Ink, juntamente com um dispositivo de caneta, oferece uma maneira natural de criar anotações manuscritas digitais, desenhos e anotações. A plataforma dá suporte à captura de dados de tinta por entrada de digitalizador, gerenciamento e geração de dados de tinta, renderização desses dados como traços de tinta no dispositivo de saída e conversão de tinta em texto por meio do reconhecimento de manuscrito.
 
@@ -49,7 +49,7 @@ Para obter diretrizes sobre a experiência do usuário com o Windows Ink, consul
 | --- | --- |
 | [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | Um controle de plataforma XAMLUI que, por padrão, recebe e exibe todas as entradas de uma caneta como um traço de tinta ou um traço para apagar.<br/>Para obter mais informações sobre como usar o InkCanvas, consulte [Reconhecer traços do Windows Ink como texto](convert-ink-to-text.md) e [Armazenar e recuperar dados de traço do Windows Ink](save-and-load-ink.md). |
 | [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | Objeto code-behind, instanciado juntamente com um controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (exposto por meio da propriedade [**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)). Esse objeto fornece todas as funcionalidades de escrita à tinta expostas pelo **InkCanvas**, juntamente com um conjunto que compreende APIs de customização e personalização adicional.<br/>Para obter mais informações sobre como usar o InkPresenter, consulte [Reconhecer traços do Windows Ink como texto](convert-ink-to-text.md) e [Armazenar e recuperar dados de traço do Windows Ink](save-and-load-ink.md). |
-| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Um controle de plataforma XAMLUI que contém uma coleção personalizável e extensível de botões que ativam recursos relacionados à tinta em um [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)associado.<br/>Para obter mais informações sobre como usar o InkToolbar, consulte [Adicionar um InkToolbar a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP)](ink-toolbar.md). |
+| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Um controle de plataforma XAMLUI que contém uma coleção personalizável e extensível de botões que ativam recursos relacionados à tinta em um associado [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas).<br/>Para obter mais informações sobre como usar o InkToolbar, consulte [Adicionar um InkToolbar a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP)](ink-toolbar.md). |
 | [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | Permite a renderização de traços de tinta para o contexto de dispositivo Direct2D designado de um aplicativo Universal do Windows, em vez do controle padrão [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535). Isso permite a personalização completa da experiência de escrita à tinta.<br/>Para obter mais informações, consulte o [Exemplo de tinta complexa](https://go.microsoft.com/fwlink/p/?LinkID=620314). |
 
 ## <a name="basic-inking-with-inkcanvas"></a>Escrita à tinta básica com InkCanvas

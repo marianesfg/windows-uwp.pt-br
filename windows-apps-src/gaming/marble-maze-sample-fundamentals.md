@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, conceitos básicos
 ms.localizationpriority: medium
 ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323643"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473398"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Princípios básicos de exemplo do Marble Maze
 
@@ -34,7 +34,7 @@ Consulte a seguir alguns dos pontos-chave que este documento discute para quando
 ## <a name="creating-the-visual-studio-project"></a>Criando o projeto do Visual Studio
 
 
-Se você baixou e extraiu o exemplo, você pode abrir o arquivo **MarbleMaze_VS2017.sln** (na pasta **C++** ) no Visual Studio, e você terá o código na frente de você.
+Se você baixou e extraiu o exemplo, você pode abrir o arquivo **MarbleMaze_VS2017.sln** (na pasta **C++** ) no Visual Studio, e você terá o código na frente você.
 
 Quando criamos o projeto do Visual Studio para o Marble Maze, começamos com um projeto existente. No entanto, se você ainda não tem um projeto existente que forneça a funcionalidade básica necessária para o seu jogo UWP DirectX, convém criar um projeto com base no modelo **Aplicativo DirectX 11 (Universal do Windows)** do Visual Studio, pois ele fornece um aplicativo 3D de trabalho básico. Para fazer isso, execute estas etapas:
 
@@ -42,7 +42,7 @@ Quando criamos o projeto do Visual Studio para o Marble Maze, começamos com um 
 
 2. Na janela **Novo projeto** , na barra lateral esquerda, selecione **instalado > Modelos > Visual C++**.
 
-3. Na lista do meio, selecione o **Aplicativo DirectX 11 (Universal Windows)**. Se você não vir essa opção, você não pode ter os componentes necessários instalados&mdash;consulte [Modificar Visual Studio 2017, adicionando ou removendo cargas de trabalho e componentes](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obter informações sobre como instalar componentes adicionais.
+3. Na lista do meio, selecione o **Aplicativo DirectX 11 (Universal Windows)**. Se você não vir essa opção, talvez você não tenha os componentes necessários instalados&mdash;consulte [Modificar Visual Studio 2017, adicionando ou removendo cargas de trabalho e componentes](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obter informações sobre como instalar componentes adicionais.
 
 4. Dê ao projeto de um **nome**, um **local** para os arquivos sejam armazenados e um **nome de solução**e, em seguida, clique em **Okey**.
 
@@ -64,7 +64,7 @@ Nos menus suspensos na parte superior do Visual Studio, à esquerda do botão ve
 
 ###  <a name="controlling-the-game"></a>Controlando o jogo
 
-Você pode usar toque, o acelerômetro, o controlador do Xbox One ou o mouse para controlar o Marble Maze.
+Você pode usar o acelerômetro, toque, o controlador do Xbox One ou o mouse para controlar o Marble Maze.
 
 -   Use o teclado direcional no controle para mudar o item de menu ativo.
 -   Use toque, o início ou um botão no controlador de, ou o mouse para selecionar um item de menu.
@@ -84,7 +84,7 @@ Para chamar APIs do Windows Runtime do JavaScript e do .NET, essas linguagens ex
 > [!IMPORTANT]
 > Você só precisa usar **^** e **ref new** quando criar objetos ou componentes do Tempo de Execução do Windows. Você pode usar a sintaxe do C++ padrão ao criar o código básico do aplicativo que não usa o Windows Runtime.
 
-O Marble Maze usa **^** junto com **Microsoft::WRL::ComPtr** para gerenciar objetos alocados em pilha e reduzir a perda de memória. Recomendamos que você use ^ para gerenciar o tempo de vida de variáveis de tempo de execução do Windows, **ComPtr** para gerenciar a vida útil das variáveis COM (por exemplo, quando você usa o DirectX) e **std::shared\_ptr** ou **std::unique\_ptr** para gerenciar o tempo de vida de todos os outros objetos C++ alocados em pilha.
+O Marble Maze usa **^** junto com **Microsoft::WRL::ComPtr** para gerenciar objetos alocados em pilha e reduzir a perda de memória. Recomendamos que você use ^ para gerenciar o tempo de vida de variáveis de tempo de execução do Windows, **ComPtr** para gerenciar o tempo de vida de variáveis COM (por exemplo, quando você usa o DirectX) e **std::shared\_ptr** ou **std::unique\_ptr** para gerenciar a vida útil de todos os outros objetos C++ alocados em pilha.
 
  
 
@@ -99,7 +99,7 @@ Recomendamos o uso das seguintes convenções no seu modelo de tratamento de err
 -   Use exceções para comunicar erros inesperados.
 -   Não use exceções para controlar o fluxo do código.
 -   Capture somente as exceções que podem ser tratadas e recuperadas com segurança. Caso contrário, não capture a exceção e permita que o aplicativo seja encerrado.
--   Quando você chamar uma rotina DirectX que retorna **HRESULT**, use a função **DX::ThrowIfFailed**. Essa função é definida em [directxhelper. H](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/master/C%2B%2B/Shared/DirectXHelper.h). **ThrowIfFailed** lança uma exceção se o **HRESULT** fornecido é um código de erro. Por exemplo, **E\_POINTER** faz com que **ThrowIfFailed** gere [Platform:: NullReferenceException](https://msdn.microsoft.com/library/windows/apps/hh755823.aspx).
+-   Quando você chamar uma rotina DirectX que retorna **HRESULT**, use a função **DX::ThrowIfFailed**. Essa função é definida em [directxhelper. H](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/master/C%2B%2B/Shared/DirectXHelper.h). **ThrowIfFailed** lança uma exceção se o fornecido **HRESULT** é um código de erro. Por exemplo, **E\_POINTER** faz com que **ThrowIfFailed** gere [Platform:: NullReferenceException](https://msdn.microsoft.com/library/windows/apps/hh755823.aspx).
 
     Quando você usar **ThrowIfFailed**, coloque a chamada DirectX em uma linha separada para ajudar a melhorar a legibilidade do código, conforme mostrado no exemplo a seguir.
 

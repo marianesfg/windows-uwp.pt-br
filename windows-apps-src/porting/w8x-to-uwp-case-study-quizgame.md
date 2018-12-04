@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ce39e87f3c5c9e11f3e9ddb1424d606356ee3c8
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466785"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Tempo de execução do Windows 8. x para UWP estudo de caso: exemplo de aplicativo QuizGame
 
 
 
 
-Este tópico apresenta um estudo de caso de portabilidade de um teste de ponto a ponto jogo WinRT 8.1 exemplo de aplicativo para um aplicativo de plataforma Windows10Universal do Windows (UWP).
+Este tópico apresenta um estudo de caso de portabilidade de um teste de ponto a ponto jogo WinRT 8.1 exemplo de aplicativo para um aplicativo da plataforma Windows10Universal do Windows (UWP).
 
 Um aplicativo Universal 8.1 é aquele que cria duas versões do mesmo aplicativo: um pacote do aplicativo para Windows 8.1 e um pacote de aplicativo diferente para o Windows Phone 8.1. A versão WinRT 8.1 do QuizGame usa a disposição de projeto de um Aplicativo Universal do Windows, mas adota uma abordagem diferente e compila um aplicativo funcionalmente distinto para as duas plataformas. O pacote de aplicativo do Windows 8.1 serve como host para uma sessão de jogo de teste, enquanto o pacote do aplicativo Windows Phone 8.1 cumpre a função do cliente para o host. As duas metades da sessão do jogo de teste se comunicam por meio da rede ponto a ponto.
 
@@ -26,7 +26,7 @@ Faz sentido personalizar as duas metades ao PC e ao telefone, respectivamente. M
 
 O aplicativo utiliza padrões que usam modos e modelos de exibição. Como resultado dessa separação clara, o processo de portabilidade para esse aplicativo é muito simples, como você verá.
 
-**Observação**Este exemplo pressupõe que a rede está configurada para enviar e receber UDP personalizado agrupar pacotes multicast (a maioria das redes domésticas está, embora sua rede de trabalho possa não estar). O exemplo também envia e recebe pacotes TCP.
+**Observação**Este exemplo pressupõe que a rede está configurada para enviar e receber UDP personalizado grupo pacotes multicast (a maioria das redes domésticas estão, embora a rede de trabalho pode não ser). O exemplo também envia e recebe pacotes TCP.
 
  
 
@@ -75,7 +75,7 @@ Para experimentar o aplicativo e as interações em um único computador, e não
 
 Para ativar o modo de teste local, defina **LOCALTESTMODEON** (nas propriedades do projeto) como um símbolo de compilação condicional e recompile.
 
-## <a name="porting-to-a-windows10-project"></a>Fazendo a portabilidade para um projeto do Windows 10
+## <a name="porting-to-a-windows10-project"></a>Portando para um projeto do Windows 10
 
 O QuizGame inclui as seguintes partes.
 
@@ -106,7 +106,7 @@ Com base nessas opções, portaremos Quizgame para um novo projeto do Windows 10
 
 **QuizGameHost**
 
--   Crie um novo projeto de aplicativo do Windows 10 (**Adicionar** &gt; **Novo projeto** &gt; **Windows Universal** &gt; **Aplicativo em branco (Universal do Windows)**) e chame-o de QuizGameHost.
+-   Crie um novo projeto de aplicativo do Windows 10 (**Adicionar** &gt; **Novo projeto** &gt; **Universal do Windows** &gt; **Aplicativo em branco (Universal do Windows)**) e chame-o de QuizGameHost.
 -   Adicione uma referência ao P2PHelper (**Adicionar Referência** &gt; **Projetos** &gt; **Solução** &gt; **P2PHelper**).
 -   No **Gerenciador de Soluções**, crie uma nova pasta para cada uma das pastas compartilhadas no disco. Clique com o botão direito do mouse na pasta recém-criada e clique em **Adicionar** &gt; **Item Existente** e navegue até uma pasta. Abra a pasta compartilhada apropriada, selecione todos os arquivos e clique em **Adicionar como Link**.
 -   Copie MainPage.xaml de \\QuizGame.Windows\\ para \\QuizGameHost\\ e altere o namespace para QuizGameHost.
@@ -133,7 +133,7 @@ por:
 
 **QuizGameClient**
 
--   Crie um novo projeto de aplicativo do Windows 10 (**Adicionar** &gt; **Novo projeto** &gt; **Windows Universal** &gt; **Aplicativo em branco (Universal do Windows)**) e chame-o de QuizGameClient.
+-   Crie um novo projeto de aplicativo do Windows 10 (**Adicionar** &gt; **Novo projeto** &gt; **Universal do Windows** &gt; **Aplicativo em branco (Universal do Windows)**) e chame-o de QuizGameClient.
 -   Adicione uma referência ao P2PHelper (**Adicionar Referência** &gt; **Projetos** &gt; **Solução** &gt; **P2PHelper**).
 -   No **Gerenciador de Soluções**, crie uma nova pasta para cada uma das pastas compartilhadas no disco. Clique com o botão direito do mouse na pasta recém-criada e clique em **Adicionar** &gt; **Item Existente** e navegue até uma pasta. Abra a pasta compartilhada apropriada, selecione todos os arquivos e clique em **Adicionar como Link**.
 -   Copie MainPage.xaml de \\QuizGame.WindowsPhone\\ para \\QuizGameClient\\ e altere o namespace para QuizGameClient.

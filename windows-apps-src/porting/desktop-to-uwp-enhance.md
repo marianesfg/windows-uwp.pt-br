@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 42229212a0f54e307eaa841849c1a279c4354d2a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326634"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465718"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Aprimorar seu aplicativo da área de trabalho para Windows 10
 
@@ -203,7 +203,7 @@ O compilador só cria esse código se essa constante for definida em sua configu
 
 Você pode compilar um conjunto de binários para todos os usuários do Windows, independentemente da versão do Windows executada. Seu aplicativo chama APIs do Windows Runtime apenas se o usuário executa seu aplicativo como um aplicativo empacotado no Windows 10.
 
-A maneira mais fácil de adicionar verificações de tempo de execução ao seu código é instalar esse pacote Nuget: [Auxiliares de ponte de Desktop](https://www.nuget.org/packages/DesktopBridge.Helpers/) e, em seguida, use o ``IsRunningAsUWP()`` método como uma ponte de todo o código que chama APIs do Windows Runtime. consulte esta postagem de blog para obter mais detalhes: [Ponte de Desktop - identificar o contexto do aplicativo](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
+A maneira mais fácil de adicionar verificações de tempo de execução ao seu código é instalar esse pacote Nuget: [Auxiliares de ponte de Desktop](https://www.nuget.org/packages/DesktopBridge.Helpers/) e, em seguida, use o ``IsRunningAsUWP()`` método como uma ponte de todo o código que chama as APIs do Windows Runtime. consulte esta postagem de blog para obter mais detalhes: [Ponte de Desktop - identificar o contexto do aplicativo](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 
 ## <a name="related-video"></a>Vídeo relacionado
 

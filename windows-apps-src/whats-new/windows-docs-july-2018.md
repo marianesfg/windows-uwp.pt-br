@@ -1,16 +1,16 @@
 ---
 title: Novidades do Windows Docs em julho de 2018 - desenvolver aplicativos UWP
-description: Novos recursos, vídeos, amostras e diretrizes para desenvolvedores têm foram adicionados à documentação do desenvolvedor do Windows 10 referente a julho de 2018.
+description: Novos recursos, vídeos, amostras e diretrizes para desenvolvedores têm foram adicionados à documentação do desenvolvedor do Windows 10 de julho de 2018.
 keywords: Novidades, atualização, recursos, diretrizes para desenvolvedores, Windows 10, julho
 ms.date: 7/11/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d445f31d22baaafeb16c004543770cf5d6df05a7
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469964"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novidades dos documentos de desenvolvedor do Windows em julho de 2018
 
@@ -22,7 +22,7 @@ A documentação do desenvolvedor do Windows está sendo constantemente atualiza
 
 ### <a name="progressive-web-apps-on-windows"></a>Aplicativos Web progressivos no Windows
 
-[Aplicativos Web progressivos (PWAs)](https://developer.microsoft.com/windows/pwa) são simplesmente os aplicativos web que são [progressivamente avançado](https://wikipedia.org/wiki/Progressive_enhancement) com recursos nativos do aplicativo semelhantes em dar suporte a plataformas e mecanismos de navegador, como instalação de inicialização de homescreen, suporte offline e por push notificações. No Windows 10 com o mecanismo Microsoft Edge (EdgeHTML), PWAs aproveitam a vantagem adicional de execução [independentemente da janela do navegador, como aplicativos UWP.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
+[Aplicativos Web progressivos (PWAs)](https://developer.microsoft.com/windows/pwa) são simplesmente os aplicativos web que são [progressivamente avançado](https://wikipedia.org/wiki/Progressive_enhancement) com recursos nativos do aplicativo semelhante sobre suporte a plataformas e mecanismos de navegador, como instalação de inicialização de homescreen, suporte offline e por push notificações. No Windows 10 com o mecanismo Microsoft Edge (EdgeHTML), PWAs aproveitam a vantagem adicional de execução [independentemente da janela do navegador, como aplicativos UWP.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
 
 ![Uma imagem de PWAs em ação](images/progressive-web-apps.jpg)
 
@@ -38,13 +38,13 @@ Está disponível no Windows 10 Insider Preview Build 17713, [o bloco de notas f
 
 ## <a name="developer-guidance"></a>Diretrizes para desenvolvedor
 
-### <a name="design-landing-page"></a>Página de aterrissagem de design
+### <a name="design-landing-page"></a>Página de aterrissagem do design
 
-Confira o [atualizado página inicial de Design](https://developer.microsoft.com/windows/apps/design) para uma visão geral de uma visão geral de áreas de design UWP e informações sobre as últimas atualizações ao Design Fluent.
+Confira o [atualizado página inicial de Design](https://developer.microsoft.com/windows/apps/design) para uma visão geral de um instantâneo de áreas de design da UWP e informações sobre as últimas atualizações Design fluente.
 
 ### <a name="design-toolkits"></a>Kits de ferramentas de design
 
-Kits de ferramentas do Adobe XD e Adobe Illustrator foram atualizados com os novos recursos. Esses kits de ferramentas de design fornecem controles e modelos de layout para criar aplicativos UWP. [Confira-los aqui.](../design/downloads/index.md)
+Kits de ferramentas dos Adobe XD e Adobe Illustrator foram atualizados com os novos recursos. Esses kits de ferramentas de design fornecem controles e modelos de layout para criar aplicativos UWP. [Confira-los aqui.](../design/downloads/index.md)
 
 ### <a name="webvr"></a>WebVR
 
@@ -62,7 +62,7 @@ Adicionamos vários novos tópicos a [WebVR documentação](https://docs.microso
 
 Além disso, fizemos algumas atualizações para páginas existentes:
 
-* Sumário agora é melhor organizado em quatro buckets distintos de nível superior: **conceitos básicos**, **desenvolvimento**, **recursos**e **demonstrações**.
+* Sumário agora é melhor organizado em quatro buckets distintos de nível superior: **demonstrações**, **desenvolvimento**, **recursos**e **conceitos básicos**.
 
 * [Guia do desenvolvedor WebVR (página inicial)](https://docs.microsoft.com/microsoft-edge/webvr/): atualizada aparência, com maiores imagens e ícones e nova demonstração.
 
@@ -76,11 +76,11 @@ Além disso, fizemos algumas atualizações para páginas existentes:
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Aprimorar seu Bot com bate-papo de personalidade do projeto
 
-Bate-papo do projeto personalidade permite que você adicionar uma pessoa personalizável para a robôs bate-papo. Por meio da integração com o SDK do Microsoft Bot estrutura, você pode adicionar recursos de pequeno falar uma maneira mais conversa interagir com os clientes. [Assista ao vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para saber como implementar e [experimentar a demonstração interativa](http://aka.ms/PersonalityChat) para uma experiência prática.
+Bate-papo do projeto personalidade permite que você adicionar uma pessoa personalizável para a robôs bate-papo. Por meio da integração com o SDK do Microsoft Bot estrutura, você pode adicionar recursos de pequeno falar uma maneira mais conversa de interagir com os clientes. [Assista ao vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para saber como implementá-lo e [experimentar a demonstração interativa](http://aka.ms/PersonalityChat) para uma experiência prática.
 
 ### <a name="one-dev-question"></a>Uma pergunta sobre desenvolvimento
 
-A série de vídeos de uma pergunta sobre desenvolvimento, há muito tempo desenvolvedores da Microsoft abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
+Série de vídeos a uma pergunta sobre desenvolvimento, os desenvolvedores da Microsoft há muito tempo abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
 
 Raymond Chen:
 

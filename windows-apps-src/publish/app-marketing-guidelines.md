@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 19b76966cf4909af460575882e2d2be7c82743a0
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329046"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465800"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Diretrizes para aplicativos de marketing do Microsoft Store
 
@@ -45,7 +45,7 @@ Para promover o seu aplicativo, convém mostrar sua aparência quando executado 
 
 -   Ter seu aplicativo ou outro conteúdo disponível na Microsoft Store ou fazer parte do [Programa de afiliados da Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=624463).
 
--   Se você estiver registrado como um desenvolvedor de aplicativos no Partner Center, estar em conformidade com a seção ["licença às marcas da Microsoft"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) o contrato de desenvolvedor.
+-   Se você estiver registrado como um desenvolvedor de aplicativo no Partner Center, estar em conformidade com a seção ["licença de marcas da Microsoft"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) de contrato de desenvolvedor.
 
 -   Se você não estiver registrado como um desenvolvedor de aplicativos no Partner Center, Microsoft concede a você uma licença mundial não exclusiva, intransferível, royalties para usar os selos exclusivamente conforme descrito nas diretrizes de selo da Microsoft Store. A Microsoft pode alterar essas diretrizes, mas, caso isso aconteça, a Microsoft usará meios razoáveis para redirecioná-lo a quaisquer novas URLs em que essas especificações sejam publicadas. A Microsoft reserva para si todos os direitos não expressamente concedidos aqui.
 

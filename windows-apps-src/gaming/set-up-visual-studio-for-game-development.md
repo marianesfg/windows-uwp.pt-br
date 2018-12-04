@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, o visual studio, ferramentas, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a3938f486d52942031944b1184a711ddbc579db
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348120"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468459"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>Ferramentas do Visual Studio para programação de jogos
 
@@ -116,7 +116,7 @@ Para obter mais informações, consulte [Trabalhando com sombreadores](https://m
 
 Você pode adicionar compilações personalizadas ao seu projeto para que o Visual Studio converta recursos em formatos utilizáveis. Depois disso, você pode carregar os ativos no aplicativo e usá-los ao criar e preencher recursos DirectX, igual faria em qualquer outro aplicativo em DirectX.
 
-Para adicionar uma compilação personalizada, você clique com botão direito no projeto no **Gerenciador de soluções** e selecione **Compilações personalizadas...**. Você pode adicionar os seguintes tipos de compilações personalizadas ao seu projeto.
+Para adicionar uma compilação personalizada, você clique com botão direito no projeto no **Gerenciador de soluções** e selecione **Criar personalizações...**. Você pode adicionar os seguintes tipos de compilações personalizadas ao seu projeto.
 
 -   O pipeline de conteúdo de imagem usa arquivos de imagem como entrada e produz arquivos de superfície do DirectDraw (.dds).
 -   O pipeline de conteúdo de malha usa arquivos de malha (como .fbx) e produz arquivos de malha .cmo.

@@ -7,11 +7,11 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b00ace982bb39b99816013a8491b5b75be765833
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8327329"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473816"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Crie seu app reservando um nome
 
@@ -22,7 +22,7 @@ Você pode reservar um nome para seu app, mesmo se não tiver começado a criar 
 Ao [carregar os pacotes do app](upload-app-packages.md), o valor [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) deve corresponder ao nome reservado para o app. Se você usar o Microsoft Visual Studio para criar o pacote de seu aplicativo, esse atributo será preenchido para você.
 
 > [!IMPORTANT]
-> Você pode reservar nomes adicionais para um aplicativo, e você pode optar por usar um na versão publicada do seu aplicativo em vez da que reserva quando você cria seu aplicativo no Partner Center. No entanto, lembre-se de que o nome inserido aqui será usado em alguns dos [detalhes de identidade](view-app-identity-details.md), como o **Nome da família de pacote (PFN) do seu aplicativo**. Esses valores pode estar visíveis para alguns usuários e não pode ser alterado, portanto, certifique-se de que o nome reservado é apropriado para esse uso.
+> Você pode reservar nomes adicionais para um aplicativo, e você pode optar por usar um na versão publicada do seu aplicativo em vez da que reservar quando você cria seu aplicativo no Partner Center. No entanto, lembre-se de que o nome inserido aqui será usado em alguns dos [detalhes de identidade](view-app-identity-details.md), como o **Nome da família de pacote (PFN) do seu aplicativo**. Esses valores podem ser visíveis para alguns usuários e não pode ser alterado, portanto, certifique-se de que o nome reservado é apropriado para esse uso.
 
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>Crie seu aplicativo reservando um novo nome

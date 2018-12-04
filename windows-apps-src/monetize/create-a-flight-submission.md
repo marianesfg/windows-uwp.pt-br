@@ -1,17 +1,17 @@
 ---
 ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
-description: Use este método na API de envio da Microsoft Store para criar um novo envio de pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Partner Center.
+description: Use este método na API de envio da Microsoft Store para criar um novo envio de versão de pré-lançamento do pacote para um aplicativo que está registrado à sua conta do Partner Center.
 title: Criar um envio de pacote de pré-lançamento
 ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de versão de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e303027aaf3b10260090c500df573f1bf484e20
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346718"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468590"
 ---
 # <a name="create-a-package-flight-submission"></a>Criar um envio de pacote de pré-lançamento
 
@@ -117,7 +117,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 400  | Não foi possível criar o envio do pacote de pré-lançamento porque a solicitação é inválida. |
-| 409  | O envio do pacote de pré-lançamento não pôde ser criado por causa do estado atual do aplicativo, ou o aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | O envio do pacote de pré-lançamento não pôde ser criado por causa do estado atual do aplicativo, ou o aplicativo usa um recurso do Partner Center [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

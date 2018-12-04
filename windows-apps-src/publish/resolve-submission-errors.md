@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9911323010f691d1fa59c35306a7173cd08a0faa
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342878"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469934"
 ---
 # <a name="resolve-submission-errors"></a>Resolver erros de envio
 
@@ -19,13 +19,13 @@ Se você encontrar erros depois de enviar seu aplicativo para a Loja, deverá re
 
 ## <a name="uwp-apps"></a>Aplicativos UWP
 
-Se você estiver enviando um aplicativo UWP, você poderá ver um erro durante o pré-processamento se o arquivo do pacote não é um arquivo .msixupload ou. appxupload gerado pelo Visual Studio para a loja. Certifique-se de que você siga as etapas no [pacote de um aplicativo UWP com Visual Studio](../packaging/packaging-uwp-apps.md) ao criar o arquivo do pacote do aplicativo e carrega somente o arquivo .msixupload ou. appxupload na página de [pacotes](upload-app-packages.md) do envio, não um appx/.msix ou .msixbundle/appxbundle .
+Se você estiver enviando um aplicativo UWP, você poderá ver um erro durante o pré-processamento se o arquivo do pacote não é um arquivo de .msixupload ou. appxupload gerado pelo Visual Studio para a loja. Certifique-se de que você siga as etapas no [pacote de um aplicativo UWP com Visual Studio](../packaging/packaging-uwp-apps.md) ao criar o arquivo do pacote do aplicativo e carrega somente o arquivo .msixupload ou. appxupload na página de [pacotes](upload-app-packages.md) do envio, não um appx/.msix ou .msixbundle/appxbundle .
 
 Caso um erro de compilação seja exibido, certifique-se de que você consiga compilar o seu aplicativo no modo Versão com êxito. Para obter mais informações, consulte [Erros do compilador interno nativo .NET](http://go.microsoft.com/fwlink/p/?LinkID=613098).
 
 ## <a name="desktop-application"></a>Aplicativo da área de trabalho
 
-Se você pretende enviar um pacote que contém os binários UWP e Win32, certifique-se de que você cria esse pacote usando o projeto de empacotamento do Windows que está disponível no Visual Studio 2017 Update 4. Se você criar o pacote usando um modelo de projeto UWP, você não poderá enviar que pacote Store ou carregue-lo em outros computadores. Mesmo se o pacote publica com êxito, ele pode se comportar de maneiras inesperadas no computador do usuário. Para obter mais informações, consulte o [pacote de um aplicativo usando o Visual Studio (ponte de Desktop)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+Se você pretende enviar um pacote que contém os binários UWP e Win32, certifique-se de que você cria esse pacote usando o projeto de empacotamento do Windows que está disponível no Visual Studio 2017 Update 4. Se você criar o pacote usando um modelo de projeto UWP, você não poderá enviar que pacote Store ou carregue-lo em outros computadores. Mesmo se o pacote publica com êxito, podem se comportar de maneiras inesperadas no computador do usuário. Para obter mais informações, consulte o [pacote de um aplicativo usando o Visual Studio (ponte de Desktop)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 ## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8. x e versões anteriores
 
@@ -46,7 +46,7 @@ Outro erro que você poderá ver depois de enviar seu aplicativo é **erro 1300*
 
 ## <a name="nameidentity-errors"></a>Erros de nome/identidade
 
-Se você vir um erro que diz **The name found in the package is not one of your reserved app names. Please reserve the app name and/or update your package with the correct app name for this language**, talvez seja porque você inseriu um nome incorreto no seu pacote. Esse erro também poderá ocorrer se você estiver usando um nome de aplicativo que você ainda não tenha reservado no Partner Center. Você geralmente pode resolver esse erro seguindo estas etapas:
+Se você vir um erro que diz **The name found in the package is not one of your reserved app names. Please reserve the app name and/or update your package with the correct app name for this language**, talvez seja porque você inseriu um nome incorreto no seu pacote. Esse erro também pode ocorrer se você estiver usando um nome de aplicativo que você ainda não tenha reservado no Partner Center. Você geralmente pode resolver esse erro seguindo estas etapas:
 
 - Vá até a página [Identidade do aplicativo](view-app-identity-details.md) para seu aplicativo (em **Gerenciamento de Aplicativos**) para confirmar se o seu aplicativo tem uma identidade atribuída. Se isso não acontecer, você verá uma opção para criar uma. Você precisará reservar um nome para seu aplicativo a fim de criar a identidade. Verifique se esse é o nome que você usou em seu pacote.
 - Se o seu aplicativo já tiver uma identidade, você talvez ainda precise reservar o nome que você deseja usar no seu pacote. Em **Gerenciamento de Aplicativos**, clique em [Gerenciar nomes de aplicativos](manage-app-names.md). Digite o nome que você gostaria de usar e clique em **Reservar o nome do aplicativo**.

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 604ad25bb65486b3b388a9a03d7503b0c1ce9c03
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333364"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468276"
 ---
 # <a name="move-and-draw-commands-syntax"></a>Sintaxe de comandos de movimentação e desenho
 
@@ -227,11 +227,11 @@ Em vez de usar decimais ou inteiros, você pode usar notação científica. Por 
 
 ## <a name="design-tools-that-produce-move-and-draw-commands"></a>Ferramentas de desenho que produzem comandos de movimentação e desenho
 
-Usando a ferramenta de **caneta** e outras ferramentas de desenho no Blend for Microsoft Visual Studio2015 geralmente produzir um objeto de [**caminho**](/uwp/api/Windows.UI.Xaml.Shapes.Path) , mover e desenhar comandos.
+Usando a ferramenta de **caneta** e outras ferramentas de desenho no Blend for Microsoft Visual Studio2015 geralmente produzem um objeto de [**caminho**](/uwp/api/Windows.UI.Xaml.Shapes.Path) , mover e desenhar comandos.
 
 É possível que você veja dados de comandos de movimentação e desenho existentes em algumas partes de controle definidas nos modelos padrão de controles do Windows Runtime XAML. Por exemplo, alguns controles usam um [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722) que tem dados definidos como comandos de movimentação e desenho.
 
-Há exportadores ou plug-ins disponíveis para outras ferramentas de desenho gráfico vetorial comuns que podem produzir o vetor na forma de XAML. Geralmente elas criam objetos [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) em um contêiner de layout, com comandos de movimentação e desenho para [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Pode haver vários elementos **Path** no XAML, de modo que pincéis diferentes podem ser aplicados. Muitos desses Exportadores ou plug-ins foram originalmente escritos para Windows Presentation Foundation (WPF) XAML ou Silverlight, mas a sintaxe XAML é idêntica ao XAML do Windows Runtime. Normalmente, você pode usar trechos de XAML de um exportador e colá-los diretamente em uma página XAML do Windows Runtime. (Contudo, você não poderá usar um **RadialGradientBrush**, se ele fazia parte do XAML convertido, porque o XAML do Windows Runtime não dá suporte ao pincel.)
+Há exportadores ou plug-ins disponíveis para outras ferramentas de desenho gráfico vetorial comuns que podem produzir o vetor na forma de XAML. Geralmente elas criam objetos [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) em um contêiner de layout, com comandos de movimentação e desenho para [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Pode haver vários elementos **Path** no XAML, de modo que pincéis diferentes podem ser aplicados. Muitos desses Exportadores ou plug-ins foram originalmente escritos para o Windows Presentation Foundation (WPF) XAML ou Silverlight, mas a sintaxe XAML é idêntica ao XAML do Windows Runtime. Normalmente, você pode usar trechos de XAML de um exportador e colá-los diretamente em uma página XAML do Windows Runtime. (Contudo, você não poderá usar um **RadialGradientBrush**, se ele fazia parte do XAML convertido, porque o XAML do Windows Runtime não dá suporte ao pincel.)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

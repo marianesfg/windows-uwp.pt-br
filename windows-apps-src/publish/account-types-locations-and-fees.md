@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
 ms.openlocfilehash: 3163b4c89cc1d0bf3e4adfdea39222dfcb5a3ee1
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350135"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470205"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
-Os Windows programa de ofertas do [Partner Center](https://partner.microsoft.com/dashboard) ambos os individuais e contas em muitos [países e regiões](#developer-account-and-app-submission-markets)da empresa. Qualquer tipo de conta fornece acesso para publicar aplicativos na Store e participar de outros programas da Microsoft.
+O Windows programa de ofertas do [Partner Center](https://partner.microsoft.com/dashboard) ambos os individuais e contas em muitos [países e regiões](#developer-account-and-app-submission-markets)da empresa. Qualquer tipo de fornece conta que acesso para publicar aplicativos na loja e participar de outros programas da Microsoft.
 
 > [!NOTE]
 > Ao abrir sua conta de desenvolvedor, certifique-se de entrar no [Partner Center](https://partner.microsoft.com/dashboard) com a conta da Microsoft que você deseja usar para sua conta de desenvolvedor. Você terá a opção de [adicionar mais usuários à conta](manage-account-users.md) mais tarde.
@@ -37,7 +37,7 @@ As contas empresariais são um pouco mais caras, principalmente porque exigem al
 
 ## <a name="account-verification"></a>Verificação da conta
 
-Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, nosso parceiro de verificação Dun & Bradstreet confirmará se você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Você não poderá enviar aplicativos de uma conta corporativa até ele tenham sido verificado, mas enquanto está esperando, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md) continuar compilando e testando aplicativos e funciona em Preparando seus envios.
+Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, nosso parceiro de verificação Dun & Bradstreet confirmará se você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Você não poderá enviar aplicativos de uma conta corporativa até ele tenham sido verificado, mas enquanto está esperando, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md) continuar compilando e testando aplicativos e funcionam em Preparando seus envios.
 
 Você pode verificar o status da verificação na página **Configurações da conta**. 
 

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: dec33768eff90b9bd35a3ea60f3158fce663345e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8337162"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467241"
 ---
 # <a name="texture-block-compression"></a>Compactação de bloco de textura
 
@@ -21,7 +21,7 @@ O suporte para texturas de compactação de bloco (BC) foi estendido no Direct3D
 
 Para obter informações mais específicas sobre o suporte do algoritmo de compactação de bloco antes do Direct3D 11, incluindo o suporte para os formatos BC1 a BC5, consulte [Compactação de bloco (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb694531).
 
-**Observação sobre formatos de arquivo:** Os formatos de compactação de textura de BC6H e BC7 usam o formato de arquivo DDS para armazenar os dados de textura compactada. Para obter mais informações, consulte o [Guia de programação para DDS](https://msdn.microsoft.com/library/windows/desktop/bb943991) para obter detalhes.
+**Observação sobre formatos de arquivo:** Os formatos de compactação de textura de BC6H e BC7 usam o formato de arquivo DDS para armazenar dados de textura compactados. Para obter mais informações, consulte o [Guia de programação para DDS](https://msdn.microsoft.com/library/windows/desktop/bb943991) para obter detalhes.
 
 ## <a name="span-idblockcompressionformatssupportedindirect3d11spanspan-idblockcompressionformatssupportedindirect3d11spanspan-idblockcompressionformatssupportedindirect3d11spanblock-compression-formats-supported-in-direct3d-11"></a><span id="Block_Compression_Formats_Supported_in_Direct3D_11"></span><span id="block_compression_formats_supported_in_direct3d_11"></span><span id="BLOCK_COMPRESSION_FORMATS_SUPPORTED_IN_DIRECT3D_11"></span>Formatos de compactação de bloco com suporte no Direct3D 11
 

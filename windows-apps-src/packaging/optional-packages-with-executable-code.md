@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais
 ms.localizationpriority: medium
 ms.openlocfilehash: 795155ab38be11987d978d8c3843a73b7d359277
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334657"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466702"
 ---
 # <a name="optional-packages-with-executable-code"></a>Pacotes opcionais com código executável
  
@@ -24,7 +24,7 @@ Os pacotes opcionais com código executável são úteis para dividir um aplicat
 Para obter as ferramentas de desenvolvimento mais recentes, consulte [Downloads e ferramentas para Windows 10](https://developer.microsoft.com/windows/downloads). 
 
 > [!NOTE]
-> Para enviar um aplicativo que usa pacotes opcionais e/ou conjuntos relacionados para a Store, você precisará de permissão. Pacotes opcionais e conjuntos relacionados podem ser usados para linha de negócios (LOB) ou aplicativos empresariais sem permissão do Partner Center se não forem enviados para a loja. Consulte [Suporte do desenvolvedor Windows](https://developer.microsoft.com/windows/support) para obter permissão para enviar um aplicativo que usa pacotes opcionais e conjuntos relacionados.
+> Para enviar um aplicativo que usa pacotes opcionais e/ou conjuntos relacionados para a Store, você precisará de permissão. Pacotes opcionais e conjuntos relacionados podem ser usados para aplicativos de linha de negócios (LOB) ou enterprise sem permissão do Partner Center se não forem enviados para a loja. Consulte [Suporte do desenvolvedor Windows](https://developer.microsoft.com/windows/support) para obter permissão para enviar um aplicativo que usa pacotes opcionais e conjuntos relacionados.
 
 ## <a name="c-optional-packages-with-executable-code"></a>Pacotes opcionais do C++ com código executável
 

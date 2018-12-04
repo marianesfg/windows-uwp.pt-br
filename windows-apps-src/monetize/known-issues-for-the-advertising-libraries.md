@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, problemas conhecidos, solução de problemas
 ms.localizationpriority: medium
 ms.openlocfilehash: 3df88af638886e6bbda9b2f2f2065809da319532
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344642"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471375"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conhecidos e solução de problemas para anúncios em aplicativos
 
@@ -40,7 +40,7 @@ Se você tiver criado um anúncio recentemente (menos de um dia), talvez ele nã
 
 Há muitos motivos para você não ver anúncios, incluindo erros de rede. Outros motivos podem incluir:
 
-* Selecionar uma unidade de anúncio no Partner Center com um tamanho maior ou menor que o tamanho do **AdControl** no código do aplicativo.
+* Selecionar uma unidade de anúncio no Partner Center com um tamanho maior ou menor que o tamanho do **AdControl** no código do seu aplicativo.
 
 * Os anúncios não aparecerão se você estiver usando um [valor de modo de teste](set-up-ad-units-in-your-app.md#test-ad-units) para seu ID de unidade de anúncios ao executar um aplicativo dinâmico.
 
@@ -58,7 +58,7 @@ Anúncios de teste podem ser mostrados, mesmo quando você está esperando anún
 
 * Aplicativos de sideload ou aplicativos que estão em execução no emulador não mostrarão anúncios ativos.
 
-Quando uma unidade de anúncio em tempo real estiver fornecendo anúncios de teste, o status da unidade de anúncio mostra **ativo e fornecendo anúncios de teste** no Partner Center. Isso não se aplica atualmente aos aplicativos de telefone.
+Quando uma unidade de anúncio dinâmico estiver fornecendo anúncios de teste, o status da unidade de anúncio mostra **ativo e fornecendo anúncios de teste** no Partner Center. Isso não se aplica atualmente aos aplicativos de telefone.
 
 
 <span id="reference_errors"/>

@@ -9,11 +9,11 @@ ms.date: 08/4/2017
 keywords: uwp do windows, plataforma universal do windows, APIs do Windows Runtime, api do windows, ref. de api do windows, api do winrt, referência de api do windows, api uwp, referência de api uwp, desenvolver uwp, criar uwp, publicar uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b31e29d0967c8514de0566647c657574f6e5930
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8343197"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469619"
 ---
 # <a name="universal-windows-platform-documentation"></a>Documentação da Plataforma Universal do Windows
 A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer dispositivo Windows — computadores, telefones, Xbox One, HoloLens e muito mais — e publicá-los na Microsoft Store.

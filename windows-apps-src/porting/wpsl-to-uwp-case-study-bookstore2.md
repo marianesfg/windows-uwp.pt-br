@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b75da7d50135ee8d40f8ed44f0239edb54dcf65
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326069"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465967"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore2"></a>WindowsPhone Silverlight para UWP estudo de caso: Bookstore2
 
 
-Este estudo de caso, que se baseia nas informações fornecidas no [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), começa com um aplicativo do WindowsPhone Silverlight que exibe dados agrupados em um **LongListSelector**. No modelo de exibição, cada instância da classe **Author** representa o grupo dos livros escritos por esse autor e, no **LongListSelector**, podemos exibir a lista de livros agrupados por autor ou reduzir o zoom para ver uma lista de atalhos de autores. A lista de atalhos proporciona uma navegação mais rápida do que rolar pela lista de livros. Veremos as etapas de portabilidade do aplicativo para um aplicativo de plataforma Windows10Universal do Windows (UWP).
+Este estudo de caso — que se baseia nas informações fornecidas no [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), começa com um aplicativo WindowsPhone Silverlight que exibe dados agrupados em um **LongListSelector**. No modelo de exibição, cada instância da classe **Author** representa o grupo dos livros escritos por esse autor e, no **LongListSelector**, podemos exibir a lista de livros agrupados por autor ou reduzir o zoom para ver uma lista de atalhos de autores. A lista de atalhos proporciona uma navegação mais rápida do que rolar pela lista de livros. Veremos as etapas de portabilidade do aplicativo para um aplicativo de plataforma Windows10Universal do Windows (UWP).
 
 **Observação**  ao abrir Bookstore2Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas para configurar a versão da plataforma de destino em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
 ## <a name="downloads"></a>Downloads
 
-[Baixe o Bookstore2WPSL8 aplicativo do WindowsPhone Silverlight](http://go.microsoft.com/fwlink/p/?linkid=522601).
+[Baixe o Bookstore2WPSL8 WindowsPhone Silverlight aplicativo](http://go.microsoft.com/fwlink/p/?linkid=522601).
 
 [Baixe o Bookstore2Universal\_10 aplicativo do Windows 10](http://go.microsoft.com/fwlink/?linkid=532952).
 
@@ -32,7 +32,7 @@ A ilustração abaixo mostra a aparência do Bookstore2WPSL8, o aplicativo que v
 
 ![a aparência do Bookstore2WPSL8](images/wpsl-to-uwp-case-studies/c02-01-wpsl-how-the-app-looks.png)
 
-##  <a name="porting-to-a-windows10-project"></a>Fazendo a portabilidade para um projeto do Windows 10
+##  <a name="porting-to-a-windows10-project"></a>Portando para um projeto do Windows 10
 
 É uma tarefa rápida criar um novo projeto no Visual Studio, copiar arquivos para ele do Bookstore2WPSL8 e incluir os arquivos copiados no novo projeto. Comece criando um novo projeto Aplicativo em Branco (Universal do Windows). Dê a ele o nome de Bookstore2Universal\_10. Esses são os arquivos que devem ser copiados de Bookstore2WPSL8 para Bookstore2Universal\_10.
 
@@ -120,7 +120,7 @@ Você pode compilar e executar o aplicativo agora. Veja como é a aparência no 
 
 ![o aplicativo UWP no dispositivo móvel com as alterações de código-fonte iniciais](images/wpsl-to-uwp-case-studies/c02-02-mob10-initial-source-code-changes.png)
 
-O modelo de exibição e as exibições ampliada e reduzida funcionam corretamente juntos, embora a necessidade de trabalhar um pouco mais o estilo e o modelo seja um problema. Por exemplo, os estilos e pincéis corretos não ainda estão sendo usados, logo, o texto está invisível nos cabeçalhos de grupo que você pode clicar para reduzir o zoom. Se você executar o aplicativo em um dispositivo da área de trabalho, você verá um segundo problema, que o aplicativo ainda adaptou sua interface do usuário para oferecer a melhor experiência e o uso de espaço em dispositivos maiores onde janelas podem ser possivelmente muito maiores do que a tela de um dispositivo móvel. Portanto, nas próximas seções ([Estilos e modelos iniciais](#initial-styling-and-templating), [Interface do usuário adaptável](#adaptive-ui) e [Estilos finais](#final-styling)), corrigiremos esses problemas.
+O modelo de exibição e as exibições ampliada e reduzida funcionam corretamente juntos, embora a necessidade de trabalhar um pouco mais o estilo e o modelo seja um problema. Por exemplo, os estilos e pincéis corretos não ainda estão sendo usados, logo, o texto está invisível nos cabeçalhos de grupo que você pode clicar para reduzir o zoom. Se você executar o aplicativo em um dispositivo da área de trabalho, você verá um segundo problema, que o aplicativo ainda adaptou sua interface do usuário para oferecer a melhor experiência e o uso do espaço em dispositivos maiores, onde o windows podem ser possivelmente muito maiores do que a tela de um dispositivo móvel. Portanto, nas próximas seções ([Estilos e modelos iniciais](#initial-styling-and-templating), [Interface do usuário adaptável](#adaptive-ui) e [Estilos finais](#final-styling)), corrigiremos esses problemas.
 
 ## <a name="initial-styling-and-templating"></a>Estilos e modelos iniciais
 

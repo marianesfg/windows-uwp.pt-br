@@ -11,11 +11,11 @@ dev_langs:
 - cppcx
 - cppwinrt
 ms.openlocfilehash: 7d66eaa77f86deffd59ebc81360ccb8183afd7d6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8338453"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466732"
 ---
 # <a name="xaml-lighting"></a>Iluminação XAML
 
@@ -25,7 +25,7 @@ Você pode aplicar luzes a [**Visuals**](https://msdn.microsoft.com/library/wind
 
 ## <a name="applying-lights-to-xaml-uielements"></a>Aplicação de luzes a UIElements XAML
 
-Os objetos [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) são usados para aplicar [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) para iluminar dinamicamente UIElements XAML. XamlLight fornece métodos para direcionar UIElements ou pincéis XAML, aplicando luzes a árvores de UIElements, e ajudando a gerenciar a vida útil do CompositionLight usam recursos com base em se está no momento.
+Os objetos [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) são usados para aplicar [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) para iluminar dinamicamente UIElements XAML. XamlLight fornece métodos para direcionar UIElements ou pincéis XAML, aplicando luzes a árvores de UIElements, e ajudando a gerenciar a vida útil de CompositionLight usam recursos com base em se estiver no momento.
 
 - Se você tiver um **Brush** como destino de uma XamlLight, então as partes de quaisquer UIElements que usem esse Brush serão iluminadas.
 - Se você tiver um **UIElement** como destino de uma XamlLight, então o UIElement inteiro e seus UIElements filhos serão iluminados.
@@ -34,7 +34,7 @@ Os objetos [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) são usados
 
 [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) é uma classe base que pode ser usada para criar luzes personalizadas.
 
-Este exemplo mostra a definição de uma XamlLight personalizada que se aplica um destaque multicolorido direcionada UIElements e pincéis.
+Este exemplo mostra a definição de uma XamlLight personalizada que se aplica um destaque multicolorido UIElements e pincéis direcionada.
 
 ```csharp
 public sealed class OrangeSpotLight : XamlLight

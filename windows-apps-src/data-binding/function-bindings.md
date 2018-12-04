@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: 371b64a6161911242acd5b9abf97cfa7d2f05358
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8332612"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466795"
 ---
 # <a name="functions-in-xbind"></a>Funções em x: Bind
 
@@ -62,7 +62,7 @@ class ColorEntry
 
 O caminho para a função é especificado como outros caminhos de propriedade e pode incluir pontos (.), indexadores ou conversões para localizar a função.
 
-As funções estáticas podem ser especificadas usando-se a sintaxe XMLNamespace:ClassName.MethodName. Por exemplo, use o abaixo sintaxe para associação para funções estáticas no code-behind.
+As funções estáticas podem ser especificadas usando-se a sintaxe XMLNamespace:ClassName.MethodName. Por exemplo, use o abaixo sintaxe para associação a funções estáticas no code-behind.
 
 ```xaml
 <Page 

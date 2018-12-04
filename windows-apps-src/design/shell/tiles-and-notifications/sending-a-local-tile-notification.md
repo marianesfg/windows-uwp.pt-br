@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5752a7bf18d785121258ea3fe75afe8383be2aff
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468966"
 ---
 # <a name="send-a-local-tile-notification"></a>Enviar uma notificação de bloco local
  
@@ -46,7 +46,7 @@ using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
 ## <a name="create-the-notification-content"></a>Criar o conteúdo da notificação
 
 
-No Windows 10, cargas de bloco são definidas usando modelos de blocos adaptáveis, que permitem que você crie layouts personalizados visual para suas notificações. (Para saber o que é possível com blocos adaptáveis, consulte [Criar blocos adaptáveis](create-adaptive-tiles.md).)
+No Windows 10, cargas de bloco são definidas usando modelos de bloco adaptável, que permitem que você crie layouts personalizados visual suas notificações. (Para saber o que é possível com blocos adaptáveis, consulte [Criar blocos adaptáveis](create-adaptive-tiles.md).)
 
 Este exemplo de código cria conteúdo de bloco adaptável para blocos médios e largos.
 

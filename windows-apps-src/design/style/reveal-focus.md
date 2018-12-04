@@ -10,11 +10,11 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 311e5714c5428fac6509564fd00784299a02f630
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351174"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470842"
 ---
 # <a name="reveal-focus"></a>Foco do revelação
 
@@ -22,7 +22,7 @@ ms.locfileid: "8351174"
 
 Revela que foco é um efeito de iluminação para [experiências de 10 pés](/windows/uwp/design/devices/designing-for-tv), como Xbox One e telas de televisão. Ele anima a borda de elementos focalizáveis, como botões, quando o usuário move o foco do gamepad ou do teclado até eles. Ele está desativado por padrão, mas é fácil de habilitar. 
 
-(Para o efeito de realce de revelação, um efeito de iluminação que destaca elementos interativos, consulte o [artigo revelar destaque](/windows/uwp/design/style/reveal)).
+(Para o efeito de realce de revelação, um efeito de iluminação que destaca elementos interativos, consulte o [artigo do realce de revelação](/windows/uwp/design/style/reveal).)
 
 
 > **APIs importantes**: [propriedade Application.FocusVisualKind](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.FocusVisualKind), [enumeração FocusVisualKind](https://docs.microsoft.com/uwp/api/windows.ui.xaml.focusvisualkind) e [propriedade Control.UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals)
@@ -66,7 +66,7 @@ Revela que foco está desativada por padrão. Para habilitá-lo:
 Depois de definir a propriedade **FocusVisualKind** , o sistema aplica automaticamente o efeito de foco do revelação a todos os controles cuja propriedade [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) é definida como **True** (o valor padrão da maioria dos controles). 
 
 ## <a name="why-isnt-reveal-focus-on-by-default"></a>Por que não está revelar foco ativado por padrão? 
-Como você pode ver, é muito fácil ativar revelar o foco quando o app detectar que ele está em execução em um Xbox. Então, por que o sistema não o ativa para você? Porque o foco do revelação aumenta o tamanho do foco visual, que pode causar problemas com o layout de interface do usuário. Em alguns casos, convém personalizar o efeito de foco do revelação para otimizá-lo para seu aplicativo.
+Como você pode ver, é muito fácil ativar o foco do revelação quando o app detectar que ele está em execução em um Xbox. Então, por que o sistema não o ativa para você? Porque o foco do revelação aumenta o tamanho do foco visual, que pode causar problemas com o layout da interface do usuário. Em alguns casos, convém personalizar o efeito de foco do revelação para otimizá-lo para seu aplicativo.
 
 ## <a name="customizing-reveal-focus"></a>Personalizando o foco do revelação
 
@@ -74,9 +74,9 @@ Você pode personalizar o efeito de foco do revelação modificando as proprieda
 
 Mas antes de começar a pena, vale a pena saber um pouco mais sobre os componentes que compõem o foco do revelação.
 
-Há três partes nos elementos visuais de foco do revelação padrão: a borda principal, a borda secundária e o brilho do revelação. A borda principal apresenta espessura de **2px** e é moldada em torno da parte *externa* da borda secundária. A borda secundária apresenta espessura de **1px** e é moldada em torno da parte *interna* da borda secundária. O brilho do foco do revelação tem espessura proporcional à espessura da borda principal e é executado em torno do *fora* da borda principal.
+Há três partes nos elementos visuais de foco do revelação padrão: a borda principal, a borda secundária e o brilho do revelação. A borda principal apresenta espessura de **2px** e é moldada em torno da parte *externa* da borda secundária. A borda secundária apresenta espessura de **1px** e é moldada em torno da parte *interna* da borda secundária. O brilho do foco do revelação tem espessura proporcional à espessura da borda principal e é executado em torno o *fora* da borda principal.
 
-Além dos elementos estáticos, elementos visuais de foco do revelação apresentam uma luz animada que pulsates quando estão em repouso e se move na direção do foco ao mover o foco.
+Além dos elementos estáticos, os elementos visuais de foco do revelação recursos uma luz animada que pulsates quando estão em repouso e se move na direção do foco ao mover o foco.
 
 ![Camadas do foco do revelação](images/reveal-breakdown.svg)
 
@@ -163,7 +163,7 @@ Se você gostaria de usar apenas o brilho sem o elemento visual de foco principa
 
 ## <a name="use-your-own-focus-visuals"></a>Use seus próprios elementos visuais de foco
 
-Outra maneira para personalizar o foco do revelação é recusar os elementos visuais de foco fornecida pelo sistema desenhando seus próprios estados visuais de uso. Para saber mais, consulte a [amostra de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895).
+Outra maneira de personalizar o foco do revelação é recusar os elementos visuais de foco fornecida pelo sistema desenhando seus próprios estados visuais de uso. Para saber mais, consulte a [amostra de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895).
 
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>Revelar foco e o sistema de Design fluente
