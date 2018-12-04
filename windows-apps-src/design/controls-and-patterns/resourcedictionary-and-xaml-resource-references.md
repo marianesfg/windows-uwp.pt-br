@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 51461df47fe92c296fee198a6f2ed1c34e833cd7
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328210"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480523"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>Referências de recursos de ResourceDictionary e XAML
 
@@ -202,7 +202,7 @@ sealed partial class App : Application
 
 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706) é uma classe base da qual os controles herdam e tem uma propriedade [Resources](https://msdn.microsoft.com/library/windows/apps/br208740). Portanto, você pode adicionar um dicionário de recursos local a qualquer **FrameworkElement**.
 
-Aqui, tanto [Page](https://msdn.microsoft.com/library/windows/apps/br227503) quanto [Border](https://msdn.microsoft.com/library/windows/apps/br209250) têm dicionários de recursos, e ambas têm um recurso chamado "greeting". O [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) chamado 'textBlock2' está dentro da **borda**, portanto, sua pesquisa de recursos examina primeira recursos da **borda**, em seguida, recursos da **página**e, em seguida, os recursos do [aplicativo](https://msdn.microsoft.com/library/windows/apps/br242324) . O **TextBlock** mostrará "Hola mundo".
+Aqui, tanto [Page](https://msdn.microsoft.com/library/windows/apps/br227503) quanto [Border](https://msdn.microsoft.com/library/windows/apps/br209250) têm dicionários de recursos, e ambas têm um recurso chamado "greeting". O [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) chamado 'textBlock2' está dentro da **borda**, portanto, sua pesquisa de recursos examina primeira a **borda**do recursos, em seguida, recursos da **página**e, em seguida, os recursos de [aplicativo](https://msdn.microsoft.com/library/windows/apps/br242324) . O **TextBlock** mostrará "Hola mundo".
 
 Para acessar os recursos desse elemento no código, use a propriedade [Resources](https://msdn.microsoft.com/library/windows/apps/br208740) do elemento. O acesso aos recursos de um [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706) no código, em vez de XAML, examinará apenas esse dicionário, não os dicionários do elemento pai.
 
@@ -449,7 +449,7 @@ O [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794)
 
 A maior parte dos cenários de um [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) é manipulada exclusivamente na XAML. Você declara o contêiner **ResourceDictionary** e os recursos contidos nele como um arquivo XAML ou conjunto de nós XAML em um arquivo de definição da interface do usuário. E, em seguida, você usa referências de recurso XAML para solicitar esses recursos de outras partes do XAML. Ainda assim, existem alguns cenários em que o seu aplicativo talvez precise ajustar o conteúdo de um **ResourceDictionary** usando o código que é executado enquanto o aplicativo está em execução, ou pelo menos consultar o conteúdo de um **ResourceDictionary** para ver se um recurso já está definido. Essas chamadas de código são feitas em uma instância de **ResourceDictionary**, portanto, recupere primeiro uma delas seja um **ResourceDictionary** imediato, em algum lugar da árvore de objetos obtendo [FrameworkElement.Resources](https://msdn.microsoft.com/library/windows/apps/br208740) ou `Application.Current.Resources`.
 
-No código de C\# ou do Microsoft Visual Basic, você pode referenciar um recurso de um determinado [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) usando o indexador ([Item](https://msdn.microsoft.com/library/windows/apps/jj603134)). Um **ResourceDictionary** é um dicionário de cadeias de caracteres inseridas, portanto, o indexador usa a chave de cadeia de caracteres em vez de um número inteiro. Em VisualC + + extensões de componente (C++ c++ /CX) de código, use a [pesquisa](https://msdn.microsoft.com/library/windows/apps/br208800).
+No código de C\# ou do Microsoft Visual Basic, você pode referenciar um recurso de um determinado [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) usando o indexador ([Item](https://msdn.microsoft.com/library/windows/apps/jj603134)). Um **ResourceDictionary** é um dicionário de cadeias de caracteres inseridas, portanto, o indexador usa a chave de cadeia de caracteres em vez de um número inteiro. Em extensões de componente VisualC + + (C++ c++ /CX) de código, use a [pesquisa](https://msdn.microsoft.com/library/windows/apps/br208800).
 
 Ao usar um código para examinar ou mudar um [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794), o comportamento para APIs como [Lookup](https://msdn.microsoft.com/library/windows/apps/br208800) ou [Item](https://msdn.microsoft.com/library/windows/apps/jj603134) não passa de recursos imediatos para recursos do aplicativo, o que é um comportamento do analisador de XAML que só acontece enquanto páginas XAML são carregadas. No tempo de execução, o escopo para chaves é autossuficiente na instância de **ResourceDictionary** que você está usando no momento. Entretanto, esse escopo não se estende em [MergedDictionaries](https://msdn.microsoft.com/library/windows/apps/br208801).
 

@@ -8,16 +8,16 @@ ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 8ffcbbcc73db049498eb09ea60061f93cd7b09f2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351550"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480331"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Projetar kits de ferramentas e amostras para aplicativos UWP
  
 
-Design e downloads relacionados à interface do usuário para aplicativos UWP/Design fluente. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/downloads">nossa página principal de downloads</a>. 
+Design e downloads relacionados à interface do usuário para aplicativos de Design fluente/UWP. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/downloads">nossa página principal de downloads</a>. 
 
 
 ## <a name="design-toolkits"></a>Kits de ferramentas de design
@@ -97,21 +97,21 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
         <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
-      **Gerador de bloco e ícone para Adobe Photoshop** Este conjunto de ações para Adobe Photoshop gera os 68 ativos recomendados de bloco e ícone em apenas 7 arquivos. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Baixar o gerador de bloco e ícone</a></p>
+      **Gerador de bloco e ícone para o Adobe Photoshop** Este conjunto de ações para Adobe Photoshop gera os 68 ativos recomendados de bloco e ícone em apenas 7 arquivos. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Baixar o gerador de bloco e ícone</a></p>
     :::column-end:::
 :::row-end:::
 
     
 ## <a name="samples"></a>Exemplos
 
-![Imagem do Editor de tema XAML fluente](images/XamlThemeEditor_screenshot.png)
+![Imagem Fluent do Editor de tema XAML](images/XamlThemeEditor_screenshot.png)
 **Editor de tema XAML fluente**<br>
-O Editor de tema XAML fluente é uma ferramenta que ajuda a demonstram a flexibilidade do sistema de Design Fluent, bem como é compatível com o processo de desenvolvimento de aplicativo, geração de marcação XAML para nossa estrutura ResourceDictionary usada em aplicativos da plataforma Universal do Windows (UWPs).
-<a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Baixe a amostra de ferramenta</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Confira a ferramenta no GitHub</a>
+O Editor de tema XAML fluente é uma ferramenta que ajuda a demonstrar a flexibilidade do sistema de Design Fluent, bem como é compatível com o processo de desenvolvimento de aplicativo, geração de marcação XAML para nossa estrutura ResourceDictionary usada em aplicativos da plataforma Universal do Windows (UWPs).
+<a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Baixe o exemplo de ferramenta</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Confira a ferramenta no GitHub</a>
 
 ![Imagem de VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-O aplicativo de exemplo do UWP de ponta a ponta Van Arsdel, Ltd. foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso do maior densidade e novos controles na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos avançados subjacentes da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência avançada e produtiva para gerenciar e comprar dispositivos IoT (nesse caso, lâmpadas).<br>
+O aplicativo de exemplo UWP Van Arsdel, Ltd. ponta a ponta foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso dos novos controles e densidade aprimorada na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos poderosos subjacentes da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência avançada e produtiva para gerenciar e comprando dispositivos IoT (nesse caso, lâmpadas).<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Baixe a amostra VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Confira a amostra VanArsdel no GitHub</a>
 
 ![criar a imagem de conversão](images/buildcast.png)

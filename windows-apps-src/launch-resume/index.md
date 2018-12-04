@@ -4,14 +4,14 @@ description: Esta seção descreve o que acontece quando um app UWP (Plataforma 
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 ms.date: 10/04/2017
 ms.topic: article
-keywords: Windows 10, uwp, tarefa em segundo plano, o serviço de aplicativo, conectado dispositivos, sistemas remotos
+keywords: Windows 10, uwp, tarefa em segundo plano, o serviço de aplicativo, conectado a dispositivos, sistemas remotos
 ms.localizationpriority: medium
 ms.openlocfilehash: d12113329381c6602edf87a11fc1cc6b822dab4e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333162"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8481320"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>Tarefas de Inicialização, retomada e de segundo plano
 

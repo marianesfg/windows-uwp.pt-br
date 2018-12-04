@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, controle de anúncio, anúncio nativo
 ms.localizationpriority: medium
 ms.openlocfilehash: c978a07ceb30aaf9c2d0df3d38ff7ee9abbb5b2a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340988"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483066"
 ---
 # <a name="native-ads"></a>Anúncios nativos
 
@@ -115,11 +115,11 @@ Depois de confirmar que a implementação do seu anúncio nativo mostra com êxi
 
 3. Como alternativa, você pode habilitar o controle de anúncios para o anúncio nativo ao definir as configurações na seção [Configurações de controle](../publish/in-app-ads.md#mediation) na página [Anúncios no app](../publish/in-app-ads.md). O controle de anúncio permite que você maximize a receita do anúncio e os recursos de promoção do app ao exibir anúncios de várias redes de anúncios conhecidas.
 
-4.  No seu código, substitua os valores de unidade de anúncio de teste (ou seja, os *applicationId* e *adUnitId* parâmetros do construtor [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) ) pelos valores dinâmicos gerados no Partner Center.
+4.  Em seu código, substitua os valores de unidade de anúncio de teste (ou seja, os *applicationId* e *adUnitId* parâmetros do construtor [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) ) pelos valores dinâmicos gerados no Partner Center.
 
 5.  [Enviar seu aplicativo](../publish/app-submissions.md) para a loja usando o Partner Center.
 
-6.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no Partner Center.
+6.  Examine os [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no Partner Center.
 
 ## <a name="manage-ad-units-for-multiple-native-ads-in-your-app"></a>Gerenciar unidades publicitárias para vários anúncios nativos no aplicativo
 

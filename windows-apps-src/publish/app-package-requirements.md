@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, requisitos do pacote, pacotes, formato de pacote, versão com suporte, enviar
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c04ac5aa12fc67cf911d575540b05f96753519b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348506"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483182"
 ---
 # <a name="app-package-requirements"></a>Requisitos do pacote do app
 
@@ -69,7 +69,7 @@ Os pacotes de seu aplicativo devem atender a estes requisitos.
 
 | Propriedade de pacote de aplicativos | Requisito                                                          |
 |----------------------|----------------------------------------------------------------------|
-| Tamanho do pacote         | .msixbundle ou. appxbundle: máximo de 25 GB por pacote <br>.msix ou. AppX pacotes voltados para Windows 10:25 máximo GB por pacote<br>Pacotes .appx voltados para Windows 8.1: máximo de 8 GB por pacote <br> Pacotes .appx voltados para Windows 8: máximo de 2 GB por pacote <br> Pacotes .appx para Windows Phone 8.1: máximo de 4 GB por pacote <br> Pacotes .xap: máximo de 1 GB por pacote                                                                           |
+| Tamanho do pacote         | .msixbundle ou. appxbundle: máximo de 25 GB por pacote <br>pacotes de .msix ou. AppX voltados para Windows 10:25 máximo GB por pacote<br>Pacotes .appx voltados para Windows 8.1: máximo de 8 GB por pacote <br> Pacotes .appx voltados para Windows 8: máximo de 2 GB por pacote <br> Pacotes .appx para Windows Phone 8.1: máximo de 4 GB por pacote <br> Pacotes .xap: máximo de 1 GB por pacote                                                                           |
 | Hashes do mapa de blocos     | Algoritmo SHA2-256                                                   |
 
 > [!IMPORTANT]
@@ -86,7 +86,7 @@ As versões compatíveis atualmente variam de:
 
 ## <a name="storemanifest-xml-file"></a>Arquivo XML StoreManifest
 
-StoreManifest.xml é um arquivo de configuração opcional que pode ser incluído em pacotes de aplicativos. Seu objetivo é habilitar recursos, como declarar seu aplicativo como um aplicativo de dispositivo da Microsoft Store ou declarar que os requisitos dos quais um pacote depende são aplicáveis a um dispositivo, que o manifesto de pacote não abrange. Se usado, storemanifest. XML é enviado com o pacote do aplicativo e deve estar na pasta raiz do projeto principal do seu aplicativo. Para saber mais, consulte [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
+StoreManifest.xml é um arquivo de configuração opcional que pode ser incluído em pacotes de aplicativos. Seu objetivo é habilitar recursos, como declarar seu aplicativo como um aplicativo de dispositivo da Microsoft Store ou declarar que os requisitos dos quais um pacote depende são aplicáveis a um dispositivo, que o manifesto de pacote não abrange. Se usado, storemanifest. XML é enviado com o pacote do aplicativo e deve ser na pasta raiz do projeto principal do seu aplicativo. Para saber mais, consulte [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
 
  
 

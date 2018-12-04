@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, API de análises da Microsoft Store, responder às análises
 ms.localizationpriority: medium
 ms.openlocfilehash: 2547daa3de7b4a3825060550b7ddc00c10df3e90
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329236"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482687"
 ---
 # <a name="respond-to-reviews-using-store-services"></a>Responder às críticas usando serviços da Store
 
-Use a *API de análises da Microsoft Store* para enviar respostas às críticas ao seu aplicativo de forma programada na Store. Essa API é especialmente útil para desenvolvedores que desejam em massa responder às diversas análises sem usar o Partner Center. Essa API usa o Azure Active Directory (Azure AD) para autenticar as chamadas do seu app ou serviço.
+Use a *API de análises da Microsoft Store* para enviar respostas às críticas ao seu aplicativo de forma programada na Store. Essa API é especialmente útil para os desenvolvedores que desejam em massa responderem às diversas análises sem usar o Partner Center. Essa API usa o Azure Active Directory (Azure AD) para autenticar as chamadas do seu app ou serviço.
 
 As etapas a seguir descrevem o processo completo:
 

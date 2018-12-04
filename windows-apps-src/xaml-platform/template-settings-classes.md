@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b44aaf741c188658c7a639422b0d091f8db6e3e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330997"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482388"
 ---
 # <a name="template-settings-classes"></a>Classes TemplateSettings
 
@@ -95,7 +95,7 @@ Este é outro exemplo de uso dos modelos de controle do padrão XAML, desta vez 
 
 Novamente, existem muitos XAML no modelo, portanto, mostramos apenas um trecho. E este é apenas um dos vários estados e animações de tema que usam as mesmas propriedades [**ComboBoxTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227752). Para [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348), o uso dos valores **ComboBoxTemplateSettings** por meio de associações reforça que as animações relacionadas no modelo pararão e começarão nas posições que são baseadas em valores compartilhados e, portanto, fazem a transição perfeitamente.
 
-**Observação**  quando você usa **TemplateSettings** valores como parte de seu modelo de controle, verifique se você está definindo propriedades que correspondem ao tipo do valor. Caso contrário, talvez você precise criar um conversor de valor para a associação de forma que o tipo de destino da associação possa ser convertido de um tipo de origem diferente do valor **TemplateSettings**. Para saber mais, consulte [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
+**Observação**  quando você usa **TemplateSettings** valores como parte de seu modelo de controle, verifique se você estiver definindo as propriedades que correspondem ao tipo do valor. Caso contrário, talvez você precise criar um conversor de valor para a associação de forma que o tipo de destino da associação possa ser convertido de um tipo de origem diferente do valor **TemplateSettings**. Para saber mais, consulte [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

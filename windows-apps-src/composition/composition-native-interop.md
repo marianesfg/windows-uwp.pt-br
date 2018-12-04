@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f5eabfaf8e526899c17b2d0da688a5135133f65
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335018"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484353"
 ---
 # <a name="composition-native-interoperation-with-directx-and-direct2d"></a>Interoperação nativa com DirectX e Direct2D
 
@@ -39,7 +39,7 @@ Por motivos de desempenho, quando um aplicativo chama [**BeginDraw**](https://ms
 
 ## <a name="usage-example"></a>Exemplo de uso
 
-O exemplo de código a seguir ilustra um cenário de interoperação. O exemplo combina tipos da área de superfície com base em tempo de execução do Windows da composição do Windows, juntamente com tipos dos cabeçalhos de interoperabilidade e código que renderiza o texto usando as APIs de Direct2D e DirectWrite baseadas em COM. O exemplo usa [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) e [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) para torná-lo perfeita a interoperabilidade entre essas tecnologias. O exemplo usa o DirectWrite para dispor o texto e, em seguida, ele usa o Direct2D para renderizá-lo. O dispositivo gráficos de composição aceita o dispositivo Direct2D diretamente no momento da inicialização. Isso permite que **BeginDraw** retornar um ponteiro de interface **ID2D1DeviceContext** , que é consideravelmente mais eficiente do que fazer com que o aplicativo criar um contexto de Direct2D para encapsular uma interface ID3D11Texture2D retornada em cada operação de desenho.
+O exemplo de código a seguir ilustra um cenário de interoperação. O exemplo combina tipos da área de superfície com base em tempo de execução do Windows da composição do Windows, juntamente com tipos dos cabeçalhos de interoperabilidade e o código que renderiza o texto usando as APIs de Direct2D e DirectWrite baseado em COM. O exemplo usa [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) e [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) para torná-lo perfeita a interoperabilidade entre essas tecnologias. O exemplo usa o DirectWrite para dispor o texto e, em seguida, ele usa o Direct2D para renderizá-lo. O dispositivo gráficos de composição aceita o dispositivo Direct2D diretamente no momento da inicialização. Isso permite que **BeginDraw** retornar um ponteiro de interface **ID2D1DeviceContext** , que é consideravelmente mais eficiente do que fazer com que o aplicativo criar um contexto de Direct2D para encapsular uma interface ID3D11Texture2D retornada em cada operação de desenho.
 
 Há dois exemplos de código abaixo. Primeiro, um [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) exemplo (que é concluído) e, em seguida, C++ c++ exemplo de código CX (que omite as partes DirectWrite e Direct2D do exemplo).
 

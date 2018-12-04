@@ -2,16 +2,16 @@
 description: Aprenda a desenvolver um aplicativo UWP.
 title: Desenvolver aplicativos UWP
 layout: LandingPage
-keywords: os desenvolvedores de desenvolver uwp aplicativo desenvolvimento threading async visão geral sobre o portal de plataforma
+keywords: os desenvolvedores de desenvolver uwp desenvolvimento threading async plataforma visão geral sobre o portal de aplicativo
 ms.date: 3/29/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 615a5a0762cfa55d7b8be7ce392e02ee1802ded2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342084"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482125"
 ---
 <div> 
 <h1>Desenvolver aplicativos UWP</h1>
@@ -269,7 +269,7 @@ ms.locfileid: "8342084"
                     </div>
                     <div class="cardText">
                         <h3>Exemplos</h3>
-                        <p> Aprenda a criar ótimos aplicativos para Windows pela tentativa com essas amostras. Esses exemplos mostram como os recursos funcionam e ajudam você iniciar rapidamente seus próprios aplicativos UWP.</p>
+                        <p> Aprenda a criar ótimos aplicativos para Windows pela tentativa com essas amostras. Esses exemplos mostram como os recursos funcionam e ajudar a você iniciar rapidamente seus próprios aplicativos UWP.</p>
                     </div>
                 </div>
             </div>
@@ -288,7 +288,7 @@ ms.locfileid: "8342084"
                     </div>                
                     <div class="cardText">
                         <h3>Ferramentas de desenvolvedor</h3>
-                        <p>Obter Visual Studio 2017, o SDK do Windows 10 e outras ferramentas de desenvolvedor.</p>
+                        <p>Obtenha o Visual Studio 2017, o SDK do Windows 10 e outras ferramentas de desenvolvedor.</p>
                     </div>
                 </div>
             </div>

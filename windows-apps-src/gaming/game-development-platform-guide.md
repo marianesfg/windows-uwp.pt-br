@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, tecnologia, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: c6d2ebad640849cd81d6a2704f89ca1f05cc1b27
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8349310"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8481494"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>Tecnologias de jogos para aplicativos UWP
 
@@ -37,7 +37,7 @@ Os jogos em tempo real que exigem alto desempenho devem usar as APIs do DirectX.
 ## <a name="development-environment"></a>Ambiente de desenvolvimento
 
 
-Para criar jogos para UWP, você precisará configurar seu ambiente de desenvolvimento instalando o Visual Studio 2015 ou posterior. É recomendável que você instale a versão mais recente do Visual Studio, fornecendo acesso às últimas atualizações de segurança e desenvolvimento. Visual Studio permite que você crie aplicativos UWP e fornece ferramentas para desenvolvimento de jogos:
+Para criar jogos para UWP, você precisará configurar seu ambiente de desenvolvimento instalando o Visual Studio 2015 ou posterior. Recomendamos que você instale a versão mais recente do Visual Studio, fornecendo acesso às últimas atualizações de segurança e desenvolvimento. Visual Studio permite que você crie aplicativos UWP e fornece ferramentas para desenvolvimento de jogos:
 
 -   Ferramentas do Visual Studio para programação de jogos DX - O Visual Studio fornece ferramentas para criar, editar, visualizar e exportar recursos de imagem, modelo e sombreador. Há também ferramentas que você pode usar para converter recursos no momento da compilação e depurar o código gráfico do DirectX. Para obter mais informações, consulte [Usar ferramentas do Visual Studio para programação de jogos](set-up-visual-studio-for-game-development.md).
 -   Recursos de diagnóstico de gráficos do Visual Studio – As ferramentas de diagnóstico de elementos gráficos agora estão disponíveis no Windows como um recurso opcional. As ferramentas de diagnóstico permitem que você faça depuração e análise do quadro de elementos gráficos e monitore o uso da GPU em tempo real. Para obter mais informações, consulte [Usar o tempo de execução do DirectX e recursos de diagnóstico de elementos gráficos do Visual Studio](use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md).

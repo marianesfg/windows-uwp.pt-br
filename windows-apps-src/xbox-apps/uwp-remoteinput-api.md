@@ -3,11 +3,11 @@ title: Referência de API de entrada remota do Portal de Dispositivos
 description: Saiba como enviar remotamente a entrada de mouse, teclado e controle em um Xbox.
 ms.localizationpriority: medium
 ms.openlocfilehash: e0db86ad50bfb1cb27f516243542a554e710c3ea
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326496"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483584"
 ---
 # <a name="remote-input-api-reference"></a>Referência de API de entrada remota   
 Você pode enviar a entrada de mouse, teclado e controle em tempo real remotamente por meio dessa API.

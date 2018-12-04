@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 4208fd56b16d5130f218492428eb459364b8ada9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482521"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu app UWP
 
@@ -270,7 +270,7 @@ Você pode usar sua conta da Microsoft, conta de mídia social ou apenas um ende
 
 Em seguida, você pode criar um aplicativo HockeyApp manualmente, ou carregar um arquivo de pacote de aplicativo existente. Para saber mais, consulte [Como criar um novo aplicativo](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app).
 
-Para usar um arquivo de pacote de aplicativo existente, adicionar uma etapa de compilação e defina o parâmetro de caminho do arquivo binário da etapa de compilação.
+Para usar um arquivo de pacote de aplicativo existente, adicione uma etapa de compilação e defina o parâmetro de caminho do arquivo binário da etapa de compilação.
 
 ![configurar o hockey app](images/building-screen15.png)
 
@@ -280,7 +280,7 @@ Para definir esse parâmetro, combine o nome do aplicativo, a variável AppxVers
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUWPApp_$(AppxVersion)_x86_x64_ARM.appxbundle
 ```
 
-Embora a tarefa HockeyApp permita que você especifique o caminho para o arquivo de símbolos, é uma prática recomendada incluir os símbolos com o pacote.
+Embora a tarefa HockeyApp permite que você especifique o caminho para o arquivo de símbolos, é uma prática recomendada incluir os símbolos com o pacote.
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Configurar uma compilação de implantação contínua que envia um pacote para a Store
 
@@ -338,7 +338,7 @@ Na atualização de aniversário do Windows 10, você pode duas vezes no arquivo
 >[!NOTE]
 > Esse método não instala o certificado nem as dependências associadas.
 
-Se você quiser distribuir seus pacotes de aplicativo do Windows em um site como VSTS ou HockeyApp, você precisará adicionar esse site à lista de sites confiáveis no navegador. Caso contrário, o Windows marca o arquivo como bloqueado.
+Se você quiser distribuir seus pacotes de aplicativo do Windows em um site como VSTS ou HockeyApp, você precisará adicionar o site à lista de sites confiáveis no seu navegador. Caso contrário, o Windows marca o arquivo como bloqueado.
 
 <span id="certificates-best-practices"/>
 

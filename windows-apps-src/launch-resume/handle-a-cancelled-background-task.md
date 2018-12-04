@@ -11,11 +11,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: b888bf1373dfb0cac80881117570eb23e8802142
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323138"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479031"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Tratar uma tarefa em segundo plano cancelada
 
@@ -85,7 +85,7 @@ private:
 
 No método **OnCanceled** que você criou na etapa 1, defina a variável de sinalizador **\_CancelRequested** como **true**.
 
-[Amostra de tarefa em segundo plano]( http://go.microsoft.com/fwlink/p/?linkid=227509) completo método **OnCanceled** define **\_CancelRequested** como **true** e grava uma saída de depuração potencialmente útil.
+[Exemplo de tarefa em segundo plano]( http://go.microsoft.com/fwlink/p/?linkid=227509) completo método **OnCanceled** define **\_CancelRequested** como **true** e grava uma saída de depuração potencialmente útil.
 
 ```csharp
 private void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
@@ -133,7 +133,7 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 Quando uma solicitação de cancelamento é recebida, o método que realiza a tarefa em segundo plano precisa parar o trabalho e sair reconhecendo quando **\_cancelRequested** está definido como **true**. Para tarefas em segundo plano no processo, isso significa retornar do método **OnBackgroundActivated** . Para tarefas em segundo plano fora do processo, isso significa retornar do método **Executar** .
 
-Modifique o código da classe de tarefa em segundo plano para verificar a variável de sinalizador enquanto ela está funcionando. Se **\_cancelRequested** torna-se definido como true, o trabalho de continuar.
+Modifique o código da classe de tarefa em segundo plano para verificar a variável de sinalizador enquanto ela está funcionando. Se **\_cancelRequested** fica definida como true, o trabalho de continuar.
 
 O [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) inclui uma verificação que interrompe o retorno de chamada do temporizador periódico se a tarefa em segundo plano é cancelada.
 

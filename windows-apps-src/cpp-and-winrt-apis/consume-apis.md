@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, classe de tempo de execução, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: 59b056e160a1d7782e054ad4dbf1b63e91be42e9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8337172"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8481733"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Consumir APIs com C++/WinRT
 
-Este tópico mostra como consumir [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) APIs, sejam elas parte do Windows, implementada por um fornecedor de componentes de terceiros ou implementar por conta própria.
+Este tópico mostra como consumir [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) APIs, sejam elas parte do Windows implementadas por um fornecedor de componentes de terceiros ou implementada por conta própria.
 
 ## <a name="if-the-api-is-in-a-windows-namespace"></a>Se a API estiver em um namespace do Windows
 Esse é o caso mais comum em que você consumirá uma API do Windows Runtime. Para cada tipo em um namespace do Windows definido nos metadados, C ++/WinRT define um equivalente C++ amigável (chamado de *tipo projetado*). Um tipo projetado tem o mesmo nome totalmente qualificado do tipo do Windows, mas ele é colocado no namespace C++ **winrt** usando a sintaxe do C++. Por exemplo, [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri) é projetado no C++/WinRT como **winrt::Windows::Foundation::Uri**.
@@ -42,7 +42,7 @@ O cabeçalho `winrt/Windows.Foundation.h` incluído faz parte do SDK, encontrado
 
 No exemplo de código acima, após inicializar C++/WinRT, alocamos em pilhas um valor do tipo projetado **winrt::Windows::Foundation::Uri** por meio de um de seus construtores documentados publicamente ([**Uri(String)**](/uwp/api/windows.foundation.uri#Windows_Foundation_Uri__ctor_System_String_), neste exemplo). Para isso, o caso de uso mais comum, que normalmente é tudo o que você precisa fazer. Quando você tiver um valor de tipo projetado do C++/WinRT, é possível tratá-lo como se fosse uma instância do tipo real do Windows Runtime, pois já tem todos os mesmos membros.
 
-Na verdade, esse valor projetada é um proxy; essencialmente, é apenas um ponteiro inteligente de um objeto subjacente. A chamada de construtores do valor projetado [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646) para criar uma instância da classe de suporte do Windows Runtime (**Windows.Foundation.Uri**, neste caso) e armazenar a interface padrão do objeto no novo valor projetado. Conforme ilustrado abaixo, suas chamadas para membros do valor projetada delegam, por meio do ponteiro inteligente, para o objeto de suporte; que é onde ocorrem alterações de estado.
+Na verdade, esse valor projetada é um proxy; essencialmente, é apenas um ponteiro inteligente de um objeto subjacente. A chamada de construtores do valor projetado [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646) para criar uma instância da classe de suporte do Windows Runtime (**Windows.Foundation.Uri**, neste caso) e armazenar a interface padrão do objeto no novo valor projetado. Como ilustrado abaixo, suas chamadas para membros do valor projetada delegam, por meio do ponteiro inteligente, para o objeto de suporte; que é onde ocorrem alterações de estado.
 
 ![O tipo Windows::Foundation::Uri projetado](images/uri.png)
 

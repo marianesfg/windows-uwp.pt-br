@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
 ms.openlocfilehash: 038003714d6543580f618b381ac7f4ecbde22da9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8345390"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479134"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>Veicular campanhas publicitárias usando os serviços da Store
 
@@ -23,7 +23,7 @@ As etapas a seguir descrevem o processo completo:
 2.  Antes de chamar um método na API de promoções da Microsoft Store [obtenha um token de acesso do Azure AD](#obtain-an-azure-ad-access-token). Depois de obter um token, você terá 60 minutos para usá-lo em chamadas à API de promoções da Microsoft Store antes que ele expire. Depois que o token expirar, será possível gerar um novo.
 3.  [Chame a API de promoções da Microsoft Store](#call-the-windows-store-promotions-api).
 
-Como alternativa, você pode criar e gerenciar as campanhas publicitárias usando o Partner Center e todas as campanhas publicitárias que você criar programaticamente através de promoções da Microsoft Store que API também poderão ser acessada no Partner Center. Para obter mais informações sobre como gerenciar as campanhas publicitárias no Partner Center, consulte [criar uma campanha publicitária para seu aplicativo](../publish/create-an-ad-campaign-for-your-app.md).
+Como alternativa, você pode criar e gerenciar campanhas publicitárias usando o Partner Center e todas as campanhas publicitárias que você criar programaticamente através de promoções da Microsoft Store que API também pode ser acessado no Partner Center. Para obter mais informações sobre como gerenciar as campanhas publicitárias no Partner Center, consulte [criar uma campanha publicitária para seu aplicativo](../publish/create-an-ad-campaign-for-your-app.md).
 
 > [!NOTE]
 > Qualquer desenvolvedor com uma conta do Partner Center pode usar a API de promoções da Microsoft Store para gerenciar as campanhas publicitárias de seus aplicativos. Agências de mídia também podem solicitar acesso a essa API para executar campanhas publicitárias em nome dos seus anunciantes. Se você for uma agência de mídia que deseja saber mais sobre essa API ou solicitar acesso à ela, envie sua solicitação para storepromotionsapi@microsoft.com.

@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
 ms.openlocfilehash: d9665ba3af10091ddc652198d5340e00456a65a7
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336130"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480074"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes do Tempo de Execução do Windows agenciados para um aplicativo UWP de sideload
 
@@ -194,7 +194,7 @@ Normalmente, um projeto do Visual Studio usando .NET utiliza um dos dois "perfis
 Um é para o desktop (".NetFramework") e outro tem como objetivo a porção do aplicativo UWP do CLR (".NetCore"). Um componente de desktop neste recurso é um híbrido entre esses dois. Como resultado, a seção de referências é cuidadosamente construída para misturar esses dois perfis.
 
 Um projeto normal de aplicativo UWP não contém nenhuma referência explícita de projeto, porque toda a superfície da API do Tempo de Execução do Windows está implicitamente incluída.
-Normalmente, só outras referências entre projetos são feitas. No entanto, um projeto de componente de desktop tem um conjunto muito especial de referências. Ele nasce como um projeto de "Área de trabalho clássica\\Biblioteca de classe" e, portanto, é um projeto de desktop. Referências tão explícitas à API do Windows Runtime (através de referências aos**winmd**arquivos) devem ser feitas. Adicione referências adequadas conforme mostrado abaixo.
+Normalmente, só outras referências entre projetos são feitas. No entanto, um projeto de componente de desktop tem um conjunto muito especial de referências. Ele nasce como um projeto de "Área de trabalho clássica\\Biblioteca de classe" e, portanto, é um projeto de desktop. Referências explícitas assim a API de tempo de execução do Windows (através de referências aos**winmd**arquivos) devem ser feitas. Adicione referências adequadas conforme mostrado abaixo.
 
 ```XML
 <ItemGroup>
@@ -406,7 +406,7 @@ Normalmente, só outras referências entre projetos são feitas. No entanto, um 
 
 As referências acima são uma mistura cuidadosa de referências que são essenciais para o bom funcionamento desse servidor híbrido. O protocolo é abrir o arquivo .csproj (conforme descrito em como editar o projeto OutputType) e adicionar essas referências conforme necessário.
 
-Depois que as referências estão configuradas corretamente, a próxima tarefa é implementar a funcionalidade do servidor. Consulte o tópico do MSDN[práticas recomendadas para interoperabilidade com componentes de tempo de execução do Windows (aplicativos UWP usando c \ # /VB/c + + e XAML)](https://msdn.microsoft.com/library/windows/apps/hh750311.aspx).
+Depois que as referências estão configuradas corretamente, a próxima tarefa é implementar a funcionalidade do servidor. Consulte o tópico do MSDN[práticas recomendadas para interoperabilidade com componentes de tempo de execução do Windows (aplicativos UWP usando c# /VB/c + + e XAML)](https://msdn.microsoft.com/library/windows/apps/hh750311.aspx).
 A tarefa é criar uma dll de componente do Tempo de Execução do Windows que consiga chamar o código de desktop como parte de sua implementação. O exemplo exibido inclui os principais padrões usados no Tempo de Execução do Windows:
 
 -   Chamadas de método
@@ -419,7 +419,7 @@ A tarefa é criar uma dll de componente do Tempo de Execução do Windows que co
 
 **Instalar**
 
-Para instalar o aplicativo, copie a implementação**winmd**para o diretório correto especificado no manifesto do sideload do aplicativo associado: <ActivatableClassAttribute>Value = "path". Copie também todos os arquivos de suporte associados e a dll do proxy/stub (esse último detalhe é abordado abaixo). Falha ao copiar a implementação**winmd**para o servidor local do diretório fará com que o sideload todas as chamadas do aplicativo para novo na RuntimeClass lancem um erro "classe não registrada". Não instalar o proxy/stub (ou deixar de registrar) fará com que todas as chamadas falhem sem nenhum valor de retorno. Este último erro é frequentemente**não**associado a exceções visíveis.
+Para instalar o aplicativo, copie o**winmd**de implementaçãopara o diretório correto especificado no manifesto do sideload do aplicativo associado: <ActivatableClassAttribute>Value = "path". Copie também todos os arquivos de suporte associados e a dll do proxy/stub (esse último detalhe é abordado abaixo). Falha ao copiar a implementação**winmd**para o servidor local do diretório fará com que o sideload todas as chamadas do aplicativo para novo na RuntimeClass lancem um erro "classe não registrada". Não instalar o proxy/stub (ou deixar de registrar) fará com que todas as chamadas falhem sem nenhum valor de retorno. Este último erro é frequentemente**não**associado a exceções visíveis.
 Se exceções forem observadas devido a esse erro de configuração, elas podem se referir à "conversão inválida".
 
 **Considerações sobre implementação de servidores**
@@ -553,7 +553,7 @@ Aqui está uma lista não exaustiva das coisas a serem consideradas:
 
 -   A transferência em massa dos resultados reduz a quantidade de conversas do processo cruzado. Isso normalmente é realizado pelo uso do constructo de matriz do Windows Runtime.
 
--   Retornando*lista<T>* onde*T*é um objeto de um fetch de propriedade ou operação assíncrona, aumentará muito da quantidade de conversas de processo cruzado. Por exemplo, suponha que você retorne um*lista&lt;pessoas&gt;* objetos. Cada passe de iteração será uma chamada de processo cruzado. Cada*pessoas*objeto retornado é representado por um proxy e cada chamada para um método ou propriedade nesse objeto individual resultará em uma chamada de processo cruzado. Portanto, um "inocente",*lista&lt;pessoas&gt;* objeto onde*contagem*é grande fará com que um grande número de chamadas lentas. Um melhor desempenho resulta da transferência em massa de estruturas do conteúdo em uma matriz. Por exemplo:
+-   Retornando*lista<T>* onde*T*é um objeto de um fetch de propriedade ou operação assíncrona, fará com que muitos quantidade de conversas de processo cruzado. Por exemplo, suponha que você retorne um*lista&lt;pessoas&gt;* objetos. Cada passe de iteração será uma chamada de processo cruzado. Cada*pessoas*objeto retornado é representado por um proxy e cada chamada para um método ou propriedade nesse objeto individual resultará em uma chamada de processo cruzado. Portanto, um "inocente",*lista&lt;pessoas&gt;* objeto onde*contagem*é grande fará com que um grande número de chamadas lentas. Um melhor desempenho resulta da transferência em massa de estruturas do conteúdo em uma matriz. Por exemplo:
 
 ```csharp
 struct PersonStruct

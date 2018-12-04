@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e18be702c1b2bbd9ce1831b6991324896769192
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8332322"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480415"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Dados de exemplo na superfície de design e para a criação de protótipo
 =============================================================================================
@@ -139,7 +139,7 @@ Até agora, usamos **d:DesignData** para carregar dados de amostra em tempo de d
         d:Source="{d:DesignInstance Type=local:Recordings, IsDesignTimeCreatable=True}"/>
 ```
 
-A propriedade **IsDesignTimeCreatable** indica que a ferramenta de design deve, na verdade, criar uma instância da classe, o que sugere que a classe tem um construtor público padrão e que é populada com dados (reais ou de exemplo). Se você não definir **IsDesignTimeCreatable** (ou se definir como **False**), os dados de exemplo não serão exibidos na superfície de design. Tudo o que a ferramenta de design faz nesse caso, é a classe para suas propriedades associáveis e exibe-no painel de **dados** e na caixa de diálogo **Criar associação de dados** .
+A propriedade **IsDesignTimeCreatable** indica que a ferramenta de design deve, na verdade, criar uma instância da classe, o que sugere que a classe tem um construtor público padrão e que é populada com dados (reais ou de exemplo). Se você não definir **IsDesignTimeCreatable** (ou se definir como **False**), os dados de exemplo não serão exibidos na superfície de design. Tudo o que a ferramenta de design faz nesse caso é a classe para suas propriedades associáveis e exibi-los no painel de **dados** e na caixa de diálogo **Criar associação de dados** .
 
 <a name="sample-data-for-prototyping"></a>Dados de exemplo para criação de protótipo
 --------------------------------------------------------

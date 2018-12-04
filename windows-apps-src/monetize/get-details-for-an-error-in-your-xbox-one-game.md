@@ -6,17 +6,17 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, detalhes
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b713e3c6c2f7b82e5779e4785cc6b2e320b24f0
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346632"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484654"
 ---
 # <a name="get-details-for-an-error-in-your-xbox-one-game"></a>Obter detalhes de um erro em seu Xbox One jogo
 
 Use este método na análise da Microsoft Store API para obter dados detalhados de um erro específico para seu Xbox One jogo que ingerido por meio do Portal de desenvolvedor do Xbox (XDP) e está disponível no painel do Centro de parceiro de análise XDP. Este método só pode recuperar detalhes dos erros que ocorreram nos últimos 30 dias.
 
-Antes de usar esse método, primeiro você deve usar o método [obter dados para o seu jogo Xbox One de relatório de erros](get-error-reporting-data-for-your-xbox-one-game.md) para recuperar a ID do erro para o qual você deseja obter informações detalhadas.
+Antes de usar esse método, primeiro você deve usar o método [get para seu jogo Xbox One relatório de erros](get-error-reporting-data-for-your-xbox-one-game.md) para recuperar a ID do erro para o qual você deseja obter informações detalhadas.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -48,7 +48,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A ID do produto do jogo Xbox One para o qual você está recuperando detalhes do erro. Para obter a ID do produto do jogo, navegue até seu jogo no Portal de Desenvolvedor do Xbox (XDP) e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de integridade do relatório de análise do Partner Center do Windows, a ID do produto estará incluída no arquivo. tsv. |  Sim  |
+| applicationId | string | A ID do produto do jogo Xbox One para o qual você está recuperando detalhes do erro. Para obter a ID do produto do jogo, navegue até seu jogo no Portal de Desenvolvedor do Xbox (XDP) e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de integridade do relatório de análise do Partner Center do Windows, a ID do produto está incluída no arquivo. tsv. |  Sim  |
 | failureHash | string | A ID exclusiva do erro para o qual você deseja obter informações detalhadas. Para obter esse valor para o erro que você está interessado, use o método [obter dados de relatório de erro para o seu Xbox One jogo](get-error-reporting-data-for-your-xbox-one-game.md) e use o valor de **failureHash** no corpo da resposta desse método. |  Sim  |
 | startDate | date | A data de início no intervalo de datas dos dados de erros detalhados a serem recuperados. O padrão é 30 dias antes da data atual. |  Não  |
 | endDate | date | A data de término no intervalo de datas dos dados de erros detalhados a serem recuperados. O padrão é a data atual. |  Não  |
@@ -102,7 +102,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | deviceModel           | string  | Uma das seguintes cadeias de caracteres que especifica o console Xbox One no qual o jogo estava em execução quando o erro ocorreu.<p/><ul><li><strong>Xbox da Microsoft um</strong></li><li><strong>Microsoft Xbox One S</strong></li><li><strong>Microsoft Xbox One X</strong></li></ul>  |
 | osVersion       | string  | A versão do sistema operacional no qual ocorreu o erro. Isso é sempre o valor **Windows 10**.    |
 | osRelease       | string  |  Uma das seguintes cadeias de caracteres que especifica a versão do sistema operacional Windows 10 ou anel de liberação (como uma subpopulação na versão do sistema operacional) no qual ocorreu o erro.<p/><ul><li><strong>Versão1507</strong></li><li><strong>Versão1511</strong></li><li><strong>Versão1607</strong></li><li><strong>Versão1703</strong></li><li><strong>Versão1709</strong></li><li><strong>Versão1803</strong></li><li><strong>Versão prévia de lançamento</strong></li><li><strong>Participante do Programa Windows Insider - Modo Rápido</strong></li><li><strong>Participante do Programa Windows Insider - Modo Lento</strong></li></ul><p>Se a versão do sistema operacional ou anel de liberação de versão de pré-lançamento for desconhecida, este campo terá o valor <strong>Desconhecido</strong>.</p>    |
-| deviceType      | string  | O tipo de dispositivo no qual o erro ocorreu. Isso é sempre o valor **Console**.     |
+| deviceType      | string  | O tipo de dispositivo no qual o erro ocorreu. Isso é sempre o valor do **Console**.     |
 | cabDownloadable           | booliano  | Indica se o arquivo CAB está disponível para download para esse usuário.   |
 
 

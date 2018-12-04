@@ -14,11 +14,11 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 9edf7bcb2ad76ed02887dfffc3e72d0d47f5aa1a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329606"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484343"
 ---
 # <a name="menus-and-context-menus"></a>Menus e menus de contexto
 
@@ -42,13 +42,13 @@ Menus e menus de contexto servem para organizar comandos; Para exibir conteúdo 
 
 ### <a name="menubar-vs-menuflyout"></a>Barra de menus versus MenuFlyout
 
-Para mostrar um menu em um submenu anexado a um elemento de interface do usuário na tela, use o controle MenuFlyout para hospedar seus itens de menu. Você pode chamar um submenu de menu como um menu regular ou como um menu de contexto. Um submenu de menu hospeda um menu de nível superior único (e submenus opcionais).
+Para mostrar um menu em um submenu anexado a um elemento de interface do usuário na tela, use o controle MenuFlyout para hospedar seus itens de menu. Você pode chamar um submenu de menu como um menu regular ou como um menu de contexto. Um submenu de menu hospeda um único menu de nível superior (e submenus opcionais).
 
-Para mostrar um conjunto de vários menus de nível superior em uma linha horizontal, use uma barra de menu. Você normalmente posiciona a barra de menu na parte superior da janela do aplicativo.
+Para mostrar um conjunto de vários menus de nível superior em uma linha horizontal, use uma barra de menu. Você normalmente posicionar a barra de menu na parte superior da janela do aplicativo.
 
 ### <a name="menubar-vs-commandbar"></a>Barra de menus versus CommandBar
 
-Barra de menus e CommandBar ambos representam superfícies que você pode usar para expor comandos para seus usuários. A barra de menus fornece uma maneira rápida e simple para expor um conjunto de comandos para aplicativos que podem precisar de mais de organização ou agrupamento que permite que um CommandBar.
+Barra de menus e CommandBar ambos representam superfícies que você pode usar para expor comandos para os usuários. A barra de menus fornece uma maneira rápida e simple para expor um conjunto de comandos para aplicativos que podem precisar de mais de organização ou agrupamento que permite que um CommandBar.
 
 Você também pode usar uma barra de menus em conjunto com um CommandBar. Use a barra de menus para fornecer a maior parte dos comandos e o CommandBar para realçar os comandos mais usados.
 
@@ -70,14 +70,14 @@ Você também pode usar uma barra de menus em conjunto com um CommandBar. Use a 
 
 ## <a name="menus-vs-context-menus"></a>Menus x menus de contexto
 
-Menus e menus de contexto são semelhantes em termos de aparência e o que eles podem conter. Na verdade, você pode usar o mesmo controle, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para criá-los. A diferença é como você permitir que o usuário acessá-lo.
+Menus e menus de contexto são semelhantes em sua aparência e o que eles podem conter. Na verdade, você pode usar o mesmo controle, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para criá-los. A diferença é como você permitir que o usuário acessá-lo.
 
 Quando você deve usar um menu ou um menu de contexto?
 
 - Se o elemento host for um botão ou outro elemento de comando cuja função principal é apresentar comandos adicionais, use um menu.
 - Se o elemento host for outro tipo de elemento que tenha outra finalidade principal (como apresentar texto ou imagem), use um menu de contexto.
 
-Por exemplo, use um menu em um botão para fornecer filtragem e opções para obter uma lista de classificação. Nesse cenário, a principal finalidade do controle de botão é fornecer acesso a um menu.
+Por exemplo, use um menu em um botão para fornecer a filtragem e opções para obter uma lista de classificação. Nesse cenário, a principal finalidade do controle de botão é fornecer acesso a um menu.
 
 ![Exemplo de menu no Mail](images/Mail_Menu.png)
 
@@ -218,12 +218,12 @@ Os controles light dismiss, como menus, menus de contexto e outros submenus, pre
 
 > **Visualização**: barra de menus requer a [compilação do Windows 10 Insider Preview e o SDK mais recente](https://insider.windows.com/for-developers/) ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Você pode usar os mesmos elementos para criar menus em uma barra de menu como um submenu de menu. No entanto, em vez de agrupar objetos MenuFlyoutItem em um MenuFlyout, você agrupá-los em um elemento MenuBarItem. Cada MenuBarItem é adicionado à barra de menu como um menu de nível superior.
+Você pode usar os mesmos elementos para criar menus em uma barra de menus, como em um submenu de menu. No entanto, em vez de agrupar objetos MenuFlyoutItem em um MenuFlyout, você agrupá-los em um elemento MenuBarItem. Cada MenuBarItem é adicionado à barra de menu como menu de nível superior.
 
 ![Exemplo de uma barra de menu](images/menu-bar-submenu.png)
 
 > [!NOTE]
-> Este exemplo mostra apenas como criar a estrutura de interface do usuário, mas não mostrar a implementação de qualquer um dos comandos.
+> Este exemplo mostra como somente criar a estrutura de interface do usuário, mas não mostrar a implementação de qualquer um dos comandos.
 
 ```xaml
 <MenuBar>

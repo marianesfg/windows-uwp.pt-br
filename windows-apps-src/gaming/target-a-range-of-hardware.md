@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, mapas de sombra, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e661065f86ac173a6ce323281c80fc964d0a4c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8345120"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484950"
 ---
 # <a name="support-shadow-maps-on-a-range-of-hardware"></a>Suporte a mapas de sombra em diversos hardwares
 

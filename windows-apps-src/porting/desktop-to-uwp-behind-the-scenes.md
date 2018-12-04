@@ -7,31 +7,31 @@ keywords: windows 10, uwp
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ms.openlocfilehash: f5320d4d6a4f43ee8d94a55e46333821656adb20
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8339641"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479946"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>Nos bastidores do seu aplicativo da área de trabalho empacotado
 
 Este artigo fornece Aprofunde-se sobre o que acontece com arquivos e entradas do registro quando você cria um pacote de aplicativo do Windows para seu aplicativo da área de trabalho.
 
-Das metas principais de um pacote moderno é separar o estado do aplicativo do estado do sistema tanto quanto possível, mantendo a compatibilidade com outros aplicativos. A ponte faz isso colocando o aplicativo dentro de um pacote da Plataforma Universal do Windows (UWP) e, em seguida, detectando e redirecionando algumas alterações feitas no sistema de arquivos e no Registro em tempo de execução.
+Das metas principais de um pacote moderno é separar o estado do aplicativo do sistema o máximo possível, mantendo a compatibilidade com outros aplicativos. A ponte faz isso colocando o aplicativo dentro de um pacote da Plataforma Universal do Windows (UWP) e, em seguida, detectando e redirecionando algumas alterações feitas no sistema de arquivos e no Registro em tempo de execução.
 
-Os pacotes criados para seu aplicativo da área de trabalho são aplicativos apenas de área de trabalho, totalmente confiáveis e não são virtualizados nem estão em área restrita. Isso permite que eles interajam com outros aplicativos da mesma maneira que aplicativos da área de trabalho clássicos.
+Os pacotes criados para seu aplicativo da área de trabalho são aplicativos apenas de área de trabalho, confiança total e não são virtualizados nem estão em área restrita. Isso permite que eles interajam com outros aplicativos da mesma maneira que aplicativos da área de trabalho clássicos.
 
 ## <a name="installation"></a>Instalação
 
-Os pacotes de aplicativos são instalados em *C:\Program Files\WindowsApps\package_name*, com o executável intitulado *app_name.exe*. Cada pasta de pacote contém um manifesto (chamado AppxManifest.xml) que contém um namespace XML especial para apps empacotados. Dentro desse arquivo de manifesto está um elemento ```<EntryPoint>```, que faz referência ao aplicativo de confiança total. Quando esse aplicativo é iniciado, ele não são executados dentro de um contêiner de aplicativo, mas em vez disso, ele é executado como o usuário normalmente faria.
+Os pacotes de aplicativos são instalados em *C:\Program Files\WindowsApps\package_name*, com o executável intitulado *app_name.exe*. Cada pasta de pacote contém um manifesto (chamado AppxManifest.xml) que contém um namespace XML especial para apps empacotados. Dentro desse arquivo de manifesto está um elemento ```<EntryPoint>```, que faz referência ao aplicativo de confiança total. Quando o aplicativo é iniciado, ele não é executado dentro de um contêiner de aplicativo, mas em vez disso, ele é executado como o usuário normalmente faria.
 
 Depois da implantação, os arquivos do pacote serão marcados como somente leitura e totalmente bloqueados pelo sistema operacional. O Windows evitará a inicialização dos aplicativos se esses arquivos forem adulterados.
 
 ## <a name="file-system"></a>Sistema de arquivos
 
-Para conter o estado do aplicativo, as alterações que o aplicativo faz em AppData são capturadas. Todas as gravações feitas na pasta AppData do usuário (por exemplo, *C:\Users\user_name\AppData*), inclusive criar, excluir e atualizar, são copiadas na gravação para um local privado por usuário e por aplicativo. Isso gera a ilusão de que o aplicativo empacotado está editando a AppData real quando está, na verdade, modificando uma cópia particular. Redirecionando gravações dessa maneira, o sistema pode acompanhar todas as modificações de arquivo feitas pelo aplicativo. Isso permite que o sistema Limpe esses arquivos quando o aplicativo é desinstalado, o que reduz o "rot" do sistema e proporciona uma remoção de aplicativo melhor experiência para o usuário.
+Para conter o estado do aplicativo, as alterações que o aplicativo faz em AppData são capturadas. Todas as gravações feitas na pasta AppData do usuário (por exemplo, *C:\Users\user_name\AppData*), inclusive criar, excluir e atualizar, são copiadas na gravação para um local privado por usuário e por aplicativo. Isso cria a ilusão de que o aplicativo empacotado está editando a AppData real quando está, na verdade, modificando uma cópia particular. Redirecionando gravações dessa maneira, o sistema pode acompanhar todas as modificações de arquivo feitas pelo aplicativo. Isso permite que o sistema Limpe esses arquivos quando o aplicativo é desinstalado, o que reduz o "rot" do sistema e fornecendo uma remoção de aplicativo a melhor experiência para o usuário.
 
-Além de redirecionar AppData, pastas conhecidas do Windows (System32, arquivos de programas (x86) etc.) são mescladas dinamicamente a diretórios correspondentes no pacote do aplicativo. Cada pacote contém uma pasta chamada "VFS" na raiz. Todas as leituras de diretório ou arquivo no diretório VFS são mescladas em tempo de execução às respectivas contrapartes nativas. Por exemplo, um aplicativo pode conter *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* como parte do pacote do aplicativo, mas o arquivo apareceria aparentemente instalado em *C:\Windows\System32\vc10.dll*.  Isso mantém a compatibilidade com aplicativos da área de trabalho, que podem esperar que arquivos estejam em locais sem pacote.
+Além de redirecionar AppData, pastas conhecidas do Windows (System32, arquivos de programas (x86), etc.) são mescladas dinamicamente a diretórios correspondentes no pacote do aplicativo. Cada pacote contém uma pasta chamada "VFS" na raiz. Todas as leituras de diretório ou arquivo no diretório VFS são mescladas em tempo de execução às respectivas contrapartes nativas. Por exemplo, um aplicativo pode conter *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* como parte do pacote do aplicativo, mas o arquivo parece ser instalado em *C:\Windows\System32\vc10.dll*.  Isso mantém a compatibilidade com aplicativos da área de trabalho, que podem esperar que arquivos estejam em locais sem pacote.
 
 As gravações em arquivos/pastas no pacote de apps não são permitidas. As gravações em arquivos e pastas que não fazem parte do pacote são ignoradas pela ponte e são permitidas desde que o usuário tenha permissão.
 
@@ -75,7 +75,7 @@ Somente as chaves em *HKLM\Software* fazem parte do pacote; as chaves em *HKCU* 
 
 Todas as gravações em HKCU são cópias em gravações para um local particular por usuário e por aplicativo. Tradicionalmente, os desinstaladores são conseguem limpar *HKEY_CURRENT_USER* porque os dados do Registro para usuários desconectados estão desmontados e não estão disponíveis.
 
-Todas as gravações são mantidas durante a atualização de pacote e só são excluídas quando o aplicativo é totalmente removido.
+Todas as gravações são mantidas durante a atualização do pacote e só são excluídas quando o aplicativo é totalmente removido.
 
 ### <a name="common-operations"></a>Operações comuns
 
