@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f627cf2a897de32aea0e35faf66f5ea70695efd5
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8322892"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8477974"
 ---
 # <a name="launch-an-app-for-results"></a>Iniciar um aplicativo para obter resultados
 
@@ -25,7 +25,7 @@ ms.locfileid: "8322892"
 
 Saiba como iniciar um aplicativo a partir de outro aplicativo e trocar dados entre os dois. Isso é chamado de *iniciar um aplicativo para obter resultados*. O exemplo mostra como usar [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) para iniciar um aplicativo para obter resultados.
 
-Novos APIs no Windows 10 de comunicação de aplicativo para aplicativo possibilitam para Windows aplicativos (e aplicativos Web do Windows) iniciar um aplicativo e exchange dados e arquivos. Isso permite que você crie soluções diversas de vários aplicativos. Usando essas novas APIs, tarefas complexas que exigiriam que o usuário usasse vários aplicativos podem agora ser executadas perfeitamente. Por exemplo, seu aplicativo pode iniciar um aplicativo de rede social para selecionar um contato ou iniciar um aplicativo de check-out para concluir um processo de pagamento.
+Comunicação de aplicativo para aplicativo novas APIs no Windows 10 possibilitam para Windows aplicativos (e aplicativos Web do Windows) iniciar um aplicativo e exchange dados e arquivos. Isso permite que você crie soluções diversas de vários aplicativos. Usando essas novas APIs, tarefas complexas que exigiriam que o usuário usasse vários aplicativos podem agora ser executadas perfeitamente. Por exemplo, seu aplicativo pode iniciar um aplicativo de rede social para selecionar um contato ou iniciar um aplicativo de check-out para concluir um processo de pagamento.
 
 O aplicativo que você iniciará para obter resultados será chamado de aplicativo iniciado. O aplicativo que inicia o aplicativo será referenciado como aplicativo de chamada. Para este exemplo, você escreverá o aplicativo de chamada e o aplicativo iniciado.
 

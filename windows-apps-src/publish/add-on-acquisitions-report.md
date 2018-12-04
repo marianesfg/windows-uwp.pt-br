@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, vendas de complementos, aquisições de complementos, vendas de iap, produtos no aplicativo, iaps, complementos
 ms.localizationpriority: medium
 ms.openlocfilehash: 8027276779dac59f0745dd8053ee73cf1615e630
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350618"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478470"
 ---
 # <a name="add-on-acquisitions-report"></a>Relatório de aquisições de complementos
 
 
-O relatório de **aquisições de complemento** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja quantos complementos você vendeu, além demográficos e detalhes da plataforma e mostra informações de conversão para clientes no Windows 10 (incluindo o Xbox). Você também pode exibir dados de aquisição em tempo real aproximado para o último período ou setenta e duas horas.
+O relatório de **aquisições de complemento** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja quantos complementos você vendeu, além de demográficos e detalhes da plataforma e mostra informações de conversão para clientes no Windows 10 (incluindo o Xbox). Você também pode exibir dados de aquisição em tempo real aproximado para o último período ou setenta e duas horas.
 
-Você pode exibir esses dados no Partner Center, ou [baixar o relatório](download-analytic-reports.md) para exibição offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter aquisições de complementos](../monetize/get-in-app-acquisitions.md) na [API REST de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
+Você pode exibir esses dados no Partner Center ou [baixar o relatório](download-analytic-reports.md) para exibição offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter aquisições de complementos](../monetize/get-in-app-acquisitions.md) na [API REST de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Neste relatório, uma aquisição de complemento significa que um cliente adquiriu um complemento de você (ou adquiriu sem pagar, se for oferecido gratuitamente). Várias compras do mesmo complemento consumível pelo mesmo cliente são contadas como aquisições de complementos separadas.
 
@@ -28,7 +28,7 @@ Neste relatório, uma aquisição de complemento significa que um cliente adquir
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode selecionar **H 1** ou **72h** para mostrar dados de aquisição em tempo quase real para uma hora ou setenta e duas horas; Esses períodos de tempo só se aplicam à guia **complementar diariamente** do gráfico de **aquisições de complemento** e para a guia de **aquisições** do gráfico **mercados** . 
+Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode selecionar **H 1** ou **72h** para mostrar dados de aquisição em tempo quase real para uma hora ou setenta e duas horas; Esses períodos de tempo só se aplicam à guia **complemento diariamente** do gráfico **aquisições de complemento** e para a guia de **aquisições** do gráfico **mercados** . 
 
 Você também pode expandir **Filtros** para filtrar os dados dessa página por complementos específicos, por mercado e/ou por tipo de dispositivo.
 

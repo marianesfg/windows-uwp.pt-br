@@ -7,25 +7,25 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d2e883fca2b5ca350322fc44c1de51a02aaa4d85
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330245"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478195"
 ---
 # <a name="supported-languages"></a>Idiomas com suporte
 
 
-Você pode enviar aplicativos na Microsoft Store em mais de 100 idiomas.
+Você pode enviar aplicativos para a Microsoft Store em mais de 100 idiomas.
 
 Para saber mais sobre a configuração de idiomas em seus aplicativos, consulte [globalização e localização](../design/globalizing/globalizing-portal.md) e [Noções básicas sobre idiomas de perfil de usuário e idiomas de manifesto do aplicativo](../design/globalizing/manage-language-and-region.md). Também temos um [Kit de Ferramentas de Aplicativo Multilíngue](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) para ajudar você a criar aplicativos com suporte para vários idiomas.
 
 ## <a name="supported-languages"></a>Idiomas compatíveis
 
 
-Estes são os idiomas aceitos pela Microsoft Store. Seu aplicativo deve dar suporte a pelo menos um desses idiomas. 
+Esses são os idiomas aceitos na Microsoft Store. Seu aplicativo deve dar suporte a pelo menos um desses idiomas. 
 
-Códigos de idioma que não estão incluídos aqui não são compatíveis com a loja. É recomendável que você não incluir pacotes que segmentem códigos de idioma que não seja os tipos listados abaixo; Esses pacotes não serão distribuídos para clientes e podem causar atrasos ou falhas de certificação.
+Códigos de idioma que não estão incluídos aqui não são compatíveis com a loja. Recomendamos que você não incluir pacotes que segmentem códigos de idioma que não sejam os listados abaixo; Esses pacotes não serão distribuídos para clientes e podem causar atrasos ou falhas de certificação.
 
 | Nome do idioma         | Códigos dos idiomas permitidos                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -11,11 +11,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 336e4e64cc0b1819081a7e42b6e3e2d099355248
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342124"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478528"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -68,29 +68,29 @@ A característica mais notável do acrílico é sua transparência. Existem dois
 
  ![Acrílico de aplicativo](images/AppAcrylic_DarkTheme.png)
 
- Coloque diversas superfícies de acrílico com cuidado: várias camadas de acrílico de fundo podem criar uma decisão traiçoeira ópticas.
+ Coloque diversas superfícies de acrílico com cuidado: várias camadas de acrílico de fundo podem criar ópticas distração.
 
 ## <a name="when-to-use-acrylic"></a>Quando usar o acrílico
 
 * Use acrílico no aplicativo para dar suporte a interface do usuário, como NavigationView ou elementos de comando em linha. 
-* Use acrílico de fundo para elementos de interface do usuário transitórios, como luz dimsissable da interface do usuário, submenus e menus de contexto.<br />Usar acrílico em cenários transitórios ajuda a manter uma relação visual com o conteúdo que acionou a UI Transiente.
+* Use acrílico de fundo para elementos de interface do usuário transitórios, como luz dimsissable da interface do usuário, submenus e menus de contexto.<br />Usar o acrílico em cenários transitórios ajuda a manter uma relação visual com o conteúdo que acionou a UI Transiente.
 
-Se você estiver usando no aplicativo acrílico em superfícies de navegação, considere a possibilidade de estender o conteúdo sob o painel acrílico para melhorar o fluxo em seu aplicativo. Usar o NavigationView fará isso para você automaticamente. No entanto, para evitar a criação de um efeito de tiragem, não tente colocar várias partes de acrílico de borda a borda - isso pode criar uma fenda indesejada entre as duas superfícies desfocadas. Acrílico é uma ferramenta para trazer harmonia visual aos seus designs, mas quando usado incorretamente, pode resultar em ruído visual.
+Se você estiver usando no aplicativo acrílico em superfícies de navegação, considere a possibilidade de estender o conteúdo sob o painel acrílico para melhorar o fluxo em seu aplicativo. Usar o NavigationView fará isso para você automaticamente. No entanto, para evitar a criação de um efeito de tiragem, não tente colocar várias partes de acrílico-borda - isso pode criar uma fenda indesejada entre as duas superfícies desfocadas. Acrílico é uma ferramenta para trazer harmonia visual aos seus designs, mas quando usado incorretamente, pode resultar em ruído visual.
 
 Considere os seguintes padrões de uso para decidir a melhor maneira de incorporar o acrílico em seu aplicativo:
 
 ### <a name="horizontal-navigation-or-commanding"></a>Navegação horizontal ou comandos
 
-Se seu aplicativo não é consegue aproveitar o NavigationView e você pretende adicionar um acrílico por conta própria, recomendamos usar acrílico relativamente transparente com opacidade de tonalidade de 60%.
+Se seu aplicativo não é capaz de aproveitar o NavigationView e você pretende adicionar um acrílico por conta própria, recomendamos usar acrílico relativamente transparente com opacidade de tonalidade de 60%.
  - Quando o painel é aberto como uma sobreposição sobre outros conteúdos do aplicativo, isso deve ser [60% de acrílico de aplicativo](#acrylic-theme-resources)
 
 ![Aplicativo de mapas usando o comando horizontal no aplicativo](images/Maps_In_App_Acrylic_1.png)
 
-Além disso, a ter seu conteúdo estender ou rolagem sob o acrílico na parte superior lhe dará seu aplicativo uma experiência mais imersiva e perfeita.
+Além disso, ter seu conteúdo estender ou rolagem sob o acrílico na parte superior dará seu aplicativo uma experiência mais imersiva e perfeita.
 
 ### <a name="vertical-panes"></a>Painéis verticais
 
-Para painéis verticais ou superfícies que ajudam a seção desativar conteúdo do seu aplicativo, recomendamos que você use um plano de fundo opaco em vez de acrílico. Se seu painéis verticais abrir em cima de conteúdo, como em do NavigationView **compacto** ou modos **mínimo** , sugerimos que usar acrílico no aplicativo para ajudar a manter o contexto da página quando o usuário tem esse painel aberto.
+Para painéis verticais ou superfícies que ajudam a seção desativar o conteúdo do seu aplicativo, recomendamos que você use um plano de fundo opaco em vez de acrílico. Se abrir seus painéis verticais sobre conteúdo, como em do NavigationView **compacto** ou modos **mínimo** , sugerimos que usar o acrílico de aplicativo para ajudar a manter o contexto da página quando o usuário tem esse painel aberto.
 
 ### <a name="transient-surfaces"></a>Superfícies transitórios
 
@@ -98,7 +98,7 @@ Para aplicativos com menu submenus, pop-ups não modal, ou ignorar painéis, é 
 
 ![Usando um submenu informativo padrão do aplicativo de email](images/Mail_TransientContextMenu.png)
 
-Muitos dos nossos controles usará o acrílico por padrão. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) e controles semelhantes com luz dimiss pop-ups todos usará o acrílico transitório quando eles são invocados.
+Muitos dos nossos controles usará o acrílico por padrão. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) e controles semelhantes com luz dimiss pop-ups todos usarão o acrílico transitório quando eles são invocados.
 
 > [!Note]
 > Renderização de superfícies é GPU intensivo, que pode aumentar o consumo de energia do dispositivo e reduzir a duração da bateria. Os efeitos acrílicos são automaticamente desativados quando dispositivos entram no modo de economia de bateria, e os usuários podem desativar os efeitos acrílicos para todos os aplicativos, se preferirem.
@@ -313,7 +313,7 @@ Além disso, você precisará desenhar o título do seu aplicativo, que normalme
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 * Use acrílico como material de fundo em superfícies não primárias do aplicativo, como painéis de navegação.
 * Estenda o acrílico para pelo menos uma borda do seu aplicativo para criar uma experiência perfeita, combinando de maneira sutil com os entornos do aplicativo.
-* Não coloque arylic da área de trabalho em superfícies de grandes em segundo plano do seu aplicativo - Isso interrompe o modelo mental da acrílico sendo usado principalmente para superfícies transitórios.
+* Não coloque arylic da área de trabalho em superfícies grandes em segundo plano do seu aplicativo - Isso interrompe o modelo mental da acrílico sendo usado principalmente para superfícies transitórios.
 * Não coloque acrílicos de aplicativo e de fundo de forma diretamente adjacente para evitar a tensão visual nas junções.
 * Não coloque vários painéis acrílicos com o mesmo tom e opacidade próximos uns aos outros, pois isso gera uma emenda visível não desejada.
 * Não coloque texto de cores destacadas sobre superfícies acrílicas.

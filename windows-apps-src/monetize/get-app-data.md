@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, dados do aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 23e392e2064a2a48089d1efadd1461c146e0d343
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348818"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478724"
 ---
 # <a name="get-app-data"></a>Obter dados de app
 
@@ -68,7 +68,7 @@ Este recurso tem os seguintes valores.
 | primaryName   | string  | O nome principal do aplicativo.      |
 | packageFamilyName | string  | O nome da família de pacotes do aplicativo.      |
 | packageIdentityName          | string  | O nome da identidade do pacote do aplicativo.                       |
-| publisherName       | string  | A ID de fornecedor do Windows que está associada ao aplicativo. Isso corresponde ao valor **Package/Identity/Publisher** que aparece na página [identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) para o aplicativo no Partner Center.       |
+| publisherName       | string  | A ID de fornecedor do Windows que está associada ao aplicativo. Isso corresponde ao valor **Package/Identity/Publisher** que aparece na página de [identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) para o aplicativo no Partner Center.       |
 | firstPublishedDate      | string  | A data em que o app foi publicado pela primeira vez, no formato ISO 8601.   |
 | lastPublishedApplicationSubmission       | object | Um [recurso de envio](#submission_object) que fornece informações sobre o último envio publicado do app.    |
 | pendingApplicationSubmission        | object  |  Um [recurso de envio](#submission_object) que fornece informações sobre o envio atual pendente do app.   |   

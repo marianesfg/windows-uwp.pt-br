@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 114524294a5b77165167601c1479b6c3894bb29b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342485"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478371"
 ---
 # <a name="view-app-identity-details"></a>Exibir detalhes de identidade do aplicativo
 
 
-Você pode exibir detalhes relacionados à identidade exclusiva atribuída ao aplicativo pela Microsoft Store em suas páginas de **identidade do aplicativo** . Você também pode obter um link para da loja do aplicativo listagem nesta página.
+Você pode exibir detalhes relacionados à identidade exclusiva atribuída ao aplicativo pela Microsoft Store em suas páginas de **identidade do aplicativo** . Você também pode obter um link para da loja do aplicativo nesta página de listagem.
 
 Para encontrar essas informações, navegue para um dos seus aplicativos, depois expanda **Gerenciamento de aplicativo** no menu de navegação esquerdo. Selecione a **Identidade do aplicativo** para exibir esses detalhes.
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, unidades publicitária, testes
 ms.localizationpriority: medium
 ms.openlocfilehash: b2d01434e508d4a5067ffd66bdf86b3083b43016
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347752"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478882"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>Configurar unidades de anúncios em seu aplicativo
 
@@ -19,7 +19,7 @@ Cada controle de anúncio no aplicativo UWP (Plataforma Universal do Windows) an
 
 Fornecemos [valores de unidade publicitária de teste](#test-ad-units) que você pode usar durante os testes para confirmar se o aplicativo mostra anúncios de teste. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Se você tentar usar valores de teste em seu aplicativo depois de publicá-lo, seu aplicativo dinâmico não receberá anúncios.
 
-Depois que você terminar de testar seu aplicativo UWP e estiver pronto para enviá-lo para o Partner Center, você deve [criar uma unidade de anúncio em tempo real](#live-ad-units) na página [anúncios no app](../publish/in-app-ads.md) no Partner Center e atualizar o código do aplicativo para usar os valores aplicativo anúncios e a ID da unidade ID para essa unidade publicitária.
+Depois que você terminar de testar seu aplicativo UWP e você estará pronto para enviá-lo para o Partner Center, você deve [criar uma unidade de anúncio em tempo real](#live-ad-units) na página [anúncios no app](../publish/in-app-ads.md) no Partner Center e atualizar o código do aplicativo para usar os valores aplicativo anúncios e a ID da unidade ID para essa unidade publicitária.
 
 Para obter mais informações sobre como atribuir os valores da ID do aplicativo e ID da unidade de anúncios no código do seu aplicativo, consulte os artigos a seguir:
 * [AdControl em XAML e .NET](adcontrol-in-xaml-and--net.md)

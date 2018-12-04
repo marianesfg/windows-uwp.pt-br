@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e212e16039d49e3ffd08aa5886d48c61ee24e9e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330682"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479565"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
-Use o **monetizar** &gt; página de **anúncios no app** no [Partner Center](https://partner.microsoft.com/dashboard) para criar e gerenciar unidades de anúncio para:
+Use a **monetizar** &gt; página de **anúncios no app** no [Partner Center](https://partner.microsoft.com/dashboard) para criar e gerenciar unidades de anúncio para:
 
 * Aplicativos da Plataforma Universal do Windows (UWP) que usam o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp).
-* Publicado anteriormente Windows 8. x e Windows Phone 8. x aplicativos que usam o [Microsoft Advertising SDK para Windows e Windows Phone 8. x](http://aka.ms/store-8-sdk).
+* Publicado anteriormente o Windows 8. x e Windows Phone 8. x aplicativos que usam o [Microsoft Advertising SDK para Windows e Windows Phone 8. x](http://aka.ms/store-8-sdk).
 
 > [!IMPORTANT]
 > A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir pacotes que segmentem 8.x/Windows do Windows Phone 8. x ou anterior. Para obter mais informações, consulte esta [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
@@ -70,7 +70,7 @@ Depois de criar unidades publicitárias para um ou mais aplicativos em sua conta
 Para editar as [Configurações de mediação](#mediation) para uma unidade publicitária UWP ou a [Conformidade com COPPA](#coppa) para o aplicativo no qual a unidade publicitária é usada, clique no nome da unidade publicitária.
 
 > [!NOTE]
-> Se uma unidade publicitária não tiver nenhuma atividade nos últimos seis meses, podemos será rotule-o como **inativo**e removeremos do Partner Center. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
+> Se uma unidade de anúncio não tiver nenhuma atividade nos últimos seis meses, podemos será o rótulo como **inativo**e removeremos do Partner Center. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
 
 <span id="mediation" />
 
@@ -86,11 +86,11 @@ Para definir as configurações de controle de anúncio de uma unidade de anúnc
 1. [Criar uma unidade de anúncio](#create-ad-unit) ou [Selecionar uma unidade de anúncio existente](#available-ad-units).
 2. Na página de **anúncios no aplicativo** , vá para a seção de **configurações de controle** e a configuração suas configurações.
 
-    * Por padrão, a caixa de seleção **Permitir que a Microsoft otimizar minhas configurações** será selecionada. É recomendável usar essa opção. Essa opção usa algoritmos de aprendizado de máquina para escolher automaticamente as configurações de controle de anúncios para que o aplicativo ajude você a maximizar a receita de anúncios em todos os mercados aos quais o aplicativo ofereça suporte. Quando você usa essa opção, você também pode optar pelas redes de publicidade que você deseja usar na configuração. Desmarque as redes de publicidade que você não deseja fazer parte da configuração e nosso algoritmo garantirá que seu aplicativo recebe apenas anúncios das redes de publicidade selecionado.
-    * Se você quiser escolher sua próprias ad configurações de controle, escolha **as configurações padrão de modificar**.
+    * Por padrão, a caixa de seleção **Permitir que a Microsoft otimizar minhas configurações** é selecionada. É recomendável usar essa opção. Essa opção usa algoritmos de aprendizado de máquina para escolher automaticamente as configurações de controle de anúncios para que o aplicativo ajude você a maximizar a receita de anúncios em todos os mercados aos quais o aplicativo ofereça suporte. Quando você usa essa opção, você também pode escolher as redes de publicidade que você deseja usar na configuração. Desmarque as redes de publicidade que você não deseja fazer parte da configuração e nosso algoritmo garante que seu aplicativo recebe apenas anúncios de redes de anúncio selecionado.
+    * Se você quiser escolher seu próprio ad configurações de controle, escolha **as configurações padrão de modificar**.
 
     > [!NOTE]
-    > As etapas restantes nesta seção só são aplicáveis se você optar por **Modificar definições padrão**.
+    > As etapas restantes nesta seção só são aplicáveis se você optar por **modificar configurações de padrão**.
 
 3. Na lista suspensa **Destino**, escolha **Linha de Base** para definir as configurações padrão do controle de anúncios. Essa configuração padrão será aplicada a todos os mercados, exceto para mercados em que você pode definir configurações específicas de mercado.
 4. Em seguida, especifique a proporção de anúncios que você deseja mostrar no controle de redes pagas (que pagarão a receita das impressões) e outras redes de anúncios (que não pagarão a receita das impressões). Para fazer isso, insira um valor entre 0 e 100 nos campos **Peso** de **Redes de publicidade pagas** e **Outras redes de publicidade**.  

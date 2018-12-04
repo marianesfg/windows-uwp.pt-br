@@ -4,14 +4,14 @@ description: Troque mensagens com um serviço de app em execução em um disposi
 ms.assetid: a0261e7a-5706-4f9a-b79c-46a3c81b136f
 ms.date: 02/08/2017
 ms.topic: article
-keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, project rome, tarefa em segundo plano, serviço de aplicativo
+keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma, tarefa em segundo plano, o serviço de aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: ddadae05ca3243f9bbd6b53cbb98f234ac560acd
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328410"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478760"
 ---
 # <a name="communicate-with-a-remote-app-service"></a>Comunicar-se com um serviço de app remoto
 
@@ -40,7 +40,7 @@ Ao lado do elemento **AppService** , adicione o atributo **SupportsRemoteSystems
 ...
 ```
 
-Para usar elementos nesse namespace **uap3** , você deve adicionar a definição de namespace na parte superior do arquivo de manifesto se ainda não estiver lá.
+Para usar elementos nesse namespace **uap3** , você deve adicionar a definição de namespace à parte superior do arquivo de manifesto, se ainda não estiver lá.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, aquisições, vendas de aplicativos, downloads de aplicativos, instalações, funil, aquisição, conversões, canal, exibições de página de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 33d5885c5161793807bf32f62ff2df4bab5b2c1d
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344761"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478515"
 ---
 # <a name="acquisitions-report"></a>Relatório de aquisições
 
 
-O relatório de **aquisições** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja quem adquiriu e instalou seu aplicativo, juntamente com demográficos e detalhes da plataforma e mostra informações sobre como os clientes no Windows 10 (incluindo o Xbox) chegaram à listagem do seu aplicativo. Você também pode exibir dados de aquisição em tempo real aproximado para o último período ou setenta e duas horas. 
+O relatório de **aquisições** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja quem adquiriu e instalou seu aplicativo, juntamente com demográficos e detalhes da plataforma e mostra informações sobre como os clientes no Windows 10 (incluindo o Xbox) chegaram a listagem do aplicativo. Você também pode exibir dados de aquisição em tempo real aproximado para o último período ou setenta e duas horas. 
 
-Você pode exibir esses dados no Partner Center, ou [baixar o relatório](download-analytic-reports.md) para exibição offline. Como alternativa, você pode recuperar esses dados de forma programática usando nossa [API REST de análise](../monetize/access-analytics-data-using-windows-store-services.md).
+Você pode exibir esses dados no Partner Center ou [baixar o relatório](download-analytic-reports.md) para exibição offline. Como alternativa, você pode recuperar esses dados de forma programática usando nossa [API REST de análise](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Neste relatório, uma **aquisição** significa que um novo cliente obteve uma licença para seu aplicativo (independentemente se você cobrou ou ofereceu gratuitamente). Uma **instalação** se refere ao aplicativo sendo instalado em um dispositivo Windows 10.
 
@@ -30,7 +30,7 @@ Neste relatório, uma **aquisição** significa que um novo cliente obteve uma l
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Quase em tempo real dados serão mostrados para todas as opções (exceto em dados **cumulativo do aplicativo** ). O tempo **H 1** e **72h** períodos só se aplicam à guia **aplicativo diariamente** do gráfico de **aquisições** e para a guia de **aquisições** do gráfico **mercados** . 
+Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Quase em tempo real dados serão mostrados para todas as opções (exceto em dados **cumulativo do aplicativo** ). O tempo de **1 H** e **72h** períodos só se aplicam à guia **aplicativo diariamente** do gráfico **aquisições** e para a guia de **aquisições** do gráfico **mercados** . 
 
 Você também pode expandir **Filtros** para filtrar os dados dessa página por mercado e/ou por tipo de dispositivo.
 
@@ -53,10 +53,10 @@ Você pode filtrar os resultados se a aquisição foi originada do cliente ou da
 > [!NOTE]
 > Você também pode recuperar de forma programática esses dados usando o método [obter aquisições de aplicativo](../monetize/get-app-acquisitions.md) na [API REST de análise](../monetize/access-analytics-data-using-windows-store-services.md).
 
-Na exibição de **aplicativo diariamente** , quando o **30d** período é selecionado, você poderá ver marcadores em círculo. Eles representam um aumento significativo ou diminuir em um determinado valor acreditamos que você vai querer saber sobre. A data em que o círculo é exibido representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
+Na exibição de **aplicativo diariamente** , quando o **30d** o período de tempo é selecionado, você poderá ver marcadores em círculo. Eles representam um aumento significativo ou diminuir um valor determinado que acreditamos que você vai querer saber sobre. A data em que o círculo é exibido representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
 
 > [!TIP]
-> Você pode exibir mais informações relacionadas a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
+> Você pode exibir mais insights relacionados a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
 
 ## <a name="installs"></a>Instalações
 
@@ -121,7 +121,7 @@ Nesse gráfico, um *canal* se refere ao método em que um cliente chegou à pág
 -   **Campanha personalizada:** o cliente seguiu um link que usava uma [ID da campanha personalizada](create-a-custom-app-promotion-campaign.md).
 -   **Outros:** o cliente seguiu um link externo (sem qualquer ID de campanha personalizada) de um site para a listagem do seu app ou o cliente seguiu um link de um mecanismo de pesquisa para a listagem do seu app.
 
-Uma *visualização da página* significa que um cliente viu a página de listagem da Store do seu aplicativo, por meio da loja baseada na web ou de dentro do aplicativo loja no Windows 10. Isso inclui modos de exibição por pessoas que não estão conectadas com uma conta da Microsoft. Alguns clientes optaram por não fornecer essas informações para a Microsoft.
+Uma *exibição de página* significa que um cliente viu a página de listagem da loja do seu aplicativo, por meio da loja baseada na web ou de dentro do aplicativo loja no Windows 10. Isso inclui modos de exibição por pessoas que não estão conectadas com uma conta da Microsoft. Alguns clientes optaram por não fornecer essas informações para a Microsoft.
 
 Uma *conversão* significa que um cliente (conectado com uma conta da Microsoft) obteve recentemente uma licença para seu aplicativo (seja paga ou gratuita).
 

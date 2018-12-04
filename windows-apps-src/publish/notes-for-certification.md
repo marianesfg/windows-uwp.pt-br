@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, notas para testadores
 ms.localizationpriority: medium
 ms.openlocfilehash: d47933ac3482f610fb8fe28b7fb52238ac7ca294
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330842"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478451"
 ---
 # <a name="notes-for-certification"></a>Notas para certificação
 
@@ -20,17 +20,17 @@ Ao enviar seu aplicativo, você tem a opção de usar a página **Notas para cer
 
 Certifique-se de incluir (se aplicável ao seu aplicativo):
 
--   **Nomes de usuário e senhas para testar contas**: se seu aplicativo requer que os usuários façam logon em uma conta de mídia social ou serviço, forneça o nome de usuário e senha para uma conta de teste. Os testadores de certificação usarão a conta ao examinar o aplicativo.
+-   **Nomes de usuário e senhas para contas de teste**: se seu aplicativo requer que os usuários façam logon em uma conta de mídia social ou serviço, forneça o nome de usuário e senha para uma conta de teste. Os testadores de certificação usarão a conta ao examinar o aplicativo.
 
 -   **As etapas para acessar recursos ocultos ou bloqueados**: descreva brevemente como os testadores podem acessar quaisquer recursos, modos ou conteúdo que pode não ser óbvio. Os aplicativos que parecerem incompletos podem não ser certificados.
 
 -   **Etapas para verificar o uso de áudio em segundo plano**: se seu aplicativo permite que o áudio seja executado em segundo plano, os testadores podem precisar de instruções sobre como acessar esse recurso para que eles possam confirmar se ele funciona corretamente.
 
--  **Diferenças de esperado no comportamento com base na região ou outras configurações de cliente**: por exemplo, se os clientes em diferentes regiões verão conteúdo diferente, certifique-se de chamá-lo-out para que os testadores entendam as diferenças e analisem adequadamente.
+-  **Diferenças de esperado no comportamento com base na região ou outras configurações de cliente**: por exemplo, se os clientes em diferentes regiões verão conteúdo diferente, certifique-se de chamar isso para que os testadores entendam as diferenças e analisem adequadamente.
 
--   **Informações sobre o que mudou em uma atualização de aplicativo**: atualizações para os aplicativos já publicados, convém informar aos testadores o que mudou, especialmente se os pacotes forem os mesmos e você está apenas alterando alterações ao seu aplicativo (como a adição de mais de listagem capturas de tela, alterar a categoria do aplicativo, ou editar a descrição).
+-   **Informações sobre o que mudou em uma atualização de aplicativo**: atualizações para os aplicativos já publicados, convém informar aos testadores o que mudou, especialmente se os pacotes são os mesmos e você estiver apenas fazendo alterações ao seu aplicativo (como a adição de mais de listagem capturas de tela, alterar a categoria do aplicativo, ou editar a descrição).
 
--   **A data em que você está inserindo as notas**: isso é especialmente importante se você estiver usando uma área restrita de desenvolvimento no Partner Center (por exemplo, esse é o caso para qualquer jogo que se integra ao Xbox Live), já que as notas inseridas ao publicar em uma área restrita será permanecerão quando você solicita a certificação. Ver a data ajuda os testadores a avaliar se há algum problema temporário que não se aplica mais.
+-   **A data em que você está inserindo as notas**: isso é especialmente importante se você estiver usando uma área restrita de desenvolvimento no Partner Center (por exemplo, esse é o caso para qualquer jogo que se integra ao Xbox Live), já que as notas inseridas ao publicar em uma área restrita será permanecem quando você solicitar a certificação. Ver a data ajuda os testadores a avaliar se há algum problema temporário que não se aplica mais.
 
 -  **Qualquer outra coisa que você ache necessário que os testadores entendam sobre o seu envio**
 
