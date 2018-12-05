@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, boxing, escalar, valor
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c86d1ac8ce83ea092ce0e2730ea0e9d4a201b94
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8711610"
+ms.locfileid: "8740374"
 ---
 # <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a>Valores de conversão de boxing e unboxing para IInspectable com C++/WinRT
  

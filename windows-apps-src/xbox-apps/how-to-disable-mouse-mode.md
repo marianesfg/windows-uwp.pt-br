@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: e57ee4e6-7807-4943-a933-c2b4dc80fc01
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e4b8868f416494daf978d65d4a4ccde02d6ccf5
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8704765"
+ms.locfileid: "8740607"
 ---
 # <a name="how-to-disable-mouse-mode"></a>Como desabilitar o modo do mouse
 O modo de mouse está ativado por padrão para todos os aplicativos, o que significa que todos os aplicativos que não o desativaram receberão um ponteiro de mouse (semelhante ao do navegador Edge no console). É altamente recomendável desativar essa opção e otimizar para navegação direcional de controlador.   

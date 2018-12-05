@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: de34411d9c7d226857214472e691dd6b41f10a18
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8695710"
+ms.locfileid: "8741131"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Como o Sistema de Gerenciamento de Recursos faz a correspondência dos recursos e os escolhe
 Quando um recurso é solicitado, pode haver vários candidatos que correspondam em um certo grau ao contexto de recurso atual. O Sistema de Gerenciamento de Recursos irá analisar todos os candidatos e determinar o melhor deles para ser retornado. Para isso, todos os qualificadores são levados em consideração para classificar todos os candidatos.
