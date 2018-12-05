@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, link, protocolo da windows store, vincular a um aplicativo, vincular ao aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 59df207adf44cea04505e41a3323da1743170c46
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8487278"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8731036"
 ---
 # <a name="link-to-your-app"></a>Link para seu app
 
@@ -32,7 +32,7 @@ Você pode vincular diretamente aos detalhes do seu aplicativo com um selo perso
 Para criar o selo, visite a página de [selos da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkID=534236) . Você precisará ter a **ID da Loja** de 12 caracteres do aplicativo para usar esse formulário, além de gerar o selo e o link. Você pode encontrar a **ID da Loja** do aplicativo na página [Identidade do aplicativo](view-app-identity-details.md) na seção **Gerenciamento do aplicativo**.
 
 > [!NOTE]
-> Consulte [diretrizes de marketing de aplicativo](app-marketing-guidelines.md) para obter informações e requisitos relacionados ao uso do selo Microsoft Store.
+> Consulte [diretrizes de marketing do aplicativo](app-marketing-guidelines.md) para obter informações e requisitos relacionados ao uso do selo Microsoft Store.
 
 
 ## <a name="linking-directly-to-your-app-in-the-microsoft-store"></a>Vincular diretamente ao seu aplicativo na Microsoft Store
@@ -41,11 +41,11 @@ Você pode criar um link que inicia o Microsoft Store e vai diretamente para a p
 
 Esses links são úteis quando você sabe que os usuários estão em um dispositivo Windows e você deseja que eles sejam encaminhados diretamente para a página de listagem da Loja. Por exemplo, você pode usar o link depois de verificar as cadeias de caracteres de agente do usuário em um navegador para confirmar se o sistema operacional do usuário oferece suporte à Loja quando você já está se comunicando por um aplicativo UWP.
 
-Para usar esse esquema de URI para vincular diretamente à listagem da loja do seu aplicativo, acrescente a ID da loja do aplicativo a este link:
+Para usar esse esquema de URI para vincular diretamente à listagem da loja do seu aplicativo, acrescente a ID da loja do seu aplicativo a este link:
 
 `ms-windows-store://pdp/?ProductId=`
 
-Para obter mais informações sobre como usar o protocolo de Microsoft Store, consulte [Iniciar o aplicativo da Microsoft](../launch-resume/launch-store-app.md).
+Para obter mais informações sobre como usar o protocolo da Microsoft Store, consulte [Iniciar o aplicativo da Microsoft](../launch-resume/launch-store-app.md).
 
  
 

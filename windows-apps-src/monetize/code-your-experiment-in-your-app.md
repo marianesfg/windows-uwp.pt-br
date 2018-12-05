@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, testes A/B, experimentos
 ms.localizationpriority: medium
-ms.openlocfilehash: f0d977d41cea873fc0f5e00bea8d0259586517d5
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.openlocfilehash: edd0fbcf841dc9d8fa43873da95dc08b276a5418
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8687596"
+ms.locfileid: "8734469"
 ---
 # <a name="code-your-app-for-experimentation"></a>Codificar seu aplicativo para experimentação
 
@@ -64,7 +64,7 @@ As etapas a seguir descrevem as partes importantes desse processo em detalhes.
 
     [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet3)]
 
-4. Verifique a propriedade [IsStale](htthttps://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.isstale) para determinar se a atribuição de variação em cache precisa ser atualizada com uma atribuição de variação remota do servidor. Se ela precisar ser atualizada, chame o método estático [GetRefreshedVariationAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getrefreshedvariationasync) para verificar se há uma atribuição de variação atualizada do servidor e atualizar a variação em cache local.
+4. Verifique a propriedade [IsStale](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.isstale) para determinar se a atribuição de variação em cache precisa ser atualizada com uma atribuição de variação remota do servidor. Se ela precisar ser atualizada, chame o método estático [GetRefreshedVariationAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getrefreshedvariationasync) para verificar se há uma atribuição de variação atualizada do servidor e atualizar a variação em cache local.
 
     [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet4)]
 

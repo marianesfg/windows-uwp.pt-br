@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, blocos secundários, orientação, diretrizes, práticas recomendadas
 ms.localizationpriority: medium
 ms.openlocfilehash: de3bfa94de1152b3945d42169143a5ae36328c75
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8686178"
+ms.locfileid: "8732329"
 ---
 # <a name="secondary-tile-guidance"></a>Diretriz de bloco secundário
 
