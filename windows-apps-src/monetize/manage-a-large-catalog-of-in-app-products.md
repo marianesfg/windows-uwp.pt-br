@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, catálogo, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 2335e09253570d09c33422d2f5ba4179697e4ea7
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8457909"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706486"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>Gerenciar um catálogo abrangente de produtos no aplicativo
 
-Se o seu app oferecer um catálogo abrangente de produtos no aplicativo, você também poderá seguir o processo descrito neste tópico para ajudar a gerenciar seu catálogo. Em versões anteriores ao Windows 10, a Loja tem um limite de 200 listagens de produtos por conta de desenvolvedor, e o processo descrito neste tópico poderá ser usado para contornar essa limitação. Começando com Windows 10, a loja não tem nenhum limite para o número de listagens de produtos por conta de desenvolvedor, e o processo descrito neste artigo não é mais necessário.
+Se o seu app oferecer um catálogo abrangente de produtos no aplicativo, você também poderá seguir o processo descrito neste tópico para ajudar a gerenciar seu catálogo. Em versões anteriores ao Windows 10, a Loja tem um limite de 200 listagens de produtos por conta de desenvolvedor, e o processo descrito neste tópico poderá ser usado para contornar essa limitação. Começando com Windows 10, a loja não tem limite para o número de listagens de produtos por conta de desenvolvedor, e o processo descrito neste artigo não é mais necessário.
 
 > [!IMPORTANT]
 > Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Esse namespace não está sendo atualizado com os novos recursos e recomendamos que você use o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) em vez disso. O namespace **Windows.Services.Store** dá suporte a tipos de complemento mais recentes, como complementos consumíveis gerenciado pela loja e assinaturas e foi projetado para ser compatível com futuros tipos de produtos e recursos compatíveis com o Partner Center e o armazenamento. O namespace **Windows.Services.Store** foi introduzido no Windows 10, versão 1607 e pode ser usada somente em projetos para **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).

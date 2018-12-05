@@ -11,11 +11,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ac6dd17f31dab1898aa394f901613d268c159b06
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458497"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706794"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Definir condições para executar uma tarefa em segundo plano
 
@@ -27,11 +27,11 @@ ms.locfileid: "8458497"
 
 Saiba como definir condições que controlam quando a sua tarefa em segundo plano será executada.
 
-Às vezes, tarefas em segundo plano exigem que certas condições sejam atendidas para a tarefa em segundo plano seja executado com êxito. Você pode definir uma ou mais das condições especificadas por [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) ao registrar sua tarefa em segundo plano. A condição será verificada após o gatilho já tiver sido disparado. A tarefa em segundo plano, em seguida, será em fila, mas ele não será executado até que todas as condições forem atendidas.
+Às vezes, tarefas em segundo plano exigem que certas condições sejam atendidas para a tarefa em segundo plano seja executado com êxito. Você pode definir uma ou mais das condições especificadas por [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) ao registrar sua tarefa em segundo plano. A condição será verificada após o gatilho já tiver sido disparado. A tarefa em segundo plano será, em seguida, ser colocados em fila, mas ele não será executado até que todas as condições forem atendidas.
 
 Colocar condições em tarefas em segundo plano poupa bateria e CPU, impedindo que tarefas em execução desnecessariamente. Por exemplo, se a sua tarefa em segundo plano é executada com um temporizador e requer conectividade com a Internet, adicione a condição **InternetAvailable** a [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) antes de registrar a tarefa. Isso ajudará a evitar que a tarefa use recursos do sistema e duração da bateria desnecessariamente executando apenas a tarefa em segundo plano quando o temporizador tiver expirado *e* a Internet estiver disponível.
 
-Também é possível integrar várias condições chamando **AddCondition** várias vezes no mesmo [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Tome cuidado para não adicionar condições conflitantes, como **UserPresent**e **UserNotPresent**.
+Também é possível combinar várias condições chamando **AddCondition** várias vezes no mesmo [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Tome cuidado para não adicionar condições conflitantes, como **UserPresent**e **UserNotPresent**.
 
 ## <a name="create-a-systemcondition-object"></a>Criar um objeto SystemCondition
 
@@ -60,7 +60,7 @@ SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionTyp
 
 Para adicionar a condição, chame o método [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) no objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) e passe a ele o objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834).
 
-O código a seguir usa **taskBuilder** para adicionar a condição de **InternetAvailable** .
+O código a seguir usa **taskBuilder** para adicionar **a internetavailable** .
 
 ```csharp
 taskBuilder.AddCondition(internetCondition);
@@ -178,7 +178,7 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> Escolha as condições certas para a sua tarefa em segundo plano para que ela seja executada somente quando for necessária e não é executado quando não deveria. Confira [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para ver descrições das diferentes condições de tarefas em tela de fundo.
+> Escolha as condições para a sua tarefa em segundo plano para que ela seja executada somente quando for necessária e não é executado quando não deveria. Confira [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para ver descrições das diferentes condições de tarefas em tela de fundo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

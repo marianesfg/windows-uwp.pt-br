@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, estender, dividir, serviço de aplicativo, pacote, extensão
 ms.localizationpriority: medium
 ms.openlocfilehash: 110fa8ec9feba1f54155d41b4c726ffb28f71630
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460806"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8708584"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Estender seu aplicativo com serviços de aplicativo, extensões e pacotes
 

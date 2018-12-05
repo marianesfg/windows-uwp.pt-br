@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 012b0bae7c0abdacba352a3e8f60bcfd0aa1dd54
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458666"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8709287"
 ---
 # <a name="lighting"></a>Iluminação
 
 
 As luzes são usadas para iluminar objetos em uma cena. A cor de cada vértice de objeto tem por base o mapa de textura atual, as cores do vértice e as fontes de iluminação.
 
-**Observação**  esta seção serve apenas para o pipeline de funções fixas. Os sombreadores programáveis executam toda a iluminação de modo explícito.
+**Observação**  esta seção é apenas para o pipeline de funções fixas. Os sombreadores programáveis executam toda a iluminação de modo explícito.
 
  
 

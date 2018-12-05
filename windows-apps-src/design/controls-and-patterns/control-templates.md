@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ad66d8797234d01673518256d6f5376ce93245f
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461851"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8709778"
 ---
 # <a name="control-templates"></a>Modelos de controle
 
@@ -53,7 +53,7 @@ Este XAML cria um [**ControlTemplate**](https://msdn.microsoft.com/library/windo
 Um [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) é um vinculador que vincula o valor de uma propriedade em um modelo de controle ao valor de outra propriedade exposta no controle de modelo. TemplateBinding só pode ser usado dentro de uma definição ControlTemplate em XAML. Consulte [TemplateBinding markup extension](../../xaml-platform/templatebinding-markup-extension.md) para mais informações.
 
 > [!NOTE]
-> A partir do Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)), você pode usar as extensões de marcação [**X:Bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) em locais você usa [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Consulte [TemplateBinding markup extension](../../xaml-platform/templatebinding-markup-extension.md) para mais informações.
+> A partir do Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)), você pode usar as extensões de marcação [**X:Bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) em locais você usar [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Consulte [TemplateBinding markup extension](../../xaml-platform/templatebinding-markup-extension.md) para mais informações.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">

@@ -11,19 +11,19 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7ef7927af7acc8f437a323f374ae7dbf8a36d452
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462799"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706876"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>Noções básicas de design de comandos para apps UWP
 
-Em um aplicativo da plataforma Universal do Windows (UWP), *elementos de comando* são os elementos de interface do usuário interativos que permitem aos usuários executar ações como enviar um email, excluir um item ou enviar um formulário. *Interfaces de comando* são compostos de elementos de comando comuns, as superfícies de comando que hospedá-los, as interações que eles dão suporte e as experiências que eles fornecem.
+Em um aplicativo da plataforma Universal do Windows (UWP), *elementos de comando* são elementos interativos da interface do usuário que permitem aos usuários executar ações como enviar um email, excluir um item ou enviar um formulário. *Interfaces de comando* são compostos de elementos de comando comuns, as superfícies de comando que hospedá-los, as interações que eles dão suporte e as experiências que eles fornecem.
 
 ## <a name="provide-the-best-command-experience"></a>Fornecer a melhor experiência de comando
 
-O aspecto de uma interface de comando mais importante é que seu tentando permitir que o usuário realizar. À medida que você pretende a funcionalidade do seu aplicativo, considere as etapas necessárias para executar essas tarefas e as experiências do usuário que você deseja habilitar. Depois de concluir um rascunho inicial dessas experiências, você pode tomar decisões sobre as ferramentas e interações implementá-los.
+O aspecto de uma interface de comando mais importante é que sua tentativa de permitir que o usuário realizar. Ao planejar a funcionalidade do seu aplicativo, considere as etapas necessárias para executar essas tarefas e as experiências do usuário que você deseja habilitar. Depois de concluir um rascunho inicial dessas experiências, em seguida, você pode tomar decisões sobre as ferramentas e interações implementá-los.
 
 Aqui estão algumas experiências de aplicativo comuns:
 
@@ -99,11 +99,11 @@ Para obter uma lista completa, consulte [Controles e elementos de interface do u
 
 ## <a name="place-commands-on-the-right-surface"></a>Colocar comandos na superfície certa
 
-Você pode colocar elementos de comando em várias superfícies no seu aplicativo, incluindo a tela do aplicativo ou contêineres de comando especial, como uma barra de comandos, submenu da barra de comandos, barra de menu ou caixa de diálogo.
+Você pode colocar elementos de comando em várias superfícies no aplicativo, incluindo a tela do aplicativo ou contêineres de comando especial, como uma barra de comandos, submenu da barra de comandos, barra de menu ou caixa de diálogo.
 
 Sempre tente permitir que os usuários manipulem diretamente o conteúdo em vez de por meio de comandos que act no conteúdo, como arrastar e soltar para reorganizar os itens de lista em vez de down botões de comando. 
 
-No entanto, isso não pode ser possível com certos dispositivos de entrada, ou ao acomodar preferências e recursos de usuário específico. Nesses casos, forneça funcionalidades comandos máximo possível e coloque esses elementos de comando em uma superfície de comando em seu aplicativo.
+No entanto, isso não pode ser possível com determinados dispositivos de entrada, ou ao acomodar preferências e recursos específicos do usuário. Nesses casos, forneça funcionalidades de comandos máximo possível e coloque esses elementos de comando em uma superfície de comando em seu aplicativo.
 
 Veja uma lista de algumas das superfícies de comando mais comuns.
 

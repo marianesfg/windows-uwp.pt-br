@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, empacotamento, configuração do pacote, lote simples
 ms.localizationpriority: medium
 ms.openlocfilehash: b7066b7f2e5bd72ebee3169e03c7940b6fef4dba
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8482035"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8708441"
 ---
 # <a name="flat-bundle-app-packages"></a>Pacotes de aplicativo do lote simples 
 

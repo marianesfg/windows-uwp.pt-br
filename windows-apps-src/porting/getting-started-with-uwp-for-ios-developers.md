@@ -7,24 +7,24 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3212128a5fda9f6c5c811b2725b97f64655588b1
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458786"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713605"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>Introdução à UWP para desenvolvedores de iOS
 
 
-Se você for um desenvolvedor do iOS e estiver cogitando desenvolver para Windows 10, esses documentos são um ótimo lugar para começar. Eles apresentam alguns conceitos que você precisará conhecer ao começar a escrever aplicativos e abordam como você pode publicar seu trabalho na Microsoft Store.
+Se você for um desenvolvedor do iOS e estiver cogitando desenvolver para o Windows 10, esses documentos são um ótimo lugar para começar. Eles apresentam alguns conceitos que você precisará conhecer ao começar a escrever aplicativos e abordam como você pode publicar seu trabalho na Microsoft Store.
 
 Nesta seção, começaremos gradualmente e veremos como usar o Microsoft Visual Studio e a linguagem de programação C# para criar um aplicativo trivial; especificamente, abordaremos como o processo pode ser diferente em comparação com as ferramentas que você usa no momento. (Não gosta de C#? Não se preocupe. Outras linguagens de programação e ferramentas estão disponíveis, falaremos sobre isso em [Introdução: escolhendo uma linguagem de programação](getting-started-choosing-a-programming-language.md)).
 
 Windows 10 introduz uma nova plataforma para criar aplicativos envolventes no desktop, laptop, tablet, dispositivos de telefone e muito mais. Como os aplicativos da Plataforma Universal do Windows (UWP) oferecem inúmeros recursos exclusivos, uma simples portagem do seu aplicativo do iOS impossibilitará o uso desses recursos. Portanto, recomendamos que você experimente os novos controles e recursos para ver como eles facilitarão o processo de desenvolvimento e possibilitarão novos aplicativos.
 
-O resultado é este: não apenas portar seu aplicativo, mas **reinventar** seu aplicativo e tirar proveito dos novos recursos e dos novos dispositivos. Não se conformar com o menor denominador comum, mas Crie experiências sofisticadas que usem os recursos exclusivos do Windows 10, como blocos dinâmicos, notificações e interagir com a Cortana.
+O resultado é este: não apenas portar seu aplicativo, mas **reinventar** seu aplicativo e tirar proveito dos novos recursos e dos novos dispositivos. Não aceite o menor denominador comum, mas Crie experiências sofisticadas que usem os recursos exclusivos do Windows 10, como blocos dinâmicos, notificações e interagir com a Cortana.
 
-Para começar com estes tutoriais, você precisará de um computador com Windows 10 e Microsoft Visual Studio instalado. Você pode baixá-los em [downloads de desenvolvedor para programar aplicativos UWP](https://developer.microsoft.com/en-us/windows/downloads). Não tem um PC? Não se preocupe, você pode usar seu Mac: consulte [Instalando o Windows e as ferramentas de desenvolvimento no seu Mac](setting-up-your-mac-with-windows-10.md).
+Para começar com estes tutoriais, você precisará de um computador com Windows 10 e Microsoft Visual Studio instalado. Você pode baixá-los em [downloads de desenvolvedor para programação de aplicativos UWP](https://developer.microsoft.com/en-us/windows/downloads). Não tem um PC? Não se preocupe, você pode usar seu Mac: consulte [Instalando o Windows e as ferramentas de desenvolvimento no seu Mac](setting-up-your-mac-with-windows-10.md).
 
 | Tópico | Descrição |
 |-------|-------------|

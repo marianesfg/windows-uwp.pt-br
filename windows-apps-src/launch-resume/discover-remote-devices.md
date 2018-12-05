@@ -4,14 +4,14 @@ description: Saiba como descobrir dispositivos remotos de seu aplicativo usando 
 ms.assetid: 5b4231c0-5060-49e2-a577-b747e20cf633
 ms.date: 02/08/2017
 ms.topic: article
-keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, project rome
+keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma
 ms.localizationpriority: medium
 ms.openlocfilehash: 7788cb546eddf77292210b5b1e8268239504a843
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458507"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713477"
 ---
 # <a name="discover-remote-devices"></a>Descobrir dispositivos remotos
 O aplicativo pode usar a rede sem fio, Bluetooth e uma conexão na nuvem para descobrir dispositivos Windows conectados com a mesma conta da Microsoft que o dispositivo de descoberta. Os dispositivos remotos não precisam ter nenhum software especial instalado para ser descoberto.
