@@ -14,11 +14,11 @@ dev_langs:
 - vb
 ms.custom: RS5
 ms.openlocfilehash: 753d0cd808daef96aa16c34c3962201ca73e5be9
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464901"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8689470"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -37,7 +37,7 @@ As APIs TreeView oferecem suporte aos seguintes recursos:
 | - |
 | Esse controle está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, consulte a [Visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
-| **APIs da plataforma** | **APIs de biblioteca de interface do usuário do Windows** |
+| **APIs da plataforma** | **APIs da biblioteca de interface do usuário do Windows** |
 | - | - |
 | [Classe TreeView](/uwp/api/windows.ui.xaml.controls.treeview), [classe TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode), [propriedade TreeView.ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) | [Classe TreeView](/uwp/api/microsoft.ui.xaml.controls.treeview), [classe TreeViewNode](/uwp/api/microsoft.ui.xaml.controls.treeviewnode), [propriedade TreeView.ItemsSource](/uwp/api/microsoft.ui.xaml.controls.treeview.itemssource) |
 
@@ -77,12 +77,12 @@ Você pode incluir um ícone no modelo de dados do item de modo de exibição á
 
 Você pode criar um modo de exibição de árvore associando o [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) a uma fonte de dados hierárquicos, ou você pode criar e gerenciar objetos TreeViewNode por conta própria.
 
-Para criar um modo de exibição de árvore, use um [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) controle e uma hierarquia de objetos [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode). Criar a hierarquia de nó adicionando um ou mais nós raiz [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) coleção do controle TreeView. Cada TreeViewNode, em seguida, pode ter mais nós adicionados à sua coleção de filhos. Você pode aninhar nós de exibição de árvore para qualquer profundidade exige que você.
+Para criar um modo de exibição de árvore, use um [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) controle e uma hierarquia de objetos [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode). Você pode criar a hierarquia de nó adicionando um ou mais nós raiz [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) coleção do controle TreeView. Cada TreeViewNode, em seguida, pode ter mais nós adicionados à sua coleção de filhos. Você pode aninhar nós de exibição de árvore para qualquer profundidade exige que você.
 
-A partir do Windows Insider Preview, você pode associar uma fonte de dados hierárquicos à propriedade [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) para fornecer o conteúdo de modo de exibição de árvore, assim como faria com ItemsSource do ListView. Da mesma forma, use [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (e o opcional [ItemTemplateSelector](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)) para fornecer um DataTemplate que renderiza o item.
+A partir do Windows Insider Preview, você pode associar uma fonte de dados hierárquicos para a propriedade [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) para fornecer o conteúdo de modo de exibição de árvore, assim como você faria com ItemsSource do ListView. Da mesma forma, use [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (e o opcional [ItemTemplateSelector](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)) para fornecer um DataTemplate que renderiza o item.
 
 > [!IMPORTANT]
-> ItemsSource é um mecanismo alternativo para TreeView.RootNodes para colocar o conteúdo no controle TreeView. Você não pode definir ItemsSource e RootNodes ao mesmo tempo. Quando você usa ItemsSource, nós criados para você e você possa acessá-los da propriedade TreeView.RootNodes.
+> ItemsSource é um mecanismo alternativo para TreeView.RootNodes para colocar o conteúdo no controle TreeView. Você não pode definir ItemsSource e RootNodes ao mesmo tempo. Quando você usa o ItemsSource, nós criados para você, e você possa acessá-los da propriedade TreeView.RootNodes.
 
 Aqui está um exemplo de uma exibição de árvore simples declarada em XAML. Você normalmente adiciona os nós no código, mas mostraremos a hierarquia XAML aqui porque ele pode ser útil para visualizar como a hierarquia de nós é criada.
 
@@ -102,7 +102,7 @@ Aqui está um exemplo de uma exibição de árvore simples declarada em XAML. Vo
 
 Na maioria dos casos, o modo de exibição de árvore exibe dados de uma fonte de dados, portanto, você normalmente declara a raiz controle TreeView em XAML, mas adiciona os objetos TreeViewNode em código ou usando vinculação de dados.
 
-### <a name="bind-to-a-hierarchical-data-source"></a>Associar a uma fonte de dados hierárquicos
+### <a name="bind-to-a-hierarchical-data-source"></a>Vincular a uma fonte de dados hierárquicos
 
 Para criar um modo de exibição de árvore usando vinculação de dados, defina uma coleção hierárquica à propriedade TreeView.ItemsSource. Em seguida, ItemTemplate, defina o filho coleção items à propriedade TreeViewItem.ItemsSource.
 
@@ -117,7 +117,7 @@ Para criar um modo de exibição de árvore usando vinculação de dados, defina
 </TreeView>
 ```
 
-Consulte a seção exemplos para o código completo de _modo de exibição de árvore usando vinculação de dados_ .
+Consulte a seção exemplos para o código completo de _exibição de árvore usando vinculação de dados_ .
 
 #### <a name="items-and-item-containers"></a>Itens e contêineres de itens
 
@@ -126,7 +126,7 @@ Se você usar TreeView.ItemsSource, essas APIs estão disponíveis para obter o 
 | **[TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem)** | |
 | - | - |
 | [TreeView.ItemFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.itemfromcontainer) | Obtém o item de dados para o contêiner TreeViewItem especificado. |
-| [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | Obtém o contêiner TreeViewItem para o item de dados especificadas. |
+| [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | Obtém o contêiner TreeViewItem para o item de dados especificado. |
 
 | **[TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode)** | |
 | - | - |
@@ -204,13 +204,13 @@ Você pode fornecer um [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate) par
 > [!NOTE]
 > No Windows 10, versão 1803, você precisa criar TreeView controlar e especificar um ItemTemplate personalizado se o seu conteúdo não é uma cadeia de caracteres. Para obter mais informações, consulte o exemplo completo no final deste artigo. Em versões posteriores, defina a propriedade [TreeView.ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) .
 
-### <a name="item-container-style"></a>Estilo de contêiner do item
+### <a name="item-container-style"></a>Estilo de contêiner de item
 
 Se você usa o ItemsSource ou RootNodes, os elementos reais usados para exibir cada nó – chamada de "contêiner" – é um objeto [TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem) . Você pode definir o estilo de contêiner usando o TreeView propriedades ItemContainerStyle ou ItemContainerStyleSelector.
 
 ### <a name="item-template-selectors"></a>Seletores de modelo de item
 
-Você pode optar por definir um DataTemplate para os itens de exibição de árvore com base no tipo de item diferente. Por exemplo, em um aplicativo do Explorador de arquivos, você pode usar um modelo de dados de pastas e outro para arquivos.
+Você pode optar por definir um DataTemplate diferente para os itens de exibição de árvore com base no tipo de item. Por exemplo, em um aplicativo do Explorador de arquivos, você pode usar um modelo de dados de pastas e outro para arquivos.
 
 ![Usando modelos de dados diferentes de arquivos e pastas](images/treeview-icons.png)
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, pacote
 ms.localizationpriority: medium
 ms.openlocfilehash: 631ba2c278c72f406a0fdd8a6d6d8d8a14c9eb05
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462114"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8691554"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Empacotar seu jogo em DirectX da Plataforma Universal do Windows (UWP)
 
@@ -79,7 +79,7 @@ Ao configurar seu aplicativo para dar suporte a ativos localizados para vários 
 -   Crie um subdiretório de aplicativo (ou uma versão de arquivo) para cada idioma e localidade a que você oferecerá suporte (por exemplo, en-us, jp-jp, zh-cn, fr-fr e assim por diante).
 -   Durante o desenvolvimento, coloque cópias de TODOS os ativos (como arquivos de áudio, texturas e gráficos de menu localizados) no subdiretório da localidade do idioma correspondente, mesmo que eles não sejam diferentes entre os idiomas ou localidades. Para proporcionar uma excelente experiência para o usuário, garanta que o usuário seja alertado se ele não tiver obtido um pacote de recursos de idioma disponível para sua localidade se houver um disponível (ou se ele tiver acidentalmente excluído o pacote após o download e a instalação).
 -   Certifique-se de que cada arquivo de recursos de ativo ou cadeia de caracteres (.resw) tenha o mesmo nome em cada diretório. Por exemplo, menu\_option1.png deve ter o mesmo nome nos diretórios \\en-us e \\jp-jp, mesmo que o conteúdo do arquivo seja para um idioma diferente. Nesse caso, você os veria como \\en-us\\menu\_option1.png e \\jp-jp\\menu\_option1.png.
-    > **Observação**  , opcionalmente, você pode anexar a localidade ao nome do arquivo e armazená-las no mesmo diretório; Por exemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_lang-JP-jp.PNG..
+    > **Observação**  , opcionalmente, você pode anexar a localidade ao nome do arquivo e armazená-los no mesmo diretório; Por exemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_lang-JP-jp.PNG..
 
      
 
@@ -96,7 +96,7 @@ Quando estiver configurando seu aplicativo para oferecer suporte a pacotes de re
 -   Crie um subdiretório do aplicativo (ou versão do arquivo) para cada fator de dimensionamento ao qual você dará suporte (escala-100, escala-140 e escala-180).
 -   Durante o desenvolvimento, coloque cópias apropriadas ao fator de dimensionamento de TODOS os ativos em cada diretório de recursos do fator de dimensionamento, mesmo que eles não sejam diferentes entre os fatores de dimensionamento.
 -   Certifique-se de que cada ativo tenha o mesmo nome em cada diretório. Por exemplo, menu\_option1.png deve ter o mesmo nome nos diretórios \\scale-100 e \\scale-180, mesmo que o conteúdo do arquivo seja diferente. Nesse caso, você os veria como \\scale-100\\menu\_option1.png e \\scale-140\\menu\_option1.png.
-    > **Observação**  novamente, você pode, opcionalmente, anexar o sufixo do fator de escala ao nome do arquivo e armazená-las no mesmo diretório; Por exemplo, \\assets\\menu\_option1\_scale-100.png, \\assets\\menu\_option1\_scale-140.PNG..
+    > **Observação**  novamente, você pode, opcionalmente, acrescente o sufixo do fator de escala ao nome do arquivo e armazená-los no mesmo diretório; Por exemplo, \\assets\\menu\_option1\_scale-100.png, \\assets\\menu\_option1\_scale-140.PNG..
 
      
 
@@ -129,7 +129,7 @@ Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferente
 -   Crie um subdiretório do aplicativo (ou versão do arquivo) para cada nível de recursos do DirectX ao qual você dará suporte (dxfl-dx9, dxfl-dx10 e dxfl-dx11).
 -   Durante o desenvolvimento, coloque ativos específicos do nível de recursos em cada diretório de recursos do nível de recursos. Ao contrário das localidades e dos fatores de dimensionamento, você pode ter diferentes ramificações de código de renderização para cada nível de recursos em seu jogo, e se você tiver texturas, sombreadores compilados ou outros ativos que são usados em um nível ou em um subconjunto de todos os níveis de recursos suportados, coloque os ativos correspondentes apenas nos diretórios dos níveis de recursos que os utilizam. No caso dos ativos que são carregados em todos os níveis de recursos, verifique se cada diretório de recursos do nível de recursos possui uma versão com o mesmo nome. Por exemplo, para uma textura independente de nível de recursos com o nome "coolsign.dds", coloque a versão comprimida BC3 no diretório \\dxfl-dx9 e a versão comprimida BC7 no diretório \\dxfl-dx11.
 -   Certifique-se de que cada ativo (se estiverem disponíveis para vários níveis de recursos) tenha o mesmo nome em cada diretório. Por exemplo, coolsign.dds deve ter o mesmo nome nos diretórios \\dxfl-dx9 e \\dxfl-dx11, mesmo que o conteúdo do arquivo seja diferente. Nesse caso, você os veria como \\dxfl-dx9\\coolsign.dds e \\dxfl-dx11\\coolsign.dds.
-    > **Observação**  novamente, você pode, opcionalmente, anexar o sufixo do nível de recurso ao nome do arquivo e armazená-las no mesmo diretório; Por exemplo, \\textures\\coolsign\_dxfl-dx9.dds, \\textures\\coolsign\_dxfl-dx11.DDS..
+    > **Observação**  novamente, você pode, opcionalmente, acrescente o sufixo do nível de recurso ao nome do arquivo e armazená-los no mesmo diretório; Por exemplo, \\textures\\coolsign\_dxfl-dx9.dds, \\textures\\coolsign\_dxfl-dx11.DDS..
 
      
 

@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a8f75fae686763f3d79cea2f02c3208993cb723
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461375"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8689286"
 ---
 # <a name="app-management-and-services"></a>Gerenciamento de apps e serviços
 
 Você pode gerenciar e exibir detalhes relacionados a cada um dos seus aplicativos no [Partner Center e configure serviços como notificações, A / B teste e mapas.
 
-Ao trabalhar com um aplicativo no Partner Center, você verá seções no menu de navegação esquerdo para **gerenciamento de aplicativos**e **Serviços** . Você pode expandir essas seções para acessar a funcionalidade descrita abaixo.
+Ao trabalhar com um aplicativo no Partner Center, você verá seções no menu de navegação esquerdo para o **gerenciamento de aplicativos**e **Serviços** . Você pode expandir essas seções para acessar a funcionalidade descrita abaixo.
 
 ## <a name="services"></a>Serviços
 
@@ -25,9 +25,9 @@ A seção **Serviços** permite que você gerencie vários serviços diferentes 
 
 ## <a name="xbox-live"></a>Xbox Live
 
-Se você estiver publicando um jogo, você pode habilitar o [Programa de criadores do Xbox Live](http://xbox.com/developers/creators-program) nesta página. Isso permite que você inicie o testes e configurar recursos do Xbox Live e, eventualmente, publicar seu jogo do programa de criadores do Xbox Live.
+Se você estiver publicando um jogo, você pode habilitar o [Programa de criadores do Xbox Live](http://xbox.com/developers/creators-program) nesta página. Isso permite que você inicie o testes e configurar recursos do Xbox Live e eventualmente publicar seu jogo do programa de criadores do Xbox Live.
 
-Para obter mais informações, consulte [Introdução ao programa de criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) e [criar um novo título de programa de criadores do Xbox Live e publicar no ambiente de teste](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
+Para obter mais informações, consulte [Introdução ao programa de criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) e [criar um novo título do programa de criadores do Xbox Live e publicar no ambiente de teste](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
 
 ## <a name="experimentation"></a>Experimentação
 
@@ -39,17 +39,17 @@ Para saber mais, veja [Executar experimentos de aplicativos com testes A/B](../m
 
 Para usar serviços de mapa em aplicativos destinados ao Windows 10 ou Windows 8.x, visite o [Centro de Desenvolvimento do Bing Mapas](http://go.microsoft.com/fwlink/p/?LinkId=614880). Para obter informações sobre como solicitar uma chave de autenticação de mapas da Central de desenvolvedores do Bing Maps e adicioná-lo ao seu aplicativo, consulte a [solicitação de uma chave de autenticação de mapas](../maps-and-location/authentication-key.md) para obter mais informações. 
 
-Use a página **mapas** somente para aplicativos publicados anteriormente para Windows Phone 8.1 e versões anteriores. Para usar serviços de mapa nesses aplicativos, você precisará solicitar uma ID de aplicativo de serviço de mapa e um token para incluir no código do seu aplicativo. Quando você clica em **obter token**, vamos gerar um ID do aplicativo (**ApplicationID**) do serviço de mapa e mapeie serviço Token de autenticação (**AuthenticationToken**) para o seu aplicativo. Não se esqueça de adicionar esses valores ao seu código antes de você pacote e enviar seu aplicativo. Para saber mais, consulte [Como adicionar um controle de mapa a uma página (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
+Use a página **mapas** somente para aplicativos publicado anteriormente para Windows Phone 8.1 e versões anteriores. Para usar serviços de mapa nesses aplicativos, você precisará solicitar uma ID de aplicativo de serviço de mapa e um token para incluir no código do seu aplicativo. Quando você clica em **obter token**, vamos gerar um ID do aplicativo (**ApplicationID**) do serviço de mapa e mapeie serviço Token de autenticação (**AuthenticationToken**) para o seu aplicativo. Certifique-se de adicionar esses valores ao seu código antes de você pacote e enviar seu aplicativo. Para saber mais, consulte [Como adicionar um controle de mapa a uma página (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
 
 ## <a name="product-collections-and-purchases"></a>Compras e coleções de produtos
 
-Para usar o Microsoft Store API de coleção e a API de compra da Microsoft Store para acessar informações de propriedade para aplicativos e complementos, você precisará inserir associado do Azure AD IDs de cliente aqui. Observe que essas alterações podem levar até 16 horas para entrar em vigor.
+Para usar a Microsoft Store API de coleção e a API de compra da Microsoft Store para acessar informações de propriedade para aplicativos e complementos, você precisará inserir associado do Azure AD IDs de cliente aqui. Observe que essas alterações podem levar até 16 horas para entrar em vigor.
 
 Para obter mais informações, consulte [Gerenciar direitos a produtos de um serviço](../monetize/view-and-grant-products-from-a-service.md).
 
 ## <a name="administrator-consent"></a>Consentimento do administrador
 
-f seu produto se integra com o Azure AD e chama as APIs que solicita um [aplicativo permissões ou permissões delegadas](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requerem o consentimento do administrador, digite sua ID de cliente do Azure AD aqui. Isso permite que os administradores que adquirem o aplicativo para seu consentimento de concessão de organização para seu produto a agir em nome de todos os usuários no locatário.
+f seu produto se integra com o Azure AD e chama as APIs que solicitam um [aplicativo permissões ou permissões delegadas](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que exigem o consentimento do administrador, digite sua ID de cliente do Azure AD aqui. Isso permite que os administradores que adquiram o aplicativo para a organização conceder consentimento para seu produto a agir em nome de todos os usuários no locatário.
 
 Para obter mais informações, consulte [solicitando consentimento para um locatário inteiro](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 

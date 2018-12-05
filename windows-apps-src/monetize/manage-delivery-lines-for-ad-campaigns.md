@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
 ms.openlocfilehash: 363f7034d7e353d9ee110637971e7b848dbca1bb
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463854"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696604"
 ---
 # <a name="manage-delivery-lines"></a>Gerenciar linhas de entrega
 
@@ -28,7 +28,7 @@ Para usar esses métodos, primeiro você precisa do seguinte:
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](run-ad-campaigns-using-windows-store-services.md#prerequisites) da API de promoções da Microsoft Store.
 
   > [!NOTE]
-  > Como parte dos pré-requisitos, certifique-se que você [criar pelo menos uma campanha publicitária no Partner Center](../publish/create-an-ad-campaign-for-your-app.md) e que você adicione pelo menos um método de pagamento para a campanha publicitária no Partner Center. Linhas de entrega criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na página **campanhas publicitárias** no Partner Center.
+  > Como parte dos pré-requisitos, certifique-se que você [criar pelo menos uma campanha publicitária no Partner Center](../publish/create-an-ad-campaign-for-your-app.md) e que você adicionar pelo menos um método de pagamento para a campanha publicitária no Partner Center. Linhas de entrega criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na página **campanhas publicitárias** no Partner Center.
 
 * [Obtenha um token de acesso do Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 

@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 ms.localizationpriority: medium
 ms.openlocfilehash: 036c3c1832bbb3e27a93671f399a9a97c7afaba3
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458477"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8689711"
 ---
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
 
@@ -59,7 +59,7 @@ Veja o tópico [Desativação do modo de desenvolvedor do Xbox One](devkit-deact
 
 ### <a name="i-sold-my-xbox-one-and-left-it-in-developer-mode-how-do-i-deactivate-developer-mode"></a>Eu vendi meu Xbox One e o deixei no modo de desenvolvedor. Como posso desativar o modo de desenvolvedor?
 
-Se você não tiver acesso ao Xbox One, você pode desativá-lo no Windows Partner Center. Para obter detalhes, consulte a seção de **desativar seu console usando o Partner Center** no tópico [Xbox One desativação do modo de desenvolvedor](devkit-deactivation.md#deactivate-your-console-using-partner-center) . 
+Se você não tem mais acesso ao Xbox One, você pode desativá-lo no Partner Center do Windows. Para obter detalhes, consulte a seção de **desativar seu console usando o Partner Center** no tópico [Xbox One desativação do modo de desenvolvedor](devkit-deactivation.md#deactivate-your-console-using-partner-center) . 
 
 ### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>Saí do programa de desenvolvedor usando o Partner Center, mas estou no modo de desenvolvedor ainda. O que devo fazer?
 

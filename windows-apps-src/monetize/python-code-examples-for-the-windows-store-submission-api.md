@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, exemplos de código, python
 ms.localizationpriority: medium
 ms.openlocfilehash: 157c11484de150d363157e5b6e5de00a35bafd5f
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464664"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8690071"
 ---
 # <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Exemplo de Python: envios para apps, complementos e versões de pré-lançamento
 
@@ -58,7 +58,7 @@ O exemplo a seguir mostra como usar diversos métodos na API de envio da Microso
 2. Em seguida, ele [exclui o envio pendente para o aplicativo](delete-an-app-submission.md), caso haja um.
 3. Em seguida, ele [cria um novo envio para o aplicativo](create-an-app-submission.md) (o novo envio é uma cópia do último envio publicado).
 4. Ele muda alguns detalhes para o novo envio e carrega um novo pacote para o envio no armazenamento do Blob do Azure.
-5. Em seguida, ele [atualizações](update-an-app-submission.md) e, em seguida, [confirma](commit-an-app-submission.md) o novo envio para o Partner Center.
+5. Em seguida, ele [atualizações](update-an-app-submission.md) e [confirma](commit-an-app-submission.md) o novo envio para o Partner Center.
 6. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-an-app-submission.md) até que o envio seja confirmado com êxito.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L93-L166)]
@@ -73,7 +73,7 @@ O exemplo a seguir mostra como usar diversos métodos na API de envio da Microso
 2. Em seguida, ele [exclui o envio pendente para o complemento](delete-an-add-on-submission.md), caso haja um.
 3. Em seguida, ele [cria um novo envio para o complemento](create-an-add-on-submission.md) (o novo envio é uma cópia do último envio publicado).
 4. Ele carrega um arquivo ZIP que contém ícones para o envio no armazenamento do Blob do Azure. Para obter mais informações, consulte as instruções relevantes sobre como carregar um arquivo ZIP para o armazenamento do Blob do Azure em [Criar um envio de complemento](manage-add-on-submissions.md#create-an-add-on-submission).
-5. Em seguida, ele [atualizações](update-an-add-on-submission.md) e, em seguida, [confirma](commit-an-add-on-submission.md) o novo envio para o Partner Center.
+5. Em seguida, ele [atualizações](update-an-add-on-submission.md) e [confirma](commit-an-add-on-submission.md) o novo envio para o Partner Center.
 6. Por fim, ele periodicamente [verifica o status do novo envio](get-status-for-an-add-on-submission.md) até que o envio seja confirmado com êxito.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L172-L245)]
@@ -88,7 +88,7 @@ O exemplo a seguir mostra como usar diversos métodos na API de envio da Microso
 2. Em seguida, ele [exclui o envio pendente para o pacote de pré-lançamento](delete-a-flight-submission.md), caso haja um.
 3. Em seguida, ele [cria um novo envio para o pacote de pré-lançamento](create-a-flight-submission.md) (o novo envio é uma cópia do último envio publicado).
 4. Ele carrega um novo pacote para o envio no armazenamento do Blob do Azure. Para obter mais informações, consulte as instruções relevantes sobre como carregar um arquivo ZIP para o armazenamento do Blob do Azure em [Criar um envio de pacote de pré-lançamento](manage-flight-submissions.md#create-a-package-flight-submission).
-5. Em seguida, ele [atualizações](update-a-flight-submission.md) e, em seguida, [confirma](commit-a-flight-submission.md) o novo envio para o Partner Center.
+5. Em seguida, ele [atualizações](update-a-flight-submission.md) e [confirma](commit-a-flight-submission.md) o novo envio para o Partner Center.
 6. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-a-flight-submission.md) até que o envio seja confirmado com êxito.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L251-L325)]
