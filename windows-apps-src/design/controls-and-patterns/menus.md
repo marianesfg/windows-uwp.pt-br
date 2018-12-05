@@ -14,11 +14,11 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 9edf7bcb2ad76ed02887dfffc3e72d0d47f5aa1a
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8484343"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8697486"
 ---
 # <a name="menus-and-context-menus"></a>Menus e menus de contexto
 
@@ -30,7 +30,7 @@ Menus e menus de contexto exibem uma lista de comandos ou opções quando o usu�
 | - |
 | Esse controle está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, consulte a [Visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
-| **APIs da plataforma** | **APIs de biblioteca de interface do usuário do Windows** |
+| **APIs da plataforma** | **APIs da biblioteca de interface do usuário do Windows** |
 | - | - |
 | [Classe MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), [classe de barra de menus](/uwp/api/windows.ui.xaml.controls.menubar), [propriedade ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout), [propriedade flyoutbase.](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) | [Classe de barra de menus](/uwp/api/microsoft.ui.xaml.controls.menubar) |
 

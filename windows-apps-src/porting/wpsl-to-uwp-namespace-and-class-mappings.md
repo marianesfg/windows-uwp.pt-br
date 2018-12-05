@@ -1,5 +1,5 @@
 ---
-description: Este tópico fornece um mapeamento abrangente WindowsPhone das APIs do Silverlight para seus equivalentes da plataforma Universal do Windows (UWP).
+description: Este tópico fornece um mapeamento abrangente das APIs do WindowsPhone Silverlight para seus equivalentes da plataforma Universal do Windows (UWP).
 title: WindowsPhone Silverlight para mapeamentos de namespace e classe UWP
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 ms.date: 02/08/2017
@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0072aa814e0bcb22806cad764b5f365770961ac3
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458919"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8705555"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight para mapeamentos de API UWP
 
 
-Este tópico fornece um mapeamento abrangente WindowsPhone das APIs do Silverlight para seus equivalentes da plataforma Universal do Windows (UWP). Geralmente não há um mapeamento de funcionalidade um para um: qualquer plataforma pode ter mais ou menos funcionalidades que suas equivalentes em um namespace ou classe.
+Este tópico fornece um mapeamento abrangente das APIs do WindowsPhone Silverlight para seus equivalentes da plataforma Universal do Windows (UWP). Geralmente não há um mapeamento de funcionalidade um para um: qualquer plataforma pode ter mais ou menos funcionalidades que suas equivalentes em um namespace ou classe.
 
 A tabela de mapeamento ajudará você quando você estiver trabalhando em um projeto UWP e estiver reutilizando o código-fonte de um projeto do WindowsPhone Silverlight. Há diferenças nos nomes de namespaces e classes (inclusive controles de interface do usuário) entre as duas plataformas. Em muitos casos, isso é tão fácil quanto alterar um nome de namespace e, em seguida, o código será compilado. Às vezes, uma classe ou o nome da API mudou, bem como o nome do namespace. Em outras ocasiões, o mapeamento requer um pouco mais de trabalho e, em casos raros, requer uma mudança na abordagem.
 

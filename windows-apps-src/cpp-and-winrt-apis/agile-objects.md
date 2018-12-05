@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, ágil, objeto, agilidade, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 2711779f2f5fc13be19a4a10224b110564716477
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463525"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8700989"
 ---
 # <a name="agile-objects-in-cwinrt"></a>Objetos ágeis em C++/WinRT
 
-Na grande maioria dos casos, uma instância de uma classe de tempo de execução do Windows pode ser acessada de qualquer thread (assim como objetos C++ mais padrão podem). Essa classe de tempo de execução do Windows é *ágil*. Apenas um pequeno número de classes do Windows Runtime que acompanha o Windows não é ágil, mas ao usá-los, você precisará levar em consideração o modelo de threading e o comportamento de empacotamento (empacotamento é transmitir dados por um marco de delimitação apartment). Ele é um bom padrão para cada objeto de tempo de execução do Windows ser ágil, portanto, sua própria [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) tipos são ágeis por padrão.
+Na grande maioria dos casos, uma instância de uma classe de tempo de execução do Windows pode ser acessada de qualquer thread (assim como objetos de C++ padrão mais podem). Essa classe de tempo de execução do Windows é *ágil*. Apenas um pequeno número de classes do Windows Runtime que acompanha o Windows não é ágil, mas ao usá-los, você precisará levar em consideração o modelo de threading e o comportamento de empacotamento (empacotamento é transmitir dados por um marco de delimitação apartment). É um bom padrão para cada objeto de tempo de execução do Windows para ser ágil, portanto, sua própria [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) tipos são ágeis por padrão.
 
 No entanto, é possível recusá-los. Você pode ter um motivo convincente para exigir que um objeto do seu tipo resida, por exemplo, em um determinado single-threaded apartment. Normalmente, isso envolve os requisitos de reentrância. Entretanto, cada vez mais, até mesmo APIs da interface do usuário oferecem objetos ágeis. Em geral, a agilidade é a opção mais simples e eficiente. Além disso, quando você implementa uma fábrica de ativação, ela deve ser ágil mesmo que a sua classe de tempo de execução correspondente não seja.
 
@@ -23,7 +23,7 @@ No entanto, é possível recusá-los. Você pode ter um motivo convincente para 
 
 ## <a name="code-examples"></a>Exemplos de código
 
-Vamos usar um exemplo de implementação de uma classe de tempo de execução para ilustrar como C++ + c++ /WinRT dá suporte à agilidade.
+Vamos usar um exemplo de implementação de uma classe de tempo de execução para ilustrar como C++ + c++ WinRT dá suporte à agilidade.
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>
@@ -85,7 +85,7 @@ struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, winrt::non_agile>
 
 Não importa onde o struct de marcador apareça no pacote de parâmetros variadic.
 
-Ou não recusar agilidade, você pode implementar **IMarshal** por conta própria. Por exemplo, você pode usar o marcador **WinRT:: non_agile** para evitar a implementação de agilidade padrão e implementar **IMarshal** por conta própria&mdash;talvez para oferecer suporte à semântica de marshal-por-valor.
+Se você recusar agilidade, ou não você pode implementar **IMarshal** por conta própria. Por exemplo, você pode usar o marcador **WinRT:: non_agile** para evitar a implementação de agilidade padrão e implementar **IMarshal** por conta própria&mdash;talvez para oferecer suporte à semântica de marshal-por-valor.
 
 ## <a name="agile-references-winrtagileref"></a>Referências ágeis (winrt::agile_ref)
 

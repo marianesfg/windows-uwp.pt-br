@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
 ms.openlocfilehash: 626b2ce36d8abc4798d39a89af540c61b26b5ed1
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460159"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8698003"
 ---
 # <a name="respond-to-customer-feedback"></a>Responder ao feedback dos clientes
 
@@ -22,7 +22,7 @@ Você pode usar o [Relatório de comentários](feedback-report.md) para analisar
 
 Para dar uma resposta a qualquer comentário, clique no link **Respond to feedback** exibido no comentário no **Relatório de comentários**.
 
-[Partner Center](https://partner.microsoft.com/dashboard) oferece suporte a três opções para responder aos clientes que fazem comentários sobre seu aplicativo. Independentemente da opção que você escolher, tenha em mente que há um limite de 1.000 caracteres para cada resposta.
+[Partner Center](https://partner.microsoft.com/dashboard) oferece suporte a três opções para responder aos clientes que fornecem comentários sobre seu aplicativo. Independentemente da opção que você escolher, tenha em mente que há um limite de 1.000 caracteres para cada resposta.
 
 ## <a name="public-comments-in-feedback-hub"></a>Comentários públicos no Hub de Feedback
 

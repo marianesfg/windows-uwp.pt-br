@@ -1,22 +1,22 @@
 ---
 ms.assetid: ba2ac5f5-1e0d-4f1d-a6f8-6a65b4cff501
-description: Esta seção descreve como fazer a portabilidade de seu aplicativo existente para o Universal Windows Platform (UWP) onde você pode criar um único pacote de aplicativo do Windows 10 que os clientes podem instalar em todos os tipos de dispositivos. Seu aplicativo se beneficiará com o novo hardware instigante, ótimas oportunidades de monetização, um conjunto de APIs modernas, controles de interface do usuário adaptáveis e uma variedade de modalidades de entrada, incluindo mouse/teclado, toque e fala.
+description: Esta seção descreve como fazer a portabilidade do seu aplicativo existente para o Universal Windows Platform (UWP) onde você pode criar um único pacote de aplicativo do Windows 10 que os clientes podem instalar em todos os tipos de dispositivos. Seu aplicativo se beneficiará com o novo hardware instigante, ótimas oportunidades de monetização, um conjunto de APIs modernas, controles de interface do usuário adaptáveis e uma variedade de modalidades de entrada, incluindo mouse/teclado, toque e fala.
 title: Portando apps para Windows 10
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eefebbd7087070f85ead09e562f154f43ed49e37
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464634"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8700599"
 ---
 # <a name="porting-apps-to-windows10"></a>Portando apps para Windows 10
 
 
-Esta seção descreve como fazer a portabilidade de seu aplicativo existente para o Universal Windows Platform (UWP) onde você pode criar um único pacote de aplicativo do Windows 10 que os clientes podem instalar em todos os tipos de dispositivos. Seu aplicativo se beneficiará com o novo hardware instigante, ótimas oportunidades de monetização, um conjunto de APIs modernas, controles de interface do usuário adaptáveis e uma variedade de modalidades de entrada, incluindo mouse/teclado, toque e fala.
+Esta seção descreve como fazer a portabilidade do seu aplicativo existente para o Universal Windows Platform (UWP) onde você pode criar um único pacote de aplicativo do Windows 10 que os clientes podem instalar em todos os tipos de dispositivos. Seu aplicativo se beneficiará com o novo hardware instigante, ótimas oportunidades de monetização, um conjunto de APIs modernas, controles de interface do usuário adaptáveis e uma variedade de modalidades de entrada, incluindo mouse/teclado, toque e fala.
 
 O Windows Runtime (WinRT) é a tecnologia que permite criar aplicativos da Plataforma Universal do Windows (UWP). Você pode consultar [O que é um aplicativo UWP (Plataforma Universal do Windows)?](https://msdn.microsoft.com/library/windows/apps/dn726767) para obter mais detalhes sobre os aplicativos do WinRT e UWP.
 

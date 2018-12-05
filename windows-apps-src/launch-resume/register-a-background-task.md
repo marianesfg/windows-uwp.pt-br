@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: f940b0433c5cf7818102f92c9e61a6fe012bf4b9
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461332"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8697794"
 ---
 # <a name="register-a-background-task"></a>Registrar uma tarefa em segundo plano
 
@@ -74,7 +74,7 @@ Verifique se a tarefa já está registrada. É importante verificar isso porque,
 
 Você pode verificar se existem registros consultando a propriedade [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) e iterando no resultado. Verifique o nome de cada instância – se ele corresponder ao nome da tarefa que você está registrando, interrompa o loop e defina uma variável de sinalização, para que seu código possa escolher outro caminho na próxima etapa.
 
-> **Observação**usar nomes de tarefa em segundo plano que são exclusivos para seu aplicativo. Verifique se cada tarefa em segundo plano possui um nome exclusivo.
+> **Observação**usar nomes de tarefa em segundo plano que são exclusivos do seu aplicativo. Verifique se cada tarefa em segundo plano possui um nome exclusivo.
 
 O código abaixo registra uma tarefa em segundo plano usando o [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) que criamos na última etapa:
 
