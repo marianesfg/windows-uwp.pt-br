@@ -6,12 +6,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: Windows 10, uwp, pacotes opcionais, conjunto relacionado, extensão de pacote, o visual studio
 ms.localizationpriority: medium
-ms.openlocfilehash: e19f9673090501d59e260a698f9968a8f98f1cd5
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.openlocfilehash: f62d6c99acc75033403fac7a498308cea6f7d3f8
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8699038"
+ms.locfileid: "8750242"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a>Pacotes opcionais e conjunto de criação relacionado
 Os pacotes opcionais contêm conteúdo que pode ser integrado com um pacote principal. Eles são úteis para conteúdo para download (DLC), dividindo um aplicativo grande para restrições de tamanho, ou para enviar qualquer conteúdo adicional para separado do seu aplicativo original.
@@ -34,7 +34,7 @@ Enquanto você estiver lendo este artigo, é recomendável que você siga com o 
 
 ## <a name="optional-packages"></a>Pacotes opcionais
 Para criar um pacote opcional no Visual Studio, você precisará:
-1. Verifique se seu aplicativo **Versão mínima do destino da plataforma** é definida como: 10.0.15063.0.
+1. Verifique se seu aplicativo **Versão mínima do destino da plataforma** é definida como: 10.0.15063.0 ou superior.
 2. No seu projeto do **pacote principal** , abra o `Package.appxmanifest` arquivo. Navegue até a guia "Packaging" e anote o **nome da família**, que é tudo antes do caractere "_".
 3. No seu projeto do **pacote opcional** , clique com botão direito do `Package.appxmanifest` e selecione **Abrir com > Editor XML (texto)**.
 4. Localize o `<Dependencies>` elemento no arquivo. Adicione o seguinte:
@@ -62,6 +62,7 @@ Se você deseja carregar o código de um pacote opcional no pacote principal, vo
 2. Na janela, pesquisar os modelos instalados para ". txt" e adicione um novo arquivo de texto.
 > [!IMPORTANT]
 > O novo arquivo de texto deve ser nomeado: `Bundle.Mapping.txt`.
+
 3. No `Bundle.Mapping.txt` arquivo que você especifica caminhos relativos para quaisquer projetos de pacote opcional ou pacotes externos. Um exemplo de `Bundle.Mapping.txt` arquivo deve parecer com isso:
 
 ```syntax
@@ -75,7 +76,7 @@ Se você deseja carregar o código de um pacote opcional no pacote principal, vo
 
 Quando sua solução é configurada dessa forma, o Visual Studio criará um manifesto de pacote para o pacote principal com todos os metadados necessários para conjuntos relacionados. 
 
-Observe que, como pacotes opcionais, um `Bundle.Mapping.txt` arquivo para conjuntos relacionados só funcionará no Windows 10, versão 1703. Além disso, a versão de mínima da plataforma de destino do seu aplicativo deve ser definida como 10.0.15063.0.
+Observe que, como pacotes opcionais, um `Bundle.Mapping.txt` arquivo para conjuntos relacionados só funcionará no Windows 10, versão 1703 ou superior. Além disso, Min versão da plataforma de destino do seu aplicativo deve ser definido para 10.0.15063.0 ou superior.
 
 ## Problemas conhecidos<a name="known_issues"></a>
 
