@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, elementos gráficos, diagnóstico, ferramentas e directx
 ms.localizationpriority: medium
 ms.openlocfilehash: f9fc1f6fa28fa36c876517eb0653693c670282ff
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459152"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8743004"
 ---
 # <a name="graphics-diagnostics-tools"></a>Ferramentas de diagnóstico de gráficos
 
@@ -19,7 +19,7 @@ ms.locfileid: "8459152"
 
 Com o Windows 10, as ferramentas de diagnóstico de gráficos agora estão disponíveis no Windows como um recurso opcional. Para usar os recursos de diagnóstico de gráficos fornecidos em tempo de execução e no Visual Studio para desenvolver jogos ou aplicativos DirectX, instale o recurso opcional Ferramentas Gráficas:
 
-1.  Vá para **configurações**, selecionar **aplicativos**e, em seguida, clique em **Gerenciar os recursos opcionais**.
+1.  Vá para **configurações**, selecionar **aplicativos**e, em seguida, clique em **Gerenciar funcionalidades opcionais**.
 2.  Clique em **Adicionar um recurso**.   
 3.  Na lista **Recursos opcionais**, selecione **Ferramentas de Gráficos** e clique em **Instalar**.
 

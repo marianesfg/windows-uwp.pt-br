@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, personalizado, app, promoção, campanha
 ms.localizationpriority: medium
 ms.openlocfilehash: 407a34294155e688e672db392c262e1607c01a39
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458280"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8743034"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Criar uma campanha personalizada de promoção de app
 
@@ -193,4 +193,4 @@ Antes de promover uma URL de campanha personalizada, recomendamos que você test
 
 3.  Clique na URL muitas vezes, fechando o aplicativo UWP ou a página do navegador após cada visita à página do seu app. Em **uma** das visitas à página do aplicativo, adquira-o para gerar uma conversão. Conte o número total de vezes que você clicou na URL.
 
-4. Confirme se os conversões e as exibições de página esperadas aparecem nos gráficos de **exibições de página do aplicativo e conversões por ID da campanha** e **Total de conversões de campanha** no [relatório de aquisições](acquisitions-report.md)e testar o código do seu aplicativo para confirmar se ele pode Recupere com êxito a ID da campanha usando as APIs descritas acima.
+4. Confirme se os conversões e as exibições de página esperadas aparecem nos gráficos de **exibições de página do aplicativo e conversões por ID da campanha** e **Total de conversões de campanha** no [relatório de aquisições](acquisitions-report.md)e testar o código do aplicativo para confirmar se ele pode Recupere com êxito a ID da campanha usando as APIs descritas acima.
