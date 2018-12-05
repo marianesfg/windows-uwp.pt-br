@@ -9,11 +9,11 @@ ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b6e0c6a751116ad03c4e8d69cb02e7147938097
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462193"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8693738"
 ---
 # <a name="speech-recognition"></a>Reconhecimento de fala
 
@@ -28,13 +28,13 @@ O reconhecimento de fala é realizado em um tempo de execução de fala, APIs de
 
 Para dar suporte a reconhecimento de fala com seu aplicativo, o usuário deve se conectar e habilitar um microfone em seus dispositivos e aceitar a política de privacidade do Microsoft conceder permissão para seu aplicativo para usá-lo.
 
-Automaticamente solicitará que o usuário com uma caixa de diálogo do sistema solicitando permissão para acessar e usar o microfone do áudio feed conjunto apenas (exemplo do [reconhecimento de fala e exemplo de síntese de fala](http://go.microsoft.com/fwlink/p/?LinkID=619897) mostrado abaixo), o **microfone** [dispositivo funcionalidade](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) em do [manifesto do pacote do aplicativo](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Para obter mais detalhes, consulte as [declarações de funcionalidades do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+Para solicitar que o usuário automaticamente uma caixa de diálogo do sistema solicitando permissão para acessar e usar o microfone do áudio feed conjunto apenas (exemplo do [reconhecimento de fala e exemplo de síntese de fala](http://go.microsoft.com/fwlink/p/?LinkID=619897) mostrado abaixo), o **microfone** [dispositivo funcionalidade](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) em do [manifesto do pacote do aplicativo](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Para obter mais detalhes, consulte as [declarações de funcionalidades do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
-![Política de privacidade para acesso de microfone](images/speech/privacy.png)
+![Política de privacidade para o acesso de microfone](images/speech/privacy.png)
 
 Se o usuário clica em Sim para conceder acesso a microfone, seu aplicativo é adicionado à lista de aplicativos aprovados nas configurações -> privacidade -> página do microfone. No entanto, como o usuário pode optar por desativar essa configuração a qualquer momento, você deve confirmar que seu aplicativo tem acesso a microfone antes de tentar usá-lo.
 
-Se você também deseja dar suporte ditado, Cortana, ou o reconhecimento de fala outros serviços (por exemplo, uma [gramática predefinida](#predefined-grammars) definidos em uma restrição de tópico), você também deve confirmar que **o reconhecimento de fala on-line** (Configurações -> privacidade -> fala) é habilitado.
+Se você deseja dar suporte a ditado, Cortana, ou o reconhecimento de fala outros serviços (por exemplo, uma [gramática predefinida](#predefined-grammars) definidos em uma restrição de tópico), você também deve confirmar que **o reconhecimento de fala on-line** (Configurações -> privacidade -> fala) é habilitado.
 
 Este trecho de código mostra como seu aplicativo pode verificar se um microfone está presente e se ele tem permissão para usá-lo.
 
@@ -279,7 +279,7 @@ Use um arquivo XML de Definição de comando de voz (VCD) para definir os comand
 
 Consulte [ **SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220)/
 
-**Observação**o tipo de tipo de restrição que você usa depende da complexidade da experiência de reconhecimento que você deseja criar. Qualquer tipo pode ser a melhor escolha para uma tarefa específica de reconhecimento, e você pode encontrar usos para todos os tipos de restrição em seu aplicativo.
+**Observação**o tipo de restrição você usa depende da complexidade da experiência de reconhecimento que você deseja criar. Qualquer tipo pode ser a melhor escolha para uma tarefa específica de reconhecimento, e você pode encontrar usos para todos os tipos de restrição em seu aplicativo.
 Para começar a usar restrições, consulte [Definir restrições de reconhecimento personalizadas](define-custom-recognition-constraints.md).
 
 A gramática de ditado predefinida do Aplicativo Universal do Windows reconhece a maioria das palavras e frases curtas em um idioma. Ela é ativada por padrão quando um objeto reconhecedor de fala é instanciado sem restrições personalizadas.

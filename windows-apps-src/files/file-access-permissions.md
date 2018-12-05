@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d960235e73ea9172fb966f227af9440923f3553e
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461643"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8694045"
 ---
 # <a name="file-access-permissions"></a>Permissões de acesso a arquivo
 
@@ -21,7 +21,7 @@ Os aplicativos Universais do Windows (apps) podem acessar determinados locais do
 
 Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais do sistema de arquivos:
 
-### <a name="application-install-directory"></a>Diretório de instalação de aplicativo
+### <a name="application-install-directory"></a>Diretório de instalação do aplicativo
 A pasta onde seu aplicativo está instalado no sistema do usuário.
 
 Há duas maneiras principais de acessar arquivos e pastas em seu aplicativo diretório de instalação:
@@ -87,12 +87,12 @@ O prefixo "ms-appx:///" no URI refere-se ao diretório de instalação do aplica
 
 Além disso, diferentemente de outros locais, você também pode acessar os arquivos no diretório de instalação de seu aplicativo usando [Win32 e COM para aplicativos UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/windows/apps/br205757) e algumas [funções da Biblioteca Padrão do C/C++ do Microsoft Visual Studio](http://msdn.microsoft.com/library/hh875057.aspx).
 
-O diretório de instalação do aplicativo é um local somente leitura. Você não pode obter acesso ao diretório de instalação através do seletor de arquivos.
+O diretório de instalação do aplicativo é um local somente leitura. Você não pode obter acesso ao diretório de instalação por meio do seletor de arquivos.
 
 ### <a name="application-data-locations"></a>Locais de dados de aplicativo
 As pastas em que seu aplicativo pode armazenar dados. Essas pastas (local, móvel e temporária) são criadas quando o aplicativo é instalado.
 
-Há duas maneiras principais de acessar arquivos e pastas de locais de dados do seu aplicativo:
+Há duas maneiras principais de acessar arquivos e pastas do seu aplicativo locais de dados:
 
 1.  Use as propriedades [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) para recuperar uma pasta de dados do aplicativo.
 

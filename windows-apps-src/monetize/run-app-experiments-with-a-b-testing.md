@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, testes A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: d4f5271d70cefea99a9caff04e7203e05043440c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464418"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8694584"
 ---
 # <a name="run-app-experiments-with-ab-testing"></a>Executar experimentos de aplicativo com teste A/B
 
 Você pode usar o Partner Center para definir variáveis remotas que você pode recuperar em tempo de execução dos aplicativos da plataforma Universal do Windows (UWP), e você pode testar variações desses valores com os usuários para identificar os valores mais efetivos para conseguir o comportamento desejado do usuário. O aplicativo pode usar variáveis remotas para configurar experiências de aplicativo, como compras realizadas em aplicativo, fluxo de assinaturas, legendas e veiculações de anúncios.
 
-A meta do teste A/B deve ser identificar uma variação dos valores variáveis remotos que deve resultar em taxas de conversão melhores (por exemplo, mais compras realizadas em aplicativo), oferecendo uma experiência de aplicativo mais atraente. Depois de identificar uma variação bem-sucedida, você pode imediatamente finalizar o experimento e habilitar essa variação para seu público de usuário inteira do Partner Center, sem precisar republicar o aplicativo.
+A meta do teste A/B deve ser identificar uma variação dos valores variáveis remotos que deve resultar em taxas de conversão melhores (por exemplo, mais compras realizadas em aplicativo), oferecendo uma experiência de aplicativo mais atraente. Depois de identificar uma variação bem-sucedida, você pode imediatamente finalizar o experimento e habilitar essa variação para seu público do usuário inteira do Partner Center, sem precisar republicar o aplicativo.
 
 ## <a name="create-and-run-an-ab-test"></a>Criar e executar um teste A/B
 

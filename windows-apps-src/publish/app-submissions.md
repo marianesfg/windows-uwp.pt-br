@@ -7,11 +7,11 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 444243bdb1d50146ba54af4f1417103566f97f93
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463259"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8693603"
 ---
 # <a name="app-submissions"></a>Envios de aplicativos
 
@@ -21,7 +21,7 @@ Assim que tiver [criado seu aplicativo reservando um nome](create-your-app-by-re
 Você pode iniciar o envio quando seu aplicativo estiver completo e pronto para ser publicado, ou pode começar a inserir informações mesmo antes de ter escrito uma única linha de código. Atualizações feitas ao seu envio são salvas, para que você possa voltar e trabalhar nele sempre que você está pronto.
 
 > [!NOTE]
-> Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) ativa no [Partner Center](https://partner.microsoft.com/dashboard) para enviar aplicativos na Microsoft Store.
+> Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) de ativa no [Partner Center](https://partner.microsoft.com/dashboard) para enviar aplicativos na Microsoft Store.
 
 Depois que o aplicativo for publicado, você pode publicar uma versão atualizada criando outro envio no Partner Center. Criar um novo envio permite fazer e publicar quaisquer mudanças necessárias, caso você esteja carregando novos pacotes ou apenas alterando detalhes, como o preço ou a categoria. Para criar um novo envio para um aplicativo publicado, clique em **Atualizar** ao lado do envio mais recente mostrado na página de **Visão geral** . Você também pode [Remover um aplicativo da loja](guidance-for-app-package-management.md#removing-an-app-from-the-store) se você precisar fazer isso (e, em seguida, disponibilizá-lo novamente mais tarde, se você quiser).
 
@@ -99,7 +99,7 @@ Você precisará de todas as informações obrigatórias para pelo menos um dos 
 | **Imagem do Windows 10 e Xbox (16:9 Arte de super-herói)**     | Recomendações        | [Windows 10 e Xbox imagem (16:9 arte de super-herói)
 ] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
 | **Imagens do Xbox**     | Necessário para a exibição correta se você publicar no Xbox        | [Imagens do Xbox
-] (aplicativo capturas de tela e images.md #xbox-imagens) |
+] (aplicativo capturas de tela e images.md #-imagens do xbox) |
 | **Campos complementares**  | Opcional                                    | [Campos complementares](create-app-store-listings.md#supplemental-fields) 
 | **Termos de pesquisa**              | Opcional                                    | [Termos de pesquisa](create-app-store-listings.md#search-terms)         |
 | **Informações sobre direitos autorais e marcas registradas** | Opcional                                 | [Informações sobre direitos autorais e marcas registradas](create-app-store-listings.md#copyright-and-trademark-info) |

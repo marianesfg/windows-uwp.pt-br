@@ -14,11 +14,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: e72dc726143d17f605283fa801f8e286c2c58878
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461964"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8691860"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementar a navegação entre duas páginas
 
@@ -87,7 +87,7 @@ Em Page1.xaml, adicione o seguinte conteúdo:
 <TextBlock x:Name="pageTitle" Text="Page 1" />
 ```
 
--   Um elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como um elemento filho da raiz [**grade**](https://msdn.microsoft.com/library/windows/apps/br242704) e depois o `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
+-   Um elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como um elemento filho da raiz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) e depois o `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
 ```xaml
 <HyperlinkButton Content="Click to go to page 2"
                  Click="HyperlinkButton_Click"
@@ -124,7 +124,7 @@ Em Page2.xaml, adicione o seguinte conteúdo:
 <TextBlock x:Name="pageTitle" Text="Page 2" />
 ```
 
--   Um elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como um elemento filho da raiz [**grade**](https://msdn.microsoft.com/library/windows/apps/br242704) e depois o `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
+-   Um elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como um elemento filho da raiz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) e depois o `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
 ```xaml
 <HyperlinkButton Content="Click to go to page 1" 
                  Click="HyperlinkButton_Click"
@@ -316,7 +316,7 @@ Por fim, sempre que uma página é carregada no quadro, ela é adicionada como u
 
 Nosso aplicativo navega entre duas páginas, mas ainda não faz nada de interessante. Geralmente, quando um aplicativo tem várias páginas, as páginas precisam compartilhar informações. Vamos passar algumas informações da primeira para a segunda página.
 
-Em Page1. XAML, substitua o **HyperlinkButton** que você adicionou anteriormente com o seguinte [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
+Em Page1. XAML, substitua o **HyperlinkButton** que você adicionou anteriormente seguir [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
 
 Aqui, adicionamos um rótulo [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) e um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) (`name`) para inserir uma sequência de texto.
 

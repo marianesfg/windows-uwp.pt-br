@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9679e6e658e7fa1eb50b41331e7e59ec2115fc14
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8457919"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8694862"
 ---
 # <a name="selecting-text-and-images"></a>Selecionando texto e imagens
 
@@ -47,18 +47,18 @@ A seleção e a manipulação de texto são particularmente suscetíveis aos des
 
 **Considerações e recomendações**
 
-Use os controles internos expostos por meio das estruturas de idioma em aplicativos de compilação Windowsto que proporcionam a experiência de interação do usuário plataforma inteira, incluindo comportamentos de seleção e manipulação. Você achará a funcionalidade de interação dos controles incorporados suficiente para a maioria dos aplicativos UWP.
+Use os controles internos expostos por meio das estruturas de idioma em aplicativos de compilação Windowsto que fornecem a experiência de interação do usuário plataforma inteira, incluindo comportamentos de seleção e manipulação. Você achará a funcionalidade de interação dos controles incorporados suficiente para a maioria dos aplicativos UWP.
 
 Ao usar controles de texto da UWP padrão, os comportamentos de seleção e os recursos visuais descritos neste tópico não podem ser personalizados.
 
 **Seleção de texto**
 
-Se seu aplicativo requer uma interface do usuário personalizada que dá suporte à seleção de texto, recomendamos que você siga os comportamentos de Windowsselection descritos aqui.
+Se seu aplicativo requer uma interface do usuário personalizada que dá suporte à seleção de texto, recomendamos que você siga os comportamentos Windowsselection descritos aqui.
 
 **Conteúdo editável e não editável**
 
 
-Com o toque, as interações de seleção são realizadas principalmente pelos gestos, como um toque para definir um cursor de inserção ou selecionar uma palavra e um movimento de deslizar para modificar a seleção. Assim como acontece com outras interações Windowstouch, as interações são limitadas à imprensa e mantenha o gesto para exibir a interface do usuário informativa. Para obter mais informações, consulte [Diretrizes de resposta visual](guidelines-for-visualfeedback.md).
+Com o toque, as interações de seleção são realizadas principalmente pelos gestos, como um toque para definir um cursor de inserção ou selecionar uma palavra e um movimento de deslizar para modificar a seleção. Assim como acontece com outras interações Windowstouch, as interações são limitadas ao pressionar e mantenha o gesto para exibir a interface do usuário informativa. Para obter mais informações, consulte [Diretrizes de resposta visual](guidelines-for-visualfeedback.md).
 
 Windowsrecognizes dois possíveis estados para interações de seleção, editáveis e não editável e ajusta a seleção da interface do usuário, comentários e funcionalidade adequadamente.
 

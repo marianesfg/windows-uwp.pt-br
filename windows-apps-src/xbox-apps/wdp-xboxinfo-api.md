@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, xbox, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: d7901890e1cc8fab24742e8785562d13d2fe182a
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462935"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8693346"
 ---
 # <a name="xbox-info-api-reference"></a>Referência de API de informações do Xbox   
 Você pode acessar informações de dispositivo Xbox One usando essa API.
@@ -43,7 +43,7 @@ Um objeto JSON com os seguintes campos:
 * OsVersion - (String) a versão do sistema operacional.
 * OsEdition - (String) a edição do sistema operacional, como "Março de 2017" ou "março de 2017 QFE 1".
 * ConsoleId - ID. do (String) o console
-* DeviceId - Xbox Live dispositivo do (String) o console ID.
+* DeviceId - dispositivo do (String) o console Xbox Live ID.
 * SerialNumber - o número de série do (String) o console.
 * DevMode - modo atual de desenvolvedor do (String) o console, como "None" ou "Retail".
 * ConsoleType - tipo do (String) o console, como "Xbox One" ou "Xbox One S".
