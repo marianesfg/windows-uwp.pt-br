@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, serviços da Loja
 ms.localizationpriority: medium
-ms.openlocfilehash: af221b8962e0029dbd8686ffbf3f8a37f825e058
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.openlocfilehash: 0557120afc324986fcab4fbe8e75f8819be004b3
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8467663"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8687169"
 ---
 # <a name="microsoft-store-services"></a>Serviços da Microsoft Store
 
@@ -24,7 +24,7 @@ A Microsoft Store expõe vários serviços que você pode chamar por meio das AP
 |------------------|-----------------------------|
 | [Acessar os dados analíticos](access-analytics-data-using-windows-store-services.md) | Use a *API de análise da Microsoft Store* para recuperar de forma programática dados analíticos de seus aplicativos. Essa API permite que você recupere dados de aplicativo e aquisições de complemento (também conhecido como produto no aplicativo ou IAP), falhas de aplicativo, classificações de aplicativo e avaliações e dados de desempenho para anúncios no aplicativo e campanhas publicitárias promocionais. |
 | [Responder às opiniões](respond-to-reviews-using-windows-store-services.md) | Use a *API de análises da Microsoft Store* para enviar respostas às críticas ao seu aplicativo de forma programada na Store. Essa API é especialmente útil para os desenvolvedores que desejam em massa responderem às diversas análises sem usar o Partner Center.  |
-| [Executar campanhas publicitárias](run-ad-campaigns-using-windows-store-services.md) | Use a *API de promoções da Microsoft Store* para gerenciar de forma programática campanhas publicitárias promocionais para seus aplicativos. Essa API permite que você crie, atualize e monitore suas campanhas e outros ativos relacionados, como direcionamento e criativos. Essa API é especialmente útil para desenvolvedores que criam grandes volumes de campanhas, e que desejam fazer isso sem usar dhboard Partner Center. |
+| [Executar campanhas publicitárias](run-ad-campaigns-using-windows-store-services.md) | Use a *API de promoções da Microsoft Store* para gerenciar de forma programática campanhas publicitárias promocionais para seus aplicativos. Essa API permite que você crie, atualize e monitore suas campanhas e outros ativos relacionados, como direcionamento e criativos. Essa API é especialmente útil para desenvolvedores que criam grandes volumes de campanhas, e que desejam fazer isso sem usar o painel do Partner Center. |
 | [Criar e gerenciar envios](create-and-manage-submissions-using-windows-store-services.md) | Use a *API de envio da Microsoft Store* para consultar programaticamente e criar os envios de aplicativos, complementos e pacotes de pré-lançamento para a conta do sua organização Partner Center. Essa API será útil se sua conta gerenciar muitos aplicativos ou complementos e você quiser automatizar e otimizar o processo de envio para esses ativos. |
 | [Gerenciar as ofertas direcionadas ](manage-targeted-offers-using-windows-store-services.md) | Use a *API de ofertas direcionadas da Microsoft Store* para reivindicar programaticamente uma oferta direcionada associada a compra bem-sucedida de um complemento em seu aplicativo. |
 | [Gerenciar direitos a produtos de um serviço](view-and-grant-products-from-a-service.md)  | Se você tiver um catálogo de aplicativos e complementos na loja, você pode usar a *API de coleção da Microsoft Store* e *a API de compra da Microsoft Store* para acessar informações de propriedade para esses produtos de seus serviços, declarar um produto consumível como providenciado para um usuário e conceder um direito para um produto gratuito a um usuário.  |

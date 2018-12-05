@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a8ce14094733ef5598c510198f4268744cb581e
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459242"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8693043"
 ---
 # <a name="package-version-numbering"></a>Numeração de versão do pacote
 
@@ -32,7 +32,7 @@ Você pode fornecer vários pacotes UWP com o mesmo número de versão. Contudo,
 
 Quando você fornece vários pacotes UWP que usam o mesmo número de versão, a arquitetura (na ordem x64, x86, ARM, neutro) será usada para decidir qual é a maior classificação (quando o armazenamento determina qual pacote fornecer para o dispositivo do cliente). Ao classificar lotes de aplicativos que usem o mesmo número de versão, a classificação de arquitetura mais alta dentro do lote será considerada: um lote de aplicativos que contém um pacote x64 terá uma classificação maior do que aquele que contém somente um pacote x86.
 
-Isso dá uma grande flexibilidade para desenvolver seu aplicativo ao longo do tempo. Você pode carregar e enviar novos pacotes que usam números de versão menores para adicionar suporte para dispositivos Windows 10 que não oferecia suporte anteriormente, você pode adicionar pacotes superiores que têm dependências mais estritas para aproveitar o hardware ou recursos do sistema operacional ou você pode adicionar pacotes superiores que servem como atualizações para alguns ou todos os seus clientes existentes base.
+Isso dá uma grande flexibilidade para desenvolver seu aplicativo ao longo do tempo. Você pode carregar e enviar novos pacotes que usam números de versão menores para adicionar suporte para dispositivos Windows 10 que não oferecia suporte anteriormente, você pode adicionar pacotes superiores dependências mais estritas para aproveitar o hardware ou recursos do sistema operacional ou você pode adicionar pacotes superiores que servem como atualizações para alguns ou todos os seus clientes existentes base.
 
 O exemplo a seguir ilustra como a numeração de versão pode ser gerenciada para a entrega dos pacotes pretendidos para seus clientes em vários envios.
 
@@ -70,7 +70,7 @@ Para pacotes .appx destinados ao Windows Phone 8.1, o número da versão do paco
 
 Para pacotes. AppX destinados a Windows8 e Windows 8.1, a mesma regra se aplica por arquitetura: o número da versão do pacote em um novo envio deve ser sempre maior do que o último pacote publicado na Store para a mesma arquitetura.
 
-Além disso, o número de versão dos pacotes do Windows 8.1 deve sempre ser maior que os números de versão de qualquer um dos seus pacotes Windows8 para o mesmo aplicativo. Em outras palavras, o número de versão de qualquer pacote Windows8 que você envia deve ser menor do que o número de versão de qualquer pacote do Windows 8.1 que você enviou para o mesmo aplicativo.
+Além disso, o número de versão dos pacotes do Windows 8.1 sempre deve ser maior que os números de versão de qualquer um dos seus pacotes Windows8 para o mesmo aplicativo. Em outras palavras, o número de versão de qualquer pacote Windows8 que você envia deve ser menor do que o número de versão de qualquer pacote do Windows 8.1 que você enviou para o mesmo aplicativo.
 
 > [!NOTE]
 > Se seu aplicativo também tiver pacotes do Windows 10, o número de versão dos pacotes do Windows 10 deve ser maior do que aqueles para qualquer um dos seus pacotes Windows8, Windows 8.1 e/ou Windows Phone 8.1. Para obter mais informações, consulte [adicionando pacotes para Windows 10 para um aplicativo publicado anteriormente](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app).

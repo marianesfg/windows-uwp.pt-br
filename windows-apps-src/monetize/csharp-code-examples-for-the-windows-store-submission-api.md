@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, exemplos de código, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: 27325938ef159dfcb29de174064314ee21d3a3f5
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458909"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8684814"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>Exemplo de C#: envios de apps, complementos e versões de pré-lançamento
 
@@ -60,7 +60,7 @@ O exemplo a seguir implementa uma classe que usa vários métodos na API de envi
 2. Em seguida, ele [exclui o envio pendente para o app](delete-an-app-submission.md), caso haja um.
 3. Em seguida, ele [cria um novo envio para o aplicativo](create-an-app-submission.md) (o novo envio é uma cópia do último envio publicado).
 4. Ele muda alguns detalhes para o novo envio e carrega um novo pacote para o envio no armazenamento do Blob do Azure.
-5. Em seguida, ele [atualizações](update-an-app-submission.md) e, em seguida, [confirma](commit-an-app-submission.md) o novo envio para o Partner Center.
+5. Em seguida, ele [atualizações](update-an-app-submission.md) e [confirma](commit-an-app-submission.md) o novo envio para o Partner Center.
 6. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-an-app-submission.md) até que o envio seja confirmado com êxito.
 
 > [!div class="tabbedCodeSnippets"]
@@ -90,7 +90,7 @@ O exemplo a seguir implementa uma classe que usa vários métodos na API de envi
 1. Para começar, o método [obtém dados do complemento especificado](get-an-add-on.md).
 2. Em seguida, ele [exclui o envio pendente para o complemento](delete-an-add-on-submission.md), caso haja um.
 3. Em seguida, ele [cria um novo envio para o complemento](create-an-add-on-submission.md) (o novo envio é uma cópia do último envio publicado).
-5. Em seguida, ele [atualizações](update-an-add-on-submission.md) e, em seguida, [confirma](commit-an-add-on-submission.md) o novo envio para o Partner Center.
+5. Em seguida, ele [atualizações](update-an-add-on-submission.md) e [confirma](commit-an-add-on-submission.md) o novo envio para o Partner Center.
 6. Por fim, ele periodicamente [verifica o status do novo envio](get-status-for-an-add-on-submission.md) até que o envio seja confirmado com êxito.
 
 > [!div class="tabbedCodeSnippets"]
@@ -106,7 +106,7 @@ O exemplo a seguir implementa uma classe que usa vários métodos na API de envi
 2. Em seguida, ele [exclui o envio pendente para o pacote de pré-lançamento](delete-a-flight-submission.md), caso haja um.
 3. Em seguida, ele [cria um novo envio para o pacote de pré-lançamento](create-a-flight-submission.md) (o novo envio é uma cópia do último envio publicado).
 4. Ele carrega um novo pacote para o envio no armazenamento do Blob do Azure.
-5. Em seguida, ele [atualizações](update-a-flight-submission.md) e, em seguida, [confirma](commit-a-flight-submission.md) o novo envio para o Partner Center.
+5. Em seguida, ele [atualizações](update-a-flight-submission.md) e [confirma](commit-a-flight-submission.md) o novo envio para o Partner Center.
 6. Por fim, ele periodicamente [verifica o status do novo envio](get-status-for-a-flight-submission.md) até que o envio seja confirmado com êxito.
 
 > [!div class="tabbedCodeSnippets"]

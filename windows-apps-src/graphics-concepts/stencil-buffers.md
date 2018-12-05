@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 285e4a70062c57c957530aa1e548c22c4cf7711e
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458740"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8688728"
 ---
 # <a name="stencil-buffers"></a>Buffers de estêncil
 
@@ -44,7 +44,7 @@ As etapas acima são mostradas na seguinte linha de código:
 -   StencilBufferValue é o conteúdo do buffer de estêncil do pixel atual.
 -   O símbolo de E comercial (&) representa a operação AND bit a bit.
 
-O pixel atual é escrito na superfície de destino se o teste de estêncil for aprovado, caso contrário, é ignorado. O comportamento padrão de comparação é a gravação do pixel, independentemente de como cada operação bit a bit a bit acontece. Você pode alterar esse comportamento alterando o valor de um tipo enumerado para identificar a função de comparação desejada.
+O pixel atual é escrito na superfície de destino se o teste de estêncil for aprovado, caso contrário, é ignorado. O comportamento padrão de comparação é a gravação do pixel, independentemente de como cada operação bit a bit acontece. Você pode alterar esse comportamento alterando o valor de um tipo enumerado para identificar a função de comparação desejada.
 
 Seu aplicativo pode personalizar a operação do buffer de estêncil. Ele pode definir a função de comparação, a máscara de estêncil e o valor de referência de estêncil. Ele também pode controlar a ação que o Direct3D executa quando o teste de estêncil passa ou falha.
 

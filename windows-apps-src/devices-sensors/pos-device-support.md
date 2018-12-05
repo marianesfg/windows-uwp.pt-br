@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ffb8ea583aade51ae1cc5049a423d734359722c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459580"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713966"
 ---
 # <a name="supported-point-of-service-peripherals"></a>Periféricos de ponto de serviço compatíveis
 
@@ -25,29 +25,29 @@ ms.locfileid: "8459580"
 
 | Fabricante  | Modelo                          | Funcionalidade | Conexão    | Tipo         | Modo                      |
 |---------------|--------------------------------|------------|--------------|--------------|---------------------------|
-| Código          | Reader™ 950                    | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| Código          | Reader™ 1021                   | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| Código          | Reader™ 1421                   | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| Código          | Reader™ 5000                   | 2D         | USB          | Apresentação | Scanner de PDV HID           |
-| Honeywell     | Genesis 7580g                  | 2D         | USB          | Apresentação | Scanner de PDV HID           |
-| Honeywell     | Granit 198Xi                   | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| Honeywell     | Granit 191Xi                   | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| Honeywell     | N5680                          | 2D         | Interna     | Componente    | Scanner de PDV HID           |
-| Honeywell     | N3680                          | 2D         | Interna     | Componente    | Scanner de PDV HID           |
-| Honeywell     | Órbita 7190g                    | 2D         | USB          | Apresentação | Scanner de PDV HID           |
-| Honeywell     | Stratos 2700                   | 2D         | USB          | Contador   | Scanner de PDV HID           |
-| Honeywell     | Voyager 1200g                  | 1D         | USB          | Handheld     | Scanner de PDV HID           |
-| Honeywell     | Voyager 1202g                  | 1D         | USB          | Handheld     | Scanner de PDV HID           |
-| Honeywell     | Voyager 1202-bf                | 1D         | USB          | Handheld     | Scanner de PDV HID           |
-| Honeywell     | Voyager 145Xg                  | 1D / 2D ¹   | USB          | Handheld     | Scanner de PDV HID           |
-| Honeywell     | Voyager 1602g                  | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| Honeywell     | Xenon 1900g                    | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| Honeywell     | Xenon 1902g                    | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| Honeywell     | Xenon 1902g-bf                 | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| Honeywell     | Xenon 1900h                    | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| Honeywell     | Xenon 1902h                    | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| HP            | Scanner de código de barras de valor (HR2150) | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| Intermec      | SG20                           | 2D         | USB          | Handheld     | Scanner de PDV HID           |
+| Código          | Reader™ 950                    | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Código          | Reader™ 1021                   | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Código          | Reader™ 1421                   | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Código          | Reader™ 5000                   | 2D         | USB          | Apresentação | HID POS Scanner           |
+| Honeywell     | Genesis 7580g                  | 2D         | USB          | Apresentação | HID POS Scanner           |
+| Honeywell     | Granit 198Xi                   | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Honeywell     | Granit 191Xi                   | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Honeywell     | N5680                          | 2D         | Interna     | Componente    | HID POS Scanner           |
+| Honeywell     | N3680                          | 2D         | Interna     | Componente    | HID POS Scanner           |
+| Honeywell     | Órbita 7190g                    | 2D         | USB          | Apresentação | HID POS Scanner           |
+| Honeywell     | Stratos 2700                   | 2D         | USB          | Contador   | HID POS Scanner           |
+| Honeywell     | Voyager 1200g                  | 1D         | USB          | Handheld     | HID POS Scanner           |
+| Honeywell     | Voyager 1202g                  | 1D         | USB          | Handheld     | HID POS Scanner           |
+| Honeywell     | Voyager 1202-bf                | 1D         | USB          | Handheld     | HID POS Scanner           |
+| Honeywell     | Voyager 145Xg                  | 1D / 2D ¹   | USB          | Handheld     | HID POS Scanner           |
+| Honeywell     | Voyager 1602g                  | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Honeywell     | Xenon 1900g                    | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Honeywell     | Xenon 1902g                    | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Honeywell     | Xenon 1902g-bf                 | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Honeywell     | Xenon 1900h                    | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Honeywell     | Xenon 1902h                    | 2D         | USB          | Handheld     | HID POS Scanner           |
+| HP            | Scanner de código de barras de valor (HR2150) | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Intermec      | SG20                           | 2D         | USB          | Handheld     | HID POS Scanner           |
 | Soquete Mobile | CHS 7Ci                        | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
 | Soquete Mobile | CHS 7Di                        | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
 | Soquete Mobile | CHS 7mi                        | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
@@ -61,8 +61,8 @@ ms.locfileid: "8459580"
 | Soquete Mobile | SocketScan S740                | 2D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
 | Soquete Mobile | SocketScan S800                | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
 | Soquete Mobile | SocketScan S850                | 2D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Zebra         | DS2278                         | 2D         | USB          | Handheld     | Scanner de PDV HID           |
-| Zebra         | DS8108²                        | 2D         | USB          | Handheld     | Scanner de PDV HID           |
+| Zebra         | DS2278                         | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Zebra         | DS8108²                        | 2D         | USB          | Handheld     | HID POS Scanner           |
 |
 
 

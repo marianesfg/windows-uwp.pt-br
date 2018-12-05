@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9466ec598fad090e31768d680b64ffea52688844
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464743"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8688356"
 ---
 # <a name="themeresource-markup-extension"></a>Extensão de marcação {ThemeResource}
 
@@ -67,7 +67,7 @@ As definições XAML de estados visuais em um modelo de controle devem usar refe
 
 O uso de **ThemeResource** pode ser visto em uma série de valores dependentes. Por exemplo, um valor [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) usado por um [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) que também é um recurso de chave pode usar uma referência **ThemeResource**. Mas quaisquer propriedades de interface do usuário que usem o recurso de chave **SolidColorBrush** também deverão usar uma referência **ThemeResource**, para que cada propriedade de tipo de [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) que esteja ativando um valor dinâmico mude quando o tema mudar.
 
-**Observação** `{ThemeResource}` e avaliação de recurso de tempo de execução durante a alteração de tema é aceito no Windows 8.1 XAML, mas não tem suporte em XAML para aplicativos destinados ao Windows8.
+**Observação** `{ThemeResource}` e avaliação de recurso de tempo de execução durante a alteração de tema é aceito no Windows 8.1 XAML, mas não tem suporte em XAML para aplicativos voltados para Windows8.
 
 ### <a name="system-resources"></a>Recursos do sistema
 
@@ -138,7 +138,7 @@ Aqui o valor [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) �
 
 ## <a name="windows8-behavior"></a>Comportamento de Windows8
 
-Windows8 não dava suporte à extensão de marcação **ThemeResource** , ela está disponível a partir do Windows 8.1. Além disso, Windows8 não dava suporte à alternância dinâmica dos recursos relacionados ao tema para um aplicativo do Windows Runtime. O aplicativo tinha que ser reiniciado para selecionar a alteração de tema dos modelos e estilos XAML. Isso não é uma boa experiência do usuário, portanto, os aplicativos devem recompile e Windows 8.1 de destino para que eles possam usar estilos com usos **ThemeResource** e podem alternar dinamicamente os temas quando o usuário o faz. Aplicativos que foram compilados para Windows8, mas em execução no Windows 8.1, continuam a adotar o comportamento Windows8.
+Windows8 não dava suporte à extensão de marcação **ThemeResource** , ele está disponível a partir do Windows 8.1. Além disso, Windows8 não dava suporte à alternância dinâmica dos recursos relacionados ao tema para um aplicativo do Windows Runtime. O aplicativo tinha que ser reiniciado para selecionar a alteração de tema dos modelos e estilos XAML. Isso não é uma boa experiência do usuário, portanto, os aplicativos são incentivados a recompile e Windows 8.1 de destino para que eles possam usar estilos com usos **ThemeResource** e podem alternar dinamicamente os temas quando o usuário o faz. Aplicativos que foram compilados para Windows8, mas em execução no Windows 8.1 continuar a usar o comportamento Windows8.
 
 ## <a name="design-time-tools-support-for-the-themeresource-markup-extension"></a>As ferramentas de tempo de design têm suporte para a extensão de marcação **{ThemeResource}**
 

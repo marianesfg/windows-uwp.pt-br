@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, preços, preços de aplicativos, preço do aplicativo, vender aplicativos, alteração de preço, preço personalizado, preço, custo, substituir preço base, preço livre, livre
 ms.localizationpriority: medium
-ms.openlocfilehash: d901ec630c680adfaa637d5555fc2182749bec89
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.openlocfilehash: ea873d2c1f78762741d6272fafe1496d6b3a71ea
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462216"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696772"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Definir e agendar o preço do aplicativo
 
@@ -32,10 +32,10 @@ Cada faixa de preço tem um valor correspondente em cada uma das mais de 60 moed
 
 Na seção **Preços**, clique em **exibir tabela de conversão** para ver os preços correspondentes em todas as moedas. Isso também exibe um número de ID associado a cada faixa de preço, que será necessário se você estiver usando a [API de envio da Microsoft Store](../monetize/manage-app-submissions.md#price-tiers) para inserir preços. Você pode clicar em **Baixar** para baixar uma cópia da tabela de faixa de preço como um arquivo .csv.
 
-Lembre-se de que a faixa de preços selecionada pode incluir impostos sobre vendas ou valor agregado que seus clientes devem pagar. Para saber mais sobre as implicações fiscais do seu aplicativo nos mercados selecionados, consulte [Detalhes fiscais para aplicativos pagos](tax-details-for-paid-apps.md). Você também deve analisar as [considerações de preço para mercados específicos](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
+Lembre-se de que a faixa de preços selecionada pode incluir impostos sobre vendas ou valor agregado que seus clientes devem pagar. Para saber mais sobre as implicações fiscais do seu aplicativo nos mercados selecionados, consulte [Detalhes fiscais para aplicativos pagos](tax-details-for-paid-apps.md). Você também deve analisar as [considerações de preço para mercados específicos](define-market-selection.md#price-considerations-for-specific-markets).
 
 > [!NOTE]
-> Se você escolher a opção **Parar aquisição** em **disponibilizar este produto mas não detectável na loja** na seção [visibilidade](choose-visibility-options.md#discoverability) ), não será capaz de definir o preço para seu envio (já que ninguém será capaz de adquirir o aplicativo a menos que um código promocional eles usam para acessar o aplicativo gratuitamente).
+> Se você escolher a opção de **Parar a aquisição** em **disponibilizar este produto mas não detectável na loja** na seção [visibilidade](choose-visibility-options.md#discoverability) ), não será capaz de definir o preço para seu envio (já que ninguém será capaz de adquirir o aplicativo a menos que usarem um código promocional para acessar o aplicativo gratuitamente).
 
 ## <a name="schedule-price-changes"></a>Agendar alterações de preço
 

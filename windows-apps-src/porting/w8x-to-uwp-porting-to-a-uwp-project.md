@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 428f6787dfeb18d7ebf02f96acea2a6ab55c7fe7
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8487188"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8688094"
 ---
 # <a name="porting-a-windows-runtime-8x-project-to-a-uwp-project"></a>Portabilidade de um projeto do Windows Runtime 8.x para um projeto UWP
 
 
 
-Você tem duas opções ao começar o processo de portabilidade. Uma é editar uma cópia dos arquivos do seu projeto existente, inclusive o manifesto do pacote do aplicativo (para essa opção, consulte as informações sobre como atualizar seus arquivos de projeto em [Migrar aplicativos para a UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/mt148501.aspx)). A outra opção é criar um novo projeto do Windows 10 no Visual Studio e copiar seus arquivos para ele. A primeira seção deste tópico descreve a segunda opção, mas o restante do tópico tem informações adicionais aplicáveis às duas opções. Você também pode optar por manter seu novo projeto do Windows 10 na mesma solução que seus projetos existentes e compartilhar arquivos de código-fonte usando um projeto compartilhado. Ou é possível manter o novo projeto em uma solução própria e compartilhar arquivos de código-fonte usando-se o recurso de arquivos vinculados no Visual Studio.
+Você tem duas opções ao começar o processo de portabilidade. Uma é editar uma cópia dos arquivos do seu projeto existente, inclusive o manifesto do pacote do aplicativo (para essa opção, consulte as informações sobre como atualizar seus arquivos de projeto em [Migrar aplicativos para a UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/mt148501.aspx)). A outra opção é criar um novo projeto do Windows 10 no Visual Studio e copiar seus arquivos para ele. A primeira seção deste tópico descreve a segunda opção, mas o restante do tópico tem informações adicionais aplicáveis às duas opções. Você também pode optar por manter o novo projeto do Windows 10 na mesma solução que os projetos existentes e compartilhar arquivos de código-fonte usando um projeto compartilhado. Ou é possível manter o novo projeto em uma solução própria e compartilhar arquivos de código-fonte usando-se o recurso de arquivos vinculados no Visual Studio.
 
 ## <a name="create-the-project-and-copy-files-to-it"></a>Crie o projeto e copie os arquivos nele
 
@@ -69,9 +69,9 @@ Além disso, consulte [Manifesto do pacote do aplicativo](#app-package-manifest)
 
 ## <a name="conditional-compilation-and-adaptive-code"></a>Compilação condicional e código adaptável
 
-Se você estiver usando uma compilação condicional (com c# diretivas de pré-processador) para que os arquivos de código funcionem no Windows 8.1 e Windows Phone 8.1, em seguida, agora você pode revisar essa compilação condicional diante do trabalho de convergência feito no Windows 10. Convergência significa que, em seu aplicativo do Windows 10, algumas condições podem ser removidas completamente. Outras mudam para verificações em tempo de execução, conforme demonstrado nos exemplos abaixo.
+Se você estiver usando a compilação condicional (com c# diretivas de pré-processador) para que os arquivos de código funcionem no Windows 8.1 e Windows Phone 8.1, em seguida, agora você pode revisar essa compilação condicional diante do trabalho de convergência feito no Windows 10. Convergência significa que, em seu aplicativo do Windows 10, algumas condições podem ser removidas completamente. Outras mudam para verificações em tempo de execução, conforme demonstrado nos exemplos abaixo.
 
-**Observação**  caso queira dar suporte ao Windows 8.1, Windows Phone 8.1 e Windows 10 em um único arquivo de código, você pode fazer isso também. Se você examinar o projeto do Windows 10 as páginas de propriedades do projeto, você verá que o projeto define WINDOWS\_UAP como um símbolo de compilação condicional. Assim, é possível usar isso em combinação com WINDOWS\_APP e WINDOWS\_PHONE\_APP. Esses exemplos mostram o caso mais simples de remoção da compilação condicional de um aplicativo Universal 8.1 e substituindo o código equivalente para um aplicativo do Windows 10.
+**Observação**  se você quiser dar suporte ao Windows 8.1, Windows Phone 8.1 e Windows 10 em um único arquivo de código, você pode fazer isso também. Se você examinar o projeto do Windows 10 páginas de propriedades do projeto, você verá que o projeto define WINDOWS\_UAP como um símbolo de compilação condicional. Assim, é possível usar isso em combinação com WINDOWS\_APP e WINDOWS\_PHONE\_APP. Esses exemplos mostram o caso mais simples de remoção da compilação condicional de um aplicativo Universal 8.1 e substituindo o código equivalente para um aplicativo do Windows 10.
 
 Esse primeiro exemplo mostra o padrão de uso para a API **PickSingleFileAsync** (que se aplica somente ao Windows 8.1) e a API **PickSingleFileAndContinue** (que se aplica somente ao Windows Phone 8.1).
 
@@ -162,7 +162,7 @@ Consulte também [Detectando a plataforma em que seu aplicativo está sendo exec
 
 ## <a name="app-package-manifest"></a>Manifesto do pacote do aplicativo
 
-O [que mudou no Windows 10](https://msdn.microsoft.com/library/windows/apps/dn705793) tópico lista as alterações para a referência de esquemas de manifesto de pacote para Windows 10, incluindo elementos que foram adicionados, removidos e alterados. Para obter informações de referência sobre todos os elementos, atributos e tipos do esquema, consulte [Hierarquia de elementos](https://msdn.microsoft.com/library/windows/apps/dn934819). Se você estiver portando um aplicativo da loja do Windows Phone, ou se seu aplicativo é uma atualização para um aplicativo da Windows Phone Store, certifique-se de que o elemento **PM: phoneidentity** corresponda ao que está no manifesto do aplicativo do seu aplicativo anterior (use os mesmos GUIDs que foram atribuídos ao aplicativo pela loja). Isso garante que os usuários do seu aplicativo que estiverem atualizando para o Windows 10 receberão seu novo aplicativo como uma atualização, não uma duplicação. Consulte o tópico [**PM: phoneidentity**](https://msdn.microsoft.com/library/windows/apps/dn934763) de referência para obter mais detalhes.
+O [que mudou no Windows 10](https://msdn.microsoft.com/library/windows/apps/dn705793) tópico lista as alterações para a referência de esquema do manifesto de pacote para Windows 10, incluindo elementos que foram adicionados, removidos e alterados. Para obter informações de referência sobre todos os elementos, atributos e tipos do esquema, consulte [Hierarquia de elementos](https://msdn.microsoft.com/library/windows/apps/dn934819). Se você estiver portando um aplicativo da loja do Windows Phone, ou se seu aplicativo é uma atualização para um aplicativo da Windows Phone Store, certifique-se de que o elemento **PM: phoneidentity** corresponda ao que está no manifesto do aplicativo do seu aplicativo anterior (use os mesmos GUIDs que foram atribuídos ao aplicativo pela loja). Isso garante que os usuários do seu aplicativo que estiverem atualizando para o Windows 10 receberão seu novo aplicativo como uma atualização, não uma duplicação. Consulte o tópico [**PM: phoneidentity**](https://msdn.microsoft.com/library/windows/apps/dn934763) de referência para obter mais detalhes.
 
 As configurações no projeto (inclusive todas as referências de SDKs de extensão) determinam a área da superfície da API que o aplicativo pode chamar. Porém, o manifesto do pacote do aplicativo é o que determina o conjunto real de dispositivos em que os clientes podem instalar o aplicativo da Loja. Para obter mais informações, consulte exemplos em [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903).
 

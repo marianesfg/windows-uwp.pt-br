@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: e0e57e28fe36ae506d29e2b51a31c756513fdd08
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465507"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8705006"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Restrições de exportação na criptografia
 
@@ -33,7 +33,7 @@ Para saber mais sobre os regulamentos EAR (Controle de exportações dos EUA) qu
 
 Primeiro, determine se seu aplicativo usa um tipo de criptografia controlado pelos regulamentos do Controle de exportação dos EUA. A questão inclui os exemplos mostrados nesta lista; mas lembre-se de que esta lista não inclui todos os aplicativos possíveis de criptografia.
 
-> **Importante**considere não apenas o código que você gravou para seu aplicativo, mas também todas as bibliotecas de software, utilitários e componentes do sistema operacional que seu aplicativo inclui ou tem links para.
+> **Importante**considere não apenas o código que você escreveu para seu aplicativo, mas também todas as bibliotecas de software, utilitários e componentes do sistema operacional que seu aplicativo inclui ou se vincula a.
 
 -   Qualquer uso de uma assinatura digital, como autenticação ou verificação de integridade
 -   Criptografia de dados ou arquivos que seu aplicativo usa ou acessa

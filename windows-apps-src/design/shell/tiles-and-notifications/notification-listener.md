@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, ouvinte de notificação, usernotificationlistener, documentação, notificações de acesso
 ms.localizationpriority: medium
 ms.openlocfilehash: ad17f4a6f568bcd10d03d7fa07c9dadd24f2f75f
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461232"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8684890"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Ouvinte de notificação: acessar todas as notificações
 
@@ -292,6 +292,6 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 ```
 
 
-## <a name="howto-fixdelays-in-the-background-task"></a>Como fixdelays na tarefa em segundo plano
+## <a name="howto-fixdelays-in-the-background-task"></a>Como fixdelays a tarefa em segundo plano
 
-Ao testar seu aplicativo, você pode perceber que a tarefa em segundo plano atrasa algumas vezes e não dispara por vários minutos. Para corrigir o atraso, prompt togo o usuário para as configurações do sistema -> sistema -> bateria -> uso da bateria pelo aplicativo, encontre o aplicativo na lista, selecioná-lo e defini-lo para "sempre permitido em segundo plano".Depois disso, a tarefa em segundo plano sempre deve ser disparada em até, aproximadamente um segundo a notificação sendo recebido.
+Ao testar seu aplicativo, você pode perceber que a tarefa em segundo plano atrasa algumas vezes e não dispara por vários minutos. Para corrigir o atraso, prompt togo o usuário para as configurações do sistema -> sistema -> bateria -> uso da bateria pelo aplicativo, localizar seu aplicativo na lista, selecione-o e defini-lo para "sempre permitido em segundo plano".Depois disso, a tarefa em segundo plano sempre deve ser disparada dentro em torno de um segundo da notificação sendo recebido.
