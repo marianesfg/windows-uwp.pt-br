@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, serviços da loja, API, insights de análise da Micro
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 5545d27668b23e5b7ae91201421dfa4c92f9c8ed
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8475965"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8705912"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>Obter dados de insights do seu aplicativo da área de trabalho
 

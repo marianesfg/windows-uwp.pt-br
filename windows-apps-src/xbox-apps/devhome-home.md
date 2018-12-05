@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 2be7bdfc04fdd09636251000347499e2f2a37ce4
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461172"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706754"
 ---
 # <a name="home-page-dev-home"></a>Página inicial (Dev Home)
    
@@ -25,7 +25,7 @@ A página **Home** contém os seguintes painéis:
    *  [Ações rápidas](#ID4EEB)  
    *  [Jogos e aplicativos](#ID4EPC)  
    *  [Contas de teste](#ID4EQD)  
-   *  [Conectar-se com o navegador](#ID4EFE)  
+   *  [Conectar-se com seu navegador](#ID4EFE)  
 
  
 <a id="ID4EEB"></a>
@@ -38,7 +38,7 @@ A página **Home** contém os seguintes painéis:
 O painel de **ações rápidas** contém os seguintes botões que fornecem acesso rápido às ações executadas com frequência:   
  
    *  **Pin de mostrar o Visual Studio:** Exibe um código que você pode usar Emparelhe o console de desenvolvimento com a instalação do Visual Studio no computador.   
-   *  **Área restrita de alteração:** Permite que você altere qual área restrita do console está no.   
+   *  **Área restrita de alteração:** Permite que você alterar qual área restrita do console está no.   
    *  **Console de reinicialização:** Reinicia o console de desenvolvimento.   
    *  **Sair do modo de desenvolvimento:** Retorna o console para o modo de varejo e reinicia o console.   
    *  **Inicialização Home:** Inicia a tela inicial de varejo.   
@@ -54,11 +54,11 @@ O painel de **ações rápidas** contém os seguintes botões que fornecem acess
   
 O painel de **jogos e aplicativos** pode ser usado para realizar as seguintes ações:   
  
-   *  Exiba a lista de jogos e aplicativos instalados no console de desenvolvimento.  
+   *  Exiba a lista de jogos e aplicativos instalados no console do desenvolvimento.  
    *  Inicie rapidamente aplicativos e jogos.  
    *  Exiba o estado PLM de jogos e aplicativos.  
    *  Alterar os estados PLM de um menu de contexto.  
-   *  Registrem e executem um título de um compartilhamento de rede remoto.
+   *  Registrar e executar um título de um compartilhamento de rede remoto.
 
   
 <a id="ID4EQD"></a>
@@ -71,7 +71,7 @@ O painel de **jogos e aplicativos** pode ser usado para realizar as seguintes a�
 O painel de **contas de teste** pode ser usado para realizar as seguintes ações:   
  
    *  Exiba a lista de usuários registrados no console.  
-   *  Assine um usuário ou sai com um único clique.  
+   *  Assine um usuário ou com um único clique.  
    *  Adicione usuários e contas de convidado.  
    *  Exibir detalhes de usuários e contas de convidado.  
 
@@ -80,7 +80,7 @@ O painel de **contas de teste** pode ser usado para realizar as seguintes açõe
 
    
 
-## <a name="connect-with-your-browser"></a>Conectar-se com o navegador  
+## <a name="connect-with-your-browser"></a>Conectar-se com seu navegador  
    
   
 O painel de **conectar-se com o navegador** exibe o endereço IP e a porta que você pode usar para gerenciar seu console usando um navegador da web.   

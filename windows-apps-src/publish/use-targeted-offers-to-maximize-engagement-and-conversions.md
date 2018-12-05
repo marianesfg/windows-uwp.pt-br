@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, ofertas direcionadas, ofertas, notificações
 ms.localizationpriority: medium
 ms.openlocfilehash: e894e81b560f071cf42198f09aad0b2b82eae2cd
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465553"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8712375"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>Usar ofertas direcionadas para maximizar o envolvimento e as conversões
 
@@ -32,7 +32,7 @@ Após concluir essas etapas, os clientes que usam seu aplicativo visualizam as o
 
 ## <a name="to-create-and-send-a-targeted-offer"></a>Para criar e enviar uma oferta direcionada
 
-1.  No [Partner Center](https://partner.microsoft.com/dashboard), expanda **interagir** no menu de navegação esquerdo e selecione **ofertas direcionadas**.
+1.  No [Partner Center](https://partner.microsoft.com/dashboard), expanda **envolver** no menu de navegação esquerdo e selecione **ofertas direcionadas**.
 2.  Na página **Ofertas direcionadas**, analise as ofertas disponíveis. Selecione **Criar nova oferta** para qualquer oferta que você deseja implementar.
 
     > [!NOTE]

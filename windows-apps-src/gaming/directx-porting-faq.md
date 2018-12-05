@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 31c165d47beea8ee0e31a3213bdd0dbf0c2bc3d7
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464964"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706721"
 ---
 # <a name="directx-11-porting-faq"></a>Perguntas frequentes de portabilidade do DirectX 11
 
@@ -47,7 +47,7 @@ O projeto comunitário [DirectXTK (kit de ferramentas do DirectX)](http://go.mic
 ##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>Como manter caminhos de código para a área de trabalho e a Microsoft Store?
 
 
-Série de artigos de Chuck Walbourn intitulado [Técnicas de codificação de duplo uso para jogos](http://go.microsoft.com/fwlink/p/?LinkID=286210) oferece uma orientação sobre compartilhar código entre a área de trabalho e os caminhos de código da Microsoft Store.
+Série de artigos de Chuck Walbourn intitulado [Duplo uso técnicas de codificação para jogos](http://go.microsoft.com/fwlink/p/?LinkID=286210) oferece uma orientação sobre compartilhar código entre a área de trabalho e os caminhos de código da Microsoft Store.
 
 ##  <a name="how-do-i-load-image-resources-in-my-directx-uwp-app"></a>Como carregar recursos de imagem em meu aplicativo UWP em DirectX?
 

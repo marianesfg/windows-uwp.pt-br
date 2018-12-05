@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 06dd8355cd0afd3889c0db2c337c93b5fbedf0fa
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458716"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8710324"
 ---
 # <a name="devices-sensors-and-power"></a>Dispositivos, sensores e consumo de energia
 
@@ -33,6 +33,6 @@ Para proporcionar uma experiência de qualidade para seus usuários, talvez seja
 | [Bluetooth](bluetooth.md) | Esta seção contém artigos sobre como integrar Bluetooth a aplicativos UWP (Plataforma Universal do Windows), incluindo como usar RFCOMM, GATT e anúncios LE (baixa energia). | 
 | [Impressão e digitalização](printing-and-scanning.md) | Esta seção descreve como imprimir e digitalizar em seu aplicativo Universal do Windows. | 
 | [Impressão 3D](3d-printing.md) | Esta seção descreve como utilizar a funcionalidade de impressão 3D em seu aplicativo Universal do Windows. |
-| [Criar um aplicativo de cartão inteligente NFC](host-card-emulation.md) | O Windows Phone 8.1 dava suporte a aplicativos de emulação de cartão NFC usando um elemento seguro baseado em SIM, mas esse modelo exigia que aplicativos de pagamento seguro estivessem rigidamente acoplados a MNO (operadoras de rede móvel). Isso limitava a variedade de soluções de pagamento possíveis por outros comerciantes ou desenvolvedores que não estão associados a MNOs. No Windows 10 Mobile, apresentamos uma nova tecnologia de emulação de cartão, chamada emulação de cartão Host (HCE). A tecnologia HCE permite que seu aplicativo se comunique diretamente com um leitor de cartão NFC. Este tópico ilustra como a emulação de cartão de Host (HCE) funciona em dispositivos Windows 10 Mobile e como você pode desenvolver um aplicativo HCE para que os clientes possam acessar seus serviços pelo telefone, em vez de um cartão físico sem colaborar com uma MNO. |
+| [Criar um aplicativo de cartão inteligente NFC](host-card-emulation.md) | O Windows Phone 8.1 dava suporte a aplicativos de emulação de cartão NFC usando um elemento seguro baseado em SIM, mas esse modelo exigia que aplicativos de pagamento seguro estivessem rigidamente acoplados a MNO (operadoras de rede móvel). Isso limitava a variedade de soluções de pagamento possíveis por outros comerciantes ou desenvolvedores que não estão associados a MNOs. No Windows 10 Mobile, apresentamos uma nova tecnologia de emulação de cartão, chamada emulação de cartão Host (HCE). A tecnologia HCE permite que seu aplicativo se comunique diretamente com um leitor de cartão NFC. Este tópico ilustra como a emulação de cartão de Host (HCE) funciona em dispositivos Windows 10 Mobile e como você pode desenvolver um aplicativo HCE para que os clientes possam acessar seus serviços de telefone, em vez de um cartão físico sem colaborar com uma MNO. |
 | [Obter informações sobre a bateria](get-battery-info.md) | Saiba como obter informações detalhadas sobre a bateria usando APIs no namespace [<strong>Windows.Devices.Power</strong>](https://msdn.microsoft.com/library/windows/apps/Dn895017). |
 

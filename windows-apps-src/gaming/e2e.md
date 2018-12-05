@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
 ms.openlocfilehash: 58044fba24450c397ee58b1034429f2af8d23ed6
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459142"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8707888"
 ---
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
 
@@ -106,7 +106,7 @@ Ao longo deste guia, você encontrará links profundos para a documentação rel
 
 [Registrar uma conta de desenvolvedor no Partner Center](https://developer.microsoft.com/store/register) é a primeira etapa para publicar seu jogo do Windows. Com uma conta de desenvolvedor, você pode reservar o nome de seu jogo e enviar jogos gratuitos e pagos à Microsoft Store para todos os dispositivos Windows. Use sua conta de desenvolvedor para gerenciar seu jogo e produtos no jogo, obter análises detalhadas e habilitar serviços que criam ótimas experiências para jogadores do mundo inteiro. 
 
-A Microsoft também oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. É recomendável verificar se algum deles serve para você antes de criar uma conta do Partner Center. Para obter mais informações, acesse [Programas de desenvolvedor](#developer-programs).
+A Microsoft também oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. É recomendável verificar se algum deles serve para você antes de registrar uma conta do Partner Center. Para obter mais informações, acesse [Programas de desenvolvedor](#developer-programs).
 
 
 ### <a name="developer-programs"></a>Programas de desenvolvedor
@@ -245,7 +245,7 @@ Os fóruns de desenvolvedores são um ótimo lugar para fazer e responder pergun
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Fóruns de desenvolvedores de aplicativos e jogos publicação</td>
+        <td>Fóruns de desenvolvedores de aplicativos e jogos de publicação</td>
         <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">Anúncios em apps e publicação</a></td>
     </tr>
     <tr>
@@ -578,7 +578,7 @@ Com a Plataforma Universal do Windows, é fácil combinar componentes criados em
 
 ### <a name="which-version-of-directx-should-your-game-use"></a>Que versão do DirectX seu jogo deve usar?
 
-Se você escolher o DirectX para seu jogo, você precisará decidir qual versão usar: Microsoft Direct3D12 ou Microsoft Direct3D11.
+Se você escolher o DirectX para seu jogo, você precisará decidir qual versão usar: Microsoft Direct3D12 ou Direct3D11 Microsoft.
 
 O DirectX 12 é mais rápido e mais eficiente do que qualquer versão anterior. O Direct3D 12 proporciona cenas mais detalhadas, mais objetos, efeitos mais complexos e a utilização completa de hardware de GPU moderno nos computadores do Windows 10 e Xbox One. Como Direct3D 12 funciona em um nível muito baixo, é possível dar a uma equipe de desenvolvimento de elementos gráficos especializada ou a uma equipe de desenvolvimento com o DirectX 11 experiente o controle que precisam para maximizar a otimização dos elementos gráficos.
 
@@ -1356,9 +1356,9 @@ Um bloco é a representação de seu jogo no menu Iniciar. Os blocos e notifica�
 </table>
  
 
-### <a name="enable-in-app-product-add-on-purchases"></a>Habilitar compras de produtos no aplicativo (complemento)
+### <a name="enable-in-app-product-add-on-purchases"></a>Habilitar compras de produto no aplicativo (complemento)
 
-Um complemento (produto no aplicativo) é um item suplementar que os jogadores podem comprar no jogo. Complementos podem ser níveis de jogos, itens ou qualquer outra coisa que os jogadores podem aproveitar. Usados adequadamente, complementos podem gerar receita e ainda melhorar a experiência do jogo. Definir e publicar complementos do seu jogo por meio do Partner Center e habilitar compras no aplicativo no código do jogo.
+Um complemento (produto no aplicativo) é um item suplementar que os jogadores podem comprar no jogo. Complementos podem ser níveis de jogo, itens ou qualquer outra coisa que os jogadores podem aproveitar. Usados adequadamente, complementos podem gerar receita e ainda melhorar a experiência do jogo. Definir e publicar os complementos do seu jogo por meio do Partner Center e habilitar compras no aplicativo no código do jogo.
 
 <table>
     <colgroup>
@@ -1378,7 +1378,7 @@ Um complemento (produto no aplicativo) é um item suplementar que os jogadores p
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148551">Envios de complemento</a></td>
     </tr>
     <tr>
-        <td>Monitorar vendas de complemento e dados demográficos para seu jogo</td>
+        <td>Monitorar vendas complemento e dados demográficos para seu jogo</td>
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148538">Relatório de aquisições de complemento</a></td>
     </tr>
 </table>
@@ -1570,7 +1570,7 @@ Você usará o [Partner Center](https://partner.microsoft.com/dashboard) para pu
     </colgroup>
     <tr>
         <td>Saiba como usar instalação de streaming e pacotes opcionais (vídeo)</td>
-        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">Distribuição de aplicativos UWP Nextgen: Criando componentizedapps extensível, fluxo capaz</a></td>
+        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">Distribuição de aplicativos UWP Nextgen: Criando extensível, fluxo capaz componentizedapps</a></td>
     </tr>
     <tr>
         <td>Divida e agrupe o conteúdo para habilitar instalação de streaming</td>
@@ -1652,7 +1652,7 @@ O manifesto da loja (StoreManifest.xml) é um arquivo de configuração opcional
 
 Quando você termina o desenvolvimento e envia seu jogo, não é "fim de jogo". Você pode ter terminado o desenvolvimento da primeira versão, mas a jornada de seu jogo no mercado está apenas começando. Você pode monitorar o uso e os relatórios de erros, responder aos comentários dos usuários e publicar atualizações para seu jogo.
 
-### <a name="partner-center-analytics-and-promotion"></a>Análises e promoções do partner Center
+### <a name="partner-center-analytics-and-promotion"></a>Promoção e análise do partner Center
 
 <table>
     <colgroup>

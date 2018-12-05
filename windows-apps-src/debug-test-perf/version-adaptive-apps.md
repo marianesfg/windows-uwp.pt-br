@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 435bbdbfaaf1bec90fa1ee2d598b4a3fe78d3789
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8487178"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8707736"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicativos adaptáveis de versão: use as novas APIs e mantenha a compatibilidade com versões anteriores
 
@@ -60,7 +60,7 @@ Para referência, a tabela a seguir mostra os números de compilação para cada
 
 Você pode baixar qualquer versão do SDK do [arquivo de emulador e do SDK do Windows](https://developer.microsoft.com/downloads/sdk-archive). Você pode baixar o SDK mais recente do Windows Insider Preview na seção de desenvolvedor do site [Participante do Insider Program](https://insider.windows.com/Home/BuildWithWindows).
 
- Para obter mais informações sobre atualizações do Windows 10, consulte as [informações de versão do Windows 10](https://technet.microsoft.com/windows/release-info). Para obter informações importantes sobre o Windows 10 do ciclo de vida de suporte, consulte a [planilha de fato de ciclo de vida do Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+ Para obter mais informações sobre atualizações do Windows 10, consulte as [informações de versão do Windows 10](https://technet.microsoft.com/windows/release-info). Para obter informações importantes sobre o Windows 10 do ciclo de vida de suporte, consulte a [folha de fatos de ciclo de vida do Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 ## <a name="perform-api-checks"></a>Executar verificações de API
 

@@ -9,11 +9,11 @@ ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4b9b5f08be695d803e9254e5801ac63b2889e1c9
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465415"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8707258"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empacotar um aplicativo da área de trabalho manualmente
 
@@ -118,7 +118,7 @@ Para aplicativos da área de trabalho que você cria um pacote para, sempre defi
 ```
 
 ### <a name="capabilities"></a>Funcionalidades
-Para aplicativos da área de trabalho que você cria um pacote para, você precisará adicionar o ``runFullTrust`` funcionalidade.
+Para aplicativos da área de trabalho que você cria um pacote para, você terá de adicionar o ``runFullTrust`` funcionalidade.
 
 ```XML
 <Capabilities>
@@ -174,7 +174,7 @@ Os ativos baseados no destino são para ícones e blocos que aparecem na barra d
 
 ### <a name="generate-a-package-resource-index-pri-file"></a>Gerar um arquivo PRI (Índice de Recurso do Pacote)
 
-Se você cria ativos baseados no destino conforme descrito na seção acima ou modificar qualquer um dos recursos visuais do seu aplicativo depois de criar o pacote, você precisará gerar um novo arquivo PRI.
+Se você criar ativos baseados no destino, conforme descrito na seção acima ou modificar qualquer um dos recursos visuais do seu aplicativo depois de criar o pacote, você precisará gerar um novo arquivo PRI.
 
 1.  Abra um **Prompt de comando de desenvolvedor para o VS 2017**.
 
@@ -205,7 +205,7 @@ Você pode executar seu aplicativo para testá-lo localmente sem precisar obter 
 Para atualizar os arquivos .exe ou .dll do seu aplicativo, substitua os arquivos existentes em seu pacote pelos novos, aumente o número de versão em AppxManifest.xml e, em seguida, execute o comando acima novamente.
 
 > [!NOTE]
-> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade em que você instale seu aplicativo empacotado para deve estar formatada no formato NTFS.
+> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade em que você instale seu aplicativo empacotado para deve ser formatada para o formato NTFS.
 
 ## <a name="next-steps"></a>Próximas etapas
 

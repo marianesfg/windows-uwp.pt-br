@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 55c4347b85d94d183d44599f7d34bc750d34d181
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464818"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8709228"
 ---
 # <a name="porting-windowsphone-silverlight-projects-to-uwp-projects"></a>Portando projetos WindowsPhone Silverlight para projetos UWP
 
@@ -67,7 +67,7 @@ Você descobrirá que refatorar um pouco, e/ou adicionar código adaptável (que
 
 ## <a name="conditional-compilation-and-adaptive-code"></a>Compilação condicional e código adaptável
 
-Se você quiser dar suporte ao WindowsPhone Silverlight e Windows 10 em um único arquivo de código, em seguida, você pode fazer isso. Se você examinar o projeto do Windows 10 as páginas de propriedades do projeto, você verá que o projeto define WINDOWS\_UAP como um símbolo de compilação condicional. Em geral, você pode usar a lógica a seguir para realizar uma compilação condicional.
+Se você quiser dar suporte ao WindowsPhone Silverlight e Windows 10 em um único arquivo de código, em seguida, você pode fazer isso. Se você examinar o projeto do Windows 10 páginas de propriedades do projeto, você verá que o projeto define WINDOWS\_UAP como um símbolo de compilação condicional. Em geral, você pode usar a lógica a seguir para realizar uma compilação condicional.
 
 ```csharp
 #if WINDOWS_UAP

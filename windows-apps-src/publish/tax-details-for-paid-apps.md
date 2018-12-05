@@ -6,12 +6,12 @@ ms.date: 11/20/2018
 ms.topic: article
 keywords: windows 10, uwp, impostos, impostos do aplicativo, requisitos fiscais, expansão do comércio, taxa de imposto
 ms.localizationpriority: medium
-ms.openlocfilehash: 60bf36e8e5e07c73e8c59088be167e9dfb584c60
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.openlocfilehash: 2065fb2a1cfeb2a895757e1aedc86cd421ff826c
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8480028"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8709864"
 ---
 # <a name="tax-details-for-paid-apps"></a>Detalhes de impostos para aplicativos pagos
 
@@ -19,7 +19,7 @@ ms.locfileid: "8480028"
 Para entender suas considerações fiscais para seleção de preço, implicações de pagamento e responsabilidade fiscal, veja seus países/regiões de distribuição nas tabelas abaixo.
 
 > [!NOTE]
-> O Ajuste de Expansão do Comércio pode ter implicações de pagamento em um conjunto limitado de países/regiões. Para obter detalhes adicionais sobre o Ajuste de Expansão do Comércio e os mercados ao qual se aplica, consulte o [Contrato do Desenvolvedor de Aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e a lista de [países/regiões afetados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
+> O Ajuste de Expansão do Comércio pode ter implicações de pagamento em um conjunto limitado de países/regiões. Para obter detalhes adicionais sobre o Ajuste de Expansão do Comércio e os mercados ao qual se aplica, consulte o [Contrato do Desenvolvedor de Aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e a lista de [países/regiões afetados](define-market-selection.md#price-considerations-for-specific-markets).
 
 > [!IMPORTANT]
 > Taxas de imposto estão sujeitas à alteração a qualquer momento. A Microsoft não poderá garantir que as taxas nas tabelas acima serão sempre precisas.

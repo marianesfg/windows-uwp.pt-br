@@ -3,11 +3,11 @@ title: Referência de API de marcas SSH do Portal de Dispositivos
 description: Saiba como remover todas as marcas SSH confiáveis de maneira programática.
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ddf15d3cdb4089a8ef010a4ae46d247a06a10d7
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8478013"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8705230"
 ---
 # <a name="ssh-pins-api-reference"></a>Referência de API de marcas SSH
 Você pode remover todas as marcas SSH confiáveis em seu kit de desenvolvimento usando essa API REST.

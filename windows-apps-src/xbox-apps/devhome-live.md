@@ -8,16 +8,16 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-live.html
 ms.localizationpriority: medium
 ms.openlocfilehash: c72137b8419526b65dc3c6cb75a511a7a6f50a82
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464126"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8711844"
 ---
 # <a name="xbox-live-page-dev-home"></a>Página (Dev Home) do Xbox Live
    
   
-A página **Do Xbox Live** de Dev Home captura informações multijogador e exibe o status atual do serviço Xbox Live.   
+A página de início do desenvolvimento **Do Xbox Live** captura informações multijogador e exibe o status atual do serviço Xbox Live.   
  ![Página do Xbox Live de Dev Home](images/devhome_live.png)   
   
 A página **Do Xbox Live** contém os seguintes painéis:   

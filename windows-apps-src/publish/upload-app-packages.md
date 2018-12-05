@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, pacotes, carregamento, carregamento de pacote
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a77cb67891b3cfcb814e66fd14db9e79a0bff1c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460611"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706446"
 ---
 # <a name="upload-app-packages"></a>Carregue os pacotes do aplicativo
 
@@ -20,7 +20,7 @@ A página **pacotes** é onde você carrega todos os arquivos de pacote (.msix, 
 > [!IMPORTANT]
 > A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir pacotes que segmentem 8.x/Windows do Windows Phone 8. x ou anterior. Para obter mais informações, consulte esta [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
-Para obter detalhes sobre o que um pacote inclui e como ele deve ser estruturado, veja [Requisitos do pacote do aplicativo](app-package-requirements.md). Você também vai querer saber mais sobre [como os números de versão afetar quais pacotes são entregues aos clientes específicos](package-version-numbering.md) e [como gerenciar pacotes para vários cenários](guidance-for-app-package-management.md).
+Para obter detalhes sobre o que um pacote inclui e como ele deve ser estruturado, veja [Requisitos do pacote do aplicativo](app-package-requirements.md). Você também vai querer saber mais sobre [como gerenciar pacotes para vários cenários](guidance-for-app-package-management.md)e [como os números de versão afetar quais pacotes são entregues a clientes específicos](package-version-numbering.md) .
 
 
 ## <a name="uploading-packages-to-your-submission"></a>Carregando pacotes para seu envio

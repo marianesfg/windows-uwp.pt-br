@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e212e16039d49e3ffd08aa5886d48c61ee24e9e
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.openlocfilehash: 78d825adf023b3c27ba6535f4cfdcc3a99be2d6c
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8479565"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8710546"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
@@ -139,7 +139,7 @@ A tabela a seguir lista as outras redes atualmente com suporte para cada tipo de
 
 ### <a name="supported-markets-for-ad-networks"></a>Mercados com suporte para redes de publicidade
 
-As redes de publicidade disponíveis veiculam anúncios em todos os [mercados com suporte](define-pricing-and-market-selection.md#microsoft-store-consumer-markets), com as seguintes exceções.
+As redes de publicidade disponíveis veiculam anúncios em todos os [mercados com suporte](define-market-selection.md#microsoft-store-consumer-markets), com as seguintes exceções.
 
 |  Rede de publicidade  |  Mercados com suporte  |
 |--------------|---------------------|

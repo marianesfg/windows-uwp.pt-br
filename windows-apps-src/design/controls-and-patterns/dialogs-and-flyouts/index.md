@@ -12,11 +12,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 2d5635a41bec716487c08dd57e6ba2ac360649ad
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465150"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706817"
 ---
 # <a name="dialogs-and-flyouts"></a>Caixas de diálogo e submenus
 
@@ -96,7 +96,7 @@ Consulte o [artigo de caixas de diálogo](dialogs.md).
 
 ## <a name="how-to-create-a-flyout"></a>Como criar um submenu
 
-Consulte o [artigo de submenu](flyouts.md). 
+Consulte o [artigo do submenu](flyouts.md). 
 
 ## <a name="examples"></a>Exemplos
 
