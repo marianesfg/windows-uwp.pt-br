@@ -1,17 +1,17 @@
 ---
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Testes do Kit de Certificação de Aplicativos Windows
-description: O Kit de certificação de aplicativo do Windows contém diversos testes que podem ajudar a garantir que seu aplicativo está pronto para ser publicado na Microsoft Store.
+description: O Kit de certificação de aplicativo do Windows contém diversos testes que podem ajudar a garantir que seu aplicativo esteja pronto para ser publicado na Microsoft Store.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 55c11232847e2e7aa4827da0e3816f0cc34e9bed
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463608"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8757969"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Testes do Kit de Certificação de Aplicativos Windows
 
@@ -304,7 +304,7 @@ Teste o aplicativo em relação ao uso de quaisquer APIs não compatíveis.
 
 ### <a name="background"></a>Histórico
 
-Aplicativos devem usar as APIs para aplicativos UWP (tempo de execução do Windows ou APIs do Win32 com suporte) para ser certificados para a Microsoft Store. Esse teste também identifica as situações em que um binário gerenciado depende de uma função fora do perfil aprovado.
+Os aplicativos devem usar as APIs para aplicativos UWP (tempo de execução do Windows ou APIs do Win32 com suporte) para ser certificados para a Microsoft Store. Esse teste também identifica as situações em que um binário gerenciado depende de uma função fora do perfil aprovado.
 
 ### <a name="test-details"></a>Detalhes do teste
 
@@ -317,7 +317,7 @@ Verifique se o aplicativo foi compilado como uma compilação de versão e não 
 
 > **Observação**a compilação de depuração de um aplicativo falhará nesse teste mesmo se o aplicativo usa [APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-Examine as mensagens de erro para identificar a API os usos de aplicativo que não é uma [API para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
+Examine as mensagens de erro para identificar a API usa o aplicativo que não é uma [API para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
 > **Observação**aplicativos C++ integrados em uma configuração de depuração falhará neste teste mesmo se a configuração usar somente APIs do SDK do Windows para aplicativos UWP. Consulte, [alternativas às APIs do Windows em aplicativos UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obter mais informações.
 
@@ -533,7 +533,7 @@ Testa aplicativos Microsoft Direct3D para garantir que funcionam em todos os dis
 
 ### <a name="background"></a>Histórico
 
-Microsoft Store exige todos os aplicativos que usam Direct3D sejam renderizados apropriadamente ou não funcionem em placas de nível 9 \-1 gráfico do recurso.
+Microsoft Store exige que todos os aplicativos usando o Direct3D sejam renderizados apropriadamente ou não funcionem em placas de nível 9 \-1 gráfico do recurso.
 
 Como os usuários podem alterar o hardware gráfico de seus dispositivos depois que o aplicativo for instalado, se você escolher um nível mínimo de recursos maior que 9\-1, o aplicativo deverá detectar durante a inicialização se o hardware atual atende ou não aos requisitos mínimos. Se os requisitos mínimos não forem atendidos, o aplicativo deverá exibir uma mensagem para o usuário detalhando os requisitos do Direct3D. Além disso, se um aplicativo for baixado em um dispositivo com o qual ele não é compatível, ele deverá detectar isso na inicialização e exibir uma mensagem para o cliente detalhando os requisitos.
 
