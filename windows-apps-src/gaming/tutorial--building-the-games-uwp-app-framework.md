@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 16af4bcabbc21c60a5dc0006da51f5bd23eef791
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464703"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8756480"
 ---
 #  <a name="define-the-uwp-app-framework"></a>Definir a estrutura do aplicativo UWP
 
@@ -384,7 +384,7 @@ void GameMain::Run()
 
 Quando o usuário encerra, por fim, a sessão de jogo, é necessário limpar tudo. Esta é a origem da propriedade **Uninitialize**.
 
-No Windows 10, fechamento da janela do aplicativo não interromper o processo do aplicativo, mas em vez disso, ele grava o estado do singleton do aplicativo na memória. Se for necessário que ocorra algo especial quando o sistema precisar usar essa memória, incluindo algum tipo de limpeza especial de recursos, insira o código da limpeza nesse método.
+No Windows 10, o fechamento da janela do aplicativo não interromper o processo do aplicativo, mas em vez disso, ele grava o estado do singleton do aplicativo na memória. Se for necessário que ocorra algo especial quando o sistema precisar usar essa memória, incluindo algum tipo de limpeza especial de recursos, insira o código da limpeza nesse método.
 
 ### <a name="app-uninitialize"></a>App:: Uninitialize
 

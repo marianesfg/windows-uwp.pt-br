@@ -12,11 +12,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 6079ea8ca844efc912b970c00c6907d98378dd07
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459520"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8748893"
 ---
 # <a name="create-write-and-read-a-file"></a>Criar, gravar e ler um arquivo
 
@@ -116,7 +116,7 @@ Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 
 **Gravando texto em um arquivo**
 
-Grave texto no seu arquivo chamando o método [**FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) .
+Grave texto em seu arquivo chamando o método [**FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) .
 
 ```csharp
 await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow");
@@ -150,7 +150,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
 
 **Gravando bytes em um arquivo usando um buffer (2 etapas)**
 
-1.  Primeiro, chame [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) para obter um buffer dos bytes (com base em uma cadeia de caracteres) que você deseja gravar no seu arquivo.
+1.  Primeiro, chame [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) para obter um buffer dos bytes (com base em uma cadeia de caracteres) que você deseja gravar em seu arquivo.
 
 ```csharp
 var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(
@@ -254,7 +254,7 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Dim stream = Await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite)
 ```
 
-2.  Em seguida, obtenha um fluxo de saída chamando o método [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) do `stream`. Se você estiver usando c#, em seguida, coloque isso em uma instrução **using** para gerenciar o ciclo de vida do fluxo de saída. Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, você pode controlar seu tempo de vida envolve em um bloco ou defini-lo como `nullptr` quando terminar com ele.
+2.  Em seguida, obtenha um fluxo de saída chamando o método [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) do `stream`. Se você estiver usando c#, coloque isso em uma instrução **using** para gerenciar o tempo de vida do fluxo de saída. Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, você pode controlar seu tempo de vida envolve em um bloco ou defini-lo como `nullptr` quando terminar com ele.
 
 ```csharp
 using (var outputStream = stream.GetOutputStreamAt(0))
@@ -361,7 +361,7 @@ Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 
 **Lendo texto de um arquivo**
 
-Leia texto do seu arquivo chamando o método [**FileIO.ReadTextAsync**](/uwp/api/windows.storage.fileio.readtextasync) .
+Leia o texto do seu arquivo chamando o método [**FileIO.ReadTextAsync**](/uwp/api/windows.storage.fileio.readtextasync) .
 
 ```csharp
 string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
