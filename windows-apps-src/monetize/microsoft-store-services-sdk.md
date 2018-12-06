@@ -6,12 +6,12 @@ ms.date: 08/21/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: 8394a1a44173541e8982a660591e84b25b985205
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.openlocfilehash: c0c283f9edd33b8c39ebccd0a71019741a0d1448
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8696133"
+ms.locfileid: "8755292"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Envolver os clientes com o Microsoft Store Services SDK
 
@@ -99,7 +99,7 @@ Para instalar as bibliotecas de SDK da Microsoft Store Services por meio do NuGe
 
 5. Na caixa de pesquisa, digite **Microsoft.Services.Store.Engagement** e instale o pacote Microsoft.Services.Store.Engagement. Quando terminar a instalação do pacote, salve sua solução.
     > [!NOTE]
-    > Se a janela **Saída** relatar um erro *Pacote-Instalação* que indica que o caminho especificado é muito longo, talvez seja necessário configurar o NuGet para extrair pacotes em um local alternativo com um caminho mais curto do que o local padrão. Para fazer isso, adicione o valor ```repositoryPath``` a um arquivo nuget.config em seu computador e o atribua a um caminho de pasta curto onde os pacotes NuGet possam ser extraídos. Para obter mais informações, consulte [este artigo](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) na documentação do NuGet. Você também pode tentar mover seu projeto do Visual Studio para uma pasta alternativa com um caminho mais curto.
+    > Se a janela **Saída** relatar um erro *Pacote-Instalação* que indica que o caminho especificado é muito longo, talvez seja necessário configurar o NuGet para extrair pacotes em um local alternativo com um caminho mais curto do que o local padrão. Para fazer isso, adicione o valor ```repositoryPath``` a um arquivo nuget.config em seu computador e o atribua a um caminho de pasta curto onde os pacotes NuGet possam ser extraídos. Para obter mais informações, consulte [este artigo](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) na documentação do NuGet. Você também pode tentar mover seu projeto do Visual Studio para uma pasta alternativa com um caminho mais curto. O problema também pode ser causado por seu caminho de pacotes global que está sendo muito longo. Nesse caso, adicione o ```globalPackagesFolder``` valor em seu arquivo config.
 
 6. Feche a solução do Visual Studio que contém seu projeto e, em seguida, reabra a solução.
 
