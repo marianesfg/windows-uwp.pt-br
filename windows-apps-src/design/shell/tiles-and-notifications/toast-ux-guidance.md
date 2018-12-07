@@ -7,12 +7,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, uwp, notificação, coleção, grupo, experiência do usuário, diretrizes de experiência do usuário, diretrizes, ação, notificação do sistema, Central de ações, noninterruptive, notificações efetivas, não intrusivos notificações, acionáveis, gerenciar, organizar
 ms.localizationpriority: medium
-ms.openlocfilehash: 17861760ea5640eca01d3e69c1ed36a023c8f9d3
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 878df85db9ab0e33db06a86ddb726f07dc28f013
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8729704"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8789070"
 ---
 # <a name="toast-notification-ux-guidance"></a>Diretrizes de experiência do usuário de notificação do sistema
 As notificações são uma parte fundamental da vida moderna; elas ajudam os usuários a ser mais produtivo e estabelecido com sites e aplicativos, bem como mantenha atualizado com as atualizações. No entanto, as notificações podem rapidamente ativem útil opressivas e intrusivo se eles não são projetados de maneira centrada no usuário. As notificações são um botão direito do mouse para longe sendo desativado e é improvável depois que eles estão desativados, eles serão ativados novamente.  Portanto, verifique se que as notificações estejam respeita espaço na tela do usuário e a hora, portanto, você pode manter esse canal envolvimento aberto.
@@ -33,14 +33,15 @@ Acima é um exemplo de uma notificação que aproveita a ações. A sensação d
 * Concluir ordens usando [atualização pendente](toast-pending-update.md)
 * Definir lembretes ou alertas para outro momento, bem como reserva potencialmente hora no calendário
 
-as notificações ctionable são uma ferramenta poderosa muito para ajudar os usuários a se sentir produtivo, realizar tarefas e ter uma experiência excelente e eficiente com seu aplicativo ou site.  Há muitas oportunidades aqui! Se você quiser ajuda debates ideias, fique à vontade para entrar em contato com a equipe de notificações do windows.  Você 
+Notificações acionáveis são uma ferramenta poderosa muito para ajudar os usuários a se sentir produtivo, realizar tarefas e ter uma experiência excelente e eficiente com seu aplicativo ou site.  Há muitas oportunidades aqui! Se você quiser ajuda debates ideias, fique à vontade para entrar em contato com a equipe de notificações do windows.
 
 ## <a name="2-timing-and-urgency"></a>2. tempo e urgência
 Ao contrário das como consideramos geralmente sobre notificações, em tempo real não é necessariamente melhor! Solicitamos que os desenvolvedores pense sobre o usuário e se a notificação estão enviando é urgentes ou não. Os usuários podem ser facilmente sobrecarregados com muitas informações e frustrado se eles estão sendo interrompidos enquanto eles estão tentando foco. O Windows fornece algumas opções como considerar o intrusiveness que estiver enviando notificações:
 
 **Notificações brutas:** Usar [as notificações brutas](raw-notification-overview.md) pode ser benéfico por várias razões, especialmente quando se trata ou minimizar interrupções para o usuário.  Enviar notificações brutas serão despertar seu aplicativo em segundo plano, portanto, você pode avaliar se a notificação faz sentido para entregar imediatamente no contexto do seu aplicativo. Se é algo sentir deve ser mostrada ao usuário imediatamente, você é capaz de exibir uma [notificação do sistema local](send-local-toast.md) a partir daí.  Se isso é algo que o usuário não precisa ver agora, você é capaz de criar uma [notificação do sistema agendada](https://blogs.msdn.microsoft.com/tiles_and_toasts/2016/09/30/quickstart-sending-an-alarm-in-windows-10/) que será acionado em um momento posterior.
 
-**Fantasma do sistema:** você também pode acionar uma notificação que irá ignorar estão aparecendo no canto inferior direito da tela e, em vez disso, enviar a notificação diretamente para a Central de ações. Isso é feito, definindo a [propriedade SuppressPopup](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification.suppresspopup) como True. Embora possa haver alguns ceticismo em torno de não enviar notificações fora da Central de ações, podemos ver um 2-3 vezes maiores envolvimento para notificações do sistema que residem na Central de ações ao longo do sistema ser exibido.  Os usuários são mais responsivos quando estiver prontos para receber notificações e pode controlar quando eles forem interrompidos, que é o motivo pelo qual o conteúdo na Central de ações pode ser muito mais eficiente para noninvasively notificar os usuários.
+
+**Fantasma do sistema:** você também pode acionar uma notificação que irá ignorar estão aparecendo no canto inferior direito da tela e, em vez disso, enviar a notificação diretamente para a Central de ações. Isso é feito, definindo a [propriedade SupressPopup](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification.suppresspopup) como True. Embora possa haver alguns ceticismo em torno de não enviar notificações fora da Central de ações, podemos ver um 2-3 vezes maiores envolvimento para notificações do sistema que residem na Central de ações ao longo do sistema ser exibido.  Os usuários são mais responsivos quando estiver prontos para receber notificações e pode controlar quando eles forem interrompidos, que é o motivo pelo qual o conteúdo na Central de ações pode ser muito mais eficiente para noninvasively notificar os usuários.
 
 ## <a name="3-clear-out-the-clutter"></a>3. clear-out a confusão
 As notificações podem persistir na Central de ações para um tempo considerável (padrão três dias).  É fundamental que você se certifique de que o conteúdo que fica aqui é relevante e atualizado sempre que o usuário abrir a Central de ações. Você está ocupando espaço de tela do usuário e ocupando slots que podem ser usados para algo mais atualizado.  Digamos que o usuário instala o aplicativo de gerenciamento de e-mail e recebe dez emails e dez notificações juntamente com esses emails.  Dependendo de sua experiência desejada, você pode considerar limpar essas notificações se o usuário tem ler o email correspondente, ou abrir o aplicativo como uma forma de eliminar a desorganização antiga na Central de ações.
@@ -52,7 +53,7 @@ Como mencionado anteriormente, o conteúdo na Central de ações persistir por t
 
 ![Exemplos de notificação do sistema com cabeçalhos rotulada 'No'!!](images/toast-headers-action-center.png)
 
-Ambas essas notificações gorup de uma maneira para que o conteúdo relevante permanece juntos (isto é, pense separando ligas esportes diferentes em um aplicativo de esportes ou classificando mensagens por bate-papo de grupo). Coleções são uma maneira mais óbvia para notificações de grupo, enquanto cabeçalhos são mais sutis, mas ambas permitem que os usuários façam triagem e escolha as notificações mais rapidamente. 
+Essas notificações de uma forma de grupo para que o conteúdo relevante permanece juntos (isto é, pense separando ligas esportes diferentes em um aplicativo de esportes ou classificando mensagens por bate-papo de grupo). Coleções são uma maneira mais óbvia para notificações de grupo, enquanto cabeçalhos são mais sutis, mas ambas permitem que os usuários façam triagem e escolha as notificações mais rapidamente.
 
 ## <a name="other-resources"></a>Outros recursos
 Esses quatro pontos acima são diretrizes que consideramos eficientes através de nosso próprio análise de telemetria e primeiro e experimentos de terceiros. Tenha em mente, no entanto, que essas diretrizes são apenas: diretrizes.  Estamos confiantes essas regras ajuda a aumentar o envolvimento e a produtividade de suas notificações, mas nada pode substituir centrada no usuário pensando e aprendendo com seus próprios dados.  

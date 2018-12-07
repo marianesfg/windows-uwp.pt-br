@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
-ms.openlocfilehash: b58ba8122d5db6cb898c5e6258794960cdc1c1f9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: c85624cec36d3e782b0c97ad810062e9b817eb98
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8754244"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790183"
 ---
 # <a name="prepare-to-package-a-desktop-application"></a>Preparar para empacotar um aplicativo da área de trabalho
 
@@ -71,7 +71,7 @@ Este artigo lista as coisas que você precisa saber antes de empacotar seu aplic
     <tr><td>2015 e 2017 (VC 14)</td><td>Suportado</td><td>Com suporte</td>
     </table>
 
-    Observação: em todos os casos, você deve se vincular à última CRT publicamente disponível.
+    Observação: Em todos os casos, você deve vincular as últimas CRT publicamente disponível.
 
 + __Seu aplicativo instala e carrega os assemblies da pasta Windows lado a lado__. Por exemplo, seu aplicativo usa bibliotecas de tempo de execução C VC8 ou VC9 e está vinculando-as dinamicamente da pasta lado a lado do Windows, que significa que seu código está usando os arquivos DLL comuns de uma pasta compartilhada. Isso não tem suporte. Você precisará vinculá-las de forma estática vinculando-as aos arquivos da biblioteca redistribuível diretamente no código.
 
