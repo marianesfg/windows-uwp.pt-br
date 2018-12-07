@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, preço, disponível, detectável, avaliação gratuita, avaliações, avaliação, apps, data de lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: d5fa6c3e23516a5255f8bd3252f6ded233101625
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8737293"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786461"
 ---
 # <a name="set-app-pricing-and-availability"></a>Definir a disponibilidade e o preço do aplicativo
 

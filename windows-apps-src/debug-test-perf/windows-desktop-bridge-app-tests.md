@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: df80fda8cf8b8c2f33a8ed0155363141fc299655
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755142"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786026"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Testes de aplicativo da Ponte de Desktop Windows
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d8c33504fcc785aa2f1fc94796e47fe097fbea96
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744899"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8788151"
 ---
 # <a name="using-lights-in-windows-ui"></a>Uso de luzes na interface do usuário do Windows
 

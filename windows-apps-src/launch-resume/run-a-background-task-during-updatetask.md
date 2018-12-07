@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, atualização, tarefa em segundo plano, updatetask, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 8cd7d4494340d1c5e617361f2e3d750b35ebabb9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738453"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8788802"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>Executar uma tarefa em segundo plano quando o aplicativo UWP é atualizado
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 7169848084b587793ba1537ea3d6ad78d31892d5
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734539"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8806619"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de ponto de serviço reivindicar e habilitar o modelo
 

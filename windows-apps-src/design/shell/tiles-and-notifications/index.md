@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ea005dd33bbb5461921fa17eded8430d7648c87
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 8a87fe2bbff1768da43d6cb366b173077555270f
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8739444"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8789620"
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Blocos, selos e notificações para aplicativos UWP
  
@@ -42,7 +42,7 @@ Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo UWP
 | [Conteúdo do bloco](create-adaptive-tiles.md) | Conteúdo da notificação de bloco é especificado usando adaptável, um novo recurso no Windows 10, permitindo que você elabore seu próprio bloco conteúdo da notificação usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo da Plataforma Universal do Windows (UWP). |
 | [Esquema de conteúdo do bloco](../tiles-and-notifications/tile-schema.md) | Veja os elementos e os atributos que você usa para criar blocos adaptáveis. |
 | [Modelos de blocos especiais](special-tile-templates-catalog.md) | Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis. |
-| [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md) | Saiba como enviar uma notificação de bloco local, adicionando conteúdo dinâmico avançado ao Bloco Dinâmico. |
+| [Enviar notificação de bloco local](sending-a-local-tile-notification.md) | Saiba como enviar uma notificação de bloco local, adicionando conteúdo dinâmico avançado ao Bloco Dinâmico. |
 
 
 ## <a name="notifications"></a>Notificações

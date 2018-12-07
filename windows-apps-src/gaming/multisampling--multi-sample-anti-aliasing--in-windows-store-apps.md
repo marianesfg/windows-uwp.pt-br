@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, várias amostras, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c1634af8589a97f5070ff85909fe12ab16bf8d6
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8743350"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784544"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span>Multisampling nos apps UWP (Plataforma Universal do Windows)
 

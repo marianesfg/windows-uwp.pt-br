@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de aplicativo, status
 ms.localizationpriority: medium
 ms.openlocfilehash: 97070136f9e1f926a275185d2b4c222513aa49d7
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738642"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8788690"
 ---
 # <a name="get-the-status-of-an-app-submission"></a>Obter o status de um envio de aplicativo
 
