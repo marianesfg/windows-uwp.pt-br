@@ -7,11 +7,11 @@ keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pa
 ms.assetid: 4c82d837-7a25-4f3a-997e-b7be33b521cc
 ms.localizationpriority: medium
 ms.openlocfilehash: 172c750d370f8fd8822d78265a04e694bc958ddf
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8741924"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8808341"
 ---
 # <a name="update-the-rollout-percentage-for-an-app-submission"></a>Atualizar o percentual de distribuição para um envio de aplicativo
 

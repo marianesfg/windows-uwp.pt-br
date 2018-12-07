@@ -6,12 +6,12 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 674f5977a69855ff51cbc579ca66085aa133eb5b
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 11f9912abb954592cd2a467008cc427cac833f35
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734204"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783453"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar correções de tempo de execução em um pacote MSIX usando a estrutura de suporte do pacote
 
@@ -86,10 +86,10 @@ Vamos percorra cada tarefa.
 
 ### <a name="create-the-package-layout-folder"></a>Criar a pasta de layout do pacote
 
-Se já tiver um arquivo .msix (ou. AppX), você pode descompactar seu conteúdo em uma pasta de layout que servirá como a área de transferência para seu pacote. Você pode fazer isso em um prompt de comando usando a ferramenta makemsix, com base no seu caminho de instalação do SDK, isso é onde você encontrará a ferramenta makemsix.exe em seu computador Windows 10: x86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makemsix.exe x64: C:\Program Files ( x86) \Windows Kits\10\bin\x64\makemsix.exe
+Se já tiver um arquivo .msix (ou. AppX), você pode descompactar seu conteúdo em uma pasta de layout que servirá como a área de transferência para seu pacote. Você pode fazer isso em um prompt de comando usando a ferramenta makemsix, com base no seu caminho de instalação do SDK, isso é onde você encontrará a ferramenta makeappx.exe em seu computador Windows 10: x86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makeappx.exe x64: C:\Program Files ( x86) \Windows Kits\10\bin\x64\makeappx.exe
 
 ```ps
-makemsix unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
+makeappx unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
 
 ```
 
@@ -219,7 +219,7 @@ Usando o PowerShell, instale o pacote.
 > Lembre-se desinstala o pacote pela primeira vez.
 
 ```ps
-powershell Add-MSIXPackage .\PSFSamplePackageFixup.msix
+powershell Add-AppPackage .\PSFSamplePackageFixup.msix
 ```
 
 Execute o aplicativo e observar o comportamento com aplicado de correção de tempo de execução.  Repita o diagnóstico e etapas de empacotamento conforme necessário.

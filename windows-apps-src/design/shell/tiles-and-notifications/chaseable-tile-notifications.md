@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, blocos rastreáveis, blocos dinâmicos, notificações de bloco rastreáveis
 ms.localizationpriority: medium
 ms.openlocfilehash: 90a43ad803ca4cfe4a7403117c268344d1192d74
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755657"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8806552"
 ---
 # <a name="chaseable-tile-notifications"></a>Notificações de blocos rastreáveis
 

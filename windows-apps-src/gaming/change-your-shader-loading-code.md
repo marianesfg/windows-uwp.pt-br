@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, opengl, direct3d, pipeline do sombreador
 ms.localizationpriority: medium
 ms.openlocfilehash: f02b365175909b5038e5eb117f12851be9f14e3a
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738850"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783923"
 ---
 # <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>Comparar o pipeline do sombreador do OpenGL ES 2.0 com Direct3D
 

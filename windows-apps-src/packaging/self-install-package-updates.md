@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e73452cdcb02798d4ebd225b48272ab77c40fef9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8733068"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786667"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Baixar e instalar atualizações de pacote a partir da Store
 

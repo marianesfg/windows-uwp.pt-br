@@ -4,17 +4,17 @@ description: A partir do .NET Framework 4.5, é possível usar código gerenciad
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
 ms.date: 12/04/2018
 ms.topic: article
-keywords: windows 10, uwp
-ms.localizationpriority: medium
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 7dde2fb0411686294ebb8abc17192b2e45c61d7a
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+keywords: windows 10, uwp
+ms.localizationpriority: medium
+ms.openlocfilehash: b4f5a2de5c3fa5564b4e4389cfc0806fd5d2844f
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736491"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8807078"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Criando componentes do Windows Runtime em C# e Visual Basic
 Começando com o .NET Framework 4.5, você pode usar código gerenciado para criar seus próprios tipos de tempo de execução do Windows e empacotá-las em um componente do tempo de execução do Windows. Você pode usar o componente em aplicativos da plataforma Universal do Windows (UWP) que são escritos em C++, JavaScript, Visual Basic ou c#. Este tópico descreve as regras para a criação de um componente e descreve alguns aspectos do suporte do .NET Framework para o Windows Runtime. Em geral, esse suporte foi projetado para ser transparente para o programador do .NET Framework. No entanto, ao criar um componente a ser usado com JavaScript ou C++, você precisa estar ciente das diferenças na maneira como essas linguagens dão suporte ao Windows Runtime.

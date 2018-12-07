@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c018c890f8fcab2cb0c778c8c91840911f158c9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8754776"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8800680"
 ---
 # <a name="windows-runtime-components"></a>Componentes do Tempo de Execução do Windows
 Os componentes do Tempo de Execução do Windows são objetos independentes para os quais você pode criar uma instância e usar em qualquer linguagem, incluindo C#, Visual Basic, JavaScript e C++.
