@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: windows 10, uwp, ouvinte de notificação, usernotificationlistener, documentação, notificações de acesso
 ms.localizationpriority: medium
-ms.openlocfilehash: ad17f4a6f568bcd10d03d7fa07c9dadd24f2f75f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: de1032eb3d0d364a62beff0a1af8f84240c11d87
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755272"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8807458"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Ouvinte de notificação: acessar todas as notificações
 
@@ -91,7 +91,7 @@ switch (accessStatus)
 }
 ```
 
-O usuário pode revogar o acesso a qualquer momento por meio das Configurações do Windows. Portanto, o app sempre deve verificar o status do acesso por meio do método [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) antes de executar o código que usa o ouvinte de notificação. Se o usuário revogar o acesso, as APIs apresentarão uma falha silenciosa, em vez de gerar uma exceção (por exemplo, a API que retornará todas as notificações simplesmente retornará uma lista vazia).
+O usuário pode revogar o acesso a qualquer momento por meio das Configurações do Windows. Portanto, seu aplicativo sempre deve verificar o status do acesso por meio do método [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) antes de executar o código que usa o ouvinte de notificação. Se o usuário revogar o acesso, as APIs apresentarão uma falha silenciosa, em vez de gerar uma exceção (por exemplo, a API que retornará todas as notificações simplesmente retornará uma lista vazia).
 
 
 ## <a name="access-the-users-notifications"></a>Acessar as notificações do usuário
