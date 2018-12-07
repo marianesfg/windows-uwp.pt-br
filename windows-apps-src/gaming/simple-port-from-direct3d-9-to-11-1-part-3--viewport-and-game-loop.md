@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, fazendo a portabilidade, loop do jogo, direct3d 9, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b0cf6352d400371b54a54d71176c4d8e1dc457d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 2087959bc29d2b2b02cdc9a2f373a8b62ea8c25a
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8732971"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793797"
 ---
 # <a name="port-the-game-loop"></a>Fazer a portabilidade do loop do jogo
 
@@ -131,7 +131,7 @@ Adicione as [perguntas frequentes sobre portabilidade do DirectX 11](directx-por
 
 Os modelos UWP DirectX incluem uma infraestrutura de dispositivo Direct3D robusta, pronta para uso com o jogo. Consulte [Criar um projeto de jogo em DirectX usando um modelo](user-interface.md) para obter instruções sobre a escolha do modelo certo.
 
-Visite os seguintes artigos aprofundados sobre desenvolvimento de jogos da Microsoft Store:
+Visite os seguintes artigos aprofundados de desenvolvimento de jogos do Microsoft Store:
 
 -   [Guia passo a passo: um jogo simples UWP com DirectX](tutorial--create-your-first-uwp-directx-game.md)
 -   [Áudio para jogos](working-with-audio-in-your-directx-game.md)

@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ffcbc3d1c11c8f756b6307b15b87c14b09f65c4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: a8e68242647204dfbf8ba23c45d881066c88900b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8751100"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793327"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Usar modelos e padrões para formatar datas e horas
 
@@ -98,7 +98,7 @@ Suponha que você queira mostrar o mês e o dia atuais juntamente com a hora atu
 June 25 | 1:38 PM
 ```
 
-A parte da data corresponde ao modelo de formato "month day", e a parte da hora corresponde ao modelo de formato "hour minute". Assim, você pode construir formatadores para a modelos de formato de data e hora relevantes e, em seguida, concatenar a saída deles juntos usando uma cadeia de caracteres de formato localizável.
+A parte da data corresponde ao modelo de formato "month day", e a parte da hora corresponde ao modelo de formato "hour minute". Portanto, você pode construir formatadores para a data relevante e modelos de formato de tempo e, em seguida, concatenar a saída juntos usando uma cadeia de caracteres de formato localizável.
 
 ```csharp
 var dateToFormat = System.DateTime.Now;

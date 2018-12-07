@@ -6,12 +6,12 @@ ms.date: 5/7/2018
 ms.topic: article
 keywords: windows 10, uwp, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: c174bb81deb84d3638a948555e045168c89f02a7
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: b54c33ab3807c26faba6a8cadd5318b4365f9ded
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8737660"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8796931"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>O que é um aplicativo da Plataforma Universal do Windows (UWP)?
 
@@ -145,7 +145,7 @@ Para mais material introdutório, consulte [Uma Introdução sobre Como Compilar
 - Para obter a lista completa de APIs do Win32 disponíveis para aplicativos UWP, consulte [Conjuntos de APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/desktop/mt186421) e [Dlls para aplicativos UWP](https://msdn.microsoft.com/library/windows/desktop/mt186422).
 - Consulte [Aplicativos Universais do Windows em .NET](https://blogs.msdn.microsoft.com/dotnet/2015/07/30/universal-windows-apps-in-net) para obter uma visão geral de criar aplicativos UWP em .NET.
 - Para obter uma lista de tipos .NET que você pode usar em um aplicativo UWP, consulte [.NET para aplicativos UWP](https://msdn.microsoft.com/library/mt185501.aspx)
-- [.NET Native - o que significa para os desenvolvedores da Plataforma Universal do Windows (UWP)](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#TYsD3tJuBJpK3Hc7.97)
+- [Compilando aplicativos com o .NET nativo](https://docs.microsoft.com/dotnet/framework/net-native/)
 - Saiba como adicionar experiências modernas para usuários do Windows 10 ao aplicativo da área de trabalho existente e distribuí-lo na Microsoft Store com a [Ponte de Desktop](https://developer.microsoft.com/windows/bridges/desktop).
 
 ## <a name="how-the-universal-windows-platform-relates-to-windows-runtime-apis"></a>Como a plataforma Universal do Windows se relaciona com APIs do Windows Runtime
