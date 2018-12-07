@@ -1,13 +1,15 @@
 ---
 title: Automatizar a inicialização de aplicativos UWP (Plataforma Universal do Windows) para Windows 10
 description: Os desenvolvedores podem usar a ativação de protocolos e a ativação de inicialização para automatizar a inicialização de seus aplicativos UWP ou jogos para testes automatizados.
+ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 123e2dfff909265673a711f480f5fe636590afa4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.date: 02/08/2017
+ms.openlocfilehash: fb68b4bbd1b751591e9f336efe5dad3c22b3bf92
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8751830"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8800437"
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Automatizar a inicialização de aplicativos UWP do Windows 10
 

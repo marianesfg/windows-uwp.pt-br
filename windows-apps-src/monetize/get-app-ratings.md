@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, classificações
 ms.localizationpriority: medium
 ms.openlocfilehash: 32f32d3389a340c25d99ec0f0a68e0c20af89c2b
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8748824"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8797933"
 ---
 # <a name="get-app-ratings"></a>Obter classificações de aplicativo
 

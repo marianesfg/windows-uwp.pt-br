@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10 s, sempre conectado, emulação x86 no ARM
 ms.localizationpriority: medium
 ms.openlocfilehash: 22b8d55fa2074d18ed3e5f3fe9fa3ab8161637be
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8752863"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8798869"
 ---
 # <a name="how-x86-emulation-works-on-arm"></a>Como a emulação x86 funciona no ARM
 A emulação para aplicativos x86 disponibiliza o ecossistema avançado de aplicativos Win32 no ARM. Isso fornece ao usuário a experiência mágica da execução de um aplicativo win32 x86 existente sem nenhuma modificação no aplicativo. O aplicativo não sabe nem mesmo se está em execução em um computador Windows no ARM, a menos que chame APIs específicas ([IsWoW64Process2](https://msdn.microsoft.com/en-us/library/windows/desktop/mt804318.aspx)).
