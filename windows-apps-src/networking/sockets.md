@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7d75afd17d5aa7edf64fda36b3a35b3a101c1d89
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8709666"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782859"
 ---
 # <a name="sockets"></a>Soquetes
 Soquetes são uma tecnologia de transferência de dados de baixo nível sobre o qual muitos protocolos de rede são implementados. UWP oferece classes de soquete de TCP e UDP para o cliente-servidor ou aplicativos ponto a ponto, se as conexões tiverem vida longa ou se uma conexão estabelecida não for necessária.

@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 12a0c59942eefd2ab9625b1b442043a1868230a1
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 87eb6562c6ee66ca1d409d3748e688861d5f3920
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755895"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783504"
 ---
 # <a name="stream-output-so-stage"></a>Estágio de Saída de Fluxo(SO)
 
@@ -41,7 +41,7 @@ Dados de vértice de um estágio de sombreador anterior.
 ## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Saída
 
 
-O estágio de Saída de Fluxo (SO) emite continuamente (ou transmite) dados de vértice do estágio ativo anterior, como o estágio de Sombreador de Geometria (GS), para um ou mais buffers na memória. Se o estágio de Sombreador de Geometria (GS) estiver inativo, o estágio de Saída de Fluxo (SO) gera continuamente dados de vértice do estágio de Sombreador de Domínio (DS) para buffers na memória (ou se o DS também estiver inativo, do estágio do Sombreador de Vértice (VS)).
+O estágio de Saída de Fluxo (SO) emite continuamente (ou transmite) dados de vértice do estágio ativo anterior, como o estágio de Sombreador de Geometria (GS), para um ou mais buffers na memória. Se o estágio de sombreador de geometria (GS) estiver inativo, o estágio de saída de fluxo (SO) gera continuamente dados de vértice do estágio do sombreador de domínio (DS) para buffers na memória (ou se o DS também estiver inativo, do estágio do sombreador de vértice (VS)).
 
 Quando uma faixa de triângulos ou linha for vinculada ao estágio do Assembler de entrada (IA), cada faixa é convertida em uma lista antes que eles são transmitidos. Os vértices sempre são gravados como primitivos completas (por exemplo, 3 vértices por vez para triângulos); primitivos incompletos nunca são transmitidos. Tipos primitivos com adjacência descartam os dados de adjacência antes de transmitir os dados.
 

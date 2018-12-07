@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, tratamento de erros, java script, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: a6c14ecf8e8909ab6cd95a54ca8144fbf8a8d912
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8753689"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780146"
 ---
 # <a name="handle-ad-errors"></a>Processamento de erros de anúncio
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, teste beta, distribuição limitada, beta, betas, teste, testadores
 ms.localizationpriority: medium
 ms.openlocfilehash: 1560da53ebcc2b24bc9bc13034431c3a2208dfe5
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8747353"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787148"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Teste beta e distribuição direcionada
 

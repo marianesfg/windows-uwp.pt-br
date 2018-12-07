@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, jogo, transmissão
 ms.localizationpriority: medium
 ms.openlocfilehash: c906551fd626dec726498ded9a7995007230504f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755162"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786534"
 ---
 # <a name="manage-game-broadcasting"></a>Gerenciar transmissão de jogo
 Este artigo mostra como gerenciar a transmissão de jogo de um aplicativo UWP. Os usuários devem iniciar a transmissão usando a interface do usuário do sistema integrada ao Windows, mas, a partir do Windows 10, versão 1709, os apps poderão iniciar a interface do usuário de transmissão do sistema e receber notificações quando a transmissão for iniciada e interrompida.

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, personalizar, listagem, descrição, anteriormente
 ms.localizationpriority: medium
 ms.openlocfilehash: bfb21d56df357640734e9e5026783cc398468f0a
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8758436"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783194"
 ---
 # <a name="create-platform-specific-store-listings"></a>Criar listagens específicas de plataforma da Store
 

@@ -6,12 +6,12 @@ ms.date: 03/14/2018
 ms.topic: article
 keywords: windows 10, uwp, mapa, localização, controle de mapa, modos de exibição de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 7242bdcedd4380c5593dba2788706ed0fbbc94a4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 7713c1664018a1875d80f70fb75da2afe6104c3c
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750787"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780110"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Exibir mapas com modos de exibição 2D, 3D e Streetside
 
@@ -421,7 +421,7 @@ private async void display3DLocation()
 
 Obtenha informações sobre localizações no mapa chamando os métodos a seguir do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
--   Método [**GetLocationFromOffset**](https://msdn.microsoft.com/library/windows/apps/dn637016) - Obtenha a localização geográfica correspondente ao ponto especificado no visor do controle de Mapa.
+-   Método [**TryGetLocationFromOffset**](https://msdn.microsoft.com/library/windows/apps/dn637016) - Obtenha a localização geográfica que corresponde ao ponto especificado no visor do controle de mapa.
 -   Método [**GetOffsetFromLocation**](https://msdn.microsoft.com/library/windows/apps/dn637018) - Obtenha o ponto no visor do controle de Mapa correspondente à localização geográfica especificada.
 -   Método [**IsLocationInView**](https://msdn.microsoft.com/library/windows/apps/dn637022) - Determine se a localização geográfica especificada está atualmente visível no visor do controle de Mapa.
 -   Método [**FindMapElementsAtOffset**](https://msdn.microsoft.com/library/windows/apps/dn637014) - Obtenha os elementos no mapa localizado no ponto especificado no visor do controle de Mapa.

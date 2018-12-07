@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, confirmar envio de aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a860239bcd266f577abca3af1cfc994393cae8e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8753904"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8785404"
 ---
 # <a name="commit-an-app-submission"></a>Confirmar um envio de app
 
