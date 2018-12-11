@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, opengl, direct3d, portabilidade
 ms.localizationpriority: medium
 ms.openlocfilehash: e09dcb1830e62d17983f564771b4808d132179a0
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8790292"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8827018"
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Correlacionar OpenGL ES 2.0 com Direct3D 11
 

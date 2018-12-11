@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, iniciando, retomando
 ms.localizationpriority: medium
 ms.openlocfilehash: ac2f7e70d813ea3314d897eedb5e245d781ce412
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8799157"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8825196"
 ---
 # <a name="launching-and-resuming-apps-directx-and-c"></a>Iniciando e retomando apps (DirectX e C++)
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b8c4777e1c34bca36200bf6e8a96c35d6a0b1079
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8751491"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8826860"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
 

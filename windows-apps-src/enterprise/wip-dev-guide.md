@@ -9,11 +9,11 @@ keywords: windows 10, uwp, wip, Proteção de Informações do Windows, dados co
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
 ms.localizationpriority: medium
 ms.openlocfilehash: 229d97c137344de26be0168be437825bea8e9700
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8784705"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8827121"
 ---
 # <a name="windows-information-protection-wip-developer-guide"></a>Guia do desenvolvedor de Proteção de Informações do Windows (WIP)
 

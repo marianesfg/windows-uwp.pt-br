@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10 s, sempre conectado, aplicativos ARM32 no ARM, windows 10 no ARM, solução de problemas
 ms.localizationpriority: medium
 ms.openlocfilehash: 6858f9add2430dc83d468b98d4147cc205dd372e
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8798597"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8827301"
 ---
 # <a name="troubleshooting-arm32-uwp-apps"></a>Solução de problemas de aplicativos UWP ARM32
 >[!IMPORTANT]
