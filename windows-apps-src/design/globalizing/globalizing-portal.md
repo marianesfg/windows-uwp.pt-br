@@ -5,16 +5,16 @@ title: Globalização e localização
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
-ms.date: 10/18/2017
+ms.date: 12/7/2018
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 49ee09374db54678dbe0152b996537771fd1bfd1
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: b7b4452bb242bb7679d37036ccda5e27912a2505
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738840"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8892349"
 ---
 # <a name="globalization-and-localization"></a>Globalização e localização
 
@@ -65,3 +65,4 @@ A maioria das equipes de localização usa ferramentas especiais para ajudar no 
 | [Projetar seu app para texto bidirecional](design-for-bidi-text.md) | Projete seu app de modo a fornecer suporte bidirecional a texto (BiDi) para que você possa combinar o script de sistemas de escrita da esquerda para a direita e da direita para a esquerda. |
 | [Use o Kit de Ferramentas de Aplicativo Multilíngue 4.0](use-mat.md) | O Kit de Ferramentas de Aplicativo Multilíngue (MAT) 4.0 se integra ao Microsoft Visual Studio 2017 para fornecer aplicativos UWP com suporte a tradução, gerenciamento de arquivos de tradução e ferramentas de edição. |
 | [Perguntas frequentes e solução de problemas do Kit de Ferramentas de Aplicativo Multilíngue 4.0](mat-faq-troubleshooting.md) | Este tópico fornece respostas a perguntas frequentes e problemas relacionados ao Kit de Ferramentas de Aplicativo Multilíngue (MAT) 4.0. |
+| [Preparar seu aplicativo para que a alteração de eras japonês](japanese-era-change.md) | Saiba mais sobre a alteração de eras japonês de maio de 2019 e como preparar seu aplicativo. |
