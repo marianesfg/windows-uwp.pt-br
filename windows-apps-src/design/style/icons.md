@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0f881c470d92ea1eafb08f24e6cf1fd06f4fc75e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: fb97f69ccdffcec86dfdaf5fa6c5f817644ebd61
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8746957"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8873489"
 ---
 # <a name="icons-for-uwp-apps"></a>Ícones para aplicativos UWP
 
@@ -81,7 +81,7 @@ Este artigo descreve os ícones no seu aplicativo. Para saber mais sobre ícones
 
 ## <a name="using-the-right-type-of-icon"></a>Usar o tipo correto de ícone
 
-Há muitas maneiras de criar um ícone. Você pode usar uma fonte de símbolo como Segoe MDL2 Assets. Você pode criar sua própria imagem com base em vetor. Você ainda pode usar uma imagem de bitmap, embora isso não seja recomendado. Veja um resumo das diferentes maneiras de adicionar um ícone ao aplicativo. 
+Há muitas maneiras de criar um ícone. Você pode usar uma fonte de símbolo como Segoe MDL2 Assets. Você pode criar sua própria imagem baseada em vetor. Você ainda pode usar uma imagem de bitmap, embora isso não seja recomendado. Veja um resumo das diferentes maneiras de adicionar um ícone ao aplicativo. 
 
 ### <a name="use-a-predefined-icon"></a>Use um ícone predefinido.
 :::row:::
