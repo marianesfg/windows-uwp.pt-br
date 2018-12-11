@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, porta, buffers de vértice, dados, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c961a8852fb1e03e4e86209f62bda821b980f8c
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8786604"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8896954"
 ---
 # <a name="port-the-vertex-buffers-and-data"></a>Fazer a portabilidade de dados e buffers de vértice
 
