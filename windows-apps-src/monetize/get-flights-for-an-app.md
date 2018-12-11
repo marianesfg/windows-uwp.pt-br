@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, versões de pré-lançamento, pacotes de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: c7e7ab4db7690cee86b76e39caa30b3c0fb25618
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8801842"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8871359"
 ---
 # <a name="get-package-flights-for-an-app"></a>Obter pacotes de pré-lançamento de um aplicativo
 

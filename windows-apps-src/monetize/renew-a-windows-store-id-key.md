@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de coleção da Microsoft Store, API de compra da Microsoft Store, chave ID da Microsoft Store, renovar
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f1c6248b2d87a68b77cad6f1bdc7cce0fae587e
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8792779"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8828225"
 ---
 # <a name="renew-a-microsoft-store-id-key"></a>Renovar uma chave de ID da Microsoft Store
 
