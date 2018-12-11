@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, Microsoft Store Services SDK, direcionadas notificaç
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
 ms.openlocfilehash: f60780186256e7f78a9596c979c79bfc704ae4c2
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744082"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8877233"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>Configurar seu app para notificações por push direcionadas
 
