@@ -5,11 +5,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: ac30d8db830c51ee40653feb49b443ed44502617
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8806003"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8883045"
 ---
 # <a name="network-credentials-api-reference"></a>Referência de API de credenciais de rede
 Você pode adicionar, remover ou atualizar as credenciais de rede armazenados no seu devkit usando essa API REST.

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d6b5c95b59c1542df743ecc1f53bf3c3fc90aa1b
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8781200"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8885560"
 ---
 # <a name="bluetooth"></a>Bluetooth
 Esta seção contém artigos sobre como integrar Bluetooth a aplicativos da plataforma Universal do Windows (UWP). Há duas tecnologias bluetooth diferentes que você pode optar por implementar em seu aplicativo.

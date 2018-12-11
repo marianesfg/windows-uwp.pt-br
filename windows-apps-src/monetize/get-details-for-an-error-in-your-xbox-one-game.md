@@ -5,12 +5,12 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, detalhes
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b713e3c6c2f7b82e5779e4785cc6b2e320b24f0
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: da3252c42a0c2e2bd02465985737125cc053a616
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8741161"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8880875"
 ---
 # <a name="get-details-for-an-error-in-your-xbox-one-game"></a>Obter detalhes de um erro em seu Xbox One jogo
 
@@ -48,7 +48,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A ID do produto do jogo Xbox One para o qual você está recuperando detalhes do erro. Para obter a ID do produto do jogo, navegue até seu jogo no Portal de Desenvolvedor do Xbox (XDP) e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de integridade do relatório de análise do Partner Center do Windows, a ID do produto está incluída no arquivo. tsv. |  Sim  |
+| applicationId | string | A **ID da loja** do jogo Xbox One para o qual você está recuperando detalhes do erro. A **ID da loja** está disponível na página de identidade do aplicativo no Partner Center. Um exemplo de **ID da loja** é 9WZDNCRFJ3Q8. |  Sim  |
 | failureHash | string | A ID exclusiva do erro para o qual você deseja obter informações detalhadas. Para obter esse valor para o erro que você está interessado, use o método [obter dados de relatório de erro para o seu Xbox One jogo](get-error-reporting-data-for-your-xbox-one-game.md) e use o valor de **failureHash** no corpo da resposta desse método. |  Sim  |
 | startDate | date | A data de início no intervalo de datas dos dados de erros detalhados a serem recuperados. O padrão é 30 dias antes da data atual. |  Não  |
 | endDate | date | A data de término no intervalo de datas dos dados de erros detalhados a serem recuperados. O padrão é a data atual. |  Não  |
@@ -60,7 +60,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 ### <a name="request-example"></a>Exemplo de solicitação
 
-Os exemplos a seguir demonstram várias solicitações de obtenção de dados de erros detalhados para um Xbox One jogo. Substitua o valor *applicationId* com a ID do produto para o seu jogo.
+Os exemplos a seguir demonstram várias solicitações de obtenção de dados de erros detalhados para um Xbox One jogo. Substitua o valor *applicationId* com a **ID da loja** para o seu jogo.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/failuredetails?applicationId=BRRT4NJ9B3D1&failureHash=012e33e3-dbc9-b12f-c124-9d9810f05d8b&startDate=2016-11-05&endDate=2016-11-06&top=10&skip=0 HTTP/1.1
@@ -90,7 +90,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 
 | Valor           | Tipo    | Descrição     |
 |-----------------|---------|----------------------------|
-| applicationId   | string  | A ID do produto do jogo Xbox One para o qual você recuperou dados de erros detalhados.      |
+| applicationId   | string  | A **ID da loja** do jogo Xbox One para o qual você recuperou dados de erros detalhados.      |
 | failureHash     | string  | O identificador exclusivo do erro.     |
 | failureName     | string  | O nome de falha, que é composto de quatro partes: uma ou mais classes de problema, um código de verificação de bug/exceção, o nome da imagem em que ocorreu a falha e o nome da função associada.           |
 | date            | string  | A primeira data no intervalo de datas dos dados do erro. Se a solicitação especificou um único dia, o valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas. |
