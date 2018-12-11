@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador do aplicativo, AppInstaller, sideload
 ms.localizationpriority: medium
 ms.openlocfilehash: d4c3aa690dd45a50e6f33d664fbc6cc4503e93f8
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8829919"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8879679"
 ---
 # <a name="troubleshoot-installation-issues-with-the-app-installer-file"></a>Solucionar problemas de instalação com o arquivo do Instalador de Aplicativo
 

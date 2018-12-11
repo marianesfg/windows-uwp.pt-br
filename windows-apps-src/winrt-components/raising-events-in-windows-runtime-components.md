@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 851f8a25055c90dfd592d5a68c733258bcd5f7b5
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8749032"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8879158"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Acionando eventos em componentes do Tempo de Execução do Windows
 > [!NOTE]
