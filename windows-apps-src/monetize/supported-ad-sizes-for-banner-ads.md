@@ -6,16 +6,18 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, tamanhos, barra de notificação
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bc59026f8e2ba9b736db8514508ca9ccfad62f8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 8cd21be7f0e1f05e1fe4de07053cb18ee5048c6a
+ms.sourcegitcommit: 05335f65dfe497ef4027b7249c0119fc59e355e2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924535"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "8964679"
 ---
 # <a name="supported-banner-ad-sizes"></a>Tamanhos de anúncios de banner compatíveis
 
-Tamanhos de anúncio em faixa são compatíveis com aplicativos da plataforma Universal do Windows (UWP). Quando você instancia o objeto de **AdControl** em seu aplicativo, verifique se que você definir as propriedades de altura e largura para corresponder a um destes tamanhos com suporte.
+Tamanhos de anúncio em faixa são compatíveis com aplicativos da plataforma Universal do Windows (UWP). Quando você instancia o objeto de **AdControl** em seu aplicativo, verifique se que você definir as propriedades de largura e altura para corresponder a um destes tamanhos com suporte.
+
+Tamanhos são largura x altura.
 
 * 160 x 600
 * 300 x 50
