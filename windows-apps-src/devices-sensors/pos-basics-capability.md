@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 832881919a3ed1f44c0912703ede5948c5b10d11
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8872816"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8945467"
 ---
 # <a name="pointofservice-device-capability"></a>Funcionalidade de dispositivo PointOfService
 Solicite acesso às APIs do PointOfService declarando a funcionalidade no manifesto do pacote do aplicativo]. Você pode declarar a maioria das funcionalidades usando o Designer de manifesto no Microsoft Visual Studio ou você pode adicioná-los manualmente.  
