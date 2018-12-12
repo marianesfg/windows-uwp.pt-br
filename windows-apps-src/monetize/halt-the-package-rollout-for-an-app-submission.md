@@ -7,11 +7,11 @@ keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pa
 ms.assetid: 4ce79fe3-deda-4d31-b938-d672c3869051
 ms.localizationpriority: medium
 ms.openlocfilehash: 08450b7aa9608e610a31d114059dd49e3ef3e10c
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8888338"
+ms.locfileid: "8933560"
 ---
 # <a name="halt-the-rollout-for-an-app-submission"></a>Interromper a distribuição para um envio de aplicativo
 

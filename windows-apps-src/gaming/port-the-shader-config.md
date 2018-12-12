@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, porta, sombreador, direct3d, opengl
 ms.localizationpriority: medium
 ms.openlocfilehash: f061d31ca779cb4c6cbe76f163e190996a6985cb
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8878031"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8935950"
 ---
 # <a name="port-the-shader-objects"></a>Fazer a portabilidade de objetos de sombreador
 
