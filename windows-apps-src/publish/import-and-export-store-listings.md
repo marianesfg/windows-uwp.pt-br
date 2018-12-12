@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, importar listagens da store, exportar listagens da store, importação/exportação, csv de listagens da store
 ms.localizationpriority: medium
 ms.openlocfilehash: 5630a9019aa11b87f06744e03ae74ec38c792d41
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8871872"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8939474"
 ---
 # <a name="import-and-export-store-listings"></a>Importar e exportar as listagens da Store
 

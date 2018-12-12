@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: aa6e93196d30c15374129eee7714604cfab7b82e
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8879132"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8942902"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>Suporte a blocos e notificações do sistema para idioma, escala e alto contraste
 

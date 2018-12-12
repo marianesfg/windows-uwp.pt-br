@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, API de envio da Microsoft Store, exemplos de código, opções de jogos, trailers, listagens avançadas, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: 041f07fd6b24af3658bc9cfffe07117e4b353831
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8890088"
+ms.locfileid: "8939632"
 ---
 # <a name="c-sample-app-submission-with-game-options-and-trailers"></a>Exemplo de C#: envio de aplicativo com opções de jogo e trailers
 
