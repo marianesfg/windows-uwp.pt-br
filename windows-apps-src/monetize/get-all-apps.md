@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, aplicativos
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c909e707d25e4add534ce89319abe71c2557b59
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 267e1d4de3917ae332cdfe15309f3871ef7b6647
+ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919076"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8968560"
 ---
 # <a name="get-all-apps"></a>Obter todos os aplicativos
 
 
-Use este método na API de envio da Microsoft Store para recuperar dados de todos os aplicativos que estão registrados em sua conta do Partner Center.
+Use este método na API de envio da Microsoft Store para recuperar dados de aplicativos que estão registrados em sua conta do Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -31,7 +31,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications``` |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -43,7 +43,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
-Todos os parâmetros de solicitação são opcionais para esse método. Se você chamar esse método sem parâmetros, a resposta conterá dados de todos os aplicativos que estão registrados em sua conta.
+Todos os parâmetros de solicitação são opcionais para esse método. Se você chamar esse método sem parâmetros, a resposta conterá dados para os 10 primeiros aplicativos que estão registrados em sua conta.
 
 |  Parâmetro  |  Tipo  |  Descrição  |  Obrigatório  |
 |------|------|------|------|
@@ -57,19 +57,44 @@ Não forneça um corpo da solicitação para esse método.
 
 ### <a name="request-examples"></a>Exemplos de solicitação
 
-O exemplo a seguir demonstra como recuperar informações sobre todos os aplicativos que estão registrados em sua conta.
+O exemplo a seguir demonstra como recuperar os 10 primeiros aplicativos que estão registrados em sua conta.
 
-```
+```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-O exemplo a seguir demonstra como recuperar os 10 primeiros aplicativos que estão registrados em sua conta.
+O exemplo a seguir demonstra como recuperar informações sobre todos os aplicativos que estão registrados em sua conta. Primeiro, obtenha os 10 primeiros aplicativos:
 
-```
+```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
+
+Em seguida, chame recursivamente `GET https://manage.devcenter.microsoft.com/v1.0/my/{@nextLink}` até `{@nextlink}` é nulo ou não existe na resposta. Por exemplo:
+
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+  
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=20&top=10 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=30&top=10 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
+Se você já souber o número total de aplicativos que você tenha em sua conta, você pode simplesmente passar esse número no parâmetro **superior** para obter informações sobre todos os seus aplicativos.
+
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?top=23 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
 
 ## <a name="response"></a>Resposta
 
@@ -114,7 +139,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicita
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | value      | array  | Uma matriz de objetos que contêm informações sobre cada aplicativo que está registrado em sua conta. Para obter mais informações sobre os dados em cada objeto, consulte [Recurso do aplicativo](get-app-data.md#application_object).                                                                                                                           |
-| @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 20 aplicativos registrados em sua conta, o corpo da resposta incluirá um valor @nextLink de ```applications?skip=10&top=10```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10``` para solicitar os próximos 10 aplicativos. |
+| @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação `https://manage.devcenter.microsoft.com/v1.0/my/` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 20 aplicativos registrados em sua conta, o corpo da resposta incluirá um valor @nextLink de `applications?skip=10&top=10`, o que indica que você pode chamar `https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10` para solicitar os próximos 10 aplicativos. |
 | totalCount | int    | O número total de linhas no resultado dos dados da consulta (ou seja, o número total de aplicativos que estão registrados em sua conta).                                                |
 
 
