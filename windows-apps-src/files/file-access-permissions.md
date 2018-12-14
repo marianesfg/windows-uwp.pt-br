@@ -6,12 +6,12 @@ ms.date: 06/28/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d960235e73ea9172fb966f227af9440923f3553e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 05ff8dd78f58910512291b819d59d68f682cc93c
+ms.sourcegitcommit: 23748871459931fc838c5e259e4822bffcf3cdea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940017"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "8970931"
 ---
 # <a name="file-access-permissions"></a>Permissões de acesso a arquivo
 
@@ -254,7 +254,7 @@ A tabela a seguir lista locais adicionais que você pode acessar declarando os r
 
 | Localização | Funcionalidade | API Windows.Storage |
 |----------|------------|---------------------|
-| Todos os arquivos aos quais o usuário tem acesso. Por exemplo: documentos, imagens, fotos, downloads, área de trabalho, OneDrive etc. | broadFileSystemAccess<br><br>Esta é uma funcionalidade restrita. No primeiro uso, o sistema solicitará que o usuário permita o acesso. O acesso é configurável em Configurações > Privacidade > Sistema de arquivos. Se você enviar para a Store um app que declare essa funcionalidade, precisará fornecer descrições adicionais do motivo pelo qual seu app precisa dessa funcionalidade, e como ele pretende usá-la.<br>Esse recurso funciona para as APIs no namespace [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346). | n/d |
+| Todos os arquivos aos quais o usuário tem acesso. Por exemplo: documentos, imagens, fotos, downloads, área de trabalho, OneDrive etc. | broadFileSystemAccess<br><br>Esta é uma funcionalidade restrita. O acesso é configurável em **configurações** > **privacidade** > **sistema de arquivos**. Como os usuários podem conceder ou negar a permissão a qualquer momento nas **configurações**, você deve garantir que seu aplicativo é resistente a essas alterações. Se você achar que seu aplicativo não tem acesso, você pode optar por solicitar que o usuário altere a configuração, fornecendo um link para o artigo de [privacidade e acesso ao sistema de arquivos Windows 10](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) . Observe que o usuário deve fechar o aplicativo, alterne a configuração e reinicie o aplicativo. Se eles alterne a configuração enquanto o aplicativo é executado, a plataforma suspenderá o aplicativo para que você pode salvar o estado e forçadamente encerrar o aplicativo para aplicar a nova configuração. Na atualização de abril de 2018, o padrão para a permissão é ativado. Na atualização de outubro de 2018, o padrão é desativado.<br /><br />Se você enviar para a Store um app que declare essa funcionalidade, precisará fornecer descrições adicionais do motivo pelo qual seu app precisa dessa funcionalidade, e como ele pretende usá-la.<br>Esse recurso funciona para APIs no namespace [**Windows. Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) . Consulte a seção de **exemplo** no final deste artigo para obter um exemplo de como ativar esse recurso em seu aplicativo. | n/d |
 | Documentos | DocumentsLibrary <br><br>Observação: você deve adicionar Associações de tipo de arquivo ao manifesto do aplicativo que declarem tipos específicos de arquivos que seu aplicativo pode acessar neste local. <br><br>Use esse recurso se o seu aplicativo:<br>- Possibilitar acesso offline entre plataformas ao conteúdo específico do OneDrive usando URLs válidas do OneDrive ou IDs de Recursos corretas<br>-Salvar abre arquivos no OneDrive do usuário automaticamente enquanto offline | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | Música     | MusicLibrary <br>Consulte também [Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | Imagens  | PicturesLibrary<br> Consulte também [Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  
