@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 336e4e64cc0b1819081a7e42b6e3e2d099355248
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 92c08971ee498e93e5a974ef8bd63d00dd27fc7d
+ms.sourcegitcommit: 1cf04b0b1bd7623cd7f6067b8392dce4372f2c69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947838"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "8970979"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -72,7 +72,7 @@ A característica mais notável do acrílico é sua transparência. Existem dois
 
 ## <a name="when-to-use-acrylic"></a>Quando usar o acrílico
 
-* Use acrílico no aplicativo para dar suporte a interface do usuário, como NavigationView ou elementos de comando em linha. 
+* Use acrílico no aplicativo para dar suporte a interface do usuário, como NavigationView ou elementos de comando em linha.
 * Use acrílico de fundo para elementos de interface do usuário transitórios, como luz dimsissable da interface do usuário, submenus e menus de contexto.<br />Usar o acrílico em cenários transitórios ajuda a manter uma relação visual com o conteúdo que acionou a UI Transiente.
 
 Se você estiver usando no aplicativo acrílico em superfícies de navegação, considere a possibilidade de estender o conteúdo sob o painel acrílico para melhorar o fluxo em seu aplicativo. Usar o NavigationView fará isso para você automaticamente. No entanto, para evitar a criação de um efeito de tiragem, não tente colocar várias partes de acrílico-borda - isso pode criar uma fenda indesejada entre as duas superfícies desfocadas. Acrílico é uma ferramenta para trazer harmonia visual aos seus designs, mas quando usado incorretamente, pode resultar em ruído visual.
@@ -192,6 +192,7 @@ Para pintar uma superfície específica, aplique um dos recursos de tema acima a
 Você pode optar por adicionar uma tonalidade de cor ao acrílico do seu aplicativo para mostrar a identidade visual ou garantir equilíbrio visual em relação aos outros elementos da página. Para exibir cores ao invés da escala de cinza, você deverá definir seus próprios pincéis acrílicos utilizando as seguintes propriedades.
  - **TintColor**: a cor/tonalidade da camada de sobreposição. Considere especificar o valor RGB da cor e a opacidade do canal alfa.
  - **TintOpacity**: a opacidade da camada de tonalidade. É recomendável 80% de opacidade como ponto de partida, embora cores diferentes possam parecer mais atraentes em outras translucencies.
+ - **TintLuminosityOpacity**: controla a quantidade de saturação é permitida por meio de superfície acrílico do plano de fundo.
  - **BackgroundSource**: o marcador para especificar se você deseja acrílico de fundo ou de aplicativo.
  - **FallbackColor**: a cor sólida que substitui o acrílico em economia de bateria. Para acrílico de fundo, a cor de retorno também substitui o acrílico quando seu aplicativo não está na janela da área de trabalho ativa ou quando o aplicativo está sendo executado no telefone ou no Xbox.
 
@@ -199,7 +200,12 @@ Você pode optar por adicionar uma tonalidade de cor ao acrílico do seu aplicat
 
 ![Amostras de acrílico de tema escuro](images/CustomAcrylic_Swatches_DarkTheme.png)
 
+![Luminosidade opactity em comparação comparada opacidade de tonalidade](images/LuminosityVersusTint.png)
+
 Para adicionar um pincel acrílico, defina os três recursos para temas escuro, claro e de alto contraste. Observe que em alto contraste, recomendamos usar um SolidColorBrush com a mesma x:Key do AcrylicBrush escuro/claro.
+
+> [!Note] 
+> Se você não especificar um valor de TintLuminosityOpacity, o sistema ajustará automaticamente seu valor com base em seu TintColor e TintOpacity.
 
 ```xaml
 <ResourceDictionary.ThemeDictionaries>
@@ -208,6 +214,7 @@ Para adicionar um pincel acrílico, defina os três recursos para temas escuro, 
             BackgroundSource="HostBackdrop"
             TintColor="#FFFF0000"
             TintOpacity="0.8"
+            TintLuminosityOpacity="0.5"
             FallbackColor="#FF7F0000"/>
     </ResourceDictionary>
 
@@ -221,6 +228,7 @@ Para adicionar um pincel acrílico, defina os três recursos para temas escuro, 
             BackgroundSource="HostBackdrop"
             TintColor="#FFFF0000"
             TintOpacity="0.8"
+            TintLuminosityOpacity="0.5"
             FallbackColor="#FFFF7F7F"/>
     </ResourceDictionary>
 </ResourceDictionary.ThemeDictionaries>
@@ -249,10 +257,9 @@ else
 
 ## <a name="extend-acrylic-into-the-title-bar"></a>Estender o acrílico até a barra de título
 
-Para dar uma aparência perfeita à janela do seu aplicativo, é possível usar o acrílico na área da barra de título. Este exemplo estende o acrílico até a barra de título definindo as propriedades [ButtonBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonBackgroundColor) e [ButtonInactiveBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonInactiveBackgroundColor) do objeto [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar) como [Colors.Transparent](https://docs.microsoft.com/uwp/api/Windows.UI.Colors.Transparent). 
+Para dar uma aparência perfeita à janela do seu aplicativo, é possível usar o acrílico na área da barra de título. Este exemplo estende o acrílico até a barra de título definindo as propriedades [ButtonBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonBackgroundColor) e [ButtonInactiveBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonInactiveBackgroundColor) do objeto [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar) como [Colors.Transparent](https://docs.microsoft.com/uwp/api/Windows.UI.Colors.Transparent).
 
 ```csharp
-/// Extend acrylic into the title bar. 
 private void ExtendAcrylicIntoTitleBar()
 {
     CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
@@ -262,11 +269,10 @@ private void ExtendAcrylicIntoTitleBar()
 }
 ```
 
-Este código pode ser colocado em seu método de aplicativo [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) (_App.xaml.cs_), após a chamada [Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.Activate), como mostrado aqui, ou na primeira página do seu aplicativo. 
-
+Este código pode ser colocado em seu método de aplicativo [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) (_App.xaml.cs_), após a chamada [Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.Activate), como mostrado aqui, ou na primeira página do seu aplicativo.
 
 ```csharp
-// Call your extend acrylic code in the OnLaunched event, after 
+// Call your extend acrylic code in the OnLaunched event, after
 // calling Window.Current.Activate.
 protected override void OnLaunched(LaunchActivatedEventArgs e)
 {
