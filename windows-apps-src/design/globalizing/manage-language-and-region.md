@@ -7,12 +7,12 @@ ms.date: 11/08/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 1443730e343bc00563142e937d534282b9b34524
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 43aeccecee5b4b2d7a2d5fa1082fb619e87e7268
+ms.sourcegitcommit: 51ea7eae59684400e7813a9dd3376d5e7bfb3635
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924064"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "8972040"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Entenda os idiomas de perfil do usuário e idiomas de manifesto do app
 Um usuário do Windows pode usar **Configurações** > **Hora e Idioma** > **Região e idioma** para configurar uma lista ordenada de idiomas de preferência de exibição, ou um único idioma de preferência de exibição. Um idioma pode ter uma variante regional. Por exemplo, você pode selecionar o espanhol falado na Espanha, o espanhol falado no México, o espanhol falado nos Estados Unidos, entre outros.
@@ -93,21 +93,23 @@ A lista de idiomas do tempo de execução do app determina os recursos que o Win
 **Observação** se o idioma do perfil do usuário e o idioma de manifesto do app são variantes regionais um do outro, a variante regional do usuário é usada como idioma de tempo de execução do app. Por exemplo, se o usuário prefere en-GB e o app der suporte a en-US, o idioma de tempo de execução do app será en-GB. Isso garante que as datas, as horas e os números sejam formatados da maneira mais próxima às expectativas do usuário (en-GB), mas os recursos localizados ainda sejam carregados (devido à correspondência do idioma) no idioma do aplicativo com suporte (en-US).
 
 ## <a name="qualify-resource-files-with-their-language"></a>Qualificar arquivos de recurso com o respectivo idioma
-Nomeie seus arquivos de recurso ou suas pastas, com qualificadores de recursos de idiomas. Para aprender mais sobre qualificadores de recursos, consulte [Personalizar os recursos de acordo com idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)). Um arquivo de recurso pode ser uma única imagem ou outro arquivo de ativo, ou pode ser um arquivo de recurso de contêiner&mdash; como um Arquivo de Recursos (.resw)&mdash; que contém recursos de cadeias de caracteres.
+Nomeie seus arquivos de recurso ou suas pastas, com qualificadores de recursos de idiomas. Para aprender mais sobre qualificadores de recursos, consulte [Personalizar os recursos de acordo com idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)). Um arquivo de recurso pode ser uma imagem (ou outro ativo) ou pode ser um arquivo de contêiner do recurso, como *. resw* que contém cadeias de caracteres de texto.
 
-**Observação** Mesmo recursos no idioma padrão do seu app devem ser qualificados com o seu idioma. Por exemplo, o idioma padrão do seu app é inglês (Estados Unidos), então qualifique até mesmo seus recursos en-US semelhantes ao `\Assets\Images\en-US\logo.png`. 
+**Observação** Mesmo recursos no idioma padrão do seu app devem especificar o qualificador de idioma. Por exemplo, se o idioma padrão do seu app é inglês (Estados Unidos), então qualifique seus ativos como `\Assets\Images\en-US\logo.png`.
 
-- O Windows executa correspondências complexas, incluindo, por exemplo, variantes regionais, como en-US e en-GB. Dessa forma, inclua ou omita a submarca de região conforme apropriado. Confira [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md).
-- Inclua o script quando não houver valor de Script de Supressão definido para o idioma. Veja detalhes de marca de idioma no [Registro da submarca de idioma IANA](http://go.microsoft.com/fwlink/p/?linkid=227303). Por exemplo, use zh-Hant, zh-Hant-TW ou zh-Hans, em vez de zh-CN ou zh-TW.
-- Para idiomas que têm um único dialeto padrão, não é necessário adicionar a região. A marcação geral é razoável em algumas situações, como a marcação de ativos com ja, em vez de ja-JP.
+- O Windows executa correspondências complexas, incluindo variantes regionais, como en-US e en-GB. Portanto, inclua a marca de região subpropriedade conforme apropriado. Confira [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md).
+- Especifique uma marca de subpropriedade de script do idioma no qualificador quando não há nenhum valor de Script de supressão definido para o idioma. Por exemplo, em vez de zh-CN ou zh-TW, use zh-Hant, zh-Hant-TW ou zh-Hans (para obter mais detalhes, consulte o [registro de submarca de idioma IANA](http://go.microsoft.com/fwlink/p/?linkid=227303)).
+- Para idiomas que têm um único dialeto padrão, não é necessário incluir o qualificador de região. Por exemplo, use ja, em vez de ja-JP.
 - Algumas ferramentas e outros componentes como os tradutores automáticos podem encontrar marcas de idioma específicas, como informações de dialetos regionais, que são úteis para entender os dados.
 
-Há casos em que nem todos os recursos precisam ser localizados.
+### <a name="not-all-resources-need-to-be-localized"></a>Nem todos os recursos precisam ser localizados
 
-- Para recursos como cadeias de caracteres da interface do usuário que vêm em todos os idiomas, marque-os com o idioma apropriado em que estão. Verifique se todas essas cadeias de caracteres existem no idioma padrão.
-- Para recursos que vêm em um subconjunto do conjunto de idiomas de um app inteiro (localização parcial), especifique o conjunto de idiomas em que os ativos vêm e verifique se todos dispõem desses recursos no idioma padrão. Por exemplo, você pode não localizar toda interface do usuário do app para catalão se o seu app tem um conjunto completo de recursos em espanhol. Para usuários que falam catalão e também espanhol, os recursos que não estão disponíveis em catalão aparecerão em espanhol.
-- Para recursos que têm exceções específicas em alguns idiomas, mas todos os outros idiomas mapeiam para um recurso comum, marque o recurso que deve ser usado para todos os idiomas com a marca de idioma indeterminada 'und'. O Windows interpreta a marca de idioma 'und' como um curinga (semelhante a um '\*') no sentido de que ele faz correspondência com o principal idioma do app após qualquer outra correspondência específica. Por exemplo, se alguns recursos forem diferentes para finlandês, mas o restante dos recursos for o mesmo para todos os idiomas, o recurso do finlandês deverá ser marcado com a marca do idioma finlandês, e o restante deverá ser marcado com 'und'.
-- Para recursos que se baseiam no script de um idioma, em vez do idioma em si, como a fonte ou altura de um texto, use a marca de idioma indeterminado com um script especificado: 'und-&lt;script&gt;'. Por exemplo, para fontes latinas, use `und-Latn\\fonts.css` e para fontes cirílicas use `und-Cryl\\fonts.css`.
+Localização não pode ser necessária para todos os recursos.
+
+- No mínimo, verifique se que todos os recursos existem no idioma padrão.
+- Um subconjunto de alguns recursos pode ser suficiente para um idioma relacionado (localização parcial). Por exemplo, você pode não localizar toda interface do usuário do app para catalão se o seu app tem um conjunto completo de recursos em espanhol. Para usuários que falam catalão e também espanhol, os recursos que não estão disponíveis em catalão aparecem em espanhol.
+- Alguns recursos podem exigir exceções para idiomas específicos, enquanto a maioria dos outro recursos é mapeado para um recurso comum. Nesse caso, marque o recurso que se destina a ser usado para todos os idiomas com a marca de idioma indeterminada 'und'. O Windows interpreta a marca de idioma 'und' como um curinga (semelhante a um '\*') no sentido de que ele faz correspondência com o principal idioma do app após qualquer outra correspondência específica. Por exemplo, se alguns recursos forem diferentes para finlandês, mas o restante dos recursos for o mesmo para todos os idiomas, o recurso do finlandês deverá ser marcado com a marca do idioma finlandês, e o restante deverá ser marcado com 'und'.
+- Para recursos que são baseados em um script de idioma, como a fonte ou altura de texto, use a marca de idioma indeterminado com um script especificado: ' und -&lt;script&gt;'. Por exemplo, para fontes latinas, use `und-Latn\\fonts.css` e para fontes cirílicas use `und-Cryl\\fonts.css`.
 
 ## <a name="set-the-http-accept-language-request-header"></a>Defina o cabeçalho da solicitação HTTP Accept-Language
 Considere se os serviços Web usados têm a mesma extensão de localização do seu app. As solicitações de HTTP feitas a partir de aplicativos UWP e aplicativos de Área de Trabalho em solicitações de Web típicas e XMLHttpRequest (XHR), use o cabeçalho da solicitação HTTP Accept-Language padrão. Por padrão, o cabeçalho HTTP é definido para a lista de idiomas do perfil do usuário. Cada idioma da lista é expandido ainda mais para incluir neutralidades de idioma e pesos (q). Por exemplo, a lista de idiomas de um usuário consistindo em fr-FR e en-US resulta em um cabeçalho da solicitação HTTP Accept-Language de fr-FR, fr, en-US, en ("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3"). Entretanto, se o seu app de condições climáticas (por exemplo) estiver exibindo uma interface do usuário em francês (França), mas o idioma principal do usuário na lista de preferências for alemão, será necessário solicitar o serviço explicitamente em francês (França) para que permaneça consistente com o seu app.
