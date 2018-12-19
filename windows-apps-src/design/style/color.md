@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 55e93cdbeec5aad487d7c03c1877095dc13955b1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7e6547267a1d0b478fdda8698bd1dcf89523442b
+ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947858"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "8976893"
 ---
 # <a name="color"></a>Cor
 
@@ -213,7 +213,7 @@ Ao usar o texto colorido em um plano de fundo colorido, verifique se que há con
 
 O gráfico a seguir ilustra um exemplo dos diversos tons de claro/escuro da cor de destaque e como tipos de cores podem ser aplicados em uma superfície colorida.
 
-![cor com base em outra cor](images/color/color-on-color.svg)
+![cor com base em outra cor](images/color/color-on-color.png)
 
 Para obter mais informações sobre os controles de estilo, consulte [Estilos XAML](../controls-and-patterns/xaml-styles.md).
 

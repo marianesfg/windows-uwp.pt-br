@@ -5,12 +5,12 @@ ms.date: 10/26/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: b162fbaaeda8e1ded1f0d3e1d75c840dfa543f4c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5a0018047b74ffa385cdd758578f3bdad9078c03
+ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934801"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "8976903"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 Respostas para perguntas que você pode ter sobre a criação e consumo de APIs do Windows Runtime com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -149,6 +149,10 @@ a.f();
 ```
 
 O padrão recomendado mostrado acima se aplica não apenas a C++ c++ WinRT, mas para todas as projeções de linguagem de tempo de execução do Windows.
+
+## <a name="how-do-i-turn-a-string-into-a-typemdashfor-navigation-for-example"></a>Como ativar uma cadeia de caracteres em um tipo de&mdash;para navegação, por exemplo?
+
+No final do [exemplo de código do modo de exibição de navegação](/windows/uwp/design/controls-and-patterns/navigationview#code-example) (que é principalmente em c#), há um C + c++ WinRT trecho de código mostrando como fazer isso.
 
 > [!NOTE]
 > Se este tópico não responder à sua pergunta, você pode encontrar ajuda visitando a [comunidade de desenvolvedores do Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html), ou usando o [ `c++-winrt` marca no Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).

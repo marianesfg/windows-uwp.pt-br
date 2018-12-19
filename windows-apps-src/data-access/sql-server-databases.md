@@ -5,12 +5,12 @@ ms.date: 11/13/2017
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, banco de dados
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cb4b16cea3368660ffcb1bc4b252391a73ab13e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4fe215a593293ff91afb7f71a830512ac365093f
+ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940807"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "8976923"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Usar um banco de dados do SQL Server em um aplicativo UWP
 Seu aplicativo pode se conectar diretamente a um banco de dados do SQL Server e, em seguida, armazenar e recuperar dados usando classes no namespace [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx).
@@ -29,7 +29,7 @@ Para conectar seu aplicativo diretamente a um banco de dados do SQL Server, cert
 
 Abra o arquivo **Package.appxmanifest** do seu projeto UWP no designer do manifesto.
 
-Na guia **Funcionalidades**, selecione a caixa de seleção **Autenticação de Empresa**.
+Na guia **funcionalidades** , selecione a caixa de seleção de **Autenticação empresarial** se você estiver usando autenticação do Windows para autenticar o SQL Server.
 
 ![Funcionalidade de Autenticação de Empresa](images/enterprise-authentication.png)
 
@@ -61,8 +61,13 @@ Nossos pontos de sequência de conexão ao banco de dados Northwind em uma inst�
 ```csharp
 sealed partial class App : Application
 {
+    // Connection string for using Windows Authentication.
     private string connectionString =
         @"Data Source=YourServerName\SQLEXPRESS;Initial Catalog=NORTHWIND;Integrated Security=SSPI";
+
+    // This is an example connection string for using SQL Server Authentication.
+    // private string connectionString =
+    //     @"Data Source=YourServerName\YourInstanceName;Initial Catalog=DatabaseName; User Id=XXXXX; Password=XXXXX";
 
     public string ConnectionString { get => connectionString; set => connectionString = value; }
 
