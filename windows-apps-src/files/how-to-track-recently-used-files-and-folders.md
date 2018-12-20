@@ -2,16 +2,16 @@
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: Rastrear arquivos e pastas usados recentemente
 description: Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à lista de itens usados recentemente de seu aplicativo.
-ms.date: 02/08/2017
+ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a810c097b4f162395106e74b68d5e9cdb2f8538
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 21e0516e3de4085e9ad2f3b67cb5ed497d907f5c
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930048"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980364"
 ---
 # <a name="track-recently-used-files-and-folders"></a>Rastrear arquivos e pastas usados recentemente
 
@@ -25,9 +25,7 @@ Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à li
 Os itens recém-usados do aplicativo são representados pela classe [**StorageItemMostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207475) que você obtém da propriedade estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458). Os itens recém-usados são armazenados como objetos [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129), portanto, os objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (que representam arquivos) e [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) (que representam pastas) podem ser adicionados aos itens recém-usados.
 
 > [!NOTE]
-> Veja também o [Exemplo de seletor de arquivos](http://go.microsoft.com/fwlink/p/?linkid=619994) e o [Exemplo de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
-
- 
+> Para exemplos completos, consulte o [exemplo de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995)e o [exemplo de seletor de arquivos](http://go.microsoft.com/fwlink/p/?linkid=619994) .
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

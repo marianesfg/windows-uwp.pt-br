@@ -8,12 +8,12 @@ keywords: Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, Ink
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 581f91099a09cff9307a2b4119f9db938f1b83f9
-ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
+ms.openlocfilehash: 07ed74af3ebe558c6a82cd799cb6aa1efa035e46
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "8976913"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980374"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Reconhecer traços do Windows Ink como texto e formas
 
@@ -373,17 +373,17 @@ Neste exemplo, o reconhecimento é iniciado quando o usuário clica em um botão
 
     Resultados do reconhecimento são gerados para cada palavra detectado por um [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478).
 
-```csharp
-// Recognize all ink strokes on the ink canvas.
-    IReadOnlyList<InkRecognitionResult> recognitionResults =
-        await inkRecognizerContainer.RecognizeAsync(
-            inkCanvas.InkPresenter.StrokeContainer,
-            InkRecognitionTarget.All);
-```
+    ```csharp
+    // Recognize all ink strokes on the ink canvas.
+        IReadOnlyList<InkRecognitionResult> recognitionResults =
+            await inkRecognizerContainer.RecognizeAsync(
+                inkCanvas.InkPresenter.StrokeContainer,
+                InkRecognitionTarget.All);
+    ```
 
-    Each [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) object contains a set of text candidates. The topmost item in this list is considered by the recognition engine to be the best match, followed by the remaining candidates in order of decreasing confidence.
+    Cada objeto [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) contém um conjunto de candidatos de texto. O primeiro item na lista é considerado pelo mecanismo de reconhecimento seja a melhor correspondência, seguida os candidatos restantes em ordem decrescente de confiança.
 
-    We iterate through each [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) and compile the list of candidates. The candidates are then displayed and the [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) is cleared (which also clears the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)).
+    Vamos percorrer cada [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) e compilar a lista de candidatos. Os candidatos são exibidos e [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) é limpos (que também limpa o [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)).
 
     ```csharp
     string str = "Recognition result\n";
@@ -404,7 +404,7 @@ Neste exemplo, o reconhecimento é iniciado quando o usuário clica em um botão
         inkCanvas.InkPresenter.StrokeContainer.Clear();
     ```
 
-    Here's the click handler example, in full.
+    Aqui está o exemplo de manipulador de clique, em sua totalidade.
 
     ```csharp
     // Handle button click to initiate recognition.

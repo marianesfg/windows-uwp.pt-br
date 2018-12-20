@@ -2,7 +2,7 @@
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Enumerar e consultar arquivos e pastas
 description: Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta.
-ms.date: 06/28/2018
+ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: 47680b97bacaa34570daf2a14dc9bb6a551d4443
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e964650e90870ef09d8d1b142917f96b61002544
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931579"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980274"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Enumerar e consultar arquivos e pastas
 
@@ -25,7 +25,7 @@ Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou loc
 Para obter orientações detalhadas sobre como armazenar os dados do app da Plataforma Universal do Windows, veja a classe [ApplicationData](/uwp/api/windows.storage.applicationdata).
 
 > [!NOTE]
-> Veja também o [Exemplo de enumeração de pasta](http://go.microsoft.com/fwlink/p/?linkid=619993).
+> Para obter um exemplo completo, consulte o [exemplo de enumeração de pasta](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

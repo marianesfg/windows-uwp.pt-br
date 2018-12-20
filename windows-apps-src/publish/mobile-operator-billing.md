@@ -2,16 +2,16 @@
 Description: The Microsoft Store offers Mobile Operator Billing as a payment method for mobile operators who support this capability.
 title: Cobrança da operadora móvel
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
-ms.date: 10/02/2018
+ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp, operadoras móveis, cobrança de celular, cobrança da operadora móvel
 ms.localizationpriority: medium
-ms.openlocfilehash: ca3d362267aabc6120173a029db2b48c65b7d249
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f9f751735c2387ab5009e2e6f19f68db304916ec
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922829"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980384"
 ---
 # <a name="mobile-operator-billing"></a>Cobrança da operadora móvel
 
@@ -39,8 +39,8 @@ No momento, a Cobrança da Operadora Móvel tem o suporte destas operadoras de c
 | Hungria         | Telenor                          |
 | Itália           | Wind, Tre                        |
 | Malásia        | Digi                             |
-| Países Baixos     | KPN                              |
-| Noruega          | Telenor, Telia                   |
+| Países Baixos     | KPN / Telfort                    |
+| Noruega          | Telenor / Talkmore, Telia / OneCall   |
 | Polônia          | Orange, Play                     |
 | Cingapura       | M1 Limited, StarHub              |
 | Eslováquia        | Slovak Telekom                   |

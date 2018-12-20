@@ -1,20 +1,27 @@
 ---
-title: Controlar alterações de sistema de arquivo em segundo plano
+title: Controlar alterações no sistema de arquivos em segundo plano
 description: Descreve como controlar as alterações em arquivos e pastas em segundo plano à medida que os usuários movem-los ao redor do sistema.
-ms.date: 11/20/2018
+ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e90692753924572a932767b9c188ed6d24f94593
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b0ec7762fd64f0f0b8de65faa1aaf079bdaba3a3
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926774"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980284"
 ---
-# <a name="track-file-system-changes-in-the-background"></a>Controlar alterações de sistema de arquivo em segundo plano
+# <a name="track-file-system-changes-in-the-background"></a>Controlar alterações no sistema de arquivos em segundo plano
 
-A classe [StorageLibraryChangeTracker](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageLibraryChangeTracker) permite que os aplicativos rastrear alterações em arquivos e pastas que os usuários movem-los ao redor do sistema. Usando a classe **StorageLibraryChangeTracker** , um aplicativo pode controlar:
+**APIs Importantes**
+
+-   [**StorageLibraryChangeTracker**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageLibraryChangeTracker)
+-   [**StorageLibraryChangeReader**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader)
+-   [**StorageLibraryChangedTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger)
+-   [**StorageLibrary**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary)
+
+A classe [**StorageLibraryChangeTracker**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageLibraryChangeTracker) permite que os aplicativos rastrear alterações em arquivos e pastas que os usuários movem-los ao redor do sistema. Usando a classe **StorageLibraryChangeTracker** , um aplicativo pode controlar:
 
 - Incluindo adicionar as operações de arquivo, excluir, modificar.
 - Operações de pasta como renomeia e exclusões.
@@ -39,7 +46,7 @@ As próximas seções percorrer cada uma das etapas com alguns exemplos de códi
 
 ### <a name="enable-the-change-tracker"></a>Habilitar o rastreador de alteração
 
-A primeira coisa que o aplicativo precisa fazer é informar ao sistema que ele está interessado em uma determinada biblioteca de controle de alterações. Ele faz isso chamando o método [Habilitar](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) sobre o rastreador de alteração para a biblioteca de interesse.
+A primeira coisa que o aplicativo precisa fazer é informar ao sistema que ele está interessado em uma determinada biblioteca de controle de alterações. Ele faz isso chamando o método [**Habilitar**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) sobre o rastreador de alteração para a biblioteca de interesse.
 
 ```csharp
 StorageLibrary videosLib = await StorageLibrary.GetLibraryAsync(KnownLibraryId.Videos);
@@ -49,14 +56,14 @@ videoTracker.Enable();
 
 Algumas observações importantes:
 
-- Verifique se que seu aplicativo tem permissão para a biblioteca correta no manifesto antes de criar o objeto [StorageLibrary](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary) . Consulte [As permissões de acesso de arquivo](https://docs.microsoft.com/en-us/windows/uwp/files/file-access-permissions) para obter mais detalhes.
-- [Habilitar](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) é thread-safe, não vai restaurar o ponteiro e pode ser chamado quantas vezes desejar (mais sobre isso mais tarde).
+- Verifique se que seu aplicativo tem permissão para a biblioteca correta no manifesto antes de criar o objeto [**StorageLibrary**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary) . Consulte [As permissões de acesso de arquivo](https://docs.microsoft.com/en-us/windows/uwp/files/file-access-permissions) para obter mais detalhes.
+- [**Habilitar**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) é thread-safe, não vai restaurar o ponteiro e pode ser chamado quantas vezes desejar (mais sobre isso mais tarde).
 
 ![Habilitar um rastreador de alteração vazia](images/changetracker-enable.png)
 
 ### <a name="wait-for-changes"></a>Aguarde até que as alterações
 
-Depois que o rastreador de alteração é inicializado, ele começará a gravar todas as operações que ocorrem dentro de uma biblioteca, mesmo enquanto o aplicativo não estiver em execução. Aplicativos podem se registrar para ser ativada sempre que houver uma alteração ao registrar o evento [StorageLibraryChangedTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger) .
+Depois que o rastreador de alteração é inicializado, ele começará a gravar todas as operações que ocorrem dentro de uma biblioteca, mesmo enquanto o aplicativo não estiver em execução. Aplicativos podem se registrar para ser ativada sempre que houver uma alteração ao registrar o evento [**StorageLibraryChangedTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger) .
 
 ![Alterações que está sendo adicionadas à alteração rastreador sem que o aplicativo lê-los](images/changetracker-waiting.png)
 
@@ -80,7 +87,7 @@ O aplicativo, em seguida, é responsável por processar as alterações em sua p
 
 ### <a name="accept-the-changes"></a>Aceitar as alterações
 
-Depois que o aplicativo é feito processar as alterações, ele deve informar ao sistema para nunca mostrar essas alterações novamente, chamando o método [AcceptChangesAsync](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader.acceptchangesasync) .
+Depois que o aplicativo é feito processar as alterações, ele deve informar ao sistema para nunca mostrar essas alterações novamente, chamando o método [**AcceptChangesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader.acceptchangesasync) .
 
 ```csharp
 await changeReader.AcceptChangesAsync();
@@ -90,7 +97,7 @@ await changeReader.AcceptChangesAsync();
 
 O aplicativo agora só receberá novas alterações ao ler o rastreador de alteração no futuro.
 
-- Se alterações tem acontecido entre chamada [ReadBatchAsync](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader.readbatchasync) e [AcceptChangesAsync](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader.acceptchangesasync), o ponteiro será apenas ser avançados para a alteração mais recente que o aplicativo tenha visto. Essas outras alterações ainda estará disponíveis na próxima vez que ele chama **ReadBatchAsync**.
+- Se alterações tem acontecido entre chamada [**ReadBatchAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader.readbatchasync) e [AcceptChangesAsync](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader.acceptchangesasync), o ponteiro será apenas ser avançados para a alteração mais recente que o aplicativo tenha visto. Essas outras alterações ainda estará disponíveis na próxima vez que ele chama **ReadBatchAsync**.
 - Não aceitar as alterações fará com que o sistema retornar o mesmo conjunto de alterações na próxima vez em que o aplicativo chama **ReadBatchAsync**.
 
 ## <a name="important-things-to-remember"></a>Itens importantes a serem lembrados
@@ -101,24 +108,24 @@ Ao usar o rastreador de alteração, há algumas coisas que você deve ter em me
 
 Embora tentamos reservar espaço suficiente no controlador alteração para manter todas as operações acontecendo no sistema até que seu aplicativo pode lê-los, é muito fácil imaginar um cenário em que o aplicativo não lê as alterações antes que o buffer circular substitui em si. Principalmente se o usuário é restaurar os dados de um backup ou sincronizar uma grande coleção de imagens do telefone da câmera.
 
-Nesse caso, **ReadBatchAsync** retornará o código de erro [StorageLibraryChangeType.ChangeTrackingLost](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetype). Se seu aplicativo recebe esse código de erro, isso significa que algumas coisas:
+Nesse caso, **ReadBatchAsync** retornará o código de erro [**StorageLibraryChangeType.ChangeTrackingLost**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetype). Se seu aplicativo recebe esse código de erro, isso significa que algumas coisas:
 
 * O buffer própria substituiu desde a última vez em que você viu. O melhor curso de ação é rastreie a biblioteca, porque qualquer informação do controlador será incompleta.
-* O controlador de alteração não retornará quaisquer alterações mais até que você chame [Redefinir](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.reset). Depois que o aplicativo chama a redefinição, o ponteiro será movido para a alteração mais recente e rastreamento será retomado normalmente.
+* O controlador de alteração não retornará quaisquer alterações mais até que você chame [**Redefinir**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.reset). Depois que o aplicativo chama a redefinição, o ponteiro será movido para a alteração mais recente e rastreamento será retomado normalmente.
 
 Ele deve ser para obter esses casos raro, mas em cenários em que o usuário está se movendo um grande número de arquivos em torno de seu disco não queremos rastreador alteração dimensionados e ocupam muito armazenamento. Isso deve permitir que aplicativos reagir a operações de sistema de arquivos enorme enquanto não danifiquem a experiência do cliente no Windows.
 
 ### <a name="changes-to-a-storagelibrary"></a>Alterações em um StorageLibrary
 
-A classe [StorageLibrary](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary) existe como um grupo virtual de pastas de raiz que contêm outras pastas. Para reconciliar isso com o controlador de alteração de sistema de arquivo, fizemos as seguintes opções:
+A classe [**StorageLibrary**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary) existe como um grupo virtual de pastas de raiz que contêm outras pastas. Para reconciliar isso com o controlador de alteração de sistema de arquivo, fizemos as seguintes opções:
 
-- As alterações para descendente das pastas de biblioteca de raiz serão representadas no controlador alteração. As pastas da biblioteca de raiz podem ser encontradas usando a propriedade de [pastas](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) .
-- Adicionar ou remover pastas raiz de um **StorageLibrary** (por meio de [RequestAddFolderAsync](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestaddfolderasync) e [RequestRemoveFolderAsync](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestremovefolderasync)) não criará uma entrada no controlador alteração. Essas alterações podem ser rastreadas por meio do evento [DefinitionChanged](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.definitionchanged) ou enumerando as pastas raiz na biblioteca usando a propriedade de [pastas](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) .
+- As alterações para descendente das pastas de biblioteca de raiz serão representadas no controlador alteração. As pastas da biblioteca de raiz podem ser encontradas usando a propriedade de [**pastas**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) .
+- Adicionar ou remover pastas raiz de um **StorageLibrary** (por meio de [**RequestAddFolderAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestaddfolderasync) e [**RequestRemoveFolderAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestremovefolderasync)) não criará uma entrada no controlador alteração. Essas alterações podem ser rastreadas por meio do evento [**DefinitionChanged**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.definitionchanged) ou enumerando as pastas raiz na biblioteca usando a propriedade de [**pastas**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) .
 - Se uma pasta com o conteúdo já em que ele é adicionada à biblioteca, não haverá uma alteração de notificação ou alterar entradas rastreador geradas. As alterações subsequentes para descendentes dessa pasta irá gerar notificações e alterar as entradas do controlador.
 
 ### <a name="calling-the-enable-method"></a>Chamar o método de ativação
 
-Aplicativos devem chamar [Habilitar](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) assim que iniciarem o sistema de arquivos de rastreamento e antes de cada enumeração das alterações. Isso garante que todas as alterações serão capturadas pelo controlador de alteração.  
+Aplicativos devem chamar [**Habilitar**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) assim que iniciarem o sistema de arquivos de rastreamento e antes de cada enumeração das alterações. Isso garante que todas as alterações serão capturadas pelo controlador de alteração.  
 
 ## <a name="putting-it-together"></a>Juntando
 

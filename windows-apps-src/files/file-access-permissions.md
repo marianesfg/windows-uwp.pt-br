@@ -2,20 +2,25 @@
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: Permissões de acesso a arquivo
 description: Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades.
-ms.date: 06/28/2018
+ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 05ff8dd78f58910512291b819d59d68f682cc93c
-ms.sourcegitcommit: 23748871459931fc838c5e259e4822bffcf3cdea
+dev_langs:
+- csharp
+- cppwinrt
+- cpp
+- javascript
+ms.openlocfilehash: 5c3732927c59cb768ef522a847f79f82994852b7
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "8970931"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980394"
 ---
 # <a name="file-access-permissions"></a>Permissões de acesso a arquivo
 
-Os aplicativos Universais do Windows (apps) podem acessar determinados locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades.
+Aplicativos universais do Windows Platform (UWP) podem acessar determinados locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades.
 
 ## <a name="the-locations-that-all-apps-can-access"></a>Os locais que todos os aplicativos podem acessar
 
@@ -28,62 +33,62 @@ Há duas maneiras principais de acessar arquivos e pastas em seu aplicativo dire
 
 1. Você pode recuperar um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente o diretório de instalação do aplicativo, assim:
 
-```csharp
-Windows.Storage.StorageFolder installedLocation = Windows.ApplicationModel.Package.Current.InstalledLocation;
-```
+    ```csharp
+    Windows.Storage.StorageFolder installedLocation = Windows.ApplicationModel.Package.Current.InstalledLocation;
+    ```
+    
+    ```javascript
+    var installDirectory = Windows.ApplicationModel.Package.current.installedLocation;
+    ```
+    
+    ```cppwinrt
+    #include <winrt/Windows.Storage.h>
+    ...
+    Windows::Storage::StorageFolder installedLocation{ Windows::ApplicationModel::Package::Current().InstalledLocation() };
+    ```
+    
+    ```cpp
+    Windows::Storage::StorageFolder^ installedLocation = Windows::ApplicationModel::Package::Current->InstalledLocation;
+    ```
 
-```javascript
-var installDirectory = Windows.ApplicationModel.Package.current.installedLocation;
-```
-
-```cppwinrt
-#include <winrt/Windows.Storage.h>
-...
-Windows::Storage::StorageFolder installedLocation{ Windows::ApplicationModel::Package::Current().InstalledLocation() };
-```
-
-```cpp
-Windows::Storage::StorageFolder^ installedLocation = Windows::ApplicationModel::Package::Current->InstalledLocation;
-```
-
-Você pode acessar arquivos e pastas no diretório usando métodos [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230). No exemplo, esse **StorageFolder** é armazenado na variável `installDirectory`. Você pode saber mais sobre como trabalhar com o pacote do app e o diretório de instalação em [Exemplo de informações de pacote do app](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Package) no GitHub.
+    Você pode acessar arquivos e pastas no diretório usando métodos [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230). No exemplo, esse **StorageFolder** é armazenado na variável `installDirectory`. Você pode saber mais sobre como trabalhar com o pacote do app e o diretório de instalação em [Exemplo de informações de pacote do app](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Package) no GitHub.
 
 2. Você pode recuperar um arquivo diretamente do diretório de instalação do aplicativo usando um URI de aplicativo, assim:
 
-```cs
-using Windows.Storage;            
-StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///file.txt"));
-```
-
-```javascript
-Windows.Storage.StorageFile.getFileFromApplicationUriAsync("ms-appx:///file.txt").done(
-    function(file) {
+    ```csharp
+    using Windows.Storage;            
+    StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///file.txt"));
+    ```
+    
+    ```javascript
+    Windows.Storage.StorageFile.getFileFromApplicationUriAsync("ms-appx:///file.txt").done(
+        function(file) {
+            // Process file
+        }
+    );
+    ```
+    
+    ```cppwinrt
+    Windows::Foundation::IAsyncAction ExampleCoroutineAsync()
+    {
+        Windows::Storage::StorageFile file{
+            co_await Windows::Storage::StorageFile::GetFileFromApplicationUriAsync(Windows::Foundation::Uri{L"ms-appx:///file.txt"})
+        };
         // Process file
     }
-);
-```
+    ```
+    
+    ```cpp
+    auto getFileTask = create_task(StorageFile::GetFileFromApplicationUriAsync(ref new Uri("ms-appx:///file.txt")));
+    getFileTask.then([](StorageFile^ file) 
+    {
+        // Process file
+    });
+    ```
 
-```cppwinrt
-Windows::Foundation::IAsyncAction ExampleCoroutineAsync()
-{
-    Windows::Storage::StorageFile file{
-        co_await Windows::Storage::StorageFile::GetFileFromApplicationUriAsync(Windows::Foundation::Uri{L"ms-appx:///file.txt"})
-    };
-    // Process file
-}
-```
-
-```cpp
-auto getFileTask = create_task(StorageFile::GetFileFromApplicationUriAsync(ref new Uri("ms-appx:///file.txt")));
-getFileTask.then([](StorageFile^ file) 
-{
-    // Process file
-});
-```
-
-Quando o [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) é concluído, ele retorna um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo `file.txt` no diretório de instalação do app (no exemplo, `file`).
-
-O prefixo "ms-appx:///" no URI refere-se ao diretório de instalação do aplicativo. Você pode aprender mais sobre como usar os URIs em [Como usar URIs para conteúdo de referência](https://msdn.microsoft.com/library/windows/apps/hh781215).
+    Quando o [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) é concluído, ele retorna um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo `file.txt` no diretório de instalação do app (no exemplo, `file`).
+    
+    O prefixo "ms-appx:///" no URI refere-se ao diretório de instalação do aplicativo. Você pode aprender mais sobre como usar os URIs em [Como usar URIs para conteúdo de referência](https://msdn.microsoft.com/library/windows/apps/hh781215).
 
 Além disso, diferentemente de outros locais, você também pode acessar os arquivos no diretório de instalação de seu aplicativo usando [Win32 e COM para aplicativos UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/windows/apps/br205757) e algumas [funções da Biblioteca Padrão do C/C++ do Microsoft Visual Studio](http://msdn.microsoft.com/library/hh875057.aspx).
 
@@ -96,66 +101,66 @@ Há duas maneiras principais de acessar arquivos e pastas do seu aplicativo loca
 
 1.  Use as propriedades [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) para recuperar uma pasta de dados do aplicativo.
 
-Por exemplo, você pode usar o [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587).[**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621) para recuperar um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente a pasta local do seu aplicativo assim:
+    Por exemplo, você pode usar o [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587).[**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621) para recuperar um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente a pasta local do seu aplicativo assim:
+    
+    ```csharp
+    using Windows.Storage;
+    StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+    ```
+    
+    ```javascript
+    var localFolder = Windows.Storage.ApplicationData.current.localFolder;
+    ```
+    
+    ```cppwinrt
+    Windows::Storage::StorageFolder storageFolder{
+        Windows::Storage::ApplicationData::Current().LocalFolder()
+    };
+    ```
+    
+    ```cpp
+    using namespace Windows::Storage;
+    StorageFolder^ storageFolder = ApplicationData::Current->LocalFolder;
+    ```
+    
+    Se você quiser acessar o roaming do seu aplicativo ou uma pasta temporária, use a propriedade [**RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623) ou [**TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629).
+    
+    Depois que você recuperar um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente um local de dados do aplicativo, você pode acessar arquivos e pastas nesse local usando os métodos **StorageFolder**. No exemplo, esses objetos **StorageFolder** são armazenados na variável `localFolder`. Você pode saber mais sobre como usar locais de dados de app nas diretrizes da página [Classe ApplicationData](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata) e ao baixar a [Exemplo de dados de app](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData) do GitHub.
 
-```cs
-using Windows.Storage;
-StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-```
-
-```javascript
-var localFolder = Windows.Storage.ApplicationData.current.localFolder;
-```
-
-```cppwinrt
-Windows::Storage::StorageFolder storageFolder{
-    Windows::Storage::ApplicationData::Current().LocalFolder()
-};
-```
-
-```cpp
-using namespace Windows::Storage;
-StorageFolder^ storageFolder = ApplicationData::Current->LocalFolder;
-```
-
-Se você quiser acessar o roaming do seu aplicativo ou uma pasta temporária, use a propriedade [**RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623) ou [**TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629).
-
-Depois que você recuperar um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente um local de dados do aplicativo, você pode acessar arquivos e pastas nesse local usando os métodos **StorageFolder**. No exemplo, esses objetos **StorageFolder** são armazenados na variável `localFolder`. Você pode saber mais sobre como usar locais de dados de app nas diretrizes da página [Classe ApplicationData](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata) e ao baixar a [Exemplo de dados de app](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData) do GitHub.
-
-2. Por exemplo, você pode recuperar um arquivo diretamente da pasta local do seu aplicativo usando um URI de aplicativo, assim:
-
-```cs
-using Windows.Storage;
-StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appdata:///local/file.txt"));
-```
-
-```javascript
-Windows.Storage.StorageFile.getFileFromApplicationUriAsync("ms-appdata:///local/file.txt").done(
-    function(file) {
-        // Process file
-    }
-);
-```
-
-```cppwinrt
-Windows::Storage::StorageFile file{
-    co_await Windows::Storage::StorageFile::GetFileFromApplicationUriAsync(Windows::Foundation::Uri{ L"ms-appdata:///local/file.txt" })
-};
-// Process file
-```
-
-```cpp
-using Windows::Storage;
-auto getFileTask = create_task(StorageFile::GetFileFromApplicationUriAsync(ref new Uri("ms-appdata:///local/file.txt")));
-getFileTask.then([](StorageFile^ file) 
-{
+2. Você pode recuperar um arquivo diretamente da pasta local do seu aplicativo usando um URI de aplicativo, desta forma:
+    
+    ```csharp
+    using Windows.Storage;
+    StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appdata:///local/file.txt"));
+    ```
+    
+    ```javascript
+    Windows.Storage.StorageFile.getFileFromApplicationUriAsync("ms-appdata:///local/file.txt").done(
+        function(file) {
+            // Process file
+        }
+    );
+    ```
+    
+    ```cppwinrt
+    Windows::Storage::StorageFile file{
+        co_await Windows::Storage::StorageFile::GetFileFromApplicationUriAsync(Windows::Foundation::Uri{ L"ms-appdata:///local/file.txt" })
+    };
     // Process file
-});
-```
-
-Quando o [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) é concluído, ele retorna um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo `file.txt` na pasta local do app (no exemplo, `file`).
-
-O prefixo "ms-appdata:///local/" no URI refere-se à pasta local do aplicativo. Para acessar os arquivos nas pastas roaming ou temporárias do aplicativo, use "ms-appdata:///roaming/" ou "ms-appdata:///temporary/" em vez disso. Você pode saber mais sobre como usar URIs do aplicativo em [Como carregar recursos de arquivos](https://msdn.microsoft.com/library/windows/apps/hh781229).
+    ```
+    
+    ```cpp
+    using Windows::Storage;
+    auto getFileTask = create_task(StorageFile::GetFileFromApplicationUriAsync(ref new Uri("ms-appdata:///local/file.txt")));
+    getFileTask.then([](StorageFile^ file) 
+    {
+        // Process file
+    });
+    ```
+    
+    Quando o [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) é concluído, ele retorna um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo `file.txt` na pasta local do app (no exemplo, `file`).
+    
+    O prefixo "ms-appdata:///local/" no URI refere-se à pasta local do aplicativo. Para acessar os arquivos nas pastas roaming ou temporárias do aplicativo, use "ms-appdata:///roaming/" ou "ms-appdata:///temporary/" em vez disso. Você pode saber mais sobre como usar URIs do aplicativo em [Como carregar recursos de arquivos](https://msdn.microsoft.com/library/windows/apps/hh781229).
 
 Além disso, diferentemente de outros locais, você também pode acessar os arquivos nos locais de dados de seu aplicativo usando [Win32 e COM para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/br205757) e algumas funções da Biblioteca Padrão C/C++ do Visual Studio.
 
@@ -178,69 +183,69 @@ Por padrão, o aplicativo só pode acessar arquivos e pastas na pasta de Downloa
 
 - Você pode criar um arquivo na pasta Downloads do usuário desta forma:
 
-```cs
-using Windows.Storage;
-StorageFile newFile = await DownloadsFolder.CreateFileAsync("file.txt");
-```
-
-```javascript
-Windows.Storage.DownloadsFolder.createFileAsync("file.txt").done(
-    function(newFile) {
-        // Process file
-    }
-);
-```
-
-```cppwinrt
-Windows::Storage::StorageFile newFile{
-    co_await Windows::Storage::DownloadsFolder::CreateFileAsync(L"file.txt")
-};
-// Process file
-```
-
-```cpp
-using Windows::Storage;
-auto createFileTask = create_task(DownloadsFolder::CreateFileAsync(L"file.txt"));
-createFileTask.then([](StorageFile^ newFile)
-{
+    ```csharp
+    using Windows.Storage;
+    StorageFile newFile = await DownloadsFolder.CreateFileAsync("file.txt");
+    ```
+    
+    ```javascript
+    Windows.Storage.DownloadsFolder.createFileAsync("file.txt").done(
+        function(newFile) {
+            // Process file
+        }
+    );
+    ```
+    
+    ```cppwinrt
+    Windows::Storage::StorageFile newFile{
+        co_await Windows::Storage::DownloadsFolder::CreateFileAsync(L"file.txt")
+    };
     // Process file
-});
-```
+    ```
+    
+    ```cpp
+    using Windows::Storage;
+    auto createFileTask = create_task(DownloadsFolder::CreateFileAsync(L"file.txt"));
+    createFileTask.then([](StorageFile^ newFile)
+    {
+        // Process file
+    });
+    ```
 
-[**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) é sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver um arquivo existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo que foi criado. Esse arquivo é chamado `newFile` no exemplo.
+    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) é sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver um arquivo existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo que foi criado. Esse arquivo é chamado `newFile` no exemplo.
 
 - Você pode criar uma subpasta na pasta Downloads do usuário desta forma:
 
-```cs
-using Windows.Storage;
-StorageFolder newFolder = await DownloadsFolder.CreateFolderAsync("New Folder");
-```
-
-```javascript
-Windows.Storage.DownloadsFolder.createFolderAsync("New Folder").done(
-    function(newFolder) {
-        // Process folder
-    }
-);
-```
-
-```cppwinrt
-Windows::Storage::StorageFolder newFolder{
-    co_await Windows::Storage::DownloadsFolder::CreateFolderAsync(L"New Folder")
-};
-// Process folder
-```
-
-```cpp
-using Windows::Storage;
-auto createFolderTask = create_task(DownloadsFolder::CreateFolderAsync(L"New Folder"));
-createFolderTask.then([](StorageFolder^ newFolder)
-{
+    ```csharp
+    using Windows.Storage;
+    StorageFolder newFolder = await DownloadsFolder.CreateFolderAsync("New Folder");
+    ```
+    
+    ```javascript
+    Windows.Storage.DownloadsFolder.createFolderAsync("New Folder").done(
+        function(newFolder) {
+            // Process folder
+        }
+    );
+    ```
+    
+    ```cppwinrt
+    Windows::Storage::StorageFolder newFolder{
+        co_await Windows::Storage::DownloadsFolder::CreateFolderAsync(L"New Folder")
+    };
     // Process folder
-});
-```
+    ```
+    
+    ```cpp
+    using Windows::Storage;
+    auto createFolderTask = create_task(DownloadsFolder::CreateFolderAsync(L"New Folder"));
+    createFolderTask.then([](StorageFolder^ newFolder)
+    {
+        // Process folder
+    });
+    ```
 
-[**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver uma subpasta existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representa a subpasta que foi criada. Esse arquivo é chamado `newFolder` no exemplo.
+    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver uma subpasta existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representa a subpasta que foi criada. Esse arquivo é chamado `newFolder` no exemplo.
 
 Se você criar um arquivo ou uma pasta na pasta Downloads, recomendamos adicionar esse item ao [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) do seu aplicativo, para que ele possa acessar prontamente esse item no futuro.
 

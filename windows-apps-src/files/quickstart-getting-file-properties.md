@@ -2,20 +2,18 @@
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Obter propriedades do arquivo
 description: Obtenha as propriedades&\#8212;nível superior, básicas e estendidas&\#8212;de um arquivo representado pelo objeto StorageFile.
-ms.date: 02/08/2017
+ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b0747dd3b8992ab456bdb00a4dc7157211eb8ba
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f69c86ac8f7d13970eca8d1bbb50d4859b95f6a6
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932978"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980354"
 ---
 # <a name="get-file-properties"></a>Obter propriedades do arquivo
-
-
 
 **APIs importantes**
 
@@ -26,10 +24,7 @@ ms.locfileid: "8932978"
 Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo representado pelo objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
 > [!NOTE]
-> Veja também o [Exemplo de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
-
- 
-
+> Para obter um exemplo completo, consulte o [exemplo de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -45,9 +40,8 @@ Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo
 
 Muitas propriedades de nível superior são acessadas como membros da classe [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). Essas propriedades incluem atributos do arquivo, tipo de conteúdo, data de criação, nome para exibição, tipo de arquivo etc.
 
-**Observação**Lembre-se de declarar a funcionalidade **picturesLibrary** .
-
- 
+> [!NOTE]
+> Lembre-se de declarar a funcionalidade **picturesLibrary**.
 
 Este exemplo enumera todos os arquivos da biblioteca Imagens, acessando algumas das propriedades de nível superior de cada arquivo.
 
