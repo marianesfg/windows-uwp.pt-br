@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ed6d9e21f3fed4a5f1d02a3b45fa08917a96117f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bc39c3aa59ca9624cc4664136b6294c07ed56083
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933759"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981420"
 ---
 # <a name="create-an-nfc-smart-card-app"></a>Criar um aplicativo de cartão inteligente NFC
 
@@ -382,4 +382,4 @@ var appletIdGroup = new SmartCardAppletIdGroup(
                                 SmartCardEmulationType.Uicc);
 ```
 
-* * Importante * * o suporte de intercepção SMS binário herdado no Windows Phone 8.1 foi removido e substituído pelo novo suporte mais amplo de SMS no Windows 10 Mobile, mas os aplicativos Windows Phone 8.1 herdados que dependem disso devem ser atualizados para usar o novo Windows 10 Mobile SMS APIs.
+<b>Importante</b>  o suporte de intercepção SMS binário herdado no Windows Phone 8.1 foi removido e substituído pelo novo suporte mais amplo de SMS no Windows 10 Mobile, mas os aplicativos Windows Phone 8.1 herdados que dependem disso devem ser atualizados para usar o novo Windows 10 Mobile SMS APIs.

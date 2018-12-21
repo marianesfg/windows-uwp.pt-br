@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, sons
 ms.localizationpriority: medium
-ms.openlocfilehash: 94044e3d10df15cb1cb256d86ced798395e6af6f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7ceef2da582f5d825949afdf2e116862c990165c
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923767"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981380"
 ---
 # <a name="add-sound"></a>Adicionar som
 
@@ -337,7 +337,7 @@ Gatilhos para reproduzir efeitos sonoros são definidos no método [Simple3DGame
 
 Desde que a interação de entre objetos difere bastante, dependendo do jogo, não vamos falar sobre a dinâmica de objetos do jogo aqui. Se você estiver interessado entender sua implementação, vá para o método [Simple3DGame::UpdateDynamics](#simple3dgameupdatedynamics-method) .
 
-Em princípio, quando ocorre uma colisão, ele aciona o efeito de som para reproduzir chamando [SoundEffect::PlaySound]((soundeffectplaysound-method). Esse método impede que os efeitos de som que está sendo reproduzido e enfileira o buffer de memória com os dados de som desejados. Ele usa a voz de origem para definir o volume, enviar dados de som e iniciar a reprodução.
+Em princípio, quando ocorre uma colisão, ele aciona o efeito de som para reproduzir chamando **SoundEffect:: PlaySound**. Esse método impede que os efeitos de som que está sendo reproduzido e enfileira o buffer de memória com os dados de som desejados. Ele usa a voz de origem para definir o volume, enviar dados de som e iniciar a reprodução.
 
 ### <a name="soundeffectplaysound-method"></a>Método SoundEffect:: PlaySound
 

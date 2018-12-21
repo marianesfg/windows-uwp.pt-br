@@ -8,12 +8,12 @@ keywords: caneta, mouse, touchpad, toque, ponteiro, entrada, interação do usu�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d5a51bd55a081265b4a90dfa662216977d1bded2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e3ffa7f559d92de4df947f160a2a7a35bd6f7f28
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933374"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981480"
 ---
 # <a name="handle-pointer-input"></a>Manusear entrada do ponteiro
 
@@ -24,9 +24,9 @@ Receba, processe e gerencie dados de entrada de dispositivos apontadores (como t
 > Se você personalizar as experiências de interação no seu aplicativo do Windows, os usuários esperam que elas sejam consistentes, intuitivas e detectáveis. Por esses motivos, recomendamos que você modele suas interações personalizadas naquelas com suporte dos [controles da plataforma](../controls-and-patterns/controls-by-function.md). Os controles de plataforma oferecem a experiência da interação do usuário da Plataforma Universal do Windows (UWP) completa, inclusive interações padrão, efeitos físicos animados, feedback visual e acessibilidade. 
 
 ## <a name="important-apis"></a>APIs importantes
-- [Windows.Devices.Input](https://msdn.microsoft.com/library/windows/apps/br225648)
-- [Windows.UI.Input](https://msdn.microsoft.com/library/windows/apps/br208383)
-- [Windows.UI.Xaml.Input](https://msdn.microsoft.com/library/windows/apps/br242084)
+- [Windows.Devices.Input](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
+- [Windows.UI.Input](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
+- [Windows.UI.Xaml.Input](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Input)
 
 ## <a name="pointers"></a>Ponteiros
 A maioria das experiências de interação normalmente envolve a identificação do objeto pelo usuário com o qual ele deseja interagir apontando para ele por meio de dispositivos de entrada, como touch, mouse, caneta e touchpad. Como os dados brutos de dispositivos de interface humana (HID) fornecidos por esses dispositivos de entrada incluem muitas propriedades comuns, os dados são promovidos e consolidados em uma pilha de entrada unificada e expostos como dados de ponteiro independentes de dispositivo. Assim, os aplicativos UWP podem consumir esses dados sem se preocupar com o dispositivo de entrada que está sendo usado.
@@ -35,7 +35,7 @@ A maioria das experiências de interação normalmente envolve a identificação
 > As informações específicas do dispositivo também são promovida dos dados brutos de HID, caso o aplicativo as exija.
  
 
-Cada ponto de entrada (ou contato) na pilha de entrada é representado por um objeto [**Pointer**](https://msdn.microsoft.com/library/windows/apps/br227968) exposto por meio do parâmetro [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) nos vários manipuladores de eventos de ponteiro. No caso de entrada com várias canetas ou de multi-touch, cada contato é tratado como um ponteiro de entrada único.
+Cada ponto de entrada (ou contato) na pilha de entrada é representado por um objeto [**Pointer**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Input.Pointer) exposto por meio do parâmetro [**PointerRoutedEventArgs**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) nos vários manipuladores de eventos de ponteiro. No caso de entrada com várias canetas ou de multi-touch, cada contato é tratado como um ponteiro de entrada único.
 
 ## <a name="pointer-events"></a>Eventos de ponteiro
 
@@ -45,7 +45,7 @@ Os eventos de ponteiro expõem informações básicas, como o tipo de dispositiv
 Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 
 > [!NOTE]
-> Restrinja a entrada de ponteiro a um elemento específico da interface do usuário chamando [**CapturePointer**](https://msdn.microsoft.com/library/windows/apps/br208918) nesse elemento dentro de um manipulador de eventos de ponteiro. Quando um ponteiro é capturado por um elemento, somente esse objeto recebe os eventos de entrada do ponteiro, mesmo quando o ponteiro é movido para fora da área delimitadora do objeto. O [**IsInContact**](https://msdn.microsoft.com/library/windows/apps/br227976) (botão do mouse pressionado, toque ou caneta em contato) deve ser true para que **CapturePointer** seja bem-sucedido.
+> Restrinja a entrada de ponteiro a um elemento específico da interface do usuário chamando [**CapturePointer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.capturepointer) nesse elemento dentro de um manipulador de eventos de ponteiro. Quando um ponteiro é capturado por um elemento, somente esse objeto recebe os eventos de entrada do ponteiro, mesmo quando o ponteiro é movido para fora da área delimitadora do objeto. O [**IsInContact**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.pointer.isincontact) (botão do mouse pressionado, toque ou caneta em contato) deve ser true para que **CapturePointer** seja bem-sucedido.
  
 
 <table>
@@ -61,7 +61,7 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208964"><strong>PointerCanceled</strong></a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointercanceled"><strong>PointerCanceled</strong></a></p></td>
 <td align="left"><p>Ocorre quando um ponteiro é cancelado pela plataforma. Isso pode ocorrer nas seguintes circunstâncias:</p>
 <ul>
 <li>Os ponteiros de toque são cancelados quando uma caneta é detectada dentro do intervalo da superfície de entrada.</li>
@@ -72,7 +72,7 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208965"><strong>PointerCaptureLost</strong></a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointercapturelost"><strong>PointerCaptureLost</strong></a></p></td>
 <td align="left"><p>Ocorre quando outro elemento da interface do usuário captura o ponteiro, o ponteiro é liberado ou outro ponteiro é capturado programaticamente.</p>
 <div class="alert">
 <strong>Observação</strong>não há nenhum evento de captura do ponteiro correspondente.
@@ -82,45 +82,45 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208968"><strong>PointerEntered</strong></a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerentered"><strong>PointerEntered</strong></a></p></td>
 <td align="left"><p>Ocorre quando um ponteiro entra na área delimitadora de um elemento. Isso pode acontecer de maneiras ligeiramente diferentes para entrada de toque, touchpad, mouse e caneta.</p>
 <ul>
 <li>O toque requer um contato do dedo para disparar esse evento, um toque direto no elemento ou uma movimentação para a área delimitadora do elemento.</li>
 <li>Mouse e touchpad têm um cursor na tela que está sempre visível e dispara esse evento mesmo caso nenhum botão do mouse ou do touchpad tenha sido pressionado.</li>
-<li>Assim como o toque, a caneta dispara esse evento com um toque da caneta no elemento ou uma movimentação para a área delimitadora do elemento. No entanto, a caneta também tem um estado de foco ([IsInRange](https://msdn.microsoft.com/library/windows/apps/br227977)) que, quando true, aciona esse evento.</li>
+<li>Assim como o toque, a caneta dispara esse evento com um toque da caneta no elemento ou uma movimentação para a área delimitadora do elemento. No entanto, a caneta também tem um estado de foco (<a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que, quando true, aciona esse evento.</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208969"><strong>PointerExited</strong></a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerexited"><strong>PointerExited</strong></a></p></td>
 <td align="left"><p>Ocorre quando um ponteiro sai da área delimitadora de um elemento. Isso pode acontecer de maneiras ligeiramente diferentes para entrada de toque, touchpad, mouse e caneta.</p>
 <ul>
 <li>O toque requer um contato do dedo para disparar esse evento quando o ponteiro sai da área delimitadora do elemento.</li>
 <li>Mouse e touchpad têm um cursor na tela que está sempre visível e dispara esse evento mesmo caso nenhum botão do mouse ou do touchpad tenha sido pressionado.</li>
-<li>Assim como o touch, a caneta aciona esse evento ao sair da área delimitadora do elemento. No entanto, a caneta também tem um estado de foco ([IsInRange](https://msdn.microsoft.com/library/windows/apps/br227977)) que aciona esse evento quando o estado muda de true para false.</li>
+<li>Assim como o touch, a caneta aciona esse evento ao sair da área delimitadora do elemento. No entanto, a caneta também tem um estado de foco (<a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que aciona esse evento quando o estado muda de true para false.</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208970"><strong>PointerMoved</strong></a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointermoved"><strong>PointerMoved</strong></a></p></td>
 <td align="left"><p>Ocorre quando um ponteiro muda coordenadas, estado do botão, pressão, inclinação ou geometria de contato (por exemplo, largura e altura) dentro da área delimitadora de um elemento. Isso pode acontecer de maneiras ligeiramente diferentes para entrada de toque, touchpad, mouse e caneta.</p>
 <ul>
 <li>O toque requer um contato do dedo e só dispara esse evento quando em contato dentro da área delimitadora do elemento.</li>
 <li>Mouse e touchpad têm um cursor na tela que está sempre visível e dispara esse evento mesmo caso nenhum botão do mouse ou do touchpad tenha sido pressionado.</li>
-<li>Assim como o touch, a caneta aciona esse evento quando em contato dentro da área delimitadora do elemento. No entanto, a caneta também tem um estado de foco ([IsInRange](https://msdn.microsoft.com/library/windows/apps/br227977)) que, quando true e dentro da área delimitadora do elemento, aciona esse evento.</li>
+<li>Assim como o touch, a caneta aciona esse evento quando em contato dentro da área delimitadora do elemento. No entanto, a caneta também tem um estado de foco (<a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que, quando true e dentro da área delimitadora do elemento, aciona esse evento.</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208971"><strong>PointerPressed</strong></a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerpressed"><strong>PointerPressed</strong></a></p></td>
 <td align="left"><p>Ocorre quando o ponteiro indica uma ação de pressionar (como um toque para baixo, botão do mouse para baixo, caneta para baixo ou botão de touchpad para baixo) dentro da área delimitadora de um elemento.</p>
-<p>[CapturePointer](https://msdn.microsoft.com/library/windows/apps/br208918) deve ser chamado no manipulador desse evento.</p></td>
+<p><a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.capturepointer">CapturePointer</a> deve ser chamado no manipulador desse evento.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208972"><strong>PointerReleased</strong></a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerreleased"><strong>PointerReleased</strong></a></p></td>
 <td align="left"><p>Ocorre quando o ponteiro indica uma ação de liberação (como um toque para cima, botão do mouse para cima, caneta para cima ou botão de touchpad para cima) dentro da área delimitadora de um elemento ou, caso o ponteiro seja capturado, fora da área delimitadora.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208973"><strong>PointerWheelChanged</strong></a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged"><strong>PointerWheelChanged</strong></a></p></td>
 <td align="left"><p>Ocorre quando o botão de rolagem do mouse é girado.</p>
-<p>A entrada do mouse é associada a um único ponteiro atribuído quando detectada pela primeira vez. Se o usuário clicar em um botão do mouse (esquerdo, de rolagem ou direito), será criada uma associação secundária entre o ponteiro e esse botão por meio do evento [PointerMoved](https://msdn.microsoft.com/library/windows/apps/br208970).</p></td>
+<p>A entrada do mouse é associada a um único ponteiro atribuído quando detectada pela primeira vez. Se o usuário clicar em um botão do mouse (esquerdo, de rolagem ou direito), será criada uma associação secundária entre o ponteiro e esse botão por meio do evento <a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointermoved">PointerMoved</a>.</p></td>
 </tr>
 </tbody>
 </table> 
@@ -194,9 +194,9 @@ Este é o Extensible Application Markup Language (XAML) da interface do usuário
 
 ### <a name="listen-for-pointer-events"></a>Escutar eventos de ponteiro
 
-Na maioria dos casos, recomendamos que você obtenha informações do ponteiro por meio do [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) do manipulador de eventos.
+Na maioria dos casos, recomendamos que você obtenha informações do ponteiro por meio do [**PointerRoutedEventArgs**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) do manipulador de eventos.
 
-Caso o argumento do evento não exponha os detalhes necessários do evento, você pode acessar informações estendidas de [**PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) expostas por meio dos métodos [**GetCurrentPoint**](https://msdn.microsoft.com/library/windows/apps/hh943077) e [**GetIntermediatePoints**](https://msdn.microsoft.com/library/windows/apps/hh943078) de [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076).
+Se o argumento do evento não exponha os detalhes necessários, você pode obter acesso a informações estendidas de [**PointerPoint**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Input.PointerPoint) expostos pelo [**GetCurrentPoint**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) e [**GetIntermediatePoints**]https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) métodos de [** PointerRoutedEventArgs**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs).
 
 O código a seguir configura o objeto de dicionário global para rastrear cada ponteiro ativo e identifica os diversos ouvintes de eventos de ponteiro para o objeto de destino.
 
@@ -240,10 +240,10 @@ public MainPage()
 
 Em seguida, usamos comentários da interface do usuário para demonstrar manipuladores de eventos de ponteiro básicos.
 
--   Esse manipulador gerencia o evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). Adicionamos o evento ao log de eventos, o ponteiro ao dicionário de ponteiros ativos e exibimos os detalhes do ponteiro.
+-   Esse manipulador gerencia o evento [**PointerPressed**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerpressed). Adicionamos o evento ao log de eventos, o ponteiro ao dicionário de ponteiros ativos e exibimos os detalhes do ponteiro.
 
     > [!NOTE]
-    > Os eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) e [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) nem sempre ocorrem em pares. O aplicativo deve escutar e manipular qualquer evento que possa concluir um ponteiro para baixo (como [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) e [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).      
+    > Os eventos [**PointerPressed**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerpressed) e [**PointerReleased**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerreleased) nem sempre ocorrem em pares. O aplicativo deve escutar e manipular qualquer evento que possa concluir um ponteiro para baixo (como [**PointerExited**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerexited), [**PointerCanceled**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointercanceled) e [**PointerCaptureLost**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointercapturelost)).      
 
 ```csharp
 /// <summary>
@@ -285,7 +285,7 @@ void Target_PointerPressed(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Esse manipulador gerencia o evento [**PointerEntered**](https://msdn.microsoft.com/library/windows/apps/br208968). Adicionamos o evento ao log de eventos, o ponteiro à coleção de ponteiros e exibimos os detalhes do ponteiro.
+-   Esse manipulador gerencia o evento [**PointerEntered**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerentered). Adicionamos o evento ao log de eventos, o ponteiro à coleção de ponteiros e exibimos os detalhes do ponteiro.
 
 ```csharp
 /// <summary>
@@ -322,10 +322,10 @@ private void Target_PointerEntered(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Esse manipulador gerencia o evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970). Adicionamos o evento ao log de eventos e atualizamos os detalhes do ponteiro.
+-   Esse manipulador gerencia o evento [**PointerMoved**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointermoved). Adicionamos o evento ao log de eventos e atualizamos os detalhes do ponteiro.
 
     > [!Important]
-    > A entrada do mouse é associada a um único ponteiro atribuído quando detectada pela primeira vez. Se o usuário clicar em um botão do mouse (esquerdo, roda ou direito), será criada uma associação secundária entre o ponteiro e esse botão por meio do evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). O evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) é disparado somente quando esse mesmo botão do mouse é liberado (nenhum outro botão pode ser associado ao ponteiro até que o evento seja concluído). Devido a essa associação exclusiva, outros cliques em botões do mouse são roteados por meio do evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970).     
+    > A entrada do mouse é associada a um único ponteiro atribuído quando detectada pela primeira vez. Se o usuário clicar em um botão do mouse (esquerdo, roda ou direito), será criada uma associação secundária entre o ponteiro e esse botão por meio do evento [**PointerPressed**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerpressed). O evento [**PointerReleased**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerreleased) é disparado somente quando esse mesmo botão do mouse é liberado (nenhum outro botão pode ser associado ao ponteiro até que o evento seja concluído). Devido a essa associação exclusiva, outros cliques em botões do mouse são roteados por meio do evento [**PointerMoved**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointermoved).     
 
 ```csharp
 /// <summary>
@@ -372,7 +372,7 @@ private void Target_PointerMoved(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Esse manipulador gerencia o evento [**PointerWheelChanged**](https://msdn.microsoft.com/library/windows/apps/br208973). Adicionamos o evento ao log de eventos, o ponteiro à matriz de ponteiros (se necessário) e exibimos os detalhes do ponteiro.
+-   Esse manipulador gerencia o evento [**PointerWheelChanged**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged). Adicionamos o evento ao log de eventos, o ponteiro à matriz de ponteiros (se necessário) e exibimos os detalhes do ponteiro.
 
 ```csharp
 /// <summary>
@@ -402,7 +402,7 @@ private void Target_PointerWheelChanged(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Esse manipulador gerencia o evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) onde o contato com o digitalizador é encerrado. Adicionamos o evento ao log de eventos, removemos o ponteiro da coleção de ponteiros e atualizamos os detalhes do ponteiro.
+-   Esse manipulador gerencia o evento [**PointerReleased**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerreleased) onde o contato com o digitalizador é encerrado. Adicionamos o evento ao log de eventos, removemos o ponteiro da coleção de ponteiros e atualizamos os detalhes do ponteiro.
 
 ```csharp
 /// <summary>
@@ -454,7 +454,7 @@ void Target_PointerReleased(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Esse manipulador gerencia o evento [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969) (quando o contato com o digitalizador é mantido). Adicionamos o evento ao log de eventos, removemos o ponteiro da matriz de ponteiros e atualizamos os detalhes do ponteiro.
+-   Esse manipulador gerencia o evento [**PointerExited**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerexited) (quando o contato com o digitalizador é mantido). Adicionamos o evento ao log de eventos, removemos o ponteiro da matriz de ponteiros e atualizamos os detalhes do ponteiro.
 
 ```csharp
 /// <summary>
@@ -489,7 +489,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Esse manipulador gerencia o evento [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964). Adicionamos o evento ao log de eventos, removemos o ponteiro da matriz de ponteiros e atualizamos os detalhes do ponteiro.
+-   Esse manipulador gerencia o evento [**PointerCanceled**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointercanceled). Adicionamos o evento ao log de eventos, removemos o ponteiro da matriz de ponteiros e atualizamos os detalhes do ponteiro.
 
 ```csharp
 /// <summary>
@@ -528,10 +528,10 @@ private void Target_PointerCanceled(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Esse manipulador gerencia o evento [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965). Adicionamos o evento ao log de eventos, removemos o ponteiro da matriz de ponteiros e atualizamos os detalhes do ponteiro.
+-   Esse manipulador gerencia o evento [**PointerCaptureLost**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointercapturelost). Adicionamos o evento ao log de eventos, removemos o ponteiro da matriz de ponteiros e atualizamos os detalhes do ponteiro.
 
     > [!NOTE]
-    > [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965) pode ocorrer no lugar de [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972). A captura do ponteiro pode ser perdida por vários motivos, incluindo interação do usuário, captura programática de outro ponteiro, chamando [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972).     
+    > [**PointerCaptureLost**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointercapturelost) pode ocorrer no lugar de [**PointerReleased**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerreleased). A captura do ponteiro pode ser perdida por vários motivos, incluindo interação do usuário, captura programática de outro ponteiro, chamando [**PointerReleased**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.pointerreleased).     
 
 ```csharp
 /// <summary>
@@ -572,9 +572,9 @@ private void Target_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
 
 ### <a name="get-pointer-properties"></a>Obter as propriedades do ponteiro
 
-Conforme mencionado anteriormente, você deve obter as informações do ponteiro mais estendido de um objeto [**Windows.UI.Input.PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) obtidas por meio dos métodos [**GetCurrentPoint**](https://msdn.microsoft.com/library/windows/apps/hh943077) e [**GetIntermediatePoints**](https://msdn.microsoft.com/library/windows/apps/hh943078) de [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076). Os trechos de código a seguir mostram como.
+Conforme mencionado anteriormente, você deve obter informações do ponteiro mais estendido de um objeto [**Windows.UI.Input.PointerPoint**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Input.PointerPoint) obtido por meio do [**GetCurrentPoint**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) e [**GetIntermediatePoints**]https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) métodos de [**PointerRoutedEventArgs**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs). Os trechos de código a seguir mostram como.
 
--   Em primeiro lugar, criamos um novo [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) para cada ponteiro.
+-   Em primeiro lugar, criamos um novo [**TextBlock**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.TextBlock) para cada ponteiro.
 
 ```csharp
 /// <summary>
@@ -597,7 +597,7 @@ void CreateInfoPop(PointerPoint ptrPt)
 }
 ```
 
--   Em seguida, fornecemos uma maneira de atualizar as informações do ponteiro em um [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) existente associado a esse ponteiro.
+-   Em seguida, fornecemos uma maneira de atualizar as informações do ponteiro em um [**TextBlock**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.TextBlock) existente associado a esse ponteiro.
 
 ```csharp
 /// <summary>

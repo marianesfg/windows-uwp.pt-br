@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 50c9e80296510d327e60f8c7dba5e38f19b95b7f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fce4ed3f32c0207e55b37a765b4d48d234343e38
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919092"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981430"
 ---
 # <a name="walkthrough-creating-a-windows-runtime-component-in-ccx-and-calling-it-from-javascript-or-c"></a>Procedimento passo a passo: criando um componente do Windows Runtime em C++/CX e chamando-o em JavaScript ou C#
 > [!NOTE]
@@ -24,14 +24,14 @@ Neste exemplo, criamos o projeto de componente primeiro, mas você pode criar o 
 
 A classe principal do componente contém exemplos de definições de propriedade e método, além de uma declaração de evento. Eles são fornecidos apenas para mostrar como isso é feito. Eles não são necessários e, neste exemplo, substituiremos todos os códigos gerados pelo próprio código.
 
-## **<a name="to-create-the-c-component-project"></a>Para criar o projeto de componente C++**
-Na barra de menus do Visual Studio, escolha **Arquivo, Novo, Projeto**.
+### **<a name="to-create-the-c-component-project"></a>Para criar o projeto de componente C++**
+1. Na barra de menus do Visual Studio, escolha **Arquivo, Novo, Projeto**.
 
-Na caixa de diálogo **Novo Projeto**, no painel à esquerda, expanda **Visual C++** e selecione o nó de aplicativos Universais do Windows.
+2. Na caixa de diálogo **Novo Projeto**, no painel à esquerda, expanda **Visual C++** e selecione o nó de aplicativos Universais do Windows.
 
-No painel central, selecione **Componente do Tempo de Execução do Windows** e nomeie o projeto WinRT\_CPP.
+3. No painel central, selecione **Componente do Tempo de Execução do Windows** e nomeie o projeto WinRT\_CPP.
 
-Escolha o botão **OK**.
+4. Escolha o botão **OK**.
 
 ## **<a name="to-add-an-activatable-class-to-the-component"></a>Para adicionar uma classe ativável ao componente**
 Uma classe ativável é aquela que código cliente pode criar usando uma expressão **new** (**New** em Visual Basic ou **ref new** em C++). Em seu componente, declare-a como **classe ref pública selado**. Na verdade, os arquivos Class1.h e .cpp já têm uma classe ref. É possível alterar o nome, mas neste exemplo usaremos o nome padrão – Class1. É possível definir classes ref adicionais ou classes regulares no componente caso elas sejam necessárias. Para obter mais informações sobre classes ref, consulte [Sistema de tipos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
@@ -85,15 +85,15 @@ private:
         Windows::UI::Core::CoreDispatcher^ m_dispatcher;
 ```
 
-## <a name="to-add-the-header-and-namespace-directives"></a>Para adicionar as diretivas de cabeçalho e namespace
-Em Class1.cpp, adicione estas diretivas #include:
+### <a name="to-add-the-header-and-namespace-directives"></a>Para adicionar as diretivas de cabeçalho e namespace
+1. Em Class1.cpp, adicione estas diretivas #include:
 
 ```cpp
 #include <ppltasks.h>
 #include <concurrent_vector.h>
 ```
 
-Agora adicione estas instruções using para extrair os namespaces necessários:
+2. Agora adicione estas instruções using para extrair os namespaces necessários:
 
 ```cpp
 using namespace concurrency;
@@ -269,22 +269,22 @@ IAsyncActionWithProgress<double>^ Class1::GetPrimesUnordered(int first, int last
 ## <a name="creating-a-javascript-client-app"></a>Criação de um aplicativo cliente JavaScript
 Caso queira criar um cliente em C#, você pode ignorar esta seção.
 
-## <a name="to-create-a-javascript-project"></a>Para criar um projeto JavaScript
-No Gerenciador de Soluções, abra o menu de atalho do nó Solução e escolha **Adicionar, Novo Projeto**.
+### <a name="to-create-a-javascript-project"></a>Para criar um projeto JavaScript
+1. No Gerenciador de Soluções, abra o menu de atalho do nó Solução e escolha **Adicionar, Novo Projeto**.
 
-Expanda JavaScript (ele pode estar aninhado em **Outros Idiomas**) e escolha **Aplicativo em Branco (Universal do Windows)**.
+2. Expanda JavaScript (ele pode estar aninhado em **Outros Idiomas**) e escolha **Aplicativo em Branco (Universal do Windows)**.
 
-Aceite o nome padrão – App1 – escolhendo o botão **OK**.
+3. Aceite o nome padrão – App1 – escolhendo o botão **OK**.
 
-Abra o menu de atalho do nó do projeto App1 e escolha **Definir como Projeto de Inicialização**.
+4. Abra o menu de atalho do nó do projeto App1 e escolha **Definir como Projeto de Inicialização**.
 
-Adicione uma referência de projeto para WinRT_CPP:
+5. Adicione uma referência de projeto para WinRT_CPP:
 
-Abra o menu de atalho do nó Referências e escolha **Adicionar Referência**.
+6. Abra o menu de atalho do nó Referências e escolha **Adicionar Referência**.
 
-No painel à esquerda da caixa de diálogo Gerenciador de Referências, selecione **Projetos** e **Solução**.
+7. No painel à esquerda da caixa de diálogo Gerenciador de Referências, selecione **Projetos** e **Solução**.
 
-No painel central, selecione WinRT_CPP e escolha o botão **OK**
+8. No painel central, selecione WinRT_CPP e escolha o botão **OK**
 
 ## <a name="to-add-the-html-that-invokes-the-javascript-event-handlers"></a>Para adicionar o HTML que invoca os manipuladores de eventos JavaScript
 Cole este HTML no nó <body> da página default.html:
@@ -440,22 +440,22 @@ Pressione F5 para executar o aplicativo.
 
 ## <a name="creating-a-c-client-app"></a>Criação de um aplicativo cliente do C#
 
-## <a name="to-create-a-c-project"></a>Para criar um projeto C#
-No Gerenciador de Soluções, abra o menu de atalho do nó Solution e escolha **Adicionar, Novo Projeto**.
+### <a name="to-create-a-c-project"></a>Para criar um projeto C#
+1. No Gerenciador de Soluções, abra o menu de atalho do nó Solution e escolha **Adicionar, Novo Projeto**.
 
-Expanda Visual C# (ele pode estar aninhado em **Outros Idiomas**), selecione **Windows** e **Universal** no painel à esquerda e selecione **Aplicativo em Branco** no painel intermediário.
+2. Expanda Visual C# (ele pode estar aninhado em **Outros Idiomas**), selecione **Windows** e **Universal** no painel à esquerda e selecione **Aplicativo em Branco** no painel intermediário.
 
-Nomeie esse aplicativo CS_Client e escolha o botão **OK**.
+3. Nomeie esse aplicativo CS_Client e escolha o botão **OK**.
 
-Abra o menu de atalho do nó do projeto CS_Client e escolha **Definir como Projeto de Inicialização**.
+4. Abra o menu de atalho do nó do projeto CS_Client e escolha **Definir como Projeto de Inicialização**.
 
-Adicione uma referência de projeto para WinRT_CPP:
+5. Adicione uma referência de projeto para WinRT_CPP:
 
-Abra o menu de atalho do nó **Referências** e escolha **Adicionar Referência**.
+   - Abra o menu de atalho do nó **Referências** e escolha **Adicionar Referência**.
 
-No painel à esquerda da caixa de diálogo **Gerenciador de Referências**, selecione **Projetos** e **Solução**.
+   - No painel à esquerda da caixa de diálogo **Gerenciador de Referências**, selecione **Projetos** e **Solução**.
 
-No painel central, selecione WinRT_CPP e escolha o botão **OK**.
+   - No painel central, selecione WinRT_CPP e escolha o botão **OK**.
 
 ## <a name="to-add-the-xaml-that-defines-the-user-interface"></a>Para adicionar o XAML que define a interface do usuário
 Copie o código a seguir para o elemento Grid em MainPage.xaml.
@@ -584,20 +584,20 @@ Selecione o projeto C# ou JavaScript como projeto de inicialização abrindo o m
 ## <a name="inspecting-your-component-in-object-browser-optional"></a>Inspeção do componente no Pesquisador de Objetos (opcional)
 No Pesquisador de Objetos, é possível inspecionar todos os tipos de Tempo de Execução do Windows definidos em arquivos .winmd. Isso inclui os tipos nos namespaces Platform e padrão. No entanto, como os tipos no namespace Platform::Collections são definidos no arquivo de cabeçalho collections.h, e não em um arquivo winmd, eles não são exibidos no Pesquisador de Objetos.
 
-## **<a name="to-inspect-a-component"></a>Para inspecionar um componente**
-Na barra de menus, escolha **Exibir, Pesquisador de Objetos** (Ctrl+Alt+J).
+### **<a name="to-inspect-a-component"></a>Para inspecionar um componente**
+1. Na barra de menus, escolha **Exibir, Pesquisador de Objetos** (Ctrl+Alt+J).
 
-No painel à esquerda do Pesquisador de Objetos, expanda o nó WinRT\_CPP para mostrar os tipos e os métodos definidos no componente.
+2. No painel à esquerda do Pesquisador de Objetos, expanda o nó WinRT\_CPP para mostrar os tipos e os métodos definidos no componente.
 
 ## <a name="debugging-tips"></a>Dicas de depuração
 Para obter uma experiência de depuração melhor, baixe os símbolos de depuração dos servidores de símbolos Microsoft públicos:
 
-## **<a name="to-download-debugging-symbols"></a>Para baixar símbolos de depuração**
-Na barra de menus, escolha **Ferramentas, Opções**.
+### **<a name="to-download-debugging-symbols"></a>Para baixar símbolos de depuração**
+1. Na barra de menus, escolha **Ferramentas, Opções**.
 
-Na caixa de diálogo **Opções**, expanda **Depuração** e selecione **Símbolos**.
+2. Na caixa de diálogo **Opções**, expanda **Depuração** e selecione **Símbolos**.
 
-Selecione **Servidores de Símbolos Microsoft** e escolha o botão **OK**.
+3. Selecione **Servidores de Símbolos Microsoft** e escolha o botão **OK**.
 
 Pode levar algum tempo para baixar os símbolos pela primeira vez. Para aumentar o desempenho na próxima vez em que você pressionar F5, especifique um diretório local no qual armazenar em cache os símbolos.
 

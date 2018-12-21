@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt, pri. recursos, jogos, centennial, desktop app converter, mui, assembly satélite
 ms.localizationpriority: medium
-ms.openlocfilehash: 620efc73502c741e415d210170ea53deefd4e974
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 287c22cbd50f1b69f505bbddd445740fe9422c31
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927949"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981450"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Use o Sistema de Gerenciamento de Recursos do Windows 10 em um app ou jogo herdado
 
@@ -158,7 +158,7 @@ Para obter mais informações sobre o arquivo `AppXManifest.xml` e o layout do p
 
 Por fim, se você estiver usando o Visual Studio para criar um novo projeto e migrar o código existente, consulte [a documentação do MSDN sobre a criação de um novo projeto UWP](https://msdn.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal). Você pode incluir o código existente no novo projeto, mas você provavelmente precisará fazer alterações significativas no código (especialmente na interface do usuário) para que ele seja executado como uma UWP "pura". Essas alterações estão fora do escopo deste documento.
 
-***
+---
 
 ## <a name="phase-1-localize-the-application-manifest"></a>Fase 1: Localizar o manifesto do aplicativo
 
@@ -178,7 +178,7 @@ Se você quiser criar os recursos manualmente:
  * Use o código BCP-47 apropriado se seu idioma padrão não for Português (Brasil) 
 0. No arquivo XML, adicione o conteúdo a seguir, no qual o <span style="background-color: yellow">texto realçado</span> é substituído pelo texto apropriado do app, no idioma padrão.
 
-**Observação** Há restrições sobre os tamanhos de algumas dessas cadeias de caracteres. Para obter mais informações, consulte [VisualElements](/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements?branch=live).
+[!Note] Há restrições sobre os tamanhos de algumas dessas cadeias de caracteres. Para obter mais informações, consulte [VisualElements](/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements?branch=live).
 
 <blockquote>
 <pre>
@@ -303,7 +303,7 @@ Agora que o arquivo PRI já foi criado, você pode criar e assinar o pacote:
  * `/f` define o arquivo de mapeamento a ser usado (criado na etapa anterior) 
  * `/p` define o nome do pacote de saída
  * `/o` define-o para substituir o arquivo de saída, se houver
-0. Depois que o pacote é criado, ele deve ser assinado. A maneira mais fácil de obter um certificado de assinatura é criando um projeto Windows Universal vazio no Visual Studio e copiando o `.pfx` arquivo, ele cria, mas você pode criar um manualmente usando o `MakeCert` e `Pvk2Pfx` utilitários conforme descrito em [o **como criar um certificado de assinatura de pacote de aplicativo** tópico no MSDN] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
+0. Depois que o pacote é criado, ele deve ser assinado. A maneira mais fácil de obter um certificado de assinatura é criando um projeto Windows Universal vazio no Visual Studio e copiando o `.pfx` arquivo, ele cria, mas você pode criar um manualmente usando o `MakeCert` e `Pvk2Pfx` utilitários conforme descrito na <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832.aspx">como criar um certificado de assinatura de pacote do aplicativo</a>, um tópico no MSDN. 
  * **Importante:** se você criar manualmente um certificado de assinatura, verifique se colocou os arquivos em um diretório que não seja o diretório de origem do pacote ou o diretório do projeto; caso contrário, ele poderá fazer parte do pacote, incluindo a chave privada!
 0. Para assinar o pacote, use o comando a seguir. Observe que o `Publisher` especificado no elemento `Identity` do `AppxManifest.xml` deve coincidir com o `Subject` do certificado (esse **não** é o elemento `<PublisherDisplayName>`, que é o nome de exibição localizado que aparecerá para os usuários). Como sempre, substitua os nomes de arquivo `contoso_demo...` pelos nomes apropriados para o projeto e (**muito importante**) assegure que o arquivo `.pfx` não está no diretório atual (caso contrário, ele teria sido criado como parte do pacote, incluindo a chave privada de assinatura):
 

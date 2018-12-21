@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, funções de usuário, permissão do usuário, funções personalizadas, acesso de usuário, personalizar permissões, funções padrão
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d1581757cb16cf2ed5d0082a6a0e4a4e09299361
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947978"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981500"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Definir funções ou permissões personalizadas para usuários de contas
 
@@ -170,7 +170,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
     <tr><td align="left">    <b>Uso</b> </td><td>    Pode exibir o <a href="usage-report.md">Relatório de uso</a> do produto.     </td><td>    N/D       </td><td>    N/D     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Health</b> </td><td>    Pode exibir o <a href="health-report.md">Relatório de integridade</a> do produto.    </td><td>    N/D     </td><td>    N/D     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Comentários do cliente</b>    </td><td>    Pode exibir os relatórios <a href="reviews-report.md">análises</a> e <a href="feedback-report.md">Comentários</a> do produto.       </td><td>    N/D (para responder a comentários ou análises, a permissão <b>Contato com cliente</b> deve ser concedida)   </td><td>    N/D     </td><td>    N/D         </td></tr>
-    <tr><td align="left">    <b>Análise do Xbox</b> </td><td>    Pode exibir o [relatório de análise do Xbox](xbox-analytics-report.md) para o produto.    </td><td>    N/D   </td><td>    N/D       </td><td>    N/D          </td></tr>
+    <tr><td align="left">    <b>Análise do Xbox</b> </td><td>    Pode exibir o <a href="xbox-analytics-report.md">relatório de análise do Xbox</a> para o produto.    </td><td>    N/D   </td><td>    N/D       </td><td>    N/D          </td></tr>
     </tbody>
     </table>
 

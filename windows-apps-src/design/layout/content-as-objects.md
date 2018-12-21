@@ -3,12 +3,12 @@ description: ''
 title: Conteúdo como objetos
 template: detail.hbs
 ms.localizationpriority: medium
-ms.openlocfilehash: 37ba5093f2d7cfe268be40413b889801daf00967
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ed2ac8530d69929cc0e0e921cfb1cc5368058cd2
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942397"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981440"
 ---
 # <a name="content-as-objects"></a>Conteúdo como objetos
 
@@ -35,7 +35,7 @@ Uma hierarquia visual limpa informa quais elementos são os mais importantes aos
   <p>Portanto, como criar uma hierarquia visual limpa? Com versões anteriores do Windows 10, você pode usar o espaço em branco, a posição e a tipografia para definir uma hierarquia visual. </p>
   </div>
   <div class="side-by-side-content-right">
-    ![Um layout simples](images/content-as-objects/flat-layout.png)
+    <a href="images/content-as-objects/flat-layout.png">Um layout simples</a>
     
   </div>
 </div>
@@ -43,7 +43,7 @@ Uma hierarquia visual limpa informa quais elementos são os mais importantes aos
 
 Com o Windows 10 RS2, nós literalmente adicionamos outra dimensão: profundidade. 
 
-![Profundidade no layout](images/content-as-objects/depth-in-layout2.png)
+<a href="images/content-as-objects/depth-in-layout2.png">Profundidade no layout</a>
 
 
 ## <a name="use-depth-to-establish-a-hierarchy"></a>Use profundidade para estabelecer uma hierarquia 
@@ -59,7 +59,7 @@ Com o Windows 10 RS2, nós literalmente adicionamos outra dimensão: profundidad
     </p>
   </div>
   <div class="side-by-side-content-right">
-    ![Profundidade no layout](images/content-as-objects/elements-forward-backward.png) 
+    <a href="images/content-as-objects/elements-forward-backward.png">Profundidade no layout</a> 
     
   </div>
 </div>
@@ -76,13 +76,12 @@ Com o Windows 10 RS2, nós literalmente adicionamos outra dimensão: profundidad
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **Além da tela de fundo** <br/>
-Essa camada fica atrás do aplicativo.  Ao mover elementos para essa camada, é recomendável torná-los não interativos. Elementos nesta camada têm o paralaxe mais lento e estão recortados para a janela do aplicativo. TODO: Essa camada é dimensionada? 
+<b>Além do plano de fundo</b> Essa camada fica atrás do aplicativo.  Ao mover elementos para essa camada, é recomendável torná-los não interativos. Elementos nesta camada têm o paralaxe mais lento e estão recortados para a janela do aplicativo. TODO: Essa camada é dimensionada? 
 
 <p>Exemplo de elementos de tela de fundo incluem imagem atrás de conteúdo, TODO: Exemplo, TODO: Exemplo.</p>
   </div>
   <div class="side-by-side-content-right">
-    ![A camada da tela de fundo acima de um aplicativo](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">A camada da tela de fundo acima de um aplicativo</a>
     
   </div>
 </div>
@@ -93,13 +92,12 @@ Essa camada fica atrás do aplicativo.  Ao mover elementos para essa camada, é 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **Camada passiva** <br/>
-Essa é a camada base do aplicativo, onde os elementos de interface do usuário moram por padrão.  Elementos movem em tempo real nessa camada (nenhum paralaxe), são cortados para a janela do aplicativo e renderizados em escala de 100%. 
+<b>Camada passiva</b> Essa é a camada base do aplicativo, onde os elementos de interface do usuário moram por padrão.  Elementos movem em tempo real nessa camada (nenhum paralaxe), são cortados para a janela do aplicativo e renderizados em escala de 100%. 
 
 <p>Elementos de exemplo: A tela de fundo do aplicativo, texto, interface do usuário secundária, como interface de usuário de navegação do aplicativo.</p>
   </div>
   <div class="side-by-side-content-right">
-    ![A camada passiva de um aplicativo](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">A camada passiva de um aplicativo</a>
     
   </div>
 </div>
@@ -110,13 +108,12 @@ Essa é a camada base do aplicativo, onde os elementos de interface do usuário 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **Chamadas para ação** <br/>
-Essa camada é para itens interativos que você prioriza acima dos elementos de camada passiva. Elementos nesta camada apresentam paralaxe médio e estão recortados para a janela do aplicativo. TODO: Colocar elementos nessa escala de camada ou adicionar uma sombra?
+<b>Chamadas para ação</b> Essa camada é para itens interativos que você prioriza acima dos elementos de camada passiva. Elementos nesta camada apresentam paralaxe médio e estão recortados para a janela do aplicativo. TODO: Colocar elementos nessa escala de camada ou adicionar uma sombra?
 
 <p>Elementos de exemplo: listas, grades, comandos principais (TODO: como....).</p> 
   </div>
   <div class="side-by-side-content-right">
-    ![A camada de chamada de ação de um aplicativo](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">A camada de chamada de ação de um aplicativo</a>
     
   </div>
 </div>
@@ -126,13 +123,12 @@ Essa camada é para itens interativos que você prioriza acima dos elementos de 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **Camada de herói** <br/>
-Essa camada é para o elemento de maior prioridade na tela no momento.  Elementos nessa camada podem quebrar os limites da janela do aplicativo, eles podem ser redimensionados e receber uma sombra automaticamente.
+<b>Camada de herói</b> Essa camada é para o elemento de maior prioridade na tela no momento.  Elementos nessa camada podem quebrar os limites da janela do aplicativo, eles podem ser redimensionados e receber uma sombra automaticamente.
 
 <p>Elementos de exemplo: elementos fotográficos, o item atualmente selecionado.</p>  
   </div>
   <div class="side-by-side-content-right">
-    ![A camada de herói de um aplicativo](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">A camada de herói de um aplicativo</a>
     
   </div>
 </div>

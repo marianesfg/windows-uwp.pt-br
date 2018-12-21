@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 340289c16cfd9c63f578c63827b1c0b35162cdfd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 363ea5728b94d6b42f29299e8d240bcfc6242b4c
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920826"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981560"
 ---
 # <a name="guidelines-for-panning"></a>Diretrizes de movimento panorâmico
 
@@ -82,7 +82,7 @@ O movimento horizontal com o uso de toque, com gestos de passar ou deslizar o de
 > <strong>Windows 10 Fall Creators Update - Mudança de comportamento</strong>
 > </div>
 > Por padrão, em vez de seleção de texto, uma caneta ativa agora fará rolagem/movimento panorâmico em aplicativos UWP (como touch, touchpad e caneta passiva).  
-> Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Consulte o tópico de referência de API da [Classe ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) para obter detalhes.
+> Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, consulte o tópico de referência de API para a <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">Classe ScrollViewer</a>.
 
 Dependendo do dispositivo de entrada, o usuário faz o deslocamento horizontal dentro da região com o movimento panorâmico usando uma das seguintes opções:
 

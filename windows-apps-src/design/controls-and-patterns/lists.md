@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d8ea08cd02314fb566680d8f5b249eaf735b977a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a86c3f2662c036dea5dcebf4726a0463d623a3ac
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938202"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981510"
 ---
 # <a name="lists"></a>Listas
 
@@ -37,7 +37,7 @@ Diretrizes de design, recursos e exemplos são fornecidos para cada padrão de l
 > <strong>Windows 10 Fall Creators Update - Mudança de comportamento</strong>
 > </div>
 > Por padrão, em vez de realizar uma seleção, a caneta ativa agora fará rolagem/movimento panorâmico em listas em aplicativos UWP (como toque, touchpad e caneta passiva).
-> Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Consulte o tópico de referência de API da [Classe ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) para obter detalhes.
+> Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, consulte o tópico de referência de API para a <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">Classe ScrollViewer</a>.
 
 ## <a name="list-views"></a>Modos de exibição de lista
 

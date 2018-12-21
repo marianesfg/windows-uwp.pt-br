@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
-ms.openlocfilehash: 20351737e17dce7654385d6843280005cae9800c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2180551f48a728a9b426bc7e35b2dac388ff56ef
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931662"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981570"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Executar, depurar e testar um aplicativo da área de trabalho empacotado
 
@@ -100,9 +100,9 @@ Você também pode assinar seu aplicativo manualmente. Veja como
   > [!IMPORTANT]
   > Certifique-se de que o nome do fornecedor no certificado corresponde ao nome do fornecedor do seu aplicativo.
 
-    **Exemplos relacionados**
+**Exemplos relacionados**
 
-    [SigningCerts](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SigningCerts)
+[SigningCerts](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SigningCerts)
 
 
 ### <a name="test-your-application-for-windows-10-s"></a>Teste seu aplicativo para Windows 10 S
