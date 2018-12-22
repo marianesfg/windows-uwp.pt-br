@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f764d15c1bf5a52a6a48a45856daf9031bbd346
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7e898b0552a9485cd15079a37940a2151e4bc9f9
+ms.sourcegitcommit: 2ef3d22a30afe853de891280e11d96e5e1ab62d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921590"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "8981875"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -193,9 +193,9 @@ O atributo ScopeOwner do elemento MenuFlyoutItem.KeyboardAccelerators marca o ac
 
 ## <a name="invoke-a-keyboard-accelerator"></a>Invocar um acelerador de teclado 
 
-O objeto [KeyboardAccelerator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardaccelerator) usa o [padrão de controle de automação de interface do usuário (UIA)](https://msdn.microsoft.com/library/windows/desktop/ee671194(v=vs.85).aspx) para executar uma ação quando um acelerador é invocado.
+O objeto [KeyboardAccelerator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardaccelerator) usa o [padrão de controle de automação de interface do usuário (UIA)](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-controlpatternsoverview) para executar uma ação quando um acelerador é invocado.
 
-A UIA [padrões de controle] expõem a funcionalidade de controle comum. Por exemplo, o controle de botão implementa o [Invoke](https://msdn.microsoft.com/library/windows/desktop/ee671279(v=vs.85).aspx) padrão de controle para dar suporte ao evento de clique (normalmente um controle é invocado clicando em, clicando duas vezes em ou pressionando Enter, um atalho de teclado predefinido ou alguma combinação alternativa dos pressionamentos de teclas). Quando um acelerador de teclado é usado para invocar um controle, a estrutura XAML pesquisa se o controle implementa o padrão de controle Invoke e, em caso afirmativo, o ativa (não é necessário escutar o evento KeyboardAcceleratorInvoked).
+A UIA [padrões de controle] expõem a funcionalidade de controle comum. Por exemplo, o controle de botão implementa o padrão de controle [Invoke](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-implementinginvoke) para dar suporte o eventos de clique (normalmente um controle é invocado clicando em, clicando duas vezes em ou pressionando Enter, um atalho de teclado predefinido ou alguma outra combinação de teclas). Quando um acelerador de teclado é usado para invocar um controle, a estrutura XAML pesquisa se o controle implementa o padrão de controle Invoke e, em caso afirmativo, o ativa (não é necessário escutar o evento KeyboardAcceleratorInvoked).
 
 No exemplo a seguir, o controle +S aciona o evento Click, porque o botão implementa o padrão Invoke.
 
@@ -218,10 +218,12 @@ Se nenhuma correspondência for identificada, o acelerador é inválido e uma me
 ## <a name="custom-keyboard-accelerator-behavior"></a>Comportamento de acelerador de teclado personalizado
 
 O evento Invoked do objeto [KeyboardAccelerator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardaccelerator) é disparado quando o acelerador é executado. O evento do objeto [KeyboardAcceleratorInvokedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs) inclui as seguintes propriedades:
-- **Manipulado** (booleano): Muda essa configuração para true e impede que o evento dispare o padrão de controle e interrompa a propagação de eventos de acelerador. O padrão é False.
-- **Elemento** (DependencyObject): O objeto que contém o acelerador.
 
-Aqui, demonstramos como definir uma coleção de aceleradores de teclado e como manipular o evento Invoked.
+- [**Manipulado**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.handled) (Booleano): muda essa configuração para true e impede que o evento dispare o padrão de controle e propagação de eventos de acelerador. O padrão é False.
+- [**Elemento**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.element) (DependencyObject): O objeto associado com o acelerador.
+- [**KeyboardAccelerator**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.keyboardaccelerator): O Acelerador de teclado usado para acionar o evento Invoked.
+
+Aqui, demonstramos como definir uma coleção de aceleradores de teclado para itens em ListView e como manipular o evento Invoked para cada acelerador.
 
 ``` xaml
 <ListView x:Name="MyListView">
@@ -229,19 +231,20 @@ Aqui, demonstramos como definir uma coleção de aceleradores de teclado e como 
     <KeyboardAccelerator Key="A" Modifiers="Control,Shift" Invoked="SelectAllInvoked" />
     <KeyboardAccelerator Key="F5" Invoked="RefreshInvoked"  />
   </ListView.KeyboardAccelerators>
-</ListView>   
+</ListView>
 ```
 
 ``` csharp
-void SelectAllInvoked (KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
+void SelectAllInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
 {
-  CustomSelectAll(MyListView);
+  MyListView.SelectAll();
   args.Handled = true;
 }
 
 void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
 {
-  Refresh(MyListView);
+  MyListView.SelectionMode = ListViewSelectionMode.None;
+  MyListView.SelectionMode = ListViewSelectionMode.Multiple;
   args.Handled = true;
 }
 ```
@@ -257,7 +260,7 @@ Se um controle estiver desabilitado, o acelerador associado também está desabi
 ``` xaml
 <ListView >
   <ListView.KeyboardAccelerators>
-    <KeyboardAccelerator Key="A" 
+    <KeyboardAccelerator Key="A"
       Modifiers="Control"
       Invoked="CustomListViewSelecAllInvoked" />
   </ListView.KeyboardAccelerators>
@@ -487,7 +490,7 @@ Aqui, revisamos alguns aspectos de baixo nível de aceleradores de teclado.
 
 ### <a name="when-an-accelerator-is-invoked"></a>Quando um acelerador é invocado
 
-Aceleradores são compostos de dois tipos de chaves: modificadores e não modificadores. Teclas modificadoras incluem Shift, Menu, Control e a chave do Windows, que são expostas por meio de [VirtualKeyModifiers](http://msdn.microsoft.com/library/windows/apps/xaml/Windows.System.VirtualKeyModifiers). Não modificadores são quaisquer tecla virtual, como excluir, F3, barra de espaços, Esc e todos alfanuméricos e chaves de pontuação. Um acelerador de teclado é invocado quando o usuário pressionar uma tecla não modificadora enquanto pressionar e segurar uma ou mais teclas modificadoras. Por exemplo, se o usuário pressionar Ctrl + Shift + M, quando o usuário pressiona M, a estrutura verifica os modificadores (Ctrl e Shift) e dispara o acelerador, se ele existir.
+Aceleradores são compostos de dois tipos de chaves: modificadores e não modificadores. Teclas modificadoras incluem Shift, Menu, Control e a chave do Windows, que são expostas por meio de [VirtualKeyModifiers](https://docs.microsoft.com/uwp/api/Windows.System.VirtualKeyModifiers). Não modificadores são quaisquer tecla virtual, como excluir, F3, barra de espaços, Esc e todos alfanuméricos e chaves de pontuação. Um acelerador de teclado é invocado quando o usuário pressionar uma tecla não modificadora enquanto pressionar e segurar uma ou mais teclas modificadoras. Por exemplo, se o usuário pressionar Ctrl + Shift + M, quando o usuário pressiona M, a estrutura verifica os modificadores (Ctrl e Shift) e dispara o acelerador, se ele existir.
 
 > [!NOTE]
 > Por design, o acelerador repete automaticamente (por exemplo, quando o usuário pressiona Ctrl + Shift e, em seguida, mantém pressionado M, o acelerador é invocado repetidamente até M ser liberado). Esse comportamento não pode ser modificado.
@@ -499,7 +502,7 @@ Eventos de entrada ocorrerem em uma sequência específica que você pode interc
 
 Em XAML, um pressionamento de teclas é processado como se houvesse entrado apenas um pipeline de propagação. Esse pipeline de entrada é usado pelos eventos KeyDown/KeyUp e caracteres de entrada. Por exemplo, se um elemento tem o foco e o usuário pressionar uma tecla, um evento KeyDown é acionado no elemento, seguido pelo elemento pai do elemento, e assim por diante para cima na árvore, até a propriedade args.Handled ser true.
 
-O evento KeyDown também é usado por alguns controles para implementar os aceleradores de controle interno. Quando um controle tem um acelerador de teclado, ele manipula o evento KeyDown, que significa que não haverá propagação de eventos KeyDown. Por exemplo, a RichEditBox oferece suporte à cópia com Ctrl + C. Quando Ctrl for pressionado, o evento KeyDown é disparado e se propaga, mas quando o usuário pressiona C ao mesmo tempo, o evento KeyDown está marcado como Handled e não é gerado (a menos que o parâmetro handledEventsToo de [UIElement.AddHandler](http://msdn.microsoft.com/library/windows/apps/xaml/Windows.UI.Xaml.UIElement.AddHandler) seja definido como true).
+O evento KeyDown também é usado por alguns controles para implementar os aceleradores de controle interno. Quando um controle tem um acelerador de teclado, ele manipula o evento KeyDown, que significa que não haverá propagação de eventos KeyDown. Por exemplo, a RichEditBox oferece suporte à cópia com Ctrl + C. Quando Ctrl for pressionado, o evento KeyDown é disparado e se propaga, mas quando o usuário pressiona C ao mesmo tempo, o evento KeyDown está marcado como Handled e não é gerado (a menos que o parâmetro handledEventsToo de [UIElement.AddHandler](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) seja definido como true).
 
 #### <a name="the-characterreceived-event"></a>O evento CharacterReceived
 
