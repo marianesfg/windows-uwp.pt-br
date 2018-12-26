@@ -8,12 +8,12 @@ ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f81c435690c7bf17066be5f49de4994f146fc5c9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 22ad7a1ac6160fd8b1cfb70c69f299c5d89192d3
+ms.sourcegitcommit: 17896441726714fa66b5ca4f9df2cdb2259f360e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945175"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "8988235"
 ---
 # <a name="text-scaling"></a>Dimensionamento de texto
 
@@ -128,7 +128,7 @@ Aqui, usamos o `AcceptsReturn` e `TextWrapping` propriedades TextBox para garant
 
 ### <a name="specify-text-trimming-behavior"></a>Especificar o comportamento de corte de texto
 
-Se a disposição do texto não é o comportamento preferencial, a maioria dos controles de texto permitem que o seu texto de recorte ou especificar elipses para o comportamento de corte de texto. Recortar é preferencial para elipses como elipses ocupam espaço propriamente ditos.
+Se a disposição do texto não é o comportamento preferencial, a maioria dos controles de texto permitem que você recortar o texto ou especificar elipses para o comportamento de corte de texto. Recortar é preferencial para elipses como elipses ocupam espaço propriamente ditos.
 
 > [!NOTE]
 > Se você precisar recortar o texto, recorte o final da cadeia de caracteres, não o início.

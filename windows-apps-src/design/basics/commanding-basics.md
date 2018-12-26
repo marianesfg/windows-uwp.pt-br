@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7ef7927af7acc8f437a323f374ae7dbf8a36d452
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0f78ffb01bf29076733af40b365e91592c71e9c8
+ms.sourcegitcommit: 17896441726714fa66b5ca4f9df2cdb2259f360e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939024"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "8988245"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>Noções básicas de design de comandos para apps UWP
 
@@ -23,7 +23,7 @@ Em um aplicativo da plataforma Universal do Windows (UWP), *elementos de comando
 
 ## <a name="provide-the-best-command-experience"></a>Fornecer a melhor experiência de comando
 
-O aspecto de uma interface de comando mais importante é que sua tentativa de permitir que o usuário realizar. Ao planejar a funcionalidade do seu aplicativo, considere as etapas necessárias para executar essas tarefas e as experiências do usuário que você deseja habilitar. Depois de concluir um rascunho inicial dessas experiências, em seguida, você pode tomar decisões sobre as ferramentas e interações implementá-los.
+O aspecto mais importante de uma interface de comando é o que você está tentando permitir que o usuário realizar. Ao planejar a funcionalidade do seu aplicativo, considere as etapas necessárias para executar essas tarefas e as experiências do usuário que você deseja habilitar. Depois de concluir um rascunho inicial dessas experiências, em seguida, você pode tomar decisões sobre as ferramentas e interações implementá-los.
 
 Aqui estão algumas experiências de aplicativo comuns:
 
