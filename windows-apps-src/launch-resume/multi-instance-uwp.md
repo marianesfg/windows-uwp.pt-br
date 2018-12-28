@@ -5,12 +5,12 @@ keywords: uwp de várias instâncias
 ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cceac0cf4b9cc4c13c0e99ce5beffad70787256
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 89ffa2f3480664131af6664988bd9fb31687fe32
+ms.sourcegitcommit: 616adaaf15ae1b41e867181326c094f42ba6ec07
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940877"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "8990202"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crie um aplicativo universal do Windows de várias instâncias
 
@@ -25,7 +25,7 @@ Do Windows 10, versão 1803 (10.0; Build 17134) em diante, seu aplicativo UWP po
 
 Se você estiver criando um novo aplicativo de várias instâncias, você pode instalar o **Templates.VSIX de projeto de aplicativo de várias instâncias**, disponível no [Visual Studio Marketplace ](https://aka.ms/E2nzbv). Depois de instalar os modelos, eles estarão disponíveis na caixa de diálogo **Novo Projeto** em **Visual C# > Universal do Windows** (ou **Outras linguagens > Visual C++ > Universal do Windows**).
 
-Dois modelos instalados: **aplicativo UWP de várias instâncias**, que fornece o modelo para a criação de um aplicativo de várias instâncias, e **aplicativo UWP de redirecionamento de várias instâncias**, que fornece a lógica adicional na qual você pode se basear para iniciar uma nova instância ou seletivamente ativar uma instância que já foi iniciada. Por exemplo, talvez você deseja apenas depois que a instância de cada vez editando o mesmo documento, para que você colocar a instância que tiver esse arquivo abrir em primeiro plano em vez de iniciar uma nova instância.
+Dois modelos instalados: **aplicativo UWP de várias instâncias**, que fornece o modelo para a criação de um aplicativo de várias instâncias, e **aplicativo UWP de redirecionamento de várias instâncias**, que fornece a lógica adicional na qual você pode se basear para iniciar uma nova instância ou seletivamente ativar uma instância que já foi iniciada. Por exemplo, talvez queira apenas uma instância por vez editando o mesmo documento, para que você colocar a instância que tiver esse arquivo abrir em primeiro plano em vez de iniciar uma nova instância.
 
 Ambos os modelos adicionam `SupportsMultipleInstances` para o `package.appxmanifest` arquivo. Observe o prefixo de namespace `desktop4` e `iot2`: apenas os projetos direcionados a área de trabalho ou projetos de Internet das coisas (IoT), suportam várias instâncias.
 
