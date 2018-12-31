@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: b0a052d08c6b0816d977d3e86881540194075818
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 14f5139f5fe2c3d5d1f97040ee3bec33ea48d6ac
+ms.sourcegitcommit: ffad7cfb5d5c099f9f559e966fd93b705b47d2bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941274"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "8990324"
 ---
 # <a name="web-account-manager"></a>Gerenciador de Contas da Web
 
@@ -74,6 +74,9 @@ Se você executar o aplicativo e clicar no botão "Fazer logon", uma janela vazi
 ![Painel de configurações da conta](images/tb-1.png)
 
 O painel está vazio porque o sistema fornece somente um shell de interface do usuário - cabe ao desenvolvedor popular o painel de forma programática com os provedores de identidade. 
+
+> [!TIP]
+> Opcionalmente, você pode usar **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** em vez de **[Mostrar](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)**, que retornará um **[IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)**, para consultar o status da operação. 
 
 ## <a name="register-for-accountcommandsrequested"></a>Registro para AccountCommandsRequested
 
