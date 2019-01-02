@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bdfcdc0782515928740a9c01b409b5170540cb27
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 888de987d507f0a1a21458c299605ebcc7b1bc70
+ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934501"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "8990469"
 ---
 # <a name="accessible-text-requirements"></a>Requisitos de texto acessível  
 
@@ -114,25 +114,31 @@ Se você estiver usando os controles intrínsecos em HTML, a implementação de 
 <span id="text_in_graphics"/>
 <span id="TEXT_IN_GRAPHICS"/>
 
-## <a name="text-in-graphics"></a>Texto em elementos gráficos  
+## <a name="text-in-graphics"></a>Texto em elementos gráficos
+
 Sempre que possível, evite incluir texto em um elemento gráfico. Por exemplo, qualquer texto que você inclua no arquivo de origem da imagem exibido no aplicativo como um elemento [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) não é automaticamente acessível e não pode ser lido por tecnologias adaptativas. Se você tiver que usar texto em elementos gráficos, assegure que o valor [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) que você fornecer como equivalente de "alt text" inclua o texto ou um resumo do significado do texto. Aplicam-se considerações semelhantes se você estiver criando caracteres de testo de vetores como parte de um [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) ou usando [**Glyphs**](https://msdn.microsoft.com/library/windows/apps/BR209921).
 
 <span id="Text_font_size"/>
 <span id="text_font_size"/>
 <span id="TEXT_FONT_SIZE"/>
 
-## <a name="text-font-size"></a>Tamanho da fonte do texto  
-Muitos leitores têm dificuldades de ler textos em aplicativos quando a fonte é muito pequena para ser lida. Primeiramente, você pode evitar esse problema deixando o texto na interface do usuário do seu aplicativo consideravelmente grande. As tecnologias adaptativas também fazem parte do Windows e permitem ao usuário alterar os tamanhos das visualizações dos aplicativos ou a exibição em geral.
+## <a name="text-font-size-and-scale"></a>Escala e tamanho da fonte de texto
 
-* Alguns usuários alteram os valores de pontos por polegada (dpi) da exibição principal como uma opção de acessibilidade. Essa opção está disponível em **Ampliar itens da tela**, em **Facilidade de Acesso**, que redireciona para uma interface do usuário do **Painel de Controle** para **Aparência e Personalização** / **Tela**. As opções de dimensionamento que realmente estão disponíveis podem variar, pois dependem dos recursos de exibição do dispositivo.
-* A ferramenta Lupa pode ampliar uma área selecionada da interface do usuário. No entanto, é dificultoso utilizar a ferramenta Lupa para leitura de texto.
+Os usuários podem ter dificuldade para ler texto em um aplicativo quando o usa fontes é simplesmente muito pequena, portanto, certifique-se de qualquer texto em seu aplicativo é um tamanho razoável em primeiro lugar.
 
-<span id="Text_scale_factor"/>
-<span id="text_scale_factor"/>
-<span id="TEXT_SCALE_FACTOR"/>
+Depois de ter feito o óbvio, o Windows inclui várias ferramentas de acessibilidade e configurações que os usuários podem tirar proveito do e ajustar às suas necessidades e preferências para leitura de texto. Por exemplo:
 
-## <a name="text-scale-factor"></a>Fator de escala de texto  
-Vários elementos e controles de texto têm uma propriedade [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.istextscalefactorenabled). Essa propriedade tem o valor **true** por padrão. Quando o valor é **true**, a configuração chamada **Dimensionamento de texto** no telefone (**Configurações &gt; Facilidade de acesso**) faz o tamanho do texto naquele elemento aumentar. O dimensionamento afetará textos com **FontSize** menor em um grau maior do que textos com **FontSize** maior. Mas você pode desabilitar o aumento automático definindo a propriedade **IsTextScaleFactorEnabled** de um elemento como **false**. Tente esta marcação, ajuste a configuração **Text size** no telefone e veja o que acontece com os **TextBlock**:
+* A ferramenta Lupa, que amplia uma área selecionada da interface do usuário. Você deve garantir que o layout do texto em seu aplicativo não torna difícil de usar a Lupa para leitura.
+* Configurações de escala e resolução globais no **Configurações -> sistema -> exibição -> escala e layout**. Exatamente quais opções de dimensionamento estão disponíveis podem variar conforme isso depende dos recursos de exibição do dispositivo.
+* As configurações de tamanho de texto no **facilidade de acesso -> Configurações -> exibição**. Ajuste a configuração de **tornar o texto maior** especificar somente o tamanho do texto em controles de suporte em todos os aplicativos e telas (todos os controles de texto UWP suportam o dimensionamento experiência sem nenhuma personalização ou modelagem de texto). 
+> [!NOTE]
+> A configuração de **deixar tudo maior** permite que um usuário especificar seu tamanho preferencial para texto e aplicativos em geral em apenas a tela principal.
+
+Vários elementos e controles de texto têm uma propriedade [**IsTextScaleFactorEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled). Essa propriedade tem o valor **true** por padrão. Quando **true**, o tamanho do texto naquele elemento pode ser dimensionado. O dimensionamento afeta o texto que tem um pequeno **FontSize** em um grau maior que ele afeta o texto que tem um grande **FontSize**. Você pode desabilitar o redimensionamento automático, definindo uma propriedade do elemento **IsTextScaleFactorEnabled** como **false**. 
+
+Para obter mais detalhes, consulte [dimensionamento de texto](https://docs.microsoft.com/windows/uwp/design/input/text-scaling) .
+
+Adicione a seguinte marcação para um aplicativo e executá-lo. Ajuste a configuração de **tamanho de texto** e veja o que acontece com cada **TextBlock**.
 
 XAML
 ```xml
@@ -143,9 +149,9 @@ XAML
     Style="{StaticResource BodyTextBlockStyle}" IsTextScaleFactorEnabled="False"/>
 ```  
 
-Porém, não desabilite o aumento automático de forma rotineira, porque o dimensionamento de texto de interface do usuário de forma geral em todos os aplicativos é uma experiência de acessibilidade importante para os usuários e eles esperam que ele funcione no seu aplicativo também.
+Não recomendamos que você desative o dimensionamento de texto como texto de interface do usuário de dimensionamento universalmente em todos os aplicativos é uma experiência de acessibilidade importante para os usuários.
 
-Você também pode usar o evento [**TextScaleFactorChanged**](https://msdn.microsoft.com/library/windows/apps/Dn633867) e a propriedade [**TextScaleFactor**](https://msdn.microsoft.com/library/windows/apps/Dn633866) para descobrir mudanças na configuração do **Tamanho do texto** no telefone. Veja como:
+Você também pode usar o evento [**TextScaleFactorChanged**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) e a propriedade [**TextScaleFactor**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactor) para descobrir mudanças na configuração do **Tamanho do texto** no telefone. Veja como:
 
 C#
 ```csharp
@@ -163,7 +169,7 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 }
 ```
 
-O valor do **TextScaleFactor** é o dobro no intervalo \[1,2\]. O menor texto está dimensionado para esse valor. Você pode usar o valor para dimensionar elementos gráficos para ajustar ao texto. Mas lembre-se de que nem todo texto é ampliado pelo mesmo fator. Em geral, quanto maior o texto for, menos ele é afetado pelo dimensionamento.
+O valor de **TextScaleFactor** é o dobro no \[1,2.25\ intervalo]. O menor texto está dimensionado para esse valor. Você pode usar o valor para dimensionar elementos gráficos para ajustar ao texto. Mas lembre-se de que nem todo texto é ampliado pelo mesmo fator. Em geral, quanto maior o texto for, menos ele é afetado pelo dimensionamento.
 
 Esses tipos têm uma propriedade **IsTextScaleFactorEnabled**:  
 * [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378)
@@ -176,6 +182,8 @@ Esses tipos têm uma propriedade **IsTextScaleFactorEnabled**:
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>Tópicos relacionados  
+
+* [Dimensionamento de texto](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
 * [Acessibilidade](accessibility.md)
 * [Informações básicas de acessibilidade](basic-accessibility-information.md)
 * [Amostra de exibição de texto XAML](http://go.microsoft.com/fwlink/p/?linkid=238579)
