@@ -2,16 +2,16 @@
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Device Portal para HoloLens
 description: Saiba como o Windows Device Portal para HoloLens permite que você configure e gerencie seu dispositivo HoloLens remotamente.
-ms.date: 09/26/2017
+ms.date: 1/3/2019
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 2607b40e53ab4a6fa1dbca389348d2de9108e4b0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6d02f9eac43687974ed76ef25e53f654783956a9
+ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931374"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "8991612"
 ---
 # <a name="device-portal-for-hololens"></a>Device Portal para HoloLens
 
@@ -34,8 +34,7 @@ ms.locfileid: "8931374"
 #### <a name="connect-over-wi-fi"></a>Conectar-se por Wi-Fi 
 
 1. Conecte seu HoloLens ao Wi-Fi.
-2. Procure pelo endereço IP do seu dispositivo.– localize o endereço IP do dispositivo em Configurações > Rede e Internet > Wi-Fi > Opções Avançadas.
-    Você também pode perguntar, "Ei Cortana, qual é meu endereço IP?"
+2. Procure o endereço IP do seu dispositivo. Localize o endereço IP do dispositivo em **Configurações > rede e Internet > Wi-Fi > Propriedades de Hardware**. Você também pode perguntar, "Ei Cortana, qual é meu endereço IP?"
 
 3. Usando um navegador da Web em seu computador, acesse `https://<YOUR_HOLOLENS_IP_ADDRESS>`
     - O navegador exibirá a seguinte mensagem: "Há um problema com o certificado de segurança deste site". Isso acontece porque o certificado emitido para o Device Portal é um certificado de teste. Você pode ignorar esse erro de certificado por enquanto e continuar.

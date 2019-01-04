@@ -1,35 +1,29 @@
 ---
 title: Criar um pacote de aplicativo com a ferramenta MakeAppx.exe
 description: A MakeAppx.exe cria, criptografa, descriptografa e extrai arquivos de pacotes e lotes de app.
-ms.date: 06/21/2018
+ms.date: 01/02/2019
 ms.topic: article
 keywords: windows 10, uwp, empacotamento
 ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: dc109fe2e684dd3bc1fef62cece5cac3ab50d246
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3c6958491092498451743085af38b2d0fa6bdf8a
+ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943007"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "8991602"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Criar um pacote do aplicativo com a ferramenta MakeAppx.exe
 
 
-A **MakeAppx.exe** cria pacotes e lotes de aplicativos. Além disso, a **MakeAppx.exe** extrai arquivos de um pacote ou lote de aplicativo e criptografa ou descriptografa pacotes e lotes de aplicativos. Essa ferramenta está incluída no SDK do Windows 10 e pode ser usada em um prompt de comando ou um arquivo de script.
+**MakeAppx.exe** cria pacotes de aplicativos (.msix ou. AppX) e lotes de aplicativos (.msixbundle ou. appxbundle). Além disso, a **MakeAppx.exe** extrai arquivos de um pacote ou lote de aplicativo e criptografa ou descriptografa pacotes e lotes de aplicativos. Essa ferramenta está incluída no SDK do Windows 10 e pode ser usada em um prompt de comando ou um arquivo de script.
 
-> [!IMPORTANT] 
-> Se você usou o Visual Studio para desenvolver seu app, é recomendável que você use o Assistente do Visual Studio para criar e assinar seu pacote de app. Para obter mais informações, consulte [Empacotar um aplicativo UWP com Visual Studio](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
+> [!IMPORTANT]
+> Se você usou o Visual Studio para desenvolver seu app, é recomendável que você use o Assistente do Visual Studio para criar e assinar seu pacote de app. Para obter mais informações, consulte [Empacotar um aplicativo UWP com Visual Studio](packaging-uwp-apps.md).
 
-Observe que a **MakeAppx.exe** não cria um arquivo .appxupload. O arquivo. appxupload é criado como parte do processo de empacotamento do Visual Studio e contém dois outros arquivos: .msix ou. AppX e. appxsym. O arquivo. appxsym é um arquivo. PDB compactado que contém símbolos públicos do aplicativo usados para [análise de falhas](../publish/health-report.md) no Partner Center. Um arquivo .appx comum também pode ser enviado, mas não haverá informações de análise de falhas ou de depuração disponíveis. Para obter mais informações sobre o envio de pacotes à Loja, consulte [Carregar pacotes de aplicativos](../publish/upload-app-packages.md). 
-
- Atualizações para essa ferramenta na versão mais recente do Windows 10 não afetam o uso do pacote. AppX. Você pode continuar a usar essa ferramenta com pacotes. AppX ou usar a ferramenta com suporte para pacotes .msix conforme descrito a seguir.
-
-Para criar manualmente um arquivo .appxupload:
-- Coloque o .msix e. appxsym em uma pasta
-- Compacte a pasta em um arquivo zip
-- Altere a extensão da pasta compactada de .zip para .appxupload
+> [!IMPORTANT]
+> Observe que **MakeAppx.exe** não cria um [pacote de aplicativo carregar o arquivo (. appxupload ou .msixupload)](packaging-uwp-apps.md#types-of-app-packages), que é o tipo de pacote de aplicativo válido para [envios para o Partner Center](../publish/upload-app-packages.md)recomendada. O arquivo de upload do pacote de aplicativo normalmente é [criado como parte do processo de empacotamento do Visual Studio](packaging-uwp-apps.md#create-an-app-package-upload-file), embora ele também pode ser criado manualmente.
 
 ## <a name="using-makeappxexe"></a>Usando a MakeAppx.exe
 
@@ -111,7 +105,7 @@ Opções específicas ao comando **pack**:
 
 Os exemplos de uso a seguir mostram algumas opções de sintaxe possíveis para o comando **pack**:
 
-``` syntax 
+``` syntax
 MakeAppx pack [options] /d <content directory> /p <output package name>
 MakeAppx pack [options] /f <mapping file> /p <output package name>
 MakeAppx pack [options] /m <app package manifest> /f <mapping file> /p <output package name>
@@ -200,7 +194,7 @@ MakeAppx unbundle /v /ep MyBundle.emsixbundle /d "C:\My Files" /kt
 
 A ferramenta **MakeAppx.exe** também pode criptografar ou descriptografar um pacote ou um lote existente. Você deve simplesmente informar o nome do pacote, o nome do pacote de saída e se a criptografia ou descriptografia deve usar um arquivo de chave (/kf) ou a chave de teste global (/kt).
 
-A criptografia e a descriptografia não estão disponíveis com o Assistente de empacotamento do Visual Studio. 
+A criptografia e a descriptografia não estão disponíveis com o Assistente de empacotamento do Visual Studio.
 
 Opções específicas aos comandos **encrypt** e **decrypt**:
 
@@ -251,7 +245,7 @@ Exemplo de um arquivo de mapeamento (sem a opção /m):
 "\\MyServer\path\icon.png"              "icon.png"
 "my app files\readme.txt"               "my app files\readme.txt"
 "CustomManifest.xml"                    "AppxManifest.xml"
-``` 
+```
 
 Ao usar um arquivo de mapeamento, você poderá escolher se deseja usar a opção /m. A opção /m permite que o usuário especifique os metadados do recurso no arquivo de mapeamento a serem incluídos no manifesto gerado. Se você usar a opção /m, o arquivo de mapeamento deverá conter uma seção que inicia com a linha "[ResourceMetadata]", seguida por linhas que especificam "ResourceDimensions" e "ResourceId". É possível que um pacote de aplicativo contenha várias "ResourceDimensions", mas só pode haver uma "ResourceId".
 
@@ -269,11 +263,11 @@ Exemplo de um arquivo de mapeamento (com a opção /m):
 
 ## <a name="semantic-validation-performed-by-makeappxexe"></a>Validação semântica realizada por MakeAppx.exe
 
-A **MakeAppx.exe** realiza a validação semântica limitada, que é projetada para capturar os erros mais comuns de implantação e ajudar a garantir que o pacote de aplicativo seja válido. Consulte a opção /nv se desejar ignorar a validação ao usar a **MakeAppx.exe**. 
+A **MakeAppx.exe** realiza a validação semântica limitada, que é projetada para capturar os erros mais comuns de implantação e ajudar a garantir que o pacote de aplicativo seja válido. Consulte a opção /nv se desejar ignorar a validação ao usar a **MakeAppx.exe**.
 
 Essa validação garante que:
 - Todos os arquivos referenciados no manifesto do pacote sejam incluídos no pacote de aplicativo.
 - Um app não tenha duas chaves idênticas.
-- Um app não seja registrado para um protocolo proibido desta lista: SMB, FILE, MS-WWA-WEB, MS-WWA. 
+- Um app não seja registrado para um protocolo proibido desta lista: SMB, FILE, MS-WWA-WEB, MS-WWA.
 
 Essa não é uma validação semântica completa, já que é projetada apenas para capturar erros comuns. Os pacotes compilados pela **MakeAppx.exe** não são garantidos como instaláveis.
