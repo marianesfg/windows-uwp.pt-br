@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, centro de desenvolvimento, configurações da conta, perfil, perfil da conta, conta de desenvolvedor, configurações da conta de desenvolvedor
 ms.localizationpriority: medium
-ms.openlocfilehash: b3a95e4e9eddbe47feb513f66856949baecdab8b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c4f7bd6d7aa085c3d5066d3b486583c5b3f37182
+ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931321"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "8992600"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Gerenciar configurações da conta e informações de perfil
 
@@ -45,7 +45,6 @@ A alteração de seu nome para exibição de editor fará com que verifiquemos s
 Abaixo estão alguns dos outros itens que você encontrará na seção **Configurações da conta**.
 
 - **Status da verificação**: quando sua conta está passando a verificação de processo (por exemplo, quando você se inscreve pela primeira vez ou depois que você atualizar significativamente as informações de contato), você pode analisar o status da verificação aqui.
-- **Do programa Insider do Centro de desenvolvimento**: você pode aceitar ou fora [Do programa Insider do Centro de desenvolvimento](dev-center-insider-program.md) da principal página de **configurações da conta** .
 - **Conta de pagamento** e **Perfil fiscal**: aqui é onde você pode [configurar a conta de pagamento e os formulários fiscais](setting-up-your-payout-account-and-tax-forms.md). Você precisará fazer isso antes de cobrar pelos aplicativos ou complementos.
 - **Associações empresariais**: aceite convites de empresas as quais desejam que você publique aplicativos para uso exclusivo. Para saber mais, consulte [Distribuir aplicativos de linha de negócios para empresas](distribute-lob-apps-to-enterprises.md) a fim de obter mais informações.
 - **Os usuários**: adicionar usuários à sua conta e atribuir a eles funções e permissões. Para obter mais informações, consulte [Gerenciar usuários de contas](manage-account-users.md).
