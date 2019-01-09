@@ -6,16 +6,16 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a8f75fae686763f3d79cea2f02c3208993cb723
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cd6f6a6fb638069dba58c62eca91b74868816d2a
+ms.sourcegitcommit: 0373a2021c1b7144f28b08778d6a3b3dc64aa10c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937960"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "8997391"
 ---
 # <a name="app-management-and-services"></a>Gerenciamento de apps e serviços
 
-Você pode gerenciar e exibir detalhes relacionados a cada um dos seus aplicativos no [Partner Center e configure serviços como notificações, A / B teste e mapas.
+Você pode gerenciar e exibir detalhes relacionados a cada um dos seus aplicativos no [Partner Center](https://partner.microsoft.com/dashboard/)e configure serviços como notificações, A / B teste e mapas.
 
 Ao trabalhar com um aplicativo no Partner Center, você verá seções no menu de navegação esquerdo para o **gerenciamento de aplicativos**e **Serviços** . Você pode expandir essas seções para acessar a funcionalidade descrita abaixo.
 
@@ -49,7 +49,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 ## <a name="administrator-consent"></a>Consentimento do administrador
 
-f seu produto se integra com o Azure AD e chama as APIs que solicitam um [aplicativo permissões ou permissões delegadas](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que exigem o consentimento do administrador, digite sua ID de cliente do Azure AD aqui. Isso permite que os administradores que adquiram o aplicativo para a organização conceder consentimento para seu produto a agir em nome de todos os usuários no locatário.
+Se seu produto se integra com o Azure AD e chama as APIs que solicitar [permissões do aplicativo ou permissões delegadas](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que exigem o consentimento do administrador, insira sua ID de cliente do Azure AD aqui. Isso permite que os administradores que adquiram o aplicativo para a organização conceder consentimento para seu produto a agir em nome de todos os usuários no locatário.
 
 Para obter mais informações, consulte [solicitando consentimento para um locatário inteiro](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 
