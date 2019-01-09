@@ -6,12 +6,12 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: dc18577015db5384c2a1f13e8a48758634a053a5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 75cde09068bcc310bcd5be2033227fa620b96f53
+ms.sourcegitcommit: 1322dd5478026176d7b3e635ea0046de3f744656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937100"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "8996564"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>Novidades no Windows 10 para desenvolvedores, compilação 17763
 
@@ -33,7 +33,7 @@ Movimento em Design fluente | O uso de movimento em um sistema de Design Fluent 
 Transições de página | [Transições de página](../design/motion/page-transitions.md) navegam entre as páginas em um aplicativo. Elas ajudam os usuários a compreender onde eles estão na hierarquia de navegação e fornecer comentários sobre a relação entre as páginas.
 Dimensionamento de texto | As novas [diretrizes de dimensionamento de texto](../design/input/text-scaling.md) explica como atualizar seus aplicativos para acomodar os novo texto dimensionamento comportamentos, que fornecem a capacidade para os usuários alterem o tamanho da fonte relativa entre o sistema operacional e de aplicativos individuais. Em vez de usar um aplicativo de Lupa (que normalmente amplia tudo dentro de uma área da tela e apresenta seus próprios problemas de usabilidade), alterando a resolução de vídeo ou depender de escala DPI (que redimensiona tudo com base na exibição e exibição típica distância), um usuário pode acessar rapidamente uma configuração para redimensionar somente texto, que variam de 100% (o tamanho padrão) até 225%.
 Kits de ferramentas | O [Adobe XD e kits de ferramentas do Adobe Illustrator](../design/downloads/index.md) foram atualizados com os novos recursos. Esses kits de ferramentas de design fornecem controles e modelos de layout para criar aplicativos UWP.
-Comandos de interface do usuário | Atualizações para a [infraestrutura de comandos UWP](../design/basics/commanding-basics.md) incluem um melhor encapsulamento de um objeto de comando (comportamento, rótulo, ícone, aceleradores de teclado, tecla de acesso e descrição) e um conjunto padrão de comandos comuns, incluindo recortar, copiar, colar, sair, etc., que elimina a necessidade de definir essas propriedades manualmente. </br> A nova classe [XamlUICommand](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.xamluicommand) fornece uma classe base para deveining o comportamento do comando de um elemento de interface do usuário interativo que executa uma ação quando invocado. Esta é a classe pai para [StandardUICommand](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.standarduicommand), que expõe um conjunto de comandos de plataforma padrão com propriedades predefinidas. 
+Comandos de interface do usuário | Atualizações para a [infraestrutura de comandos UWP](../design/basics/commanding-basics.md) incluem um melhor encapsulamento de um objeto de comando (comportamento, rótulo, ícone, aceleradores de teclado, tecla de acesso e descrição) e um conjunto padrão de comandos comuns, incluindo recortar, copiar, colar, sair, etc., que elimina a necessidade de definir essas propriedades manualmente. </br> A nova classe [XamlUICommand](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.xamluicommand) fornece uma classe base para definir o comportamento do comando de um elemento de interface do usuário interativo que executa uma ação quando invocado. Esta é a classe pai para [StandardUICommand](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.standarduicommand), que expõe um conjunto de comandos de plataforma padrão com propriedades predefinidas. 
 Biblioteca de interface do usuário do Windows | A [Biblioteca de interface do usuário do Windows](https://aka.ms/winui-docs) é um conjunto de pacotes NuGet que fornecem controles e outros elementos de interface do usuário para aplicativos UWP. Esses pacotes também são compatíveis com versões anteriores do Windows 10, para que seu aplicativo funcione mesmo se os usuários não tenham a versão mais recente do sistema operacional. </br> Para obter mais informações sobre o que há na biblioteca de interface do usuário do Windows, consulte [essa lista de namespaces de API incluídos no pacote do NuGet.](https://docs.microsoft.com/uwp/api/overview/winui/)
 
 ## <a name="develop-windows-apps"></a>Desenvolver aplicativos do Windows
@@ -64,7 +64,7 @@ Visão geral do aplicativo padrão | O [Aplicativo padrão do Windows 10 IoT Cor
 Painel | O [Painel do Windows 10 Iot Core](https://docs.microsoft.com/windows/iot-core/tutorials/quickstarter/devicesetup) agora permite aos desenvolvedores usando um Dragonboard 410 C ou NXP para flash FFUs personalizados em seu dispositivo.
 Teclado Virtual | Agora o [teclado virtual para dispositivos IoT](https://docs.microsoft.com/windows/iot-core/develop-your-app/onscreenkeyboard) usa os mesmos componentes de teclado de toque como a edição da área de trabalho do Windows. Isso permite que os recursos, como o modo de ditado, suporte ao IME e um conjunto completo de escopos de entrada.
 Barras de título para entrar caixas de diálogo | Windows 10 IoT Core agora oferece a opção de configurar [as barras de título para caixas de diálogo do sistema](https://docs.microsoft.com/windows/iot-core/develop-your-app/signindialogtitlebars).
-Ativação por toque | [Ativação por toque](https://docs.microsoft.com/windows/iot-core/learn-about-hardware/wakeontouch) permite que a tela do seu dispositivo desativar enquanto não estiver em uso, enquanto liga rapidamente quando um usuário toca a tela. 
+Ativação por toque | [Ativação por toque](https://docs.microsoft.com/windows/iot-core/learn-about-hardware/wakeontouch) permite que a tela do seu dispositivo desativar enquanto não estiver em uso, enquanto liga rapidamente quando um usuário toca a tela.
 Windows.System.Update | O novo [namespace Windows.System.Update](https://docs.microsoft.com/uwp/api/windows.system.update) permite controle interativo de atualizações do sistema. Esse namespace só está disponível para Windows 10 IoT Core.
 
 ## <a name="web-development"></a>Desenvolvimento para a Web
