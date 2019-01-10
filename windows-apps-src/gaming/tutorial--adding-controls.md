@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, controles, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 01c0d1361dcc0858a54792adc0d17408ed281c99
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 09bda2bda5f6f8731b64321d3282f540e6c50db4
+ms.sourcegitcommit: 4e12e820141fa5c3e61052ec78452b4032a974da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947848"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "8999751"
 ---
 # <a name="add-controls"></a>Adicionar controles
 
@@ -585,6 +585,9 @@ No método [**InitWindow**](https://github.com/Microsoft/Windows-universal-sampl
     Gamepad::GamepadRemoved +=
         ref new EventHandler<Gamepad^>(this, &MoveLookController::OnGamepadRemoved);
 ```
+
+> [!NOTE]
+> Aplicativos UWP não podem receber entrada de um controlador do Xbox One, enquanto o aplicativo não está em foco.
 
 ### <a name="the-updatepollingdevices-method"></a>O método UpdatePollingDevices
 
