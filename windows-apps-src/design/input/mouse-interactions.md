@@ -8,23 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ad801dee43607b4fb6e75bd30f612682e1214ff
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f81634fdb0f9382b1f660394764e5555189783e4
+ms.sourcegitcommit: 444fd387c55618f9afdac115264c85b14fd8b826
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921129"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "8999909"
 ---
 # <a name="mouse-interactions"></a>Interações por mouse
 
-
-Otimize o design do seu aplicativo UWP (Plataforma Universal do Windows) para entrada touch e obtenha, por padrão, o suporte básico para mouse.
-
- 
+Otimize o design do seu aplicativo UWP (Plataforma Universal do Windows) para entrada touch e obtenha, por padrão, o suporte básico para mouse. 
 
 ![mouse](images/input-patterns/input-mouse.jpg)
-
-
 
 A entrada via mouse é a mais adequada às interações que exigem precisão do usuário para apontar e clicar. Essa precisão inerente é naturalmente aceita pela interface do usuário do Windows, que foi otimizado para a natureza imprecisa do toque.
 
@@ -33,7 +28,6 @@ Mouse e touch apresentam divergências quando o assunto é a capacidade do touch
 Este tópico descreve as considerações de design para interações com mouse.
 
 ## <a name="the-uwp-app-mouse-language"></a>A linguagem de mouse de aplicativo UWP
-
 
 Um conjunto conciso de interações de mouse é usado de forma consistente em todo o sistema.
 
@@ -90,36 +84,64 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 </tbody>
 </table>
 
-## <a name="mouse-events"></a>Eventos de mouse
+## <a name="mouse-input-events"></a>Eventos de entrada de mouse
 
-Responda à entrada do mouse em seus aplicativos manipulando os mesmos eventos de ponteiro básicos que você usa para entrada touch e por caneta.
+A maioria dos entrada do mouse pode ser manipulada por meio dos eventos de entrada roteados comuns é compatíveis com todos os objetos de [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) . Por exemplo:
 
-Use eventos [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) para implementar funcionalidade de entrada básica sem a necessidade de gravar código para cada dispositivo de entrada de ponteiro. No entanto, você ainda pode aproveitar as funcionalidades especiais de cada dispositivo (como eventos do botão de rolagem do mouse) usando os eventos de ponteiro, gesto e manipulação desse objeto.
+- [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
+- [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
+- [**ContextCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextcanceled)
+- [**ContextRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextrequested)
+- [**DoubleTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.doubletapped)
+- [**DragEnter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragenter)
+- [**DragLeave**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragleave)
+- [**DragOver**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
+- [**DragStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragstarting)
+- [**Drop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
+- [**DropCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dropcompleted)
+- [**GettingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gettingfocus)
+- [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
+- [**Holding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
+- [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown)
+- [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup)
+- [**LosingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.losingfocus)
+- [**LostFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus)
+- [**ManipulationCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)
+- [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)
+- [**ManipulationInertiaStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastarting)
+- [**ManipulationStarted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)
+- [**ManipulationStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)
+- [**NoFocusCandidateFound**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.nofocuscandidatefoundeventargs)
+- [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled)
+- [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)
+- [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered)
+- [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited)
+- [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved)
+- [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed)
+- [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)
+- [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
+- [**Eventos PreviewKeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeydown.md)
+- [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup.md)
+- [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
+- [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
+- [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
 
-**Exemplos:** Consulte essa funcionalidade em ação em nossos [exemplos de aplicativo](https://go.microsoft.com/fwlink/p/?LinkID=264996).
+No entanto, você pode tirar proveito dos recursos específicos de cada dispositivo (como eventos de roda do mouse) usando o ponteiro, gesto e eventos de manipulação no [Input](https://docs.microsoft.com/uwp/api/windows.ui.input).
 
-
-- [Entrada: exemplo de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-
-- [Exemplo de entrada](https://go.microsoft.com/fwlink/p/?linkid=226855)
-
-- [Entrada: gestos e manipulações com o GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
+**Exemplos:** Consulte nosso [exemplo BasicInput](https://go.microsoft.com/fwlink/p/?LinkID=620302), para.
 
 ## <a name="guidelines-for-visual-feedback"></a>Diretrizes de feedback visual
 
-
--   Quando o mouse é detectado (por eventos de movimentação ou focalização), mostre a interface do usuário específica do mouse para indicar a funcionalidade exposta pelo elemento. Se o mouse não for movimentado por algum tempo ou se o usuário começar uma interação por toque, faça com que a interface do usuário do mouse desapareça gradualmente. Dessa forma, a interface do usuário fica mais organizada.
--   Não use o cursor para comentário de foco; o comentário apresentado pelo elemento é suficiente (veja Cursores, a seguir).
--   Não exiba respostas visuais quando o elemento não permite manipulação (como texto estático).
--   Não use retângulos de foco nas manipulações por mouse. Reserve-os para as interações por teclado.
--   Exiba respostas visuais simultaneamente para todos os elementos que representam o mesmo destino de entrada.
--   Inclua botões (como + e -) para emular manipulações baseadas em toque, como movimento panorâmico, giro, zoom, etc.
+- Quando o mouse é detectado (por eventos de movimentação ou focalização), mostre a interface do usuário específica do mouse para indicar a funcionalidade exposta pelo elemento. Se o mouse não for movimentado por algum tempo ou se o usuário começar uma interação por toque, faça com que a interface do usuário do mouse desapareça gradualmente. Dessa forma, a interface do usuário fica mais organizada.
+- Não use o cursor para comentário de foco; o comentário apresentado pelo elemento é suficiente (veja Cursores, a seguir).
+- Não exiba respostas visuais quando o elemento não permite manipulação (como texto estático).
+- Não use retângulos de foco nas manipulações por mouse. Reserve-os para as interações por teclado.
+- Exiba respostas visuais simultaneamente para todos os elementos que representam o mesmo destino de entrada.
+- Inclua botões (como + e -) para emular manipulações baseadas em toque, como movimento panorâmico, giro, zoom, etc.
 
 Para obter diretrizes mais gerais sobre comentários visuais, consulte [Diretrizes de comentários visuais](guidelines-for-visualfeedback.md).
 
-
 ## <a name="cursors"></a>Cursores
-
 
 Um conjunto de cursores padrão está disponível para ponteiros de mouse. São usados para indicar a ação primária de um elemento.
 
@@ -127,33 +149,21 @@ Cada cursor padrão tem uma imagem padrão correspondente associada. O usuário 
 
 Se você precisa personalizar o cursor do mouse:
 
--   Sempre use o cursor de seta (![cursor de seta](images/cursor-arrow.png)) para elementos clicáveis. não use o de cursor de mão apontando (![cursor de mão apontando](images/cursor-pointinghand.png)) para links ou outros elementos interativos. No lugar dele, use os efeitos de focalização (descritos anteriormente).
--   Use o cursor de texto (![cursor de texto](images/cursor-text.png)) para texto selecionável.
--   Use o de cursor de movimentação (![cursor de movimentação](images/cursor-move.png)) quando o movimento é a ação principal (como arrastar ou cortar). Não use o cursor de movimentação para elementos em que a ação principal é navegar (como os blocos na tela inicial).
--   Use os cursores de redimensionamento horizontal, vertical e diagonal (![cursor de redimensionamento vertical](images/cursor-vertical.png), ![cursor de redimensionamento horizontal](images/cursor-horizontal.png), ![cursor de redimensionamento diagonal (inferior esquerdo, superior direito)](images/cursor-diagonal2.png), ![cursor de redimensionamento diagonal (superior esquerdo, inferior direito)](images/cursor-diagonal1.png)), quando um objeto for redimensionável.
--   Use os cursores de mão agarrando (![cursor de mão agarrando (aberto)](images/cursor-pan1.png), ![cursor de mão agarrando (fechado)](images/cursor-pan2.png)) durante o movimento panorâmico do conteúdo dentro de uma tela fixa (como um mapa).
+- Sempre use o cursor de seta (![cursor de seta](images/cursor-arrow.png)) para elementos clicáveis. não use o de cursor de mão apontando (![cursor de mão apontando](images/cursor-pointinghand.png)) para links ou outros elementos interativos. No lugar dele, use os efeitos de focalização (descritos anteriormente).
+- Use o cursor de texto (![cursor de texto](images/cursor-text.png)) para texto selecionável.
+- Use o de cursor de movimentação (![cursor de movimentação](images/cursor-move.png)) quando o movimento é a ação principal (como arrastar ou cortar). Não use o cursor de movimentação para elementos em que a ação principal é navegar (como os blocos na tela inicial).
+- Use os cursores de redimensionamento horizontal, vertical e diagonal (![cursor de redimensionamento vertical](images/cursor-vertical.png), ![cursor de redimensionamento horizontal](images/cursor-horizontal.png), ![cursor de redimensionamento diagonal (inferior esquerdo, superior direito)](images/cursor-diagonal2.png), ![cursor de redimensionamento diagonal (superior esquerdo, inferior direito)](images/cursor-diagonal1.png)), quando um objeto for redimensionável.
+- Use os cursores de mão agarrando (![cursor de mão agarrando (aberto)](images/cursor-pan1.png), ![cursor de mão agarrando (fechado)](images/cursor-pan2.png)) durante o movimento panorâmico do conteúdo dentro de uma tela fixa (como um mapa).
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Identificar entrada do ponteiro](handle-pointer-input.md)
-* [Identificar dispositivos de entrada](identify-input-devices.md)
+- [Identificar entrada do ponteiro](handle-pointer-input.md)
+- [Identificar dispositivos de entrada](identify-input-devices.md)
+- [Visão geral de eventos e eventos roteados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)
 
-**Exemplos**
-* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+### <a name="samples"></a>Exemplos
 
-**Exemplos de arquivo morto**
-* [Entrada: amostra de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos e interações com o GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
- 
- 
-
- 
-
-
-
-
+- [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+- [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+- [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+- [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)

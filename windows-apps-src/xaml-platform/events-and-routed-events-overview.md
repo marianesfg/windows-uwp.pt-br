@@ -6,18 +6,18 @@ ms.date: 07/12/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f24543c1afcd9c154788cc4be03434384f00f0c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cf84846fc34a7b93f168abc1dfa31e9f743be209
+ms.sourcegitcommit: 444fd387c55618f9afdac115264c85b14fd8b826
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939795"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "8999919"
 ---
 # <a name="events-and-routed-events-overview"></a>Visão geral de eventos e eventos roteados
 
 **APIs Importantes**
--   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
--   [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)
+- [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
+- [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)
 
 Descrevemos o conceito de programação de eventos em um aplicativo de tempo de execução do Windows, ao usar c#, Visual Basic ou VisualC + + extensões de componente (C++ c++ /CX) como a linguagem de programação e XAML para a definição de interface do usuário. Você pode atribuir manipuladores de eventos como parte das declarações para elementos da interface do usuário em XAML ou pode adicionar manipuladores no código. O Windows Runtime dá suporte a *eventos roteados*: determinados eventos de entrada e eventos de dados podem ser manipulados por outros objetos além do objeto que acionou o evento. Eventos roteados são úteis quando você define modelos de controle ou usa páginas ou contêiners de layout.
 
@@ -151,9 +151,9 @@ End Sub
 
 Em C++ c++ /CX, também usar o **+=** sintaxe, mas há diferenças no formulário c# básico:
 
--   Não há inferência de delegado, portanto, você deve usar **ref new** para a instância do delegado.
--   O construtor do delegado possui dois parâmetros e requer o objeto de destino como o primeiro parâmetro. Tipicamente, você especifica **this**.
--   O construtor delegate requer o endereço do método como o segundo parâmetro, de maneira que o operador de referência **&** preceda o nome do método.
+- Não há inferência de delegado, portanto, você deve usar **ref new** para a instância do delegado.
+- O construtor do delegado possui dois parâmetros e requer o objeto de destino como o primeiro parâmetro. Tipicamente, você especifica **this**.
+- O construtor delegate requer o endereço do método como o segundo parâmetro, de maneira que o operador de referência **&** preceda o nome do método.
 
 ```cppwinrt
 textBlock1().PointerEntered({this, &MainPage::TextBlock1_PointerEntered });
@@ -170,11 +170,11 @@ Normalmente não é necessário remover manipuladores de eventos em código, mes
 
 Há alguns casos em que você quer remover manipuladores de eventos explicitamente. Eles incluem:
 
--   Manipuladores adicionados para eventos estáticos, que não podem sofrer a coleta de lixo de maneira convencional. Exemplos de eventos estáticos na API do Windows Runtime são os eventos das classes [**CompositionTarget**](https://msdn.microsoft.com/library/windows/apps/br228126) e [**Clipboard**](https://msdn.microsoft.com/library/windows/apps/br205867).
--   Teste o código quando quiser que o tempo da remoção dos manipuladores seja imediato ou quando quiser trocar antigos/novos manipuladores de eventos para um evento em tempo de execução.
--   A implementação de um acessador **remove** personalizado.
--   Eventos estáticos personalizados.
--   Manipuladores para navegações de página.
+- Manipuladores adicionados para eventos estáticos, que não podem sofrer a coleta de lixo de maneira convencional. Exemplos de eventos estáticos na API do Windows Runtime são os eventos das classes [**CompositionTarget**](https://msdn.microsoft.com/library/windows/apps/br228126) e [**Clipboard**](https://msdn.microsoft.com/library/windows/apps/br205867).
+- Teste o código quando quiser que o tempo da remoção dos manipuladores seja imediato ou quando quiser trocar antigos/novos manipuladores de eventos para um evento em tempo de execução.
+- A implementação de um acessador **remove** personalizado.
+- Eventos estáticos personalizados.
+- Manipuladores para navegações de página.
 
 [**FrameworkElement.Unloaded**](https://msdn.microsoft.com/library/windows/apps/br208748) ou [**Page.NavigatedFrom**](https://msdn.microsoft.com/library/windows/apps/br227507) são possíveis disparadores de eventos que têm posições apropriadas em gerenciamento de estados e vida útil de objetos de maneira que você pode usá-los para remover manipuladores para outros eventos.
 
@@ -196,31 +196,43 @@ Se você precisar remover um manipulador de eventos em C++/CX, precisará de um 
 
 O Windows Runtime com C#, Microsoft Visual Basic ou C++/CX aceita o conceito de um evento roteado para um conjunto de eventos presentes na maioria dos elementos da interface do usuário. Esses eventos são para cenários de entrada e interação do usuário e são implementados na classe base [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). Veja a seguir uma lista de eventos de entrada que são eventos roteados:
 
--   [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/br208922)
--   [**DragEnter**](https://msdn.microsoft.com/library/windows/apps/br208923)
--   [**DragLeave**](https://msdn.microsoft.com/library/windows/apps/br208924)
--   [**DragOver**](https://msdn.microsoft.com/library/windows/apps/br208925)
--   [**Drop**](https://msdn.microsoft.com/library/windows/apps/br208926)
--   [**Holding**](https://msdn.microsoft.com/library/windows/apps/br208928)
--   [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)
--   [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)
--   [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945)
--   [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946)
--   [**ManipulationInertiaStarting**](https://msdn.microsoft.com/library/windows/apps/br208947)
--   [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950)
--   [**ManipulationStarting**](https://msdn.microsoft.com/library/windows/apps/br208951)
--   [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964)
--   [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)
--   [**PointerEntered**](https://msdn.microsoft.com/library/windows/apps/br208968)
--   [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969)
--   [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970)
--   [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971)
--   [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972)
--   [**PointerWheelChanged**](https://msdn.microsoft.com/library/windows/apps/br208973)
--   [**RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984)
--   [**Tapped**](https://msdn.microsoft.com/library/windows/apps/br208985)
--   [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/br208927)
--   [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/br208943)
+- [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
+- [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
+- [**ContextCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextcanceled)
+- [**ContextRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextrequested)
+- [**DoubleTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.doubletapped)
+- [**DragEnter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragenter)
+- [**DragLeave**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragleave)
+- [**DragOver**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
+- [**DragStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragstarting)
+- [**Drop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
+- [**DropCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dropcompleted)
+- [**GettingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gettingfocus)
+- [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
+- [**Holding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
+- [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown)
+- [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup)
+- [**LosingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.losingfocus)
+- [**LostFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus)
+- [**ManipulationCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)
+- [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)
+- [**ManipulationInertiaStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastarting)
+- [**ManipulationStarted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)
+- [**ManipulationStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)
+- [**NoFocusCandidateFound**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.nofocuscandidatefoundeventargs)
+- [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled)
+- [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)
+- [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered)
+- [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited)
+- [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved)
+- [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed)
+- [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)
+- [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
+- [**Eventos PreviewKeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeydown.md)
+- [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup.md)
+- [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
+- [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
+- [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
 
 Um evento roteado é um evento que é potencialmente passado adiante (*roteado*) de um objeto filho para cada um dos seus sucessivos objetos pais em uma árvore de objetos. A estrutura XAML da interface do usuário se aproxima dessa árvore, sendo que a raiz da árvore é o elemento raiz do XAML. A verdadeira árvore de objetos pode variar um pouco do aninhamento de elementos XAML porque a árvore de objetos não inclui recursos da linguagem XAML – como marcas de elementos de propriedades. Você pode conceber o evento roteado como *decorrente* de qualquer elemento filho de elemento de objeto XAML que aciona o evento em direção ao elemento de objeto pai que o contém. O evento e seus dados podem ser manipulados em vários objetos ao longo da rota de evento. Se nenhum elemento tiver manipuladores, a rota se mantém potencialmente em movimento até que o elemento raiz seja alcançado.
 
@@ -262,13 +274,13 @@ Certos objetos participam de uma relação com a árvore visual primária que é
 
 Determinar se um elemento está visível para a entrada por mouse, toque e de caneta é chamado de *teste de clique*. Para ações de toque e também para eventos específicos de interação ou de manipulação resultantes de uma ação de toque, é preciso que o elemento esteja visível para teste de clique, para ser a origem do evento e acionar o evento associado à ação. Caso contrário, a ação passa pelo elemento em direção a qualquer elemento subjacente ou aos elementos pai na árvore visual que interage com essa entrada. Há vários fatores que influenciam o teste de clique, mas é possível determinar se um determinado elemento pode acionar eventos de entrada verificando sua propriedade [**IsHitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933). Esta propriedade retorna **true** apenas quando o elemento segue estes critérios:
 
--   O valor de propriedade [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) do elemento é [**Visible**](https://msdn.microsoft.com/library/windows/apps/br209006).
--   O valor da propriedade **Background** ou **Fill** do elemento não é **null**. Um valor **null** [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) resulta em transparência e invisibilidade do teste de clique. (Para tornar um elemento transparente, mas também visível para teste de clique, use um pincel [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061) em vez de **null**.)
+- O valor de propriedade [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) do elemento é [**Visible**](https://msdn.microsoft.com/library/windows/apps/br209006).
+- O valor da propriedade **Background** ou **Fill** do elemento não é **null**. Um valor **null** [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) resulta em transparência e invisibilidade do teste de clique. (Para tornar um elemento transparente, mas também visível para teste de clique, use um pincel [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061) em vez de **null**.)
 
 **Observação** **Em segundo plano** e **Preencher** não são definidos por [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)e, em vez disso, são definidos por diferentes classes derivadas, como [**controle**](https://msdn.microsoft.com/library/windows/apps/br209390) e [**forma**](/uwp/api/Windows.UI.Xaml.Shapes.Shape). As implicações dos pincéis usados para as propriedades primeiro plano e tela de fundo são as mesmas para teste de clique e eventos de entrada, independentemente da subclasse que implementa as propriedades.
 
--   Se o elemento for um controle, o valor da sua propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) deverá ser **true**.
--   É preciso que o elemento tenha dimensões reais em layout. Um elemento em que [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) e [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) são iguais a 0 não acionará eventos.
+- Se o elemento for um controle, o valor da sua propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) deverá ser **true**.
+- É preciso que o elemento tenha dimensões reais em layout. Um elemento em que [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) e [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) são iguais a 0 não acionará eventos.
 
 Alguns controles têm regras especiais para teste de hit. Por exemplo, o [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) não tem uma propriedade **Background**, mas ainda pode executar o teste de clique em toda a região de suas dimensões. Os controles [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) e [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) podem executar teste de clique nas dimensões do retângulo definido, independentemente do conteúdo transparente – por exemplo, canal alfa no arquivo de origem de mídia que está sendo exibido. Os controles [**WebView**](https://msdn.microsoft.com/library/windows/apps/br227702) têm um comportamento especial de teste de clique, pois a entrada pode ser manipulada pelo HTML hospedado e acionar eventos de script.
 
@@ -284,13 +296,13 @@ Um pequeno número de elementos da interface do usuário dão suporte a *comando
 
 Para fins de definir eventos personalizados, o modo de adicionar o evento e o que isso significa para seu design de classe dependem bastante da linguagem de programação sendo usada.
 
--   Para C# e Visual Basic, você está definindo um evento de CLR. Você pode usar o padrão de evento .NET, desde que não esteja usando acessadores personalizados(**add**/**remove**). Outras dicas:
-    -   Para o manipulador de eventos, é uma ótima ideia usar [**System.EventHandler<TEventArgs>**](https://msdn.microsoft.com/library/windows/apps/xaml/db0etb8x.aspx) porque ele tem conversão interna para o delegado de evento genérico do Windows Runtime [**EventHandler<T>**](https://msdn.microsoft.com/library/windows/apps/br206577).
-    -   Não use como base de sua classe de dados de eventos o [**System.EventArgs**](https://msdn.microsoft.com/library/windows/apps/xaml/system.eventargs.aspx) porque ele não é convertido para o Windows Runtime. Use uma classe de dados de eventos existente ou nenhuma classe base.
-    -   Se estiver usando acessadores personalizados, veja [Eventos personalizados e acessadores de eventos nos Componentes de Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh972883.aspx).
-    -   Se não tiver certeza do que é o padrão de evento .NET padrão, veja [Definindo eventos para classes personalizadas do Silverlight](http://msdn.microsoft.com/library/dd833067.aspx). Esse tópico foi escrito para o Microsoft Silverlight mas ainda é uma ótima referência do código e dos conceitos para o padrão de evento .NET padrão.
--   Para C++/CX, veja [Eventos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh755799.aspx).
-    -   Use referências nomeadas mesmo para seus próprios usos de eventos personalizados. Não use lambda para eventos personalizados, pois ele pode criar uma referência circular.
+- Para C# e Visual Basic, você está definindo um evento de CLR. Você pode usar o padrão de evento .NET, desde que não esteja usando acessadores personalizados(**add**/**remove**). Outras dicas:
+    - Para o manipulador de eventos, é uma ótima ideia usar [**System.EventHandler<TEventArgs>**](https://msdn.microsoft.com/library/windows/apps/xaml/db0etb8x.aspx) porque ele tem conversão interna para o delegado de evento genérico do Windows Runtime [**EventHandler<T>**](https://msdn.microsoft.com/library/windows/apps/br206577).
+    - Não use como base de sua classe de dados de eventos o [**System.EventArgs**](https://msdn.microsoft.com/library/windows/apps/xaml/system.eventargs.aspx) porque ele não é convertido para o Windows Runtime. Use uma classe de dados de eventos existente ou nenhuma classe base.
+    - Se estiver usando acessadores personalizados, veja [Eventos personalizados e acessadores de eventos nos Componentes de Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh972883.aspx).
+    - Se não tiver certeza do que é o padrão de evento .NET padrão, veja [Definindo eventos para classes personalizadas do Silverlight](http://msdn.microsoft.com/library/dd833067.aspx). Esse tópico foi escrito para o Microsoft Silverlight mas ainda é uma ótima referência do código e dos conceitos para o padrão de evento .NET padrão.
+- Para C++/CX, veja [Eventos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh755799.aspx).
+    - Use referências nomeadas mesmo para seus próprios usos de eventos personalizados. Não use lambda para eventos personalizados, pois ele pode criar uma referência circular.
 
 Você não pode declarar um evento roteado personalizado para o Tempo de Execução do Windows; eventos roteados são limitados ao conjunto proveniente do Tempo de Execução do Windows.
 
