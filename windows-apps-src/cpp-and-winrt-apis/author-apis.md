@@ -1,16 +1,16 @@
 ---
 description: Este tópico mostra como criar APIs de C++/WinRT, usando a estrutura de base **winrt::implements**, direta ou indiretamente.
 title: Criar APIs com C++/WinRT
-ms.date: 10/03/2018
+ms.date: 01/10/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fd543d7c3ad9dec878cc02b14a79c254d91b4be
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5b0f2c5a9941e8f82e77cbaaf2d38badb41ce7c0
+ms.sourcegitcommit: 1294275b5044ef8878d54bf4fd7aa8e0203e6fac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943394"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "9001562"
 ---
 # <a name="author-apis-with-cwinrt"></a>Criar APIs com C++/WinRT
 
@@ -311,7 +311,28 @@ myimpl.Close();
 IClosable ic1 = myimpl.as<IClosable>(); // error
 ```
 
-Se você tiver uma instância do seu tipo de implementação e precisar passá-la para uma função que espera o tipo projetado correspondente, então você pode fazer isso. Existe um operador de conversão em seu tipo de implementação (desde que o tipo de implementação foi gerado pelo `cppwinrt.exe` ferramenta) que torna isso possível.
+Se você tiver uma instância do seu tipo de implementação e precisar passá-la para uma função que espera o tipo projetado correspondente, então você pode fazer isso. Existe um operador de conversão em seu tipo de implementação (desde que o tipo de implementação foi gerado pelo `cppwinrt.exe` ferramenta) que torna isso possível. Você pode passar um valor de tipo de implementação diretamente para um método que espera um valor do tipo projetado correspondente. De uma função de membro do tipo de implementação, você pode passar `*this` para um método que espera um valor do tipo projetado correspondente.
+
+```cppwinrt
+// MyProject::MyType is the projected type; the implementation type would be MyProject::implementation::MyType.
+
+void MyOtherType::DoWork(MyProject::MyType const&){ ... }
+
+...
+
+void FreeFunction(MyProject::MyOtherType const& ot)
+{
+    MyType myimpl;
+    ot.DoWork(myimpl);
+}
+
+...
+
+void MyType::MemberFunction(MyProject::MyOtherType const& ot)
+{
+    ot.DoWork(*this);
+}
+```
 
 ## <a name="deriving-from-a-type-that-has-a-non-default-constructor"></a>Derivando de um tipo que tem um construtor não padrão
 [**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_) é um exemplo de um construtor não padrão. Não há nenhum padrão construtor; então, para construir um **ToggleButtonAutomationPeer**, você precisa passar um *proprietário*. Consequentemente, se você derivar de **ToggleButtonAutomationPeer**, então você precisa fornecer um construtor que leva um *proprietário* e passá-lo para a base. Vamos ver um exemplo disso na prática.
