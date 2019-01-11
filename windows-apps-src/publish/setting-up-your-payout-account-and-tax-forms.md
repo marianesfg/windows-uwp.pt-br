@@ -6,12 +6,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a24e038dc2645b0aea7b1e7e516886af9a9e6f09
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 81aa15892bf39209c31238878e0ca19a996d0b3e
+ms.sourcegitcommit: 322e1ae259ba0480b816a004d7a52bb0d1618b90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930256"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "9000271"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar a conta de pagamento e formulários de imposto
 
@@ -42,8 +42,8 @@ A conta de pagamento é a conta bancária para a qual enviamos a receita de suas
  
 **Para configurar sua conta de pagamento**
 
-1.  No [Partner Center](https://partner.microsoft.com/dashboard), selecione o ícone de **configurações da conta** no canto superior direito e selecione **as configurações do desenvolvedor**.
-2.  No menu de navegação esquerdo, selecione a **conta de pagamento**.
+1.  No [Partner Center](https://partner.microsoft.com/dashboard), selecione o ícone de engrenagem **configurações** no canto superior direito, e **as configurações do desenvolvedor**.
+2.  No menu de navegação à esquerda da página de ajustes, selecione a **conta de pagamento**.
 
    > [!NOTE]
    > Como se tratam de informações confidenciais, talvez você seja solicitado a entrar novamente.

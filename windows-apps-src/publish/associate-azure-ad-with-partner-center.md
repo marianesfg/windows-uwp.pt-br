@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, azure ad, locatário do azure, locatário do aad, locatário do azure ad, gerenciamento de locatário, locatários
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f807799740d7e832da2f6a6fa3ea63e00deaee4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: aacfdb0044fa9b9368ecbd032629ed5e572ece99
+ms.sourcegitcommit: 322e1ae259ba0480b816a004d7a52bb0d1618b90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931483"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "9000261"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a>Associar o Azure Active Directory à sua conta do Partner Center
 
@@ -31,7 +31,7 @@ Um único locatário do Azure AD pode ser associado a várias contas do Partner 
 
 Se sua organização já usa o Azure AD, siga estas etapas para vincular sua conta do Partner Center.
 
-1.  Do [Partner Center](https://partner.microsoft.com/dashboard) , selecione o ícone de engrenagem (perto do canto superior direito do painel) e, em seguida, selecione **as configurações do desenvolvedor**. No menu **configurações** , selecione **locatários**.
+1.  Do [Partner Center](https://partner.microsoft.com/dashboard), selecione o ícone de engrenagem (perto do canto superior direito do painel) e, em seguida, selecione **as configurações do desenvolvedor**. No menu **configurações** , selecione **locatários**.
 2.  Selecione **associar o Azure AD com sua conta do Partner Center**.
 3.  Insira suas credenciais do Azure AD para o locatário que deseja associar.
 4.  Revise os nomes da organização e do domínio da conta do inquilino do Azure AD. Para concluir a associação, selecione **Confirmar**.
