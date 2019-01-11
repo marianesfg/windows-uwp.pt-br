@@ -1,24 +1,24 @@
 ---
 description: Este guia ajuda você a criar interfaces do usuário UWP fluentes diretamente em seus aplicativos do WPF e Windows Forms
 title: Controles UWP em aplicativos da área de trabalho
-ms.date: 09/21/2018
+ms.date: 01/11/2019
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 43cdb19e791726732f564ffea1b03af53a4a1ffe
-ms.sourcegitcommit: 1294275b5044ef8878d54bf4fd7aa8e0203e6fac
+ms.openlocfilehash: bf25fea6ca6e8809c12324ae57a42cc712ded2a5
+ms.sourcegitcommit: 9df81996628359ad6af4227339a2ce01c2d804e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/11/2019
-ms.locfileid: "9001552"
+ms.locfileid: "9001780"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a>Controles UWP em aplicativos da área de trabalho
 
 > [!NOTE]
 > Ilhas XAML estão disponíveis atualmente como uma visualização de desenvolvedor. Embora Encorajamos você a experimentá-los em seu próprio código de protótipo agora, não recomendamos que você usá-los no código de produção neste momento. Esses controles e APIs continuará a se desenvolver e estabilizar em futuras versões do Windows. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui.
 >
-> Se você tiver comentários sobre Ilhas XAML, envie seus comentários para XamlIslandsFeedback@microsoft.com. Seu insights e cenários são extremamente importantes para nós.
+> Se você tiver comentários sobre Ilhas XAML, criar um novo problema no [repositório WindowsCommunityToolkit](https://github.com/windows-toolkit/WindowsCommunityToolkit/issues) e deixe seus comentários lá. Se você preferir enviar seus comentários em particular, você pode enviá-lo para XamlIslandsFeedback@microsoft.com. Seu insights e cenários são extremamente importantes para nós.
 
 Windows 10 agora permite que você use controles UWP em aplicativos da área de trabalho não UWP para que você possa melhorar a aparência e a funcionalidade de seus aplicativos da área de trabalho existentes com os recursos de interface do usuário do Windows 10 mais recentes que só estão disponíveis por meio de controles UWP. Isso significa que você pode usar recursos UWP, como o [Windows Ink](../design/input/pen-and-stylus-interactions.md) e controles que suportam o [Sistema de Design fluente](../design/fluent-design-system/index.md) em seu existente WPF, formulários do Windows e aplicativos C++ Win32. Esse cenário de desenvolvedor às vezes é chamado *Ilhas XAML*.
 
