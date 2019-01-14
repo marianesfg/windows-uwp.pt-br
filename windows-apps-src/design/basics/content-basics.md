@@ -9,12 +9,12 @@ ms.date: 12/1/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fc27a2c24128553b7c1449bd8e724e2097213b80
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: b2d85d97fa704b4fb79e93cf95fdd1bfcc41f8ca
+ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981410"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "9004602"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>Noções básicas de design de conteúdo para aplicativos UWP
 
@@ -38,11 +38,6 @@ Páginas de aterrissagem, também conhecidas como telas de celebridades, geralme
 
 Coleções permitem que os usuários naveguem grupos de conteúdo ou dados. [Modo de exibição de grade](../controls-and-patterns/item-templates-gridview.md) é uma boa opção para fotos ou conteúdo centrado em mídia, e [exibição de lista](../controls-and-patterns/item-templates-listview.md) é uma boa opção para conteúdo de uso intenso de texto ou dados.
 
-### <a name="hub"></a>Hub
-
-![hub](images/content-basics/hub.png)
-
-[Hubs](../controls-and-patterns/hub.md) são projetados para olhar vitrines. Os usuários obtêm uma boa visão geral sobre o conteúdo que é oferecido; é tudo uma questão de mostrar uma grande diversidade de conteúdo, mantendo pouca quantidade. Por exemplo, a seção 1 do Hub pode conter uma tela de celebridades, a seção 2 do Hub pode conter uma coleção, a seção 3 do Hub pode conter outra coleção e assim por diante.
 
 ### <a name="masterdetail"></a>Mestre/detalhes
 
