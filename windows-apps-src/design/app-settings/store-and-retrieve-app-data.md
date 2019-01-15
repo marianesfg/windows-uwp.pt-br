@@ -8,12 +8,12 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a5e3a29a252b091b1e52dbea5fa7af5058488ed5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3c4f8de32be13f9de776a1c2d0ba0f6af2797329
+ms.sourcegitcommit: be52da74f0b3f24973286792afa4f5e80799161b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946592"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "9009513"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Armazenar e recuperar configurações e outros dados de aplicativo
 
@@ -172,7 +172,7 @@ Os dados de roaming de um aplicativo estarão disponíveis na nuvem desde que se
 
 ### <a name="roaming-pre-requisites"></a>Pré-requisitos do uso do roaming
 
-Qualquer usuário pode se beneficiar de roaming, desde que esteja usando uma conta da Microsoft para fazer logon no dispositivo. No entanto, usuários e administradores de política de grupo podem desligar o dados de uso do perfil móvel do aplicativo a qualquer momento. Se uma usuária escolher não usar uma conta da Microsoft ou desabilitar os recursos de roaming, ela ainda poderá usar seu aplicativo, mas os dados de aplicativo serão locais em cada dispositivo.
+Qualquer usuário pode se beneficiar de roaming, desde que esteja usando uma conta da Microsoft para fazer logon no dispositivo. No entanto, usuários e administradores de política de grupo podem desligar o dados de uso do perfil móvel do aplicativo a qualquer momento. Se um usuário optar por não usar uma conta da Microsoft ou desativa os recursos de roaming, ela ainda será capaz de usar o aplicativo, mas os dados de aplicativo serão locais em cada dispositivo.
 
 Os dados armazenados no [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) serão transferidos somente se o usuário tiver definido o dispositivo como "confiável". Se um dispositivo não for confiável, os dados armazenados nesse cofre não estarão disponíveis para roaming.
 
