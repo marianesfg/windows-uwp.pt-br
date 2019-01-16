@@ -8,12 +8,12 @@ keywords: Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, Ink
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 22477ab0facfcb67d44057a91c7c3a49df57f8b9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2451606ccb9dfb604dd9f8aaffe245016776c1e7
+ms.sourcegitcommit: 906b494aa190e6e5b46e7b73d4a900b2cc7d53ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937986"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "9010990"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Interações com caneta e Windows Ink em apps UWP
 
@@ -64,7 +64,7 @@ Por padrão, o [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/d
 Neste exemplo, um [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) sobrepõe uma imagem em segundo plano.
 
 > [!NOTE]
-> Um InkCanvas tem propriedades padrão [**Height**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) e [**Width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) igual a zero, a menos que ele seja o filho de um elemento que dimensiona automaticamente seus elementos filhos. 
+> Um InkCanvas tem propriedades padrão de [**Altura**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) e [**largura**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) igual a zero, a menos que ele seja o filho de um elemento que dimensiona automaticamente seus elementos filho, como os controles [StackPanel](stackpanel.md) ou [grade](grid.md) .
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
