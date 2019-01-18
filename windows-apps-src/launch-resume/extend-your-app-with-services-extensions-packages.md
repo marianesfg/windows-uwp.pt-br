@@ -1,20 +1,20 @@
 ---
 title: Estender seu aplicativo com serviços de aplicativo, extensões e pacotes
-description: Saiba como criar uma tarefa em segundo plano que é executada quando seu aplicativo da loja da UWP (Plataforma Universal do Windows) é atualizado.
+description: Descreve como criar uma tarefa em segundo plano que é executado quando o aplicativo da loja da plataforma Universal do Windows (UWP) é atualizado.
 ms.date: 05/7/2018
 ms.topic: article
 keywords: windows 10, uwp, estender, dividir, serviço de aplicativo, pacote, extensão
 ms.localizationpriority: medium
-ms.openlocfilehash: 110fa8ec9feba1f54155d41b4c726ffb28f71630
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fd14ce6248f7017160a0c6b222e31ba55e9d2977
+ms.sourcegitcommit: f35480718452a8d95b1862581449a038b63184de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932862"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "9015094"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Estender seu aplicativo com serviços de aplicativo, extensões e pacotes
 
-Há diferentes tecnologias no Windows 10 que ajudam você a estender e separar os componentes do aplicativo. Esta tabela deve ajudar você a determinar qual tecnologia deve ser usada para seu cenário. Ela é seguida por uma breve descrição dos cenários e tecnologias.
+Há muitas tecnologias no Windows 10 para estender e inserir componentes em seu aplicativo. Esta tabela deve ajudar você a determinar qual tecnologia deve ser usada dependendo dos requisitos. Ela é seguida por uma breve descrição dos cenários e tecnologias.
 
 | Cenário                           | Pacote de recursos   | Pacote de ativos      | Pacote opcional   | Pacote simples        | Extensão de aplicativo      | Serviço de aplicativo        | Instalação de streaming  |
 |------------------------------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
@@ -37,7 +37,7 @@ Código que você pode baixar da loja e executar no seu aplicativo. Por exemplo,
 
 **Plug-ins de código em processamento**  
 
-Código que é executado em processo com seu aplicativo. Há suporte somente para C++. Também pode incluir o conteúdo. Como o código é executado no processo, é considerado um nível mais alto de confiança. Você pode optar por não abrir esse tipo de extensão para terceiros.
+Código que é executado em processo com seu aplicativo. Há suporte somente para C++. Também pode incluir o conteúdo. Como o código é executado no processo, é considerado um nível mais alto de confiança. Você pode optar por não expor esse tipo de extensão para terceiros.
 
 **Ativos de experiência do usuário (cadeia de caracteres/imagens)**  
 
@@ -61,7 +61,7 @@ Oferece a funcionalidade para reduzir o tempo necessário para adquirir o aplica
 
 **Reduzir o volume de disco** reduz o tamanho de um aplicativo, incluindo somente os aplicativos ou recursos necessários.
 
-**Otimizar o empacotamento** Otimiza o processo de empacotamento do aplicativo para aplicativos complexos ou de grande escala.
+**Otimizar empacotamento** Otimiza o processo de empacotamento de aplicativo para aplicativos complexos ou em grande escala.
 
 **Reduzir o tempo de publicação** Minimiza o tempo necessário para publicar seu aplicativo na Store, no compartilhamento local ou no servidor Web.
 
@@ -71,11 +71,11 @@ Oferece a funcionalidade para reduzir o tempo necessário para adquirir o aplica
 
 Pacotes de recursos são apenas pacotes de ativos que permitem ao aplicativo se adaptar a vários tamanhos de tela e idiomas do sistema. O pacote de recursos visa o idioma do usuário, a escala do sistema e os recursos do DirectX, permitindo que o aplicativo seja adaptado para diversos cenários de usuário. Embora um pacote do aplicativo possa conter vários recursos, o sistema operacional baixa apenas os recursos relevantes por dispositivo do usuário, economizando espaço em disco e largura de banda.
 
-**Pacote de ativos** Os pacotes de ativos são uma fonte comum e centralizada de arquivos executáveis ou não-executáveis usados pelo seu aplicativo. Em geral, são arquivos sem processamento ou linguagem específica. Por exemplo, isso pode incluir uma coleção de fotos no pacote de um ativo e vídeos em outro pacote de ativo, que são usados pelo aplicativo. Por exemplo, isso pode incluir uma coleção de imagens no pacote de ativos e vídeos em outro pacote de ativos. Se o aplicativo oferece suporte a várias arquitetura e linguagens, esses ativos podem ser incluídos no pacote de arquitetura ou recursos, mas isso também significa que os ativos seriam duplicados muitas vezes em pacotes de arquitetura diferentes, ocupando espaço em disco. Se os pacotes de ativos forem usados, eles devem ser incluídos somente no pacote do aplicativos uma vez. Consulte [Introdução aos pacotes de ativos](../packaging/asset-packages.md) para saber mais.
+**Pacote de ativo** Pacotes de ativo são uma fonte comum e centralizada de arquivos executáveis ou não-executáveis para uso pelo seu aplicativo. Normalmente, são arquivos sem processamento ou linguagem específica. Por exemplo, isso pode incluir uma coleção de fotos no pacote de um ativo e vídeos em outro pacote de ativo, que são usados pelo aplicativo. Se seu aplicativo dá suporte a várias arquiteturas e vários idiomas, esses ativos podem ser incluídos no pacote de arquitetura ou pacote de recursos, mas isso também significa que os ativos seriam duplicados várias vezes em vários pacotes de arquitetura, levando espaço em disco. Se os pacotes de ativos forem usados, eles devem ser incluídos somente no pacote do aplicativos uma vez. Consulte [Introdução aos pacotes de ativos](../packaging/asset-packages.md) para saber mais.
 
 **Pacote opcional**
 
-Os pacotes opcionais são usados para complementar ou estender a funcionalidade original do pacote do aplicativo. É possível publicar um aplicativo, seguido da publicação de pacotes opcionais em um momento posterior, ou publicar pacotes de aplicativo e opcionais simultaneamente. Ao estender seu aplicativo por meio de um pacote opcional, você tem as vantagens de distribuir e monetizar conteúdo como um pacote de aplicativo separado. Os pacotes opcionais geralmente devem ser desenvolvidos pelo desenvolvedor do aplicativo original, pois são executados com a identidade do aplicativo principal (diferente das extensões de aplicativo). Dependendo de como você define o pacote opcional, você pode carregar código, ativos ou código e ativos do pacote opcional para o aplicativo principal. Se você estiver procurando melhorar seu aplicativo com conteúdo que pode ser monetizado, licenciado, e pacotes distribuídos separadamente, então os pacotes opcionais podem ser a escolha certa para você. Para obter detalhes de implementação, consulte [Criação de pacotes opcionais e conjunto relacionado](https://docs.microsoft.com/windows/uwp/packaging/optional-packages).
+Os pacotes opcionais são usados para complementar ou estender a funcionalidade original do pacote do aplicativo. É possível publicar um aplicativo, seguido da publicação de pacotes opcionais em um momento posterior, ou publicar pacotes de aplicativo e opcionais simultaneamente. Ao estender seu aplicativo por meio de um pacote opcional, você tem as vantagens de distribuir e monetizar conteúdo como um pacote de aplicativo separado. Os pacotes opcionais geralmente devem ser desenvolvidos pelo desenvolvedor do aplicativo original, pois são executados com a identidade do aplicativo principal (diferente das extensões de aplicativo). Dependendo de como você define o pacote opcional, você pode carregar código, ativos ou código e ativos do pacote opcional para o aplicativo principal. Se você precisa melhorar seu aplicativo com conteúdo que pode ser monetizado, licenciado, e pacotes distribuídos separadamente, em seguida, opcionais podem ser a escolha certa para você. Para obter detalhes de implementação, consulte [Criação de pacotes opcionais e conjunto relacionado](https://docs.microsoft.com/windows/uwp/packaging/optional-packages).
 
 **Pacote simples**
 [Pacotes simples do aplicativo](../packaging/flat-bundles.md) são semelhantes aos regulares, exceto que em vez de incluírem todos os pacotes de aplicativo na pasta, o pacote simples contém apenas *referências* aos pacotes de aplicativo. Por conter referências aos pacotes de aplicativo em vez dos próprios arquivos, um pacote simples reduz o tempo necessário para empacotar e baixar um aplicativo.
@@ -90,9 +90,9 @@ Os aplicativos não podem carregar o código a partir das extensões. Se você p
 
 **Serviço de Aplicativo**
 
-Os serviços de aplicativo do Windows permitem a comunicação entre aplicativos, permitindo que o aplicativo UWP forneça serviços a outros aplicativos universais do Windows. Os serviços de aplicativo permitem que você crie serviços sem interface do usuário que os aplicativos podem chamar no mesmo dispositivo e, a partir do Windows 10, versão 1607, nos dispositivos remotos. Consulte [Criar e consumir um serviço de aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service) para obter mais detalhes.
+Serviços de aplicativo do Windows permitem a comunicação de aplicativo para aplicativo, permitindo que seu aplicativo UWP para fornecer serviços a outro aplicativo Universal do Windows. Os serviços de aplicativo permitem que você crie serviços sem interface do usuário que os aplicativos podem chamar no mesmo dispositivo e, a partir do Windows 10, versão 1607, nos dispositivos remotos. Consulte [Criar e consumir um serviço de aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service) para obter mais detalhes.
 
-Os serviços de aplicativo são aplicativos UWP que fornecem serviços a outros aplicativos UWP. Eles são análogos aos serviços da Web em um dispositivo. Um serviço de aplicativo é executado como uma tarefa em segundo plano no aplicativo host e pode fornecer seu serviço a outros aplicativos. Por exemplo, um serviço de aplicativo pode fornecer um serviço de scanner de código de barras que outros aplicativos podem usar. Ou talvez um conjunto de aplicativos Enterprise tenha um serviço de verificação ortográfica que está disponível para os outros aplicativos no pacote.
+Os serviços de aplicativo são aplicativos UWP que fornecem serviços a outros aplicativos UWP. Eles são análogos aos serviços da web em um dispositivo. Um serviço de aplicativo é executado como uma tarefa em segundo plano no aplicativo host e pode fornecer seu serviço a outros aplicativos. Por exemplo, um serviço de aplicativo pode fornecer um serviço de scanner de código de barras que outros aplicativos podem usar. Ou talvez um conjunto de aplicativos Enterprise tenha um serviço de verificação ortográfica que está disponível para os outros aplicativos no pacote.
 
 **Instalação de streaming de aplicativo UWP**
 
