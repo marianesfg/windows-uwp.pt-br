@@ -1,16 +1,16 @@
 ---
 description: Este tópico mostra como fazer a portabilidade do código C++/CX para seu equivalente no C++/WinRT.
 title: Mudar do C++/CX para C++/WinRT
-ms.date: 10/18/2018
+ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a6a778f1efe16d56c24e437a0c25a8b8c5e3bc7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4dc1d63451e1c344e4dd6bb2aeac31c814bd294a
+ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927231"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014731"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>Mudar de C++/CX para C++/WinRT
 
@@ -45,7 +45,7 @@ Caso o projeto também use os tipos da [Biblioteca de Modelos C++ do Windows Run
 ## <a name="parameter-passing"></a>Passagem de parâmetro
 Ao criar o código-fonte do C++/CX, você passa os tipos C++/CX como parâmetros de função e referência de circunflexo (\^).
 
-```cpp
+```cppcx
 void LogPresenceRecord(PresenceRecord^ record);
 ```
 
@@ -61,7 +61,7 @@ Um objeto do C++/WinRT é fundamentalmente um valor que mantém um ponteiro da i
 ## <a name="variable-and-field-references"></a>Referências de variáveis e campo
 Ao criar o código-fonte do C++/CX, você usa as variáveis de circunflexo (\^) para fazer referência a objetos do Windows Runtime e o operador de seta (-&gt;) para desreferenciar uma variável desse tipo.
 
-```cpp
+```cppcx
 IVectorView<User^>^ userList = User::Users;
 
 if (userList != nullptr)
@@ -70,7 +70,7 @@ if (userList != nullptr)
     ...
 ```
 
-Ao fazer a portabilidade para o C++ equivalente c++ código WinRT, basicamente remover os circunflexos e altera o operador de seta (-&gt;) para o operador ponto (.), porque C++ c++ WinRT projetado tipos são valores e não ponteiros.
+Ao fazer a portabilidade para o C++ equivalente c++ WinRT código, você pode obter um longo caminho removendo os circunflexos e alterar o operador de seta (-&gt;) para o operador ponto (.). C++ c++ WinRT projetado tipos são valores e não ponteiros.
 
 ```cppwinrt
 IVectorView<User> userList = User::Users();
@@ -81,6 +81,19 @@ if (userList != nullptr)
     ...
 ```
 
+O construtor padrão para C++ c++ ponteiro de hat CX inicializa para nulo. Aqui está um C + c++ exemplo de código CX que criamos um variável/campo do tipo correto, mas que tem não inicializado. Em outras palavras, ele não inicialmente se refere a um **TextBlock**; nós pretendemos atribuir uma referência posterior.
+
+```cppcx
+TextBlock^ textBlock;
+
+class MyClass
+{
+    TextBlock^ textBlock;
+};
+```
+
+Para o equivalente no C++ c++ WinRT, consulte [inicialização atrasada](consume-apis.md#delayed-initialization).
+
 ## <a name="properties"></a>Propriedades
 A extensões de linguagem C++/CX incluem o conceito de propriedades. Ao criar o código-fonte do C++/CX, você pode acessar uma propriedade como se fosse um campo. O C++ padrão não tem o conceito de propriedade, portanto, no C++/WinRT, você pode obter e definir funções.
 
@@ -89,7 +102,7 @@ Nos exemplos a seguir, **XboxUserId**, **UserState**, **PresenceDeviceRecords** 
 ### <a name="retrieving-a-value-from-a-property"></a>Recuperar um valor a partir de uma propriedade
 Veja como obter um valor de propriedade no C++/CX.
 
-```cpp
+```cppcx
 void Sample::LogPresenceRecord(PresenceRecord^ record)
 {
     auto id = record->XboxUserId;
@@ -114,7 +127,7 @@ Observe que a função **PresenceDeviceRecords** retorna um objeto do Windows Ru
 ### <a name="setting-a-property-to-a-new-value"></a>Definir uma propriedade como um novo valor
 Uma propriedade é definida com um novo valor de forma semelhante. Primeiro, no C++/CX.
 
-```cpp
+```cppcx
 record->UserState = newValue;
 ```
 
@@ -127,7 +140,7 @@ record.UserState(newValue);
 ## <a name="creating-an-instance-of-a-class"></a>Criar uma instância de uma classe
 Você trabalha com um objeto do C++/CX por meio de um identificador, conhecido como uma referência de circunflexo (\^). Você pode criar um novo objeto por meio da palavra-chave `ref new`, que chama [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646) para ativar uma nova instância da classe do tempo de execução.
 
-```cpp
+```cppcx
 using namespace Windows::Storage::Streams;
 
 class Sample
@@ -151,7 +164,7 @@ private:
 
 Se um recurso foi dispendioso para inicializar, é comum atrasar a inicialização até ser necessária.
 
-```cpp
+```cppcx
 using namespace Windows::Storage::Streams;
 
 class Sample
@@ -189,7 +202,7 @@ private:
 ## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>Conversão de uma classe base de tempo de execução para um derivadas
 É comum ter uma referência para a base que você sabe que se refere a um objeto de um tipo derivado. Em C++ c++ /CX, use `dynamic_cast` à *conversão* a referência para a base para uma referência-para-derivada. O `dynamic_cast` é realmente apenas uma chamada oculta para [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Aqui está um exemplo típico&mdash;você está manipulando um evento de alteração de propriedade de dependência, e você deseja reconverter de **DependencyObject** o tipo real que possui a propriedade de dependência.
 
-```cpp
+```cppcx
 void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs^ e)
 {
     BgLabelControl^ theControl{ dynamic_cast<BgLabelControl^>(d) };
@@ -226,19 +239,21 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d
 ## <a name="event-handling-with-a-delegate"></a>Processamento de eventos com um delegado
 Veja um exemplo típico de processamento de eventos no C++/CX usando uma função lambda como um delegado nesse caso.
 
-```cpp
-auto token = myButton->Click += ref new RoutedEventHandler([&](Platform::Object^ sender, RoutedEventArgs^ args)
+```cppcx
+auto token = myButton->Click += ref new RoutedEventHandler([=](Platform::Object^ sender, RoutedEventArgs^ args)
 {
     // Handle the event.
+    // Note: locals are captured by value, not reference, since this handler is delayed.
 });
 ```
 
 Isso é o equivalente no C++/WinRT.
 
 ```cppwinrt
-auto token = myButton().Click([&](IInspectable const& sender, RoutedEventArgs const& args)
+auto token = myButton().Click([=](IInspectable const& sender, RoutedEventArgs const& args)
 {
     // Handle the event.
+    // Note: locals are captured by value, not reference, since this handler is delayed.
 });
 ```
 
@@ -249,7 +264,7 @@ Se estiver transferindo de uma base de código C++/CX em que os eventos e delega
 ## <a name="revoking-a-delegate"></a>Revogar um delegado
 No C++/CX, você usa o operador `-=` para revogar um registro de evento anterior.
 
-```cpp
+```cppcx
 myButton->Click -= token;
 ```
 
@@ -277,7 +292,7 @@ O **Platform:: Agile\ ^** tipo em C++ c++ /CX representa uma classe de tempo de 
 
 No C++/CX.
 
-```cpp
+```cppcx
 Platform::Agile<Windows::UI::Core::CoreWindow> m_window;
 ```
 
@@ -294,7 +309,7 @@ Para fazer a portabilidade para o C++/WinRT, altere todos os códigos que usam *
 
 No C++/CX.
 
-```cpp
+```cppcx
 catch (Platform::Exception^ ex)
 ```
 
@@ -326,7 +341,7 @@ Observe que cada classe (pela classe base **hresult_error**) fornece uma funçã
 
 Veja um exemplo de geração de uma exceção no C++/CX.
 
-```cpp
+```cppcx
 throw ref new Platform::InvalidArgumentException(L"A valid User is required");
 ```
 
@@ -348,21 +363,21 @@ winrt::Windows::Foundation::IInspectable var{ nullptr };
 
 Com o C++/CX, você pode acessar a propriedade [**Platform::String::Data**](https://docs.microsoft.com/en-us/cpp/cppcx/platform-string-class#data) para recuperar a cadeia de caracteres como uma matriz **const wchar_t\*** C-style (por exemplo, passar para **std::wcout**).
 
-```C++
-auto var = titleRecord->TitleName->Data();
+```cppcx
+auto var{ titleRecord->TitleName->Data() };
 ```
 
 Para fazer o mesmo com C++/WinRT, você pode usar a função [**hstring::c_str**](/uwp/api/windows.foundation.uri#hstringcstr-function) para obter uma versão de cadeia de caracteres C-style terminada em null, assim como de **std::wstring**.
 
-```C++
-auto var = titleRecord.TitleName().c_str();
+```cppwinrt
+auto var{ titleRecord.TitleName().c_str() };
 ```
 
 Quando se trata de implementar APIs que recebem ou retornam cadeias de caracteres, normalmente você altera qualquer código do C++/CX que usa **Platform::String\^** para em vez disso usar **winrt::hstring**.
 
 Veja um exemplo de uma API do C++/CX API que recebe a cadeia de caracteres.
 
-```cpp
+```cppcx
 void LogWrapLine(Platform::String^ str);
 ```
 
@@ -377,6 +392,22 @@ A cadeia de ferramentas do C++/WinRT gera o código-fonte semelhante a isso.
 
 ```cppwinrt
 void LogWrapLine(winrt::hstring const& str);
+```
+
+#### <a name="tostring"></a>ToString)
+
+C++ c++ /CX fornece o método [Object::ToString](/cpp/cppcx/platform-object-class?view=vs-2017#tostring) .
+
+```cppcx
+int i{ 2 };
+auto s{ i.ToString() }; // s is a Platform::String^ with value L"2".
+```
+
+C++ c++ WinRT diretamente não fornece esse recurso, mas você pode desativar a alternativas.
+
+```cppwinrt
+int i{ 2 };
+auto s{ std::to_wstring(i) }; // s is a std::wstring with value L"2".
 ```
 
 ## <a name="important-apis"></a>APIs Importantes
