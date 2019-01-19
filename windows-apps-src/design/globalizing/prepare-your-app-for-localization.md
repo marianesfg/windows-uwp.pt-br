@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 23343ea88b0347ac3e8cb5d41812a24d619be986
-ms.sourcegitcommit: 28fa37c2106ceb0ebe2c06ec74198b7ee97a9b88
+ms.openlocfilehash: 618b9d556d3c855c5aed888f0639393bdaaec52e
+ms.sourcegitcommit: 6b417970ee42b46d0a3a2307229376e41e70f8c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "9015417"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "9015661"
 ---
 # <a name="make-your-app-localizable"></a>Tornar seu app localizável
 
@@ -22,7 +22,7 @@ Também recomendamos que você se familiarize com as [diretrizes de globalizaç�
 
 ## <a name="put-your-strings-into-resources-files-resw"></a>Coloque suas cadeias de caracteres nos Arquivos de Recursos (.resw)
 
-Não codifique os literais de cadeia de caracteres no código imperativo, na marcação XAML, nem no manifesto do pacote do aplicativo. Em vez disso, coloque suas cadeias de caracteres em Arquivos de Recursos (.resw) para que elas se adaptem a diferentes mercados locais independentemente dos binários criados do seu app. Para mais informações, consulte [Localizar as cadeias de caracteres em seu IU e o manifesto do pacote do aplicativo](../../app-resources/localize-strings-ui-manifest.md).
+Não literais de cadeia de caracteres de codificar no código imperativo, na marcação XAML, nem no manifesto do pacote do aplicativo. Em vez disso, coloque suas cadeias de caracteres em Arquivos de Recursos (.resw) para que elas se adaptem a diferentes mercados locais independentemente dos binários criados do seu app. Para mais informações, consulte [Localizar as cadeias de caracteres em seu IU e o manifesto do pacote do aplicativo](../../app-resources/localize-strings-ui-manifest.md).
 
 Esse tópico também mostra como adicionar comentários ao seu Arquivo de Recursos (.resw) padrão. Por exemplo, se você estiver adotando uma voz ou tom informal, certifique-se de explicar isso nos comentários. Além disso, para minimizar despesas, certifique-se de que somente as cadeias de caracteres que precisam ser traduzidas sejam fornecidas aos tradutores.
 
@@ -64,9 +64,9 @@ Como outro exemplo, considere a frase "Lembre-me em {0} minuto (s)." Usar "minut
 
 Para resolver este problema, localize a frase inteira em vez de apenas uma palavra. Fazer isso pode parecer um trabalho redobrado e uma solução inadequada, mas essa é a melhor solução porque:
 
--   Uma mensagem gramaticalmente correta será exibida para todos os idiomas.
--   Seu tradutor não precisará perguntar pelo o que as cadeias de caracteres serão substituídas.
--   Você não precisará implementar uma correção de código custosa quando um problema assim aparecer depois de o seu aplicativo estar concluído.
+- Uma mensagem gramaticalmente correta será exibida para todos os idiomas.
+- Seu tradutor não precisará perguntar pelo o que as cadeias de caracteres serão substituídas.
+- Você não precisará implementar uma correção de código custosa quando um problema assim aparecer depois de o seu aplicativo estar concluído.
 
 ## <a name="other-considerations-for-strings"></a>Outras considerações para cadeias de caracteres
 
@@ -82,13 +82,22 @@ Pseudolocalize seu app para revelar quaisquer problemas de localização. A pseu
 
 ## <a name="deployment-considerations"></a>Considerações sobre a implantação
 
-Quando você instala o aplicativo que contém dados de idioma localizado, que você pode descobrir que somente o idioma padrão está disponível para o aplicativo, mesmo que você incluiu inicialmente recursos para vários idiomas. Isso ocorre por causa da maneira que o processo de instalação é otimizado para instalar somente os recursos de idioma coincidir com o idioma e cultura atual do dispositivo. Isso significa que, se o dispositivo está configurado para en-us quando você instala o aplicativo apenas a en-nos recursos de idioma serão instalados. Se você alterar o idioma padrão do sistema operacional o aplicativo ainda só exibirá en-us recursos porque é a única linguagem instalada para o aplicativo. Neste momento, não há nenhuma maneira para instalar o suporte a idiomas adicionais para o seu aplicativo após a instalação inicial. 
+Quando você instala um aplicativo que contém dados de idioma localizado, talvez você descubra que somente o idioma padrão está disponível para o aplicativo, mesmo que você incluiu inicialmente recursos para vários idiomas. Isso ocorre porque o processo de instalação é otimizado para instalar somente os recursos de idioma coincidir com o idioma e cultura atual do dispositivo. Portanto, se o dispositivo estiver configurado para en-US, somente os recursos de idioma en-US são instalados com o seu aplicativo.
 
-Se você quiser certificar-se de que todos os recursos de idioma estão disponíveis após a instalação, você pode cerate um arquivo de configuração para o pacote de aplicativo que especifica que determinados recursos não são necessários durante a instalação. Nesse arquivo de configuração, você pode exigir qualquer recurso de ser instalado, incluindo os recursos de idioma. Para obter mais informações sobre recursos garantindo são instalados, consulte este documento: [Certifique-se de que os recursos são instalados em um dispositivo, independentemente se um dispositivo requê-los](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140))
- 
-Esse recurso de instalação otimizado é habilitado automaticamente quando você gera um appxbundle para seu aplicativo durante o empacotamento. Opcionalmente, para garantir que todos os recursos sejam instalados você pode desativar a geração de appxbundle quando você empacotar seu aplicativo. Isso não é recomendado Entretanto porque ele pode aumentar o tempo de instalação do seu aplicativo. Em vez disso, você deve criar um arquivo de configuração de empacotamento de acordo com a parágrafo anterior e exigem apenas os recursos necessários, permitindo que o instalador continue otimizar os recursos desnecessários ausente. 
- 
-Você pode desativar a geração de appxbundle e incluir todos os recursos empacotados, definindo o atributo "Gerar lote de aplicativo" para "nunca". 
+> [!NOTE]
+> Não é possível instalar o suporte a idiomas adicionais para o seu aplicativo após a instalação inicial. Se você alterar o idioma padrão depois de instalar um aplicativo, o aplicativo continua a usar apenas os recursos de idioma original.
+
+Se você deseja garantir que todos os recursos de idioma estão disponíveis após a instalação, crie um arquivo de configuração para o pacote de aplicativo que especifica que determinados recursos não são necessários durante a instalação (incluindo recursos de idioma). Esse recurso de instalação otimizado é habilitado automaticamente quando. appxbundle do seu aplicativo é gerado durante o empacotamento. Para obter mais informações, consulte [Certifique-se de que os recursos são instalados em um dispositivo, independentemente se um dispositivo requê-los](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140)).
+
+Opcionalmente garantir que todos os recursos estão instalados (não apenas um subconjunto), você pode desativar a geração. appxbundle quando você empacotar seu aplicativo. Isso não é recomendado no entanto, ele pode aumentar o tempo de instalação do seu aplicativo.
+
+Desative a geração automática da. appxbundle, definindo o atributo "Gerar lote de aplicativo" para "nunca":
+
+1. No Visual Studio, clique no nome do projeto
+2. Selecione a **loja** -> **criar pacotes de aplicativos...**
+3. Na caixa de diálogo **Criar seus pacotes** , selecione **quero criar pacotes para carregar na Microsoft Store usando um novo nome de aplicativo** e, em seguida, clique em **Avançar**.
+4. Na caixa de diálogo **Selecionar um nome de aplicativo** , selecione/Criar um aplicativo nome para seu pacote.
+5. Na caixa de diálogo **Selecionar e configurar pacotes** , defina **Gerar lote de aplicativo** como **nunca**.
 
 ## <a name="geopolitical-awareness"></a>Consciência geopolítica
 
@@ -128,12 +137,13 @@ Considere essas opções.
 - **Os arquivos de recursos podem ser traduzidos abrindo-os diretamente no projeto.** Essa abordagem funciona bem para um projeto com um volume pequeno de cadeias de caracteres que precisa ser traduzido para dois ou três idiomas. Ela pode ser adequada para um cenário em que um desenvolvedor fale mais de um idioma e esteja disposto a se envolver no processo de tradução. Essa abordagem é vantajosa por ser rápida, não exigir ferramentas e minimizar o risco de traduções incorretas. Mas não é escalável. Em particular, os recursos em idiomas diferentes podem facilmente ficar fora de sincronia, causando experiências ruins para o usuário e dores de cabeça para executar a manutenção.
 - **Os arquivos de recursos de cadeia de caracteres estão no formato texto XML ou ResJSON, então podem ser entregues para tradução usando qualquer editor de texto. Os arquivos traduzidos, em seguida, seriam copiados de volta no projeto.** Essa abordagem tem o risco de os tradutores editarem acidentalmente as marcações XML, mas permite que o trabalho ocorra fora do projeto do Microsoft Visual Studio. Tal abordagem pode funcionar bem para projetos que precisam ser traduzidos para poucos idiomas. O formato XLIFF é um formato XML especificamente projetado para o uso em localização e tem um bom suporte de alguns fornecedores de localização ou de ferramentas de localização. Você pode usar o [Kit de Ferramentas de Aplicativo Multilíngue](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx) para gerar arquivos XLIFF de outros arquivos de recursos, como. resw ou .resjson.
 
-Pode ser necessário que outros arquivos, como arquivos de imagem ou de áudio, sejam enviados para os tradutores.
+> [!NOTE]
+> Localização também pode ser necessária para outros ativos, incluindo imagens e arquivos de áudio.
 
-Além disso, considere estas sugestões.
+Você também deve considerar o seguinte:
 
-- **Use uma ferramenta de localização.** Há várias ferramentas de localização disponíveis para analisar arquivos de recursos e permitir que somente as cadeias de caracteres transmissíveis sejam editadas por tradutores. Essa abordagem reduz o risco de um tradutor editar acidentalmente as marcas de XML. A desvantagem é que é preciso introduzir uma nova ferramenta e um novo processo à localização. Uma ferramenta de localização é boa para projetos com grande volume de cadeias de caracteres e poucos idiomas. Para saber mais, consulte [Como usar o Kit de Ferramentas de Aplicativo Multilíngue](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx).
-- **Use um fornecedor de localização.** Considere o uso de um fornecedor de localização se o seu projeto tiver um grande volume de cadeias de caracteres que precisam ser traduzidas para muitos idiomas. Um fornecedor de localização pode recomendar ferramentas e processos, bem como traduzir seus arquivos de recurso. Essa é a solução ideal, mas também é a opção mais dispendiosa, e pode aumentar o tempo de retorno do conteúdo traduzido.
+- **Ferramentas de localização** Um número de ferramentas de localização está disponível para analisar arquivos de recurso e permitir que somente as cadeias de caracteres transmissíveis sejam editadas por tradutores. Essa abordagem reduz o risco de um tradutor editar acidentalmente as marcas de XML. A desvantagem é que é preciso introduzir uma nova ferramenta e um novo processo à localização. Uma ferramenta de localização é boa para projetos com grande volume de cadeias de caracteres e poucos idiomas. Para saber mais, consulte [Como usar o Kit de Ferramentas de Aplicativo Multilíngue](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx).
+- **Fornecedores de localização** Considere usar um fornecedor de localização se seu aplicativo contém ampla cadeias de caracteres que precisam ser traduzidos para um grande número de idiomas. Um fornecedor de localização pode recomendar ferramentas e processos, bem como traduzir seus arquivos de recurso. Essa é a solução ideal, mas também é a opção mais dispendiosa, e pode aumentar o tempo de retorno do conteúdo traduzido.
 
 ## <a name="keep-access-keys-and-labels-consistent"></a>Mantenha teclas de acesso e rótulos consistentes
 
@@ -145,8 +155,8 @@ Os caracteres kanji japoneses apresentam a propriedade de ter mais de uma leitur
 
 A *furigana* resolve esse problema permitindo que o usuário ou criador especifique a fonética dos caracteres em uso. Se você usar o seguinte procedimento para adicionar a furigana ao nome do aplicativo, poderá garantir que ele seja classificado no local adequado da lista de aplicativos. Se o nome do aplicativo contiver os caracteres kanji e a furigana não for fornecida quando o idioma da interface do usuário ou a ordem de classificação for definida em japonês, o Windows se esforçará ao máximo para gerar a pronúncia adequada. Entretanto, existe a possibilidade de os nomes de aplicativos, que contêm leituras raras ou exclusivas, serem classificados em uma leitura mais comum. Portanto, a melhor prática para aplicativos em japonês (principalmente os que contêm caracteres kanji em seus nomes) é fornecer uma versão em furigana do nome do aplicativo como parte do processo de localização para japonês.
 
-1.  Adicione "ms-resource:Appname" como o Nome de exibição do pacote e o Nome de exibição do aplicativo.
-2.  Crie uma pasta ja-JP em cadeias de caracteres e adicione dois arquivos de recursos, como a seguir:
+1. Adicione "ms-resource:Appname" como o Nome de exibição do pacote e o Nome de exibição do aplicativo.
+2. Crie uma pasta ja-JP em cadeias de caracteres e adicione dois arquivos de recursos, como a seguir:
 
     ``` syntax
     strings\
@@ -156,28 +166,28 @@ A *furigana* resolve esse problema permitindo que o usuário ou criador especifi
             Resources.resw
     ```
 
-3.  Em Resources.resw para ja-JP geral: adicione um recurso de cadeia de caracteres para Appname "希蒼"
-4.  Em Resources.altform-msft-phonetic.resw para recursos Furigana para japonês: adicione o valor furigana para AppName "のあ"
+3. Em Resources.resw para ja-JP geral: adicione um recurso de cadeia de caracteres para Appname "希蒼"
+4. Em Resources.altform-msft-phonetic.resw para recursos Furigana para japonês: adicione o valor furigana para AppName "のあ"
 
 O usuário pode pesquisar o nome do aplicativo "希蒼" usando tanto o valor furigana "のあ" (noa), quanto o valor fonético (usando a função **GetPhonetic** do Editor de Método de Entrada (IME)) "まれあお" (mare-ao).
 
 A classificação segue o formato do **Painel de Controle Regional**.
 
--   Em um local de usuário japonês,
-    -   Se a furigana estiver habilitada, o "希蒼" estará classificado sob "の".
-    -   Se a furigana estiver faltando, o "希蒼" estará classificado sob "ま".
--   Em um local de usuário não japonês,
-    -   Se a furigana estiver habilitada, o "希蒼" estará classificado sob "の".
-    -   Se a furigana estiver faltando, o "希蒼" estará classificado sob "漢字".
+- Em um local de usuário japonês,
+  - Se a furigana estiver habilitada, o "希蒼" estará classificado sob "の".
+  - Se a furigana estiver faltando, o "希蒼" estará classificado sob "ま".
+- Em um local de usuário não japonês,
+  - Se a furigana estiver habilitada, o "希蒼" estará classificado sob "の".
+  - Se a furigana estiver faltando, o "希蒼" estará classificado sob "漢字".
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Diretrizes de globalização](guidelines-and-checklist-for-globalizing-your-app.md)
-* [Localizar as cadeias de caracteres em seu IU e o manifesto do pacote do aplicativo](../../app-resources/localize-strings-ui-manifest.md)
-* [Personalizar os recursos de acordo com idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
-* [Ajustar layout e fontes e fornecer suporte a RTL](adjust-layout-and-fonts--and-support-rtl.md)
-* [Atualizando imagens em resposta aos eventos de alteração de valor de qualificador](../../app-resources/images-tailored-for-scale-theme-contrast.md#updating-images-in-response-to-qualifier-value-change-events)
+- [Diretrizes de globalização](guidelines-and-checklist-for-globalizing-your-app.md)
+- [Localizar as cadeias de caracteres em seu IU e o manifesto do pacote do aplicativo](../../app-resources/localize-strings-ui-manifest.md)
+- [Personalizar os recursos de acordo com idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
+- [Ajustar layout e fontes e fornecer suporte a RTL](adjust-layout-and-fonts--and-support-rtl.md)
+- [Atualizando imagens em resposta aos eventos de alteração de valor de qualificador](../../app-resources/images-tailored-for-scale-theme-contrast.md#updating-images-in-response-to-qualifier-value-change-events)
 
 ## <a name="samples"></a>Exemplos
 
-* [Exemplo de recursos e localização de aplicativos](http://go.microsoft.com/fwlink/p/?linkid=254478)
+- [Exemplo de recursos e localização de aplicativos](http://go.microsoft.com/fwlink/p/?linkid=254478)
