@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: c0df06458bf70599be657fe2812b2fb3e2b44ed6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 23343ea88b0347ac3e8cb5d41812a24d619be986
+ms.sourcegitcommit: 28fa37c2106ceb0ebe2c06ec74198b7ee97a9b88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938293"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "9015417"
 ---
 # <a name="make-your-app-localizable"></a>Tornar seu app localizável
 
@@ -79,6 +79,16 @@ Usar uma voz ou tom informal em suas cadeias de caracteres é uma opção válid
 ## <a name="pseudo-localization"></a>Pseudolocalização
 
 Pseudolocalize seu app para revelar quaisquer problemas de localização. A pseudolocalização é um tipo de simulação de localização, ou teste de divulgação. Você produz um conjunto de recursos que não estão realmente traduzidos; eles só parecem estar. As cadeias de caracteres são aproximadamente 40% mais longas do que no idioma padrão, por exemplo, e elas têm delimitadores para que você possa ver rapidamente se foram truncadas na interface do usuário.
+
+## <a name="deployment-considerations"></a>Considerações sobre a implantação
+
+Quando você instala o aplicativo que contém dados de idioma localizado, que você pode descobrir que somente o idioma padrão está disponível para o aplicativo, mesmo que você incluiu inicialmente recursos para vários idiomas. Isso ocorre por causa da maneira que o processo de instalação é otimizado para instalar somente os recursos de idioma coincidir com o idioma e cultura atual do dispositivo. Isso significa que, se o dispositivo está configurado para en-us quando você instala o aplicativo apenas a en-nos recursos de idioma serão instalados. Se você alterar o idioma padrão do sistema operacional o aplicativo ainda só exibirá en-us recursos porque é a única linguagem instalada para o aplicativo. Neste momento, não há nenhuma maneira para instalar o suporte a idiomas adicionais para o seu aplicativo após a instalação inicial. 
+
+Se você quiser certificar-se de que todos os recursos de idioma estão disponíveis após a instalação, você pode cerate um arquivo de configuração para o pacote de aplicativo que especifica que determinados recursos não são necessários durante a instalação. Nesse arquivo de configuração, você pode exigir qualquer recurso de ser instalado, incluindo os recursos de idioma. Para obter mais informações sobre recursos garantindo são instalados, consulte este documento: [Certifique-se de que os recursos são instalados em um dispositivo, independentemente se um dispositivo requê-los](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140))
+ 
+Esse recurso de instalação otimizado é habilitado automaticamente quando você gera um appxbundle para seu aplicativo durante o empacotamento. Opcionalmente, para garantir que todos os recursos sejam instalados você pode desativar a geração de appxbundle quando você empacotar seu aplicativo. Isso não é recomendado Entretanto porque ele pode aumentar o tempo de instalação do seu aplicativo. Em vez disso, você deve criar um arquivo de configuração de empacotamento de acordo com a parágrafo anterior e exigem apenas os recursos necessários, permitindo que o instalador continue otimizar os recursos desnecessários ausente. 
+ 
+Você pode desativar a geração de appxbundle e incluir todos os recursos empacotados, definindo o atributo "Gerar lote de aplicativo" para "nunca". 
 
 ## <a name="geopolitical-awareness"></a>Consciência geopolítica
 
