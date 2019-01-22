@@ -5,16 +5,16 @@ ms.date: 5/2/2018
 ms.topic: article
 keywords: windows 10, uwp, instalador do aplicativo, AppInstaller, sideload
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c7055748eb8905341d9f90c47e6141c9c9c599e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b547394657fc992474ac0ef9e79719e3ab8f31e1
+ms.sourcegitcommit: 58783d1ea22e632b9c50dcfbaa1cc57686bcdd8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929663"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024223"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Criar um arquivo do Instalador de Aplicativo com o Visual Studio
 
-A partir do Windows 10, versão 1804, e do Visual Studio 2017, atualização 15.7, aplicativos de sideload podem ser configurados para receber atualizações automáticas usando um arquivo `.appinstaller`. O Visual Studio permite ativar essas atualizações.
+A partir do Windows 10, versão 1803 e Visual Studio 2017, atualização 15.7, aplicativos de sideload podem ser configurados para receber atualizações automáticas usando um `.appinstaller` arquivo. O Visual Studio permite ativar essas atualizações.
 
 ## <a name="app-installer-file-location"></a>Local do arquivo do Instalador de Aplicativo
 O arquivo `.appinstaller` pode ser hospedado em um local compartilhado como um ponto de extremidade HTTP ou uma pasta compartilhada UNC e inclui o caminho para encontrar os pacotes de aplicativos a serem instalados. Os usuários instalam o aplicativo a partir do local compartilhado e ativam verificações periódicas de novas atualizações. 
@@ -25,7 +25,7 @@ O arquivo `.appinstaller` pode ser hospedado em um local compartilhado como um p
 Você pode configurar a propriedade `TargetPlatformMinVersion` quando cria o projeto ou alterá-la mais tarde nas propriedades do projeto. 
 
 >[!IMPORTANT]
-> O arquivo do instalador de aplicativo só é gerado quando o `TargetPlatformMinVersion` é Windows 10, versão 1804 ou posterior.
+> O arquivo do instalador de aplicativo só é gerado quando o `TargetPlatformMinVersion` é o Windows 10, versão 1803 ou maior.
 
 
 ### <a name="create-packages"></a>Criar pacotes
