@@ -1,222 +1,213 @@
-items:
 - name: Visão geral
   href: ../publish/index.md
 - name: Abrindo uma conta de desenvolvedor
   href: ../publish/opening-a-developer-account.md
   items:
-  - name: Tipos de conta, localizações e taxas
-    href: ../publish/account-types-locations-and-fees.md
-  - name: Gerenciar configurações da conta e informações de perfil
-    href: ../publish/manage-account-settings-and-profile.md
-  - name: Proteção de marcas comerciais e direitos autorais
-    href: ../publish/trademark-and-copyright-protection.md
-  - name: Programa Insider do Centro de Desenvolvimento
-    href: ../publish/dev-center-insider-program.md
+    - name: 'Tipos de conta, localizações e taxas'
+      href: ../publish/account-types-locations-and-fees.md
+    - name: Gerenciar configurações da conta e informações de perfil
+      href: ../publish/manage-account-settings-and-profile.md
+    - name: Proteção de marcas comerciais e direitos autorais
+      href: ../publish/trademark-and-copyright-protection.md
 - name: Gerenciar usuários de contas
   href: ../publish/manage-account-users.md
   items:
-  - name: Associar o Azure AD à sua conta do Partner Center
-    href: ../publish/associate-azure-ad-with-partner-center.md
-  - name: Adicionar usuários, grupos e aplicativos Azure AD
-    href: ../publish/add-users-groups-and-azure-ad-applications.md
-  - name: Definir funções e permissões personalizadas
-    href: ../publish/set-custom-permissions-for-account-users.md
+    - name: Associar o Azure AD à sua conta do Partner Center
+      href: ../publish/associate-azure-ad-with-partner-center.md
+    - name: 'Adicionar usuários, grupos e aplicativos Azure AD'
+      href: ../publish/add-users-groups-and-azure-ad-applications.md
+    - name: Definir funções e permissões personalizadas
+      href: ../publish/set-custom-permissions-for-account-users.md
 - name: Criar seu aplicativo reservando um nome
   href: ../publish/create-your-app-by-reserving-a-name.md
 - name: Envios de aplicativos
   href: ../publish/app-submissions.md
   items:
-  - name: Definir a disponibilidade e o preço do aplicativo
-    href: ../publish/set-app-pricing-and-availability.md
-    items:
-    - name: Definir seleção de mercado
-      href: ../publish/define-market-selection.md
-    - name: Escolher as opções de visibilidade
-      href: ../publish/choose-visibility-options.md
-    - name: Configurar o agendamento preciso do lançamento
-      href: ../publish/configure-precise-release-scheduling.md
-    - name: Definir e agendar o preço do aplicativo
-      href: ../publish/set-and-schedule-app-pricing.md
-    - name: Opções de licenciamento organizacional
-      href: ../publish/organizational-licensing.md
-  - name: Insira as propriedades do aplicativo
-    href: ../publish/enter-app-properties.md
-    items:
-    - name: Tabela de categoria e subcategoria
-      href: ../publish/category-and-subcategory-table.md
-    - name: Declarações de produto
-      href: ../publish/product-declarations.md
-  - name: Classificações etárias
-    href: ../publish/age-ratings.md
-  - name: Carregue os pacotes do aplicativo
-    href: ../publish/upload-app-packages.md
-    items:
-    - name: Disponibilidade da família de dispositivos
-      href: ../publish/device-family-availability.md
-    - name: Requisitos do pacote do aplicativo
-      href: ../publish/app-package-requirements.md
-    - name: Numeração de versão do pacote
-      href: ../publish/package-version-numbering.md
-    - name: Idiomas com suporte
-      href: ../publish/supported-languages.md
-    - name: Diretrizes para gerenciamento do pacote do aplicativo
-      href: ../publish/guidance-for-app-package-management.md
-  - name: Criar listagens da Store do app
-    href: ../publish/create-app-store-listings.md
-    items:
-    - name: Escrever uma ótima descrição do aplicativo
-      href: ../publish/write-a-great-app-description.md
-    - name: Capturas de tela, imagens e trailers do aplicativo
-      href: ../publish/app-screenshots-and-images.md
-    - name: Importar e exportar as listagens da Loja
-      href: ../publish/import-and-export-store-listings.md
-    - name: Criar listagens específicas de plataforma da Store
-      href: ../publish/create-platform-specific-store-listings.md
-  - name: Gerenciar opções de envio
-    href: ../publish/manage-submission-options.md
-    items:
-    - name: Notas para certificação
-      href: ../publish/notes-for-certification.md
-  - name: O processo de certificação de aplicativos
-    href: ../publish/the-app-certification-process.md
-    items:
-    - name: Resolver erros de envio
-      href: ../publish/resolve-submission-errors.md
-    - name: Evitar erros comuns de certificação
-      href: ../publish/avoid-common-certification-failures.md
-  - name: Pacotes de pré-lançamento
-    href: ../publish/package-flights.md
-  - name: Distribuição gradual de pacote
-    href: ../publish/gradual-package-rollout.md
-  - name: Teste beta e distribuição direcionada
-    href: ../publish/beta-testing-and-targeted-distribution.md
-  - name: Distribuir os aplicativos LOB para empresas
-    href: ../publish/distribute-lob-apps-to-enterprises.md
+    - name: Definir a disponibilidade e o preço do aplicativo
+      href: ../publish/set-app-pricing-and-availability.md
+      items:
+        - name: Definir seleção de mercado
+          href: ../publish/define-market-selection.md
+        - name: Escolher as opções de visibilidade
+          href: ../publish/choose-visibility-options.md
+        - name: Configurar o agendamento preciso do lançamento
+          href: ../publish/configure-precise-release-scheduling.md
+        - name: Definir e agendar o preço do aplicativo
+          href: ../publish/set-and-schedule-app-pricing.md
+        - name: Opções de licenciamento organizacional
+          href: ../publish/organizational-licensing.md
+    - name: Insira as propriedades do aplicativo
+      href: ../publish/enter-app-properties.md
+      items:
+        - name: Tabela de categoria e subcategoria
+          href: ../publish/category-and-subcategory-table.md
+        - name: Declarações de produto
+          href: ../publish/product-declarations.md
+    - name: Classificações etárias
+      href: ../publish/age-ratings.md
+    - name: Carregue os pacotes do aplicativo
+      href: ../publish/upload-app-packages.md
+      items:
+        - name: Disponibilidade da família de dispositivos
+          href: ../publish/device-family-availability.md
+        - name: Requisitos do pacote do aplicativo
+          href: ../publish/app-package-requirements.md
+        - name: Numeração de versão do pacote
+          href: ../publish/package-version-numbering.md
+        - name: Idiomas com suporte
+          href: ../publish/supported-languages.md
+        - name: Diretrizes para gerenciamento do pacote do aplicativo
+          href: ../publish/guidance-for-app-package-management.md
+    - name: Criar listagens da Store do app
+      href: ../publish/create-app-store-listings.md
+      items:
+        - name: Escrever uma ótima descrição do aplicativo
+          href: ../publish/write-a-great-app-description.md
+        - name: 'Capturas de tela, imagens e trailers do aplicativo'
+          href: ../publish/app-screenshots-and-images.md
+        - name: Importar e exportar as listagens da Loja
+          href: ../publish/import-and-export-store-listings.md
+        - name: Criar listagens específicas de plataforma da Store
+          href: ../publish/create-platform-specific-store-listings.md
+    - name: Gerenciar opções de envio
+      href: ../publish/manage-submission-options.md
+      items:
+        - name: Notas para certificação
+          href: ../publish/notes-for-certification.md
+    - name: O processo de certificação de aplicativos
+      href: ../publish/the-app-certification-process.md
+      items:
+        - name: Resolver erros de envio
+          href: ../publish/resolve-submission-errors.md
+        - name: Evitar erros comuns de certificação
+          href: ../publish/avoid-common-certification-failures.md
+    - name: Pacotes de pré-lançamento
+      href: ../publish/package-flights.md
+    - name: Distribuição gradual de pacote
+      href: ../publish/gradual-package-rollout.md
+    - name: Teste beta e distribuição direcionada
+      href: ../publish/beta-testing-and-targeted-distribution.md
+    - name: Distribuir os aplicativos LOB para empresas
+      href: ../publish/distribute-lob-apps-to-enterprises.md
 - name: Envios de complemento
   href: ../publish/add-on-submissions.md
   items:
-  - name: Definir seu tipo de produto e ID do produto (product ID) do complemento
-    href: ../publish/set-your-add-on-product-id.md
-  - name: Inserir propriedades de complemento
-    href: ../publish/enter-add-on-properties.md
-  - name: Definir disponibilidade e preço de complemento
-    href: ../publish/set-add-on-pricing-and-availability.md
-  - name: Criar listagens de complementos da Store
-    href: ../publish/create-add-on-store-listings.md
+    - name: Definir seu tipo de produto e ID do produto (product ID) do complemento
+      href: ../publish/set-your-add-on-product-id.md
+    - name: Inserir propriedades de complemento
+      href: ../publish/enter-add-on-properties.md
+    - name: Definir disponibilidade e preço de complemento
+      href: ../publish/set-add-on-pricing-and-availability.md
+    - name: Criar listagens de complementos da Store
+      href: ../publish/create-add-on-store-listings.md
 - name: Anúncios no aplicativo
   href: ../publish/in-app-ads.md
 - name: Gerenciamento de apps e serviços
   href: ../publish/app-management-and-services.md
   items:
-  - name: Exibir detalhes de identidade do aplicativo
-    href: ../publish/view-app-identity-details.md
-  - name: Gerenciar nomes de aplicativo
-    href: ../publish/manage-app-names.md
-  - name: Gerar pacotes de pré-instalação para OEMs
-    href: ../publish/generate-preinstall-packages-for-oems.md
+    - name: Exibir detalhes de identidade do aplicativo
+      href: ../publish/view-app-identity-details.md
+    - name: Gerenciar nomes de aplicativo
+      href: ../publish/manage-app-names.md
+    - name: Gerar pacotes de pré-instalação para OEMs
+      href: ../publish/generate-preinstall-packages-for-oems.md
 - name: Atraia e promova
   href: ../publish/attract-customers-and-promote-your-apps.md
   items:
-  - name: Gerar códigos promocionais
-    href: ../publish/generate-promotional-codes.md
-  - name: Criar uma campanha publicitária para seu aplicativo
-    href: ../publish/create-an-ad-campaign-for-your-app.md
-    items:
-    - name: Gerenciar sua campanha publicitária
-      href: ../publish/managing-your-ad-campaign.md
-    - name: Sobre anúncios domésticos
-      href: ../publish/about-house-ads.md
-    - name: Sobre anúncios de comunidade
-      href: ../publish/about-community-ads.md
-    - name: Perguntas comuns sobre campanhas publicitárias
-      href: ../publish/common-questions.md
-  - name: Criar uma campanha personalizada de promoção de aplicativo
-    href: ../publish/create-a-custom-app-promotion-campaign.md
-  - name: Colocar aplicativos e complementos à venda
-    href: ../publish/put-apps-and-add-ons-on-sale.md
-  - name: Diretrizes para marketing de aplicativos
-    href: ../publish/app-marketing-guidelines.md
-  - name: Link para seu aplicativo
-    href: ../publish/link-to-your-app.md
-  - name: Facilitar a promoção do seu aplicativo
-    href: ../publish/make-your-app-easier-to-promote.md
+    - name: Gerar códigos promocionais
+      href: ../publish/generate-promotional-codes.md
+    - name: Criar uma campanha publicitária para seu aplicativo
+      href: ../publish/create-an-ad-campaign-for-your-app.md
+      items:
+        - name: Gerenciar sua campanha publicitária
+          href: ../publish/managing-your-ad-campaign.md
+        - name: Sobre anúncios domésticos
+          href: ../publish/about-house-ads.md
+        - name: Sobre anúncios de comunidade
+          href: ../publish/about-community-ads.md
+        - name: Perguntas comuns sobre campanhas publicitárias
+          href: ../publish/common-questions.md
+    - name: Criar uma campanha personalizada de promoção de aplicativo
+      href: ../publish/create-a-custom-app-promotion-campaign.md
+    - name: Colocar aplicativos e complementos à venda
+      href: ../publish/put-apps-and-add-ons-on-sale.md
+    - name: Diretrizes para marketing de aplicativos
+      href: ../publish/app-marketing-guidelines.md
+    - name: Link para seu aplicativo
+      href: ../publish/link-to-your-app.md
+    - name: Facilitar a promoção do seu aplicativo
+      href: ../publish/make-your-app-easier-to-promote.md
 - name: Envolver-se com os clientes
   href: ../publish/engage-with-your-customers.md
   items:
-  - name: Criar grupos de clientes
-    href: ../publish/create-customer-groups.md
-    items:
-    - name: Criar segmentos de cliente
-      href: ../publish/create-customer-segments.md
-    - name: Criar grupos de usuários conhecidos
-      href: ../publish/create-known-user-groups.md
-  - name: Responder às críticas dos clientes
-    href: ../publish/respond-to-customer-reviews.md
-  - name: Responder ao feedback dos clientes
-    href: ../publish/respond-to-customer-feedback.md
-  - name: Enviar notificações para clientes do seu aplicativo
-    href: ../publish/send-push-notifications-to-your-apps-customers.md
-  - name: Usar ofertas direcionadas
-    href: ../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md
+    - name: Criar grupos de clientes
+      href: ../publish/create-customer-groups.md
+      items:
+        - name: Criar segmentos de cliente
+          href: ../publish/create-customer-segments.md
+        - name: Criar grupos de usuários conhecidos
+          href: ../publish/create-known-user-groups.md
+    - name: Responder às críticas dos clientes
+      href: ../publish/respond-to-customer-reviews.md
+    - name: Responder ao feedback dos clientes
+      href: ../publish/respond-to-customer-feedback.md
+    - name: Enviar notificações para clientes do seu aplicativo
+      href: ../publish/send-push-notifications-to-your-apps-customers.md
+    - name: Usar ofertas direcionadas
+      href: ../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md
 - name: Analisar o desempenho do aplicativo
   href: ../publish/analytics.md
   items:
-  - name: Relatório de aquisições
-    href: ../publish/acquisitions-report.md
-  - name: Relatório de aquisições de complemento
-    href: ../publish/add-on-acquisitions-report.md
-  - name: Relatório de uso
-    href: ../publish/usage-report.md
-  - name: Relatório de integridade
-    href: ../publish/health-report.md
-  - name: Relatório de classificações
-    href: ../publish/ratings-report.md
-  - name: Relatório de avaliações
-    href: ../publish/reviews-report.md
-  - name: Relatório de feedback
-    href: ../publish/feedback-report.md
-  - name: Relatório de análise do Xbox
-    href: ../publish/xbox-analytics-report.md
-  - name: Relatório de insights
-    href: ../publish/insights-report.md
-  - name: Relatório de desempenho de anúncios
-    href: ../publish/advertising-performance-report.md
-  - name: Relatório de campanha publicitária
-    href: ../publish/ad-campaign-report.md
-  - name: Baixar relatórios de análise
-    href: ../publish/download-analytic-reports.md
+    - name: Relatório de aquisições
+      href: ../publish/acquisitions-report.md
+    - name: Relatório de aquisições de complemento
+      href: ../publish/add-on-acquisitions-report.md
+    - name: Relatório de uso
+      href: ../publish/usage-report.md
+    - name: Relatório de integridade
+      href: ../publish/health-report.md
+    - name: Relatório de classificações
+      href: ../publish/ratings-report.md
+    - name: Relatório de avaliações
+      href: ../publish/reviews-report.md
+    - name: Relatório de feedback
+      href: ../publish/feedback-report.md
+    - name: Relatório de análise do Xbox
+      href: ../publish/xbox-analytics-report.md
+    - name: Relatório de insights
+      href: ../publish/insights-report.md
+    - name: Relatório de desempenho de anúncios
+      href: ../publish/advertising-performance-report.md
+    - name: Relatório de campanha publicitária
+      href: ../publish/ad-campaign-report.md
+    - name: Baixar relatórios de análise
+      href: ../publish/download-analytic-reports.md
 - name: Recebendo pagamento
   href: ../publish/getting-paid-apps.md
   items:
-  - name: Configurar a conta de pagamento e formulários de imposto
-    href: ../publish/setting-up-your-payout-account-and-tax-forms.md
-  - name: Intervalos de tempo, métodos e limites de pagamento
-    href: ../publish/payment-thresholds-methods-and-timeframes.md
-  - name: Resumo do pagamento
-    href: ../publish/payout-summary.md
-  - name: Detalhes de impostos para apps pagos
-    href: ../publish/tax-details-for-paid-apps.md
-  - name: Noções sobre os formulários fiscais da Receita Federal dos EUA
-    href: ../publish/understand-irs-tax-forms.md
-  - name: Cobrança da operadora móvel
-    href: ../publish/mobile-operator-billing.md
-  - name: Informações sobre IVA
-    href: ../publish/vat-info.md
+    - name: Configurar a conta de pagamento e formulários de imposto
+      href: ../publish/setting-up-your-payout-account-and-tax-forms.md
+    - name: 'Intervalos de tempo, métodos e limites de pagamento'
+      href: ../publish/payment-thresholds-methods-and-timeframes.md
+    - name: Resumo do pagamento
+      href: ../publish/payout-summary.md
+    - name: Detalhes de impostos para apps pagos
+      href: ../publish/tax-details-for-paid-apps.md
+    - name: Noções sobre os formulários fiscais da Receita Federal dos EUA
+      href: ../publish/understand-irs-tax-forms.md
+    - name: Cobrança da operadora móvel
+      href: ../publish/mobile-operator-billing.md
+    - name: Informações sobre IVA
+      href: ../publish/vat-info.md
 - name: Código de Conduta e Políticas da Store
-  href: https://docs.microsoft.com/legal/windows/agreements/store-policies-and-code-of-conduct
+  href: 'https://docs.microsoft.com/legal/windows/agreements/store-policies-and-code-of-conduct'
   items:
-  - name: Políticas da Microsoft Store
-    href: https://docs.microsoft.com/legal/windows/agreements/store-policies
-    items:
-    - name: Histórico de alterações
-      href: https://docs.microsoft.com/legal/windows/agreements/store-policies-change-history
-  - name: Qualidade do app
-    href: https://docs.microsoft.com/legal/windows/agreements/store-app-quality
-  - name: Código de Conduta do Desenvolvedor
-    href: https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct
-ms.openlocfilehash: 53ac86d707ecbf117e4fc2852ca476dc73cc9525
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8962478"
+    - name: Políticas da Microsoft Store
+      href: 'https://docs.microsoft.com/legal/windows/agreements/store-policies'
+      items:
+        - name: Histórico de alterações
+          href: 'https://docs.microsoft.com/legal/windows/agreements/store-policies-change-history'
+    - name: Qualidade do app
+      href: 'https://docs.microsoft.com/legal/windows/agreements/store-app-quality'
+    - name: Código de Conduta do Desenvolvedor
+      href: 'https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct'
