@@ -8,12 +8,13 @@ ms.author: mijacobs
 ms.date: 08/4/2017
 keywords: uwp do windows, plataforma universal do windows, APIs do Windows Runtime, api do windows, ref. de api do windows, api do winrt, referência de api do windows, api uwp, referência de api uwp, desenvolver uwp, criar uwp, publicar uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b31e29d0967c8514de0566647c657574f6e5930
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.technology: uwp-conceptual-docs
+ms.openlocfilehash: 419f1e87d2cb0ff87b210e9f746e3617f51d6776
+ms.sourcegitcommit: f433f926ddd94fe1d0fdd0057cb39b74e83b4f8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939904"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "9029042"
 ---
 # <a name="universal-windows-platform-documentation"></a>Documentação da Plataforma Universal do Windows
 A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer dispositivo Windows — computadores, telefones, Xbox One, HoloLens e muito mais — e publicá-los na Microsoft Store.
@@ -268,7 +269,7 @@ A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer 
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Comunidade e suporte</h3>
+                        <h3>Comunidade e Suporte</h3>
                         <p>
                             <a href="https://twitter.com/WindowsDocs">@WindowsDocsno Twitter</a>
                         </p>
@@ -276,7 +277,7 @@ A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer 
                             <a href="http://aka.ms/OneDevMinute">OneDevMinute no YouTube</a>
                         </p>
                         <p>
-                            <a href="https://developer.microsoft.com/windows/support">Suporte para desenvolvedores do Windows</a>
+                            <a href="https://developer.microsoft.com/windows/support">Suporte do Windows Developer</a>
                         </p>
                     </div>
                 </div>
