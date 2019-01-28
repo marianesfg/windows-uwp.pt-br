@@ -6,18 +6,18 @@ ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
-ms.openlocfilehash: 79decdcb420e7d1b5cb732a354ccddb1ce5b7404
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c785e6d2a8021148f572df88a6d9e6ba07c4a457
+ms.sourcegitcommit: 9448348d7bc6590849db3a41e988dff9470ec111
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929248"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "9031362"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>Apps e dispositivos conectados (projeto Roma)
 
-Esta seção explica como conectar apps entre dispositivos e plataformas usando o Project Rome. Saiba como descobrir dispositivos remotos, iniciar um app em um dispositivo remoto e comunicar-se com um serviço de app em um dispositivo remoto.
+Esta seção explica como conectar apps entre dispositivos e plataformas usando o [Project Rome](https://developer.microsoft.com/en-us/windows/project-rome). Para saber como implementar o Project Rome em um cenário de plataforma cruzada, visite a [página principal de documentos do projeto Roma](https://docs.microsoft.com/en-us/windows/project-rome/).
 
-A maioria dos usuários tem vários dispositivos e muitas vezes começam uma atividade em um dispositivo e a concluem em outro. Para acomodar isso, os aplicativos precisam estendem a dispositivos e plataformas.
+A maioria dos usuários tem vários dispositivos e muitas vezes começam uma atividade em um dispositivo e a concluem em outro. Para acomodar isso, os aplicativos precisam estendem a dispositivos e plataformas. Projeto Roma permite que você descobrir dispositivos remotos, iniciar um aplicativo em um dispositivo remoto e comunicar-se com um serviço de aplicativo em um dispositivo remoto.
 
 As [APIs de sistemas remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems) introduzidas no Windows 10, versão 1607, permitem que você crie aplicativos que permitem aos usuários iniciar uma tarefa em um dispositivo e concluí-la em outro. A tarefa permanece o foco central, e os usuários podem fazer seu trabalho no dispositivo que for mais conveniente. Por exemplo, um usuário pode ouvir rádio no seu telefone enquanto estiver no carro, mas quando chegar em casa pode transferir a reprodução para o Xbox One que está conectado ao seu sistema estéreo doméstico.
 

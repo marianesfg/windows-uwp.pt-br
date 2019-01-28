@@ -6,16 +6,18 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: b33cf07ef10d0891f2747a06caf098b7d37b62f3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fb1ff6431b3ccf609b7362db819569c2f6cebc48
+ms.sourcegitcommit: 9448348d7bc6590849db3a41e988dff9470ec111
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938816"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "9031382"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueio do Windows com dispositivos complementares (IoT) do Windows Hello
 
 Dispositivo complementar do Windows Hello é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a estrutura de dispositivo complementar do Windows Hello, um dispositivo complementar pode fornecer uma experiência avançada para o Windows Hello mesmo quando a biometria não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo leitor de impressão digital, por exemplo).
+
+> **Observação** A Microsoft será o ser substituindo a Windows Hello estrutura de dispositivo complementar no futuro e publicará a data de início para garantir que os clientes têm prazo adequado para implantar soluções alternativas.
 
 > **Observação** A estrutura de dispositivo complementar do Windows Hello é um recurso especializado não disponível para todos os desenvolvedores de aplicativos. Para usar essa estrutura, seu app deve ser especificamente provisionado pela Microsoft e listar a funcionalidade restrita *secondaryAuthenticationFactor* em seu manifesto. Para obter aprovação, entre em contato com [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
 
