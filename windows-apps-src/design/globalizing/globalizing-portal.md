@@ -9,12 +9,12 @@ ms.date: 12/7/2018
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: b7b4452bb242bb7679d37036ccda5e27912a2505
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6e9e0f6305a99b6e3ab83cb3b560754f2e4d310f
+ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944337"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035417"
 ---
 # <a name="globalization-and-localization"></a>Globalização e localização
 
@@ -36,6 +36,10 @@ Seu código precisa funcionar igualmente bem em qualquer uma das culturas que vo
 - Formatação de data e hora
 - Convenções numéricas, de moeda, peso e medida
 - Regras de classificação
+
+>[!NOTE]
+> Para obter uma lista de códigos de país/região padrão usados pela Microsoft, consulte a [Lista oficial do país/região](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion).
+
 
 **Localizabilidade** é o processo de preparar um app globalizado para a localização e/ou verificar se o app está pronto para a localização. Tornar um app corretamente localizável significa que o processo de localização posterior não revelará nenhum defeito funcional no app. A propriedade mais essencial de um app localizável é que seu código executável tenha sido separado cuidadosamente dos recursos localizáveis do app.
 
@@ -65,4 +69,4 @@ A maioria das equipes de localização usa ferramentas especiais para ajudar no 
 | [Projetar seu app para texto bidirecional](design-for-bidi-text.md) | Projete seu app de modo a fornecer suporte bidirecional a texto (BiDi) para que você possa combinar o script de sistemas de escrita da esquerda para a direita e da direita para a esquerda. |
 | [Use o Kit de Ferramentas de Aplicativo Multilíngue 4.0](use-mat.md) | O Kit de Ferramentas de Aplicativo Multilíngue (MAT) 4.0 se integra ao Microsoft Visual Studio 2017 para fornecer aplicativos UWP com suporte a tradução, gerenciamento de arquivos de tradução e ferramentas de edição. |
 | [Perguntas frequentes e solução de problemas do Kit de Ferramentas de Aplicativo Multilíngue 4.0](mat-faq-troubleshooting.md) | Este tópico fornece respostas a perguntas frequentes e problemas relacionados ao Kit de Ferramentas de Aplicativo Multilíngue (MAT) 4.0. |
-| [Preparar seu aplicativo para que a alteração de eras japonês](japanese-era-change.md) | Saiba mais sobre a alteração de eras japonês de maio de 2019 e como preparar seu aplicativo. |
+| [Prepare seu aplicativo para a mudança de era japonesa](japanese-era-change.md) | Saiba mais sobre a alteração de eras japonês de maio de 2019 e como preparar seu aplicativo. |
