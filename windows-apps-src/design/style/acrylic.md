@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 92c08971ee498e93e5a974ef8bd63d00dd27fc7d
-ms.sourcegitcommit: 1cf04b0b1bd7623cd7f6067b8392dce4372f2c69
+ms.openlocfilehash: b47991add56868fe534b0460ec65336e94f433e9
+ms.sourcegitcommit: 1391190e27907f0c7cd40e4bb56cdead387a53cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "8970979"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035526"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -72,7 +72,7 @@ A característica mais notável do acrílico é sua transparência. Existem dois
 
 ## <a name="when-to-use-acrylic"></a>Quando usar o acrílico
 
-* Use acrílico no aplicativo para dar suporte a interface do usuário, como NavigationView ou elementos de comando em linha.
+* Use acrílico no aplicativo para dar suporte a interface do usuário, como em superfícies que podem se sobrepor conteúdo quando rolada ou interage.
 * Use acrílico de fundo para elementos de interface do usuário transitórios, como luz dimsissable da interface do usuário, submenus e menus de contexto.<br />Usar o acrílico em cenários transitórios ajuda a manter uma relação visual com o conteúdo que acionou a UI Transiente.
 
 Se você estiver usando no aplicativo acrílico em superfícies de navegação, considere a possibilidade de estender o conteúdo sob o painel acrílico para melhorar o fluxo em seu aplicativo. Usar o NavigationView fará isso para você automaticamente. No entanto, para evitar a criação de um efeito de tiragem, não tente colocar várias partes de acrílico-borda - isso pode criar uma fenda indesejada entre as duas superfícies desfocadas. Acrílico é uma ferramenta para trazer harmonia visual aos seus designs, mas quando usado incorretamente, pode resultar em ruído visual.
@@ -107,7 +107,7 @@ Muitos dos nossos controles usará o acrílico por padrão. [MenuFlyouts](https:
 O acrílico adapta automaticamente sua aparência para uma variedade de dispositivos e contextos.
 
 No modo Alto Contraste, os usuários continuam visualizando a cor de fundo familiar de sua escolha no lugar do acrílico. Além disso, ambos os acrílicos de plano de fundo e no aplicativo aparecem como uma cor sólida:
- - Quando o usuário desativa a transparência em Configurações > personalização > cores
+ - Quando o usuário desativa a transparência em Configurações gt _ gt _ personalização cor
  - Quando o modo de economia de bateria está ativado
  - Quando o aplicativo é executado em hardware de capacidade reduzida
 
