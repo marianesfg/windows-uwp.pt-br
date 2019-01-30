@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 43c570fc3e0187fbf6e559ad794a2a63e608a252
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1e03da83d4045c570490a26cb2e111d12f709ee0
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925661"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037148"
 ---
 # <a name="person-picture-control"></a>Controle de imagem da pessoa
 
@@ -48,7 +48,7 @@ A ilustração mostra o controle de imagem da pessoa em uma lista de contatos: !
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/PersonPicture">abrir o aplicativo e ver o PersonPicture em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtenha o código-fonte (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -185,7 +185,7 @@ Se não houver uma imagem, o controle exibe o nome ou as iniciais do contato; se
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - Veja todos os controles XAML em um formato interativo.
+- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - Veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

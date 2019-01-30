@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle personalizado, modelo,
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e929f217c71a90540803b180e6e79b98802f9c7a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 24739e79b3999309aef9c1c6b35afd9ef2bbc9ab
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943651"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9036988"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>Controles personalizados (modelos) XAML com C++/WinRT
 
@@ -21,7 +21,7 @@ ms.locfileid: "8943651"
 Um dos recursos mais avançados da plataforma Universal do Windows (UWP) é a flexibilidade que fornece a pilha de interface do usuário (IU) para criar controles personalizados com base no tipo de [**controle**](/uwp/api/windows.ui.xaml.controls.control) do XAML. A estrutura de XAML UI fornece recursos, como [Propriedades de dependência personalizadas](/windows/uwp/xaml-platform/custom-dependency-properties) e propriedades anexadas e [modelos de controle](/windows/uwp/design/controls-and-patterns/control-templates), que tornam mais fácil criar controles rico e personalizáveis. Este tópico o orienta pelas etapas de criação de um controle (modelo) personalizado com C++ c++ WinRT.
 
 ## <a name="create-a-blank-app-bglabelcontrolapp"></a>Criar um aplicativo em branco (BgLabelControlApp)
-Comece criando um novo projeto no Microsoft Visual Studio. Criar um **Visual C++** > **Universal do Windows** > **aplicativo em branco (C++ c++ WinRT)** de projeto e nomeie-o *BgLabelControlApp*.
+Comece criando um novo projeto no Microsoft Visual Studio. Criar um **Visual C++** > **Universal do Windows** > **aplicativo em branco (C++ c++ WinRT)** de projeto e nomeie-o *BgLabelControlApp*. Em uma seção posterior deste tópico, você será direcionado para compilar seu projeto (não compile até lá).
 
 Vamos criar uma nova classe para representar um controle personalizado de (modelo). Estamos criando e consumindo a classe dentro da mesma unidade de compilação. Mas queremos poder criar uma instância dessa classe da marcação XAML e por isso que ela será ser uma classe de tempo de execução. E vamos usar C++/WinRT para criar e consumi-lo.
 
@@ -149,7 +149,7 @@ Abra `MainPage.xaml`, que contém a marcação XAML para nossa página da interf
 <local:BgLabelControl Background="Red" Label="Hello, World!"/>
 ```
 
-Além disso, adicione o seguinte incluem diretiva para `MainPage.h` para que o tipo de **MainPage** (uma combinação de compilação de marcação XAML e código imperativo) está ciente do tipo **BgLabelControl** controle personalizado.
+Além disso, adicione o seguinte incluem diretiva para `MainPage.h` para que o tipo de **MainPage** (uma combinação de compilação de marcação XAML e código imperativo) está ciente do tipo **BgLabelControl** controle personalizado. Se você quiser usar **BgLabelControl** de outra página XAML e, em seguida, adicioná-lo mesmo incluem diretiva no arquivo de cabeçalho para essa página, também. Ou, como alternativa, basta colocar um único incluir diretiva no arquivo de cabeçalho pré-compilado.
 
 ```cppwinrt
 // MainPage.h

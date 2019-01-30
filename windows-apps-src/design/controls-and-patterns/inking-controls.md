@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: a76a03eaff3d831b48e7b86c0b70ff2cbae7360a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4a969c0dfbfd08b5cc29651e2ad295c2bdd60ee0
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936212"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037008"
 ---
 # <a name="inking-controls"></a>Controles de escrita à tinta
 
@@ -59,7 +59,7 @@ Emparelhe o InkCanvas com um InkToolbar a fim de oferecer uma interface do usuá
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/InkCanvas">abrir o aplicativo e ver o InkCanvas em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obter o código-fonte (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obter o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -166,7 +166,7 @@ A borracha também tem um submenu que fornece o comando **Apagar Toda a Tinta**.
 
 - O [exemplo SimpleInk](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk) - Demonstra 8 cenários de recursos de personalização e extensibilidade dos controles InkCanvas e InkToolbar. Cada cenário fornece orientação básica sobre situações comuns de escrita à tinta e implementações de controle.
 - [Exemplo de ComplexInk](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk) - Demonstra cenários de escrita à tinta mais avançados.
-- [Exemplo de XAML Controls Gallery](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) -Ver todos os controles XAML em um formato interativo.
+- [Exemplo de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) -Ver todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
