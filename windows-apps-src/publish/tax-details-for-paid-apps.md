@@ -1,30 +1,31 @@
 ---
 Description: To understand your tax considerations for price selection, payout implications, and tax responsibility, see your countries/regions of distribution in the tables below.
-title: Detalhes de impostos para aplicativos pagos
+title: Detalhes de impostos
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
-ms.date: 01/02/2019
+ms.date: 01/31/2019
 ms.topic: article
 keywords: windows 10, uwp, impostos, impostos do aplicativo, requisitos fiscais, expansão do comércio, taxa de imposto
 ms.localizationpriority: medium
-ms.openlocfilehash: 896a92e009b7d9c33554f77d8da56730625f1f85
-ms.sourcegitcommit: ffad7cfb5d5c099f9f559e966fd93b705b47d2bd
+ms.openlocfilehash: cf57fa923297b8e4a57d7c5ca4668868bfae7038
+ms.sourcegitcommit: b9ee49402db7a8999cade1c5cf7f7b6ac4d783db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "8990334"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042486"
 ---
-# <a name="tax-details-for-paid-apps"></a>Detalhes de impostos para aplicativos pagos
+# <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Detalhes de imposto para os desenvolvedores de aplicativo/jogo do Windows e editores Azure Marketplace
 
 
-Para entender suas considerações fiscais para seleção de preço, implicações de pagamento e responsabilidade fiscal, veja seus países/regiões de distribuição nas tabelas abaixo.
+Para entender suas considerações fiscais para seleção de preço e responsabilidade sob o contrato de desenvolvedor ou modernos Publisher Agreement fiscal, veja seus países/regiões de distribuição nas tabelas abaixo.
 
 > [!NOTE]
 > O Ajuste de Expansão do Comércio pode ter implicações de pagamento em um conjunto limitado de países/regiões. Para obter detalhes adicionais sobre o Ajuste de Expansão do Comércio e os mercados ao qual se aplica, consulte o [Contrato do Desenvolvedor de Aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e a lista de [países/regiões afetados](define-market-selection.md#price-considerations-for-specific-markets).
 
 > [!IMPORTANT]
-> Taxas de imposto estão sujeitas à alteração a qualquer momento. A Microsoft não poderá garantir que as taxas nas tabelas acima serão sempre precisas.
-> 
-> A responsabilidade fiscal para circunstâncias e países/regiões de revenda (como descrito [abaixo](#reseller-countriesregions)) é abordada no Anexo C do [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), apesar das informações na tabela abaixo.
+> Responsabilidade fiscal para circunstâncias e países/regiões de revenda (como descrito [abaixo](#reseller-countriesregions)) é coberta por anexo C do [Contrato de desenvolvedor](https://docs.microsoft.com/en-us/legal/windows/agreements/app-developer-agreement), não obstante as informações na tabela a seguir.
+> Observe que a coluna de **implicação de pagamento** só se aplica aos desenvolvedores de aplicativo/jogo do Windows. Taxas de imposto observadas nessa coluna estão sujeitos a alterações a qualquer momento, e a Microsoft não pode garantir que as taxas nas tabelas abaixo serão sempre precisas.
+
+
 
  
 
@@ -262,9 +263,16 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Zâmbia                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Zimbábue                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 
- 
+A seguir se aplica somente ao Azure Marketplace fornecedores, não obstante qualquer disposição em contrário acima: 
 
-## <a name="mixed-remittance-countriesregions"></a>Países/regiões de remessa misturados
+| País/região                   | Considerações fiscais para a seleção do preço                                                                                                             | Gerenciamento de impostos                    | 
+|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| Austrália (para compras feitas por meio de todos os cenários de compra de cliente exceto Enterprise Agreement) | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. | Microsoft |
+| Austrália (somente para compras feitas por meio do cenário de compra de cliente Enterprise Agreement) | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. | Editor |
+| Brasil | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. | Fornecedor **(consulte países/regiões)** |
+| México | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. | Fornecedor **(consulte países/regiões)** |
+
+## <a name="mixed-remittance-countriesregions-for-windows-appgame-developers"></a>Países/regiões de remessa misturados para desenvolvedores de aplicativo/jogo do Windows
 
 
 Determinados parceiros de cobrança da Microsoft podem coletar e pagar impostos sobre vendas, uso, bens e serviços, valor agregado ou similares, se houver, aplicáveis à aquisição pelos Clientes seus Aplicativos e/ou Produtos no Aplicativo por meio da Store nos seguintes países/regiões: Os [relatórios](payout-summary.md#downloading-payment-transactions) que a Microsoft disponibiliza para você identificarão as transações nas quais o parceiro de cobrança cobrou vendas, utilização, bens e serviços, valor agregado e outros impostos semelhantes aplicáveis à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo por meio da Store. Com exceção de transações descritas em tais relatórios, nem a Microsoft nem seus provedores de serviços de cobrança remeterão quaisquer vendas, uso, bens e serviços, valor agregado ou outra semelhante em relação à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo nesses países/regiões. Você é responsável por analisar o relatório fornecido e por determinar e cumprir quaisquer obrigações, se houver, para registrar, cobrar e remeter impostos relacionados às transações envolvendo seus Aplicativos ou Produtos no Aplicativo.
@@ -274,20 +282,23 @@ Determinados parceiros de cobrança da Microsoft podem coletar e pagar impostos 
 | África do Sul                       |
 | Vietnã                            |
 
- 
-
 ## <a name="reseller-countriesregions"></a>Países/regiões de revenda
 
-
 Em determinados países/regiões, a Microsoft atua como revendedor, e não agente, ao disponibilizar seus aplicativos e produtos no aplicativo na loja. Para obter mais detalhes sobre termos e condições dos países/regiões de revenda, consulte o [Contrato de Desenvolvimento de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
+
+O exemplo a seguir aplica-se apenas para desenvolvedores de aplicativo/jogos do Windows:   
 
 |                    Países/regiões de revenda                                                                          |
 |------------------------------------------------------------------------------------------------------------------------|
 | China (exceto em dispositivos de comunicação móvel com o Windows Phone 7.x e em PCs com o Windows 8. x) |
 | Brasil (somente para compras realizadas por meio de dispositivos com Windows 10)     |
 
- 
+A seguir se aplica somente ao Azure Marketplace fornecedores: 
 
+|                    Países/regiões de revenda                                                                          |
+|------------------------------------------------------------------------------------------------------------------------|
+| Brasil (para compras feitas por meio de todos os cenários de compra de cliente exceto CSP) |
+| México (somente para compras feitas por meio do cenário de compra de cliente Enterprise Agreement) |
 
 
  
