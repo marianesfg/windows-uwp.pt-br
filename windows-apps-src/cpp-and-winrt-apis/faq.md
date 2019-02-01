@@ -5,12 +5,12 @@ ms.date: 10/26/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: e02622452aa99cd262221cd0c448ceca8271b00d
-ms.sourcegitcommit: a71122082947b4cc3d157465e402746760d1d5c2
+ms.openlocfilehash: 2d4bb534ae5b5dc02f72712cf417ca9054f21b6e
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035721"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042288"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 Respostas para perguntas que você pode ter sobre a criação e consumo de APIs do Windows Runtime com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -19,15 +19,16 @@ Respostas para perguntas que você pode ter sobre a criação e consumo de APIs 
 > Caso sua pergunta seja sobre uma mensagem de erro já vista, consulte também o tópico de [Solução de problemas de C++/WinRT](troubleshooting.md).
 
 ## <a name="how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>Como redirecionar C + c++ WinRT projeto para uma versão posterior do SDK do Windows?
-
 Consulte [como redirecionar C++ c++ WinRT projeto para uma versão posterior do SDK do Windows](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk).
 
 ## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>Por que meu novo projeto não será compilado? Usando o Visual Studio 2017 (versão 15.8.0 ou superior) e o SDK versão 17134
-
 Se você estiver usando o Visual Studio 2017 (versão 15.8.0 ou superior) e o SDK do Windows versão 10.0.17134.0 (Windows 10, versão 1803), em seguida, um recém-criado C + de direcionamento c++ WinRT projeto pode falhar ao compilar com o erro "*erro C3861: 'from_abi': identificador não encontrado*"e com outros erros que se originam no *base.h*. A solução é qualquer destino uma posterior (mais compatível) versão do SDK do Windows, ou conjunto de propriedade do projeto **C/C++** > **idioma** > **modo de conformidade: não** (Além disso, se **/ permissivo-** aparece na propriedade do projeto ** C/C++** > de**linha de comando** em **Opções adicionais**, exclua-o).
 
-## <a name="what-are-the-requirements-for-the-cwinrt-visual-studio-extension-vsixhttpsakamscppwinrtvsix"></a>Quais são os requisitos para o [Extensão do Visual Studio (VSIX) para C++/WinRT](https://aka.ms/cppwinrt/vsix)?
-A [extensão VSIX](https://aka.ms/cppwinrt/vsix) requer uma versão de destino mínima do SDK do Windows de 10.0.17134.0 (Windows 10, versão 1803). Você também precisará Visual Studio 2017 (pelo menos a versão 15.6; recomendamos pelo menos a 15.7), ou o Visual Studio 2019. Você pode identificar um projeto que usa o VSIX pela presença de `<CppWinRTEnabled>true</CppWinRTEnabled>` em `<PropertyGroup Label="Globals">` no arquivo `.vcxproj`. Para obter mais informações, incluindo informações sobre se o seu projeto requer o [pacote Microsoft.Windows.CppWinRT NuGet](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) a ser instalado, consulte [suporte do Visual Studio para C++ c++ /WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
+## <a name="how-do-i-resolve-the-build-error-the-cwinrt-vsix-no-longer-provides-project-build-support--please-add-a-project-reference-to-the-microsoftwindowscppwinrt-nuget-package"></a>Como posso resolver o erro de compilação "C++ c++ WinRT VSIX não oferece suporte de compilação do projeto.  Adicione uma referência de projeto para o pacote Microsoft.Windows.CppWinRT Nuget"?
+Instale o pacote NuGet **Microsoft.Windows.CppWinRT** no seu projeto. Para obter detalhes, consulte [as versões anteriores da extensão VSIX](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension).
+
+## <a name="what-are-the-requirements-for-the-cwinrt-visual-studio-extension-vsix"></a>Quais são os requisitos para o Extensão do Visual Studio (VSIX) para C++/WinRT?
+Para versão 1.0.190128.4 da extensão VSIX e mais tarde, consulte [suporte do Visual Studio para C++ c++ WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package). Para outras versões, consulte [as versões anteriores da extensão VSIX](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension).
 
 ## <a name="whats-a-runtime-class"></a>O que é uma *classe de tempo de execução*?
 Uma classe de tempo de execução é um tipo que pode ser ativado e consumido por meio de interfaces COM modernas, normalmente entre limites executáveis. No entanto, uma classe de tempo de execução também pode ser usada dentro da unidade de compilação que a implementa. Você declara uma classe de tempo de execução em idioma de definição da Interface (IDL) e pode implementá-la em C++ padrão usando C++/WinRT.
@@ -89,10 +90,9 @@ windows.com
 
 Como o C++/WinRT usa recursos do C++ 17 padrão, é necessário usar qualquer sinalizador de compilador para obter esse suporte; esses sinalizadores diferem de um compilador para outro.
 
-O Visual Studio é a ferramenta de desenvolvimento a qual oferecemos suporte e recomendamos para C++/WinRT. Veja o [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
+O Visual Studio é a ferramenta de desenvolvimento a qual oferecemos suporte e recomendamos para C++/WinRT. Consulte [suporte do Visual Studio para C++ c++ WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="why-doesnt-the-generated-implementation-function-for-a-read-only-property-have-the-const-qualifier"></a>Por que a função de implementação gerada para uma propriedade somente leitura não tem o `const` qualificador?
-
 Quando você declara uma propriedade somente leitura no [MIDL 3.0](/uwp/midl-3/), você pode esperar a `cppwinrt.exe` ferramenta para gerar uma função de implementação para você que é `const`-qualificado (uma função const trata o *esse* ponteiro como const).
 
 Recomendamos certamente usando const sempre que possível, mas o `cppwinrt.exe` ferramenta em si não tenta motivo sobre implementação funções perfeitamente podem ser const e que talvez não. Você pode optar por fazer qualquer uma das suas funções de implementação const, como neste exemplo.
@@ -130,7 +130,6 @@ Funções sobre a projeção são const independentemente de como você escolhe 
 Entender que esses exemplos de `const` são detalhes de implementação de C++ c++ WinRT projeções e implementações; eles constituem higienização de código para seu benefício. Há algo como `const` sobre o COM nem ABI do Windows Runtime (para funções de membro).
 
 ## <a name="do-you-have-any-recommendations-for-decreasing-the-code-size-for-cwinrt-binaries"></a>Você tem todas as recomendações para reduzir o tamanho do código para C++ c++ WinRT binários?
-
 Ao trabalhar com objetos de tempo de execução do Windows, você deve evitar o padrão de codificação mostrado abaixo porque ele pode ter um impacto negativo em seu aplicativo fazendo com que mais código binário que o necessário para ser gerado.
 
 ```cppwinrt
@@ -151,7 +150,6 @@ a.f();
 O padrão recomendado mostrado acima se aplica não apenas a C++ c++ WinRT, mas para todas as projeções de linguagem de tempo de execução do Windows.
 
 ## <a name="how-do-i-turn-a-string-into-a-typemdashfor-navigation-for-example"></a>Como ativar uma cadeia de caracteres em um tipo de&mdash;para navegação, por exemplo?
-
 No final do [exemplo de código do modo de exibição de navegação](/windows/uwp/design/controls-and-patterns/navigationview#code-example) (que é principalmente em c#), há um C + c++ WinRT trecho de código mostrando como fazer isso.
 
 > [!NOTE]

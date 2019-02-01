@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fd921782571082ee696c26480f1c55c96c30d7c2
-ms.sourcegitcommit: 7bea35c5a35c78e65f822313962c4b1579b163b2
+ms.openlocfilehash: b753b9e93a0cd2abae089f9d53915e0c109f6b63
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035440"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042418"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -158,7 +158,7 @@ int main()
 
 ## <a name="post-binary-data-over-http"></a>Dados binários POST por HTTP
 
-O [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis) código de exemplo abaixo ilustra enviando uma pequena quantidade de dados binários com uma solicitação POST, usando a classe [HttpBufferContent](/uwp/api/windows.web.http.httpbuffercontent) .
+O [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis) código de exemplo abaixo ilustra enviando uma pequena quantidade de dados binários com uma solicitação POST, usando a classe [HttpBufferContent](/uwp/api/windows.web.http.httpbuffercontent) . Chamar **obter** (conforme visto no exemplo de código abaixo) não é adequado para um thread de interface do usuário. Para a técnica correta para usar nesse caso, consulte [simultaneidade e operações assíncronas com C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
 
 ```cppwinrt
 // pch.h

@@ -5,12 +5,12 @@ ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, interoperabilidade, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: e1e4570320e9d48351ccb01052fc77d35ae03642
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: 558f3fa75e7dd599927a9d2ace256bf1feb98e77
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024565"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042298"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>Interoperabilidade entre C++/WinRT e C++/CX
 
@@ -47,7 +47,7 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 
 ## <a name="example-project-showing-the-two-helper-functions-in-use"></a>Projeto de exemplo mostra as duas funções auxiliares em uso
 
-Para reproduzir, de forma simple, o cenário de portabilidade gradualmente o código C++ c++ projeto CX para C++ c++ WinRT, você pode começar criando um novo projeto no Visual Studio usando um dos C++ c++ modelos de projeto do WinRT (consulte [suporte do Visual Studio para C++ c++ WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix)).
+Para reproduzir, de forma simple, o cenário de portabilidade gradualmente o código C++ c++ projeto CX para C++ c++ WinRT, você pode começar criando um novo projeto no Visual Studio usando um dos C++ c++ modelos de projeto do WinRT (consulte [suporte do Visual Studio para C++ c++ WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)).
 
 Este projeto de exemplo também ilustra como você pode usar aliases de namespace para as Ilhas diferentes de código, para lidar com outros possíveis conflitos de namespace entre C++ c++ WinRT projeção e C++ c++ projeção CX.
 

@@ -5,12 +5,12 @@ ms.date: 01/11/2019
 ms.topic: article
 keywords: Windows 10, uwp, formulários do windows, win32, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 999a990dbbc98f4f1224ce55f48d99889afbb89a
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: efd7dc687b9aba2e3c07b0afefa2e4fa49b882b1
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024625"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042308"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Usando o XAML da UWP que hospeda a API em um aplicativo da área de trabalho
 
@@ -55,9 +55,9 @@ O XAML da UWP que hospeda a API tem esses pré-requisitos.
 
 * Windows 10 Insider Preview build 17709 (ou uma compilação posterior) e a compilação do Insider Preview correspondente do SDK do Windows. Como esse é um recurso em evolução, para a melhor experiência é recomendável usar a compilação mais recente.
 
-* Para usar o XAML da UWP que hospeda a API em seu aplicativo da área de trabalho, você precisará configurar seu projeto para que você pode chamar APIs UWP:
+* Para usar o XAML da UWP que hospeda a API em seu aplicativo da área de trabalho, você precisará configurar seu projeto para que você possa chamar as APIs UWP.
 
-    * **C++ Win32:** Recomendamos que você configure seu projeto para usar [C++ c++ WinRT](../cpp-and-winrt-apis/index.md). Baixe e instale o [C++ c++ WinRT Visual Studio Extension (VSIX)](https://aka.ms/cppwinrt/vsix) do Visual Studio Marketplace e, em seguida, adicione o ```<CppWinRTEnabled>true</CppWinRTEnabled>``` propriedade seu arquivo .vcxproj, conforme descrito [aqui](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
+    * **C++ Win32:** Recomendamos que você configure seu projeto para usar [C++ c++ WinRT](../cpp-and-winrt-apis/index.md). Para obter instruções, consulte [modificar um projeto de aplicativo de área de trabalho do Windows para adicionar C++ c++ WinRT suporte](/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
     * **Windows Forms e WPF:** Siga [estas instruções](../porting/desktop-to-uwp-enhance.md).
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, notícias, o que do, o novo
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b46aaf9948587ef79a9c5bf73064b1a70c0e9c3a
-ms.sourcegitcommit: a71122082947b4cc3d157465e402746760d1d5c2
+ms.openlocfilehash: cb624a93a010dfe9784cf8c26beed12c6cf2f77d
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035701"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042428"
 ---
 # <a name="whats-new-in-cwinrt"></a>Novidades no C++ c++ WinRT
 
@@ -43,8 +43,8 @@ Outras alterações.
 - Removido recursão desnecessária. Quando a linha de comando se refere a uma pasta, em vez de em um determinado `.winmd`, o `cppwinrt.exe` ferramenta não pesquisa recursivamente para `.winmd` arquivos. O `cppwinrt.exe` ferramenta agora também manipula duplicatas mais inteligente, tornando mais resistente a erro de usuário e a mal formado `.winmd` arquivos.
 - Proteção avançados ponteiros inteligentes. Anteriormente, os revokers evento Falha ao revogar quando move-atribuído um novo valor. Isso ajudou a descobrir um problema onde classes de ponteiro inteligente não estavam manipular confiavelmente Self atribuição; enraizada no [**modelo de struct WinRT:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr). **WinRT:: com_ptr** foi corrigido e revokers o evento fixados para tratar mover semântica corretamente para que eles revogar após a atribuição.
 
-> [!NOTE]
-> Foram feitas alterações importantes para o [C++ c++ WinRT Visual Studio Extension (VSIX)](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix), tanto na versão 1.0.181002.2 e, em seguida, na versão 1.0.190128.4. Para obter detalhes dessas alterações e como eles podem afetar o seu projeto, consulte [suporte do Visual Studio para C++ c++ /WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
+> [!IMPORTANT]
+> Foram feitas alterações importantes para o [C++ c++ WinRT Visual Studio Extension (VSIX)](https://aka.ms/cppwinrt/vsix), tanto em versão 1.0.181002.2 e depois na versão 1.0.190128.4. Para obter detalhes sobre essas alterações, e como elas afetam seus projetos existentes, [suporte do Visual Studio para C++ c++ WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) e [versões anteriores da extensão VSIX](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension).
 
 ## <a name="isolation-from-windows-sdk-header-files"></a>Isolamento de arquivos de cabeçalho do SDK do Windows
 
