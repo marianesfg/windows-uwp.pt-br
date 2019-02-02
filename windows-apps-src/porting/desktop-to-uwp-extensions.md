@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
-ms.openlocfilehash: 19ae09190b916fdaae68a67a2b9c11caa20d30e2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1c0dcb40e4e70fc28dc0ccdbbf4aa329b00c71cf
+ms.sourcegitcommit: 7a1899358cd5ce9d2f9fa1bd174a123740f98e7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922347"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042642"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Integrar seu aplicativo da área de trabalho empacotado com o Windows 10
 
@@ -119,7 +119,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 |Nome |Descrição |
 |-------|-------------|
 |Categoria |Sempre ``windows.fileTypeAssociation``.
-|Nome |Uma Id exclusiva para o seu aplicativo. Essa Id é usada internamente para gerar um [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) com hash associado à sua associação de tipo de arquivo. Você pode usar este Id para gerenciar as alterações nas versões futuras do seu aplicativo. |
+|Nome |Uma Id exclusiva para o seu aplicativo. Essa Id é usada internamente para gerar um [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) com hash associado à sua associação de tipo de arquivo. Você pode usar esta Id para gerenciar as alterações nas versões futuras do seu app. |
 |MigrationProgId |O [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que descreve o aplicativo, o componente e a versão do aplicativo da área de trabalho do qual você quer herdar associações de arquivos.|
 
 #### <a name="example"></a>Exemplo
@@ -880,7 +880,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 </Extension>
 ```
 
-Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol).
+Encontre a referência do esquema completo [aqui ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol).
 
 |Nome |Descrição |
 |-------|-------------|
@@ -897,11 +897,13 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
   <Applications>
     <Application>
       <Extensions>
-        <uap3:Extension
-          Category="windows.protocol">
-          <uap3:Protocol
-            Name="myapp-cmd"
-            Parameters="/p &quot;%1&quot;" />
+         <uap3:Extension
+                Category="windows.appExecutionAlias"
+                Executable="exes\launcher.exe"
+                EntryPoint="Windows.FullTrustApplication">
+            <uap3:AppExecutionAlias>
+                <desktop:ExecutionAlias Alias="Contoso.exe" />
+            </uap3:AppExecutionAlias>
         </uap3:Extension>
       </Extensions>
     </Application>
@@ -947,15 +949,20 @@ Os usuários e outros processos podem usar um alias para iniciar seu aplicativo 
   xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
   xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
   IgnorableNamespaces="uap3, desktop">
-  ...
-  <uap3:Extension
-        Category="windows.appExecutionAlias"
-        Executable="exes\launcher.exe"
-        EntryPoint="Windows.FullTrustApplication">
-      <uap3:AppExecutionAlias>
-        <desktop:ExecutionAlias Alias="Contoso.exe" />
-      </uap3:AppExecutionAlias>
-  </uap3:Extension>
+  <Applications>
+    <Application>
+      <Extensions>
+        <uap3:Extension
+          Category="windows.protocol">
+          <uap3:Protocol
+            Name="myapp-cmd"
+            Parameters="/p &quot;%1&quot;" />
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+</Package>
+ 
 ...
 </Package>
 ```
