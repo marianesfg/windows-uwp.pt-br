@@ -5,12 +5,12 @@ ms.date: 06/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 74753c2c91912969342d2989ed76900e8386f292
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 5154593065ce40c5ac67a4873d58b2aac913d1f8
+ms.sourcegitcommit: f01e7abae23b91bbaa007055942e93587c0ec137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050929"
+ms.locfileid: "9059008"
 ---
 # <a name="supported-point-of-service-peripherals"></a>Periféricos de ponto de serviço compatíveis
 
@@ -61,13 +61,15 @@ ms.locfileid: "9050929"
 | Soquete Mobile | SocketScan S740                | 2D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
 | Soquete Mobile | SocketScan S800                | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
 | Soquete Mobile | SocketScan S850                | 2D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
+| Zebra         | DS2208²                        | 2D         | USB          | Handheld     | HID POS Scanner           |
 | Zebra         | DS2278                         | 2D         | USB          | Handheld     | HID POS Scanner           |
-| Zebra         | DS8108²                        | 2D         | USB          | Handheld     | HID POS Scanner           |
+| Zebra         | DS8108³                        | 2D         | USB          | Handheld     | HID POS Scanner           |
 |
 
 
 ¹ Upgradable para dar suporte a códigos de barras 2D por meio de Honeywell <br/>
-Firmware de ² mínimo necessário 016 (2018.01.18) necessários. Atualizável usando Zebra [123Scan](https://www.zebra.com/123Scan). 
+Firmware mínimo ² 009 (2018.07.09) necessários. Atualizável usando Zebra [123Scan](http://www.zebra.com/123Scan).<br/>
+Firmware de ³ mínimo necessário 016 (2018.01.18) necessários. Atualizável usando Zebra [123Scan](http://www.zebra.com/123Scan). 
 
 
 <hr>
