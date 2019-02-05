@@ -6,12 +6,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp, contatos, calendário, compromissos, mensagens de email
 ms.localizationpriority: medium
-ms.openlocfilehash: a2ccf75796140723270e49a7b967ce234d41baf1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 239dbaa7799d9991a63223d1cd8706d34445a16b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945675"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048233"
 ---
 # <a name="contacts-my-people-and-calendar"></a>Contatos, Minhas Pessoas e calendário
 
@@ -35,8 +35,8 @@ Para conhecer alguns métodos diferentes que o seu aplicativo pode usar para ace
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Amostra da API de compromissos](http://go.microsoft.com/fwlink/p/?linkid=309836)
-* [Amostra da API do Gerenciador de Contatos](http://go.microsoft.com/fwlink/p/?LinkID=310079)
-* [Amostra de aplicativo de Seletor de Contatos](http://go.microsoft.com/fwlink/p/?linkid=231575)
-* [Amostra de manipulação de ações de contato](http://go.microsoft.com/fwlink/p/?LinkID=320151)
+* [Amostra da API de compromissos](https://go.microsoft.com/fwlink/p/?linkid=309836)
+* [Amostra da API do Gerenciador de Contatos](https://go.microsoft.com/fwlink/p/?LinkID=310079)
+* [Amostra de aplicativo de Seletor de Contatos](https://go.microsoft.com/fwlink/p/?linkid=231575)
+* [Amostra de manipulação de ações de contato](https://go.microsoft.com/fwlink/p/?LinkID=320151)
 * [Exemplo de integração de cartão de contato](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)

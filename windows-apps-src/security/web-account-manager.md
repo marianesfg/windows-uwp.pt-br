@@ -6,19 +6,19 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 14f5139f5fe2c3d5d1f97040ee3bec33ea48d6ac
-ms.sourcegitcommit: ffad7cfb5d5c099f9f559e966fd93b705b47d2bd
+ms.openlocfilehash: e2c1be80ada3e337a4bf7353b854ae4cbe5bd99a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "8990324"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050979"
 ---
 # <a name="web-account-manager"></a>Gerenciador de Contas da Web
 
 Este artigo descreve como usar o **[AccountsSettingsPane](https://docs.microsoft.com/uwp/api/Windows.UI.ApplicationSettings.AccountsSettingsPane)** para conectar seu aplicativo da Plataforma Universal do Windows (UWP) a provedores de identidade externos, como a Microsoft ou o Facebook, usando as APIs do Gerenciador de Contas da Web do Windows 10. Você aprenderá a solicitar a permissão de um usuário para usar a conta da Microsoft dele, obter um token de acesso e usá-lo para realizar operações básicas (como obter dados de perfil ou carregar arquivos na conta do OneDrive). As etapas são semelhantes para obter permissão do usuário e acesso com qualquer provedor de identidade que ofereça suporte ao Gerenciador de Contas da Web.
 
 > [!NOTE]
-> Para obter um exemplo de código completo, consulte o [exemplo de WebAccountManagement no GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620621).
+> Para obter um exemplo de código completo, consulte o [exemplo de WebAccountManagement no GitHub](https://go.microsoft.com/fwlink/p/?LinkId=620621).
 
 ## <a name="get-set-up"></a>Preparar-se
 
@@ -430,6 +430,6 @@ Teoricamente, você pode usar comandos de configurações para tudo. No entanto,
 
 [Agente de autenticação da Web](web-authentication-broker.md)
 
-[Exemplo de gerenciamento de contas da Web](http://go.microsoft.com/fwlink/p/?LinkId=620621)
+[Exemplo de gerenciamento de contas da Web](https://go.microsoft.com/fwlink/p/?LinkId=620621)
 
 [App Lunch Scheduler](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)

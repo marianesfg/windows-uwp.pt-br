@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, aplicativo do azure ad, aad, usuário, grupo, vários usuários, multiusuário
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ecdcf2b148f53fefb5edc7e1f2df0d6bab58475
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 326bb547ac5b0d31f5112d7d5737ddad0d592dd5
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942062"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046935"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-partner-center-account"></a>Adicionar usuários, grupos e aplicativos Azure AD à sua conta do Partner Center
 
@@ -26,7 +26,7 @@ Ao adicionar usuários, você precisará especificar o acesso à sua conta do Pa
 Tenha em mente que todos os usuários do Partner Center (incluindo grupos e aplicativos Azure AD) devem ter uma conta ativa em [um locatário do Azure AD está associado à sua conta do Partner Center](associate-azure-ad-with-partner-center.md). O gerenciamento de usuários é realizado em um locatário de cada vez. Você deve entrar com uma conta de gerenciador para o locatário em que você deseja adicionar ou editar usuários. Criar um novo usuário no Partner Center também criará uma conta de usuário no locatário do Azure AD ao qual você está conectado e fazer alterações em um nome de usuário no Partner Center fazer as mesmas alterações no locatário do Azure AD da sua organização.
 
 > [!NOTE]
-> Se sua organização usa a [integração de diretório](http://go.microsoft.com/fwlink/p/?LinkID=724033) para sincronizar o serviço de diretório local com o Azure AD, você não será capaz de criar novos usuários, grupos ou aplicativos Azure AD no Partner Center. Você (ou outro admin em seu diretório local) precisará criá-los diretamente no diretório local antes de você poderá ver e adicioná-los no Partner Center.
+> Se sua organização usa a [integração de diretório](https://go.microsoft.com/fwlink/p/?LinkID=724033) para sincronizar o serviço de diretório local com o Azure AD, você não será capaz de criar novos usuários, grupos ou aplicativos Azure AD no Partner Center. Você (ou outro admin em seu diretório local) precisará criá-los diretamente no diretório local antes de você poderá ver e adicioná-los no Partner Center.
 
 
 <span id="users" />

@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, centro de desenvolvimento, configurações da conta, perfil, perfil da conta, conta de desenvolvedor, configurações da conta de desenvolvedor
 ms.localizationpriority: medium
-ms.openlocfilehash: c4f7bd6d7aa085c3d5066d3b486583c5b3f37182
-ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
+ms.openlocfilehash: 25e18956900a873c22ec95858e72f02e74aa7370
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "8992600"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049333"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Gerenciar configurações da conta e informações de perfil
 
@@ -51,6 +51,6 @@ Abaixo estão alguns dos outros itens que você encontrará na seção **Configu
 - **Locatários**: gerenciar suas associações de locatário do Azure AD. Para obter mais informações, consulte [associar o Azure AD com sua conta do Partner Center](associate-azure-ad-with-dev-center.md).
 - **Programas**: veja detalhes sobre os programas em que estão participando e saiba mais sobre outros programas que podem ser de seu interesse.
 - **Contratos**: consulte os contratos aceitos pela sua conta.
-- **Dispositivos de desenvolvimento**: exibir e gerenciar o [Windows Phone 8. x dispositivos que você tenha desbloqueado para testes](http://go.microsoft.com/fwlink/p/?LinkId=533897) e [consoles Xbox One habilitados para desenvolvimento](../xbox-apps/devkit-activation.md). 
+- **Dispositivos de desenvolvimento**: exibir e gerenciar o [Windows Phone 8. x dispositivos que você tenha desbloqueado para testes](https://go.microsoft.com/fwlink/p/?LinkId=533897) e [consoles Xbox One habilitados para desenvolvimento](../xbox-apps/devkit-activation.md). 
 
 

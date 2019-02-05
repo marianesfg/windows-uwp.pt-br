@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: dcaad17df5c036069dcdd729e662e5418db7646e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fe86656756eab9d9286d68c2a37357a9b824561e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923506"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048939"
 ---
 # <a name="data-binding-in-depth"></a>Vinculação de dados em detalhes
 
@@ -40,14 +40,14 @@ Independentemente do modo, existem dois tipos de associação, e ambos normalmen
 
 **Aplicativos de amostra que demonstram {x:Bind}**
 
--   [Amostra de {x:Bind}](http://go.microsoft.com/fwlink/p/?linkid=619989).
+-   [Amostra de {x:Bind}](https://go.microsoft.com/fwlink/p/?linkid=619989).
 -   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)
--   [Amostra de noções básicas de interface do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=619992)
+-   [Amostra de noções básicas de interface do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=619992)
 
 **Aplicativos de amostra que demonstram {Binding}**
 
--   Baixe o aplicativo [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950).
--   Baixe o aplicativo [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952).
+-   Baixe o aplicativo [Bookstore1](https://go.microsoft.com/fwlink/?linkid=532950).
+-   Baixe o aplicativo [Bookstore2](https://go.microsoft.com/fwlink/?linkid=532952).
 
 ## <a name="every-binding-involves-these-pieces"></a>Cada associação envolve essas partes
 
@@ -606,7 +606,7 @@ A técnica de associação de eventos é semelhante a implementar e consumir com
 
 ## <a name="binding-to-a-collection-of-folders-or-files"></a>Associando a uma coleção de pastas ou arquivos
 
-Você pode usar as APIs do namespace [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) para recuperar dados de pastas e arquivos. No entanto, os diversos métodos **GetFilesAsync**, **GetFoldersAsync** e **GetItemsAsync** não retornam valores adequados para a associação a controles de lista. Em vez disso, você deve associar os valores de retorno dos métodos [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422), [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428) e [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430) da classe [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501). A amostra de código a seguir, da [amostra de StorageDataSource e GetVirtualizedFilesVector](http://go.microsoft.com/fwlink/p/?linkid=228621), mostra o padrão de uso típico. Lembre-se de declarar a funcionalidade **picturesLibrary** em seu manifesto de pacote do aplicativo e confirmar que há imagens na sua pasta de biblioteca de imagens.
+Você pode usar as APIs do namespace [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) para recuperar dados de pastas e arquivos. No entanto, os diversos métodos **GetFilesAsync**, **GetFoldersAsync** e **GetItemsAsync** não retornam valores adequados para a associação a controles de lista. Em vez disso, você deve associar os valores de retorno dos métodos [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422), [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428) e [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430) da classe [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501). A amostra de código a seguir, da [amostra de StorageDataSource e GetVirtualizedFilesVector](https://go.microsoft.com/fwlink/p/?linkid=228621), mostra o padrão de uso típico. Lembre-se de declarar a funcionalidade **picturesLibrary** em seu manifesto de pacote do aplicativo e confirmar que há imagens na sua pasta de biblioteca de imagens.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -673,9 +673,9 @@ ItemsSource="{x:Bind AuthorHasACollectionOfBookSku}" ...>
 </GridView>
 ```
 
-Você pode implementar o padrão "é-um-grupo" de uma de duas maneiras. Uma maneira é criar sua própria classe de grupo. Derive a classe de **List&lt;T&gt;** (onde *T* é o tipo dos itens). Por exemplo, `public class Author : List<BookSku>`. A segunda maneira é usar uma expressão [LINQ](http://msdn.microsoft.com/library/bb397926.aspx) para criar dinamicamente objetos de grupo (e uma classe de grupo) de valores de propriedade dos itens **BookSku**. Essa abordagem (manter somente uma lista simples de itens e agrupá-los em tempo real) é típica de um aplicativo que acessa dados de um serviço de nuvem. Você tem a flexibilidade para agrupar livros por autor ou por gênero (por exemplo) sem a necessidade de classes de grupos especiais, como **Author** e **Genre**.
+Você pode implementar o padrão "é-um-grupo" de uma de duas maneiras. Uma maneira é criar sua própria classe de grupo. Derive a classe de **List&lt;T&gt;** (onde *T* é o tipo dos itens). Por exemplo, `public class Author : List<BookSku>`. A segunda maneira é usar uma expressão [LINQ](https://msdn.microsoft.com/library/bb397926.aspx) para criar dinamicamente objetos de grupo (e uma classe de grupo) de valores de propriedade dos itens **BookSku**. Essa abordagem (manter somente uma lista simples de itens e agrupá-los em tempo real) é típica de um aplicativo que acessa dados de um serviço de nuvem. Você tem a flexibilidade para agrupar livros por autor ou por gênero (por exemplo) sem a necessidade de classes de grupos especiais, como **Author** e **Genre**.
 
-O exemplo a seguir ilustra o padrão "é-um-grupo" usando [LINQ](http://msdn.microsoft.com/library/bb397926.aspx). Desta vez, agrupamos livros por gênero, exibido com o nome do gênero nos cabeçalhos de grupo. Isso é indicado pelo caminho de propriedade "Key" na referência ao valor [**Key**](https://msdn.microsoft.com/library/windows/apps/bb343251.aspx) do grupo.
+O exemplo a seguir ilustra o padrão "é-um-grupo" usando [LINQ](https://msdn.microsoft.com/library/bb397926.aspx). Desta vez, agrupamos livros por gênero, exibido com o nome do gênero nos cabeçalhos de grupo. Isso é indicado pelo caminho de propriedade "Key" na referência ao valor [**Key**](https://msdn.microsoft.com/library/windows/apps/bb343251.aspx) do grupo.
 
 ```csharp
 using System.Linq;
@@ -724,7 +724,7 @@ Lembre-se de que, ao usar [{x:Bind}](https://msdn.microsoft.com/library/windows/
     </GridView>
 ```
 
-Um controle [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/Hh702601) é uma ótima maneira para que os usuários vejam e naveguem por dados agrupados. O aplicativo de amostra [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) ilustra como usar o **SemanticZoom**. No aplicativo, você pode exibir uma lista de livros agrupados por autor (a exibição ampliada) ou pode reduzir o zoom para ver uma lista de atalhos de autores (a exibição reduzida). A lista de atalhos proporciona uma navegação mais rápida do que rolar pela lista de livros. Os modos de exibição ampliada e reduzida são, na verdade, controles **ListView** ou **GridView** associados à mesma **CollectionViewSource**.
+Um controle [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/Hh702601) é uma ótima maneira para que os usuários vejam e naveguem por dados agrupados. O aplicativo de amostra [Bookstore2](https://go.microsoft.com/fwlink/?linkid=532952) ilustra como usar o **SemanticZoom**. No aplicativo, você pode exibir uma lista de livros agrupados por autor (a exibição ampliada) ou pode reduzir o zoom para ver uma lista de atalhos de autores (a exibição reduzida). A lista de atalhos proporciona uma navegação mais rápida do que rolar pela lista de livros. Os modos de exibição ampliada e reduzida são, na verdade, controles **ListView** ou **GridView** associados à mesma **CollectionViewSource**.
 
 ![Uma ilustração de um SemanticZoom](images/sezo.png)
 

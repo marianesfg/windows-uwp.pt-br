@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: ae8daa6141eadaac699fc49b8ec4796f1dde5c91
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3527cae294f2268b2457b9fe9a6593cf1b539ee8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923810"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050143"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Criar um jogo UWP em JavaScript
 
@@ -38,9 +38,9 @@ Este projeto é compilado com JavaScript usando o Visual Studio. Com algumas peq
 Para jogar com este projeto, você precisará do seguinte:
 
 * Um computador com Windows (ou uma máquina virtual) executando a versão atual do Windows 10.
-* Uma cópia do Visual Studio. O Visual Studio Community Edition gratuito pode ser baixado na [home page do Visual Studio](http://visualstudio.com).
+* Uma cópia do Visual Studio. O Visual Studio Community Edition gratuito pode ser baixado na [home page do Visual Studio](https://visualstudio.com).
 
-Este projeto usa a estrutura do CreateJS JavaScript. CreateJS é um conjunto gratuito de ferramentas, liberado sob uma licença do MIT e projetado para facilitar a criação de jogos baseados em sprites. As bibliotecas do CreateJS já estão presentes no projeto (procure *js/easeljs-0.8.2.min.js* e *js/preloadjs-0.6.2.min.js* no modo de exibição do Gerenciador de soluções). Mais informações sobre o CreateJS podem ser encontradas na [home page do CreateJS](http://www.createjs.com).
+Este projeto usa a estrutura do CreateJS JavaScript. CreateJS é um conjunto gratuito de ferramentas, liberado sob uma licença do MIT e projetado para facilitar a criação de jogos baseados em sprites. As bibliotecas do CreateJS já estão presentes no projeto (procure *js/easeljs-0.8.2.min.js* e *js/preloadjs-0.6.2.min.js* no modo de exibição do Gerenciador de soluções). Mais informações sobre o CreateJS podem ser encontradas na [home page do CreateJS](https://www.createjs.com).
 
 
 ## <a name="getting-started"></a>Introdução
@@ -134,7 +134,7 @@ Localize o código a seguir e remova os comentários (\\) da linha que faz refer
     ];
 ```
 
-O JavaScript precisa de uma pequena ajuda quando se trata de carregamento de recursos, como imagens, e, assim, estamos usando um recurso da biblioteca CreateJS que pode pré-carregar imagens, chamadas de [LoadQueue](http://www.createjs.com/docs/preloadjs/classes/LoadQueue.html). Não podemos saber quanto tempo levará para que as imagens sejam carregadas, portanto usamos o LoadQueue para cuidar disso. Depois que as imagens estiverem disponíveis, a fila indicará que estão prontas. Para fazer isso, primeiro criamos um novo objeto que lista todas as nossas imagens e, em seguida, criamos um objeto LoadQueue. Você verá no código abaixo como está configurado para chamar uma função chamada **loadingComplete()** quando está tudo pronto.
+O JavaScript precisa de uma pequena ajuda quando se trata de carregamento de recursos, como imagens, e, assim, estamos usando um recurso da biblioteca CreateJS que pode pré-carregar imagens, chamadas de [LoadQueue](https://www.createjs.com/docs/preloadjs/classes/LoadQueue.html). Não podemos saber quanto tempo levará para que as imagens sejam carregadas, portanto usamos o LoadQueue para cuidar disso. Depois que as imagens estiverem disponíveis, a fila indicará que estão prontas. Para fazer isso, primeiro criamos um novo objeto que lista todas as nossas imagens e, em seguida, criamos um objeto LoadQueue. Você verá no código abaixo como está configurado para chamar uma função chamada **loadingComplete()** quando está tudo pronto.
 
 ```
     // Now we create a special queue, and finally a handler that is
@@ -162,9 +162,9 @@ Execute novamente o app (pressione F5) e você verá que nossas nuvens surgiram.
 
 ### <a name="3-moving-the-clouds"></a>3. Mover as nuvens
 
-Agora, vamos fazer nuvens se moverem. O segredo para mover nuvens - e mover qualquer coisa, na verdade - é configurar uma função [ticker](http://www.createjs.com/docs/easeljs/classes/Ticker.html) que é chamada repetidamente várias vezes por segundo. Cada vez que essa função é chamada, ela redesenha os elementos gráficos em um local ligeiramente diferente.
+Agora, vamos fazer nuvens se moverem. O segredo para mover nuvens - e mover qualquer coisa, na verdade - é configurar uma função [ticker](https://www.createjs.com/docs/easeljs/classes/Ticker.html) que é chamada repetidamente várias vezes por segundo. Cada vez que essa função é chamada, ela redesenha os elementos gráficos em um local ligeiramente diferente.
 
-<p data-height="500" data-theme-id="23761" data-slug-hash="vxZVRK" data-default-tab="result" data-user="MicrosoftEdgeDocumentation" data-embed-version="2" data-pen-title="CreateJS - Animating clouds" data-preview="true" data-editable="true" class="codepen">Veja a Caneta <a href="https://codepen.io/MicrosoftEdgeDocumentation/pen/vxZVRK/">CreateJS - Animando nuvens</a> dos documentos do Microsoft Edge (<a href="http://codepen.io/MicrosoftEdgeDocumentation">@MicrosoftEdgeDocumentation</a>) em <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="23761" data-slug-hash="vxZVRK" data-default-tab="result" data-user="MicrosoftEdgeDocumentation" data-embed-version="2" data-pen-title="CreateJS - Animating clouds" data-preview="true" data-editable="true" class="codepen">Veja a Caneta <a href="https://codepen.io/MicrosoftEdgeDocumentation/pen/vxZVRK/">CreateJS - Animando nuvens</a> dos documentos do Microsoft Edge (<a href="https://codepen.io/MicrosoftEdgeDocumentation">@MicrosoftEdgeDocumentation</a>) em <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
  
 O código para fazer isso já está no arquivo **main.js**, fornecido pela biblioteca do CreateJS, EaselJS. Ele terá a aparência a seguir:
@@ -217,7 +217,7 @@ Um jogo em que você não pode interagir não é um jogo. Portanto, vamos permit
 
 Agora temos duas funções que estão sendo chamadas sempre que o jogador aperta uma tecla ou clica com o mouse. Ambos os eventos chamarão **userDidSomething()**, uma função que analisa a variável gamestate para decidir o que o jogo está fazendo no momento, e o que precisa ser feito em seguida como resultado.
 
-Gamestate é um padrão de design comum usado em jogos. Tudo o que acontece, acontece na função **gameLoop()**, chamada pelo temporizador do ticker. O gameLoop() monitora se o jogo está reproduzindo ou em um "estado de fim de jogo" ou em um "estado pronto para reproduzir" ou qualquer outro estado definido pelo autor, usando uma variável. Esta variável de estado é testada em uma instrução de comutador, e isso define quais outras funções são chamadas. Assim, se o estado for definido como "reproduzindo", as funções para fazer o dinossauro pular e fazer os barris se moverem serão chamadas. Se o dinossauro for morto por algo, a variável gamestate será definida como "estado fim de jogo" e a mensagem "Fim de jogo!" será exibida. Se você estiver interessado em padrões de design de jogo, o livro [Game Programming Patterns](http://gameprogrammingpatterns.com/) é muito útil.
+Gamestate é um padrão de design comum usado em jogos. Tudo o que acontece, acontece na função **gameLoop()**, chamada pelo temporizador do ticker. O gameLoop() monitora se o jogo está reproduzindo ou em um "estado de fim de jogo" ou em um "estado pronto para reproduzir" ou qualquer outro estado definido pelo autor, usando uma variável. Esta variável de estado é testada em uma instrução de comutador, e isso define quais outras funções são chamadas. Assim, se o estado for definido como "reproduzindo", as funções para fazer o dinossauro pular e fazer os barris se moverem serão chamadas. Se o dinossauro for morto por algo, a variável gamestate será definida como "estado fim de jogo" e a mensagem "Fim de jogo!" será exibida. Se você estiver interessado em padrões de design de jogo, o livro [Game Programming Patterns](https://gameprogrammingpatterns.com/) é muito útil.
 
 Tente executar o app novamente e, finalmente você poderá começar a jogar. Pressione espaço (ou clique com o mouse ou toque na tela) para fazer as coisas acontecerem. 
 
@@ -271,7 +271,7 @@ Para obter mais detalhes, consulte [Publicando seu aplicativo UWP](https://devel
 
 O que fazer em seguida? Aqui estão algumas sugestões para recursos a serem adicionados ao seu (futuro) app premiado.
 
-1. Efeitos sonoros. A biblioteca CreateJS inclui suporte para som com uma biblioteca chamada [SoundJS](http://www.createjs.com/soundjs).
+1. Efeitos sonoros. A biblioteca CreateJS inclui suporte para som com uma biblioteca chamada [SoundJS](https://www.createjs.com/soundjs).
 2. Suporte de Gamepad. Há um [API disponível](https://gamedevelopment.tutsplus.com/tutorials/using-the-html5-gamepad-api-to-add-controller-support-to-browser-games--cms-21345).
 3. Torne-o um jogo muito, muito melhor! Essa parte é você quem decide, mas há vários recursos disponíveis online. 
 

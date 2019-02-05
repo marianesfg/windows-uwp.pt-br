@@ -5,12 +5,12 @@ ms.date: 11/29/2017
 ms.topic: article
 keywords: webvr, edge, desenvolvimento da web, babylon, babylonjs, Babylon. js, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e2081f0dbe163dcbcf35d83ea111caf573dacfb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1d8029752790e19adc5eb4266615372fb346e001
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919066"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050103"
 ---
 # <a name="adding-webvr-support-to-a-3d-babylonjs-game"></a>Adicionando suporte a WebVR a um jogo de Babylon. js 3D
 
@@ -132,7 +132,7 @@ Com as informações armazenadas no `headset` variável, podemos agora poderá e
 
 ## <a name="creating-and-selecting-the-initial-camera"></a>Criando e selecionando a câmera inicial
 
-Com Babylon. js, a WebVR pode ser adicionada rapidamente usando o [`WebVRFreeCamera`](http://doc.babylonjs.com/classes/3.1/webvrfreecamera). Câmera pode levar a entrada do teclado e permite que você use um fone de ouvido VR para controlar sua rotação "head".
+Com Babylon. js, a WebVR pode ser adicionada rapidamente usando o [`WebVRFreeCamera`](https://doc.babylonjs.com/classes/3.1/webvrfreecamera). Câmera pode levar a entrada do teclado e permite que você use um fone de ouvido VR para controlar sua rotação "head".
 
 
 ### <a name="step-1-checking-for-headsets"></a>Etapa 1: Verificar se há fones de ouvido

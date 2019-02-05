@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp, proteção de informações do Windows, dados corporativos, proteção de dados corporativos, edp, aplicativos habilitados
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
-ms.openlocfilehash: b65da20c8931f74800f817ecba0139b14d0447ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f6938118b3a9041eea27367c3916e94ce34d468e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946098"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049493"
 ---
 # <a name="windows-information-protection-wip"></a>Proteção de Informações do Windows (WIP)
 
@@ -67,7 +67,7 @@ Se você estiver pronto para capacitar seu aplicativo, consulte um destes proced
 
 **Para aplicativos da área de trabalho que você criar usando C++**
 
-[Guia do desenvolvedor de Proteção de Informações do Windows (WIP) (C++)](http://go.microsoft.com/fwlink/?LinkId=822192).
+[Guia do desenvolvedor de Proteção de Informações do Windows (WIP) (C++)](https://go.microsoft.com/fwlink/?LinkId=822192).
 
 
 ## <a name="create-non-enlightened-enterprise-app"></a>Criar um aplicativo corporativo não habilitado

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 153d73a75b48d61cb490a903c6657c42638c6674
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ec5f12c60e9fd244805209720e3e6d29260d5100
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939248"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049683"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Portando WindowsPhone Silverlight XAML e a interface do usuário para UWP
 
@@ -161,9 +161,9 @@ Atualmente, os recursos relacionados à associação de aplicativos UWP têm as 
 -   Não há suporte interno para validação de entrada de dados e para as interfaces [**IDataErrorInfo**](https://msdn.microsoft.com/library/system.componentmodel.idataerrorinfo.aspx) e [**INotifyDataErrorInfo**](https://msdn.microsoft.com/library/system.componentmodel.inotifydataerrorinfo.aspx).
 -   A classe [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) não inclui as propriedades de formatação estendidas disponíveis no WindowsPhone Silverlight. Entretanto, você ainda pode implementar [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) para oferecer formatação personalizada.
 -   Os métodos [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) obtêm as cadeias de caracteres de idiomas como parâmetros em vez de objetos [**CultureInfo**](https://msdn.microsoft.com/library/system.globalization.cultureinfo.aspx).
--   A classe [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) não fornece suporte interno para classificação e filtragem, e o agrupamento funciona de modo diferente. Para obter mais informações, consulte [Associação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946) e [Exemplo de vinculação de dados](http://go.microsoft.com/fwlink/p/?linkid=226854).
+-   A classe [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) não fornece suporte interno para classificação e filtragem, e o agrupamento funciona de modo diferente. Para obter mais informações, consulte [Associação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946) e [Exemplo de vinculação de dados](https://go.microsoft.com/fwlink/p/?linkid=226854).
 
-Embora os mesmos recursos de associação ainda tenham amplo têm suporte, Windows 10 oferece a opção de uma nova e mais eficiente mecanismo chamado de associação associações compiladas, que usam a extensão de marcação {x: Bind}. Consulte [Vinculação de dados: impulsione o desempenho de seu aplicativo por meio de novas melhorias na vinculação de dados XAML](http://channel9.msdn.com/Events/Build/2015/3-635) e o [Exemplo x:Bind](http://go.microsoft.com/fwlink/p/?linkid=619989).
+Embora os mesmos recursos de associação ainda tenham amplo têm suporte, Windows 10 oferece a opção de uma nova e mais eficiente mecanismo chamado de associação associações compiladas, que usam a extensão de marcação {x: Bind}. Consulte [Vinculação de dados: impulsione o desempenho de seu aplicativo por meio de novas melhorias na vinculação de dados XAML](https://channel9.msdn.com/Events/Build/2015/3-635) e o [Exemplo x:Bind](https://go.microsoft.com/fwlink/p/?linkid=619989).
 
 ## <a name="binding-an-image-to-a-view-model"></a>Associando uma imagem a um modelo de exibição
 
@@ -205,7 +205,7 @@ Para saber mais sobre controles da UWP, consulte [Controles por função](https:
 
 ##  <a name="design-language-in-windows10"></a>Linguagem de design no Windows 10
 
-Existem algumas diferenças na linguagem de design entre aplicativos WindowsPhone Silverlight e aplicativos do Windows 10. Para saber todos os detalhes, consulte [Design](http://dev.windows.com/design). Apesar das alterações na linguagem de design, nossos princípios de design permanecem consistentes: atenção aos detalhes, mas sempre buscando simplicidade por meio da concentração no conteúdo, e não no cromo, reduzindo drasticamente elementos visuais e permanecendo autêntico ao domínio digital; usar a hierarquia visual especialmente com tipografia; projetar em uma grade e dar vida às suas experiências com animações suaves.
+Existem algumas diferenças na linguagem de design entre aplicativos WindowsPhone Silverlight e aplicativos do Windows 10. Para saber todos os detalhes, consulte [Design](https://dev.windows.com/design). Apesar das alterações na linguagem de design, nossos princípios de design permanecem consistentes: atenção aos detalhes, mas sempre buscando simplicidade por meio da concentração no conteúdo, e não no cromo, reduzindo drasticamente elementos visuais e permanecendo autêntico ao domínio digital; usar a hierarquia visual especialmente com tipografia; projetar em uma grade e dar vida às suas experiências com animações suaves.
 
 ## <a name="localization-and-globalization"></a>Localização e globalização
 
@@ -313,7 +313,7 @@ Texto (ou tipografia) é um aspecto importante de um aplicativo UWP e, durante a
 
 Estilos de sistema TextBlock para aplicativos do Windows 10
 
-Em um aplicativo do WindowsPhone Silverlight, a família de fontes padrão é Segoe WP. Em um aplicativo do Windows 10, a família de fontes padrão é Segoe UI. Como resultado, as métricas de fonte em seu aplicativo podem parecer diferentes. Se você deseja reproduzir a aparência do texto WindowsPhone Silverlight, você pode definir suas próprias métricas usando propriedades como [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) e [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362). Para obter mais informações, consulte [Diretrizes para fontes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) e [Crie aplicativos UWP](http://dev.windows.com/design).
+Em um aplicativo do WindowsPhone Silverlight, a família de fontes padrão é Segoe WP. Em um aplicativo do Windows 10, a família de fontes padrão é Segoe UI. Como resultado, as métricas de fonte em seu aplicativo podem parecer diferentes. Se você deseja reproduzir a aparência do texto WindowsPhone Silverlight, você pode definir suas próprias métricas usando propriedades como [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) e [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362). Para obter mais informações, consulte [Diretrizes para fontes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) e [Crie aplicativos UWP](https://dev.windows.com/design).
 
 ## <a name="theme-changes"></a>Alterações de tema
 

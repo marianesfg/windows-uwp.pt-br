@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 38318e7f97c8eba7d0137a865f5025fb9a77fa55
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5c3c57653899ce7d849eec72ad36f14f7806652c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930687"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049863"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Introdução ao desenvolvimento de aplicativos seguros do Windows
 
@@ -96,7 +96,7 @@ Aqui está o fluxo de trabalho geral usado para chamar a API [**WebAuthenticatio
 
 Caso a comunicação seja bem-sucedida, processe a cadeia de caracteres de resposta retornada pelo provedor de identidade. Caso isso seja malsucedido, processe o erro.
 
-O código de amostra em C# para esse processo está abaixo. Para obter informações e um passo a passo detalhado, consulte [WebAuthenticationBroker](web-authentication-broker.md). Para obter uma amostra de código completo, confira a [Amostra de WebAuthenticationBroker em GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
+O código de amostra em C# para esse processo está abaixo. Para obter informações e um passo a passo detalhado, consulte [WebAuthenticationBroker](web-authentication-broker.md). Para obter uma amostra de código completo, confira a [Amostra de WebAuthenticationBroker em GitHub](https://go.microsoft.com/fwlink/p/?LinkId=620622).
 
 ```cs
 string startURL = "https://<providerendpoint>?client_id=<clientid>";

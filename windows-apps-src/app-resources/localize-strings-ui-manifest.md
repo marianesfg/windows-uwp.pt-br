@@ -8,12 +8,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 6740e6ce35277fa7f7f088c312f8b9ee1f5281c3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 321f8efc1475bc153102f3f8157cd2d094b37077
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923965"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049048"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote de aplicativos
 Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md).
@@ -116,7 +116,7 @@ Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options
 ## <a name="localize-the-string-resources"></a>Localizar os recursos de cadeia de caracteres
 1. Faça uma cópia do arquivo de recursos (.resw) em outro idioma.
     1. Em "Strings", crie uma nova subpasta e nomeie-a como "de-DE" para alemão (Alemanha).
-   <br>**Observação**para o nome da pasta, você pode usar qualquer [marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302). Consulte [Personalizar os recursos para idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md) para obter informações detalhadas sobre o qualificador de idioma e uma lista de marcas de idioma comuns.
+   <br>**Observação**para o nome da pasta, você pode usar qualquer [marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302). Consulte [Personalizar os recursos para idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md) para obter informações detalhadas sobre o qualificador de idioma e uma lista de marcas de idioma comuns.
    2. Faça uma cópia de `Strings/en-US/Resources.resw` na pasta `Strings/de-DE`.
 2. Traduza as cadeias de caracteres.
     1. Abra `Strings/de-DE/Resources.resw` e traduza os valores na coluna Value. Você não precisa traduzir os comentários.
@@ -291,6 +291,6 @@ Um pacote de estrutura podem acessar seus próprios recursos com um URI de ident
 * [Diretiva x:Uid](../xaml-platform/x-uid-directive.md)
 * [propriedades anexadas](../xaml-platform/attached-properties-overview.md)
 * [Itens de manifesto localizáveis](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
-* [Marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Personalizar os recursos para idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md)
 * [Como carregar recursos de cadeias de caracteres](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)

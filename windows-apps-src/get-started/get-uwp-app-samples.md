@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, código de exemplo, exemplos de código
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
-ms.openlocfilehash: 64eb0d13db1fbcf49d9da28e57eb85ff84823bf1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4cdf38a4bd77c4f6affb813c9e1de68463c43100
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946291"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049713"
 ---
 # <a name="get-uwp-app-samples"></a>Obter exemplos de aplicativo UWP
 
@@ -28,7 +28,7 @@ O arquivo zip sempre terá as amostras mais recentes. Você não precisa de uma 
 
 
 > [!NOTE]
-> Os exemplos UWP precisam do Visual Studio 2015 ou posterior e do SDK do Windows para serem abertos, compilados e executados. Você pode obter uma cópia gratuita do Visual Studio Community com suporte para a criação de aplicativos UWP [aqui](http://go.microsoft.com/fwlink/p/?LinkID=280676 "downloads de ferramentas de desenvolvimento do Windows").  
+> Os exemplos UWP precisam do Visual Studio 2015 ou posterior e do SDK do Windows para serem abertos, compilados e executados. Você pode obter uma cópia gratuita do Visual Studio Community com suporte para a criação de aplicativos UWP [aqui](https://go.microsoft.com/fwlink/p/?LinkID=280676 "downloads de ferramentas de desenvolvimento do Windows").  
 >
 > Além disso, não se esqueça de descompactar todo o arquivo morto, e não apenas exemplos individuais. Todos os exemplos dependem da pasta SharedContent no arquivo morto. Os exemplos de recursos UWP usam arquivos vinculados no Visual Studio para reduzir a duplicação de arquivos comuns, inclusive arquivos de modelo de exemplo e ativos de imagem. Esses arquivos comuns são armazenados na pasta SharedContent na raiz do repositório e são referenciados nos arquivos de projeto usando links.
 

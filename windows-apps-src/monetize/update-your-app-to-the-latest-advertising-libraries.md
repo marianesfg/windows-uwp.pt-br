@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, AdMediatorControl, migração
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: adac5cfdb1b4a10674fb7173e5b84a86b509f130
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ff0ea54f55803e652964203899f429faf196805e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920163"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048673"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Atualizar seu aplicativo para as bibliotecas mais recentes de anúncios em faixa
 
@@ -19,7 +19,7 @@ A partir de 1 de abril de 2017, não veicularemos mais os anúncios em faixa par
 
 ## <a name="overview"></a>Visão geral
 
-Os aplicativos UWP que mostram anúncios em faixa devem usar o **AdControl** de bibliotecas de publicidade distribuídas no [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp). Este SDK oferece suporte a um conjunto mínimo de recursos, incluindo a capacidade de servir mídia avançada em HTML5 por meio da [especificação de Mobile Rich-media Ad Interface Definitions (MRAID) 1.0](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) do Interactive Advertising Bureau (IAB). Muitos dos anunciantes procuram esses recursos, e exigimos que os desenvolvedores de aplicativos usem uma dessas versões do SDK para ajudar a tornar o ecossistema de aplicativos mais atraente para anunciantes e, por fim, gerar mais receita para você.
+Os aplicativos UWP que mostram anúncios em faixa devem usar o **AdControl** de bibliotecas de publicidade distribuídas no [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp). Este SDK oferece suporte a um conjunto mínimo de recursos, incluindo a capacidade de servir mídia avançada em HTML5 por meio da [especificação de Mobile Rich-media Ad Interface Definitions (MRAID) 1.0](https://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) do Interactive Advertising Bureau (IAB). Muitos dos anunciantes procuram esses recursos, e exigimos que os desenvolvedores de aplicativos usem uma dessas versões do SDK para ajudar a tornar o ecossistema de aplicativos mais atraente para anunciantes e, por fim, gerar mais receita para você.
 
 Antes desse SDK ser lançado, nós fornecemos anteriormente a classe **AdControl** em várias versões antigas do SDK de publicidade. Essas versões mais antigas do SDK de publicidade não têm suporte, pois os recursos de publicidade mínimo descritos acima não têm suporte. A partir de 1 de abril de 2017, não veicularemos mais os anúncios em faixa para aplicativos que usam uma versão do SDK de publicidade sem suporte. Se você tiver um aplicativo que ainda usa uma versão do SDK de publicidade sem suporte, você observará o comportamento a seguir:
 
@@ -27,14 +27,14 @@ Antes desse SDK ser lançado, nós fornecemos anteriormente a classe **AdControl
 
 * Quando o **AdControl** no aplicativo solicitar um novo anúncio, o evento **ErrorOccurred** do controle será acionado e a propriedade **ErrorCode** dos argumentos de evento terá o valor **NoAdAvailable**.
 
-* Quaisquer unidades de publicidade associadas ao aplicativo serão desativadas. Você não pode remover essas unidades desativadas da sua conta do DePartnerv. Se você atualizar o aplicativo para usar um [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp), ignore essas unidades de anúncio e crie novas.
+* Quaisquer unidades de publicidade associadas ao aplicativo serão desativadas. Você não pode remover essas unidades desativadas da sua conta do DePartnerv. Se você atualizar o aplicativo para usar um [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp), ignore essas unidades de anúncio e crie novas.
 
 * Os anúncios em faixa também não serão mais disponibilizados para qualquer unidade de anúncio usada em mais de um aplicativo. Certifique-se de que suas unidades de anúncio serão usadas em um único aplicativo.
 
-Se tiver um aplicativo (já na Microsoft Store ou ainda em desenvolvimento) com anúncios em faixa usando **AdControl** e você não tiver certeza sobre qual SDK de publicidade está sendo utilizado, siga as instruções neste artigo para determinar se é necessário atualizar o aplicativo para um SDK compatível. Se você tiver algum problema ou precisar de ajuda, [contate o suporte](http://go.microsoft.com/fwlink/?LinkId=393643).
+Se tiver um aplicativo (já na Microsoft Store ou ainda em desenvolvimento) com anúncios em faixa usando **AdControl** e você não tiver certeza sobre qual SDK de publicidade está sendo utilizado, siga as instruções neste artigo para determinar se é necessário atualizar o aplicativo para um SDK compatível. Se você tiver algum problema ou precisar de ajuda, [contate o suporte](https://go.microsoft.com/fwlink/?LinkId=393643).
 
 > [!NOTE]
-> Se o aplicativo já usa o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp) (para aplicativos UWP), você não precisa fazer outras alterações nele.
+> Se o aplicativo já usa o [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp) (para aplicativos UWP), você não precisa fazer outras alterações nele.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -76,7 +76,7 @@ Se o aplicativo usar uma versão do SDK anterior, siga estas instruções para s
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
     ```
 
-3.  Instale o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp).
+3.  Instale o [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp).
 
 ## <a name="part-3-update-your-project"></a>Parte 3: Atualize o projeto
 

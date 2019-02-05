@@ -8,12 +8,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a06859d6580720150383f2995505e671c0a31a4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d84683544628a9b6df0eafb2999fabb134465ea8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947231"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049623"
 ---
 # <a name="accessibility-testing"></a>Testes de acessibilidade  
 
@@ -80,7 +80,7 @@ A melhor maneira de testar a acessibilidade do seu teclado é desconectar o mous
 <span id="VERIFY_THE_CONTRAST_RATIO_OF_VISIBLE_TEXT"/>
 
 ## <a name="verify-the-contrast-ratio-of-visible-text"></a>Verificar o contraste do texto visível  
-Use as ferramentas de contraste de cores para verificar se a taxa de contraste de texto visível é aceitável. As exceções incluem elementos da interface do usuário inativos e logotipos ou texto decorativo que não transmita informações e possa ser rearranjado sem alterar o significado. Consulte [Requisitos de texto acessível](accessible-text-requirements.md) para obter mais informações sobre a taxa de contraste e as exceções. Consulte [Técnicas para WCAG 2.0 G18 (seção Recursos)](http://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) sobre as ferramentas que podem testar taxas de contraste.
+Use as ferramentas de contraste de cores para verificar se a taxa de contraste de texto visível é aceitável. As exceções incluem elementos da interface do usuário inativos e logotipos ou texto decorativo que não transmita informações e possa ser rearranjado sem alterar o significado. Consulte [Requisitos de texto acessível](accessible-text-requirements.md) para obter mais informações sobre a taxa de contraste e as exceções. Consulte [Técnicas para WCAG 2.0 G18 (seção Recursos)](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) sobre as ferramentas que podem testar taxas de contraste.
 
 > [!NOTE]
 > Algumas das ferramentas listadas pelas Técnicas para WCAG 2.0 G18 não podem ser usadas de forma interativa com um aplicativo UWP. Talvez você precise inserir valores de cor da tela de fundo e de primeiro plano manualmente na ferramenta, fazer capturas de tela da interface do usuário do aplicativo e depois executar a ferramenta de taxa de contraste na imagem da captura de tela. Ou então executar a ferramenta enquanto você abre arquivos de bitmap de origem em um programa de edição de imagens, não enquanto a imagem é carregada pelo aplicativo.
@@ -164,5 +164,5 @@ Um aspecto que você pode testar é se há elementos aparecendo na exibição do
 * [Acessibilidade](accessibility.md)
 * [Práticas que devem ser evitadas](practices-to-avoid.md)
 * [Automação da Interface do Usuário.](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
-* [Acessibilidade no Windows](http://go.microsoft.com/fwlink/p/?LinkId=320802)
+* [Acessibilidade no Windows](https://go.microsoft.com/fwlink/p/?LinkId=320802)
 * [Introdução ao Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, compromissos, calendário
 ms.localizationpriority: medium
-ms.openlocfilehash: 805383d243008f839b04c98906edd3beb52d581a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ece137fafc2fdcca7ce41839aa4614456973cf40
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938776"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049513"
 ---
 # <a name="manage-appointments"></a>Gerenciar compromissos
 
@@ -565,11 +565,11 @@ private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
-Agora, você já conhece as noções básicas de como gerenciar compromissos. Baixe as [amostras de aplicativos Universais do Windows](http://go.microsoft.com/fwlink/p/?linkid=619979) do GitHub para ver mais exemplos de como gerenciar compromissos.
+Agora, você já conhece as noções básicas de como gerenciar compromissos. Baixe as [amostras de aplicativos Universais do Windows](https://go.microsoft.com/fwlink/p/?linkid=619979) do GitHub para ver mais exemplos de como gerenciar compromissos.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Amostra da API de compromissos](http://go.microsoft.com/fwlink/p/?linkid=309836)
+* [Amostra da API de compromissos](https://go.microsoft.com/fwlink/p/?linkid=309836)
  
 
  

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, latência, dxgi, cadeias de troca, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: ec315cc9ed59a4b3272151f2ee1bb4bde8d9df10
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: acb5c58eebafa53fe140442550356f7eb7534efe
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942803"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047165"
 ---
 # <a name="reduce-latency-with-dxgi-13-swap-chains"></a>Reduzir latência com cadeias de troca DXGI 1.3
 
@@ -147,7 +147,7 @@ Para saber mais sobre programação multithreaded no Windows, consulte os seguin
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Amostra de DirectXLatency](http://go.microsoft.com/fwlink/p/?LinkID=317361)
+* [Amostra de DirectXLatency](https://go.microsoft.com/fwlink/p/?LinkID=317361)
 * [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://msdn.microsoft.com/library/windows/desktop/dn268309)
 * [**WaitForSingleObjectEx**](https://msdn.microsoft.com/library/windows/desktop/ms687036)
 * [**Windows.System.Threading**](https://msdn.microsoft.com/library/windows/apps/br229642)

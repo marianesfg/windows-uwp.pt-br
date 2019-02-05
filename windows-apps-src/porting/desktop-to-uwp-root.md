@@ -8,12 +8,12 @@ keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 99657899615a5d485af788004589c2bc53a0a0e8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5442dacb5c01bc6e22460e9d772ad73ba06b54e2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924411"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049933"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>Empacotar aplicativos da área de trabalho (ponte de Desktop)
 
@@ -100,13 +100,13 @@ Consulte o [pacote de um aplicativo da área de trabalho usando o Visual Studio]
 #### <a name="advanced-installer"></a>Instalador avançado
 
 A Caphyon fornece uma ferramenta de empacotamento de aplicativo da área de trabalho baseada em GUI gratuita que ajuda você a gerar um pacote de aplicativo do Windows para seu app com apenas alguns cliques. Ele pode usar qualquer instalador; mesmo aqueles que são executados em modo silencioso e executa uma validação verificação para determinar se o aplicativo é adequado para empacotamento.
-O Desktop App Converter também se integra ao Hyper-V e ao [VMware](http://www.vmware.com/). Isso significa que você pode usar suas próprias máquinas virtuais, sem precisar baixar uma imagem [Docker](https://docs.docker.com/) correspondente que pode ter mais de 3GB de tamanho.
+O Desktop App Converter também se integra ao Hyper-V e ao [VMware](https://www.vmware.com/). Isso significa que você pode usar suas próprias máquinas virtuais, sem precisar baixar uma imagem [Docker](https://docs.docker.com/) correspondente que pode ter mais de 3GB de tamanho.
 
 <img width="20%" src="images/desktop-to-uwp/Advanced_Installer_Vertical.png">
 
-Você pode usar o [Instalador Avançado](http://www.advancedinstaller.com/) para gerar MSI e [pacotes de aplicativos Windows](http://www.advancedinstaller.com/uwp-app-package.html) a partir dos projetos existentes. Você também pode usar o instalador avançado para importar pacotes de aplicativos do Windows que você gera usando o Microsoft Desktop App Converter. Uma vez importado, você pode mantê-los usando ferramentas visuais especificamente projetadas para aplicativos UWP.
+Você pode usar o [Instalador Avançado](https://www.advancedinstaller.com/) para gerar MSI e [pacotes de aplicativos Windows](https://www.advancedinstaller.com/uwp-app-package.html) a partir dos projetos existentes. Você também pode usar o instalador avançado para importar pacotes de aplicativos do Windows que você gera usando o Microsoft Desktop App Converter. Uma vez importado, você pode mantê-los usando ferramentas visuais especificamente projetadas para aplicativos UWP.
 
-O Advanced Installer também fornece uma extensão para o Visual Studio 2017 e 2015 que pode ser usada para [compilar e depurar aplicativos de ponte de Desktop](http://www.advancedinstaller.com/debug-desktop-bridge-apps.html).
+O Advanced Installer também fornece uma extensão para o Visual Studio 2017 e 2015 que pode ser usada para [compilar e depurar aplicativos de ponte de Desktop](https://www.advancedinstaller.com/debug-desktop-bridge-apps.html).
 
 Veja este [vídeo](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be) para uma rápida visão geral.
 
@@ -115,7 +115,7 @@ Veja este [vídeo](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be)
 
 #### <a name="cloudhouse-compatibility-containers"></a>Contêineres de Compatibilidade Cloudhouse
 
-Para os clientes corporativos com aplicativos de linha de negócios incompatíveis com o Windows 10 e o Windows 10 S, os Contêineres de Compatibilidade da Cloudhouse permitem que os aplicativos do Windows XP e do Windows 7 sejam executados no Windows 10 e, em seguida, convertidos para execução na Plataforma Universal do Windows (UWP) para disponibilização pela Microsoft Store para Empresas ou do Microsoft Intune, sem alteração no código-fonte. Inscreva-se em uma [Avaliação gratuita](http://www.cloudhouse.com/free-trial).
+Para os clientes corporativos com aplicativos de linha de negócios incompatíveis com o Windows 10 e o Windows 10 S, os Contêineres de Compatibilidade da Cloudhouse permitem que os aplicativos do Windows XP e do Windows 7 sejam executados no Windows 10 e, em seguida, convertidos para execução na Plataforma Universal do Windows (UWP) para disponibilização pela Microsoft Store para Empresas ou do Microsoft Intune, sem alteração no código-fonte. Inscreva-se em uma [Avaliação gratuita](https://www.cloudhouse.com/free-trial).
 
 <img width="20%" src="images/desktop-to-uwp/cloudhouse-container-logo.png">
 
@@ -123,7 +123,7 @@ A Cloudhouse fornece um Empacotador automática de empacotamento de aplicativos 
 
 O Empacotador automático usa a análise de instalação/captura e de tempo de execução a fim de criar um Contêiner para o aplicativo, o que inclui os arquivos do aplicativo, o registro, os tempos de execução, as dependências, além do mecanismo de compatibilidade e redirecionamento necessários para que o aplicativo seja executado no Windows 10. O Contêiner fornece isolamento do aplicativo e seus tempos de execução para que não afetem ou entrem em conflito com outros aplicativos executados no dispositivo do usuário.
 
-Saiba mais sobre como você pode fornecer aplicativos de negócios pela Microsoft Store para Empresas. Leia tudo em nosso [Blog de lançamento](http://www.cloudhouse.com/resources/release-solution-to-get-any-line-of-business-app-to-uwp).
+Saiba mais sobre como você pode fornecer aplicativos de negócios pela Microsoft Store para Empresas. Leia tudo em nosso [Blog de lançamento](https://www.cloudhouse.com/resources/release-solution-to-get-any-line-of-business-app-to-uwp).
 
 #### <a name="firegiant"></a>FireGiant
 
@@ -249,7 +249,7 @@ Para testar seu aplicativo em uma configuração realista enquanto você se prep
 
 ## <a name="validate"></a>Validar
 
-Para seu aplicativo as chances de ser publicado na Microsoft Store ou obter [Certificados do Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666), valide e teste-o localmente antes de enviá-lo para certificação.
+Para seu aplicativo as chances de ser publicado na Microsoft Store ou obter [Certificados do Windows](https://go.microsoft.com/fwlink/p/?LinkID=309666), valide e teste-o localmente antes de enviá-lo para certificação.
 
 Se você estiver usando o DAC para empacotar seu aplicativo, você pode usar o novo ``-Verify`` sinalizador para validar o pacote contra o aplicativo da área de trabalho empacotado e requisitos da loja. Consulte [Empacotar um app, assinar o app e prepará-lo para envio à loja](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters).
 
@@ -269,7 +269,7 @@ Consulte [distribuir um aplicativo da área de trabalho empacotado](desktop-to-u
 
 **Encontrar respostas para suas dúvidas**
 
-Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Fazer comentários ou sugestões de recursos**
 

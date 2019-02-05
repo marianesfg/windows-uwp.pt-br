@@ -5,18 +5,18 @@ keywords: Novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 7/11/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d445f31d22baaafeb16c004543770cf5d6df05a7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 83d890983cfe32aaf1204b21552a7d72d89d9675
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935860"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049633"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novidades dos documentos de desenvolvedor do Windows em julho de 2018
 
 A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As seguintes visões gerais de recurso, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de julho.
 
-[Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+[Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="features"></a>Recursos
 
@@ -34,7 +34,7 @@ Confira nossos guias PWA para:
 
 ### <a name="notepad"></a>Bloco de notas
 
-Está disponível no Windows 10 Insider Preview Build 17713, [o bloco de notas foi atualizado com muitos recursos novos](http://aka.ms/ant-man). Zoom, delimitador localizar/substituir e suporte para terminações de linha Unix/Linux (AL) e Mac (CR) agora estão disponíveis para [Os participantes do Windows Insider](https://insider.windows.com/). 
+Está disponível no Windows 10 Insider Preview Build 17713, [o bloco de notas foi atualizado com muitos recursos novos](https://aka.ms/ant-man). Zoom, delimitador localizar/substituir e suporte para terminações de linha Unix/Linux (AL) e Mac (CR) agora estão disponíveis para [Os participantes do Windows Insider](https://insider.windows.com/). 
 
 ## <a name="developer-guidance"></a>Diretrizes para desenvolvedor
 
@@ -72,11 +72,11 @@ Além disso, fizemos algumas atualizações para páginas existentes:
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>Introdução para desenvolvedores: criar e personalizar um formulário no Windows 10
 
-[Introdução documentos](../get-started/index.md) para desenvolvedores do Windows agora fornecem experiência prática com as tarefas de desenvolvimento de aplicativo básico. Este vídeo orienta você por meio de um desses tópicos e aborda as Noções básicas de criação de um formulário da interface do usuário em seu aplicativo. [Assista ao vídeo](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) para ver o código em ação, em seguida, [Confira o tópico por conta própria.](http://aka.ms/CreateForms)
+[Introdução documentos](../get-started/index.md) para desenvolvedores do Windows agora fornecem experiência prática com as tarefas de desenvolvimento de aplicativo básico. Este vídeo orienta você por meio de um desses tópicos e aborda as Noções básicas de criação de um formulário da interface do usuário em seu aplicativo. [Assista ao vídeo](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) para ver o código em ação, em seguida, [Confira o tópico por conta própria.](https://aka.ms/CreateForms)
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Aprimorar seu Bot com bate-papo de personalidade do projeto
 
-Bate-papo do projeto personalidade permite que você adicionar uma pessoa personalizável para a robôs bate-papo. Por meio da integração com o SDK do Microsoft Bot estrutura, você pode adicionar recursos de pequeno falar uma maneira mais conversa de interagir com os clientes. [Assista ao vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para saber como implementá-lo e [experimentar a demonstração interativa](http://aka.ms/PersonalityChat) para uma experiência prática.
+Bate-papo do projeto personalidade permite que você adicionar uma pessoa personalizável para a robôs bate-papo. Por meio da integração com o SDK do Microsoft Bot estrutura, você pode adicionar recursos de pequeno falar uma maneira mais conversa de interagir com os clientes. [Assista ao vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para saber como implementá-lo e [experimentar a demonstração interativa](https://aka.ms/PersonalityChat) para uma experiência prática.
 
 ### <a name="one-dev-question"></a>Uma pergunta sobre desenvolvimento
 

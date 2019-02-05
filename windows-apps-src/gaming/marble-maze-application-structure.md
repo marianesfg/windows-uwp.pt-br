@@ -6,12 +6,12 @@ ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, estrutura
 ms.localizationpriority: medium
-ms.openlocfilehash: d19fe1a81a193baf7fe6b7b86865dfb7ea65c00b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 55b933db7f9b26de2caa3877bde445f96c08d561
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936169"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049873"
 ---
 # <a name="marble-maze-application-structure"></a>Estrutura do app Marble Maze
 
@@ -21,7 +21,7 @@ ms.locfileid: "8936169"
 A estrutura de um aplicativo UWP (Plataforma Universal do Windows) DirectX é diferente daquela de um aplicativo de área de trabalho tradicional. Em vez de funcionar com tipos de identificador como [HWND](https://msdn.microsoft.com/library/windows/desktop/aa383751) e funções como [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679), o Windows Runtime oferece interfaces como [Windows::UI::Core::ICoreWindow](https://msdn.microsoft.com/library/windows/apps/br208296) para que seja possível desenvolver aplicativos UWP de uma maneira mais moderna orientada a objetos. Esta seção da documentação mostra como o código do app Marble Maze está estruturado.
 
 > [!NOTE]
-> O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
+> O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](https://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 ## 

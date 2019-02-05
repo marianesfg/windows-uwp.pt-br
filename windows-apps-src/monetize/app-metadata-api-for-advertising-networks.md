@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, rede de publicidade, metadados do app
 ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fd0381d9ec8917f381cfeb045d58bfa3436de74
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0122c2fbe1e0e9905a8509694c4a589e04e33247
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934415"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049423"
 ---
 # <a name="app-metadata-api-for-advertising-networks"></a>API de metadados de app para redes de publicidade
 
@@ -129,20 +129,20 @@ Para obter mais detalhes sobre os valores no corpo da resposta, veja a tabela a 
 | Valor      | Tipo   | Descrição    |
 |------------|--------|--------------------|
 | storeId           | string  | A ID da Loja do aplicativo. Uma ID da Loja de exemplo é 9NBLGGH29DM8.     |  
-| name           | string  | O nome do aplicativo.   |
+| name           | cadeia  | O nome do aplicativo.   |
 | description           | string  | A descrição da listagem da Loja para o aplicativo.  |
 | phoneStoreGuid           | string  | A ID do produto (Windows Phone 8.x) para o aplicativo. É um GUID.  |
 | windowsStoreGuid           | string  | A ID do produto (Windows 8.x) para o aplicativo. É um GUID. |
 | storeCategory           | string  | A categoria do aplicativo na Loja. Para os valores aceitos, consulte a [tabela de categoria e subcategoria](../publish/category-and-subcategory-table.md) de aplicativos na Loja.  |
 | iabCategory           | string  | A categoria de conteúdo do aplicativo, conforme definido pelo Interactive Advertising Bureau (IAB). Por exemplo, **Notícias** ou **Esportes**. Para obter uma lista de categorias de conteúdo, consulte a página [IAB Tech Lab Content Taxonomy](https://www.iab.com/guidelines/iab-quality-assurance-guidelines-qag-taxonomy) no site do IAB.   |
-| iabCategoryId           | string  | A ID da categoria de conteúdo do aplicativo. Por exemplo, **IAB12** é a ID da categoria Notícias e **IAB17** é a ID da categoria Esportes. Para obter uma lista de IDs de categoria de conteúdo, consulte a seção 5.1 da [Especificação da API OpenRTB](http://www.iab.com/wp-content/uploads/2015/05/OpenRTB_API_Specification_Version_2_3_1.pdf). |
-| coppa           | Booliano  | True se o aplicativo for direcionado a crianças com menos de 13 anos e, portanto, tem obrigações segundo a Children's Online Privacy Protection Act (COPPA). Caso contrário, false.  |
+| iabCategoryId           | string  | A ID da categoria de conteúdo do aplicativo. Por exemplo, **IAB12** é a ID da categoria Notícias e **IAB17** é a ID da categoria Esportes. Para obter uma lista de IDs de categoria de conteúdo, consulte a seção 5.1 da [Especificação da API OpenRTB](https://www.iab.com/wp-content/uploads/2015/05/OpenRTB_API_Specification_Version_2_3_1.pdf). |
+| coppa           | booliano  | True se o aplicativo for direcionado a crianças com menos de 13 anos e, portanto, tem obrigações segundo a Children's Online Privacy Protection Act (COPPA). Caso contrário, false.  |
 | downloadUrl           | string  | O link para a listagem do aplicativo na Loja. Este link está no formato ```https://www.microsoft.com/store/apps/<Store ID>```.  |
 | isLive           | Booliano  | Verdadeiro se o aplicativo está atualmente disponível na loja; caso contrário, falso.  |
-| iconUrls           | matriz  |  Uma matriz com uma ou mais strings que contêm os caminhos relativos para as URLs de ícone associado ao aplicativo. Para recuperar os ícones, coloque *http* ou *https* como prefixo nas URLs.  |
+| iconUrls           | array  |  Uma matriz com uma ou mais strings que contêm os caminhos relativos para as URLs de ícone associado ao aplicativo. Para recuperar os ícones, coloque *http* ou *https* como prefixo nas URLs.  |
 | type           | string  | Uma das seguintes strings: **Aplicativo** ou **Jogo**.  |
-| dispositivos           |  matriz  | Uma matriz com uma ou mais das seguintes strings que especifica os tipos de dispositivo que o aplicativo suporta: **Computador**, **Telefone**, **Xbox**, **IoT**, **Servidor** e **Holográfico**.  |
-| platformVersions           | matriz  |  Uma matriz com uma ou mais das seguintes strings que especifica as plataformas compatíveis com o aplicativo: **Windows.Universal**, **Windows.Windows8x** e **Windows.WindowsPhone8x**.  |
+| dispositivos           |  array  | Uma matriz com uma ou mais das seguintes strings que especifica os tipos de dispositivo que o aplicativo suporta: **Computador**, **Telefone**, **Xbox**, **IoT**, **Servidor** e **Holográfico**.  |
+| platformVersions           | array  |  Uma matriz com uma ou mais das seguintes strings que especifica as plataformas compatíveis com o aplicativo: **Windows.Universal**, **Windows.Windows8x** e **Windows.WindowsPhone8x**.  |
 | screenshotUrls           | matriz  | Uma matriz com uma ou mais strings que contêm os caminhos relativos para as URLs de captura de tela para este aplicativo. Para recuperar as capturas de tela, coloque *http* ou *https* como prefixo nas URLs.  |
 
 <span/>

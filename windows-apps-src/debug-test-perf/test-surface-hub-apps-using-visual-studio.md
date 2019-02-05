@@ -6,12 +6,12 @@ ms.date: 10/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b40fd56a85be6dce441324a427790cda28f9d7ac
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: db481fac1bdcb9e79762f52aee48574e987c4cbb
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929528"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048879"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Testar aplicativos Surface Hub usando o Visual Studio
 O simulador do Visual Studio fornece um ambiente onde você pode projetar, desenvolver, depurar e testar os aplicativos UWP (Plataforma Universal do Windows), incluindo os aplicativos que você criou para o Microsoft Surface Hub. O simulador não usa a mesma interface de usuário que o Surface Hub, mas é útil para testar seu aplicativo a aparência e se comporta com tamanho de tela do Surface Hub e resolução.
@@ -69,7 +69,7 @@ Para adicionar resoluções do Surface Hub ao simulador:
     ![Resoluções de simulador do Visual Studio](images/vs-simulator-resolutions.png)
 
    > [!TIP]
-   > [Ativar o modo de Tablet](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) para melhor simular a experiência de um Surface Hub.
+   > [Ativar o modo de Tablet](https://windows.microsoft.com/windows-10/getstarted-like-a-tablet) para melhor simular a experiência de um Surface Hub.
 
 ## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a>Implantar aplicativos em um dispositivo Surface Hub do Visual Studio
 Implantar manualmente um aplicativo em um Surface Hub é um processo simples.
@@ -85,7 +85,7 @@ Por padrão, o Surface Hub só instala aplicativos da Microsoft Store. Para inst
    > [!NOTE]
    > São necessários privilégios administrativos para acessar o aplicativo configurações no Surface Hub.
 
-2. Navegue até **atualização e segurança \ > para desenvolvedores**.
+2. Navegue para **Atualizar & segurança \> para desenvolvedores**.
 
 3. Escolha **Modo de desenvolvedor** e aceite o prompt de aviso.
 

@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, problemas conhecidos, solução de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 3df88af638886e6bbda9b2f2f2065809da319532
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 029d595c41301e62f74c9b08b633bb22bfb12786
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939374"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049174"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conhecidos e solução de problemas para anúncios em aplicativos
 
@@ -48,7 +48,7 @@ Há muitos motivos para você não ver anúncios, incluindo erros de rede. Outro
 
 Se você pode ver anúncios de teste no aplicativo, seu código está funcionando e é capaz de exibir anúncios. Se você tiver problemas, entre em contato com o [suporte do produto](https://developer.microsoft.com/en-us/windows/support). Nessa página, escolha **entre em contato conosco**.
 
-Você também pode postar uma pergunta no [fórum](http://go.microsoft.com/fwlink/p/?LinkId=401266).
+Você também pode postar uma pergunta no [fórum](https://go.microsoft.com/fwlink/p/?LinkId=401266).
 
 ## <a name="test-ads-are-showing-in-your-app-instead-of-live-ads"></a>Anúncios de teste estão aparecendo em seu aplicativo em vez de anúncios ativos
 
@@ -91,7 +91,7 @@ Definir propriedades relacionadas a borda herdada do **AdControl** da classe pai
 
 ## <a name="more-information"></a>Mais informações
 
-Para obter mais informações sobre os problemas conhecidos mais recentes e publicar perguntas relacionadas às bibliotecas do SDK do Microsoft Advertising, visite o [fórum](http://go.microsoft.com/fwlink/p/?LinkId=401266).
+Para obter mais informações sobre os problemas conhecidos mais recentes e publicar perguntas relacionadas às bibliotecas do SDK do Microsoft Advertising, visite o [fórum](https://go.microsoft.com/fwlink/p/?LinkId=401266).
 
  
 

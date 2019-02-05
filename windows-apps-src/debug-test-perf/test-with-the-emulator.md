@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ee38abfb28aad8d6a3ce073a947580b3df29593
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: df03c6f10f106868213fe812b2f303d7675c567b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942590"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050123"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Testar com o Emulador Microsoft para Windows 10 Mobile
 
@@ -237,7 +237,7 @@ Você também pode usar a ferramenta de simulador de terminal da MasterCard ([ht
 -   Marque a caixa de seleção de ouvinte **Habilitar MasterCard** abaixo das janelas do editor de script e inicie o simulador da MasterCard.
 -   Usando a ferramenta, você pode gerar comandos que são retransmitidos ao seu aplicativo em execução no emulador por meio da ferramenta de NFC.
 
-Para saber mais sobre o suporte à HCE e como desenvolver aplicativos HCE no Windows 10 Mobile, confira o [Blog da equipe de NFC da Microsoft](http://go.microsoft.com/fwlink/?LinkId=534749).
+Para saber mais sobre o suporte à HCE e como desenvolver aplicativos HCE no Windows 10 Mobile, confira o [Blog da equipe de NFC da Microsoft](https://go.microsoft.com/fwlink/?LinkId=534749).
 
 ### <a name="how-to-create-scripts-for-hce-testing"></a>Como criar scripts para testes de HCE
 
@@ -656,7 +656,7 @@ Para desativar a aceleração de hardware:
 
 ## <a name="support-resources"></a>Recursos de suporte
 
-Para encontrar respostas e resolver problemas ao começar a trabalhar com as ferramentas do Windows 10, visite o [Fórum das ferramentas do Windows 10](http://go.microsoft.com/fwlink/?LinkId=534765). Para ver todos os fóruns sobre o desenvolvimento do Windows 10, acesse [este link](http://go.microsoft.com/fwlink/?LinkId=535000).
+Para encontrar respostas e resolver problemas ao começar a trabalhar com as ferramentas do Windows 10, visite o [Fórum das ferramentas do Windows 10](https://go.microsoft.com/fwlink/?LinkId=534765). Para ver todos os fóruns sobre o desenvolvimento do Windows 10, acesse [este link](https://go.microsoft.com/fwlink/?LinkId=535000).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: d9665ba3af10091ddc652198d5340e00456a65a7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9ebac70d56fcdf1bf717d763daf4ac1bd9c06d4b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934521"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048413"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes do Tempo de Execução do Windows agenciados para um aplicativo UWP de sideload
 
@@ -52,7 +52,7 @@ O contrato entre o aplicativo de sideload e o componente de desktop é descrito 
 
 O aplicativo de sideload é um aplicativo UWP normal em todos os aspectos, exceto um: usa sideload em vez de ser instalado através do aplicativo da Microsoft Store. A maioria dos mecanismos de instalação é idêntica: o manifesto e o empacotamento do aplicativo são semelhantes (uma adição ao manifesto é descrita em detalhes mais tarde). Depois que o sideload estiver habilitado, um script PowerShell simples poderá instalar os certificados necessários e o próprio aplicativo. Uma prática recomendada normal é que o aplicativo de sideload passe no teste de certificação WACK incluído no menu Projeto/Loja do Visual Studio
 
->**Observação**sideload pode ser ativado em configurações -&gt; atualização e segurança -&gt; para desenvolvedores.
+>**Observação**sideload pode ser ativado em configurações -&gt; atualizar segurança & -&gt; para desenvolvedores.
 
 Um ponto importante a salientar é que o mecanismo de Agente de aplicativo enviado como parte do Windows10 é somente de 32 bits. O componente da área de trabalho deve ser 32 bits.
 Aplicativos de sideload podem ser de 64 bits (desde que haja proxies de 64 bits e 32 bits registrados), mas isso será atípico. A criação do aplicativo de sideload em C\# usando a configuração normal "neutra" e o padrão de "preferir 32 bits" naturalmente cria aplicativos de sideload de 32 bits.
@@ -499,7 +499,7 @@ d) Um arquivo \*\_p.c (por exemplo, MyWinRTComponent\_p.c)
 
 **Etapa 5:** Adicione esses quatro arquivos gerados ao projeto "MyWinRTProxy".
 
-**Etapa 6:** Adicionar um arquivo def ao projeto "MyWinRTProxy"**(projeto > Adicionar Novo Item > código > arquivo de definição de módulo**) e atualizar o conteúdo para ser:
+**Etapa 6:** Adicionar um arquivo def ao projeto "MyWinRTProxy"**( gt _ Adicionar Novo Item gt _ código gt _ arquivo de definição de módulo de projeto**) e atualizar o conteúdo para ser:
 
 LIBRARY MyWinRTComponent.Proxies.dll
 
@@ -592,13 +592,13 @@ Lista de módulos para um servidor do agente deve listar*clrhost. dll*em sua lis
 
 -   [Modelos de projeto de componente WinRT intermediado para Windows 10 e VS 2015](https://visualstudiogallery.msdn.microsoft.com/10be07b3-67ef-4e02-9243-01b78cd27935)
 
--   [Componente de exemplo do WinRT intermediado para NorthwindRT](http://go.microsoft.com/fwlink/p/?LinkID=397349)
+-   [Componente de exemplo do WinRT intermediado para NorthwindRT](https://go.microsoft.com/fwlink/p/?LinkID=397349)
 
--   [Como entregar aplicativos fidedignos e confiáveis da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkID=393644)
+-   [Como entregar aplicativos fidedignos e confiáveis da Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkID=393644)
 
 -   [Contratos e extensões de aplicativos (aplicativos da Windows Store)](https://msdn.microsoft.com/library/windows/apps/hh464906.aspx)
 
 -   [Como fazer sideload de aplicativos no Windows 10](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#GroupPolicy)
 
--   [Implantação de aplicativos UWP para empresas](http://go.microsoft.com/fwlink/p/?LinkID=264770)
+-   [Implantação de aplicativos UWP para empresas](https://go.microsoft.com/fwlink/p/?LinkID=264770)
 

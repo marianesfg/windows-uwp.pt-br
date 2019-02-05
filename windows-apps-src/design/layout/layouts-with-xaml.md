@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 82a528b3ec98f56e1079e11ec1123d86de15d50f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 691ce1cc0c49154142a52f329af6f2a1df4ae027
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919981"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049393"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Layouts dinâmicos com o XAML
 
@@ -117,7 +117,7 @@ Controle do painel | Descrição
 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) |<li>Os elementos são empilhados em uma única linha vertical ou horizontalmente.</li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são respeitados na direção oposta à da propriedade Orientation. Caso o tamanho de um elemento não seja definido explicitamente, ele se amplia para preencher a largura disponível (ou a altura caso o Orientation seja Horizontal). Na direção especificada pela propriedade Orientation, um elemento é dimensionado segundo seu conteúdo.</li><li>O conteúdo filho será recortado visualmente se for maior do que o painel.</li><li>Como o tamanho do conteúdo não é restringido pelos limites do painel na direção especificada pela propriedade Orientation, o conteúdo rolável se amplia além dos limites do painel e não mostra barras de rolagem. Você deve restringir explicitamente a altura (ou a largura) do conteúdo filho para fazer suas barras de rolagem serem mostradas.</li>
 [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) |<li>Os elementos são organizados em linhas ou colunas que se ajustam automaticamente em uma nova linha ou coluna quando o valor MaximumRowsOrColumns é atingido.</li><li>A propriedade Orientation especifica se os elementos devem ser organizados em linhas ou colunas.</li><li>Os elementos podem abranger várias linhas e colunas usando-se as propriedades anexadas VariableSizedWrapGrid.RowSpan e VariableSizedWrapGrid.ColumnSpan.</li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são ignorados. Os elementos são dimensionados conforme especificados pelas propriedades ItemHeight e ItemWidth. Caso essas propriedades não sejam definidas, o item na primeira célula é dimensionado segundo seu conteúdo, e todas as outras células herdam esse tamanho.</li><li>O conteúdo filho será recortado visualmente se for maior do que o painel.</li><li>Como o tamanho do conteúdo é restringido pelos limites do painel, o conteúdo rolável mostra barras de rolagem, caso necessário.</li>
 
-Para obter informações detalhadas e exemplos desses painéis, consulte [Painéis de layout](layout-panels.md). Consulte também a [Amostra de técnicas dinâmicas](http://go.microsoft.com/fwlink/p/?LinkId=620024).
+Para obter informações detalhadas e exemplos desses painéis, consulte [Painéis de layout](layout-panels.md). Consulte também a [Amostra de técnicas dinâmicas](https://go.microsoft.com/fwlink/p/?LinkId=620024).
 
 Os painéis de layout permitem organizar sua interface do usuário em grupos lógicos de controles. Ao usá-los com as configurações de propriedade apropriadas, você tem certo suporte para redimensionamento automático, reposicionamento e refluxo de elementos da interface do usuário. No entanto, a maioria dos layouts de interface do usuário ainda precisa de mais modificações quando ocorrem alterações significativas no tamanho da janela. Para isso, você pode usar estados visuais.
 
@@ -254,13 +254,13 @@ Este exemplo mostra como definir a propriedade anexada [**RelativePanel.AlignHor
 
 ### <a name="custom-state-triggers"></a>Gatilhos de estado personalizados
 
-Você pode estender a classe [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) para criar gatilhos personalizados para uma ampla variedade de cenários. Por exemplo, você pode criar um StateTrigger para disparar estados diferentes com base no tipo de entrada e, em seguida, aumentar as margens em torno de um controle quando o tipo de entrada é toque. Ou crie um StateTrigger para aplicar estados diferentes com base na família de dispositivos em que o aplicativo está em execução. Para obter exemplos de como compilar gatilhos personalizados e usá-los para criar experiências de interface do usuário otimizadas dentro de um único modo de exibição XAML, consulte a [Amostra de gatilhos de estado](http://go.microsoft.com/fwlink/p/?LinkId=620025).
+Você pode estender a classe [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) para criar gatilhos personalizados para uma ampla variedade de cenários. Por exemplo, você pode criar um StateTrigger para disparar estados diferentes com base no tipo de entrada e, em seguida, aumentar as margens em torno de um controle quando o tipo de entrada é toque. Ou crie um StateTrigger para aplicar estados diferentes com base na família de dispositivos em que o aplicativo está em execução. Para obter exemplos de como compilar gatilhos personalizados e usá-los para criar experiências de interface do usuário otimizadas dentro de um único modo de exibição XAML, consulte a [Amostra de gatilhos de estado](https://go.microsoft.com/fwlink/p/?LinkId=620025).
 
 ### <a name="visual-states-and-styles"></a>Estilos e estados visuais
 
 Você pode usar recursos Style em estados visuais para aplicar um conjunto de alterações de propriedade a vários controles. Para obter mais informações sobre como usar estilos, consulte [Definindo o estilo de controles](../controls-and-patterns/xaml-styles.md).
 
-Neste XAML simplificado da Amostra de gatilhos de estado, um recurso Style é aplicado a um Button para ajustar o tamanho e as margens da entrada por mouse ou toque. Para obter o código completo e a definição do gatilho de estado personalizado, consulte [Amostra de gatilhos de estado](http://go.microsoft.com/fwlink/p/?LinkId=620025).
+Neste XAML simplificado da Amostra de gatilhos de estado, um recurso Style é aplicado a um Button para ajustar o tamanho e as margens da entrada por mouse ou toque. Para obter o código completo e a definição do gatilho de estado personalizado, consulte [Amostra de gatilhos de estado](https://go.microsoft.com/fwlink/p/?LinkId=620025).
 
 ```xaml
 <Page ... >
@@ -389,7 +389,7 @@ else
 }
 ```
 
-Você também pode usar critérios diferentes para determinar para qual página navegar. Para obter mais exemplos, consulte o [Exemplo de vários modos de exibição personalizados](http://go.microsoft.com/fwlink/p/?LinkId=620636), que usa a função [**GetIntegratedDisplaySize**](https://msdn.microsoft.com/library/windows/apps/xaml/dn904185.aspx) para verificar o tamanho físico de uma tela integrada.
+Você também pode usar critérios diferentes para determinar para qual página navegar. Para obter mais exemplos, consulte o [Exemplo de vários modos de exibição personalizados](https://go.microsoft.com/fwlink/p/?LinkId=620636), que usa a função [**GetIntegratedDisplaySize**](https://msdn.microsoft.com/library/windows/apps/xaml/dn904185.aspx) para verificar o tamanho físico de uma tela integrada.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 - [Tutorial: Criar layouts adaptáveis](../basics/xaml-basics-adaptive-layout.md)

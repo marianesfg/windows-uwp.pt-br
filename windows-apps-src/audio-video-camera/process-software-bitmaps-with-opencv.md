@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: Windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: 45f76744070a7557939d1d7f2307113852737072
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ccc3f22d0485faa0df01828f1a6f807d2a1ce555
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938564"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046895"
 ---
 # <a name="process-bitmaps-with-opencv"></a>Processar bitmaps com OpenCV
 
@@ -20,7 +20,7 @@ Este artigo explica como usar a classe **[SoftwareBitmap](https://docs.microsoft
 Os exemplos neste artigo explicam como criar um componente do Tempo de execução do Windows para código nativo, que pode ser usado a partir de um aplicativo UWP, incluindo os aplicativos criados usando C#. Esse componente auxiliar expõe um único método, **Desfocar**, que usará a função de processamento de imagem desfocada do OpenCV. O componente implementa métodos particulares que obtêm um ponteiro para o buffer de dados de imagem subjacente, o qual pode ser usado diretamente pela biblioteca do OpenCV, facilitando a extensão do componente auxiliar para implementar outros recursos de processamento de OpenCV. 
 
 * Para ver as noções básicas de uso do **SoftwareBitmap**, consulte [Criar, editar e salvar imagens de bitmap](imaging.md). 
-* Para saber como usar a biblioteca OpenCV, acesse [http://opencv.org](http://opencv.org).
+* Para saber como usar a biblioteca OpenCV, acesse [http://opencv.org](https://opencv.org).
 * Para ver como usar o componente auxiliar do OpenCV mostrado neste artigo com **[MediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader)** a fim de implementar o processamento de quadros de imagens em tempo real de uma câmera, consulte [Usar o OpenCV com MediaFrameReader](use-opencv-with-mediaframereader.md).
 * Para obter um exemplo de código completo que implementa alguns efeitos diferentes, consulte [Quadros de câmera + Amostra do OpenCV](https://go.microsoft.com/fwlink/?linkid=854003) no repositório do GitHub de amostras universais do Windows.
 

@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ad00090fdfc3ce7be34ef6271d16e76541b584bb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 606cc68aafa4de110f034336cd5d18bd1426a0a7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920673"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047348"
 ---
 # <a name="raw-notification-overview"></a>Visão geral de notificações brutas
 
@@ -113,7 +113,7 @@ Para cada aplicativo, apenas uma tarefa em segundo plano pode ser executada de c
 ## <a name="other-resources"></a>Outros recursos
 
 
-Você pode saber mais baixando a [amostra de notificações brutas](http://go.microsoft.com/fwlink/p/?linkid=241553) para Windows 8.1 e a [amostra de notificações periódicas e por Push](http://go.microsoft.com/fwlink/p/?LinkId=231476) para Windows 8.1 e reutilizando o código-fonte em seu aplicativo do Windows 10.
+Você pode saber mais baixando a [amostra de notificações brutas](https://go.microsoft.com/fwlink/p/?linkid=241553) para Windows 8.1 e a [amostra de notificações periódicas e por Push](https://go.microsoft.com/fwlink/p/?LinkId=231476) para Windows 8.1 e reutilizando o código-fonte em seu aplicativo do Windows 10.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
