@@ -6,14 +6,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e9d0fdee4ba9f44f15c461e5a53dad28700023a4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e50d3613e5f7058e99f2e71ba023fb4191e5c734
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947036"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051099"
 ---
-# <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu aplicativo
+# <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu app
 
 
 Crie aplicativos da Plataforma Universal do Windows (UWP) com tempos de inicialização ótimos melhorando a maneira como você manipula a inicialização e a ativação.
@@ -103,7 +103,7 @@ O desempenho de inicialização em um aplicativo XAML é correlacionado diretame
 -   UserControls e modelos de controle serão expandidos, então, eles também devem ser levados em consideração.
 -   Se você criar qualquer XAML que não apareça na tela, deverá justificar se essas partes do XAML devem ser criadas durante a inicialização.
 
-A janela [Live Visual Tree no Visual Studio](http://blogs.msdn.com/b/visualstudio/archive/2015/02/24/introducing-the-ui-debugging-tools-for-xaml.aspx) mostra a quantidade de elementos filho para cada nó na árvore.
+A janela [Live Visual Tree no Visual Studio](https://blogs.msdn.com/b/visualstudio/archive/2015/02/24/introducing-the-ui-debugging-tools-for-xaml.aspx) mostra a quantidade de elementos filho para cada nó na árvore.
 
 ![Live Visual Tree.](images/live-visual-tree.png)
 
@@ -323,7 +323,7 @@ Os aplicativos que exibem uma página de carregamento no manipulador de carregam
 > End Class
 > ```
 
-Para ver um exemplo do uso de telas iniciais prolongadas, consulte [Exemplo de tela inicial](http://go.microsoft.com/fwlink/p/?linkid=234889).
+Para ver um exemplo do uso de telas iniciais prolongadas, consulte [Exemplo de tela inicial](https://go.microsoft.com/fwlink/p/?linkid=234889).
 
 ### <a name="phase-3"></a>Fase 3
 
@@ -339,7 +339,7 @@ Como exatamente o aplicativo vai reagir a cada fase da inicialização é você 
 
 Os códigos reutilizáveis costumam vir na forma da inclusão de módulos (dlls) inclusos em um projeto. O carregamento desses módulos requer acesso ao disco e, como você pode imaginar, o custo de fazê-lo pode aumentar. Isso tem mais impacto na inicialização a frio, mas pode ter impacto na inicialização a quente, também. No caso do C# e do Visual Basic, o CLR tenta adiar esse custo o máximo possível carregando assemblies sob demanda. Ou seja, o CLR não carrega um módulo até que um método executado faça referência a ele. Portanto, faça referência apenas a assemblies necessários para a inicialização do aplicativo no código de inicialização, para que o CLR não carregue módulos desnecessários. Se tiver caminhos de código não utilizados em seu caminho de inicialização com referências desnecessárias, você poderá migrar esses caminhos de código para outros métodos, a fim de evitar as cargas desnecessárias.
 
-Uma outra maneira de reduzir as cargas de módulos é combinar os módulos do seu aplicativo. Carregar um assembly grande geralmente leva menos tempo do que carregar dois pequenos. Isso nem sempre é possível, e você deverá combinar módulos somente se isso não fizer uma diferença relevante para a produtividade do desenvolvedor ou a capacidade de reutilização do código. Você pode usar ferramentas como o [PerfView](http://go.microsoft.com/fwlink/p/?linkid=251609) ou o [Windows Performance Analyzer (WPA)](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx) para descobrir quais módulos são carregados na inicialização.
+Uma outra maneira de reduzir as cargas de módulos é combinar os módulos do seu aplicativo. Carregar um assembly grande geralmente leva menos tempo do que carregar dois pequenos. Isso nem sempre é possível, e você deverá combinar módulos somente se isso não fizer uma diferença relevante para a produtividade do desenvolvedor ou a capacidade de reutilização do código. Você pode usar ferramentas como o [PerfView](https://go.microsoft.com/fwlink/p/?linkid=251609) ou o [Windows Performance Analyzer (WPA)](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx) para descobrir quais módulos são carregados na inicialização.
 
 ### <a name="make-smart-web-requests"></a>Faça solicitações da Web inteligentes
 

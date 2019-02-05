@@ -6,12 +6,12 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f85570d5c66db1641ec6352526d4db6213e199b4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e7082c3e572493656e8b109da35861ec820d4ec9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944891"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050829"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Processar quadros de áudio com o MediaFrameReader
 
@@ -21,7 +21,7 @@ Este artigo mostra como usar um [**MediaFrameReader**](https://msdn.microsoft.co
 > Os recursos abordados neste artigo só estão disponíveis a partir do Windows 10, versão 1803.
 
 > [!NOTE] 
-> Há um exemplo de aplicativo Universal do Windows que demonstra o uso do **MediaFrameReader** para exibir quadros de origens diferentes, incluindo câmeras em cores, de profundidade e infravermelho. Para obter mais informações, consulte [Exemplo de quadros de câmera](http://go.microsoft.com/fwlink/?LinkId=823230).
+> Há um exemplo de aplicativo Universal do Windows que demonstra o uso do **MediaFrameReader** para exibir quadros de origens diferentes, incluindo câmeras em cores, de profundidade e infravermelho. Para obter mais informações, consulte [Exemplo de quadros de câmera](https://go.microsoft.com/fwlink/?LinkId=823230).
 
 ## <a name="setting-up-your-project"></a>Configurando seu projeto
 O processo de aquisição dos quadros de áudio é basicamente o mesmo para outros tipos de quadros de mídia. Como com qualquer aplicativo que usa **MediaCapture**, você deve declarar que seu aplicativo usa a funcionalidade de *webcam* antes de tentar acessar qualquer dispositivo de câmera. Se seu aplicativo fizer a captura de um dispositivo de áudio, você deve declarar também a funcionalidade do dispositivo *microfone*. 
@@ -79,7 +79,7 @@ Você pode usar um objeto [**AudioFrame**](https://docs.microsoft.com/uwp/api/wi
 * [Processar quadros de mídia com o MediaFrameReader](process-media-frames-with-mediaframereader.md)
 * [Câmera](camera.md)
 * [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Quadros da câmera de exemplo](http://go.microsoft.com/fwlink/?LinkId=823230)
+* [Quadros da câmera de exemplo](https://go.microsoft.com/fwlink/?LinkId=823230)
 * [Gráficos de áudio](audio-graphs.md)
  
 

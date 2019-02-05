@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b65a62c2a6182e3b120f8ae8cb6b5fe3a0bf45aa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c105425be5b8eb56f32956f126a8f6c2c4f30f2e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936258"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050849"
 ---
 # <a name="performance"></a>Desempenho
 
 
 Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não usem muito a bateria. Tecnicamente, o desempenho é um requisito não funcional, mas tratar o desempenho como um recurso ajudará você atender às expectativas dos usuários. Especificar metas e mensurar são fatores importantes. Determine quais são os cenários críticos de desempenho; defina o que significa bom desempenho. Em seguida, faça medições o quanto antes e com frequência suficiente ao longo do ciclo de vida do projeto para cumprir suas metas. Esta seção mostra como organizar seu fluxo de trabalho de desempenho, corrigir problemas de taxa de quadros e falhas de animação e ajustar seu tempo de inicialização, tempo de navegação de página e uso de memória.
 
-Se você ainda não fez isso, uma etapa que vimos resultar em melhorias significativas de desempenho é fazer a portabilidade do seu aplicativo para Windows 10. Várias otimizações XAML (por exemplo, [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) só estão disponíveis em aplicativos do Windows 10. Consulte [portar aplicativos para Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) e a sessão //build/ [movimento para a plataforma Universal do Windows](http://channel9.msdn.com/Events/Build/2015/3-741).
+Se você ainda não fez isso, uma etapa que vimos resultar em melhorias significativas de desempenho é fazer a portabilidade do seu aplicativo para Windows 10. Várias otimizações XAML (por exemplo, [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) só estão disponíveis em aplicativos do Windows 10. Consulte [portar aplicativos para Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) e a sessão //build/ [movimento para a plataforma Universal do Windows](https://channel9.msdn.com/Events/Build/2015/3-741).
 
 | Tópico | Descrição |
 |-------|-------------|

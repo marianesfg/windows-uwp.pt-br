@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: b888bf1373dfb0cac80881117570eb23e8802142
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2c8bb1e352fe4924b45fd56963de324528269a12
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929436"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044470"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Tratar uma tarefa em segundo plano cancelada
 
@@ -135,7 +135,7 @@ Quando uma solicitação de cancelamento é recebida, o método que realiza a ta
 
 Modifique o código da classe de tarefa em segundo plano para verificar a variável de sinalizador enquanto ela está funcionando. Se **\_cancelRequested** fica definida como true, o trabalho de continuar.
 
-O [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) inclui uma verificação que interrompe o retorno de chamada do temporizador periódico se a tarefa em segundo plano é cancelada.
+O [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) inclui uma verificação que interrompe o retorno de chamada do temporizador periódico se a tarefa em segundo plano é cancelada.
 
 ```csharp
 if ((_cancelRequested == false) && (_progress < 100))
@@ -181,7 +181,7 @@ else
 
 Modifique o método **Run** para que depois que o trabalho tiver parado, ele registre se a tarefa foi concluída ou foi cancelada. Esta etapa é válida para tarefas em segundo plano fora do processo porque você precisa de uma maneira de comunicação entre processos quando a tarefa em segundo plano foi cancelada. Para tarefas em segundo plano dentro do processo, você pode simplesmente compartilhar o estado com o aplicativo para indicar que a tarefa foi cancelada.
 
-A [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) registra o status em LocalSettings.
+A [amostra de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) registra o status em LocalSettings.
 
 ```csharp
 if ((_cancelRequested == false) && (_progress < 100))
@@ -255,13 +255,13 @@ else
 
 ## <a name="remarks"></a>Comentários
 
-Você pode baixar a [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) para ver esses exemplos de código contextualizados dentro de métodos.
+Você pode baixar a [amostra de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) para ver esses exemplos de código contextualizados dentro de métodos.
 
-Por questões ilustrativas, o código de exemplo mostra apenas partes do método **Run** (e temporizador de chamada de retorno) da [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+Por questões ilustrativas, o código de exemplo mostra apenas partes do método **Run** (e temporizador de chamada de retorno) da [amostra de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666).
 
 ## <a name="run-method-example"></a>Exemplo do método Run
 
-A concluir o método **Run** e o código de retorno de chamada do temporizador, da [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) são mostrados abaixo para o contexto.
+A concluir o método **Run** e o código de retorno de chamada do temporizador, da [amostra de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) são mostrados abaixo para o contexto.
 
 ```csharp
 // The Run method is the entry point of a background task.
@@ -414,4 +414,4 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 - [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
 - [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 - [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-- [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+- [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)

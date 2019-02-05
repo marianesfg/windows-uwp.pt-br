@@ -6,12 +6,12 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: windows 10, uwp, geocodificação, mapa, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: e8b0efe39578974090844a4224055821c29f8ced
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a30ca89242b15866019fffc6972bdae7086f3f7e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920311"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046439"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>Executar geocódigo e geocódigo reverso
 
@@ -121,8 +121,8 @@ town = Redmond
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Exemplo do aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Exemplo do aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo: Aproveitando mapas e localização no telefone, Tablet e computador em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)

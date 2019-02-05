@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, responder, respostas, examine
 ms.localizationpriority: medium
-ms.openlocfilehash: 1feb6f463fe018d356d678b23199716ad0cbd3e8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0d45b5144bb13e66c506c4a55115bf252288064d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920620"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048203"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder às críticas dos clientes
 
@@ -46,7 +46,7 @@ Ao responder à crítica de um cliente, você deve seguir estas diretrizes. Eles
 >
 > A Microsoft se reserva o direito de revogar a permissão para um desenvolvedor enviar respostas por qualquer motivo, inclusive se suas respostas gerarem um número excepcionalmente alto de relatórios de respostas inadequadas ou caso solicitem um número excepcionalmente alto de clientes que optam por não receber respostas a análises.
 
-Sua relação com seus clientes cabe a você. A Microsoft não se envolve em controvérsias entre desenvolvedores e clientes. No entanto, se uma análise do seu aplicativo contiver linguagem ofensiva, profano ou abusiva, abra uma [solicitação de suporte](http://go.microsoft.com/fwlink/p/?LinkID=401178).
+Sua relação com seus clientes cabe a você. A Microsoft não se envolve em controvérsias entre desenvolvedores e clientes. No entanto, se uma análise do seu aplicativo contiver linguagem ofensiva, profano ou abusiva, abra uma [solicitação de suporte](https://go.microsoft.com/fwlink/p/?LinkID=401178).
 
 
 ## <a name="use-customer-reviews-to-improve-your-app"></a>Use análises dos clientes para melhorar seu aplicativo

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, entrada, amostra
 ms.localizationpriority: medium
-ms.openlocfilehash: aee239f76c3d4431426f0bc9fe519a59f8f48838
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d545f696a93bfa8416e1a772ecc015867a3615c2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923436"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045442"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Adicionando entrada e interatividade ao exemplo do Marble Maze
 
@@ -21,7 +21,7 @@ ms.locfileid: "8923436"
 Jogos da Plataforma Universal do Windows (UWP) funcionam em uma variedade de dispositivos, como computadores de mesa, laptops e tablets. Um dispositivo pode ter diversos mecanismos de entrada e controle. Este documento descreve as principais práticas a serem consideradas quando se trabalha com dispositivos de entrada e mostra como o Marble Maze as aplica.
 
 > [!NOTE]
-> O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
+> O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](https://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 Seguem alguns dos pontos principais discutidos neste documento para quando você trabalhar com entrada no seu jogo:

@@ -6,12 +6,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: abc2ba7287541d97208899b51e81110b464b6cdd
-ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
+ms.openlocfilehash: 151584f15013c9d4ab7d9566e175b957a7a84149
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9014711"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9045735"
 ---
 # <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>Compartilhar código entre um aplicativo da área de trabalho e um aplicativo UWP
 
@@ -270,7 +270,7 @@ Para começar com Android, iOS e projetos de plataforma cruzada, consulte o [Por
 
 **Encontrar respostas para suas dúvidas**
 
-Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Fazer comentários ou sugestões de recursos**
 

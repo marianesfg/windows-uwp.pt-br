@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 11467a45021da7898c2b617e3b1b01312c795c4c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3c17fb7de151308e41a2e613d86a9c0413c7517e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947530"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047790"
 ---
 # <a name="epson-escpos-with-formatting"></a>ESC/POS Epson com formatação
 
@@ -59,4 +59,4 @@ printJob.PrintLine(DoubleOn + "Here is some large text." + DoubleOff);
 printJob.ExecuteAsync();
 ```
 
-Para saber mais sobre ESC/POS, incluindo os comandos disponíveis, consulte as [Perguntas frequentes sobre ESC/POS Epson](http://content.epson.de/fileadmin/content/files/RSD/downloads/escpos.pdf). Para obter detalhes sobre [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) e todas as funcionalidades disponíveis, consulte [Impressora PointofService](https://msdn.microsoft.com/library/windows/apps/Mt426652) no MSDN.
+Para saber mais sobre ESC/POS, incluindo os comandos disponíveis, consulte as [Perguntas frequentes sobre ESC/POS Epson](https://content.epson.de/fileadmin/content/files/RSD/downloads/escpos.pdf). Para obter detalhes sobre [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) e todas as funcionalidades disponíveis, consulte [Impressora PointofService](https://msdn.microsoft.com/library/windows/apps/Mt426652) no MSDN.

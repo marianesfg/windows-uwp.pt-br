@@ -6,12 +6,12 @@ keywords: tinta, escrita à tinta, tutorial
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8affb83195e1e9048e0a363a34893ae04561dd14
-ms.sourcegitcommit: 2ef3d22a30afe853de891280e11d96e5e1ab62d1
+ms.openlocfilehash: 3bc28a4b1cb8afd70ef68a2e297b51ad0a5a0fc5
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "8981885"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046579"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>Tutorial: Oferecer suporte à tinta no aplicativo UWP
 
@@ -38,7 +38,7 @@ Com o Windows Ink, você pode fornecer aos clientes o equivalente digital de pra
 * Um computador (ou uma máquina virtual) executando a versão atual do Windows 10
 * [Visual Studio 2017 e o SDK do RS2](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
-* Dependendo da configuração, talvez seja necessário instalar o pacote NuGet [Microsoft.NETCore.UniversalWindowsPlatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform) e habilitar o **modo de desenvolvedor** nas configurações do sistema (Configurações -> atualização & segurança -> para desenvolvedores -> Use recursos de desenvolvedor).
+* Dependendo da configuração, talvez seja necessário instalar o pacote NuGet [Microsoft.NETCore.UniversalWindowsPlatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform) e habilitar o **modo de desenvolvedor** nas configurações do sistema (Configurações- gt _ atualização & segurança- gt _ para desenvolvedores- gt _ Use recursos de desenvolvedor).
 * Se você for novato no desenvolvimento de aplicativos UWP (Plataforma Universal do Windows) com o Visual Studio, dê uma olhada nestes tópicos antes de iniciar este tutorial:  
     * [Prepare-se para começar](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
     * [Criar um aplicativo "Olá, Mundo" (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
@@ -69,7 +69,7 @@ Esses objetos fornecem a maior parte da experiência de escrita à tinta em apli
 | [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) | Um controle de plataforma XAMLUI que, por padrão, recebe e exibe todas as entradas de uma caneta como um traço de tinta ou um traço para apagar. |
 | [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) | Objeto code-behind, instanciado juntamente com um controle [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) (exposto por meio da propriedade [**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter)). Esse objeto fornece todas as funcionalidades de escrita à tinta padrão expostas pelo [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), juntamente com um conjunto abrangente de APIs para personalização adicional. |
 | [**InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar) | Um controle de plataforma XAMLUI que contém uma coleção personalizável e extensível de botões que ativam recursos relacionados à tinta em um associado [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas). |
-| [**IInkD2DRenderer**](https://docs.microsoft.com/windows/desktop/api/inkrenderer/nn-inkrenderer-iinkd2drenderer)<br/>Não abordaremos funcionalidade aqui; para obter mais informações, consulte o [Exemplo de tinta complexo](http://go.microsoft.com/fwlink/p/?LinkID=620314). | Permite a renderização de traços de tinta no contexto designado do dispositivo Direct2D de um aplicativo universal do Windows, e não no controle padrão [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas). |
+| [**IInkD2DRenderer**](https://docs.microsoft.com/windows/desktop/api/inkrenderer/nn-inkrenderer-iinkd2drenderer)<br/>Não abordaremos funcionalidade aqui; para obter mais informações, consulte o [Exemplo de tinta complexo](https://go.microsoft.com/fwlink/p/?LinkID=620314). | Permite a renderização de traços de tinta no contexto designado do dispositivo Direct2D de um aplicativo universal do Windows, e não no controle padrão [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas). |
 
 ## <a name="step-1-run-the-sample"></a>Etapa 1: Executar o exemplo
 
@@ -474,9 +474,9 @@ Parabéns, você concluiu o tutorial **Entrada: Suporte a tinta no aplicativo UW
 * [Salvar e carregar traços de tinta da área de transferência](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
 * [Exemplo de localização e orientação da barra de ferramentas de tinta (básico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)
 * [Exemplo de localização e orientação da barra de ferramentas de tinta (dinâmico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)
-* [Exemplo de tinta simples (C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Amostra de tinta complexa (C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [Exemplo de tinta (JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Exemplo de tinta simples (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Amostra de tinta complexa (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Exemplo de tinta (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Tutorial de Introdução: oferecer suporte à tinta em seu aplicativo UWP](https://aka.ms/appsample-ink)
 * [Exemplo de livro de colorir](https://aka.ms/cpubsample-coloringbook)
 * [Exemplo de anotações da família](https://aka.ms/cpubsample-familynotessample)

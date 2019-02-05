@@ -1,6 +1,6 @@
 ---
 title: Tratar a suspensão do aplicativo
-description: Saiba como salvar dados importantes quando o sistema suspende o seu aplicativo.
+description: Saiba como salvar dados de aplicativo importantes quando o sistema suspende o seu aplicativo.
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
 ms.date: 07/06/2018
 ms.topic: article
@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: e765faeabc754581efc769804e2daf4bfe7f9671
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e440812861cf853810f9fee597c807b439dda426
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941327"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044141"
 ---
 # <a name="handle-app-suspend"></a>Tratar a suspensão do aplicativo
 
@@ -137,7 +137,7 @@ O sistema tenta manter o aplicativo e seus dados na memória enquanto ele está 
 
 O sistema não notifica um aplicativo quando ele está encerrado, por isso seu aplicativo deve salvar seus dados de aplicativo e liberar identificadores de arquivo e recursos exclusivos quando suspenso e restaurá-los quando ativado após o encerramento.
 
-Se você fizer uma chamada assíncrona no manipulador, o controle será retornado imediatamente daquela chamada assíncrona. Isso significa que a execução pode retornar do manipulador de eventos e o aplicativo mudará para o próximo estado, mesmo que a chamada assíncrona ainda não tenha sido concluída. Use o método [**GetDeferral**](http://aka.ms/Kt66iv) no objeto [**EnteredBackgroundEventArgs**](http://aka.ms/Ag2yh4) que é passado para o manipulador de eventos para atrasar a suspensão até depois que você chamar o método [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) no objeto [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) retornado.
+Se você fizer uma chamada assíncrona no manipulador, o controle será retornado imediatamente daquela chamada assíncrona. Isso significa que a execução pode retornar do manipulador de eventos e o aplicativo mudará para o próximo estado, mesmo que a chamada assíncrona ainda não tenha sido concluída. Use o método [**GetDeferral**](https://aka.ms/Kt66iv) no objeto [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) que é passado para o manipulador de eventos para atrasar a suspensão até depois que você chamar o método [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) no objeto [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) retornado.
 
 Um adiamento não aumenta a quantidade de código que precisa ser executado antes que o aplicativo seja encerrado. Ele somente atrasa o encerramento até que o método *Complete* do adiamento seja chamado ou o prazo termine, *o que ocorrer primeiro*. Para estender o tempo em que o uso de estado Suspending [ **ExtendedExecutionSession**](run-minimized-with-extended-execution.md)
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e431694f3f0effb6fd5e7688b146109dfc1f5dc7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 26eb371e767f0c1e7f3d5855cf68728958c0cda3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946018"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044989"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a>Determinando a disponibilidade de arquivos do Microsoft OneDrive
 
@@ -53,7 +53,7 @@ As etapas a seguir ilustram como determinar se um arquivo está disponível no m
 
 1.  Declare uma funcionalidade apropriada para a biblioteca que você quer acessar.
 2.  Inclua o namespace [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346). Esse namespace inclui os tipos para gerenciamento de arquivos, pastas e configurações de aplicativos. Inclui também o tipo [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) necessário.
-3.  Obtenha um objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) para o(s) arquivo(s) desejado(s). Se estiver enumerando uma biblioteca, essa etapa será normalmente realizada pela chamada ao método [**StorageFolder.CreateFileQuery**](https://msdn.microsoft.com/library/windows/apps/BR227252) e, depois, chamando o método [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276.aspx) do objeto resultante [**StorageFileQueryResult**](https://msdn.microsoft.com/library/windows/apps/BR208046). O método **GetFilesAsync** retorna uma coleção [IReadOnlyList](http://go.microsoft.com/fwlink/p/?LinkId=324970) de objetos **StorageFile**.
+3.  Obtenha um objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) para o(s) arquivo(s) desejado(s). Se estiver enumerando uma biblioteca, essa etapa será normalmente realizada pela chamada ao método [**StorageFolder.CreateFileQuery**](https://msdn.microsoft.com/library/windows/apps/BR227252) e, depois, chamando o método [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276.aspx) do objeto resultante [**StorageFileQueryResult**](https://msdn.microsoft.com/library/windows/apps/BR208046). O método **GetFilesAsync** retorna uma coleção [IReadOnlyList](https://go.microsoft.com/fwlink/p/?LinkId=324970) de objetos **StorageFile**.
 4.  Quando você tiver acesso a um objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) representando os arquivos desejados, o valor da propriedade [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) refletirá se o arquivo está ou não disponível.
 
 O método genérico a seguir ilustra como enumerar qualquer pasta e retorna a coleção de objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) dessa pasta. O método chamado faz a iteração sobre a coleção retornada, referenciando a propriedade [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) de cada arquivo.

@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp, assíncrona
 ms.localizationpriority: medium
-ms.openlocfilehash: 50e8bae0db888b947c568deb50fa5f2fc227e734
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a8349b9a96dd67d64abb368f0fdadd822af2fe84
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924736"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048073"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 Este tópico descreve a programação assíncrona na plataforma Universal do Windows (UWP) e sua representação em c#, Microsoft Visual Basic.NET, C++ e JavaScript.
@@ -63,7 +63,7 @@ Em C++/CX, a programação assíncrona se baseia na [**classe task**](https://ms
 A [**função create\_async**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750102.aspx) dá suporte à produção de APIs assíncronas que podem ser consumidas a partir de JavaScript ou de qualquer outra linguagem que dê suporte à UWP. Para obter mais informações, consulte [Criando operações assíncronas em C++ c++ /CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh750082.aspx).
 
 ## <a name="asynchronous-patterns-in-uwp-using-javascript"></a>Padrões assíncronos em UWP usando JavaScript
-No JavaScript, a programação assíncrona segue o padrão proposto [Common JS Promises/A](http://wiki.commonjs.org/wiki/Promises/A) ao ter métodos assíncronos retornando objetos promise. As promessas são usadas na UWP e na Biblioteca do Windows para JavaScript.
+No JavaScript, a programação assíncrona segue o padrão proposto [Common JS Promises/A](https://wiki.commonjs.org/wiki/Promises/A) ao ter métodos assíncronos retornando objetos promise. As promessas são usadas na UWP e na Biblioteca do Windows para JavaScript.
 
 Um objeto promise representa um valor que será preenchido no futuro. Na UWP, você obtém um objeto promise a partir de uma função factory, cujo nome por convenção termina com "Async".
 
@@ -71,5 +71,5 @@ Em muitos casos, chamar uma função assíncrona é quase tão simples quando ch
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Chamar APIs assíncronas no Visual Basic ou C#](call-asynchronous-apis-in-csharp-or-visual-basic.md)
-* [Programação assíncrona com Async e Await (C# e Visual Basic)](http://msdn.microsoft.com/library/hh191443(vs.110).aspx)
+* [Programação assíncrona com Async e Await (C# e Visual Basic)](https://msdn.microsoft.com/library/hh191443(vs.110).aspx)
 * [Cenários de recursos de exemplo de Reversi: código assíncrono](https://msdn.microsoft.com/library/windows/apps/xaml/jj712233.aspx#async)

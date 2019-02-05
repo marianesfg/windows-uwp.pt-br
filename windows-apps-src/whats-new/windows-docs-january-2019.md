@@ -5,18 +5,18 @@ keywords: Novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 1/17/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f224663506cbb60f6c1476caccb5ecffefeaf7b
-ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
+ms.openlocfilehash: cc5323ba12fa72fb5350e62f74206ea72fe96497
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9014386"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046126"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-january-2019"></a>Novidades dos documentos de desenvolvedor do Windows em janeiro de 2019
 
 A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. Visões gerais de recurso, diretrizes para desenvolvedores e vídeos a seguir foram disponibilizados no mês de janeiro.
 
-[Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+[Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="features"></a>Recursos
 
@@ -70,7 +70,7 @@ Interessado em criar um novo aplicativo da área de trabalho? Confira nossa pág
 
 ### <a name="progressive-web-apps"></a>Aplicativos Web progressivos
 
-Aplicativos Web progressivos são sites que funcionam como os aplicativos nativos em diferentes navegadores e uma ampla variedade de dispositivos Windows 10. [Assista ao vídeo](https://youtu.be/ugAewC3308Y) para saber mais e, em seguida, [Confira os documentos](http://aka.ms/Windows-PWA) para começar.
+Aplicativos Web progressivos são sites que funcionam como os aplicativos nativos em diferentes navegadores e uma ampla variedade de dispositivos Windows 10. [Assista ao vídeo](https://youtu.be/ugAewC3308Y) para saber mais e, em seguida, [Confira os documentos](https://aka.ms/Windows-PWA) para começar.
 
 ### <a name="vs-code-series"></a>Série de código do VS
 

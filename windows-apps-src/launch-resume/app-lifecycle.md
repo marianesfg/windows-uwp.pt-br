@@ -6,12 +6,12 @@ ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8555f9594ac3d2e7ea1b9f7006750c1084db3d9f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3f70d768ad6589e210826f94f73249ed1ea272e1
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944093"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045605"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>O ciclo de vida do aplicativo da Plataforma Universal do Windows (UWP) para Windows 10
 
@@ -64,7 +64,7 @@ Por causa da pré-inicialização, o método **OnLaunched ()** do aplicativo pod
 
 O Windows exibe a tela inicial do aplicativo quando ele é iniciado. Para configurar a tela inicial, consulte [Adicionando uma tela inicial](https://msdn.microsoft.com/library/windows/apps/xaml/hh465331).
 
-Enquanto a tela inicial é exibida, o aplicativo deve registrar manipuladores de eventos e configurar qualquer interface do usuário personalizada necessária para a página inicial. Note que essas tarefas em execução no construtor do aplicativo e no **OnLaunched ()** devem ser concluídas dentro de alguns segundos ou o sistema pode achar que seu aplicativo não está respondendo e encerrá-lo. Se um aplicativo precisa solicitar dados da rede ou recuperar grandes quantidades de dados do disco, essas atividades deverão ser concluídas fora da inicialização. Um aplicativo pode usar sua própria interface do usuário de carregamento personalizada ou uma tela inicial estendida enquanto aguarda a conclusão dessas operações de longa duração. Consulte [Exibir uma tela inicial por mais tempo](create-a-customized-splash-screen.md) e [Exemplo de tela inicial](http://go.microsoft.com/fwlink/p/?linkid=234889) para saber mais.
+Enquanto a tela inicial é exibida, o aplicativo deve registrar manipuladores de eventos e configurar qualquer interface do usuário personalizada necessária para a página inicial. Note que essas tarefas em execução no construtor do aplicativo e no **OnLaunched ()** devem ser concluídas dentro de alguns segundos ou o sistema pode achar que seu aplicativo não está respondendo e encerrá-lo. Se um aplicativo precisa solicitar dados da rede ou recuperar grandes quantidades de dados do disco, essas atividades deverão ser concluídas fora da inicialização. Um aplicativo pode usar sua própria interface do usuário de carregamento personalizada ou uma tela inicial estendida enquanto aguarda a conclusão dessas operações de longa duração. Consulte [Exibir uma tela inicial por mais tempo](create-a-customized-splash-screen.md) e [Exemplo de tela inicial](https://go.microsoft.com/fwlink/p/?linkid=234889) para saber mais.
 
 Depois que o aplicativo conclui a inicialização, ele entra no estado **Running** e a tela inicial desaparece e todos os recursos e objetos são limpos.
 
@@ -129,7 +129,7 @@ Lembre-se de que se seu aplicativo tiver atividade em segundo plano em andamento
 
 ### <a name="asynchronous-work-and-deferrals"></a>Trabalho assíncrono e adiamentos
 
-Se você fizer uma chamada assíncrona no manipulador, o controle será retornado imediatamente daquela chamada assíncrona. Isso significa que a execução pode retornar do manipulador de eventos e o aplicativo mudará para o próximo estado, mesmo que a chamada assíncrona ainda não tenha sido concluída. Use o método [**GetDeferral**](http://aka.ms/Kt66iv) no objeto [**EnteredBackgroundEventArgs**](http://aka.ms/Ag2yh4) que é passado para o manipulador de eventos para atrasar a suspensão até depois que você chamar o método [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) no objeto [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) retornado.
+Se você fizer uma chamada assíncrona no manipulador, o controle será retornado imediatamente daquela chamada assíncrona. Isso significa que a execução pode retornar do manipulador de eventos e o aplicativo mudará para o próximo estado, mesmo que a chamada assíncrona ainda não tenha sido concluída. Use o método [**GetDeferral**](https://aka.ms/Kt66iv) no objeto [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) que é passado para o manipulador de eventos para atrasar a suspensão até depois que você chamar o método [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) no objeto [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) retornado.
 
 Um adiamento não aumenta a quantidade de código que precisa ser executado antes que o aplicativo seja encerrado. Ele somente atrasa o encerramento até que o método *Complete* do adiamento seja chamado ou o prazo termine, *o que ocorrer primeiro*.
 
@@ -191,7 +191,7 @@ Recomendamos que os aplicativos não sejam fechados programaticamente a menos qu
 
 A experiência de falha do sistema foi projetada para que os usuários voltem ao que eles estavam fazendo o mais rápido possível. Você não deve fornecer uma caixa de diálogo de aviso ou outra notificação porque isso atrasará o usuário.
 
-Se o aplicativo falhar, parar de responder ou gerar uma exceção, um relatório do problema será enviado para a Microsoft segundo as [configurações de comentários e diagnóstico](http://go.microsoft.com/fwlink/p/?LinkID=614828). A Microsoft fornece um subconjunto dos dados de erro no relatório de problema para você para que você possa usá-lo para melhorar o aplicativo. Você pode ver esses dados na página Qualidade do aplicativo no Painel.
+Se o aplicativo falhar, parar de responder ou gerar uma exceção, um relatório do problema será enviado para a Microsoft segundo as [configurações de comentários e diagnóstico](https://go.microsoft.com/fwlink/p/?LinkID=614828). A Microsoft fornece um subconjunto dos dados de erro no relatório de problema para você para que você possa usá-lo para melhorar o aplicativo. Você pode ver esses dados na página Qualidade do aplicativo no Painel.
 
 Quando o usuário ativa um aplicativo após um travamento, o manipulador de eventos de ativação recebe em [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) o valor **NotRunning**, e deve exibir os dados e a interface do usuário iniciais. Após um travamento, não use sistematicamente os dados do aplicativo que usaria para **Resuming** com **Suspended** porque esses dados podem estar corrompidos; consulte [Guidelines for app suspend and resume](https://msdn.microsoft.com/library/windows/apps/hh465088).
 

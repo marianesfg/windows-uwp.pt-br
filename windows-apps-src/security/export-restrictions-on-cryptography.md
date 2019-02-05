@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: e0e57e28fe36ae506d29e2b51a31c756513fdd08
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6d445e5164d542a7e10f136a5fb238c575f35c2d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942487"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048806"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Restrições de exportação na criptografia
 
@@ -25,9 +25,9 @@ O Bureau of Industry and Security do Departamento de Comércio dos Estados Unido
 
  
 
-Para saber mais sobre o Departamento de Comércio dos EUA e o Bureau of Industry and Security, consulte [Bureau of Industry and Security](http://go.microsoft.com/fwlink/p/?LinkID=245644).
+Para saber mais sobre o Departamento de Comércio dos EUA e o Bureau of Industry and Security, consulte [Bureau of Industry and Security](https://go.microsoft.com/fwlink/p/?LinkID=245644).
 
-Para saber mais sobre os regulamentos EAR (Controle de exportações dos EUA) que regem a exportação de tecnologia que inclui criptografia, consulte [Controles de EAR para itens que usam criptografia](http://go.microsoft.com/fwlink/p/?LinkID=245645).
+Para saber mais sobre os regulamentos EAR (Controle de exportações dos EUA) que regem a exportação de tecnologia que inclui criptografia, consulte [Controles de EAR para itens que usam criptografia](https://go.microsoft.com/fwlink/p/?LinkID=245645).
 
 ## <a name="governed-uses"></a>Usos controlados
 
@@ -43,7 +43,7 @@ Primeiro, determine se seu aplicativo usa um tipo de criptografia controlado pel
 -   Proteção contra cópia ou DRM (gerenciamento de direitos digitais)
 -   Proteção antivírus
 
-Para obter a lista completa e atualizada de aplicativos de criptografia, consulte [Controles de EAR para itens que usam criptografia](http://go.microsoft.com/fwlink/p/?LinkID=245645).
+Para obter a lista completa e atualizada de aplicativos de criptografia, consulte [Controles de EAR para itens que usam criptografia](https://go.microsoft.com/fwlink/p/?LinkID=245645).
 
 ## <a name="non-restricted-uses"></a>Usos não restritos
 
@@ -55,8 +55,8 @@ Observe que alguns dos aplicativos de criptografia não são restritos. Estas s�
 -   Gerenciamento de direitos digitais
 -   Usando assinaturas digitais
 
-Para obter a lista completa e atualizada de aplicativos de criptografia, consulte [Controles de EAR para itens que usam criptografia](http://go.microsoft.com/fwlink/p/?LinkID=245645).
+Para obter a lista completa e atualizada de aplicativos de criptografia, consulte [Controles de EAR para itens que usam criptografia](https://go.microsoft.com/fwlink/p/?LinkID=245645).
 
 Se seu aplicativo chamar, der suporte, contiver ou usar criptografia para qualquer tarefa que não esteja nessa lista, ele precisará de um ECCN (Número de classificação de mercadoria de exportação).
 
-Se você não tiver um ECCN, consulte [Perguntas e respostas sobre ECCN](http://go.microsoft.com/fwlink/p/?LinkID=245646).
+Se você não tiver um ECCN, consulte [Perguntas e respostas sobre ECCN](https://go.microsoft.com/fwlink/p/?LinkID=245646).

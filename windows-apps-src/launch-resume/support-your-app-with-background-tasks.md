@@ -6,12 +6,12 @@ ms.date: 08/21/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 2413a27c12a9b36f0fd57482492414e7b5a379b6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 71026762933267e1cad9a1cd9b6581eed1dadbb8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934771"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044563"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Dar suporte a seu app com tarefas em segundo plano
 
@@ -158,7 +158,7 @@ Seu aplicativo pode acessar sensores e dispositivos periféricos a partir de uma
 > [!IMPORTANT]
 > O **DeviceUseTrigger** e o **DeviceServicingTrigger** não podem ser usados com tarefas em segundo plano dentro do processo.
 
-Algumas operações críticas de dispositivos, como atualizações de firmware de longa execução não podem ser executadas com o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Elas podem ser executadas somente no computador por um aplicativo privilegiado que usa o [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Um *aplicativo privilegiado* é um aplicativo que o fabricante do dispositivo autorizou a executar tais operações. Os metadados do dispositivo são usados para especificar qual aplicativo, se houver, foi designado como o aplicativo privilegiado para um dispositivo. Para obter mais informações, consulte o [dispositivo sincronização e atualização para aplicativos de dispositivo da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=306619)
+Algumas operações críticas de dispositivos, como atualizações de firmware de longa execução não podem ser executadas com o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Elas podem ser executadas somente no computador por um aplicativo privilegiado que usa o [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Um *aplicativo privilegiado* é um aplicativo que o fabricante do dispositivo autorizou a executar tais operações. Os metadados do dispositivo são usados para especificar qual aplicativo, se houver, foi designado como o aplicativo privilegiado para um dispositivo. Para obter mais informações, consulte o [dispositivo sincronização e atualização para aplicativos de dispositivo da Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkId=306619)
 
 ## <a name="managing-background-tasks"></a>Gerenciando tarefas em segundo plano
 

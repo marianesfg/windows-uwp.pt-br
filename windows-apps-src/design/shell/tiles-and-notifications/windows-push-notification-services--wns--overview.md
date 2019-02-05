@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f131ad229b4ba22f7fa4652aa302e3596819f206
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 267e6e1cf9a004b6703e000b694274b802220f60
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926180"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047521"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Visão geral dos Serviços de Notificação por Push do Windows (WNS)
  
@@ -51,7 +51,7 @@ Depois o aplicativo cria com êxito um URI de canal, ele o envia para seu servi�
 
 ### <a name="important-notes"></a>Observações importantes
 
--   Não podemos garantir que o URI do canal de notificação de um aplicativo permanecerá sempre o mesmo. Aconselhamos que o aplicativo solicite um novo canal a cada vez que for executado e atualize seu serviço quando o URI for alterado. O desenvolvedor nunca deve modificar o URI do canal e deve considerá-lo como uma cadeia de caracteres de caixa preta. Nesse momento, os URIs do canal expiram após 30 dias. Se seu aplicativo do Windows 10 renovar periodicamente o canal em segundo plano, em seguida, você pode baixar a [amostra de notificações periódicas e por Push](http://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 e reutilizar o código-fonte e/ou o padrão que ele demonstra.
+-   Não podemos garantir que o URI do canal de notificação de um aplicativo permanecerá sempre o mesmo. Aconselhamos que o aplicativo solicite um novo canal a cada vez que for executado e atualize seu serviço quando o URI for alterado. O desenvolvedor nunca deve modificar o URI do canal e deve considerá-lo como uma cadeia de caracteres de caixa preta. Nesse momento, os URIs do canal expiram após 30 dias. Se seu aplicativo do Windows 10 renovar periodicamente o canal em segundo plano, em seguida, você pode baixar a [amostra de notificações periódicas e por Push](https://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 e reutilizar o código-fonte e/ou o padrão que ele demonstra.
 -   A interface entre o serviço de nuvem e o aplicativo cliente é implementada por você, o desenvolvedor. Recomendamos que o aplicativo passe por um processo de autenticação com o seu próprio serviço e transmita dados por meio de um protocolo seguro, como HTTPS.
 -   É importante que o serviço na nuvem sempre garanta que o URI do canal use o domínio "notify.windows.com". O serviço nunca deve enviar as notificações por push para um canal em algum outro domínio. Se o retorno de chamada para o aplicativo fosse comprometido, um invasor mal-intencionado poderia enviar um URI de canal para falsificar o WNS. Sem inspecionar o domínio, o serviço na nuvem poderia revelar as informações a este invasor de forma inconsciente.
 -   Se o seu serviço na nuvem tentar entregar uma notificação para um canal expirado, o WNS retornará um [código de resposta 410](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#WNSResponseCodes). Em resposta a esse código, seu serviço não deverá mais tentar enviar notificações a esse URI.
@@ -61,7 +61,7 @@ Depois o aplicativo cria com êxito um URI de canal, ele o envia para seu servi�
 
 Para enviar uma notificação, o serviço na nuvem deve ser autenticado por meio do WNS. A primeira etapa neste processo ocorre quando você registra o aplicativo no Painel da Microsoft Store. Durante o processo de registro, o aplicativo recebe um SID (Identificador do Pacote de Segurança) e uma chave secreta. Estas informações são usadas pelo serviço na nuvem para autenticar no WNS.
 
-O esquema de autenticação do WNS é implementado usando o perfil de credenciais de cliente do protocolo [OAuth 2.0](http://go.microsoft.com/fwlink/p/?linkid=226787). O serviço na nuvem autentica no WNS fornecendo suas credenciais (SID do pacote e chave secreta). Em troca, ele recebe um token de acesso. Esse token de acesso permite que um serviço na nuvem envie uma notificação. O token é necessário a cada solicitação de notificação enviada para o WNS.
+O esquema de autenticação do WNS é implementado usando o perfil de credenciais de cliente do protocolo [OAuth 2.0](https://go.microsoft.com/fwlink/p/?linkid=226787). O serviço na nuvem autentica no WNS fornecendo suas credenciais (SID do pacote e chave secreta). Em troca, ele recebe um token de acesso. Esse token de acesso permite que um serviço na nuvem envie uma notificação. O token é necessário a cada solicitação de notificação enviada para o WNS.
 
 Um nível elevado, a cadeia de informações é a seguinte:
 

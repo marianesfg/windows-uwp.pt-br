@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6178e2072721ad8514ba7ddfc0ae8f99ab59d34c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4332bd0b19d381937e477efc472634d6d81afd58
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920578"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046489"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>Namespaces XAML e mapeamento de namespace
 
@@ -65,7 +65,7 @@ O namespace XAML "d:" foi projetado para auxiliar o designer, especificamente na
 
 -   **Atributo d:DataContext:** Você pode definir esse atributo em uma raiz de página ou um controle para substituir qualquer [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) explícito ou herdado que o objeto tenha.
 -   **Atributo d:DesignSource:** Especifica uma fonte de dados de tempo de design para um [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833), substituindo [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835).
--   **Extensões de marcação d:DesignInstance e d:DesignData:** Essas extensões de marcação são usadas para fornecer os recursos de dados de tempo de design para **d:DataContext** ou **d:DesignSource**. Não documentamos totalmente aqui a maneira de usar os recursos de dados de tempo de design. Para obter mais informações, consulte [Atributos de tempo de design](http://go.microsoft.com/fwlink/p/?LinkId=272504). Para obter alguns exemplos de uso, consulte [Dados de exemplo na área de design e para a criação de protótipo](https://msdn.microsoft.com/library/windows/apps/mt517866).
+-   **Extensões de marcação d:DesignInstance e d:DesignData:** Essas extensões de marcação são usadas para fornecer os recursos de dados de tempo de design para **d:DataContext** ou **d:DesignSource**. Não documentamos totalmente aqui a maneira de usar os recursos de dados de tempo de design. Para obter mais informações, consulte [Atributos de tempo de design](https://go.microsoft.com/fwlink/p/?LinkId=272504). Para obter alguns exemplos de uso, consulte [Dados de exemplo na área de design e para a criação de protótipo](https://msdn.microsoft.com/library/windows/apps/mt517866).
 
 ### **<a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 

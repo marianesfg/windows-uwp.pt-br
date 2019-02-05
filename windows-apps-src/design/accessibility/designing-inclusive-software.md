@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 52504855a83b8fdf30de311028c39e30ddd2b026
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 88d2377f95efbe79853b1416213a25e22ed7d5f0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921139"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044743"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a>Projetando software inclusivo para Windows 10  
 
@@ -104,7 +104,7 @@ Em resumo, siga essas sete etapas para garantir que o seu software seja inclusiv
 7.  Ofereça seu produto final e documente sua implementação para quem possa trabalhar no projeto depois de você.  
 
 ## <a name="related-topics"></a>Tópicos relacionados  
-* [Design inclusivo](http://design.microsoft.com/inclusive)
+* [Design inclusivo](https://design.microsoft.com/inclusive)
 * [Software de engenharia para acessibilidade](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Hub de desenvolvedor de acessibilidade da Microsoft](https://developer.microsoft.com/windows/accessible-apps)
 * [Desenvolvendo aplicativos inclusivos do Windows](developing-inclusive-windows-apps.md) 

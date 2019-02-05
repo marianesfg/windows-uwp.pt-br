@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 13bc8f2558b3e3f15d7329697a41b177777b6e7a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 26b665f68932f7a90127ee99414f984f5d9f2005
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918987"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046775"
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>Acessar sensores e dispositivos a partir de uma tarefa em segundo plano
 
@@ -20,7 +20,7 @@ ms.locfileid: "8918987"
 
 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando seu app em primeiro plano estiver suspenso. Por exemplo, dependendo de onde o seu aplicativo estiver sendo executado, ele poderá usar uma tarefa em segundo plano para sincronizar dados com dispositivos ou monitorar sensores. Para ajudar a economizar a duração da bateria e assegurar o consentimento do usuário adequado, o uso do [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) está sujeito a políticas descritas neste tópico.
 
-Para acessar sensores ou dispositivos periféricos em segundo plano, crie uma tarefa em segundo plano que use o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Para ver um exemplo que mostra como isso é feito em um computador, consulte [Custom USB device sample](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para obter um exemplo em um telefone, consulte o [Exemplo de sensores em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+Para acessar sensores ou dispositivos periféricos em segundo plano, crie uma tarefa em segundo plano que use o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Para ver um exemplo que mostra como isso é feito em um computador, consulte [Custom USB device sample](https://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para obter um exemplo em um telefone, consulte o [Exemplo de sensores em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=393307).
 
 > [!Important]
 > **DeviceUseTrigger** não pode ser usado com tarefas em segundo plano no processo. As informações neste tópico se aplicam somente a tarefas em segundo plano que são executadas fora do processo.
@@ -33,7 +33,7 @@ Quando o aplicativo não estiver mais visível para o usuário, o Windows suspen
 
 ### <a name="limitation-critical-device-operations"></a>Limitação: operações de dispositivo críticas
 
-Algumas operações críticas de dispositivos, como atualizações de firmware de longa execução não podem ser executadas com o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Elas podem ser executadas somente no computador por um aplicativo privilegiado que usa o [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Um *aplicativo privilegiado* é um aplicativo que o fabricante do dispositivo autorizou a executar tais operações. Os metadados do dispositivo são usados para especificar qual aplicativo, se houver, foi designado como o aplicativo privilegiado para um dispositivo. Para obter mais informações, consulte [Sincronização e atualização de dispositivos para aplicativos de dispositivos da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=306619).
+Algumas operações críticas de dispositivos, como atualizações de firmware de longa execução não podem ser executadas com o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Elas podem ser executadas somente no computador por um aplicativo privilegiado que usa o [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Um *aplicativo privilegiado* é um aplicativo que o fabricante do dispositivo autorizou a executar tais operações. Os metadados do dispositivo são usados para especificar qual aplicativo, se houver, foi designado como o aplicativo privilegiado para um dispositivo. Para obter mais informações, consulte [Sincronização e atualização de dispositivos para aplicativos de dispositivos da Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkId=306619).
 
 ## <a name="protocolsapis-supported-in-a-deviceusetrigger-background-task"></a>Protocolos/APIs com suporte em uma tarefa em segundo plano do DeviceUseTrigger.
 
@@ -91,7 +91,7 @@ Para usar o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/ap
 
 -   Tarefas em segundo plano que usam o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) podem ser canceladas pelo Windows quando certos requisitos da política não são atendidos, incluindo um tempo de segundo plano máximo (tempo cronológico). É importante considerar os requisitos dessa política ao se usar essas tarefas em segundo plano para interagir com o seu dispositivo periférico.
 
-**Dica**para ver como as tarefas em segundo plano trabalham, baixe uma amostra. Para ver um exemplo que mostra como isso é feito em um computador, consulte [Custom USB device sample](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para obter um exemplo em um telefone, consulte o [Exemplo de sensores em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+**Dica**para ver como as tarefas em segundo plano trabalham, baixe uma amostra. Para ver um exemplo que mostra como isso é feito em um computador, consulte [Custom USB device sample](https://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para obter um exemplo em um telefone, consulte o [Exemplo de sensores em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=393307).
  
 ## <a name="frequency-and-foreground-restrictions"></a>Frequência e restrições de primeiro plano
 

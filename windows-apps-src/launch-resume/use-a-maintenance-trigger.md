@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 87df67c480c18ef2c75a9c63d538f0107908ca10
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 53107ca6add4193737ab0d00497bbe6324bee44f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943351"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047005"
 ---
 # <a name="use-a-maintenance-trigger"></a>Usar um gatilho de manutenção
 
@@ -129,4 +129,4 @@ Para garantir que seu aplicativo Universal do Windows continue a ser executado c
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)

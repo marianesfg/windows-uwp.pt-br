@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6388158a7b1c4fd3fa3e0ab17dcc86b7ef2d7c0e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3bfe034ed697661c81b2f01b67fafeee1941832d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921560"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050759"
 ---
 # <a name="planning-for-performance"></a>Planejando para o desempenho
 
@@ -104,7 +104,7 @@ Agora você pode usar suas metas de desempenho para influenciar o design de seu 
 
 **Inicialização e retomada do aplicativo**
 
--   Adie a tela inicial do aplicativo e só a estenda se for necessário. Para obter detalhes, consulte [Criando uma experiência rápida e fluida de inicialização de aplicativos](http://go.microsoft.com/fwlink/p/?LinkId=317595) e [Exibir uma tela inicial por mais tempo](https://msdn.microsoft.com/library/windows/apps/Mt187309).
+-   Adie a tela inicial do aplicativo e só a estenda se for necessário. Para obter detalhes, consulte [Criando uma experiência rápida e fluida de inicialização de aplicativos](https://go.microsoft.com/fwlink/p/?LinkId=317595) e [Exibir uma tela inicial por mais tempo](https://msdn.microsoft.com/library/windows/apps/Mt187309).
 -   Desabilite animações que aparecem logo depois que a tela inicial é ignorada, pois elas geram unicamente uma percepção de atraso no tempo de inicialização do aplicativo.
 
 **Interface do usuário adaptável e orientação**
@@ -152,7 +152,7 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 // ...
 ```
 
-Consulte também o [Exemplo de registro em log](http://go.microsoft.com/fwlink/p/?LinkId=529576).
+Consulte também o [Exemplo de registro em log](https://go.microsoft.com/fwlink/p/?LinkId=529576).
 
 Com o seu aplicativo instrumentado, você pode testar e medir o seu desempenho.
 

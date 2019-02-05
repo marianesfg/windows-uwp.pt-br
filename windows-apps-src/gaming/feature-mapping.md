@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx 9, directx 11, portabilidade
 ms.localizationpriority: medium
-ms.openlocfilehash: 56bb86706795e773d21e45263f640f9fc0aa596a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0cfaa071ea0182ef5fac264e85d919be5744d15d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936063"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050669"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Correlacionar recursos do DirectX 9 com APIs do DirectX 11
 
@@ -55,7 +55,7 @@ D3DX e DXUT foram preteridos e não podem ser usados por jogos UWP. Essas biblio
 
 -   O guia passo a passo [Portabilidade simples do Direct3D 9 para a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md) demonstra como configurar uma janela, inicializar o Direct3D e realizar renderização 3D básica.
 -   O guia passo a passo sobre [Jogos UWP simples com o DirectX](tutorial--create-your-first-uwp-directx-game.md) demonstra tarefas comuns de programação de jogos incluindo elementos gráficos, carregamento de arquivos, interface do usuário, controles e som.
--   O projeto da comunidade [Kit de ferramentas do DirectX)](http://go.microsoft.com/fwlink/p/?LinkID=248929) oferece classes de ajuda para usar com aplicativos UWP e Direct3D 11.
+-   O projeto da comunidade [Kit de ferramentas do DirectX)](https://go.microsoft.com/fwlink/p/?LinkID=248929) oferece classes de ajuda para usar com aplicativos UWP e Direct3D 11.
 
 ## <a name="move-shader-programs-from-fx-to-hlsl"></a>Mover programas de sombreador do FX para HLSL
 

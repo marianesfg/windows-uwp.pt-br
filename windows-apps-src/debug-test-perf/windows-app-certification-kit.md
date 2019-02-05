@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
-ms.openlocfilehash: 614f59fe06528d7b5bac36290eae14f0d7d49653
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e3c8729a6d2ac828f3d7b257681d64f4c7834587
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930767"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048866"
 ---
 # <a name="windows-app-certification-kit"></a>Kit de Certificação de Aplicativos Windows
 
 
 
-Para obter o aplicativo [Windows certificados](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) ou prepará-lo para [publicação na Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062), você deve validar e testá-lo localmente primeiro. Este tópico mostra como instalar e executar o [Kit de certificação de aplicativo do Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) para garantir que seu aplicativo é seguro e eficiente.
+Para obter o aplicativo [Windows certificados](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) ou prepará-lo para [publicação na Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062), você deve validar e testá-lo localmente primeiro. Este tópico mostra como instalar e executar o [Kit de certificação de aplicativo do Windows](https://go.microsoft.com/fwlink/p/?LinkID=309666) para garantir que seu aplicativo é seguro e eficiente.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

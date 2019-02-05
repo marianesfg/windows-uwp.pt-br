@@ -6,12 +6,12 @@ keywords: contatos, seleção de um único contato selecionar vários contatos c
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 28943c5ff60ebf2326193e4c3f90a02111f4aec2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c44f05b5d67fe094859ea0eacfb57c0012004d14
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927327"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047591"
 ---
 # <a name="select-contacts"></a>Selecionar contatos
 
@@ -230,4 +230,4 @@ public class ContactItemAdapter
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
-Agora, você já tem o entendimento básico de como usar o seletor de contatos para recuperar informações de contatos. Baixe as [amostras de aplicativo Universal do Windows](http://go.microsoft.com/fwlink/p/?linkid=619979) do GitHub para ver mais exemplos de como usar contatos e o seletor de contatos.
+Agora, você já tem o entendimento básico de como usar o seletor de contatos para recuperar informações de contatos. Baixe as [amostras de aplicativo Universal do Windows](https://go.microsoft.com/fwlink/p/?linkid=619979) do GitHub para ver mais exemplos de como usar contatos e o seletor de contatos.

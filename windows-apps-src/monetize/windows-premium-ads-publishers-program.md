@@ -5,16 +5,16 @@ ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade
 ms.localizationpriority: medium
-ms.openlocfilehash: 638854066c02edb923c8d4153f2125142d6b966b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1d747d35148965480cb34714cde7859203a7424d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941744"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050749"
 ---
 # <a name="windows-premium-ads-publishers-program"></a>Programa de editores de anúncios premium do Windows
 
-Como parte dos nossos esforços contínuos para ajudar os desenvolvedores do Windows monetizar seus aplicativos por meio de anúncios, oferecemos o [Programa de editores de anúncios do Windows Premium](http://www.windowspremiumapps.com). Esta é uma coleção gerenciada de habilitado por anúncio aplicativos e jogos que são melhores do setor em termos de uso, o envolvimento e a experiência. Esses aplicativos e jogos são visualização certificados e ter uma audiência globalmente distribuída de identificação usuários que são altamente envolvidos.
+Como parte dos nossos esforços contínuos para ajudar os desenvolvedores do Windows monetizar seus aplicativos por meio de anúncios, oferecemos o [Programa de editores de anúncios do Windows Premium](https://www.windowspremiumapps.com). Esta é uma coleção gerenciada de habilitado por anúncio aplicativos e jogos que são melhores do setor em termos de uso, o envolvimento e a experiência. Esses aplicativos e jogos são visualização certificados e ter uma audiência globalmente distribuída de identificação usuários que são altamente envolvidos.
 
 Anunciantes de nossas redes de anúncios de parceiro podem identificar esses aplicativos separadamente e veicular anúncios premium, alto rendimento exclusivamente para esses aplicativos para o mais alto retorno sobre o investimento de suas campanhas. Para desenvolvedores, isso significa que os aplicativos que fazem parte deste programa poderá ganhar mais receita de publicidade.
 

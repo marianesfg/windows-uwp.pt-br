@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cb53295227655e3067dafd5e3a3f1f4631a97455
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3e5b97c236f71c95cdff9c56ccc205d3b0fbde5e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936737"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044693"
 ---
 #  <a name="porting-windowsphone-silverlight-business-and-data-layers-to-uwp"></a>Portando camadas de dados para a UWP e empresas WindowsPhone Silverlight
 
@@ -30,11 +30,11 @@ Um aplicativo do WindowsPhone Silverlight pode usar um objeto **ScheduledTaskAge
 
 Para transferir grandes arquivos de dados em segundo plano, um aplicativo do WindowsPhone Silverlight usa a classe **BackgroundTransferService** . Um aplicativo UWP usa APIs no namespace [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) para fazer isso. Os recursos usam um padrão semelhante para iniciar transferências, mas a nova API melhorou as funcionalidades e o desempenho. Para obter mais informações, consulte [Transferindo dados em segundo plano](https://msdn.microsoft.com/library/windows/apps/xaml/hh452975).
 
-Um aplicativo WindowsPhone Silverlight usa as classes gerenciadas no namespace **Microsoft.Phone.BackgroundAudio** para reproduzir áudio enquanto o aplicativo não está em primeiro plano. A UWP usa o modelo de aplicativo da Loja do Windows Phone; consulte [Áudio em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140) e o exemplo [Áudio em segundo plano](http://go.microsoft.com/fwlink/p/?linkid=619997).
+Um aplicativo WindowsPhone Silverlight usa as classes gerenciadas no namespace **Microsoft.Phone.BackgroundAudio** para reproduzir áudio enquanto o aplicativo não está em primeiro plano. A UWP usa o modelo de aplicativo da Loja do Windows Phone; consulte [Áudio em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140) e o exemplo [Áudio em segundo plano](https://go.microsoft.com/fwlink/p/?linkid=619997).
 
 ## <a name="cloud-services-networking-and-databases"></a>Serviços de nuvem, redes e bancos de dados
 
-Hospedar serviços de aplicativos e dados na nuvem é possível com o Azure. Consulte [Introdução aos Serviços Móveis](http://go.microsoft.com/fwlink/p/?LinkID=403138). Para soluções que exigem dados online e offline, consulte: [Usando a sincronização de dados offline em Serviços Móveis](http://azure.microsoft.com/documentation/articles/mobile-services-windows-store-dotnet-get-started-offline-data/).
+Hospedar serviços de aplicativos e dados na nuvem é possível com o Azure. Consulte [Introdução aos Serviços Móveis](https://go.microsoft.com/fwlink/p/?LinkID=403138). Para soluções que exigem dados online e offline, consulte: [Usando a sincronização de dados offline em Serviços Móveis](https://azure.microsoft.com/documentation/articles/mobile-services-windows-store-dotnet-get-started-offline-data/).
 
 A UWP tem suporte parcial para a classe **System.Net.HttpWebRequest**, mas a classe **System.Net.WebClient** não tem suporte. A alternativa recomendada e prospectiva é a classe [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx) se você precisar que seu código seja portável para outras plataformas que deem suporte ao .NET). Essas APIs usam [System.Net.Http.HttpRequestMessage](https://msdn.microsoft.com/library/system.net.http.httprequestmessage.aspx) para representar uma solicitação HTTP.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 8781cbffcb8d5c433c58865fba38cd65369b5c49
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 473b7ef9f4efacbbe78e1fdb5563695f8211bca8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930071"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050899"
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticação da Web
 
@@ -21,7 +21,7 @@ ms.locfileid: "8930071"
 Este artigo explica como conectar seu aplicativo da Plataforma Universal do Windows (UWP) a um provedor de identidade online que use protocolos de autenticação como OpenID ou OAuth, como Facebook, Twitter, Flickr, Instagram e assim por diante. O método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) envia uma solicitação ao provedor de identidade online e obtém um token de acesso que descreve os recursos do provedor aos quais o aplicativo tem acesso.
 
 >[!NOTE]
->Para obter uma amostra de código funcional completa, clone o [Repo WebAuthenticationBroker em GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
+>Para obter uma amostra de código funcional completa, clone o [Repo WebAuthenticationBroker em GitHub](https://go.microsoft.com/fwlink/p/?LinkId=620622).
 
  
 

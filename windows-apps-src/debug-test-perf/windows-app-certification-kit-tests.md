@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
-ms.openlocfilehash: 55c11232847e2e7aa4827da0e3816f0cc34e9bed
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ecb7cb68b57e3d9b30a25237a63410d3bfa319b3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923123"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047155"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Testes do Kit de Certificação de Aplicativos Windows
 
@@ -22,7 +22,7 @@ O [Kit de certificação de aplicativo do Windows](windows-app-certification-kit
 
 Monitora o aplicativo durante o teste de certificação para registrar quando ele falha ou trava.
 
-### <a name="background"></a>Histórico
+### <a name="background"></a>Tela de fundo
 
 Aplicativos que param de responder ou travam podem provocar a perda de dados do usuário ou uma experiência insatisfatória.
 
@@ -54,7 +54,7 @@ Identifique e solucione o problema com o arquivo. Compile e teste novamente o ap
 
 Verifica se o aplicativo do Windows pode ser executado em uma versão futura do sistema operacional. Esse teste foi aplicado historicamente apenas ao fluxo de trabalho do aplicativo da área de trabalho, mas agora ele está habilitado para fluxos de trabalho da Loja e da Plataforma Universal do Windows (UWP).
 
-### <a name="background"></a>Histórico
+### <a name="background"></a>Tela de fundo
 
 Informações de versão do sistema operacional têm uso restrito para a Microsoft Store. Elas têm sido usadas incorretamente com frequência pelos aplicativos para verificar a versão do sistema operacional, de forma que o aplicativo possa fornecer aos usuários as funcionalidades específicas de uma versão do sistema operacional.
 
@@ -70,7 +70,7 @@ Os aplicativos devem usar as funções auxiliares da API de versão para verific
 
 Verifica se o aplicativo tem um manipulador de cancelamento para tarefas em segundo plano declaradas. Precisa haver uma função dedicada que será chamada quando a tarefa for cancelada. Esse teste é aplicado somente a aplicativos implantados.
 
-### <a name="background"></a>Histórico
+### <a name="background"></a>Tela de fundo
 
 Os Aplicativos Universais do Windows podem registrar um processo que seja executado em segundo plano. Por exemplo, um aplicativo de email pode executar ping no servidor de tempos em tempos. No entanto, se o sistema operacional precisar desses recursos, ele cancelará a tarefa em segundo plano e os aplicativos deverão lidar normalmente com esse cancelamento. Aplicativos que não têm um manipulador de cancelamento podem falhar ou não fechar quando o usuário tentar fechá-los.
 
@@ -86,7 +86,7 @@ Adicione o manipulador de cancelamento ao seu aplicativo. Para obter mais inform
 
 Verifica se um pacote do aplicativo (APPX, lote de aplicativo) contém um aplicativo. Isso foi alterado no kit para ser um teste autônomo.
 
-### <a name="background"></a>Histórico
+### <a name="background"></a>Tela de fundo
 
 Esse teste foi implementado em conformidade com a política da Loja.
 
@@ -104,7 +104,7 @@ Garantir que o pacote do aplicativo e lote atendam aos requisitos acima em Detal
 
 Teste o conteúdo do manifesto do aplicativo para garantir que seu conteúdo esteja correto.
 
-### <a name="background"></a>Histórico
+### <a name="background"></a>Tela de fundo
 
 Os aplicativos devem ter um manifesto corretamente formatado.
 
@@ -319,7 +319,7 @@ Verifique se o aplicativo foi compilado como uma compilação de versão e não 
 
 Examine as mensagens de erro para identificar a API usa o aplicativo que não é uma [API para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-> **Observação**aplicativos C++ integrados em uma configuração de depuração falhará neste teste mesmo se a configuração usar somente APIs do SDK do Windows para aplicativos UWP. Consulte, [alternativas às APIs do Windows em aplicativos UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obter mais informações.
+> **Observação**aplicativos C++ integrados em uma configuração de depuração falhará neste teste mesmo se a configuração usar somente APIs do SDK do Windows para aplicativos UWP. Consulte, [alternativas às APIs do Windows em aplicativos UWP](https://go.microsoft.com/fwlink/p/?LinkID=244022) para obter mais informações.
 
 ## <a name="performance-tests"></a>Testes de desempenho
 
@@ -495,7 +495,7 @@ Substitua as imagens padrão por algo mais distinto e que representa seu aplicat
 
 Teste o aplicativo para ter certeza de que ele não é uma compilação de depuração.
 
-### <a name="background"></a>Histórico
+### <a name="background"></a>Tela de fundo
 
 Para serem certificados para a Microsoft Store, aplicativos não devem ser compilados para depuração e não devem referenciar versões de depuração de um arquivo executável. Além disso, você deve criar seu código como otimizado para que seu aplicativo passe nesse teste.
 
@@ -513,7 +513,7 @@ Teste o aplicativo para garantir que ele não é uma compilação de depuração
 
 ### <a name="utf-8-file-encoding"></a>Codificação de arquivos UTF-8
 
-### <a name="background"></a>Histórico
+### <a name="background"></a>Tela de fundo
 
 Os arquivos HTML, CSS e JavaScript devem estar codificados no formato UTF-8 com a marca de ordem de byte (BOM) correspondente para aproveitar o cache do código de bytes e evitar determinadas condições de erro de tempo de execução.
 
@@ -531,7 +531,7 @@ Abra o arquivo afetado e selecione **Salvar como** no menu **Arquivo** no Visual
 
 Testa aplicativos Microsoft Direct3D para garantir que funcionam em todos os dispositivos com hardware gráfico mais antigos.
 
-### <a name="background"></a>Histórico
+### <a name="background"></a>Tela de fundo
 
 Microsoft Store exige que todos os aplicativos usando o Direct3D sejam renderizados apropriadamente ou não funcionem em placas de nível 9 \-1 gráfico do recurso.
 
@@ -543,13 +543,13 @@ O teste valida se os aplicativos são renderizados com precisão no nível de re
 
 ### <a name="corrective-action"></a>Ação corretiva
 
-Verifique se o aplicativo renderiza corretamente no recurso nível 9\-1 do Direct3D, mesmo que você espera executar em um nível de recurso superior. Para saber mais, consulte [Desenvolvendo para diferentes níveis de recursos do Direct3D](http://go.microsoft.com/fwlink/p/?LinkID=253575).
+Verifique se o aplicativo renderiza corretamente no recurso nível 9\-1 do Direct3D, mesmo que você espera executar em um nível de recurso superior. Para saber mais, consulte [Desenvolvendo para diferentes níveis de recursos do Direct3D](https://go.microsoft.com/fwlink/p/?LinkID=253575).
 
 ### <a name="direct3d-trim-after-suspend"></a>Corte Direct3D após a suspensão
 
 > **Observação**esse teste só se aplica a aplicativos UWP desenvolvidos para Windows 8.1 e posteriores.
 
-### <a name="background"></a>Histórico
+### <a name="background"></a>Tela de fundo
 
 Se o aplicativo não chamar [**Trim**](https://msdn.microsoft.com/library/windows/desktop/Dn280346) no dispositivo Direct3D, ele não liberará a memória alocada para seu trabalho 3D anterior. Isso aumenta o risco de os aplicativos serem encerrados devido à demanda de memória do sistema.
 
@@ -565,7 +565,7 @@ O aplicativo deve chamar a API [**Trim**](https://msdn.microsoft.com/library/win
 
 ### <a name="special-use-capabilities"></a>Funcionalidades de uso especial
 
-### <a name="background"></a>Histórico
+### <a name="background"></a>Tela de fundo
 
 As funcionalidades de uso especial destinam-se a cenários bastante específicos. Somente contas empresariais podem usar esses recursos.
 
@@ -585,7 +585,7 @@ Considere a remoção da funcionalidade de uso especial caso ela não seja neces
 
 ## <a name="windows-runtime-metadata-validation"></a>Validação dos metadados do Windows Runtime
 
-### <a name="background"></a>Histórico
+### <a name="background"></a>Contexto
 
 Verifica se os componentes que vêm com o aplicativo são compatíveis com o sistema de tipo UWP.
 

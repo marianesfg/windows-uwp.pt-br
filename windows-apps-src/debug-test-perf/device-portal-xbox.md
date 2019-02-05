@@ -6,12 +6,12 @@ ms.date: 02/12/2017
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0930e970af943329cac60d02a4bfe5986c21757a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 42077756beff4269cc91624502fb9958c580bbc0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932665"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047268"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal para Xbox
 
@@ -165,7 +165,7 @@ Um sensor Kinect deve estar conectado ao console para alterar essas configuraç�
 
 * **Quando estiver ocioso, desligar após**: o dispositivo desligará depois de estar ocioso por esse período de tempo.
 
-* **Modo de energia**: O modo de energia do dispositivo. Consulte [Sobre os modos de economia de energia e instantâneo](http://support.xbox.com/xbox-one/console/learn-about-power-modes) para obter mais informações.
+* **Modo de energia**: O modo de energia do dispositivo. Consulte [Sobre os modos de economia de energia e instantâneo](https://support.xbox.com/xbox-one/console/learn-about-power-modes) para obter mais informações.
 
 * **Iniciar automaticamente o console quando conectado à alimentação**: O dispositivo ligará automaticamente ao ser conectado a uma fonte de energia.
 

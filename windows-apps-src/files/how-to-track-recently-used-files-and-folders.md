@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 21e0516e3de4085e9ad2f3b67cb5ed497d907f5c
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: c0eb2b6e668baec9f5ad1ef859b7213f20748beb
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980364"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049573"
 ---
 # <a name="track-recently-used-files-and-folders"></a>Rastrear arquivos e pastas usados recentemente
 
@@ -25,7 +25,7 @@ Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à li
 Os itens recém-usados do aplicativo são representados pela classe [**StorageItemMostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207475) que você obtém da propriedade estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458). Os itens recém-usados são armazenados como objetos [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129), portanto, os objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (que representam arquivos) e [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) (que representam pastas) podem ser adicionados aos itens recém-usados.
 
 > [!NOTE]
-> Para exemplos completos, consulte o [exemplo de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995)e o [exemplo de seletor de arquivos](http://go.microsoft.com/fwlink/p/?linkid=619994) .
+> Para exemplos completos, consulte o [exemplo de acesso a arquivos](https://go.microsoft.com/fwlink/p/?linkid=619995)e o [exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994) .
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

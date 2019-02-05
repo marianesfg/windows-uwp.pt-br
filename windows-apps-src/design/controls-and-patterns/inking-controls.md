@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a969c0dfbfd08b5cc29651e2ad295c2bdd60ee0
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: fcbed8400b31616f92f20aa3a64a4dd8603dc7b0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037008"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047890"
 ---
 # <a name="inking-controls"></a>Controles de escrita à tinta
 
@@ -84,7 +84,7 @@ Adicionar um InkCanvas ao aplicativo requer apenas uma linha de marcação:
 ```
 
 > [!NOTE]
-> Para obter uma personalização do InkCanvas detalhada usando o InkPresenter, consulte o artigo ["Interações com caneta em aplicativos UWP"](http://windowsstyleguide/input/pen-and-stylus-interactions/).
+> Para obter uma personalização do InkCanvas detalhada usando o InkPresenter, consulte o artigo ["Interações com caneta em aplicativos UWP"](https://windowsstyleguide/input/pen-and-stylus-interactions/).
 
 O controle InkToolbar deve ser usado em conjunto com um InkCanvas. A incorporação de um InkToolbar (com todas as ferramentas internas) ao seu aplicativo requer uma linha de marcação adicional:
 
@@ -170,6 +170,6 @@ A borracha também tem um submenu que fornece o comando **Apagar Toda a Tinta**.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Interações com caneta em aplicativos UWP](http://windowsstyleguide/input/pen-and-stylus-interactions/)
-- [Reconhecer traços de tinta](http://windowsstyleguide/input/convert-ink-to-text/)
-- [Armazenar e recuperar traços de tinta](http://windowsstyleguide/input/save-and-load-ink/)
+- [Interações com caneta em aplicativos UWP](https://windowsstyleguide/input/pen-and-stylus-interactions/)
+- [Reconhecer traços de tinta](https://windowsstyleguide/input/convert-ink-to-text/)
+- [Armazenar e recuperar traços de tinta](https://windowsstyleguide/input/save-and-load-ink/)

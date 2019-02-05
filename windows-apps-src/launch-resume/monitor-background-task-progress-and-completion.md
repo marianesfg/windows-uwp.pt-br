@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 12772d81742815b8d739f61aee9461e64f970ef2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5417a2cded6dab98747569acc4e6e92356361482
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935706"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050819"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>Monitorar o progresso e a conclusão de tarefas em segundo plano
 
@@ -64,7 +64,7 @@ auto completed = [this](BackgroundTaskRegistration^ task, BackgroundTaskComplete
 ### <a name="step-2"></a>Etapa 2
 Adicione código ao manipulador de eventos que gerencia a conclusão da tarefa em segundo plano.
 
-Por exemplo, o [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) atualiza a interface do usuário.
+Por exemplo, o [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) atualiza a interface do usuário.
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
@@ -122,7 +122,7 @@ auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressE
 ### <a name="step-2"></a>Etapa 2
 Adicione código ao manipulador de eventos que gerencia a conclusão da tarefa em segundo plano.
 
-Por exemplo, o [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) atualiza a interface do usuário com o status de progresso informado pelo parâmetro *args*:
+Por exemplo, o [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) atualiza a interface do usuário com o status de progresso informado pelo parâmetro *args*:
 
 ```csharp
 private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)
@@ -158,7 +158,7 @@ auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressE
 ### <a name="step-1"></a>Etapa 1
 Quando o aplicativo registra uma tarefa em segundo plano pela primeira vez, ele deve se registrar para receber atualizações de progresso e conclusão dessa tarefa, caso ela seja executada enquanto o aplicativo ainda estiver ativo no primeiro plano.
 
-Por exemplo, o [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) chama a seguinte função em cada tarefa em segundo plano que ela registra:
+Por exemplo, o [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) chama a seguinte função em cada tarefa em segundo plano que ela registra:
 
 ```csharp
 private void AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration task)
@@ -217,7 +217,7 @@ void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskReg
 ### <a name="step-2"></a>Etapa 2
 Quando o aplicativo é iniciado ou navega para uma nova página onde o status da tarefa em segundo plano é irrelevante, ele deve obter uma lista das tarefas em segundo plano atualmente registradas e associá-las às funções do manipulador de eventos de progresso e conclusão. A lista das tarefas em segundo plano atualmente registradas pelo aplicativo é mantida na propriedade [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).[**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787).
 
-Por exemplo, o [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) usa o seguinte código para anexar manipuladores de eventos quando a página SampleBackgroundTask é navegada para:
+Por exemplo, o [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) usa o seguinte código para anexar manipuladores de eventos quando a página SampleBackgroundTask é navegada para:
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -299,4 +299,4 @@ void SampleBackgroundTask::OnNavigatedTo(NavigationEventArgs^ e)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)

@@ -6,12 +6,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f6a37af19c9e3e9beaebbadfcc71f3ad01e3087c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b2d402bca61fc271b6d1e2e972cca280693f9ce3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918507"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045189"
 ---
 # <a name="guidelines-for-cross-slide"></a>Diretrizes de deslizamento transversal
 
@@ -133,19 +133,19 @@ Se for necessário mover mais de um objeto, permita que os usuários selecionem 
 
 
 **Exemplos**
-* [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Exemplo de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Exemplo do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Exemplo de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 **Exemplos do arquivo**
-* [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de teste de toque](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: amostra de tinta simplificada](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: amostra de gestos no Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: amostra de manipulações e gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Amostra de entrada por toque do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [Entrada: amostra de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: exemplo de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: amostra de teste de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: amostra de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: amostra de gestos no Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Entrada: amostra de manipulações e gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Amostra de entrada por toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

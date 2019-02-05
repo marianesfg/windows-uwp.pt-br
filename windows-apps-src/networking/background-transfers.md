@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d67bb7c7fd2173e1406669367935efdb09967ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2535818d5362b1ffe4b7b35c7b4079bee73a511f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932519"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046050"
 ---
 # <a name="background-transfers"></a>Transferências em segundo plano
 Use a API de transferência em segundo plano para copiar arquivos de maneira confiável na rede. A API de transferência em segundo plano fornece recursos avançados de carregamento e download que são executados em segundo plano durante a suspensão do aplicativo e persistirão após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de download se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para downloads.
@@ -82,7 +82,7 @@ Observe as chamadas de método assíncrono definidas usando promessas do JavaScr
 promise = upload.startAsync().then(complete, error, progress);
 ```
 
-A chamada de método assíncrono é seguida por uma instrução then que indica métodos, definidos pelo aplicativo, que são chamados quando é retornado um resultado da chamada de método assíncrono. Para obter mais informações sobre esse padrão de programação, consulte [Programação assíncrona em JavaScript usando promessas](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
+A chamada de método assíncrono é seguida por uma instrução then que indica métodos, definidos pelo aplicativo, que são chamados quando é retornado um resultado da chamada de método assíncrono. Para obter mais informações sobre esse padrão de programação, consulte [Programação assíncrona em JavaScript usando promessas](https://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
 
 ### <a name="uploading-multiple-files"></a>Carregando vários arquivos
 **Identificar os arquivos e o destino para o upload**
@@ -178,7 +178,7 @@ Observe as chamadas de método assíncrono definidas usando promessas do JavaScr
 promise = download.startAsync().then(complete, error, progress);
 ```
 
-A chamada de método assíncrono é seguida por uma instrução then que indica métodos, definidos pelo aplicativo, que são chamados quando é retornado um resultado da chamada de método assíncrono. Para obter mais informações sobre esse padrão de programação, consulte [Programação assíncrona em JavaScript usando promessas](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
+A chamada de método assíncrono é seguida por uma instrução then que indica métodos, definidos pelo aplicativo, que são chamados quando é retornado um resultado da chamada de método assíncrono. Para obter mais informações sobre esse padrão de programação, consulte [Programação assíncrona em JavaScript usando promessas](https://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
 
 ### <a name="adding-additional-operation-control-methods"></a>Adicionando outros métodos de controle de operação
 O nível de controle pode ser aumentado com a implementação de métodos [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) adicionais. Por exemplo, adicionar o seguinte código ao exemplo acima introduzirá a habilidade de cancelar o download.

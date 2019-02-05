@@ -1,17 +1,17 @@
 ---
 Description: You can select the screenshots, logos, and other art assets (such as trailers and promotional images) to include in your app's Store listing.
-title: Capturas de tela, imagens e trailers do app
+title: Capturas de tela, imagens e trailers do aplicativo
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 0019ded3b409acf0e6530bffa4ad73f85bfa8855
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0ae5b68d73a3776adf6250dbb96de827a106a6c5
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942640"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050999"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do app
 
@@ -106,7 +106,7 @@ Essa seção permite fornecer ilustrações para ajudar a exibir seu produto com
 
 Trailers são vídeos curtos que permitem aos clientes ver o produto em ação, para que ele possam ter uma melhor compreensão de como ele é. Eles são mostrados na parte superior da listagem da loja de seu aplicativo (desde que você inclua uma imagem de [16:9 arte de super-herói](#windows-10-and-xbox-image-169-super-hero-art) ). 
 
-Os trailers são codificados com [Smooth Streaming](http://www.iis.net/downloads/microsoft/smooth-streaming), que adapta a qualidade de um streaming de vídeo entregue aos clientes em tempo real com base na largura de banda disponível e nos recursos da CPU.
+Os trailers são codificados com [Smooth Streaming](https://www.iis.net/downloads/microsoft/smooth-streaming), que adapta a qualidade de um streaming de vídeo entregue aos clientes em tempo real com base na largura de banda disponível e nos recursos da CPU.
 
 > [!NOTE]
 > Os trailers só são mostrados aos clientes no Windows 10, versão 1607 ou posterior (o que inclui o Xbox).

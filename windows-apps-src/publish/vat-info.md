@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 90447f63cf28660eaffc0dff4e28524f8ef4372a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3d8b11815d7762179ad982edaf3985c06f9f54e4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928055"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051079"
 ---
 # <a name="vat-info"></a>Informações sobre IVA
 
@@ -21,7 +21,7 @@ Se você for solicitado a fornecer um número de ID de IVA durante o processo de
 ## <a name="understanding-vat-numbers"></a>Noções básicas sobre números de IVA
 
 
-Um número do imposto sobre valor agregado (IVA) é um identificador usado para países ou regiões na União Europeia. Para obter mais informações, consulte o [site da VIES](http://go.microsoft.com/fwlink/p/?LinkId=258372) oficial da União Europeia.
+Um número do imposto sobre valor agregado (IVA) é um identificador usado para países ou regiões na União Europeia. Para obter mais informações, consulte o [site da VIES](https://go.microsoft.com/fwlink/p/?LinkId=258372) oficial da União Europeia.
 
 ## <a name="accepted-formats-for-vat-numbers"></a>Formatos aceitos para números de IVA
 

@@ -1,17 +1,17 @@
 ---
-description: Se você tiver um aplicativo Universal 8.1 & \#8212;whether para o Windows 8.1, Windows Phone 8.1 ou ambos & \#8212;then que você descobrirá que seu código-fonte e suas habilidades serão portados perfeitamente para Windows 10.
+description: 'Se você tiver um app&\ Universal 8.1 #8212; se ele está direcionando o Windows 8.1, Windows Phone 8.1 ou both&\ #8212; em seguida, você encontrará que seu código-fonte e suas habilidades serão portados perfeitamente para Windows 10.'
 title: Mudar do Windows Runtime 8.x para a UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c94b2a9a1ad13db4051d276aaff9a082f95f33fb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7d0a75ae4306535d37c5c2d776fda2cbdc3a0634
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938617"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047684"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Mudar do Windows Runtime 8.x para a UWP
 
@@ -55,9 +55,9 @@ Ao portar um aplicativo Universal 8.1 para o modelo de aplicativos UWP, praticam
 
 -   **Modo de Exibição**. O modo de exibição (juntamente com o modelo de exibição) compõe a interface do usuário do seu aplicativo. Idealmente, o modo de exibição consiste em marcação associada às propriedades observáveis de um modelo de exibição. Outro padrão (comum e conveniente, mas somente a curto prazo) destina-se ao código imperativo em um arquivo code-behind para manipular elementos de interface do usuário diretamente. Em ambos os casos, sua marcação da interface do usuário e o design, e até mesmo o código imperativo que manipula os elementos da interface do usuário, serão simples de portar.
 -   **Modelos de exibição e modelos de dados**. Mesmo se você não adotar formalmente padrões de separação de preocupações (como MVVM), inevitavelmente haverá presente em seu aplicativo código que execute a função de modelo de exibição e de modelo de dados. O código do modelo de exibição usa tipos nos namespaces da estrutura da IU. O código dos modelos de exibição e de dados também usa APIs de sistema operacional não visual e do .NET Framework (incluindo APIs para acesso a dados). Essas APIs estão [disponíveis para aplicativos UWP, também](https://msdn.microsoft.com/library/windows/apps/br211369), portanto, a maior parte, senão todo este código será portado sem alteração.
--   **Serviços de nuvem**. É provável que alguma parte do aplicativo (talvez uma grande parte dele) seja executada na nuvem na forma de serviços. A parte do aplicativo em execução no dispositivo cliente se conecta a elas. Essa é a parte de um aplicativo distribuído que mais provavelmente permanecerá inalterada durante a portabilidade da parte cliente. Se você ainda não tiver, uma boa opção de serviços de nuvem para seu aplicativo UWP é o [Serviços Móveis do Microsoft Azure](http://azure.microsoft.com/services/mobile-services/), que oferece poderosos componentes de back-end que seu aplicativo pode chamar para serviços desde notificações simples para atualizações de blocos dinâmicos até o tipo de escalabilidade pesada que um farm de servidores pode oferecer.
+-   **Serviços de nuvem**. É provável que alguma parte do aplicativo (talvez uma grande parte dele) seja executada na nuvem na forma de serviços. A parte do aplicativo em execução no dispositivo cliente se conecta a elas. Essa é a parte de um aplicativo distribuído que mais provavelmente permanecerá inalterada durante a portabilidade da parte cliente. Se você ainda não tiver, uma boa opção de serviços de nuvem para seu aplicativo UWP é o [Serviços Móveis do Microsoft Azure](https://azure.microsoft.com/services/mobile-services/), que oferece poderosos componentes de back-end que seu aplicativo pode chamar para serviços desde notificações simples para atualizações de blocos dinâmicos até o tipo de escalabilidade pesada que um farm de servidores pode oferecer.
 
-Antes ou durante a portabilidade, considere se o seu aplicativo pode ser melhorado por meio de refatoração, de forma que o código com finalidade semelhante seja agrupado em camadas e não fique espalhado arbitrariamente. A fatoração de seu aplicativo em camadas como as descritas acima facilita a correção do seu aplicativo, a aplicação de testes nele e, subsequentemente, a leitura e a manutenção dele. Você pode tornar a funcionalidade mais reutilizável seguindo o padrão Model-View-ViewModel ([MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx)). Esse padrão mantém partes de dados, comercial e da interface do usuário de seu aplicativo separadas umas das outras. Mesmo na interface do usuário, ele mantém o estado e o comportamento separados, e testáveis separadamente, dos elementos visuais. Com o MVVM, você pode escrever seus dados e sua lógica de negócios uma vez e usá-los em todos os dispositivos, independentemente da interface do usuário. É provável que você também consiga reutilizar grande parte do modelo de exibição e do modo de exibição entre dispositivos.
+Antes ou durante a portabilidade, considere se o seu aplicativo pode ser melhorado por meio de refatoração, de forma que o código com finalidade semelhante seja agrupado em camadas e não fique espalhado arbitrariamente. A fatoração de seu aplicativo em camadas como as descritas acima facilita a correção do seu aplicativo, a aplicação de testes nele e, subsequentemente, a leitura e a manutenção dele. Você pode tornar a funcionalidade mais reutilizável seguindo o padrão Model-View-ViewModel ([MVVM](https://msdn.microsoft.com/magazine/dd419663.aspx)). Esse padrão mantém partes de dados, comercial e da interface do usuário de seu aplicativo separadas umas das outras. Mesmo na interface do usuário, ele mantém o estado e o comportamento separados, e testáveis separadamente, dos elementos visuais. Com o MVVM, você pode escrever seus dados e sua lógica de negócios uma vez e usá-los em todos os dispositivos, independentemente da interface do usuário. É provável que você também consiga reutilizar grande parte do modelo de exibição e do modo de exibição entre dispositivos.
 
 | Tópico | Descrição |
 |-------|-------------|
@@ -73,5 +73,5 @@ Antes ou durante a portabilidade, considere se o seu aplicativo pode ser melhora
 
 **Documentação**
 * [Referência do Windows Runtime](https://msdn.microsoft.com/library/windows/apps/br211377)
-* [Criando aplicativos Universais do Windows para todos os dispositivos Windows](http://go.microsoft.com/fwlink/p/?LinkID=397871)
+* [Criando aplicativos Universais do Windows para todos os dispositivos Windows](https://go.microsoft.com/fwlink/p/?LinkID=397871)
 * [Criando a experiência do usuário para aplicativos](https://msdn.microsoft.com/library/windows/apps/hh767284)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 3dprinting, impressão 3d
 ms.localizationpriority: medium
-ms.openlocfilehash: a51312cc9be466c6847ec7f2d98b29da1c8e5c9f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4013341a3e4e44d6ac2df66d58d4114313573d2a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918775"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048263"
 ---
 # <a name="3d-printing-from-your-app"></a>Impressão 3D a partir do seu app
 
@@ -65,7 +65,7 @@ Em seu método `OnLoadClick`, use a classe [**FileOpenPicker**](https://msdn.mic
 Neste momento, você pode carregar um arquivo de dados 3D na memória do seu aplicativo. Entretanto, dados de geometria 3D pode vir em muitos formatos diferentes, e nem todos são eficientes para impressão 3D. O Windows 10 usa o tipo de arquivo no Formato de manufatura 3D (.3mf) para todas as tarefas de impressão 3D.
 
 > [!NOTE]  
-> O tipo de arquivo .3mf oferece mais funcionalidades que são abordadas neste tutorial. Para saber mais sobre 3MF e os recursos que ele fornece produtores e consumidores de produtos 3D, consulte o [3MF especificação](http://3mf.io/what-is-3mf/3mf-specification/). Para saber como utilizar esses recursos com as APIs do Windows 10, consulte o tutorial [Gerar um pacote 3MF](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf).
+> O tipo de arquivo .3mf oferece mais funcionalidades que são abordadas neste tutorial. Para saber mais sobre 3MF e os recursos que ele fornece produtores e consumidores de produtos 3D, consulte o [3MF especificação](https://3mf.io/what-is-3mf/3mf-specification/). Para saber como utilizar esses recursos com as APIs do Windows 10, consulte o tutorial [Gerar um pacote 3MF](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf).
 
 O aplicativo [3D Builder](https://www.microsoft.com/store/apps/3d-builder/9wzdncrfj3t6) pode abrir arquivos nos formatos 3D mais populares e salvá-los como arquivos .3mf. Neste exemplo, onde o tipo de arquivo pode variar, uma solução muito simples é abrir o aplicativo 3D Builder e solicitar que o usuário salve os dados importados como um arquivo .3mf e recarregue-o.
 

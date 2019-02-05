@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, elementos gráficos, diagnóstico, ferramentas e directx
 ms.localizationpriority: medium
-ms.openlocfilehash: f9fc1f6fa28fa36c876517eb0653693c670282ff
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6e3c48e69dd1ad991a2a04017d4e262e45430504
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945838"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047913"
 ---
 # <a name="graphics-diagnostics-tools"></a>Ferramentas de diagnóstico de gráficos
 
@@ -32,7 +32,7 @@ Recursos de diagnóstico de elementos gráficos incluem a capacidade de criar di
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-[Visão geral do diagnóstico de gráficos no Visual Studio](http://go.microsoft.com/fwlink/p/?LinkID=526382)
+[Visão geral do diagnóstico de gráficos no Visual Studio](https://go.microsoft.com/fwlink/p/?LinkID=526382)
 
  
 

@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, campanhas, promover
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ece97d2e2cf96d2905902fd563f1de9027aa64a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6c198bf9ebb8eb6f409277bfe09af6881530d5a7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919991"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047085"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Criar uma campanha publicitária para seu app
 
@@ -74,7 +74,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
         * Na lista suspensa **Idioma**, selecione o idioma do anúncio. O texto para o selo da Microsoft Store será exibido no idioma selecionado.
         * Para adicionar uma linha extra de texto ao anúncio, digite o texto no campo **Slogan personalizado**.
             > [!NOTE]
-            > O texto que você insere aqui deve estar traduzido no idioma selecionado. O slogan personalizado será rejeitado se o texto não estiver de acordo com as [Políticas do Bing Ads](http://go.microsoft.com/fwlink?LinkId=398341). Consulte esta página para obter orientação sobre estilo e conteúdo não permitido.
+            > O texto que você insere aqui deve estar traduzido no idioma selecionado. O slogan personalizado será rejeitado se o texto não estiver de acordo com as [Políticas do Bing Ads](https://go.microsoft.com/fwlink?LinkId=398341). Consulte esta página para obter orientação sobre estilo e conteúdo não permitido.
         * Para personalizar mais o anúncio, expanda **Personalizar design de anúncios/Ver todos os tamanhos de anúncio** e escolha um dos seguintes itens:
             * **Cor da tela de fundo**. Escolha entre as opções disponíveis.
             * **Imagens**. Escolha uma das imagens disponíveis (tiradas da listagem da Loja do aplicativo).
@@ -84,13 +84,13 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 
     * **Personalizado**. Escolha essa opção para usar seus próprios designs de anúncios. Observe que, se você selecionou um segmento de cliente anteriormente, você deverá usar criativos personalizados. Você pode carregar arquivos diferentes para cada um dos tamanhos de anúncios disponíveis. Os arquivos devem cumprir os requisitos e as diretrizes a seguir:
         * Cada arquivo deve ser um .png ou .jpg com 40 KB ou menos.
-        * Seus designs de anúncios devem atender aos requisitos especificados na [Política de Aceitação de Criatividade da Microsoft](http://go.microsoft.com/fwlink?LinkId=532595).
+        * Seus designs de anúncios devem atender aos requisitos especificados na [Política de Aceitação de Criatividade da Microsoft](https://go.microsoft.com/fwlink?LinkId=532595).
         * O conteúdo em seus designs de anúncios deve ser relevante para o aplicativo que você está promovendo. Designs de anúncios não relacionadas ao aplicativo não serão distribuídos a anúncios em outros aplicativos.
         * Todo o conteúdo em seus designs de anúncios deve ser claramente legível. Por exemplo, o conteúdo não deve ser desfocado, pixelado ou ampliado.
 
 12.  Se você tiver uma [conta premium](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign), pode usar a caixa **URL de destino** para controlar o que acontece quando um cliente clica em seu anúncio.
     * Se você deixar a caixa vazia, quando um cliente clicar em seu anúncio, a listagem da Loja do seu app será exibida.
-    * Se você estiver usando o Kochava ou o Tune para medir análises de instalação de seu app, insira URL de rastreamento de instalação do Kochava ou do Tune. Quando você salvar a campanha, a URL de rastreamento será validada para garantir que ela seja resolvida como a página de listagem para seu app na Microsoft Store. Para obter mais informações sobre o controle de instalação com Kochava e Tune, consulte a documentação do [Kochava](http://support.kochava.com/) e do [Tune](https://help.tune.com/).
+    * Se você estiver usando o Kochava ou o Tune para medir análises de instalação de seu app, insira URL de rastreamento de instalação do Kochava ou do Tune. Quando você salvar a campanha, a URL de rastreamento será validada para garantir que ela seja resolvida como a página de listagem para seu app na Microsoft Store. Para obter mais informações sobre o controle de instalação com Kochava e Tune, consulte a documentação do [Kochava](https://support.kochava.com/) e do [Tune](https://help.tune.com/).
     * Se você escolheu **Aumentar o envolvimento do app** como objetivo da campanha, pode especificar um [URI de um link profundo](../launch-resume/handle-uri-activation.md) para redirecionar os clientes no segmento selecionado para uma página específica em seu app.
     * Se você especificar um destino que não seja a página de descrição do seu app ou uma página dentro de seu app, sua campanha será pausada automaticamente.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b324cbca6d5e36193c057a6d1473ff1aad7be095
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c598868610e42e0f2ad64ef2d4fedfb48c4d91e9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945070"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047288"
 ---
 # <a name="playready-encrypted-media-extension"></a>Extensão de Mídia Criptografada do PlayReady
 
@@ -61,7 +61,7 @@ A lista a seguir descreve os novos recursos e as alterações feitas à extensã
 
 Esta seção descreve a versão da extensão de mídia criptografada do W3C com suporte pelo PlayReady.
 
-O PlayReady para aplicativos Web está atualmente vinculado à [versão preliminar da extensão de mídia criptografada (EME) do W3C de 10 de maio de 2013](http://www.w3.org/TR/2013/WD-encrypted-media-20130510/). Esse suporte será alterado para a especificação EME atualizada em versões futuras do Windows.
+O PlayReady para aplicativos Web está atualmente vinculado à [versão preliminar da extensão de mídia criptografada (EME) do W3C de 10 de maio de 2013](https://www.w3.org/TR/2013/WD-encrypted-media-20130510/). Esse suporte será alterado para a especificação EME atualizada em versões futuras do Windows.
 
 ## <a name="use-hardware-drm"></a>Usar DRM de hardware
 

@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 107c904dc4b89941c0f453efd830504d2d032534
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7ed69dc912e916f7964c125550621c22dfcd9555
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929119"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049058"
 ---
 # <a name="show-multiple-views-for-an-app"></a>Mostrar vários modos de exibição de um aplicativo
 
@@ -75,7 +75,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 2.  Acompanhe a [**Id**](https://msdn.microsoft.com/library/windows/apps/dn281120) do novo modo de exibição. Você pode usá-la para mostrar o modo de exibição mais tarde.
 
-    Convém considerar a criação de uma infraestrutura no aplicativo para ajudar no controle dos modos de exibição criados. Consulte a classe `ViewLifetimeControl` na [Amostra MultipleViews](http://go.microsoft.com/fwlink/p/?LinkId=620574) para obter um exemplo.
+    Convém considerar a criação de uma infraestrutura no aplicativo para ajudar no controle dos modos de exibição criados. Consulte a classe `ViewLifetimeControl` na [Amostra MultipleViews](https://go.microsoft.com/fwlink/p/?LinkId=620574) para obter um exemplo.
 
     ```csharp
     int newViewId = 0;
@@ -83,7 +83,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 3.  No novo thread, preencha a janela.
 
-    Você usa o método [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) para agendar o trabalho no thread da interface do usuário para o novo modo de exibição. Você usa uma [expressão lambda](http://go.microsoft.com/fwlink/p/?LinkId=389615) para passar uma função como um argumento para o método **RunAsync**. O trabalho feito na função lambda acontece no thread do novo modo de exibição.
+    Você usa o método [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) para agendar o trabalho no thread da interface do usuário para o novo modo de exibição. Você usa uma [expressão lambda](https://go.microsoft.com/fwlink/p/?LinkId=389615) para passar uma função como um argumento para o método **RunAsync**. O trabalho feito na função lambda acontece no thread do novo modo de exibição.
 
     Em XAML, você normalmente adiciona um [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) à propriedade [**Content**](https://msdn.microsoft.com/library/windows/apps/br209051) de [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) e passa o **Frame** para um XAML [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) em que você definiu o conteúdo do aplicativo. Para obter mais informações, consulte [Navegação ponto a ponto entre duas páginas](../basics/navigate-between-two-pages.md).
 

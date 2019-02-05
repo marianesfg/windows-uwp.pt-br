@@ -6,17 +6,17 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, rede, websocket, messagewebsocket, streamwebsocket
 ms.localizationpriority: medium
-ms.openlocfilehash: 05f56f07aed0c9f97daffe3842952ce142f8159a
-ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
+ms.openlocfilehash: 8af1f478bc466719eef3c5e19d055ac6073a0b11
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035407"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045402"
 ---
 # <a name="websockets"></a>WebSockets
 Os WebSockets fornecem um mecanismo para comunicações bidirecionais rápidas e seguras entre um cliente e um servidor na Web usando HTTP(S), suportando tanto mensagens UTF-8 quanto binárias.
 
-De acordo com o [Protocolo WebSocket](http://tools.ietf.org/html/rfc6455), os dados são transferidos imediatamente através de uma única conexão de soquete full-duplex, permitindo que as mensagens sejam enviadas e recebidas de ambos os pontos de extremidade em tempo real. WebSockets são ideais para uso em jogos multijogador (tanto em tempo real, quanto por fases), notificações instantâneas de rede social, exibições atualizadas de ações e informações meteorológicas, bem como em outros aplicativos que exigem transferências de dados rápidas e seguras.
+De acordo com o [Protocolo WebSocket](https://tools.ietf.org/html/rfc6455), os dados são transferidos imediatamente através de uma única conexão de soquete full-duplex, permitindo que as mensagens sejam enviadas e recebidas de ambos os pontos de extremidade em tempo real. WebSockets são ideais para uso em jogos multijogador (tanto em tempo real, quanto por fases), notificações instantâneas de rede social, exibições atualizadas de ações e informações meteorológicas, bem como em outros aplicativos que exigem transferências de dados rápidas e seguras.
 
 Para estabelecer uma conexão de WebSocket, um handshake baseado em HTTP é trocado entre o cliente e o servidor. Em caso de êxito, o protocolo de camada de aplicativo é "atualizado" de HTTP para WebSockets usando a conexão TCP estabelecida anteriormente. Assim que isso ocorre, o HTTP fica totalmente fora de cogitação. Os dados podem ser enviados ou recebidos usando o protocolo WebSocket por ambos os pontos de extremidade até o encerramento da conexão com WebSocket.
 
@@ -834,8 +834,8 @@ protected:
 * [Windows.Networking.Sockets](/uwp/api/Windows.Networking.Sockets)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Protocolo WebSocket](http://tools.ietf.org/html/rfc6455)
+* [Protocolo WebSocket](https://tools.ietf.org/html/rfc6455)
 * [Soquetes](sockets.md)
 
 ## <a name="samples"></a>Exemplos
-* [Exemplo de WebSocket](http://go.microsoft.com/fwlink/p/?LinkId=620623)
+* [Exemplo de WebSocket](https://go.microsoft.com/fwlink/p/?LinkId=620623)

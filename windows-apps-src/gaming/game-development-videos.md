@@ -6,12 +6,12 @@ ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp, vídeos, GDC, build
 ms.localizationpriority: medium
-ms.openlocfilehash: de04b0b272bbc6889c5fb9b13e5487902a77e98c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2360af867fdc708f49cf5ba804a204ae497705b3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929950"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050969"
 ---
 # <a name="game-development-videos"></a>Vídeos de desenvolvimento de jogos
 
@@ -48,7 +48,7 @@ O que é LiveOps? Saiba por que os desenvolvedores estão criando jogos ao vivo:
 
 O que é o VSTS? Saiba como implementar DevOps em seu processo de compilação: [Introdução ao Visual Studio Team Services](https://channel9.msdn.com/Shows/Level-Up/Introduction-to-Visual-Studio-Team-Services) - Dmitry Lyalin, James Montemagno
 
-* [Planejamento e a criação de jogos usando todo o potencial do VSTS: demonstração ágil, de ponta a ponta de CI & CD](https://channel9.msdn.com/Shows/Level-Up/Planning-and-building-games-using-the-full-power-of-VSTS-Agile-CI--CD-end-to-end-demo) -Rogan Ferguson
+* [Planejamento e a criação de jogos usando todo o potencial do VSTS: ágil, demonstração de ponta a ponta CI & CD](https://channel9.msdn.com/Shows/Level-Up/Planning-and-building-games-using-the-full-power-of-VSTS-Agile-CI--CD-end-to-end-demo) -Rogan Ferguson
 * [Criar seu jogo próximo alimentado pelo Visual Studio Team Services e equipes Unity compilação de nuvem](https://channel9.msdn.com/Shows/Level-Up/Build-your-next-game-powered-by-Visual-Studio-Team-Services-and-Unity-Teams-cloud-build-Theater) - Dmitry Lyalin
 * [Testar continuamente, distribuir e monitorar seu jogo com o aplicativo Center](https://channel9.msdn.com/Shows/Level-Up/Continuously-Test-distribute-and-monitor-your-game-with-App-Center-Theater-Presentation) - James White
 * [Instalação CI/CD do pipeline para Node. js, Python, .NET, Go, Ruby ou Java - em minutos](https://channel9.msdn.com/Shows/Level-Up/Setup-your-CICD-pipeline-for-Nodejs-Python-NET-Go-Ruby-or-Java-in-Minutes) - Abel Wang
@@ -112,20 +112,20 @@ Novo para sistemas de controle de versão? Introdução ao sistema de arquivos V
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Vídeos da sessão de desenvolvimento de jogos GDC 2015
 
--   [O futuro dos jogos no ecossistema da Microsoft](http://channel9.msdn.com/Events/GDC/GDC-2015/The-Future-of-Gaming-Across-the-Microsoft-Ecosystem) – Phil Spencer
--   [Desenvolvimento de jogos para Windows 10](http://channel9.msdn.com/Events/GDC/GDC-2015/Developing-Games-for-Windows-10) – Chris Tector, Don Box
--   [Elementos gráficos DirectX 12 e desempenho avançados](http://channel9.msdn.com/Events/GDC/GDC-2015/Advanced-DirectX12-Graphics-and-Performance) – Max McMullen
--   [Experiência de consumidor de jogos no Windows 10](http://channel9.msdn.com/Events/GDC/GDC-2015/Gaming-Consumer-Experience-on-Windows-10) – Bill Schiefelbein
--   [Novas oportunidades para os desenvolvedores independentes](http://channel9.msdn.com/Events/GDC/GDC-2015/New-Opportunities-for-Independent-Developers) – Chris Charla
--   [Desenvolvendo com o Xbox Live para o Windows 10](http://channel9.msdn.com/Events/GDC/GDC-2015/Developing-with-Xbox-Live-for-Windows-10) – Vijay Gajjala, Brian Tyler
--   [Xbox Live Multiplayer: apresentando os serviços de associação de plataforma cruzada e jogabilidade](http://channel9.msdn.com/Events/GDC/GDC-2015/Xbox-Live-Multiplayer-Introducing-services-for-cross-platform-matchmaking-and-gameplay) – Ferdinand Schober
--   [Legendas de Fable: Jogabilidade entre dispositivos com o Xbox Live](http://channel9.msdn.com/Events/GDC/GDC-2015/Fable-Legends-Cross-device-Gameplay-with-Xbox-Live) – Raymond Arifianto, Julian Davis
--   [Práticas recomendadas para utilizar as estatísticas e as conquistas do usuário baseado em nuvem no Xbox Live](http://channel9.msdn.com/Events/GDC/GDC-2015/Best-Practices-for-Leveraging-Cloud-Based-User-Stats-and-Achievements-in-Xbox-Live) – Cierra McDonald
--   [Resolver os problemas de elementos gráficos resistentes em seu jogo usando as ferramentas de DirectX](http://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools) – Rodolfo Balaz, Rong Lu, Jason Strayer
--   [Mais energia, melhor desempenho: seu jogo em DirectX 12](http://channel9.msdn.com/Events/GDC/GDC-2015/Better-Power-Better-Performance-Your-Game-on-DirectX12) – Bennett Sorbo
--   [Desempenho de jogos sustentado em dispositivos móveis com vários núcleos](http://channel9.msdn.com/Events/GDC/GDC-2015/Sustained-gaming-performance-in-multi-core-mobile-devices) – Julian Calinov
--   [Criando jogos para um mundo do Windows Core](http://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World) – Todd Williams, Shai Hinitz
--   [Jogos de computador para o Windows 10](http://channel9.msdn.com/Events/GDC/GDC-2015/PC-Games-for-Windows-10) – Chuck Walbourn
+-   [O futuro dos jogos no ecossistema da Microsoft](https://channel9.msdn.com/Events/GDC/GDC-2015/The-Future-of-Gaming-Across-the-Microsoft-Ecosystem) – Phil Spencer
+-   [Desenvolvimento de jogos para Windows 10](https://channel9.msdn.com/Events/GDC/GDC-2015/Developing-Games-for-Windows-10) – Chris Tector, Don Box
+-   [Elementos gráficos DirectX 12 e desempenho avançados](https://channel9.msdn.com/Events/GDC/GDC-2015/Advanced-DirectX12-Graphics-and-Performance) – Max McMullen
+-   [Experiência de consumidor de jogos no Windows 10](https://channel9.msdn.com/Events/GDC/GDC-2015/Gaming-Consumer-Experience-on-Windows-10) – Bill Schiefelbein
+-   [Novas oportunidades para os desenvolvedores independentes](https://channel9.msdn.com/Events/GDC/GDC-2015/New-Opportunities-for-Independent-Developers) – Chris Charla
+-   [Desenvolvendo com o Xbox Live para o Windows 10](https://channel9.msdn.com/Events/GDC/GDC-2015/Developing-with-Xbox-Live-for-Windows-10) – Vijay Gajjala, Brian Tyler
+-   [Xbox Live Multiplayer: apresentando os serviços de associação de plataforma cruzada e jogabilidade](https://channel9.msdn.com/Events/GDC/GDC-2015/Xbox-Live-Multiplayer-Introducing-services-for-cross-platform-matchmaking-and-gameplay) – Ferdinand Schober
+-   [Legendas de Fable: Jogabilidade entre dispositivos com o Xbox Live](https://channel9.msdn.com/Events/GDC/GDC-2015/Fable-Legends-Cross-device-Gameplay-with-Xbox-Live) – Raymond Arifianto, Julian Davis
+-   [Práticas recomendadas para utilizar as estatísticas e as conquistas do usuário baseado em nuvem no Xbox Live](https://channel9.msdn.com/Events/GDC/GDC-2015/Best-Practices-for-Leveraging-Cloud-Based-User-Stats-and-Achievements-in-Xbox-Live) – Cierra McDonald
+-   [Resolver os problemas de elementos gráficos resistentes em seu jogo usando as ferramentas de DirectX](https://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools) – Rodolfo Balaz, Rong Lu, Jason Strayer
+-   [Mais energia, melhor desempenho: seu jogo em DirectX 12](https://channel9.msdn.com/Events/GDC/GDC-2015/Better-Power-Better-Performance-Your-Game-on-DirectX12) – Bennett Sorbo
+-   [Desempenho de jogos sustentado em dispositivos móveis com vários núcleos](https://channel9.msdn.com/Events/GDC/GDC-2015/Sustained-gaming-performance-in-multi-core-mobile-devices) – Julian Calinov
+-   [Criando jogos para um mundo do Windows Core](https://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World) – Todd Williams, Shai Hinitz
+-   [Jogos de computador para o Windows 10](https://channel9.msdn.com/Events/GDC/GDC-2015/PC-Games-for-Windows-10) – Chuck Walbourn
 
 ## <a name="build-2015-session-videos"></a>//Vídeos de sessão da compilação 2015
 

@@ -8,12 +8,12 @@ keywords: Cortana, tela da Cortana, design da Cortana, interface do usuário, co
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cf8b8c095f96217375eb05d0128a31fc28ab47df
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 49290d0e0ba96a5dce562ca4148b0ebf53bf0ff5
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921109"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051119"
 ---
 # <a name="cortana-interactions-in-uwp-apps"></a>Interações da Cortana em aplicativos UWP
 
@@ -36,7 +36,7 @@ Para saber como estender a Cortana com funcionalidade de um aplicativo UWP usand
 * [Diretrizes de design da Cortana para comandos de voz](https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines)
 
 **Exemplos**
-* [Amostra de comando de voz da Cortana](http://go.microsoft.com/fwlink/p/?LinkID=619899)
+* [Amostra de comando de voz da Cortana](https://go.microsoft.com/fwlink/p/?LinkID=619899)
  
 
  

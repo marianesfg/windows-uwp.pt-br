@@ -6,12 +6,12 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
-ms.openlocfilehash: df80fda8cf8b8c2f33a8ed0155363141fc299655
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 42ec5c1e91fbeebcaad68f346f317893fdfb2e1c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932872"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046805"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Testes de aplicativo da Ponte de Desktop Windows
 
@@ -23,7 +23,7 @@ Testes opcionais para aplicativos de ponte de Desktop do Windows são apenas inf
 ## <a name="current-optional-tests"></a>Testes opcionais atuais
 
 ### <a name="1-digitally-signed-file-test"></a>1. Teste de arquivo assinado digitalmente 
-**Contexto**  
+**Tela de fundo**  
 Este teste verifica que todos os arquivos executáveis portáteis (PE) contêm uma assinatura válida. A presença de arquivos assinados digitalmente permite que os usuários saibam que o software é original.
 
 **Detalhes do teste**  
@@ -33,7 +33,7 @@ O teste verifica todos os arquivos executáveis portáteis no pacote e verifica 
 Sempre é recomendável ter arquivos assinados digitalmente. Para saber mais, veja [Introdução à assinatura de código](https://msdn.microsoft.com/en-us/library/ms537361(v=vs.85).aspx).
 
 ### <a name="2-file-association-verbs"></a>2. Verbos de associação de arquivo 
-**Contexto**  
+**Tela de fundo**  
 Esse teste examina o registro do pacote para verificar se qualquer verbo de associação de arquivo está registrado. 
 
 **Detalhes do teste**  
@@ -45,7 +45,7 @@ Veja [Ponte de Desktop para UWP: extensões de apps](https://docs.microsoft.com/
 ### <a name="3-debug-configuration-test"></a>3. Teste de configuração de depuração
 Esse teste verifica se o appx não é um build de depuração.
  
-**Contexto**  
+**Tela de fundo**  
 Para serem certificados para a Microsoft Store, aplicativos não devem ser compilados para depuração e não devem referenciar versões de depuração de um arquivo executável. Além disso, você deve criar seu código como otimizado para que seu aplicativo passe nesse teste.
  
 **Detalhes do teste**  
@@ -59,7 +59,7 @@ Teste o aplicativo para garantir que ele não é uma compilação de depuração
 ### <a name="4-package-sanity-test"></a>4. Testes de integridade do pacote
 #### <a name="41-archive-files-usage"></a>4.1 Uso de arquivos mortos
 
-**Contexto**  
+**Tela de fundo**  
 Esse teste ajuda a criar os melhores aplicativos da Ponte de Desktop para execução nos computadores com [Windows 10 S](https://www.microsoft.com/windows/windows-10-s).
 
 **Detalhes do teste**  
@@ -71,7 +71,7 @@ Este teste verifica todos os arquivos executáveis dentro dos arquivos mortos ou
 
 #### <a name="42-blocked-executables"></a>4.2 Executáveis bloqueados
 
-**Contexto**  
+**Tela de fundo**  
 Esse teste ajuda a criar os melhores aplicativos da Ponte de Desktop para execução nos computadores com [Windows 10 S](https://www.microsoft.com/windows/windows-10-s). 
 
 **Detalhes do teste**  
@@ -133,7 +133,7 @@ O arquivo {filename} não deve conter uma seção de mapa reverso.  | Apesar do 
 
 
 #### <a name="22-branding-validation"></a>2.2 Validação de identidade visual
-**Contexto**  
+**Tela de fundo**  
 Espera-se que os Apps de Ponte de Desktop estejam completos e totalmente funcionais. Os aplicativos que usam as imagens padrão (de modelos ou exemplos de SDK) apresentam uma experiência do usuário ruim e não podem ser identificados facilmente no catálogo da loja.
 
 **Detalhes do teste**  
@@ -165,7 +165,7 @@ Analise o manifesto do app em relação aos requisitos descritos em [Requisitos 
 #### <a name="32-application-count"></a>3.2 Contagem de aplicativos
 Esse teste verifica se um pacote do app (.appx,, lote de aplicativo) contém um aplicativo. 
 
-**Contexto**  
+**Tela de fundo**  
 Esse teste é implementado de acordo com a política da Loja. 
 
 **Detalhes do teste**  
@@ -176,7 +176,7 @@ Garantir que o pacote e o lote do app atendam aos requisitos declarados em **Det
 
 
 #### <a name="33-registry-checks"></a>3.3 Verificações de registro
-**Contexto**  
+**Tela de fundo**  
 Este teste verifica se o aplicativo instala ou atualiza todos os novos serviços ou drivers.
 
 **Detalhes do teste**  
@@ -205,7 +205,7 @@ Siga estas diretrizes para garantir que seu pacote de apps contenha apenas arqui
 ### <a name="5-supported-api-test"></a>5. Teste de API com suporte
 Verifica o app em relação ao uso de quaisquer APIs não compatíveis. 
 
-**Contexto**  
+**Tela de fundo**  
 Os apps de Ponte de Desktop podem aproveitar algumas APIs Win32 herdadas juntamente com APIs modernas (componentes da UWP). Esse teste identifica binários gerenciados que usam APIs sem suporte.
  
 **Detalhes do teste**  
@@ -224,7 +224,7 @@ Isso pode ser corrigido, garantindo que o app foi compilado como um build de ver
 
 ### <a name="6-user-account-control-uac-test"></a>6. Teste de UAC (controle de conta de usuário).  
 
-**Contexto**  
+**Tela de fundo**  
 Garante que o app não esteja solicitando o controle de conta de usuário em tempo de execução.
 
 **Detalhes do teste**  
@@ -235,7 +235,7 @@ Os apps devem ser executados como um usuário interativo. Veja [Visão geral sob
 
  
 ### <a name="7-windows-runtime-metadata-validation"></a>7. Validação dos metadados do Windows Runtime
-**Contexto**  
+**Histórico**  
 Verifica se os componentes que vêm com o app são compatíveis com o sistema do tipo UWP.
 
 **Detalhes do teste**  
@@ -269,7 +269,7 @@ A verificação de arquivo banido no Kit de Certificação de Aplicativos Window
 Essa verificação geralmente falha quando um app está usando uma versão "Release Preview" do arquivo em vez da versão mais recente oficial. 
 
 **Ações corretivas**  
-Para corrigir esse problema, use a versão mais recente do [SDK do Bing mapas](http://go.microsoft.com/fwlink/p/?linkid=614880) para aplicativos UWP.
+Para corrigir esse problema, use a versão mais recente do [SDK do Bing mapas](https://go.microsoft.com/fwlink/p/?linkid=614880) para aplicativos UWP.
 
 #### <a name="82-private-code-signing"></a>8.2 Assinatura de códigos privados
 Testes para a existência de binários de assinatura de código privado no pacote de app. 

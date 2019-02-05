@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9953afcdf595508d09f44262bcd92e104e0ce0c5
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: 4c61a34b983b0faaedc509b68fd4225ea0859a7d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980314"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044826"
 ---
 # <a name="save-a-file-with-a-picker"></a>Salvar um arquivo com um seletor
 
@@ -23,7 +23,7 @@ ms.locfileid: "8980314"
 Use o [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir que os usuários especifiquem o nome e o local onde desejam que o aplicativo salve um aplicativo.
 
 > [!NOTE]
-> Para obter um exemplo completo, veja o [Exemplo de seletor de arquivos](http://go.microsoft.com/fwlink/p/?linkid=619994).
+> Para obter um exemplo completo, veja o [Exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994).
 
  
 

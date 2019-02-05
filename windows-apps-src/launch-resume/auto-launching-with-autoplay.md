@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 714da78a8860eec92bce9389185f52a58e45b44e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f49d70ceadad8309419846aa26cb9f97df1c82ff
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947119"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047431"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>Iniciando automaticamente com a Reprodução Automática
 
 Você pode usar a **Reprodução Automática** para dar ao seu aplicativo uma opção quando um usuário conecta um dispositivo ao computador. Isso inclui dispositivos sem volume, como uma câmera ou um player de mídia, ou dispositivos com volume, como pen drives, cartões de memória ou DVDs. Também é possível usar a **Reprodução Automática** para oferecer seu aplicativo como uma opção quando os usuários compartilham arquivos entre dois computadores usando proximidade (encostar).
 
-> **Observação**se você for um fabricante de dispositivos e desejar associar seu [aplicativo de dispositivo da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkID=301381) como um manipulador de **reprodução automática** para o seu dispositivo, você pode identificar o aplicativo nos metadados do dispositivo. Para obter mais informações, consulte [Reprodução Automática para aplicativos de dispositivo da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=306684).
+> **Observação**se você for um fabricante de dispositivos e desejar associar seu [aplicativo de dispositivo da Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkID=301381) como um manipulador de **reprodução automática** para o seu dispositivo, você pode identificar o aplicativo nos metadados do dispositivo. Para obter mais informações, consulte [Reprodução Automática para aplicativos de dispositivo da Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkId=306684).
 
 ## <a name="register-for-autoplay-content"></a>Registrar para conteúdo de Reprodução Automática
 

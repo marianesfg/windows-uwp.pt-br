@@ -6,18 +6,18 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, cra, compra realizada em aplicativo, produto no aplicativo, envio de cra
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dc3e9b928c544b8552abc6c289c682694f623c0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 28383ed82c418ff15806c325d6eab5a05f9987bf
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924252"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045059"
 ---
 # <a name="add-on-submissions"></a>Envios de complemento
 
 Complementos (também às vezes conhecidos como produtos no aplicativo) são itens suplementares para seu aplicativo que podem ser comprados pelos clientes. Um complemento pode ser um divertido novo recurso, um novo nível de jogo ou qualquer coisa que você acha que manterá os usuários envolvidos. Os complementos não são somente uma ótima forma de ganhar dinheiro, eles também ajudam a direcionar a interação e o compromisso do cliente.
 
-Complementos são publicados por meio [Do Partner Center](https://partner.microsoft.com/dashboard)e exigem que você tenha uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100)de ativa. Você também precisará [habilitar os complementos](../monetize/in-app-purchases-and-trials.md) no código de seu aplicativo.
+Complementos são publicados por meio [Do Partner Center](https://partner.microsoft.com/dashboard)e exigem que você tenha uma [conta de desenvolvedor](https://go.microsoft.com/fwlink/p/?LinkId=615100)de ativa. Você também precisará [habilitar os complementos](../monetize/in-app-purchases-and-trials.md) no código de seu aplicativo.
 
 A primeira etapa no processo de envio de complemento é criar o complemento no Partner Center, [Definindo o tipo de produto e a ID do produto](set-your-add-on-product-id.md). Depois disso, você criará um envio para que seu complemento possa ser adquirido através da Microsoft Store. Você pode enviar um complemento ao mesmo tempo em que [envia seu aplicativo](app-submissions.md) ou pode trabalhar nele de forma independente. E você pode fazer [atualizações](#updating-an-add-on-after-publication) nos complementos depois que o aplicativo estiver na Store, sem precisar reenviar o aplicativo.
 

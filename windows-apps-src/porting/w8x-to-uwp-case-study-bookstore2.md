@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 156f780e5637852d554488adfeeb9d688fa4a4d7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a81980bc03a272cb2be0e66772591f4e395d7722
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947938"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051009"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a>Estudo de caso do Windows Runtime 8.x para UWP: Bookstore2
 
@@ -22,9 +22,9 @@ Este estudo de caso, que se baseia nas informações fornecidas no [Bookstore1](
 
 ## <a name="downloads"></a>Downloads
 
-[Baixe o aplicativo Universal 8.1 Bookstore2\_81](http://go.microsoft.com/fwlink/?linkid=532951).
+[Baixe o aplicativo Universal 8.1 Bookstore2\_81](https://go.microsoft.com/fwlink/?linkid=532951).
 
-[Baixe o Bookstore2Universal\_10 aplicativo do Windows 10](http://go.microsoft.com/fwlink/?linkid=532952).
+[Baixe o Bookstore2Universal\_10 aplicativo do Windows 10](https://go.microsoft.com/fwlink/?linkid=532952).
 
 ## <a name="the-universal-81-app"></a>O aplicativo Universal 8.1
 

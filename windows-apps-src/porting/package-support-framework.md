@@ -6,12 +6,12 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 11f9912abb954592cd2a467008cc427cac833f35
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b0ed1c7f01e8cb06f6950f2ad23a42605e97c1a0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928427"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050729"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar correções de tempo de execução em um pacote MSIX usando a estrutura de suporte do pacote
 
@@ -29,7 +29,7 @@ Primeiro, crie um pacote para seu aplicativo. Em seguida, instalá-lo, executá-
 
 ### <a name="using-process-monitor-to-identify-an-issue"></a>Usando o Monitor de processo para identificar um problema
 
-[Monitor de processo](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) é um utilitário poderoso para observar o arquivo do aplicativo e operações de registro e seus resultados.  Isso pode ajudar você a compreender os problemas de compatibilidade de aplicativo.  Após a abertura do Monitor do processo, adicione um filtro (filtro > filtro...) para incluir somente os eventos o executável do aplicativo.
+[Monitor de processo](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) é um utilitário poderoso para observar o arquivo do aplicativo e operações de registro e seus resultados.  Isso pode ajudar você a compreender os problemas de compatibilidade de aplicativo.  Após a abertura do Monitor do processo, adicione um filtro (filtro gt _ filtro...) para incluir somente os eventos o executável do aplicativo.
 
 ![Filtro de aplicativo ProcMon](images/desktop-to-uwp/procmon_app_filter.png)
 
@@ -553,4 +553,4 @@ bp ...
 
 **Encontrar respostas para suas dúvidas**
 
-Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).

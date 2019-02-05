@@ -7,26 +7,26 @@ ms.date: 11/08/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: d70dbc0dffc3763855924b8f7faca61ca2fb18f2
-ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
+ms.openlocfilehash: d782e8cd64cb976df964c72199964c1d349d527e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035397"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045655"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Entenda os idiomas de perfil do usuário e idiomas de manifesto do app
 Um usuário do Windows pode usar **Configurações** > **Hora e Idioma** > **Região e idioma** para configurar uma lista ordenada de idiomas de preferência de exibição, ou um único idioma de preferência de exibição. Um idioma pode ter uma variante regional. Por exemplo, você pode selecionar o espanhol falado na Espanha, o espanhol falado no México, o espanhol falado nos Estados Unidos, entre outros.
 
 Além disso, em **Configurações** > **Hora e idioma** > **Região e idioma**, mas separado do idioma, o usuário pode especificar sua localização (conhecida como região) no mundo. Observe que a configuração do idioma de exibição (e a variante regional) não é determinante da configuração de região, e vice-versa. Por exemplo, um usuário pode estar vivendo atualmente na França, mas escolher como idioma de exibição preferencial do Windows o espanhol (México).
 
-Para aplicativos UWP, um idioma é representado como uma [marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302). Por exemplo, a marca de idioma BCP-47 "en-US" corresponde ao inglês (Estados Unidos) em **Configurações**. APIs UWP apropriadas aceitam e retornam representações em cadeia de marcas de idioma BCP-47.
+Para aplicativos UWP, um idioma é representado como uma [marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302). Por exemplo, a marca de idioma BCP-47 "en-US" corresponde ao inglês (Estados Unidos) em **Configurações**. APIs UWP apropriadas aceitam e retornam representações em cadeia de marcas de idioma BCP-47.
 
-Veja também o [Registro da submarca de idioma IANA](http://go.microsoft.com/fwlink/p/?linkid=227303).
+Veja também o [Registro da submarca de idioma IANA](https://go.microsoft.com/fwlink/p/?linkid=227303).
 
 As três seções a seguir definem os termos "lista de idiomas do perfil do usuário", "lista de idiomas de manifesto do app" e "lista de idiomas de tempo de execução do aplicativo". Vamos usar esses termos neste tópico e em outros tópicos nessa área de recurso, por isso, é importante saber o que significam.
 
 ## <a name="user-profile-language-list"></a>Lista de idiomas do perfil do usuário
-A lista de idiomas do perfil do usuário é o nome da lista que está configurada pelo usuário em **Configurações** > **Hora e idioma** > **Região e idioma** > **Idiomas**. No código, você pode usar a propriedade [**GlobalizationPreferences.Languages**](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages) para acessar a lista de idiomas do perfil do usuário como lista somente de leitura de cadeias de caracteres, em que cada cadeia é uma única [marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302), como "en-US" ou "ja-JP".
+A lista de idiomas do perfil do usuário é o nome da lista que está configurada pelo usuário em **Configurações** > **Hora e idioma** > **Região e idioma** > **Idiomas**. No código, você pode usar a propriedade [**GlobalizationPreferences.Languages**](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages) para acessar a lista de idiomas do perfil do usuário como lista somente de leitura de cadeias de caracteres, em que cada cadeia é uma única [marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302), como "en-US" ou "ja-JP".
 
 ```csharp
     IReadOnlyList<string> userLanguages = Windows.System.UserProfile.GlobalizationPreferences.Languages;
@@ -70,7 +70,7 @@ A lista de interesse do terceiro idioma é a interseção entre as duas listas q
 
 Mais especificamente, a lista de idiomas do tempo de execução do app é composta por esses itens.
 
-1.  **Substituição do Idioma Principal (Opcional)**. A [**PrimaryLanguageOverride**](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride) é uma configuração de substituição simples para aplicativos que permitirão aos usuários fazer sua própria escolha de idioma independente ou para aplicativos que, por motivos realmente importantes, substituirão as opções de idioma padrão. Para obter mais informações, consulte o [Exemplo de recursos e localização de aplicativos](http://go.microsoft.com/fwlink/p/?linkid=231501).
+1.  **Substituição do Idioma Principal (Opcional)**. A [**PrimaryLanguageOverride**](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride) é uma configuração de substituição simples para aplicativos que permitirão aos usuários fazer sua própria escolha de idioma independente ou para aplicativos que, por motivos realmente importantes, substituirão as opções de idioma padrão. Para obter mais informações, consulte o [Exemplo de recursos e localização de aplicativos](https://go.microsoft.com/fwlink/p/?linkid=231501).
 2.  **Os idiomas do usuário com suporte pelo aplicativo.**. Esta é a lista de idiomas do perfil do usuário filtrada pela lista de idiomas de manifesto do app. Filtrar os idiomas do usuário por aqueles suportados pelo aplicativo mantém a consistência entre os SDKs (software development kits), bibliotecas de classes, pacotes de estrutura dependente e o aplicativo.
 3.  **Se 1 e 2 estão vazios, o padrão ou o primeiro idioma suportado pelo app.**. Se a lista de idiomas do perfil do usuário não contém nenhum idioma com suporte pelo aplicativo, o idioma de tempo de execução do app será o primeiro idioma suportado pelo aplicativo.
 
@@ -98,7 +98,7 @@ Nomeie seus arquivos de recurso ou suas pastas, com qualificadores de recursos d
 **Observação** Mesmo recursos no idioma padrão do seu app devem especificar o qualificador de idioma. Por exemplo, se o idioma padrão do seu app é inglês (Estados Unidos), então qualifique seus ativos como `\Assets\Images\en-US\logo.png`.
 
 - O Windows executa correspondências complexas, incluindo variantes regionais, como en-US e en-GB. Portanto, inclua a marca de região subpropriedade conforme apropriado. Confira [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md).
-- Especifique uma marca de subpropriedade de script do idioma no qualificador quando não há nenhum valor de Script de supressão definido para o idioma. Por exemplo, em vez de zh-CN ou zh-TW, use zh-Hant, zh-Hant-TW ou zh-Hans (para obter mais detalhes, consulte o [registro de submarca de idioma IANA](http://go.microsoft.com/fwlink/p/?linkid=227303)).
+- Especifique uma marca de subpropriedade de script do idioma no qualificador quando não há nenhum valor de Script de supressão definido para o idioma. Por exemplo, em vez de zh-CN ou zh-TW, use zh-Hant, zh-Hant-TW ou zh-Hans (para obter mais detalhes, consulte o [registro de submarca de idioma IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)).
 - Para idiomas que têm um único dialeto padrão, não é necessário incluir o qualificador de região. Por exemplo, use ja, em vez de ja-JP.
 - Algumas ferramentas e outros componentes como os tradutores automáticos podem encontrar marcas de idioma específicas, como informações de dialetos regionais, que são úteis para entender os dados.
 
@@ -208,12 +208,12 @@ A seguinte tabela contém exemplos do que o usuário veria na sua interface do u
 * [GeographicRegion](/uwp/api/windows.globalization.geographicregion?branch=live)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Registro da submarca de idioma IANA](http://go.microsoft.com/fwlink/p/?linkid=227303)
+* [Marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Registro da submarca de idioma IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)
 * [Personalizar os recursos de acordo com idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [Idiomas com suporte](../../publish/supported-languages.md)
 * [Globalize seus formatos data/hora/número.](use-global-ready-formats.md)
 * [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
 
 ## <a name="samples"></a>Exemplos
-* [Exemplo de recursos e localização de aplicativos](http://go.microsoft.com/fwlink/p/?linkid=231501)
+* [Exemplo de recursos e localização de aplicativos](https://go.microsoft.com/fwlink/p/?linkid=231501)

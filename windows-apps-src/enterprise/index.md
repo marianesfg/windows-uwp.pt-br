@@ -6,12 +6,12 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cce98591cdaa78a887d7a5fb495e999a4ffc453
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4517d3fc917cb306281e9050f8554119ff987007
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945372"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044500"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -140,7 +140,7 @@ Os aplicativos de linha de negócios com frequência precisam se comunicar com u
 | [Noções básicas de rede](https://msdn.microsoft.com/library/windows/apps/mt280233) | Estas instruções passo a passo explicam conceitos básicos de rede relevantes para todos os aplicativos UWP, independentemente dos protocolos de comunicação em uso.  |
 | [Qual tecnologia de rede?](https://msdn.microsoft.com/library/windows/apps/mt280235) | Uma rápida visão geral das tecnologias de rede disponíveis para aplicativos UWP, com sugestões sobre como escolher as tecnologias mais adequadas ao seu aplicativo. |
 | [Serialização de XML e SOAP](https://msdn.microsoft.com/library/90c86ass.aspx) | A serialização XML converte objetos em um fluxo XML que obedece a uma determinada linguagem de definição de esquema XML (XSD). Para converter XML em uma classe fortemente tipada, você pode usar a classe nativa [XDocument](https://msdn.microsoft.com/library/system.xml.linq.xdocument.aspx) ou uma biblioteca externa. |
-| [Serialização JSON](https://msdn.microsoft.com/library/windows/apps/br240639) | A serialização JSON (JavaScript Object Notation) é um formato popular para comunicação com APIs REST. O [Newtonsoft Json.NET](http://www.newtonsoft.com/json), com suporte total para aplicativos UWP. |
+| [Serialização JSON](https://msdn.microsoft.com/library/windows/apps/br240639) | A serialização JSON (JavaScript Object Notation) é um formato popular para comunicação com APIs REST. O [Newtonsoft Json.NET](https://www.newtonsoft.com/json), com suporte total para aplicativos UWP. |
 
 ## <a name="devices"></a>Dispositivos
 
@@ -160,7 +160,7 @@ Muitos usuários hoje levam para o trabalho o próprio celular ou tablet, com di
 | Tópico | Descrição |
 |-------|-------------|
 | [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631) | Neste guia introdutório, você vai se familiarizar com a Plataforma Universal do Windows 10. Entre outras coisas, ele define família de dispositivos e orienta como decidir para qual direcionar, apresenta novos painéis e controles de interface do usuário, que permitem que você adapte a sua interface do usuário a diferentes fatores forma de dispositivo diferentes, e explica como entender e controlar a superfície de API que está disponível para seu aplicativo. |
-| [Amostra de código de interface do usuário XAML adaptável](http://go.microsoft.com/fwlink/p/?LinkId=619992) | Essa amostra de código mostra todas as opções de layout e controles para seu aplicativo possíveis, independentemente do tipo de dispositivo, e permite que você interaja com os painéis para mostrar como obter qualquer layout que estiver procurando. Além de mostrar como cada controle responde a diferentes fatores forma, o próprio aplicativo é dinâmico e mostra vários métodos para alcançar a interface do usuário adaptável. |
+| [Amostra de código de interface do usuário XAML adaptável](https://go.microsoft.com/fwlink/p/?LinkId=619992) | Essa amostra de código mostra todas as opções de layout e controles para seu aplicativo possíveis, independentemente do tipo de dispositivo, e permite que você interaja com os painéis para mostrar como obter qualquer layout que estiver procurando. Além de mostrar como cada controle responde a diferentes fatores forma, o próprio aplicativo é dinâmico e mostra vários métodos para alcançar a interface do usuário adaptável. |
 | [Tópico Xamarin]() | Xamarin para direcionamento de telefone |
 
 ## <a name="deployment"></a>Implantação

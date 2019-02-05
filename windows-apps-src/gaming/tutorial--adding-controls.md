@@ -6,17 +6,17 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, controles, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 09bda2bda5f6f8731b64321d3282f540e6c50db4
-ms.sourcegitcommit: 4e12e820141fa5c3e61052ec78452b4032a974da
+ms.openlocfilehash: 369aa076184f79aa1e43c3aac11706982a6be268
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "8999751"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045635"
 ---
 # <a name="add-controls"></a>Adicionar controles
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](https://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Um bom jogo da Plataforma Universal do Windows (UWP) dá suporte a uma ampla variedade de interfaces. Um jogador em potencial pode ter o Windows 10 em um tablet sem botões físicos, um computador com um controlador Xbox conectado, ou o desktop para jogos mais recente multimídia com alto desempenho mouse e teclado de jogos. No nosso jogo, os controles são implementados na classe [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp). Essa classe agrega todos os três tipos de entrada (mouse e teclado, touch e gamepad) em um único controlador. O resultado final é um jogo de tiros em primeira pessoa que usa controles move-look padrão no gênero que funcionam em vários dispositivos.
 

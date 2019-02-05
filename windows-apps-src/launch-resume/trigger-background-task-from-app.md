@@ -5,12 +5,12 @@ ms.date: 07/06/2018
 ms.topic: article
 keywords: gatilho de tarefa em segundo plano, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 237f342029f8d9bc0bbec1fcef5c7059cbf09840
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 02e4bf3d7977c9bdd675f264a37e608a5082ef4c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935370"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050719"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>Ativar uma tarefa em segundo plano no seu aplicativo
 
@@ -155,7 +155,7 @@ Uma tarefa em segundo plano só será executado usando um **ApplicationTrigger**
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Liberar memória quando seu app é movido para o segundo plano](reduce-memory-usage.md)
 * [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Adiar a suspensão do app com execução estendida](run-minimized-with-extended-execution.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)

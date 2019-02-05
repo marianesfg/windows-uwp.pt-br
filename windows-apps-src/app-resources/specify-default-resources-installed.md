@@ -6,12 +6,12 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: f18a1db19c3a8c6632a8cbc3104dc1328f97fdb4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b11f6dfec2941ae4eaa277f37de66965bd1ea4aa
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919732"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048899"
 ---
 # <a name="specify-the-default-resources-that-your-app-uses"></a>Especificar os recursos padrão usados pelo app
 
@@ -44,7 +44,7 @@ Você pode configurar o que são esses padrões de duas maneiras. Você pode adi
    </default>
    ```
    
-   **Observação** O valor `LANGUAGE-TAG(S)` precisa ser sincronizado com o idioma padrão do app. Se essa for uma única [marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302), o idioma padrão do app precisará ter a mesma marca. Se for uma lista separada por vírgulas de marcas de idioma, o idioma do padrão do app precisará ser a primeira marca na lista. Defina o idioma padrão do app no campo **Idioma Padrão** da guia **Aplicativo** no arquivo de origem do manifesto do pacote de aplicativos (`Package.appxmanifest`).
+   **Observação** O valor `LANGUAGE-TAG(S)` precisa ser sincronizado com o idioma padrão do app. Se essa for uma única [marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302), o idioma padrão do app precisará ter a mesma marca. Se for uma lista separada por vírgulas de marcas de idioma, o idioma do padrão do app precisará ser a primeira marca na lista. Defina o idioma padrão do app no campo **Idioma Padrão** da guia **Aplicativo** no arquivo de origem do manifesto do pacote de aplicativos (`Package.appxmanifest`).
 
 4. Cada elemento `<qualifier>` informa ao Visual Studio qual valor será usado como padrão para cada nome de qualificador. Com o conteúdo de arquivo que você tem até agora, o comportamento do Visual Studio não foi alterado. Em outras palavras, o Visual Studio *já estava se comportando como se* esse arquivo estivesse presente com esse conteúdo, pois isso é o padrão. Portanto, para substituir um padrão pelo seu próprio valor padrão, você precisará alterar um valor no arquivo. Este é um exemplo da aparência do arquivo se você tiver editado os primeiros três valores.
    ```xml
@@ -103,5 +103,5 @@ Salve e feche o arquivo, e recompile o projeto.
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores](tailor-resources-lang-scale-contrast.md)
-* [Marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)

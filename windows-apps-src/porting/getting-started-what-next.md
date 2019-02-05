@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ab12f79670428fa2b6affa91240787f75bc51bc2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e5b273df8120d982f263c4411012baa715b2820c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921258"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044237"
 ---
 # <a name="getting-started-what-next"></a>Introdução: o que vem depois?
 
@@ -24,7 +24,7 @@ Com essas informações básicas, você agora pode começar a escrever aplicativ
 -   [Trabalhando com blocos, selos e notificações do sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259): como criar blocos, blocos de atualização e selos, enviar notificações do sistema e exibir e atualizar atualizações em bloco e selo na tela de bloqueio.
 -   [Iniciando, retomando e executando multitarefa](https://msdn.microsoft.com/library/windows/apps/hh770837): como iniciar automaticamente, ativar, suspender e retomar aplicativos e como trabalhar com tarefas em segundo plano.
 -   [Diretrizes para dados de aplicativos móveis](https://msdn.microsoft.com/library/windows/apps/hh465094): como proporcionar uma excelente experiência para o usuário final que utiliza os aplicativos em mais de um dispositivo, como um PC no trabalho e um tablet em casa.
--   [Criar seu primeiro aplicativo Windows Runtime em C# ou Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=394138): um tópico focalizado no desenvolvimento do Windows Phone.
+-   [Criar seu primeiro aplicativo Windows Runtime em C# ou Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=394138): um tópico focalizado no desenvolvimento do Windows Phone.
 -   [Vídeos: movendo do iOS e Android](https://msdn.microsoft.com/library/windows/apps/dn393982): mais ajuda, desta vez em formato visual.
 
 Além disso, verifique se visitou nossos [Recursos de comunidade](https://developer.microsoft.com/en-us/windows/support) para saber como obter ajuda e ficar conectado através de fóruns de desenvolvedores, blogs, palestras e workshops para desenvolvedores e eventos e contatos locais da Microsoft.

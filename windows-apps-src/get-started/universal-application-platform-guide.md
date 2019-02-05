@@ -6,12 +6,12 @@ ms.date: 5/7/2018
 ms.topic: article
 keywords: windows 10, uwp, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: b54c33ab3807c26faba6a8cadd5318b4365f9ded
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 8d6609d73090d7d981d992bef4ca8ce6be3cc20a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922720"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044550"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>O que é um aplicativo da Plataforma Universal do Windows (UWP)?
 
@@ -68,7 +68,7 @@ Alguns aspectos da interface do usuário do seu aplicativo se adaptará automati
 
 Um armazenamento unificado de aplicativos disponibilizará seu aplicativo em dispositivos Windows 10, como computador, tablet, Xbox, HoloLens, Surface Hub e dispositivos de Internet das coisas (IoT). Você poderá enviar seu aplicativo para a loja e disponibilizá-lo em todas os tipos de dispositivos ou apenas os escolhidos. Você envia e gerencia todos os aplicativos para dispositivos Windows em um só lugar. Você tem um aplicativo de área de trabalho do C++ que deseja modernizar com recursos UWP e vender na Microsoft Store? Tudo bem.
 
-Os aplicativos UWP integram-se a [Application Insights](http://azure.microsoft.com/services/application-insights/) para telemetria detalhada e análise, uma ferramenta crucial para entender os usuários e melhorar os aplicativos.
+Os aplicativos UWP integram-se a [Application Insights](https://azure.microsoft.com/services/application-insights/) para telemetria detalhada e análise, uma ferramenta crucial para entender os usuários e melhorar os aplicativos.
 
 ### <a name="monetize-your-app"></a>Monetizar seu aplicativo
 
@@ -115,7 +115,7 @@ Confira [Prepare-se](get-set-up.md) a fim de baixar as ferramentas necessárias 
 
 O sistema de design da Microsoft chama-se Fluent. O Sistema de Design Fluente é um conjunto de recursos UWP combinado a práticas recomendadas para criação de aplicativos que funcionam perfeitamente em todos os tipos de dispositivos com Windows. As experiências do Fluente adaptam-se a e funcionam normalmente em dispositivos, de tablets a notebooks, de computadores a televisores, e em dispositivos de realidade virtual. Consulte [O Sistema de Design Fluente para aplicativos UWP](https://docs.microsoft.com/windows/uwp/design/fluent-design-system) para obter uma introdução ao Design Fluent.
 
-Um bom [projeto](http://go.microsoft.com/fwlink/?LinkId=258848) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, bem como será sua aparência e como vai funcionar. A experiência do usuário desempenha uma função enorme em determinar o quão feliz as pessoas serão com seu aplicativo, portanto não economize nesta etapa. [Noções básicas de design](https://dev.windows.com/design) apresenta você ao design de um aplicativo Universal do Windows. Consulte a [Introdução aos aplicativos da Plataforma Universal do Windows (UWP) para os designers](https://msdn.microsoft.com/library/windows/apps/dn958439) para obter informações sobre como projetar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, consulte a [cartilha de dispositivos](../design/devices/index.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes de destino.
+Um bom [projeto](https://go.microsoft.com/fwlink/?LinkId=258848) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, bem como será sua aparência e como vai funcionar. A experiência do usuário desempenha uma função enorme em determinar o quão feliz as pessoas serão com seu aplicativo, portanto não economize nesta etapa. [Noções básicas de design](https://dev.windows.com/design) apresenta você ao design de um aplicativo Universal do Windows. Consulte a [Introdução aos aplicativos da Plataforma Universal do Windows (UWP) para os designers](https://msdn.microsoft.com/library/windows/apps/dn958439) para obter informações sobre como projetar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, consulte a [cartilha de dispositivos](../design/devices/index.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes de destino.
 
 Além da interação em diferentes dispositivos, [planeje seu aplicativo](https://msdn.microsoft.com/library/windows/apps/hh465427) para adotar os benefícios de trabalhar em vários dispositivos. Por exemplo:
 
@@ -125,7 +125,7 @@ Além da interação em diferentes dispositivos, [planeje seu aplicativo](https:
 
 ### <a name="add-services"></a>Adicionar serviços
 
-- Use [serviços de nuvem](http://go.microsoft.com/fwlink/?LinkId=526377) para sincronização entre dispositivos.
+- Use [serviços de nuvem](https://go.microsoft.com/fwlink/?LinkId=526377) para sincronização entre dispositivos.
 - Saiba como [se conectar a serviços Web](https://msdn.microsoft.com/library/windows/apps/xaml/hh761504) para melhorar a experiência do aplicativo.
 - Saiba como [Adicionar a Cortana a seu aplicativo](https://mva.microsoft.com/training-courses/integrating-cortana-in-your-apps-8487?l=20D3s5Xz_5904984382) para que seu aplicativo possa responder a comandos de voz.
 - Inclua [Notificações por push](https://msdn.microsoft.com/library/windows/apps/mt187203) e [compras no aplicativo](https://msdn.microsoft.com/library/windows/apps/mt219684) em seu planejamento. Esses recursos devem funcionar em todos os dispositivos.

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e8c995c5a9513bea44664bcb395cd604ba2668c3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7a7f080a3de18ec0acc8fe68d8f0282d92f46125
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926352"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050989"
 ---
 # <a name="composition-brushes"></a>Pincéis de composição
 Todos os itens visíveis na tela de um aplicativo UWP é visível porque ele foi pintado por um pincel. Pincéis permitem que você pintar objetos (UI) da interface de usuário com conteúdo que variam de cores simples e sólidas para imagens ou desenhos à cadeia de efeitos complexos. Este tópico apresenta os conceitos de pintar com CompositionBrush.
@@ -134,9 +134,9 @@ _imageVisual.Size = new Vector2(156, 156);
 ```
 
 ### <a name="paint-with-a-custom-drawing"></a>Pintar com um desenho personalizado
-Um [CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) também pode ser usado para pintar uma área com pixels de um ICompositionSurface renderizados usando [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm) (ou D2D).
+Um [CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) também pode ser usado para pintar uma área com pixels de um ICompositionSurface renderizados usando [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm) (ou D2D).
 
-O código a seguir mostra que um SpriteVisual pintado com um texto de executar renderizado em um ICompositionSurface usando Win2D. Observe que, para usar Win2D, você precisa incluir o pacote [NuGet Win2D](http://www.nuget.org/packages/Win2D.uwp) ao seu projeto.
+O código a seguir mostra que um SpriteVisual pintado com um texto de executar renderizado em um ICompositionSurface usando Win2D. Observe que, para usar Win2D, você precisa incluir o pacote [NuGet Win2D](https://www.nuget.org/packages/Win2D.uwp) ao seu projeto.
 
 ```cs
 Compositor _compositor;
@@ -439,12 +439,12 @@ A tabela a seguir fornece uma lista dos cenários e se o uso de pincel XAML ou c
 |Pintar uma área com um gradiente estático                                       |[LinearGradientBrush](https://msdn.microsoft.com/library/windows/apps/BR210108)                            |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)
 |Pintar uma área com um gradiente animado                                 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)                                                                                 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)
 |Pintar uma área com uma imagem                                                |[ImageBrush](https://msdn.microsoft.com/library/windows/apps/BR210101)                                     |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415)
-|Pintar uma área com uma página da Web                                               |[WebViewBrush](https://msdn.microsoft.com/library/windows/apps/BR227703)                                   |N/D
+|Pintar uma área com uma página da Web                                               |[WebViewBrush](https://msdn.microsoft.com/library/windows/apps/BR227703)                                   |N/A
 |Pintar uma área com uma imagem usando stretch NineGrid                         |[Controle de imagem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image)                   |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
 |Pintar uma área com animado stretch NineGrid                               |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)                                                                                       |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
 |Pintar uma área com uma swapchain                                             |[SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel)                                                                                                 |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) com interoperabilidade swapchain
 |Pintar uma área com um vídeo                                                 |[MediaElement](https://msdn.microsoft.com/library/windows/apps/mt187272.aspx)                                                                                                  |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) com interoperabilidade de mídia
-|Pintar uma área com desenho 2D personalizado                                       |[CanvasControl](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_UI_Xaml_CanvasControl.htm) do Win2D                                                                                                 |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) com interoperabilidade do Win2D
+|Pintar uma área com desenho 2D personalizado                                       |[CanvasControl](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_UI_Xaml_CanvasControl.htm) do Win2D                                                                                                 |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) com interoperabilidade do Win2D
 |Pintar uma área com máscara não animado                                       |Use XAML [formas](https://docs.microsoft.com/windows/uwp/graphics/drawing-shapes) para definir uma máscara   |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
 |Pintar uma área com uma máscara animada                                        |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)                                                                                           |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
 |Pintar uma área com um efeito de filtro animado                               |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)                                                                                         |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e18be702c1b2bbd9ce1831b6991324896769192
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c72af86edd3d0a20ab8a0f062b5e0ccf8608e8a9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930737"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050789"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Dados de exemplo na superfície de design e para a criação de protótipo
 =============================================================================================
@@ -24,8 +24,8 @@ Pode ser impossível ou indesejado (talvez por motivos de privacidade ou desempe
 
 **Aplicativos de amostra que demonstram {Binding}**
 
--   Baixe o aplicativo [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950).
--   Baixe o aplicativo [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952).
+-   Baixe o aplicativo [Bookstore1](https://go.microsoft.com/fwlink/?linkid=532950).
+-   Baixe o aplicativo [Bookstore2](https://go.microsoft.com/fwlink/?linkid=532952).
 
 <a name="setting-datacontext-in-markup"></a>Definindo DataContext na marcação
 -----------------------------
@@ -97,7 +97,7 @@ Basta especificar uma classe para o comando usar. O comando executa duas ações
 
 As várias declarações xmlns significam que atributos com o prefixo **d:** são interpretados apenas em tempo de design e são ignorados em tempo de execução. Portanto, o atributo **d:DataContext** afeta somente o valor da propriedade [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) em tempo de design, não tendo qualquer efeito em tempo de execução. Se quiser, você pode até mesmo definir tanto **d:DataContext** quanto **DataContext** na marcação. **d:DataContext** será substituído em tempo de design, enquanto a propriedade **DataContext** será substituída em tempo de execução. Essas mesmas regras de substituição se aplicam a todos os atributos em tempo de design e em tempo de execução.
 
-O atributo **d:DataContext** e todos os outros atributos em tempo de design estão documentados no tópico sobre [atributos em tempo de design](http://go.microsoft.com/fwlink/p/?LinkId=272504), que ainda é válido para aplicativos UWP (Plataforma Universal do Windows).
+O atributo **d:DataContext** e todos os outros atributos em tempo de design estão documentados no tópico sobre [atributos em tempo de design](https://go.microsoft.com/fwlink/p/?LinkId=272504), que ainda é válido para aplicativos UWP (Plataforma Universal do Windows).
 
 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) não tem uma propriedade **DataContext**, mas tem uma propriedade **Source**. Consequentemente, há uma propriedade **d:Source** que você pode usar para definir dados de amostra somente em tempo de design em um **CollectionViewSource**.
 

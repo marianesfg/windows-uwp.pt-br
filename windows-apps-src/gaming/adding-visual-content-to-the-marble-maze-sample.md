@@ -6,12 +6,12 @@ ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, elementos gráficos
 ms.localizationpriority: medium
-ms.openlocfilehash: 60dd12c3e18b82118053d72d0983e13008dd8a0e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b8ad6b9a46993dc1121703e820c924b113120e51
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918901"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046469"
 ---
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a>Adicionando conteúdo visual ao exemplo do Marble Maze
 
@@ -33,7 +33,7 @@ Também nos concentramos primeiro em Adicionar ativos 3D e, em seguida, ativos 2
 Também precisamos repetir algumas dessas etapas várias vezes durante o processo de desenvolvimento. Por exemplo, como fizemos alterações aos modelos de malha e Mármore, tínhamos também alterar algumas do código de sombreador que dá suporte a esses modelos.
 
 > [!NOTE]
-> O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
+> O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](https://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 Seguem alguns dos principais pontos discutidos neste documento para quando você trabalhar com DirectX e conteúdo visual de jogos, ou seja, quando inicializar as bibliotecas de elementos gráficos do DirectX, carregar recursos de cena e atualizar e renderizar a cena.

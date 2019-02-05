@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, versão, build, versões, windows, escolher, atualizar, atualizações
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
-ms.openlocfilehash: 3461170110a4ca4391c41bee815a83b6d45cee75
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fed67ca6547ec8c8f90bc67a7be1f0d97af475df
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931258"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047371"
 ---
 # <a name="choose-a-uwp-version"></a>Escolher uma versão do UWP
 
@@ -20,7 +20,7 @@ Cada versão do Windows 10 trouxe recursos novos e aprimorados para a plataforma
 > [!WARNING]
 > Projetos UWP criados em versões atuais do Visual Studio não podem ser abertos no Visual Studio 2015.
 
-A tabela a seguir descreve as versões disponíveis do Windows 10. Observe que esta tabela só se aplica para a construção de aplicativos UWP, que são suportados apenas no Windows 10. Você não pode desenvolver aplicativos UWP para versões mais antigas do Windows, e você deve ter [instalado a compilação apropriada do SDK](http://go.microsoft.com/fwlink/?LinkId=821431) para segmentar essa versão. 
+A tabela a seguir descreve as versões disponíveis do Windows 10. Observe que esta tabela só se aplica para a construção de aplicativos UWP, que são suportados apenas no Windows 10. Você não pode desenvolver aplicativos UWP para versões mais antigas do Windows, e você deve ter [instalado a compilação apropriada do SDK](https://go.microsoft.com/fwlink/?LinkId=821431) para segmentar essa versão. 
 
 | Versão | Descrição |
 | --- | --- |

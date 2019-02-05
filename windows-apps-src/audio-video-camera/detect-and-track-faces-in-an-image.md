@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 970fbcef984f28e779ea7c133de95f7f7f99be8d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fdeb3f18e6500cc0a907e725f34c0eb96d33876e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923519"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045927"
 ---
 # <a name="detect-faces-in-images-or-videos"></a>Detectar rostos em imagens ou vídeos
 
@@ -23,7 +23,7 @@ Este tópico mostra como usar [**FaceDetector**](https://msdn.microsoft.com/libr
 
 Para um método alternativo de acompanhamento facial que usa [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776), consulte [Análise de cena para captura de mídia](scene-analysis-for-media-capture.md).
 
-O código neste artigo foi adaptado dos exemplos [Detecção básica de rostos](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409) e [Acompanhamento facial básico](http://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409). Você pode baixar esses exemplos para ver o código usado em contexto ou usar o exemplo como ponto de partida para seu próprio aplicativo.
+O código neste artigo foi adaptado dos exemplos [Detecção básica de rostos](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409) e [Acompanhamento facial básico](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409). Você pode baixar esses exemplos para ver o código usado em contexto ou usar o exemplo como ponto de partida para seu próprio aplicativo.
 
 ## <a name="detect-faces-in-a-single-image"></a>Detectar rostos em uma única imagem
 
@@ -98,8 +98,8 @@ Chame [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/app
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Análise de cena para captura de mídia](scene-analysis-for-media-capture.md)
-* [Exemplo de detecção básica de rostos](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
-* [Exemplo de acompanhamento facial básico](http://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
+* [Exemplo de detecção básica de rostos](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
+* [Exemplo de acompanhamento facial básico](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
 * [Câmera](camera.md)
 * [Captura básica de fotos, áudio e vídeo com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Reprodução de mídia](media-playback.md)

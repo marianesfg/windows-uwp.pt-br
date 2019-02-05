@@ -7,12 +7,12 @@ ms.date: 09/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e4e8d5f49d10219a06a36fdfbe7ec3abe236109a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b58eb4b6e3f3f02bb1f72fcba9da3710f08a72da
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931453"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045990"
 ---
 # <a name="high-contrast-themes"></a>Temas de alto contraste  
 
@@ -46,7 +46,7 @@ No segundo exemplo, a [**extensão de marcação {ThemeResource}**](../../xaml-p
 Quando você precisar alterar uma cor padrão do sistema, crie uma coleção de ThemeDictionaries para seu aplicativo.
 
 1. Comece criando o caminho adequado, caso ainda não exista. No App.xaml, crie uma coleção de **ThemeDictionaries**, incluindo no mínimo **Default** e **HighContrast**.
-2. Em **Default**, crie o tipo de [Brush](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx) de que você precisa, geralmente um **SolidColorBrush**. Dê a ele um nome de *x:Key* específico para o que ele está sendo usado.
+2. Em **Default**, crie o tipo de [Brush](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx) de que você precisa, geralmente um **SolidColorBrush**. Dê a ele um nome de *x:Key* específico para o que ele está sendo usado.
 3. Atribua a **Color** desejada para ele.
 4. Copie esse **Brush** em **HighContrast**.
 
@@ -235,7 +235,7 @@ Você pode verificar programaticamente se o tema atual é um tema de alto contra
 
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [Acessibilidade](accessibility.md)
-* [Amostra de configurações e contraste da interface do usuário](http://go.microsoft.com/fwlink/p/?linkid=231539)
-* [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
-* [Amostra de alto contraste XAML](http://go.microsoft.com/fwlink/p/?linkid=254993)
+* [Amostra de configurações e contraste da interface do usuário](https://go.microsoft.com/fwlink/p/?linkid=231539)
+* [Amostra de acessibilidade XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Amostra de alto contraste XAML](https://go.microsoft.com/fwlink/p/?linkid=254993)
 * [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)

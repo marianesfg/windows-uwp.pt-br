@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: abe77526a7ac12bc905839065913dd59d70fdf62
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: eaf6118720ab77931decf93113a13341ab4f51d0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925893"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046509"
 ---
 # <a name="handle-file-activation"></a>Tratar a ativação do arquivo
 
@@ -129,13 +129,13 @@ Quando seu aplicativo é iniciado por ativação de arquivo, você deve consider
 
 ## <a name="remarks"></a>Comentários
 
-Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que você valide o conteúdo de um arquivo antes de processá-lo. Para obter mais informações sobre a validação de entrada, consulte [Escrevendo código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053)
+Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que você valide o conteúdo de um arquivo antes de processá-lo. Para obter mais informações sobre a validação de entrada, consulte [Escrevendo código seguro](https://go.microsoft.com/fwlink/p/?LinkID=142053)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 ### <a name="complete-example"></a>Exemplo completo
 
-* [Amostra de inicialização de associação](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+* [Amostra de inicialização de associação](https://go.microsoft.com/fwlink/p/?LinkID=231484)
 
 ### <a name="concepts"></a>Conceitos
 

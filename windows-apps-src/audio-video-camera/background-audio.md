@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b8a859f27ff24dba15f7e4fde66a8d54a84a8bf4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3f5fe7cad12193b409c4923f876b47cae0852aa9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925780"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045555"
 ---
 # <a name="play-media-in-the-background"></a>Reproduzir mídia em segundo plano
 Este artigo mostra como configurar seu aplicativo para que a mídia continue a ser reproduzida quando o aplicativo for movido do primeiro para o segundo plano. Isso significa que, mesmo depois que o usuário minimizar o aplicativo, retornar à tela inicial ou sair do aplicativo de alguma outra forma, o aplicativo poderá continuar a reproduzir o áudio. 
@@ -25,7 +25,7 @@ Os cenários de reprodução de áudio em segundo plano incluem:
 A implementação de áudio em segundo plano descrita neste artigo permitirá que seu aplicativo seja executado universalmente em todos os dispositivos Windows, incluindo dispositivos móveis, desktop e Xbox.
 
 > [!NOTE]
-> O código neste artigo foi adaptado da [Amostra de áudio em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=800141) da UWP.
+> O código neste artigo foi adaptado da [Amostra de áudio em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=800141) da UWP.
 
 ## <a name="explanation-of-one-process-model"></a>Explicação do modelo de um processo
 Com o Windows 10, versão 1607, foi introduzido um novo modelo de processo único que simplifica significativamente o processo para habilitar áudio em segundo plano. Anteriormente, era necessário que o aplicativo gerenciasse um processo em segundo plano além do aplicativo em primeiro plano e comunicasse manualmente as mudanças de estado entre os dois processos. Com o novo modelo, você simplesmente adiciona a funcionalidade de áudio em segundo plano ao manifesto do aplicativo e ele continuará reproduzindo áudio automaticamente quando for movido para o segundo plano. Dois novos eventos de ciclo de vida do aplicativo, [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) e [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) permitem que o aplicativo saiba quando ele entra em segundo plano e sai dele. Quando o aplicativo move para as transições de ou para o segundo plano, as restrições de memória impostas pelo sistema podem mudar, portanto, você pode usar esses eventos para verificar o consumo de memória atual e liberar recursos para ficar abaixo do limite.

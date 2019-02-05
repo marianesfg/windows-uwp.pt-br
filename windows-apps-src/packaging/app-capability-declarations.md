@@ -6,12 +6,12 @@ ms.date: 11/26/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 51d671ef4542598322ec79d9cc3b16abd8105731
-ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
+ms.openlocfilehash: 69e73d020738e0bad5404f164417bbce35e5e60c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "8990499"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047870"
 ---
 # <a name="app-capability-declarations"></a>Declarações de funcionalidades do app
 
@@ -66,7 +66,7 @@ As funcionalidades de dispositivo permitem que o aplicativo acesse dispositivos 
 | **Microfone** | A funcionalidade **microfone** dá acesso ao feed de áudio do microfone, o qual permite que o aplicativo registre o áudio de microfones conectados. Os aplicativos devem tratar o caso no qual o usuário desabilitou o microfone no botão **Configurações**. |
 | **Proximidade** | A funcionalidade **proximidade** permite que vários dispositivos próximos se comuniquem entre eles. Essa funcionalidade costuma ser usada em jogos casuais de vários jogadores e em aplicativos que trocam informações. Os dispositivos tentam usar a tecnologia de comunicação que oferece a melhor conexão possível, incluindo Bluetooth, Wi-Fi e a Internet. Essa funcionalidade é usada para iniciar a comunicação entre os dispositivos. |
 | **Webcam** | A funcionalidade **webcam** dá acesso ao feed de vídeo de uma câmera interna ou uma webcam externa, o que permite que o aplicativo capture fotos e vídeos. No Windows, os aplicativos devem tratar o caso no qual o usuário desabilitou a câmera no botão **Configurações**.<br/>A funcionalidade **webcam** concede acesso somente ao stream de vídeo. Para conceder acesso ao stream de áudio também, a funcionalidade **microphone** deve ser adicionada. |
-| **USB** | A funcionalidade do dispositivo **usb** habilita o acesso às APIs em [Updating the app manifest package for a USB device](http://go.microsoft.com/fwlink/p/?LinkId=302259). |
+| **USB** | A funcionalidade do dispositivo **usb** habilita o acesso às APIs em [Updating the app manifest package for a USB device](https://go.microsoft.com/fwlink/p/?LinkId=302259). |
 | **Dispositivos de interface humana (HID)** | A funcionalidade de dispositivo **humaninterfacedevice** habilita o acesso às APIs em [Como especificar funcionalidades de dispositivos para HID](https://msdn.microsoft.com/library/windows/apps/Dn263091). |
 | **Ponto de Serviço (POS)** | A funcionalidade de dispositivo **pointOfService** habilita o acesso às APIs em [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071). Esse namespace permite que o aplicativo acesse scanners de código de barras de Ponto de Serviço (POS) e leitores de tarja magnética. O namespace oferece uma interface neutra de fornecedor para acessar dispositivos de POS de diversos fabricantes a partir de um aplicativo UWP. |
 | **Bluetooth** | A funcionalidade do dispositivo **bluetooth** permite que os aplicativos se comuniquem com dispositivos bluetooth já emparelhados usando os protocolos GATT (Atributo Genérico) ou RFCOMM Taxa Básica Clássica).<br/>Essa funcionalidade é necessária para usar algumas APIs no namespace [**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/Dn263413). |
@@ -108,7 +108,7 @@ Para declarar um recurso restrito, modificar seu arquivo de origem do [manifesto
 
 Anteriormente, era necessário contatar o suporte para obter aprovação para usar uma funcionalidade. Vamos agora permitem que você forneça essas informações no [Partner Center](https://partner.microsoft.com/dashboard/) como parte do [processo de envio](../publish/app-submissions.md).
 
-Quando você carrega pacotes para envio, detectaremos se as funcionalidades restritas são declaradas. Se fizermos isso, será necessário fornecer detalhes sobre como seu produto usa cada funcionalidade na página [Opções de envio](../publish/manage-submission-options.md#restricted-capabilities). Certifique-se de fornecer o máximo de detalhes possível para nos ajudar a entender por que seu produto precisa declarar a funcionalidade. Observe que isso pode adicionar algum tempo adicional para seu envio concluir o processo de certificação.
+Quando você carrega pacotes para envio, detectaremos se as funcionalidades restritas são declaradas. Se fizermos isso, será necessário fornecer detalhes sobre como seu produto usa cada funcionalidade na página [Opções de envio](../publish/manage-submission-options.md#restricted-capabilities). Certifique-se de fornecer o máximo de detalhes possível para nos ajudar a entender por que seu produto precisa declarar a funcionalidade. Observe que isso pode adicionar algum tempo adicional para concluir o processo de certificação do seu envio.
 
 Durante o processo de certificação, nossos testadores analisarão as informações que você fornecer para determinar se o envio é aprovado para usar a funcionalidade. Observe que isso pode adicionar algum tempo adicional para concluir o processo de certificação do seu envio. Se nós aprovarmos o uso da funcionalidade, seu aplicativo continuará o restante do processo de certificação. Você geralmente não precisa repetir o processo de aprovação da funcionalidade ao enviar atualizações do seu aplicativo (a menos que você declare funcionalidades adicionais).
 

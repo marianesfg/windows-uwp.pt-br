@@ -6,12 +6,12 @@ keywords: Introdução, Licença de desenvolvedor, Visual Studio, licença de de
 ms.date: 05/30/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 802555f6b1e6f928edf43806226ac497a437b4ff
-ms.sourcegitcommit: 67cc4153dac48a2633d93c954eaad61be8600fa8
+ms.openlocfilehash: 90ff8e8c0d11e58d251e9c2f5bfb00f3b8aedf1a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991754"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044939"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
 
@@ -68,7 +68,7 @@ Informações específicas à família de dispositivos
 **O sideload de aplicativos** é uma opção mais segura que o Modo de Desenvolvedor, pois você não pode instalar aplicativos no dispositivo sem um certificado confiável.
 
 > [!NOTE]
-> Se você fizer o sideload de aplicativos, ainda deverá instalar aplicativos somente de fontes confiáveis. Ao instalar um app de sideload que não foi certificado pela Microsoft Store, você concorda que obteve todos os direitos necessários para fazer sideload do app e que é o único responsável por qualquer dano resultante da instalação e da execução do app. Veja a seção Windows &gt; Microsoft Store desta [política de privacidade](http://go.microsoft.com/fwlink/?LinkId=521839).
+> Se você fizer o sideload de aplicativos, ainda deverá instalar aplicativos somente de fontes confiáveis. Ao instalar um app de sideload que não foi certificado pela Microsoft Store, você concorda que obteve todos os direitos necessários para fazer sideload do app e que é o único responsável por qualquer dano resultante da instalação e da execução do app. Veja a seção Windows &gt; Microsoft Store desta [política de privacidade](https://go.microsoft.com/fwlink/?LinkId=521839).
 
 
 ### <a name="developer-mode"></a>Modo de Desenvolvedor
@@ -133,7 +133,7 @@ Em versões anteriores do Windows 10 Mobile, uma opção Despejos de Memória es
 
 Há várias ferramentas que você pode usar para implantar um app de um computador Windows 10 para um dispositivo Windows 10. Ambos os dispositivos devem estar conectados à mesma sub-rede da rede por uma conexão com ou sem fio, ou eles devem estar conectados por USB. Ambas as maneiras listadas instalam somente o pacote do aplicativo (.appx/.appxbundle); elas não instalam certificados.
 
--   Use a ferramenta de implantação de aplicativos do Windows 10 (WinAppDeployCmd). Saiba mais sobre [a ferramenta WinAppDeployCmd](http://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
+-   Use a ferramenta de implantação de aplicativos do Windows 10 (WinAppDeployCmd). Saiba mais sobre [a ferramenta WinAppDeployCmd](https://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
 -   Você pode usar o [Portal de Dispositivos](../debug-test-perf/device-portal.md) para implantar do seu navegador para um dispositivo móvel executando o Windows 10, versão 1511 ou posterior. Use a página **[Aplicativos](../debug-test-perf/device-portal.md#apps-manager)** no Device Portal para carregar um pacote de aplicativo (.appx) e instalá-lo no dispositivo.
 
 ## <a name="failure-to-install-developer-mode-package"></a>Falha ao instalar o pacote do Modo de Desenvolvedor

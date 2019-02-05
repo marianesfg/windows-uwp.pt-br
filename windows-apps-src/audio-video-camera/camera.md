@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e28a4a7abaacd8b2de60c6163055bd9d667ba412
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e190a6d5134cc1fba4ac8be970bb8d90847700e4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946907"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044410"
 ---
 # <a name="camera"></a>Câmera
 
@@ -50,14 +50,14 @@ Esta seção fornece orientação para a criação de aplicativos da Plataforma 
 
 ## <a name="uwp-app-samples-for-camera"></a>Exemplos de aplicativos UWP para câmera
 
-* [Exemplo de detecção de rosto com a câmera](http://go.microsoft.com/fwlink/p/?LinkID=619486&clcid=0x409)
-* [Exemplo de quadro de visualização da câmera](http://go.microsoft.com/fwlink/p/?LinkID=620516&clcid=0x409)
-* [Exemplo de HDR de câmera](http://go.microsoft.com/fwlink/p/?LinkID=620517&clcid=0x409)
-* [Exemplo de controles manuais da câmera](http://go.microsoft.com/fwlink/p/?LinkID=627611&clcid=0x409)
-* [Exemplo de perfil da câmera](http://go.microsoft.com/fwlink/p/?LinkID=620518&clcid=0x409)
-* [Exemplo de resolução da câmera](http://go.microsoft.com/fwlink/p/?LinkID=624252&clcid=0x409)
-* [Kit inicial de câmera](http://go.microsoft.com/fwlink/p/?LinkID=619479&clcid=0x409)
-* [Exemplo de estabilização de vídeo da câmera](http://go.microsoft.com/fwlink/p/?LinkID=620519&clcid=0x409)
+* [Exemplo de detecção de rosto com a câmera](https://go.microsoft.com/fwlink/p/?LinkID=619486&clcid=0x409)
+* [Exemplo de quadro de visualização da câmera](https://go.microsoft.com/fwlink/p/?LinkID=620516&clcid=0x409)
+* [Exemplo de HDR de câmera](https://go.microsoft.com/fwlink/p/?LinkID=620517&clcid=0x409)
+* [Exemplo de controles manuais da câmera](https://go.microsoft.com/fwlink/p/?LinkID=627611&clcid=0x409)
+* [Exemplo de perfil da câmera](https://go.microsoft.com/fwlink/p/?LinkID=620518&clcid=0x409)
+* [Exemplo de resolução da câmera](https://go.microsoft.com/fwlink/p/?LinkID=624252&clcid=0x409)
+* [Kit inicial de câmera](https://go.microsoft.com/fwlink/p/?LinkID=619479&clcid=0x409)
+* [Exemplo de estabilização de vídeo da câmera](https://go.microsoft.com/fwlink/p/?LinkID=620519&clcid=0x409)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

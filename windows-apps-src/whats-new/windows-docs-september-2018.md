@@ -5,18 +5,18 @@ keywords: Novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 16ddf00e88842bc6a83ecf759427984a50f5b4a9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0876b2d9b65143cde2387a42e221460cc617cf0b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931855"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046732"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novidades dos documentos de desenvolvedor do Windows em setembro de 2018
 
 A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. Visões gerais de recurso, diretrizes para desenvolvedores e vídeos a seguir foram disponibilizados no mês de setembro.
 
-[Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+[Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="features"></a>Recursos
 

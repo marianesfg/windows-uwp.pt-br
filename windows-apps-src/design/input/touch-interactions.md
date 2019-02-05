@@ -8,12 +8,12 @@ keywords: toque, ponteiro, entrada, interação do usuário
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b662a7689f0b0b24fc3f70a9fbc143d4268d2cb8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b889fede67c7e32ff48c0e48a516f389afda820a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940490"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048636"
 ---
 # <a name="touch-interactions"></a>Interações por toque
 
@@ -591,17 +591,17 @@ Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implem
 
 **Exemplos**
 
-* [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Exemplos de arquivo morto**
 
-* [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos e interações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: amostra de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: amostra de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: gestos e interações com o GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
  

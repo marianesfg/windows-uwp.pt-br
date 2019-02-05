@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, arquivos, io de arquivo, ler arquivo, gravar arquivo, criar arquivo, escrever texto, ler texto
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 9350228585ec8108c41bd15de6179de0294140dc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e0abc146820ca27ee83662ba5f8b79a1daf90bab
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921076"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045525"
 ---
 # <a name="work-with-files"></a>Trabalhar com arquivos
 
@@ -130,7 +130,7 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 | [Criar, gravar e ler um arquivo](https://docs.microsoft.com/windows/uwp/files/quickstart-reading-and-writing-files) | Capas de criação, leitura e gravação de texto, dados binários e fluxos. |
 | [Introdução ao armazenamento de dados de aplicativo localmente](https://blogs.windows.com/buildingapps/2016/05/10/getting-started-storing-app-data-locally/#pCbJKGjcShh5DTV5.97) | Além de cobrir as práticas recomendadas para salvar os dados locais, abrange a finalidade da pasta LocalSettings e LocalCache. |
 | [Introdução aos Dados de aplicativo em roaming](https://blogs.windows.com/buildingapps/2016/05/03/getting-started-with-roaming-app-data/#RgjgLt5OkU9DbVV8.97) | Uma série de duas partes sobre como usar dados de aplicativo em roaming. |
-| [Diretrizes de dados de aplicativo em roaming](http://msdn.microsoft.com/library/windows/apps/hh465094) | Siga essas diretrizes de dados em roaming ao projetar seu aplicativo. |
+| [Diretrizes de dados de aplicativo em roaming](https://msdn.microsoft.com/library/windows/apps/hh465094) | Siga essas diretrizes de dados em roaming ao projetar seu aplicativo. |
 | [Armazenar e recuperar configurações e outros dados de aplicativo](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data) | Fornece uma visão geral de várias fontes de dados de aplicativo, como as pastas locais, em roaming e temporárias. Consulte a seção [Dados em roaming](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#roaming-data) para ver diretrizes e mais informações sobre a gravação de dados em roaming entre os dispositivos. |
 | [Permissões de acesso a arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions) | Informações sobre quais locais do sistema de arquivo que o aplicativo pode acessar. |
 | [Abrir arquivos e pastas com um seletor](https://docs.microsoft.com/windows/uwp/files/quickstart-using-file-and-folder-pickers) | Mostra como acessar arquivos e pastas permitindo que o usuário decida por uma interface do usuário do seletor. |
@@ -143,6 +143,6 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 |-----------------|---------------|
 | [Amostra de dados de aplicativos](https://code.msdn.microsoft.com/windowsapps/ApplicationData-sample-fb043eb2) | Mostra como armazenar e recuperar dados específicos de cada usuário usando as APIs de dados de aplicativos. |
 | [Exemplo de acesso a arquivos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) | Mostra como criar, ler, gravar, copiar e excluir um arquivo. |
-| [Exemplo do seletor de arquivos](http://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | Mostra como acessar arquivos e pastas, permitindo que o usuário as escolha com a interface do usuário e como salvar um arquivo para que o usuário possa especificar o nome, o tipo e o local de um arquivo para salvar. |
+| [Exemplo do seletor de arquivos](https://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | Mostra como acessar arquivos e pastas, permitindo que o usuário as escolha com a interface do usuário e como salvar um arquivo para que o usuário possa especificar o nome, o tipo e o local de um arquivo para salvar. |
 | [Amostra de JSON](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Json) | Mostra como codificar e decodificar objetos JavaScript Object Notation (JSON), matrizes, cadeias de caracteres, números e boolianos usando o [namespace Windows.Data.Json](https://docs.microsoft.com/uwp/api/Windows.Data.Json). |
 | [Exemplos de código adicionais](https://developer.microsoft.com//windows/samples) | Escolha **Arquivos, pastas e bibliotecas** na lista suspensa categoria. |

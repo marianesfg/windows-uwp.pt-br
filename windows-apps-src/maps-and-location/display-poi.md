@@ -6,18 +6,18 @@ ms.date: 08/11/2017
 ms.topic: article
 keywords: windows 10, uwp, mapa, localização, pinos de pressão
 ms.localizationpriority: medium
-ms.openlocfilehash: f67c93a6f56fd466d981bce10eb41c16ff8da1f3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bfb307093889c5a40a452d2d406f02224ab5eab1
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930246"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050639"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>Exibir pontos de interesse em um mapa
 
 Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML. Uma ponto de interesse é um ponto específico no mapa que representa algo de seu interesse. Por exemplo, o local de uma empresa, cidade ou amigo.
 
-Para saber mais sobre como exibir POI no seu app, baixe o exemplo a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub: [exemplo de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977).
+Para saber mais sobre como exibir POI no seu app, baixe o exemplo a seguir do [repositório Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub: [exemplo de mapa da Plataforma Universal do Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
 
 Exiba pinos, imagens e formas no mapa adicionando os objetos [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077), [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard),  [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) e [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) a uma coleção **MapElements** de um objeto [**MapElementsLayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelementslayer). Em seguida, adicione esse objeto de camada à coleção **Layers** de um controle de mapa.
 
@@ -92,7 +92,7 @@ Tenha estas considerações em mente ao trabalhar com a classe [**MapIcon**](htt
 
 ## <a name="add-a-3d-pushpin"></a>Adicionar um pino 3D
 
-Você pode adicionar objetos tridimensionais a um mapa. Use a classe [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d) para importar um objeto tridimensional de um arquivo [Formato de Manufatura 3D (3MF)](http://3mf.io/specification/).
+Você pode adicionar objetos tridimensionais a um mapa. Use a classe [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d) para importar um objeto tridimensional de um arquivo [Formato de Manufatura 3D (3MF)](https://3mf.io/specification/).
 
 Esta imagem usa xícaras de café 3D para marcar os locais dos cafeterias em um bairro.
 
@@ -186,7 +186,7 @@ O [**NormalizedAnchorPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml
 
 ## <a name="add-a-shape"></a>Adicionar uma forma
 
-Exiba uma forma de vários pontos no mapa usando a classe [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103). O exemplo a seguir, da [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977), mostra uma caixa vermelha com borda azul no mapa.
+Exiba uma forma de vários pontos no mapa usando a classe [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103). O exemplo a seguir, da [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977), mostra uma caixa vermelha com borda azul no mapa.
 
 ```csharp
 public void HighlightArea()
@@ -229,7 +229,7 @@ public void HighlightArea()
 ## <a name="add-a-line"></a>Adicionar uma linha
 
 
-Exiba uma linha no mapa usando a classe [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114). O exemplo a seguir, da [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977), mostra uma linha tracejada no mapa.
+Exiba uma linha no mapa usando a classe [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114). O exemplo a seguir, da [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977), mostra uma linha tracejada no mapa.
 
 ```csharp
 public void DrawLineOnMap()
@@ -474,10 +474,10 @@ Na página XAML, associe à propriedade na sua classe de modelo de exibição qu
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
-* [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo de aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Exemplo de aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)
 * [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103)
 * [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114)

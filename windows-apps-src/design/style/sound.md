@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5060012c90ec9cfef093021f44b39321f452e01c
-ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
+ms.openlocfilehash: 9dd47ce2acf78a76ad413d70ce8c3e7f39a793ea
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004592"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048193"
 ---
 # <a name="sound"></a>Som
 
@@ -53,7 +53,7 @@ Para saber mais sobre o áudio espacial e como o XAML processa isso, veja [Audio
 ### <a name="sound-for-tv-and-xbox"></a>Som de TV e Xbox
 
 O som é uma parte essencial da experiência de 3 metros e, por padrão, o estado do **ElementSoundPlayer** é **Auto**, o que significa que você só obterá som quando seu aplicativo estiver em execução no Xbox.
-Para obter mais informações sobre como projetar para Xbox e TV, consulte o artigo [Projetando para Xbox e TV](http://go.microsoft.com/fwlink/?LinkId=760736).
+Para obter mais informações sobre como projetar para Xbox e TV, consulte o artigo [Projetando para Xbox e TV](https://go.microsoft.com/fwlink/?LinkId=760736).
 
 ## <a name="sound-volume-override"></a>Substituição de volume do som
 
@@ -166,5 +166,5 @@ O objetivo por trás desse recurso de ciclo é evitar que os sons de foco se tor
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Projetar para Xbox e TV](http://go.microsoft.com/fwlink/?LinkId=760736)
+* [Projetar para Xbox e TV](https://go.microsoft.com/fwlink/?LinkId=760736)
 * [Documentação da classe ElementSoundPlayer](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer)

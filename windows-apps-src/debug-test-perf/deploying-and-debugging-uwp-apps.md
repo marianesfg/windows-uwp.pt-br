@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, depuração, teste, desempenho
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f58485b6f6829b9eec0495cce088304b181a2b1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 606ab4489b86b1fbba7346b4a503339c4c19f7d4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940668"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048313"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implantando e depurando aplicativos UWP
 
@@ -184,7 +184,7 @@ O dispositivo remoto, o layout é registrado no seguinte local padrão dependend
 
 No Windows 10, o desempenho de inicialização dos aplicativos UWP é melhorado iniciando proativamente e, em seguida, suspendendo os aplicativos em uma técnica chamada de [pré-inicialização](https://msdn.microsoft.com/library/windows/apps/Mt593297). Muitos aplicativos não precisam fazer nada especial para trabalhar nesse modo, mas alguns aplicativos talvez precisem ajustar seu comportamento. Para ajudar a depurar problemas nesses caminhos de código, você pode iniciar o aplicativo do Visual Studio no modo de pré-inicialização.
 
-Há suporte para depuração de um projeto do Visual Studio (**Depurar** -&gt; **Outros Destinos de Depuração** -&gt; **Depurar Pré-inicialização de Aplicativo Universal do Windows**) e para aplicativos já instalados no computador (**Depurar** -&gt; **Outros Destinos de Depuração** -&gt; **Depurar Pacote do Aplicativo Instalado**, selecionando **Ativar Aplicativos com Pré-inicialização**). Para obter mais informações, consulte [Depurar pré-inicialização de UWP](http://go.microsoft.com/fwlink/p/?LinkId=717245).
+Há suporte para depuração de um projeto do Visual Studio (**Depurar** -&gt; **Outros Destinos de Depuração** -&gt; **Depurar Pré-inicialização de Aplicativo Universal do Windows**) e para aplicativos já instalados no computador (**Depurar** -&gt; **Outros Destinos de Depuração** -&gt; **Depurar Pacote do Aplicativo Instalado**, selecionando **Ativar Aplicativos com Pré-inicialização**). Para obter mais informações, consulte [Depurar pré-inicialização de UWP](https://go.microsoft.com/fwlink/p/?LinkId=717245).
 
 Você pode definir as seguintes opções de implementação na página da propriedade de **depuração** do projeto de inicialização:
 
@@ -206,7 +206,7 @@ Você pode definir as seguintes opções de implementação na página da propri
 
 ## <a name="symbols"></a>Símbolos
 
-Os arquivos de símbolos contêm uma variedade de dados muito úteis na depuração de código, como variáveis, nomes de funções e endereços de ponto de entrada, permitindo que você compreenda melhor as exceções e a ordem de execução da pilha de chamadas. Os símbolos da maioria das variantes do Windows estão disponíveis no [servidor de símbolos da Microsoft](http://msdl.microsoft.com/download/symbols), ou podem ser baixados para que as pesquisas offline fiquem mais rápidas em [Baixar pacotes de símbolos do Windows](http://aka.ms/winsymbols).
+Os arquivos de símbolos contêm uma variedade de dados muito úteis na depuração de código, como variáveis, nomes de funções e endereços de ponto de entrada, permitindo que você compreenda melhor as exceções e a ordem de execução da pilha de chamadas. Os símbolos da maioria das variantes do Windows estão disponíveis no [servidor de símbolos da Microsoft](https://msdl.microsoft.com/download/symbols), ou podem ser baixados para que as pesquisas offline fiquem mais rápidas em [Baixar pacotes de símbolos do Windows](https://aka.ms/winsymbols).
 
 Para definir opções de símbolos para o Visual Studio, selecione **Ferramentas > Opções** e vá para **Depuração > Símbolos** na janela da caixa de diálogo.
 
@@ -223,7 +223,7 @@ Você pode adicionar mais caminhos usando o delimitador `‘;’` ou usar o coma
 
 ## <a name="windbg"></a>WinDbg
 
-WinDbg é um depurador avançado fornecido como parte do conjunto de Ferramentas de Depuração para Windows, que está incluído no [SDK do Windows](http://go.microsoft.com/fwlink/p/?LinkID=271979). A instalação do SDK do Windows permite que você instale as Ferramentas de Depuração para Windows como um produto autônomo. Embora seja altamente útil para a depuração de código nativo, não recomendamos o WinDbg para aplicativos escritos em código gerenciado ou HTML5.
+WinDbg é um depurador avançado fornecido como parte do conjunto de Ferramentas de Depuração para Windows, que está incluído no [SDK do Windows](https://go.microsoft.com/fwlink/p/?LinkID=271979). A instalação do SDK do Windows permite que você instale as Ferramentas de Depuração para Windows como um produto autônomo. Embora seja altamente útil para a depuração de código nativo, não recomendamos o WinDbg para aplicativos escritos em código gerenciado ou HTML5.
 
 Para usar o WinDbg com aplicativos UWP, você precisará primeiro desabilitar o PLM (Gerenciamento do Tempo de Vida do Processo) para o pacote do aplicativo usando o PLMDebug, conforme descrito em [Testando e depurando ferramentas para PLM (Gerenciamento do Tempo de Vida do Processo)](testing-debugging-plm.md).
 

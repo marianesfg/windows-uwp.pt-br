@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
-ms.openlocfilehash: ca618dde24c1eed254d89c2d84734b7e3aec6306
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 392c8c181906e9e403f2204689b5e0406ea0f914
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920944"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047820"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Empacotar um aplicativo da área de trabalho usando o Desktop App Converter
 
@@ -270,8 +270,8 @@ Você também pode exibir toda a lista executando o comando ``Get-Help`` na jane
 |-MakeMSIX [&lt;SwitchParameter&gt;]  |Opcional |Um botão que, quando presente, informa este script para a saída como um pacote MSIX do pacote. |
 |<a id="identity-params" /><strong>Parâmetros de identidade do pacote</strong>||
 |-PackageName &lt;Cadeia de Caracteres&gt; |Necessário |O nome do seu pacote de aplicativos Universais do Windows. Se o Partner Center atribui uma identidade ao pacote que começa com um número, certifique-se de que você também passa o parâmetro <i>- AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro. |
-|-Publisher &lt;Cadeia de Caracteres&gt; |Necessário |O editor do pacote da sua aplicativo Universal Windows |
-|-Version &lt;Versão&gt; |Necessário |O número da versão do pacote da sua aplicativo Universal Windows |
+|-Publisher &lt;Cadeia de Caracteres&gt; |Obrigatório |O editor do pacote da sua aplicativo Universal Windows |
+|-Version &lt;Versão&gt; |Obrigatório |O número da versão do pacote da sua aplicativo Universal Windows |
 |<a id="manifest-params" /><strong>Parâmetros do manifesto do pacote</strong>||
 |-AppExecutable &lt;Cadeia de Caracteres&gt; |Opcional |O nome do executável principal do seu aplicativo (por exemplo, "MyApp.exe"). Esse parâmetro é necessário para uma conversão sem instalador. |
 |-AppFileTypes &lt;Cadeia de Caracteres&gt;|Opcional |Uma lista separada por vírgulas de tipos de arquivos com a qual o aplicativo será associado. Exemplo de uso: - AppFileTypes "'.md', '.markdown'".|
@@ -283,15 +283,15 @@ Você também pode exibir toda a lista executando o comando ``Get-Help`` na jane
 |<a id="cleanup-params" /><strong>Parâmetros de limpeza</strong>|||
 |-Cleanup [&lt;Opção&gt;] |Necessário |Executa a limpeza dos artefatos do DesktopAppConverter. Existem 3 opções válidas para o modo de limpeza. |
 |-Cleanup All | |Exclui todas as imagens de base expandidas, remove todos os arquivos temporários do conversor, remove a rede do contêiner e desativa o recurso opcional do Windows, Recipientes. |
-|-Cleanup WorkDirectory |Necessário |Remove todos os arquivos do conversor temporário. |
-|-Cleanup ExpandedImage |Necessário |Exclui todas as imagens de base expandidas instaladas em sua máquina host. |
+|-Cleanup WorkDirectory |Obrigatório |Remove todos os arquivos do conversor temporário. |
+|-Cleanup ExpandedImage |Obrigatório |Exclui todas as imagens de base expandidas instaladas em sua máquina host. |
 |<a id="architecture-params" /><strong>Parâmetros da arquitetura do pacote</strong>|||
 |-PackageArch &lt;Cadeia de Caracteres&gt; |Necessário |Gera um pacote com a arquitetura especificada. As opções válidas são 'x86' ou 'x64'; por exemplo, -PackageArch x86. Este parâmetro é opcional. Se não for especificado, o DesktopAppConverter tentará detectar automaticamente a arquitetura do pacote. Se a auto-detecção falhar, será padrão para o pacote x64. |
 |<a id="other-params" /><strong>Parâmetros diversos</strong>|||
 |-ExpandedBaseImage &lt;Cadeia de Caracteres&gt;  |Opcional |Caminho completo para uma imagem base já expandida.|
 |-LogFile &lt;String&gt;  |Opcional |Especifica um arquivo de registro. Se for omitido, será criada uma localização temporária do arquivo de registro. |
 | -Sign [&lt;SwitchParameter&gt;] |Opcional |Avisa este script para assinar o pacote de aplicativos do Windows de saída usando um certificado gerado para fins de teste. Este interruptor deve estar presente ao lado do interruptor ```-MakeAppx```. |
-|&lt;Parâmetros comuns&gt; |Necessário |Esse cmdlet oferece suporte aos parâmetros comuns: *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable* e *OutVariable*. Para mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216). |
+|&lt;Parâmetros comuns&gt; |Necessário |Esse cmdlet oferece suporte aos parâmetros comuns: *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable* e *OutVariable*. Para mais informações, consulte [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216). |
 | -Verify [&lt;SwitchParameter&gt;] |Opcional |Um interruptor que, quando presente, informa ao DAC para validar o pacote do aplicativo contra aplicativos empacotados e requisitos da Microsoft Store. O resultado é um relatório de validação "VerifyReport.xml", que é melhor visualizado em um navegador. Este interruptor deve estar presente ao lado do interruptor `-MakeAppx`. |
 |-PublishComRegistrations| Opcional| Digitaliza todos os registos COM públicos feitos pelo seu instalador e publica os válidos no seu manifesto. Use este sinalizador somente se desejar disponibilizar esses registros para outros aplicativos. Você não precisa usar este sinalizador se esses registros forem usados apenas pelo seu aplicativo. <br><br>Examine [este artigo](https://blogs.windows.com/buildingapps/2017/04/13/com-server-ole-document-support-desktop-bridge/#lDg5gSFxJ2TDlpC6.97) para certificar-se de que seus registros COM se comportam como esperado após o empacotamento do seu app.
 
@@ -370,7 +370,7 @@ example3: PEHeaderCertFixTool c:\myapp /c /v
 
 ## <a name="telemetry-from-desktop-app-converter"></a>Telemetria do Desktop App Converter
 
-O conversor de aplicativos da área de trabalho pode coletar informações sobre você e o seu uso do software e enviar essas informações para a Microsoft. Você pode saber mais sobre a coleta e o uso de dados da Microsoft na documentação do produto e na [Política de Privacidade da Microsoft](http://go.microsoft.com/fwlink/?LinkId=521839). Você concorda em cumprir todas as provisões aplicáveis da Política de Privacidade da Microsoft.
+O conversor de aplicativos da área de trabalho pode coletar informações sobre você e o seu uso do software e enviar essas informações para a Microsoft. Você pode saber mais sobre a coleta e o uso de dados da Microsoft na documentação do produto e na [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839). Você concorda em cumprir todas as provisões aplicáveis da Política de Privacidade da Microsoft.
 
 Por padrão, a telemetria será habilitada para o conversor de aplicativos da área de trabalho. Adicione a seguinte chave do registro para definir a telemetria com uma configuração desejada:  
 
@@ -388,7 +388,7 @@ O Desktop App Converter não dá suporte a Unicode; portanto, nenhum caractere c
 
 **Encontrar respostas para suas dúvidas**
 
-Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 Você também pode consultar [esta](desktop-to-uwp-known-issues.md#app-converter) lista de problemas conhecidos.
 

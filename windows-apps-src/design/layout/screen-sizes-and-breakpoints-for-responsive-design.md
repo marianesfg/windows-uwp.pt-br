@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0959c9bc09782538cdb15a68c46b0797d4b7d230
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fce2c9230add569c4494b01546f1b3ced81d488b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925648"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048133"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamanhos de tela e pontos de interrupção
 
@@ -90,7 +90,7 @@ Os aplicativos UWP ajustam automaticamente a escala da interface do usuário par
 - Use até duas colunas/regiões.
 - Mostre a caixa de pesquisa.
 - Coloque o [painel de navegação](../controls-and-patterns/navigationview.md) no modo de fragmento de forma que uma faixa estreita de ícones sempre seja exibida.
-- É recomendável fazer mais adaptações para [experiências de TV](http://go.microsoft.com/fwlink/?LinkId=760736).
+- É recomendável fazer mais adaptações para [experiências de TV](https://go.microsoft.com/fwlink/?LinkId=760736).
 
 ### <a name="large"></a>Grande
 - Defina as margens esquerda e direita de janela para 24 px para criar uma separação visual entre as margens esquerda e direita da janela do app.
@@ -100,6 +100,6 @@ Os aplicativos UWP ajustam automaticamente a escala da interface do usuário par
 - Coloque o [painel de navegação](../controls-and-patterns/navigationview.md) no modo encaixado para que ele sempre apareça.
 
 >[!TIP] 
-> Com o [**Continuum para telefones**](http://go.microsoft.com/fwlink/p/?LinkID=699431), os usuários podem conectar dispositivos móveis compatíveis com o Windows 10 para um monitor, mouse e teclado para fazê-los funcionar como laptops. Tenha essa nova funcionalidade em mente ao projetar pontos de interrupção específicos; um celular não permanecerá sempre na classe de tamanho.
+> Com o [**Continuum para telefones**](https://go.microsoft.com/fwlink/p/?LinkID=699431), os usuários podem conectar dispositivos móveis compatíveis com o Windows 10 para um monitor, mouse e teclado para fazê-los funcionar como laptops. Tenha essa nova funcionalidade em mente ao projetar pontos de interrupção específicos; um celular não permanecerá sempre na classe de tamanho.
 
 

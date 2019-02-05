@@ -6,12 +6,12 @@ ms.date: 10/18/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: e6938807a589337489f07f5865e02a580a72dae2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1a245c4ec0280f687cf34e85123960e64fe36a57
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925853"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044623"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>Indexadores específicos de formato do MakePri.exe
 
@@ -311,7 +311,7 @@ O indexador ResJSON é identificado por um atributo `type` de RESJSON. Ele index
 </xs:schema>\
 ```
 
-Um arquivo `.resjson` contém o texto JSON (consulte [O tipo de mídia de aplicativo/json para JavaScript Object Notation (JSON)](http://www.ietf.org/rfc/rfc4627.txt)). O arquivo deve conter um único objeto JSON com propriedades hierárquicas. Cada propriedade deve ser outro objeto JSON ou um valor de cadeia de caracteres.
+Um arquivo `.resjson` contém o texto JSON (consulte [O tipo de mídia de aplicativo/json para JavaScript Object Notation (JSON)](https://www.ietf.org/rfc/rfc4627.txt)). O arquivo deve conter um único objeto JSON com propriedades hierárquicas. Cada propriedade deve ser outro objeto JSON ou um valor de cadeia de caracteres.
 
 As propriedades JSON com nomes que começam com um sublinhado ("_") não são compiladas no arquivo PRI final, mas são mantidas no arquivo de log.
 
@@ -400,4 +400,4 @@ O atributo `initialPath` coloca todos os recursos nesse caminho inicial, inserin
 * [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)
 * [Opções de linha de comando do MakePri.exe](makepri-exe-command-options.md)
 * [Arquivo de configuração MakePri.exe](makepri-exe-configuration.md)
-* [O tipo de mídia de aplicativo/json para JavaScript Object Notation (JSON)](http://www.ietf.org/rfc/rfc4627.txt)
+* [O tipo de mídia de aplicativo/json para JavaScript Object Notation (JSON)](https://www.ietf.org/rfc/rfc4627.txt)

@@ -1,17 +1,17 @@
 ---
 title: Manipular a ativação do URI
-description: Saiba como registrar um aplicativo para ser o manipulador padrão de um nome de esquema de URI (Uniform Resource Identifier).
+description: Saiba como registrar um app para ser o manipulador padrão de um nome de esquema de URI (Uniform Resource Identifier).
 ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
 ms.date: 07/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: aaaf7e6b13a3ce05bd30dd0ebf3e1d7d98915d6e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3d8cbb3d7e245b747a7637726df9559f5fa87a6d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946058"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046409"
 ---
 # <a name="handle-uri-activation"></a>Tratar a ativação do URI
 
@@ -155,7 +155,7 @@ Quando iniciado por Ativação de protocolo, os aplicativos devem considerar inc
 Qualquer aplicativo ou site pode usar seu nome de esquema de URI, inclusive os maliciosos. Assim, qualquer dado que você obtenha no URI pode vir de uma fonte não confiável. Recomendamos que você nunca execute uma ação permanente com base nos parâmetros recebidos no URI. Por exemplo, os parâmetros de URI podem ser usados para iniciar o aplicativo em uma página de conta de usuário, mas nunca devem ser usados para modificar diretamente a conta do usuário.
 
 > [!NOTE]
-> Se você estiver criando um novo nome de esquema URI para seu aplicativo, certifique-se de seguir as orientações na [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550). Isso garante que seu nome atenda aos padrões de esquemas de URI.
+> Se você estiver criando um novo nome de esquema URI para seu aplicativo, certifique-se de seguir as orientações na [RFC 4395](https://go.microsoft.com/fwlink/p/?LinkID=266550). Isso garante que seu nome atenda aos padrões de esquemas de URI.
 
 > [!NOTE]
 > Quando iniciado por contrato de protocolo, verifique se o que botão Voltar leva o usuário voltar para a tela que iniciou o aplicativo e não o conteúdo do aplicativo anterior.

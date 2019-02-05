@@ -8,12 +8,12 @@ keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4b9b5f08be695d803e9254e5801ac63b2889e1c9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1dd159b7cd04a7641bf3f89605e054a00a0bad58
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945808"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051109"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empacotar um aplicativo da área de trabalho manualmente
 
@@ -211,7 +211,7 @@ Para atualizar os arquivos .exe ou .dll do seu aplicativo, substitua os arquivos
 
 **Encontrar respostas para suas dúvidas**
 
-Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora esses [tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode perguntar [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora esses [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode perguntar [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Fazer comentários ou sugestões de recursos**
 

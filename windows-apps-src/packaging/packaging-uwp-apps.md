@@ -9,12 +9,12 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: dc5f033737e36bd5a891543fbad6b3eba933f052
-ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
+ms.openlocfilehash: f2e89490a76c9174c1e938466bf1fbcc9cc13455
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991622"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045950"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>União de um aplicativo UWP com o Visual Studio
 
@@ -46,7 +46,7 @@ Depois de concluir as etapas acima, você estará pronto para distribuir seu apl
 
 1.  **Teste o aplicativo.** Antes de empacotar seu aplicativo para o envio do Partner Center, verifique se que ele funciona como esperado em todas as famílias de dispositivo que você pretende dar suporte. Essas famílias de dispositivos podem incluir desktop, celular, Surface Hub, Xbox, dispositivos IoT ou outros. Para obter mais informações sobre como implantar e testar seu aplicativo usando o Visual Studio, consulte [Implantando e Depurando aplicativos UWP](../debug-test-perf/deploying-and-debugging-uwp-apps.md).
 2.  **Otimize o aplicativo.** Você pode usar as ferramentas de criação de perfil e depuração do Visual Studio para otimizar o desempenho do aplicativo UWP. Por exemplo, a ferramenta de linha do tempo para capacidade de resposta da interface do usuário, a ferramenta de uso da memória, a ferramenta de uso da CPU e muito mais. Para obter mais informações sobre essas ferramentas, consulte o tópico [Tour sobre recurso de perfil](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour).
-3.  **Verifique a compatibilidade do .NET Native (para aplicativos VB e C#).** Na Plataforma Universal do Windows, existe um compilador nativo que melhorará o desempenho do tempo de execução do app. Com essa alteração, você deverá testar seu aplicativo nesse ambiente de compilação. Por padrão, a configuração de build **Release** habilita a cadeia de ferramentas .NET Native, então é importante testar seu aplicativo com essa configuração **Release** e verificar se seu aplicativo se comporta como o esperado. Alguns problemas de depuração comuns que podem acontecer com o .NET Native serão explicados mais detalhadamente em [Depuração de aplicativos universais do Windows do .NET Native](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx).
+3.  **Verifique a compatibilidade do .NET Native (para aplicativos VB e C#).** Na Plataforma Universal do Windows, existe um compilador nativo que melhorará o desempenho do tempo de execução do app. Com essa alteração, você deverá testar seu aplicativo nesse ambiente de compilação. Por padrão, a configuração de build **Release** habilita a cadeia de ferramentas .NET Native, então é importante testar seu aplicativo com essa configuração **Release** e verificar se seu aplicativo se comporta como o esperado. Alguns problemas de depuração comuns que podem acontecer com o .NET Native serão explicados mais detalhadamente em [Depuração de aplicativos universais do Windows do .NET Native](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx).
 
 ## <a name="configure-an-app-package"></a>Configurar um pacote do app
 
@@ -131,7 +131,7 @@ Valide o aplicativo antes de enviá-lo para o Partner Center para certificação
     >[!IMPORTANT]
     > Você não pode validar o pacote do aplicativo em um dispositivo ARM remoto para Windows 10.
 2.  Baixe e instale as ferramentas remotas para o Visual Studio. Essas ferramentas são usadas para executar o Kit de Certificação de Aplicativos Windows remotamente. Você pode obter mais informações sobre essas ferramentas, inclusive onde baixá-las visitando [Executar aplicativos UWP em uma máquina remota](https://msdn.microsoft.com/library/hh441469.aspx#BKMK_Starting_the_Remote_Debugger_Monitor).
-3.  Baixe o [Kit de certificação de aplicativo do Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) de necessários e, em seguida, instalá-lo em seu dispositivo Windows 10 remoto.
+3.  Baixe o [Kit de certificação de aplicativo do Windows](https://go.microsoft.com/fwlink/p/?LinkID=309666) de necessários e, em seguida, instalá-lo em seu dispositivo Windows 10 remoto.
 4.  Na página **Criação de pacote concluída** do assistente, escolha o botão de opção **Máquina remota** e, em seguida, escolha o botão de reticências próximo ao botão **Conexão de teste**.
     >[!NOTE]
     > O botão de opção de **Máquina remota** está disponível somente se você selecionar pelo menos uma configuração de solução que dá suporte a validação. Para obter mais informações sobre como testar o aplicativo com o WACK, consulte [Kit de Certificação de Aplicativos Windows](https://msdn.microsoft.com/library/windows/apps/Mt186449).

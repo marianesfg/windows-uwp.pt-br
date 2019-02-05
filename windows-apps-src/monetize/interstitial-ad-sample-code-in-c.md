@@ -6,16 +6,16 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, intersticial, c#, código de exemplo
 ms.localizationpriority: medium
-ms.openlocfilehash: a8276e1a9639b23a965c5a608fb951d1e1035133
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 075d98d49ba7e878abc7e800af84984bdb93e3a2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947878"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045082"
 ---
 # <a name="interstitial-ad-sample-code-in-c"></a>Código de exemplo de anúncio intersticial em C\# #  
 
-Este tópico fornece o exemplo de código completo para um aplicativo básico da Plataforma Universal do Windows (UWP) em C# e XAML que mostra um anúncio de vídeo intersticial. Para obter instruções passo a passo que mostram como configurar o projeto para usar esse código, consulte [Anúncios intersticiais](interstitial-ads.md). Para obter um projeto de exemplo completo, consulte os [exemplos de publicidade no GitHub](http://aka.ms/githubads).
+Este tópico fornece o exemplo de código completo para um aplicativo básico da Plataforma Universal do Windows (UWP) em C# e XAML que mostra um anúncio de vídeo intersticial. Para obter instruções passo a passo que mostram como configurar o projeto para usar esse código, consulte [Anúncios intersticiais](interstitial-ads.md). Para obter um projeto de exemplo completo, consulte os [exemplos de publicidade no GitHub](https://aka.ms/githubads).
 
 ## <a name="code-example"></a>Exemplo de código
 
@@ -39,5 +39,5 @@ Este aplicativo de exemplo usa dois botões para solicitar e, em seguida, inicia
  
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Exemplos de publicidade no GitHub](http://aka.ms/githubads)
+* [Exemplos de publicidade no GitHub](https://aka.ms/githubads)
  

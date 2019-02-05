@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, tributação, irs, receita federal dos Estados Unidos, imposto, imposto de renda, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a5e70278d655bce4ced48b33c4711762a7cce7f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fb25887d9bc40bd9c596cd437b7d2d6d06047020
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918537"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047308"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft
 
@@ -23,8 +23,8 @@ A seguir, explicaremos mais sobre esses formulários, inclusive quem os receber�
 
 | Formulário fiscal da Receita Federal dos EUA | Descrição | Disponibilidade |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Relacionado a atividade de vendas e/ou pagamentos feitos a você pela participação em marketplaces da Microsoft | Formulários impressos serão protocolados até em ou antes de **31 de janeiro**, e cópias em. PDF serão disponibilizadas no [Partner Center](https://partner.microsoft.com/dashboard) (no **configurações da conta > perfil fiscal**) ao mesmo tempo |
-|1042-S | Relacionado a pagamentos feitos a você que estão sujeitos à retenção de imposto dos Estados Unidos | Formulários impressos serão protocolados até em ou antes de **15 de março**e cópias em. PDF serão disponibilizadas no Partner Center (no **configurações da conta > perfil fiscal**) ao mesmo tempo |
+|1099-MISC, 1099-K | Relacionado a atividade de vendas e/ou pagamentos feitos a você pela participação em marketplaces da Microsoft | Formulários impressos serão protocolados até em ou antes de **31 de janeiro**, e cópias em. PDF serão disponibilizadas no [Partner Center](https://partner.microsoft.com/dashboard) (na **conta Configurações gt _ perfil fiscal**) ao mesmo tempo |
+|1042-S | Relacionado a pagamentos feitos a você que estão sujeitos à retenção de imposto dos Estados Unidos | Formulários impressos serão protocolados até em ou antes de **15 de março**e cópias em. PDF estarão disponíveis no Partner Center (em **conta Configurações gt _ perfil fiscal**) ao mesmo tempo |
 
 > [!NOTE]
 > O endereço que usamos nos formulários de imposto da Receita Federal dos EUA vem do endereço em seu [perfil de imposto](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Se seu endereço mudou, atualize-o em seu **Perfil fiscal**.
@@ -127,4 +127,4 @@ Recebi pelo menos US$ 600 em pagamentos não relacionados a vendas de app da Mic
 
 
 > [!NOTE]
-> Se você tiver outras dúvidas ou preocupações relacionadas aos **formulários fiscais da Receita Federal dos EUA**, crie um [tíquete de suporte](http://aka.ms/storesupport). A Microsoft não pode responder a perguntas relacionadas a circunstâncias específicas de seu imposto; para essas perguntas, consulte seu contador.
+> Se você tiver outras dúvidas ou preocupações relacionadas aos **formulários fiscais da Receita Federal dos EUA**, crie um [tíquete de suporte](https://aka.ms/storesupport). A Microsoft não pode responder a perguntas relacionadas a circunstâncias específicas de seu imposto; para essas perguntas, consulte seu contador.

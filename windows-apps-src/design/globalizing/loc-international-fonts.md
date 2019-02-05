@@ -6,18 +6,18 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c525c79287a81421c68fca5bed3393b4d230d8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6f1d618a111ee207eacfceb52680859c8272e0ed
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942680"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046649"
 ---
 # <a name="international-fonts"></a>Fontes internacionais
 
 Este tópico lista as fontes disponíveis para os aplicativos UWP que são traduzidos para outros idiomas.
 
-Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language tag](http://go.microsoft.com/fwlink/p/?linkid=227302) do idioma. Para ver uma lista das marcas de idioma específicas com suporte pela Microsoft Store, consulte [Idiomas com suporte](../../publish/supported-languages.md).
+Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language tag](https://go.microsoft.com/fwlink/p/?linkid=227302) do idioma. Para ver uma lista das marcas de idioma específicas com suporte pela Microsoft Store, consulte [Idiomas com suporte](../../publish/supported-languages.md).
 
 | Idioma | Marca de idioma | Fonte usada no Windows |
 | --------- | ----------- | -------------------- |
@@ -135,5 +135,5 @@ A fonte Meiryo UI é usada no Windows. O Windows inclui Yu Gothic e Yu Mincho, d
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Idiomas compatíveis](../../publish/supported-languages.md)

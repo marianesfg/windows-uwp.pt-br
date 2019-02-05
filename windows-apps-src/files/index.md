@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 811a9b42efe83cf89fd3df89e5c43c72274af36f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 517302b7db1e7b65ca7a181a8c766ce1e71737ac
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928530"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044540"
 ---
  # <a name="files-folders-and-libraries"></a>Arquivos, pastas e bibliotecas
 
@@ -29,17 +29,17 @@ Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/
 | [Determinando a disponibilidade de arquivos do Microsoft OneDrive](quickstart-determining-availability-of-microsoft-onedrive-files.md) | Determine se um arquivo do Microsoft OneDrive está disponível usando a propriedade [StorageFile.IsAvailable](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx). |
 | [Arquivos e pastas nas bibliotecas Música, Imagens e Vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | Adicione pastas existentes de música, fotos ou vídeos às bibliotecas correspondentes. Você também pode remover pastas de bibliotecas, obter a lista de pastas em uma biblioteca e descobrir fotos, músicas e vídeos armazenados. |
 | [Acompanhar arquivos e pastas usados recentemente](how-to-track-recently-used-files-and-folders.md) | Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à lista de itens usados recentemente de seu aplicativo. A plataforma gerencia os itens usados recentemente para você classificando-os com base na data em que foram acessados pela última vez e removendo o item mais antigo quando o limite de 25 itens é atingido. Todos os aplicativos têm seus próprios itens usados recentemente. |
-| [Controlar alterações de sistema de arquivo em segundo plano](change-tracking-filesystem.md) | Controlar alterações ao sistema de arquivos, mesmo quando o aplicativo não estiver em execução.|
+| [Controlar alterações no sistema de arquivos em segundo plano](change-tracking-filesystem.md) | Controlar alterações ao sistema de arquivos, mesmo quando o aplicativo não estiver em execução.|
 | [Acessar o cartão SD](access-the-sd-card.md) | Você pode armazenar e acessar dados não essenciais em um cartão microSD opcional, especialmente em dispositivos móveis de baixo custo que têm armazenamento interno limitado. |
 | [Permissões de acesso a arquivo](file-access-permissions.md) | Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades. |
 | [Acesso rápido às propriedades de arquivo UWP](fast-file-properties.md) | Coletar com eficiência uma lista de arquivos e respectivas propriedades em uma biblioteca para usar em um aplicativo UWP. |
 
 ## <a name="related-samples"></a>Exemplos relacionados
-[Exemplo de enumeração de pasta](http://go.microsoft.com/fwlink/p/?linkid=619993)
+[Exemplo de enumeração de pasta](https://go.microsoft.com/fwlink/p/?linkid=619993)
 
-[Exemplo de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995)
+[Exemplo de acesso a arquivos](https://go.microsoft.com/fwlink/p/?linkid=619995)
 
-[Exemplo do seletor de arquivos](http://go.microsoft.com/fwlink/p/?linkid=619994)
+[Exemplo do seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994)
  
 
  

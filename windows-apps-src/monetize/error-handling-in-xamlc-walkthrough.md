@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, tratamento de erros, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: d7b2ffd15a07dc6f1018bd28cf9799e1e5209c0b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fe01a01dc97b67c339d015a260288176a5ba57da
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946201"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047045"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a>Tratamento de erros no passo a passo do XAML/C#
 
@@ -75,4 +75,4 @@ Estes exemplos pressupõem que você tenha um aplicativo XAML/C# que contém um 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Exemplos de publicidade no GitHub](http://aka.ms/githubads)
+* [Exemplos de publicidade no GitHub](https://aka.ms/githubads)

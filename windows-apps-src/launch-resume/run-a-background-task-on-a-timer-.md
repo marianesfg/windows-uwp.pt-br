@@ -6,12 +6,12 @@ ms.date: 07/06/2018
 ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b64ca35e47044cbc2320ca77c1d1ba2e3d66fcb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 46d2b5704fa8a9bf53534ded98647ce57da0f520
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947026"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048959"
 ---
 # <a name="run-a-background-task-on-a-timer"></a>Executar uma tarefa em segundo plano em um temporizador
 
@@ -138,7 +138,7 @@ Uma tarefa em segundo plano só será executado usando um **TimeTrigger** se voc
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Liberar memória quando seu app é movido para o segundo plano](reduce-memory-usage.md)
 * [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Adiar a suspensão do app com execução estendida](run-minimized-with-extended-execution.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)

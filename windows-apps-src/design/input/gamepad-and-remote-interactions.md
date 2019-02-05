@@ -1,10 +1,24 @@
 ---
-autor de cabeça <<<<<<<: descrição Karl ponte-Microsoft: otimizar seu aplicativo para entrada do gamepad do Xbox e controle remoto.
-=== Descrição: TODO
->>>>>>> título do mestre: MS. AssetID interações Gamepad e controle remoto: 784a08dc-2736-4bd3-bea0-08da16b1bd47 rótulo: Gamepad e modelo de interações remoto: isNew detail.hbs: verdadeiro <<<<<<< HEAD MS: kbridge =======
-mestre MS. Date: 08/02/2017 ms.topic: palavras-chave do artigo: windows 10, uwp MS. localizationpriority: médio
+author: Karl-Bridge-Microsoft
+Description: Optimize your app for input from Xbox gamepad and remote control.
+title: Interações de gamepad e controle remoto
+ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47
+label: Gamepad and remote interactions
+template: detail.hbs
+isNew: true
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+keywords: windows 10, uwp
+ms.localizationpriority: medium
+ms.openlocfilehash: 022724064ad1e7f5551b6676bf256ca5cf6e4b8e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048553"
 ---
-# <a name="gamepad-and-remote-control-interactions"></a>Interações de Gamepad e de controle remoto
+# <a name="gamepad-and-remote-control-interactions"></a>Interações de gamepad e controle remoto
 
 ![imagem de teclado e gamepad](images/keyboard/keyboard-gamepad.jpg)
 

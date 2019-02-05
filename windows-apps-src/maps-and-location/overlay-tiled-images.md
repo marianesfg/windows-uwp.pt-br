@@ -6,18 +6,18 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: windows 10, uwp, mapa, local, imagens, sobreposição
 ms.localizationpriority: medium
-ms.openlocfilehash: 47b9c4335a99e7b0f17da0fb9ddb520cc917e398
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c0c2f07a364980b67a34a519eb5dd8b4da1a18f0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942298"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046429"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Sobrepor imagens lado a lado em um mapa
 
 Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão.
 
-**Dica** Para saber mais sobre como usar mapas em seu app, baixe o [exemplo de mapa da Plataforma Universal do Windows (UWP) (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) do Github.
+**Dica** Para saber mais sobre como usar mapas em seu app, baixe o [exemplo de mapa da Plataforma Universal do Windows (UWP) (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977) do Github.
 
 <a id="tileintro" />
 
@@ -35,7 +35,7 @@ http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
 
 (As coordenadas X e Y representam a localização do bloco individual dentro do mapa do mundo no nível de detalhe especificado. O sistema de numeração de bloco começa em {0, 0} no canto superior esquerdo do mapa. Por exemplo, o bloco em {1, 2} está na segunda coluna da terceira linha da grade de blocos).
 
-Para obter mais informações sobre o sistema de blocos usado pelos serviços de mapeamento, consulte [Sistema lado a lado do Bing Mapas](http://go.microsoft.com/fwlink/p/?LinkId=626692).
+Para obter mais informações sobre o sistema de blocos usado pelos serviços de mapeamento, consulte [Sistema lado a lado do Bing Mapas](https://go.microsoft.com/fwlink/p/?LinkId=626692).
 
 ### <a name="overlay-tiles-from-a-tile-source"></a>Sobreponha blocos de uma fonte de blocos
 
@@ -421,7 +421,7 @@ Para substituir o mapa padrão inteiramente com blocos de terceiros ou personali
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
-* [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo do aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Exemplo do aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)

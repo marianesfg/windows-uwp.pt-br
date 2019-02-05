@@ -6,12 +6,12 @@ ms.date: 1/25/2017
 ms.topic: article
 keywords: Windows 10, uwp, primeiro app, c#, c + +, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cd4d60e6eb3eee7253997938882e6fbdf9fba69
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ef6e364f8c6c88400d2d47a0591d4b7432c33215
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923737"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048013"
 ---
 # <a name="create-your-first-app"></a>Criar seu primeiro aplicativo
 
@@ -30,7 +30,7 @@ Se você quiser aprender as noções básicas, ou apenas refrescar sua memória,
 * [Conceitos básicos do C# para iniciantes](https://go.microsoft.com/fwlink/?linkid=850801)
 * [Conceitos básicos do VB para iniciantes](https://go.microsoft.com/fwlink/?linkid=850802)
 * [Guia do desenvolvedor para o Windows 10](https://go.microsoft.com/fwlink/?linkid=850804)
-* [Microsoft Virtual Academy](http://www.microsoftvirtualacademy.com/)
+* [Microsoft Virtual Academy](https://www.microsoftvirtualacademy.com/)
 
 Se você estiver pronto para tentar algo um pouco mais divertido do que "Olá, Mundo!", tente estes tutoriais:
 
@@ -46,8 +46,8 @@ Tirar proveito de seus conhecimentos sobre programação C++ para criar aplicati
 
 Saiba mais sobre C++ aqui:
 
-* [C++: uma linguagem de finalidade geral e início rápido em biblioteca](http://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
-* [Microsoft Virtual Academy](http://go.microsoft.com/fwlink/p/?LinkID=389916)
+* [C++: uma linguagem de finalidade geral e início rápido em biblioteca](https://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
+* [Microsoft Virtual Academy](https://go.microsoft.com/fwlink/p/?LinkID=389916)
 
 Se você estiver pronto para tentar algo um pouco mais divertido do que "Olá, Mundo!", tente estes tutoriais:
 
@@ -71,9 +71,9 @@ Os aplicativos Web podem ser empacotados facilmente na estrutura UWP como aplica
 
 Precisa aprimorar suas habilidades na Web?
 
-* [Conceitos básicos de JavaScript para iniciantes](http://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
-* [Conceitos básicos de HTML5 e CSS3 para iniciantes](http://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
-* [Microsoft Virtual Academy](http://go.microsoft.com/fwlink/p/?LinkID=389916)
+* [Conceitos básicos de JavaScript para iniciantes](https://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
+* [Conceitos básicos de HTML5 e CSS3 para iniciantes](https://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
+* [Microsoft Virtual Academy](https://go.microsoft.com/fwlink/p/?LinkID=389916)
 
 ## <a name="see-also"></a>Veja também
 

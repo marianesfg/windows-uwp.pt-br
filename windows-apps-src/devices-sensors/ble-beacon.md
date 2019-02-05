@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
-ms.openlocfilehash: e9eafde0596ad3156f52a7a2f0a1566444a9836a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b1c8271c8066304dce355cf50afd4509173eed3e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918954"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046785"
 ---
 # <a name="bluetooth-le-advertisements"></a>Anúncios de Bluetooth LE
 
@@ -29,7 +29,7 @@ Há duas funções principais que um desenvolvedor pode executar usando as APIs 
 -   [Inspetor de anúncio](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): escuta beacons nas proximidades e filtra com base na carga ou proximidade.  
 -   [Fornecedor de anúncio](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): define uma carga para o Windows anunciar em nome de um desenvolvedor.  
 
-O código de exemplo completo está disponível no [Exemplo de anúncio de Bluetooth](http://go.microsoft.com/fwlink/p/?LinkId=619990) no Github
+O código de exemplo completo está disponível no [Exemplo de anúncio de Bluetooth](https://go.microsoft.com/fwlink/p/?LinkId=619990) no Github
 
 ## <a name="basic-setup"></a>Configuração básica
 

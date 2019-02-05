@@ -6,12 +6,12 @@ ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 122be597bbf772d891b7e9839dfc4d9039754b00
-ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
+ms.openlocfilehash: 41020055e664d58f36e50eaf4e1cff1e28eeec37
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "8968580"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044733"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Crie seu app reservando um nome
 
@@ -36,7 +36,7 @@ Reservar um nome é a primeira etapa na criação de um aplicativo no Partner Ce
 O nome agora está reservado, e você pode começar a trabalhar em seu [envio](app-submissions.md) quando estiver pronto. 
 
 > [!NOTE]
-> Talvez você descubra que não pode reservar um nome, mesmo que não exista nenhum app com esse nome listado na Microsoft Store. Geralmente isso ocorre porque outro desenvolvedor reservou o nome para o app dele, mas ainda não o enviou. Se você não conseguir reservar um nome que tenha sido registrado por você ou sobre o qual você possui outros direitos legais, ou se encontrar outro app na Microsoft Store com o mesmo nome, [contate a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).
+> Talvez você descubra que não pode reservar um nome, mesmo que não exista nenhum app com esse nome listado na Microsoft Store. Geralmente isso ocorre porque outro desenvolvedor reservou o nome para o app dele, mas ainda não o enviou. Se você não conseguir reservar um nome que tenha sido registrado por você ou sobre o qual você possui outros direitos legais, ou se encontrar outro app na Microsoft Store com o mesmo nome, [contate a Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=233777).
 
 Depois de reservar um nome, você terá três meses para enviar o app. Se você não enviá-lo em um três meses, a reserva do nome expirará e outro desenvolvedor poderá usar o nome em um app. Você pode encontrar um erro se tentar enviar um aplicativo sob um nome que deixou expirar.
 

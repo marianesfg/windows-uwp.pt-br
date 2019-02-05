@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a4c5005885d150fdd4f6a41b3fb2586e2728bbd5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: dde7f966e47aa6c35e3bc4e508eddabf13e313ee
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921880"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045907"
 ---
 # <a name="high-dynamic-range-hdr-and-low-light-photo-capture"></a>Captura de foto de pouca luz e HDR (High Dynamic Range)
 
@@ -39,7 +39,7 @@ Outros artigos relacionados à captura HDR incluem:
 > [!NOTE] 
 > Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. Recomendamos que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que seu aplicativo já tenha uma instância do MediaCapture inicializada corretamente.
 
-Há um exemplo Universal do Windows que demonstra o uso da classe **AdvancedPhotoCapture** que você pode usar para ver a API usada no contexto ou como ponto de partida para seu próprio aplicativo. Para obter mais informações, consulte o [exemplo de captura avançada com câmera](http://go.microsoft.com/fwlink/?LinkID=620517).
+Há um exemplo Universal do Windows que demonstra o uso da classe **AdvancedPhotoCapture** que você pode usar para ver a API usada no contexto ou como ponto de partida para seu próprio aplicativo. Para obter mais informações, consulte o [exemplo de captura avançada com câmera](https://go.microsoft.com/fwlink/?LinkID=620517).
 
 ## <a name="advanced-photo-capture-namespaces"></a>Namespaces de captura de foto avançada
 

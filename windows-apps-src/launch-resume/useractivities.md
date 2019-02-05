@@ -5,12 +5,12 @@ keywords: atividade do usuário, atividades do usuário, linha do tempo, cortana
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f35882af5ed7f66f59eb4e7fc4410223c4424e92
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2e1c2a3da3711bbc5335a9c44a4b280e3934adac
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941790"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046196"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Continue a atividade do usuário, mesmo entre dispositivos
 
@@ -24,7 +24,7 @@ Nosso tempo todo dia é distribuído em vários dispositivos. Nós podemos usar 
 
 Da mesma forma, vincular seu telefone ao seu computador Windows permite que você continue o que estava fazendo anteriormente no dispositivo Android ou iOS.
 
-Pense em uma **UserActivity** como algo específico o usuário estava trabalhando dentro de seu aplicativo. For example, if you are using a RSS reader, a **UserActivity** could be the feed that you are reading. Se você estiver jogando um jogo, o **UserActivity** poderia ser o nível que você está executando. Se você está ouvindo um aplicativo de música, o **UserActivity** poderia ser a playlist que você está ouvindo. Se você estiver trabalhando em um documento, o **UserActivity** poderia ser onde estava trabalhando nisso e assim por diante.  Em poucas palavras, uma **UserActivity** representa um destino dentro de seu aplicativo que permite que o usuário retome o que estava fazendo.
+Pense em uma **UserActivity** como algo específico o usuário estava trabalhando dentro de seu aplicativo. Por exemplo, se você estiver usando um leitor RSS, um **UserActivity** poderia ser o feed que você está lendo. Se você estiver jogando um jogo, o **UserActivity** poderia ser o nível que você está executando. Se você está ouvindo um aplicativo de música, o **UserActivity** poderia ser a playlist que você está ouvindo. Se você estiver trabalhando em um documento, o **UserActivity** poderia ser onde estava trabalhando nisso e assim por diante.  Em poucas palavras, uma **UserActivity** representa um destino dentro de seu aplicativo que permite que o usuário retome o que estava fazendo.
 
 Quando você se envolve com uma **UserActivity** chamando [UserActivity.CreateSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.createsession), o sistema cria um registro de histórico que indica a hora de início e fim de **UserActivity**. Conforme você se envolver novamente com que **UserActivity** ao longo do tempo, vários registros de histórico são registrados para ele.
 
@@ -34,7 +34,7 @@ Uma [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.u
 
 1. O [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri#Windows_ApplicationModel_UserActivities_UserActivity_ActivationUri) é usado para retomar o aplicativo com um contexto específico. Normalmente, esse link assume a forma de manipulador de protocolo para um esquema (por exemplo, "my-app://page2?action=edit") ou de um AppUriHandler (por exemplo, http://constoso.com/page2?action=edit).
 2. [VisualElements](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.visualelements) expõe uma classe que permite ao usuário identificar visualmente uma atividade com um título, descrição ou elementos de cartão adaptável.
-3. Por fim, [conteúdo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content) é onde você pode armazenar metadados para a atividade que pode ser usado para agrupar e recuperar as atividades em um contexto específico. Muitas vezes, isso assume a forma de dados [http://schema.org](http://schema.org).
+3. Por fim, [conteúdo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content) é onde você pode armazenar metadados para a atividade que pode ser usado para agrupar e recuperar as atividades em um contexto específico. Muitas vezes, isso assume a forma de dados [http://schema.org](https://schema.org).
 
 Para adicionar uma **UserActivity** ao seu app:
 
@@ -103,7 +103,7 @@ Esse código detecta se o aplicativo foi ativado por meio de um protocolo. Se fo
 
 ## <a name="use-adaptive-cards-to-improve-the-timeline-experience"></a>Usar Cartões Adaptáveis para melhorar a experiência de linha do tempo
 
-Atividades do usuário aparecem na Cortana e linha do tempo. Quando as atividades aparecem na linha do tempo, podemos exibi-las usando a estrutura [Cartão adaptável](http://adaptivecards.io/). Se você não fornecer um cartão adaptável para cada atividade, a linha do tempo criará automaticamente um cartão de atividade simples com base no nome do seu aplicativo e ícone, o campo de título e descrição opcional do campo. Abaixo há uma carga de cartão adaptável de exemplo e o cartão que ele produz.
+Atividades do usuário aparecem na Cortana e linha do tempo. Quando as atividades aparecem na linha do tempo, podemos exibi-las usando a estrutura [Cartão adaptável](https://adaptivecards.io/). Se você não fornecer um cartão adaptável para cada atividade, a linha do tempo criará automaticamente um cartão de atividade simples com base no nome do seu aplicativo e ícone, o campo de título e descrição opcional do campo. Abaixo há uma carga de cartão adaptável de exemplo e o cartão que ele produz.
 
 ![Um cartão adaptável](images/adaptivecard.png)]
 
@@ -157,7 +157,7 @@ Depois que seu aplicativo ou serviço está autenticado com uma conta da Microso
 Você pode usar a API [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities) para fazer com que seu aplicativo apareça na linha do tempo e Cortana.
 * Saiba mais sobre o [ **UserActivity** API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 * Confira o [exemplo de código](https://github.com/Microsoft/project-rome).
-* Consulte [Cartões Adaptáveis mais sofisticados](http://adaptivecards.io/).
+* Consulte [Cartões Adaptáveis mais sofisticados](https://adaptivecards.io/).
 * Publique uma **UserActivity** do iOS, Android ou seu serviço Web via [Microsoft Graph](https://developer.microsoft.com/graph/).
 * Saiba mais sobre o [Project Rome no GitHub](https://github.com/Microsoft/project-rome).
 
@@ -169,7 +169,7 @@ Você pode usar a API [UserActivity](https://docs.microsoft.com/uwp/api/windows.
 
 * [Atividades do usuário (documentos do projeto Roma)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [Cartões adaptáveis](https://docs.microsoft.com/adaptive-cards/)
-* [Visualizador de cartões adaptáveis, amostras](http://adaptivecards.io/)
+* [Visualizador de cartões adaptáveis, amostras](https://adaptivecards.io/)
 * [Manipular a ativação do URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 * [Envolvimento com seus clientes em qualquer plataforma usando o Microsoft Graph, Feed de atividades e cartões adaptáveis](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph/)

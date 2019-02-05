@@ -8,12 +8,12 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e2dc5186c028aa8f20c2cc1d697f1749b4f1765
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bdc7e5de3be941f2622c04d515e5e1211247b9a2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930677"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047238"
 ---
 # <a name="guidelines-for-globalization"></a>Diretrizes de globalização
 
@@ -29,7 +29,7 @@ Projete e desenvolva seu app de forma que ele funciona corretamente em sistemas 
 | Permita tamanhos internacionais de papel. | Os tamanhos mais comuns de papel diferem entre os países, portanto se você incluir recursos que dependam do tamanho do papel, como impressão, assegure-se de permitir e testar tamanhos internacionais comuns. |
 | Registre o idioma do teclado ou IME. | Quando seu app pedir entrada de texto ao usuário, registre a marca do idioma para o layout do teclado ou IME habilitado no momento. Isso garante que quando a entrada for exibida posteriormente ela será apresentada ao usuário com a formatação adequada. Use a propriedade [**Language.CurrentInputMethodLanguageTag**](/uwp/api/windows.globalization.language.CurrentInputMethodLanguageTag) para obter o idioma de entrada atual. |
 | Não use o idioma para pressupor a região de um usuário, nem a região para pressupor o idioma do usuário. | Idioma e região são conceitos distintos. Um usuário pode falar uma variação regional específica de um idioma, como en-GB para inglês como falado no Reino Unido, mas o usuário pode estar em um país ou região completamente diferente. Considere se o app requer conhecimento sobre o idioma do usuário (para texto da interface do usuário, por exemplo) ou região (para licenciamento, por exemplo). Para obter mais informações, consulte [Entenda os idiomas de perfil do usuário e idiomas de manifesto do app](manage-language-and-region.md). |
-| As regras para comparar marcas de idioma são não triviais. | As [marcas de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) são complexas. Há uma série de problemas para comparar marcas de idioma, incluindo problemas para corresponder informações de script, marcas herdadas e diversas variações regionais. O Sistema de Gerenciamento de Recursos no Windows cuida da correspondência para você. Você pode especificar um conjunto de recursos em quaisquer idiomas, e o sistema escolhe o idioma adequado para o usuário e para o aplicativo. Consulte [Os recursos de app e o Sistemas de Gerenciamento de Recursos](../../app-resources/index.md) e [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md). |
+| As regras para comparar marcas de idioma são não triviais. | As [marcas de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) são complexas. Há uma série de problemas para comparar marcas de idioma, incluindo problemas para corresponder informações de script, marcas herdadas e diversas variações regionais. O Sistema de Gerenciamento de Recursos no Windows cuida da correspondência para você. Você pode especificar um conjunto de recursos em quaisquer idiomas, e o sistema escolhe o idioma adequado para o usuário e para o aplicativo. Consulte [Os recursos de app e o Sistemas de Gerenciamento de Recursos](../../app-resources/index.md) e [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md). |
 | Crie sua interface do usuário de modo a acomodar tamanhos de texto e tamanhos de fonte diferentes para rótulos e controles de entrada de texto. | As cadeias de caracteres traduzidas para idiomas diferentes podem variar muito de comprimento, portanto, será necessário que os controles de interface do usuário sejam dimensionados dinamicamente ao conteúdo. Caracteres comuns em outros idiomas incluem marcas acima ou abaixo do que é usado normalmente em inglês (como Å ou Ņ). Use tamanhos de fonte e alturas de linha padrão para fornecer um espaço vertical adequado. Lembre-se de que as fontes de outros idiomas podem exigir tamanhos de fonte mínimos maiores para permanecerem legíveis. Veja as classes no namespace [Windows.Globalization.Fonts](/uwp/api/windows.globalization.fonts?branch=live). |
 | Suporte o espelhamento da ordem de leitura. | O alinhamento do texto e a ordem de leitura pode ser da esquerda para a direita (como em português, por exemplo), ou da direita para a esquerda (RTL) (como em árabe ou hebraico, por exemplo). Se você estiver localizando seu produto em vários idiomas que usem uma ordem de leitura diferente do seu idioma, assegure-se de que o layout dos elementos da interface do usuário permitam espelhamento. Até itens como botões Voltar, efeitos de transição da interface do usuário e imagens podem ser espelhados. Para obter mais informações, consulte [Ajustar layout e fontes e fornecer suporte a RTL](adjust-layout-and-fonts--and-support-rtl.md). |
 | Exiba o texto e as fontes corretamente. | A fonte ideal, o tamanho da fonte e a direção do texto variam entre diferentes mercados. Para obter mais informações, consulte [**Ajustar layout e fontes e fornecer suporte a RTL**](adjust-layout-and-fonts--and-support-rtl.md) e [Fontes internacionais](loc-international-fonts.md). |
@@ -46,7 +46,7 @@ Projete e desenvolva seu app de forma que ele funciona corretamente em sistemas 
 * [Recomendações para o uso de cadeias de caracteres](/dotnet/standard/base-types/best-practices-strings?branch=live#recommendations_for_string_usage)
 * [Globalize seus formatos data/hora/número.](use-global-ready-formats.md)
 * [Entenda os idiomas de perfil do usuário e idiomas de manifesto do app](manage-language-and-region.md)
-* [Marcas de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Marcas de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Os recursos de app e o Sistemas de Gerenciamento de Recursos](../../app-resources/index.md)
 * [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
 * [Ajustar layout e fontes e fornecer suporte a RTL](adjust-layout-and-fonts--and-support-rtl.md)
@@ -55,4 +55,4 @@ Projete e desenvolva seu app de forma que ele funciona corretamente em sistemas 
 
 ## <a name="samples"></a>Exemplos
 
-* [Exemplo de preferências de globalização](http://go.microsoft.com/fwlink/p/?linkid=231608)
+* [Exemplo de preferências de globalização](https://go.microsoft.com/fwlink/p/?linkid=231608)

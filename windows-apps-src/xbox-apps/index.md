@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
 ms.localizationpriority: medium
-ms.openlocfilehash: 1bcffedfea6903c5e62222529b5e7fb8f6f8366e
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: c2689218c8e3885815585424901453b9fc07f2d6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981460"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050959"
 ---
 # <a name="uwp-on-xbox-one"></a>UWP no Xbox One
 
 Comece a criar aplicativos para a UWP (Plataforma Universal de Aplicativos) no Xbox One.
 
-A UWP no Xbox One dá suporte ao desenvolvimento de aplicativos e jogos. Você não precisa fazer parte de um programa para desenvolvedores para experimentar, criar e testar jogos ou apps no Xbox. Tudo o que você precisa é uma [conta de desenvolvedor](https://developer.microsoft.com/en-us/store/register) no [Partner Center](https://partner.microsoft.com/dashboard). Quando você estiver pronto para publicar e vender jogos no Xbox One ou tirar proveito do Xbox Live no Windows 10, precisará ingressar no [Programa de Criadores do Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) ou ser um desenvolvedor do [ID@Xbox](http://www.xbox.com/Developers/id). Se você planeja ser um desenvolvedor do ID@Xbox, recomendamos sua inscrição no programa primeiro antes de criar uma conta de desenvolvedor. Para saber mais, veja a [Visão geral do programa para desenvolvedores](../xbox-live/developer-program-overview.md).
+A UWP no Xbox One dá suporte ao desenvolvimento de aplicativos e jogos. Você não precisa fazer parte de um programa para desenvolvedores para experimentar, criar e testar jogos ou apps no Xbox. Tudo o que você precisa é uma [conta de desenvolvedor](https://developer.microsoft.com/en-us/store/register) no [Partner Center](https://partner.microsoft.com/dashboard). Quando você estiver pronto para publicar e vender jogos no Xbox One ou tirar proveito do Xbox Live no Windows 10, precisará ingressar no [Programa de Criadores do Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) ou ser um desenvolvedor do [ID@Xbox](https://www.xbox.com/Developers/id). Se você planeja ser um desenvolvedor do ID@Xbox, recomendamos sua inscrição no programa primeiro antes de criar uma conta de desenvolvedor. Para saber mais, veja a [Visão geral do programa para desenvolvedores](../xbox-live/developer-program-overview.md).
 
 Esta seção inclui as etapas de instalação, um guia do processo de autenticação, informações sobre como instalar as versões necessárias das ferramentas do Visual Studio e do Windows 10 e as etapas para criar, executar e depurar seu primeiro aplicativo simples. 
 
@@ -40,7 +40,7 @@ Esta seção inclui as etapas de instalação, um guia do processo de autentica�
 |[Introdução aos aplicativos multiusuário](multi-user-applications.md)| Descreve os MUAs (aplicativos para multiusuário) no Xbox One. |
 | [Automatizar tarefas de desenvolvimento do Xbox One](https://github.com/Microsoft/WindowsDevicePortalWrapper/tree/v0.9.4) | O projeto WindowsDevicePortalWrapper no GitHub fornece uma biblioteca que permite a automação de tarefas de desenvolvimento comuns, como a implantação ou o lançamento de um aplicativo. O projeto inclui um exemplo, XboxWdpDriver.exe, que demonstra como usar as APIs para tarefas comuns. |
 |[Trazendo jogos existentes para o Xbox](development-lanes-landing.md)|Com base na tecnologia em que seu jogo for criado, podemos direcioná-lo para instruções passo a passo que podem agilizar o processo de trazer seu jogo para o Xbox usando a UWP.|
-|[Recursos da UWP que ainda não são suportados no Xbox One](http://go.microsoft.com/fwlink/p/?LinkId=760755)|  Descreve as áreas de recursos da UWP que não estão totalmente funcionais no Xbox One.|
+|[Recursos da UWP que ainda não são suportados no Xbox One](https://go.microsoft.com/fwlink/p/?LinkId=760755)|  Descreve as áreas de recursos da UWP que não estão totalmente funcionais no Xbox One.|
 
 ## <a name="videos"></a>Vídeos
 

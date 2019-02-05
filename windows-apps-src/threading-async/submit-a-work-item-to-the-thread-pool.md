@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, threads, pool de threads
 ms.localizationpriority: medium
-ms.openlocfilehash: 08608bc5715031f9ddf5b6bec05e7c86737f7e10
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 423f0efa9118f581d6e768a815dd2550801aa87e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981370"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048613"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar um item de trabalho ao pool de threads
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](https://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 <b>APIs importantes</b>
 
@@ -350,7 +350,7 @@ Observe que o manipulador de conclusão verifica se o item de trabalho foi cance
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
-Você pode saber mais baixando o código neste guia de início rápido em [Criando um ThreadPool amostra de item de trabalho](http://go.microsoft.com/fwlink/p/?LinkID=328569) escritos para Windows 8.1 e reutilizando o código-fonte em um aplicativo win\_unap Windows 10.
+Você pode saber mais baixando o código neste guia de início rápido em [Criando um ThreadPool amostra de item de trabalho](https://go.microsoft.com/fwlink/p/?LinkID=328569) escritos para Windows 8.1 e reutilizando o código-fonte em um aplicativo win\_unap Windows 10.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

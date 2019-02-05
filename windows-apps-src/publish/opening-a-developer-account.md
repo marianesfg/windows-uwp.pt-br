@@ -6,33 +6,33 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b65dd07a89b1617f805c17bf43a3ce3f5f3282f
-ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
+ms.openlocfilehash: 4f28204edeec7a1f256eae803095edf587532117
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "8968590"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046090"
 ---
 # <a name="opening-a-developer-account"></a>Abrindo uma conta de desenvolvedor
 
 Aqui está uma visão geral de como se registrar para uma conta de desenvolvedor do Windows no [Partner Center](https://partner.microsoft.com/dashboard).
 
 > [!NOTE]
-> Quando você se inscreve em uma conta de desenvolvedor, o endereço de email fornecido nas informações de contato é usado para enviar comunicações por email relacionadas à sua conta. Às vezes, isso incluir emails informativos sobre nossos programas. Mesmo que você opte por não receber esses emails informativos, [recusando-os](http://go.microsoft.com/fwlink/p/?LinkId=533280), ainda enviaremos emails transacionais (por exemplo, para que você saiba que seu aplicativo foi aprovado para certificação ou que um pagamento está sendo feito). Esses emails são uma parte fundamental da sua conta e, a menos que você feche sua conta, continuará a receber esses emails transacionais.
+> Quando você se inscreve em uma conta de desenvolvedor, o endereço de email fornecido nas informações de contato é usado para enviar comunicações por email relacionadas à sua conta. Às vezes, isso incluir emails informativos sobre nossos programas. Mesmo que você opte por não receber esses emails informativos, [recusando-os](https://go.microsoft.com/fwlink/p/?LinkId=533280), ainda enviaremos emails transacionais (por exemplo, para que você saiba que seu aplicativo foi aprovado para certificação ou que um pagamento está sendo feito). Esses emails são uma parte fundamental da sua conta e, a menos que você feche sua conta, continuará a receber esses emails transacionais.
 
 ## <a name="the-account-signup-process"></a>O processo de inscrição de conta
 
 > [!NOTE]
 > Em alguns casos, as telas e os campos que você vir ao se registrar para obter uma conta de desenvolvedor podem variar um pouco em relação ao que é destacado a seguir. As informações básicas e o processo serão os mesmos.
 
-1.  Acesse a [página de registro](http://go.microsoft.com/fwlink/p/?LinkId=615100) e clique em **Inscrever-se**.
+1.  Acesse a [página de registro](https://go.microsoft.com/fwlink/p/?LinkId=615100) e clique em **Inscrever-se**.
 2.  Se você ainda não estiver conectado com uma conta da Microsoft, entre agora ou crie uma nova conta da Microsoft. A conta da Microsoft usada aqui será a que você utilizará para entrar na conta de desenvolvedor.
 3.  Selecione o [país/região](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) em que você vive ou onde sua empresa está localizada. Não será possível alterar isso posteriormente.
 4.  Selecione seu [tipo de conta de desenvolvedor](account-types-locations-and-fees.md) (individual ou empresa). Você não poderá alterar isso depois, por isso, esteja atento para escolher o tipo de conta correto.
 5.  Informe o **nome de exibição do editor** que você deseja usar (50 caracteres ou menos). Selecione isso com cuidado, pois os clientes verão esse nome quando navegarem e reconhecerão seus aplicativos por esse nome. Para contas de empresa, certifique-se de usar o nome comercial ou registrado da sua organização. Observe que, se você inserir um nome já selecionado por outra pessoa ou se aparentemente alguém já tiver os direitos de usar esse nome, nós não permitiremos que você use esse nome. 
 
    > [!NOTE]
-   > Certifique-se de ter os direitos de uso do nome inserido aqui. Se outra pessoa tiver registrado a marca ou detiver os direitos autorais sobre o nome escolhido, sua conta poderá ser fechada. Consulte o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para saber mais. Se alguém estiver usando um nome de exibição do editor do qual você detenha a marca ou outros direitos jurídicos, [contate a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
+   > Certifique-se de ter os direitos de uso do nome inserido aqui. Se outra pessoa tiver registrado a marca ou detiver os direitos autorais sobre o nome escolhido, sua conta poderá ser fechada. Consulte o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para saber mais. Se alguém estiver usando um nome de exibição do editor do qual você detenha a marca ou outros direitos jurídicos, [contate a Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=233777).    
 
 6.  Insira as informações de contato que deseja usar para sua conta de desenvolvedor.
 
@@ -72,7 +72,7 @@ Se você precisar ter várias pessoas acesso a conta da empresa ao entrar com a 
 
 Usamos as informações de segurança que você forneceu para aumentar o nível de segurança da sua conta da Microsoft ao associá-la a várias formas de identificação. Isso dificulta bastante o acesso não autorizado à conta da Microsoft (e à conta de desenvolvedor). Além disso, se você se esquecer da senha ou se alguém tentar acessar a sua conta, poderemos entrar em contato para confirmar se você é o proprietário e/ou restabelecer o controle adequado da conta.
 
-Você deve ter no mínimo dois endereços de email ou números de telefone na sua conta da Microsoft. Recomendamos a adição do máximo possível. Lembre-se de que algumas informações de segurança precisam ser confirmadas antes de se tornarem válidas. Também revise suas informações de segurança com frequência e assegure que estejam atualizadas. Você pode gerenciar suas informações de segurança acessando https://account.microsoft.com/security e entrar usando sua conta da Microsoft. Para obter mais informações, consulte [as informações de segurança e códigos de segurança](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) .
+Você deve ter no mínimo dois endereços de email ou números de telefone na sua conta da Microsoft. Recomendamos a adição do máximo possível. Lembre-se de que algumas informações de segurança precisam ser confirmadas antes de se tornarem válidas. Também revise suas informações de segurança com frequência e assegure que estejam atualizadas. Você pode gerenciar suas informações de segurança acessando https://account.microsoft.com/security e entrar usando sua conta da Microsoft. Consulte os [códigos de segurança de & de informações de segurança](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) para obter mais informações.
 
 Quando você entrar no Partner Center usando sua conta da Microsoft, o sistema pode solicitar que você verifique sua identidade enviando um código de segurança que você deve fornecer para concluir o processo de entrada. Recomendamos designar os computadores que você usa com frequência como *dispositivos confiáveis*. Quando você entrar em um dispositivo confiável, você geralmente não será solicitado um código, embora você possa ocasionalmente ser solicitado em situações específicas ou se você ainda não entrou nesse dispositivo há muito tempo. Consulte [Adicionar um dispositivo confiável para sua conta da Microsoft](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) para obter mais informações.
 

@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, análises, relatórios, painel, aplicativos, dados, métricas
 ms.localizationpriority: medium
-ms.openlocfilehash: f6a6d79745ec98af2c7f562297092eea3feda659
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6f76b1f897c345fb71beec8e37e592165922b2ed
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945728"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047707"
 ---
 # <a name="analyze-app-performance"></a>Analisar o desempenho do aplicativo
 
@@ -64,4 +64,4 @@ Use os recursos a seguir para começar a usar o Power BI para acessar seus dados
 * [Saiba como usar o pacote de conteúdo do Centro de Desenvolvimento do Windows para Power BI para se conectar aos seus dados analíticos](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
 > [!NOTE]
-> Para se conectar ao pacote de conteúdo do Centro de desenvolvimento do Windows para Power BI, recomendamos que você especificar credenciais em um diretório do Azure AD associado à sua conta do Partner Center. Se você usar suas credenciais de conta da Microsoft, seus dados analíticos não serão atualizados automaticamente no Power BI, e você terá que se conectar ao Power BI para atualizar seus dados. Se sua organização já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem Azure AD. Caso contrário, você pode [baixá-lo gratuitamente](http://go.microsoft.com/fwlink/p/?LinkId=703757). Para obter mais informações sobre como configurar a associação, consulte [Associar o Azure Active Directory com sua conta do Partner Center](associate-azure-ad-with-dev-center.md).
+> Para se conectar ao pacote de conteúdo do Centro de desenvolvimento do Windows para Power BI, recomendamos que você especificar credenciais em um diretório do Azure AD associado à sua conta do Partner Center. Se você usar suas credenciais de conta da Microsoft, seus dados analíticos não serão atualizados automaticamente no Power BI, e você terá que se conectar ao Power BI para atualizar seus dados. Se sua organização já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem Azure AD. Caso contrário, você pode [baixá-lo gratuitamente](https://go.microsoft.com/fwlink/p/?LinkId=703757). Para obter mais informações sobre como configurar a associação, consulte [Associar o Azure Active Directory com sua conta do Partner Center](associate-azure-ad-with-dev-center.md).

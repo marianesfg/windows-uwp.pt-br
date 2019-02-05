@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d40e921f999381421a5a6ce422e019e7db58bbd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2ab7385d4c61c52b71c74fb61797be306bcc9851
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928361"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044337"
 ---
 # <a name="feedback-report"></a>Relatório de comentários
 
@@ -22,7 +22,7 @@ O **relatório de comentários** no Partner Center permite que você veja proble
 
 Incentivar os clientes a fornecerem comentários sobre seu aplicativo é uma ótima maneira de aprender sobre os problemas e recursos que são mais importantes para eles. Quando seus clientes sabem que podem enviar comentários diretamente, eles têm menos probabilidade de deixar esses comentários como uma análise negativa na Loja.
 
-Você pode usar a API de comentários no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que os clientes [iniciem diretamente o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele usando o aplicativo de Hub de Feedback. Por isso, você poderá ver comentários de clientes nesse relatório, mesmo se você tiver não solicitado comentários especificamente de dentro de seu aplicativo.
+Você pode usar a API de comentários no [Microsoft Store Services SDK](https://aka.ms/store-em-sdk) para permitir que os clientes [iniciem diretamente o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele usando o aplicativo de Hub de Feedback. Por isso, você poderá ver comentários de clientes nesse relatório, mesmo se você tiver não solicitado comentários especificamente de dentro de seu aplicativo.
 
 Comentários também podem ser útil ao usar o [pacote de pré-lançamento](package-flights.md), pois o relatório de **comentários** mostra o pacote específico que cada cliente tinha instalado em seu dispositivo quando deixou os comentários.
 
@@ -40,7 +40,7 @@ Também é possível expandir os **Filtros** para filtrar todos os dados dessa p
 - **Tipo de dispositivo**: a configuração padrão é **Todos os dispositivos**. Você poderá escolher um tipo de dispositivo específico, se quiser que essa página mostre somente comentários deixados por clientes que estão usando esse dispositivo.
 - **Versão do pacote**: a configuração padrão é **Todos os pacotes**. Você pode selecionar um de seus pacotes para mostrar apenas os comentários deixados por clientes que estavam usando esse pacote específico quando deixaram comentários.
 - **Mercado**: a configuração padrão é **Todos os mercados**. Você pode escolher um específico para mostrar apenas os comentários dos clientes desse mercado.
-- **Grupo**: a configuração padrão é **Todos**. Você pode optar por exibir apenas os comentários enviados por [Usuários do Windows Insider](http://insider.windows.com).
+- **Grupo**: a configuração padrão é **Todos**. Você pode optar por exibir apenas os comentários enviados por [Usuários do Windows Insider](https://insider.windows.com).
 
 > [!TIP]
 > Se você não exibir nenhum comentário na página, verifique se os filtros não excluíram todos os comentários. Por exemplo, se você filtrar por um **Tipo de dispositivo** não compatível com seu aplicativo, você não verá nenhum comentário

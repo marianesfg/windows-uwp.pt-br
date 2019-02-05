@@ -5,18 +5,18 @@ keywords: novidades, novidade, atualização, atualizações, recursos, novos, W
 ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 72319e7d97bfaaff4595c56a09fb7d3a874faa50
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 570e9c463175475db15bd15adbb6b9b88cb9ff39
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923211"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046276"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novidades no Windows 10 para desenvolvedores, compilação 17134
 
-O Windows 10, compilação 17134 (também conhecido como a Atualização de abril ou versão 1803), em combinação com o Visual Studio 2017 e o SDK atualizado, fornece as ferramentas, os recursos e as experiências para tornar notáveis os aplicativos da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+O Windows 10, compilação 17134 (também conhecido como a Atualização de abril ou versão 1803), em combinação com o Visual Studio 2017 e o SDK atualizado, fornece as ferramentas, os recursos e as experiências para tornar notáveis os aplicativos da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
-Esta é uma coleção de recursos novos e aprimorados e diretrizes de interesse para os desenvolvedores do Windows neste lançamento. Para obter uma lista completa de namespaces novos adicionados ao SDK do Windows, consulte as [alterações de API do Windows 10 compilação 17134](windows-10-build-17134-api-diff.md). Para obter mais informações sobre os recursos destacados do Windows 10, consulte [Novidades no Windows 10](http://go.microsoft.com/fwlink/?LinkId=823181). Além disso, consulte [recursos da plataforma de desenvolvimento do Windows](https://developer.microsoft.com/windows/platform/features) para uma visão geral de alto nível das adições passadas e futuras da plataforma do Windows.
+Esta é uma coleção de recursos novos e aprimorados e diretrizes de interesse para os desenvolvedores do Windows neste lançamento. Para obter uma lista completa de namespaces novos adicionados ao SDK do Windows, consulte as [alterações de API do Windows 10 compilação 17134](windows-10-build-17134-api-diff.md). Para obter mais informações sobre os recursos destacados do Windows 10, consulte [Novidades no Windows 10](https://go.microsoft.com/fwlink/?LinkId=823181). Além disso, consulte [recursos da plataforma de desenvolvimento do Windows](https://developer.microsoft.com/windows/platform/features) para uma visão geral de alto nível das adições passadas e futuras da plataforma do Windows.
 
 ## <a name="design--ui"></a>Design e interface do usuário
 

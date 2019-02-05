@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 9c362cfde71ef3bb75840216c787403846d3da95
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1231643e17ce30c68f71967f016f5bdeea546b2f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932902"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9045830"
 ---
 # <a name="custom-dependency-properties"></a>Propriedades de dependência personalizadas
 
@@ -472,12 +472,12 @@ Há um princípio geral de que os construtores de classe não devem chamar méto
 
 ### <a name="registering-the-dependency-properties-for-ccx-apps"></a>Registrando as propriedades de dependência para aplicativos C++/CX
 
-A implementação para registrar uma propriedade em C++/CX é mais complicada que em C#, devido à separação em cabeçalho e arquivo de implementação, e também porque a inicialização no escopo raiz do arquivo de implementação não é uma prática recomendada. (VisualC + + extensões de componente (C++ c++ /CX) colocam o código de inicializador estático do âmbito raiz diretamente no **DllMain**, enquanto os compiladores de c# atribuem os inicializadores estáticos a classes e, assim, evitam problemas de bloqueio de carga **DllMain** .). A melhor prática aqui é declarar uma função auxiliar que faz todo o registro de propriedade de dependência para uma classe, uma função por classe. Então, para cada classe personalizada que seu aplicativo consumir, será necessário fazer referência à função de registro auxiliar que é exposta por cada classe personalizada que deseja usar. Chame cada função de registro auxiliar uma vez, como parte do [**Application constructor**](https://msdn.microsoft.com/library/windows/apps/br242325) (`App::App()`), antes de `InitializeComponent`. Esse construtor só é executado quando o aplicativo é realmente referenciado pela primeira vez. Ele não será executado novamente se um aplicativo suspenso for retomado, por exemplo. Além disso, como pode ser visto no exemplo de registro anterior de C++, a verificação do **nullptr** em torno de cada chamada de [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) é importante: é a segurança de que nenhum chamador da função pode registrar a propriedade duas vezes. Uma segunda chamada de registro, provavelmente, travaria o aplicativo sem essa verificação, porque o nome da propriedade seria uma duplicação. Você pode ver esse padrão de implementação nos exemplos de controle personalizado e de usuário [XAML](http://go.microsoft.com/fwlink/p/?linkid=238581) se analisar o código para a versão C++/CX do exemplo.
+A implementação para registrar uma propriedade em C++/CX é mais complicada que em C#, devido à separação em cabeçalho e arquivo de implementação, e também porque a inicialização no escopo raiz do arquivo de implementação não é uma prática recomendada. (VisualC + + extensões de componente (C++ c++ /CX) colocam o código de inicializador estático do âmbito raiz diretamente no **DllMain**, enquanto os compiladores de c# atribuem os inicializadores estáticos a classes e, assim, evitam problemas de bloqueio de carga **DllMain** .). A melhor prática aqui é declarar uma função auxiliar que faz todo o registro de propriedade de dependência para uma classe, uma função por classe. Então, para cada classe personalizada que seu aplicativo consumir, será necessário fazer referência à função de registro auxiliar que é exposta por cada classe personalizada que deseja usar. Chame cada função de registro auxiliar uma vez, como parte do [**Application constructor**](https://msdn.microsoft.com/library/windows/apps/br242325) (`App::App()`), antes de `InitializeComponent`. Esse construtor só é executado quando o aplicativo é realmente referenciado pela primeira vez. Ele não será executado novamente se um aplicativo suspenso for retomado, por exemplo. Além disso, como pode ser visto no exemplo de registro anterior de C++, a verificação do **nullptr** em torno de cada chamada de [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) é importante: é a segurança de que nenhum chamador da função pode registrar a propriedade duas vezes. Uma segunda chamada de registro, provavelmente, travaria o aplicativo sem essa verificação, porque o nome da propriedade seria uma duplicação. Você pode ver esse padrão de implementação nos exemplos de controle personalizado e de usuário [XAML](https://go.microsoft.com/fwlink/p/?linkid=238581) se analisar o código para a versão C++/CX do exemplo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 - [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
 - [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)
 - [Visão geral das propriedades de dependência](dependency-properties-overview.md)
-- [Usuário XAML e exemplo de controles personalizados](http://go.microsoft.com/fwlink/p/?linkid=238581)
+- [Usuário XAML e exemplo de controles personalizados](https://go.microsoft.com/fwlink/p/?linkid=238581)
  

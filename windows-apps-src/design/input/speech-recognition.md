@@ -8,12 +8,12 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b6e0c6a751116ad03c4e8d69cb02e7147938097
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1b7eec51044a70b0738e246d3aa516c37643cf68
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927340"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048543"
 ---
 # <a name="speech-recognition"></a>Reconhecimento de fala
 
@@ -28,13 +28,13 @@ O reconhecimento de fala é realizado em um tempo de execução de fala, APIs de
 
 Para dar suporte a reconhecimento de fala com seu aplicativo, o usuário deve se conectar e habilitar um microfone em seus dispositivos e aceitar a política de privacidade do Microsoft conceder permissão para seu aplicativo para usá-lo.
 
-Para solicitar que o usuário automaticamente uma caixa de diálogo do sistema solicitando permissão para acessar e usar o microfone do áudio feed conjunto apenas (exemplo do [reconhecimento de fala e exemplo de síntese de fala](http://go.microsoft.com/fwlink/p/?LinkID=619897) mostrado abaixo), o **microfone** [dispositivo funcionalidade](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) em do [manifesto do pacote do aplicativo](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Para obter mais detalhes, consulte as [declarações de funcionalidades do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+Para solicitar que o usuário automaticamente uma caixa de diálogo do sistema solicitando permissão para acessar e usar o microfone do áudio feed conjunto apenas (exemplo do [reconhecimento de fala e exemplo de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897) mostrado abaixo), o **microfone** [dispositivo funcionalidade](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) em do [manifesto do pacote do aplicativo](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Para obter mais detalhes, consulte as [declarações de funcionalidades do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
 ![Política de privacidade para o acesso de microfone](images/speech/privacy.png)
 
-Se o usuário clica em Sim para conceder acesso a microfone, seu aplicativo é adicionado à lista de aplicativos aprovados nas configurações -> privacidade -> página do microfone. No entanto, como o usuário pode optar por desativar essa configuração a qualquer momento, você deve confirmar que seu aplicativo tem acesso a microfone antes de tentar usá-lo.
+Se o usuário clica em Sim para conceder acesso a microfone, seu aplicativo é adicionado à lista de aplicativos aprovados nas configurações- gt _ privacidade- gt _ página de microfone. No entanto, como o usuário pode optar por desativar essa configuração a qualquer momento, você deve confirmar que seu aplicativo tem acesso a microfone antes de tentar usá-lo.
 
-Se você deseja dar suporte a ditado, Cortana, ou o reconhecimento de fala outros serviços (por exemplo, uma [gramática predefinida](#predefined-grammars) definidos em uma restrição de tópico), você também deve confirmar que **o reconhecimento de fala on-line** (Configurações -> privacidade -> fala) é habilitado.
+Se você deseja dar suporte a ditado, Cortana, ou o reconhecimento de fala outros serviços (por exemplo, uma [gramática predefinida](#predefined-grammars) definidos em uma restrição de tópico), você também deve confirmar que **o reconhecimento de fala on-line** (Configurações- gt _ privacidade- gt _ fala) é habilitado.
 
 Este trecho de código mostra como seu aplicativo pode verificar se um microfone está presente e se ele tem permissão para usá-lo.
 
@@ -269,7 +269,7 @@ Consulte [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/librar
 
 ### <a name="srgs-grammars"></a>Gramáticas da SRGS
 
-Uma gramática SRGS (Especificação de Gramática de Reconhecimento de Fala) é um documento estático que, ao contrário de uma restrição de lista programática, usa o formato XML definido pela [SRGS Versão 1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302). Uma gramática SRGS oferece maior controle sobre a experiência de reconhecimento de fala, permitindo a você capturar diversos significados semânticos em um único reconhecimento.
+Uma gramática SRGS (Especificação de Gramática de Reconhecimento de Fala) é um documento estático que, ao contrário de uma restrição de lista programática, usa o formato XML definido pela [SRGS Versão 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302). Uma gramática SRGS oferece maior controle sobre a experiência de reconhecimento de fala, permitindo a você capturar diversos significados semânticos em um único reconhecimento.
 
  Consulte [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412).
 
@@ -373,7 +373,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 **Designers**
 * [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
 **Exemplos**
-* [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Exemplo de reconhecimento de fala e sintetização de controle por voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

@@ -1,18 +1,18 @@
 ---
 Description: A localized app is one that can be localized to other markets, languages, or regions without uncovering any functional defects in the app. The most essential property of a localizable app is that its executable code has been cleanly separated from its localizable resources.
-title: Tornar seu app localizável
+title: Torne seu app localizável
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 618b9d556d3c855c5aed888f0639393bdaaec52e
-ms.sourcegitcommit: 6b417970ee42b46d0a3a2307229376e41e70f8c9
+ms.openlocfilehash: fb16f682e5e1f57196737a6e15a9ffbadbfd0e84
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "9015661"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050879"
 ---
 # <a name="make-your-app-localizable"></a>Tornar seu app localizável
 
@@ -190,4 +190,4 @@ A classificação segue o formato do **Painel de Controle Regional**.
 
 ## <a name="samples"></a>Exemplos
 
-- [Exemplo de recursos e localização de aplicativos](http://go.microsoft.com/fwlink/p/?linkid=254478)
+- [Exemplo de recursos e localização de aplicativos](https://go.microsoft.com/fwlink/p/?linkid=254478)

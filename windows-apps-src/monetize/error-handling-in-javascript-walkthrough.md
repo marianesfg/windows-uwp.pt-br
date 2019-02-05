@@ -6,18 +6,18 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, tratamento de erros, java script
 ms.localizationpriority: medium
-ms.openlocfilehash: 68f49cd97e8b4e2ef5e20502909a7dc8cb4ab676
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: df33dc84823d5bcdc02d892820967b74ff0e5f65
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943804"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048999"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>Processamento de erros no guia passo a passo do JavaScript
 
 Este guia passo a passo demonstra como detectar erros relacionados a anúncios em seu aplicativo JavaScript. O passo a passo usa um [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para exibir um anúncio em faixa, mas os conceitos gerais nele também se aplicam a anúncios intersticiais e anúncios nativos.
 
-Estes exemplos pressupõem que você tenha um aplicativo JavaScript que contém um **AdControl**. Para obter instruções passo a passo que demonstram como adicionar um **AdControl** ao seu aplicativo, consulte [AdControl em HTML 5 e Javascript](adcontrol-in-html-5-and-javascript.md). Para um projeto de exemplo completo que demonstra como adicionar anúncios em faixa a um aplicativo JavaScript/HTML, consulte os [Exemplos de publicidade no GitHub](http://aka.ms/githubads).
+Estes exemplos pressupõem que você tenha um aplicativo JavaScript que contém um **AdControl**. Para obter instruções passo a passo que demonstram como adicionar um **AdControl** ao seu aplicativo, consulte [AdControl em HTML 5 e Javascript](adcontrol-in-html-5-and-javascript.md). Para um projeto de exemplo completo que demonstra como adicionar anúncios em faixa a um aplicativo JavaScript/HTML, consulte os [Exemplos de publicidade no GitHub](https://aka.ms/githubads).
 
 1.  No arquivo default.html, adicione um valor para o evento **onErrorOccurred**, onde você define **data-win-options** no **div** do **AdControl**. Encontre o código a seguir no arquivo default.html.
     ``` HTML
@@ -66,4 +66,4 @@ Estes exemplos pressupõem que você tenha um aplicativo JavaScript que contém 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Exemplos de publicidade no GitHub](http://aka.ms/githubads)
+* [Exemplos de publicidade no GitHub](https://aka.ms/githubads)

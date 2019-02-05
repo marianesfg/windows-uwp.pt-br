@@ -8,12 +8,12 @@ keywords: fala, voz, reconhecimento de fala, linguagem natural, ditado, entrada,
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 53539c73137b40d154db00fa9e340d81412764da
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 539acb242cfe6ee70d1311133a3f1a193860541a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942175"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047551"
 ---
 # <a name="define-custom-recognition-constraints"></a>Definir restrições de reconhecimento personalizadas
 
@@ -144,7 +144,7 @@ As gramáticas da SRGS fornecem um conjunto completo de recursos para ajudar voc
 -   Use a semântica para definir o reconhecimento de fala por meio de seu aplicativo.
 -   Especifique as pronúncias, quer em linha com uma gramática ou por meio de um link de um léxico.
 
-Para saber mais sobre elementos e atributos da SRGS, consulte a [Referência XML para gramáticas da SRGS](http://go.microsoft.com/fwlink/p/?LinkID=269886). Para começar a criar uma gramática SRGS, consulte [Como criar uma gramática XML básica](http://go.microsoft.com/fwlink/p/?LinkID=269887).
+Para saber mais sobre elementos e atributos da SRGS, consulte a [Referência XML para gramáticas da SRGS](https://go.microsoft.com/fwlink/p/?LinkID=269886). Para começar a criar uma gramática SRGS, consulte [Como criar uma gramática XML básica](https://go.microsoft.com/fwlink/p/?LinkID=269887).
 
 Lembre-se bem do seguinte:
 
@@ -178,7 +178,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Esse arquivo SRGS (srgs.grxml) inclui tags de interpretação semântica. Essas tags fornecem um mecanismo para retornar dados correspondentes de gramática para seu aplicativo. Gramáticas devem estar de acordo com a especificação World Wide Web Consortium (W3C)[Interpretação semântica para reconhecimento de fala (SISR) 1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765) .
+Esse arquivo SRGS (srgs.grxml) inclui tags de interpretação semântica. Essas tags fornecem um mecanismo para retornar dados correspondentes de gramática para seu aplicativo. Gramáticas devem estar de acordo com a especificação World Wide Web Consortium (W3C)[Interpretação semântica para reconhecimento de fala (SISR) 1.0](https://go.microsoft.com/fwlink/p/?LinkID=201765) .
 
 Aqui, escutamos as variantes de "sim" e "não".
 
@@ -236,7 +236,7 @@ Para avisar o usuário sobre o que pode ser falado, use as propriedades [**Speec
 * [Interações de controle por voz](speech-interactions.md)
 
 **Exemplos**
-* [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Exemplo de reconhecimento de fala e sintetização de controle por voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

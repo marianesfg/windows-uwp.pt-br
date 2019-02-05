@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9940367054ae8771355012492434e12aa97d43ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a1d5a15bd88b7adc23ccc835001c384a91e65a31
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921782"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050699"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Processar quadros de mídia com o MediaFrameReader
 
@@ -23,7 +23,7 @@ Se o seu interesse for simplesmente capturar vídeo ou fotos, como um aplicativo
 > Os recursos abordados neste artigo só estão disponíveis a partir do Windows 10, versão 1607.
 
 > [!NOTE] 
-> Há um exemplo de aplicativo Universal do Windows que demonstra o uso do **MediaFrameReader** para exibir quadros de origens diferentes, incluindo câmeras em cores, de profundidade e infravermelho. Para obter mais informações, consulte [Exemplo de quadros de câmera](http://go.microsoft.com/fwlink/?LinkId=823230).
+> Há um exemplo de aplicativo Universal do Windows que demonstra o uso do **MediaFrameReader** para exibir quadros de origens diferentes, incluindo câmeras em cores, de profundidade e infravermelho. Para obter mais informações, consulte [Exemplo de quadros de câmera](https://go.microsoft.com/fwlink/?LinkId=823230).
 
 > [!NOTE] 
 > Um novo conjunto de APIs para usar **MediaFrameReader** com dados de áudio foi introduzido no Windows 10, versão 1803. Para obter mais informações, consulte [Processar quadros de áudio com o MediaFrameReader](process-audio-frames-with-mediaframereader.md).
@@ -151,7 +151,7 @@ Ao terminar a leitura dos quadros, certifique-se de parar o leitor de quadros de
 Para obter mais informações sobre a limpeza de objetos de captura de mídia quando seu aplicativo é suspenso, consulte [**Exibir a visualização de câmera**](simple-camera-preview-access.md).
 
 ## <a name="the-framerenderer-helper-class"></a>A classe auxiliar FrameRenderer
-O Universal Windows [Quadros de câmera de exemplo](http://go.microsoft.com/fwlink/?LinkId=823230) fornece uma classe auxiliar que torna mais fácil exibir os quadros de origens em cor, infravermelho e de profundidade em seu aplicativo. Normalmente, você vai querer fazer algo mais com dados de infravermelho e profundidade do que apenas exibi-los na tela, mas essa classe auxiliar é uma ferramenta útil para demonstrar o recurso de leitor de quadros e para a depuração de sua própria implementação do leitor de quadros.
+O Universal Windows [Quadros de câmera de exemplo](https://go.microsoft.com/fwlink/?LinkId=823230) fornece uma classe auxiliar que torna mais fácil exibir os quadros de origens em cor, infravermelho e de profundidade em seu aplicativo. Normalmente, você vai querer fazer algo mais com dados de infravermelho e profundidade do que apenas exibi-los na tela, mas essa classe auxiliar é uma ferramenta útil para demonstrar o recurso de leitor de quadros e para a depuração de sua própria implementação do leitor de quadros.
 
 A classe auxiliar **FrameRenderer** implementa os métodos a seguir.
 
@@ -253,7 +253,7 @@ Para obter mais informações sobre como usar perfis de câmera, consulte [Perfi
 
 * [Câmera](camera.md)
 * [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Quadros da câmera de exemplo](http://go.microsoft.com/fwlink/?LinkId=823230)
+* [Quadros da câmera de exemplo](https://go.microsoft.com/fwlink/?LinkId=823230)
  
 
  

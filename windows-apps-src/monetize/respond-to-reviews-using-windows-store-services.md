@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, API de análises da Microsoft Store, responder às análises
 ms.localizationpriority: medium
-ms.openlocfilehash: 95de2cc1de1b71a435fc8d4388f599c417132814
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 677108e692bbc702778cad3c42a45b4f5408b8cd
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944452"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044510"
 ---
 # <a name="respond-to-reviews-using-store-services"></a>Responder às críticas usando serviços da Store
 
@@ -32,7 +32,7 @@ As etapas a seguir descrevem o processo completo:
 
 Antes de começar a escrever o código para chamar a API de análises da Microsoft Store, certifique-se de que você concluiu os pré-requisitos a seguir.
 
-* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Partner Center](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sem nenhum custo adicional.
+* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](https://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Partner Center](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sem nenhum custo adicional.
 
 * Você deve associar um aplicativo Azure AD à sua conta do Partner Center, recuperar a ID do locatário e ID do cliente para o aplicativo e gerar uma chave. O app do Azure AD representa o app ou serviço do qual você quer chamar a API de análises da Microsoft Store. Você precisa da ID do locatário, da ID do cliente e da chave para obter um token de acesso do Azure AD que você passa para a API.
     > [!NOTE]

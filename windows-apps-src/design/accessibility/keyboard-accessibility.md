@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 938b5b3cdd2e23995a1031875a28f178e0c97a26
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5ad64c2a0d4d7569ec2c0c0a44f9236fc4b2819f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931127"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045515"
 ---
 # <a name="keyboard-accessibility"></a>Acessibilidade do teclado  
 
@@ -148,7 +148,7 @@ XAML
 
 Para fins de simplicidade, o exemplo anterior omite o uso de recursos para cadeias de caracteres, como "Ctrl+A". Contudo, considere também as teclas de atalho durante o processo de localização. A localização de teclas de atalho é relevante porque a escolha da chave a ser usada como a chave de atalho normalmente depende do rótulo de texto visível para o elemento.
 
-Para saber mais sobre as diretrizes de implementação de teclas de atalho, consulte [Teclas de atalho](http://go.microsoft.com/fwlink/p/?linkid=221825) nas Diretrizes de interação com a experiência do usuário do Windows.
+Para saber mais sobre as diretrizes de implementação de teclas de atalho, consulte [Teclas de atalho](https://go.microsoft.com/fwlink/p/?linkid=221825) nas Diretrizes de interação com a experiência do usuário do Windows.
 
 <span id="Implementing_a_key_event_handler"/>
 <span id="implementing_a_key_event_handler"/>
@@ -249,5 +249,5 @@ Os atalhos do teclado não são normalmente relevantes para os aplicativos no Wi
 * [Acessibilidade](accessibility.md)
 * [Interações por teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607)
 * [Amostra de teclado virtual](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Amostra de acessibilidade XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 

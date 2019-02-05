@@ -5,18 +5,18 @@ keywords: Novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 5/7/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 20bb514a15963befb5b96a1b01a6c057e8f27482
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: be67c83a986602318adf995bae35c09e5a7a4997
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926332"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048663"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novidades dos documentos de desenvolvedor do Windows em maio de 2018
 
 A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As seguintes visões gerais de recurso, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de maio para coincidir com a conferência de desenvolvedores [Microsoft Build 2018](https://www.microsoft.com/build) .
 
-[Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+[Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="features"></a>Recursos
 
@@ -99,7 +99,7 @@ O recurso de conjuntos está disponível no Windows compilações do Insider pre
 
 ## <a name="developer-guidance"></a>Diretrizes para desenvolvedor
 
-### <a name="get-started"></a>Comece agora
+### <a name="get-started"></a>Introdução
 
 Nós já revitalized nosso Get iniciado conteúdo com novos acompanhamentos de aprendizagem. Esses novos tópicos objetivam é fornecer novos desenvolvedores do Windows 10 com informações sobre algumas tarefas comuns que eles podem querer fazer. Eles não estiver tutoriais e não fornecerem um passo a passo portátil, mas em vez disso, destacar onde existe documentação existente e como usá-lo. Confira o remodelado [começar a codificar](../get-started/create-uwp-apps.md) página ou explore a cada faixa de aprendizagem individuais:
 

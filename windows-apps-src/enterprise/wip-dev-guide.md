@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp, wip, Proteção de Informações do Windows, dados corporativos, proteção de dados corporativos, edp, aplicativos habilitados
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
 ms.localizationpriority: medium
-ms.openlocfilehash: 229d97c137344de26be0168be437825bea8e9700
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6f022045787512f6baea679633d5327b6ba4caf8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932539"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048353"
 ---
 # <a name="windows-information-protection-wip-developer-guide"></a>Guia do desenvolvedor de Proteção de Informações do Windows (WIP)
 
@@ -21,7 +21,7 @@ Um aplicativo *capacitado* diferencia entre dados pessoais e empresariais e sabe
 
 Neste guia, mostraremos como criar uma. Quando você terminar, os administradores de política poderão confiar em seu aplicativo para consumir dados da organização. E os funcionários vão adorar saber que os dados pessoais deles ficarão intactos no dispositivo mesmo se eles cancelarem a inscrição do gerenciamento de dispositivo móvel (MDM) da organização ou saírem completamente da organização.
 
-__Observação__ Este guia ajuda você a capacitar um aplicativo UWP. Se você quiser habilitar um aplicativo de área de trabalho do Windows C++, consulte [Guia do desenvolvedor de Proteção de Informações do Windows (WIP) (C++)](http://go.microsoft.com/fwlink/?LinkId=822192).
+__Observação__ Este guia ajuda você a capacitar um aplicativo UWP. Se você quiser habilitar um aplicativo de área de trabalho do Windows C++, consulte [Guia do desenvolvedor de Proteção de Informações do Windows (WIP) (C++)](https://go.microsoft.com/fwlink/?LinkId=822192).
 
 Você pode ler mais sobre WIP e aplicativos capacitados aqui: [Proteção de Informações do Windows (WIP)](wip-hub.md).
 
@@ -1163,4 +1163,4 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Exemplo de Proteção de Informações do Windows (WIP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
+[Exemplo de Proteção de Informações do Windows (WIP)](https://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
 ms.localizationpriority: medium
-ms.openlocfilehash: 60642016e5924c554534775a6576b61e935eaf1e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 019db8c93b61f84dde400f7be9f98bf82b1466e8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932499"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048573"
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Trazendo jogos HTML para o UWP no Xbox
 O Xbox One é uma plataforma excelente para jogos HTML 5. Jogos HTML 5 são executados no mecanismo do navegador [Edge](https://developer.microsoft.com/microsoft-edge/). O Edge é rápido e totalmente compatível com recursos HTML 5 e CSS 3 como WebGL e canvas.
@@ -20,7 +20,7 @@ Mecanismos de jogos populares, como [Construct 2](https://www.scirra.com/blog/17
 
 Jogos HTML estão no mesmo nível que qualquer outro tipo de jogo. Os desenvolvedores podem obter acesso completo à APIs nativas como entrada do controlador, Kinect e muito mais.
 
-Xbox One é executado na Plataforma Universal do Windows, e isso significa que, como outros dispositivos da Microsoft, possui suporte a aplicativos Web hospedados, que são aplicativos que vêm completamente de um servidor. Para saber mais, consulte [Aplicativos Web hospedados](http://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm).
+Xbox One é executado na Plataforma Universal do Windows, e isso significa que, como outros dispositivos da Microsoft, possui suporte a aplicativos Web hospedados, que são aplicativos que vêm completamente de um servidor. Para saber mais, consulte [Aplicativos Web hospedados](https://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm).
 
 
 Este vídeo apresenta mais detalhes sobre aplicativos Web empacotados e aplicativos Web hospedados no Xbox, incluindo como criá-los.

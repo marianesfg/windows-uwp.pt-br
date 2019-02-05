@@ -6,18 +6,18 @@ ms.date: 03/14/2018
 ms.topic: article
 keywords: windows 10, uwp, mapa, localização, controle de mapa, modos de exibição de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 7713c1664018a1875d80f70fb75da2afe6104c3c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 03c864a6e8bc6191f63a2b6fd55d8eb23ad965e4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924358"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046985"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Exibir mapas com modos de exibição 2D, 3D e Streetside
 
 Você pode mostrar um mapa na janela descartável leve chamada de um *cartão de lugar* de mapa em um controle de mapa cheio de recursos.
 
-Baixe o [exemplo de mapa](http://go.microsoft.com/fwlink/p/?LinkId=619977) para experimentar alguns dos recursos descritos neste guia.
+Baixe o [exemplo de mapa](https://go.microsoft.com/fwlink/p/?LinkId=619977) para experimentar alguns dos recursos descritos neste guia.
 
 <a id="placecard" />
 
@@ -455,10 +455,10 @@ Trate mudanças que acontecem quando o usuário ou o aplicativo altera as config
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
-* [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Obter a localização atual](get-location.md)
 * [Diretrizes de design para aplicativos com detecção de localização](https://msdn.microsoft.com/library/windows/apps/hh465148)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo de aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Exemplo de aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 55c4347b85d94d183d44599f7d34bc750d34d181
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fe07e19a66bb7fc85a69a3bd542894e0b22aba9b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927896"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045382"
 ---
 # <a name="porting-windowsphone-silverlight-projects-to-uwp-projects"></a>Portando projetos WindowsPhone Silverlight para projetos UWP
 
@@ -62,8 +62,8 @@ Você descobrirá que refatorar um pouco, e/ou adicionar código adaptável (que
 -   É possível que seu aplicativo detecte a família de dispositivos em que ele esteja sendo executado e navegue para um modo de exibição que foi projetado especificamente para essa família de dispositivos. Para saber mais, confira [Detectando a plataforma em que seu aplicativo é executado](wpsl-to-uwp-input-and-sensors.md).
 -   Uma técnica semelhante que pode ser útil, caso não haja alternativa, é dar um nome especial a um arquivo de marcação ou arquivo **ResourceDictionary** (ou à pasta que contém o arquivo), de maneira que ele seja carregado automaticamente no tempo de execução somente quando o aplicativo é executado em uma família de dispositivos em especial. Essa técnica é ilustrada no estudo de caso [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md).
 -   Para usar recursos que não estejam disponíveis em todas as famílias de dispositivos (por exemplo, impressoras, scanners ou o botão da câmera), você pode escrever um código adaptável. Consulte o terceiro exemplo em [Compilação condicional e código adaptável](#conditional-compilation-and-adaptive-code) neste tópico.
--   Se você quiser dar suporte a WindowsPhone Silverlight e Windows 10, em seguida, você poderá compartilhar arquivos de código-fonte entre projetos. Veja como: no Visual Studio, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções**, selecione **Adicionar Item Existente**, selecione os arquivos a serem compartilhados e clique em **Adicionar como Link**. Armazene seus arquivos de código-fonte em uma pasta comum no sistema de arquivos onde os projetos vinculados a eles possam vê-los, e não se esqueça de adicioná-los ao controle do código-fonte. Caso possa fatorar o código-fonte imperativo de maneira que a maior parte de um arquivo, se não todo ele, funcione em ambas as plataformas, você não precisa ter duas cópias dele. É possível encapsular qualquer lógica específica da plataforma no arquivo dentro das diretivas de compilação condicional, onde possível, ou das condições de tempo de execução, onde necessário. Consulte a próxima seção abaixo e [Diretivas de pré-processador C#](http://msdn.microsoft.com/library/ed8yd1ha.aspx).
--   Para reutilização no nível binário, em vez de nível do código-fonte, há bibliotecas de classes portáteis, que oferecem suporte ao subconjunto de APIs .NET que estão disponíveis no WindowsPhone Silverlight e o subconjunto de aplicativos do Windows 10 (.NET Core). As assemblies da Biblioteca de Classes Portátil são compatíveis com binários nas plataformas .NET e mais. Use o Visual Studio para criar um projeto direcionado a uma Biblioteca de Classes Portátil. Consulte [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](http://msdn.microsoft.com/library/gg597391.aspx).
+-   Se você quiser dar suporte a WindowsPhone Silverlight e Windows 10, em seguida, você poderá compartilhar arquivos de código-fonte entre projetos. Veja como: no Visual Studio, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções**, selecione **Adicionar Item Existente**, selecione os arquivos a serem compartilhados e clique em **Adicionar como Link**. Armazene seus arquivos de código-fonte em uma pasta comum no sistema de arquivos onde os projetos vinculados a eles possam vê-los, e não se esqueça de adicioná-los ao controle do código-fonte. Caso possa fatorar o código-fonte imperativo de maneira que a maior parte de um arquivo, se não todo ele, funcione em ambas as plataformas, você não precisa ter duas cópias dele. É possível encapsular qualquer lógica específica da plataforma no arquivo dentro das diretivas de compilação condicional, onde possível, ou das condições de tempo de execução, onde necessário. Consulte a próxima seção abaixo e [Diretivas de pré-processador C#](https://msdn.microsoft.com/library/ed8yd1ha.aspx).
+-   Para reutilização no nível binário, em vez de nível do código-fonte, há bibliotecas de classes portáteis, que oferecem suporte ao subconjunto de APIs .NET que estão disponíveis no WindowsPhone Silverlight e o subconjunto de aplicativos do Windows 10 (.NET Core). As assemblies da Biblioteca de Classes Portátil são compatíveis com binários nas plataformas .NET e mais. Use o Visual Studio para criar um projeto direcionado a uma Biblioteca de Classes Portátil. Consulte [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](https://msdn.microsoft.com/library/gg597391.aspx).
 
 ## <a name="conditional-compilation-and-adaptive-code"></a>Compilação condicional e código adaptável
 

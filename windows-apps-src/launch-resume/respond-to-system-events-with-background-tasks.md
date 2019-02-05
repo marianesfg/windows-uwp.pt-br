@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: c3773a486a1b7a29fc2a171c473edf38f6f3a7f1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: de8d585d7178a277d1df248858f69a5a5705fb1d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935780"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044530"
 ---
 # <a name="respond-to-system-events-with-background-tasks"></a>Responder a eventos do sistema com tarefas em segundo plano
 
@@ -88,7 +88,7 @@ Para garantir que seu aplicativo Universal do Windows continue a ser executado c
  
 ## <a name="remarks"></a>Comentários
 
-Para ver o registro da tarefa em segundo plano em ação, baixe a [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+Para ver o registro da tarefa em segundo plano em ação, baixe a [amostra de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666).
 
 Tarefas em segundo plano podem ser executadas em resposta aos eventos de [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) e [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) sem entrar na tela de bloqueio, mas ainda será necessário [declarar as tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md). Você também deve chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de tarefa em segundo plano.
 
@@ -108,4 +108,4 @@ Os aplicativos com recurso de tela de bloqueio podem registrar tarefas em segund
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)

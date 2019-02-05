@@ -6,16 +6,16 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, serviços da Store, API de ofertas direcionadas da Microsoft Store, ofertas direcionadas
 ms.localizationpriority: medium
-ms.openlocfilehash: 27d99d2008352ff291f0cb620afab8ccb8f6977c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bcf270bd56d17936ef404adbc3663034b58e7a2c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937534"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045019"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>Gerenciar ofertas direcionadas usando os serviços da Loja
 
-Se você criar uma *oferta direcionada* no **participar > ofertas direcionadas** página do seu aplicativo no Partner Center, use a *API de ofertas direcionadas da Microsoft Store* no código do seu aplicativo para recuperar informações que ajuda você a implementar a experiência no aplicativo para o oferta direcionada. Para obter mais informações sobre ofertas direcionadas e como criá-las no painel, consulte [Use ofertas direcionadas para maximizar o engajamento e as conversões](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
+Se você criar uma *oferta de destino* na página **gt _ prenda ofertas direcionadas** para o seu aplicativo no Partner Center, use a *API de ofertas direcionadas da Microsoft Store* no código do seu aplicativo para recuperar informações que ajuda você a implementar a experiência no aplicativo para o oferta direcionada. Para obter mais informações sobre ofertas direcionadas e como criá-las no painel, consulte [Use ofertas direcionadas para maximizar o engajamento e as conversões](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
 
 A API de ofertas direcionadas é uma API REST simples que você pode usar para obter as ofertas segmentadas disponíveis para o usuário atual, com base no fato de o usuário fazer parte do segmento de clientes ou não para a oferta segmentada. Para usar esta API no código do seu aplicativo, siga estas etapas:
 
@@ -45,7 +45,7 @@ Depois de ter um token MSA para o usuário atual, chame o método GET do URI ```
 
 Esse método retorna as IDs do produto dos complementos que estão associados às ofertas direcionadas disponíveis para o usuário atual. Com esta informação, você pode oferecer uma ou mais ofertas direcionadas como uma compra no aplicativo ao usuário.
 
-O exemplo a seguir demonstra como obter as ofertas direcionadas para o usuário atual. Este exemplo é um trecho do [exemplo completo](#code-example). Isso requer a biblioteca [Json.NET](http://www.newtonsoft.com/json) da Newtonsoft e as classes adicionais, e as instruções **using** fornecidas no exemplo completo.
+O exemplo a seguir demonstra como obter as ofertas direcionadas para o usuário atual. Este exemplo é um trecho do [exemplo completo](#code-example). Isso requer a biblioteca [Json.NET](https://www.newtonsoft.com/json) da Newtonsoft e as classes adicionais, e as instruções **using** fornecidas no exemplo completo.
 
 [!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffers)]
 
@@ -59,7 +59,7 @@ O exemplo de código a seguir demonstra as seguintes tarefas:
 * Obtenha todas as ofertas direcionadas para o usuário atual usando o método [Obter ofertas direcionadas](get-targeted-offers.md).
 * Compre o complemento que está associado a uma oferta direcionada.
 
-Este exemplo exige a biblioteca [Json.NET](http://www.newtonsoft.com/json) da Newtonsoft. O exemplo usa esta biblioteca para serializar e desserializar dados formatados em JSON.
+Este exemplo exige a biblioteca [Json.NET](https://www.newtonsoft.com/json) da Newtonsoft. O exemplo usa esta biblioteca para serializar e desserializar dados formatados em JSON.
 
 [!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffersSample)]
 

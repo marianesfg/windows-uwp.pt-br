@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a486f27d390a651cec0dcad82246a858bab2f33
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 08acb2972469a84e6a37d7293ed00cae8df94dfb
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947549"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044440"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Adicionando o suporte para Minhas Pessoas a um aplicativo
 
@@ -252,7 +252,7 @@ async Task PinMultipleContacts(Contact[] contacts)
 + [Compartilhamento de Minhas Pessoas](my-people-sharing.md)
 + [Notificações de Minhas Pessoas](my-people-notifications.md)
 + [Vídeo do Channel 9 sobre como adicionar o suporte para Minhas Pessoas a um aplicativo](https://channel9.msdn.com/Events/Build/2017/P4056)
-+ [Exemplo de integração de Minhas Pessoas](http://aka.ms/mypeoplebuild2017)
++ [Exemplo de integração de Minhas Pessoas](https://aka.ms/mypeoplebuild2017)
 + [Exemplo de cartão de visita](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
 + [Documentação da classe PinnedContactManager](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
 + [Conectar seu aplicativo a ações em um cartão de contato](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)

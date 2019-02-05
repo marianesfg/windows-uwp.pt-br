@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, notificações direcionadas, notificações por push, notificações do sistema, bloco
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
-ms.openlocfilehash: 902a8d84c2a0cfa1549c4c3926e838e9bb8ed9c4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9858665eaf36f5cd261dd1098b23aeecccf9179c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923133"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045775"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificações para clientes do seu aplicativo
 
@@ -45,7 +45,7 @@ Em um nível superior, você precisa executar três ações para usar notificaç
 Siga estas etapas para criar uma notificação no Partner Center e enviá-lo para um segmento de cliente específico.
 
 > [!NOTE]
-> Para que um aplicativo possa receber notificações do Partner Center, primeiro você deve chamar o método [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) em seu aplicativo para registrar seu aplicativo para receber notificações. Esse método está disponível no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Para obter mais informações sobre como chamar esse método, incluindo um exemplo de código, consulte [Configurar o aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+> Para que um aplicativo possa receber notificações do Partner Center, primeiro você deve chamar o método [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) em seu aplicativo para registrar seu aplicativo para receber notificações. Esse método está disponível no [Microsoft Store Services SDK](https://aka.ms/store-em-sdk). Para obter mais informações sobre como chamar esse método, incluindo um exemplo de código, consulte [Configurar o aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
 1. No [Partner Center](https://partner.microsoft.com/dashboard), expanda a seção de **interagir** e, em seguida, selecione **as notificações**.
 2. Na página **Notificações**, selecione **Nova notificação**.

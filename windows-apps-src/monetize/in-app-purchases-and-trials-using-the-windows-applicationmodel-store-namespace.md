@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: uwp, compras no aplicativo, IAPs, complementos, avaliações, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 72f5875721d17bda79842989c1ac22475a06e938
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 96260b0fb2aa0818dd6df52f88bd0c63d56c35b7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946121"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046975"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store
 
@@ -155,7 +155,7 @@ Esta seção lista o arquivo XSD que define a estrutura do arquivo WindowsStoreP
 5. Alterne para o arquivo WindowsStoreProxy.xml no Visual Studio.
 6. No menu **XML**, clique em **Esquemas** e localize a linha na lista para o arquivo WindowsStoreProxy.xsd. Se o local do arquivo não for aquele que você deseja (por exemplo, se o arquivo temporário ainda for exibido), clique em **Adicionar**. Navegue até o arquivo correto e clique em **OK**. Agora você deve ver o arquivo na lista. Verifique se uma marca de seleção aparece na coluna **Uso** para o esquema.
 
-Depois de ter feito isso, as edições realizadas no WindowsStoreProxy.xml estarão sujeitas ao esquema. Para obter mais informações, consulte [Instruções: selecionar os esquemas XML a serem usados](http://go.microsoft.com/fwlink/p/?LinkId=403014).
+Depois de ter feito isso, as edições realizadas no WindowsStoreProxy.xml estarão sujeitas ao esquema. Para obter mais informações, consulte [Instruções: selecionar os esquemas XML a serem usados](https://go.microsoft.com/fwlink/p/?LinkId=403014).
 
 > [!div class="tabbedCodeSnippets"]
 ```xml

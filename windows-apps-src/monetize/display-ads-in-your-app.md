@@ -6,12 +6,12 @@ ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, faixa, controle de anúncio, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: baf26335ccdf34c8403cc15ecc1e68527d92e90e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 84ed7f5f1eb65f06a47e92de962777ca9d3c50c7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941423"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044850"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Apresentar anúncios em seu app com o SDK do Microsoft Advertising
 
@@ -32,7 +32,7 @@ Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP
 <tr>
 <td align="left"><img src="images/install-sdk.png" alt="Install SDK icon" /></td>
 <td align="left"><b>Introdução</b><br/><br/>
-    <a href="http://aka.ms/ads-sdk-uwp">Instalar o SDK do Microsoft Advertising</a>
+    <a href="https://aka.ms/ads-sdk-uwp">Instalar o SDK do Microsoft Advertising</a>
 </td>
 <td align="left"><img src="images/write-code.png" alt="Develop icon" /></td>
 <td align="left"><b>Guias do desenvolvedor</b><br/><br/>
@@ -56,7 +56,7 @@ Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP
 
 ## <a name="step-1-install-the-microsoft-advertising-sdk"></a>Etapa 1: Instalar o SDK do Microsoft Advertising
 
-Para começar, instale o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp) no computador de desenvolvimento usado para criar seu aplicativo. Para obter instruções de instalação, consulte [este artigo](install-the-microsoft-advertising-libraries.md).
+Para começar, instale o [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp) no computador de desenvolvimento usado para criar seu aplicativo. Para obter instruções de instalação, consulte [este artigo](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="step-2-implement-ads-in-your-app"></a>Etapa 2: implementar anúncios no aplicativo
 
@@ -111,16 +111,16 @@ Para obter ajuda adicional usando o SDK do Microsoft Advertising, use os recurso
 |  Tarefa    | Recurso |               
 |----------|-------|
 | Relatar um bug ou obter suporte assistido para publicidade     | Visite a [página de suporte](https://developer.microsoft.com/en-us/windows/support) e escolha **Anúncios em Apps**.        |
-| Obter suporte da comunidade     | Visite o [fórum](http://go.microsoft.com/fwlink/p/?LinkId=401266).       |
-| Baixe os projetos de exemplo que demonstram como adicionar faixa e anúncios intersticiais a aplicativos.     | Consulte os [Exemplos de publicidade no GitHub](http://aka.ms/githubads).       |
+| Obter suporte da comunidade     | Visite o [fórum](https://go.microsoft.com/fwlink/p/?LinkId=401266).       |
+| Baixe os projetos de exemplo que demonstram como adicionar faixa e anúncios intersticiais a aplicativos.     | Consulte os [Exemplos de publicidade no GitHub](https://aka.ms/githubads).       |
 | Saiba mais sobre as oportunidades de monetização mais recentes para aplicativos do Windows     | Visite [Monetize seus aplicativos](https://developer.microsoft.com/store/monetize).        |
 
 ## <a name="windows-81-and-windows-phone-8x-apps"></a>Aplicativos para Windows 8.1 e Windows Phone 8.x
 
-Para os aplicativos do Windows 8.1 e Windows Phone 8. x, fornecedos [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk). Para obter mais informações sobre como usar este SDK para mostrar anúncio em aplicativos para Windows 8.1 ou Windows Phone 8.x, consulte [este artigo](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn792120(v=win.10)).
+Para os aplicativos do Windows 8.1 e Windows Phone 8. x, fornecedos [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](https://aka.ms/store-8-sdk). Para obter mais informações sobre como usar este SDK para mostrar anúncio em aplicativos para Windows 8.1 ou Windows Phone 8.x, consulte [este artigo](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn792120(v=win.10)).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp)
+* [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp)
 * [Relatório de desempenho de anúncios](../publish/advertising-performance-report.md)
 * [Programa de editores de anúncios premium do Windows](windows-premium-ads-publishers-program.md)

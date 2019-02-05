@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Hub de Feedback, iniciar
 ms.localizationpriority: medium
-ms.openlocfilehash: b4e11b8dfffd7e749a31f052545bfbdfc4449126
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9f5d5c12deed9fffc3d2515529aa5bba5fbffc47
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947868"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045269"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>Iniciar o Hub de Feedback do seu app
 
 Você pode incentivar os clientes a deixar comentários adicionando um controle (como um botão) ao seu aplicativo da Plataforma Universal do Windows (UWP) que inicia o Hub de Feedbacks. Hub de Feedback é um aplicativo pré-instalado que oferece um local único para coletar feedback sobre o Windows e os aplicativos instalados. Todos os comentários dos clientes que é enviado para seu aplicativo por meio do Hub de Feedback é coletado e apresentado no [relatório de comentários](../publish/feedback-report.md) no Partner Center, para que você possa ver os problemas, sugestões e aprovações que os clientes enviaram em um relatório.
 
-Para iniciar o Hub de Feedback do seu aplicativo, use uma API que seja fornecida pelo [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Recomendamos que você use essa API para iniciar o Hub de Feedback de um elemento de interface do usuário em seu app que siga nossas diretrizes de design.
+Para iniciar o Hub de Feedback do seu aplicativo, use uma API que seja fornecida pelo [Microsoft Store Services SDK](https://aka.ms/store-em-sdk). Recomendamos que você use essa API para iniciar o Hub de Feedback de um elemento de interface do usuário em seu app que siga nossas diretrizes de design.
 
 > [!NOTE]
 > O Hub de Feedback está disponível apenas em dispositivos que executam a versão 10.0.14271 ou posterior de um SO Windows 10 que se baseia em [famílias de dispositivos móveis e computadores](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families). Recomendamos que você mostre um controle de feedback no seu app apenas se o Hub de Feedback estiver disponível no dispositivo do usuário. O código neste tópico demonstra como fazer isso.

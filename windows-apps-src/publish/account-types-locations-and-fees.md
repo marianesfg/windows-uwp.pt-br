@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
-ms.openlocfilehash: 3163b4c89cc1d0bf3e4adfdea39222dfcb5a3ee1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9fda6fc33ab82283047e4bdf4b78d21f78a577c9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934631"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045705"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
@@ -20,7 +20,7 @@ O Windows programa de ofertas do [Partner Center](https://partner.microsoft.com/
 > [!NOTE]
 > Ao abrir sua conta de desenvolvedor, certifique-se de entrar no [Partner Center](https://partner.microsoft.com/dashboard) com a conta da Microsoft que você deseja usar para sua conta de desenvolvedor. Você terá a opção de [adicionar mais usuários à conta](manage-account-users.md) mais tarde.
 
-Quando você [começar o processo de inscrição](http://go.microsoft.com/fwlink/p/?LinkId=615100), precisará escolher entre criar uma conta individual ou uma conta empresarial. Os dois tipos de conta permitirão que você envie aplicativos, jogos, suplementos e serviços.
+Quando você [começar o processo de inscrição](https://go.microsoft.com/fwlink/p/?LinkId=615100), precisará escolher entre criar uma conta individual ou uma conta empresarial. Os dois tipos de conta permitirão que você envie aplicativos, jogos, suplementos e serviços.
 
 Contas de empresa são projetadas para organizações e empresas. Para contas empresariais, exigimos uma [verificação](#account-verification) maior para confirmar se você está autorizado a configurar a conta para sua empresa. As contas individuais são geralmente apropriadas para desenvolvedores autônomos que trabalham por conta própria, embora você tenha a opção de adicionar mais usuários da conta a qualquer tipo de conta.
 

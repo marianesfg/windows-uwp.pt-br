@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: ac61d57a965e3a35c6eb7cfaf17d0f4ef2a02501
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1ab8dde9984ed0e4f7d99e7809361d928bebb718
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943302"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045422"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Personalizar os recursos para idioma, escala, alto contraste e outros qualificadores
 
@@ -191,11 +191,11 @@ Dificilmente você precisará do nome de qualificador `dxfeaturelevel`. Ele foi 
 
 ## <a name="homeregion"></a>HomeRegion
 
-O qualificador `homeregion` corresponde à configuração do usuário referente ao país ou à região. Ele representa o local de residência do usuário. Os valores incluem qualquer [marca de região BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) válida. Ou seja, qualquer código de região de duas letras **ISO 3166-1 alpha-2**, além do conjunto de códigos geográficos de três dígitos **ISO 3166-1 numeric** para regiões compostas (consulte [composição M49 de códigos de região da Divisão de Estatísticas das Nações Unidas](http://go.microsoft.com/fwlink/p/?linkid=247929)). Códigos para "Indicadores econômicos selecionados e outros agrupamentos" não são válidos.
+O qualificador `homeregion` corresponde à configuração do usuário referente ao país ou à região. Ele representa o local de residência do usuário. Os valores incluem qualquer [marca de região BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) válida. Ou seja, qualquer código de região de duas letras **ISO 3166-1 alpha-2**, além do conjunto de códigos geográficos de três dígitos **ISO 3166-1 numeric** para regiões compostas (consulte [composição M49 de códigos de região da Divisão de Estatísticas das Nações Unidas](https://go.microsoft.com/fwlink/p/?linkid=247929)). Códigos para "Indicadores econômicos selecionados e outros agrupamentos" não são válidos.
 
 ## <a name="language"></a>Idioma
 
-O qualificador `language` corresponde à configuração de idioma de exibição. Os valores incluem qualquer [marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) válida. Para obter uma lista de idiomas, consulte [Registro da submarca de idioma IANA](http://go.microsoft.com/fwlink/p/?linkid=227303).
+O qualificador `language` corresponde à configuração de idioma de exibição. Os valores incluem qualquer [marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) válida. Para obter uma lista de idiomas, consulte [Registro da submarca de idioma IANA](https://go.microsoft.com/fwlink/p/?linkid=227303).
 
 Se você deseja que o app ofereça suporte a diferentes idiomas de exibição, e você tiver literais de cadeia de caracteres no código ou na marcação XAML, retire essas cadeias de caracteres do código/marcação e insira-as em um arquivo de recursos (`.resw`). Em seguida, você poderá fazer uma cópia traduzida desse arquivo de recursos para cada idioma ao qual o app ofereça suporte.
 
@@ -273,7 +273,7 @@ O qualificador `theme` é usado para fornecer os recursos que melhor corresponde
 * [Detectando a plataforma em que o app está sendo executado](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
 * [Visão geral das famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
 * [Localizar as cadeias de caracteres de interface do usuário](localize-strings-ui-manifest.md)
-* [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Composição M49 de códigos de região da Divisão de Estatísticas das Nações Unidas](http://go.microsoft.com/fwlink/p/?linkid=247929)
-* [Registro da submarca de idioma IANA](http://go.microsoft.com/fwlink/p/?linkid=227303)
+* [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Composição M49 de códigos de região da Divisão de Estatísticas das Nações Unidas](https://go.microsoft.com/fwlink/p/?linkid=247929)
+* [Registro da submarca de idioma IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)
 * [Ajustar layout e fontes e fornecer suporte a RTL](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)

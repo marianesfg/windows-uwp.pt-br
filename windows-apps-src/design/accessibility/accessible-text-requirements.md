@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 888de987d507f0a1a21458c299605ebcc7b1bc70
-ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
+ms.openlocfilehash: 3f474ec0c3017c3834d3eadb6f1caa989fc188a7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "8990469"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050739"
 ---
 # <a name="accessible-text-requirements"></a>Requisitos de texto acessível  
 
@@ -28,13 +28,13 @@ Este tópico descreve as práticas recomendadas para acessibilidade de texto em 
 ## <a name="contrast-ratios"></a>Taxas de contraste  
 Embora os usuários sempre tenham a opção de alternar para um modo de alto contraste, o design do seu aplicativo para texto deve considerar essa possibilidade como último recurso. Uma prática muito melhor é assegurar que o texto do seu aplicativo siga algumas diretrizes estabelecidas para o nível de contraste entre o texto e a tela de fundo. A avaliação do nível de contraste é baseada em técnicas determinísticas que não consideram a tonalidade de cor. Por exemplo, se você tiver texto vermelho sobre fundo verde, esse texto poderá não ser legível por alguém com daltonismo. Verificar e corrigir a taxa de contraste pode evitar esses tipos de problemas de acessibilidade.
 
-As recomendações para contraste de texto são baseadas em um padrão de acessibilidade da Web, o [G18, para garantir que exista, no mínimo, uma relação de contraste de 4,5:1 entre o texto (e as imagens do texto) e a tela de fundo do texto](http://go.microsoft.com/fwlink/p/?linkid=221823). Essa orientação está na especificação *W3C Techniques for WCAG 2.0*.
+As recomendações para contraste de texto são baseadas em um padrão de acessibilidade da Web, o [G18, para garantir que exista, no mínimo, uma relação de contraste de 4,5:1 entre o texto (e as imagens do texto) e a tela de fundo do texto](https://go.microsoft.com/fwlink/p/?linkid=221823). Essa orientação está na especificação *W3C Techniques for WCAG 2.0*.
 
 Para ser considerado acessível, o texto visível precisa ter contraste de luminosidade mínimo de 4,5:1 em relação à tela de fundo. As exceções incluem logotipos e texto incidental (como o que faz parte de um componente de interface do usuário inativo).
 
 Texto decorativo e que não expressa informações é excluído. Por exemplo, quando são usadas palavras aleatórias para criar uma tela de fundo, e as palavras podem ser reorganizadas ou substituídas sem alteração de significado, elas são consideradas decorativas e não precisam atender a esse critério.
 
-Use as ferramentas de contraste de cores para verificar se a taxa de contraste de texto visível é aceitável. Consulte [Técnicas para WCAG 2.0 G18 (seção Recursos)](http://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) sobre as ferramentas que podem testar as taxas de contraste.
+Use as ferramentas de contraste de cores para verificar se a taxa de contraste de texto visível é aceitável. Consulte [Técnicas para WCAG 2.0 G18 (seção Recursos)](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) sobre as ferramentas que podem testar as taxas de contraste.
 
 > [!NOTE]
 > Algumas das ferramentas listadas pelas Técnicas para WCAG 2.0 G18 não podem ser usadas de forma interativa com um aplicativo UWP. Talvez seja necessário inserir valores de cores da tela de fundo e de primeiro plano manualmente na ferramenta, ou fazer capturas de tela da interface do usuário do aplicativo e depois executar a ferramenta de índice de contraste na imagem de captura de tela.
@@ -129,8 +129,8 @@ Os usuários podem ter dificuldade para ler texto em um aplicativo quando o usa 
 Depois de ter feito o óbvio, o Windows inclui várias ferramentas de acessibilidade e configurações que os usuários podem tirar proveito do e ajustar às suas necessidades e preferências para leitura de texto. Por exemplo:
 
 * A ferramenta Lupa, que amplia uma área selecionada da interface do usuário. Você deve garantir que o layout do texto em seu aplicativo não torna difícil de usar a Lupa para leitura.
-* Configurações de escala e resolução globais no **Configurações -> sistema -> exibição -> escala e layout**. Exatamente quais opções de dimensionamento estão disponíveis podem variar conforme isso depende dos recursos de exibição do dispositivo.
-* As configurações de tamanho de texto no **facilidade de acesso -> Configurações -> exibição**. Ajuste a configuração de **tornar o texto maior** especificar somente o tamanho do texto em controles de suporte em todos os aplicativos e telas (todos os controles de texto UWP suportam o dimensionamento experiência sem nenhuma personalização ou modelagem de texto). 
+* Configurações globais de escala e resolução em **configurações->System->Display->Scale e layout**. Exatamente quais opções de dimensionamento estão disponíveis podem variar conforme isso depende dos recursos de exibição do dispositivo.
+* Configurações de tamanho de texto em **configurações->Ease de acesso >Display**. Ajuste a configuração de **tornar o texto maior** especificar somente o tamanho do texto em controles de suporte em todos os aplicativos e telas (todos os controles de texto UWP suportam o dimensionamento experiência sem nenhuma personalização ou modelagem de texto). 
 > [!NOTE]
 > A configuração de **deixar tudo maior** permite que um usuário especificar seu tamanho preferencial para texto e aplicativos em geral em apenas a tela principal.
 
@@ -186,6 +186,6 @@ Esses tipos têm uma propriedade **IsTextScaleFactorEnabled**:
 * [Dimensionamento de texto](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
 * [Acessibilidade](accessibility.md)
 * [Informações básicas de acessibilidade](basic-accessibility-information.md)
-* [Amostra de exibição de texto XAML](http://go.microsoft.com/fwlink/p/?linkid=238579)
-* [Amostra de edição de texto XAML](http://go.microsoft.com/fwlink/p/?linkid=251417)
-* [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570) 
+* [Amostra de exibição de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238579)
+* [Amostra de edição de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=251417)
+* [Amostra de acessibilidade XAML](https://go.microsoft.com/fwlink/p/?linkid=238570) 

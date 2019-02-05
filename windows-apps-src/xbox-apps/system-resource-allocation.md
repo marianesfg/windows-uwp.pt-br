@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
-ms.openlocfilehash: f2aad1b4d6abf9a05af9b9a938188c69d9cae7c8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0869f5cfc2499a00577f0196cd9f9f84987c0321
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941317"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048363"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Recursos do sistema para jogos e aplicativos UWP no Xbox One
 
@@ -44,7 +44,7 @@ Exceder essas limitações causará falhas de alocação de memória. Para obter
 
 Para **desenvolvimento de aplicativos**, os recursos disponíveis podem ser limitados, em comparação com um computador padrão e podem variar com base no número de aplicativos e jogos executados no sistema.
 
-Para **desenvolvimento de jogos**, o Xbox One, como outros consoles de jogos, é um componente especializado de hardware que exige um kit de desenvolvimento baseado em hardware específico para acessar todo o seu potencial. Se você estiver trabalhando em um jogo que requeira acesso ao potencial máximo do hardware do Xbox One, considere registrar com o programa [ID@Xbox](http://www.xbox.com/Developers/id) para obter acesso a um kit de desenvolvimento do Xbox One.
+Para **desenvolvimento de jogos**, o Xbox One, como outros consoles de jogos, é um componente especializado de hardware que exige um kit de desenvolvimento baseado em hardware específico para acessar todo o seu potencial. Se você estiver trabalhando em um jogo que requeira acesso ao potencial máximo do hardware do Xbox One, considere registrar com o programa [ID@Xbox](https://www.xbox.com/Developers/id) para obter acesso a um kit de desenvolvimento do Xbox One.
 
 
 Para obter mais informações sobre recursos do sistema para aplicativos UWP no Xbox One, veja a primeira parte deste vídeo.

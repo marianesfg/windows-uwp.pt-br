@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: eb6cde0c3c31f0116c65e5d5dc4a0d8ae4a1b540
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9df6eef44d45db37e17610d6a5333f3a387b5cf6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920371"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045805"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Criar e registrar uma tarefa em segundo plano fora do processo
 
@@ -202,7 +202,7 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 > [!NOTE]
 > Em C#, os métodos assíncronos da tarefa em segundo plano podem ser chamados usando as palavras-chave **async/await**. No C++ c++ /CX, um resultado semelhante pode ser obtido por meio de uma cadeia da tarefa.
 
-Para mais informações sobre padrões assíncronos, consulte [Programação assíncrona](https://msdn.microsoft.com/library/windows/apps/mt187335). Para exemplos adicionais sobre como usar os adiamentos para evitar que uma tarefa em segundo plano pare antecipadamente, consulte a [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+Para mais informações sobre padrões assíncronos, consulte [Programação assíncrona](https://msdn.microsoft.com/library/windows/apps/mt187335). Para exemplos adicionais sobre como usar os adiamentos para evitar que uma tarefa em segundo plano pare antecipadamente, consulte a [amostra de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666).
 
 O procedimento abaixo é concluído em uma de suas classes de aplicativo (por exemplo, MainPage.xaml.cs).
 
@@ -393,7 +393,7 @@ void MainPage::OnCompleted(BackgroundTaskRegistration^ task, BackgroundTaskCompl
 ```
 
 > [!NOTE]
-> As atualizações da interface do usuário devem ser executadas assincronamente para evitar atraso do thread da interface do usuário. Por exemplo, consulte o método UpdateUI no [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+> As atualizações da interface do usuário devem ser executadas assincronamente para evitar atraso do thread da interface do usuário. Por exemplo, consulte o método UpdateUI no [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666).
 
 2.  Retorne para onde você registrou a tarefa em segundo plano. Depois dessa linha de código, adicione um novo objeto [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781). Forneça o método OnCompleted como o parâmetro para o construtor **BackgroundTaskCompletedEventHandler**.
 
@@ -439,7 +439,7 @@ O seguinte elemento Extensions é adicionado ao arquivo Package.appxmanifest par
 Agora você deve compreender os fundamentos de como escrever uma classe de tarefa em segundo plano, como registrar a tarefa em segundo plano no aplicativo e como fazer o aplicativo reconhecer quando a tarefa em segundo plano é concluída. Você também deve saber atualizar o manifesto do aplicativo para que seu aplicativo possa registrar com êxito a tarefa em segundo plano.
 
 > [!NOTE]
-> Baixe o [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) para ver exemplos de código semelhantes, no contexto de um aplicativo UWP completo e robusto, que usa tarefas em segundo plano.
+> Baixe o [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) para ver exemplos de código semelhantes, no contexto de um aplicativo UWP completo e robusto, que usa tarefas em segundo plano.
 
 Veja os seguintes tópicos relacionados para obter referência de API, diretriz conceitual de tarefa em segundo plano e instruções mais detalhadas para escrever aplicativos que usam tarefas em segundo plano.
 
@@ -461,7 +461,7 @@ Veja os seguintes tópicos relacionados para obter referência de API, diretriz 
 
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
 **Referência de API de tarefa em segundo plano**
 

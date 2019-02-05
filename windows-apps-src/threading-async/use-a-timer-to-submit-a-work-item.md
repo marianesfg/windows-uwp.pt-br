@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, temporizador, threads
 ms.localizationpriority: medium
-ms.openlocfilehash: 9cad23f5f82ce70b3a9920726d054b59446925b8
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 0ee5142997e3d4824152adf6d0b26bccb8a30f7f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981520"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044131"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>Usar um temporizador para enviar um item de trabalho
 
@@ -221,7 +221,7 @@ Se o temporizador ainda estiver em contagem regressiva, mas o item de trabalho n
 
 Os aplicativos UWP (Plataforma Universal do Windows) não podem usar **Thread.Sleep** porque esse método pode bloquear o thread da interface do usuário. Em vez disso, você pode usar um [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) para criar um item de trabalho. Isso atrasará a tarefa realizada pelo item de trabalho sem bloquear o thread da interface do usuário.
 
-Veja o [exemplo do pool de threads](http://go.microsoft.com/fwlink/p/?linkid=255387) para obter um exemplo de código completo que demonstra os itens de trabalho, os itens de trabalho de timer e os itens de trabalho periódico. O exemplo de código foi originalmente escrito para Windows 8.1, mas o código pode ser reutilizado no Windows 10.
+Veja o [exemplo do pool de threads](https://go.microsoft.com/fwlink/p/?linkid=255387) para obter um exemplo de código completo que demonstra os itens de trabalho, os itens de trabalho de timer e os itens de trabalho periódico. O exemplo de código foi originalmente escrito para Windows 8.1, mas o código pode ser reutilizado no Windows 10.
 
 Para saber mais sobre temporizadores repetidos, veja [Criar um item de trabalho periódico](create-a-periodic-work-item.md).
 

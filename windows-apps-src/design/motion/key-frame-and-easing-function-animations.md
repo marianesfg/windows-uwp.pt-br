@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 145912f08075678c98dfb34ac491e123577c69e3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 696a3f0f065c209bec28f774224da6e4c8d93275
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946661"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046319"
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>Animações de quadro chave e animações com função de easing
 
@@ -75,7 +75,7 @@ Os quadros chave separados não usam interpolação. Quando um **KeyTime** é at
 
 ### <a name="spline-key-frames"></a>Quadros chave de spline
 
-Um quadro chave de spline cria uma transição variável entre valores de acordo com o valor da propriedade **KeySpline**. Essa propriedade especifica o primeiro e o segundo ponto de controle de uma curva de Bézier, que descreve a aceleração da animação. Basicamente, um [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307) define uma relação de função ao longo do tempo em que o gráfico função-tempo é a forma dessa curva de Bézier. Geralmente, você especifica um valor **KeySpline** em uma cadeia de caracteres de atributo XAML abreviada que tem quatro valores [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) separados por espaços ou vírgulas. Esses valores são pares "X, Y" para dois pontos de controle da curva de Bézier. "X" é o tempo e "Y" é o modificador de função para o valor. Cada valor deve estar sempre entre 0 e 1. Sem modificação do ponto de controle para um **KeySpline**, a linha reta de 0,0 a 1,1 é a representação de uma função ao longo do tempo para uma interpolação linear. Seus pontos de controle alteram a forma dessa curva e, assim, o comportamento da função ao longo do tempo da animação de spline. Provavelmente, é melhor conferir isso visualmente em um gráfico. Você pode executar o [Exemplo de visualizador de spline chave do Silverlight](http://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample) em um navegador para ver como os pontos de controle modificam a curva e como uma animação de exemplo é executada quando é usada como um valor **KeySpline** 
+Um quadro chave de spline cria uma transição variável entre valores de acordo com o valor da propriedade **KeySpline**. Essa propriedade especifica o primeiro e o segundo ponto de controle de uma curva de Bézier, que descreve a aceleração da animação. Basicamente, um [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307) define uma relação de função ao longo do tempo em que o gráfico função-tempo é a forma dessa curva de Bézier. Geralmente, você especifica um valor **KeySpline** em uma cadeia de caracteres de atributo XAML abreviada que tem quatro valores [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) separados por espaços ou vírgulas. Esses valores são pares "X, Y" para dois pontos de controle da curva de Bézier. "X" é o tempo e "Y" é o modificador de função para o valor. Cada valor deve estar sempre entre 0 e 1. Sem modificação do ponto de controle para um **KeySpline**, a linha reta de 0,0 a 1,1 é a representação de uma função ao longo do tempo para uma interpolação linear. Seus pontos de controle alteram a forma dessa curva e, assim, o comportamento da função ao longo do tempo da animação de spline. Provavelmente, é melhor conferir isso visualmente em um gráfico. Você pode executar o [Exemplo de visualizador de spline chave do Silverlight](https://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample) em um navegador para ver como os pontos de controle modificam a curva e como uma animação de exemplo é executada quando é usada como um valor **KeySpline** 
 
 Este próximo exemplo mostra três quadros chave diferentes aplicados a uma animação, em que o último é uma animação de spline chave para um valor [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) ([**SplineDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210446)). Observe a cadeia de caracteres "0.6,0.0 0.9,0.00" aplicada a **KeySpline**. Isso gera uma curva em que a animação parece ser executada devagar inicialmente, mas depois ela rapidamente atinge o valor logo antes de **KeyTime** ser atingido.
 

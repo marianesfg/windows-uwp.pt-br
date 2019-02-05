@@ -6,12 +6,12 @@ keywords: lista de verificação, windows, uwp, envio, enviar, jogo, app, envio
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 444243bdb1d50146ba54af4f1417103566f97f93
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b98ea7f1d28c4fcd63cd2d4706905578b240e126
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944357"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044909"
 ---
 # <a name="app-submissions"></a>Envios de aplicativos
 
@@ -21,7 +21,7 @@ Assim que tiver [criado seu aplicativo reservando um nome](create-your-app-by-re
 Você pode iniciar o envio quando seu aplicativo estiver completo e pronto para ser publicado, ou pode começar a inserir informações mesmo antes de ter escrito uma única linha de código. Atualizações feitas ao seu envio são salvas, para que você possa voltar e trabalhar nele sempre que você está pronto.
 
 > [!NOTE]
-> Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) de ativa no [Partner Center](https://partner.microsoft.com/dashboard) para enviar aplicativos na Microsoft Store.
+> Você deve ter uma [conta de desenvolvedor](https://go.microsoft.com/fwlink/p/?LinkId=615100) de ativa no [Partner Center](https://partner.microsoft.com/dashboard) para enviar aplicativos na Microsoft Store.
 
 Depois que o aplicativo for publicado, você pode publicar uma versão atualizada criando outro envio no Partner Center. Criar um novo envio permite fazer e publicar quaisquer mudanças necessárias, caso você esteja carregando novos pacotes ou apenas alterando detalhes, como o preço ou a categoria. Para criar um novo envio para um aplicativo publicado, clique em **Atualizar** ao lado do envio mais recente mostrado na página de **Visão geral** . Você também pode [Remover um aplicativo da loja](guidance-for-app-package-management.md#removing-an-app-from-the-store) se você precisar fazer isso (e, em seguida, disponibilizá-lo novamente mais tarde, se você quiser).
 
@@ -41,10 +41,10 @@ Os itens que você será solicitado a fornecer ou especificar são indicados aba
 | Nome do campo                    | Observações                                       | Para obter mais informações                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **Mercados**                   | Padrão: todos os mercados possíveis  | [Definir preço e seleção de mercado](define-pricing-and-market-selection.md)         |
-| **Público**                | Padrão: Audiência pública | [Público](choose-visibility-options.md#audience) |
+| **Audiência**                | Padrão: Audiência pública | [Público](choose-visibility-options.md#audience) |
 | **Detectabilidade**                | Padrão: Make this app available and discoverable in the Store | [Detectabilidade](choose-visibility-options.md#discoverability) |
 | **Agendar**                  | Padrão: Liberar o mais rápido possível        | [Configurar o agendamento preciso do lançamento](configure-precise-release-scheduling.md) |
-| **Preço base**                | Necessário                                    | [Definir e agendar preço do aplicativo](set-and-schedule-app-pricing.md)              |
+| **Preço base**                | Obrigatório                                    | [Definir e agendar preço do aplicativo](set-and-schedule-app-pricing.md)              |
 | **Avaliação gratuita**                | Padrão: Nenhuma avaliação gratuita                      | [Avaliação gratuita](set-app-pricing-and-availability.md#free-trial)              |
 | **Preço de venda**              | Opcional                                    | [Colocar aplicativos e complementos à venda](put-apps-and-add-ons-on-sale.md)           |
 | **Licenciamento para organizações**    | Padrão: permitir aquisição de volume por organizações | [Opções de licenciamento organizacional](organizational-licensing.md)        |

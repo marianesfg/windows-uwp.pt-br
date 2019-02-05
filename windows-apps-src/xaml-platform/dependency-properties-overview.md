@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 92e8b0b0d68b1dc4110818977024d3040194a376
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 52ab0dfba6261a5e278a42f38ea13c632df400f9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928457"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050769"
 ---
 # <a name="dependency-properties-overview"></a>Visão geral das propriedades de dependência
 
@@ -209,7 +209,7 @@ Os aspectos de threading de [**DependencyObject**](https://msdn.microsoft.com/li
 - [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946)
 - [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/mt187354)
 - [Criando componentes do Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
-- [Usuário XAML e exemplo de controles personalizados](http://go.microsoft.com/fwlink/p/?linkid=238581)
+- [Usuário XAML e exemplo de controles personalizados](https://go.microsoft.com/fwlink/p/?linkid=238581)
 
 ## <a name="apis-related-to-dependency-properties"></a>APIs relacionadas às propriedades de dependência
 

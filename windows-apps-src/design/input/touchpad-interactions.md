@@ -8,12 +8,12 @@ keywords: touchpad, PTP, toque, ponteiro, entrada, interação do usuário
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dfc98127133790deba9274ddba7801bea34f9cd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 895bf1ffe4fc79a65fdf452235ee9466e91b7215
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935890"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046702"
 ---
 # <a name="touchpad-design-guidelines"></a>Diretrizes de design do touchpad
 
@@ -155,15 +155,15 @@ Se você precisa personalizar o cursor do mouse:
 * [Identificar entrada do ponteiro](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
 **Exemplos**
-* [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Exemplo de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Exemplo de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 **Exemplos de arquivo morto**
-* [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos e interações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: amostra de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: amostra de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: gestos e interações com o GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
 

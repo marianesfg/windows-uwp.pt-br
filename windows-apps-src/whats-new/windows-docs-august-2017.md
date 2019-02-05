@@ -5,18 +5,18 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: aeb6f60396b270a78df5203106635436fe2dabe5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: edf81f0474855c868ea1fb50afa683523aedcd07
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922839"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050779"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Novidades dos documentos de desenvolvedor do Windows em agosto de 2017
 
 A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. Disponibilizaram-se as visões gerais de recurso, as diretrizes para desenvolvedores e os vídeos a seguir, contendo informações novas e atualizadas para desenvolvedores do Windows.
 
-[Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/your-first-app.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+[Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/your-first-app.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="features"></a>Recursos
 
@@ -30,7 +30,7 @@ Use a nova extensão do [Windows Template Studio](https://aka.ms/wtsinstall) par
 
 Agora você pode visualizar [XAML condicional](../debug-test-perf/conditional-xaml.md) para criar [aplicativos adaptáveis de versão](../debug-test-perf/version-adaptive-apps.md). A XAML condicional permite usar o método ApiInformation.IsApiContractPresent na marcação XAML. Por isso, é possível definir propriedades e instanciar objetos na marcação com base na presença de uma API, sem a necessidade de usar code-behind.
 
-### <a name="game-mode"></a>Modo de Jogo
+### <a name="game-mode"></a>Modo de jogo
 
 As APIs de [Modo de Jogo](https://msdn.microsoft.com/library/windows/desktop/mt808808) para a Plataforma Universal do Windows (UWP) permitem produzir a experiência de jogos mais otimizada, aproveitando o modo de jogo no Windows 10. Essas APIs são localizadas no cabeçalho **&lt;expandedresources.h&gt;**.
 

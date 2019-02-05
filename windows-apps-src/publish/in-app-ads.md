@@ -6,19 +6,19 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 78d825adf023b3c27ba6535f4cfdcc3a99be2d6c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cfdc4bd81a96d3bbdb2dd369cbdd0444ca22ea4c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947788"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048473"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
 Use a **monetizar** &gt; página de **anúncios no app** no [Partner Center](https://partner.microsoft.com/dashboard) para criar e gerenciar unidades de anúncio para:
 
-* Aplicativos da Plataforma Universal do Windows (UWP) que usam o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp).
-* Publicado anteriormente o Windows 8. x e Windows Phone 8. x aplicativos que usam o [Microsoft Advertising SDK para Windows e Windows Phone 8. x](http://aka.ms/store-8-sdk).
+* Aplicativos da Plataforma Universal do Windows (UWP) que usam o [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp).
+* Publicado anteriormente o Windows 8. x e Windows Phone 8. x aplicativos que usam o [Microsoft Advertising SDK para Windows e Windows Phone 8. x](https://aka.ms/store-8-sdk).
 
 > [!IMPORTANT]
 > A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir pacotes que segmentem 8.x/Windows do Windows Phone 8. x ou anterior. Para obter mais informações, consulte esta [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
@@ -70,7 +70,7 @@ Depois de criar unidades publicitárias para um ou mais aplicativos em sua conta
 Para editar as [Configurações de mediação](#mediation) para uma unidade publicitária UWP ou a [Conformidade com COPPA](#coppa) para o aplicativo no qual a unidade publicitária é usada, clique no nome da unidade publicitária.
 
 > [!NOTE]
-> Se uma unidade de anúncio não tiver nenhuma atividade nos últimos seis meses, podemos será o rótulo como **inativo**e removeremos do Partner Center. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
+> Se uma unidade de anúncio não tiver nenhuma atividade nos últimos seis meses, podemos será o rótulo como **inativo**e removeremos do Partner Center. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](https://aka.ms/storesupport).
 
 <span id="mediation" />
 
@@ -115,9 +115,9 @@ A tabela a seguir lista as redes pagas atualmente com suporte para cada tipo de 
 | Anúncios de instalação de Aplicativos Microsoft | Selecione esta opção para veicular anúncios de instalação de aplicativo ou anúncios de novo envolvimento de aplicativos criados por outros desenvolvedores no ecossistema do Windows, que [cria campanhas publicitárias promocionais para seus aplicativos](create-an-ad-campaign-for-your-app.md).  |  Faixa, Vídeo intersticial, Nativo  |
 | Recomendações de conteúdo do MSN |  Selecione esta opção para veicular anúncios do MSN recomendações de conteúdo. |  Faixa, faixa intersticial  |
 | Outbrain |  Selecione esta opção para veicular anúncios da [Outbrain](https://www.outbrain.com/). |  Faixa, faixa intersticial  |
-| Revcontent |  Selecione esta opção para veicular anúncios da [Revcontent](http://www.revcontent.com/). |  Faixa, nativo  |
+| Revcontent |  Selecione esta opção para veicular anúncios da [Revcontent](https://www.revcontent.com/). |  Faixa, nativo  |
 | Smaato |  Selecione esta opção para veicular anúncios da [Smaato](https://www.smaato.com/). |  Faixa  |
-| smartclip |  Selecione esta opção para veicular anúncios da [smartclip](http://www.smartclip.com/). |  Intersticial em vídeo  |
+| smartclip |  Selecione esta opção para veicular anúncios da [smartclip](https://www.smartclip.com/). |  Intersticial em vídeo  |
 | SpotX |  Selecione esta opção para veicular anúncios da [SpotX](https://www.spotx.tv/). |  Intersticial em vídeo  |
 | Taboola |  Selecione esta opção para veicular anúncios da [Taboola](https://www.taboola.com/). |  Faixa  |
 | Undertone | Selecione esta opção para veicular anúncios de [Undertone](https://www.undertone.com/). | Faixa intersticial |
@@ -159,4 +159,4 @@ Para fins do Children's Online Privacy Protection Act (“COPPA”), você deve 
 A configuração **Conformidade com o COPPA** escolhida por você é automaticamente aplicada a todas as unidades publicitárias do aplicativo selecionado.
 
 > [!IMPORTANT]
-> Caso seu aplicativo seja direcionado para crianças com menos de 13 anos, você tem determinadas obrigações segundo COPPA. Para obter mais informações sobre as obrigações, consulte [esta página](http://go.microsoft.com/fwlink/p/?linkid=536558).
+> Caso seu aplicativo seja direcionado para crianças com menos de 13 anos, você tem determinadas obrigações segundo COPPA. Para obter mais informações sobre as obrigações, consulte [esta página](https://go.microsoft.com/fwlink/p/?linkid=536558).

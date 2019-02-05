@@ -6,12 +6,12 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 84e3c74171c619fd59e272e539fd9a4e5428e258
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 74ad832d5516a4fa9bef849c5f691e2909c6c3d4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925575"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047611"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>Use o Kit de Ferramentas de Aplicativo Multilíngue 4.0
 
@@ -63,13 +63,13 @@ Siga estas etapas para adicionar idiomas ao seu projeto.
 
 O kit de ferramentas faz isso em resposta.
 
-- Para cada idioma que você adicionou, uma nova pasta é criada nomeada de acordo com a [marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) do idioma. Dentro dessa pasta, novos Arquivos de Recursos (.resw) são criados para corresponder àqueles que contêm as cadeias de caracteres no idioma padrão.
+- Para cada idioma que você adicionou, uma nova pasta é criada nomeada de acordo com a [marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) do idioma. Dentro dessa pasta, novos Arquivos de Recursos (.resw) são criados para corresponder àqueles que contêm as cadeias de caracteres no idioma padrão.
 - Se esta for a primeira vez que você adicionou um idioma, uma nova pasta chamada `MultilingualResources` será adicionada ao projeto. Dentro dessa pasta, um arquivo .xlf será adicionado a cada idioma. Os arquivos .xlf contêm uma unidade de conversão para cada cadeia de caracteres em cada Arquivo de Recursos (.resw) do seu projeto.
 - A janela de Saída confirma a inclusão do(s) idioma(s) que você adicionou.
 
 Sempre que você adicionar/remover um Arquivo de Recursos (.resw) no idioma padrão ou adicionar/remover uma cadeia de caracteres em um Arquivo de Recursos (.resw) no idioma padrão, faça a compilação do projeto novamente para ressincronizar os arquivos .xlf. Isso garante que os arquivos .xlf contenham a união das cadeias de caracteres no idioma padrão.
 
-Os provedores de tradução instalados&mdash; como os serviços do [Portal de Idiomas Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=330295) e [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220)&mdash; podem ser usados para traduzir os recursos do seu app. Quando um provedor dá suporte a um idioma específico, o ícone do provedor é exibido próximo do nome do idioma no diálogo Idiomas de Tradução.
+Os provedores de tradução instalados&mdash; como os serviços do [Portal de Idiomas Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=330295) e [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)&mdash; podem ser usados para traduzir os recursos do seu app. Quando um provedor dá suporte a um idioma específico, o ícone do provedor é exibido próximo do nome do idioma no diálogo Idiomas de Tradução.
 
 Na caixa de diálogo Idiomas de Tradução, todo idioma baseado em .xlf existente detectável pelo kit de ferramentas terá a caixa de seleção pré-marcada para indicar que o idioma já está incluído no projeto.
 
@@ -149,8 +149,8 @@ O Editor Multilíngue fornece o mesmo suporte para tradução e também a adiç�
 
 Dois provedores são enviados com o Kit de Ferramentas de Aplicativo Multilíngue.
 
-- O provedor do [Portal de Idiomas Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=330295) permite o suporte para correspondência de terminologias e reciclagem de tradução com base nas traduções de textos da interface do usuário para os produtos e serviços da Microsoft.
-- O provedor do [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220) permite serviços de tradução de máquina a pedido.
+- O provedor do [Portal de Idiomas Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=330295) permite o suporte para correspondência de terminologias e reciclagem de tradução com base nas traduções de textos da interface do usuário para os produtos e serviços da Microsoft.
+- O provedor do [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220) permite serviços de tradução de máquina a pedido.
 
 Você e o(s) tradutor(es) pode(m) gerenciar as traduções no Editor Multilíngue para examinar as traduções posteriormente. Você pode definir o status de cada cadeia de caracteres na guia **Propriedades**. Os valores de status são: **Novo**, **Precisa de revisão**, **Traduzido**, **Final**, e **Desconectado**. O indicador à esquerda da linha mostra o status. Quando todas as linhas são exibidas em verde no Editor Multilíngue, o trabalho de tradução é feito.
 
@@ -166,7 +166,7 @@ Antes de começar o processo de Certificação da Microsoft Store, exclua o arqu
 * [Globalização e localização](globalizing-portal.md)
 * [Diretrizes de globalização](guidelines-and-checklist-for-globalizing-your-app.md)
 * [Torne seu app localizável](prepare-your-app-for-localization.md)
-* [Marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 
 ## <a name="downloads"></a>Downloads
 
@@ -175,5 +175,5 @@ Antes de começar o processo de Certificação da Microsoft Store, exclua o arqu
 
 ## <a name="translation-services"></a>Serviços de tradução
 
-* [Portal de Idiomas Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=330295)
-* [Microsoft Translator ](http://go.microsoft.com/fwlink/p/?LinkId=258220)
+* [Portal de Idiomas Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=330295)
+* [Microsoft Translator ](https://go.microsoft.com/fwlink/p/?LinkId=258220)

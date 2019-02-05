@@ -6,16 +6,16 @@ ms.date: 08/08/2018
 ms.topic: article
 keywords: Windows 10, uwp, educação
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f308e42e1dbb1d3654d3fc557a9d5e29ef6f6b0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bee8a04e3b4d57caf7da3e21f2be3c789d83be90
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933124"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049363"
 ---
 # <a name="take-a-test-javascript-api"></a>API JavaScript Fazer um Teste
 
-[Fazer um teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) é um aplicativo UWP com base em navegador que renderiza avaliações online bloqueado para testes de alto risco, permitindo que os educadores concentre-se a avaliação de conteúdo em vez de como fornecer um ambiente de teste seguro. Para conseguir isso, ele usa uma API JavaScript que qualquer aplicativo Web pode utilizar. A API Fazer um Teste oferece suporte ao [padrão da API do navegador SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para testes decisivos comuns importantes.
+[Fazer um teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) é um aplicativo UWP com base em navegador que renderiza avaliações online bloqueado para testes de alto risco, permitindo que os educadores concentre-se a avaliação de conteúdo em vez de como fornecer um ambiente de teste seguro. Para conseguir isso, ele usa uma API JavaScript que qualquer aplicativo Web pode utilizar. A API Fazer um Teste oferece suporte ao [padrão da API do navegador SBAC](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para testes decisivos comuns importantes.
 
 Consulte a [Referência técnica do app Fazer um Teste](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) para obter mais informações sobre o próprio app. Para obter ajuda de solução de problemas, consulte [Solução de problemas com Fazer um Teste da Microsoft usando o visualizador de eventos](troubleshooting.md).
 

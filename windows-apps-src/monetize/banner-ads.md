@@ -5,12 +5,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, uwp, anúncios, publicidade, AdControl, anúncios em faixa
 ms.localizationpriority: medium
-ms.openlocfilehash: e8754790fac07e6e1babdb44888cfd1ff138c230
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5f8aea8f204127a0f783f9b751a9f4178667753e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938228"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9045874"
 ---
 # <a name="banner-ads"></a>Anúncios em faixa
 
@@ -31,5 +31,5 @@ Anúncios em faixa são anúncios estáticos que utilizam uma parte retangular d
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Exemplos de publicidade no GitHub](http://aka.ms/githubads)
+* [Exemplos de publicidade no GitHub](https://aka.ms/githubads)
 * [Configurar unidades publicitárias para seu app](set-up-ad-units-in-your-app.md)

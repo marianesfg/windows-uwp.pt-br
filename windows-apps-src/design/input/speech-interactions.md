@@ -8,12 +8,12 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: dfd829881892eece08c30fcd665bdf21a1f43471
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 09787d5a83415b65b8946860edb5b7cad09a5846
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945057"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050809"
 ---
 # <a name="speech-interactions"></a>Interações de controle por voz
 
@@ -157,14 +157,14 @@ Essas gramáticas predefinidas podem ser usadas para reconhecer até 10 segundos
 Uma gramática personalizada é projetada e criada por você e instalada com o seu aplicativo. O reconhecimento de fala usando uma restrição personalizada é realizado no dispositivo.
 
 -   Restrições de lista programática fornecem uma abordagem leve para criar gramáticas simples usando uma lista de palavras ou frases. Uma lista de restrições funciona bem para o reconhecimento de frases curtas e distintas. Especificar explicitamente todas as palavras em uma gramática também melhora a precisão do reconhecimento, porque o mecanismo de reconhecimento de fala deve processar somente a fala para confirmar uma correspondência. A lista também pode ser atualizada programaticamente.
--   Uma gramática SRGS é um documento estático que, ao contrário de uma restrição de lista programática, usa o formato XML definido pela [SRGS Versão 1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302). Uma gramática SRGS oferece maior controle sobre a experiência de reconhecimento de fala, permitindo a você capturar diversos significados semânticos em um único reconhecimento.
+-   Uma gramática SRGS é um documento estático que, ao contrário de uma restrição de lista programática, usa o formato XML definido pela [SRGS Versão 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302). Uma gramática SRGS oferece maior controle sobre a experiência de reconhecimento de fala, permitindo a você capturar diversos significados semânticos em um único reconhecimento.
 
     Veja algumas dicas para criar gramáticas SRGS:
 
     -   Cada gramática deve ser pequena. Gramáticas com poucas frases tendem a oferecer um reconhecimento mais preciso do que gramáticas maiores com muitas frases. É preferível ter várias gramáticas menores para cenários específicos a ter uma única gramática para o aplicativo inteiro.
     -   Permita que os usuários saibam o que dizer para cada contexto do aplicativo e habilitem e desabilitem gramáticas conforme necessário.
     -   Projete cada gramática para que os usuários possam falar um comando de diversas maneiras. Por exemplo, você pode usar a regra **GARBAGE** para fazer correspondência da entrada de fala que sua gramática não define. Isso permite que os usuários digam palavras adicionais que não tenham significado para seu aplicativo. Por exemplo, "me dê", "e", "hum", "talvez", etc.
-    -   Use o elemento [sapi:subset](http://msdn.microsoft.com/library/windowsphone/design/jj572474.aspx) para ajudar na correspondência da entrada de fala. Essa é uma extensão da Microsoft para a especificação SRGS para ajudar na correspondência de frases parciais.
+    -   Use o elemento [sapi:subset](https://msdn.microsoft.com/library/windowsphone/design/jj572474.aspx) para ajudar na correspondência da entrada de fala. Essa é uma extensão da Microsoft para a especificação SRGS para ajudar na correspondência de frases parciais.
     -   Evite definir frases que contenham apenas uma sílaba na sua gramática. O reconhecimento tende a ser mais preciso em frases com duas ou mais sílabas.
     -   Evite frases que pareçam iguais. Por exemplo, palavras como "cumprimento" e "comprimento" podem confundir o mecanismo de reconhecimento e resultar em reconhecimento pouco preciso.
 
@@ -175,9 +175,9 @@ Uma gramática personalizada é projetada e criada por você e instalada com o s
 
 Se seu aplicativo tiver vocabulário especializado com palavras incomuns ou fictícias, ou ainda, palavras com pronúncias incomuns, você poderá melhorar o desempenho do reconhecimento para essas palavras ao definir pronúncias personalizadas.
 
-Para uma pequena lista de palavras e frases, ou uma lista de palavras e frases usadas com pouca frequência, você pode criar pronúncias personalizadas em uma gramática SRGS. Consulte [elemento token](http://msdn.microsoft.com/library/windowsphone/design/hh361600.aspx) para obter mais informações.
+Para uma pequena lista de palavras e frases, ou uma lista de palavras e frases usadas com pouca frequência, você pode criar pronúncias personalizadas em uma gramática SRGS. Consulte [elemento token](https://msdn.microsoft.com/library/windowsphone/design/hh361600.aspx) para obter mais informações.
 
-Para listas maiores de palavras e frases, ou palavras e frases usadas com frequência, você pode criar documentos separados de léxico de pronúncias. Consulte [Sobre léxicos e alfabetos fonéticos](http://msdn.microsoft.com/library/windowsphone/design/hh361646.aspx) para obter mais informações.
+Para listas maiores de palavras e frases, ou palavras e frases usadas com frequência, você pode criar documentos separados de léxico de pronúncias. Consulte [Sobre léxicos e alfabetos fonéticos](https://msdn.microsoft.com/library/windowsphone/design/hh361646.aspx) para obter mais informações.
 
 ## <a name="testing"></a>Testes
 
@@ -200,7 +200,7 @@ Você deve ouvir todas as cadeias de caracteres da TTS para garantir que sejam i
 -   Encadear uma sequência incomum de palavras ou falar números de peças ou pontuação podem tornar uma frase inteligível.
 -   A fala pode parecer artificial quando a prosódia ou a cadência é diferente de como um falante nativo diria a frase.
 
-Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação como entrada para o sintetizador de voz. Para obter mais informações sobre SSML, consulte [Usar SSML para controlar a fala sintetizada](http://msdn.microsoft.com/library/windowsphone/design/hh378454.aspx) e [Referência da linguagem de marcação da sintetização de voz](http://msdn.microsoft.com/library/windowsphone/design/hh378377.aspx).
+Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação como entrada para o sintetizador de voz. Para obter mais informações sobre SSML, consulte [Usar SSML para controlar a fala sintetizada](https://msdn.microsoft.com/library/windowsphone/design/hh378454.aspx) e [Referência da linguagem de marcação da sintetização de voz](https://msdn.microsoft.com/library/windowsphone/design/hh378377.aspx).
 
 ## <a name="other-articles-in-this-section"></a>Outros artigos nesta seção 
 
@@ -220,7 +220,7 @@ Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação 
 
  **Exemplos**
 
-* [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Exemplo de reconhecimento de fala e sintetização de controle por voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

@@ -8,12 +8,12 @@ keywords: caneta, mouse, touchpad, toque, ponteiro, entrada, interação do usu�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c8f670a5139d4969489bede3b0b4bbf72de2d55
-ms.sourcegitcommit: 2ef3d22a30afe853de891280e11d96e5e1ab62d1
+ms.openlocfilehash: 596e9221fac686964b4faaa8a75f112dbb8ddf5a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "8981865"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048393"
 ---
 # <a name="handle-pointer-input"></a>Manusear entrada do ponteiro
 
@@ -954,15 +954,15 @@ Por fim, definimos os manipuladores de eventos de ponteiro básicos no code-behi
 * [Exemplo de entrada de ponteiro (UserControl com animação)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)
 
 **Outros exemplos**
-* [Exemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Exemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Exemplos de arquivo-morto**
-* [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de manipulações e gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Entrada: amostra de teste de hit de toque](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: amostra de tinta simplificada](http://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: amostra de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: exemplo de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: amostra de manipulações e gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Entrada: amostra de teste de hit de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: amostra de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)

@@ -6,19 +6,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
-ms.openlocfilehash: 626b2ce36d8abc4798d39a89af540c61b26b5ed1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 93d4da26dbb4c5eee1856b3a594214aabbbbaa00
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938515"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047561"
 ---
 # <a name="respond-to-customer-feedback"></a>Responder ao feedback dos clientes
 
 Você pode usar o [Relatório de comentários](feedback-report.md) para analisar os comentários que os clientes do Windows 10 deixaram sobre o aplicativo no Hub de Feedback e, em seguida, responder diretamente a esse comentário. Você pode postar as respostas no Hub de Feedback para que todos possam ver (como comentários individuais, ou atualizando o status de uma parte dos comentários e adicionando uma descrição) para informar aos clientes sobre novos recursos ou correções de bugs, ou para solicitar comentários mais específicos sobre como melhorar o aplicativo. Você também pode enviar a resposta como um email diretamente para o cliente que deixou os comentários.
 
 > [!TIP]
-> Você pode encorajar os clientes a deixarem comentários utilizando a API de Feedback no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para adicionar um controle que permite aos clientes [iniciar o Hub de Feedback diretamente do aplicativo UWP](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele diretamente por meio do aplicativo de Hub de Feedback. Por isso, você poderá ver comentários de clientes nesse relatório, mesmo que não tenha solicitado comentários especificamente dentro de seu aplicativo.
+> Você pode encorajar os clientes a deixarem comentários utilizando a API de Feedback no [Microsoft Store Services SDK](https://aka.ms/store-em-sdk) para adicionar um controle que permite aos clientes [iniciar o Hub de Feedback diretamente do aplicativo UWP](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele diretamente por meio do aplicativo de Hub de Feedback. Por isso, você poderá ver comentários de clientes nesse relatório, mesmo que não tenha solicitado comentários especificamente dentro de seu aplicativo.
 
 Para dar uma resposta a qualquer comentário, clique no link **Respond to feedback** exibido no comentário no **Relatório de comentários**.
 
@@ -66,4 +66,4 @@ Não importa qual método usa para responder aos comentários do cliente, você 
 > [!NOTE]
 > Os clientes pode relatar um desenvolvedor para a Microsoft caso recebam uma resposta de feedback inapropriada. Eles também podem recusar receber respostas de comentários por email.
 
-Sua relação com seus clientes cabe a você. A Microsoft não se envolve em controvérsias entre desenvolvedores e clientes. No entanto, se você acha que o conteúdo de um comentário do cliente ao seu produto seja inapropriada, envie um [tíquete de suporte](http://go.microsoft.com/fwlink/p/?LinkID=401178).
+Sua relação com seus clientes cabe a você. A Microsoft não se envolve em controvérsias entre desenvolvedores e clientes. No entanto, se você acha que o conteúdo de um comentário do cliente ao seu produto seja inapropriada, envie um [tíquete de suporte](https://go.microsoft.com/fwlink/p/?LinkID=401178).

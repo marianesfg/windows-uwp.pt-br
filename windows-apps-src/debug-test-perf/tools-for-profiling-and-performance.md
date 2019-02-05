@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 30be8d13c7e549f8ed75060f614de5bbcdb6284f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: adaf1bc4b3cc70c3ceb22eb561d9782520415c4a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936493"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048033"
 ---
 # <a name="tools-for-profiling-and-performance"></a>Ferramentas de criação de perfil e de desempenho
 
 
 A Microsoft oferece várias ferramentas para ajudar a melhorar o desempenho do aplicativo da Plataforma Universal do Windows (UWP). Siga estes links para saber como usar essas ferramentas.
 
-**Ferramenta capacidade de resposta de interface do usuário XAML no Visual Studio**. Uma das melhores ferramentas para medir o impacto de desempenho em seu aplicativo é a ferramenta de capacidade de resposta da interface do usuário XAML. Isso foi [atualizado](http://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) para dar suporte a ainda mais cenários.
+**Ferramenta capacidade de resposta de interface do usuário XAML no Visual Studio**. Uma das melhores ferramentas para medir o impacto de desempenho em seu aplicativo é a ferramenta de capacidade de resposta da interface do usuário XAML. Isso foi [atualizado](https://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) para dar suporte a ainda mais cenários.
 
 Consulte também:
 

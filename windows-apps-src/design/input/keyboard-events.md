@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e7453d3973cef31ae8143f3ecff31fffeb763a3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9ff4e7d01d907112558993f52c8a214c91f7d499
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942547"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047065"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -391,16 +391,16 @@ Você pode tornar a entrada de dados muito mais rápida e fácil para os usuári
 
 **Exemplos**
 * [Amostra de teclado virtual](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Exemplos de arquivo morto**
-* [Amostra de entrada](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: amostra de recursos de dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de teclado virtual](http://go.microsoft.com/fwlink/p/?linkid=246019)
-* [Respondendo ao aparecimento da amostra de teclado na tela](http://go.microsoft.com/fwlink/p/?linkid=231633)
-* [Amostra de edição de texto XAML](http://go.microsoft.com/fwlink/p/?LinkID=251417)
+* [Amostra de entrada](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: amostra de recursos de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: amostra de teclado virtual](https://go.microsoft.com/fwlink/p/?linkid=246019)
+* [Respondendo ao aparecimento da amostra de teclado na tela](https://go.microsoft.com/fwlink/p/?linkid=231633)
+* [Amostra de edição de texto XAML](https://go.microsoft.com/fwlink/p/?LinkID=251417)
  
 
  

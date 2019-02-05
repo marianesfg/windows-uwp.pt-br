@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: e964650e90870ef09d8d1b142917f96b61002544
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: b561e08227664f723802ffc0ee3f0e16bc34a5cc
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980274"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045092"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Enumerar e consultar arquivos e pastas
 
@@ -25,7 +25,7 @@ Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou loc
 Para obter orientações detalhadas sobre como armazenar os dados do app da Plataforma Universal do Windows, veja a classe [ApplicationData](/uwp/api/windows.storage.applicationdata).
 
 > [!NOTE]
-> Para obter um exemplo completo, consulte o [exemplo de enumeração de pasta](http://go.microsoft.com/fwlink/p/?linkid=619993).
+> Para obter um exemplo completo, consulte o [exemplo de enumeração de pasta](https://go.microsoft.com/fwlink/p/?linkid=619993).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

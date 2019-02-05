@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
-ms.openlocfilehash: e0a0bef4496e9b6aa327a8da404e88bcbd791e70
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0629201b695f6df6f7f3e2084a73d72b10b82be5
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940175"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050909"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Desenvolvimento de apps para Windows como serviço
 
-**Aplicável a**
+**Aplica-se a**
 -   Windows 10
 -   Windows10 Mobile
 -   Windows 10 IoT Core 
@@ -50,7 +50,7 @@ A abordagem tradicional para dar suporte a aplicativos tem sido lançar uma nova
 
 No modelo do Windows como um serviço, a Microsoft está fazendo um compromisso para manter a compatibilidade do sistema operacional subjacente. Isso significa que a Microsoft fará um esforço concentrado para garantir que não há nenhuma alteração significativa que afeta negativamente o ecossistema do aplicativo. Nesse cenário, quando houver um lançamento de uma compilação do Windows, a maioria dos aplicativos (aqueles sem nenhuma dependência do kernel) continuarão a funcionar.
 
-Tendo em vista essa alteração, a Microsoft recomenda que nossos parceiros de ISV dissociem seus lançamentos e suporte de aplicativos das compilações específicas do Windows. Nossos clientes mútuos são atendidos melhor por uma abordagem de ciclo de vida do aplicativo. Isso significa que, quando uma versão do aplicativo for lançada, ela terá suporte por um determinado período, independentemente do número de compilações do Windows lançadas nesse intervalo de tempo. O ISV faz um compromisso para oferecer suporte para essa versão específica do aplicativo enquanto ela tiver suporte no ciclo de vida. A Microsoft segue uma abordagem semelhante ao ciclo de vida do Windows que pode ser referenciado [aqui](http://go.microsoft.com/fwlink/?LinkID=780549).
+Tendo em vista essa alteração, a Microsoft recomenda que nossos parceiros de ISV dissociem seus lançamentos e suporte de aplicativos das compilações específicas do Windows. Nossos clientes mútuos são atendidos melhor por uma abordagem de ciclo de vida do aplicativo. Isso significa que, quando uma versão do aplicativo for lançada, ela terá suporte por um determinado período, independentemente do número de compilações do Windows lançadas nesse intervalo de tempo. O ISV faz um compromisso para oferecer suporte para essa versão específica do aplicativo enquanto ela tiver suporte no ciclo de vida. A Microsoft segue uma abordagem semelhante ao ciclo de vida do Windows que pode ser referenciado [aqui](https://go.microsoft.com/fwlink/?LinkID=780549).
 
 Essa abordagem reduz a sobrecarga de manutenção de um agendamento de aplicativo que se alinha com os lançamentos do Windows. O parceiros ISV devem estar liberados para lançar recursos ou atualizações em seu próprio ritmo. Achamos que nossos parceiros podem manter sua base de clientes atualizada com as últimas atualizações do aplicativo independente de uma versão do Windows. Além disso, nossos clientes não precisam procurar uma instrução de suporte explícita sempre que uma compilação do Windows for lançada. Aqui está um exemplo de uma instrução de suporte que aborda como um aplicativo pode ter suporte em versões diferentes do sistema operacional:
 
@@ -90,7 +90,7 @@ Alguns aplicativos realizam uma verificação da versão e simplesmente passam u
 -   Se o aplicativo é dependente da funcionalidade de uma API específica, garanta que você selecione a versão correta da API.
 -   Certifique-se de detectar a alteração via APISet ou outra API pública e não use a versão como um proxy para algum recurso ou correção. Se houverem alterações significativas e uma seleção adequada não for exposta, então isto é um bug.
 -   Certifique-se de que o aplicativo NÃO verifica a versão de maneira indefinida, como por meio do registro, versões do arquivo, deslocamentos, modo de kernel, drivers ou outros meios. Se o aplicativo absolutamente precisa verificar a versão, use as APIs GetVersion, que devem retornar o número principal, secundário e de compilação da versão.
--   Se você estiver usando o [GetVersion](http://go.microsoft.com/fwlink/?LinkID=780555) API, lembre-se de que o comportamento dessa API mudou desde o Windows 8.1.
+-   Se você estiver usando o [GetVersion](https://go.microsoft.com/fwlink/?LinkID=780555) API, lembre-se de que o comportamento dessa API mudou desde o Windows 8.1.
 
 Se você possui aplicativos como aplicativos antimalware ou firewall, você deve trabalhar por meio dos canais de feedback usuais e por meio do programa Windows Insider.
 
@@ -100,9 +100,9 @@ Seus aplicativos não devem chamar APIs do Windows não documentadas ou depender
 
 ### <a name="develop-universal-windows-platform-uwp-and-centennial-apps"></a>Desenvolver aplicativos Centennial e na Plataforma Universal do Windows (UWP)
 
-Incentivamos todos os ISVs de aplicativos para Win32 a desenvolver na [Plataforma Universal do Windows(UWP)](http://go.microsoft.com/fwlink/?LinkID=780560) e, especificamente, aplicativos [Centennial](http://go.microsoft.com/fwlink/?LinkID=780562) mais adiante. Há excelentes benefícios para desenvolver esses pacotes de aplicativos em lugar de usar os instaladores Win32 tradicionais. Aplicativos UWP também têm suporte na [Microsoft Store](http://go.microsoft.com/fwlink/?LinkID=780563), portanto, é mais fácil para você atualizar os usuários para uma versão consistente automaticamente, reduzindo os custos de suporte.
+Incentivamos todos os ISVs de aplicativos para Win32 a desenvolver na [Plataforma Universal do Windows(UWP)](https://go.microsoft.com/fwlink/?LinkID=780560) e, especificamente, aplicativos [Centennial](https://go.microsoft.com/fwlink/?LinkID=780562) mais adiante. Há excelentes benefícios para desenvolver esses pacotes de aplicativos em lugar de usar os instaladores Win32 tradicionais. Aplicativos UWP também têm suporte na [Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=780563), portanto, é mais fácil para você atualizar os usuários para uma versão consistente automaticamente, reduzindo os custos de suporte.
 
-Se os seus tipos de aplicativos Win32 não funcionam com o modelo do Centennial, é altamente recomendável que você use o instalador correto e certifique-se de que isto é completamente testado. Um instalador é a primeira experiência do seu cliente ou usuário com o seu aplicativo, portanto certifique-se de que ele funciona bem. Geralmente, isto não funciona bem ou ele não foi totalmente testado para todos os cenários. O [Kit de Certificação de Aplicativos Windows](http://go.microsoft.com/fwlink/?LinkID=780565) pode ajudá-lo testar a instalação e desinstalação do seu aplicativo Win32 e ajudá-lo a identificar uso de APIs não documentadas, bem como outros problemas básicos de práticas recomendadas relacionadas ao desempenho, antes dos usuários o utilizarem.
+Se os seus tipos de aplicativos Win32 não funcionam com o modelo do Centennial, é altamente recomendável que você use o instalador correto e certifique-se de que isto é completamente testado. Um instalador é a primeira experiência do seu cliente ou usuário com o seu aplicativo, portanto certifique-se de que ele funciona bem. Geralmente, isto não funciona bem ou ele não foi totalmente testado para todos os cenários. O [Kit de Certificação de Aplicativos Windows](https://go.microsoft.com/fwlink/?LinkID=780565) pode ajudá-lo testar a instalação e desinstalação do seu aplicativo Win32 e ajudá-lo a identificar uso de APIs não documentadas, bem como outros problemas básicos de práticas recomendadas relacionadas ao desempenho, antes dos usuários o utilizarem.
 
 **Práticas recomendadas:**
 -   Use instaladores que funcionam para versões de 32 bits e 64 bits do Windows.
@@ -117,7 +117,7 @@ A liberação de versões de pré-lançamento do sistema operacional Windows ref
 Se seu aplicativo está na Loja, você pode liberar a versão de pré-lançamento do seu aplicativo através da Loja, o que significa que o seu aplicativo estará disponível para os nossos participantes do Programa Windows Insider para instalação. Os usuários podem instalar seu aplicativo e você pode receber comentários preliminar sobre o seu aplicativo antes de lançá-lo para a população geral. As seções a seguir descrevem as etapas para testar seus aplicativos com base em compilações de versões de pré-lançamento do Windows.
 
 ### <a name="step-1-become-a-windows-insider-and-participate-in-flighting"></a>Etapa 1: torne-se um usuário do Windows Insider e participe da liberação de versões de pré-lançamento
-Como um [participante do programa Windows Insider,](http://go.microsoft.com/fwlink/p/?LinkId=521639) você pode ajudar a moldar o futuro do Windows — seus comentários nos ajudarão a melhorar os recursos e funcionalidades na plataforma. Essa é uma comunidade vibrante onde você pode se conectar com outros entusiastas, participar de fóruns, trocar conselhos e saber mais sobre os futuros eventos apenas para o programa Insider.
+Como um [participante do programa Windows Insider,](https://go.microsoft.com/fwlink/p/?LinkId=521639) você pode ajudar a moldar o futuro do Windows — seus comentários nos ajudarão a melhorar os recursos e funcionalidades na plataforma. Essa é uma comunidade vibrante onde você pode se conectar com outros entusiastas, participar de fóruns, trocar conselhos e saber mais sobre os futuros eventos apenas para o programa Insider.
 
 Assim que você tenha acesso para as compilações do Windows 10, Windows 10 Mobile e o SDK mais recente do Windows e o emulador, você terá todas as ferramentas à sua disposição para desenvolver ótimos aplicativos e explorar o que há de novo na plataforma Universal do Windows e a Microsoft Store.
 
@@ -157,7 +157,7 @@ Depois de ter atualizado para uma compilação liberada de versão de pré-lanç
 Conte como seu aplicativo está se comportando em relação às compilações de versões de pré-lançamento liberadas. Na medida que você descobrir problemas com seu aplicativo durante o teste, registre os bugs através do portal do parceiro se você tem acesso, ou por meio do seu representante da Microsoft. Recomendamos essas informações para que possamos construir uma experiência de qualidade para os nossos usuários juntos.
 
 ### <a name="step-4-register-on-ready-for-windows"></a>Etapa 4: registre-se no Ready for Windows
-O site [Ready for Windows](http://go.microsoft.com/fwlink/?LinkID=780580) é um diretório de software que suporta o Windows 10. Destina-se a administradores de TI em empresas e organizações em todo o mundo que estão considerando o Windows 10 para suas implantações. Os administradores de TI podem verificar o site para ver que se o software implantado em sua empresa é suportado no Windows 10.
+O site [Ready for Windows](https://go.microsoft.com/fwlink/?LinkID=780580) é um diretório de software que suporta o Windows 10. Destina-se a administradores de TI em empresas e organizações em todo o mundo que estão considerando o Windows 10 para suas implantações. Os administradores de TI podem verificar o site para ver que se o software implantado em sua empresa é suportado no Windows 10.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 [Opções de serviços do Windows10 para atualizações e upgrade](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)

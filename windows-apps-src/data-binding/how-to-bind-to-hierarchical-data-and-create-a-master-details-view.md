@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 194bbeefbd3ca5f8237bb3449ec935211056aea3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1c2280fd7234fc41ee02dc17909bda8d7af0e1b9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923678"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049091"
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Associar dados hierárquicos e criar um modo de exibição mestre/detalhes
 
 
 
-> **Observação**também veja a [amostra de mestre/detalhes](http://go.microsoft.com/fwlink/p/?linkid=619991).
+> **Observação**também veja a [amostra de mestre/detalhes](https://go.microsoft.com/fwlink/p/?linkid=619991).
 
 Você pode criar um modo de exibição mestre/detalhes de vários níveis (também conhecido como lista/detalhes) de dados hierárquicos, associando controles de itens a instâncias [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) que são associadas em uma cadeia. Neste tópico, usamos a [extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) onde possível, e a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) mais flexível (mas menos eficiente) onde necessário.
 

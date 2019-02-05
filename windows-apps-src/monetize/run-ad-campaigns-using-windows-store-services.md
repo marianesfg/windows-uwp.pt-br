@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
-ms.openlocfilehash: 35b2df09bcac553eeb939f516e950150cf2ee40d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 58325074a2f59dcd146a9534054b302b3ce9956b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929406"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044673"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>Veicular campanhas publicitárias usando os serviços da Store
 
@@ -36,7 +36,7 @@ Antes de começar a escrever o código para chamar a API de promoções da Micro
 
 * Antes de poder criar e iniciar uma campanha publicitária usando essa API com êxito, você deve primeiro [criar uma campanha publicitária usando a página de **campanhas publicitárias** no Partner Center](../publish/create-an-ad-campaign-for-your-app.md), e você deve adicionar pelo menos um método de pagamento nesta página. Depois que você fizer isso, é possível criar linhas de entrega faturáveis para campanhas publicitárias usando essa API. Linhas de entrega de campanhas publicitárias criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na página **campanhas publicitárias** no Partner Center.
 
-* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Partner Center](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sem nenhum custo adicional.
+* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](https://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Partner Center](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sem nenhum custo adicional.
 
 * Você deve associar um aplicativo Azure AD à sua conta do Partner Center, recuperar a ID do locatário e ID do cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de promoções da Microsoft Store. Você precisa da ID do locatário, ID do cliente e da chave para obter um token de acesso do Azure AD que você passa para a API.
     > [!NOTE]
@@ -100,7 +100,7 @@ O diagrama a seguir ilustra a relação entre campanhas, linhas de entrega, perf
 
 ## <a name="code-example"></a>Exemplo de código
 
-O exemplo de código a seguir demonstra como obter um token de acesso do Azure AD e chamar a API de promoções da Microsoft Store de um aplicativo de console C#. Para usar este exemplo de código, atribua as variáveis *tenantId*, *clientId*, *clientSecret* e *appID* aos valores adequados ao seu cenário. Este exemplo exige o [pacote Json.NET](http://www.newtonsoft.com/json) do Newtonsoft para desserializar os dados JSON retornados pela API de promoções da Microsoft Store.
+O exemplo de código a seguir demonstra como obter um token de acesso do Azure AD e chamar a API de promoções da Microsoft Store de um aplicativo de console C#. Para usar este exemplo de código, atribua as variáveis *tenantId*, *clientId*, *clientSecret* e *appID* aos valores adequados ao seu cenário. Este exemplo exige o [pacote Json.NET](https://www.newtonsoft.com/json) do Newtonsoft para desserializar os dados JSON retornados pela API de promoções da Microsoft Store.
 
 [!code-cs[PromotionsApi](./code/StoreServicesExamples_Promotions/cs/Program.cs#PromotionsApiExample)]
 

@@ -6,12 +6,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 345a41a45e28843161e65ecb04f0083f1a71269a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b449179468d26c357e69ad1d8868004cadd6e2fa
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942842"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048343"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
@@ -19,9 +19,9 @@ Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar pa
 
 ## <a name="common-features-of-the-uri-schemes"></a>Recursos comuns dos esquemas de URI
 
-Todos os esquemas descritos neste tópico seguem as regras típicas de esquema URI para normalização e recursos de recuperação. Consulte [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444) para obter a sintaxe genérica de uma URI.
+Todos os esquemas descritos neste tópico seguem as regras típicas de esquema URI para normalização e recursos de recuperação. Consulte [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444) para obter a sintaxe genérica de uma URI.
 
-Todos os esquemas de URI definem a parte hierárquica por [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444) como os componentes de autoridade e de caminho do URI.
+Todos os esquemas de URI definem a parte hierárquica por [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444) como os componentes de autoridade e de caminho do URI.
 
 ```syntax
 URI         = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
@@ -267,7 +267,7 @@ Os desenvolvedores de componentes específicos dispostos em camadas acima desta 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [URI (Uniform Resource Identifier): sintaxe genérica](http://go.microsoft.com/fwlink/p/?LinkId=263444)
+* [URI (Uniform Resource Identifier): sintaxe genérica](https://go.microsoft.com/fwlink/p/?LinkId=263444)
 * [Empacotando aplicativos](../packaging/index.md)
 * [Fazer referência a uma imagem ou outro ativo no código e na marcação XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [Armazenar e recuperar configurações e outros dados de aplicativo](../design/app-settings/store-and-retrieve-app-data.md)

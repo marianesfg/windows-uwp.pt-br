@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, orientação da tela, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: eb86cfaefe7112d408a17a54bf4f4b482c218be8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4e2cf915e510c3d6e3d702417b72c097a293f03c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924318"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051069"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>Oferecendo suporte à orientação de tela (DirectX e C++)
 
@@ -391,7 +391,7 @@ Conforme sugerido no terceiro marcador, quando um aplicativo chama [**NotifyLayo
 ## <a name="appendix-a-applying-matrices-for-screen-rotation-2-d"></a>Apêndice A: Aplicando métricas para rotação da tela (2-D)
 
 
-No código de exemplo em [Redimensionando a cadeia de troca e fazendo a pré-rotação de seu conteúdo](#resizing-the-swap-chain-and-pre-rotating-its-contents) (e no [Exemplo de rotação de cadeia de troca DXGI](http://go.microsoft.com/fwlink/p/?linkid=257600)), você pode ter percebido que tínhamos matrizes de rotação separadas para a saída de Direct2D e Direct3D. Vamos examinar as matrizes 2-D, primeiro.
+No código de exemplo em [Redimensionando a cadeia de troca e fazendo a pré-rotação de seu conteúdo](#resizing-the-swap-chain-and-pre-rotating-its-contents) (e no [Exemplo de rotação de cadeia de troca DXGI](https://go.microsoft.com/fwlink/p/?linkid=257600)), você pode ter percebido que tínhamos matrizes de rotação separadas para a saída de Direct2D e Direct3D. Vamos examinar as matrizes 2-D, primeiro.
 
 Há dois motivos pelos quais não podemos aplicar as mesmas matrizes de rotação ao conteúdo do Direct2D e Direct3D:
 
@@ -488,7 +488,7 @@ Na próxima vez que você apresentar a cadeia de troca, sua imagem 2D será gira
 ## <a name="appendix-b-applying-matrices-for-screen-rotation-3-d"></a>Apêndice B: Aplicando métricas para rotação da tela (3D)
 
 
-No código de exemplo em [Redimensionando a cadeia de troca e fazendo a pré-rotação de seu conteúdo](#resizing-the-swap-chain-and-pre-rotating-its-contents) (e no [Exemplo de rotação de cadeia de permuta DXGI](http://go.microsoft.com/fwlink/p/?linkid=257600)), definimos uma matriz de transformação específica para cada orientação de tela possível. Agora, vamos examinar as matrizes para girar cenas 3D. Como antes, crie um conjunto de matrizes para cada uma das 4 orientações possíveis. Para evitar erros de arredondamento e, portanto, artefatos visuais secundários, declare explicitamente as matrizes em seu código.
+No código de exemplo em [Redimensionando a cadeia de troca e fazendo a pré-rotação de seu conteúdo](#resizing-the-swap-chain-and-pre-rotating-its-contents) (e no [Exemplo de rotação de cadeia de permuta DXGI](https://go.microsoft.com/fwlink/p/?linkid=257600)), definimos uma matriz de transformação específica para cada orientação de tela possível. Agora, vamos examinar as matrizes para girar cenas 3D. Como antes, crie um conjunto de matrizes para cada uma das 4 orientações possíveis. Para evitar erros de arredondamento e, portanto, artefatos visuais secundários, declare explicitamente as matrizes em seu código.
 
 Configure essas matrizes de rotação 3D como a seguir. As matrizes exibidas no seguinte exemplo de código são matrizes de rotação padrão para rotações de 0, 90, 180 e 270 graus das vértices que definem pontos no espaço da cena 3D da câmera. Cada valor de coordenada \[x, y, z\] do vértice na cena é multiplicado por esta matriz de rotação quando a projeção 2D da cena é calculada.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, mapa, localização, cerca geográfica, notificações
 ms.localizationpriority: medium
-ms.openlocfilehash: adcce5716a2982cf2c08e98ee337dbad20bddf28
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7e00a3db8890183f50efad6caa31bd573707c6a6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924663"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9045685"
 ---
 # <a name="set-up-a-geofence"></a>Configurar uma cerca geográfica
 
@@ -20,9 +20,9 @@ ms.locfileid: "8924663"
 
 Configure uma [**cerca geográfica**](https://msdn.microsoft.com/library/windows/apps/dn263587) no aplicativo e saiba como manipular notificações em primeiro e segundo planos.
 
-**Dica** Para saber mais sobre como acessar o local no aplicativo, baixe a amostra a seguir no [Repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+**Dica** Para saber mais sobre como acessar o local no aplicativo, baixe a amostra a seguir no [Repositório Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
--   [Amostra de mapa da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Amostra de mapa da UWP (Plataforma Universal do Windows)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>Habilitar a funcionalidade de local
 
@@ -456,7 +456,7 @@ O teste e a depuração de aplicativos com localização geográfica podem ser u
 
 1.  Compile seu aplicativo no Visual Studio.
 2.  Inicie o aplicativo no emulador do Visual Studio.
-3.  Use estas ferramentas para simular várias localizações dentro e fora da sua região de cerca geográfica. Espere o tempo suficiente após o período especificado pela propriedade [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para disparar o evento. Observe que você deve aceitar o prompt para habilitar permissões de localização para o aplicativo. Para saber mais sobre como simular localizações, consulte [Definir a localização geográfica simulada do dispositivo](http://go.microsoft.com/fwlink/p/?LinkID=325245).
+3.  Use estas ferramentas para simular várias localizações dentro e fora da sua região de cerca geográfica. Espere o tempo suficiente após o período especificado pela propriedade [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para disparar o evento. Observe que você deve aceitar o prompt para habilitar permissões de localização para o aplicativo. Para saber mais sobre como simular localizações, consulte [Definir a localização geográfica simulada do dispositivo](https://go.microsoft.com/fwlink/p/?LinkID=325245).
 4.  Você também pode usar o emulador para estimar se o tamanho das cercas e duração dos testes aproximadamente necessitam ser detectados em diferentes velocidades.
 
 ### <a name="test-and-debug-a-geofencing-app-that-is-running-in-the-background"></a>Testar e depurar um aplicativo com cerca geográfica em execução em segundo plano
@@ -468,7 +468,7 @@ O teste e a depuração de aplicativos com localização geográfica podem ser u
 3.  Feche seu aplicativo que está em execução localmente.
 4.  Inicie o aplicativo no emulador do Visual Studio. Observe que a simulação de cerca geográfica em segundo plano tem suporte apenas em um aplicativo de cada vez dentro do emulador. Não inicie vários aplicativos com cerca geográfica dentro do emulador.
 5.  No emulador, simule várias localizações dentro e fora da sua região de cerca geográfica. Espere o tempo suficiente após o [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para disparar o evento. Observe que você deve aceitar o prompt para habilitar permissões de localização para o aplicativo.
-6.  Use o Visual Studio para disparar a tarefa de segundo plano de localização. Para obter mais informações sobre como disparar tarefas em segundo plano no Visual Studio, consulte [Como disparar tarefas em segundo plano](http://go.microsoft.com/fwlink/p/?LinkID=325378).
+6.  Use o Visual Studio para disparar a tarefa de segundo plano de localização. Para obter mais informações sobre como disparar tarefas em segundo plano no Visual Studio, consulte [Como disparar tarefas em segundo plano](https://go.microsoft.com/fwlink/p/?LinkID=325378).
 
 ## <a name="troubleshoot-your-app"></a>Solucionar problemas do aplicativo
 
@@ -481,6 +481,6 @@ Para que o aplicativo possa acessar a localização, é necessário habilitar **
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Amostra de geolocalização da UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Amostra de geolocalização da UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Diretrizes de design para cerca geográfica](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [Diretrizes de design para aplicativos com detecção de localização](https://msdn.microsoft.com/library/windows/apps/hh465148)

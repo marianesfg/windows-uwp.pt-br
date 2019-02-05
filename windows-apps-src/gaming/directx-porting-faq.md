@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 31c165d47beea8ee0e31a3213bdd0dbf0c2bc3d7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d2f883e62cf7c61560295673cf48cf891befed91
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927770"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044450"
 ---
 # <a name="directx-11-porting-faq"></a>Perguntas frequentes de portabilidade do DirectX 11
 
@@ -42,12 +42,12 @@ Os jogos que ainda usam a instrução RDTSC precisam de uma atualização. Consu
 ## <a name="my-game-code-is-based-on-d3dx-and-dxut-is-there-anything-available-that-can-help-me-migrate-my-code"></a>O código do meu jogo é baseado em D3DX e DXUT. Há algum recurso disponível que me ajude a migrar esse código?
 
 
-O projeto comunitário [DirectXTK (kit de ferramentas do DirectX)](http://go.microsoft.com/fwlink/p/?LinkID=248929) oferece classes de ajuda para usar com aplicativos em Direct3D 11.
+O projeto comunitário [DirectXTK (kit de ferramentas do DirectX)](https://go.microsoft.com/fwlink/p/?LinkID=248929) oferece classes de ajuda para usar com aplicativos em Direct3D 11.
 
 ##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>Como manter caminhos de código para a área de trabalho e a Microsoft Store?
 
 
-Série de artigos de Chuck Walbourn intitulado [Duplo uso técnicas de codificação para jogos](http://go.microsoft.com/fwlink/p/?LinkID=286210) oferece uma orientação sobre compartilhar código entre a área de trabalho e os caminhos de código da Microsoft Store.
+Série de artigos de Chuck Walbourn intitulado [Duplo uso técnicas de codificação para jogos](https://go.microsoft.com/fwlink/p/?LinkID=286210) oferece uma orientação sobre compartilhar código entre a área de trabalho e os caminhos de código da Microsoft Store.
 
 ##  <a name="how-do-i-load-image-resources-in-my-directx-uwp-app"></a>Como carregar recursos de imagem em meu aplicativo UWP em DirectX?
 
@@ -57,7 +57,7 @@ Há dois caminhos de API para carregar imagens:
 -   O pipeline de conteúdo converte imagens em arquivos DDS, usados como recursos de textura Direct3D. Consulte o tópico sobre [uso de ativos 3D em jogos ou aplicativos](https://msdn.microsoft.com/library/windows/apps/hh972446.aspx).
 -   O [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719902) pode ser usado para carregar imagens de diversos formatos, inclusive bitmaps Direct2D e recursos de textura Direct3D.
 
-Você também pode usar DDSTextureLoader e WICTextureLoader a partir de [DirectXTK](http://go.microsoft.com/fwlink/p/?LinkID=248929) ou [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926).
+Você também pode usar DDSTextureLoader e WICTextureLoader a partir de [DirectXTK](https://go.microsoft.com/fwlink/p/?LinkID=248929) ou [DirectXTex](https://go.microsoft.com/fwlink/p/?LinkID=248926).
 
 ## <a name="where-is-the-directx-sdk"></a>Onde está o SDK do DirectX?
 
@@ -74,7 +74,7 @@ Os aplicativos da área de trabalho Win32 ainda usam DirectSetup. Por isso, se v
 ## <a name="is-there-any-way-i-can-update-my-desktop-code-to-directx-11-before-moving-away-from-effects"></a>Há algum modo de atualizar meu código de área de trabalho para o DirectX 11 antes de sair do Effects?
 
 
-Consulte a [atualização do Effects para Direct3D 11](http://go.microsoft.com/fwlink/p/?LinkId=271568). O Effects 11 o ajuda a eliminar dependências de cabeçalhos herdados do SDK do DirectX; ele deve ser usado com aplicativos da área de trabalho como um auxílio à portabilidade.
+Consulte a [atualização do Effects para Direct3D 11](https://go.microsoft.com/fwlink/p/?LinkId=271568). O Effects 11 o ajuda a eliminar dependências de cabeçalhos herdados do SDK do DirectX; ele deve ser usado com aplicativos da área de trabalho como um auxílio à portabilidade.
 
 ##  <a name="is-there-a-path-for-porting-my-directx-8-game-to-uwp"></a>Há algum modo de fazer a portabilidade de meu jogo em DirectX 8 para a UWP?
 
@@ -116,7 +116,7 @@ Visite os seguintes tópicos:
 ## <a name="what-should-i-use-instead-of-the-x-file-format-for-my-models"></a>O que devo usar em vez do formato de arquivo .x para meus modelos?
 
 
-Embora não tenhamos uma substituição oficial para o formato de arquivo .x, muitos dos exemplos usam o formato SDKMesh. O Visual Studio também tem um [pipeline de conteúdo](https://msdn.microsoft.com/library/windows/apps/hh972446.aspx) que compila diversos formatos populares em arquivos CMO, que podem ser carregados com o código do kit inicial do Visual Studio 3D ou usando [DirectXTK](http://go.microsoft.com/fwlink/p/?LinkID=248929).
+Embora não tenhamos uma substituição oficial para o formato de arquivo .x, muitos dos exemplos usam o formato SDKMesh. O Visual Studio também tem um [pipeline de conteúdo](https://msdn.microsoft.com/library/windows/apps/hh972446.aspx) que compila diversos formatos populares em arquivos CMO, que podem ser carregados com o código do kit inicial do Visual Studio 3D ou usando [DirectXTK](https://go.microsoft.com/fwlink/p/?LinkID=248929).
 
 ## <a name="how-do-i-debug-my-shaders"></a>Como depurar meus sombreadores?
 

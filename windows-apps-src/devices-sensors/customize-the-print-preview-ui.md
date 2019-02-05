@@ -1,17 +1,17 @@
 ---
 ms.assetid: 88132B6F-FB50-4B03-BC21-233988746230
 title: Personalizar a interface do usuário para visualização de impressão
-description: Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização da impressão.
+description: Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização de impressão.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, impressão
 ms.localizationpriority: medium
-ms.openlocfilehash: 16fca2fc98450375ec2dcf7a0d10775b2bba1bf2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3783105c054e5d956ab64aabe9971bb952d6cae6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926259"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046379"
 ---
 # <a name="customize-the-print-preview-ui"></a>Personalizar a interface do usuário para visualização de impressão
 
@@ -25,7 +25,7 @@ ms.locfileid: "8926259"
 
 Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização da impressão. Para obter mais informações sobre a impressão, consulte [Imprimir no aplicativo](print-from-your-app.md).
 
-**Dica**a maioria dos exemplos neste tópico se baseiam na amostra de impressão. Para ver o código completo, baixe a [amostra de impressão da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619984) do [repositório de amostras universais do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+**Dica**a maioria dos exemplos neste tópico se baseiam na amostra de impressão. Para ver o código completo, baixe a [amostra de impressão da UWP (Plataforma Universal do Windows)](https://go.microsoft.com/fwlink/p/?LinkId=619984) do [repositório de amostras universais do Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
  
 
@@ -187,4 +187,4 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 * [Diretrizes de design para impressão](https://msdn.microsoft.com/library/windows/apps/Hh868178)
 * [//Vídeo da Compilação 2015: Desenvolvendo aplicativos que imprimem no Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
-* [Exemplo de impressão via UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984)
+* [Exemplo de impressão via UWP](https://go.microsoft.com/fwlink/p/?LinkId=619984)

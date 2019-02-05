@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: bd851b6deab0f7a2772720fac83bb2bfa3175071
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: af8e45e13eb89185e346c3c8e8cd5303da399471
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923093"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047481"
 ---
 # <a name="guidelines-for-background-tasks"></a>Diretrizes de tarefas em segundo plano
 
@@ -103,7 +103,7 @@ Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tip
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 

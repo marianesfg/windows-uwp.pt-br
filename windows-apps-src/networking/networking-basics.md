@@ -6,12 +6,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 173164106e068e3fa081c8d7ddf7838d5b3d18db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ffc2f31b52e7913905c7d64ab797b2939cfb313d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927452"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045219"
 ---
 # <a name="networking-basics"></a>Noções básicas de rede
 Coisas que você deve fazer para qualquer aplicativo habilitado por rede.
@@ -45,7 +45,7 @@ O agente de soquete destina-se a substituir gatilhos de canal de controle, onde 
 ### <a name="choosing-a-network-trigger"></a>Escolhendo um gatilho de rede
 Existem alguns cenários onde qualquer tipo de gatilho seria adequado. Ao escolher o tipo de gatilho para usar em seu aplicativo, considere o seguinte aviso.
 
--   Se estiver usando [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) ou [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638), você deverá usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
+-   Se estiver usando [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) ou [System.Net.Http.HttpClientHandler](https://go.microsoft.com/fwlink/p/?linkid=241638), você deverá usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
 -   Se você está usando **StreamSockets** habilitados por push, pode usar gatilhos de canal de controle, mas prefira [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009). Esta última opção permite que o sistema libere memória e reduza os requisitos de energia quando a conexão não está sendo usada ativamente.
 -   Se você deseja minimizar o volume de memória de seu aplicativo quando ele não está atendendo ativamente as solicitações de rede, prefira [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) quando possível.
 -   Se você deseja que seu aplicativo seja capaz de receber dados enquanto o sistema estiver no modo de espera conectado, use [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009).
@@ -507,4 +507,4 @@ As APIs de rede dão suporte a métodos diferentes para recuperar essas informa�
 -   Outras APIs fornecem um método para recuperar efetivamente o valor **HRESULT**.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Melhorias de API de rede no Windows 10](http://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)
+* [Melhorias de API de rede no Windows 10](https://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)

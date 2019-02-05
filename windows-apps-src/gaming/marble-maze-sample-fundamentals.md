@@ -6,12 +6,12 @@ ms.date: 08/22/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, conceitos básicos
 ms.localizationpriority: medium
-ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d41a9fe2363e5d5c462fb0646fbcc2479c756119
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946374"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049383"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Princípios básicos de exemplo do Marble Maze
 
@@ -21,7 +21,7 @@ ms.locfileid: "8946374"
 Este tópico descreve as características fundamentais do projeto Marble Maze, por exemplo, como ele usa o Visual C++ no ambiente do Windows Runtime, como ele é criado e estruturado e como é compilado. O tópico também descreve várias das convenções que são usadas no código.
 
 > [!NOTE]
-> O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
+> O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](https://go.microsoft.com/fwlink/?LinkId=624011).
 
 Consulte a seguir alguns dos pontos-chave que este documento discute para quando você planejar e desenvolver seu jogo UWP (Plataforma Universal do Windows).
 
@@ -38,9 +38,9 @@ Se você baixou e extraiu o exemplo, você pode abrir o arquivo **MarbleMaze_VS2
 
 Quando criamos o projeto do Visual Studio para o Marble Maze, começamos com um projeto existente. No entanto, se você ainda não tem um projeto existente que forneça a funcionalidade básica necessária para o seu jogo UWP DirectX, convém criar um projeto com base no modelo **Aplicativo DirectX 11 (Universal do Windows)** do Visual Studio, pois ele fornece um aplicativo 3D de trabalho básico. Para fazer isso, execute estas etapas:
 
-1. No Visual Studio 2017, selecione **arquivo > Novo > projeto...**
+1. No Visual Studio 2017, selecione o **arquivo gt _ Novo gt _ projeto...**
 
-2. Na janela **Novo projeto** , na barra lateral esquerda, selecione **instalado > Modelos > Visual C++**.
+2. Na janela **Novo projeto** , na barra lateral esquerda, selecione **instalado gt _ modelos gt _ Visual C++**.
 
 3. Na lista do meio, selecione o **Aplicativo DirectX 11 (Universal Windows)**. Se você não vir essa opção, talvez você não tenha os componentes necessários instalados&mdash;consulte [Modificar Visual Studio 2017, adicionando ou removendo cargas de trabalho e componentes](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obter informações sobre como instalar componentes adicionais.
 
@@ -131,7 +131,7 @@ void LoadMesh(
     );
 ```
 
-Para realizar a análise de código em seu aplicativo, na barra de menus, escolha **Construir > Executar análise de código na solução**. Para saber mais sobre a análise de código, consulte [Analisando a qualidade do código C/C++ com o uso da análise de código](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
+Para executar análise de código em seu aplicativo, na barra de menus, escolha **Build gt _ executar análise de código na solução**. Para saber mais sobre a análise de código, consulte [Analisando a qualidade do código C/C++ com o uso da análise de código](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
 
 A lista completa de anotações disponíveis está definida em sal.h. Para saber mais, veja [Anotações SAL](https://docs.microsoft.com/cpp/c-runtime-library/sal-annotations).
 

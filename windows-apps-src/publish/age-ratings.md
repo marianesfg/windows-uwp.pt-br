@@ -6,16 +6,16 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp, classificação etária, classificação de jogos, iarc, classificação, questionário, conselho de classificação, classificação de conteúdo
 ms.localizationpriority: medium
-ms.openlocfilehash: f8268e4f3fa6517da480c2ab220863de9523e845
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3582328a0f013c2f7b4ccc9affb5b61ca643761c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927191"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049078"
 ---
 # <a name="age-ratings"></a>Classificações etárias
 
-A página **Classificações etárias** do [processo de envio de aplicativo](app-submissions.md) permite que você forneça informações sobre seu aplicativo para que ele possa receber as classificações etárias e de conteúdo administradas pelo sistema de classificação da [International Age Ratings Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854). Essas classificações dizem respeito à adequação do conteúdo no aplicativo, em vez da idade do público-alvo.
+A página **Classificações etárias** do [processo de envio de aplicativo](app-submissions.md) permite que você forneça informações sobre seu aplicativo para que ele possa receber as classificações etárias e de conteúdo administradas pelo sistema de classificação da [International Age Ratings Coalition (IARC)](https://go.microsoft.com/fwlink/p/?LinkId=716854). Essas classificações dizem respeito à adequação do conteúdo no aplicativo, em vez da idade do público-alvo.
 
 ## <a name="answering-the-age-ratings-questionnaire"></a>Respondendo ao questionário de classificação etária
 
@@ -35,7 +35,7 @@ Na próxima vez que atualizar o seu aplicativo, você verá todas as classifica�
 <span id="boards" />
 
 > [!NOTE]
-> A legislação sul-coreana exige que os jogos disponibilizados na Coreia do Sul sejam classificados pelo [Game Rating Board](http://go.microsoft.com/fwlink/p/?LinkId=228256) da Coreia do Sul. Se você estiver enviando um jogo, e quiser oferecê-lo na Coreia do Sul, deve preencher esta seção adicional e carregar o certificado de classificação. Observe que, se o seu aplicativo não for um jogo, ou se você não quiser oferecê-lo na Coreia do Sul, você poderá deixar essa seção em branco.
+> A legislação sul-coreana exige que os jogos disponibilizados na Coreia do Sul sejam classificados pelo [Game Rating Board](https://go.microsoft.com/fwlink/p/?LinkId=228256) da Coreia do Sul. Se você estiver enviando um jogo, e quiser oferecê-lo na Coreia do Sul, deve preencher esta seção adicional e carregar o certificado de classificação. Observe que, se o seu aplicativo não for um jogo, ou se você não quiser oferecê-lo na Coreia do Sul, você poderá deixar essa seção em branco.
 
 > [!NOTE]
 > Se você estiver enviando um jogo que estará disponível em Taiwan, é exigido por lei que você registre a classificação CSRR fornecida usando [este formulário](https://go.microsoft.com/fwlink/?linkid=867281). 

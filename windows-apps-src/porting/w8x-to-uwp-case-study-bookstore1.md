@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 88a5492116eaf48f72d512a093001a5c3835f0d2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5e0b8ffbebdca920bc6cc584dd735062a364d1d9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920060"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048113"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Estudo de caso do Windows Runtime 8.x para UWP: Bookstore1
 
@@ -26,9 +26,9 @@ Os tópicos anteriores desta seção descrevem as diferenças entre as plataform
 
 ## <a name="downloads"></a>Downloads
 
-[Baixe o aplicativo universal Bookstore1\_81 do Windows 8.1](http://go.microsoft.com/fwlink/?linkid=532946).
+[Baixe o aplicativo universal Bookstore1\_81 do Windows 8.1](https://go.microsoft.com/fwlink/?linkid=532946).
 
-[Baixe o Bookstore1Universal\_10 aplicativo do Windows 10](http://go.microsoft.com/fwlink/?linkid=532950).
+[Baixe o Bookstore1Universal\_10 aplicativo do Windows 10](https://go.microsoft.com/fwlink/?linkid=532950).
 
 ## <a name="the-universal-81-app"></a>O aplicativo Universal 8.1
 

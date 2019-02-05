@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fac02f892c66a1bcf0b08986ae00a3a162b44ca
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 181568d705f24c97af0d62f951a88102d3d008db
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925721"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049164"
 ---
 # <a name="playready-drm"></a>DRM do PlayReady
 
@@ -77,15 +77,15 @@ As novas interfaces, classes e enumerações a seguir foram adicionadas ao DRM d
 -   Classe [**PlayReadySecureStopIterator**](https://msdn.microsoft.com/library/windows/apps/dn986375)
 -   Enumerador [**PlayReadyHardwareDRMFeatures**](https://msdn.microsoft.com/library/windows/apps/dn986265)
 
-Uma nova amostra foi criada para demonstrar como usar os novos recursos DRM do PlayReady. A amostra pode ser baixada de [http://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](http://go.microsoft.com/fwlink/p/?linkid=331670).
+Uma nova amostra foi criada para demonstrar como usar os novos recursos DRM do PlayReady. A amostra pode ser baixada de [http://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](https://go.microsoft.com/fwlink/p/?linkid=331670).
 
 ## <a name="things-to-consider"></a>O que deve ser considerado
 
--   O DRM do PlayReady agora dá suporte à HDCP Tipo 1 (compatível com HDCP versão 2.1 ou posterior). O PlayReady carrega uma política de restrição de tipo HDCP na licença para ser imposta pelo dispositivo. No Windows 10, essa política impõe que a HDCP 2.2 ou posterior seja ativada. Esse recurso pode ser habilitado na sua licença do servidor v3.0 SDK do PlayReady (o servidor controla essa política na licença usando o GUID da Restrição de Tipo HDCP). Para saber mais, consulte [Regras de conformidade e robustez do PlayReady](http://www.microsoft.com/playready/licensing/compliance/) (em inglês).
+-   O DRM do PlayReady agora dá suporte à HDCP Tipo 1 (compatível com HDCP versão 2.1 ou posterior). O PlayReady carrega uma política de restrição de tipo HDCP na licença para ser imposta pelo dispositivo. No Windows 10, essa política impõe que a HDCP 2.2 ou posterior seja ativada. Esse recurso pode ser habilitado na sua licença do servidor v3.0 SDK do PlayReady (o servidor controla essa política na licença usando o GUID da Restrição de Tipo HDCP). Para saber mais, consulte [Regras de conformidade e robustez do PlayReady](https://www.microsoft.com/playready/licensing/compliance/) (em inglês).
 -   Não há suporte para o Windows Media Video (também conhecido como VC-1) no DRM de hardware (consulte [Substituir DRM de hardware](hardware-drm.md#override-hardware-drm)).
 -   O DRM do PlayReady agora dá suporte ao padrão de compactação de vídeo de codificação de vídeo de alta eficiência (HEVC /H.265). Para dar suporte ao HEVC, seu aplicativo deve usar conteúdo de versão 2 do esquema de criptografia comum (CENC) que inclui deixar cabeçalhos de fração de conteúdo não criptografados. Para mais informações, consulte ISO/IEC 23001-7 Information technology -- MPEG systems technologies -- Part 7: Common encryption in ISO base media file format files (Versão de especificação ISO/IEC 23001-7:2015 ou superior necessária). A Microsoft também recomenda a utilização do CENC versão 2 para todo o conteúdo HWDRM. Além disso, alguns itens do DRM de hardware darão suporte ao HEVC, e outros não (consulte [Substituir DRM de hardware](hardware-drm.md#override-hardware-drm)).
 -   Para usufruir determinados recursos novos do PlayReady 3.0 (incluindo, mas não se limitando a, SL3000 para clientes baseados em hardware, a aquisição de várias licenças não persistentes em uma mensagem de aquisição de licença e restrições baseadas em tempo em licenças não persistentes), é necessário que o servidor PlayReady seja o Microsoft PlayReady Server Software Development Kit v3.0.2769 ou posterior.
--   Dependendo da política de proteção de saída especificada na licença do conteúdo, pode ocorrer falha na reprodução de mídia para os usuários finais se sua saída conectada não oferecer suporte a esses requisitos. A tabela a seguir lista o conjunto de erros comuns que ocorrem como resultado. Para saber mais, consulte [Regras de conformidade e robustez do PlayReady](http://www.microsoft.com/playready/licensing/compliance/) (em inglês).
+-   Dependendo da política de proteção de saída especificada na licença do conteúdo, pode ocorrer falha na reprodução de mídia para os usuários finais se sua saída conectada não oferecer suporte a esses requisitos. A tabela a seguir lista o conjunto de erros comuns que ocorrem como resultado. Para saber mais, consulte [Regras de conformidade e robustez do PlayReady](https://www.microsoft.com/playready/licensing/compliance/) (em inglês).
 
 | Erro                                                   | Valor      | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |---------------------------------------------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -401,7 +401,7 @@ Antes de começar a criar seu aplicativo UWP protegido pelo PlayReady, o seguint
 -   Se você estiver compilando alguma das amostras para o DRM do PlayReady para aplicativos UWP, você deve usar o Microsoft Visual Studio2015 ou posterior para compilar as amostras. Você ainda pode usar o Microsoft Visual Studio2013 para compilar qualquer uma das amostras do DRM do PlayReady para aplicativos do Windows 8.1 da loja.
 
 <!--This is no longer available-->
-<!--If you are planning to play back MPEG-2/H.262 content on your app, you must also download and install [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876).-->
+<!--If you are planning to play back MPEG-2/H.262 content on your app, you must also download and install [Windows 8.1 Media Center Pack](https://go.microsoft.com/fwlink/p/?LinkId=626876).-->
 
 ## <a name="playready-uwp-app-migration-guide"></a>Guia de migração de aplicativos UWP da PlayReady
 
@@ -507,7 +507,7 @@ Há dois cenários principais para enviar um desafio de parada segura:
 -   Quando a apresentação de mídia é interrompida porque foi alcançado o fim do conteúdo ou quando o usuário interrompeu a apresentação de mídia em algum ponto intermediário.
 -   Quando a sessão anterior é encerrada inesperadamente (por exemplo, devido a uma falha no sistema ou no aplicativo). O aplicativo precisará consultar, na inicialização ou no desligamento, qualquer sessão de parada segura pendente e enviar desafio(s) separadamente de qualquer outra reprodução de mídia.
 
-Para obter uma implementação de exemplo de parada segura, consulte o arquivo securestop.cs no exemplo de PlayReady localizado em [http://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](http://go.microsoft.com/fwlink/p/?linkid=331670).
+Para obter uma implementação de exemplo de parada segura, consulte o arquivo securestop.cs no exemplo de PlayReady localizado em [http://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](https://go.microsoft.com/fwlink/p/?linkid=331670).
 
 ## <a name="use-playready-drm-on-xbox-one"></a>Usar PlayReady DRM em Xbox One
 

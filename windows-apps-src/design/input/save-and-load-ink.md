@@ -8,12 +8,12 @@ keywords: Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, Ink
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1196b5dd11f006e42d43e15efd56b2be92f35c4b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0c12e5cb7012ba9ff9a4ed383427e37b79835983
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947152"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045342"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Armazenar e recuperar dados de traço do Windows Ink
 
@@ -441,9 +441,9 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 * [Salvar e carregar traços de tinta da área de transferência](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
 
 **Outros exemplos**
-* [Exemplo de tinta simples (C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Amostra de tinta complexa (C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [Exemplo de tinta (JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Exemplo de tinta simples (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Amostra de tinta complexa (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Exemplo de tinta (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Tutorial de Introdução: oferecer suporte à tinta em seu aplicativo UWP](https://aka.ms/appsample-ink)
 * [Exemplo de livro de colorir](https://aka.ms/cpubsample-coloringbook)
 * [Exemplo de anotações da família](https://aka.ms/cpubsample-familynotessample)
