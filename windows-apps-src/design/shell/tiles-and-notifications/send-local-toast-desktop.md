@@ -8,12 +8,12 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: Windows 10, uwp, notificação da área de trabalho, win32, notificações, enviar uma notificação do sistema, enviar notificações do sistema local, ponte de desktop, c#, c sharp, notificação, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 3436433c8086c2801f1ee2174a51525e48c2f7c9
-ms.sourcegitcommit: fae67a53ab1468a31120293653ade9541085bdd7
+ms.openlocfilehash: 907ba19812c9a34a7a91f42fefac4c190bfd394b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "8992307"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058697"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar uma notificação do sistema local a partir de aplicativos C# da área de trabalho
 
@@ -386,7 +386,7 @@ DesktopNotificationManagerCompat.History.Clear();
 
 ## <a name="step-10-deploying-and-debugging"></a>Etapa 10: implantação e depuração
 
-Para implantar e depurar o aplicativo de Ponte de Desktop, consulte [Executar, depurar e testar um aplicativo de área de trabalho empacotado](/porting/desktop-to-uwp-debug.md).
+Para implantar e depurar o aplicativo de Ponte de Desktop, consulte [Executar, depurar e testar um aplicativo de área de trabalho empacotado](/windows/uwp/porting/desktop-to-uwp-debug).
 
 Para implantar e depurar seu aplicativo para Win32 clássico, você deve instalar o aplicativo pelo instalador uma vez antes da depuração normal para que o atalho no menu Iniciar com a AUMID e a CLSID esteja presente. Depois que o atalho de Iniciar estiver presente, você pode depurar usando F5 no Visual Studio.
 

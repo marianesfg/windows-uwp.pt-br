@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0760805128f8f11b4598a5c8b0d19d8e9f20d04d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 90c86e071b0e1d2a07d7755ba23cb6418ca0022a
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050949"
+ms.locfileid: "9058567"
 ---
 # <a name="command-bar-flyout"></a>Submenu da barra de comandos
 
@@ -165,7 +165,7 @@ Os controles de botão da barra de aplicativos são caracterizados por um ícone
 
 ### <a name="other-content"></a>Outros tipos de conteúdo
 
-Você pode adicionar outros controles a um submenu da barra de comando encapsulá-los em um AppBarElementContainer. Isso permite que você adicionar controles, como [DropDownButton]() ou [SplitButton]()ou adicionar contêineres como [StackPanel]() para criar a interface do usuário mais complexo.
+Você pode adicionar outros controles a um submenu da barra de comando encapsulá-los em um AppBarElementContainer. Isso permite que você adicionar controles, como [DropDownButton](buttons.md) ou [SplitButton](buttons.md)ou adicionar contêineres como [StackPanel](buttons.md) para criar a interface do usuário mais complexo.
 
 Para ser adicionado a coleções comando principal ou secundária de um submenu da barra de comando, um elemento deve implementar a interface [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) . AppBarElementContainer é um wrapper que implementa essa interface, portanto, você pode adicionar um elemento para uma barra de comandos, mesmo se ele não implementa a interface em si.
 
@@ -174,7 +174,7 @@ Aqui, um AppBarElementContainer é usado para adicionar elementos extras para um
 > [!TIP]
 > Por padrão, elementos projetados para a tela do aplicativo não podem parecer direita em uma barra de comandos. Quando você adiciona um elemento usando AppBarElementContainer, há algumas etapas que você deve seguir para fazer com que o elemento coincidir com outros elementos da barra de comando:
 >
-> - Substitua os pincéis de padrão com [estilo leve](/design/controls-and-patterns/xaml-styles#lightweight-styling) para tornar o elemento em segundo plano e borda corresponder os botões da barra de aplicativo.
+> - Substitua os pincéis de padrão com [estilo leve](/windows/uwp/design/controls-and-patterns/xaml-styles#lightweight-styling) para tornar o elemento em segundo plano e borda corresponder os botões da barra de aplicativo.
 > - Ajuste o tamanho e a posição do elemento.
 > - Encapsule ícones em uma Viewbox com uma largura e altura de 16 px.
 

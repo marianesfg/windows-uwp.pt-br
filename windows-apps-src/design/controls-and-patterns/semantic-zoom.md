@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5689fd967756025872fd45bf242076e854e700aa
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 210cca8a4b17b77e8c1f9cb490a79bcd1a53b6c7
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048093"
+ms.locfileid: "9058787"
 ---
 # <a name="semantic-zoom"></a>Zoom semântico
 
@@ -80,7 +80,7 @@ Os 3 elementos de que você precisa para um Zoom Semântico são:
 - Uma exibição ampliada que mostre os dados no nível do item.
 - Uma exibição reduzida que mostre os dados no nível do grupo.
 
-Antes de usar um Zoom Semântico, você deve entender como usar uma exibição de lista com dados agrupados. Para obter mais informações, consulte [Exibição de lista e exibição em grade](listview-and-gridview.md) e [Agrupamento de itens em uma lista](). 
+Antes de usar um Zoom Semântico, você deve entender como usar uma exibição de lista com dados agrupados. Para obter mais informações, consulte o [modo de exibição de lista e exibição de grade](listview-and-gridview.md). 
 
 > **Observação**&nbsp;&nbsp;Para definir as exibições ampliada e reduzida do controle SemanticZoom, você pode usar qualquer um dos controles que implementam a interface [ISemanticZoomInformation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.isemanticzoominformation.aspx). A estrutura XAML fornece 3 controles que implementam essa interface: ListView, GridView e Hub.
  

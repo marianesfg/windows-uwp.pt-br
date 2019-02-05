@@ -6,18 +6,18 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: ea855480-874d-431f-94bf-13d81eacc010
 ms.localizationpriority: medium
-ms.openlocfilehash: 3791887baaefeca0052a10c60d4650d5623ba3fd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e3d0a17bbb46cf2b855749f7349f86268b915ec6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947251"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050549"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-15063"></a>Novidades no Windows 10 para desenvolvedores, compilação 15063
 
-O Windows 10 build 15063 (também conhecido como a Atualização para Criadores ou versão 1703), em combinação com o Visual Studio 2017 e o SDK atualizado, fornece as ferramentas, os recursos e as experiências para a criação de notáveis aplicativos da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+O Windows 10 build 15063 (também conhecido como a Atualização para Criadores ou versão 1703), em combinação com o Visual Studio 2017 e o SDK atualizado, fornece as ferramentas, os recursos e as experiências para a criação de notáveis aplicativos da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
-Esta é uma coleção de recursos novos e aprimorados de interesse dos desenvolvedores. Para obter uma lista completa de namespaces novos adicionados ao SDK do Windows, consulte as [alterações de API do Windows 10 compilação 15063](windows-10-build-15063-api-diff.md). Para obter mais informações sobre os recursos destacados do Windows 10, consulte [Novidades no Windows 10](http://go.microsoft.com/fwlink/?LinkId=823181). Além disso, veja [Recursos da Windows Developer Platform](https://developer.microsoft.com/windows/platform/features) para obter uma visão geral de alto nível das adições passadas e futuras feitas na plataforma do Windows.
+Esta é uma coleção de recursos novos e aprimorados de interesse dos desenvolvedores. Para obter uma lista completa de namespaces novos adicionados ao SDK do Windows, consulte as [alterações de API do Windows 10 compilação 15063](windows-10-build-15063-api-diff.md). Para obter mais informações sobre os recursos destacados do Windows 10, consulte [Novidades no Windows 10](https://go.microsoft.com/fwlink/?LinkId=823181). Além disso, veja [Recursos da Windows Developer Platform](https://developer.microsoft.com/windows/platform/features) para obter uma visão geral de alto nível das adições passadas e futuras feitas na plataforma do Windows.
 
 ## <a name="windows-10-build-15063---march-2017"></a>Windows 10 build 15063 - março de 2017
 

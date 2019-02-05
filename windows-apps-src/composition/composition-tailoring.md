@@ -5,14 +5,14 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e6252ce3d2e213602250f6c24f8867767accecbe
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bcc9a6d89a143d8fd03d73dbd83b832ed9513ee2
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922588"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058707"
 ---
-# <a name="tailoring-effects--experiences-using-windows-ui"></a>Adaptar efeitos e experiências usando a interface do usuário do Windows
+# <a name="tailoring-effects--experiences-using-windows-ui"></a>Adaptar efeitos & experiências usando a interface do usuário do Windows
 
 Interface do usuário do Windows fornece muitos belos efeitos, animações e meios para diferenciação. No entanto, atendendo às expectativas do usuário para desempenho e personalização ainda é uma parte fundamental da criação de aplicativos com êxito. A plataforma Universal do Windows dá suporte a uma grande e diversificada família de dispositivos, que têm diferentes recursos e funcionalidades. Para proporcionar uma experiência inclusiva para todos os seus usuários, você precisa garantir que sua escala de aplicativos em dispositivos e respeitar as preferências do usuário. Adaptar de interface do usuário pode fornecer uma maneira eficiente para aproveitar os recursos do dispositivo e garantir uma experiência de usuário agradável e inclusivo.
 
@@ -22,7 +22,7 @@ Adaptar de interface do usuário é uma categoria ampla como englobar trabalho e
 - Acomodar configurações do usuário para animações
 - Otimizar a interface do usuário para os recursos de hardware determinado
 
-Aqui, abordaremos como adaptar seu efeitos e animações com a camada Visual nas áreas acima, mas há muitos outros meios para adaptar seu aplicativo para garantir uma experiência excelente usuário final. Documentos orientações estão disponíveis em como [adaptar sua interface do usuário](/design/layout/screen-sizes-and-breakpoints-for-responsive-design.md) para vários dispositivos e [criar a interface do usuário responsiva](/design/layout/responsive-design.md).
+Aqui, abordaremos como adaptar seu efeitos e animações com a camada Visual nas áreas acima, mas há muitos outros meios para adaptar seu aplicativo para garantir uma experiência excelente usuário final. Documentos orientações estão disponíveis em como [adaptar sua interface do usuário](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design) para vários dispositivos e [criar a interface do usuário responsiva](/windows/uwp/design/layout/responsive-design).
 
 ## <a name="user-effects-settings"></a>Configurações de efeitos de usuário
 
@@ -30,7 +30,7 @@ Os usuários podem personalizar a experiência do Windows por vários motivos, q
 
 ### <a name="transparency-effects-settings"></a>Configurações de efeitos de transparência
 
-Efeitos de transparência ativar/desativar a transformação é uma configuração assim efeito os usuários podem personalizar. Isso pode ser encontrado no aplicativo configurações em personalização > cores, ou por meio do aplicativo Configurações > facilidade de acesso > exibição.
+Efeitos de transparência ativar/desativar a transformação é uma configuração assim efeito os usuários podem personalizar. Isso pode ser encontrado no aplicativo configurações em personalização gt _ cores ou por meio de configurações aplicativo gt _ facilidade de acesso gt _ exibição.
 
 ![Opção de transparência nas configurações](images/tailoring-transparency-setting.png)
 
@@ -59,7 +59,7 @@ private void Uisettings_AdvancedEffectsEnabledChanged(UISettings sender, object 
 
 ## <a name="animations-settings"></a>Configurações de animações
 
-Da mesma forma, os aplicativos devem ouvir e responder à propriedade [UISettings.AnimationsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.animationsenabled) para garantir que animações são ativadas ou desativado com base nas configurações do usuário em Configurações > facilidade de acesso > exibição.
+Da mesma forma, os aplicativos devem ouvir e responder à propriedade [UISettings.AnimationsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.animationsenabled) para garantir que as animações são ativadas ou desativada com base nas configurações do usuário em Configurações gt _ facilidade de acesso gt _ exibição.
 
 ![Opção de animações em configurações](images/tailoring-animations-setting.png)
 

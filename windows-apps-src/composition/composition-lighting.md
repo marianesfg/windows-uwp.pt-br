@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d8c33504fcc785aa2f1fc94796e47fe097fbea96
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5182981483069d42339ad71a5347dc9c6c36ed58
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931529"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058737"
 ---
 # <a name="using-lights-in-windows-ui"></a>Uso de luzes na interface do usuário do Windows
 
@@ -22,7 +22,7 @@ As APIs Windows.UI.Composition permitem que você crie efeitos e animações em 
 Iluminação de composição permite que você crie interessantes da interface do usuário, permitindo que:
 
 - Transformação de uma luz independente de outros objetos na cena para habilitar cenários imersivos como cenas de reprodução de música.
-- A capacidade de emparelhar um objeto com uma luz para que eles se movam juntos independente do restante da cena para habilitar cenários como fluente [Revelar](/design/style/reveal.md) destaque.
+- A capacidade de emparelhar um objeto com uma luz para que eles se movam juntos independente do restante da cena para habilitar cenários como fluente [Revelar](/design/style/reveal) destaque.
 - Transformação de luz e cena inteira como um grupo para criar materiais e profundidade.
 
 Iluminação de composição dá suporte a três principais conceitos: **luz**, **destinos**e **SceneLightingEffect**.
@@ -74,7 +74,7 @@ Conceito | Detalhes
 **A luz ambiente** | Adicionando um não-a luz a sua cena desativará todas as luzes existentes.  Itens não direcionados por um não-a luz aparecerá em pretos.  Para iluminar elementos visuais ao redor não direcionados pela luz de uma maneira natural, use uma luz ambiente em conjunto com outras luzes.
 **Número de luzes** | Você pode usar qualquer duas luzes de composição não ambiente em qualquer combinação de sua interface do usuário de destino. Luzes ambiente não são restritas; ponto, ponto e luzes distantes são.
 **Tempo de vida** | CompositionLight pode enfrentar condições de tempo de vida (exemplo: o coletor de lixo pode reciclar o objeto de luz antes que ele seja usado).  É recomendável manter uma referência ao seus luzes adicionando luzes como um membro para ajudar a gerenciar o ciclo de vida o aplicativo.
-**Transformações** | Luzes devem ser colocadas em um nó acima da interface do usuário que usa efeitos, como [transformações de perspectiva](/design/layout/3-d-perspective-effects.md) na sua estrutura visual para ser desenhado corretamente.
+**Transformações** | Luzes devem ser colocadas em um nó acima da interface do usuário que usa efeitos, como [transformações de perspectiva](/design/layout/3-d-perspective-effects) na sua estrutura visual para ser desenhado corretamente.
 **Destinos e espaço de coordenadas** | CoordinateSpace é o espaço visual no qual todas as propriedades de luzes devem ser definidas. CompositionLight.Targets deve ser dentro da árvore de CoordinateSpace.
 
 ## <a name="lighting-properties"></a>Propriedades de iluminação

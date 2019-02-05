@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ef1814443b3831e514eafb3f5a0c58b7703126b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2235e8781d8a795145c7080bfd846c58b6253629
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947918"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049220"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>Portabilidade do WindowsPhone Silverlight para UWP para e/s, dispositivo e modelo de aplicativo
 
@@ -72,7 +72,7 @@ Um aplicativo do WindowsPhone Silverlight pode usar a classe **devicestatus** pa
 | Windows Phone Silverlight                                                               | UWP                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Propriedades **ApplicationCurrentMemoryUsage** e **ApplicationCurrentMemoryUsageLimit** | Propriedades [**MemoryManager.AppMemoryUsage**](https://msdn.microsoft.com/library/windows/apps/dn633832) e [**AppMemoryUsageLimit**](https://msdn.microsoft.com/library/windows/apps/dn633836)                                                                                                                                    |
-| Propriedade **ApplicationPeakMemoryUsage**                                                 | Use as ferramentas de criação de perfil de memória no Visual Studio. Para saber mais, veja [Analisar o uso da memória](http://msdn.microsoft.com/library/windows/apps/dn645469.aspx).                                                                                                                                                                          |
+| Propriedade **ApplicationPeakMemoryUsage**                                                 | Use as ferramentas de criação de perfil de memória no Visual Studio. Para saber mais, veja [Analisar o uso da memória](https://msdn.microsoft.com/library/windows/apps/dn645469.aspx).                                                                                                                                                                          |
 | Propriedade **DeviceFirmwareVersion**                                                      | Propriedade [**EasClientDeviceInformation.SystemFirmwareVersion**](https://msdn.microsoft.com/library/windows/apps/dn608144) (somente para famílias de dispositivos de desktop)                                                                                                                                                                             |
 | Propriedade **DeviceHardwareVersion**                                                      | Propriedade [**EasClientDeviceInformation.SystemHardwareVersion**](https://msdn.microsoft.com/library/windows/apps/dn608145) (somente família de dispositivos de desktop)                                                                                                                                                                             |
 | Propriedade **DeviceManufacturer**                                                         | Propriedade [**EasClientDeviceInformation.SystemManufacturer**](https://msdn.microsoft.com/library/windows/apps/hh701398) (somente família de dispositivos de desktop)                                                                                                                                                                                |

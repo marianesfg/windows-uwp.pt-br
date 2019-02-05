@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b109dff2896d2db01892d2b62a511d392f8054b3
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 692b8837f3bd74dfc5f74bee02786213c9a898f2
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037158"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058517"
 ---
 # <a name="text-block"></a>Bloco de texto
 
@@ -80,7 +80,7 @@ Você também pode adicionar conteúdo ao colocar elementos de conteúdo de flux
     <Italic>italic</Italic>, or a <Bold><Italic>combination</Italic></Bold>.</TextBlock>
 ```
 
-Elementos derivados da classe Inline, como Bold, Italic, Run, Span e LineBreak, permitem formatações diferentes para diferentes partes do texto. Para obter mais informações, consulte a seção [Formatação do texto](). O elemento Hyperlink embutido permite adicionar um hiperlink ao seu texto. No entanto, usar Inlines também desabilita a renderização de texto de caminho rápido, que será discutida na próxima seção.
+Elementos derivados da classe Inline, como Bold, Italic, Run, Span e LineBreak, permitem formatações diferentes para diferentes partes do texto. Para obter mais informações, consulte a seção [Formatação do texto](#formatting-text). O elemento Hyperlink embutido permite adicionar um hiperlink ao seu texto. No entanto, usar Inlines também desabilita a renderização de texto de caminho rápido, que será discutida na próxima seção.
 
 
 ## <a name="performance-considerations"></a>Considerações sobre desempenho

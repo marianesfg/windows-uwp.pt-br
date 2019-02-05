@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introdução, uwp, o windows 10, acompanhamento de aprendizado, layout, formulário
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1c316ac97211e85b782bdbf8f5642889a7726a95
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 45c4acda953808a85363d1cec7c623dd79cc08f1
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037041"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058527"
 ---
 # <a name="create-and-customize-a-form"></a>Criar e personalizar um formulário
 
@@ -135,7 +135,7 @@ Ao criar layouts mais complexos com mais elementos visuais, é recomendado consu
 
 Embora você tenha criado um formulário aqui, os conceitos de layouts e controles são aplicáveis em todas as interfaces do usuário XAML que você pode construir. Fique à vontade para consultar os documentos que você e experimentar com a forma que você tiver, adicionando novos recursos de interface do usuário e aperfeiçoando a experiência do usuário. Se você quiser orientações passo a passo por meio de recursos de layout mais detalhadas, consulte nosso [tutorial de layout adaptável](../design/basics/xaml-basics-adaptive-layout.md)
 
-Os formulários também não precisam existir no vácuo: você pode ir além e incorporar o seu em um [padrão principal/detalhes](../design/controls-and-patterns/master-details.md) ou de um [controle de pivot](../design/controls-and-patterns/tabs-pivot.md). Ou se quiser começar a trabalhar no código por trás do formulário, é recomendado começar com a [visão geral dos eventos](../xaml-platform/events-and-routed-events-overview.md).
+Os formulários também não precisam existir no vácuo: você pode ir além e incorporar o seu em um [padrão principal/detalhes](../design/controls-and-patterns/master-details.md) ou de um [controle de pivot](../design/controls-and-patterns/pivot.md). Ou se quiser começar a trabalhar no código por trás do formulário, é recomendado começar com a [visão geral dos eventos](../xaml-platform/events-and-routed-events-overview.md).
 
 ## <a name="useful-apis-and-docs"></a>APIs e documentos úteis
 
@@ -161,7 +161,7 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 | [Formulários](../design/controls-and-patterns/forms.md) | Diretrizes gerais para a criação de formulários. |
 | [Painéis de layout](../design/layout/layout-panels.md) | Fornece uma visão geral dos tipos de painéis de layout e de onde usá-los. |
 | [Padrão mestre/detalhes](../design/controls-and-patterns/master-details.md) | Um padrão de design que pode ser implementado em um ou vários formulários. |
-| [Controle Pivot](../design/controls-and-patterns/tabs-pivot.md) | Um controle que pode conter um ou vários formulários. |
+| [Controle Pivot](../design/controls-and-patterns/pivot.md) | Um controle que pode conter um ou vários formulários. |
 | [Design dinâmico](../design/layout/responsive-design.md) | Uma visão geral dos princípios de design dinâmico em grande escala. | 
 | [Layouts dinâmicos com o XAML](../design/layout/layouts-with-xaml.md) | Informações específicas sobre estados visuais e outras implementações de design dinâmico. |
 | [Tamanho de tela para design dinâmico](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md) | Orientações na tela sobre quais tamanhos de tela devem estar no escopo de layouts dinâmicos. |

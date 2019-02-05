@@ -6,12 +6,12 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b0ed1c7f01e8cb06f6950f2ad23a42605e97c1a0
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 80f9c8bad9445bd9cfef9b09c00f99929fda37aa
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050729"
+ms.locfileid: "9058657"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar correções de tempo de execução em um pacote MSIX usando a estrutura de suporte do pacote
 
@@ -86,7 +86,7 @@ Vamos percorra cada tarefa.
 
 ### <a name="create-the-package-layout-folder"></a>Criar a pasta de layout do pacote
 
-Se já tiver um arquivo .msix (ou. AppX), você pode descompactar seu conteúdo em uma pasta de layout que servirá como a área de transferência para seu pacote. Você pode fazer isso em um prompt de comando usando a ferramenta makemsix, com base no seu caminho de instalação do SDK, isso é onde você encontrará a ferramenta makeappx.exe em seu computador Windows 10: x86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makeappx.exe x64: C:\Program Files ( x86) \Windows Kits\10\bin\x64\makeappx.exe
+Se já tiver um arquivo .msix (ou. AppX), você pode descompactar seu conteúdo em uma pasta de layout que servirá como a área de transferência para seu pacote. Você pode fazer isso em um prompt de comando usando a ferramenta MakeAppx, com base em seu caminho de instalação do SDK, isso é onde você encontrará a ferramenta makeappx.exe em seu computador Windows 10: x86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makeappx.exe x64: C:\Program Files ( x86) \Windows Kits\10\bin\x64\makeappx.exe
 
 ```ps
 makeappx unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
@@ -514,7 +514,7 @@ Enquanto o Visual Studio oferece o desenvolvimento mais simples e a experiência
 
 Primeiro, a depuração F5 executa o aplicativo Implantando arquivos soltos do caminho de pasta de layout do pacote, em vez de instalando a partir de um .msix / pacote. AppX.  A pasta de layout normalmente não tem as mesmas restrições de segurança como uma pasta de pacote instalado. Como resultado, talvez não seja possível reproduzir erros de negação de acesso de caminho de pacote antes da aplicação de uma correção de tempo de execução.
 
-Para resolver esse problema, use .msix / implantação do pacote. AppX em vez de F5 solto implantação do arquivo.  Para criar um .msix /. AppX empacotar um arquivo, use o utilitário [MakeMSIX](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) do SDK do Windows, conforme descrito acima. Ou, de dentro do Visual Studio, clique com botão direito o nó do seu projeto de aplicativo e selecione **Store**->**Criar pacotes de aplicativo**.
+Para resolver esse problema, use .msix / implantação do pacote. AppX em vez de F5 solto implantação do arquivo.  Para criar um .msix /. AppX empacotar um arquivo, use o utilitário [MakeAppx](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) do SDK do Windows, conforme descrito acima. Ou, de dentro do Visual Studio, clique com botão direito o nó do seu projeto de aplicativo e selecione **Store**->**Criar pacotes de aplicativo**.
 
 Outro problema com o Visual Studio é que ele não tem suporte interno para anexar a quaisquer processos filho iniciados pelo depurador.   Isso dificulta depurar a lógica no caminho de inicialização do aplicativo de destino deve ser anexado manualmente pelo Visual Studio após a inicialização.
 

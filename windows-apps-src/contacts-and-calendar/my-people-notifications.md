@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: db25954b7fc6541ac5f5900236e61cb8da488be6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e4657c9dfb651c1e7f6bb4e2cafdc49d0a11237b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922377"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058717"
 ---
 # <a name="my-people-notifications"></a>Notificações de Minhas Pessoas
 
@@ -78,7 +78,7 @@ Além disso, o nó de nível superior da notificação do sistema deve incluir o
 > Se seu app utiliza as [APIs de ContactStore](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) e utiliza a propriedade [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para associar contatos armazenados no computador com contatos armazenados remotamente, é fundamental que o valor para a propriedade RemoteId seja estável e exclusivo. Isso significa que a ID remota deve identificar de modo consistente uma única conta de usuário e deve manter uma única marca para garantir que ela não entrará em conflito com as IDs remotas de outros contatos no computador, incluindo contatos que são de propriedade de outros apps.
 > Se as IDs remotas usadas por seu app não forem com certeza estáveis e exclusivas, você poderá usar a [classe RemoteIdHelper](https://msdn.microsoft.com/en-us/library/windows/apps/jj207024(v=vs.105).aspx#BKMK_UsingtheRemoteIdHelperclass) para adicionar uma marca exclusiva a todas as IDs remotas antes de adicioná-las ao sistema. Como alternativa, você pode optar por não usar a propriedade RemoteId e criar uma propriedade estendida personalizada na qual armazenará as IDs remotas de seus contatos.
 
-Além da segunda associação e conteúdo, você deve incluir outra conteúdo na primeira associação para a notificação do sistema de fallback. A notificação usará isso se precisar voltar a ser uma notificação do sistema regular (esse assunto será abordado em detalhes no [final deste artigo](https://review.docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications#falling-back-to-toast)).
+Além da segunda associação e conteúdo, você deve incluir outra conteúdo na primeira associação para a notificação do sistema de fallback. A notificação usará isso se precisar voltar a ser uma notificação do sistema regular (esse assunto será abordado em detalhes no [final deste artigo](/windows/uwp/contacts-and-calendar/my-people-notifications#falling-back-to-toast)).
 
 ## <a name="creating-the-notification"></a>Criando a notificação
 Você pode criar um modelo de notificação de Minhas Pessoas exatamente como faria com uma [notificação do sistema](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md).

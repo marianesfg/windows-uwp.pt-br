@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fd6accd3082c141d9288dba5c6156132188c214b
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 5451e0dd94510873f87b981a817fb55ba2c4f985
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037238"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049773"
 ---
 # <a name="images-and-image-brushes"></a>Imagens e pincéis de imagem
 
@@ -155,7 +155,7 @@ Para obter mais informações sobre como desenvolver para dimensionamento, consu
 
 É comum especificar os elementos Image e ImageBrush usando XAML em vez de código. Isso ocorre porque esses elementos costumam ser a saída das ferramentas de design como parte de uma definição da interface do usuário do XAML.
 
-Se você definir um Image ou ImageBrush usando código, use os construtores padrão e defina a propriedade relevante ([Image.Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) ou [ImageBrush.ImageSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)). As propriedades de source exigem um [BitmapImage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx) (não um URI) quando você os define usando código. Se a sua origem for um fluxo, use o método [SetSourceAsync](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx) para inicializar o valor. Se sua origem for um URI que inclua conteúdo no seu aplicativo que usa o esquema **ms-appx** ou **ms-resource**, use o construtor [BitmapImage](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx) que inclui um URI. Você também pode considerar a manipulação do evento [ImageOpened](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx) se houver algum problema de temporização com a recuperação ou decodificação da origem da imagem, onde você pode precisar de conteúdo alternativo para exibir até que a origem da imagem esteja disponível. Consulte um código de amostra em [Amostra de imagens XAML](http://go.microsoft.com/fwlink/p/?linkid=238575).
+Se você definir um Image ou ImageBrush usando código, use os construtores padrão e defina a propriedade relevante ([Image.Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) ou [ImageBrush.ImageSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)). As propriedades de source exigem um [BitmapImage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx) (não um URI) quando você os define usando código. Se a sua origem for um fluxo, use o método [SetSourceAsync](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx) para inicializar o valor. Se sua origem for um URI que inclua conteúdo no seu aplicativo que usa o esquema **ms-appx** ou **ms-resource**, use o construtor [BitmapImage](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx) que inclui um URI. Você também pode considerar a manipulação do evento [ImageOpened](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx) se houver algum problema de temporização com a recuperação ou decodificação da origem da imagem, onde você pode precisar de conteúdo alternativo para exibir até que a origem da imagem esteja disponível. Consulte um código de amostra em [Amostra de imagens XAML](https://go.microsoft.com/fwlink/p/?linkid=238575).
 
 > [!NOTE]
 > Se você definir as imagens usando código, poderá usar a manipulação automática para acessar recursos não qualificados com os qualificadores atuais de escala e cultura ou usar [ResourceManager](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) e [ResourceMap](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) com qualificadores de escala e cultura para obter esses recursos diretamente. Para saber mais, veja [Sistema de gerenciamento de recursos](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).

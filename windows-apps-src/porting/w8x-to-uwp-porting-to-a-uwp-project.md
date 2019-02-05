@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 428f6787dfeb18d7ebf02f96acea2a6ab55c7fe7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c7a40d81171113656a39dda2fe02e0701fdd8ba4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938587"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050356"
 ---
 # <a name="porting-a-windows-runtime-8x-project-to-a-uwp-project"></a>Portabilidade de um projeto do Windows Runtime 8.x para um projeto UWP
 
@@ -39,7 +39,7 @@ Você descobrirá que refatorar um pouco, e/ou adicionar código adaptável (que
 -   Você poderá remover muitas diretivas de compilação condicional no código-fonte do seu aplicativo Universal 8.1 caso precise somente para dar suporte ao Windows 10. Consulte [Compilação condicional e código adaptável](#conditional-compilation-and-adaptive-code) neste tópico.
 -   Para usar recursos que não estejam disponíveis em todas as famílias de dispositivos (por exemplo, impressoras, scanners ou o botão da câmera), você pode escrever um código adaptável. Consulte o terceiro exemplo em [Compilação condicional e código adaptável](#conditional-compilation-and-adaptive-code) neste tópico.
 -   Se você quiser dar suporte do Windows 8.1, Windows Phone 8.1 e Windows 10, você pode manter três projetos na mesma solução e compartilhar código com um projeto compartilhado. Como alternativa, você pode compartilhar arquivos de código-fonte entre projetos. Veja como: no Visual Studio, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções**, selecione **Adicionar Item Existente**, selecione os arquivos a serem compartilhados e clique em **Adicionar como Link**. Armazene seus arquivos de código-fonte em uma pasta comum no sistema de arquivos onde os projetos vinculados a eles possam vê-los. E não se esqueça de adicioná-los ao controle do código-fonte.
--   Para reutilização no nível binário, em vez do nível do código-fonte, consulte [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](http://msdn.microsoft.com/library/windows/apps/xaml/br230301.aspx). Também há bibliotecas de classes portáteis, que oferecem suporte a subconjunto de APIs .NET que estão disponíveis no .NET Framework para Windows 8.1, Windows Phone 8.1 e aplicativos do Windows 10 (.NET Core) e o .NET Framework completo. Os assemblies da Biblioteca de Classes Portáteis são compatíveis com binários em todas essas plataformas. Use o Visual Studio para criar um projeto direcionado a uma Biblioteca de Classes Portátil. Confira [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](http://msdn.microsoft.com/library/gg597391.aspx).
+-   Para reutilização no nível binário, em vez do nível do código-fonte, consulte [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](https://msdn.microsoft.com/library/windows/apps/xaml/br230301.aspx). Também há bibliotecas de classes portáteis, que oferecem suporte a subconjunto de APIs .NET que estão disponíveis no .NET Framework para Windows 8.1, Windows Phone 8.1 e aplicativos do Windows 10 (.NET Core) e o .NET Framework completo. Os assemblies da Biblioteca de Classes Portáteis são compatíveis com binários em todas essas plataformas. Use o Visual Studio para criar um projeto direcionado a uma Biblioteca de Classes Portátil. Confira [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](https://msdn.microsoft.com/library/gg597391.aspx).
 
 ## <a name="extension-sdks"></a>SDKs de Extensão
 
@@ -172,8 +172,8 @@ O próximo tópico é [Solução de problemas](w8x-to-uwp-troubleshooting.md).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Desenvolver aplicativos para a Plataforma Universal do Windows](http://msdn.microsoft.com/library/dn975273.aspx)
+* [Desenvolver aplicativos para a Plataforma Universal do Windows](https://msdn.microsoft.com/library/dn975273.aspx)
 * [Iniciar rapidamente seu tempo de execução do Windows 8. x aplicativo usando modelos (c#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Criando componentes do Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
-* [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](http://msdn.microsoft.com/library/gg597391.aspx)
+* [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](https://msdn.microsoft.com/library/gg597391.aspx)
 

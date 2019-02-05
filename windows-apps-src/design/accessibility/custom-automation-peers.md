@@ -8,12 +8,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 18d3affe5f142c56314d132ba488d87c6f285723
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 13bf5d60b547f71d0cd83e5790236534d05d2544
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920130"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050529"
 ---
 # <a name="custom-automation-peers"></a>Pares de automação personalizados  
 
@@ -318,7 +318,7 @@ Para obter uma lista dos padrões de provedor disponíveis na implementação do
 
 Um par pode relatar que dá suporte a mais de um padrão. Nesse caso, a substituição deve incluir a lógica do caminho de retorno para cada valor de [**PatternInterface**](https://msdn.microsoft.com/library/windows/apps/BR242496) com suporte e retornar o par a cada correspondência. Espera-se que o chamador solicite apenas uma interface por vez e o chamador decide se deve fazer a conversão para a interface esperada.
 
-Consulte um exemplo da uma substituição de [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) para um par personalizado. Ele relata o suporte a dois padrões, [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) e [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653). Este é um controle de exibição de mídia que pode ser mostrado em tela inteira (o modo de alternância) e tem uma barra de progresso na qual os usuários podem escolher uma posição (o controle de intervalo). Esse código vem do [Exemplo de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570).
+Consulte um exemplo da uma substituição de [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) para um par personalizado. Ele relata o suporte a dois padrões, [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) e [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653). Este é um controle de exibição de mídia que pode ser mostrado em tela inteira (o modo de alternância) e tem uma barra de progresso na qual os usuários podem escolher uma posição (o controle de intervalo). Esse código vem do [Exemplo de acessibilidade XAML](https://go.microsoft.com/fwlink/p/?linkid=238570).
 
 
 ```csharp
@@ -538,7 +538,7 @@ Além disso, os pares devem ser relativamente conservadores no que diz respeito 
 
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [Acessibilidade](accessibility.md)
-* [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Amostra de acessibilidade XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472)
 * [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185)
 * [**OnCreateAutomationPeer**](https://msdn.microsoft.com/ibrary/windows/apps/windows.ui.xaml.uielement.oncreateautomationpeer)

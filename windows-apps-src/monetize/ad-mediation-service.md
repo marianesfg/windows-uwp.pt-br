@@ -5,16 +5,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, controle de anúncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f4041c21665bd77856b15b7e94e45d613d6ea51
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9197dd4b62df26ff63e469063573789da948c767
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945748"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049813"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Serviço de controle de anúncios da Microsoft
 
-Quando você usa o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp) para [exibir anúncios em seus aplicativos](display-ads-in-your-app.md), como alternativa você pode usar o serviço de controle de anúncios da Microsoft para maximizar a receita dos anúncios. Este artigo fornece uma visão geral do serviço de controle de anúncios e suas metas.
+Quando você usa o [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp) para [exibir anúncios em seus aplicativos](display-ads-in-your-app.md), como alternativa você pode usar o serviço de controle de anúncios da Microsoft para maximizar a receita dos anúncios. Este artigo fornece uma visão geral do serviço de controle de anúncios e suas metas.
 
 O serviço de controle de anúncios é parte da [plataforma de monetização de anúncios da Microsoft](https://developer.microsoft.com/windows/ad-monetization-platform). A plataforma é composta pelas seguintes partes.
 
@@ -55,6 +55,6 @@ O serviço de controle de anúncios funciona com várias redes de anúncios para
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp)
+* [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp)
 * [Configurações de controle](../publish/in-app-ads.md#mediation-settings)
 * [Relatório de desempenho de anúncios](../publish/advertising-performance-report.md)

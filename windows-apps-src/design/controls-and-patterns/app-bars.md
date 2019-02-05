@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f642466137320732ccbee9ceea859a7fb954f1e
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 3d2a7d34f00d40429863f08ffe6a9c34222daa32
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036948"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050023"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
@@ -277,7 +277,7 @@ As barras de comandos podem ser posicionadas nas seguintes regiões da tela, em 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
 - [Exemplo de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - Veja todos os controles XAML em um formato interativo.
-- [Exemplo de execução de comandos XAML](http://go.microsoft.com/fwlink/p/?LinkId=620019)
+- [Exemplo de execução de comandos XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ## <a name="related-articles"></a>Artigos relacionados
 

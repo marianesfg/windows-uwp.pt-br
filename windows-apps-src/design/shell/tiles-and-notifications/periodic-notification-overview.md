@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f7a5054fde1a1a24945b193f578b8389519dc2d5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7a3bf2ce69105787b7ca9e83c7f7fe5db8ae1038
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918622"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050509"
 ---
 # <a name="periodic-notification-overview"></a>Visão geral de notificações periódicas
  
@@ -25,7 +25,7 @@ Notificações periódicas, que são chamadas também de notificações de sonda
 
 As notificações periódicas permitem que seu aplicativo obtenha atualizações de bloco em tempo real com serviço de nuvem mínimo e pouco investimento do cliente. As notificações periódicas são um método de entrega excelente para distribuir o mesmo conteúdo a uma ampla audiência.
 
-**Observação**  você pode saber mais baixando a [amostra de notificações periódicas e por Push](http://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 e reutilizando seu código-fonte em seu aplicativo do Windows 10.
+**Observação**  você pode saber mais baixando a [amostra de notificações periódicas e por Push](https://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 e reutilizando seu código-fonte em seu aplicativo do Windows 10.
 
  
 
@@ -77,7 +77,7 @@ Se você lançar uma atualização de aplicativo que altere seu URI de sondagem,
 
 Por padrão, as notificações periódicas de bloco e de selo expiram três dias depois que são baixadas. Quando uma notificação expira, o conteúdo é removido do selo, do bloco ou da fila e não é mais mostrado para o usuário. É recomendável definir um horário de expiração explícito em todas as notificações de bloco e de selo periódicas usando um tempo que faça sentido para o aplicativo ou notificação, para garantir que o conteúdo do bloco não continue além do tempo relevante. Um tempo de expiração explícito é essencial para conteúdo com tempo de vida definido. Isso também garante a remoção de conteúdo obsoleto se seu serviço de nuvem se tornar inacessível ou se o usuário se desconectar da rede por um período de tempo prolongado.
 
-Seu serviço de nuvem configura uma data de expiração e hora para uma notificação incluindo o cabeçalho HTTP X-WNS-Expire na carga da resposta. O cabeçalho HTTP X-WNS-Expires está em conformidade com o [formato de data HTTP](http://go.microsoft.com/fwlink/p/?linkid=253706). Para saber mais, veja [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) ou [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_).
+Seu serviço de nuvem configura uma data de expiração e hora para uma notificação incluindo o cabeçalho HTTP X-WNS-Expire na carga da resposta. O cabeçalho HTTP X-WNS-Expires está em conformidade com o [formato de data HTTP](https://go.microsoft.com/fwlink/p/?linkid=253706). Para saber mais, veja [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) ou [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_).
 
 Por exemplo, durante um dia de negociação ativo do mercado de ações, você pode definir a expiração de uma atualização de preços de ações para duas vezes mais do que seu intervalo de sondagem (por exemplo, uma hora após o recebimento, se estiver sondando a cada meia hora). Outro exemplo é um aplicativo de notícias que pode determinar que um dia é um período de expiração adequado para a atualização de blocos de notícias diárias.
 

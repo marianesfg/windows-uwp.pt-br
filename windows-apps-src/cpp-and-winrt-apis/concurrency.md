@@ -5,12 +5,12 @@ ms.date: 10/27/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
-ms.openlocfilehash: c0c9a0912b0287d45633aeec4dbb643e7959c215
-ms.sourcegitcommit: 4ee300bfa6a238d3ce7674036ec1c574bb025210
+ms.openlocfilehash: f3283ffa5fa047806befa2712301c25a7d07af8e
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "9029929"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058797"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Simultaneidade e operações assíncronas com C++/WinRT
 
@@ -289,7 +289,7 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
 }
 ```
 
-O código acima gera uma exceção [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/hresult-wrong-thread), pois um **TextBlock** deve ser atualizado a partir do thread que o gerou, ou seja, um thread da interface do usuário. Uma solução é capturar o contexto do thread no qual a corrotina foi chamada originalmente. Para fazer isso, instanciar um objeto [**WinRT:: apartment_context**](/uwp/cpp-ref-for-winrt/apartment-context) , de trabalho, em segundo plano e, em seguida, `co_await` o **apartment_context** para voltar ao contexto de chamada.
+O código acima gera uma exceção [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/error-handling/hresult-wrong-thread), pois um **TextBlock** deve ser atualizado a partir do thread que o gerou, ou seja, um thread da interface do usuário. Uma solução é capturar o contexto do thread no qual a corrotina foi chamada originalmente. Para fazer isso, instanciar um objeto [**WinRT:: apartment_context**](/uwp/cpp-ref-for-winrt/apartment-context) , de trabalho, em segundo plano e, em seguida, `co_await` o **apartment_context** para voltar ao contexto de chamada.
 
 ```cppwinrt
 IAsyncAction DoWorkAsync(TextBlock textblock)

@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b09e90ea71872421a0caf1edcc1a03ce25fef42
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f6868975f793bf504dac167bf4d57d2574ddc0e9
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930657"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058637"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Projetar para TV e Xbox
 
@@ -933,9 +933,9 @@ Um [Pivot](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.contr
 
 ![Sublinhado dinâmico](images/designing-for-tv/pivot-underline.png)
 
-Você pode definir a propriedade [Pivot.IsHeaderItemsCarouselEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabled.aspx) como `true` para que os pivôs sempre mantenham a mesma posição, em vez de fazer o cabeçalho dinâmico selecionado sempre se mover para a primeira posição. Essa é uma experiência melhor para exibições em tela grande, como a TV, pois a disposição do cabeçalho pode distrair os usuários. Se nem todos os cabeçalhos dinâmicos couberem na tela ao mesmo tempo, haverá uma barra de rolagem para permitir que os clientes vejam os outros cabeçalhos; entretanto, você deveria garantir que todos eles se encaixassem na tela para proporcionar a melhor experiência. Para saber mais, consulte [Guias e pivôs](../controls-and-patterns/tabs-pivot.md).
+Você pode definir a propriedade [Pivot.IsHeaderItemsCarouselEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabled.aspx) como `true` para que os pivôs sempre mantenham a mesma posição, em vez de fazer o cabeçalho dinâmico selecionado sempre se mover para a primeira posição. Essa é uma experiência melhor para exibições em tela grande, como a TV, pois a disposição do cabeçalho pode distrair os usuários. Se nem todos os cabeçalhos dinâmicos couberem na tela ao mesmo tempo, haverá uma barra de rolagem para permitir que os clientes vejam os outros cabeçalhos; entretanto, você deveria garantir que todos eles se encaixassem na tela para proporcionar a melhor experiência. Para saber mais, consulte [Guias e pivôs](../controls-and-patterns/pivot.md).
 
-### <a name="navigation-pane-a-namenavigation-pane"></a>Painel de navegação <a name="navigation-pane">
+### <a name="navigation-pane-a-namenavigation-pane-"></a>Painel de navegação <a name="navigation-pane" />
 
 Um painel de navegação (também conhecido como *menu hambúrguer*) é um controle de navegação frequentemente usado em aplicativos UWP. Normalmente é um painel com várias opções para seleção em um menu de estilo de lista que levará o usuário a páginas diferentes. Em geral, esse painel começa recolhido para economizar espaço, e o usuário pode abri-lo clicando em um botão.
 

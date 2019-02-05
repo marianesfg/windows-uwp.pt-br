@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9dd47ce2acf78a76ad413d70ce8c3e7f39a793ea
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: f04d364aac79ed232f35cbdd8378bc50393d2c74
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048193"
+ms.locfileid: "9058507"
 ---
 # <a name="sound"></a>Som
 
@@ -118,7 +118,7 @@ ElementSoundPlayer.Play(ElementSoundKind.Hide);
 ```
 ### <a name="navigation-within-a-page"></a>Navegação dentro de uma página
 
-Ao navegar entre os painéis ou modos de exibição na página do aplicativo (consulte [guias e Pivôs](../controls-and-patterns/tabs-pivot.md)), normalmente há movimento bidirecional. Ou seja, você pode passar para o modo de exibição/painel próximo ou o anterior, sem sair da página atual do aplicativo.
+Ao navegar entre os painéis ou modos de exibição na página do aplicativo (consulte [guias e Pivôs](../controls-and-patterns/pivot.md)), normalmente há movimento bidirecional. Ou seja, você pode passar para o modo de exibição/painel próximo ou o anterior, sem sair da página atual do aplicativo.
 
 A experiência de áudio em torno esse conceito de navegação é englobada pelos sons **MovePrevious** e **MoveNext**.
 

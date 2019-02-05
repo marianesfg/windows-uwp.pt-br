@@ -9,12 +9,12 @@ dev_langs:
 - vb
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b4f5a2de5c3fa5564b4e4389cfc0806fd5d2844f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5a7f2d2db5670b0102f589fcd6d764a239d3bb3f
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928105"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058817"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Criando componentes do Windows Runtime em C# e Visual Basic
 Começando com o .NET Framework 4.5, você pode usar código gerenciado para criar seus próprios tipos de tempo de execução do Windows e empacotá-las em um componente do tempo de execução do Windows. Você pode usar o componente em aplicativos da plataforma Universal do Windows (UWP) que são escritos em C++, JavaScript, Visual Basic ou c#. Este tópico descreve as regras para a criação de um componente e descreve alguns aspectos do suporte do .NET Framework para o Windows Runtime. Em geral, esse suporte foi projetado para ser transparente para o programador do .NET Framework. No entanto, ao criar um componente a ser usado com JavaScript ou C++, você precisa estar ciente das diferenças na maneira como essas linguagens dão suporte ao Windows Runtime.
@@ -270,7 +270,7 @@ Ao acionar uma exceção no componente, você pode facilitar para um chamador Ja
 
 Quando você declara um tipo para manter os dados do evento, derive de Object, em vez de EventArgs, porque EventArgs não é um tipo do Windows Runtime. Use [**EventHandler&lt;TEventArgs&gt; **](https://msdn.microsoft.com/library/db0etb8x.aspx) como o tipo de evento e use o argumento do evento tipo como o argumento de tipo genérico. Acione o evento, assim como você faria em um aplicativo do .NET Framework.
 
-Quando o componente do Tempo de Execução do Windows é usado em JavaScript ou C++, o evento segue o padrão de evento do Windows Runtime que essas linguagens esperam. Quando você usa o componente de C# ou Visual Basic, o evento é exibido como um evento do .NET Framework comum. Um exemplo é dado em [Passo a passo: criação de um componente simples em C# ou Visual Basic e a chamada dele em JavaScript]().
+Quando o componente do Tempo de Execução do Windows é usado em JavaScript ou C++, o evento segue o padrão de evento do Windows Runtime que essas linguagens esperam. Quando você usa o componente de C# ou Visual Basic, o evento é exibido como um evento do .NET Framework comum. Um exemplo é dado em [Passo a passo: criação de um componente simples em C# ou Visual Basic e a chamada dele em JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript).
 
 Caso implemente acessadores de eventos personalizado (declarar um evento com a palavra-chave **Custom**, em Visual Basic), você deve seguir o padrão de evento do Windows Runtime na implementação. Consulte [Eventos personalizados e acessadores de evento em componentes do Windows Runtime](custom-events-and-event-accessors-in-windows-runtime-components.md). Quando você manipula o evento no código C# ou Visual Basic, ele ainda parece ser um evento do .NET Framework comum.
 

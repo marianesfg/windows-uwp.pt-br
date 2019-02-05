@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 88b35c4ebc7e3b3f5c047ed5e1cef9d46a011909
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 6578ddfd077e121e0eca5a5fcc8c06cdec26aa42
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037018"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058607"
 ---
 # <a name="scroll-viewer-controls"></a>Controles do visualizador de rolagem
 
@@ -143,7 +143,7 @@ Para os casos em que um ScrollViewer é explícito na sua XAML, conforme mostrad
 - Se você deseja que o usuário aplique movimento panorâmico em ambas as direções por uma área maior, além de possivelmente utilizar zoom também, por exemplo, se você deseja permitir que o usuário aplique movimento panorâmico e zoom em uma imagem de tamanho inteiro (em vez de uma imagem dimensionada para caber na tela), então posicione a imagem dentro de um visualizador de rolagem.
 - Se o usuário fará a rolagem por uma longa passagem de texto, configure o visualizador de rolagem para fazer somente a rolagem vertical.
 - Utilize um visualizador de rolagem para conter somente um objeto. Observe que esse objeto pode ser um painel de layout, que por sua vez pode conter em si qualquer determinado número de objetos.
-- Não coloque um controle [Pivot](tabs-pivot.md) dentro de um visualizador de rolagem para evitar conflitos de rolagem de pivô.
+- Não coloque um controle [Pivot](pivot.md) dentro de um visualizador de rolagem para evitar conflitos de rolagem de pivô.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 

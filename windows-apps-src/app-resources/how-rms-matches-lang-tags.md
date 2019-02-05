@@ -6,12 +6,12 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 4914a448432206e2418fe110c0b49517a7145e0b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ccbfa5f06d336604160f98dd44c27cc0cf1b0aed
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937973"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050579"
 ---
 # <a name="how-the-resource-management-system-matches-language-tags"></a>Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma
 
@@ -21,7 +21,7 @@ O tópico anterior ([Como o Sistema de Gerenciamento de Recursos faz a correspon
 
 Os recursos com qualificadores de marca de idioma são comparados e classificados com base na lista de idiomas de tempo de execução do app. Para obter definições das diferentes listas de idiomas, consulte [Noções básicas sobre idiomas de perfil de usuário e idiomas de manifesto do app](../design/globalizing/manage-language-and-region.md). A correspondência do primeiro idioma em uma lista ocorre antes da correspondência do segundo idioma em uma lista, mesmo para outras variações regionais. Por exemplo, um recurso de en-GB será escolhido em detrimento de um recurso de fr-CA se o idioma de tempo de execução do app for en-US. Somente se não houver nenhum recurso para o formato en, um recurso para fr-CA será escolhido (observe que o idioma padrão do app não pôde ser definido para nenhum formato en nesse caso).
 
-O mecanismo de pontuação usa os dados incluídos no Registro de submarca [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302), além de outras fontes de dados. Ele permite um gradiente de pontuação com diferentes qualidades de correspondência e, quando vários candidatos estão disponíveis, seleciona aquele com a melhor pontuação de correspondência.
+O mecanismo de pontuação usa os dados incluídos no Registro de submarca [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302), além de outras fontes de dados. Ele permite um gradiente de pontuação com diferentes qualidades de correspondência e, quando vários candidatos estão disponíveis, seleciona aquele com a melhor pontuação de correspondência.
 
 Dessa forma, você pode marcar o conteúdo de idioma em termos genéricos, mas pode ainda especificar determinado conteúdo quando necessário. Por exemplo, o app pode ter várias cadeias de caracteres em inglês que são comuns aos Estados Unidos, à Grã-Bretanha e a outras regiões. A marcação dessas cadeias de caracteres como "en" (inglês) economiza espaço e sobrecarga de localização. Quando é necessário fazer distinções, como em uma cadeia de caracteres com a palavra "color/colour", as versões dos Estados Unidos e da Grã-Bretanha podem ser marcadas separadamente usando as submarcas de idioma e de região, como "en-US" e "en-GB", respectivamente.
 
@@ -74,7 +74,7 @@ As marcas correspondem às submarcas de idioma e script, mas diferem na região 
 
 #### <a name="macro-region-match"></a>Correspondência de macrorregião
 
-As tags correspondem às submarcas de idioma e script; ambas possuem submarcas de região, uma das quais denota uma macrorregião que abrange outra região. As submarcas de macroregião são sempre numéricas e derivadas dos códigos de área de país/região M.49 da Divisão de Estatística das Nações Unidas. Para ver detalhes sobre como englobar relacionamentos, consulte [Composição de macrorregiões geográficas (continentais), sub-regiões geográficas e agrupamentos econômicos e outros agrupamentos selecionados](http://go.microsoft.com/fwlink/p/?LinkId=247929).
+As tags correspondem às submarcas de idioma e script; ambas possuem submarcas de região, uma das quais denota uma macrorregião que abrange outra região. As submarcas de macroregião são sempre numéricas e derivadas dos códigos de área de país/região M.49 da Divisão de Estatística das Nações Unidas. Para ver detalhes sobre como englobar relacionamentos, consulte [Composição de macrorregiões geográficas (continentais), sub-regiões geográficas e agrupamentos econômicos e outros agrupamentos selecionados](https://go.microsoft.com/fwlink/p/?LinkId=247929).
 
 **Observação** Os códigos das Nações Unidas para "agrupamentos econômicos" ou "outros agrupamentos" não têm suporte na BCP-47.
  
@@ -126,7 +126,7 @@ Quando uma submarca de idioma tem um valor de Script de Supressão definido no R
 
 Às vezes, a correspondência ocorre como parte de um processo maior de correspondência de um único idioma com uma lista de idiomas. Por exemplo, pode haver uma correspondência de um recurso baseado em um único idioma com a lista de idiomas de um aplicativo. A pontuação da correspondência é ponderada pela posição do primeiro idioma correspondente na lista. Quanto mais baixa a posição do idioma na lista, mas baixa é a pontuação.
 
-Quando a lista de idiomas contém duas ou mais variantes regionais com as mesmas submarcas de idioma e script, as comparações da primeira marca de idioma são classificadas apenas para correspondências exatas, variantes e de região. A pontuação de correspondências parciais é adiada para a última variante regional. Dessa forma, os usuários podem controlar perfeitamente o comportamento da correspondência em sua lista de idiomas. O comportamento da correspondência pode incluir a precedência da correspondência exata de um item secundário na lista sobre uma correspondência parcial do primeiro item na lista, se houver um terceiro item que corresponda ao idioma e ao script do primeiro. Veja um exemplo a seguir.
+Quando a lista de idiomas contém duas ou mais variantes regionais com as mesmas submarcas de idioma e script, as comparações da primeira marca de idioma são classificadas apenas para correspondências exatas, variantes e de região. A pontuação de correspondências parciais é adiada para a última variante regional. Dessa forma, os usuários podem controlar perfeitamente o comportamento da correspondência em sua lista de idiomas. O comportamento da correspondência pode incluir a precedência da correspondência exata de um item secundário na lista sobre uma correspondência parcial do primeiro item na lista, se houver um terceiro item que corresponda ao idioma e ao script do primeiro. Veja um exemplo.
 
 - Lista de idiomas (em ordem): "pt-PT" (Português (Portugal)), "en-US" (Inglês (Estados Unidos)), "pt-BR" (Português (Brasil)).
 - Recursos: "en-US", "pt-BR".
@@ -189,6 +189,6 @@ O idioma inglês merece consideração especial. Se um app adicionar localizaç�
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Como o Sistema de Gerenciamento de Recursos faz a correspondência dos recursos e os escolhe](how-rms-matches-and-chooses-resources.md)
-* [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Noções básicas sobre idiomas de perfil de usuário e idiomas de manifesto do app](../design/globalizing/manage-language-and-region.md)
-* [Composição de macrorregiões geográficas (continentais), sub-regiões geográficas, e agrupamentos econômicos e outros agrupamentos selecionados](http://go.microsoft.com/fwlink/p/?LinkId=247929)
+* [Composição de macrorregiões geográficas (continentais), sub-regiões geográficas, e agrupamentos econômicos e outros agrupamentos selecionados](https://go.microsoft.com/fwlink/p/?LinkId=247929)

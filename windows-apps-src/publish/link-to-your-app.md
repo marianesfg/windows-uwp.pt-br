@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, link, protocolo da windows store, vincular a um aplicativo, vincular ao aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 59df207adf44cea04505e41a3323da1743170c46
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 56bc051c3c5a935f3b6b26e478731fcde9c06902
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931760"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050609"
 ---
 # <a name="link-to-your-app"></a>Link para seu app
 
@@ -29,7 +29,7 @@ Quando um cliente clicar nesse link, ele abre a página de listagem baseada na W
 
 Você pode vincular diretamente aos detalhes do seu aplicativo com um selo personalizado para permitir que os clientes saibam que seu aplicativo está na Microsoft Store.
 
-Para criar o selo, visite a página de [selos da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkID=534236) . Você precisará ter a **ID da Loja** de 12 caracteres do aplicativo para usar esse formulário, além de gerar o selo e o link. Você pode encontrar a **ID da Loja** do aplicativo na página [Identidade do aplicativo](view-app-identity-details.md) na seção **Gerenciamento do aplicativo**.
+Para criar o selo, visite a página de [selos da Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkID=534236) . Você precisará ter a **ID da Loja** de 12 caracteres do aplicativo para usar esse formulário, além de gerar o selo e o link. Você pode encontrar a **ID da Loja** do aplicativo na página [Identidade do aplicativo](view-app-identity-details.md) na seção **Gerenciamento do aplicativo**.
 
 > [!NOTE]
 > Consulte [diretrizes de marketing do aplicativo](app-marketing-guidelines.md) para obter informações e requisitos relacionados ao uso do selo Microsoft Store.

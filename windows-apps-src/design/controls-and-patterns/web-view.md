@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a29f58ff8dc842fd985a44f94ff44baea51dc2e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7af61b7d442fee7eff6399a7a5d143adb53fb560
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940998"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058547"
 ---
 # <a name="web-view"></a>Modo de exibição da Web
  
@@ -73,7 +73,7 @@ webView1.Navigate("http://www.contoso.com");
 
 Para navegar para o URI com uma solicitação POST e cabeçalhos HTTP, use o método [NavigateWithHttpRequestMessage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatewithhttprequestmessage.aspx). Esse método possui suporte apenas ao [HttpMethod.Post](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpmethod.post.aspx) e [HttpMethod.Get](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpmethod.get.aspx) para o valor da propriedade [HttpRequestMessage.Method](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httprequestmessage.method.aspx). 
 
-Para carregar o conteúdo descompactado e não criptografado a partir do armazenamento de dados [LocalFolder]() ou [TemporaryFolder]() do seu aplicativo, use o método **Navigate** com um **Uri** que usa o [ms-appdata scheme](). O suporte a exibição da Web para esse esquema requer que você coloque o conteúdo em uma subpasta sob a pasta local ou temporary. Isso permite a navegação para URIs como ms-appdata:///local/*folder*/*file*.html e ms-appdata:///temp/*folder*/*file*.html. (para carregar arquivos compactados ou criptografados, consulte [NavigateToLocalStreamUri](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetolocalstreamuri.aspx)). 
+Para carregar o conteúdo descompactado e não criptografado a partir do armazenamento de dados [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) ou [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) do seu aplicativo, use o método **Navigate** com um **Uri** que usa o [ms-appdata scheme](/windows/uwp/app-resources/uri-schemes). O suporte a exibição da Web para esse esquema requer que você coloque o conteúdo em uma subpasta sob a pasta local ou temporary. Isso permite a navegação para URIs como ms-appdata:///local/*folder*/*file*.html e ms-appdata:///temp/*folder*/*file*.html. (para carregar arquivos compactados ou criptografados, consulte [NavigateToLocalStreamUri](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetolocalstreamuri.aspx)). 
 
 Cada uma dessas subpastas de primeiro nível é isolada do conteúdo em outras subpastas de primeiro nível. Por exemplo, você pode navegar para ms-appdata:///temp/folder1/file.html, mas você não pode ter um link nesse arquivo para ms-appdata:///temp/folder2/file.html. No entanto, você ainda pode vincular ao conteúdo HTML no pacote do aplicativo usando o **ms-appx-web scheme** e ao conteúdo da Web usando os esquemas de URI **http** e **https**.
 

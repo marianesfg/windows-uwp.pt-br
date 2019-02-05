@@ -6,12 +6,12 @@ ms.date: 08/01/2018
 ms.topic: article
 keywords: windows 10, uwp, API de coleção da Microsoft Store, API de compra da Microsoft Store, exibir produtos, conceder produtos
 ms.localizationpriority: medium
-ms.openlocfilehash: 68bcee02c07ea8c998927d558521084cb49e9e24
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a749550c1dc644c4a9fb3f91530503adf192246e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925529"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050256"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>Gerenciar direitos a produtos de um serviço
 
@@ -23,7 +23,7 @@ Essas APIs consistem em métodos REST que são projetados para serem usados por 
 -   API de compras da Microsoft Store: [Conceda um produto gratuito a um usuário](grant-free-products.md), [obtenha assinaturas para um usuário](get-subscriptions-for-a-user.md) e [altere o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md).
 
 > [!NOTE]
-> A API de coleção e a API de compra da Microsoft Store usam a autenticação do Azure Active Directory (Azure AD) para acessar informações de propriedade do cliente. Para usar essas APIs, você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD.
+> A API de coleção e a API de compra da Microsoft Store usam a autenticação do Azure Active Directory (Azure AD) para acessar informações de propriedade do cliente. Para usar essas APIs, você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](https://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD.
 
 ## <a name="overview"></a>Visão geral
 
@@ -122,11 +122,11 @@ grant_type=client_credentials
 
 Para cada token, especifique os seguintes dados de parâmetro:
 
-* Para os parâmetros *client\_id* e *client\_secret* , especifique a ID do aplicativo e o segredo do cliente para seu aplicativo que você recuperou do [Portal de gerenciamento do Azure](http://manage.windowsazure.com). Esses dois parâmetros são necessários para criar um token de acesso com o nível de autenticação exigido pela API de compra ou API de coleção da Microsoft Store.
+* Para os parâmetros *client\_id* e *client\_secret* , especifique a ID do aplicativo e o segredo do cliente para seu aplicativo que você recuperou do [Portal de gerenciamento do Azure](https://manage.windowsazure.com). Esses dois parâmetros são necessários para criar um token de acesso com o nível de autenticação exigido pela API de compra ou API de coleção da Microsoft Store.
 
 * Para o parâmetro de *recurso*, especifique um dos URIs de audiência listados na [seção anterior](#access-tokens), dependendo do tipo de token de acesso que você está criando.
 
-Depois que seu token de acesso expirar, você poderá atualizá-lo seguindo as instruções descritas [aqui](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens). Para obter mais detalhes sobre a estrutura de um token de acesso, consulte [Tipos de declaração e token com suporte](http://go.microsoft.com/fwlink/?LinkId=722501).
+Depois que seu token de acesso expirar, você poderá atualizá-lo seguindo as instruções descritas [aqui](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens). Para obter mais detalhes sobre a estrutura de um token de acesso, consulte [Tipos de declaração e token com suporte](https://go.microsoft.com/fwlink/?LinkId=722501).
 
 <span id="step-4"/>
 
@@ -252,6 +252,6 @@ Aqui está um exemplo de uma declaração de chave de ID da Microsoft Store deco
 * [Obter assinaturas para um usuário](get-subscriptions-for-a-user.md)
 * [Alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md)
 * [Renovar uma chave de ID da Microsoft Store](renew-a-windows-store-id-key.md)
-* [Integrando aplicativos com o Azure Active Directory](http://go.microsoft.com/fwlink/?LinkId=722502)
+* [Integrando aplicativos com o Azure Active Directory](https://go.microsoft.com/fwlink/?LinkId=722502)
 * [Noções básicas sobre o manifesto de aplicativo do Active Directory do Azure]( http://go.microsoft.com/fwlink/?LinkId=722500)
-* [Tipos de declaração e token com suporte](http://go.microsoft.com/fwlink/?LinkId=722501)
+* [Tipos de declaração e token com suporte](https://go.microsoft.com/fwlink/?LinkId=722501)

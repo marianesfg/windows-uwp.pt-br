@@ -6,12 +6,12 @@ ms.date: 06/22/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f4f68481078d7265ee11ba2b7147d28990081e80
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.openlocfilehash: cab06db098312531a488731fb50bae99d8f2c8f6
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042405"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058827"
 ---
 # <a name="composition-native-interoperation-with-directx-and-direct2d"></a>Interoperação nativa com DirectX e Direct2D
 
@@ -43,7 +43,7 @@ O exemplo de código a seguir ilustra um cenário de interoperação. O exemplo 
 
 Há dois exemplos de código abaixo. Primeiro, um [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) exemplo (que é concluído) e, em seguida, C++ c++ exemplo de código CX (que omite as partes DirectWrite e Direct2D do exemplo).
 
-Usar C++ c++ WinRT exemplo de código abaixo, primeiro crie um novo **aplicativo principal (C++ c++ WinRT)** projeto no Visual Studio (para requisitos, consulte [suporte do Visual Studio para C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). Ao criar o projeto, selecione como sua versão de destino **Windows 10, versão 1803 (10.0; Build 17134)**. Essa é a versão que esse código foi compilado e testado. Substitua o conteúdo do seu `App.cpp` arquivo de código de origem com a listagem de código abaixo, em seguida, compilar e executar. O aplicativo processa a cadeia de caracteres "Hello, World!" no texto preto em um plano de fundo transparente.
+Usar C++ c++ WinRT exemplo de código abaixo, primeiro crie um novo **aplicativo principal (C++ c++ WinRT)** projeto no Visual Studio (para requisitos, consulte [suporte do Visual Studio para C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). Ao criar o projeto, selecione como sua versão de destino **Windows 10, versão 1803 (10.0; Build 17134)**. Essa é a versão que esse código foi compilado e testado. Substitua o conteúdo do seu `App.cpp` arquivo de código de origem com a listagem de código abaixo, em seguida, compilar e executar. O aplicativo processa a cadeia de caracteres "Hello, World!" no texto preto em um plano de fundo transparente.
 
 ```cppwinrt
 // App.cpp

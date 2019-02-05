@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b753b9e93a0cd2abae089f9d53915e0c109f6b63
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.openlocfilehash: f4e0b2a2370acd3571b48eecdf13e44cadc3879c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042418"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050469"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -39,7 +39,7 @@ As classes do namespace [**Windows.Web.Http**](https://msdn.microsoft.com/librar
 
 -   Informações de progresso da Solicitação HTTP disponíveis em métodos assíncronos.
 
-A classe [**Windows.Web.Http.HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) representa uma mensagem de solicitação HTTP enviada por [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639). A classe [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) representa uma mensagem de resposta HTTP recebida de uma solicitação HTTP. As mensagens HTTP são definidas na [RFC 2616](http://go.microsoft.com/fwlink/p/?linkid=241642) pela IETF.
+A classe [**Windows.Web.Http.HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) representa uma mensagem de solicitação HTTP enviada por [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639). A classe [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) representa uma mensagem de resposta HTTP recebida de uma solicitação HTTP. As mensagens HTTP são definidas na [RFC 2616](https://go.microsoft.com/fwlink/p/?linkid=241642) pela IETF.
 
 O namespace [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) representa conteúdo HTTP como o corpo e os cabeçalhos da entidade HTTP, incluindo cookies. O conteúdo HTTP pode ser associado a uma solicitação HTTP ou a uma resposta HTTP. O namespace **Windows.Web.Http** fornece várias classes diferentes para representar o conteúdo HTTP.
 
@@ -228,9 +228,9 @@ No C++, não há nenhum método para tentar analisar uma cadeia de caracteres pa
 
 O [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) não tem uma função de praticidade. Portanto, o aplicativo que usa [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) e outras classes nesse namespace precisa usar o valor **HRESULT**.
 
-Em aplicativos usar o Framework4.5 .NET em c#, VB.NET, o [System. Exception](http://msdn.microsoft.com/library/system.exception.aspx) representa um erro durante a execução do aplicativo quando ocorre uma exceção. A propriedade [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) retorna o **HRESULT** atribuído à exceção específica. A propriedade [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) retorna a mensagem que descreve a exceção. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Um aplicativo pode filtrar por valores específicos de **HRESULT** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
+Em aplicativos usar o Framework4.5 .NET em c#, VB.NET, o [System. Exception](https://msdn.microsoft.com/library/system.exception.aspx) representa um erro durante a execução do aplicativo quando ocorre uma exceção. A propriedade [System.Exception.HResult](https://msdn.microsoft.com/library/system.exception.hresult.aspx) retorna o **HRESULT** atribuído à exceção específica. A propriedade [System.Exception.Message](https://msdn.microsoft.com/library/system.exception.message.aspx) retorna a mensagem que descreve a exceção. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Um aplicativo pode filtrar por valores específicos de **HRESULT** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
 
-Nos aplicativos que usam C++ gerenciado, o [Platform::Exception](http://msdn.microsoft.com/library/windows/apps/hh755825.aspx) representa um erro durante a execução do aplicativo quando ocorre uma exceção. A propriedade [Platform::Exception::HResult](http://msdn.microsoft.com/library/windows/apps/hh763371.aspx) retorna o **HRESULT** atribuído à exceção específica. A propriedade [Platform::Exception::Message](http://msdn.microsoft.com/library/windows/apps/hh763375.aspx) retorna a cadeia de caracteres fornecida pelo sistema que está associada ao valor de **HRESULT**. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Um aplicativo pode filtrar por valores específicos de **HRESULT** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
+Nos aplicativos que usam C++ gerenciado, o [Platform::Exception](https://msdn.microsoft.com/library/windows/apps/hh755825.aspx) representa um erro durante a execução do aplicativo quando ocorre uma exceção. A propriedade [Platform::Exception::HResult](https://msdn.microsoft.com/library/windows/apps/hh763371.aspx) retorna o **HRESULT** atribuído à exceção específica. A propriedade [Platform::Exception::Message](https://msdn.microsoft.com/library/windows/apps/hh763375.aspx) retorna a cadeia de caracteres fornecida pelo sistema que está associada ao valor de **HRESULT**. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Um aplicativo pode filtrar por valores específicos de **HRESULT** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
 
 Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E\_INVALIDARG**. Para algumas chamadas de método ilícitas, o **HRESULT** retornado é **E\_ILLEGAL\_METHOD\_CALL**.
 

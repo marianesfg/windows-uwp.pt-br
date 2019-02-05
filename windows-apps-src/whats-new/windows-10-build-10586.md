@@ -6,16 +6,16 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: 0d6c65c5-2ad5-46c7-964e-a3a9833c94ce
 ms.localizationpriority: medium
-ms.openlocfilehash: 6557648e3998cedee2a6eb0bcc9e58ca2f4c27d9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ff5e131c0d6f5371d4ce9cf2b1b59ebba928c759
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928904"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050389"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-10586"></a>Novidades no Windows 10 para desenvolvedores, build 10586
 
-O Windows 10, compilação 10586 (também conhecido como a Atualização de novembro ou versão 1511), em combinação com o Visual Studio 2017 e o SDK atualizado, fornece as ferramentas, os recursos e as experiências para tornar notáveis os aplicativos da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+O Windows 10, compilação 10586 (também conhecido como a Atualização de novembro ou versão 1511), em combinação com o Visual Studio 2017 e o SDK atualizado, fornece as ferramentas, os recursos e as experiências para tornar notáveis os aplicativos da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="windows-10-build-10586---november-2015"></a>Windows 10 build 10586 – novembro de 2015
 

@@ -6,12 +6,12 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4517d3fc917cb306281e9050f8554119ff987007
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: a2d5db17be1367deea66ff2762d0350931e1861e
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044500"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058577"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -47,7 +47,7 @@ Consulte [Windows Template Studio](https://marketplace.visualstudio.com/items?it
 
 Lançamos novos controles XAML da UWP que preencher a lacuna entre um aplicativo da área de trabalho tradicional da interface do usuário e uma UI UWP.
 
-Por exemplo, os novos controles de [barra de menus](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [divisão](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)e [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) oferecem formas mais flexíveis para expor comandos, e o [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) vamos o usuário inserir valores que não estejam listadas em uma lista predefinida de opções.
+Por exemplo, os novos controles de [barra de menus](/windows/uwp/design/controls-and-patterns/menus), [DropDownButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [divisão](/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)e [CommandBarFlyout](/windows/uwp/design/controls-and-patterns/command-bar-flyout) oferecem formas mais flexíveis para expor comandos, e o [EditableComboBox](/windows/uwp/design/controls-and-patterns/combo-box#make-a-combo-box-editable) vamos o usuário inserir valores que não estejam listadas em uma lista predefinida de opções.
 
 ![Barra de menus](images/menu-bar.png)
 
@@ -68,7 +68,7 @@ Biblioteca de interface do usuário do Windows é um conjunto de pacotes NuGet q
 
 ![Biblioteca de interface do usuário do Windows](images/win-ui.png)
 
-Consulte a [Biblioteca de interface do usuário do Windows (versão prévia)](https://docs.microsoft.com/en-us/uwp/toolkits/winui/).
+Consulte a [Biblioteca de interface do usuário do Windows (versão prévia)](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 <a id="xaml-islands" />
 
@@ -161,7 +161,7 @@ Muitos usuários hoje levam para o trabalho o próprio celular ou tablet, com di
 |-------|-------------|
 | [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631) | Neste guia introdutório, você vai se familiarizar com a Plataforma Universal do Windows 10. Entre outras coisas, ele define família de dispositivos e orienta como decidir para qual direcionar, apresenta novos painéis e controles de interface do usuário, que permitem que você adapte a sua interface do usuário a diferentes fatores forma de dispositivo diferentes, e explica como entender e controlar a superfície de API que está disponível para seu aplicativo. |
 | [Amostra de código de interface do usuário XAML adaptável](https://go.microsoft.com/fwlink/p/?LinkId=619992) | Essa amostra de código mostra todas as opções de layout e controles para seu aplicativo possíveis, independentemente do tipo de dispositivo, e permite que você interaja com os painéis para mostrar como obter qualquer layout que estiver procurando. Além de mostrar como cada controle responde a diferentes fatores forma, o próprio aplicativo é dinâmico e mostra vários métodos para alcançar a interface do usuário adaptável. |
-| [Tópico Xamarin]() | Xamarin para direcionamento de telefone |
+| [Tópico Xamarin](/xamarin/) | Xamarin para direcionamento de telefone |
 
 ## <a name="deployment"></a>Implantação
 

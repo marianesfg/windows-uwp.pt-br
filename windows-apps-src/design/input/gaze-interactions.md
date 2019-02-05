@@ -11,12 +11,12 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5dc12e9b85b7274c9e1deb7d629917cbeaa981c0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 77e39b9c7440fab491b3d7ef85baa757d299fff8
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942358"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058537"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a>Interações de foco e rastreamento de olhos em aplicativos UWP
 
@@ -36,7 +36,7 @@ A entrada por Foco é maneira eficiente de interagir e usar o Windows e os aplic
 Além disso, a entrada usando o foco oferece oportunidades igualmente atraentes para jogos (incluindo a aquisição do alvo e acompanhamento) e aplicativos de produtividade tradicionais, quiosques e outros cenários interativos onde os dispositivos de entrada tradicionais (teclado, mouse, toque) não estão disponíveis ou onde pode ser útil para liberar as mãos do usuário para outras tarefas (por exemplo, segurar bolsas de compras).
 
 > [!NOTE]
-> O suporte para o hardware de acompanhamento com os olhos foi introduzido no **Windows 10 Fall Creators Update** juntamente com [Controle com os olhos](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control), um recurso interno que permite usar seus olhos para controlar o ponteiro virtual, digitar com o teclado virtual e se comunicar com pessoas usando a conversão de texto em fala. Um conjunto de [APIs UWP]([Windows.Devices.Input.Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)) para criar aplicativos que podem interagir com o hardware de acompanhamento de olhos está disponível na **Atualização de abril de 2018 para o Windows 10 (versão 1803, build 17134)** e mais recente.
+> O suporte para o hardware de acompanhamento com os olhos foi introduzido no **Windows 10 Fall Creators Update** juntamente com [Controle com os olhos](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control), um recurso interno que permite usar seus olhos para controlar o ponteiro virtual, digitar com o teclado virtual e se comunicar com pessoas usando a conversão de texto em fala. Um conjunto de APIs de UWP ([Devices](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)) para criar aplicativos que podem interagir com o hardware de acompanhamento de olhos está disponível com **Windows 10 de abril de 2018 Update (versão 1803, build 17134)** e mais recente.
 
 ## <a name="privacy"></a>Privacidade
 

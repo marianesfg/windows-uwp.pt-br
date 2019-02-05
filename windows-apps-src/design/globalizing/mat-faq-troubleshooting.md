@@ -6,12 +6,12 @@ ms.date: 11/13/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: a39d2b3133714ab784309e131a71219beae4e3c0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2e27256fbf19ed31a7b087e94dea9e5514db516f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926648"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050589"
 ---
 # <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a>Perguntas frequentes e solução de problemas do Kit de Ferramentas de Aplicativo Multilíngue 4.0
 
@@ -83,7 +83,7 @@ Antes de usar efetivamente o MAT, seu app precisa estar localizável. Isso é ex
 
 ## <a name="what-is-microsoft-translator"></a>O que é Microsoft Translator?
 
-O Microsoft Translator é um serviço baseado em nuvem que fornece tradução baseada em máquina. A tradução por máquina é ideal para ter acesso à tradução quando a tradução humana não é razoável. Você pode saber mais em [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220).
+O Microsoft Translator é um serviço baseado em nuvem que fornece tradução baseada em máquina. A tradução por máquina é ideal para ter acesso à tradução quando a tradução humana não é razoável. Você pode saber mais em [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220).
 
 O Kit de Ferramentas usa o serviço Microsoft Translator para fornecer sugestões de tradução a você. Você pode ver quais idiomas têm suporte pelo Microsoft Translator quando o ícone do Microsoft Translator está presente no diálogo Idiomas de Tradução.
 
@@ -178,5 +178,5 @@ Antes de começar o processo de Certificação da Microsoft Store, exclua o arqu
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Use o Kit de Ferramentas de Aplicativo Multilíngue 4.0](use-mat.md)
-* [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220)
+* [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)
 * [Opções de linha de comando do MakePri.exe](../../app-resources/makepri-exe-command-options.md)

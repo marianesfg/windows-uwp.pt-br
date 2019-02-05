@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ab8dde9984ed0e4f7d99e7809361d928bebb718
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 82dd3d20aa39ea471618e7707d066c67a6547f9f
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045422"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058747"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Personalizar os recursos para idioma, escala, alto contraste e outros qualificadores
 
@@ -258,7 +258,7 @@ Para obter informações sobre qualificar um recurso para `scale` e `targetsize`
 
 ## <a name="theme"></a>Tema
 
-O qualificador `theme` é usado para fornecer os recursos que melhor correspondem à configuração de modo de app padrão ou a substituição do app usando [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application?branch=master.RequestedTheme).
+O qualificador `theme` é usado para fornecer os recursos que melhor correspondem à configuração de modo de app padrão ou a substituição do app usando [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme).
 
 ## <a name="important-apis"></a>APIs importantes
 

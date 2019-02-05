@@ -6,12 +6,12 @@ ms.date: 09/12/2017
 ms.topic: article
 keywords: windows 10, uwp, captura, vídeo
 ms.localizationpriority: medium
-ms.openlocfilehash: a654739490043b9f821e7906fa8cf9e3e7259fed
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c474221769bf3aec6e32c80f21386ac1ca2620ea
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919929"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058627"
 ---
 # <a name="capture-from-multiple-sources-using-mediaframesourcegroup"></a>Capturar de várias fontes usando o MediaFrameSourceGroup
 
@@ -56,7 +56,7 @@ O exemplo a seguir mostra como inicializar um objeto **TimedMetadataStreamDescri
 
 [!code-cs[GetStreamDescriptor](./code/SimpleCameraPreview_Win10/cs/MainPage.MultiRecord.xaml.cs#SnippetGetStreamDescriptor)]
 
-Chame [MediaEncodingProfile.SetTimedMetadataTracks](**https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks**) para adicionar o descritor de streaming de metadados ao perfil de codificação. O exemplo a seguir mostra um método auxiliar que usa dois descritores de streaming de vídeo, um descritor de streaming de áudio e descritor de streaming de metadados e retorna um **MediaEncodingProfile** que pode ser usado para codificar os fluxos.
+Chame [**Settimedmetadatatracks**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks) para adicionar o descritor de streaming de metadados ao perfil de codificação. O exemplo a seguir mostra um método auxiliar que usa dois descritores de streaming de vídeo, um descritor de streaming de áudio e descritor de streaming de metadados e retorna um **MediaEncodingProfile** que pode ser usado para codificar os fluxos.
 
 [!code-cs[GetMediaEncodingProfile](./code/SimpleCameraPreview_Win10/cs/MainPage.MultiRecord.xaml.cs#SnippetGetMediaEncodingProfile)]
 

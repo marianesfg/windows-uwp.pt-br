@@ -6,12 +6,12 @@ ms.date: 11/28/2017
 ms.topic: article
 keywords: windows 10, uwp, mapa, localização, funcionalidade de localização
 ms.localizationpriority: medium
-ms.openlocfilehash: fae533e0ce42e14e3c53f5083b746a9aae221adf
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b3582aa8ed406a25eb704f2f86f8ed272bea2c63
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941353"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050216"
 ---
 # <a name="get-the-users-location"></a>Obter a localização do usuário
 
@@ -20,9 +20,9 @@ ms.locfileid: "8941353"
 
 Encontre a localização do usuário e responda a alterações na localização. O acesso à localização do usuário é gerenciado por configurações de privacidade no aplicativo Configurações. Este tópico também mostra como verificar se o aplicativo tem permissão para acessar a localização do usuário.
 
-**Dica** Para saber mais sobre como acessar a localização do usuário em seu aplicativo, baixe a seguinte amostra do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+**Dica** Para saber mais sobre como acessar a localização do usuário em seu aplicativo, baixe a seguinte amostra do [repositório Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
--   [Amostra de mapa da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Amostra de mapa da UWP (Plataforma Universal do Windows)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>Habilitar a funcionalidade de localização
 
@@ -267,6 +267,6 @@ Para que o aplicativo possa acessar a localização do usuário, **Localização
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Amostra de geolocalização da UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Amostra de geolocalização da UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Diretrizes de design para cerca geográfica](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [Diretrizes de design para aplicativos com detecção de localização](https://msdn.microsoft.com/library/windows/apps/hh465148)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ce39e87f3c5c9e11f3e9ddb1424d606356ee3c8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d2d1b2b4e6875730d5a6bfa8dd711e11ac5d049c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918868"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049303"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Tempo de execução do Windows 8. x para UWP estudo de caso: exemplo de aplicativo QuizGame
 
@@ -36,9 +36,9 @@ O aplicativo utiliza padrões que usam modos e modelos de exibição. Como resul
 
 ## <a name="downloads"></a>Downloads
 
-[Baixe o aplicativo Universal 8.1 QuizGame](http://go.microsoft.com/fwlink/?linkid=532953). Esse é o estado inicial do aplicativo antes da portabilidade. 
+[Baixe o aplicativo Universal 8.1 QuizGame](https://go.microsoft.com/fwlink/?linkid=532953). Esse é o estado inicial do aplicativo antes da portabilidade. 
 
-[Baixe o aplicativo QuizGame10 do Windows 10](http://go.microsoft.com/fwlink/?linkid=532954). Esse é o estado do aplicativo depois da portabilidade. 
+[Baixe o aplicativo QuizGame10 do Windows 10](https://go.microsoft.com/fwlink/?linkid=532954). Esse é o estado do aplicativo depois da portabilidade. 
 
 [Veja a versão mais recente deste exemplo no GitHub](https://github.com/Microsoft/Windows-appsample-quizgame).
 

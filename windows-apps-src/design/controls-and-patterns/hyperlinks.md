@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 13a22c33f3c975e5c1e797f52d7c4e81ea008b61
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 9aa5053d83518c61335807874cd0d31943a60695
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036978"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058597"
 ---
 # <a name="hyperlinks"></a>Hiperlinks
 
@@ -158,7 +158,7 @@ Como um hiperlink não é um [UIElement](https://msdn.microsoft.com/library/wind
 
 **Conteúdo**
 
-O hiperlink tem restrições sobre o conteúdo que podem existir na sua coleção [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). Especificamente, um hiperlink só permite [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) e outros tipos de [Span]() que não são outro hiperlink. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) não pode estar na coleção Inlines de um hiperlink. Tentar adicionar conteúdo restrito gera uma exceção de argumento inválido ou uma exceção de análise XAML.
+O hiperlink tem restrições sobre o conteúdo que podem existir na sua coleção [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). Especificamente, um hiperlink só permite [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) e outros tipos de [Span](/uwp/api/windows.ui.xaml.documents.span) que não são outro hiperlink. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) não pode estar na coleção Inlines de um hiperlink. Tentar adicionar conteúdo restrito gera uma exceção de argumento inválido ou uma exceção de análise XAML.
 
 **Comportamento de hiperlink e tema/estilo**
 

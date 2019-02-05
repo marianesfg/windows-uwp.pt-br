@@ -6,17 +6,17 @@ ms.topic: article
 keywords: windows 10 s, sempre conectado, limitações, windows 10 no ARM
 ms.localizationpriority: medium
 redirect_url: https://docs.microsoft.com/en-us/windows/uwp/porting/apps-on-arm-troubleshooting-x86
-ms.openlocfilehash: 5fa05e1dfd04208ba547a692473fc3df136e6e4f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 42a2866642d11d1d97cc7b0b663486723499a5cf
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919272"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058667"
 ---
 # <a name="limitations-of-apps-and-experiences-on-arm"></a>Limitações de aplicativos e experiências em ARM
 O Windows 10 no ARM tem as seguintes limitações necessárias:
 
-- **Somente os drivers ARM64 têm suporte**. Assim como acontece com todas as arquiteturas, drivers de modo kernel, drivers [Estrutura de Driver em Modo de Usuário (UMDF)](https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/overview-of-the-umdf) e drivers de impressão devem ser compilados para corresponder à arquitetura do SO. Enquanto o SO ARM tem os recursos para emular aplicativos x86 em modo de usuário, drivers implementados para outras arquiteturas (por exemplo, x64 ou x86) atualmente não são emulados e, portanto, não têm suporte nesta plataforma. Qualquer aplicativo que funcione com seu próprio driver personalizado precisa ser portado para ARM64. Em cenários limitados, o aplicativo pode ser executado como x86 em emulação, mas a parte de driver do aplicativo deve ser portada para ARM64. Para obter mais informações sobre a compilação do seu driver para ARM64, consulte [Criando drivers ARM64 com o WDK](https://review.docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers?branch=rs4-arm64).
+- **Somente os drivers ARM64 têm suporte**. Assim como acontece com todas as arquiteturas, drivers de modo kernel, drivers [Estrutura de Driver em Modo de Usuário (UMDF)](https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/overview-of-the-umdf) e drivers de impressão devem ser compilados para corresponder à arquitetura do SO. Enquanto o SO ARM tem os recursos para emular aplicativos x86 em modo de usuário, drivers implementados para outras arquiteturas (por exemplo, x64 ou x86) atualmente não são emulados e, portanto, não têm suporte nesta plataforma. Qualquer aplicativo que funcione com seu próprio driver personalizado precisa ser portado para ARM64. Em cenários limitados, o aplicativo pode ser executado como x86 em emulação, mas a parte de driver do aplicativo deve ser portada para ARM64. Para obter mais informações sobre a compilação do seu driver para ARM64, consulte [Criando drivers ARM64 com o WDK](/windows-hardware/drivers/develop/building-arm64-drivers).
 
 - **Não há suporte para aplicativos x64**. O Windows 10 no ARM não oferece suporte a emulação de aplicativos x64.
 
