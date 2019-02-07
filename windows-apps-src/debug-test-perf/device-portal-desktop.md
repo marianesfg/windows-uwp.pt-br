@@ -2,20 +2,18 @@
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Portal de Dispositivos para desktop Windows
 description: Saiba como o Windows Device Portal abre diagnósticos e automação em sua área de trabalho do Windows.
-ms.date: 03/15/2018
+ms.date: 2/6/2019
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 1be8dfd11e68dc8e6382f98e08e6c23f2a4d6be6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3dcf35a1bd43930e616edc6d1e7180c9cea31560
+ms.sourcegitcommit: b79cc7e0eac414ac2275517a7f56d1f9a817d112
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938826"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9060040"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de Dispositivos para desktop Windows
-
-
 
 O Portal de Dispositivos do Windows permite exibir informações de diagnóstico e interagir com seu desktop por HTTP em uma janela de seu navegador. Você pode usar o Portal de Dispositivos para fazer o seguinte:
 - Ver e manipular uma lista de processos em execução
@@ -77,6 +75,7 @@ O Portal de Dispositivos na área de trabalho do Windows fornece o conjunto padr
 - Rascunho
 
 ## <a name="more-device-portal-options"></a>Mais opções do Portal de Dispositivos
+
 ### <a name="registry-based-configuration-for-device-portal"></a>Configuração baseada no registro para o Portal de Dispositivos
 
 Se você quiser selecionar números de porta para o Portal de Dispositivos (como 80 e 443), será possível definir as seguintes chaves do registro:
@@ -105,6 +104,30 @@ Em um prompt de comando administrativo, você pode ativar e configurar partes do
 - `-Debug <various options for authentication, port selection, and tracing level>`
     - Execute uma versão autônoma do Portal de Dispositivos com uma configuração específica e mensagens de depuração visível. Isso é mais útil para criar um [plug-in empacotado](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-plugin). 
     - Consulte o [artigo de revista do MSDN](https://msdn.microsoft.com/en-us/magazine/mt826332.aspx) para obter detalhes sobre como executar isso como sistema para testar completamente o plug-in empacotado.
+
+## <a name="common-errors-and-issues"></a>Erros e problemas comuns
+
+Abaixo estão alguns erros comuns que você pode encontrar ao configurar o Portal de dispositivos.
+
+### <a name="windowsupdatesearch-returns-invalid-number-of-updates-0x800f0950-cbseinvalidwindowsupdatecount"></a>WindowsUpdateSearch retorna o número de atualizações inválido (0x800f0950 CBS_E_INVALID_WINDOWS_UPDATE_COUNT)
+
+Você pode obter esse erro ao tentar instalar os pacotes de desenvolvedor em uma compilação de pré-lançamento do Windows 10. Esses pacotes de recursos sob demanda (FoD) são hospedados no Windows Update e baixá-las em compilações de pré-lançamento requer que você escolhe de pré-lançamento. Se não tiver optado pela sua instalação em pré-lançamento para a combinação de toque e compilação certa, a carga não estará disponível para download. Verificar o seguinte:
+
+1. Navegue até **Configurações gt _ atualização & segurança gt _ programa Windows Insider** e confirme se a seção **Windows Insider conta** tem suas informações de conta correto. Se você não vir essa seção, selecione **vincular uma conta do Windows Insider**, adicione sua conta de email e confirmar se ele é exibida sob o título de **conta do Windows Insider** (talvez seja necessário selecionar **vincular uma conta do Windows Insider** uma segunda vez para Na verdade, vincule uma conta do recém-adicionado).
+ 
+2. Sob **que tipo de conteúdo você gostaria de receber?**, certifique-se de **desenvolvimento ativo do Windows** é selecionado.
+ 
+3. Sob **qual ritmo você deseja obter novas compilações?**, verifique se **Windows Insider-modo rápido** está selecionado.
+ 
+4. Agora você deve ser capaz de instalar os FoDs. Se você tiver confirmado que você está no Windows Insider rápido e ainda não pode instalar os FoDs, forneça comentários e anexar arquivos de log em **c:\Windows\Logs\CBS.**.
+
+### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>[SC] StartService: OpenService falha 1060: O serviço especificado não existe como um serviço instalado
+
+Você pode obter esse erro se os pacotes de desenvolvedor não são instalados. Sem os pacotes de desenvolvedor, não há nenhum serviço de gerenciamento da web. Tente instalar os pacotes de desenvolvedor novamente.
+
+### <a name="cbs-cannot-start-download-because-the-system-is-on-metered-network-cbsemeterednetwork"></a>CBS não pode iniciar o download porque o sistema está em rede limitada (CBS_E_METERED_NETWORK)
+
+Se você estiver em uma conexão de internet limitada, você pode obter esse erro. Você não conseguirá baixar os pacotes de desenvolvedor em uma conexão limitada.
 
 ## <a name="see-also"></a>Veja também
 

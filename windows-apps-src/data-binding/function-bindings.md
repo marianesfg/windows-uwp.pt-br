@@ -1,20 +1,21 @@
 ---
 description: A marcação xbind permite funções para ser usado na marcação.
 title: 'Funções em x: Bind'
-ms.date: 04/26/2018
+ms.date: 02/06/2019
 ms.topic: article
 keywords: Windows 10, uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: 38573bf4602c88d2e04d4bf29b39191045eddec8
-ms.sourcegitcommit: 58783d1ea22e632b9c50dcfbaa1cc57686bcdd8e
+ms.openlocfilehash: b85777c254c36cc7bf5b156569c7cef267a6c567
+ms.sourcegitcommit: b79cc7e0eac414ac2275517a7f56d1f9a817d112
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024213"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9060030"
 ---
 # <a name="functions-in-xbind"></a>Funções em x: Bind
 
-**Observação**para obter informações gerais sobre como usar dados de associação em seu aplicativo com **{x: Bind}** (e para uma todas as comparações entre **{x: Bind}** e **{Binding}**), consulte a [vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
+> [!NOTE]
+> Para obter informações gerais sobre como usar a vinculação de dados em seu aplicativo com **{x: Bind}** (e para uma todas as comparações entre **{x: Bind}** e **{Binding}**), consulte a [vinculação de dados em detalhes](data-binding-in-depth.md).
 
 Desde o Windows 10, versão 1607, **{x: Bind}** dá suporte ao uso de uma função como a etapa de folha do caminho de associação. Isso permite que:
 
@@ -54,7 +55,7 @@ class ColorEntry
 
 ## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
-``` syntax
+```xaml
 <object property="{x:Bind pathToFunction.FunctionName(functionParameter1, functionParameter2, ...), bindingProperties}" ... />
 ```
 
@@ -75,6 +76,7 @@ As funções estáticas podem ser especificadas usando-se a sintaxe XMLNamespace
     </StackPanel>
 </Page>
 ```
+
 ```csharp
 namespace MyNamespace
 {
@@ -86,6 +88,7 @@ namespace MyNamespace
 ```
 
 Você também pode usar funções de sistema diretamente na marcação para realizar cenários simples como formatação de data, formatação de texto, concatenações de texto, etc., por exemplo:
+
 ```xaml
 <Page 
      xmlns:sys="using:System"
@@ -105,9 +108,9 @@ A função associada precisa:
 - Os tipos de argumento precisam corresponder aos dados passados – não fazemos conversões de restrição
 - O tipo de retorno da função precisa corresponder ao tipo da propriedade que está usando a associação
 
-Começando com a próxima atualização principal para o Windows 10, o mecanismo de vinculação reagir às notificações de alteração de propriedade acionadas com o nome da função e reavaliar associações conforme necessário. Por exemplo: 
+O mecanismo de vinculação reage a alteração de propriedade notificações acionado com o nome da função e reavaliar associações conforme necessário. Por exemplo:
 
-```XAML
+```xaml
 <DataTemplate x:DataType="local:Person">
    <StackPanel>
       <TextBlock Text="{x:Bind FullName}" />
@@ -115,6 +118,7 @@ Começando com a próxima atualização principal para o Windows 10, o mecanismo
    </StackPanel>
 </DataTemplate>
 ```
+
 ```csharp
 public class Person:INotifyPropertyChanged
 {
@@ -148,7 +152,7 @@ public class Person:INotifyPropertyChanged
     public string FullName
     {
         get { return this.fullName; }
-        set 
+        set
         {
             this.fullName = value;
             this.OnPropertyChanged ();
@@ -175,6 +179,7 @@ Vários argumentos de função podem ser especificados, separados por vírgula (
 ### <a name="two-way-function-bindings"></a>Associações de função bidirecional
 
 Em um cenário de associação bidirecional, uma segunda função deve ser especificada para a direção inversa da associação. Isso é feito usando a propriedade de associação **BindBack** . No exemplo abaixo, a função deve utilizar um argumento que é o valor que precisa ser reenviado para o modelo.
+
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```
