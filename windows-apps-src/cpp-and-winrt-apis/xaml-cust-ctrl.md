@@ -6,19 +6,19 @@ ms.topic: article
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle personalizado, modelo,
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 24739e79b3999309aef9c1c6b35afd9ef2bbc9ab
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: ce4f7eea074233c625a2cc92ef773f0b06c2be9f
+ms.sourcegitcommit: ec4087c5203d2d4a68bcfa612c1fe8f16d8ef255
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036988"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "9063471"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>Controles personalizados (modelos) XAML com C++/WinRT
 
 > [!IMPORTANT]
 > Para conceitos e termos que dão suporte ao entendimento de como consumir e criar classes de tempo de execução com essenciais [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), consulte [consumir APIs com C++ c++ WinRT](consume-apis.md) e [criar APIs com C++ c++ WinRT](author-apis.md).
 
-Um dos recursos mais avançados da plataforma Universal do Windows (UWP) é a flexibilidade que fornece a pilha de interface do usuário (IU) para criar controles personalizados com base no tipo de [**controle**](/uwp/api/windows.ui.xaml.controls.control) do XAML. A estrutura de XAML UI fornece recursos, como [Propriedades de dependência personalizadas](/windows/uwp/xaml-platform/custom-dependency-properties) e propriedades anexadas e [modelos de controle](/windows/uwp/design/controls-and-patterns/control-templates), que tornam mais fácil criar controles rico e personalizáveis. Este tópico o orienta pelas etapas de criação de um controle (modelo) personalizado com C++ c++ WinRT.
+Um dos recursos mais avançados da plataforma Universal do Windows (UWP) é a flexibilidade que fornece a pilha de interface do usuário (IU) para criar controles personalizados com base no tipo de [**controle**](/uwp/api/windows.ui.xaml.controls.control) do XAML. A estrutura de XAML UI fornece recursos, como [Propriedades de dependência personalizadas](/windows/uwp/xaml-platform/custom-dependency-properties) e [Propriedades anexadas](/windows/uwp/xaml-platform/custom-attached-properties)e [modelos de controle](/windows/uwp/design/controls-and-patterns/control-templates), que tornam mais fácil criar controles rico e personalizáveis. Este tópico o orienta pelas etapas de criação de um controle (modelo) personalizado com C++ c++ WinRT.
 
 ## <a name="create-a-blank-app-bglabelcontrolapp"></a>Criar um aplicativo em branco (BgLabelControlApp)
 Comece criando um novo projeto no Microsoft Visual Studio. Criar um **Visual C++** > **Universal do Windows** > **aplicativo em branco (C++ c++ WinRT)** de projeto e nomeie-o *BgLabelControlApp*. Em uma seção posterior deste tópico, você será direcionado para compilar seu projeto (não compile até lá).
@@ -40,7 +40,7 @@ namespace BgLabelControlApp
 }
 ```
 
-A listagem acima mostra o padrão que você segue ao declarar uma propriedade de dependência (DP). Há duas partes para cada ponto de distribuição. Primeiro, você pode declarar uma propriedade estática somente leitura do tipo [**DependencyProperty**](/uwp/api/windows.ui.xaml.dependencyproperty). Ele tem o nome do seu DP além de *propriedade*. Você usará essa propriedade estática na sua implementação. Segundo, você deve declarar uma propriedade de instância de leitura-gravação com o tipo e o nome do seu DP.
+A listagem acima mostra o padrão que você segue ao declarar uma propriedade de dependência (DP). Há duas partes para cada ponto de distribuição. Primeiro, você pode declarar uma propriedade estática somente leitura do tipo [**DependencyProperty**](/uwp/api/windows.ui.xaml.dependencyproperty). Ele tem o nome do seu DP além de *propriedade*. Você usará essa propriedade estática na sua implementação. Segundo, você deve declarar uma propriedade de instância de leitura-gravação com o tipo e o nome do seu DP. Se você quiser criar uma *propriedade anexada* (em vez de um ponto de distribuição), consulte os exemplos de código [Propriedades anexadas personalizadas](/windows/uwp/xaml-platform/custom-attached-properties).
 
 > [!NOTE]
 > Se você quiser um ponto de distribuição com um tipo de ponto flutuante, em seguida, torná-lo `double` (`Double` no [MIDL 3.0](/uwp/midl-3/)). Declaração e implementação de um ponto de distribuição do tipo `float` (`Single` em MIDL), e, em seguida, definir um valor para esse ponto de distribuição na marcação XAML, resulta no erro *Falha ao criar 'Windows.Foundation.Single' do texto '<NUMBER>'*.
