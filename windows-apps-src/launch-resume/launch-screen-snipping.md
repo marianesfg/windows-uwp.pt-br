@@ -1,17 +1,17 @@
 ---
 title: Iniciar a captura de tela
-description: Este tópico descreve os esquemas de URI ms-screenclip e ms-screensketch. Seu aplicativo pode usar esses esquemas de URI para iniciar o aplicativo de recorte & esboço ou abrir um novo recorte.
+description: Este tópico descreve os esquemas de URI ms-screenclip e ms-screensketch. Seu aplicativo pode usar esses esquemas de URI para iniciar o aplicativo de esboço & recorte ou abrir um novo recorte.
 ms.date: 8/1/2017
 ms.topic: article
 keywords: Windows 10, uwp, uri, recorte, esboço
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 07c095e661327ba1b64c4ba897937c8e3e905140
-ms.sourcegitcommit: d705a79d037baa764790d3d8daa9321ed0ac9ebc
+ms.openlocfilehash: 2bddea1dd2b5f21a145bde789f1ad760bb5e556a
+ms.sourcegitcommit: b126940932935ebd2965ea68078798fb6e876b23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "8992186"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "9065983"
 ---
 # <a name="launch-screen-snipping"></a>Iniciar a captura de tela
 
@@ -27,10 +27,11 @@ O **ms-screenclip:** URI permite que seu aplicativo abrir automaticamente e inic
 | --- | --- | --- | --- |
 | fonte | string | não | Uma sequência de forma livre para indicar a origem que iniciou o URI. |
 | delayInSeconds | int | não | Um valor inteiro, de 1 a 30. Especifica o atraso, em segundos completos, entre a chamada URI e recorte começa. |
+| callbackformat | string | não | Este parâmetro não está disponível. |
 
 ## <a name="launching-the-snip--sketch-app"></a>Iniciar o aplicativo de esboço & recorte
 
-O **ms-screensketch:** URI permite que você iniciar o aplicativo de recorte & esboço programaticamente e abrir uma imagem específica no aplicativo para anotação.
+O **ms-screensketch:** URI permite que você iniciar o aplicativo de esboço & recorte programaticamente e abrir uma imagem específica no aplicativo para anotação.
 
 **ms-screensketch:** usa os seguintes parâmetros:
 
