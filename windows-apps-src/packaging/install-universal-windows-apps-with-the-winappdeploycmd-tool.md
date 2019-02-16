@@ -6,12 +6,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ec673236f41d4128e6aa5702f4d54f43c55890ab
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 479c4410384613b22ba86bc976a360125bb73c3a
+ms.sourcegitcommit: d6bc0c73df105482cab00c41e80c7c98d6834874
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937950"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "9079769"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Instalar apps usando a ferramenta WinAppDeployCmd.exe
 
@@ -22,7 +22,7 @@ Basta o SDK do Windows 10 instalado para executar a ferramenta WinAppDeployCmd e
 
 Para implementar em dispositivos móveis, você deve primeiro criar um pacote. Para obter mais informações, veja [aqui](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-A ferramenta **WinAppDeployCmd.exe** está localizada aqui em seu computador Windows 10: **C:\\Program Files (x86) \\Windows Kits\\10\\bin\\<SDK Version>\\x86\\WinAppDeployCmd.exe** (com base no seu caminho de instalação do SDK). 
+A ferramenta **WinAppDeployCmd.exe** está localizada aqui em seu computador Windows 10: **C:\\Program Files (x86) \\Windows Kits\\10\\bin\\&lt;versão do SDK&gt;\\x86\\WinAppDeployCmd.exe** (com base no seu caminho de instalação do SDK). 
 > [!NOTE]
 > Na versão 15063 e posterior do SDK, ele está instalado lado a lado em pastas específicas à versão.  SDKs anteriores (14393 e anteriores) são gravados diretamente na pasta pai.
 
