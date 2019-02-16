@@ -1,1514 +1,1521 @@
+items:
 - name: Tipos de app
   items:
-    - name: Apps educacionais
-      href: ../apps-for-education/index.md
+  - name: Apps educacionais
+    href: ../apps-for-education/index.md
+    items:
+    - name: API Fazer um Teste
+      href: ../apps-for-education/take-a-test-api.md
+  - name: Aplicativos corporativos
+    href: ../enterprise/index.md
+    items:
+    - name: Proteção de Informações do Windows (WIP)
+      href: ../enterprise/wip-hub.md
       items:
-        - name: API Fazer um Teste
-          href: ../apps-for-education/take-a-test-api.md
-    - name: Aplicativos corporativos
-      href: ../enterprise/index.md
+      - name: Guia do desenvolvedor do WIP
+        href: ../enterprise/wip-dev-guide.md
+    - name: Armazenamento compartilhado corporativo
+      href: ../enterprise/enterprise-shared-storage.md
+    - name: 'Tutorial: Criar um aplicativo de banco de dados de clientes'
+      href: ../enterprise/customer-database-tutorial.md
       items:
-        - name: Proteção de Informações do Windows (WIP)
-          href: ../enterprise/wip-hub.md
-          items:
-            - name: Guia do desenvolvedor do WIP
-              href: ../enterprise/wip-dev-guide.md
-        - name: Armazenamento compartilhado corporativo
-          href: ../enterprise/enterprise-shared-storage.md
-        - name: 'Tutorial: Criar um aplicativo de banco de dados de clientes'
-          href: ../enterprise/customer-database-tutorial.md
-          items:
-            - name: Estrutura do app de tutorial de banco de dados de clientes
-              href: ../enterprise/customer-database-app-structure.md
-    - name: Aplicativos Web progressivos
-      href: /microsoft-edge/progressive-web-apps
-- name: 'Áudio, vídeo e câmera'
+      - name: Estrutura do app de tutorial de banco de dados de clientes
+        href: ../enterprise/customer-database-app-structure.md
+  - name: Aplicativos Web progressivos
+    href: /microsoft-edge/progressive-web-apps
+- name: Áudio, vídeo e câmera
   href: ../audio-video-camera/index.md
   items:
-    - name: Câmera
-      href: ../audio-video-camera/camera.md
+  - name: Câmera
+    href: ../audio-video-camera/camera.md
+    items:
+    - name: Capturar fotos e vídeos com a interface do usuário da câmera interna do Windows
+      href: ../audio-video-camera/capture-photos-and-video-with-cameracaptureui.md
+    - name: Exibir a visualização da câmera
+      href: ../audio-video-camera/simple-camera-preview-access.md
+    - name: Captura básica de fotos, áudio e vídeo com o MediaCapture
+      href: ../audio-video-camera/basic-photo-video-and-audio-capture-with-MediaCapture.md
+    - name: Recursos da interface do usuário da câmera para dispositivos móveis
+      href: ../audio-video-camera/camera-ui-features-for-mobile-devices.md
+    - name: Tratar a orientação do dispositivo e da tela com o MediaCapture
+      href: ../audio-video-camera/handle-device-orientation-with-mediacapture.md
+    - name: Descobrir e selecionar as funcionalidades da câmera com perfis de câmera
+      href: ../audio-video-camera/camera-profiles.md
+    - name: Definir o formato, a resolução e a taxa de quadros para o MediaCapture
+      href: ../audio-video-camera/set-media-encoding-properties.md
+    - name: Captura de fotos HDR e com pouca luz
+      href: ../audio-video-camera/high-dynamic-range-hdr-photo-capture.md
+    - name: Controles manuais da câmera para a captura de fotos e vídeos
+      href: ../audio-video-camera/capture-device-controls-for-photo-and-video-capture.md
+    - name: Controles manuais da câmera para captura de vídeo
+      href: ../audio-video-camera/capture-device-controls-for-video-capture.md
+    - name: Efeito de estabilização de vídeo para captura de vídeo
+      href: ../audio-video-camera/effects-for-video-capture.md
+    - name: Análise de cena para o MediaCapture
+      href: ../audio-video-camera/scene-analysis-for-media-capture.md
+    - name: Capturar uma sequência de fotos com VariablePhotoSequence
+      href: ../audio-video-camera/variable-photo-sequence.md
+    - name: Processar quadros de mídia com o MediaFrameReader
+      href: ../audio-video-camera/process-media-frames-with-mediaframereader.md
       items:
-        - name: Capturar fotos e vídeos com a interface do usuário da câmera interna do Windows
-          href: ../audio-video-camera/capture-photos-and-video-with-cameracaptureui.md
-        - name: Exibir a visualização da câmera
-          href: ../audio-video-camera/simple-camera-preview-access.md
-        - name: 'Captura básica de fotos, áudio e vídeo com o MediaCapture'
-          href: ../audio-video-camera/basic-photo-video-and-audio-capture-with-MediaCapture.md
-        - name: Recursos da interface do usuário da câmera para dispositivos móveis
-          href: ../audio-video-camera/camera-ui-features-for-mobile-devices.md
-        - name: Tratar a orientação do dispositivo e da tela com o MediaCapture
-          href: ../audio-video-camera/handle-device-orientation-with-mediacapture.md
-        - name: Descobrir e selecionar as funcionalidades da câmera com perfis de câmera
-          href: ../audio-video-camera/camera-profiles.md
-        - name: 'Definir o formato, a resolução e a taxa de quadros para o MediaCapture'
-          href: ../audio-video-camera/set-media-encoding-properties.md
-        - name: Captura de fotos HDR e com pouca luz
-          href: ../audio-video-camera/high-dynamic-range-hdr-photo-capture.md
-        - name: Controles manuais da câmera para a captura de fotos e vídeos
-          href: ../audio-video-camera/capture-device-controls-for-photo-and-video-capture.md
-        - name: Controles manuais da câmera para captura de vídeo
-          href: ../audio-video-camera/capture-device-controls-for-video-capture.md
-        - name: Efeito de estabilização de vídeo para captura de vídeo
-          href: ../audio-video-camera/effects-for-video-capture.md
-        - name: Análise de cena para o MediaCapture
-          href: ../audio-video-camera/scene-analysis-for-media-capture.md
-        - name: Capturar uma sequência de fotos com VariablePhotoSequence
-          href: ../audio-video-camera/variable-photo-sequence.md
-        - name: Processar quadros de mídia com o MediaFrameReader
-          href: ../audio-video-camera/process-media-frames-with-mediaframereader.md
-          items:
-            - name: Processar quadros de áudio com o MediaFrameReader
-              href: ../audio-video-camera/use-opencv-with-mediaframereader.md
-            - name: Usar OpenCV com MediaFrameReader
-              href: ../audio-video-camera/use-opencv-with-mediaframereader.md
-        - name: Capturar de várias fontes usando o MediaFrameSourceGroup
-          href: ../audio-video-camera/capture-from-multiple-sources-simultaneously.md
-        - name: Obter um quadro de visualização
-          href: ../audio-video-camera/get-a-preview-frame.md
-    - name: Reprodução de mídia
-      href: ../audio-video-camera/media-playback.md
+      - name: Processar quadros de áudio com o MediaFrameReader
+        href: ../audio-video-camera/use-opencv-with-mediaframereader.md
+      - name: Usar OpenCV com MediaFrameReader
+        href: ../audio-video-camera/use-opencv-with-mediaframereader.md
+    - name: Capturar de várias fontes usando o MediaFrameSourceGroup
+      href: ../audio-video-camera/capture-from-multiple-sources-simultaneously.md
+    - name: Obter um quadro de visualização
+      href: ../audio-video-camera/get-a-preview-frame.md
+  - name: Reprodução de mídia
+    href: ../audio-video-camera/media-playback.md
+    items:
+    - name: Reproduzir áudio e vídeo com o MediaPlayer
+      href: ../audio-video-camera/play-audio-and-video-with-mediaplayer.md
+    - name: Itens de mídia, playlists e faixas
+      href: ../audio-video-camera/media-playback-with-mediasource.md
+    - name: Integrar aos controles de transporte de mídia do sistema
+      href: ../audio-video-camera/integrate-with-systemmediatransportcontrols.md
       items:
-        - name: Reproduzir áudio e vídeo com o MediaPlayer
-          href: ../audio-video-camera/play-audio-and-video-with-mediaplayer.md
-        - name: 'Itens de mídia, playlists e faixas'
-          href: ../audio-video-camera/media-playback-with-mediasource.md
-        - name: Integrar aos controles de transporte de mídia do sistema
-          href: ../audio-video-camera/integrate-with-systemmediatransportcontrols.md
-          items:
-            - name: Controle manual dos Controles de Transporte de Mídia do Sistema
-              href: ../audio-video-camera/system-media-transport-controls.md
-        - name: Sinais de metadados cronometrados suportados pelo sistema
-          href: ../audio-video-camera/system-supported-metadata-cues.md
-        - name: 'Criar, agendar e gerenciar pausas de mídia'
-          href: ../audio-video-camera/create-schedule-and-manage-media-breaks.md
-        - name: Reproduzir mídia em segundo plano
-          href: ../audio-video-camera/background-audio.md
-          items:
-            - name: Reprodução de mídia em segundo plano herdada
-              href: ../audio-video-camera/legacy-background-media-playback.md
-        - name: Streaming adaptável
-          href: ../audio-video-camera/adaptive-streaming.md
-          items:
-            - name: Suporte para a marca HLS
-              href: ../audio-video-camera/hls-tag-support.md
-            - name: Suporte de perfil DASH
-              href: ../audio-video-camera/dash-profile-support.md
-        - name: Transmissão de mídia
-          href: ../audio-video-camera/media-casting.md
-        - name: DRM do PlayReady
-          href: ../audio-video-camera/playready-client-sdk.md
-          items:
-            - name: DRM de hardware
-              href: ../audio-video-camera/hardware-drm.md
-            - name: Streaming adaptável com PlayReady
-              href: ../audio-video-camera/adaptive-streaming-with-playready.md
-        - name: Extensão de Mídia Criptografada do PlayReady
-          href: ../audio-video-camera/playready-encrypted-media-extension.md
-    - name: Detectar rostos em imagens ou vídeos
-      href: ../audio-video-camera/detect-and-track-faces-in-an-image.md
-    - name: Efeitos de vídeo personalizados
-      href: ../audio-video-camera/custom-video-effects.md
-    - name: Efeitos de áudio personalizados
-      href: ../audio-video-camera/custom-audio-effects.md
-    - name: Composições e edição de mídia
-      href: ../audio-video-camera/media-compositions-and-editing.md
-    - name: Propriedades de informações do dispositivo de áudio
-      href: ../audio-video-camera/audio-device-information-properties.md
-    - name: Detectar e responder a alterações de estado de áudio
-      href: ../audio-video-camera/detect-and-respond-to-audio-state-changes.md
-    - name: 'Criar, editar e salvar imagens de bitmap'
-      href: ../audio-video-camera/imaging.md
+      - name: Controle manual dos Controles de Transporte de Mídia do Sistema
+        href: ../audio-video-camera/system-media-transport-controls.md
+    - name: Sinais de metadados cronometrados suportados pelo sistema
+      href: ../audio-video-camera/system-supported-metadata-cues.md
+    - name: Criar, agendar e gerenciar pausas de mídia
+      href: ../audio-video-camera/create-schedule-and-manage-media-breaks.md
+    - name: Reproduzir mídia em segundo plano
+      href: ../audio-video-camera/background-audio.md
       items:
-        - name: Processar bitmaps com OpenCV
-          href: ../audio-video-camera/process-software-bitmaps-with-opencv.md
-        - name: Processar bitmaps com a API LowLightFusion
-          href: ../audio-video-camera/process-bitmaps-low-light-fusion.md
-        - name: Referência de opções de BitmapEncoder
-          href: ../audio-video-camera/bitmapencoder-options-reference.md
-        - name: Metadados de imagem
-          href: ../audio-video-camera/image-metadata.md
-    - name: Transcodificar arquivos de mídia
-      href: ../audio-video-camera/transcode-media-files.md
-    - name: Processar arquivos de mídia em segundo plano
-      href: ../audio-video-camera/process-media-files-in-the-background.md
-    - name: Gráficos de áudio
-      href: ../audio-video-camera/audio-graphs.md
-    - name: MIDI
-      href: ../audio-video-camera/midi.md
-    - name: Importar mídia de um dispositivo
-      href: ../audio-video-camera/import-media-from-a-device.md
-    - name: Lanterna independente da câmera
-      href: ../audio-video-camera/camera-independent-flashlight.md
-    - name: Codecs compatíveis
-      href: ../audio-video-camera/supported-codecs.md
-    - name: Consulta de codecs instalados
-      href: ../audio-video-camera/codec-query.md
-    - name: Captura de tela
-      href: ../audio-video-camera/screen-capture.md
+      - name: Reprodução de mídia em segundo plano herdada
+        href: ../audio-video-camera/legacy-background-media-playback.md
+    - name: Streaming adaptável
+      href: ../audio-video-camera/adaptive-streaming.md
+      items:
+      - name: Suporte para a marca HLS
+        href: ../audio-video-camera/hls-tag-support.md
+      - name: Suporte de perfil DASH
+        href: ../audio-video-camera/dash-profile-support.md
+    - name: Transmissão de mídia
+      href: ../audio-video-camera/media-casting.md
+    - name: DRM do PlayReady
+      href: ../audio-video-camera/playready-client-sdk.md
+      items:
+      - name: DRM de hardware
+        href: ../audio-video-camera/hardware-drm.md
+      - name: Streaming adaptável com PlayReady
+        href: ../audio-video-camera/adaptive-streaming-with-playready.md
+    - name: Extensão de Mídia Criptografada do PlayReady
+      href: ../audio-video-camera/playready-encrypted-media-extension.md
+  - name: Detectar rostos em imagens ou vídeos
+    href: ../audio-video-camera/detect-and-track-faces-in-an-image.md
+  - name: Efeitos de vídeo personalizados
+    href: ../audio-video-camera/custom-video-effects.md
+  - name: Efeitos de áudio personalizados
+    href: ../audio-video-camera/custom-audio-effects.md
+  - name: Composições e edição de mídia
+    href: ../audio-video-camera/media-compositions-and-editing.md
+  - name: Propriedades de informações do dispositivo de áudio
+    href: ../audio-video-camera/audio-device-information-properties.md
+  - name: Detectar e responder a alterações de estado de áudio
+    href: ../audio-video-camera/detect-and-respond-to-audio-state-changes.md
+  - name: Criar, editar e salvar imagens de bitmap
+    href: ../audio-video-camera/imaging.md
+    items:
+    - name: Processar bitmaps com OpenCV
+      href: ../audio-video-camera/process-software-bitmaps-with-opencv.md
+    - name: Processar bitmaps com a API LowLightFusion
+      href: ../audio-video-camera/process-bitmaps-low-light-fusion.md
+    - name: Referência de opções de BitmapEncoder
+      href: ../audio-video-camera/bitmapencoder-options-reference.md
+    - name: Metadados de imagem
+      href: ../audio-video-camera/image-metadata.md
+  - name: Transcodificar arquivos de mídia
+    href: ../audio-video-camera/transcode-media-files.md
+  - name: Processar arquivos de mídia em segundo plano
+    href: ../audio-video-camera/process-media-files-in-the-background.md
+  - name: Gráficos de áudio
+    href: ../audio-video-camera/audio-graphs.md
+  - name: MIDI
+    href: ../audio-video-camera/midi.md
+  - name: Importar mídia de um dispositivo
+    href: ../audio-video-camera/import-media-from-a-device.md
+  - name: Lanterna independente da câmera
+    href: ../audio-video-camera/camera-independent-flashlight.md
+  - name: Codecs compatíveis
+    href: ../audio-video-camera/supported-codecs.md
+  - name: Consulta de codecs instalados
+    href: ../audio-video-camera/codec-query.md
+  - name: Captura de tela
+    href: ../audio-video-camera/screen-capture.md
 - name: Comunicação
   items:
-    - name: Comunicação entre apps
-      href: ../app-to-app/index.md
-      items:
-        - name: Compartilhar dados
-          href: ../app-to-app/share-data.md
-        - name: Receber dados
-          href: ../app-to-app/receive-data.md
-        - name: Copiar e colar
-          href: ../app-to-app/copy-and-paste.md
-    - name: Serviços de rede e Web
-      href: ../networking/index.md
-      items:
-        - name: Noções básicas de rede
-          href: ../networking/networking-basics.md
-        - name: Qual tecnologia de rede?
-          href: ../networking/which-networking-technology.md
-        - name: Comunicações de rede em segundo plano
-          href: ../networking/network-communications-in-the-background.md
-        - name: Soquetes
-          href: ../networking/sockets.md
-        - name: WebSockets
-          href: ../networking/websockets.md
-        - name: HttpClient
-          href: ../networking/httpclient.md
-        - name: Feeds RSS/Atom
-          href: ../networking/web-feeds.md
-        - name: Transferências em segundo plano
-          href: ../networking/background-transfers.md
+  - name: Comunicação entre apps
+    href: ../app-to-app/index.md
+    items:
+    - name: Compartilhar dados
+      href: ../app-to-app/share-data.md
+    - name: Receber dados
+      href: ../app-to-app/receive-data.md
+    - name: Copiar e colar
+      href: ../app-to-app/copy-and-paste.md
+  - name: Serviços de rede e Web
+    href: ../networking/index.md
+    items:
+    - name: Noções básicas de rede
+      href: ../networking/networking-basics.md
+    - name: Qual tecnologia de rede?
+      href: ../networking/which-networking-technology.md
+    - name: Comunicações de rede em segundo plano
+      href: ../networking/network-communications-in-the-background.md
+    - name: Soquetes
+      href: ../networking/sockets.md
+    - name: WebSockets
+      href: ../networking/websockets.md
+    - name: HttpClient
+      href: ../networking/httpclient.md
+    - name: Feeds RSS/Atom
+      href: ../networking/web-feeds.md
+    - name: Transferências em segundo plano
+      href: ../networking/background-transfers.md
 - name: Dados e arquivos
   items:
-    - name: Recursos do aplicativo
-      href: ../app-resources/index.md
+  - name: Recursos do aplicativo
+    href: ../app-resources/index.md
+    items:
+    - name: Sistema de Gerenciamento de Recursos
+      href: ../app-resources/resource-management-system.md
+    - name: Como o RMS faz a correspondência dos recursos e os escolhe
+      href: ../app-resources/how-rms-matches-and-chooses-resources.md
+    - name: Como o RMS faz a correspondência das marcas de idioma
+      href: ../app-resources/how-rms-matches-lang-tags.md
+    - name: Personalizar os recursos para idioma, escala, contraste, entre outros
+      href: ../app-resources/tailor-resources-lang-scale-contrast.md
+    - name: Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo
+      href: ../app-resources/localize-strings-ui-manifest.md
+    - name: Carregar imagens, ativos personalizados para escala, tema, contraste, entre outros
+      href: ../app-resources/images-tailored-for-scale-theme-contrast.md
+    - name: Esquemas de URI
+      href: ../app-resources/uri-schemes.md
+    - name: Especificar os recursos padrão usados pelo app
+      href: ../app-resources/specify-default-resources-installed.md
+    - name: Compilar recursos no pacote de aplicativos, e não em um pacote de recursos
+      href: ../app-resources/build-resources-into-app-package.md
+    - name: APIs de PRI e sistemas de compilação personalizados
+      href: ../app-resources/pri-apis-custom-build-systems.md
       items:
-        - name: Sistema de Gerenciamento de Recursos
-          href: ../app-resources/resource-management-system.md
-        - name: Como o RMS faz a correspondência dos recursos e os escolhe
-          href: ../app-resources/how-rms-matches-and-chooses-resources.md
-        - name: Como o RMS faz a correspondência das marcas de idioma
-          href: ../app-resources/how-rms-matches-lang-tags.md
-        - name: 'Personalizar os recursos para idioma, escala, contraste, entre outros'
-          href: ../app-resources/tailor-resources-lang-scale-contrast.md
-        - name: Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo
-          href: ../app-resources/localize-strings-ui-manifest.md
-        - name: 'Carregar imagens, ativos personalizados para escala, tema, contraste, entre outros'
-          href: ../app-resources/images-tailored-for-scale-theme-contrast.md
-        - name: Esquemas de URI
-          href: ../app-resources/uri-schemes.md
-        - name: Especificar os recursos padrão usados pelo app
-          href: ../app-resources/specify-default-resources-installed.md
-        - name: 'Compilar recursos no pacote de aplicativos, e não em um pacote de recursos'
-          href: ../app-resources/build-resources-into-app-package.md
-        - name: APIs de PRI e sistemas de compilação personalizados
-          href: ../app-resources/pri-apis-custom-build-systems.md
-          items:
-            - name: Cenário 1 (APIs de PRI)
-              href: ../app-resources/pri-apis-scenario-1.md
-        - name: Compilar recursos manualmente com o MakePri.exe
-          href: ../app-resources/compile-resources-manually-with-makepri.md
-        - name: Opções de linha de comando do MakePri.exe
-          href: ../app-resources/makepri-exe-command-options.md
-        - name: Arquivo de configuração MakePri.exe
-          href: ../app-resources/makepri-exe-configuration.md
-        - name: Indexadores específicos de formato do MakePri.exe
-          href: ../app-resources/makepri-exe-format-specific-indexers.md
-        - name: Migrar recursos herdados
-          href: ../app-resources/using-mrt-for-converted-desktop-apps-and-games.md
-    - name: Acesso a dados
-      href: ../data-access/index.md
-      items:
-        - name: Usar um banco de dados do SQLite
-          href: ../data-access/sqlite-databases.md
-        - name: Usar um banco de dados do SQL Server
-          href: ../data-access/sql-server-databases.md
-    - name: Associação de dados
-      href: ../data-binding/index.md
-      items:
-        - name: Visão geral da vinculação de dados
-          href: ../data-binding/data-binding-quickstart.md
-        - name: Vinculação de dados em detalhes
-          href: ../data-binding/data-binding-in-depth.md
-        - name: 'Funções em x: Bind'
-          href: ../data-binding/function-bindings.md
-        - name: 'Tutorial: criar vinculações de dados'
-          href: ../data-binding/xaml-basics-data-binding.md
-        - name: Dados de amostra na superfície de design e para a criação de protótipo
-          href: ../data-binding/displaying-data-in-the-designer.md
-        - name: Vincular dados hierárquicos e criar um modo de exibição mestre/detalhes
-          href: ../data-binding/how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md
-        - name: Vinculação de dados e MVVM
-          href: ../data-binding/data-binding-and-mvvm.md
-    - name: 'Arquivos, pastas e bibliotecas'
-      href: ../files/index.md
-      items:
-        - name: Enumerar e consultar arquivos e pastas
-          href: ../files/quickstart-listing-files-and-folders.md
-        - name: 'Criar, gravar e ler um arquivo'
-          href: ../files/quickstart-reading-and-writing-files.md
-        - name: Obter propriedades do arquivo
-          href: ../files/quickstart-getting-file-properties.md
-        - name: Abrir arquivos e pastas com um seletor
-          href: ../files/quickstart-using-file-and-folder-pickers.md
-        - name: Salvar um arquivo com um seletor
-          href: ../files/quickstart-save-a-file-with-a-picker.md
-        - name: Acessando o conteúdo do Grupo Doméstico
-          href: ../files/quickstart-accessing-homegroup-content.md
-        - name: Determinando a disponibilidade de arquivos do Microsoft OneDrive
-          href: ../files/quickstart-determining-availability-of-microsoft-onedrive-files.md
-        - name: 'Arquivos e pastas nas bibliotecas de Música, Imagens e Vídeos'
-          href: ../files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md
-        - name: Imagens em miniatura
-          href: ../files/thumbnails.md
-        - name: Rastrear arquivos e pastas usados recentemente
-          href: ../files/how-to-track-recently-used-files-and-folders.md
-        - name: Controlar alterações no sistema de arquivos em segundo plano
-          href: ../files/change-tracking-filesystem.md
-        - name: Acessar o cartão SD
-          href: ../files/access-the-sd-card.md
-        - name: Permissões de acesso a arquivo
-          href: ../files/file-access-permissions.md
-        - name: Acesso rápido às propriedades de arquivo UWP
-          href: ../files/fast-file-properties.md
-    - name: Aprendizado de Máquina
-      href: 'https://docs.microsoft.com/windows/ai/'
+      - name: Cenário 1 (APIs de PRI)
+        href: ../app-resources/pri-apis-scenario-1.md
+    - name: Compilar recursos manualmente com o MakePri.exe
+      href: ../app-resources/compile-resources-manually-with-makepri.md
+    - name: Opções de linha de comando do MakePri.exe
+      href: ../app-resources/makepri-exe-command-options.md
+    - name: Arquivo de configuração MakePri.exe
+      href: ../app-resources/makepri-exe-configuration.md
+    - name: Indexadores específicos de formato do MakePri.exe
+      href: ../app-resources/makepri-exe-format-specific-indexers.md
+    - name: Migrar recursos herdados
+      href: ../app-resources/using-mrt-for-converted-desktop-apps-and-games.md
+  - name: Acesso a dados
+    href: ../data-access/index.md
+    items:
+    - name: Usar um banco de dados do SQLite
+      href: ../data-access/sqlite-databases.md
+    - name: Usar um banco de dados do SQL Server
+      href: ../data-access/sql-server-databases.md
+  - name: Associação de dados
+    href: ../data-binding/index.md
+    items:
+    - name: Visão geral da vinculação de dados
+      href: ../data-binding/data-binding-quickstart.md
+    - name: Vinculação de dados em detalhes
+      href: ../data-binding/data-binding-in-depth.md
+    - name: 'Funções em x: Bind'
+      href: ../data-binding/function-bindings.md
+    - name: 'Tutorial: criar vinculações de dados'
+      href: ../data-binding/xaml-basics-data-binding.md
+    - name: Dados de amostra na superfície de design e para a criação de protótipo
+      href: ../data-binding/displaying-data-in-the-designer.md
+    - name: Vincular dados hierárquicos e criar um modo de exibição mestre/detalhes
+      href: ../data-binding/how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md
+    - name: Vinculação de dados e MVVM
+      href: ../data-binding/data-binding-and-mvvm.md
+  - name: Arquivos, pastas e bibliotecas
+    href: ../files/index.md
+    items:
+    - name: Enumerar e consultar arquivos e pastas
+      href: ../files/quickstart-listing-files-and-folders.md
+    - name: Criar, gravar e ler um arquivo
+      href: ../files/quickstart-reading-and-writing-files.md
+    - name: Obter propriedades do arquivo
+      href: ../files/quickstart-getting-file-properties.md
+    - name: Abrir arquivos e pastas com um seletor
+      href: ../files/quickstart-using-file-and-folder-pickers.md
+    - name: Salvar um arquivo com um seletor
+      href: ../files/quickstart-save-a-file-with-a-picker.md
+    - name: Acessando o conteúdo do Grupo Doméstico
+      href: ../files/quickstart-accessing-homegroup-content.md
+    - name: Determinando a disponibilidade de arquivos do Microsoft OneDrive
+      href: ../files/quickstart-determining-availability-of-microsoft-onedrive-files.md
+    - name: Arquivos e pastas nas bibliotecas de Música, Imagens e Vídeos
+      href: ../files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md
+    - name: Imagens em miniatura
+      href: ../files/thumbnails.md
+    - name: Rastrear arquivos e pastas usados recentemente
+      href: ../files/how-to-track-recently-used-files-and-folders.md
+    - name: Controlar alterações no sistema de arquivos em segundo plano
+      href: ../files/change-tracking-filesystem.md
+    - name: Acessar o cartão SD
+      href: ../files/access-the-sd-card.md
+    - name: Permissões de acesso a arquivo
+      href: ../files/file-access-permissions.md
+    - name: Acesso rápido às propriedades de arquivo UWP
+      href: ../files/fast-file-properties.md
+  - name: Aprendizado de Máquina
+    href: https://docs.microsoft.com/windows/ai/
 - name: Implantação
   items:
-    - name: Escolher uma versão do UWP
-      href: ../updates-and-versions/choose-a-uwp-version.md
-    - name: 'Depuração, teste e desempenho'
-      href: ../debug-test-perf/index.md
+  - name: Escolher uma versão do UWP
+    href: ../updates-and-versions/choose-a-uwp-version.md
+  - name: Depuração, teste e desempenho
+    href: ../debug-test-perf/index.md
+    items:
+    - name: Implantando e depurando aplicativos UWP
+      href: ../debug-test-perf/deploying-and-debugging-uwp-apps.md
+    - name: Testando e depurando ferramentas de PLM
+      href: ../debug-test-perf/testing-debugging-plm.md
+    - name: Testar com o Emulador Microsoft para Windows 10
+      href: ../debug-test-perf/test-with-the-emulator.md
+    - name: Testar aplicativos Surface Hub usando o Visual Studio
+      href: ../debug-test-perf/test-surface-hub-apps-using-visual-studio.md
+    - name: Implantar um aplicativo por meio de registro de arquivo flexível
+      href: ../debug-test-perf/loose-file-registration.md
+    - name: Teste beta
+      href: ../debug-test-perf/beta-testing.md
+    - name: Windows Device Portal
+      href: ../debug-test-perf/device-portal.md
       items:
-        - name: Implantando e depurando aplicativos UWP
-          href: ../debug-test-perf/deploying-and-debugging-uwp-apps.md
-        - name: Testando e depurando ferramentas de PLM
-          href: ../debug-test-perf/testing-debugging-plm.md
-        - name: Testar com o Emulador Microsoft para Windows 10
-          href: ../debug-test-perf/test-with-the-emulator.md
-        - name: Testar aplicativos Surface Hub usando o Visual Studio
-          href: ../debug-test-perf/test-surface-hub-apps-using-visual-studio.md
-        - name: Implantar um aplicativo por meio de registro de arquivo flexível
-          href: ../debug-test-perf/loose-file-registration.md
-        - name: Teste beta
-          href: ../debug-test-perf/beta-testing.md
-        - name: Windows Device Portal
-          href: ../debug-test-perf/device-portal.md
-          items:
-            - name: Device Portal para desktop
-              href: ../debug-test-perf/device-portal-desktop.md
-            - name: Device Portal para celulares
-              href: ../debug-test-perf/device-portal-mobile.md
-            - name: Device Portal para Xbox
-              href: ../debug-test-perf/device-portal-xbox.md
-            - name: Device Portal para Hololens
-              href: ../debug-test-perf/device-portal-hololens.md
-            - name: APIs básicas do Device Portal
-              href: ../debug-test-perf/device-portal-api-core.md
-            - name: Criar um plug-in personalizado para o Portal de Dispositivos
-              href: ../debug-test-perf/device-portal-plugin.md
-            - name: Provisionar o Portal de Dispositivos com um certificado SSL personalizado
-              href: ../debug-test-perf/device-portal-ssl.md
-        - name: Kit de Certificação de Aplicativos Windows
-          href: ../debug-test-perf/windows-app-certification-kit.md
-          items:
-            - name: Testes do Kit de Certificação de Aplicativos Windows
-              href: ../debug-test-perf/windows-app-certification-kit-tests.md
-              items:
-                - name: Testes de aplicativo da Ponte de Desktop Windows
-                  href: ../debug-test-perf/windows-desktop-bridge-app-tests.md
-        - name: Desempenho
-          href: ../debug-test-perf/performance-and-xaml-ui.md
-          items:
-            - name: Planejando para o desempenho
-              href: ../debug-test-perf/planning-and-measuring-performance.md
-            - name: Otimizar a atividade em segundo plano
-              href: ../debug-test-perf/optimize-background-activity.md
-            - name: Otimização das interfaces do usuário ListView e GridView
-              href: ../debug-test-perf/optimize-gridview-and-listview.md
-            - name: Virtualização de dados de ListView e GridView
-              href: ../debug-test-perf/listview-and-gridview-data-optimization.md
-            - name: Melhore o desempenho de coleta de lixo
-              href: ../debug-test-perf/improve-garbage-collection-performance.md
-            - name: Mantenha o thread de interface do usuário responsivo
-              href: ../debug-test-perf/keep-the-ui-thread-responsive.md
-            - name: Otimizar sua marcação XAML
-              href: ../debug-test-perf/optimize-xaml-loading.md
-            - name: Otimizar o layout XAML
-              href: ../debug-test-perf/optimize-your-xaml-layout.md
-            - name: Dicas de MVVM e desempenho de linguagem
-              href: ../debug-test-perf/mvvm-performance-tips.md
-            - name: Práticas recomendadas para o desempenho inicial de seu aplicativo
-              href: ../debug-test-perf/best-practices-for-your-app-s-startup-performance.md
-            - name: 'Otimizar animações, mídia e imagens'
-              href: ../debug-test-perf/optimize-animations-and-media.md
-            - name: Otimizar suspensão/retomada
-              href: ../debug-test-perf/optimize-suspend-resume.md
-            - name: Otimizar o acesso a arquivos
-              href: ../debug-test-perf/optimize-file-access.md
-            - name: Componentes do Tempo de Execução do Windows e otimização de interoperabilidade
-              href: ../debug-test-perf/windows-runtime-components-and-optimizing-interop.md
-            - name: Ferramentas para criação de perfil e desempenho
-              href: ../debug-test-perf/tools-for-profiling-and-performance.md
-        - name: Aplicativos adaptáveis de versão
-          href: ../debug-test-perf/version-adaptive-apps.md
-          items:
-            - name: Código adaptável de versão
-              href: ../debug-test-perf/version-adaptive-code.md
-            - name: XAML condicional
-              href: ../debug-test-perf/conditional-xaml.md
-    - name: 'Monetização, envolvimento e serviços da Store'
-      href: ../monetize/index.md
+      - name: Device Portal para desktop
+        href: ../debug-test-perf/device-portal-desktop.md
+      - name: Device Portal para celulares
+        href: ../debug-test-perf/device-portal-mobile.md
+      - name: Device Portal para Xbox
+        href: ../debug-test-perf/device-portal-xbox.md
+      - name: Device Portal para Hololens
+        href: ../debug-test-perf/device-portal-hololens.md
+      - name: APIs básicas do Device Portal
+        href: ../debug-test-perf/device-portal-api-core.md
+      - name: Criar um plug-in personalizado para o Portal de Dispositivos
+        href: ../debug-test-perf/device-portal-plugin.md
+      - name: Provisionar o Portal de Dispositivos com um certificado SSL personalizado
+        href: ../debug-test-perf/device-portal-ssl.md
+    - name: Kit de Certificação de Aplicativos Windows
+      href: ../debug-test-perf/windows-app-certification-kit.md
       items:
-        - name: Compras e avaliações no aplicativo
-          href: ../monetize/in-app-purchases-and-trials.md
-          items:
-            - name: Obter informações do produto para apps e complementos
-              href: ../monetize/get-product-info-for-apps-and-add-ons.md
-            - name: Obter informações de licença para apps e complementos
-              href: ../monetize/get-license-info-for-apps-and-add-ons.md
-            - name: Habilitar compras nos aplicativos e complementos no aplicativo
-              href: ../monetize/enable-in-app-purchases-of-apps-and-add-ons.md
-            - name: Habilitar compras de complementos consumíveis
-              href: ../monetize/enable-consumable-add-on-purchases.md
-            - name: Habilitar complementos de assinatura para o app
-              href: ../monetize/enable-subscription-add-ons-for-your-app.md
-            - name: Implementar uma versão de avaliação do aplicativo
-              href: ../monetize/implement-a-trial-version-of-your-app.md
-            - name: Esquemas de dados de produtos da Microsoft Store
-              href: ../monetize/data-schemas-for-store-products.md
-            - name: Códigos de erro para operações da Microsoft Store
-              href: ../monetize/error-codes-for-store-operations.md
-            - name: Usar o namespace Windows.ApplicationModel.Store
-              href: ../monetize/in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md
-              items:
-                - name: Excluir ou limitar recursos em uma versão de avaliação
-                  href: ../monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.md
-                - name: Habilitar compras de produtos no aplicativo
-                  href: ../monetize/enable-in-app-product-purchases.md
-                - name: Habilitar compras de produtos consumíveis no aplicativo
-                  href: ../monetize/enable-consumable-in-app-product-purchases.md
-                - name: Gerenciar um catálogo abrangente de produtos no aplicativo
-                  href: ../monetize/manage-a-large-catalog-of-in-app-products.md
-                - name: Usar recibos para verificar compras de produtos
-                  href: ../monetize/use-receipts-to-verify-product-purchases.md
-        - name: Apresentar anúncios em seu app com o SDK do Microsoft Advertising
-          href: ../monetize/display-ads-in-your-app.md
-          items:
-            - name: Instalar o SDK do Microsoft Advertising
-              href: ../monetize/install-the-microsoft-advertising-libraries.md
-              items:
-                - name: Atualizar seu aplicativo para as bibliotecas mais recentes de anúncios em faixa
-                  href: ../monetize/update-your-app-to-the-latest-advertising-libraries.md
-            - name: Implementa anúncios no aplicativo
-              href: ../monetize/developer-walkthroughs.md
-              items:
-                - name: Anúncios em faixa
-                  href: ../monetize/banner-ads.md
-                  items:
-                    - name: AdControl em XAML e .NET
-                      href: ../monetize/adcontrol-in-xaml-and--net.md
-                    - name: AdControl em HTML 5 e JavaScript
-                      href: ../monetize/adcontrol-in-html-5-and-javascript.md
-                    - name: Tamanhos de anúncios de banner compatíveis
-                      href: ../monetize/supported-ad-sizes-for-banner-ads.md
-                - name: Anúncios intersticiais
-                  href: ../monetize/interstitial-ads.md
-                  items:
-                    - name: 'Código exemplo de anúncio intersticial em C#'
-                      href: ../monetize/interstitial-ad-sample-code-in-c.md
-                    - name: Código exemplo de anúncio intersticial em JavaScript
-                      href: ../monetize/interstitial-ad-sample-code-in-javascript.md
-                - name: Anúncios nativos
-                  href: ../monetize/native-ads.md
-                - name: Mostrar anúncios em conteúdo de vídeo
-                  href: ../monetize/add-advertisements-to-video-content.md
-            - name: Configurar unidades publicitárias no app
-              href: ../monetize/set-up-ad-units-in-your-app.md
-            - name: Serviço de controle de anúncios da Microsoft
-              href: ../monetize/ad-mediation-service.md
-            - name: Práticas recomendadas
-              href: ../monetize/best-practices-for-ads-in-apps.md
-              items:
-                - name: Diretrizes de experiência do usuário e de interface do usuário
-                  href: ../monetize/ui-and-user-experience-guidelines.md
-                - name: Otimizar a visualização das unidades de anúncio
-                  href: ../monetize/optimize-ad-unit-viewability.md
-                - name: Processamento de erros de anúncio
-                  href: ../monetize/error-handling-with-advertising-libraries.md
-                  items:
-                    - name: 'Tratamento de erros no passo a passo do XAML/C#'
-                      href: ../monetize/error-handling-in-xamlc-walkthrough.md
-                    - name: Processamento de erros no guia passo a passo do JavaScript
-                      href: ../monetize/error-handling-in-javascript-walkthrough.md
-            - name: Problemas conhecidos e soluções de problemas
-              href: ../monetize/known-issues-for-the-advertising-libraries.md
-              items:
-                - name: Guia de solução de problemas em HTML e JavaScript
-                  href: ../monetize/html-and-javascript-troubleshooting-guide.md
-                - name: 'Guia de solução de problemas de XAML e C#'
-                  href: ../monetize/xaml-and-c-troubleshooting-guide.md
-            - name: Notas da versão
-              href: ../monetize/release-notes-for-the-advertising-libraries.md
-            - name: Programa de editores de anúncios premium do Windows
-              href: ../monetize/windows-premium-ads-publishers-program.md
-        - name: Envolver os clientes com o Microsoft Store Services SDK
-          href: ../monetize/microsoft-store-services-sdk.md
-          items:
-            - name: Executar experimentos de apps com testes A/B
-              href: ../monetize/run-app-experiments-with-a-b-testing.md
-              items:
-                - name: Criar um projeto experimental no Partner Center
-                  href: ../monetize/create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md
-                - name: Codificar seu aplicativo para experimentação
-                  href: ../monetize/code-your-experiment-in-your-app.md
-                - name: Definir seu experimento no Partner Center
-                  href: ../monetize/define-your-experiment-in-the-dev-center-dashboard.md
-                - name: Gerenciar seu experimento no Partner Center
-                  href: ../monetize/manage-your-experiment.md
-                - name: Criar e executar seu primeiro experimento
-                  href: ../monetize/create-and-run-your-first-experiment-with-a-b-testing.md
-            - name: Iniciar o Hub de Feedback do seu app
-              href: ../monetize/launch-feedback-hub-from-your-app.md
-            - name: Configurar seu app para notificações por push direcionadas
-              href: ../monetize/configure-your-app-to-receive-dev-center-notifications.md
-            - name: Registrar eventos personalizados para o Partner Center
-              href: ../monetize/log-custom-events-for-dev-center.md
-        - name: Solicitar classificações e opiniões
-          href: ../monetize/request-ratings-and-reviews.md
-        - name: Serviços da Microsoft Store
-          href: ../monetize/using-windows-store-services.md
-          items:
-            - name: Acessar os dados analíticos
-              href: ../monetize/access-analytics-data-using-windows-store-services.md
-              items:
-                - name: Aplicativos UWP
-                  items:
-                    - name: Obter dados de aquisições e instalações
-                      items:
-                        - name: Obter aquisições de apps
-                          href: ../monetize/get-app-acquisitions.md
-                        - name: Obter instalações do app
-                          href: ../monetize/get-app-installs.md
-                        - name: Obter dados de funil de aquisição do app
-                          href: ../monetize/get-acquisition-funnel-data.md
-                        - name: Obter conversões de app por canal
-                          href: ../monetize/get-app-conversions-by-channel.md
-                        - name: Obter aquisições de complemento
-                          href: ../monetize/get-in-app-acquisitions.md
-                        - name: Obter aquisições de complemento de assinatura
-                          href: ../monetize/get-subscription-acquisitions.md
-                        - name: Obter conversões de complemento por canal
-                          href: ../monetize/get-add-on-conversions-by-channel.md
-                    - name: Obter dados de insights do seu app
-                      href: ../monetize/get-insights-data-for-your-app.md
-                    - name: Obter classificações do app
-                      href: ../monetize/get-app-ratings.md
-                    - name: Obter avaliações do app
-                      href: ../monetize/get-app-reviews.md
-                    - name: Obter uso do app diariamente
-                      href: ../monetize/get-app-usage-daily.md
-                    - name: Obter uso do app mensalmente
-                      href: ../monetize/get-app-usage-monthly.md
-                    - name: Obter dados de relatórios de erros
-                      href: ../monetize/get-error-reporting-data.md
-                      items:
-                        - name: Obter detalhes de um erro em seu app
-                          href: ../monetize/get-details-for-an-error-in-your-app.md
-                        - name: Obter o rastreamento de pilha de um erro em seu aplicativo
-                          href: ../monetize/get-the-stack-trace-for-an-error-in-your-app.md
-                        - name: Baixar o arquivo CAB de um erro em seu aplicativo
-                          href: ../monetize/download-the-cab-file-for-an-error-in-your-app.md
-                    - name: Obter dados de desempenho de anúncios
-                      href: ../monetize/get-ad-performance-data.md
-                    - name: Obter dados de desempenho da campanha publicitária
-                      href: ../monetize/get-ad-campaign-performance-data.md
-                - name: Apps da área de trabalho
-                  items:
-                    - name: Obter instalações de aplicativo da área de trabalho
-                      href: ../monetize/get-desktop-app-installs.md
-                    - name: Obter dados de insights do seu aplicativo da área de trabalho
-                      href: ../monetize/get-insights-data-for-your-desktop-app.md
-                    - name: Obter bloqueios de upgrade para seu aplicativo da área de trabalho
-                      href: ../monetize/get-desktop-block-data.md
-                    - name: Obter detalhes do bloqueio de upgrade para seu aplicativo da área de trabalho
-                      href: ../monetize/get-desktop-block-data-details.md
-                    - name: Obter dados de relatório de erros do seu aplicativo da área de trabalho
-                      href: ../monetize/get-desktop-application-error-reporting-data.md
-                      items:
-                        - name: Obter detalhes de um erro em seu aplicativo da área de trabalho
-                          href: ../monetize/get-details-for-an-error-in-your-desktop-application.md
-                        - name: Obter o rastreamento de pilha de um erro em seu aplicativo da área de trabalho
-                          href: ../monetize/get-the-stack-trace-for-an-error-in-your-desktop-application.md
-                        - name: Baixar o arquivo CAB de um erro em seu aplicativo da área de trabalho
-                          href: ../monetize/download-the-cab-file-for-an-error-in-your-desktop-application.md
-                - name: Jogos do Xbox One e Xbox Live
-                  items:
-                    - name: Obter aquisições de jogos Xbox One
-                      href: ../monetize/get-xbox-one-game-acquisitions.md
-                    - name: Obter aquisições de complementos do Xbox One
-                      href: ../monetize/get-xbox-one-add-on-acquisitions.md
-                    - name: Obter dados de relatório de erros do seu jogo do Xbox One
-                      href: ../monetize/get-error-reporting-data-for-your-xbox-one-game.md
-                      items:
-                        - name: Obter detalhes de um erro em seu jogo do Xbox One
-                          href: ../monetize/get-details-for-an-error-in-your-xbox-one-game.md
-                        - name: Obter o rastreamento de pilha de um erro em seu jogo do Xbox One
-                          href: ../monetize/get-the-stack-trace-for-an-error-in-your-xbox-one-game.md
-                        - name: Baixar o arquivo CAB de um erro em seu jogo do Xbox One
-                          href: ../monetize/download-the-cab-file-for-an-error-in-your-xbox-one-game.md
-                    - name: Obter dados de análise do Xbox Live
-                      href: ../monetize/get-xbox-live-analytics.md
-                      items:
-                        - name: Obter dados de conquistas do Xbox Live
-                          href: ../monetize/get-xbox-live-achievements-data.md
-                        - name: Obter dados de integridade do Xbox Live
-                          href: ../monetize/get-xbox-live-health-data.md
-                        - name: Obter dados do Hub de Jogos Xbox Live
-                          href: ../monetize/get-xbox-live-game-hub-data.md
-                        - name: Obter dados de clube do Xbox Live
-                          href: ../monetize/get-xbox-live-club-data.md
-                        - name: Obter dados de multijogador do Xbox Live
-                          href: ../monetize/get-xbox-live-multiplayer-data.md
-                        - name: Obter dados de uso simultâneo do Xbox Live
-                          href: ../monetize/get-xbox-live-concurrent-usage-data.md
-            - name: Responder às avaliações
-              href: ../monetize/respond-to-reviews-using-windows-store-services.md
-              items:
-                - name: Obter informações de resposta para análises
-                  href: ../monetize/get-response-info-for-app-reviews.md
-                - name: Enviar respostas às críticas
-                  href: ../monetize/submit-responses-to-app-reviews.md
-            - name: Executar campanhas publicitárias
-              href: ../monetize/run-ad-campaigns-using-windows-store-services.md
-              items:
-                - name: Gerenciar campanhas publicitárias
-                  href: ../monetize/manage-ad-campaigns.md
-                - name: Gerenciar linhas de entrega
-                  href: ../monetize/manage-delivery-lines-for-ad-campaigns.md
-                - name: Gerenciar perfis de direcionamento
-                  href: ../monetize/manage-targeting-profiles-for-ad-campaigns.md
-                - name: Gerenciar criativos
-                  href: ../monetize/manage-creatives-for-ad-campaigns.md
-            - name: Criar e gerenciar envios
-              href: ../monetize/create-and-manage-submissions-using-windows-store-services.md
-              items:
-                - name: Obter dados de app
-                  href: ../monetize/get-app-data.md
-                  items:
-                    - name: Obter todos os apps
-                      href: ../monetize/get-all-apps.md
-                    - name: Obter um aplicativo
-                      href: ../monetize/get-an-app.md
-                    - name: Obter complementos para um app
-                      href: ../monetize/get-add-ons-for-an-app.md
-                    - name: Obter pacotes de pré-lançamento de um app
-                      href: ../monetize/get-flights-for-an-app.md
-                - name: Gerenciar envios de aplicativo
-                  href: ../monetize/manage-app-submissions.md
-                  items:
-                    - name: Obter um envio de aplicativo
-                      href: ../monetize/get-an-app-submission.md
-                    - name: Obter o status de um envio de aplicativo
-                      href: ../monetize/get-status-for-an-app-submission.md
-                    - name: Criar um envio de aplicativo
-                      href: ../monetize/create-an-app-submission.md
-                    - name: Confirmar um envio de aplicativo
-                      href: ../monetize/commit-an-app-submission.md
-                    - name: Atualizar um envio de aplicativo
-                      href: ../monetize/update-an-app-submission.md
-                    - name: Excluir um envio de aplicativo
-                      href: ../monetize/delete-an-app-submission.md
-                    - name: Obter informações de distribuição para um envio de aplicativo
-                      href: ../monetize/get-package-rollout-info-for-an-app-submission.md
-                    - name: Atualizar o percentual de distribuição para um envio de aplicativo
-                      href: ../monetize/update-the-package-rollout-percentage-for-an-app-submission.md
-                    - name: Interromper a distribuição para um envio de aplicativo
-                      href: ../monetize/halt-the-package-rollout-for-an-app-submission.md
-                    - name: Finalizar a distribuição para um envio de app
-                      href: ../monetize/finalize-the-package-rollout-for-an-app-submission.md
-                - name: Gerenciar complementos
-                  href: ../monetize/manage-add-ons.md
-                  items:
-                    - name: Obter todos os complementos
-                      href: ../monetize/get-all-add-ons.md
-                    - name: Obter um complemento
-                      href: ../monetize/get-an-add-on.md
-                    - name: Criar um complemento
-                      href: ../monetize/create-an-add-on.md
-                    - name: Excluir um complemento
-                      href: ../monetize/delete-an-add-on.md
-                - name: Gerenciar envios de complemento
-                  href: ../monetize/manage-add-on-submissions.md
-                  items:
-                    - name: Obter um envio de complemento
-                      href: ../monetize/get-an-add-on-submission.md
-                    - name: Obter o status de um envio de complemento
-                      href: ../monetize/get-status-for-an-add-on-submission.md
-                    - name: Criar um envio de complemento
-                      href: ../monetize/create-an-add-on-submission.md
-                    - name: Confirmar um envio de complemento
-                      href: ../monetize/commit-an-add-on-submission.md
-                    - name: Atualizar um envio de complemento
-                      href: ../monetize/update-an-add-on-submission.md
-                    - name: Excluir um envio de complemento
-                      href: ../monetize/delete-an-add-on-submission.md
-                - name: Gerenciar pacotes de pré-lançamento
-                  href: ../monetize/manage-flights.md
-                  items:
-                    - name: Obter um pacote de pré-lançamento
-                      href: ../monetize/get-a-flight.md
-                    - name: Criar um pacote de pré-lançamento
-                      href: ../monetize/create-a-flight.md
-                    - name: Excluir um pacote de pré-lançamento
-                      href: ../monetize/delete-a-flight.md
-                - name: Gerenciar envios de pacote de pré-lançamento
-                  href: ../monetize/manage-flight-submissions.md
-                  items:
-                    - name: Obter um envio de pacote de pré-lançamento
-                      href: ../monetize/get-a-flight-submission.md
-                    - name: Obter o status de um envio de pacote de pré-lançamento
-                      href: ../monetize/get-status-for-a-flight-submission.md
-                    - name: Criar um envio de pacote de pré-lançamento
-                      href: ../monetize/create-a-flight-submission.md
-                    - name: Confirmar um envio de pacote de pré-lançamento
-                      href: ../monetize/commit-a-flight-submission.md
-                    - name: Atualizar um envio de pacote de pré-lançamento
-                      href: ../monetize/update-a-flight-submission.md
-                    - name: Excluir um envio de pacote de pré-lançamento
-                      href: ../monetize/delete-a-flight-submission.md
-                    - name: Obter as informações de distribuição de pacote para um envio de versão de pré-lançamento
-                      href: ../monetize/get-package-rollout-info-for-a-flight-submission.md
-                    - name: Atualizar a porcentagem de distribuição para um envio de versão de pré-lançamento
-                      href: ../monetize/update-the-package-rollout-percentage-for-a-flight-submission.md
-                    - name: Interromper a distribuição para um envio de versão de pré-lançamento
-                      href: ../monetize/halt-the-package-rollout-for-a-flight-submission.md
-                    - name: Finalizar a distribuição para um envio de versão de pré-lançamento
-                      href: ../monetize/finalize-the-package-rollout-for-a-flight-submission.md
-                - name: Exemplos de código para a API de envio
-                  href: ../monetize/code-examples-for-the-windows-store-submission-api.md
-                  items:
-                    - name: 'Exemplo de C#: envios de apps, complementos e versões de pré-lançamento'
-                      href: ../monetize/csharp-code-examples-for-the-windows-store-submission-api.md
-                    - name: 'Exemplo de C#: envio de aplicativo com opções de jogo e trailers'
-                      href: ../monetize/csharp-code-examples-for-submissions-game-options-and-trailers.md
-                    - name: 'Exemplo de Java: envios de apps, complementos e versões de pré-lançamento'
-                      href: ../monetize/java-code-examples-for-the-windows-store-submission-api.md
-                    - name: 'Exemplo de Java: envio de aplicativo com opções de jogo e trailers'
-                      href: ../monetize/java-code-examples-for-submissions-game-options-and-trailers.md
-                    - name: 'Exemplo de Python: envios para apps, complementos e versões de pré-lançamento'
-                      href: ../monetize/python-code-examples-for-the-windows-store-submission-api.md
-                    - name: 'Exemplo de Python: envio de aplicativo com opções de jogo e trailers'
-                      href: ../monetize/python-code-examples-for-submissions-game-options-and-trailers.md
-            - name: Gerenciar as ofertas direcionadas
-              href: ../monetize/manage-targeted-offers-using-windows-store-services.md
-              items:
-                - name: Receber as ofertas direcionadas
-                  href: ../monetize/get-targeted-offers.md
-            - name: Gerenciar direitos a produtos de um serviço
-              href: ../monetize/view-and-grant-products-from-a-service.md
-              items:
-                - name: Consulta por produtos
-                  href: ../monetize/query-for-products.md
-                - name: Declarar produtos consumíveis como providenciados
-                  href: ../monetize/report-consumable-products-as-fulfilled.md
-                - name: Conceder produtos gratuitos
-                  href: ../monetize/grant-free-products.md
-                - name: Obter assinaturas para um usuário
-                  href: ../monetize/get-subscriptions-for-a-user.md
-                - name: Alterar o estado de cobrança de uma assinatura para um usuário
-                  href: ../monetize/change-the-billing-state-of-a-subscription-for-a-user.md
-                - name: Renovar uma chave de ID da Microsoft Store
-                  href: ../monetize/renew-a-windows-store-id-key.md
-            - name: API de metadados de apps para redes de publicidade
-              href: ../monetize/app-metadata-api-for-advertising-networks.md
-        - name: Enviar solicitações para a Store
-          href: ../monetize/send-requests-to-the-store.md
-        - name: Adicionar recursos de demonstração (RDX) de varejo
-          href: ../monetize/retail-demo-experience.md
-        - name: Simplificar pagamentos com a API de Solicitação de Pagamento
-          href: ../monetize/payment-request.md
-    - name: Empacotar apps
-      href: ../packaging/index.md
+      - name: Testes do Kit de Certificação de Aplicativos Windows
+        href: ../debug-test-perf/windows-app-certification-kit-tests.md
+        items:
+        - name: Testes de aplicativo da Ponte de Desktop Windows
+          href: ../debug-test-perf/windows-desktop-bridge-app-tests.md
+    - name: Desempenho
+      href: ../debug-test-perf/performance-and-xaml-ui.md
       items:
-        - name: União de um aplicativo UWP com o Visual Studio
-          href: ../packaging/packaging-uwp-apps.md
-        - name: Empacotamento manual de app
-          href: ../packaging/manual-packaging-root.md
+      - name: Planejando para o desempenho
+        href: ../debug-test-perf/planning-and-measuring-performance.md
+      - name: Otimizar a atividade em segundo plano
+        href: ../debug-test-perf/optimize-background-activity.md
+      - name: Otimização das interfaces do usuário ListView e GridView
+        href: ../debug-test-perf/optimize-gridview-and-listview.md
+      - name: Virtualização de dados de ListView e GridView
+        href: ../debug-test-perf/listview-and-gridview-data-optimization.md
+      - name: Melhore o desempenho de coleta de lixo
+        href: ../debug-test-perf/improve-garbage-collection-performance.md
+      - name: Mantenha o thread de interface do usuário responsivo
+        href: ../debug-test-perf/keep-the-ui-thread-responsive.md
+      - name: Otimizar sua marcação XAML
+        href: ../debug-test-perf/optimize-xaml-loading.md
+      - name: Otimizar o layout XAML
+        href: ../debug-test-perf/optimize-your-xaml-layout.md
+      - name: Dicas de MVVM e desempenho de linguagem
+        href: ../debug-test-perf/mvvm-performance-tips.md
+      - name: Práticas recomendadas para o desempenho inicial de seu aplicativo
+        href: ../debug-test-perf/best-practices-for-your-app-s-startup-performance.md
+      - name: Otimizar animações, mídia e imagens
+        href: ../debug-test-perf/optimize-animations-and-media.md
+      - name: Otimizar suspensão/retomada
+        href: ../debug-test-perf/optimize-suspend-resume.md
+      - name: Otimizar o acesso a arquivos
+        href: ../debug-test-perf/optimize-file-access.md
+      - name: Componentes do Tempo de Execução do Windows e otimização de interoperabilidade
+        href: ../debug-test-perf/windows-runtime-components-and-optimizing-interop.md
+      - name: Ferramentas para criação de perfil e desempenho
+        href: ../debug-test-perf/tools-for-profiling-and-performance.md
+    - name: Aplicativos adaptáveis de versão
+      href: ../debug-test-perf/version-adaptive-apps.md
+      items:
+      - name: Código adaptável de versão
+        href: ../debug-test-perf/version-adaptive-code.md
+      - name: XAML condicional
+        href: ../debug-test-perf/conditional-xaml.md
+  - name: Monetização, envolvimento e serviços da Store
+    href: ../monetize/index.md
+    items:
+    - name: Compras e avaliações no aplicativo
+      href: ../monetize/in-app-purchases-and-trials.md
+      items:
+      - name: Obter informações do produto para apps e complementos
+        href: ../monetize/get-product-info-for-apps-and-add-ons.md
+      - name: Obter informações de licença para apps e complementos
+        href: ../monetize/get-license-info-for-apps-and-add-ons.md
+      - name: Habilitar compras nos aplicativos e complementos no aplicativo
+        href: ../monetize/enable-in-app-purchases-of-apps-and-add-ons.md
+      - name: Habilitar compras de complementos consumíveis
+        href: ../monetize/enable-consumable-add-on-purchases.md
+      - name: Habilitar complementos de assinatura para o app
+        href: ../monetize/enable-subscription-add-ons-for-your-app.md
+      - name: Implementar uma versão de avaliação do aplicativo
+        href: ../monetize/implement-a-trial-version-of-your-app.md
+      - name: Esquemas de dados de produtos da Microsoft Store
+        href: ../monetize/data-schemas-for-store-products.md
+      - name: Códigos de erro para operações da Microsoft Store
+        href: ../monetize/error-codes-for-store-operations.md
+      - name: Usar o namespace Windows.ApplicationModel.Store
+        href: ../monetize/in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md
+        items:
+        - name: Excluir ou limitar recursos em uma versão de avaliação
+          href: ../monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.md
+        - name: Habilitar compras de produtos no aplicativo
+          href: ../monetize/enable-in-app-product-purchases.md
+        - name: Habilitar compras de produtos consumíveis no aplicativo
+          href: ../monetize/enable-consumable-in-app-product-purchases.md
+        - name: Gerenciar um catálogo abrangente de produtos no aplicativo
+          href: ../monetize/manage-a-large-catalog-of-in-app-products.md
+        - name: Usar recibos para verificar compras de produtos
+          href: ../monetize/use-receipts-to-verify-product-purchases.md
+    - name: Apresentar anúncios em seu app com o SDK do Microsoft Advertising
+      href: ../monetize/display-ads-in-your-app.md
+      items:
+      - name: Instalar o SDK do Microsoft Advertising
+        href: ../monetize/install-the-microsoft-advertising-libraries.md
+        items:
+        - name: Atualizar seu aplicativo para as bibliotecas mais recentes de anúncios em faixa
+          href: ../monetize/update-your-app-to-the-latest-advertising-libraries.md
+      - name: Implementa anúncios no aplicativo
+        href: ../monetize/developer-walkthroughs.md
+        items:
+        - name: Anúncios em faixa
+          href: ../monetize/banner-ads.md
           items:
-            - name: Criar um pacote do aplicativo com a ferramenta MakeAppx.exe
-              href: ../packaging/create-app-package-with-makeappx-tool.md
-            - name: Criar um certificado para a assinatura de pacote
-              href: ../packaging/create-certificate-package-signing.md
-            - name: Assinar um pacote do aplicativo usando a SignTool
-              href: ../packaging/sign-app-package-using-signtool.md
-            - name: Desenvolvendo com os pacotes de ativo e dobramento de pacote
-              href: ../packaging/package-folding.md
-            - name: Pacotes do lote simples de aplicativo
-              href: ../packaging/flat-bundles.md
-            - name: Introdução aos pacotes de ativo
-              href: ../packaging/asset-packages.md
-            - name: Criação do pacote com o layout de empacotamento
-              href: ../packaging/packaging-layout.md
-        - name: Arquiteturas de pacote do aplicativo
-          href: ../packaging/device-architecture.md
-        - name: Instalação de streaming de aplicativo UWP
-          href: ../packaging/streaming-install.md
+          - name: AdControl em XAML e .NET
+            href: ../monetize/adcontrol-in-xaml-and--net.md
+          - name: AdControl em HTML 5 e JavaScript
+            href: ../monetize/adcontrol-in-html-5-and-javascript.md
+          - name: Tamanhos de anúncios de banner compatíveis
+            href: ../monetize/supported-ad-sizes-for-banner-ads.md
+        - name: Anúncios intersticiais
+          href: ../monetize/interstitial-ads.md
           items:
-            - name: Criar e converter um mapa de grupo de conteúdo de origem
-              href: ../packaging/create-cgm.md
-        - name: Criação de pacotes opcionais e conjunto relacionado
-          href: ../packaging/optional-packages.md
+          - name: Código exemplo de anúncio intersticial em C#
+            href: ../monetize/interstitial-ad-sample-code-in-c.md
+          - name: Código exemplo de anúncio intersticial em JavaScript
+            href: ../monetize/interstitial-ad-sample-code-in-javascript.md
+        - name: Anúncios nativos
+          href: ../monetize/native-ads.md
+        - name: Mostrar anúncios em conteúdo de vídeo
+          href: ../monetize/add-advertisements-to-video-content.md
+      - name: Configurar unidades publicitárias no app
+        href: ../monetize/set-up-ad-units-in-your-app.md
+      - name: Serviço de controle de anúncios da Microsoft
+        href: ../monetize/ad-mediation-service.md
+      - name: Práticas recomendadas
+        href: ../monetize/best-practices-for-ads-in-apps.md
+        items:
+        - name: Diretrizes de experiência do usuário e de interface do usuário
+          href: ../monetize/ui-and-user-experience-guidelines.md
+        - name: Otimizar a visualização das unidades de anúncio
+          href: ../monetize/optimize-ad-unit-viewability.md
+        - name: Processamento de erros de anúncio
+          href: ../monetize/error-handling-with-advertising-libraries.md
           items:
-            - name: Pacotes opcionais com código executável
-              href: ../packaging/optional-packages-with-executable-code.md
-        - name: Instalar aplicativos UWP com o Instalador de Aplicativo
-          href: ../packaging/appinstaller-root.md
+          - name: Tratamento de erros no passo a passo do XAML/C#
+            href: ../monetize/error-handling-in-xamlc-walkthrough.md
+          - name: Processamento de erros no guia passo a passo do JavaScript
+            href: ../monetize/error-handling-in-javascript-walkthrough.md
+      - name: Problemas conhecidos e soluções de problemas
+        href: ../monetize/known-issues-for-the-advertising-libraries.md
+        items:
+        - name: Guia de solução de problemas em HTML e JavaScript
+          href: ../monetize/html-and-javascript-troubleshooting-guide.md
+        - name: Guia de solução de problemas de XAML e C#
+          href: ../monetize/xaml-and-c-troubleshooting-guide.md
+      - name: Notas da versão
+        href: ../monetize/release-notes-for-the-advertising-libraries.md
+      - name: Programa de editores de anúncios premium do Windows
+        href: ../monetize/windows-premium-ads-publishers-program.md
+    - name: Envolver os clientes com o Microsoft Store Services SDK
+      href: ../monetize/microsoft-store-services-sdk.md
+      items:
+      - name: Executar experimentos de apps com testes A/B
+        href: ../monetize/run-app-experiments-with-a-b-testing.md
+        items:
+        - name: Criar um projeto experimental no Partner Center
+          href: ../monetize/create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md
+        - name: Codificar seu aplicativo para experimentação
+          href: ../monetize/code-your-experiment-in-your-app.md
+        - name: Definir seu experimento no Partner Center
+          href: ../monetize/define-your-experiment-in-the-dev-center-dashboard.md
+        - name: Gerenciar seu experimento no Partner Center
+          href: ../monetize/manage-your-experiment.md
+        - name: Criar e executar seu primeiro experimento
+          href: ../monetize/create-and-run-your-first-experiment-with-a-b-testing.md
+      - name: Iniciar o Hub de Feedback do seu app
+        href: ../monetize/launch-feedback-hub-from-your-app.md
+      - name: Configurar seu app para notificações por push direcionadas
+        href: ../monetize/configure-your-app-to-receive-dev-center-notifications.md
+      - name: Registrar eventos personalizados para o Partner Center
+        href: ../monetize/log-custom-events-for-dev-center.md
+    - name: Solicitar classificações e opiniões
+      href: ../monetize/request-ratings-and-reviews.md
+    - name: Serviços da Microsoft Store
+      href: ../monetize/using-windows-store-services.md
+      items:
+      - name: Acessar os dados analíticos
+        href: ../monetize/access-analytics-data-using-windows-store-services.md
+        items:
+        - name: Aplicativos UWP
           items:
-            - name: Criar um arquivo do Instalador de Aplicativo com o Visual Studio
-              href: ../packaging/create-appinstallerfile-vs.md
-            - name: Instalar aplicativos UWP a partir de uma página da Web
-              href: ../packaging/installing-UWP-apps-web.md
-            - name: Instalar um conjunto relacionado usando um arquivo do Instalador de Aplicativo
-              href: ../packaging/install-related-set.md
-            - name: Solucionar problemas de instalação com o arquivo do Instalador de Aplicativo
-              href: ../packaging/troubleshoot-appinstaller-issues.md
-            - name: Instalar um aplicativo UWP a partir de um aplicativo Web do Azure
-              href: ../packaging/web-install-azure.md
-            - name: Instale um aplicativo UWP a partir de um servidor IIS
-              href: ../packaging/web-install-iis.md
-            - name: Hospedagem de pacotes de aplicativo UWP no AWS para instalação pela Web
-              href: ../packaging/web-install-aws.md
-        - name: Instalar apps usando a ferramenta WinAppDeployCmd.exe
-          href: ../packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md
-        - name: Declarações de funcionalidades do app
-          href: ../packaging/app-capability-declarations.md
-        - name: Configurar compilações automáticas para seu aplicativo UWP
-          href: ../packaging/auto-build-package-uwp-apps.md
-        - name: Baixar e instalar atualizações de pacote a partir da Store
-          href: ../packaging/self-install-package-updates.md
+          - name: Obter dados de aquisições e instalações
+            items:
+            - name: Obter aquisições de apps
+              href: ../monetize/get-app-acquisitions.md
+            - name: Obter instalações do app
+              href: ../monetize/get-app-installs.md
+            - name: Obter dados de funil de aquisição do app
+              href: ../monetize/get-acquisition-funnel-data.md
+            - name: Obter conversões de app por canal
+              href: ../monetize/get-app-conversions-by-channel.md
+            - name: Obter aquisições de complemento
+              href: ../monetize/get-in-app-acquisitions.md
+            - name: Obter aquisições de complemento de assinatura
+              href: ../monetize/get-subscription-acquisitions.md
+            - name: Obter conversões de complemento por canal
+              href: ../monetize/get-add-on-conversions-by-channel.md
+          - name: Obter dados de insights do seu app
+            href: ../monetize/get-insights-data-for-your-app.md
+          - name: Obter classificações do app
+            href: ../monetize/get-app-ratings.md
+          - name: Obter avaliações do app
+            href: ../monetize/get-app-reviews.md
+          - name: Obter uso do app diariamente
+            href: ../monetize/get-app-usage-daily.md
+          - name: Obter uso do app mensalmente
+            href: ../monetize/get-app-usage-monthly.md
+          - name: Obter dados de relatórios de erros
+            href: ../monetize/get-error-reporting-data.md
+            items:
+            - name: Obter detalhes de um erro em seu app
+              href: ../monetize/get-details-for-an-error-in-your-app.md
+            - name: Obter o rastreamento de pilha de um erro em seu aplicativo
+              href: ../monetize/get-the-stack-trace-for-an-error-in-your-app.md
+            - name: Baixar o arquivo CAB de um erro em seu aplicativo
+              href: ../monetize/download-the-cab-file-for-an-error-in-your-app.md
+          - name: Obter dados de desempenho de anúncios
+            href: ../monetize/get-ad-performance-data.md
+          - name: Obter dados de desempenho da campanha publicitária
+            href: ../monetize/get-ad-campaign-performance-data.md
+        - name: Apps da área de trabalho
+          items:
+          - name: Obter instalações de aplicativo da área de trabalho
+            href: ../monetize/get-desktop-app-installs.md
+          - name: Obter dados de insights do seu aplicativo da área de trabalho
+            href: ../monetize/get-insights-data-for-your-desktop-app.md
+          - name: Obter bloqueios de upgrade para seu aplicativo da área de trabalho
+            href: ../monetize/get-desktop-block-data.md
+          - name: Obter detalhes do bloqueio de upgrade para seu aplicativo da área de trabalho
+            href: ../monetize/get-desktop-block-data-details.md
+          - name: Obter dados de relatório de erros do seu aplicativo da área de trabalho
+            href: ../monetize/get-desktop-application-error-reporting-data.md
+            items:
+            - name: Obter detalhes de um erro em seu aplicativo da área de trabalho
+              href: ../monetize/get-details-for-an-error-in-your-desktop-application.md
+            - name: Obter o rastreamento de pilha de um erro em seu aplicativo da área de trabalho
+              href: ../monetize/get-the-stack-trace-for-an-error-in-your-desktop-application.md
+            - name: Baixar o arquivo CAB de um erro em seu aplicativo da área de trabalho
+              href: ../monetize/download-the-cab-file-for-an-error-in-your-desktop-application.md
+        - name: Jogos do Xbox One e Xbox Live
+          items:
+          - name: Obter aquisições de jogos Xbox One
+            href: ../monetize/get-xbox-one-game-acquisitions.md
+          - name: Obter aquisições de complementos do Xbox One
+            href: ../monetize/get-xbox-one-add-on-acquisitions.md
+          - name: Obter dados de relatório de erros do seu jogo do Xbox One
+            href: ../monetize/get-error-reporting-data-for-your-xbox-one-game.md
+            items:
+            - name: Obter detalhes de um erro em seu jogo do Xbox One
+              href: ../monetize/get-details-for-an-error-in-your-xbox-one-game.md
+            - name: Obter o rastreamento de pilha de um erro em seu jogo do Xbox One
+              href: ../monetize/get-the-stack-trace-for-an-error-in-your-xbox-one-game.md
+            - name: Baixar o arquivo CAB de um erro em seu jogo do Xbox One
+              href: ../monetize/download-the-cab-file-for-an-error-in-your-xbox-one-game.md
+          - name: Obter dados de análise do Xbox Live
+            href: ../monetize/get-xbox-live-analytics.md
+            items:
+            - name: Obter dados de conquistas do Xbox Live
+              href: ../monetize/get-xbox-live-achievements-data.md
+            - name: Obter dados de integridade do Xbox Live
+              href: ../monetize/get-xbox-live-health-data.md
+            - name: Obter dados do Hub de Jogos Xbox Live
+              href: ../monetize/get-xbox-live-game-hub-data.md
+            - name: Obter dados de clube do Xbox Live
+              href: ../monetize/get-xbox-live-club-data.md
+            - name: Obter dados de multijogador do Xbox Live
+              href: ../monetize/get-xbox-live-multiplayer-data.md
+            - name: Obter dados de uso simultâneo do Xbox Live
+              href: ../monetize/get-xbox-live-concurrent-usage-data.md
+      - name: Responder às avaliações
+        href: ../monetize/respond-to-reviews-using-windows-store-services.md
+        items:
+        - name: Obter informações de resposta para análises
+          href: ../monetize/get-response-info-for-app-reviews.md
+        - name: Enviar respostas às críticas
+          href: ../monetize/submit-responses-to-app-reviews.md
+      - name: Executar campanhas publicitárias
+        href: ../monetize/run-ad-campaigns-using-windows-store-services.md
+        items:
+        - name: Gerenciar campanhas publicitárias
+          href: ../monetize/manage-ad-campaigns.md
+        - name: Gerenciar linhas de entrega
+          href: ../monetize/manage-delivery-lines-for-ad-campaigns.md
+        - name: Gerenciar perfis de direcionamento
+          href: ../monetize/manage-targeting-profiles-for-ad-campaigns.md
+        - name: Gerenciar criativos
+          href: ../monetize/manage-creatives-for-ad-campaigns.md
+      - name: Criar e gerenciar envios
+        href: ../monetize/create-and-manage-submissions-using-windows-store-services.md
+        items:
+        - name: Obter dados de app
+          href: ../monetize/get-app-data.md
+          items:
+          - name: Obter todos os apps
+            href: ../monetize/get-all-apps.md
+          - name: Obter um aplicativo
+            href: ../monetize/get-an-app.md
+          - name: Obter complementos para um app
+            href: ../monetize/get-add-ons-for-an-app.md
+          - name: Obter pacotes de pré-lançamento de um app
+            href: ../monetize/get-flights-for-an-app.md
+        - name: Gerenciar envios de aplicativo
+          href: ../monetize/manage-app-submissions.md
+          items:
+          - name: Obter um envio de aplicativo
+            href: ../monetize/get-an-app-submission.md
+          - name: Obter o status de um envio de aplicativo
+            href: ../monetize/get-status-for-an-app-submission.md
+          - name: Criar um envio de aplicativo
+            href: ../monetize/create-an-app-submission.md
+          - name: Confirmar um envio de aplicativo
+            href: ../monetize/commit-an-app-submission.md
+          - name: Atualizar um envio de aplicativo
+            href: ../monetize/update-an-app-submission.md
+          - name: Excluir um envio de aplicativo
+            href: ../monetize/delete-an-app-submission.md
+          - name: Obter informações de distribuição para um envio de aplicativo
+            href: ../monetize/get-package-rollout-info-for-an-app-submission.md
+          - name: Atualizar o percentual de distribuição para um envio de aplicativo
+            href: ../monetize/update-the-package-rollout-percentage-for-an-app-submission.md
+          - name: Interromper a distribuição para um envio de aplicativo
+            href: ../monetize/halt-the-package-rollout-for-an-app-submission.md
+          - name: Finalizar a distribuição para um envio de app
+            href: ../monetize/finalize-the-package-rollout-for-an-app-submission.md
+        - name: Gerenciar complementos
+          href: ../monetize/manage-add-ons.md
+          items:
+          - name: Obter todos os complementos
+            href: ../monetize/get-all-add-ons.md
+          - name: Obter um complemento
+            href: ../monetize/get-an-add-on.md
+          - name: Criar um complemento
+            href: ../monetize/create-an-add-on.md
+          - name: Excluir um complemento
+            href: ../monetize/delete-an-add-on.md
+        - name: Gerenciar envios de complemento
+          href: ../monetize/manage-add-on-submissions.md
+          items:
+          - name: Obter um envio de complemento
+            href: ../monetize/get-an-add-on-submission.md
+          - name: Obter o status de um envio de complemento
+            href: ../monetize/get-status-for-an-add-on-submission.md
+          - name: Criar um envio de complemento
+            href: ../monetize/create-an-add-on-submission.md
+          - name: Confirmar um envio de complemento
+            href: ../monetize/commit-an-add-on-submission.md
+          - name: Atualizar um envio de complemento
+            href: ../monetize/update-an-add-on-submission.md
+          - name: Excluir um envio de complemento
+            href: ../monetize/delete-an-add-on-submission.md
+        - name: Gerenciar pacotes de pré-lançamento
+          href: ../monetize/manage-flights.md
+          items:
+          - name: Obter um pacote de pré-lançamento
+            href: ../monetize/get-a-flight.md
+          - name: Criar um pacote de pré-lançamento
+            href: ../monetize/create-a-flight.md
+          - name: Excluir um pacote de pré-lançamento
+            href: ../monetize/delete-a-flight.md
+        - name: Gerenciar envios de pacote de pré-lançamento
+          href: ../monetize/manage-flight-submissions.md
+          items:
+          - name: Obter um envio de pacote de pré-lançamento
+            href: ../monetize/get-a-flight-submission.md
+          - name: Obter o status de um envio de pacote de pré-lançamento
+            href: ../monetize/get-status-for-a-flight-submission.md
+          - name: Criar um envio de pacote de pré-lançamento
+            href: ../monetize/create-a-flight-submission.md
+          - name: Confirmar um envio de pacote de pré-lançamento
+            href: ../monetize/commit-a-flight-submission.md
+          - name: Atualizar um envio de pacote de pré-lançamento
+            href: ../monetize/update-a-flight-submission.md
+          - name: Excluir um envio de pacote de pré-lançamento
+            href: ../monetize/delete-a-flight-submission.md
+          - name: Obter as informações de distribuição de pacote para um envio de versão de pré-lançamento
+            href: ../monetize/get-package-rollout-info-for-a-flight-submission.md
+          - name: Atualizar a porcentagem de distribuição para um envio de versão de pré-lançamento
+            href: ../monetize/update-the-package-rollout-percentage-for-a-flight-submission.md
+          - name: Interromper a distribuição para um envio de versão de pré-lançamento
+            href: ../monetize/halt-the-package-rollout-for-a-flight-submission.md
+          - name: Finalizar a distribuição para um envio de versão de pré-lançamento
+            href: ../monetize/finalize-the-package-rollout-for-a-flight-submission.md
+        - name: Exemplos de código para a API de envio
+          href: ../monetize/code-examples-for-the-windows-store-submission-api.md
+          items:
+          - name: 'Exemplo de C#: envios de apps, complementos e versões de pré-lançamento'
+            href: ../monetize/csharp-code-examples-for-the-windows-store-submission-api.md
+          - name: 'Exemplo de C#: envio de aplicativo com opções de jogo e trailers'
+            href: ../monetize/csharp-code-examples-for-submissions-game-options-and-trailers.md
+          - name: 'Exemplo de Java: envios de apps, complementos e versões de pré-lançamento'
+            href: ../monetize/java-code-examples-for-the-windows-store-submission-api.md
+          - name: 'Exemplo de Java: envio de aplicativo com opções de jogo e trailers'
+            href: ../monetize/java-code-examples-for-submissions-game-options-and-trailers.md
+          - name: 'Exemplo de Python: envios para apps, complementos e versões de pré-lançamento'
+            href: ../monetize/python-code-examples-for-the-windows-store-submission-api.md
+          - name: 'Exemplo de Python: envio de aplicativo com opções de jogo e trailers'
+            href: ../monetize/python-code-examples-for-submissions-game-options-and-trailers.md
+      - name: Gerenciar as ofertas direcionadas
+        href: ../monetize/manage-targeted-offers-using-windows-store-services.md
+        items:
+        - name: Receber as ofertas direcionadas
+          href: ../monetize/get-targeted-offers.md
+      - name: Gerenciar direitos a produtos de um serviço
+        href: ../monetize/view-and-grant-products-from-a-service.md
+        items:
+        - name: Consulta por produtos
+          href: ../monetize/query-for-products.md
+        - name: Declarar produtos consumíveis como providenciados
+          href: ../monetize/report-consumable-products-as-fulfilled.md
+        - name: Conceder produtos gratuitos
+          href: ../monetize/grant-free-products.md
+        - name: Obter assinaturas para um usuário
+          href: ../monetize/get-subscriptions-for-a-user.md
+        - name: Alterar o estado de cobrança de uma assinatura para um usuário
+          href: ../monetize/change-the-billing-state-of-a-subscription-for-a-user.md
+        - name: Renovar uma chave de ID da Microsoft Store
+          href: ../monetize/renew-a-windows-store-id-key.md
+      - name: API de metadados de apps para redes de publicidade
+        href: ../monetize/app-metadata-api-for-advertising-networks.md
+    - name: Enviar solicitações para a Store
+      href: ../monetize/send-requests-to-the-store.md
+    - name: Adicionar recursos de demonstração (RDX) de varejo
+      href: ../monetize/retail-demo-experience.md
+    - name: Simplificar pagamentos com a API de Solicitação de Pagamento
+      href: ../monetize/payment-request.md
+  - name: Empacotar apps
+    href: ../packaging/index.md
+    items:
+    - name: União de um aplicativo UWP com o Visual Studio
+      href: ../packaging/packaging-uwp-apps.md
+    - name: Empacotamento manual de app
+      href: ../packaging/manual-packaging-root.md
+      items:
+      - name: Criar um pacote do aplicativo com a ferramenta MakeAppx.exe
+        href: ../packaging/create-app-package-with-makeappx-tool.md
+      - name: Criar um certificado para a assinatura de pacote
+        href: ../packaging/create-certificate-package-signing.md
+      - name: Assinar um pacote do aplicativo usando a SignTool
+        href: ../packaging/sign-app-package-using-signtool.md
+      - name: Desenvolvendo com os pacotes de ativo e dobramento de pacote
+        href: ../packaging/package-folding.md
+      - name: Pacotes do lote simples de aplicativo
+        href: ../packaging/flat-bundles.md
+      - name: Introdução aos pacotes de ativo
+        href: ../packaging/asset-packages.md
+      - name: Criação do pacote com o layout de empacotamento
+        href: ../packaging/packaging-layout.md
+    - name: Arquiteturas de pacote do aplicativo
+      href: ../packaging/device-architecture.md
+    - name: Instalação de streaming de aplicativo UWP
+      href: ../packaging/streaming-install.md
+      items:
+      - name: Criar e converter um mapa de grupo de conteúdo de origem
+        href: ../packaging/create-cgm.md
+    - name: Criação de pacotes opcionais e conjunto relacionado
+      href: ../packaging/optional-packages.md
+      items:
+      - name: Pacotes opcionais com código executável
+        href: ../packaging/optional-packages-with-executable-code.md
+    - name: Instalar aplicativos UWP com o Instalador de Aplicativo
+      href: ../packaging/appinstaller-root.md
+      items:
+      - name: Criar um arquivo do Instalador de Aplicativo com o Visual Studio
+        href: ../packaging/create-appinstallerfile-vs.md
+      - name: Instalar aplicativos UWP a partir de uma página da Web
+        href: ../packaging/installing-UWP-apps-web.md
+      - name: Instalar um conjunto relacionado usando um arquivo do Instalador de Aplicativo
+        href: ../packaging/install-related-set.md
+      - name: Solucionar problemas de instalação com o arquivo do Instalador de Aplicativo
+        href: ../packaging/troubleshoot-appinstaller-issues.md
+      - name: Instalar um aplicativo UWP a partir de um aplicativo Web do Azure
+        href: ../packaging/web-install-azure.md
+      - name: Instale um aplicativo UWP a partir de um servidor IIS
+        href: ../packaging/web-install-iis.md
+      - name: Hospedagem de pacotes de aplicativo UWP no AWS para instalação pela Web
+        href: ../packaging/web-install-aws.md
+    - name: Instalar apps usando a ferramenta WinAppDeployCmd.exe
+      href: ../packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md
+    - name: Declarações de funcionalidades do app
+      href: ../packaging/app-capability-declarations.md
+    - name: Configurar compilações automáticas para seu aplicativo UWP
+      href: ../packaging/auto-build-package-uwp-apps.md
+    - name: Baixar e instalar atualizações de pacote a partir da Store
+      href: ../packaging/self-install-package-updates.md
 - name: Plataforma
   items:
-    - name: C++/WinRT
-      href: ../cpp-and-winrt-apis/index.md
+  - name: C++/WinRT
+    href: ../cpp-and-winrt-apis/index.md
+    items:
+    - name: Introdução
+      href: ../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md
+    - name: Comece agora
+      href: ../cpp-and-winrt-apis/get-started.md
+    - name: Novidades
+      href: ../cpp-and-winrt-apis/news.md
+    - name: Perguntas frequentes
+      href: ../cpp-and-winrt-apis/faq.md
+    - name: Solução de problemas
+      href: ../cpp-and-winrt-apis/troubleshooting.md
+    - name: Aplicativo de exemplo do Editor de fotos
+      href: ../cpp-and-winrt-apis/photo-editor-sample.md
+    - name: Manipulação de cadeia de caracteres
+      href: ../cpp-and-winrt-apis/strings.md
+    - name: Tipos de dados C++ padrão
+      href: ../cpp-and-winrt-apis/std-cpp-data-types.md
+    - name: Valores de conversão de boxing e unboxing valores para IInspectable
+      href: ../cpp-and-winrt-apis/boxing.md
+    - name: Consumir APIs
+      href: ../cpp-and-winrt-apis/consume-apis.md
+    - name: Criar APIs
+      href: ../cpp-and-winrt-apis/author-apis.md
+    - name: Tratamento de erros
+      href: ../cpp-and-winrt-apis/error-handling.md
+    - name: Manejar eventos usando delegados
+      href: ../cpp-and-winrt-apis/handle-events.md
+    - name: Criar eventos
+      href: ../cpp-and-winrt-apis/author-events.md
+    - name: Coleções
+      href: ../cpp-and-winrt-apis/collections.md
+    - name: Simultaneidade e operações assíncronas
+      href: ../cpp-and-winrt-apis/concurrency.md
+    - name: Controles XAML; vincular a uma propriedade
+      href: ../cpp-and-winrt-apis/binding-property.md
+    - name: Controles de itens XAML; vincular a uma coleção
+      href: ../cpp-and-winrt-apis/binding-collection.md
+    - name: Controles (modelos) personalizados de XAML
+      href: ../cpp-and-winrt-apis/xaml-cust-ctrl.md
+    - name: Consumir componentes COM
+      href: ../cpp-and-winrt-apis/consume-com.md
+    - name: Criar componentes COM
+      href: ../cpp-and-winrt-apis/author-coclasses.md
+    - name: Mudar de C++/CX para C++/WinRT
+      href: ../cpp-and-winrt-apis/move-to-winrt-from-cx.md
+    - name: Interoperabilidade com C++/CX
+      href: ../cpp-and-winrt-apis/interop-winrt-cx.md
+    - name: Mudar de WRL para C++/WinRT
+      href: ../cpp-and-winrt-apis/move-to-winrt-from-wrl.md
+    - name: Interoperabilidade com a ABI
+      href: ../cpp-and-winrt-apis/interop-winrt-abi.md
+    - name: Referências fracas e fortes
+      href: ../cpp-and-winrt-apis/weak-references.md
+    - name: Objetos ágeis
+      href: ../cpp-and-winrt-apis/agile-objects.md
+    - name: Linguagem C++
       items:
-        - name: Introdução
-          href: ../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md
-        - name: Comece agora
-          href: ../cpp-and-winrt-apis/get-started.md
-        - name: Novidades
-          href: ../cpp-and-winrt-apis/news.md
-        - name: Perguntas frequentes
-          href: ../cpp-and-winrt-apis/faq.md
-        - name: Solução de problemas
-          href: ../cpp-and-winrt-apis/troubleshooting.md
-        - name: Aplicativo de exemplo do Editor de fotos
-          href: ../cpp-and-winrt-apis/photo-editor-sample.md
-        - name: Manipulação de cadeia de caracteres
-          href: ../cpp-and-winrt-apis/strings.md
-        - name: Tipos de dados C++ padrão
-          href: ../cpp-and-winrt-apis/std-cpp-data-types.md
-        - name: Valores de conversão de boxing e unboxing valores para IInspectable
-          href: ../cpp-and-winrt-apis/boxing.md
-        - name: Consumir APIs
-          href: ../cpp-and-winrt-apis/consume-apis.md
-        - name: Criar APIs
-          href: ../cpp-and-winrt-apis/author-apis.md
-        - name: Tratamento de erros
-          href: ../cpp-and-winrt-apis/error-handling.md
-        - name: Manejar eventos usando delegados
-          href: ../cpp-and-winrt-apis/handle-events.md
-        - name: Criar eventos
-          href: ../cpp-and-winrt-apis/author-events.md
-        - name: Coleções
-          href: ../cpp-and-winrt-apis/collections.md
-        - name: Simultaneidade e operações assíncronas
-          href: ../cpp-and-winrt-apis/concurrency.md
-        - name: Controles XAML; vincular a uma propriedade
-          href: ../cpp-and-winrt-apis/binding-property.md
-        - name: Controles de itens XAML; vincular a uma coleção
-          href: ../cpp-and-winrt-apis/binding-collection.md
-        - name: Controles (modelos) personalizados de XAML
-          href: ../cpp-and-winrt-apis/xaml-cust-ctrl.md
-        - name: Consumir componentes COM
-          href: ../cpp-and-winrt-apis/consume-com.md
-        - name: Criar componentes COM
-          href: ../cpp-and-winrt-apis/author-coclasses.md
-        - name: Mudar de C++/CX para C++/WinRT
-          href: ../cpp-and-winrt-apis/move-to-winrt-from-cx.md
-        - name: Interoperabilidade com C++/CX
-          href: ../cpp-and-winrt-apis/interop-winrt-cx.md
-        - name: Mudar de WRL para C++/WinRT
-          href: ../cpp-and-winrt-apis/move-to-winrt-from-wrl.md
-        - name: Interoperabilidade com a ABI
-          href: ../cpp-and-winrt-apis/interop-winrt-abi.md
-        - name: Referências fracas e fortes
-          href: ../cpp-and-winrt-apis/weak-references.md
-        - name: Objetos ágeis
-          href: ../cpp-and-winrt-apis/agile-objects.md
-        - name: Linguagem C++
-          items:
-            - name: Categorias de valor e referências
-              href: ../cpp-and-winrt-apis/cpp-value-categories.md
-    - name: Segurança
-      href: ../security/index.md
+      - name: Categorias de valor e referências
+        href: ../cpp-and-winrt-apis/cpp-value-categories.md
+  - name: Segurança
+    href: ../security/index.md
+    items:
+    - name: Introdução ao desenvolvimento de aplicativos seguros do Windows
+      href: ../security/intro-to-secure-windows-app-development.md
+    - name: Autenticação e identidade do usuário
+      href: ../security/authentication-and-user-identity.md
       items:
-        - name: Introdução ao desenvolvimento de aplicativos seguros do Windows
-          href: ../security/intro-to-secure-windows-app-development.md
-        - name: Autenticação e identidade do usuário
-          href: ../security/authentication-and-user-identity.md
-          items:
-            - name: Cofre de credenciais
-              href: ../security/credential-locker.md
-            - name: Biometria por impressão digital
-              href: ../security/fingerprint-biometrics.md
-            - name: Windows Hello
-              href: ../security/microsoft-passport.md
-              items:
-                - name: Criar um app de logon do Windows Hello
-                  href: ../security/microsoft-passport-login.md
-                - name: Criar um serviço de logon do Windows Hello
-                  href: ../security/microsoft-passport-login-auth-service.md
-            - name: Cartões inteligentes
-              href: ../security/smart-cards.md
-            - name: Certificados compartilhados
-              href: ../security/share-certificates.md
-            - name: Gerenciador de Contas da Web
-              href: ../security/web-account-manager.md
-            - name: Desbloquear com dispositivos IoT complementares
-              href: ../security/companion-device-unlock.md
-            - name: Agente de autenticação da Web
-              href: ../security/web-authentication-broker.md
-        - name: Criptografia
-          href: ../security/cryptography.md
-          items:
-            - name: Certificados
-              href: ../security/certificates.md
-            - name: Chaves criptográficas
-              href: ../security/cryptographic-keys.md
-            - name: Proteção de dados
-              href: ../security/data-protection.md
-            - name: 'MACs, hashes e assinaturas'
-              href: ../security/macs-hashes-and-signatures.md
-            - name: Restrições de exportação na criptografia
-              href: ../security/export-restrictions-on-cryptography.md
-            - name: Tarefas comuns de criptografia
-              href: ../security/common-cryptography-tasks.md
-              items:
-                - name: Criar números aleatórios
-                  href: ../security/create-random-numbers.md
-                - name: Comparar buffers
-                  href: ../security/compare-buffers.md
-                - name: Converter entre cadeias de caracteres e dados binários
-                  href: ../security/convert-between-strings-and-binary-data.md
-                - name: Copiar de e para matrizes de bytes
-                  href: ../security/copy-to-and-from-byte-arrays.md
-                - name: Codificar e decodificar dados
-                  href: ../security/encode-and-decode-data.md
-    - name: Camada visual
-      href: ../composition/visual-layer.md
+      - name: Cofre de credenciais
+        href: ../security/credential-locker.md
+      - name: Biometria por impressão digital
+        href: ../security/fingerprint-biometrics.md
+      - name: Windows Hello
+        href: ../security/microsoft-passport.md
+        items:
+        - name: Criar um app de logon do Windows Hello
+          href: ../security/microsoft-passport-login.md
+        - name: Criar um serviço de logon do Windows Hello
+          href: ../security/microsoft-passport-login-auth-service.md
+      - name: Cartões inteligentes
+        href: ../security/smart-cards.md
+      - name: Certificados compartilhados
+        href: ../security/share-certificates.md
+      - name: Gerenciador de Contas da Web
+        href: ../security/web-account-manager.md
+      - name: Desbloquear com dispositivos IoT complementares
+        href: ../security/companion-device-unlock.md
+      - name: Agente de autenticação da Web
+        href: ../security/web-authentication-broker.md
+    - name: Criptografia
+      href: ../security/cryptography.md
       items:
-        - name: Composição visual
-          href: ../composition/composition-visual-tree.md
-        - name: Animações de composição
-          href: ../composition/composition-animation.md
-          items:
-            - name: Animações baseadas em tempo
-              href: ../composition/time-animations.md
-            - name: Animações de relações
-              href: ../composition/relation-animations.md
-            - name: Animações naturais
-              href: ../composition/natural-animations.md
-              items:
-                - name: Animações de mola
-                  href: ../composition/spring-animations.md
-            - name: Animações controladas por entrada
-              href: ../composition/input-driven-animations.md
-              items:
-                - name: Animações baseadas em rolagem
-                  href: ../composition/scroll-input-animations.md
-                - name: Animações baseadas em ponteiro
-                  href: ../composition/pointer-input-animations.md
-                - name: Manipulações personalizadas
-                  href: ../composition/interaction-tracker-manipulations.md
-                  items:
-                    - name: Pontos de ajuste
-                      href: ../composition/inertia-modifiers.md
-                    - name: Puxar para atualizar
-                      href: ../composition/source-modifiers.md
-        - name: Efeitos de composição
-          href: ../composition/composition-effects.md
-          items:
-            - name: Sombras de composição
-              href: ../composition/composition-shadows.md
-            - name: Iluminação de composição
-              href: ../composition/composition-lighting.md
-        - name: Pincéis de composição
-          href: ../composition/composition-brushes.md
-        - name: Interoperação nativa de composição
-          href: ../composition/composition-native-interop.md
-        - name: Adaptar sua interface do usuário
-          href: ../composition/composition-tailoring.md
-        - name: Usando XAML
-          href: ../composition/using-the-visual-layer-with-xaml.md
-          items:
-            - name: Iluminação XAML
-              href: ../composition/xaml-lighting.md
-    - name: Windows como serviço
-      href: ../updates-and-versions/application-development-for-windows-as-a-service.md
-    - name: Componentes do Tempo de Execução do Windows
-      href: ../winrt-components/index.md
+      - name: Certificados
+        href: ../security/certificates.md
+      - name: Chaves criptográficas
+        href: ../security/cryptographic-keys.md
+      - name: Proteção de dados
+        href: ../security/data-protection.md
+      - name: MACs, hashes e assinaturas
+        href: ../security/macs-hashes-and-signatures.md
+      - name: Restrições de exportação na criptografia
+        href: ../security/export-restrictions-on-cryptography.md
+      - name: Tarefas comuns de criptografia
+        href: ../security/common-cryptography-tasks.md
+        items:
+        - name: Criar números aleatórios
+          href: ../security/create-random-numbers.md
+        - name: Comparar buffers
+          href: ../security/compare-buffers.md
+        - name: Converter entre cadeias de caracteres e dados binários
+          href: ../security/convert-between-strings-and-binary-data.md
+        - name: Copiar de e para matrizes de bytes
+          href: ../security/copy-to-and-from-byte-arrays.md
+        - name: Codificar e decodificar dados
+          href: ../security/encode-and-decode-data.md
+  - name: Camada visual
+    href: ../composition/visual-layer.md
+    items:
+    - name: Composição visual
+      href: ../composition/composition-visual-tree.md
+    - name: Animações de composição
+      href: ../composition/composition-animation.md
       items:
-        - name: Criando componentes do Tempo de Execução do Windows em C++/CX
-          href: ../winrt-components/creating-windows-runtime-components-in-cpp.md
-        - name: 'Passo a passo: Como criar um componente do Tempo de Execução do Windows básico em C++/CX e chamá-lo do JavaScript ou C#'
-          href: ../winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md
-        - name: 'Criando componentes do Tempo de Execução do Windows em C# e Visual Basic'
-          href: ../winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic.md
+      - name: Animações baseadas em tempo
+        href: ../composition/time-animations.md
+      - name: Animações de relações
+        href: ../composition/relation-animations.md
+      - name: Animações naturais
+        href: ../composition/natural-animations.md
+        items:
+        - name: Animações de mola
+          href: ../composition/spring-animations.md
+      - name: Animações controladas por entrada
+        href: ../composition/input-driven-animations.md
+        items:
+        - name: Animações baseadas em rolagem
+          href: ../composition/scroll-input-animations.md
+        - name: Animações baseadas em ponteiro
+          href: ../composition/pointer-input-animations.md
+        - name: Manipulações personalizadas
+          href: ../composition/interaction-tracker-manipulations.md
           items:
-            - name: Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
-              href: ../winrt-components/custom-events-and-event-accessors-in-windows-runtime-components.md
-            - name: Passagem de matrizes para um componente do Tempo de Execução do Windows
-              href: ../winrt-components/passing-arrays-to-a-windows-runtime-component.md
-            - name: Diagnóstico das condições de erro do componente do Tempo de Execução do Windows
-              href: ../winrt-components/diagnosing-windows-runtime-component-error-conditions.md
-            - name: Distribuição de um componente do Tempo de Execução do Windows gerenciado
-              href: ../winrt-components/distributing-a-managed-windows-runtime-component.md
-            - name: Mapeamentos do .NET Framework dos tipos de Tempo de Execução do Windows
-              href: ../winrt-components/net-framework-mappings-of-windows-runtime-types.md
-        - name: 'Procedimento passo a passo: criando um componente simples do Tempo de Execução do Windows e chamando-o em JavaScript'
-          href: ../winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md
-        - name: Acionando eventos em componentes do Tempo de Execução do Windows
-          href: ../winrt-components/raising-events-in-windows-runtime-components.md
-        - name: Componentes do Tempo de Execução do Windows intermediários para aplicativos UWP de sideload
-          href: ../winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md
-    - name: Plataforma XAML
-      href: ../xaml-platform/index.md
+          - name: Pontos de ajuste
+            href: ../composition/inertia-modifiers.md
+          - name: Puxar para atualizar
+            href: ../composition/source-modifiers.md
+    - name: Efeitos de composição
+      href: ../composition/composition-effects.md
       items:
-        - name: Visão geral do XAML
-          href: ../xaml-platform/xaml-overview.md
-          items:
-            - name: Guia de sintaxe do XAML
-              href: ../xaml-platform/xaml-syntax-guide.md
-              items:
-                - name: Sintaxe de Property-path
-                  href: ../xaml-platform/property-path-syntax.md
-                - name: Sintaxe de comandos de movimentação e desenho
-                  href: ../xaml-platform/move-draw-commands-syntax.md
-            - name: XAML e espaço em branco
-              href: ../xaml-platform/xaml-and-whitespace.md
-            - name: Namescopes XAML
-              href: ../xaml-platform/xaml-namescopes.md
-            - name: Namespaces XAML e mapeamento de namespace
-              href: ../xaml-platform/xaml-namespaces-and-namespace-mapping.md
-            - name: Classes TemplateSettings
-              href: ../xaml-platform/template-settings-classes.md
-            - name: 'Atributo x:Class'
-              href: ../xaml-platform/x-class-attribute.md
-            - name: 'Atributo x:DefaultBindMode'
-              href: ../xaml-platform/x-defaultbindmode-attribute.md
-            - name: 'Atributo x:DeferLoadStrategy'
-              href: ../xaml-platform/x-deferloadstrategy-attribute.md
-            - name: 'Atributo x:FieldModifier'
-              href: ../xaml-platform/x-fieldmodifier-attribute.md
-            - name: 'Atributo x:Key'
-              href: ../xaml-platform/x-key-attribute.md
-            - name: 'Atributo x:Load'
-              href: ../xaml-platform/x-load-attribute.md
-            - name: 'Atributo x:Name'
-              href: ../xaml-platform/x-name-attribute.md
-            - name: 'atributo x:Phase'
-              href: ../xaml-platform/x-phase-attribute.md
-            - name: 'Diretiva x:Uid'
-              href: ../xaml-platform/x-uid-directive.md
-            - name: 'Extensão de marcação {x:Bind}'
-              href: ../xaml-platform/x-bind-markup-extension.md
-            - name: 'Extensão de marcação {Binding}'
-              href: ../xaml-platform/binding-markup-extension.md
-            - name: 'Extensão de marcação {x:Null}'
-              href: ../xaml-platform/x-null-markup-extension.md
-            - name: Tipos de dados XAML intrínsecos
-              href: ../xaml-platform/xaml-intrinsic-data-types.md
-            - name: 'Extensão de marcação {CustomResource}'
-              href: ../xaml-platform/customresource-markup-extension.md
-            - name: 'Extensão de marcação {RelativeSource}'
-              href: ../xaml-platform/relativesource-markup-extension.md
-            - name: 'Extensão de marcação {StaticResource}'
-              href: ../xaml-platform/staticresource-markup-extension.md
-            - name: 'Extensão de marcação {TemplateBinding}'
-              href: ../xaml-platform/templatebinding-markup-extension.md
-            - name: 'Extensão de marcação {ThemeResource}'
-              href: ../xaml-platform/themeresource-markup-extension.md
-        - name: Visão geral das propriedades de dependência
-          href: ../xaml-platform/dependency-properties-overview.md
-        - name: Propriedades de dependência personalizadas
-          href: ../xaml-platform/custom-dependency-properties.md
-        - name: Visão geral das propriedades anexadas
-          href: ../xaml-platform/attached-properties-overview.md
-        - name: Propriedades anexadas personalizadas
-          href: ../xaml-platform/custom-attached-properties.md
-        - name: Visão geral de eventos e eventos roteados
-          href: ../xaml-platform/events-and-routed-events-overview.md
-        - name: Controles UWP em aplicativos da área de trabalho
-          href: ../xaml-platform/xaml-host-controls.md
-          items:
-            - name: Usando o XAML da UWP que hospeda a API
-              href: ../xaml-platform/using-the-xaml-hosting-api.md
+      - name: Sombras de composição
+        href: ../composition/composition-shadows.md
+      - name: Iluminação de composição
+        href: ../composition/composition-lighting.md
+    - name: Pincéis de composição
+      href: ../composition/composition-brushes.md
+    - name: Interoperação nativa de composição
+      href: ../composition/composition-native-interop.md
+    - name: Adaptar sua interface do usuário
+      href: ../composition/composition-tailoring.md
+    - name: Usando XAML
+      href: ../composition/using-the-visual-layer-with-xaml.md
+      items:
+      - name: Iluminação XAML
+        href: ../composition/xaml-lighting.md
+  - name: Windows como serviço
+    href: ../updates-and-versions/application-development-for-windows-as-a-service.md
+  - name: Componentes do Tempo de Execução do Windows
+    href: ../winrt-components/index.md
+    items:
+    - name: Criando componentes do Tempo de Execução do Windows em C++/CX
+      href: ../winrt-components/creating-windows-runtime-components-in-cpp.md
+    - name: 'Passo a passo: Como criar um componente do Tempo de Execução do Windows básico em C++/CX e chamá-lo do JavaScript ou C#'
+      href: ../winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md
+    - name: Criando componentes do Tempo de Execução do Windows em C# e Visual Basic
+      href: ../winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic.md
+      items:
+      - name: Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
+        href: ../winrt-components/custom-events-and-event-accessors-in-windows-runtime-components.md
+      - name: Passagem de matrizes para um componente do Tempo de Execução do Windows
+        href: ../winrt-components/passing-arrays-to-a-windows-runtime-component.md
+      - name: Diagnóstico das condições de erro do componente do Tempo de Execução do Windows
+        href: ../winrt-components/diagnosing-windows-runtime-component-error-conditions.md
+      - name: Distribuição de um componente do Tempo de Execução do Windows gerenciado
+        href: ../winrt-components/distributing-a-managed-windows-runtime-component.md
+      - name: Mapeamentos do .NET Framework dos tipos de Tempo de Execução do Windows
+        href: ../winrt-components/net-framework-mappings-of-windows-runtime-types.md
+    - name: 'Procedimento passo a passo: criando um componente simples do Tempo de Execução do Windows e chamando-o em JavaScript'
+      href: ../winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md
+    - name: Acionando eventos em componentes do Tempo de Execução do Windows
+      href: ../winrt-components/raising-events-in-windows-runtime-components.md
+    - name: Componentes do Tempo de Execução do Windows intermediários para aplicativos UWP de sideload
+      href: ../winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md
+  - name: Plataforma XAML
+    href: ../xaml-platform/index.md
+    items:
+    - name: Visão geral do XAML
+      href: ../xaml-platform/xaml-overview.md
+      items:
+      - name: Guia de sintaxe do XAML
+        href: ../xaml-platform/xaml-syntax-guide.md
+        items:
+        - name: Sintaxe de Property-path
+          href: ../xaml-platform/property-path-syntax.md
+        - name: Sintaxe de comandos de movimentação e desenho
+          href: ../xaml-platform/move-draw-commands-syntax.md
+      - name: XAML e espaço em branco
+        href: ../xaml-platform/xaml-and-whitespace.md
+      - name: Namescopes XAML
+        href: ../xaml-platform/xaml-namescopes.md
+      - name: Namespaces XAML e mapeamento de namespace
+        href: ../xaml-platform/xaml-namespaces-and-namespace-mapping.md
+      - name: Classes TemplateSettings
+        href: ../xaml-platform/template-settings-classes.md
+      - name: Atributo x:Class
+        href: ../xaml-platform/x-class-attribute.md
+      - name: Atributo x:DefaultBindMode
+        href: ../xaml-platform/x-defaultbindmode-attribute.md
+      - name: Atributo x:DeferLoadStrategy
+        href: ../xaml-platform/x-deferloadstrategy-attribute.md
+      - name: Atributo x:FieldModifier
+        href: ../xaml-platform/x-fieldmodifier-attribute.md
+      - name: Atributo x:Key
+        href: ../xaml-platform/x-key-attribute.md
+      - name: Atributo x:Load
+        href: ../xaml-platform/x-load-attribute.md
+      - name: Atributo x:Name
+        href: ../xaml-platform/x-name-attribute.md
+      - name: atributo x:Phase
+        href: ../xaml-platform/x-phase-attribute.md
+      - name: Diretiva x:Uid
+        href: ../xaml-platform/x-uid-directive.md
+      - name: Extensão de marcação {x:Bind}
+        href: ../xaml-platform/x-bind-markup-extension.md
+      - name: Extensão de marcação {Binding}
+        href: ../xaml-platform/binding-markup-extension.md
+      - name: Extensão de marcação {x:Null}
+        href: ../xaml-platform/x-null-markup-extension.md
+      - name: Tipos de dados XAML intrínsecos
+        href: ../xaml-platform/xaml-intrinsic-data-types.md
+      - name: Extensão de marcação {CustomResource}
+        href: ../xaml-platform/customresource-markup-extension.md
+      - name: Extensão de marcação {RelativeSource}
+        href: ../xaml-platform/relativesource-markup-extension.md
+      - name: Extensão de marcação {StaticResource}
+        href: ../xaml-platform/staticresource-markup-extension.md
+      - name: Extensão de marcação {TemplateBinding}
+        href: ../xaml-platform/templatebinding-markup-extension.md
+      - name: Extensão de marcação {ThemeResource}
+        href: ../xaml-platform/themeresource-markup-extension.md
+    - name: Visão geral das propriedades de dependência
+      href: ../xaml-platform/dependency-properties-overview.md
+    - name: Propriedades de dependência personalizadas
+      href: ../xaml-platform/custom-dependency-properties.md
+    - name: Visão geral das propriedades anexadas
+      href: ../xaml-platform/attached-properties-overview.md
+    - name: Propriedades anexadas personalizadas
+      href: ../xaml-platform/custom-attached-properties.md
+    - name: Visão geral de eventos e eventos roteados
+      href: ../xaml-platform/events-and-routed-events-overview.md
+    - name: Controles UWP em aplicativos da área de trabalho
+      href: ../xaml-platform/xaml-host-controls.md
+      items:
+      - name: Usando o XAML da UWP que hospeda a API
+        href: ../xaml-platform/using-the-xaml-hosting-api.md
 - name: Pessoas e locais
   items:
-    - name: 'Contatos, Minhas Pessoas e calendário'
-      href: ../contacts-and-calendar/index.md
+  - name: Contatos, Minhas Pessoas e calendário
+    href: ../contacts-and-calendar/index.md
+    items:
+    - name: Minhas Pessoas
+      href: ../contacts-and-calendar/my-people-support.md
       items:
-        - name: Minhas Pessoas
-          href: ../contacts-and-calendar/my-people-support.md
-          items:
-            - name: Compartilhamento de Minhas Pessoas
-              href: ../contacts-and-calendar/my-people-sharing.md
-            - name: Notificações de Minhas Pessoas
-              href: ../contacts-and-calendar/my-people-notifications.md
-        - name: Selecionar contatos
-          href: ../contacts-and-calendar/selecting-contacts.md
-        - name: Enviar email
-          href: ../contacts-and-calendar/sending-email.md
-        - name: Enviar uma mensagem SMS
-          href: ../contacts-and-calendar/sending-an-sms-message.md
-        - name: Gerenciar compromissos
-          href: ../contacts-and-calendar/managing-appointments.md
-        - name: Conectar seu app a ações em um cartão de visita
-          href: ../contacts-and-calendar/integrating-with-contacts.md
-    - name: Mapas e localização
-      href: ../maps-and-location/index.md
-      items:
-        - name: Solicitar chave de autenticação
-          href: ../maps-and-location/authentication-key.md
-        - name: Exibir mapas
-          href: ../maps-and-location/display-maps.md
-        - name: Exibir pontos de interesse
-          href: ../maps-and-location/display-poi.md
-        - name: Exibir rotas e trajeto
-          href: ../maps-and-location/routes-and-directions.md
-        - name: Sobrepor imagens lado a lado
-          href: ../maps-and-location/overlay-tiled-images.md
-        - name: Executar geocodificação
-          href: ../maps-and-location/geocoding.md
-        - name: Obter a localização atual
-          href: ../maps-and-location/get-location.md
-        - name: Diretrizes de design para aplicativos com detecção de localização
-          href: ../maps-and-location/guidelines-and-checklist-for-detecting-location.md
-        - name: Diretrizes para usar o rastreamento de visitas
-          href: ../maps-and-location/guidelines-for-visits.md
-        - name: Configurar uma cerca geográfica
-          href: ../maps-and-location/set-up-a-geofence.md
-        - name: Diretrizes de design para delimitação geográfica
-          href: ../maps-and-location/guidelines-for-geofencing.md
-        - name: Referência da folha de estilos de mapa
-          href: ../maps-and-location/elements-of-map-style-sheet.md
-- name: 'Periféricos, sensores e consumo de energia'
+      - name: Compartilhamento de Minhas Pessoas
+        href: ../contacts-and-calendar/my-people-sharing.md
+      - name: Notificações de Minhas Pessoas
+        href: ../contacts-and-calendar/my-people-notifications.md
+    - name: Selecionar contatos
+      href: ../contacts-and-calendar/selecting-contacts.md
+    - name: Enviar email
+      href: ../contacts-and-calendar/sending-email.md
+    - name: Enviar uma mensagem SMS
+      href: ../contacts-and-calendar/sending-an-sms-message.md
+    - name: Gerenciar compromissos
+      href: ../contacts-and-calendar/managing-appointments.md
+    - name: Conectar seu app a ações em um cartão de visita
+      href: ../contacts-and-calendar/integrating-with-contacts.md
+  - name: Mapas e localização
+    href: ../maps-and-location/index.md
+    items:
+    - name: Solicitar chave de autenticação
+      href: ../maps-and-location/authentication-key.md
+    - name: Exibir mapas
+      href: ../maps-and-location/display-maps.md
+    - name: Exibir pontos de interesse
+      href: ../maps-and-location/display-poi.md
+    - name: Exibir rotas e trajeto
+      href: ../maps-and-location/routes-and-directions.md
+    - name: Sobrepor imagens lado a lado
+      href: ../maps-and-location/overlay-tiled-images.md
+    - name: Executar geocodificação
+      href: ../maps-and-location/geocoding.md
+    - name: Obter a localização atual
+      href: ../maps-and-location/get-location.md
+    - name: Diretrizes de design para aplicativos com detecção de localização
+      href: ../maps-and-location/guidelines-and-checklist-for-detecting-location.md
+    - name: Diretrizes para usar o rastreamento de visitas
+      href: ../maps-and-location/guidelines-for-visits.md
+    - name: Configurar uma cerca geográfica
+      href: ../maps-and-location/set-up-a-geofence.md
+    - name: Diretrizes de design para delimitação geográfica
+      href: ../maps-and-location/guidelines-for-geofencing.md
+    - name: Referência da folha de estilos de mapa
+      href: ../maps-and-location/elements-of-map-style-sheet.md
+- name: Periféricos, sensores e consumo de energia
   href: ../devices-sensors/index.md
   items:
-    - name: Habilitar os recursos do dispositivo
-      href: ../devices-sensors/enable-device-capabilities.md
-    - name: Habilitar o acesso de modo do usuário
-      href: ../devices-sensors/enable-usermode-access.md
-    - name: Enumerar dispositivos
-      href: ../devices-sensors/enumerate-devices.md
+  - name: Habilitar os recursos do dispositivo
+    href: ../devices-sensors/enable-device-capabilities.md
+  - name: Habilitar o acesso de modo do usuário
+    href: ../devices-sensors/enable-usermode-access.md
+  - name: Enumerar dispositivos
+    href: ../devices-sensors/enumerate-devices.md
+    items:
+    - name: Criar um seletor de dispositivo
+      href: ../devices-sensors/build-a-device-selector.md
+    - name: Enumerar dispositivos em uma rede
+      href: ../devices-sensors/enumerate-devices-over-a-network.md
+    - name: Propriedades de informações do dispositivo
+      href: ../devices-sensors/device-information-properties.md
+    - name: IDs de classe de serviço AEP
+      href: ../devices-sensors/aep-service-class-ids.md
+  - name: Emparelhar dispositivos
+    href: ../devices-sensors/pair-devices.md
+  - name: Ponto de Serviço
+    href: ../devices-sensors/point-of-service.md
+    items:
+    - name: Noções básicas
+      href: ../devices-sensors/pos-basics.md
       items:
-        - name: Criar um seletor de dispositivo
-          href: ../devices-sensors/build-a-device-selector.md
-        - name: Enumerar dispositivos em uma rede
-          href: ../devices-sensors/enumerate-devices-over-a-network.md
-        - name: Propriedades de informações do dispositivo
-          href: ../devices-sensors/device-information-properties.md
-        - name: IDs de classe de serviço AEP
-          href: ../devices-sensors/aep-service-class-ids.md
-    - name: Emparelhar dispositivos
-      href: ../devices-sensors/pair-devices.md
-    - name: Ponto de Serviço
-      href: ../devices-sensors/point-of-service.md
+      - name: Declaração de funcionalidade
+        href: ../devices-sensors/pos-basics-capability.md
+      - name: Enumerando dispositivos
+        href: ../devices-sensors/pos-basics-enumerating.md
+      - name: Criar um objeto de dispositivo
+        href: ../devices-sensors/pos-basics-deviceobject.md
+      - name: Solicitar e habilitar
+        href: ../devices-sensors/pos-basics-claim.md
+      - name: Compartilhar periféricos com outras pessoas
+        href: ../devices-sensors/pos-basics-sharing.md
+      - name: Introdução
+        href: ../devices-sensors/pos-get-started.md
+    - name: Suporte a hardware
+      href: ../devices-sensors/pos-device-support.md
+    - name: Scanner de código de barras
+      href: ../devices-sensors/pos-barcodescanner.md
       items:
-        - name: Noções básicas
-          href: ../devices-sensors/pos-basics.md
-          items:
-            - name: Declaração de funcionalidade
-              href: ../devices-sensors/pos-basics-capability.md
-            - name: Enumerando dispositivos
-              href: ../devices-sensors/pos-basics-enumerating.md
-            - name: Criar um objeto de dispositivo
-              href: ../devices-sensors/pos-basics-deviceobject.md
-            - name: Solicitar e habilitar
-              href: ../devices-sensors/pos-basics-claim.md
-            - name: Compartilhar periféricos com outras pessoas
-              href: ../devices-sensors/pos-basics-sharing.md
-            - name: Introdução
-              href: ../devices-sensors/pos-get-started.md
-        - name: Suporte a hardware
-          href: ../devices-sensors/pos-device-support.md
-        - name: Scanner de código de barras
-          href: ../devices-sensors/pos-barcodescanner.md
-          items:
-            - name: Configurar um scanner de código de barras
-              href: ../devices-sensors/pos-barcodescanner-configure.md
-            - name: Usar um gatilho de software
-              href: ../devices-sensors/pos-barcodescanner-software-trigger.md
-            - name: Trabalhando com simbologias
-              href: ../devices-sensors/pos-barcodescanner-symbologies.md
-            - name: Obter e entender os dados de código de barras
-              href: ../devices-sensors/pos-barcodescanner-scan-data.md
-            - name: Scanner de código de barras da câmera
-              href: ../devices-sensors/pos-camerabarcode.md
-              items:
-                - name: Requisitos de sistema
-                  href: ../devices-sensors/pos-camerabarcode-system-requirements.md
-                - name: Introdução
-                  href: ../devices-sensors/pos-camerabarcode-get-started.md
-                - name: Hospedagem de uma visualização da câmera
-                  href: ../devices-sensors/pos-camerabarcode-hosting-preview.md
-                - name: Habilitar/desabilitar scanner de código de barras da câmera
-                  href: ../devices-sensors/pos-camerabarcode-enable-disable.md
-                - name: Simbologias com suporte
-                  href: ../devices-sensors/pos-camerabarcode-symbologies.md
-        - name: Leitor de tarjas magnéticas
-          href: ../devices-sensors/pos-magnetic-stripe-reader.md
-          items:
-            - name: Obter e compreender os dados de tarja magnética
-              href: ../devices-sensors/pos-magnetic-stripe-reader-data.md
-        - name: POSPrinter
-          href: ../devices-sensors/pos-printer.md
-          items:
-            - name: Epson ESC/POS com formatação
-              href: ../devices-sensors/epson-esc-pos-with-formatting.md
-    - name: Sensores
-      href: ../devices-sensors/sensors.md
+      - name: Configurar um scanner de código de barras
+        href: ../devices-sensors/pos-barcodescanner-configure.md
+      - name: Usar um gatilho de software
+        href: ../devices-sensors/pos-barcodescanner-software-trigger.md
+      - name: Trabalhando com simbologias
+        href: ../devices-sensors/pos-barcodescanner-symbologies.md
+      - name: Obter e entender os dados de código de barras
+        href: ../devices-sensors/pos-barcodescanner-scan-data.md
+      - name: Scanner de código de barras da câmera
+        href: ../devices-sensors/pos-camerabarcode.md
+        items:
+        - name: Requisitos de sistema
+          href: ../devices-sensors/pos-camerabarcode-system-requirements.md
+        - name: Introdução
+          href: ../devices-sensors/pos-camerabarcode-get-started.md
+        - name: Hospedagem de uma visualização da câmera
+          href: ../devices-sensors/pos-camerabarcode-hosting-preview.md
+        - name: Habilitar/desabilitar scanner de código de barras da câmera
+          href: ../devices-sensors/pos-camerabarcode-enable-disable.md
+        - name: Simbologias com suporte
+          href: ../devices-sensors/pos-camerabarcode-symbologies.md
+    - name: Leitor de tarjas magnéticas
+      href: ../devices-sensors/pos-magnetic-stripe-reader.md
       items:
-        - name: Calibrar sensores
-          href: ../devices-sensors/calibrate-sensors.md
-        - name: Orientação do sensor
-          href: ../devices-sensors/sensor-orientation.md
-        - name: Usar o acelerômetro
-          href: ../devices-sensors/use-the-accelerometer.md
-        - name: Usar a bússola
-          href: ../devices-sensors/use-the-compass.md
-        - name: Usar o girômetro
-          href: ../devices-sensors/use-the-gyrometer.md
-        - name: Usar o inclinômetro
-          href: ../devices-sensors/use-the-inclinometer.md
-        - name: Usar o sensor de luz
-          href: ../devices-sensors/use-the-light-sensor.md
-        - name: Usar o sensor de orientação
-          href: ../devices-sensors/use-the-orientation-sensor.md
-    - name: Bluetooth
-      href: ../devices-sensors/bluetooth.md
+      - name: Obter e compreender os dados de tarja magnética
+        href: ../devices-sensors/pos-magnetic-stripe-reader-data.md
+    - name: POSPrinter
+      href: ../devices-sensors/pos-printer.md
       items:
-        - name: RFCOMM
-          href: ../devices-sensors/send-or-receive-files-with-rfcomm.md
-        - name: Bluetooth Low Energy
-          href: ../devices-sensors/bluetooth-low-energy-overview.md
-          items:
-            - name: Cliente GATT
-              href: ../devices-sensors/gatt-client.md
-            - name: Servidor GATT
-              href: ../devices-sensors//gatt-server.md
-            - name: Anúncios
-              href: ../devices-sensors/ble-beacon.md
-        - name: Perguntas frequentes de desenvolvedores Bluetooth
-          href: ../devices-sensors/bluetooth-dev-faq.md
-    - name: Impressão e digitalização
-      href: ../devices-sensors/printing-and-scanning.md
+      - name: Epson ESC/POS com formatação
+        href: ../devices-sensors/epson-esc-pos-with-formatting.md
+  - name: Sensores
+    href: ../devices-sensors/sensors.md
+    items:
+    - name: Calibrar sensores
+      href: ../devices-sensors/calibrate-sensors.md
+    - name: Orientação do sensor
+      href: ../devices-sensors/sensor-orientation.md
+    - name: Usar o acelerômetro
+      href: ../devices-sensors/use-the-accelerometer.md
+    - name: Usar a bússola
+      href: ../devices-sensors/use-the-compass.md
+    - name: Usar o girômetro
+      href: ../devices-sensors/use-the-gyrometer.md
+    - name: Usar o inclinômetro
+      href: ../devices-sensors/use-the-inclinometer.md
+    - name: Usar o sensor de luz
+      href: ../devices-sensors/use-the-light-sensor.md
+    - name: Usar o sensor de orientação
+      href: ../devices-sensors/use-the-orientation-sensor.md
+  - name: Bluetooth
+    href: ../devices-sensors/bluetooth.md
+    items:
+    - name: RFCOMM
+      href: ../devices-sensors/send-or-receive-files-with-rfcomm.md
+    - name: Bluetooth Low Energy
+      href: ../devices-sensors/bluetooth-low-energy-overview.md
       items:
-        - name: Imprimir de seu app
-          href: ../devices-sensors/print-from-your-app.md
-        - name: Personalizar a interface do usuário para visualização de impressão
-          href: ../devices-sensors/customize-the-print-preview-ui.md
-        - name: Personalizar o fluxo de trabalho de impressão
-          href: ../devices-sensors/print-workflow-customize.md
-        - name: Digitalizar a partir do seu app
-          href: ../devices-sensors/scan-from-your-app.md
-    - name: Impressão 3D
-      href: ../devices-sensors/3d-printing.md
-      items:
-        - name: Impressão 3D a partir de seu aplicativo
-          href: ../devices-sensors/3d-print-from-app.md
-        - name: Gerar um pacote 3MF
-          href: ../devices-sensors/generate-3mf.md
-    - name: NFC
-      href: ../devices-sensors/nfc.md
-      items:
-        - name: Criar um aplicativo de cartão inteligente NFC
-          href: ../devices-sensors/host-card-emulation.md
-    - name: Obter informações sobre a bateria
-      href: ../devices-sensors/get-battery-info.md
+      - name: Cliente GATT
+        href: ../devices-sensors/gatt-client.md
+      - name: Servidor GATT
+        href: ../devices-sensors//gatt-server.md
+      - name: Anúncios
+        href: ../devices-sensors/ble-beacon.md
+    - name: Perguntas frequentes de desenvolvedores Bluetooth
+      href: ../devices-sensors/bluetooth-dev-faq.md
+  - name: Impressão e digitalização
+    href: ../devices-sensors/printing-and-scanning.md
+    items:
+    - name: Imprimir de seu app
+      href: ../devices-sensors/print-from-your-app.md
+    - name: Personalizar a interface do usuário para visualização de impressão
+      href: ../devices-sensors/customize-the-print-preview-ui.md
+    - name: Personalizar o fluxo de trabalho de impressão
+      href: ../devices-sensors/print-workflow-customize.md
+    - name: Digitalizar a partir do seu app
+      href: ../devices-sensors/scan-from-your-app.md
+  - name: Impressão 3D
+    href: ../devices-sensors/3d-printing.md
+    items:
+    - name: Impressão 3D a partir de seu aplicativo
+      href: ../devices-sensors/3d-print-from-app.md
+    - name: Gerar um pacote 3MF
+      href: ../devices-sensors/generate-3mf.md
+  - name: NFC
+    href: ../devices-sensors/nfc.md
+    items:
+    - name: Criar um aplicativo de cartão inteligente NFC
+      href: ../devices-sensors/host-card-emulation.md
+  - name: Obter informações sobre a bateria
+    href: ../devices-sensors/get-battery-info.md
 - name: Portabilidade de apps
   items:
-    - name: Visão geral
-      href: ../porting/index.md
-    - name: Mudar do Windows Phone Silverlight para a UWP
-      href: ../porting/wpsl-to-uwp-root.md
+  - name: Visão geral
+    href: ../porting/index.md
+  - name: Mudar do Windows Phone Silverlight para a UWP
+    href: ../porting/wpsl-to-uwp-root.md
+    items:
+    - name: Mapeamentos de namespace e de classe
+      href: ../porting/wpsl-to-uwp-namespace-and-class-mappings.md
+    - name: Portando o projeto
+      href: ../porting/wpsl-to-uwp-porting-to-a-uwp-project.md
+    - name: Solução de problemas
+      href: ../porting/wpsl-to-uwp-troubleshooting.md
+    - name: Portando XAML e a interface do usuário
+      href: ../porting/wpsl-to-uwp-porting-xaml-and-ui.md
+    - name: Portabilidade para E/S, dispositivo e modelo de aplicativo
+      href: ../porting/wpsl-to-uwp-input-and-sensors.md
+    - name: Portando camadas de negócios e dados
+      href: ../porting/wpsl-to-uwp-business-and-data.md
+    - name: Portabilidade para o fator forma e a experiência do usuário
+      href: ../porting/wpsl-to-uwp-form-factors-and-ux.md
+    - name: 'Estudo de caso: Bookstore1'
+      href: ../porting/wpsl-to-uwp-case-study-bookstore1.md
+    - name: 'Estudo de caso: Bookstore2'
+      href: ../porting/wpsl-to-uwp-case-study-bookstore2.md
+  - name: Mudar do Windows Runtime 8.x para a UWP
+    href: ../porting/w8x-to-uwp-root.md
+    items:
+    - name: Portando o projeto
+      href: ../porting/w8x-to-uwp-porting-to-a-uwp-project.md
+    - name: Solução de problemas
+      href: ../porting/w8x-to-uwp-troubleshooting.md
+    - name: Portando XAML e a interface do usuário
+      href: ../porting/w8x-to-uwp-porting-xaml-and-ui.md
+    - name: Portabilidade para E/S, dispositivo e modelo de aplicativo
+      href: ../porting/w8x-to-uwp-input-and-sensors.md
+    - name: 'Estudo de caso: Bookstore1'
+      href: ../porting/w8x-to-uwp-case-study-bookstore1.md
+    - name: 'Estudo de caso: Bookstore2'
+      href: ../porting/w8x-to-uwp-case-study-bookstore2.md
+    - name: 'Estudo de caso: QuizGame'
+      href: ../porting/w8x-to-uwp-case-study-quizgame.md
+  - name: Aplicativos da área de trabalho do pacote
+    href: ../porting/desktop-to-uwp-root.md
+    items:
+    - name: Preparar para empacotar
+      href: ../porting/desktop-to-uwp-prepare.md
+    - name: Empacotar usando o Desktop App Converter
+      href: ../porting/desktop-to-uwp-run-desktop-app-converter.md
+    - name: Empacotar usando o Visual Studio
+      href: ../porting/desktop-to-uwp-packaging-dot-net.md
+    - name: Empacotar manualmente
+      href: ../porting/desktop-to-uwp-manual-conversion.md
+    - name: Integrar com o Windows 10
+      href: ../porting/desktop-to-uwp-extensions.md
+    - name: Aprimorar para o Windows 10
+      href: ../porting/desktop-to-uwp-enhance.md
       items:
-        - name: Mapeamentos de namespace e de classe
-          href: ../porting/wpsl-to-uwp-namespace-and-class-mappings.md
-        - name: Portando o projeto
-          href: ../porting/wpsl-to-uwp-porting-to-a-uwp-project.md
-        - name: Solução de problemas
-          href: ../porting/wpsl-to-uwp-troubleshooting.md
-        - name: Portando XAML e a interface do usuário
-          href: ../porting/wpsl-to-uwp-porting-xaml-and-ui.md
-        - name: 'Portabilidade para E/S, dispositivo e modelo de aplicativo'
-          href: ../porting/wpsl-to-uwp-input-and-sensors.md
-        - name: Portando camadas de negócios e dados
-          href: ../porting/wpsl-to-uwp-business-and-data.md
-        - name: Portabilidade para o fator forma e a experiência do usuário
-          href: ../porting/wpsl-to-uwp-form-factors-and-ux.md
-        - name: 'Estudo de caso: Bookstore1'
-          href: ../porting/wpsl-to-uwp-case-study-bookstore1.md
-        - name: 'Estudo de caso: Bookstore2'
-          href: ../porting/wpsl-to-uwp-case-study-bookstore2.md
-    - name: Mudar do Windows Runtime 8.x para a UWP
-      href: ../porting/w8x-to-uwp-root.md
+      - name: APIs UWP disponíveis
+        href: ../porting/desktop-to-uwp-supported-api.md
+      - name: Otimizar binários do app com imagens nativas
+        href: ../porting/desktop-to-uwp-r2r.md
+    - name: Estender com UWP
+      href: ../porting/desktop-to-uwp-extend.md
+    - name: Executar, depurar e testar
+      href: ../porting/desktop-to-uwp-debug.md
       items:
-        - name: Portando o projeto
-          href: ../porting/w8x-to-uwp-porting-to-a-uwp-project.md
-        - name: Solução de problemas
-          href: ../porting/w8x-to-uwp-troubleshooting.md
-        - name: Portando XAML e a interface do usuário
-          href: ../porting/w8x-to-uwp-porting-xaml-and-ui.md
-        - name: 'Portabilidade para E/S, dispositivo e modelo de aplicativo'
-          href: ../porting/w8x-to-uwp-input-and-sensors.md
-        - name: 'Estudo de caso: Bookstore1'
-          href: ../porting/w8x-to-uwp-case-study-bookstore1.md
-        - name: 'Estudo de caso: Bookstore2'
-          href: ../porting/w8x-to-uwp-case-study-bookstore2.md
-        - name: 'Estudo de caso: QuizGame'
-          href: ../porting/w8x-to-uwp-case-study-quizgame.md
-    - name: Aplicativos da área de trabalho do pacote
-      href: ../porting/desktop-to-uwp-root.md
+      - name: Testar para o Windows 10 no modo S
+        href: ../porting/desktop-to-uwp-test-windows-s.md
+    - name: Aplicar correções de tempo de execução
+      href: ../porting/package-support-framework.md
+    - name: Distribuir
+      href: ../porting/desktop-to-uwp-distribute.md
+    - name: Nos bastidores
+      href: ../porting/desktop-to-uwp-behind-the-scenes.md
+    - name: Problemas conhecidos
+      href: ../porting/desktop-to-uwp-known-issues.md
+  - name: Compartilhar código entre o desktop e o UWP
+    href: ../porting/desktop-to-uwp-migrate.md
+  - name: Mapeamento de conceitos de aplicativos do Windows para desenvolvedores Android e iOS
+    href: ../porting/android-ios-uwp-map.md
+  - name: Mudar do iOS para a UWP
+    href: ../porting/ios-to-uwp-root.md
+    items:
+    - name: Selecionando uma abordagem para o desenvolvimento de aplicativos iOS e UWP
+      href: ../porting/selecting-an-approach-to-ios-and-uwp-app-development.md
+    - name: Introdução do UWP para desenvolvedores iOS
+      href: ../porting/getting-started-with-uwp-for-ios-developers.md
       items:
-        - name: Preparar para empacotar
-          href: ../porting/desktop-to-uwp-prepare.md
-        - name: Empacotar usando o Desktop App Converter
-          href: ../porting/desktop-to-uwp-run-desktop-app-converter.md
-        - name: Empacotar usando o Visual Studio
-          href: ../porting/desktop-to-uwp-packaging-dot-net.md
-        - name: Empacotar manualmente
-          href: ../porting/desktop-to-uwp-manual-conversion.md
-        - name: Integrar com o Windows 10
-          href: ../porting/desktop-to-uwp-extensions.md
-        - name: Aprimorar para o Windows 10
-          href: ../porting/desktop-to-uwp-enhance.md
-          items:
-            - name: APIs UWP disponíveis
-              href: ../porting/desktop-to-uwp-supported-api.md
-            - name: Otimizar binários do app com imagens nativas
-              href: ../porting/desktop-to-uwp-r2r.md
-        - name: Estender com UWP
-          href: ../porting/desktop-to-uwp-extend.md
-        - name: 'Executar, depurar e testar'
-          href: ../porting/desktop-to-uwp-debug.md
-          items:
-            - name: Testar para o Windows 10 no modo S
-              href: ../porting/desktop-to-uwp-test-windows-s.md
-        - name: Aplicar correções de tempo de execução
-          href: ../porting/package-support-framework.md
-        - name: Distribuir
-          href: ../porting/desktop-to-uwp-distribute.md
-        - name: Nos bastidores
-          href: ../porting/desktop-to-uwp-behind-the-scenes.md
-        - name: Problemas conhecidos
-          href: ../porting/desktop-to-uwp-known-issues.md
-    - name: Compartilhar código entre o desktop e o UWP
-      href: ../porting/desktop-to-uwp-migrate.md
-    - name: Mapeamento de conceitos de aplicativos do Windows para desenvolvedores Android e iOS
-      href: ../porting/android-ios-uwp-map.md
-    - name: Mudar do iOS para a UWP
-      href: ../porting/ios-to-uwp-root.md
-      items:
-        - name: Selecionando uma abordagem para o desenvolvimento de aplicativos iOS e UWP
-          href: ../porting/selecting-an-approach-to-ios-and-uwp-app-development.md
-        - name: Introdução do UWP para desenvolvedores iOS
-          href: ../porting/getting-started-with-uwp-for-ios-developers.md
-          items:
-            - name: 'Introdução: criando um projeto'
-              href: ../porting/getting-started-creating-a-project.md
-            - name: 'Introdução: escolhendo uma linguagem de programação'
-              href: ../porting/getting-started-choosing-a-programming-language.md
-            - name: 'Introdução: conhecendo o Visual Studio'
-              href: ../porting/getting-started-getting-around-in-visual-studio.md
-            - name: 'Introdução: controles comuns'
-              href: ../porting/getting-started-common-controls.md
-            - name: 'Introdução: navegação'
-              href: ../porting/getting-started-navigation.md
-            - name: 'Introdução: animação'
-              href: ../porting/getting-started-animation.md
-            - name: 'Introdução: o que vem depois?'
-              href: ../porting/getting-started-what-next.md
-        - name: Configurando o seu Mac com o Windows 10
-          href: ../porting/setting-up-your-mac-with-windows-10.md
-    - name: Converter seu aplicativo Web em PWA no Windows 10
-      href: 'https://docs.microsoft.com/microsoft-edge/progressive-web-apps'
-      items:
-        - name: Empacotar app do Windows 7 como PWA
-          href: 'https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-windows7.html'
-        - name: Empacotar app do iOS como PWA
-          href: 'https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-ios.html'
-        - name: Empacotar app do Android como PWA
-          href: 'https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-android.html'
-        - name: Empacotar app do MacOS como PWA
-          href: 'https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-mac.html'
-    - name: Windows 10 em execução no ARM
-      href: ../porting/apps-on-arm.md
-      items:
-        - name: Como a emulação x86 funciona no ARM
-          href: ../porting/apps-on-arm-x86-emulation.md
-        - name: Solução de problemas de aplicativos de área de trabalho x86
-          href: ../porting/apps-on-arm-troubleshooting-x86.md
-        - name: Solução de problemas de aplicativos ARM UWP
-          href: ../porting/apps-on-arm-troubleshooting-arm32.md
-        - name: Solução de problemas de compatibilidade de programas no ARM
-          href: ../porting/apps-on-arm-program-compat-troubleshooter.md
+      - name: 'Introdução: criando um projeto'
+        href: ../porting/getting-started-creating-a-project.md
+      - name: 'Introdução: escolhendo uma linguagem de programação'
+        href: ../porting/getting-started-choosing-a-programming-language.md
+      - name: 'Introdução: conhecendo o Visual Studio'
+        href: ../porting/getting-started-getting-around-in-visual-studio.md
+      - name: 'Introdução: controles comuns'
+        href: ../porting/getting-started-common-controls.md
+      - name: 'Introdução: navegação'
+        href: ../porting/getting-started-navigation.md
+      - name: 'Introdução: animação'
+        href: ../porting/getting-started-animation.md
+      - name: 'Introdução: o que vem depois?'
+        href: ../porting/getting-started-what-next.md
+    - name: Configurando o seu Mac com o Windows 10
+      href: ../porting/setting-up-your-mac-with-windows-10.md
+  - name: Converter seu aplicativo Web em PWA no Windows 10
+    href: https://docs.microsoft.com/microsoft-edge/progressive-web-apps
+    items:
+    - name: Empacotar app do Windows 7 como PWA
+      href: https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-windows7.html
+    - name: Empacotar app do iOS como PWA
+      href: https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-ios.html
+    - name: Empacotar app do Android como PWA
+      href: https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-android.html
+    - name: Empacotar app do MacOS como PWA
+      href: https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-mac.html
+  - name: Windows 10 em execução no ARM
+    href: ../porting/apps-on-arm.md
+    items:
+    - name: Como a emulação x86 funciona no ARM
+      href: ../porting/apps-on-arm-x86-emulation.md
+    - name: Solução de problemas de aplicativos de área de trabalho x86
+      href: ../porting/apps-on-arm-troubleshooting-x86.md
+    - name: Solução de problemas de aplicativos ARM UWP
+      href: ../porting/apps-on-arm-troubleshooting-arm32.md
+    - name: Solução de problemas de compatibilidade de programas no ARM
+      href: ../porting/apps-on-arm-program-compat-troubleshooter.md
 - name: Processos e threading
   items:
-    - name: 'Inicialização, retomada e execução de tarefas em segundo plano'
-      href: ../launch-resume/index.md
+  - name: Inicialização, retomada e execução de tarefas em segundo plano
+    href: ../launch-resume/index.md
+    items:
+    - name: Criar um aplicativo de console da Plataforma Universal do Windows
+      href: ../launch-resume/console-uwp.md
+    - name: Criar um aplicativo UWP de várias instâncias
+      href: ../launch-resume/multi-instance-uwp.md
+    - name: Ciclo de vida do app
+      href: ../launch-resume/app-lifecycle.md
       items:
-        - name: Criar um aplicativo de console da Plataforma Universal do Windows
-          href: ../launch-resume/console-uwp.md
-        - name: Criar um aplicativo UWP de várias instâncias
-          href: ../launch-resume/multi-instance-uwp.md
-        - name: Ciclo de vida do app
-          href: ../launch-resume/app-lifecycle.md
-          items:
-            - name: Tratar a pré-inicialização do aplicativo
-              href: ../launch-resume/handle-app-prelaunch.md
-            - name: Tratar a ativação do aplicativo
-              href: ../launch-resume/activate-an-app.md
-            - name: Tratar a suspensão do aplicativo
-              href: ../launch-resume/suspend-an-app.md
-            - name: Tratar a retomada do app
-              href: ../launch-resume/resume-an-app.md
-            - name: Liberar memória quando seu app é movido para o segundo plano
-              href: ../launch-resume/reduce-memory-usage.md
-            - name: Adiar a suspensão do app com execução estendida
-              href: ../launch-resume/run-minimized-with-extended-execution.md
-        - name: Iniciar um app com um URI
-          href: ../launch-resume/launch-app-with-uri.md
-          items:
-            - name: Iniciar o app padrão para um URI
-              href: ../launch-resume/launch-default-app.md
-            - name: Tratar a ativação do URI
-              href: ../launch-resume/handle-uri-activation.md
-            - name: Iniciar um app para obter resultados
-              href: ../launch-resume/how-to-launch-an-app-for-results.md
-            - name: Escolher e salvar tons usando o esquema de URI ms-tonepicker
-              href: ../launch-resume/launch-ringtone-picker.md
-            - name: Iniciar o app Configurações do Windows
-              href: ../launch-resume/launch-settings-app.md
-            - name: Iniciar o aplicativo da Microsoft Store
-              href: ../launch-resume/launch-store-app.md
-            - name: Iniciar o app Mapas do Windows
-              href: ../launch-resume/launch-maps-app.md
-            - name: Iniciar o aplicativo Pessoas
-              href: ../launch-resume/launch-people-apps.md
-            - name: Iniciar a captura de tela
-              href: ../launch-resume/launch-screen-snipping.md
-            - name: Dar suporte à vinculação de apps à Web com manipuladores de URI de apps
-              href: ../launch-resume/web-to-app-linking.md
-        - name: Iniciar um app por meio de ativação de arquivo
-          href: ../launch-resume/launch-app-from-file.md
-          items:
-            - name: Iniciar o app padrão para um arquivo
-              href: ../launch-resume/launch-the-default-app-for-a-file.md
-            - name: Manipular a ativação do arquivo
-              href: ../launch-resume/handle-file-activation.md
-        - name: Iniciando automaticamente com a Reprodução Automática
-          href: ../launch-resume/auto-launching-with-autoplay.md
-        - name: Arquivo reservado e nomes de esquemas de URI
-          href: ../launch-resume/reserved-uri-scheme-names.md
-        - name: Usar serviços e extensões de app
-          href: ../launch-resume/app-services.md
-          items:
-            - name: Criar e consumir um serviço de app
-              href: ../launch-resume/how-to-create-and-consume-an-app-service.md
-            - name: Converter um serviço de aplicativo para ser executado no mesmo processo de seu aplicativo hospedado
-              href: ../launch-resume/convert-app-service-in-process.md
-            - name: 'Estender seu app com serviços, extensões e pacotes'
-              href: ../launch-resume/extend-your-app-with-services-extensions-packages.md
-            - name: Criar e consumir uma extensão de app
-              href: ../launch-resume/how-to-create-an-extension.md
-        - name: Dar suporte ao seu app com tarefas em segundo plano
-          href: ../launch-resume/support-your-app-with-background-tasks.md
-          items:
-            - name: Diretrizes de tarefas em segundo plano
-              href: ../launch-resume/guidelines-for-background-tasks.md
-            - name: Acessar sensores e dispositivos a partir de uma tarefa em segundo plano
-              href: ../launch-resume/access-sensors-and-devices-from-a-background-task.md
-            - name: Criar e registrar uma tarefa em segundo plano no processo
-              href: ../launch-resume/create-and-register-an-inproc-background-task.md
-            - name: Criar e registrar uma tarefa em segundo plano fora do processo
-              href: ../launch-resume/create-and-register-a-background-task.md
-            - name: Fazer a portabilidade de uma tarefa em segundo plano fora do processo para uma tarefa em segundo plano no processo
-              href: ../launch-resume/convert-out-of-process-background-task.md
-            - name: Depurar uma tarefa em segundo plano
-              href: ../launch-resume/debug-a-background-task.md
-            - name: Declarar tarefas em segundo plano no manifesto do aplicativo
-              href: ../launch-resume/declare-background-tasks-in-the-application-manifest.md
-            - name: Registo de tarefas em segundo plano em grupo
-              href: ../launch-resume/group-background-tasks.md
-            - name: Tratar uma tarefa em segundo plano cancelada
-              href: ../launch-resume/handle-a-cancelled-background-task.md
-            - name: Monitorar o progresso e a conclusão de tarefas em segundo plano
-              href: ../launch-resume/monitor-background-task-progress-and-completion.md
-            - name: Registrar uma tarefa em segundo plano
-              href: ../launch-resume/register-a-background-task.md
-            - name: Responder a eventos do sistema com tarefas em segundo plano
-              href: ../launch-resume/respond-to-system-events-with-background-tasks.md
-            - name: Executar uma tarefa em segundo plano em um temporizador
-              href: ../launch-resume/run-a-background-task-on-a-timer-.md
-            - name: Executar uma tarefa em segundo plano quando o aplicativo UWP é atualizado
-              href: ../launch-resume/run-a-background-task-during-updatetask.md
-            - name: Executar em segundo plano indefinidamente
-              href: ../launch-resume/run-in-the-background-indefinetly.md
-            - name: Definir condições para executar uma tarefa em segundo plano
-              href: ../launch-resume/set-conditions-for-running-a-background-task.md
-            - name: Disparar uma tarefa em segundo plano do aplicativo
-              href: ../launch-resume/trigger-background-task-from-app.md
-            - name: Atualizar um bloco dinâmico de uma tarefa em segundo plano
-              href: ../launch-resume/update-a-live-tile-from-a-background-task.md
-            - name: Usar um ativador de manutenção
-              href: ../launch-resume/use-a-maintenance-trigger.md
-        - name: Aplicativos e dispositivos conectados (Projeto "Rome")
-          href: ../launch-resume/connected-apps-and-devices.md
-          items:
-            - name: Descobrir dispositivos remotos
-              href: ../launch-resume/discover-remote-devices.md
-            - name: Iniciar um app em um dispositivo remoto
-              href: ../launch-resume/launch-a-remote-app.md
-            - name: Comunicar-se com um serviço de app remoto
-              href: ../launch-resume/communicate-with-a-remote-app-service.md
-            - name: Conectar dispositivos por meio de sessões remotas
-              href: ../launch-resume/remote-sessions.md
-            - name: 'Continue a atividade do usuário, mesmo entre dispositivos'
-              href: ../launch-resume/useractivities.md
-            - name: Práticas recomendadas de atividades de usuários
-              href: ../launch-resume/useractivities-best-practices.md
-        - name: Telas iniciais
-          href: ../launch-resume/splash-screens.md
-          items:
-            - name: Adicionar uma tela inicial
-              href: ../launch-resume/add-a-splash-screen.md
-            - name: Exibir uma tela inicial por mais tempo
-              href: ../launch-resume/create-a-customized-splash-screen.md
-    - name: Programação threading e assíncrona
-      href: ../threading-async/index.md
+      - name: Tratar a pré-inicialização do aplicativo
+        href: ../launch-resume/handle-app-prelaunch.md
+      - name: Tratar a ativação do aplicativo
+        href: ../launch-resume/activate-an-app.md
+      - name: Tratar a suspensão do aplicativo
+        href: ../launch-resume/suspend-an-app.md
+      - name: Tratar a retomada do app
+        href: ../launch-resume/resume-an-app.md
+      - name: Liberar memória quando seu app é movido para o segundo plano
+        href: ../launch-resume/reduce-memory-usage.md
+      - name: Adiar a suspensão do app com execução estendida
+        href: ../launch-resume/run-minimized-with-extended-execution.md
+    - name: Iniciar um app com um URI
+      href: ../launch-resume/launch-app-with-uri.md
       items:
-        - name: Programação assíncrona (aplicativos UWP)
-          href: ../threading-async/asynchronous-programming-universal-windows-platform-apps.md
-        - name: Programação assíncrona em C++/CX (aplicativos UWP)
-          href: ../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md
-        - name: Práticas recomendadas para usar o pool de threads
-          href: ../threading-async/best-practices-for-using-the-thread-pool.md
-        - name: 'Chamar APIs assíncronas no Visual Basic ou C#'
-          href: ../threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md
-        - name: Criar um item de trabalho periódico
-          href: ../threading-async/create-a-periodic-work-item.md
-        - name: Enviar um item de trabalho ao pool de threads
-          href: ../threading-async/submit-a-work-item-to-the-thread-pool.md
-        - name: Usar um temporizador para enviar um item de trabalho
-          href: ../threading-async/use-a-timer-to-submit-a-work-item.md
-        - name: Usando objetos do Windows Runtime em um ambiente multithread
-          href: ../threading-async/using-windows-runtime-objects-in-a-multithreaded-environment.md
+      - name: Iniciar o app padrão para um URI
+        href: ../launch-resume/launch-default-app.md
+      - name: Tratar a ativação do URI
+        href: ../launch-resume/handle-uri-activation.md
+      - name: Iniciar um app para obter resultados
+        href: ../launch-resume/how-to-launch-an-app-for-results.md
+      - name: Escolher e salvar tons usando o esquema de URI ms-tonepicker
+        href: ../launch-resume/launch-ringtone-picker.md
+      - name: Iniciar o app Configurações do Windows
+        href: ../launch-resume/launch-settings-app.md
+      - name: Iniciar o aplicativo da Microsoft Store
+        href: ../launch-resume/launch-store-app.md
+      - name: Iniciar o app Mapas do Windows
+        href: ../launch-resume/launch-maps-app.md
+      - name: Iniciar o aplicativo Pessoas
+        href: ../launch-resume/launch-people-apps.md
+      - name: Iniciar a captura de tela
+        href: ../launch-resume/launch-screen-snipping.md
+      - name: Dar suporte à vinculação de apps à Web com manipuladores de URI de apps
+        href: ../launch-resume/web-to-app-linking.md
+    - name: Iniciar um app por meio de ativação de arquivo
+      href: ../launch-resume/launch-app-from-file.md
+      items:
+      - name: Iniciar o app padrão para um arquivo
+        href: ../launch-resume/launch-the-default-app-for-a-file.md
+      - name: Manipular a ativação do arquivo
+        href: ../launch-resume/handle-file-activation.md
+    - name: Iniciando automaticamente com a Reprodução Automática
+      href: ../launch-resume/auto-launching-with-autoplay.md
+    - name: Arquivo reservado e nomes de esquemas de URI
+      href: ../launch-resume/reserved-uri-scheme-names.md
+    - name: Usar serviços e extensões de app
+      href: ../launch-resume/app-services.md
+      items:
+      - name: Criar e consumir um serviço de app
+        href: ../launch-resume/how-to-create-and-consume-an-app-service.md
+      - name: Converter um serviço de aplicativo para ser executado no mesmo processo de seu aplicativo hospedado
+        href: ../launch-resume/convert-app-service-in-process.md
+      - name: Estender seu app com serviços, extensões e pacotes
+        href: ../launch-resume/extend-your-app-with-services-extensions-packages.md
+      - name: Criar e armazenar uma extensão de app
+        href: ../launch-resume/how-to-create-an-extension.md
+    - name: Dar suporte ao seu app com tarefas em segundo plano
+      href: ../launch-resume/support-your-app-with-background-tasks.md
+      items:
+      - name: Diretrizes de tarefas em segundo plano
+        href: ../launch-resume/guidelines-for-background-tasks.md
+      - name: Acessar sensores e dispositivos a partir de uma tarefa em segundo plano
+        href: ../launch-resume/access-sensors-and-devices-from-a-background-task.md
+      - name: Criar e registrar uma tarefa em segundo plano no processo
+        href: ../launch-resume/create-and-register-an-inproc-background-task.md
+      - name: Criar e registrar uma tarefa em segundo plano fora do processo
+        href: ../launch-resume/create-and-register-a-background-task.md
+      - name: Fazer a portabilidade de uma tarefa em segundo plano fora do processo para uma tarefa em segundo plano no processo
+        href: ../launch-resume/convert-out-of-process-background-task.md
+      - name: Depurar uma tarefa em segundo plano
+        href: ../launch-resume/debug-a-background-task.md
+      - name: Declarar tarefas em segundo plano no manifesto do aplicativo
+        href: ../launch-resume/declare-background-tasks-in-the-application-manifest.md
+      - name: Registo de tarefas em segundo plano em grupo
+        href: ../launch-resume/group-background-tasks.md
+      - name: Tratar uma tarefa em segundo plano cancelada
+        href: ../launch-resume/handle-a-cancelled-background-task.md
+      - name: Monitorar o progresso e a conclusão de tarefas em segundo plano
+        href: ../launch-resume/monitor-background-task-progress-and-completion.md
+      - name: Registrar uma tarefa em segundo plano
+        href: ../launch-resume/register-a-background-task.md
+      - name: Responder a eventos do sistema com tarefas em segundo plano
+        href: ../launch-resume/respond-to-system-events-with-background-tasks.md
+      - name: Executar uma tarefa em segundo plano em um temporizador
+        href: ../launch-resume/run-a-background-task-on-a-timer-.md
+      - name: Executar uma tarefa em segundo plano quando o aplicativo UWP é atualizado
+        href: ../launch-resume/run-a-background-task-during-updatetask.md
+      - name: Executar em segundo plano indefinidamente
+        href: ../launch-resume/run-in-the-background-indefinetly.md
+      - name: Definir condições para executar uma tarefa em segundo plano
+        href: ../launch-resume/set-conditions-for-running-a-background-task.md
+      - name: Disparar uma tarefa em segundo plano do aplicativo
+        href: ../launch-resume/trigger-background-task-from-app.md
+      - name: Atualizar um bloco dinâmico de uma tarefa em segundo plano
+        href: ../launch-resume/update-a-live-tile-from-a-background-task.md
+      - name: Usar um ativador de manutenção
+        href: ../launch-resume/use-a-maintenance-trigger.md
+    - name: Aplicativos e dispositivos conectados (Projeto "Rome")
+      href: ../launch-resume/connected-apps-and-devices.md
+      items:
+      - name: Descobrir dispositivos remotos
+        href: ../launch-resume/discover-remote-devices.md
+      - name: Iniciar um app em um dispositivo remoto
+        href: ../launch-resume/launch-a-remote-app.md
+      - name: Comunicar-se com um serviço de app remoto
+        href: ../launch-resume/communicate-with-a-remote-app-service.md
+      - name: Conectar dispositivos por meio de sessões remotas
+        href: ../launch-resume/remote-sessions.md
+      - name: Continue a atividade do usuário, mesmo entre dispositivos
+        href: ../launch-resume/useractivities.md
+      - name: Práticas recomendadas de atividades de usuários
+        href: ../launch-resume/useractivities-best-practices.md
+    - name: Telas iniciais
+      href: ../launch-resume/splash-screens.md
+      items:
+      - name: Adicionar uma tela inicial
+        href: ../launch-resume/add-a-splash-screen.md
+      - name: Exibir uma tela inicial por mais tempo
+        href: ../launch-resume/create-a-customized-splash-screen.md
+  - name: Programação threading e assíncrona
+    href: ../threading-async/index.md
+    items:
+    - name: Programação assíncrona (aplicativos UWP)
+      href: ../threading-async/asynchronous-programming-universal-windows-platform-apps.md
+    - name: Programação assíncrona em C++/CX (aplicativos UWP)
+      href: ../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md
+    - name: Práticas recomendadas para usar o pool de threads
+      href: ../threading-async/best-practices-for-using-the-thread-pool.md
+    - name: Chamar APIs assíncronas no Visual Basic ou C#
+      href: ../threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md
+    - name: Criar um item de trabalho periódico
+      href: ../threading-async/create-a-periodic-work-item.md
+    - name: Enviar um item de trabalho ao pool de threads
+      href: ../threading-async/submit-a-work-item-to-the-thread-pool.md
+    - name: Usar um temporizador para enviar um item de trabalho
+      href: ../threading-async/use-a-timer-to-submit-a-work-item.md
+    - name: Usando objetos do Windows Runtime em um ambiente multithread
+      href: ../threading-async/using-windows-runtime-objects-in-a-multithreaded-environment.md
+ms.openlocfilehash: 30584a90fbfaf39ed66cf90fd27575ff055ef69e
+ms.sourcegitcommit: a774dac901ad6ad3a85520ef75ee9a1029aa9792
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "9070376"
