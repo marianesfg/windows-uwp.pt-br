@@ -2,16 +2,16 @@
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: Visão geral do Windows Device Portal
 description: Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo remotamente por uma rede ou conexão USB.
-ms.date: 12/12/2017
+ms.date: 2/19/2019
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bffdb31e9001bd0b2abe873780ef507c2073b46
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 372524b5a5f002e68c02a8f298703cb7ef99bfdf
+ms.sourcegitcommit: a32f656253acc1e8b150919e73c886a59e65756a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946694"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9083714"
 ---
 # <a name="windows-device-portal-overview"></a>Visão geral do Windows Device Portal
 
@@ -33,7 +33,7 @@ Cada dispositivo possui instruções específicas para se conectar ao Device Por
 Família de dispositivos | Ativado por padrão? | HTTP | HTTPS | USB
 --------------|----------------|------|-------|----
 HoloLens | Sim, no Modo de Desenvolvedor | 80 (padrão) | 443 (padrão) | http://127.0.0.1:10080
-IoT | Sim, no Modo de Desenvolvedor | 8080 | Habilitar por meio da regkey | N/D
+IoT | Sim, no Modo de Desenvolvedor | 8080 | Habilitar por meio da regkey | N/A
 Xbox | Habilitar dentro do Modo de Desenvolvedor | Desabilitado | 11443 | N/D
 Área de trabalho| Habilitar dentro do Modo de Desenvolvedor | 50080\* | 50043\* | N/D
 Telefone | Habilitar dentro do Modo de Desenvolvedor | 80| 443 | http://127.0.0.1:10080
@@ -65,20 +65,47 @@ As ferramentas que são comuns em famílias são descritas aqui. Talvez haja out
 
 O Gerenciador de aplicativos fornece instalação/desinstalação e funcionalidade de gerenciamento de aplicativo pacotes e pacotes no dispositivo host.
 
-![Página de Gerenciador de aplicativos do Portal de dispositivo](images/device-portal/wdp-apps.png)
+![Página de Gerenciador de aplicativos do Portal de dispositivo](images/device-portal/WDP_AppsManager2.png)
 
-- **Aplicativos instalados**: Use o menu suspenso para remover ou iniciar aplicativos que estão instalados no dispositivo. Instale um novo aplicativo clicando em **Adicionar**. Isso inicia o experiência do usuário para implantar aplicativos empacotados no local de instalação, rede ou web hospeda e registrar arquivos soltos de compartilhamentos de rede.
-- **Aplicativos em execução**: obter informações sobre os aplicativos que estão sendo executados e fechá-los conforme necessário.
+* **Implantar aplicativos**: implantar aplicativos empacotados no local, rede, ou web hosts e registrar arquivos soltos de compartilhamentos de rede.
+* **Aplicativos instalados**: Use o menu suspenso para remover ou iniciar aplicativos que estão instalados no dispositivo.
+* **Aplicativos em execução**: obter informações sobre os aplicativos que estão sendo executados e fechá-los conforme necessário.
 
-#### <a name="install-an-app"></a>Instalar um aplicativo
+#### <a name="install-sideload-an-app"></a>Instalar um aplicativo (sideload)
+
+Você pode fazer o sideload de aplicativos durante o desenvolvimento usando o Windows Device Portal:
 
 1.  Quando tiver criado um pacote do aplicativo, você poderá instalá-lo remotamente em seu dispositivo. Após a compilação no Visual Studio, uma pasta de saída será gerada.
+
   ![Instalação de aplicativos](images/device-portal/iot-installapp0.png)
-2.  Na seção de Gerenciador de aplicativos do Device Portal, clique em **Adicionar** e selecione o **pacote de aplicativo do armazenamento local de instalação**.
-3.  Clique em **Procurar** e localize o pacote do aplicativo.
-3.  Clique em **Procurar** e localize o arquivo de certificado (_. cer_) (não necessário em todos os dispositivos.)
-4.  Caixas de seleção o respectivas se você deseja instalar opcionais ou pacotes de estrutura juntamente com a instalação do aplicativo. Se você tiver mais de uma, adicione cada uma delas individualmente.     
-5.  Clique em **Avançar** para mover para a etapa de Avançar e **instalar** para iniciar a instalação. 
+
+2. No Windows Device Portal, navegue até a página **Gerenciador de aplicativos** .
+
+3. Na seção de **implantar aplicativos** , selecione **Armazenamento Local**.
+
+4. Em **Selecione o pacote de aplicativo**, selecione **Escolher arquivo** e navegue até o pacote do aplicativo que você deseja carregar.
+
+5. Em **Selecione o arquivo de certificado (. cer) usado para assinar o pacote do aplicativo**, selecione **Escolher arquivo** e navegue até o certificado associado a esse pacote do aplicativo.
+
+6. Caixas de seleção o respectivas se você deseja instalar opcionais ou pacotes de estrutura juntamente com a instalação do aplicativo e selecione **Avançar** para escolhê-los.
+
+7. Selecione **instalação** para iniciar a instalação.
+
+8. Se o dispositivo está executando o Windows 10 no modo S, e é a primeira vez que determinado certificado foi instalado no dispositivo, reinicie o dispositivo.
+
+#### <a name="install-a-certificate"></a>Instalar um certificado
+
+Como alternativa, você pode instalar o certificado via Windows Device Portal e instalar o aplicativo por outros meios:
+
+1. No Windows Device Portal, navegue até a página **Gerenciador de aplicativos** .
+
+2. Na seção de **implantar aplicativos** , selecione **Instalar certificado**.
+
+3. Em **Selecione o arquivo de certificado (. cer) usado para assinar um pacote do aplicativo**, selecione **Escolher arquivo** e navegue até o certificado associado ao pacote de aplicativo que você deseja carregar.
+
+4. Selecione **instalação** para iniciar a instalação.
+
+5. Se o dispositivo está executando o Windows 10 no modo S, e é a primeira vez que determinado certificado foi instalado no dispositivo, reinicie o dispositivo.
 
 #### <a name="uninstall-an-app"></a>Desinstalar um aplicativo
 1.  Certifique-se de que seu aplicativo não esteja em execução. 
