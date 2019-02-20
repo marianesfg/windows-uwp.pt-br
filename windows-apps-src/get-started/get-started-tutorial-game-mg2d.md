@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: e6d36c368672675f503359735de8717df1be8b57
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: dbd2c6c9f5e3cf2200f9b260687f05718178868a
+ms.sourcegitcommit: 4dd9f76bd7f0ebdb42d78eab472d33a979dce60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050649"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9082879"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Criar um jogo UWP em MonoGame 2D
 
@@ -67,6 +67,7 @@ Agora que você criou o projeto, abra o arquivo **Game1.cs** do **Gerenciador de
 **protected override void UnloadContent()** Este método é usado para descarregar o conteúdo do gerenciador de não conteúdo. Nós não o usamos.
 
 **protected override void Update (GameTime gameTime)** Esse método é chamado uma vez para cada ciclo do loop do jogo. Aqui, podemos atualizar os estados de qualquer objeto ou variável usados no jogo. Isso inclui itens como posição, a velocidade ou a cor de um objeto. Isso também é que a entrada do usuário é manipulada. Em poucas palavras, esse método manipula cada parte da lógica do jogo, exceto objetos de desenho na tela.
+
 **protected override void Draw(GameTime gameTime)** É aqui que os objetos são desenhados na tela, usando as posições dadas pelo método Update.
 
 ## <a name="draw-a-sprite"></a>Desenhar um sprite
@@ -565,7 +566,7 @@ if (!gameStarted)
 
 Primeiro, criamos duas cadeias de caracteres, uma para cada linha de texto que queremos desenhar. Em seguida, medimos a largura e altura de cada linha quando impressa, usando o método **SpriteFont.MeasureString(String)**. Isso nos dá o tamanho como um objeto **Vector2**, com a propriedade **X** que contém a largura e a **Y** que contém a altura.
 
-Por fim, desenhamos cada linha. Para centralizar o texto horizontalmente, tornamos o valor **X** de seu vetor de posição igual a **screenWidth / 2 - textSize.X / 2**
+Por fim, desenhamos cada linha. Para centralizar o texto horizontalmente, tornamos o valor **X** do vetor da posição igual a **screenWidth / 2 - TextSize / 2**.
 
 **Desafio:** como você alterar o procedimento descrito acima para centralizar o texto verticalmente e também horizontalmente?
 
@@ -576,7 +577,12 @@ Experimente executar o jogo. Você consegue ver a tela inicial de Introdução? 
 ## <a name="collision-detection"></a>Detecção de colisão
 Então, nós temos um brócolis que o segue por toda parte e ainda temos uma pontuação que sobre a cada vez que aparece um novo — mas do jeito em que está não existe realmente nenhuma maneira de perder esse jogo. Precisamos de uma maneira de saber se os sprites do dinossauro e dos brócolis colidem, e quando isso acontece, para declarar fim de jogo.
 
-### <a name="1-rectangular-collision"></a>1. Colisão retangular
+### <a name="1-get-the-textures"></a>1. Obter as texturas
+A última imagem precisamos, é um de "passar o jogo". [Clique aqui para baixar a imagem](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/game-over.png).
+
+Assim como antes com o retângulo verde, imagens gato ninja e brócolis, adicione esta imagem à **mgcb** por meio do **Pipeline do MonoGame**, nomeando-"jogo-over.png".
+
+### <a name="2-rectangular-collision"></a>2. colisão retangular
 Para detectar colisões em um jogo, os objetos geralmente são simplificados para reduzir a complexidade dos cálculos envolvidos. Vamos tratar tanto o avatar do jogador e o obstáculo brócolis como retângulos para fins de detecção de colisão entre eles.
 
 Abra **SpriteClass.cs** e adicione uma nova variável de classe:
@@ -602,7 +608,7 @@ public bool RectangleCollision(SpriteClass otherSprite)
 
 Esse método detecta se dois objetos retangulares colidiram. O algoritmo funciona por meio de testes para ver se há uma lacuna entre qualquer uma das laterais dos retângulos. Se houver uma lacuna, não há nenhuma colisão — se não houver nenhuma lacuna, tem de haver uma colisão.
 
-### <a name="2-load-new-textures"></a>2. Carregue novas texturas
+### <a name="3-load-new-textures"></a>3. carregue novas texturas
 
 Em seguida, abra **Game1.cs** e adicione duas novas variáveis de classe, uma para armazenar a textura do sprite fim de jogo e um boliano para rastrear o estado do jogo:
 
@@ -623,7 +629,7 @@ Por fim, carregue a textura em **gameOverTexture** no método **LoadContent**:
 gameOverTexture = Content.Load<Texture2D>("game-over");
 ```
 
-### <a name="3-implement-game-over-logic"></a>3. Implemente a lógica "fim de jogo"
+### <a name="4-implement-game-over-logic"></a>4. implemente a lógica "fim de jogo"
 Adicione este código ao método **Update**, logo após o método **KeyboardHandler** ser chamado:
 
 ```CSharp
@@ -647,7 +653,7 @@ if (dino.RectangleCollision(broccoli)) gameOver = true;
 
 Isso chama o método **RectangleCollision** que criamos na **SpriteClass** e sinaliza o jogo como over se retornar true.
 
-### <a name="4-add-user-input-for-resetting-the-game"></a>4. Adicione a entrada do usuário para redefinir o jogo
+### <a name="5-add-user-input-for-resetting-the-game"></a>5. Adicionar entrada do usuário para redefinir o jogo
 Adicione este código ao método **KeyboardHandler** , para permitir que o usuário redefina o jogo se pressionar Enter:
 
 ```CSharp
@@ -658,7 +664,7 @@ if (gameOver && state.IsKeyDown(Keys.Enter))
 }
 ```
 
-### <a name="5-draw-game-over-splash-and-text"></a>5. Desenhe a tela inicial e o texto fim de jogo
+### <a name="6-draw-game-over-splash-and-text"></a>6. desenhe fim de jogo inicial e texto
 Por fim, adicione este código ao método Draw, logo após a primeira chamada de **spriteBatch.Draw** (essa deve ser a chamada que desenha a textura de grama).
 
 ```CSharp
