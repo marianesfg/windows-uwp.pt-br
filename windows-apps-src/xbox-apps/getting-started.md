@@ -5,12 +5,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a8f217322d6d10b91ebc82c3434c88e9d11128f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c94d27e87853b570268e3a39fe941c817b3eda6a
+ms.sourcegitcommit: eaee5a45d5eace64c69e67691e5330b466cc74c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930163"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9083251"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Introdução ao desenvolvimento de aplicativos UWP no Xbox One
 
@@ -39,7 +39,7 @@ Antes de começar, você precisará fazer o seguinte:
 
 2.  Instale o [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk)mais recente.
 
-3.  Habilitar o modo de desenvolvedor para seu computador de desenvolvimento (**configurações / atualização e segurança / para desenvolvedores / usar recursos de desenvolvedor / modo de desenvolvedor**).
+3.  Habilitar o modo de desenvolvedor para seu computador de desenvolvimento (**configurações / Update & segurança / para desenvolvedores / usar recursos de desenvolvedor / modo de desenvolvedor**).
 
 Agora que seu computador de desenvolvimento está pronto, você pode assistir a este vídeo ou continuar lendo para saber como configurar o seu Xbox One para desenvolvimento e criar e implantar um aplicativo UWP para ele.
 </br>
@@ -48,7 +48,7 @@ Agora que seu computador de desenvolvimento está pronto, você pode assistir a 
 
 ## <a name="setting-up-your-xbox-one-console"></a>Configurando seu console Xbox One
 
-1.  Ative o Modo de Desenvolvedor no seu Xbox One. Baixar o aplicativo, obter o código de ativação e, em seguida, insira-o na página [Gerenciar Xbox One consoles](https://partner.microsoft.com/xboxactivate) em sua conta do Partner Center. Para saber mais, consulte [Ativação do modo de desenvolvedor do Xbox One](devkit-activation.md). 
+1.  Ative o Modo de Desenvolvedor no seu Xbox One. Baixar o aplicativo, obter o código de ativação e, em seguida, insira-o na página **Gerenciar Xbox One consoles** em sua conta de desenvolvedor de aplicativo do Partner Center. Para saber mais, consulte [Ativação do modo de desenvolvedor do Xbox One](devkit-activation.md). 
 
 2.  Abra o aplicativo **Ativação do modo de desenvolvedor** e selecione **Alternar e reiniciar**. Parabéns! Agora você tem um Xbox One no Modo de Desenvolvedor!
   
