@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ad66d8797234d01673518256d6f5376ce93245f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 539f67079547db28a02ef34fc4b9af2e15d107d3
+ms.sourcegitcommit: 4e80ee8d577c3475b6d247317a24411a48b02c29
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928697"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9083887"
 ---
 # <a name="control-templates"></a>Modelos de controle
 
@@ -200,7 +200,7 @@ Os tópicos que documentam os estilos e modelos dos controles de XAML mostram tr
 
 Para alguns dos atributos nos exemplos de XAML, você pode ter percebido referências de recursos que usam a [extensão de marcação {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md). Essa é uma técnica que permite que um único modelo de controle use recursos que podem ser valores diferentes dependendo de qual tema está ativo no momento. Isso é particularmente importante para pincéis e cores, porque a finalidade principal dos temas é permitir que os usuários escolham se querem um tema de contraste escuro, claro ou alto aplicado ao sistema como um todo. Os aplicativos que usam o sistema de recursos de XAML podem usar um conjunto de recursos apropriado para esse tema, de maneira que as escolhas de tema na interface do usuário de um aplicativo reflitam a escolha de tema em todo o sistema feita pelo usuário.
 
- # # Obter o código de exemplo
+## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
 * [Exemplo de galeria de controles XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 * [Exemplo de controle de edição de texto personalizado](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)
