@@ -6,12 +6,12 @@ ms.date: 1/8/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 92cfb1318f176e7d8adb8052c119a006389f49e5
-ms.sourcegitcommit: 158467c576c5924e1822d397bd449fc8251bf92f
+ms.openlocfilehash: 5a1f9d853e41642ca5f8027d42b49fcbc3122a66
+ms.sourcegitcommit: 6ba110be80bc343a1aecaf4361edcdb70278c0a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "8996071"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "9086654"
 ---
 # <a name="launch-the-windows-settings-app"></a>Iniciar o app Configurações do Windows
 
@@ -103,7 +103,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 
 |Página de configurações| URI |
 |-------------|-----|
-| Permissões e histórico | ms-settings:cortana-permissions |
+| Permissões & histórico | ms-settings:cortana-permissions |
 | Mais detalhes | ms-settings:cortana-moredetails |
 | Cortana em todos os meus dispositivos | ms-settings:cortana-notifications |
 | Converse com a Cortana | ms-settings:cortana-language<br/>MS-configurações: cortana<br/>MS-configurações: cortana-talktocortana |
@@ -136,7 +136,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 | Áudio | ms-settings:easeofaccess-audio |
 | Legendas ocultas | ms-settings:easeofaccess-closedcaptioning |
 | Filtros de cores | MS-configurações: easeofaccess-colorfilter |
-| Tamanho do cursor e ponteiro | MS-configurações: easeofaccess-cursorandpointersize |
+| Tamanho do cursor & ponteiro | MS-configurações: easeofaccess-cursorandpointersize |
 | Tela | ms-settings:easeofaccess-display |
 | Controle com os olhos | ms-settings:easeofaccess-eyecontrol |
 | Fontes | ms-settings:fonts |
@@ -268,7 +268,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 | Configurações de economia de bateria | ms-settings:batterysaver-settings (disponível somente em dispositivos que possuem bateria, como um tablet) |
 | Uso da bateria | ms-settings:batterysaver-usagedetails (disponível somente em dispositivos que possuem bateria, como um tablet) |
 | Área de Transferência | MS-configurações: área de transferência |
-| Tela | ms-settings:display |
+| Display | ms-settings:display |
 | Locais de salvamento padrão | ms-settings:savelocations |
 | Tela | ms-settings:screenrotation |
 | Duplicando minha tela | ms-settings:quietmomentspresentation |
@@ -288,7 +288,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 | Área de Trabalho Remota | ms-settings:remotedesktop |
 | Telefone | MS-configurações: telefone (**preteridos no Windows 10, versão 1809 e posterior**) |
 | Energia e suspensão | ms-settings:powersleep |
-| Sons | ms-settings:sounds |
+| Som | MS-configurações: som |
 | Armazenamento | ms-settings:storagesense |
 | Sensor de armazenamento | ms-settings:storagepolicies |
 
