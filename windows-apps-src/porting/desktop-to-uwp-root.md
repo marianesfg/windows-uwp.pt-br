@@ -8,12 +8,12 @@ keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5442dacb5c01bc6e22460e9d772ad73ba06b54e2
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 70a9b6046e3b7be9ac84678ac21c0c9f89a4a7b2
+ms.sourcegitcommit: 1a4bbfb8495e2f414deac5ee050ab679a78b1717
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049933"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "9089748"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>Empacotar aplicativos da área de trabalho (ponte de Desktop)
 
@@ -127,13 +127,13 @@ Saiba mais sobre como você pode fornecer aplicativos de negócios pela Microsof
 
 #### <a name="firegiant"></a>FireGiant
 
-A extensão [Appx FireGiant](https://www.firegiant.com/products/wix-expansion-pack/appx) permite criar pacotes de aplicativo do Windows e pacotes MSI simultaneamente do mesmo código-fonte WiX. Sempre que você criar, você pode direcionar o Windows 10 com um pacote de aplicativo do Windows e versões anteriores do Windows com MSI.
+A [extensão FireGiant MSIX](https://www.firegiant.com/products/wix-expansion-pack/msix) permite que você criar pacotes de aplicativos do Windows e pacotes MSI simultaneamente do mesmo código-fonte WiX. Sempre que você criar, você pode direcionar o Windows 10 com um pacote de aplicativo do Windows e versões anteriores do Windows com MSI.
 
 <img width="20%" src="images/desktop-to-uwp/FG3rdPartyLogo.png">
 
-A extensão Appx FireGiant usa análise estática e emulação inteligente de projetos WiX para criar pacotes de aplicativo do Windows sem a sobrecarga de espaço em disco e de tempo de execução de contêineres ou máquinas virtuais.
+A extensão MSIX FireGiant usa análise estática e emulação inteligente de projetos WiX para criar pacotes de aplicativos do Windows sem a sobrecarga de espaço e tempo de execução do disco de contêineres ou máquinas virtuais.
 
-Como a extensão Appx FireGiant não converte o instalador ao executá-lo, você pode manter seu instalador WiX sem precisar repetidamente convertê-lo em pacotes de aplicativo do Windows. Todos os usuários em diferentes versões do Windows obtêm seus últimos aprimoramentos e você não precisa se preocupar com pacotes de aplicativos MSI e Windows fora de sincronia.
+Como a extensão MSIX FireGiant não converte o instalador ao executá-lo, você pode manter seu instalador WiX sem precisar repetidamente convertê-lo em pacotes de aplicativos do Windows. Todos os usuários em diferentes versões do Windows obtêm seus últimos aprimoramentos e você não precisa se preocupar com pacotes de aplicativos MSI e Windows fora de sincronia.
 
 Confira este [vídeo](https://www.youtube.com/watch?v=AFBpdBiAYQE) e veja como em algumas linhas de código FireGiant CEO Rob Mensching, cria uma versão Appx (pacote de aplicativo do Windows) a ferramenta populares compactação 7-Zip de código-fonte aberto e, em seguida, como ele aprimora o aplicativo do Windows e pacotes MSI com alterações no mesmo código-fonte WiX.
 
