@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: ba64afe3440ed209a6f637871f21427716533b09
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.openlocfilehash: 39f60576962d9e69d8ec7ba80918fdbdfe96f070
+ms.sourcegitcommit: 9b0f9c8854277d2e786e9294af3a2b559aa457a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042278"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "9099313"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>Mudar de C++/CX para C++/WinRT
 
@@ -282,6 +282,7 @@ O C++/CX fornece vários tipos de dados no namespace **Platform**. Esses tipos n
 | C++/CX | C++/WinRT |
 | ---- | ---- |
 | **Platform:: Agile\ ^** | [**WinRT:: agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) |
+| **Platform:: array \ ^** | Consulte [porta **Platform:: array \ ^** ](#port-platformarray) |
 | **Platform::Exception\^** | [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) |
 | **Platform::InvalidArgumentException\^** | [**winrt::hresult_invalid_argument**](/uwp/cpp-ref-for-winrt/error-handling/hresult-invalid-argument) |
 | **Platform::Object\^** | **winrt::Windows::Foundation::IInspectable** |
@@ -301,6 +302,9 @@ No C++/WinRT.
 ```cppwinrt
 winrt::agile_ref<Windows::UI::Core::CoreWindow> m_window;
 ```
+
+### <a name="port-platformarray"></a>Porta **Platform:: array \ ^**
+As opções incluem o uso de uma lista de inicializadores, um **std:: array**ou um **std:: Vector**. Para obter mais informações e exemplos de código, consulte [a lista de inicializadores padrão](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-initializer-lists) e [vetores e matrizes padrão](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-arrays-and-vectors).
 
 ### <a name="port-platformexception-to-winrthresulterror"></a>Faça a transferência de **Platform::Exception\^** para **winrt::hresult_error**
 O tipo **Platform::Exception\^** é produzido no C++/CX quando uma API do Windows Runtime retorna um HRESULT diferente de S\_OK. O equivalente para C++/WinRT é [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error).
