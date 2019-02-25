@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b11f927eca82e2c068f0210022893905b1503db
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: c0113f039ccd2d2df0c155b77295afef194018ce
+ms.sourcegitcommit: f7b8112a99097c7c8a76b028aef436d1a5c68cdb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049963"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "9099456"
 ---
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
 
@@ -1512,21 +1512,6 @@ Desenvolva jogos prontos para o mundo para a plataforma Windows e saiba mais sob
     <tr>
         <td>Transpondo idiomas, culturas e tecnologias</td>
         <td><a href="https://www.microsoft.com/Language/Default.aspx">Recurso online para convenções de idioma e a terminologia Microsoft padrão</a></td>
-    </tr>
-</table>
-
-### <a name="security"></a>Segurança
-
-Crie um ambiente no qual os jogadores possam jogar e competir de forma justa. Um jogo registrado no TruePlay é executado em um processo protegido, que reduz uma classe de ataques comuns. O sistema de monitoramento de jogos também ajuda a identificar os cenários de trapaças comuns. 
-
-<table>
-    <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-    </colgroup>
-    <tr>
-        <td>Ferramentas para combater trapaças em jogos de computador</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/mt808781">TruePlay</a></td>
     </tr>
 </table>
 
