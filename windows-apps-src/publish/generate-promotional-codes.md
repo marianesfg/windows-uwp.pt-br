@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, código promocional, códigos promocionais, token, tokens
 ms.localizationpriority: medium
-ms.openlocfilehash: ce8fb38ee26beadc68eb8e5829549f69e2d11d16
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: db4cde6f8c195101ec31de26c00ffa7325e08d71
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929020"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114482"
 ---
 # <a name="generate-promotional-codes"></a>Gerar códigos promocionais
 
@@ -71,7 +71,7 @@ Para baixar um pedido atendido de códigos promocionais e distribuir os códigos
     -   **Nome do produto**: o nome do aplicativo ou complemento ao qual o código está associado.
     -   **Nome do pedido**: o nome do pedido no qual esse código foi gerado.
     -   **Código promocional**: o código propriamente dito. Consiste em uma sequência 5x5 de caracteres alfanuméricos separados por hífens. Por exemplo: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
-    -   **URL Resgatável**: a URL que um cliente pode usar para resgatar o código e instalar seu aplicativo ou complemento. A URL tem o seguinte formato: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt; promotional_code >
+    -   **URL Resgatável**: a URL que um cliente pode usar para resgatar o código e instalar seu aplicativo ou complemento. A URL tem o seguinte formato: https://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt; promotional_code>
     -   **Data de início**: a data em que este código foi ativado.
     -   **Data de validade**: a data de validade deste código.
     -   **ID do Código**: uma ID exclusiva para este código.

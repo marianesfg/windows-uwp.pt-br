@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, localização, mapa, localização geográfica
 ms.localizationpriority: medium
-ms.openlocfilehash: d7004f579bb8bb60b1f9585e49319e278770700a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 723b1b12a6bbfb572c9aaacf66c97541bf70f72d
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048153"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114522"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Diretrizes de aplicativos com reconhecimento de local
 
@@ -155,7 +155,7 @@ Alguns tipos de aplicativos, por exemplo, aplicativos de previsão de tempo ou d
 
 A localização geográfica do usuário faz parte das PII (informações de identificação do usuário). O site a seguir fornece orientações para proteger a privacidade do usuário.
 
--   [Microsoft Privacy]( http://go.microsoft.com/fwlink/p/?LinkId=259692)
+-   [Microsoft Privacy]( https://go.microsoft.com/fwlink/p/?LinkId=259692)
 
 <!--For more info, see [Guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md).-->
 

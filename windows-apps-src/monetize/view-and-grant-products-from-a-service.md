@@ -6,12 +6,12 @@ ms.date: 08/01/2018
 ms.topic: article
 keywords: windows 10, uwp, API de coleção da Microsoft Store, API de compra da Microsoft Store, exibir produtos, conceder produtos
 ms.localizationpriority: medium
-ms.openlocfilehash: a749550c1dc644c4a9fb3f91530503adf192246e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 0bf85a73cb35044b4be2282c9a13c1e65b836a92
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050256"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114502"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>Gerenciar direitos a produtos de um serviço
 
@@ -253,5 +253,5 @@ Aqui está um exemplo de uma declaração de chave de ID da Microsoft Store deco
 * [Alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md)
 * [Renovar uma chave de ID da Microsoft Store](renew-a-windows-store-id-key.md)
 * [Integrando aplicativos com o Azure Active Directory](https://go.microsoft.com/fwlink/?LinkId=722502)
-* [Noções básicas sobre o manifesto de aplicativo do Active Directory do Azure]( http://go.microsoft.com/fwlink/?LinkId=722500)
+* [Noções básicas sobre o manifesto de aplicativo do Active Directory do Azure]( https://go.microsoft.com/fwlink/?LinkId=722500)
 * [Tipos de declaração e token com suporte](https://go.microsoft.com/fwlink/?LinkId=722501)

@@ -6,12 +6,12 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 16d1ea6186cc8ccabacd1751db61e752a97930f7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4426cbc2e2d3c6e7d980b0733b6deb5178025abb
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921936"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114612"
 ---
 # <a name="use-the-orientation-sensor"></a>Usar o sensor de orientação
 
@@ -76,7 +76,7 @@ Esta seção está dividida em duas subseções. A primeira subseção levará v
     using Windows.UI.Core;
     using Windows.Devices.Sensors;
 
-    // The Blank Page item template is documented at http://go.microsoft.com/fwlink/p/?linkid=234238
+    // The Blank Page item template is documented at https://go.microsoft.com/fwlink/p/?linkid=234238
 
     namespace App1
     {
@@ -129,7 +129,7 @@ Esta seção está dividida em duas subseções. A primeira subseção levará v
     }
 ```
 
-Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **OrientationSensorCS**, poderá substituir `namespace App1` por `namespace OrientationSensorCS`.
+Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **OrientationSensorCS**, pode substituir `namespace App1` por `namespace OrientationSensorCS`.
 
 -   Abra o arquivo MainPage.xaml e substitua o conteúdo original pelo XML abaixo.
 
@@ -237,7 +237,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
 
     using Windows.UI.Core;
     using Windows.Devices.Sensors;
-    // The Blank Page item template is documented at http://go.microsoft.com/fwlink/p/?linkid=234238
+    // The Blank Page item template is documented at https://go.microsoft.com/fwlink/p/?linkid=234238
 
     namespace App1
     {
@@ -299,7 +299,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
     }
 ```
 
-Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **SimpleOrientationCS**, poderá substituir `namespace App1` por `namespace SimpleOrientationCS`.
+Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **SimpleOrientationCS**, pode substituir `namespace App1` por `namespace SimpleOrientationCS`.
 
 -   Abra o arquivo MainPage.xaml e substitua o conteúdo original pelo XML abaixo.
 

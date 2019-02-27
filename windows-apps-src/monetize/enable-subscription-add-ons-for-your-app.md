@@ -5,12 +5,12 @@ keywords: windows 10, uwp, assinaturas, complementos, compras no aplicativo, IAP
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 44553d2a772dcfe3b46ea196d6f6bb7c20fdfec0
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: cda22488f613c508b2c753c6b530b2b34b10909d
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046682"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114472"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Habilitar complementos de assinatura para o app
 
@@ -27,7 +27,7 @@ Os complementos de assinatura para aplicativos UWP dão suporte aos seguintes re
 * Você pode adicionar períodos de avaliação gratuita de uma semana ou de um mês à sua assinatura.
 * O SDK do Windows [fornece APIs](#code-examples) que você pode usar em seu app para obter informações sobre os complementos de assinatura disponíveis para o aplicativo e habilitar a compra de um complemento de assinatura. Também fornecemos APIs REST que você pode chamar dos seus serviços para [gerenciar assinaturas para um usuário](#manage-subscriptions).
 * Você pode exibir relatórios analíticos que fornecem o número de aquisições de assinatura, os assinantes ativos e as assinaturas canceladas em um determinado período de tempo.
-* Os clientes podem gerenciar suas assinaturas na página [http://account.microsoft.com/services](https://account.microsoft.com/services) da conta da Microsoft. Os clientes podem usar essa página para exibir todas as assinaturas que eles adquiriram, cancelar uma assinatura e alterar a forma de pagamento associada à sua assinatura.
+* Os clientes podem gerenciar suas assinaturas na página [https://account.microsoft.com/services](https://account.microsoft.com/services) da conta da Microsoft. Os clientes podem usar essa página para exibir todas as assinaturas que eles adquiriram, cancelar uma assinatura e alterar a forma de pagamento associada à sua assinatura.
 
 ## <a name="steps-to-enable-a-subscription-add-on-for-your-app"></a>Etapas para habilitar um complemento de assinatura para o app
 
@@ -109,7 +109,7 @@ Depois que seu app atualizado estiver na Store e os clientes puderem comprar seu
 
 ## <a name="cancellations"></a>Cancelamentos
 
-Os clientes podem usar a página [http://account.microsoft.com/services](https://account.microsoft.com/services) da conta da Microsoft para exibir todas as assinaturas que eles adquiriram, cancelar uma assinatura e alterar a forma de pagamento associada à assinatura. Quando um cliente cancela uma assinatura usando esta página, ele continuam a ter acesso à assinatura durante o período de cobrança atual. Ele não obtém reembolso de qualquer parte do período de cobrança atual. No final do período de cobrança atual, a assinatura é desativada.
+Os clientes podem usar a página [https://account.microsoft.com/services](https://account.microsoft.com/services) da conta da Microsoft para exibir todas as assinaturas que eles adquiriram, cancelar uma assinatura e alterar a forma de pagamento associada à assinatura. Quando um cliente cancela uma assinatura usando esta página, ele continuam a ter acesso à assinatura durante o período de cobrança atual. Ele não obtém reembolso de qualquer parte do período de cobrança atual. No final do período de cobrança atual, a assinatura é desativada.
 
 Você também pode cancelar uma assinatura em nome de um usuário usando a API REST para [alterar o estado de cobrança de uma assinatura para um determinado usuário](change-the-billing-state-of-a-subscription-for-a-user.md).
 
@@ -124,7 +124,7 @@ Não oferecemos períodos de carência para cobrança de assinatura. Se não pud
 No momento, os cenários a seguir não têm suporte para complementos de assinatura.
 
 * No momento, não há suporte para a venda de assinaturas para clientes diretamente por meio da Store. As assinaturas só estão disponíveis para compras no aplicativo de produtos digitais.
-* Os clientes não podem trocar de períodos de assinatura usando a página [http://account.microsoft.com/services](https://account.microsoft.com/services) para a conta da Microsoft. Para alternar para um período de assinatura diferente, os clientes devem cancelar sua assinatura atual e, em seguida, comprar uma assinatura com um período de assinatura diferente do seu aplicativo.
+* Os clientes não podem trocar de períodos de assinatura usando a página [https://account.microsoft.com/services](https://account.microsoft.com/services) para a conta da Microsoft. Para alternar para um período de assinatura diferente, os clientes devem cancelar sua assinatura atual e, em seguida, comprar uma assinatura com um período de assinatura diferente do seu aplicativo.
 * No momento, a troca de camada não tem suporte para complementos de assinatura (por exemplo, alternar um cliente de uma assinatura básica para uma assinatura premium com mais recursos).
 * No momento, não há suporte a [vendas](../publish/put-apps-and-add-ons-on-sale.md) e [códigos promocionais](../publish/generate-promotional-codes.md) para complementos de assinatura.
 

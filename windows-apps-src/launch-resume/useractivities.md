@@ -5,12 +5,12 @@ keywords: atividade do usuário, atividades do usuário, linha do tempo, cortana
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e1c2a3da3711bbc5335a9c44a4b280e3934adac
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 2756231b067176da66c6dbcedf7a1452d5d109f4
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046196"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114542"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Continue a atividade do usuário, mesmo entre dispositivos
 
@@ -34,7 +34,7 @@ Uma [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.u
 
 1. O [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri#Windows_ApplicationModel_UserActivities_UserActivity_ActivationUri) é usado para retomar o aplicativo com um contexto específico. Normalmente, esse link assume a forma de manipulador de protocolo para um esquema (por exemplo, "my-app://page2?action=edit") ou de um AppUriHandler (por exemplo, http://constoso.com/page2?action=edit).
 2. [VisualElements](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.visualelements) expõe uma classe que permite ao usuário identificar visualmente uma atividade com um título, descrição ou elementos de cartão adaptável.
-3. Por fim, [conteúdo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content) é onde você pode armazenar metadados para a atividade que pode ser usado para agrupar e recuperar as atividades em um contexto específico. Muitas vezes, isso assume a forma de dados [http://schema.org](https://schema.org).
+3. Por fim, [conteúdo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content) é onde você pode armazenar metadados para a atividade que pode ser usado para agrupar e recuperar as atividades em um contexto específico. Muitas vezes, isso assume a forma de dados [https://schema.org](https://schema.org).
 
 Para adicionar uma **UserActivity** ao seu app:
 

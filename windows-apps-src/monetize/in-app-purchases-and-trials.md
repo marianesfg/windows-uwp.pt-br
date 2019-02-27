@@ -6,12 +6,12 @@ ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, avaliações, consumível, durável, assinatura
 ms.localizationpriority: medium
-ms.openlocfilehash: 9891205d4fdc8110cb727fb5caabbff6c5f4f948
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5a8bad5207c5907beb91e5664b4bc7e140ab036b
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945988"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114672"
 ---
 # <a name="in-app-purchases-and-trials"></a>Compras e avaliações no aplicativo
 
@@ -175,7 +175,7 @@ Se seu app usa APIs no namespace **Windows.Services.Store** para implementar com
     > [!NOTE]
     > Depois de concluir essas etapas, você poderá continuar atualizando o código do aplicativo e, em seguida, depurar o projeto atualizado no computador de desenvolvimento sem enviar novos pacotes de aplicativos para a Store. Você só precisa baixar a versão da Store do aplicativo no computador de desenvolvimento uma vez para obter a licença local que será usada para teste. Você só precisará enviar novos pacotes de aplicativos para a Store depois de concluir o teste e se quiser disponibilizar os recursos relacionados à avaliação ou à compra no aplicativo no aplicativo para os clientes.
 
-Se o seu app usa o namespace **Windows.ApplicationModel.Store**, você pode usar a classe [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) em seu app para simular as informações de licença durante o teste antes de enviar seu app para a Store. Para obter mais informações, consulte [Introdução às classes CurrentApp e CurrentAppSimulator] (in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#get-started-with-the-currentapp-and-currentappsimulator-classes).  
+Se o seu app usa o namespace **Windows.ApplicationModel.Store**, você pode usar a classe [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) em seu app para simular as informações de licença durante o teste antes de enviar seu app para a Store. Para obter mais informações, consulte a [Introdução às classes CurrentApp e CurrentAppSimulator](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#get-started-with-the-currentapp-and-currentappsimulator-classes).  
 
 > [!NOTE]
 > O namespace **Windows.Services.Store** não fornece uma classe que seja possível usar para simular informações de licença durante o teste. Se você usar o namespace **Windows.Services.Store** para implementar compras ou avaliações no aplicativo, deverá publicar seu app na Store e baixá-lo em seu dispositivo de desenvolvimento para usar sua licença de teste como descrito acima.

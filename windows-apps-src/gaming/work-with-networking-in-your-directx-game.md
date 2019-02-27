@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, rede, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d9675d59a727829946a7ef2a7d4f3780db36bee
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: e3dc77b48feb0c7ceba9fa3cede82c1a44687d0d
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044796"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114622"
 ---
 # <a name="networking-for-games"></a>Rede para jogos
 
@@ -389,6 +389,6 @@ using namespace Windows::Web::Http;
 **Exemplos**
 
 * [Exemplo de DatagramSocket](https://go.microsoft.com/fwlink/p/?LinkID=243037)
-* [Amostra de HttpClient]( http://go.microsoft.com/fwlink/p/?linkid=242550)
+* [Amostra de HttpClient]( https://go.microsoft.com/fwlink/p/?linkid=242550)
 * [Exemplo de proximidade](https://go.microsoft.com/fwlink/p/?linkid=245082)
 * [Exemplo do StreamSocket](https://go.microsoft.com/fwlink/p/?linkid=243037)

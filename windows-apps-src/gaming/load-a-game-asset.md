@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, carregamento de recursos
 ms.localizationpriority: medium
-ms.openlocfilehash: ca16dd6115bbbe84529928ca58ee0d3074498728
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 478c61713dfcf5bc8a420aa71b0dced81ed6a169
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937205"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114582"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Carregar recursos no jogo em DirectX
 
@@ -690,7 +690,7 @@ task<void> BasicLoader::LoadShaderAsync(
 
 Nesse código, depois de ter lido os dados de bytes do arquivo CSO do sombreador de vértice, você cria o sombreador de vértice chamando [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524). Depois disso, cria o layout de entrada do sombreador no mesmo lambda.
 
-Outros tipos de sombreador, como sombreadores de envoltório e geometria, também podem exigir configuração específica. O código completo para vários métodos de carregamento de sombreador é fornecido em [Concluir código para BasicLoader](complete-code-for-basicloader.md) e no [exemplo de carregamento de recursos do Direct3D]( http://go.microsoft.com/fwlink/p/?LinkID=265132).
+Outros tipos de sombreador, como sombreadores de envoltório e geometria, também podem exigir configuração específica. O código completo para vários métodos de carregamento de sombreador é fornecido em [Concluir código para BasicLoader](complete-code-for-basicloader.md) e no [exemplo de carregamento de recursos do Direct3D]( https://go.microsoft.com/fwlink/p/?LinkID=265132).
 
 ## <a name="remarks"></a>Comentários
 
@@ -698,7 +698,7 @@ Nesse ponto, você deverá estar apto a entender e criar ou modificar métodos d
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Exemplo de carregamento de recursos do Direct3D]( http://go.microsoft.com/fwlink/p/?LinkID=265132)
+* [Exemplo de carregamento de recursos do Direct3D]( https://go.microsoft.com/fwlink/p/?LinkID=265132)
 * [Concluir código para BasicLoader](complete-code-for-basicloader.md)
 * [Concluir código para BasicReaderWriter](complete-code-for-basicreaderwriter.md)
 * [Concluir código para DDSTextureLoader](complete-code-for-ddstextureloader.md)

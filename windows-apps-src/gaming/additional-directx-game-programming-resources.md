@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, programação
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c69d317f920e5b829eb5dea796b7930cc387203
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 84d5068c2f474af22d789dea6428f911087f9ff0
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044317"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114442"
 ---
 # <a name="game-programming-resources"></a>Recursos para programação de jogos
 
@@ -34,15 +34,15 @@ Para saber mais sobre programação de jogos no Windows, confira os recursos a s
 ## <a name="blogs"></a>Blogs
 
 
--   [Jogos para Windows e SDK do DirectX]( http://go.microsoft.com/fwlink/p/?LinkID=288873)
--   [Blog de desenvolvedores do DirectX]( http://go.microsoft.com/fwlink/p/?LinkID=288874)
--   [Blog de Shawn Hargreaves]( http://go.microsoft.com/fwlink/p/?LinkID=288872) (informações sobre jogos em XNA).
+-   [Jogos para Windows e SDK do DirectX]( https://go.microsoft.com/fwlink/p/?LinkID=288873)
+-   [Blog de desenvolvedores do DirectX]( https://go.microsoft.com/fwlink/p/?LinkID=288874)
+-   [Blog de Shawn Hargreaves]( https://go.microsoft.com/fwlink/p/?LinkID=288872) (informações sobre jogos em XNA).
 
 ## <a name="toolkits"></a>Kits de ferramentas
 
 
--   [Kit de ferramentas do DirectX](  http://go.microsoft.com/fwlink/p/?LinkID=248929)
--   [Biblioteca de processamento de texturas DirectXTex](  http://go.microsoft.com/fwlink/p/?LinkID=248926)
+-   [Kit de ferramentas do DirectX](  https://go.microsoft.com/fwlink/p/?LinkID=248929)
+-   [Biblioteca de processamento de texturas DirectXTex](  https://go.microsoft.com/fwlink/p/?LinkID=248926)
 -   [Diagnóstico de elementos gráficos](https://msdn.microsoft.com/library/windows/apps/hh873207.aspx) do Microsoft Visual Studio
 -   [Win2D](https://github.com/Microsoft/Win2D) - Uma API de Windows Runtime fácil de usar para renderização de gráficos 2D de modo imediato com aceleração da GPU.
 -   [ANGLE for Microsoft Store](https://go.microsoft.com/fwlink/p/?linkid=618387) - conteúdo é executado OpenGL ES no Windows traduzindo as chamadas de API do OpenGL ES para chamadas de API do DirectX 11.

@@ -5,12 +5,12 @@ keywords: aplicativo web hospedado, HWA, API REST, aplicativo de página única,
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fa606da245c3506c8b4125edeb1edfc47f6aab0d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: f60eb37d7bff1187e282f5af2207c6df92f4ec24
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049543"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114572"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Criar um app Web de página única com back-end da API REST
 
@@ -209,7 +209,7 @@ Depois disso, é hora de executar o servidor! Vamos configurar o Visual Studio C
 ]
 ```
 
-Pressione F5 e abra o navegador em [http://localhost:8000](https://localhost:8000). A página abrirá a interface do usuário do Swagger da API do jogo de memória e, nesse local, você poderá expandir os detalhes e os campos de entrada de cada um dos métodos. Você pode até mesmo tentar chamar as APIs, embora suas respostas contenham apenas dados simulados (fornecidos pelo módulo [Swagmock](https://www.npmjs.com/package/swagmock)). É hora de adicionar a lógica do jogo para tornar essas APIs reais.
+Pressione F5 e abra o navegador em [https://localhost:8000](https://localhost:8000). A página abrirá a interface do usuário do Swagger da API do jogo de memória e, nesse local, você poderá expandir os detalhes e os campos de entrada de cada um dos métodos. Você pode até mesmo tentar chamar as APIs, embora suas respostas contenham apenas dados simulados (fornecidos pelo módulo [Swagmock](https://www.npmjs.com/package/swagmock)). É hora de adicionar a lógica do jogo para tornar essas APIs reais.
 
 ### <a name="3-set-up-your-route-handlers"></a>3. Configure os manipuladores de rotas
 
@@ -235,7 +235,7 @@ Essa camada do programa representa as própria cartas de memória e fornece a ma
 
 Para simplificar, estamos armazenando o tabuleiro do jogo em uma variável global (`global.board`) no servidor do nó. Mas, na verdade, você usaria o armazenamento em nuvem (como o Google [Cloud Datastore](https://cloud.google.com/datastore/) ou o Azure [DocumentDB](https://azure.microsoft.com/en-us/services/documentdb/)) para torná-lo um serviço de API de jogo de memória viável que dá suporte a vários jogadores e jogos simultaneamente.
 
-Verifique se você salvou todas as alterações no VS Code, acione o servidor novamente (F5 no VS Code ou `npm start` no shell e vá até [http://localhost:8000](https://localhost:8000)) para testar a API do jogo.
+Verifique se você salvou todas as alterações no VS Code, acione o servidor novamente (F5 no VS Code ou `npm start` no shell e vá até [https://localhost:8000](https://localhost:8000)) para testar a API do jogo.
 
 Cada vez que você pressionar o botão **Try it out!** em uma das operações **/game**, **/guess** ou **/new**, verifique o **Corpo da Resposta** e o **Código da Resposta** resultante abaixo para certificar-se de que tudo está funcionando como esperado.
 
@@ -333,7 +333,7 @@ Vamos começar criando o projeto Node.js com o Express.
     npm start
     ```
 
-5. Para exibir p aplicativo, acesse [http://localhost:3000/](https://localhost:3000/).
+5. Para exibir p aplicativo, acesse [https://localhost:3000/](https://localhost:3000/).
 
     ![Uma captura de tela de http://localhost:3000/](./images/express.png)
 
@@ -620,7 +620,7 @@ Parabéns! Você concluiu a criação do aplicativo Web! Vamos testá-lo.
 
 1. Abra um prompt de comando no diretório de memória e digite o seguinte comando: `npm start`
 
-2. No navegador, vá para [http://localhost:3000/](https://localhost:3000/) e jogue!
+2. No navegador, vá para [https://localhost:3000/](https://localhost:3000/) e jogue!
 
 3. Se você encontrar algum erro, poderá usar as ferramentas de depuração Node.js do Visual Studio Code pressionando F5 no teclado e digitando `Node.js`. Para obter mais informações sobre a depuração no Visual Studio Code, confira este [artigo ](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations). 
 
