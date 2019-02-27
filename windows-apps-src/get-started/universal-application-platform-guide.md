@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: a4fb5020eafb838074b8dec43b8a5d07596ab7a0
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.openlocfilehash: 1a43cdd5c16e4ab7ec254c263df75c182ce3faba
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116308"
+ms.locfileid: "9117626"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>O que é um aplicativo da Plataforma Universal do Windows (UWP)?
 
@@ -115,7 +115,7 @@ Confira [Prepare-se](get-set-up.md) a fim de baixar as ferramentas necessárias 
 
 O sistema de design da Microsoft chama-se Fluent. O Sistema de Design Fluente é um conjunto de recursos UWP combinado a práticas recomendadas para criação de aplicativos que funcionam perfeitamente em todos os tipos de dispositivos com Windows. As experiências do Fluente adaptam-se a e funcionam normalmente em dispositivos, de tablets a notebooks, de computadores a televisores, e em dispositivos de realidade virtual. Consulte [O Sistema de Design Fluente para aplicativos UWP](https://docs.microsoft.com/windows/uwp/design/fluent-design-system) para obter uma introdução ao Design Fluent.
 
-Um bom [projeto](https://go.microsoft.com/fwlink/?LinkId=258848) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, bem como será sua aparência e como vai funcionar. A experiência do usuário desempenha uma função enorme em determinar o quão feliz as pessoas serão com seu aplicativo, portanto não economize nesta etapa. [Noções básicas de design](https://dev.windows.com/design) apresenta você ao design de um aplicativo Universal do Windows. Consulte a [Introdução aos aplicativos da Plataforma Universal do Windows (UWP) para os designers](https://msdn.microsoft.com/library/windows/apps/dn958439) para obter informações sobre como projetar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, consulte a [cartilha de dispositivos](../design/devices/index.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes de destino.
+Um bom [projeto](https://go.microsoft.com/fwlink/?LinkId=258848) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, bem como será sua aparência e como vai funcionar. A experiência do usuário desempenha uma função enorme em determinar o quão feliz as pessoas serão com seu aplicativo, portanto não economize nesta etapa. [Noções básicas de design](https://developer.microsoft.com/en-us/windows/apps/design) apresenta você ao design de um aplicativo Universal do Windows. Consulte a [Introdução aos aplicativos da Plataforma Universal do Windows (UWP) para os designers](https://msdn.microsoft.com/library/windows/apps/dn958439) para obter informações sobre como projetar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, consulte a [cartilha de dispositivos](../design/devices/index.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes de destino.
 
 Além da interação em diferentes dispositivos, [planeje seu aplicativo](https://msdn.microsoft.com/library/windows/apps/hh465427) para adotar os benefícios de trabalhar em vários dispositivos. Por exemplo:
 

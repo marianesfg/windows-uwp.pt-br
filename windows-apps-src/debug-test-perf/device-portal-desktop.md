@@ -6,12 +6,12 @@ ms.date: 02/6/2019
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: c499c14d98f63836d80134aac70b2c80902f049b
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.openlocfilehash: 4fe1f2a51199dd12cd1d285c17c5d48c9a25b969
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116128"
+ms.locfileid: "9117796"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de Dispositivos para desktop Windows
 
@@ -39,7 +39,7 @@ Você pode habilitar o Portal de Dispositivos na seção **Para desenvolvedores*
 
 ![A seção Portal de Dispositivos do aplicativo de configurações](images/device-portal/device-portal-desk-settings.png) 
 
-Depois que o Portal de Dispositivos estiver habilitado, você verá links da web na parte inferior da seção. Anote o número da porta acrescentado ao final das URLs listadas: esse número é gerado aleatoriamente quando o Portal de Dispositivos é habilitado, mas deve permanecer consistente entre reinicializações da área de trabalho. Se você gostaria de definir os números de portas manualmente para que eles sejam permanentes, consulte [Definindo números de porta](device-portal-desktop.md#setting-port-numbers).
+Depois que o Portal de Dispositivos estiver habilitado, você verá links da web na parte inferior da seção. Anote o número da porta acrescentado ao final das URLs listadas: esse número é gerado aleatoriamente quando o Portal de Dispositivos é habilitado, mas deve permanecer consistente entre reinicializações da área de trabalho. 
 
 Esses links oferecem duas maneiras de se conectar ao Portal de Dispositivos: pela rede local (incluindo VPN) ou por meio do host local.
 

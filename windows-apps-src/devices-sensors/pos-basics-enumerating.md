@@ -5,25 +5,25 @@ ms.date: 10/08/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 7759186d45d3488336a1b793d173d6d1f21aa601
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 27d25864941b9d73c9b12e6329eab79fac1b15bf
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918931"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117696"
 ---
 # <a name="enumerating-point-of-service-devices"></a>Enumerar dispositivos de Ponto de Serviço
 Nesta seção, você aprenderá como [definir um seletor de dispositivo](https://docs.microsoft.com/windows/uwp/devices-sensors/build-a-device-selector) usado para consultar os dispositivos disponíveis para o sistema e usar esse seletor para enumerar dispositivos de Ponto de Serviço usando um dos seguintes métodos:
 
-**Método 1:** [Use um seletor de dispositivo](#method-1:-use-a-device-picker)
+**Método 1:** [Use um seletor de dispositivo](#method-1-use-a-device-picker)
 <br/>
 Exibir um seletor de dispositivo da interface do usuário e fazer com que o usuário escolha um dispositivo conectado. Esse método manipula a atualização da lista quando dispositivos são conectados e removidos e é mais simples e mais segura do que outros métodos.
 
-**Método 2:** [Obter o primeiro dispositivo disponível](#Method-1:-get-first-available-device)<br />Use [GetDefaultAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.getdefaultasync) para acessar o primeiro dispositivo disponível em uma classe de dispositivo de ponto de serviço específica.
+**Método 2:** [Obter o primeiro dispositivo disponível](#method-2-get-first-available-device)<br />Use [GetDefaultAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.getdefaultasync) para acessar o primeiro dispositivo disponível em uma classe de dispositivo de ponto de serviço específica.
 
-**Método 3:** [Instantâneo de dispositivos](#Method-2:-Snapshot-of-devices)<br />Enumere um instantâneo dos dispositivos de ponto de serviço que estão presentes no sistema em um determinado momento. Isso é útil que você precisa criar sua própria interface do usuário ou enumerar dispositivos sem exibir uma interface para o usuário. [FindAllAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) manterá resultados até que toda a enumeração seja concluída.
+**Método 3:** [Instantâneo de dispositivos](#method-3-snapshot-of-devices)<br />Enumere um instantâneo dos dispositivos de ponto de serviço que estão presentes no sistema em um determinado momento. Isso é útil que você precisa criar sua própria interface do usuário ou enumerar dispositivos sem exibir uma interface para o usuário. [FindAllAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) manterá resultados até que toda a enumeração seja concluída.
 
-**Método 4:** [Enumerar e inspecionar](#Method-3:-Enumerate-and-watch)<br />[DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) é um modelo de enumeração mais avançado e flexível que permite enumerar dispositivos que estão presentes no momento e também receber notificações quando dispositivos são adicionados ou removidos do sistema.  Isso é útil quando você quiser manter uma lista atual de dispositivos em segundo plano para exibir na interface do usuário em vez de aguardar um instantâneo.
+**Método 4:** [Enumerar e inspecionar](#method-4-enumerate-and-watch)<br />[DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) é um modelo de enumeração mais avançado e flexível que permite enumerar dispositivos que estão presentes no momento e também receber notificações quando dispositivos são adicionados ou removidos do sistema.  Isso é útil quando você quiser manter uma lista atual de dispositivos em segundo plano para exibir na interface do usuário em vez de aguardar um instantâneo.
 
 ## <a name="define-a-device-selector"></a>Definir um seletor de dispositivo
 Um seletor de dispositivo permitirá que você limite os dispositivos que está pesquisando ao enumerar dispositivos.  Isso permitirá que você apenas obter resultados relevantes e reduza o tempo que leva para enumerar os dispositivos desejados.

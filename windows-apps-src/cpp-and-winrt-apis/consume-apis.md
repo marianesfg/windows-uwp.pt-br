@@ -5,12 +5,12 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, classe de tempo de execução, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: 531bd349fca825a8bb80630192698b647db3129a
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.openlocfilehash: 488516f94a53eb26b4a9e2f49927b8399c62bff5
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042318"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117686"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Consumir APIs com C++/WinRT
 
@@ -40,7 +40,7 @@ O cabeçalho `winrt/Windows.Foundation.h` incluído faz parte do SDK, encontrado
 > [!TIP]
 > Sempre que desejar usar um tipo de namespace do Windows, inclua o cabeçalho do C++/WinRT correspondente a esse namespace. As diretivas de `using namespace` são opcionais, mas convenientes.
 
-No exemplo de código acima, após inicializar C++/WinRT, alocamos em pilhas um valor do tipo projetado **winrt::Windows::Foundation::Uri** por meio de um de seus construtores documentados publicamente ([**Uri(String)**](/uwp/api/windows.foundation.uri#Windows_Foundation_Uri__ctor_System_String_), neste exemplo). Para isso, o caso de uso mais comum, que normalmente é tudo o que você precisa fazer. Quando você tiver um valor de tipo projetado do C++/WinRT, é possível tratá-lo como se fosse uma instância do tipo real do Windows Runtime, pois já tem todos os mesmos membros.
+No exemplo de código acima, após inicializar C++/WinRT, alocamos em pilhas um valor do tipo projetado **winrt::Windows::Foundation::Uri** por meio de um de seus construtores documentados publicamente ([**Uri(String)**](/uwp/api/windows.foundation.uri.-ctor#Windows_Foundation_Uri__ctor_System_String_), neste exemplo). Para isso, o caso de uso mais comum, que normalmente é tudo o que você precisa fazer. Quando você tiver um valor de tipo projetado do C++/WinRT, é possível tratá-lo como se fosse uma instância do tipo real do Windows Runtime, pois já tem todos os mesmos membros.
 
 Na verdade, esse valor projetada é um proxy; essencialmente, é apenas um ponteiro inteligente de um objeto subjacente. A chamada de construtores do valor projetado [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646) para criar uma instância da classe de suporte do Windows Runtime (**Windows.Foundation.Uri**, neste caso) e armazenar a interface padrão do objeto no novo valor projetado. Como ilustrado abaixo, suas chamadas para membros do valor projetada delegam, por meio do ponteiro inteligente, para o objeto de suporte; que é onde ocorrem alterações de estado.
 

@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, sons
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ceef2da582f5d825949afdf2e116862c990165c
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 8d5a976ef65bee5efc3329afc98bf198d094b037
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981380"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117836"
 ---
 # <a name="add-sound"></a>Adicionar som
 
@@ -22,7 +22,7 @@ Neste tópico, podemos criar um mecanismo simple de som usando [XAudio2](https:/
 
 ## <a name="objective"></a>Objetivo
 
-Adicione sons para o jogo de exemplo usando [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
+Adicione sons para o jogo de exemplo usando [XAudio2](/windows/desktop/xaudio2/xaudio2-introduction).
 
 ## <a name="define-the-audio-engine"></a>Definir o mecanismo de áudio
 
@@ -51,7 +51,7 @@ __Simple3dgame:: Initialize__, onde __m\_controller__ e __m\_renderer__ também 
  * Crie __m\_audioController__, que é uma instância da classe de [áudio](#audioh) .
  * Crie os recursos de áudio necessários usando o método [Audio::CreateDeviceIndependentResources](#audiocreatedeviceindependentresources-method) . Aqui, dois objetos __XAudio2__ &mdash; um objeto do mecanismo de música e um objeto do mecanismo de som e uma voz de masterização para cada uma delas foram criados. O objeto do mecanismo de música pode ser usado para reproduzir música em segundo plano para o seu jogo. O mecanismo de som pode ser usado para reproduzir efeitos de som no jogo. Para obter mais informações, consulte [criar e inicializar os recursos de áudio](#create-and-initialize-the-audio-resources).
  * Crie __mediaReader__, que é uma instância da classe [MediaReader](#mediareaderh) . [MediaReader](#mediareaderh), que é uma classe auxiliar para a classe [SoundEffect](#soundeffecth) , lê pequenos arquivos de áudio de forma síncrona de local do arquivo e retorna os dados de som como uma matriz de bytes.
- * Use [mediareader:: Loadmedia](#mediareaderloadmedia-method) para carregar arquivos de som de sua localização e crie uma variável __targetHitSound__ para armazenar os dados de som. wav carregado. Para obter mais informações, consulte o [arquivo de áudio de carga](#load-audio). 
+ * Use [mediareader:: Loadmedia](#mediareaderloadmedia-method) para carregar arquivos de som de sua localização e crie uma variável __targetHitSound__ para armazenar os dados de som. wav carregado. Para obter mais informações, consulte o [arquivo de áudio de carga](#load-audio-file). 
 
 Efeitos sonoros são associados com o objeto do jogo. Portanto, quando ocorre uma colisão com esse objeto de jogo, ele aciona o efeito de som a ser reproduzido. Neste jogo de exemplo, temos efeitos sonoros para a munição (o que usamos para atirar nos alvos com) e para o destino. 
     
@@ -469,11 +469,11 @@ Há três tipos de objetos de voz do XAudio2: origem, submixagem e masterizaçã
 * As vozes de submixagem e masterização combinam o áudio de todas as vozes que as alimentam e operam no resultado. 
 * As vozes de masterização receba dados de vozes de origem e de vozes de submix e envia esses dados para o hardware de áudio.
 
-Para obter mais informações, vá para [vozes XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415824.aspx).
+Para obter mais informações, vá para [vozes XAudio2](/windows/desktop/xaudio2/xaudio2-voices).
 
 ### <a name="audio-graph"></a>Gráfico de áudio
 
-Gráfico de áudio é uma coleção de [vozes XAudio2](#xaudio2-voice-objects). Áudio começa em um lado de um gráfico de áudio nas vozes de origem, opcionalmente, passa por um ou mais vozes de submix e termina em uma voz de masterização. Um gráfico de áudio contém uma voz de origem para cada som reproduzindo, zero ou mais vozes de submix e uma voz de masterização. O gráfico de áudio mais simples e o mínimo necessário para tornar um ruído no XAudio2, é uma única voz de origem saída diretamente para uma voz de masterização. Para obter mais informações, vá para [gráficos de áudio](https://msdn.microsoft.com/library/windows/desktop/ee415739.aspx).
+Gráfico de áudio é uma coleção de [vozes XAudio2](/windows/desktop/xaudio2/xaudio2-voices). Áudio começa em um lado de um gráfico de áudio nas vozes de origem, opcionalmente, passa por um ou mais vozes de submix e termina em uma voz de masterização. Um gráfico de áudio contém uma voz de origem para cada som reproduzindo, zero ou mais vozes de submix e uma voz de masterização. O gráfico de áudio mais simples e o mínimo necessário para tornar um ruído no XAudio2, é uma única voz de origem saída diretamente para uma voz de masterização. Para obter mais informações, vá para [gráficos de áudio](https://msdn.microsoft.com/library/windows/desktop/ee415739.aspx).
 
 ### <a name="additional-reading"></a>Leituras adicionais
 

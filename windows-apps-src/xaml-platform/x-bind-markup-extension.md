@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d8e065b76a79a6733d1fa066cd924d07a8fc7c9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 625c48e2f0fc57a4e9fd3a98acc505e01e2eb42c
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045362"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117826"
 ---
 # <a name="xbind-markup-extension"></a>Extensão de marcação {x:Bind}
 
@@ -52,7 +52,7 @@ Os objetos de associação criados por **{x:Bind}** e **{Binding}** são em gran
 | _bindingProperties_ |
 | _propName_=_value_\[, _propName_=_value_\]* | Uma ou mais propriedades de associação que são especificadas usando uma sintaxe de par nome/valor. |
 | _propName_ | O nome da cadeia de caracteres da propriedade a ser definida no objeto Binding. Por exemplo, "Converter". |
-| _value_ | O valor a se definir a propriedade. A sintaxe do argumento depende da propriedade que está sendo definida. Veja um exemplo de uso de _propName_=_value_ em que o valor é uma extensão de marcação: `Converter={StaticResource myConverterClass}`. Para obter mais informações, consulte a seção [Propriedades que você pode definir com {x: Bind}](#properties-you-can-set) a seguir. |
+| _value_ | O valor a se definir a propriedade. A sintaxe do argumento depende da propriedade que está sendo definida. Veja um exemplo de uso de _propName_=_value_ em que o valor é uma extensão de marcação: `Converter={StaticResource myConverterClass}`. Para obter mais informações, consulte a seção [Propriedades que você pode definir com {x: Bind}](#properties-that-you-can-set-with-xbind) a seguir. |
 
 ## <a name="examples"></a>Exemplos
 

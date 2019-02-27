@@ -9,18 +9,18 @@ design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
-ms.openlocfilehash: 728a057b445ae50a1c0af818b350b25fd390ca01
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 71a3108e21455086e2742987db1d7125c733f6e2
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047631"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117596"
 ---
 # <a name="contact-card"></a>Cartão de visita
 
 O cartão de visita exibe informações de contato, como o nome, número de telefone e endereço, para um [Contato](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) (o mecanismo que UWP usa para representar pessoas e empresas).  O cartão de visita também permite que o usuário edite informações de contato. Você pode optar por exibir um cartão de visita compacto ou completo que contém informações adicionais.
 
-> **APIs importantes**: [método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_), [método ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_), [método IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [classe Contact](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
+> **APIs importantes**: [método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard), [método ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_), [método IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [classe Contact](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
 
 Há duas maneiras de exibir o cartão de visita:  
 * Como um cartão de contato padrão que é exibido em um submenu é light-rejeitável relativa às ações – o cartão de contato dissapears quando o usuário clica fora dele. 
@@ -103,7 +103,7 @@ Use o cartão de contato quando você deseja exibir informações de contato de 
                 email.Address = "jsmith@contoso.com"; 
                 contact.Emails.Add(email); 
     ```
-5. Mostrar cartão de contato chamando o método [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_). 
+5. Mostrar cartão de contato chamando o método [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard). 
 
     ```csharp
             ContactManager.ShowFullContactCard(
@@ -146,7 +146,7 @@ private void OnUserClickShowContactCard(object sender, RoutedEventArgs e)
 
 ## <a name="show-a-full-contact-card"></a>Exibir um cartão de contato completo
 
-Para mostrar o cartão de contato completas, chame o método [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_) em vez de [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_).
+Para mostrar o cartão de contato completas, chame o método [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_) em vez de [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard).
 
 ```csharp
 private void onUserClickShowContactCard() 

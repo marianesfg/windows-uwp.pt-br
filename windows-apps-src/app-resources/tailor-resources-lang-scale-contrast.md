@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 82dd3d20aa39ea471618e7707d066c67a6547f9f
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.openlocfilehash: 1ac80888019044beabc44335290bc6ad59cf377c
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058747"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117656"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Personalizar os recursos para idioma, escala, alto contraste e outros qualificadores
 
@@ -130,7 +130,7 @@ O qualificador `contrast` é usado para fornecer os recursos que melhor correspo
 
 ## <a name="custom"></a>Personalizado
 
-O app pode definir um valor para o qualificador `custom`; em seguida, os recursos que melhor correspondem a esse valor serão carregados. Por exemplo, convém carregar os recursos com base na licença do app. Quando o app for iniciado, ele verificará a respectiva licença e a usará como o valor para o qualificador `custom` chamando [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_), conforme mostrado no exemplo de código.
+O app pode definir um valor para o qualificador `custom`; em seguida, os recursos que melhor correspondem a esse valor serão carregados. Por exemplo, convém carregar os recursos com base na licença do app. Quando o app for iniciado, ele verificará a respectiva licença e a usará como o valor para o qualificador `custom` chamando [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue), conforme mostrado no exemplo de código.
 
 ```csharp
 public void SetLicenseLevel(BrandID brand)
@@ -263,7 +263,7 @@ O qualificador `theme` é usado para fornecer os recursos que melhor corresponde
 ## <a name="important-apis"></a>APIs importantes
 
 * [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
-* [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
+* [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

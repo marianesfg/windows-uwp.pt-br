@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ec5f12c60e9fd244805209720e3e6d29260d5100
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 869ab9994f10070797fb4b803b1189127d84eadf
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049683"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117706"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Portando WindowsPhone Silverlight XAML e a interface do usuário para UWP
 
@@ -205,7 +205,7 @@ Para saber mais sobre controles da UWP, consulte [Controles por função](https:
 
 ##  <a name="design-language-in-windows10"></a>Linguagem de design no Windows 10
 
-Existem algumas diferenças na linguagem de design entre aplicativos WindowsPhone Silverlight e aplicativos do Windows 10. Para saber todos os detalhes, consulte [Design](https://dev.windows.com/design). Apesar das alterações na linguagem de design, nossos princípios de design permanecem consistentes: atenção aos detalhes, mas sempre buscando simplicidade por meio da concentração no conteúdo, e não no cromo, reduzindo drasticamente elementos visuais e permanecendo autêntico ao domínio digital; usar a hierarquia visual especialmente com tipografia; projetar em uma grade e dar vida às suas experiências com animações suaves.
+Existem algumas diferenças na linguagem de design entre aplicativos WindowsPhone Silverlight e aplicativos do Windows 10. Para saber todos os detalhes, consulte [Design](https://developer.microsoft.com/en-us/windows/apps/design). Apesar das alterações na linguagem de design, nossos princípios de design permanecem consistentes: atenção aos detalhes, mas sempre buscando simplicidade por meio da concentração no conteúdo, e não no cromo, reduzindo drasticamente elementos visuais e permanecendo autêntico ao domínio digital; usar a hierarquia visual especialmente com tipografia; projetar em uma grade e dar vida às suas experiências com animações suaves.
 
 ## <a name="localization-and-globalization"></a>Localização e globalização
 
@@ -313,7 +313,7 @@ Texto (ou tipografia) é um aspecto importante de um aplicativo UWP e, durante a
 
 Estilos de sistema TextBlock para aplicativos do Windows 10
 
-Em um aplicativo do WindowsPhone Silverlight, a família de fontes padrão é Segoe WP. Em um aplicativo do Windows 10, a família de fontes padrão é Segoe UI. Como resultado, as métricas de fonte em seu aplicativo podem parecer diferentes. Se você deseja reproduzir a aparência do texto WindowsPhone Silverlight, você pode definir suas próprias métricas usando propriedades como [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) e [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362). Para obter mais informações, consulte [Diretrizes para fontes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) e [Crie aplicativos UWP](https://dev.windows.com/design).
+Em um aplicativo do WindowsPhone Silverlight, a família de fontes padrão é Segoe WP. Em um aplicativo do Windows 10, a família de fontes padrão é Segoe UI. Como resultado, as métricas de fonte em seu aplicativo podem parecer diferentes. Se você deseja reproduzir a aparência do texto WindowsPhone Silverlight, você pode definir suas próprias métricas usando propriedades como [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) e [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362). Para obter mais informações, consulte [Diretrizes para fontes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) e [Crie aplicativos UWP](https://developer.microsoft.com/en-us/windows/apps/design).
 
 ## <a name="theme-changes"></a>Alterações de tema
 

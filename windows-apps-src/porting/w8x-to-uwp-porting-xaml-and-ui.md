@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4de36ba8c87c764ff1280e2c886d1ff8692b3246
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 7b8bb652c3d8b978d631da2e529662a455310458
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046030"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117846"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Portabilidade do Windows Runtime 8.x XAML e da interface do usuário para a UWP
 
@@ -86,7 +86,7 @@ Você não precisa alterar o código que se integra aos botões, mas você preci
 
 ## <a name="controls-and-control-styles-and-templates"></a>Controles, estilos e modelos de controle
 
-Um aplicativo Universal 8.1 em execução no Windows 10 manterá a aparência 8.1 e o comportamento em relação aos controles. Mas, quando você porta esse aplicativo para um aplicativo do Windows 10, existem algumas diferenças na aparência e comportamento devem ser lembradas. A arquitetura e o design de controles é essencialmente inalterados para aplicativos do Windows 10, portanto, as alterações são principalmente em torno de [linguagem de design](#design-language-in-windows-10), na simplificação e melhorias de usabilidade.
+Um aplicativo Universal 8.1 em execução no Windows 10 manterá a aparência 8.1 e o comportamento em relação aos controles. Mas, quando você porta esse aplicativo para um aplicativo do Windows 10, existem algumas diferenças na aparência e comportamento devem ser lembradas. A arquitetura e o design de controles é essencialmente inalterados para aplicativos do Windows 10, portanto, as alterações são principalmente em torno as melhorias de usabilidade, simplificação e linguagem de design.
 
 **Observação**  o estado visual PointerOver é relevante em estilos/modelos personalizados em aplicativos do Windows 10 e em aplicativos do Windows Runtime 8. x, mas não em aplicativos do Windows Phone Store. Por esse motivo (e por causa das chaves de recurso do sistema que são compatíveis com aplicativos do Windows 10), recomendamos que você reutilize estilos/modelos personalizados de seus aplicativos do Windows Runtime 8. x ao portar seu aplicativo para Windows 10.
 Se você quiser ter certeza de que seus estilos/modelos personalizados estão usando o conjunto mais recente de estados visuais e estão se beneficiando dos aprimoramentos de desempenho feitos nos estilos/modelos padrão, em seguida, edite uma cópia do novo modelo padrão Windows 10 e aplique novamente sua personalização a ele. Um exemplo de uma melhoria no desempenho é que qualquer controle **Border** que anteriormente contornava um **ContentPresenter** ou um painel foi removido e um elemento filho agora renderiza a borda.
@@ -122,7 +122,7 @@ Para saber mais sobre controles do aplicativo UWP, consulte [Controles por funç
 
 ##  <a name="design-language-in-windows10"></a>Linguagem de design no Windows 10
 
-Existem algumas diferenças pequenas, mas importantes na linguagem de design entre aplicativos Universal 8.1 e Windows 10. Para saber todos os detalhes, consulte [Design](https://dev.windows.com/design). Apesar das alterações na linguagem de design, nossos princípios de design permanecem consistentes: atenção aos detalhes, mas sempre buscando simplicidade por meio da concentração no conteúdo, e não no cromo, reduzindo drasticamente elementos visuais e permanecendo autêntico ao domínio digital; usar a hierarquia visual especialmente com tipografia; projetar em uma grade e dar vida às suas experiências com animações suaves.
+Existem algumas diferenças pequenas, mas importantes na linguagem de design entre aplicativos Universal 8.1 e Windows 10. Para saber todos os detalhes, consulte [Design](https://developer.microsoft.com/en-us/windows/apps/design). Apesar das alterações na linguagem de design, nossos princípios de design permanecem consistentes: atenção aos detalhes, mas sempre buscando simplicidade por meio da concentração no conteúdo, e não no cromo, reduzindo drasticamente elementos visuais e permanecendo autêntico ao domínio digital; usar a hierarquia visual especialmente com tipografia; projetar em uma grade e dar vida às suas experiências com animações suaves.
 
 ## <a name="effective-pixels-viewing-distance-and-scale-factors"></a>Pixels efetivos, distância exibição e fatores de escala
 
@@ -247,7 +247,7 @@ A linguagem de design evoluiu para Windows 10 e, consequentemente, determinados 
 
 Em outros casos, as chaves de recurso deixam de ser compatíveis. O editor de marcação XAML no Visual Studio realça referências a chaves de recurso que não podem ser resolvidas. Por exemplo, o editor de marcação XAML sublinhará uma referência à chave de estilo `ListViewItemTextBlockStyle` com uma linha ondulada vermelha. Se isso não for corrigido, o aplicativo será encerrado imediatamente quando você tentar implantá-lo no emulador ou no dispositivo. Portanto, é importante estar atento à correção da marcação XAML. E você descobrirá que o Visual Studio é uma ótima ferramenta para identificar esses problemas.
 
-Para chaves que ainda têm suporte, as mudanças na linguagem de design significam que as propriedades definidas por alguns estilos foram alteradas. Por exemplo, `TitleTextBlockStyle` define **FontSize** como 14, 667px em um aplicativo do Windows Runtime 8. x e 18, 14px em um aplicativo da loja do Windows Phone. Porém, o mesmo estilo define **FontSize** como uma 24px muito maior em um aplicativo do Windows 10. Revise os designs e layouts e use os estilos apropriados nos locais corretos. Para obter mais informações, consulte [Diretrizes para fontes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) e [Crie aplicativos UWP](https://dev.windows.com/design).
+Para chaves que ainda têm suporte, as mudanças na linguagem de design significam que as propriedades definidas por alguns estilos foram alteradas. Por exemplo, `TitleTextBlockStyle` define **FontSize** como 14, 667px em um aplicativo do Windows Runtime 8. x e 18, 14px em um aplicativo da loja do Windows Phone. Porém, o mesmo estilo define **FontSize** como uma 24px muito maior em um aplicativo do Windows 10. Revise os designs e layouts e use os estilos apropriados nos locais corretos. Para obter mais informações, consulte [Diretrizes para fontes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) e [Crie aplicativos UWP](https://developer.microsoft.com/en-us/windows/apps/design).
 
 Esta é uma lista completa das chaves que não têm suporte.
 

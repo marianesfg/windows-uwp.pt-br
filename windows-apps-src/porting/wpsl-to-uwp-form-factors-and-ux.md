@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dbba9dbdf6bc3df02657cc03b9264e74664318b4
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 9efa6cae8994c12ce742aac0a6301346d6eae0d1
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045159"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117676"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>Portabilidade do WindowsPhone Silverlight para UWP para fator forma e experiência do usuário
 
@@ -64,7 +64,7 @@ Consulte novamente a lista [maximizando a reutilização de marcação e de cód
 
 ## <a name="more-info-and-design-guidelines"></a>Mais informações e diretrizes de design
 
--   [Criar aplicativos UWP](https://dev.windows.com/design)
+-   [Criar aplicativos UWP](https://developer.microsoft.com/en-us/windows/apps/design)
 -   [Diretrizes de fontes](https://msdn.microsoft.com/library/windows/apps/hh700394)
 -   [Plano para fatores forma diferentes](https://msdn.microsoft.com/library/windows/apps/dn958435)
 

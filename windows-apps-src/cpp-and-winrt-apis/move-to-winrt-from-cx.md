@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 39f60576962d9e69d8ec7ba80918fdbdfe96f070
-ms.sourcegitcommit: 9b0f9c8854277d2e786e9294af3a2b559aa457a8
+ms.openlocfilehash: fe988bffbf024308fb5d43da7ed538e5330b58de
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "9099313"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117636"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>Mudar de C++/CX para C++/WinRT
 
@@ -371,7 +371,7 @@ Com o C++/CX, você pode acessar a propriedade [**Platform::String::Data**](http
 auto var{ titleRecord->TitleName->Data() };
 ```
 
-Para fazer o mesmo com C++/WinRT, você pode usar a função [**hstring::c_str**](/uwp/api/windows.foundation.uri#hstringcstr-function) para obter uma versão de cadeia de caracteres C-style terminada em null, assim como de **std::wstring**.
+Para fazer o mesmo com C++/WinRT, você pode usar a função [**hstring::c_str**](/uwp/api/windows.foundation.uri.-ctor#Windows_Foundation_Uri__ctor_System_String_) para obter uma versão de cadeia de caracteres C-style terminada em null, assim como de **std::wstring**.
 
 ```cppwinrt
 auto var{ titleRecord.TitleName().c_str() };

@@ -6,12 +6,12 @@ ms.date: 06/08/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 76e4b60e1cd25a205d6a304f12a0b04f5db693b5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2d1fac6d735d4f6915dea1af531dffa666607fe3
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941093"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117806"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Estender seu aplicativo da área de trabalho com componentes UWP modernos
 
@@ -103,7 +103,7 @@ Para mostrar uma interface do usuário baseada em XAML, faça o seguinte:
 
 :dois: [Criar uma interface do usuário XAML](#xaml-UI)
 
-:três: [Adicione uma extensão de protocolo ao projeto UWP](#protocol)
+:três: [Adicione uma extensão de protocolo ao projeto UWP](#add-a-protocol-extension)
 
 :quatro: [Inicie o aplicativo UWP do seu aplicativo da área de trabalho](#start)
 

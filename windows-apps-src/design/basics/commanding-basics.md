@@ -5,17 +5,18 @@ ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
 template: detail.hbs
 op-migration-status: ready
-ms.date: 10/01/2018
+ms.author: mijacobs
+ms.date: 11/01/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0f78ffb01bf29076733af40b365e91592c71e9c8
-ms.sourcegitcommit: 17896441726714fa66b5ca4f9df2cdb2259f360e
+ms.openlocfilehash: ac2bd55d1cea25359c3c609148c7098532d76c46
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "8988245"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117586"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>Noções básicas de design de comandos para apps UWP
 
@@ -25,7 +26,7 @@ Em um aplicativo da plataforma Universal do Windows (UWP), *elementos de comando
 
 O aspecto mais importante de uma interface de comando é o que você está tentando permitir que o usuário realizar. Ao planejar a funcionalidade do seu aplicativo, considere as etapas necessárias para executar essas tarefas e as experiências do usuário que você deseja habilitar. Depois de concluir um rascunho inicial dessas experiências, em seguida, você pode tomar decisões sobre as ferramentas e interações implementá-los.
 
-Aqui estão algumas experiências de aplicativo comuns:
+Aqui estão algumas experiências de comando comum:
 
 - Enviar informações
 - Selecionar configurações e opções
@@ -33,7 +34,7 @@ Aqui estão algumas experiências de aplicativo comuns:
 - Abrir, salvar e excluir arquivos
 - Edição ou a criação de conteúdo
 
-Seja criativo com o design de suas experiências de comando. Escolha quais dispositivos de entrada de seu aplicativo dá suporte, e como seu aplicativo responde a cada dispositivo. Dando suporte a mais ampla variedade de recursos e preferências tornar seu aplicativo como acessível possível, portátil e utilizável.
+Seja criativo com o design de suas experiências de comando. Escolha quais dispositivos de entrada de seu aplicativo dá suporte, e como seu aplicativo responde a cada dispositivo. Dando suporte a mais ampla variedade de recursos e preferências tornar seu aplicativo como utilizável, portátil e acessível possível (consulte o [design de comando para aplicativos da plataforma Universal do Windows (UWP)](../controls-and-patterns/commanding.md) para obter mais detalhes).
 
 
 
@@ -143,10 +144,10 @@ Veja uma lista de algumas das superfícies de comando mais comuns.
 
 ## <a name="provide-command-feedback"></a>Fornecer comentários de comando 
 
-Comentários do comando se comunica com os usuários que uma interação ou comando foi detectado, como ele foi interpretado e manipulado e se ele foi bem-sucedida ou não. Isso ajuda os usuários a entender o que fizeram e o que eles podem fazer em seguida. Idealmente, os comentários devem ser integrados naturalmente em sua interface de usuário para que os usuários não precisem ser interrompidos ou executar nenhuma ação adicional, a menos que absolutamente necessário.
+Comentários do comando se comunica com os usuários que foi detectado uma interação ou um comando, como o comando foi interpretado e manipulado e se o comando foi bem-sucedida ou não. Isso ajuda os usuários a entender o que fizeram e o que eles podem fazer em seguida. Idealmente, os comentários devem ser integrados naturalmente em sua interface de usuário para que os usuários não precisem ser interrompidos ou executar nenhuma ação adicional, a menos que absolutamente necessário.
 
 > [!NOTE]
-> Não fornece comentários, a menos que seja absolutamente necessário e os comentários não está disponível em outro lugar. Mantenha seu aplicativo da interface do usuário clara e organizada, a menos que você esteja agregando valor.
+> Fornece comentários somente quando necessário e somente se ele não está disponível em outro lugar. Mantenha seu aplicativo da interface do usuário clara e organizada, a menos que você esteja agregando valor.
 
 Aqui estão algumas maneiras de fornecer comentários em seu aplicativo.
 

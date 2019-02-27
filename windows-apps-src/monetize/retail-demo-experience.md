@@ -6,12 +6,12 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, aplicativo de demonstração varejo
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d6baaff5ca2af781e72c9b4643fa1ea0624e0eb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b66435dd7c94762874461b48e19e9a60224f287b
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947683"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117666"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>Adicionar recursos de demonstração (RDX) de varejo ao seu aplicativo
 
@@ -61,7 +61,7 @@ Aplicativos com reconhecimento RDX que não atendam a esses requisitos de alta p
 
 * **Nenhuma comunicação anônima**. Como um cliente usando um dispositivo de demonstração de revenda é um usuário anônimo, eles não devem ser capazes de mensagem ou o compartilhamento de conteúdo do dispositivo.
 
-* **Fornecer experiências consistentes, usando o processo de limpeza**. Todos os clientes devem ter a mesma experiência quando usarem um dispositivo de demonstração de revenda. Seu aplicativo deve usar o [processo de limpeza](#clean-up-process) de retornar ao mesmo estado padrão depois de cada uso. Não queremos que o próximo cliente veja o que o cliente deixou. Isso inclui placares, conquistas e desbloqueios.
+* **Fornecer experiências consistentes, usando o processo de limpeza**. Todos os clientes devem ter a mesma experiência quando usarem um dispositivo de demonstração de revenda. Seu aplicativo deve usar o [processo de limpeza](#cleanup-process) de retornar ao mesmo estado padrão depois de cada uso. Não queremos que o próximo cliente veja o que o cliente deixou. Isso inclui placares, conquistas e desbloqueios.
 
 * **Conteúdo apropriado à idade**. Todo o conteúdo de aplicativo precisa ser um adolescente ou inferior categoria de classificação. Para saber mais, consulte [obter classificados como seu aplicativo pelo IARC](https://www.globalratings.com/for-developers.aspx) e [classificações ESRB](https://www.esrb.org/ratings/ratings_guide.aspx).
 

@@ -1,16 +1,16 @@
 ---
 title: Hospedagem da visualização do scanner de código de barras da câmera
 description: Saiba como hospedar uma visualização de scanner de código de barras de câmera em seu aplicativo
-ms.date: 05/1/2018
+ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0eb7b1b620fcfa16576d84eaa2564408394d59de
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 49d531ea2e699afaf7cfb6872fe0287c6d6a8f85
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929377"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116115"
 ---
 # <a name="hosting-a-camera-barcode-scanner-preview-in-your-application"></a>Hospedagem de uma visualização de scanner de código de barras de câmera em seu aplicativo
 ## <a name="step-1-setup-your-camera-preview"></a>Etapa 1: Configurar a visualização da câmera

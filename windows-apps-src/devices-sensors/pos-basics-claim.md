@@ -5,12 +5,12 @@ ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 7169848084b587793ba1537ea3d6ad78d31892d5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0e7d60c0b612a8067ac4c225dff9da5da428f1a1
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924942"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117646"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de ponto de serviço reivindicar e habilitar o modelo
 
@@ -19,7 +19,7 @@ ms.locfileid: "8924942"
 Depois de criar um objeto de dispositivo de PointOfService com sucesso, você deve declará-lo usando o método adequado para o tipo de dispositivo antes de usá-lo para entrada ou saída.  A declaração concede ao aplicativo acesso exclusivo a diversas funções do dispositivo para garantir que um aplicativo não interfira com o uso do dispositivo por outro aplicativo.  Apenas um aplicativo pode reivindicar um dispositivo de PointOfService para uso exclusivo por vez. 
 
 > [!Note]
-> A ação de declaração estabelece um bloqueio exclusivo para um dispositivo, mas não colocá-lo em um estado operacional.  Para obter mais informações, consulte [Habilitar dispositivo para operações de e/s](#Enable-device-for-I/O-operations) .
+> A ação de declaração estabelece um bloqueio exclusivo para um dispositivo, mas não colocá-lo em um estado operacional.  Para obter mais informações, consulte [Habilitar dispositivo para operações de e/s](#enable-device-for-io-operations) .
 
 ### <a name="apis-used-to-claim--release"></a>APIs usadas para reivindicar / liberar
 

@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 788f47c1b29766cae1f437992aee8414580f3935
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.openlocfilehash: 431b8912e43647bc2678aaab7efc9ec68b866d10
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116488"
+ms.locfileid: "9117576"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Projetar para TV e Xbox
 
@@ -122,7 +122,7 @@ Elementos de interface do usuário interativos devem ser dimensionados em uma al
 
 #### <a name="number-of-clicks"></a>Número de cliques
 
-Quando o usuário está navegando de uma borda da tela da TV para a outra, isso deve levar não mais do que **seis cliques** para simplificar a sua interface do usuário. Novamente, o princípio de **simplicidade** aplica-se aqui. Para obter mais detalhes, veja [Caminho de menos cliques](#path-of-least-clicks).
+Quando o usuário está navegando de uma borda da tela da TV para a outra, isso deve levar não mais do que **seis cliques** para simplificar a sua interface do usuário. Novamente, o princípio de **simplicidade** aplica-se aqui. 
 
 ![6 ícones em](images/designing-for-tv/six-clicks.png)
 
@@ -462,7 +462,7 @@ Embora os botões padrão da UWP funcionem bem na TV, alguns estilos visuais de 
 
 A interface do usuário aninhada expõe itens acionáveis aninhados dentro de um elemento de interface do usuário do contêiner onde o item aninhado, bem como o item de contêiner podem focar de forma independente umas nas outras.
 
-A interface do usuário aninhada funciona bem para alguns tipos de entrada, mas nem sempre para gamepad e remoto, que dependem de navegação do plano XY. Certifique-se de seguir as orientações neste tópico para garantir que sua interface do usuário seja otimizada para o ambiente de 3 metros e que o usuário possa acessar facilmente todos os elementos interativos. Uma solução comum é colocar elementos de interface do usuário aninhada em um `ContextFlyout` (veja [CommandBar e ContextFlyout](#commandbar-and-contextflyout)).
+A interface do usuário aninhada funciona bem para alguns tipos de entrada, mas nem sempre para gamepad e remoto, que dependem de navegação do plano XY. Certifique-se de seguir as orientações neste tópico para garantir que sua interface do usuário seja otimizada para o ambiente de 3 metros e que o usuário possa acessar facilmente todos os elementos interativos. Uma solução comum é colocar elementos de interface do usuário aninhada em um `ContextFlyout`.
 
 Para obter mais informações sobre a interface do usuário aninhada, consulte [Interface do usuário aninhada em itens de lista](../controls-and-patterns/nested-ui.md).
 
@@ -558,7 +558,7 @@ bool IsTenFoot = (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily 
                     "Windows.Xbox");
 ```
 
-Em seguida, você pode fazer os ajustes adequados à sua interface de usuário no bloco de código após essa verificação. Um exemplo disso é mostrado em [Amostra de cor UWP](#uwp-color-sample).
+Em seguida, você pode fazer os ajustes adequados à sua interface de usuário no bloco de código após essa verificação. 
 
 ## <a name="summary"></a>Resumo
 

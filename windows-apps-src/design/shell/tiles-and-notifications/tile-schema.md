@@ -8,12 +8,12 @@ ms.date: 07/28/2017
 ms.topic: article
 keywords: windows 10, uwp, bloco, notificação de bloco, conteúdo de bloco, esquema, carga de bloco
 ms.localizationpriority: medium
-ms.openlocfilehash: 02ac975ae3893b1d3d591133862d0ff3733cca6b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f12f1c2b6ac158b6f8e837fd3d6a64f96939ed99
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925134"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117726"
 ---
 # <a name="tile-content-schema"></a>Esquema de conteúdo do bloco
 
@@ -67,7 +67,7 @@ O objeto de associação possui o conteúdo visual para um tamanho de bloco espe
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
 | **Content** | [ITileBindingContent](#itilebindingcontent) | false | O conteúdo visual a ser exibido no bloco. Uma das [TileBindingContentAdaptive](#tilebindingcontentadaptive), [TileBindingContentIconic](#TileBindingContentIconic), [TileBindingContentContact](#TileBindingContentContact), [TileBindingContentPeople](#TileBindingContentPeople) ou [TileBindingContentPhotos](#TileBindingContentPhotos). |
-| **Branding** | [TileBranding](#tilebranding) | false | O formato que o bloco deve usar para exibir a marca do app. Por padrão, herda a identidade visual do bloco padrão. |
+| **Branding** | TileBranding | false | O formato que o bloco deve usar para exibir a marca do app. Por padrão, herda a identidade visual do bloco padrão. |
 | **DisplayName** | string | false | Uma cadeia de caracteres opcional que substitui o nome de exibição do bloco neste tamanho de bloco. |
 | **Arguments** | string | false | Novidades na Atualização de Aniversário: dados definidos pelo app que são retornados ao app por meio da propriedade TileActivatedInfo em LaunchActivatedEventArgs quando o usuário inicia o app no Bloco Dinâmico. Informa a você quais notificações de bloco o usuário viu quando tocou no Bloco Dinâmico. Nos dispositivos sem a Atualização de Aniversário, isso simplesmente será ignorado. |
 | **BaseUri** | Uri | false | Uma URL base padrão que é combinada às URLs relativas nos atributos de origem da imagem. |
@@ -92,7 +92,7 @@ Compatível com todos os tamanhos. Esta é a maneira recomendada de especificar 
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **Children** | IList<[ITileBindingContentAdaptiveChild](#ITileBindingContentAdaptiveChild)> | false | Os elementos visuais embutidos. Os objetos [AdaptiveText](#adaptivetext), [AdaptiveImage](#adaptiveimage) e [AdaptiveGroup](#adaptivegroup) podem ser adicionados. Os filhos são exibidos em um StackPanel vertical. |
+| **Children** | IList<ITileBindingContentAdaptiveChild> | false | Os elementos visuais embutidos. Os objetos [AdaptiveText](#adaptivetext), [AdaptiveImage](#adaptiveimage) e [AdaptiveGroup](#adaptivegroup) podem ser adicionados. Os filhos são exibidos em um StackPanel vertical. |
 | **BackgroundImage** | [TileBackgroundImage](#tilebackgroundimage) | false | Uma imagem de plano de fundo opcional exibida atrás do conteúdo do bloco, sangramento total. |
 | **PeekImage** | [TilePeekImage](#tilepeekimage) | false | Uma imagem opcional animada que surge da parte superior do bloco. |
 | **TextStacking** | [TileTextStacking](#tiletextstacking) | false | Controla o empilhamento de texto (alinhamento vertical) do conteúdo filho como um todo. |

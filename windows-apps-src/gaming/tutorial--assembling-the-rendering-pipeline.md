@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, renderização
 ms.localizationpriority: medium
-ms.openlocfilehash: 6724aedf898706dd4c5bf728616c918d64b2fb32
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4c16f1fbb55374b1d04c9fc9f5f7eae72ad19b00
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931291"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117776"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Estrutura de renderização I: introdução à renderização
 
@@ -71,10 +71,10 @@ void App::Initialize(
 
 ## <a name="display-the-graphics-by-rendering-the-frame"></a>Exibir os elementos gráficos renderizando o quadro
 
-A cena de jogo precisará renderizar quando o jogo for iniciado. As instruções para renderização começam no método  [__GameMain::Run__](#gameamainrun-method), conforme mostrado abaixo.
+A cena de jogo precisará renderizar quando o jogo for iniciado. As instruções para renderização começam no método  [__GameMain::Run__](#gamemainrun-method), conforme mostrado abaixo.
 
 O fluxo simples é:
-1. __Atualizar__
+1. __Update__
 2. __Renderizar__
 3. __Apresentar__
 
@@ -130,7 +130,7 @@ Consulte o artigo [Gerenciamento de fluxo de jogo](tutorial-game-flow-management
 
 A renderização é implementada chamando o método [__GameRenderer::Render__](#gamerendererrender-method) em __GameMain::Run__.
 
-Se a [renderização estéreo](#stereo-rendering) for habilitada, haverá duas passagens de renderização: uma para o olho direito e a outra para o olho esquerdo. Em cada passagem de renderização, associaremos o destino de renderização e a [exibição de estêncil de profundidade](#depth-stencil-view) ao dispositivo. Também limparemos a exibição de estêncil de profundidade posteriormente.
+Se a [renderização estéreo](#stereo-rendering) for habilitada, haverá duas passagens de renderização: uma para o olho direito e a outra para o olho esquerdo. Em cada passagem de renderização, associaremos o destino de renderização e a exibição de estêncil de profundidade ao dispositivo. Também limparemos a exibição de estêncil de profundidade posteriormente.
 
 > [!Note]
 > A renderização estéreo pode ser alcançada por meio de outros métodos, como estéreo de passagem única usando instanciação de vértice ou sombreadores de geometria. Embora o método com duas passagens de renderização seja mais lento, é mais conveniente para se obter a renderização estéreo.
@@ -146,7 +146,7 @@ Neste jogo de exemplo, o renderizador foi criado para usar um layout de vértice
 
 Defina o contexto Direct3D para usar um layout de vértice de entrada. Os objetos de layout de entrada descrevem como os dados do buffer de vértices são transmitidos para o [pipeline de renderização](#rendering-pipeline). 
 
-Em seguida, definimos o contexto Direct3D para usar os [buffers constantes](#constant-buffers) definidos anteriormente, que são usados pelo estágio de pipeline de [sombreador de vértice](#vertex-shaders-and-pixel-shaders) e pelo estágio de pipeline de [sombreador de pixel](#vertex-shaders-and-pixel-shaders). 
+Em seguida, definimos o contexto Direct3D para usar os buffers constantes definidos anteriormente, que são usados pelo estágio de pipeline de [sombreador de vértice](#vertex-shaders-and-pixel-shaders) e pelo estágio de pipeline de [sombreador de pixel](#vertex-shaders-and-pixel-shaders). 
 
 > [!Note]
 > Consulte [Estrutura de renderização II: introdução ao jogo](tutorial-game-rendering.md) para obter mais informações sobre a definição dos buffers constantes.
@@ -338,11 +338,11 @@ Ao renderizar a cena, você executará um loop por todos os objetos que precisam
 * O __m\_constantBufferChangesEveryPrim__ contém os parâmetros para cada objeto.  Inclui o objeto para matriz de transformação de mundo e propriedades materiais como cor e expoente especular para cálculos de iluminação.
 * Defina o contexto Direct3D para usar o layout de vértice de entrada para os dados de objeto de malha que serão transmitidos ao estágio do assembler de entrada (IA) do [pipeline de renderização](#rendering-pipeline)
 * Defina o contexto Direct3D para usar um [buffer de índice](#index-buffer) no estágio do IA. Forneça as informações de primitiva: tipo, ordem de dados.
-* Envie uma chamada de desenho para desenhar a primitiva indexada não instanciada. O método __GameObject::Render__ atualiza o [buffer constante](#constant-buffer-or-shader-constant-buffer) de primitiva com os dados específicos de uma determinada primitiva. Isso resulta em uma chamada de __DrawIndexed__ no contexto para desenhar a geometria dessa primitiva. Especificamente, essa chamada de desenho enfileira comandos e dados para a GPU (Unidade de Processamento de Gráficos), conforme parametrizados pelos dados do buffer constante. Cada chamada de desenho executa o [sombreador de vértice](#vertex-shaders-and-pixel-shaders) uma vez por vértice e, em seguida, o [sombreador de pixel](#vertex-shaders-and-pixel-shaders) uma vez para cada pixel de cada triângulo da primitiva. As texturas fazem parte do estado que o sombreador de pixel usa para executar a renderização.
+* Envie uma chamada de desenho para desenhar a primitiva indexada não instanciada. O método __GameObject::Render__ atualiza o [buffer constante](#constant-buffer-or-shader-constant-buffer) de primitiva com os dados específicos de uma determinada primitiva. Isso resulta em uma chamada de __DrawIndexed__ no contexto para desenhar a geometria dessa primitiva. Especificamente, essa chamada de desenho enfileira comandos e dados para a GPU (Unidade de Processamento de Gráficos), conforme parametrizados pelos dados do buffer constante. Cada chamada de desenho executa o sombreador de vértice uma vez por vértice e, em seguida, o [sombreador de pixel](#vertex-shaders-and-pixel-shaders) uma vez para cada pixel de cada triângulo da primitiva. As texturas fazem parte do estado que o sombreador de pixel usa para executar a renderização.
 
 Motivos para vários buffers constantes:
     * O jogo usa vários buffers constantes, mas só precisa atualizar esses buffers uma vez para cada primitiva. Conforme mencionado anteriormente, os buffers constantes são como uma entrada de dados para os sombreadores executados para cada primitiva. Alguns dados são estáticos (__m\_constantBufferNeverChanges__); alguns são constantes no quadro (__m\_constantBufferChangesEveryFrame__), como a posição da câmera; e alguns são específicos da primitiva, como sua cor e suas texturas (__m\_constantBufferChangesEveryPrim__)
-    * O [renderizador](#renderer) do jogo separa essas entradas em diferentes buffers constantes para otimizar a largura de banda de memória usada pela CPU e pela GPU. Essa abordagem também ajuda a minimizar a quantidade de dados que a GPU precisa controlar. A GPU possui uma grande fila de comandos, e sempre que o jogo chama __Draw__, esse comando é inserido na fila com os respectivos dados. Quando o jogo atualiza o buffer de constantes de primitiva e emite o próximo comando __Draw__, o driver gráfico adiciona esse comando e os dados associados à fila. Se o jogo desenha 100 primitivas, pode haver 100 cópias dos dados do buffer constante na fila. Para minimizar a quantidade de dados enviados à GPU, o jogo usa um buffer de constantes de primitiva em separado contendo apenas as atualizações para cada primitiva.
+    * O renderizador do jogo separa essas entradas em diferentes buffers constantes para otimizar a largura de banda de memória usada pela CPU e pela GPU. Essa abordagem também ajuda a minimizar a quantidade de dados que a GPU precisa controlar. A GPU possui uma grande fila de comandos, e sempre que o jogo chama __Draw__, esse comando é inserido na fila com os respectivos dados. Quando o jogo atualiza o buffer de constantes de primitiva e emite o próximo comando __Draw__, o driver gráfico adiciona esse comando e os dados associados à fila. Se o jogo desenha 100 primitivas, pode haver 100 cópias dos dados do buffer constante na fila. Para minimizar a quantidade de dados enviados à GPU, o jogo usa um buffer de constantes de primitiva em separado contendo apenas as atualizações para cada primitiva.
 
 #### <a name="gameobjectrender-method"></a>Método GameObject::Render
 

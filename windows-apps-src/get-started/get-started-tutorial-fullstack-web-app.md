@@ -5,12 +5,12 @@ keywords: aplicativo web hospedado, HWA, API REST, aplicativo de página única,
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f60eb37d7bff1187e282f5af2207c6df92f4ec24
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.openlocfilehash: 4c76f0da8c3ac1d50ccd2d328dd321df9aa9bd3e
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114572"
+ms.locfileid: "9117716"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Criar um app Web de página única com back-end da API REST
 
@@ -40,7 +40,7 @@ Se você decidir alça em (ou adiar) a parte do Azure, basta ignorar as seções
 
 Primeiro, criaremos uma API de jogo de memória simples para ativar nosso aplicativo Web de jogo de memória. Usaremos o [Swagger](https://swagger.io/) para definir a API e gerar código scaffold e uma interface do usuário da Web para teste manual.
 
-Se você quiser ignorar esta parte e passar diretamente para a [Parte II: Criar um aplicativo Web de página única](#part-ii-build-a-single-page-web-appl), este é o [código final da Parte I](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend). Siga as instruções do *LEIAME* para que o código seja executado localmente ou consulte *5. Hospedar o serviço de API no Azure e habilitar o CORS* para executá-lo no Azure.
+Se você quiser ignorar esta parte e passar diretamente para a [Parte II: Criar um aplicativo Web de página única](#part-ii-build-a-single-page-web-application), este é o [código final da Parte I](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend). Siga as instruções do *LEIAME* para que o código seja executado localmente ou consulte *5. Hospedar o serviço de API no Azure e habilitar o CORS* para executá-lo no Azure.
 
 ### <a name="game-overview"></a>Visão geral do jogo
 

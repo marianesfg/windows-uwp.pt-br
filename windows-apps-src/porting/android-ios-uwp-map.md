@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 008dce5ffc3824d49830bc368a3eaa9d55b7d229
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2d4739442414b02358f3afea8967b0fc404ff7f9
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8948018"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117816"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Mapeamento do conceito de aplicativos do Windows para desenvolvedores do Android e iOS
 
@@ -43,7 +43,7 @@ Consulte também o conteúdo de portabilidade em [Move from iOS to UWP](ios-to-u
 <td align="left"><strong>Linguagem de design.</strong><br><br>Um conjunto de convenções que estabelece como deve ser a aparência e o comportamento dos apps na plataforma.</td>
 <td align="left">Diretrizes de <strong>design de material do Android</strong> oferecem uma linguagem visual para os desenvolvedores e designers do Android seguirem.</td>
 <td align="left"><strong>Diretrizes de interface humana</strong> oferecem consultoria para designers e desenvolvedores de iOS.</td>
-<td align="left"><a href="https://dev.windows.com/design"><strong>Design de aplicativos do Windows da UWP</strong></a> mostra como criar um app que fique fantástico em todos os dispositivos Windows 10. Você encontrará fundamentos de design da interface do usuário (IU), técnicas de design responsivo e uma lista completa de diretrizes detalhadas.<br/></td>
+<td align="left"><a href="https://developer.microsoft.com/en-us/windows/apps/design"><strong>Design de aplicativos do Windows da UWP</strong></a> mostra como criar um app que fique fantástico em todos os dispositivos Windows 10. Você encontrará fundamentos de design da interface do usuário (IU), técnicas de design responsivo e uma lista completa de diretrizes detalhadas.<br/></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Linguagem de marcação da interface do usuário.</strong> <br><br>Uma linguagem de marcação que renderiza e descreve uma interface do usuário e seus componentes. Cada plataforma fornece um editor para edição visual e de marcação.<br/></td>
@@ -55,7 +55,7 @@ Consulte também o conteúdo de portabilidade em [Move from iOS to UWP](ios-to-u
 <td align="left"><strong>Controles de interface do usuário internos.</strong> <br><br>Elementos de interface do usuário reutilizáveis fornecidos pela plataforma, como botões, controles de lista e controles de texto.</td>
 <td align="left">Classes pré-construídas de <strong>visualização</strong> e <strong>grupo de visualização</strong> conhecidas como widgets, layouts, campos de texto, contêineres, controles de data/hora e controles especializados.</td>
 <td align="left"><strong>Visualizações</strong> e <strong>controles</strong> encontrados na biblioteca de objetos do Xcode e listados no catálogo de interface de usuário do UIKit. As visualizações incluem visualizações de imagem, visualizações de seletor e visualizações de rolagem. Os controles incluem botões, seletores de data e campos de texto.</td>
-<td align="left">A plataforma XAML fornece um conjunto generoso de <strong>controles internos</strong>, como botões, controles de lista, painéis, controles de texto, barras de comando, seletores, mídia e escrita à tinta.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228345.aspx">Adicionar controles e tratar eventos</a></td>
+<td align="left">A plataforma XAML fornece um conjunto generoso de <strong>controles internos</strong>, como botões, controles de lista, painéis, controles de texto, barras de comando, seletores, mídia e escrita à tinta.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228345.aspx">Adicionar controles e manipular eventos</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Controlar a manipulação de eventos.</strong> <br><br>Definir a lógica que é executada quando os eventos são acionados dentro de controles de interface do usuário.</td>

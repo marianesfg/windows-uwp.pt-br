@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 770896f467ff3a2c24fff65fdf16f1e13c83b688
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e65ad1f4dcb5a83eb7336fc8e1eb794b107dcf01
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933544"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117606"
 ---
 # <a name="xaml-theme-resources"></a>Recursos de temas XAML
 
@@ -430,7 +430,7 @@ Aqui está um [Button](https://msdn.microsoft.com/library/windows/apps/br209265)
 
 ## <a name="troubleshooting-theme-resources"></a>Solução de problemas de recursos de temas
 
-Caso não siga as [diretrizes para usar recursos de tema](#guidelines-for-using-theme-resources), você pode notar um comportamento inesperado relacionado aos temas no aplicativo.
+Caso não siga as [diretrizes para usar recursos de tema](#guidelines-for-custom-theme-resources), você pode notar um comportamento inesperado relacionado aos temas no aplicativo.
 
 Por exemplo, quando você abre um submenu com tema claro, partes do aplicativo com tema escuro também mudam como se estivessem no tema claro. Ou, caso você navegue até uma página com tema claro e, em seguida, volte à navegação original, a página com tema escuro original (ou partes dele) agora parece ser do tema claro.
 

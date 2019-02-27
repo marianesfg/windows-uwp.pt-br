@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, renderização
 ms.localizationpriority: medium
-ms.openlocfilehash: f73665e60513e4f8465be3dbe69f792af285a8e1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 108e9bf21b0552ac7f88721bf4b1ee72ca2a5e2c
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934641"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117746"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>Estrutura de renderização II: introdução ao jogo
 
@@ -42,7 +42,7 @@ Estes são alguns conceitos que você pode usar projetar o renderizador do seu j
     * Use vários buffers de constantes com diferentes frequências para reduzir a quantidade de dados que deve ser enviada à GPU por quadro. Este exemplo separa as constantes em diferentes buffers com base na frequência em que eles devem ser atualizados. Esta é a prática recomendada para programação do Direct3D. 
     * Neste jogo de exemplo, quatro buffers de constantes são definidos.
         1. __m\_constantBufferNeverChanges__ contém os parâmetros de iluminação. Ele é definido uma vez no método __FinalizeCreateGameDeviceResources__ e nunca mais é alterado.
-        2. __m\_constantBufferChangeOnResize__ contém a matriz de projeção. A matriz de projeção depende do tamanho e da taxa de proporção da janela. Ele é definido em [__CreateWindowSizeDependentResources__](#createwindowsizedependentresources-method) e, em seguida, atualizado depois que os recursos são carregados no método [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method). Se a renderização for em 3D, ele também será alterado duas vezes por quadro.
+        2. __m\_constantBufferChangeOnResize__ contém a matriz de projeção. A matriz de projeção depende do tamanho e da taxa de proporção da janela. Ele é definido em [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method) e, em seguida, atualizado depois que os recursos são carregados no método [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method). Se a renderização for em 3D, ele também será alterado duas vezes por quadro.
         3. __m\_constantBufferChangesEveryFrame__ contém a matriz de visualização. Essa matriz depende da posição da câmera e da direção do olhar (o normal para a projeção) e muda somente uma vez por quadro no método __Render__. Isso foi abordado anteriormente em __Estrutura de renderização I: introdução à renderização__, no método [__GameRenderer::Render__ method](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method).
         4. __m\_constantBufferChangesEveryPrim__ contém a matriz de modelo e as propriedades de material de cada primitiva. A matriz do modelo transforma os vértices das coordenadas locais em coordenadas mundiais. Essas constantes são específicas de cada primitiva e atualizadas para cada chamada de desenho. Isso foi abordado anteriormente em __Estrutura de renderização I: introdução à renderização__, em [Primitive rendering](tutorial--assembling-the-rendering-pipeline.md#primitive-rendering).
 * Os objetos de recurso de sombreador que contêm as texturas das primitivas também são definidos nesta classe.
@@ -158,7 +158,7 @@ GameRenderer::GameRenderer(const std::shared_ptr<DX::DeviceResources>& deviceRes
 No jogo de exemplo (e no modelo do __app DirectX 11 (Universal Windows)__ do Visual Studio), a criação e o carregamento de recursos do jogo são implementados através destes dois métodos chamados pelo construtor __GameRenderer__:
 
 * [__CreateDeviceDependentResources__](#createdevicedependentresources-method)
-* [__CreateWindowSizeDependentResources__](#createwindowsizedependentresources-method)
+* [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method)
 
 ## <a name="createdevicedependentresources-method"></a>Método CreateDeviceDependentResources
 
@@ -590,7 +590,7 @@ Os recursos de tamanho de janela são atualizados desta maneira:
 
 Neste jogo de exemplo, diversas chamadas de método são iguais ao método [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method). Para obter instruções passo a passo sobre o código, vá para a seção anterior.
 
-Os ajustes de renderização de tamanho da HUD e da janela de sobreposição do jogo são abordados em [Adicionar uma interface do usuário](#tutorial--adding-a-user-interface).
+Os ajustes de renderização de tamanho da HUD e da janela de sobreposição do jogo são abordados em [Adicionar uma interface do usuário](tutorial--adding-a-user-interface.md).
 
 ```cpp
 // Initializes view parameters when the window size changes.

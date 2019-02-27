@@ -4,32 +4,12 @@ description: Este mapa fornece uma visão geral dos recursos empresariais princi
 title: Enterprise
 ms.date: 08/30/2018
 ms.topic: article
-keywords: windows 10, uwp
+keywords: 'windows 10, uwp'
 ms.localizationpriority: medium
-ms.openlocfilehash: a2d5db17be1367deea66ff2762d0350931e1861e
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058577"
 ---
 # <a name="enterprise"></a>Enterprise
 
-Este artigo fornece uma visão geral dos recursos empresariais principais fornecidos pela plataforma Universal do Windows (UWP) para aplicativos do Windows 10.
-
-## <a name="whats-new-and-recent-for-enterprise-applications"></a>Novidades e recentes para aplicativos corporativos
-
-> [!div class="checklist"]
-> * [Windows Template Studio](#template-studio)
-> * [Controles para criar interfaces do usuário estilo de área de trabalho](#desktop-style-UI)
-> * [Controles para dar suporte a cenários corporativos](#enterprise)
-> * [Biblioteca de interface do usuário do Windows](#UI-library)
-> * [Controles UWP em aplicativos da área de trabalho](#xaml-islands)
-> * [.NET Standard 2.0](#standard)
-> * [Conectividade do SQL Server](#sql-server)
-> * [Implantação de MSIX](#MSIX)
-
-Para obter um vídeo que demonstra alguns desses recursos em detalhes, veja [Rapidamente construir aplicativos LOB com UWP e o Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502).
+Este artigo fornece uma visão geral dos recursos empresariais principais fornecidos pela plataforma Universal do Windows (UWP) para aplicativos do Windows 10. Para obter um vídeo que demonstra alguns desses recursos em detalhes, veja [Rapidamente construir aplicativos LOB com UWP e o Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502).
 
 <a id="template-studio" />
 
