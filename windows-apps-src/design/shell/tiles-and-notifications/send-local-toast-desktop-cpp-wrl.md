@@ -3,16 +3,16 @@ Description: Learn how Win32 C++ WRL apps can send local toast notifications and
 title: Enviar uma notificação do sistema local a partir de aplicativos C++ WRL da área de trabalho
 label: Send a local toast notification from desktop C++ WRL apps
 template: detail.hbs
-ms.date: 03/7/2018
+ms.date: 03/07/2018
 ms.topic: article
 keywords: Windows 10, uwp, win32, área de trabalho, notificações do sistema, enviar uma notificação do sistema, enviar notificações do sistema local, ponte de desktop, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: f4b7dbe75b06e264eed67d9f08b1e12a42ecb890
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 82de349009350c970fce923a2aa503df0801c3b7
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926814"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116258"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar uma notificação do sistema local a partir de aplicativos C++ WRL da área de trabalho
 
@@ -395,7 +395,7 @@ if (SUCCEEDED(hr))
 
 ## <a name="step-10-deploying-and-debugging"></a>Etapa 10: implantação e depuração
 
-Para implantar e depurar o aplicativo de Ponte de Desktop, consulte [Executar, depurar e testar um aplicativo de área de trabalho empacotado](/porting/desktop-to-uwp-debug.md).
+Para implantar e depurar o aplicativo de Ponte de Desktop, consulte [Executar, depurar e testar um aplicativo de área de trabalho empacotado](/windows/uwp/porting/desktop-to-uwp-debug).
 
 Para implantar e depurar seu aplicativo para Win32 clássico, você deve instalar o aplicativo pelo instalador uma vez antes da depuração normal para que o atalho no menu Iniciar com a AUMID e a CLSID esteja presente. Depois que o atalho de Iniciar estiver presente, você pode depurar usando F5 no Visual Studio.
 

@@ -2,16 +2,16 @@
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
 description: Use esse método na API da coleção da Microsoft Store para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário.
 title: Declarar produtos consumíveis como providenciados
-ms.date: 03/16/2018
+ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, API de coleção da Microsoft Store, providenciado, consumível
 ms.localizationpriority: medium
-ms.openlocfilehash: e3271dd26a4e7eaa23d63efa3b75cf321480528d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cea8937af3df0ad1e80434d649f431d188521667
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935657"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116022"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>Declarar produtos consumíveis como providenciados
 
@@ -57,9 +57,9 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 | Parâmetro     | Tipo         | Descrição         | Obrigatório |
 |---------------|--------------|---------------------|----------|
 | beneficiário   | UserIdentity | O usuário para o qual este item está sendo consumido. Para obter mais informações, consulte a tabela a seguir.        | Sim      |
-| itemId        | cadeia de caracteres       | O valor *itemID* retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com *trackingId*      | Não       |
+| itemId        | string       | O valor *itemID* retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com *trackingId*      | Não       |
 | trackingId    | guid         | Uma ID de rastreamento exclusiva fornecida pelo desenvolvedor. Use esse parâmetro com *itemId*.         | Não       |
-| productId     | cadeia de caracteres       | O valor de *productId* retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com *transactionId*   | Não       |
+| productId     | cadeia       | O valor de *productId* retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com *transactionId*   | Não       |
 | transactionId | guid         | Um valor de ID de transação que é obtido de uma das seguintes fonte. Use esse parâmetro com *productId*.<ul><li>A propriedade [TransactionID](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.purchaseresults.transactionid) da classe [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).</li><li>O recibo do app ou produto que é retornado por [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) ou [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync).</li><li>O parâmetro *transactionId* retornado por uma [consulta por produtos](query-for-products.md).</li></ul>   | Não       |
 
 
@@ -67,8 +67,8 @@ O objeto UserIdentity contém os parâmetros a seguir.
 
 | Parâmetro            | Tipo   | Descrição       | Obrigatório |
 |----------------------|--------|-------------------|----------|
-| identityType         | string | Especifique o valor de cadeia de caracteres **b2b**.    | Sim      |
-| identityValue        | cadeia de caracteres | Uma [chave ID da Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa a identidade do usuário para o qual você quer declarar um produto consumível como providenciado.      | Sim      |
+| identityType         | cadeia de caracteres | Especifique o valor de cadeia de caracteres **b2b**.    | Sim      |
+| identityValue        | string | Uma [chave ID da Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa a identidade do usuário para o qual você quer declarar um produto consumível como providenciado.      | Sim      |
 | localTicketReference | string | O identificador solicitado para resposta retornada. Recomendamos que você use o mesmo valor do que a [declaração](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) *userId* na chave ID da Microsoft Store. | Sim      |
 
 

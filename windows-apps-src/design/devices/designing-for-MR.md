@@ -6,19 +6,19 @@ label: Designing for Mixed Reality
 template: detail.hbs
 isNew: true
 keywords: Realidade misturada, Hololens, realidade aumentada, focar, voz, controlador
-ms.date: 2/5/2018
+ms.date: 02/05/2018
 ms.topic: article
 pm-contact: chigy
 design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: e6aebac45dc32933f55d917c0b1153cba952d819
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b988859422a80b31d94a133e36631b078ac7c14e
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932559"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116208"
 ---
 # <a name="designing-for-mixed-reality"></a>Desenvolvendo para realidade misturada
 

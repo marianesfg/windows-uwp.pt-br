@@ -1,17 +1,11 @@
 ---
 description: Conheça o Design Fluente e como incorporá-lo nos apps.
 title: Sistema de Design fluente para Windows
-keywords: layout do aplicativo uwp, plataforma universal do Windows, design do app, interface, sistema de design fluent
-ms.date: 3/7/2018
+keywords: 'layout do aplicativo uwp, plataforma universal do Windows, design do app, interface, sistema de design fluent'
+ms.date: 03/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: cc0af4cba5d4d14c862724cd199c9e6ab221a24d
-ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "9059717"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Os criadores de aplicativo do sistema de Design fluente para Windows
 

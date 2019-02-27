@@ -1,17 +1,11 @@
 ---
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
-title: Arquivos, pastas e bibliotecas
-description: Saiba como ler e gravar configurações do app, seletores de pastas e arquivos e sobre locais especiais de área restrita, como a biblioteca de vídeos/músicas.
+title: 'Arquivos, pastas e bibliotecas'
+description: 'Saiba como ler e gravar configurações do app, seletores de pastas e arquivos e sobre locais especiais de área restrita, como a biblioteca de vídeos/músicas.'
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp
+keywords: 'windows 10, uwp'
 ms.localizationpriority: medium
-ms.openlocfilehash: 517302b7db1e7b65ca7a181a8c766ce1e71737ac
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044540"
 ---
  # <a name="files-folders-and-libraries"></a>Arquivos, pastas e bibliotecas
 
@@ -22,6 +16,7 @@ Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/
 |-------|--------------|
 | [Enumerar e consultar arquivos e pastas](quickstart-listing-files-and-folders.md) | Acesse arquivos e pastas que estejam em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta. |
 | [Criar, gravar e ler um arquivo](quickstart-reading-and-writing-files.md) | Leia e grave um arquivo usando o objeto [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171). |
+| [Práticas recomendadas para escrever a arquivos](best-practices-for-writing-to-files.md) | Saiba mais práticas recomendadas para usar o arquivo diversos métodos das classes [FileIO](https://docs.microsoft.com/uwp/api/windows.storage.fileio) e [PathIO](https://docs.microsoft.com/uwp/api/windows.storage.pathio) de gravação. |
 | [Obter propriedades do arquivo](quickstart-getting-file-properties.md) | Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo representado pelo objeto [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171). |
 | [Abrir arquivos e pastas com um seletor](quickstart-using-file-and-folder-pickers.md) | Acesse arquivos e pastas permitindo que o usuário interaja com um seletor. Você pode usar o [FolderPicker](https://msdn.microsoft.com/library/windows/apps/br207881) para obter acesso a uma pasta. |
 | [Salvar um arquivo com um seletor](quickstart-save-a-file-with-a-picker.md) | Use o [FileSavePicker](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir que os usuários especifiquem o nome e o local em que desejam que o aplicativo salve um aplicativo. |

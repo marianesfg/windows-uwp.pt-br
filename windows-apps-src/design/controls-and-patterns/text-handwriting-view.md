@@ -3,7 +3,7 @@ Description: Customize the built-in handwriting view for ink to text input that 
 title: Entrada de texto com o modo de exibição de manuscrito
 label: Text input with the handwriting view
 template: detail.hbs
-ms.date: 10/13/18
+ms.date: 10/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: sewen
@@ -11,12 +11,12 @@ design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3660586b856205721bfa8e9cbb3e72df4fd3ad43
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f7b31898e6a90410e4edc73ee36f71a7e4d94155
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921693"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116278"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto com o modo de exibição de manuscrito
 
@@ -63,7 +63,7 @@ Neste exemplo, podemos desabilitar o modo de exibição de manuscrito, definindo
 
 ## <a name="specify-the-alignment-of-the-handwriting-view"></a>Especificar o alinhamento do modo de exibição de manuscrito
 
-O modo de exibição de manuscrito está localizado acima do controle de texto subjacente e dimensionado para acomodar as preferências do usuário manuscrito (consulte **Configurações -> dispositivos -> caneta e Windows Ink -> manuscrito -> tamanho de fonte ao escrever diretamente no campo de texto **). O modo de exibição é alinhado também automaticamente em relação ao controle de texto e seu local dentro do aplicativo.
+O modo de exibição de manuscrito está localizado acima do controle de texto subjacente e dimensionado para acomodar as preferências do usuário manuscrito (Consulte configurações **- gt _ dispositivos- gt _ caneta & Windows Ink - gt _ manuscrito- gt _ tamanho de fonte ao escrever diretamente no campo de texto **). O modo de exibição é alinhado também automaticamente em relação ao controle de texto e seu local dentro do aplicativo.
 
 O interface do usuário do aplicativo não flui novamente para acomodar o maior controle, para que o sistema pode fazer com que o modo de exibição ocultar importante da interface do usuário.
 
@@ -99,7 +99,7 @@ Se seu aplicativo já fornece robusta, funcionalidade de reconhecimento personal
 
 ## <a name="use-handwriting-font-preferences"></a>Use as preferências de fonte de manuscrito
 
-Um usuário pode escolher entre uma coleção predefinida de fontes com base em texto manuscrito usar quando renderizar texto com base no reconhecimento de tinta (consulte **Configurações -> dispositivos -> caneta e Windows Ink -> manuscrito -> fonte ao usar manuscrito**).
+Um usuário pode escolher entre uma coleção predefinida de fontes com base em texto manuscrito usar quando renderizar texto com base no reconhecimento de tinta (consulte **Configurações- gt _ dispositivos- gt _ caneta & Windows Ink- gt _ manuscrito- gt _ fonte ao usar manuscrito**).
 
 > [!NOTE]
 > Os usuários ainda podem criar uma fonte com base em sua próprias manuscrito.

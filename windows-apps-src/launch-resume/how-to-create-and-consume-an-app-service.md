@@ -3,15 +3,15 @@ title: Criar e consumir um serviço de app
 description: Saiba como escrever um aplicativo UWP (Plataforma Universal do Windows) que pode fornecer serviços a outros aplicativos UWP e também como consumir esses serviços.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
 keywords: comunicação, a comunicação entre processos, IPC, mensagens, o serviço de aplicativo em segundo plano comunicação, aplicativo, em segundo plano
-ms.date: 1/16/2019
+ms.date: 01/16/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5239bff53bb0e5383bce28b4d781a0ab6a41c3af
-ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
+ms.openlocfilehash: 96ecad8494ad82dc4927b3675ad322f07a8ca7f3
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9013955"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116388"
 ---
 # <a name="create-and-consume-an-app-service"></a>Criar e consumir um serviço de app
 

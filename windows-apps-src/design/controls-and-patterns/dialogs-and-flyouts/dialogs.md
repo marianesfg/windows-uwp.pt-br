@@ -12,14 +12,14 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f3fd2173296c433015fa30b81c0d90e32d2d4b0
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: bee954cba446ac7dc7eb41622d9275b3b73af6ee
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036938"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116095"
 ---
-## <a name="dialog-controls"></a>Controles de caixa de diálogo
+# <a name="dialog-controls"></a>Controles de caixa de diálogo
 
 Controles de caixa de diálogo são sobreposições de interface do usuário modais que fornecem informações contextuais do aplicativo. Eles bloqueiam interações com a janela do aplicativo até que sejam explicitamente ignoradas. Elas muitas vezes solicitam algum tipo de ação do usuário.
 

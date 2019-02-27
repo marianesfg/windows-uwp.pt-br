@@ -2,15 +2,15 @@
 title: Novidades no Windows 10 para desenvolvedores, ferramentas e recursos
 description: O Windows 10, compilação 17134 e as novas ferramentas de desenvolvedor fornecem as ferramentas, os recursos e as experiências da UWP (Plataforma Universal do Windows).
 keywords: novidades, novidade, atualização, atualizações, recursos, novos, Windows 10, mais recente, desenvolvedores, 17134
-ms.date: 4/10/2018
+ms.date: 04/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 570e9c463175475db15bd15adbb6b9b88cb9ff39
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 7d880b2167e718b1ff66aa349c32329e6c19e5b5
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046276"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116478"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novidades no Windows 10 para desenvolvedores, compilação 17134
 

@@ -1,16 +1,16 @@
 ---
 title: Estender seu aplicativo com serviços de aplicativo, extensões e pacotes
 description: Descreve como criar uma tarefa em segundo plano que é executado quando o aplicativo da loja da plataforma Universal do Windows (UWP) é atualizado.
-ms.date: 05/7/2018
+ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, estender, dividir, serviço de aplicativo, pacote, extensão
 ms.localizationpriority: medium
-ms.openlocfilehash: fd14ce6248f7017160a0c6b222e31ba55e9d2977
-ms.sourcegitcommit: f35480718452a8d95b1862581449a038b63184de
+ms.openlocfilehash: 47ab6491d09775bf86f0f484fc96d85bd07f53a4
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "9015094"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116178"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Estender seu aplicativo com serviços de aplicativo, extensões e pacotes
 

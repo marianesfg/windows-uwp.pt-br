@@ -1,17 +1,17 @@
 ---
 title: Iniciar a captura de tela
 description: Este tópico descreve os esquemas de URI ms-screenclip e ms-screensketch. Seu aplicativo pode usar esses esquemas de URI para iniciar o aplicativo de esboço & recorte ou abrir um novo recorte.
-ms.date: 8/1/2017
+ms.date: 08/09/2017
 ms.topic: article
 keywords: Windows 10, uwp, uri, recorte, esboço
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2bddea1dd2b5f21a145bde789f1ad760bb5e556a
-ms.sourcegitcommit: b126940932935ebd2965ea68078798fb6e876b23
+ms.openlocfilehash: 06e988387f574b74d511b14a2ebca24b0a149158
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "9065983"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116168"
 ---
 # <a name="launch-screen-snipping"></a>Iniciar a captura de tela
 

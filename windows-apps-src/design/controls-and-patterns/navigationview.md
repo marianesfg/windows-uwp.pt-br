@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b61c36143749ddb358cea1d4cf59f43ecb8c6338
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 4ba3a45701d82ad0b43591469bf390190ec18db0
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037088"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116448"
 ---
 # <a name="navigation-view"></a>Modo de exibição de navegação
 
@@ -143,7 +143,7 @@ Você pode usar a propriedade PaneDisplayMode para posicionar o painel acima do 
 O painel NavigationView pode conter:
 
 - Objetos [NavigationViewItem](/uwp/api/windows.ui.xaml.controls.navigationviewitem) . Itens de navegação para navegar até páginas específicas.
-- Objetos [NavigationViewItemSeparator](/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator) . Separadores para agrupar itens de navegação. Defina a propriedade de [opacidade](/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator.opacity) como 0 para renderizar o separador de espaço.
+- Objetos [NavigationViewItemSeparator](/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator) . Separadores para agrupar itens de navegação. Defina a propriedade de [opacidade](/uwp/api/windows.ui.xaml.uielement.opacity) como 0 para renderizar o separador de espaço.
 - Objetos [NavigationViewItemHeader](/uwp/api/windows.ui.xaml.controls.navigationviewitemheader) . Cabeçalhos para rotular grupos de itens.
 - Um controle [AutoSuggestBox](auto-suggest-box.md) opcional para permitir a pesquisa no nível do aplicativo. Atribua o controle à propriedade [NavigationView.AutoSuggestBox](/uwp/api/windows.ui.xaml.controls.navigationview.autosuggestbox) .
 - Um ponto de entrada opcional para [configurações do aplicativo](../app-settings/app-settings-and-data.md). Para ocultar o item de configurações, defina a propriedade [IsSettingsVisible](/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) como **false**.

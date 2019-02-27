@@ -6,12 +6,12 @@ ms.date: 06/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 143aa8310cdfe9dd5f0be29bf07f03c23293a647
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6c5c8b99ec3646d1eebbb922557f97c9e9304ed4
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919031"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116458"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Iniciar o app padrão de um URI
 
@@ -46,7 +46,7 @@ Este tópico descreve os seguintes esquemas de URI integrados ao Windows:
 <br>
 Por exemplo, o URI a seguir abre o navegador padrão e exibe o site do Bing.
 
-`http://bing.com`
+`https://bing.com`
 
 Você também pode iniciar esquemas de URI personalizados. Se não houver app instalado para manipular esse URI, você poderá recomendar um app para o usuário instalar. Para obter mais informações, consulte [Recomendar um app se nenhum estiver disponível para manipular o URI](#recommend-an-app-if-one-is-not-available-to-handle-the-uri).
 
@@ -244,4 +244,4 @@ Use o **msnweather:** esquema de URI para iniciar o aplicativo de previsão do t
 
 | Esquema de URI | Resultados |
 |------------|---------|
-| msnweather://Forecast?la= \[latitude\] & lo = \ [longitude\] | Inicia o aplicativo de previsão do tempo na página de previsão com base em um coordenadas da localização geográfica.<br>`latitude` refere-se para o latitude da localização.<br> `longitude` refere-se à longitude do local.<br> |
+| msnweather://Forecast?la= \[latitude\]&lo=\[longitude\] | Inicia o aplicativo de previsão do tempo na página de previsão com base em um coordenadas da localização geográfica.<br>`latitude` refere-se para o latitude da localização.<br> `longitude` refere-se à longitude do local.<br> |

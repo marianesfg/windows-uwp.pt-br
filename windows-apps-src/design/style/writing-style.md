@@ -2,16 +2,16 @@
 title: Estilo de escrita
 description: O uso da voz e do tom corretos é essencial para que o texto do seu aplicativo seja uma parte natural do design.
 keywords: UWP, Windows 10, texto, escrita, voz, tom, design, interface do usuário, experiência do usuário
-ms.date: 5/7/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b09265164ccd922ab310c06e6c2bd14b6d7a841c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: aaaf13c455d3d05d5ccfac6b2bd61418f3e8e5bb
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938948"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116198"
 ---
 # <a name="writing-style"></a>Estilo de escrita
 

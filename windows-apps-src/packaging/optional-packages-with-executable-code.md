@@ -1,16 +1,16 @@
 ---
 title: Pacotes opcionais com código executável
 description: Saiba como usar o Visual Studio para criar um pacote opcional com código executável.
-ms.date: 9/30/2018
+ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais
 ms.localizationpriority: medium
-ms.openlocfilehash: 465253be7ebf8cf7794004c0a6832a78cb0ced69
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 44e32438034cf09695f313d24055b6ed3c82df0b
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927695"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115883"
 ---
 # <a name="optional-packages-with-executable-code"></a>Pacotes opcionais com código executável
  
