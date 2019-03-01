@@ -2,7 +2,7 @@
   "build_entry_point": "op",
   "docsets_to_publish": [
     {
-      "docset_name": "hub",
+      "docset_name": "windows-uwp-hub",
       "build_source_folder": "hub",
       "build_output_subfolder": "hub",
       "locale": "pt-br",
@@ -16,7 +16,7 @@
       "template_folder": "_themes"
     },
     {
-      "docset_name": "windows-apps",
+      "docset_name": "windows-uwp",
       "build_source_folder": "windows-apps-src",
       "build_output_subfolder": "windows-apps-src",
       "locale": "pt-br",
@@ -33,7 +33,7 @@
     }
   ],
   "notification_subscribers": [
-    "v-mikmat@microsoft.com"
+    "v-nidolc@microsoft.com"
   ],
   "branches_to_filter": [
     "master-oldev",
@@ -75,3 +75,7 @@
   "need_generate_pdf": false,
   "need_generate_intellisense": false
 }
+
+
+
+
