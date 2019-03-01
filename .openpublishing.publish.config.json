@@ -58,7 +58,7 @@
     },
     {
       "path_to_root": "_repo.en-us",
-      "url": "https://cpubwin.visualstudio.com/DefaultCollection/windows-uwp/_git/windows-uwp",
+      "url": "https://github.com/microsoftdocs/windows-uwp-pr",
       "branch": "live",
       "branch_mapping": {
         "live": "live",
