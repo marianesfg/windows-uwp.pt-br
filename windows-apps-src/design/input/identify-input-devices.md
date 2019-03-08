@@ -1,5 +1,5 @@
 ---
-Description: Identify the input devices connected to a Universal Windows Platform (UWP) device and identify their capabilities and attributes.
+Description: Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma Universal do Windows (UWP) e os recursos e atributos.
 title: Identificar dispositivos de entrada
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
@@ -9,16 +9,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d37a830ffd0735d69046aa7e9495cfe6fa943f97
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048493"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57638521"
 ---
 # <a name="identify-input-devices"></a>Identificar dispositivos de entrada
 
 
-Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma Universal do Windows (UWP) e os seus recursos e atributos.
+Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma Universal do Windows (UWP) e os recursos e atributos.
 
 > **APIs importantes**: [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 
@@ -27,7 +27,7 @@ Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma
 
 O namespace [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contém a classe [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626) usada para recuperar as propriedades expostas por um ou mais mouses conectados. Crie um novo objeto **MouseCapabilities** e obtenha as propriedades que interessam a você.
 
-**Observação**os valores retornados pelas propriedades abordadas aqui são baseados em todos os mouses detectados: as propriedades Boolianas retornam não zero se pelo menos um mouse der suporte a um recurso específico e as propriedades numéricas retornarem o valor máximo exposto por qualquer uma mouse.
+**Observação**  os valores retornados pelas propriedades discutidas aqui se baseiam em todos os ratos detectados: As propriedades Boolianas de retorno diferente de zero se pelo menos um mouse dá suporte a uma funcionalidade específica e propriedades numéricas retornam o valor máximo exposto por qualquer um mouse.
 
  
 
@@ -65,7 +65,7 @@ private void GetKeyboardProperties()
 
 O namespace [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contém a classe [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644) usada para recuperar se um digitalizador de toque estiver conectado. Basta criar um novo objeto **TouchCapabilities** e obter as propriedades que interessam a você.
 
-**Observação**os valores retornados pelas propriedades abordadas aqui são baseados em todos os digitalizadores detectados: as propriedades Boolianas retornam não zero se pelo menos um digitalizador der suporte a um recurso específico e as propriedades numéricas retornarem o valor máximo exposto por um digitalizador.
+**Observação**  os valores retornados pelas propriedades discutidas aqui se baseiam em todos os digitalizadores de toque detectado: As propriedades Boolianas de retorno diferente de zero se pelo menos um digitalizador dá suporte a uma funcionalidade específica e propriedades numéricas retornam o valor máximo exposto por qualquer um digitalizador.
 
  
 
@@ -85,7 +85,7 @@ private void GetTouchProperties()
 
 O namespace [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contém a classe [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) usada para recuperar se um dispositivo detectado der suporte à entrada de ponteiro (toque, touchpad, mouse ou caneta). Basta criar um novo objeto **PointerDevice** e obter as propriedades que interessam a você.
 
-**Observação**os valores retornados pelas propriedades abordadas aqui são baseados em todos os dispositivos de ponteiro detectados: as propriedades Boolianas retornam não zero se pelo menos um dispositivo dá suporte a um recurso específico e as propriedades numéricas retornarem o valor máximo exposto por qualquer dispositivo de ponteiro.
+**Observação**  os valores retornados pelas propriedades discutidas aqui são com base em todos os dispositivos detectados ponteiro: As propriedades Boolianas de retorno diferente de zero se pelo menos um dispositivo dá suporte a uma funcionalidade específica e propriedades numéricas retornam o valor máximo exposto por qualquer dispositivo de um ponteiro.
 
 O código a seguir usa uma tabela para exibir as propriedades e valores de cada dispositivo de ponteiro.
 
@@ -178,12 +178,12 @@ private void GetPointerDevices()
 
 
 **Exemplos**
-* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Exemplo do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
 
-**Exemplos de arquivo-morto**
-* [Entrada: exemplo de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+**Amostras de arquivo-morto**
+* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
  
 
  

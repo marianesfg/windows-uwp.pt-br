@@ -1,5 +1,5 @@
 ---
-Description: Lists display and enable interaction with collection-based content.
+Description: Listas são exibidas e permitem a interação com conteúdo baseado em coleção.
 title: Listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
@@ -13,11 +13,11 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: eb9c600e58be04d8ce967eb119777d6746507fbe
-ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004582"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636361"
 ---
 # <a name="lists"></a>Listas
 
@@ -30,14 +30,14 @@ Listas são exibidas e permitem interações com conteúdo baseado em coleção.
 
 Diretrizes de design, recursos e exemplos são fornecidos para cada padrão de lista.
 
-> **APIs importantes**: [classe ListView](https://msdn.microsoft.com/library/windows/apps/br242878), [classe GridView](https://msdn.microsoft.com/library/windows/apps/br242705), [classe ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348)
+> **APIs importantes**: [Classe ListView](https://msdn.microsoft.com/library/windows/apps/br242878), [classe GridView](https://msdn.microsoft.com/library/windows/apps/br242705), [classe ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348)
 
 
 > <div id="main">
-> <strong>Windows 10 Fall Creators Update - Mudança de comportamento</strong>
+> <strong>Windows 10 Fall Creators Update - alteração de comportamento</strong>
 > </div>
 > Por padrão, em vez de realizar uma seleção, a caneta ativa agora fará rolagem/movimento panorâmico em listas em aplicativos UWP (como toque, touchpad e caneta passiva).
-> Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, consulte o tópico de referência de API para a <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">Classe ScrollViewer</a>.
+> Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, consulte o tópico de referência de API para o <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer classe</a>.
 
 ## <a name="list-views"></a>Modos de exibição de lista
 
@@ -76,15 +76,15 @@ Veja uma exibição de lista simples que mostra dados agrupados em um telefone.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="listview-and-gridview.md">Exibição de lista e exibição de grade</a></p></td>
+<td align="left"><p><a href="listview-and-gridview.md">Exibição de lista e o modo de exibição de grade</a></p></td>
 <td align="left"><p>Conheça as noções básicas do uso de uma exibição de lista ou grade em seu aplicativo.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="item-containers-templates.md">Contêineres e modelos de itens</a></p></td>
+<td align="left"><p><a href="item-containers-templates.md">Modelos e contêineres de itens</a></p></td>
 <td align="left"><p>Os itens exibidos em uma lista ou grade podem desempenhar uma função importante na aparência geral do seu aplicativo. Modifique modelos de controle e modelos de dados para definir a aparência dos itens e deixar seu aplicativo com uma ótima aparência.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="item-templates-listview.md">Modelos de item para visualização de lista</a></p></td>
+<td align="left"><p><a href="item-templates-listview.md">Modelos de item para exibição de lista</a></p></td>
 <td align="left"><p>Use esses exemplos de modelos de item para uma ListView para obter a aparência de tipos de app comuns.</p></td>
 </tr>
 <tr class="even">
@@ -92,11 +92,11 @@ Veja uma exibição de lista simples que mostra dados agrupados em um telefone.
 <td align="left"><p>As listas invertidas têm novos itens adicionados na parte inferior, como em um aplicativo de chat. Siga estas orientações para usar uma lista invertida em seu aplicativo.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="pull-to-refresh.md">Puxar para atualizar</a></p></td>
+<td align="left"><p><a href="pull-to-refresh.md">Pull para atualizar</a></p></td>
 <td align="left"><p>O padrão puxar para atualizar permite a um usuário extrair uma lista de dados com toque para recuperar mais dados. Use estas orientações para implementar esse padrão em sua exibição de lista.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="nested-ui.md">Interface do usuário aninhada</a></p></td>
+<td align="left"><p><a href="nested-ui.md">Interface de usuário aninhado</a></p></td>
 <td align="left"><p>Interface do usuário aninhada é uma interface do usuário (IU) que expõe controles acionáveis colocados dentro de um contêiner que o usuário também pode usar. Por exemplo, você pode ter um item de exibição de lista que contém um botão e o usuário pode selecionar o item de lista ou pressionar o botão aninhado dentro dele. Siga estas práticas recomendadas para oferecer a melhor experiência da interface do usuário aninhada para seus usuários.</p></td>
 </tr>
 </tbody>
@@ -143,19 +143,19 @@ Um modo de exibição de grade é a solução ideal para uma biblioteca de conte
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="listview-and-gridview.md">Exibição de lista e exibição de grade</a></p></td>
+<td align="left"><p><a href="listview-and-gridview.md">Exibição de lista e o modo de exibição de grade</a></p></td>
 <td align="left"><p>Conheça as noções básicas do uso de uma exibição de lista ou grade em seu aplicativo.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="item-containers-templates.md">Contêineres e modelos de itens</a></p></td>
+<td align="left"><p><a href="item-containers-templates.md">Modelos e contêineres de itens</a></p></td>
 <td align="left"><p>Os itens exibidos em uma lista ou grade podem desempenhar uma função importante na aparência geral do seu aplicativo. Modifique modelos de controle e modelos de dados para definir a aparência dos itens e deixar seu aplicativo com uma ótima aparência.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="item-templates-gridview.md">Modelos de item para visualização de grade</a></p></td>
+<td align="left"><p><a href="item-templates-gridview.md">Modelos de item para exibição de grade</a></p></td>
 <td align="left"><p>Use esses exemplos de modelos de item para uma GridView para obter a aparência de tipos de app comuns.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="nested-ui.md">Interface do usuário localizada</a></p></td>
+<td align="left"><p><a href="nested-ui.md">Interface de usuário aninhado</a></p></td>
 <td align="left"><p>Interface do usuário aninhada é uma interface do usuário (IU) que expõe controles acionáveis colocados dentro de um contêiner que o usuário também pode usar. Por exemplo, você pode ter um item de exibição de lista que contém um botão e o usuário pode selecionar o item de lista ou pressionar o botão aninhado dentro dele. Siga estas práticas recomendadas para oferecer a melhor experiência da interface do usuário aninhada para seus usuários.</p></td>
 </tr>
 </tbody>
@@ -229,9 +229,9 @@ O modo de seleção permite que os usuários selecionem e executem ações em um
 
 Há três modos de seleção diferentes:
 
--   Única: o usuário pode selecionar apenas um item de cada vez.
--   Múltipla: o usuário pode selecionar vários itens sem usar um modificador.
--   Estendida: o usuário pode selecionar vários itens com um modificador, por exemplo, segurando a tecla SHIFT.
+-   Único: O usuário pode selecionar apenas um item por vez.
+-   Vários: O usuário pode selecionar vários itens sem usar um modificador.
+-   Estendido: O usuário pode selecionar vários itens com um modificador, como manter a tecla SHIFT pressionada.
 
 Tocar em qualquer lugar em um item seleciona-o. Tocar na ação da barra de comandos afeta todos os itens selecionados. Se nenhum item estiver selecionado, as ações da barra de comandos devem estar inativas, com exceção de "Selecionar Tudo".
 
@@ -269,7 +269,7 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 - [Imagens em miniatura](../../files/thumbnails.md)
 
 **Para desenvolvedores**
-- [Classe ListView](https://msdn.microsoft.com/library/windows/apps/br242878)
-- [Classe GridView](https://msdn.microsoft.com/library/windows/apps/br242705)
+- [Classe de ListView](https://msdn.microsoft.com/library/windows/apps/br242878)
+- [Classe de GridView](https://msdn.microsoft.com/library/windows/apps/br242705)
 - [Classe ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348)
-- [Classe ListBox](https://msdn.microsoft.com/library/windows/apps/br242868)
+- [Classe de caixa de listagem](https://msdn.microsoft.com/library/windows/apps/br242868)

@@ -1,5 +1,5 @@
 ---
-Description: When a resource is requested, there may be several candidates that match the current resource context to some degree. The Resource Management System will analyze all of the candidates and determine the best candidate to return. This topic describes that process in detail and gives examples.
+Description: Quando um recurso é solicitado, pode haver vários candidatos que correspondam em um certo grau ao contexto de recurso atual. O Sistema de Gerenciamento de Recursos analisará todos os candidatos e determinará o melhor deles para ser retornado. Este tópico descreve detalhadamente esse processo e fornece exemplos.
 title: Como o Sistema de Gerenciamento de Recursos faz a correspondência dos recursos e os escolhe
 template: detail.hbs
 ms.date: 10/23/2017
@@ -7,20 +7,20 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: de34411d9c7d226857214472e691dd6b41f10a18
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943456"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593881"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Como o Sistema de Gerenciamento de Recursos faz a correspondência dos recursos e os escolhe
-Quando um recurso é solicitado, pode haver vários candidatos que correspondam em um certo grau ao contexto de recurso atual. O Sistema de Gerenciamento de Recursos irá analisar todos os candidatos e determinar o melhor deles para ser retornado. Para isso, todos os qualificadores são levados em consideração para classificar todos os candidatos.
+Quando um recurso é solicitado, pode haver vários candidatos que correspondam em um certo grau ao contexto de recurso atual. O Sistema de Gerenciamento de Recursos analisará todos os candidatos e determinará o melhor deles para ser retornado. Para isso, todos os qualificadores são levados em consideração para classificar todos os candidatos.
 
 Nesse processo de classificação, os diferentes qualificadores recebem prioridades distintas: o idioma tem o maior impacto sobre a classificação geral, seguido por contraste, depois escala e assim por diante. Para cada qualificador, qualificadores candidatos são comparados com o valor do qualificador de contexto para determinar uma qualidade de correspondência. A forma como a comparação é feita depende do qualificador.
 
 Para obter detalhes específicos sobre como a correspondência de marca de idioma é feita, consulte [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](how-rms-matches-lang-tags.md).
 
-Para alguns qualificadores, como escala e contraste, há sempre um grau mínimo de correspondência. Por exemplo, um candidato qualificado para "scale-100"corresponde a um contexto "scale-400" certo grau, embora não, bem como um candidato qualificado como"scale-200"ou (para uma correspondência perfeita)"scale-400".
+Para alguns qualificadores, como escala e contraste, há sempre um grau mínimo de correspondência. Por exemplo, um candidato qualificados para "scale-100" corresponde a um contexto de "escala-400" até certo ponto pequeno, embora não, bem como um candidato qualificados para "scale-200" ou (para uma correspondência perfeita) "scale-400".
 
 No entanto, para outros qualificadores, como idioma ou região de residência, é possível ter uma comparação de não correspondência (bem como graus de correspondência). Por exemplo, um candidato qualificado para idioma como "en-US" é uma correspondência parcial de um contexto "en-GB", mas um candidato qualificado como "fr" não é uma correspondência. Da mesma forma, um candidato qualificado para região de residência como "155" (Europa Ocidental) corresponde relativamente bem ao contexto de um usuário cuja configuração de região de residência seja "FR". Porém, um candidato qualificado como "US" não oferece nenhuma correspondência.
 
@@ -131,8 +131,8 @@ O Sistema de Gerenciamento de Recursos usa o qualificador de contexto de priorid
 de/images/contrast-standard/logo.jpg
 ```
 
-## <a name="important-apis"></a>APIs importantes
+## <a name="important-apis"></a>APIs Importantes
 * [NamedResource.ResolveAll](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)
+* [Compilar recursos manualmente com MakePri.exe](compile-resources-manually-with-makepri.md)

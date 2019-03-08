@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, conquistas
 ms.localizationpriority: medium
 ms.openlocfilehash: 23a99c637dfd466ba21169626315803dec60e4e8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945162"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607811"
 ---
 # <a name="get-xbox-live-achievements-data"></a>Obter dados de conquistas do Xbox Live
 
-Use este método na API de análise da Microsoft Store para obter o número de clientes que desbloquearam cada conquista para seu [jogo habilitado para Xbox Live](../xbox-live/index.md) durante o dia mais recente para o qual os dados de conquista estão disponíveis, os 30 dias anteriores a esse dia e o tempo de vida total do seu jogo até esse dia. Essas informações também estão disponíveis no [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
+Use este método na API de análise da Microsoft Store para obter o número de clientes que desbloquearam cada conquista para seu [jogo habilitado para Xbox Live](../xbox-live/index.md) durante o dia mais recente para o qual os dados de conquista estão disponíveis, os 30 dias anteriores a esse dia e o tempo de vida total do seu jogo até esse dia. Essas informações também estão disponíveis na [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
 
 > [!IMPORTANT]
 > Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](../xbox-live/developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
@@ -24,7 +24,7 @@ Use este método na API de análise da Microsoft Store para obter o número de c
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](access-analytics-data-using-windows-store-services.md#prerequisites) para a API de análise da Microsoft Store.
-* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
 ## <a name="request"></a>Solicitação
 
@@ -40,7 +40,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
@@ -48,8 +48,8 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A [ID da Store](in-app-purchases-and-trials.md#store-ids) do jogo para o qual você deseja recuperar os dados de conquistas do Xbox Live.  |  Sim  |
-| metricType | string | Uma sequência que especifica o tipo de dados de análise do Xbox Live para recuperar. Para este método, especifique o valor **achievements**.  |  Sim  |
+| applicationId | cadeia de caracteres | A [ID da Store](in-app-purchases-and-trials.md#store-ids) do jogo para o qual você deseja recuperar os dados de conquistas do Xbox Live.  |  Sim  |
+| metricType | cadeia de caracteres | Uma sequência que especifica o tipo de dados de análise do Xbox Live para recuperar. Para este método, especifique o valor **achievements**.  |  Sim  |
 | top | int | O número de linhas de dados a serem retornadas na solicitação. O valor máximo e o valor padrão; se não forem especificados, será 10.000. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
 | skip | int | O número de linhas a serem ignoradas na consulta. Use este parâmetro para percorrer grandes conjuntos de dados. Por exemplo, top=10000 e skip=0 recuperam as primeiras 10.000 linhas de dados, top=10000 e skip=10000 recuperam as próximas 10.000 linhas de dados e assim por diante. |  Não  |
 
@@ -68,8 +68,8 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descrição                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | array  | Uma matriz de objetos que contem dados sobre cada conquista em seu jogo. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir.                                                                                                                      |
-| @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 100, mas houver mais de 100 linhas de dados para a consulta. |
+| Valor      | matriz  | Uma matriz de objetos que contem dados sobre cada conquista em seu jogo. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir.                                                                                                                      |
+| @nextLink  | cadeia de caracteres | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 100, mas houver mais de 100 linhas de dados para a consulta. |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.  |
 
 
@@ -77,10 +77,10 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 
 | Valor               | Tipo   | Descrição                           |
 |---------------------|--------|-------------------------------------------|
-| applicationId       | string | A ID da Store do jogo do qual você está recuperando dados de conquistas.     |
-| reportDateTime     | string |  A data para os dados de conquistas.    |
+| applicationId       | cadeia de caracteres | A ID da Store do jogo do qual você está recuperando dados de conquistas.     |
+| reportDateTime     | cadeia de caracteres |  A data para os dados de conquistas.    |
 | achievementId          | number |  A ID da conquista. |
-| achievementName           | string | O nome da conquista.  |
+| achievementName           | cadeia de caracteres | O nome da conquista.  |
 | pontuação do jogador           | number |  A recompensa de pontuação do jogador para a conquista.  |
 | dailyUnlocks           | number |  O número de clientes que desbloquearam a conquista no dia especificado por *reportDateTime*.  |
 | monthlyUnlocks              | number |  O número de clientes que desbloquearam a conquista nos 30 dias anteriores ao dia especificado por *reportDateTime*.   |
@@ -132,9 +132,9 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Acessar dados analíticos usando serviços da Microsoft Store](access-analytics-data-using-windows-store-services.md)
+* [Dados de análise de acesso usando os serviços da Microsoft Store](access-analytics-data-using-windows-store-services.md)
 * [Obter dados de análise do Xbox Live](get-xbox-live-analytics.md)
 * [Obter dados de integridade do Xbox Live](get-xbox-live-health-data.md)
-* [Obter dados do Hub de Jogos Xbox Live](get-xbox-live-game-hub-data.md)
-* [Obter dados de clube do Xbox Live](get-xbox-live-club-data.md)
-* [Obter dados de multijogador do Xbox Live](get-xbox-live-multiplayer-data.md)
+* [Obter dados de Hub de jogo do Xbox Live](get-xbox-live-game-hub-data.md)
+* [Obter dados do clube Xbox Live](get-xbox-live-club-data.md)
+* [Obter dados para múltiplos jogadores Xbox Live](get-xbox-live-multiplayer-data.md)

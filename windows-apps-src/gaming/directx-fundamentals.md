@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogo, directx, carregar, rasterizar, malha, bitmap, 2D, 3D
 ms.localizationpriority: medium
 ms.openlocfilehash: afd08d62182bd0980f43ce1c4578c1181f8a6d2f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925147"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613741"
 ---
 # <a name="fundamentals-of-directx-programming"></a>Conceitos básicos da programação no DirectX
 
@@ -38,19 +38,19 @@ O tópico sobre carregar recursos em seu jogo DirectX orienta você pelas etapas
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="working-with-2d-graphics-in-your-directx-game.md">Elementos gráficos 2D para jogos DirectX</a></p></td>
+<td align="left"><p><a href="working-with-2d-graphics-in-your-directx-game.md">Gráficos em 2D para jogos do DirectX</a></p></td>
 <td align="left"><p>Crie elementos gráficos 2D usando o DirectX.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/windows/uwp/graphics-concepts/index">Guia de aprendizagem de elementos gráficos do Direct3D</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/windows/uwp/graphics-concepts/index">Guia de aprendizado de gráficos do Direct3D</a></p></td>
 <td align="left"><p>Entenda os conceitos de elementos gráficos do Direct3D.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="an-introduction-to-3d-graphics-with-directx.md">Elementos gráficos 3D básicos para jogos DirectX</a></p></td>
+<td align="left"><p><a href="an-introduction-to-3d-graphics-with-directx.md">Básica de gráficos 3D para jogos do DirectX</a></p></td>
 <td align="left"><p>Crie elementos gráficos 3D do DirectX.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="load-a-game-asset.md">Carregar recursos no jogo DirectX</a></p></td>
+<td align="left"><p><a href="load-a-game-asset.md">Recursos de carga em seus jogos em DirectX</a></p></td>
 <td align="left"><p>Carregue malhas no jogo DirectX.</p></td>
 </tr>
 </tbody>

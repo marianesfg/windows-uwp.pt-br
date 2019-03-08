@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ecb511fad1aa4e1605d83090a5e4e8d98efff1be
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929722"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620791"
 ---
 # <a name="balancing-style-and-consistency"></a>Equilibrando estilo e consistência
 
  
 
-> Observação: Este artigo é um rascunho inicial para Windows 10 RS2. Os nomes, a terminologia e a funcionalidade dos recursos não são finais.
+> Observação: Este artigo é um esboço inicial para Windows 10 RS2. Os nomes, a terminologia e a funcionalidade dos recursos não são finais.
 
 Ao projetar um produto, você é o porta-voz do consumidor. Todos nos esforçamos para criar o melhor design, apropriado e fiel à nossa intenção. Este artigo explora o equilíbrio entre seguir convenções para a criação de uma experiência de usuário consistente, versus a criação de recursos e experiências únicas que diferenciam seu aplicativo. 
 
@@ -56,20 +56,20 @@ Neste modelo, as camadas base fornecem um pilar de consistência testado e aprov
 4. A camada quatro é onde você define a personalidade da sua marca. Que elementos de design exclusivos reforçam sua marca e diferenciam-na da concorrência? Também é aqui que você adapta seu aplicativo para diferentes usuários finais. O seu aplicativo é para jogadores, para profissionais da informação ou estudantes e educadores de nível primário? Quais são as necessidades únicas desses diferentes consumidores, podemos fazer o design funcionar melhor para eles? Não basta fazer o mesmo, continue buscando criar mais valor para seus diferentes consumidores.  
 
 
-## <a name="design-principles"></a>Princípios do design
+## <a name="design-principles"></a>Princípios de design
 Para utilizar esse modelo efetivamente, precisamos de um conjunto de princípios de design que nos ajude a realizar as trocas corretas. Aqui estão nossos princípios de trabalho de consistência de design:
 
-**Se parecer o mesmo, faça com que ele seja o mesmo**
+**Se ele tem a mesma aparência, torná-lo funcionar do mesmo**
 -   Quando o usuário visualiza uma caixa de texto, ou o controle de hambúrguer, ele provavelmente espera que o comportamento seja o mesmo em dispositivos diferentes. Se você tiver uma boa razão para se desviar de um comportamento estabelecido, defina as expectativas dos usuários ao fazer com que ele se pareça diferente.
 
-**Se um elemento se parece muito com outro elemento ou convenção existente, considere fazê-lo igual**
+**Se um elemento parece muito semelhante a um elemento existente ou uma convenção, considere a possibilidade de fazer o mesmo**
 -   Você precisa de um ícone de "novo documento". Por que conceber um novo que é apenas um pouco diferente, quando você pode usar um que já foi reconhecido pelo usuário.
 
-**Usabilidade supera consistência**
+**Usabilidade prevalece sobre consistência**
 -   É melhor ser utilizável do que consistente. Em alguns casos, você pode precisar desenvolver novos controles ou comportamentos para auxiliar a usabilidade. Utilizar o telefone com apenas uma mão traz desafios únicos. Assim como trabalhar com uma tela de 80". Um bom design faz com que o usuário se sinta um especialista. 
 
-**O envolvimento é importante**
+**Contrato é importante**
 -   Não deixe ele monótono. Se tudo é plano, com a mesma cor, cheio de quadrados, será que nossos consumidores irão querer pegar e usar? Crie satisfação. Introduza novos elementos que surpreendam sem comprometer a capacidade de aprendizado. 
 
-**Comportamentos evoluem**
+**Comportamentos de evoluir**
 -   Essa é a parte complicada: à medida que a indústria evolui, novas convenções são estabelecidas. É possível que comportamentos atuais desapareçam, e nossos comportamentos consistentes precisarem se adaptar a novos padrões. Veja a ação apertar e fazer zoom. Era de costume prever a aplicação de zoom através dos +/- da interface de usuário, no entanto, na interface de usuário moderna espera-se o zoom através da pinça. Observe os paradigmas de novas experiências, e evolua. 

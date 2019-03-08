@@ -1,23 +1,23 @@
 ---
 ms.assetid: D20C8E01-4E78-4115-A2E8-07BB3E67DDDC
-description: Este artigo mostra como acessar e usar a lâmpada do dispositivo, se houver uma. A funcionalidade da lâmpada é gerenciada separadamente da câmera e do flash da câmera do dispositivo.
+description: Este artigo mostra como acessar e usar a lâmpada do dispositivo, se houver uma. A funcionalidade da lâmpada é gerenciada separadamente da funcionalidade da câmera e do flash da câmera do dispositivo.
 title: Lanterna independente da câmera
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fd69900995a51af806c99b25aae43149d6e30a7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919847"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622601"
 ---
 # <a name="camera-independent-flashlight"></a>Lanterna independente da câmera
 
 
 
-Este artigo mostra como acessar e usar a lâmpada do dispositivo, se houver uma. A funcionalidade da lâmpada é gerenciada separadamente da câmera e do flash da câmera do dispositivo. Além de oferecer uma referência para a lâmpada e o ajuste de suas configurações, este artigo também mostra como liberar o recurso da lâmpada corretamente quando ela não estiver em uso e como detectar quando a disponibilidade da lâmpada muda caso esteja sendo usada por outro aplicativo.
+Este artigo mostra como acessar e usar a lâmpada do dispositivo, se houver uma. A funcionalidade da lâmpada é gerenciada separadamente da funcionalidade da câmera e do flash da câmera do dispositivo. Além de oferecer uma referência para a lâmpada e o ajuste de suas configurações, este artigo também mostra como liberar o recurso da lâmpada corretamente quando ela não estiver em uso e como detectar quando a disponibilidade da lâmpada muda caso esteja sendo usada por outro aplicativo.
 
 ## <a name="get-the-devices-default-lamp"></a>Obter a lâmpada padrão do dispositivo
 

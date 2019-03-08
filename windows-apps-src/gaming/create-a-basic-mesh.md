@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, jogos, malha, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: d3b6717c0b2d9d85e9c81e78fcaa1df1abbea23b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934621"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595641"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>Criar e exibir uma malha básica
 
@@ -19,7 +19,7 @@ ms.locfileid: "8934621"
 
 Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos para representar objetos e superfícies do jogo. As listas de vértices que compõem a estrutura desses objetos e superfícies poligonais são chamadas de malhas. Aqui, vamos criar uma malha básica para um objeto cúbico e fornecê-lo no pipeline de sombreador para renderização e exibição.
 
-> **Importante**  o código de exemplo incluído aqui usa tipos (como Xmfloat3 e Xmfloat4x4) e métodos embutidos declarados no Directxmath. Se você estiver recortando e colando esse código, \#include &lt;DirectXMath.h&gt; no seu projeto.
+> **Importante**    o código de exemplo incluído aqui usa tipos (como DirectX::XMFLOAT3 e DirectX::XMFLOAT4X4) e métodos embutidos declarados em DirectXMath.h. Se você estiver recortar e colar esse código \#incluem &lt;DirectXMath.h&gt; em seu projeto.
 
  
 
@@ -33,7 +33,7 @@ Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos 
 ### <a name="prerequisites"></a>Pré-requisitos
 
 -   Conhecimento básico de álgebra linear e sistemas de coordenadas 3D
--   Um Visual Studio 2015 ou posterior modelo Direct3D
+-   Um Visual Studio 2015 ou o modelo de Direct3D posterior
 
 ## <a name="instructions"></a>Instruções
 
@@ -46,7 +46,7 @@ Se você preferir uma explicação mais detalhada desses conceitos, confira este
 <iframe src="https://channel9.msdn.com/Series/Introduction-to-C-and-DirectX-Game-Development/03/player#time=7m39s:paused" width="600" height="338" allowFullScreen frameBorder="0"></iframe>
 
 
-### <a name="step-1-construct-the-mesh-for-the-model"></a>Etapa 1: construir a malha do modelo
+### <a name="step-1-construct-the-mesh-for-the-model"></a>Etapa 1: Construir a malha para o modelo
 
 Na maioria dos jogos, a malha de um objeto de jogo é carregada de um arquivo que contém os dados de vértice específicos. A ordenação desses vértices depende do aplicativo, mas eles geralmente são serializados como faixas ou leques. Os dados de vértice podem se originar em qualquer fonte de software ou podem ser criados manualmente. Cabe ao seu jogo interpretar os dados de maneira que o sombreador de vértice possa efetivamente processá-los.
 
@@ -75,7 +75,7 @@ Em cada emparelhamento entre parênteses, o segundo grupo de valores DirectX::XM
 
 Portanto, você tem 8 vértices, cada um com uma cor específica. Cada vértice/emparelhamento entre parênteses representa os dados completos de um vértice, no nosso exemplo. Ao especificar o buffer do vértices, tenha em mente esse layout específico. Nós fornecemos esse layout de entrada para o sombreador de vértice, para que ele possa entender os seus dados de vértice.
 
-### <a name="step-2-set-up-the-input-layout"></a>Etapa 2: configurar o layout de entrada
+### <a name="step-2-set-up-the-input-layout"></a>Etapa 2: Configurar o layout de entrada
 
 Agora, os vértices estão na memória. O dispositivo gráfico, porém, tem sua própria memória e você usa o Direct3D para acessá-la. Para que os seus dados sejam disponibilizados no dispositivo gráfico para processamento, é preciso limpar o caminho e deixá-lo como era: declare como os dados de vértice são organizados para que o dispositivo gráfico possa interpretá-los quando eles forem obtidos do seu jogo. Para isso, use [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575).
 
@@ -100,25 +100,25 @@ m_d3dDevice->CreateInputLayout(
 
 Nesse código, você define um layout para os vértices; especificamente, quais dados cada elemento da lista de vértices contém. Aqui, na **basicVertexLayoutDesc**, são especificados dois componentes de dados:
 
--   **POSITION**: uma semântica HLSL para dados de posição fornecidos a um sombreador. Nesse código, é um DirectX::XMFLOAT3 ou, mais especificamente, uma estrutura com 3 valores de ponto de flutuação de 32 bits correspondente a uma coordenada 3D (x, y, z). Também será possível usar um float4 se você fornecer a coordenada homogênea "w" e, nesse caso, especifique DXGI\_FORMAT\_R32G32B32A32\_FLOAT. A escolha de um DirectX::XMFLOAT3 ou de um float4 depende das necessidades inerentes ao jogo. Portanto, verifique se os dados de vértice da sua malha correspondem corretamente ao formato que você usa.
+-   **POSIÇÃO**: Essa é uma semântica para os dados de posição fornecidos para um sombreador HLSL. Nesse código, é um DirectX::XMFLOAT3 ou, mais especificamente, uma estrutura com 3 valores de ponto de flutuação de 32 bits correspondente a uma coordenada 3D (x, y, z). Você também pode usar um float4 se você está fornecendo a coordenada de "w" homogênea e, nesse caso, você pode especificar DXGI\_formato\_R32G32B32A32\_FLOAT. A escolha de um DirectX::XMFLOAT3 ou de um float4 depende das necessidades inerentes ao jogo. Portanto, verifique se os dados de vértice da sua malha correspondem corretamente ao formato que você usa.
 
     Cada valor de coordenada é expresso como um valor de ponto de flutuação entre -1 e 1 no espaço de coordenadas do objeto. Quando o sombreador de vértice é concluído, o vértice transformado está no espaço de projeção de exibição (perspectiva corrigida) homogênea.
 
     "Porém, o valor de enumeração indica RGB, não XYZ!" você observa. Muito bem! Nos dois casos de dados de cor e dados de coordenada, você geralmente usa 3 ou 4 valores de componentes, então, por que não usar o mesmo formato em ambos? A semântica HLSL, não o nome do formato, indica como o sombreador trata os dados.
 
--   **COLOR**: uma semântica HLSL para dados de cor. Como em **POSITION**, ela consiste em três valores de ponto de flutuação de 32 bits (DirectX::XMFLOAT3). Cada valor contém um componente de cor: vermelho (r), azul (b) ou verde (g), expressos como um número flutuante entre 0 e 1.
+-   **COLOR**: Essa é um semântica para dados de cores do HLSL. Como em **POSITION**, ela consiste em três valores de ponto de flutuação de 32 bits (DirectX::XMFLOAT3). Cada valor contém um componente de cor: vermelho (r), azul (b) ou verde (g), expressos como um número flutuante entre 0 e 1.
 
     Os valores **COLOR** são tipicamente retornados como um valor RGBA de componente 4 no final do pipeline de sombreador. Para esse exemplo, você definirá o valor alfabético "A" como 1.0 (opacidade máxima) no pipeline de sombreador para todos os pixels.
 
-Para obter uma lista completa de formatos, consulte [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059). Para ver uma lista completa de semânticas HLSL, consulte [Semânticas](https://msdn.microsoft.com/library/windows/desktop/bb509647).
+Para obter uma lista completa de formatos, consulte [ **DXGI\_formato**](https://msdn.microsoft.com/library/windows/desktop/bb173059). Para ver uma lista completa de semânticas HLSL, consulte [Semânticas](https://msdn.microsoft.com/library/windows/desktop/bb509647).
 
 Chame [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) e crie o layout de entrada no dispositivo Direct3D. Agora, você precisa criar um buffer que possa realmente manter os dados.
 
-### <a name="step-3-populate-the-vertex-buffers"></a>Etapa 3: popular os buffers de vértices
+### <a name="step-3-populate-the-vertex-buffers"></a>Etapa 3: Popule os buffers de vértice
 
 Os buffers de vértices contêm a lista de vértices de cada triângulo da malha. Cada vértice deve ser exclusivo nessa lista. Em nosso exemplo, há 8 vértices para o cubo. O sombreador de vértice é executado no dispositivo gráfico e lê o buffer de vértices, e interpreta os dados com base no layout de entrada especificado na etapa anterior.
 
-No próximo exemplo, você fornecerá uma descrição e um sub-recurso para o buffer, o que informará o Direct3D sobre vários aspectos do mapeamento físico dos dados de vértice e como tratá-lo na memória, no dispositivo gráfico. Isso é necessário porque você usa um [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) genérico, que pode conter qualquer coisa! As estruturas [**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) e [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) são fornecidas para garantir que o Direct3D entenda o layout da memória física do buffer, incluindo o tamanho de cada elemento de vértice no buffer, e também o tamanho máximo da lista de vértices. Aqui, também é possível controlar o acesso à memória do buffer e a forma como ela é partilhada, mas isso está um pouco além do escopo deste tutorial.
+No próximo exemplo, você fornecerá uma descrição e um sub-recurso para o buffer, o que informará o Direct3D sobre vários aspectos do mapeamento físico dos dados de vértice e como tratá-lo na memória, no dispositivo gráfico. Isso é necessário porque você usa um [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) genérico, que pode conter qualquer coisa! O [ **D3D11\_BUFFER\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) e [ **D3D11\_SUBRESOURCE\_dados** ](https://msdn.microsoft.com/library/windows/desktop/ff476220)estruturas são fornecidas para garantir que o Direct3D compreenda o layout de memória física do buffer, incluindo o tamanho de cada elemento de vértice no buffer, bem como o tamanho máximo da lista de vértice. Aqui, também é possível controlar o acesso à memória do buffer e a forma como ela é partilhada, mas isso está um pouco além do escopo deste tutorial.
 
 Depois de configurar o buffer, você chama [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) para criá-lo efetivamente. Claro, se você tiver mais de um objeto, crie buffers para cada modelo exclusivo.
 
@@ -147,13 +147,13 @@ m_d3dDevice->CreateBuffer(
 
 Vértices carregados. Mas, qual é a ordem de processamento desses vértices? Esse aspecto é tratado quando você fornece uma lista de índices para os vértices: a ordenação desses índices é a ordem em que o sombreador de vértice os processa.
 
-### <a name="step-4-populate-the-index-buffers"></a>Etapa 4: popular os buffers de índices
+### <a name="step-4-populate-the-index-buffers"></a>Etapa 4: Popule os buffers de índice
 
 Agora, forneça uma lista dos índices de cada um dos vértices. Esses índices correspondem à posição do vértice no buffer de vértices, começando com 0. Para ajudar você a visualizar isso, considere que cada vértice exclusivo na sua malha tem um número exclusivo atribuído a ele, como uma ID. Essa ID é a posição inteira do vértice no buffer de vértices.
 
 ![Um cubo com oito vértices numerados](images/cube-mesh-1.png)
 
-No nosso exemplo de cubo, há 8 vértices, os quais criam 6 quadrupletos para os lados. Você divide os quadrupletos em triângulos, para um total de 12 triângulos que usam nossos 8 vértices. Nos 3 vértices por triângulo, há 36 entradas no buffer de índices. No nosso exemplo, esse padrão de índice é conhecido como uma lista de triângulos e você a indica para o Direct3D como uma **D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLELIST**, ao definir a topologia primitiva.
+No nosso exemplo de cubo, há 8 vértices, os quais criam 6 quadrupletos para os lados. Você divide os quadrupletos em triângulos, para um total de 12 triângulos que usam nossos 8 vértices. Nos 3 vértices por triângulo, há 36 entradas no buffer de índices. Em nosso exemplo, esse padrão de índice é conhecido como uma lista de triângulo e indicá-lo para o Direct3D como uma **D3D11\_PRIMITIVO\_topologia\_TRIANGLELIST** quando você define a topologia primitiva.
 
 Está é, provavelmente, a maneira mais ineficiente de listar índices, pois há muitas redundâncias quando os triângulos compartilham pontos e lados. Por exemplo, quando um triângulo compartilha um lado em uma sombra de losango, você lista 6 índices para os quatro vértices, assim:
 
@@ -162,7 +162,7 @@ Está é, provavelmente, a maneira mais ineficiente de listar índices, pois há
 -   Triângulo 1: \[0, 1, 2\]
 -   Triângulo 2: \[0, 2, 3\]
 
-Em uma topologia de faixa ou leque, você ordena os vértices de forma a eliminar muitos lados redundantes durante a passagem (por exemplo, o lado do índice 0 até o índice 2 da imagem). Para malhas maiores, isso reduz significativamente o número de vezes em que o sombreador de vértice é executado e melhora muito o desempenho. Entretanto, vamos manter isso simples e compatível com a lista de triângulos.
+Em uma topologia de faixa ou o ventilador, você ordenar os vértices de uma maneira que elimina muitos lados redundantes durante a passagem (como o lado do índice 0 para índice 2 na imagem.) Para grandes malhas, isso reduz drasticamente o número de vezes que o sombreador de vértice é executado e melhora significativamente o desempenho. Entretanto, vamos manter isso simples e compatível com a lista de triângulos.
 
 Declare os índices do buffer de vértices de maneira tão simples quanto a topologia da lista de triângulos.
 
@@ -187,11 +187,11 @@ unsigned short cubeIndices[] =
     0, 4, 7 };
 ```
 
-Trinta e seis elementos de índice no buffer indicam redundância em excesso, pois há apenas 8 vértices. Se você optar por eliminar algumas redundâncias e usar outro tipo de lista de vértices, como faixa ou leque, especifique esse tipo ao fornecer um valor [**D3D11\_PRIMITIVE\_TOPOLOGY**](https://msdn.microsoft.com/library/windows/desktop/ff476189) específico para o método [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455).
+Trinta e seis elementos de índice no buffer indicam redundância em excesso, pois há apenas 8 vértices. Se você optar por eliminar alguns das redundâncias e usar um tipo de lista de vértice diferentes, como uma faixa ou um ventilador, você deve especificar esse tipo quando você fornece um determinado [ **D3D11\_PRIMITIVO\_topologia** ](https://msdn.microsoft.com/library/windows/desktop/ff476189) de valor para a [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) método.
 
 Para obter mais informações sobre as diferentes técnicas de lista de índices, consulte [Topologias primitivas](https://msdn.microsoft.com/library/windows/desktop/bb205124).
 
-### <a name="step-5-create-a-constant-buffer-for-your-transformation-matrices"></a>Etapa 5: criar um buffer constante para as matrizes de transformação
+### <a name="step-5-create-a-constant-buffer-for-your-transformation-matrices"></a>Etapa 5: Criar um buffer de constantes para suas matrizes de transformação
 
 Para dar início ao processamento de vértices, você precisa fornecer as matrizes de transformação que serão aplicadas (multiplicadas) em cada vértice, quando ele for executado. Para a maioria dos jogos em 3D, há três delas:
 
@@ -205,7 +205,7 @@ Buffers constantes não são alterados por HLSL. Você pode alterá-los quando o
 
 Neste exemplo, temos apenas a classe que nunca é modificada: os dados DirectX::XMFLOAT4X4 das três matrizes.
 
-> **Observação**  o código de exemplo apresentado aqui usa matrizes principais de colunas. É possível usar matrizes principais de linhas, usando a palavra-chave **row\_major** em HLSL e garantindo que os dados da matriz de origem também sejam principais de linha. O DirectXMath usa matrizes principais de linhas e pode ser usado com matrizes HLSL definidas com a palavra-chave **row\_major**.
+> **Observação**    o código de exemplo apresentado aqui usa matrizes de coluna principal. Você pode usar matrizes de linhas principais em vez disso, usando o **linha\_principais** palavra-chave em HLSL e garantir que a sua fonte de dados de matriz também é linha principal. DirectXMath usa matrizes de linhas principais e pode ser usada diretamente com matrizes HLSL definidas com o **linha\_principais** palavra-chave.
 
  
 
@@ -257,7 +257,7 @@ m_constantBufferData.view = DirectX::XMFLOAT4X4(
              0.00000000f, 0.00000000f,  0.00000000f,  1.00000000f);
 ```
 
-> **Observação**geralmente, você declara a matriz de projeção ao configurar recursos específicos do dispositivo, porque os resultados dessa multiplicação devem corresponder os parâmetros de tamanho atual do visor 2D (que normalmente correspondem com a pixel altura e largura da Exiba). Se isso mudar, dimensione os valores das coordenadas x e y de acordo com as alterações.
+> **Observação**  você geralmente declara a matriz de projeção ao configurar recursos específicos do dispositivo, porque os resultados da multiplicação com ele devem corresponder aos parâmetros de tamanho de visor 2D atual (que geralmente correspondem aos pixel altura e largura da tela). Se isso mudar, dimensione os valores das coordenadas x e y de acordo com as alterações.
 
  
 
@@ -312,7 +312,7 @@ m_d3dDeviceContext->IASetIndexBuffer(
 
 Muito bem! Assembly de entrada concluído. Está tudo pronto para renderização. Vamos acionar o sombreador de vértice.
 
-### <a name="step-6-process-the-mesh-with-the-vertex-shader"></a>Etapa 6: processar a malha com o sombreador de vértice
+### <a name="step-6-process-the-mesh-with-the-vertex-shader"></a>Etapa 6: Processo de malha com o sombreador de vértice
 
 Agora que você tem um buffer de vértices contendo os vértices definidos para a malha e o buffer de índices que define a ordem de processamento dos vértices, envie-os para o sombreador de vértice. O código do sombreador de vértice, expresso como linguagem compilada de sombreador de alto nível, é executado uma vez para ada vértice no buffer de vértices, permitindo que você execute suas transformações por vértice. O resultado final é tipicamente uma projeção 2D.
 
@@ -381,9 +381,9 @@ Está vendo **cbuffer** na parte superior? É o HLSL análogo para o mesmo buffe
 
 **PixelShaderInput** especifica o layout dos dados que são retornados pela função principal do sombreador de vértice. Ao concluir o processamento de um vértice, você retornará uma posição de vértice no espaço de projeção 2D e uma cor usada para iluminação por vértice. A placa gráfica usa a saída de dados do sombreador para calcular os "fragmentos" (pixels possíveis) que deverão ser coloridos quando o sombreador de pixel for executado no próximo estágio do pipeline.
 
-### <a name="step-7-passing-the-mesh-through-the-pixel-shader"></a>Etapa 7: passar a malha pelo sombreador de pixel
+### <a name="step-7-passing-the-mesh-through-the-pixel-shader"></a>Etapa 7: Passando da malha por meio do sombreador de pixel
 
-Nesse estágio do pipeline gráfico, geralmente você executa operações por pixel nas superfícies projetadas visíveis dos objetos. (As pessoas gostam de texturas.) Para fins de amostragem, porém, basta passar isso por meio desse estágio.
+Nesse estágio do pipeline gráfico, geralmente você executa operações por pixel nas superfícies projetadas visíveis dos objetos. (Pessoas, como texturas). Para fins de exemplo, no entanto, você simplesmente passar por meio de neste estágio.
 
 Primeiro, vamos criar uma instância do sombreador de pixel. O sombreador de pixel é executado para cada pixel da projeção 2D do cenário, atribuindo uma cor a esse pixel. Nesse caso, passamos a cor do pixel retornado pela passagem direta do sombreador de vértice.
 
@@ -410,7 +410,7 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 
 Coloque esse código em um arquivo HLSL separado do HLSL de sombreador de vértice (por exemplo, SimplePixelShader.hlsl). Esse código é executado uma vez para cada pixel visível no visor (uma representação na memória da parte da tela em que você está desenhando), o que, nesse caso, mapeia toda a tela. Agora, o pipeline gráfico está totalmente definido.
 
-### <a name="step-8-rasterizing-and-displaying-the-mesh"></a>Etapa 8: rasterizar e exibir a malha
+### <a name="step-8-rasterizing-and-displaying-the-mesh"></a>Etapa 8: Rasterização e exibindo a malha
 
 Vamos executar o pipeline. É fácil: chame [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/bb173565).
 
@@ -447,7 +447,7 @@ Este tópico abrange a criação e a exibição de geometria simples que você m
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Como carregar recursos no jogo em DirectX](load-a-game-asset.md)
+* [Como carregar recursos em seus jogos em DirectX](load-a-game-asset.md)
 
  
 

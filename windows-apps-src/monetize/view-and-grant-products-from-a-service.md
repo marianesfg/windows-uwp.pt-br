@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de coleção da Microsoft Store, API de compra da Microsoft Store, exibir produtos, conceder produtos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0bf85a73cb35044b4be2282c9a13c1e65b836a92
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114502"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604001"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>Gerenciar direitos a produtos de um serviço
 
@@ -19,8 +19,8 @@ Se você tiver um catálogo de aplicativos e complementos, poderá usar a *API d
 
 Essas APIs consistem em métodos REST que são projetados para serem usados por desenvolvedores com catálogos de complementos que são suportados pelos serviços para várias plataformas. Essa API permite:
 
--   API de coleção da Microsoft Store: [consulta por aplicativos pertencentes a um usuário](query-for-products.md) e [declarar que um produto de consumo foi providenciado](report-consumable-products-as-fulfilled.md).
--   API de compras da Microsoft Store: [Conceda um produto gratuito a um usuário](grant-free-products.md), [obtenha assinaturas para um usuário](get-subscriptions-for-a-user.md) e [altere o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md).
+-   API da coleta do Microsoft Store: [Consulta de produtos que pertence a um usuário](query-for-products.md) e [relatar um produto de consumo, como atendida](report-consumable-products-as-fulfilled.md).
+-   API de compra da Microsoft Store: [Conceder a um produto gratuito a um usuário](grant-free-products.md), [obter assinaturas para um usuário](get-subscriptions-for-a-user.md), e [alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md).
 
 > [!NOTE]
 > A API de coleção e a API de compra da Microsoft Store usam a autenticação do Azure Active Directory (Azure AD) para acessar informações de propriedade do cliente. Para usar essas APIs, você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](https://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD.
@@ -30,33 +30,33 @@ Essas APIs consistem em métodos REST que são projetados para serem usados por 
 As etapas a seguir descrevem o processo de ponta a ponta para usar a API de coleção da Microsoft Store e a API de compra:
 
 1.  [Configurar um aplicativo no Azure AD](#step-1).
-2.  [Associar sua ID de aplicativo do Azure AD com o seu aplicativo no Partner Center](#step-2).
+2.  [Associar ID de aplicativo do Azure AD com o seu aplicativo no Partner Center](#step-2).
 3.  Em seu serviço, [crie tokens de acesso do Azure AD](#step-3) que representem sua identidade de fornecedor.
-4.  No aplicativo cliente Windows, [criar uma chave de ID da Microsoft Store](#step-4) que representa a identidade do usuário atual e passe a chave nesse volta para seu serviço.
+4.  Em seu aplicativo do cliente Windows, [criar uma chave de ID do Microsoft Store](#step-4) que representa a identidade do usuário atual e passe essa chave de volta para seu serviço.
 5.  Depois de obter o token de acesso do Azure AD e a chave de ID da Microsoft Store, [chame a API de coleção ou a API de compra da Microsoft Store de seu serviço](#step-5).
 
-Esse processo de ponta a ponta envolve dois componentes de software que realizar tarefas diferentes:
+Esse processo de ponta a ponta envolve dois componentes de software que executam tarefas diferentes:
 
-* **Seu serviço**. Este é um aplicativo executado com segurança no contexto de seu ambiente de negócios, e ele pode ser implementado usando qualquer plataforma de desenvolvimento que você escolher. O serviço é responsável por criar os tokens de acesso do Azure AD necessários para o cenário e para chamar os URIs REST de coleção da Microsoft Store, API e a API de compra.
-* **Seu aplicativo do Windows cliente**. Este é o aplicativo para o qual você deseja acessar e gerenciar informações de direitos do cliente (incluindo complementos para o aplicativo). Esse aplicativo é responsável por criar as chaves de ID da Microsoft Store, que você precisará chamar a API de coleção da Microsoft Store e a API de compra de seu serviço.
+* **Seu serviço**. Este é um aplicativo que é executado com segurança no contexto de seu ambiente de negócios, e ele pode ser implementado usando qualquer plataforma de desenvolvimento que você escolher. O serviço é responsável por criar os tokens de acesso do AD do Azure necessários para o cenário de e para chamar os URIs de REST para a coleção da Microsoft Store API e a API de compra.
+* **Seu aplicativo do cliente Windows**. Este é o aplicativo para o qual você deseja acessar e gerenciar informações de qualificação de cliente (incluindo complementos para o aplicativo). Este aplicativo é responsável por criar as chaves de ID do Microsoft Store que você precisa chamar a API de coleção do Microsoft Store e comprar a API do seu serviço.
 
 <span id="step-1"/>
 
 ## <a name="step-1-configure-an-application-in-azure-ad"></a>Etapa 1: Configurar um aplicativo no Azure AD
 
-Antes de poder usar a API de coleção da Microsoft Store ou API de compra, você deve criar um aplicativo Web do Azure AD, recuperar a ID do locatário e ID do aplicativo para o aplicativo e gerar uma chave. O aplicativo Web do Azure AD representa o serviço do qual você quer chamar a API de coleção da Microsoft Store ou API de compra. Você precisa a ID do locatário, ID do aplicativo e a chave para gerar tokens de acesso do Azure AD que você precisa chamar a API.
+Antes de poder usar a API de coleção do Microsoft Store ou comprar a API, criar um aplicativo Web do Azure AD, recuperar a ID de locatário e ID do aplicativo para o aplicativo e gerar uma chave. O aplicativo Web do Azure AD representa o serviço do qual você deseja chamar a API de coleção do Microsoft Store ou comprar a API. É necessário o ID do locatário, ID do aplicativo e a chave para gerar tokens de acesso do AD do Azure que você precisa chamar a API.
 
 > [!NOTE]
-> Você precisa executar somente as tarefas nesta seção uma vez. Depois que você atualizar o manifesto de aplicativo do Azure AD e você tiver seu ID de locatário, segredo do cliente e a ID do aplicativo, você pode reutilizar esses valores sempre que precisar criar um novo token de acesso do Azure AD.
+> Você precisa executar somente as tarefas nesta seção uma vez. Depois que você atualizar o manifesto do aplicativo do Azure AD e você tiver sua ID de locatário, o segredo de cliente e a ID do aplicativo, você pode reutilizar esses valores a qualquer momento que você precisa criar um novo token de acesso do AD do Azure.
 
-1.  Se você ainda não fez isso, siga as instruções [Integrando aplicativos com o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) para registrar um **aplicativo Web / API** aplicativo com o Azure AD.
+1.  Se você ainda não fez isso, siga as instruções em [integrando aplicativos com o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) para registrar um **aplicativo Web / API** aplicativo com o Azure AD.
     > [!NOTE]
-    > Quando você registra seu aplicativo, você deve escolher **aplicativo Web / API** que o aplicativo digita para que você possa recuperar uma chave (também chamada de um *segredo do cliente*) para seu aplicativo. Para chamar a API de coleção ou a API de compra da Microsoft Store, você deverá fornecer o segredo do cliente quando solicitar um token de acesso do Azure AD em uma etapa posterior.
+    > Quando você registra seu aplicativo, você deve escolher **aplicativo Web / API** como tipo de aplicativo para que você possa recuperar uma chave (também chamado de um *segredo do cliente*) para seu aplicativo. Para chamar a API de coleção ou a API de compra da Microsoft Store, você deverá fornecer o segredo do cliente quando solicitar um token de acesso do Azure AD em uma etapa posterior.
 
-2.  No [Portal de gerenciamento do Azure](https://portal.azure.com/), navegue até o **Azure Active Directory**. Selecione seu diretório, clique em **registros de aplicativo** no painel de navegação esquerdo e, em seguida, selecione seu aplicativo.
-3.  Você for levado à página de registro principal do aplicativo. Nessa página, copie o valor da **ID do aplicativo** para uso posterior.
-4.  Criar uma chave que será necessário mais tarde (Isso é tudo chamado um *segredo do cliente*). No painel esquerdo, clique em **configurações** e, em seguida, **chaves**. Nessa página, conclua as etapas para [criar uma chave](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis). Copie essa chave para uso posterior.
-5.  Adicione vários URIs de público necessária ao seu [manifesto do aplicativo](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-manifest). No painel esquerdo, clique no **manifesto**. Clique em **Editar**, substitua o `"identifierUris"` seção com o seguinte texto e, em seguida, clique em **Salvar**.
+2.  No [Portal de gerenciamento](https://portal.azure.com/), navegue até **Azure Active Directory**. Selecione seu diretório, clique em **registros de aplicativo** no painel de navegação à esquerda e, em seguida, selecione seu aplicativo.
+3.  Você será levado à página de registro principal do aplicativo. Nessa página, copie o **ID do aplicativo** valor para uso posterior.
+4.  Criar uma chave que você precisará mais tarde (Isso é chamado um *segredo do cliente*). No painel esquerdo, clique em **as configurações** e, em seguida **chaves**. Nessa página, conclua as etapas a serem [criar uma chave](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis). Copie essa chave para uso posterior.
+5.  Adicionar vários URIs de audiência necessários para seu [manifesto do aplicativo](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-manifest). No painel esquerdo, clique em **manifesto**. Clique em **edite**, substitua o `"identifierUris"` seção com o seguinte texto e, em seguida, clique em **salvar**.
 
     ```json
     "identifierUris" : [                                
@@ -70,21 +70,21 @@ Antes de poder usar a API de coleção da Microsoft Store ou API de compra, voc�
 
 <span id="step-2"/>
 
-## <a name="step-2-associate-your-azure-ad-application-id-with-your-client-app-in-partner-center"></a>Etapa 2: Associe sua ID de aplicativo do Azure AD ao seu aplicativo cliente no Partner Center
+## <a name="step-2-associate-your-azure-ad-application-id-with-your-client-app-in-partner-center"></a>Etapa 2: Associar ID de aplicativo do Azure AD com o aplicativo cliente no Partner Center
 
-Antes de poder usar a API de coleção da Microsoft Store ou API para configurar a propriedade e compras para seu aplicativo ou complemento de compra, você deve associar sua ID de aplicativo do Azure AD ao aplicativo (ou o aplicativo que contém o complemento) no Partner Center.
+Antes de poder usar a API de coleção do Microsoft Store ou API para configurar a propriedade e compras para seu aplicativo ou o complemento de compra, você deve associar sua ID de aplicativo do Azure AD com o aplicativo (ou o aplicativo que contém o complemento) no Partner Center.
 
 > [!NOTE]
 > Você só precisa executar essa tarefa uma vez.
 
-1.  Entre no [Partner Center](https://partner.microsoft.com/dashboard) e selecione seu aplicativo.
-2.  Vá para os **Serviços** &gt; **compras e coleções de produtos** da página e digite sua ID de aplicativo do Azure AD em um dos campos de **ID de cliente** disponíveis.
+1.  Entrar no [Partner Center](https://partner.microsoft.com/dashboard) e selecione seu aplicativo.
+2.  Vá para o **Services** &gt; **coleções de produto e compras** página e insira sua ID de aplicativo do Azure AD em um dos disponíveis **ID do cliente** campos.
 
 <span id="step-3"/>
 
-## <a name="step-3-create-azure-ad-access-tokens"></a>Etapa 3: criar tokens de acesso do Azure AD
+## <a name="step-3-create-azure-ad-access-tokens"></a>Etapa 3: Criar tokens de acesso do AD do Azure
 
-Para poder recuperar uma chave de ID da Microsoft Store ou chamar a API de coleção ou API de compra da Microsoft Store, seu serviço deve criar diversos tokens de acesso do Azure AD diferentes que representem sua identidade de fornecedor. Cada token será usado com uma API diferente. A vida útil desses tokens é de 60 minutos, e você pode atualizá-los depois que expirarem.
+Para poder recuperar uma chave de ID da Microsoft Store ou chamar a API de coleção ou API de compra da Microsoft Store, seu serviço deve criar diversos tokens de acesso do Azure AD diferentes que representem sua identidade de fornecedor. Cada token será usado com uma API diferente. A vida útil desses tokens é de 60 minutos, e você pode atualizá-la depois que expirarem.
 
 > [!IMPORTANT]
 > Crie tokens de acesso do Azure AD somente no contexto de seu serviço, e não em seu aplicativo. O segredo do cliente pode ser comprometido se ele for enviado para seu aplicativo.
@@ -122,7 +122,7 @@ grant_type=client_credentials
 
 Para cada token, especifique os seguintes dados de parâmetro:
 
-* Para os parâmetros *client\_id* e *client\_secret* , especifique a ID do aplicativo e o segredo do cliente para seu aplicativo que você recuperou do [Portal de gerenciamento do Azure](https://manage.windowsazure.com). Esses dois parâmetros são necessários para criar um token de acesso com o nível de autenticação exigido pela API de compra ou API de coleção da Microsoft Store.
+* Para o *client\_id* e *cliente\_segredo* parâmetros, especifique a ID do aplicativo e o segredo do cliente para o aplicativo que você recuperou do [Portal de gerenciamento do azure](https://manage.windowsazure.com). Esses dois parâmetros são necessários para criar um token de acesso com o nível de autenticação exigido pela API de compra ou API de coleção da Microsoft Store.
 
 * Para o parâmetro de *recurso*, especifique um dos URIs de audiência listados na [seção anterior](#access-tokens), dependendo do tipo de token de acesso que você está criando.
 
@@ -130,7 +130,7 @@ Depois que seu token de acesso expirar, você poderá atualizá-lo seguindo as i
 
 <span id="step-4"/>
 
-## <a name="step-4-create-a-microsoft-store-id-key"></a>Etapa 4: Criar uma chave de ID da Microsoft Store
+## <a name="step-4-create-a-microsoft-store-id-key"></a>Etapa 4: Criar uma chave de ID do Microsoft Store
 
 Antes de chamar qualquer método na API de coleção ou a API de compra da Microsoft Store, o aplicativo deve criar uma chave de ID da Microsoft Store e enviá-la para o serviço. Esta chave é um JSON Web Token (JWT) que representa a identidade do usuário cujas informações de propriedade de produto você deseja acessar. Para obter mais informações sobre as declarações nessa chave, consulte [Declarações em uma chave de ID da Microsoft Store](#claims-in-a-microsoft-store-id-key).
 
@@ -153,7 +153,7 @@ Siga estas etapas para criar uma chave de ID da Microsoft Store que você pode u
 
   * Se seu aplicativo usa a classe [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) no namespace [ApplicationModel](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) para gerenciar as compras no aplicativo, use o método [CurrentApp.GetCustomerCollectionsIdAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getcustomercollectionsidasync).
 
-    Passe o token de acesso do Azure AD para o parâmetro *serviceTicket* do método. Se você mantiver IDs de usuário anônimo no contexto de serviços que você pode gerenciar como o fornecedor do aplicativo atual, você também pode passar uma ID de usuário para o parâmetro *publisherUserId* para associar o usuário atual com a nova chave de ID da Microsoft Store (a ID de usuário será eme bedded na chave). Caso contrário, se você não precisa associar uma ID de usuário com a chave de ID da Microsoft Store, você pode passar qualquer valor de cadeia de caracteres para o parâmetro *publisherUserId* .
+    Passe o token de acesso do Azure AD para o parâmetro *serviceTicket* do método. Se você mantiver as IDs de usuário anônimo no contexto de serviços que gerenciam como o Editor do aplicativo atual, você também pode passar uma ID de usuário para o *publisherUserId* parâmetro para associar o usuário atual com a nova ID da Microsoft Store chave (a ID de usuário será inserida na chave). Caso contrário, se você não precisa associar uma ID de usuário com a chave de ID do Microsoft Store, você pode passar qualquer valor de cadeia de caracteres para o *publisherUserId* parâmetro.
 
 3.  Depois que seu app criar com êxito uma chave de ID da Microsoft Store, repasse a chave para seu serviço.
 
@@ -163,7 +163,7 @@ Siga estas etapas para criar uma chave de ID da Microsoft Store que você pode u
 
 Siga estas etapas para criar uma chave de ID da Microsoft Store que você pode usar com a API de compras da Microsoft Store a fim de [conceder um produto gratuito a um usuário](grant-free-products.md), [obter assinaturas para um usuário](get-subscriptions-for-a-user.md) ou [alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md).
 
-1.  Passe o token de acesso do Azure AD criado com o valor do URI de audiência `https://onestore.microsoft.com/b2b/keys/create/purchase` de seu serviço para o app cliente. Esse é um dos tokens que você criou [anteriormente na etapa 3](#step-3).
+1.  Passe o token de acesso do Azure AD criado com o URI de público `https://onestore.microsoft.com/b2b/keys/create/purchase` de seu serviço para o app cliente. Esse é um dos tokens que você criou [anteriormente na etapa 3](#step-3).
 
 2.  No código do seu app, chame um desses métodos para recuperar uma chave de ID da Microsoft Store:
 
@@ -171,24 +171,24 @@ Siga estas etapas para criar uma chave de ID da Microsoft Store que você pode u
 
   * Se seu aplicativo usa a classe [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) no namespace [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) para gerenciar as compras no aplicativo, use o método [CurrentApp.GetCustomerPurchaseIdAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getcustomerpurchaseidasync).
 
-    Passe o token de acesso do Azure AD para o parâmetro *serviceTicket* do método. Se você mantiver IDs de usuário anônimo no contexto de serviços que você pode gerenciar como o fornecedor do aplicativo atual, você também pode passar uma ID de usuário para o parâmetro *publisherUserId* para associar o usuário atual com a nova chave de ID da Microsoft Store (a ID de usuário será eme bedded na chave). Caso contrário, se você não precisa associar uma ID de usuário com a chave de ID da Microsoft Store, você pode passar qualquer valor de cadeia de caracteres para o parâmetro *publisherUserId* .
+    Passe o token de acesso do Azure AD para o parâmetro *serviceTicket* do método. Se você mantiver as IDs de usuário anônimo no contexto de serviços que gerenciam como o Editor do aplicativo atual, você também pode passar uma ID de usuário para o *publisherUserId* parâmetro para associar o usuário atual com a nova ID da Microsoft Store chave (a ID de usuário será inserida na chave). Caso contrário, se você não precisa associar uma ID de usuário com a chave de ID do Microsoft Store, você pode passar qualquer valor de cadeia de caracteres para o *publisherUserId* parâmetro.
 
 3.  Depois que seu app criar com êxito uma chave de ID da Microsoft Store, repasse a chave para seu serviço.
 
 ### <a name="diagram"></a>Diagrama
 
-O diagrama a seguir ilustra o processo de criação de uma chave ID da Microsoft Store.
+O diagrama a seguir ilustra o processo de criação de uma chave de ID do Microsoft Store.
 
-  ![Criar chave de ID da Windows Store](images/b2b-1.png)
+  ![Criar chave de ID do Windows Store](images/b2b-1.png)
 
 <span id="step-5"/>
 
-## <a name="step-5-call-the-microsoft-store-collection-api-or-purchase-api-from-your-service"></a>Etapa 5: Chamar a API de coleção ou a API de compra da Microsoft Store desde o seu serviço
+## <a name="step-5-call-the-microsoft-store-collection-api-or-purchase-api-from-your-service"></a>Etapa 5: Chamar a API de coleção do Microsoft Store ou comprar a API do seu serviço
 
 Depois que o serviço tiver uma chave de ID da Microsoft Store que o permita acessar informações de propriedade de produto de um usuário específico, seu serviço poderá chamar a API de compra ou a API de coleção da Microsoft Store seguindo estas instruções:
 
-* [Consulta por produtos](query-for-products.md)
-* [Declarar produtos consumíveis como providenciados](report-consumable-products-as-fulfilled.md)
+* [Consulta de produtos](query-for-products.md)
+* [Produtos de consumo de relatório como atendida](report-consumable-products-as-fulfilled.md)
 * [Conceder produtos gratuitos](grant-free-products.md)
 * [Obter assinaturas para um usuário](get-subscriptions-for-a-user.md)
 * [Alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md)
@@ -200,22 +200,22 @@ Para cada cenário, passe as seguintes informações para a API:
 
 ### <a name="diagram"></a>Diagrama
 
-O diagrama a seguir descreve o processo de chamar um método na API de compra ou API de coleção da Microsoft Store de seu serviço.
+O diagrama a seguir descreve o processo de chamar um método na coleção Microsoft Store API API ou a compra de seu serviço.
 
-  ![Chame coleções ou adquirir API](images/b2b-2.png)
+  ![Chamar coleções ou compra API](images/b2b-2.png)
 
 ## <a name="claims-in-a-microsoft-store-id-key"></a>Declarações em uma chave de ID da Microsoft Store
 
 Uma chave de ID da Microsoft Store é um Token Web JSON (JWT) que representa a identidade do usuário cujas informações de propriedade de produto você deseja acessar. Quando decodificada usando Base64, uma chave de ID da Microsoft Store contém as declarações a seguir.
 
-* `iat`:&nbsp;&nbsp;&nbsp;Identifica o momento em que a chave foi emitida. Essa declaração pode ser usada para determinar a idade do token. Esse valor é expresso como época.
+* `iat`:&nbsp;&nbsp;&nbsp;Identifica a hora em que a chave foi emitida. Essa declaração pode ser usada para determinar a idade do token. Esse valor é expresso como época.
 * `iss`:&nbsp;&nbsp;&nbsp;Identifica o emissor. Isso tem o mesmo valor que a reivindicação `aud`.
-* `aud`:&nbsp;&nbsp;&nbsp;Identifica o público. Deve ser um dos seguintes valores: `https://collections.mp.microsoft.com/v6.0/keys` ou `https://purchase.mp.microsoft.com/v6.0/keys`.
-* `exp`:&nbsp;&nbsp;&nbsp;Identifica o período durante ou após o tempo de expiração em que a chave não será mais aceita para processamento de qualquer coisa, salvo a renovação de chaves. O valor dessa declaração é expresso como época.
-* `nbf`:&nbsp;&nbsp;&nbsp;Identifica o momento em que o token será aceito para processamento. O valor dessa declaração é expresso como época.
+* `aud`:&nbsp;&nbsp;&nbsp;Identifica o público-alvo. Deve se um dos seguintes valores: `https://collections.mp.microsoft.com/v6.0/keys` ou `https://purchase.mp.microsoft.com/v6.0/keys`.
+* `exp`:&nbsp;&nbsp;&nbsp;Identifica o tempo de expiração em ou depois que a chave será não será aceito para processamento de qualquer coisa, exceto para a renovação de chaves. O valor dessa declaração é expresso como época.
+* `nbf`:&nbsp;&nbsp;&nbsp;Identifica a hora em que o token será aceito para processamento. O valor dessa declaração é expresso como época.
 * `http://schemas.microsoft.com/marketplace/2015/08/claims/key/clientId`:&nbsp;&nbsp;&nbsp;A ID do cliente que identifica o desenvolvedor.
-* `http://schemas.microsoft.com/marketplace/2015/08/claims/key/payload`:&nbsp;&nbsp;&nbsp;Uma carga opaca (criptografada e codificada em Base64) que contém informações que destinam-se apenas para uso pelos serviços da Microsoft Store.
-* `http://schemas.microsoft.com/marketplace/2015/08/claims/key/userId`:&nbsp;&nbsp;&nbsp;Uma ID de usuário que identifica o usuário atual no contexto de seus serviços. É o mesmo valor que você transmite para o parâmetro *publisherUserId* opcional do [método usado para criar a chave](#step-4).
+* `http://schemas.microsoft.com/marketplace/2015/08/claims/key/payload`:&nbsp;&nbsp;&nbsp;Uma carga opaca (criptografado e codificada em Base64) que contém informações que são destinadas apenas para uso pelos serviços da Microsoft Store.
+* `http://schemas.microsoft.com/marketplace/2015/08/claims/key/userId`:&nbsp;&nbsp;&nbsp;Uma ID de usuário que identifica o usuário atual no contexto dos seus serviços. É o mesmo valor que você transmite para o parâmetro *publisherUserId* opcional do [método usado para criar a chave](#step-4).
 * `http://schemas.microsoft.com/marketplace/2015/08/claims/key/refreshUri`:&nbsp;&nbsp;&nbsp;O URI que você pode usar para renovar a chave.
 
 Veja aqui um exemplo de um cabeçalho de chave de ID da Microsoft Store decodificado.
@@ -246,12 +246,12 @@ Aqui está um exemplo de uma declaração de chave de ID da Microsoft Store deco
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Consulta por produtos](query-for-products.md)
-* [Declarar produtos consumíveis como providenciados](report-consumable-products-as-fulfilled.md)
+* [Consulta de produtos](query-for-products.md)
+* [Produtos de consumo de relatório como atendida](report-consumable-products-as-fulfilled.md)
 * [Conceder produtos gratuitos](grant-free-products.md)
 * [Obter assinaturas para um usuário](get-subscriptions-for-a-user.md)
 * [Alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md)
-* [Renovar uma chave de ID da Microsoft Store](renew-a-windows-store-id-key.md)
-* [Integrando aplicativos com o Azure Active Directory](https://go.microsoft.com/fwlink/?LinkId=722502)
-* [Noções básicas sobre o manifesto de aplicativo do Active Directory do Azure]( https://go.microsoft.com/fwlink/?LinkId=722500)
-* [Tipos de declaração e token com suporte](https://go.microsoft.com/fwlink/?LinkId=722501)
+* [Renovar uma chave de ID do Microsoft Store](renew-a-windows-store-id-key.md)
+* [Integrando aplicativos com o Active Directory do Azure](https://go.microsoft.com/fwlink/?LinkId=722502)
+* [Noções básicas sobre o manifesto do aplicativo do Azure Active Directory]( https://go.microsoft.com/fwlink/?LinkId=722500)
+* [Tipos de declaração e Token com suporte](https://go.microsoft.com/fwlink/?LinkId=722501)

@@ -1,28 +1,28 @@
 ---
-title: Compartilhamento de dispositivos de PointOfService
-description: Compartilhar periféricos do PointOfService com outras pessoas
+title: Compartilhamento de dispositivo PointOfService
+description: Compartilhando PointOfService periféricos com outras pessoas
 ms.date: 06/14/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 53dc22b2aa35b5e69854f6fb489ff6a454c73bf6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926441"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618941"
 ---
-# <a name="pointofservice-device-sharing"></a>Compartilhamento de dispositivos de PointOfService
+# <a name="pointofservice-device-sharing"></a>Compartilhamento de dispositivo PointOfService
 
-Saiba como compartilhar periféricos Bluetooth conectado ou rede com outros computadores em um ambiente onde vários computadores contam com periféricos compartilhados em vez de dedicada periféricos conectados para cada computador.
+Aprenda a compartilhar periféricos de Bluetooth conectado ou de rede com outros computadores em um ambiente onde vários PCs dependem de periféricos compartilhados em vez de periféricos dedicados anexados a cada computador.
 
-## <a name="device-sharing"></a>Compartilhamento de dispositivos
+## <a name="device-sharing"></a>Compartilhamento de dispositivo
 
-Rede e Bluetooth periféricos do PointOfService conectados são normalmente usados em um ambiente wheere vários dispositivos cliente estão compartilhando os mesmos periféricos durante o dia.  Em um ambiente de varejo ou serviços de alimentos ocupado qualquer atraso na capacidade de um dispositivo cliente para se conectar a um periférico tem um impacto sobre a eficiência em que um colega pode fechar uma transação com o cliente e passar para a próxima. Em um cenário de restaurante serviço rápida onde uma impressora de recibo é usada como uma impressora cozinha para transferir os detalhes do pedido do cliente para a cozinha para preparação, haverá vários dispositivos cliente levando pedidos de clientes.  Depois que a ordem for concluída cada dispositivo cliente deve ser capaz de solicitar a impressora compartilhada e imprimir imediatamente a ordem para a cozinha.
+Rede e Bluetooth periféricos conectados de PointOfService normalmente são usados em um ambiente wheere vários dispositivos de cliente estão compartilhando os mesmos periféricos ao longo do dia.  Em um ambiente de varejo ou serviços de alimentos ocupado qualquer atraso na capacidade de um dispositivo cliente anexar a um periférico tem um impacto sobre a eficiência em que um colega pode fechar uma transação com o cliente e para a próxima. Em um cenário de restaurante rápida do serviço onde uma impressora de recebimento é usada como uma impressora cozinha para transferir os detalhes do pedido do cliente para a cozinha para a preparação, haverá vários dispositivos de cliente receber ordens dos clientes.  Após a conclusão da ordem de cada dispositivo cliente deve ser capaz de declaração de impressora compartilhada e imprimir imediatamente a ordem de cozinha.
 
-Nesses ambientes, é importante para o aplicativo totalmente **Descartar** o objeto de dispositivo para que outra pode reivindicar o mesmo dispositivo.
+Nesses ambientes, é importante para que o aplicativo totalmente **dispose** o dispositivo do objeto, de modo que outro pode solicitar o mesmo dispositivo.
 
-Descartar uma PosPrinter no final de um bloco 'usando'
+Como descartar um PosPrinter no final de um bloco 'using'
 
 ```Csharp 
 using Windows.Devices.PointOfService;
@@ -39,7 +39,7 @@ using(PosPrinter printer = await PosPrinter.FromIdAsync("Device ID"))
 ```
 
 
-Descartar uma PosPrinter chamando explicitamente Dispose)
+Como descartar um PosPrinter chamando Dispose () explicitamente
 
 ```Csharp 
 using Windows.Devices.PointOfService;

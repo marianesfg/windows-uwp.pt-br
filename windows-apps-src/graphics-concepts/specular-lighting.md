@@ -8,29 +8,29 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f28f1f46cfd34ee1aab614c57dc99019dbd6111
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930911"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597971"
 ---
 # <a name="specular-lighting"></a>Iluminação especular
 
 
-*A Iluminação especular* identifica os realces especulares brilhantes que ocorrem quando a luz atinge a superfície de um objeto e reflete em direção à câmera. A iluminação especular é mais intensa do que a luz difusa e incide mais rapidamente na superfície do objeto. Demora mais tempo para calcular a iluminação especular que a iluminação difusa, no entanto, a vantagem de usá-lo é que ele adiciona detalhes significativos a uma superfície.
+*A Iluminação especular* identifica os realces especulares brilhantes que ocorrem quando a luz atinge a superfície de um objeto e reflete em direção à câmera. A iluminação especular é mais intensa do que a luz difusa e incide mais rapidamente na superfície do objeto. O cálculo da iluminação especular demora mais do que o da iluminação difusa, no entanto, a vantagem de usá-lo é que ele adiciona detalhes significativas à superfície.
 
 Modelar a reflexão especular requer que o sistema saiba em que direção a luz está viajando e a direção para os olhos do observador. O sistema usa uma versão simplificada do modelo de reflexo especular Phong, que utiliza um vetor de metade para aproximar a intensidade da reflexão especular.
 
 O estado de iluminação padrão não calcula os realces especulares.
 
-## <a name="span-idspecularlightingequationspanspan-idspecularlightingequationspanspan-idspecularlightingequationspanspecular-lighting-equation"></a><span id="Specular_Lighting_Equation"></span><span id="specular_lighting_equation"></span><span id="SPECULAR_LIGHTING_EQUATION"></span>Equação de Iluminação Especular
+## <a name="span-idspecularlightingequationspanspan-idspecularlightingequationspanspan-idspecularlightingequationspanspecular-lighting-equation"></a><span id="Specular_Lighting_Equation"></span><span id="specular_lighting_equation"></span><span id="SPECULAR_LIGHTING_EQUATION"></span>Equação de iluminação especular
 
 
 A iluminação especular é descrita pela seguinte equação.
 
 |                                                                             |
 |-----------------------------------------------------------------------------|
-| Iluminação especular = Cₛ \ * sum\ [Lₛ \ * (N · H)<sup>P</sup> \ * Atten \ * Spot\] |
+| Iluminação especular = Cₛ \* soma\[Lₛ \* (N reforçado H)<sup>P</sup> \* Atten \* especiais\] |
 
  
 
@@ -55,13 +55,13 @@ O valor de Cₛ é:
 -   cor do vértice 2, se a origem de material especular for a cor do vértice especular, e a segunda cor do vértice for fornecido na declaração de vértice.
 -   cor especular do material
 
-**Observação**  se qualquer uma das opções de fonte de material especular é usado e a cor do vértice não for fornecida, a cor especular do material é usada.
+**Observação**    se uma das opções de fonte de material especular é usado e a cor do vértice não for fornecida, a cor especular material é usada.
 
  
 
 Componentes especulares são vinculados para estar entre 0 e 255, depois que todas as luzes são processadas e interpoladas separadamente.
 
-## <a name="span-idthehalfwayvectorspanspan-idthehalfwayvectorspanspan-idthehalfwayvectorspanthe-halfway-vector"></a><span id="The_Halfway_Vector"></span><span id="the_halfway_vector"></span><span id="THE_HALFWAY_VECTOR"></span>O vetor de metade
+## <a name="span-idthehalfwayvectorspanspan-idthehalfwayvectorspanspan-idthehalfwayvectorspanthe-halfway-vector"></a><span id="The_Halfway_Vector"></span><span id="the_halfway_vector"></span><span id="THE_HALFWAY_VECTOR"></span>O vetor na metade
 
 
 O vetor de metade (H) existe situado entre dois vetores: o vetor de um vértice de objeto para a fonte de luz e o vetor de um vértice de objeto para a posição da câmera. O Direct3D fornece duas maneiras de calcular o vetor de metade. Quando os realces especulares relativos à câmera estiverem habilitados (em vez de realces especulares ortogonais), o sistema calcula o vetor de metade usando a posição da câmera e a posição do vértice, juntamente com o vetor de direção da luz. A fórmula a seguir mostra isso.
@@ -114,7 +114,7 @@ A iluminação especular é mais intensa para se calcular do que a iluminação 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Matemática de iluminação](mathematics-of-lighting.md)
+[Cálculos de iluminação](mathematics-of-lighting.md)
 
  
 

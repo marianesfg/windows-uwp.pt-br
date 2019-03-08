@@ -1,5 +1,5 @@
 ---
-Description: These guidelines describe how to design effective Help content for your app.
+Description: Estas diretrizes descrevem como criar conteúdo da ajuda eficaz para seu aplicativo.
 title: Diretrizes da ajuda do aplicativo
 label: Guidelines for app help
 template: detail.hbs
@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: c3e73f9b-4839-4804-b379-c95b0ca4fbe8
 ms.localizationpriority: medium
 ms.openlocfilehash: bd2174c6bbfb84a3ea6c6956e1d0b02ed5c9be33
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928573"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621361"
 ---
 # <a name="guidelines-for-app-help"></a>Diretrizes da ajuda do aplicativo
 
@@ -35,15 +35,15 @@ Um usuário não irá procurar o conteúdo da ajuda, a menos que ele já tenha u
 
 Toda ajuda, qualquer que seja, deve seguir estes princípios:
 
--   **Fácil de entender:** a ajuda que confunde o usuário é pior que nenhuma ajuda.
+-   **Fácil de entender:** Ajuda que confunde o usuário é pior do que não há ajuda.
 
--   **Simples:** os usuários que procuram a ajuda querem respostas claras apresentadas diretamente a eles.
+-   **Simples:** Usuários que desejam ajudam deseja limpar respostas apresentadas diretamente para eles.
 
--   **Relevante:** os usuários não querem ter a necessidade de procurar seu problema específico. Eles querem uma ajuda mais relevante apresentada diretamente para eles (isso é chamado de "Ajuda contextual") ou querem uma interface fácil de navegar.
+-   **Relevante:** Os usuários não desejam precisará procurar por seu problema específico. Eles querem uma ajuda mais relevante apresentada diretamente para eles (isso é chamado de "Ajuda contextual") ou querem uma interface fácil de navegar.
 
--   **Direta:** quando um usuário procura a ajuda, ele quer ver a ajuda. Se seu aplicativo incluir páginas para relatório de bugs, envio de comentários, exibição dos termos de serviço ou funções semelhantes, é bom que sua ajuda tenha links para essas páginas. Mas eles devem ser incluídos como algo secundário na página principal da ajuda e não como itens de igual ou maior importância.
+-   **Direto:** Quando um usuário procura ajuda, ele deseja ver a Ajuda. Se seu aplicativo incluir páginas para relatório de bugs, envio de comentários, exibição dos termos de serviço ou funções semelhantes, é bom que sua ajuda tenha links para essas páginas. Mas eles devem ser incluídos como algo secundário na página principal da ajuda e não como itens de igual ou maior importância.
 
--   **Consistente:** independentemente do seu tipo, a ajuda ainda faz parte do seu app e deve ser tratada como qualquer outra parte da interface do usuário. Os mesmos princípios de design de usabilidade, acessibilidade e estilo usados em todo o restante de seu aplicativo também devem estar presentes na ajuda que você oferece.
+-   **Consistente:** Não importa o tipo de Ajuda ainda é uma parte do seu aplicativo e deve ser tratada como qualquer outra parte da interface do usuário. Os mesmos princípios de design de usabilidade, acessibilidade e estilo usados em todo o restante de seu aplicativo também devem estar presentes na ajuda que você oferece.
 
 ## <a name="types-of-help"></a>Tipos de ajuda
 
@@ -53,18 +53,18 @@ Há três categorias principais de conteúdo de ajuda, cada uma com pontos forte
 
 Normalmente, os usuários devem poder usar todas as funções principais do seu aplicativo sem nenhuma instrução. Mas, às vezes, seu aplicativo irá depender do uso de um gesto específico ou poderá conter recursos secundários que não são imediatamente óbvios. Nesse caso, a interface do usuário instrucional deve ser usada para instruir os usuários com informações sobre como realizar tarefas específicas.
 
-[Consulte Diretrizes da interface do usuário instrucional](instructional-ui.md)
+[Consulte as diretrizes para das instruções da interface do usuário](instructional-ui.md)
 
 #### <a name="in-app-help"></a>Ajuda no aplicativo
 
 O método padrão da apresentação da ajuda é exibi-la dentro do aplicativo mediante solicitação do usuário. Há várias maneiras de apresentar isso, como em páginas da ajuda ou como descrições informativas. Esse método é ideal para a ajuda de uso geral que responde diretamente às perguntas de um usuário sem complexidade.
 
-[Consulte Diretrizes de ajuda no aplicativo](in-app-help.md)
+[Consulte as diretrizes para obter ajuda no aplicativo](in-app-help.md)
 
 #### <a name="external-help"></a>Ajuda externa
 
 Para tutoriais detalhados, funções avançadas ou bibliotecas de tópicos da ajuda muito grandes para caber em seu aplicativo, links para páginas da web externas são ideais. Se possível, esses links devem ser usados com moderação, uma vez que removem o usuário da experiência do aplicativo.
 
-[Consulte Diretrizes de ajuda externa](external-help.md)
+[Consulte as diretrizes para ajuda externo](external-help.md)
 
 

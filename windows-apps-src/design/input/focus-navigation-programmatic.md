@@ -1,5 +1,5 @@
 ---
-Description: Learn how to programmatically manage focus navigation with keyboard, gamepad, and accessibility tools in a UWP app.
+Description: Saiba como gerenciar a navegação de foco com o teclado, gamepad e ferramentas de acessibilidade em um aplicativo UWP de forma programática.
 title: Navegação por foco programática com teclado, gamepad e ferramentas de acessibilidade
 label: Programmatic focus navigation
 keywords: teclado, controlador de jogo, controle remoto, navegação, estratégia de navegação, entrada, interação do usuário, acessibilidade, usabilidade
@@ -11,11 +11,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 00d25896a490b0a6b1d65075852f44dfb89c2e53
-ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "9075129"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662711"
 ---
 # <a name="programmatic-focus-navigation"></a>Navegação por foco programática
 
@@ -143,7 +143,7 @@ Quando o elemento B tem o foco, FindNextElement identifica I como o candidato de
 
 ![Comportamento de navegação por foco personalizada usando dicas de navegação](images/keyboard/navigation-hints.png)
 
-*Comportamento de navegação por foco personalizada usando dicas de navegação*
+*Comportamento de navegação de foco personalizado usando as dicas de navegação*
 
 ## <a name="navigation-focus-events"></a>Eventos de foco de navegação
 
@@ -211,7 +211,7 @@ A imagem a seguir mostra como, ao mover de A para a direita, o XYFocus escolhe B
 
 ![Alterando o destino da navegação por foco no evento GettingFocus](images/keyboard/focus-events.png)
 
-*Alterando o destino da navegação por foco no evento GettingFocus*
+*Alterando o destino de navegação de foco no evento GettingFocus*
 
 Aqui, mostramos como manipular o evento [GettingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) e redirecionar o foco.
 
@@ -327,6 +327,6 @@ private void OnLosingFocus(UIElement sender, LosingFocusEventArgs args)
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Navegação por foco para teclado, gamepad, controle remoto e ferramentas de acessibilidade](focus-navigation.md)
-- [Interações por teclado](keyboard-interactions.md)
+- [Navegação de foco de teclado, gamepad, controle remoto e ferramentas de acessibilidade](focus-navigation.md)
+- [Interações de teclado](keyboard-interactions.md)
 - [Acessibilidade do teclado](../accessibility/keyboard-accessibility.md)

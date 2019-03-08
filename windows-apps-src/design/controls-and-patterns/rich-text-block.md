@@ -1,5 +1,5 @@
 ---
-Description: Use a RichTextBlock with RichTextBlockOverflow elements to create advanced text layouts.
+Description: Use RichTextBlock com elementos RichTextBlockOverflow para criar layouts de texto avançados.
 title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
@@ -12,21 +12,21 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ab83e74dc59b407c15e1a8213540c8954fcd16e
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037038"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610891"
 ---
-# <a name="rich-text-block"></a>Bloco de rich text
+# <a name="rich-text-block"></a>Bloco rich text
 
  
 
 Blocos Rich Text fornecem vários recursos para layout de texto avançado que você pode usar quando precisa de suporte para parágrafos, elementos de interface do usuário embutidos ou layouts de texto complexos.
 
-> **APIs importantes**: [classe RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [classe RichTextBlockOverflow](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx), [classe Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx), [classe Typography](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
+> **APIs importantes**: [Classe RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [classe RichTextBlockOverflow](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx), [classe de parágrafo](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx), [classe de tipografia](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use um **RichTextBlock** quando precisar de suporte para vários parágrafos, várias colunas ou outros layouts de texto complexos ou elementos de interface do usuário embutidos, como imagens.
 
@@ -43,7 +43,7 @@ Para obter mais informações sobre como escolher o controle de texto certo, con
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RichTextBlock">abrir o aplicativo e ver o RichTextBlock em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -132,7 +132,7 @@ Veja a seguir um Parágrafo com a primeira frase em texto em negrito, azul, 16 p
 </Paragraph>
 ```
 
-### <a name="typography"></a>Typography
+### <a name="typography"></a>Tipografia
 
 As propriedades anexadas da classe [Typography](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx) fornecem acesso a um conjunto de propriedades de tipografia Microsoft OpenType. Você pode definir essas propriedades anexadas em RichTextBlock ou nos elementos de texto embutidos individuais, conforme mostrado aqui.
 
@@ -151,7 +151,7 @@ Consulte Tipografia e Diretrizes para fontes.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
@@ -159,13 +159,13 @@ Consulte Tipografia e Diretrizes para fontes.
 
 **Para designers**
 - [Diretrizes para verificação ortográfica](text-controls.md)
-- [Adicionando pesquisa](https://msdn.microsoft.com/library/windows/apps/hh465231)
-- [Diretrizes para entrada de texto](text-controls.md)
+- [Adicionando uma pesquisa](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [Diretrizes para a entrada de texto](text-controls.md)
 
 **Para desenvolvedores (XAML)**
-- [Classe TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [Classe Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [Classe de caixa de texto](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Classe PasswordBox Windows](https://msdn.microsoft.com/library/windows/apps/br227519)
 
 
-**Para desenvolvedores (outros)**
-- [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+**Para desenvolvedores (outro)**
+- [Propriedade String. Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

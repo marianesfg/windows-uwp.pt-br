@@ -1,5 +1,5 @@
 ---
-Description: The master/detail pattern displays a master list and the details for the currently selected item. This pattern is frequently used for email and contact lists/address books.
+Description: O padrão mestre/detalhes exibe uma lista mestra e os detalhes do item atualmente selecionado. Esse padrão é usado com frequência para email e listas de contatos/catálogos de endereços.
 title: Mestre/detalhes
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b9d8d8a381c0fce186b39853f57d35c1dce4b8f8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940635"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601251"
 ---
 # <a name="masterdetails-pattern"></a>Padrão mestre/detalhes
 
@@ -21,7 +21,7 @@ ms.locfileid: "8940635"
 
 O padrão mestre/detalhes tem um painel mestre (geralmente com uma [exibição de lista](lists.md)) e um painel de detalhes para o conteúdo. Quando um item na lista mestra é selecionado, o painel de detalhes é atualizado. Esse padrão é usado com frequência para email e catálogos de endereços.
 
-> **APIs importantes**: [classe ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [classe SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+> **APIs importantes**: [Classe ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView classe](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![Exemplo do padrão mestre/detalhes](images/HIGSecOne_MasterDetail.png)
 
@@ -88,21 +88,21 @@ Para implementar um padrão de mestre/detalhes para qualquer tamanho de tela, cr
 ![layout de detalhe mestre adaptável](images/patterns_masterdetail.png)
 
 ### <a name="create-an-adaptive-masterdetails-pattern"></a>Criar um mestre adaptável/padrão de detalhes
-Para criar um layout adaptável, definir diferentes [**VisualStates**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.visualstate) para sua interface do usuário e declare pontos de interrupção para os estados diferentes com [**AdaptiveTriggers **](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.AdaptiveTrigger).
+Para criar um layout adaptável, definir diferentes [**VisualStates**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.visualstate) para sua interface do usuário e declare pontos de interrupção para os estados diferentes com [**AdaptiveTriggers** ](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.AdaptiveTrigger).
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
 Os exemplos a seguir implementam o padrão de mestre/detalhes com layouts adaptáveis e demonstram a vinculação de dados para estático, banco de dados e recursos online: 
-- [Amostra de mestre/detalhes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
-- [Exemplo de seleção além de mestre/detalhes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
-- [Exemplo do Windows Template Studio de mestre/detalhes](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
+- [Exemplo de mestre/detalhes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
+- [Exemplo de seleção + mestre/detalhes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
+- [Exemplo de modelo do Windows \ Studio mestre/detalhes](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
 - [Exemplo de banco de dados de pedidos do cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
-- [Exemplo de leitor RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
+- [Amostra de leitor de RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Listas](lists.md)
 - [Pesquisa](search.md)
-- [Aplicativo e barras de comandos](app-bars.md)
-- [Classe ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [Barras de comando e de aplicativo](app-bars.md)
+- [Classe de ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)
 - [Classe SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)

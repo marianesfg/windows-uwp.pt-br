@@ -1,5 +1,5 @@
 ---
-Description: The estimated time to transfer payments, applicable payment thresholds, and Microsoft marketplaces from which you can receive payments can vary depending on your country/region and payout account type.
+Description: O tempo estimado para transferir pagamentos, os limites de pagamento aplicáveis e os marketplaces Microsoft dos quais você pode receber pagamentos podem variar dependendo do país/região e do tipo de conta de pagamento.
 title: Limites, formas e períodos de pagamento
 ms.date: 10/18/2018
 ms.topic: article
@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f837674ff9af123c7535e3aea00b632b8b35bfc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932809"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610661"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Limites, formas e períodos de pagamento
 
@@ -44,7 +44,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 
 - [Microsoft Store](#microsoft-store)
 - [Microsoft Advertising](#microsoft-advertising)
-- [Azure Marketplace](#azure-marketplace)
+- [O Azure Marketplace](#azure-marketplace)
 - [Office Store](#office-store)
 
 ### <a name="microsoft-store"></a>Microsoft Store 
@@ -58,9 +58,9 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
   <tr>
     <td><strong>País/região</strong></td>
     <td><strong>Limite de pagamento</strong></td>
-    <td><strong>Forma de pagamento</strong></td>
+    <td><strong>Método de pagamento</strong></td>
     <td><strong>Limite de pagamento</strong></td>
-    <td><strong>Forma de pagamento</strong></td>
+    <td><strong>Método de pagamento</strong></td>
   </tr>
   <tr>
     <td>Afeganistão</td>
@@ -161,7 +161,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Benim</td>
+    <td>Benin</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
     <td>N/D</td>
@@ -273,7 +273,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>N/D</td>
   </tr>
   <tr>
-    <td>Comores</td>
+    <td>Ilhas Comores</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
     <td>N/D</td>
@@ -644,7 +644,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>N/D</td>
   </tr>
   <tr>
-    <td>Maláui</td>
+    <td>Malaui</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
     <td>N/D</td>
@@ -1120,9 +1120,9 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
   <tr>
     <td><strong>País/região</strong></td>
     <td><strong>Limite de pagamento</strong></td>
-    <td><strong>Forma de pagamento</strong></td>
+    <td><strong>Método de pagamento</strong></td>
     <td><strong>Limite de pagamento</strong></td>
-    <td><strong>Forma de pagamento</strong></td>
+    <td><strong>Método de pagamento</strong></td>
   </tr>
   <tr>
     <td>Afeganistão</td>
@@ -1223,7 +1223,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Benim</td>
+    <td>Benin</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
     <td>N/D</td>
@@ -1335,7 +1335,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>N/D</td>
   </tr>
   <tr>
-    <td>Comores</td>
+    <td>Ilhas Comores</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
     <td>N/D</td>
@@ -1706,7 +1706,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>N/D</td>
   </tr>
   <tr>
-    <td>Maláui</td>
+    <td>Malaui</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
     <td>N/D</td>
@@ -2182,9 +2182,9 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
   <tr>
     <td><strong>País/região</strong></td>
     <td><strong>Limite de pagamento</strong></td>
-    <td><strong>Forma de pagamento</strong></td>
+    <td><strong>Método de pagamento</strong></td>
     <td><strong>Limite de pagamento</strong></td>
-    <td><strong>Forma de pagamento</strong></td>
+    <td><strong>Método de pagamento</strong></td>
   </tr>
   <tr>
     <td>Afeganistão</td>
@@ -2285,7 +2285,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>PayPal</td>
   </tr>
  <tr>
-    <td>Benim</td>
+    <td>Benin</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
     <td>N/D</td>
@@ -2390,7 +2390,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>N/D</td>
   </tr>
   <tr>
-    <td>Comores</td>
+    <td>Ilhas Comores</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
     <td>N/D</td>
@@ -2761,7 +2761,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>N/D</td>
   </tr>
   <tr>
-    <td>Maláui</td>
+    <td>Malaui</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
     <td>N/D</td>
@@ -3229,9 +3229,9 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
   <tr>
     <td><strong>País/região</strong></td>
     <td><strong>Limite de pagamento</strong></td>
-    <td><strong>Forma de pagamento</strong></td>
+    <td><strong>Método de pagamento</strong></td>
     <td><strong>Limite de pagamento</strong></td>
-    <td><strong>Forma de pagamento</strong></td>
+    <td><strong>Método de pagamento</strong></td>
   </tr>
   <tr>
     <td>Albânia</td>
@@ -3318,7 +3318,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Benim</td>
+    <td>Benin</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
     <td>N/D</td>
@@ -3766,7 +3766,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>N/D</td>
   </tr>
   <tr>
-    <td>Maláui</td>
+    <td>Malaui</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
     <td>N/D</td>

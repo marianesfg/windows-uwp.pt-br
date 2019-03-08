@@ -1,5 +1,5 @@
 ---
-Description: Windows desktop applications can pin secondary tiles thanks to the Desktop Bridge!
+Description: Os aplicativos da área de trabalho do Windows podem fixar blocos secundários graças à Ponte de Desktop!
 title: Fixar blocos secundários do aplicativo da área de trabalho
 label: Pin secondary tiles from desktop application
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, ponte de desktop, blocos secundários, fixar, fixando, guia de início rápido, exemplo de código, exemplo, secondarytile, aplicativo da área de trabalho, win32, winforms, wpf
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e713f37cd5e5fbf4b2771e76fb7e132b5976629
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924391"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57609621"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>Fixar blocos secundários do aplicativo da área de trabalho
 
@@ -22,7 +22,7 @@ Graças à [Ponte de Desktop](https://developer.microsoft.com/windows/bridges/de
 ![Captura de tela de blocos secundários](images/secondarytiles.png)
 
 > [!IMPORTANT]
-> **Requer a Fall Creators Update**: você deve usar o SDK 16299 e executar o build 16299 ou posterior para marcar blocos secundários nos aplicativos de Ponte de Desktop.
+> **Requer a atualização dos criadores de outono**: Você deve ter como destino 16299 do SDK e estar executando a compilação 16299 ou posterior para fixar blocos secundários de aplicativos de ponte de Desktop.
 
 Adicionar um bloco secundário do aplicativo WPF ou WinForms é muito parecido com um aplicativo UWP puro. A única diferença é que você deve especificar o identificador da janela principal (HWND). Isso ocorre porque, ao fixar um bloco, o Windows exibe uma caixa de diálogo modal solicitando que o usuário confirme se deseja fixar o bloco. Se o aplicativo da área de trabalho não configurar o objeto SecondaryTile com a janela do proprietário, o Windows não saberá onde exibir a caixa de diálogo, e a operação falhará.
 
@@ -46,7 +46,7 @@ public interface IInitializeWithWindow
 }
 ```
 
-Como alternativa, se você estiver usando C++, adicione uma referência ao arquivo de cabeçalho **shobjidl.h** no código. Esse arquivo de cabeçalho contém a declaração da interface *IInitializeWithWindow*.
+Como alternativa, se você estiver usando C++, adicione uma referência ao arquivo de cabeçalho **shobjidl.h** no código. Este arquivo de cabeçalho contém a declaração da interface *IInitializeWithWindow*.
 
 
 ## <a name="initialize-the-secondary-tile"></a>Inicializar o bloco secundário
@@ -90,7 +90,7 @@ bool isPinned = await tile.RequestCreateAsync();
 ## <a name="send-tile-notifications"></a>Enviar notificações de bloco
 
 > [!IMPORTANT]
-> **Requer a versão 17134.81 de abril de 2018 ou posterior**: você deve executar a versão 17134.81 ou posterior para enviar as notificações de bloco para blocos secundários pelos aplicativos da Ponte de Desktop. Antes da atualização de serviço .81, uma exceção de 0x80070490 *Elemento não encontrado* não ocorreria ao enviar notificações de bloco para blocos secundários pelos aplicativos de Ponte de Desktop.
+> **Requer a versão 17134.81 ou posterior de abril de 2018**: Você deve estar executando compilação 17134.81 ou posterior para enviar notificações de bloco ou selo para blocos secundários de aplicativos de ponte de Desktop. Antes da atualização de serviço .81, uma exceção de 0x80070490 *Elemento não encontrado* não ocorreria ao enviar notificações de bloco para blocos secundários pelos aplicativos de Ponte de Desktop.
 
 O envio de notificações de bloco ou selo é o mesmo para aplicativos UWP. Consulte [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md) para começar.
 
@@ -99,6 +99,6 @@ O envio de notificações de bloco ou selo é o mesmo para aplicativos UWP. Cons
 
 * [Exemplo de código completo](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SecondaryTileSample)
 * [Visão geral de blocos secundários](secondary-tiles.md)
-* [Fixar blocos secundários (UWP)](secondary-tiles-pinning.md)
+* [Blocos secundários do PIN (UWP)](secondary-tiles-pinning.md)
 * [Ponte de Desktop](https://developer.microsoft.com/windows/bridges/desktop)
-* [Exemplos de código da Ponte de Desktop](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
+* [Exemplos de código de ponte de desktop](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)

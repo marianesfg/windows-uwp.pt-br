@@ -1,25 +1,25 @@
 ---
-Description: The Xbox analytics report in Partner Center shows you statistics about how your customers are engaging with the Xbox features in your product.
+Description: O relatório de análise do Xbox no Partner Center mostra estatísticas sobre como seus clientes estão participando com os recursos do Xbox em seu produto.
 title: Relatório de análise do Xbox
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, análise do Xbox, análise do Xbox em tempo real, estatística do Xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: ae9bacd88f957954c5cd1d3f6ccd6d3c04a568a2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922387"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607441"
 ---
 # <a name="xbox-analytics-report"></a>Relatório de análise do Xbox
 
-O relatório de **análise do Xbox** no [Partner Center](https://partner.microsoft.com/dashboard) mostra estatísticas sobre como os clientes estão participando com os recursos do Xbox em seu jogo. Ele também fornece informações de integridade do serviço para ajudar a resolver erros de cliente.
+O **analytics Xbox** de relatórios no [Partner Center](https://partner.microsoft.com/dashboard) mostra estatísticas sobre como seus clientes estão se envolvendo com os recursos do Xbox em seu jogo. Ele também fornece informações de integridade do serviço para ajudar a resolver erros de cliente.
 
 > [!IMPORTANT]
-> Você só verá esse relatório se estiver publicando um jogo para Xbox ou um jogo que usa os serviços Xbox Live. Para fazer isso, você deve passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do [ ID@Xbox programa](../xbox-live/developer-program-overview.md#id). Jogos publicados por meio do [Programa de criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) não são visíveis no momento nesse relatório.
+> Você só verá esse relatório se estiver publicando um jogo para Xbox ou um jogo que usa os serviços Xbox Live. Para fazer isso, você deve percorrer as [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui os jogos publicados pela [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) enviados por meio de jogos e o [ ID@Xbox programa](../xbox-live/developer-program-overview.md#id). Jogos publicados por meio de [programa de criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) não são visíveis no momento neste relatório.
 
-Você pode exibir o relatório de **análise do Xbox** do menu de navegação esquerdo para o seu jogo, expandindo **Analisar** e selecionar a **análise do Xbox**.  Você pode exibir esses dados no Partner Center ou [baixar o relatório](download-analytic-reports.md) para exibição offline.
+Você pode exibir o **analytics Xbox** relatórios no menu de navegação à esquerda de seu jogo, expandindo **analisar** e selecionando **Xbox analytics**.  Você pode exibir esses dados no Partner Center, ou [baixar o relatório](download-analytic-reports.md) exibir offline.
 
 
 ## <a name="overview-tab"></a>Guia Visão geral
@@ -89,11 +89,11 @@ As seções na **guia de Integridade do serviço Xbox Live** o ajudam a entender
 Na parte superior da guia, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para **7D** (7 dias) ou um intervalo de datas personalizado que você especificar (não superior a 30 dias). Para um intervalo de datas personalizado, observe que todos os gráficos reduzirão o intervalo do gráfico para o primeiro e o último dia de dados fornecido dentro do intervalo que você inserir.
 
 Também é possível expandir **Filtros** para filtrar os dados dessa página por versão do pacote, tipo de dispositivo e/ou por área restrita.
-- **Versão do pacote**: o filtro padrão é **Todas as versões**, mas é possível limitar os dados de integridade do serviço para uma versão do pacote específica.
-- **Tipo de dispositivo**: A configuração padrão é **Todos os dispositivos**, mas é possível limitar os dados de integridade de serviço para um tipo de dispositivo específico.
-- **Área restrita**: A configuração padrão é **COMERCIAL**, mas você pode limitar os dados de integridade do serviço para uma área restrita específica.
+- **Versão do pacote**: O filtro padrão é **todas as versões**, mas você pode limitar os dados de integridade do serviço para uma versão específica do pacote.
+- **Tipo de dispositivo**: A configuração padrão é **todos os dispositivos**, mas você pode limitar os dados de integridade do serviço para um tipo de dispositivo específico.
+- **Área restrita**: A configuração padrão é **varejo**, mas você pode limitar os dados de integridade do serviço para uma área de segurança específico.
 
-As informações de todos os gráficos listados abaixo refletem o intervalo de datas e quaisquer filtros selecionados. Algumas seções também permitem que você aplique mais filtros.
+As informações de todos os gráficos listados abaixo refletem o intervalo de datas e todos os filtros selecionados. Algumas seções também permitem que você aplique mais filtros.
 
 
 ### <a name="client-errors-by-service"></a>Erros do cliente por serviço

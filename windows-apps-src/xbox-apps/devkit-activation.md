@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
 ms.openlocfilehash: 3664ecae152b7178709bffc373a877e58a86461a
-ms.sourcegitcommit: eaee5a45d5eace64c69e67691e5330b466cc74c2
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "9083252"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57590531"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Ativação do Modo de Desenvolvedor do Xbox One
 
@@ -38,13 +38,13 @@ O Modo de Desenvolvedor pode ser habilitado em qualquer console Xbox One de vare
 
     ![Etapa de Ativação 5](images/activation-step-5.png)  
     
-5.  [Registrar uma conta de desenvolvedor de aplicativo no Partner Center](https://developer.microsoft.com/store/register).  Isso também é a primeira etapa para publicar seu jogo.
+5.  [Registrar uma conta de desenvolvedor do aplicativo no Partner Center](https://developer.microsoft.com/store/register).  Isso também é a primeira etapa para publicar seu jogo.
 
-6.  Entrar no [Partner Center](https://partner.microsoft.com/dashboard) com sua conta de desenvolvedor de aplicativo de Partner Center válida, atual.  Se você não vir várias opções no painel de navegação à esquerda, ou não verá a opção de **criar um novo aplicativo** na seção de **Visão geral** , as etapas a seguir e ativação links _não funcionará_; Verifique se que você registrou totalmente sua conta de desenvolvedor de aplicativo da etapa anterior.
+6.  Entrar no [Partner Center](https://partner.microsoft.com/dashboard) com sua conta de desenvolvedor do aplicativo do Partner Center que tenha válida e atual.  Se você não vir várias opções no painel de navegação à esquerda ou não vir as **criar um novo aplicativo** opção a **visão geral** seção, as etapas a seguir e links de ativação _não funcionará_ ; Verifique se você registrou totalmente sua conta de desenvolvedor do aplicativo da etapa anterior.
 
 7.  Vá para [partner.microsoft.com/xboxconfig/devices](https://partner.microsoft.com/xboxconfig/devices).
 
-8.  Insira o código de ativação exibido no aplicativo Ativação do Modo de Desenvolvedor. Você tem um número limitado de ativações associadas à sua conta. Depois que tiver sido ativado o modo de desenvolvedor, Partner Center indicará que você usou uma das ativações associadas à sua conta.
+8.  Insira o código de ativação exibido no aplicativo Ativação do Modo de Desenvolvedor. Você tem um número limitado de ativações associadas à sua conta. Depois de ativar o modo de desenvolvedor, Partner Center indicará que você usou um as ativações associadas à sua conta.
 
     ![Etapa de Ativação 8](images/activation-step-8-rs2.png)    
     
@@ -59,7 +59,7 @@ O Modo de Desenvolvedor pode ser habilitado em qualquer console Xbox One de vare
 ## <a name="switch-between-retail-and-developer-mode"></a>Alternar entre o Modo de Varejo e o Modo de Desenvolvedor
 Quando o Modo de Desenvolvedor tiver sido habilitado no seu console, use **Dev Home** para alternar entre ele e o Modo de Varejo. Para saber mais sobre como iniciar e usar a Dev Home, consulte [Introdução às ferramentas do Xbox One](introduction-to-xbox-tools.md).
 
-* Para alternar para o Modo de varejo, abra a **Home Page de Desenvolvimento**. Em **Ações rápidas**, selecione **Sair do Modo de desenvolvimento**. Isso reiniciará o console no Modo de varejo.    
+* Para alternar para o Modo de varejo, abra a **Home Page de Desenvolvimento**. Em **Ações rápidas**, selecione **Sair do Modo de desenvolvimento**. Isso reiniciará o seu console no modo de varejo.    
 
   ![Etapa de Ativação 13](images/activation-step-13-rs4.png)  
   
@@ -68,5 +68,5 @@ Quando o Modo de Desenvolvedor tiver sido habilitado no seu console, use **Dev H
   ![Etapa de Ativação 14](images/activation-step-12.png)  
 
 ## <a name="see-also"></a>Consulte também
-- [Desativação do Modo de Desenvolvedor do Xbox One](devkit-deactivation.md)
+- [Desativação de um modo de desenvolvedor Xbox](devkit-deactivation.md)
 - [UWP no Xbox One](index.md)

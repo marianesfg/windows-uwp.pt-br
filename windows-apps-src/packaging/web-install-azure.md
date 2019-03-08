@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais, servidor Web do Azure
 ms.localizationpriority: medium
 ms.openlocfilehash: 074a8e9941d4314bb35c28b0ee296e9d86fa23a5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929683"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608791"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Instalar um aplicativo UWP a partir de um aplicativo Web do Azure
 
@@ -25,7 +25,7 @@ Para seguir com sucesso este tutorial, você precisará do seguinte:
 1. Assinatura do Microsoft Azure 
 2. Pacote do aplicativo UWP: o pacote do aplicativo que você distribuirá
 
-Opcional: [Projeto inicial](https://github.com/AppInstaller/MySampleWebApp) no GitHub. Isso é útil se você não tem um pacote do aplicativo ou página da Web para trabalhar, mas ainda quer aprender a usar esse recurso.
+Opcional: [Projeto Starter](https://github.com/AppInstaller/MySampleWebApp) no GitHub. Isso é útil se você não tem um pacote do aplicativo ou página da Web para trabalhar, mas ainda quer aprender a usar esse recurso.
 
 ### <a name="step-1---get-an-azure-subscription"></a>Etapa 1: obter uma assinatura do Azure
 Para obter uma assinatura do Azure, acesse a [página da conta do Azure](https://azure.microsoft.com/free/). Para os fins deste tutorial, você pode usar uma associação gratuita.

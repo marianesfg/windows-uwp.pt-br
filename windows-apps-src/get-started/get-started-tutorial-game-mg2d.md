@@ -1,17 +1,17 @@
 ---
 title: Criar um jogo UWP em MonoGame 2D
-description: Um jogo simples UWP para a Microsoft Store, escrito em c# e MonoGame
+description: Um UWP simple jogo para a Microsoft Store, escrito em C# e o MonoGame
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: dbd2c6c9f5e3cf2200f9b260687f05718178868a
-ms.sourcegitcommit: 4dd9f76bd7f0ebdb42d78eab472d33a979dce60d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "9082879"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57619151"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Criar um jogo UWP em MonoGame 2D
 
@@ -26,12 +26,12 @@ O MonoGame é uma estrutura leve de desenvolvimento de jogos. Este tutorial vai 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 +   Windows 10 e Microsoft Visual Studio 2017.  [Clique aqui para saber como fazer a preparação inicial com o Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ O .NET framework de desenvolvimento da área de trabalho. Se você ainda não tiver instalado, você pode obtê-lo novamente executando o instalador do Visual Studio e modificar a instalação do Visual Studio 2017.
++ A estrutura de desenvolvimento de desktop .NET. Se você ainda não a tem instalada, poderá obtê-la executando novamente o instalador do Visual Studio e modificando a instalação do Visual Studio 2017.
 +   Conhecimento básico de C# ou uma linguagem de programação similar orientada a objetos. [Clique aqui para acessar uma introdução a C#](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   É útil ter familiaridade com conceitos de ciências básicas de computação, como classes, métodos e variáveis.
 
 ## <a name="why-monogame"></a>Por que o MonoGame?
-Não faltam opções quando se trata de ambientes de desenvolvimento de jogos. Pode ser difícil saber onde começar quando se tem desde mecanismos repletos de recursos, como Unity, até APIs de multimídia abrangentes e complexas, como DirectX. O MonoGame é um conjunto de ferramentas, com um nível de complexidade que se situa entre um mecanismo de jogo e uma API mais robusta como DirectX. Ele fornece um pipeline de conteúdo fácil de usar, e todas as funcionalidades necessárias para criar jogos leves que são executados em uma ampla variedade de plataformas. Melhor de tudo, apps MonoGame são escritos em c# pura, e você pode distribuí-los rapidamente por meio da Microsoft Store ou outras plataformas de distribuição semelhantes.
+Não faltam opções quando se trata de ambientes de desenvolvimento de jogos. Pode ser difícil saber onde começar quando se tem desde mecanismos repletos de recursos, como Unity, até APIs de multimídia abrangentes e complexas, como DirectX. O MonoGame é um conjunto de ferramentas, com um nível de complexidade que se situa entre um mecanismo de jogo e uma API mais robusta como DirectX. Ele fornece um pipeline de conteúdo fácil de usar, e todas as funcionalidades necessárias para criar jogos leves que são executados em uma ampla variedade de plataformas. O melhor de todos, MonoGame aplicativos são escritos em pura C#, e você pode distribuí-los rapidamente por meio do Microsoft Store ou em outras plataformas de distribuição semelhante.
 
 ## <a name="get-the-code"></a>Obter o código
 Se você estiver com vontade de seguir as etapas do tutorial passo a passo e quiser apenas ver o MonoGame em ação, [clique aqui para baixar o app finalizado](https://github.com/Microsoft/Windows-appsample-get-started-mg2d).
@@ -40,7 +40,7 @@ Abra o projeto no Visual Studio 2017 e pressione **F5** para executar o exemplo.
 
 Se você tiver feito isso, pule a próxima seção sobre como configurar o MonoGame para ver um passo a passo do código.
 
-**Observação:** o jogo criado nesta amostra não pretende ser completo (e nem divertido). Sua única finalidade é demonstrar todos os conceitos básicos do desenvolvimento 2D no MonoGame. Fique à vontade para usar este código e fazer algo muito melhor — ou apenas começar do zero após aprender as noções básicas!
+**Observação:** O jogo criado neste exemplo não deve ser concluída (ou qualquer nada divertido). Sua única finalidade é demonstrar todos os principais conceitos do desenvolvimento 2D no MonoGame. Fique à vontade para usar este código e fazer algo muito melhor — ou apenas começar do zero após aprender as noções básicas!
 
 ## <a name="set-up-monogame-project"></a>Configurar o projeto do MonoGame
 1. Instale o **MonoGame 3.6** para Visual Studio de [MonoGame.net](https://www.monogame.net/)
@@ -66,7 +66,7 @@ Agora que você criou o projeto, abra o arquivo **Game1.cs** do **Gerenciador de
 
 **protected override void UnloadContent()** Este método é usado para descarregar o conteúdo do gerenciador de não conteúdo. Nós não o usamos.
 
-**protected override void Update (GameTime gameTime)** Esse método é chamado uma vez para cada ciclo do loop do jogo. Aqui, podemos atualizar os estados de qualquer objeto ou variável usados no jogo. Isso inclui itens como posição, a velocidade ou a cor de um objeto. Isso também é que a entrada do usuário é manipulada. Em poucas palavras, esse método manipula cada parte da lógica do jogo, exceto objetos de desenho na tela.
+**substituição protegida void Update (GameTime gameTime)** esse método é chamado uma vez para cada ciclo do loop do jogo. Aqui, podemos atualizar os estados de qualquer objeto ou variável usados no jogo. Isso inclui itens como posição, a velocidade ou a cor de um objeto. Isso também é onde a entrada do usuário é tratada. Em poucas palavras, esse método manipula cada parte da lógica do jogo, exceto objetos de desenho na tela.
 
 **protected override void Draw(GameTime gameTime)** É aqui que os objetos são desenhados na tela, usando as posições dadas pelo método Update.
 
@@ -77,14 +77,14 @@ No MonoGame, a arte 2D é adicionada ao app sob a forma de "sprites". Um sprite 
 ### <a name="1-download-a-texture"></a>1. Baixe uma textura
 Para os nossos objetivos, este primeiro sprite vai ser extremamente tedioso. [Clique aqui para baixar este retângulo verde monótono](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/grass.png).
 
-### <a name="2-add-the-texture-to-the-content-folder"></a>2. Adicione a textura na pasta de Conteúdo
+### <a name="2-add-the-texture-to-the-content-folder"></a>2. Adicionar a textura para a pasta de conteúdo
 - Abra o **Gerenciador de Soluções**
 - Clique com botão direito em **Content.mgcb** na pasta **Conteúdo** e selecione **Abrir com**. No menu pop-up selecione **Monogame Pipeline**e selecione **OK**.
 - Na nova janela, clique com botão direito no item **Conteúdo** e selecione **Adicionar -> Item Existente**.
 - Localize e selecione o retângulo verde no navegador de arquivos.
 - Nomeie o item "grass.png" e selecione **Adicionar**.
 
-### <a name="3-add-class-variables"></a>3. Adicione variáveis de classe
+### <a name="3-add-class-variables"></a>3. Adicionar variáveis de classe
 Para carregar esta imagem como uma textura de sprite, abra **Game1.cs** e adicione as seguintes variáveis de classe.
 
 ```CSharp
@@ -96,7 +96,7 @@ Texture2D grass;
 
 A variável SKYRATIO nos informa quanto da cena queremos que seja céu versus grama — nesse caso, dois terços. **screenWidth** e **screenHeight** manterão o controle do tamanho da janela do app, enquanto **grass** é onde vamos armazenar nosso retângulo verde.
 
-### <a name="4-initialize-class-variables-and-set-window-size"></a>4. Inicialize as variáveis de classe e defina o tamanho da janela
+### <a name="4-initialize-class-variables-and-set-window-size"></a>4. Inicializar variáveis de classe e defina o tamanho da janela
 As variáveis **screenWidth** e **screenHeight** ainda precisam ser inicializadas, então adicione este código ao método **Inicialize**:
 
 ```CSharp
@@ -117,7 +117,7 @@ Para carregar a textura para a variável de grama, adicione o seguinte ao métod
 grass = Content.Load<Texture2D>("grass");
 ```
 
-### <a name="6-draw-the-sprite"></a>6. Desenhe o sprite
+### <a name="6-draw-the-sprite"></a>6. Desenhar o sprite
 Para desenhar o retângulo, adicione as seguintes linhas ao método **Draw**:
 
 ```CSharp
@@ -159,7 +159,7 @@ Antes de começarmos a animar sprites, vamos fazer uma nova classe chamada "Spri
 ### <a name="1-create-a-new-class"></a>1. Crie uma nova classe
 No **Gerenciador de Soluções**, clique com botão direito do mouse em **MonoGame2D (Universal do Windows)** e selecione **Adicionar -> Classe**. Nomeie a classe "SpriteClass.cs" e selecione **Adicionar**.
 
-### <a name="2-add-class-variables"></a>2. Adicione variáveis de classe
+### <a name="2-add-class-variables"></a>2. Adicionar variáveis de classe
 Adicione este código à classe que você acabou de criar:
 
 ```CSharp
@@ -264,7 +264,7 @@ Agora, o obstáculo que o jogador precisa evitar. O que gatos ninja e dinossauro
 
 Como já fez antes com o retângulo verde, adicione essas imagens em **Content.mgcb** por meio do **MonoGame Pipeline**, nomeando-as "ninja-cat-dino.png" e "broccoli.png", respectivamente.
 
-### <a name="2-add-class-variables"></a>2. Adicione variáveis de classe
+### <a name="2-add-class-variables"></a>2. Adicionar variáveis de classe
 Adicione o seguinte código à lista de variáveis de classe em **Game1.cs**:
 
 ```CSharp
@@ -298,7 +298,7 @@ score rastreia de quantos obstáculos o jogador se esquivou com êxito.
 
 Por fim, **random** será usado para adicionar um pouco de imprevisibilidade ao comportamento do obstáculo brócolis.
 
-### <a name="3-initialize-variables"></a>3. Inicialize as variáveis
+### <a name="3-initialize-variables"></a>3. Inicializar variáveis
 Em seguida, precisamos inicializar estas variáveis. Adicione adicione o seguinte código ao método Initialize:
 
 ```CSharp
@@ -314,7 +314,7 @@ gravitySpeed = ScaleToHighDPI(30f);
 
 Observe que as três últimas variáveis precisam ser dimensionadas para dispositivos com alto DPI, porque elas especificam uma taxa de alteração em pixels.
 
-### <a name="4-construct-spriteclasses"></a>4. Construa SpriteClasses
+### <a name="4-construct-spriteclasses"></a>4. Construir SpriteClasses
 Nós vamos construir objetos SpriteClass no método **LoadContent**. Adicione este código ao que você já tem:
 
 ```CSharp
@@ -324,8 +324,8 @@ broccoli = new SpriteClass(GraphicsDevice, "Content/broccoli.png", ScaleToHighDP
 
 A imagem de brócolis é bem maior do que queremos que apareça no jogo, portanto, nós vamos dimensioná-la até 0,2 vezes seu tamanho original.
 
-### <a name="5-program-obstacle-behaviour"></a>5. comportamento de obstáculo programa
-Queremos que o brócolis para surja de um lugar fora da tela e vá na direção do avatar do jogador para que ele precise se esquivar. Para fazer isso, adicione este método à classe **Game1.cs** :
+### <a name="5-program-obstacle-behaviour"></a>5. Comportamento do programa obstáculo
+Queremos que o brócolis para surja de um lugar fora da tela e vá na direção do avatar do jogador para que ele precise se esquivar. Para fazer isso, adicione este método para o **Game1.cs** classe:
 
 ```CSharp
 public void SpawnBroccoli()
@@ -365,7 +365,7 @@ A segunda parte determina a rapidez com que o brócolis se moverá, que é deter
 
 A terceira parte define a direção do movimento do sprite brócolis. Ele vai na direção do avatar do jogador (dinossauro) quando o brócolis é gerado. Nós também damos um valor **dA** de 7f, que fará o brócolis girar no ar enquanto persegue o jogador.
 
-### <a name="6-program-game-starting-state"></a>6. Programe o estado inicial do jogo
+### <a name="6-program-game-starting-state"></a>6. Estado inicial do jogo programa
 Antes de podermos à manipulação da entrada do teclado, precisamos de um método que defina o estado inicial do jogo dos dois objetos que criamos. Em vez de o jogo começar assim que o app for executado, queremos que o usuário o inicie manualmente, pressionando a barra de espaços. Adicione o código a seguir, que define o estado inicial dos objetos animados e redefine a pontuação:
 
 ```CSharp
@@ -379,8 +379,8 @@ public void StartGame()
 }
 ```
 
-### <a name="7-handle-keyboard-input"></a>7. manipular a entrada do teclado
-Em seguida, precisamos de um novo método para manipular a entrada do usuário por meio do teclado. Adicione este método para **Game1.cs**:
+### <a name="7-handle-keyboard-input"></a>7. Manipular a entrada do teclado
+Depois, precisamos de um novo método para manipular a entrada do usuário por meio do teclado. Adicione este método para **Game1.cs**:
 
 ```CSharp
 void KeyboardHandler()
@@ -429,13 +429,13 @@ A primeira encerra o jogo se a tecla **Escape** for pressionada.
 
 A segunda inicia o jogo se a tecla **Space** tecla for pressionada e o jogo não tiver sido iniciado.
 
-A terceira faz o avatar dinossauro pular se **Space** for pressionada, alterando sua propriedade **dY**. Observe que o jogador não pode pular a menos que estejam no "chão" (Dino = screenHeight * SKYRATIO) e também não vai pular se a tecla de espaço está sendo pressionada em vez de ser pressionada uma vez. Isso impede o dinossauro de saltar assim que o jogo é iniciado, utilizando o mesmo pressionamento de tecla que inicia o jogo.
+A terceira faz o avatar dinossauro pular se **Space** for pressionada, alterando sua propriedade **dY**. Observe que o jogador não possa pular a menos que eles estejam em "Terra" (dino.y = screenHeight * SKYRATIO) e também não saltará se a tecla espaço está sendo pressionada em vez de uma vez pressionada. Isso impede o dinossauro de saltar assim que o jogo é iniciado, utilizando o mesmo pressionamento de tecla que inicia o jogo.
 
 Por fim, a última instrução if/else verifica se as setas direcionais para a esquerda ou direita estão sendo pressionadas e, em caso afirmativo, altera a propriedade **dX** do dinossauro, de acordo.
 
 **Desafio:** você pode fazer o método de manipulação de teclado acima funcionar com o esquema de entrada WASD, além da teclas de seta?
 
-### <a name="8-add-logic-to-the-update-method"></a>8. Adicione lógica ao método Update
+### <a name="8-add-logic-to-the-update-method"></a>8. Adicionar lógica para o método de atualização
 Em seguida, precisamos adicionar a lógica para todas essas partes ao método **Update** em **Game1.cs**:
 
 ```CSharp
@@ -475,7 +475,7 @@ if (broccoli.y > screenHeight+100 || broccoli.y < -100 || broccoli.x > screenWid
 }
 ```
 
-### <a name="9-draw-spriteclass-objects"></a>9. Draw objetos SpriteClass
+### <a name="9-draw-spriteclass-objects"></a>9. Desenhar objetos SpriteClass
 Por fim, adicione o seguinte código ao método **Draw** de **Game1.cs**, logo depois da última chamada de **spriteBatch.Draw**:
 
 ```CSharp
@@ -483,9 +483,9 @@ broccoli.Draw(spriteBatch);
 dino.Draw(spriteBatch);
 ```
 
-No MonoGame, novas chamadas de **spriteBatch.Draw** vão desenhar sobre todas as chamadas anteriores. Isso significa que o brócolis e o sprite dinossauro serão desenhados sobre o sprite da grama existente, portanto, eles nunca podem estar oculta atrás dela, independentemente de sua posição.
+No MonoGame, novas chamadas de **spriteBatch.Draw** vão desenhar sobre todas as chamadas anteriores. Isso significa que o broccoli e o sprite dino serão desenhadas sobre o sprite grama existente, para que eles nunca podem ser ocultados por trás dele, independentemente de sua posição.
 
-Tente executar o jogo agora e movimentar o dinossauro com as teclas de seta e a barra de espaços. Se você tiver seguido as etapas acima, você deve ser capaz de fazer seu avatar se movimente dentro da janela do jogo e o brócolis deve gerar a uma velocidade crescente.
+Tente executar o jogo agora e movimentar o dinossauro com as teclas de seta e a barra de espaços. Se você tiver seguido as etapas acima, você deve ser capaz de fazer seu avatar mover dentro da janela do jogo e o broccoli deve gerar a uma velocidade cada vez maiores.
 
 ![Avatar do jogador e obstáculo](images/monogame-tutorial-2.png)
 
@@ -494,10 +494,10 @@ Usando o código acima, podemos manter o controle de pontuação do jogador nos 
 
 Para corrigir esses dois problemas, vamos usar um novo tipo de objeto MonoGame chamado **SpriteFonts**.
 
-### <a name="1-create-spritefont-description-files"></a>1. Crie arquivos de descrição SpriteFont
+### <a name="1-create-spritefont-description-files"></a>1. Criar arquivos de descrição de SpriteFont
 No **Gerenciador de Soluções** encontre a pasta **Conteúdo**. Nesta pasta, clique com botão direito do mouse no arquivo **Content.mgcb** e selecione **Abrir com**. No menu pop-up, selecione **MonoGame Pipeline** e, depois, pressione **OK**. Na nova janela, clique com botão direito do mouse no item **Conteúdo** e selecione **Adicionar -> Novo Item**. Selecione **SpriteFont Description**, chame-o de "Score" e pressione **OK**. Em seguida, adicione outra descrição SpriteFont denominada "GameState" usando o mesmo procedimento.
 
-### <a name="2-edit-descriptions"></a>2. Edite as descrições
+### <a name="2-edit-descriptions"></a>2. Editar descrições
 Clique com botão direito do mouse na pasta **Conteúdo** no **MonoGame Pipeline** e selecione **Abrir local do arquivo**. Você deve ver uma pasta com os arquivos de descrição SpriteFont que você acabou de criar, bem como as imagens que você adicionou à pasta Conteúdo até agora. Agora você pode fechar e salvar a janela do pipeline do MonoGame. No **Explorador de Arquivos** abra ambos os arquivos de descrição em um editor de texto (Visual Studio, NotePad++, Atom etc).
 
 Cada descrição contém vários valores que descrevem o SpriteFont. Vamos fazer algumas alterações:
@@ -506,7 +506,7 @@ Em **Score.spritefont**, altere o valor **<Size>** de 12 para 36.
 
 Em **GameState.spritefont**, altere o valor **<Size>** de 12 para 72 e o valor **<FontName>** de Arial para Agency. Agency é outra fonte que vem por padrão com computadores Windows 10 e adicionará um toque de arte em nossa tela Introdução.
 
-### <a name="3-load-spritefonts"></a>3. Carregue SpriteFonts
+### <a name="3-load-spritefonts"></a>3. Carregar SpriteFonts
 De volta ao Visual Studio, primeiro vamos adicionar uma nova textura para a tela inicial de Introdução. [Clique aqui para baixar a imagem](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/start-splash.png).
 
 Como antes, adicione a textura ao projeto clicando com o botão direito do mouse em Conteúdo e selecionando **Adicionar -> Item existente**. Nomeie o novo item como “start-splash.png”.
@@ -527,7 +527,7 @@ scoreFont = Content.Load<SpriteFont>("Score");
 stateFont = Content.Load<SpriteFont>("GameState");
 ```
 
-### <a name="4-draw-the-score"></a>4. Desenhe a pontuação
+### <a name="4-draw-the-score"></a>4. Desenhar a pontuação
 Vá para o método **Draw** de **Game1.cs** e adicione o código a seguir antes de **spriteBatch.End();**
 
 ```CSharp
@@ -537,7 +537,7 @@ new Vector2(screenWidth - 100, 50), Color.Black);
 
 O código acima usa a descrição de sprite que criamos (Arial tamanho 36) para informar a pontuação atual do jogador perto do canto superior direito da tela.
 
-### <a name="5-draw-horizontally-centered-text"></a>5. Desenhe um texto centralizado horizontalmente
+### <a name="5-draw-horizontally-centered-text"></a>5. Desenhar texto centralizado horizontalmente
 Ao fazer um jogo, muitas vezes você desejará desenhar texto centralizado, horizontal ou verticalmente. Para centralizar horizontalmente o texto introdutório, adicione este código ao método **Draw** logo antes de **spriteBatch.End();**
 
 ```CSharp
@@ -566,7 +566,7 @@ if (!gameStarted)
 
 Primeiro, criamos duas cadeias de caracteres, uma para cada linha de texto que queremos desenhar. Em seguida, medimos a largura e altura de cada linha quando impressa, usando o método **SpriteFont.MeasureString(String)**. Isso nos dá o tamanho como um objeto **Vector2**, com a propriedade **X** que contém a largura e a **Y** que contém a altura.
 
-Por fim, desenhamos cada linha. Para centralizar o texto horizontalmente, tornamos o valor **X** do vetor da posição igual a **screenWidth / 2 - TextSize / 2**.
+Por fim, desenhamos cada linha. Para centralizar o texto horizontalmente, fazemos a **X** o valor de sua posição vetor igual a **screenWidth / 2 - textSize.X / 2**.
 
 **Desafio:** como você alterar o procedimento descrito acima para centralizar o texto verticalmente e também horizontalmente?
 
@@ -578,11 +578,11 @@ Experimente executar o jogo. Você consegue ver a tela inicial de Introdução? 
 Então, nós temos um brócolis que o segue por toda parte e ainda temos uma pontuação que sobre a cada vez que aparece um novo — mas do jeito em que está não existe realmente nenhuma maneira de perder esse jogo. Precisamos de uma maneira de saber se os sprites do dinossauro e dos brócolis colidem, e quando isso acontece, para declarar fim de jogo.
 
 ### <a name="1-get-the-textures"></a>1. Obter as texturas
-A última imagem precisamos, é um de "passar o jogo". [Clique aqui para baixar a imagem](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/game-over.png).
+A última imagem que precisamos, está uma para "game over". [Clique aqui para baixar a imagem](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/game-over.png).
 
-Assim como antes com o retângulo verde, imagens gato ninja e brócolis, adicione esta imagem à **mgcb** por meio do **Pipeline do MonoGame**, nomeando-"jogo-over.png".
+Exatamente como antes com o retângulo verde, cat ninja e broccoli imagens, adicione essa imagem para **Content.mgcb** por meio de **MonoGame Pipeline**, nomeando-o "jogo over.png".
 
-### <a name="2-rectangular-collision"></a>2. colisão retangular
+### <a name="2-rectangular-collision"></a>2. Colisão retangular
 Para detectar colisões em um jogo, os objetos geralmente são simplificados para reduzir a complexidade dos cálculos envolvidos. Vamos tratar tanto o avatar do jogador e o obstáculo brócolis como retângulos para fins de detecção de colisão entre eles.
 
 Abra **SpriteClass.cs** e adicione uma nova variável de classe:
@@ -606,9 +606,9 @@ public bool RectangleCollision(SpriteClass otherSprite)
 }
 ```
 
-Esse método detecta se dois objetos retangulares colidiram. O algoritmo funciona por meio de testes para ver se há uma lacuna entre qualquer uma das laterais dos retângulos. Se houver uma lacuna, não há nenhuma colisão — se não houver nenhuma lacuna, tem de haver uma colisão.
+Esse método detecta se dois objetos retangulares colidiram. O algoritmo funciona testando para ver se há uma lacuna entre qualquer um dos lados dos retângulos. Se houver uma lacuna, não há nenhuma colisão — se não houver nenhuma lacuna, tem de haver uma colisão.
 
-### <a name="3-load-new-textures"></a>3. carregue novas texturas
+### <a name="3-load-new-textures"></a>3. Carregar novo texturas
 
 Em seguida, abra **Game1.cs** e adicione duas novas variáveis de classe, uma para armazenar a textura do sprite fim de jogo e um boliano para rastrear o estado do jogo:
 
@@ -629,7 +629,7 @@ Por fim, carregue a textura em **gameOverTexture** no método **LoadContent**:
 gameOverTexture = Content.Load<Texture2D>("game-over");
 ```
 
-### <a name="4-implement-game-over-logic"></a>4. implemente a lógica "fim de jogo"
+### <a name="4-implement-game-over-logic"></a>4. Implementar a lógica de "game over"
 Adicione este código ao método **Update**, logo após o método **KeyboardHandler** ser chamado:
 
 ```CSharp
@@ -653,8 +653,8 @@ if (dino.RectangleCollision(broccoli)) gameOver = true;
 
 Isso chama o método **RectangleCollision** que criamos na **SpriteClass** e sinaliza o jogo como over se retornar true.
 
-### <a name="5-add-user-input-for-resetting-the-game"></a>5. Adicionar entrada do usuário para redefinir o jogo
-Adicione este código ao método **KeyboardHandler** , para permitir que o usuário redefina o jogo se pressionar Enter:
+### <a name="5-add-user-input-for-resetting-the-game"></a>5. Adicione a entrada do usuário para redefinir o jogo
+Adicione este código para o **KeyboardHandler** método, para permitir que o usuário redefina o jogo se eles pressionam Enter:
 
 ```CSharp
 if (gameOver && state.IsKeyDown(Keys.Enter))
@@ -664,7 +664,7 @@ if (gameOver && state.IsKeyDown(Keys.Enter))
 }
 ```
 
-### <a name="6-draw-game-over-splash-and-text"></a>6. desenhe fim de jogo inicial e texto
+### <a name="6-draw-game-over-splash-and-text"></a>6. Desenhe o jogo sobre abertura e texto
 Por fim, adicione este código ao método Draw, logo após a primeira chamada de **spriteBatch.Draw** (essa deve ser a chamada que desenha a textura de grama).
 
 ```CSharp
@@ -689,8 +689,8 @@ E pronto! Tente executar o jogo novamente. Se você tiver seguido as etapas acim
 
 ![Fim de jogo](images/monogame-tutorial-4.png)
 
-## <a name="publish-to-the-microsoft-store"></a>Publicar na Microsoft Store
-Como criamos este jogo como um aplicativo UWP, é possível publicar este projeto na Microsoft Store. Há algumas etapas para o processo.
+## <a name="publish-to-the-microsoft-store"></a>Publicar para a Microsoft Store
+Porque nós o construímos esse jogo como um aplicativo UWP, é possível publicar esse projeto para a Microsoft Store. Há algumas etapas para o processo.
 
 Você precisa estar [registrado](https://developer.microsoft.com/en-us/store/register) como desenvolvedor no Windows.
 
@@ -698,4 +698,4 @@ Você deve usar a [lista de verificação do envio de aplicativo](https://docs.m
 
 O app deve ser enviado para [certificação](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process).
 
-Para obter mais detalhes, consulte [Publicando seu aplicativo UWP](https://developer.microsoft.com/en-us/store/publish-apps).
+Para obter mais detalhes, consulte [publicando seu aplicativo UWP](https://developer.microsoft.com/en-us/store/publish-apps).

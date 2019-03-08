@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx 9, directx 11, portabilidade
 ms.localizationpriority: medium
 ms.openlocfilehash: 0cfaa071ea0182ef5fac264e85d919be5744d15d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050669"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57619311"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Correlacionar recursos do DirectX 9 com APIs do DirectX 11
 
@@ -19,7 +19,7 @@ ms.locfileid: "9050669"
 
 **Resumo**
 
--   [Planejar a portabilidade do DirectX](plan-your-directx-port.md)
+-   [Planejar sua porta do DirectX](plan-your-directx-port.md)
 -   [Alterações importantes do Direct3D 9 para o Direct3D 11](understand-direct3d-11-1-concepts.md)
 -   Mapeamento de recursos
 
@@ -66,7 +66,7 @@ O Visual Studio ainda usa FXC para compilar objetos de sombreador. Os sombreador
 
 Para ter uma ideia do carregamento de recursos de sombreador, consulte o tópico sobre [portabilidade simples do Direct3D 9 para UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
-O Direct3D 11 introduziu o modelo de sombreador 5, que requer o nível de recursos do Direct3D 11\_0 (ou superior). Consulte o tópico sobre [Recursos do modelo de sombreador 5 do HLSL para Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff471419).
+Direct3D 11 introduziu o modelo de sombreador 5, que requer o nível de recurso do Direct3D 11\_0 (ou superior). Consulte o tópico sobre [Recursos do modelo de sombreador 5 do HLSL para Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff471419).
 
 ## <a name="replace-xnamath-and-d3dxmath"></a>Substituir XNAMath e D3DXMath
 
@@ -102,16 +102,16 @@ O DirectShow não faz mais parte da API do DirectX (ou do Windows). O [Microsoft
 O Microsoft DirectPlay foi preterido. Caso o jogo use serviços de rede, será necessário fornecer código de rede em conformidade com os requisitos de certificação da UWP. Use as seguintes APIs:
 
 -   [Win32 e COM para aplicativos UWP (rede) (Windows)](https://msdn.microsoft.com/library/windows/apps/br205759)
--   [**Namespace Windows.Networking (Windows)**](https://msdn.microsoft.com/library/windows/apps/br207124)
+-   [**Namespace Windows Networking (Windows)**](https://msdn.microsoft.com/library/windows/apps/br207124)
 -   [**Namespace Windows.Networking.Sockets (Windows)**](https://msdn.microsoft.com/library/windows/apps/br226960)
 -   [**Namespace Windows.Networking.Connectivity (Windows)**](https://msdn.microsoft.com/library/windows/apps/br207308)
 -   [**Namespace Windows.ApplicationModel.Background (Windows)**](https://msdn.microsoft.com/library/windows/apps/br224847)
 
 Os artigos a seguir ajudam a adicionar recursos de rede e a declarar suporte à rede no manifesto do pacote do aplicativo.
 
--   [Conectando-se com soquetes (aplicativos UWP usando C#/VB/C++ e XAML) (Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh452976)
--   [Conectando-se com WebSockets (aplicativos UWP usando C#/VB/C++ e XAML) (Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh994396)
--   [Conectando serviços Web (aplicativos UWP usando C#/VB/C++ e XAML) (Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh761504)
+-   [Conectar-se com soquetes (aplicativos UWP usando a C#/VB/C++ e XAML) (Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh452976)
+-   [Conectar-se com o WebSockets (aplicativos UWP usando a C#/VB/C++ e XAML) (Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh994396)
+-   [Conectar-se aos serviços da web (aplicativos UWP usando a C#/VB/C++ e XAML) (Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh761504)
 -   [Noções básicas de rede](https://msdn.microsoft.com/library/windows/apps/mt280233)
 
 Observe que todos os aplicativos UWP (incluindo jogos) usam tipos específicos de tarefas em segundo plano para manter a conectividade enquanto o aplicativo é suspenso. Caso o jogo precise manter o estado de conexão enquanto suspenso, consulte [Noções básicas de rede](https://msdn.microsoft.com/library/windows/apps/mt280233).
@@ -201,7 +201,7 @@ Use a tabela a seguir para converter o código do Direct3D 9 em Direct3D 11. Iss
 <p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174375">IDirect3DDevice9::EndScene</a></p>
 <p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174372">IDirect3DDevice9::DrawPrimitiveUP</a></p>
 <p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174370">IDirect3DDevice9::DrawIndexedPrimitiveUP</a></p></td>
-<td align="left"><p>Sem equivalente direto</p></td>
+<td align="left"><p>Nenhuma equivalência direta</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174470">IDirect3DDevice9::ShowCursor</a></p>
@@ -261,7 +261,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R8G8B8</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8R8G8B8</p></td>
@@ -279,7 +279,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X1R5G5B5</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A1R5G5B5</p></td>
@@ -291,7 +291,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_R3G3B2</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A8</p></td>
@@ -299,11 +299,11 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8R3G3B2</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X4R4G4B4</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A2B10G10R10</p></td>
@@ -316,7 +316,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_X8B8G8R8</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_G16R16</p></td>
@@ -324,7 +324,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A2R10G10B10</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A16B16G16R16</p></td>
@@ -332,17 +332,17 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8P8</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_P8</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>  Use swizzling r no sombreador para duplicar o vermelho em outros componentes para obter o comportamento do Direct3D 9.
+<strong>Observação</strong>    swizzle do uso. r no sombreador duplicar vermelho para outros componentes para obter o comportamento do Direct3D 9.
 </div>
 <div>
  
@@ -352,7 +352,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DFMT_A8L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>  Use o swizzle rrrg no sombreador para duplicar o vermelho e mover o verde para os componentes alfa para obter o comportamento do Direct3D 9.
+<strong>Observação</strong>    Use swizzle .rrrg sombreador para duplicar vermelho e mover verde para os componentes alfabéticos para obter o comportamento do Direct3D 9.
 </div>
 <div>
  
@@ -360,7 +360,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A4L4</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_V8U8</p></td>
@@ -368,11 +368,11 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L6V5U5</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X8L8V8U8</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_Q8W8V8U8</p></td>
@@ -384,21 +384,21 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_W11V11U10</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A2W10V10U10</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_UYVY</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R8G8_B8G8</p></td>
 <td align="left"><p>DXGI_FORMAT_G8R8_G8B8_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>  no Direct3D 9 os dados foi dimensionado para 255.0, mas isso pode ser manipulado no sombreador.
+<strong>Observação</strong>    no Direct3D 9 os dados foi aumentado por 255.0f, mas isso pode ser tratado no sombreador.
 </div>
 <div>
  
@@ -406,13 +406,13 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_YUY2</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_G8R8_G8B8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_B8G8_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>  no Direct3D 9 os dados foi dimensionado para 255.0, mas isso pode ser manipulado no sombreador.
+<strong>Observação</strong>    no Direct3D 9 os dados foi aumentado por 255.0f, mas isso pode ser tratado no sombreador.
 </div>
 <div>
  
@@ -426,7 +426,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DFMT_DXT2</p></td>
 <td align="left"><p>DXGI_FORMAT_BC1_UNORM & DXGI_FORMAT_BC1_UNORM_SRGB</p>
 <div class="alert">
-<strong>Observação</strong>  DXT1 e DXT2 são iguais na perspectiva de API/hardware. A única diferença é quando alfa pré-multiplicado é usado, o que pode ser acompanhado por um aplicativo, sem a necessidade de um formato separado.
+<strong>Observação</strong>    DXT1 e DXT2 são as mesmas de uma perspectiva de API/hardware. A única diferença é quando alfa pré-multiplicado é usado, o que pode ser acompanhado por um aplicativo, sem a necessidade de um formato separado.
 </div>
 <div>
  
@@ -440,7 +440,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM & DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>Observação</strong>  DXT3 e DXT4 são iguais na perspectiva de API/hardware. A única diferença é quando alfa pré-multiplicado é usado, o que pode ser acompanhado por um aplicativo, sem a necessidade de um formato separado.
+<strong>Observação</strong>    DXT3 e DXT4 são as mesmas de uma perspectiva de API/hardware. A única diferença é quando alfa pré-multiplicado é usado, o que pode ser acompanhado por um aplicativo, sem a necessidade de um formato separado.
 </div>
 <div>
  
@@ -456,23 +456,23 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D32</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D15S1</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D24S8</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D24X8</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D24X4S4</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D16</p></td>
@@ -484,11 +484,11 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D24FS8</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_S1D15</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_S8D24</p></td>
@@ -496,17 +496,17 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_X8D24</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X4S4D24</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>  Use swizzling r no sombreador para duplicar o vermelho em outros componentes para obter o comportamento do D3D9.
+<strong>Observação</strong>    swizzle do uso. r no sombreador duplicar vermelho para outros componentes para obter o comportamento de D3D9.
 </div>
 <div>
  
@@ -526,7 +526,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_MULTI2_ARGB8</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R16F</p></td>
@@ -554,7 +554,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_CxV8U8</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_FLOAT1</p></td>
@@ -574,13 +574,13 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPED3DCOLOR</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8B8A8_UINT</p>
 <div class="alert">
-<strong>Observação</strong>  o sombreador obtém valores UINT, mas se o Direct3D 9 de estilo integrais sejam necessários floats no (0, 0F, 1, 0F... 255. f), UINT poderá ser convertido em float32 no sombreador.
+<strong>Observação</strong>    sombreador obtém valores UINT, mas se o Direct3D 9 estilo integral floats são necessários (0.0f, 1.0f... 255.f), UINT apenas pode ser convertido em float32 no sombreador.
 </div>
 <div>
  
@@ -590,7 +590,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DDECLTYPE_SHORT2</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16_SINT</p>
 <div class="alert">
-<strong>Observação</strong>  o sombreador obtém valores SINT, mas caso sejam necessários floats integrais no estilo do Direct3D 9, SINT poderá ser convertido em float32 no sombreador.
+<strong>Observação</strong>    sombreador obtém valores de SANTO, mas se floats integrais do Direct3D 9 estilo forem necessários, o SANTO apenas pode ser convertido em float32 no sombreador.
 </div>
 <div>
  
@@ -600,7 +600,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DDECLTYPE_SHORT4</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16B16A16_SINT</p>
 <div class="alert">
-<strong>Observação</strong>  o sombreador obtém valores SINT, mas caso sejam necessários floats integrais no estilo do Direct3D 9, SINT poderá ser convertido em float32 no sombreador.
+<strong>Observação</strong>    sombreador obtém valores de SANTO, mas se floats integrais do Direct3D 9 estilo forem necessários, o SANTO apenas pode ser convertido em float32 no sombreador.
 </div>
 <div>
  
@@ -628,11 +628,11 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_UDEC3</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_DEC3N</p></td>
-<td align="left"><p>Indisponível</p></td>
+<td align="left"><p>Não disponível</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_FLOAT16_2</p></td>
@@ -646,7 +646,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>FourCC 'ATI1'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC4_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>  exige nível de recursos 10.0 ou posterior
+<strong>Observação</strong>    requer o nível de recurso 10.0 ou posterior
 </div>
 <div>
  
@@ -656,7 +656,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>FourCC 'ATI2'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC5_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>  exige nível de recursos 10.0 ou posterior
+<strong>Observação</strong>    requer o nível de recurso 10.0 ou posterior
 </div>
 <div>
  

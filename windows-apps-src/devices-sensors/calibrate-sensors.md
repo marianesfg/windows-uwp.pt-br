@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a93d59a00630c240e74049a9fd98d50f285b0dd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946844"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634671"
 ---
 # <a name="calibrate-sensors"></a>Calibrar sensores
 
@@ -29,7 +29,7 @@ A enumeração [**MagnetometerAccuracy**](https://msdn.microsoft.com/library/win
 
 | Valor           | Descrição    |
 | ----------------- | ------------------- |
-| **Desconhecido**     | O driver do sensor não pôde relatar a precisão atual. Isso não significa necessariamente que o dispositivo está descalibrado. Cabe ao seu aplicativo decidir o melhor curso de ação se o valor **Desconhcido** for retornado. Se o seu aplicativo depender de uma leitura de sensor precisa, convém enviar um prompt para o usuário calibrar o dispositivo. |
+| **Desconhecido**     | O driver do sensor não pôde relatar a precisão atual. Isso não significa necessariamente que o dispositivo esteja descalibrado. Cabe ao seu aplicativo decidir o melhor curso de ação se o valor **Desconhcido** for retornado. Se o seu aplicativo depender de uma leitura de sensor precisa, convém enviar um prompt para o usuário calibrar o dispositivo. |
 | **Não confiável**  | Atualmente, há um alto grau de imprecisão no magnetômetro. Os aplicativos sempre devem solicitar uma calibragem ao usuário da primeira vez em que esse valor é retornado. |
-| **Aproximado** | Os dados são precisos o suficiente para alguns aplicativos. Um aplicativo de realidade aplicativo, que só precisa saber se o usuário movimento o dispositivo para cima/baixo ou para a esquerda/direita, pode continuar sem calibragem. Aplicativos que exigem uma posição absoluta, como um aplicativo de navegação que precisa saber em que direção você está indo para poder fornecer instruções, precisam solicitar uma calibragem. |
-| **Alto**        | Os dados são precisos. Nenhuma calibragem é necessária, mesmo para aplicativos que precisam conhecer uma posição absoluta, como aplicativos de navegação ou realidade ampliada. |
+| **Aproximar** | Os dados são precisos o suficiente para alguns aplicativos. Um aplicativo de realidade virtual, que só precisa saber se o usuário movimentou o dispositivo para cima/baixo ou para a esquerda/direita, pode continuar sem calibragem. Aplicativos que exigem uma posição absoluta, como um aplicativo de navegação que precisa saber em que direção você está indo para poder fornecer instruções, precisam solicitar uma calibragem. |
+| **Alta**        | Os dados são precisos. Nenhuma calibragem é necessária, mesmo para aplicativos que precisam conhecer uma posição absoluta, como aplicativos de navegação ou realidade ampliada. |

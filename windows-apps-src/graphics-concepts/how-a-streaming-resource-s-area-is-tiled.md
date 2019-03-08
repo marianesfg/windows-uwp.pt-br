@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7251d4595a3e87a8629d6e717bb4f52e5b7c35fe
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926597"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615361"
 ---
 # <a name="how-a-streaming-resources-area-is-tiled"></a>Como uma área de recurso de streaming é colocada lado a lado
 
@@ -23,9 +23,9 @@ Quando você cria um recurso de streaming, as dimensões, o tamanho do elemento 
 
 O número de blocos que serão usados por uma largura de elemento de tamanho e formato de superfície fornecida é bem definido e previsível com base nas tabelas das seções a seguir. Para recursos que contêm mipmaps ou casos em que as dimensões da superfície não preenchem um bloco, existem algumas restrições; consulte [Compactação mipmap](mipmap-packing.md).
 
-Diferentes recursos de streaming podem apontar para memória idêntica com formatos diferentes, desde que os aplicativos não confiem nos resultados da gravação na memória com um formato e leitura com outro. Mas os aplicativos podem confiar nos resultados da gravação na memória com um formato e leitura ocm outro se os formatos estiverem na mesma família de formato (ou seja, eles têm o mesmo formato do tipo pai). Por exemplo, DXGI\_FORMAT\_R8G8B8A8\_UNORM e DXGI\_FORMAT\_R8G8B8A8\_UINT são compatíveis entre si, mas não com DXGI\_FORMAT\_R16G16\_UNORM.
+Diferentes recursos de streaming podem apontar para memória idêntica com formatos diferentes, desde que os aplicativos não confiem nos resultados da gravação na memória com um formato e leitura com outro. Mas os aplicativos podem confiar nos resultados da gravação na memória com um formato e leitura ocm outro se os formatos estiverem na mesma família de formato (ou seja, eles têm o mesmo formato do tipo pai). Por exemplo, o DXGI\_formato\_R8G8B8A8\_UNORM e DXGI\_formato\_R8G8B8A8\_UINT são compatíveis entre si, mas não com o DXGI\_formato\_R16G16\_UNORM.
 
-Uma exceção é onde o sangramento de dados de suavização de um formato para outro está bem definido: se um bloco completamente contém 0 para todos os seus bits, esse bloco pode ser usado com qualquer formato que interpreta esses conteúdos de memória como 0 (independentemente do layout de memória). Portanto, um bloco pode ser limpo para 0x00 com o formato DXGI\_FORMAT\_R8\_UNORM e, em seguida, usado com um formato como DXGI\_FORMAT\_R32G32\_FLOAT e apareceria o conteúdo (que ainda é 0.0f,0.0f).
+Uma exceção é onde o sangramento de dados de suavização de um formato para outro está bem definido: se um bloco completamente contém 0 para todos os seus bits, esse bloco pode ser usado com qualquer formato que interpreta esses conteúdos de memória como 0 (independentemente do layout de memória). Portanto, um bloco pode ser limpo com 0x00 com o formato DXGI\_formato\_R8\_UNORM e, em seguida, usado com um formato como DXGI\_formato\_R32G32\_FLOAT e ela seriam exibido o conteúdo é ainda (0.0f, 0.0f).
 
 O layout dos dados dentro de um bloco não depende de onde o bloco é mapeado em um recurso geral. Assim, por exemplo, um bloco pode ser reutilizado em locais diferentes de uma superfície de uma só vez com um comportamento consistente em todos os locais.
 
@@ -45,19 +45,19 @@ O layout dos dados dentro de um bloco não depende de onde o bloco é mapeado em
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="texture2d-and-texture2darray-subresource-tiling.md">Sub-recursos lado a lado de Texture2D e Texture2DArray</a></p></td>
+<td align="left"><p><a href="texture2d-and-texture2darray-subresource-tiling.md">Texture2D e Texture2DArray subrecursos lado a lado</a></p></td>
 <td align="left"><p>Estas tabelas mostram como sub-recursos <a href="https://msdn.microsoft.com/library/windows/desktop/ff471525"><strong>Texture2D</strong></a> e <a href="https://msdn.microsoft.com/library/windows/desktop/ff471526"><strong>Texture2DArray</strong></a> são agrupados lado a lado.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="texture3d-subresource-tiling.md">Sub-recursos lado a lado de Texture3D</a></p></td>
+<td align="left"><p><a href="texture3d-subresource-tiling.md">Texture3D subrecursos lado a lado</a></p></td>
 <td align="left"><p>Esta tabela mostra como os sub-recursos de <a href="https://msdn.microsoft.com/library/windows/desktop/ff471562"><strong>Texture3D</strong></a> são colocados lado a lado.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="buffer-tiling.md">Buffers colocados lado a lado</a></p></td>
+<td align="left"><p><a href="buffer-tiling.md">Lado a lado do buffer</a></p></td>
 <td align="left"><p>Um recurso de <a href="introduction-to-buffers.md">buffer</a> é dividido em blocos de 64KB, com algum espaço vazio no último bloco se o tamanho não é um múltiplo de 64KB.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="mipmap-packing.md">Compactação de mipmap</a></p></td>
+<td align="left"><p><a href="mipmap-packing.md">Empacotamento de Mipmap</a></p></td>
 <td align="left"><p>Um número de mips (por fatia de matriz) pode ser incluído em um número de blocos, dependendo das dimensões de um recurso de streaming, formato, número de mipmaps e fatias da matriz.</p></td>
 </tr>
 </tbody>

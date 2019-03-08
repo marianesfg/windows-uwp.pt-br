@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: efdf4214-9738-4df6-bf1f-ed7141696ef6
 ms.localizationpriority: medium
 ms.openlocfilehash: 8bf4d62f390a5d324952ef2852a76803f4619fdc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934269"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593801"
 ---
 # <a name="register-an-app-in-a-loose-folder"></a>Registre um aplicativo em uma pasta flexível  
 
@@ -23,7 +23,7 @@ Método      | URI da solicitação
 :------     | :------
 POST | /api/app/packagemanager/register
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -34,11 +34,11 @@ pasta (obrigatória) | O nome da pasta de destino do pacote a ser registrado. Es
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Resposta**
 
@@ -56,9 +56,9 @@ Código de status HTTP      | Descrição
 
 * Windows Xbox
 
-**Observações**
+**Notas**
 
-Existem pelo menos três maneiras diferentes de colocar o aplicativo flexível no console na pasta desejada. A maneira mais fácil é simplesmente copiar os arquivos por meio do SMB para \\<IP_Address>\DevelopmentFiles\LooseApps. Isso exigirá um nome de usuário e uma senha em kits UWA que podem ser obtidos por meio de [/ext/smb/developerfolder](wdp-smb-api.md). 
+Existem pelo menos três maneiras diferentes de colocar o aplicativo flexível no console na pasta desejada. É a maneira mais fácil simplesmente copiar os arquivos via SMB para \\\DevelopmentFiles\LooseApps < endereço_IP >. Isso exigirá um nome de usuário e uma senha em kits UWA que podem ser obtidos por meio de [/ext/smb/developerfolder](wdp-smb-api.md). 
 
 A segunda maneira é copiando arquivos individuais para o local correto fazendo um POST em /api/filesystem/apps/file em que knownfolderid é DevelopmentFiles, packagefullname está vazio, além de nome de arquivo e caminho corretamente serem fornecidos (caminho deve começar com LooseApps).
 

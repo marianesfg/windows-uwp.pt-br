@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c1c9b75599efe4566bc1783f68ff9752510d1d99
-ms.sourcegitcommit: 9448348d7bc6590849db3a41e988dff9470ec111
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "9031372"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640561"
 ---
 # <a name="share-data"></a>Compartilhar dados
 
 
-Este artigo explica como dar suporte ao contrato de Compartilhamento em um aplicativo da UWP (Plataforma Universal do Windows). O contrato de Compartilhamento é uma maneira fácil de compartilhar dados como texto, links, fotos e vídeos entre aplicativos rapidamente. Por exemplo, um usuário pode querer compartilhar uma página da Web com seus amigos usando um aplicativo de rede social ou salvar um link em um aplicativo de anotações para consultar mais tarde.
+Este artigo explica como dar suporte ao contrato de Compartilhamento em um aplicativo da Plataforma Universal do Windows (UWP). O contrato de Compartilhamento é uma maneira fácil de compartilhar dados como texto, links, fotos e vídeos entre aplicativos rapidamente. Por exemplo, um usuário pode querer compartilhar uma página da Web com seus amigos usando um aplicativo de rede social ou salvar um link em um aplicativo de anotações para consultar mais tarde.
 
 ## <a name="set-up-an-event-handler"></a>Configurar um manipulador de eventos
 
@@ -24,7 +24,7 @@ Adicione um manipulador de eventos [**DataRequested**](https://msdn.microsoft.co
 
 [!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
 
-Quando ocorre um evento [**DataRequested**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.DataRequested), o app recebe um objeto [**DataRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest). Este contém um [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) que você pode usar para fornecer o conteúdo que o usuário quer compartilhar. Você deve fornecer um título e os dados a serem compartilhados. Uma descrição é opcional, mas recomendada.
+Quando ocorre um evento [**DataRequested**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.DataRequested), seu aplicativo recebe um objeto [**DataRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest). Este contém um [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) que você pode usar para fornecer o conteúdo que o usuário quer compartilhar. Você deve fornecer um título e os dados a serem compartilhados. Uma descrição é opcional, mas recomendada.
 
 [!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
 
@@ -60,7 +60,7 @@ Uma interface do usuário para compartilhamento é fornecida pelo sistema. Para 
 
 ## <a name="handle-errors"></a>Manipular erros
 
-Na maioria dos casos, o compartilhamento de conteúdo é um processo simples e direto. Contudo, há sempre a chance de algo inesperado acontecer. Por exemplo, o aplicativo pode exigir que o usuário selecione conteúdo para compartilhamento, mas o usuário não faz essa seleção. Para lidar com essas situações, use o método [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String)), que exibirá uma mensagem ao usuário se algo der errado.
+Na maioria dos casos, o compartilhamento de conteúdo é um processo simples e direto. Contudo, há sempre a chance de algo inesperado acontecer. Por exemplo, o aplicativo pode exigir que o usuário selecione conteúdo para compartilhamento, mas ele não faz essa seleção. Para lidar com essas situações, use o método [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String)), que exibirá uma mensagem ao usuário se algo der errado.
 
 ## <a name="delay-share-with-delegates"></a>Atrasar o compartilhamento com delegados
 

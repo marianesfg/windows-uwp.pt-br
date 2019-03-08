@@ -7,11 +7,11 @@ keywords: windows 10, uwp, xbox one, ferramentas
 ms.assetid: 6eaf376f-0d7c-49de-ad78-38e689b43658
 ms.localizationpriority: medium
 ms.openlocfilehash: ed106095d83ed0c6e055d22a1a0cf229380cff71
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945888"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57609321"
 ---
 # <a name="introduction-to-xbox-one-tools"></a>Introdução às ferramentas do Xbox One
 
@@ -21,7 +21,7 @@ Esta seção aborda como acessar o Portal de Dispositivos do Xbox por meio do ap
 
 A Dev Home é uma experiência de ferramentas no Kit de desenvolvimento do Xbox One criada para auxiliar a produtividade do desenvolvedor. A Dev Home oferece funcionalidade para gerenciar e configurar o kit de desenvolvimento.
 
-A Dev Home é o aplicativo padrão que é aberto quando seu console é inicializado no Modo de Desenvolvedor. Também é possível abrir a Dev Home selecionando o bloco **Dev Home** na tela Início. Se não houver nenhum bloco presente, o console não estará no Modo de Desenvolvedor.
+A Dev Home é o aplicativo padrão que é aberto quando seu console é inicializado no Modo de Desenvolvedor. Também é possível abrir a Dev Home selecionando o bloco **Dev Home** na tela Início. Se não houver nenhum bloco presente, o console não estará no modo de desenvolvedor.
 
 Para obter mais informações sobre a Dev Home, consulte [Home de desenvolvedor no Console (Dev Home)](dev-home.md).
 
@@ -32,7 +32,7 @@ Para habilitar o Portal de Dispositivos do Xbox no seu console Xbox One:
 
 1. Selecione o bloco **Dev Home** na tela Início.
 
-  ![Selecione o bloco Dev Home](images/introduction-to-xbox-one-tools-1.png)
+  ![Selecionar o bloco Dev Home](images/introduction-to-xbox-one-tools-1.png)
 
 2. Na Dev Home, navegue até a guia **Início** e, na seção **Acesso Remoto**, selecione **Configurações de Acesso Remoto**.
 
@@ -52,10 +52,10 @@ Para habilitar o Portal de Dispositivos do Xbox no seu console Xbox One:
 
 8. Faça logon com as credenciais que você configurou.
 
-## <a name="xbox-dev-mode-companion"></a>Complemento do Modo Desenvolvedor do Xbox
+## <a name="xbox-dev-mode-companion"></a>Complemento do modo de desenvolvimento do Xbox
 Complemento do modo de desenvolvimento do Xbox é uma ferramenta que permite que você trabalhe no seu console sem deixar seu computador. O aplicativo permite que você exiba a tela do console e envie a entrada para ele. Para obter mais informações, consulte [Complemento do modo de desenvolvimento do Xbox](xbox-dev-mode-companion.md).
 
 ## <a name="see-also"></a>Consulte também
-- [Como usar o Fiddler com o Xbox One ao desenvolver para UWP](uwp-fiddler.md)
+- [Como usar o Fiddler com o Xbox One durante o desenvolvimento de UWP](uwp-fiddler.md)
 - [Visão geral do Windows Device Portal](../debug-test-perf/device-portal.md)
 - [UWP no Xbox One](index.md)

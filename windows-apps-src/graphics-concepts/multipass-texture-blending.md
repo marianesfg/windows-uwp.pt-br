@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d6b1e8958874ede50a18f2d2446c8f156361210e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932052"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589891"
 ---
 # <a name="multipass-texture-blending"></a>Mistura de textura com passagem múltipla
 
 
-Os aplicativos Direct3D podem conseguir vários efeitos especiais aplicando várias texturas a uma primitiva ao longo de várias passagens de renderização. O termo comum para isso é *mesclagem de texturas de passagem múltipla*. Um uso comum de mesclagem de texturas de passagem múltipla é emular os efeitos de iluminação complexa e sombrear modelos aplicando várias cores de várias texturas diferentes. Uma dessas aplicações é o *mapeamento de luz*. Consulte [Mapeamento de luz com texturas](light-mapping-with-textures.md).
+Os apps Direct3D podem conseguir vários efeitos especiais ao aplicar diversas texturas a um primitivo durante múltiplas passagens de renderização. O termo comum para isso é *mesclagem de texturas de passagem múltipla*. O uso típico da mesclagem de textura com passagens múltiplas é emular os efeitos de iluminação complexos e os modelos de sombreamento ao aplicar várias cores de diversas texturas diferentes. Uma dessas aplicações é chamada de *mapeamento suave*. Consulte [Mapeamento de luz com texturas](light-mapping-with-textures.md).
 
-**Observação**  alguns dispositivos são capazes de aplicar múltiplas texturas aos primitivos em uma única passagem. Consulte [Mistura de textura](texture-blending.md).
+**Observação**    alguns dispositivos são capazes de aplicar várias texturas a primitivos em uma única passagem. Consulte [Mistura de textura](texture-blending.md).
 
  
 
@@ -37,7 +37,7 @@ Para realizar uma mistura de textura com passagem múltipla em um app C/C++:
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Mesclagem de textura](texture-blending.md)
+[A combinação de textura](texture-blending.md)
 
  
 

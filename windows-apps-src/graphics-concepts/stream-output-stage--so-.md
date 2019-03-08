@@ -1,20 +1,20 @@
 ---
-title: Estágio de Saída de Fluxo(SO)
+title: Estágio de saída de fluxo(SO)
 description: O estágio de Saída de Fluxo (SO) emite continuamente (ou transmite) dados de vértice do estágio ativo anterior para um ou mais buffers na memória. Os dados transmitidos para a memória podem ser reenviados para o pipeline como dados de entrada ou lidos pela CPU.
 ms.assetid: DE89E99F-39BC-4B34-B80F-A7D373AA7C0A
 keywords:
-- Estágio de Saída de Fluxo(SO)
+- Estágio de saída de fluxo(SO)
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 87eb6562c6ee66ca1d409d3748e688861d5f3920
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936470"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605041"
 ---
-# <a name="stream-output-so-stage"></a>Estágio de Saída de Fluxo(SO)
+# <a name="stream-output-so-stage"></a>Estágio de saída de fluxo(SO)
 
 
 O estágio de Saída de Fluxo (SO) emite continuamente (ou transmite) dados de vértice do estágio ativo anterior para um ou mais buffers na memória. Os dados transmitidos para a memória podem ser reenviados para o pipeline como dados de entrada ou lidos pela CPU.
@@ -33,7 +33,7 @@ Há duas maneiras de fornecer dados de saída de fluxo para o pipeline:
 -   Os dados da saída de fluxo podem ser transmitidos de volta para o estágio de Assembler de Entrada (IA).
 -   Os dados da saída de fluxo podem ser lidos pelos sombreadores programáveis usando as funções [Load](https://msdn.microsoft.com/library/windows/desktop/bb509694).
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entrada
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
 
 
 Dados de vértice de um estágio de sombreador anterior.
@@ -41,9 +41,9 @@ Dados de vértice de um estágio de sombreador anterior.
 ## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Saída
 
 
-O estágio de Saída de Fluxo (SO) emite continuamente (ou transmite) dados de vértice do estágio ativo anterior, como o estágio de Sombreador de Geometria (GS), para um ou mais buffers na memória. Se o estágio de sombreador de geometria (GS) estiver inativo, o estágio de saída de fluxo (SO) gera continuamente dados de vértice do estágio do sombreador de domínio (DS) para buffers na memória (ou se o DS também estiver inativo, do estágio do sombreador de vértice (VS)).
+O estágio de Saída de Fluxo (SO) emite continuamente (ou transmite) dados de vértice do estágio ativo anterior, como o estágio de Sombreador de Geometria (GS), para um ou mais buffers na memória. Se o estágio Geometry Shader (GS) estiver inativo, o estágio Stream saída (SO) continuamente gera dados de vértice do estágio de sombreador de domínio (DS) para buffers de memória (ou se o DS também está inativo, do estágio de sombreador de vértice (VS)).
 
-Quando uma faixa de triângulos ou linha for vinculada ao estágio do Assembler de entrada (IA), cada faixa é convertida em uma lista antes que eles são transmitidos. Os vértices sempre são gravados como primitivos completas (por exemplo, 3 vértices por vez para triângulos); primitivos incompletos nunca são transmitidos. Tipos primitivos com adjacência descartam os dados de adjacência antes de transmitir os dados.
+Quando uma faixa de triângulos ou linha for vinculada ao estágio de Assembler de Entrada (IA), cada faixa é convertida em uma lista antes de ser transmitida. Os vértices sempre são gravados como primitivos completas (por exemplo, 3 vértices por vez para triângulos); primitivos incompletos nunca são transmitidos. Os tipos primitivos com adjacência descartam os dados de adjacência antes de transmitir os dados.
 
 O estágio de saída de fluxo dá suporte a até 4 buffers simultaneamente.
 
@@ -53,7 +53,7 @@ O estágio de saída de fluxo dá suporte a até 4 buffers simultaneamente.
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de elementos gráficos](graphics-pipeline.md)
+[Pipeline de gráficos](graphics-pipeline.md)
 
  
 

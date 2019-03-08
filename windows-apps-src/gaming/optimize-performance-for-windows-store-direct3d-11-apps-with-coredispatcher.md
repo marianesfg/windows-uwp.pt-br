@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, latência de entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 537dd6e9d3f300666a0692b66f422ce00dd68460
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934093"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601741"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Otimizar a latência de entrada para jogos em DirectX da Plataforma Universal do Windows (UWP)
 
@@ -177,7 +177,7 @@ Esse método é a maneira mais fácil de gravar um jogo, pois não há necessida
 
 No entanto, essa facilidade de desenvolvimento tem um preço. A renderização a 60 quadros por segundo usa mais energia do que a renderização por demanda. É melhor usar **ProcessAllIfPresent** quando o jogo muda o que está sendo exibido a cada quadro. Isso também aumenta a latência de entrada em até 16,7 ms, porque o aplicativo agora bloqueia o loop de jogo no intervalo de sincronia da exibição em vez de no **ProcessEvents**. Alguns eventos de entrada podem ser reduzidos, porque a fila é processada apenas uma vez por quadro (60 Hz).
 
-## <a name="scenario-4-render-60-frames-per-second-and-achieve-the-lowest-possible-input-latency"></a>Cenário 4: Renderizar 60 quadros por segundo e atingir a mais baixa latência possível de entrada
+## <a name="scenario-4-render-60-frames-per-second-and-achieve-the-lowest-possible-input-latency"></a>Cenário 4: Renderizar 60 quadros por segundo e atingir a menor latência possível de entrada
 
 
 Alguns jogos podem conseguir ignorar ou compensar o aumento na latência de entrada observada no cenário 3. No entanto, se a baixa latência de entrada for crítica para a experiência do jogo e para a detecção dos comentários do jogador, os jogos que renderizam 60 quadros por segundo precisam processar a entrada em um thread separado.
@@ -233,7 +233,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-O modelo de **aplicativo XAML (Universal Windows) DirectX 11 e** no Microsoft Visual Studio2015 separa o loop de jogo em vários threads de modo semelhante. Ele usa o objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) para iniciar um thread dedicado a manipular a entrada e também cria um thread de renderização independente do thread de interface do usuário XAML. Para obter mais detalhes sobre esses modelos, leia [Create a Universal Windows Platform and DirectX game project from a template](user-interface.md).
+O **DirectX 11 e XAML App (Windows Universal)** modelo no Microsoft Visual Studio 2015 divide o loop do jogo em vários threads de maneira semelhante. Ele usa o objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) para iniciar um thread dedicado a manipular a entrada e também cria um thread de renderização independente do thread de interface do usuário XAML. Para obter mais detalhes sobre esses modelos, leia [Create a Universal Windows Platform and DirectX game project from a template](user-interface.md).
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>Maneiras adicionais de reduzir a latência de entrada
 
@@ -246,7 +246,7 @@ Figura 1
 
 ![figura 1 latência de entrada no directx ](images/input-latency1.png)
 
-No Windows 8.1, DXGI introduziu o sinalizador **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** para a cadeia de troca, que permite que os aplicativos reduzam essa latência sem exigir que implementem heurísticas para manter a fila presente vazia. As cadeias de troca criadas com esse sinalizador são referidas como cadeias de troca de espera. A Figura 2 mostra o ciclo de vida aproximado e a resposta a um evento de entrada ao usar cadeias de troca de espera:
+No Windows 8.1, DXGI introduziu o **DXGI\_PERMUTA\_cadeia\_sinalizador\_quadro\_LATÊNCIA\_WAITABLE\_objeto** sinalizador para a troca cadeia, que permite que os aplicativos facilmente reduzir essa latência sem a necessidade de implementar a heurística para manter a fila presente vazio. As cadeias de troca criadas com esse sinalizador são referidas como cadeias de troca de espera. A Figura 2 mostra o ciclo de vida aproximado e a resposta a um evento de entrada ao usar cadeias de troca de espera:
 
 Figura 2
 

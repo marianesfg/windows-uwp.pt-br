@@ -1,25 +1,25 @@
 ---
-title: Manipular uma tarefa em segundo plano cancelada
+title: Tratar uma tarefa em segundo plano cancelada
 description: Saiba como criar uma tarefa em segundo plano que reconhece solicitações de cancelamento e interrompe o trabalho, relatando o cancelamento ao aplicativo usando armazenamento persistente.
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
 ms.date: 07/05/2018
 ms.topic: article
-keywords: Windows 10, uwp, tarefa em segundo plano
+keywords: o Windows 10, uwp, tarefas em segundo plano
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
 - cpp
 ms.openlocfilehash: 1feffac4d9b616c2fadff0080c3282e4200f3be7
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114432"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625571"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Tratar uma tarefa em segundo plano cancelada
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**BackgroundTaskCanceledEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224775)
 -   [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797)
@@ -27,16 +27,16 @@ ms.locfileid: "9114432"
 
 Saiba como criar uma tarefa em segundo plano que reconhece uma solicitação de cancelamento e interrompe o trabalho, relatando o cancelamento ao aplicativo usando armazenamento persistente.
 
-Este tópico pressupõe que você já criou uma classe de tarefa em segundo plano, incluindo o método **Run** que é usado como o ponto de entrada de tarefa em segundo plano. Para começar a criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md) ou [Criar e registrar uma tarefa em segundo plano dentro do processo](create-and-register-an-inproc-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
+Este tópico pressupõe que você já tiver criado uma classe de tarefa em segundo plano, incluindo o **executar** método que é usado como o ponto de entrada de tarefa em segundo plano. Para começar a criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md) ou [Criar e registrar uma tarefa em segundo plano dentro do processo](create-and-register-an-inproc-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
 
-Este tópico também é aplicável a tarefas em segundo plano dentro do processo. Mas, em vez do método **Run** , substitua **OnBackgroundActivated**. As tarefas em segundo plano dentro do processo não exigem que você use o armazenamento persistente para sinalizar o cancelamento, pois você pode comunicar o cancelamento usando o estado do aplicativo desde que a tarefa em segundo plano esteja em execução no mesmo processo do seu aplicativo em primeiro plano.
+Este tópico também é aplicável a tarefas em segundo plano dentro do processo. Mas, em vez do **executados** método, substitua **OnBackgroundActivated**. As tarefas em segundo plano dentro do processo não exigem que você use o armazenamento persistente para sinalizar o cancelamento, pois você pode comunicar o cancelamento usando o estado do aplicativo desde que a tarefa em segundo plano esteja em execução no mesmo processo do seu aplicativo em primeiro plano.
 
 ## <a name="use-the-oncanceled-method-to-recognize-cancellation-requests"></a>Usar o método OnCanceled para reconhecer as solicitações de cancelamento
 
 Grave um método para manipular o evento de cancelamento.
 
 > [!NOTE]
-> Para todas as famílias de dispositivos, exceto desktop, caso haja pouca memória, as tarefas em segundo plano podem ser encerradas. Se uma exceção de falta de memória não surgir ou se o aplicativo não manipulá-la, a tarefa em segundo plano será encerrada sem aviso e sem gerar o evento OnCanceled. Isso ajuda a assegurar a experiência do usuário do aplicativo em primeiro plano. A tarefa em segundo plano deve ser projetada para tratar desse cenário.
+> Para todas as famílias de dispositivos, exceto desktop, caso haja pouca memória, as tarefas em segundo plano podem ser encerradas. Se uma exceção de falta de memória não será exposta ou o aplicativo não lida com ele, a tarefa em segundo plano será encerrada sem aviso e sem acionar o evento OnCanceled. Isso ajuda a assegurar a experiência do usuário do aplicativo em primeiro plano. A tarefa em segundo plano deve ser projetada para tratar desse cenário.
 
 Crie um método chamado **OnCanceled** da seguinte maneira. Este método é o ponto de entrada chamado pelo Windows Runtime quando uma solicitação de cancelamento é feita em relação a sua tarefa em segundo plano.
 
@@ -67,7 +67,7 @@ void ExampleBackgroundTask::OnCanceled(
 }
 ```
 
-Adicione uma variável de sinalizador chamada **\_CancelRequested** à classe da tarefa em segundo plano. Essa variável será usada para indicar quando uma solicitação de cancelamento tiver sido feita.
+Adicione uma variável de sinalizador chamada  **\_CancelRequested** para a classe de tarefa em segundo plano. Essa variável será usada para indicar quando uma solicitação de cancelamento tiver sido feita.
 
 ```csharp
 volatile bool _CancelRequested = false;
@@ -83,9 +83,9 @@ private:
     volatile bool CancelRequested;
 ```
 
-No método **OnCanceled** que você criou na etapa 1, defina a variável de sinalizador **\_CancelRequested** como **true**.
+No **OnCanceled** método que você criou na etapa 1, defina a variável de sinalizador  **\_CancelRequested** para **true**.
 
-[Exemplo de tarefa em segundo plano]( https://go.microsoft.com/fwlink/p/?linkid=227509) completo método **OnCanceled** define **\_CancelRequested** como **true** e grava uma saída de depuração potencialmente útil.
+Completo [exemplo de tarefa em segundo plano]( https://go.microsoft.com/fwlink/p/?linkid=227509) **OnCanceled** método conjuntos  **\_CancelRequested** para **true** e gravações saída de depuração potencialmente úteis.
 
 ```csharp
 private void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
@@ -115,7 +115,7 @@ void ExampleBackgroundTask::OnCanceled(IBackgroundTaskInstance^ taskInstance, Ba
 }
 ```
 
-No método **Run** da tarefa em segundo plano, registre o método de manipulador de eventos **OnCanceled** antes de começar a trabalhar. Em uma tarefa em segundo plano dentro do processo único, você pode fazer esse registro como parte da inicialização do seu aplicativo. Por exemplo, use a seguinte linha de código.
+A tarefa de plano de fundo **executados** método, registre-se a **OnCanceled** método do manipulador de eventos antes de iniciar o trabalho. Em uma tarefa em segundo plano dentro do processo único, você pode fazer esse registro como parte da inicialização do seu aplicativo. Por exemplo, use a seguinte linha de código.
 
 ```csharp
 taskInstance.Canceled += new BackgroundTaskCanceledEventHandler(OnCanceled);
@@ -131,11 +131,11 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 ## <a name="handle-cancellation-by-exiting-your-background-task"></a>Manipular o cancelamento saindo da sua tarefa em segundo plano
 
-Quando uma solicitação de cancelamento é recebida, o método que realiza a tarefa em segundo plano precisa parar o trabalho e sair reconhecendo quando **\_cancelRequested** está definido como **true**. Para tarefas em segundo plano no processo, isso significa retornar do método **OnBackgroundActivated** . Para tarefas em segundo plano fora do processo, isso significa retornar do método **Executar** .
+Quando uma solicitação de cancelamento é recebida, o método que o trabalho em segundo plano precisa interromper o trabalho e sair reconhecendo quando  **\_cancelRequested** é definido como **true**. Para tarefas de plano de fundo em processo, isso significa retornar do **OnBackgroundActivated** método. Para tarefas de plano de fundo de out-of-process, isso significa retornar do **executar** método.
 
-Modifique o código da classe de tarefa em segundo plano para verificar a variável de sinalizador enquanto ela está funcionando. Se **\_cancelRequested** fica definida como true, o trabalho de continuar.
+Modifique o código da classe de tarefa em segundo plano para verificar a variável de sinalizador enquanto ela está funcionando. Se  **\_cancelRequested** torna-se definida como true, pare de trabalho de continuar.
 
-O [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) inclui uma verificação que interrompe o retorno de chamada do temporizador periódico se a tarefa em segundo plano é cancelada.
+O [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) inclui uma verificação que para o retorno de chamada do temporizador periódicas se a tarefa em segundo plano é cancelada.
 
 ```csharp
 if ((_cancelRequested == false) && (_progress < 100))
@@ -177,11 +177,11 @@ else
 ```
 
 > [!NOTE]
-> O código de exemplo mostrado acima usa a [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797). Propriedade de [**progresso**](https://msdn.microsoft.com/library/windows/apps/br224800) que está sendo usada para registrar o progresso da tarefa em segundo plano. O progresso é relatado para o aplicativo usando a classe [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782).
+> O exemplo de código mostrado acima usa o [ **IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[ **Progresso** ](https://msdn.microsoft.com/library/windows/apps/br224800) propriedade que está sendo usada para registrar o andamento da tarefa em segundo plano. O progresso é relatado para o aplicativo usando a classe [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782).
 
-Modifique o método **Run** para que depois que o trabalho tiver parado, ele registre se a tarefa foi concluída ou foi cancelada. Esta etapa é válida para tarefas em segundo plano fora do processo porque você precisa de uma maneira de comunicação entre processos quando a tarefa em segundo plano foi cancelada. Para tarefas em segundo plano dentro do processo, você pode simplesmente compartilhar o estado com o aplicativo para indicar que a tarefa foi cancelada.
+Modificar a **executar** método, portanto, depois que o trabalho foi interrompido, ele registra se a tarefa concluída ou cancelada. Esta etapa é válida para tarefas em segundo plano fora do processo porque você precisa de uma maneira de comunicação entre processos quando a tarefa em segundo plano foi cancelada. Para tarefas em segundo plano dentro do processo, você pode simplesmente compartilhar o estado com o aplicativo para indicar que a tarefa foi cancelada.
 
-A [amostra de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) registra o status em LocalSettings.
+O [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) registra o status em LocalSettings.
 
 ```csharp
 if ((_cancelRequested == false) && (_progress < 100))
@@ -257,11 +257,11 @@ else
 
 Você pode baixar a [amostra de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) para ver esses exemplos de código contextualizados dentro de métodos.
 
-Por questões ilustrativas, o código de exemplo mostra apenas partes do método **Run** (e temporizador de chamada de retorno) da [amostra de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666).
+Para fins ilustrativos, o código de exemplo mostra apenas as partes do **executados** método (e o timer de retorno de chamada) da [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666).
 
 ## <a name="run-method-example"></a>Exemplo do método Run
 
-A concluir o método **Run** e o código de retorno de chamada do temporizador, da [amostra de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) são mostrados abaixo para o contexto.
+Completo **executados** método e o código de retorno de chamada do temporizador, da [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) são mostradas abaixo para o contexto.
 
 ```csharp
 // The Run method is the entry point of a background task.
@@ -402,16 +402,16 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md).
-- [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
-- [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+- [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
+- [Criar e registrar uma tarefa em segundo plano do out-of-process](create-and-register-a-background-task.md)
+- [Declare as tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 - [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
-- [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
+- [Monitorar o progresso da tarefa em segundo plano e conclusão](monitor-background-task-progress-and-completion.md)
 - [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 - [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
 - [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
-- [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
+- [Defina as condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
 - [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
 - [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 - [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-- [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+- [Como disparar suspender, continuar e eventos em aplicativos UWP do plano de fundo (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)

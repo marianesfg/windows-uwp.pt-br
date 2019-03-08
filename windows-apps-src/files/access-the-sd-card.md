@@ -1,17 +1,17 @@
 ---
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: Acessar o cartão SD
-description: Você pode armazenar e acessar dados não essenciais em um cartão microSD opcional, especialmente em dispositivos móveis de baixo custo que têm armazenamento interno limitado.
+description: Você pode armazenar e acessar dados não essenciais em um cartão microSD, principalmente em dispositivos de baixo custo que possuem espaço de armazenamento interno limitado.
 ms.date: 03/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, cartão sd, armazenamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ef97ed489f2dc35aece83821633a583dfba77e2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931609"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625511"
 ---
 # <a name="access-the-sd-card"></a>Acessar o cartão SD
 

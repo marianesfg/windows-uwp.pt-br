@@ -1,40 +1,40 @@
 ---
-Description: The Add-on acquisitions report in Partner Center lets you see how many add-ons you've sold, along with demographic and platform details.
-title: Relatório de aquisições de complementos
+Description: O relatório de aquisições de complemento no Partner Center permite que você veja quantos complementos vendido, juntamente com dados demográficos e detalhes de plataforma.
+title: Relatório de aquisições de complemento
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, vendas de complementos, aquisições de complementos, vendas de iap, produtos no aplicativo, iaps, complementos
 ms.localizationpriority: medium
 ms.openlocfilehash: 8027276779dac59f0745dd8053ee73cf1615e630
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919056"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625831"
 ---
-# <a name="add-on-acquisitions-report"></a>Relatório de aquisições de complementos
+# <a name="add-on-acquisitions-report"></a>Relatório de aquisições de complemento
 
 
-O relatório de **aquisições de complemento** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja quantos complementos você vendeu, além de demográficos e detalhes da plataforma e mostra informações de conversão para clientes no Windows 10 (incluindo o Xbox). Você também pode exibir dados de aquisição em tempo real aproximado para o último período ou setenta e duas horas.
+O **aquisições de complemento** de relatórios no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja quantos complementos vendido, juntamente com dados demográficos e detalhes de plataforma e mostra informações de conversão para clientes do Windows 10 ( incluindo Xbox). Você também pode exibir dados em tempo real de aquisição de curto para o último período ou setenta e duas horas.
 
-Você pode exibir esses dados no Partner Center ou [baixar o relatório](download-analytic-reports.md) para exibição offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter aquisições de complementos](../monetize/get-in-app-acquisitions.md) na [API REST de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
+Você pode exibir esses dados no Partner Center, ou [baixar o relatório](download-analytic-reports.md) exibir offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter aquisições de complementos](../monetize/get-in-app-acquisitions.md) na [API REST de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Neste relatório, uma aquisição de complemento significa que um cliente adquiriu um complemento de você (ou adquiriu sem pagar, se for oferecido gratuitamente). Várias compras do mesmo complemento consumível pelo mesmo cliente são contadas como aquisições de complementos separadas.
 
 > [!IMPORTANT]
-> O relatório de **Aquisições de complemento** não inclui dados sobre reembolsos, reversões, estornos etc. Para estimar a receita do seu aplicativo, visite [Resumo de pagamento](payout-summary.md). Na seção **Reservado**, clique no link **Download reserved transactions**.
+> O **aquisições de complemento** relatório não inclui dados sobre reembolsos, reversões, estornos, etc. Para estimar sua receita do aplicativo, visite [resumo de pagamento](payout-summary.md). Na seção **Reservado**, clique no link **Download reserved transactions**.
 
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode selecionar **H 1** ou **72h** para mostrar dados de aquisição em tempo quase real para uma hora ou setenta e duas horas; Esses períodos de tempo só se aplicam à guia **complemento diariamente** do gráfico **aquisições de complemento** e para a guia de **aquisições** do gráfico **mercados** . 
+Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode selecionar **1h** ou **72H** para mostrar dados de aquisição em tempo real para qualquer uma hora ou horas setenta e dois; esses períodos de tempo se aplicam somente aos **complemento diária** guia do **aquisições de complemento** gráfico e o **aquisições** guia da **mercados** gráfico. 
 
 Você também pode expandir **Filtros** para filtrar os dados dessa página por complementos específicos, por mercado e/ou por tipo de dispositivo.
 
--   **Complemento**: o filtro padrão é **Todos os complementos**, mas você pode limitar os dados a um ou mais complementos do aplicativo.
--   **Mercado**: o filtro padrão é **Todos os mercados**, mas você pode limitar os dados a aquisições em um ou mais mercados.
--   **Tipo de dispositivo**: a configuração padrão é **Todos os dispositivos**. Se você deseja mostrar dados de aquisições apenas de um determinado tipo de dispositivo (por exemplo, computador, console ou tablet), pode escolher um dispositivo específico aqui.
+-   **Complemento**: O filtro padrão é **todos os complementos**, mas você pode limitar os dados para um ou mais dos complementos do aplicativo.
+-   **Mercado**: O filtro padrão é **todos os mercados**, mas você pode limitar os dados a serem aquisições nos mercados de um ou mais.
+-   **Tipo de dispositivo**: A configuração padrão é **todos os dispositivos**. Se você deseja mostrar dados de aquisições apenas de um determinado tipo de dispositivo (por exemplo, computador, console ou tablet), pode escolher um dispositivo específico aqui.
 
 As informações de todos os gráficos listados abaixo refletem o intervalo de datas e todos os filtros selecionados. Algumas seções também permitem que você aplique mais filtros.
 
@@ -53,7 +53,7 @@ Você pode filtrar os resultados se a aquisição foi originada do complemento o
 O gráfico **Customer demographic** mostra informações demográficas sobre as pessoas que adquiriram seus complementos. Você pode ver quantas aquisições (ao longo do período de tempo selecionado) foram feitas por pessoas em uma determinada faixa etária e por sexo.
 
 > [!NOTE]
-> Alguns clientes optaram por não para compartilhar essa informação. Se não for possível determinar a faixa etária ou o sexo, a aquisição será categorizada como **Desconhecida**.
+> Alguns clientes optaram por não para compartilhar essa informação. Se não for possível determinar a faixa etária ou o sexo, a aquisição será categorizada como **Desconhecido**.
 
 
 ## <a name="markets"></a>Mercados

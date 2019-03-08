@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais
 ms.localizationpriority: medium
 ms.openlocfilehash: 44e32438034cf09695f313d24055b6ed3c82df0b
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115883"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637101"
 ---
 # <a name="optional-packages-with-executable-code"></a>Pacotes opcionais com código executável
  
@@ -24,10 +24,10 @@ Os pacotes opcionais com código executável são úteis para dividir um aplicat
 Para obter as ferramentas de desenvolvimento mais recentes, consulte [Downloads e ferramentas para Windows 10](https://developer.microsoft.com/windows/downloads). 
 
 > [!NOTE]
-> Para enviar um aplicativo que usa pacotes opcionais e/ou conjuntos relacionados para a Store, você precisará de permissão. Pacotes opcionais e conjuntos relacionados podem ser usados para aplicativos de linha de negócios (LOB) ou enterprise sem permissão do Partner Center se não forem enviados para a loja. Consulte [Suporte do desenvolvedor Windows](https://developer.microsoft.com/windows/support) para obter permissão para enviar um aplicativo que usa pacotes opcionais e conjuntos relacionados.
+> Para enviar um aplicativo que usa pacotes opcionais e/ou conjuntos relacionados para a Store, você precisará de permissão. Pacotes opcionais e conjuntos relacionados podem ser usados para aplicativos de linha de negócios (LOB) ou enterprise sem permissão do Partner Center se eles não são enviados para a Store. Consulte [Suporte do desenvolvedor Windows](https://developer.microsoft.com/windows/support) para obter permissão para enviar um aplicativo que usa pacotes opcionais e conjuntos relacionados.
 
 > [!NOTE]
-> Pacotes opcionais que contém o código executável devem ser parte de um [conjunto relacionado](https://docs.microsoft.com/windows/uwp/packaging/optional-packages#related-sets). Você não poderá executar o código de um pacote opcional, a menos que ele faz parte de um conjunto relacionado.
+> Pacotes opcionais que contêm código executável devem ser parte de um [relacionados ao conjunto](https://docs.microsoft.com/windows/uwp/packaging/optional-packages#related-sets). Você não poderá executar o código, a menos que ele faz parte de um conjunto relacionado de um pacote opcional.
 
 ## <a name="c-optional-packages-with-executable-code"></a>Pacotes opcionais do C++ com código executável
 
@@ -61,7 +61,7 @@ Para começar a criar um pacote opcional de código em C#, siga as etapas a segu
 
 7. Compile o projeto do pacote opcional e vá até a pasta de Referência do pacote na saída da compilação encontrada em `..\[PathToOptionalPackageProject]\bin\[architecture]\[configuration]\Reference`. Observe que você pode escolher qualquer arquitetura no caminho para a pasta de Referência, pois o arquivo `.winmd` (etapa 8) não depende de arquitetura.
 
-8. Adicione uma referência de projeto do aplicativo principal para o arquivo `.winmd` encontrado nessa pasta. O arquivo `.winmd` **deve** ser atualizado sempre que você alterar a área de superfície da API no projeto do pacote opcional. Essa referência fornece ao projeto de aplicativo principal as informações necessárias para a compilação.
+8. Adicione uma referência de projeto do aplicativo principal para o arquivo `.winmd` encontrado nessa pasta. O arquivo `.winmd`**deve** ser atualizado sempre que você alterar a área de superfície da API no projeto do pacote opcional. Essa referência fornece ao projeto de aplicativo principal as informações necessárias para a compilação.
 
 9. No projeto do aplicativo principal, vá até as propriedades de compilação do projeto e selecione **Compilar com a cadeia de ferramenta .NET Native**. Atualmente, apenas a depuração no .NET Native é compatível com a criação do pacote opcional de código em C#. Vá até as propriedades de depuração do projeto e selecione **Implantar pacotes opcionais**. Isso garante que ambos os pacotes são sincronizados sempre que você implantar o projeto do aplicativo principal.
 

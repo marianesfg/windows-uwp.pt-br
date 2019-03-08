@@ -7,11 +7,11 @@ ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma, tarefa em segundo plano, o serviço de aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: ddadae05ca3243f9bbd6b53cbb98f234ac560acd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939454"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612931"
 ---
 # <a name="communicate-with-a-remote-app-service"></a>Comunicar-se com um serviço de app remoto
 
@@ -20,7 +20,7 @@ Além de iniciar um app em um dispositivo remoto usando um URI, você também po
 ## <a name="set-up-the-app-service-on-the-host-device"></a>Configurar o serviço de app no dispositivo host
 Para executar um serviço de app em um dispositivo remoto, você já deve ter um provedor desse serviço de app instalado no dispositivo. Este guia usará a versão CSharp do [exemplo do serviço de aplicativo Gerador de Número Aleatório](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices), disponível no [repositório de exemplos universais do Windows](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices). Para obter instruções sobre como criar seu próprio serviço de app, consulte [Criar e consumir um serviço de app](how-to-create-and-consume-an-app-service.md).
 
-Se você estiver usando um serviço de aplicativo já criado ou estiver criando seu próprio serviço, precisará fazer algumas edições para tornar o serviço compatível com sistemas remotos. No Visual Studio, vá para o projeto do provedor de serviço (chamado de "AppServicesProvider" no exemplo) e selecione seu arquivo _Package.appxmanifest_. Clique com botão direito e selecione **Exibir Código** para exibir todo o conteúdo do arquivo. Crie um elemento **Extensions** dentro do elemento do **aplicativo** principal (ou encontrá-lo se ele já existir). Em seguida, crie uma **extensão** para definir o projeto como um serviço de aplicativo e fazer referência a seu projeto pai.
+Se você estiver usando um serviço de aplicativo já criado ou estiver criando seu próprio serviço, precisará fazer algumas edições para tornar o serviço compatível com sistemas remotos. No Visual Studio, vá para o projeto do provedor de serviço (chamado de "AppServicesProvider" no exemplo) e selecione seu arquivo _Package.appxmanifest_. Clique com botão direito e selecione **Exibir Código** para exibir todo o conteúdo do arquivo. Criar uma **extensões** elemento dentro do principal **aplicativo** elemento (ou encontrá-lo caso ele já exista). Em seguida, crie uma **extensão** para definir o projeto como um serviço de aplicativo e fazer referência a seu projeto pai.
 
 ``` xml
 ...
@@ -32,7 +32,7 @@ Se você estiver usando um serviço de aplicativo já criado ou estiver criando 
 ...
 ```
 
-Ao lado do elemento **AppService** , adicione o atributo **SupportsRemoteSystems** :
+Ao lado de **AppService** elemento, adicionar o **SupportsRemoteSystems** atributo:
 
 ``` xml
 ...
@@ -40,7 +40,7 @@ Ao lado do elemento **AppService** , adicione o atributo **SupportsRemoteSystems
 ...
 ```
 
-Para usar elementos nesse namespace **uap3** , você deve adicionar a definição de namespace à parte superior do arquivo de manifesto, se ainda não estiver lá.
+Para usar elementos desta **uap3** namespace, você deve adicionar a definição de namespace na parte superior do arquivo de manifesto se ainda não estiver lá.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -53,7 +53,7 @@ Para usar elementos nesse namespace **uap3** , você deve adicionar a definiçã
 </Package>
 ```
 
-Em seguida, compilar seu projeto de provedor de serviços de aplicativo e implante-nos dispositivos host.
+Em seguida, compilar seu projeto de provedor de serviço de aplicativo e implantá-lo para o dispositivo de host (s).
 
 ## <a name="target-the-app-service-from-the-client-device"></a>Direcionar o serviço de app do dispositivo cliente
 O dispositivo do qual o serviço de app remoto deve ser chamado precisa de um app com a funcionalidade Sistemas Remotos. Isso pode ser adicionado ao mesmo app que fornece o serviço de app no dispositivo host (nesse caso, você deve instalar o mesmo app nos dois dispositivos) ou implementado em um app completamente diferente.
@@ -86,8 +86,8 @@ Agora que você já está conectado a um serviço de app em um dispositivo host 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Visão geral de aplicativos e dispositivos conectados (projeto Roma)](connected-apps-and-devices.md)  
-[Iniciar um app remoto](launch-a-remote-app.md)  
-[Criar e consumir um serviço de app](how-to-create-and-consume-an-app-service.md)  
-[Referência de API de Sistemas Remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
+[Visão de geral (projeto Roma) aplicativos e dispositivos conectado](connected-apps-and-devices.md)  
+[Inicie um aplicativo remoto](launch-a-remote-app.md)  
+[Criar e consumir um serviço de aplicativo](how-to-create-and-consume-an-app-service.md)  
+[Referência da API de sistemas remota](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
 [Exemplo de Sistemas Remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)

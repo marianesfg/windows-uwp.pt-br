@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 26f4153b59c618a4559549ba7fa9ca0f99c4ab64
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933844"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613261"
 ---
 # <a name="xaml-intrinsic-data-types"></a>Tipos de dados XAML intrínsecos
 
@@ -31,18 +31,18 @@ O XAML para o Windows Runtime fornece suporte no nível de linguagem para estes 
 
 Geralmente, esses primitivos da linguagem XAML são os únicos casos em que você define um elemento de objeto que usa o prefixo **x:** em XAML. Todos os outros recursos da linguagem XAML são tipicamente usados na forma de atributos ou como extensão de marcação.
 
-**Observação**por convenção, os primitivos de linguagem para XAML e todos os outros elementos da linguagem XAML são mostrados com o prefixo "x:". É assim que os elementos da linguagem XAML são normalmente usados em situações reais de marcação. Essa convenção é seguida na documentação de XAML e também na especificação XAML.
+**Observação**  por convenção, primitivos de linguagem para XAML e todos os outros elementos de linguagem XAML são mostrados com o prefixo "x". É assim que os elementos da linguagem XAML são normalmente usados em situações reais de marcação. Essa convenção é seguida na documentação de XAML e também na especificação XAML.
 
 ## <a name="other-xaml-primitives"></a>Outras primitivas XAML
 
 A especificação XAML 2009 destaca outros primitivos no nível da linguagem XAML **x:Uri** e **x:Single**. A não ser que estejam listados na tabela neste tópico, outros primitivos de linguagem XAML, como definidos por outros vocabulários XAML ou pela especificação XAML 2009, não têm suporte atualmente em XAML para o Windows Runtime.
 
-**Observação**datas e horas (propriedades que usam [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576) ou [**DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx), [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996) ou [**System. TimeSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/system.timespan.aspx)) não são configuráveis com um primitivo XAML. Essas propriedades geralmente não são configuráveis em XAML, pois não há conversão de cadeia de caracteres padrão no analisador XAML do Windows Runtime para datas e horas. Para valores de inicialização de quaisquer propriedades de data e hora, você precisará usar code-behind que é executado quando uma página ou um elemento é carregado.
+**Observação**  datas e horas (propriedades que usam [ **DateTime** ](https://msdn.microsoft.com/library/windows/apps/br206576) ou [ **DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx), [ **TimeSpan** ](https://msdn.microsoft.com/library/windows/apps/br225996) ou [ **System. TimeSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/system.timespan.aspx)) não são configuráveis com um primitivo XAML. Essas propriedades geralmente não são configuráveis em XAML, pois não há conversão de cadeia de caracteres padrão no analisador XAML do Windows Runtime para datas e horas. Para valores de inicialização de quaisquer propriedades de data e hora, você precisará usar code-behind que é executado quando uma página ou um elemento é carregado.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Visão geral do XAML](xaml-overview.md)
-* [Guia de sintaxe do XAML](xaml-syntax-guide.md)
-* [Animações de storyboard](https://msdn.microsoft.com/library/windows/apps/mt187354)
+* [Guia de sintaxe XAML](xaml-syntax-guide.md)
+* [Animações storyboarded](https://msdn.microsoft.com/library/windows/apps/mt187354)
  
 

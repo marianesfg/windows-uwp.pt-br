@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, renderização
 ms.localizationpriority: medium
 ms.openlocfilehash: 108e9bf21b0552ac7f88721bf4b1ee72ca2a5e2c
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117746"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610501"
 ---
-# <a name="rendering-framework-ii-game-rendering"></a>Estrutura de renderização II: introdução ao jogo
+# <a name="rendering-framework-ii-game-rendering"></a>Framework de renderização II: Renderização de jogos
 
 Em [Estrutura de renderização I](tutorial--assembling-the-rendering-pipeline.md), falamos sobre como podemos capturar as informações da cena e apresentá-las na tela. Agora, vamos voltar um pouco e aprender a preparar os dados para renderização.
 
@@ -25,10 +25,10 @@ Em [Estrutura de renderização I](tutorial--assembling-the-rendering-pipeline.m
 Recapitulação rápida do objetivo. Entender como configurar uma estrutura de renderização básica para exibir a saída gráfica de um jogo UWP em DirectX. Podemos agrupá-las facilmente nestas três etapas.
 
  1. Estabelecer uma conexão com a interface gráfica
- 2. Preparação: criar os recursos necessários para desenhar os elementos gráficos
- 3. Exibir os elementos gráficos: renderizar o quadro
+ 2. Preparação: Criar recursos que precisamos para desenhar os elementos gráficos
+ 3. Exiba os elementos gráficos: Renderizar o quadro
 
-A [Estrutura de renderização I: introdução à renderização](tutorial--assembling-the-rendering-pipeline.md) descreve como os elementos gráficos são renderizados, abordagem nas etapas 1 e 3. 
+[Framework de renderização i: Introdução à renderização](tutorial--assembling-the-rendering-pipeline.md) explicado como os gráficos são renderizados, que abrangem as etapas 1 e 3. 
 
 Este artigo explica como configurar as outras partes dessa estrutura e preparar os dados necessários para que a renderização possa ser feita, que é a etapa 2 do processo.
 
@@ -37,21 +37,21 @@ Este artigo explica como configurar as outras partes dessa estrutura e preparar 
 O renderizador é responsável por criar e manter todos os objetos D3D11 e D2D usados para gerar os elementos visuais do jogo. A classe __GameRenderer__ é o renderizador deste jogo de exemplo e é projetada para atender às necessidades de renderização do jogo.
 
 Estes são alguns conceitos que você pode usar projetar o renderizador do seu jogo:
-* Como as APIs do Direct3D 11 são definidas como APIS [COM](https://msdn.microsoft.com/library/windows/desktop/ms694363.aspx), você deve fornecer referências [ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) aos objetos definidos por essas APIs. Esses objetos são liberados automaticamente quando sua última referência fica fora do escopo após o encerramento do app. Para obter mais informações, consulte [ComPtr](https://github.com/Microsoft/DirectXTK/wiki/ComPtr). Exemplo desses objetos: buffers de constantes, objetos sombreadores - [sombreador de vértice](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders), [sombreador de pixel](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders) e objetos de recurso de sombreador.
+* Como as APIs do Direct3D 11 são definidas como APIS [COM](https://msdn.microsoft.com/library/windows/desktop/ms694363.aspx), você deve fornecer referências [ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) aos objetos definidos por essas APIs. Esses objetos são liberados automaticamente quando sua última referência fica fora do escopo quando o aplicativo termina. Para obter mais informações, consulte [ComPtr](https://github.com/Microsoft/DirectXTK/wiki/ComPtr). Exemplo desses objetos: buffers de constantes, objetos sombreadores - [sombreador de vértice](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders), [sombreador de pixel](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders) e objetos de recurso de sombreador.
 * Os buffers de constantes são definidos nessa classe para armazenar vários dados necessários à renderização.
     * Use vários buffers de constantes com diferentes frequências para reduzir a quantidade de dados que deve ser enviada à GPU por quadro. Este exemplo separa as constantes em diferentes buffers com base na frequência em que eles devem ser atualizados. Esta é a prática recomendada para programação do Direct3D. 
     * Neste jogo de exemplo, quatro buffers de constantes são definidos.
         1. __m\_constantBufferNeverChanges__ contém os parâmetros de iluminação. Ele é definido uma vez no método __FinalizeCreateGameDeviceResources__ e nunca mais é alterado.
         2. __m\_constantBufferChangeOnResize__ contém a matriz de projeção. A matriz de projeção depende do tamanho e da taxa de proporção da janela. Ele é definido em [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method) e, em seguida, atualizado depois que os recursos são carregados no método [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method). Se a renderização for em 3D, ele também será alterado duas vezes por quadro.
-        3. __m\_constantBufferChangesEveryFrame__ contém a matriz de visualização. Essa matriz depende da posição da câmera e da direção do olhar (o normal para a projeção) e muda somente uma vez por quadro no método __Render__. Isso foi abordado anteriormente em __Estrutura de renderização I: introdução à renderização__, no método [__GameRenderer::Render__ method](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method).
-        4. __m\_constantBufferChangesEveryPrim__ contém a matriz de modelo e as propriedades de material de cada primitiva. A matriz do modelo transforma os vértices das coordenadas locais em coordenadas mundiais. Essas constantes são específicas de cada primitiva e atualizadas para cada chamada de desenho. Isso foi abordado anteriormente em __Estrutura de renderização I: introdução à renderização__, em [Primitive rendering](tutorial--assembling-the-rendering-pipeline.md#primitive-rendering).
+        3. __m\_constantBufferChangesEveryFrame__ contém a matriz de exibição. Essa matriz depende da posição da câmera e da direção do olhar (o normal para a projeção) e muda somente uma vez por quadro no método __Render__. Isso foi discutido anteriormente na __framework de renderização i: Introdução à renderização__, sob o [ __GameRenderer::Render__ método](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method).
+        4. __m\_constantBufferChangesEveryPrim__ contém as propriedades de matriz e o material do modelo de cada primitivo. A matriz do modelo transforma os vértices das coordenadas locais em coordenadas mundiais. Essas constantes são específicas para cada primitiva e são atualizadas para cada chamada de desenho. Isso foi discutido anteriormente na __framework de renderização i: Introdução à renderização__, sob o [processamento primitivo](tutorial--assembling-the-rendering-pipeline.md#primitive-rendering).
 * Os objetos de recurso de sombreador que contêm as texturas das primitivas também são definidos nesta classe.
     * Alguns texturas são predefinidas. (O [DDS](https://msdn.microsoft.com/library/windows/desktop/bb943991.aspx) é um formato de arquivo que pode ser usado para armazenar texturas compactadas e descompactadas. As texturas DDS são usadas para as paredes e o piso do mundo, bem como para as esferas de munição.)
-    * Neste jogo de exemplo, são objetos de recurso de sombreador: __m\_sphereTexture__, __m\_cylinderTexture__, __m\_ceilingTexture__, __m\_floorTexture__, __m\_wallsTexture__.
+    * Neste exemplo de jogo, são objetos de recurso de sombreador: __m\_sphereTexture__, __m\_cylinderTexture__, __m\_ceilingTexture__, __m\_floorTexture__, __m\_wallsTexture__.
 * Os objetos de sombreador são definidos nesta classe para calcular nossas primitivas e texturas. 
-    * Neste jogo de exemplo, os objetos de sombreador são __m\_vertexShader__, __m\_vertexShaderFlat__ e __m\_pixelShader__, __m\_pixelShaderFlat__.
+    * Neste exemplo de jogo, são os objetos de sombreador __m\_vertexShader__, __m\_vertexShaderFlat__, e __m\_pixelShader__, __m\_pixelShaderFlat__.
     * O sombreador de vértice processa as primitivas e a iluminação básica, e o sombreador de pixel (às vezes, chamou um sombreador de fragmento) processa as texturas e quaisquer efeitos por pixel.
-    * Existem duas versões desses sombreadores (regulares e planos) para a renderização de diferentes primitivas. O motivo pelo qual temos diferentes versões é que as versões planas são muito mais simples e não fazem realces especulares por efeitos de iluminação de pixel. Elas são usadas nas paredes e tornam a renderização mais rápida em dispositivos com pouco consumo de energia.
+    * Existem duas versões desses sombreadores (regulares e planos) para a renderização de diferentes primitivas. O motivo pelo qual temos diferentes versões é que as versões planas são muito mais simples e não fazem realces especulares por efeitos de iluminação de pixel. Estes são usados nas paredes e tornam a renderização mais rápida em dispositivos com pouco consumo de energia.
 
 ## <a name="gamerendererh"></a>GameRenderer.h
 
@@ -168,7 +168,7 @@ No jogo de exemplo, essas operações dos objetos de cena são divididas entre o
 
 Neste jogo de exemplo, o que acontece neste método?
 
-* Variáveis instanciadas (__m\_gameResourcesLoaded__ = false e __m\_levelResourcesLoaded__ = false) que indicam se os recursos foram carregados antes que a renderização seja iniciada, já que estamos carregando-as de forma assíncrona. 
+* Instanciado variáveis (__m\_gameResourcesLoaded__ = false e __m\_levelResourcesLoaded__ = false) que indicam se os recursos tiverem sido carregados antes de mover encaminhe para renderizar, pois estamos carregando-los forma assíncrona. 
 * Como a HUD e a renderização de sobreposição estão em objetos de classe separados, chame os métodos __GameHud::CreateDeviceDependentResources__ and __GameInfoOverlay::CreateDeviceDependentResources__ aqui.
 
 Este é o código de __GameRenderer::CreateDeviceDependentResources__.
@@ -241,7 +241,7 @@ GameMain::GameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) 
 
 ## <a name="creategamedeviceresourcesasync-method"></a>Método CreateGameDeviceResourcesAsync
 
-__CreateGameDeviceResourcesAsync__ é chamado no método de construtor __GameMain__ no loop __create\_task__ loop, pois estamos carregando recursos de jogo de forma assíncrona.
+__CreateGameDeviceResourcesAsync__ é chamado do __GameMain__ método de construtor no __crie\_tarefa__ loop, pois estamos carregando recursos jogos assincronamente.
         
 __CreateDeviceResourcesAsync__ é um método executado como um conjunto separado de tarefas assíncronas para carregar os recursos do jogo. Como é esperado que ele seja executado em um thread separado, ele só tem acesso aos métodos de dispositivo Direct3D 11 (os definidos no __ID3D11Device__), e não aos métodos de contexto de dispositivo (os métodos definidos no __ID3D11DeviceContext__); sendo assim, ele não faz nenhuma renderização.
 
@@ -254,13 +254,13 @@ Em princípio:
 * Use este método para carregar texturas (como os arquivos .dds) e informações de sombreador (como os arquivos .cso) nos [sombreadores](tutorial--assembling-the-rendering-pipeline.md#shaders).
 
 Este método é usado para:
-* Criar os quatro [buffers de constantes](tutorial--assembling-the-rendering-pipeline.md#buffer): __m\_constantBufferNeverChanges__, __m\_constantBufferChangeOnResize__, __m\_constantBufferChangesEveryFrame__, __m\_constantBufferChangesEveryPrim__
+* Criar o 4 [buffers de constantes](tutorial--assembling-the-rendering-pipeline.md#buffer): __m\_constantBufferNeverChanges__, __m\_constantBufferChangeOnResize__, __m \_constantBufferChangesEveryFrame__, __m\_constantBufferChangesEveryPrim__
 * Criar um objeto de [estado de amostra](tutorial--assembling-the-rendering-pipeline.md#sampler-state) que encapsula informações de amostragem de uma textura
 * Crie um grupo de tarefas que contenha todas as tarefas assíncronas criadas pelo método. Ele aguarda a conclusão de todas essas tarefas assíncronas e chama __FinalizeCreateGameDeviceResources__.
 * Crie um carregador usando [Carregador básico](tutorial--assembling-the-rendering-pipeline.md#basicloader). Adicione as operações de carregamento assíncrono do carregador como tarefas ao grupo de tarefas criado anteriormente.
 * Métodos como __BasicLoader::LoadShaderAsync__ e __BasicLoader::LoadTextureAsync__ são usados para carregar:
     * objetos de sombreador compilados (VertextShader.cso, VertexShaderFlat.cso, PixelShader.cso e PixelShaderFlat.cso). Para obter mais informações, acesse [Vários formatos de arquivo de sombreador](tutorial--assembling-the-rendering-pipeline.md#various-shader-file-formats).
-    * texturas específicas de jogo (Assets\\seafloor.dds, metal_texture.dds, cellceiling.dds, cellfloor.dds, cellwall.dds).
+    * texturas específicas do jogo (ativos\\seafloor.dds, metal_texture.dds, cellceiling.dds, cellfloor.dds, cellwall.dds).
 
 ```cpp
 task<void> GameRenderer::CreateGameDeviceResourcesAsync(_In_ Simple3DGame^ game)
@@ -363,8 +363,8 @@ O método __FinalizeCreateGameDeviceResources__ é chamado depois que todas as t
 __FinalizeCreateGameDeviceResources__ e [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method) compartilham partes similares do código para isso:
 * Use __SetProjParams__ para garantir que a câmera esteja com a matriz de projeção correta. Para obter mais informações, acesse [Câmera e espaço de coordenadas](tutorial--assembling-the-rendering-pipeline.md#camera-and-coordinate-space).
 * Manipule a rotação da tela pós-multiplicando a matriz de rotação 3D na matriz de projeção da câmera. Em seguida, atualize o buffer de constantes __ConstantBufferChangeOnResize__ com a matriz de projeção resultante.
-* Defina a variável global __m\_gameResourcesLoaded__ __Boolean__ para indicar que os recursos agora são carregados nos buffers, prontos para a próxima etapa. Lembre-se de que inicializamos primeiro essa variável como __FALSE__ no método de construtor do __GameRenderer__, por meio do método __GameRenderer::CreateDeviceDependentResources__. 
-* Quando esse __m\_gameResourcesLoaded__ for __TRUE__, a renderização dos objetos de cena poderá ocorrer. Isso foi abordado no artigo __Estrutura de renderização I: introdução à renderização__, no [__método GameRenderer::Render__](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method).
+* Defina as __m\_gameResourcesLoaded__ __booliano__ variável global para indicar que os recursos agora são carregados nos buffers, prontos para a próxima etapa. Lembre-se de que inicializamos primeiro essa variável como __FALSE__ no método de construtor do __GameRenderer__, por meio do método __GameRenderer::CreateDeviceDependentResources__. 
+* Quando isso __m\_gameResourcesLoaded__ é __TRUE__, renderização dos objetos da cena podem ocorrer. Isso foi abordado no __framework de renderização i: Introdução à renderização__ do artigo, sob [ __método GameRenderer::Render__](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method).
 
 ```cpp
 // When creating this sample game using the DirectX 11 App template, this method needs to be created.
@@ -581,7 +581,7 @@ void GameRenderer::FinalizeCreateGameDeviceResources()
 
 ## <a name="createwindowsizedependentresource-method"></a>Método CreateWindowSizeDependentResource
 
-Os métodos CreateWindowSizeDependentResources são chamados sempre que o tamanho da janela, a orientação, a renderização habilitada para estéreo ou a resolução é alterada. No jogo de exemplo, ele atualiza a matriz de projeção em __ConstantBufferChangeOnResize__.
+Os métodos CreateWindowSizeDependentResources são chamados sempre que o tamanho da janela, a orientação, a renderização habilitada para estéreo ou a resolução é alterada. O jogo de exemplo, ele atualiza a matriz de projeção em __ConstantBufferChangeOnResize__.
 
 Os recursos de tamanho de janela são atualizados desta maneira: 
 * A estrutura do app recebe um dos vários eventos possíveis, indicando uma alteração no estado da janela. 

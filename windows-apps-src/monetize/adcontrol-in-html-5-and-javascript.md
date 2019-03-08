@@ -7,24 +7,24 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, controle de anúncios, javascript, HTML
 ms.localizationpriority: medium
 ms.openlocfilehash: 556493ffc901021310036cfb417c3c3b815c529e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049593"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611001"
 ---
 # <a name="adcontrol-in-html-5-and-javascript"></a>AdControl em HTML 5 e JavaScript
 
 Este guia passo a passo mostra como usar a classe [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para exibir anúncios em faixa em um aplicativo JavaScript/HTML da Plataforma Universal do Windows (UWP) para Windows 10.
 
-Para um projeto de exemplo completo que demonstra como adicionar anúncios em um aplicativo JavaScript/HTML, consulte os [exemplos de publicidade no GitHub](https://aka.ms/githubads).
+Para um projeto de exemplo completo que demonstra como adicionar anúncios em faixa a um aplicativo JavaScript/HTML, consulte os [Exemplos de publicidade no GitHub](https://aka.ms/githubads).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 * Instale o [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp) com o Visual Studio 2015 ou uma versão posterior do Visual Studio. Para obter instruções de instalação, consulte [este artigo](install-the-microsoft-advertising-libraries.md).
 
 > [!NOTE]
-> Se você tiver instalado a versão do SDK do Windows 10 10.0.14393 (atualização de aniversário) ou uma versão posterior do SDK do Windows, você também deve instalar a biblioteca [WinJS](https://github.com/winjs/winjs) . Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows para Windows 10, mas a partir da versão 10.0.14393 do SDK do Windows 10 (Atualização de Aniversário), ela deve ser instalada separadamente. 
+> Se você tiver instalado a versão do SDK do Windows 10 10.0.14393 (atualização de aniversário) ou uma versão posterior do SDK do Windows, você também deve instalar o [WinJS](https://github.com/winjs/winjs) biblioteca. Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows para Windows 10, mas a partir da versão 10.0.14393 do SDK do Windows 10 (Atualização de Aniversário), ela deve ser instalada separadamente. 
 
 ## <a name="integrate-a-banner-ad-into-your-app"></a>Integrar um anúncio em faixa ao seu aplicativo
 
@@ -56,7 +56,7 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em um
 8.  Modifique a seção **&lt;body&gt;** no arquivo default.html (ou outro arquivo html apropriado para o seu projeto) para incluir o elemento **div** do **AdControl**. Atribua as propriedades **applicationId** e **adUnitId** no **AdControl** aos valores de teste fornecidos em [valores de unidade publicitária de teste](set-up-ad-units-in-your-app.md#test-ad-units). Ajuste também a **altura** e a **largura** do controle para que ele tenha um dos [tamanhos de anúncio compatíveis para anúncios em faixa](supported-ad-sizes-for-banner-ads.md).
 
     > [!NOTE]
-    > Cada **AdControl** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade publicitária consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu aplicativo para a loja, você deve [substituir esses valores por valores dinâmicos de teste](#release) do Partner Center.
+    > Cada **AdControl** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade publicitária consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu aplicativo para a Store, você deve [substitua esses valores com os valores em tempo real de teste](#release) do Partner Center.
 
     ``` HTML
     <div id="myAd" style="position: absolute; top: 50px; left: 0px; width: 300px; height: 250px; z-index: 1"
@@ -65,7 +65,7 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em um
     </div>
     ```
 
-9.  Compile e execute o app para vê-lo com um anúncio.
+9.  Compile e execute o aplicativo para vê-lo com um anúncio.
 
 O exemplo a seguir mostra o index.html completo para um aplicativo simples.
 
@@ -111,21 +111,21 @@ Se você usa esse código e não vê anúncios, tente inserir um atributo **posi
 
 <span id="release" />
 
-## <a name="release-your-app-with-live-ads"></a>Liberar seu aplicativo com anúncios ativos
+## <a name="release-your-app-with-live-ads"></a>Liberar seu app com anúncios ativos
 
 1. Verifique se o uso de anúncios em faixa no aplicativo segue as [diretrizes para anúncios em faixa](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads).
 
-1.  No Partner Center, vá para a página de [anúncios no aplicativo](../publish/in-app-ads.md) e [criar uma unidade de anúncio](set-up-ad-units-in-your-app.md#live-ad-units). No tipo de unidade publicitária, especifique **Faixa**. Anote a ID da unidade publicitária e a ID do aplicativo.
+1.  No Partner Center, vá para o [anúncios no aplicativo](../publish/in-app-ads.md) página e [criar uma unidade de anúncio](set-up-ad-units-in-your-app.md#live-ad-units). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote a ID da unidade de anúncio e a ID do aplicativo.
     > [!NOTE]
-    > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Quando você cria uma unidade de publicitária dinâmica UWP no Partner Center, o valor de ID do aplicativo para a unidade publicitária sempre corresponde a ID da loja do aplicativo (um valor de ID da loja de exemplo é semelhante a 9NBLGGH4R315).
+    > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Quando você cria uma unidade de anúncio UWP ao vivo no Partner Center, o valor de ID do aplicativo para a unidade de ad sempre corresponde a ID da Store para seu aplicativo (um valor de ID de Store de exemplo é semelhante 9NBLGGH4R315).
 
-2. Como alternativa, você pode habilitar o controle de anúncios para **AdControl** ao definir as configurações na seção [Configurações de controle](../publish/in-app-ads.md#mediation) na página [Anúncios no app](../publish/in-app-ads.md). O controle de anúncios permite que você maximize seus recursos de promoção de apps e receita de anúncios exibindo anúncios de várias redes de anúncios, incluindo os anúncios de outras redes de anúncios pagas, como Taboola e Smaato e anúncios para campanhas promocionais de aplicativos da Microsoft.
+2. Como alternativa, você pode habilitar o controle de anúncios para **AdControl** ao definir as configurações na seção [Configurações de controle](../publish/in-app-ads.md#mediation) na página [Anúncios no app](../publish/in-app-ads.md). O controle de anúncios permite que você maximize seus recursos de promoção de aplicativos e receita de anúncios exibindo anúncios de várias redes de anúncios, incluindo os anúncios de outras redes de anúncios pagas, como Taboola e Smaato e anúncios para campanhas promocionais de aplicativos da Microsoft.
 
-3.  Em seu código, substitua os valores de unidade de anúncio de teste (**applicationId** e **adUnitId**) pelos valores dinâmicos gerados no Partner Center.
+3.  No seu código, substitua os valores de unidade de anúncio de teste (**applicationId** e **adUnitId**) com os valores em tempo real gerado no Partner Center.
 
-4.  [Enviar seu aplicativo](../publish/app-submissions.md) para a loja usando o Partner Center.
+4.  [Enviar seu aplicativo](../publish/app-submissions.md) para a Store usando o Partner Center.
 
-5.  Examine os [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no Partner Center.             
+5.  Examine sua [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no Partner Center.             
 
 <span id="manage" />
 
@@ -138,7 +138,7 @@ Você pode usar vários objetos **AdControl** em um único app (por exemplo, cad
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Diretrizes para anúncios em faixa](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads)
-* [Exemplos de publicidade no GitHub](https://aka.ms/githubads)
-* [Configurar unidades publicitárias para seu aplicativo](set-up-ad-units-in-your-app.md)
-* [Processamento de erros no guia passo a passo do JavaScript](error-handling-in-javascript-walkthrough.md)
+* [Diretrizes para anúncios](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads)
+* [Amostras de publicidade no GitHub](https://aka.ms/githubads)
+* [Configurar unidades de ad para seu aplicativo](set-up-ad-units-in-your-app.md)
+* [Tratamento de erro no passo a passo do JavaScript](error-handling-in-javascript-walkthrough.md)

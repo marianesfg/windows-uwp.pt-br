@@ -1,5 +1,5 @@
 ---
-Description: The toggle switch represents a physical switch that allows users to turn things on or off.
+Description: O switch de alternância representa um comutador físico que permite aos usuários ativar ou desativar itens.
 title: Diretrizes para controles de switches de alternância
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
@@ -13,21 +13,21 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: a23a7a7da9605c0ffb5a537c75d63e3f06705881
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036958"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625461"
 ---
 # <a name="toggle-switches"></a>Switches de alternância
 
-O botão de alternância representa um comutador físico que permite aos usuários ativar ou desativar itens, como um interruptor. Use os controles de botão de alternância para apresentar aos usuários duas opções mutuamente excludentes (como ligar/desligar), em que a escolha de uma opção apresenta resultados imediatos.
+A opção de ativar/desativar representa um comutador físico que permite aos usuários ativar coisas ativado ou desativado, como um comutador de luz. Use os controles de botão de alternância para apresentar aos usuários duas opções mutuamente excludentes (como ligar/desligar), em que a escolha de uma opção apresenta resultados imediatos.
 
 Para criar um controle de botão de alternância, use a [classe ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch).
 
-> **APIs importantes**: [classe ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [propriedade IsOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [evento Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
+> **APIs importantes**: [Classe ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [propriedade estiver ativado](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [evento Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use um switch de alternância para operações binárias que entram em vigor logo depois que o usuário gira o switch.
 
@@ -46,7 +46,7 @@ Para tornar o botão de alternância fácil de entender, rotule-o com uma ou dua
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abrir o aplicativo para ver o <a href="xamlcontrolsgallery:/item/ToggleSwitch">ToggleSwitch</a> ou <a href="xamlcontrolsgallery:/item/ToggleButton">ToggleButton</a> em ação.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -67,7 +67,7 @@ Para algumas ações, uma caixa de seleção ou um switch de alternância pode f
 - Use uma caixa de seleção quando o usuário precisar executar etapas extras para que as alterações sejam efetivadas. Por exemplo, se o usuário precisar clicar no botão "enviar" ou "avançar" para aplicar as alterações, use uma caixa de seleção.
 - Use caixas de seleção quando o usuário pode selecionar vários itens que estão relacionados a uma única configuração ou recurso.
 
-## <a name="toggle-switches-in-the-windows-ui"></a>Switches de alternância da interface do usuário do Windows
+## <a name="toggle-switches-in-the-windows-ui"></a>Comutadores de alternância na interface do usuário do Windows
 
 Essas imagens mostram como a interface do usuário do Windows usa os botões de alternância. Aqui está como a tela de Configurações de armazenamento inteligente usam os botões de alternância:
 
@@ -171,11 +171,11 @@ Você também pode usar conteúdo mais complexo, ao definir as propriedades [OnC
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Classe ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)
 - [Botões de opção](radio-button.md)
-- [Switches de alternância](toggles.md)
+- [Comutadores de alternância](toggles.md)
 - [Caixas de seleção](checkbox.md)

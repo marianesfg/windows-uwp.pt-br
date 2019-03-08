@@ -7,23 +7,23 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e508feb8a530f29b40d5a3839df573cb2ce89896
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932167"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634391"
 ---
 # <a name="drag-and-drop"></a>Arrastar e soltar
 
 Arrastar e soltar é uma maneira intuitiva de transferir dados dentro de um aplicativo ou entre aplicativos na área de trabalho do Windows. A operação arrastar e soltar permite que o usuário transfira dados entre aplicativos ou dentro de um aplicativo usando um gesto padrão (pressionar, segurar e aplicar panorâmica com o dedo ou pressionar e aplicar panorâmica com um mouse ou uma caneta).
 
-> **APIs importantes**: [propriedade CanDrag](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag), [propriedade AllowDrop](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) 
+> **APIs importantes**: [Propriedade de CanDrag](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag), [propriedade AllowDrop](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) 
 
 A origem de arraste, que é o aplicativo ou a área em que o gesto de arrastar é acionado, fornece os dados a serem transferidos preenchendo um objeto de pacote de dados que pode conter formatos de dados padrão, incluindo texto, RTF, HTML, bitmaps, itens de armazenamento ou formatos de dados personalizados. A origem também indica o tipo de operações com suporte: copiar, mover ou vincular. Quando o ponteiro é liberado, o item é solto. A reprodução automática, que é o aplicativo ou a área sob o ponteiro, processa o pacote de dados e retorna o tipo de operação realizada.
 
 Durante a operação arrastar e soltar, a interface de usuário do arraste fornece uma indicação visual do tipo de operação arrastar e soltar que está ocorrendo. Esse feedback visual é inicialmente fornecido pela origem, mas pode ser alterado pelos destinos conforme o ponteiro se move sobre eles.
 
-A operação arrastar e soltar moderna está disponível em todos os dispositivos que oferecem suporte à UWP. Ela permite a transferência de dados entre ou dentro de qualquer tipo de aplicativo, incluindo aplicativos clássicos do Windows, embora este artigo se concentre na API de XAML para a operação arrastar e soltar moderna. Uma vez implementada, a operação arrastar e soltar funciona perfeitamente em todas as direções, incluindo de aplicativo para aplicativo, de aplicativo para área de trabalho e de área de trabalho para aplicativo.
+A operação arrastar e soltar moderna está disponível em todos os dispositivos que oferecem suporte à UWP. Ela permite a transferência de dados entre ou dentro de qualquer tipo de aplicativo, incluindo aplicativos clássicos do Windows, embora este artigo se concentre na API de XAML para a operação arrastar e soltar moderna. Uma vez implementada, a função arrastar e soltar funciona diretamente em todas as direções, incluindo de aplicativo para aplicativo, de aplicativo para área de trabalho e de área de trabalho para aplicativo.
 
 Aqui está uma visão geral do que você precisa fazer para habilitar o recurso de arrastar e soltar no seu aplicativo:
 
@@ -45,7 +45,7 @@ Veja como definir [**CanDrag**](https://msdn.microsoft.com/library/windows/apps/
 
 [!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]
 
-Você não precisa fazer mais nada para permitir arrastar, a menos que queira personalizar a interface do usuário (o que é abordado posteriormente neste artigo). Para soltar são necessárias mais algumas etapas.
+Você não precisa fazer mais nada para permitir arrastar, a menos que queira personalizar a interface do usuário (o que é abordado posteriormente neste artigo). Soltar requer mais algumas etapas.
 
 ## <a name="construct-a-data-package"></a>Construir um pacote de dados 
 
@@ -98,7 +98,7 @@ O sistema irá exibir automaticamente as animações apropriadas para soltar em 
 
 ## <a name="implementing-custom-drag-and-drop"></a>Implementar o recurso arrastar e soltar personalizado
 
-A classe [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) faz a maior parte do trabalho de implementação do recurso arrastar e soltar para você. Mas se você quiser, você pode implementar sua própria versão usando as APIs no [namespace DragDrop](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core).
+A classe [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) faz a maior parte do trabalho de implementação do recurso arrastar e soltar para você. Mas se você quiser, você pode implementar sua própria versão por meio das APIs na [Windows.ApplicationModel.DataTransfer.DragDrop.Core namespace](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core).
 
 | Funcionalidade | API do WinRT |
 | --- | --- |
@@ -109,7 +109,7 @@ A classe [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielemen
 
 
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 * [Comunicação de aplicativo a aplicativo](index.md)
 * [AllowDrop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.allowdrop.aspx)
@@ -117,6 +117,6 @@ A classe [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielemen
 * [DragOver](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.dragover.aspx)
 * [AcceptedOperation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.acceptedoperation.aspx)
 * [DataView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.dataview.aspx)
-* [DragUiOverride](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.draguioverride.aspx)
-* [Drop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.drop.aspx)
+* [DragUIOverride](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.draguioverride.aspx)
+* [Descartar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.drop.aspx)
 * [IsDragSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isdragsource.aspx)

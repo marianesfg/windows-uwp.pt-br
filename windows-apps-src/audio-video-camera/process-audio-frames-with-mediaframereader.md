@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c78e16a50bdca09f474d5016fdc86b6d27702d5b
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058760"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598581"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Processar quadros de áudio com o MediaFrameReader
 
@@ -26,12 +26,12 @@ Este artigo mostra como usar um [**MediaFrameReader**](https://msdn.microsoft.co
 ## <a name="setting-up-your-project"></a>Configurando seu projeto
 O processo de aquisição dos quadros de áudio é basicamente o mesmo para outros tipos de quadros de mídia. Como com qualquer aplicativo que usa **MediaCapture**, você deve declarar que seu aplicativo usa a funcionalidade de *webcam* antes de tentar acessar qualquer dispositivo de câmera. Se seu aplicativo fizer a captura de um dispositivo de áudio, você deve declarar também a funcionalidade do dispositivo *microfone*. 
 
-**Adicionar funcionalidades ao manifesto do aplicativo**
+**Adicionar recursos ao manifesto do aplicativo**
 
 1.  No Microsoft Visual Studio, no **Gerenciador de Soluções**, abra o designer do manifesto do aplicativo clicando duas vezes no item **package.appxmanifest**.
 2.  Selecione a guia **Recursos**.
 3.  Marque a caixa da **Webcam** e a caixa do **Microfone**.
-4.  Para acessar a biblioteca de Imagens e Vídeos, marque as caixas da **Biblioteca de imagens** e da **Biblioteca de vídeos**.
+4.  Para acessar as bibliotecas Imagens e Vídeos, marque as caixas para **Biblioteca de Imagens** e a caixa para **Biblioteca de Vídeos**.
 
 
 
@@ -76,10 +76,10 @@ Você pode usar um objeto [**AudioFrame**](https://docs.microsoft.com/uwp/api/wi
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Processar quadros de mídia com o MediaFrameReader](process-media-frames-with-mediaframereader.md)
+* [Quadros de processos de mídia com MediaFrameReader](process-media-frames-with-mediaframereader.md)
 * [Câmera](camera.md)
-* [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Quadros da câmera de exemplo](https://go.microsoft.com/fwlink/?LinkId=823230)
+* [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Exemplo de quadros de câmera](https://go.microsoft.com/fwlink/?LinkId=823230)
 * [Gráficos de áudio](audio-graphs.md)
  
 

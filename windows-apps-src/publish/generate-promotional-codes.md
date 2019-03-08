@@ -1,5 +1,5 @@
 ---
-Description: You can generate promotional codes for an app or add-on that you have published in the Microsoft Store.
+Description: Você pode gerar códigos promocionais para um app ou complemento que você tenha publicado na Microsoft Store.
 title: Gerar códigos promocionais
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ms.date: 10/31/2018
@@ -7,20 +7,20 @@ ms.topic: article
 keywords: windows 10, uwp, código promocional, códigos promocionais, token, tokens
 ms.localizationpriority: medium
 ms.openlocfilehash: db4cde6f8c195101ec31de26c00ffa7325e08d71
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114482"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605391"
 ---
 # <a name="generate-promotional-codes"></a>Gerar códigos promocionais
 
 
-[Partner Center](https://partner.microsoft.com/dashboard) permite gerar códigos promocionais para um aplicativo ou complemento que você tenha publicado na Microsoft Store. Códigos promocionais são um modo fácil de conceder a usuários influentes acesso gratuito ao seu app ou complemento. Você também pode usar códigos promocionais em situações de atendimento ao cliente, oferecendo aos usuários acesso gratuito ao seu aplicativo ou complemento, ou para o [teste beta](beta-testing-and-targeted-distribution.md) com Windows 10. 
+[Partner Center](https://partner.microsoft.com/dashboard) permite a geração de códigos promocionais para um aplicativo ou o complemento que você publicou na Microsoft Store. Códigos promocionais são um modo fácil de oferecer a usuários influentes acesso gratuito ao seu aplicativo ou complemento. Você também pode usar os códigos promocionais para cenários de serviço de cliente de endereço, dando aos usuários acesso gratuito ao seu aplicativo ou o complemento, ou para [testes beta](beta-testing-and-targeted-distribution.md) com o Windows 10. 
 
-Cada código promocional tem uma URL resgatável exclusiva correspondente que um cliente pode clicar para resgatar o código e instalar seu aplicativo ou complemento da Microsoft Store.  Observe que o aplicativo deve passar na fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md) para que os usuários possam resgatar um código promocional para instalá-lo.
+Cada código promocional tem uma URL pode ser trocada exclusiva correspondente que um cliente pode clicar para resgatar o código e instalar seu aplicativo ou o complemento da Microsoft Store.  Observe que o aplicativo deve passar na fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md) para que os usuários possam resgatar um código promocional para instalá-lo.
 
-Você pode gerar códigos de uso único (e distribuir um para cada cliente), ou você pode optar por gerar um código que pode ser usado várias vezes por um determinado número de clientes.
+Você pode gerar códigos de uso único (e distribuir um para cada cliente), ou você pode optar por gerar um código que pode ser usado várias vezes por um número especificado de clientes.
 
 > [!TIP]
 > Você pode usar [notificações por push direcionadas](send-push-notifications-to-your-apps-customers.md) para distribuir um código promocional a um segmento dos clientes. Ao fazer isso, use um código promocional que permite que vários clientes usem o mesmo código.
@@ -31,28 +31,28 @@ Você pode gerar códigos de uso único (e distribuir um para cada cliente), ou 
 Lembre-se das seguintes políticas para códigos promocionais:
 
 -   Você pode gerar códigos promocionais para qualquer app ou complemento (exceto complementos de assinatura) que você tenha publicado na Microsoft Store. Os clientes podem resgatar os códigos em qualquer versão do Windows que seja compatível com o app ou o complemento.
--   Os códigos promocionais expiram em seis meses após a data do pedido (a menos que você escolha uma data de expiração anterior).
+-   Os códigos promocionais expiram seis meses após a data do pedido (a menos que você escolha uma data de expiração anterior).
 -   Para cada um dos aplicativos ou complementos, você pode gerar códigos que permitam até 1600 resgates a cada seis meses. O período de seis meses começa quando o primeiro pedido de código promocional é enviado, mesmo se você escolher uma data de expiração anterior. O total de 1600 resgates por produto se aplica a códigos de uso único e códigos que podem ser usados várias vezes.
--   Você deve seguir os requisitos definidos no [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), incluindo a seção **3k. Códigos promocionais**.
+-   Você deve seguir os requisitos definidos na [contrato de desenvolvedor do aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), incluindo a seção **3 k. Códigos promocionais**.
 
 > [!NOTE]
-> Você pode usar códigos promocionais mesmo se seu aplicativo não está disponível para os clientes (isto é, se você selecionou **disponibilizar este produto mas não detectável na loja** com a aquisição de parada **: qualquer cliente com um link direto pode ver da loja do produto listagem, mas eles só poderão baixá-lo se adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10** opção na seção de [Descoberta](choose-visibility-options.md#discoverability) do seu envio). Com essa opção, os clientes devem estar na Windows 10 (incluindo o Xbox) para adquirir seu produto com um código promocional.
+> Você pode usar códigos promocionais, mesmo que seu aplicativo não está disponível para clientes (ou seja, se você tiver selecionado **tornar este produto disponível, mas não podem ser descobertos no Store** com o **parar aquisição: Qualquer cliente com um link direto pode ver uma listagem de Store do produto, mas eles podem baixá-lo somente se o produto antes, de propriedade ou tiver um código promocional e estiver usando um dispositivo Windows 10** opção em seu envio [detectabilidade ](choose-visibility-options.md#discoverability) seção). Com essa opção, os clientes devem estar no Windows 10 (incluindo Xbox) para adquirir seu produto com um código promocional.
 
 
 ## <a name="order-promotional-codes"></a>Solicitar códigos promocionais
 
-Para solicitar códigos promocionais para um aplicativo ou complemento:
+Para os códigos promocionais de pedido para um aplicativo ou o complemento:
 
-1.  No menu de navegação esquerdo do [Partner Center](https://partner.microsoft.com/dashboard), expanda **atrair** e, em seguida, selecione **códigos promocionais**.
+1.  No menu de navegação à esquerda do [Partner Center](https://partner.microsoft.com/dashboard), expanda **Attract** e, em seguida, selecione **códigos promocionais**.
 
 2.   Na página **Códigos promocionais**, clique em **Solicitar códigos**.
 
 3.  Na página **Pedido de novos códigos promocionais**, insira o seguinte:
-    -   Selecione o app ou o complemento para o qual você deseja gerar códigos. (Observe que você não pode gerar códigos promocionais para complementos de assinatura).
+    -   Selecione o aplicativo ou complemento para o qual você deseja gerar códigos. (Observe que você não pode gerar códigos promocionais para complementos de assinatura).
     -   Especifique um nome para o pedido. Você pode usar esse nome para diferenciar entre diferentes pedidos de códigos quando for analisar os dados de uso dos códigos promocionais.
     -   Selecione o tipo de pedido. Você pode optar por gerar um conjunto de códigos promocionais que pode ser usado uma vez ou optar por gerar um código promocional que pode ser usado várias vezes.
     -   Especifique o número de códigos a ser solicitado (se estiver gerando um conjunto de códigos) ou o número de vezes que o código pode ser resgatado (se estiver gerando códigos a serem usados várias vezes).
-    -   Especifique quando os códigos promocionais devem se tornar ativos. Para escolher uma determinada data e hora inicial, desmarque a caixa de seleção **Os códigos são ativados imediatamente**. Caso contrário, os códigos ficarão ativos imediatamente (embora seu produto deve ter concluído o processo de publicação para que um cliente para usar o código).
+    -   Especifique quando os códigos promocionais devem se tornar ativos. Para escolher uma determinada data e hora inicial, desmarque a caixa de seleção **Os códigos são ativados imediatamente**. Caso contrário, os códigos se tornará ativos imediatamente (embora o produto deve ter concluído o processo de publicação para que um cliente usar o código).
     -   Especifique quando os códigos promocionais devem expirar. Para escolher uma data e hora de expiração anterior a seis meses, desmarque a caixa de seleção **Os códigos expiram após 6 meses**.
 
 4.  Clique em **Solicitar códigos**. Você será retornado à página **Códigos promocionais**, na qual poderá ver seu novo pedido na tabela de resumo de pedidos de códigos promocionais do aplicativo.
@@ -62,23 +62,23 @@ Para solicitar códigos promocionais para um aplicativo ou complemento:
 
 Para baixar um pedido atendido de códigos promocionais e distribuir os códigos para os clientes:
 
-1.  No menu de navegação esquerdo do [Partner Center](https://partner.microsoft.com/dashboard), expanda **atrair** e, em seguida, selecione **códigos promocionais.**
+1.  No menu de navegação à esquerda do [Partner Center](https://partner.microsoft.com/dashboard), expanda **Attract** e, em seguida, selecione **códigos promocionais.**
 2.  Clique no link **Download** do pedido de código promocional e salve o arquivo gerado no computador. Esse arquivo contém informações sobre seu pedido de códigos promocionais no formato (.tsv).
 3.  Abra o arquivo .tsv no editor de sua escolha. Para a obter a melhor experiência, abra o arquivo .tsv em um aplicativo que possa exibir os dados em uma estrutura tabular, como o Microsoft Excel. No entanto, você também pode abrir o arquivo em qualquer editor de texto.
 
     O arquivo contém as seguintes colunas de dados para cada código:
 
-    -   **Nome do produto**: o nome do aplicativo ou complemento ao qual o código está associado.
-    -   **Nome do pedido**: o nome do pedido no qual esse código foi gerado.
-    -   **Código promocional**: o código propriamente dito. Consiste em uma sequência 5x5 de caracteres alfanuméricos separados por hífens. Por exemplo: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
-    -   **URL Resgatável**: a URL que um cliente pode usar para resgatar o código e instalar seu aplicativo ou complemento. A URL tem o seguinte formato: https://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt; promotional_code>
-    -   **Data de início**: a data em que este código foi ativado.
-    -   **Data de validade**: a data de validade deste código.
-    -   **ID do Código**: uma ID exclusiva para este código.
-    -   **ID do Pedido**: uma ID exclusiva para o pedido em que este código foi gerado.
-    -   **Fornecido a**: um campo vazio que você pode usar para controlar a quais cliente forneceu o código.
-    -   **Disponível**: o número de vezes que o código ainda está disponível para resgate (no momento em que o arquivo foi gerado).
-    -   **Resgatado**: o número de vezes que o código foi resgatado (no momento em que o arquivo foi gerado).
+    -   **Nome do produto**: O nome do aplicativo ou complemento que o código está associado.
+    -   **Nome do pedido**: O nome da ordem em que esse código foi gerado.
+    -   **O código promocional**: O próprio código. Consiste em uma sequência 5x5 de caracteres alfanuméricos separados por hífens. Por exemplo: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
+    -   **A URL pode ser trocada**: A URL que um cliente pode usar para resgatar o código e instalar seu aplicativo ou o complemento. A URL tem o seguinte formato: https://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt; promotional_code >
+    -   **Data de início**: A data em que esse código se tornaram ativo.
+    -   **Expirar data**: A data em que esse código expira.
+    -   **ID de código**: Uma ID exclusiva para esse código.
+    -   **ID do pedido**: Uma ID exclusiva para a ordem em que esse código foi gerado.
+    -   **Dada a**: Um campo vazio que você pode usar para controlar qual cliente que você atribuiu o código.
+    -   **Disponível**: O número de vezes que o código ainda está disponível para resgatar (no momento em que o arquivo foi gerado).
+    -   **Resgatado**: O número de vezes que o código foi resgatado (no momento em que o arquivo foi gerado).
 
 4.  Distribua as URLs resgatáveis aos clientes por meio de qualquer formato de comunicação de sua preferência (por exemplo, notificações direcionadas, email, mensagens SMS ou cartões impressos). Recomendamos que sua comunicação inclua o seguinte:
     -   Uma explicação do aplicativo ou complemento ao qual o código promocional se aplica e, opcionalmente, uma descrição do motivo pelo qual o cliente está recebendo o código.
@@ -86,9 +86,9 @@ Para baixar um pedido atendido de códigos promocionais e distribuir os códigos
     -   Instruções que orientam o cliente a acessar a URL resgatável, fazer logon usando a conta da Microsoft e seguir as instruções para baixar e instalar o aplicativo.
 
 
-## <a name="code-redemption-user-experience"></a>Experiência de resgate do código pelo usuário
+## <a name="code-redemption-user-experience"></a>Experiência do usuário de resgate do código
 
-Após distribuir um código promocional (ou sua URL resgatável) a um cliente, eles podem clicar na URL para obter o produto gratuitamente. Clicar na URL resgatável iniciará uma página **Resgatar seu código** autenticada em <https://account.microsoft.com/billing/redeem>. Esta página inclui uma descrição do aplicativo que o usuário está prestes a resgatar. Se o cliente não estiver conectado com a conta da Microsoft, ele poderá ser solicitado a fazê-lo. O cliente também pode visitar <https://account.microsoft.com/billing/redeem> e inserir o código diretamente.
+Após distribuir o código promocional (ou sua URL pode ser trocada) a um cliente, eles podem clicar na URL para obter o produto gratuitamente. Clicar na URL resgatável iniciará uma página **Resgatar seu código** autenticada em <https://account.microsoft.com/billing/redeem>. Esta página inclui uma descrição do aplicativo que o usuário está prestes a resgatar. Se o cliente não estiver conectado com a conta da Microsoft, ele poderá ser solicitado a fazê-lo. O cliente também pode visitar <https://account.microsoft.com/billing/redeem> e inserir o código diretamente.
 
 > [!IMPORTANT]
 > É recomendável não distribuir códigos promocionais para seus clientes até que o produto conclua o processo de publicação (mesmo se você tiver selecionado **Disponibilizar este produto mas não torná-lo detectável na Loja**). Os clientes verão um erro se tentarem usar um código promocional para um produto que ainda não foi publicado.
@@ -96,12 +96,12 @@ Após distribuir um código promocional (ou sua URL resgatável) a um cliente, e
 Depois que o cliente clicar em **Resgatar**, a Microsoft Store abrirá a página de visão geral do app (se ele estiver em um dispositivo Windows 10 ou Windows 8.1), onde ele poderá clicar em **Instalar** para baixar e instalar o aplicativo gratuitamente. Se o cliente estiver em um computador ou dispositivo que não tenha a Microsoft Store instalada, o link iniciará a página da Web da Microsoft Store do app. O código será aplicado à conta da Microsoft do cliente, para que ele possa baixar o aplicativo em um dispositivo Windows (que é associado à mesma conta da Microsoft) gratuitamente mais tarde.
 
 > [!NOTE]
-> Em alguns casos, um cliente pode ver um botão **comprar** , em vez de **instalar**, mesmo que o aplicativo tenha sido resgatado com êxito o código promocional. O cliente pode clicar em **Comprar** para instalar o aplicativo gratuitamente.
+> Em alguns casos, um cliente poderá ver uma **compre** botão em vez de **instalar**, mesmo que o aplicativo foi resgatado com êxito por meio do código promocional. O cliente pode clicar em **Comprar** para instalar o aplicativo gratuitamente.
 
 
-## <a name="review-your-promotional-codes"></a>Analisar os códigos promocionais
+## <a name="review-your-promotional-codes"></a>Analisar seus códigos promocionais
 
-Para analisar um resumo detalhado de pedidos de códigos promocionais para seus aplicativos e complementos, navegue até a página de **códigos promocionais** (no menu de navegação esquerdo do Partner Center, expanda **atrair** e, em seguida, selecione **códigos promocionais**). Você pode analisar os seguintes detalhes de todos os seus códigos promocionais atuais e inativos:
+Para examinar um resumo detalhado de ordens de código promocional para seus aplicativos e complementos, navegue até a **códigos promocionais** página (no menu de navegação à esquerda do Partner Center, expanda **Attract** e, em seguida, selecione **Códigos promocionais**). Você pode analisar os seguintes detalhes de todos os seus códigos promocionais atuais e inativos:
 -   Nome do pedido
 -   Aplicativo ou complemento
 -   Data de início

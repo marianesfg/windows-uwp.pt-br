@@ -1,6 +1,6 @@
 ---
 description: Apresentamos a linguagem XAML e os conceitos de XAML para o público de desenvolvedores de aplicativos do Windows Runtime e descrevemos as diferentes maneiras de declarar objetos e definir atributos no XAML durante seu uso para criar um aplicativo do Windows Runtime.
-title: Visão geral de XAML
+title: Visão geral do XAML
 ms.assetid: 48041B37-F1A8-44A4-BB8E-1D4DE30E7823
 ms.date: 07/18/2018
 ms.topic: article
@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 639f552a240cf8d28d1a2a0ce530315671128746
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931724"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599801"
 ---
 # <a name="xaml-overview"></a>Visão geral do XAML
 
@@ -69,10 +69,10 @@ O prefixo "x" e o namespace XAML da linguagem XAML contêm vários construtores 
 | Termo | Descrição |
 |------|-------------|
 | [x:Key](x-key-attribute.md) | Estabelece uma chave exclusiva, definida pelo usuário, para cada recurso em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) XAML. A cadeia de tokens da chave é o argumento da extensão de marcação **StaticResource** e essa chave é usada posteriormente para recuperar o recurso XAML de outro uso do XAML em outro lugar do aplicativo XAML. |
-| [x:Class](x-class-attribute.md) | Especifica o namespace de código e o nome da classe de código referente à classe que apresenta o code-behind de uma página XAML. Isso nomeia a classe que é criada ou unida por ações de criação ao criar o aplicativo. Essas ações criam suporte ao compilador de marcação XAML e combina a marcação e código subjacente quando o aplicativo é compilado. Você deve ter essa classe para suportar o código subjacente para uma página XAML. [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/br209051) no modelo de ativação do Windows Runtime padrão. |
-| [x:Name](x-name-attribute.md) | Especifica um nome de objeto em tempo de execução para a instância existente no código em tempo de execução após o processamento de um elemento de objeto definido em XAML. Você pode pensar em configurar o **x:Name** em XAML como declarar uma variável nomeada no código. Conforme você aprenderá mais tarde, isso é exatamente o que acontece quando o XAML é carregado como um componente de um aplicativo do Windows Runtime. <br/><div class="alert">**Observação** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) é uma propriedade semelhante na estrutura, mas nem todos os elementos a suportam. Você pode usar **x:Name** para identificação de elemento, sempre que o **FrameworkElement.Name** não for suportado nesse tipo de elemento. |
-| [x:Uid](x-uid-directive.md) | Identifica elementos que devem usar recursos localizados para alguns dos valores de propriedade. Para saber mais sobre como usar **x:Uid**, veja o [Guia de início rápido: traduzindo recursos de interface de usuário](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329). |
-| [Tipos de dados XAML intrínsecos](xaml-intrinsic-data-types.md) | Esses tipos podem especificar valores para tipos de valores simples, quando isso for necessário para um atributo ou recurso. Esses tipos intrínsecos correspondem aos tipos de valores simples que são tipicamente definidos como parte de definições intrínsecas de cada linguagem de programação. Por exemplo, você pode precisar de um objeto representando um valor booliano **true** para usar em um estado visual com storyboard [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320). Para esse valor em XAML, você usaria o tipo intrínseco **x:Boolean** como o elemento de objeto, como este: <code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> | 
+| [X:Class](x-class-attribute.md) | Especifica o namespace de código e o nome da classe de código referente à classe que apresenta o code-behind de uma página XAML. Isso nomeia a classe que é criada ou unida por ações de criação ao criar o aplicativo. Essas ações criam suporte ao compilador de marcação XAML e combina a marcação e código subjacente quando o aplicativo é compilado. Você deve ter essa classe para suportar o código subjacente para uma página XAML. [**Window.Content** ](https://msdn.microsoft.com/library/windows/apps/br209051) no modelo de ativação de tempo de execução do Windows padrão. |
+| [x:Name](x-name-attribute.md) | Especifica um nome de objeto em tempo de execução para a instância existente no código em tempo de execução após o processamento de um elemento de objeto definido em XAML. Você pode pensar em configurar o **x:Name** em XAML como declarar uma variável nomeada no código. Conforme você aprenderá mais tarde, isso é exatamente o que acontece quando o XAML é carregado como um componente de um aplicativo do Windows Runtime. <br/><div class="alert">**Observação**  [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) é uma propriedade semelhante na estrutura, mas nem todos os elementos a suportam. Você pode usar **x:Name** para identificação de elemento, sempre que o **FrameworkElement.Name** não for suportado nesse tipo de elemento. |
+| [x:Uid](x-uid-directive.md) | Identifica elementos que devem usar recursos localizados para alguns dos valores de propriedade. Para obter mais informações sobre como usar **X:UID**, consulte [guia de início rápido: Traduzir os recursos de interface do usuário](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329). |
+| [Tipos de dados intrínsecos de XAML](xaml-intrinsic-data-types.md) | Esses tipos podem especificar valores para tipos de valores simples, quando isso for necessário para um atributo ou recurso. Esses tipos intrínsecos correspondem aos tipos de valores simples que são tipicamente definidos como parte de definições intrínsecas de cada linguagem de programação. Por exemplo, você pode precisar de um objeto representando um valor booliano **true** para usar em um estado visual com storyboard [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320). Esse valor em XAML, você usaria o **x: booliano** tipo intrínseco, como o elemento de objeto, como este: <code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> | 
 
 Existem outros construtores de programação no namespace XAML da linguagem XAML, mas eles não são tão comuns.
 
@@ -88,7 +88,7 @@ O prefixo define o token de marcação usado para mencionar esse namespace XAML 
 
 Por exemplo, a sintaxe do atributo para mapear o prefixo `myTypes` ao namespace `myCompany.myTypes` é: `    xmlns:myTypes="using:myCompany.myTypes"`, e o uso do elemento representante é: `<myTypes:CustomButton/>`
 
-Para obter mais informações sobre namespaces XAML de mapeamento para tipos personalizados, incluindo considerações especiais para VisualC + + extensões de componente (C++ c++ /CX), consulte [namespaces XAML e mapeamento de namespace](xaml-namespaces-and-namespace-mapping.md).
+Para obter mais informações sobre namespaces XAML de mapeamento para tipos personalizados, incluindo considerações especiais para extensões de componentes do Visual C++ (C + + c++ /CLI CX), consulte [namespaces XAML e mapeamento de namespace](xaml-namespaces-and-namespace-mapping.md).
 
 ## <a name="other-xaml-namespaces"></a>Outros namespaces XAML
 
@@ -114,7 +114,7 @@ O Windows Runtime também permite a extensão de marcação [{x:Null}](x-null-ma
 
 As extensões de marcação geralmente retornam uma instância existente de alguma outra parte do gráfico de objeto do aplicativo ou adiam um valor para o tempo de execução Como é possível usar uma extensão de marcação como um valor de atributo, que é o uso comum, você sempre vê extensões de marcação passando valores para propriedades do tipo de referência que possam ter solicitado de outra forma uma sintaxe de elemento de propriedade.
 
-Por exemplo, veja a sintaxe para fazer referência a um [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) reutilizável de um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794): `<Button Style="{StaticResource SearchButtonStyle}"/>`. [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) é um tipo de referência, não um valor simples; assim, sem o uso de `{StaticResource}`, talvez fosse necessário um elemento de propriedade `<Button.Style>` e uma definição de `<Style>` incluída para definir a propriedade [**FrameworkElement.Style**](https://msdn.microsoft.com/library/windows/apps/br208743).
+Por exemplo, veja a sintaxe para fazer referência a um [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) reutilizável de um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794): `<Button Style="{StaticResource SearchButtonStyle}"/>`. [  **Style**](https://msdn.microsoft.com/library/windows/apps/br208849) é um tipo de referência, não um valor simples; assim, sem o uso de `{StaticResource}`, talvez fosse necessário um elemento de propriedade `<Button.Style>` e uma definição de `<Style>` incluída para definir a propriedade [**FrameworkElement.Style**](https://msdn.microsoft.com/library/windows/apps/br208743).
 
 Usando extensões de marcação, cada propriedade configurável em XAML é potencialmente configurável na sintaxe do atributo. Você pode usar a sintaxe de atributo para fornecer valores de referência para uma propriedade, mesmo que ela não permita uma sintaxe de atributo para instanciação direta de objetos. Você também pode habilitar um comportamento específico que adie o requisito geral de que as propriedades XAML têm que ser preenchidas por tipos de valor ou por tipos de referência recém-criados.
 
@@ -198,7 +198,7 @@ namespace App1
 
 Em um projeto, a linguagem XAML é escrita como um arquivo .xaml, e você usa a linguagem preferida (C#, Visual Basic, C++/CX) para escrever um arquivo code-behind. Quando um arquivo XAML é compilado por marcação como parte de uma ação de compilação do projeto, o local do arquivo code-behind XAML de cada página XAML é identificado por meio da especificação de um namespace e de uma classe como o atributo [x:Class](x-class-attribute.md) do elemento raiz da página XAML. Para saber mais sobre como esses mecanismos funcionam em XAML e como estão relacionados aos modelos de programação e aplicativo, consulte [Visão geral de eventos e eventos encaminhados](events-and-routed-events-overview.md).
 
-**Observação**para c++ c++ /CX há dois arquivos code-behind, um deles é um cabeçalho (. h) e o outro é implementação (. cpp). A implementação faz referência ao cabeçalho e tecnicamente é o cabeçalho que representa o ponto de entrada para a conexão code-behind.
+**Observação**  c++ para c++ /CLI CX lá são dois arquivos de code-behind, um é um cabeçalho (. xaml.h) e a outra é a implementação (. xaml.cpp). A implementação faz referência ao cabeçalho e tecnicamente é o cabeçalho que representa o ponto de entrada para a conexão code-behind.
 
 ## <a name="resource-dictionaries"></a>Dicionários de recursos
 
@@ -218,7 +218,7 @@ A linguagem XAML define o conceito de namescope XAML. Esse conceito influencia o
 
 ## <a name="the-role-of-xaml-in-the-development-process"></a>A função de XAML no processo de desenvolvimento
 
-O XAML desempenha vários papéis importantes no processo de desenvolvimento de aplicativos.
+A XAML desempenha vários papéis importantes no processo de desenvolvimento de aplicativos.
 
 -   O XAML é o principal formato para declaração da interface do usuário e respectivos elementos de um aplicativo, caso você esteja programando em C#, Visual Basic ou C++/CX. Em geral, pelo menos um arquivo XAML do projeto representa uma metáfora de página no aplicativo, para a interface do usuário inicialmente exibida. Arquivos XAML adicionais podem declarar páginas adicionais para a interface do usuário de navegação. Outros arquivos XAML podem declarar recursos, como modelos ou estilos.
 -   O formato XAML é usado para declaração dos estilos e modelos aplicados aos controles e à interface do usuário de um aplicativo.
@@ -234,13 +234,13 @@ Dependendo da sua própria função no processo de desenvolvimento, você pode n
 
 A seguir estão algumas dicas para definir elementos da interface do usuário no XAML usando práticas recomendadas de desempenho. Muitas dessas dicas se relacionam ao uso dos recursos XAML, mas elas estão listadas aqui na Visão geral do XAML para fins de conveniência. Para saber mais sobre os recursos XAML, consulte [Referências de recursos de ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273). Para obter mais algumas dicas sobre desempenho, incluindo XAML que demonstra de propósito algumas das más práticas de desempenho que você deve evitar em seu XAML, consulte [Otimizar carregamento de XAML](https://msdn.microsoft.com/library/windows/apps/mt204779).
 
--   Se você usar o mesmo pincel de cores com frequência no XAML, defina [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) como um recurso, em vez de sempre usar uma cor nomeada como um valor de atributo.
+-   Se você usar o mesmo pincel de cores com frequência em XAML, defina [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) como um recurso, em vez de sempre usar uma cor nomeada como um valor de atributo.
 -   Se você usar o mesmo recurso em mais de uma página da interface do usuário, avalie defini-lo em [**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338), em vez de em cada página. Em contrapartida, se uma única página usar um recurso, não o defina em **Application.Resources** mas sim somente para a página que precisa dele. Isso é bom para faturamento de XAML enquanto você cria seu aplicativo e para o desempenho durante a análise do XAML.
 -   Para recursos que o seu aplicativo empacota, verifique se há recursos não utilizados (um recurso que tem uma chave, mas sem nenhuma referência de [StaticResource](staticresource-markup-extension.md) no aplicativo que o use). Remova-os de seu XAML antes de lançar seu aplicativo.
 -   Se você estiver usando arquivos XAML separados que forneçam recursos de design ([**MergedDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208801)), avalie se desabilitará ou removerá os recursos não utilizados desses arquivos. Mesmo que você tenha um ponto inicial de XAML compartilhado que esteja usando em mais de um aplicativo ou que forneça recursos comuns para todos os seus aplicativos, ainda é seu aplicativo que empacota os recursos XAML a cada vez, e potencialmente precisa carregá-los.
 -   Não defina elementos da interface do usuário de que não precisa para composição, e use os modelos de controle padrão sempre que possível (esses modelos já foram testados e verificados em termos de desempenho de carga).
 -   Use contêineres como [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250), em vez de retiradas deliberas de elementos da interface do usuário. Basicamente, não desenhe o mesmo pixel várias vezes. Para saber mais sobre exceder e como testá-lo, veja [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/hh701823).
--   Use os modelos de itens padrão para [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) ou [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705); esses tem lógica especial **Presenter** que resolve problemas de desempenho ao criar a árvore visual para um grande número de itens da lista.
+-   Use os modelos de itens padrão para [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) ou [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705); esses têm lógica especial **Presenter** que resolve problemas de desempenho ao criar a árvore visual para um grande número de itens da lista.
 
 ## <a name="debugging-xaml"></a>Depurando o XAML
 
@@ -252,6 +252,6 @@ O XAML é frequentemente editado dentro de um IDE, como o Visual Studio e uma de
 
 Depois que o aplicativo for executado, se houver erros de análise de XAML não detectados no tempo de projeto, eles serão relatados pelo CLR (Common Language Runtime) como um [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774). Para saber mais sobre o que você pode fazer para um tempo de execução **XamlParseException**, veja [Manipulação de exceções para aplicativos do Windows Runtime do Windows em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
 
-**Observação**os aplicativos que usam C++ c++ CX para código não receber o específico [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774). Mas a mensagem na exceção esclarece que a origem do erro está relacionada ao XAML, e inclui informações de contexto, como números de linha em um arquivo XAML, assim como o **XamlParseException** faz.
+**Observação**  aplicativos que usam o C + + c++ /CLI CX para código não obtiver o específico [ **XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774). Mas a mensagem na exceção esclarece que a origem do erro está relacionada ao XAML, e inclui informações de contexto, como números de linha em um arquivo XAML, assim como o **XamlParseException** faz.
 
 Para saber sobre a depuração de um aplicativo do Windows Runtime, veja [Iniciar uma sessão de depuração](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx).

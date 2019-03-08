@@ -5,11 +5,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 882e84c5126e4f67e246dd479008133c979c06b1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939954"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595951"
 ---
 # <a name="remote-input-api-reference"></a>Referência de API de entrada remota   
 Você pode enviar a entrada de mouse, teclado e controle em tempo real remotamente por meio dessa API.
@@ -20,13 +20,13 @@ Método      | URI da solicitação
 :------     | :-----
 Websocket | /ext/remoteinput
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
-- Nenhum(a)
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Solicitação**
 
@@ -97,7 +97,7 @@ VK_GAMEPAD_RIGHT_THUMBSTICK_LEFT   |  0xDA
 
 **Resposta**   
 
-- Nenhum(a)
+- Nenhuma
 
 **Código de status**
 

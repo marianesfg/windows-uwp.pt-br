@@ -7,21 +7,21 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 77ee3191bc41fca672a055a708523578390860b4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919142"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623701"
 ---
 # <a name="use-the-accelerometer"></a>Usar o acelerômetro
 
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Acelerômetro**](https://msdn.microsoft.com/library/windows/apps/BR225687)
+-   [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687)
 
-**Amostra**
+**Exemplo**
 
 -   Para obter uma implementação completa, consulte o [exemplo de acelerômetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer).
 
@@ -31,7 +31,7 @@ Um aplicativo de jogos simples conta com um sensor único, o acelerômetro, como
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você deve estar familiarizado com Extensible Application Markup Language (XAML), Microsoft VisualC c# e eventos.
+Você deve estar familiarizado com o Extensible Application Markup Language (XAML), Microsoft Visual C#e eventos.
 
 O dispositivo ou emulador que você estiver usando deve ter suporte para um acelerômetro.
 
@@ -136,11 +136,11 @@ Você precisará substituir o nome do namespace no trecho anterior pelo nome que
 
 Você precisará substituir a primeira parte do nome da classe no trecho anterior pelo namespace de seu aplicativo. Por exemplo, se você criou um projeto denominado **AccelerometerCS**, pode substituir `x:Class="App1.MainPage"` por `x:Class="AccelerometerCS.MainPage"`. Você também deve substituir `xmlns:local="using:App1"` por `xmlns:local="using:AccelerometerCS"`.
 
--   Pressione F5 ou selecione **Depurar** &gt; **Iniciar Depuração** para criar, implantar e executar o aplicativo.
+-   Pressione F5 ou selecione **Debug** &gt; **iniciar depuração** para compilar, implantar e executar o aplicativo.
 
 Quando o aplicativo estiver em execução, você poderá alterar os valores do acelerômetro. Basta mover o dispositivo ou usar as ferramentas do emulador.
 
--   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** &gt; **Parar Depuração** para parar o aplicativo.
+-   Interromper o aplicativo, retornando ao Visual Studio e pressionando Shift + F5 ou selecione **Debug** &gt; **parar depuração** para interromper o aplicativo.
 
 ### <a name="explanation"></a>Explicação
 

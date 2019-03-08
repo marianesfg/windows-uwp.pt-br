@@ -1,5 +1,5 @@
 ---
-Description: Learn about when and where you should use secondary tiles in your UWP app.
+Description: Saiba quando e onde você deve usar blocos secundários em seu aplicativo UWP.
 title: Blocos secundários
 label: Secondary tiles
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, blocos secundários, orientação, diretrizes, práticas recomendadas
 ms.localizationpriority: medium
 ms.openlocfilehash: de3bfa94de1152b3945d42169143a5ae36328c75
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943312"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625341"
 ---
 # <a name="secondary-tile-guidance"></a>Diretriz de bloco secundário
 
@@ -32,7 +32,7 @@ Ao habilitar blocos secundários em seu aplicativo, considere as seguintes recom
 * Se o conteúdo em foco já estiver fixado, substitua o botão "Fixar em Iniciar" na barra de aplicativo por um botão "Desafixar de Iniciar". O botão "Desafixar de Iniciar" deve remover o bloco secundário existente.
 * Quando o conteúdo em foco não for fixável, não exiba um botão "Fixar em Iniciar" (ou mostre um botão "Fixar em Iniciar" desativado).
 * Use os glifos fornecidos pelo sistema para os botões "Fixar em Iniciar" e "Desafixar de Iniciar" (consulte os membros de fixação e desafixação em Windows.UI.Xaml.Controls.Symbol ou WinJS.UI.AppBarIcon).
-* Use o texto do botão padrão: "Fixar em Iniciar" e "Desafixar de Iniciar". Você terá que substituir o texto padrão ao usar os glifos fixar e desafixar fornecidos pelo sistema.
+* Use o texto do botão padrão: "Fixar na tela inicial" e "Desafixar da tela inicial". Você terá que substituir o texto padrão ao usar os glifos fixar e desafixar fornecidos pelo sistema.
 * Não use um bloco secundário como um botão de comando virtual para interagir com o aplicativo pai, como um bloco "saltar para a próxima faixa".
 
 
@@ -50,5 +50,5 @@ Ao habilitar blocos secundários em seu aplicativo, considere as seguintes recom
 * [Visão geral de blocos secundários](secondary-tiles.md)
 * [Fixar blocos secundários](secondary-tiles-pinning.md)
 * [Ativos de bloco](app-assets.md)
-* [Documentação sobre conteúdo de blocos](create-adaptive-tiles.md)
+* [Documentação de conteúdo do bloco](create-adaptive-tiles.md)
 * [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md)

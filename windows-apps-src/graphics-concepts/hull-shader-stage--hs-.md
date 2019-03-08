@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9137f7ef46da1b861976dbac680327febf315dac
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946269"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601051"
 ---
 # <a name="hull-shader-hs-stage"></a>Estágio de sombreador Hull (HS)
 
@@ -33,7 +33,7 @@ Um sombreador hull opera em duas fases: uma fase de ponto de controle e uma fase
 -   A fase de ponto de controle opera uma vez para cada ponto de controle, lendo os pontos de controle para um patch e gerando um ponto de controle de saída (identificado por um **ControlPointID**).
 -   A fase de patch constante opera uma vez por patch para gerar fatores de mosaico de borda e outras constantes por patch. Internamente, muitas fases de constante de patch podem ser executadas ao mesmo tempo. A fase de patch constante tem acesso somente leitura a todos os pontos de controle de entrada e saída.
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entrada
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
 
 
 Entre 1 e 32 pontos de controle de entrada, que juntos definem uma superfície de ordem baixa.
@@ -68,12 +68,12 @@ MyOutPoint main(uint Id : SV_ControlPointID,
 }
 ```
 
-Consulte [como: criar um sombreador Hull](https://msdn.microsoft.com/library/windows/desktop/ff476338).
+Consulte [como: Criar um sombreador de envoltório](https://msdn.microsoft.com/library/windows/desktop/ff476338).
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de elementos gráficos](graphics-pipeline.md)
+[Pipeline de gráficos](graphics-pipeline.md)
 
  
 

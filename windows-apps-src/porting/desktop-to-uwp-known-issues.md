@@ -1,5 +1,5 @@
 ---
-Description: This article contains known issues with the Desktop Bridge.
+Description: Este artigo contém problemas conhecidos com a Ponte de Desktop.
 Search.Product: eADQiWindows 10XVcnh
 title: Problemas conhecidos (Ponte de Desktop)
 ms.date: 06/20/2018
@@ -8,15 +8,15 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 9c437e30db7007a6889a822d7d2219f1647bb3d8
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051029"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637091"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conhecidos com pacotes de aplicativos da área de trabalho
 
-Este artigo contém problemas conhecidos que podem ocorrer quando você cria um pacote de aplicativo do Windows para seu aplicativo da área de trabalho.
+Este artigo contém problemas conhecidos que podem ocorrer quando você cria um pacote de aplicativo do Windows para o seu aplicativo da área de trabalho.
 
 <a id="app-converter" />
 
@@ -28,13 +28,13 @@ Se você receber qualquer um desses erros, verifique se você está usando uma i
 Se você estiver usando uma imagem base válida, tente usar ``-Cleanup All`` em seu comando.
 Se isso não funcionar, envie-nos seus registros para converter@microsoft.com para nos ajudar a investigar.
 
-### <a name="new-containernetwork-the-object-already-exists-error"></a>New-ContainerNetwork: Erro informando que o objeto já existe
+### <a name="new-containernetwork-the-object-already-exists-error"></a>New-ContainerNetwork: O objeto já existe o erro
 
 Você pode receber esse erro ao configurar uma nova imagem base. Isso pode acontecer se você tiver versão de pré-lançamento do Windows Insider em uma máquina de desenvolvimento que anteriormente tinha o Desktop App Converter instalado.
 
 Para resolver este problema, tente executar o comando `Netsh int ipv4 reset` a partir de um prompt de comando elevado e reinicie sua máquina.
 
-### <a name="your-net-application-is-compiled-with-the-anycpu-build-option-and-fails-to-install"></a>Seu aplicativo .NET é compilado com a opção de compilação "AnyCPU" e não conseguir instalar
+### <a name="your-net-application-is-compiled-with-the-anycpu-build-option-and-fails-to-install"></a>Seu aplicativo .NET é compilado com a opção de compilação "AnyCPU" e Falha na instalação
 
 Isso pode acontecer se o executável principal ou qualquer uma das dependências foram colocadas em qualquer lugar na hierarquia de pastas **Arquivos de Programas** ou **Windows\System32**.
 
@@ -42,17 +42,17 @@ Para resolver este problema, tente usar seu instalador de desktop específico da
 
 ### <a name="publishing-public-side-by-side-fusion-assemblies-wont-work"></a>Publicar conjuntos públicos de Fusion lado a lado não funcionará
 
- Durante a instalação, um aplicativo pode publicar conjuntos de Fusion públicos lado a lado, acessíveis a qualquer outro processo. Durante a criação do contexto de ativação do processo, esses assemblies são recuperados por um processo do sistema denominado CSRSS.exe. Quando isso for feito para um processo convertido, a criação do contexto de ativação e o carregamento do módulo dessas montagens falharão. Os conjuntos Fusion lado a lado estão registrados nos seguintes locais:
+ Durante a instalação, um aplicativo pode publicar assemblies Fusion públicos lado a lado, acessíveis para qualquer outro processo. Durante a criação do contexto de ativação do processo, esses assemblies são recuperados por um processo do sistema denominado CSRSS.exe. Quando isso é feito em um processo convertido, a criação do contexto de ativação e o carregamento do módulo desses assemblies falhará. Os conjuntos Fusion lado a lado estão registrados nos seguintes locais:
   + Registro: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners`
-  + Sistema de arquivos: %windir%\\SideBySide
+  + Sistema de arquivos: % windir %\\SideBySide
 
 Essa é uma limitação conhecida e não há atualmente nenhuma solução alternativa. Dito isso, as montagens da caixa de entrada, como o ComCtl, são fornecidas com o sistema operacional, portanto, ter uma dependência delas é seguro.
 
 ### <a name="error-found-in-xml-the-executable-attribute-is-invalid---the-value-myappexe-is-invalid-according-to-its-datatype"></a>Erro encontrado no XML. O atributo 'Executável' é inválido - O valor 'MyApp.EXE' é inválido de acordo com seu tipo de dados
 
-Isso pode acontecer se os executáveis ​​em seu aplicativo tiverem uma extensão **.EXE** maiúscula. Embora, o invólucro desta extensão não afete se seu aplicativo é executado, isso pode causar o DAC gere esse erro.
+Isso pode acontecer se os executáveis ​​em seu aplicativo tiverem uma extensão **.EXE** maiúscula. No entanto, o uso de maiusculas e minúsculas desta extensão não deve afetar se seu aplicativo é executado, isso pode causar o DAC gerar esse erro.
 
-Para resolver esse problema, tente especificar o sinalizador **-AppExecutable** quando você empacota e use ".exe" em minúsculo como a extensão do seu executável principal (por exemplo: MYAPP.exe).    Como alternativa, você pode alterar o invólucro de todos os executáveis em seu aplicativo de minúsculas para maiusculas (por exemplo: de. EXE .exe).
+Para resolver esse problema, tente especificar o **AppExecutable -** sinalizar quando você empacota e use as letras minúsculas ".exe" como a extensão de seu executável principal (por exemplo: MYAPP.exe).    Como alternativa, você pode alterar as maiusculas e minúsculas para todos os executáveis em seu aplicativo de letra minúscula para maiuscula (por exemplo: do. EXE .exe).
 
 ### <a name="corrupted-or-malformed-authenticode-signatures"></a>Assinaturas Authenticode corrompidas ou malformadas
 
@@ -83,7 +83,7 @@ Estamos cientes desse problema e estamos trabalhando em um solução de longo pr
 
 ## <a name="blue-screen-with-error-code-0x139-kernelsecuritycheckfailure"></a>Tela azul com código de erro 0x139 (KERNEL_SECURITY_CHECK_FAILURE)
 
-Depois da instalação ou da inicialização de determinados aplicativos da Microsoft Store, o computador poderá ser reiniciado inesperadamente com o erro: **0x139 (KERNEL\_SECURITY\_CHECK\_ FAILURE)**.
+Depois de instalar ou iniciar o Microsoft Store de determinados aplicativos, ele pode inesperadamente reiniciar com o erro: **0x139 (KERNEL\_segurança\_Verifique\_ falha)**.
 
 Entre os aplicativos afetados conhecidos estão Kodi, JT2Go, Ear Trumpet, Teslagrad e outros.
 
@@ -91,7 +91,7 @@ Uma [atualização do Windows (versão 14393.351 - KB3197954)](https://support.m
 
 Se a atualização não corrigir o problema ou se você não souber como recuperar o computador, entre em contato com o [Suporte da Microsoft](https://support.microsoft.com/contactus/).
 
-Se for um desenvolvedor, você desejará impedir a instalação do aplicativo empacotado em versões do Windows que não incluam essa atualização. Observe que, ao fazer isso em seu aplicativo não estará disponível para os usuários que ainda não tenham instalado a atualização. Para limitar a disponibilidade de seu aplicativo para os usuários que tenham instalado essa atualização, modifique o arquivo Appxmanifest XML da seguinte maneira:
+Se for um desenvolvedor, você desejará impedir a instalação do aplicativo empacotado em versões do Windows que não incluam essa atualização. Observe que, ao fazer isso em seu aplicativo não estará disponível para os usuários que ainda não tem instalado a atualização. Para limitar a disponibilidade do seu aplicativo para usuários que instalaram essa atualização, modifique o arquivo Appxmanifest XML da seguinte maneira:
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
@@ -101,7 +101,7 @@ Os detalhes a respeito do Windows Update podem ser encontrados em:
 
 ## <a name="common-errors-that-can-appear-when-you-sign-your-app"></a>Erros comuns que podem aparecer quando você assina seu aplicativo
 
-### <a name="publisher-and-cert-mismatch-causes-signtool-error-error-signersign-failed--21470248850x8007000b"></a>O fornecedor e algumas incompatibilidades causam um erro Signtool "Error: SignerSign() Failed" (-2147024885/0x8007000b)
+### <a name="publisher-and-cert-mismatch-causes-signtool-error-error-signersign-failed--21470248850x8007000b"></a>Incompatibilidade de publicador e cert faz com que o Signtool erro "Erro: Falha de SignerSign()"(-2147024885/0x8007000b)
 
 A entrada de Fornecedor no manifesto do pacote de aplicativo do Windows deve corresponder ao Assunto do certificado que você está assinando.  Você pode usar qualquer um dos seguintes métodos para ver o assunto do certificado.
 
@@ -113,13 +113,13 @@ Execute o seguinte comando do PowerShell: Ambos .cer ou .pfx pode ser usado como
 (Get-PfxCertificate <cert_file>).Subject
 ```
 
-**Opção 2: Explorador de Arquivos**
+**Opção 2: Explorador de arquivos**
 
 Clique duas vezes no certificado no Explorador de Arquivos, selecione a guia *Detalhes* e depois o campo *Assunto* na lista. Em seguida, você pode copiar o conteúdo.
 
 **Opção 3: CertUtil**
 
-Execute o **certutil** na linha de comando no arquivo PFX e copie o campo de *assunto* da saída.
+Execute **certutil** da linha de comando no arquivo PFX e copiar a *assunto* campo da saída.
 
 ```cmd
 certutil -dump <cert_file.pfx>
@@ -127,31 +127,31 @@ certutil -dump <cert_file.pfx>
 
 <a id="bad-pe-cert" />
 
-### <a name="bad-pe-certificate-0x800700c1"></a>Certificado PE incorreto (0x800700C1)
+### <a name="bad-pe-certificate-0x800700c1"></a>Certificado incorreto de PE (0x800700C1)
 
-Isso pode acontecer quando o pacote contém um binário que possui um certificado corrompido. Veja alguns dos motivos por que isso pode acontecer:
+Isso pode acontecer quando o pacote contenha um binário que tem um certificado corrompido. Eis algumas das razões por que isso pode acontecer:
 
 * O início do certificado não está no final de uma imagem.  
 
 * O tamanho do certificado não é positivo.
 
-* O início do certificado não for após o `IMAGE_NT_HEADERS32` estrutura para um executável de 32 bits ou após o `IMAGE_NT_HEADERS64` estrutura para um executável de 64 bits.
+* Não é o início do certificado após o `IMAGE_NT_HEADERS32` estrutura para um executável de 32 bits ou após o `IMAGE_NT_HEADERS64` estrutura para um executável de 64 bits.
 
 * O ponteiro de certificado não está alinhado corretamente para uma estrutura WIN_CERTIFICATE.
 
-Para encontrar os arquivos que contêm um certificado PE incorreto, abra um **Prompt de comando**e defina a variável de ambiente denominada `APPXSIP_LOG` como um valor de 1.
+Para localizar arquivos que contêm um certificado incorreto do PE, abra uma **Prompt de comando**e defina a variável de ambiente denominada `APPXSIP_LOG` como um valor de 1.
 
 ```
 set APPXSIP_LOG=1
 ```
 
-Em seguida, no **Prompt de comando**, assine seu aplicativo novamente. Por exemplo:
+Em seguida, do **Prompt de comando**, assinar o aplicativo novamente. Por exemplo:
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-Informações sobre arquivos que contêm um certificado PE ruins aparecerão na **Janela do Console**. Por exemplo:
+Informações sobre os arquivos que contêm um certificado incorreto do PE aparecerão na **janela do Console**. Por exemplo:
 
 ```
 ...
@@ -162,7 +162,7 @@ ERROR: [AppxSipCustomLoggerCallback] File has malformed certificate: uninstall.e
 ```
 ## <a name="next-steps"></a>Próximas etapas
 
-**Encontrar respostas para suas dúvidas**
+**Encontre respostas para suas perguntas**
 
 Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 

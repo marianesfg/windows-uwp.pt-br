@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, vídeo, agendador, javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 69fef2bc5deb21be8685badb0cf18f38769170cb
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045069"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603841"
 ---
 # <a name="show-ads-in-video-content"></a>Mostrar anúncios em conteúdo de vídeo
 
@@ -49,7 +49,7 @@ Publicidade para conteúdo de vídeo dependendo se o programa tem menos de 10 mi
 
 2. Se o seu projeto tem direcionamento **Any CPU**, atualize-o para usar uma saída de compilação de arquitetura específica (por exemplo, **x86**). Se o seu projeto tem direcionamento **Any CPU**, você não conseguirá adicionar uma referência à biblioteca do Microsoft Advertising nas etapas a seguir. Para obter mais informações, consulte [Erros de referência causados pelo direcionamento Any CPU em seu projeto](known-issues-for-the-advertising-libraries.md#reference_errors).
 
-3. Adicione uma referência para a biblioteca do **SDK do Microsoft Advertising para JavaScript** ao seu projeto.
+3. Adicione uma referência para a biblioteca do **Microsoft Advertising SDK para JavaScript** ao seu projeto.
 
     1. Na janela **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** e selecione **Adicionar Referência...**
     2. No **Gerenciador de Referências**, expanda **Universal do Windows**, clique em **Extensões** e marque a caixa de seleção ao lado de **SDK do Microsoft Advertising para JavaScript** (versão 10.0).
@@ -142,7 +142,7 @@ Ao retomar conteúdo que contenha publicidade, defina **playSkippedMedia** como 
 
 ### <a name="requesttimeout"></a>requestTimeout
 
-Essa propriedade obtém ou define o número de milissegundos para aguardar uma resposta de solicitação de anúncio antes do tempo limite. O valor 0 informa o sistema para nunca atingir o tempo limite. O padrão é 30000 ms (30 segundos).
+Esta propriedade obtém ou define o número de milissegundos para aguardar uma resposta de solicitação de anúncio antes do tempo limite. O valor 0 informa o sistema para nunca atingir o tempo limite. O padrão é 30000 ms (30 segundos).
 
 ### <a name="schedule"></a>programa
 
@@ -152,9 +152,9 @@ Essa propriedade obtém os dados de agendamento recuperados do servidor de anún
 
 Esse evento é acionado quando a reprodução do anúncio atinge pontos de verificação de quartil. O segundo parâmetro do manipulador de eventos (*eventInfo*) é um objeto JSON com os membros a seguir:
 
-* **progress**: o status de reprodução do anúncio (um dos valores da enumeração **MediaProgress** definidos em AdScheduler.js).
-* **clip**: o clipe de vídeo que está sendo reproduzido. Essa objeto não deve ser utilizado em seu código.
-* **adPackage**: um objeto que representa a parte da carga do anúncio que corresponde ao anúncio que está sendo reproduzido. Essa objeto não deve ser utilizado em seu código.
+* **progresso**: O status de reprodução do ad (um dos **MediaProgress** valores de enumeração definidos no AdScheduler.js).
+* **clip**: O clipe de vídeo que está sendo reproduzido. Essa objeto não deve ser utilizado em seu código.
+* **adPackage**: Um objeto que representa a parte da carga do ad que corresponde ao ad que está sendo reproduzido. Essa objeto não deve ser utilizado em seu código.
 
 ### <a name="onallcomplete"></a>onAllComplete  
 
@@ -168,8 +168,8 @@ Esse evento é gerado quando o **AdScheduler** encontra um erro. Para obter mais
 
 Esse evento é gerado quando um anúncio está sendo reproduzido e indica o tempo restante no pod atual. O segundo parâmetro do manipulador de eventos (*eventData*) é um objeto JSON com os membros a seguir:
 
-* **remainingAdTime**: o número de segundos restantes para o anúncio atual.
-* **remainingPodTime**: o número de segundos restantes para o pod atual.
+* **remainingAdTime**: O número de segundos é deixada para o ad atual.
+* **remainingPodTime**: O número de segundos é deixada para o pod atual.
 
 > [!NOTE]
 > Uma pod é um grupo de anúncios reproduzido em uma sequência, como um grupo de anúncios que é reproduzido durante um intervalo comercial. Para obter mais detalhes, consulte a especificação VAST (Digital Video Ad Serving Template) do IAB.
@@ -178,12 +178,12 @@ Esse evento é gerado quando um anúncio está sendo reproduzido e indica o temp
 
 Esse evento é gerado quando um pod de anúncios termina. O segundo parâmetro do manipulador de eventos (*eventData*) é um objeto JSON com os membros a seguir:
 
-* **startTime**: a hora de início do pod, em segundos.
-* **pod**: um objeto que representa o pod. Essa objeto não deve ser utilizado em seu código.
+* **startTime**: Hora de início do pod, em segundos.
+* **pod**: Um objeto que representa o pod. Essa objeto não deve ser utilizado em seu código.
 
 ### <a name="onpodstart"></a>onPodStart
 
 Esse evento é gerado quando um pod de anúncios inicia. O segundo parâmetro do manipulador de eventos (*eventData*) é um objeto JSON com os membros a seguir:
 
-* **startTime**: a hora de início do pod, em segundos.
-* **pod**: um objeto que representa o pod. Essa objeto não deve ser utilizado em seu código.
+* **startTime**: Hora de início do pod, em segundos.
+* **pod**: Um objeto que representa o pod. Essa objeto não deve ser utilizado em seu código.

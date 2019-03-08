@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b3e37d4de3a346e0f29909727a46d3b31f9d59d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934541"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608491"
 ---
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>Testando e depurando ferramentas para PLM (Gerenciamento do Tempo de Vida do Processo)
 
@@ -84,5 +84,5 @@ em que `Game` é o nome do processo e `279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0.
 Cada chamada para **/enableDebug** deverá ser acoplada posteriormente a outra chamada PLMDebug com a opção **/disableDebug**. Além disso, o caminho para um depurador deve ser absoluto (caminhos relativos não são compatíveis).
 
 ## <a name="related-topics"></a>Tópicos relacionados
-- [Implantando e depurando aplicativos UWP](deploying-and-debugging-uwp-apps.md)
+- [Implantar e depurar aplicativos UWP](deploying-and-debugging-uwp-apps.md)
 - [Depuração, teste e desempenho](index.md)

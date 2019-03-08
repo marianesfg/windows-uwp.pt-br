@@ -1,5 +1,5 @@
 ---
-Description: This article describes how to create a Windows Runtime component that implements the IBasicVideoEffect interface to allow you to create custom effects for video streams.
+Description: Este artigo descreve como criar um componente do Tempo de Execução do Windows que implemente a interface IBasicVideoEffect para permitir que você crie efeitos personalizados para fluxos de vídeo.
 MS-HAID: dev\_audio\_vid\_camera.custom\_video\_effects
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e48febb3fb49a35fe256e58cf7c80b4abe93267
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045565"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623081"
 ---
 # <a name="custom-video-effects"></a>Efeitos de vídeo personalizados
 
@@ -28,7 +28,7 @@ Este artigo descreve como criar um componente do Windows Runtime que implemente 
 
 Um efeito de vídeo personalizado é definido em uma classe que implementa a interface [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788). Essa classe não pode ser incluída diretamente no projeto do seu aplicativo. Em vez disso, você deve usar um componente do Tempo de Execução do Windows para hospedar sua classe de efeito de vídeo.
 
-**Adicionar um componente do Tempo de Execução do Windows para o efeito de vídeo**
+**Adicionar um componente de tempo de execução do Windows para o efeito de vídeo**
 
 1.  No Microsoft Visual Studio, com sua solução aberta, vá para o menu **Arquivo** e selecione **Adicionar-&gt;Novo Projeto**.
 2.  Selecione o tipo de projeto **Componente do Tempo de Execução do Windows (Windows Universal)**.
@@ -166,7 +166,7 @@ Criar um efeito de vídeo personalizado usando o processamento de hardware (GPU)
 
 Use as etapas a seguir para adicionar o pacote NuGet Win2D ao projeto que você criou, conforme descrito na seção **Adicionar um efeito personalizado ao seu aplicativo** no início deste artigo.
 
-**Para adicionar o pacote NuGet Win2D ao seu projeto de efeito**
+**Para adicionar o pacote Win2D NuGet ao seu projeto de efeito**
 
 1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **VideoEffectComponent** e selecione **Gerenciar Pacotes NuGet**.
 2.  Na parte superior da janela, selecione a guia **Procurar**.
@@ -239,7 +239,7 @@ Para obter orientações gerais sobre como criar composições de mídia a parti
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Acesso de visualização de câmera simples](simple-camera-preview-access.md)
-* [Composições e edição de mídia](media-compositions-and-editing.md)
-* [Documentação do Win2D](https://go.microsoft.com/fwlink/p/?LinkId=519078)
+* [Acesso de visualização da câmera simples](simple-camera-preview-access.md)
+* [Composições de mídia e edição](media-compositions-and-editing.md)
+* [Documentação de Win2D](https://go.microsoft.com/fwlink/p/?LinkId=519078)
 * [Reprodução de mídia](media-playback.md)

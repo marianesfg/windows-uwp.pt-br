@@ -1,5 +1,5 @@
 ---
-Description: In this scenario, we'll make a new app to represent our custom build system. We'll create a resource indexer and add strings and other kinds of resources to it. Then we'll generate and dump a PRI file.
+Description: Nesse cenário, criaremos um novo app para representar nosso sistema de compilação personalizado. Criaremos um indexador de recurso e adicionaremos cadeias de caracteres e outros tipos de recursos a ele. Em seguida, geraremos e despejaremos um arquivo PRI.
 title: Cenário 1 Gerar um arquivo PRI de recursos de cadeia de caracteres e arquivos de ativos
 template: detail.hbs
 ms.date: 05/07/2018
@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ccb9447e9594f71907f0da5d0e15f9c6c65bb6b
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058837"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622751"
 ---
-# <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>Cenário 1: Gerar um arquivo PRI de recursos de cadeia de caracteres e arquivos de ativos
+# <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>Cenário 1: Gerar um arquivo PRI de recursos de cadeia de caracteres e arquivos de ativo
 Neste cenário, usaremos as [APIs de índice de recurso do pacote (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690) para criar um novo app para representar nosso sistema de compilação personalizado. Lembre-se: a finalidade do sistema de compilação personalizado é criar os arquivos PRI para um aplicativo UWP de destino. Portanto, como parte deste passo a passo, criaremos alguns arquivos de recurso de exemplo (contendo cadeias de caracteres e outros tipos de recursos) para representar os recursos do aplicativo UWP de destino.
 
 ## <a name="new-project"></a>Novo projeto
@@ -139,7 +139,7 @@ Esta é uma explicação dos argumentos que estão sendo passados para **MrmCrea
 - Uma lista de qualificadores de recurso padrão.
 - Um ponteiro para nosso identificador de indexador de recurso para que a função possa defini-lo.
 
-A próxima etapa é adicionar nossos recursos ao indexador de recurso que acabamos de criar. `resources.resw` é um arquivo de recursos (.resw) que contém as cadeias de caracteres neutras do nosso aplicativo UWP de destino. Role a tela para cima (neste tópico) se você quiser ver seu conteúdo. `de-DE\resources.resw` contém nossas cadeias de caracteres em alemão, enquanto `en-US\resources.resw` contém nossas cadeias de caracteres em inglês. Para adicionar os recursos de cadeia de caracteres em um arquivo de recursos a um indexador de recurso, chame [**MrmIndexResourceContainerAutoQualifiers**](/windows/desktop/menurc/mrmindexresourcecontainerautoqualifiers). Em terceiro lugar, chamamos a função [**MrmIndexFile**](/windows/desktop/menurc/mrmindexfile) para um arquivo que contém um recurso de imagem neutro no indexador de recurso.
+A próxima etapa é adicionar nossos recursos ao indexador de recurso que acabamos de criar. `resources.resw` é um arquivo de recursos (. resw) que contém as cadeias de caracteres neutras para nosso aplicativo UWP do destino. Role a tela para cima (neste tópico) se você quiser ver seu conteúdo. `de-DE\resources.resw` contém nossas cadeias de caracteres, alemãs e `en-US\resources.resw` nossas cadeias de caracteres em inglês. Para adicionar os recursos de cadeia de caracteres em um arquivo de recursos a um indexador de recurso, chame [**MrmIndexResourceContainerAutoQualifiers**](/windows/desktop/menurc/mrmindexresourcecontainerautoqualifiers). Em terceiro lugar, chamamos a função [**MrmIndexFile**](/windows/desktop/menurc/mrmindexfile) para um arquivo que contém um recurso de imagem neutro no indexador de recurso.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmIndexResourceContainerAutoQualifiers(indexer, L"resources.resw"));
@@ -162,7 +162,7 @@ Neste ponto, um arquivo PRI chamado `resources.pri` foi criado em uma pasta cham
 ::ThrowIfFailed(::MrmDestroyIndexerAndMessages(indexer));
 ```
 
-Como um arquivo PRI é binário, será mais fácil exibir o que acabamos de gerar se despejarmos o arquivo PRI binário em seu equivalente XML. Uma chamada para [**MrmDumpPriFile**](/windows/desktop/menurc/mrmdumpprifile) faz exatamente isso.
+Como um arquivo PRI é binário, será mais fácil exibir o que acabamos de gerar se despejarmos o arquivo PRI binário em seu equivalente XML. Uma chamada para [ **MrmDumpPriFile** ](/windows/desktop/menurc/mrmdumpprifile) faz exatamente isso.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmDumpPriFile(filePathPRI.c_str(), nullptr, MrmDumpType::MrmDumpType_Basic, filePathPRIDumpBasic.c_str()));
@@ -230,8 +230,8 @@ O primeiro recurso de cadeia de caracteres é *EnOnlyString* de `en-US\resources
 ## <a name="summary"></a>Resumo
 Neste cenário, mostramos como usar as [APIs de índice de recurso do pacote (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690) para criar um indexador de recursos. Adicionamos recursos de cadeia de caracteres e arquivos de ativos ao indexador de recursos. Em seguida, usamos o indexador de recursos para gerar um arquivo PRI binário. E, finalmente, despejamos o arquivo PRI binário sob a forma de XML, para que possamos confirmar que ele contém as informações esperadas.
 
-## <a name="important-apis"></a>APIs importantes
-* [Referência ao índice de recurso do pacote (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690)
+## <a name="important-apis"></a>APIs Importantes
+* [Indexação de referência (PRI) de recurso do pacote](https://msdn.microsoft.com/library/windows/desktop/mt845690)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [APIs de índice de recurso do pacote (PRI) e sistemas de compilação personalizados](pri-apis-custom-build-systems.md)
+* [Sistemas de build do recurso de pacote (PRI) APIs e personalizada de indexação](pri-apis-custom-build-systems.md)

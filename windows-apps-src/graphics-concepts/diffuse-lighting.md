@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1785b06aa2217e8ec15aeaa560bd98a65522df2e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939602"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603371"
 ---
 # <a name="diffuse-lighting"></a>Iluminação difusa
 
@@ -25,7 +25,7 @@ Depois que calcular os valores de luz refletida, o Direct3D aplica esses novos v
 
 A iluminação difusa é descrita pela seguinte equação.
 
-Iluminação difusa = sum\[C<sub>d</sub>\*L<sub>d</sub>\*(N<sup>.</sup>L<sub>dir</sub>)\*Atten\*Spot\]
+Difuso iluminação = soma\[C<sub>1!d</sub>\*L<sub>1!d</sub>\*(N<sup>.</sup> L<sub>dir</sub>)\*Atten\*especiais\]
 
 | Parâmetro       | Valor padrão | Tipo          | Descrição                                                                                      |
 |-----------------|---------------|---------------|--------------------------------------------------------------------------------------------------|
@@ -67,7 +67,7 @@ A iluminação difusa é mais intensa para se calcular do que a iluminação amb
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Matemática de iluminação](mathematics-of-lighting.md)
+[Cálculos de iluminação](mathematics-of-lighting.md)
 
  
 

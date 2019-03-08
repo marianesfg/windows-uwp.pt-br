@@ -1,6 +1,6 @@
 ---
 title: Redimensionamento de pool de blocos
-description: Redimensione um pool de blocos para ampliá-lo se o aplicativo precisar de mais trabalho definido para os recursos de streaming mapeados para ele ou reduzi-lo se menos espaço for necessário.
+description: Redimensione um pool de blocos para ampliar um pool de blocos se o app precisar de mais trabalho para os recursos de streaming mapeados neles ou reduzir se precisar de menos espaço.
 ms.assetid: A54A06DC-BDDB-42DC-85E8-C64241100ED5
 keywords:
 - Redimensionamento de pool de blocos
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e08447c575e99178e503e99eb651cd5e225a898
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921985"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607771"
 ---
 # <a name="tile-pool-resizing"></a>Redimensionamento de pool de blocos
 
 
-Redimensione um pool de blocos para ampliá-lo se o aplicativo precisar de mais trabalho definido para os recursos de streaming mapeados para ele ou reduzi-lo se menos espaço for necessário. Outra opção para os aplicativos é alocar pools de blocos adicionais para novos recursos de streaming. Mas se algum recurso de streaming precisar de mais espaço do que o inicialmente disponível no bloco de pools, ampliar o pool de blocos será uma boa opção. Um recurso de streaming não pode ter mapeamentos para vários pools de blocos ao mesmo tempo.
+Redimensione um pool de blocos para ampliar um pool de blocos se o app precisar de mais trabalho para os recursos de streaming mapeados neles ou reduzir se precisar de menos espaço. Outra opção para os aplicativos é alocar pools de blocos adicionais para novos recursos de streaming. Mas se algum recurso de streaming precisar de mais espaço do que o inicialmente disponível no bloco de pools, ampliar o pool de blocos será uma boa opção. Um recurso de streaming não pode ter mapeamentos para vários pools de blocos ao mesmo tempo.
 
 Quando um pool de blocos é expandido, blocos adicionais são adicionados ao final por meio de uma ou mais alocações novo pelo driver de vídeo. Essa divisão em alocações não fica visível para o aplicativo. A memória existente no pool de blocos deve ser deixada como está, e os mapeamentos de recursos de streaming existentes na memória permanecem intactos.
 
@@ -30,7 +30,7 @@ O ato de reduzir (e remover mapeamentos) não necessariamente gera economia de m
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Mapeamentos estão em um pool de blocos](mappings-are-into-a-tile-pool.md)
+[Mapeamentos estiverem em um pool de bloco](mappings-are-into-a-tile-pool.md)
 
  
 

@@ -1,17 +1,17 @@
 ---
 ms.assetid: 40122343-1FE3-4160-BABE-6A2DD9AF1E8E
 title: Otimizar o acesso a arquivos
-description: Crie apps da Plataforma Universal do Windows (UWP) que acessem o sistema de arquivos de modo eficiente, evitando problemas de desempenho devido à latência de disco e aos ciclos de memória/CPU.
+description: Crie aplicativos da Plataforma Universal do Windows (UWP) que acessem o sistema de arquivos de modo eficiente, evitando problemas de desempenho devido à latência de disco e aos ciclos de memória/CPU.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cacd915530bb599936730ec404a6e524fef0105d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922753"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597261"
 ---
 # <a name="optimize-file-access"></a>Otimizar o acesso a arquivos
 
@@ -133,7 +133,7 @@ Se você estiver realizando várias operações em objetos Windows.Storage, como
 
 ### <a name="buffering-between-uwp-and-net-streams"></a>Buffer entre fluxos UWP e .NET
 
-Há muitos cenários em que você pode converter um fluxo UWP (como um [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) ou [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728)) em fluxo .NET ([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx)). Isso é útil quando você está escrevendo um aplicativo UWP e quer usar um código .NET existente que funcione em fluxos com o sistema de arquivo UWP, por exemplo. Para habilitar isso, as APIs .NET para aplicativos UWP fornece métodos de extensão que permitem a conversão entre tipos de fluxo .NET e UWP. Para obter mais informações, consulte [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx).
+Há muitos cenários em que você pode converter um fluxo UWP (como um [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) ou [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728)) em fluxo .NET ([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx)). Isso é útil quando você está escrevendo um aplicativo UWP e quer usar um código .NET existente que funcione em fluxos com o sistema de arquivo UWP, por exemplo. Para habilitar isso, as APIs do .NET para aplicativos UWP fornece métodos de extensão que permitem converter entre tipos de fluxo do .NET e UWP. Para obter mais informações, consulte [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx).
 
 Quando você converte um fluxo UWP em um fluxo .NET, você cria efetivamente um adaptador para o fluxo UWP subjacente. Em algumas circunstâncias, há um custo de tempo de execução associado à invocação de métodos em fluxos UWP. Esse fator pode afetar a velocidade do seu aplicativo, especialmente em cenários em que você executa muitas operações pequenas e frequentes de leitura ou gravação.
 
@@ -196,7 +196,7 @@ Esse comportamento de buffer padrão é desejável na maioria dos cenários em q
 
 Quando estiver lendo ou gravando conjuntos de dados maiores, você talvez consiga aumentar o rendimento de sua leitura ou gravação fornecendo um tamanho de buffer maior para os métodos de extensão [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) e [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx). Isso dá ao adaptador de fluxo um tamanho de buffer interno maior. Por exemplo, na transferência do fluxo de um arquivo grande para um analisador XML, o analisador pode executar várias leituras pequenas e sequenciais do fluxo. Um buffer grande pode reduzir a quantidade de chamadas para o fluxo UWP subjacente e impulsionar o desempenho.
 
-> **Observação**  você deve ter cuidado ao definir um tamanho de buffer que é maior do que aproximadamente 80 KB, pois isso pode causar fragmentação na pilha de coletor de lixo (consulte [melhorar desempenho da coleta de lixo](improve-garbage-collection-performance.md)). O exemplo de código a seguir cria um adaptador de fluxo gerenciado com um buffer de 81.920 bytes.
+> **Observação**    você deve ter cuidado ao definir um tamanho de buffer que é maior do que aproximadamente 80 KB, pois isso pode causar fragmentação no heap do coletor de lixo (consulte [melhorar o desempenho de coleta de lixo](improve-garbage-collection-performance.md) ). O exemplo de código a seguir cria um adaptador de fluxo gerenciado com um buffer de 81.920 bytes.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp

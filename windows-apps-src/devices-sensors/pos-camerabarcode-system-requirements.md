@@ -1,16 +1,16 @@
 ---
 title: Requisitos de sistema do scanner de código de barras da câmera
 description: Este artigo lista os requisitos para usar o scanner de código de barras da câmera de um aplicativo UWP.
-ms.date: 05/1/2018
+ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: aea2a339c450f50ca3ae6f6250d056b4a1e70aa1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: da9934f29b1c9f73a76421c4dfa793c9c7f5fae9
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944610"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614031"
 ---
 # <a name="camera-barcode-scanner-system-requirements"></a>Requisitos de sistema do scanner de código de barras da câmera
 A partir do Windows 10, versão 1803, você pode ler códigos de barras por meio de uma lente de câmera padrão de um aplicativo universal do Windows.

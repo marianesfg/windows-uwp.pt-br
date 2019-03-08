@@ -1,17 +1,17 @@
 ---
 title: Telas iniciais
-description: Esta seção descreve como definir e configurar a tela inicial do aplicativo.
+description: Esta seção descreve como definir e configurar a tela inicial do app.
 ms.assetid: 6b954bb3-e5b0-46d1-8afc-fb805536cf6d
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: df3fc8f54a4174006fd28f319d7cab09142a81fd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936331"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630191"
 ---
 # <a name="splash-screens"></a>Telas iniciais
 

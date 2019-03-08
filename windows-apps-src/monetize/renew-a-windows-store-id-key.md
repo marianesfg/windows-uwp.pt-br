@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de coleção da Microsoft Store, API de compra da Microsoft Store, chave ID da Microsoft Store, renovar
 ms.localizationpriority: medium
 ms.openlocfilehash: fd4d7ce26e12f7ff939ced8d456390b97d0c8a0d
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116032"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620481"
 ---
 # <a name="renew-a-microsoft-store-id-key"></a>Renovar uma chave de ID da Microsoft Store
 
@@ -35,24 +35,24 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 | Tipo de chave    | Método | URI da solicitação                                              |
 |-------------|--------|----------------------------------------------------------|
 | Coleções | POST   | ```https://collections.mp.microsoft.com/v6.0/b2b/keys/renew``` |
-| Compra    | POST   | ```https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew```    |
+| Adquirir    | POST   | ```https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew```    |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Host           | cadeia | Deve ser definido como o valor **collections.mp.microsoft.com** ou **purchase.mp.microsoft.com**.           |
-| Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
-| Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
+| Host           | cadeia de caracteres | Deve ser definido como o valor **collections.mp.microsoft.com** ou **purchase.mp.microsoft.com**.           |
+| Content-Length | number | O comprimento do corpo da solicitação.                                                                       |
+| Content-Type   | cadeia de caracteres | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
 
 | Parâmetro     | Tipo   | Descrição                       | Obrigatório |
 |---------------|--------|-----------------------------------|----------|
-| serviceTicket | string | O token de acesso do Azure AD.        | Sim      |
-| chave           | string | A chave ID da Microsoft Store expirada. | Sim       |
+| serviceTicket | cadeia de caracteres | O token de acesso do Azure AD.        | Sim      |
+| key           | cadeia de caracteres | A chave ID da Microsoft Store expirada. | Sim       |
 
 
 ### <a name="request-example"></a>Exemplo de solicitação
@@ -76,7 +76,7 @@ Host: collections.mp.microsoft.com
 
 | Parâmetro | Tipo   | Descrição                                                                                                            |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------|
-| chave       | string | A chave da Microsoft Store atualizada que pode ser usada em futuras chamadas das APIs de coleção ou compra da Microsoft Store. |
+| key       | cadeia de caracteres | A chave da Microsoft Store atualizada que pode ser usada em futuras chamadas das APIs de coleção ou compra da Microsoft Store. |
 
 
 ### <a name="response-example"></a>Exemplo de resposta
@@ -108,7 +108,7 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Gerenciar direitos a produtos de um serviço](view-and-grant-products-from-a-service.md)
-* [Consulta por produtos](query-for-products.md)
-* [Declarar produtos consumíveis como providenciados](report-consumable-products-as-fulfilled.md)
+* [Gerenciar direitos de produto de um serviço](view-and-grant-products-from-a-service.md)
+* [Consulta de produtos](query-for-products.md)
+* [Produtos de consumo de relatório como atendida](report-consumable-products-as-fulfilled.md)
 * [Conceder produtos gratuitos](grant-free-products.md)

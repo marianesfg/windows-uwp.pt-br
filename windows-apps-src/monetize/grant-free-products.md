@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de compra da Microsoft Store, conceder produtos
 ms.localizationpriority: medium
 ms.openlocfilehash: 957958891b1052be4ac9ae65d90f97ff8a44ef36
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116358"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613191"
 ---
 # <a name="grant-free-products"></a>Conceder produtos gratuitos
 
@@ -42,25 +42,25 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorização  | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;.                           |
-| Host           | cadeia | Deve ser definido como o valor **purchase.mp.microsoft.com**.                                            |
-| Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
-| Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
+| Autorização  | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;.                           |
+| Host           | cadeia de caracteres | Deve ser definido como o valor **purchase.mp.microsoft.com**.                                            |
+| Content-Length | number | O comprimento do corpo da solicitação.                                                                       |
+| Content-Type   | cadeia de caracteres | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
 
 | Parâmetro      | Tipo   | Descrição        | Obrigatório |
 |----------------|--------|---------------------|----------|
-| availabilityId | string | A ID de disponibilidade do produto a ser concedido no catálogo da Microsoft Store.         | Sim      |
-| b2bKey         | string | A [chave de ID da Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa a identidade do usuário para o qual você deseja conceder um produto gratuito.    | Sim      |
-| devOfferId     | string | Uma ID de oferta especificada pelo desenvolvedor que irá aparecer no item Coleção após a compra.        |
-| idioma       | string | O idioma do usuário.  | Sim      |
-| market         | string | O mercado do usuário.       | Sim      |
+| availabilityId | cadeia de caracteres | A ID de disponibilidade do produto a ser concedido no catálogo da Microsoft Store.         | Sim      |
+| b2bKey         | cadeia de caracteres | A [chave de ID da Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa a identidade do usuário para o qual você deseja conceder um produto gratuito.    | Sim      |
+| devOfferId     | cadeia de caracteres | Uma ID de oferta especificada pelo desenvolvedor que irá aparecer no item Coleção após a compra.        |
+| language       | cadeia de caracteres | O idioma do usuário.  | Sim      |
+| market         | cadeia de caracteres | O mercado do usuário.       | Sim      |
 | orderId        | guid   | Uma GUID gerada para o pedido. Esse valor é exclusivo para o usuário, mas não é necessário que seja exclusivo em todos os pedidos.    | Sim      |
-| productId      | string | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [produto](in-app-purchases-and-trials.md#products-skus-and-availabilities) no catálogo da Microsoft Store. Um exemplo de ID da Store para um produto é 9NBLGGH42CFD. | Sim      |
+| productId      | cadeia de caracteres | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [produto](in-app-purchases-and-trials.md#products-skus-and-availabilities) no catálogo da Microsoft Store. Um exemplo de ID da loja para um produto é 9NBLGGH42CFD. | Sim      |
 | quantity       | int    | A quantidade a ser comprada. Atualmente, o único valor com suporte é 1. Se não for especificado, o padrão é 1.   | Não       |
-| skuId          | string | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) do produto no catálogo da Microsoft Store. Um exemplo de ID da Store para uma SKU é 0010.     | Sim      |
+| skuId          | cadeia de caracteres | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) do produto no catálogo da Microsoft Store. Um exemplo de ID da loja para SKU é 0010.     | Sim      |
 
 
 ### <a name="request-example"></a>Exemplo de solicitação
@@ -91,17 +91,17 @@ Content-Type: application/json
 |---------------------------|-----------------------------|-----------------------|----------|
 | clientContext             | ClientContextV6             | Informações contextuais do cliente para este pedido. Isso será atribuído ao valor *clientID* no token do Azure AD.    | Sim      |
 | createdtime               | datetimeoffset              | A hora em que o pedido foi criado.         | Sim      |
-| currencyCode              | string                      | Código de moeda para *totalAmount* e *totalTaxAmount*. N/D para itens gratuitos.     | Sim      |
-| friendlyName              | string                      | O nome amigável do pedido. N/D para pedidos feitos usando-se a API de compra da Microsoft Store. | Sim      |
-| isPIRequired              | boolean                     | Indica se um PI (meio de pagamento) é necessário como parte da ordem de compra.  | Sim      |
-| language                  | string                      | A ID de idioma para a ordem (por exemplo, "en").       | Sim      |
-| market                    | string                      | A ID de mercado para a ordem (por exemplo, "US").  | Sim      |
-| orderId                   | string                      | ID que identifica o pedido de um usuário específico.                | Sim      |
+| currencyCode              | cadeia de caracteres                      | Código de moeda para *totalAmount* e *totalTaxAmount*. N/D para itens gratuitos.     | Sim      |
+| friendlyName              | cadeia de caracteres                      | O nome amigável do pedido. N/D para pedidos feitos usando-se a API de compra da Microsoft Store. | Sim      |
+| isPIRequired              | booliano                     | Indica se um PI (meio de pagamento) é necessário como parte da ordem de compra.  | Sim      |
+| language                  | cadeia de caracteres                      | A ID de idioma para a ordem (por exemplo, "en").       | Sim      |
+| market                    | cadeia de caracteres                      | A ID de mercado para a ordem (por exemplo, "US").  | Sim      |
+| orderId                   | cadeia de caracteres                      | ID que identifica o pedido de um usuário específico.                | Sim      |
 | orderLineItems            | list&lt;OrderLineItemV6&gt; | A lista de itens de linha do pedido. Normalmente, há um item de linha por pedido.       | Sim      |
-| orderState                | string                      | O estado do pedido. Os estados válidos são: **Editing**, **CheckingOut**, **Pending**, **Purchased**, **Refunded**, **ChargedBack** e **Cancelled**. | Sim      |
-| orderValidityEndTime      | string                      | A última vez em que o preço do pedido era válido antes de ser enviado. N/D para aplicativos gratuitos.      | Sim      |
-| orderValidityStartTime    | string                      | A primeira vez em que o preço do pedido é válido antes de ser enviado. N/D para aplicativos gratuitos.          | Sim      |
-| purchaser                 | IdentityV6                  | Um objeto que descreve a identidade do comprador.       | Sim      |
+| orderState                | cadeia de caracteres                      | O estado do pedido. Os estados válidos são: **Editing**, **CheckingOut**, **Pending**, **Purchased**, **Refunded**, **ChargedBack** e **Cancelled**. | Sim      |
+| orderValidityEndTime      | cadeia de caracteres                      | A última vez em que o preço do pedido era válido antes de ser enviado. N/D para aplicativos gratuitos.      | Sim      |
+| orderValidityStartTime    | cadeia de caracteres                      | A primeira vez em que o preço do pedido é válido antes de ser enviado. N/D para aplicativos gratuitos.          | Sim      |
+| comprador                 | IdentityV6                  | Um objeto que descreve a identidade do comprador.       | Sim      |
 | totalAmount               | decimal                     | O valor total da compra de todos os itens no pedido, incluindo imposto.       | Sim      |
 | totalAmountBeforeTax      | decimal                     | Valor total da compra de todos os itens no pedido, sem imposto.      | Sim      |
 | totalChargedToCsvTopOffPI | decimal                     | Se você estiver usando um meio de pagamento e o valor armazenado (CSV) separados, o valor será carregado no CSV.            | Sim      |
@@ -112,37 +112,37 @@ O objeto ClientContext contém os parâmetros a seguir.
 
 | Parâmetro | Tipo   | Descrição                           | Obrigatório |
 |-----------|--------|---------------------------------------|----------|
-| client    | string | A ID do cliente que criou o pedido. | Não       |
+| cliente    | cadeia de caracteres | A ID do cliente que criou o pedido. | Não       |
 
 
 O objeto OrderLineItemV6 contém os parâmetros a seguir.
 
 | Parâmetro               | Tipo           | Descrição                                                                                                  | Obrigatório |
 |-------------------------|----------------|--------------------------------------------------------------------------------------------------------------|----------|
-| agent                   | IdentityV6     | O agente que editou o item de linha pela última vez. Para obter mais informações sobre esse objeto, consulte a tabela a seguir.       | Não       |
-| availabilityId          | string         | A ID de disponibilidade do produto a ser comprado no catálogo da Microsoft Store.                           | Sim      |
-| beneficiary             | IdentityV6     | A identidade do beneficiário do pedido.                                                                | Não       |
-| billingState            | string         | O estado da cobrança do pedido. Isso é definido como **Charged** quando concluído.                                   | Não       |
-| campaignId              | string         | A ID de campanha desse pedido.                                                                              | Não       |
-| currencyCode            | string         | O código de moeda usado nos detalhes do preço.                                                                    | Sim      |
-| description             | string         | Uma descrição traduzida do item de linha.                                                                    | Sim      |
-| devofferId              | string         | A ID de oferta do pedido específico, se presente.                                                           | Não       |
+| agente                   | IdentityV6     | O agente que editou o item de linha pela última vez. Para obter mais informações sobre esse objeto, consulte a tabela a seguir.       | Não       |
+| availabilityId          | cadeia de caracteres         | A ID de disponibilidade do produto a ser comprado no catálogo da Microsoft Store.                           | Sim      |
+| beneficiário             | IdentityV6     | A identidade do beneficiário do pedido.                                                                | Não       |
+| billingState            | cadeia de caracteres         | O estado da cobrança do pedido. Isso é definido como **Charged** quando concluído.                                   | Não       |
+| campaignId              | cadeia de caracteres         | A ID de campanha desse pedido.                                                                              | Não       |
+| currencyCode            | cadeia de caracteres         | O código de moeda usado nos detalhes do preço.                                                                    | Sim      |
+| description             | cadeia de caracteres         | Uma descrição traduzida do item de linha.                                                                    | Sim      |
+| devofferId              | cadeia de caracteres         | A ID de oferta do pedido específico, se presente.                                                           | Não       |
 | fulfillmentDate         | datetimeoffset | A data em que ocorreu o providência.                                                                           | Não       |
-| fulfillmentState        | string         | O estado do abastecimento desse item. Isso é definido como **Fulfilled** quando concluído.                      | Não       |
-| isPIRequired            | boolean        | Indica se um meio de pagamento é necessário para este item de linha.                                       | Sim      |
-| isTaxIncluded           | boolean        | Indica se o imposto está incluído nos detalhes do preço do item.                                        | Sim      |
-| legacyBillingOrderId    | string         | A ID de cobrança herdada.                                                                                       | Não       |
-| lineItemId              | string         | A ID do item de linha do item nesse pedido.                                                                 | Sim      |
+| fulfillmentState        | cadeia de caracteres         | O estado do abastecimento desse item. Isso é definido como **Fulfilled** quando concluído.                      | Não       |
+| isPIRequired            | booliano        | Indica se um meio de pagamento é necessário para este item de linha.                                       | Sim      |
+| isTaxIncluded           | booliano        | Indica se o imposto está incluído nos detalhes do preço do item.                                        | Sim      |
+| legacyBillingOrderId    | cadeia de caracteres         | A ID de cobrança herdada.                                                                                       | Não       |
+| lineItemId              | cadeia de caracteres         | A ID do item de linha do item nesse pedido.                                                                 | Sim      |
 | listPrice               | decimal        | O preço de lista do item nesse pedido.                                                                    | Sim      |
-| productId               | cadeia         | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [produto](in-app-purchases-and-trials.md#products-skus-and-availabilities) que representa o item de linha no catálogo da Microsoft Store. Um exemplo de ID da Store para um produto é 9NBLGGH42CFD.   | Sim      |
-| productType             | string         | O tipo do produto. Os valores suportados são **Durable**, **Application** e **UnmanagedConsumable**. | Sim      |
+| productId               | cadeia de caracteres         | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [produto](in-app-purchases-and-trials.md#products-skus-and-availabilities) que representa o item de linha no catálogo da Microsoft Store. Um exemplo de ID da loja para um produto é 9NBLGGH42CFD.   | Sim      |
+| productType             | cadeia de caracteres         | O tipo do produto. Os valores suportados são **Durable**, **Application** e **UnmanagedConsumable**. | Sim      |
 | quantity                | int            | A quantidade do item solicitado.                                                                            | Sim      |
 | retailPrice             | decimal        | O preço de varejo do item solicitado.                                                                        | Sim      |
-| revenueRecognitionState | string         | O estado de reconhecimento da receita.                                                                               | Sim      |
-| skuId                   | string         | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) do item de linha no catálogo da Microsoft Store. Um exemplo de ID da Store para uma SKU é 0010.                                                                   | Sim      |
+| revenueRecognitionState | cadeia de caracteres         | O estado de reconhecimento da receita.                                                                               | Sim      |
+| skuId                   | cadeia de caracteres         | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) do item de linha no catálogo da Microsoft Store. Um exemplo de ID da loja para SKU é 0010.                                                                   | Sim      |
 | taxAmount               | decimal        | O valor do imposto do item de linha.                                                                            | Sim      |
-| taxType                 | string         | O tipo de imposto para os impostos aplicáveis.                                                                       | Sim      |
-| Title                   | string         | O título traduzido do item de linha.                                                                        | Sim      |
+| taxType                 | cadeia de caracteres         | O tipo de imposto para os impostos aplicáveis.                                                                       | Sim      |
+| Título                   | cadeia de caracteres         | O título traduzido do item de linha.                                                                        | Sim      |
 | totalAmount             | decimal        | O valor total da compra do item de linha com imposto.                                                    | Sim      |
 
 
@@ -150,8 +150,8 @@ O objeto IdentityV6 contém os parâmetros a seguir.
 
 | Parâmetro     | Tipo   | Descrição                                                                        | Obrigatório |
 |---------------|--------|------------------------------------------------------------------------------------|----------|
-| identityType  | string | Contém o valor **"pub"**.                                                      | Sim      |
-| identityValue | string | O valor da sequência de *publisherUserId* da chave de ID da Microsoft Store especificada. | Sim      |
+| identityType  | cadeia de caracteres | Contém o valor **"pub"**.                                                      | Sim      |
+| identityValue | cadeia de caracteres | O valor da sequência de *publisherUserId* da chave de ID da Microsoft Store especificada. | Sim      |
 
 
 ### <a name="response-example"></a>Exemplo de resposta
@@ -229,7 +229,7 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Gerenciar direitos a produtos de um serviço](view-and-grant-products-from-a-service.md)
-* [Consulta por produtos](query-for-products.md)
-* [Declarar produtos consumíveis como providenciados](report-consumable-products-as-fulfilled.md)
-* [Renovar uma chave de ID da Microsoft Store](renew-a-windows-store-id-key.md)
+* [Gerenciar direitos de produto de um serviço](view-and-grant-products-from-a-service.md)
+* [Consulta de produtos](query-for-products.md)
+* [Produtos de consumo de relatório como atendida](report-consumable-products-as-fulfilled.md)
+* [Renovar uma chave de ID do Microsoft Store](renew-a-windows-store-id-key.md)

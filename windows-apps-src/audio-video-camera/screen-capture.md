@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, captura de tela
 ms.localizationpriority: medium
 ms.openlocfilehash: dfed365e097b6f0d3816477513202b2693127ade
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049973"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592961"
 ---
 # <a name="screen-capture"></a>Captura de tela
 
@@ -20,17 +20,17 @@ A partir do Windows 10, versão 1803, o namespace [Windows.Graphics.Capture](htt
 Com a captura de tela, os desenvolvedores chamam a interface do usuário do sistema para que os usuários finais selecionem a tela ou a janela do aplicativo para captura, e uma borda de notificação amarela é desenhada pelo sistema ao redor do item capturado ativamente. No caso de várias sessões de captura simultânea, uma borda amarela é desenhada em volta de cada item sendo capturado.
 
 > [!NOTE]
-> APIs de captura de tela são suportadas apenas em desktops e fones de ouvido imersivos do Windows Mixed Reality.
+> Somente há suporte para APIs de captura de tela na área de trabalho e fones imersivos em exposição realidade mista do Windows.
 
 ## <a name="add-the-screen-capture-capability"></a>Adicionar a funcionalidade de captura de tela
 
-As APIs encontradas no namespace **Graphics** exigem uma funcionalidade geral para ser declaradas no manifesto do aplicativo:
+As APIs encontrado na **Windows.Graphics.Capture** namespace exigir uma funcionalidade genérica para ser declarada no manifesto do aplicativo:
     
-1. Abra **Package. appxmanifest** no **Gerenciador de soluções**.
+1. Abra **Package. appxmanifest** na **Gerenciador de soluções**.
 2. Selecione a guia **Recursos**.
-3. Verifique a **captura de gráfico**.
+3. Verifique **captura de gráficos**.
 
-![Captura de gráfico](images/screen-capture-1.png)
+![Captura de gráficos](images/screen-capture-1.png)
 
 ## <a name="launch-the-system-ui-to-start-screen-capture"></a>Iniciar o interface do usuário do sistema para iniciar a captura de tela
 
@@ -68,7 +68,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Como esse é o código de interface do usuário, ele deve ser chamado no thread da interface do usuário. Se você estiver chamando-o em code-behind para uma página do seu aplicativo (por exemplo, **MainPage.xaml.cs**) isso é feito para você automaticamente, mas se não, você pode forçar a ser executado no thread da interface do usuário com o código a seguir:
+Como esse é o código de interface do usuário, ele precisa ser chamado no thread da interface do usuário. Se você estiver chamando-o de code-behind para uma página do seu aplicativo (como **MainPage.xaml.cs**) isso é feito para você automaticamente, mas se não estiver, você pode forçá-lo para ser executado no thread da interface do usuário com o código a seguir:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -81,7 +81,7 @@ await window.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
 
 ## <a name="create-a-capture-frame-pool-and-capture-session"></a>Criar um pool de quadro de captura e uma sessão de captura
 
-Usando o **GraphicsCaptureItem**, você criará um [Direct3D11CaptureFramePool](https://docs.microsoft.com/uwp/api/windows.graphics.capture.direct3d11captureframepool) com o formato de pixel compatível com o dispositivo D3D (**DXGI\_FORMAT\_B8G8R8A8\_UNORM**), o número desejado de quadros (que pode ser um inteiro) e um tamanho de quadro. A propriedade **ContentSize** da classe **GraphicsCaptureItem** pode ser usada como tamanho do quadro:
+Usando o **GraphicsCaptureItem**, você criará uma [Direct3D11CaptureFramePool](https://docs.microsoft.com/uwp/api/windows.graphics.capture.direct3d11captureframepool) com o dispositivo D3D, suporte para formato de pixel (**DXGI\_formato\_ B8G8R8A8\_UNORM**), o número de quadros desejados (que podem ser qualquer inteiro) e quadro de tamanho. A propriedade **ContentSize** da classe **GraphicsCaptureItem** pode ser usada como tamanho do quadro:
 
 ```cs
 private GraphicsCaptureItem _item;
@@ -163,10 +163,10 @@ Quando **Recreate** é chamado, todos os quadros existentes são descartados. Is
 
 ## <a name="putting-it-all-together"></a>Reunindo tudo
 
-O trecho de código a seguir está um exemplo de ponta a ponta de como implementar a captura de tela em um aplicativo UWP. Neste exemplo, temos um botão no front-end que, quando clicado, chama o método **Button_ClickAsync** .
+O trecho de código a seguir é um exemplo de ponta a ponta de como implementar a captura de tela em um aplicativo UWP. Neste exemplo, temos um botão no front-end que, quando clicado, chama o **Button_ClickAsync** método.
 
 > [!NOTE]
-> Este trecho de código usa [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm), uma biblioteca para renderização de gráficos 2D. Consulte a documentação para obter informações sobre como configurá-lo para seu projeto.
+> Este trecho de código utiliza [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm), uma biblioteca para renderização de gráficos 2D. Consulte sua documentação para obter informações sobre como configurá-lo para seu projeto.
 
 ```cs
 using Microsoft.Graphics.Canvas;
@@ -386,8 +386,8 @@ namespace WindowsGraphicsCapture
 
 ## <a name="record-a-video"></a>Gravar um vídeo
 
-Se você quiser gravar um vídeo do seu aplicativo, você pode fazer isso com mais facilidade com o [namespace apprecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording). Isso faz parte do SDK, de extensão da área de trabalho para que ela funcione somente na área de trabalho e requer que você adicione uma referência a ele no seu projeto. Consulte a [Visão geral de famílias de dispositivo](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) para obter mais informações.
+Se você quiser gravar um vídeo do seu aplicativo, você poderá fazer isso mais facilmente com o [Windows.Media.AppRecording namespace](https://docs.microsoft.com/uwp/api/windows.media.apprecording). Isso faz parte da extensão da área de trabalho do SDK, portanto, ele só funciona na área de trabalho e requer que você adicione uma referência a ele do seu projeto. Ver [visão geral de famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) para obter mais informações.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 * [Namespace Windows.Graphics.Capture](https://docs.microsoft.com/uwp/api/windows.graphics.capture)

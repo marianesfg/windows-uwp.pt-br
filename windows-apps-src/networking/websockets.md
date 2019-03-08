@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, rede, websocket, messagewebsocket, streamwebsocket
 ms.localizationpriority: medium
 ms.openlocfilehash: 8af1f478bc466719eef3c5e19d055ac6073a0b11
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045402"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615411"
 ---
 # <a name="websockets"></a>WebSockets
 Os WebSockets fornecem um mecanismo para comunicações bidirecionais rápidas e seguras entre um cliente e um servidor na Web usando HTTP(S), suportando tanto mensagens UTF-8 quanto binárias.
@@ -39,7 +39,7 @@ Na maioria dos casos, você usará uma conexão WebSocket segura para que seus d
 | wss: | usado para conexões seguras que devem ser criptografadas. |
 | ws: | usado para conexões não criptografadas. |
 
-Para criptografar a conexão WebSocket, use o esquema de URI `wss:`. Veja um exemplo.
+Para criptografar a conexão WebSocket, use o esquema de URI `wss:`. Aqui está um exemplo.
 
 ```csharp
 protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -67,7 +67,7 @@ IAsyncAction OnNavigatedTo(NavigationEventArgs /* e */)
 ```
 
 ## <a name="use-messagewebsocket-to-connect"></a>Use MessageWebSocket para conectar
-[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket) permite que uma mensagem WebSocket inteira seja lida/gravada em uma operação única. Consequentemente, ele é apropriado quando as mensagens não são muito grandes. A classe suporta tanto mensagens UTF-8 quanto binárias.
+[**MessageWebSocket** ](/uwp/api/windows.networking.sockets.messagewebsocket) permite que uma mensagem inteira do WebSocket para serem lidas/gravadas em uma única operação. Consequentemente, ele é apropriado quando as mensagens não são muito grandes. A classe suporta tanto mensagens UTF-8 quanto binárias.
 
 Este exemplo de código abaixo usa o servidor de eco WebSocket.org&mdash;um serviço que exibe de volta para o remetente qualquer mensagem enviada a ele.
 
@@ -303,7 +303,7 @@ Quando uma conexão é estabelecida, é possível enviar dados ao servidor. Voc�
 **Observação** O **DataWriter** se apropria do fluxo de saída. Quando o **DataWriter** sai do escopo, se o fluxo de saída for anexado a ele, o **DataWriter** desalocará o fluxo de saída. Após isso, as tentativas subsequentes para usar o fluxo de saída falharão com um valor HRESULT de 0x80000013. Mas você pode chamar [**DataWriter.DetachStream**](/uwp/api/windows.storage.streams.datawriter.DetachStream) para desanexar o fluxo de saída do **DataWriter** e retornar a propriedade do fluxo para o **MessageWebSocket**.
 
 ## <a name="use-streamwebsocket-to-connect"></a>Use StreamWebSocket para conectar
-[**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket) permite que seções de uma mensagem sejam lidas com cada operação de leitura. Consequentemente, é adequado quando arquivos muito grandes (como fotos ou vídeos) são transferidos. A classe oferece suporte para mensagens binárias somente.
+[**StreamWebSocket** ](/uwp/api/windows.networking.sockets.streamwebsocket) permite que seções de uma mensagem a ser lido com cada operação de leitura. Consequentemente, é adequado quando arquivos muito grandes (como fotos ou vídeos) são transferidos. A classe oferece suporte para mensagens binárias somente.
 
 Este exemplo de código abaixo usa o servidor de eco WebSocket.org&mdash;um serviço que exibe de volta para o remetente qualquer mensagem enviada a ele.
 
@@ -606,11 +606,11 @@ auto connectTask = Concurrency::create_task(streamWebSocket->ConnectAsync(ref ne
 **Observação** Não tente alterar uma propriedade de controle *depois* de chamar **ConnectAsync**. A única exceção a essa regra é [MessageWebSocketControl.MessageType](/uwp/api/windows.networking.sockets.messagewebsocketcontrol.MessageType).
 
 ## <a name="websocket-information-classes"></a>Classes de informações de WebSocket
-[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket) e [**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket) têm uma classe correspondente que fornece informações adicionais sobre o objeto.
+[**MessageWebSocket** ](/uwp/api/windows.networking.sockets.messagewebsocket) e [ **StreamWebSocket** ](/uwp/api/windows.networking.sockets.streamwebsocket) possuem uma classe correspondente que fornece informações adicionais sobre o objeto.
 
-[**MessageWebSocketInformation**](/uwp/api/windows.networking.sockets.messagewebsocketinformation) fornece informações sobre um **MessageWebSocket**. Recupere uma instância dele usando a propriedade [**MessageWebSocket.Information**](/uwp/api/windows.networking.sockets.messagewebsocket.Information).
+[**MessageWebSocketInformation** ](/uwp/api/windows.networking.sockets.messagewebsocketinformation) fornece informações sobre uma **MessageWebSocket**, e você recuperar uma instância dele usando o [ **MessageWebSocket.Information** ](/uwp/api/windows.networking.sockets.messagewebsocket.Information) propriedade.
 
-[**StreamWebSocketInformation**](/uwp/api/Windows.Networking.Sockets.StreamWebSocketInformation) fornece informações sobre um **StreamWebSocket**. Recupere uma instância da classe de informações usando a propriedade [**StreamWebSocket.Information**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket.Information).
+[**StreamWebSocketInformation** ](/uwp/api/Windows.Networking.Sockets.StreamWebSocketInformation) fornece informações sobre uma **StreamWebSocket**, e você recuperar uma instância dele usando o [ **StreamWebSocket.Information** ](/uwp/api/Windows.Networking.Sockets.StreamWebSocket.Information) propriedade.
 
 Observe que todas as propriedades destas classes de informações são somente leitura, porém você pode usá-la para recuperar informações a qualquer momento durante o tempo de vida de um objeto WebSocket.
 

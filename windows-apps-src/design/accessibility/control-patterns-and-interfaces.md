@@ -1,5 +1,5 @@
 ---
-Description: Lists the Microsoft UI Automation control patterns, the classes that clients use to access them, and the interfaces providers use to implement them.
+Description: Lista os padrões de controle de Automação da Interface do Usuário da Microsoft, as classes que os clientes usam para acessá-los e as interfaces que os provedores usam para implementá-los.
 ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
 title: Padrões e interfaces de controle
 label: Control patterns and interfaces
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 87afe086ca28e27a39f5508a2bea5ea9fcb1c6a5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936103"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597231"
 ---
 # <a name="control-patterns-and-interfaces"></a>Padrões e interfaces de controle  
 
@@ -29,14 +29,14 @@ Ao implementar um padrão de controle, você também deverá consultar a documen
 
 | Padrão de controle | Interface do provedor de classe | Descrição |
 |-----------------|--------------------------|-------------|
-| **Anotações** | [**IAnnotationProvider**](https://msdn.microsoft.com/library/windows/apps/Hh738493) | Usado para expor as propriedades de uma anotação em um documento. |
-| **Doca** | [**IDockProvider**](https://msdn.microsoft.com/library/windows/apps/BR242565) | Usado para controles que podem ser encaixados em um contêiner. Por exemplo, barras de ferramentas ou paletas de ferramentas. |
-| **Arrastar** | [**IDragProvider**](https://msdn.microsoft.com/library/windows/apps/Hh750322) | Usado para oferecer suporte aos controles arrastáveis ou controles com itens arrastáveis. |
+| **Anotação** | [**IAnnotationProvider**](https://msdn.microsoft.com/library/windows/apps/Hh738493) | Usado para expor as propriedades de uma anotação em um documento. |
+| **Encaixe** | [**IDockProvider**](https://msdn.microsoft.com/library/windows/apps/BR242565) | Usado para controles que podem ser encaixados em um contêiner. Por exemplo, barras de ferramentas ou paletas de ferramentas. |
+| **Arraste** | [**IDragProvider**](https://msdn.microsoft.com/library/windows/apps/Hh750322) | Usado para oferecer suporte aos controles arrastáveis ou controles com itens arrastáveis. |
 | **DropTarget** | [**IDropTargetProvider**](https://msdn.microsoft.com/library/windows/apps/Hh750327) | Usado para oferecer suporte aos controles podem ser o destino para uma operação de arrastar e soltar. |
 | **ExpandCollapse** | [**IExpandCollapseProvider**](https://msdn.microsoft.com/library/windows/apps/BR242568) | Usado para oferecer suporte aos controles que se expandem visualmente para exibir mais conteúdo e se recolhem para ocultar o conteúdo. |
 | **Grade** | [**IGridProvider**](https://msdn.microsoft.com/library/windows/apps/BR242578) | Usado para controles que dão suporte à funcionalidade de grade, como dimensionamento e transferência para uma célula especificada. Observe que Grade em si não implementa esse padrão porque ele fornece layout, mas não é um controle. |
 | **GridItem** | [**IGridItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242572) | Usado para controles que possuem células nas grades. |
-| **Invocar** | [**IInvokeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242582) | Usado para controles que podem ser invocados, como [**Botão**](https://msdn.microsoft.com/library/windows/apps/BR209265). |
+| **Invoke** | [**IInvokeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242582) | Usado para controles que podem ser invocados, como [**Botão**](https://msdn.microsoft.com/library/windows/apps/BR209265). |
 | **ItemContainer** | [**IItemContainerProvider**](https://msdn.microsoft.com/library/windows/apps/BR242583) | Possibilita que os aplicativos localizem um elemento em um contêiner, como uma lista virtualizada. |
 | **MultipleView** | [**IMultipleViewProvider**](https://msdn.microsoft.com/library/windows/apps/BR242585) | Usado para controles que podem alternar entre várias representações do mesmo conjunto de informações, dados ou filhos. |
 | **ObjectModel** | [**IObjectModelProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251815) | Usado para expor um ponteiro para o modelo de objeto subjacente de um documento. |
@@ -51,21 +51,21 @@ Ao implementar um padrão de controle, você também deverá consultar a documen
 | **SynchronizedInput** | [**ISynchronizedInputProvider**](https://msdn.microsoft.com/library/windows/apps/Dn279198) | Permite que os aplicativos de cliente da Automação da Interface do Usuário redirecionem a entrada do mouse ou do teclado para um elemento da interface do usuário específico. |
 | **Tabela** | [**ITableProvider**](https://msdn.microsoft.com/library/windows/apps/BR242623) | Usado para controles que possuem uma grade e informações de cabeçalho. Por exemplo, um controle de calendário tabular. |
 | **TableItem** | [**ITableItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242620) | Usado para itens em uma tabela. |
-| **Text** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | Usado para editar controles e documentos que exponham informações textuais. Consulte também [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) e [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider2). |
+| **Texto** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | Usado para editar controles e documentos que exponham informações textuais. Consulte também [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) e [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider2). |
 | **TextChild** | [**ITextChildProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextchildprovider) | Usado para acessar o antecessor mais próximo de um elemento que suporta o padrão de controle **Text**. |
 | **TextEdit** | Não há classe gerenciada disponível | Fornece acesso a um controle que modifica o texto, por exemplo, um controle que executa correção automática ou permite a composição de entrada através de um IME (Editor de Método de Entrada). |
 | **TextRange** | [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) | Fornece acesso a um conjunto de texto contínuo em um contêiner de texto que implementa [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider). Consulte também [**ITextRangeProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider2). |
-| **Toggle** | [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653) | Usado para controles onde é possível alternar o estado. Por exemplo, [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/BR209316) e itens de menu que podem ser marcados. |
-| **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Usado para controles que podem ser redimensionados, transferidos e girados. O padrão de controle de transformação costuma ser usado em aplicativos de desenho, design, formulários e editores gráficos. |
-| **Value** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | Possibilita que os clientes obtenham ou definam um valor nos controles que não dão suporte a um intervalo de valores. |
+| **Alternar** | [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653) | Usado para controles onde é possível alternar o estado. Por exemplo, [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/BR209316) e itens de menu que podem ser marcados. |
+| **Transformação** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Usado para controles que podem ser redimensionados, transferidos e girados. O padrão de controle de transformação costuma ser usado em aplicativos de desenho, design, formulários e editores gráficos. |
+| **Valor** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | Possibilita que os clientes obtenham ou definam um valor nos controles que não dão suporte a um intervalo de valores. |
 | **VirtualizedItem** | [**IVirtualizedItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242668) | Expõe itens nos contêineres que são virtualizados e precisam estar totalmente acessíveis como elementos de automação da IU. |
-| **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | Expõe informações específicas de janelas, um conceito fundamental para o sistema operacional Microsoft Windows. Exemplos de controles que são janelas filho e caixas de diálogo. |
+| **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | Expõe as informações específicas do windows, um conceito fundamental para o sistema operacional Microsoft Windows. Exemplos de controles que são janelas filho e caixas de diálogo. |
 
 > [!NOTE]
 > Você não encontrará necessariamente implementações de todos esses padrões em controles XAML existentes. Alguns dos padrões têm interfaces exclusivamente para oferecer suporte à paridade com a definição de padrões da estrutura de Automação da IU geral e para oferecer suporte a cenários de mesmo nível de automação que exigirão uma implementação puramente personalizada para oferecer suporte a esse padrão.
 
 > [!NOTE]
-> Os aplicativos da Store do Windows Phone não dão suporte a todos os padrões de controle de Automação da Interface do Usuário listados aqui. **Annotation**, **Dock**, **Drag**, **DropTarget**, **ObjectModel** são alguns dos padrões sem suporte.
+> Os aplicativos da Loja do Windows Phone não dão suporte a todos os padrões de controle de Automação da Interface do Usuário listados aqui. **Annotation**, **Dock**, **Drag**, **DropTarget**, **ObjectModel** são alguns dos padrões não suportados.
 
 <span id="related_topics"/>
 

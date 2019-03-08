@@ -1,16 +1,16 @@
 ---
-Description: Learn how to create known user groups to use for package flighting and more.
+Description: Saiba como criar grupos de usuários conhecidos para uso na liberação de versões de pré-lançamento e muito mais.
 title: Criar grupos de usuários conhecidos
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, grupo direcionado, clientes, grupo de versão de pré-lançamento, grupos de usuários, usuários conhecidos
 ms.localizationpriority: medium
 ms.openlocfilehash: 1fcb111121511553bba22cef55f94125d47e9f21
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938261"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605281"
 ---
 # <a name="create-known-user-groups"></a>Criar grupos de usuários conhecidos
 
@@ -20,7 +20,7 @@ Para ser considerado um membro do grupo, cada pessoa deve ser autenticada na Loj
 
 ## <a name="to-create-a-known-user-group"></a>Para criar um grupo de usuários conhecido
 
-1. No [Partner Center](https://partner.microsoft.com/dashboard), expanda **envolver** no menu de navegação esquerdo e, em seguida, selecione **grupos de clientes**. 
+1. Na [Partner Center](https://partner.microsoft.com/dashboard), expanda **acionar** no menu de navegação à esquerda e em seguida, selecione **grupos de clientes**. 
 2. Na seção **Meus grupos de clientes**, selecione **Criar novo grupo**.
 3. Na próxima página, insira um nome para seu grupo na caixa **Nome do grupo**.
 4. Verifique se o botão de opção **Grupo de usuários conhecido** está selecionado.
@@ -36,7 +36,7 @@ Você também pode criar um grupo de usuários conhecidos ao selecionar **Criar 
 
 ## <a name="to-edit-a-known-user-group"></a>Para editar um grupo de usuários conhecido
 
-Você não pode remover um grupo de usuários conhecidos do Partner Center (ou alterar seu nome) após ela ter sido criada, mas você pode editar sua participação a qualquer momento.
+Você não pode remover um grupo de usuários conhecidos do Partner Center (ou altere seu nome) depois que ele é criado, mas você pode editar sua participação a qualquer momento.
 
 Para revisar e editar os grupos de usuários conhecidos, expanda o menu **Envolver** no menu de navegação esquerdo e selecione **Grupos de clientes**. Em **Meus grupos de clientes**, selecione o nome do grupo que você deseja editar. Também é possível editar um grupo de usuários conhecido na página de criação do pacote de pré-lançamento ao selecionar **Exibir e gerenciar grupos existentes** ao criar uma nova versão de pré-lançamento ou selecionar o nome do grupo na página de visão geral de um pacote de pré-lançamento. 
 

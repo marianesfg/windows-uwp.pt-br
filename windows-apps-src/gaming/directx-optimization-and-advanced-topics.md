@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogo, directx, otimizar, multisampling, cadeias de troca
 ms.localizationpriority: medium
 ms.openlocfilehash: e9618a35ecd8f9d1a37b627494c0f00a5ed84806
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940385"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595011"
 ---
 # <a name="optimization-and-advanced-topics-for-directx-games"></a>Otimização e tópicos avançados para jogos DirectX
 
@@ -46,7 +46,7 @@ O tópico sobre o dimensionamento e as sobreposições de cadeia de troca explic
 <td align="left"><p>Entenda a programação assíncrona e o threading com o DirectX.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="handling-device-lost-scenarios.md">Lidar com cenários removidos de dispositivos no Direct3D 11</a></p></td>
+<td align="left"><p><a href="handling-device-lost-scenarios.md">Lidar com cenários de dispositivo removido no Direct3D 11</a></p></td>
 <td align="left"><p>Recrie a cadeia de interface do dispositivo Direct3D e DXGI quando o adaptador gráfico é removido ou reinicializado.</p></td>
 </tr>
 <tr class="odd">
@@ -54,15 +54,15 @@ O tópico sobre o dimensionamento e as sobreposições de cadeia de troca explic
 <td align="left"><p>Use multisampling em jogos UWP criados usando o Direct3D.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md">Otimizar entrada e loop de renderização</a></p></td>
+<td align="left"><p><a href="optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md">Otimizar o loop de entrada e renderização</a></p></td>
 <td align="left"><p>Reduza a latência de entrada e otimize o loop de renderização.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="reduce-latency-with-dxgi-1-3-swap-chains.md">Reduzir a latência com cadeias de troca do DXGI 1.3</a></p></td>
+<td align="left"><p><a href="reduce-latency-with-dxgi-1-3-swap-chains.md">Reduzir a latência com cadeias de troca de DXGI 1.3</a></p></td>
 <td align="left"><p>Use o DXGI 1.3 para reduzir a latência de quadros efetiva.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="multisampling--scaling--and-overlay-swap-chains.md">Dimensionamento e sobreposições de cadeia de troca</a></p></td>
+<td align="left"><p><a href="multisampling--scaling--and-overlay-swap-chains.md">Dimensionamento de cadeia de troca e sobreposições</a></p></td>
 <td align="left"><p>Crie cadeias de troca dimensionadas para permitir renderização mais rápida em dispositivos móveis e usar cadeias de troca sobrepostas para aumentar a qualidade visual.</p></td>
 </tr>
 </tbody>

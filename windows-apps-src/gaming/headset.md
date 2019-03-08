@@ -1,5 +1,5 @@
 ---
-title: Fone de ouvido
+title: Headset
 description: Use as APIs de fone de ouvido Windows.Gaming.Input para detectar fones de ouvido, capturar a voz do jogador e reproduzir áudio.
 ms.assetid: 021CCA26-D339-4C8B-B084-0D499BD83ABE
 ms.date: 02/08/2017
@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, fone de ouvido
 ms.localizationpriority: medium
 ms.openlocfilehash: b3de68cc59c9928a52eba5caeb840e9e825eecf0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933887"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627951"
 ---
-# <a name="headset"></a>Fone de ouvido
+# <a name="headset"></a>Headset
 
 Esta página descreve as noções básicas de programação para fones de ouvido que usam [Windows.Gaming.Input.Headset][headset] e APIs relacionadas para a Plataforma Universal do Windows (UWP).
 

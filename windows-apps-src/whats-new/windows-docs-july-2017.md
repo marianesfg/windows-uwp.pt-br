@@ -6,11 +6,11 @@ ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1875fecbdfa6b97cdc30413c8afa6cc58d3251ef
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045475"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595031"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Novidades dos documentos de desenvolvedor do Windows em julho de 2017
 
@@ -42,11 +42,11 @@ Disponíveis para [Participantes do Programa Windows Insider](https://insider.wi
 
 O [controle do seletor de cores](../design/controls-and-patterns/color-picker.md) permite que os usuários naveguem e selecionem cores.  
 
-![Um seletor de cores padrão](../design/controls-and-patterns/images/color-picker-default.png)
+![Um selecionador de cores padrão](../design/controls-and-patterns/images/color-picker-default.png)
 
 O [controle de modo de exibição de navegação](../design/controls-and-patterns/navigationview.md) torna mais fácil adicionar navegação de ponta ao seu aplicativo.
 
-![Seções do NavigationView](../design/controls-and-patterns/images/navview_sections.png)
+![Seções de NavigationView](../design/controls-and-patterns/images/navview_sections.png)
 
 O [controle de imagem da pessoa](../design/controls-and-patterns/person-picture.md) exibe a imagem de avatar para uma pessoa.
 
@@ -64,7 +64,7 @@ Os [kits de ferramentas de design e recursos para aplicativos UWP](../design/dow
 
 Os seguintes novos recursos agora estão disponíveis:
 
-* O SDK do Microsoft Advertising agora permite que você exiba [anúncios nativos](../monetize/native-ads.md) em seus aplicativos. Um anúncio nativo é um formato de anúncio com base em componente em que cada parte do criativo do anúncio (como título, imagem, descrição e texto do plano de ação) é entregue ao aplicativo como um elemento individual. Atualmente, os núncios nativos só estão disponíveis para desenvolvedores que estão participando de um programa piloto, mas nós pretendemos disponibilizar esse recurso para todos os desenvolvedores em breve.
+* O SDK do Microsoft Advertising agora permite que você exiba [anúncios nativos](../monetize/native-ads.md) em seus aplicativos. Um anúncio nativo é um formato de anúncio com base em componente em que cada parte do criativo do anúncio (como título, imagem, descrição e texto do chamada para ação) é entregue ao aplicativo como um elemento individual. Atualmente, os núncios nativos só estão disponíveis para desenvolvedores que estão participando de um programa piloto, mas nós pretendemos disponibilizar esse recurso para todos os desenvolvedores em breve.
 
 * A [API de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md) agora fornece um método que pode ser usado para [baixar o arquivo CAB para um erro em seu app](../monetize/download-the-cab-file-for-an-error-in-your-app.md).
 
@@ -78,7 +78,7 @@ Os seguintes novos recursos agora estão disponíveis:
 
 ### <a name="my-people"></a>Minhas Pessoas
 
-Disponível para [Participantes do Programa Windows Insider](https://insider.windows.com/) nas Compilações de Prévia SDK, o futuro recurso Minhas Pessoas permitirá aos usuários fixar contatos de um aplicativo diretamente nas suas barras de tarefas. [Saiba como adicionar suporte para Minhas Pessoas a seu aplicativo.](../contacts-and-calendar/my-people-support.md)
+Disponível para [Participantes do Programa Windows Insider](https://insider.windows.com/) nas Compilações de Prévia SDK, o futuro recurso Minhas Pessoas permitirá aos usuários fixar contatos de um aplicativo diretamente nas suas barras de tarefas. [Saiba como adicionar pessoas Meu suporte ao seu aplicativo.](../contacts-and-calendar/my-people-support.md)
 
 ![Painel de contato do recurso Minhas Pessoas](images/my-people.png)
 

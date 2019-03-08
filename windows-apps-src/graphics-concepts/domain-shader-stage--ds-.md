@@ -1,20 +1,20 @@
 ---
-title: Estágio de Sombreador de Domínio (DS)
+title: Estágio de sombreador de domínio (DS)
 description: O estágio do Sombreador de Domínio (DS) calcula a posição de vértice de um ponto subdividido no patch saída; ele calcula a posição do vértice que corresponde a cada amostra de domínio.
 ms.assetid: 673CC04A-A74F-495F-AFB7-49157538749C
 keywords:
-- Estágio de Sombreador de Domínio (DS)
+- Estágio de sombreador de domínio (DS)
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: bbde90d848d3bc8fb18a5ecf370c85121adc02f6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934661"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620491"
 ---
-# <a name="domain-shader-ds-stage"></a>Estágio de Sombreador de Domínio (DS)
+# <a name="domain-shader-ds-stage"></a>Estágio de sombreador de domínio (DS)
 
 
 O estágio do Sombreador de Domínio (DS) calcula a posição de vértice de um ponto subdividido no patch saída; ele calcula a posição do vértice que corresponde a cada amostra de domínio. Um sombreador de domínio é executado uma vez por ponto de saída do estágio de mosaico e tem acesso somente leitura às constantes do patch de saída, ao patch de saída do sombreador e às coordenadas UV de saída do estágio de mosaico.
@@ -26,7 +26,7 @@ O estágio de Sombreador de Domínio (DS) gera a posição de vértice de um pon
 
 ![diagrama do estágio do sombreador de domínio](images/d3d11-domain-shader.png)
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entrada
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
 
 
 -   Um sombreador de domínio consome pontos de controle de saída do [estágio de Sombreador Hull (HS)](hull-shader-stage--hs-.md). As saídas de sombreador hull incluem:
@@ -61,7 +61,7 @@ void main( out    MyDSOutput result,
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de elementos gráficos](graphics-pipeline.md)
+[Pipeline de gráficos](graphics-pipeline.md)
 
  
 

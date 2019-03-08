@@ -1,6 +1,6 @@
 ---
 title: Introdução a texturas
-description: Um recurso de textura é uma estrutura de dados para armazenar texels, que são a unidade menor de uma textura que pode ser lida ou gravada. Quando a textura é lida por um sombreador, é possível filtrá-la por amostras de texturas.
+description: Um recurso de textura é uma estrutura de dados para armazenar texels, que é a menor unidade de uma textura que pode ser lida ou gravada. Quando a textura é lida por um sombreador, é possível filtrá-la por amostras de texturas.
 ms.assetid: 6F3C76A8-F762-4296-AE02-BFBD6476A5A8
 keywords:
 - Introdução a texturas
@@ -8,27 +8,27 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3cd5ca66635b57b79c2fca3e6ff10b8debb43fd0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929311"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618161"
 ---
 # <a name="introduction-to-textures"></a>Introdução a texturas
 
 
-Um recurso de textura é uma estrutura de dados para armazenar texels, que são a unidade menor de uma textura que pode ser lida ou gravada. Quando a textura é lida por um sombreador, é possível filtrá-la por amostras de texturas.
+Um recurso de textura é uma estrutura de dados para armazenar texels, que é a menor unidade de uma textura que pode ser lida ou gravada. Quando a textura é lida por um sombreador, é possível filtrá-la por amostras de texturas.
 
-Um recurso de textura é uma coleção estruturada de dados projetada para armazenar texels. Um texel representa a menor unidade de uma textura que pode ser lida ou gravada pelo pipeline. Diferente dos buffers, as texturas podem ser filtradas por amostras de texturas à medida que são lidas por unidades de sombreador. O tipo de textura afeta como a textura é filtrada. Cada texel contém 1 a 4 componentes, organizados em um dos formatos DXGI definidos pela enumeração DXGI\_FORMAT.
+Um recurso de textura é uma coleção estruturada de dados projetada para armazenar texels. Um texel representa a menor unidade de uma textura que pode ser lida ou gravada pelo pipeline. Diferente dos buffers, as texturas podem ser filtradas por amostras de texturas à medida que são lidas por unidades de sombreador. O tipo de textura afeta como a textura é filtrada. Cada texel contém componentes de 1 a 4, organizados em um dos formatos DXGI definidos pelo DXGI\_enumeração de formato.
 
 As texturas são criadas como um recurso estruturado de tamanho conhecido. Entretanto, cada textura pode ter tipos ou não quando o recurso é criado, contanto que o tipo seja especificado usando um modo de exibição quando a textura está vinculada ao pipeline.
 
-## <a name="span-idtexturetypesspanspan-idtexturetypesspanspan-idtexturetypesspantexture-types"></a><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span>Tipo de textura
+## <a name="span-idtexturetypesspanspan-idtexturetypesspanspan-idtexturetypesspantexture-types"></a><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span>Tipos de textura
 
 
-O Direct3D oferece suporte a várias representações de ponto flutuante. Todos os cálculos de ponto flutuante operam em um subconjunto definido de regras de ponto flutuante de precisão única IEEE 754 de 32 bits.
+O Direct3D dá suporte a várias representações de ponto flutuante. Todos os cálculos de ponto flutuante operam em um subconjunto das regras de ponto flutuante de precisão única de 32 bits 754 IEEE definido.
 
-Existem vários tipos de texturas: 1D, 2D, 3D, e cada uma pode ser criada com ou sem mipmaps. O Direct3D também oferece suporte a matrizes de textura e texturas multisample.
+Há vários tipos de texturas: 1 D, 2D, 3D, cada um deles pode ser criada com ou sem mipmaps. O Direct3D também oferece suporte a matrizes de textura e texturas multisample.
 
 -   [Texturas 1D](#texture1d-resource)
 -   [Matrizes de textura 1D](#texture1d-array-resource)
@@ -75,7 +75,7 @@ Um recurso de matriz de textura 2D é uma matriz homogênea de texturas 2D; ou s
 
 Essa matriz de textura contém três texturas; cada uma de 3 x 5 com dois níveis de mipmap.
 
-### <a name="span-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanusing-a-2d-texture-array-as-a-texture-cube"></a><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>Usar uma matriz de textura 2D como um cubo de textura
+### <a name="span-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanusing-a-2d-texture-array-as-a-texture-cube"></a><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>Usando uma matriz de textura 2D como um cubo de textura
 
 Um cubo de textura é uma matriz de textura 2D com 6 texturas, uma para cada face do cubo. Um cubo de textura totalmente preenchida se parece com a ilustração a seguir.
 
@@ -95,14 +95,14 @@ Não há nenhum conceito de matriz de textura 3D; portanto, um sub-recurso de te
 
 Os sistemas de coordenadas para Direct3D são definidos para pixels e texels.
 
-## <a name="span-idpixelspanspan-idpixelspanspan-idpixelspanpixel-coordinate-system"></a><span id="Pixel"></span><span id="pixel"></span><span id="PIXEL"></span>Sistema de coordenadas de pixels
+## <a name="span-idpixelspanspan-idpixelspanspan-idpixelspanpixel-coordinate-system"></a><span id="Pixel"></span><span id="pixel"></span><span id="PIXEL"></span>Sistema de coordenadas de pixel
 
 
 O sistema de coordenadas de pixels no Direct3D define a origem de um destino de renderização no canto superior esquerdo, conforme mostrado no diagrama a seguir. Os centros de pixels são separados por (0,5f;0,5f) de locais de números inteiros.
 
 ![diagrama do sistema de coordenadas de pixels no direct3d 10](images/d3d10-coordspix10.png)
 
-## <a name="span-idtexelspanspan-idtexelspanspan-idtexelspantexel-coordinate-system"></a><span id="Texel"></span><span id="texel"></span><span id="TEXEL"></span>Sistema de coordenadas de texel
+## <a name="span-idtexelspanspan-idtexelspanspan-idtexelspantexel-coordinate-system"></a><span id="Texel"></span><span id="texel"></span><span id="TEXEL"></span>Sistema de coordenadas de Texel
 
 
 O sistema de coordenadas de texel é originado no canto superior esquerdo da textura, conforme mostrado no diagrama a seguir. Isso facilita a renderização de texturas alinhadas à tela, pois o sistema de coordenadas de pixels está alinhado ao sistema de coordenadas de texel.
@@ -113,13 +113,13 @@ As coordenadas de textura são representadas por um número normalizado ou dimen
 
 Para uma coordenada normalizada:
 
--   Amostragem de ponto: Texel \# = base(U \* largura)
--   Amostragem linear: Texel esquerdo \# = base(U \* largura), Texel direito \# = Texel esquerdo \# + 1
+-   Do ponto de amostragem: Texel \# = floor (U \* largura)
+-   Amostragem linear: Esquerda Texel \# = floor (U \* largura), direita Texel \# = esquerda Texel \# + 1
 
 Para uma coordenada dimensionada:
 
--   Amostragem de pontos: Texel \# = piso(U)
--   Amostragem linear: Texel esquerdo \# = base(U - 0,5), Texel direito \# = Texel esquerdo \# + 1
+-   Do ponto de amostragem: Texel \# = floor(U)
+-   Amostragem linear: Esquerda Texel \# = floor (U - 0,5), direita Texel \# = esquerda Texel \# + 1
 
 Onde a largura é a largura da textura (em texels).
 

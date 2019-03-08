@@ -1,5 +1,5 @@
 ---
-Description: Periodic notifications, which are also called polled notifications, update tiles and badges at a fixed interval by downloading content from a cloud service.
+Description: Notificações periódicas, que são chamadas também de notificações de sondagem, atualizam blocos e selos em um intervalo fixo, baixando o conteúdo da nuvem.
 title: Visão geral de notificações periódicas
 ms.assetid: 1EB79BF6-4B94-451F-9FAB-0A1B45B4D01C
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a3bf2ce69105787b7ca9e83c7f7fe5db8ae1038
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050509"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624851"
 ---
 # <a name="periodic-notification-overview"></a>Visão geral de notificações periódicas
  
@@ -25,7 +25,7 @@ Notificações periódicas, que são chamadas também de notificações de sonda
 
 As notificações periódicas permitem que seu aplicativo obtenha atualizações de bloco em tempo real com serviço de nuvem mínimo e pouco investimento do cliente. As notificações periódicas são um método de entrega excelente para distribuir o mesmo conteúdo a uma ampla audiência.
 
-**Observação**  você pode saber mais baixando a [amostra de notificações periódicas e por Push](https://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 e reutilizando seu código-fonte em seu aplicativo do Windows 10.
+**Observação**    você pode saber mais, baixando o [Push e exemplo de notificações periódicas](https://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 e reutilizando seu código-fonte em seu aplicativo do Windows 10.
 
  
 
@@ -48,9 +48,9 @@ A resposta do servidor de nuvem inclui o conteúdo baixado. O conteúdo retornad
 
 Chame um destes métodos para começar a sondagem:
 
--   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (Bloco)
--   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (Selo)
--   [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (Bloco)
+-   [**StartPeriodicUpdate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (lado a lado)
+-   [**StartPeriodicUpdate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (notificação)
+-   [**StartPeriodicUpdateBatch** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (lado a lado)
 
 Quando você chama um destes métodos, o URI é imediatamente sondado e o bloco ou a notificação será atualizada com o conteúdo recebido. Após essa sondagem inicial, o Windows continua fornecendo as atualizações no intervalo solicitado. A sondagem continua até você parar explicitamente (com [**TileUpdater.StopPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater.StopPeriodicUpdate)), seu aplicativo ser desinstalado ou, no caso de um bloco secundário, o bloco ser removido. Caso contrário, o Windows continua a sondar atualizações para seu bloco ou notificação mesmo que seu aplicativo não seja mais iniciado.
 
@@ -104,6 +104,6 @@ Você deve fornecer um URI exclusivo para cada notificação que quiser que o Wi
 
 
 * [Diretrizes para notificações periódicas](https://msdn.microsoft.com/library/windows/apps/hh761461)
-* [Como configurar notificações periódicas para selos](https://msdn.microsoft.com/library/windows/apps/hh761476)
+* [Como configurar notificações periódicas para notificações](https://msdn.microsoft.com/library/windows/apps/hh761476)
 * [Como configurar notificações periódicas para blocos](https://msdn.microsoft.com/library/windows/apps/hh761476)
  

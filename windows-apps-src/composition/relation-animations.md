@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animação
 ms.localizationpriority: medium
 ms.openlocfilehash: b6fdc59e8a7203a3bb8c6ad79adabd446b884639
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926292"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597711"
 ---
 # <a name="relation-based-animations"></a>Animações baseadas em relações
 
@@ -66,7 +66,7 @@ Os parâmetros formam o núcleo de uma expressão. Existem dois tipos de parâme
 - Constantes: são parâmetros que representam a variáveis tipadas do System.Numeric. Esses parâmetros obtêm os valores atribuídos uma vez quando a animação é iniciada.
 - Referências: são parâmetros que representam as referências aos CompositionObjects; atualizam continuamente os valores depois que uma animação é iniciada.
 
-Em geral, as referências são o principal aspecto de como a saída de uma expressão pode ser alterada dinamicamente. Como essas referências mudam, a saída da expressão também muda. Se você criar a expressão com cadeias de caracteres ou usá-las em um cenário de modelagem (usando a expressão para direcionar vários CompositionObjects), precisará nomear e definir os valores dos parâmetros. Consulte a seção Exemplo para obter mais informações.
+Em geral, as referências são o principal aspecto de como a saída de uma expressão pode ser alterada dinamicamente. Como essas referências mudam, a saída da expressão também muda. Se você criar a expressão com cadeias de caracteres ou usá-las em um cenário de modelagem (usando a expressão para direcionar vários CompositionObjects), precisará nomear e definir os valores dos parâmetros. Veja a seção Exemplo para mais informações.
 
 ### <a name="working-with-keyframeanimations"></a>Trabalhando com KeyFrameAnimations
 
@@ -112,7 +112,7 @@ var orbitRotation = EF.Vector3(
 ```
 
 > [!NOTE]
-> `EF` é um atalho que "usa" a notação para definir ExpressionBuilder.ExpressionFunctions.
+> `EF` é uma notação abreviada do "using" para definir ExpressionBuilder.ExpressionFunctions.
 
 Por fim, combine esses componentes e referencie a posição da bola vermelha para definir o relacionamento matemático.
 

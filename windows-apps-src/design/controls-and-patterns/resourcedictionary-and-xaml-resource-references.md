@@ -1,5 +1,5 @@
 ---
-Description: Explains how to define a ResourceDictionary element and keyed resources, and how XAML resources relate to other resources that you define as part of your app or app package.
+Description: Explica como definir um elemento ResourceDictionary e os recursos inseridos, e também como os recursos XAML se relacionam com outros recursos definidos como parte do aplicativo ou do pacote do aplicativo.
 MS-HAID: dev\_ctrl\_layout\_txt.resourcedictionary\_and\_xaml\_resource\_references
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 51461df47fe92c296fee198a6f2ed1c34e833cd7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939765"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634921"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>Referências de recursos de ResourceDictionary e XAML
 
@@ -53,7 +53,7 @@ Neste exemplo:
 
 -   `<Page.Resources>…</Page.Resources>` - Define o dicionário de recursos.
 -   `<x:String>` - Define o recurso com a chave "greeting".
--   `{StaticResource greeting}` - Pesquisa o recurso com a chave "greeting", que é atribuída à propriedade [Text](https://msdn.microsoft.com/library/windows/apps/br209676) de [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652).
+-   `{StaticResource greeting}` -Procura o recurso com a chave "greeting", que é atribuído para o [texto](https://msdn.microsoft.com/library/windows/apps/br209676) propriedade da [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652).
 
 > **Observação**&nbsp;&nbsp;Não confunda os conceitos relacionados a [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) com a ação de compilação **Resource**, arquivos de recursos (.resw) ou outros "recursos" que são abordados no contexto de estruturação do projeto de código que produz seu pacote do aplicativo.
 
@@ -112,7 +112,7 @@ Para saber mais sobre estilos implícitos e como eles funcionam, consulte [Aplic
 Você acessa membros do dicionário de recursos como qualquer outro dicionário.
 
 > [!WARNING]
-> Quando você executa uma pesquisa de recursos no código, somente os recursos no `Page.Resources` dicionário são examinados. Ao contrário da [extensão de marcação StaticResource](../../xaml-platform/staticresource-markup-extension.md), o código não fará fallback para o dicionário `Application.Resources` se os recursos não forem encontrados no primeiro dicionário.
+> Quando você executa um recurso de pesquisa no código, somente os recursos no `Page.Resources` dicionário serão examinados. Ao contrário da [extensão de marcação StaticResource](../../xaml-platform/staticresource-markup-extension.md), o código não fará fallback para o dicionário `Application.Resources` se os recursos não forem encontrados no primeiro dicionário.
 
  
 
@@ -202,7 +202,7 @@ sealed partial class App : Application
 
 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706) é uma classe base da qual os controles herdam e tem uma propriedade [Resources](https://msdn.microsoft.com/library/windows/apps/br208740). Portanto, você pode adicionar um dicionário de recursos local a qualquer **FrameworkElement**.
 
-Aqui, tanto [Page](https://msdn.microsoft.com/library/windows/apps/br227503) quanto [Border](https://msdn.microsoft.com/library/windows/apps/br209250) têm dicionários de recursos, e ambas têm um recurso chamado "greeting". O [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) chamado 'textBlock2' está dentro da **borda**, portanto, sua pesquisa de recursos examina primeira a **borda**do recursos, em seguida, recursos da **página**e, em seguida, os recursos de [aplicativo](https://msdn.microsoft.com/library/windows/apps/br242324) . O **TextBlock** mostrará "Hola mundo".
+Aqui, tanto [Page](https://msdn.microsoft.com/library/windows/apps/br227503) quanto [Border](https://msdn.microsoft.com/library/windows/apps/br209250) têm dicionários de recursos, e ambas têm um recurso chamado "greeting". O [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) chamado 'textBlock2' está dentro a **borda**, de modo que seu recurso de pesquisa procura primeiro para o **borda**do recursos, em seguida, a **página**de recursos e, em seguida, o [aplicativo](https://msdn.microsoft.com/library/windows/apps/br242324) recursos. O **TextBlock** mostrará "Hola mundo".
 
 Para acessar os recursos desse elemento no código, use a propriedade [Resources](https://msdn.microsoft.com/library/windows/apps/br208740) do elemento. O acesso aos recursos de um [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706) no código, em vez de XAML, examinará apenas esse dicionário, não os dicionários do elemento pai.
 
@@ -377,7 +377,7 @@ Neste exemplo, você define o primeiro plano de um [TextBlock](https://msdn.micr
 
 Para dicionários de temas, o dicionário ativo que será usado para a pesquisa de recursos muda dinamicamente sempre que a [extensão de marcação ThemeResource](../../xaml-platform/themeresource-markup-extension.md) é usada para fazer a referência e o sistema detecta uma mudança de tema. O comportamento da pesquisa feita pelo sistema se baseia no mapeamento do tema ativo para o [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787) de um dicionário de temas específico.
 
-Pode ser útil examinar como os dicionários de temas são estruturados nos recursos de design de XAML padrão, que são correspondentes aos modelos que o Windows Runtime usa por padrão para seus controles. Abra os arquivos XAML em \\(Program Files)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP\\&lt;SDK version&gt;\\Generic usando um editor de texto ou IDE. Observe como os dicionários de temas são definidos primeiro em generic.xaml e como cada dicionário de temas define as mesmas chaves. Cada uma dessas chaves é então referenciada pelos elementos de composição nos vários elementos inseridos, os quais estão fora do dicionário de temas e foram definidos posteriormente na XAML. Há também um arquivo themeresources.xaml à parte para o design que contém apenas os recursos de tema e modelos extras, e não os modelos de controle padrão. As áreas de temas são duplicatas do que você veria em generic.xaml.
+Pode ser útil examinar como os dicionários de temas são estruturados nos recursos de design de XAML padrão, que são correspondentes aos modelos que o Windows Runtime usa por padrão para seus controles. Abra os arquivos XAML no \\(arquivos de programa)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\neutro\\UAP\\&lt;SDK versão&gt;\\genérico usando um editor de texto ou IDE. Observe como os dicionários de temas são definidos primeiro em generic.xaml e como cada dicionário de temas define as mesmas chaves. Cada uma dessas chaves é então referenciada pelos elementos de composição nos vários elementos inseridos, os quais estão fora do dicionário de temas e foram definidos posteriormente na XAML. Há também um arquivo themeresources.xaml à parte para o design que contém apenas os recursos de tema e modelos extras, e não os modelos de controle padrão. As áreas de temas são duplicatas do que você veria em generic.xaml.
 
 Quando você usa ferramentas de design de XAML para editar cópias de estilos e modelos, as ferramentas de design extraem seções dos dicionários de recursos de design de XAML e os colocam como cópias locais de elementos do dicionário XAML que fazem parte do seu aplicativo e do projeto.
 
@@ -419,7 +419,7 @@ Os recursos definidos no nível do aplicativo não podem fazer referência a rec
 
 Para que um objeto exista em um [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794), esse objeto deve ser *compartilhável*.
 
-A condição de compartilhável é uma exigência porque, quando a árvore de objetos de um aplicativo é construída e usada no tempo de execução, os objetos não podem existir em vários locais da árvore. Internamente, o sistema de recursos cria cópias de valores de recursos a serem utilizadas no gráfico de objeto de seu aplicativo quando cada recurso XAML é solicitado.
+A condição de compartilhável é uma exigência porque, quando a árvore de objetos de um aplicativo é construída e usada em tempo de execução, os objetos não podem existir em vários locais da árvore. Internamente, o sistema de recursos cria cópias de valores de recursos a serem utilizadas no gráfico de objeto de seu aplicativo quando cada recurso XAML é solicitado.
 
 Um [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) e a XAML do Windows Runtime em geral dão suporte a esses objetos para uso compartilhável:
 
@@ -430,7 +430,7 @@ Um [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794
 -   [Matrix](https://msdn.microsoft.com/library/windows/apps/br210127) e [Matrix3D](https://msdn.microsoft.com/library/windows/apps/br243266)
 -   Valores [Point](https://msdn.microsoft.com/library/windows/apps/br225870)
 -   Determinadas estruturas relacionadas à interface do usuário, como [Thickness](https://msdn.microsoft.com/library/windows/apps/br208864) e [CornerRadius](https://msdn.microsoft.com/library/windows/apps/br242343)
--   [Tipos de dados XAML intrínsecos](https://msdn.microsoft.com/library/windows/apps/mt186448)
+-   [Tipos de dados intrínsecos de XAML](https://msdn.microsoft.com/library/windows/apps/mt186448)
 
 Também é possível usar tipos personalizados como um recurso compartilhável, se você seguir os padrões de implementação necessários. Você define essas classes em seu código de suporte (ou em componentes de tempo de execução que você inclui) e, depois, instancia essas classes na XAML como um recurso. Exemplos: fontes de dados de objeto e implementações [IValueConverter](https://msdn.microsoft.com/library/windows/apps/br209903) para vinculação de dados.
 
@@ -449,17 +449,17 @@ O [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794)
 
 A maior parte dos cenários de um [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) é manipulada exclusivamente na XAML. Você declara o contêiner **ResourceDictionary** e os recursos contidos nele como um arquivo XAML ou conjunto de nós XAML em um arquivo de definição da interface do usuário. E, em seguida, você usa referências de recurso XAML para solicitar esses recursos de outras partes do XAML. Ainda assim, existem alguns cenários em que o seu aplicativo talvez precise ajustar o conteúdo de um **ResourceDictionary** usando o código que é executado enquanto o aplicativo está em execução, ou pelo menos consultar o conteúdo de um **ResourceDictionary** para ver se um recurso já está definido. Essas chamadas de código são feitas em uma instância de **ResourceDictionary**, portanto, recupere primeiro uma delas seja um **ResourceDictionary** imediato, em algum lugar da árvore de objetos obtendo [FrameworkElement.Resources](https://msdn.microsoft.com/library/windows/apps/br208740) ou `Application.Current.Resources`.
 
-No código de C\# ou do Microsoft Visual Basic, você pode referenciar um recurso de um determinado [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) usando o indexador ([Item](https://msdn.microsoft.com/library/windows/apps/jj603134)). Um **ResourceDictionary** é um dicionário de cadeias de caracteres inseridas, portanto, o indexador usa a chave de cadeia de caracteres em vez de um número inteiro. Em extensões de componente VisualC + + (C++ c++ /CX) de código, use a [pesquisa](https://msdn.microsoft.com/library/windows/apps/br208800).
+Em C\# ou o código do Microsoft Visual Basic, você pode fazer referência a um recurso em um determinado [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) usando o indexador ([Item](https://msdn.microsoft.com/library/windows/apps/jj603134)). Um **ResourceDictionary** é um dicionário de cadeias de caracteres inseridas, portanto, o indexador usa a chave de cadeia de caracteres em vez de um número inteiro. Nas extensões de componente do Visual C++ (C + + c++ /CLI CX) de código, use [pesquisa](https://msdn.microsoft.com/library/windows/apps/br208800).
 
-Ao usar um código para examinar ou mudar um [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794), o comportamento para APIs como [Lookup](https://msdn.microsoft.com/library/windows/apps/br208800) ou [Item](https://msdn.microsoft.com/library/windows/apps/jj603134) não passa de recursos imediatos para recursos do aplicativo, o que é um comportamento do analisador de XAML que só acontece enquanto páginas XAML são carregadas. No tempo de execução, o escopo para chaves é autossuficiente na instância de **ResourceDictionary** que você está usando no momento. Entretanto, esse escopo não se estende em [MergedDictionaries](https://msdn.microsoft.com/library/windows/apps/br208801).
+Ao usar um código para examinar ou mudar um [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794), o comportamento para APIs como [Lookup](https://msdn.microsoft.com/library/windows/apps/br208800) ou [Item](https://msdn.microsoft.com/library/windows/apps/jj603134) não passa de recursos imediatos para recursos do aplicativo, o que é um comportamento do analisador de XAML que só acontece enquanto páginas XAML são carregadas. Em tempo de execução, o escopo para chaves é autossuficiente na instância de **ResourceDictionary** que você está usando no momento. Entretanto, esse escopo não se estende em [MergedDictionaries](https://msdn.microsoft.com/library/windows/apps/br208801).
 
 Além disso, se você solicitar uma chave não existente no [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794), talvez não ocorra nenhum erro; o valor de retorno poderá simplesmente ser fornecido como **null**. Porém, você ainda poderá receber um erro se tentar usar o **null** retornado como um valor. O erro seria gerado pelo setter da propriedade, e não pela sua chamada **ResourceDictionary**. A única maneira de evitar um erro seria se a propriedade aceitasse **null** como um valor válido. Observe como esse comportamento contrasta com o comportamento de pesquisa XAML no tempo de análise da XAML; uma falha na resolução da chave fornecida pela XAML no tempo de análise resulta em um erro de análise de XAML, mesmo nos casos em que a propriedade poderia ter aceito **null**.
 
-Dicionários de recursos mesclados são incluídos no escopo de índice do dicionário de recursos principal que referencia o dicionário mesclado no tempo de execução. Em outras palavras, você pode usar **Item** ou [Lookup](https://msdn.microsoft.com/library/windows/apps/br208800) do dicionário principal para localizar qualquer objeto que na verdade foi definido no dicionário mesclado. Neste caso, o comportamento de pesquisa se parece com o comportamento de pesquisa XAML em tempo de análise: se houver vários objetos nos dicionários mesclados e cada um deles tiver a mesma chave, o objeto do último dicionário adicionado será retornado.
+Dicionários de recursos mesclados são incluídos no escopo de índice do dicionário de recursos principal que referencia o dicionário mesclado em tempo de execução. Em outras palavras, você pode usar **Item** ou [Lookup](https://msdn.microsoft.com/library/windows/apps/br208800) do dicionário principal para localizar qualquer objeto que na verdade foi definido no dicionário mesclado. Neste caso, o comportamento de pesquisa se parece com o comportamento de pesquisa XAML em tempo de análise: se houver vários objetos nos dicionários mesclados e cada um deles tiver a mesma chave, o objeto do último dicionário adicionado será retornado.
 
-É possível adicionar itens a um [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) existente chamando **Add** (C\# ou Visual Basic) ou [Insert](https://msdn.microsoft.com/library/windows/apps/br208799) (C++/CX). Você pode adicionar os itens a recursos imediatos ou recursos do aplicativo. Cada uma dessas chamadas de API exige uma chave, o que atende à exigência de que cada item em um **ResourceDictionary** deve ter uma chave. Entretanto, os itens adicionados a um **ResourceDictionary** em tempo de execução não são relevantes para referências a recursos XAML. A pesquisa necessária para referências de recurso XAML acontece quando essa XAML é analisada pela primeira vez quando o aplicativo é carregado (ou um tema alterado é detectado). Os recursos adicionados a coleções no tempo de execução não estavam disponíveis então, e alterar o **ResourceDictionary** não invalida um recurso já recuperado dele, mesmo que você altere o valor desse recurso.
+Você tem permissão para adicionar itens a um existente [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) chamando **Add** (C\# ou o Visual Basic) ou [inserir](https://msdn.microsoft.com/library/windows/apps/br208799) (C + + c++ /CLI CX). Você pode adicionar os itens a recursos imediatos ou recursos do aplicativo. Cada uma dessas chamadas de API exige uma chave, o que atende à exigência de que cada item em um **ResourceDictionary** deve ter uma chave. Entretanto, os itens adicionados a um **ResourceDictionary** em tempo de execução não são relevantes para referências a recursos XAML. A pesquisa necessária para referências de recurso XAML acontece quando essa XAML é analisada pela primeira vez quando o aplicativo é carregado (ou um tema alterado é detectado). Os recursos adicionados a coleções no tempo de execução não estavam disponíveis então, e alterar o **ResourceDictionary** não invalida um recurso já recuperado dele, mesmo que você altere o valor desse recurso.
 
-Também é possível remover itens de um [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) em tempo de execução, fazer cópias parcial ou total dos itens ou executar outras operações. A listagem de membros do **ResourceDictionary** indica quais APIs estão disponíveis. Observe que como o **ResourceDictionary** tem uma API projetada para dar suporte a suas interfaces de coleção adjacentes, as opções da sua API são diferentes, dependendo de você estar usando C\# ou Visual Basic, em vez de C++/CX.
+Também é possível remover itens de um [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) em tempo de execução, fazer cópias parcial ou total dos itens ou executar outras operações. A listagem de membros do **ResourceDictionary** indica quais APIs estão disponíveis. Observe que, como **ResourceDictionary** tem uma API projetada para dar suporte a suas interfaces de coleção subjacente, suas opções de API são diferentes dependendo se você estiver usando o C\# ou Visual Basic versus C + + c++ /CLI CX.
 
 ## <a name="resourcedictionary-and-localization"></a>ResourceDictionary e localização
 
@@ -477,9 +477,9 @@ Em cenários avançados, você pode implementar uma classe que pode ter um compo
 * [Visão geral do XAML](https://msdn.microsoft.com/library/windows/apps/mt185595)
 * [Extensão de marcação StaticResource](../../xaml-platform/staticresource-markup-extension.md)
 * [Extensão de marcação ThemeResource](../../xaml-platform/themeresource-markup-extension.md)
-* [Recursos de temas XAML](xaml-theme-resources.md)
+* [Recursos de tema do XAML](xaml-theme-resources.md)
 * [Aplicando estilos a controles](xaml-styles.md)
-* [Atributo x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787)
+* [atributo X:Key](https://msdn.microsoft.com/library/windows/apps/mt204787)
 
  
 

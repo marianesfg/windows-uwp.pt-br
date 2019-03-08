@@ -6,11 +6,11 @@ ms.date: 02/05/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 421fb7c973c1aaa4e9e1924548d7f11439fd5350
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115833"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632861"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>Novidades dos documentos de desenvolvedor do Windows em fevereiro de 2018
 

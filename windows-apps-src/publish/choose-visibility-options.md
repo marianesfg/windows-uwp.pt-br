@@ -1,23 +1,23 @@
 ---
-Description: Set restrictions on how your app can be discovered and acquired, including whether people can find your app in the Store or see its Store listing at all.
+Description: Definir restrições sobre como seu aplicativo pode ser descoberto e adquirido, incluindo se as pessoas podem encontrar seu aplicativo no Store ou consulte seu Store listando em todos os.
 title: Escolher as opções de visibilidade
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, visibilidade, audiência particular, disponível, detectável
 ms.localizationpriority: medium
 ms.openlocfilehash: a002037e85f179e4a2dbe3dfdaf4bc3579e110e4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921119"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601731"
 ---
 # <a name="choose-visibility-options"></a>Escolher as opções de visibilidade
 
 
 A seção **Visibilidade** da [página Preço e disponibilidade](set-app-pricing-and-availability.md) permite que você defina restrições sobre como seu app pode ser descoberto e adquirido. Isso lhe dá a opção de especificar se as pessoas podem encontrar seu app na Store ou ver sua listagem da Store.
 
-Há duas seções separadas dentro da seção Visibilidade: **Audiência** e **Detectabilidade**. 
+Há duas seções separadas dentro da seção de visibilidade: **Público-alvo** e **detectabilidade**. 
 
 ## <a name="audience"></a>Audiência
 
@@ -58,7 +58,7 @@ Aqui estão algumas coisas importantes para ter em mente ao escolher distribuir 
 - Seu app não estará disponível por meio da Microsoft Store para Empresas e/ou a Microsoft Store para Educação, independentemente de suas configurações de licenciamento organizacional, até mesmo para as pessoas em sua audiência particular.
 - Embora a Store garanta que seu app só esteja visível e disponível para as pessoas conectadas com uma conta da Microsoft adicionada à sua audiência particular, não podemos impedir que essas pessoas compartilhem informações ou capturas de tela fora de sua audiência particular. Quando a confidencialidade for essencial, certifique-se de que a sua audiência particular inclua apenas as pessoas que você confia que não compartilharão os detalhes de seu app com outras pessoas.
 - Informe aos seus testadores como eles podem enviar comentários para você. Você provavelmente não deseja que eles deixem comentários no Hub de Feedback, porque qualquer outro cliente poderia vê-los. Considere a inclusão de um link para que eles possam enviar emails ou fazer comentários de alguma outra forma.
-- As avaliações escritas por pessoas em seu público particular estarão disponíveis para exibição. No entanto, essas análises não serão publicadas na listagem da Store do seu app, mesmo depois que o envio for movido para **Audiência pública**. Você pode ler avaliações escritas por seu público particular exibindo o [relatório de avaliações](reviews-report.md), mas você não pode baixar esses dados ou use a [API de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md) para acessar programaticamente essas avaliações.
+- As avaliações escritas por pessoas em seu público particular estarão disponíveis para exibição. No entanto, essas análises não serão publicadas na listagem da Store do seu app, mesmo depois que o envio for movido para **Audiência pública**. Você pode ler as revisões escritas por seu público-alvo privada por meio da exibição a [examina o relatório](reviews-report.md), mas você não pode baixar esses dados ou usar o [API de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md) programaticamente acessar essas revisões.
 - Quando você move um app de **Audiência particular** para **Audiência pública**, a **Data do lançamento** mostrada na listagem da Store será a data em que ele foi publicado pela primeira vez para a audiência pública.
 
 ## <a name="discoverability"></a>Detectabilidade
@@ -71,7 +71,7 @@ As seleções na seção **Detectabilidade** indicam como os clientes podem desc
 
 ### <a name="make-this-product-available-and-discoverable-in-the-store"></a>Disponibilizar este produto e torná-lo detectável na Store
 
-Essa é a opção padrão. Deixe esta opção selecionada se quiser que seu aplicativo para ser listado na loja para os clientes encontrarem via link direto do aplicativo e/ou por outros métodos, como pesquisa, navegação e inclusão em listas comissionadas. 
+Essa é a opção padrão. Deixe essa opção se você quiser que seu aplicativo seja listado na Store para os clientes encontrarem por meio do link de direto do aplicativo e/ou por outros métodos, incluindo pesquisa, navegação e inclusão em listas. 
 
 ### <a name="make-this-product-available-but-not-discoverable-in-the-store"></a>Disponibilizar este produto mas não torná-lo detectável na Store
 
@@ -86,11 +86,11 @@ Você também deve escolher uma das seguintes opções para especificar como seu
 >[!IMPORTANT]
 > Cada uma dessas opções limita as versões de sistema operacional no qual os clientes podem adquirir o aplicativo. Leia as descrições atentamente para garantir que você sabe quais versões do sistema operacional são compatíveis. 
 
-- **Somente link direto: qualquer cliente com um link direto para a listagem do produto pode baixá-lo, exceto no Windows 8.x.** Qualquer cliente que obtiver a listagem do seu app por meio de um link direto poderá baixá-lo em dispositivos que executam o Windows 10 ou em dispositivos que executam o Windows Phone 8.1 ou versões anteriores (mas não em dispositivos que executam o Windows 8.x).
-- **Parar a aquisição: os clientes com um link direto poderão ver a listagem da Loja do produto, mas só poderão baixá-lo se já tiverem adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10.** Mesmo que um cliente tenha um link direto, não é possível baixar o aplicativo, a menos que ele tenha um [código promocional](generate-promotional-codes.md) e esteja usando um dispositivo Windows 10. Se um cliente tiver um código promocional, ele poderá usar o link e o código para acessar seu app gratuitamente (somente no Windows 10), mesmo que você não esteja oferecendo-o a outros clientes. Não há nenhuma outra forma de obter seu aplicativo a não ser por meio de um código promocional.
+- **Link direto apenas: Qualquer cliente com um link direto para a listagem do produto pode baixá-lo, exceto no Windows 8. x.** Qualquer cliente que obtiver a listagem do seu app por meio de um link direto poderá baixá-lo em dispositivos que executam o Windows 10 ou em dispositivos que executam o Windows Phone 8.1 ou versões anteriores (mas não em dispositivos que executam o Windows 8.x).
+- **Pare a aquisição de: Qualquer cliente com um link direto pode ver a listagem de Store do produto, mas eles podem baixá-lo somente se o produto antes, de propriedade ou tiver um código promocional e estiver usando um dispositivo Windows 10.** Mesmo que um cliente tenha um link direto, não é possível baixar o aplicativo, a menos que ele tenha um [código promocional](generate-promotional-codes.md) e esteja usando um dispositivo Windows 10. Se um cliente tiver um código promocional, ele poderá usar o link e o código para acessar seu app gratuitamente (somente no Windows 10), mesmo que você não esteja oferecendo-o a outros clientes. Não há nenhuma outra forma de obter seu aplicativo a não ser por meio de um código promocional.
 
 > [!TIP]
-> Se você desejar parar completamente de oferecer um aplicativo para quaisquer novos clientes, é necessário selecionar **Tornar aplicativo indisponível** na página de visão geral. Depois que você confirmar que deseja tornar o aplicativo indisponível, em algumas horas ele não estará mais visível na Microsoft Store, e os novos clientes não poderão obtê-lo (exceto com um [código promocional](generate-promotional-codes.md) e se estiver no dispositivo Windows 10). Esta ação substituirá as seleções de **Visibilidade** no seu envio. Para disponibilizar o aplicativo para novos clientes novamente (de acordo com seleções de **Visibilidade**), você pode a qualquer momento clicar em **Tornar aplicativo disponível** na página de visão geral do aplicativo. Para obter mais informações, consulte [Como remover um aplicativo da Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+> Se você desejar parar completamente de oferecer um aplicativo para quaisquer novos clientes, é necessário selecionar **Tornar aplicativo indisponível** na página de visão geral. Depois que você confirmar que deseja tornar o aplicativo indisponível, em algumas horas ele não estará mais visível na Microsoft Store, e os novos clientes não poderão obtê-lo (exceto com um [código promocional](generate-promotional-codes.md) e se estiver no dispositivo Windows 10). Esta ação substituirá as seleções de **Visibilidade** no seu envio. Para disponibilizar o aplicativo para novos clientes novamente (de acordo com seleções de **Visibilidade**), você pode a qualquer momento clicar em **Tornar aplicativo disponível** na página de visão geral do aplicativo. Para obter mais informações, consulte [Removendo um aplicativo da Loja](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
 
 

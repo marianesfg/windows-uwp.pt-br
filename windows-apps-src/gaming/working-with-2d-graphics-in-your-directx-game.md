@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, 2d, elementos gráficos
 ms.localizationpriority: medium
 ms.openlocfilehash: 1154abc4305307d87f15fbe0c0e5461e3a15e27e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924450"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632651"
 ---
 # <a name="2d-graphics-for-directx-games"></a>Elementos gráficos 2D para jogos DirectX
 
@@ -32,7 +32,7 @@ No DirectX, os gráficos 2D fazem parte do pipeline 3D. Há uma variedade muito 
 
 Consulte alguns conceitos básicos que você deve conhecer ao iniciar o desenvolvimento de gráficos 2D.
 
--   Pixels e coordenadas de rasterização. Um pixel é um ponto único em uma exibição de rasterização e tem seu próprio para de coordenadas (x, y) indicando seu local na exibição (O termo "pixel" é frequentemente usado alternadamente entre os pixels físicos que compõem a exibição e os elementos de memória endereçáveis usados para manter os valores de cor e alfa dos pixels antes de serem enviados para a exibição). A rasterização é tratada pelas APIs como uma grade retangular de elementos de pixel, que muitas vezes tem uma correspondência de 1:1 com a grade de pixels física de uma exibição. Os sistemas de coordenadas de rasterização começam na parte superior esquerda, com um pixel em (0, 0), no canto superior mais à esquerda na grade.
+-   Pixels e coordenadas de rasterização. Um pixel é um ponto único em uma exibição de rasterização e tem seu próprio para de coordenadas (x, y) indicando seu local na exibição (O termo "pixel" é geralmente usado alternadamente entre os pixels físicos que compõem a exibição e os elementos de memória endereçável usados para manter os valores alfa e cor de pixels antes de serem enviados para a exibição.) A varredura é tratada por APIs, como uma grade retangular de elementos de pixel, que geralmente tem uma correspondência 1:1 com a grade de pixels físicos de uma exibição. Os sistemas de coordenadas de rasterização começam na parte superior esquerda, com um pixel em (0, 0), no canto superior mais à esquerda na grade.
 -   Os gráficos de bitmap (às vezes chamados de gráficos de rasterização) são elementos gráficos representados como uma grade retangular de valores de pixel. Os sprites (matrizes de pixels processadas, gerenciadas de modo independente da rasterização) são um tipo de gráfico de bitmap. Normalmente, são usados para personagens ativos ou objetos animados independentes do plano de fundo em um jogo. Os vários quadros de animação de um sprite são representados como coleções de bitmaps chamadas de "folhas" ou "lotes". Os planos de fundo são objetos de bitmap maiores com uma resolução igual ou maior à da rasterização da tela. Muitas vezes, eles atuam como cenário(s) do ambiente de um jogo.
 -   Os gráficos vetoriais são aqueles que usam primitivas geométricas, como pontos, linhas, círculos e polígonos, para definir objetos 2D. Eles são representados não como matrizes de pixels, mas como equações matemáticas que os definem em um espaço 2D. Eles não possuem necessariamente uma correspondência de 1:1 com a grade de pixels da exibição e devem ser transformados (a partir do sistema de coordenadas no qual você os renderizou) no sistema de coordenadas de rasterização da exibição.
 -   Conversão é pegar um ponto ou vértice e calcular seu novo local no mesmo sistema de coordenadas.
@@ -56,6 +56,6 @@ Com relação ao visual, um trabalho de arte bem feito será seu maior trunfo. E
 ## <a name="reference"></a>Referência
 
 
--   [Visão geral de Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987)
--   [Guia de início rápido de Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd535473)
--   [Visão geral de interoperabilidade entre Direct2D e Direct3D](https://msdn.microsoft.com/library/windows/desktop/dd370966)
+-   [Visão geral do Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987)
+-   [Início rápido do Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd535473)
+-   [Visão geral sobre interoperabilidade Direct2D e do Direct3D](https://msdn.microsoft.com/library/windows/desktop/dd370966)

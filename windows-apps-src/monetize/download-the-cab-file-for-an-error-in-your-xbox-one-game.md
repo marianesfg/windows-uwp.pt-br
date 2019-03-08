@@ -1,22 +1,22 @@
 ---
-description: Use este método na API de análise da Microsoft Store para baixar o arquivo CAB para um erro em seu jogo Xbox One.
-title: Baixar o arquivo CAB para um erro em seu jogo Xbox One
+description: Use esse método na API de análise de Microsoft Store para baixar o arquivo CAB para um erro em seu jogo Xbox One.
+title: Baixar o arquivo CAB de um erro em seu jogo do Xbox One
 ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, API de análise da Microsoft Store, baixar CAB
 ms.localizationpriority: medium
 ms.openlocfilehash: 736219533a254e6380c10600e97f707f15e37de6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923353"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604321"
 ---
-# <a name="download-the-cab-file-for-an-error-in-your-xbox-one-game"></a>Baixar o arquivo CAB para um erro em seu jogo Xbox One
+# <a name="download-the-cab-file-for-an-error-in-your-xbox-one-game"></a>Baixar o arquivo CAB de um erro em seu jogo do Xbox One
 
-Use este método na API de análise da Microsoft Store para baixar o arquivo CAB que está associado um erro específico em seu jogo Xbox One que foi inserido por meio do Portal de desenvolvedor do Xbox (XDP) e está disponível no painel do Centro de parceiro de análise XDP. Esse método pode apenas baixar o arquivo CAB para um erro que ocorreu nos últimos 30 dias.
+Use esse método na API de análise de Microsoft Store para baixar o arquivo CAB que é associado um determinado erro em seu jogo Xbox One que foi ingerido por meio do Portal de desenvolvedor do Xbox (XDP) e está disponível no painel XDP Analytics Partner Center. Esse método só pode baixar o arquivo CAB para um erro que ocorreram nos últimos 30 dias.
 
-Antes de usar esse método, primeiro você deve usar o método [obter detalhes de um erro em seu jogo Xbox One](get-details-for-an-error-in-your-xbox-one-game.md) para recuperar a ID do arquivo CAB que você deseja baixar.
+Antes de usar esse método, primeiro você deve usar o [obter detalhes sobre um erro em seu Xbox One jogo](get-details-for-an-error-in-your-xbox-one-game.md) método para recuperar a ID do arquivo CAB que você deseja baixar.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -25,7 +25,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](access-analytics-data-using-windows-store-services.md#prerequisites) para a API de análise da Microsoft Store.
 * [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
-* Obtenha a ID do arquivo CAB que você deseja baixar. Para obter essa ID, use o método [obter detalhes de um erro em seu Xbox One jogo](get-details-for-an-error-in-your-xbox-one-game.md) para recuperar os detalhes de um erro específico em seu aplicativo e use o valor de **cabId** no corpo da resposta desse método.
+* Obtenha a ID do arquivo CAB que você deseja baixar. Para obter essa ID, use o [obter detalhes sobre um erro em seu Xbox One jogo](get-details-for-an-error-in-your-xbox-one-game.md) método para recuperar detalhes de um erro específico no seu aplicativo e usar o **cabId** valor no corpo da resposta do método.
 
 ## <a name="request"></a>Solicitação
 
@@ -41,15 +41,15 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  |
 |---------------|--------|---------------|------|
-| applicationId | string | A ID do produto do jogo Xbox One para o qual você está baixando o arquivo CAB. Para obter a ID do produto do jogo, navegue até seu jogo no Portal de Desenvolvedor do Xbox (XDP) e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de integridade do relatório de análise do Partner Center do Windows, a ID do produto está incluída no arquivo. tsv. |  Sim  |
-| cabId | string | A ID exclusiva do arquivo CAB que você deseja baixar. Para obter essa ID, use o método [obter detalhes de um erro em seu Xbox One jogo](get-details-for-an-error-in-your-xbox-one-game.md) para recuperar os detalhes de um erro específico em seu aplicativo e use o valor de **cabId** no corpo da resposta desse método. |  Sim  |
+| applicationId | cadeia de caracteres | A ID do produto do jogo Xbox One para o qual você está baixando o arquivo CAB. Para obter a ID do produto do jogo, navegue até seu jogo no Portal de Desenvolvedor do Xbox (XDP) e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de integridade do relatório de análise de centro de parceiros do Windows, a ID do produto está incluída no arquivo. tsv. |  Sim  |
+| cabId | cadeia de caracteres | A ID exclusiva do arquivo CAB que você deseja baixar. Para obter essa ID, use o [obter detalhes sobre um erro em seu Xbox One jogo](get-details-for-an-error-in-your-xbox-one-game.md) método para recuperar detalhes de um erro específico no seu aplicativo e usar o **cabId** valor no corpo da resposta do método. |  Sim  |
 
  
 ### <a name="request-example"></a>Exemplo de solicitação
@@ -67,7 +67,7 @@ Esse método retorna um código de resposta 302 (redirecionamento) e o cabeçalh
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Acessar dados analíticos usando serviços da Microsoft Store](access-analytics-data-using-windows-store-services.md)
-* [Obter dados de relatório para seu Xbox One erros jogo](get-error-reporting-data-for-your-xbox-one-game.md)
-* [Obter detalhes de um erro em seu Xbox One jogo](get-details-for-an-error-in-your-xbox-one-game.md)
-* [Obter o rastreamento de pilha de um erro em seu Xbox One jogo](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)
+* [Dados de análise de acesso usando os serviços da Microsoft Store](access-analytics-data-using-windows-store-services.md)
+* [Obter dados relatórios de erros para o seu Xbox One jogo](get-error-reporting-data-for-your-xbox-one-game.md)
+* [Obter detalhes sobre um erro em seu Xbox One jogo](get-details-for-an-error-in-your-xbox-one-game.md)
+* [Obter o rastreamento de pilha para um erro em seu Xbox One jogo](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)

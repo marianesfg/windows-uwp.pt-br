@@ -1,21 +1,21 @@
 ---
 title: Monitorar o progresso e a conclusão de tarefas em segundo plano
-description: Saiba como o app pode reconhecer o progresso e a conclusão relatados por uma tarefa em segundo plano.
+description: Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por uma tarefa em segundo plano.
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 ms.date: 07/06/2018
 ms.topic: article
-keywords: Windows 10, uwp, tarefa em segundo plano
+keywords: o Windows 10, uwp, tarefas em segundo plano
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
 - cpp
 ms.openlocfilehash: 5417a2cded6dab98747569acc4e6e92356361482
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050819"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595811"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>Monitorar o progresso e a conclusão de tarefas em segundo plano
 
@@ -29,14 +29,14 @@ Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por
 
 O progresso e a conclusão da tarefa em segundo plano podem ser monitorados pelo código do aplicativo. Para fazer isso, o aplicativo assina eventos das tarefas em segundo plano que ele registrou no sistema.
 
-- Este tópico considera que você tem um aplicativo que registra tarefas em segundo plano. Para começar a criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
+- Este tópico considera que você tem um aplicativo que registra tarefas em segundo plano. Para começar a criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md) ou [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
 
 ## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>Criar um manipulador de eventos para gerenciar as tarefas em segundo plano concluídas
 
 ### <a name="step-1"></a>Etapa 1
-Crie uma função de manipulador de eventos para gerenciar as tarefas em segundo plano concluídas. Este código deve seguir um volume de memória específico, o que leva um objeto [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) e um objeto [**BackgroundTaskCompletedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224778) .
+Crie uma função de manipulador de eventos para gerenciar as tarefas em segundo plano concluídas. Esse código deve seguir um volume específico, o que leva um [ **IBackgroundTaskRegistration** ](https://msdn.microsoft.com/library/windows/apps/br224803) objeto e uma [ **BackgroundTaskCompletedEventArgs** ](https://msdn.microsoft.com/library/windows/apps/br224778) objeto.
 
-Use o seguinte volume de memória para o método de manipulador de eventos de tarefa do **OnCompleted** em segundo plano.
+Use o seguinte volume para o **OnCompleted** método do manipulador de eventos de tarefa do plano de fundo.
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
@@ -287,16 +287,16 @@ void SampleBackgroundTask::OnNavigatedTo(NavigationEventArgs^ e)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md).
-* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
-* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
-* [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
+* [Criar e registrar uma tarefa em segundo plano do out-of-process](create-and-register-a-background-task.md)
+* [Declare as tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Lidar com uma tarefa em segundo plano foi cancelada](handle-a-cancelled-background-task.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
-* [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
+* [Defina as condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
 * [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar suspender, continuar e eventos em aplicativos UWP do plano de fundo (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)

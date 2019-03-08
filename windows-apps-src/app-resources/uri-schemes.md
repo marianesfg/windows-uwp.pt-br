@@ -1,5 +1,5 @@
 ---
-Description: There are several URI (Uniform Resource Identifier) schemes that you can use to refer to files that come from your app's package, your app's data folders, or the cloud. You can also use a URI scheme to refer to strings loaded from your app's Resources Files (.resw).
+Description: Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar para fazer referência aos arquivos que vêm no conjunto de aplicativo, nas pastas de dados do seu aplicativo ou na nuvem. Você também pode usar um esquema de URI para fazer referência a cadeias de caracteres carregadas dos arquivos de recursos (.resw) do app.
 title: Esquemas de URI
 template: detail.hbs
 ms.date: 10/16/2017
@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: b449179468d26c357e69ad1d8868004cadd6e2fa
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048343"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632051"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
-Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar para fazer referência aos arquivos que vêm no conjunto de aplicativo, nas pastas de dados do seu aplicativo ou na nuvem. Você também pode usar um esquema de URI para fazer referência a cadeias de caracteres carregadas de seus arquivos de recursos (.resw). Você pode usar esses esquemas de URI em seu código, em sua marcação XAML, no manifesto do conjunto de aplicativo ou em seu bloco e modelos de notificação do sistema.
+Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar para fazer referência aos arquivos que vêm no conjunto de aplicativo, nas pastas de dados do seu aplicativo ou na nuvem. Você também pode usar um esquema de URI para fazer referência a cadeias de caracteres carregadas dos arquivos de recursos (.resw) do app. Você pode usar esses esquemas de URI em seu código, em sua marcação XAML, no manifesto do conjunto de aplicativo ou em seu bloco e modelos de notificação do sistema.
 
 ## <a name="common-features-of-the-uri-schemes"></a>Recursos comuns dos esquemas de URI
 
@@ -41,11 +41,11 @@ A comparação ocorre byte por byte após a normalização de todos os component
 
 Todos os esquemas de URI descritos neste tópico seguem as regras típicas de URI (RFC 3986) para normalização e recursos de recuperação de esquemas. A forma normalizada desses URIs mantém a capitalização e faz a decodificação percentual dos caracteres não reservados RFC 3986.
 
-Em todos os esquemas URI descritos neste tópico, *esquema*, *autoridade* e *caminho* não diferenciam maiúsculas de minúsculas por padrão, ou são processados pelo sistema de uma forma que não diferencia maiúsculas de minúsculas. **Observação** A única exceção a essa regra é a *autoridade* de `ms-resource`, que diferencia maiúsculas de minúsculas.
+Para todos os esquemas URI descritos neste tópico, *esquema*, *autoridade* e *caminho* diferenciam maiúsculas de minúsculas por padrão, ou são processados pelo sistema de uma forma que diferencie maiúsculas de minúsculas. **Observação** A única exceção a essa regra é a *autoridade* de `ms-resource`, que diferencia maiúsculas de minúsculas.
 
 ## <a name="ms-appx-and-ms-appx-web"></a>ms-appx e ms-appx-web
 
-Use o esquema de URI `ms-appx` ou `ms-appx-web` para fazer referência a um arquivo que vem do conjunto de aplicativo (veja [Empacotando aplicativos](../packaging/index.md)). Arquivos em seu pacote de aplicativo geralmente são imagens estáticas, dados, código e arquivos de layout. O esquema `ms-appx-web` acessa os mesmos arquivos `ms-appx`, mas no compartimento da Web. Para obter exemplos e mais informações, consulte [Referenciar uma imagem ou outro caminho da marcação e código de XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code).
+Use o esquema de URI `ms-appx` ou `ms-appx-web` para fazer referência a um arquivo que vem do conjunto de aplicativo (veja [Empacotando aplicativos](../packaging/index.md)). Arquivos em seu pacote de aplicativo geralmente são imagens estáticas, dados, código e arquivos de layout. O esquema `ms-appx-web` acessa os mesmos arquivos que `ms-appx`, mas no compartimento da Web. Para obter exemplos e mais informações, consulte [Referenciar uma imagem ou outro caminho da marcação e código de XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code).
 
 ### <a name="scheme-name-ms-appx-and-ms-appx-web"></a>Nome de esquema (ms-appx e ms-appx-web)
 
@@ -253,7 +253,7 @@ Para obter exemplos e mais informações, consulte [Localizar cadeias de caracte
 
 O componente de caminho de `ms-resource` diferencia maiúsculas de minúsculas, como os URIs genéricos. No entanto, a recuperação subjacente faz um [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) com *ignoreCase* definido como `true`.
 
-O formato normalizado do URI mantém a capitalização e faz a decodificação (um símbolo de "%" seguido pela representação hexadecimal de dois dígitos) RFC 3986 dos caracteres. Os caracteres "?", "#", "/", "*" e '”' (o caractere de aspas duplas) devem ter codificação por percentual em um caminho para representar dados como um arquivo ou nomes de pasta. Todos os caracteres codificados percentuais são decodificados antes da recuperação. Dessa forma recuperar um recurso de cadeia de caracteres de um arquivo de recursos denominado `Hello#World.resw`, use esse URI.
+O formato normalizado do URI mantém a capitalização e faz a decodificação (um símbolo de "%" seguido pela representação hexadecimal de dois dígitos) RFC 3986 dos caracteres. Os caracteres "?", "#", "/", "*" e '”' (o caractere de aspas duplas) devem ter codificação por percentual em um caminho para representar dados como um arquivo ou nomes de pasta. Todos os caracteres codificados percentuais são decodificados antes da recuperação. Portanto, para recuperar um recurso de cadeia de caracteres de um arquivo de recursos chamado `Hello#World.resw`, usar este URI.
 
 ```xml
 ms-resource:///Hello%23World/String1
@@ -267,10 +267,10 @@ Os desenvolvedores de componentes específicos dispostos em camadas acima desta 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [URI (Uniform Resource Identifier): sintaxe genérica](https://go.microsoft.com/fwlink/p/?LinkId=263444)
+* [Uniform Resource Identifier (URI): Sintaxe genérica](https://go.microsoft.com/fwlink/p/?LinkId=263444)
 * [Empacotando aplicativos](../packaging/index.md)
-* [Fazer referência a uma imagem ou outro ativo no código e na marcação XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
-* [Armazenar e recuperar configurações e outros dados de aplicativo](../design/app-settings/store-and-retrieve-app-data.md)
-* [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](localize-strings-ui-manifest.md)
-* [Sistema de Gerenciamento de Recursos](https://msdn.microsoft.com/library/windows/apps/jj552947)
-* [Suporte a blocos e notificações do sistema para idioma, escala e alto contraste](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)
+* [Fazer referência a uma imagem ou outros ativos de código e marcação XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
+* [Armazene e recupere configurações e outros dados de aplicativo](../design/app-settings/store-and-retrieve-app-data.md)
+* [Localizar cadeias de caracteres em seu manifesto de pacote da interface do usuário e aplicativo](localize-strings-ui-manifest.md)
+* [Sistema de gerenciamento de recursos](https://msdn.microsoft.com/library/windows/apps/jj552947)
+* [Suporte à notificação de bloco e notificação do sistema para o idioma, escala e alto contraste](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

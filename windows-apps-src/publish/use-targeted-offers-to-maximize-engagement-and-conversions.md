@@ -1,16 +1,16 @@
 ---
-Description: Target specific segments of your customers with personalized content to increase engagement, retention, and monetization.
+Description: Direcione segmentos específicos dos seus clientes com conteúdo personalizado para aumentar o envolvimento, a retenção e a monetização.
 title: Usar ofertas direcionadas para maximizar o envolvimento e as conversões
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, ofertas direcionadas, ofertas, notificações
 ms.localizationpriority: medium
 ms.openlocfilehash: e894e81b560f071cf42198f09aad0b2b82eae2cd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934581"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606151"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>Usar ofertas direcionadas para maximizar o envolvimento e as conversões
 
@@ -23,16 +23,16 @@ Direcione segmentos específicos dos seus clientes com conteúdo atrativo e pers
 
 Basicamente, você precisa tomar três medidas para usar ofertas direcionadas:
 
-1. **Crie a oferta no [Partner Center](https://partner.microsoft.com/dashboard).** Navegue até a página **Interagir > Ofertas direcionadas** para criar ofertas. Veja mais informações sobre esse processo a seguir.
-2. **Implemente a experiência de oferta no aplicativo.** Use a *API de ofertas direcionadas da Microsoft Store* no código do seu aplicativo para recuperar as ofertas disponíveis para um determinado usuário. Você também precisará criar a experiência de aplicativo para a oferta direcionada. Para obter mais informações, consulte [Gerenciar ofertas direcionadas usando os serviços da Loja](../monetize/manage-targeted-offers-using-windows-store-services.md).
-3. **Envie seu aplicativo para a Loja.** O aplicativo deve ser publicado com a experiência de oferta no aplicativo para que as ofertas sejam disponibilizadas aos clientes.
+1. **Criar a oferta no [Partner Center](https://partner.microsoft.com/dashboard).** Navegue até a página **Interagir > Ofertas direcionadas** para criar ofertas. Veja mais informações sobre esse processo a seguir.
+2. **Implemente a experiência de oferta no aplicativo.** Use o *Microsoft Store direcionados oferece a API* no código do seu aplicativo para recuperar as ofertas disponíveis para um determinado usuário. Você também precisará criar a experiência de aplicativo para a oferta direcionada. Para obter mais informações, consulte [Gerenciar ofertas direcionadas usando os serviços da Loja](../monetize/manage-targeted-offers-using-windows-store-services.md).
+3. **Envie seu aplicativo para a Store.** O aplicativo deve ser publicado com a experiência de oferta no aplicativo para que as ofertas sejam disponibilizadas aos clientes.
 
 Após concluir essas etapas, os clientes que usam seu aplicativo visualizam as ofertas disponíveis para eles naquele momento, com base na sua participação nos segmentos associados às suas ofertas. Observe que, embora façamos todos os esforços para mostrar todas as ofertas disponíveis aos clientes, ocasionalmente podem ocorrer problemas que afetam a disponibilidade da oferta.
 
 
 ## <a name="to-create-and-send-a-targeted-offer"></a>Para criar e enviar uma oferta direcionada
 
-1.  No [Partner Center](https://partner.microsoft.com/dashboard), expanda **envolver** no menu de navegação esquerdo e selecione **ofertas direcionadas**.
+1.  Na [Partner Center](https://partner.microsoft.com/dashboard), expanda **acionar** no menu de navegação à esquerda, em seguida, selecione **direcionados ofertas**.
 2.  Na página **Ofertas direcionadas**, analise as ofertas disponíveis. Selecione **Criar nova oferta** para qualquer oferta que você deseja implementar.
 
     > [!NOTE]
@@ -42,7 +42,7 @@ Após concluir essas etapas, os clientes que usam seu aplicativo visualizam as o
 4.  Se quiser criar ofertas adicionais, repita as etapas 2 e 3. Você pode implementar o mesmo tipo de oferta mais de uma vez no mesmo aplicativo, desde que você selecione complementos diferentes para cada oferta. Além disso, você pode associar o mesmo complemento a mais de um tipo de oferta.
 5.  Quando terminar de criar as ofertas, clique em **Salvar**.
 
-Depois que você implementou suas ofertas, você pode retornar para a página **ofertas direcionadas** no Partner Center para exibir o total de conversões para cada oferta.
+Depois de implementar suas ofertas, você pode retornar para o **direcionados ofertas** página no Partner Center para exibir as conversões de total para cada oferta.
 
 Se você decidir não usar uma oferta (ou se você não quiser mais usá-la), clique em **Excluir**.
 

@@ -1,6 +1,6 @@
 ---
 title: Nível 2
-description: O suporte de Nível 2 para recursos de streaming adiciona funcionalidades além do Nível 1, como garantir o mipmap de textura não compactado quando o tamanho é de pelo menos uma forma de bloco padrão; instruções do sombreador para fixação de nível de detalhe (LOD) e para a obtenção do status da operação do sombreador; além disso, a leitura de blocos com mapeamentos NULOS tratam esse valor de amostragem como zero.
+description: O suporte do nível 2 a recursos de streaming adiciona funcionalidades além do nível 1, como a garantia de um mipmap de textura não empacotada quando o tamanho é pelo menos uma forma de bloco padrão; instruções de sombreador para fixação de nível de detalhe (LOD) e para a obtenção de status sobre a operação de sombreador; Além disso, a leitura de blocos mapeados em NULL trata o valor de amostragem como zero.
 ms.assetid: 111A28EA-661A-4D29-921A-F2E376A46DC5
 keywords:
 - Nível 2
@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f9f9a69c0e30459929d1e31084ea88b3f7ebbd0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925360"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612881"
 ---
 # <a name="tier-2"></a>Nível 2
 
 
-O suporte de Nível 2 para recursos de streaming adiciona funcionalidades além do Nível 1, como garantir o mipmap de textura não compactado quando o tamanho é de pelo menos uma forma de bloco padrão; instruções do sombreador para fixação de nível de detalhe (LOD) e para a obtenção do status da operação do sombreador; além disso, a leitura de blocos com mapeamentos NULOS tratam esse valor de amostragem como zero.
+O suporte do nível 2 a recursos de streaming adiciona funcionalidades além do nível 1, como a garantia de um mipmap de textura não empacotada quando o tamanho é pelo menos uma forma de bloco padrão; instruções de sombreador para fixação de nível de detalhe (LOD) e para a obtenção de status sobre a operação de sombreador; Além disso, a leitura de blocos mapeados em NULL trata o valor de amostragem como zero.
 
-## <a name="span-idtier2generalsupportspanspan-idtier2generalsupportspanspan-idtier2generalsupportspantier-2-general-support"></a><span id="Tier_2_general_support"></span><span id="tier_2_general_support"></span><span id="TIER_2_GENERAL_SUPPORT"></span>Suporte geral de Nível 2
+## <a name="span-idtier2generalsupportspanspan-idtier2generalsupportspanspan-idtier2generalsupportspantier-2-general-support"></a><span id="Tier_2_general_support"></span><span id="tier_2_general_support"></span><span id="TIER_2_GENERAL_SUPPORT"></span>Suporte geral de camada 2
 
 
 O suporte de Nível 2 inclui o seguinte:
@@ -30,7 +30,7 @@ O suporte de Nível 2 inclui o seguinte:
 
 Além desses, há alguns problemas de suporte específicos que serão descritos a seguir.
 
-## <a name="span-idnon-mappedtilesspanspan-idnon-mappedtilesspanspan-idnon-mappedtilesspannon-mapped-tiles"></a><span id="Non-mapped_tiles"></span><span id="non-mapped_tiles"></span><span id="NON-MAPPED_TILES"></span>Blocos não mapeados
+## <a name="span-idnon-mappedtilesspanspan-idnon-mappedtilesspanspan-idnon-mappedtilesspannon-mapped-tiles"></a><span id="Non-mapped_tiles"></span><span id="non-mapped_tiles"></span><span id="NON-MAPPED_TILES"></span>Blocos não mapeado
 
 
 As leituras de blocos não mapeados retornam 0 em todos os componentes não ausentes do formato e o padrão para os componentes ausentes.
@@ -47,9 +47,9 @@ Os acessos a texels **NULOS** fazem com que a operação [**CheckAccessFullyMapp
 ## <a name="span-idalignmentconstraintsspanspan-idalignmentconstraintsspanspan-idalignmentconstraintsspanalignment-constraints"></a><span id="Alignment_constraints"></span><span id="alignment_constraints"></span><span id="ALIGNMENT_CONSTRAINTS"></span>Restrições de alinhamento
 
 
-Restrições de alinhamento para formas de bloco padrão: os mipmaps que preenchem pelo menos um bloco padrão em todas as dimensões usam garantidamente o agrupamento lado a lado padrão, com o restante considerado compactado como uma **unidade** em blocos N (N relatado ao aplicativo). O aplicativo pode mapear os blocos N para locais arbitrariamente separados em um pool de blocos, mas deve mapear todos ou nenhum dos blocos compactados. A compactação MIP é um conjunto exclusivo de blocos compactados por fatia de matriz.
+Restrições de alinhamento para formas de bloco padrão: Mipmaps que preenchem a pelo menos um bloco padrão em todas as dimensões são garantidos para usar a padrão lado a lado, com o restante considerado empacotada como uma **unidade** em blocos de N (N relatado para o aplicativo). O aplicativo pode mapear os blocos N para locais arbitrariamente separados em um pool de blocos, mas deve mapear todos ou nenhum dos blocos compactados. A compactação MIP é um conjunto exclusivo de blocos compactados por fatia de matriz.
 
-## <a name="span-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>Filtragem de redução mínima/máxima
+## <a name="span-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>Filtragem de redução de Min/Max
 
 
 Há suporte para a filtragem de redução mínima/máxima. Consulte [Recursos de amostragem de textura de recursos de streaming](streaming-resources-texture-sampling-features.md).
@@ -64,7 +64,7 @@ Ainda se aplicam limitações sobre como os blocos podem ser acessados quando h�
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Níveis de recursos de streaming](streaming-resources-features-tiers.md)
+[As camadas de recursos de recursos de streaming](streaming-resources-features-tiers.md)
 
  
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 03cf647fdb243fd18212ca894f7682e913378907
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943177"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57609631"
 ---
 # <a name="xuid-directive"></a>Diretiva x:Uid
 
@@ -38,7 +38,7 @@ Use **x:Uid** para identificar um elemento de objeto em seu XAML. Normalmente, e
 <Button x:Uid="GoButton" Content="Go"/>
 ```
 
-Para especificar o conteúdo para substituir o texto de exibição **Go**, você deve especificar um novo recurso proveniente de um arquivo de recursos. O arquivo de recursos deve conter uma entrada para o recurso nomeado "GoButton.Content". [**Content**](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) neste caso é uma propriedade específica herdada da classe [**Button**](/uwp/api/windows.ui.xaml.controls.button). Você também pode fornecer valores localizados para outras propriedades desse botão, por exemplo, um valor baseado em recursos para "GoButton.FlowDirection". Para obter mais informações sobre como usar **x:Uid** e os arquivos de recursos juntos, consulte [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](../app-resources/localize-strings-ui-manifest.md).
+Para especificar o conteúdo para substituir o texto de exibição **Go**, você deve especificar um novo recurso proveniente de um arquivo de recursos. O arquivo de recursos deve conter uma entrada para o recurso nomeado "GoButton.Content". [**Conteúdo** ](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) nesse caso é uma propriedade específica que é herdada pela [ **botão** ](/uwp/api/windows.ui.xaml.controls.button) classe. Você também pode fornecer valores localizados para outras propriedades desse botão, por exemplo, um valor baseado em recursos para "GoButton.FlowDirection". Para obter mais informações sobre como usar **x:Uid** e os arquivos de recursos juntos, consulte [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](../app-resources/localize-strings-ui-manifest.md).
 
 A validade de quais cadeias de caracteres podem ser usadas para um valor **x:Uid** é controlada de maneira prática, por meio da qual as cadeias de caracteres são legais enquanto identificadores em um arquivo de recursos e um caminho de recurso.
 

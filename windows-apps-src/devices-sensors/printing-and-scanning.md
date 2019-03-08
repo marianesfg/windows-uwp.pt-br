@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, impressão, 3dprinting, impressão 3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 99272c4e9ffd461901b4b2f2d2aa93b416a1b100
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044683"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605611"
 ---
 # <a name="printing-and-scanning"></a>Impressão e digitalização
 
@@ -20,15 +20,15 @@ Esta seção descreve como imprimir e digitalizar em seu aplicativo Universal do
 
 | Tópico | Descrição | 
 |-------|-------------|
-| [Imprimir de seu aplicativo](print-from-your-app.md) | Aprenda a imprimir documentos a partir de um aplicativo Universal do Windows. Este tópico também mostra como imprimir páginas específicas. |
-| [Personalizar a interface do usuário para visualização de impressão](customize-the-print-preview-ui.md) | Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização da impressão. |
+| [Imprimir a partir de seu aplicativo](print-from-your-app.md) | Aprenda a imprimir documentos a partir de um aplicativo Universal do Windows. Este tópico também mostra como imprimir páginas específicas. |
+| [Personalizar a interface do usuário de visualização de impressão](customize-the-print-preview-ui.md) | Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização da impressão. |
 | [Personalizar o fluxo de trabalho de impressão](print-workflow-customize.md) | Esta seção descreve como criar experiências de fluxo de trabalho de impressão personalizadas para atender às necessidades de sua organização.  |
-| [Digitalizar a partir do seu aplicativo](scan-from-your-app.md) | Aprenda aqui a digitalizar conteúdos do seu aplicativo usando uma fonte de scanner de mesa, alimentador ou autoconfigurado.|
+| [Verificação de seu aplicativo](scan-from-your-app.md) | Aprenda aqui a digitalizar conteúdos do seu aplicativo usando uma fonte de scanner de mesa, alimentador ou autoconfigurado.|
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Diretrizes de design para impressão](https://msdn.microsoft.com/library/windows/apps/Hh868178)
-* [//Vídeo da Compilação 2015: Desenvolvendo aplicativos que imprimem no Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
-* [Exemplo de impressão via UWP](https://go.microsoft.com/fwlink/p/?LinkId=619984)
+* [Vídeo da Build 2015: Desenvolvimento de aplicativos que são impressas no Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
+* [Exemplo de impressão de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619984)
  
 

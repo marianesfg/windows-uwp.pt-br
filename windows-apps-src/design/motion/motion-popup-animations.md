@@ -1,6 +1,6 @@
 ---
-Description: Use pop-up animations to show and hide pop-up UI for flyouts or custom pop-up UI elements. Pop-up elements are containers that appear over the app's content and are dismissed if the user taps or clicks outside of the pop-up element.
-title: Animações pop-up de interface do usuário em aplicativos UWP
+Description: Use animações pop-up para mostrar e ocultar a interface do usuário pop-up para submenus ou elementos de interface do usuário pop-up personalizados. Os elementos pop-up são contêineres que aparecem sobre o conteúdo do aplicativo e desaparecem quando o usuário toca ou clica fora do elemento pop-up.
+title: Animações de interface do usuário pop-up em aplicativos UWP
 ms.assetid: 4E9025CE-FC90-4d4c-9DE6-EC6B6F2AD9DF
 label: Motion--Pop-up animations
 template: detail.hbs
@@ -9,19 +9,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d79c369e14236b827bdc18aba6c74349528728b3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942039"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635171"
 ---
-# <a name="pop-up-ui-animations"></a>Animações pop-up da interface de usuário
+# <a name="pop-up-ui-animations"></a>Animações de interface pop-up
 
 
 
 Use animações pop-up para mostrar e ocultar a interface do usuário pop-up para submenus ou elementos de interface do usuário pop-up personalizados. Os elementos pop-up são contêineres que aparecem sobre o conteúdo do aplicativo e desaparecem quando o usuário toca ou clica fora do elemento pop-up.
 
-> **APIs importantes**: [**classe PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210383), [**classe PopupThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh969172)
+> **APIs importantes**: [**Classe PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210383), [ **PopupThemeTransition classe**](https://msdn.microsoft.com/library/windows/apps/hh969172)
 
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
@@ -34,8 +34,8 @@ Use animações pop-up para mostrar e ocultar a interface do usuário pop-up par
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Animando a interface do usuário pop-up](https://msdn.microsoft.com/library/windows/apps/xaml/jj649433)
-* [Guia de início rápido: animando sua interface do usuário usando animações da biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Animar um pop-up da interface do usuário](https://msdn.microsoft.com/library/windows/apps/xaml/jj649433)
+* [Guia de início rápido: Animando sua interface do usuário usando animações de biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Classe PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210383)
 * [**Classe PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210391)
 * [**Classe PopupThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh969172)

@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 0943273dab239669be75b30070222d698246aa41
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944718"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610021"
 ---
 # <a name="typography"></a>Tipografia
 
@@ -19,7 +19,7 @@ ms.locfileid: "8944718"
 
 Como a representação visual da linguagem, a tarefa principal da tipografia é informar. Seu estilo nunca deve atrapalhar essa meta. Neste artigo, vamos discutir como definir o estilo de tipografia em seu aplicativo UWP para ajudar os usuários a entender o conteúdo de modo fácil e eficiente.
 
-## <a name="font"></a>Fonte
+## <a name="font"></a>Font
 
 Você deve usar uma fonte em toda a interface do usuário do aplicativo e recomendamos manter a fonte padrão para aplicativos UWP, **Segoe UI**. Ela foi projetada para manter a legibilidade ideal em todos os tamanhos e densidades de pixel, e oferece uma estética limpa, leve e aberta que complementa o conteúdo do sistema.
 
@@ -154,7 +154,7 @@ Quando a quantidade de texto se estende além do espaço disponível, recomendam
     :::column-end:::
 :::row-end:::
 
-**Observação**: se os contêineres não estiverem bem definidos (por exemplo, nenhuma cor da tela de fundo diferente), ou quando há um link para ver mais texto, use as elipses.
+**Observação**: Se os contêineres não são bem definidos (por exemplo, nenhuma diferenciação cor de fundo), ou quando há um link para ver mais texto, em seguida, use elipses.
 
 ## <a name="languages"></a>Idiomas 
 
@@ -221,9 +221,9 @@ Use as [APIs de mapeamento de fonte LanguageFont](https://docs.microsoft.com/uwp
 <td align="left">Uma fonte de interface do usuário chinesa herdada. </td>
 </tr>
 <tr class="even">
-<td align="left" style="font-family: Yu Gothic UI;">Interface de usuário Yu Gothic</td>
+<td align="left" style="font-family: Yu Gothic UI;">Interface do usuário Yu Gothic</td>
 <td align="left">Leve, Semi-leve, Regular, Semi-negrito, Negrito</td>
-<td align="left">Fonte de interface de usuário para japonês.</td>
+<td align="left">Fonte de interface do usuário para japonês.</td>
 </tr>
 </tbody>
 </table>
@@ -302,7 +302,7 @@ As fontes serif são adequadas para apresentar grandes quantidades de texto.
 <td align="left">A fonte de largura fixa serif dá suporte a scripts da Europa e do Oriente Médio (latino, grego, cirílico, árabe, armênio e hebraico).</td>
 </tr>
 <tr class="odd">
-<td style="font-family: Georgia;">Georgia</td>
+<td style="font-family: Georgia;">Geórgia</td>
 <td align="left">Regular, itálico, negrito, negrito itálico</td>
 <td align="left">Dá suporte a scripts europeus (latino, grego e cirílico).</td>
 </tr>
@@ -348,6 +348,6 @@ As fontes serif são adequadas para apresentar grandes quantidades de texto.
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Controles de texto](../controls-and-patterns/text-controls.md)
-* [Recursos de temas XAML](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)
-* [Estilos de XAML](../controls-and-patterns/xaml-styles.md)
+* [Recursos de tema do XAML](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)
+* [Estilos XAML](../controls-and-patterns/xaml-styles.md)
 * [Tipografia da Microsoft](https://docs.microsoft.com/typography/)

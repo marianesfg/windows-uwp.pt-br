@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, interface do usuário, navegação
 ms.localizationpriority: medium
 ms.openlocfilehash: ec5ba9d893a622e256030601cca204abab35045f
-ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "9059707"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599921"
 ---
 # <a name="ui-navigation-controller"></a>Controlador de navegação da interface do usuário
 
@@ -47,7 +47,7 @@ A tabela a seguir resume esses comandos e o uso pretendido, com exemplos.
 |    Exibir | Exibir informações do jogo _(placar, estatísticas do jogo, objetivos, mapa do mundo ou da região)_
 |    Menu | Menu principal / Pausar _(configurações, status, equipamento, inventário, pausa)_
 |  Aceitar | Resposta afirmativa _(aceitar, avançar, confirmar, iniciar, sim)_
-|  Cancelar | Resposta negativa _(rejeitar, inverter, recusar, parar, não)_
+|  Cancel | Resposta negativa _(rejeitar, inverter, recusar, parar, não)_
 
 
 ### <a name="optional-set"></a>Conjunto opcional
@@ -89,24 +89,24 @@ A tabela a seguir resume como o _conjunto obrigatório_ de comandos de navegaç�
 |               Exibir | Botão Exibir                         | Botão Exibir        | Botão Exibir        |
 |               Menu | Botão Menu                         | Botão Menu        | Botão Menu        |
 |             Aceitar | Botão A                            | Botão de ação 1    | Botão A           |
-|             Cancelar | Botão B                            | Botão de ação 2    | Botão B           |
+|             Cancel | Botão B                            | Botão de ação 2    | Botão B           |
 
 A tabela a seguir resume como o _conjunto opcional_ de comandos de navegação é mapeado para vários dispositivos de entrada.
 
 | Comando de navegação | Entrada do gamepad          | Entrada do joystick de arcade | Entrada do volante de corrida    |
 | ------------------:| ---------------------- | ------------------ | --------------------- |
-|             PageUp | Gatilho esquerdo           | _sem suporte_    | _varia_              |
-|           PageDown | Gatilho direito          | _sem suporte_    | _varia_              |
-|           PageLeft | Botão superior esquerdo            | _sem suporte_    | _varia_              |
-|          PageRight | Botão superior direito           | _sem suporte_    | _varia_              |
-|           ScrollUp | Botão direito para cima    | _sem suporte_    | _varia_              |
-|         ScrollDown | Botão direito para baixo  | _sem suporte_    | _varia_              |
-|         ScrollLeft | Botão direito para a esquerda  | _sem suporte_    | _varia_              |
-|        ScrollRight | Botão direito para a direita | _sem suporte_    | _varia_              |
-|           Context1 | Botão X               | _sem suporte_    | Botão X (_comumente_) |
-|           Context2 | Botão Y               | _sem suporte_    | Botão Y (_comumente_) |
-|           Context3 | Pressionar o botão esquerdo  | _sem suporte_    | _varia_              |
-|           Context4 | Pressionar o botão direito | _sem suporte_    | _varia_              |
+|             PageUp | Gatilho esquerdo           | _Não tem suporte_    | _varia de acordo_              |
+|           PageDown | Gatilho direito          | _Não tem suporte_    | _varia de acordo_              |
+|           PageLeft | Botão superior esquerdo            | _Não tem suporte_    | _varia de acordo_              |
+|          PageRight | Botão superior direito           | _Não tem suporte_    | _varia de acordo_              |
+|           ScrollUp | Botão direito para cima    | _Não tem suporte_    | _varia de acordo_              |
+|         ScrollDown | Botão direito para baixo  | _Não tem suporte_    | _varia de acordo_              |
+|         ScrollLeft | Botão direito para a esquerda  | _Não tem suporte_    | _varia de acordo_              |
+|        ScrollRight | Botão direito para a direita | _Não tem suporte_    | _varia de acordo_              |
+|           Context1 | Botão X               | _Não tem suporte_    | Botão X (_comumente_) |
+|           Context2 | Botão Y               | _Não tem suporte_    | Botão Y (_comumente_) |
+|           Context3 | Pressionar o botão esquerdo  | _Não tem suporte_    | _varia de acordo_              |
+|           Context4 | Pressionar o botão direito | _Não tem suporte_    | _varia de acordo_              |
 
 
 ## <a name="detect-and-track-ui-navigation-controllers"></a>Detectar e rastrear controladores de navegação da interface do usuário

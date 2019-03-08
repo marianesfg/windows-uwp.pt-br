@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 26cde97f82e6962d530721f1e0230138e5917016
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920525"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617921"
 ---
 # <a name="relativesource-markup-extension"></a>Extensão de marcação {RelativeSource}
 
@@ -49,7 +49,7 @@ Um [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) pode 
 
 O modo **Self** é útil para associar uma propriedade de um elemento a outra propriedade do mesmo elemento, e é uma variação da associação com [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828), mas não exige o nome e a autorreferência do elemento. Se você associar uma propriedade de um elemento a outra propriedade do mesmo elemento, as propriedades devem usar o mesmo tipo de propriedade, ou você também terá que usar um [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826) na associação para converter os valores. Por exemplo, é possível usar [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) como origem de [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) sem conversão, mas seria necessário um conversor para usar [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) como origem de [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br209006).
 
-Veja um exemplo a seguir. Esse [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) usa uma [extensão de marcação {Binding}](binding-markup-extension.md) de forma que sua [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) e [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) sejam sempre iguais e ele as renderize como um quadrado. Somente a altura é definida como um valor fixo. Para esse **Rectangle**, seu [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) padrão é **null**, e não **this**. Assim, para estabelecer a origem de contexto de dados como sendo o próprio objeto (e habilitar a associação com suas outras propriedades) usamos o argumento `RelativeSource={RelativeSource Self}` no uso da extensão de marcação {Binding}.
+Aqui está um exemplo. Esse [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) usa uma [extensão de marcação {Binding}](binding-markup-extension.md) de forma que sua [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) e [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) sejam sempre iguais e ele as renderize como um quadrado. Somente a altura é definida como um valor fixo. Para esse **Rectangle**, seu [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) padrão é **null**, e não **this**. Assim, para estabelecer a origem de contexto de dados como sendo o próprio objeto (e habilitar a associação com suas outras propriedades) usamos o argumento `RelativeSource={RelativeSource Self}` no uso da extensão de marcação {Binding}.
 
 ```XML
 <Rectangle
@@ -58,15 +58,15 @@ Veja um exemplo a seguir. Esse [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.R
 />
 ```
 
-Outro uso de `RelativeSource={RelativeSource Self}` é como uma maneira de definir um [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) do objeto como si próprio.  Por exemplo, você pode ver essa técnica em alguns exemplos do SDK onde a classe [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) foi estendida com uma propriedade personalizada que já está fornecendo um modelo de exibição pronto para sua própria vinculação de dados, como: `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
+Outro uso de `RelativeSource={RelativeSource Self}` é como uma maneira de definir um [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) do objeto como si próprio.  Por exemplo, você poderá ver essa técnica em alguns dos exemplos do SDK no qual o [ **página** ](https://msdn.microsoft.com/library/windows/apps/br227503) classe foi estendida com uma propriedade personalizada que já está fornecendo um modelo de exibição pronto para ir para sua própria associação de dados como: `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
 
-**Observação**o uso de XAML para **RelativeSource** mostra apenas o uso para o qual ele se destina: definir um valor para [**Binding. RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) em XAML como parte de uma expressão de associação. Teoricamente, outros usos são possíveis no caso da definição de uma propriedade na qual o valor é [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913).
+**Observação**  uso o XAML para **RelativeSource** mostra apenas o uso para o qual ele destina-se: definindo um valor para [ **Binding.RelativeSource** ](https://msdn.microsoft.com/library/windows/apps/br209831)em XAML como parte de uma expressão de associação. Teoricamente, outros usos são possíveis no caso da definição de uma propriedade na qual o valor é [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Visão geral do XAML](xaml-overview.md)
-* [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946)
-* [Extensão de marcação {Binding}](binding-markup-extension.md)
+* [Associação de dados em camadas](https://msdn.microsoft.com/library/windows/apps/mt210946)
+* [Extensão de marcação {binding}](binding-markup-extension.md)
 * [**Associação**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)
 

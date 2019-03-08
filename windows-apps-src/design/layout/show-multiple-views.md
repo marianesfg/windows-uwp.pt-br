@@ -1,18 +1,18 @@
 ---
-Description: View multiple parts of your app in separate windows.
-title: Mostrar vários modos de exibição de um aplicativo
+Description: Exiba várias partes do seu aplicativo em janelas separadas.
+title: Mostrar vários modos de exibição para um aplicativo
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ed69dc912e916f7964c125550621c22dfcd9555
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049058"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607621"
 ---
-# <a name="show-multiple-views-for-an-app"></a>Mostrar vários modos de exibição de um aplicativo
+# <a name="show-multiple-views-for-an-app"></a>Mostrar vários modos de exibição para um aplicativo
 
 ![Estrutura delineada mostrando um aplicativo com várias janelas](images/multi-view.gif)
 
@@ -44,7 +44,7 @@ Da mesma forma, a estrutura XAML encapsula o objeto [**CoreWindow**](https://msd
 
 Embora cada layout de aplicativo seja exclusivo, é recomendável incluir um botão de "nova janela" em um local previsível, como o canto superior direito do conteúdo que pode ser aberto em uma nova janela. Considere também incluir uma opção de menu de contexto em "Abrir em uma nova janela".
 
-Vamos examinar as etapas de criação de um novo modo de exibição. Aqui, o novo modo de exibição é iniciado em resposta a um clique de botão.
+Vamos examinar as etapas de criação de um novo modo de exibição. Aqui, o novo modo de exibição é iniciado em resposta a um clique do botão.
 
 ```csharp
 private async void Button_Click(object sender, RoutedEventArgs e)
@@ -65,7 +65,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**Para mostrar um novo modo de exibição**
+**Para mostrar uma nova exibição**
 
 1.  Chame [**CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297291) para criar uma nova janela e um thread para o conteúdo do modo de exibição.
 
@@ -117,7 +117,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 O primeiro modo de exibição criado quando o aplicativo é iniciado é chamado de *modo de exibição principal*. Esse modo de exibição é armazenado na propriedade [**CoreApplication.MainView**](https://msdn.microsoft.com/library/windows/apps/hh700465), e a propriedade [**IsMain**](https://msdn.microsoft.com/library/windows/apps/hh700452) é verdadeira. Você não cria esse modo de exibição; ele é criado pelo aplicativo. O thread do modo de exibição principal funciona como o gerenciador para o aplicativo, e todos os eventos de ativação do aplicativo são fornecidos nesse thread.
 
-Caso os modos de exibição secundários estejam abertos, a janela do modo de exibição principal pode permanecer oculta – por exemplo, clicando-se no botão de fechamento (x) na barra de título da janela –, mas o thread permanece ativo. Chamar [**Close**](https://msdn.microsoft.com/library/windows/apps/br209049) no [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) do modo de exibição principal causa a ocorrência de **InvalidOperationException**. (Use [**Application.Exit**](https://msdn.microsoft.com/library/windows/apps/br242327) para fechar seu aplicativo.) Se o thread do modo de exibição principal for encerrado, o aplicativo será fechado.
+Caso os modos de exibição secundários estejam abertos, a janela do modo de exibição principal pode permanecer oculta – por exemplo, clicando-se no botão de fechamento (x) na barra de título da janela –, mas o thread permanece ativo. Chamar [**Close**](https://msdn.microsoft.com/library/windows/apps/br209049) no [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) do modo de exibição principal causa a ocorrência de **InvalidOperationException**. (Use [ **exit** ](https://msdn.microsoft.com/library/windows/apps/br242327) para fechar o aplicativo.) Se o thread principal do modo de exibição for encerrada, o aplicativo é fechado.
 
 ## <a name="secondary-views"></a>Modos de exibição secundários
 

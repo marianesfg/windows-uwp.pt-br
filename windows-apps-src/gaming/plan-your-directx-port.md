@@ -1,5 +1,5 @@
 ---
-title: Planejar a portabilidade do DirectX
+title: Planeje a compatibilização do DirectX
 description: Planeje o seu projeto de portabilidade para jogos do DirectX 9 para o DirectX 11 e Plataforma Universal do Windows (UWP) - atualize o código dos elementos gráficos e coloque o seu jogo no ambiente do Windows Runtime.
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 ms.date: 02/08/2017
@@ -7,21 +7,21 @@ ms.topic: article
 keywords: windows 10, uwp, directx, compatibilização
 ms.localizationpriority: medium
 ms.openlocfilehash: 6779fd95d4fd1964a8ca19aa4a7a9f9c29a6179b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044377"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602121"
 ---
-# <a name="plan-your-directx-port"></a>Planejar a portabilidade do DirectX
+# <a name="plan-your-directx-port"></a>Planeje a compatibilização do DirectX
 
 
 
 **Resumo**
 
--   Planejar a portabilidade do DirectX
+-   Planeje a compatibilização do DirectX
 -   [Alterações importantes do Direct3D 9 para o Direct3D 11](understand-direct3d-11-1-concepts.md)
--   [Mapeamento de recursos](feature-mapping.md)
+-   [Mapeamento de recurso](feature-mapping.md)
 
 
 Planeje o seu projeto de portabilidade para jogos do DirectX 9 para o DirectX 11 e Plataforma Universal do Windows (UWP): atualize o código dos elementos gráficos e coloque o seu jogo no ambiente do Windows Runtime.
@@ -35,11 +35,11 @@ A atualização do Direct3D 9 para o Direct3D 11 é mais do que uma alteração 
 
 Você deve substituir as livrarias auxiliares D3DX e DXUT pelas suas ou por ferramentas da comunidade. Veja a seção [Mapeamento de recursos](feature-mapping.md) para saber mais.
 
-> **Observação**  você pode usar o [Kit de ferramentas do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=248929) ou [DirectXTex](https://go.microsoft.com/fwlink/p/?LinkID=248926) para substituir uma funcionalidade que antes era fornecida pelo D3DX e DXUT.
+> **Observação**    você pode usar o [Kit de ferramentas do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=248929) ou [DirectXTex](https://go.microsoft.com/fwlink/p/?LinkID=248926) para substituir algumas funcionalidades que anteriormente foi fornecida por D3DX e DXUT.
 
  
 
-Os sombreadores escritos em linguagem de assembly devem ser atualizados para HLSL usando a funcionalidade nível 9\_1 ou 9\_3 do modelo 4 de sombreador e os sombreadores escritos para a biblioteca de efeitos terão que ser atualizados para uma versão mais recente de sintaxe HLSL. Veja a seção [Mapeamento de recursos](feature-mapping.md) para saber mais.
+Sombreadores escritos na linguagem de assembly devem ser atualizados para HLSL usando o nível de modelo 4 de sombreador 9\_1 ou 9\_3 funcionalidade e sombreadores escritos para a biblioteca de efeitos precisará ser atualizado para uma versão mais recente da sintaxe do HLSL. Veja a seção [Mapeamento de recursos](feature-mapping.md) para saber mais.
 
 Conheça os diferentes [níveis de recursos do Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876). Os níveis de recursos classificam uma ampla gama de hardware de vídeo, definindo conjuntos de funcionalidades conhecidas. Cada conjunto corresponde aproximadamente às versões do Direct3D, de 9.1 a 11.2. Todos os níveis de recursos usam a API do DirectX 11.
 

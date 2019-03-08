@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogo, directx, entrada, mouse, toque, controle
 ms.localizationpriority: medium
 ms.openlocfilehash: 549a4da0614dd1c7cc6884c5556c061edfccaf18
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936159"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599451"
 ---
 # <a name="game-input-for-directx-games"></a>Entrada de jogo para jogos DirectX
 
@@ -36,11 +36,11 @@ O tópico sobre controles de toque para jogos explica como adicionar controles b
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="tutorial--adding-move-look-controls-to-your-directx-game.md">Controles move-look para jogos</a></p></td>
+<td align="left"><p><a href="tutorial--adding-move-look-controls-to-your-directx-game.md">Controles de mover a consulta para jogos</a></p></td>
 <td align="left"><p>Adicione controles move-look.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="relative-mouse-movement.md">Movimento relativo do mouse</a></p></td>
+<td align="left"><p><a href="relative-mouse-movement.md">Movimento do mouse relativas</a></p></td>
 <td align="left"><p>Manipule o movimento relativo do mouse.</p></td>
 </tr>
 <tr class="odd">

@@ -1,31 +1,31 @@
 ---
 title: Fazer a portabilidade de objetos de sombreador
-description: Ao fazer a portabilidade do renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar-se de que o programa principal consiga se comunicar com os objetos de sombreador depois de eles serem compilados.
+description: Ao fazer a portabilidade do renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar que o programa principal consegue se comunicar com os objetos de sombreador depois de eles serem compilados.
 ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, porta, sombreador, direct3d, opengl
 ms.localizationpriority: medium
 ms.openlocfilehash: f061d31ca779cb4c6cbe76f163e190996a6985cb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935950"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618741"
 ---
 # <a name="port-the-shader-objects"></a>Fazer a portabilidade de objetos de sombreador
 
 
 
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)
 -   [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)
 
-Ao fazer a portabilidade do renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar-se de que o programa principal consiga se comunicar com os objetos de sombreador depois de eles serem compilados.
+Ao fazer a portabilidade do renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar que o programa principal consegue se comunicar com os objetos de sombreador depois de eles serem compilados.
 
-> **Observação**  você já criou um projeto Direct3D novo? Caso não tenha criado, siga as instruções em [Criar um novo projeto DirectX 11 para a Plataforma Universal do Windows (UWP)](user-interface.md). Este guia passo a passo parte do pressuposto de que você criou os recursos DXGI e Direct3D para desenhar na tela, os quais são fornecidos no modelo.
+> **Observação**    você criou um novo projeto de Direct3D? Caso não tenha criado, siga as instruções em [Criar um novo projeto DirectX 11 para a Plataforma Universal do Windows (UWP)](user-interface.md). Este guia passo a passo parte do pressuposto de que você criou os recursos DXGI e Direct3D para desenhar na tela, os quais são fornecidos no modelo.
 
  
 
@@ -34,11 +34,11 @@ Os sombreadores compilados no Direct3D devem ser associados a um contexto de des
 <a name="instructions"></a>Instruções
 ------------
 
-### <a name="step-1-compile-the-shaders"></a>Etapa 1: compile os sombreadores
+### <a name="step-1-compile-the-shaders"></a>Etapa 1: Compilar os sombreadores
 
 Nesta amostra simples do OpenGL ES 2.0, os sombreadores são armazenados como arquivos de texto e carregados como dados de cadeia de caracteres para compilação de tempo de execução.
 
-OpenGL ES 2.0: compilar um sombreador
+OpenGL ES 2.0: Compilar um sombreador
 
 ``` syntax
 GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
@@ -78,11 +78,11 @@ GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
 
 No Direct3D, os sombreadores não são compilados durante o tempo de execução; eles sempre são compilados em arquivos CSO quando o resto do programa é compilado. Quando você compila o seu aplicativo com Microsoft Visual Studio, os arquivos HLSL são compilados a arquivos CSO (.cso) que o seu aplicativo deve carregar. Não se esqueça de incluir esses arquivos CSO ao seu aplicativo em seu pacote!
 
-> **Observação**  o exemplo a seguir executa o sombreador Carregando e a compilação de forma assíncrona usando a sintaxe de palavra-chave e lambda **automática** . ReadDataAsync() é um método implementado para o modelo que lê em um arquivo CSO como uma matriz de dados em byte (fileData).
+> **Observação**    o exemplo a seguir executa o carregamento de sombreador e a compilação de forma assíncrona usando o **automático** sintaxe de palavra-chave e lambda. ReadDataAsync() é um método implementado para o modelo que lê em um arquivo CSO como uma matriz de dados em byte (fileData).
 
  
 
-Direct3D 11: compile um sombreador
+Direct3D 11: Compilar um sombreador
 
 ``` syntax
 auto loadVSTask = DX::ReadDataAsync(m_projectDir + "SimpleVertexShader.cso");
@@ -105,11 +105,11 @@ auto createPSTask = loadPSTask.then([this](Platform::Array<byte>^ fileData) {
 };
 ```
 
-### <a name="step-2-create-and-load-the-vertex-and-fragment-pixel-shaders"></a>Etapa 2: crie e carregue o vértice e os sombreadores de fragmento (pixel)
+### <a name="step-2-create-and-load-the-vertex-and-fragment-pixel-shaders"></a>Etapa 2: Criar e carregar o vértice e fragmentar sombreadores (pixel)
 
 OpenGL ES 2.0 tem a noção de um "programa" sombreador, que serve como interface entre o programa principal sendo executado na CPU e os sombreadores, que são executados na GPU. Os sombreadores são compilados :(ou carregados de origens compiladas) e associados a um programa, que habilita a execução na GPU.
 
-OpenGL ES 2.0: carregando sombreadores de vértice e fragmento em um programa de sombreamento
+OpenGL ES 2.0: Carregando os sombreadores de vértices e de fragmento em um programa de sombreamento
 
 ``` syntax
 GLuint __cdecl LoadShaderProgram (const char *vertShaderSrcStr, const char *fragShaderSrcStr)
@@ -170,7 +170,7 @@ glUseProgram(renderer->programObject);
 
 O Direct3D não tem o conceito de objeto de programa de sombreador. Em vez disso, os sombreadores são criados quando um dos métodos de criação de sombreador na interface [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) (como [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) ou [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)) é chamado. Para definir os sombreadores para o contexto de desenho atual, nós os fornecemos ao [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) correspondente com um método de sombreamento definido, como[**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) para o sombreador de vértice ou [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472) para o sombreador de fragmento.
 
-Direct3D 11: defina os sombreadores para o contexto de desenho do dispositivo de elementos gráficos.
+Direct3D 11: Defina os sombreadores para o contexto de desenho de dispositivo de gráficos.
 
 ``` syntax
 m_d3dContext->VSSetShader(
@@ -184,18 +184,18 @@ m_d3dContext->PSSetShader(
   0);
 ```
 
-### <a name="step-3-define-the-data-to-supply-to-the-shaders"></a>Etapa 3: defina os dados a serem fornecidos aos sombreadores
+### <a name="step-3-define-the-data-to-supply-to-the-shaders"></a>Etapa 3: Definir os dados para fornecer aos sombreadores
 
 No nosso exemplo de OpenGL ES 2.0, temos um **uniforme** a declarar para o pipeline do sombreador.
 
--   **u\_mvpMatrix**: uma matriz 4 x 4 de flutuações que representa a matriz de transformação de projeção de exibição do modelo final que utiliza as coordenadas de modelo para o cubo e as transforma em coordenadas de projeção 2D para conversão de varredura.
+-   **u\_mvpMatrix**: uma matriz de 4 x 4 de floats que representa a matriz de transformação de projeção de exibição do modelo final que usa o modelo de coordenadas para o cubo e transforma-os em coordenadas de projeção 2D para conversão de verificação.
 
 E dois valores de **atributo** para os dados do vértice:
 
--   **a\_position**: um vetor de 4 floats para as coordenadas de modelo de um vértice.
--   **a\_color**: um vetor de 4 floats para o valor de cor RGBA associado ao vértice.
+-   **uma\_posição**: um vetor de float de 4 para as coordenadas do modelo de um vértice.
+-   **a\_color**: Um vetor de float de 4 para o valor de cor RGBA associado ao vértice.
 
-Open GL ES 2.0: definições GLSL para uniformes e atributos
+Open GL ES 2.0: Definições do GLSL uniformes e atributos
 
 ``` syntax
 uniform mat4 u_mvpMatrix;
@@ -203,9 +203,9 @@ attribute vec4 a_position;
 attribute vec4 a_color;
 ```
 
-Neste caso, as variáveis correspondentes do programa principal são definidas como campos no objeto de renderizador (Consulte o cabeçalho em [Como: compatibilizar um renderizador OpenGL ES 2.0 simples ao Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md).) Depois disso, precisamos especificar as localizações na memória, onde o programa principal fornecerá esses valores para o pipeline de sombreador, que geralmente fazemos pouco antes de uma chamada de desenho:
+Neste caso, as variáveis correspondentes do programa principal são definidas como campos no objeto de renderizador (Consulte o cabeçalho na [como: um renderizador simple do OpenGL ES 2.0 ao Direct3D 11 da porta](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md).) Depois que nós já fizemos isso, precisamos especificar os locais na memória em que o programa principal fornecerá esses valores para o pipeline de sombreador, que normalmente fazemos logo antes de uma chamada de desenho:
 
-OpenGL ES 2.0: marcando o local de dados de atributos e uniformes
+OpenGL ES 2.0: O local dos dados uniforme e atributo de marcação
 
 ``` syntax
 
@@ -227,9 +227,9 @@ renderer->mvpLoc = glGetUniformLocation(renderer->programObject, "u_mvpMatrix");
 
 O Direct3D não tem um conceito de "atributo" ou "uniforme" com o mesmo sentido (ou, pelo menos, não compartilha essa sintaxe). Em vez disso, ele tem buffers constantes, representados como sub-recursos Direct3D (recursos esses compartilhados entre o programa principal e os programas de sombreador). Alguns desses sub-recursos, como posições e cores de vértice, são descritos como semântica HLSL. Para saber mais sobre buffers constantes e semântica HLSL relacionados a conceitos do OpenGL ES 2.0, leia o tópico sobre [portabilidade de uniformes, atributos e objetos de buffer de quadros](porting-uniforms-and-attributes.md).
 
-Ao mover esse processo para o Direct3D, convertemos o uniforme para um buffer constante (cbuffer) do Direct3D e atribuímos a ele um registro de pesquisa com a semântica HLSL **registro**. Os dois atributos de vértice são manipulados como elementos de entrada para os estágios de pipeline de sombreador, e também são atribuídos [HLSL semantics](https://msdn.microsoft.com/library/windows/desktop/bb205574) (POSITION and COLOR0) que informam aos sombreadores. O sombreador de pixel usa um SV\_POSITION, com o prefixo SV\_ indicando que é um valor de sistema gerado pela GPU. (Neste caso, é uma posição de pixel gerada durante conversão de varredura) VertexShaderInput e PixelShaderInput não são declarados como buffers constantes porque o primeiro será usado para definir o buffer de vértices (consulte [Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)), e os dados para o segundo são gerados como resultado de um estágio anterior no pipeline, que, neste caso, é o sombreador de vértice.
+Ao mover esse processo para o Direct3D, convertemos o uniforme para um buffer constante (cbuffer) do Direct3D e atribuímos a ele um registro de pesquisa com a semântica HLSL **registro**. Os dois atributos de vértice são manipulados como elementos de entrada para os estágios de pipeline de sombreador, e também são atribuídos [HLSL semantics](https://msdn.microsoft.com/library/windows/desktop/bb205574) (POSITION and COLOR0) que informam aos sombreadores. O sombreador de pixel leva um SV\_posição, com a VA\_ prefixo indicando que é um valor do sistema gerado pela GPU. (Nesse caso, é uma posição de pixel gerada durante a verificação de conversão.) VertexShaderInput e PixelShaderInput não são declaradas como constante armazena em buffer porque o primeiro será usado para definir o buffer de vértice (consulte [os buffers de vértices e os dados da porta](port-the-vertex-buffers-and-data-config.md)), e os dados para o último são gerados como resultado de uma estágio anterior no pipeline, que nesse caso é o sombreador de vértices.
 
-Direct3D: definições HLSL para buffers constantes e dados de vértice
+Direct3D: Definições de HLSL para os buffers de constantes e os dados de vértice
 
 ``` syntax
 cbuffer ModelViewProjectionConstantBuffer : register(b0)
@@ -256,7 +256,7 @@ Para saber mais sobre a portabilidade para buffers de constantes e aplicação d
 
 Consulte as estruturas para o layout dos dados passados ao pipeline do sombreador com um buffer de vértice ou constante.
 
-Direct3D 11: declarando o layout de constantes e buffers de vértices
+Direct3D 11: Declarando o layout de buffers de vértice e de constante
 
 ``` syntax
 // Constant buffer used to send MVP matrices to the vertex shader.
@@ -273,11 +273,11 @@ struct VertexPositionColor
 };
 ```
 
-Use os tipos DirectXMath XM\* para os seus elementos de buffer constantes, já que eles fornecem compactação e alinhamento adequados para os conteúdos quando são enviados para o pipeline de sombreador. Se você usa tipos de float e matrizes padrão da plataforma Windows, deve executar a compactação e o alinhamento sozinho.
+Use o XM DirectXMath\* tipos para a constante do buffer elementos, pois eles fornecem o empacotamento adequado e alinhamento do conteúdo quando eles são enviados para o pipeline de sombreador. Se você usa tipos de float e matrizes padrão da plataforma Windows, deve executar a compactação e o alinhamento sozinho.
 
-Para associar um buffer constante, crie uma descrição de layout como uma estrutura [**CD3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/jj151620) e a passe para [**ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501). Em seguida, no seu método de renderização, passe o buffer constante para [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) antes de desenhar.
+Para associar um buffer de constantes, crie uma descrição de layout como um [ **CD3D11\_BUFFER\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/jj151620) estruturar e passá-lo para [ **ID3DDevice:: CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501). Em seguida, no seu método de renderização, passe o buffer constante para [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) antes de desenhar.
 
-Direct3D 11: associe o buffer constante
+Direct3D 11: Associar o buffer de constantes
 
 ``` syntax
 CD3D11_BUFFER_DESC constantBufferDesc(sizeof(ModelViewProjectionConstantBuffer), D3D11_BIND_CONSTANT_BUFFER);
@@ -301,16 +301,16 @@ m_d3dContext->UpdateSubresource(
 
 O buffer de vértices é criado e atualizado de forma semelhante, e é discutido na próxima etapa, [Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md).
 
-<a name="next-step"></a>Próxima etapa
+<a name="next-step"></a>Próximas etapas
 ---------
 
-[Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
+[Realizar a portabilidade de dados e buffers de vértice](port-the-vertex-buffers-and-data-config.md)
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-[Como: compatibilizar um renderizador simples do OpenGL ES 2.0 ao Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
+[Como: um renderizador simple do OpenGL ES 2.0 ao Direct3D 11 da porta](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
 
-[Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
+[Realizar a portabilidade de dados e buffers de vértice](port-the-vertex-buffers-and-data-config.md)
 
 [Fazer a portabilidade do GLSL](port-the-glsl.md)
 

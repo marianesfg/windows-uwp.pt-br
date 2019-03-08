@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3359c3e7d7841e68dd00dc318eb1de9f1418df06
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047338"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635821"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>Efeitos para análise de quadros de câmera
 
@@ -21,7 +21,7 @@ Este artigo descreve como usar [**SceneAnalysisEffect**](https://msdn.microsoft.
 
 ## <a name="scene-analysis-effect"></a>Efeito de análise de cena
 
-[**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) analisa os quadros de vídeo no fluxo de visualização de captura de mídia e recomenda opções de processamento para melhorar o resultado da captura. Atualmente, o efeito permite detectar se a captura poderia ser melhorada usando o processamento em HDR (High Dynamic Range).
+[  **SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) analisa os quadros de vídeo no fluxo de visualização de captura de mídia e recomenda opções de processamento para melhorar o resultado da captura. Atualmente, o efeito permite detectar se a captura poderia ser melhorada usando o processamento em HDR (High Dynamic Range).
 
 Se o efeito recomendar o uso de HDR, você pode fazer isso das seguintes maneiras:
 
@@ -116,7 +116,7 @@ Nem todos os dispositivos têm um mecanismo de captura que possa ajustar o foco 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
-* [Captura básica de fotos, áudio e vídeo com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

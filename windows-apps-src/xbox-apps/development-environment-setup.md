@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c1d8c6a33bd7d9249b5000767ece154ab7f8776
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046000"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603871"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Configurar seu ambiente de desenvolvimento da UWP no Xbox
 
@@ -23,7 +23,7 @@ Este artigo discute as etapas para configurar e testar seu ambiente de desenvolv
 
 ## <a name="visual-studio-setup"></a>Instalação do Visual Studio
 
-1. Instale o Visual Studio 2017, Visual Studio 2015 atualização 3 ou a versão mais recente do Visual Studio. Para saber mais e obter informações de instalação, consulte [Downloads e ferramentas para o Windows 10](https://dev.windows.com/downloads). Recomendamos que você use a versão mais recente do Visual Studio para que você possa receber as atualizações mais recentes para desenvolvedores e segurança.
+1. Instale o Visual Studio 2017, Visual Studio 2015 atualização 3 ou a versão mais recente do Visual Studio. Para saber mais e obter informações de instalação, consulte [Downloads e ferramentas para o Windows 10](https://dev.windows.com/downloads). É recomendável que você use a versão mais recente do Visual Studio para que você possa receber as atualizações mais recentes para desenvolvedores e segurança.
 
 2. Se estiver instalando o Visual Studio 2017, escolha a carga de trabalho **Desenvolvimento da Plataforma Universal do Windows**. Se você for um desenvolvedor de C++, marque também a caixa de seleção **Ferramentas C++ da Plataforma Universal do Windows** no painel **Resumo** à direita, em **Desenvolvimento da Plataforma Universal do Windows**. Não faz parte da instalação padrão.
 
@@ -46,7 +46,7 @@ Antes de implantar aplicativos em seu computador de desenvolvimento, você deve 
 
 Para que você possa implantar um aplicativo em seu Xbox One, precisa ter um usuário conectado ao console. Você pode usar sua conta do Xbox Live existente ou criar uma nova conta para seu console em modo de desenvolvimento. 
 
-## <a name="create-your-first-app"></a>Crie seu primeiro aplicativo
+## <a name="create-your-first-app"></a>Criar seu primeiro aplicativo
 
 1. Verifique se o computador de desenvolvimento está na mesma rede local que o console Xbox One de destino. Em geral, isso significa que eles devem usar o mesmo roteador e devem estar na mesma sub-rede. Uma conexão de rede com fio é recomendada.
 
@@ -106,7 +106,7 @@ Para que você possa implantar um aplicativo em seu Xbox One, precisa ter um usu
 
 3. Se esta for a sua primeira implantação, você verá uma caixa de diálogo do Visual Studio solicitando o emparelhamento do dispositivo com o uso de um PIN.
 
-    a. Para obter um PIN, abra **Dev Home** na tela Início do seu console Xbox One.
+    a. Para obter um PIN, abra **Dev Home** na tela inicial do seu console Xbox One.
 
     b. Na guia **Início**, em **Ações rápidas**, selecione **Mostrar PIN do Visual Studio**.
   
@@ -121,8 +121,8 @@ Para que você possa implantar um aplicativo em seu Xbox One, precisa ter um usu
 Parabéns! Você criou e implantou com êxito o seu primeiro aplicativo UWP no Xbox!
 
 ## <a name="see-also"></a>Consulte também
-- [Ativação do Modo de Desenvolvedor do Xbox One](devkit-activation.md)  
-- [Downloads e ferramentas para o Windows 10](https://dev.windows.com/downloads)  
+- [Ativação de um modo de desenvolvedor Xbox](devkit-activation.md)  
+- [Downloads e ferramentas para Windows 10](https://dev.windows.com/downloads)  
 - [Programa Windows Insider](https://go.microsoft.com/fwlink/?LinkId=780552)  
-- [Introdução às ferramentas do Xbox One](introduction-to-xbox-tools.md) 
+- [Introdução às ferramentas Xbox One](introduction-to-xbox-tools.md) 
 - [UWP no Xbox One](index.md)

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 287079bf7195ebcadc3543d9369a0567f197b10c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923615"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622931"
 ---
 # <a name="create-edit-and-save-bitmap-images"></a>Criar, editar e salvar imagens de bitmap
 
@@ -19,13 +19,13 @@ ms.locfileid: "8923615"
 
 Este artigo explica como carregar e salvar arquivos de imagem usando [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) e [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) e como usar o objeto [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) para representar imagens de bitmap.
 
-A classe **SoftwareBitmap** é uma API versátil que pode ser criada a partir de várias origens incluindo arquivos de imagem, objetos [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/br243259), superfícies do Direct3D e código. **SoftwareBitmap** permite que você converta facilmente entre modos alfa e formatos de pixel diferentes e permite acesso de baixo nível a dados de pixel. Além disso, o **SoftwareBitmap** é uma interface comum usada por vários recursos do Windows, incluindo:
+A classe **SoftwareBitmap** é uma API versátil que pode ser criada a partir de várias origens incluindo arquivos de imagem, objetos [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/br243259), superfícies do Direct3D e código. **O SoftwareBitmap** permite que você converta facilmente entre modos alfa e formatos de pixel diferentes e permite acesso de baixo nível a dados de pixel. Além disso, o **SoftwareBitmap** é uma interface comum usada por vários recursos do Windows, incluindo:
 
--   [**CapturedFrame**](https://msdn.microsoft.com/library/windows/apps/dn278725) permite que você obtenha os quadros capturados pela câmera como um **SoftwareBitmap**.
+-   [**CapturedFrame** ](https://msdn.microsoft.com/library/windows/apps/dn278725) permite que você obtenha os quadros capturados pela câmera como uma **SoftwareBitmap**.
 
--   [**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) permite que você obtenha uma representação **SoftwareBitmap** de um **VideoFrame**.
+-   [**VideoFrame** ](https://msdn.microsoft.com/library/windows/apps/dn930917) permite que você obtenha um **SoftwareBitmap** representação de um **VideoFrame**.
 
--   [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) permite que você detecte rostos em um **SoftwareBitmap**.
+-   [**FaceDetector** ](https://msdn.microsoft.com/library/windows/apps/dn974129) permite que você detecte rostos em uma **SoftwareBitmap**.
 
 O código de exemplo neste artigo usa APIs dos namespaces a seguir.
 
@@ -83,7 +83,7 @@ Você pode criar um **SoftwareBitmap** de um **WriteableBitmap** existente chama
 
 Até agora este tópico mostrou como trabalhar com arquivos de imagem. Você também pode criar um novo **SoftwareBitmap** programaticamente no código e usar a mesma técnica para acessar e modificar os dados de pixel do **SoftwareBitmap**.
 
-**SoftwareBitmap** usa interoperabilidade COM para expor o buffer bruto que contém os dados de pixel.
+O **SoftwareBitmap** usa interoperabilidade COM para expor o buffer bruto que contém os dados de pixel.
 
 Para usar interoperabilidade COM, você deve incluir uma referência ao namespace **System.Runtime.InteropServices** em seu projeto.
 
@@ -123,7 +123,7 @@ Você pode transcodificar um arquivo de imagem diretamente de um [**BitmapDecode
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Referência de opções de BitmapEncoder](bitmapencoder-options-reference.md)
+* [Referência de opções BitmapEncoder](bitmapencoder-options-reference.md)
 * [Metadados de imagem](image-metadata.md)
  
 

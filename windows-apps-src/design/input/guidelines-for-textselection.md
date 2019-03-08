@@ -1,5 +1,5 @@
 ---
-Description: This topic describes the new Windows UI for selecting and manipulating text, images, and controls and provides user experience guidelines that should be considered when using these new selection and manipulation mechanisms in your UWP app.
+Description: Este tópico descreve a nova interface do Windows para selecionar e manipular texto, imagens e controles e fornece diretrizes de experiência do usuário que devem ser consideradas ao usar esses mecanismos de manipulação e nova seleção no seu aplicativo da UWP.
 title: Selecionando texto e imagens
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9679e6e658e7fa1eb50b41331e7e59ec2115fc14
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939001"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612501"
 ---
 # <a name="selecting-text-and-images"></a>Selecionando texto e imagens
 
@@ -40,27 +40,27 @@ Este artigo descreve a seleção e a manipulação de texto, imagens e controles
 
 -   Não permita a seleção de elementos da interface do usuário como controles, rótulos, imagens, conteúdo proprietário e assim por diante. Normalmente, os aplicativos do Windows permitem a seleção somente dentro de controles específicos. Controles, como botões, rótulos e logotipos não são selecionáveis. Avalie se a seleção é um problema para o seu aplicativo e, se for, identifique as áreas da interface do usuário onde a seleção deve ser proibida. 
 
-## <a name="additional-usage-guidance"></a>Diretrizes de uso adicionais
+## <a name="additional-usage-guidance"></a>Diretriz de uso adicional
 
 
 A seleção e a manipulação de texto são particularmente suscetíveis aos desafios da experiência do usuário introduzidos pelas interações por toque. A entrada por mouse, caneta/stylus e teclado são altamente granulares: um clique do mouse ou contato da caneta/stylus é mapeado normalmente para um único pixel e uma tecla é ou não é pressionada. A entrada de toque não é granular; é difícil mapear toda a superfície da ponta de um dedo para especificar a localização x-y na tela para colocar o sinal de interpolação de texto de forma precisa.
 
 **Considerações e recomendações**
 
-Use os controles internos expostos por meio das estruturas de idioma em aplicativos de compilação Windowsto que fornecem a experiência de interação do usuário plataforma inteira, incluindo comportamentos de seleção e manipulação. Você achará a funcionalidade de interação dos controles incorporados suficiente para a maioria dos aplicativos UWP.
+Use os controles internos expostos por meio de estruturas de linguagem no Windows para criar aplicativos que fornecem a experiência de interação de usuário de plataforma completo, incluindo comportamentos de seleção e a manipulação. Você achará a funcionalidade de interação dos controles incorporados suficiente para a maioria dos aplicativos UWP.
 
 Ao usar controles de texto da UWP padrão, os comportamentos de seleção e os recursos visuais descritos neste tópico não podem ser personalizados.
 
 **Seleção de texto**
 
-Se seu aplicativo requer uma interface do usuário personalizada que dá suporte à seleção de texto, recomendamos que você siga os comportamentos Windowsselection descritos aqui.
+Se seu aplicativo requer uma interface do usuário personalizada que dá suporte à seleção de texto, é recomendável que você siga os comportamentos de seleção do Windows descritos aqui.
 
-**Conteúdo editável e não editável**
+**Conteúdo editável e não editáveis**
 
 
-Com o toque, as interações de seleção são realizadas principalmente pelos gestos, como um toque para definir um cursor de inserção ou selecionar uma palavra e um movimento de deslizar para modificar a seleção. Assim como acontece com outras interações Windowstouch, as interações são limitadas ao pressionar e mantenha o gesto para exibir a interface do usuário informativa. Para obter mais informações, consulte [Diretrizes de resposta visual](guidelines-for-visualfeedback.md).
+Com o toque, as interações de seleção são realizadas principalmente pelos gestos, como um toque para definir um cursor de inserção ou selecionar uma palavra e um movimento de deslizar para modificar a seleção. Como com outros Windows touch interações, interações cronometradas estão limitadas à imprensa e mantenha o gesto para exibir a informação da interface do usuário. Para obter mais informações, consulte [Diretrizes de resposta visual](guidelines-for-visualfeedback.md).
 
-Windowsrecognizes dois possíveis estados para interações de seleção, editáveis e não editável e ajusta a seleção da interface do usuário, comentários e funcionalidade adequadamente.
+Windows reconhece dois estados possíveis para interações de seleção, editáveis e não editáveis e também se ajusta a seleção da interface do usuário, comentários e funcionalidade.
 
 **Conteúdo editável**
 
@@ -78,7 +78,7 @@ As imagens a seguir demonstram como invocar o menu de contexto tocando na seleç
 
 ![tocar (ou pressionar e segurar) dentro da seleção ou em uma garra para invocar o menu de contexto.](images/textselection-show-context.png)
 
-**Observação**essas interações podem variar no caso de uma palavra incorreta. Tocar uma palavra que está marcada com a ortografia errada ressaltará toda a palavra e invocará o menu de contexto com a sugestão ortográfica.
+**Observação**  essas interações variam um pouco no caso de uma palavra incorreta. Tocar uma palavra que está marcada com a ortografia errada ressaltará toda a palavra e invocará o menu de contexto com a sugestão ortográfica.
 
  
 
@@ -98,11 +98,11 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 
 ![media player com garra de progresso](images/gripper-mediaplayer.png)
 
-*Media player com garra de progresso ajustável.*
+*Player de mídia com a barra de progresso ajustáveis.*
 
 ![Imagem com garras de corte](images/gripper-imagemanip.png)
 
-*Editor de imagens com garras de corte.*
+*Editor de imagens com as garras de corte.*
 
 ## <a name="related-articles"></a>Artigos relacionados
 
@@ -112,20 +112,20 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 * [Interações personalizadas do usuário](https://msdn.microsoft.com/library/windows/apps/mt185599)
 
 **Exemplos**
-* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Exemplos de arquivo-morto**
-* [Entrada: amostra de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: exemplo de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de teste de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: amostra de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: amostra de gestos no Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: amostra de manipulações e gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Amostra de entrada por toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+**Amostras de arquivo-morto**
+* [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: Exemplo de teste de hit de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: Exemplo simplificado de tinta](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: Exemplo de gestos do Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Entrada: Manipulações e exemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Exemplo de entrada de toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

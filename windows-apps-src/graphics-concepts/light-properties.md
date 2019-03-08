@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 86b8627461251a5d43762facc18c8a414a117fc9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941403"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604121"
 ---
 # <a name="light-properties"></a>Propriedades de luz
 
@@ -21,12 +21,12 @@ As propriedades de luz descrevem o tipo (ponto, direcional, destaque), a atenua�
 
 As propriedades de posição, intervalo e atenuação definem o local da luz no espaço do mundo e como a iluminação emitida se comporta à distância.
 
-## <a name="span-idlightattenuationspanspan-idlightattenuationspanspan-idlightattenuationspanlight-attenuation"></a><span id="Light_Attenuation"></span><span id="light_attenuation"></span><span id="LIGHT_ATTENUATION"></span>Atenuação de luz
+## <a name="span-idlightattenuationspanspan-idlightattenuationspanspan-idlightattenuationspanlight-attenuation"></a><span id="Light_Attenuation"></span><span id="light_attenuation"></span><span id="LIGHT_ATTENUATION"></span>Atenuação da luz
 
 
-A atenuação controla como a intensidade da luz diminui em direção à distância máxima especificada pela propriedade do intervalo. Às vezes, três valores de ponto flutuante são usados para representar a atenuação de luz: Atenuação0, Atenuação1 e Atenuação2. Esses valores de ponto flutuante variando de 0,0 ao infinito controlam a atenuação da luz. Alguns apps definem o membro do Atenuação1 como 1,0 e a outros como 0,0, o que resulta em intensidade de luz que muda como 1 / D, onde D é a distância da fonte de luz para o vértice. A intensidade da luz máxima está na origem, diminuindo a distância da luz para 1 / (intervalo da luz).
+A atenuação controla como a intensidade da luz diminui em direção à distância máxima especificada pela propriedade do intervalo. Três valores de ponto flutuante, às vezes, são usados para representar a atenuação da luz: Attenuation0, Attenuation1 e Attenuation2. Esses valores de ponto flutuante variando de 0,0 ao infinito controlam a atenuação da luz. Alguns apps definem o membro do Atenuação1 como 1,0 e a outros como 0,0, o que resulta em intensidade de luz que muda como 1 / D, onde D é a distância da fonte de luz para o vértice. A intensidade da luz máxima está na origem, diminuindo a distância da luz para 1 / (intervalo da luz).
 
-Embora normalmente um app defina Atenuação0 como 0,0, Atenuação1 como um valor constante e Atenuação2 como 0,0, é possível obter diversos efeitos de luz por essa alteração. Você pode combinar valores de atenuação para obter efeitos de atenuação mais complexos. Ou você pode defini-los como valores fora do intervalo normal para criar efeitos de atenuação ainda mais incomuns. Entretanto, não é permitido usar valores de atenuação negativos. Consulte [Atenuação e fator de destaque](attenuation-and-spotlight-factor.md).
+Embora normalmente um app defina Atenuação0 como 0,0, Atenuação1 como um valor constante e Atenuação2 como 0,0, é possível obter diversos efeitos de luz por essa alteração. Você pode combinar valores de atenuação para obter efeitos de atenuação mais complexos. Ou você pode defini-los como valores fora do intervalo normal para criar efeitos de atenuação ainda mais incomuns. Entretanto, não é permitido usar valores de atenuação negativos. Consulte [Fator de atenuação e destaque](attenuation-and-spotlight-factor.md).
 
 ## <a name="span-idlightcolorspanspan-idlightcolorspanspan-idlightcolorspanlight-color"></a><span id="Light_Color"></span><span id="light_color"></span><span id="LIGHT_COLOR"></span>Cor da luz
 
@@ -61,7 +61,7 @@ Embora não seja necessário normalizar um vetor de direção da luz, verifique 
 
 A posição da luz é descrita usando uma estrutura de vetor. As coordenadas x, y e z são consideradas no espaço do mundo. As luzes direcionais são o único tipo de luz que não usa a propriedade de posição.
 
-## <a name="span-idlightrangespanspan-idlightrangespanspan-idlightrangespanlight-range"></a><span id="Light_Range"></span><span id="light_range"></span><span id="LIGHT_RANGE"></span>Intervalo de luz
+## <a name="span-idlightrangespanspan-idlightrangespanspan-idlightrangespanlight-range"></a><span id="Light_Range"></span><span id="light_range"></span><span id="LIGHT_RANGE"></span>Intervalo da luz
 
 
 A propriedade de intervalo da luz determina a distância, no espaço do mundo, em que malhas de uma cena não recebem mais luz emitida pelo objeto. As luzes direcionais não usam a propriedade do intervalo.
@@ -69,7 +69,7 @@ A propriedade de intervalo da luz determina a distância, no espaço do mundo, e
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Luzes e materiais](lights-and-materials.md)
+[Materiais e luzes](lights-and-materials.md)
 
  
 

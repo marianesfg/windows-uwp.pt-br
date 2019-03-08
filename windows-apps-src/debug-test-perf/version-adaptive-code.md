@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 ms.localizationpriority: medium
 ms.openlocfilehash: d62ce9abd84a0769a2393db169b8198d3d9f6cec
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921673"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616401"
 ---
 # <a name="version-adaptive-code"></a>Código adaptável de versão
 
@@ -71,9 +71,9 @@ Desvantagens:
 
 Nesta seção, mostraremos vários exemplos de código adaptável que usam APIs que são novas no Windows 10, versão 1607 (Windows Insider Preview).
 
-### <a name="example-1-new-enum-value"></a>Exemplo 1: novo valor de enumeração
+### <a name="example-1-new-enum-value"></a>Exemplo 1: Novo valor de enum
 
-O Windows 10, versão 1607 adiciona um novo valor à enumeração [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx): **ChatWithoutEmoji**. Esse novo escopo de entrada tem o mesmo comportamento de entrada que o escopo de entrada **Chat** (verificação ortográfica, preenchimento automático, uso de maiúsculas automático), mas ele é mapeado para um teclado virtual sem um botão emoji. Isso é útil se você criar seu próprio seletor de emoji e quiser desabilitar o botão emoji interno no teclado virtual. 
+Windows 10, versão 1607 adiciona um novo valor para o [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx) enumeração: **ChatWithoutEmoji**. Esse novo escopo de entrada tem o mesmo comportamento de entrada que o escopo de entrada **Chat** (verificação ortográfica, preenchimento automático, uso de maiúsculas automático), mas ele é mapeado para um teclado virtual sem um botão emoji. Isso é útil se você criar seu próprio seletor de emoji e quiser desabilitar o botão emoji interno no teclado virtual. 
 
 Este exemplo mostra como verificar se o valor de enumeração **ChatWithoutEmoji** está presente e define a propriedade [InputScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.inputscope.aspx) de um **TextBox** se estiver presente. Se não estiver presente no sistema em que o aplicativo for executado, a propriedade **InputScope** será definida como **Chat** em vez disso. O código mostrado poderia ser colocado em um construtor de página ou em um manipulador de eventos Page.Loaded.
 
@@ -154,7 +154,7 @@ Nesses exemplos, você pode usar o valor de enumeração Chat em XAML ou no cód
 
 Se você usar o valor de ChatWithoutEmoji em XAML ou no código sem uma verificação, ele será compilado sem erros porque está presente na versão de Destino do sistema operacional. Ele também será executado sem erros em um sistema com a versão de Destino do sistema operacional. No entanto, quando o aplicativo for executado em um sistema que use a versão Mínima, haverá falha no tempo de execução porque o valor de enumeração ChatWithoutEmoji não está presente. Portanto, você deve usar esse valor somente no código e encapsulá-lo em uma verificação de API do tempo de execução para que seja chamado somente se for compatível com o sistema atual.
 
-### <a name="example-2-new-control"></a>Exemplo 2: novo controle
+### <a name="example-2-new-control"></a>Exemplo 2: Novo controle
 
 Uma nova versão do Windows normalmente traz novos controles para a superfície de API da UWP que traz novas funcionalidades à plataforma. Para aproveitar a presença de um novo controle, use o método [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx).
 
@@ -267,7 +267,7 @@ O `MediaElementUserControl` encapsula um controle **MediaElement**.
 > [!NOTE]
 > A página de código para `MediaElementUserControl` só contém código gerado, portanto ela não é mostrada.
 
-**Inicializar um controle baseado em IsTypePresent**
+**Inicializar um controle com base em IsTypePresent**
 
 No tempo de execução, você chama **ApiInformation.IsTypePresent** para verificar se há o MediaPlayerElement. Se ele estiver presente, você carrega `MediaPlayerUserControl`. Se não estiver, você carrega `MediaElementUserControl`.
 
@@ -303,7 +303,7 @@ Gatilhos de estado extensíveis permitem que você use o código e a marcação 
 
 Você deve usar gatilhos de estado para código adaptável somente quando tiver pequenas alterações de interface do usuário entre diferentes versões do sistema operacional que não afetem o restante da interface do usuário, como uma alteração de propriedade ou de valor enumeração em um controle.
 
-### <a name="example-1-new-property"></a>Exemplo 1: nova propriedade
+### <a name="example-1-new-property"></a>Exemplo 1: Nova propriedade
 
 A primeira etapa na configuração de um gatilho de estado extensível é subclassificar a classe [StateTriggerBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.statetriggerbase.aspx) para criar um gatilho personalizado que será acionado com base na presença de uma API. Este exemplo mostra um gatilho que é acionado se a presença da propriedade corresponder à variável `_isPresent` definida em XAML.
 
@@ -371,7 +371,7 @@ O gatilho neste exemplo verifica se a propriedade está presente. Se a proprieda
 </Grid>
 ```
 
-### <a name="example-2-new-enum-value"></a>Exemplo 2: novo valor de enumeração
+### <a name="example-2-new-enum-value"></a>Exemplo 2: Novo valor de enum
 
 Este exemplo mostra como definir valores de enumeração diferentes com base em se um valor estiver presente. Ele usa um gatilho de estado personalizado para obter o mesmo resultado conforme o exemplo anterior de chat. Neste exemplo, você usa o novo escopo de entrada ChatWithoutEmoji se o dispositivo estiver executando o Windows 10, versão 1607. Caso contrário, o escopo de entrada **Chat** é usado. Os estados visuais que usam esse gatilho são configurados em estilo *if-else* em que o escopo de entrada é escolhido com base na presença do novo valor de enumeração.
 
@@ -445,5 +445,5 @@ class IsEnumPresentTrigger : StateTriggerBase
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Visão geral das famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-- [Detectando dinamicamente recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [Visão geral de famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
+- [Detectar dinamicamente os recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)

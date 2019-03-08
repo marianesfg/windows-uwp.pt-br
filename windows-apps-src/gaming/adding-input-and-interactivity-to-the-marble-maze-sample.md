@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, entrada, amostra
 ms.localizationpriority: medium
 ms.openlocfilehash: d545f696a93bfa8416e1a772ecc015867a3615c2
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045442"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611811"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Adicionando entrada e interatividade ao exemplo do Marble Maze
 
@@ -324,7 +324,7 @@ case GameState::InGamePaused:
 
 ### <a name="tracking-touch-and-mouse-input"></a>Acompanhar a entrada por toque e de mouse
 
-Para entradas de touch e de mouse, um item do menu é escolhido quando o usuário clicar ou tocar nele. O exemplo a seguir mostra como o método **MarbleMazeMain::Update** processa a entrada do ponteiro para selecionar itens do menu. A variável do membro **m\_pointQueue** rastreia os locais em que o usuário tocou ou clicou na tela. A forma como o Marble Maze coleta entradas de ponteiro será descrita com mais detalhes neste documento, na seção [Processando a entrada de ponteiro](#processing-pointer-input).
+Para entradas de touch e de mouse, um item do menu é escolhido quando o usuário clicar ou tocar nele. O exemplo a seguir mostra como o método **MarbleMazeMain::Update** processa a entrada do ponteiro para selecionar itens do menu. O **m\_pointQueue** variável de membro rastreia os locais em que o usuário tocadas ou clicou na tela. A forma como o Marble Maze coleta entradas de ponteiro será descrita com mais detalhes neste documento, na seção [Processando a entrada de ponteiro](#processing-pointer-input).
 
 ```cpp
 // Check whether the user chose a button from the UI. 
@@ -535,13 +535,13 @@ if ((oppositeSquared + adjacentSquared) > m_deadzoneSquared)
 Verificamos se a entrada do direcional analógico esquerdo está fora da zona morta e, em caso afirmativo, o adicionamos a **combinedTiltX** e **combinedTiltY** (multiplicados por um fator de escala) para inclinar o palco.
 
 > [!IMPORTANT]
-> Quando você trabalhar com o controlador do Xbox, considere sempre a zona morta. A zona morta se refere a variação de sensibilidade ao movimento inicial entre os consoles de jogos. Em alguns controladores, um pequeno movimento pode não gerar nenhuma leitura, mas em outros pode gerar uma leitura mensurável. Para considerar isso em seu jogo, crie uma zona de não movimento para o movimento inicial do thumbstick. Para obter mais informações sobre a zona morta, consulte [Lendo os botões de controle](gamepad-and-vibration.md#reading-the-thumbsticks).
+> Quando você trabalhar com o controlador do Xbox, considere sempre a zona morta. A zona morta se refere a variação de sensibilidade ao movimento inicial entre os consoles de jogos. Em alguns controladores, um pequeno movimento pode não gerar nenhuma leitura, mas em outros pode gerar uma leitura mensurável. Para considerar isio em seu jogo, crie uma zona de não movimento para o movimento inicial do thumbstick. Para obter mais informações sobre a zona morta, consulte [Lendo os botões de controle](gamepad-and-vibration.md#reading-the-thumbsticks).
 
  
 
 ###  <a name="applying-input-to-the-game-state"></a>Aplicando entrada ao estado de jogo
 
-Os dispositivos relatam valores de entrada de diferentes maneiras. Por exemplo, a entrada de ponteiro pode ser em coordenadas de tela e a entrada de controlador pode ser em um formato completamente diferente. Um desafio ao se combinarem entradas de vários dispositivos em um conjunto de valores de entrada é a normalização, ou a conversão de valores para um formato comum. O Marble Maze normaliza valores dimensionando-os no intervalo \[-1,0, 1,0\]. A função **PointToTouch**, que já foi descrita nesta seção, converte coordenadas de tela para valores normalizados que vão, aproximadamente, de -1,0 a +1,0.
+Os dispositivos relatam valores de entrada de diferentes maneiras. Por exemplo, a entrada de ponteiro pode ser em coordenadas de tela e a entrada de controlador pode ser em um formato completamente diferente. Um desafio ao se combinarem entradas de vários dispositivos em um conjunto de valores de entrada é a normalização, ou a conversão de valores para um formato comum. Marble Maze normaliza valores escalando-os para o intervalo \[-1,0, 1,0\]. A função **PointToTouch**, que já foi descrita nesta seção, converte coordenadas de tela para valores normalizados que vão, aproximadamente, de -1,0 a +1,0.
 
 > [!TIP]
 > Mesmo se seu aplicativo usa um método de entrada, recomendamos que você sempre normalize os valores de entrada. Isso pode simplificar como a entrada é interpretada por outros componentes do seu jogo, como a simulação física, e facilita a gravação de jogos que funcionam em resoluções de tela diferentes.
@@ -613,9 +613,9 @@ Leia [Adicionando áudio ao exemplo do Marble Maze](adding-audio-to-the-marble-m
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Adicionando áudio ao exemplo do Marble Maze](adding-audio-to-the-marble-maze-sample.md)
-* [Adicionando conteúdo visual ao exemplo do Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
-* [Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* [Adicionando áudio ao exemplo Marble Maze](adding-audio-to-the-marble-maze-sample.md)
+* [Adicionando conteúdo visual ao exemplo Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
+* [Desenvolvendo o Marble Maze, um jogo UWP em C++ e DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 

@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use a progress bar within your toast notification.
+Description: Saiba como usar uma barra de progresso dentro de sua notificação do sistema.
 title: Barra de progresso de notificação do sistema e associação de dados
 label: Toast progress bar and data binding
 template: detail.hbs
@@ -8,22 +8,22 @@ ms.topic: article
 keywords: windows 10, uwp, notificação do sistema, barra de progresso, barra de progresso de notificação do sistema, notificação, associação de dados do sistema
 ms.localizationpriority: medium
 ms.openlocfilehash: f955f2a71fed6444c65f9550e1f4fa3baeabe092
-ms.sourcegitcommit: 88265a8c9f6a77a0508a0c9d89b6ab0a6238a1da
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "8969053"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624821"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>Barra de progresso de notificação do sistema e associação de dados
 
 Uma barra de progresso na notificação do sistema permite que você transmita o status das operações de longa duração para o usuário, como downloads, renderização de vídeo, metas de exercício e muito mais.
 
 > [!IMPORTANT]
-> **Requer a Atualização para Criadores e a biblioteca de Notificações 1.4.0**: você deve ter como meta o SDK 15063 e executar o build 15063 ou superior para usar barras de progresso em notificações do sistema. Você deve usar a versão 1.4.0 ou posterior da [biblioteca NuGet de notificações do kit de ferramentas da comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para inserir a barra de progresso no conteúdo da notificação do sistema.
+> **Requer a atualização para criadores e 1.4.0 da biblioteca de notificações**: Você deve ter como destino SDK 15063 e executar o build 15063 ou superior para usar barras de progresso em notificações do sistema. Você deve usar a versão 1.4.0 ou posterior da [biblioteca NuGet de notificações do kit de ferramentas da comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para inserir a barra de progresso no conteúdo da notificação do sistema.
 
-Uma barra de progresso dentro de uma notificação do sistema pode ser "indeterminada" (sem valor específico, os pontos animados indicam uma operação está ocorrendo) ou "determinada" (uma porcentagem específica da barra é preenchida, como 60%).
+Uma barra de progresso dentro de uma notificação do sistema pode ser "indeterminada" (nenhum valor específico, animados pontos indicam uma operação está ocorrendo) ou "determinada" (um percentual específico da barra é preenchido, como % 60).
 
-> **APIs importantes**: [classe NotificationData](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationdata), [método ToastNotifier.Update](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [classe ToastNotification](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
+> **APIs importantes**: [Classe NotificationData](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationdata), [método ToastNotifier.Update](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [ToastNotification classe](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
 
 > [!NOTE]
 > Somente a Área de trabalho oferece suporte às barras de progresso em notificações do sistema. Em outros dispositivos, a barra de progresso será descartada da notificação.
@@ -37,7 +37,7 @@ A imagem abaixo mostra uma barra de progresso determinada com todas as proprieda
 | **Título** | sequência ou [BindableString](toast-schema.md#bindablestring) | false | Obtém ou define uma sequência de título opcional. Suporte à associação de dados. |
 | **Valor** | dobro ou [AdaptiveProgressBarValue](toast-schema.md#adaptiveprogressbarvalue) ou [BindableProgressBarValue](toast-schema.md#bindableprogressbarvalue) | false | Obtém ou define o valor da barra de progresso. Suporte à associação de dados. Assume 0 como valor padrão. Pode ser um duplo entre 0,0 e 1,0; `AdaptiveProgressBarValue.Indeterminate` ou `new BindableProgressBarValue("myProgressValue")`. |
 | **ValueStringOverride** | sequência ou [BindableString](toast-schema.md#bindablestring) | false | Obtém ou define uma sequência para exibição em vez da sequência de percentual padrão. Caso não seja fornecida, algo como "70%" será exibido. |
-| **Status** | sequência ou [BindableString](toast-schema.md#bindablestring) | true | Obtém ou define uma sequência de status (obrigatória), que é exibida abaixo da barra de progresso à esquerda. Essa sequência deve refletir o status da operação, como "Baixando..." ou "Instalando..." |
+| **Status** | sequência ou [BindableString](toast-schema.md#bindablestring) | verdadeiro | Obtém ou define uma sequência de status (obrigatória), que é exibida abaixo da barra de progresso à esquerda. Essa sequência deve refletir o status da operação, como "Baixando..." ou "Instalando..." |
 
 
 Veja como você pode gerar a notificação acima...
@@ -204,10 +204,10 @@ Desde o Windows 10, você sempre pode **substituir** uma notificação ao enviar
 
 | | Substituir | Atualizar |
 | -- | -- | --
-| **Posição na Central de Ações** | Move a notificação para o tipo da Central de ações. | Deixa a notificação sem alterações na Central de ações. |
+| **Posição na Central de ações** | Move a notificação para o tipo da Central de ações. | Deixa a notificação sem alterações na Central de ações. |
 | **Modificar o conteúdo** | Pode alterar completamente todo o conteúdos/layout da notificação do sistema | Pode alterar somente as propriedades que oferecem suporte à associação de dados (barra de progresso e texto de nível superior) |
-| **Reaparece como pop-up** | Podem reaparecer como um pop-up de notificação do sistema se você deixar **SuppressPopup** definida como `false` (ou definida como true para enviá-la silenciosamente à Central de ações) | Não reaparece como um pop-up; os dados da notificação do sistema são atualizados silenciosamente na Central de ações |
-| **Ignorado pelo usuário** | A notificação substituta sempre será enviada independentemente do usuário ignorar a notificação anterior | Se o usuário ignorou a notificação do sistema, ocorre falha na atualização dela |
+| **Reapareçam como pop-up** | Podem reaparecer como um pop-up de notificação do sistema se você deixar **SuppressPopup** definida como `false` (ou definida como true para enviá-la silenciosamente à Central de ações) | Não reaparece como um pop-up; os dados da notificação do sistema são atualizados silenciosamente na Central de ações |
+| **Usuário ignorado** | A notificação substituta sempre será enviada independentemente do usuário ignorar a notificação anterior | Se o usuário ignorou a notificação do sistema, ocorre falha na atualização dela |
 
 Em geral, a **atualização é útil para...**
 
@@ -222,5 +222,5 @@ Muitas vezes, após a conclusão da sequência de atualizações (como o fim do 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-toast-progress-bar)
-- [Conteúdo e documentação sobre notificações do sistema](adaptive-interactive-toasts.md)
+- [Exemplo de código completo no GitHub](https://github.com/WindowsNotifications/quickstart-toast-progress-bar)
+- [Documentação de conteúdo de notificação do sistema](adaptive-interactive-toasts.md)

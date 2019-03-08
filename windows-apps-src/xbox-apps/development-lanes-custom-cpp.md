@@ -7,13 +7,13 @@ keywords: windows 10, uwp
 ms.assetid: 6ae36021-94d3-43df-9e96-69a93cfe8b56
 ms.localizationpriority: medium
 ms.openlocfilehash: 23dfb8843ed8e70fc6f979bd778a517d0c30327a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943917"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613871"
 ---
-# <a name="bring-custom-c-games-to-uwp-on-xbox"></a>Traga C++ personalizado jogos para UWP no Xbox
+# <a name="bring-custom-c-games-to-uwp-on-xbox"></a>Trazer jogos personalizados em C++ para a UWP no Xbox
 
 Se você estiver elaborando um mecanismo em C++ personalizado, o Xbox One tem suporte completo para C++. 
 
@@ -28,6 +28,6 @@ Para saber como transformar seu console em um kit de desenvolvimento e como impl
 
 
 ## <a name="see-also"></a>Consulte também
-- [Trazendo jogos existentes para o Xbox](development-lanes-landing.md)
+- [Trazendo existente de jogos para Xbox](development-lanes-landing.md)
 - [UWP no Xbox One](index.md)
 

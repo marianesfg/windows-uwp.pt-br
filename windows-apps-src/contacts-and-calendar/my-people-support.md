@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 08acb2972469a84e6a37d7293ed00cae8df94dfb
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044440"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611531"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Adicionando o suporte para Minhas Pessoas a um aplicativo
 
@@ -27,8 +27,8 @@ O recurso Minhas Pessoas permite que os usuários fixem contatos de um aplicativ
 
 Há três coisas que você precisa fazer para permitir que seu aplicativo use o recurso Minhas Pessoas:
 
-1. [Declare o suporte para o contrato de ativação shareTarget no manifesto do aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [Anote os contatos com os quais os usuários podem compartilhar usando seu aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
+1. [Declare suporte para o contrato de ativação shareTarget no manifesto do aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+2. [Anote os contatos que os usuários podem compartilhar a usar seu aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3.  Dê suporte a várias instâncias do seu aplicativo em execução ao mesmo tempo. Os usuários devem poder interagir com a versão completa de seu aplicativo enquanto o usam em um painel de contato.  Eles podem até usá-lo em vários painéis de contato ao mesmo tempo.  Para dar suporte a isso, seu aplicativo precisa ser capaz de executar várias exibições simultaneamente. Para saber como fazer isso, consulte o artigo ["Mostrar vários modos de exibição para um aplicativo"](https://docs.microsoft.com/en-us/windows/uwp/layout/show-multiple-views).
 
 Feito isso, seu aplicativo será exibido no painel de contato para os contatos anotados.
@@ -37,7 +37,7 @@ Feito isso, seu aplicativo será exibido no painel de contato para os contatos a
 
 Para declarar o suporte para o contrato do recurso Minhas Pessoas, abra seu aplicativo no Visual Studio. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo **Package.appxmanifest** e selecione **Abrir com**. No menu, selecione **Editor de XML (texto)** e clique em **OK**. Faça as seguintes alterações no manifesto:
 
-**Antes**
+**Antes de**
 
 ```xml
 <Package
@@ -53,7 +53,7 @@ Para declarar o suporte para o contrato do recurso Minhas Pessoas, abra seu apli
 
 ```
 
-**Depois**
+**Depois de**
 
 ```xml
 <Package
@@ -101,13 +101,13 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-O "appId" é o Nome da Família de Pacotes, seguido por '!' e a ID da classe ativável. Para localizar o Nome da Família de Pacotes, abra **Package.appxmanifest** usando o editor de padrão e procure na guia "Empacotamento". Aqui, o "Aplicativo" é a classe ativável correspondente ao modo de exibição do aplicativo.
+O "appId" é o Nome da Família de Pacotes, seguido por '!' e a ID da classe ativável. Para localizar o Nome da Família de Pacotes, abra **Package.appxmanifest** usando o editor padrão e procure na guia "Packaging". Aqui, o "App" é a classe ativável correspondente para o modo de exibição de inicialização do aplicativo.
 
 ## <a name="allow-contacts-to-invite-new-potential-users"></a>Permitir que os contatos convidem novos usuários em potencial
 
 Por padrão, seu aplicativo só aparecerá no painel de contato para os contatos que você tiver anotado especificamente.  Isso é para evitar confusão com os contatos que não podem interagir por meio de seu app.  Se você quiser que o aplicativo apareça para os contatos que ele não conhece (para convidar os usuários a adicionarem esse contato à conta deles, por exemplo), você poderá adicionar o seguinte ao seu manifesto:
 
-**Antes**
+**Antes de**
 
 ```Csharp
 <Applications>
@@ -121,7 +121,7 @@ Por padrão, seu aplicativo só aparecerá no painel de contato para os contatos
 </Applications>
 ```
 
-**Depois**
+**Depois de**
 
 ```Csharp
 <Applications>
@@ -188,7 +188,7 @@ Para marcar um contato, o nó de nível superior da notificação do sistema dev
     + Ex. mailto:johndoe@mydomain.com
 + **Número de telefone** 
     + Ex. tel:888-888-8888
-+ **ID Remota** 
++ **ID remota** 
     + Ex. remoteid:1234
 
 Aqui está um exemplo de como identificar uma notificação do sistema está relacionado a uma determinada pessoa:
@@ -248,11 +248,11 @@ async Task PinMultipleContacts(Contact[] contacts)
 
 **Observação:** 
 
-## <a name="see-also"></a>Veja também
-+ [Compartilhamento de Minhas Pessoas](my-people-sharing.md)
-+ [Notificações de Minhas Pessoas](my-people-notifications.md)
-+ [Vídeo do Channel 9 sobre como adicionar o suporte para Minhas Pessoas a um aplicativo](https://channel9.msdn.com/Events/Build/2017/P4056)
-+ [Exemplo de integração de Minhas Pessoas](https://aka.ms/mypeoplebuild2017)
-+ [Exemplo de cartão de visita](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
+## <a name="see-also"></a>Consulte também
++ [Minha equipe compartilhamento](my-people-sharing.md)
++ [Minhas notificações de por pessoas](my-people-notifications.md)
++ [Vídeo do canal 9 sobre como adicionar pessoas meu dão suporte a um aplicativo](https://channel9.msdn.com/Events/Build/2017/P4056)
++ [Meu exemplo de integração de pessoas](https://aka.ms/mypeoplebuild2017)
++ [Entre em contato com o exemplo do cartão](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
 + [Documentação da classe PinnedContactManager](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
-+ [Conectar seu aplicativo a ações em um cartão de contato](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)
++ [Conectar seu aplicativo para ações em um cartão de visita](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)

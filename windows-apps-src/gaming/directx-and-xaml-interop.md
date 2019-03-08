@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, interoperabilidade com xaml
 ms.localizationpriority: medium
 ms.openlocfilehash: 34fb65ec53f6addccf8723b451d333d602c17908
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046206"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604701"
 ---
 # <a name="directx-and-xaml-interop"></a>Interoperabilidade entre DirectX e XAML
 
@@ -21,13 +21,13 @@ Você pode usar a XAML (Extensible Application Markup Language) e o Microsoft Di
 
 Se seu app se concentrar principalmente na renderização 2D, convém usar biblioteca [Win2D](https://github.com/microsoft/win2d) do Windows Runtime. Essa biblioteca é mantida pela Microsoft e criada com base nas tecnologias principais de Direct2D. Ela simplifica bastante o padrão de uso para implementar os gráficos 2D e inclui abstrações úteis para algumas das técnicas descritas neste documento. Consulte a página de projeto para obter mais detalhes. Esse documento aborda orientações para desenvolvedores de aplicativos que optam por *não* usar Win2D.
 
-> **Observação**APIs do DirectX não são definidas como tipos de tempo de execução do Windows, portanto, você normalmente usa extensões de componente VisualC + + (C++ c++ /CX) para desenvolver componentes XAML UWP que interoperam com o DirectX. Além disso, você pode criar um aplicativo UWP em C# e XAML que usa DirectX se encapsular as chamadas DirectX em um arquivo de metadados do Windows Runtime separado.
+> **Observação**  as APIs do DirectX não são definidas como tipos de tempo de execução do Windows, para que você normalmente usa extensões de componentes do Visual C++ (C + + c++ /CLI CX) para desenvolver componentes UWP XAML que interoperam com o DirectX. Além disso, você pode criar um aplicativo UWP em C# e XAML que usa DirectX se encapsular as chamadas DirectX em um arquivo de metadados do Windows Runtime separado.
 
  
 
 ## <a name="xaml-and-directx"></a>XAML e DirectX
 
-O DirectX fornece duas bibliotecas poderosas para gráficos 2D e 3D: Direct2D e Microsoft Direct3D. Embora a XAML dê suporte para primitivos e efeitos básicos 2D, muitos aplicativos, como de modelagem e jogos, precisam de suporte gráfico mais complexo. Para esses, você pode usar o Direct2D e o Direct3D para renderizar parte dos gráficos, ou todos eles, e usar a XAML para todo o resto.
+DirectX fornece duas bibliotecas eficientes para gráficos 2D e 3D: Direct2D e Microsoft Direct3D. Embora a XAML dê suporte para primitivos e efeitos básicos 2D, muitos aplicativos, como de modelagem e jogos, precisam de suporte gráfico mais complexo. Para esses, você pode usar o Direct2D e o Direct3D para renderizar parte dos gráficos, ou todos eles, e usar a XAML para todo o resto.
 
 Se estiver implementando interoperabilidade personalizada entre XAML e DirectX, você precisa conhecer estes dois conceitos:
 
@@ -369,9 +369,9 @@ Veja a seguir o processo básico para criar e atualizar um objeto [VirtualSurfac
 Para assegurar um bom desempenho, há algumas limitações para o tipo [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834):
 
 -   Há, no máximo, quatro instâncias de [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834) por app.
--   Você deve definir a altura e a largura da cadeia de troca do DirectX (em [DXGI\_SWAP\_CHAIN\_DESC1](https://msdn.microsoft.com/library/windows/desktop/hh404528)) como as dimensões atuais do elemento da cadeia de troca. Caso contrário, o conteúdo da exibição será ajustado (usando **DXGI\_SCALING\_STRETCH**) para caber.
--   Você deve definir o modo de dimensionamento da cadeia de troca do DirectX (em [DXGI\_SWAP\_CHAIN\_DESC1](https://msdn.microsoft.com/library/windows/desktop/hh404528)) como **DXGI\_SCALING\_STRETCH**.
--   Não é possível definir o modo alfa da cadeia de troca do DirectX (em [DXGI\_SWAP\_CHAIN\_DESC1](https://msdn.microsoft.com/library/windows/desktop/hh404528)) como **DXGI\_ALPHA\_MODE\_PREMULTIPLIED**.
+-   Você deve definir a cadeia de troca de DirectX altura e largura (em [DXGI\_PERMUTA\_cadeia\_DESC1](https://msdn.microsoft.com/library/windows/desktop/hh404528)) para as dimensões atuais do elemento de cadeia de troca. Se você não fizer isso, o conteúdo de exibição será dimensionado (usando **DXGI\_SCALING\_STRETCH**) para se ajustar.
+-   Você deve definir o modo de dimensionamento da cadeia de troca do DirectX (na [DXGI\_PERMUTA\_cadeia\_DESC1](https://msdn.microsoft.com/library/windows/desktop/hh404528)) para **DXGI\_SCALING\_STRETCH**.
+-   Não é possível definir o modo de alfa da cadeia de troca do DirectX (na [DXGI\_PERMUTA\_cadeia\_DESC1](https://msdn.microsoft.com/library/windows/desktop/hh404528)) para **DXGI\_alfa\_modo\_ PRÉ-MULTIPLICADOS**.
 -   Você deve criar a cadeia de troca do DirectX chamando [IDXGIFactory2::CreateSwapChainForComposition](https://msdn.microsoft.com/library/windows/desktop/hh404558).
 
 Atualize o [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834) com base nas necessidades do seu aplicativo, e não as atualizações da estrutura do XAML. Se você precisar sincronizar as atualizações de **SwapChainPanel** com as da estrutura da XAML, registre-se no evento [Windows::UI::Xaml::Media::CompositionTarget::Rendering](https://msdn.microsoft.com/library/windows/apps/br228127). Caso contrário, será necessário levar em consideração todos os problemas entre threads se você tentar atualizar os elementos XAML de um thread diferente daquele que atualiza **SwapChainPanel**.
@@ -465,7 +465,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [SwapChainPan
 * [VirtualSurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702050)
 * [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834)
 * [ISwapChainPanelNative](https://msdn.microsoft.com/library/windows/desktop/dn302143)
-* [Guia de programação para Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
+* [Guia de programação para o Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
 
  
 

@@ -1,5 +1,5 @@
 ---
-Description: Learn how to send a local toast notification and handle the user clicking the toast.
+Description: Saiba como enviar uma notificação do sistema local e manipular o usuário ao clicar na notificação do sistema.
 title: Enviar uma notificação do sistema local
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Send a local toast notification
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, enviar notificações do sistema, notificações, enviar notificações, notificações do sistema, como fazer, guia de início rápido, introdução, exemplo de código, passo a passo
 ms.localizationpriority: medium
 ms.openlocfilehash: 410e8121aecfe13805586c9287f62444f80a1b1b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946141"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605921"
 ---
 # <a name="send-a-local-toast-notification"></a>Enviar uma notificação do sistema local
 
@@ -39,14 +39,14 @@ Explicaremos os seguintes procedimentos:
 * Manipulação de ativação em primeiro plano
 * Manipulação de ativação em segundo plano
 
-> **APIs importantes**: [Classe ToastNotification](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification), [Classe ToastNotificationActivatedEventArgs](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
+> **APIs importantes**: [Classe ToastNotification](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification), [ToastNotificationActivatedEventArgs classe](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Para entender completamente este tópico, os itens a seguir serão úteis...
 
-* Um conhecimento prático dos termos e conceitos de notificações do sistema. Para obter mais informações, consulte a[Visão geral da notificação do sistema e ação central](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/toast-notification-and-action-center-overview-for-windows-10/).
+* Um conhecimento prático dos termos e conceitos de notificações do sistema. Para obter mais informações, consulte [notificação do sistema e a ação do Centro de visão geral do](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/toast-notification-and-action-center-overview-for-windows-10/).
 * Uma familiaridade com o conteúdo da notificação do sistema Windows 10. Para obter mais informações, consulte [documentação de conteúdo da notificação do sistema](adaptive-interactive-toasts.md).
 * Um projeto de aplicativo UWP do Windows 10
 
@@ -54,20 +54,20 @@ Para entender completamente este tópico, os itens a seguir serão úteis...
 > Diferente do Windows 8/8.1, você não precisa mais declarar no manifesto do aplicativo que ele é capaz de mostrar notificações do sistema. Todos os aplicativos são capazes de enviar e exibir notificações do sistema.
 
 > [!NOTE]
-> **Aplicativos do Windows 8/8.1**: use [documentação arquivada](https://msdn.microsoft.com/library/windows/apps/xaml/hh868254.aspx).
+> **Aplicativos do Windows 8/8.1**: Use o [documentação arquivada](https://msdn.microsoft.com/library/windows/apps/xaml/hh868254.aspx).
 
 
 ## <a name="install-nuget-packages"></a>Instalar pacotes NuGet
 
 Recomendamos a instalação destes dois pacotes NuGet para o projeto. Nosso exemplo de código usará esses pacotes. No final do artigo, forneceremos os trechos de código "Baunilha" que não usam pacotes NuGet.
 
-* [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/): gerar cargas de notificações do sistema por meio de objetos em vez de XML bruto.
-* [QueryString.NET](https://www.nuget.org/packages/QueryString.NET/): gerar e analisar cadeias de caracteres de consulta com C#
+* [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/): Gere cargas de notificação do sistema por meio de objetos em vez de XML bruto.
+* [QueryString.NET](https://www.nuget.org/packages/QueryString.NET/): Gerar e analisar cadeias de caracteres de consulta comC#
 
 
 ## <a name="add-namespace-declarations"></a>Adicionar declarações de namespace
 
-`Windows.UI.Notifications` Inclui as APIs de notificação do sistema.
+`Windows.UI.Notifications` inclui o APIs do sistema.
 
 ```csharp
 using Windows.UI.Notifications;
@@ -84,10 +84,10 @@ No Windows 10, o conteúdo da notificação do sistema é descrito usando uma li
 
 Vamos começar construindo a parte visual do conteúdo, que inclui o conteúdo de texto e imagens que você deseja exibir para o usuário.
 
-Graças a biblioteca de notificações, gerar o conteúdo XML é simples. Se você não instalar a biblioteca de Notificações do NuGet, é necessário construir o XML manualmente, o que deixa espaço para erros.
+Graças à biblioteca de notificações, gerar o conteúdo XML é simples. Se você não instalar a biblioteca de Notificações do NuGet, é necessário construir o XML manualmente, o que deixa espaço para erros.
 
 > [!NOTE]
-> As imagens podem ser usadas do pacote do aplicativo, do armazenamento local do aplicativo ou da Web. Na Fall Creators Update, as imagens da Web podem ter até 3 MB em conexões normais e 1 MB em conexões limitadas. Em dispositivos que ainda não executam a Fall Creators Update, as imagens da Web devem ser maiores do que 200 KB.
+> As imagens podem ser usadas do pacote do aplicativo, do armazenamento local do aplicativo ou da Web. Na the Fall Creators Update, as imagens da Web podem ter até 3 MB em conexões normais e 1 MB em conexões limitadas. Em dispositivos que ainda não executam a Fall Creators Update, as imagens da Web devem ser maiores do que 200 KB.
 
 ```csharp
 // In a real app, these would be initialized with actual data
@@ -238,9 +238,9 @@ toast.ExpirationTime = DateTime.Now.AddDays(2);
 
 Se você quiser remover ou substituir a notificação enviada por meio de programação, é necessário usar a propriedade Tag (e, opcionalmente, a propriedade Group) a fim de fornecer uma chave primária para a notificação. Em seguida, você pode usar essa chave primária no futuro para remover ou substituir a notificação.
 
-Para ver mais detalhes sobre como substituir/remover notificações do sistema disponibilizadas, consulte [Guia de início rápido: gerenciamento de notificações do sistema na central de ações (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/dn631260.aspx).
+Para ver mais detalhes sobre como substituir/remover já entregue notificações do sistema, consulte [guia de início rápido: Gerenciar notificações do sistema na Central de ações (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/dn631260.aspx).
 
-Tag e Group combinadas atuam como uma chave primária composta. Group é o identificador mais genérico, no qual você pode atribuir a grupos como "wallPosts", "messages", "friendRequests" etc. Tag deve identificar exclusivamente a notificação dentro do grupo. Ao usar um grupo genérico, você pode remover todas as notificações dele usando a [API RemoveGroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_).
+Tag e Group combinadas atuam como uma chave primária composta. Grupo é o identificador mais genérico, onde você pode atribuir grupos como "wallPosts", "mensagens", "friendRequests", etc. E, em seguida, marca deve identificar exclusivamente a notificação em si de dentro do grupo. Ao usar um grupo genérico, você pode remover todas as notificações dele usando a [API RemoveGroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_).
 
 ```csharp
 toast.Tag = "18365";
@@ -270,7 +270,7 @@ Veja um exemplo do que um aplicativo de mensagens deve fazer...
 3. O aplicativo abre a conversa e, em seguida, apaga todas as notificações do sistema relativas a ela (usando [RemoveGroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_) no grupo fornecido pelo aplicativo para a conversa)
 4. Agora, a Central de Ações do usuário reflete adequadamente o estado da notificação, pois não há notificações obsoletas dessa conversa na Central de Ações.
 
-Para saber sobre como limpar todas as notificações ou remover notificações específicas, consulte [Guia de início rápido: gerenciamento de notificações do sistema na central de ações (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/dn631260.aspx).
+Para saber mais sobre como limpar todas as notificações ou remover notificações específicas, consulte [guia de início rápido: Gerenciar notificações do sistema na Central de ações (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/dn631260.aspx).
 
 
 ## <a name="handling-activation"></a>Manipular a ativação
@@ -501,7 +501,7 @@ var toast = new ToastNotification(toastXml);
 
 ## <a name="resources"></a>Recursos
 
-* [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-sending-local-toast)
-* [Conteúdo e documentação sobre notificações do sistema](adaptive-interactive-toasts.md)
+* [Exemplo de código completo no GitHub](https://github.com/WindowsNotifications/quickstart-sending-local-toast)
+* [Documentação de conteúdo de notificação do sistema](adaptive-interactive-toasts.md)
 * [Classe ToastNotification](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
 * [Classe ToastNotificationActivatedEventArgs](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)

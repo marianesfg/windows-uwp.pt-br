@@ -1,5 +1,5 @@
 ---
-Description: Create Universal Windows Platform (UWP) apps with intuitive and distinctive user interaction experiences that are optimized for touchpad but are functionally consistent across input devices.
+Description: Crie aplicativos UWP (Plataforma Universal do Windows) com experiências de interação do usuário intuitivas e exclusivas otimizadas para touchpad, mas que sejam funcionalmente consistentes em diferentes dispositivos de entrada.
 title: Interações por touchpad
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 895bf1ffe4fc79a65fdf452235ee9466e91b7215
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046702"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593901"
 ---
 # <a name="touchpad-design-guidelines"></a>Diretrizes de design do touchpad
 
@@ -55,11 +55,11 @@ Os usuários podem definir muito mais gestos de touchpad de precisão e comporta
 
 ![configurações de touchpad padrão](images/mouse-touchpad-settings-standard.png)
 
-<sup>Configurações Standard\\ touchpad\\</sup>
+<sup>Standard\\ touchpad\\ configurações</sup>
 
 ![configurações do windows precision touchpad](images/mouse-touchpad-settings-ptp.png)
 
-<sup>Configurações Windows\\ Precision\\ Touchpad\\</sup>
+<sup>Windows\\ precisão\\ Touchpad\\ configurações</sup>
 
 Aqui estão alguns exemplos de gestos otimizados de touchpad para realizar tarefas comuns.
 
@@ -128,7 +128,7 @@ Para saber mais sobre como consultar os recursos do dispositivo, veja [Identific
 
 -   Quando o cursor do touchpad for detectado (por eventos de movimentação ou focalização), mostre a interface do usuário específica do mouse para indicar a funcionalidade exposta pelo elemento. Se o cursor do touchpad não for movimentado por algum tempo ou se o usuário começar uma interação por toque, faça com que a interface do usuário do touchpad desapareça gradualmente. Dessa forma, a interface do usuário fica mais organizada.
 -   Não use o cursor para comentário de foco; o comentário apresentado pelo elemento é suficiente (veja a seção Cursores, a seguir).
--   Não exiba comentários sobre elementos visuais quando o elemento não der suporte a interação (como um texto estático).
+-   Não exiba feedback visual quando o elemento não permite manipulação (como texto estático).
 -   Não use retângulos de foco nas interações por touchpad; Reserve-os para as interações por teclado.
 -   Exiba respostas visuais simultaneamente para todos os elementos que representam o mesmo destino de entrada.
 
@@ -155,15 +155,15 @@ Se você precisa personalizar o cursor do mouse:
 * [Identificar entrada do ponteiro](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
 **Exemplos**
-* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Exemplo de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 **Exemplos de arquivo morto**
-* [Entrada: amostra de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos e interações com o GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: Gestos e manipulações com GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
 

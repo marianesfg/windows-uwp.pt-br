@@ -7,11 +7,11 @@ ms.date: 10/11/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1593ab8b547a464492a35aa7d49d38f667a8210b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927400"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626481"
 ---
 # <a name="send-email"></a>Enviar email
 
@@ -19,7 +19,7 @@ Mostra como iniciar a caixa de diálogo de email para permitir que o usuário en
 
 **Neste artigo**
 
--   [Iniciar a caixa de redação de email](#launch-the-compose-email-dialog)
+-   [Iniciar a caixa de diálogo de email de composição](#launch-the-compose-email-dialog)
 -   [Resumo e próximas etapas](#summary-and-next-steps)
 -   [Tópicos relacionados](#related-topics)
 
@@ -47,7 +47,7 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 ```
 
 >[!NOTE]
-> Anexos que você adicionar a um email usando a classe [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) aparecerá somente no aplicativo Mail. Se os usuários têm qualquer outro programa de email configurado como o programa de email padrão, a janela de redigir será exibida sem o anexo. Isso é um problema conhecido.
+> Os anexos que você adicionar a um email usando o [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) classe será exibida apenas no aplicativo Mail. Se os usuários tiverem qualquer outro programa de email configurado como esse programa de email padrão, a janela de redação será exibida sem o anexo. Esse é um problema conhecido.
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
@@ -55,8 +55,8 @@ Este tópico mostrou como iniciar a caixa de redação de email. Para obter mais
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Selecionando contatos](selecting-contacts.md)
-* [Como continuar seu aplicativo do Windows Phone após chamar um Seletor de arquivo](https://msdn.microsoft.com/library/windows/apps/xaml/Dn614994)
+* [Seleção de contatos](selecting-contacts.md)
+* [Como continuar seu aplicativo do Windows Phone depois de chamar um seletor de arquivos](https://msdn.microsoft.com/library/windows/apps/xaml/Dn614994)
  
 
  

@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, entrada, joystick para simulador de voo
 ms.localizationpriority: medium
 ms.openlocfilehash: 5eceb30c62f1e803397aff71d59b560c39736cf9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927969"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57609011"
 ---
-# <a name="flight-stick"></a>Joystick de voo
+# <a name="flight-stick"></a>Joystick para simulador de voo
 
 Esta página descreve os conceitos básicos de programação para joysticks para simulador de voo do Xbox One usando [Windows.Gaming.Input.FlightStick](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstick) e APIs relacionadas para a Plataforma Universal do Windows (UWP).
 
@@ -49,12 +49,12 @@ Como um controlador de navegação da interface do usuário, um joystick para si
 | ------------------:| ----------------------------------- |
 |                 Para cima | Joystick para cima                         |
 |               Para baixo | Joystick para baixo                       |
-|               Para a esquerda | Joystick para a esquerda                       |
-|              Para a direita | Joystick para a direita                      |
+|               Esquerda | Joystick para a esquerda                       |
+|              Direita | Joystick para a direita                      |
 |               Exibir | Botão **Exibir**                     |
 |               Menu | Botão **Menu**                     |
 |             Aceitar | Botão **FirePrimary**              |
-|             Cancelar | Botão **FireSecondary**            |
+|             Cancel | Botão **FireSecondary**            |
 
 Os joysticks para simulador de voo não mapeiam qualquer um dos comandos de navegação do [conjunto opcional](ui-navigation-controller.md#optional-set).
 
@@ -177,7 +177,7 @@ Cada um dos dois botões de tiro do joystick para simulador de voo fornece uma l
 > [!NOTE]
 > Os joysticks para simulador de voo são equipados com botões adicionais usados para a navegação da interface do usuário, como os botões **Exibir** e **Menu**. Esses botões não fazem parte da enumeração `FlightStickButtons` e só podem ser lidos acessando o joystick para simulador de voo como um dispositivo de navegação da interface do usuário. Para saber mais, veja [Controlador de navegação da interface do usuário](ui-navigation-controller.md).
 
-Os valores de botão são lidos da propriedade [FlightStickReading.Buttons](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstickreading.Buttons). Como essa propriedade é um campo de bits, o mascaramento bit a bit é usado para isolar o valor do botão de seu interesse. O botão está pressionado (para baixo) quando o bit correspondente está definido; caso contrário, ele está liberado (para acima).
+Os valores de botão são lidos da propriedade [FlightStickReading.Buttons](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstickreading.Buttons). Como essa propriedade é um campo de bits, o mascaramento bit a bit é usado para isolar o valor do botão de interesse. O botão está pressionado (para baixo) quando o bit correspondente está definido; caso contrário, ele está liberado (para acima).
 
 O exemplo a seguir determina se o botão **FirePrimary** é pressionado:
 
@@ -223,8 +223,8 @@ if (GameControllerSwitchPosition::Center == (reading.HatSwitch & GameControllerS
 
 The [InputInterfacingUWP sample _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP) demonstrates how to use flight sticks and different kinds of input devices in tandem, as well as how these input devices behave as UI navigation controllers.-->
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 * [Classe Windows.Gaming.Input.UINavigationController](https://docs.microsoft.com/uwp/api/windows.gaming.input.uinavigationcontroller)
 * [Interface Windows.Gaming.Input.IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
-* [Práticas de entrada para jogos](input-practices-for-games.md)
+* [Práticas recomendadas de entrada para jogos](input-practices-for-games.md)

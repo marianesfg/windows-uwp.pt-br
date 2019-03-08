@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a3133508a0cb8919994543845412ef71a8d463fe
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050839"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611761"
 ---
 # <a name="conditional-xaml"></a>XAML condicional
 
@@ -183,7 +183,7 @@ Neste exemplo, um [ColorPicker](https://docs.microsoft.com/uwp/api/windows.ui.xa
 </Rectangle>
 ```
 
-Ao associar uma propriedade com outra que depende de um namespace condicional, é preciso usar a mesma condição em ambas as propriedades. Neste exemplo, `colorPicker.Color` depende do namespace condicional "contract5Present". Por isso, também é preciso colocar o prefixo "contract5Present" na propriedade SolidColorBrush.Color. (Ou é possível colocar o prefixo "contract5Present" na propriedade SolidColorBrush em vez da propriedade Color.) Caso isso não seja feito, ocorrerá um erro de tempo de compilação.
+Ao associar uma propriedade com outra que depende de um namespace condicional, é preciso usar a mesma condição em ambas as propriedades. Neste exemplo, `colorPicker.Color` depende do namespace condicional "contract5Present". Por isso, também é preciso colocar o prefixo "contract5Present" na propriedade SolidColorBrush.Color. (Ou, você pode colocar o prefixo 'contract5Present' em SolidColorBrush, em vez de na propriedade de cor.) Se você não fizer isso, você obterá um erro de tempo de compilação.
 
 ```xaml
 <SolidColorBrush contract5Present:Color="{x:Bind colorPicker.Color, Mode=OneWay}"/>
@@ -245,5 +245,5 @@ Quando o aplicativo é executado no Fall Creators Update, use ColorPicker para q
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Guia para aplicativos UWP](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
-- [Detectando dinamicamente recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [Detectar dinamicamente os recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [Contratos de API](https://channel9.msdn.com/Events/Build/2015/3-733) (Vídeo da Compilação 2015)

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, localização, funcionalidade de localização
 ms.localizationpriority: medium
 ms.openlocfilehash: b3582aa8ed406a25eb704f2f86f8ed272bea2c63
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050216"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627321"
 ---
 # <a name="get-the-users-location"></a>Obter a localização do usuário
 
@@ -22,9 +22,9 @@ Encontre a localização do usuário e responda a alterações na localização.
 
 **Dica** Para saber mais sobre como acessar a localização do usuário em seu aplicativo, baixe a seguinte amostra do [repositório Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
--   [Amostra de mapa da UWP (Plataforma Universal do Windows)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Exemplo de mapa do Universal Windows Platform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-## <a name="enable-the-location-capability"></a>Habilitar a funcionalidade de localização
+## <a name="enable-the-location-capability"></a>Habilitar a funcionalidade de local
 
 
 1.  No **Gerenciador de Soluções**, clique duas vezes sobre **package.appxmanifest** e selecione a guia **Funcionalidades**.
@@ -42,9 +42,9 @@ Encontre a localização do usuário e responda a alterações na localização.
 
 Esta seção descreve como detectar a localização geográfica do usuário usando APIs no namespace [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603).
 
-### <a name="step-1-request-access-to-the-users-location"></a>Etapa 1: Solicitar acesso ao local do usuário
+### <a name="step-1-request-access-to-the-users-location"></a>Etapa 1: Solicitar o acesso ao local do usuário
 
-A menos que seu aplicativo tem a funcionalidade de localização grande (ver nota), você deverá solicitar acesso à localização do usuário usando o método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de tentar acessar a localização. É necessário chamar o método **RequestAccessAsync** no thread da interface do usuário e o aplicativo deve estar em segundo plano. O aplicativo não será capaz de acessar informações de local do usuário até o usuário conceder permissão ao aplicativo.\*
+A menos que seu aplicativo tem a capacidade de localização aproximada (consulte a observação), você deve solicitar acesso ao local do usuário usando o [ **RequestAccessAsync** ](https://msdn.microsoft.com/library/windows/apps/dn859152) método antes de tentar acessar o local. É necessário chamar o método **RequestAccessAsync** no thread da interface do usuário e o aplicativo deve estar em segundo plano. Seu aplicativo não poderá acessar as informações do usuário local até que o usuário concede permissão ao seu aplicativo.\*
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -56,9 +56,9 @@ var accessStatus = await Geolocator.RequestAccessAsync();
 
 O método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) solicita ao usuário permissão para acessar o local. O usuário é solicitado apenas uma vez (por aplicativo). Após a primeira vez em que a permissão é concedida ou negada, esse método deixa de solicitar a permissão ao usuário. Para ajudar o usuário a alterar as permissões de localização depois que elas tiverem sido solicitadas, é recomendável fornecer um link para as configurações de localização, conforme demonstrado mais adiante neste tópico.
 
->Observação: O recurso de localização grande permite que seu aplicativo obtenha um local intencionalmente ofuscado (impreciso) sem obter permissão explícita do usuário (a opção de localização de todo o sistema ainda deve estar **no**, no entanto). Para saber como utilizar a localização grande em seu aplicativo, consulte o método [**AllowFallbackToConsentlessPositions**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) na classe [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx) .
+>Observação:  O recurso de localização aproximada permite que seu aplicativo obter um local (impreciso) intencionalmente ofuscado sem obter permissão explícita do usuário (a opção de local de todo o sistema ainda deve ser **em**, no entanto). Para saber como utilizar o grosso local em seu aplicativo, consulte o [ **AllowFallbackToConsentlessPositions** ](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) método na [ **Geolocator** ](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx)classe.
 
-### <a name="step-2-get-the-users-location-and-register-for-changes-in-location-permissions"></a>Etapa 2: obtenha a localização do usuário e registre as alterações nas permissões de localização
+### <a name="step-2-get-the-users-location-and-register-for-changes-in-location-permissions"></a>Etapa 2: Obter a localização do usuário e se registrar para as alterações nas permissões de localização
 
 O método [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) realiza uma leitura única da localização atual. Aqui, uma instrução **switch** é usada com **accessStatus** (do exemplo anterior) para atuar somente quando o acesso à localização do usuário é permitido. Se o acesso à localização do usuário for permitido, o código cria um objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534), registra as alterações nas permissões de localização e solicita a localização do usuário.
 
@@ -94,9 +94,9 @@ switch (accessStatus)
 }
 ```
 
-### <a name="step-3-handle-changes-in-location-permissions"></a>Etapa 3: lide com as alterações nas permissões de localização
+### <a name="step-3-handle-changes-in-location-permissions"></a>Etapa 3: Lidar com as alterações nas permissões de localização
 
-O objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) aciona o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) para indicar que as configurações de localização do usuário foram alteradas. Esse evento transmite o status correspondente por meio da propriedade **Status** do argumento (do tipo [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599)). Observe que esse método não é chamado a partir do thread de interface do usuário, e que o objeto [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) invoca as alterações na interface do usuário.
+O objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) aciona o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) para indicar que as configurações de localização do usuário foram alteradas. Esse evento transmite o status correspondente por meio da propriedade **Status** do argumento (do tipo [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599)). Observe que esse método não é chamado no thread de interface do usuário, e o objeto [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) invoca as alterações de interface do usuário.
 
 ```csharp
 using Windows.UI.Core;
@@ -169,9 +169,9 @@ Esta seção descreve como usar o evento [**PositionChanged**](https://msdn.micr
 
 Esta seção presume que você já habilitou os recursos de localização e chamou [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) a partir do thread de interface do usuário em seu aplicativo em segundo plano.
 
-### <a name="step-1-define-the-report-interval-and-register-for-location-updates"></a>Etapa 1: defina o intervalo de relatório e registre as atualizações de localização
+### <a name="step-1-define-the-report-interval-and-register-for-location-updates"></a>Etapa 1: Definir o intervalo de relatório e registrar as atualizações do local
 
-Neste exemplo, uma instrução **switch** é usada com **accessStatus** (do exemplo anterior) para atuar somente quando o acesso à localização do usuário é permitido. Se o acesso à localização do usuário for permitido, o código cria um objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534), especifica o tipo de rastreamento e registra as atualizações de localização.
+Neste exemplo, uma instrução **switch** é usada com **accessStatus** (do exemplo anterior) para funcionar somente quando o acesso ao local do usuário for permitido. Se o acesso à localização do usuário for permitido, o código cria um objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534), especifica o tipo de rastreamento e registra as atualizações de localização.
 
 O objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) pode acionar o evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) com base em uma alteração na posição (rastreamento com base em distância) ou uma alteração em um período (rastreamento periódico).
 
@@ -214,7 +214,7 @@ switch (accessStatus)
 }
 ```
 
-### <a name="step-2-handle-location-updates"></a>Etapa 2: lide com as atualizações de localização
+### <a name="step-2-handle-location-updates"></a>Etapa 2: Lidar com atualizações de local
 
 O objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) aciona o evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) para indicar que a localização do usuário mudou ou que o tempo passou, dependendo de como você o configurou. Esse evento transmite a localização correspondente por meio da propriedade **Position** do argumento (do tipo [**Geoposition**](https://msdn.microsoft.com/library/windows/apps/br225543)). Neste exemplo, o método não é chamado a partir do thread de interface do usuário, e que o objeto [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) invoca as alterações na interface do usuário.
 
@@ -234,7 +234,7 @@ async private void OnPositionChanged(Geolocator sender, PositionChangedEventArgs
 ## <a name="change-the-location-privacy-settings"></a>Altere configurações de privacidade de localização
 
 
-Se as configurações de privacidade de localização não permitirem que seu aplicativo acesse a localização do usuário, recomendamos que você forneça um link para as **configurações de privacidade de localização** no aplicativo **Configurações**. Neste exemplo, um controle Hyperlink é usado navegar até o URI `ms-settings:privacy-location`.
+Se as configurações de privacidade da localização não permitirem que seu aplicativo acesse a localização do usuário, é recomendável fornecer um link conveniente para as **configurações de privacidade de localização** no aplicativo **Configurações**. Neste exemplo, um controle Hyperlink é usado navegar até o URI `ms-settings:privacy-location`.
 
 ```xml
 <!--Set Visibility to Visible when access to location is denied -->  
@@ -261,12 +261,12 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 Para que o aplicativo possa acessar a localização do usuário, **Localização** deve estar habilitado no dispositivo. No aplicativo **Configurações**, verifique se as seguintes **configurações de privacidade de localização** estão ativadas:
 
--   **Localização deste dispositivo...** é **ativado (não se aplica ao Windows 10 Mobile)**
+-   **Local para este dispositivo...**  estiver desativado **em** (não aplicável no Windows 10 Mobile)
 -   A configuração de serviços de localização, **Localização**, está **ativada**
 -   Em **Escolher aplicativos que podem usar sua localização**, seu aplicativo está definido como **ativado**
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Amostra de geolocalização da UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
-* [Diretrizes de design para cerca geográfica](https://msdn.microsoft.com/library/windows/apps/dn631756)
-* [Diretrizes de design para aplicativos com detecção de localização](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [Exemplo de localização geográfica UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Diretrizes de design para o isolamento geográfico](https://msdn.microsoft.com/library/windows/apps/dn631756)
+* [Diretrizes de design para aplicativos com reconhecimento de local](https://msdn.microsoft.com/library/windows/apps/hh465148)

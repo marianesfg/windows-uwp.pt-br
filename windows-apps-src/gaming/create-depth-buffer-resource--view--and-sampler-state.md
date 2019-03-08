@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, direct3d, buffer de profundidade
 ms.localizationpriority: medium
 ms.openlocfilehash: f5ce1ec522a194111e175e41f82c4275cda4fbf5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946739"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613691"
 ---
 # <a name="create-depth-buffer-device-resources"></a>Criar recursos de dispositivo de buffer de profundidade
 
 
 
 
-Aprenda a criar recursos de dispositivos Direct3D necessários ao suporte de testes e profundidade para volumes de sombra. Parte 1 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
+Aprenda a criar recursos de dispositivos Direct3D necessários para dar suporte a testes de profundidade para volumes de sombra. Parte 1 de [passo a passo: Implementar os volumes de sombra usando buffers de profundidade em Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
 ## <a name="resources-youll-need"></a>Recursos necessários
 
@@ -38,7 +38,7 @@ Observe que a criação desses recursos deve se incluída em uma rotina de cria�
 ## <a name="check-feature-support"></a>Verificar o suporte ao recurso
 
 
-Antes de criar o mapa de profundidade, chame o método [**CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) no dispositivo Direct3D, solicite **D3D11\_FEATURE\_D3D9\_SHADOW\_SUPPORT** e forneça uma estrutura [**D3D11\_FEATURE\_DATA\_D3D9\_SHADOW\_SUPPORT**](https://msdn.microsoft.com/library/windows/desktop/jj247569).
+Antes de criar o mapa de profundidade, chame o [ **CheckFeatureSupport** ](https://msdn.microsoft.com/library/windows/desktop/ff476497) método no dispositivo Direct3D, solicitar **D3D11\_recurso\_D3D9\_ SOMBRA\_suporte**e fornecer uma [ **D3D11\_recurso\_dados\_D3D9\_sombra\_suporte** ](https://msdn.microsoft.com/library/windows/desktop/jj247569) estrutura.
 
 ```cpp
 D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT isD3D9ShadowSupported;
@@ -55,14 +55,14 @@ if (isD3D9ShadowSupported.SupportsDepthAsTextureWithLessEqualComparisonFilter)
 
 ```
 
-Senão houver suporte para esse recurso, não tente carregar sombreadores compilados para o modelo de sombreador 4 de nível 9\_x que chama exemplos de funções de comparação. Em muitos casos, a falta de suporte a esse recurso significa que a GPU é um dispositivo herdado com um driver que não está atualizado para dar suporte a pelo menos o WDDM 1.2. Quando o dispositivo dá suporte a pelo menos o nível de recurso 10\_0, você pode carregar um exemplo de sombreador de comparação compilado para o modelo de sombreador 4\_0.
+Se não há suporte para esse recurso, não tente carregar sombreadores compilados para o nível de modelo 4 sombreador 9\_x que chamam funções de comparação de exemplo. Em muitos casos, a falta de suporte a esse recurso significa que a GPU é um dispositivo herdado com um driver que não está atualizado para dar suporte a pelo menos o WDDM 1.2. Se o dispositivo dá suporte pelo menos 10 de nível de recurso\_0, você pode carregar um sombreador de comparação de exemplo compilado para o modelo de sombreador 4\_0 em vez disso.
 
 ## <a name="create-depth-buffer"></a>Criar o buffer de profundidade
 
 
 Primeiro, tente criar o mapa de profundidade com um formato de profundidade de precisão maior. Inicialmente, configure as propriedades de exibição do recurso de sombreador correspondente. Caso ocorra uma falha na criação do recurso (por exemplo, devido à baixa memória do dispositivo ou à incompatibilidade do formato com o hardware), tente um formato de precisão mais baixa e altere as propriedades para que haja correspondência.
 
-Esta etapa é opcional se você precisa apenas de um formato de profundidade de baixa precisão (por exemplo, ao fazer renderização em dispositivos Direct3D com nível de recursos 9\_1 e resolução média).
+Esta etapa é opcional se você só precisa de um formato de baixa precisão profundidade, por exemplo, quando a renderização em nível de recurso resolução média Direct3D 9\_1 dispositivos.
 
 ```cpp
 D3D11_TEXTURE2D_DESC shadowMapDesc;
@@ -82,7 +82,7 @@ HRESULT hr = pD3DDevice->CreateTexture2D(
     );
 ```
 
-Em seguida, crie as exibições de recursos. Defina o tamanho de mip como zero na exibição de estêncil de profundidade; defina também os níveis de mip como 1 na exibição de recurso de sombreador. Ambos têm uma dimensão de textura TEXTURE2D, e devem usar um [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059) correspondente.
+Em seguida, crie as exibições de recursos. Defina o tamanho de mip como zero na exibição de estêncil de profundidade; defina também os níveis de mip como 1 na exibição de recurso de sombreador. Ambos têm uma dimensão de textura de TEXTURE2D e ambos precisam usar uma correspondência [ **DXGI\_formato**](https://msdn.microsoft.com/library/windows/desktop/bb173059).
 
 ```cpp
 D3D11_DEPTH_STENCIL_VIEW_DESC depthStencilViewDesc;
@@ -113,11 +113,11 @@ hr = pD3DDevice->CreateShaderResourceView(
 ## <a name="create-comparison-state"></a>Criar estado de comparação
 
 
-Agora crie o objeto de estado de amostra da comparação. O nível de recurso 9\_1 só dá suporte a D3D11\_COMPARISON\_LESS\_EQUAL. As opções de filtragem são explicadas com mais detalhes no tópico sobre [suporte a mapas de sombra em diversos hardwares](target-a-range-of-hardware.md), mas você pode simplesmente escolher a filtragem por pontos para obter mapas de sombra mais rápidos.
+Agora crie o objeto de estado de amostra da comparação. 9 de nível de recurso\_1 oferece suporte apenas ao D3D11\_comparação\_menos\_igual. As opções de filtragem são explicadas com mais detalhes no tópico sobre [suporte a mapas de sombra em diversos hardwares](target-a-range-of-hardware.md), mas você pode simplesmente escolher a filtragem por pontos para obter mapas de sombra mais rápidos.
 
-Não se esqueça de que você pode especificar o modo de endereço D3D11\_TEXTURE\_ADDRESS\_BORDER, pois ele funciona em dispositivos com nível de recurso 9\_1. Isso se aplica a sombreadores de pixel que não testam se o pixel está no tronco de exibição da luz antes da realização do teste de profundidade. Ao especificar 0 ou 1 para cada borda, você pode controlar se os pixels fora do tronco de exibição da luz são aprovados ou não no teste de profundidade (e, consequentemente, se são iluminados ou sombreados).
+Observe que você pode especificar o D3D11\_TEXTURA\_endereço\_modo de borda de endereço e ela funcionará em nível de recurso 9\_1 dispositivos. Isso se aplica a sombreadores de pixel que não testam se o pixel está no tronco de exibição da luz antes da realização do teste de profundidade. Ao especificar 0 ou 1 para cada borda, você pode controlar se os pixels fora do tronco de exibição da luz são aprovados ou não no teste de profundidade (e, consequentemente, se são iluminados ou sombreados).
 
-No nível de recurso 9\_1, defina os seguintes valores obrigatórios: **MinLOD** é definido como zero, **MaxLOD** é definido como **D3D11\_FLOAT32\_MAX** e **MaxAnisotropy** como zero.
+No recurso de nível 9\_1, os seguintes necessários de valores devem ser definidos: **MinLOD** é definido como zero, **MaxLOD** é definido como **D3D11\_FLOAT32\_MAX**, e **MaxAnisotropy** é definido como zero.
 
 ```cpp
 D3D11_SAMPLER_DESC comparisonSamplerDesc;
@@ -152,7 +152,7 @@ DX::ThrowIfFailed(
 ## <a name="create-render-states"></a>Criar estados de renderização.
 
 
-Agora crie um estado de renderização que você possa usar para habilitar o conjunto de face frontal. Não se esqueça de que os dispositivos com nível de recursos 9\_1 precisam de **DepthClipEnable** definido como **true**.
+Agora crie um estado de renderização que você possa usar para habilitar o conjunto de face frontal. Observe que nível de recurso 9\_dispositivos 1 exigem **DepthClipEnable** definido como **true**.
 
 ```cpp
 D3D11_RASTERIZER_DESC drawingRenderStateDesc;

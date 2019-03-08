@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: d52943ab28ba9cb7544db827528985746585e361
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940254"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607561"
 ---
 # <a name="common-cryptography-tasks"></a>Tarefas comuns de criptografia
 
@@ -20,8 +20,8 @@ Estes artigos fornecem código de exemplo para tarefas comuns de criptografia da
 | Tópico                                                                                 | Descrição                                                                                            |
 |---------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | [Criar números aleatórios](create-random-numbers.md)                                     | Este exemplo de código mostra como criar um número aleatório ou buffer para uso em criptografia em um aplicativo UWP. |
-| [Comparar buffers](compare-buffers.md)                                                 | Este código de exemplo mostra como comparar buffers em um aplicativo UWP.                                          |
+| [Compare os buffers](compare-buffers.md)                                                 | Este código de exemplo mostra como comparar buffers em um aplicativo UWP.                                          |
 | [Converter entre cadeias de caracteres e dados binários](convert-between-strings-and-binary-data.md) | Este exemplo de código mostra como converter entre cadeias de caracteres e dados binários em um aplicativo UWP.                  |
-| [Copiar de e para matrizes de bytes](copy-to-and-from-byte-arrays.md)                       | Este código de exemplo mostra como copiar para e a partir matrizes de bytes em um aplicativo UWP.                             |
+| [Copiar entre matrizes de bytes](copy-to-and-from-byte-arrays.md)                       | Este código de exemplo mostra como copiar para e a partir matrizes de bytes em um aplicativo UWP.                             |
 | [Codificar e decodificar dados](encode-and-decode-data.md)                                   | Este exemplo de código mostra como codificar e decodificar dados hexadecimais e base64 em um aplicativo UWP.            |
 

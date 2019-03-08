@@ -8,13 +8,13 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d62a1d3158e13187f89277a1ba009bd56fc2b39a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921399"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659421"
 ---
-# <a name="span-iddirect3dconceptssrvbehaviorwithnon-mappedtilesspansrv-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.srv_behavior_with_non-mapped_tiles"></span>Comportamento de SRV com blocos não mapeados
+# <a name="span-iddirect3dconceptssrvbehaviorwithnon-mappedtilesspansrv-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.srv_behavior_with_non-mapped_tiles"></span>Comportamento SRV com blocos não mapeados
 
 
 O comportamento de leituras de modo de exibição (SRV) de recurso de sombreador que envolve blocos não mapeados depende do nível de suporte de hardware. Para uma análise dos requisitos, veja o comportamento de leitura para [Níveis de recursos de streaming](streaming-resources-features-tiers.md). Esta seção resume o comportamento ideal, que o [Nível 2](tier-2.md) requer.
@@ -26,7 +26,7 @@ Alguns hardwares de [Nível 2](tier-2.md) de primeira geração não atendem a e
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Acesso pipeline aos recursos de streaming](pipeline-access-to-streaming-resources.md)
+[Pipeline de acesso a recursos de streaming](pipeline-access-to-streaming-resources.md)
 
  
 

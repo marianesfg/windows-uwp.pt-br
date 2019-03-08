@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f1d37446cb5f540cd77928cb8167d8d4319977d1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945149"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612001"
 ---
 # <a name="app-analysis-overview"></a>Visão geral da análise de aplicativo
 
@@ -38,7 +38,7 @@ O aplicativo está usando SetSource() em vez de SetSourceAsync(). Você sempre d
 
 O BitmapImage está conectado à árvore XAML ativa após a configuração do conteúdo com SetSourceAsync ou UriSource. Você sempre deve anexar uma [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235) à árvore ativa antes de definir a origem. Sempre que um elemento de imagem ou um pincel for especificado na marcação, esse será automaticamente o caso. Exemplos são fornecidos abaixo. 
 
-**Exemplos de árvore ativa**
+**Exemplos de árvore em tempo real**
 
 Exemplo 1 (bom) - Uniform Resource Identifier (URI) especificado em marcação.
 
@@ -60,7 +60,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-Exemplo 2 code-behind (ruim) — Configurando o UriSource do BitmapImage antes de conectá-lo à árvore.
+Exemplo 2 de lógica (ruim) — definindo o UriSource de BitmapImage antes de conectar-se à árvore.
 
 ```vb
 var bitmapImage = new BitmapImage();
@@ -72,7 +72,7 @@ myImage.Source = bitmapImage;
 
 Quando uma imagem é usada para um pincel não retangular, a imagem usará um caminho de rasterização por software, que não dimensionará as imagens de forma alguma. Além disso, ele deve armazenar uma cópia da imagem na memória de hardware e software. Por exemplo, se uma imagem for usada como um pincel para uma elipse, a imagem inteira potencialmente grande será armazenada duas vezes internamente. Ao usar um pincel não retangular, seu aplicativo deverá pré-dimensionar suas imagens para aproximadamente o tamanho em que elas serão renderizadas.
 
-Como alternativa, você pode definir um tamanho de decodificação explícito para criar uma versão da imagem no tamanho exato que ela será desenhada na tela usando as propriedades [ **DecodePixelWidth** ](https://msdn.microsoft.com/library/windows/apps/BR243243) e [ **DecodePixelHeight** ](https://msdn.microsoft.com/library/windows/apps/BR243241).
+Como alternativa, você pode definir um tamanho de decodificação explícito para criar uma versão da imagem no tamanho exato que ela será desenhada na tela usando as propriedades [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) e [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241).
 
 ```xml
 <Image>
@@ -93,11 +93,11 @@ Observe que Image.Stretch devem ser considerado ao determinar o tamanho do conte
 
 #### <a name="images-used-inside-of-bitmapicons-fall-back-to-decoding-to-natural-size"></a>Imagens usadas dentro do BitmapIcons retornam para a decodificação de tamanho natural 
 
-Defina um tamanho de decodificação explícito para criar uma versão da imagem no tamanho exato que ela será desenhada na tela usando as propriedades [ **DecodePixelWidth** ](https://msdn.microsoft.com/library/windows/apps/BR243243) e [ **DecodePixelHeight** ](https://msdn.microsoft.com/library/windows/apps/BR243241).
+Defina um tamanho de decodificação explícito para criar uma versão da imagem no tamanho exato que ela será desenhada na tela usando as propriedades [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) e [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241).
 
 #### <a name="images-that-appear-extremely-large-on-screen-fall-back-to-decoding-to-natural-size"></a>Imagens que aparecem muito grandes na tela retornam para decodificação de tamanho natural 
 
-Imagens que aparecem muito grandes na tela retornam para decodificação de tamanho natural. Defina um tamanho de decodificação explícito para criar uma versão da imagem no tamanho exato que ela será desenhada na tela usando as propriedades [ **DecodePixelWidth** ](https://msdn.microsoft.com/library/windows/apps/BR243243) e [ **DecodePixelHeight** ](https://msdn.microsoft.com/library/windows/apps/BR243241).
+Imagens que aparecem muito grandes na tela retornam para decodificação de tamanho natural. Defina um tamanho de decodificação explícito para criar uma versão da imagem no tamanho exato que ela será desenhada na tela usando as propriedades [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) e [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241).
 
 #### <a name="image-is-hidden"></a>Imagem oculta
 
@@ -115,11 +115,11 @@ Se DecodePixelWidth/Height forem configurados explicitamente maiores do que a im
 
 #### <a name="image-is-decoded-as-part-of-producing-a-drag-and-drop-image"></a>A imagem é decodificada como parte de produção de uma imagem de arrastar e soltar
 
-Defina um tamanho de decodificação explícito para criar uma versão da imagem no tamanho exato que ela será desenhada na tela usando as propriedades [ **DecodePixelWidth** ](https://msdn.microsoft.com/library/windows/apps/BR243243) e [ **DecodePixelHeight** ](https://msdn.microsoft.com/library/windows/apps/BR243241).
+Defina um tamanho de decodificação explícito para criar uma versão da imagem no tamanho exato que ela será desenhada na tela usando as propriedades [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) e [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241).
 
 ## <a name="collapsed-elements-at-load-time"></a>Elementos recolhidos em tempo de carregamento
 
-Um padrão comum em apps é ocultar elementos da interface do usuário inicialmente e mostrá-las posteriormente. Na maioria dos casos, esses elementos devem ser adiados usando x:Load ou x:DeferLoadStrategy para evitar pagar o custo de criar o elemento em tempo de carregamento.
+Um padrão comum em aplicativos é ocultar elementos da interface do usuário inicialmente e mostrá-las posteriormente. Na maioria dos casos, esses elementos devem ser adiados usando x:Load ou x:DeferLoadStrategy para evitar pagar o custo de criar o elemento em tempo de carregamento.
 
 Isso inclui os casos em que um booleano para conversor de visibilidade é usado para ocultar itens até um momento posterior.
 
@@ -209,7 +209,7 @@ Use X:Key em vez de X:Name quando não estiver fazendo referência a recursos a 
 
 ## <a name="collections-control-is-using-a-non-virtualizing-panel"></a>O controle de coletas está usando um painel sem virtualização
 
-Se você oferece um modelo de painel de itens personalizado (consulte ItemsPanel), certifique-se de usar um painel de virtualização como ItemsWrapGrid ou ItemsStackPanel. Se você usar VariableSizedWrapGrid, WrapGrid ou StackPanel, não obterá a virtualização. Além disso, os seguintes eventos ListView serão gerados somente quando você estiver usando um ItemsWrapGrid ou um ItemsStackPanel: ChoosingGroupHeaderContainer, ChoosingItemContainer e ContainerContentChanging.
+Se você oferece um modelo de painel de itens personalizado (consulte ItemsPanel), certifique-se de usar um painel de virtualização como ItemsWrapGrid ou ItemsStackPanel. Se você usar VariableSizedWrapGrid, WrapGrid ou StackPanel, não obterá a virtualização. Além disso, os seguintes eventos do ListView são gerados somente quando usar um ItemsWrapGrid ou um ItemsStackPanel: ChoosingGroupHeaderContainer, ChoosingItemContainer e ContainerContentChanging.
 
 A virtualização da interface do usuário é o aprimoramento mais importante que você pode fazer para melhorar o desempenho da coleta. Isso significa que os elementos de interface do usuário que representam os itens são criados por demanda. Para uma associação de controle de itens para uma coleção de 1.000 itens, seria um desperdício de recursos criar a interface do usuário para todos os itens ao mesmo tempo, pois eles não podem ser todos exibidos ao mesmo tempo. ListView e GridView (e outros controles derivados de ItemsControl padrão) executam a virtualização de interface do usuário para você. Quando os itens estão quase sendo rolados para a exibição (a algumas páginas distância), a estrutura gera a interface do usuário para os itens e os armazena em cache. Quando torna-se improvável que os itens sejam mostrados novamente, a estrutura recupera a memória.
 
@@ -227,7 +227,7 @@ Você está usando um painel que não oferece suporte à virtualização.
 
 Use um painel de virtualização como ItemsWrapGrid ou ItemsStackPanel.
 
-## <a name="accessibility-uia-elements-with-no-name"></a>Acessibilidade: elementos UIA sem nome
+## <a name="accessibility-uia-elements-with-no-name"></a>Acessibilidade: Elementos UIA sem nome
 
 Em XAML, você pode fornecer um nome, definindo AutomationProperties.Name. Vários pares de automação fornecem um nome padrão para UIA se AutomationProperties.Name está definido. 
 
@@ -245,7 +245,7 @@ Defina a propriedade AutomationProperties.Name no XAML do controle para uma cade
 
 Às vezes, a correção de aplicativo não é fornecer um nome, e sim remover o elemento UIA de tudo, com exceção das árvores brutas. Você pode fazer isso no XAML, definindo AutomationProperties.AccessibilityView = “Raw”.
 
-## <a name="accessibility-uia-elements-with-the-same-controltype-should-not-have-the-same-name"></a>Acessibilidade: elementos UIA com o mesmo Controltype não devem ter o mesmo nome
+## <a name="accessibility-uia-elements-with-the-same-controltype-should-not-have-the-same-name"></a>Acessibilidade: Elementos UIA com o mesmo Controltype não devem ter o mesmo nome
 
 Dois elementos UIA com o mesmo pai UIA não devem ter o mesmo Nome e ControlType. Há problema em ter dois controles com o mesmo Nome que tenham ControlTypes diferentes. 
 

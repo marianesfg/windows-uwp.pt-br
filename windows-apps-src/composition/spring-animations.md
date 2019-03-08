@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animação
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e00aa383bcce17b7cd6b67514647c2f6137cc32
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947660"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601941"
 ---
 # <a name="spring-animations"></a>Animações de mola
 
@@ -26,8 +26,8 @@ Aqui, presumimos que você esteja familiarizado com os conceitos abordados neste
 
 As molas helicoidais são uma experiência de movimento comum que todos nós já vivenciamos em algum momento de nossas vidas; desde brinquedos helicoidais a experiências de física em sala de aula com um bloco vinculado à mola. O movimento de oscilação de uma mola geralmente incita uma resposta alegre e divertida nas pessoas que o observam. Consequentemente, o movimento de uma mola se adequa perfeitamente à interface do usuário do aplicativo para aqueles que pretendem criar uma experiência de movimento mais dinâmica que seja mais "evidente" para o usuário final do que um tradicional Bézier Cúbico. Nesses casos, o movimento da mola não apenas cria uma experiência de movimento mais dinâmica, mas também pode tornar mais atrativo um conteúdo novo ou atualmente animado. Dependendo do idioma de identidade visual ou movimento do aplicativo, a oscilação fica mais visível; no entanto, em outros casos, é mais sutil.
 
-![Movimento com animação de mola](images/animation/offset-spring.gif)
-![Movimento com animação de Bézier cúbico](images/animation/offset-cubic-bezier.gif)
+![Movimento com animação spring](images/animation/offset-spring.gif)
+![movimento com a animação de Bézier cúbica](images/animation/offset-cubic-bezier.gif)
 
 ## <a name="using-springs-in-your-ui"></a>Usando molas na interface do usuário
 
@@ -68,7 +68,7 @@ Nos casos comuns de deslocamento de animação e escala/tamanho, os seguintes va
 
 | Propriedade | Normal Spring | Dampened Spring | Less-Dampened Spring |
 | -------- | ------------- | --------------- | -------------------- |
-| Offset | Damping Ratio = 0,8 <br/> Period = 50 ms | Damping Ratio = 0,85 <br/> Period = 50 ms | Damping Ratio = 0,65 <br/> Period = 60 ms |
+| Deslocamento | Damping Ratio = 0,8 <br/> Period = 50 ms | Damping Ratio = 0,85 <br/> Period = 50 ms | Damping Ratio = 0,65 <br/> Period = 60 ms |
 | Scale/Size | Damping Ratio = 0,7 <br/> Period = 50 ms | Damping Ratio = 0,8 <br/> Period = 50 ms | Damping Ratio = 0,6 <br/> Period = 60 ms |
 
 Depois que você tiver definido as propriedades, poderá transmitir o NaturalMotionAnimation da mola para o método StartAnimation de um CompositionObject ou a propriedade Motion de um InteractionTracker InertiaModifier.
@@ -152,9 +152,9 @@ Em resumo, estas são as etapas para usar uma animação de mola no app:
 1. Criar o SpringAnimation a partir do Compositor.
 1. Definir as propriedades do SpringAnimation se você quiser valores não padrão:
     - DampingRatio
-    - Period
+    - Período
     - Final Value
-    - Initial Value
+    - Valor Inicial
     - Initial Velocity
 1. Atribuir ao destino.
     - Se você estiver animando a propriedade CompositionObject, passe o SpringAnimation como parâmetro para StartAnimation.

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 499d361bddbecef50ee8cdf44b56530a98cfccd1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936116"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627581"
 ---
 # <a name="rasterizer-rs-stage"></a>Estágio do rasterizador (RS)
 
@@ -30,10 +30,10 @@ No hardware que implementa as otimizações de buffer de Z hierárquicas, você 
 
 Consulte [Regras de rasterização](rasterization-rules.md).
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entrada
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
 
 
-Presume-se que vértices (x, y, z, w) chegando ao estágio de rasterizador estejam em espaço de recorte homogêneo. Nesse espaço de coordenadas, o eixo X aponta para a direita, o Y aponta para cima e Z aponta para longe da câmera.
+Presume-se que vértices (x, y, z, w) chegando ao estágio de rasterizador estejam em espaço de recorte homogêneo. Nesse espaço de coordenadas, o eixo X aponta para a direita, Y aponta para cima, Z aponta para longe da câmera.
 
 O estágio de rasterizador (RS) de função fixa é alimentado pelo estágio de saída de fluxo (SO) e/ou pelo estágio de pipeline anterior, como o [estágio do sombreador de geometria (GS)](geometry-shader-stage--gs-.md). Se GS não for usado, RS será alimentado pelo [estágio do sombreador de domínio (DS)](domain-shader-stage--ds-.md). Se DS também não for usado, RS será alimentado pelo [estágio do sombreador de vértice (VS)](vertex-shader-stage--vs-.md).
 
@@ -45,9 +45,9 @@ Usar o estágio de sombreador de pixel (PS) é opcional. O estágio do rasteriza
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Regras de rasterização](rasterization-rules.md)
+[Rasterização regras](rasterization-rules.md)
 
-[Pipeline de elementos gráficos](graphics-pipeline.md)
+[Pipeline de gráficos](graphics-pipeline.md)
 
  
 

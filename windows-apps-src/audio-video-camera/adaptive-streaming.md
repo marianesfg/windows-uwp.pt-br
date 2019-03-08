@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 66618d79166e06f6ee2696ed3c9f193a310b6ae9
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116338"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617871"
 ---
 # <a name="adaptive-streaming"></a>Streaming adaptável
 
@@ -23,7 +23,7 @@ Para obter uma lista de marcas de protocolo HLS com suporte, consulte [Suporte �
 Para obter uma lista dos perfis DASH com suporte, veja [Suporte ao perfil DASH](dash-profile-support.md). 
 
 > [!NOTE] 
-> O código neste artigo foi adaptado do [Exemplo de streaming adaptável](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/AdaptiveStreaming) da UWP.
+> O código neste artigo foi adaptado da [Amostra de Streaming adaptável](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/AdaptiveStreaming) da UWP.
 
 ## <a name="simple-adaptive-streaming-with-mediaplayer-and-mediaplayerelement"></a>Streaming adaptável simples com MediaPlayer e MediaPlayerElement
 
@@ -116,9 +116,9 @@ Se você deseja registrar manipuladores de eventos para a origem de mídia adapt
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
-* [Suporte para a marca HLS](hls-tag-support.md) 
-* [Suporte a perfil Dash](dash-profile-support.md) 
-* [Reproduzir áudio e vídeo com o MediaPlayer](play-audio-and-video-with-mediaplayer.md)
+* [Suporte à marcação HLS](hls-tag-support.md) 
+* [Suporte ao perfil de traço](dash-profile-support.md) 
+* [Reproduzir áudio e vídeo com o Media Player](play-audio-and-video-with-mediaplayer.md)
 * [Reproduzir mídia em segundo plano](background-audio.md) 
 
 

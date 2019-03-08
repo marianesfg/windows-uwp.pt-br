@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 47a4ceef2603d7b0178431c93fb6c271b24c506a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920535"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599221"
 ---
 # <a name="smart-cards"></a>Cartões inteligentes
 
@@ -119,7 +119,7 @@ Agora que temos a lógica definida para os desafios de autenticação, podemos n
 
 2.  Em seguida, passe o valor do desafio do cartão e a chave de administração fornecidos pelo serviço ou pela ferramenta de gerenciamento ao **ChallengeResponseAlgorithm** que definimos no exemplo anterior.
 
-3.  [**VerifyResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn297627) retornará **true** se a autenticação for bem-sucedida.
+3.  [**VerifyResponseAsync** ](https://msdn.microsoft.com/library/windows/apps/dn297627) retornará **verdadeiro** se a autenticação for bem-sucedida.
 
 ```cs
 bool verifyResult = false;
@@ -157,7 +157,7 @@ bool result = await provisioning.RequestPinChangeAsync();
 Para solicitar uma redefinição de PIN:
 
 1.  Chame [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) para iniciar a operação. Essa chamada inclui um método [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) que representa o cartão inteligente e a solicitação de redefinição de PIN.
-2.  [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) fornece informações de que nosso **ChallengeResponseAlgorithm**, encapsulado em uma chamada [**SmartCardPinResetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn297693), usa para comparar o valor do desafio do cartão e a chave de administração fornecida pelo serviço ou pela ferramenta de gerenciamento para autenticar a solicitação.
+2.  [**SmartCardPinResetHandler** ](https://msdn.microsoft.com/library/windows/apps/dn297701) fornece informações que nossos **ChallengeResponseAlgorithm**encapsulada em um [ **SmartCardPinResetDeferral** ](https://msdn.microsoft.com/library/windows/apps/dn297693) chamar usa para comparar o valor do desafio do cartão e a chave de administração fornecido pela serviço ou ferramenta de gerenciamento para autenticar a solicitação.
 
 3.  Se o desafio for bem-sucedido, a chamada [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) estará concluída; retornando **true** se o PIN teve uma redefinição bem-sucedida.
 

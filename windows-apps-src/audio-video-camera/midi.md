@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cb210621b74fef5128456d06a7cdf047752f45f5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947559"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612741"
 ---
 # <a name="midi"></a>MIDI
 
 
 
-Este artigo mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo Universal do Windows. Windows 10 compatível com MIDI via USB (drivers compatíveis com a classe e mais proprietários), MIDI sobre Bluetooth LE (edição de aniversário do Windows 10 e posterior) e por meio de produtos de terceiros disponíveis gratuitamente, MIDI pela Ethernet e roteado MIDI.
+Este artigo mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo Universal do Windows. Windows 10 dá suporte a MIDI por USB (em conformidade com a classe e proprietárias mais drivers), MIDI ao longo do Bluetooth LE (edição de aniversário do Windows 10 e posterior) e por meio de produtos de terceiros disponíveis gratuitamente, MIDI over Ethernet e roteado MIDI.
 
 ## <a name="enumerate-midi-devices"></a>Enumerar dispositivos MIDI
 
@@ -68,10 +68,10 @@ Registre manipuladores para os manipuladores de eventos do inspetor.
 
 O **DeviceWatcher** tem os eventos a seguir:
 
--   [**Added**](https://msdn.microsoft.com/library/windows/apps/br225450) - Gerado quando um novo dispositivo é adicionado ao sistema.
--   [**Removed**](https://msdn.microsoft.com/library/windows/apps/br225453) - Gerado quando um dispositivo é removido do sistema.
--   [**Updated**](https://msdn.microsoft.com/library/windows/apps/br225458) - Gerado quando as informações associadas a um dispositivo existente são atualizadas.
--   [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451) - Gerado quando o inspetor concluiu sua enumeração do tipo de dispositivo solicitado.
+-   [**Adicionado** ](https://msdn.microsoft.com/library/windows/apps/br225450) -gerado quando um novo dispositivo é adicionado ao sistema.
+-   [**Removido** ](https://msdn.microsoft.com/library/windows/apps/br225453) -gerado quando um dispositivo é removido do sistema.
+-   [**Atualizado** ](https://msdn.microsoft.com/library/windows/apps/br225458) -gerado quando as informações associadas a um dispositivo existente for atualizadas.
+-   [**EnumerationCompleted** ](https://msdn.microsoft.com/library/windows/apps/br225451) -gerado quando o Inspetor concluiu sua enumeração do tipo solicitado do dispositivo.
 
 No manipulador para cada um desses eventos, um método auxiliar, **UpdateDevices**, é chamado para atualizar o **ListBox** com a lista atual de dispositivos. Por **UpdateDevices** atualizar elementos de interface do usuário e esses manipuladores de eventos não serem chamados no thread da interface do usuário, cada chamada deve ser encapsulada em uma chamada para [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317), que faz com que o código especificado seja executado no thread da interface do usuário.
 
@@ -131,7 +131,7 @@ Quando seu aplicativo é desativado, certifique-se de limpar os recursos de apli
 
 Quando você enumerar dispositivos MIDI de saída usando a técnica descrita acima, seu aplicativo descobre um dispositivo MIDI chamado "Microsoft GS Wavetable Synth". Este é um sintetizador General MIDI interno que você pode jogar de seu aplicativo. No entanto, a tentativa de criar um outport MIDI para este dispositivo falhará, a menos que você tenha incluído a extensão do SDK para o sintetizador interno em seu projeto.
 
-**Para incluir a extensão do SDK General MIDI Synth no seu projeto de aplicativo**
+**Para incluir a extensão do SDK de sintetizador MIDI geral em seu projeto de aplicativo**
 
 1.  No **Gerenciador de Soluções**, no seu projeto, clique com o botão direito do mouse em **Referências** e selecione **Adicionar referência...**
 2.  Expanda o nó **Universal do Windows**.

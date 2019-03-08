@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, elementos gráficos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5dbdf6072f57d12d424f0787cfa2e8993a1624af
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932128"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621791"
 ---
 # <a name="basic-3d-graphics-for-directx-games"></a>Elementos gráficos 3D básicos para jogos DirectX
 
@@ -19,7 +19,7 @@ ms.locfileid: "8932128"
 
 Mostramos como usar programação em DirectX para implementar os conceitos fundamentais de elementos gráficos 3D.
 
-**Objetivo:** aprender a programar um aplicativo com elementos gráficos 3D.
+**Objetivo:** Aprenda a programar um aplicativo de gráficos 3D.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -28,12 +28,12 @@ Partimos do princípio de que você conhece C++. Você também precisa ter exper
 
 **Tempo total para concluir:** 30 minutos.
 
-## <a name="where-to-go-from-here"></a>Para onde ir a partir daqui
+## <a name="where-to-go-from-here"></a>Para onde ir em seguida
 
 
-Aqui, falamos sobre como desenvolver elementos gráficos 3D com DirectX e C++\\Cx. Este tutorial em cinco partes introduz a API [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) e os conceitos e códigos que também são usados em muitas das outras amostras de DirectX. Essas partes se complementam, desde a configuração do DirectX para seu aplicativo em C++ da UWP até a texturização de primitivos e a adição de efeitos.
+Aqui, podemos falar sobre como desenvolver elementos gráficos 3D com o DirectX e C++\\Cx. Este tutorial em cinco partes introduz a API [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) e os conceitos e códigos que também são usados em muitas das outras amostras de DirectX. Essas partes se complementam, desde a configuração do DirectX para seu aplicativo em C++ da UWP até a texturização de primitivos e a adição de efeitos.
 
-> **Observação**este tutorial usa um sistema de coordenadas destro com vetores Coluna. Muitos exemplos e aplicativos em DirectX usam um sistema de coordenadas à esquerda, com vetores de linha. Para uma solução matemática de elementos gráficos mais completa e que suporte um sistema de coordenadas canhoto com vetores linha, considere o uso de [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833). Para obter mais informações, consulte [Usando DirectXMath com Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
+> **Observação**  este tutorial usa um sistema de coordenadas destro com vetores de coluna. Muitos exemplos e aplicativos em DirectX usam um sistema de coordenadas à esquerda, com vetores de linha. Para uma solução matemática de elementos gráficos mais completa e que suporte um sistema de coordenadas canhoto com vetores linha, considere o uso de [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833). Para obter mais informações, consulte [Usando DirectXMath com Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
 
  
 
@@ -51,12 +51,12 @@ Nós lhe mostramos como:
 
 Em seguida, criamos um dispositivo Direct3D, uma cadeia de troca e um modo de exibição de destino de processamento e apresentamos a imagem renderizada para exibição.
 
-[Início rápido: configurando recursos de DirectX e exibindo uma imagem](setting-up-directx-resources.md)
+[Guia de início rápido: configurar recursos do DirectX e exibir uma imagem](setting-up-directx-resources.md)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Elementos gráficos em Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080)
+* [Direct3D 11 gráficos](https://msdn.microsoft.com/library/windows/desktop/ff476080)
 * [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534)
 * [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561)
 

@@ -5,13 +5,13 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
 ms.openlocfilehash: fb68b4bbd1b751591e9f336efe5dad3c22b3bf92
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937195"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618301"
 ---
-# <a name="automate-launching-windows-10-uwp-apps"></a>Automatizar a inicialização de aplicativos UWP do Windows 10
+# <a name="automate-launching-windows-10-uwp-apps"></a>Automatizar o lançamento de aplicativos UWP do Windows 10
 
 ## <a name="introduction"></a>Introdução
 

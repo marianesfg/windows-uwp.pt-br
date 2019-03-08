@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 ms.localizationpriority: medium
 ms.openlocfilehash: 402d535bf6ff9ced24bc642c17d13b2d48d79681
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920885"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598641"
 ---
 # <a name="developer-settings-api-reference"></a>Referência da API de configurações do desenvolvedor   
 É possível acessar configurações do Xbox One que sejam úteis para o desenvolvimento usando essa API.
@@ -26,17 +26,17 @@ Método      | URI da solicitação
 :------     | :-----
 GET | /ext/settings
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
-- Nenhum(a)
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Resposta**   
 A resposta é uma matriz JSON de configurações que contém todas as configurações. Todo objeto de configurações contém os seguintes campos:
@@ -49,11 +49,11 @@ A resposta é uma matriz JSON de configurações que contém todas as configura�
 * Tipo - ("Texto" | "Número" | "Booleano" | "Selecionar") Este campo indica o tipo uma configuração: texto de entrada, um valor booleano ("true" ou "false"), um número com um mín. e máx. ou selecione com uma lista de valores específicos.
 
 Se a configuração é um número:
-* Mín - (número) Este campo indica o valor numérico mínimo da configuração.
-* Máx - (número) Este campo indica o valor numérico máximo da configuração.
+* Min - (número) esse campo indica o valor numérico mínimo da configuração.
+* Max - (número) esse campo indica o valor numérico máximo da configuração.
 
-Selecione se a configuração é:
-* OptionsVariable - ("Sim" | "Não") Este campo indica se as opções de configuração são variáveis, se as opções válidas podem mudar sem uma reinicialização.
+Se a configuração for selecionada:
+* OptionsVariable - ("Sim" | "Não") neste campo indica se as opções de configuração são variáveis, se as opções válidas podem alterar sem uma reinicialização.
 * Opções - Array JSON com as opções de seleção válidas como cadeias de caracteres.
 
 **Código de status**
@@ -75,19 +75,19 @@ As configurações também podem ser recuperadas individualmente.
 
 Método      | URI da solicitação
 :------     | :-----
-GET | /ext/settings/\<nome da configuração\>
+GET | /ext/Settings/\<nome da configuração\>
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
-- Nenhum(a)
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Resposta**   
 A resposta é um objeto JSON com os seguintes campos:
@@ -100,11 +100,11 @@ A resposta é um objeto JSON com os seguintes campos:
 * Tipo - ("Texto" | "Número" | "Booleano" | "Selecionar") Este campo indica o tipo uma configuração: texto de entrada, um valor booleano ("true" ou "false"), um número com um mín. e máx. ou selecione com uma lista de valores específicos.
 
 Se a configuração é um número:
-* Mín - (número) Este campo indica o valor numérico mínimo da configuração.
-* Máx - (número) Este campo indica o valor numérico máximo da configuração.
+* Min - (número) esse campo indica o valor numérico mínimo da configuração.
+* Max - (número) esse campo indica o valor numérico máximo da configuração.
 
-Selecione se a configuração é:
-* OptionsVariable - ("Sim" | "Não") Este campo indica se as opções de configuração são variáveis, se as opções válidas podem mudar sem uma reinicialização.
+Se a configuração for selecionada:
+* OptionsVariable - ("Sim" | "Não") neste campo indica se as opções de configuração são variáveis, se as opções válidas podem alterar sem uma reinicialização.
 * Opções - Array JSON com as opções de seleção válidas como cadeias de caracteres.
 
 **Código de status**
@@ -126,15 +126,15 @@ Código de status HTTP      | Descrição
 
 Método      | URI da solicitação
 :------     | :-----
-PUT | /ext/settings/\<nome da configuração\>
+PUT | /ext/Settings/\<nome da configuração\>
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
-- Nenhum(a)
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Corpo da solicitação**   
 O corpo da solicitação é um objeto JSON contendo o seguinte campo:   
@@ -142,7 +142,7 @@ Value – (sequência) o novo valor da configuração.
 
 **Resposta**   
 
-- Nenhum(a)
+- Nenhuma
 
 **Código de status**
 

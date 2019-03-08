@@ -1,6 +1,6 @@
 ---
-title: Manipular a retomada do aplicativo
-description: Saiba como atualizar o conteúdo exibido quando o sistema retomar o app.
+title: Tratar a retomada do app
+description: Saiba como atualizar o conteúdo exibido quando o sistema retomar o aplicativo.
 ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
 ms.date: 07/06/2018
 ms.topic: article
@@ -12,15 +12,15 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: f424a274d3e96b58f32875620f3165ccfac82ba6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939354"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612461"
 ---
 # <a name="handle-app-resume"></a>Tratar a retomada do app
 
-**APIs Importantes**
+**APIs importantes**
 
 - [**Retomando**](https://msdn.microsoft.com/library/windows/apps/br242339)
 
@@ -116,7 +116,7 @@ void MainPage::App_Resuming(Object^ sender, Object^ e)
 ```
 
 > [!NOTE]
-> Como o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) não é gerado do thread da interface do usuário, um dispatcher deverá ser usado em seu manipulador para despachar todas as chamadas para a interface do usuário.
+> Porque o [ **retomando** ](https://msdn.microsoft.com/library/windows/apps/br242339) evento não é chamado do thread de interface do usuário, um dispatcher deve ser usado em seu manipulador para expedir todas as chamadas para a interface do usuário.
 
 ## <a name="remarks"></a>Comentários
 
@@ -127,5 +127,5 @@ Para aplicativos da Loja do Windows Phone, o evento [**Resuming**](https://msdn.
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Ciclo de vida do aplicativo](app-lifecycle.md)
-* [Tratar a ativação do aplicativo](activate-an-app.md)
-* [Tratar a suspensão do aplicativo](suspend-an-app.md)
+* [Manipular a ativação de aplicativo](activate-an-app.md)
+* [Suspender o identificador de aplicativo](suspend-an-app.md)

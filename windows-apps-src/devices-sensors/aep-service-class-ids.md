@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 08a186e0a8e7293b139f756b69966cd8d4b49c92
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048293"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598211"
 ---
 # <a name="aep-service-class-ids"></a>IDs de classe de serviço AEP
 
@@ -21,7 +21,7 @@ ms.locfileid: "9048293"
 
 - [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
-Os serviços de pontos de extremidade de associação (AEP) fornecem um contrato de programação para serviços aos quais um dispositivo oferece suporte em determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles. Esses contratos são identificados com a propriedade **System.Devices.AepService.ServiceClassId**. Este tópico lista várias IDs de classe de serviço AEP conhecidas. A ID de classe de serviço AEP também é aplicável a protocolos com IDs de classe personalizada.
+Os serviços do Ponto de Extremidade de Associação (AEP) oferecem um contrato de programação para serviços compatível com um dispositivo via um determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles. Esses contratos são identificados com a propriedade **System.Devices.AepService.ServiceClassId**. Este tópico lista várias IDs de classe de serviço AEP conhecidas. A ID de classe de serviço AEP também é aplicável a protocolos com IDs de classe personalizada.
 
 Um desenvolvedor de aplicativos deve usar filtros de sintaxe de consulta avançada (AQS) com base nas IDs de classe para limitar suas consultas aos serviços AEP que pretendem usar. Isso limitará os resultados da consulta aos serviços relevantes e aumentará consideravelmente o desempenho, a duração da bateria e a qualidade de serviço do dispositivo. Por exemplo, um aplicativo pode usar essas IDs de classe de serviço para usar um dispositivo como uma sincronização de Miracast ou um renderizador de mídia digital DLNA (DMR). Para obter mais informações sobre como dispositivos e serviços interagem uns com os outros, consulte [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991).
 

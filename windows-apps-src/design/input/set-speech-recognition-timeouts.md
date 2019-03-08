@@ -1,5 +1,5 @@
 ---
-Description: Set how long a speech recognizer ignores silence or unrecognizable sounds (babble) and continues listening for speech input.
+Description: Defina quanto tempo um reconhecedor de fala ignora o silêncio ou sons não reconhecíveis (murmúrios) e continua escutando a entrada de fala.
 title: Definir tempos limite de reconhecimento de fala
 ms.assetid: 58F446AC-4A56-454D-8125-62A2C4DBFCC8
 label: Speech recognition timeouts
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 679c2632fd5793ae083b2a79e29de3a3e9da04cf
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044919"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627161"
 ---
 # <a name="set-speech-recognition-timeouts"></a>Definir tempos limite de reconhecimento de fala
 
@@ -31,7 +31,7 @@ Aqui, especificamos vários valores de [**Timeouts**](https://msdn.microsoft.com
 -   BabbleTimeout — o período de tempo que um SpeechRecognizer continua a ouvir sons não reconhecíveis (murmúrios) antes que ele presuma que a entrada de fala terminou e finalize a operação de reconhecimento.
 -   EndSilenceTimeout — o período de tempo que um SpeechRecognizer detecta o silêncio (depois que os resultados de reconhecimento foram gerados) e presume que a entrada de fala terminou.
 
-**Observação**tempos limite pode ser definida em uma base do reconhecedor.
+**Observação**  tempos limite pode ser definido em uma base por reconhecedor.
 
  
 
@@ -47,7 +47,7 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 
 * [Interações de fala](speech-interactions.md)
 **Amostras**
-* [Amostra de reconhecimento de fala e sintetização de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

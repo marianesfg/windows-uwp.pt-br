@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ec96f6245969d32357563c44107f539fb9043aac
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924440"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618241"
 ---
 # <a name="creating-streaming-resources"></a>Criar recursos de streaming
 
@@ -43,19 +43,19 @@ Não confunda esse conceito com a noção de mapeamento de um recurso do Direct3
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="mappings-are-into-a-tile-pool.md">Os mapeamentos estão em um pool de blocos</a></p></td>
-<td align="left"><p>Quando um recurso é criado como um recurso de streaming, os blocos que o compõem são provenientes da indicação de locais em um pool de blocos. Um pool de blocos é um pool de memória (sustentado por uma ou mais alocações nos bastidores - nunca vistos pelo app).</p></td>
+<td align="left"><p><a href="mappings-are-into-a-tile-pool.md">Mapeamentos estiverem em um pool de bloco</a></p></td>
+<td align="left"><p>Quando um recurso é criado como um recurso de streaming, os blocos que compõem o recurso são provenientes do apontamento para locais em um pool de blocos. Um pool de blocos é um pool de memória (sustentado por uma ou mais alocações nos bastidores - nunca vistos pelo app).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="streaming-resource-creation-parameters.md">Parâmetros de criação de recursos de streaming</a></p></td>
 <td align="left"><p>Há algumas restrições sobre o tipo de recursos do Direct3D que você pode criar como um recurso de streaming.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="tile-pool-creation-parameters.md">Parâmetros de criação de pool de blocos</a></p></td>
+<td align="left"><p><a href="tile-pool-creation-parameters.md">Parâmetros de criação de pool de bloco</a></p></td>
 <td align="left"><p>Use os parâmetros nesta seção para definir pools de bloco ao criar um buffer.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="streaming-resource-cross-process-and-device-sharing.md">Processo cruzado de recursos de streaming e compartilhamento de dispositivos</a></p></td>
+<td align="left"><p><a href="streaming-resource-cross-process-and-device-sharing.md">Fluxo de recurso entre processos e compartilhamento de dispositivo</a></p></td>
 <td align="left"><p>Os pools de bloco podem ser compartilhados com outros processos como recursos tradicionais. O streaming de recursos que faz referência a pools de bloco não pode ser compartilhado entre dispositivos e processos.</p></td>
 </tr>
 <tr class="odd">
@@ -63,12 +63,12 @@ Não confunda esse conceito com a noção de mapeamento de um recurso do Direct3
 <td align="left"><p>Esta seção lista operações que podem ser executadas em recursos de streaming.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="operations-available-on-tile-pools.md">Operações disponíveis em pools de blocos</a></p></td>
+<td align="left"><p><a href="operations-available-on-tile-pools.md">Operações disponíveis no bloco de pools</a></p></td>
 <td align="left"><p>As operações em pools de blocos incluem o redimensionamento de um pool de blocos, a oferta de recursos (concedendo memória temporariamente para o sistema para todo o pool de blocos) e a recuperação de recursos.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="how-a-streaming-resource-s-area-is-tiled.md">Como uma área de recurso de streaming é colocada lado a lado</a></p></td>
-<td align="left"><p>Quando você cria um recurso de streaming, as dimensões, o tamanho do elemento de formato e o número de mipmaps e/ou fatias de matriz (se aplicável) determinam o número de blocos que são obrigatórios para toda a área de superfície.</p></td>
+<td align="left"><p><a href="how-a-streaming-resource-s-area-is-tiled.md">Como área do recurso streaming é colocada lado a lado</a></p></td>
+<td align="left"><p>Quando você cria um recurso de streaming, as dimensões, o tamanho do elemento de formato e o número de mipmaps e/ou fatias de matriz (se aplicável) determinam o número de blocos que são necessários para toda a área de superfície.</p></td>
 </tr>
 </tbody>
 </table>

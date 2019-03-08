@@ -6,11 +6,11 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: edf81f0474855c868ea1fb50afa683523aedcd07
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050779"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614861"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Novidades dos documentos de desenvolvedor do Windows em agosto de 2017
 
@@ -30,7 +30,7 @@ Use a nova extensão do [Windows Template Studio](https://aka.ms/wtsinstall) par
 
 Agora você pode visualizar [XAML condicional](../debug-test-perf/conditional-xaml.md) para criar [aplicativos adaptáveis de versão](../debug-test-perf/version-adaptive-apps.md). A XAML condicional permite usar o método ApiInformation.IsApiContractPresent na marcação XAML. Por isso, é possível definir propriedades e instanciar objetos na marcação com base na presença de uma API, sem a necessidade de usar code-behind.
 
-### <a name="game-mode"></a>Modo de jogo
+### <a name="game-mode"></a>Modo de Jogo
 
 As APIs de [Modo de Jogo](https://msdn.microsoft.com/library/windows/desktop/mt808808) para a Plataforma Universal do Windows (UWP) permitem produzir a experiência de jogos mais otimizada, aproveitando o modo de jogo no Windows 10. Essas APIs são localizadas no cabeçalho **&lt;expandedresources.h&gt;**.
 

@@ -1,5 +1,5 @@
 ---
-Description: The Multilingual App Toolkit (MAT) 4.0 integrates with Microsoft Visual Studio 2017 to provide UWP apps with translation support, translation file management, and editor tools.
+Description: O Kit de Ferramentas de Aplicativo Multilíngue (MAT) 4.0 se integra ao Microsoft Visual Studio 2017 para fornecer aplicativos UWP com suporte a tradução, gerenciamento de arquivos de tradução e ferramentas de edição.
 title: Use o Kit de Ferramentas de Aplicativo Multilíngue
 template: detail.hbs
 ms.date: 01/23/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
 ms.openlocfilehash: 74ad832d5516a4fa9bef849c5f691e2909c6c3d4
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047611"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610111"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>Use o Kit de Ferramentas de Aplicativo Multilíngue 4.0
 
@@ -119,9 +119,9 @@ Você também pode iniciar o Editor Multilíngue da seguinte forma. Ir até o In
 
 Para terceirizar o trabalho de tradução e edição aos tradutores, selecione os arquivos .xlf desejados no Gerenciador de Soluções, clique neles com o botão direito do mouse e em **Kit de Ferramentas de Aplicativo Multilíngue** > **Exportar traduções...**.
 
-Selecione **Saída: Destinatário do e-mail** na caixa de diálogo Exportar recursos de sequência e clique em OK. Seus arquivos serão zipados e anexados a um novo email. Selecione **Saída: Local da pasta de arquivos**, navegue pela pasta e clique em OK, opcionalmente escolha a compactação (zip) dos arquivos, clique em OK novamente e seus arquivos serão (zipados e) salvos no local que você escolheu, dentro de uma nova pasta com o nome do seu projeto.
+Selecione **saída: Destinatário do email** na caixa de diálogo de recursos de cadeia de caracteres exportação e em Okey e seus arquivos serão ser compactado e anexado a um novo email. Selecione **saída: Local da pasta do arquivo**navegador para uma pasta e clique em Okey, opcionalmente escolha para os arquivos a ser compactado, Okey novamente e em seus arquivos serão (compactado e) salvo no local que você escolheu, dentro de uma nova pasta chamada para o seu projeto.
 
-Depois que os tradutores concluírem o trabalho de tradução e enviarem os arquivos .xlf traduzidos, você poderá importá-los para o seu projeto. Selecione os arquivos .xlf desejados no Gerenciador de Soluções, clique neles com o botão direito do mouse e em **Kit de Ferramentas de Aplicativo Multilíngue** > **Importar/reciclar traduções...**. Clique em **Adicionar**, navegue até os arquivos .xlf ou .zip e clique em **Importar**.
+Depois que os tradutores concluírem o trabalho de tradução e enviarem os arquivos .xlf traduzidos, você poderá importá-los para o seu projeto. Selecione os arquivos de XLF desejada no Gerenciador de soluções, clique com botão direito-los e clique em **Multilingual App Toolkit** > **Import/reciclagem traduções...** . Clique em **Add**, navegue até os arquivos XLF ou. zip e clique em **importação**.
 
 **Observação** O processo de importação executa uma validação básica antes da importação. Isso garante que as informações da cultura de destino nos arquivos que estão sendo importados correspondam aos arquivos .xlf existentes.
 
@@ -152,7 +152,7 @@ Dois provedores são enviados com o Kit de Ferramentas de Aplicativo Multilíngu
 - O provedor do [Portal de Idiomas Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=330295) permite o suporte para correspondência de terminologias e reciclagem de tradução com base nas traduções de textos da interface do usuário para os produtos e serviços da Microsoft.
 - O provedor do [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220) permite serviços de tradução de máquina a pedido.
 
-Você e o(s) tradutor(es) pode(m) gerenciar as traduções no Editor Multilíngue para examinar as traduções posteriormente. Você pode definir o status de cada cadeia de caracteres na guia **Propriedades**. Os valores de status são: **Novo**, **Precisa de revisão**, **Traduzido**, **Final**, e **Desconectado**. O indicador à esquerda da linha mostra o status. Quando todas as linhas são exibidas em verde no Editor Multilíngue, o trabalho de tradução é feito.
+Você e o(s) tradutor(es) pode(m) gerenciar as traduções no Editor Multilíngue para examinar as traduções posteriormente. Você pode definir o status de cada cadeia de caracteres a **propriedades** guia. Valores de status são: **Novos**, **precisa de revisão**, **traduzido**, **Final**, e **aprovou**. O indicador à esquerda da linha mostra o status. Quando todas as linhas são exibidas em verde no Editor Multilíngue, o trabalho de tradução é feito.
 
 Faça a compilação do seu projeto novamente para que as cadeias de caracteres traduzidas sejam copiadas para o(s) Arquivo(s) de Recursos (.resw) que corresponde(m) ao(s) arquivo(s) .xlf que você acabou de editar.
 
@@ -162,18 +162,18 @@ Antes de começar o processo de Certificação da Microsoft Store, exclua o arqu
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Localizar cadeias de caracteres em seu IU e manifesto do conjunto de aplicativo](../../app-resources/localize-strings-ui-manifest.md)
+* [Localizar cadeias de caracteres em seu manifesto de pacote da interface do usuário e aplicativo](../../app-resources/localize-strings-ui-manifest.md)
 * [Globalização e localização](globalizing-portal.md)
-* [Diretrizes de globalização](guidelines-and-checklist-for-globalizing-your-app.md)
-* [Torne seu app localizável](prepare-your-app-for-localization.md)
+* [Diretrizes para globalização](guidelines-and-checklist-for-globalizing-your-app.md)
+* [Tornar seu aplicativo localizável](prepare-your-app-for-localization.md)
 * [Marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 
 ## <a name="downloads"></a>Downloads
 
-* [Instalador .vsix do Kit de Ferramentas de Aplicativo Multilíngue 4.0](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
-* [Instalador .msi do Kit de Ferramentas de Aplicativo Multilíngue 4.0](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit)
+* [Instalador. VSIX Multilingual App Toolkit 4.0](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
+* [Multilingual App Toolkit 4.0. msi installer](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit)
 
 ## <a name="translation-services"></a>Serviços de tradução
 
-* [Portal de Idiomas Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=330295)
-* [Microsoft Translator ](https://go.microsoft.com/fwlink/p/?LinkId=258220)
+* [Portal de idiomas do Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=330295)
+* [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)

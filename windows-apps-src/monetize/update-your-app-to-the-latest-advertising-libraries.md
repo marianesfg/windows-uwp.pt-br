@@ -7,11 +7,11 @@ keywords: windows 10, uwp, anúncios, publicidade, AdControl, AdMediatorControl,
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
 ms.openlocfilehash: ff0ea54f55803e652964203899f429faf196805e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048673"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620461"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Atualizar seu aplicativo para as bibliotecas mais recentes de anúncios em faixa
 
@@ -27,7 +27,7 @@ Antes desse SDK ser lançado, nós fornecemos anteriormente a classe **AdControl
 
 * Quando o **AdControl** no aplicativo solicitar um novo anúncio, o evento **ErrorOccurred** do controle será acionado e a propriedade **ErrorCode** dos argumentos de evento terá o valor **NoAdAvailable**.
 
-* Quaisquer unidades de publicidade associadas ao aplicativo serão desativadas. Você não pode remover essas unidades desativadas da sua conta do DePartnerv. Se você atualizar o aplicativo para usar um [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp), ignore essas unidades de anúncio e crie novas.
+* Quaisquer unidades de publicidade associadas ao aplicativo serão desativadas. Você não pode remover essas unidades ad desativado de sua conta do Centro de DePartnerv. Se você atualizar o aplicativo para usar um [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp), ignore essas unidades de anúncio e crie novas.
 
 * Os anúncios em faixa também não serão mais disponibilizados para qualquer unidade de anúncio usada em mais de um aplicativo. Certifique-se de que suas unidades de anúncio serão usadas em um único aplicativo.
 
@@ -46,7 +46,7 @@ Se tiver um aplicativo (já na Microsoft Store ou ainda em desenvolvimento) com 
 
 <span id="part-1" />
 
-## <a name="part-1-determine-whether-you-need-to-update-your-uwp-app"></a>Parte 1: determine se você precisa atualizar o aplicativo UWP
+## <a name="part-1-determine-whether-you-need-to-update-your-uwp-app"></a>Parte 1: Determinar se é necessário atualizar seu aplicativo UWP
 
 Siga as instruções nas seções a seguir para determinar se você precisa atualizar o aplicativo.
 
@@ -59,7 +59,7 @@ Siga as instruções nas seções a seguir para determinar se você precisa atua
 
 <span id="part-2" />
 
-## <a name="part-2-install-the-latest-sdk"></a>Parte 2: Instale o SDK mais recente
+## <a name="part-2-install-the-latest-sdk"></a>Parte 2: Instalar o SDK mais recente
 
 Se o aplicativo usar uma versão do SDK anterior, siga estas instruções para se certificar de que você tenha o SDK mais recente no computador de desenvolvimento.
 
@@ -78,12 +78,12 @@ Se o aplicativo usar uma versão do SDK anterior, siga estas instruções para s
 
 3.  Instale o [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp).
 
-## <a name="part-3-update-your-project"></a>Parte 3: Atualize o projeto
+## <a name="part-3-update-your-project"></a>Parte 3: Atualizar seu projeto
 
 Remova todas as referências existentes às bibliotecas do Microsoft Advertising do projeto e siga [essas instruções](install-the-microsoft-advertising-libraries.md#reference) para adicionar as referências necessárias. Isso garantirá que o projeto use as bibliotecas corretas. É possível preservar a marcação e o código existentes.
 
-## <a name="part-4-test-and-republish-your-app"></a>Parte 4: Teste e republique o aplicativo
+## <a name="part-4-test-and-republish-your-app"></a>Parte 4: Testar e publicar novamente seu aplicativo
 
 Teste o aplicativo para garantir que ele exiba anúncios em faixa conforme o esperado.
 
-Se a versão anterior do seu aplicativo já está disponível na loja, [Crie um novo envio](../publish/app-submissions.md) para o aplicativo atualizado no Partner Center republicar o aplicativo.
+Se a versão anterior do seu aplicativo já está disponível na Store, [criar um novo envio](../publish/app-submissions.md) para seu aplicativo atualizado no Partner Center para republicar seu aplicativo.

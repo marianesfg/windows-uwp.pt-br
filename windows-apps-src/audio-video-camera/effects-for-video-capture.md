@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e9960e66c6bcdd7105e201d48e2317de4a39a19a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947508"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636621"
 ---
 # <a name="effects-for-video-capture"></a>Efeitos para captura de vídeo
 
@@ -85,7 +85,7 @@ Defina a propriedade [**Video**](https://msdn.microsoft.com/library/windows/apps
 
 [!code-cs[SetUpVideoStabilizationRecommendationAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetSetUpVideoStabilizationRecommendationAsync)]
 
-### <a name="handle-the-video-stabilization-effect-being-disabled"></a>Manipular o efeito de estabilização de vídeo sendo desabilitado
+### <a name="handle-the-video-stabilization-effect-being-disabled"></a>Manipular o efeito de estabilização de vídeo que está sendo desabilitado
 
 O sistema poderá desabilitar automaticamente o efeito de estabilização de vídeo se a taxa de transferência de pixel for muito alta para o efeito ou se detectar que o efeito está sendo executado lentamente. Se isso ocorrer, o evento EnabledChanged será gerado. A instância **VideoStabilizationEffect** no parâmetro *sender* indica o novo estado do efeito, habilitado ou desabilitado. O [**VideoStabilizationEffectEnabledChangedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948979) tem um valor [**VideoStabilizationEffectEnabledChangedReason**](https://msdn.microsoft.com/library/windows/apps/dn948981) que indica por que o efeito foi habilitado ou desabilitado. Observe que esse evento também será gerado se você habilitá-lo ou desabilitá-lo o efeito programaticamente, nesse caso, o motivo será **Programmatic**.
 
@@ -102,7 +102,7 @@ Para limpar o efeito de estabilização de vídeo, chame [**RemoveEffectAsync**]
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
-* [Captura básica de fotos, áudio e vídeo com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

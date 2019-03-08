@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp, directx, objeto de app
 ms.localizationpriority: medium
 ms.openlocfilehash: e12ad6ce221440e8840006b3883980721b899ae6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922971"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616971"
 ---
 # <a name="the-app-object-and-directx"></a>Objeto de aplicativo e DirectX
 
 
 
-A Plataforma Universal do Windows (UWP) com jogos em DirectX não usa muitos elementos e objetos da interface do usuário do Windows. Em vez disso, por serem executados em um nível mais baixo na pilha do Windows Runtime, eles devem interoperam com a estrutura da IU de uma maneira mais básica: acessando e interoperando com o objeto do aplicativo diretamente. Saiba como e quando essa interoperação ocorre e como você, como um desenvolvedor de DirectX, pode usar esse modelo no desenvolvimento do seu aplicativo UWP de forma eficaz.
+A Plataforma Universal do Windows (UWP) com jogos em DirectX não usa muitos elementos e objetos da interface do usuário do Windows. Em vez disso, por serem executados em um nível mais baixo na pilha do Windows Runtime, eles devem interoperam com a estrutura da IU de uma maneira mais básica: acessando e interoperando com o objeto do aplicativo diretamente. Saiba como e quando essa interoperação ocorre e como você, como desenvolvedor do DirectX, pode usar esse modelo no desenvolvimento de seu aplicativo UWP de forma eficaz.
 
-Consulte o [Glossário de elementos gráficos do Direct3D](../graphics-concepts/index.md) para obter informações sobre termos desconhecidos gráficos ou conceitos que você encontrar durante a leitura.
+Consulte a [Glossário de gráficos do Direct3D](../graphics-concepts/index.md) para obter informações sobre termos gráficos desconhecidos ou conceitos encontrados durante a leitura.
 
 ## <a name="the-important-core-user-interface-namespaces"></a>Os importantes namespaces de interface do usuário básico
 
@@ -32,7 +32,7 @@ Primeiramente, vejamos os namespaces do Windows Runtime que você deve incluir (
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **Observação**  se você não estiver desenvolvendo um aplicativo UWP, use os componentes de interface do usuário fornecidos em bibliotecas específicas de JavaScript ou XAML e namespaces em vez dos tipos fornecidos nesses namespaces.
+> **Observação**    se você não estiver desenvolvendo um aplicativo UWP, use os componentes de interface do usuário fornecidos nas bibliotecas de JavaScript ou XAML específico e namespaces em vez de tipos fornecidos nesses namespaces.
 
  
 
@@ -87,14 +87,14 @@ Em resumo, o objeto de aplicativo fornece uma fábrica de provedores de visualiz
 ## <a name="coreapplicationview-behaviors-and-properties"></a>Comportamentos e propriedades do CoreApplicationView
 
 
-[**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) representa a exibição atual do aplicativo. O singleton do aplicativo cria a exibição do aplicativo durante a inicialização, mas a exibição se mantém inativa até ser ativada. Você pode obter o [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que mostra a exibição acessando a propriedade [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) nele, e pode manipular eventos de ativação e desativação para a exibição registrando delegados com o evento [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018).
+[**CoreApplicationView** ](https://msdn.microsoft.com/library/windows/apps/br225017) representa o modo de exibição atual do aplicativo. O singleton do aplicativo cria a exibição do aplicativo durante a inicialização, mas a exibição se mantém inativa até ser ativada. Você pode obter o [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que mostra a exibição acessando a propriedade [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) nele, e pode manipular eventos de ativação e desativação para a exibição registrando delegados com o evento [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018).
 
 ## <a name="corewindow-behaviors-and-properties"></a>Comportamentos e propriedades do CoreWindow
 
 
 A janela pai, que é uma instância [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), é criada e passada para o provedor de modo de exibição quando o objeto do aplicativo é inicializado. Se o aplicativo tem uma janela para ser exibida, ele o fará. Caso contrário, ele simplesmente inicializará a exibição.
 
-[**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) oferece vários eventos específicos a entradas e comportamentos de janela básicos. Você pode tratar desses eventos registrando seus próprios delegados com eles.
+[**CoreWindow** ](https://msdn.microsoft.com/library/windows/apps/br208225) fornece um número de eventos comportamentos específicos para entrada e o basic de janela. Você pode tratar desses eventos registrando seus próprios delegados com eles.
 
 Você também pode obter o despachante do evento de janela para a janela acessando a propriedade [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264), que fornece uma instância do [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211).
 

@@ -7,11 +7,11 @@ keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, configur
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4aa56bf24d2dfa1fd4ae1947a5b0edf7f312ea2f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931894"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614631"
 ---
 # <a name="save-and-load-settings-in-a-uwp-app"></a>Salvar e carregar configurações em um aplicativo UWP
 
@@ -76,7 +76,7 @@ if (composite != null)
 
 Carregue uma configuração pelo dispositivo local obtendo uma instância **ApplicationDataContainer** do repositório de dados de configurações local `Windows.Storage.ApplicationData.Current.LocalSettings`. Em seguida, usá-a para recuperar pares chave/valor.
 
-Carregue uma configuração de roaming seguindo um padrão semelhante. Primeiro obtenha uma instância **ApplicationDataContainer** para o armazenamento de dados de configurações de roaming com `Windows.Storage.ApplicationData.Current.RoamingSettings`. Acesse pares de chave/valor da instância. Se os dados ainda não foram movidos para o dispositivo usado para acessar as configurações, você receberá um **ApplicationDataContainer ** nulo. Por isso há uma marcação `if (composite != null)` no código de exemplo acima.
+Carregue uma configuração de roaming seguindo um padrão semelhante. Primeiro obtenha uma instância **ApplicationDataContainer** para o armazenamento de dados de configurações de roaming com `Windows.Storage.ApplicationData.Current.RoamingSettings`. Acesse pares de chave/valor da instância. Se os dados ainda não foram movidos para o dispositivo usado para acessar as configurações, você receberá um **ApplicationDataContainer**  nulo. Por isso há uma marcação `if (composite != null)` no código de exemplo acima.
 
 ## <a name="useful-apis-and-docs"></a>APIs e documentos úteis
 
@@ -95,11 +95,11 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 
 | Tópico | Descrição |
 |-------|----------------|
-| [Diretrizes para configurações de aplicativos](https://docs.microsoft.com/windows/uwp/design/app-settings/guidelines-for-app-settings) | Descreve as práticas recomendadas para criar e exibir configurações de aplicativo. |
-| [Armazenar e recuperar configurações e outros dados de aplicativo](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#create-and-read-a-local-file) | Noções básicas para salvar e recuperar configurações, incluindo configurações de roaming. |
+| [Diretrizes para configurações de aplicativo](https://docs.microsoft.com/windows/uwp/design/app-settings/guidelines-for-app-settings) | Descreve as práticas recomendadas para criar e exibir configurações de aplicativo. |
+| [Armazene e recupere configurações e outros dados de aplicativo](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#create-and-read-a-local-file) | Noções básicas para salvar e recuperar configurações, incluindo configurações de roaming. |
 
 ## <a name="useful-code-samples"></a>Exemplos de código úteis
 
 | Exemplo de código | Descrição |
 |-----------------|---------------|
-| [Amostra de dados de aplicativos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData) | Cenários 2 a 4: foco em configurações |
+| [Exemplo de dados de aplicativo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData) | Cenários 2 a 4: foco em configurações |

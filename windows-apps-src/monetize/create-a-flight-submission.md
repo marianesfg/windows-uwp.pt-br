@@ -1,17 +1,17 @@
 ---
 ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
-description: Use este método na API de envio da Microsoft Store para criar um novo envio de versão de pré-lançamento do pacote para um aplicativo que está registrado à sua conta do Partner Center.
+description: Use esse método na API de envio a Microsoft Store para criar um novo voo o envio de pacote para um aplicativo que é registrado em sua conta no Partner Center.
 title: Criar um envio de pacote de pré-lançamento
 ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de versão de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e303027aaf3b10260090c500df573f1bf484e20
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946384"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636861"
 ---
 # <a name="create-a-package-flight-submission"></a>Criar um envio de pacote de pré-lançamento
 
@@ -27,8 +27,8 @@ Para obter mais informações sobre como esse método se encaixa no processo de 
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
-* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-* Crie um pacote de pré-lançamento para um aplicativo. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o método de [criar um pacote de pré-lançamento](create-a-flight.md) .
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
+* Crie um voo de pacote para um aplicativo. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o [criar um voo de pacote](create-a-flight.md) método.
 
 ## <a name="request"></a>Solicitação
 
@@ -43,15 +43,15 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um envio do pacote de pré-lançamento. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Obrigatório. A ID do pacote de pré-lançamento para o qual você deseja adicionar o envio. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md).  |
+| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um envio do pacote de pré-lançamento. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| flightId | cadeia de caracteres | Obrigatório. A ID do pacote de pré-lançamento para o qual você deseja adicionar o envio. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md).  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -117,15 +117,15 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 400  | Não foi possível criar o envio do pacote de pré-lançamento porque a solicitação é inválida. |
-| 409  | O envio do pacote de pré-lançamento não pôde ser criado por causa do estado atual do aplicativo, ou o aplicativo usa um recurso do Partner Center [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | O envio de voo do pacote não pôde ser criado devido ao estado atual do aplicativo ou o aplicativo usa um recurso do Partner Center que está [atualmente não tem suporte da API de envio a Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md)
-* [Obter um envio de pacote de pré-lançamento](get-a-flight-submission.md)
-* [Confirmar um envio de pacote de pré-lançamento](commit-a-flight-submission.md)
-* [Atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md)
-* [Excluir um envio de pacote de pré-lançamento](delete-a-flight-submission.md)
-* [Obter o status de um envio de pacote de pré-lançamento](get-status-for-a-flight-submission.md)
+* [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Gerenciar envios de voo do pacote](manage-flight-submissions.md)
+* [Obter o envio de voo de um pacote](get-a-flight-submission.md)
+* [O envio de voo de um pacote de confirmação](commit-a-flight-submission.md)
+* [O envio de voo de um pacote de atualização](update-a-flight-submission.md)
+* [Excluir um envio de voo do pacote](delete-a-flight-submission.md)
+* [Obter o status de envio de voo de um pacote](get-status-for-a-flight-submission.md)

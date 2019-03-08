@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e49a9dcaa2638065946f01797cbea084a1432a6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930697"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602301"
 ---
 # <a name="devices"></a>Dispositivos
 
@@ -54,11 +54,11 @@ Como o comportamento dos dispositivos de referência e software fornecidos com o
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="device-types.md">Tipos de dispositivos</a></p></td>
+<td align="left"><p><a href="device-types.md">Tipos de dispositivo</a></p></td>
 <td align="left"><p>Os tipos de dispositivos Direct3D incluem dispositivos de camada de abstração de hardware (hal) e o rasterizador de referência.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="windowed-vs--full-screen-mode.md">Modo de janela versus modo de tela inteira</a></p></td>
+<td align="left"><p><a href="windowed-vs--full-screen-mode.md">Em janelas do VS. modo de tela inteira</a></p></td>
 <td align="left"><p>Os aplicativos Direct3D podem ser executados em um destes modos: janela ou tela inteira. No <em>modo de janela</em>, o aplicativo compartilha o espaço disponível na tela da área de trabalho com todos os aplicativos em execução. No <em>modo de tela inteira</em>, a janela em que o aplicativo é executado abrange a área de trabalho inteira, ocultando todos os aplicativos em execução (incluindo o ambiente de desenvolvimento).</p></td>
 </tr>
 <tr class="odd">
@@ -81,7 +81,7 @@ Como o comportamento dos dispositivos de referência e software fornecidos com o
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Guia de aprendizagem de Gráficos do Direct3D](index.md)
+[Guia de aprendizado de gráficos do Direct3D](index.md)
 
  
 

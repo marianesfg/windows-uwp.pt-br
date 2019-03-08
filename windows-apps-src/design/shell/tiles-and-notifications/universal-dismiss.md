@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use Universal Dismiss on your toast notifications.
+Description: Saiba como usar a ignorar Universal em suas notificações do sistema.
 title: Ignorar universal
 label: Universal Dismiss
 template: detail.hbs
@@ -8,20 +8,20 @@ ms.topic: article
 keywords: Windows 10, uwp, notificação do sistema, Central de ações na nuvem, ignorar universal, notificação, entre dispositivos, ignorar uma vez, ignorar em todos os locais
 ms.localizationpriority: medium
 ms.openlocfilehash: 0dc87e8856e35d60660c2643b70b820b2857b488
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922112"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605091"
 ---
 # <a name="universal-dismiss"></a>Ignorar universal
 
 O recurso Ignorar universal, da Central de ações na nuvem, significa que, quando você ignorar uma notificação de um dispositivo, a mesma notificação também é ignorada em seus outros dispositivos.
 
 > [!IMPORTANT]
-> **Requer a Atualização de Aniversário**: você deve usar o SDK 14393 e executar o build 14393 ou posterior para usar o recurso de Ignorar universal.
+> **Requer a atualização de aniversário do**: Você deve ter como destino do SDK do 14393 e estar executando a build 14393 ou superior para usar ignorar Universal.
 
-O exemplo comum desse cenário é o de lembretes de calendário: você tem um aplicativo de calendário em ambos os dispositivos. Você recebe um lembrete em seu telefone e no computador. Em seguida, clica em ignorar no computador. Graças ao Ignorar Universal, o lembrete em seu telefone também é ignorado! **A habilitação do Ignorar universal exibe apenas uma linha de código.**
+O exemplo comum desse cenário é o de lembretes de calendário: você tem um aplicativo de calendário em ambos os dispositivos. Você recebe um lembrete em seu telefone e no computador. Em seguida, clica em ignorar no computador. Graças ao Ignorar Universal, o lembrete em seu telefone também é ignorado! **Habilitando a ignorar Universal requer apenas uma linha de código!**
 
 <img alt="Diagram of Universal Dismiss" src="images/universal-dismiss.gif" width="406"/>
 
@@ -34,7 +34,7 @@ Como desenvolvedor, é extremamente fácil habilitar o Ignorar universal. Forne�
 
 ![Diagrama de RemoteId de Ignorar universal](images/universal-dismiss-remoteid.jpg)
 
-> **RemoteId**: um identificador que identifica exclusivamente uma notificação *em todos os dispositivos*.
+> **RemoteId**: Um identificador que identifica exclusivamente uma notificação *em todos os dispositivos*.
 
 É necessário apenas uma linha de código para adicionar RemoteId e habilitar o suporte para o Ignorar universal. Como a RemoteId é gerada depende de você. Entretanto, é preciso certificar-se de que ela identifica sua notificação exclusivamente em todos os dispositivos, e que o mesmo identificador pode ser gerado a partir de instâncias diferentes do seu aplicativo executado em dispositivos diferentes.
 
@@ -57,7 +57,7 @@ O código a seguir é executado no meu telefone e no aplicativo de computador, o
 
 Isso é tudo o que você precisa fazer. Quando o usuário descarta (ou clica em) uma notificação, é possível verificar se ele tem uma RemoteId. Em caso afirmativo, ignoramos a RemoteId em todos os dispositivos do usuário.
 
-**Problema conhecido**: a recuperação da **RemoteId** por meio da API `ToastNotificationHistory.GetHistory()` sempre retornará a cadeia de caracteres vazia em vez da **RemoteId** especificada. Não se preocupe, tudo está funcionando, está apenas recuperando o valor violado.
+**Problema conhecido**: Recuperando a **RemoteId** por meio de `ToastNotificationHistory.GetHistory()` API sempre retornará a cadeia de caracteres vazia em vez de **RemoteId** especificado. Não se preocupe, tudo está funcionando, está apenas recuperando o valor violado.
 
 > [!NOTE]
 > Se o usuário ou a empresa desabilita o [espelhamento de notificação](notification-mirroring.md) do aplicativo (ou desabilita totalmente o espelhamento de notificação), o recurso Ignorar universal não funcionará, pois não temos suas notificações na nuvem.

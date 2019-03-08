@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, notas de versão
 ms.localizationpriority: medium
 ms.openlocfilehash: d7a250880d148dd4ca3ced522312904f2786715e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050859"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601221"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Notas de versão para as bibliotecas de anúncio
 
 
 
 
-Esta seção fornece notas de versão para a versão atual das bibliotecas do Microsoft Advertising. Essas bibliotecas dão suporte a aplicativos XAML e JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8.1 e WindowsPhone8.
+Esta seção fornece notas de versão para a versão atual das bibliotecas do Microsoft Advertising. Essas bibliotecas de suportam a aplicativos XAML e HTML/JavaScript para Windows 10, Windows 8.1, Windows Phone 8.1 e Windows Phone 8.
 
 ## <a name="installation"></a>Instalação
 

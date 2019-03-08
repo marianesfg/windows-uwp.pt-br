@@ -1,30 +1,30 @@
 ---
-title: Inicializar o Direct3D 11.
-description: Consulte como converter o código de inicialização do Direct3D 9 para usá-lo no Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca.
+title: Inicializar o Direct3D 11
+description: Mostra como converter o código de inicialização do Direct3D 9 para o Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca.
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, direct3d 11, inicialização, fazendo a portabilidade, direct3d 9
 ms.localizationpriority: medium
 ms.openlocfilehash: 2aaf6dcc001a09e33588ac18898767b9cf92819c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947401"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604181"
 ---
-# <a name="initialize-direct3d-11"></a>Inicializar o Direct3D 11.
+# <a name="initialize-direct3d-11"></a>Inicializar o Direct3D 11
 
 
 
 **Resumo**
 
--   Parte 1: inicializar o Direct3D 11
--   [Parte 2: converter a estrutura de renderização](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
--   [Parte 3: fazer a portabilidade do loop do jogo](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
+-   Parte 1: Inicializar o Direct3D 11
+-   [Parte 2: Converter o framework de renderização](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
+-   [Parte 3: O loop do jogo da porta](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
 
 
-Consulte como converter o código de inicialização do Direct3D 9 para usá-lo no Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca. Parte 1 do guia passo a passo de [portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a Plataforma Universal do Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Mostra como converter o código de inicialização do Direct3D 9 para o Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca. Parte 1 do guia passo a passo de [portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a Plataforma Universal do Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
 ## <a name="initialize-the-direct3d-device"></a>Inicializar o dispositivo Direct3D
 
@@ -73,7 +73,7 @@ Primeiramente, criamos o dispositivo. Vamos obter uma lista de níveis de recurs
 
 Após a criação do dispositivo Direct3D 11 e de seu contexto, podemos usar a funcionalidade do ponteiro COM para obter as versões mais recentes das interfaces, que incluem recursos adicionais e são sempre recomendadas.
 
-> **Observação**  D3D\_FEATURE\_LEVEL\_9\_1 (que corresponde ao modelo de sombreador 2.0) é o nível mínimo de seu jogo da Microsoft Store é necessária para dar suporte. (Ocorrerá falha na certificação dos pacotes ARM de seu jogo se você não der suporte a 9\_1.) Se o seu jogo também incluir um caminho de renderização de recursos do modelo 3 de sombreador, você deverá incluir D3D\_FEATURE\_LEVEL\_9\_3 na matriz.
+> **Observação**    D3D\_recurso\_nível\_9\_1 (que corresponde ao modelo de sombreador 2.0) é o nível mínimo seu jogo da Microsoft Store é necessário para dar suporte. (Pacotes ARM do seu jogo falhará certificação se não houver suporte 9\_1.) Se seu jogo também inclui um caminho de renderização para recursos de modelo 3 de sombreador, você deve incluir D3D\_recurso\_nível\_9\_3 na matriz.
 
  
 
@@ -125,7 +125,7 @@ O Direct3D 11 inclui uma API de dispositivo chamada DXGI (infraestrutura de elem
 
 O dispositivo Direct3D implementa uma interface COM para DXGI. Primeiro precisamos obter essa interface e usá-la para solicitar o adaptador DXGI que hospeda o dispositivo. Depois, usamos o adaptador DXGI para criar uma fábrica DXGI.
 
-> **Observação**  são interfaces COM, portanto, pode ser sua primeira resposta usar [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Porém, em vez disso, use ponteiros inteligentes [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx). Em seguida, chame o método [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx), fornecendo um ponteiro COM vazio do tipo de interface correto.
+> **Observação**    elas são interfaces COM, portanto, sua primeira resposta pode ser usar [ **QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Porém, em vez disso, use ponteiros inteligentes [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx). Em seguida, chame o método [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx), fornecendo um ponteiro COM vazio do tipo de interface correto.
 
  
 
@@ -147,9 +147,9 @@ dxgiAdapter->GetParent(
     );
 ```
 
-Agora que temos a fábrica DXGI, podemos usá-la para criar a cadeia de permuta. É hora de definir os parâmetros da cadeia de troca. Precisamos especificar o formato da superfície; escolheremos [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059)por ser compatível com Direct2D. Desativaremos a colocação da exibição em escala, a multiamostragem e a renderização estéreo, pois elas não são usadas neste exemplo. Como a execução é feita diretamente em uma CoreWindow, podemos deixar a largura e altura como 0 e obter os valores de tela inteira automaticamente.
+Agora que temos a fábrica DXGI, podemos usá-la para criar a cadeia de permuta. É hora de definir os parâmetros da cadeia de troca. É necessário especificar o formato de superfície; Vamos escolher [ **DXGI\_formato\_B8G8R8A8\_UNORM** ](https://msdn.microsoft.com/library/windows/desktop/bb173059) porque ele é compatível com o Direct2D. Desativaremos a colocação da exibição em escala, a multiamostragem e a renderização estéreo, pois elas não são usadas neste exemplo. Como a execução é feita diretamente em uma CoreWindow, podemos deixar a largura e altura como 0 e obter os valores de tela inteira automaticamente.
 
-> **Observação**  sempre defina o parâmetro *SDKVersion* como D3D11\_SDK\_VERSION para aplicativos UWP.
+> **Observação**    sempre conjunto a *SDKVersion* parâmetro D3D11\_SDK\_versão para aplicativos UWP.
 
  
 
@@ -167,9 +167,9 @@ dxgiFactory->CreateSwapChainForCoreWindow(
 swapChain.As(&m_swapChain);
 ```
 
-Para garantir que não estejamos realizando mais renderizações do que a tela pode exibir, definimos a latência de quadros como 1 e usamos [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077). Assim, é possível economizar energia e atender a um requisito de certificação da loja; a parte 2 deste guia passo a passo fala mais sobre apresentação na tela.
+Para garantir que não são de renderização com mais frequência que a tela pode mostrar, na verdade, definimos a latência de quadro como 1 e o uso [ **DXGI\_trocar\_efeito\_INVERTER\_SEQUENCIAL** ](https://msdn.microsoft.com/library/windows/desktop/bb173077). Assim, é possível economizar energia e atender a um requisito de certificação da loja; a parte 2 deste guia passo a passo fala mais sobre apresentação na tela.
 
-> **Observação**  você pode usar multithreading (por exemplo, itens de trabalho [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642) ) para continuar a outros trabalhos enquanto o thread de renderização está bloqueado.
+> **Observação**    você pode usar multithreading (por exemplo, [ **ThreadPool** ](https://msdn.microsoft.com/library/windows/apps/br229642) itens de trabalho) para continuar a outro trabalho enquanto o thread de renderização é bloqueado.
 
  
 
@@ -184,7 +184,7 @@ Agora já podemos configurar o buffer de fundo para renderização.
 ## <a name="configure-the-back-buffer-as-a-render-target"></a>Configure-o como destino de renderização.
 
 
-Primeiro, precisamos obter um identificador para esse buffer (Observe que o buffer de fundo pertence à cadeia de troca DXGI; no DirectX 9 ele pertencia ao dispositivo Direct3D.) Em seguida, pediremos que o dispositivo Direct3D use-o como o destino de renderização, criando um destino de renderização *exibição* usando o buffer de fundo.
+Primeiro, precisamos obter um identificador para esse buffer (Observe que o buffer de fundo é de propriedade de cadeia de troca DXGI, enquanto que o DirectX 9 ele pertencia pelo dispositivo Direct3D.) Dizemos que o dispositivo Direct3D para usá-lo como o destino de renderização, criando um destino de renderização *exibição* usando o buffer de fundo.
 
 **Direct3D 11**
 
@@ -222,7 +222,7 @@ CD3D11_VIEWPORT viewport(
 m_d3dContext->RSSetViewports(1, &viewport);
 ```
 
-Agora que temos um identificador de dispositivo e um destino de renderização em tela inteira, estamos prontos para carregar a geometria de desenho. Vá para a [parte 2: renderização](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md).
+Agora que temos um identificador de dispositivo e um destino de renderização em tela inteira, estamos prontos para carregar a geometria de desenho. Continuar a [parte 2: Renderização](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md).
 
  
 

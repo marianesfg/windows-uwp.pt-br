@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use headers to visually group your toast notifications in Action Center.
+Description: Saiba como usar cabeçalhos para agrupar visualmente as notificações do sistema na Central de ações.
 title: Cabeçalhos de notificação do sistema
 label: Toast headers
 template: detail.hbs
@@ -8,18 +8,18 @@ ms.topic: article
 keywords: windows 10, uwp, notificação do sistema, cabeçalho, cabeçalhos de notificação do sistema, notificação, notificações de grupo, central de ações
 ms.localizationpriority: medium
 ms.openlocfilehash: 361b161b8cf323596a3b07665819300c78f1dcc5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946088"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612101"
 ---
 # <a name="toast-headers"></a>Cabeçalhos de notificação do sistema
 
 Você pode agrupar visualmente um conjunto de notificações relacionadas na Central de ações por meio de um cabeçalho de notificação do sistema em suas notificações.
 
 > [!IMPORTANT]
-> **Requer a Atualização para Criadores para desktop e a biblioteca de Notificações 1.4.0**: você deve estar executando o build 15063 ou posterior da Área de trabalho para ver as notificações do sistema. Você deve usar a versão 1.4.0 ou posterior da [Biblioteca NuGet de notificações do kit de ferramentas da comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para inserir o cabeçalho no conteúdo da notificação do sistema. Há suporte para os cabeçalhos somente na área de trabalho.
+> **Requer a atualização para criadores de área de trabalho e 1.4.0 da biblioteca de notificações**: Você deve estar executando os cabeçalhos da área de trabalho de build 15063 ou superior para ver a notificação do sistema. Você deve usar a versão 1.4.0 ou posterior da [Biblioteca NuGet de notificações do kit de ferramentas da comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para inserir o cabeçalho no conteúdo da notificação do sistema. Há suporte para os cabeçalhos somente na área de trabalho.
 
 Conforme visto abaixo, essa conversa de grupo é unificada em um único cabeçalho, "Acampamentos!!". Cada mensagem na conversa é uma notificação do sistema separada compartilhando o mesmo cabeçalho de notificação do sistema.
 
@@ -96,7 +96,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 O cabeçalho separa e agrupa visualmente as notificações. Ele não altera qualquer outra logística sobre a quantidade máxima de notificações que um aplicativo pode ter (20) e o comportamento de primeiro a entrar, primeiro a sair da lista de notificações.
 
-A ordem das notificações em cabeçalhos é: para um determinado aplicativo, a notificação mais recente dele (e o grupo de cabeçalho inteiro se for parte de um cabeçalho) será exibida primeiro.
+A ordem das notificações em cabeçalhos são da seguinte maneira... Para um determinado aplicativo, a notificação mais recente do aplicativo (e o grupo de todo o cabeçalho se parte de um cabeçalho) aparecerão primeira.
 
 O **Id** pode ser qualquer sequência que você escolher. Não há nenhuma restrição de tamanho ou caracteres em qualquer uma das propriedades em **ToastHeader**. A única restrição é que o conteúdo de notificação do sistema XML inteiro não pode ser maior que 5 KB.
 
@@ -107,5 +107,5 @@ Clicar no cabeçalho, assim como clicar no nome do aplicativo, não limpa todas 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Enviar uma notificação do sistema local e manipular a ativação](send-local-toast.md)
-- [Conteúdo e documentação sobre notificações do sistema](adaptive-interactive-toasts.md)
+- [Enviar uma ativação de notificação do sistema e o identificador de local](send-local-toast.md)
+- [Documentação de conteúdo de notificação do sistema](adaptive-interactive-toasts.md)

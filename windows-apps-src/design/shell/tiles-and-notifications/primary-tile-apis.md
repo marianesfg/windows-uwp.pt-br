@@ -1,5 +1,5 @@
 ---
-Description: You can programmatically pin your own app's primary tile to Start, just like you can pin secondary tiles. And you can check whether it's currently pinned.
+Description: Programaticamente, você pode fixar o bloco principal do seu aplicativo na tela inicial, assim como é possível fixar blocos secundários. Você também pode verificar se ele está fixado no momento.
 title: APIs de bloco primário
 label: Primary tile API's
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, StartScreenManager, fixar bloco primário, apis de bloco primário, verificar se o bloco está fixado, bloco dinâmico
 ms.localizationpriority: medium
 ms.openlocfilehash: 04d7c66b358a3a465522ad3b56d8ae926358ae57
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922931"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596191"
 ---
 # <a name="primary-tile-apis"></a>APIs de bloco primário
  
@@ -20,9 +20,9 @@ ms.locfileid: "8922931"
 As APIs de bloco primário permitem que você verifique se o app está fixado em Iniciar e solicite a fixação do bloco primário do app.
 
 > [!IMPORTANT]
-> **Requer a Atualização para Criadores**: você precisa usar o SDK 15063 e executar a compilação 15063 ou mais recente para usar as APIs de bloco primário.
+> **Requer a atualização para criadores**: Você deve ter como destino SDK 15063 e estar executando a build 15063 ou superior para usar as APIs de bloco principal.
 
-> **APIs importantes**: [**classe StartScreenManager**](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager), [ContainsAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_), [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_)
+> **APIs importantes**: [**Classe StartScreenManager**](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager), [ContainsAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_), [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_)
 
 
 ## <a name="when-to-use-primary-tile-apis"></a>Quando usar APIs de bloco primário
@@ -33,7 +33,7 @@ Você se esforçou para criar uma ótima experiência para o bloco principal do 
 * **Explique** claramente o valor do Bloco Dinâmico do aplicativo antes de pedir ao usuário para fixá-lo.
 * **Não** peça a um usuário para fixar o bloco do aplicativo se já tiver sido fixado ou se o dispositivo não oferecer suporte a ele (mais informações a seguir).
 * **Não** peça repetidamente para o usuário fixar o bloco do aplicativo (eles provavelmente ficarão aborrecidos).
-* **Não** chame a fixação de API sem interação explícita do usuário ou quando o aplicativo estiver minimizado/não abrir.
+* **Não** chame a fixação de API sem interação explícita do usuário ou quando o app estiver minimizado/não abrir.
 
 
 ## <a name="checking-whether-the-apis-exist"></a>Verificar se as APIs existem
@@ -84,7 +84,7 @@ bool isPinned = await StartScreenManager.GetDefault().ContainsAppListEntryAsync(
 Se o bloco primário atualmente não estiver fixado e o bloco for compatível com Iniciar, convém mostrar uma dica para que os usuários possam fixar o bloco primário.
 
 > [!NOTE]
-> Você deve chamar essa API de um thread de interface do usuário enquanto o aplicativo está em primeiro plano, e você só deve chamar essa APIafterthe usuário tiver solicitado intencionalmente bepinned o bloco primário (por exemplo, depois que o usuário tiver clicado em Sim na dica sobre como fixar o bloco).
+> Você deve chamar essa API de um thread de interface do usuário enquanto seu aplicativo estiver em primeiro plano e você só deve chamar essa API depois que o usuário solicitou intencionalmente o bloco primário ser fixado (por exemplo, depois que o usuário clicou em Sim para sua dica sobre como fixar o bloco).
 
 Se o usuário clica no botão para fixar o bloco primário, você poderia chamar o método [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_) para solicitar que o bloco seja fixado em Iniciar. Isso exibirá uma caixa de diálogo solicitando ao usuário para confirmar se eles querem seu bloco fixado em Iniciar.
 
@@ -101,7 +101,7 @@ bool isPinned = await StartScreenManager.GetDefault().RequestAddAppListEntryAsyn
 
 ## <a name="resources"></a>Recursos
 
-* [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-pin-primary-tile)
+* [Exemplo de código completo no GitHub](https://github.com/WindowsNotifications/quickstart-pin-primary-tile)
 * [Fixar na barra de tarefas](../pin-to-taskbar.md)
 * [Blocos, selos e notificações](index.md)
-* [Documentação de blocos adaptáveis](create-adaptive-tiles.md)
+* [Documentação do bloco adaptável](create-adaptive-tiles.md)

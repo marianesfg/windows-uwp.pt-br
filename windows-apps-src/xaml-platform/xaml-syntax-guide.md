@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e988582877a6aa4ca3cf88ba0a5d98aceb56939e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942327"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595051"
 ---
 # <a name="xaml-syntax-guide"></a>Guia de sintaxe do XAML
 
@@ -34,8 +34,8 @@ Um arquivo XAML sempre tem exatamente um elemento servindo de raiz, o qual decla
 
 Em termos de sintaxe XAML, há três maneiras de declarar objetos em XAML:
 
--   **Diretamente, usando a sintaxe do elemento do objeto:** usa marcas de abertura e fechamento para instanciar um objeto como um elemento na forma XML. Você pode usar essa sintaxe para declarar objetos raiz ou para criar objetos aninhados que definem valores de propriedade.
--   **Indiretamente, usando a sintaxe do atributo:** usa um valor de cadeia de caracteres inline que tem instruções sobre como criar um objeto. O analisador de XAML usa essa cadeia de caracteres para definir o valor de uma propriedade como um valor de referência recém-criado. O suporte a ele é limitado a determinados objetos e propriedades comuns.
+-   **Diretamente, usando a sintaxe de elemento de objeto:** Isso usa marcas de abertura e fechamento para instanciar um objeto como um elemento de formulário de XML. Você pode usar essa sintaxe para declarar objetos raiz ou para criar objetos aninhados que definem valores de propriedade.
+-   **Indiretamente, usando a sintaxe de atributo:** Isso usa um valor de cadeia de caracteres embutidas com instruções sobre como criar um objeto. O analisador de XAML usa essa cadeia de caracteres para definir o valor de uma propriedade como um valor de referência recém-criado. O suporte a ele é limitado a determinados objetos e propriedades comuns.
 -   Usando uma extensão de marcação.
 
 Isso não significa que você sempre terá a opção de qualquer sintaxe para criação de objetos em um vocabulário XAML. Alguns objetos podem ser criados apenas com o uso da sintaxe de elemento de objeto. Outros podem ser criados apenas com a definição inicial em um atributo. Na realidade, os objetos que podem ser criados com a sintaxe de atributo ou de elemento de objeto são relativamente raros nos vocabulários XAML. Mesmo se ambas as formas de sintaxe forem possíveis, uma delas será mais comum por uma questão de estilo.
@@ -50,7 +50,7 @@ Para declarar um objeto com a sintaxe de elemento de objeto, você cria marcas c
 </Canvas>
 ```
 
-Se o objeto não contiver outros objetos, você poderá declarar o elemento de objeto usando uma marca de fechamento automático em vez de um par de abertura/fechamento:  `<Canvas />`
+Se o objeto não contiver outros objetos, você poderá declarar o elemento de objeto usando uma marca de fechamento automático em vez de um par de abertura/fechamento: `<Canvas />`
 
 ### <a name="containers"></a>Contêineres
 
@@ -87,7 +87,7 @@ Este exemplo abreviado usa o texto de inicialização para especificar valores p
 </UserControl ...>
 ```
 
-**Observação**algumas estruturas não podem ser declaradas como elementos de objeto. Não há suporte ao texto de inicialização e eles não podem ser usados como recursos. Você deve usar uma sintaxe de atributo para definir as propriedades com esses valores em XAML. Esses tipos são: [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) e [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995).
+**Observação**  algumas estruturas não podem ser declaradas como elementos de objeto. Não há suporte ao texto de inicialização e eles não podem ser usados como recursos. Você deve usar uma sintaxe de atributo para definir as propriedades com esses valores em XAML. Esses tipos são: [**Duração**](https://msdn.microsoft.com/library/windows/apps/br242377), [ **RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [ **ponto**](https://msdn.microsoft.com/library/windows/apps/br225870), [ **Rect**  ](https://msdn.microsoft.com/library/windows/apps/br225994) e [ **tamanho**](https://msdn.microsoft.com/library/windows/apps/br225995).
 
 ## <a name="setting-properties"></a>Definição de propriedades
 
@@ -125,7 +125,7 @@ Para usar a sintaxe de elemento de propriedade, você cria elementos de propried
 
 Na gramática a seguir, *property* é o nome da propriedade que você deseja definir e *propertyValueAsObjectElement* é um único elemento de objeto, cuja expectativa é satisfazer os requisitos de tipo de valor da propriedade.
 
-`<`*objeto*`>`
+`<`*object*`>`
 
 `<`*object*`.`*property*`>`
 
@@ -133,9 +133,9 @@ Na gramática a seguir, *property* é o nome da propriedade que você deseja def
 
 `</`*object*`.`*property*`>`
 
-`</`*objeto*`>`
+`</`*object*`>`
 
-O exemplo a seguir usa a sintaxe de elemento de propriedade para definir o [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill) de um [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) com um elemento de objeto [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962). (Em **SolidColorBrush**, [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) é definido como um atributo). O resultado analisado desse XAML é idêntico ao exemplo anterior de XAML que define **Fill** usando a sintaxe de atributo.
+O exemplo a seguir usa a sintaxe de elemento de propriedade para definir o [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill) de um [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) com um elemento de objeto [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962). (Dentro de **SolidColorBrush**, [ **cor** ](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) é definido como um atributo.) O resultado analisado esse XAML é idêntico ao exemplo XAML anterior que defina **preencher** usando a sintaxe de atributo.
 
 ```xml
 <Rectangle
@@ -151,7 +151,7 @@ O exemplo a seguir usa a sintaxe de elemento de propriedade para definir o [**Fi
 
 ### <a name="xaml-vocabularies-and-object-oriented-programming"></a>Vocabulários XAML e programação orientada a objeto
 
-As propriedades e eventos como aparecem enquanto membros XAML de um tipo XAML do Windows Runtime normalmente são herdadas de tipos base. Considere este exemplo: `<Button Background="Blue" .../>` A propriedade [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) não é uma propriedade declarada imediatamente na classe [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265). Em vez disso, **Background** é herdado da classe base [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390). Na realidade, se você analisar o tópico de referência de **Button** verá que as listas de membros contêm pelo menos um membro herdado de cada uma das classes base sucessivas: [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736), [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390), [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911), [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). Na lista **Propriedades**, todas as propriedades somente leitura e as propriedades de coleção são herdadas em um sentido de vocabulário XAML. Eventos (como os vários eventos [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)) também são herdados.
+As propriedades e eventos como aparecem enquanto membros XAML de um tipo XAML do Windows Runtime normalmente são herdadas de tipos base. Considere este exemplo: `<Button Background="Blue" .../>` A propriedade [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) não é uma propriedade declarada imediatamente na classe [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265). Em vez disso, **Background** é herdado da classe base [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390). Na verdade, se você examinar o tópico de referência **botão** você verá que as listas de membros contêm pelo menos um membro herdado de cada um de uma cadeia de sucessivas classes base: [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736), [ **controle**](https://msdn.microsoft.com/library/windows/apps/br209390), [ **FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), [  **UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911), [ **DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). Na lista **Propriedades**, todas as propriedades somente leitura e as propriedades de coleção são herdadas em um sentido de vocabulário XAML. Eventos (como os vários eventos [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)) também são herdados.
 
 Se você usar a referência de Windows Runtime para diretriz XAML, o nome do elemento mostrado numa sintaxe ou mesmo em exemplo de código às vezes será para o tipo que originariamente define a propriedade, porque esse tópico de referência é compartilhado por todos os tipos possíveis que o herdam de uma classe base. Se você usar o IntelliSense para XAML do Visual Studio no editor de XML, o IntelliSense e seus menus suspensos farão um excelente trabalho de unir a herança e fornecer uma precisa lista de atributos disponíveis para configuração, depois que você começar um elemento de objeto para uma instância de classe.
 
@@ -173,7 +173,7 @@ Se a propriedade declarada como propriedade de conteúdo XAML for o tipo **Objec
 <TextBlock>Hello!</TextBlock>
 ```
 
-Se existir uma propriedade de conteúdo XAML para uma classe, isso será indicado no tópico de referência da classe, na seção "Atributos". Procure o valor do [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011). Esse atributo usa um campo nomeado "Name". O valor de "Name" é o nome da propriedade dessa classe que é a propriedade de conteúdo XAML. Por exemplo, na página de referência [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250), você verá isto: ContentProperty("Name=Child").
+Se existir uma propriedade de conteúdo XAML para uma classe, isso será indicado no tópico de referência da classe, na seção "Atributos". Procure o valor do [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011). Esse atributo usa um campo nomeado "Name". O valor de "Name" é o nome da propriedade dessa classe que é a propriedade de conteúdo XAML. Por exemplo, na [ **borda** ](https://msdn.microsoft.com/library/windows/apps/br209250) página de referência, você verá isso: ContentProperty("Name=Child").
 
 Uma regra de sintaxe XAML importante que deve ser mencionada é que não é possível misturar a propriedade de conteúdo XAML com outros elementos de propriedade definidos no elemento. A propriedade de conteúdo XAML deve ser definida inteiramente antes de quaisquer elementos de propriedade, ou inteiramente depois. Por exemplo, este é um XAML inválido:
 
@@ -238,7 +238,7 @@ Em primeiro lugar, a presença do elemento de objeto indica que deve ser criada 
 
 Outra regra do XAML é que os atributos de um elemento devem ser capazes de ser definidos em qualquer ordem. Por exemplo, não há diferença entre `<Rectangle Height="50" Width="100" />` e `<Rectangle Width="100"  Height="50" />`. A ordem de uso é uma questão de estilo.
 
-**Observação**os designers XAML geralmente promovem convenções de ordenação se você usar superfícies de design diferentes do editor de XML, mas é possível editar livremente esse XAML mais tarde, para reordenar os atributos ou introduzir novos.
+**Observação**  designers XAML promovem as convenções de ordenação geralmente se você usar as superfícies de design que não seja o editor XML, mas você pode editar livremente posteriormente, esse XAML para reordenar os atributos ou introduzir novos.
 
 ## <a name="attached-properties"></a>Propriedades anexadas
 
@@ -256,18 +256,18 @@ Em XAML, você define propriedades anexadas usando a sintaxe *AttachedPropertyPr
 
 No XAML do Windows Runtime, você verá as propriedades anexadas que dão suporte a estes cenários:
 
--   Elementos filho podem informar aos painéis de contêiner pai como deve ser seu comportamento no layout: [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704), [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/br227651).
--   Os usos de controle podem influenciar o comportamento de uma parte de controle importante que vem do modelo de controle: [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/br227689).
--   Usando um serviço que está disponível em uma classe relacionada, onde o serviço e a classe que o utiliza não compartilha a herança: [**Typography**](https://msdn.microsoft.com/library/windows/apps/hh702143), [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021), [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081), [**ToolTipService**](https://msdn.microsoft.com/library/windows/apps/br227609).
--   Direcionamento de animações: [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490).
+-   Elementos filho podem informar painéis do contêiner pai como deve se comportar em layout: [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704), [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/br227651).
+-   Usos de controle podem influenciar o comportamento de uma parte importante de controle que vem de um modelo de controle: [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/br227689).
+-   Usando um serviço que está disponível em uma classe relacionada, onde o serviço e a classe que o utiliza não compartilham herança: [**Typography**](https://msdn.microsoft.com/library/windows/apps/hh702143), [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021), [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081), [**ToolTipService**](https://msdn.microsoft.com/library/windows/apps/br227609).
+-   Direcionamento de animação: [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490).
 
 Para saber mais, veja [Visão geral de propriedades anexadas](attached-properties-overview.md).
 
 ## <a name="literal--values"></a>Valores "{" literais
 
-Como o símbolo da chave de abertura \{ é o início da sequência de extensão de marcação, use uma sequência de escape para especificar um valor de cadeia de caracteres literais que comece com "\{". A sequência de escape é "\{\}". Por exemplo, para especificar um valor de cadeia de caracteres que seja uma única chave de abertura, especifique o valor de atributo como "\{\}\{". Você também pode usar as aspas alternativas (por exemplo, um caractere **'** em um valor de atributo delimitado por **""**) para fornecer um valor "\{" como uma cadeia de caracteres.
+Porque a chave de abertura símbolo \{ é a abertura da sequência de extensão de marcação, você deve usar uma sequência de escape para especificar um valor de cadeia de caracteres literal que começa com "\{". A sequência de escape é "\{\}". Por exemplo, para especificar um valor de cadeia de caracteres que é uma chave de abertura única, especifique o valor do atributo como "\{\}\{". Você também pode usar as aspas alternativas (por exemplo, uma **'** dentro de um valor de atributo delimitadas por **""**) para fornecer um "\{" valor como uma cadeia de caracteres.
 
-**Observação**"\}" funciona também se ele está dentro de um atributo entre aspas.
+**Observação**  "\\}" também funciona se ele estiver dentro de um atributo entre aspas.
  
 ## <a name="enumeration-values"></a>Valores de enumeração
 
@@ -276,7 +276,7 @@ Muitas propriedades na API de Tempo de Execução do Windows usam enumerações 
 -   Não use uma forma qualificada, pois ela não funcionará. Por exemplo, este é um XAML inválido: `<Button Visibility="Visibility.Visible"/>`.
 -   Não use o valor da constante. Em outras palavras, não confie no valor inteiro da enumeração que aparece explícita ou implicitamente, dependendo de como a enumeração foi definida. Embora isso pareça funcionar, não é uma boa prática tanto no XAML como em código, pois você está confiando no que poderia ser um detalhe de implementação transitório. Por exemplo, não faça isto: `<Button Visibility="1"/>`.
 
-**Observação**nos tópicos de referência para APIs que usam XAML e enumerações, clique no link para o tipo de enumeração na seção de **valor de propriedade** de **sintaxe**. Isso vincula à página de enumeração na qual você descobre as constantes nomeadas referentes a essa enumeração.
+**Observação**  nos tópicos de referência para as APIs que usam XAML e usar enumerações, clique no link para o tipo de enumeração na **o valor da propriedade** seção **sintaxe**. Isso vincula à página de enumeração na qual você descobre as constantes nomeadas referentes a essa enumeração.
 
 As enumerações podem ser relacionadas a sinalizador, ou seja, atribuídas com **FlagsAttribute**. Se você precisar especificar uma combinação de valores para uma enumeração de sinalizadores como um valor de atributo XAML, use o nome de cada constante de enumeração, com uma vírgula (,) entre cada nome, sem espaços. Atributos do tipo sinalizador não são comuns no vocabulário XAML do Windows Runtime, mas [**ManipulationModes**](https://msdn.microsoft.com/library/windows/apps/br227934) é um exemplo em que definir um valor de enumeração do tipo sinalizador em XAML não tem suporte.
 
@@ -286,7 +286,7 @@ Raramente, você verá uma sintaxe XAML em que o tipo de propriedade seja uma in
 
 ## <a name="xaml-placeholder-conventions-in-windows-runtime-reference"></a>Referência de convenções de espaço reservado XAML no Tempo de Execução do Windows
 
-Se você examinou algum dos tópicos da seção **Sintaxe** relacionados às APIs do Tempo de Execução do Windows que podem usar XAML, provavelmente viu que a sintaxe inclui alguns espaços reservados. Sintaxe XAML é diferente das extensões de componente c#, Microsoft Visual Basic ou VisualC + + (C++ c++ /CX) sintaxe porque a sintaxe XAML é uma sintaxe de uso. Ela sugere seu uso eventual de seus próprios arquivos XAML, mas sem ser muito rígida com relação aos valores que você pode utilizar. Normalmente, o uso descreve um tipo de gramática que combina literais e espaços reservados e define alguns dos espaços reservados na seção **Valores de XAML**.
+Se você examinou algum dos tópicos da seção **Sintaxe** relacionados às APIs do Tempo de Execução do Windows que podem usar XAML, provavelmente viu que a sintaxe inclui alguns espaços reservados. Sintaxe XAML é diferente de C#, extensões de componentes do Microsoft Visual Basic ou Visual C++ (C + + c++ /CLI CX) sintaxe porque a sintaxe XAML é uma sintaxe de uso. Ela sugere seu uso eventual de seus próprios arquivos XAML, mas sem ser muito rígida com relação aos valores que você pode utilizar. Normalmente, o uso descreve um tipo de gramática que combina literais e espaços reservados e define alguns dos espaços reservados na seção **Valores de XAML**.
 
 Quando você vê nomes de tipos/elementos na sintaxe XAML de uma propriedade, o nome que aparece refere-se ao tipo que originalmente define a propriedade. Porém, o XAML do Windows Runtime permite um modelo de herança de classe para as classes baseadas em [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). Dessa forma, você sempre pode usar um atributo em uma classe que não seja literalmente a classe de definição, mas que em vez disso derive da classe que definiu primeiro a propriedade/atributo. Por exemplo, você pode definir [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) como um atributo em qualquer classe derivada de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) usando uma herança mais profunda. Por exemplo: `<Button Visibility="Visible" />`. Portanto, não entenda tão literalmente o nome do elemento mostrado em qualquer sintaxe de uso de XAML; a sintaxe pode ser viável para elementos que representam essa classe, e também elementos que representam uma classe derivada. Nos casos em que é raro ou impossível que o tipo mostrado como o elemento de definição seja usado em no mundo real, o nome desse tipo será deliberadamente colocado em minúsculas na sintaxe. Por exemplo, a sintaxe que você vê em **UIElement.Visibility** é:
 
@@ -300,11 +300,11 @@ Muitas seções de sintaxe XAML incluem espaços reservados no "Uso" que depois 
 
 As seções de uso XAML também empregam diversos espaços reservados generalizados. Esses espaços reservados não são sempre redefinidos nos **Valores XAML**, já que você deduz ou eventualmente sabe o que eles representam. Achamos que a maioria dos leitores ficaria cansada de tanto vê-los nos **Valores XAML** por isso os deixamos de fora das definições. Para referência, veja uma lista de alguns desses espaços reservados e o que eles significam em termos gerais:
 
--   *object*: teoricamente, qualquer valor de objeto, mas em geral quase limitado a determinados tipos de objetos, como a opção entre cadeia de caracteres ou objeto, e você deve conferir os Comentários na página de referência para saber mais.
--   *object* *property*: *object* *property* junto com outros é usado nos casos em que a sintaxe mostrada refere-se a um tipo que pode ser usado como valor de atributo em várias propriedades. Por exemplo, o **Xaml Attribute Usage** mostrado para [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) inclui: <*object* *property*="*predefinedColorName*"/>
--   *eventhandler*: aparece como o valor de atributo de cada sintaxe XAML mostrada para um atributo de evento. O que você especifica aqui é o nome de uma função de manipulador de eventos. Essa função tem que ser definida no code-behind da página XAML. No nível de programação, essa função tem que corresponder à assinatura do delegado do evento que você está manipulando, senão o código de seu aplicativo não vai ser compilado. Mas isso é realmente uma consideração de programação, e não de XAML; portanto, nós não sugerimos nada sobre o tipo de delegado na sintaxe XAML. Para saber que delegado você deve implementar em um evento, veja a seção **Informações do evento** do tópico de referência do evento, na linha da tabela chamada **Delegado**.
+-   *object*: teoricamente, qualquer valor de objeto, mas em geral quase limitado a determinados tipos de objetos, como a escolha entre cadeia de caracteres ou objeto, e você deve conferir os Comentários na página de referência para saber mais.
+-   *objeto* *propriedade*: *objeto* *propriedade* em combinação é usado para casos em que a sintaxe que está sendo mostrada é a sintaxe para um tipo que pode ser usado como um valor de atributo para muitas propriedades. Por exemplo, o **uso do atributo Xaml** mostrado para [ **pincel** ](/uwp/api/Windows.UI.Xaml.Media.Brush) inclui: <*objeto* *propriedade*= "*predefinedColorName*" / >
+-   *eventhandler*: Isso é exibido como o valor do atributo para cada sintaxe XAML mostrado para um atributo de evento. O que você especifica aqui é o nome de uma função de manipulador de eventos. Essa função tem que ser definida no code-behind da página XAML. No nível de programação, essa função tem que corresponder à assinatura do delegado do evento que você está manipulando, senão o código de seu aplicativo não vai ser compilado. Mas isso é realmente uma consideração de programação, e não de XAML; portanto, nós não sugerimos nada sobre o tipo de delegado na sintaxe XAML. Para saber que delegado você deve implementar em um evento, veja a seção **Informações do evento** do tópico de referência do evento, na linha da tabela chamada **Delegado**.
 -   *enumMemberName*: mostrado na sintaxe do atributo de todas as enumerações. Existe um espaço reservado similar para as propriedades que usam um valor de enumeração, mas ele normalmente prefixa o espaço reservado com uma dica do nome da enumeração. Por exemplo, a sintaxe mostrada em [**FrameworkElement.FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716) é <*frameworkElement***FlowDirection**="* flowDirectionMemberName*"/>. Se você está em uma dessas páginas de referência de propriedades, clique no link para o tipo de enumeração que aparece na seção **Valor da Propriedade**, ao lado do texto **Tipo:**. Para o valor do atributo de uma propriedade que usa essa enumeração, você pode utilizar qualquer cadeia de caracteres que esteja listada na coluna **Membro** da lista **Membros**.
--   *double*, *int*, *string*, *bool*: são tipos primitivos conhecidos da linguagem XAML. Se você está programando com o C# ou o Visual Basic, esses tipos são projetados para tipos equivalentes do Microsoft .NET, como [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx) [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx) e [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx), e você pode usar qualquer membro nesses tipos do .NET ao trabalhar com seus valores definidos por XAML no code-behind do .NET. Se você está programando com o C++/CX, vai usar os tipos primitivos do C++, mas também poderá considerar esses equivalentes aos tipos definidos pelo namespace da [**Platform**](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx), por exemplo [**Platform::String**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx). Às vezes, há outras restrições de valor para propriedades específicas. Normalmente, elas aparecem na seção **Valor da propriedade** ou na seção "Comentários", e não na seção XAML, porque qualquer restrição desse tipo é válida para usos de código e de XAML.
+-   *double*, *int*, *string*, *bool*: Esses são os tipos primitivos conhecidos para a linguagem XAML. Se você está programando com o C# ou o Visual Basic, esses tipos são projetados para tipos equivalentes do Microsoft .NET, como [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx)[**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx) e [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx), e você pode usar qualquer membro nesses tipos do .NET ao trabalhar com seus valores definidos por XAML no code-behind do .NET. Se você está programando com o C++/CX, vai usar os tipos primitivos do C++, mas também poderá considerar esses equivalentes aos tipos definidos pelo namespace da [**Platform**](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx), por exemplo [**Platform::String**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx). Às vezes, há outras restrições de valor para propriedades específicas. Normalmente, elas aparecem na seção **Valor da propriedade** ou na seção "Comentários", e não na seção XAML, porque qualquer restrição desse tipo é válida para usos de código e de XAML.
 
 ## <a name="tips-and-tricks-notes-on-style"></a>Dicas e truques, anotações sobre estilo
 
@@ -315,6 +315,6 @@ As seções de uso XAML também empregam diversos espaços reservados generaliza
 
 * [Visão geral do XAML](xaml-overview.md)
 * [Namespaces XAML e mapeamento de namespace](xaml-namespaces-and-namespace-mapping.md)
-* [Referências de recursos de ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
+* [Referências de recurso de ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
  
 

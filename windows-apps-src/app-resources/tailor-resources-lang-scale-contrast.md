@@ -1,5 +1,5 @@
 ---
-Description: This topic explains the general concept of qualifiers, how to use them, and the purpose of each of the qualifier names.
+Description: Este tópico descreve o conceito geral dos qualificadores, como usá-los e a finalidade de cada nome de qualificador.
 title: Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores
 template: detail.hbs
 ms.date: 10/10/2017
@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ac80888019044beabc44335290bc6ad59cf377c
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117656"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608131"
 ---
-# <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Personalizar os recursos para idioma, escala, alto contraste e outros qualificadores
+# <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores
 
 Este tópico descreve o conceito geral dos qualificadores de recurso, como usá-los e a finalidade de cada nome de qualificador. Consulte [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) para obter uma tabela de referência de todos os valores de qualificador possíveis.
 
@@ -29,7 +29,7 @@ Um nome de qualificador é uma chave mapeada para um conjunto de valores de qual
 | :--------------- | :--------------- | :--------------- |
 | A configuração de alto contraste | contraste | padrão, alto, preto e branco |
 
-Você pode combina um nome de qualificador com um valor de qualificador para formar um qualificador. `<qualifier name>-<qualifier value>` é o formato de um qualificador. `contrast-standard` é um exemplo de qualificador.
+Você pode combina um nome de qualificador com um valor de qualificador para formar um qualificador. `<qualifier name>-<qualifier value>` é o formato de um qualificador. `contrast-standard` é um exemplo de um qualificador.
 
 Portanto, para alto contraste, o conjunto de qualificadores é `contrast-standard`, `contrast-high`, `contrast-black` e `contrast-white`. Os nomes e os valores de qualificador não diferenciam maiúsculas de minúsculas. Por exemplo, `contrast-standard` e `Contrast-Standard` são o mesmo qualificador.
 
@@ -260,20 +260,20 @@ Para obter informações sobre qualificar um recurso para `scale` e `targetsize`
 
 O qualificador `theme` é usado para fornecer os recursos que melhor correspondem à configuração de modo de app padrão ou a substituição do app usando [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme).
 
-## <a name="important-apis"></a>APIs importantes
+## <a name="important-apis"></a>APIs Importantes
 
 * [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
 * [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Pixels efetivos e fator de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
-* [Sistema de Gerenciamento de Recursos](resource-management-system.md)
-* [Como se preparar para a localização](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
-* [Detectando a plataforma em que o app está sendo executado](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
-* [Visão geral das famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-* [Localizar as cadeias de caracteres de interface do usuário](localize-strings-ui-manifest.md)
+* [Pixels efetivos e o fator de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
+* [Sistema de gerenciamento de recursos](resource-management-system.md)
+* [Como se preparar para localização](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
+* [Detectar a plataforma de seu aplicativo está sendo executado](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
+* [Visão geral de famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
+* [Localizar suas cadeias de caracteres da interface do usuário](localize-strings-ui-manifest.md)
 * [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Composição M49 de códigos de região da Divisão de Estatísticas das Nações Unidas](https://go.microsoft.com/fwlink/p/?linkid=247929)
-* [Registro da submarca de idioma IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)
-* [Ajustar layout e fontes e fornecer suporte a RTL](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)
+* [Composição das Nações Unidas M49 de divisão de estatística de códigos de região](https://go.microsoft.com/fwlink/p/?linkid=247929)
+* [Registro de submarca de idioma IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)
+* [Ajustar layout e fontes e fornecer suporte para RTL](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)

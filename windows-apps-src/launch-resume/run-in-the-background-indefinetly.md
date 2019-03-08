@@ -2,16 +2,16 @@
 title: Executar em segundo plano indefinidamente
 description: Use a funcionalidade extendedExecutionUnconstrained para executar uma tarefa em segundo plano ou a sessão de execução estendida em segundo plano indefinidamente.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: tarefa em segundo plano, execução estendida, recursos, limites, tarefa em segundo plano
-ms.date: 10/3/2017
+keywords: tarefa em segundo plano, estendido de execução, recursos, limites, tarefa em segundo plano
+ms.date: 10/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: aedd948fe58efcc3edc160db971478189d9cb4ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: faac1d8d47ddcff4e5ec32d35f2e46bab7a3f4aa
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933920"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630241"
 ---
 # <a name="run-in-the-background-indefinitely"></a>Executar em segundo plano indefinidamente
 
@@ -75,12 +75,12 @@ _Package.appxmanifest_
 </Package>
 ```
 
-Essa funcionalidade remove as limitações de tempo de execução e o watchdog de tarefa ociosa. Após o início de uma tarefa em segundo plano por um gatilho ou uma chamada de serviço de aplicativo, depois de receber um adiamento [BackgroundTaskInstance](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance) fornecido pelo método **Executar**, ele pode ser executado indefinidamente. Se o aplicativo for definido como **Gerenciado pelo Windows**, em seguida, ele ainda pode ter uma cota de energia aplicada a si e a suas tarefas em segundo plano não serão ativadas quando a economia de bateria estiver ativa.Isso pode ser alterado com configurações do sistema operacional. Mais informações estão disponíveis em [Otimizando atividade em segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity).
+Essa funcionalidade remove as limitações de tempo de execução e o watchdog de tarefa ociosa. Após o início de uma tarefa em segundo plano por um gatilho ou uma chamada de serviço de aplicativo, depois de receber um adiamento [BackgroundTaskInstance](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance) fornecido pelo método **Executar**, ele pode ser executado indefinidamente. Se o aplicativo for definido como **Gerenciado pelo Windows**, em seguida, ele ainda pode ter uma cota de energia aplicada a si e a suas tarefas em segundo plano não serão ativadas quando a economia de bateria estiver ativa. Isso pode ser alterado com as configurações do sistema operacional. Mais informações estão disponíveis em [Otimizando atividade em segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity).
 
 A Plataforma Universal do Windows monitora a execução de tarefas em segundo plano para garantir uma experiência de aplicativo em primeiro plano suave e com boa duração da bateria. No entanto, aplicativos pessoais e aplicativos de linha de negócios corporativos podem usar execução estendida e a funcionalidade **extendedBackgroundTaskTime** de criar aplicativos que serão executados, conforme necessário, independentemente da disponibilidade de recursos do dispositivo.
 
 Lembre-se de que as funcionalidades **extendedExecutionUnconstrained** e **extendedBackgroundTaskTime** podem substituir a política padrão para aplicativos UWP e causar uso significativo da bateria. Antes de usar esses recursos, primeiro confirme que o padrão de execução estendido e políticas de tempo de tarefa em segundo plano não atendem às suas necessidades e realize testes em condições de restrição de bateria para entender o impacto que seu aplicativo terá em um dispositivo.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Remover as restrições de recurso de tarefa em segundo plano](https://docs.microsoft.com/windows/application-management/enterprise-background-activity-controls)

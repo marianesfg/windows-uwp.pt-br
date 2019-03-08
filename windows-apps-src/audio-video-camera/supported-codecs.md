@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 02d8c67c92a070fbeaaab81ef6c5145dec90e411
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929228"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631351"
 ---
 # <a name="supported-codecs"></a>Codecs compatíveis
 
-Este artigo lista o áudio, vídeo e a disponibilidade de codec e o formato de imagem para aplicativos UWP por padrão para cada família de dispositivos. Observe que essas tabelas listam os codecs incluídos com a instalação do Windows 10 para a família de dispositivo especificado. Os usuários e aplicativos podem instalar codecs adicionais que podem estar disponíveis para uso. Você pode consultar em tempo de execução o conjunto de codecs que estão atualmente disponíveis para um dispositivo específico. Para obter mais informações, consulte [Consulta de codecs instalados em um dispositivo](codec-query.md).
+Este artigo lista o áudio, vídeo e a disponibilidade de codec e o formato de imagem para apps UWP por padrão para cada família de dispositivos. Observe que essas tabelas listam os codecs incluídos com a instalação do Windows 10 para a família de dispositivo especificado. Os usuários e aplicativos podem instalar codecs adicionais que podem estar disponíveis para uso. Você pode consultar em tempo de execução o conjunto de codecs que estão atualmente disponíveis para um dispositivo específico. Para obter mais informações, consulte [Consulta de codecs instalados em um dispositivo](codec-query.md).
 
 Nas tabelas abaixo "D" indica suporte de decodificador e "E" indica suporte de codificador.
 
@@ -28,7 +28,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 
  
 
-### <a name="desktop"></a>Desktop
+### <a name="desktop"></a>Área de Trabalho
 
 <table>
 <colgroup>
@@ -339,7 +339,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 
  
 
-### <a name="mobile"></a>Dispositivos móveis
+### <a name="mobile"></a>Móvel
 
 <table>
 <colgroup>
@@ -1593,7 +1593,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 
  
 
-### <a name="desktop"></a>Desktop
+### <a name="desktop"></a>Área de Trabalho
 
 <table>
 <colgroup>
@@ -1812,7 +1812,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 
  
 
-### <a name="mobile"></a>Dispositivos móveis
+### <a name="mobile"></a>Móvel
 
 <table>
 <colgroup>
@@ -2697,7 +2697,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 <thead>
 <tr class="header">
 <th align="left">Codec</th>
-<th align="left">Desktop</th>
+<th align="left">Área de Trabalho</th>
 <th align="left">Outras famílias de dispositivo</th>
 </tr>
 </thead>

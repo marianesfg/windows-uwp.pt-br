@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1815f0956fbc175fec5ca892dbeeec92b2f939ab
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926794"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594691"
 ---
 # <a name="light-types"></a>Tipos de luz
 
 
 A propriedade do tipo de luz define qual o tipo de fonte de luz que você está usando. Existem três tipos de luzes no Direct3D: pontos iluminados, destaques e luzes direcionais. Cada tipo ilumina objetos em uma cena de forma diferente, com diferentes níveis de sobrecarga.
 
-## <a name="span-idpointlightspanspan-idpointlightspanspan-idpointlightspanpoint-light"></a><span id="Point_Light"></span><span id="point_light"></span><span id="POINT_LIGHT"></span>Luz pontual
+## <a name="span-idpointlightspanspan-idpointlightspanspan-idpointlightspanpoint-light"></a><span id="Point_Light"></span><span id="point_light"></span><span id="POINT_LIGHT"></span>Ponto de luz
 
 
 As luzes pontuais têm cor e posição em uma cena, mas nenhum direção única. Elas emitem luz igualmente em todas as direções, como mostrado na ilustração a seguir.
@@ -33,7 +33,7 @@ Uma lâmpada é um bom exemplo de luz pontual. As luzes pontuais são afetadas p
 
 As luzes direcionais têm somente cor e direção, mas não têm posição. Elas emitem luz paralela. Ou seja, todas as luzes geradas pelas luzes direcionais percorrem uma cena na mesma direção. Imagine uma luz direcional como uma fonte de luz a uma distância quase infinita, como o sol. As luzes direcionais não são afetadas por atenuação ou intervalos, portanto, a direção e a cor especificadas são fatores considerados somente quando o Direct3D calcula cores de vértice. Devido ao pequeno número de fatores de iluminação, essas são as luzes menos intensas para usar.
 
-## <a name="span-idspotlightspanspan-idspotlightspanspan-idspotlightspanspotlight"></a><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>Destaque
+## <a name="span-idspotlightspanspan-idspotlightspanspan-idspotlightspanspotlight"></a><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>SpotLight
 
 
 Os destaques têm cor, posição e direção para emissão de luz. A luz emitida de um destaque é composta por um cone interno brilhante e um cone externo maior, com a intensidade de luz entre os dois diminuindo conforme mostrado na ilustração a seguir.
@@ -79,7 +79,7 @@ O efeito de diversos valores de queda sobre a iluminação real é sutil e uma p
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Luzes e materiais](lights-and-materials.md)
+[Materiais e luzes](lights-and-materials.md)
 
  
 

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 36d08006fa2f32812f97daef5135a98dce16c4e5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929590"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594611"
 ---
 # <a name="index-buffers"></a>Buffers de índice
 
@@ -23,7 +23,7 @@ Os buffers de índice são buffers de memória que contêm dados de índice. Dad
 
 Um buffer de vértices contém vértices. Portanto, você pode desenhar um buffer de vértice com ou sem primitivas indexadas. No entanto, como um buffer de índice contém índices, você não pode usar um buffer de índice sem um buffer de vértice correspondente.
 
-## <a name="span-idindexbufferdescriptionspanspan-idindexbufferdescriptionspanspan-idindexbufferdescriptionspanindex-buffer-description"></a><span id="Index_Buffer_Description"></span><span id="index_buffer_description"></span><span id="INDEX_BUFFER_DESCRIPTION"></span>Descrição de buffer de índice
+## <a name="span-idindexbufferdescriptionspanspan-idindexbufferdescriptionspanspan-idindexbufferdescriptionspanindex-buffer-description"></a><span id="Index_Buffer_Description"></span><span id="index_buffer_description"></span><span id="INDEX_BUFFER_DESCRIPTION"></span>Descrição do índice de Buffer
 
 
 Um buffer de índice é descrito em termos de suas funcionalidades, como onde ele existe na memória, se suporta leitura e gravação, e o tipo e o número de índices que contém.
@@ -40,7 +40,7 @@ O app pode gravar diretamente índices em um buffer de índice alocado na memór
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Buffers de vértice e índice](vertex-and-index-buffers.md)
+[Buffers de índice e vértice](vertex-and-index-buffers.md)
 
  
 

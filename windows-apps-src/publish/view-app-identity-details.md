@@ -1,5 +1,5 @@
 ---
-Description: View details related to the unique identity assigned to your app by the Microsoft Store, and get a link to your app's Store listing.
+Description: Exibir detalhes relacionados à identidade exclusiva atribuída ao seu aplicativo, a Microsoft Store e obter um link para a listagem de Store do seu aplicativo.
 title: Exibir detalhes de identidade do aplicativo
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
 ms.date: 10/02/2018
@@ -7,27 +7,27 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e108d603a623e3b9e41d7ced3c0fafc80f006b8
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050003"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610811"
 ---
 # <a name="view-app-identity-details"></a>Exibir detalhes de identidade do aplicativo
 
 
-Você pode exibir detalhes relacionados à identidade exclusiva atribuída ao aplicativo pela Microsoft Store em suas páginas de **identidade do aplicativo** . Você também pode obter um link para da loja do aplicativo nesta página de listagem.
+Você pode exibir os detalhes relacionados à identidade exclusiva atribuída ao seu aplicativo, a Microsoft Store na sua **identidade de aplicativo** páginas. Você também pode obter um link para Store seu aplicativo listando nesta página.
 
 Para encontrar essas informações, navegue para um dos seus aplicativos, depois expanda **Gerenciamento de aplicativo** no menu de navegação esquerdo. Selecione a **Identidade do aplicativo** para exibir esses detalhes.
 
 
 ## <a name="values-to-include-in-your-app-package-manifest"></a>Valores a serem incluídos no manifesto do pacote do aplicativo
 
-Os seguintes valores devem ser incluídos no manifesto do pacote. Se você [usar o Microsoft Visual Studio para criar seus pacotes](../packaging/packaging-uwp-apps.md), e estiver conectado à mesma conta da Microsoft que você associou com sua conta de desenvolvedor, esses detalhes serão incluídos automaticamente. Se você estiver criando o pacote manualmente, é necessário adicionar estes itens.
+Os valores a seguir devem ser incluídos em seu manifesto de pacote. Se você [usar o Microsoft Visual Studio para criar seus pacotes](../packaging/packaging-uwp-apps.md), e estiver conectado à mesma conta da Microsoft que você associou com sua conta de desenvolvedor, esses detalhes serão incluídos automaticamente. Se você estiver criando o pacote manualmente, é necessário adicionar estes itens.
 
--   **Pacote/identidade/nome**
--   **Pacote/identidade/editor**
--   **Pacote/Propriedades/PublisherDisplayName**
+-   **Nome/de identidade de pacote**
+-   **Identidade/pacote/publicador**
+-   **Package/Properties/PublisherDisplayName**
 
 Para saber mais, consulte [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) na [Referência de esquemas de manifesto do pacote](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root).
 
@@ -38,8 +38,8 @@ Juntos, esses elementos declaram a identidade do seu aplicativo, estabelecendo a
 
 Os valores seguintes são valores adicionais que se referem à família de pacote do seu aplicativo, mas que não estão incluídos em seu manifesto.
 
--   **Nome da Família de Pacotes (PFN)**: esse valor é usado com determinadas APIs do Windows.
--   **SID de pacote**: você precisará desse valor para enviar notificações do WNS para seu aplicativo. Para saber mais, consulte a [Visão geral do WNS (Serviços de Notificação por Push do Windows)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
+-   **Nome de família (PFN) do pacote**: Esse valor é usado com determinadas APIs do Windows.
+-   **SID de pacote**: Você precisará desse valor para enviar notificações do WNS para seu aplicativo. Para saber mais, consulte a [Visão geral do WNS (Serviços de Notificação por Push do Windows)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
 
 
 ## <a name="link-to-your-apps-listing"></a>Link com os detalhes do seu aplicativo

@@ -1,5 +1,5 @@
 ---
-Description: Your tiles and toasts can load strings and images tailored for display language, display scale factor, high contrast, and other runtime contexts.
+Description: Seu blocos e notificações do sistema podem carregar cadeias de caracteres e imagens adaptadas para exibição de idioma, de fator de escala, alto contraste e outros contextos de tempo de execução.
 title: Suporte à notificação de bloco e do sistema para o idioma, a escala e o alto contraste
 template: detail.hbs
 ms.date: 10/12/2017
@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: aa6e93196d30c15374129eee7714604cfab7b82e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942902"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601471"
 ---
-# <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>Suporte a blocos e notificações do sistema para idioma, escala e alto contraste
+# <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>Suporte à notificação de bloco e do sistema para o idioma, a escala e o alto contraste
 
-Seu blocos e notificações do sistema podem carregar cadeias de caracteres e imagens personalizadas para idioma de exibição, [fator de escala de exibição](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), alto contraste e outros contextos de tempo de execução. Para obter informações sobre como usar os qualificadores nos nomes de seus arquivos de recurso, consulte [Personalizar os recursos para idioma, escala e outros qualificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md) e [ícones e logotipos](/windows/uwp/design/style/app-icons-and-logos).
+Seu blocos e notificações do sistema podem carregar cadeias de caracteres e imagens personalizadas para idioma de exibição, [fator de escala de exibição](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), alto contraste e outros contextos de tempo de execução. Para obter informações sobre como usar qualificadores nos nomes de seus arquivos de recurso, confira [adaptar seus recursos de idioma, escala e outros qualificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md) e [ícones do aplicativo e logotipos](/windows/uwp/design/style/app-icons-and-logos).
 
 Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../../globalizing/globalizing-portal.md).
 
@@ -84,12 +84,12 @@ Para obter uma tabela de referência de todos os valores de qualificador possív
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Tamanhos de tela e pontos de interrupção para um design responsivo](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md)
-* [Personalizar os recursos para idioma, escala e outros qualificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [Tamanhos de tela e pontos de interrupção para o design responsivo](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md)
+* [Personalize seus recursos de idioma, escala e outros qualificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [Diretrizes para ativos de bloco e ícone](app-assets.md).
 * [Globalização e localização](../../globalizing/globalizing-portal.md)
-* [Localizar sequência na interface do usuário e no manifesto do pacote do aplicativo](../../../app-resources/localize-strings-ui-manifest.md)
-* [Fazer referência a uma imagem ou outro ativo no código e na marcação XAML](../../../app-resources/images-tailored-for-scale-theme-contrast.md)
+* [Localizar cadeias de caracteres em seu manifesto de pacote da interface do usuário e aplicativo](../../../app-resources/localize-strings-ui-manifest.md)
+* [Fazer referência a uma imagem ou outros ativos de código e marcação XAML](../../../app-resources/images-tailored-for-scale-theme-contrast.md)
 * [addImageQuery](/uwp/schemas/tiles/tilesschema/element-visual?branch=live)
 * [Esquema de bloco](/uwp/schemas/tiles/tilesschema/schema-root?branch=live)
 * [Esquema de notificação do sistema](/uwp/schemas/tiles/toastschema/schema-root?branch=live)

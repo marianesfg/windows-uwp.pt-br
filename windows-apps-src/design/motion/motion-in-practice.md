@@ -1,5 +1,5 @@
 ---
-Description: Learn how Fluent motion fundamentals come together in your app.
+Description: Saiba como Fluent movimento conceitos básicos se unem em seu aplicativo.
 title: 'Movimento na prática: animação em aplicativos UWP'
 label: Motion in practice
 template: detail.hbs
@@ -12,11 +12,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 6eafbfd965d2783c0f72e75c91a04e5ac1cb119f
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058557"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599401"
 ---
 # <a name="bringing-it-together"></a>Reunião
 
@@ -80,27 +80,27 @@ Veja três maneiras de aplicar os conceitos básicos de movimento fluente em seu
 
 ## <a name="implicit-animations"></a>Animações implícitas
 
-> Animações implícitas requerem o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior.
+> Animações implícitas exigem o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior.
 
 
-Animações implícitas são uma maneira simples de alcançar o movimento fluente por automaticamente interpolando entre os valores novos e antigos durante uma alteração de parâmetro.
+Animações implícitas são uma forma simple de obter o movimento Fluent pela interpolação automaticamente entre os valores novos e antigos durante uma alteração de parâmetro.
 
-Você pode animar implicitamente alterações para as seguintes propriedades:
+Implicitamente, você pode animar as alterações para as seguintes propriedades:
 
 - [UIElement](/uwp/api/windows.ui.xaml.uielement)
   - **Opacidade**
   - **Rotação**
   - **Escala**
-  - **Translation**
+  - **Tradução**
 
-- [Borda](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)ou [painel](/uwp/api/windows.ui.xaml.controls.panel)
-  - **Tela de fundo**
+- [Borda](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter), ou [painel](/uwp/api/windows.ui.xaml.controls.panel)
+  - **Em segundo plano**
 
-Cada propriedade que pode ter alterações implicitamente animadas tem uma propriedade de _transição_ correspondente. Para animar a propriedade, você pode atribuir um tipo de transição para a propriedade correspondente da _transição_ . Esta tabela mostra as propriedades de _transição_ e o tipo de transição a ser usado para cada um deles.
+Cada propriedade que pode ter alterações animadas implicitamente tem um correspondente _transição_ propriedade. Para animar a propriedade, você deve atribuir um tipo de transição para os respectivos _transição_ propriedade. Esta tabela mostra os _transição_ propriedades e o tipo de transição a ser usado para cada um deles.
 
-| Propriedade animada | Propriedade de transição | Tipo de transição implícito |
+| Propriedade animada | Propriedade de transição | Tipo de transição implícita |
 | -- | -- | -- |
-| [UIElement. Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
+| [UIElement.Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
 | [UIElement.Rotation](/uwp/api/windows.ui.xaml.uielement.rotation) | [RotationTransition](/uwp/api/windows.ui.xaml.uielement.rotationtransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
 | [UIElement.Scale](/uwp/api/windows.ui.xaml.uielement.scale) | [ScaleTransition](/uwp/api/windows.ui.xaml.uielement.scaletransition) | [Vector3Transition](/uwp/api/windows.ui.xaml.vector3transition) |
 | [UIElement.Translation](/uwp/api/windows.ui.xaml.uielement.scale) | [TranslationTransition](/uwp/api/windows.ui.xaml.uielement.translationtransition) | [Vector3Transition](/uwp/api/windows.ui.xaml.vector3transition) |
@@ -108,7 +108,7 @@ Cada propriedade que pode ter alterações implicitamente animadas tem uma propr
 | [ContentPresenter.Background](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 | [Panel.Background](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 
-Este exemplo mostra como usar a propriedade de opacidade e a transição para tornar um botão desaparecem quando o controle está habilitado e fade out quando ele está desativado.
+Este exemplo mostra como usar a propriedade de opacidade e a transição para tornar um botão Aplicar fade-in quando o controle está habilitado e desaparecer quando ele estiver desabilitado.
 
 ```xaml
 <Button x:Name="SubmitButton"
@@ -129,6 +129,6 @@ public double OpaqueIfEnabled(bool IsEnabled)
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Visão geral do movimento](index.md)
-- [Tempo e suavização](timing-and-easing.md)
-- [Direção e gravidade](directionality-and-gravity.md)
+- [Visão geral de animação](index.md)
+- [Atingir o tempo e atenuação](timing-and-easing.md)
+- [Direcionalidade e gravidade](directionality-and-gravity.md)

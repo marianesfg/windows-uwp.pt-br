@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, volante de corrida, force feedback
 ms.localizationpriority: medium
 ms.openlocfilehash: ab7c5bc15b149d5f469b7fc5e6b6285986569b22
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981550"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608831"
 ---
 # <a name="racing-wheel-and-force-feedback"></a>Volante de corrida e force feedback
 
-Esta página descreve os conceitos básicos de programação para Xbox One usando [racingwheel] de volantes de corrida[ racingwheel] e APIs relacionadas para a plataforma Universal do Windows (UWP).
+Esta página descreve os conceitos básicos da programação para usando a roda Xbox One racing [Windows.Gaming.Input.RacingWheel] [ racingwheel] e APIs relacionadas para Universal Windows Platform (UWP).
 
 Ao ler esta página, você saberá como:
 
@@ -33,7 +33,7 @@ Os volantes de corrida do Xbox One são oferecidos em uma grande variedade de fa
 
 ### <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
-Volantes de corrida Xbox One oferecem conjuntos de funcionalidades de dispositivo opcionais diferentes e níveis variados de suporte para essas funcionalidades; Esse nível de variação entre um único tipo de dispositivo de entrada é exclusivo dentre os dispositivos compatíveis com o [Gaming](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input) API. Além disso, a maioria dos dispositivos que você encontrará dará suporte a pelo menos alguma funcionalidade opcional ou outras variações. Por isso, é importante determinar as funcionalidades de cada volante de corrida conectado individualmente e dar suporte a toda a variação de funcionalidades justificável para o jogo.
+Rodas de corrida Xbox One diferentes oferecem diferentes conjuntos de recursos do dispositivo opcionais e níveis variados de suporte para esses recursos; Esse nível de variação entre um único tipo de dispositivo de entrada é exclusivo entre os dispositivos compatíveis com o [Windows.Gaming.Input](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input) API. Além disso, a maioria dos dispositivos que você encontrará dará suporte a pelo menos alguma funcionalidade opcional ou outras variações. Por isso, é importante determinar as funcionalidades de cada volante de corrida conectado individualmente e dar suporte a toda a variação de funcionalidades justificável para o jogo.
 
 Para obter mais informações, consulte [Determinar funcionalidades de volante de corrida](#determining-racing-wheel-capabilities).
 
@@ -55,29 +55,29 @@ Como um controlador de navegação da interface do usuário, os volantes de corr
 | ------------------:| ------------------ |
 |                 Para cima | Direcional para cima           |
 |               Para baixo | Direcional para baixo         |
-|               Para esquerda | Direcional para esquerda         |
-|              Direita | Direcional para direita        |
+|               Esquerda | Direcional para a esquerda         |
+|              Direita | Direcional para a direita        |
 |               Exibir | Botão Exibir        |
 |               Menu | Botão Menu        |
 |             Aceitar | Botão A           |
-|             Cancelar | Botão B           |
+|             Cancel | Botão B           |
 
 Além disso, alguns volantes de corrida podem mapear alguns dos comandos de navegação do [conjunto opcional](ui-navigation-controller.md#optional-set) para outras entradas compatíveis, mas os mapeamentos de comando podem variar de um dispositivo para outro. Também leve em consideração o suporte a esses comandos, mas certifique-se de que esses comandos não sejam essenciais para navegar na interface do jogo.
 
 | Comando de navegação | Entrada do volante de corrida    |
 | ------------------:| --------------------- |
-|            Página acima | _varia_              |
-|          Página abaixo | _varia_              |
-|          Página à esquerda | _varia_              |
-|         Página à direita | _varia_              |
-|          Rolar para cima | _varia_              |
-|        Rolar para baixo | _varia_              |
-|        Rolar para esquerda | _varia_              |
-|       Rolar para direita | _varia_              |
+|            Página acima | _varia de acordo_              |
+|          Página abaixo | _varia de acordo_              |
+|          Página à esquerda | _varia de acordo_              |
+|         Página à direita | _varia de acordo_              |
+|          Rolar para cima | _varia de acordo_              |
+|        Rolar para baixo | _varia de acordo_              |
+|        Rolar para esquerda | _varia de acordo_              |
+|       Rolar para direita | _varia de acordo_              |
 |          Contexto 1 | Botão X (_normalmente_) |
 |          Contexto 2 | Botão Y (_normalmente_) |
-|          Contexto 3 | _varia_              |
-|          Contexto 4 | _varia_              |
+|          Contexto 3 | _varia de acordo_              |
+|          Contexto 4 | _varia de acordo_              |
 
 ## <a name="detect-and-track-racing-wheels"></a>Detectar e acompanhar volantes de corrida
 
@@ -260,7 +260,7 @@ if(racingwheel->HasClutch)
 
 ### <a name="reading-the-pattern-shifter"></a>Como ler a borboleta de câmbio
 
-A borboleta de câmbio é um controle opcional que fornece uma leitura digital entre -1 e [MaxPatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.maxpatternshiftergear) representada como um valor de inteiro assinado. Um valor -1 ou 0 corresponde às marchas _a ré_ e _neutra_ marcha, respectivamente; valores cada vez mais positivos correspondem a marchas à frente mais altas até **MaxPatternShifterGear**, inclusive. O valor da borboleta de câmbio é lido da propriedade [PatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading.patternshiftergear) da estrutura [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading) .
+A borboleta de câmbio é um controle opcional que fornece uma leitura digital entre -1 e [MaxPatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.maxpatternshiftergear) representada como um valor de inteiro assinado. Um valor -1 ou 0 corresponde às marchas _a ré_ e _neutra_ marcha, respectivamente; valores cada vez mais positivos correspondem a marchas à frente mais altas até **MaxPatternShifterGear**, inclusive. O valor de deslocar o padrão é lido do [PatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading.patternshiftergear) propriedade da [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading) struct.
 
 ```cpp
 if (racingwheel->HasPatternShifter)
@@ -278,7 +278,7 @@ O [exemplo InputInterfacingUWP _(github)_](https://github.com/Microsoft/Xbox-ATG
 
 ## <a name="force-feedback-overview"></a>Visão geral do force feedback
 
-Muitos volantes de corrida têm a funcionalidade de force feedback para oferecer uma experiência de direção mais imersiva e desafiadora. Os volantes de corrida compatíveis com force feedback normalmente são equipados com um único motor que aplica força ao volante ao longo de um único eixo, o eixo de esterçamento do volante. Force feedback será compatível em aplicativos do Windows 10 UWP e do Xbox One pelo namespace [forcefeedback](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback) .
+Muitos volantes de corrida têm a funcionalidade de force feedback para oferecer uma experiência de direção mais imersiva e desafiadora. Os volantes de corrida compatíveis com force feedback normalmente são equipados com um único motor que aplica força ao volante ao longo de um único eixo, o eixo de esterçamento do volante. Force feedback tem suporte em aplicativos do Windows 10 e UWP do Xbox One, o [Windows.Gaming.Input.ForceFeedback](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback) namespace.
 
 > [!NOTE]
 > As APIs de force feedback são capazes de dar suporte a diversos eixos de força, mas nenhum volante de corrida do Xbox One atualmente dá suporte a qualquer eixo de feedback que não seja de esterçamento do volante.
@@ -315,7 +315,7 @@ if (racingwheel->WheelMotor != nullptr)
 
 ### <a name="loading-force-feedback-effects"></a>Como carregar efeitos de force feedback
 
-Os efeitos de force feedback são carregados no dispositivo de feedback no qual são "executados" de maneira autônoma no comando do jogo. Vários efeitos básicos são fornecidos; efeitos personalizados podem ser criados por meio de uma classe que implementa a interface [IForceFeedbackEffect](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback.iforcefeedbackeffect) .
+Os efeitos de force feedback são carregados no dispositivo de feedback no qual são "executados" de maneira autônoma no comando do jogo. Um número de efeitos básicos é fornecido; efeitos personalizados podem ser criados por meio de uma classe que implementa o [IForceFeedbackEffect](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback.iforcefeedbackeffect) interface.
 
 | Classe de efeito         | Descrição de efeito                                                                     |
 | -------------------- | -------------------------------------------------------------------------------------- |
@@ -373,7 +373,7 @@ Por fim, é possível habilitar, desabilitar ou redefinir de maneira assíncrona
 
 * [Windows.Gaming.Input.UINavigationController](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.uinavigationcontroller)
 * [Windows.Gaming.Input.IGameController](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.igamecontroller)
-* [Práticas de entrada para jogos](input-practices-for-games.md)
+* [Práticas recomendadas de entrada para jogos](input-practices-for-games.md)
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.UINavigationController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationcontroller.aspx

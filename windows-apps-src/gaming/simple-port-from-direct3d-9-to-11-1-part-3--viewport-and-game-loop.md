@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, fazendo a portabilidade, loop do jogo, direct3d 9, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 2087959bc29d2b2b02cdc9a2f373a8b62ea8c25a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941629"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627981"
 ---
 # <a name="port-the-game-loop"></a>Fazer a portabilidade do loop do jogo
 
@@ -19,9 +19,9 @@ ms.locfileid: "8941629"
 
 **Resumo**
 
--   [Parte 1: inicializar o Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)
--   [Parte 2: converter a estrutura de renderização](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
--   Parte 3: fazer a portabilidade do loop do jogo
+-   [Parte 1: Inicializar o Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)
+-   [Parte 2: Converter o framework de renderização](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
+-   Parte 3: Fazer a portabilidade do loop do jogo
 
 
 Mostra como implementar uma janela para um jogo da Plataforma Universal do Windows (UWP) e como ativar o loop do jogo, inclusive como criar uma [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) para controlar uma [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) em tela inteira. Parte 3 do guia passo a passo de [portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
@@ -33,11 +33,11 @@ Para configurar uma janela da área de trabalho com um visor do Direct3D 9, era 
 
 O ambiente UWP tem um sistema muito mais simples. Em vez de configurar uma janela tradicional, um jogo da Microsoft Store que usa DirectX implementa [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478). Essa interface existe para que aplicativos e jogos em DirectX sejam executados diretamente em uma [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), dentro do contêiner de aplicativo.
 
-> **Observação**  Windows oferece ponteiros gerenciados para recursos como o objeto de aplicativo de origem e a [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulte [**manipular o operador de objeto (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **Observação**    Windows fornece ponteiros gerenciados a recursos como o objeto de aplicativo de origem e o [ **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulte [**operador Handle to Object (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
  
 
-Sua classe "principal" precisa ser herdada de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) e implementar os cinco métodos de **IFrameworkView**: [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) e [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523). Além de criar **IFrameworkView**, que é (essencialmente) onde ficará o jogo, você precisa implementar uma classe de fábrica que crie uma instância da **IFrameworkView**. O jogo ainda possui um executável com um método chamado **main()**, mas tudo que ele pode fazer é usar a fábrica para criar a instância de **IFrameworkView**.
+Sua classe de "main" deve herdar de [ **IFrameworkView** ](https://msdn.microsoft.com/library/windows/apps/hh700478) e implementar os cinco **IFrameworkView** métodos: [**Inicializar**](https://msdn.microsoft.com/library/windows/apps/hh700495), [ **SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [ **carga**](https://msdn.microsoft.com/library/windows/apps/hh700501), [ **executar** ](https://msdn.microsoft.com/library/windows/apps/hh700505), e [ **Cancelar inicialização**](https://msdn.microsoft.com/library/windows/apps/hh700523). Além de criar **IFrameworkView**, que é (essencialmente) onde ficará o jogo, você precisa implementar uma classe de fábrica que crie uma instância da **IFrameworkView**. O jogo ainda possui um executável com um método chamado **main()**, mas tudo que ele pode fazer é usar a fábrica para criar a instância de **IFrameworkView**.
 
 Função principal
 
@@ -124,18 +124,18 @@ while (true)
 
 Agora temos um aplicativo UWP que configura a mesma infraestrutura de elementos gráficos básica e renderiza o mesmo cubo colorido, como o exemplo em DirectX 9.
 
-## <a name="where-do-i-go-from-here"></a>Para onde ir em seguida?
+## <a name="where-do-i-go-from-here"></a>Para onde vou daqui?
 
 
 Adicione as [perguntas frequentes sobre portabilidade do DirectX 11](directx-porting-faq.md) aos favoritos.
 
 Os modelos UWP DirectX incluem uma infraestrutura de dispositivo Direct3D robusta, pronta para uso com o jogo. Consulte [Criar um projeto de jogo em DirectX usando um modelo](user-interface.md) para obter instruções sobre a escolha do modelo certo.
 
-Visite os seguintes artigos aprofundados de desenvolvimento de jogos do Microsoft Store:
+Visite os seguintes artigos detalhados de desenvolvimento de jogos do Microsoft Store:
 
--   [Guia passo a passo: um jogo simples UWP com DirectX](tutorial--create-your-first-uwp-directx-game.md)
+-   [Passo a passo: um simple jogo UWP com o DirectX](tutorial--create-your-first-uwp-directx-game.md)
 -   [Áudio para jogos](working-with-audio-in-your-directx-game.md)
--   [Controles move-look para jogos](tutorial--adding-move-look-controls-to-your-directx-game.md)
+-   [Controles de mover a consulta para jogos](tutorial--adding-move-look-controls-to-your-directx-game.md)
 
  
 

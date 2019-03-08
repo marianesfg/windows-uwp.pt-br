@@ -6,24 +6,24 @@ ms.topic: article
 keywords: windows 10, uwp, SQLite, banco de dados
 ms.localizationpriority: medium
 ms.openlocfilehash: 552de1ccb8f8e69a4ad716e54557ae0b5cd3a3f4
-ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "9075139"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635661"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Usar um banco de dados do SQLite em um aplicativo UWP
 Você pode usar o SQLite para armazenar e recuperar dados em um banco de dados leve nos dispositivos dos usuários. Esse guia mostra como fazer isso.
 
 ## <a name="some-benefits-of-using-sqlite-for-local-storage"></a>Alguns benefícios do uso do SQLite para armazenamento local
 
-:heavy_check_mark: SQLite é leve e autossuficiente. É uma biblioteca de código sem nenhuma outra dependência. Não há nada a ser configurado.
+:heavy_check_mark: O SQLite é leve e independente. É uma biblioteca de código sem nenhuma outra dependência. Não há nada a ser configurado.
 
-:heavy_check_mark: Não há servidor de banco de dados. O cliente e o servidor são executados no mesmo processo.
+:heavy_check_mark: Não há nenhum servidor de banco de dados. O cliente e o servidor são executados no mesmo processo.
 
-:heavy_check_mark: SQLite é de domínio público, então você pode usá-lo livremente e distribuí-lo com seu aplicativo.
+:heavy_check_mark: SQLite é de domínio público, portanto, você pode usar livremente e distribuí-lo com seu aplicativo.
 
-:heavy_check_mark: SQLite funciona em várias arquiteturas e plataformas.
+:heavy_check_mark: SQLite funciona em várias plataformas e arquiteturas.
 
 Você pode ler mais sobre o SQLite [aqui](https://sqlite.org/about.html).
 
@@ -85,11 +85,11 @@ Primeiro, você pode usar as bibliotecas do .NET Standard 2.0 em vez de bibliote
 
 Em segundo lugar, seu aplicativo não precisa empacotar bibliotecas SQLite. Em vez disso, seu aplicativo pode usar a versão do SQLite que vem instalado com o Windows. Isso ajuda você de algumas maneiras.
 
-:heavy_check_mark: Reduz o tamanho do seu aplicativo, pois você não precisa baixar o binário do SQLite e empacotá-lo como parte do seu aplicativo.
+:heavy_check_mark: Reduz o tamanho do seu aplicativo porque você não precisa baixar o binário do SQLite, e, em seguida, empacotá-lo como parte do seu aplicativo.
 
-:heavy_check_mark: Impede que você precise enviar uma nova versão do seu aplicativo para os usuários no caso de a SQLite publicar correções críticas para bugs e vulnerabilidades de segurança no SQLite. A versão Windows do SQLite é mantida pela Microsoft em coordenação com o SQLite.org.
+:heavy_check_mark: Evita a necessidade que enviar por push uma nova versão do seu aplicativo para usuários que SQLite publica correções críticas para bugs e vulnerabilidades de segurança no SQLite. A versão Windows do SQLite é mantida pela Microsoft em coordenação com o SQLite.org.
 
-:heavy_check_mark: O tempo de carregamento do aplicativo tem o potencial de ser mais rápido porque, provavelmente, a versão do SDK do SQLite já será carregada na memória.
+:heavy_check_mark: Tempo de carregamento do aplicativo tem o potencial para ser mais rápido porque muito provavelmente, a versão do SDK do SQLite já será carregada na memória.
 
 Vamos começar adicionando uma biblioteca de classes do .NET Standard 2.0 à sua solução. Não é necessário usar uma biblioteca de classes para conter o código de acesso de dados, mas vamos usar uma em nosso exemplo. Chamaremos a biblioteca de **DataAccessLibrary** e chamaremos a classe na biblioteca de **DataAccess**.
 
@@ -125,15 +125,15 @@ Você não precisa fazer isso. Mas, se você tiver um motivo para incluir uma ve
 
 Vamos fazer o seguinte:
 
-:one: Preparar a classe de acesso de dados.
+: um: Prepare-se a classe de acesso de dados.
 
-:two: Inicializar o banco de dados SQLite.
+: dois: Inicialize o banco de dados SQLite.
 
-:three: Inserir dados no banco de dados do SQLite.
+: três: Inserir dados no banco de dados SQLite.
 
-:four: Recuperar dados do banco de dados SQLite.
+: quatro: Recupere dados do banco de dados SQLite.
 
-:five: Adicionar uma interface do usuário básica.
+:five: Adicione uma interface do usuário básica.
 
 ### <a name="prepare-the-data-access-class"></a>Preparar a classe de acesso de dados
 
@@ -163,7 +163,7 @@ namespace DataAccessLibrary
 
 ```
 
-Adicione o seguinte usando as instruções na parte superior deste arquivo.
+Adicione o seguinte usando instruções na parte superior desse arquivo.
 
 ```csharp
 using Microsoft.Data.Sqlite;
@@ -274,7 +274,7 @@ public static List<String> GetData()
 }
 ```
 
-O método [Leitura](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.read?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_Read) avança por linhas de dados retornados. Ele retorna **true** se houver mais linhas restantes; caso contrário, ele retorna **false **.
+O método [Leitura](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.read?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_Read) avança por linhas de dados retornados. Ele retorna **true** se houver mais linhas restantes; caso contrário, ele retorna **false** .
 
 O método [GetString](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getstring?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetString_System_Int32_) retorna o valor da coluna especificada como uma sequência. Ele aceita um valor inteiro que representa o ordinal de coluna baseada em zero dos dados que você deseja. Você pode usar métodos semelhantes, como [GetDataTime](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getdatetime?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetDateTime_System_Int32_) e [GetBoolean ](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getboolean?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetBoolean_System_Int32_). Escolha um método com base em qual tipo de dados a coluna contém.
 
@@ -321,10 +321,10 @@ Isso é tudo. Explore o [Microsoft.Data.Sqlite](https://docs.microsoft.com/dotne
 
 Consulte [Usar um banco de dados do SQL Server em um aplicativo UWP](sql-server-databases.md).
 
-**Compartilhar código entre aplicativos diferentes em diferentes plataformas**
+**Compartilhar código entre aplicativos diferentes em plataformas diferentes**
 
 Consulte [Compartilhar código entre o desktop e o UWP](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate).
 
-**Adicionar páginas de detalhes mestre com back-ends Azure SQL**
+**Adicionar páginas de detalhes mestre com o back-ends de SQL do Azure**
 
 Consulte [Exemplo de banco de dados de pedidos do cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database).

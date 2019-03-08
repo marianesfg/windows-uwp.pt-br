@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, erro, processamento, exceção
 ms.localizationpriority: medium
 ms.openlocfilehash: c6f7135e85ab63ddfe92bd0de8c656b58fb1a020
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937504"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626571"
 ---
 # <a name="error-handling-with-cwinrt"></a>Processamento de erros com C++/WinRT
 
-Este tópico aborda as estratégias para processar erros ao programar com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Para obter informações gerais e o histórico, veja [Processamento de erros e exceções (C++ moderno)](/cpp/cpp/errors-and-exception-handling-modern-cpp).
+Este tópico discute estratégias de tratamento de erros durante a programação com [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Para obter informações gerais e o histórico, veja [Processamento de erros e exceções (C++ moderno)](/cpp/cpp/errors-and-exception-handling-modern-cpp).
 
 ## <a name="avoid-catching-and-throwing-exceptions"></a>Evitar a captura e a geração de exceções
 Recomendamos que você continue a criar [código à prova de exceções](/cpp/cpp/how-to-design-for-exception-safety), mas evite a captura e a geração de exceções sempre que possível. Se não houver nenhum manipulador para uma exceção, o Windows gera automaticamente um relatório de erros (incluindo um minidespejo da pane), que ajudará você a detectar onde está o problema.
@@ -23,7 +23,7 @@ Não gere uma exceção que você pretende capturar. Não use exceções para fa
 
 Considere o cenário de acesso ao Registro do Windows. Se o aplicativo falhar ao ler um valor do Registro, isso é esperado e você deve tratar a situação normalmente. Não gere uma exceção; em vez disso, retorne um valor `bool`ou `enum` que indica se e por que não foi possível ler o valor. Por outro lado, uma falha ao *gravar* um valor no Registro provavelmente indica um problema maior que você pode processar facilmente em seu aplicativo. Em casos assim, não é recomendado que o aplicativo continue, portanto, uma exceção que resulta em um relatório de erros é a maneira mais rápida de impedir que o aplicativo cause danos.
 
-Em outro exemplo, considere recuperar uma imagem em miniatura de uma chamada para [**StorageFile.GetThumbnailAsync**](/uwp/api/windows.storage.storagefile.getthumbnailasync#Windows_Storage_StorageFile_GetThumbnailAsync_Windows_Storage_FileProperties_ThumbnailMode_) e passá-la para [**BitmapSource.SetSourceAsync**](/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync#Windows_UI_Xaml_Media_Imaging_BitmapSource_SetSourceAsync_Windows_Storage_Streams_IRandomAccessStream_). Se essa sequência de chamadas resultar em passar `nullptr` para **SetSourceAsync** (o arquivo não imagem não pode ser lido; talvez a extensão do arquivo faça parece que contém dados de imagem mesmo não contendo), você provocará uma exceção de ponteiro inválido. Se você descobrir um caso semelhante no seu código, em vez de detectar e processar o caso como uma exceção, verifique se `nullptr` foi retornado de **GetThumbnailAsync **.
+Em outro exemplo, considere recuperar uma imagem em miniatura de uma chamada para [**StorageFile.GetThumbnailAsync**](/uwp/api/windows.storage.storagefile.getthumbnailasync#Windows_Storage_StorageFile_GetThumbnailAsync_Windows_Storage_FileProperties_ThumbnailMode_) e passá-la para [**BitmapSource.SetSourceAsync**](/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync#Windows_UI_Xaml_Media_Imaging_BitmapSource_SetSourceAsync_Windows_Storage_Streams_IRandomAccessStream_). Se essa sequência de chamadas resultar em passar `nullptr` para **SetSourceAsync** (o arquivo não imagem não pode ser lido; talvez a extensão do arquivo faça parece que contém dados de imagem mesmo não contendo), você provocará uma exceção de ponteiro inválido. Se você descobrir um caso semelhante no seu código, em vez de detectar e processar o caso como uma exceção, verifique se `nullptr` foi retornado de **GetThumbnailAsync** .
 
 A geração de exceções tende a ser mais lenta do que usar códigos de erro. Caso gere apenas uma exceção quando um erro fatal ocorrer, se tudo correr bem, você nunca terá um problema de desempenho.
 
@@ -63,7 +63,7 @@ IAsyncAction MakeThumbnailsAsync()
 
 Se o mesmo padrão em uma corrotina ao chamar uma função `co_await`-ed. Outro exemplo dessa conversão de HRESULT para exceção é que, quando uma API de componente retorna E_OUTOFMEMORY, isso gera um **std::bad_alloc**.
 
-## <a name="throwing-exceptions"></a>Geração de exceções
+## <a name="throwing-exceptions"></a>Acionamento de exceções
 Há casos em que você deve decidir que, em caso de falha na chamada para uma função específica, o aplicativo não será capaz de se recuperar (não é possível confiar no funcionamento previsível). O exemplo de código a seguir usa um valor de [**winrt::handle**](/uwp/cpp-ref-for-winrt/handle) como um wrapper identificador retornado por [**CreateEvent**](https://msdn.microsoft.com/library/windows/desktop/ms682396). Em seguida, passa o identificador (criando um valor `bool` dele) para o modelo de função [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool). **winrt::check_bool** funciona com um `bool` ou com qualquer valor convertido para `false` (uma condição de erro) ou `true` (uma condição de sucesso).
 
 ```cppwinrt
@@ -75,7 +75,7 @@ winrt::check_bool(::SetEvent(h.get()));
 Se o valor que você passa para [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool) é false, a seguinte sequência de ações ocorre.
 
 - **winrt::check_bool** chama a função [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error).
-- **WinRT:: throw_last_error** chama [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360) para recuperar o valor do último código de erro do thread de chamada e, em seguida, chama a função [**WinRT:: throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) .
+- **WinRT::throw_last_error** chamadas [ **GetLastError** ](https://msdn.microsoft.com/library/windows/desktop/ms679360) para recuperar o thread de chamada valor do código de erro da última e, em seguida, chama o [ **winrt::throw_ HRESULT** ](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) função.
 - **winrt::throw_hresult** gera uma exceção usando um objeto [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) (ou um objeto padrão) que representa esse código de erro.
 
 Como as APIs do Windows relatam erros no tempo de execução usando vários tipos de valor de retorno, existem algumas outras funções auxiliares úteis além de **winrt::check_bool** para verificar os valores e gerar exceções.
@@ -105,7 +105,7 @@ HRESULT DoWork() noexcept
 }
 ```
 
-[**winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult) processa as exceções derivadas de **std::exception**, [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) e seus tipos derivados. Na implementação, você deve preferir **winrt::hresult_error** ou um tipo derivado para que os consumidores da API recebam informações de erro avançadas. **std::exception** (mapeada para E_FAIL) é suportada caso surjam exceções devido ao uso da biblioteca de modelo padrão.
+[**WinRT::to_hresult** ](/uwp/cpp-ref-for-winrt/error-handling/to-hresult) trata exceções derivadas **std:: Exception**, e [ **winrt::hresult_error** ](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) e seus tipos derivados. Na implementação, você deve preferir **winrt::hresult_error** ou um tipo derivado para que os consumidores da API recebam informações de erro avançadas. **std::exception** (mapeada para E_FAIL) é suportada caso surjam exceções devido ao uso da biblioteca de modelo padrão.
 
 ## <a name="assertions"></a>Afirmações
 Para suposições internas em seu aplicativo existem declarações. Prefira **static_assert** para a validação de tempo de compilação sempre que possível. Para as condições de tempo de execução, use WINRT_ASSERT com uma expressão booliana.
@@ -123,18 +123,18 @@ WINRT_VERIFY(::CloseHandle(value));
 WINRT_VERIFY_(TRUE, ::CloseHandle(value));
 ```
 
-## <a name="important-apis"></a>APIs importantes
-* [winrt::check_bool function template](/uwp/cpp-ref-for-winrt/error-handling/check-bool)
-* [winrt::check_hresult function](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)
-* [winrt::check_nt function template](/uwp/cpp-ref-for-winrt/error-handling/check-nt)
-* [winrt::check_pointer function template](/uwp/cpp-ref-for-winrt/error-handling/check-pointer)
-* [winrt::check_win32 function template](/uwp/cpp-ref-for-winrt/error-handling/check-win32)
-* [winrt::handle struct](/uwp/cpp-ref-for-winrt/handle)
+## <a name="important-apis"></a>APIs Importantes
+* [modelo de função WinRT::check_bool](/uwp/cpp-ref-for-winrt/error-handling/check-bool)
+* [função WinRT::check_hresult](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)
+* [modelo de função WinRT::check_nt](/uwp/cpp-ref-for-winrt/error-handling/check-nt)
+* [modelo de função WinRT::check_pointer](/uwp/cpp-ref-for-winrt/error-handling/check-pointer)
+* [modelo de função WinRT::check_win32](/uwp/cpp-ref-for-winrt/error-handling/check-win32)
+* [struct WinRT::Handle](/uwp/cpp-ref-for-winrt/handle)
 * [winrt::hresult_error struct](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
-* [winrt::throw_hresult function](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult)
+* [função WinRT::throw_hresult](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult)
 * [winrt::throw_last_error function](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error)
 * [winrt::to_hresult function](/uwp/cpp-ref-for-winrt/error-handling/to-hresult)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Processamento de erros e exceções (C++ moderno)](/cpp/cpp/errors-and-exception-handling-modern-cpp)
-* [Como: design de proteção para a exceção](/cpp/cpp/how-to-design-for-exception-safety)
+* [Erros e tratamento de exceções (C++ moderno)](/cpp/cpp/errors-and-exception-handling-modern-cpp)
+* [Como: Design para segurança de exceção](/cpp/cpp/how-to-design-for-exception-safety)

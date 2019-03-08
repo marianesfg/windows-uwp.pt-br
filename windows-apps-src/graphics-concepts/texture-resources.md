@@ -8,21 +8,21 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f52a032b7fe61df67aaf35c57b2ca64ac8eef6a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933328"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57591381"
 ---
 # <a name="texture-resources"></a>Recursos de textura
 
 
 Texturas são um tipo de recurso usado para renderização.
 
-## <a name="span-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanrendering-with-texture-resources"></a><span id="Rendering_with_Texture_Resources"></span><span id="rendering_with_texture_resources"></span><span id="RENDERING_WITH_TEXTURE_RESOURCES"></span>Renderizando com recursos de textura
+## <a name="span-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanrendering-with-texture-resources"></a><span id="Rendering_with_Texture_Resources"></span><span id="rendering_with_texture_resources"></span><span id="RENDERING_WITH_TEXTURE_RESOURCES"></span>Renderização com recursos de textura
 
 
-O Direct3D dá suporte à mesclagem de várias texturas pelo conceito de estágios de textura. Cada estágio de textura contém uma textura e as operações que podem ser executadas na textura. As texturas nos estágios de textura formam o conjunto de texturas atuais. Consulte [Mesclagem de texturas](texture-blending.md). O estado de cada textura é encapsulado em seu estágio de textura.
+O Direct3D dá suporte à mesclagem de várias texturas pelo conceito de estágios de textura. Cada estágio de textura contém uma textura e as operações que podem ser executadas na textura. As texturas nos estágios de textura formam o conjunto de texturas atuais. Consulte [Mistura de textura](texture-blending.md). O estado de cada textura é encapsulado em seu estágio de textura.
 
 Seu aplicativo também pode definir a perspectiva da textura e os estados de filtragem de textura. Consulte [Filtragem de textura](texture-filtering.md).
 

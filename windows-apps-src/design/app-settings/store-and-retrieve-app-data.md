@@ -1,6 +1,6 @@
 ---
-Description: Learn how to store and retrieve local, roaming, and temporary app data.
-title: Armazenar e recuperar configurações e outros dados de app
+Description: Saiba como armazenar e recuperar dados de aplicativo local, em roaming e temporário.
+title: Armazenar e recuperar configurações e outros dados de aplicativo
 ms.assetid: 41676A02-325A-455E-8565-C9EC0BC3A8FE
 label: App settings and data
 template: detail.hbs
@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c4f8de32be13f9de776a1c2d0ba0f6af2797329
-ms.sourcegitcommit: be52da74f0b3f24973286792afa4f5e80799161b
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "9009513"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602671"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Armazenar e recuperar configurações e outros dados de aplicativo
 
-*Dados de aplicativo* são dados mutáveis específicos de determinado aplicativo. Eles incluem estado de tempo de execução, preferências de usuário e outras configurações. Dados de aplicativo são diferentes de *dados do usuário*, dados que o usuário cria e gerencia ao usar um aplicativo. Os dados do usuário incluem arquivos de documentos ou mídia, emails, transcrições de comunicações ou registros de bancos de dados com conteúdo criado pelo usuário. Os dados do usuário podem ser úteis ou significativos para mais de um aplicativo. Geralmente, trata-se de dados que o usuário quer manipular ou transmitir como uma entidade independente do próprio aplicativo, como um documento.
+*Dados de aplicativo* são dados mutáveis específicos a determinado aplicativo. Eles incluem estado de tempo de execução, preferências de usuário e outras configurações. Dados de aplicativo são diferentes de *dados do usuário*, dados que o usuário cria e gerencia ao usar um aplicativo. Os dados do usuário incluem arquivos de documentos ou mídia, emails, transcrições de comunicações ou registros de bancos de dados com conteúdo criado pelo usuário. Os dados do usuário podem ser úteis ou significativos para mais de um aplicativo. Geralmente, trata-se de dados que o usuário quer manipular ou transmitir como uma entidade independente do próprio aplicativo, como um documento.
 
-**Observação importante sobre os dados de aplicativo:** O tempo de vida dos dados de aplicativo está vinculado ao tempo de vida do aplicativo. Se o aplicativo for removido, como consequência todos os dados do aplicativo serão perdidos. Não use dados do aplicativo para armazenar dados do usuário ou qualquer coisa que os usuários possam perceber como valioso e insubstituível. Recomendamos que as bibliotecas do usuário e o Microsoft OneDrive sejam usados para armazenar esse tipo de informações. Os dados do Aplicativo são ideais para armazenar as preferências, as configurações e os favoritos do usuário específicos ao aplicativo.
+**Observação importante sobre dados de aplicativo:** O tempo de vida dos dados de aplicativo está vinculado ao tempo de vida do aplicativo. Se o aplicativo for removido, como consequência todos os dados do aplicativo serão perdidos. Não use dados do aplicativo para armazenar dados do usuário ou qualquer coisa que os usuários possam perceber como valioso e insubstituível. Recomendamos que as bibliotecas do usuário e o Microsoft OneDrive sejam usados para armazenar esse tipo de informações. Os dados do Aplicativo são ideais para armazenar as preferências, as configurações e os favoritos do usuário específicos ao aplicativo.
 
 ## <a name="types-of-app-data"></a>Tipos de dados de aplicativo
 
@@ -33,11 +33,11 @@ Existem dois tipos de dados de aplicativo: configurações e arquivos.
     Aqui estão os tipos de dados que você pode usar para as configurações do aplicativo:
 
     -   **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
-    -   **Booliano**
+    -   **valor booliano**
     -   **Char16**, **String**
     -   [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576), [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996)
     -   **GUID**, [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)
-    -   [**ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588): conjunto de configurações de aplicativo relacionados que devem ser serializados e desserializados atomicamente. Use configurações compostas para lidar com facilidade com atualizações atômicas ou configurações interdependentes. O sistema assegura a integridade das configurações compostas durante o acesso e o roaming. As configurações compostas são otimizadas para pequenas quantidades de dados e o desempenho pode ser ruim se você as utilizar para conjuntos grandes de dados.
+    -   [**ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588): Um conjunto de configurações de aplicativo relacionado que deve ser serializado e desserializado atomicamente. Use configurações compostas para lidar com facilidade com atualizações atômicas ou configurações interdependentes. O sistema assegura a integridade das configurações compostas durante o acesso e o roaming. As configurações compostas são otimizadas para pequenas quantidades de dados e o desempenho pode ser ruim se você as utilizar para conjuntos grandes de dados.
 -   **Arquivos**
 
     Use arquivos para armazenar dados binários ou para permitir seus tipos serializado próprios e personalizados.
@@ -168,11 +168,11 @@ Os dados de roaming de um aplicativo estarão disponíveis na nuvem desde que se
 -   Não use roaming em dados de aplicativo específicos de um dispositivo. Algumas informações são pertinentes apenas localmente, como um nome de caminho para um recurso de arquivo local. Se você decidir usar um perfil móvel nas informações locais, certifique-se de que o aplicativo possa se recuperar se as informações não forem válidas no dispositivo secundário.
 -   Não use perfis móveis em grandes conjuntos de dados de aplicativos. Há um limite na quantidade de dados à qual um aplicativo pode aplicar roaming; use a propriedade [**RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625) para atingir essa quantidade máxima. Se um aplicativo atingir esse limite, o roaming não poderá ser usado em nenhum dado até que o tamanho do armazenamento de dados do aplicativo deixe de exceder o limite. Ao projetar seu aplicativo, considere como definir um limite para dados maiores, para que eles não ultrapassem o limite. Por exemplo, se para salvar o estado de um jogo for preciso 10 KB, o aplicativo deverá apenas permitir o armazenamento de até 10 jogos.
 -   Não use o perfil móvel para dados que dependerem da sincronização instantânea. O Windows não garante uma sincronização instantânea; o uso de roaming poderá sofrer um atraso significativo se um usuário estiver offline em uma rede de alta latência. Assegure-se de que sua interface do usuário não dependa da sincronização instantânea.
--   Não use roaming para dados alterados com frequência. Por exemplo: se o aplicativo acompanhar informações que mudarem frequentemente, como a posição em um música por segundos, não armazene essas informações como dados de uso do perfil móvel do aplicativo. Em vez disso, escolha uma representação menos frequente que ainda represente uma boa experiência do usuário, como uma música que estiver tocando no momento.
+-   Não use o roaming de dados com alterações frequentes. Por exemplo: se o aplicativo acompanhar informações que mudarem frequentemente, como a posição em um música por segundos, não armazene essas informações como dados de uso do perfil móvel do aplicativo. Em vez disso, escolha uma representação menos frequente que ainda represente uma boa experiência do usuário, como uma música que estiver tocando no momento.
 
 ### <a name="roaming-pre-requisites"></a>Pré-requisitos do uso do roaming
 
-Qualquer usuário pode se beneficiar de roaming, desde que esteja usando uma conta da Microsoft para fazer logon no dispositivo. No entanto, usuários e administradores de política de grupo podem desligar o dados de uso do perfil móvel do aplicativo a qualquer momento. Se um usuário optar por não usar uma conta da Microsoft ou desativa os recursos de roaming, ela ainda será capaz de usar o aplicativo, mas os dados de aplicativo serão locais em cada dispositivo.
+Qualquer usuário pode se beneficiar com dados de aplicativo em roaming, desde que esteja usando uma conta da Microsoft para fazer logon no dispositivo. No entanto, usuários e administradores de política de grupo podem desligar o dados de uso do perfil móvel do aplicativo a qualquer momento. Se um usuário optar por não usar uma conta da Microsoft ou desabilita os recursos de dados móveis, ela ainda será possível usar seu aplicativo, mas os dados do aplicativo serão locais para cada dispositivo.
 
 Os dados armazenados no [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) serão transferidos somente se o usuário tiver definido o dispositivo como "confiável". Se um dispositivo não for confiável, os dados armazenados nesse cofre não estarão disponíveis para roaming.
 
@@ -317,7 +317,7 @@ async void ReadTimestamp()
 ## <a name="temporary-app-data"></a>Dados temporários de aplicativo
 
 
-O repositório de dados temporários de aplicativo funciona como um cache. Os arquivos não se movimentam e podem ser removidos a qualquer momento. A tarefa Manutenção do Sistema pode excluir automaticamente dados armazenados neste local a qualquer momento. O usuário também pode limpar arquivos do repositório de dados temporários usando a Limpeza de Disco. Dados temporários de aplicativo podem ser usados para armazenar informações temporárias durante uma sessão de aplicativo. Não há garantia de que esses dados persistirão além do fim da sessão do aplicativo, pois o sistema pode recuperar o espaço usado, se necessário. O local está disponível por meio da propriedade [**temporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629).
+O armazenamento de dados temporários de aplicativo funciona como um cache. Os arquivos não se movimentam e podem ser removidos a qualquer momento. A tarefa Manutenção do Sistema pode excluir automaticamente dados armazenados neste local a qualquer momento. O usuário também pode limpar arquivos do repositório de dados temporários usando a Limpeza de Disco. Dados temporários de aplicativo podem ser usados para armazenar informações temporárias durante uma sessão de aplicativo. Não há garantia de que esses dados persistirão além do fim da sessão do aplicativo, pois o sistema pode recuperar o espaço usado, se necessário. O local está disponível por meio da propriedade [**temporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629).
 
 ### <a name="retrieve-the-temporary-data-container"></a>Recuperar o contêiner de dados temporários
 
@@ -430,7 +430,7 @@ localSettings.DeleteContainer("exampleContainer");
 ## <a name="versioning-your-app-data"></a>Controlar a versão de seus dados de aplicativo
 
 
-Como opção, você pode converter os dados do aplicativo para seu aplicativo. Isso permite que você crie uma versão futura de seu aplicativo que altere o formato de seus dados de aplicativo sem causar problemas de compatibilidade com a versão anterior do aplicativo. O aplicativo verifica a versão dos dados de aplicativo no armazenamento de dados e, caso a versão seja inferior à versão esperada, o aplicativo deverá atualizar os dados do aplicativo para o novo formato e atualizar a versão. Para obter mais informações, consulte a propriedade [** Application.Version**](https://msdn.microsoft.com/library/windows/apps/br241630) e o método [**ApplicationData.SetVersionAsync**](https://msdn.microsoft.com/library/windows/apps/hh701429).
+Como opção, você pode converter os dados do aplicativo para seu aplicativo. Isso permite que você crie uma versão futura de seu aplicativo que altere o formato de seus dados de aplicativo sem causar problemas de compatibilidade com a versão anterior do aplicativo. O aplicativo verifica a versão dos dados de aplicativo no armazenamento de dados e, caso a versão seja inferior à versão esperada, o aplicativo deverá atualizar os dados do aplicativo para o novo formato e atualizar a versão. Para obter mais informações, consulte a propriedade [**Application.Version**](https://msdn.microsoft.com/library/windows/apps/br241630) e o método [**ApplicationData.SetVersionAsync**](https://msdn.microsoft.com/library/windows/apps/hh701429).
 
 ## <a name="related-articles"></a>Artigos relacionados
 

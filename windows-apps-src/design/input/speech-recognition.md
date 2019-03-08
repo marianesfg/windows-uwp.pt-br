@@ -1,5 +1,5 @@
 ---
-Description: Use speech recognition to provide input, specify an action or command, and accomplish tasks.
+Description: Use o reconhecimento de fala para fornecer entrada, especificar uma ação ou um comando e realizar tarefas.
 title: Reconhecimento de fala
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
@@ -9,11 +9,11 @@ ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b7eec51044a70b0738e246d3aa516c37643cf68
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048543"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608071"
 ---
 # <a name="speech-recognition"></a>Reconhecimento de fala
 
@@ -26,17 +26,17 @@ O reconhecimento de fala é realizado em um tempo de execução de fala, APIs de
 
 ## <a name="configure-speech-recognition"></a>Configurar o reconhecimento de fala
 
-Para dar suporte a reconhecimento de fala com seu aplicativo, o usuário deve se conectar e habilitar um microfone em seus dispositivos e aceitar a política de privacidade do Microsoft conceder permissão para seu aplicativo para usá-lo.
+Para dar suporte a reconhecimento de fala com seu aplicativo, o usuário deve se conectar e habilitar um microfone em seu dispositivo e aceitar a política de privacidade do Microsoft concedendo permissão para seu aplicativo para usá-lo.
 
-Para solicitar que o usuário automaticamente uma caixa de diálogo do sistema solicitando permissão para acessar e usar o microfone do áudio feed conjunto apenas (exemplo do [reconhecimento de fala e exemplo de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897) mostrado abaixo), o **microfone** [dispositivo funcionalidade](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) em do [manifesto do pacote do aplicativo](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Para obter mais detalhes, consulte as [declarações de funcionalidades do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+Automaticamente solicitar ao usuário uma caixa de diálogo do sistema solicitando permissão para acessar e usar o feed de áudio do microfone (exemplo da [reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897) mostrada abaixo), simplesmente defina a  **Microfone** [funcionalidade do dispositivo](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) no [manifesto do pacote de aplicativo](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Para obter mais detalhes, consulte [declarações de funcionalidades do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
-![Política de privacidade para o acesso de microfone](images/speech/privacy.png)
+![Política de privacidade para o acesso ao microfone](images/speech/privacy.png)
 
-Se o usuário clica em Sim para conceder acesso a microfone, seu aplicativo é adicionado à lista de aplicativos aprovados nas configurações- gt _ privacidade- gt _ página de microfone. No entanto, como o usuário pode optar por desativar essa configuração a qualquer momento, você deve confirmar que seu aplicativo tem acesso a microfone antes de tentar usá-lo.
+Se o usuário clicar em Sim para conceder acesso ao microfone, seu aplicativo é adicionado à lista de aplicativos aprovados nas configurações -> privacidade -> página de microfone. No entanto, como o usuário pode optar por desativar essa configuração a qualquer momento, você deve confirmar que seu aplicativo tem acesso ao microfone antes de tentar usá-lo.
 
-Se você deseja dar suporte a ditado, Cortana, ou o reconhecimento de fala outros serviços (por exemplo, uma [gramática predefinida](#predefined-grammars) definidos em uma restrição de tópico), você também deve confirmar que **o reconhecimento de fala on-line** (Configurações- gt _ privacidade- gt _ fala) é habilitado.
+Se você quiser dar suporte a outros serviços de reconhecimento de fala, ditado ou Cortana (como uma [predefinidos gramática](#predefined-grammars) definidos em uma restrição de tópico), também será necessário confirmar que **reconhecimento de fala Online** (Configurações -> privacidade -> fala) está habilitado.
 
-Este trecho de código mostra como seu aplicativo pode verificar se um microfone está presente e se ele tem permissão para usá-lo.
+Este trecho de código mostra como seu aplicativo pode verificar se um microfone estiver presente e se ele tem permissão para usá-lo.
 
 ```csharp
 public class AudioCapturePermissions
@@ -220,7 +220,7 @@ A gramática de ditado de texto livre padrão pode reconhecer a maioria das pala
 
 A gramática de pesquisa na Web, assim como uma gramática de ditado, contém um grande número de palavras e frases que um usuário pode dizer. No entanto, ela é otimizada para reconhecer termos que as pessoas normalmente usam ao pesquisar na Web.
 
-**Observação**gramáticas de pesquisa na web e de ditado predefinidas podem ser grandes e online (não no dispositivo), desempenho pode não ser tão rápido como gramáticas personalizadas instaladas no dispositivo.     
+**Observação**  como gramáticas de pesquisa na web e ditado predefinidas podem ser grandes, e porque eles estão online (não no dispositivo), desempenho pode não ser tão rápido como ocorre com uma gramática personalizada instalada no dispositivo.     
 
 Essas gramáticas predefinidas podem ser usadas para reconhecer até 10 segundos de entrada de fala e não exigem nenhum esforço de criação de sua parte. No entanto, elas exigem uma conexão com uma rede.
 
@@ -228,7 +228,7 @@ Para usar restrições de serviço Web, você deve habilitar o suporte à entrad
 
 Aqui, nós mostramos como testar se a entrada de fala está habilitada. Caso não esteja, abra página Configurações -> Privacidade -> Fala, escrita à tinta e digitação.
 
-Primeiro, inicializamos uma variável global (HResultPrivacyStatementDeclined) para o valor HResult de 0x80045509. Consulte [Tratamento de exceções para em C\# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
+Primeiro, inicializamos uma variável global (HResultPrivacyStatementDeclined) para o valor HResult de 0x80045509. Ver [tratamento de exceção para em C\# ou o Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
 
 ```csharp
 private static uint HResultPrivacyStatementDeclined = 0x80045509;
@@ -257,29 +257,29 @@ catch (Exception exception)
 }
 ```
 
-Consulte [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446).
+Ver [ **SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446).
 
-### <a name="programmatic-list-constraints"></a>Restrições de lista programática 
+### <a name="programmatic-list-constraints"></a>Restrições de lista através de programação 
 
 Restrições de lista programática fornecem uma abordagem leve para criar gramáticas simples usando uma lista de palavras ou frases. Uma lista de restrições funciona bem para o reconhecimento de frases curtas e distintas. Especificar explicitamente todas as palavras em uma gramática também melhora a precisão do reconhecimento, porque o mecanismo de reconhecimento de fala deve processar somente a fala para confirmar uma correspondência. A lista também pode ser atualizada programaticamente.
 
 Uma restrição de lista consiste em uma matriz de cadeia de caracteres que representa a entrada de fala que seu aplicativo aceitará para uma operação de reconhecimento. Você pode criar uma restrição de lista em seu aplicativo criando um objeto de restrição de lista de reconhecimento de fala e passando uma matriz de cadeias de caracteres. Em seguida, adicione o objeto à coleção de restrições do reconhecedor. O reconhecimento é bem-sucedido quando o reconhecedor de fala reconhece qualquer uma das sequências de caracteres na matriz.
 
-Consulte [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421).
+Ver [ **SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421).
 
-### <a name="srgs-grammars"></a>Gramáticas da SRGS
+### <a name="srgs-grammars"></a>Gramáticas SRGS
 
 Uma gramática SRGS (Especificação de Gramática de Reconhecimento de Fala) é um documento estático que, ao contrário de uma restrição de lista programática, usa o formato XML definido pela [SRGS Versão 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302). Uma gramática SRGS oferece maior controle sobre a experiência de reconhecimento de fala, permitindo a você capturar diversos significados semânticos em um único reconhecimento.
 
- Consulte [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412).
+ Ver [ **SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412).
 
 ### <a name="voice-command-constraints"></a>Restrições de comando de voz
 
 Use um arquivo XML de Definição de comando de voz (VCD) para definir os comandos que o usuário pode usar para iniciar ações ao ativar seu aplicativo. Para obter mais detalhes, consulte [Iniciar um aplicativo em primeiro plano com comandos de voz na Cortana](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana).
 
-Consulte [ **SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220)/
+Ver [ **SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220)/
 
-**Observação**o tipo de restrição você usa depende da complexidade da experiência de reconhecimento que você deseja criar. Qualquer tipo pode ser a melhor escolha para uma tarefa específica de reconhecimento, e você pode encontrar usos para todos os tipos de restrição em seu aplicativo.
+**Observação**  o tipo do tipo de restrição que você usa depende da complexidade da experiência de reconhecimento que você deseja criar. Qualquer tipo pode ser a melhor escolha para uma tarefa específica de reconhecimento, e você pode encontrar usos para todos os tipos de restrição em seu aplicativo.
 Para começar a usar restrições, consulte [Definir restrições de reconhecimento personalizadas](define-custom-recognition-constraints.md).
 
 A gramática de ditado predefinida do Aplicativo Universal do Windows reconhece a maioria das palavras e frases curtas em um idioma. Ela é ativada por padrão quando um objeto reconhecedor de fala é instanciado sem restrições personalizadas.
@@ -373,7 +373,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 **Designers**
 * [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
 **Exemplos**
-* [Exemplo de reconhecimento de fala e sintetização de controle por voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

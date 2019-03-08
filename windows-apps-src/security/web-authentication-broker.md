@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 473b7ef9f4efacbbe78e1fdb5563695f8211bca8
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050899"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606741"
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticação da Web
 
@@ -87,7 +87,7 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->Além do [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066), o namespace [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) contém um método [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425). Não chame esse método. Ele foi projetado para aplicativos direcionados apenas ao Windows Phone 8.1 e foi preterido a partir do Windows 10.
+>Além do [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066), o namespace [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) contém um método [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425). Não chame esse método. Ele foi projetado para aplicativos destinados ao Windows Phone 8.1 apenas e foi preterido a partir do Windows 10.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>Conectando-se com logon único (SSO)
 
@@ -136,28 +136,28 @@ Existem várias maneiras de solucionar problemas com APIs de agente de autentica
 
 ### <a name="operational-logs"></a>Logs operacionais
 
-Geralmente é possível determinar o que não está funcionando usando logs operacionais. Há um canal de log de eventos dedicado, a saber, Microsoft-Windows-WebAuth\\Operational, que permite aos desenvolvedores de sites entender como suas páginas da Web estão sendo processadas pelo agente de autenticação da Web. Para habilitá-lo, execute o arquivo eventvwr.exe e habilite Log operacional em Application and Services\\Microsoft\\Windows\\WebAuth. Além disso, o agente de autenticação da Web acrescenta uma cadeia de caracteres exclusiva à cadeia de caracteres do agente do usuário para se identificar no servidor Web. A cadeia de caracteres é "MSAuthHost/1.0". Observe que o número da versão pode mudar no futuro, portanto você não deve depender do número daquela versão no seu código. Um exemplo de cadeia de caracteres de agente de usuário, seguida pelas etapas de depuração completa, é o seguinte.
+Geralmente é possível determinar o que não está funcionando usando logs operacionais. Há um canal de log de eventos dedicados Microsoft-Windows-WebAuth\\operacional que permite aos desenvolvedores de site entender como suas páginas da web estão sendo processadas pelo agente de autenticação da Web. Para habilitá-lo, eventvwr.exe lançamento e habilitar Operational log sob os aplicativos e serviços\\Microsoft\\Windows\\WebAuth. Além disso, o agente de autenticação da Web acrescenta uma cadeia de caracteres exclusiva à cadeia de caracteres do agente do usuário para se identificar no servidor Web. A cadeia de caracteres é "MSAuthHost/1.0". Observe que o número da versão pode mudar no futuro, portanto você não deve depender do número daquela versão no seu código. Um exemplo de cadeia de caracteres de agente de usuário, seguida pelas etapas de depuração completa, é o seguinte.
 
 `User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0; MSAuthHost/1.0)`
 
 1.  Habilitar logs operacionais.
 2.  Executar aplicativo social da Contoso. ![visualizador de Eventos exibindo logs operacionais do webauth](images/wab-event-viewer-1.png)
 3.  As entradas dos logs geradas podem ser usadas para entender o comportamento do agente de autenticação da Web em maiores detalhes. Nesse caso, elas podem ser:
-    -   Início da Navegação: registra quando o AuthHost é iniciado e contém informações sobre as URLs de início e término.
+    -   Início de navegação: Logs quando o AuthHost é iniciado e contém informações sobre as URLs de início e término.
     -   ![ilustra os detalhes do início da navegação](images/wab-event-viewer-2.png)
-    -   Navegação Completa: registra a conclusão do carregamento de uma página da Web.
-    -   Marca meta: registra quando uma marca meta é encontrada, incluindo os detalhes.
-    -   Término da Navegação: navegação encerrada pelo usuário.
-    -   Erro de Navegação: o AuthHost encontra um erro de navegação em uma URL, incluindo HttpStatusCode.
-    -   Final da Navegação: a URL de término é encontrada.
+    -   Navegação completa: Registra a conclusão do carregamento de uma página da web.
+    -   Meta Tag: Logs quando uma marca meta é encontrada, incluindo os detalhes.
+    -   Encerrar a navegação: Navegação encerrada pelo usuário.
+    -   Erro de navegação: AuthHost encontra um erro de navegação em uma URL incluindo HttpStatusCode.
+    -   Fim de navegação: Encerrando a URL é encontrado.
 
 ### <a name="fiddler"></a>Fiddler
 
 O depurador da Web Fiddler pode ser usado com aplicativos.
 
-1.  O AuthHost executar no seu próprio contêiner de aplicativo, para dar a ele a funcionalidade de rede privada você deve definir uma chave do registro: Windows Registry Editor Version 5.00
+1.  Como o AuthHost é executado em seu próprio contêiner de aplicativo, para dar a ele a capacidade de rede privada, você deve definir uma chave do registro: Editor do registro do Windows versão 5,00
 
-    **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Image File Execution Options**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
+    **HKEY\_LOCAL\_máquina**\\**SOFTWARE**\\**Microsoft**\\**Windows NT** \\ **CurrentVersion**\\**imagem File Execution Options**\\**authhost.exe** \\ **EnablePrivateNetwork** = 00000001
 
     Se você não tiver essa chave do registro, você pode criá-lo em um Prompt de comando com privilégios de administrador.
 

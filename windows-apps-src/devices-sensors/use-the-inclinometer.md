@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bfd617c3c08cdcb7815010648c6036a5f39ee3ab
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932655"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623801"
 ---
 # <a name="use-the-inclinometer"></a>Usar o inclinômetro
 
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Inclinômetro**](https://msdn.microsoft.com/library/windows/apps/BR225766)
+-   [**inclinômetro**](https://msdn.microsoft.com/library/windows/apps/BR225766)
 
 **Exemplo**
 
@@ -31,7 +31,7 @@ Alguns jogos 3-D requerem um inclinômetro como dispositivo de entrada. Um exemp
 
  ## <a name="prerequisites"></a>Pré-requisitos
 
-Você deve estar familiarizado com Extensible Application Markup Language (XAML), Microsoft VisualC c# e eventos.
+Você deve estar familiarizado com o Extensible Application Markup Language (XAML), Microsoft Visual C#e eventos.
 
 O dispositivo ou emulador que você está usando deve ter suporte para um inclinômetro.
 
@@ -108,7 +108,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
     }
 ```
 
-Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **InclinometerCS**, pode substituir `namespace App1` por `namespace InclinometerCS`.
+Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **InclinometerCS**, poderá substituir `namespace App1` por `namespace InclinometerCS`.
 
 -   Abra o arquivo MainPage.xaml e substitua o conteúdo original pelo XML abaixo.
 

@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp, temporizador, threads
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ee5142997e3d4824152adf6d0b26bccb8a30f7f
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044131"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613301"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>Usar um temporizador para enviar um item de trabalho
 
 
 <b>APIs importantes</b>
 
--   [**Windows.UI.Core namespace**](https://msdn.microsoft.com/library/windows/apps/BR208383)
--   [**Windows.System.Threading namespace**](https://msdn.microsoft.com/library/windows/apps/BR229642)
+-   [**Namespace Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/BR208383)
+-   [**Namespace Windows.System.Threading**](https://msdn.microsoft.com/library/windows/apps/BR229642)
 
 Saiba como criar um item de trabalho que seja executado após um temporizador.
 
@@ -27,7 +27,7 @@ Saiba como criar um item de trabalho que seja executado após um temporizador.
 
 Use o método [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) para criar um temporizador para o item de trabalho. Forneça um lambda que realiza o trabalho e use o parâmetro *delay* para especificar por quanto tempo o pool de threads deve aguardar antes de atribuir o item de trabalho a um thread disponível. O atraso é especificado usando uma estrutura [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996).
 
-> **Observação**você pode usar o [**Coredispatcher**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
+> **Observação**  você pode usar [ **CoreDispatcher.RunAsync** ](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
 
 O seguinte exemplo cria um item de trabalho que é executado em três minutos:
 
@@ -221,7 +221,7 @@ Se o temporizador ainda estiver em contagem regressiva, mas o item de trabalho n
 
 Os aplicativos UWP (Plataforma Universal do Windows) não podem usar **Thread.Sleep** porque esse método pode bloquear o thread da interface do usuário. Em vez disso, você pode usar um [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) para criar um item de trabalho. Isso atrasará a tarefa realizada pelo item de trabalho sem bloquear o thread da interface do usuário.
 
-Veja o [exemplo do pool de threads](https://go.microsoft.com/fwlink/p/?linkid=255387) para obter um exemplo de código completo que demonstra os itens de trabalho, os itens de trabalho de timer e os itens de trabalho periódico. O exemplo de código foi originalmente escrito para Windows 8.1, mas o código pode ser reutilizado no Windows 10.
+Veja o [exemplo do pool de threads](https://go.microsoft.com/fwlink/p/?linkid=255387) para obter um exemplo de código completo que demonstra os itens de trabalho, os itens de trabalho de timer e os itens de trabalho periódico. O exemplo de código foi escrito originalmente para Windows 8.1, mas o código pode ser reutilizado no Windows 10.
 
 Para saber mais sobre temporizadores repetidos, veja [Criar um item de trabalho periódico](create-a-periodic-work-item.md).
 

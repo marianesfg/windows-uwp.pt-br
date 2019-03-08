@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de diagnóstico de elementos gráficos
+title: Ferramentas de diagnóstico de gráficos
 description: Saiba como obter e usar os recursos de diagnóstico de elementos gráficos, incluindo depuração de elementos gráficos, análise do quadro de elementos gráficos e uso da GPU no Visual Studio.
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
 ms.date: 02/08/2017
@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, elementos gráficos, diagnóstico, ferramentas e directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e3c48e69dd1ad991a2a04017d4e262e45430504
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047913"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608531"
 ---
 # <a name="graphics-diagnostics-tools"></a>Ferramentas de diagnóstico de gráficos
 
 
 
-Com o Windows 10, as ferramentas de diagnóstico de gráficos agora estão disponíveis no Windows como um recurso opcional. Para usar os recursos de diagnóstico de gráficos fornecidos em tempo de execução e no Visual Studio para desenvolver jogos ou aplicativos DirectX, instale o recurso opcional Ferramentas Gráficas:
+As ferramentas de diagnóstico de gráficos com o Windows 10, agora estão disponíveis no Windows como um recurso opcional. Para usar os recursos de diagnóstico de gráficos fornecidos em tempo de execução e no Visual Studio para desenvolver jogos ou aplicativos DirectX, instale o recurso opcional Ferramentas Gráficas:
 
-1.  Vá para **configurações**, selecionar **aplicativos**e, em seguida, clique em **Gerenciar funcionalidades opcionais**.
+1.  Vá para **as configurações**, selecione **Apps**e, em seguida, clique em **gerenciar recursos opcionais**.
 2.  Clique em **Adicionar um recurso**.   
 3.  Na lista **Recursos opcionais**, selecione **Ferramentas de Gráficos** e clique em **Instalar**.
 

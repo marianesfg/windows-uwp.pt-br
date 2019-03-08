@@ -1,5 +1,5 @@
 ---
-Description: The following article describes all of the properties and elements within the toast content XML payload.
+Description: O artigo a seguir descreve todas as propriedades e os elementos na carga XML do conteúdo da notificação do sistema.
 title: Esquema XML de conteúdo de notificação do sistema
 ms.assetid: AF49EFAC-447E-44C3-93C3-CCBEDCF07D22
 label: Toast content XML schema
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b9535cd8c2dd82b0c209919080df9a88bb80ccc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934385"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612771"
 ---
 # <a name="toast-content-xml-schema"></a>Esquema XML de conteúdo de notificação do sistema
 
@@ -43,7 +43,7 @@ Nos esquemas XML a seguir, o sufixo "?" significa que o atributo é opcional.
 </toast>
 ```
 
-**Atributos na &lt;notificação do sistema&gt;**
+**Os atributos no &lt;notificação do sistema&gt;**
 
 launch?
 
@@ -75,7 +75,7 @@ scenario?
 -   Você não precisa disso, a menos que seu cenário seja exibir um alarme, lembrete ou chamada de entrada.
 -   Não use isso apenas para manter sua notificação persistente na tela.
 
-**Atributos em &lt;visual&gt;**
+**Os atributos no &lt;visual&gt;**
 
 lang?
 
@@ -89,11 +89,11 @@ addImageQuery?
 
 -   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
 
-**Atributos em &lt;vinculação&gt;**
+**Os atributos no &lt;associação&gt;**
 
 template?
 
--   \[Important\] template? = "ToastGeneric"
+-   \[Importante\] modelo? = "ToastGeneric"
 -   Se você estiver usando qualquer um dos novos recursos de notificação interativa e adaptável, comece a usar o modelo "ToastGeneric" em vez do modelo herdado.
 -   Usar os modelos herdados com as novas ações pode funcionar agora, mas esse não é o caso de uso esperado, e não podemos garantir que isso continuará a funcionar.
 
@@ -109,13 +109,13 @@ addImageQuery?
 
 -   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
 
-**Atributos em &lt;texto&gt;**
+**Os atributos no &lt;texto&gt;**
 
 lang?
 
 -   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
 
-**Atributos em &lt;imagens&gt;**
+**Os atributos no &lt;imagem&gt;**
 
 src
 
@@ -144,7 +144,7 @@ hint-crop?
 -   "none" é o valor padrão que significa nenhum corte.
 -   "circle" corta a imagem em formato circular. Use isso para imagens de perfil de um contato, imagens de uma pessoa e assim por diante.
 
-**Atributos em &lt;áudio&gt;**
+**Os atributos no &lt;áudio&gt;**
 
 src?
 
@@ -177,7 +177,7 @@ Nos esquemas XML a seguir, o sufixo "?" significa que o atributo é opcional.
 </toast>
 ```
 
-**Atributos em &lt;entrada&gt;**
+**Os atributos no &lt;entrada&gt;**
 
 id
 
@@ -210,7 +210,7 @@ defaultInput?
 -   Se o tipo de entrada for "text", isso será tratado como uma entrada de cadeia de caracteres.
 -   Se o tipo de entrada for "selection", isso deve ser a identificação de uma das seleções disponíveis dentro dos elementos dessa entrada.
 
-**Atributos em &lt;seleção&gt;**
+**Os atributos no &lt;seleção&gt;**
 
 id
 
@@ -220,7 +220,7 @@ content
 
 -   Esse atributo é obrigatório. Ele fornece a cadeia de caracteres a ser exibida para esse elemento de seleção.
 
-**Atributos em &lt;ação&gt;**
+**Os atributos no &lt;ação&gt;**
 
 content
 

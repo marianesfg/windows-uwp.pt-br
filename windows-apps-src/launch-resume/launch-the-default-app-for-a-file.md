@@ -1,5 +1,5 @@
 ---
-title: Iniciar o aplicativo padrão para um arquivo
+title: Iniciar o app padrão para um arquivo
 description: Aprenda como iniciar o app padrão para um arquivo.
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
 ms.date: 07/05/2018
@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8e59ae5fb20ce8e1a900f7c1415a699715215e0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925018"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594521"
 ---
 # <a name="launch-the-default-app-for-a-file"></a>Iniciar o app padrão para um arquivo
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**Windows.System.Launcher.LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)
 
-Aprenda como iniciar o aplicativo padrão para um arquivo. Muitos aplicativos precisam funcionar com arquivos que eles não podem manipular sozinhos. Por exemplo, os aplicativos de email recebem uma variedade de tipos de arquivo e precisam de alguma maneira iniciá-los em seus manipuladores padrão. Essas etapas mostram como usar a API [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801) para iniciar o manipulador padrão para um arquivo que seu aplicativo não pode manipular sozinho.
+Aprenda como iniciar o app padrão para um arquivo. Muitos aplicativos precisam funcionar com arquivos que eles não podem manipular sozinhos. Por exemplo, os aplicativos de email recebem uma variedade de tipos de arquivo e precisam de alguma maneira iniciá-los em seus manipuladores padrão. Essas etapas mostram como usar a API [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801) para iniciar o manipulador padrão para um arquivo que seu aplicativo não pode manipular sozinho.
 
 ## <a name="get-the-file-object"></a>Obter o objeto de arquivo
 
@@ -38,7 +38,7 @@ O Windows fornece várias opções diferentes para iniciar o manipulador padrão
 | Início padrão | [**LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) | Inicie o arquivo especificado com o manipulador padrão. |
 | Início com Abrir com | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicie o arquivo especificado deixando que o usuário escolha o manipulador na caixa de diálogo Abrir com. |
 | Iniciar com um fallback do aplicativo recomendado | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicie o arquivo especificado com o manipulador padrão. Se nenhum manipulador estiver instalado no sistema, recomende ao usuário um aplicativo na Loja. |
-| Iniciar com um modo de exibição restante desejado | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) (somente Windows) | Inicie o arquivo especificado com o manipulador padrão. Especifique uma preferência para permanecer na tela após a inicialização e solicite um tamanho específico de janela. [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) não é compatível na família de dispositivos móveis. |
+| Iniciar com um modo de exibição restante desejado | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) (Windows-only) | Inicie o arquivo especificado com o manipulador padrão. Especifique uma preferência para permanecer na tela após a inicialização e solicite um tamanho específico de janela. [**LauncherOptions.DesiredRemainingView** ](https://msdn.microsoft.com/library/windows/apps/dn298314) não é compatível com a família de dispositivos móveis. |
 
 ### <a name="default-launch"></a>Início padrão
 
@@ -287,7 +287,7 @@ void MainPage::DefaultLaunch()
 }
 ```
 
-**Iniciar com um fallback do aplicativo recomendado**
+**Inicie com um aplicativo recomendado fallback**
 
 Em alguns casos, pode ser que o usuário não tenha um aplicativo instalado para manipular o arquivo que você está iniciando. Por padrão, nesses casos, o Windows oferece ao usuário um link para pesquisar o aplicativo apropriado na Loja. Se você quiser, poderá fazer uma recomendação específica sobre qual aplicativo deve ser adquirido nesse cenário, transmitindo tal recomendação junto com o arquivo que você está iniciando. Para fazer isso, chame o método [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) com [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482) definido para o nome da família do pacote do aplicativo na Loja que você deseja recomendar. Em seguida, defina [**LauncherOptions.PreferredApplicationDisplayName**](https://msdn.microsoft.com/library/windows/apps/hh965481) como o nome desse aplicativo. O Windows usará essas informações para substituir a opção geral de pesquisar um aplicativo na Loja por uma opção específica para adquirir o aplicativo recomendado na Loja.
 
@@ -437,9 +437,9 @@ void MainPage::DefaultLaunch()
 Aplicativos de origem que chamam [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) podem solicitar que permaneçam na tela após a inicialização de um arquivo. Por padrão, o Windows tenta dividir todo o espaço disponível igualmente entre o aplicativo de origem e o aplicativo de destino que manipula o arquivo. Aplicativos de origem podem usar a propriedade [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar ao sistema operacional que eles preferem que sua janela de aplicativo ocupe mais ou menos espaço disponível. **DesiredRemainingView** também pode ser usado para indicar que o aplicativo de origem não precisa permanecer na tela depois da inicialização do arquivo e pode ser completamente substituído pelo aplicativo de destino. Esta propriedade especifica somente o tamanho da janela preferido do aplicativo de chamada. Ele não especifica o comportamento de outros aplicativos que podem acontecer de também estar na tela ao mesmo tempo.
 
 > [!NOTE]
-> Windows leva em conta vários fatores diferentes ao determinar tamanho da janela final do aplicativo de origem, por exemplo, a preferência do aplicativo de origem, o número de aplicativos na tela, a orientação de tela e assim por diante. Definindo [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314), você não garante um comportamento de janelas específico para o aplicativo de origem.
+> Windows leva em consideração vários fatores diferentes quando ele determina o tamanho de janela final do código-fonte do aplicativo, por exemplo, a preferência do aplicativo de origem, o número de aplicativos em tela, a orientação da tela e assim por diante. Definindo [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314), você não garante um comportamento de janelas específico para o aplicativo de origem.
 
-**Família de dispositivos móveis:** [**Launcheroptions**](https://msdn.microsoft.com/library/windows/apps/dn298314) não tem suporte na família de dispositivos móveis.
+**Família de dispositivos móveis:  **[**LauncherOptions.DesiredRemainingView** ](https://msdn.microsoft.com/library/windows/apps/dn298314) não é compatível com a família de dispositivos móveis.
 
 ```csharp
 async void DefaultLaunch()
@@ -559,7 +559,7 @@ Quando você tenta iniciar um tipo de arquivo restrito, há falha na inicializa�
 
 ### <a name="guidelines"></a>Diretrizes
 
-* [Diretrizes para tipos de arquivos e URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
+* [Diretrizes para tipos de arquivo e URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
 ### <a name="reference"></a>Referência
 

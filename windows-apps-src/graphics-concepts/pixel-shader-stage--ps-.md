@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e1f7e787f2ee80a3168d38a9afd9a249dc0e6de0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941446"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603061"
 ---
 # <a name="pixel-shader-ps-stage"></a>Estágio do sombreador de pixel (PS)
 
@@ -30,27 +30,27 @@ As funções intrínsecas do sombreador de pixel produzem ou usam derivadas de q
 ## <a name="span-idinputsspanspan-idinputsspanspan-idinputsspaninputs"></a><span id="Inputs"></span><span id="inputs"></span><span id="INPUTS"></span>Entradas
 
 
-Quando o pipeline é configurado sem um sombreador de geometria, um sombreador de pixel é limitado a 16 entradas de 32 bits e 4 componentes. Caso contrário, um sombreador de pixel pode levar até 32 entradas de 32 bits de 4 componentes.
+Quando o pipeline é configurado sem um sombreador de geometria, um sombreador de pixel é limitado a 16 entradas de 32 bits de 4 componentes. Caso contrário, um sombreador de pixel pode levar até 32 entradas de 32 bits de 4 componentes.
 
-Os dados de entrada de sombreador de pixel incluem atributos de vértice (que podem ser interpolados com ou sem correção de perspectiva) ou podem ser tratados como constantes por primitivo. As entradas do sombreador de pixel são interpoladas dos atributos de vértice do primitivo que está sendo rasterizado, com base no modo de interpolação declarado. Se um primitivo for recortado antes da rasterização, o modo de interpolação também será aplicado durante o processo de recorte.
+Os dados de entrada de sombreador de pixel incluem atributos de vértice (que podem ser interpolados com ou sem correção de perspectiva) ou podem ser tratados como constantes por primitivo. As entradas do sombreador de pixel são interpoladas dos atributos de vértice do primitivo que está sendo rasterizado, com base no modo de interpolação declarado. Se um primitivo for recortado antes da varredura, o modo de interpolação também será aplicado durante o processo de recorte.
 
 Atributos de vértice são interpolados (ou avaliados) em locais de centro de sombreador de pixel. Modos de interpolação de atributo de sombreador de pixel são declarados em uma declaração de registro de entrada, de acordo com o elemento, em um [argumento](https://msdn.microsoft.com/library/windows/desktop/bb509606) ou um [entrada estrutura](https://msdn.microsoft.com/library/windows/desktop/bb509668). Atributos podem ser interpolados linearmente ou amostragem de centroides. Consulte a seção "Amostragem de centroides de atributos com suavização de várias amostras" em [Regras de rasterização](rasterization-rules.md). A avaliação de centroides é relevante apenas durante a coleta de várias amostras para cobrir casos onde um pixel é coberto por um primitivo, mas um centro de pixel pode não estar; a avaliação de centroides ocorre o mais próximo possível do centro de pixel (não coberto).
 
-Entradas também podem ser declaradas com uma [semântica de valor do sistema](https://msdn.microsoft.com/library/windows/desktop/bb509647), que marca um parâmetro que é consumido pelos outros estágios de pipeline. Por exemplo, uma posição de pixel deve ser marcada com a semântica SV\_Position. O [estágio do assembler de entrada (IA)](input-assembler-stage--ia-.md) pode produzir um escalar para um sombreador de pixel (usando SV\_PrimitiveID); o [estágio do rasterizador (RS)](rasterizer-stage--rs-.md) também pode gerar um escalar para um sombreador de pixel (usando SV\_IsFrontFace).
+Entradas também podem ser declaradas com uma [semântica de valor do sistema](https://msdn.microsoft.com/library/windows/desktop/bb509647), que marca um parâmetro que é consumido pelos outros estágios de pipeline. Por exemplo, uma posição do pixel deve ser marcada com a VA\_semântica de posição. O [estágio do Assembler de entrada (IA)](input-assembler-stage--ia-.md) pode produzir um escalar para um sombreador de pixel (usando VA\_PrimitiveID); o [estágio de rasterizador (RS)](rasterizer-stage--rs-.md) também pode gerar um escalar para um sombreador de pixel (usando VA\_ IsFrontFace).
 
 ## <a name="span-idoutputsspanspan-idoutputsspanspan-idoutputsspanoutputs"></a><span id="Outputs"></span><span id="outputs"></span><span id="OUTPUTS"></span>Saídas
 
 
-Um sombreador de pixel pode gerar até 8 cores de 32 bits e 4 componentes, ou nenhuma cor se o pixel for descartado. Componentes de registro de saída de sombreador de pixel devem ser declarados antes de poderem ser usados; cada registro pode ter uma máscara de gravação de saída distinta.
+Um sombreador de pixel pode gerar até 8 cores de 4 componentes de 32 bits, ou nenhuma cor se o pixel for descartado. Os componentes de registro de saída de sombreador de pixel devem ser declarados antes que possam ser usados; uma máscara de gravação de saída distinta é permitida para cada registro.
 
-Use o estado de profundidade de gravação de habilitada (no [estágio de fusão de saída (OM)](output-merger-stage--om-.md)) para controlar se os dados de profundidade são gravados em um buffer de profundidade (ou use a instrução de descarte para descartar dados para o pixel). Um sombreador de pixel também pode gerar uma saída opcional de valor de profundidade de ponto flutuante de 32 bits e 1 componente para teste de profundidade (usando a semântica SV\_Depth). O valor de profundidade tem saída no registro oDepth e substitui o valor de profundidade interpolado para teste de profundidade (supondo que o teste de profundidade está habilitado). Não há como alternar dinamicamente entre usar a profundidade de função fixa ou oDepth do sombreador.
+Use o estado de profundidade de gravação de habilitada (no [estágio de fusão de saída (OM)](output-merger-stage--om-.md)) para controlar se os dados de profundidade são gravados em um buffer de profundidade (ou use a instrução de descarte para descartar dados para o pixel). Um sombreador de pixel também poderá gerar um valor de profundidade de 32 bits, 1-o componente, ponto flutuante, opcional para o teste de profundidade (usando a VA\_profundidade semântica). O valor de profundidade tem saída no registro oDepth e substitui o valor de profundidade interpolado para teste de profundidade (supondo que o teste de profundidade está habilitado). Não há como alternar dinamicamente entre usar a profundidade de função fixa ou oDepth do sombreador.
 
 Um sombreador de pixel não pode retornar um valor de estêncil.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de elementos gráficos](graphics-pipeline.md)
+[Pipeline de gráficos](graphics-pipeline.md)
 
  
 

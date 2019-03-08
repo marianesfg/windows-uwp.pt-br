@@ -1,5 +1,5 @@
 ---
-Description: Design effective help to be displayed reactively inside your app.
+Description: Crie ajuda eficaz para ser exibida reativamente em seu aplicativo.
 title: Diretrizes da criação de ajuda no aplicativo.
 label: In-app help
 template: detail.hbs
@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 6208b71b-37a7-40f5-91b0-19b665e7458a
 ms.localizationpriority: medium
 ms.openlocfilehash: 4783d28e4da6c06df0d0676f4a7d28ef3995481a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926239"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610051"
 ---
 # <a name="in-app-help-pages"></a>Páginas de ajuda no aplicativo
 
@@ -35,27 +35,27 @@ A ajuda no aplicativo pode ser fornecida de várias formas, mas todas elas segue
 
 Ter uma página ou páginas separadas de ajuda em seu aplicativo é uma maneira rápida e fácil de exibir instruções úteis.
 
--   **Seja conciso:** uma biblioteca grande de tópicos da ajuda é complicada e inadequada para a ajuda no aplicativo.
--   **Seja consistente:** verifique se os usuários podem acessar as páginas da ajuda da mesma maneira em qualquer parte do aplicativo. Eles nunca devem precisar procurá-la.
--   **Os usuários examinam, não leem:** como a ajuda que um usuário procura pode estar na mesma página de outros tópicos da ajuda, certifique-se de que eles possam indicar rapidamente em qual eles precisam se concentrar.
+-   **Ser conciso:** Uma grande biblioteca de tópicos da Ajuda é complicado e inadequada para Ajuda no aplicativo.
+-   **Seja consistente:** Certifique-se de que os usuários podem acessar as páginas de Ajuda da mesma forma de qualquer parte de seu aplicativo. Eles nunca devem precisar procurá-la.
+-   **Verificação de usuários, não lida:** Como a Ajuda de que um usuário está procurando pode ser na mesma página como outros tópicos de Ajuda, certifique-se de que eles possam perceber facilmente quais deles precisam se concentrar em.
 
 
 #### <a name="popups"></a>Pop-ups
 
 Os pop-ups permitem ajuda altamente contextual exibindo instruções e conselhos que são relevantes para a tarefa específica que o usuário está tentando.
 
--   **Concentre-se um problema:** o espaço é ainda mais restrito em um pop-up do que em uma página da ajuda. Os pop-ups da ajuda precisam fazer referência a uma tarefa específica para serem eficazes.
--   **Visibilidade é importante:** como os pop-ups da ajuda só podem ser exibidos em um local, certifique-se de que eles estejam claramente visíveis para o usuário sem serem obstrutivos. Se o usuário não os vir, ele pode sair do pop-up em busca de uma página da ajuda.
--   **Não use muitos recursos:** a ajuda não deve demorar nem ter carregamento lento. O uso de arquivos de áudio ou vídeos ou imagens de alta resolução em pop-ups é provavelmente mais frustrante do que útil para o usuário.
+-   **Concentre-se de um único problema:** Espaço é ainda mais restrita em um pop-up que uma página de Ajuda. Os pop-ups da ajuda precisam fazer referência a uma tarefa específica para serem eficazes.
+-   **Visibilidade é importante:** Como pop-ups de Ajuda só podem ser exibidos de um local, certifique-se de que eles são claramente visíveis para o usuário sem ser obstrutivo. Se o usuário não os vir, ele pode sair do pop-up em busca de uma página da ajuda.
+-   **Não use um número excessivo de recursos:** A Ajuda não deve ficar ou ser para carregar. O uso de arquivos de áudio ou vídeos ou imagens de alta resolução em pop-ups é provavelmente mais frustrante do que útil para o usuário.
 
 #### <a name="descriptions"></a>Descrições
 
 Às vezes, pode ser útil fornecer mais informações sobre um recurso quando um usuário o inspeciona. As descrições são semelhantes à interface do usuário instrutiva, mas a principal diferença é que a interface do usuário instrucional tenta ensinar e treinar o usuário sobre recursos que ele não conhece, enquanto descrições detalhadas melhoram o entendimento de recursos do aplicativo nos quais o usuário já está interessado.
 
--   **Não ensine noções básicas:** pressuponha que o usuário já conheça os conceitos básicos de como usar o item que está sendo descrito. Esclarecer ou oferecer informações adicionais é útil. Informar o que o usuário já sabe não é.
--   **Descreva interações interessantes:** um dos melhores usos de descrições é fornecer instruções sobre como um recurso que o usuário já conhece pode interagir. Isso ajuda os usuários a saber mais sobre coisas já gostam de usar.
--   **Fique fora do caminho:** de forma muito semelhante à interface do usuário instrucional, as descrições precisam evitar interferir no aproveitamento do aplicativo pelo usuário.
+-   **Não ensinam as Noções básicas:** Suponha que o usuário já conhece os fundamentos de como usar o item que está sendo descrito. Esclarecer ou oferecer informações adicionais é útil. Informar o que o usuário já sabe não é.
+-   **Descreva interações interessantes:** Uma das melhores utilidades para obter descrições é instruir o usuário sobre como os recursos de que já conhecem sobre podem interagir. Isso ajuda os usuários a saber mais sobre coisas já gostam de usar.
+-   **Fique fora do caminho:** Muito como das instruções da interface do usuário, as descrições precisam evitar interferência com o aproveitamento de um usuário do aplicativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Diretrizes da ajuda do aplicativo](guidelines-for-app-help.md)
+* [Diretrizes para obter ajuda sobre o aplicativo](guidelines-for-app-help.md)

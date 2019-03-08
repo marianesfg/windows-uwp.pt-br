@@ -1,5 +1,5 @@
 ---
-Description: Consider how often we read text in our daily lives - in email, a book, a road sign, the prices on a menu, tire pressure markings, or posters on a street pole.
+Description: Considere com que frequência lemos texto em nossas vidas diárias - em emails, livros, sinais de trânsito, preços em um cardápio, marcas de pressão dos pneus ou cartazes em postes.
 title: Controles de texto
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
@@ -12,22 +12,22 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 0812e4655b8d817f4318f6bd87f7578ee09d635e
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037188"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621421"
 ---
 # <a name="text-controls"></a>Controles de texto
 
 Controles de texto consistem em caixas de entrada de texto, caixas de senha, caixas de sugestão automática e blocos de texto. A estrutura do XAML fornece vários controles para renderizar, inserir e editar texto, com um conjunto de propriedades para formatar o texto.
 
 - Os controles para exibir texto somente leitura são [TextBlock](text-block.md) e [RichTextBlock](rich-text-block.md).
-- Os controles de entrada e edição de texto são: [TextBox](text-box.md), [RichEditBox](rich-edit-box.md), [AutoSuggestBox](auto-suggest-box.md)e [PasswordBox](password-box.md).
+- Os controles de entrada de texto e de edição estão: [Caixa de texto](text-box.md), [RichEditBox](rich-edit-box.md), [AutoSuggestBox](auto-suggest-box.md), e [PasswordBox](password-box.md).
 
-> **APIs importantes**: [classe TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [classe RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [classe TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [classe RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [classe AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [classe PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
+> **APIs importantes**: [Classe TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [classe RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [classe TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [classe RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [AutoSuggestBox classe](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [Classe PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 O controle de texto que você deverá usar dependerá do cenário. Use essas informações para selecionar o controle de texto correto para usar em seu aplicativo.
 
@@ -57,18 +57,18 @@ Você também deve usar um controle AutoSuggestBox para implementar uma caixa de
 
 Use **RichEditBox** para exibir e editar arquivos Rich Text. Você não usa um RichEditBox para obter a entrada do usuário no aplicativo da maneira que você usa outras caixas de entrada de texto padrão. Em vez disso, você o usa para trabalhar com arquivos de texto que são separados de seu aplicativo. Em geral, você salva o texto inserido em um RichEditBox em um arquivo. rtf.
 
-**A entrada de texto é a melhor opção?**
+**É a melhor opção de entrada de texto?**
 
 Há muitas maneiras de se obter a entrada do usuário em seu aplicativo. Estas perguntas ajudarão a responder se uma das caixas de entrada de texto padrão ou outro controle é a melhor opção para obter a entrada do usuário.
 
--   **É prático enumerar todos os valores válidos de forma eficiente?** Se sim, então considere usar um dos controles de seleção, como [caixa de seleção](checkbox.md), [lista suspensa](lists.md), caixa de listagem, [botão de opção](radio-button.md), [controle deslizante](slider.md), [switch de alternância](toggles.md), [seletor de data](date-and-time.md) ou seletor de hora.
--   **Há um conjunto razoavelmente pequeno de valores válidos?** Nesse caso, considere uma [lista suspensa](lists.md) ou uma caixa de listagem, especialmente se os valores tiverem mais do que alguns caracteres.
--   **Os dados válidos estão completamente irrestritos? Ou os dados válidos estão restritos apenas pelo formato (restrição de tamanho ou tipos de caractere)?** Em caso afirmativo, use um controle de entrada de texto. Você pode limitar o número de caracteres que podem ser inseridos e validar o formato no código do aplicativo.
+-   **É prática enumerar com eficiência todos os valores válidos?** Se sim, então considere usar um dos controles de seleção, como [caixa de seleção](checkbox.md), [lista suspensa](lists.md), caixa de listagem, [botão de opção](radio-button.md), [controle deslizante](slider.md), [switch de alternância](toggles.md), [seletor de data](date-and-time.md) ou seletor de hora.
+-   **Há um relativamente pequeno conjunto de valores válidos?** Nesse caso, considere uma [lista suspensa](lists.md) ou uma caixa de listagem, especialmente se os valores tiverem mais do que alguns caracteres.
+-   **Os dados válidos é irrestrita completamente? Ou os dados válidos é apenas restrito pelo formato (comprimento restrito ou tipos de caracteres)?** Em caso afirmativo, use um controle de entrada de texto. Você pode limitar o número de caracteres que podem ser inseridos e validar o formato no código do aplicativo.
 -   **O valor representa um tipo de dados que tem um controle comum especializado?** Se sim, use o controle apropriado em vez de um controle de entrada de texto. Por exemplo, use um [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681), em vez de um controle de entrada de texto, para aceitar uma entrada de data.
 -   Se os dados forem estritamente numéricos:
-    -   **O valor que está sendo inserido é aproximado e/ou relativo a outra quantidade na mesma página?** Se for o caso, utilize um [controle deslizante](slider.md).
-    -   **O usuário se beneficiaria com um feedback instantâneo sobre o efeito das alterações de configuração?** Se for caso, utilize um [controle deslizante](slider.md), possivelmente com um controle anexo.
-    -   **Há alguma probabilidade de o valor inserido ser ajustado após o resultado ser observado, como volume ou brilho ser ajustado?** Se for o caso, utilize um [controle deslizante](slider.md).
+    -   **É o valor que está sendo inserido aproximada e/ou em relação à quantidade de outra na mesma página?** Se for o caso, utilize um [controle deslizante](slider.md).
+    -   **O usuário pode se beneficiar de feedback instantâneo sobre o efeito de alterações de configuração?** Se for caso, utilize um [controle deslizante](slider.md), possivelmente com um controle anexo.
+    -   **O valor é inserido provavelmente ser ajustado depois que o resultado for observada, tal como ocorre com o brilho da tela ou volume?** Se for o caso, utilize um [controle deslizante](slider.md).
 
 ## <a name="examples"></a>Exemplos
 
@@ -79,7 +79,7 @@ Há muitas maneiras de se obter a entrada do usuário em seu aplicativo. Estas p
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/category/Text">abrir o aplicativo e ver os controles de texto em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -113,21 +113,21 @@ Consulte estes artigos para obter informações e exemplos específicos para cad
 Consulte estes artigos para obter diretrizes de fonte:
 
 - [Diretrizes de tipografia](../style/typography.md)
-- [Diretrizes e lista de ícones Segoe MDL2](../style/segoe-ui-symbol-font.md)
+- [Diretrizes e lista de ícones do Segoe MDL2](../style/segoe-ui-symbol-font.md)
 
 ## <a name="pen-input"></a>Entrada à caneta
 
-**Aplica-se a:** TextBox, RichEditBox, AutoSuggestBox
+**Aplica-se a:** Caixa de texto, RichEditBox, AutoSuggestBox
 
 A partir do Windows 10, versão 1803, caixas de entrada de texto XAML têm suporte incorporado para caneta de entrada usando [Windows Ink](../input/pen-and-stylus-interactions.md). Quando um usuário toca em um texto de entrada de caixa usando uma caneta do Windows, as transformações de caixa de texto para permitir que o usuário escrever diretamente nele com uma caneta, em vez de abrir um painel de entrada separado.
 
 ![Caixa de texto se expande quando tocado com caneta](images/handwritingview/handwritingview2.gif)
 
-Para obter mais informações, consulte [a entrada de texto com o modo de exibição de manuscrito](text-handwriting-view.md).
+Para obter mais informações, consulte [entrada de texto com o modo de exibição de texto manuscrito](text-handwriting-view.md).
 
-## <a name="choose-the-right-keyboard-for-your-text-control"></a>Escolher o teclado correto para seu controle de texto
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>Escolha o teclado correto para o controle de texto
 
-**Aplica-se a:** TextBox, PasswordBox RichEditBox
+**Aplica-se a:** Caixa de texto, PasswordBox RichEditBox
 
 Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira.
 
@@ -162,7 +162,7 @@ Para saber mais, consulte a propriedade [IsColorFontEnabled](https://msdn.micros
 
 ## <a name="guidelines-for-line-and-paragraph-separators"></a>Diretrizes para separadores de linha e parágrafo
 
-**Aplica-se a:** TextBlock, RichTextBlock, TextBox de várias linhas, RichEditBox
+**Aplica-se a:** Caixa de texto de várias linha de TextBlock, RichTextBlock, RichEditBox
 
 Use o caractere separador de linha (0x2028) e o caractere separador de parágrafo (0x2029) para dividir texto sem formatação. Uma nova linha é iniciada após cada separador de linha. Um novo parágrafo é iniciado após cada separador de parágrafo.
 
@@ -184,7 +184,7 @@ Veja aqui um exemplo do verificador ortográfico interno:
 
 Use a verificação ortográfica com controles de entrada de texto para estas duas finalidades:
 
--   **Para corrigir erros ortográficos automaticamente**
+-   **Para erros de ortografia de correção automática**
 
     O mecanismo de verificação ortográfico corrige automaticamente palavras incorretas quando tem certeza sobre a correção. Por exemplo, o mecanismo altera automaticamente "teh" para "the".
 
@@ -202,10 +202,10 @@ Para controles TextBox e RichEditBox, a verificação ortográfica permanece ati
 
 **Para designers**
 - [Diretrizes de tipografia](../style/typography.md)
-- [Diretrizes e lista de ícones Segoe MDL2](../style/segoe-ui-symbol-font.md)
-- [Adicionando pesquisa](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [Diretrizes e lista de ícones do Segoe MDL2](../style/segoe-ui-symbol-font.md)
+- [Adicionando uma pesquisa](https://msdn.microsoft.com/library/windows/apps/hh465231)
 
 **Para desenvolvedores (XAML)**
-- [Classe TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [Classe Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
-- [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length.aspx)
+- [Classe de caixa de texto](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Classe PasswordBox Windows](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [Propriedade String. Length](https://msdn.microsoft.com/library/system.string.length.aspx)

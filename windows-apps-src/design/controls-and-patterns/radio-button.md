@@ -1,5 +1,5 @@
 ---
-Description: Radio buttons let users select one option from two or more choices.
+Description: Botões de opção permitem que os usuários selecionem uma opção entre duas ou mais escolhas.
 title: Diretrizes de botões de opção
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
@@ -13,15 +13,15 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 91903365a258d54804b420cd217dd7c25d79406a
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037228"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606131"
 ---
 # <a name="radio-buttons"></a>Botões de opção
 
-> **APIs importantes**: [classe RadioButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [evento Checked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [propriedade IsChecked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
+> **APIs importantes**: [Classe RadioButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [eventos marcados](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [propriedade IsChecked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
 
 Botões de opção permitem que os usuários selecionem uma opção de um conjunto. Cada opção é representada por um botão de opção, e os usuários podem selecionar apenas um botão de opção em um grupo de botões de opção.
 
@@ -29,7 +29,7 @@ Botões de opção permitem que os usuários selecionem uma opção de um conjun
 
 ![Botões de opção](images/controls/radio-button.png)
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use botões de opção para apresentar aos usuários duas ou mais opções mutuamente exclusivas.
 
@@ -66,7 +66,7 @@ Se as opções disponíveis estiverem baseadas no contexto atual do aplicativo o
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RadioButton">abrir o aplicativo e ver o RadioButton em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -176,10 +176,10 @@ Um botão de opção tem dois estados: *marcado* ou *desmarcado*. Quando um bot�
 -   Certifique-se de que a finalidade e o estado atual de um conjunto de botões de opção seja clara.
 -   Limite o conteúdo em texto do botão de opção para uma única linha.
 -   Se o conteúdo do texto for dinâmico, considere como o botão redimensionará e o que acontecerá com os elementos visuais ao redor dele.
--   Use a fonte padrão, a menos que as diretrizes da marca o orientem de outra forma.
+-   Use fonte padrão, a menos que as diretrizes da marca o orientem de outra forma.
 -   Não coloque dois grupos de botão de opção próximos um ao lado do outro. Quando dois grupos de botão de opção estão próximos um do outro é difícil determinar quais botões pertencem a qual grupo.
 
-## <a name="additional-usage-guidance"></a>Diretrizes de uso adicional
+## <a name="additional-usage-guidance"></a>Diretriz de uso adicional
 
 Esta ilustração mostra a maneira correta de posicionar e espaçar os botões de opção.
 
@@ -191,7 +191,7 @@ Esta ilustração mostra a maneira correta de posicionar e espaçar os botões d
 
 **Para designers**
 - [Botões](buttons.md)
-- [Switches de alternância](toggles.md)
+- [Comutadores de alternância](toggles.md)
 - [Caixas de seleção](checkbox.md)
 - [Listas e caixas de combinação](lists.md)
 - [Controles deslizantes](slider.md)

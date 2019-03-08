@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, glsl, hlsl, opengl, directx, sombreadores
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f468584d995de40ff14df1527ab1df8275c36a8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938905"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611161"
 ---
 # <a name="glsl-to-hlsl-reference"></a>Referência de GLSL para HLSL
 
@@ -20,13 +20,13 @@ ms.locfileid: "8938905"
 Porte seu código GLSL (OpenGL Shader Language) para código Microsoft HLSL (High Level Shader Language) ao [portar sua arquitetura gráfica do OpenGL ES 2.0 para o Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md) para criar um jogo para a UWP (Plataforma Universal do Windows). O GLSL citado neste documento é compatível com OpenGL ES 2.0; o HLSL é compatível com Direct3D 11. Para saber mais sobre as diferenças entre o Direct3D 11 e versões anteriores do Direct3D, consulte [Mapeamento de recursos](feature-mapping.md).
 
 -   [Comparando o OpenGL ES 2.0 com o Direct3D 11](#comparing-opengl-es-20-with-direct3d-11)
--   [Portando variáveis do GLSL para o HLSL](#porting-glsl-variables-to-hlsl)
--   [Portando tipos do GLSL para o HLSL](#porting-glsl-types-to-hlsl)
--   [Portando variáveis globais predefinidas do GLSL para o HLSL](#porting-glsl-pre-defined-global-variables-to-hlsl)
--   [Exemplos de portabilidade de variáveis do GLSL para o HLSL](#examples-of-porting-glsl-variables-to-hlsl)
-    -   [Uniforme, atributo e variação no GLSL](#uniform-attribute-and-varying-in-glsl)
-    -   [Buffers constantes e transferências de dados no HLSL](#constant-buffers-and-data-transfers-in-hlsl)
--   [Exemplos de portabilidade do código de renderização do OpenGL para o Direct3D](#examples-of-porting-opengl-rendering-code-to-direct3d)
+-   [Portabilidade de variáveis do GLSL para HLSL](#porting-glsl-variables-to-hlsl)
+-   [Tipos de portabilidade GLSL para HLSL](#porting-glsl-types-to-hlsl)
+-   [Portabilidade GLSL predefinidos variáveis globais para o HLSL](#porting-glsl-pre-defined-global-variables-to-hlsl)
+-   [Exemplos de portabilidade de variáveis do GLSL para HLSL](#examples-of-porting-glsl-variables-to-hlsl)
+    -   [Uniforme, o atributo e variados em GLSL](#uniform-attribute-and-varying-in-glsl)
+    -   [Constante buffers e transferência de dados em HLSL](#constant-buffers-and-data-transfers-in-hlsl)
+-   [Exemplos de portabilidade do código de renderização do OpenGL para Direct3D](#examples-of-porting-opengl-rendering-code-to-direct3d)
 -   [Tópicos relacionados](#related-topics)
 
 ## <a name="comparing-opengl-es-20-with-direct3d-11"></a>Comparando o OpenGL ES 2.0 com o Direct3D 11
@@ -65,14 +65,14 @@ Geralmente, o GLSL e o HLSL diferem das seguintes maneiras:
 <td align="left">Compilação de sombreador integrada à API gráfica</td>
 <td align="left">O compilador HLSL <a href="https://msdn.microsoft.com/library/windows/desktop/bb509633">compila o sombreador</a> em uma representação binária intermediária antes de o Direct3D passá-lo ao driver.
 <div class="alert">
-<strong>Observação</strong>essa representação binária é independente de hardware. Normalmente, ela é compilada no momento da compilação do aplicativo, e não no tempo de execução dele.
+<strong>Observação</strong>  essa representação binária é independente de hardware. Normalmente, ela é compilada no momento da compilação do aplicativo, e não no tempo de execução dele.
 </div>
 <div>
  
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left">Modificadores de armazenamento <a href="#porting-glsl-variables-to-hlsl">variáveis</a></td>
+<td align="left">Modificadores de armazenamento de <a href="#porting-glsl-variables-to-hlsl">variável</a></td>
 <td align="left">Buffers constantes e transferências de dados via declarações de layout de entrada</td>
 </tr>
 <tr class="even">
@@ -94,7 +94,7 @@ Geralmente, o GLSL e o HLSL diferem das seguintes maneiras:
 <td align="left">Matrizes da linha principal (padrão)</td>
 <td align="left">Matrizes de coluna principal (padrão)
 <div class="alert">
-<strong>Observação</strong>  Use o modificador de tipo <strong>row_major</strong> para alterar o layout de uma variável. Para obter mais informações, consulte <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">Sintaxe de variáveis</a>. Você também pode especificar um pragma ou um sinalizador de compilador para alterar o padrão global.
+<strong>Observação</strong>    usar o <strong>row_major</strong> modificador de tipo para alterar o layout para uma variável. Para obter mais informações, consulte <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">Sintaxe de variáveis</a>. Você também pode especificar um pragma ou um sinalizador de compilador para alterar o padrão global.
 </div>
 <div>
  
@@ -109,13 +109,13 @@ Geralmente, o GLSL e o HLSL diferem das seguintes maneiras:
 
  
 
-> **Observação**HLSL tem texturas e amostras como dois objetos separados. No GLSL, assim como no Direct3D 9, a associação de textura faz parte do estado da amostra.
+> **Observação**  HLSL tem texturas e classificadores como dois objetos separados. No GLSL, assim como no Direct3D 9, a associação de textura faz parte do estado da amostra.
 
  
 
-No GLSL, grande parte do estado do OpenGL é apresentada como variáveis globais predefinidas. Por exemplo, com o GLSL, você usa a variável **gl\_Position** para definir a posição do vértice e a variável **gl\_FragColor** para especificar a cor do fragmento. No HLSL, você passa o estado do Direct3D explicitamente do código do aplicativo para o sombreador. Por exemplo, com Direct3D e HLSL, a entrada para o sombreador de vértice deve corresponder ao formato de dados no buffer de vértice, e a estrutura de um buffer constante no código do aplicativo deve corresponder à estrutura de um buffer constante ([cbuffer](https://msdn.microsoft.com/library/windows/desktop/bb509581)) no código do sombreador.
+No GLSL, grande parte do estado do OpenGL é apresentada como variáveis globais predefinidas. Por exemplo, com GLSL, use o **gl\_posição** variável para especificar a posição de vértice e o **gl\_FragColor** variável para especificar a cor do fragmento. No HLSL, você passa o estado do Direct3D explicitamente do código do aplicativo para o sombreador. Por exemplo, com Direct3D e HLSL, a entrada para o sombreador de vértice deve corresponder ao formato de dados no buffer de vértice, e a estrutura de um buffer constante no código do aplicativo deve corresponder à estrutura de um buffer constante ([cbuffer](https://msdn.microsoft.com/library/windows/desktop/bb509581)) no código do sombreador.
 
-## <a name="porting-glsl-variables-to-hlsl"></a>Portando variáveis do GLSL para HLSL
+## <a name="porting-glsl-variables-to-hlsl"></a>Portando variáveis do GLSL para o HLSL
 
 
 No GLSL, você deve aplicar modificadores (qualificadores) a uma declaração de variável de sombreador global, fornecendo à variável um comportamento específico nos sombreadores. No HLSL, não é necessário usar esses modificadores, pois o fluxo do sombreador é definido com os argumentos passados para o sombreador e retornados dele.
@@ -133,21 +133,21 @@ No GLSL, você deve aplicar modificadores (qualificadores) a uma declaração de
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>uniforme</strong></p>
+<td align="left"><p><strong>uniform</strong></p>
 <p>Você passa uma variável uniforme do código do aplicativo para o sombreador de vértice, para o sombreador de fragmento ou para ambos. Você deve definir os valores de todos os uniformes antes de desenhar triângulos com os sombreadores, de modo que os valores sejam os mesmos em todo o desenho de uma malha de triângulos. Esses valores são uniformes. Alguns uniformes são definidos para todo e quadro, e outros são exclusivos de um par específico de sombreadores de vértice-pixel.</p>
 <p>As variáveis uniformes são específicas dos polígonos.</p></td>
 <td align="left"><p>Use buffers constantes.</p>
-<p>Consulte <a href="https://msdn.microsoft.com/library/windows/desktop/ff476896">Como: criar um buffer constante</a> e <a href="https://msdn.microsoft.com/library/windows/desktop/bb509581">Constantes de sombreador</a>.</p></td>
+<p>Consulte <a href="https://msdn.microsoft.com/library/windows/desktop/ff476896">como: Criar um Buffer de constantes</a> e <a href="https://msdn.microsoft.com/library/windows/desktop/bb509581">constantes de sombreadores</a>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>variação</strong></p>
+<td align="left"><p><strong>varying</strong></p>
 <p>Inicialize uma variável de variação dentro do sombreador de vértice e passe-a para uma variável de variação com nome idêntico no sombreador de fragmento. Como o sombreador de vértice define apenas o valor das variáveis diversas em cada vértice, o rasterizador interpola esses valores (de modo a corrigir a perspectiva) para gerar valores por fragmento, que serão passados no sombreador de fragmento. Essas variáveis variam em cada triângulo.</p></td>
 <td align="left">Use a estrutura retornada do sombreador de vértice como entrada do sombreador de pixel. Verifique se valores semânticos correspondem.</td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>atributo</strong></p>
+<td align="left"><p><strong>Atributo</strong></p>
 <p>Um atributo é uma parte da descrição de um vértice que você passa do código do aplicativo para o sombreador de vértice. Ao contrário de um uniforme, você pode definir o valor do atributo de cada vértice, que, por sua vez, permite que cada vértice tenha um valor diferente. As variáveis de atributo são específicas dos vértices.</p></td>
-<td align="left"><p>Defina um buffer de vértice no código do aplicativo em Direct3D e corresponda-o à entrada de vértice definida no sombreador de vértice. Você também pode definir um buffer de índice. Veja <a href="https://msdn.microsoft.com/library/windows/desktop/ff476899">Como: criar um buffer de vértice</a> e <a href="https://msdn.microsoft.com/library/windows/desktop/ff476897">Como: criar um buffer de índice</a>.</p>
+<td align="left"><p>Defina um buffer de vértice no código do aplicativo em Direct3D e corresponda-o à entrada de vértice definida no sombreador de vértice. Você também pode definir um buffer de índice. Consulte <a href="https://msdn.microsoft.com/library/windows/desktop/ff476899">como: Criar um Buffer de vértice</a> e <a href="https://msdn.microsoft.com/library/windows/desktop/ff476897">como: Criar um Buffer de índice</a>.</p>
 <p>Crie um layout de entrada no código de seu aplicativo Direct3D e corresponda os valores semânticos aos da entrada do vértice. Consulte <a href="https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout">Criar o layout de entrada</a>.</p></td>
 </tr>
 <tr class="even">
@@ -213,9 +213,9 @@ Use esta tabela para fazer a portabilidade de tipos do GLSL para o HLSL.
 <tr class="odd">
 <td align="left"><p>tipo de matriz</p>
 <ul>
-<li>mat2: matriz float 2 x 2</li>
-<li>mat3: matriz float 3 x 3</li>
-<li>mat4: matriz float 4 x 4</li>
+<li>mat2: matriz float de 2 x 2</li>
+<li>mat3: matriz 3x3 float</li>
+<li>mat4: matriz float de 4 x 4</li>
 </ul></td>
 <td align="left"><p>tipo de matriz</p>
 <ul>
@@ -299,7 +299,7 @@ Use esta tabela para portar variáveis globais predefinidas do GLSL para o HLSL.
 <p>Esta semântica é do tipo <strong>float4</strong>.</p>
 <p>Saída do sombreador de vértice</p>
 <p>Posição do vértice</p>
-<p>por exemplo - float4 vPosition : SV_Position;</p></td>
+<p>Por exemplo, float4 vPosition: SV_Position;</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>gl_PointSize</strong></p>
@@ -321,7 +321,7 @@ Use esta tabela para portar variáveis globais predefinidas do GLSL para o HLSL.
 <p>Esta semântica é do tipo <strong>float4</strong>.</p>
 <p>Saída do sombreador de pixel</p>
 <p>Cor do pixel</p>
-<p>por exemplo - float4 Color[4] : SV_Target;</p></td>
+<p>Por exemplo: cor float4 [4]: SV_Target;</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>gl_FragData[n]</strong></p>
@@ -340,7 +340,7 @@ Use esta tabela para portar variáveis globais predefinidas do GLSL para o HLSL.
 <p>Esta semântica é do tipo <strong>float4</strong>.</p>
 <p>Entrada do sombreador de pixel</p>
 <p>Coordenadas de espaço na tela</p>
-<p>por exemplo - float4 screenSpace : SV_Position</p></td>
+<p>Por exemplo, float4 screenSpace: SV_Position</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>gl_FrontFacing</strong></p>
@@ -363,7 +363,7 @@ Use esta tabela para portar variáveis globais predefinidas do GLSL para o HLSL.
 <p>VPOS é do tipo <strong>float2</strong>.</p>
 <p>Entrada do sombreador de pixel</p>
 <p>Posição do pixel ou da amostra no espaço da tela</p>
-<p>por exemplo - float4 pos : SV_Position</p></td>
+<p>Por exemplo, o pos float4: SV_Position</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>gl_FragDepth</strong></p>
@@ -562,7 +562,7 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Portar do OpenGL ES 2.0 para o Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md)
+* [Compatibilizar do OpenGL ES 2.0 ao Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md)
 
  
 

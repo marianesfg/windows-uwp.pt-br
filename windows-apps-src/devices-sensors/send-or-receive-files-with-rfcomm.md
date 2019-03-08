@@ -11,11 +11,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 27adf5bb39a06e24b7d76e272ceb8dcf6348b57e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943834"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615621"
 ---
 # <a name="bluetooth-rfcomm"></a>Bluetooth RFCOMM
 
@@ -34,13 +34,13 @@ As APIs de RFCOMM utilizam o conceito de identificadores de serviço. Embora um 
 
 Os aplicativos de um dispositivo podem executar operações de dispositivos de multietapas em uma tarefa em segundo plano, portanto eles podem executar até concluírem, mesmo se o aplicativo for movido para segundo plano e suspenso. Isso permite um serviço do dispositivo confiável, como alterações em configurações persistentes ou firmware, e sincronização de conteúdo, sem precisar que o usuário sente-se e observe a barra de progresso. Use o [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297315) para serviço de dispositivo e o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297337) para sincronização de conteúdo. Observe que essas tarefas em segundo plano limitam a quantidade de tempo que o aplicativo pode ser executado em segundo plano e não têm a intenção de permitir operação indefinida nem sincronização infinita.
 
-Para ver um exemplo de código completo que fornece detalhes sobre a operação de RFCOMM, consulte o [ **Exemplo do Bluetooth Rfcomm Chat** ](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothRfcommChat) no Github.  
+Para ver um exemplo de código completo que fornece detalhes sobre a operação de RFCOMM, consulte o [**Exemplo do Bluetooth Rfcomm Chat**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothRfcommChat) no Github.  
 
 ## <a name="send-a-file-as-a-client"></a>Enviar um arquivo como cliente
 
 Ao enviar um arquivo, o cenário mais básico é estabelecer conexão com um dispositivo emparelhado com base em um serviço desejado. Isso envolve as seguintes etapas:
 
--   Use as funções **RfcommDeviceService.GetDeviceSelector\*** para ajudar a gerar uma consulta AQS que possa ser usada para instâncias de dispositivos emparelhados enumerados do serviço desejado.
+-   Use o **RfcommDeviceService.GetDeviceSelector\***  funções para ajudar a gerar uma consulta AQS que pode ser usada para enumerado emparelhado instâncias de dispositivo do serviço desejado.
 -   Escolha um dispositivo enumerado, crie um [**RfcommDeviceService**](https://msdn.microsoft.com/library/windows/apps/Dn263463) e leia os atributos SDP conforme necessário (usando [**established data helpers**](https://msdn.microsoft.com/library/windows/apps/BR208119) para analisar os dados do atributo).
 -   Crie um soquete e use as propriedades [**RfcommDeviceService.ConnectionHostName**](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname.aspx) e [**RfcommDeviceService.ConnectionServiceName**](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename.aspx) para [**StreamSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701504) para o serviço de dispositivo remoto com os parâmetros apropriados.
 -   Siga os padrões de fluxo de dados estabelecidos para ler dados do arquivo e enviá-lo no [**StreamSocket.OutputStream**](https://msdn.microsoft.com/library/windows/apps/BR226920) do soquete para o dispositivo.
@@ -352,7 +352,7 @@ Outro cenário de aplicativo comum RFCOMM é hospedar um serviço no computador 
 -   Quando uma conexão é recebida, armazene o soquete conectado para processamento posterior.
 -   Siga os padrões de fluxo de dados estabelecidos para ler dados do InputStream do soquete e salvá-los em um arquivo.
 
-Para manter um serviço RFCOMM em segundo plano, use o [ **RfcommConnectionTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.rfcommconnectiontrigger.aspx). A tarefa em segundo plano é disparada em conexão com o serviço. O desenvolvedor recebe um identificador para o soquete na tarefa em segundo plano. A tarefa em segundo plano é de longa duração e persiste enquanto o soquete está em uso.    
+Para manter um serviço RFCOMM em segundo plano, use o [**RfcommConnectionTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.rfcommconnectiontrigger.aspx). A tarefa em segundo plano é disparada em conexão com o serviço. O desenvolvedor recebe um identificador para o soquete na tarefa em segundo plano. A tarefa em segundo plano é de longa duração e persiste enquanto o soquete está em uso.    
 
 ```csharp
 Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider _provider;

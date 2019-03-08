@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ddb1dc0e42f88cf65464841388b9addfb4b5748
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935920"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616681"
 ---
 # <a name="device-types"></a>Tipos de dispositivos
 
@@ -31,14 +31,14 @@ Os aplicativos não acessam os adaptadores gráficos diretamente. Eles chamam m�
 
 O Direct3D dá suporte a um tipo de dispositivo adicional chamado um rasterizador de referência ou dispositivo de referência. Ao contrário de um dispositivo de software, o rasterizador de referência dá suporte a todos os recursos do Direct3D. Este dispositivo se destina a ser usado para fins de depuração e, portanto, só está disponível em computadores em que o SDK do DirectX tiver sido instalado. Como esses recursos são implementados para precisão em vez de velocidade e são implementados no software, os resultados não são muito rápidos. O rasterizador de referência faz uso de instruções especiais da CPU sempre que possível, mas ele não foi desenvolvido para aplicativos de varejo. Use o rasterizador de referência apenas para fins de teste ou demonstração do recurso.
 
-## <a name="span-idhalvsrefspanspan-idhalvsrefspanspan-idhalvsrefspanhal-vs-ref-devices"></a><span id="HAL_vs_REF"></span><span id="hal_vs_ref"></span><span id="HAL_VS_REF"></span>Dispositivos HAL vs. REF
+## <a name="span-idhalvsrefspanspan-idhalvsrefspanspan-idhalvsrefspanhal-vs-ref-devices"></a><span id="HAL_vs_REF"></span><span id="hal_vs_ref"></span><span id="HAL_VS_REF"></span>HAL vs. Dispositivos REF
 
 
 Os dispositivos HAL (camada de abstração de Hardware) e REF (rasterizador de referência) são os dois tipos principais de dispositivo Direct3D; o primeiro baseia-se no suporte de hardware e é muito rápido, mas talvez não dê suporte a tudo; enquanto o segundo usa a aceleração de hardware, portanto é muito lento, mas garante suporte a todo o conjunto de recursos do Direct3D, da forma correta. Em geral, você só precisará usar dispositivos HAL, mas se você estiver usando algum recurso avançado que não dá suporte à placa gráfica, então talvez seja necessário voltar ao REF.
 
 Uma outra ocasião onde convém usar o REF é se o dispositivo HAL estiver produzindo resultados estranhos, ou seja, você tem certeza que seu código está correto, mas o resultado não é o que você espera. É garantido que o dispositivo REF irá se comportar corretamente, portanto, convém testar seu aplicativo no dispositivo REF e ver se o comportamento estranho continua. Se isso não acontecer, isso significa que o seu aplicativo está pressupondo que a placa gráfica oferece suporte há algo não suportado por ela, ou (b) é um bug de driver. Se ainda não funcionar com o dispositivo REF, trata-se de um bug de aplicativo.
 
-## <a name="span-idhardwarevssoftwarespanspan-idhardwarevssoftwarespanspan-idhardwarevssoftwarespanhardware-vs-software-vertex-processing"></a><span id="Hardware_vs_Software"></span><span id="hardware_vs_software"></span><span id="HARDWARE_VS_SOFTWARE"></span>Processamento de vértice de software versus hardware
+## <a name="span-idhardwarevssoftwarespanspan-idhardwarevssoftwarespanspan-idhardwarevssoftwarespanhardware-vs-software-vertex-processing"></a><span id="Hardware_vs_Software"></span><span id="hardware_vs_software"></span><span id="HARDWARE_VS_SOFTWARE"></span>Hardware vs. Processamento de vértice de software
 
 
 O processamento de vértice de hardware versus software se aplica somente aos dispositivos HAL. Quando você transmite os vértices por push através do pipeline, eles precisam ser transformadas (pelas matrizes de mundo, modo de exibição e projeção) e iluminados (pelas internas luzes do D3D) - esse estágio de processamento é conhecido como T&L (para transformação e iluminação). O processamento de vértice de hardware significa que isso é feito no hardware, se o hardware oferecer suporte a ele; logo, o processamento de vértice de software é feito no software. A prática geral é a criação de um dispositivo de Hardware T&L primeiro, se isso falhar, tente Misto e se falhar novamente tente Software. (Se o software falhar, não continue insistindo e encerre com um erro).

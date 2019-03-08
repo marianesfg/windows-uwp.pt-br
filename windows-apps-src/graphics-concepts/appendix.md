@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f4cd2e17754dc5b5958e8bca208e30b87718cdd8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922859"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632491"
 ---
 # <a name="appendices"></a>Apêndices
 
@@ -33,7 +33,7 @@ Essas seções fornecem detalhes técnicos detalhados.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="floating-point-rules.md">Regras de ponto flutuante</a></p></td>
+<td align="left"><p><a href="floating-point-rules.md">Regras de ponto flutuantes</a></p></td>
 <td align="left"><p>O Direct3D dá suporte a várias representações de ponto flutuante. Todos os cálculos de ponto flutuante operam em um subconjunto das regras de ponto flutuante de precisão única de 32 bits 754 IEEE definido.</p></td>
 </tr>
 <tr class="even">
@@ -41,7 +41,7 @@ Essas seções fornecem detalhes técnicos detalhados.
 <td align="left"><p>As seções a seguir descrevem como o Direct3D manipula as conversões entre os tipos de dados.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="rasterization-rules.md">Regras de rasterização</a></p></td>
+<td align="left"><p><a href="rasterization-rules.md">Rasterização regras</a></p></td>
 <td align="left"><p>As regras de rasterização definem como os dados de vetor são mapeados nos dados de rasterização. Os dados de rasterização são ajustados para locais de inteiro que são, em seguida, removidos e recortados (para desenhar o número mínimo de pixels) e atributos de por pixel são interpolados (de atributos de vértice) antes de serem passados para um sombreador de pixel.</p></td>
 </tr>
 <tr class="even">
@@ -56,7 +56,7 @@ Essas seções fornecem detalhes técnicos detalhados.
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Guia de aprendizagem de Gráficos do Direct3D](index.md)
+[Guia de aprendizado de gráficos do Direct3D](index.md)
 
  
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de coleção da Microsoft Store, providenciado, consumível
 ms.localizationpriority: medium
 ms.openlocfilehash: cea8937af3df0ad1e80434d649f431d188521667
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116022"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615801"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>Declarar produtos consumíveis como providenciados
 
@@ -46,10 +46,10 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorização  | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;.                           |
-| Host           | string | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
-| Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
-| Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
+| Autorização  | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;.                           |
+| Host           | cadeia de caracteres | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
+| Content-Length | number | O comprimento do corpo da solicitação.                                                                       |
+| Content-Type   | cadeia de caracteres | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -57,10 +57,10 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 | Parâmetro     | Tipo         | Descrição         | Obrigatório |
 |---------------|--------------|---------------------|----------|
 | beneficiário   | UserIdentity | O usuário para o qual este item está sendo consumido. Para obter mais informações, consulte a tabela a seguir.        | Sim      |
-| itemId        | string       | O valor *itemID* retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com *trackingId*      | Não       |
+| itemId        | cadeia de caracteres       | O valor *itemID* retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com *trackingId*      | Não       |
 | trackingId    | guid         | Uma ID de rastreamento exclusiva fornecida pelo desenvolvedor. Use esse parâmetro com *itemId*.         | Não       |
-| productId     | cadeia       | O valor de *productId* retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com *transactionId*   | Não       |
-| transactionId | guid         | Um valor de ID de transação que é obtido de uma das seguintes fonte. Use esse parâmetro com *productId*.<ul><li>A propriedade [TransactionID](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.purchaseresults.transactionid) da classe [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).</li><li>O recibo do app ou produto que é retornado por [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) ou [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync).</li><li>O parâmetro *transactionId* retornado por uma [consulta por produtos](query-for-products.md).</li></ul>   | Não       |
+| productId     | cadeia de caracteres       | O valor de *productId* retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com *transactionId*   | Não       |
+| transactionId | guid         | Um valor de ID de transação que é obtido de uma das seguintes fonte. Use esse parâmetro com *productId*.<ul><li>A propriedade [TransactionID](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.purchaseresults.transactionid) da classe [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).</li><li>O recibo do aplicativo ou produto que é retornado por [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) ou [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync).</li><li>O parâmetro *transactionId* retornado por uma [consulta por produtos](query-for-products.md).</li></ul>   | Não       |
 
 
 O objeto UserIdentity contém os parâmetros a seguir.
@@ -68,8 +68,8 @@ O objeto UserIdentity contém os parâmetros a seguir.
 | Parâmetro            | Tipo   | Descrição       | Obrigatório |
 |----------------------|--------|-------------------|----------|
 | identityType         | cadeia de caracteres | Especifique o valor de cadeia de caracteres **b2b**.    | Sim      |
-| identityValue        | string | Uma [chave ID da Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa a identidade do usuário para o qual você quer declarar um produto consumível como providenciado.      | Sim      |
-| localTicketReference | string | O identificador solicitado para resposta retornada. Recomendamos que você use o mesmo valor do que a [declaração](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) *userId* na chave ID da Microsoft Store. | Sim      |
+| identityValue        | cadeia de caracteres | Uma [chave ID da Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa a identidade do usuário para o qual você quer declarar um produto consumível como providenciado.      | Sim      |
+| localTicketReference | cadeia de caracteres | O identificador solicitado para resposta retornada. É recomendável que você use o mesmo valor que o *userId*[declaração](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) na chave de ID do Microsoft Store.   | Sim      |
 
 
 ### <a name="request-examples"></a>Exemplos de solicitação
@@ -144,7 +144,7 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Gerenciar direitos a produtos de um serviço](view-and-grant-products-from-a-service.md)
-* [Consulta por produtos](query-for-products.md)
+* [Gerenciar direitos de produto de um serviço](view-and-grant-products-from-a-service.md)
+* [Consulta de produtos](query-for-products.md)
 * [Conceder produtos gratuitos](grant-free-products.md)
-* [Renovar uma chave de ID da Microsoft Store](renew-a-windows-store-id-key.md)
+* [Renovar uma chave de ID do Microsoft Store](renew-a-windows-store-id-key.md)

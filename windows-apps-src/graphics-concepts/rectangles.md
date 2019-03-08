@@ -1,6 +1,6 @@
 ---
 title: Retângulos
-description: Pela programação do Direct3D e do Windows, objetos na tela são referidos em termos de retângulos delimitadores.
+description: Em toda a programação do Direct3D e do Windows, os objetos na tela são referidos em termos de retângulos delimitadores.
 ms.assetid: 3B78AE66-2C1A-4191-BDCA-D737E33460BA
 keywords:
 - Retângulos
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: aa94eb00058ba3297e7ca7cc4f93581d9281fd1c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947908"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608011"
 ---
 # <a name="rectangles"></a>Retângulos
 
 
-Em toda a programação do Direct3D e do Windows, os objetos na tela são referidos em termos de retângulos delimitadores. Os lados de um retângulo delimitador sempre são paralelos às laterais da tela, então o retângulo pode ser descrito por dois pontos: o canto superior esquerdo e o canto inferior direito.
+Em toda a programação do Direct3D e do Windows, os objetos na tela são referidos em termos de retângulos delimitadores. Os lados de um retângulo delimitador sempre são paralelos às laterais da tela, para que o retângulo possa ser descrito por dois pontos, o canto superior esquerdo e o canto inferior direito.
 
 ## <a name="span-idboundingrectanglesspanspan-idboundingrectanglesspanspan-idboundingrectanglesspanbounding-rectangles"></a><span id="Bounding_rectangles"></span><span id="bounding_rectangles"></span><span id="BOUNDING_RECTANGLES"></span>Retângulos delimitadores
 
@@ -44,7 +44,7 @@ Para eficiência, consistência e a facilidade de uso, todas as funções de apr
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Sistemas de coordenadas e geometria](coordinate-systems-and-geometry.md)
+[Sistemas de coordenadas e geometry](coordinate-systems-and-geometry.md)
 
  
 

@@ -7,11 +7,11 @@ keywords: windows 10, uwp, rede de publicidade, metadados do app
 ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
 ms.localizationpriority: medium
 ms.openlocfilehash: 0122c2fbe1e0e9905a8509694c4a589e04e33247
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049423"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621131"
 ---
 # <a name="app-metadata-api-for-advertising-networks"></a>API de metadados de app para redes de publicidade
 
@@ -69,7 +69,7 @@ Esse método tem a seguinte sintaxe de solicitação.
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Ocp-Apim-Subscription-Key | string | Obrigatório. A chave de assinatura que você [recuperou no portal da API de metadados de aplicativo](#get-key).  |
+| Ocp-Apim-Subscription-Key | cadeia de caracteres | Obrigatório. A chave de assinatura que você [recuperou no portal da API de metadados de aplicativo](#get-key).  |
 
 <span/>
 
@@ -77,7 +77,7 @@ Esse método tem a seguinte sintaxe de solicitação.
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------|
-| app_id | string | Obrigatório. A ID do aplicativo para o qual você deseja recuperar metadados. Ele pode ter um dos seguintes valores:<br/><br/><ul><li>A ID da Loja do aplicativo. Uma ID da Loja de exemplo é 9NBLGGH29DM8.</li><li>A ID do produto (também chamada de *ID do aplicativo*) para um aplicativo que foi criado originalmente para o Windows 8.x ou Windows Phone 8.x. A ID do produto é um GUID.</li></ul> |
+| app_id | cadeia de caracteres | Obrigatório. A ID do aplicativo para o qual você deseja recuperar metadados. Isso pode ter um dos seguintes valores:<br/><br/><ul><li>A ID da Loja do aplicativo. Uma ID da Loja de exemplo é 9NBLGGH29DM8.</li><li>A ID do produto (também chamada de *ID do aplicativo*) para um aplicativo que foi criado originalmente para o Windows 8.x ou Windows Phone 8.x. A ID do produto é um GUID.</li></ul> |
 
 <span/>
 
@@ -128,21 +128,21 @@ Para obter mais detalhes sobre os valores no corpo da resposta, veja a tabela a 
 
 | Valor      | Tipo   | Descrição    |
 |------------|--------|--------------------|
-| storeId           | string  | A ID da Loja do aplicativo. Uma ID da Loja de exemplo é 9NBLGGH29DM8.     |  
-| name           | cadeia  | O nome do aplicativo.   |
-| description           | string  | A descrição da listagem da Loja para o aplicativo.  |
-| phoneStoreGuid           | string  | A ID do produto (Windows Phone 8.x) para o aplicativo. É um GUID.  |
-| windowsStoreGuid           | string  | A ID do produto (Windows 8.x) para o aplicativo. É um GUID. |
-| storeCategory           | string  | A categoria do aplicativo na Loja. Para os valores aceitos, consulte a [tabela de categoria e subcategoria](../publish/category-and-subcategory-table.md) de aplicativos na Loja.  |
-| iabCategory           | string  | A categoria de conteúdo do aplicativo, conforme definido pelo Interactive Advertising Bureau (IAB). Por exemplo, **Notícias** ou **Esportes**. Para obter uma lista de categorias de conteúdo, consulte a página [IAB Tech Lab Content Taxonomy](https://www.iab.com/guidelines/iab-quality-assurance-guidelines-qag-taxonomy) no site do IAB.   |
-| iabCategoryId           | string  | A ID da categoria de conteúdo do aplicativo. Por exemplo, **IAB12** é a ID da categoria Notícias e **IAB17** é a ID da categoria Esportes. Para obter uma lista de IDs de categoria de conteúdo, consulte a seção 5.1 da [Especificação da API OpenRTB](https://www.iab.com/wp-content/uploads/2015/05/OpenRTB_API_Specification_Version_2_3_1.pdf). |
-| coppa           | booliano  | True se o aplicativo for direcionado a crianças com menos de 13 anos e, portanto, tem obrigações segundo a Children's Online Privacy Protection Act (COPPA). Caso contrário, false.  |
-| downloadUrl           | string  | O link para a listagem do aplicativo na Loja. Este link está no formato ```https://www.microsoft.com/store/apps/<Store ID>```.  |
+| storeId           | cadeia de caracteres  | A ID da Loja do aplicativo. Uma ID da Loja de exemplo é 9NBLGGH29DM8.     |  
+| name           | cadeia de caracteres  | O nome do aplicativo.   |
+| description           | cadeia de caracteres  | A descrição da listagem da Loja para o aplicativo.  |
+| phoneStoreGuid           | cadeia de caracteres  | A ID do produto (Windows Phone 8.x) para o aplicativo. É um GUID.  |
+| windowsStoreGuid           | cadeia de caracteres  | A ID do produto (Windows 8.x) para o aplicativo. É um GUID. |
+| storeCategory           | cadeia de caracteres  | A categoria do aplicativo na Loja. Para os valores aceitos, consulte a [tabela de categoria e subcategoria](../publish/category-and-subcategory-table.md) de aplicativos na Loja.  |
+| iabCategory           | cadeia de caracteres  | A categoria de conteúdo do aplicativo, conforme definido pelo Interactive Advertising Bureau (IAB). Por exemplo, **Notícias** ou **Esportes**. Para obter uma lista de categorias de conteúdo, consulte a página [IAB Tech Lab Content Taxonomy](https://www.iab.com/guidelines/iab-quality-assurance-guidelines-qag-taxonomy) no site do IAB.   |
+| iabCategoryId           | cadeia de caracteres  | A ID da categoria de conteúdo do aplicativo. Por exemplo, **IAB12** é a ID da categoria Notícias e **IAB17** é a ID da categoria Esportes. Para obter uma lista de IDs de categoria de conteúdo, consulte a seção 5.1 da [Especificação da API OpenRTB](https://www.iab.com/wp-content/uploads/2015/05/OpenRTB_API_Specification_Version_2_3_1.pdf). |
+| coppa           | Booliano  | True se o aplicativo for direcionado a crianças com menos de 13 anos e, portanto, tem obrigações segundo a Children's Online Privacy Protection Act (COPPA). Caso contrário, false.  |
+| downloadUrl           | cadeia de caracteres  | O link para a listagem do aplicativo na Loja. Este link está no formato ```https://www.microsoft.com/store/apps/<Store ID>```.  |
 | isLive           | Booliano  | Verdadeiro se o aplicativo está atualmente disponível na loja; caso contrário, falso.  |
-| iconUrls           | array  |  Uma matriz com uma ou mais strings que contêm os caminhos relativos para as URLs de ícone associado ao aplicativo. Para recuperar os ícones, coloque *http* ou *https* como prefixo nas URLs.  |
-| type           | string  | Uma das seguintes strings: **Aplicativo** ou **Jogo**.  |
-| dispositivos           |  array  | Uma matriz com uma ou mais das seguintes strings que especifica os tipos de dispositivo que o aplicativo suporta: **Computador**, **Telefone**, **Xbox**, **IoT**, **Servidor** e **Holográfico**.  |
-| platformVersions           | array  |  Uma matriz com uma ou mais das seguintes strings que especifica as plataformas compatíveis com o aplicativo: **Windows.Universal**, **Windows.Windows8x** e **Windows.WindowsPhone8x**.  |
+| iconUrls           | matriz  |  Uma matriz com uma ou mais strings que contêm os caminhos relativos para as URLs de ícone associado ao aplicativo. Para recuperar os ícones, coloque *http* ou *https* como prefixo nos URLs.  |
+| type           | cadeia de caracteres  | Uma das seguintes cadeias de caracteres: **Aplicativo** ou **jogo**.  |
+| dispositivos           |  matriz  | Uma matriz de uma ou mais das seguintes cadeias de caracteres que especificam os tipos de dispositivo que o aplicativo dá suporte a: **PC**, **telefone**, **Xbox**, **IoT**, **servidor**, e **Holographic**.  |
+| platformVersions           | matriz  |  Uma matriz de uma ou mais das seguintes cadeias de caracteres que especificam as plataformas que o aplicativo dá suporte a: **Universal**, **Windows.Windows8x**, e **Windows.WindowsPhone8x**.  |
 | screenshotUrls           | matriz  | Uma matriz com uma ou mais strings que contêm os caminhos relativos para as URLs de captura de tela para este aplicativo. Para recuperar as capturas de tela, coloque *http* ou *https* como prefixo nas URLs.  |
 
 <span/>

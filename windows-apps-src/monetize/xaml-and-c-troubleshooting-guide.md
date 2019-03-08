@@ -7,25 +7,25 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, solução de problemas, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d92795ac7de2ab09fd0b3b86e05aa33669c54dd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941383"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615911"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>Guia de solução de problemas de XAML e C#
 
 Este tópico contém soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos XAML.
 
 * [XAML](#xaml)
-  * [AdControl não aparece](#xaml-notappearing)
+  * [AdControl não aparecem](#xaml-notappearing)
   * [Caixa preta pisca e desaparece](#xaml-blackboxblinksdisappears)
-  * [Anúncios não são atualizados](#xaml-adsnotrefreshing)
+  * [Anúncios não atualizando](#xaml-adsnotrefreshing)
 
 * [C#](#csharp)
-  * [AdControl não aparece](#csharp-adcontrolnotappearing)
+  * [AdControl não aparecem](#csharp-adcontrolnotappearing)
   * [Caixa preta pisca e desaparece](#csharp-blackboxblinksdisappears)
-  * [Anúncios não são atualizados](#csharp-adsnotrefreshing)
+  * [Anúncios não atualizando](#csharp-adsnotrefreshing)
 
 <span id="xaml"/>
 
@@ -37,7 +37,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 1.  Certifique-se de que a funcionalidade **Internet (Client)** esteja selecionada em Package.appxmanifest.
 
-2.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Esses IDs devem coincidir com a ID do aplicativo e a ID da unidade de anúncio que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncios em seu aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+2.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder a ID do aplicativo e a ID de unidade do ad que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -173,7 +173,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
 
-3.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Esses IDs devem coincidir com a ID do aplicativo e a ID da unidade de anúncio que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncios em seu aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+3.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder a ID do aplicativo e a ID de unidade do ad que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs
@@ -240,7 +240,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
     O erro mais comum que causa uma caixa preta é “Nenhum anúncio disponível”. Esse erro significa que não há anúncios disponíveis para serem retornados da solicitação.
 
-3.  **AdControl** está funcionando normalmente. Às vezes, o mesmo anúncio aparecerá mais do que uma vez em uma linha, dando a impressão de que anúncios não estão sendo atualizados.
+3.  O **AdControl** está funcionando normalmente. Às vezes, o mesmo anúncio aparecerá mais do que uma vez em uma linha, dando a impressão de que anúncios não estão sendo atualizados.
 
 <span id="csharp-adsnotrefreshing"/>
 

@@ -1,6 +1,6 @@
 ---
 title: Texturas opacas e Alfa de 1 bit
-description: O formato de textura BC1 destina-se a texturas que são opaca ou que têm uma única cor transparente.
+description: O formato de textura BC1 destina-se a texturas que são opacas ou que têm uma única cor transparente.
 ms.assetid: 8C53ACDD-72ED-4307-B4F3-2FCF9A9F53EC
 keywords:
 - Texturas opacas e Alfa de 1 bit
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4227a3ad77eadaa40e47420a5fdab6d65c875da5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923717"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594001"
 ---
-# <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Texturas opacas e Alfa de 1 bit
+# <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Texturas alfabéticos opacas e 1 bit
 
 
-O formato de textura BC1 destina-se a texturas que são opaca ou que têm uma única cor transparente.
+O formato de textura BC1 destina-se a texturas que são opacas ou que têm uma única cor transparente.
 
 Para cada bloco opaco ou de alfa de 1 bit são armazenados dois valores de 16 bits (formato RGB 5:6:5) e um bitmap de 4 x 4 com 2 bits por pixel. Isso resulta em um total de 64 bits de 16 texels ou quatro bits por texel. No bitmap de bloco, há 2 bits por texel para selecionar entre as quatro cores, dois dos quais são armazenados em dados codificados. As outras duas cores são derivadas dessas cores armazenadas por interpolação linear. Esse layout está ilustrado no diagrama a seguir.
 
@@ -55,7 +55,7 @@ else
 
 É recomendável que você defina os componentes RGBA do pixel transparência como zero antes da mesclagem.
 
-As tabelas a seguir mostram o layout de memória para o bloco de 8 bytes. Presume-se que o primeiro índice corresponde à coordenada y e o segundo à coordenada x. Por exemplo, Texel\[1\]\[2\] refere-se ao pixel de mapa de textura em (x,y) = (2,1).
+As tabelas a seguir mostram o layout de memória para o bloco de 8 bytes. Presume-se que o primeiro índice corresponde à coordenada y e o segundo à coordenada x. Por exemplo, o Texel\[1\]\[2\] refere-se para o pixel de mapa de textura em (x, y) = (2,1).
 
 Este é o layout de memória para o bloco de 8 bytes (64 bits):
 
@@ -68,7 +68,7 @@ Este é o layout de memória para o bloco de 8 bytes (64 bits):
 
  
 
-Cor\_0 e Cor\_1, as cores nos dois extremos, estão dispostas da seguinte maneira:
+Cor\_0 e a cor\_1, as cores nas duas pontas são dispostos da seguinte maneira:
 
 | Bits        | Cor                 |
 |-------------|-----------------------|
@@ -78,9 +78,9 @@ Cor\_0 e Cor\_1, as cores nos dois extremos, estão dispostas da seguinte maneir
 
  
 
-\*bit menos importante
+\*bit menos significativo
 
-Palavra de bitmap\_0 disposto da seguinte forma:
+Palavra de bitmap\_0 são dispostos da seguinte maneira:
 
 | Bits          | Texel           |
 |---------------|-----------------|
@@ -95,9 +95,9 @@ Palavra de bitmap\_0 disposto da seguinte forma:
 
  
 
-\*bit mais importante (MSB)
+\*bit mais significativo (MSB)
 
-Palavra de bitmap\_1 disposto da seguinte forma:
+Palavra de bitmap\_1 são dispostos da seguinte maneira:
 
 | Bits        | Texel           |
 |-------------|-----------------|
@@ -115,7 +115,7 @@ Palavra de bitmap\_1 disposto da seguinte forma:
 ## <a name="span-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanexample-of-opaque-color-encoding"></a><span id="Example_of_Opaque_Color_Encoding"></span><span id="example_of_opaque_color_encoding"></span><span id="EXAMPLE_OF_OPAQUE_COLOR_ENCODING"></span>Exemplo de codificação de cor opaca
 
 
-Como um exemplo de codificação opaca, considere que as cores vermelho e preto são os extremos. Vermelho é cor\_0 e preto é cor\_1. Existem quatro cores interpoladas que formam o gradiente distribuído uniformemente entre elas. Para determinar os valores do bitmap de 4 x 4, os seguintes cálculos são usados:
+Como um exemplo de codificação opaca, considere que as cores vermelho e preto são os extremos. Vermelho é a cor\_0 e o preto é a cor\_1. Existem quatro cores interpoladas que formam o gradiente distribuído uniformemente entre elas. Para determinar os valores do bitmap de 4 x 4, os seguintes cálculos são usados:
 
 ```
 00 ? color_0
@@ -130,7 +130,7 @@ Em seguida, o bitmap se parece com o diagrama a seguir.
 
 Isso é semelhante à seguinte série ilustrada de cores.
 
-**Observação**  em uma imagem, o pixel (0,0) é exibido na parte superior esquerda.
+**Observação**    em uma imagem, o pixel (0,0) é exibida no canto superior esquerdo.
 
  
 
@@ -139,7 +139,7 @@ Isso é semelhante à seguinte série ilustrada de cores.
 ## <a name="span-idexampleof1bitalphaencodingspanspan-idexampleof1bitalphaencodingspanspan-idexampleof1bitalphaencodingspanexample-of-1-bit-alpha-encoding"></a><span id="Example_of_1_Bit_Alpha_Encoding"></span><span id="example_of_1_bit_alpha_encoding"></span><span id="EXAMPLE_OF_1_BIT_ALPHA_ENCODING"></span>Exemplo de codificação alfa de 1 bit
 
 
-Esse formato é selecionado quando o inteiro de 16 bits não designado, cor\_0, for menor do que o inteiro de 16 bits não designado, cor\_1. Um exemplo de onde esse formato pode ser usado é em folhas em uma árvore, mostrado em comparação a um céu azul. Alguns texels pode ser marcados como transparentes enquanto três tons de verde ainda estão disponíveis para as folhas. Duas cores corrigem os extremos e a terceira é uma cor interpolada.
+Esse formato é selecionado quando o inteiro sem sinal de 16 bits, a cor\_0, é menor que o inteiro sem sinal de 16 bits, cor\_1. Um exemplo de onde esse formato pode ser usado é em folhas em uma árvore, mostrado em comparação a um céu azul. Alguns texels pode ser marcados como transparentes enquanto três tons de verde ainda estão disponíveis para as folhas. Duas cores corrigem os extremos e a terceira é uma cor interpolada.
 
 A ilustração a seguir é um exemplo dessa imagem.
 

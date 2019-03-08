@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, controle de anúncio, anúncio nativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 89e9df87cd214d3d03f25c674ec80a73fedf53d6
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045239"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628061"
 ---
 # <a name="native-ads"></a>Anúncios nativos
 
@@ -47,7 +47,7 @@ Siga estas instruções para integrar um anúncio nativo ao seu app e confirme q
 
 5.  Em um local indicado no aplicativo (por exemplo, em ```MainPage``` ou em alguma outra página), declare um objeto [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) e diversos campos da cadeia de caracteres que representam a ID do aplicativo e a ID da unidade de anúncio para o anúncio nativo. O exemplo de código a seguir atribui os campos `myAppId` e `myAdUnitId` aos [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para anúncios nativos.
     > [!NOTE]
-    > Cada **NativeAdsManagerV2** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle de anúncio nativo, e cada unidade de anúncio consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu aplicativo para a loja, você deve [substituir esses valores por valores dinâmicos de teste](#release) do Partner Center.
+    > Cada **NativeAdsManagerV2** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle de anúncio nativo, e cada unidade de anúncio consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu aplicativo para a Store, você deve [substitua esses valores com os valores em tempo real de teste](#release) do Partner Center.
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Variables)]
 
@@ -109,17 +109,17 @@ Depois de confirmar que a implementação do seu anúncio nativo mostra com êxi
 
 1.  Certifique-se de que sua implementação de anúncios nativo segue as [diretrizes para anúncios nativos](ui-and-user-experience-guidelines.md#guidelines-for-native-ads).
 
-2.  No Partner Center, vá para a página de [anúncios no aplicativo](../publish/in-app-ads.md) e [criar uma unidade de anúncio](set-up-ad-units-in-your-app.md#live-ad-units). No tipo de unidade publicitária, especifique **Nativa**. Anote a ID da unidade publicitária e a ID do aplicativo.
+2.  No Partner Center, vá para o [anúncios no aplicativo](../publish/in-app-ads.md) página e [criar uma unidade de anúncio](set-up-ad-units-in-your-app.md#live-ad-units). No tipo de unidade publicitária, especifique **Nativa**. Anote a ID da unidade de anúncio e a ID do aplicativo.
     > [!NOTE]
-    > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Quando você cria uma unidade de publicitária dinâmica UWP no Partner Center, o valor de ID do aplicativo para a unidade publicitária sempre corresponde a ID da loja do aplicativo (um valor de ID da loja de exemplo é semelhante a 9NBLGGH4R315).
+    > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Quando você cria uma unidade de anúncio UWP ao vivo no Partner Center, o valor de ID do aplicativo para a unidade de ad sempre corresponde a ID da Store para seu aplicativo (um valor de ID de Store de exemplo é semelhante 9NBLGGH4R315).
 
 3. Como alternativa, você pode habilitar o controle de anúncios para o anúncio nativo ao definir as configurações na seção [Configurações de controle](../publish/in-app-ads.md#mediation) na página [Anúncios no app](../publish/in-app-ads.md). O controle de anúncio permite que você maximize a receita do anúncio e os recursos de promoção do app ao exibir anúncios de várias redes de anúncios conhecidas.
 
-4.  Em seu código, substitua os valores de unidade de anúncio de teste (ou seja, os *applicationId* e *adUnitId* parâmetros do construtor [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) ) pelos valores dinâmicos gerados no Partner Center.
+4.  No seu código, substitua os valores de unidade do teste ad (ou seja, o *applicationId* e *adUnitId* parâmetros da [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) construtor) com o live valores você gerado no Partner Center.
 
-5.  [Enviar seu aplicativo](../publish/app-submissions.md) para a loja usando o Partner Center.
+5.  [Enviar seu aplicativo](../publish/app-submissions.md) para a Store usando o Partner Center.
 
-6.  Examine os [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no Partner Center.
+6.  Examine sua [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no Partner Center.
 
 ## <a name="manage-ad-units-for-multiple-native-ads-in-your-app"></a>Gerenciar unidades publicitárias para vários anúncios nativos no aplicativo
 
@@ -132,4 +132,4 @@ Você pode usar vários posicionamentos de anúncio nativo em um único aplicati
 
 * [Diretrizes para anúncios nativos](ui-and-user-experience-guidelines.md#guidelines-for-native-ads)
 * [Anúncios no aplicativo](../publish/in-app-ads.md)
-* [Configurar unidades publicitárias para seu app](set-up-ad-units-in-your-app.md)
+* [Configurar unidades de ad para seu aplicativo](set-up-ad-units-in-your-app.md)

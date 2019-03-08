@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e342094509dd5d8fb06657d147ac6468a5f8cd6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926045"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618101"
 ---
 # <a name="media-compositions-and-editing"></a>Composições e edição de mídia
 
@@ -74,7 +74,7 @@ Chame o método **MediaComposition** do objeto [**GeneratePreviewMediaStreamSour
 
 -   O **MediaComposition** deve conter pelo menos um clipe de mídia antes de chamar [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674), ou o objeto retornado será nulo.
 
--   A linha do tempo **MediaElement** não é atualizada automaticamente para refletir as alterações na composição. É recomendável que você chame **GeneratePreviewMediaStreamSource** e defina a propriedade do **MediaPlayerElement**, **Origem**, sempre que fizer um conjunto de alterações na composição e desejar atualizar a interface do usuário.
+-   A linha do tempo **MediaElement** não é atualizada automaticamente para refletir as alterações na composição. É recomendável que você chame ambos **GeneratePreviewMediaStreamSource** e defina as **MediaPlayerElement** **origem** propriedade sempre que você fizer um conjunto de alterações para o composição e quiser atualizar a interface do usuário.
 
 É recomendável que você defina o objeto **MediaStreamSource** e a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) do **MediaPlayerElement** como nula quando o usuário navegar fora da página para liberar os recursos associados.
 
@@ -86,7 +86,7 @@ Para renderizar uma composição de mídia para um arquivo de vídeo simples par
 
 [!code-cs[Namespace2](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace2)]
 
-Depois de permitir que o usuário selecione um arquivo de saída com um [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871), renderize a composição para o arquivo selecionado chamando o objeto **MediaComposition **[**RenderToFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652690). O restante do código no exemplo a seguir simplesmente segue o padrão de manipulação de um [**AsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/desktop/br205807).
+Depois de permitir que o usuário selecione um arquivo de saída com um [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871), renderize a composição para o arquivo selecionado chamando o objeto **MediaComposition** [**RenderToFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652690). O restante do código no exemplo a seguir simplesmente segue o padrão de manipulação de um [**AsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/desktop/br205807).
 
 [!code-cs[RenderCompositionToFile](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetRenderCompositionToFile)]
 
@@ -109,7 +109,7 @@ Para adicionar uma faixa em segundo plano para uma composição, carregue um arq
 
 [!code-cs[AddBackgroundAudioTrack](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetAddBackgroundAudioTrack)]
 
--   Um **MediaComposition** dá suporte a faixas de áudio em segundo plano nos seguintes formatos: MP3, WAV e FLAC
+-   Um **MediaComposition** dá suporte a faixas de áudio nos seguintes formatos de plano de fundo: MP3, WAV, FLAC
 
 -   Uma faixa de áudio em segundo plano
 

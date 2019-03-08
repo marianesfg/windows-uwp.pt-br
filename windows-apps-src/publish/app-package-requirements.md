@@ -1,19 +1,19 @@
 ---
-Description: Follow these guidelines to prepare your app's packages for submission to the Microsoft Store.
-title: Requisitos do pacote do app
+Description: Siga estas diretrizes para preparar os pacotes de seu aplicativo para envio à Microsoft Store.
+title: Requisitos do pacote do aplicativo
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, requisitos do pacote, pacotes, formato de pacote, versão com suporte, enviar
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c04ac5aa12fc67cf911d575540b05f96753519b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927429"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625241"
 ---
-# <a name="app-package-requirements"></a>Requisitos do pacote do app
+# <a name="app-package-requirements"></a>Requisitos do pacote do aplicativo
 
 Siga estas diretrizes para preparar os pacotes de seu aplicativo para envio à Microsoft Store.
 
@@ -30,14 +30,14 @@ Se estiver usando o Microsoft Visual Studio como seu ambiente de desenvolvimento
 
 Quando for criar seu pacote no Visual Studio, certifique-se de estar conectado com a mesma conta associada a sua conta de desenvolvedor. Algumas partes do manifesto do pacote têm detalhes específicos relacionados à sua conta. Essas informações são detectadas e adicionadas automaticamente. Sem as informações adicionais adicionadas ao manifesto, é possível encontrar falhas de carregamento de pacote. 
 
-Quando você compila os pacotes do aplicativo UWP, o Visual Studio pode criar um .msix ou arquivo appx ou um arquivo .msixupload ou. appxupload. Para aplicativos UWP, é recomendável que você sempre carregue o arquivo .msixupload ou. appxupload na página de [pacotes](upload-app-packages.md) . Para obter mais informações sobre como empacotar aplicativos UWP para a Store, consulte [Empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md).
+Quando você cria pacotes UWP do seu aplicativo, o Visual Studio pode criar um .msix ou arquivo appx ou um arquivo. appxupload ou .msixupload. Para aplicativos UWP, é recomendável que você sempre carrega o arquivo .msixupload ou. appxupload na [pacotes](upload-app-packages.md) página. Para obter mais informações sobre como empacotar aplicativos UWP para a Store, consulte [Empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md).
 
 Os pacotes do seu aplicativo não precisam ser assinados com um certificado proveniente de uma autoridade de certificação confiável.
 
 
 ### <a name="app-bundles"></a>Pacotes de aplicativos
 
-Para aplicativos UWP, o Visual Studio pode gerar um lote de aplicativo (.msixbundle ou. appxbundle) para reduzir o tamanho do aplicativo que os usuários baixam. Isso pode ser útil se você definiu ativos específicos de idioma, uma variedade de ativos em escala de imagem ou recursos que se aplicam a versões específicas do Microsoft DirectX.
+Para aplicativos UWP, o Visual Studio pode gerar um pacote de aplicativo (.msixbundle ou. appxbundle) para reduzir o tamanho do aplicativo que os usuários baixam. Isso pode ser útil se você definiu ativos específicos de idioma, uma variedade de ativos em escala de imagem ou recursos que se aplicam a versões específicas do Microsoft DirectX.
 
 > [!NOTE]
 > Um pacote de aplicativos pode conter seus pacotes para todas as arquiteturas.
@@ -54,13 +54,13 @@ Confira a documentação [Manifesto do pacote do aplicativo](https://docs.micros
 Seu manifesto deve incluir algumas informações específicas sobre sua conta e seu aplicativo. Você pode encontrar essa informação em [visualizar detalhes de identidade do aplicativo](view-app-identity-details.md) na seção **Gerenciamento de aplicativo** da página de visão geral do seu aplicativo no painel.
 
 > [!NOTE]
-> Os valores no manifesto diferenciam maiúsculas de minúsculas. Espaços e outros sinais de pontuação também devem coincidir. Insira os valores com cuidado e os revise para garantir que estejam corretos.
+> Valores no manifesto diferenciam maiusculas de minúsculas. Espaços e outros sinais de pontuação também devem corresponder. Insira os valores com cuidado e os revise para garantir que estejam corretos.
 
 
-Pacotes de aplicativos (.msixbundle ou. appxbundle) usam outro manifesto. Confira a documentação [Manifesto do pacote](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para ver os detalhes e requisitos de manifestos de pacotes de aplicativos. Observe que, em um .msixbundle ou. appxbundle, o manifesto de cada pacote incluído deve usar os mesmos elementos e atributos, exceto para o atributo **ProcessorArchitecture** do elemento [identidade](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
+Pacotes de aplicativos (.msixbundle ou. appxbundle) usam um manifesto diferente. Analise a documentação do [Manifesto do pacote](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para obter os detalhes e os requisitos para manifestos de lote de aplicativo. Observe que em um .msixbundle ou. appxbundle, o manifesto de cada pacote incluído deve usar os mesmos elementos e atributos, exceto para o **ProcessorArchitecture** atributo da [identidade](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) elemento.
 
 > [!TIP]
-> Execute o [Kit de Certificação de Aplicativos Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviar seus pacotes. Ele pode ajudar a determinar se o manifesto apresenta algum problema que possa causar falhas na certificação ou no envio.
+> Certifique-se de executar o [Kit de certificação de aplicativos do Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviar seus pacotes. Ele pode ajudar a determinar se o manifesto apresenta algum problema que possa causar falhas na certificação ou no envio.
 
 
 ## <a name="package-format-requirements"></a>Requisitos de formato de pacote
@@ -69,11 +69,11 @@ Os pacotes de seu aplicativo devem atender a estes requisitos.
 
 | Propriedade de pacote de aplicativos | Requisito                                                          |
 |----------------------|----------------------------------------------------------------------|
-| Tamanho do pacote         | .msixbundle ou. appxbundle: máximo de 25 GB por pacote <br>pacotes de .msix ou. AppX voltados para Windows 10:25 máximo GB por pacote<br>Pacotes .appx voltados para Windows 8.1: máximo de 8 GB por pacote <br> Pacotes .appx voltados para Windows 8: máximo de 2 GB por pacote <br> Pacotes .appx para Windows Phone 8.1: máximo de 4 GB por pacote <br> Pacotes .xap: máximo de 1 GB por pacote                                                                           |
+| Tamanho do pacote         | .msixbundle ou. appxbundle: Máximo de 25 GB por pacote <br>pacotes .msix ou. AppX visando o Windows 10: Máximo de 25 GB por pacote<br>. AppX de pacotes de direcionamento do Windows 8.1: Máximo de 8 GB por pacote <br> . AppX de pacotes de direcionamento do Windows 8: Máximo de 2 GB por pacote <br> pacotes. AppX direcionados a Windows Phone 8.1: Máximo de 4 GB por pacote <br> pacotes XAP: Máximo de 1 GB por pacote                                                                           |
 | Hashes do mapa de blocos     | Algoritmo SHA2-256                                                   |
 
 > [!IMPORTANT]
-> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir pacotes que segmentem 8.x/Windows do Windows Phone 8. x ou anterior. Para obter mais informações, consulte esta [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 ## <a name="supported-versions"></a>Versões com suporte
 
@@ -86,7 +86,7 @@ As versões compatíveis atualmente variam de:
 
 ## <a name="storemanifest-xml-file"></a>Arquivo XML StoreManifest
 
-StoreManifest.xml é um arquivo de configuração opcional que pode ser incluído em pacotes de aplicativos. Seu objetivo é habilitar recursos, como declarar seu aplicativo como um aplicativo de dispositivo da Microsoft Store ou declarar que os requisitos dos quais um pacote depende são aplicáveis a um dispositivo, que o manifesto de pacote não abrange. Se usado, storemanifest. XML é enviado com o pacote do aplicativo e deve ser na pasta raiz do projeto principal do seu aplicativo. Para saber mais, consulte [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
+StoreManifest.xml é um arquivo de configuração opcional que pode ser incluído em pacotes de aplicativos. Seu objetivo é habilitar recursos, como declarar seu aplicativo como um aplicativo de dispositivo da Microsoft Store ou declarar que os requisitos dos quais um pacote depende são aplicáveis a um dispositivo, que o manifesto de pacote não abrange. Se usado, o Storemanifest é enviado com o pacote do aplicativo e deve estar na pasta raiz do projeto principal do seu aplicativo. Para saber mais, consulte [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
 
  
 

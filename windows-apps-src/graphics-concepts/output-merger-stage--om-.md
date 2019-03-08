@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 63a77048bed3ad27f2040a672d93380d0250f9aa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929844"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641091"
 ---
 # <a name="output-merger-om-stage"></a>Estágio de fusão de saída (OM)
 
@@ -43,13 +43,13 @@ A mesclagem de função fixa pode ser habilitada independentemente para cada des
 
 Quando você usa destinos de renderização sRGB, o tempo de execução converte a cor do destino de renderização em espaço linear antes de realizar a mesclagem. O tempo de execução converte o valor mesclado final novamente em espaço de sRGB antes de salvar o valor de volta para o destino de renderização.
 
-### <a name="span-iddual-source-color-blendingspanspan-iddual-source-color-blendingspanspan-iddual-source-color-blendingspandual-source-color-blending"></a><span id="Dual-source-color-blending"></span><span id="dual-source-color-blending"></span><span id="DUAL-SOURCE-COLOR-BLENDING"></span>Mescla de cor de fonte de dupla
+### <a name="span-iddual-source-color-blendingspanspan-iddual-source-color-blendingspanspan-iddual-source-color-blendingspandual-source-color-blending"></a><span id="Dual-source-color-blending"></span><span id="dual-source-color-blending"></span><span id="DUAL-SOURCE-COLOR-BLENDING"></span>Cor de fonte dupla de mesclagem
 
 Esse recurso habilita o estágio de fusão de saída para usar simultaneamente ambas as saídas de sombreador de pixel (o0 e o1) como entradas para uma operação de mesclagem com o destino de renderização único no slot 0. As operações de mesclagem válidas incluem: adicionar, subtrair e revsubtract. A equação de mesclagem e a máscara de gravação de saída especificam quais componentes são saída do sombreador de pixel. Componentes adicionais são ignorados.
 
 A gravação para outras saídas de sombreador de pixel (o2, o3, etc.) são indefinidas; você não pode gravar em um destino de renderização não vinculado ao slot 0. Gravar oDepth é válido durante a mesclagem de cor de fonte dupla.
 
-### <a name="span-iddepth-stencil-testspanspan-iddepth-stencil-testspanspan-iddepth-stencil-testspandepth-stencil-testing-overview"></a><span id="Depth-Stencil-Test"></span><span id="depth-stencil-test"></span><span id="DEPTH-STENCIL-TEST"></span>Visão geral de testes de estêncil de profundidade
+### <a name="span-iddepth-stencil-testspanspan-iddepth-stencil-testspanspan-iddepth-stencil-testspandepth-stencil-testing-overview"></a><span id="Depth-Stencil-Test"></span><span id="depth-stencil-test"></span><span id="DEPTH-STENCIL-TEST"></span>Visão geral de teste de estêncil de profundidade
 
 Um buffer de estêncil de profundidade, que é criado como um recurso de textura, pode conter dados de profundidade e dados de estêncil. Os dados de profundidade são usados para determinar quais pixels ficam mais próximos da câmera e os dados de estêncil são usados para mascarar quais pixels podem ser atualizados. Por fim, tanto os dados de valores de profundidade e estêncil são usados pelo estágio de fusão de saída para determinar se um pixel deve ser desenhado ou não. O diagrama a seguir mostra conceitualmente como os testes de estêncil de profundidade são feitos.
 
@@ -65,11 +65,11 @@ Se não houver nenhum componente de estêncil em formato de buffer de profundida
 
 Somente um buffer de profundidade/estêncil pode estar ativo por vez; qualquer modo de exibição de recurso vinculado deve corresponder (mesmos tamanho e dimensões) ao modo de exibição de profundidade/estêncil. Isso não significa que o tamanho do recurso deve corresponder, basta que o tamanho da exibição corresponda.
 
-### <a name="span-idsample-maskspanspan-idsample-maskspanspan-idsample-maskspansample-mask-overview"></a><span id="Sample-Mask"></span><span id="sample-mask"></span><span id="SAMPLE-MASK"></span>Visão geral de máscara de amostra
+### <a name="span-idsample-maskspanspan-idsample-maskspanspan-idsample-maskspansample-mask-overview"></a><span id="Sample-Mask"></span><span id="sample-mask"></span><span id="SAMPLE-MASK"></span>Visão geral de máscara de exemplo
 
 Uma máscara de amostra é uma máscara de cobertura de várias amostras de 32 bits que determina quais amostras são atualizadas em destinos de renderização ativos. Apenas uma máscara de amostra é permitida. O mapeamento de bits em uma máscara de amostra para as amostras em um recurso é definido pelo usuário. Para renderização de n amostras, os primeiros n bits (de LSB) da máscara de amostra são usados (32 bits é o número máximo de bits).
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entrada
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
 
 
 O estágio de fusão de saída (OM) gera a cor de pixel renderizado final usando uma combinação do seguinte:
@@ -86,7 +86,7 @@ O estágio de fusão de saída (OM) gera a cor de pixel renderizado final usando
 
 Use uma máscara de gravação de saída para controlar (por componente) quais dados podem ser gravados em um destino de renderização.
 
-### <a name="span-idmultiple-render-targets-overviewspanspan-idmultiple-render-targets-overviewspanspan-idmultiple-render-targets-overviewspanmultiple-render-targets-overview"></a><span id="Multiple-render-targets-overview"></span><span id="multiple-render-targets-overview"></span><span id="MULTIPLE-RENDER-TARGETS-OVERVIEW"></span>Visão geral de vários destinos de renderização
+### <a name="span-idmultiple-render-targets-overviewspanspan-idmultiple-render-targets-overviewspanspan-idmultiple-render-targets-overviewspanmultiple-render-targets-overview"></a><span id="Multiple-render-targets-overview"></span><span id="multiple-render-targets-overview"></span><span id="MULTIPLE-RENDER-TARGETS-OVERVIEW"></span>Visão geral vários destinos de renderização
 
 Um sombreador de pixel pode ser usado para, no mínimo, 8 destinos de renderização diferentes, e todos devem ser do mesmo tipo (buffer, Texture1D, Texture1DArray e assim por diante). Além disso, todos os destinos de renderização devem ter o mesmo tamanho em todas as dimensões (largura, altura, profundidade, tamanho da matriz, contagens de amostra). Cada destino de renderização pode ter um formato de dados diferente.
 
@@ -108,7 +108,7 @@ Você pode usar qualquer combinação dos slots de destinos de renderização (a
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="configuring-depth-stencil-functionality.md">Configuração da funcionalidade de estêncil de profundidade</a></p></td>
+<td align="left"><p><a href="configuring-depth-stencil-functionality.md">Configurando a funcionalidade de estêncil de profundidade</a></p></td>
 <td align="left"><p>Esta seção abrange as etapas para configurar o buffer de estêncil de profundidade e o estado de estêncil de profundidade para o estágio de fusão de saída.</p></td>
 </tr>
 </tbody>
@@ -119,7 +119,7 @@ Você pode usar qualquer combinação dos slots de destinos de renderização (a
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de elementos gráficos](graphics-pipeline.md)
+[Pipeline de gráficos](graphics-pipeline.md)
 
  
 

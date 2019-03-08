@@ -7,11 +7,11 @@ ms.date: 05/09/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0446269fcbde87dfa25b7bff25f7160335950fba
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928583"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636721"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>Habilitar compras de complementos consumíveis
 
@@ -24,11 +24,11 @@ Este artigo demonstra como usar métodos da classe [StoreContext](https://msdn.m
 
 Os aplicativos podem oferecer dois tipos de complementos consumíveis que variam dependendo da maneira como o atendimento é gerenciado:
 
-* **Consumível gerenciado pelo desenvolvedor**. Para esse tipo de produto consumível, você é responsável por controlar o saldo do usuário de itens do usuário que o complemento representa e por relatar a compra do complemento como providenciada para a Store depois que o usuário consome todos os itens. O usuário não pode comprar o complemento novamente até que seu aplicativo tenha informado a compra anterior do complemento como providenciada.
+* **Consumível gerenciado pelo desenvolvedor**. Para esse tipo de produto consumível, você é responsável por controlar o saldo do usuário de itens do usuário que o complemento representa e por relatar a compra do complemento como providenciada para a Loja depois que o usuário consome todos os itens. O usuário não pode comprar o complemento novamente até que seu aplicativo tenha informado a compra anterior do complemento como providenciada.
 
   Por exemplo, se o seu complemento representar 100 moedas em um jogo e o usuário consumir 10 moedas, seu aplicativo ou o serviço deverá manter o novo saldo restante de 90 moedas para o usuário. Depois que o usuário tiver consumido todas as 100 moedas, seu aplicativo deverá declarar o complemento como providenciado e, em seguida, o usuário poderá comprar o complemento de 100 moedas novamente.
 
-* **Consumível gerenciado pela Store**. Para esse tipo de produto consumível, a Store mantém o controle do saldo de itens do usuário que o complemento representa. Quando o usuário consome todos os itens, você é responsável por relatar esses itens como providenciados para a Store, e a Store atualiza o saldo do usuário. O usuário pode adquirir o complemento quantas vezes desejar (não é necessário consumir os itens primeiro). Seu aplicativo pode consultar o saldo atual na Store para o usuário a qualquer momento.
+* **Consumível gerenciado pela Loja**. Para esse tipo de produto consumível, a Loja mantém o controle do saldo de itens do usuário que o complemento representa. Quando o usuário consome todos os itens, você é responsável por relatar esses itens como providenciados para a Loja, e a Loja atualiza o saldo do usuário. O usuário pode adquirir o complemento quantas vezes desejar (não é necessário consumir os itens primeiro). Seu aplicativo pode consultar o saldo atual na Store para o usuário a qualquer momento.
 
   Por exemplo, se o complemento representar uma quantidade inicial de 100 moedas em um jogo e o usuário consumir 50 moedas, o aplicativo relatará para a Store que 50 unidades do complemento foram providenciadas, e a Store atualizará o saldo restante. Se o usuário comprar o complemento novamente para adquirir mais 100 moedas, ele agora terá 150 moedas no total.
     > [!NOTE]
@@ -39,21 +39,21 @@ Para oferecer um complemento consumível a um usuário, siga este processo geral
 1. Permita que os usuários [comprem o complemento](enable-in-app-purchases-of-apps-and-add-ons.md) do seu aplicativo.
 3. Quando o usuário consumir o complemento (por exemplo, gastar moedas em um jogo), [declare o complemento como providenciado](enable-consumable-add-on-purchases.md#report_fulfilled).
 
-A qualquer momento, você também pode [obter o saldo restante](enable-consumable-add-on-purchases.md#get_balance) de um consumível gerenciado pela Store.
+A qualquer momento, você também pode [obter o saldo restante](enable-consumable-add-on-purchases.md#get_balance) de um consumível gerenciado pela Loja.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Esses exemplos têm os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior.
-* Você tenha [criado um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center e esse aplicativo é publicado na loja. Opcionalmente, é possível configurar o aplicativo para que ele não possa ser descoberto na Microsoft Store enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
-* Você tenha [criado um complemento consumível para o aplicativo](../publish/add-on-submissions.md) no Partner Center.
+* Você tem [criou um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center e esse aplicativo é publicado na Store. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Store enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você tem [criou um complemento consumível para o aplicativo](../publish/add-on-submissions.md) no Partner Center.
 
-O código nestes exemplos pressupõe que:
+O código nestes exemplos pressupõem que:
 * O código seja executado no contexto de uma [Página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contenha um [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` e um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Esses objetos sejam usados para indicar que uma operação assíncrona está ocorrendo e exibir mensagens de saída, respectivamente.
 * O arquivo de código tenha uma instrução **using** para o namespace **Windows.Services.Store**.
 * O aplicativo seja um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md#api_intro).
 
-Para obter um app de exemplo completo, consulte o [exemplo da Store](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Para obter um app de exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 > [!NOTE]
 > Se você tiver um aplicativo da área de trabalho que utilize o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado nesses exemplos para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).
@@ -64,31 +64,31 @@ Para obter um app de exemplo completo, consulte o [exemplo da Store](https://git
 
 Depois que o usuário [comprar o complemento](enable-in-app-purchases-of-apps-and-add-ons.md) do seu aplicativo e ele consumir o complemento, seu aplicativo deverá declarar o complemento como providenciado chamando o método [ReportConsumableFulfillmentAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.reportconsumablefulfillmentasync) da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Você deve passar as seguintes informações para esse método:
 
-* A [ID da Store](in-app-purchases-and-trials.md#store-ids) do complemento que você deseja relatar como providenciado.
+* A [ID da Loja](in-app-purchases-and-trials.md#store-ids) do complemento que você deseja relatar como providenciado.
 * As unidades do complemento a ser relatado como providenciado.
-  * Para um consumível gerenciado pelo desenvolvedor, especifique 1 para o parâmetro *quantity*. Isso alerta a Store que o consumível foi providenciado, e o cliente pode comprar o consumível novamente. O usuário não pode comprar o consumível novamente até que seu aplicativo tenha notificado a Store que ele foi providenciado.
-  * Para um consumível gerenciado pela Store, especifique o número real de unidades que foram consumidas. A Store atualizará o saldo restante do consumível.
+  * Para um consumível gerenciado pelo desenvolvedor, especifique 1 para o parâmetro *quantity*. Isso alerta a Loja que o consumível foi providenciado, e o cliente pode comprar o consumível novamente. O usuário não pode comprar o consumível novamente até que seu aplicativo tenha notificado a Loja que ele foi providenciado.
+  * Para um consumível gerenciado pela Loja, especifique o número real de unidades que foram consumidas. A Loja atualizará o saldo restante do consumível.
 * A ID de rastreamento do atendimento. Trata-se de uma GUID fornecida pelo desenvolvedor que identifica a transação específica à qual a operação de atendimento está associada para fins de controle. Para obter mais informações, consulte os comentários em [ReportConsumableFulfillmentAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.reportconsumablefulfillmentasync).
 
-Este exemplo demonstra como relatar um consumível gerenciado pela Store como providenciado.
+Este exemplo demonstra como relatar um consumível gerenciado pela Loja como providenciado.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/ConsumeAddOnPage.xaml.cs#ConsumeAddOn)]
 
 <span id="get_balance" />
 
-## <a name="get-the-remaining-balance-for-a-store-managed-consumable"></a>Obter o saldo restante de um consumível gerenciado pela Store
+## <a name="get-the-remaining-balance-for-a-store-managed-consumable"></a>Obter o saldo restante de um consumível gerenciado pela Loja
 
-Este exemplo demonstra como usar o método [GetConsumableBalanceRemainingAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getconsumablebalanceremainingasync) da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para obter o saldo restante de um complemento consumível gerenciado pela Store.
+Este exemplo demonstra como usar o método [GetConsumableBalanceRemainingAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getconsumablebalanceremainingasync) da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para obter o saldo restante de um complemento consumível gerenciado pela Loja.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/GetRemainingAddOnBalancePage.xaml.cs#GetRemainingAddOnBalance)]
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md)
-* [Obter informações do produto para apps e complementos](get-product-info-for-apps-and-add-ons.md)
-* [Obter informações de licença para apps e complementos](get-license-info-for-apps-and-add-ons.md)
-* [Habilitar compras nos aplicativos e complementos no aplicativo](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [Compras no aplicativo e avaliação](in-app-purchases-and-trials.md)
+* [Obter informações sobre produtos para os aplicativos e complementos](get-product-info-for-apps-and-add-ons.md)
+* [Obter informações de licença para aplicativos e complementos](get-license-info-for-apps-and-add-ons.md)
+* [Habilitar compras no aplicativo de aplicativos e complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Implementar uma versão de avaliação do seu aplicativo](implement-a-trial-version-of-your-app.md)
-* [Exemplo da Store](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
+* [Exemplo de Store](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)

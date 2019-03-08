@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: fe876b362f09eaca68d84516d413d3f458edf0a6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920047"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603401"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>Descobrir e selecionar as funcionalidades da câmera com perfis de câmera
 
@@ -20,7 +20,7 @@ ms.locfileid: "8920047"
 Este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo. Isso inclui tarefas como selecionar perfis com suporte a resoluções ou taxas de quadro específicos, perfis que dão suporte ao acesso simultâneo a várias câmeras e perfis compatíveis com HDR.
 
 > [!NOTE] 
-> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
+> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que seu aplicativo já tenha uma instância do MediaCapture inicializada corretamente.
 
  
 
@@ -46,7 +46,7 @@ Se a ID do dispositivo retornada do método auxiliar **GetVideoProfileSupportedD
 
 [!code-cs[GetDeviceWithProfileSupport](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetDeviceWithProfileSupport)]
 
-## <a name="select-a-profile-based-on-supported-resolution-and-frame-rate"></a>Selecione um perfil com base na resolução e na taxa de quadros com suporte
+## <a name="select-a-profile-based-on-supported-resolution-and-frame-rate"></a>Selecionar um perfil com base na resolução e na taxa de quadros com suporte
 
 Para selecionar um perfil com determinadas funcionalidades, como a capacidade de alcançar uma determinada resolução e uma taxa de quadros, você deve primeiro chamar o método auxiliar definido acima para obter a ID de um dispositivo de captura que ofereça suporte ao uso de perfil de câmeras.
 
@@ -73,7 +73,7 @@ O método de exemplo abaixo mostra como usar objetos **MediaFrameSourceGroup** p
 > [!NOTE] 
 > As APIs descritas nesta seção foram preteridas a partir do Windows 10, versão 1803. Veja a seção anterior, **Usar grupos de origem de quadro de mídia para obter perfis**.
 
-A seleção de um perfil que ofereça suporte a HDR é feita como a de outros cenários. Criar um **MediaCaptureInitializationSettings** e uma cadeia de caracteres para armazenar a ID do dispositivo de captura. Adicione uma variável booliana que detectará se o vídeo HDR tem suporte.
+A seleção de um perfil que ofereça suporte a HDR é feita como a de outros cenários. Criar uma **MediaCaptureInitializationSettings** e uma cadeia de caracteres para conter a ID do dispositivo de captura. Adicione uma variável booliana que detectará se o vídeo HDR tem suporte.
 
 [!code-cs[GetHdrProfileSetup](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetHdrProfileSetup)]
 
@@ -98,7 +98,7 @@ Você pode refinar essa consulta para procurar perfis com suporte a resoluções
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
-* [Captura básica de fotos, áudio e vídeo com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

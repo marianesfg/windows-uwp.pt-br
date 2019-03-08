@@ -1,24 +1,24 @@
 ---
 title: Introdução ao desenvolvimento de aplicativos seguros do Windows
-description: Este artigo introdutório ajuda arquitetos e desenvolvedores compreendam melhor os vários recursos de plataforma do Windows 10 que aceleram a criação de aplicativos da plataforma Universal do Windows (UWP) seguros.
+description: Este artigo introdutório ajuda arquitetos de aplicativo e os desenvolvedores compreendam melhor as várias funcionalidades de plataforma do Windows 10 que aceleram a criação de aplicativos seguros da plataforma Universal do Windows (UWP).
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c3c57653899ce7d849eec72ad36f14f7806652c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049863"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606511"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Introdução ao desenvolvimento de aplicativos seguros do Windows
 
 
 
 
-Este artigo introdutório ajuda arquitetos e desenvolvedores compreendam melhor os vários recursos de plataforma do Windows 10 que aceleram a criação de aplicativos da plataforma Universal do Windows (UWP) seguros. Ele fornece detalhes sobre como usar os recursos de segurança do Windows disponíveis em cada um dos seguintes estágios: autenticação, dados em voo (data-in-flight) e dados em repouso (data-at-rest). Você pode encontrar informações mais detalhadas sobre cada tópico revisando os recursos adicionais incluídos em cada capítulo.
+Este artigo introdutório ajuda arquitetos de aplicativo e os desenvolvedores compreendam melhor as várias funcionalidades de plataforma do Windows 10 que aceleram a criação de aplicativos seguros da plataforma Universal do Windows (UWP). Ele fornece detalhes sobre como usar os recursos de segurança do Windows disponíveis em cada um dos seguintes estágios: autenticação, dados em voo (data-in-flight) e dados em repouso (data-at-rest). Você pode encontrar informações mais detalhadas sobre cada tópico revisando os recursos adicionais incluídos em cada capítulo.
 
 ## <a name="1-introduction"></a>1 Introdução
 
@@ -75,7 +75,7 @@ Apesar de todas as desvantagens, a autenticação de fator único oferece ao usu
 ## <a name="211-web-authentication-broker"></a>2.1.1 Agente de autenticação na Web
 
 
-Conforme discutido anteriormente, um dos desafios na autenticação de senhas para um departamento de TI é a sobrecarga adicional de gerenciar a base de nomes de usuários/senhas, mecanismos de redefinição etc. Uma opção cada vez mais procurada é o uso de provedores de identidade de terceiros que oferecem autenticação por meio do OAuth, um padrão aberto para autenticação.
+Conforme discutido anteriormente, um dos desafios com autenticação de senha para um departamento de TI é a sobrecarga de gerenciar a base de nomes de usuário/senha, redefinição de mecanismos, etc. Uma opção de cada vez mais popular é contar com provedores de identidade de terceiros que oferecem a autenticação por meio do OAuth, um padrão aberto para autenticação.
 
 Usando o OAuth, os departamentos de TI podem efetivamente "terceirizar" a complexidade de manter um banco de dados com nomes de usuário e senhas, redefinir a funcionalidade de senha etc. para um provedor de identidade de terceiros, como o Facebook, o Twitter ou a Microsoft.
 
@@ -156,7 +156,7 @@ Active Directory do Azure (Azure AD) é um serviço de gerenciamento de identida
 
 Embora o Azure AD também possa implementar a autenticação de fator único, as empresas geralmente exigem a maior segurança da autenticação multifator. Em uma configuração de autenticação multifator, um usuário autenticado com uma conta do Azure AD tem a opção de ter um código de verificação enviado como uma mensagem SMS para o telefone celular ou para o aplicativo Azure Authenticator no aplicativo de celular.
 
-Além disso, o Azure AD pode ser usado como um provedor OAuth, fornecendo ao usuário padrão um mecanismo de autenticação e autorização para aplicativos em várias plataformas. Para saber mais, consulte [Active Directory do Microsoft Azure](https://azure.microsoft.com/services/active-directory/) e [Autenticação multifator no Azure](https://azure.microsoft.com/services/multi-factor-authentication/).
+Além disso, o Azure AD pode ser usado como um provedor OAuth, fornecendo ao usuário padrão um mecanismo de autenticação e autorização para aplicativos em várias plataformas. Para saber mais, consulte [Active Directory do Azure](https://azure.microsoft.com/services/active-directory/) e [Autenticação multifator no Azure](https://azure.microsoft.com/services/multi-factor-authentication/).
 
 ## <a name="24-windows-hello"></a>2.4 Windows Hello
 
@@ -169,7 +169,7 @@ No entanto, o Windows Hello não é apenas uma renovação dos sistemas de 2FA t
 
 Um dispositivo deve ser registrado junto ao Windows Hello para que os usuários possam se autenticar junto a ele. O Windows Hello usa a criptografia assimétrica (chave pública/privada) em que um participante usa uma chave pública para criptografar os dados que a outra parte pode descriptografar usando uma chave privada. No caso do Windows Hello, ele cria um conjunto de pares de chave pública/privada e grava as chaves privadas no chip Trusted Platform Module (TPM) do dispositivo. Após o registro de um dispositivo, os aplicativos UWP (Plataforma Universal do Windows) podem chamar APIs de sistema para recuperar a chave pública do usuário, que pode ser utilizada para registrar o usuário no servidor.
 
-O fluxo de trabalho de registro de um app pode ter a seguinte aparência:
+O fluxo de trabalho de registro de um aplicativo pode ter a seguinte aparência:
 
 ![registro do windows hello](images/secure-passport.png)
 
@@ -192,9 +192,9 @@ Existem dois cenários gerais em que a comunicação ocorre com um sistema de co
 
 Os requisitos de segurança para a comunicação do serviço Web são mais altos do que aqueles ligados diretamente a cenários, pois os dados não são apenas uma parte da rede se segurança e a probabilidade de invasores mal intencionados tentarem interceptar dados também é maior. Como vários tipos de dispositivos acessarão o serviço, eles provavelmente serão compilados como serviços RESTful, em vez de WCF, por exemplo, o que significa que a autenticação e a autorização para o serviço também introduzem novos desafios. Vamos discutir dois requisitos para a comunicação segura do sistema remoto.
 
-O primeiro requisito é a confidencialidade da mensagem: as informações passadas entre o cliente e os serviços Web (por exemplo, a identidade do usuário e outras informações pessoais) não devem ser legíveis por terceiros em trânsito. Isso normalmente é realizado criptografando-se a conexão por meio da qual as mensagens são enviadas e criptografando-se a mensagem propriamente dita. Na criptografia de chaves pública/privada, a chave pública está disponível para qualquer pessoa e é usada para criptografar as mensagens a serem enviadas para um receptor específico. A chave privada só é mantida pelo receptor e é usada para descriptografar a mensagem.
+O primeiro requisito é a confidencialidade da mensagem: As informações transmitidas entre o cliente e os serviços da web (por exemplo, a identidade do usuário e outras informações pessoais) não devem ser lidas por terceiros em trânsito. Isso normalmente é realizado criptografando-se a conexão por meio da qual as mensagens são enviadas e criptografando-se a mensagem propriamente dita. Na criptografia de chaves pública/privada, a chave pública está disponível para qualquer pessoa e é usada para criptografar as mensagens a serem enviadas para um receptor específico. A chave privada só é mantida pelo receptor e é usada para descriptografar a mensagem.
 
-O segundo requisito é a integridade da mensagem: o cliente e o serviço Web devem ser capazes de verificar se as mensagens que eles recebem são aquelas a serem enviadas pela outra parte e se a mensagem não foi alterada em trânsito. Isso é realizado assinando-se mensagens com assinaturas digitais e usando-se a autenticação de certificado.
+O segundo requisito é a integridade da mensagem: O cliente e o serviço web devem ser capazes de verificar se as mensagens recebidas são aqueles que se destina a ser enviada por outra parte, e que a mensagem não foi alterada em trânsito. Isso é realizado assinando-se mensagens com assinaturas digitais e usando-se a autenticação de certificado.
 
 ## <a name="32-ssl-connections"></a>3.2 Conexões SSL
 
@@ -286,7 +286,7 @@ Quando os dados chegam em um dispositivo, nos referimos a eles como "dados em re
 
 Tradicionalmente, o Windows jamais teve uma definição de um aplicativo. Ele era mais conhecido como um executável (.exe), e isso nunca incluiu a instalação, o armazenamento do estado, a duração da execução, o controle de versão, a integração com o SO ou a comunicação de aplicativo para aplicativo. O modelo Plataforma Universal do Windows define um modelo de aplicativo que abrange instalação, ambiente de tempo de execução, gerenciamento de recursos, atualizações, modelo de dados e desinstalação.
 
-Windows 10 são executados em um contêiner, o que significa que eles têm privilégios limitados por padrão (privilégios adicionais podem ser solicitados e concedidos pelo usuário). Por exemplo, se um aplicativo quiser acessar arquivos no sistema, um seletor de arquivos do namespace [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) tem de ser usado para permitir que o usuário selecione um arquivo (sem acesso direto aos arquivos habilitado). Outro exemplo é que se um aplicativo quiser acessar os dados de local do usuário, ele terá que permitir a declaração da capacidade do dispositivo de local, solicitando ao usuário no momento do download que esse aplicativo solicite acesso ao local do usuário. Além disso, na primeira vez que o aplicativo quiser acessar o local do usuário, um prompt de consentimento adicional será mostrado ao usuário, solicitando permissão para acessar os dados.
+Executar aplicativos do Windows 10 em um contêiner, o que significa que eles têm privilégios limitados por padrão (privilégios adicionais podem ser solicitados e concedidos pelo usuário). Por exemplo, se um aplicativo quiser acessar arquivos no sistema, um seletor de arquivos do namespace [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) tem de ser usado para permitir que o usuário selecione um arquivo (sem acesso direto aos arquivos habilitado). Outro exemplo é que se um aplicativo quiser acessar os dados de local do usuário, ele terá que permitir a declaração da capacidade do dispositivo de local, solicitando ao usuário no momento do download que esse aplicativo solicite acesso ao local do usuário. Além disso, na primeira vez que o aplicativo quiser acessar o local do usuário, um prompt de consentimento adicional será mostrado ao usuário, solicitando permissão para acessar os dados.
 
 Observe que esse modelo de aplicativo atua como uma "jaula" para aplicativos, o que significa que eles não podem sair, mas não e um “castelo” que não possa ser acessado do lado de fora (obviamente, os aplicativos com privilégios de administrador ainda podem acessá-los). O Device Guard no Windows 10, que permite que as organizações/TI especifiquem quais aplicativos (Win32) podem ser executados, podem ajudar a limitar esse acesso ainda mais.
 
@@ -294,7 +294,7 @@ O modelo de aplicativo também gerencia o ciclo de vida do aplicativo. Ele limit
 
 Quando faltam recursos de memória no dispositivo, o Windows libera espaço na memória encerrando aplicativos. Esse modelo do ciclo de vida força aplicativos a fechar dados sempre que são suspensos, porque não há mais tempo disponível entre a suspensão e o encerramento.
 
-Para obter mais informações, consulte [É universal: Noções básicas sobre o ciclo de vida de um aplicativo do Windows 10](https://visualstudiomagazine.com/articles/2015/09/01/its-universal.aspx).
+Para obter mais informações, consulte [é Universal: Noções básicas sobre o ciclo de vida de um aplicativo do Windows 10](https://visualstudiomagazine.com/articles/2015/09/01/its-universal.aspx).
 
 ## <a name="42-stored-credential-protection"></a>4.2 Proteção de credencial armazenada
 
@@ -464,14 +464,14 @@ Quando os dados chegam no dispositivo, o modelo de aplicativo do Windows fornece
 -   [Autenticação e identidade do usuário](authentication-and-user-identity.md)
 -   [Windows Hello](microsoft-passport.md)
 -   [Cofre de credenciais](credential-locker.md)
--   [Agente de autenticação Web](web-authentication-broker.md)
--   [Biometria por impressão digital](fingerprint-biometrics.md)
+-   [O Web authentication broker](web-authentication-broker.md)
+-   [Biometria de impressões digitais](fingerprint-biometrics.md)
 -   [Cartões inteligentes](smart-cards.md)
 -   [Certificados compartilhados](share-certificates.md)
 -   [Criptografia](cryptography.md)
 -   [Certificados](certificates.md)
--   [Chaves criptográficas](cryptographic-keys.md)
--   [Proteção de dados](data-protection.md)
+-   [Chaves de criptografia](cryptographic-keys.md)
+-   [proteção de dados](data-protection.md)
 -   [MACs, hashes e assinaturas](macs-hashes-and-signatures.md)
 -   [Restrições de exportação na criptografia](export-restrictions-on-cryptography.md)
 -   [Tarefas comuns de criptografia](common-cryptography-tasks.md)
@@ -479,9 +479,9 @@ Quando os dados chegam no dispositivo, o modelo de aplicativo do Windows fornece
 ### <a name="62-code-samples"></a>6.2 Exemplos de código
 
 -   [Cofre de credenciais](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/PasswordVault)
--   [Seletor de credenciais](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CredentialPicker)
--   [Bloqueio de dispositivo com logon do Azure](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DeviceLockdownAzureLogin)
--   [Proteção de dados empresariais](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/EnterpriseDataProtection)
+-   [Seletor de credencial](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CredentialPicker)
+-   [Bloqueio de dispositivo com o logon do Azure](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DeviceLockdownAzureLogin)
+-   [Proteção de dados corporativos](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/EnterpriseDataProtection)
 -   [KeyCredentialManager](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/KeyCredentialManager)
 -   [Cartões inteligentes](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SmartCard)
 -   [Gerenciamento de contas da Web](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/WebAccountManagement)

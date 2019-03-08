@@ -1,23 +1,23 @@
 ---
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
-description: Este artigo mostra como converter mídia em dispositivos remotos de um aplicativo Universal do Windows.
+description: Este artigo mostra como converter mídia em dispositivos remotos de um aplicativo universal do Windows.
 title: Transmissão de mídia
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e4b794e560c213e5c3796b11dd1a5fd77a98506
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930537"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57619941"
 ---
 # <a name="media-casting"></a>Transmissão de mídia
 
 
 
-Este artigo mostra como converter mídia em dispositivos remotos de um aplicativo Universal do Windows.
+Este artigo mostra como converter mídia em dispositivos remotos de um aplicativo universal do Windows.
 
 ## <a name="built-in-media-casting-with-mediaplayerelement"></a>Transmissão de mídia integrada com o MediaPlayerElement
 
@@ -132,7 +132,7 @@ Quando o usuário seleciona um dos dispositivos de transmissão na caixa de list
 
 Primeiro, verifique se que o inspetor de dispositivos é interrompido para que a enumeração de dispositivo não esteja interferindo na transmissão de mídia. Crie uma conexão de transmissão chamando [**CreateCastingConnection**](https://msdn.microsoft.com/library/windows/apps/dn972547) sobre o objeto **CastingDevice** selecionado pelo usuário. Adicione os manipuladores de eventos para os eventos [**StateChanged**](https://msdn.microsoft.com/library/windows/apps/dn972523) e [**ErrorOccurred**](https://msdn.microsoft.com/library/windows/apps/dn972519).
 
-Inicie a transmissão de mídia chamando [**RequestStartCastingAsync**](https://msdn.microsoft.com/library/windows/apps/dn972520), passando na origem da transmissão retornada pela chamada do método **MediaPlayer** [**GetAsCastingSource**](https://msdn.microsoft.com/library/windows/apps/dn920012). Por fim, torne o botão desconectar visível para permitir que o usuário interrompa a transmissão de mídia.
+Inicie a transmissão de mídia chamando [**RequestStartCastingAsync**](https://msdn.microsoft.com/library/windows/apps/dn972520), passando na origem da transmissão retornada pela chamada do método **MediaPlayer**[**GetAsCastingSource**](https://msdn.microsoft.com/library/windows/apps/dn920012). Por fim, torne o botão desconectar visível para permitir que o usuário interrompa a transmissão de mídia.
 
 [!code-cs[SelectionChanged](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetSelectionChanged)]
 

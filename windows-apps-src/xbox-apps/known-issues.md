@@ -7,17 +7,17 @@ keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
 ms.openlocfilehash: 01bc72051e9efa69adbbab574b932da829c83e72
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046529"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626631"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Problemas conhecidos com o Programa de desenvolvedor UWP no Xbox
 
 Este tópico descreve problemas conhecidos com o Programa de desenvolvedor UWP no Xbox One. Para saber mais sobre esse programa, consulte [UWP no Xbox](index.md). 
 
-\[Se você chegou até aqui a partir de um link em um tópico de referência de API e estiver procurando informações sobre a API da família de dispositivos Universal, consulte [Recursos da UWP que ainda não têm suporte no Xbox](https://go.microsoft.com/fwlink/?LinkID=760755).\]
+\[Se você aqui veio de um link em um tópico de referência de API e está procurando informações de API de famílias de dispositivo Universal, consulte [recursos UWP que ainda não são suportados no Xbox](https://go.microsoft.com/fwlink/?LinkID=760755).\]
 
 A lista a seguir destaca alguns problemas conhecidos que podem ocorrer, embora essa não seja uma lista completa. 
 
@@ -26,7 +26,7 @@ A lista a seguir destaca alguns problemas conhecidos que podem ocorrer, embora e
 Se você se perder, leia as informações neste tópico. Consulte [Perguntas frequentes](frequently-asked-questions.md) e use os fóruns para pedir ajuda.
 
  
-## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>A implantação com base em VS falha com os Controle dos Pais ativado
+## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>A implantação com base em VS falha com os Controles dos Pais ativados
 
 A inicialização do aplicativo com base em VS falhará se o console tiver os Controles dos Pais ativados em Configurações.
 

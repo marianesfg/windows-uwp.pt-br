@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, instalação, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 252d7ccb8e50e773a19282afaf19bb18d4c5d5a6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944580"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608701"
 ---
 # <a name="set-up-the-game-project"></a>Configurar o projeto de jogo
 
@@ -33,13 +33,13 @@ Se você for iniciante no desenvolvimento de UWP (Plataforma Universal do Window
 
 ### <a name="use-directx-template-to-create-a-project"></a>Use o modelo do DirectX para criar um projeto
 
-Um modelo do Visual Studio é uma coleção de configurações e arquivos de código voltados para um tipo específico de aplicativo com base na linguagem e na tecnologia de preferência. No Microsoft Visual Studio2017, você encontrará vários modelos que podem facilitar consideravelmente o desenvolvimento de aplicativos gráficos e jogos. Se você não usar um modelo, será necessário desenvolver grande parte da estrutura básica de exibição e renderização de elementos gráficos por conta própria. Isso pode ser um pouco complexo para um novo desenvolvedor de jogos.
+Um modelo do Visual Studio é uma coleção de configurações e arquivos de código voltados para um tipo específico de aplicativo com base na linguagem e na tecnologia de preferência. Microsoft Visual Studio 2017, você encontrará uma série de modelos que podem facilitar significativamente o desenvolvimento de aplicativos de jogos e elementos gráficos. Se você não usar um modelo, será necessário desenvolver grande parte da estrutura básica de exibição e renderização de elementos gráficos por conta própria. Isso pode ser um pouco complexo para um novo desenvolvedor de jogos.
 
 O modelo usado para este tutorial é chamado **DirectX 11 App (Universal Windows)**. 
 
 Etapas para criar um projeto de jogo em DirectX 11 no Visual Studio:
-1.  Selecione **Arquivo...** &gt; **Novo**  &gt; **Projeto...**
-2.  No painel esquerdo, selecione **Instalado** &gt; **Modelos** &gt; **Visual C++** &gt; **Universal do Windows**
+1.  Selecione **arquivo...** &gt; **Novos** &gt; **projeto...** 
+2.  No painel esquerdo, selecione **Installed** &gt; **modelos** &gt; **Visual C++** &gt; **Universal do Windows**
 3.  No painel central, selecione **Aplicativo DirectX 11 (Universal Windows)**
 4.  Dê um nome ao projeto de jogo e clique em **OK**.
 
@@ -53,7 +53,7 @@ A classe **App** é herdada da classe **IFrameworkView**.
 
 ### <a name="inspect-apph"></a>Inspecione **App.h**.
 
-Vamos analisar rapidamente os 5 métodos em **App.h** &mdash; [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) e [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523) ao implementar a interface [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700469) que define um provedor de visualização. Esses métodos são executados pelo singleton do aplicativo criado quando o jogo é iniciado e carregam todos os recursos de seu aplicativo, além de conectar os manipuladores de eventos adequados.
+Vejamos rapidamente os 5 métodos **App. h** &mdash; [ **inicializar**](https://msdn.microsoft.com/library/windows/apps/hh700495), [ **SetWindow** ](https://msdn.microsoft.com/library/windows/apps/hh700509), [ **Carga**](https://msdn.microsoft.com/library/windows/apps/hh700501), [ **executar**](https://msdn.microsoft.com/library/windows/apps/hh700505), e [ **Cancelar inicialização** ](https://msdn.microsoft.com/library/windows/apps/hh700523) ao implementar o [ **IFrameworkView** ](https://msdn.microsoft.com/library/windows/apps/hh700469) interface que define um provedor de exibição. Esses métodos são executados pelo singleton do aplicativo criado quando o jogo é iniciado e carregam todos os recursos de seu aplicativo, além de conectar os manipuladores de eventos adequados.
 
 ```cpp
     // Main entry point for our app. Connects the app with the Windows shell and handle application lifecycle events.
@@ -118,7 +118,7 @@ void App::Run()
 }
 ```
 
-O que esse método faz: se a janela do jogo não estiver fechada, ocorrerá o envio de todos os eventos, atualização do temporizador e depois renderização/apresentação dos resultados do pipeline de elementos gráficos. Falaremos sobre isso mais detalhadamente em [Definir a estrutura do aplicativo UWP do jogo](tutorial--building-the-games-uwp-app-framework.md), [Estrutura de renderização I: introdução à renderização](tutorial--assembling-the-rendering-pipeline.md) e [Estrutura de renderização II: introdução ao jogo](tutorial-game-rendering.md). A esta altura, você deve ter uma noção da estrutura de código básica de um jogo UWP DirectX.
+O que esse método faz: Se a janela para o seu jogo não é fechada, ele envia todos os eventos, atualiza o temporizador, em seguida, processa e apresenta os resultados do seu pipeline de gráficos. Falaremos sobre isso mais detalhadamente nos [definem a estrutura de aplicativo UWP](tutorial--building-the-games-uwp-app-framework.md), [framework de renderização i: Introdução à renderização](tutorial--assembling-the-rendering-pipeline.md), e [II do framework de renderização: Renderização de jogos](tutorial-game-rendering.md). A esta altura, você deve ter uma noção da estrutura de código básica de um jogo UWP DirectX.
 
 ## <a name="review-and-update-the-packageappxmanifest-file"></a>Examine e atualize o arquivo package.appxmanifest
 

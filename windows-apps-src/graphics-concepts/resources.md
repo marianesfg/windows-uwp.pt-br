@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c31dcbcc3019538d769118b018c693174b17b4c7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922918"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631471"
 ---
 # <a name="resources"></a>Recursos
 
@@ -43,7 +43,7 @@ Uma exibição de recurso fornece um modelo geral para acesso a um recurso (como
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="resource-types.md">Tipos de recurso</a></p></td>
+<td align="left"><p><a href="resource-types.md">Tipos de recursos</a></p></td>
 <td align="left"><p>Diferentes tipos de recursos têm um layout distinto (ou volume de memória). Todos os recursos usados pelo pipeline Direct3D derivam de dois tipos de recurso básicos: <a href="resource-types.md#buffer-resources">buffers</a> e <a href="resource-types.md#texture-resources">texturas</a>. Um buffer é uma coleção de dados brutos (elementos); uma textura é uma coleção de texels (elementos de textura).</p></td>
 </tr>
 <tr class="even">
@@ -51,8 +51,8 @@ Uma exibição de recurso fornece um modelo geral para acesso a um recurso (como
 <td align="left"><p>Um recurso é uma coleção de dados que são usados pelo pipeline de 3D. Criar recursos e definir seu comportamento é o primeiro passo para programar seu app. Este guia aborda tópicos básicos para escolher os recursos exigidos pelo seu app.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="copying-and-accessing-resource-data.md">Copiando e acessando dados de recursos</a></p></td>
-<td align="left"><p>Sinalizadores de uso indicam como o app pretende usar os dados de recurso para colocar os recursos na área mais eficiente de memória possível. Dados de recursos são copiados em todos os recursos para que a CPU ou a GPU possa acessá-los sem afetar o desempenho.</p></td>
+<td align="left"><p><a href="copying-and-accessing-resource-data.md">Copiar e acessar dados de recursos</a></p></td>
+<td align="left"><p>Os sinalizadores de uso indicam como o app pretende usar os dados de recurso, para colocar os recursos na área mais eficiente possível da memória. Os dados de recursos são copiados em todos os recursos para que a CPU ou GPU possa acessá-los sem afetar o desempenho.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="texture-views.md">Exibições de textura</a></p></td>
@@ -68,8 +68,8 @@ Uma exibição de recurso fornece um modelo geral para acesso a um recurso (como
 
 [Sistemas de coordenadas](coordinate-systems.md)
 
-[Guia de aprendizagem de Gráficos do Direct3D](index.md)
+[Guia de aprendizado de gráficos do Direct3D](index.md)
 
-[Regras de ponto flutuante](floating-point-rules.md)
+[Regras de ponto flutuantes](floating-point-rules.md)
 
 [Conversão de tipo de dados](data-type-conversion.md)

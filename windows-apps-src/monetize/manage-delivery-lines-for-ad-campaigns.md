@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
 ms.openlocfilehash: 363f7034d7e353d9ee110637971e7b848dbca1bb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932190"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625631"
 ---
 # <a name="manage-delivery-lines"></a>Gerenciar linhas de entrega
 
@@ -19,7 +19,7 @@ Use esses métodos na API de promoções da Microsoft Store a fim de criar uma o
 
 Para saber mais sobre a relação entre linhas de entrega e campanhas publicitárias, perfis de direcionamento e criativos, consulte [Veicular campanhas publicitárias usando serviços da Microsoft Store](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
 
->**Observação**&nbsp;&nbsp;antes de poder criar linhas de entrega de campanhas publicitárias usando essa API, você deve primeiro [criar uma campanha publicitária usando a página de **campanhas publicitárias** no Partner Center](../publish/create-an-ad-campaign-for-your-app.md)e você deve adicionar pelo menos um pagamento instrumento nesta página. Depois que você fizer isso, é possível criar linhas de entrega faturáveis para campanhas publicitárias usando essa API. Campanhas publicitárias criadas usando a API cobram automaticamente o instrumento de pagamento padrão escolhido na página **campanhas publicitárias** no Partner Center.
+>**Observação**&nbsp;&nbsp;antes de você pode criar linhas de entrega para campanhas publicitárias usando essa API com êxito, você deve primeiro [criar uma campanha de anúncio pago usando o **campanhas publicitárias** página Partner Center](../publish/create-an-ad-campaign-for-your-app.md), e você deve adicionar pelo menos um instrumento de pagamento nesta página. Depois que você fizer isso, é possível criar linhas de entrega faturáveis para campanhas publicitárias usando essa API. Campanhas de anúncios que você cria usando a API cobrará automaticamente o instrumento de pagamento padrão escolhido na **campanhas publicitárias** página no Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -28,9 +28,9 @@ Para usar esses métodos, primeiro você precisa do seguinte:
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](run-ad-campaigns-using-windows-store-services.md#prerequisites) da API de promoções da Microsoft Store.
 
   > [!NOTE]
-  > Como parte dos pré-requisitos, certifique-se que você [criar pelo menos uma campanha publicitária no Partner Center](../publish/create-an-ad-campaign-for-your-app.md) e que você adicionar pelo menos um método de pagamento para a campanha publicitária no Partner Center. Linhas de entrega criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na página **campanhas publicitárias** no Partner Center.
+  > Como parte dos pré-requisitos, certifique-se que você [criar a campanha de anúncio pago pelo menos um no Partner Center](../publish/create-an-ad-campaign-for-your-app.md) e que você adicione pelo menos um instrumento de pagamento para a campanha de anúncio no Partner Center. Linhas de entrega que você cria usando essa API serão cobrada automaticamente o instrumento de pagamento padrão escolhido na **campanhas publicitárias** página no Partner Center.
 
-* [Obtenha um token de acesso do Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+* [Obtenha um token de acesso do Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
 ## <a name="request"></a>Solicitação
 
@@ -47,7 +47,7 @@ Esses métodos têm os seguintes URIs.
 
 | Cabeçalho        | Tipo   | Descrição         |
 |---------------|--------|---------------------|
-| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 | ID de rastreamento   | GUID   | Opcional. Uma ID que rastreia o fluxo de chamada.                                  |
 
 
@@ -138,14 +138,14 @@ O corpo da solicitação e resposta desses métodos contêm os campos a seguir. 
 | Campo        | Tipo   |  Descrição      |  Somente leitura  | Padrão  | Obrigatório para POST/PUT |   
 |--------------|--------|---------------|------|-------------|------------|
 |  id   |  número inteiro   |  A ID da linha de entrega.     |   Sim    |      |  Não      |    
-|  nome   |  cadeia   |   O nome da linha de entrega.    |    Não   |      |  POST     |     
-|  configuredStatus   |  cadeia   |  Um dos seguintes valores que especifica o status da linha de entrega especificada pelo desenvolvedor: <ul><li>**Ativo**</li><li>**Inactive**</li></ul>     |  Não     |      |   POST    |       
-|  effectiveStatus   |  cadeia   |   Um dos seguintes valores que especifica o status eficaz da linha de entrega com base na validação do sistema: <ul><li>**Ativo**</li><li>**Inactive**</li><li>**Processando**</li><li>**Falha**</li></ul>    |    Sim   |      |  Não      |      
+|  name   |  cadeia de caracteres   |   O nome da linha de entrega.    |    Não   |      |  POST     |     
+|  configuredStatus   |  cadeia de caracteres   |  Um dos seguintes valores que especifica o status da linha de entrega especificada pelo desenvolvedor: <ul><li>**Active**</li><li>**inativo**</li></ul>     |  Não     |      |   POST    |       
+|  effectiveStatus   |  cadeia de caracteres   |   Um dos seguintes valores que especifica o status eficaz da linha de entrega com base na validação do sistema: <ul><li>**Active**</li><li>**inativo**</li><li>**Processamento**</li><li>**Falha**</li></ul>    |    Sim   |      |  Não      |      
 |  effectiveStatusReasons   |  matriz   |  Um ou mais dos seguintes valores que especificam o motivo para o status eficaz da linha de entrega: <ul><li>**AdCreativesInactive**</li><li>**ValidationFailed**</li></ul>      |  Sim     |     |    Não    |           
-|  startDatetime   |  cadeia   |  A data e hora de início para a linha de entrega no formato ISO 8601. Esse valor não pode ser alterado se já estiver no passado.     |    Não   |      |    POST, PUT     |
-|  endDatetime   |  cadeia   |  A data e hora de término para a linha de entrega no formato ISO 8601. Esse valor não pode ser alterado se já estiver no passado.     |   Não    |      |  POST, PUT     |
-|  createdDatetime   |  cadeia   |  A data e hora de criação da linha de entrega no formato ISO 8601.      |    Sim   |      |  Não      |
-|  bidType   |  cadeia   |  Um valor que especifica o tipo de lance da linha de entrega. Atualmente, o único valor com suporte é **CPM**.      |    Não   |  CPM    |  Não     |
+|  startDatetime   |  cadeia de caracteres   |  A data e hora de início para a linha de entrega no formato ISO 8601. Esse valor não pode ser alterado se já estiver no passado.     |    Não   |      |    POST, PUT     |
+|  endDatetime   |  cadeia de caracteres   |  A data e hora de término para a linha de entrega no formato ISO 8601. Esse valor não pode ser alterado se já estiver no passado.     |   Não    |      |  POST, PUT     |
+|  createdDatetime   |  cadeia de caracteres   |  A data e hora de criação da linha de entrega no formato ISO 8601.      |    Sim   |      |  Não      |
+|  bidType   |  cadeia de caracteres   |  Um valor que especifica o tipo de lance da linha de entrega. Atualmente, o único valor com suporte é **CPM**.      |    Não   |  CPM    |  Não     |
 |  bidAmount   |  decimal   |  A quantidade do lance a ser usada para qualquer solicitação de anúncio pedida.      |    Não   |  O valor médio de CPM com base nos mercados de destino (esse valor é revisado periodicamente).    |    Não    |  
 |  dailyBudget   |  decimal   |  O orçamento diário da linha de entrega. É necessário definir *dailyBudget* ou *lifetimeBudget*.      |    Não   |      |   POST, PUT (se *lifetimeBudget* não estiver definido)       |
 |  lifetimeBudget   |  decimal   |   O orçamento vitalício da linha de entrega. lifetimeBudget* ou *dailyBudget* devem ser definidos.      |    Não   |      |   POST, PUT (se *dailyBudget* não estiver definido)    |
@@ -153,14 +153,14 @@ O corpo da solicitação e resposta desses métodos contêm os campos a seguir. 
 |  criativos   |  matriz   |  Um ou mais objetos que representam os [criativos](manage-creatives-for-ad-campaigns.md#creative) associados à linha de entrega. Cada objeto nesse campo consiste em um único campo *id* que especifica a ID de um criativo.      |    Não   |      |   Não     |  
 |  campaignId   |  número inteiro   |  A ID da campanha publicitária pai.      |    Não   |      |   Não     |  
 |  minMinutesPerImp   |  número inteiro   |  Especifica o intervalo de tempo mínimo (em minutos) entre duas impressões mostrado para o mesmo usuário dessa linha de entrega.      |    Não   |  4000    |  Não      |  
-|  pacingType   |  cadeia   |  Um dos seguintes valores que especificam o tipo de ritmo: <ul><li>**SpendEvenly**</li><li>**SpendAsFastAsPossible**</li></ul>      |    Não   |  SpendEvenly    |  Não      |
+|  pacingType   |  cadeia de caracteres   |  Um dos seguintes valores que especificam o tipo de ritmo: <ul><li>**SpendEvenly**</li><li>**SpendAsFastAsPossible**</li></ul>      |    Não   |  SpendEvenly    |  Não      |
 |  currencyId   |  número inteiro   |  A ID da moeda da campanha.      |    Sim   |  A moeda da conta de desenvolvedor (você não precisa especificar esse campo nas chamadas POST ou PUT)    |   Não     |      |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Veicular campanhas publicitárias usando os serviços da Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
+* [Executar campanhas publicitárias usando serviços da Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
 * [Gerenciar campanhas publicitárias](manage-ad-campaigns.md)
-* [Gerenciar perfis de direcionamento de campanhas publicitárias](manage-targeting-profiles-for-ad-campaigns.md)
-* [Gerenciar criativos de campanhas publicitárias](manage-creatives-for-ad-campaigns.md)
-* [Obter dados de desempenho da campanha publicitária](get-ad-campaign-performance-data.md)
+* [Gerenciar perfis de direcionamento para campanhas publicitárias](manage-targeting-profiles-for-ad-campaigns.md)
+* [Gerenciar criativos para campanhas publicitárias](manage-creatives-for-ad-campaigns.md)
+* [Obter dados de desempenho de campanha de anúncio](get-ad-campaign-performance-data.md)

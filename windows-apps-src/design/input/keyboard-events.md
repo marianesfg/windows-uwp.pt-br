@@ -1,5 +1,5 @@
 ---
-Description: Respond to keystroke actions from hardware or software keyboards in your apps using both keyboard and class event handlers.
+Description: Responda às ações de pressionamento de tecla de teclados de hardware ou de software nos aplicativos usando o teclado e manipuladores de eventos de classe.
 title: Eventos de teclado
 ms.assetid: ac500772-d6ed-4a3a-825b-210a9c3c8f59
 label: Keyboard events
@@ -13,11 +13,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ff4e7d01d907112558993f52c8a214c91f7d499
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047065"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610451"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -62,7 +62,7 @@ Você pode anexar funções de manipulação de eventos do teclado a qualquer ob
 </Grid>
 ```
 
-Você também pode anexar um manipulador de eventos em código. Para obter mais informações, consulte [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/library/windows/apps/mt185584).
+Você também pode anexar um manipulador de eventos em código. Para saber mais, consulte [Events and routed events overview](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
 ### <a name="defining-a-keyboard-event-handler"></a>Definindo um manipulador de eventos do teclado
 
@@ -94,12 +94,12 @@ void MyProject::MainPage::Grid_KeyUp(
 
 Todos os eventos do teclado usam [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072) para dados de eventos, e **KeyRoutedEventArg** contém as seguintes propriedades:
 
--   [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074)
+-   [**Chave**](https://msdn.microsoft.com/library/windows/apps/hh943074)
 -   [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)
--   [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)
--   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) herdado de [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809))
+-   [**Tratado**](https://msdn.microsoft.com/library/windows/apps/hh943073)
+-   [**OriginalSource** ](https://msdn.microsoft.com/library/windows/apps/br208810) (herdado de [ **RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809))
 
-### <a name="key"></a>Key
+### <a name="key"></a>Chave
 
 O evento [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) será acionado se a tecla for pressionada. Da mesma forma, [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) será acionado se a tecla for liberada. Normalmente, você escuta eventos para processar um valor de tecla específico. Para determinar qual tecla é pressionada ou liberada, verifique o valor de [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) nos dados do evento. **Key** retorna um valor [**VirtualKey**](https://msdn.microsoft.com/library/windows/apps/br241812). A enumeração **VirtualKey** inclui todas as teclas com suporte.
 
@@ -317,7 +317,7 @@ O objetivo da propriedade [**Handled**](https://msdn.microsoft.com/library/windo
 
 ### <a name="addhandler-and-already-handled-keyboard-events"></a>AddHandler e eventos do teclado já manipulados
 
-Você pode usar uma técnica especial para anexar manipuladores que podem atuar em eventos que já estão marcados como manipulados. Essa técnica usa o método [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) para registrar um manipulador, em vez de usar atributos XAML ou sintaxe específica de linguagem para adicionar manipuladores, como += em C\#.
+Você pode usar uma técnica especial para anexar manipuladores que podem atuar em eventos que já estão marcados como manipulados. Essa técnica usa o [ **AddHandler** ](https://msdn.microsoft.com/library/windows/apps/hh702399) método para registrar um manipulador, em vez de usar atributos XAML ou sintaxe específica da linguagem para adicionar manipuladores, como + = em C\#.
 
 Uma limitação geral dessa técnica é que a API **AddHandler** obtém um parâmetro do tipo [**RoutedEvent**](https://msdn.microsoft.com/library/windows/apps/br208808), que identifica o evento roteado em questão. Nem todos os eventos roteados fornecem um identificador **RoutedEvent**, e essa consideração afeta os eventos roteados que podem ainda ser manipulados no caso [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073). Os eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) possuem identificadores de eventos roteados ([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702416) e [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418)) em [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). Contudo, outros eventos, como [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706), não possuem identificadores de eventos roteados e, portanto, não podem ser usados com a técnica **AddHandler**.
 
@@ -325,7 +325,7 @@ Uma limitação geral dessa técnica é que a API **AddHandler** obtém um parâ
 
 Você pode substituir eventos-chave para controles específicos (como [**GridView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridView)) para fornecer navegação de foco consistente para vários dispositivos de entrada, incluindo teclado e gamepad.
 
-No exemplo a seguir, vamos subclasse o controle e substituímos o comportamento de KeyDown para mover o foco para o GridView conteúdo quando qualquer tecla de seta é pressionada.
+No exemplo a seguir, podemos subclasse o controle e substituir o comportamento de KeyDown para mover o foco para o GridView de conteúdo quando qualquer tecla de seta é pressionada.
 
 ```csharp
 public class CustomGridView : GridView
@@ -382,25 +382,25 @@ Você pode tornar a entrada de dados muito mais rápida e fácil para os usuári
 ## <a name="related-articles"></a>Artigos relacionados
 
 **Desenvolvedores**
-* [Interações por teclado](keyboard-interactions.md)
+* [Interações de teclado](keyboard-interactions.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
-* [Responder à presença do teclado virtual](respond-to-the-presence-of-the-touch-keyboard.md)
+* [Responder a presença de teclado de toque](respond-to-the-presence-of-the-touch-keyboard.md)
 
 **Designers**
 * [Diretrizes de design do teclado](https://msdn.microsoft.com/library/windows/apps/hh972345)
 
 **Exemplos**
-* [Amostra de teclado virtual](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Exemplo de teclado de toque](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
+* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Exemplos de arquivo morto**
-* [Amostra de entrada](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: amostra de recursos de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de teclado virtual](https://go.microsoft.com/fwlink/p/?linkid=246019)
-* [Respondendo ao aparecimento da amostra de teclado na tela](https://go.microsoft.com/fwlink/p/?linkid=231633)
-* [Amostra de edição de texto XAML](https://go.microsoft.com/fwlink/p/?LinkID=251417)
+**Exemplos de arquivo-morto**
+* [Exemplo de entrada](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: Exemplo de teclado de toque](https://go.microsoft.com/fwlink/p/?linkid=246019)
+* [Respondendo à aparência do teclado na tela de exemplo](https://go.microsoft.com/fwlink/p/?linkid=231633)
+* [Exemplo de edição de texto XAML](https://go.microsoft.com/fwlink/p/?LinkID=251417)
  
 
  

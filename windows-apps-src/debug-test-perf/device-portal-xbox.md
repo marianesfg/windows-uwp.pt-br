@@ -4,14 +4,14 @@ title: Device Portal para Xbox
 description: Saiba como habilitar o Device Portal para Xbox One.
 ms.date: 02/12/2017
 ms.topic: article
-keywords: Windows 10, uwp, portal de dispositivos
+keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
 ms.openlocfilehash: 42077756beff4269cc91624502fb9958c580bbc0
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047268"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635711"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal para Xbox
 
@@ -21,7 +21,7 @@ As etapas a seguir mostram como habilitar o Portal de Dispositivos do Xbox, que 
 
 1. Abra Início do Desenvolvimento. Isso deve abrir por padrão quando você inicializa o seu Xbox de desenvolvimento, mas você também pode abri-lo na tela inicial.
 
-    ![Início do Desenvolvimento do Portal de Dispositivos](images/device-portal-xbox-1.png)
+    ![DevHome do Device Portal](images/device-portal-xbox-1.png)
 
 2. No Início do Desenvolvimento, na guia **Início**, em **Acesso Remoto**, selecione **Configurações de acesso remoto**.
 
@@ -37,9 +37,9 @@ As etapas a seguir mostram como habilitar o Portal de Dispositivos do Xbox, que 
 
 7. Você receberá um aviso sobre o certificado que foi fornecido, semelhante ao mostrado a seguir. No Edge, clique em **Detalhes** e então em **Ir para a página da Web** para acessar o Portal de Dispositivos do Xbox. Na caixa de diálogo que aparecer, digite o nome de usuário e a senha que você inseriu anteriormente no seu Xbox.
 
-    ![Erro de certificado do Portal de Dispositivos](images/device-portal-xbox-3.png)
+    ![Erro de certificado do Device Portal](images/device-portal-xbox-3.png)
 
-## <a name="device-portal-pages"></a>Páginas do Portal de Dispositivos
+## <a name="device-portal-pages"></a>Páginas do Device Portal
 
 O Portal de Dispositivos Xbox fornece um conjunto padrão de páginas semelhante ao que está disponível no Portal de Dispositivos do Windows, bem como várias páginas que são exclusivas. Para obter descrições detalhadas delas, consulte [Visão geral do Portal de Dispositivos do Windows](device-portal.md). As seções a seguir descrevem as páginas que são exclusivas do Portal de Dispositivos do Xbox.
 
@@ -67,7 +67,7 @@ O Monitor HTTP permite que você veja o tráfego HTTP e HTTPS descriptografado d
 
 Para habilitá-lo, abra o Início do Desenvolvimento no seu Xbox One, vá para a guia **Configurações**, e na caixa **Configurações do Monitor HTTP**, marque **Habilitar Monitor HTTP**.
 
-![Início do Desenvolvimento: Rede](images/device-portal-xbox-14.png)
+![Página inicial do desenvolvimento: Rede](images/device-portal-xbox-14.png)
 
 Uma vez habilitado, no Portal de Dispositivos do Xbox, você pode **Parar**, **Limpar**, e **Salvar para o arquivo** tráfego HTTP e HTTPS, selecionando os respectivos botões.
 
@@ -97,91 +97,91 @@ Há várias seções com diferentes configurações para exibir e/ou editar, que
 
 * **Nome do dispositivo**: O nome do dispositivo. Para editar, altere o nome na caixa e selecione **Salvar**.
 
-* **Versão do SO**: somente leitura. O número da versão do sistema operacional.
+* **Versão do sistema operacional**: Somente leitura. O número da versão do sistema operacional.
 
-* **Edição do SO**: somente leitura. O nome da versão principal do sistema operacional.
+* **Edição do sistema operacional**: Somente leitura. O nome da versão principal do sistema operacional.
 
-* **Identificação do dispositivo Xbox Live**: somente leitura.
+* **Xbox Live ID do dispositivo**: Somente leitura.
 
-* **ID do console**: somente leitura.
+* **ID do console**: Somente leitura.
 
-* **Número de série**: somente leitura.
+* **Número de série**: Somente leitura.
 
-* **Tipo de console**: somente leitura. O tipo de dispositivo Xbox One (Xbox One, Xbox One S ou Xbox One X).
+* **Tipo de console**: Somente leitura. O tipo de dispositivo Xbox One (Xbox One, Xbox One S ou Xbox One X).
 
-* **Modo de Desenvolvedor:** somente leitura. O modo de desenvolvedor em que o dispositivo está.
+* **Modo de desenvolvimento**: Somente leitura. O modo de desenvolvedor em que o dispositivo está.
 
 #### <a name="audio-settings"></a>Configurações de áudio
 
-* **Formato de áudio bitstream**: o formato dos dados de áudio.
+* **Formato de fluxo de bits de áudio**: O formato dos dados de áudio.
 
-* **Áudio HDMI**: o tipo de áudio por meio da porta HDMI.
+* **Áudio HDMI**: O tipo de áudio através da porta HDMI.
 
-* **Formato de Headset**: o formato de áudio que vem por meio de headset.
+* **Formato de fone de ouvido**: O formato de áudio que é fornecida por meio de fones de ouvido.
 
-* **Áudio Óptico**: o tipo de áudio por meio da porta óptica.
+* **Áudio óptico**: O tipo de áudio através da porta óptica.
 
-* **Use HDMI ou headset de áudio óptico**: marque essa caixa se você estiver usando um headset conectado por meio de HDMI ou óptico.
+* **Usar HDMI ou óptica fone de ouvido**: Marque esta caixa se você estiver usando um headset conectado via HDMI ou mídia óptico.
 
 #### <a name="display-settings"></a>Configurações de tela
 
 * **Profundidade de cor**: O número de bits usados para cada componente de cor de um único pixel.
 
-* **Espaço de cores**: A gama de cores disponíveis para a exibição.
+* **Espaço de cores**: A gama de cores disponível para a exibição.
 
-* **Resolução de tela**: A resolução da tela.
+* **Resolução de vídeo**: A resolução da tela.
 
-* **Conexão de tela**: O tipo de conexão para a tela.
+* **Exibir conexão**: O tipo de conexão para a exibição.
 
-* **Permitir alto alcance dinâmico (HDR)**: permite HDR na tela. Disponível somente para as telas compatíveis.
+* **Permitir alta de intervalo dinâmico (HDR)**: Habilita HDR na exibição. Disponível somente para as telas compatíveis.
 
-* **Permitir 4K**: permite a resolução 4K na tela. Disponível somente para as telas compatíveis.
+* **Permitir 4K**: Permite a resolução de 4K no vídeo. Disponível somente para as telas compatíveis.
 
-* **Permitir taxa de atualização variável (VRR)**: Habilitar VRR na tela. Disponível somente para as telas compatíveis.
+* **Permitir que a taxa de atualização de variável (VRR)**: Habilite VRR na exibição. Disponível somente para as telas compatíveis.
 
 #### <a name="kinect-settings"></a>Configurações do Kinect
 
 Um sensor Kinect deve estar conectado ao console para alterar essas configurações.
 
-* **Habilitar Kinect**: permitir o sensor Kinect anexado.
+* **Habilitar o Kinect**: Habilite o sensor Kinect anexado.
 
-* **Forçar recarregamento do Kinect na alteração do aplicativo**: recarregar o sensor Kinect anexado sempre que um aplicativo diferente ou o jogo é executado.
+* **Forçar Kinect Recarregar na alteração de aplicativo**: Recarregue o sensor Kinect anexado sempre que um aplicativo diferente ou um jogo for executado.
 
 #### <a name="localization-settings"></a>Configurações de localização
 
-* **Região geográfica**: A região geográfica para a qual o dispositivo está definido. Deve ser o código de país específico de 2 caracteres (por exemplo, **EUA** para Estados Unidos).
+* **Região geográfica**: A região geográfica que o dispositivo é definido como. Deve ser o código de país específico de 2 caracteres (por exemplo, **EUA** para Estados Unidos).
 
-* **Idiomas de preferência**: O idioma no qual o dispositivo está definido.
+* **Idiomas de preferência**: O idioma que o dispositivo é definido como.
 
-* **Fuso horário**: O fuso horário definido no dispositivo.
+* **Fuso horário**: O fuso horário que o dispositivo é definido como.
 
 #### <a name="network-settings"></a>Configurações de rede
 
-* **Configurações de rádio sem fio**: as configurações sem fio do dispositivo (se determinados aspectos como LAN sem fio estão ativados ou desativados).
+* **Configurações de rádio sem fio**: As configurações sem fio do dispositivo (se determinados aspectos como LAN sem fio são ativado ou desativado).
 
 #### <a name="power-settings"></a>Configurações de Ligar/Desligar
 
-* **Quando estiver ocioso, escurecer a tela após (minutos)**: a tela escurecerá depois que o dispositivo estiver ocioso durante esse período de tempo. Defina como **0** para nunca escurecer a tela.
+* **Quando está ocioso, dim tela após (minutos)**: A tela fica esmaecida depois que o dispositivo estiver ocioso durante esse período de tempo. Defina como **0** para nunca escurecer a tela.
 
-* **Quando estiver ocioso, desligar após**: o dispositivo desligará depois de estar ocioso por esse período de tempo.
+* **Quando está ocioso, desativar após**: O dispositivo será desligado após ele ficar ocioso por essa quantidade de tempo.
 
 * **Modo de energia**: O modo de energia do dispositivo. Consulte [Sobre os modos de economia de energia e instantâneo](https://support.xbox.com/xbox-one/console/learn-about-power-modes) para obter mais informações.
 
-* **Iniciar automaticamente o console quando conectado à alimentação**: O dispositivo ligará automaticamente ao ser conectado a uma fonte de energia.
+* **Automaticamente console de inicialização quando conectado à energia**: O dispositivo será automaticamente ligado quando ele está conectado a uma fonte de alimentação.
 
 #### <a name="preference-settings"></a>Configurações de preferências
 
-* **Experiência padrão da tela inicial**: define qual tela inicial aparece quando o dispositivo é ligado.
+* **Padrão de experiência em casa**: Define qual tela inicial aparece quando o dispositivo for ativado.
 
-* **Permitir conexões do aplicativo Xbox**: o aplicativo Xbox em outro dispositivo (como um computador com Windows 10) pode se conectar a este console.
+* **Permitir conexões do aplicativo do Xbox**: O aplicativo do Xbox em outro dispositivo (como um computador Windows 10) pode se conectar a esse console.
 
-* **Tratar os aplicativos UWP como jogos por padrão**: aplicativos e jogos obtém diferentes recursos alocados a eles no Xbox. Se você marcar essa caixa, todos os pacotes UWP serão identificados como jogos e, portanto, receberão mais recursos.
+* **Tratar os aplicativos UWP como jogos por padrão**: Jogos e aplicativos obtém diferentes recursos alocados para eles no Xbox. Se você marcar essa caixa, todos os pacotes UWP serão identificados como jogos e, portanto, receberão mais recursos.
 
 #### <a name="user-settings"></a>Configurações do usuário
 
-* **Usuário com acesso automático**: inicia a sessão automaticamente para o usuário selecionado quando o dispositivo é ligado.
+* **Automático de usuário que entrou**: Entrar automaticamente no usuário selecionado quando o dispositivo for ativado.
 
-* **Controlador de usuário com acesso automático**: associa automaticamente um tipo de controlador específico a um usuário específico.
+* **Auto logon no controlador de usuário**: Automaticamente associa um tipo de controlador específico a um usuário específico.
 
 #### <a name="xbox-live-sandbox"></a>Área restrita do Xbox Live
 
@@ -193,13 +193,13 @@ Este é um espaço de trabalho em branco, que você pode personalizar de acordo 
 
 ![Adicionar ferramentas ao espaço de trabalho](images/device-portal-xbox-13.png)
 
-### <a name="game-event-data"></a>Dados de evento de jogo
+### <a name="game-event-data"></a>Dados de eventos de jogos
 
-Na página de **dados de evento de jogo** , você pode exibir um gráfico em tempo real que fluxos no número de eventos do jogo rastreamento de eventos para Windows (ETW) atualmente registradas no seu Xbox One. Se houver jogos eventos registrados no sistema, você também pode exibir detalhes (nome do evento, ocorrência de evento e o título de jogo) que descreve cada evento em uma tabela de dados abaixo do gráfico de dados. A tabela só está disponível se não houver eventos registrados.
+Sobre o **dados de eventos de jogos** , você pode exibir um gráfico em tempo real que transmite o número de eventos de jogos Event Tracing for Windows (ETW) atualmente registrados em seu Xbox One. Se não houver eventos de jogos registrados no sistema, você também pode exibir os detalhes (nome do evento, ocorrência de evento e o título do jogo) que descreve cada evento em uma tabela de dados abaixo do gráfico de dados. A tabela só está disponível se não houver eventos registrados.
 
-![Dados de evento de jogo](images/device-portal-xbox-22.PNG)
+![Dados de eventos de jogos](images/device-portal-xbox-22.PNG)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-* [Visão geral do Portal de Dispositivos do Windows](device-portal.md)
-* [Referência de API central do Portal de Dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Visão geral do Windows Device Portal](device-portal.md)
+* [Núcleo do Portal de dispositivo referência de API](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

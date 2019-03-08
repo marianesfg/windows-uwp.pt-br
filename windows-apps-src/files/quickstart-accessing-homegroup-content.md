@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 06c42cff51852f7d0456d533af60455d7d1b9caf
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980294"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613891"
 ---
 # <a name="accessing-homegroup-content"></a>Acessando o conteúdo do Grupo Doméstico
 
@@ -25,22 +25,22 @@ Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo i
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
--   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
+-   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
 
     Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
--   **Declarações de recursos do aplicativo**
+-   **Declarações de capabilty do aplicativo**
 
     Para acessar o conteúdo do Grupo Doméstico, a máquina do usuário deverá ter um Grupo Doméstico configurado e seu aplicativo deve ter pelo menos um dos seguintes recursos: **picturesLibrary**, **musicLibrary** ou **videosLibrary**. Quando seu aplicativo acessar a pasta Grupo Doméstico, ele verá somente as bibliotecas correspondentes aos recursos declarados em seu manifesto do aplicativo. Para saber mais, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
     > [!NOTE]
-    > O conteúdo na biblioteca Documentos de um Grupo Doméstico não fica visível para seu aplicativo independentemente dos recursos declarados em seu manifesto do aplicativo e independente das configurações de compartilhamento do usuário.     
+    > Conteúdo da biblioteca de documentos de um grupo doméstico não está visível para o aplicativo, independentemente dos recursos declarados no manifesto do aplicativo e, independentemente das configurações de compartilhamento do usuário.     
 
--   **Noções básicas para usar seletores de arquivos**
+-   **Entenda como usar o seletor de arquivo**
 
     Normalmente, você usa o seletor de arquivos para acessar arquivos e pastas no Grupo Doméstico. Para saber como usar o seletor de arquivos, consulte [Abrir arquivos e pastas com um seletor](quickstart-using-file-and-folder-pickers.md).
 
--   **Noções básicas sobre consultas de arquivo e pasta**
+-   **Entender as consultas de arquivo e pasta**
 
     Você pode usar consultas para enumerar arquivos e pastas no Grupo Doméstico. Para saber mais sobre as consultas de arquivo e pasta, consulte [Enumerando e consultando arquivos e pastas](quickstart-listing-files-and-folders.md).
 
@@ -61,7 +61,7 @@ Siga essas etapas para abrir uma instancia do seletor de arquivos que permite qu
     picker.FileTypeFilter.Add("*");
     ```
 
-2.  **Mostre o seletor de arquivos e processe o arquivo selecionado.**
+2.  **Mostrar o seletor de arquivos e processar o arquivo separado.**
 
     Depois de criar e personalizar um seletor de arquivos, permita que o usuário selecione um arquivo chamando o [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275)ou vários arquivos chamando o [**FileOpenPicker.PickMultipleFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br207851).
 
@@ -90,7 +90,7 @@ Esta seção mostra como encontrar itens do Grupo Doméstico correspondentes a u
     string queryTerm = this.searchQueryTextBox.Text;    
     ```
 
-2.  **Defina as opções de consulta e o filtro de pesquisa.**
+2.  **Defina as opções de consulta e filtro de pesquisa.**
 
     As opções de consulta determinam como os resultados da pesquisa são classificados, enquanto o filtro de pesquisa determina quais itens são incluídos nos resultados da pesquisa.
 
@@ -104,7 +104,7 @@ Esta seção mostra como encontrar itens do Grupo Doméstico correspondentes a u
             Windows.Storage.KnownFolders.HomeGroup.CreateFileQueryWithOptions(queryOptions);    
     ```
 
-3.  **Execute a consulta e processe os resultados.**
+3.  **Execute a consulta e processar os resultados.**
 
     O exemplo a seguir executa a consulta da pesquisa no Grupo Doméstico e salva os nomes de quaisquer arquivos correspondentes como uma lista de cadeia de caracteres.
     ```cs
@@ -126,7 +126,7 @@ Esta seção mostra como encontrar itens do Grupo Doméstico correspondentes a u
 
 Esta seção mostra a você como encontrar arquivos do Grupo Doméstico compartilhados por um usuário específico.
 
-1.  **Obtenha uma coleção de usuários do Grupo Doméstico.**
+1.  **Obtém uma coleção de usuários do grupo doméstico.**
 
     Cada uma das pastas de primeiro nível no Grupo Doméstico representa um usuário do Grupo Doméstico individual. Assim, para obter a coleção de usuários do Grupo Doméstico, chame [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227279) para recuperar as pastas do Grupo Doméstico de nível superior.
     ```cs
@@ -134,7 +134,7 @@ Esta seção mostra a você como encontrar arquivos do Grupo Doméstico comparti
         await Windows.Storage.KnownFolders.HomeGroup.GetFoldersAsync();    
     ```
 
-2.  **Localize a pasta do usuário de destino e depois crie uma consulta de arquivo de escopo para essa pasta do usuário.**
+2.  **Encontrar a pasta do usuário de destino e, em seguida, crie um arquivo de consulta com escopo para a pasta do usuário.**
 
     O exemplo a seguir interage por meio das pastas recuperadas para localizar a pasta do usuário de destino. Em seguida, ele define as opções de consulta para localizar todos os arquivos na pasta, classificados primeiro por relevância e depois pela data de modificação. O exemplo cria uma cadeia de caracteres que reporta o número de arquivos encontrados, juntamente com os nomes dos arquivos.
     ```cs
@@ -171,7 +171,7 @@ Esta seção mostra a você como encontrar arquivos do Grupo Doméstico comparti
 
 Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Doméstico:
 
-1.  **Incluir um MediaElement em seu aplicativo.**
+1.  **Inclua um MediaElement em seu aplicativo.**
 
     Um [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) permite que você reproduza conteúdo de áudio e vídeo em seu aplicativo. Para saber mais sobre reprodução de áudio e vídeo, consulte [Criar controles personalizados de transporte](https://msdn.microsoft.com/library/windows/apps/mt187271) e [Áudio, vídeo e câmera](https://msdn.microsoft.com/library/windows/apps/mt203788).
     ```HTML
@@ -180,7 +180,7 @@ Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Domés
     </Grid>    
     ```
 
-2.  **Abra um seletor de arquivos no Grupo Doméstico e aplique um filtro que inclua os arquivos de vídeo nos formatos compatíveis com seu aplicativo.**
+2.  **Abra um seletor de arquivos no grupo doméstico e aplicar um filtro que inclui arquivos de vídeo nos formatos que dá suporte a seu aplicativo.**
 
     Este exemplo inclui arquivos .mp4 e .wmv no seletor de arquivos aberto.
     ```cs
@@ -193,7 +193,7 @@ Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Domés
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **Abra a seleção de arquivos do usuário para acesso de leitura e defina o fluxo do arquivo como a origem para o** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)e, em seguida, executar o arquivo.
+3.  **Abrir seleção de arquivo do usuário para acesso de leitura e definir o fluxo de arquivos como a fonte para o** [ **MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926), e, em seguida, executar o arquivo.
     ```cs
     if (file != null)
     {

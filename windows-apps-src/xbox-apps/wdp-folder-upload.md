@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: e1a2c7f0-0040-4ce7-94de-17224736e20b
 ms.localizationpriority: medium
 ms.openlocfilehash: 0805dbeedcf66bc3596f3d284f51e8f177608396
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946171"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617601"
 ---
 # <a name="upload-a-folder-to-the-development-directory"></a>Carregar uma pasta para o diretório de desenvolvimento
 
@@ -23,7 +23,7 @@ Método      | URI da solicitação
 :------     | :------
 POST | /api/app/packagemanager/upload 
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -34,7 +34,7 @@ destinationFolder (obrigatória) | O nome da pasta de destino da pasta a ser car
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Corpo da solicitação**
 

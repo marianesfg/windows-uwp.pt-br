@@ -1,23 +1,23 @@
 ---
 ms.assetid: f54ae666-d609-49d6-90ba-e2e62ebc3652
-description: Saiba mais sobre os tamanhos de anúncios em barra de notificação com suporte.
+description: Saiba mais sobre os tamanhos de anúncios em banner com suporte.
 title: Tamanhos de anúncios de banner compatíveis
 ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, tamanhos, barra de notificação
 ms.localizationpriority: medium
 ms.openlocfilehash: 8cd21be7f0e1f05e1fe4de07053cb18ee5048c6a
-ms.sourcegitcommit: 05335f65dfe497ef4027b7249c0119fc59e355e2
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "8964679"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613841"
 ---
 # <a name="supported-banner-ad-sizes"></a>Tamanhos de anúncios de banner compatíveis
 
-Tamanhos de anúncio em faixa são compatíveis com aplicativos da plataforma Universal do Windows (UWP). Quando você instancia o objeto de **AdControl** em seu aplicativo, verifique se que você definir as propriedades de largura e altura para corresponder a um destes tamanhos com suporte.
+Os seguintes tamanhos de anúncios em faixa têm suporte para aplicativos UWP (Plataforma Universal do Windows). Quando você criar uma instância de sua **AdControl** em seu aplicativo, verifique se você definir as propriedades width e height para corresponder a um desses tamanhos com suporte.
 
-Tamanhos são largura x altura.
+Os tamanhos são largura x altura.
 
 * 160 x 600
 * 300 x 50
@@ -28,9 +28,9 @@ Tamanhos são largura x altura.
 * 728 x 90
 
 > [!NOTE]
-> Para obter a melhor experiência, é recomendável usar os seguintes tamanhos em dispositivos Windows 10 Mobile: 300 x 50, 50 x 320 e 640 x 100.
+> Para obter a melhor experiência, recomendamos o uso dos seguintes tamanhos em dispositivos Windows 10 Mobile: 300 x 50, 320 x 50 e 640 x 100.
 
-A tabela a seguir fornece exemplos que ilustram cada tamanho de anúncio em faixa.
+A tabela a seguir fornece exemplos que ilustram cada tamanho dos anúncios em faixa.
 
 <table>
 <colgroup>

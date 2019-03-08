@@ -1,6 +1,6 @@
 ---
 title: Interações por foco
-Description: Learn how to design and optimize your UWP apps to provide the best experience possible for users who rely on gaze input from eye and head trackers.
+Description: Aprenda a projetar e otimizar seus aplicativos UWP para fornecer a melhor experiência possível para usuários que dependem de olhar entrada de rastreadores de olho e head.
 label: Gaze interactions
 template: detail.hbs
 keywords: foco, rastreamento de olhos, rastreamento de cabeça, ponto de foco, entrada, interação do usuário, acessibilidade, usabilidade
@@ -12,11 +12,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 77e39b9c7440fab491b3d7ef85baa757d299fff8
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058537"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604391"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a>Interações de foco e rastreamento de olhos em aplicativos UWP
 
@@ -36,7 +36,7 @@ A entrada por Foco é maneira eficiente de interagir e usar o Windows e os aplic
 Além disso, a entrada usando o foco oferece oportunidades igualmente atraentes para jogos (incluindo a aquisição do alvo e acompanhamento) e aplicativos de produtividade tradicionais, quiosques e outros cenários interativos onde os dispositivos de entrada tradicionais (teclado, mouse, toque) não estão disponíveis ou onde pode ser útil para liberar as mãos do usuário para outras tarefas (por exemplo, segurar bolsas de compras).
 
 > [!NOTE]
-> O suporte para o hardware de acompanhamento com os olhos foi introduzido no **Windows 10 Fall Creators Update** juntamente com [Controle com os olhos](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control), um recurso interno que permite usar seus olhos para controlar o ponteiro virtual, digitar com o teclado virtual e se comunicar com pessoas usando a conversão de texto em fala. Um conjunto de APIs de UWP ([Devices](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)) para criar aplicativos que podem interagir com o hardware de acompanhamento de olhos está disponível com **Windows 10 de abril de 2018 Update (versão 1803, build 17134)** e mais recente.
+> O suporte para o hardware de acompanhamento com os olhos foi introduzido no **Windows 10 Fall Creators Update** juntamente com [Controle com os olhos](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control), um recurso interno que permite usar seus olhos para controlar o ponteiro virtual, digitar com o teclado virtual e se comunicar com pessoas usando a conversão de texto em fala. Um conjunto de APIs de UWP ([Eye](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)) para a criação de aplicativos que podem interagir com o olho está disponível com o hardware de acompanhamento **Windows 10 de abril de 2018 Update (versão 1803, build 17134)** e mais recente.
 
 ## <a name="privacy"></a>Privacidade
 
@@ -70,9 +70,9 @@ Uma elipse pequena é usada para mostrar onde o ponto de foco está no visor do 
 
 ![Rastreamento de foco com amostra de temporizador](images/gaze/gaze-input-timed2.gif)
 
-*Rastreamento de foco com amostra de temporizador*
+*Mantenha o foco de controle com exemplo de temporizador*
 
-**Baixe esse exemplo em [Exemplo de entrada com foco (básico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)**
+**Baixar esse exemplo no [olhar entrada de exemplo (basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)**
 
 1. Primeiro, configuramos a interface do usuário (MainPage.xaml).
 
@@ -499,9 +499,9 @@ Uma elipse pequena é usada para mostrar onde o ponto de foco está no visor do 
     ```
 6. Por fim, veja os métodos usados para gerenciar o temporizador de foco para este aplicativo.
 
-    `DoesElementContainPoint` verifica se o ponteiro de foco está sobre a barra de progresso. Em caso afirmativo, ele inicia o temporizador de foco e aumenta a barra de progresso a cada tique do temporizador.
+    `DoesElementContainPoint` verifica se o ponteiro de olhar sobre a barra de progresso. Em caso afirmativo, ele inicia o temporizador de foco e aumenta a barra de progresso a cada tique do temporizador.
 
-    `SetGazeTargetLocation` define o local inicial da barra de progresso e, se a barra for concluída (dependendo do temporizador de foco), move a barra de progresso para um local aleatório.
+    `SetGazeTargetLocation` Define o local inicial da barra de progresso e, se a barra de progresso for concluída (dependendo do temporizador de foco de olhar), move a barra de progresso para um local aleatório.
 
     ```csharp
     /// <summary>
@@ -596,12 +596,12 @@ Uma elipse pequena é usada para mostrar onde o ponto de foco está no visor do 
     }
     ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 ### <a name="resources"></a>Recursos
 
-- [Biblioteca de Foco do Kit de Ferramentas da Comunidade do Windows](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/gaze/gazeinteractionlibrary)
+- [Biblioteca de olhares de kit de ferramentas de comunidade do Windows](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/gaze/gazeinteractionlibrary)
 
 ### <a name="topic-samples"></a>Exemplos de tópico
 
-- [Amostra de foco (básico) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)
+- [Mantenha o foco de exemplo (basic) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)

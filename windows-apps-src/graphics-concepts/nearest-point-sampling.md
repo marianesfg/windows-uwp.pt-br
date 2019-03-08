@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 18703a75747e09436e7938e1229dda09cd457fa5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946723"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589841"
 ---
-# <a name="span-iddirect3dconceptsnearest-pointsamplingspannearest-point-sampling"></a><span id="direct3dconcepts.nearest-point_sampling"></span>Exemplo do ponto mais próximo
+# <a name="span-iddirect3dconceptsnearest-pointsamplingspannearest-point-sampling"></a><span id="direct3dconcepts.nearest-point_sampling"></span>Mais próximo ponto de amostragem
 
 
-Os apps não são obrigados a usar filtragem de textura. O Direct3D pode ser configurado para calcular o endereço do texel, que geralmente não é avaliado como inteiro, e copia a cor de texel com o endereço do inteiro mais próximo. Esse processo é chamado de *exemplo do ponto mais próximo*. A amostragem do ponto próximo pode ser uma maneira rápida e eficiente para processar texturas se o tamanho da textura for semelhante ao tamanho da imagem do primitivo na tela. Caso contrário, a textura deve ser ampliada ou minificada. O resultado de incompatibilidade de tamanhos de textura para o tamanho da imagem do primitivo pode ser uma imagem truncada, com alias ou desfocada.
+Os apps não são obrigados a usar filtragem de textura. O Direct3D pode ser definido para calcular o endereço de texel, que geralmente não avalia como inteiros e copia a cor de texel com o endereço inteiro mais próximo. Esse processo é chamado de *amostragem do ponto mais próximo*. A amostragem do ponto próximo pode ser uma maneira rápida e eficiente para processar texturas se o tamanho da textura for semelhante ao tamanho da imagem do primitivo na tela. Caso contrário, a textura deve ser ampliada ou minificada. O resultado de incompatibilidade de tamanhos de textura para o tamanho da imagem do primitivo pode ser uma imagem truncada, com alias ou desfocada.
 
 Use o exemplo do ponto mais próximo com cuidado, pois, às vezes, podem causar artefatos gráficos quando a textura é amostrada com o limite entre os dois texels. Esse limite é a posição ao longo da textura (u ou v) em que as transições de texel amostradas fazem as transições de um texel para o próximo. Quando a amostragem de pontos é usada, o sistema escolhe uma amostra texel ou a outra, e o resultado pode mudar abruptamente de um texel para o outro à medida que o limite é ultrapassado. Esse efeito pode aparecer como artefatos gráficos indesejados na textura exibida. Quando a filtragem linear for usada, o texel resultante é calculado a partir de ambos os texels adjacentes e se combina perfeitamente entre eles à medida que o índice de textura percorre o limite.
 
@@ -27,13 +27,13 @@ Na maioria dos casos, os apps recebem os melhores resultados ao evitar o exemplo
 
 ![ilustração de uma caixa divididas em seções seis com linhas horizontais não contínuas nos dois quadrados superiores à direita](images/ptrtfct.png)
 
-Dois quadrados no canto superior direito do grupo parecem diferentes de seus vizinhos, com deslocamentos diagonais neles. Para evitar artefatos gráficos como estes, você deve estar familiarizado com as regras de amostragem de textura do Direct3D para filtragem do ponto mais próximo. O Direct3D mapeia uma coordenada de textura de ponto flutuante desde \[0,0; 1,0\] (0,0 a 1,0 inclusive) com um valor de espaço de texel inteiro desde \ [- 0,5; n - 0,5\], onde n é o número de texels em uma determinada dimensão na textura. O índice de textura resultante é arredondado para o inteiro mais próximo. Esse mapeamento pode introduzir imprecisões de amostragem nos limites de texel.
+Dois quadrados no canto superior direito do grupo parecem diferentes de seus vizinhos, com deslocamentos diagonais neles. Para evitar artefatos gráficos como estes, você deve estar familiarizado com as regras de amostragem de textura do Direct3D para filtragem do ponto mais próximo. Direct3D mapeia uma coordenada de textura de ponto flutuante que variam de \[0,0, 1,0\] (0,0 a 1,0, inclusive) em um valor de espaço de texel inteiro desde \[ - 0,5, n - 0,5\], onde n é o número de texels em um determinado dimensão de textura. O índice de textura resultante é arredondado para o inteiro mais próximo. Esse mapeamento pode introduzir imprecisões de amostragem nos limites de texel.
 
 Para obter um exemplo simples, imagine um app que renderiza polígonos com o Modo de endereçamento de textura de encapsulamento. Usando o mapeamento empregado por Direct3D, o índice de textura u é mapeado como mostrado no diagrama a seguir para uma textura com 4 texels de largura.
 
 ![diagrama de coordenadas de textura 0,0 e 1,0 no limite entre texels](images/ptsmpprb.png)
 
-As coordenadas de textura 0,0 e 1,0 da ilustração estão exatamente no limite entre texels. Usando o método pelo qual o Direct3D mapeia os valores, as coordenadas de textura variam de \ [- 0,5; 4 - 0,5\], onde 4 é a largura da textura. Nesse caso, a amostra de texel é o texel 0 para um índice de textura de 1,0. No entanto, se a coordenada de textura foi somente um pouco menor do que 1,0, a amostra de texel seria o texel n em vez do texel 0.
+As coordenadas de textura 0,0 e 1,0 da ilustração estão exatamente no limite entre texels. Usando o método pelo qual o Direct3D mapeia os valores, coordenadas de textura variam de \[ - 0,5, 4 - 0,5\], onde 4 é a largura da textura. Nesse caso, a amostra de texel é o texel 0 para um índice de textura de 1,0. No entanto, se a coordenada de textura foi somente um pouco menor do que 1,0, a amostra de texel seria o texel n em vez do texel 0.
 
 A implicação disso é que ao ampliar uma pequena textura usando coordenadas de textura de 0,0 e 1,0 com filtragem de ponto mais próximo ponto triângulo alinhado no espaço da tela resulta em pixels para os quais é feita a amostragem do mapa de textura com o limite entre texels do limite. Qualquer imprecisões no cálculo de coordenadas de textura, porém pequenos, resulta em artefatos ao longo as áreas em que a imagem renderizada que correspondem até as bordas de texel do mapa de textura.
 
