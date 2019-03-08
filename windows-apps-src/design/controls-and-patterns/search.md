@@ -1,5 +1,5 @@
 ---
-Description: Search is one of the top ways users can find content in your app. The guidance in this article covers elements of the search experience, search scopes, implementation, and examples of search in context.
+Description: A pesquisa é uma das principais maneiras para os usuários encontrarem conteúdo em seu aplicativo. As diretrizes neste artigo abordam elementos da experiência de pesquisa, escopos da pesquisa, implementação e exemplos de pesquisa em contexto.
 title: Pesquisar e localizar na página
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
@@ -12,11 +12,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: caf0e8e63716f6ba140ef9346257687f0e7293bb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925262"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631001"
 ---
 # <a name="search-and-find-in-page"></a>Pesquisar e localizar na página
 
@@ -24,26 +24,26 @@ ms.locfileid: "8925262"
 
 A pesquisa é uma das principais maneiras para os usuários encontrarem conteúdo em seu aplicativo. As diretrizes neste artigo abordam elementos da experiência de pesquisa, escopos da pesquisa, implementação e exemplos de pesquisa em contexto.
 
-> **APIs importantes**: [classe AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/dn633874)
+> **APIs importantes**: [Classe AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/dn633874)
 
 ## <a name="elements-of-the-search-experience"></a>Elementos da experiência de pesquisa
 
 
-**Entrada.** é o modo mais comum de entrada de pesquisa de texto e o foco deste guia. Outros modos de entrada comuns incluem voz e câmera, mas eles geralmente exigem a capacidade de interface com o hardware do dispositivo e podem exigir outros controles ou interface do usuário personalizada no aplicativo.
+**Entrada.**    é o modo mais comum de entrada de pesquisa de texto e é o foco deste guia. Outros modos de entrada comuns incluem voz e câmera, mas eles geralmente exigem a capacidade de interface com o hardware do dispositivo e podem exigir outros controles ou interface do usuário personalizada no aplicativo.
 
-**Entrada de zero.** Depois que o usuário tiver ativado o campo de entrada, mas antes do usuário ter inserido texto, você pode exibir o que é chamado uma "tela de entrada zero." A tela de entrada zero normalmente aparecerá na tela do aplicativo para que a [sugestão automática](auto-suggest-box.md) substitua esse conteúdo quando o usuário começar a inserir a consulta. Histórico de pesquisa recente, pesquisas mais populares, sugestões de pesquisa contextual e dicas são todos bons candidatos para o estado de entrada zero.
+**Zero entrada.**    Depois que o usuário ativou o campo de entrada, mas antes que o usuário inseriu texto, você pode exibir o que é chamado uma "zero entrada tela." A tela de entrada zero normalmente aparecerá na tela do aplicativo para que a [sugestão automática](auto-suggest-box.md) substitua esse conteúdo quando o usuário começar a inserir a consulta. Histórico de pesquisa recente, pesquisas mais populares, sugestões de pesquisa contextual e dicas são todos bons candidatos para o estado de entrada zero.
 
 ![exemplo da Cortana em uma tela de entrada zero](images/search-cortana-example.png)
 
  
 
-**Consulta formulação/sugestão automática.** Consulta formulação substitui o conteúdo de entrada zero assim que o usuário começa a inserir a entrada. Conforme o usuário insere uma cadeia de caracteres de consulta, é fornecido um conjunto atualizado continuamente de sugestões de consulta ou opções de desambiguação para ajudar a acelerar o processo de entrada e formular uma consulta eficiente. Esse comportamento de sugestões de consulta é incorporado ao [controle de sugestão automática](auto-suggest-box.md), e também é uma maneira de mostrar o ícone dentro da pesquisa (como um ícone de microfone ou de confirmação). Qualquer comportamento que não se enquadre é atribuído ao aplicativo.
+**Consultar a formulação /-sugestão automática.**    Formulação substitui nenhum conteúdo de entrada, assim que o usuário começa a inserir a entrada de consulta. Conforme o usuário insere uma cadeia de caracteres de consulta, é fornecido um conjunto atualizado continuamente de sugestões de consulta ou opções de desambiguação para ajudar a acelerar o processo de entrada e formular uma consulta eficiente. Esse comportamento de sugestões de consulta é incorporado ao [controle de sugestão automática](auto-suggest-box.md), e também é uma maneira de mostrar o ícone dentro da pesquisa (como um ícone de microfone ou de confirmação). Qualquer comportamento que não se enquadre é atribuído ao aplicativo.
 
 ![example of query/formulation sugestão automática](images/search-autosuggest-example.png)
 
  
 
-**Conjunto de resultados.** Resultados de pesquisa normalmente aparecem diretamente abaixo do campo de entrada de pesquisa. Embora isso não seja um requisito, a justaposição de entrada e resultados mantém o contexto e fornece acesso imediato ao usuário para editar a consulta anterior ou inserir uma nova consulta. Essa conexão pode ser ainda mais comunicada substituindo o texto de dica pela consulta que criou o conjunto de resultados.
+**Conjunto de resultados.**    Os resultados da pesquisa normalmente são exibidos diretamente sob o campo de entrada de pesquisa. Embora isso não seja um requisito, a justaposição de entrada e resultados mantém o contexto e fornece acesso imediato ao usuário para editar a consulta anterior ou inserir uma nova consulta. Essa conexão pode ser ainda mais comunicada substituindo o texto de dica pela consulta que criou o conjunto de resultados.
 
 Um método para permitir acesso eficiente para editar a consulta anterior e inserir uma nova consulta é realçar a consulta anterior quando o campo for reativado. Dessa forma, qualquer pressionamento de tecla substituirá a cadeia de caracteres anterior, mas a cadeia de caracteres será mantida para que o usuário possa posicionar o cursor para editar ou acrescentar a cadeia de caracteres anterior.
 
@@ -56,11 +56,11 @@ A pesquisa é um recurso comum, e os usuários encontrarão interface do usuári
 
 Alguns escopos comuns da pesquisa incluem:
 
-**Global** e **contextual/refinado.** Pesquisa várias origens de nuvem e conteúdo local. Resultados variados incluem URLs, documentos, mídia, ações, aplicativos e muito mais.
+**Global** e **contextuais/refinar.**   Pesquisa em várias fontes de nuvem e locais de conteúdo. Resultados variados incluem URLs, documentos, mídia, ações, aplicativos e muito mais.
 
-**Web.** Pesquisa um índice da web. Os resultados incluem páginas, entidades e respostas.
+**Web.**    Pesquisar um índice de web. Os resultados incluem páginas, entidades e respostas.
 
-**Meu conteúdo.** Pesquisa em todos os dispositivos, nuvem, gráficos de redes sociais e muito mais. Os resultados variam, mas são restringidos pela conexão à(s) conta(s) de usuário.
+**Minhas coisas.**    Pesquisa nos dispositivos, nuvem, gráficos sociais e muito mais. Os resultados variam, mas são restringidos pela conexão à(s) conta(s) de usuário.
 
 Use o texto de dica para comunicar o escopo da pesquisa. Os exemplos incluem:
 
@@ -200,7 +200,7 @@ Localizar na página tem um contador de correspondência:
 
 
 
-## **<a name="implementing-find-in-page"></a>Implementando a localização na página**
+## <a name="implementing-find-in-page"></a>**Implementando a localizar na página**
 
 -   Visualizadores de documentos, leitores e navegadores, os tipos de aplicativo mais prováveis para fornecer localizar na página, permitem que o usuário tenha uma experiência de visualização/leitura em tela inteira.
 -   A funcionalidade de localização na página é secundária e deve estar localizada em uma barra de comando.

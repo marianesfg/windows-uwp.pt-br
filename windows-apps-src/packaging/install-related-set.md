@@ -6,21 +6,21 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais
 ms.localizationpriority: medium
 ms.openlocfilehash: 946c0ae2251d1f75ea250d43881b29b172b9ad1d
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116158"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637141"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>Instalar um conjunto relacionado usando um arquivo do Instalador de Aplicativo
 
 Se você estiver apenas começando com pacotes opcionais UWP ou conjuntos relacionados, os artigos a seguir são bons recursos para começar. 
 
-1.  [Estender seu aplicativo usando pacotes opcionais](https://blogs.msdn.microsoft.com/appinstaller/2017/04/05/uwpoptionalpackages/)
+1.  [Estender seu aplicativo usando os pacotes opcionais](https://blogs.msdn.microsoft.com/appinstaller/2017/04/05/uwpoptionalpackages/)
 2.  [Criar seu primeiro pacote opcional](https://blogs.msdn.microsoft.com/appinstaller/2017/05/09/build-your-first-optional-package/)
 3.  [Código de carregamento de um pacote opcional](https://blogs.msdn.microsoft.com/appinstaller/2017/05/11/loading-code-from-an-optional-package/)
 4.  [Ferramentas para criar um conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/)
-5.  [Criação de pacotes opcionais e conjunto relacionado](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)
+5.  [Criação de conjunto relacionado e pacotes opcionais](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)
 
 Com a atualização do Windows 10 Fall Creators Update, conjuntos relacionados agora podem ser instalados por meio do Instalador de Aplicativo. Isso permite a distribuição e a implantação de pacotes de aplicativos do conjunto relacionado aos usuários. 
 
@@ -86,8 +86,8 @@ O modelo básico inclui as informações de arquivo do Instalador de Aplicativo.
 </AppInstaller>
 ```
 
-### <a name="step-3-add-the-main-package-information"></a>Etapa 3: Adicionar as informações de pacote principal 
-Se o pacote do aplicativo principal for um arquivo. appxbundle ou .msixbundle, em seguida, use o `<MainBundle>` mostrado abaixo. Se o pacote do aplicativo principal for um arquivo. AppX ou .msix, use `<MainPackage>` em vez de `<MainBundle>` no trecho. 
+### <a name="step-3-add-the-main-package-information"></a>Etapa 3: Adicione as informações do pacote principal 
+Se o pacote do aplicativo principal é um arquivo appxbundle ou .msixbundle, em seguida, use o `<MainBundle>` mostrado abaixo. Se o pacote do aplicativo principal é um arquivo. AppX ou .msix, em seguida, use `<MainPackage>` em vez de `<MainBundle>` no trecho de código. 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -106,7 +106,7 @@ Se o pacote do aplicativo principal for um arquivo. appxbundle ou .msixbundle, e
 ```
 As informações no atributo `<MainBundle>` ou `<MainPackage>` devem corresponder ao elemento [Pacote/Identidade](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) no manifesto do lote de aplicativo ou manifesto do conjunto de aplicativo, respectivamente. 
 
-### <a name="step-4-add-the-optional-packages"></a>Etapa 4: Adicionar os pacotes opcionais 
+### <a name="step-4-add-the-optional-packages"></a>Etapa 4: Adicione os pacotes opcionais 
 Semelhante ao atributo de conjunto de aplicativo principal, se o pacote opcional puder ser um conjunto de aplicativo ou um lote do aplicativo, o elemento filho dentro do atributo `<OptionalPackages>` deve ser `<Package>`ou `<Bundle>`, respectivamente. As informações nos elementos filho do pacote devem corresponder ao elemento identidade no manifesto do pacote ou lote. 
 
 ``` xml
@@ -192,7 +192,7 @@ No elemento de dependências, você pode especificar os pacotes de estrutura nec
 </AppInstaller>
 ```
 
-### <a name="step-6-add-update-setting"></a>Etapa 6: Adicionar a configuração de atualização 
+### <a name="step-6-add-update-setting"></a>Etapa 6: Adicionar configuração de atualização 
 O arquivo do Instalador de Aplicativo também pode especificar a configuração de atualização para que os conjuntos relacionados possam ser atualizados automaticamente quando um arquivo mais recente do Instalador de Aplicativo for publicado. **<UpdateSettings>** é um elemento opcional. Dentro de **<UpdateSettings>**, a opção OnLaunch especifica que as verificações de atualização devem ser feitas na inicialização do aplicativo e HoursBetweenUpdateChecks = "12" especifica que uma verificação de atualização deve ser feita a cada 12 horas. Se HoursBetweenUpdateChecks não for especificado, o intervalo padrão usado para verificar se há atualizações será de 24 horas.
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>

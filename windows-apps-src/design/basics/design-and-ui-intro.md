@@ -1,5 +1,5 @@
 ---
-Description: The universal design features included in every UWP app help you build apps that scale beautifully across a range of devices.
+Description: Os recursos de design universal incluídos em cada ajuda de aplicativo UWP que você crie aplicativos que dimensionar perfeitamente em uma variedade de dispositivos.
 title: Introdução ao design de aplicativos UWP (Plataforma Universal do Windows) (aplicativos do Windows)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 ms.date: 05/05/2018
@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 32838e2c3369535928c9e9311f62654eba54e4e0
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058777"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611751"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introdução ao design de aplicativos UWP
 
@@ -24,15 +24,15 @@ Não é uma lista de regras prescritivas – é um documento dinâmico, projetad
 
 Esta introdução fornece uma visão geral dos recursos de design universais que são incluídos em todos os aplicativos UWP, ajudando você a criar interfaces de usuário (UI) que se adequam perfeitamente a vários dispositivos.
 
-## <a name="effective-pixels-and-scaling"></a>dimensionamento e pixels efetivos
+## <a name="effective-pixels-and-scaling"></a>Dimensionamento e pixels eficazes
 
-Aplicativos UWP executados em todos os [dispositivos Windows 10](../devices/index.md), da sua TV ao seu tablet ou computador. Então, como projetar uma interface do usuário que tenha boa aparência em uma ampla variedade de dispositivos e tamanhos de tela?
+Aplicativos UWP são executados em todos os [dispositivos Windows 10](../devices/index.md), da TV tablet ou PC. Então, como você projeta uma interface do usuário que tenha aparência satisfatório em uma ampla variedade de dispositivos e tamanhos de tela?
 
 ![mesmo aplicativo em vários dispositivos](images/universal-image-1.jpg)
 
-UWP ajuda ajustando automaticamente os elementos de interface do usuário para que ele estiverem legível e fácil de interagir com em todos os dispositivos e tamanhos de tela.
+O UWP ajuda ao ajustar automaticamente os elementos de interface do usuário para que fiquem legíveis e interagir facilmente com em todos os dispositivos e tamanhos de tela.
 
-Quando seu aplicativo é executado em um dispositivo, o sistema usa um algoritmo para normalizar a forma como os elementos da interface do usuário são exibidos na tela. Esse algoritmo de dimensionamento leva em conta a distância de visualização e a densidade da tela (pixels por polegada) para otimizar o tamanho percebido (em vez do tamanho físico). O algoritmo de dimensionamento garante que uma fonte de 24 px no Surface Hub a 3 m de distância seja tão legível para o usuário quanto uma fonte de 24 px no telefone de 5" a alguns centímetros de distância.
+Quando seu aplicativo é executado em um dispositivo da plataforma Windows, o sistema usa um algoritmo para normalizar a forma como os os elementos da interface do usuário são exibidos na tela. Esse algoritmo de dimensionamento leva em conta a distância de visualização e a densidade da tela (pixels por polegada) para otimizar o tamanho percebido (em vez do tamanho físico). O algoritmo de dimensionamento garante que uma fonte de 24 px no Surface Hub a 3 m de distância seja tão legível para o usuário quanto uma fonte de 24 px no telefone de 5" a alguns centímetros de distância.
 
 ![distâncias de visualização em diferentes dispositivos](images/scaling-chart.png)
 
@@ -170,12 +170,12 @@ Fornecemos uma variedade de ferramentas para ajudá-lo no processo de projeção
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Designing-Universal-Windows-Platform-apps/player]
 
-## <a name="next-fluent-design-system"></a>A seguir: o Sistema de Design Fluente
+## <a name="next-fluent-design-system"></a>Avançar: Sistema de Design Fluente
 
 Se você quiser saber mais sobre os princípios por trás do Design Fluente (sistema de design da Microsoft) e ver mais recursos que você pode incorporar em seu aplicativo UWP, continue para o [sistema de Design Fluente](../fluent-design-system/index.md).
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [O que é um aplicativo UWP?](../../get-started/universal-application-platform-guide.md)
-- [Sistema de Design Fluente](../fluent-design-system/index.md)
+- [Sistema de Design Fluent](../fluent-design-system/index.md)
 - [Visão geral da plataforma XAML](../../xaml-platform/index.md)

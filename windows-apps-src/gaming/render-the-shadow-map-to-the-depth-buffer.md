@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, renderização, mapa de sombra, buffer de profundidade, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 27cd535dc51a330937c345acf352677a42c652eb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925565"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621331"
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>Renderizar o mapa de sombra para o buffer de profundidade
 
 
 
 
-Faça a renderização do ponto de vista da luz para criar um mapa de profundidade bidimensional que representa o volume de sombra. O mapa de profundidade mascara o espaço que será renderizado com sombras. Parte 2 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
+Faça a renderização do ponto de vista da luz para criar um mapa de profundidade bidimensional que representa o volume de sombra. O mapa de profundidade mascara o espaço que será renderizado com sombras. Parte 2 de [passo a passo: Implementar os volumes de sombra usando buffers de profundidade em Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
 ## <a name="clear-the-depth-buffer"></a>Limpar o buffer de profundidade
 
@@ -125,7 +125,7 @@ void ShadowSceneRenderer::RenderShadowMap()
 }
 ```
 
-**Otimizar o tronco de exibição:** garanta que a implementação calcule um tronco de exibição firme, para obter o máximo de precisão com o buffer de profundidade. Consulte as [técnicas comuns para melhorar mapas de profundidade de sombra](https://msdn.microsoft.com/library/windows/desktop/ee416324) para conhecer mais dicas sobre técnicas de sombreamento.
+**Otimize o frustum do modo de exibição:**  Certifique-se de que sua implementação calcula um frustum estreito do modo de exibição para que você obtenha mais precisão de seu buffer de profundidade. Consulte as [técnicas comuns para melhorar mapas de profundidade de sombra](https://msdn.microsoft.com/library/windows/desktop/ee416324) para conhecer mais dicas sobre técnicas de sombreamento.
 
 ## <a name="vertex-shader-for-shadow-pass"></a>Sombreador de vértice para passagem de sombra
 

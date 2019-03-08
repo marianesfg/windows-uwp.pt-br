@@ -1,17 +1,17 @@
 ---
-Description: The Payout summary shows you details about the money you’ve earned with your apps and add-ons. It also lets you know when you’ll receive payments and how much you'll be paid.
-title: Resumo de pagamentos
+Description: O Resumo de pagamentos mostra detalhes do dinheiro que você ganhou com os seus aplicativos e complementos. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
+title: Resumo do pagamento
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, resumo de pagamentos, extrato, pagamentos, lucros, pagamentos, pagamento, receita
 ms.localizationpriority: medium
 ms.openlocfilehash: e9ab2d2d096c6c0a639a831bb7d09f6d1d044a0c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046236"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57629731"
 ---
 # <a name="payout-summary"></a>Resumo do pagamento
 
@@ -25,15 +25,15 @@ Se você vender produtos no Azure Marketplace, também verá informações sobre
 > [!NOTE]
 > Para se qualificar ao pagamento, sua receita deve atingir o [limite de pagamentos](payment-thresholds-methods-and-timeframes.md) aplicável. Se a receita for inferior ao limite de pagamento, ela permanecerá na categoria **Reservado** até que o limite seja atingido. Para obter mais detalhes sobre o limite de pagamento para receita do aplicativo, consulte o [Contrato de Desenvolvedor de Aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Para receita gerada por anúncios, o limite de pagamento é US$ 50 (ou o equivalente em moeda local). 
 >
-> Os pagamentos são feitos mensalmente (desde que tenha sido atingido um limite de pagamento aplicável). Normalmente, enviaremos qualquer pagamento devido em um determinado mês até o 15º dia do mês. Observe que os pagamentos geralmente levam entre 3 e 10 dias úteis adicionais para alcançar sua conta de pagamento. Para obter mais informações, consulte [Limites, métodos e períodos de pagamento](payment-thresholds-methods-and-timeframes.md).
+> Os pagamentos são feitos mensalmente (desde que tenha sido atingido um limite de pagamento aplicável). Normalmente, enviaremos qualquer pagamento devido em um determinado mês até o 15º dia do mês. Observe que os pagamentos geralmente levam entre 3 e 10 dias úteis adicionais para alcançar sua conta de pagamento. Para obter mais informações, consulte [Limites, métodos e prazos de pagamento](payment-thresholds-methods-and-timeframes.md).
 
-Para exibir seu **Resumo de pagamentos**, clique no ícone de **pagamento** que aparece próximo ao canto superior direito no Partner Center e selecione **Resumo de pagamentos**.
+Para exibir sua **resumo de pagamento**, clique no **pagamento** ícone que aparece próximo ao canto superior direito no Partner Center, em seguida, selecione **resumo do pagamento**.
 
 ## <a name="current-proceeds-and-payments"></a>Receita e pagamentos atuais
 
-Próximo ao topo da página, você encontrará **Receita e pagamentos atuais**, que contém três seções: **Reservado**, **Pagamentos futuros** e **Pagamento mais recente**.
+Próximo à parte superior da página, você encontrará sua **prossegue atual e pagamentos**, que contém três seções: **Reservado**, **futuros pagamentos**, e **pagamento mais recente**.
 
--   **Reservado** mostra a quantidade de dinheiro que sua conta acumulou, mas que ainda não foi agendada para pagamento, incluindo receita de publicidade. (a receita do Azure Marketplace não aparece na seção **Reservado**; se você apenas participar do Azure Marketplace, verá US$ 0,00 aqui). A receita do seu anúncio mais recente e as vendas de aplicativo permanecem em um estado pendente por cerca de 30 dias antes de se tornarem qualificadas para pagamento. Depois disso, a receita será programada para pagamento no mês seguinte (supondo que o [limite de pagamento](payment-thresholds-methods-and-timeframes.md) foi atingido). Quando se tenta fazer um pagamento, o valor do pagamento é diminuído do o saldo reservado, e você vê o valor refletido em **Próximo pagamento**. Observe que o valor mostrado em **Reservado** é uma estimativa, porque as taxas de câmbio para vendas em outras moedas podem flutuar antes da geração do pagamento. Você pode notar que seu saldo reservado muda um pouco no início de cada mês. Seu saldo reservado é atualizado mensalmente para refletir as taxas de câmbio mensais, de modo que ele represente uma estimativa mais precisa. Você pode clicar em **Exibir detalhes** para ver informações adicionais ou no link **Baixar as transações reservadas** para exibir um arquivo .csv de todas as suas transações **Reservadas**.
+-   **Reservado** mostra a quantidade de dinheiro que sua conta acumulou, mas que ainda não foi agendada para pagamento, incluindo receita de publicidade. (Receita do Marketplace do azure não aparecem na **reservado** seção; se você participar apenas no Azure Marketplace, você verá $0,00 aqui.) Continua a partir de seu aplicativo mais recente vendas permanecem em um estado pendente por cerca de 30 dias antes que eles se tornarão elegíveis para pagamento. Depois disso, a receita será programada para pagamento no mês seguinte (supondo que o [limite de pagamento](payment-thresholds-methods-and-timeframes.md) foi atingido). Quando se tenta fazer um pagamento, o valor do pagamento é diminuído do o saldo reservado, e você vê o valor refletido em **Próximo pagamento**. Observe que o valor mostrado em **Reservado** é uma estimativa, porque as taxas de câmbio para vendas em outras moedas podem flutuar antes da geração do pagamento. Você pode notar que seu saldo reservado muda um pouco no início de cada mês. Seu saldo reservado é atualizado mensalmente para refletir as taxas de câmbio mensais, de modo que ele represente uma estimativa mais precisa. Você pode clicar em **Exibir detalhes** para ver informações adicionais ou no link **Baixar as transações reservadas** para exibir um arquivo .csv de todas as suas transações **Reservadas**.
 -   **Pagamentos futuros** mostra o número de pagamentos futuros, o valor do(s) próximo(s) pagamento(s) e a(s) data(s) de criação do pagamento. Se a receita qualificada ainda não tiver alcançado o [limite de pagamento](payment-thresholds-methods-and-timeframes.md), nenhum pagamento futuro será mostrado aqui. Selecione **Exibir detalhes** para ver informações adicionais, incluindo os valores dos pagamentos e os respectivos códigos de receita. Quando um valor for mostrado na seção **Pagamento futuro**, você verá um link temporário para **Baixar transações**.  Se clicar no link, você poderá exibir um arquivo .csv de todas as transações que constituem os pagamentos futuros.  Observação: quando o valor **Pagamento futuro** passar para **Pagamento mais recente**, o link **Baixar transações** deixará de ser exibido.
 -   **Pagamento mais recente** mostra o valor da última tentativa de pagamento. Se o pagamento foi bem-sucedido, o link **Exibir detalhes** estará azul, e você pode clicar nele para ver os detalhes de cada pagamento. Observe que se tentarmos fazer vários pagamentos e apenas um deles for bem-sucedido, apenas o valor do pagamento bem-sucedido será mostrado aqui. Se ocorrer falha em um ou mais pagamentos, o link **Exibir detalhes** estará vermelho e o número de pagamentos com falha serão exibidos. Você pode clicar em **Exibir detalhes** para ver mais detalhes sobre o problema a fim de corrigir a situação.
 
@@ -55,7 +55,7 @@ Abaixo da seção **Total pago até a data**, você verá seus três últimos de
 
 Na parte superior de cada demonstrativo, você verá o valor total de seu pagamento mensal. Logo abaixo, na área de **pagamentos efetuados**, você verá um resumo da forma como o valor dos pagamentos foi calculado.
 
-Abaixo, na seção **Divisão de receitas**, você pode ver detalhes sobre quanto dinheiro foi ganho por mercado e por fonte de receita (por exemplo, Microsoft Store, Windows Store 8, Loja do Windows Phone etc.) por app. Você também verá detalhes sobre todos os [ajustes](#proceeds-by-app-and-adjustments) feitos, inclusive a data, o valor e o motivo do ajuste.
+Abaixo, na seção **Divisão de receitas**, você pode ver detalhes sobre quanto dinheiro foi ganho por mercado e por fonte de receita (por exemplo, Microsoft Store, Windows Store 8, Loja do Windows Phone etc.) por app. Você também verá detalhes sobre quaisquer [ajustes](#proceeds-by-app-and-adjustments) feitos, inclusive a data, o valor e o motivo do ajuste.
 
 As seções mencionadas acima mostram apenas informações sobre sua receita (e ajustes) de vendas do aplicativo. Se ganhar dinheiro com publicidade, você verá uma seção separada da Microsoft Advertising com detalhes sobre os pagamentos e as conversões de moeda.
 
@@ -84,9 +84,9 @@ A tabela a seguir descreve os campos que aparecem no arquivo .csv. Observe que o
 | ID da transação          |       Identificador exclusivo da transação.  |
 | Data/hora da transação   | A data e a hora em que a transação ocorreu (UTC).                                                                                        |
 | ID do Produto (Product ID) pai       | Identificador exclusivo do produto pai. Observação: se não houver um produto pai para a transação, então ID do produto pai = ID do produto (Product ID). |
-| ID do Produto (Product ID)              | Identificador exclusivo do produto.                                                                                                               |
+| ID do Produto              | Identificador exclusivo do produto.                                                                                                               |
 | Nome do produto pai     | Nome do produto pai. Observação: se não houver um produto pai para a transação, então Nome do produto pai = Nome do produto.   |
-| Nome do produto            | Nome do produto.                                                                                                                     |
+| Nome do Produto            | Nome do produto.                                                                                                                     |
 | Tipo do Produto            | Tipo de produto (por exemplo, app, complemento, jogo, etc.)                                                                                        |
 | Quantidade                | Quando a fonte de receita é a Microsoft Store para Empresas, a quantidade representa o número de licenças adquiridas. Para todas as outras fontes de receita, a quantidade sempre será 1. Observação: mesmo quando uma única transação é dividida em dois itens de linha porque foram usados dois métodos de pagamento diferentes, cada item de linha mostrará uma quantidade de 1.    |
 | Tipo de transação        | Tipo de transação (por exemplo, compra, reembolso, estorno, etc.)                                                                |

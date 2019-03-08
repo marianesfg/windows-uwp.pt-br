@@ -7,11 +7,11 @@ ms.assetid: 43ffd28c-c4df-405c-bf5c-29c94e0d142b
 keywords: windows 10, uwp, temporizador, threads
 ms.localizationpriority: medium
 ms.openlocfilehash: f11207a774b1ffcebde95e316634592020e6ed49
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058497"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631211"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usando objetos do Windows Runtime em um ambiente multithread
 Este artigo discute a maneira como o .NET Framework lida com chamadas de códigos C# e Visual Basic para objetos fornecidos pelo Windows Runtime ou pelo Componentes do Tempo de Execução do Windows.
@@ -160,7 +160,7 @@ Por padrão, as classes no componente que podem ser ativadas são ágeis. No ent
 
 Para objetos que são executados no segmento da interface de usuário e lançam exceções quando são chamados de um segmento diferente do segmento da interface de usuário, você pode usar o objeto [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029) do segmento da interface de usuário para despachar a chamada.
 
-## <a name="see-also"></a>Veja também
-[Guia de C#](/dotnet/csharp/)
+## <a name="see-also"></a>Consulte também
+[C#Guia](/dotnet/csharp/)
 
 [Guia do Visual Basic](/dotnet/visual-basic/)

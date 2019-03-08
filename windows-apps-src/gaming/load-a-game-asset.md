@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, carregamento de recursos
 ms.localizationpriority: medium
 ms.openlocfilehash: 478c61713dfcf5bc8a420aa71b0dced81ed6a169
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114582"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633351"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Carregar recursos no jogo em DirectX
 
@@ -55,15 +55,15 @@ O código completo desses exemplos pode ser encontrado nos seguintes links.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="complete-code-for-basicloader.md">Concluir código para BasicLoader</a></p></td>
+<td align="left"><p><a href="complete-code-for-basicloader.md">Código completo para BasicLoader</a></p></td>
 <td align="left"><p>Conclua o código para classe e métodos que convertam e carreguem objetos da malha de elementos gráficos na memória.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="complete-code-for-basicreaderwriter.md">Concluir código para BasicReaderWriter</a></p></td>
+<td align="left"><p><a href="complete-code-for-basicreaderwriter.md">Código completo para BasicReaderWriter</a></p></td>
 <td align="left"><p>Conclua código para classe e métodos de leitura e gravação de arquivos de dados binários em geral. Usado pela classe <a href="complete-code-for-basicloader.md">BasicLoader</a>.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="complete-code-for-ddstextureloader.md">Concluir código para DDSTextureLoader</a></p></td>
+<td align="left"><p><a href="complete-code-for-ddstextureloader.md">Código completo para DDSTextureLoader</a></p></td>
 <td align="left"><p>Conclua código para a classe e o método que carrega uma textura DDS da memória.</p></td>
 </tr>
 </tbody>
@@ -130,7 +130,7 @@ Se o jogo for suficientemente simples, use um método como esse para carregar os
 
 Contudo, você quer que o jogo comece somente quando todo o carregamento assíncrono estiver concluído. Crie algum método de sinalização para a conclusão do carregamento (por exemplo, um campo específico) e use o lambda no(s) método(s) de carregamento para definir esse sinal, quando finalizado. Verifique a variável antes de iniciar qualquer componente que utilize os recursos carregados.
 
-Aqui está um exemplo que usa os métodos assíncronos definidos em BasicLoader.cpp para carregar sombreadores, uma malha e uma textura já na inicialização do jogo. Observe que, na conclusão de todos os métodos de carregamento, há um campo específico definido no objeto de jogo, **m\_loadingComplete**.
+Aqui está um exemplo que usa os métodos assíncronos definidos em BasicLoader.cpp para carregar sombreadores, uma malha e uma textura já na inicialização do jogo. Observe que ele define um campo específico no objeto do jogo **m\_loadingComplete**, quando terminar de todos os métodos de carregamento.
 
 ```cpp
 void ResourceLoading::CreateDeviceResources()
@@ -205,14 +205,14 @@ Para carregar corretamente uma malha, é preciso conhecer o formato dos dados no
 
 (Tente sempre empacotar dados de ativos em um formato o mais próximo possível da representação interna. Fazendo assim, você reduzirá a utilização de recursos e economizará tempo.)
 
-Vamos extrair os dados de bytes do arquivo da malha. O formato do exemplo pressupõe que o arquivo está em um formato específico do exemplo, com sufixo .vbo. (Novamente, esse formato não é igual ao formato VBO do OpenGL.) Cada vértice em si é mapeado para o tipo **BasicVertex**, que é uma estrutura definida no código para a ferramenta de conversão obj2vbo. O layout dos dados de vértice no arquivo .vbo se parece com o seguinte:
+Vamos extrair os dados de bytes do arquivo da malha. O formato do exemplo pressupõe que o arquivo está em um formato específico do exemplo, com sufixo .vbo. (Novamente, esse formato não é o mesmo formato VBO do OpenGL.) Cada vértice em si é mapeado para o **BasicVertex** tipo, que é um struct definido no código para a ferramenta de conversor obj2vbo. O layout dos dados de vértice no arquivo .vbo se parece com o seguinte:
 
 -   Os primeiros 32 bits (4 bytes) do fluxo de dados contêm o número de vértices (numVertices) da malha, representado como um valor uint32.
 -   Os primeiros 32 bits (4 bytes) do fluxo de dados contêm o número de índices (numIndices) da malha, representado como um valor uint32.
--   Depois disso, os bits subsequentes (numVertices \* sizeof(**BasicVertex**)) contêm os dados de vértice.
--   Os últimos bits (numIndices \* 16) de dados contêm os dados de índice, representados como uma sequência de valores uint16.
+-   Depois disso, o subsequentes (numVertices \* sizeof (**BasicVertex**)) bits contêm os dados de vértice.
+-   O último (numIndices \* 16) bits de dados contêm os dados de índice, representados como uma sequência de valores uint16.
 
-O ponto é este: saber o layout no nível de bit dos dados de malha carregados. Além disso, verifique se há consistência com endian-ness. Todas as plataformas Windows8 são little-endian.
+O ponto é este: saber o layout no nível de bit dos dados de malha carregados. Além disso, verifique se há consistência com endian-ness. Todas as plataformas Windows 8 são little endian.
 
 No exemplo, você chama um método CreateMesh no método **LoadMeshAsync** para executar essa interpretação no nível do bit.
 
@@ -239,7 +239,7 @@ task<void> BasicLoader::LoadMeshAsync(
 }
 ```
 
-**CreateMesh** interpreta os dados de bytes carregados do arquivo e cria um buffer de vértices e um buffer de índices da malha, passando as listas de vértices e índices respectivamente para [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) e especificando D3D11\_BIND\_VERTEX\_BUFFER ou D3D11\_BIND\_INDEX\_BUFFER. Aqui está o código usado em **BasicLoader**:
+**CreateMesh** interpreta os dados de bytes carregados do arquivo e cria um buffer de vértice e um buffer de índice para a malha, passando as listas de índice e vértice, respectivamente, para [ **ID3D11Device::CreateBuffer** ](https://msdn.microsoft.com/library/windows/desktop/ff476501) e especificando o D3D11\_ASSOCIAR\_VÉRTICE\_BUFFER ou D3D11\_ASSOCIAR\_índice\_BUFFER. Aqui está o código usado em **BasicLoader**:
 
 ```cpp
 void BasicLoader::CreateMesh(
@@ -320,14 +320,14 @@ Um arquivo DDS é um arquivo binário que contém as seguintes informações:
 
 -   Uma descrição dos dados no arquivo.
 
-    Os dados são descritos com uma descrição de cabeçalho usando [**DDS\_HEADER**](https://msdn.microsoft.com/library/windows/desktop/bb943982); o formato de pixel é definido com [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984). Observe que as estruturas **DDS\_HEADER** e **DDS\_PIXELFORMAT** substituem as estruturas obsoletas DDSURFACEDESC2, DDSCAPS2 e DDPIXELFORMAT DirectDraw 7. **DDS\_HEADER** é o equivalente binário de DDSURFACEDESC2 e DDSCAPS2. **DDS\_PIXELFORMAT** é o equivalente binário de DDPIXELFORMAT.
+    Os dados são descritos com uma descrição de cabeçalho usando [ **DDS\_cabeçalho**](https://msdn.microsoft.com/library/windows/desktop/bb943982); o formato de pixel é definido usando [ **DDS\_PIXELFORMAT** ](https://msdn.microsoft.com/library/windows/desktop/bb943984). Observe que o **DDS\_cabeçalho** e **DDS\_PIXELFORMAT** estruturas substituir as estruturas de DDSURFACEDESC2, DDSCAPS2 e DDPIXELFORMAT DirectDraw 7 preteridas. **DDS\_cabeçalho** é o equivalente binário DDSURFACEDESC2 e DDSCAPS2. **DDS\_PIXELFORMAT** é o equivalente binário DDPIXELFORMAT.
 
     ```cpp
     DWORD               dwMagic;
     DDS_HEADER          header;
     ```
 
-    Se o valor de **dwFlags** em [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984) for definido como DDPF\_FOURCC e **dwFourCC** for definido como "DX10", uma estrutura adicional [**DDS\_HEADER\_DXT10**](https://msdn.microsoft.com/library/windows/desktop/bb943983) será apresentada para acomodar as matrizes de textura ou os formatos DXGI que não podem ser expressos como um formato de pixel RGB; por exemplo, como formatos de ponto flutuante, formatos sRGB etc. Quando a estrutura **DDS\_HEADER\_DXT10** está presente, toda a descrição dos dados terá esta aparência.
+    Se o valor de **dwFlags** na [ **DDS\_PIXELFORMAT** ](https://msdn.microsoft.com/library/windows/desktop/bb943984) é definido como DDPF\_FOURCC e **dwFourCC** é definido como "DX10" um adicional [ **DDS\_cabeçalho\_DXT10** ](https://msdn.microsoft.com/library/windows/desktop/bb943983) estrutura estará presente para acomodar os formatos de DXGI não podem ser expresso como um RGB ou matrizes de textura formato de pixel como formatos de ponto flutuante, sRGB formatos etc. Quando o **DDS\_cabeçalho\_DXT10** estrutura estiver presente, ocorrerá na descrição de dados inteira se parece com isso.
 
     ```cpp
     DWORD               dwMagic;
@@ -551,7 +551,7 @@ task<void> BasicLoader::LoadShaderAsync(
 
 ```
 
-Nesse exemplo, você usa a instância **BasicReaderWriter** (**m\_basicReaderWriter**) para ler no arquivo de objeto de sombreador compilado fornecido (.cso) como um fluxo de bytes. Após a conclusão da tarefa, o lambda chama [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) com os dados de bytes carregados do arquivo. O retorno de chamada deve definir algum sinalizador indicando que houve êxito no carregamento e o seu código deve verificar esse sinalizador antes de executar o sombreador.
+Neste exemplo, você deve usar o **BasicReaderWriter** instância (**m\_basicReaderWriter**) para ler o arquivo de objeto (. CSO) do sombreador compilado fornecido como um fluxo de bytes. Após a conclusão da tarefa, o lambda chama [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) com os dados de bytes carregados do arquivo. O retorno de chamada deve definir algum sinalizador indicando que houve êxito no carregamento e o seu código deve verificar esse sinalizador antes de executar o sombreador.
 
 Sombreadores de vértice são um pouco mais complexos. Para um sombreador de vértice, você também carrega um layout de entrada separado, que define os dados de vértice. O código a seguir pode ser usado para carregar de modo assíncrono um sombreador de vértice juntamente com um layout de entrada de vértice personalizado. Verifique se as informações de vértice carregadas das malhas podem ser representadas corretamente por esse layout de entrada.
 
@@ -699,9 +699,9 @@ Nesse ponto, você deverá estar apto a entender e criar ou modificar métodos d
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplo de carregamento de recursos do Direct3D]( https://go.microsoft.com/fwlink/p/?LinkID=265132)
-* [Concluir código para BasicLoader](complete-code-for-basicloader.md)
-* [Concluir código para BasicReaderWriter](complete-code-for-basicreaderwriter.md)
-* [Concluir código para DDSTextureLoader](complete-code-for-ddstextureloader.md)
+* [Código completo para BasicLoader](complete-code-for-basicloader.md)
+* [Código completo para BasicReaderWriter](complete-code-for-basicreaderwriter.md)
+* [Código completo para DDSTextureLoader](complete-code-for-ddstextureloader.md)
 
  
 

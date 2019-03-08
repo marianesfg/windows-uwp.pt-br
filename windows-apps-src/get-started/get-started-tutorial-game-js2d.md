@@ -1,17 +1,17 @@
 ---
 title: Criar um jogo UWP em JavaScript
-description: Um jogo simples UWP para a Microsoft Store, escrito em JavaScript e CreateJS
+description: Um jogo para a Microsoft Store, escrito em JavaScript e CreateJS UWP simple
 ms.date: 02/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d10dbf52f0ed01d46f9e5cba83cd14d48bfc88d
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114552"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639171"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Criar um jogo UWP em JavaScript
 
@@ -24,13 +24,13 @@ ms.locfileid: "9114552"
 ## <a name="introduction"></a>Introdução
 
 
-Publicar um aplicativo da Microsoft Store significa que você pode compartilhá-lo (ou vendê-lo!) com milhões de pessoas, em muitos dispositivos diferentes.  
+Publicar um aplicativo para o meio da Microsoft Store você pode compartilhá-lo (ou vendê-lo!) com milhões de pessoas, em vários dispositivos diferentes.  
 
-Para publicar seu aplicativo na Microsoft Store, ele deve ser escrito como um aplicativo UWP (plataforma Universal do Windows). Entretanto, a UWP é extremamente flexível e dá suporte a uma ampla variedade de linguagens e estruturas. Para demonstrar isso, este exemplo é um jogo simples escrito em JavaScript, que usa várias bibliotecas de CreateJS e demonstra como desenhar sprites, criar um loop de jogo, dar suporte a teclado e mouse e se adaptar a diferentes tamanhos de tela.
+Para publicar seu aplicativo para a Microsoft Store, ele deve ser escrito como um aplicativo UWP (plataforma Universal do Windows). Entretanto, a UWP é extremamente flexível e dá suporte a uma ampla variedade de linguagens e estruturas. Para demonstrar isso, este exemplo é um jogo simples escrito em JavaScript, que usa várias bibliotecas de CreateJS e demonstra como desenhar sprites, criar um loop de jogo, dar suporte a teclado e mouse e se adaptar a diferentes tamanhos de tela.
 
 Este projeto é compilado com JavaScript usando o Visual Studio. Com algumas pequenas mudanças, ele também pode ser hospedado em um site ou adaptado para outras plataformas. 
 
-**Observação:** Isso não é um jogo completo (ou BOM!); ele foi projetado para demonstrar o uso de JavaScript e um terceiro biblioteca de terceiros para deixar um app pronto para ser publicado na Microsoft Store.
+**Observação:** Isso não é um jogo completo (ou BOM!); ele é projetado para demonstrar o uso do JavaScript e um terceiro biblioteca de terceiros para fazer com que um aplicativo pronto para publicar o Microsoft Store.
 
 
 ## <a name="requirements"></a>Requisitos
@@ -49,7 +49,7 @@ O código-fonte completo para o app está armazenado em [GitHub](https://github.
 
 O modo mais simples de começar é visitar GitHub, clicar no botão verde **Clone ou baixar** e selecionar **Abrir no Visual Studio**. 
 
-![Clonar o repo](images/JS2D_2.png)
+![Clonando o repositório](images/JS2D_2.png)
 
 Você também pode baixar o projeto como um arquivo zip ou usar alguma outra maneira padrão de trabalhar com projetos [GitHub](https://msdn.microsoft.com/en-us/windows/uwp/get-started/get-uwp-app-samples).
 
@@ -61,17 +61,17 @@ Depois que a solução tiver sido carregada no Visual Studio, você verá vário
 
 Agora você pode executar o jogo!
 
-Pressione **F5** para iniciar a execução do app. Você deve ver uma janela aberta e nosso dinossauro familiar em uma paisagem idílica (esparsa). Agora vamos examinar o app, explicar algumas partes importantes e desbloquear o restante dos recursos conforme prosseguimos.
+Pressione **F5** para iniciar a execução do app. Você verá uma janela aberta, e nosso permanente de dinossauro familiares em um cenário arredores (se for esparsa). Agora vamos examinar o app, explicar algumas partes importantes e desbloquear o restante dos recursos conforme prosseguimos.
 
 ![Só um dinossauro comum com um gato ninja nas costas](images/JS2D_3.png)
 
-**Observação:** algo deu errado? Verifique se você instalou o Visual Studio com suporte para web. Você pode verificar criando um novo projeto - se não houver suporte para JavaScript, você precisará instalar o Visual Studio novamente e verificar a caixa de *Microsoft Web Developer Tools*.
+**Observação:** Algo deu errado? Verifique se você instalou o Visual Studio com suporte para web. Você pode verificar criando um novo projeto - se não houver suporte para JavaScript, você precisará instalar o Visual Studio novamente e verificar a caixa de *Microsoft Web Developer Tools*.
 
 ## <a name="walkthough"></a>Explicação passo a passo
 
-Se você começou o jogo usando F5, provavelmente está se perguntando o que está acontecendo. E a resposta é "pouca coisa", pois uma grande parte do código é atualmente comentado. Até agora, tudo o que você verá é o dinossauro e um pedido pouco eficiente para pressione espaço. 
+Se você começou o jogo usando F5, provavelmente está se perguntando o que está acontecendo. E a resposta é "pouca coisa", pois uma grande parte do código é atualmente comentado. Até agora, tudo o que você verá é o dinossauro e um pedido pouco eficiente para pressione Espaço. 
 
-### <a name="1-setting-the-stage"></a>1. Configurar o palco
+### <a name="1-setting-the-stage"></a>1. Preparando o terreno
 
 Se você abrir e examinar **index.html**, você verá que está praticamente vazio. Esse arquivo é a página da web padrão que contém o nosso app, e ele executa apenas duas ações importantes. Primeiro, ele inclui o código-fonte JavaScript para as bibliotecas do **EaselJS** e **PreloadJS** CreateJS e também **main.js** (nosso próprio arquivo de código-fonte).
 Segundo, ele define uma marca de &lt;tela&gt;, que é onde todos os nossos elementos gráficos vão aparecer. A &lt;tela&gt; é um componente padrão do documento HTML5. Podemos dar um nome (gameCanvas) então nosso código em **main,js** pode fazer referência a ele. A propósito, se pretende criar seu próprio jogo JavaScript do zero, você também precisará copiar os arquivos **EaselJS** e **PreloadJS** em sua solução e, em seguida, criar um objeto de tela.
@@ -86,9 +86,9 @@ Você verá essa linha de código aparecer várias vezes em **main.js**
 
 Falando nisso, agora é um bom momento para abrir o **main.js**.
 
-### <a name="2-loading-the-bitmaps"></a>2. Carregar os bitmaps
+### <a name="2-loading-the-bitmaps"></a>2. Carregando os bitmaps
 
-EaselJS fornece vários tipos diferentes de objetos gráficos. Podemos criar formas simples (por exemplo, o retângulo azul usado para o céu), ou bitmaps (por exemplo, as nuvens que vamos adicionar), objetos de texto e sprites. Sprites usam um (SpriteSheet) [https://createjs.com/docs/easeljs/classes/SpriteSheet.html]: um único bitmap que contém várias imagens. Por exemplo, nós usamos essa SpriteSheet para armazenar o quadro diferente de animação do dinossauro:
+EaselJS fornece vários tipos diferentes de objetos gráficos. Podemos criar formas simples (por exemplo, o retângulo azul usado para o céu), ou bitmaps (por exemplo, as nuvens que vamos adicionar), objetos de texto e sprites. Usam o sprites (SpriteSheet) [https://createjs.com/docs/easeljs/classes/SpriteSheet.html]: um único bitmap que contém várias imagens. Por exemplo, nós usamos essa SpriteSheet para armazenar o quadro diferente de animação do dinossauro:
 
 ![Folha de sprite do Walking Dino](images/JS2D_4.png)
 
@@ -124,7 +124,7 @@ Agora, vamos adicionar algumas nuvens fofinhas ao palco. Quando o jogo for execu
 
 Examine o **main.js** até encontrar a função **init**. Ela é chamada quando o jogo é iniciado, e é onde começamos a configurar todos os nossos objetos gráficos.
 
-Localize o código a seguir e remova os comentários (\\) da linha que faz referência à imagem da nuvem.
+Localizar o código a seguir e remova os comentários (\\) da linha que referencia a imagem de nuvem.
 
 ```
  manifest = [
@@ -160,14 +160,13 @@ Esse código cria três objetos de nuvem cada um usando nossa imagem pré-carreg
 
 Execute novamente o app (pressione F5) e você verá que nossas nuvens surgiram.
 
-### <a name="3-moving-the-clouds"></a>3. Mover as nuvens
+### <a name="3-moving-the-clouds"></a>3. Movendo as nuvens
 
 Agora, vamos fazer nuvens se moverem. O segredo para mover nuvens - e mover qualquer coisa, na verdade - é configurar uma função [ticker](https://www.createjs.com/docs/easeljs/classes/Ticker.html) que é chamada repetidamente várias vezes por segundo. Cada vez que essa função é chamada, ela redesenha os elementos gráficos em um local ligeiramente diferente.
 
 <p data-height="500" data-theme-id="23761" data-slug-hash="vxZVRK" data-default-tab="result" data-user="MicrosoftEdgeDocumentation" data-embed-version="2" data-pen-title="CreateJS - Animating clouds" data-preview="true" data-editable="true" class="codepen">Veja a Caneta <a href="https://codepen.io/MicrosoftEdgeDocumentation/pen/vxZVRK/">CreateJS - Animando nuvens</a> dos documentos do Microsoft Edge (<a href="https://codepen.io/MicrosoftEdgeDocumentation">@MicrosoftEdgeDocumentation</a>) em <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
- 
-O código para fazer isso já está no arquivo **main.js**, fornecido pela biblioteca do CreateJS, EaselJS. Ele terá a aparência a seguir:
+  O código para fazer isso já está no **Main** arquivo, fornecido pela biblioteca CreateJS, EaselJS. Ele é semelhante ao seguinte:
 
 ```
     // Set up the game loop and keyboard handler.
@@ -240,7 +239,7 @@ Se o dinossauro não estiver saltando e o barril estiver perto, o código muda a
 
 E, portanto, a mecânica principal de nosso jogo é concluída.
 
-### <a name="5-resizing-support"></a>5. Redimensionar o suporte
+### <a name="5-resizing-support"></a>5. Redimensionamento de suporte
 
 Estamos quase no fim agora! Mas antes de pararmos, temos de cuidar primeiro de um problema irritante. Quando o jogo estiver executando, tente redimensionar a janela. Você verá que o jogo rapidamente fica muito confuso, pois os objetos não estão mais onde deveriam estar. Podemos cuidar disso criando um manipulador para o evento de redimensionamento de janela gerado quando o jogador redimensiona a janela, ou quando o dispositivo for girado de paisagem para retrato.
 
@@ -255,9 +254,9 @@ Simplesmente remova o comentário desta linha para chamar a função quando o ev
 
 Se executar o app novamente, você agora deverá poder redimensionar a janela e obter resultados melhores.
 
-## <a name="publishing-to-the-microsoft-store"></a>Publicação na Microsoft Store
+## <a name="publishing-to-the-microsoft-store"></a>Publicação para a Microsoft Store
 
-Agora você tem um aplicativo UWP, é possível publicá-lo na Microsoft Store (supondo que você tenha aperfeiçoado primeiro!) 
+Agora você tem um aplicativo UWP, é possível publicá-lo para a Microsoft Store (supondo que você o melhoraram pela primeira vez!) 
 
 Há algumas etapas para o processo.
 
@@ -265,7 +264,7 @@ Há algumas etapas para o processo.
 2. Você deve usar a [lista de verificação](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) do envio de aplicativo.
 3. O app deve ser enviado para [certificação](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process).
 
-Para obter mais detalhes, consulte [Publicando seu aplicativo UWP](https://developer.microsoft.com/en-us/store/publish-apps).
+Para obter mais detalhes, consulte [publicando seu aplicativo UWP](https://developer.microsoft.com/en-us/store/publish-apps).
 
 ## <a name="suggestions-for-other-features"></a>Sugestões para outros recursos.
 
@@ -277,7 +276,7 @@ O que fazer em seguida? Aqui estão algumas sugestões para recursos a serem adi
 
 ## <a name="other-links"></a>Outros links
 
-* [Criar um jogo simples do Windows com JavaScript](https://www.sitepoint.com/creating-a-simple-windows-8-game-with-javascript-game-basics-createjseaseljs/)
-* [Selecionar um mecanismo de jogo de HTML/JS](https://html5gameengine.com/)
-* [Usar CreateJS no seu jogo baseado em JS](https://blogs.msdn.microsoft.com/cbowen/2012/09/19/using-createjs-in-your-javascript-based-windows-8-game/)
+* [Criar um jogo simple do Windows com JavaScript](https://www.sitepoint.com/creating-a-simple-windows-8-game-with-javascript-game-basics-createjseaseljs/)
+* [Escolher um mecanismo de jogo de HTML/JS](https://html5gameengine.com/)
+* [Usar CreateJS em seu JS com base em um jogo](https://blogs.msdn.microsoft.com/cbowen/2012/09/19/using-createjs-in-your-javascript-based-windows-8-game/)
 * [Cursos de desenvolvimento de jogos no LinkedIn Learning](https://www.linkedin.com/learning/topics/game-development)

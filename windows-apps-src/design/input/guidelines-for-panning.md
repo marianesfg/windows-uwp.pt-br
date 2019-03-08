@@ -1,5 +1,5 @@
 ---
-Description: Panning or scrolling lets users navigate within a single view, to display the content of the view that does not fit within the viewport. Examples of views include the folder structure of a computer, a library of documents, or a photo album.
+Description: O movimento panorâmico ou rolagem permite aos usuários navegar dentro de uma única exibição, para ver o conteúdo da exibição que não se encaixa no visor. Exemplos de exibição incluem a estrutura de pastas de um computador, uma biblioteca de documentos ou um álbum de fotos.
 title: Movimento panorâmico
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 363ea5728b94d6b42f29299e8d240bcfc6242b4c
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981560"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625111"
 ---
 # <a name="guidelines-for-panning"></a>Diretrizes de movimento panorâmico
 
@@ -26,17 +26,17 @@ O movimento panorâmico ou rolagem permite aos usuários navegar dentro de uma �
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
 
-**Indicadores de movimento panorâmico e barras de rolagem**
+**Indicadores de Panorâmica e barras de rolagem**
 
 -   Verifique se o movimento panorâmico/rolagem é possível antes de carregar o conteúdo no seu aplicativo.
 
 -   Exiba indicadores de movimento panorâmico e barras de rolagem para fornecer dicas de localização e tamanho. Oculte-os se o aplicativo fornecer um recurso de navegação personalizado.
 
-    **Observação**ao contrário de rolagem barras, indicadores de movimento panorâmico são puramente informativos. Eles não são expostos para dispositivos de entrada e não podem ser manipulados de nenhuma maneira.
+    **Observação**  ao contrário de rolagem padrão barras, indicadores de panorâmica são meramente informativas. Eles não são expostos para dispositivos de entrada e não podem ser manipulados de nenhuma maneira.
 
      
 
-**Movimento panorâmico de eixo único (estouro de capacidade unidimensional)**
+**Um eixo, movimento panorâmico (estouro unidimensional)**
 
 -   Use o movimento panorâmico de eixo único para regiões de conteúdo que vão além do limite de um visor (vertical ou horizontal).
 
@@ -44,9 +44,9 @@ O movimento panorâmico ou rolagem permite aos usuários navegar dentro de uma �
     -   Movimento panorâmico horizontal para uma grade de itens.
 -   Não use pontos de ajuste obrigatórios com movimento panorâmico de eixo único se for permitir que o usuário gire e pare entre os pontos de ajuste. Pontos de ajuste obrigatórios garantem que o usuário irá "parar" em um ponto de ajuste. Em vez disso, use pontos de ajuste de proximidade.
 
-**Movimento panorâmico de forma livre (estouro de capacidade bidimensional)**
+**Forma livre movimento panorâmico (estouro bidimensional)**
 
--   Use o movimento panorâmico de dois eixos para regiões de conteúdo que vão além dos limites de visor (vertical ou horizontal).
+-   Use o movimento panorâmico de dois eixos para regiões de conteúdo que vão além dos dois limites do visor (vertical e horizontal).
 
     -   Substitua o comportamento de trilhos padrão e use o movimento panorâmico de forma livre para conteúdo não estruturado em que o usuário provavelmente realizará deslocamento em várias direções.
 -   O movimento panorâmico de forma livre é adequado para navegação em imagens ou mapas.
@@ -58,13 +58,13 @@ O movimento panorâmico ou rolagem permite aos usuários navegar dentro de uma �
     -   Um ponto de ajuste deve ser colocado em cada limite lógico.
     -   Cada elemento deve ser dimensionado ou escalonado para caber no modo de exibição.
 
-**Pontos lógicos e chaves**
+**Pontos principais e lógicos**
 
 -   Use pontos de ajuste de proximidade se houver pontos chave ou casas lógicas no conteúdo em que o usuário provavelmente irá parar. Por exemplo, um cabeçalho de seção.
 
--   Se forem definidas restrições de tamanho máximo e mínimo ou limites, use o retorno visual para demonstrar quando o usuário atinge ou excede esses limites.
+-   Se forem definidas restrições ou limites de tamanho máximo e mínimo, use o retorno visual para demonstrar quando o usuário atingiu ou excedeu esses limites.
 
-**Encadeamento incorporado ou conteúdo aninhado**
+**Encadeamento de conteúdo incorporado ou aninhado**
 
 -   Use o movimento panorâmico de eixo único (tipicamente horizontal) e layouts de colunas para conteúdo baseado em texto e grade. Nesses casos, o conteúdo costuma se ajustar e fluir naturalmente de coluna para coluna e manter a experiência do usuário consistente e detectável nos aplicativos UWP.
 
@@ -74,17 +74,17 @@ O movimento panorâmico ou rolagem permite aos usuários navegar dentro de uma �
 
     ![imagem demonstrando uma área incorporada com capacidade de movimento panorâmico que rola na mesma direção do seu contêiner.](images/scrolling-embedded3.png)
 
-## <a name="additional-usage-guidance"></a>Diretrizes de uso adicionais
+## <a name="additional-usage-guidance"></a>Diretriz de uso adicional
 
-O movimento horizontal com o uso de toque, com gestos de passar ou deslizar o dedo usando um ou mais dedos, é semelhante à rolagem com o mouse. A interação do deslocamento horizontal é similar ao ato de girar a roda do mouse ou deslizar a barra de rolagem, ao invés de clicar na barra de rolagem. A menos que uma distinção é feita em uma API ou exigida por alguns WindowsUI específicas do dispositivo, simplesmente nos referimos às duas interações como movimento panorâmico.
+O movimento horizontal com o uso de toque, com gestos de passar ou deslizar o dedo usando um ou mais dedos, é semelhante à rolagem com o mouse. A interação do deslocamento horizontal é similar ao ato de girar a roda do mouse ou deslizar a barra de rolagem, ao invés de clicar na barra de rolagem. A menos que uma distinção é feita em uma API ou exigida por algumas interfaces do usuário de Windows específicos do dispositivo, simplesmente chamamos ambas as interações como movimento panorâmico.
 
 > <div id="main">
-> <strong>Windows 10 Fall Creators Update - Mudança de comportamento</strong>
+> <strong>Windows 10 Fall Creators Update - alteração de comportamento</strong>
 > </div>
 > Por padrão, em vez de seleção de texto, uma caneta ativa agora fará rolagem/movimento panorâmico em aplicativos UWP (como touch, touchpad e caneta passiva).  
-> Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, consulte o tópico de referência de API para a <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">Classe ScrollViewer</a>.
+> Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, consulte o tópico de referência de API para o <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer classe</a>.
 
-Dependendo do dispositivo de entrada, o usuário faz o deslocamento horizontal dentro da região com o movimento panorâmico usando uma das seguintes opções:
+Dependendo do dispositivo de entrada, o usuário faz o deslocamento horizontal dentro da região com o movimento panorâmico usando um dos seguintes:
 
 -   Um mouse, um touchpad ou uma caneta para clicar nas setas de rolagem, arrastar a caixa de rolagem ou clicar na barra de rolagem.
 -   O botão de roda do mouse para emular a caixa de rolagem sendo arrastada.
@@ -94,18 +94,18 @@ Dependendo do dispositivo de entrada, o usuário faz o deslocamento horizontal d
 
 Deslizar envolve mover os dedos lentamente na direção do movimento panorâmico. Esta ação gera movimentos de um-em-um, nos quais o conteúdo é deslocado horizontalmente na mesma velocidade e distância dos dedos. O deslizamento (deslizar e levantar os dedos rapidamente) resulta na aplicação da seguinte função à animação panorâmica:
 
--   Desaceleração (inércia): levantar os dedos faz com que o movimento panorâmico seja desacelerado. Isso é semelhante a deslizar até parar em uma superfície escorregadia.
--   Absorção: a cinética de movimento panorâmico durante a desaceleração provoca um ligeiro efeito de recuperação se um ponto de ajuste ou um limite da área de conteúdo for atingido.
+-   Desaceleração (inércia): Levantando as causas de dedos de movimento panorâmico para iniciar desacelerando. Isso é semelhante a deslizar até parar em uma superfície escorregadia.
+-   Absorção: Movimento panorâmico momentum durante a desaceleração faz com que um pequeno efeito de retorno se um ponto de alinhamento ou um limite de área de conteúdo for atingido.
 
 **Tipos de movimento panorâmico**
 
-Windows8 dá suporte a três tipos de movimento panorâmico:
+Windows 8 dá suporte a três tipos de movimento panorâmico:
 
 -   Eixo único: o movimento panorâmico é possível somente em uma direção (horizontal ou vertical).
 -   Trilhos: o movimento panorâmico é possível em todas as direções. No entanto, depois que o usuário cruza um limite de distância em uma direção específica, o movimento panorâmico fica limitado ao eixo em questão.
 -   Forma livre: o movimento panorâmico é possível em todas as direções.
 
-**Interface do usuário do movimento panorâmico**
+**Panorâmica da interface do usuário**
 
 A experiência de interação do movimento panorâmico é exclusiva no dispositivo de entrada, embora ele ainda forneça funcionalidade similar.
 
@@ -116,7 +116,7 @@ Há dois modos de exibição de movimento panorâmico baseados no dispositivo de
 -   Indicadores de movimento panorâmico para toque.
 -   Barras de rolagem para outros dispositivos de entrada, incluindo mouse, touchpad, teclado e caneta.
 
-**Observação**indicadores de movimento panorâmico ficam visíveis somente quando o contato por toque está dentro da região que permite movimento panorâmico. Da mesma forma, a barra de rolagem só fica visível quando o cursor do mouse, o cursor da caneta ou o foco do teclado está na região rolável.
+**Observação**  indicadores de panorâmica são visíveis apenas quando o contato de toque está dentro da região pannable. Da mesma forma, a barra de rolagem só fica visível quando o cursor do mouse, o cursor da caneta ou o foco do teclado está na região rolável.
 
  
 
@@ -153,7 +153,7 @@ O diagrama a seguir demonstra o conceito de trilhos.
 
 ![diagrama de uma tela com trilhos que limitam o movimento panorâmico](images/ux-panning-rails.png)
 
-**Encadeamento incorporado ou conteúdo aninhado**
+**Encadeamento de conteúdo incorporado ou aninhado**
 
 Após o usuário atingir o limite de zoom ou rolagem em um elemento que foi aninhado dentro de outro elemento ampliável ou rolável, é possível especificar se o elemento pai deve continuar a operação de ampliar ou rolar iniciada no respectivo elemento filho. Isso é chamado encadeamento de zoom ou de rolagem.
 
@@ -173,24 +173,24 @@ Essa diretriz também é útil para aplicativos como, por exemplo, álbuns de fo
 
 
 * [Interações personalizadas do usuário](https://msdn.microsoft.com/library/windows/apps/mt185599)
-* [Otimizar ListView e GridView](https://msdn.microsoft.com/library/windows/apps/mt204776)
+* [Otimizar o ListView e GridView](https://msdn.microsoft.com/library/windows/apps/mt204776)
 * [Acessibilidade do teclado](https://msdn.microsoft.com/library/windows/apps/mt244347)
 
 **Exemplos**
-* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Exemplos de arquivo-morto**
-* [Entrada: amostra de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: exemplo de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de teste de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: amostra de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: amostra de gestos no Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: amostra de manipulações e gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Amostra de entrada por toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+**Amostras de arquivo-morto**
+* [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: Exemplo de teste de hit de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: Exemplo simplificado de tinta](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: Exemplo de gestos do Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Entrada: Manipulações e exemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Exemplo de entrada de toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

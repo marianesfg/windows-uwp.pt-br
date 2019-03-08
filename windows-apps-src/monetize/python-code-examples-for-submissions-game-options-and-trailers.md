@@ -6,13 +6,13 @@ ms.topic: article
 keywords: Windows 10, uwp, API de envio da Microsoft Store, exemplos de código, opções de jogos, trailers, listagens avançadas, python
 ms.localizationpriority: medium
 ms.openlocfilehash: 59306e32fe1fcc68978c977b89934e64d85b8cc8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924282"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57629911"
 ---
-# <a name="python-sample-app-submission-with-game-options-and-trailers"></a>Exemplo de Python: envio de aplicativo com opções e trailers de jogos
+# <a name="python-sample-app-submission-with-game-options-and-trailers"></a>Exemplo de Python: envio de aplicativo com opções de jogo e trailers
 
 Este artigo fornece exemplos de código Python que demonstram como usar a [API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md) para estas tarefas:
 
@@ -28,7 +28,7 @@ Este artigo fornece exemplos de código Python que demonstram como usar a [API d
 
 Esse código chama outras classes e funções de exemplo para usar a API de envio da Microsoft Store para criar e confirmar um envio de aplicativo que contém as opções de jogo e um trailer. Para adaptar este código para seu próprio uso:
 
-* Atribua a variável ```tenant``` à ID do locatário do seu app e atribua as variáveis ```client``` e ```secret``` à ID e a chave do cliente para seu app. Para obter mais informações, consulte [como associar um aplicativo do Azure AD com sua conta do Partner Center](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
+* Atribua a variável ```tenant``` à ID do locatário do seu app e atribua as variáveis ```client``` e ```secret``` à ID e a chave do cliente para seu app. Para obter mais informações, consulte [como associar um aplicativo do AD do Azure com sua conta no Partner Center](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 * Atribua a variável ```application_id``` à [ID da Loja](in-app-purchases-and-trials.md#store-ids) do app para o qual você deseja criar um envio.
 
 > [!div class="tabbedCodeSnippets"]
@@ -57,4 +57,4 @@ O exemplo a seguir define as funções auxiliares que retornam dados de listagem
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)

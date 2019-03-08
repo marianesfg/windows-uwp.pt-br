@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 486eb4adc1151bac1bf6a04a8f54b67530b426a3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933289"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607341"
 ---
 # <a name="swap-chains"></a>Cadeias de troca
 
@@ -23,14 +23,14 @@ Um adaptador gráfico contém um ponteiro para uma superfície que representa a 
 
 Se seu aplicativo está atualizando o buffer frontal enquanto o monitor está no meio de uma atualização, a imagem exibida será recortada na metade com a metade superior da tela que contém a imagem anterior e a metade inferior que contém a nova imagem. Esse problema é conhecido como *desmembramento*.
 
-## <a name="span-idavoidingtearingspanspan-idavoidingtearingspanspan-idavoidingtearingspanavoiding-tearing"></a><span id="Avoiding_tearing"></span><span id="avoiding_tearing"></span><span id="AVOIDING_TEARING"></span>Evitando o desmembramento
+## <a name="span-idavoidingtearingspanspan-idavoidingtearingspanspan-idavoidingtearingspanavoiding-tearing"></a><span id="Avoiding_tearing"></span><span id="avoiding_tearing"></span><span id="AVOIDING_TEARING"></span>Evitando a divisão
 
 
 O Direct3D implementa duas opções para evitar a divisão:
 
 -   Uma opção para permitir somente as atualizações de monitor na operação de retorno vertical (ou sincronização vertical). Um monitor normalmente atualiza sua imagem, movendo um marcador de luz horizontalmente, fazendo um movimento em zigue-zague na parte superior esquerda do monitor e terminando na parte inferior direita. Quando o marcador de luz atinge a parte inferior, o monitor calibra novamente o marcador de luz, movendo-o novamente para o canto superior esquerdo para que o processo possa iniciar novamente.
 
-    Esta recalibragem é chamada uma sincronização vertical. Durante uma sincronização vertical, o monitor é nada desenhado, portanto, qualquer atualização para o buffer frontal não será Vista até o monitor comece a desenhar novamente. A sincronização vertical é relativamente lenta, no entanto, não lenta o suficiente para renderizar uma cena complexa durante o tempo de espera. O que é necessário para evitar o desmembramento e ser capaz de renderizar cenas complexas é um processo chamado de armazenamento em buffer de fundo.
+    Esta recalibragem é chamada de sincronização vertical. Durante uma sincronização vertical, nada é desenhado no monitor, portanto, qualquer atualização para o buffer frontal não será vista até o monitor comece a desenhar novamente. A sincronização vertical é relativamente lenta, no entanto, não lenta o suficiente para renderizar uma cena complexa durante o tempo de espera. O que é necessário para evitar o desmembramento e ser capaz de renderizar cenas complexas é um processo chamado de armazenamento em buffer de fundo.
 
 -   Uma opção para usar uma técnica chamada de armazenamento em buffer de fundo. O armazenamento em buffer de trás é o processo de desenhar uma cena em uma superfície fora da tela, chamada de buffer de fundo. Qualquer superfície que não seja o buffer frontal é chamada de superfície fora da tela, porque ela nunca é visualizada diretamente pelo monitor.
 

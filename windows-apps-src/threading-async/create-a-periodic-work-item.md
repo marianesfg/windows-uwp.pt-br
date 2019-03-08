@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, item de trabalho periódico, threading, temporizadores
 ms.localizationpriority: medium
 ms.openlocfilehash: 05ed3b4bc4fa6dbe1119dca40d22107e94cea576
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981540"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636901"
 ---
 # <a name="create-a-periodic-work-item"></a>Criar um item de trabalho periódico
 
@@ -27,11 +27,11 @@ Saiba como criar um item de trabalho periódico que se repete periodicamente.
 
 Use o método [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) para criar um item de trabalho periódico. Forneça um lambda que realize o trabalho e use o parâmetro *period* para especificar o intervalo entre os envios. O período é especificado usando uma estrutura [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996). O item de trabalho será reenviado sempre que o período acabar, assim, verifique se o período é longo o suficiente para o trabalho ser concluído.
 
-[**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) retorna um objeto [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587). Armazene esse objeto no caso de o temporizador ter que ser cancelado.
+[**CreateTimer** ](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) retorna um [ **ThreadPoolTimer** ](https://msdn.microsoft.com/library/windows/apps/BR230587) objeto. Armazene esse objeto no caso de o temporizador ter que ser cancelado.
 
-> **Observação**Evite especificar um valor igual a zero (ou qualquer valor inferior a um milésimo de segundo) para o intervalo. Isso faz com que o temporizador periódico se comporte como um temporizador de disparo único.
+> **Observação**  Evite especificar um valor de zero (ou qualquer valor menor que um milissegundo) para o intervalo. Isso faz com que o temporizador periódico se comporte como um temporizador de disparo único.
 
-> **Observação**você pode usar o [**Coredispatcher**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
+> **Observação**  você pode usar [ **CoreDispatcher.RunAsync** ](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
 
 O seguinte exemplo cria um item de trabalho que é executado a cada 60 segundos:
 
@@ -184,7 +184,7 @@ O exemplo a seguir cria um item de trabalho periódico que se repete a cada 60 s
 >         }));
 > ```
 
-## <a name="cancel-the-timer"></a>Cancelar o temporizador
+## <a name="cancel-the-timer"></a>Cancelar o timer
 
 Quando necessário, chame o método [**Cancel**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.cancel.aspx) para impedir que o item de trabalho periódico se repita. Se o item de trabalho estiver sendo executado quando o temporizador periódico for cancelado, ele poderá ser concluído. O [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926) (se fornecido) é chamado quando todas as instâncias do item de trabalho periódico foram concluídas.
 

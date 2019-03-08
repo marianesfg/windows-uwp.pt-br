@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, diretrizes, práticas recomendadas
 ms.localizationpriority: medium
 ms.openlocfilehash: 78f044890e49f4631abf710764bc2f9746a1306f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930747"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639141"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Diretrizes para a interface do usuário e experiência do usuário para anúncios
 
@@ -71,7 +71,7 @@ Esta seção fornece exemplos de cenários de anúncios em faixa que violam a [p
 
 * Ignorar o timer de atualização mínimo interno para anúncios em faixa por qualquer meio, incluindo (mas não se limitando a) trocar objetos do [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) ou forçar uma atualização da página sem a interação do usuário.
 
-* Uso de unidades de anúncio em tempo real (ou seja, unidades de anúncio que você obtém do Partner Center) durante o desenvolvimento e teste, ou em um emulador.
+* Usando unidades de anúncios em tempo real (ou seja, unidades de anúncios que você obtém do Partner Center) durante o desenvolvimento e teste, ou em um emulador.
 
 * Escrever ou distribuir um código que chame serviços de anúncios por meios que não sejam as bibliotecas do Microsoft Advertising em execução no contexto de seu app.
 
@@ -155,7 +155,7 @@ Esta seção fornece exemplos de cenários de anúncios intersticiais que violam
 
 * Solicitar um anúncio intersticial simplesmente para ter um anúncio de backup para uma sequência de cascata de anúncios. Se você solicitar um anúncio intersticial e, em seguida, receber o evento [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready), o próximo anúncio intersticial mostrado em seu app deve ser o anúncio que está pronto para ser exibido por meio do método [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show).
 
-* Uso de unidades de anúncio em tempo real (ou seja, unidades de anúncio que você obtém do Partner Center) durante o desenvolvimento e teste, ou em um emulador.
+* Usando unidades de anúncios em tempo real (ou seja, unidades de anúncios que você obtém do Partner Center) durante o desenvolvimento e teste, ou em um emulador.
 
 * Escrever ou distribuir um código que chame serviços de anúncios por meios que não sejam as bibliotecas do Microsoft Advertising em execução no contexto de seu app.
 
@@ -185,7 +185,7 @@ No mínimo, você sempre deverá mostrar os seguintes elementos de anúncio nati
     * O texto *patrocinado* (disponível na propriedade **SponsoredBy**). Esse texto é fornecido pelo anunciante.
     * Como uma alternativa para o texto *patrocinado por*, você pode optar por exibir algum outro texto que ajude a diferenciar a experiência do anúncio nativo do resto do seu app, como "Conteúdo patrocinado", "Conteúdo promocional", "Conteúdo recomendado" etc.
 
-### <a name="user-experience"></a>Experiência do usuário
+### <a name="user-experience"></a>Experiência de usuário
 
 Seu anúncio nativo deve ser claramente delineado do resto do seu aplicativo e ter espaço ao redor dele para impedir cliques acidentais. Use bordas, telas de fundo diferentes ou alguma outra interface do usuário para separar o conteúdo do anúncio do resto do seu aplicativo. Tenha em mente que os cliques acidentais em anúncios não são benéficos para sua receita baseada em anúncio ou para a experiência do seu usuário final a longo prazo.
 

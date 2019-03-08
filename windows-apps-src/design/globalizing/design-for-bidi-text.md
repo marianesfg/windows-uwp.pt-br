@@ -1,5 +1,5 @@
 ---
-Description: Design your app to provide bidirectional text support (BiDi) so that you can combine script from left-to-right (LTR) and right-to-left (RTL) writing systems, which generally contain different types of alphabets.
+Description: Projetar seu aplicativo para fornecer suporte a texto bidirecional (BiDi) para que você pode combinar o script a partir da esquerda para a direita (LTR) e da direita para a esquerda (RTL) gravando sistemas, que geralmente contêm tipos diferentes de letras do alfabeto.
 title: Projetar seu app para texto bidirecional
 template: detail.hbs
 ms.date: 11/10/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: 66a158a96fcab5391030f4517b6420ba4585bf04
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942019"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641121"
 ---
 # <a name="design-your-app-for-bidirectional-text"></a>Projetar seu app para texto bidirecional
 
@@ -42,8 +42,8 @@ O Windows oferece suporte aos quatro elementos de design bidirecional. Vamos olh
 
 Windows ajusta a direção da grade tipográfica para que ela flua da direita para a esquerda, significando que o primeiro bloco na grade é colocado no canto superior direito e o último bloco na parte inferior esquerda. Isso corresponde ao padrão RTL de publicações impressas, como livros e revistas, em que o padrão de leitura sempre começa no canto superior direito e caminha para a esquerda.
 
-![Menu Iniciar bidirecional](images/56283_BIDI_01_startscreen_resized.png)
-![Menu Iniciar bidirecional com botões](images/56283_BIDI_02_startscreen_charm_resized.png)
+![Menu Iniciar do BiDi](images/56283_BIDI_01_startscreen_resized.png)
+![BiDi o menu Iniciar com botões](images/56283_BIDI_02_startscreen_charm_resized.png)
 
 Para preservar um fluxo consistente da interface do usuário, o conteúdo nos blocos retêm um layout da direita para a esquerda, o que significa que o nome e o logotipo do app são posicionados no canto direito inferior do bloco, independentemente do idioma da interface do usuário do app.
 
@@ -65,11 +65,11 @@ Os blocos possuem suporte a texto misto. A região de notificação tem flexibil
 
 Todos os elementos da interface do usuário do Windows se encaixam na orientação da direita para a esquerda. Os botões e menus suspensos foram posicionados na borda esquerda da tela para não ficarem sobre os resultados da pesquisa nem reduzirem a otimização de toque. Eles podem ser acessados facilmente com os polegares.
 
-![Captura de tela bidirecional](images/56286_BIDI_05_search_flyout_resized.png)
-![Captura de tela bidirecional](images/56286_BIDI_06_print_flyout_resized.png)
+![Captura de tela de BiDi](images/56286_BIDI_05_search_flyout_resized.png)
+![BiDi captura de tela](images/56286_BIDI_06_print_flyout_resized.png)
 
-![Captura de tela bidirecional](images/56286_BIDI_07_settings_flyout_resized.png)
-![Captura de tela bidirecional](images/56286_BIDI_08_app_bars_resized.png)
+![Captura de tela de BiDi](images/56286_BIDI_07_settings_flyout_resized.png)
+![BiDi captura de tela](images/56286_BIDI_08_app_bars_resized.png)
 
 ### <a name="text-input-in-any-direction"></a>Entrada de texto em qualquer direção
 
@@ -99,10 +99,10 @@ Com a introdução do Algoritmo de Parêntese Bidirecional (BPA), os parênteses
 
 O Windows usa a fonte Segoe UI para todos os idiomas bidirecionais. Essa fonte foi totalmente adaptada à IU do Windows.
 
-![Fonte Segoe UI para idioma bidirecional](images/56290_BIDI_13_start_screen_segoe.png)
-![fonte Segoe UI para idioma bidirecional](images/56290_BIDI_13_start_screen_segoe_arabic.png)
+![Fonte do Segoe UI para idiomas BiDi](images/56290_BIDI_13_start_screen_segoe.png)
+![fonte Segoe UI para idiomas BiDi](images/56290_BIDI_13_start_screen_segoe_arabic.png)
 
-## <a name="case-study-1-a-bidi-music-app"></a>Estudo de caso 1: um app de música bidirecional
+## <a name="case-study-1-a-bidi-music-app"></a>Estudo de caso #1: Um aplicativo de música BiDi
 
 ### <a name="overview"></a>Visão geral
 
@@ -182,7 +182,7 @@ string NormalizeTextDirection(string data)
 
 Os caracteres Unicode adicionados são de largura igual a zero para que não afetem o espaçamento das cadeias de caracteres. Este código carrega uma penalidade de desempenho em potencial, já que detectar a direção de uma cadeia de caracteres requer o exame da cadeia de caracteres até que um caractere não neutro seja encontrado. Cada caractere que é primeiro verificado para neutralidade é comparado com vários intervalos Unicode, por isso, não é uma verificação trivial.
 
-## <a name="case-study-2-a-bidi-mail-app"></a>Estudo de caso 2: um aplicativo de email bidirecional
+## <a name="case-study-2-a-bidi-mail-app"></a>Estudo de caso #2: Um aplicativo de email BiDi
 
 ### <a name="overview"></a>Visão geral
 

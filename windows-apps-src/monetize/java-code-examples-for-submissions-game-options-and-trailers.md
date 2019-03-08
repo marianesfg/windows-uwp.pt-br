@@ -6,13 +6,13 @@ ms.topic: article
 keywords: Windows 10, uwp, API de envio da Microsoft Store, exemplos de código, opções de jogo, trailers, listagens avançadas, java
 ms.localizationpriority: medium
 ms.openlocfilehash: 974bbc4c864edb9450f9ba677c60349b5e1f8ece
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920766"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641051"
 ---
-# <a name="java-sample-app-submission-with-game-options-and-trailers"></a>Exemplo de Java: envio de aplicativo com opções e trailers de jogos
+# <a name="java-sample-app-submission-with-game-options-and-trailers"></a>Exemplo de Java: envio de aplicativo com opções de jogo e trailers
 
 Este artigo fornece exemplos de código Java que demonstram como usar a [API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md) para estas tarefas:
 
@@ -28,7 +28,7 @@ Este artigo fornece exemplos de código Java que demonstram como usar a [API de 
 
 A classe ```CreateAndSubmitSubmissionExample``` implementa um programa ```main``` que chama outros métodos de exemplo para usar a API de envio da Microsoft Store para criar e confirmar um envio de aplicativo que contém as opções de jogo e um trailer. Para adaptar este código para seu próprio uso:
 
-* Atribua a variável ```tenantId``` à ID do locatário do seu app e atribua as variáveis ```clientId``` e ```clientSecret``` à ID e a chave do cliente para seu app. Para obter mais informações, consulte [como associar um aplicativo do Azure AD com sua conta do Partner Center](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
+* Atribua a variável ```tenantId``` à ID do locatário do seu app e atribua as variáveis ```clientId``` e ```clientSecret``` à ID e a chave do cliente para seu app. Para obter mais informações, consulte [como associar um aplicativo do AD do Azure com sua conta no Partner Center](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 * Atribua a variável ```applicationId``` à [ID da Loja](in-app-purchases-and-trials.md#store-ids) do app para o qual você deseja criar um envio.
 
 > [!div class="tabbedCodeSnippets"]
@@ -54,4 +54,4 @@ A classe ```DevCenterClient``` define os métodos auxiliares que invocam uma var
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)

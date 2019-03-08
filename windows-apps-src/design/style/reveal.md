@@ -1,6 +1,6 @@
 ---
 description: Revelação é um efeito de iluminação que ajuda a trazer profundidade e foco para os elementos interativos do seu aplicativo.
-title: Realce do revelação
+title: Revelar realce
 template: detail.hbs
 ms.date: 08/09/2017
 ms.topic: article
@@ -11,22 +11,22 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: aeba4dbd734ea4b521033726968e90c232c154cb
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116398"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628661"
 ---
-# <a name="reveal-highlight"></a>Realce do revelação
+# <a name="reveal-highlight"></a>Revelar realce
 
 ![imagem hero](images/header-reveal-highlight.svg)
 
-Revela que destaque é um efeito de iluminação que destaca elementos interativos, como barras de comandos, quando o usuário move o ponteiro perto deles. 
+Revele o que realce é um efeito de iluminação que realça os elementos interativos, como barras de comandos, quando o usuário move o ponteiro próximo a eles. 
 
-> **APIs importantes**: [classe RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [classe RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [classe RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [classe RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [classe VisualState](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
+> **APIs importantes**: [Classe RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [classe RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [classe RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [classe RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState classe](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Como funciona
-Revela destaque chama a atenção para elementos interativos, revelando o contêiner do elemento quando o ponteiro está próximo, conforme mostrado nesta ilustração:
+Revele a atenção de chamadas de realce para elementos interativos, revelando o contêiner do elemento quando o ponteiro estiver próximo, conforme mostrado nesta ilustração:
 
 ![Visual do Revelação](images/Nav_Reveal_Animation.gif)
 
@@ -41,8 +41,8 @@ Por meio da exposição das bordas ocultas ao redor de objetos, o Revelação pr
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/Reveal">abrir o aplicativo e ver o Revelação em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obter o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obter o código-fonte (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -54,7 +54,7 @@ Por meio da exposição das bordas ocultas ao redor de objetos, o Revelação pr
 
 ## <a name="how-to-use-it"></a>Como usá-lo
 
-O Revelação funciona automaticamente para alguns controles. Para outros controles, você pode habilitar o revelação atribuindo um estilo especial ao controle, conforme descrito nas seções deste artigo [Habilitando o revelação em outros controles](#enabling-reveal-on-other-controls) e [Habilitando o revelação em controles personalizados](#enabling-reveal-on-custom-controls) .
+O Revelação funciona automaticamente para alguns controles. Para outros controles, você pode habilitar revelam atribuindo um estilo especial para o controle, conforme descrito na [habilitando revelar em outros controles](#enabling-reveal-on-other-controls) e [habilitando revelar em controles personalizados](#enabling-reveal-on-custom-controls) seções deste artigo.
 
 ## <a name="controls-that-automatically-use-reveal"></a>Controles que usam o Revelação automaticamente
 
@@ -65,7 +65,7 @@ O Revelação funciona automaticamente para alguns controles. Para outros contro
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Estas ilustrações mostram o realce do revelação em vários controles diferentes:
+Estas ilustrações mostram revelar realçar em vários controles diferentes:
 
 ![Exemplos do Revelação](images/RevealExamples_Collage.png)
 
@@ -76,7 +76,7 @@ Se você tiver um cenário onde deve ser aplicado Revelação (esses controles s
 
 Esses controles não têm a Revelação por padrão, uma vez que são controles menores que geralmente são ajudantes dos principais pontos de foco da sua aplicação; no entanto cada aplicativo é diferente, e se esses controles são os mais utilizados em seu aplicativo, nós criamos alguns estilos para auxiliá-lo com isso:
 
-| Nome do Controle   | Nome do Recurso |
+| Nome do Controle   | Nome do recurso |
 |----------|:-------------:|
 | Botão |  ButtonRevealStyle |
 | ToggleButton | ToggleButtonRevealStyle |
@@ -113,7 +113,7 @@ Ou altere o TargetTheme no RevealBorderBrush para escuro. Lembre-se: se o Target
 
 ## <a name="enabling-reveal-on-custom-controls"></a>Habilitando o Revelação em controles personalizados
 
-Você pode adicionar o Revelação a controles personalizados. Antes de fazer isso, é útil saber um pouco mais sobre como funciona o efeito do revelação. O Revelação é composto de dois efeitos individuais: **Borda do Revelação** e **Hover do Revelação**.
+Você pode adicionar o Revelação a controles personalizados. Antes de fazer, é útil saber um pouco mais sobre como funciona o efeito de revelação. Revelar é composto por dois efeitos separados: **Borda de revelar** e **revelar focalização**.
 
 - **Borda** mostra as bordas dos elementos interativos quando um ponteiro está próximo. Esse efeito mostra que esses objetos próximos podem executar ações semelhantes às do objeto em foco.
 - **Hover**  aplica uma forma de halo suave ao redor do item focalizado ou focado e executa uma animação ao clicar. 
@@ -130,8 +130,8 @@ Você pode adicionar o Revelação a controles personalizados. Antes de fazer is
 
 
 Esses efeitos são definidos por dois pincéis: 
-* Revelação borda é definido por **RevealBorderBrush**
-* Revelação hover é definido por **RevealBackgroundBrush**
+* Revelar de borda é definido por **RevealBorderBrush**
+* Revelação de em foco é definida por **RevealBackgroundBrush**
 
 ```xaml
 <RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
@@ -255,14 +255,14 @@ Veja a seguir um modelo completo da aparência de um botão do Revelação:
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>Ajustando o efeito do Revelação em um controle personalizado 
 
-Ao habilitar o revelação em um controle personalizado ou remodelado ou um superfície de comando personalizada, estas dicas podem ajudá-lo a otimizar o efeito:
+Quando você habilita a revelação em um controle personalizado ou re-modelo ou uma superfície de comando personalizada, essas dicas podem ajudar a otimizar o efeito:
  
-* Nos itens adjacentes com tamanhos que não estão alinhados em altura ou largura (particularmente em listas): remova o comportamento de abordagem da borda e mantenha as bordas mostradas somente no foco.
-* Para itens de comando que entram e saem do estado desabilitado com frequência: coloque o pincel de abordagem da borda nos backplates dos elementos, bem como em suas bordas para enfatizar seu estado.
-* Para elementos de comandos adjacentes que estão tão próximos que chegam a se tocar: adicione uma margem de 1px entre os dois elementos. 
+* Nos itens adjacentes com tamanhos que não estão alinhados na altura ou largura (especialmente em listas): Remover o comportamento da abordagem de borda e manter as bordas mostradas ao focalizar somente.
+* Para itens de comandos que frequentemente vá e sair do estado desativado: Coloque o pincel de abordagem de borda no backplates dos elementos, bem como suas bordas para enfatizar seu estado.
+* Para elementos adjacentes de comandos que são então fechar eles abordam: Adicionada uma margem de 1px entre os dois elementos. 
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
-### <a name="do"></a>Fazer:
+### <a name="do"></a>Faça:
 - Use o Revelação nos elementos em que o usuário pode executar muitas ações (CommandBars, menus de navegação)
 - Use o Revelação em agrupamentos de elementos interativos que não têm separadores visuais por padrão (listas, faixas de opções)
 - Use o Revelação em áreas com uma grande quantidade de elementos interativos (cenários de comando)
@@ -287,8 +287,8 @@ Ao habilitar o revelação em um controle personalizado ou remodelado ou um supe
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Classe RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush)
-- [Acrílico](acrylic.md)
-- [Efeitos de Composição](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
-- [Fluent Design para UWP](../fluent-design-system/index.md)
-- [Ciência no sistema: Fluent Design e profundidade](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
-- [Ciência no sistema: Fluent Design e luz](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)
+- [Tinta acrílica](acrylic.md)
+- [Efeitos de composição](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
+- [Design Fluent para UWP](../fluent-design-system/index.md)
+- [Ciência no sistema: Profundidade e Design Fluent](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
+- [Ciência no sistema: Luz e Design Fluent](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

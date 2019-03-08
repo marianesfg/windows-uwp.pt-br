@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dc5e107fd343798698f5957c26d87a0d3ffe6625
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929205"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608621"
 ---
-# <a name="getting-started-animation"></a>Introdução: animação
+# <a name="getting-started-animation"></a>Guia de Introdução: Animação
 
 
 ## <a name="adding-animations"></a>Adicionando animações
 
-No iOS, a maioria dos efeitos de animação são criados de forma programática. Por exemplo, você pode usar as animações fornecidas pelos métodos baseados em blocos **animateWithDuration** da classe **UIView** ou os métodos mais antigos, não baseados em blocos. Você também pode usar explicitamente a classe **CALayer** para animar camadas. As animações nos aplicativos do Windows podem ser criadas de forma programática, mas elas também podem ser definidas declarativamente com Extensible Application Markup Language (XAML). Você pode usar o Microsoft Visual Studio para editar o código XAML diretamente, mas o Visual Studio também vem com uma ferramenta chamada **Blend**, que cria o código XAML para você enquanto você trabalha com animações em um designer. Na realidade, o Blend permite que você abra, crie, compile e execute projetos completos do Visual Studio, graficamente. O tutorial a seguir permite experimentar.
+No iOS, a maioria dos efeitos de animação são criados de forma programática. Por exemplo, você pode usar as animações fornecidas pelos métodos baseados em blocos **animateWithDuration** da classe **UIView** ou os métodos mais antigos, não baseados em blocos. Você também pode usar explicitamente a classe **CALayer** para animar camadas. As animações em aplicativos do Windows podem ser criadas via programação, mas também podem ser definidas declarativamente com a linguagem XAML. Você pode usar o Microsoft Visual Studio para editar o código XAML diretamente, mas o Visual Studio também vem com uma ferramenta chamada **Blend**, que cria o código XAML para você enquanto você trabalha com animações em um designer. Na realidade, o Blend permite que você abra, crie, compile e execute projetos completos do Visual Studio, graficamente. O tutorial a seguir permite experimentar.
 
 Crie um novo aplicativo da Plataforma Universal do Windows (UWP) e dê um nome como "SimpleAnimation". Neste projeto, vamos mover um retângulo, aplicar um efeito de esmaecimento e trazê-lo de volta à visualização. Animações em XAML são baseadas em conceito de *storyboards* (não para ser confundido com iOS storyboards). As storyboards usam *quadros-chave* para animar as alterações da propriedade.
 
@@ -54,7 +54,7 @@ Agora, vamos reexibir o retângulo. Na janela **Objetos e Linha do Tempo**, cliq
 
 Finalmente, clique no botão **Reproduzir** para ver o que acontece.
 
-Você pode compilar e executar o projeto, clicando no botão verde de execução na parte superior da janela (ou basta pressionar F5). Se você fizer isso, verá que seu projeto realmente será compilado e executado, mas o retângulo verde ainda ficará perfeita e teimosamente parado, como um bebê que não ganha doces em um corredor de supermercado. Para iniciar a animação, você precisará adicionar uma linha de código ao projeto. Este é o procedimento.
+Você pode compilar e executar o projeto, clicando no botão verde de execução na parte superior da janela (ou basta pressionar F5). Se você fizer isso, verá que seu projeto realmente será compilado e executado, mas o retângulo verde ainda ficará perfeita e teimosamente parado, como um bebê que não ganha doces em um corredor de supermercado. Para iniciar a animação, você precisará adicionar uma linha de código ao projeto. Veja aqui como fazer isso.
 
 Salve o projeto, abrindo o menu **Arquivo** e selecionando **Salvar MainPage.xaml**. Retorne ao Visual Studio. Se o Visual Studio exibir uma caixa de diálogo perguntando se você quer recarregar o arquivo modificado, selecione **Yes**. Clique duas vezes sobre o arquivo **MainPage.xaml.cs**, que está oculto em **MainPage.xaml**, para abri-lo e adicione o seguinte código acima do método público MainPage():
 
@@ -68,7 +68,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 Execute o projeto novamente e observe a animação do retângulo. Viva!
 
-Se você abrir o arquivo MainPage.xaml, no modo de exibição **XAML**, verá que código XAML adicionado pelo Blend funcionou no designer. Em particular, analise o código nos elementos `<Storyboard>` e `<Rectangle>`. O código a seguir mostra um exemplo. As reticências indicam código não relacionado omitido por questões de brevidade; as quebras de linha foram adicionadas para melhorar a legibilidade do código.
+Se você abrir o arquivo MainPage.xaml, no modo de exibição **XAML**, verá que código XAML adicionado pelo Blend funcionou no designer. Em particular, analise o código nos elementos `<Storyboard>` e `<Rectangle>`. Os seguintes códigos mostram um exemplo. As reticências indicam código não relacionado omitido por questões de brevidade; as quebras de linha foram adicionadas para melhorar a legibilidade do código.
 
 ```xml
 ...
@@ -124,10 +124,10 @@ Se você abrir o arquivo MainPage.xaml, no modo de exibição **XAML**, verá qu
 ...
 ```
 
-Você pode editar esse XAML manualmente ou retornar ao Blend para continuar a trabalhar com ele lá. O Blend torna divertida a criação de interfaces do usuário interessantes e permite animá-las usando uma ferramenta gráfica pode acelerar drasticamente o tempo de desenvolvimento. Para obter mais informações sobre animações, consulte [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350).
+Você pode editar esse XAML manualmente ou retornar ao Blend para continuar a trabalhar com ele lá. O Blend torna divertida a criação de interfaces do usuário interessantes e permite animá-las usando uma ferramenta gráfica pode acelerar drasticamente o tempo de desenvolvimento. Para saber mais sobre animações, consulte [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350).
 
-**Observação**para obter informações sobre animações para <span class="legacy-term">aplicativos UWP usando JavaScript e HTML</span>, consulte [Animating your UI (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
+**Observação**  para obter informações sobre animações para <span class="legacy-term">aplicativos UWP usando JavaScript e HTML</span>, consulte [animando sua interface do usuário (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
 
-### <a name="next-step"></a>Próxima etapa
+### <a name="next-step"></a>Próximas etapas
 
-[Introdução: o que vem depois?](getting-started-what-next.md)
+[Guia de Introdução: O que fazer agora?](getting-started-what-next.md)

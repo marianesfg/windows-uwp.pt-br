@@ -1,6 +1,6 @@
 ---
 title: Transformação da projeção
-description: A transformação da projeção controla o interior da câmera, como a escolha de uma lente para uma câmera. Esse é o mais complicado dos três tipos de transformação.
+description: A transformação da projeção controla o interior da câmera, como a escolha de uma lente para uma câmera. Este é o mais complicado dos três tipos de transformação.
 ms.assetid: 378F205D-3800-4477-9820-5EBE6528B14A
 keywords:
 - Transformação da projeção
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f0806c0aa7a130a080457f4361d17f64451846f9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931212"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634541"
 ---
 # <a name="projection-transform"></a>Transformação da projeção
 
 
-A *transformação da projeção* controla as partes internas da câmera, como escolher uma lente de uma câmera. Esse é o mais complicado dos três tipos de transformação.
+A *transformação da projeção* controla as partes internas da câmera, como escolher uma lente de uma câmera. Este é o mais complicado dos três tipos de transformação.
 
 A matriz de projeção costuma ser uma projeção de perspectiva e escala. A transformação da projeção converte o tronco de exibição em uma forma cuboide. Como a parte perto do final do tronco de exibição é menor do que a extremidade oposta, isso tem o efeito de expandir objetos próximos da câmera; é assim que a perspectiva é aplicada à cena.
 
@@ -29,7 +29,7 @@ A matriz de visualização converte a câmera para a origem por meio da transla�
 
 ![ilustração da matriz de translação](images/projmat2.png)
 
-Multiplicar a matriz de translação pela matriz de projeção (T\*P) resulta na matriz de projeção composta, conforme mostrado na ilustração a seguir.
+Multiplicar a matriz de translação pela matriz de projeção (T\*P) fornece a matriz de projeção compostas, conforme mostrado na ilustração a seguir.
 
 ![ilustração da matriz de projeção composta](images/projmat3.png)
 
@@ -55,7 +55,7 @@ Nessas fórmulas, Zₙ representa a posição do plano de recorte próximo e o V
 
 Seja qual fórmula você decidir usar, lembre-se de definir Zₙ para o maior valor possível, pois os valores de z extremamente próximos da câmera não variam muito. Isso dificulta comparações de profundidade usando buffers de z de 16 bits um pouco complicados.
 
-## <a name="span-idawfriendlyprojectionmatrixspanspan-idawfriendlyprojectionmatrixspanspan-idawfriendlyprojectionmatrixspana-w-friendly-projection-matrix"></a><span id="A_W_Friendly_Projection_Matrix"></span><span id="a_w_friendly_projection_matrix"></span><span id="A_W_FRIENDLY_PROJECTION_MATRIX"></span>Uma matriz de projeção fácil para w
+## <a name="span-idawfriendlyprojectionmatrixspanspan-idawfriendlyprojectionmatrixspanspan-idawfriendlyprojectionmatrixspana-w-friendly-projection-matrix"></a><span id="A_W_Friendly_Projection_Matrix"></span><span id="a_w_friendly_projection_matrix"></span><span id="A_W_FRIENDLY_PROJECTION_MATRIX"></span>Uma matriz de projeção w amigável
 
 
 O Direct3D pode usar o componente de w de um vértice que foi transformado pelas matrizes de mundo, exibição e projeção para realizar cálculos baseados em profundidade em buffer de profundidade ou efeitos de nevoeiro. Cálculos como esses exigem que sua matriz de projeção normalize w para equivaler ao z do espaço do mundo. Em poucas palavras, se sua matriz de projeção inclui um coeficiente (3,4) que não é 1, todos os coeficientes devem ser dimensionados pelo inverso do coeficiente (3,4) para criar uma matriz adequada. Se você não fornecer uma matriz em conformidade, efeitos de nevoeiro e buffering de profundidade não serão aplicados corretamente.

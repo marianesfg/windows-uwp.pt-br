@@ -1,5 +1,5 @@
 ---
-Description: This article describes how to send a local tile notification to a primary tile and a secondary tile using adaptive tile templates.
+Description: Este artigo descreve como enviar uma notificação de bloco local para um bloco primário e um bloco secundário usando modelos de bloco adaptável.
 title: Enviar uma notificação de bloco local
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 template: detail.hbs
@@ -8,16 +8,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5752a7bf18d785121258ea3fe75afe8383be2aff
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946311"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636101"
 ---
 # <a name="send-a-local-tile-notification"></a>Enviar uma notificação de bloco local
  
 
-Blocos de aplicativo principal no Windows 10 são definidos no manifesto do aplicativo, enquanto os blocos secundários são criados e definidos pelo código do aplicativo por meio de programação. Este artigo descreve como enviar uma notificação de bloco local para um bloco primário e um bloco secundário usando modelos de bloco adaptável. (Notificação local é aquela que é enviada pelo código do app, e não uma enviada por push ou obtida em um servidor Web.)
+Blocos de aplicativos primário no Windows 10 são definidos no manifesto do aplicativo, enquanto os blocos secundários por meio de programação são criados e definidos pelo código do aplicativo. Este artigo descreve como enviar uma notificação de bloco local para um bloco primário e um bloco secundário usando modelos de bloco adaptável. (Notificação local é aquela que é enviada pelo código do app, e não uma enviada por push ou obtida em um servidor Web.)
 
 ![bloco padrão e bloco com notificação](images/sending-local-tile-01.png)
 
@@ -46,7 +46,7 @@ using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
 ## <a name="create-the-notification-content"></a>Criar o conteúdo da notificação
 
 
-No Windows 10, cargas de bloco são definidas usando modelos de bloco adaptável, que permitem que você crie layouts personalizados visual suas notificações. (Para saber o que é possível com blocos adaptáveis, consulte [Criar blocos adaptáveis](create-adaptive-tiles.md).)
+No Windows 10, cargas de bloco são definidas usando modelos de bloco adaptável, que permitem que você crie layouts de visual personalizados para suas notificações. (Para saber o que é possível com blocos adaptáveis, consulte [Criar blocos adaptáveis](create-adaptive-tiles.md).)
 
 Este exemplo de código cria conteúdo de bloco adaptável para blocos médios e largos.
 
@@ -202,11 +202,11 @@ Notificações periódicas ou enviadas por push só podem adicionar novas notifi
 ## <a name="next-steps"></a>Próximas etapas
 
 
-**Como usar a fila de notificações**
+**Usando a fila de notificação**
 
 Agora que concluiu a primeira atualização do bloco, você pode expandir a funcionalidade do título habilitando uma [fila de notificação](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234).
 
-**Outros métodos de entrega da notificação**
+**Outros métodos de entrega de notificação**
 
 Este artigo mostra como enviar a atualização do bloco como uma notificação. Para explorar outros métodos de entrega da notificação, inclusive agendadas, periódicas e enviadas por push, consulte [Entrega de notificações](choosing-a-notification-delivery-method.md).
 
@@ -289,9 +289,9 @@ var notification = new TileNotification(doc);
 * [Criar blocos adaptáveis](create-adaptive-tiles.md)
 * [Esquema de conteúdo do bloco](../tiles-and-notifications/tile-schema.md)
 * [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
-* [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-sending-local-tile-win10)
-* [**Namespace Windows.UI.Notifications**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications)
-* [Como usar a fila de notificações (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)
+* [Exemplo de código completo no GitHub](https://github.com/WindowsNotifications/quickstart-sending-local-tile-win10)
+* [**Namespace do Windows**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications)
+* [Como usar a fila de notificação (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)
 * [Entrega de notificações](choosing-a-notification-delivery-method.md)
  
 

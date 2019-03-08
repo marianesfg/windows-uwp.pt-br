@@ -1,5 +1,5 @@
 ---
-Description: Navigation in Universal Windows Platform (UWP) apps is based on a flexible model of navigation structures, navigation elements, and system-level features.
+Description: A navegação em aplicativos da Plataforma Universal do Windows (UWP) é baseada em um modelo flexível de estruturas de navegação, elementos de navegação e recursos no nível do sistema.
 title: Noções básicas de navegação para aplicativos UWP
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: bba6d42e6ce494c0655c6b6c60db91c1e2e006e8
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116238"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636091"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -49,13 +49,13 @@ Embora não haja nenhum design de navegação simples que funcione para todos os
 
 Vamos começar com os princípios básicos de bom design de navegação:
 
-- **Consistência:** atenda às expectativas do usuário.
-- **Simplicidade**: não faça mais que o necessário.
-- **Clareza:** forneça caminhos claros e opções.
+- **Consistência:** Atender às expectativas dos usuários.
+- **Simplicidade:** Não faça mais do que o necessário.
+- **Maior clareza:** Forneça caminhos claros e opções.
 
 ### <a name="consistency"></a>Consistência
 
-A navegação deve ser consistente com as expectativas dos usuários. Usando [controles padrão](#use-the-right-controls) que os usuários são familiares com e seguir convenções padrão para ícones, localização e estilo tornarão navegação previsível e intuitiva para os usuários.
+A navegação deve ser consistente com as expectativas dos usuários. Usando o [controles padrão](#use-the-right-controls) que os usuários estão familiarizadas com e seguir convenções padrão para ícones, local, e o estilo fará navegação previsível e intuitiva para os usuários.
 
 ![imagem dos componentes da página](images/nav/page-components.svg)
 
@@ -115,7 +115,7 @@ Agora que você está familiarizado com os princípios gerais de navegação, co
 
         We recommend using a flat structure when:
 
-        - As páginas podem ser exibidas em qualquer ordem.
+        - As páginas podem ser vistas em qualquer ordem.
         - As páginas são claramente distintas umas das outros e não têm uma relação pai/filho óbvia.
         - Há menos de 8 páginas no grupo. <br>
         (Quando há mais páginas, talvez seja difícil para os usuários compreender como as páginas são únicas ou entender sua localização atual dentro do grupo. Se você não achar que isso é um problema para seu aplicativo, vá em frente e torne as páginas pares. Caso contrário, considere a possibilidade de usar uma estrutura hierárquica para quebrar as páginas em dois ou mais grupos menores.)
@@ -185,12 +185,12 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
         Use top navigation when:
 
         - Você deseja mostrar todas as opções de navegação na tela.
-        - Desejam mais espaço para conteúdo do seu aplicativo.
-        - Ícones não descrevem claramente as categorias de navegação.
+        - Você deseja obter mais espaço para o conteúdo do seu aplicativo.
+        - Ícones não é possível descrever claramente suas categorias de navegação.
         
         Use guias quando:
 
-        - Você deseja preservar o estado de página e histórico de navegação.
+        - Você deseja preservar o estado da página e o histórico de navegação.
         - Você espera que os usuários alternem entre as guias com frequência.
 
 :::row-end:::
@@ -204,7 +204,7 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
 
         Displays a vertical list of links to top-level pages. Use when:
         
-        - As páginas estiverem no nível superior.
+        - As páginas existirem no nível superior.
         - Há muitos itens de navegação (mais de 5)
         - Você não espera que os usuários alternem entre as páginas com frequência.
         
@@ -235,6 +235,6 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
         Embedded navigation elements can appear in a page's content. Unlike other navigation elements, which should be consistent across the pages, content-embedded navigation elements are unique from page to page.
 :::row-end:::
 
-## <a name="next-add-navigation-code-to-your-app"></a>Próximo: Adicionar código de navegação ao aplicativo
+## <a name="next-add-navigation-code-to-your-app"></a>Avançar: Adicione o código de navegação ao seu aplicativo
 
 O próximo artigo, [Implementar a navegação básica](navigate-between-two-pages.md), mostra o código necessário para usar um controle de Quadro que habilitará a navegação básica entre duas páginas no aplicativo.

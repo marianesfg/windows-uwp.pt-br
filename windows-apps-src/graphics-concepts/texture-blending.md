@@ -1,27 +1,27 @@
 ---
-title: Mesclagem de texturas
+title: Mesclagem de textura
 description: O Direct3D pode mesclar até oito texturas em primitivas em uma única passagem.
 ms.assetid: 9AD388FA-B2B9-44A9-B73E-EDBD7357ACFB
 keywords:
-- Mesclagem de texturas
+- Mesclagem de textura
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c40c7d3bd080bd927fc52cb7f740e1dc4a6358c0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947998"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620801"
 ---
-# <a name="texture-blending"></a>Mesclagem de texturas
+# <a name="texture-blending"></a>Mesclagem de textura
 
 
 O Direct3D pode mesclar até oito texturas em primitivas em uma única passagem. O uso da mesclagem de várias texturas pode aumentar profundamente a taxa de quadros de um aplicativo Direct3D. Um aplicativo emprega a mesclagem de várias texturas para aplicar texturas, sombras, iluminação especular, iluminação difusa e outros efeitos especiais em uma única passagem.
 
 Para usar a mesclagem de texturas, seu aplicativo deve verificar primeiro se o hardware do usuário tem suporte para isso.
 
-## <a name="span-idtexture-stages-and-the-texture-blending-cascadespanspan-idtexture-stages-and-the-texture-blending-cascadespanspan-idtexture-stages-and-the-texture-blending-cascadespantexture-stages-and-the-texture-blending-cascade"></a><span id="Texture-Stages-and-the-Texture-Blending-Cascade"></span><span id="texture-stages-and-the-texture-blending-cascade"></span><span id="TEXTURE-STAGES-AND-THE-TEXTURE-BLENDING-CASCADE"></span>Os estágios de textura e a mesclagem de texturas em cascata
+## <a name="span-idtexture-stages-and-the-texture-blending-cascadespanspan-idtexture-stages-and-the-texture-blending-cascadespanspan-idtexture-stages-and-the-texture-blending-cascadespantexture-stages-and-the-texture-blending-cascade"></a><span id="Texture-Stages-and-the-Texture-Blending-Cascade"></span><span id="texture-stages-and-the-texture-blending-cascade"></span><span id="TEXTURE-STAGES-AND-THE-TEXTURE-BLENDING-CASCADE"></span>Estágios de textura e a textura em cascata de mesclagem
 
 
 O Direct3D dá suporte para a mesclagem de várias texturas em uma única passagem por meio do uso de estágios de textura. Um estágio de textura pega dois argumentos e executa uma operação de mesclagem neles, passando o resultado para processamento adicional ou para rasterização. Você pode visualizar um estágio de textura conforme mostrado no diagrama a seguir.
@@ -30,7 +30,7 @@ O Direct3D dá suporte para a mesclagem de várias texturas em uma única passag
 
 Como mostra o diagrama anterior, os estágios de textura combinam dois argumentos usando um operador especificado. As operações comuns incluem modulação simples ou adição dos componentes de cor ou alfa dos argumentos, mas há suporte para dezenas de operações. Os argumentos para um estágio podem ser uma textura associada, a cor iterada ou o alfa (iterado durante o sombreamento Gouraud), cor ou alfa arbitrário ou o resultado do estágio de textura anterior.
 
-**Observação**  Direct3D diferencia a mesclagem de cores da mesclagem alfa. Os aplicativos definem as operações e os argumentos de mesclagem de cor e alfa individualmente, e os resultados dessas configurações são independentes uns dos outros.
+**Observação**    Direct3D diferencia a cor de mistura de combinação alfa. Os aplicativos definem as operações e os argumentos de mesclagem de cor e alfa individualmente, e os resultados dessas configurações são independentes uns dos outros.
 
  
 
@@ -61,11 +61,11 @@ Se seu aplicativo usa um número de estágios variado para diferentes situaçõe
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="blending-stages.md">Estágios de mesclagem</a></p></td>
-<td align="left"><p>Um estágio de mesclagem é um conjunto de operações de textura e seus argumentos que definem como as texturas são mescladas.</p></td>
+<td align="left"><p>Um estágio de mesclagem é um conjunto de operações de textura e seus argumentos que definem como as texturas são combinadas.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="multipass-texture-blending.md">Mistura de textura com passagem múltipla</a></p></td>
-<td align="left"><p>Os aplicativos Direct3D podem conseguir vários efeitos especiais aplicando várias texturas a uma primitiva ao longo de várias passagens de renderização. O termo comum para isso é <em>mesclagem de texturas de passagem múltipla</em>. Um uso comum de mesclagem de texturas de passagem múltipla é emular os efeitos de iluminação complexa e sombrear modelos aplicando várias cores de várias texturas diferentes. Uma dessas aplicações é chamada de <em>mapeamento suave</em>.</p></td>
+<td align="left"><p><a href="multipass-texture-blending.md">A combinação de textura MultiPass</a></p></td>
+<td align="left"><p>Os apps Direct3D podem conseguir vários efeitos especiais ao aplicar diversas texturas a um primitivo durante múltiplas passagens de renderização. O termo comum para isso é <em>mesclagem de texturas de passagem múltipla</em>. O uso típico da mesclagem de textura com passagens múltiplas é emular os efeitos de iluminação complexos e os modelos de sombreamento ao aplicar várias cores de diversas texturas diferentes. Uma dessas aplicações é chamada de <em>mapeamento suave</em>.</p></td>
 </tr>
 </tbody>
 </table>

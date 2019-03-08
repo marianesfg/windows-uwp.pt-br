@@ -1,5 +1,5 @@
 ---
-Description: Dialogs and flyouts display transient UI elements that appear when the user requests them or when something happens that requires notification or approval.
+Description: Caixas de diálogo e submenus exibem elementos transitórios da interface do usuário que aparecem quando o usuário os solicita ou quando acontece algo que requer notificação ou aprovação.
 title: Controles de caixa de diálogo
 label: Dialogs
 template: detail.hbs
@@ -13,26 +13,26 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: bee954cba446ac7dc7eb41622d9275b3b73af6ee
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116095"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621831"
 ---
 # <a name="dialog-controls"></a>Controles de caixa de diálogo
 
-Controles de caixa de diálogo são sobreposições de interface do usuário modais que fornecem informações contextuais do aplicativo. Eles bloqueiam interações com a janela do aplicativo até que sejam explicitamente ignoradas. Elas muitas vezes solicitam algum tipo de ação do usuário.
+Controles de caixa de diálogo são sobreposições da interface do usuário modais que fornecem informações contextuais de aplicativo. Eles bloqueiam as interações com a janela do aplicativo até que seja explicitamente descartado. Elas muitas vezes solicitam algum tipo de ação do usuário.
 
 ![Exemplo de uma caixa de diálogo](../images/dialogs/dialog_RS2_delete_file.png)
 
 
-> **APIs importantes**: [classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
+> **APIs importantes**: [Classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use caixas de diálogo para notificar os usuários sobre informações importantes ou para solicitar a confirmação ou informações adicionais antes de uma ação ser concluída.
 
-Para obter recomendações sobre quando usar uma caixa de diálogo VS quando usar um submenu (um controle semelhante), consulte [as caixas de diálogo e submenus](index.md). 
+Para obter recomendações sobre quando usar uma caixa de diálogo versus quando usar um submenu (um controle semelhante), consulte [caixas de diálogo e submenus](index.md). 
 
 ## <a name="examples"></a>Exemplos
 
@@ -43,8 +43,8 @@ Para obter recomendações sobre quando usar uma caixa de diálogo VS quando usa
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abrir o aplicativo para ver o <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> ou <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> em ação.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obter o código-fonte (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -62,7 +62,7 @@ Para obter recomendações sobre quando usar uma caixa de diálogo VS quando usa
     -   Se um título da caixa de diálogo for usado, use a área de conteúdo para fornecer mais detalhes ou definir a terminologia. Não repita o título com palavras ligeiramente diferentes.
 -   Pelo menos um botão da caixa de diálogo deve aparecer.
     -   Certifique-se de que a caixa de diálogo tem pelo menos um botão correspondente para uma ação segura e não destrutiva como "Acertou!", "Fechar" ou "Cancelar". Use a API CloseButton para adicionar esse botão.
-    -   Use respostas específicas para a instrução ou o conteúdo principal como texto do botão. Um exemplo é "Você permite que AppName acesse sua localização?", seguido pelos botões "Permitir" e "Bloquear". Respostas específicas podem ser entendidas mais rapidamente, resultando na tomada de decisão eficiente.
+    -   Use respostas específicas para a instrução ou o conteúdo principal como texto do botão. Um exemplo é "Você permite que NomeDoAplicativo acesse o sua localização?", seguido pelos botões "Permitir" e "Bloquear". Respostas específicas podem ser entendidas mais rapidamente, resultando na tomada de decisão eficiente.
     - Verifique se o texto dos botões de ação é conciso. Cadeias de caracteres curtas permitem que o usuário faça uma escolha de modo rápido e seguro.
     - Além da ação segura e não destrutiva, você pode, opcionalmente, apresentar ao usuário um ou dois botões de ação relacionados à instrução principal. Esses botões de confirmam o ponto principal da caixa de diálogo. Use as APIs PrimaryButton e SecondaryButton para adicionar essas ações.
     - Os botões de ação devem aparecer como os botões mais à esquerda. A ação segura e não destrutiva deve aparecer como o botão mais à direita.
@@ -118,8 +118,8 @@ private async void DisplayDeleteFileDialog()
 }
 ```
 
-## <a name="provide-a-safe-action"></a>Forneça uma ação segura
-Como caixas de diálogo bloqueiam a interação do usuário e como os botões são o mecanismo principal para os usuários ignorarem a caixa de diálogo, certifique-se de que a caixa de diálogo contém pelo menos um botão de ação "segura" e não destrutiva, como "Fechar" ou "Acertou!". **Todas as caixas de diálogo devem conter pelo menos um botão de ação segura para fechar a caixa de diálogo.** Isso garante que o usuário possa fechar a caixa de diálogo sem executar uma ação.<br>![Uma caixa de diálogo de um botão](../images/dialogs/dialog_RS2_one_button.png)
+## <a name="provide-a-safe-action"></a>Fornecer uma ação de segurança
+Como caixas de diálogo bloqueiam a interação do usuário e como os botões são o mecanismo principal para os usuários ignorarem a caixa de diálogo, certifique-se de que a caixa de diálogo contém pelo menos um botão de ação "segura" e não destrutiva, como "Fechar" ou "Acertou!". **Todas as caixas de diálogo devem conter pelo menos um botão de ação de segurança para fechar a caixa de diálogo.** Isso garante que o usuário possa fechar a caixa de diálogo sem executar uma ação.<br>![Uma caixa de diálogo de um botão](../images/dialogs/dialog_RS2_one_button.png)
 
 ```csharp
 private async void DisplayNoWifiDialog()
@@ -248,7 +248,7 @@ Uma caixa de diálogo de confirmação típica tem dois botões: um botão de af
     </li>
 </ul>
 
-> Algumas plataformas colocam o botão de afirmação à direita em vez de à esquerda. Por que é recomendável colocá-lo no lado esquerdo?  Se você considerar que a maioria dos usuários estão à direita e eles segurar o telefone com a mão, é realmente mais confortável pressionar o botão de afirmação quando ele está à esquerda, como o botão está mais chances de serem dentro thumb-arco do usuário. Botões no lado direito da tela exigem que o usuário receber seu polegar para dentro para uma posição mais confortável.
+> Algumas plataformas colocam o botão de afirmação à direita em vez de à esquerda. Por que é recomendável colocá-lo no lado esquerdo?  Se você considerar que a maioria dos usuários é destra e eles seguram o telefone com essa mão, é realmente mais confortável pressionar o botão de afirmação quando ele está à esquerda, pois o botão tem mais chances de estar dentro do raio do polegar do usuário. Botões no lado direito da tela exigem que o usuário puxe o polegar para dentro até uma posição mais confortável.
 
 
 
@@ -256,10 +256,10 @@ Uma caixa de diálogo de confirmação típica tem dois botões: um botão de af
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
-- [Dicas de ferramenta](../tooltips.md)
-- [Menus e menu de contexto](../menus.md)
-- [Classe Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+- [Dicas de ferramentas](../tooltips.md)
+- [Menus e menus de contexto](../menus.md)
+- [Classe de submenu](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 - [Classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)

@@ -8,11 +8,11 @@ keywords: windows 10, uwp, contatos, cartão de contato, anotação
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a3485635a49b1690116e7cb271435e63bee2151
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920394"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616431"
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>Conectar seu app a ações em um cartão de contato
 
@@ -185,7 +185,7 @@ Substitua o método [Application.OnActivated](https://msdn.microsoft.com/library
 
 No arquivo code-behind da página, substitua o método [Page.OnNavigatedTo](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.onnavigatedto.aspx). O cartão de contato passa o nome da operação e a ID do usuário para esse método.
 
-Para iniciar uma chamada de vídeo ou áudio, veja este exemplo: [Exemplo de VoIP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP). Você encontrará a API completa no namespace [WIndows.ApplicationModel.Calls](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.calls.aspx).
+Para iniciar uma chamada de áudio ou vídeo, consulte este exemplo: [Exemplo de VoIP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP). Você encontrará a API completa no namespace [WIndows.ApplicationModel.Calls](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.calls.aspx).
 
 Para facilitar a troca de mensagens, veja o namespace [Windows.ApplicationModel.Chat](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.aspx).
 

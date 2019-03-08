@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0194ccba43e2ba5270b9ff8eacf045ca140af6cb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934711"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611901"
 ---
 # <a name="process-media-files-in-the-background"></a>Processar arquivos de mídia em segundo plano
 
@@ -23,9 +23,9 @@ O aplicativo de exemplo descrito neste artigo permite que o usuário selecione u
 
 Para mais detalhes sobre os diferentes recursos do aplicativo Universal do Windows utilizados nessa amostra, consulte:
 
--   [Transcodificar arquivos de mídia](transcode-media-files.md)
--   [Início, retomada e tarefas em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt227652)
--   [Blocos, selos e notificações](https://msdn.microsoft.com/library/windows/apps/mt185606)
+-   [Transcodifique arquivos de mídia](transcode-media-files.md)
+-   [Iniciar tarefas de retomada e segundo plano](https://msdn.microsoft.com/library/windows/apps/mt227652)
+-   [Selos de blocos e notificações](https://msdn.microsoft.com/library/windows/apps/mt185606)
 
 ## <a name="create-a-media-processing-background-task"></a>Criar uma tarefa de processamento de mídia em segundo plano
 
@@ -92,7 +92,7 @@ Antes de poder iniciar a tarefa em segundo plano do seu aplicativo em primeiro p
 1.  No **Gerenciador de Soluções**, clique duas vezes no ícone do arquivo Package.appmanifest para abrir o editor de manifesto.
 2.  Selecione a guia **Declarações**.
 3.  Em **Declarações Disponíveis**, selecione **Tarefas em Segundo Plano** e clique em **Adicionar**.
-4.  Em **Declarações Duportadas** verifique se o item **Tarefas em Segundo Plano** está selecionado. Em **Propriedades**, marque a caixa de seleção **Processamento de mídia**.
+4.  Em **Declarações Compatíveis** verifique se o item **Tarefas em Segundo Plano** está selecionado. Em **Propriedades**, marque a caixa de seleção **Processamento de mídia**.
 5.  Na caixa de texto **Ponto de Entrada**, especifique o namespace e nome da classe para seu teste de em segundo plano, separado por um ponto. Para este exemplo, a entrada é:
    ```csharp
    MediaProcessingBackgroundTask.MediaProcessingTask
@@ -124,13 +124,13 @@ Registre a tarefa em segundo plano chamando [**Register**](https://msdn.microsof
 
 [!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
 
-Um aplicativo típico registrará sua tarefa em segundo plano quando o aplicativo é iniciado inicialmente, como o evento **OnNavigatedTo** .
+Um aplicativo típico registrará suas tarefas em segundo plano quando o aplicativo for lançado inicialmente, como na **OnNavigatedTo** eventos.
 
 Inicie a tarefa em segundo plano chamando o método [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071) do objeto **MediaProcessingTrigger**. O objeto [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007) devolvido por esse método informa se a tarefa em segundo plano foi iniciada com êxito ou se não foi iniciada. 
 
 [!code-cs[LaunchBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetLaunchBackgroundTask)]
 
-Um aplicativo típico iniciará a tarefa em segundo plano em resposta à interação do usuário, como no evento de **clique** de um controle de interface do usuário.
+Um aplicativo típico iniciará a tarefa em segundo plano em resposta à interação do usuário, como no **clique** evento de um controle de interface do usuário.
 
 O manipulador de evento **OnProgress** é chamado quando a tarefa em segundo plano atualiza o progresso da operação. Você pode aproveitar a oportunidade para atualizar sua interface do usuário com informações de progresso.
 

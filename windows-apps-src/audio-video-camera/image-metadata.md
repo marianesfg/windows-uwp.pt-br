@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ab1279a8744d6dc9cddc88abaa064058f1259c2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943072"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631801"
 ---
 # <a name="image-metadata"></a>Metadados de imagem
 
@@ -19,7 +19,7 @@ ms.locfileid: "8943072"
 
 Este artigo mostra como ler e gravar propriedades de metadados de imagem e como adicionar marca de localização em arquivos usando a classe de utilitário [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683).
 
-## <a name="image-properties"></a>Propriedades de imagem
+## <a name="image-properties"></a>Propriedades da imagem
 
 A propriedade [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225) retorna um objeto [**StorageItemContentProperties**](https://msdn.microsoft.com/library/windows/apps/hh770642) que fornece acesso às informações relacionadas ao conteúdo sobre o arquivo. Obtenha as propriedades específicas da imagem chamando [**GetImagePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh770646). O objeto retornado [**ImageProperties**](https://msdn.microsoft.com/library/windows/apps/br207718) expõe membros que contêm campos de metadados de imagem básicos, como o título da imagem e a data de captura.
 
@@ -69,7 +69,7 @@ Assim que você tiver o decodificador, crie uma lista de cadeias de caracteres e
 
 -   Para obter informações sobre a linguagem de consulta de metadados do WIC e as propriedades com suporte, consulte [Consultas de metadados nativos de formato de imagem do WIC](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
--   Muitas propriedades de metadados são suportadas apenas por um subconjunto de tipos de imagem. [**GetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226250) falhará com o código de erro 0x88982F41 se não houver suporte para uma das propriedades solicitadas pela imagem associada ao decodificador e 0x88982F81 se a imagem não der suporte a metadados. As constantes associadas a esses códigos de erro são WINCODEC\_ERR\_PROPERTYNOTSUPPORTED e WINCODEC\_ERR\_UNSUPPORTEDOPERATION e são definidas no arquivo de cabeçalho winerror.h.
+-   Muitas propriedades de metadados são suportadas apenas por um subconjunto de tipos de imagem. [**GetPropertiesAsync** ](https://msdn.microsoft.com/library/windows/apps/br226250) falhará com o código de erro 0x88982F41 se uma das propriedades solicitadas não é compatível com a imagem associada com o decodificador e 0x88982F81 se a imagem não der suporte a metadados em todos os. As constantes associadas com esses códigos de erro são WINCODEC\_ERR\_PROPERTYNOTSUPPORTED e WINCODEC\_ERR\_UNSUPPORTEDOPERATION e são definidos no arquivo de cabeçalho Winerror. h.
 -   Como uma imagem pode ou não conter um valor de uma propriedade específica, use o **IDictionary.ContainsKey** para verificar se uma propriedade está presente nos resultados antes de tentar acessá-la.
 
 Gravar metadados de imagem no fluxo requer um **BitmapEncoder** associado ao arquivo de saída da imagem.
@@ -80,11 +80,11 @@ Crie um objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
 
 -   Para obter detalhes sobre quais propriedades são suportadas para quais tipos de arquivo de imagem, consulte [Propriedades do Windows](https://msdn.microsoft.com/library/windows/desktop/dd561977), [Políticas de Metadados de Fotos](https://msdn.microsoft.com/library/windows/desktop/ee872003) e [Consultas de metadados nativos de formato de imagem do WIC](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
--   [**SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252) falhará com o código de erro 0x88982F41 se não houver suporte para uma das propriedades solicitadas pela imagem associada ao codificador.
+-   [**SetPropertiesAsync** ](https://msdn.microsoft.com/library/windows/apps/br226252) falhará com o código de erro 0x88982F41 se uma das propriedades solicitadas não é compatível com a imagem associada com o codificador.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Imagens](imaging.md)
+* [Geração de imagens](imaging.md)
  
 
  

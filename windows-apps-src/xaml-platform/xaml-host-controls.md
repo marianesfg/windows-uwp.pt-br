@@ -7,53 +7,53 @@ keywords: windows 10, uwp, windows forms, wpf
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: bf25fea6ca6e8809c12324ae57a42cc712ded2a5
-ms.sourcegitcommit: 9df81996628359ad6af4227339a2ce01c2d804e3
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "9001780"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57619701"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a>Controles UWP em aplicativos da área de trabalho
 
 > [!NOTE]
-> Ilhas XAML estão disponíveis atualmente como uma visualização de desenvolvedor. Embora Encorajamos você a experimentá-los em seu próprio código de protótipo agora, não recomendamos que você usá-los no código de produção neste momento. Esses controles e APIs continuará a se desenvolver e estabilizar em futuras versões do Windows. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui.
+> Ilhas XAML estão atualmente disponíveis como uma visualização do desenvolvedor. Embora incentivamos você a experimentá-las em seu próprio código de protótipo agora, não recomendamos que você usá-los no código de produção neste momento. Esses controles e APIs continuará a amadurecer e se estabilizar em futuras versões do Windows. A Microsoft não faz nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.
 >
-> Se você tiver comentários sobre Ilhas XAML, criar um novo problema no [repositório WindowsCommunityToolkit](https://github.com/windows-toolkit/WindowsCommunityToolkit/issues) e deixe seus comentários lá. Se você preferir enviar seus comentários em particular, você pode enviá-lo para XamlIslandsFeedback@microsoft.com. Seu insights e cenários são extremamente importantes para nós.
+> Se você tiver comentários sobre Ilhas XAML, crie um novo problema nos [WindowsCommunityToolkit repositório](https://github.com/windows-toolkit/WindowsCommunityToolkit/issues) e deixe seus comentários lá. Se você preferir a enviar seus comentários em particular, você pode enviá-lo para XamlIslandsFeedback@microsoft.com. Seus insights e os cenários são extremamente importantes para nós.
 
-Windows 10 agora permite que você use controles UWP em aplicativos da área de trabalho não UWP para que você possa melhorar a aparência e a funcionalidade de seus aplicativos da área de trabalho existentes com os recursos de interface do usuário do Windows 10 mais recentes que só estão disponíveis por meio de controles UWP. Isso significa que você pode usar recursos UWP, como o [Windows Ink](../design/input/pen-and-stylus-interactions.md) e controles que suportam o [Sistema de Design fluente](../design/fluent-design-system/index.md) em seu existente WPF, formulários do Windows e aplicativos C++ Win32. Esse cenário de desenvolvedor às vezes é chamado *Ilhas XAML*.
+Windows 10 agora permite que você use controles UWP em aplicativos de área de trabalho não UWP para que você pode aprimorar a aparência e a funcionalidade dos seus aplicativos de área de trabalho existentes com os recursos mais recentes de interface do usuário do Windows 10 que só estão disponíveis por meio de controles da UWP. Isso significa que você pode usar os recursos UWP, como [Windows Ink](../design/input/pen-and-stylus-interactions.md) e os controles que dão suporte a [Fluent Design System](../design/fluent-design-system/index.md) em existentes do WPF, Windows Forms e aplicativos do Win32 em C++. Às vezes é chamado neste cenário de desenvolvedor *Ilhas XAML*.
 
-Fornecemos várias maneiras de usar Ilhas XAML em seus aplicativos C++ Win32, Windows Forms e WPF, dependendo da tecnologia ou estrutura, que você está usando.
+Fornecemos várias maneiras de usar Ilhas XAML em seus aplicativos WPF, Windows Forms e Win32 em C++, dependendo da tecnologia ou estrutura que você está usando.
 
-## <a name="wrapped-controls"></a>Controles de quebra automático
+## <a name="wrapped-controls"></a>Controles encapsulados
 
-Aplicativos WPF e Windows Forms podem usar uma seleção de quebra automática controles UWP no [Kit de ferramentas do Windows da comunidade](https://docs.microsoft.com/windows/uwpcommunitytoolkit/). Nos referimos a esses controles como *encapsuladas controles* porque eles encapsulam a interface e a funcionalidade de um controle específico da UWP. Você pode adicionar esses controles diretamente à superfície de design do seu projeto do WPF ou Windows Forms e usá-los como qualquer outro controle WPF ou Windows Forms no designer.
+Aplicativos WPF e Windows Forms podem usar uma seleção de controles da UWP encapsulados na [Kit de ferramentas de comunidade Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/). Fazemos referência a esses controles conforme *encapsulado controles* porque eles encapsulam a interface e a funcionalidade de um controle específico de UWP. Você pode adicionar esses controles diretamente para a superfície de design do seu projeto WPF ou Windows Forms e, em seguida, usá-los como qualquer outro controle WPF ou Windows Forms no designer.
 
 > [!NOTE]
-> Controles empacotados não estão disponíveis para aplicativos da área de trabalho do C++ Win32. Esses tipos de aplicativos devem usar a [API de hospedagem XAML da UWP](#uwp-xaml-hosting-api).
+> Controles encapsulados não estão disponíveis para aplicativos da área de trabalho do C++ do Win32. Esses tipos de aplicativos devem usar o [XAML UWP API de hospedagem](#uwp-xaml-hosting-api).
 
-Os seguintes controles UWP empacotados estão atualmente disponíveis para aplicativos WPF e Windows Forms. Mais controles UWP encapsulado são planejados para versões futuras do Kit de ferramentas da comunidade Windows.
+Os seguintes controles UWP encapsulados estão atualmente disponíveis para aplicativos WPF e Windows Forms. Mais controles UWP encapsulado são planejados para versões futuras do Kit de ferramentas de comunidade do Windows.
 
-| Controle | Mínimo com suporte do sistema operacional | Descrição |
+| Controle | Mínimo de sistema operacional com suporte | Descrição |
 |-----------------|-------------------------------|-------------|
 | [WebView](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webview) | Windows 10, versão 1803 | Usa o mecanismo de renderização do Microsoft Edge para mostrar o conteúdo da web. |
-| [WebViewCompatible](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webviewcompatible) | Windows 7 | Fornece uma versão de **exibição da Web** que é compatível com versões de sistema operacional mais. Esse controle usa o mecanismo de renderização do Microsoft Edge para mostrar o conteúdo da web no Windows 10 versão 1803 e posteriores e o mecanismo de renderização do Internet Explorer para mostrar o conteúdo da web em versões anteriores do Windows 10, Windows 8. x e o Windows 7. |
-| [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas)<br>[InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) | Windows 10, versão 1809 (compilação 17763) | Forneça uma superfície e relacionados barras de ferramentas para interação do usuário com base em Windows Ink em seu aplicativo da área de trabalho do Windows Forms ou WPF. |
-| [MediaPlayerElement](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/mediaplayerelement) | Windows 10, versão 1809 (compilação 17763) | Incorpora um modo de exibição que transmite e renderiza o conteúdo de mídia, como vídeo em seu aplicativo da área de trabalho do Windows Forms ou WPF. |
-| [MapControl](https://docs.microsoft.com/en-us/windows/communitytoolkit/controls/wpf-winforms/mapcontrol) | Windows 10, versão 1809 (compilação 17763) | Permite que você exiba um mapa simbólico ou fotorrealista em seu aplicativo da área de trabalho do Windows Forms ou WPF. |
+| [WebViewCompatible](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webviewcompatible) | Windows 7 | Fornece uma versão do **WebView** que é compatível com versões de sistema operacional mais. Este controle usa o mecanismo de renderização do Microsoft Edge para mostrar o conteúdo da web no Windows 10 versão 1803 e posterior e o mecanismo de renderização do Internet Explorer para mostrar o conteúdo da web em versões anteriores do Windows 10, Windows 8.x e Windows 7. |
+| [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas)<br>[InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) | Windows 10, versão 1809 (build 17763) | Fornece um barras de ferramentas na superfície e relacionados com base em Windows Ink interação do usuário em seu aplicativo de área de trabalho do Windows Forms ou WPF. |
+| [MediaPlayerElement](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/mediaplayerelement) | Windows 10, versão 1809 (build 17763) | Insere um modo de exibição que transmite e renderiza o conteúdo de mídia, como o vídeo em seu aplicativo de área de trabalho do Windows Forms ou WPF. |
+| [MapControl](https://docs.microsoft.com/en-us/windows/communitytoolkit/controls/wpf-winforms/mapcontrol) | Windows 10, versão 1809 (build 17763) | Permite que você exibir um mapa simbólico ou com realismo em seu aplicativo de área de trabalho do Windows Forms ou WPF. |
 
 ## <a name="host-controls"></a>Controles de host
 
-Para cenários além daqueles coberto pelos controles empacotados disponíveis, aplicativos WPF e Windows Forms também podem usar o controle [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) no [Kit de ferramentas do Windows da comunidade](https://docs.microsoft.com/windows/uwpcommunitytoolkit/). Esse controle pode hospedar qualquer controle UWP que deriva de [**Windows.UI.Xaml.UIElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement), incluindo qualquer controle UWP fornecido pelo SDK do Windows, bem como controles de usuário personalizados. Esse controle oferece suporte a versões de 17709 e posteriores de compilação de SDK do Windows 10 Insider Preview.
+Para cenários além daquelas abordadas pelos controles encapsulados disponíveis, os aplicativos WPF e Windows Forms também podem usar o [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) no controlar a [Kit de ferramentas de comunidade Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/). Esse controle pode hospedar qualquer controle UWP que deriva de [ **Windows.UI.Xaml.UIElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement), incluindo qualquer controle UWP fornecida pelo SDK do Windows, bem como controles de usuário personalizada. Esse controle dá suporte a SDK do Windows 10 Insider Preview build 17709 e versões mais recentes.
 
 > [!NOTE]
-> Hospedar controles não estão disponíveis para aplicativos da área de trabalho do C++ Win32. Esses tipos de aplicativos devem usar a [API de hospedagem XAML da UWP](#uwp-xaml-hosting-api).
+> Controles de host não estão disponíveis para aplicativos da área de trabalho do C++ do Win32. Esses tipos de aplicativos devem usar o [XAML UWP API de hospedagem](#uwp-xaml-hosting-api).
 
-## <a name="uwp-xaml-hosting-api"></a>API de hospedagem XAML da UWP
+## <a name="uwp-xaml-hosting-api"></a>XAML UWP API de hospedagem
 
-Se você tiver um aplicativo C++ Win32, você pode usar o *XAML da UWP que hospeda a API* para hospedar qualquer controle UWP que deriva de [**Windows.UI.Xaml.UIElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) em qualquer elemento de interface do usuário em seu aplicativo que tem um identificador de janela associado (HWND). Essa API foi introduzida no SDK do Windows 10 Insider Preview compilação 17709. Para obter mais informações sobre como usar essa API, consulte [usando o XAML que hospeda a API em um aplicativo da área de trabalho](using-the-xaml-hosting-api.md).
+Se você tiver um aplicativo Win32 em C++, você pode usar o *XAML UWP API de hospedagem* para hospedar qualquer controle UWP que deriva [ **Windows.UI.Xaml.UIElement** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) em qualquer elemento de interface do usuário em seu aplicativo que tem um identificador de janela associado (HWND). Essa API foi introduzida no SDK de visualização do Windows 10 Insider build 17709. Para obter mais informações sobre como usar essa API, consulte [usando a API de hospedagem em um aplicativo da área de trabalho de XAML](using-the-xaml-hosting-api.md).
 
 > [!NOTE]
-> Aplicativos da área de trabalho do C++ Win32 devem usar o XAML da UWP que hospeda a API para hospedar controles UWP. Os controles empacotados e host não estão disponíveis para esses tipos de aplicativos. Para aplicativos WPF e Windows Forms, recomendamos que você use os controles de host e controles empacotados no Kit de ferramentas de comunidade do Windows em vez do XAML da UWP que hospeda a API. Esses controles usam a API de hospedagem internamente XAML da UWP e proporcionar uma experiência de desenvolvimento mais simples. No entanto, você pode usar o XAML da UWP que hospeda API diretamente em aplicativos WPF e Windows Forms, se você escolher.
+> Aplicativos de desktop do Win32 em C++ devem usar o XAML UWP API de hospedagem para hospedar controles da UWP. Controles encapsulados e controles de host não estão disponíveis para esses tipos de aplicativos. Para aplicativos WPF e Windows Forms, é recomendável que você use os controles de host e controles encapsulados no Kit de ferramentas de comunidade do Windows em vez da XAML UWP API de hospedagem. Esses controles usam o XAML UWP API de hospedagem internamente e fornecem uma experiência de desenvolvimento mais simples. No entanto, você pode usar o XAML UWP API de hospedagem diretamente em aplicativos WPF e Windows Forms se você escolher.
 
 ## <a name="architecture-overview"></a>Visão geral da arquitetura
 
@@ -73,32 +73,32 @@ Na maior parte, tudo o que é compatível, a menos quando explicitamente citado 
 
 ### <a name="whats-supported-only-with-workarounds"></a>O que é suportado apenas com soluções alternativas
 
-:heavy_check_mark: hospedar vários controles de caixa de entrada em várias janelas. Você deverá colocar cada janela em seu próprio thread.
+:heavy_check_mark: Hospedando vários controles de caixa de entrada dentro de várias janelas. Você deverá colocar cada janela em seu próprio thread.
 
-:heavy_check_mark: usando ``x:Bind`` com controles hospedados. É necessário declarar o modelo de dados em uma biblioteca .NET padrão.
+:heavy_check_mark: Usando ``x:Bind`` com controles hospedados. É necessário declarar o modelo de dados em uma biblioteca .NET padrão.
 
-:heavy_check_mark: controles de terceiros com base em C#. Se você tiver o código-fonte para um controle de terceiros, você pode compilar em relação a ele.
+:heavy_check_mark: C#-com base em controles de terceiros. Se você tiver o código-fonte para um controle de terceiros, você pode compilar em relação a ele.
 
 ### <a name="whats-not-yet-supported"></a>O que ainda não tem suporte
 
-:no_entry_sign: ferramentas de acessibilidade de funcionam sem interrupção no aplicativo e nos controles hospedados.
+:no_entry_sign: Ferramentas de acessibilidade que funcionam perfeitamente no aplicativo e os controles hospedados.
 
-:no_entry_sign: conteúdo localizado nos controles que você adiciona aos aplicativos que não contêm um pacote do aplicativo do Windows.
+:no_entry_sign: Conteúdo localizado nos controles que você adiciona a aplicativos que não contêm um pacote de aplicativo do Windows.
 
-:no_entry_sign: referências de ativo feitas em XAML nos aplicativos que não contêm um pacote do aplicativo do Windows.
+:no_entry_sign: Referências de ativos feitas no XAML nos aplicativos que não contêm um pacote de aplicativo do Windows.
 
-:no_entry_sign: controles que respondem adequadamente às mudanças em DPI e escala.
+:no_entry_sign: Controles de responder corretamente a alterações em DPI e escala.
 
-:no_entry_sign: adicionar um controle **WebView** a um controle de usuário personalizado, (no thread, fora do thread, ou fora de proc).
+:no_entry_sign: Adicionando um **WebView** controle a um controle de usuário personalizada, (no thread, fora do thread ou fora do processo).
 
-:no_entry_sign: o efeito fluente de [realce de revelação](https://docs.microsoft.com/windows/uwp/design/style/reveal).
+:no_entry_sign: O [revelam Realce](https://docs.microsoft.com/windows/uwp/design/style/reveal) efeito Fluent.
 
-:no_entry_sign: tinta embutida, @Places e @People para controles de entrada.
+:no_entry_sign: Escrita à tinta embutido, @Places, e @People para controles de entrada.
 
-:no_entry_sign: atribuir chaves de acelerador.
+:no_entry_sign: Atribuindo teclas de aceleração.
 
-:no_entry_sign: controles de terceiros com base em C++.
+:no_entry_sign: Controles de terceiros baseados em C++.
 
-:no_entry_sign: hospedagem de controles personalizados do usuário.
+:no_entry_sign: Hospedando controles de usuário personalizados.
 
 Os itens nessa lista provavelmente são alterados à medida que melhoramos a experiência fluente para a área de trabalho.  

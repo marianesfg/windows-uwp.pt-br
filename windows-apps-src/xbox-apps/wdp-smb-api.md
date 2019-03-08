@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 1f0eb76e-fe3e-4674-a27e-229beec7e63d
 ms.localizationpriority: medium
 ms.openlocfilehash: e248a6ff666efe7dca262daa81a21ab44a4dc5aa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922941"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617701"
 ---
 # <a name="developer-folder-api-reference"></a>Pasta de API da pasta do desenvolvedor   
 Você pode acessar arquivos relacionados ao desenvolvimento no Xbox One usando um Explorador de Arquivos padrão. Isso permite exibir facilmente e substituir arquivos do computador para o console.
@@ -27,17 +27,17 @@ Método      | URI da solicitação
 :------     | :-----
 GET | /ext/smb/developerfolder
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
-- Nenhum(a)
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Resposta**   
 Path – o caminho do compartilhamento do desenvolvedor de arquivos.   

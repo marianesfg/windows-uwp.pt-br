@@ -6,15 +6,15 @@ ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c76f0da8c3ac1d50ccd2d328dd321df9aa9bd3e
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117716"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624621"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Criar um app Web de página única com back-end da API REST
 
-**Criar um Aplicativo Web Hospedado para a Microsoft Store com tecnologias da Web fullstack populares**
+**Criar um aplicativo de Web hospedados para a Microsoft Store com fullstack popular tecnologias da web**
 
 ![Jogo de memória simples como um aplicativo Web de página única](images/fullstack.png)
 
@@ -28,7 +28,7 @@ Se você ainda não tiver esses recursos no computador, siga estes links de down
 
  - [Node.js](https://nodejs.org/en/download/) - Não deixe de selecionar a opção para adicionar o Node ao CAMINHO.
 
- - [Gerador Express](https://expressjs.com/en/starter/generator.html)- Após instalar o Node, instale o Express executando o `npm install express-generator -g`
+ - [Gerador expresso](https://expressjs.com/en/starter/generator.html)- depois de instalar o nó, instale o Express, executando `npm install express-generator -g`
 
  - [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -36,11 +36,11 @@ Se você quiser concluir as etapas finais de hospedagem do serviço de API e do 
 
 Se você decidir alça em (ou adiar) a parte do Azure, basta ignorar as seções finais das partes I e II, que abrangem a hospedagem do Azure e o empacotamento do aplicativo para a Microsoft Store. O serviço de API e o aplicativo Web criado ainda serão executados localmente (em `http://localhost:8000` e `http://localhost:3000`, respectivamente) no computador.
 
-## <a name="part-i-build-a-rest-api-backend"></a>Parte I: Compilar um back-end da API REST
+## <a name="part-i-build-a-rest-api-backend"></a>Parte i: Criar um back-end de API REST
 
 Primeiro, criaremos uma API de jogo de memória simples para ativar nosso aplicativo Web de jogo de memória. Usaremos o [Swagger](https://swagger.io/) para definir a API e gerar código scaffold e uma interface do usuário da Web para teste manual.
 
-Se você quiser ignorar esta parte e passar diretamente para a [Parte II: Criar um aplicativo Web de página única](#part-ii-build-a-single-page-web-application), este é o [código final da Parte I](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend). Siga as instruções do *LEIAME* para que o código seja executado localmente ou consulte *5. Hospedar o serviço de API no Azure e habilitar o CORS* para executá-lo no Azure.
+Se você quiser ignorar essa parte e ir direto para [parte II: Criar um aplicativo web de página única](#part-ii-build-a-single-page-web-application), aqui está o [conclusão de código para a parte I](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend). Siga as *Leiame* instruções para obter o código para cima e em execução localmente, ou consulte *5. Hospedar seu serviço de API no Azure e habilitar o CORS* para executá-lo do Azure.
 
 ### <a name="game-overview"></a>Visão geral do jogo
 
@@ -109,7 +109,7 @@ Especifica uma carta a ser revelada e procura uma correspondência para a carta 
 | 200 OK | Retorna o JSON com **id** e **value** da carta especificada. Exemplo: `[{"id":0,"value":1}]`|
 | 400 BAD REQUEST |  Erro com a carta especificada. Consulte o corpo da resposta HTTP para obter mais detalhes.|
 
-### <a name="1-spec-out-the-api-and-generate-code-stubs"></a>1. Especifique a API e gere stubs de código
+### <a name="1-spec-out-the-api-and-generate-code-stubs"></a>1. A API da especificação e gerar stubs de código
 
 Usaremos o [Swagger](https://swagger.io/) para transformar o design da API de jogo de memória em um código funcional de servidor Node.js. Saiba como você definir as [APIs de jogo de memória como metadados do Swagger](https://github.com/Microsoft/Windows-tutorials-web/blob/master/Single-Page-App-with-REST-API/backend/api.json). Usaremos isso para gerar stubs de código de servidor.
 
@@ -144,7 +144,7 @@ Usaremos o [Swagger](https://swagger.io/) para transformar o design da API de jo
 
     Inicie o VS Code, clique em **File** > **Open Folder...** e vá para o diretório MemoryGameAPI. Este é o servidor de API Node.js que você acabou de criar! Ele usa a estrutura de aplicativo Web popular [ExpressJS](https://expressjs.com/en/4x/api.html) para estruturar e executar seu projeto.
 
-### <a name="2-customize-the-server-code-and-setup-debugging"></a>2. Personalize o código de servidor e a depuração da configuração
+### <a name="2-customize-the-server-code-and-setup-debugging"></a>2. Personalizar o código de servidor e a configuração de depuração
 
 O arquivo *server. js* na raiz do projeto atua como a função "principal" do servidor. Abra-o no VS Code e copie o conteúdo a seguir. As linhas modificadas do código gerado serão comentadas com explicação adicional.
 
@@ -211,7 +211,7 @@ Depois disso, é hora de executar o servidor! Vamos configurar o Visual Studio C
 
 Pressione F5 e abra o navegador em [https://localhost:8000](https://localhost:8000). A página abrirá a interface do usuário do Swagger da API do jogo de memória e, nesse local, você poderá expandir os detalhes e os campos de entrada de cada um dos métodos. Você pode até mesmo tentar chamar as APIs, embora suas respostas contenham apenas dados simulados (fornecidos pelo módulo [Swagmock](https://www.npmjs.com/package/swagmock)). É hora de adicionar a lógica do jogo para tornar essas APIs reais.
 
-### <a name="3-set-up-your-route-handlers"></a>3. Configure os manipuladores de rotas
+### <a name="3-set-up-your-route-handlers"></a>3. Configurar seus manipuladores de rotas
 
 O arquivo do Swagger (config\swagger.json) ensina o servidor a manipular várias solicitações HTTP de cliente por meio do mapeamento de cada caminho de URL definido para um arquivo de manipulador (em \handlers) e cada método definido para esse caminho (por exemplo, **GET**, **POST**) para uma `operationId` (função) nesse arquivo manipulador.
 
@@ -223,7 +223,7 @@ Nessa camada do programa, adicionaremos uma verificação de entrada antes de pa
 
  Você pode ler os comentários nesses arquivos para obter mais detalhes sobre as alterações, mas basicamente eles procuram erros básicos de entrada (por exemplo, o cliente solicita um novo jogo com menos de uma correspondência) e enviam mensagens de erro descritivas quando necessário. Os manipuladores também roteiam solicitações de cliente válidas para os arquivos de dados correspondentes (em \data) para processamento adicional. Vamos trabalhar neles a seguir.
 
-### <a name="4-set-up-your-data-model"></a>4. Configure o modelo de dados
+### <a name="4-set-up-your-data-model"></a>4. Configurar seu modelo de dados
 
 É hora de trocar o serviço de simulação de dados de espaço reservado por um modelo de dados real do tabuleiro do jogo de memória.
 
@@ -270,13 +270,13 @@ for (var i=0; i < board.length; i++){
 
 Com essa alteração, o método **GET /game** retornará todos os valores de carta (incluindo os que não foram limpos). Este é um meio de depuração útil enquanto você cria o front-end para o jogo de memória.
 
-### <a name="5-optional-host-your-api-service-on-azure-and-enable-cors"></a>5. (Opcional) Hospede o serviço de API no Azure e habilite o CORS
+### <a name="5-optional-host-your-api-service-on-azure-and-enable-cors"></a>5. (Opcional) Hospedar seu serviço de API no Azure e habilitar o CORS
 
 Os documentos do Azure conduzirão você pelo(a):
 
- - [Registro de um novo *Aplicativo de API* com o Portal do Azure](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#createapiapp)
+ - [Registrar um novo *API App* com o Portal do Azure](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#createapiapp)
  - [Configuração da implantação do Git no aplicativo de API](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git) e
- - [Implantação do código do aplicativo de API no Azure](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git)
+ - [Implantar o código do aplicativo de API no Azure](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git)
 
 Ao registrar o aplicativo, tente diferenciar seu *Nome de aplicativo* (para evitar conflitos de nomenclatura com outras pessoas que estão solicitando variações na URL *http://memorygameapi.azurewebsites.net*).
 
@@ -288,11 +288,11 @@ Para tornar a API do jogo de memória um serviço back-end viável para um aplic
 
 Aqui estão alguns recursos úteis para aprofundamento:
 
- - [Depuração avançada do Node.js com o Visual Studio Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
+ - [Node. js avançadas de depuração com o Visual Studio Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
 
- - [Web do Azure + documentos móveis](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=web)
+ - [Azure Web + móveis docs](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=web)
 
- - [Documentos do Azure DocumentDB](https://docs.microsoft.com/en-us/azure/documentdb/index)
+ - [Documentos do DocumentDB do Azure](https://docs.microsoft.com/en-us/azure/documentdb/index)
 
 ## <a name="part-ii-build-a-single-page-web-application"></a>Parte II: Criar um aplicativo web de página única
 
@@ -307,12 +307,12 @@ A Parte II deste tutorial lhe proporcionará a experiência com o:
 * [Bootstrap](https://getbootstrap.com/): para o layout dinâmico
 * [Visual Studio Code](https://code.visualstudio.com/): para criação, exibição de markdown e depuração do código
 
-### <a name="1-create-a-nodejs-application-by-using-express"></a>1. Crie um aplicativo Node.js usando o Express
+### <a name="1-create-a-nodejs-application-by-using-express"></a>1. Criar um aplicativo Node. js usando Express
 
 Vamos começar criando o projeto Node.js com o Express.
 
 1. Abra um prompt de comando e navegue até o diretório no qual deseja armazenar o jogo. 
-2. Use o gerador Express para criar um novo aplicativo chamado *memória* por meio do mecanismo de modelagem *Pug *.
+2. Use o gerador Express para criar um novo aplicativo chamado *memória* por meio do mecanismo de modelagem *Pug* .
 
     ```
     express --view=pug memory
@@ -345,7 +345,7 @@ Vamos começar criando o projeto Node.js com o Express.
 
 7. Para atualizar o aplicativo para ver o novo título, interrompa-o pressionando **Crtl + C**, **Y** no prompt de comando e reinicie-o com `npm start`.
 
-### <a name="2-add-client-side-game-logic-code"></a>2. Adicione o código da lógica do jogo do lado do cliente
+### <a name="2-add-client-side-game-logic-code"></a>2. Adicione o código da lógica de jogo do lado do cliente
 Você encontrará os arquivos necessários a essa metade do tutorial na pasta [Start](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/frontend/Start). Se você se perder, o código final está disponível na pasta [Final](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/frontend/Final). 
 
 1. Copie o arquivo scripts.js da pasta [Start](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/frontend/Start) e cole-o em memory\public\javascripts. Esse arquivo contém toda a lógica necessária para executar o jogo, incluindo:
@@ -464,14 +464,14 @@ Você encontrará os arquivos necessários a essa metade do tutorial na pasta [S
 > [!TIP] 
 > Se você estiver usando o Visual Studio Code, selecione todas as linhas de código cujo comentário você deseja remova e pressione Crtl + K, U
 
-Aqui, usamos [`jQuery.ajax()`](https://api.jquery.com/jQuery.ajax/) e o método **PUT** [`/guess`](#part-i-build-a-rest-api-backend) criado na Parte I. 
+Aqui, usamos [ `jQuery.ajax()` ](https://api.jquery.com/jQuery.ajax/) e o **colocar** [ `/guess` ](#part-i-build-a-rest-api-backend) método criado na parte I. 
 
 Esse código é executado na ordem a seguir.
 
-* O `id`do primeiro cartão selecionado pelo usuário é adicionada à matriz selectedCards[] como primeiro valor: `selectedCards[0]` 
+* O `id` do cartão primeiro o usuário selecionado é adicionado como o primeiro valor à matriz selectedCards []: `selectedCards[0]` 
 * O valor (`id`) em `selectedCards[0]` é postado no servidor por meio do método [`/guess`](#part-i-build-a-rest-api-backend)
 * O servidor responde com o `value` dessa placa (um número inteiro)
-* Um [glyphicon Bootstrap](https://getbootstrap.com/components/) é adicionado à parte de trás da carta cuja `id` é `selectedCards[0]`
+* Um [glyphicon Bootstrap](https://getbootstrap.com/components/) é adicionado à parte traseira do cartão cuja `id` é `selectedCards[0]`
 * O `value` da primeira carta (do servidor) é armazenado na matriz `selectedCardsValues[]`: `selectedCardsValues[0]`. 
 
 A segunda suposição do usuário segue a mesma lógica. Se as cartas que o usuário selecionou tiverem as mesmas IDs (por exemplo, `selectedCards[0] == selectedCards[1]`), as cartas serão correspondentes! A classe CSS `.matched` é adicionada às cartas correspondentes (tornando-as verdes) e as cartas permanecem viradas.
@@ -489,8 +489,8 @@ if (cardsFlipped == gameBoardSize) {
 
 Se o número de cartas viradas corresponder ao tamanho do tabuleiro do jogo (por exemplo, `cardsFlipped == gameBoardSize`), não há mais nenhuma carta a ser virada e o usuário ganhou o jogo. Adicionaremos um HTML simples a `div` com `id="game-board"` para que o usuário saiba que ganhou e pode jogar novamente.  
 
-### <a name="3-create-the-user-interface"></a>3. Crie a interface do usuário 
-Agora vamos conferir todo esse código em ação, criando a interface do usuário. Neste tutorial, usamos o mecanismo de modelagem [Pug](https://pugjs.org/) (antigo Jade).  *Pug* é uma sintaxe limpa que faz distinção de espaços em branco na escrita de HTML. Veja um exemplo a seguir. 
+### <a name="3-create-the-user-interface"></a>3. Criar a interface do usuário 
+Agora vamos conferir todo esse código em ação, criando a interface do usuário. Neste tutorial, usamos o mecanismo de modelagem [Pug](https://pugjs.org/) (antigo Jade).  *Pug* é uma sintaxe limpa que faz distinção de espaços em branco na escrita de HTML. Aqui está um exemplo. 
 
 ```
 body
@@ -537,13 +537,13 @@ Esse arquivo estende o arquivo layout.pug e renderizará nosso jogo. Em layout.p
     ```
 
 > [!TIP] 
-> Lembre-se: o Pug faz distinção de espaços em branco. Verifique se todos os recuos estão corretos!
+> Lembre-se: Pug é confidencial de espaço em branco. Verifique se todos os recuos estão corretos!
 
-### <a name="4-use-bootstraps-grid-system-to-create-a-responsive-layout"></a>4. Use o sistema de grade do Bootstrap para criar um layout dinâmico
+### <a name="4-use-bootstraps-grid-system-to-create-a-responsive-layout"></a>4. Use o sistema de grades do Bootstrap para criar um layout dinâmico
 O [sistema de grade](https://getbootstrap.com/css/#grid) do Bootstrap é um sistema de grade fluido que dimensiona uma grade como alterações de visor de um dispositivo. As cartas neste jogo usam classes de sistema de grade predefinidas do Bootstrap no layout, incluindo:
-* `.container-fluid`: especifica o contêiner fluido da grade
-* `.row-fluid`: especifica as linhas fluidas
-* `.col-xs-3`: especifica o número de colunas
+* `.container-fluid`: Especifica o contêiner para a grade fluido
+* `.row-fluid`: especifica as linhas suaves
+* `.col-xs-3`: Especifica o número de colunas
 
 O sistema de grade do Bootstrap permite que um sistema de grade recolha uma coluna vertical, como você veria em um menu de navegação em um dispositivo móvel.  No entanto, como queremos que nosso jogo sempre tenha colunas, usamos a classe predefinida `.col-xs-3`, que mantém a grade sempre horizontal. 
 
@@ -572,7 +572,7 @@ O sistema de grade permite até 12 colunas. Como queremos apenas quatro colunas 
                 script restoreGame();
     ```
 
-### <a name="5-add-a-card-flip-animation-with-css-transforms"></a>5. Adicione uma animação de virada de carta com transformações CSS
+### <a name="5-add-a-card-flip-animation-with-css-transforms"></a>5. Adicionar uma animação de inversão de cartão com transformações de CSS
 Substitua o arquivo style.css em memory\public\stylesheets pelo arquivo style.css da pasta Start.
 
 A adição de um movimento de virada por meio de [Transformações CSS](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/css/transforms) confere às cartas um movimento 3D realista. As cartas do jogo são criadas através da estrutura HTML a seguir e adicionadas de forma programática ao tabuleiro do jogo (na função `drawGameBoard()` mostrada anteriormente).
@@ -592,14 +592,14 @@ A adição de um movimento de virada por meio de [Transformações CSS](https://
     perspective: 1000px; 
     ```
 
-2. Agora, adicione as propriedades a seguir à classe `.cards` em style.css. O `div` `.cards` é o elemento que fará a animação de virada de carta, mostrando a parte da frente ou de trás da carta. 
+2. Agora, adicione as propriedades a seguir à classe `.cards` em style.css. O `.cards` `div` é o elemento que realmente será fazer a animação de inversão, mostrando a frente ou parte de trás do cartão. 
 
     ``` css
     transform-style: preserve-3d;
     transition-duration: 1s;
     ```
 
-    A propriedade [`transform-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style) estabelece um contexto de renderização 3D, e os filhos da classe `.cards` `.front` e `.back` são membros do espaço 3D. A adição da propriedade [`transition-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration) especifica o número de segundos até o término da animação. 
+    A propriedade [`transform-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style) estabelece um contexto de renderização 3D, e os filhos da classe `.cards``.front` e `.back` são membros do espaço 3D. A adição da propriedade [`transition-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration) especifica o número de segundos até o término da animação. 
 
 3.  Usando a propriedade [`transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform), podemos girar a carta em torno do eixo y.  Adicione a seguinte CSS a `cards.flip`.
 
@@ -615,10 +615,10 @@ A adição de um movimento de virada por meio de [Transformações CSS](https://
 
     Agora, quando um usuário clica em uma carta, esta é girada 180 graus.
 
-### <a name="6-test-and-play"></a>6. Teste e jogue
+### <a name="6-test-and-play"></a>6. Teste e reproduzir
 Parabéns! Você concluiu a criação do aplicativo Web! Vamos testá-lo. 
 
-1. Abra um prompt de comando no diretório de memória e digite o seguinte comando: `npm start`
+1. Abra um prompt de comando no seu diretório de memória e insira o seguinte comando: `npm start`
 
 2. No navegador, vá para [https://localhost:3000/](https://localhost:3000/) e jogue!
 
@@ -626,11 +626,11 @@ Parabéns! Você concluiu a criação do aplicativo Web! Vamos testá-lo.
 
     Você também pode comparar seu código com o código fornecido na pasta Final.
 
-4. Para interromper o jogo, no prompt de comando, digite **Ctrl + C**, **Y **. 
+4. Para interromper o jogo, no prompt de comando digite: **Ctrl + C**, **Y**. 
 
 ### <a name="going-further"></a>Aprofundamento
 
-Agora você pode implantar o aplicativo no Azure (ou em qualquer outro serviço de hospedagem de nuvem) para testar nos diferentes fatores forma de dispositivo, como o celular, tablet e desktop. (Não esqueça de testar em diferentes navegadores também!) Depois que o aplicativo estiver pronto para produção, você poderá empacotá-lo facilmente como um *Aplicativo Web Hospedado* (HWA) da *Plataforma Universal do Windows* (UWP) e distribuí-lo na Microsoft Store.
+Agora você pode implantar o aplicativo no Azure (ou em qualquer outro serviço de hospedagem de nuvem) para testar nos diferentes fatores forma de dispositivo, como o celular, tablet e desktop. (Não se esqueceu de teste em navegadores diferentes muito!) Depois que seu aplicativo está pronto para produção, você pode facilmente empacotá-lo como um *aplicativo de Web hospedado* (HWA) para o *plataforma Universal do Windows* (UWP) e distribuí-lo de que a Microsoft Store.
 
 Estas são as etapas básicas para publicação na Microsoft Store:
 
@@ -640,8 +640,8 @@ Estas são as etapas básicas para publicação na Microsoft Store:
 
 Aqui estão alguns recursos úteis para aprofundamento:
 
- - [Implantar o projeto de desenvolvimento de aplicativos para sites do Azure](https://docs.microsoft.com/azure/cosmos-db/documentdb-nodejs-application#_Toc395783182)
+ - [Implantar seu projeto de desenvolvimento de aplicativo nos sites do Azure](https://docs.microsoft.com/azure/cosmos-db/documentdb-nodejs-application#_Toc395783182)
 
- - [Converter o aplicativo Web em um aplicativo UWP (Plataforma Universal do Windows)](https://docs.microsoft.com/en-us/windows/uwp/porting/hwa-create-windows)
+ - [Converter seu aplicativo web para um aplicativo da plataforma Universal do Windows (UWP)](https://docs.microsoft.com/en-us/windows/uwp/porting/hwa-create-windows)
 
  - [Publicar aplicativos do Windows](https://developer.microsoft.com/en-us/store/publish-apps)

@@ -1,5 +1,5 @@
 ---
-Description: Adaptive tile templates are a new feature in Windows 10, allowing you to design your own tile notification content using a simple and flexible markup language that adapts to different screen densities.
+Description: Modelos de bloco adaptável são um novo recurso no Windows 10, permitindo que você crie seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapta a diferentes densidades de tela.
 title: Criar blocos adaptáveis
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
@@ -9,24 +9,24 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 524cc15dbb7a3264d8476210f727508ea41ace87
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945523"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639601"
 ---
 # <a name="create-adaptive-tiles"></a>Criar blocos adaptáveis
 
-Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo da Plataforma Universal do Windows (UWP). Para obter a lista completa de elementos e atributos adaptáveis, consulte o [Esquema de blocos adaptáveis](../tiles-and-notifications/tile-schema.md).
+Modelos de bloco adaptável são um novo recurso no Windows 10, permitindo que você crie seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapta a diferentes densidades de tela. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo da Plataforma Universal do Windows (UWP). Para obter a lista completa de elementos e atributos adaptáveis, consulte o [Esquema de blocos adaptáveis](../tiles-and-notifications/tile-schema.md).
 
-(Se você quiser, você pode ainda usar os modelos predefinidos do [Catálogo de modelos de bloco Windows8](https://msdn.microsoft.com/library/windows/apps/hh761491) durante a criação de notificações para Windows 10.)
+(Se você desejar, você ainda poderá usar os modelos predefinidos do [catálogo de modelos do Windows 8 lado a lado](https://msdn.microsoft.com/library/windows/apps/hh761491) durante a criação de notificações para o Windows 10.)
 
 
 ## <a name="getting-started"></a>Introdução
 
 **Instale a biblioteca de notificações.** Se você quiser usar a linguagem C# em vez de XML para gerar notificações, instale o pacote NuGet denominado [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) (procure por "notificações uwp"). Os exemplos em linguagem C# fornecidos neste artigo usam o pacote NuGet, versão 1.0.0.
 
-**Instale o Visualizador de Notificações.** Esse aplicativo UWP gratuito ajuda você a criar blocos dinâmicos adaptáveis, fornecendo uma visualização instantânea de seu bloco enquanto você o edita semelhante ao modo de exibição de editor/design XAML do Visual Studio. Consulte [Visualizador de notificações](notifications-visualizer.md) para obter mais informações ou [Baixar o Visualizador de notificações da Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
+**Instale o Visualizador de notificações.** Esse aplicativo UWP gratuito ajuda você a criar blocos dinâmicos adaptáveis, fornecendo uma visualização instantânea de seu bloco enquanto você o edita semelhante ao modo de exibição de editor/design XAML do Visual Studio. Consulte [Visualizador de notificações](notifications-visualizer.md) para obter mais informações ou [Baixar o Visualizador de notificações da Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
 
 
 ## <a name="how-to-send-a-tile-notification"></a>Como enviar uma notificação de bloco
@@ -208,7 +208,7 @@ TileContent content = new TileContent()
 
 Você pode controlar a identidade visual na parte inferior de um bloco dinâmico (o nome de exibição e o logotipo de canto) usando o atributo branding no conteúdo da notificação. Você pode optar por exibir "none", somente "name", somente "logo", ou ambos, com "nameAndLogo".
 
-**Observação**Windows Mobile não aceita o logotipo de canto, então "logo" e "nameAndLogo" padrão "Name" no Mobile.
+**Observação**  Windows Mobile não oferece suporte o logotipo de canto, então "logotipo" e "nameAndLogo" padrão como "name" em dispositivos móveis.
 
  
 
@@ -274,13 +274,13 @@ TileContent content = new TileContent()
 };
 ```
 
-**Resultado de identidade visual padrão:**
+**Padrão de identidade visual do resultado:**
 
 ![identidade visual padrão em blocos](images/adaptive-tiles-defaultbranding.png)
 
 Se você não especificar a identidade visual no conteúdo da notificação, as propriedades do bloco base determinarão a identidade visual. Se o bloco base mostrar o nome de exibição, a identidade visual padrão será "name". Caso contrário, a identidade visual padrão será "none" se o nome de exibição não for mostrado.
 
-**Observação**  isso é uma alteração do Windows8.x, no qual a identidade visual padrão era "logo".
+**Observação**    essa é uma alteração do Windows 8. x, em que a identidade visual padrão era "logotipo".
 
  
 
@@ -406,11 +406,11 @@ new AdaptiveText()
 
 ![estilos de texto de blocos adaptáveis](images/adaptive-tiles-textstyles.png)
 
-**Observação**o estilo padrão é caption quando hint-style é especificado.
+**Observação**  o estilo padrão de legenda se estilo dica não for especificado.
 
  
 
-**Estilos de texto básicos**
+**Estilos de texto básica**
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
@@ -420,12 +420,12 @@ new AdaptiveText()
 | base                           | 15 epx                    | Semibold    |
 | subtitle                       | 20 epx                    | Regular     |
 | title                          | 24 epx                    | Semilight   |
-| subheader                      | 34 epx                    | Light       |
-| header                         | 46 epx                    | Light       |
+| subheader                      | 34 epx                    | Claro       |
+| header                         | 46 epx                    | Claro       |
 
  
 
-**Variações numéricas de estilo de texto**
+**Variações de estilo de texto numérico**
 
 Essas variações reduzem a altura da linha para que o conteúdo acima e abaixo se aproxime bem do texto.
 
@@ -437,7 +437,7 @@ Essas variações reduzem a altura da linha para que o conteúdo acima e abaixo 
 
  
 
-**Variações sutis de estilo de texto**
+**Variações de estilo do texto sutis**
 
 Cada estilo tem uma variação sutil que oferece ao texto uma opacidade de 60%, o que geralmente torna a cor do texto um tom de cinza-claro.
 
@@ -485,7 +485,7 @@ Os grupos permitem declarar semanticamente que o conteúdo dentro do grupo está
 
 Para proporcionar a melhor experiência em dispositivos e telas, forneça vários grupos. Ter vários grupos permite que seu bloco se adapte a telas maiores.
 
-**Observação**o único filho válido de um grupo é um subgrupo.
+**Observação**  filho só é válido de um grupo é um subgrupo.
 
  
 
@@ -607,7 +607,7 @@ O atributo **hint-weight** permite que você controle as larguras das colunas. O
 <td align="left">25%</td>
 </tr>
 <tr class="even">
-<td align="left">Espessura total: 4</td>
+<td align="left">Peso total: 4</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -638,7 +638,7 @@ Para tornar uma coluna duas vezes maior que outra coluna, atribua à coluna meno
 <td align="left">66,7%</td>
 </tr>
 <tr class="even">
-<td align="left">Espessura total: 3</td>
+<td align="left">Peso total: 3</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -669,7 +669,7 @@ Se quiser que sua primeira coluna ocupe 20% da largura total e sua segunda colun
 <td align="left">80%</td>
 </tr>
 <tr class="even">
-<td align="left">Espessura total: 100</td>
+<td align="left">Peso total: 100</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -679,7 +679,7 @@ Se quiser que sua primeira coluna ocupe 20% da largura total e sua segunda colun
 
 ![subgrupos, com espessuras totalizando 100](images/adaptive-tiles-subgroups03.png)
 
-**Observação**uma margem de 8 pixels é automaticamente adicionada entre as colunas.
+**Observação**  uma margem de 8 pixels é adicionada automaticamente entre as colunas.
 
  
 
@@ -793,7 +793,7 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 O elemento &lt;image&gt; é usado para exibir imagens na notificação do bloco. As imagens podem ser embutidas no conteúdo do bloco (padrão), como uma imagem de plano de fundo atrás do conteúdo, ou como uma imagem de "espiar" animada na parte superior da notificação.
 
 > [!NOTE]
-> As imagens podem ser usadas do pacote do aplicativo, do armazenamento local do aplicativo ou da Web. Na Fall Creators Update, as imagens da Web podem ter até 3 MB em conexões normais e 1 MB em conexões limitadas. Em dispositivos que ainda não executam a Fall Creators Update, as imagens da Web devem ser maiores do que 200 KB.
+> As imagens podem ser usadas do pacote do aplicativo, do armazenamento local do aplicativo ou da Web. Na the Fall Creators Update, as imagens da Web podem ter até 3 MB em conexões normais e 1 MB em conexões limitadas. Em dispositivos que ainda não executam a Fall Creators Update, as imagens da Web devem ser maiores do que 200 KB.
 
  
 
@@ -1179,7 +1179,7 @@ TileWide = new TileBinding()
 
 ![exemplos de imagens de "espiar"](images/adaptive-tiles-imagepeeking.png)
 
-**Corte em círculo para imagens de "espiar" e de plano de fundo**
+**Corte do círculo para imagens de inspeção e plano de fundo**
 
 Use o seguinte atributo hint-crop em imagens de "espiar" e de plano de fundo para fazer um corte em círculo:
 
@@ -1199,7 +1199,7 @@ O resultado ficará assim:
 
 ![corte em círculo para imagens de "espiar" e de plano de fundo](images/circlecrop-image.png)
 
-**Usar imagem dinâmica e de plano de fundo**
+**Usar imagem de inspeção e plano de fundo**
 
 Para usar uma imagem de "espiar" e de plano de fundo em uma notificação de bloco, especifique uma imagem de "espiar" e uma imagem de plano de fundo em sua carga de notificação.
 
@@ -1212,7 +1212,7 @@ O resultado ficará assim:
 
 Você pode definir uma sobreposição preta em suas imagens de "espiar" e de plano de fundo usando **hint-overlay**, que aceita inteiros de 0 a 100, sendo 0 nenhuma sobreposição e 100 uma sobreposição total preta. Você pode usar a sobreposição para assegurar que o texto em seu bloco seja legível.
 
-**Use hint-overlay em uma imagem de plano de fundo**
+**Use a dica de sobreposição em uma imagem de plano de fundo**
 
 Sua imagem de plano de fundo será padronizada com uma sobreposição de 20% desde que você tenha alguns elementos de texto em sua carga (caso contrário, o padrão será 0% sobreposição).
 
@@ -1239,11 +1239,11 @@ TileWide = new TileBinding()
 }
 ```
 
-**Resultado de hint-overlay:**
+**Resultado de sobreposição de dica:**
 
 ![exemplo de uma sobreposição de dica de imagem](images/adaptive-tiles-image-hintoverlay.png)
 
-**Use hint-overlay em uma imagem de "espiar"**
+**Use a sobreposição de dica em uma imagem de espiada**
 
 Na versão 1511 do Windows 10, também oferecemos suporte a uma sobreposição para sua imagem de "espiar", da mesma forma que fizemos para a imagem de plano de fundo. Especifique hint-overlay no elemento de imagem de "espiar", como um número inteiro de 0 a 100. A sobreposição padrão para imagens de "espiar" é 0 (nenhuma sobreposição).
 
@@ -1393,7 +1393,7 @@ TileWide = new TileBinding()
 * [Esquema de conteúdo do bloco](../tiles-and-notifications/tile-schema.md)
 * [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md)
 * [Modelos de blocos especiais](special-tile-templates-catalog.md)
-* [Kit de ferramentas de comunidade UWP - Notificações](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [UWP Community Toolkit - notificações](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
 * [Notificações do Windows no GitHub](https://github.com/WindowsNotifications)
 
  

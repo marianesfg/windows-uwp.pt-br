@@ -1,22 +1,22 @@
 ---
 title: Criação do pacote com o layout de empacotamento
-description: O layout de empacotamento é um documento único que descreve a estrutura de empacotamento do aplicativo. Ele especifica os lotes de um aplicativo (principal e opcional), os pacotes nos lotes e os arquivos nos pacotes.
+description: O layout de empacotamento é um documento único que descreve a estrutura de empacotamento do aplicativo. Ele especifica os pacotes de um aplicativo (principal e opcional), os pacotes no lote e os arquivos nos pacotes.
 ms.date: 04/30/2018
 ms.topic: article
-keywords: windows 10, empacotamento, layout do pacote, pacote de ativo
+keywords: windows 10, empacotamento, layout do pacote, pacote do ativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 3e54b74cf3052fdeb5b70cc90f59ab0ea59aef76
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941923"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627651"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>Criação do pacote com o layout de empacotamento  
 
 Com a introdução de pacotes de ativo, os desenvolvedores agora têm as ferramentas para criar mais pacotes além de mais tipos de pacotes. Conforme um aplicativo fica maior e mais complexo, ele geralmente será composto de mais pacotes e a dificuldade de gerenciar esses pacotes aumentará (especialmente se você estiver criando fora do Visual Studio e usando arquivos de mapeamento). Para simplificar o gerenciamento da estrutura de empacotamento do aplicativo, você pode usar o layout de empacotamento com suporte pelo MakeAppx.exe. 
 
-O layout de empacotamento é um documento XML único que descreve a estrutura de empacotamento do aplicativo. Ele especifica os lotes de um aplicativo (principal e opcional), os pacotes nos lotes e os arquivos nos pacotes. Arquivos podem ser selecionados de locais de rede, unidades e pastas diferentes. Curingas podem ser usados para selecionar ou excluir arquivos.
+O layout de empacotamento é um documento XML único que descreve a estrutura de empacotamento do aplicativo. Ele especifica os pacotes de um aplicativo (principal e opcional), os pacotes no lote e os arquivos nos pacotes. Arquivos podem ser selecionados de locais de rede, unidades e pastas diferentes. Curingas podem ser usados para selecionar ou excluir arquivos.
 
 Depois que o layout de empacotamento de um aplicativo tiver sido configurado, ele é usado com o MakeAppx.exe para criar todos os pacotes para um aplicativo em uma única chamada de linha de comando. O layout de empacotamento pode ser editado para alterar a estrutura de pacote para atender às suas necessidades de implantação. 
 
@@ -51,7 +51,7 @@ Aqui está um exemplo da aparência de um layout de empacotamento simples:
 Vamos dividir este exemplo para entender como ele funciona.
 
 ### <a name="packagefamily"></a>PackageFamily
-Esse layout de empacotamento criará um arquivo de lote de aplicativo único simples com x64 pacote de arquitetura e um pacote de ativo de "Mídia". 
+Esse layout de empacotamento criará um arquivo de pacote de aplicativo único simples com um x64 pacote de arquitetura e um pacote de ativos de "Mídia". 
 
 O elemento **PackageFamily** é usado para definir um lote de aplicativo. Você deve usar o atributo **ManifestPath** para fornecer um **AppxManifest** para o pacote, o **AppxManifest** deve corresponder ao **AppxManifest** para o pacote de arquitetura do pacote. O atributo **ID** também deve ser fornecido. Isso é usado com MakeAppx.exe durante a criação de pacote para que você possa criar apenas esse pacote se quiser, e isso será o nome do arquivo do pacote criado. O atributo **FlatBundle** é usado para descrever o tipo de pacote que você deseja criar, **true** para um pacote simples (que você pode ler mais sobre aqui), e **false** para um pacote clássico. O atributo **ResourceManager** é usado para especificar se os pacotes de recursos dentro esse pacote usarão MRT para acessar os arquivos. Por padrão, é **true**, mas a partir do Windows 10, versão 1803, isso ainda não está definido, portanto, esse atributo deve ser definido como **false**.
 
@@ -143,7 +143,7 @@ Pacotes de recursos podem ser especificados com o elemento **ResourcePackage**. 
 
 Cada pacote opcional tem seu próprio nome de família do pacote distinto e deve ser definido com elementos **PackageFamily**, ao especificar o atributo **Optional** para **true**. O atributo **RelatedSet** é usado para especificar se o pacote opcional está dentro do conjunto relacionado (por padrão isso é verdadeiro), e se o pacote opcional deve ser atualizado com o pacote principal.
 
-O elemento **PrebuiltPackage** é usado para adicionar pacotes que não são definidos no layout de empacotamento para ser incluído ou referenciado nos arquivos de lote de aplicativo para ser compilado. Nesse caso, outro pacote opcional DLC está sendo incluído aqui para que o arquivo de lote de aplicativo principal possa referenciá-lo e tenha-o como parte do conjunto relacionado.
+O **PrebuiltPackage** elemento é usado para adicionar os pacotes que não estão definidos no layout de empacotamento para serem incluídos ou referenciados nos arquivos de pacote de aplicativo a ser criado. Nesse caso, outro pacote opcional do DLC está sendo incluído aqui, para que o arquivo de pacote do aplicativo principal pode fazer referência a ela e tê-lo parte do conjunto de relacionadas.
 
 
 ## <a name="build-app-packages-with-a-packaging-layout-and-makeappxexe"></a>Criar pacotes de aplicativos com um layout de empacotamento e MakeAppx.exe
@@ -159,13 +159,13 @@ No entanto, se você estiver atualizando seu aplicativo e alguns pacotes não co
 MakeAppx.exe build /f PackagingLayout.xml /id "x64" /ip PreviousVersion\ /op OutputPackages\ /iv
 ```
 
-O sinalizador `/id` pode ser usado para selecionar os pacotes a serem construídos com o layout de empacotamento, correspondente ao atributo do **ID** no layout. O `/ip` é usado para indicar onde a versão anterior dos pacotes estão neste caso. A versão anterior deve ser fornecida porque o arquivo de lote de aplicativo ainda precisa fazer referência a versão anterior do pacote de **mídia** . O sinalizador `/iv` é usado para incrementar a versão dos pacotes que está sendo criado automaticamente (ao invés de alterar a versão no **AppxManifest**). Como alternativa, os switches `/pv` e `/bv` podem ser usados para fornecer diretamente uma versão do pacote (para todos os pacotes a serem criados) e uma versão do lote (para todos os lotes a serem criados), respectivamente.
+O sinalizador `/id` pode ser usado para selecionar os pacotes a serem construídos com o layout de empacotamento, correspondente ao atributo do **ID** no layout. O `/ip` é usado para indicar onde a versão anterior dos pacotes estão neste caso. A versão anterior deve ser fornecida porque o arquivo de pacote do aplicativo ainda precisa referenciar a versão anterior da **mídia** pacote. O sinalizador `/iv` é usado para incrementar a versão dos pacotes que está sendo criado automaticamente (ao invés de alterar a versão no **AppxManifest**). Como alternativa, os switches `/pv` e `/bv` podem ser usados para fornecer diretamente uma versão do pacote (para todos os pacotes a serem criados) e uma versão do lote (para todos os lotes a serem criados), respectivamente.
 Usando o exemplo de layout de empacotamento avançado nesta página, se você quiser criar somente o lote opcional **Themes** e o pacote do aplicativo **Themes.main** que faz referência a ele, você usaria esse comando:
 
 ``` example 
 MakeAppx.exe build /f PackagingLayout.xml /id "Themes" /op OutputPackages\ /bc /nbp
 ```
 
-O sinalizador `/bc` é usado para indicar que os filhos do lote **Themes** também devem ser compilados (neste caso **Themes.main** será compilado). O sinalizador `/nbp` é usado para indicar que o responsável do lote **Themes** não deve ser compilado. O responsável de **Themes**, que é um lote de aplicativo opcional, é o lote de aplicativo principal: **MyGame**. Geralmente para um pacote opcional em um conjunto relacionado, o lote de aplicativo principal deve também ser criado para o pacote a ser instalado, desde que o pacote opcional também seja referenciado no lote de aplicativo principal quando ele estiver em um conjunto relacionado (para garantir o controle de versão entre os pacotes principais e opcionais). A relação do responsável entre pacotes é ilustrada no diagrama a seguir:
+O sinalizador `/bc` é usado para indicar que os filhos do lote **Themes** também devem ser compilados (neste caso **Themes.main** será compilado). O sinalizador `/nbp` é usado para indicar que o responsável do lote **Themes** não deve ser compilado. O pai do **temas**, que é um pacote de aplicativo opcional, é o pacote de aplicativo primário: **MyGame**. Geralmente para um pacote opcional em um conjunto relacionado, o lote de aplicativo principal deve também ser criado para o pacote a ser instalado, desde que o pacote opcional também seja referenciado no lote de aplicativo principal quando ele estiver em um conjunto relacionado (para garantir o controle de versão entre os pacotes principais e opcionais). A relação do responsável entre pacotes é ilustrada no diagrama a seguir:
 
 ![Diagrama do layout de empacotamento](images/packaging-layout.png)

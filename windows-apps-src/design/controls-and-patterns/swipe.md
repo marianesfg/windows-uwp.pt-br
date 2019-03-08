@@ -3,8 +3,8 @@ pm-contact: kisai
 design-contact: ksulliv
 dev-contact: Shmazlou
 doc-status: Published
-Description: Swipe commanding is a touch accelerator for context menus.
-title: Deslizar o dedo
+Description: Passe o dedo dos comandos são um acelerador de toque dos menus de contexto.
+title: Passar o dedo
 label: Swipe
 template: detail.hbs
 ms.date: 02/08/2017
@@ -12,13 +12,13 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d575eb25d9a013aa999cf304db6d83faeb87765
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037318"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626651"
 ---
-# <a name="swipe"></a>Deslizar o dedo
+# <a name="swipe"></a>Passar o dedo
 
 O comando de deslizar o dedo é um acelerador para menus de contexto que permite aos usuários acessar facilmente as ações comuns do menu apenas tocando, sem precisar alterar estados no aplicativo.
 
@@ -26,7 +26,7 @@ O comando de deslizar o dedo é um acelerador para menus de contexto que permite
 
 ![Executar e revelar o tema claro](images/LightThemeSwipe.png)
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 O comando de passar o dedo economiza espaço. É útil em situações onde o usuário pode executar a mesma operação em vários itens em rápida sucessão. E ele oferece "ações rápidas" em itens que não precisam de um pop-up completo ou mudança de estado dentro da página.
 
@@ -46,8 +46,8 @@ Você deve usar o comando de passar o dedo quando tiver um grupo potencialmente 
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/SwipeControl">abrir o aplicativo e ver o SwipeControl em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obter o código-fonte (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -59,7 +59,7 @@ Você deve usar o comando de passar o dedo quando tiver um grupo potencialmente 
 
 ## <a name="how-does-swipe-work"></a>Como o recurso de deslizar o dedo funciona?
 
-Comandos de passar o dedo UWP tem dois modos: [revelar](/uwp/api/windows.ui.xaml.controls.swipemode) e [Execute](/uwp/api/windows.ui.xaml.controls.swipemode). Ele também dá suporte a quatro direções de passar o dedo diferentes: para cima, para baixo, para a esquerda e direita.
+Comandos de passar o dedo com a UWP tem dois modos: [Revelar](/uwp/api/windows.ui.xaml.controls.swipemode) e [executar](/uwp/api/windows.ui.xaml.controls.swipemode). Ele também dá suporte a quatro direções de passar o dedo diferentes: para cima, para baixo, para a esquerda e direita.
 
 ### <a name="reveal-mode"></a>Modo de revelação
 
@@ -96,7 +96,7 @@ Por exemplo, não é possível ter duas definições [LeftItems](/uwp/api/window
 Passe o dedo comandos têm dois componentes que você precisa definir:
 
 - O [SwipeControl](/uwp/api/windows.ui.xaml.controls.swipecontrol), que encapsula seu conteúdo. Em uma coleção, como um ListView, isso fica dentro de seu DataTemplate.
-- Os itens de menu de passar o dedo, que é um ou mais [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem) objetos colocados em contêineres direcional do controle de passar o dedo: [LeftItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.LeftItems), [RightItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.RightItems), [TopItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.TopItems), ou [BottomItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.BottomItems)
+- Os itens de menu de passar o dedo, que é um ou mais [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem) objetos colocados em contêineres de direcional do controle de passar o dedo: [LeftItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.LeftItems), [RightItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.RightItems), [TopItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.TopItems), ou [BottomItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.BottomItems)
 
 Passe o dedo conteúdo pode ser colocado embutido ou definido na seção Resources da sua página ou aplicativo.
 
@@ -182,7 +182,7 @@ Aqui está um ListView com o SwipeControl aplicada em seu item de DataTemplate. 
 
 ## <a name="handle-an-invoked-swipe-command"></a>Acessar um comando de deslizar o dedo invocado
 
-Para executar uma ação em um comando de passar o dedo, você manipula seu evento [Invoked](/uwp/api/windows.ui.xaml.controls.swipeitem.Invoked). (Para obter mais informações sobre um como um usuário pode invocar um comando, examine o _como passar o dedo funciona? _seção anteriormente neste artigo.) Normalmente, um comando de passar o dedo é em um ListView ou cenário de lista. Nesse caso quando um comando é invocado, você desejará executar uma ação nesse item.
+Para executar uma ação em um comando de passar o dedo, você manipula seu evento [Invoked](/uwp/api/windows.ui.xaml.controls.swipeitem.Invoked). (Para obter mais informações sobre como um usuário pode invocar um comando, examine os _como funciona a passe o dedo?_ seção neste artigo.) Normalmente, um comando de passar o dedo é em um ListView ou um cenário de lista. Nesse caso quando um comando é invocado, você desejará executar uma ação nesse item.
 
 Aqui está como manipular o evento Invoked no _excluir_ item de passar o dedo, você criou anteriormente.
 
@@ -239,6 +239,6 @@ Aqui, um _resposta_ item de passar o dedo é definido para fechar depois que ele
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Exibição de lista e exibição de grade](listview-and-gridview.md)
-- [Contêineres e modelos de itens](item-containers-templates.md)
-- [Puxar para atualizar](pull-to-refresh.md)
+- [Exibição de lista e o modo de exibição de grade](listview-and-gridview.md)
+- [Modelos e contêineres de itens](item-containers-templates.md)
+- [Deslizar para atualizar](pull-to-refresh.md)

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c89a1901d15d00c7c102157c8f44d6ab96272ef0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919768"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617901"
 ---
 # <a name="integrate-with-the-system-media-transport-controls"></a>Integrar aos Controles de transporte de mídia do sistema
 
@@ -77,9 +77,9 @@ Como mencionado anteriormente neste artigo, o SMTC detectará e exibirá automat
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
-* [Reproduzir áudio e vídeo com o MediaPlayer](play-audio-and-video-with-mediaplayer.md)
-* [Controle manual dos controles de transporte de mídia do sistema](system-media-transport-controls.md)
-* [Exemplo de controles de transporte de mídia do sistema no github](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
+* [Reproduzir áudio e vídeo com o Media Player](play-audio-and-video-with-mediaplayer.md)
+* [Controle manual, o sistema de transporte de controles de mídia](system-media-transport-controls.md)
+* [Exemplo de controles de Tranport de mídia do sistema no github](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
  
 
  

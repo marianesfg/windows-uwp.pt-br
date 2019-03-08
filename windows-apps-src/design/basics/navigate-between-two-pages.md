@@ -1,5 +1,5 @@
 ---
-Description: Learn how to enable peer-to-peer navigation between two basic pages in an Universal Windows Platform (UWP) app.
+Description: Saiba como habilitar a navegação de ponto a ponto entre duas páginas básicas em um aplicativo da plataforma Universal do Windows (UWP).
 title: Navegação ponto a ponto entre duas páginas
 ms.assetid: 0A364C8B-715F-4407-9426-92267E8FB525
 label: Peer-to-peer navigation between two pages
@@ -14,17 +14,17 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: e72dc726143d17f605283fa801f8e286c2c58878
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943049"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616201"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementar a navegação entre duas páginas
 
 Saiba como usar um quadro e páginas para habilitar a navegação básica ponto a ponto no aplicativo. 
 
-> **APIs importantes**: classe [**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682), classe [**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503), namespace [**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300)
+> **APIs importantes**: [**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) class, [**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503) class, [**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300) namespace
 
 ![navegação ponto a ponto](images/peertopeer.png)
 
@@ -87,7 +87,7 @@ Em Page1.xaml, adicione o seguinte conteúdo:
 <TextBlock x:Name="pageTitle" Text="Page 1" />
 ```
 
--   Um elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como um elemento filho da raiz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) e depois o `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
+-   Um elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento filho do elemento raiz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) and after the `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
 ```xaml
 <HyperlinkButton Content="Click to go to page 2"
                  Click="HyperlinkButton_Click"
@@ -124,7 +124,7 @@ Em Page2.xaml, adicione o seguinte conteúdo:
 <TextBlock x:Name="pageTitle" Text="Page 2" />
 ```
 
--   Um elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como um elemento filho da raiz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) e depois o `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
+-   Um elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento filho do elemento raiz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) and after the `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
 ```xaml
 <HyperlinkButton Content="Click to go to page 1" 
                  Click="HyperlinkButton_Click"
@@ -296,9 +296,9 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 ```
 
 > [!NOTE]
-> O código aqui usa o valor de retorno de [**navegar**](https://msdn.microsoft.com/library/windows/apps/br242694) para lançar uma exceção de aplicativo caso a navegação ao quadro da janela inicial do aplicativo falhe. Quando **Navigate** retorna **true**, a navegação acontece.
+> Aqui, o código usa o valor de retorno [ **Navigate** ](https://msdn.microsoft.com/library/windows/apps/br242694) para lançar uma exceção de aplicativo se a navegação para o quadro de janela inicial do aplicativo falhar. Quando **Navigate** retorna **true**, a navegação acontece.
 
-Agora, crie e execute o aplicativo. Clique no link que diz "Clique para ir à página 2". A segunda página, intitulada "Página 2" no topo, será carregada e exibida no quadro.
+Agora, crie e execute o aplicativo. Clique no link que diz "Clique para ir à página 2". A segunda página, que diz "Página 2" no topo, deve ser carregada e exibida no quadro.
 
 ### <a name="about-the-frame-and-page-classes"></a>Sobre as classes Frame e Page
 
@@ -306,7 +306,7 @@ Antes de adicionarmos mais funcionalidades ao nosso aplicativo, vejamos como as 
 
 Primeiro, um [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) chamado `rootFrame`é criado para o aplicativo no método `App.OnLaunched` no arquivo de code-behind App.xaml. A classe **Frame** dá suporte a vários métodos de navegação, como [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694), [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568), e [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693), e propriedades como [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543), [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547) e [**BackStackDepth**](https://msdn.microsoft.com/library/windows/apps/hh967995).
  
-O método [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) é usado para exibir conteúdo nesse **Frame**. Por padrão, esse método carrega MainPage.xaml. No nosso exemplo, `Page1` é passada para o método **Navigate**, então o método carrega `Page1` no **Quadro **. 
+O método [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) é usado para exibir conteúdo nesse **Frame**. Por padrão, esse método carrega MainPage.xaml. No nosso exemplo, `Page1` é passada para o método **Navigate**, então o método carrega `Page1` no **Quadro** . 
 
 `Page1` é uma subclasse da classe [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503). A classe **Page** tem uma propriedade **Frame** somente leitura que obtém o **Frame** que contém a **Page**. Quando o manipulador de eventos **Click** do **HyperlinkButton** na `Page1` chama `this.Frame.Navigate(typeof(Page2))`, o **Frame** exibe o conteúdo de Page2.xaml.
 
@@ -316,9 +316,9 @@ Por fim, sempre que uma página é carregada no quadro, ela é adicionada como u
 
 Nosso aplicativo navega entre duas páginas, mas ainda não faz nada de interessante. Geralmente, quando um aplicativo tem várias páginas, as páginas precisam compartilhar informações. Vamos passar algumas informações da primeira para a segunda página.
 
-Em Page1. XAML, substitua o **HyperlinkButton** que você adicionou anteriormente seguir [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
+No Page1. XAML, substitua os **HyperlinkButton** adicionado anteriormente com o seguinte [ **StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
 
-Aqui, adicionamos um rótulo [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) e um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) (`name`) para inserir uma sequência de texto.
+Aqui, podemos adicionar um [ **TextBlock** ](https://msdn.microsoft.com/library/windows/apps/br209652) rótulo e uma [ **caixa de texto** ](https://msdn.microsoft.com/library/windows/apps/br209683) `name` para inserir uma cadeia de caracteres de texto.
 
 ```xaml
 <StackPanel>
@@ -330,7 +330,7 @@ Aqui, adicionamos um rótulo [**TextBlock**](https://msdn.microsoft.com/library/
 </StackPanel>
 ```
 
-No `HyperlinkButton_Click` manipulador de eventos de arquivo code-behind Page1. XAML, adicione um parâmetro referenciando o `Text` propriedade do `name` **TextBox** para o `Navigate` método.
+No manipulador de eventos `HyperlinkButton_Click` do arquivo code-behind Page1.xaml, adicione um parâmetro que faça referência à propriedade `Text`  do  `name` **TextBox** para o método `Navigate`.
 
 ```csharp
 private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
@@ -451,6 +451,6 @@ Page1::Page1()
 ```
 
 ## <a name="related-articles"></a>Artigos relacionados
-* [Noções básicas de design de navegação para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958438)
-* [Diretrizes para pivôs e guias](https://msdn.microsoft.com/library/windows/apps/dn997788)
+* [Noções básicas sobre design de navegação para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958438)
+* [Diretrizes para tabelas dinâmicas e guias](https://msdn.microsoft.com/library/windows/apps/dn997788)
 * [Diretrizes para painéis de navegação](https://msdn.microsoft.com/library/windows/apps/dn997766)

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 07f5c6ef180cb4abe90a705e73be8d99ecbd2ca7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947079"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603181"
 ---
 # <a name="bitmapencoder-options-reference"></a>Referência de opções de BitmapEncoder
 
@@ -22,22 +22,22 @@ Esse artigo lista as opções de codificação que podem ser usadas com [**Bitma
 |-------------------------|--------------|----------------------------------------------------------------------------------------------------|---------------|
 | ImageQuality            | único       | Valores válidos de 0 a 1.0. Valores maiores indicam maior qualidade                                 | JPEG, JPEG-XR |
 | CompressionQuality      | único       | Valores válidos de 0 a 1.0. Valores maiores indicam um esquema de compactação mais eficiente e mais lento | TIFF          |
-| Lossless                | booleano      | Se for definido como true, a opção ImageQuality será ignorada                                        | JPEG-XR       |
-| InterlaceOption         | booleano      | Entrelaçar ou não a imagem                                                                    | PNG           |
+| Lossless                | booliano      | Se for definido como true, a opção ImageQuality será ignorada                                        | JPEG-XR       |
+| InterlaceOption         | booliano      | Entrelaçar ou não a imagem                                                                    | PNG           |
 | FilterOption            | uint8        | Use a enumeração [**PngFilterMode**](https://msdn.microsoft.com/library/windows/apps/br226389)                                | PNG           |
 | TiffCompressionMethod   | uint8        | Use a enumeração [**TiffCompressionMode**](https://msdn.microsoft.com/library/windows/apps/br226399)                    | TIFF          |
 | Luminância               | uint32Array  | Uma matriz de 64 elementos contendo contrastes de quantização de luminância                               | JPEG          |
 | Crominância             | uint32Array  | Uma matriz de 64 elementos contendo contrastes de quantização de crominância                             | JPEG          |
 | JpegYCrCbSubsampling    | uint8        | Use a enumeração [**JpegSubsamplingMode**](https://msdn.microsoft.com/library/windows/apps/br226386)                    | JPEG          |
-| SuppressApp0            | booleano      | Suprimir ou não a criação de um bloqueio de metadados App0                                        | JPEG          |
-| EnableV5Header32bppBGRA | booleano      | Codificar ou não para uma versão de 5 BMP que tem suporte para alfa                                         | BMP           |
+| SuppressApp0            | booliano      | Suprimir ou não a criação de um bloqueio de metadados App0                                        | JPEG          |
+| EnableV5Header32bppBGRA | booliano      | Codificar ou não para uma versão de 5 BMP que tem suporte para alfa                                         | BMP           |
 
  
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar, editar e salvar imagens de bitmap](imaging.md)
-* [Codecs compatíveis](supported-codecs.md)
+* [Codecs com suporte](supported-codecs.md)
 
  
 

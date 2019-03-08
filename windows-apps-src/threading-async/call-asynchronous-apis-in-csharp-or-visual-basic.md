@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, C#, Visual Basic, assíncrona
 ms.localizationpriority: medium
 ms.openlocfilehash: 899af2ffd26419d4c8906d703d6708d202f8c150
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940942"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632611"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>Chamar APIs assíncronas no Visual Basic ou C#
 
@@ -38,7 +38,7 @@ O exemplo a seguir obtém as listas de postagens de um blog chamando o método a
 
 Há algumas coisas importantes sobre este exemplo. Primeiro, a linha `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` usa o operador de **espera** com a chamada para o método assíncrono, [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460). Você pode pensar no operador de **espera** dizendo ao compilador que está chamando um método assíncrono, o que faz com que o compilador realize um trabalho extra para que você não precise fazê-lo. Em seguida, a declaração do manipulador de eventos inclui a palavra-chave **async**. Você deve incluir essa palavra-chave na declaração de método de qualquer método em que usar o operador de **espera**.
 
-Neste tópico, não entraremos em muitos detalhes sobre o que o compilador faz com o operador de **espera**, mas examinemos o que seu aplicativo faz para permanecer assíncrono e responsivo. Considere o que acontece quando você usa o código síncrono. Por exemplo, suponha que exista um método chamado `SyndicationClient.RetrieveFeed` que seja síncrono. (Esse método não existe, mas imagine que exista.) Se seu aplicativo incluísse a linha `SyndicationFeed feed = client.RetrieveFeed(feedUri)`, em vez de `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)`, a execução do aplicativo seria interrompida até que o valor de retorno `RetrieveFeed` estivesse disponível. Além disso, enquanto seu aplicativo aguarda a conclusão do método, ele não pode responder a nenhum outro evento, como outro evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737). Ou seja, seu aplicativo fica bloqueado até que `RetrieveFeed` seja retornado.
+Neste tópico, não entraremos em muitos detalhes sobre o que o compilador faz com o operador de **espera**, mas examinemos o que seu aplicativo faz para permanecer assíncrono e responsivo. Considere o que acontece quando você usa o código síncrono. Por exemplo, suponha que exista um método chamado `SyndicationClient.RetrieveFeed` que seja síncrono. (Não há nenhum método desse tipo, mas imagine que há.) Se seu aplicativo inclua a linha `SyndicationFeed feed = client.RetrieveFeed(feedUri)`, em vez de `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)`, poderia interromper a execução do aplicativo até que o valor de retorno `RetrieveFeed` está disponível. Além disso, enquanto seu aplicativo aguarda a conclusão do método, ele não pode responder a nenhum outro evento, como outro evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737). Ou seja, seu aplicativo fica bloqueado até que `RetrieveFeed` seja retornado.
 
 Mas, se você chamar `client.RetrieveFeedAsync`, o método iniciará a recuperação e será retornado imediatamente. Quando você usa **espera** com [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460), o aplicativo sai temporariamente do manipulador de eventos. Dessa forma, ele pode processar outros eventos enquanto **RetrieveFeedAsync** é executado de maneira assíncrona. Isso mantém o aplicativo responsivo para o usuário. Quando **RetrieveFeedAsync** é finalizado e [**SyndicationFeed**](https://msdn.microsoft.com/library/windows/apps/BR243485) está disponível, o aplicativo basicamente volta a entrar no manipulador de eventos de onde saiu, depois de `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)`, e conclui o restante do método.
 
@@ -64,9 +64,9 @@ A tabela abaixo dá exemplos de métodos assíncronos e lista o tipo de retorno 
 |-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | [**SyndicationClient.RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460)     | [**IAsyncOperationWithProgress&lt;SyndicationFeed, RetrievalProgress&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206594)                                 | [**SyndicationFeed**](https://msdn.microsoft.com/library/windows/apps/BR243485) |
 | [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275) | [**IAsyncOperation&lt;StorageFile&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)                                                                                | [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)          |
-| [**XmlDocument.SaveToFileAsync**](https://msdn.microsoft.com/library/windows/apps/BR206284)                 | [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)                                                                                                           | **nulo**                                          |
-| [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)                                                                   | **nulo**                                          |
-| [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | [**DataReaderLoadOperation**](https://msdn.microsoft.com/library/windows/apps/BR208120), uma classe de resultados personalizada que implementa **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)                     |
+| [**XmlDocument.SaveToFileAsync**](https://msdn.microsoft.com/library/windows/apps/BR206284)                 | [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)                                                                                                           | **void**                                          |
+| [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)                                                                   | **void**                                          |
+| [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | [**DataReaderLoadOperation**](https://msdn.microsoft.com/library/windows/apps/BR208120), um personalizado resulta de classe que implementa **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)                     |
 
  
 
@@ -79,7 +79,7 @@ Ao usar o operador de **espera** para recuperar seus resultados de um método as
 
 Quando métodos assíncronos chamam outros métodos assíncronos, qualquer método assíncrono que resulta numa exceção será propagado para os métodos externos. Isso significa que você pode colocar um bloco **tentativa/obtenção** no método mais externo para encontrar erros para os métodos assíncronos aninhados. Novamente, isso é semelhante à maneira como você obtém exceções para métodos síncronos. Porém, não é possível usar **espera** no bloco **obtenção**.
 
-**Dica**começando com c# no Microsoft Visual Studio2005, você pode usar **await** no bloco **catch** .
+**Dica**  começando com C# no Microsoft Visual Studio 2005, você pode usar **await** no **catch** bloco.
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 

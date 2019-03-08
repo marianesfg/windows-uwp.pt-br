@@ -1,5 +1,5 @@
 ---
-Description: You can encourage your customers to leave feedback by launching Feedback Hub from your app.
+Description: Você pode incentivar os clientes a deixar comentários iniciando o Hub de Feedback do seu aplicativo.
 title: Iniciar o Hub de Feedback do seu app
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 ms.date: 02/08/2017
@@ -7,27 +7,27 @@ ms.topic: article
 keywords: windows 10, uwp, Hub de Feedback, iniciar
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f5d5c12deed9fffc3d2515529aa5bba5fbffc47
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045269"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631831"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>Iniciar o Hub de Feedback do seu app
 
-Você pode incentivar os clientes a deixar comentários adicionando um controle (como um botão) ao seu aplicativo da Plataforma Universal do Windows (UWP) que inicia o Hub de Feedbacks. Hub de Feedback é um aplicativo pré-instalado que oferece um local único para coletar feedback sobre o Windows e os aplicativos instalados. Todos os comentários dos clientes que é enviado para seu aplicativo por meio do Hub de Feedback é coletado e apresentado no [relatório de comentários](../publish/feedback-report.md) no Partner Center, para que você possa ver os problemas, sugestões e aprovações que os clientes enviaram em um relatório.
+Você pode incentivar os clientes a deixar comentários adicionando um controle (como um botão) ao seu aplicativo da Plataforma Universal do Windows (UWP) que inicia o Hub de Feedbacks. Hub de Feedback é um aplicativo pré-instalado que oferece um local único para coletar feedback sobre o Windows e os aplicativos instalados. Todos os comentários do cliente que é enviado para seu aplicativo por meio do Hub de comentários é coletado e apresentado na [relatório de comentários](../publish/feedback-report.md) no Partner Center, portanto, você pode ver os problemas, sugestões e votos a favor que seus clientes têm enviado em um relatório.
 
-Para iniciar o Hub de Feedback do seu aplicativo, use uma API que seja fornecida pelo [Microsoft Store Services SDK](https://aka.ms/store-em-sdk). Recomendamos que você use essa API para iniciar o Hub de Feedback de um elemento de interface do usuário em seu app que siga nossas diretrizes de design.
+Para iniciar o Hub de Feedback do seu aplicativo, use uma API que seja fornecida pelo [Microsoft Store Services SDK](https://aka.ms/store-em-sdk). Recomendamos que você use essa API para iniciar o Hub de Feedback de um elemento de interface do usuário em seu aplicativo que siga nossas diretrizes de design.
 
 > [!NOTE]
-> O Hub de Feedback está disponível apenas em dispositivos que executam a versão 10.0.14271 ou posterior de um SO Windows 10 que se baseia em [famílias de dispositivos móveis e computadores](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families). Recomendamos que você mostre um controle de feedback no seu app apenas se o Hub de Feedback estiver disponível no dispositivo do usuário. O código neste tópico demonstra como fazer isso.
+> O Hub de Feedback está disponível apenas em dispositivos que executam a versão 10.0.14271 ou posterior de um SO Windows 10 que se baseia em [famílias de dispositivos móveis e computadores](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families). Recomendamos que você mostre um controle de feedback no seu aplicativo apenas se o Hub de Feedback estiver disponível no dispositivo do usuário. O código neste tópico demonstra como fazer isso.
 
 ## <a name="how-to-launch-feedback-hub-from-your-app"></a>Como iniciar o Hub de Feedback do seu aplicativo
 
 Para iniciar o Hub de Feedback do seu aplicativo:
 
 1. [Instale o Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk).
-2. Abra seu projeto no Visual Studio.
+2. Abra o projeto no Visual Studio.
 3. No Gerenciador de Soluções, clique com botão direito no nó **Referências** para seu projeto e clique em **Adicionar Referência**.
 4. No **Gerenciador de Referências**, expanda **Universal do Windows** e clique em **Extensões**.
 5. Na lista de SDKs, clique na caixa de seleção ao lado de **Microsoft Engagement Framework** e clique em **OK**.
@@ -76,4 +76,4 @@ Também recomendamos usar uma ou mais das seguintes opções de posicionamento p
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Relatório de feedback](../publish/feedback-report.md)
+* [Relatório de comentários](../publish/feedback-report.md)

@@ -1,5 +1,5 @@
 ---
-Description: Follow these best practices for geofencing in your app.
+Description: Siga estas práticas recomendadas para cerca geográfica em seu aplicativo.
 title: Diretrizes de aplicativos com cerca geográfica
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
 ms.date: 02/08/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, localização, cerca geográfica
 ms.localizationpriority: medium
 ms.openlocfilehash: e3fe7cb84d4ae265ed20a6a74b76e4f08dd4c1dd
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047401"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622471"
 ---
 # <a name="guidelines-for-geofencing-apps"></a>Diretrizes de aplicativos com cerca geográfica
 
@@ -20,7 +20,7 @@ ms.locfileid: "9047401"
 
 **APIs importantes**
 
--   [**Classe Geofence (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn263587)
+-   [**Classe do limite geográfico (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn263587)
 -   [**Classe Geolocator (XAML)**](https://msdn.microsoft.com/library/windows/apps/br225534)
 
 Siga estas práticas recomendadas para [**cerca geográfica**](https://msdn.microsoft.com/library/windows/apps/dn263744) em seu aplicativo.
@@ -44,7 +44,7 @@ Siga estas práticas recomendadas para [**cerca geográfica**](https://msdn.micr
 -   Não use mais de 1000 cercas geográficas por aplicativo. O sistema na realidade oferece suporte para milhares de cercas geográficas por aplicativo. Você pode manter um bom desempenho do aplicativo para reduzir o uso de memória do aplicativo, usando menos de 1000.
 -   Não crie uma cerca geográfica com um raio menor que 50 metros. Se seu aplicativo precisar usar cercas geográficas com raios pequenos, sugira aos usuários para o utilizarem em um dispositivo com rádio GPS para garantir um melhor desempenho.
 
-## <a name="additional-usage-guidance"></a>Diretrizes de uso adicional
+## <a name="additional-usage-guidance"></a>Diretriz de uso adicional
 
 ### <a name="checking-the-time-stamp-and-current-location"></a>Verificando o carimbo de data/hora e a localização atual
 
@@ -128,8 +128,8 @@ Se seu aplicativo precisar usar cercas geográficas com raios pequenos, sugira a
 
 
 * [Configurar uma cerca geográfica](https://msdn.microsoft.com/library/windows/apps/mt219702)
-* [Obter a localização atual](https://msdn.microsoft.com/library/windows/apps/mt219698)
-* [Amostra de localização UWP (geolocalização)](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Obter o local atual](https://msdn.microsoft.com/library/windows/apps/mt219698)
+* [Exemplo de localização UWP (localização geográfica)](https://go.microsoft.com/fwlink/p/?linkid=533278)
  
 
  

@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 285e4a70062c57c957530aa1e548c22c4cf7711e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934701"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57629461"
 ---
 # <a name="stencil-buffers"></a>Buffers de estêncil
 
 
-Um *buffer de estêncil* é usado para mascarar pixels em uma imagem, para gerar efeitos especiais. A máscara controla se o pixel é desenhado ou não. Esses efeitos especiais incluem composição, decalque, desintegração, desvanecimento, deslizamento, contornos, silhuetas, e estêncil de dois lados. Alguns dos efeitos mais comuns são mostrados abaixo.
+Um *buffer de estêncil* é usado para mascarar pixels em uma imagem, para gerar efeitos especiais. A máscara controla se o pixel é desenhado ou não. Esses efeitos especiais incluem composição, decalque, desintegração, esmaecimento, deslizar o dedo, contornos, silhuetas, e estêncil de dois lados. Alguns dos efeitos mais comuns são mostrados abaixo.
 
 O buffer de estêncil habilita ou desabilita o desenho na superfície de destino de renderização em uma base de pixel por pixel. No nível mais fundamental, ele permite que aplicativos mascarem seções da imagem renderizada para que elas não sejam exibidas. Aplicativos geralmente usam buffers de estêncil de efeitos especiais, como desintegração, decalque e contorno.
 
@@ -55,7 +55,7 @@ Seu app pode usar o buffer de estêncil para compor imagens 2D ou 3D em uma cena
 
 Jogos geralmente são compostos por diversas cenas 3D juntas. Por exemplo, jogos de direção normalmente exibem um espelho retrovisor. O espelho contém o modo de exibição da cena 3D atrás do condutor. Ele é essencialmente uma segunda cena 3D composta pela visão frontal do condutor.
 
-## <a name="span-iddecalingspanspan-iddecalingspanspan-iddecalingspandecaling"></a><span id="Decaling"></span><span id="decaling"></span><span id="DECALING"></span>Decalque
+## <a name="span-iddecalingspanspan-iddecalingspanspan-iddecalingspandecaling"></a><span id="Decaling"></span><span id="decaling"></span><span id="DECALING"></span>Decaling
 
 
 Aplicativos Direct3D usam decalque para controlar quais pixels de uma determinada imagem primitiva são desenhados na superfície de destino de renderização. Os apps aplicam os decalques às imagens de objetos primitivos para permitir que polígonos coplanares sejam renderizados corretamente.
@@ -66,7 +66,7 @@ Para resolver esse problema, use um estêncil para mascarar a seção da parte t
 
 Embora diversas mesclagens de textura possam ser usadas para resolver esse problema, fazer isso limitará o número de outros efeitos especiais que seu aplicativo pode produzir. Usar o buffer de estêncil para aplicar os decalques libera estágios de mesclagem de textura para outros efeitos.
 
-## <a name="span-iddissolvesfadesandswipesspanspan-iddissolvesfadesandswipesspanspan-iddissolvesfadesandswipesspandissolves-fades-and-swipes"></a><span id="Dissolves__fades__and_swipes"></span><span id="dissolves__fades__and_swipes"></span><span id="DISSOLVES__FADES__AND_SWIPES"></span>Desintegração, desvanecimento e passagem de dedo
+## <a name="span-iddissolvesfadesandswipesspanspan-iddissolvesfadesandswipesspanspan-iddissolvesfadesandswipesspandissolves-fades-and-swipes"></a><span id="Dissolves__fades__and_swipes"></span><span id="dissolves__fades__and_swipes"></span><span id="DISSOLVES__FADES__AND_SWIPES"></span>Dissolver, fades e dedo
 
 
 Cada vez mais, aplicativos empregam efeitos especiais que são comumente usados em filmes e vídeo, como desintegração, passagem de dedo e desvanecimento.
@@ -83,14 +83,14 @@ Os aplicativos Direct3D usam uma técnica semelhante para as passagens de dedo. 
 
 Uma passagem de dedo é um pouco mais complexa do que uma desintegração em que seu aplicativo deve ler os pixels da imagem final na ordem inversa da passagem do dedo. Ou seja, se a passagem do dedo acontecer da esquerda para a direita, seu aplicativo deverá ler pixels da imagem final da direita para a esquerda.
 
-## <a name="span-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanoutlines-and-silhouettes"></a><span id="Outlines_and_silhouettes"></span><span id="outlines_and_silhouettes"></span><span id="OUTLINES_AND_SILHOUETTES"></span>Contornos e silhuetas
+## <a name="span-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanoutlines-and-silhouettes"></a><span id="Outlines_and_silhouettes"></span><span id="outlines_and_silhouettes"></span><span id="OUTLINES_AND_SILHOUETTES"></span>Contornos e apenas
 
 
 Você pode usar o buffer de estêncil para efeitos mais abstratos, como contornos e silhuetas.
 
-Se seu aplicativo aplicar uma máscara de estêncil à imagem de um objeto primitivo com o mesmo formato, mas um pouco menor, a imagem resultante terá apenas o contorno do objeto primitivo. O aplicativo pode preencher a área com máscara de estêncil da imagem com uma cor sólida, dando ao primitivo uma aparência em alto-relevo.
+Se seu aplicativo aplicar uma máscara de estêncil à imagem de um objeto primitivo com o mesmo formato, mas um pouco menor, a imagem resultante terá apenas o contorno do objeto primitivo. O app pode preencher a área com máscara de estêncil da imagem com uma cor sólida, dando à primitiva uma aparência em alto-relevo.
 
-Se a máscara de estêncial tiver o mesmo tamanho e formato da primitiva que está sendo renderizado, a imagem resultante terá um buraco onde o primitivo deveria estar. Seu aplicativo poderá preencher o buraco com cor preta para produzir uma silhueta do primitivo.
+Se a máscara de estêncial tiver o mesmo tamanho e formato da primitiva que está sendo renderizado, a imagem resultante terá um buraco onde o primitivo deveria estar. Seu app poderá preencher o buraco com cor preta para produzir uma silhueta da primitiva.
 
 ## <a name="span-idtwo-sidedstencilspanspan-idtwo-sidedstencilspanspan-idtwo-sidedstencilspantwo-sided-stencil"></a><span id="Two-sided_stencil"></span><span id="two-sided_stencil"></span><span id="TWO-SIDED_STENCIL"></span>Estêncil de dois lados
 

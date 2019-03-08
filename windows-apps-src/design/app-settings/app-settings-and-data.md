@@ -1,6 +1,6 @@
 ---
-Description: This section contains user experience guidelines for presenting app settings and storing those settings as app data.
-title: Configurações e dados do aplicativo
+Description: Esta seção contém diretrizes de experiência de usuário para a apresentação das configurações de aplicativo e o armazenamento dessas configurações como dados de aplicativo.
+title: Dados e configurações do aplicativo
 ms.assetid: E7F312F7-54D8-411F-8D92-92FBB95C2463
 label: App settings and data
 template: detail.hbs
@@ -9,13 +9,13 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5790e9fcd05cb873958e53786e3282094ec0a3d4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938427"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639891"
 ---
-# <a name="app-settings-and-data"></a>Dados e configurações do app
+# <a name="app-settings-and-data"></a>Dados e configurações do aplicativo
 
 
 
@@ -43,7 +43,7 @@ Os dados do aplicativo são os dados que o próprio aplicativo cria e gerencia. 
 <td align="left"><p>Práticas recomendadas para criar e exibir configurações de aplicativo.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="store-and-retrieve-app-data.md">Armazenar e recuperar dados de aplicativo</a></p></td>
+<td align="left"><p><a href="store-and-retrieve-app-data.md">Store e recuperar dados de aplicativo</a></p></td>
 <td align="left"><p>Como armazenar e recuperar dados de aplicativo locais, em roaming e temporários.</p></td>
 </tr>
 </tbody>

@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, problemas conhecidos, solução de problemas
 ms.localizationpriority: medium
 ms.openlocfilehash: 029d595c41301e62f74c9b08b633bb22bfb12786
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049174"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641061"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conhecidos e solução de problemas para anúncios em aplicativos
 
 Esta tópico lista os problemas conhecidos com a versão atual do SDK do Microsoft Advertising. Para obter instruções adicionais de solução de problemas, consulte os seguintes tópicos.
 
-* [Guia de solução de problemas em HTML e JavaScript](html-and-javascript-troubleshooting-guide.md)
-* [Guia de solução de problemas de XAML e C#](xaml-and-c-troubleshooting-guide.md)
+* [HTML e JavaScript, guia de solução de problemas](html-and-javascript-troubleshooting-guide.md)
+* [XAML e C# guia de solução de problemas](xaml-and-c-troubleshooting-guide.md)
 
 ## <a name="adcontrol-interface-unknown-in-xaml"></a>Interface AdControl desconhecida em XAML
 
@@ -40,7 +40,7 @@ Se você tiver criado um anúncio recentemente (menos de um dia), talvez ele nã
 
 Há muitos motivos para você não ver anúncios, incluindo erros de rede. Outros motivos podem incluir:
 
-* Selecionar uma unidade de anúncio no Partner Center com um tamanho maior ou menor que o tamanho do **AdControl** no código do seu aplicativo.
+* Selecionar uma unidade de anúncio no Partner Center com um tamanho que seja maior ou menor que o tamanho do **AdControl** no código do seu aplicativo.
 
 * Os anúncios não aparecerão se você estiver usando um [valor de modo de teste](set-up-ad-units-in-your-app.md#test-ad-units) para seu ID de unidade de anúncios ao executar um aplicativo dinâmico.
 
@@ -58,7 +58,7 @@ Anúncios de teste podem ser mostrados, mesmo quando você está esperando anún
 
 * Aplicativos de sideload ou aplicativos que estão em execução no emulador não mostrarão anúncios ativos.
 
-Quando uma unidade de anúncio dinâmico estiver fornecendo anúncios de teste, o status da unidade de anúncio mostra **ativo e fornecendo anúncios de teste** no Partner Center. Isso não se aplica atualmente aos aplicativos de telefone.
+Quando uma unidade de anúncios em tempo real estiver atendendo a anúncios de teste, o status da unidade do ad mostra **ativo e atendendo ao testar o ads** no Partner Center. Isso não se aplica atualmente aos aplicativos de telefone.
 
 
 <span id="reference_errors"/>
@@ -67,7 +67,7 @@ Quando uma unidade de anúncio dinâmico estiver fornecendo anúncios de teste, 
 
 Ao usar as bibliotecas do SDK do Microsoft Advertising, você não pode direcionar para **Qualquer CPU** em seu projeto. Se o seu projeto for direcionado para a plataforma **Any CPU**, você poderá ver um aviso depois de adicionar a referência semelhante a esta.
 
-![referenceerror\ solutionexplorer](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
+![referenceerror\-solutionexplorer](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
 
 Para remover esse aviso, atualize seu projeto para usar uma saída de compilação específica da arquitetura (por exemplo, **x86**). Use o **Gerenciador de Configurações** para definir os destinos de plataforma para depuração e configurações de versão.
 
@@ -89,7 +89,7 @@ Os aplicativos JavaScript/HTML não devem colocar elementos no intervalo de 10 M
 
 Definir propriedades relacionadas a borda herdada do **AdControl** da classe pai fará com que o posicionamento de anúncios fique incorreto.
 
-## <a name="more-information"></a>Mais informações
+## <a name="more-information"></a>Mais Informações
 
 Para obter mais informações sobre os problemas conhecidos mais recentes e publicar perguntas relacionadas às bibliotecas do SDK do Microsoft Advertising, visite o [fórum](https://go.microsoft.com/fwlink/p/?LinkId=401266).
 

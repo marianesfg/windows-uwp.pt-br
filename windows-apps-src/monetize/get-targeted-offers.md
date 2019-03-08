@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, serviços de Store, API de ofertas direcionadas para a Microsoft Store, obter ofertas direcionadas
 ms.localizationpriority: medium
 ms.openlocfilehash: 71cd6ce3b9736b812f8ccdf4d21d35357928c63c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943711"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622761"
 ---
 # <a name="get-targeted-offers"></a>Receber as ofertas direcionadas
 
@@ -35,10 +35,10 @@ Para usar esse método, você precisa primeiro [obter um token de conta da Micro
 
 | Cabeçalho        | Tipo   | Descrição  |
 |---------------|--------|--------------|
-| Autorização | string | Necessário. O código de Conta da Microsoft para o usuário conectado atual do seu aplicativo na forma **Portador** &lt;*código*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token Account da Microsoft para o usuário atual conectado do seu aplicativo na forma **portador** &lt; *token*&gt;. |
 
 
-### <a name="request-parameters"></a>Parâmetros de solicitação
+### <a name="request-parameters"></a>Parâmetros solicitados
 
 Esse método não possui parâmetros de solicitação ou URI.
 
@@ -55,8 +55,8 @@ Esse método retorna um corpo de resposta formatada em JSON que contém uma matr
 
 | Campo      | Tipo   | Descrição         |
 |------------|--------|------------------|
-| ofertas      | array  | Uma série de IDs de produtos para os complementos que estão associados às ofertas direcionadas disponíveis para o usuário atual. Essas IDs de produto são especificados na página de **ofertas direcionadas** para o seu aplicativo no Partner Center.            |
-| trackingId  | string | Um GUID que, opcionalmente, você pode usar para acompanhar a oferta de destino em seu próprio código ou serviços. |
+| ofertas      | matriz  | Uma série de IDs de produtos para os complementos que estão associados às ofertas direcionadas disponíveis para o usuário atual. Essas IDs de produto são especificados na **direcionados ofertas** página do seu aplicativo no Partner Center.            |
+| trackingId  | cadeia de caracteres | Um GUID que, opcionalmente, você pode usar para acompanhar a oferta de destino em seu próprio código ou serviços. |
 
 
 ### <a name="example"></a>Exemplo
@@ -77,7 +77,7 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Gerencie ofertas direcionadas usando os serviços da Store](manage-targeted-offers-using-windows-store-services.md)
+* [Gerenciar as ofertas de destino usando os serviços de Store](manage-targeted-offers-using-windows-store-services.md)
 
  
 

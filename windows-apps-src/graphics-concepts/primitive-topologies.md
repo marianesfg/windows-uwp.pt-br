@@ -8,33 +8,33 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 85d1c41fc10f509f3872fb1e4a0af5fa1e1e7c30
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924756"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631391"
 ---
 # <a name="primitive-topologies"></a>Topologias primitivas
 
 
 O Direct3D dá suporte a várias topologias primitivas, que definem como os vértices são interpretados e renderizados pelo pipeline, como listas de ponto, listas de linha e faixas de triângulos.
 
-## <a name="span-idprimitivetypesspanspan-idprimitivetypesspanspan-idprimitivetypesspanbasic-primitive-topologies"></a><span id="Primitive_Types"></span><span id="primitive_types"></span><span id="PRIMITIVE_TYPES"></span>Topologias primitivas básicas
+## <a name="span-idprimitivetypesspanspan-idprimitivetypesspanspan-idprimitivetypesspanbasic-primitive-topologies"></a><span id="Primitive_Types"></span><span id="primitive_types"></span><span id="PRIMITIVE_TYPES"></span>Topologias de primitivas básicas
 
 
 As seguintes topologias primitivas básicas (ou tipos primitivos) são suportados:
 
--   [Listas de pontos](point-lists.md)
--   [Listas de linhas](line-lists.md)
--   [Faixas de linhas](line-strips.md)
--   [Listas de triângulos](triangle-lists.md)
--   [Listas de triângulos](triangle-strips.md)
+-   [Listas de ponto](point-lists.md)
+-   [Listas de linha](line-lists.md)
+-   [Faixas de linha](line-strips.md)
+-   [Listas de triângulo](triangle-lists.md)
+-   [Faixas de triângulo](triangle-strips.md)
 
 Para uma visualização de cada tipo primitivo, consulte o diagrama mais abaixo neste tópico em [Direção da rotação e posições de vértice principais](#winding-direction-and-leading-vertex-positions).
 
 O [estágio do assembler de entrada (IA)](input-assembler-stage--ia-.md) lê os dados de vértice e buffers de índice, reúne os dados nesses primitivos e, em seguida, envia os dados para os estágios de pipeline restantes.
 
-## <a name="span-idprimitiveadjacencyspanspan-idprimitiveadjacencyspanspan-idprimitiveadjacencyspanprimitive-adjacency"></a><span id="Primitive_Adjacency"></span><span id="primitive_adjacency"></span><span id="PRIMITIVE_ADJACENCY"></span>Adjacência primitiva
+## <a name="span-idprimitiveadjacencyspanspan-idprimitiveadjacencyspanspan-idprimitiveadjacencyspanprimitive-adjacency"></a><span id="Primitive_Adjacency"></span><span id="primitive_adjacency"></span><span id="PRIMITIVE_ADJACENCY"></span>Primitiva adjacência
 
 
 Todos os tipos primitivos do Direct3D (exceto a lista de ponto) estão disponíveis em duas versões: um tipo primitivo com adjacência e um tipo primitivo sem adjacência. Primitivas com adjacência contêm alguns dos vértices ao redor, enquanto primitivas sem adjacência contêm apenas os vértices da primitiva de destino. Por exemplo, a primitiva de lista de linha tem uma primitiva de lista de linha correspondente que inclui adjacências.
@@ -43,7 +43,7 @@ Primitivas adjacentes foram projetadas para fornecer mais informações sobre su
 
 Por exemplo, suponha que você deseja desenhar uma lista de triângulos com adjacência. Uma lista de triângulos que contém 36 vértices (com adjacência) produzirá 6 primitivas concluídas. Primitivas com adjacência (exceto faixas de linha) contêm exatamente o dobro dos vértices que a primitiva equivalente sem adjacência, onde cada vértice adicional é um vértice adjacente.
 
-## <a name="span-idwindingdirectionandleadingvertexpositionsspanspan-idwindingdirectionandleadingvertexpositionsspanspan-idwindingdirectionandleadingvertexpositionsspanspan-idwinding-direction-and-leading-vertex-positionsspanwinding-direction-and-leading-vertex-positions"></a><span id="Winding_Direction_and_Leading_Vertex_Positions"></span><span id="winding_direction_and_leading_vertex_positions"></span><span id="WINDING_DIRECTION_AND_LEADING_VERTEX_POSITIONS"></span><span id="winding-direction-and-leading-vertex-positions"></span>Direção da rotação e posições de vértice principais
+## <a name="span-idwindingdirectionandleadingvertexpositionsspanspan-idwindingdirectionandleadingvertexpositionsspanspan-idwindingdirectionandleadingvertexpositionsspanspan-idwinding-direction-and-leading-vertex-positionsspanwinding-direction-and-leading-vertex-positions"></a><span id="Winding_Direction_and_Leading_Vertex_Positions"></span><span id="winding_direction_and_leading_vertex_positions"></span><span id="WINDING_DIRECTION_AND_LEADING_VERTEX_POSITIONS"></span><span id="winding-direction-and-leading-vertex-positions"></span>Enrolamento direção e à esquerda de posições de vértice
 
 
 Conforme mostrado na ilustração a seguir, um vértice principal é o primeiro vértice não adjacente em uma primitiva. Um tipo primitivo poderá ter vários vértices principais definidos, desde que cada um deles seja usado para uma primitiva diferente.
@@ -78,9 +78,9 @@ Para obter mais informações sobre a geração de várias faixas, consulte [Est
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Estágio do assembler de entrada (IA)](input-assembler-stage--ia-.md)
+[Estágio do Assembler de entrada (IA)](input-assembler-stage--ia-.md)
 
-[Pipeline de elementos gráficos](graphics-pipeline.md)
+[Pipeline de gráficos](graphics-pipeline.md)
 
  
 

@@ -1,5 +1,5 @@
 ---
-Description: Use templates to modify the look of items in ListView or GridView controls.
+Description: Use modelos para modificar a aparência de itens em controles ListView ou GridView.
 title: Contêineres e modelos de itens
 label: Item containers and templates
 template: detail.hbs
@@ -13,11 +13,11 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1dcf0176e20e498f8c6744a542010b5197689b8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947818"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639931"
 ---
 # <a name="item-containers-and-templates"></a>Contêineres e modelos de itens
 
@@ -25,7 +25,7 @@ ms.locfileid: "8947818"
 
 Os controles **ListView** e **GridView** gerenciam como seus itens são organizados (horizontal, vertical, quebra automática, etc...) e como o usuário interage com os itens, mas não como os itens individuais são mostrados na tela. A visualização dos itens é gerenciada por contêineres de itens. Quando você adiciona itens a um recurso exibição de lista, eles são colocados automaticamente em um contêiner. O contêiner de itens padrão para ListView é [ListViewItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listviewitem.aspx); para GridView, é [GridViewItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridviewitem.aspx).
 
-> **APIs importantes**: [classe ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [classe GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx), [propriedade ItemTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx), [propriedade ItemContainerStyle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx)
+> **APIs importantes**: [Classe ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [classe GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx), [propriedade ItemTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx), [propriedade ItemContainerStyle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx)
 
 
 > [!NOTE]
@@ -262,7 +262,7 @@ Quando os dados são mostrados em uma grade usando este modelo de dados, eles t�
 
 Os modelos de dados são a principal maneira de definir a aparência de sua exibição de lista. Eles também poderão causar um impacto significativo no desempenho se sua lista exibir um grande número de itens. 
 
-Uma instância de cada elemento XAML em um modelo de dados é criada para cada item da exibição de lista. Por exemplo, o modelo de grade do exemplo anterior tem 10 elementos XAML (1 Grid, 1 Rectangle, 3 Borders, 5 TextBlocks). Uma GridView que mostra 20 itens na tela usando esse modelo de dados cria pelo menos 200 elementos (20 x 10 = 200). Reduzir o número de elementos em um modelo de dados pode reduzir significativamente o número total de elementos criados para a exibição de lista. Para obter mais informações, consulte [Otimização da interface do usuário em ListView e GridView: Redução de elemento por item](https://msdn.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview#element-reduction-per-item).
+Uma instância de cada elemento XAML em um modelo de dados é criada para cada item da exibição de lista. Por exemplo, o modelo de grade do exemplo anterior tem 10 elementos XAML (1 Grid, 1 Rectangle, 3 Borders, 5 TextBlocks). Uma GridView que mostra 20 itens na tela usando esse modelo de dados cria pelo menos 200 elementos (20 x 10 = 200). Reduzir o número de elementos em um modelo de dados pode reduzir significativamente o número total de elementos criados para a exibição de lista. Para obter mais informações, consulte [ListView e GridView UI otimização: Redução da contagem de elemento por item](https://msdn.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview#element-reduction-per-item).
 
  Considere esta seção do modelo de dados de grade. Vejamos algumas coisas que reduzem o número de elementos.
 
@@ -404,8 +404,8 @@ Quando **SelectionMode** é definido como **Multiple**, uma caixa de seleção �
 
 Você pode definir a propriedade [CheckMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.checkmode.aspx) para especificar se a caixa de seleção é mostrada usando o estilo de sobreposição ou o estilo embutido.
 
-- **Embutido**: esse estilo mostra a caixa de seleção à esquerda do conteúdo e as cores na tela de fundo do contêiner de itens para indicar seleção. Este é o estilo padrão para ListView.
-- **Sobreposição**: esse estilo mostra a caixa de seleção acima do conteúdo e as cores somente na borda do contêiner de itens para indicar seleção. Este é o estilo padrão para GridView.
+- **Embutido**: Esse estilo mostra a caixa de seleção à esquerda do conteúdo e o plano de fundo de contêiner do item para indicar a seleção de cores. Este é o estilo padrão para ListView.
+- **Sobrepor**: Esse estilo mostra a caixa de seleção na parte superior do conteúdo e apenas a borda do contêiner do item para indicar a seleção de cores. Este é o estilo padrão para GridView.
 
 Esta tabela mostra os elementos visuais padrão usados para indicar a seleção.
 
@@ -432,11 +432,11 @@ Nome do estado/pincel | Estilo embutido | Estilo de sobreposição
 ------------|--------------|--------------
 <b>Normal</b><ul><li><b>CheckBoxBrush="Red"</b></li></ul> | ![Seleção normal de itens embutidos](images/listview-item-normal.png) | ![Seleção normal de itens sobrepostos](images/gridview-item-normal.png)
 <b>PointerOver</b><ul><li><b>PointerOverForeground="DarkOrange"</b></li><li><b>PointerOverBackground="MistyRose"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![Ponteiro sobre seleção de itens embutidos](images/listview-item-pointerover.png) | ![Ponteiro sobre seleção de itens sobrepostos](images/gridview-item-pointerover.png)
-<b>Pressed</b><ul><li><b>PressedBackground="LightCyan"</b></li><li>PointerOverForeground="DarkOrange"</li><li>CheckBoxBrush="Red"</li></ul> | ![Seleção de itens embutidos pressionados](images/listview-item-pressed.png) | ![Seleção de itens sobrepostos pressionados](images/gridview-item-pressed.png)
+<b>Pressionado</b><ul><li><b>PressedBackground="LightCyan"</b></li><li>PointerOverForeground="DarkOrange"</li><li>CheckBoxBrush="Red"</li></ul> | ![Seleção de itens embutidos pressionados](images/listview-item-pressed.png) | ![Seleção de itens sobrepostos pressionados](images/gridview-item-pressed.png)
 <b>Selected</b><ul><li><b>SelectedForeground="Navy"</b></li><li><b>SelectedBackground="Khaki"</b></li><li><b>CheckBrush="Green"</b></li><li>CheckBoxBrush="Red" (somente embutido)</li></ul> | ![Seleção de itens embutidos selecionados](images/listview-item-selected.png) | ![Seleção de itens sobrepostos selecionados](images/gridview-item-selected.png)
 <b>PointerOverSelected</b><ul><li><b>SelectedPointerOverBackground="Lavender"</b></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki" (somente sobreposição)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red" (somente embutido)</li></ul> | ![Ponteiro sobre seleção de itens embutidos selecionados](images/listview-item-pointeroverselected.png) | ![Ponteiro sobre seleção de itens sobrepostos selecionados](images/gridview-item-pointeroverselected.png)
 <b>PressedSelected</b><ul><li><b>SelectedPressedBackground="MediumTurquoise"</b></li></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki" (somente sobreposição)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red" (somente embutido)</li></ul> | ![Seleção de itens embutidos pressionados selecionados](images/listview-item-pressedselected.png) | ![Seleção de itens sobrepostos pressionados selecionados](images/gridview-item-pressedselected.png)
-<b>Focused</b><ul><li><b>FocusBorderBrush="Crimson"</b></li><li><b>FocusSecondaryBorderBrush="Gold"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![Seleção de itens embutidos focalizados](images/listview-item-focused.png) | ![Seleção de itens sobrepostos focalizados](images/gridview-item-focused.png)
+<b>Com foco</b><ul><li><b>FocusBorderBrush="Crimson"</b></li><li><b>FocusSecondaryBorderBrush="Gold"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![Seleção de itens embutidos focalizados](images/listview-item-focused.png) | ![Seleção de itens sobrepostos focalizados](images/gridview-item-focused.png)
 
 ListViewItemPresenter tem outras propriedades de pincel para estados de espaços reservados de dados e arrastar. Se você usa o carregamento incremental ou arrastar e soltar em sua exibição de lista, considere se é necessário também modificar essas propriedades adicionais do pincel. Veja a classe ListViewItemPresenter para obter a lista completa das propriedades que você pode modificar. 
 
@@ -458,7 +458,7 @@ Para personalizar um modelo XAML expandido, você precisa fazer uma cópia dele 
     <GridView ItemContainerStyle="{StaticResource GridViewItemExpanded}"/>
     ```
 2. No painel Propriedades do Visual Studio, expanda a seção Diversos e localize a propriedade ItemContainerStyle. (Certifique-se de que ListView ou GridView esteja selecionado.)
-3. Clique no marcador de propriedade para a propriedade ItemContainerStyle. (É a caixa pequena ao lado de TextBox. Está colorida em verde para mostrar que está definida como StaticResource.) O menu de propriedades será aberto.
+3. Clique no marcador de propriedade para a propriedade ItemContainerStyle. (É a caixa pequena ao lado de TextBox. É coloreed verde para mostrar que ele é definido como um StaticResource.) O menu Propriedade é aberto.
 4. No menu de propriedades, clique em **Converter em Novo Recurso**. 
     
     ![Menu de propriedades do Visual Studio](images/listview-convert-resource-vs.png)

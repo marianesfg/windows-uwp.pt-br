@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
 ms.openlocfilehash: 0d84c6eb678bf884709e13ecefd81e64097ee738
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940218"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630201"
 ---
 # <a name="manage-targeting-profiles"></a>Gerenciar perfis de direcionamento
 
@@ -25,7 +25,7 @@ Para saber mais sobre a relação entre perfis de direcionamento e campanhas pub
 Para usar esses métodos, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](run-ad-campaigns-using-windows-store-services.md#prerequisites) da API de promoções da Microsoft Store.
-* [Obtenha um token de acesso do Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+* [Obtenha um token de acesso do Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
 ## <a name="request"></a>Solicitação
 
@@ -42,7 +42,7 @@ Esses métodos têm os seguintes URIs.
 
 | Cabeçalho        | Tipo   | Descrição         |
 |---------------|--------|---------------------|
-| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 | ID de rastreamento   | GUID   | Opcional. Uma ID que rastreia o fluxo de chamada.                                  |
 
 
@@ -142,10 +142,10 @@ O corpo da solicitação e resposta desses métodos contêm os campos a seguir. 
 | Campo        | Tipo   |  Descrição      |  Somente leitura  | Padrão  | Obrigatório para POST |  
 |--------------|--------|---------------|------|-------------|------------|
 |  id   |  número inteiro   |  A ID do perfil de direcionamento.     |   Sim    |       |   Não      |       
-|  nome   |  cadeia   |   O nome do perfil de direcionamento.    |    Não   |      |  Sim     |       
-|  targetingType   |  cadeia   |  Um dos seguintes valores: <ul><li>**Automática**: Especifique esse valor para permitir que a Microsoft Escolha o perfil de direcionamento com base nas configurações do aplicativo no Partner Center.</li><li>**Manual**: especifique esse valor para definir seu próprio direcionamento de perfil.</li></ul>     |  Não     |  Automático    |   Sim    |       
+|  name   |  cadeia de caracteres   |   O nome do perfil de direcionamento.    |    Não   |      |  Sim     |       
+|  targetingType   |  cadeia de caracteres   |  Um dos seguintes valores: <ul><li>**Auto**: Especifique esse valor para permitir que a Microsoft escolher o perfil de direcionamento com base nas configurações do aplicativo no Partner Center.</li><li>**Manual**: Especifique esse valor para definir seu próprio perfil de destino.</li></ul>     |  Não     |  Automático    |   Sim    |       
 |  idade   |  matriz   |   Um ou mais números inteiros que identificam os intervalos de idade dos usuários de destino. Para obter uma lista completa de números inteiros, consulte [Valores de idade](#age-values) neste artigo.    |    Não    |  null    |     Não    |       
-|  sexo   |  matriz   |  Um ou mais números inteiros que identificam os sexos dos usuários de destino. Para obter uma lista completa de números inteiros, consulte [Valores de sexo](#gender-values) neste artigo.       |  Não    |  null    |     Não    |       
+|  gender   |  matriz   |  Um ou mais números inteiros que identificam os sexos dos usuários de destino. Para obter uma lista completa de números inteiros, consulte [Valores de sexo](#gender-values) neste artigo.       |  Não    |  null    |     Não    |       
 |  país   |  matriz   |  Um ou mais números inteiros que identificam os códigos de país dos usuários de destino. Para obter uma lista completa de números inteiros, consulte [Códigos de país](#country-code-values) neste artigo.    |  Não    |  null   |      Não   |       
 |  osVersion   |  matriz   |   Um ou mais números inteiros que identificam as versões do sistema operacional dos usuários de destino. Para obter uma lista completa de números inteiros, consulte [Valores da versão do sistema operacional](#osversion-values) neste artigo.     |   Não    |  null   |     Não    |       
 |  deviceType   | matriz    |  Um ou mais números inteiros que identificam os tipos de dispositivo dos usuários de destino. Para obter uma lista completa de números inteiros, consulte [Valores do tipo de dispositivo](#devicetype-values) neste artigo.       |   Não    |  null    |    Não     |       
@@ -166,7 +166,7 @@ O campo *idade* no objeto [TargetingProfile](#targeting-profile) contém um ou m
 |     654     |            35 a 49             |
 |     655     |            50 e acima             |
 
-Para obter os valores aceitos pelo campo *idade* de modo programático, você pode chamar o método GET a seguir.  Na cabeçalho ```Authorization```, passe o token de acesso do Azure AD na forma de **Token de** &lt;*portador*&gt;.
+Para obter os valores aceitos pelo campo *idade* de modo programático, você pode chamar o método GET a seguir.  Para o ```Authorization``` cabeçalho, passar o token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/age
@@ -197,10 +197,10 @@ O campo *sexo* no objeto [TargetingProfile](#targeting-profile) contém um ou ma
 
 |  Valor inteiro do campo *sexo*  |  Sexo correspondente  |  
 |---------------------------------|---------------------------|
-|     700     |            Masculino             |
+|     Etapas de resolução para o seguinte evento ID 700     |            Masculino             |
 |     701     |           Feminino             |
 
-Para obter os valores aceitos pelo campo *sexo* de modo programático, você pode chamar o método GET a seguir.  Na cabeçalho ```Authorization```, passe o token de acesso do Azure AD na forma de **Token de** &lt;*portador*&gt;.
+Para obter os valores aceitos pelo campo *sexo* de modo programático, você pode chamar o método GET a seguir.  Para o ```Authorization``` cabeçalho, passar o token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/gender
@@ -240,7 +240,7 @@ O campo *osVersion* no objeto [TargetingProfile](#targeting-profile) contém um 
 |     508     |           Windows 10             |
 |     509     |           Windows 10 Mobile             |
 
-Para obter os valores aceitos pelo campo *osVersion* de modo programático, você pode chamar o método GET a seguir.  Na cabeçalho ```Authorization```, passe o token de acesso do Azure AD na forma de **Token de** &lt;*portador*&gt;.
+Para obter os valores aceitos pelo campo *osVersion* de modo programático, você pode chamar o método GET a seguir.  Para o ```Authorization``` cabeçalho, passar o token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/osversion
@@ -278,9 +278,9 @@ O campo *deviceType* no objeto [TargetingProfile](#targeting-profile) contém um
 |  Valor inteiro do campo *deviceType*  |  Tipo de dispositivo correspondente  |  Descrição  |
 |---------------------------------|---------------------------|---------------------------|
 |     710     |  Windows   |  Isso representa dispositivos que executam uma versão do Windows 10 ou Windows 8. x para computadores desktop.  |
-|     711     |  Telefone     |  Isso representa dispositivos que executam o Windows 10 Mobile, Windows Phone 8. x ou Windows Phone 7. x.
+|     711     |  Phone     |  Isso representa dispositivos que executam o Windows 10 Mobile, Windows Phone 8. x ou Windows Phone 7. x.
 
-Para obter os valores aceitos pelo campo *deviceType* de modo programático, você pode chamar o método GET a seguir.  Na cabeçalho ```Authorization```, passe o token de acesso do Azure AD na forma de **Token de** &lt;*portador*&gt;.
+Para obter os valores aceitos pelo campo *deviceType* de modo programático, você pode chamar o método GET a seguir.  Para o ```Authorization``` cabeçalho, passar o token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/devicetype
@@ -312,7 +312,7 @@ O campo *supplyType* no objeto [TargetingProfile](#targeting-profile) contém um
 |     11470     |  Aplicativo        |  Isso se refere aos anúncios que aparecem somente em apps.  |
 |     11471     |  Universal        |  Isso se refere a anúncios que aparecem em apps, na Web e em outras superfícies de exibição.  |
 
-Para obter os valores aceitos pelo campo *supplyType* de modo programático, você pode chamar o método GET a seguir.  Na cabeçalho ```Authorization```, passe o token de acesso do Azure AD na forma de **Token de** &lt;*portador*&gt;.
+Para obter os valores aceitos pelo campo *supplyType* de modo programático, você pode chamar o método GET a seguir.  Para o ```Authorization``` cabeçalho, passar o token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/supplytype
@@ -360,7 +360,7 @@ O campo *país* no objeto [TargetingProfile](#targeting-profile) contém um ou m
 |     18      |            MX                  |
 |     19      |            NL                  |
 |     20      |            NZ                  |
-|     21      |            NO                  |
+|     21      |            NÃO                  |
 |     22      |            PL                  |
 |     23      |            PT                  |
 |     24      |            SG                  |
@@ -398,8 +398,8 @@ O campo *país* no objeto [TargetingProfile](#targeting-profile) contém um ou m
 |     56      |            BG                  |
 |     57      |            LT                  |
 |     58      |            RS                  |
-|     59      |            HR                  |
-|     60      |            HR                  |
+|     59      |            RH                  |
+|     60      |            RH                  |
 |     61      |            LV                  |
 |     62      |            EE                  |
 |     63      |            IS                  |
@@ -447,7 +447,7 @@ O campo *país* no objeto [TargetingProfile](#targeting-profile) contém um ou m
 |     145      |            ME                  |
 |     146      |            MA                  |
 |     147      |            MZ                  |
-|     148      |            NA                  |
+|     148      |            N/D                  |
 |     150      |            NP                  |
 |     151      |            NI                  |
 |     153      |            NG                  |
@@ -470,7 +470,7 @@ O campo *país* no objeto [TargetingProfile](#targeting-profile) contém um ou m
 |     225      |            RE                  |
 |     246      |            PR                  |
 
-Para obter os valores aceitos pelo campo *país* de modo programático, você pode chamar o método GET a seguir.  Na cabeçalho ```Authorization```, passe o token de acesso do Azure AD na forma de **Token de** &lt;*portador*&gt;.
+Para obter os valores aceitos pelo campo *país* de modo programático, você pode chamar o método GET a seguir.  Para o ```Authorization``` cabeçalho, passar o token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/country
@@ -619,8 +619,8 @@ O exemplo de código a seguir mostra o corpo de resposta desse método.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Veicular campanhas publicitárias usando os serviços da Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
+* [Executar campanhas publicitárias usando serviços da Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
 * [Gerenciar campanhas publicitárias](manage-ad-campaigns.md)
-* [Gerenciar linhas de entrega de campanhas publicitárias](manage-delivery-lines-for-ad-campaigns.md)
-* [Gerenciar criativos de campanhas publicitárias](manage-creatives-for-ad-campaigns.md)
-* [Obter dados de desempenho da campanha publicitária](get-ad-campaign-performance-data.md)
+* [Gerenciar linhas de entrega para campanhas publicitárias](manage-delivery-lines-for-ad-campaigns.md)
+* [Gerenciar criativos para campanhas publicitárias](manage-creatives-for-ad-campaigns.md)
+* [Obter dados de desempenho de campanha de anúncio](get-ad-campaign-performance-data.md)

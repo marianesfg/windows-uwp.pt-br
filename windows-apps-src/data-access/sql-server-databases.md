@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, SQL Server, banco de dados
 ms.localizationpriority: medium
 ms.openlocfilehash: 4fe215a593293ff91afb7f71a830512ac365093f
-ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "8976923"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621151"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Usar um banco de dados do SQL Server em um aplicativo UWP
 Seu aplicativo pode se conectar diretamente a um banco de dados do SQL Server e, em seguida, armazenar e recuperar dados usando classes no namespace [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx).
@@ -29,7 +29,7 @@ Para conectar seu aplicativo diretamente a um banco de dados do SQL Server, cert
 
 Abra o arquivo **Package.appxmanifest** do seu projeto UWP no designer do manifesto.
 
-Na guia **funcionalidades** , selecione a caixa de seleção de **Autenticação empresarial** se você estiver usando autenticação do Windows para autenticar o SQL Server.
+No **capacidades** guia, selecione o **autenticação corporativa** caixa de seleção se você estiver usando autenticação do Windows para autenticar seu SQL Server.
 
 ![Funcionalidade de Autenticação de Empresa](images/enterprise-authentication.png)
 
@@ -39,15 +39,15 @@ Na guia **funcionalidades** , selecione a caixa de seleção de **Autenticação
 
 Nesta seção, nós faremos o seguinte:
 
-:one: Adicionar uma sequência de conexão.
+: um: Adicione uma cadeia de caracteres de conexão.
 
-:two: Criar uma classe para armazenar dados do produto.
+: dois: Crie uma classe para manter os dados do produto.
 
-:three: Recuperar produtos do banco de dados do SQL Server.
+: três: Recupere produtos do banco de dados do SQL Server.
 
-:four: Adicionar uma interface do usuário básica.
+: quatro: Adicione uma interface do usuário básica.
 
-:five: Preencher a interface do usuário com produtos.
+:five: Preencha a interface do usuário com os produtos.
 
 >[!NOTE]
 > Esta seção ilustra uma maneira de organizar seu código de acesso de dados. Ele deve apenas fornecer um exemplo de como você pode usar o [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) para armazenar e recuperar dados de um banco de dados do SQL Server. Você pode organizar seu código de qualquer maneira que faça mais sentido para o design do seu aplicativo.
@@ -236,14 +236,14 @@ Em seguida, certifique-se de que o serviço do SQL Server Browser está em execu
 
 ## <a name="next-steps"></a>Próximas etapas
 
-**Use um banco de dados leve para armazenar dados no dispositivo de usuários**
+**Usar um banco de dados leve para armazenar dados no dispositivo do usuário**
 
 Consulte [Usar um banco de dados do SQLite em um aplicativo UWP](sqlite-databases.md).
 
-**Compartilhar código entre aplicativos diferentes em diferentes plataformas**
+**Compartilhar código entre aplicativos diferentes em plataformas diferentes**
 
 Consulte [Compartilhar código entre o desktop e o UWP](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate).
 
-**Adicionar páginas de detalhes mestre com back-ends Azure SQL**
+**Adicionar páginas de detalhes mestre com o back-ends de SQL do Azure**
 
 Consulte [Exemplo de banco de dados de pedidos do cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database).

@@ -1,16 +1,16 @@
 ---
 title: Configuração do scanner de código de barras da câmera
 description: Habilitação ou desabilitação do scanner de código de barras da câmera
-ms.date: 05/1/2018
+ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b802dfa44f36768dc2446ee1d15bf9ca6d4f9f3
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 3db54caa5be88559aa44f9a99273e9d8d5d6a00d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051039"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610301"
 ---
 # <a name="enable-or-disable-the-software-decoder-that-ships-with-windows"></a>Habilitar ou desabilitar o decodificador de software que vem com o Windows
 No Windows 10, versão 1803, o decodificador de software está instalado e habilitado por padrão.  Você pode desabilitar o decodificador de software que vem com o Windows se não quiser usar o scanner de código de barras da câmera ou se tiver adquirido um decodificador de terceiros que funciona com as APIs Windows.Devices.PointOfService.BarcodeScanner APIs e não quiser usar os dois.
@@ -20,7 +20,7 @@ O decodificador de software que vem com o Windows pode ser habilitado ou desabil
 
 | Nome do valor  | Tipo de valor | Valor | Status |
 | ----------- | --------- | -------|--------|
-| Enable      | DWORD     | 1 (padrão)<br/>0 |  Habilita o decodificador de software que vem com o Windows <br/> Desabilita o decodificador de software que vem com o Windows |
+| Habilitar      | DWORD     | 1 (padrão)<br/>0 |  Habilita o decodificador de software que vem com o Windows <br/> Desabilita o decodificador de software que vem com o Windows |
 
 
 Veja um exemplo de arquivo de registro que você pode usar para **desabilitar** o decodificador de software que vem com o Windows:

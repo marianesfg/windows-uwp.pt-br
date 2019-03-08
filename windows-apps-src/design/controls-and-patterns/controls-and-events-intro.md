@@ -1,5 +1,5 @@
 ---
-Description: You create the UI for your app by using controls such as buttons, text boxes, and combo boxes to display data and get user input. Here, we show you how to add controls to your app.
+Description: Crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário. Mostramos aqui como adicionar controles ao seu aplicativo.
 title: Introdução a controles e padrões
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and patterns
@@ -9,19 +9,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ff3f89887235fc9c8d9d7afbbdea3d79bace810
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923080"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630791"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introdução a controles e padrões
 
 No desenvolvimento de aplicativos UWP, um *controle* é um elemento de interface do usuário que exibe conteúdo ou permite interação. Crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário.
 
-> **APIs importantes**: [namespace Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+> **APIs importantes**: [Windows.UI.Xaml.Controls namespace](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 
-Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o padrão de [mestre/detalhes](master-details.md) é uma maneira que você pode usar um controle [SplitView](split-view.md) para navegação do aplicativo. Da mesma forma, você pode personalizar o modelo de um controle [NavigationView](navigationview.md) para implementar o padrão de guia.
+Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o [mestre/detalhes](master-details.md) padrão é uma maneira que você pode usar um [SplitView](split-view.md) controle de navegação do aplicativo. Da mesma forma, você pode personalizar o modelo de um [NavigationView](navigationview.md) controle para implementar o padrão de guia.
 
 Em muitos casos, você pode usar um controle da forma como ele se apresenta. No entanto, os controles XAML separam a função da estrutura e aparência para que você possa fazer vários níveis de modificação para torná-los adequados às suas necessidades. Na seção [Estilo](../style/index.md), você pode aprender a usar [estilos XAML](xaml-styles.md) e [modelos de controle](control-templates.md) para modificar um controle.
 
@@ -105,7 +105,7 @@ Button1.Foreground = new SolidColorBrush(Windows.UI.Colors.Beige);
 
 ## <a name="create-an-event-handler"></a>Criar um manipulador de eventos 
 
-Todos os controles possuem eventos que permitem que você responda a ações de seu usuário ou a outras mudanças em seu aplicativo. Por exemplo, um controle de Botão fornece um evento Clicar que é gerado quando um usuário clica no Botão. Crie um método, chamado manipulador de eventos, para manipular o evento. Você pode associar o evento de um controle a um método de manipulador de eventos na janela Propriedades, em XAML ou em código. Para saber mais sobre eventos, veja [Visão geral de eventos e eventos roteados](../../xaml-platform/events-and-routed-events-overview.md).
+Todos os controles possuem eventos que permitem que você responda a ações de seu usuário ou a outras mudanças em seu aplicativo. Por exemplo, um controle de Botão fornece um evento Clicar que é gerado quando um usuário clica no Botão. Crie um método, chamado manipulador de eventos, para manipular o evento. Você pode associar o evento de um controle a um método de manipulador de eventos na janela Propriedades, em XAML ou em código. Para saber mais sobre eventos, consulte [Visão geral de eventos e eventos roteados](../../xaml-platform/events-and-routed-events-overview.md).
 
 Para criar um manipulador de eventos, selecione o controle e clique na guia Eventos, na parte superior da janela Propriedades. A janela Propriedades lista todos os eventos disponíveis para esse controle. Veja alguns dos eventos para um Botão.
 
@@ -144,7 +144,7 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 ## <a name="related-topics"></a>Tópicos relacionados
 
 -   [Índice de controles por função](controls-by-function.md)
--   [Namespace Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+-   [Windows.UI.Xaml.Controls namespace](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 -   [Layout](../layout/index.md)
 -   [Estilo](../style/index.md)
 -   [Usabilidade](../usability/index.md)

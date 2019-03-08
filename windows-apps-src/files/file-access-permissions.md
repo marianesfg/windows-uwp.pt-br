@@ -12,24 +12,24 @@ dev_langs:
 - cpp
 - javascript
 ms.openlocfilehash: 4845b20ed74642f6fb34ea40dd774c91ae378e7b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050276"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630401"
 ---
 # <a name="file-access-permissions"></a>Permissões de acesso a arquivo
 
-Aplicativos universais do Windows Platform (UWP) podem acessar determinados locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades.
+Aplicativos universais do Windows Platform (UWP) podem acessar certos locais de sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades.
 
 ## <a name="the-locations-that-all-apps-can-access"></a>Os locais que todos os aplicativos podem acessar
 
 Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais do sistema de arquivos:
 
 ### <a name="application-install-directory"></a>Diretório de instalação do aplicativo
-A pasta onde seu aplicativo está instalado no sistema do usuário.
+A pasta onde o seu aplicativo está instalado no sistema do usuário.
 
-Há duas maneiras principais de acessar arquivos e pastas em seu aplicativo diretório de instalação:
+Há duas maneiras principais de acessar arquivos e pastas em seu aplicativo de um diretório de instalação:
 
 1. Você pode recuperar um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente o diretório de instalação do aplicativo, assim:
 
@@ -92,12 +92,12 @@ Há duas maneiras principais de acessar arquivos e pastas em seu aplicativo dire
 
 Além disso, diferentemente de outros locais, você também pode acessar os arquivos no diretório de instalação de seu aplicativo usando [Win32 e COM para aplicativos UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/windows/apps/br205757) e algumas [funções da Biblioteca Padrão do C/C++ do Microsoft Visual Studio](https://msdn.microsoft.com/library/hh875057.aspx).
 
-O diretório de instalação do aplicativo é um local somente leitura. Você não pode obter acesso ao diretório de instalação por meio do seletor de arquivos.
+O diretório de instalação do aplicativo é um local somente leitura. Você não pode acessar o diretório de instalação por meio do seletor de arquivo.
 
 ### <a name="application-data-locations"></a>Locais de dados de aplicativo
 As pastas em que seu aplicativo pode armazenar dados. Essas pastas (local, móvel e temporária) são criadas quando o aplicativo é instalado.
 
-Há duas maneiras principais de acessar arquivos e pastas do seu aplicativo locais de dados:
+Há duas maneiras principais de acessar arquivos e pastas de locais de dados do seu aplicativo:
 
 1.  Use as propriedades [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) para recuperar uma pasta de dados do aplicativo.
 
@@ -127,7 +127,7 @@ Há duas maneiras principais de acessar arquivos e pastas do seu aplicativo loca
     
     Depois que você recuperar um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente um local de dados do aplicativo, você pode acessar arquivos e pastas nesse local usando os métodos **StorageFolder**. No exemplo, esses objetos **StorageFolder** são armazenados na variável `localFolder`. Você pode saber mais sobre como usar locais de dados de app nas diretrizes da página [Classe ApplicationData](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata) e ao baixar a [Exemplo de dados de app](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData) do GitHub.
 
-2. Você pode recuperar um arquivo diretamente da pasta local do seu aplicativo usando um URI de aplicativo, desta forma:
+2. Você pode recuperar um arquivo diretamente na pasta local do seu aplicativo usando um aplicativo URI, como este:
     
     ```csharp
     using Windows.Storage;
@@ -164,7 +164,7 @@ Há duas maneiras principais de acessar arquivos e pastas do seu aplicativo loca
 
 Além disso, diferentemente de outros locais, você também pode acessar os arquivos nos locais de dados de seu aplicativo usando [Win32 e COM para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/br205757) e algumas funções da Biblioteca Padrão C/C++ do Visual Studio.
 
-Você não pode acessar as pastas locais, roaming ou temporárias o seletor de arquivos.
+Você não pode acessar as pastas temporárias, móveis ou locais por meio do seletor de arquivo.
 
 ### <a name="removable-devices"></a>Dispositivos removíveis
 Além disso, o aplicativo pode acessar alguns dos arquivos em dispositivos conectados por padrão. Esta é uma opção se o seu aplicativo usa a [extensão de Dispositivo AutoPlay](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay) para ser iniciada automaticamente quando os usuários conectam um dispositivo, como uma câmera ou pen drive USB, ao seu sistema. Os arquivos que seu aplicativo podem acessar são limitados a determinados tipos de arquivos que são especificados através de declarações Associação de Tipo de Arquivos no manifesto do aplicativo.
@@ -174,8 +174,8 @@ Além disso, o aplicativo pode acessar alguns dos arquivos em dispositivos conec
 > [!NOTE]
 > Para saber mais sobre como acessar um cartão SD ou outros dispositivos removíveis, veja [Acessar o cartão SD](access-the-sd-card.md).
 
-## <a name="locations-that-uwp-apps-can-access"></a>Locais que podem acessar aplicativos UWP
-### <a name="users-downloads-folder"></a>Pasta Downloads do usuário
+## <a name="locations-that-uwp-apps-can-access"></a>Locais que podem acessar a aplicativos UWP
+### <a name="users-downloads-folder"></a>Pasta de Downloads do usuário
 
 A pasta em que os arquivos baixados são salvos por padrão.
 
@@ -212,7 +212,7 @@ Por padrão, o aplicativo só pode acessar arquivos e pastas na pasta de Downloa
     });
     ```
 
-    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) é sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver um arquivo existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo que foi criado. Esse arquivo é chamado `newFile` no exemplo.
+    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[ **CreateFileAsync** ](https://msdn.microsoft.com/library/windows/apps/hh996761) está sobrecarregado para que você possa especificar o sistema deve fazer se já houver um arquivo existente na pasta de Downloads que tem o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo que foi criado. Esse arquivo é chamado `newFile` no exemplo.
 
 - Você pode criar uma subpasta na pasta Downloads do usuário desta forma:
 
@@ -245,7 +245,7 @@ Por padrão, o aplicativo só pode acessar arquivos e pastas na pasta de Downloa
     });
     ```
 
-    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver uma subpasta existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representa a subpasta que foi criada. Esse arquivo é chamado `newFolder` no exemplo.
+    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[ **CreateFolderAsync** ](https://msdn.microsoft.com/library/windows/apps/hh996763) está sobrecarregado para que você possa especificar o sistema deve fazer se já houver uma subpasta existente na pasta de Downloads que tem o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representa a subpasta que foi criada. Esse arquivo é chamado `newFolder` no exemplo.
 
 Se você criar um arquivo ou uma pasta na pasta Downloads, recomendamos adicionar esse item ao [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) do seu aplicativo, para que ele possa acessar prontamente esse item no futuro.
 
@@ -257,17 +257,17 @@ Os aplicativos que declaram a extensão [AppExecutionAlias](https://docs.microso
 
 A tabela a seguir lista locais adicionais que você pode acessar declarando os recursos e usando a API [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) associada:
 
-| Localização | Funcionalidade | API Windows.Storage |
+| Location | Capacidade | API Windows.Storage |
 |----------|------------|---------------------|
-| Todos os arquivos aos quais o usuário tem acesso. Por exemplo: documentos, imagens, fotos, downloads, área de trabalho, OneDrive etc. | broadFileSystemAccess<br><br>Esta é uma funcionalidade restrita. O acesso é configurável em **configurações** > **privacidade** > **sistema de arquivos**. Como os usuários podem conceder ou negar a permissão a qualquer momento nas **configurações**, você deve garantir que seu aplicativo é resistente a essas alterações. Se você achar que seu aplicativo não tem acesso, você pode optar por solicitar que o usuário altere a configuração, fornecendo um link para o artigo de [privacidade e acesso ao sistema de arquivos Windows 10](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) . Observe que o usuário deve fechar o aplicativo, alterne a configuração e reinicie o aplicativo. Se eles alterne a configuração enquanto o aplicativo é executado, a plataforma suspenderá o aplicativo para que você pode salvar o estado e forçadamente encerrar o aplicativo para aplicar a nova configuração. Na atualização de abril de 2018, o padrão para a permissão é ativado. Na atualização de outubro de 2018, o padrão é desativado.<br /><br />Se você enviar para a Store um app que declare essa funcionalidade, precisará fornecer descrições adicionais do motivo pelo qual seu app precisa dessa funcionalidade, e como ele pretende usá-la.<br>Esse recurso funciona para APIs no namespace [**Windows. Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) . Consulte a seção de **exemplo** no final deste artigo para obter um exemplo de como ativar esse recurso em seu aplicativo. | n/d |
-| Documentos | DocumentsLibrary <br><br>Observação: você deve adicionar Associações de tipo de arquivo ao manifesto do aplicativo que declarem tipos específicos de arquivos que seu aplicativo pode acessar neste local. <br><br>Use esse recurso se o seu aplicativo:<br>- Possibilitar acesso offline entre plataformas ao conteúdo específico do OneDrive usando URLs válidas do OneDrive ou IDs de Recursos corretas<br>-Salvar abre arquivos no OneDrive do usuário automaticamente enquanto offline | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
+| Todos os arquivos aos quais o usuário tem acesso. Por exemplo: documentos, imagens, fotos, downloads, área de trabalho, OneDrive etc. | broadFileSystemAccess<br><br>Esta é uma funcionalidade restrita. O acesso é configurável no **as configurações** > **privacidade** > **sistema de arquivos**. Porque os usuários podem conceder ou negar a permissão a qualquer momento no **configurações**, você deve garantir que seu aplicativo seja resiliente a essas alterações. Se você achar que seu aplicativo não tem acesso, você pode optar por solicitar que o usuário alterar a configuração, fornecendo um link para o [acesso de sistema de arquivos do Windows 10 e privacidade](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) artigo. Observe que o usuário deve fechar o aplicativo, alternar a configuração e reiniciar o aplicativo. Se eles alternar a configuração enquanto o aplicativo está em execução, a plataforma de suspender o seu aplicativo para que você pode salvar o estado e forçar o encerramento do aplicativo para aplicar a nova configuração. Na atualização de abril de 2018, o padrão para a permissão é On. Na atualização de outubro de 2018, o padrão é Off.<br /><br />Se você enviar para a Store um app que declare essa funcionalidade, precisará fornecer descrições adicionais do motivo pelo qual seu app precisa dessa funcionalidade, e como ele pretende usá-la.<br>Esse recurso funciona para APIs na [ **Storage** ](https://msdn.microsoft.com/library/windows/apps/BR227346) namespace. Consulte a **exemplo** seção no final deste artigo para obter um exemplo de como habilitar esse recurso em seu aplicativo. | n/d |
+| Documentos | DocumentsLibrary <br><br>Observação: Você deve adicionar associações de tipo de arquivo ao manifesto do aplicativo que declaram os tipos de arquivos específicos que seu aplicativo pode acessar nesse local. <br><br>Use esse recurso se o seu aplicativo:<br>- Possibilitar acesso offline entre plataformas ao conteúdo específico do OneDrive usando URLs válidas do OneDrive ou IDs de Recursos corretas<br>-Salva arquivos abertos para o OneDrive do usuário automaticamente enquanto offline | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | Música     | MusicLibrary <br>Consulte também [Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | Imagens  | PicturesLibrary<br> Consulte também [Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  
 | Vídeos    | VideosLibrary<br>Consulte também [Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.VideosLibrary](https://msdn.microsoft.com/library/windows/apps/br227159) |   
 | Dispositivos removíveis  | RemovableDevices <br><br>Observação  Você deve adicionar Associações de tipo de arquivo ao manifesto do aplicativo que declarem tipos específicos de arquivos que seu aplicativo pode acessar neste local. <br><br>Consulte também [Acessar o cartão SD](access-the-sd-card.md). | [KnownFolders.RemovableDevices](https://msdn.microsoft.com/library/windows/apps/br227158) |  
 | Bibliotecas de grupo doméstico  | Pelo menos um dos seguintes recursos é necessário. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.HomeGroup](https://msdn.microsoft.com/library/windows/apps/br227153) |      
 | Dispositivos do servidor de mídia (DLNA) | Pelo menos um dos seguintes recursos é necessário. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.MediaServerDevices](https://msdn.microsoft.com/library/windows/apps/br227154) |
-| Pastas UNC (Convenção de Nomenclatura Universal) | Uma combinação dos seguintes recursos é necessária. <br><br>O recurso de redes de trabalho e domésticas: <br>- PrivateNetworkClientServer <br><br>E pelo menos um recurso de internet e de redes públicas: <br>- InternetClient <br>- InternetClientServer <br><br>E, se aplicável, o recurso de credenciais de domínio:<br>- EnterpriseAuthentication <br><br>Observação: você deve adicionar Associações de tipo de arquivo ao manifesto do aplicativo que declarem tipos específicos de arquivos que seu aplicativo pode acessar neste local. | Recupere uma pasta usando: <br>[StorageFolder.GetFolderFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227278) <br><br>Recupere um arquivo usando: <br>[StorageFile.GetFileFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227206) |
+| Pastas UNC (Convenção de Nomenclatura Universal) | Uma combinação dos seguintes recursos é necessária. <br><br>O recurso de redes de trabalho e domésticas: <br>- PrivateNetworkClientServer <br><br>E pelo menos um recurso de internet e de redes públicas: <br>- InternetClient <br>- InternetClientServer <br><br>E, se aplicável, o recurso de credenciais de domínio:<br>- EnterpriseAuthentication <br><br>Observação: Você deve adicionar associações de tipo de arquivo ao manifesto do aplicativo que declaram os tipos de arquivos específicos que seu aplicativo pode acessar nesse local. | Recupere uma pasta usando: <br>[StorageFolder.GetFolderFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227278) <br><br>Recupere um arquivo usando: <br>[StorageFile.GetFileFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227206) |
 
 **Exemplo**
 

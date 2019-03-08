@@ -1,5 +1,5 @@
 ---
-Description: This article describes best practices for creating and displaying app settings.
+Description: Este artigo descreve as práticas recomendadas para criar e exibir configurações do aplicativo.
 title: Diretrizes para configurações de aplicativos
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a31464d208e8d9abe68703560552c99e5d957463
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049131"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57638231"
 ---
 # <a name="guidelines-for-app-settings"></a>Diretrizes para configurações de aplicativos
 
@@ -53,7 +53,7 @@ Para um layout de painel de navegação, as configurações do aplicativo devem 
 
 ![ponto de entrada de configurações do aplicativo para o painel de navegação](images/appsettings-entrypoint-navpane.png)
 
-**Barra de aplicativos**
+**Barra de aplicativo**
 
 Se você estiver usando uma [barra de aplicativos](../controls-and-patterns/app-bars.md) ou barra de ferramentas, coloque o ponto de entrada de configurações como o último item no menu de excedentes "Mais". Se for importante para o aplicativo ter maior capacidade de descoberta do ponto de entrada de configurações, coloque-o diretamente na barra de aplicativos, e não na área de excedentes.
 
@@ -63,11 +63,11 @@ Se você estiver usando uma [barra de aplicativos](../controls-and-patterns/app-
 
 Se você estiver usando um layout de Hub, o ponto de entrada de configurações do aplicativo deve ser colocado no menu de excedentes "Mais" de uma barra de aplicativos.
 
-**Guias/pivôs**
+**Guias/tabelas dinâmicas**
 
 Para um layout de guias ou pivôs, não recomendamos colocar o ponto de entrada das configurações do aplicativo como um dos primeiros itens da navegação. Em vez disso, o ponto de entrada das configurações do aplicativo deve ser colocado no menu de excedentes "Mais" de uma barra de aplicativos.
 
-**Mestre/detalhes**
+**Mestre-detalhes**
 
 Em vez de esconder totalmente o ponto de entrada das configurações do aplicativo em um painel de detalhes mestres, faça com que ele seja o último item fixado no nível superior do painel mestre.
 
@@ -109,13 +109,13 @@ Detailed redlines showing preferred text strings for the "Choose a mode" section
 
 No subcabeçalho "Legal", coloque quaisquer "Termos de uso" e "Política de privacidade" (deve ser [botões de hiperlink](../controls-and-patterns/hyperlinks.md) com disposição do texto), bem como informações legais adicionais, como direitos autorais.
 
-![seção "sobre este aplicativo" com o botão "fornecer feedback"](images/appsettings-about.png)
+![seção "sobre este aplicativo" com o botão "fornecer comentários"](images/appsettings-about.png)
 
 
 ## <a name="recommended-page-content"></a>Conteúdo recomendado da página
 
 
-Assim que você tiver uma lista dos itens que deseja incluir na página de configurações do aplicativo, considere estas diretrizes:
+Assim que você tiver uma lista de itens que deseja incluir na página de configurações do aplicativo, considere estas diretrizes:
 
 -   Agrupe configurações semelhantes ou relacionadas em um rótulo de configurações.
 -   Tente manter o número total de configurações em um máximo de quatro ou cinco.
@@ -129,11 +129,11 @@ Assim que você tiver uma lista dos itens que deseja incluir na página de confi
 -   Apresente o conteúdo de cima para baixo em uma única coluna, com rolagem, se necessário. Limite a rolagem para no máximo de duas vezes a altura da tela.
 -   Use os seguintes controles para configurações do aplicativo:
 
-    -   [Switches de alternância](../controls-and-patterns/toggles.md): para permitir que os usuários definam valores como "ativado" ou "desativado".
-    -   [Botões de opção](../controls-and-patterns/radio-button.md): para permitir que os usuários escolham um item de um conjunto de até cinco opções relacionadas exclusivas.
-    -   [Caixa de entrada de texto](../controls-and-patterns/text-block.md): para permitir que os usuários insiram texto. Use o tipo da caixa de entrada de texto que corresponde ao tipo de texto que você está obtendo do usuário, como um email ou senha.
-    -   [Hiperlinks](../controls-and-patterns/hyperlinks.md): para conduzir o usuário para outra página dentro do aplicativo ou para um site externo. Quando um usuário clicar em um hiperlink, o submenu Configurações será ignorado.
-    -   [Botões](../controls-and-patterns/buttons.md): para permitir que os usuários iniciem uma ação imediata sem ignorar o submenu Configurações atual.
+    -   [Comutadores de alternância](../controls-and-patterns/toggles.md): Para permitir aos usuários define valores ativada ou desativada.
+    -   [Botões de opção](../controls-and-patterns/radio-button.md): Para permitir aos usuários escolher um item de um conjunto de até 5 mutuamente exclusivos, relacionados opções.
+    -   [Caixa de entrada de texto](../controls-and-patterns/text-block.md): Para permitir aos usuários inserir texto. Use o tipo da caixa de entrada de texto que corresponde ao tipo de texto que você está obtendo do usuário, como um email ou senha.
+    -   [Hiperlinks](../controls-and-patterns/hyperlinks.md): Para levar o usuário para outra página dentro do aplicativo ou para um site externo. Quando um usuário clicar em um hiperlink, o submenu Configurações será ignorado.
+    -   [Botões](../controls-and-patterns/buttons.md): Para permitir que usuários iniciem uma ação imediata sem fechar o submenu de configurações atual.
 -   Adicione uma mensagem descritiva se um dos controles estiver desativado. Coloque esta mensagem acima do controle desativado.
 -   Anime o conteúdo e os controles como um bloco único depois que o submenu Configurações e o cabeçalho forem animados. Anime o conteúdo usando a animação [**enterPage**](https://msdn.microsoft.com/library/windows/apps/br212672) ou [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288) com um deslocamento à esquerda de 100px.
 -   Use cabeçalhos de seção, parágrafos e rótulos para ajudar a organizar e esclarecer conteúdo, se necessário.
@@ -145,7 +145,7 @@ Assim que você tiver uma lista dos itens que deseja incluir na página de confi
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Noções básicas de design de comandos](https://msdn.microsoft.com/library/windows/apps/dn958433)
-* [Diretrizes de controles de progresso](https://msdn.microsoft.com/library/windows/apps/hh465469)
-* [Armazenar e recuperar dados de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt299098)
+* [Noções básicas sobre o design de comando](https://msdn.microsoft.com/library/windows/apps/dn958433)
+* [Diretrizes para controles de andamento](https://msdn.microsoft.com/library/windows/apps/hh465469)
+* [Store e recuperar dados de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt299098)
 * [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)

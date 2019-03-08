@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d33a2bf1505618dca4e0e54c2bd9a534f58bcfc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938407"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628201"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>Reproduzir áudio e vídeo com o MediaPlayer
 
@@ -23,7 +23,7 @@ Este artigo fornecerá orientações sobre os recursos do **MediaPlayer** que se
 > As edições do Windows 10 N e Windows 10 KN não incluem os recursos de mídia necessários para usar o **MediaPlayer** para reprodução. Esses recursos podem ser instalados manualmente. Para obter mais informações, consulte [Pacote de recursos de mídia para Windows 10 N e Windows 10 KN](https://support.microsoft.com/en-us/help/3010081/media-feature-pack-for-windows-10-n-and-windows-10-kn-editions).
 
 ## <a name="play-a-media-file-with-mediaplayer"></a>Reproduzir um arquivo de mídia com o MediaPlayer  
-A reprodução básica de mídia com o **MediaPlayer** é bastante simples de implementar. Primeiro, crie uma nova instância da classe **MediaPlayer**. Seu aplicativo pode ter várias instâncias ativas do **MediaPlayer** simultaneamente. Em seguida, defina a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) do player como um objeto que implemente a [ **IMediaPlaybackSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.IMediaPlaybackSource), como uma [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), um [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) ou um [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList). Neste exemplo, um **MediaSource** é criado a partir de um arquivo contido no armazenamento local do aplicativo e, em seguida, um **MediaPlaybackItem** é criado a partir da origem e é atribuído à propriedade **Source** do player.
+A reprodução básica de mídia com o **MediaPlayer** é bastante simples de implementar. Primeiro, crie uma nova instância da classe **MediaPlayer**. Seu aplicativo pode ter várias instâncias ativas do **MediaPlayer** simultaneamente. Em seguida, defina a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) do player como um objeto que implemente a [**IMediaPlaybackSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.IMediaPlaybackSource), como uma [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), um [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) ou um [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList). Neste exemplo, um **MediaSource** é criado a partir de um arquivo contido no armazenamento local do aplicativo e, em seguida, um **MediaPlaybackItem** é criado a partir da origem e é atribuído à propriedade **Source** do player.
 
 Diferentemente do **MediaElement**, o **MediaPlayer** não inicia a reprodução automaticamente por padrão. Para iniciar a reprodução, você pode chamar [**Play**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play), definir a propriedade [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AutoPlay) como true ou aguardar que o usuário inicie a reprodução com os controles de mídia integrados.
 
@@ -58,7 +58,7 @@ Defina a propriedade [**AudioCategory**](https://msdn.microsoft.com/library/wind
 [!code-cs[SetAudioCategory](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioCategory)]
 
 ### <a name="output-to-a-specific-audio-endpoint"></a>Saída para um ponto de extremidade de áudio específico
-Por padrão, a saída de áudio de um **MediaPlayer** é roteada para o ponto de extremidade de áudio padrão do sistema, mas você pode especificar um ponto de extremidade de áudio específico que o **MediaPlayer** deverá usar para a saída. No exemplo a seguir, [**MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.MediaDevice.GetAudioRenderSelector) retorna uma cadeia de caracteres que identifica, de forma exclusiva, a categoria de renderização de áudio dos dispositivos. Em seguida, o método [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation) [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation.FindAllAsync) é chamado para obter uma lista de todos os dispositivos disponíveis do tipo selecionado. Você pode determinar programaticamente qual dispositivo deseja usar ou adicionar os dispositivos retornados a uma [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ComboBox) para permitir que o usuário selecione um dispositivo.
+Por padrão, a saída de áudio de um **MediaPlayer** é roteada para o ponto de extremidade de áudio padrão do sistema, mas você pode especificar um ponto de extremidade de áudio específico que o **MediaPlayer** deverá usar para a saída. No exemplo a seguir, [**MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.MediaDevice.GetAudioRenderSelector) retorna uma cadeia de caracteres que identifica, de forma exclusiva, a categoria de renderização de áudio dos dispositivos. Em seguida, o método [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation)[**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation.FindAllAsync) é chamado para obter uma lista de todos os dispositivos disponíveis do tipo selecionado. Você pode determinar programaticamente qual dispositivo deseja usar ou adicionar os dispositivos retornados a uma [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ComboBox) para permitir que o usuário selecione um dispositivo.
 
 [!code-cs[SetAudioEndpointEnumerate](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioEndpointEnumerate)]
 
@@ -67,7 +67,7 @@ No evento [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps
 [!code-cs[SetAudioEndpontSelectionChanged](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioEndpontSelectionChanged)]
 
 ### <a name="playback-session"></a>Sessão de reprodução
-Conforme descrito anteriormente neste artigo, muitas das funções que são expostas pela classe **MediaElement** foram transferidas para a classe [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession). Isso inclui informações sobre o estado de reprodução do player, como a posição de reprodução atual, se o player está pausado ou em reprodução e a velocidade de reprodução atual. O **MediaPlaybackSession** também fornece vários eventos para avisá-lo quando o estado é alterado, inclusive o status de transferência e o buffer atual do conteúdo que está sendo reproduzido, bem como o tamanho natural e a taxa de proporção do conteúdo de vídeo em reprodução no momento.
+Conforme descrito anteriormente neste artigo, muitas das funções que são expostas pela classe **MediaElement** foram transferidas para a classe [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession). Isso inclui informações sobre o estado de reprodução do player, como a posição de reprodução atual, se o player está pausado ou em reprodução e a velocidade de reprodução atual. O **MediaPlaybackSession** também fornece vários eventos para avisá-lo quando o estado é alterado, inclusive o status de download e o buffer atual do conteúdo que está sendo reproduzido, bem como o tamanho natural e a taxa de proporção do conteúdo de vídeo em reprodução no momento.
 
 O exemplo a seguir mostra como implementar um manipulador de clique de botão que avança 10 segundos no conteúdo. Primeiro, o objeto**MediaPlaybackSession** do player é recuperado com a propriedade [**PlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.PlaybackSession). Em seguida, a propriedade [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.Position) é definida como a posição de reprodução atual mais 10 segundos.
 
@@ -104,7 +104,7 @@ Em seguida, declare um objeto **Rect** que armazenará o retângulo de origem de
 
 [!code-cs[DeclareSourceRect](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareSourceRect)]
 
-O manipulador **ManipulationDelta** ajusta a escala ou a translação do retângulo de zoom. Se o valor de escala delta não for 1, isso significa que o usuário realizou um gesto de pinçar. Se o valor for maior que 1, o retângulo de origem deverá ser menor para ampliar o conteúdo. Se o valor for menor que 1, o retângulo de origem deve ser maior para reduzir. Antes de configurar os novos valores de escala, o retângulo resultante é verificado para garantir que esteja inteiramente dentro dos limites (0,0,1,1).
+O manipulador **ManipulationDelta** ajusta a escala ou a translação do retângulo de zoom. Se o valor de escala delta não for 1, isso significa que o usuário realizou um gesto de pinçar. Se o valor for maior que 1, o retângulo de origem deverá ser menor para ampliar o conteúdo. Se o valor for menor que 1, o retângulo de origem deverá ser maior para diminuir o zoom. Antes de configurar os novos valores de escala, o retângulo resultante é verificado para garantir que ele esteja inteiramente dentro dos limites (0,0,1,1).
 
 Se o valor de escala for 1, o gesto de translação será manipulado. O retângulo é simplesmente convertido pelo número de pixels contidos no gesto, dividido pela largura e a altura do controle. Novamente, o retângulo resultante é verificado para garantir que ele fique dentro dos limites (0,0,1,1).
 
@@ -143,7 +143,7 @@ O exemplo a seguir mostra como usar um **MediaTimelineController** para controla
 
 [!code-cs[SetTimelineController](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetTimelineController)]
 
-**Cuidado** O [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) proporciona a integração automática entre o **MediaPlayer** e os Controles de Transporte de Mídia do Sistema (SMTC), mas essa integração automática não pode ser usada com media players que sejam controlados com um **MediaTimelineController**. Dessa forma, você deverá desabilitar o gerenciador de comandos do media player antes de configurar o controlador de linha do tempo do player. Não seguir esse procedimento lançará uma exceção com a seguinte mensagem: "A anexação do Controlador de Linha do Tempo de Mídia está bloqueada por causa do estado atual do objeto." Para obter mais informações sobre a integração do media player com SMTC, consulte [Integrar aos Controles de Transporte de Mídia do Sistema](integrate-with-systemmediatransportcontrols.md). Se você estiver usando um **MediaTimelineController**, ainda poderá controlar o SMTC manualmente. Para obter mais informações, consulte [Controle Manual dos Controles de Transporte de Mídia do Sistema](system-media-transport-controls.md).
+**Cuidado** O [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) proporciona a integração automática entre o **MediaPlayer** e os Controles de Transporte de Mídia do Sistema (SMTC), mas essa integração automática não pode ser usada com media players que sejam controlados com um **MediaTimelineController**. Dessa forma, você deverá desabilitar o gerenciador de comandos do media player antes de configurar o controlador de linha do tempo do player. Falha ao fazer isso resultará em uma exceção sendo lançada com a seguinte mensagem: "A anexação de controlador de linha do tempo de mídia é bloqueado devido ao estado atual do objeto." Para obter mais informações sobre a integração do media player com SMTC, consulte [Integrar aos Controles de Transporte de Mídia do Sistema](integrate-with-systemmediatransportcontrols.md). Se você estiver usando um **MediaTimelineController**, ainda poderá controlar o SMTC manualmente. Para obter mais informações, consulte [Controle Manual dos Controles de Transporte de Mídia do Sistema](system-media-transport-controls.md).
 
 Depois de associar um **MediaTimelineController** a um ou mais media players, você poderá controlar o estado de reprodução usando os métodos expostos pelo controlador. A exemplo a seguir chama [**Start**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController.Start) para iniciar a reprodução de todos os media players associados no início da mídia.
 
@@ -228,7 +228,7 @@ Depois que todos os objetos necessários tenham sido criados, **CopyFrameToVideo
 
 Para saber mais sobre como usar o Win2D, veja o [Repositório do Win2D no GitHub](https://github.com/Microsoft/Win2D). Para experimentar o código de exemplo mostrado acima, você precisará adicionar o pacote NuGet Win2D ao seu projeto com as instruções a seguir.
 
-**Para adicionar o pacote NuGet Win2D ao seu projeto de efeito**
+**Para adicionar o pacote Win2D NuGet ao seu projeto de efeito**
 
 1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e selecione **Gerenciar Pacotes NuGet**.
 2.  Na parte superior da janela, selecione a guia **Procurar**.
@@ -258,9 +258,9 @@ O usuário pode decidir que eles querem pausar ou continuar a reprodução, mesm
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
-* [Itens de mídia, playlists e faixas](media-playback-with-mediasource.md)
-* [Integrar aos Controles de Transporte de Mídia do Sistema](integrate-with-systemmediatransportcontrols.md)
-* [Criar, programar e gerenciar pausas de mídia](create-schedule-and-manage-media-breaks.md)
+* [Trilhas, as listas de reprodução e itens de mídia](media-playback-with-mediasource.md)
+* [Integrar com os controles de transporte de mídia do sistema](integrate-with-systemmediatransportcontrols.md)
+* [Criar, agendar e gerenciar as quebras de mídia](create-schedule-and-manage-media-breaks.md)
 * [Reproduzir mídia em segundo plano](background-audio.md)
 
 

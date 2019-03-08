@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 63c678f4b2dde1a5e35c0131b5154493c9703951
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942660"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623371"
 ---
 # <a name="geometry-shader-gs-stage"></a>Estágio de sombreador de geometria (GS)
 
@@ -40,12 +40,12 @@ O estágio do sombreador de geometria é adequado para algoritmos incluindo:
 -   Troca de material por primitivo
 -   Configuração de material por primitivo - essa funcionalidade inclui a geração de coordenadas baricêntricas como dados primitivos para que um sombreador de pixel possa realizar a interpolação de atributo personalizado.
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entrada
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
 
 
 O estágio do sombreador de geometria executa o código de sombreador específico do aplicativo com primitivos inteiros como entrada e a capacidade de gerar vértices na saída. Ao contrário de sombreadores de vértice que operam em um único vértice, as entradas do sombreador de geometria são os vértices de um primitivo completo (três vértices para triângulos, dois vértices para linhas ou um único vértice para ponto). Os sombreadores de geometria também podem trazer os dados de vértice para os primitivos adjacentes de borda como entrada (três vértices adicionais para um triângulo, e dois vértices adicionais para uma linha).
 
-O estágio do sombreador de geometria pode consumir o valor **SV\_PrimitiveID** gerado pelo sistema que é gerado automaticamente pelo [estágio do Assembler de Entrada (IA)](input-assembler-stage--ia-.md). Isso permite que os dados por primitivo sejam buscados ou calculados, se desejado.
+O estágio de sombreador de geometria pode consumir os **VA\_PrimitiveID** valor gerado pelo sistema que é gerado automaticamente pelo [estágio do Assembler de entrada (IA)](input-assembler-stage--ia-.md). Isso permite que os dados por primitivo sejam buscados ou calculados, se desejado.
 
 Quando um sombreador de geometria está ativo, ele é chamado uma vez para cada primitivo passado para baixo ou gerado anteriormente no pipeline. Cada invocação do sombreador de geometria vê como entrada os dados para a invocação do primitivo, independentemente de ser um único ponto, uma única linha ou um único triângulo. Uma faixa de triângulos de versões anteriores no pipeline resultaria em uma chamada de sombreador de geometria de cada triângulo individual na faixa (como se a faixa fosse expandida em uma lista de triângulos). Todos os dados de entrada para cada vértice do primitivo individual está disponível (ou seja, 3 vértices para um triângulo), além de dados de vértice adjacentes, se aplicáveis e disponíveis.
 
@@ -70,9 +70,9 @@ A saída do sombreador de geometria pode ser alimentada no estágio do rasteriza
 
 Um sombreador de geometria produz um vértice de dados por vez, acrescentando vértices a um objeto de fluxo de saída. A topologia dos fluxos é determinada por uma declaração fixa, escolhendo um **TriangleStream**, **LineStream** e **PointStream** como saída para o estágio de GS.
 
-Há três tipos de objetos de fluxo disponíveis: **TriangleStream**, **LineStream** e **PointStream**, que são objetos transformados em modelos. A topologia da saída é determinada pelo seu tipo de objeto correspondente, enquanto o formato dos vértices acrescentado ao fluxo é determinado pelo tipo de modelo.
+Há três tipos de objetos de fluxo disponíveis: **TriangleStream**, **LineStream** e **PointStream**, que são modelados de todos os objetos. A topologia da saída é determinada pelo seu tipo de objeto correspondente, enquanto o formato dos vértices acrescentado ao fluxo é determinado pelo tipo de modelo.
 
-Quando uma saída do sombreador de geometria é identificada como um valor interpretado do sistema (por exemplo, **SV\_RenderTargetArrayIndex** ou **SV\_Position**), o hardware observa esses dados e realiza algum comportamento depende do valor, além de poder passar os dados por conta própria para o próximo estágio do sombreador de entrada. Quando essa saída de dados do sombreador de geometria tem significado para o hardware em uma base por primitivos (como **SV\_RenderTargetArrayIndex** ou **SV\_ViewportArrayIndex**), em vez de em uma base por vértice (como **SV\_ClipDistance\ [n\]** ou **SV\_Position**), os dados por primitivo são retirados do vértice à esquerda emitido para o primitivo.
+Quando a saída do sombreador de geometria é identificada como um valor de interpretado do sistema (por exemplo, **VA\_RenderTargetArrayIndex** ou **VA\_posição**), hardware analisa esses dados e executa algum comportamento dependente do valor, além de ser capaz de passar os dados em si para o próximo estágio de sombreador para entrada. Quando essa saída de dados de sombreador de geometria tem um significado para o hardware em uma base por primitivo (como **VA\_RenderTargetArrayIndex** ou **VA\_ViewportArrayIndex**), em vez de em uma base por vértice (como **VA\_ClipDistance\[n\]**  ou **VA\_posição**), os dados por primitivo retirado do vértice à esquerda emitido para o primitivo.
 
 Os primitivos parcialmente concluídos podem ser gerados pelo sombreador de geometria, se o sombreador de geometria terminar e o primitivo estiver incompleto. Primitivos incompletos são descartados silenciosamente. Isso é semelhante à maneira como o IA trata primitivos parcialmente concluídas.
 
@@ -81,7 +81,7 @@ O sombreador de geometria pode executar operações de amostragem de textura e c
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de elementos gráficos](graphics-pipeline.md)
+[Pipeline de gráficos](graphics-pipeline.md)
 
  
 

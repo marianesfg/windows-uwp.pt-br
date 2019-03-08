@@ -1,6 +1,6 @@
 ---
-Description: Use fade animations to bring items into a view or to take items out of a view. The two common fade animations are fade-in and fade-out.
-title: Animações de esmaecimento em aplicativos UWP
+Description: Use animações de fade para trazer itens para uma exibição ou retirá-los de uma exibição. As duas animações de fade comuns são fade in e fade out.
+title: Animações de fade em aplicativos UWP
 ms.assetid: 975E5EE3-EFBE-4159-8D10-3C94143DD07F
 label: Motion--fades
 template: detail.hbs
@@ -9,19 +9,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d3fee78f3608466f588a79d2811f1464e27a0ab
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940135"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620411"
 ---
 # <a name="fade-animations"></a>Animações de fade
 
 
 
-Use animações de fade para trazer itens para uma exibição ou retirá-los de uma exibição. As duas animações comuns de esmaecimento são fade-in e fade-out.
+Use animações de fade para trazer itens para uma exibição ou retirá-los de uma exibição. As duas animações de fade comuns são fade in e fade out.
 
-> **APIs importantes**: [**classe FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210298), [**classe FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210302)
+> **APIs importantes**: [**Classe FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210298), [ **FadeOutThemeAnimation classe**](https://msdn.microsoft.com/library/windows/apps/br210302)
 
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
@@ -35,8 +35,8 @@ Use animações de fade para trazer itens para uma exibição ou retirá-los de 
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Animando fades](https://msdn.microsoft.com/library/windows/apps/xaml/jj649429)
-* [Guia de início rápido: animando sua interface do usuário usando animações da biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Animando esmaece](https://msdn.microsoft.com/library/windows/apps/xaml/jj649429)
+* [Guia de início rápido: Animando sua interface do usuário usando animações de biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Classe FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210298)
 * [**Classe FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210302)
 

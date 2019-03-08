@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animação
 ms.localizationpriority: medium
 ms.openlocfilehash: 3512d47c8b3e689b0baadec26c1d8f0f510e03ef
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931397"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639921"
 ---
 # <a name="pointer-based-animations"></a>Animações baseadas em ponteiro
 
@@ -20,8 +20,8 @@ Este artigo mostra como usar a posição de um ponteiro para criar experiências
 
 Aqui, presumimos que você esteja familiarizado com os conceitos abordados neste artigo:
 
-- [Animações controladas por entrada](input-driven-animations.md)
-- [Animações baseadas em relações](relation-animations.md)
+- [Controlado por entrada animações](input-driven-animations.md)
+- [Animações de relação com base](relation-animations.md)
 
 ## <a name="why-create-pointer-position-driven-experiences"></a>Por que criar experiências de ponteiro controladas por posição?
 
@@ -43,7 +43,7 @@ Veja a seguir alguns exemplos:
 
 Você pode criar essas experiências usando o PointerPositionPropertySet. Este PropertySet é criado para um UIElement para manter a posição do ponteiro enquanto o UIElement passa com sucesso pelo teste de acertos. O valor de posição é relativa ao espaço de coordenadas do UIElement (a posição <0,0> é o canto superior esquerdo do UIElement). Em seguida, você pode aproveitar esse conjunto de propriedades em uma animação para promover o movimento de outra propriedade.
 
-Para cada um das diferentes modalidades de entrada de ponteiro, há diversos estados que a entrada pode assumir nos quais a posição é alterada: Focalizar, Pressionado, Pressionado e Movido. O PointerPositionPropertySet só mantém a posição do ponteiro nos estados Focalizar, Pressionado, e Pressionado e Movido para mouse e caneta.
+Para cada um de modalidades de entrada diferente do ponteiro, há um número de estados de entrada que a entrada poderia ser no qual a posição for alterada: Passe o mouse, pressionado, pressionado e movido. O PointerPositionPropertySet só mantém a posição do ponteiro nos estados Focalizar, Pressionado, e Pressionado e Movido para mouse e caneta.
 
 Etapas gerais para começar:
 

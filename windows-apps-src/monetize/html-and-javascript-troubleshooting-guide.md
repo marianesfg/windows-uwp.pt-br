@@ -7,25 +7,25 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, solução de problemas, HTML, javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 01e2781b64629e24cba9b4ac02629a79ee4d998b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919626"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633231"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>Guia de solução de problemas em HTML e JavaScript
 
 Este tópico contém soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos JavaScript/HTML.
 
 * [HTML](#html)
-  * [AdControl não aparece](#html-notappearing)
+  * [AdControl não aparecem](#html-notappearing)
   * [Caixa preta pisca e desaparece](#html-blackboxblinksdisappears)
-  * [Anúncios não são atualizados](#html-adsnotrefreshing)
+  * [Anúncios não atualizando](#html-adsnotrefreshing)
 
 * [JavaScript](#js)
-  * [AdControl não aparece](#js-adcontrolnotappearing)
+  * [AdControl não aparecem](#js-adcontrolnotappearing)
   * [Caixa preta pisca e desaparece](#js-blackboxblinksdisappears)
-  * [Anúncios não são atualizados](#js-adsnotrefreshing)
+  * [Anúncios não atualizando](#js-adsnotrefreshing)
 
 ## <a name="html"></a>HTML
 
@@ -33,7 +33,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 ### <a name="adcontrol-not-appearing"></a>AdControl não aparece
 
-1.  Certifique-se de que a funcionalidade **Internet (Cliente)** esteja selecionada em Package.appxmanifest.
+1.  Certifique-se de que a funcionalidade **Internet (Client)** esteja selecionada em Package.appxmanifest.
 
 2.  Certifique-se de que a referência de JavaScript esteja presente. Sem a referência ad.js na seção &lt;head&gt; (após a referência default. js), o **AdControl** não poderá ser exibido e ocorrerá um erro durante a compilação.
 
@@ -46,7 +46,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     </head>
     ```
 
-3.  Verifique a ID do aplicativo e a ID de unidade publicitária. Esses IDs devem coincidir com a ID do aplicativo e a ID da unidade de anúncio que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncios em seu aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+3.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder a ID do aplicativo e a ID de unidade do ad que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` html
@@ -161,7 +161,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     </div>
     ```
 
-    O erro mais comum que gera uma caixa preta é "Nenhum anúncio disponível." Esse erro significa que não há anúncios disponíveis para serem retornados da solicitação.
+    O erro mais comum que causa uma caixa preta é “Nenhum anúncio disponível”. Esse erro significa que não há anúncios disponíveis para serem retornados da solicitação.
 
 3.  O **AdControl** está funcionando normalmente. Por padrão, o **AdControl** será recolhido quando não conseguir exibir um anúncio. Se outros elementos forem filhos do mesmo pai, eles poderão se mover para preencher a lacuna do **AdControl** recolhido e se expandir quando a próxima solicitação for feita.
 
@@ -213,7 +213,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     );
     ```
 
-3.  O **AdControl** está funcionando normalmente. Às vezes, o mesmo anúncio aparecerá mais do que uma vez em uma linha, dando a impressão de que os anúncios não estão sendo atualizados.
+3.  O **AdControl** está funcionando normalmente. Às vezes, o mesmo anúncio aparecerá mais do que uma vez em uma linha, dando a impressão de que anúncios não estão sendo atualizados.
 
 <span id="js"/>
 
@@ -271,7 +271,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     });  
     ```
 
-4.  Verifique a ID do aplicativo e a ID de unidade de anúncios. Esses IDs devem coincidir com a ID do aplicativo e a ID da unidade de anúncio que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncios em seu aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+4.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder a ID do aplicativo e a ID de unidade do ad que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` javascript
@@ -330,7 +330,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     );
     ```
 
-    O erro mais comum que gera uma caixa preta é “Nenhum anúncio disponível”. Esse erro significa que não há anúncios disponíveis para serem retornados da solicitação.
+    O erro mais comum que causa uma caixa preta é “Nenhum anúncio disponível”. Esse erro significa que não há anúncios disponíveis para serem retornados da solicitação.
 
 3.  O **AdControl** está funcionando normalmente. Às vezes, o mesmo anúncio aparecerá mais do que uma vez em uma linha, dando a impressão de que anúncios não estão sendo atualizados.
 
@@ -340,7 +340,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 1.  Verifique se a propriedade [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) do **AdControl** está definida como false. Por padrão, essa propriedade opcional é definida como **true**. Quando definida como **false**, o método **Refresh** deve ser usado para recuperar outro anúncio.
 
-2.  Verifique as chamadas para o método [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx). Ao usar a atualização automática (**IsAutoRefreshEnabled** definido como **true**), não é possível usar **Refresh** para recuperar outro anúncio. Quando se usar a atualização manual (**IsAutoRefreshEnabled** definido como **false**), **Refresh** só deverá ser chamado depois de um intervalo mínimo de 30 a 60 segundos dependendo da conexão de dados atual do dispositivo.
+2.  Verifique as chamadas para o método [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx). Ao usar a atualização automática (**IsAutoRefreshEnabled** definido como **true**), não é possível usar **Refresh** para recuperar outro anúncio. Ao usar a atualização manual (**IsAutoRefreshEnabled** definido como **false**), **Refresh** só deverá ser chamado depois de um intervalo mínimo de 30 a 60 segundos dependendo da conexão de dados atual do dispositivo.
 
     Este exemplo demonstra como criar o **div** para o **AdControl**.
 

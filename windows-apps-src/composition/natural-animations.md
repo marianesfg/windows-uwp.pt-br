@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animação
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fde0cbf5335b4f5c3da2f21f692fc2c23455776
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937159"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630371"
 ---
 # <a name="natural-motion-animations"></a>Animações de movimento natural
 
@@ -22,9 +22,9 @@ Apps excelentes são aqueles que proporcionam experiências que capturam e retê
 
 Uma maneira de o movimento ajudar a estabelecer essa conexão é por meio de experiências que pareçam familiar para os usuários. Os usuários têm uma expectativa inconsciente de como percebem o movimento baseado em experiências da vida real. Vemos como os objetos deslizam pelo chão, caem da mesa, saltam em direção a outro e oscilam com uma mola. O movimento que aproveita essa expectativa baseado na física do mundo real parece mais natural aos nossos olhos. O movimento torna-se mais natural e interativo, mas, o mais importante é que toda a experiência se torna mais fácil de memorizar e divertida.
 
-![Movimento de escala sem animação](images/animation/scale-no-animation.gif)
-![Movimento de escala com Bézier cúbico](images/animation/scale-cubic-bezier.gif)
-![Movimento de escala com animação de mola](images/animation/scale-spring.gif)
+![Dimensionar o movimento sem animação](images/animation/scale-no-animation.gif)
+![dimensionar movimento com de Bézier cúbica](images/animation/scale-cubic-bezier.gif)
+![dimensionar movimento com animação spring](images/animation/scale-spring.gif)
 
 O resultado é o maior envolvimento e retenção do usuário com o app.
 

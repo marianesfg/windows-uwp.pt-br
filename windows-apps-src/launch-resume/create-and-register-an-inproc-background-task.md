@@ -1,19 +1,19 @@
 ---
-title: Criar e registrar uma tarefa em segundo plano no processo
-description: Crie e registre uma tarefa no processo que é executada no mesmo processo de seu app em primeiro plano.
+title: Criar e registrar uma tarefa em segundo plano em processo
+description: Crie e registre uma tarefa no processo que é executada no mesmo processo de seu aplicativo em primeiro plano.
 ms.date: 11/03/2017
 ms.topic: article
-keywords: Windows 10, uwp, tarefa em segundo plano
+keywords: o Windows 10, uwp, tarefas em segundo plano
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
 ms.openlocfilehash: 50e818059436cf7653bf7ac7b2203b0761b93377
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045039"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615791"
 ---
-# <a name="create-and-register-an-in-process-background-task"></a>Criar e registrar uma tarefa em segundo plano no processo
+# <a name="create-and-register-an-in-process-background-task"></a>Criar e registrar uma tarefa em segundo plano em processo
 
 **APIs importantes**
 
@@ -29,7 +29,7 @@ Lembre-se de que a atividade em segundo plano pode ser encerrada mesmo ao ser ex
 
 ## <a name="fundamentals"></a>Conceitos básicos
 
-O modelo no processo aprimora o ciclo de vida do aplicativo com notificações aprimoradas quando o aplicativo está em primeiro plano ou em segundo plano. Dois novos eventos estão disponíveis no objeto do Aplicativo para essas transições: [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) e [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). Esses eventos se adaptam ao ciclo de vida do aplicativo com base no estado de visibilidade do seu aplicativo Leia mais sobre esses eventos e como eles afetam o ciclo de vida do aplicativo em [ciclo de vida do aplicativo](app-lifecycle.md).
+O modelo no processo aprimora o ciclo de vida do aplicativo com notificações aprimoradas quando o aplicativo está em primeiro plano ou em segundo plano. Dois novos eventos estão disponíveis do objeto de aplicativo para essas transições: [**EnteredBackground** ](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) e [ **LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). Esses eventos se adaptam ao ciclo de vida do aplicativo com base no estado de visibilidade do seu aplicativo Leia mais sobre esses eventos e como eles afetam o ciclo de vida do aplicativo em [ciclo de vida do aplicativo](app-lifecycle.md).
 
 Em um nível alto, você manipulará o evento **EnteredBackground** para executar seu código que será executado enquanto seu aplicativo é executado em segundo plano e manipule **LeavingBackground** para saber quando seu aplicativo foi movido para o primeiro plano.
 
@@ -68,7 +68,7 @@ O código de exemplo abaixo atribui uma condição que exige que o usuário este
 
 ## <a name="place-your-background-activity-code-in-onbackgroundactivated"></a>Coloque seu código de atividade em segundo plano em OnBackgroundActivated()
 
-Coloque o código de atividade em segundo plano em [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) para responder ao seu gatilho em segundo plano quando ele for acionado. **OnBackgroundActivated** pode ser tratado como [ibackgroundtask. Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396). O método tem um parâmetro [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) , que contém tudo o que fornece o método **Run** . Por exemplo, em App.xaml.cs:
+Coloque o código de atividade em segundo plano em [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) para responder ao gatilho em segundo plano quando ele é acionado. **OnBackgroundActivated** pode ser tratado como [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396). O método tem um [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) parâmetro, que contém tudo o que o **executar** entrega do método. Por exemplo, no App.xaml.cs:
 
 ``` cs
 using Windows.ApplicationModel.Background;
@@ -88,7 +88,7 @@ sealed partial class App : Application
 }
 ```
 
-Para obter um exemplo de **OnBackgroundActivated** mais sofisticado, consulte [converter um serviço de aplicativo para ser executado no mesmo processo de seu aplicativo host](convert-app-service-in-process.md).
+Para mais rica **OnBackgroundActivated** exemplo, consulte [converter de um serviço de aplicativo para ser executado no mesmo processo que seu aplicativo de host](convert-app-service-in-process.md).
 
 ## <a name="handle-background-task-progress-and-completion"></a>Manipular progresso e conclusão de tarefas em segundo plano
 
@@ -110,24 +110,24 @@ Veja os seguintes tópicos relacionados para obter referência de API, diretriz 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-**Tópicos de instruções detalhadas de tarefa em segundo plano**
+**Tópicos de instrução de tarefa em segundo plano detalhado**
 
-* [Converter uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo](convert-out-of-process-background-task.md)
-* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
+* [Converter uma tarefa de plano de fundo de out-of-process em uma tarefa de plano de fundo em processo](convert-out-of-process-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano do out-of-process](create-and-register-a-background-task.md)
 * [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
-* [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
+* [Defina as condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
-* [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
-* [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
+* [Lidar com uma tarefa em segundo plano foi cancelada](handle-a-cancelled-background-task.md)
+* [Monitorar o progresso da tarefa em segundo plano e conclusão](monitor-background-task-progress-and-completion.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 
-**Diretrizes da tarefa em segundo plano**
+**Diretrizes de tarefa em segundo plano**
 
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar suspender, continuar e eventos em aplicativos UWP do plano de fundo (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
 **Referência de API de tarefa em segundo plano**
 

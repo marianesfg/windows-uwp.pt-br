@@ -1,19 +1,19 @@
 ---
 title: Multisampling nos aplicativos UWP (Plataforma Universal do Windows)
-description: Saiba como utilizar o multisampling em apps da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D.
+description: Saiba como utilizar o multisampling em aplicativos da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D.
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, várias amostras, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c1634af8589a97f5070ff85909fe12ab16bf8d6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924912"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610851"
 ---
-# <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span>Multisampling nos apps UWP (Plataforma Universal do Windows)
+# <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Multisampling no Windows Universal aplicativos UWP (plataforma)
 
 
 
@@ -28,11 +28,11 @@ Os aplicativos UWP em DirectX devem usar cadeias de troca do modelo de inversão
 
 Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específicas de contagem mínima de amostras e garantem que determinados formatos de buffer que dão suporte a várias amostras estarão disponíveis. Os dispositivos gráficos costumam dar suporte a um número maior do que o mínimo necessário de formatos e contagens de amostras. O suporte ao multisampling pode ser determinado no tempo de execução verificando o suporte ao recurso de multisampling para formatos DXGI específicos e, em seguida, verificando o número de amostras que podem ser usadas com cada formato com suporte.
 
-1.  Chame [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) para descobrir quais formatos DXGI podem ser usados com o multisampling. Forneça os formatos de destino de renderização que seu jogo pode usar. O destino de renderização e o destino de resolução devem usar o mesmo formato. Portanto, verifique [**D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RENDERTARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476134) e **D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RESOLVE**.
+1.  Chame [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) para descobrir quais formatos DXGI podem ser usados com o multisampling. Forneça os formatos de destino de renderização que seu jogo pode usar. O destino de renderização e a resolução de destino deve usar o mesmo formato, portanto, verifique para ambos [ **D3D11\_formato\_suporte\_MULTISAMPLE\_RENDERTARGET** ](https://msdn.microsoft.com/library/windows/desktop/ff476134) e **D3D11\_formato\_suporte\_MULTISAMPLE\_RESOLVER**.
 
-    **Nível de recurso 9:** Embora o nível de recurso 9 dispositivos [garantir suporte para formatos de destino de renderização com várias amostras](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), suporte não é garantido para destinos de resolução multisample. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
+    **9 de nível de recurso:  ** Embora o recurso de nível 9 dispositivos [garantir suporte para formatos de destino de renderização de texturas](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), não há garantia de suporte para destinos de multisample resolver. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
 
-    O código a seguir verifica o suporte a multisampling para todos os valores de DXGI\_FORMAT:
+    O código a seguir verifica o suporte ao multisampling para todos os o DXGI\_valores de formato:
 
     ```cpp
     // Determine the format support for multisampling.
@@ -82,11 +82,11 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
     }
     ```
 
-    > **Observação**  Use [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) em vez disso, se você precisar verificar o suporte de várias amostras para lado a lado buffers de recursos.
+    > **Observação**    uso [ **ID3D11Device2::CheckMultisampleQualityLevels1** ](https://msdn.microsoft.com/library/windows/desktop/dn280494) em vez disso, se você precisar verificar multisample suporte para buffers de recursos lado a lado.
 
      
 
-3.  Crie um buffer e renderize a visualização do destino com a contagem de amostras desejada. Use o mesmo DXGI\_FORMAT, largura e altura com a cadeia de troca, mas especifique uma contagem de amostra maior que 1 e use uma dimensão de textura de várias amostras (**D3D11\_RTV\_DIMENSION\_TEXTURE2DMS**, por exemplo). Se necessário, você pode recriar a cadeia de troca com novas configurações que sejam ideais para o multisampling.
+3.  Crie um buffer e renderize a visualização do destino com a contagem de amostras desejada. Use o mesmo DXGI\_formato, largura e altura como a cadeia de troca, mas especificar uma contagem de exemplo maior que 1 e usar uma dimensão de textura texturas (**D3D11\_RTV\_dimensão\_TEXTURE2DMS** por exemplo). Se necessário, você pode recriar a cadeia de troca com novas configurações que sejam ideais para o multisampling.
 
     O código a seguir cria um destino de renderização com várias amostras:
 

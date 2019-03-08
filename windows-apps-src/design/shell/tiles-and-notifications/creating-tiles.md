@@ -1,5 +1,5 @@
 ---
-Description: A tile is an app's representation on the Start menu. Every app has a tile. When you create a new Universal Windows Platform (UWP) app project in Microsoft Visual Studio, it includes a default tile that displays your app's name and logo.
+Description: Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo tem um bloco. Quando você cria um novo projeto de aplicativo da Plataforma Universal do Windows (UWP) no Microsoft Visual Studio, ele inclui um bloco padrão que exibe o nome e o logotipo do seu aplicativo.
 title: Blocos
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e46d73c91f54b1bb74a70990a238f13ccd47645d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946887"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634431"
 ---
 # <a name="tiles-for-uwp-apps"></a>Blocos de aplicativos UWP
 
  
 
-*Bloco* é a representação de um aplicativo no menu Iniciar. Todo aplicativo tem um bloco. Quando você cria um novo projeto de aplicativo da Plataforma Universal do Windows (UWP) no Microsoft Visual Studio, ele inclui um bloco padrão que exibe o nome e o logotipo do seu aplicativo.O Windows exibe esse bloco quando seu aplicativo é instalado pela primeira vez. Depois que seu aplicativo é instalado, você pode alterar o conteúdo do bloco por meio de notificações. Por exemplo, você pode alterar o bloco para comunicar novas informações ao usuário, como manchetes de jornais, ou o assunto da mensagem não lida mais recente.
+*Bloco* é a representação de um aplicativo no menu Iniciar. Todo aplicativo tem um bloco. Quando você cria um novo projeto de aplicativo da Plataforma Universal do Windows (UWP) no Microsoft Visual Studio, ele inclui um bloco padrão que exibe o nome e o logotipo do seu aplicativo. O Windows exibe esse bloco quando seu aplicativo é instalado pela primeira vez. Depois que seu aplicativo é instalado, você pode alterar o conteúdo do bloco por meio de notificações. Por exemplo, você pode alterar o bloco para comunicar novas informações ao usuário, como manchetes de jornais, ou o assunto da mensagem não lida mais recente.
 
 ## <a name="configure-the-default-tile"></a>Configurar o bloco padrão
 
@@ -47,15 +47,15 @@ Para editar seu bloco, clique duas vezes no arquivo **Package.appxmanifest** em 
 
 Há alguns itens que você deve atualizar:
 
--   DisplayName: substitua esse valor pelo nome que você deseja exibir no bloco.
--   ShortName: como há espaço limitado para seu nome de exibição nos blocos, recomendamos que você especifique um ShortName também, para garantir que o nome do aplicativo não fique truncado.
+-   DisplayName: Substitua esse valor com o nome que você deseja exibir em seu bloco.
+-   ShortName: Porque não há espaço limitado para seu nome de exibição caber em blocos, é recomendável que você especifique um nome curto, para garantir que o nome do seu aplicativo não ser truncados.
 -   Imagens de logotipo:
 
     Você deve substituir essas imagens por suas próprias. Você pode fornecer imagens para diferentes escalas visuais, mas não é necessário fornecer para todas elas. Para garantir que seu aplicativo tenha uma boa aparência em um vários dispositivos, recomendamos que você ofereça versões de escala em 100%, 200% e 400% de cada imagem. Consulte [Ativos de bloco e ícone](app-assets.md) para saber mais sobre a geração desses ativos.
 
     As imagens dimensionadas seguem esta convenção de nomenclatura:
     
-    *&lt;nome da imagem&gt;*.scale-*&lt;fator de escala&gt;*.*&lt;extensão de arquivo de imagem&gt;* 
+    *&lt;nome da imagem&gt;*. Scale -*&lt;fator de escala&gt;*. *&lt;extensão de arquivo de imagem&gt;* 
 
     Por exemplo: SplashScreen.scale-100.png
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: da1dc2ab7444bf65074d9c7ccc615aaee07fdcff
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046349"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627961"
 ---
 # <a name="audio-graphs"></a>Gráficos de áudio
 
@@ -54,8 +54,8 @@ A classe [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/dn9141
 
 [!code-cs[InitAudioGraph](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetInitAudioGraph)]
 
--   Todos os tipos de nó áudio são criados usando os métodos Create\* da classe **AudioGraph**.
--   O método [**AudioGraph.Start**](https://msdn.microsoft.com/library/windows/apps/dn914244) faz com que o gráfico de áudio comece a processar dados de áudio. O método [**AudioGraph.Stop**](https://msdn.microsoft.com/library/windows/apps/dn914245) para o processamento do áudio. Cada nó no gráfico pode ser iniciado e interrompido independentemente enquanto o gráfico está sendo executado, mas nenhum nó está ativo quando o gráfico é interrompido. [**ResetAllNodes**](https://msdn.microsoft.com/library/windows/apps/dn914242) faz com que todos os nós no gráfico descartem todos os dados em seus buffers de áudio no momento.
+-   Todos os tipos de nó de áudio são criados usando Create\* métodos do **AudioGraph** classe.
+-   O método [**AudioGraph.Start**](https://msdn.microsoft.com/library/windows/apps/dn914244) faz com que o gráfico de áudio comece a processar dados de áudio. O método [**AudioGraph.Stop**](https://msdn.microsoft.com/library/windows/apps/dn914245) para o processamento do áudio. Cada nó no gráfico pode ser iniciado e interrompido independentemente enquanto o gráfico está sendo executado, mas nenhum nó está ativo quando o gráfico é interrompido. [**ResetAllNodes** ](https://msdn.microsoft.com/library/windows/apps/dn914242) faz com que todos os nós no gráfico para descartar qualquer dado atualmente em seus buffers de áudio.
 -   O evento [**QuantumStarted**](https://msdn.microsoft.com/library/windows/apps/dn914241) ocorre quando o gráfico está iniciando o processamento de um novo quantum de dados de áudio. O evento [**QuantumProcessed**](https://msdn.microsoft.com/library/windows/apps/dn914240) ocorre quando o processamento de um quantum é concluído.
 
 -   A única propriedade [**AudioGraphSettings**](https://msdn.microsoft.com/library/windows/apps/dn914185) necessária é [**AudioRenderCategory**](https://msdn.microsoft.com/library/windows/apps/dn297724). A especificação desse valor permite que o sistema otimize o pipeline de áudio para a categoria especificada.
@@ -64,7 +64,7 @@ A classe [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/dn9141
 -   A propriedade [**DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522) determina a quantidade de processamento que o dispositivo de renderização principal realiza na saída do gráfico de áudio. A configuração **Default** permite que o sistema use o processamento de áudio padrão na categoria de renderização de áudio especificada. Esse processamento pode melhorar significativamente o som do áudio em alguns dispositivos, especialmente dispositivos móveis com alto-falantes pequenos. A configuração **Raw** pode melhorar o desempenho, minimizando a quantidade de processamento de sinal realizada, mas pode resultar em som de qualidade inferior em alguns dispositivos.
 -   Se o [**QuantumSizeSelectionMode**](https://msdn.microsoft.com/library/windows/apps/dn914208) é definido como **LowestLatency**, o gráfico de áudio usará automaticamente **Raw** para [**DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522).
 - A partir do Windows 10, versão 1803, você pode definir a propriedade [**AudioGraphSettings.MaxPlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.maxplaybackspeedfactor) a fim de definir um valor máximo usado pelas propriedades [**AudioFileInputNode.PlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiofileinputnode.playbackspeedfactor), [**AudioFrameInputNode.PlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode.playbackspeedfactor) e [**MediaSourceInputNode.PlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.mediasourceinputnode.playbackspeedfactor). Quando um gráfico de áudio oferece suporte a um fator de velocidade de reprodução maior que 1, o sistema deve alocar memória adicional para manter um buffer suficiente de dados de áudio. Por esse motivo, a configuração de **MaxPlaybackSpeedFactor** com o valor mais baixo exigido pelo seu aplicativo reduz o consumo de memória do aplicativo. Caso seu aplicativo reproduza somente conteúdo na velocidade normal, é recomendável que você defina MaxPlaybackSpeedFactor como 1.
--   [**EncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn958523) determina o formato de áudio usado pelo gráfico. Há suporte para formatos float de 32 bits somente.
+-   [  **EncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn958523) determina o formato de áudio usado pelo gráfico. Há suporte para formatos float de 32 bits somente.
 -   O [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524) define o dispositivo de renderização principal para o gráfico de áudio. Se você não definir isso, o dispositivo padrão do sistema será usado. O dispositivo de renderização principal é usado para calcular os tamanhos de quantum para outros nós do gráfico. Se não houver dispositivos de renderização de áudio presentes no sistema, a criação de gráfico de áudio falhará.
 
 Você pode permitir que o gráfico de áudio use o dispositivo de renderização de áudio padrão ou usar a classe [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) para obter uma lista dos dispositivos de renderização de áudio disponíveis no sistema chamando [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) e passando o seletor de dispositivo de renderização de áudio retornado por [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817). É possível escolher um dos objetos **DeviceInformation** retornados programaticamente ou mostrar a interface do usuário para permitir que o usuário selecione um dispositivo e, em seguida, usá-lo para definir a propriedade [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524).
@@ -80,7 +80,7 @@ Um nó de entrada de dispositivo passa áudio para o gráfico a partir de um dis
 
 [!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
 
-Se você quiser especificar um dispositivo de captura de áudio específico para o nó de entrada do dispositivo, você pode usar a classe [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) para obter uma lista de dispositivos de captura de áudio disponíveis do sistema chamando [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) e seletor de dispositivo retornado por [**Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector)de renderização passando o áudio. É possível escolher um dos objetos **DeviceInformation** retornados programaticamente ou mostrar a interface do usuário para permitir que o usuário selecione um dispositivo e, em seguida, passá-lo para [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218).
+Se você quiser especificar um dispositivo de captura de áudio específica para o nó de entrada do dispositivo, você pode usar o [ **Windows.Devices.Enumeration.DeviceInformation** ](https://msdn.microsoft.com/library/windows/apps/br225393) classe para obter uma lista de áudio de disponíveis do sistema dispositivos de captura, chamando [ **FindAllAsync** ](https://msdn.microsoft.com/library/windows/apps/br225432) e passando no seletor de dispositivo de processamento de áudio retornado pela [  **Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector). É possível escolher um dos objetos **DeviceInformation** retornados programaticamente ou mostrar a interface do usuário para permitir que o usuário selecione um dispositivo e, em seguida, passá-lo para [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218).
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 
@@ -230,7 +230,7 @@ A API do gráfico de áudio permite que você adicione efeitos de áudio a cada 
 [!code-cs[AddEffect](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddEffect)]
 
 -   Todos os efeitos de áudio implementam [**IAudioEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608044). Cada nó expõe uma propriedade **EffectDefinitions** que representa a lista de efeitos aplicados ao nó. Adicione um efeito adicionando seu objeto de definição à lista.
--   Várias classes de definição de efeito são fornecidas no namespace **Windows.Media.Audio**. Por exemplo:
+-   Várias classes de definição de efeito são fornecidas no namespace **Windows.Media.Audio**. Como por exemplo:
     -   [**EchoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn914276)
     -   [**EqualizerEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn914287)
     -   [**LimiterEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn914306)

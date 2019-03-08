@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ef1a6047a7c462961f40ae8913881125e2331bb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946877"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618261"
 ---
 # <a name="xname-attribute"></a>Atributo x:Name
 
@@ -43,9 +43,9 @@ DecimalDigit ::= '0'-'9'
 CombiningCharacter::= none
 ```
 
--   Os caracteres são restritos à faixa ASCII inferior e, mais especificamente, às letras maiúsculas e minúsculas, aos dígitos e ao caractere de sublinhado (\_) do alfabeto romano.
+-   Os caracteres são restritos para o intervalo de ASCII menor e mais especificamente para o alfabeto romano em maiusculas e minúsculas, dígitos e o sublinhado (\_) caracteres.
 -   Não há suporte à faixa de caracteres Unicode.
--   Um nome não pode começar com um dígito. As implementações de algumas ferramentas precedem um sublinhado (\_) na cadeia de caracteres quando o usuário insere um dígito como o caractere inicial, ou a ferramenta gera automaticamente valores **x:Name** com base em outros valores que incluam dígitos.
+-   Um nome não pode começar com um dígito. Algumas implementações de ferramenta preceder um caractere de sublinhado (\_) para uma cadeia de caracteres se o usuário fornece um dígito como caractere inicial ou o ferramenta poupando **X:Name** valores com base em outros valores que contêm dígitos.
 
 ## <a name="remarks"></a>Comentários
 
@@ -57,7 +57,7 @@ As ferramentas de design muitas vezes geram valores **x:Name** automaticamente p
 
 **x:Name** não pode ser definido na sintaxe do elemento da propriedade XAML ou em códigos que usam [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361). **x:Name** só pode ser definido usando sintaxe de atributo XAML em elementos.
 
-**Observação**especificamente para C++ c++ CX aplicativos, um campo de suporte para uma referência **X:Name** não é criado para o elemento raiz de um arquivo XAML ou uma página. Se você precisa mencionar o objeto raiz do code-behind C++, use outras APIs ou outro percurso de árvore. Por exemplo, você pode chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para um elemento filho nomeado conhecido e depois chamar [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
+**Observação**  especificamente para C + + c++ /CLI CX aplicativos, um campo de suporte para um **X:Name** referência não foi criada para o elemento raiz de um arquivo XAML ou página. Se você precisa mencionar o objeto raiz do code-behind C++, use outras APIs ou outro percurso de árvore. Por exemplo, você pode chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para um elemento filho nomeado conhecido e depois chamar [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
 
 ### <a name="xname-and-other-name-properties"></a>x:Name e outras propriedades de Name
 
@@ -65,9 +65,9 @@ Alguns tipos usados no XAML da UWP também têm uma propriedade chamada **Name**
 
 Se **Name** estiver disponível como uma propriedade definível em um elemento, **Name** e **x:Name** poderão ser usados de forma intercambiável em XAML, mas ocorrerá erro se os dois atributos forem especificados no mesmo elemento. Também há casos em que há uma propriedade **Name** mas que é somente leitura (como [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031)). Se essa for a situação, use sempre **x:Name** para nomear esse elemento no XAML, e o **Name** somente leitura existirá para algum cenário de código menos comum.
 
-**Observação** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) geralmente não deve ser usado como uma maneira de mudar valores originariamente definidos pelo **X:Name**, apesar de haver alguns cenários de exceções a essa regra geral. Em cenários típicos, a criação e definição de namescopes XAML é uma operação do processador XAML. A modificação de **FrameworkElement.Name** no tempo de execução pode resultar em um alinhamento inconsistente de nomenclatura de campo privado/namescope XAML, que será difícil de controlar no code-behind.
+**Observação**  [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) geralmente não deve ser usada como uma maneira de mudar valores originariamente definidos por **x:Name**, apesar de haver alguns cenários de exceção a essa regra geral. Em cenários típicos, a criação e definição de namescopes XAML é uma operação do processador XAML. A modificação de **FrameworkElement.Name** no tempo de execução pode resultar em um alinhamento inconsistente de nomenclatura de campo privado/namescope XAML, que será difícil de controlar no code-behind.
 
 ### <a name="xname-and-xkey"></a>x:Name e x:Key
 
-**x:Name** pode ser aplicado como um atributo aos elementos em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) para atuar como substituto do [atributo x:Key](x-key-attribute.md). (É regra que todos os elementos em uma **ResourceDictionary** deve ser um atributo x:Key ou x:Name). Isso é comum para [animações Storyboarded](https://msdn.microsoft.com/library/windows/apps/mt187354). Para obter mais informações, consulte a seção de [Referências de ResourceDictionary e recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
+**x:Name** pode ser aplicado como um atributo aos elementos em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) para atuar como substituto do [atributo x:Key](x-key-attribute.md). (A regra é que todos os elementos em uma **ResourceDictionary** deve ter um atributo X:Key ou X:Name.) Isso é comum para [Storyboarded animações](https://msdn.microsoft.com/library/windows/apps/mt187354). Para obter mais informações, consulte a seção de [Referências de ResourceDictionary e recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
 

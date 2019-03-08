@@ -5,11 +5,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
 ms.openlocfilehash: 49662d476d6d022ca05d53e9358fc547fda92a32
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945007"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625661"
 ---
 # <a name="cpusets-for-game-development"></a>CPUSets para desenvolvimento de jogos
 
@@ -47,7 +47,7 @@ Cada instância do **SYSTEM_CPU_SET_INFORMATION** retornado contém informaçõe
 
 As informações em cada instância dessa estrutura de dados retornados do **GetSystemCpuSetInformation** contêm informações sobre uma unidade de processamento exclusiva na qual os threads podem ser agendados. Devido à possível variedade de dispositivos de destino, muitas informações na estrutura de dados **SYSTEM_CPU_SET_INFORMATION** podem não ser aplicáveis ao desenvolvimento de jogos. A Tabela 1 fornece uma explicação sobre os membros de dados que são úteis para o desenvolvimento de jogos.
 
- **Tabela 1. Membros de dados úteis para o desenvolvimento de jogos.**
+ **Tabela 1. Membros de dados útil para desenvolvimento de jogos.**
 
 | Nome do membro  | Tipo de dados | Descrição |
 | ------------- | ------------- | ------------- |
@@ -64,15 +64,15 @@ Os outros membros de dados fornecem informações que é improvável que descrev
 
 Veja a seguir alguns exemplos do tipo de informações coletadas dos aplicativos UWP em execução em vários tipos de hardware.
 
-**Tabela 2. Informações retornadas de um aplicativo UWP em execução em um Microsoft Lumia 950. Este é um exemplo de um sistema que tem vários caches de último nível. O Lumia 950 apresenta um processo do Qualcomm 808 Snapdragon que contém uma CPU ARM Cortex A57 dual core e CPUs ARM Cortex A53 quad core.**
+**Tabela 2. Informações retornadas de um aplicativo UWP em execução em um Microsoft Lumia 950. Este é um exemplo de um sistema que tem vários caches de último nível. O Lumia 950 apresenta um processo Qualcomm 808 Snapdragon que contém um ARM Cortex A57 dual-core e quad-core ARM Cortex A53 CPUs.**
 
   ![Tabela 2](images/cpusets-table2.png)
 
-**Tabela 3. Informações retornadas de um aplicativo UWP em execução em um computador típico. Este é um exemplo de um sistema que usa hyperthreading; cada núcleo físico tem dois núcleos lógicos no qual os threads podem ser agendados. Nesse caso, o sistema continha uma CPU Intel Xenon E5-2620.**
+**A tabela 3. Informações retornadas de um aplicativo UWP em execução em um computador típico. Este é um exemplo de um sistema que usa hyperthreading; cada núcleo físico tem dois núcleos lógicos no qual os threads podem ser agendados. Nesse caso, o sistema continha um Intel Xenônio CPU E5-2620.**
 
   ![Tabela 3](images/cpusets-table3.png)
 
-**Tabela 4. Informações retornadas de um aplicativo UWP em execução em um Microsoft Surface Pro 4 quad core. Esse sistema tinha uma CPU Intel Core i5-6300.**
+**Tabela 4. Informações retornadas de um aplicativo UWP em execução em um Microsoft Surface Pro 4 quad core. Esse sistema tinha uma CPU de i5 6300 Intel Core.**
 
   ![Tabela 4](images/cpusets-table4.png)
 

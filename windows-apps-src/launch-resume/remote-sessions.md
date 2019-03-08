@@ -7,11 +7,11 @@ ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma
 ms.localizationpriority: medium
 ms.openlocfilehash: 3dd23603df1f1c3fac151da2aea2f8435b3ee423
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932622"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633411"
 ---
 # <a name="connect-devices-through-remote-sessions"></a>Conectar dispositivos por meio de sessões remotas
 
@@ -21,9 +21,9 @@ Sessões remotas podem ser criadas por qualquer dispositivo Windows, e qualquer 
 
 ## <a name="preliminary-setup"></a>Configuração preliminar
 
-### <a name="add-the-remotesystem-capability"></a>Adicionar funcionalidade remoteSystem
+### <a name="add-the-remotesystem-capability"></a>Adicionar a funcionalidade remoteSystem
 
-Para seu app iniciar um app em um dispositivo remoto, você deve adicionar a funcionalidade `remoteSystem` ao manifesto do conjunto de aplicativo. Você pode usar o designer de manifesto de pacote para adicioná-lo selecionando Sistema Remoto na guia **Remote System** em **Funcionalidades**, ou adicionar manualmente a linha a seguir ao arquivo _Package.appxmanifest_ do projeto.
+Para seu app iniciar um app em um dispositivo remoto, você deve adicionar a funcionalidade `remoteSystem` ao manifesto do pacote do aplicativo. Você pode usar o designer de manifesto de pacote para adicioná-lo selecionando Sistema Remoto na guia **Remote System** em **Funcionalidades**, ou adicionar manualmente a linha a seguir ao arquivo _Package.appxmanifest_ do projeto.
 
 ``` xml
 <Capabilities>
@@ -44,7 +44,7 @@ if (!RemoteSystem.IsAuthorizationKindEnabled(RemoteSystemAuthorizationKind.Anony
 
 Para alterar essa configuração, o usuário deve abrir o aplicativo de **Configurações**. No menu **Sistema** > **Experiências compartilhadas** > **Compartilhar entre dispositivos**, há uma caixa de lista suspensa na qual o usuário pode especificar com quais dispositivos o sistema pode ser compartilhado.
 
-![página de configurações de experiências compartilhadas](images/shared-experiences-settings.png)
+![página de configuração de experiências compartilhadas](images/shared-experiences-settings.png)
 
 ### <a name="include-the-necessary-namespaces"></a>Incluir os namespaces necessários
 Para usar todos os trechos de código neste guia, você precisará das seguintes instruções `using` nos seus arquivos de classe.
@@ -321,5 +321,5 @@ public async void SendMessageToListAsync(RemoteSystemSessionMessageChannel messa
 ```
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Aplicativos e dispositivos conectados (Projeto Rome)](connected-apps-and-devices.md)
-* [Referência de API de sistemas remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)
+* [Aplicativos conectados e dispositivos (projeto Roma)](connected-apps-and-devices.md)
+* [Referência da API de sistemas remota](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)

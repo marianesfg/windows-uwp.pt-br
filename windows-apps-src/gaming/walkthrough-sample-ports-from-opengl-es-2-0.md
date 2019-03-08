@@ -6,11 +6,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 6f9b424428753529e753c9fd15bbab4321fa05b4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922483"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624881"
 ---
 # <a name="walkthrough-sample-ports-from-opengl-es-20"></a>Passo a passo - exemplos de portabilidade do OpenGL ES 2.0
 
@@ -34,7 +34,7 @@ Este conjunto de tópicos mostra várias situações de portabilidade de element
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md">Como fazer a portabilidade de um renderizador OpenGL ES 2.0 simples para Direct3D 11.1</a></p></td>
+<td align="left"><p><a href="port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md">Como: um renderizador simple do OpenGL ES 2.0 ao Direct3D 11.1 da porta</a></p></td>
 <td align="left"><p>Para o primeiro exercício de portabilidade, vamos começar com noções básicas: trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de aplicativo do DirectX 11 (Windows Universal) do Visual Studio 2015.</p></td>
 </tr>
 </tbody>

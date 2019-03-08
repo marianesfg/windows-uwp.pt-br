@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use custom timestamps on your toast notifications.
+Description: Saiba como usar os carimbos de hora personalizados em suas notificações do sistema.
 title: Carimbos de data e hora personalizados em notificações do sistema
 label: Custom timestamps on toasts
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificação do sistema, carimbo de data e hora personalizado, carimbo de data e hora, notificação, central de ações
 ms.localizationpriority: medium
 ms.openlocfilehash: c18c32e1dcee5486ff6545a1db0ec8f0cd67bfae
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944485"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625811"
 ---
 # <a name="custom-timestamps-on-toasts"></a>Carimbos de data e hora personalizados em notificações do sistema
 
@@ -23,7 +23,7 @@ Por padrão, o carimbo de data e hora em notificações do sistema (visíveis na
 Como opção, você pode substituir o carimbo de data e hora pela sua data e hora personalizada para que o carimbo representa a hora que a mensagem/informações/conteúdo realmente foi criado, em vez da hora de envio da notificação. Isso também garante que as notificações aparecem na ordem correta na Central de Ações (que são organizadas por hora). Recomendamos que a maioria dos aplicativos especifique um carimbo de data e hora personalizado.
 
 > [!IMPORTANT]
-> **Requer a Atualização para Criadores e a biblioteca de Notificações 1.4.0**: você deve estar executando o build 15063 ou posterior os carimbos de data e hora personalizados. Você deve usar a versão 1.4.0 ou posterior da [Biblioteca NuGet de notificações do kit de ferramentas da comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para atribuir o carimbo de data e hora ao conteúdo da notificação do sistema.
+> **Requer a atualização para criadores e 1.4.0 da biblioteca de notificações**: Você deve estar executando build 15063 ou superior para ver os carimbos de hora personalizados. Você deve usar a versão 1.4.0 ou posterior da [Biblioteca NuGet de notificações do kit de ferramentas da comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para atribuir o carimbo de data e hora ao conteúdo da notificação do sistema.
 
 Para usar um carimbo de hora personalizado, atribua a propriedade **DisplayTimestamp** ao **ToastContent**.
 
@@ -68,4 +68,4 @@ Se você enviou uma notificação local, usamos a hora em que a plataforma de no
 ## <a name="related-topics"></a>Tópicos relacionados
 
 - [Enviar uma notificação do sistema local](send-local-toast.md)
-- [Conteúdo e documentação sobre notificações do sistema](adaptive-interactive-toasts.md)
+- [Documentação de conteúdo de notificação do sistema](adaptive-interactive-toasts.md)

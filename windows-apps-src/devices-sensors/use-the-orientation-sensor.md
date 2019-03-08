@@ -1,22 +1,22 @@
 ---
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
-title: Usar sensor de orientação
+title: Usar o sensor de orientação
 description: Saiba como usar os sensores de orientação para determinar a orientação do dispositivo.
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4426cbc2e2d3c6e7d980b0733b6deb5178025abb
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114612"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624091"
 ---
 # <a name="use-the-orientation-sensor"></a>Usar o sensor de orientação
 
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371)
@@ -29,11 +29,11 @@ ms.locfileid: "9114612"
 
 Saiba como usar os sensores de orientação para determinar a orientação do dispositivo.
 
-Existem dois tipos diferentes de APIs de sensor de orientação no namespace [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408): [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) e [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399). Embora os dois sensores sejam sensores de orientação, esse termo é superestimado e eles são usados para fins bem diferentes. No entanto, como os dois são sensores de orientação, eles são abordados neste artigo.
+Há dois tipos diferentes de sensor de orientação APIs incluídas na [ **Windows.Devices.Sensors** ](https://msdn.microsoft.com/library/windows/apps/BR206408) namespace: [**OrientationSensor** ](https://msdn.microsoft.com/library/windows/apps/BR206371) e [ **SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399). Embora os dois sensores sejam sensores de orientação, esse termo é superestimado e eles são usados para fins bem diferentes. No entanto, como os dois são sensores de orientação, eles são abordados neste artigo.
 
-A API do [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) é usada para que aplicativos 3D obtenham um quatérnion e uma matriz de rotação. Um quatérnion pode ser mais fácil de compreender do que um ponto de rotação \[x,y,z\] sobre um eixo arbitrário (em comparação com uma matriz de rotação que representa rotações em torno de três eixos). A matemática oculta nos quatérnions é um pouco exótica, já que envolve as propriedades geométricas de números complexos e as propriedades matemáticas de números imaginários, mas trabalhar com elas é simples e estruturas como DirectX têm suporte para elas. Um aplicativo 3-D complexo pode usar o Sensor de orientação para ajustar a perspectiva do usuário. Esse sensor combina a entrada do acelerômetro, do girômetro e da bússola.
+A API do [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) é usada para que aplicativos 3D obtenham um quatérnion e uma matriz de rotação. Um quatérnion pode ser mais facilmente entendido como uma rotação de um ponto \[x, y, z\] sobre um eixo arbitrário (contrastado com uma matriz de rotação, que representa as rotações em torno de três eixos). A matemática oculta nos quatérnions é um pouco exótica, já que envolve as propriedades geométricas de números complexos e as propriedades matemáticas de números imaginários, mas trabalhar com elas é simples e estruturas como DirectX têm suporte para elas. Um aplicativo 3-D complexo pode usar o Sensor de orientação para ajustar a perspectiva do usuário. Esse sensor combina a entrada do acelerômetro, do girômetro e da bússola.
 
-A API do [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) é usada para determinar a orientação do dispositivo atual em termos de definições como retrato para cima, retrato para baixo, paisagem à esquerda e paisagem à direita. Ela também pode detectar se um dispositivo está voltado para cima ou para baixo. Em vez de retornar propriedades como "portrait-up" ou "landscape left", este sensor retorna um valor de rotação: "Not rotated", "Rotated90DegreesCounterclockwise", etc. A tabela a seguir mapeia as propriedades comuns de orientação à leitura correspondente do sensor.
+A API do [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) é usada para determinar a orientação do dispositivo atual em termos de definições como retrato para cima, retrato para baixo, paisagem à esquerda e paisagem à direita. Ela também pode detectar se um dispositivo está voltado para cima ou para baixo. Em vez de retornar propriedades como "retrato backup" ou "paisagem à esquerda", esse sensor retorna um valor de rotação: "Não é girado", "Rotated90DegreesCounterclockwise" e assim por diante. A tabela a seguir mapeia as propriedades comuns de orientação à leitura correspondente do sensor.
 
 | Orientação     | Leitura correspondente do sensor      |
 |-----------------|-----------------------------------|
@@ -44,7 +44,7 @@ A API do [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você deve estar familiarizado com Extensible Application Markup Language (XAML), Microsoft VisualC c# e eventos.
+Você deve estar familiarizado com o Extensible Application Markup Language (XAML), Microsoft Visual C#e eventos.
 
 O dispositivo ou emulador que você estiver usando deve ser compatível com um sensor de orientação.
 
@@ -129,7 +129,7 @@ Esta seção está dividida em duas subseções. A primeira subseção levará v
     }
 ```
 
-Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **OrientationSensorCS**, pode substituir `namespace App1` por `namespace OrientationSensorCS`.
+Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **OrientationSensorCS**, poderá substituir `namespace App1` por `namespace OrientationSensorCS`.
 
 -   Abra o arquivo MainPage.xaml e substitua o conteúdo original pelo XML abaixo.
 
@@ -193,7 +193,7 @@ O aplicativo estabelece conexão com o sensor de orientação padrão no método
 _sensor = OrientationSensor.GetDefault();
 ```
 
-O aplicativo estabelece o intervalo de relatório **MainPage**. Esse código recupera o intervalo mínimo com suporte do dispositivo e o compara com um intervalo solicitado de 16 milissegundos (aproximadamente a uma taxa de atualização de 60 Hz). Se o intervalo mínimo suportado for maior que o intervalo solicitado, o código definirá valor mínimo. Do contrário, ele definirá o valor para o intervalo solicitado.
+O aplicativo estabelece o intervalo de relatório **MainPage**. Esse código recupera o intervalo mínimo com suporte do dispositivo e o compara com um intervalo solicitado de 16 milissegundos (aproximadamente a uma taxa de atualização de 60 Hz). Se o intervalo mínimo suportado for maior que o intervalo solicitado, o código definirá valor mínimo. Caso contrário, ele definirá o valor para o intervalo solicitado.
 
 ```csharp
 uint minReportInterval = _sensor.MinimumReportInterval;
@@ -299,7 +299,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
     }
 ```
 
-Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **SimpleOrientationCS**, pode substituir `namespace App1` por `namespace SimpleOrientationCS`.
+Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **SimpleOrientationCS**, poderá substituir `namespace App1` por `namespace SimpleOrientationCS`.
 
 -   Abra o arquivo MainPage.xaml e substitua o conteúdo original pelo XML abaixo.
 

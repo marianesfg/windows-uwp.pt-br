@@ -1,5 +1,5 @@
 ---
-Description: Product declarations help make sure your app is displayed appropriately in the Microsoft Store and offered to the right set of customers.
+Description: Declarações de produto ajudar a garantir que seu aplicativo é exibido corretamente na Microsoft Store e oferecido para o conjunto certo de clientes.
 title: Declarações de produto
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ms.date: 10/31/2018
@@ -7,21 +7,21 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e17fbd81c84ca4ce72d36dbabf9991fe8c6d75d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935970"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611781"
 ---
 # <a name="product-declarations"></a>Declarações de produto
 
-A seção de **declarações de produto** da página [Propriedades](enter-app-properties.md) do [processo de envio](app-submissions.md) de ajuda certificar-se de que seu aplicativo é exibido adequadamente e oferecido ao conjunto correto do clientes, ajudando-os a entender como eles podem usar seu aplicativo.
+O **declarações de produto** seção o [propriedades](enter-app-properties.md) página da [processo de envio](app-submissions.md) ajuda a assegurar que seu aplicativo é exibido adequadamente e oferecido para o conjunto certo de clientes e ajuda a compreender como eles podem usar seu aplicativo.
 
-As seções a seguir descrevem algumas das declarações e o que você precisa considerar ao determinar se cada declaração se aplica ao seu aplicativo. Observe que dois essas declarações são verificadas por padrão (conforme descrito abaixo.) Dependendo da categoria do produto, você também pode ver declarações adicionais. Certifique-se de revisar todas as declarações e garantir que eles refletem com precisão seu envio.
+As seções a seguir descrevem algumas das declarações e o que você precisa considerar ao determinar se cada declaração se aplica ao seu aplicativo. Observe que duas dessas declarações são verificadas por padrão (conforme descrito abaixo.) Dependendo da categoria do produto, você também pode ver declarações adicionais. Certifique-se de examinar todas as declarações e garantir que reflitam seu envio.
 
-## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Este aplicativo permite que os usuários façam compras, mas não usa o sistema de comércio da Microsoft Store.
+## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Esse aplicativo permite que os usuários fazer compras, mas não usa o sistema de comércio do Microsoft Store.
 
-Para praticamente todas envio, você deve deixar essa caixa desmarcada, desde que os aplicativos que oferecem oportunidades para comprar itens que são ou podem ser consumidos ou usados dentro de seu aplicativo devem usar a API de compra no aplicativo Microsoft Store para criar e enviar os complementos. Por [Contrato de desenvolvedor](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), aplicativos que foram criados e enviados antes de 29 de junho de 2015, poderiam continuar oferecendo a funcionalidade de compra no aplicativo sem usar o mecanismo de comércio da Microsoft, desde que a funcionalidade de compra esteja em conformidade com o [ Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Se isso se aplica ao seu aplicativo, você deve marcar esta caixa. Caso contrário, deixe-a desmarcada.
+Para quase todos envio, você deve deixar essa caixa desmarcada, desde aplicativos que oferecem oportunidades para comprar os itens que são ou podem ser consumidos ou usados dentro de seu aplicativo devem usar a API as compras no aplicativo Microsoft Store para criar e enviar os complementos. Pela [contrato de desenvolvedor do aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), aplicativos que foram criados e enviados antes de 29 de junho de 2015, foi possível continuar a oferecer a funcionalidade de compra no aplicativo sem usar o mecanismo de comércio da Microsoft, como a funcionalidade de compra, desde está em conformidade com o [Microsoft Store políticas](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Se isso se aplica ao seu aplicativo, você deve marcar esta caixa. Caso contrário, deixe-a desmarcada.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>Este aplicativo foi testado para atender às diretrizes de acessibilidade.
 
@@ -37,16 +37,16 @@ Você só deve marcar essa caixa se tiver feito todas as seguintes tarefas:
 
 Ao declarar seu aplicativo como acessível, você concorda que o aplicativo é acessível para todos os clientes, inclusive pessoas com necessidades especiais. Por exemplo, isso significa que você testou o aplicativo com modo de alto contraste e com um leitor de tela. Você também verificou que a interface de usuário funciona corretamente com um teclado, a Lupa e outras ferramentas de acessibilidade.
 
-Para obter mais informações, consulte [acessibilidade](../design/accessibility/accessibility.md), [testes de acessibilidade](../design/accessibility/accessibility-testing.md)e a [acessibilidade na loja](../design/accessibility/accessibility-in-the-store.md).
+Para obter mais informações, consulte [Acessibilidade](../design/accessibility/accessibility.md), [Testes de acessibilidade](../design/accessibility/accessibility-testing.md) e [Acessibilidade na Loja](../design/accessibility/accessibility-in-the-store.md).
 
 > [!IMPORTANT]
-> Não lista seu aplicativo como acessível, a menos que você tenha especificamente a engenharia e para essa finalidade. Se seu aplicativo for declarado como acessível, mas não der suporte real à acessibilidade, você provavelmente receberá comentários negativos da comunidade.
+> Não lista seu aplicativo como acessíveis, a menos que especificamente projetado e testado para essa finalidade. Se seu aplicativo for declarado como acessível, mas não der suporte real à acessibilidade, você provavelmente receberá comentários negativos da comunidade.
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Os clientes podem instalar esse aplicativo em unidades alternativas ou armazenamento removível.
 
-Essa caixa é marcada por padrão, para permitir que os clientes instalem seu aplicativo externa ou removível mídia de armazenamento, como um cartão SD, ou em um volume do sistema não drive, como uma unidade externa.
+Essa caixa é marcada por padrão, para permitir que os clientes instalem o seu aplicativo para o armazenamento externo ou removível unidade de mídia como um cartão SD, ou para um volume não são do sistema, como uma unidade externa.
 
-Se você deseja impedir que seu aplicativo seja instalado em unidades alternativas ou armazenamento removível e permitem apenas a instalação na unidade de disco rígido interno em seus dispositivos, desmarque essa caixa. (Observe que não há nenhuma opção para restringir a instalação para que um aplicativo *só* pode ser instalado a mídia de armazenamento removível).
+Se você quiser impedir que seu aplicativo está sendo instalado em unidades alternativas ou de armazenamento removível e permitir somente a instalação para o disco rígido interno em seu dispositivo, desmarque essa caixa. (Observe que não há nenhuma opção para restringir a instalação para que um aplicativo possa *apenas* ser instalado para a mídia de armazenamento removível.)
 
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>O Windows pode incluir dados do aplicativo em backups automáticos no OneDrive.
@@ -56,9 +56,9 @@ Esta caixa é marcada por padrão, para permitir que os dados do seu aplicativo 
 Se você deseja impedir que os dados do aplicativo sejam incluídos em backups automáticos, desmarque essa caixa.
 
 
-## <a name="this-app-sends-kinect-data-to-external-services"></a>Este aplicativo envia os dados do Kinect a serviços externos. 
+## <a name="this-app-sends-kinect-data-to-external-services"></a>Esse aplicativo envia dados do Kinect a serviços externos. 
 
-Se seu aplicativo usa os dados do Kinect e envia para qualquer serviço externo, você deve marcar essa caixa.
+Se seu aplicativo usa dados do Kinect e o envia a qualquer serviço externo, marque essa caixa.
 
 
 

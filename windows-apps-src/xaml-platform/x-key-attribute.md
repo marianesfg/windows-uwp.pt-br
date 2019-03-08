@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 407ceeb4964e616bdbcacb14620ed1a488a0072b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924766"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618211"
 ---
-# <a name="xkey-attribute"></a>atributo x:Key
+# <a name="xkey-attribute"></a>Atributo x:Key
 
 
 Identifica de forma exclusiva os elementos que são criados e referenciados como origens e que existem em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794).
@@ -54,7 +54,7 @@ DecimalDigit ::= '0'-'9'
 CombiningCharacter::= none
 ```
 
--   Os caracteres são restritos à faixa ASCII inferior e, mais especificamente, às letras maiúsculas e minúsculas, aos dígitos e ao caractere de sublinhado (\_) do alfabeto romano.
+-   Os caracteres são restritos para o intervalo de ASCII menor e mais especificamente para o alfabeto romano em maiusculas e minúsculas, dígitos e o sublinhado (\_) caracteres.
 -   Não há suporte à faixa de caracteres Unicode.
 -   Um nome não pode começar com um dígito.
 

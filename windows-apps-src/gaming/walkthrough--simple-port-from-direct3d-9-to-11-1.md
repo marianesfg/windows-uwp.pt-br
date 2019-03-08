@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, portabilidade, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: c7569c6b2f041f5535e0eabe934a91da86b60b9a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944705"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634221"
 ---
-# <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Passo a passo: portabilidade de um aplicativo simples em Direct3D 9 para DirectX 11 e a Plataforma Universal do Windows (UWP)
+# <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Passo a passo: Portar um aplicativo simple do Direct3D 9 DirectX 11 e plataforma Universal do Windows (UWP)
 
 
 
@@ -36,11 +36,11 @@ Este exercício de portabilidade mostra como levar uma estrutura de renderizaç�
 <td align="left"><p>Mostra como converter o código de inicialização do Direct3D 9 para o Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-2--rendering.md">Converter a estrutura de renderização</a></p></td>
+<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-2--rendering.md">Converter o framework de renderização</a></p></td>
 <td align="left"><p>Mostra como converter uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11. Saiba também como fazer a portabilidade de buffers de geometria, como compilar e carregar programas sombreadores HLSL e como implementar a cadeia de renderização no Direct3D 11.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md">Fazer a portabilidade do loop do jogo</a></p></td>
+<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md">O loop do jogo da porta</a></p></td>
 <td align="left"><p>Mostra como implementar uma janela para um jogo UWP e como ativar o loop do jogo, inclusive como criar uma <a href="https://msdn.microsoft.com/library/windows/apps/hh700478"><strong>IFrameworkView</strong></a> para controlar uma <a href="https://msdn.microsoft.com/library/windows/apps/br208225"><strong>CoreWindow</strong></a> em tela inteira.</p></td>
 </tr>
 </tbody>
@@ -68,7 +68,7 @@ Observe que este passo a passo usa [**CoreWindow**](https://msdn.microsoft.com/l
 ## <a name="prerequisites"></a>Pré-requisitos
 
 
-Você deve [preparar seu ambiente para o desenvolvimento do jogo da UWP em DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Você ainda não precisa de um modelo, mas você precisará Microsoft Visual Studio2015 carregue os exemplos de código neste passo a passo.
+Você deve [preparar seu ambiente para o desenvolvimento do jogo da UWP em DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Não é necessário um modelo ainda, mas será necessário o Microsoft Visual Studio 2015 para carregar os exemplos de código para este passo a passo.
 
 Visite o tópico sobre [conceitos e considerações sobre portabilidade](porting-considerations.md) para conhecer melhor os conceitos de programação do DirectX 11 e da UWP mostrados neste guia.
 
@@ -77,10 +77,10 @@ Visite o tópico sobre [conceitos e considerações sobre portabilidade](porting
 **Direct3D**
 
 * [Escrevendo sombreadores HLSL no Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
-* [Modelos de projeto de jogo DirectX](user-interface.md)
+* [Modelos de projeto de jogo do DirectX](user-interface.md)
 
 **Microsoft Store**
 
 * [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
-* [**Identificador para o operador de objeto (^)**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)
+* [**Operador Handle to Object (^)**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)
 

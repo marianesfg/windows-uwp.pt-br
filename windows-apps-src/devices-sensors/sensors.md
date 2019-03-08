@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c29673a0b41b4f071d438f0c03255c2d73831dc5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946867"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626791"
 ---
 # <a name="sensors"></a>Sensores
 
@@ -24,13 +24,13 @@ Como regra geral, decida desde o princípio se o seu aplicativo irá depender ex
 | Tópico                                                       | Descrição  |
 |-------------------------------------------------------------|--------------|
 | [Calibrar sensores](calibrate-sensors.md)                   | Sensores em um dispositivo baseado no magnetômetro (bússola, inclinômetro e sensor de orientação) podem precisar de calibragem devido a fatores ambientais. A enumeração [<strong>MagnetometerAccuracy</strong>](https://msdn.microsoft.com/library/windows/apps/Dn297552) pode ajudar a determinar um curso de ação quando seu dispositivo precisar de calibração. |
-| [Orientação do sensor](sensor-orientation.md)                 | Os dados do sensor das classes [<strong>OrientationSensor</strong>](https://msdn.microsoft.com/library/windows/apps/BR206371) e são definidos por seus eixos de referência. Esses eixos são definidos pela orientação paisagem do dispositivo e giram com o dispositivo conforme o usuário o vira. |
-| [Usar o acelerômetro](use-the-accelerometer.md)           | Saiba como usar o acelerômetro para responder ao movimento do usuário. |
-| [Usar a bússola](use-the-compass.md)                       | Saiba como usar a bússola para determinar a direção atual. |
-| [Usar o girômetro](use-the-gyrometer.md)                   | Saiba como usar o girômetro para detectar mudanças no movimento do usuário. | 
-| [Usar o inclinômetro](use-the-inclinometer.md)             | Saiba como usar o inclinômetro para determinar a rotação sobre o eixo x, a rolagem e a rotação sobre o eixo y. |
+| [Orientação de sensor](sensor-orientation.md)                 | Os dados do sensor das classes [<strong>OrientationSensor</strong>](https://msdn.microsoft.com/library/windows/apps/BR206371) e são definidos por seus eixos de referência. Esses eixos são definidos pela orientação paisagem do dispositivo e giram com o dispositivo conforme o usuário o vira. |
+| [Use o acelerômetro](use-the-accelerometer.md)           | Saiba como usar o acelerômetro para responder ao movimento do usuário. |
+| [Use a bússola](use-the-compass.md)                       | Saiba como usar a bússola para determinar a direção atual. |
+| [Use o girômetro](use-the-gyrometer.md)                   | Saiba como usar o girômetro para detectar mudanças no movimento do usuário. | 
+| [Use o inclinômetro](use-the-inclinometer.md)             | Saiba como usar o inclinômetro para determinar a rotação sobre o eixo x, a rolagem e a rotação sobre o eixo y. |
 | [Usar o sensor de luz](use-the-light-sensor.md)             | Aprenda a usar o sensor de luz ambiente para detectar alterações na iluminação. |
-| [Usar sensor de orientação](use-the-orientation-sensor.md) | Saiba como usar os sensores de orientação para determinar a orientação do dispositivo.|
+| [Usar o sensor de orientação](use-the-orientation-sensor.md) | Saiba como usar os sensores de orientação para determinar a orientação do dispositivo.|
 
 ## <a name="sensor-batching"></a>Envio em lote de sensor
 
@@ -108,7 +108,7 @@ O sensor [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR22
 
 Os aplicativos que alteram sua exibição para corresponder à orientação do dispositivo podem usar o sensor do inclinômetro. Além disso, um aplicativo que exibe um avião que corresponde à rotação sobre o eixo y, rotação sobre o eixo x e rolagem do dispositivo devem usar também as leituras do inclinômetro.
 
-Para um exemplo de implementação, consulte o exemplo de inclinômetro [https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
+Para um exemplo de implementação, consulte o exemplo de inclinômetro [ https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer ](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
 
 ## <a name="light-sensor"></a>Sensor de luz
 

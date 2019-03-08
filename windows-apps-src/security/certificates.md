@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ee96628fd90ec9eea998abf312c5da11bff3826
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937411"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624351"
 ---
 # <a name="intro-to-certificates"></a>Introdução a certificados
 
@@ -22,7 +22,7 @@ Este artigo discute o uso de certificados em aplicativos da Plataforma Universal
 
 ### <a name="shared-certificate-stores"></a>Repositórios de certificados compartilhados
 
-Aplicativos UWP usam o novo aplicativo isolationist introduzido no Windows8. Nesse modelo, os aplicativos são executados em uma construção do sistema operacional de baixo nível, chamada de contêiner de aplicativo, que proíbe o aplicativo de acessar recursos ou arquivos fora de si mesmo, a menos que haja permissão explícita para fazer isso. As seções a seguir descrevem as implicações que isso tem na infraestrutura de chave pública (PKI).
+Aplicativos UWP usam o novo modelo de aplicativo do excesso introduzido no Windows 8. Nesse modelo, os aplicativos são executados em uma construção do sistema operacional de baixo nível, chamada de contêiner de aplicativo, que proíbe o aplicativo de acessar recursos ou arquivos fora de si mesmo, a menos que haja permissão explícita para fazer isso. As seções a seguir descrevem as implicações que isso tem na infraestrutura de chave pública (PKI).
 
 ### <a name="certificate-storage-per-app-container"></a>Repositório de certificados por contêiner de aplicativo
 
@@ -61,11 +61,11 @@ Alguns destes campos e extensões podem ser especificados diretamente quando voc
 |-------|-------------|
 | Versão | Especifica o número de versão do certificado codificado. Atualmente, os possíveis valores desse campo são 0, 1 ou 2. |
 | Número de Série | Contém um inteiro positivo único atribuído pela AC (autoridade de certificação) para o certificado. |
-| Algoritmo de Assinatura | Contém um OID (identificador de objeto) que especifica o algoritmo usado pela AC para assinar o certificado. Por exemplo, 1.2.840.113549.1.1.5 especifica um algoritmo de hash SHA-1 combinado com o algoritmo de criptografia RSA da RSA Laboratories. |
+| Algoritmo de assinatura | Contém um OID (identificador de objeto) que especifica o algoritmo usado pela AC para assinar o certificado. Por exemplo, 1.2.840.113549.1.1.5 especifica um algoritmo de hash SHA-1 combinado com o algoritmo de criptografia RSA da RSA Laboratories. |
 | Emissor | Contém o DN (nome diferenciado) X.500 da CA que criou e assinou o certificado. |
 | Validade | Especifica o intervalo de tempo durante o qual o certificado é válido. As datas até o final de 2049 usam o formato de Tempo Universal Coordenado (Hora de Greenwich) (yymmddhhmmssz). As datas a partir de 1º de janeiro de 2050 usam o formato de tempo genérico (yyyymmddhhmmssz). |
-| Requerente | Contém um nome diferenciado X.500 da entidade associada à chave pública contida no certificado. |
-| Chave Pública | Contém a chave pública e as informações de algoritmo associadas. |
+| Assunto | Contém um nome diferenciado X.500 da entidade associada à chave pública contida no certificado. |
+| Chave pública | Contém a chave pública e as informações de algoritmo associadas. |
 
 ### <a name="version-2-fields"></a>Campos da versão 2
 
@@ -82,18 +82,18 @@ Um certificado X.509 versão 3 contém os campos definidos na versão 1 e 2, e a
 
 | Campo  | Descrição |
 |--------|-------------|
-| Identificador da Chave da Autoridade | Identifica a chave pública da autoridade de certificação (AC) que corresponde à chave privada da AC usada para assinar o certificado. |
+| Identificador da chave da autoridade | Identifica a chave pública da autoridade de certificação (AC) que corresponde à chave privada da AC usada para assinar o certificado. |
 | Restrições Básicas | Especifica se a entidade pode ser usada como AC e, em caso afirmativo, o número de ACs subordinadas que podem existir abaixo dela na cadeia de certificados. |
-| Políticas de Certificado | Especifica as políticas sob as quais o certificado foi emitido e as finalidades para as quais ele pode ser usado. |
+| Políticas de certificado | Especifica as políticas sob as quais o certificado foi emitido e as finalidades para as quais ele pode ser usado. |
 | Pontos de Distribuição de CRL | Contém o URI da lista de certificados revogados (CRL) de base. |
-| Uso Avançado de Chave | Especifica a maneira na qual a chave pública contida no certificado pode ser usada. |
+| Uso avançado de chave | Especifica a maneira na qual a chave pública contida no certificado pode ser usada. |
 | Nome Alternativo para o Emissor | Especifica uma ou mais formas de nome alternativas para o emissor da solicitação de certificado. |
-| Uso de Chave | Especifica restrições nas operações que podem ser executadas pela chave pública contida no certificado.|
+| Uso de chave | Especifica restrições nas operações que podem ser executadas pela chave pública contida no certificado.|
 | Restrições de Nome  | Especifica o namespace dentro do qual todos os nomes de entidades em uma hierarquia de certificados devem estar localizados. A extensão é usada somente em um certificado de AC. |
 | Restrições de Política | Restringe a validação do caminho, proibindo o mapeamento de política ou exigindo que cada certificado na hierarquia contenha um identificador de política aceitável. A extensão é usada somente em um certificado de AC. |
 | Mapeamentos de Política | Especifica as políticas em uma AC subordinada que correspondem às políticas na AC emissora. |
 | Período de Uso da Chave Privada | Especifica um período de validade para a chave privada diferente do período para o certificado com o qual a chave privada está associada. |
-| Nome Alternativo para a Entidade | Especifica uma ou mais formas de nome alternativas para a entidade da solicitação de certificado. Dentre os exemplos de formas alternativas incluem-se endereços de email, nomes DNS, endereços IP e URIs. |
+| Nome alternativo do assunto | Especifica uma ou mais formas de nome alternativas para a entidade da solicitação de certificado. Dentre os exemplos de formas alternativas incluem-se endereços de email, nomes DNS, endereços IP e URIs. |
 | Atributos do Diretório de Entidade | Expressa atributos de identificação, como a nacionalidade da entidade do certificado. O valor da extensão é uma sequência de pares de valores OID. |
-| Identificador da Chave da Entidade | Diferencia entre várias chaves públicas mantidas pela entidade do certificado. O valor da extensão é geralmente um hash SHA-1 da chave. |
+| Identificador da chave de assunto | Diferencia entre várias chaves públicas mantidas pela entidade do certificado. O valor da extensão é geralmente um hash SHA-1 da chave. |
 

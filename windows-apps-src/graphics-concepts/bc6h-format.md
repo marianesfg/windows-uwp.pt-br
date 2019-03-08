@@ -1,36 +1,36 @@
 ---
-title: Formato BC6H
+title: Formato de BC6H
 description: O formato BC6H é um formato de compactação de textura projetado para dar suporte a espaços de cores de intervalo altamente dinâmico (HDR) nos dados de origem.
 ms.assetid: 6781D967-9262-4EE7-B354-7A6D0EA0498E
 keywords:
-- Formato BC6H
+- Formato de BC6H
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f147f4c30d2a662806df5928fc79178522b9b6a6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939722"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633091"
 ---
-# <a name="bc6h-format"></a>Formato BC6H
+# <a name="bc6h-format"></a>Formato de BC6H
 
 
 O formato BC6H é um formato de compactação de textura projetado para dar suporte a espaços de cores de intervalo altamente dinâmico (HDR) nos dados de origem.
 
-## <a name="span-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanabout-bc6hdxgiformatbc6h"></a><span id="About-BC6H-DXGI-FORMAT-BC6H"></span><span id="about-bc6h-dxgi-format-bc6h"></span><span id="ABOUT-BC6H-DXGI-FORMAT-BC6H"></span>Sobre BC6H/DXGI\_FORMAT\_BC6H
+## <a name="span-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanabout-bc6hdxgiformatbc6h"></a><span id="About-BC6H-DXGI-FORMAT-BC6H"></span><span id="about-bc6h-dxgi-format-bc6h"></span><span id="ABOUT-BC6H-DXGI-FORMAT-BC6H"></span>Sobre BC6H/DXGI\_formato\_BC6H
 
 
 O formato BC6H fornece compactação de alta qualidade para imagens que usam canais de cor HDR, com um valor de 16 bits para cada canal de cor do valor (16: 16:16). Não há nenhum suporte para um canal alfa.
 
-BC6H é especificado pelos seguintes valores de enumeração DXGI\_FORMAT:
+BC6H é especificado pelo DXGI seguir\_Formatar valores de enumeração:
 
 -   **DXGI\_FORMAT\_BC6H\_TYPELESS**.
 -   **DXGI\_FORMAT\_BC6H\_UF16**. Esse formato BC6H não usa um bit de sinal nos valores de canal de cor da ponto flutuante de 16 bits.
 -   **DXGI\_FORMAT\_BC6H\_SF16**. Esse formato BC6H usa um bit de sinal nos valores de canal de cor da ponto flutuante de 16 bits.
 
-**Observação**  o flutuante de 16 formato de ponto de canais de cor é geralmente conhecido como um "parcial" ponto flutuante formato. Esse formato tem o seguinte layout de bit:
+**Observação**    o flutuante formato de ponto para canais de cores de 16 bits é conhecido como formato de ponto de flutuante "meio". Esse formato tem o seguinte layout de bit:
 |                       |                                                 |
 |-----------------------|-------------------------------------------------|
 | UF16 (float não assinado) | 5 bits de expoente + 11 bits de mantissa              |
@@ -46,12 +46,12 @@ O BC6H usa um tamanho de bloco fixo de 16 bytes (128 bits) e um tamanho de bloco
 
 Advertências com o formato BC6H:
 
--   O BC6H suporta a denormalization de ponto flutuante, mas não suporta INF (infinito) e NaN (não numérico). A exceção é o modo assinado de BC6H (DXGI\_FORMAT\_BC6H\_SF16), que dá suporte a -INF (infinito negativo). Esse suporte para -INF é simplesmente um artefato do formato em si e não é especificamente permitido pela codificadores para esse formato. Em geral, quando um codificador encontra dados de sinal INF (positivo ou negativo) ou NaN, o codificador deve converter os dados para o valor de representação não INF máximo permitido, e mapear NaN como 0 antes da compactação.
+-   O BC6H suporta a denormalization de ponto flutuante, mas não suporta INF (infinito) e NaN (não numérico). A exceção é o modo de com sinal de BC6H (DXGI\_formato\_BC6H\_SF16), que oferece suporte a -INF (infinito negativo). Esse suporte para -INF é simplesmente um artefato do formato em si e não é especificamente permitido pela codificadores para esse formato. Em geral, quando um codificador encontra dados de sinal INF (positivo ou negativo) ou NaN, o codificador deve converter os dados para o valor de representação não INF máximo permitido, e mapear NaN como 0 antes da compactação.
 -   O BC6H não oferece suporte a um canal alfa.
 -   O decodificador BC6H executa descompactação antes de realizar a filtragem de textura.
 -   A descompactação do BC6H deve ter precisão de bit, ou seja, o hardware deve retornar resultados que são idênticos ao decodificador descrito nesta documentação.
 
-## <a name="span-idbc6h-implementationspanspan-idbc6h-implementationspanspan-idbc6h-implementationspanbc6h-implementation"></a><span id="BC6H-implementation"></span><span id="bc6h-implementation"></span><span id="BC6H-IMPLEMENTATION"></span>Implementação do BC6H
+## <a name="span-idbc6h-implementationspanspan-idbc6h-implementationspanspan-idbc6h-implementationspanbc6h-implementation"></a><span id="BC6H-implementation"></span><span id="bc6h-implementation"></span><span id="BC6H-IMPLEMENTATION"></span>Implementação de BC6H
 
 
 Um bloco de BC6H consiste em bits de modo, pontos de extremidade compactados, índices compactados e um índice de partição opcional. Esse formato especifica 14 modos diferentes.
@@ -60,7 +60,7 @@ Uma cor de ponto de extremidade é armazenada como um trio RGB. O BC6H define um
 
 No caso de duas regiões, há 32 partições possíveis.
 
-## <a name="span-iddecoding-the-bc6h-formatspanspan-iddecoding-the-bc6h-formatspanspan-iddecoding-the-bc6h-formatspandecoding-the-bc6h-format"></a><span id="Decoding-the-BC6H-format"></span><span id="decoding-the-bc6h-format"></span><span id="DECODING-THE-BC6H-FORMAT"></span>Decodificar o formato BC6H
+## <a name="span-iddecoding-the-bc6h-formatspanspan-iddecoding-the-bc6h-formatspanspan-iddecoding-the-bc6h-formatspandecoding-the-bc6h-format"></a><span id="Decoding-the-BC6H-format"></span><span id="decoding-the-bc6h-format"></span><span id="DECODING-THE-BC6H-FORMAT"></span>Decodificação de formato BC6H
 
 
 O pseudocódigo a seguir mostra as etapas para descompactar o pixel em (x, y) que recebe o bloco de 16 bytes BC6H.
@@ -135,7 +135,7 @@ Nesta tabela de conjuntos de partição, a entrada em negrito e sublinhada é o 
 
 ![campos de bit para formatos de ponto de extremidade bc6h compactado](images/bc6h-headers-med.png)
 
-Esta tabela mostra os campos de bit para os pontos de extremidade compactados como uma função de formato de ponto de extremidade, com cada coluna especificando uma codificação e cada linha especificando um campo de bit. Essa abordagem ocupa 82 bits para blocos de duas regiões e 65 bits para blocos de uma região. Por exemplo, os primeiros 5 bits para a codificação de uma região \[16 4\] acima (especificamente, a coluna mais à direita) são bits m\[4:0\], os próximos 10 bits são bits rw\[9:0\] e assim por diante com os últimos bits 6 contendo bw\[10:15\].
+Esta tabela mostra os campos de bit para os pontos de extremidade compactados como uma função de formato de ponto de extremidade, com cada coluna especificando uma codificação e cada linha especificando um campo de bit. Essa abordagem ocupa 82 bits para blocos de duas regiões e 65 bits para blocos de uma região. Por exemplo, os primeiros 5 bits para a região de um \[16 4\] codificação acima (especificamente, a coluna mais à direita) são bits m\[4:0\], os 10 bits são bits rw\[9:0\]e assim por diante com os últimos 6 bits contendo bw\[10:15\].
 
 Os nomes dos campos na tabela acima são definidos da seguinte maneira:
 
@@ -158,11 +158,11 @@ Os nomes dos campos na tabela acima são definidos da seguinte maneira:
 
  
 
-Endpt\[i\], onde i é 0 ou 1, refere-se ao conjunto de pontos de extremidade de número 0 ou 1 respectivamente.
+Endpt\[eu\], onde i é 0 ou 1, refere-se para o conjunto de pontos de extremidade 0º ou 1º dia, respectivamente.
 ## <a name="span-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspansign-extension-for-endpoint-values"></a><span id="Sign-extension-for-endpoint-values"></span><span id="sign-extension-for-endpoint-values"></span><span id="SIGN-EXTENSION-FOR-ENDPOINT-VALUES"></span>Extensão de sinal para valores de ponto de extremidade
 
 
-Para os blocos de duas regiões, há quatro valores de ponto de extremidade que pode ter seu sinal estendido. Endpt\[0\].A é assinado somente se o formato for um formato assinado; os outros pontos de extremidade são assinados somente se o ponto de extremidade foi transformado, ou se o formato é um formato assinado. O código a seguir demonstra o algoritmo para estender o sinal dos valores de ponto de extremidade de duas regiões.
+Para os blocos de duas regiões, há quatro valores de ponto de extremidade que pode ter seu sinal estendido. Endpt\[0\]. Um é conectado somente se o formato é um formato com sinal; outros pontos de extremidade são assinados somente se o ponto de extremidade foi transformado, ou se o formato é assinado. O código a seguir demonstra o algoritmo para estender o sinal dos valores de ponto de extremidade de duas regiões.
 
 ``` syntax
 static void sign_extend_two_region(Pattern &p, IntEndpts endpts[NREGIONS_TWO])
@@ -199,19 +199,19 @@ static void sign_extend_one_region(Pattern &p, IntEndpts endpts[NREGIONS_ONE])
 ## <a name="span-idtransform-inversion-for-endpoint-valuesspanspan-idtransform-inversion-for-endpoint-valuesspanspan-idtransform-inversion-for-endpoint-valuesspantransform-inversion-for-endpoint-values"></a><span id="Transform-inversion-for-endpoint-values"></span><span id="transform-inversion-for-endpoint-values"></span><span id="TRANSFORM-INVERSION-FOR-ENDPOINT-VALUES"></span>Transformar inversão para valores de ponto de extremidade
 
 
-Para os blocos de duas regiões, a transformação aplica o inverso da codificação de diferença, adicionando o valor base em endpt\[0\].A a três outras entradas para um total de 9 operações de adição. Na imagem abaixo, o valor base é representado como "A0" e tem a maior precisão de ponto flutuante. "A1", "B0" e "B1" são todos os deltas calculados a partir do valor de âncora, e esses valores delta são representados com precisão mais baixa. (A0 corresponde ao endpt\[0\].A, B0 corresponde ao endpt\[0\].B, A1 corresponde ao endpt\[1\].A e B1 corresponde ao endpt\[1\].B.)
+Para blocos de duas regiões, a transformação aplica o inverso da diferença de codificação, adicionando o valor base em endpt\[0\]. Operações de adicionar um a três outras entradas para um total de 9. Na imagem abaixo, o valor base é representado como "A0" e tem a maior precisão de ponto flutuante. "A1", "B0" e "B1" são todos os deltas calculados a partir do valor de âncora, e esses valores delta são representados com precisão mais baixa. (A0 corresponde ao endpt\[0\]. A, B0 corresponde ao endpt\[0\]. B, A1 corresponde ao endpt\[1\]. Um e B1 corresponde ao endpt\[1\]. B.)
 
 ![cálculo dos valores de ponto de extremidade de inversão de transformação](images/bc6h-transform-inverse.png)
 
 Para blocos de uma região, há apenas um deslocamento delta e, portanto, apenas 3 operações de adição.
 
-O decompressor deve garantir que os resultados da transformação inversa não irão exceder a precisão de endpt\[0\].a. No caso de um estouro, os valores resultantes da transformação inversa devem ser encapsulados dentro do mesmo número de bits. Se a precisão de A0 for "p" bits, o algoritmo de transformação é:
+O descompactador deve garantir que os resultados do inverso transform não será estourar a precisão do endpt\[0\]. um. No caso de um estouro, os valores resultantes da transformação inversa devem ser encapsulados dentro do mesmo número de bits. Se a precisão de A0 for "p" bits, o algoritmo de transformação é:
 
 `B0 = (B0 + A0) & ((1 << p) - 1)`
 
 Para formatos assinados, os resultados do cálculo do delta também devem ter seu sinal estendido. Se a operação de extensão do sinal considerar estender ambos os sinais, onde 0 é positivo e 1 é negativo, a extensão de sinal de 0 se encarregará da vinculação acima. De maneira equivalente, após a vinculação acima, apenas um valor de 1 (negativo) precisa ter o sinal estendido.
 
-## <a name="span-idunquantization-of-color-endpointsspanspan-idunquantization-of-color-endpointsspanspan-idunquantization-of-color-endpointsspanunquantization-of-color-endpoints"></a><span id="Unquantization-of-color-endpoints"></span><span id="unquantization-of-color-endpoints"></span><span id="UNQUANTIZATION-OF-COLOR-ENDPOINTS"></span>Desquantização de pontos de extremidade de cor
+## <a name="span-idunquantization-of-color-endpointsspanspan-idunquantization-of-color-endpointsspanspan-idunquantization-of-color-endpointsspanunquantization-of-color-endpoints"></a><span id="Unquantization-of-color-endpoints"></span><span id="unquantization-of-color-endpoints"></span><span id="UNQUANTIZATION-OF-COLOR-ENDPOINTS"></span>Unquantization de pontos de extremidade de cor
 
 
 Considerando os pontos de extremidade não compactados, a próxima etapa é executar uma desquantização inicial dos pontos de extremidade de cor. Isso envolve três etapas:
@@ -249,7 +249,7 @@ void generate_palette_unquantized(UINT8 uNumIndices, int c1, int c2, int prec, U
 O exemplo de código a seguir demonstra o processo de interpolação, com as seguintes observações:
 
 -   Como a gama completa de valores de cor para a função **unquantize** (abaixo) fica entre -32768 e 65535, o interpolador é implementado usando aritmética assinada de 17 bits.
--   Após a interpolação, os valores são passados para a função **finish\_unquantize** (descrita no terceiro exemplo nesta seção), que aplica a escala final.
+-   Depois de interpolação, os valores são passados para o **terminar\_unquantize** função (descrita no terceiro exemplo nesta seção), que se aplica a colocação em escala final.
 -   Todos os descompactadores de hardware são obrigatórios para retornar resultados precisos de bit com essas funções.
 
 ``` syntax
@@ -296,7 +296,7 @@ int unquantize(int comp, int uBitsPerComp)
 }
 ```
 
-**finish\_unquantize** é chamada após a interpolação de paleta. A função **unquantize** adia o dimensionamento por 31/32 para assinado, 31/64 para não assinado. Esse comportamento é necessário para obter o valor final no intervalo de metade válido (-0x7BFF ~ 0x7BFF) após a interpolação de paleta para reduzir o número de multiplicações necessárias. **finish\_unquantize** aplica a escala final e retorna um valor **unsigned curto** que é reinterpretado em **half**.
+**terminar\_unquantize** é chamado após a interpolação da paleta. A função **unquantize** adia o dimensionamento por 31/32 para assinado, 31/64 para não assinado. Esse comportamento é necessário para obter o valor final no intervalo de metade válido (-0x7BFF ~ 0x7BFF) após a interpolação de paleta para reduzir o número de multiplicações necessárias. **terminar\_unquantize** aplica-se o dimensionamento final e retorna um **unsigned short** valor obtém reinterpretado em **metade**.
 
 ``` syntax
 unsigned short finish_unquantize(int comp)

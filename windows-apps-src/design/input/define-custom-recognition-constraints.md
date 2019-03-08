@@ -1,19 +1,19 @@
 ---
-Description: Learn how to define and use custom constraints for speech recognition.
+Description: Saiba como definir e usar restrições personalizadas para reconhecimento de fala.
 title: Definir restrições de reconhecimento personalizadas
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
-keywords: fala, voz, reconhecimento de fala, linguagem natural, ditado, entrada, interação do usuário
+keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, ditado, entrada, interação do usuário
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 539acb242cfe6ee70d1311133a3f1a193860541a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047551"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631721"
 ---
 # <a name="define-custom-recognition-constraints"></a>Definir restrições de reconhecimento personalizadas
 
@@ -34,15 +34,15 @@ Use a propriedade [**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/
 
 Aqui, abordamos os três tipos de restrições de reconhecimento de fala usados de dentro de um aplicativo. Para restrições de comando de voz, consulte [Iniciar um aplicativo em primeiro plano com comandos de voz na Cortana](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana).
 
--   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446) — Uma restrição baseada em uma gramática predefinida (ditado ou pesquisa na Web).
--   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421) — Uma restrição baseada em uma lista de palavras ou frases.
--   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412) — Uma restrição definida em um arquivo SRGS (Especificação de Gramática de Reconhecimento de Fala).
+-   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)— uma restrição com base em uma gramática predefinida (pesquisa de ditado ou web).
+-   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)— uma restrição com base em uma lista de palavras ou frases.
+-   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)— uma restrição definida em um arquivo de especificação de gramática de reconhecimento de fala (SRGS).
 
-Cada reconhecedor de fala pode ter uma coleção de restrição. Somente estas combinações de restrições são válidas:
+Cada reconhecedor de fala pode ter uma coleção de restrição. Somente essas combinações de restrições são válidas:
 
 - Uma restrição baseada em um único tópico (ditado ou pesquisa na Web)
 - No Windows 10 Fall Creators Update (10.0.16299.15) e posteriores, uma restrição baseada em um único tópico pode ser combinada com uma restrição de lista
-- Uma combinação de restrições de lista e/ou restrições de arquivo de gramática.
+- Uma combinação da lista de restrições e/ou restrições de arquivo de gramática.
 
 > [!Important]
 > Chame o método **[SpeechRecognizer.CompileConstraintsAsync](https://msdn.microsoft.com/library/windows/apps/dn653240)** para compilar as restrições antes de iniciar o processo de reconhecimento.
@@ -54,7 +54,7 @@ Restrições de tópico (ditado ou gramática de pesquisa na Web) devem ser adic
 > [!NOTE]
 > Você pode usar uma [SpeechRecognitionListConstraint](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint) em conjunto com uma [SpeechRecognitionTopicConstraint](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint) para aumentar a precisão do ditado fornecendo um conjunto de palavras-chave específicas ao domínio que, a seu ver, provavelmente serão usadas durante o ditado.
 
-Aqui, adicionamos uma gramática de pesquisa na Web à coleção de restrições.
+Aqui, adicionamos uma gramática de pesquisa na Web para a coleção de restrições.
 
 ```CSharp
 private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
@@ -178,7 +178,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Esse arquivo SRGS (srgs.grxml) inclui tags de interpretação semântica. Essas tags fornecem um mecanismo para retornar dados correspondentes de gramática para seu aplicativo. Gramáticas devem estar de acordo com a especificação World Wide Web Consortium (W3C)[Interpretação semântica para reconhecimento de fala (SISR) 1.0](https://go.microsoft.com/fwlink/p/?LinkID=201765) .
+Esse arquivo SRGS (srgs.grxml) inclui tags de interpretação semântica. Essas tags fornecem um mecanismo para retornar dados correspondentes de gramática para seu aplicativo. Gramáticas devem estar em conformidade com o World Wide Web Consortium (W3C) [interpretação de semântica de conversão de fala reconhecimento (SISR) 1.0](https://go.microsoft.com/fwlink/p/?LinkID=201765) especificação.
 
 Aqui, escutamos as variantes de "sim" e "não".
 
@@ -236,7 +236,7 @@ Para avisar o usuário sobre o que pode ser falado, use as propriedades [**Speec
 * [Interações de controle por voz](speech-interactions.md)
 
 **Exemplos**
-* [Exemplo de reconhecimento de fala e sintetização de controle por voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

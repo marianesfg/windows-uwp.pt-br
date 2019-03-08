@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 175009773f7969adbaf36a036e733443f593467f
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117766"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620551"
 ---
 #  <a name="define-the-uwp-app-framework"></a>Definir a estrutura do aplicativo UWP
 
@@ -22,9 +22,9 @@ Para configurar essa estrutura, primeiro obtenha um provedor de exibição para 
 O objeto de provedor de exibição implementa a interface __IFrameworkView__, que consiste em uma série de métodos que precisam ser configurados para criar esse jogo de exemplo.
 
 Você precisará implementar esses cinco métodos que o singleton do aplicativo chama:
-* [__Initialize__](#initialize-the-view-provider)
+* [__inicializar__](#initialize-the-view-provider)
 * [__SetWindow__](#configure-the-window-and-display-behaviors)
-* [__Load__](#load-method-of-the-view-provider)
+* [__Carga__](#load-method-of-the-view-provider)
 * [__Run__](#run-method-of-the-view-provider)
 * [__Uninitialize__](#uninitialize-method-of-the-view-provider)
 
@@ -186,7 +186,7 @@ void App::Load(
 
 ### <a name="gamemain-constructor"></a>Construtor GameMain
 
-* Crie e inicialize o renderizador do jogo. Para obter mais informações, consulte [Estrutura de renderização I: introdução à renderização](tutorial--assembling-the-rendering-pipeline.md).
+* Crie e inicialize o renderizador do jogo. Para obter mais informações, consulte [framework de renderização i: Introdução à renderização](tutorial--assembling-the-rendering-pipeline.md).
 * Crie e inicialize o objeto Simple3Dgame. Para obter mais informações, consulte [Definir o objeto principal do jogo](tutorial--defining-the-main-game-loop.md).    
 * Crie o objeto de controle de interface de usuário do jogo e exiba a sobreposição de informações do jogo para mostrar uma barra de progresso à medida que os arquivos de recurso são carregados. Para saber mais, consulte [Adicionando uma interface do usuário](tutorial--adding-a-user-interface.md).
 * Crie o controlador para que possa ler entradas do controlador (toque, mouse, controle sem fio do XBox). Para obter mais informações, consulte [Adicionando controles](tutorial--adding-controls.md).
@@ -298,19 +298,19 @@ GameMain::GameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) 
 
 ## <a name="run-method-of-the-view-provider"></a>Método Run do provedor de visualização
 
-Os três métodos anteriores: __Initialize__, __SetWindow__ e __Load__ prepararam o estágio. Agora o jogo pode avançar para o método **Run**, dando início à diversão! Os eventos que ele usa para passar de um estado do jogo para outro são enviados e processados. Os elementos gráficos são atualizados, assim como os ciclos de loop do jogo.
+Os três métodos anteriores: __Inicializar__, __SetWindow__, e __carga__ tiver definido o estágio. Agora o jogo pode avançar para o método **Run**, dando início à diversão! Os eventos que ele usa para passar de um estado do jogo para outro são enviados e processados. Os elementos gráficos são atualizados, assim como os ciclos de loop do jogo.
 
 ### <a name="apprun"></a>App::Run
 
 Inicie um loop __while__ que termina quando o jogador fecha a janela do jogo.
 
 O código de exemplo transita para um dos dois estados na máquina de estado do mecanismo do jogo:
-    * __Deactivated__: a janela do jogo é desativada ou (perde o foco) ou ajustada. Quando isso acontece, o jogo suspende o processamento de eventos e aguarda a janela focar ou desajustar.
-    * __TooSmall__: o jogo atualiza seu próprio estado e renderiza os gráficos para exibição.
+    * __Desativado__: A janela do jogo é desativada ou (perde o foco) ou ajustada. Quando isso acontece, o jogo suspende o processamento de eventos e aguarda a janela focar ou desajustar.
+    * __TooSmall__: O jogo atualiza seu próprio estado e renderiza os elementos gráficos para exibição.
 
 Quando seu jogo tem foco, você deve lidar com todos os eventos na fila de mensagens conforme eles chegam. Por isso, é preciso chamar [**CoreWindowDispatch.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) com a opção **ProcessAllIfPresent**. Outras opções podem causar atrasos no processamento de eventos de mensagens, que podem fazer com que o jogo pareça não responder, ou resultar em comportamentos de toque lentos, e não "fluidos".
 
-Quando o jogo não estiver visível, suspenso ou encaixado, você não quer que ele consuma ciclos de recursos para enviar mensagens que nunca chegarão. Nesse caso, o jogo precisa usar o **ProcessOneAndAllPending**, que é bloqueado até receber um evento e processa esse evento e todos os outros que chegam na fila do processo durante o processamento da primeira. [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) retorna, em seguida, imediatamente após o processamento da fila.
+Quando o jogo não estiver visível, suspenso ou encaixado, você não quer que ele consuma ciclos de recursos para enviar mensagens que nunca chegarão. Nesse caso, o jogo precisa usar o **ProcessOneAndAllPending**, que é bloqueado até receber um evento e processa esse evento e todos os outros que chegam na fila do processo durante o processamento da primeira. [**ProcessEvents** ](https://msdn.microsoft.com/library/windows/apps/br208215) , em seguida, retorna imediatamente depois que a fila foi processada.
 
 ```cpp
 void App::Run()
@@ -384,9 +384,9 @@ void GameMain::Run()
 
 Quando o usuário encerra, por fim, a sessão de jogo, é necessário limpar tudo. Esta é a origem da propriedade **Uninitialize**.
 
-No Windows 10, o fechamento da janela do aplicativo não interromper o processo do aplicativo, mas em vez disso, ele grava o estado do singleton do aplicativo na memória. Se for necessário que ocorra algo especial quando o sistema precisar usar essa memória, incluindo algum tipo de limpeza especial de recursos, insira o código da limpeza nesse método.
+No Windows 10, fechando a janela do aplicativo não matar o processo do aplicativo, mas em vez disso, ele grava o estado do singleton do aplicativo na memória. Se for necessário que ocorra algo especial quando o sistema precisar usar essa memória, incluindo algum tipo de limpeza especial de recursos, insira o código da limpeza nesse método.
 
-### <a name="app-uninitialize"></a>App:: Uninitialize
+### <a name="app-uninitialize"></a>Aplicativo:: Uninitialize
 
 ```cpp
 void App::Uninitialize()

@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8c1cc6e17d95f55cc97af7695c12b374edcaaa8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936384"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632881"
 ---
 # <a name="use-the-compass"></a>Usar a bússola
 
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Bússola**](https://msdn.microsoft.com/library/windows/apps/BR225705)
@@ -31,7 +31,7 @@ Um aplicativo pode recuperar a direção atual com relação ao norte magnético
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você deve estar familiarizado com Extensible Application Markup Language (XAML), Microsoft VisualC c# e eventos.
+Você deve estar familiarizado com o Extensible Application Markup Language (XAML), Microsoft Visual C#e eventos.
 
 O dispositivo ou emulador que você está usando deve ter suporte para uma bússola.
 

@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6efe7aa27721f519ba93052abf2d0e8189f58941
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933716"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622311"
 ---
-# <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>Usando valores gerados pelo sistema
+# <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>Usando os valores gerados pelo sistema
 
 
-Os valores gerados pelo sistema são gerados pelo [estágio de Assembler de Entrada (IA)](input-assembler-stage--ia-.md) (com base na [semântica de entrada fornecida pelo usuário](https://msdn.microsoft.com/library/windows/desktop/bb509647)) para permitir certas eficiências nas operações do sombreador. Ao anexar dados, como uma ID de instância (visível para o [estágio do Sombreador de Vértice (VS)](vertex-shader-stage--vs-.md)), uma ID de vértice (visível para o VS) ou uma ID de primitivo (visível para o [estágio do Sombreador de Geometria (GS)](geometry-shader-stage--gs-.md)/[estágio do Sombreador de Pixel (PS)](pixel-shader-stage--ps-.md)), pode parecer um estágio do sombreador subsequente para esses valores do sistema, para otimizar o processamento nesse estágio.
+Os valores gerados pelo sistema são gerados pelo [estágio de Assembler de Entrada (IA)](input-assembler-stage--ia-.md) (com base na [semântica de entrada fornecida pelo usuário](https://msdn.microsoft.com/library/windows/desktop/bb509647)) para permitir certas eficiências nas operações do sombreador. Anexando dados, como uma ID de instância (visível para o [estágio do sombreador de vértice (VS)](vertex-shader-stage--vs-.md)), uma ID de vértice (visível para VS) ou uma ID primitiva (visível para [estágio do sombreador de geometria (GS)](geometry-shader-stage--gs-.md)/[estágio do sombreador de pixel (PS)](pixel-shader-stage--ps-.md)), um estágio do sombreador subsequente pode acessar esses valores do sistema para otimizar o processamento nesse estágio.
 
 Por exemplo, o estágio do VS pode procurar a ID de instância para coletar dados por vértice adicionais para o sombreador ou para realizar outras operações; os estágios GS e PS podem usar a ID do primitivo para coletar dados por primitiva da mesma forma.
 
@@ -98,7 +98,7 @@ O [estágio do Assembler de Entrada (IA)](input-assembler-stage--ia-.md) gera as
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Estágio do assembler de entrada (IA)](input-assembler-stage--ia-.md)
+[Estágio do Assembler de entrada (IA)](input-assembler-stage--ia-.md)
 
  
 

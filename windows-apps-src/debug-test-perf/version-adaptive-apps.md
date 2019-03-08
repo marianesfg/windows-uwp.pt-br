@@ -6,13 +6,13 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 435bbdbfaaf1bec90fa1ee2d598b4a3fe78d3789
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944947"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631651"
 ---
-# <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicativos adaptáveis de versão: use as novas APIs e mantenha a compatibilidade com versões anteriores
+# <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicativos adaptáveis da versão: Use as novas APIs, mantendo a compatibilidade com versões anteriores
 
 Cada versão do SDK do Windows 10 adiciona novas funcionalidades interessantes que você vai querer aproveitar. No entanto, nem todos os seus clientes atualizarão seus dispositivos para a versão mais recente do Windows 10 ao mesmo tempo, e você quer garantir que seu aplicativo funcione na maior variedade possível de dispositivos. Aqui, mostraremos como projetar seu aplicativo de modo que ele seja executado em versões anteriores do Windows 10, mas também tire proveito dos novos recursos, sempre que o aplicativo for executado em um dispositivo com a atualização mais recente instalada.
 
@@ -26,8 +26,8 @@ Há 3 etapas que devem ser seguidas a fim de garantir que o aplicativo seja comp
 
 A primeira etapa para dar suporte a várias versões do Windows 10 é especificar as versões de *Destino* e *Mínima* com suporte do SO/SDK em seu projeto do Visual Studio.
 
-- *Destino*: a versão do SDK na qual o Visual Studio compila o código do aplicativo e executa todas as ferramentas. Todas as APIs e recursos nesta versão do SDK estão disponíveis no código do aplicativo no momento da compilação.
-- *Mínima*: versão do SDK que dá suporte à versão mais antiga do sistema operacional na qual seu aplicativo possa ser executado (e que será implantado pela loja) e a versão que o Visual Studio compila o código de marcação do aplicativo. 
+- *Target*: A versão do SDK do Visual Studio compila o código do aplicativo e executar todas as ferramentas em relação a. Todas as APIs e recursos nesta versão do SDK estão disponíveis no código do aplicativo no momento da compilação.
+- *Mínimo*: A versão do SDK com suporte para a versão mais antiga do sistema operacional que seu aplicativo pode ser executado em (e será implantado pelo repositório) e a versão do Visual Studio compila seu código de marcação de aplicativo com base. 
 
 Durante o tempo de execução, o aplicativo será executado com a versão do sistema operacional que for implantado, portanto o aplicativo gerará exceções se você usar recursos ou chamar as APIs que não estejam disponíveis nessa versão. Mostramos a você como usar verificações de tempo de execução para chamar as APIs corretas mais adiante neste artigo.
 
@@ -58,9 +58,9 @@ Para referência, a tabela a seguir mostra os números de compilação para cada
 | Atualização de abril de 2018 | 1803 | 17134 |
 | Atualização de outubro de 2018 | 1809 | 17763 |
 
-Você pode baixar qualquer versão do SDK do [arquivo de emulador e do SDK do Windows](https://developer.microsoft.com/downloads/sdk-archive). Você pode baixar o SDK mais recente do Windows Insider Preview na seção de desenvolvedor do site [Participante do Insider Program](https://insider.windows.com/Home/BuildWithWindows).
+Você pode baixar qualquer versão do SDK do [arquivo de emulador e do SDK do Windows](https://developer.microsoft.com/downloads/sdk-archive). Você pode baixar o SDK mais recente do Windows Insider Preview na seção de desenvolvedor do site [Windows Insider](https://insider.windows.com/Home/BuildWithWindows).
 
- Para obter mais informações sobre atualizações do Windows 10, consulte as [informações de versão do Windows 10](https://technet.microsoft.com/windows/release-info). Para obter informações importantes sobre o Windows 10 do ciclo de vida de suporte, consulte a [folha de fatos de ciclo de vida do Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+ Para obter mais informações sobre atualizações do Windows 10, consulte [informações de versão do Windows 10](https://technet.microsoft.com/windows/release-info). Para obter informações importantes sobre o ciclo de vida de suporte do Windows 10, consulte o [folha de fatos de ciclo de vida do Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 ## <a name="perform-api-checks"></a>Executar verificações de API
 
@@ -83,7 +83,7 @@ Tipos logicamente relacionados são agrupados em um contrato de API, e, a partir
 O maior e mais comumente usado contrato de API é o **Windows.Foundation.UniversalApiContract**. Ele contém a maioria das APIs na Plataforma Universal do Windows. A documentação [Contratos de API e SDKs de extensão de família de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/) descreve a variedade de contratos de API disponíveis. Você verá que a maioria deles representa um conjunto de APIs relacionadas funcionalmente.
 
 > [!NOTE]
-> Se tiver um Software Development Kit do Windows (SDK do Windows) de visualização instalado que ainda não foi documentado, você também pode encontrar informações sobre o suporte de contrato de API no arquivo "Platform.xml" localizado na pasta Instalação do SDK em "\(Program Files (x86))\Windows Kits\10\Platforms\<platform>\<SDK version>\Platform.xml".
+> Se você tiver uma visualização Windows Software Development Kit (SDK) instalado não está documentada ainda, você também pode encontrar informações sobre o suporte do contrato de API no arquivo 'Platform.xml' localizado na pasta de instalação do SDK em '\(arquivos de programas (x86)) \ Windows Kits\10\Platforms\<plataforma >\<versão do SDK > \Platform.xml'.
 
 ### <a name="version-adaptive-code-and-conditional-xaml"></a>Código adaptável de versão e XAML condicional
 
@@ -105,5 +105,5 @@ Para obter mais informações sobre a depuração remota, consulte [Implantando 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [O que é um aplicativo UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
-- [Detectando dinamicamente recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [Detectar dinamicamente os recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [Contratos de API](https://channel9.msdn.com/Events/Build/2015/3-733) (Vídeo da Compilação 2015)

@@ -6,11 +6,11 @@ ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2756231b067176da66c6dbcedf7a1452d5d109f4
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114542"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641151"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Continue a atividade do usuário, mesmo entre dispositivos
 
@@ -39,7 +39,7 @@ Uma [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.u
 Para adicionar uma **UserActivity** ao seu app:
 
 1. Gerar objetos **UserActivity** quando o contexto do usuário muda dentro do aplicativo (como navegação de página, novo nível de jogo etc.)
-2. Popular objetos **UserActivity** com o conjunto mínimo de campos obrigatórios: [ActivityId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activityid#Windows_ApplicationModel_UserActivities_UserActivity_ActivityId), [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri) e [UserActivity.VisualElements.DisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.displaytext#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_DisplayText).
+2. Popular **UserActivity** objetos com o conjunto mínimo de campos obrigatórios: [ActivityId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activityid#Windows_ApplicationModel_UserActivities_UserActivity_ActivityId), [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri), e [UserActivity.VisualElements.DisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.displaytext#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_DisplayText).
 3. Adicione um manipulador de esquema personalizado ao seu aplicativo para que ele possa ser ativado novamente por uma **UserActivity**.
 
 Uma **UserActivity** pode ser integrada em um aplicativo com apenas algumas linhas de código. Por exemplo, imagine este código em MainPage.xaml.cs, dentro da classe MainPage (observação: pressupõe `using Windows.ApplicationModel.UserActivities;`):
@@ -99,7 +99,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-Esse código detecta se o aplicativo foi ativado por meio de um protocolo. Se foi, ele procura para ver o que o aplicativo deve fazer para retomar a tarefa que ele está sendo ativado. Sendo um aplicativo simples, a atividade somente que esse aplicativo é retomado está ficando página secundária quando o aplicativo é exibida.
+Esse código detecta se o aplicativo foi ativado por meio de um protocolo. Se foi, ele procura para ver o que o aplicativo deve fazer para retomar a tarefa que ele está sendo ativado. Sendo um aplicativo simples, a atividade apenas que esse aplicativo é retomada é colocar você na página secundária quando o aplicativo é exibido.
 
 ## <a name="use-adaptive-cards-to-improve-the-timeline-experience"></a>Usar Cartões Adaptáveis para melhorar a experiência de linha do tempo
 
@@ -169,7 +169,7 @@ Você pode usar a API [UserActivity](https://docs.microsoft.com/uwp/api/windows.
 
 * [Atividades do usuário (documentos do projeto Roma)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [Cartões adaptáveis](https://docs.microsoft.com/adaptive-cards/)
-* [Visualizador de cartões adaptáveis, amostras](https://adaptivecards.io/)
-* [Manipular a ativação do URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-* [Envolvimento com seus clientes em qualquer plataforma usando o Microsoft Graph, Feed de atividades e cartões adaptáveis](https://channel9.msdn.com/Events/Connect/2017/B111)
+* [Visualizador de cartões adaptáveis, exemplos](https://adaptivecards.io/)
+* [Manipular a ativação de URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+* [Interação com seus clientes em qualquer plataforma usando o Microsoft Graph, o Feed de atividades e os cartões adaptáveis](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph/)

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, entrada, registro, personalizado
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d30c19a7fd7641d76e810912d33a96dbbeb3132
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936971"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633601"
 ---
 # <a name="registry-data-for-game-controllers"></a>Dados do Registro para controladores de jogo
 
@@ -36,14 +36,14 @@ A tabela a seguir explica os valores esperados no local raiz do dispositivo:
         <th>Informações</th>
     </tr>
     <tr>
-        <td>Desabilitado</td>
+        <td>Desabilitada</td>
         <td>DWORD</td>
         <td>Não</td>
         <td>
-            <p>Indica que esse dispositivo específico deve ser desabilitado.</p>
+            <p>Indica que esse dispositivo em particular deve ser desativado.</p>
             <ul>
-                <li><b>0</b>: o dispositivo não está desabilitado.</li>
-                <li><b>1</b>: o dispositivo está desabilitado.</li>
+                <li><b>0</b>: Dispositivo não está desabilitado.</li>
+                <li><b>1</b>: Dispositivo é desativado.</li>
             </ul>
         </td>
     </tr>
@@ -74,7 +74,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **Gam
         <td rowspan="18" style="vertical-align: middle;">Consulte <a href="#button-mapping">Mapeamento de botões</a></td>
     </tr>
     <tr>
-        <td>View</td>
+        <td>Exibir</td>
         <td>Sim</td>
     </tr>
     <tr>
@@ -303,7 +303,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **Rac
         <td>Não</td>
     </tr>
     <tr>
-        <td>Wheel</td>
+        <td>Roda</td>
         <td>Sim</td>
         <td rowspan="5" style="vertical-align: middle;">Consulte <a href="#axis-mapping">Mapeamento de eixos</a></td>
     </tr>
@@ -416,7 +416,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **Fli
         <td rowspan="4" style="vertical-align: middle;">Consulte <a href="#axis-mapping">Mapeamento de eixos</a></td>
     </tr>
     <tr>
-        <td>Pitch</td>
+        <td>Rotação sobre o eixo x</td>
         <td>Sim</td>
     </tr>
     <tr>
@@ -450,11 +450,11 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **UIN
         <td rowspan="24" style="vertical-align: middle;">Consulte <a href="#button-mapping">Mapeamento de botões</a></td>
     </tr>
     <tr>
-        <td>View</td>
+        <td>Exibir</td>
         <td>Sim</td>
     </tr>
     <tr>
-        <td>Accept</td>
+        <td>Aceitar</td>
         <td>Sim</td>
     </tr>
     <tr>
@@ -576,7 +576,7 @@ A tabela a seguir lista os valores que são necessários para mapear um botão. 
         <td>Índice na matriz de eixos <b>RawGameController</b>.</td>
     </tr>
     <tr>
-        <td>Invert</td>
+        <td>Inverter</td>
         <td>DWORD</td>
         <td>Não</td>
         <td>Indica que o valor do eixo deverá ser invertido antes de os fatores <b>ThresholdPercent</b> e <b>DebouncePercent</b> serem aplicados.</td>
@@ -597,7 +597,7 @@ A tabela a seguir lista os valores que são necessários para mapear um botão. 
         </td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Comutador</td>
+        <td rowspan="3" style="vertical-align: middle;">Opção</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Sim</td>
@@ -610,13 +610,13 @@ A tabela a seguir lista os valores que são necessários para mapear um botão. 
         <td>
             <p>Indica a posição do comutador que fará com que o botão mapeado relate que está sendo pressionado. Os valores de posição podem ser uma destas cadeias de caracteres:</p>
             <ul>
-                <li>Up</li> 
+                <li>Para cima</li> 
                 <li>UpRight</li>
-                <li>Right</li>
+                <li>Direita</li>
                 <li>DownRight</li>
-                <li>Down</li>
+                <li>Para baixo</li>
                 <li>DownLeft</li>
-                <li>Left</li>
+                <li>Esquerda</li>
                 <li>UpLeft</li>
             </ul>
         </td>
@@ -707,13 +707,13 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
         <td>Índice na matriz de eixos <b>RawGameController</b>.</td>
     </tr>
     <tr>
-        <td>Invert</td>
+        <td>Inverter</td>
         <td>DWORD</td>
         <td>Não</td>
         <td>Indica que o valor do eixo mapeado deverá ser invertido antes de ser retornado.</td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Comutador</td>
+        <td rowspan="3" style="vertical-align: middle;">Opção</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Sim</td>
@@ -726,13 +726,13 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
         <td>
             <p>Uma das seguintes cadeias de caracteres:</p>
             <ul>
-                <li>Up</li>
+                <li>Para cima</li>
                 <li>UpRight</li>
-                <li>Right</li>
+                <li>Direita</li>
                 <li>DownRight</li>
-                <li>Down</li>
+                <li>Para baixo</li>
                 <li>DownLeft</li>
-                <li>Left</li>
+                <li>Esquerda</li>
                 <li>UpLeft</li>
             </ul>
             <p>Isso indica a posição do comutador que faz com que o valor do eixo mapeado seja relatados como 1.0. A direção oposta de <b>MaxValueSwitchPosition</b> é tratado como 0.0. Por exemplo, se <b>MaxValueSwitchPosition</b> for <b>Up</b>, a conversão do valor do eixo é mostrada abaixo:</p>
@@ -742,7 +742,7 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
                     <th>AxisValue</th>
                 </tr>
                 <tr>
-                    <td>Up</td>
+                    <td>Para cima</td>
                     <td>1.0</td>
                 </tr>
                 <tr>
@@ -750,7 +750,7 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
                     <td>0.5</td>
                 </tr>
                 <tr>
-                    <td>Down</td>
+                    <td>Para baixo</td>
                     <td>0.0</td>
                 </tr>
             </table>
@@ -768,7 +768,7 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
                     <th>AxisValue</th>
                 </tr>
                 <tr>
-                    <td>Up</td>
+                    <td>Para cima</td>
                     <td>1.0</td>
                 </tr>
                 <tr>
@@ -784,7 +784,7 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
                     <td>0.5</td>
                 </tr>
                 <tr>
-                    <td>Down</td>
+                    <td>Para baixo</td>
                     <td>0.0</td>
                 </tr>
                 <tr>
@@ -820,7 +820,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
     <tr>
         <td>SwitchKind</td>
         <td>REG_SZ</td>
-        <td><b>TwoWay</b>, <b>FourWay</b> ou <b>EightWay</b>
+        <td><b>TwoWay</b>, <b>FourWay</b>, ou <b>EightWay</b>
     </tr>
     <tr>
         <td>UpButtonIndex</td>
@@ -898,13 +898,13 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
         <td>DWORD</td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Comutador</td>
+        <td rowspan="3" style="vertical-align: middle;">Opção</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Índice na matriz de comutadores <b>RawGameController</b>.
     </tr>
     <tr>
-        <td>Invert</td>
+        <td>Inverter</td>
         <td>DWORD</td>
         <td>Indica que o comutador relata suas posições na ordem no sentido anti-horário, em vez da ordem no sentido horário padrão.</td>
     </tr>
@@ -926,7 +926,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
                     <td>3</td>
                 </tr>
                 <tr>
-                    <td>Right</td>
+                    <td>Direita</td>
                     <td>1</td>
                     <td>2</td>
                 </tr>
@@ -936,7 +936,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Up</td>
+                    <td>Para cima</td>
                     <td>3</td>
                     <td>0</td>
                 </tr>
@@ -946,7 +946,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
                     <td>7</td>
                 </tr>
                 <tr>
-                    <td>Left</td>
+                    <td>Esquerda</td>
                     <td>5</td>
                     <td>6</td>
                 </tr>
@@ -956,7 +956,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
                     <td>5</td>
                 </tr>
                 <tr>
-                    <td>Down</td>
+                    <td>Para baixo</td>
                     <td>7</td>
                     <td>4</td>
                 </tr>
@@ -966,7 +966,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
 
 #### <a name="buttonindex-values"></a>*Valores de ButtonIndex
 
-Índice de valores de \*ButtonIndex na matriz de botões do **RawGameController**:
+\*Indexar valores ButtonIndex a **RawGameController**da matriz de botão:
 
 <table>
     <tr>
@@ -1047,7 +1047,7 @@ Estes são os valores de mapeamento estático para diferentes tipos de mapeament
 
 ## <a name="labels"></a>Rótulos
 
-Rótulos devem estar presentes sob a chave **Labels** na raiz do dispositivo. **Labels** pode ter 3 subchaves: **Buttons**, **Axes** e **Switches**.
+Rótulos devem estar presentes sob a chave **Labels** na raiz do dispositivo. **Rótulos** ter 3 subchaves: **Botões**, **eixos**, e **Switches**.
 
 ### <a name="button-labels"></a>Rótulos de botão
 
@@ -1079,7 +1079,7 @@ Os rótulos devem aparecer nesta ordem sob a chave **Buttons**:
     </tr>
     <tr>
         <td>Button1</td>
-        <td>View</td>
+        <td>Exibir</td>
     </tr>
     <tr>
         <td>Button2</td>
@@ -1345,8 +1345,8 @@ Windows Registry Editor Version 5.00
 "Invert" = dword:00000000
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-* [Namespace Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)
+* [Windows.Gaming.Input Namespace](https://docs.microsoft.com/uwp/api/windows.gaming.input)
 * [Namespace Windows.Gaming.Input.Custom](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
 * [Arquivos INF](https://docs.microsoft.com/windows-hardware/drivers/install/inf-files)

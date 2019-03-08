@@ -1,5 +1,5 @@
 ---
-Description: Design your app to be global-ready by appropriately formatting dates, times, numbers, phone numbers, and currencies. You'll then be able later to adapt your app for additional cultures, regions, and languages in the global market.
+Description: Projete seu app de modo a ser usado globalmente. Formate adequadamente datas, horas, números, números de telefone e moedas. Você poderá, posteriormente, adaptar seu app a outras culturas, regiões e idiomas do mercado global.
 title: Globalize seus formatos data/hora/número.
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
 ms.openlocfilehash: d641bcff48b830c56a1d03ee861ec2a4c5f433b6
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048603"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634131"
 ---
 # <a name="globalize-your-datetimenumber-formats"></a>Globalize seus formatos data/hora/número.
 
@@ -116,9 +116,9 @@ Para garantir o uso do formato de calendário preferido, você pode usar os [con
 
 Os números de telefone são formatados de maneira diferente em regiões. O número de dígitos, como os dígitos são agrupados e a significância de determinadas partes do número de telefone variam entre países. Desde o Windows 10, versão 1607, você pode usar classes no namespace [**PhoneNumberFormatting**](/uwp/api/windows.globalization.phonenumberformatting?branch=live) para formatar números de telefone apropriadamente para a região corrente.
 
-[**PhoneNumberInfo**](/uwp/api/windows.globalization.phonenumberformatting.phonenumberinfo?branch=live) analisa uma cadeia de dígitos e permite determinar se os dígitos são um número de telefone válido na região atual, comparar dois números em busca de igualdade e extrair as parte funcionais diferentes do número de telefone, como código do país ou código da área geográfica.
+[**PhoneNumberInfo** ](/uwp/api/windows.globalization.phonenumberformatting.phonenumberinfo?branch=live) analisa uma cadeia de caracteres de dígitos e permite que você: determinar se os dígitos são um número de telefone válido na região atual; comparar dois números quanto à igualdade; e para extrair as diferentes partes funcionais do telefone número, como o código de país ou código de área geográfico.
 
-[**PhoneNumberFormatter**](/uwp/api/windows.globalization.phonenumberformatting.phonenumberformatter?branch=live) formata uma cadeia de dígitos ou um **PhoneNumberInfo** para exibição, mesmo quando a cadeia de dígitos representa um número de telefone parcial. Você pode usar essa formatação de número parcial para formatar um número à medida que um usuário insere o número.
+[**PhoneNumberFormatter** ](/uwp/api/windows.globalization.phonenumberformatting.phonenumberformatter?branch=live) formatos de uma cadeia de caracteres de dígitos ou uma **PhoneNumberInfo** para exibição, mesmo quando a cadeia de caracteres de dígitos representa um número de telefone parcial. Você pode usar essa formatação de número parcial para formatar um número à medida que um usuário insere o número.
 
 O exemplo abaixo mostra como usar **PhoneNumberFormatter** para formatar um número de telefone à medida que é inserido. Sempre que o texto muda em um **TextBox** chamado phoneNumberInputTextBox, o conteúdo da caixa de texto é formatado usando-se a região padrão atual e exibido em um **TextBlock** chamado phoneNumberOutputTextBlock. Para fins de demonstração, a cadeia de caracteres também é formatada usando-se a região da Nova Zelândia e exibida em um TextBlock chamado phoneNumberOutputTextBlockNZ.
   
@@ -167,13 +167,13 @@ Para cenários em que você deseja fornecer uma funcionalidade diferente, que ba
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Controles de calendário, data e hora](../controls-and-patterns/date-and-time.md)
-* [Entenda os idiomas de perfil do usuário e idiomas de manifesto do app](manage-language-and-region.md)
-* [Personalizar os recursos de acordo com idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [Controles de tempo, data e calendário](../controls-and-patterns/date-and-time.md)
+* [Entender os idiomas de perfil do usuário e linguagens de manifesto do aplicativo](manage-language-and-region.md)
+* [Personalize seus recursos de idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 
 ## <a name="samples"></a>Exemplos
 
-* [Detalhes do calendário e exemplo de matemática](https://go.microsoft.com/fwlink/p/?linkid=231636)
-* [Exemplo de formatação de data e hora](https://go.microsoft.com/fwlink/p/?linkid=231618)
-* [Exemplo de preferências de globalização](https://go.microsoft.com/fwlink/p/?linkid=231608)
-* [Exemplo de formatação de número e análise](https://go.microsoft.com/fwlink/p/?linkid=231620)
+* [Exemplo de matemática e detalhes do calendário](https://go.microsoft.com/fwlink/p/?linkid=231636)
+* [Exemplo de formatação data e hora](https://go.microsoft.com/fwlink/p/?linkid=231618)
+* [Amostra de globalização de preferências](https://go.microsoft.com/fwlink/p/?linkid=231608)
+* [Formatação de números e exemplo de análise](https://go.microsoft.com/fwlink/p/?linkid=231620)

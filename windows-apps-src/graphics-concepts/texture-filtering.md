@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 449a31d92235efc50119bcd0db11b3532f523cd2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930865"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633721"
 ---
 # <a name="texture-filtering"></a>Filtragem de textura
 
@@ -48,19 +48,19 @@ O Direct3D dá suporte às abordagens de filtragem de textura a seguir.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="nearest-point-sampling.md">Amostragem do ponto mais próximo</a></p></td>
-<td align="left"><p>Os aplicativos não precisam usar a filtragem de textura. O Direct3D pode ser configurado para calcular o endereço do texel, que geralmente não é avaliado como inteiro, e copia a cor de texel com o endereço do inteiro mais próximo. Esse processo é chamado de <em>amostragem do ponto mais próximo</em>.</p></td>
+<td align="left"><p><a href="nearest-point-sampling.md">Mais próximo ponto de amostragem</a></p></td>
+<td align="left"><p>Os apps não são obrigados a usar filtragem de textura. O Direct3D pode ser definido para calcular o endereço de texel, que geralmente não avalia como inteiros e copia a cor de texel com o endereço inteiro mais próximo. Esse processo é chamado de <em>amostragem do ponto mais próximo</em>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="bilinear-texture-filtering.md">Filtragem bilinear de textura</a></p></td>
-<td align="left"><p>A <em>filtragem bilinear</em> calcula a média ponderada dos 4 texels mais próximos do ponto de amostragem. Essa abordagem de filtragem é mais precisa e comum que a filtragem por ponto mais próximo. Essa abordagem é eficiente porque é implementada em hardware de gráficos modernos.</p></td>
+<td align="left"><p><a href="bilinear-texture-filtering.md">Filtragem de textura bilinear</a></p></td>
+<td align="left"><p>A <em>filtragem bilinear</em> calcula a média ponderada dos 4 texels mais próximos do ponto de amostragem. Essa abordagem de filtragem é mais precisa e comum que a filtragem por ponto mais próximo. Essa abordagem é eficiente porque ela é implementado no hardware de gráficos moderno.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="anisotropic-texture-filtering.md">Filtragem anisotrópica de textura</a></p></td>
+<td align="left"><p><a href="anisotropic-texture-filtering.md">Filtragem de textura anisotrópica</a></p></td>
 <td align="left"><p><em>Anisotropia</em> é visível no texels a distorção de um objeto 3D cujo superfície é orientada com um ângulo em relação ao plano da tela. Quando um pixel de uma primitiva anisotrópica é mapeado para texels, sua forma é distorcida.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="texture-filtering-with-mipmaps.md">Filtragem de textura com mipmaps</a></p></td>
+<td align="left"><p><a href="texture-filtering-with-mipmaps.md">Filtragem com mipmaps de textura</a></p></td>
 <td align="left"><p>Um <em>mipmap</em> é uma sequência de texturas, cada uma delas é uma representação em resolução mais baixa progressivamente da mesma imagem. A altura e a largura de cada imagem ou nível, no mipmap é uma potência de dois menor do que o nível anterior.</p></td>
 </tr>
 </tbody>

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c872d289c67161e414671d3d509401f0539a7675
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941472"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631441"
 ---
 # <a name="streaming-resources-features-tiers"></a>Níveis de recursos de streaming
 
@@ -43,15 +43,15 @@ As funções de consulta estão disponíveis nas versões do Direct3D, para vali
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="tier-1.md">Nível 1</a></p></td>
+<td align="left"><p><a href="tier-1.md">Camada 1</a></p></td>
 <td align="left"><p>Esta seção descreve o suporte de nível 1.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="tier-2.md">Nível 2</a></p></td>
+<td align="left"><p><a href="tier-2.md">Camada 2</a></p></td>
 <td align="left"><p>O suporte do nível 2 a recursos de streaming adiciona funcionalidades além do nível 1, como a garantia de um mipmap de textura não empacotada quando o tamanho é pelo menos uma forma de bloco padrão; instruções de sombreador para fixação de nível de detalhe (LOD) e para a obtenção de status sobre a operação de sombreador; Além disso, a leitura de blocos mapeados em NULL trata o valor de amostragem como zero.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="tier-3.md">Nível 3</a></p></td>
+<td align="left"><p><a href="tier-3.md">Camada 3</a></p></td>
 <td align="left"><p>O nível 3 adiciona suporte para Texture3D para recursos de streaming, além dos recursos do <a href="tier-2.md">nível 2</a>.</p></td>
 </tr>
 </tbody>

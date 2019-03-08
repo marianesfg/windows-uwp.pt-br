@@ -1,5 +1,5 @@
 ---
-Description: A button gives the user a way to trigger an immediate action.
+Description: Um botão dá ao usuário uma forma de acionar uma ação imediata.
 title: Cartão de visita
 ms.date: 03/07/2018
 ms.topic: article
@@ -10,17 +10,17 @@ dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
 ms.openlocfilehash: 71a3108e21455086e2742987db1d7125c733f6e2
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117596"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57638821"
 ---
 # <a name="contact-card"></a>Cartão de visita
 
 O cartão de visita exibe informações de contato, como o nome, número de telefone e endereço, para um [Contato](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) (o mecanismo que UWP usa para representar pessoas e empresas).  O cartão de visita também permite que o usuário edite informações de contato. Você pode optar por exibir um cartão de visita compacto ou completo que contém informações adicionais.
 
-> **APIs importantes**: [método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard), [método ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_), [método IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [classe Contact](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
+> **APIs importantes**: [Método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard), [método ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_), [método IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [entre em contato com a classe](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
 
 Há duas maneiras de exibir o cartão de visita:  
 * Como um cartão de contato padrão que é exibido em um submenu é light-rejeitável relativa às ações – o cartão de contato dissapears quando o usuário clica fora dele. 
@@ -181,5 +181,5 @@ Os exemplos neste artigo criam um contato simples. Em um aplicativo real, você 
 
 ## <a name="related-articles"></a>Artigos relacionados
 - [Contatos e calendário](/windows/uwp/contacts-and-calendar/)
-- [Exemplo de cartões de contato](https://go.microsoft.com/fwlink/p/?LinkId=624040)
+- [Exemplo de cartões de visita](https://go.microsoft.com/fwlink/p/?LinkId=624040)
 - [Controle de imagem de pessoas](/windows/uwp/controls-and-patterns/person-picture/)

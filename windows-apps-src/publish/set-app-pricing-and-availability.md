@@ -1,5 +1,5 @@
 ---
-Description: The Pricing and availability page of the app submission process lets you determine how much your app will cost, whether you'll offer a free trial, and how, when, and where it will be available to customers.
+Description: A página Preço e disponibilidade do processo de envio de aplicativo permite que você determine quanto seu aplicativo vai custar, se você oferecerá uma avaliação gratuita e como, quando e onde ele estará disponível para os clientes.
 title: Definir a disponibilidade e o preço do aplicativo
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 ms.date: 10/31/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, preço, disponível, detectável, avaliação gratuita, avaliações, avaliação, apps, data de lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: d5fa6c3e23516a5255f8bd3252f6ded233101625
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922089"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640161"
 ---
 # <a name="set-app-pricing-and-availability"></a>Definir a disponibilidade e o preço do aplicativo
 
@@ -33,7 +33,7 @@ A seção **Visibilidade** permite que você defina restrições sobre como seu 
 Para saber mais, consulte [Escolher opções de visibilidade](choose-visibility-options.md).
 
 
-## <a name="schedule"></a>Agendar
+## <a name="schedule"></a>Agendamento
 
 Por padrão (a menos que você tenha selecionado uma das opções **Disponibilizar este produto mas não torná-lo detectável na Store** na seção [Visibilidade](choose-visibility-options.md#discoverability)), o app estará disponível para os clientes assim que ele for aprovado na certificação e concluir o processo de publicação. Para escolher outras datas, selecione **Mostrar opções** para expandir essa seção. 
 
@@ -49,15 +49,15 @@ Para obter mais informações, consulte [Definir e agendar preço do aplicativo]
 
 ## <a name="free-trial"></a>Avaliação gratuita
 
-Muitos desenvolvedores optam por permitir que os clientes experimentem seu aplicativo gratuitamente usando a funcionalidade de avaliação fornecida pela Loja. Por padrão, a opção **Nenhuma avaliação gratuita** é selecionada, e não haverá nenhuma avaliação para seu aplicativo. Se você quiser oferecer uma avaliação, poderá selecionar um valor na lista suspensa **Avaliação gratuita**.
+Muitos desenvolvedores optam por permitir que os clientes experimentem seu aplicativo gratuitamente usando a funcionalidade de avaliação fornecida pela loja. Por padrão, a opção **Nenhuma avaliação gratuita** é selecionada, e não haverá nenhuma avaliação para seu aplicativo. Se você quiser oferecer uma avaliação, poderá selecionar um valor na lista suspensa **Avaliação gratuita**.
 
 Existem dois tipos de versão de avaliação que você pode escolher, e você tem a opção de configurar a data e a hora de início e término da oferta da versão de avaliação.
 
 ### <a name="time-limited"></a>Limitada ao tempo
 
-Escolha **Limitada ao tempo** para permitir que os clientes testem o aplicativo gratuitamente por um determinado número de dias: **1 dia**, **7 dias**, **15 dias** ou **30 dias**. Você pode limitar os recursos adicionando código a [excluir ou limitar recursos na versão de avaliação](../monetize/in-app-purchases-and-trials.md), ou pode permitir que os clientes acessem a funcionalidade completa durante esse período. 
+Escolher **tempo limitado** para permitir aos clientes testar o seu aplicativo gratuitamente para um determinado número de dias: **1 dia**, **7 dias**, **15 dias**, ou **30 dias**. Você pode limitar os recursos adicionando código a [excluir ou limitar recursos na versão de avaliação](../monetize/in-app-purchases-and-trials.md), ou pode permitir que os clientes acessem a funcionalidade completa durante esse período. 
 > [!NOTE]
-> As versões de avaliação por tempo limitado não são mostradas para os clientes no Windows 10 build 10.0.10586 ou versões anteriores nem para os clientes no Windows Phone 8.1 e versões anteriores.
+> As avaliações de tempo limite não são mostradas aos clientes no Windows 10 build 10.0.10586 ou anterior, ou para os clientes no Windows Phone 8.1 e versões anteriores.
 
 ### <a name="unlimited"></a>Ilimitado
 
@@ -70,14 +70,14 @@ Por padrão, a versão de avaliação será disponibilizada assim que o aplicati
 >[!NOTE]
 > Essas datas se aplicam somente a clientes no Windows 10 (incluindo o Xbox). Se o app estiver disponível para os clientes nas versões anteriores do sistema operacional, a versão de avaliação será oferecida a esses clientes enquanto seu produto estiver disponível. 
 
-Para definir as datas em que sua avaliação deve ser oferecida aos clientes no Windows 10, altere a lista suspensa **Começa em** e/ou **Termina em** para **em** e escolha a data e a hora. Se você fizer isso, poderá escolher **UTC** para que a hora selecionada seja no fuso horário Horário Coordenado Universal (UTC) ou escolha **Local** para que esses períodos sejam usados em cada fuso horário associado a um mercado. (Observe que, no caso de mercados que incluem mais de um fuso horário, apenas um fuso horário desse mercado será usado. Para os Estados Unidos, o fuso horário do Leste dos EUA é usado.) Se você deseja definir datas diferentes para qualquer um mercado, você pode selecionar **Personalizar para mercados específicos** .
+Para definir as datas em que sua avaliação deve ser oferecida aos clientes no Windows 10, altere a lista suspensa **Começa em** e/ou **Termina em** para **em** e escolha a data e a hora. Se você fizer isso, poderá escolher **UTC** para que a hora selecionada seja no fuso horário Horário Coordenado Universal (UTC) ou escolha **Local** para que esses períodos sejam usados em cada fuso horário associado a um mercado. (Observe que, no caso de mercados que incluem mais de um fuso horário, apenas um fuso horário desse mercado será usado. Para os Estados Unidos, o fuso horário do Leste dos EUA é usado. Você pode selecionar **personalizar para mercados específicos** se você quiser definir datas diferentes para qualquer market(s).
 
 
-## <a name="sale-pricing"></a>Preço de venda
+## <a name="sale-pricing"></a>Preço promocional
 
 Se você quiser oferecer seu aplicativo por um preço reduzido por um período limitado de tempo, será possível criar e agendar uma promoção.
 
-Para obter mais informações, consulte [Colocar aplicativos e complementos à venda](put-apps-and-add-ons-on-sale.md).
+Para obter mais informações, consulte [Colocar aplicativos e complementos em promoção](put-apps-and-add-ons-on-sale.md).
 
 
 ## <a name="organizational-licensing"></a>Licenciamento para organizações

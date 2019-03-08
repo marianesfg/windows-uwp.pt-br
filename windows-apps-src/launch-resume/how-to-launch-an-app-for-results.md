@@ -1,19 +1,19 @@
 ---
-title: Iniciar um aplicativo para obter resultados
-description: Saiba como iniciar um app a partir de outro app e trocar dados entre os dois. Isso é chamado de "iniciar" um aplicativo para obter resultados.
+title: Iniciar um app para obter resultados
+description: Saiba como iniciar um app a partir de outro app e trocar dados entre os dois. Isso é chamado de "iniciar" um app para obter resultados.
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f627cf2a897de32aea0e35faf66f5ea70695efd5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930757"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631071"
 ---
-# <a name="launch-an-app-for-results"></a>Iniciar um aplicativo para obter resultados
+# <a name="launch-an-app-for-results"></a>Iniciar um app para obter resultados
 
 
 
@@ -23,13 +23,13 @@ ms.locfileid: "8930757"
 -   [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)
 -   [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)
 
-Saiba como iniciar um aplicativo a partir de outro aplicativo e trocar dados entre os dois. Isso é chamado de *iniciar um aplicativo para obter resultados*. O exemplo mostra como usar [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) para iniciar um aplicativo para obter resultados.
+Saiba como iniciar um app a partir de outro app e trocar dados entre os dois. Isso é chamado de *iniciar um aplicativo para obter resultados*. O exemplo mostra como usar [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) para iniciar um aplicativo para obter resultados.
 
-Comunicação de aplicativo para aplicativo novas APIs no Windows 10 possibilitam para Windows aplicativos (e aplicativos Web do Windows) iniciar um aplicativo e exchange dados e arquivos. Isso permite que você crie soluções diversas de vários aplicativos. Usando essas novas APIs, tarefas complexas que exigiriam que o usuário usasse vários aplicativos podem agora ser executadas perfeitamente. Por exemplo, seu aplicativo pode iniciar um aplicativo de rede social para selecionar um contato ou iniciar um aplicativo de check-out para concluir um processo de pagamento.
+Novas APIs no Windows 10 de comunicação de aplicativo para torná-lo Windows aplicativos (e aplicativos Web do Windows) iniciar um aplicativo e o exchange os dados e arquivos. Isso permite que você crie soluções diversas de vários aplicativos. Usando essas novas APIs, tarefas complexas que exigiriam que o usuário usasse vários aplicativos podem agora ser executadas perfeitamente. Por exemplo, seu aplicativo pode iniciar um aplicativo de rede social para selecionar um contato ou iniciar um aplicativo de check-out para concluir um processo de pagamento.
 
 O aplicativo que você iniciará para obter resultados será chamado de aplicativo iniciado. O aplicativo que inicia o aplicativo será referenciado como aplicativo de chamada. Para este exemplo, você escreverá o aplicativo de chamada e o aplicativo iniciado.
 
-## <a name="step-1-register-the-protocol-to-be-handled-in-the-app-that-youll-launch-for-results"></a>Etapa 1: Registrar o protocolo que será manipulado no aplicativo que você iniciará para obter resultados
+## <a name="step-1-register-the-protocol-to-be-handled-in-the-app-that-youll-launch-for-results"></a>Etapa 1: Registre-se o protocolo a ser manipulado no aplicativo que você vai iniciar para resultados
 
 
 No arquivo Package.appxmanifest do aplicativo iniciado, adicione uma extensão do protocolo à seção **&lt;Application&gt;**. O exemplo aqui usa um protocolo fictício chamado **test-app2app**.
@@ -58,7 +58,7 @@ Neste exemplo de extensão de protocolo, o aplicativo pode ser iniciado somente 
 </Applications>
 ```
 
-## <a name="step-2-override-applicationonactivated-in-the-app-that-youll-launch-for-results"></a>Etapa 2: substituir Application.OnActivated no aplicativo que será iniciado para obter resultados
+## <a name="step-2-override-applicationonactivated-in-the-app-that-youll-launch-for-results"></a>Etapa 2: Substituir Application.OnActivated no aplicativo que você vai iniciar para resultados
 
 
 Se esse método ainda não existir no aplicativo iniciado, crie-o dentro da classe `App` definida em App.xaml.cs.
@@ -90,7 +90,7 @@ protected override void OnActivated(IActivatedEventArgs args)
 
 Como a extensão de protocolo no arquivo Package.appxmanifest especifica **ReturnResults** como **always**, o código que acabamos de mostrar pode converter `args` diretamente no [**ProtocolForResultsActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn906905) com confiança de que somente **ProtocolForResultsActivatedEventArgs** será enviada a **OnActivated** para esse aplicativo. Caso seu aplicativo possa ser ativado de outras formas além de iniciar para obter resultados, você pode verificar se a propriedade [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) retorna [**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693) para determinar se o aplicativo foi iniciado para obter resultados.
 
-## <a name="step-3-add-a-protocolforresultsoperation-field-to-the-app-you-launch-for-results"></a>Etapa 3: Adicionar um campo ProtocolForResultsOperation ao aplicativo iniciado para obter resultados
+## <a name="step-3-add-a-protocolforresultsoperation-field-to-the-app-you-launch-for-results"></a>Etapa 3: Adicionar um campo de ProtocolForResultsOperation para o aplicativo que iniciar para resultados
 
 
 ```cs
@@ -99,7 +99,7 @@ private Windows.System.ProtocolForResultsOperation _operation = null;
 
 Você usará o campo [**ProtocolForResultsOperation**](https://msdn.microsoft.com/library/windows/apps/dn906913) para sinalizar quando o aplicativo iniciado estiver pronto para retornar o resultado para o aplicativo de chamada. Neste exemplo, o campo é adicionado à classe **LaunchedForResultsPage** porque a operação de início para obter resultados será concluída nessa página e precisaremos acessá-la.
 
-## <a name="step-4-override-onnavigatedto-in-the-app-you-launch-for-results"></a>Etapa 4: Substituir OnNavigatedTo() no aplicativo iniciado para obter resultados
+## <a name="step-4-override-onnavigatedto-in-the-app-you-launch-for-results"></a>Etapa 4: Substituição OnNavigatedTo () no aplicativo que iniciar para resultados
 
 
 Substitua o método [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) na página que será exibida quando o aplicativo for iniciado para obter resultados. Se esse método ainda não existir, crie-o dentro da classe para a página definida em &lt;pagename&gt;.xaml.cs. Verifique se a seguinte instrução **using** está incluída na parte superior do arquivo:
@@ -130,7 +130,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 private Windows.System.ProtocolForResultsOperation _operation = null;
 ```
 
-## <a name="step-5-write-code-to-return-data-to-the-calling-app"></a>Etapa 5: Escrever o código para retornar dados para o aplicativo chamador
+## <a name="step-5-write-code-to-return-data-to-the-calling-app"></a>Etapa 5: Escrever código para retornar dados para o aplicativo de chamada
 
 
 No aplicativo iniciado, use [**ProtocolForResultsOperation**](https://msdn.microsoft.com/library/windows/apps/dn906913) para retornar dados para o aplicativo de chamada. Neste código de exemplo, um objeto [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) é criado com o valor a ser retornado ao aplicativo de chamada. O campo **ProtocolForResultsOperation** é usado para enviar o valor para o aplicativo de chamada.
@@ -141,7 +141,7 @@ No aplicativo iniciado, use [**ProtocolForResultsOperation**](https://msdn.micro
     _operation.ReportCompleted(result);
 ```
 
-## <a name="step-6-write-code-to-launch-the-app-for-results-and-get-the-returned-data"></a>Etapa 6: Escrever o código para iniciar o aplicativo para obter resultados e os dados retornados
+## <a name="step-6-write-code-to-launch-the-app-for-results-and-get-the-returned-data"></a>Etapa 6: Escrever código para iniciar o aplicativo para obter os resultados e obter os dados retornados
 
 
 Inicie o aplicativo a partir de um método assíncrono no aplicativo de chamada, conforme mostrado no código de exemplo. Observe as instruções **using** que são necessárias para a compilação do código:

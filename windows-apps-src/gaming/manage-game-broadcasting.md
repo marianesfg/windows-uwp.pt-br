@@ -4,14 +4,14 @@ description: Mostra como gerenciar a transmissão de jogo de um aplicativo UWP.
 title: Gerenciar transmissão de jogo
 ms.date: 09/27/2017
 ms.topic: article
-keywords: windows10, jogo, transmissão
+keywords: windows 10, jogo, transmissão
 ms.localizationpriority: medium
 ms.openlocfilehash: c906551fd626dec726498ded9a7995007230504f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930487"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607581"
 ---
 # <a name="manage-game-broadcasting"></a>Gerenciar transmissão de jogo
 Este artigo mostra como gerenciar a transmissão de jogo de um aplicativo UWP. Os usuários devem iniciar a transmissão usando a interface do usuário do sistema integrada ao Windows, mas, a partir do Windows 10, versão 1709, os apps poderão iniciar a interface do usuário de transmissão do sistema e receber notificações quando a transmissão for iniciada e interrompida.
@@ -21,7 +21,7 @@ As APIs para gerenciamento de transmissão de app, encontradas no namespace **[W
 
 1. No Visual Studio, em **Gerenciador de Soluções**, expanda o projeto UWP, clique com botão direito do mouse em **Referências** e selecione **Adicionar Referência...**. 
 2. Expanda o nó **Universal do Windows** e selecione **Extensões**.
-3. Na lista de extensões, marque a caixa de seleção ao lado da entrada **Extensões de Área de Trabalho do Windows para a UWP** que corresponde à compilação de destino do projeto. Para os recursos de transmissão de app, a versão deve ser 1709 ou superior.
+3. Na lista de extensões, marque a caixa de seleção ao lado da entrada ***Extensões de Área de Trabalho do Windows para a UWP** que corresponde à compilação de destino do projeto. Para os recursos de transmissão de app, a versão deve ser 1709 ou superior.
 4. Clique em **OK**.
 
 ## <a name="launch-the-system-ui-to-allow-the-user-to-initiate-broadcasting"></a>Iniciar a interface do usuário do sistema para permitir que o usuário inicie a transmissão

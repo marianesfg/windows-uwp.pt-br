@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 3f92c8fd-4096-4972-97da-01ae5db6423c
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a27d13f7ceedd14a84d5b4b4aa1233445037a1f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934325"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640761"
 ---
 # <a name="media-capture-api-reference"></a>Referência de API da captura de mídia #
 
@@ -24,23 +24,23 @@ Você pode capturar uma representação PNG da tela atual usando o formato de so
 | GET           | /ext/screenshot |
 <br>
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
 
 | Parâmetro do URI      | Descrição     | 
 | ------------------ |-----------------|
-| transferência (opcional)| Um valor booliano que indica se os cabeçalhos de resposta HTTP devem ser definidos indicando que o navegador do host precisa baixar a captura de tela como anexo em vez renderizá-lo no navegador.  |
+| download (opcional)| Um valor booliano que indica se os cabeçalhos de resposta HTTP devem ser definidos indicando que o navegador do host precisa baixar a captura de tela como anexo em vez renderizá-lo no navegador.  |
 <br>
 
 **Cabeçalhos de solicitação**
 
-* Nenhum(a)
+* Nenhuma
 
 **Corpo da solicitação**
 
-* Nenhum(a)
+* Nenhuma
 
 ###<a name="response"></a>Resposta # # #
 

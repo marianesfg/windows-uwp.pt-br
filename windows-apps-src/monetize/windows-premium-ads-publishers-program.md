@@ -1,48 +1,48 @@
 ---
-description: O Windows programa de editores de anúncios premium consiste em uma coleção gerenciada de aplicativos habilitado por anúncio destinados redes de anúncios de parceiro com premium, alto-rendimento de anúncios. Aplicativos neste programa são melhores do setor em termos de uso, o envolvimento e a experiência.
+description: O programa de editores de anúncios premium do Windows consiste em um conjunto administrado de aplicativos habilitados para anúncios que as redes de anúncios de parceiros podem usar para veicular anúncios premium de alto-rendimento. Os aplicativos nesse programa são os melhores do setor em termos de uso, envolvimento e experiência.
 title: Programa de editores de anúncios premium do Windows
 ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d747d35148965480cb34714cde7859203a7424d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050749"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634371"
 ---
 # <a name="windows-premium-ads-publishers-program"></a>Programa de editores de anúncios premium do Windows
 
-Como parte dos nossos esforços contínuos para ajudar os desenvolvedores do Windows monetizar seus aplicativos por meio de anúncios, oferecemos o [Programa de editores de anúncios do Windows Premium](https://www.windowspremiumapps.com). Esta é uma coleção gerenciada de habilitado por anúncio aplicativos e jogos que são melhores do setor em termos de uso, o envolvimento e a experiência. Esses aplicativos e jogos são visualização certificados e ter uma audiência globalmente distribuída de identificação usuários que são altamente envolvidos.
+Como parte dos nossos esforços contínuos para ajudar os desenvolvedores do Windows a monetizar seus apps por meio de anúncios, oferecemos o [Programa de editores de anúncios premium do Windows](https://www.windowspremiumapps.com). Isso é um conjunto gerenciado de apps e jogos com os melhores anúncios do setor em termos de uso, envolvimento e experiência. Esses aplicativos e jogos têm visualização certificada, além de um público de usuários identificáveis distribuído globalmente, com alto grau de envolvimento.
 
-Anunciantes de nossas redes de anúncios de parceiro podem identificar esses aplicativos separadamente e veicular anúncios premium, alto rendimento exclusivamente para esses aplicativos para o mais alto retorno sobre o investimento de suas campanhas. Para desenvolvedores, isso significa que os aplicativos que fazem parte deste programa poderá ganhar mais receita de publicidade.
+Os anunciantes de nossas redes de publicidade de parceiro podem identificar esses apps separadamente e veicular anúncios premium de alto rendimento para exclusivamente nesses apps a fim de obter o mais alto retorno sobre o investimento das campanhas. Para desenvolvedores, isso significa que os aplicativos participantes do programa podem gerar mais receitas de publicidade.
 
-## <a name="how-does-microsoft-add-apps-to-this-program"></a>Como o Microsoft adicionar aplicativos a este programa? 
+## <a name="how-does-microsoft-add-apps-to-this-program"></a>Como a Microsoft adiciona aplicativos ao programa? 
 
-Revisamos continuamente aplicativos na loja contra os [critérios de qualificação](#what-are-the-criteria-for-apps-in-the-program). Aplicativos que atendem aos critérios de qualificação são colocados em um processo de revisão manual rigorosos para verificar se há uma experiência de usuário suave e bem-definida e certificar-se de anúncios bem são colocados para evitar cliques não intencionais. Aplicativos que limpar o manual do processo de triagem e automático, em seguida, são adicionados ao programa.
+Revisamos continuamente os aplicativos na Microsoft Store tendo em vista os [critérios de qualificação](#what-are-the-criteria-for-apps-in-the-program). Os aplicativos que atendem aos critérios de qualificação são colocados em um processo de revisão manual rigoroso a fim de verificar se há uma experiência de usuário bem definida e para verificar se os anúncios foram devidamente inseridos a fim de evitar cliques não intencionais. Os aplicativos aprovados no processo de triagem automática e manual são adicionados ao programa.
 
-No momento, este é um programa de apenas por convite e simplesmente reunião os critérios de qualificação não automaticamente dão direito aplicativo se torne parte do programa premium.Se você quiser saber mais sobre como melhorar a experiência do aplicativo para se qualificar para o programa, entre em contato em aiacare@microsoft.com.
+No momento, o programa é somente por convite e apenas atender aos critérios de qualificação não permite que um aplicativo participe automaticamente do programa premium. Se quiser saber mais sobre como melhorar a experiência do aplicativo a fim de se qualificar para o programa, entre em contato conosco em aiacare@microsoft.com.
 
-## <a name="what-are-the-criteria-for-apps-in-the-program"></a>Quais são os critérios de aplicativos no programa?
+## <a name="what-are-the-criteria-for-apps-in-the-program"></a>Quais são os critérios para aplicativos no programa?
 
-Aplicativos neste programa devem satisfazer os seguintes critérios:
+Os aplicativos nesse programa devem atender aos seguintes critérios:
 
-* Mínima garantida volume diário de solicitação de anúncio. 
-* Taxa de visualização alto de impressões. 
-* Boa qualidade clica contribuindo para uma clique por meio de taxa mínima em todos os formatos de anúncio. 
-* Siga os tamanhos padrão Interactive Advertising Bureau (IAB) e os métodos de posicionamento. Nenhum anúncio oculto.
-* Limpo posicionamento de anúncios em faixa (por exemplo, anúncios não são adjacentes entre si).
-* Unidades de anúncio não são usadas em vários aplicativos.
-* [Fluxo de usuário definido claro](https://blogs.windows.com/buildingapps/2017/08/31/best-practices-using-video-ads-windows-apps/) para o ponto em que o vídeo e/ou intersticiais em faixa anúncio é mostrado. Anúncios de vídeo não são previamente armazenadas em cache. 
-* Controlado comportamento de atualização do ad para que os anúncios retornados do servidor de mediação são sempre reproduzidos.
-* Presença Great Store com Limpar descrições do aplicativo, capturas de tela de alta fidelidade e ícones carregados para a loja. Trailers de vídeo são altamente recomendados.
-* Nenhuma atividade fraudulenta.
+* Volume diário mínimo de solicitações de anúncio. 
+* Taxa de visualização alta para impressões. 
+* A boa qualidade de clique contribuindo para uma taxa mínima de cliques em todos os formatos de anúncio. 
+* Siga os métodos de posicionamento e tamanhos de anúncios padrão da Interactive Advertising Bureau (IAB). Nenhum anúncio oculto.
+* O posicionamento claro de anúncios em faixa (por exemplo, os anúncios não estão adjacentes).
+* As unidades de anúncio não são usadas em vários aplicativos.
+* [Elimine o fluxo de usuários definido](https://blogs.windows.com/buildingapps/2017/08/31/best-practices-using-video-ads-windows-apps/) até o ponto em que o anúncio em faixa de vídeo e/ou intersticial é mostrado. Os anúncios em vídeo não são armazenados antecipadamente em cache. 
+* O comportamento de atualização de anúncios é controlado para que os anúncios retornados pelo servidor mediação sejam reproduzidos sempre.
+* Presença ideal da Microsoft Store com descrições claras de aplicativos, capturas de tela de alta fidelidade e ícones enviados. É recomendado usar trailers de vídeo.
+* Sem atividades fraudulentas.
 
-## <a name="can-apps-get-removed-from-the-program"></a>Os aplicativos podem obter removidos do programa?
+## <a name="can-apps-get-removed-from-the-program"></a>Os aplicativos podem ser removidos do programa?
 
-Aplicativos no programa são monitorados regularmente para garantir que eles continuem a atender aos critérios de qualificação. Para manter um volume de solicitação de anúncio diários mínima, certifique-se de que seu uso do app não soltar significativamente ao longo do tempo. É uma ótima maneira de fazer isso executando [campanhas de promoção regular](https://developer.microsoft.com/en-us/store/promote-your-apps).
+Os aplicativos no programa são monitorados regularmente para garantir que continuem a atender aos critérios de qualificação. Para manter um volume de solicitação mínima de anúncio diário, verifique se o uso do aplicativo não é reduzido significativamente ao longo do tempo. É uma ótima maneira de fazer isso é por meio de [campanhas promocionais veiculadas regularmente](https://developer.microsoft.com/en-us/store/promote-your-apps).
 
-## <a name="can-i-provide-additional-marketing-material-to-showcase-my-app-in-the-program"></a>Posso fornecer material adicional de marketing para demonstrar o meu aplicativo no programa? 
+## <a name="can-i-provide-additional-marketing-material-to-showcase-my-app-in-the-program"></a>Posso fornecer outros materiais de marketing para demonstrar o aplicativo no programa? 
 
-Qualquer conteúdo carregado como parte do envio da Store será usado automaticamente para demonstrar aplicativos premium. Além disso, se você quiser usar mais aplicativo ou capturas de tela de jogos, trailers de jogo e descrições avançadas, entre em contato em aiacare@microsoft.com.
+Qualquer conteúdo carregado como parte do envio para a Microsoft Store é usado automaticamente para demonstrar aplicativos premium. Além disso, se você gostaria de usar mais capturas de tela de aplicativos ou jogos, trailers de jogos e descrições mais detalhadas entre em contato conosco em aiacare@microsoft.com.

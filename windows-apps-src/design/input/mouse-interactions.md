@@ -1,5 +1,5 @@
 ---
-Description: Respond to mouse input in your apps by handling the same basic pointer events that you use for touch and pen input.
+Description: Responda à entrada do mouse em seus aplicativos manipulando os mesmos eventos de ponteiro básicos que você usa para entrada touch e por caneta.
 title: Interações por mouse
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f81634fdb0f9382b1f660394764e5555189783e4
-ms.sourcegitcommit: 444fd387c55618f9afdac115264c85b14fd8b826
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "8999909"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622351"
 ---
 # <a name="mouse-interactions"></a>Interações por mouse
 
@@ -57,9 +57,9 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 </tr>
 <tr class="even">
 <td align="left"><p>Clicar com o botão direito do mouse para selecionar e executar um comando</p></td>
-<td align="left"><p>Clique com o botão direito do mouse para exibir a barra de navegação (se disponível) e a barra de aplicativos com os comandos globais. Clique com o botão direito do mouse em um elemento para selecioná-lo e exibir a barra de apps com os comandos contextuais relacionados ao elemento selecionado.</p>
+<td align="left"><p>Clique com o botão direito do mouse para exibir a barra de navegação (se disponível) e a barra de aplicativos com os comandos globais. Clique com o botão direito do mouse em um elemento para selecioná-lo e exibir a barra de aplicativos com os comandos contextuais relacionados ao elemento selecionado.</p>
 <div class="alert">
-<strong>Observação</strong>com o botão direito para exibir um menu de contexto, se os comandos de barra de seleção ou o aplicativo não forem os comportamentos adequados da interface do usuário. Mas a nossa recomendação é que você use a barra de apps para os comportamentos de todos os comandos.
+<strong>Observação</strong>  botão direito do mouse para exibir um menu de contexto, se a seleção ou o aplicativo da barra de comandos não é apropriados comportamentos de interface do usuário. Mas a nossa recomendação é que você use a barra de aplicativos para os comportamentos de todos os comandos.
 </div>
 <div>
  
@@ -86,7 +86,7 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 
 ## <a name="mouse-input-events"></a>Eventos de entrada de mouse
 
-A maioria dos entrada do mouse pode ser manipulada por meio dos eventos de entrada roteados comuns é compatíveis com todos os objetos de [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) . Por exemplo:
+A maioria dos mouse de entrada podem ser tratadas por meio de eventos de entrada comuns roteados suportados por todos os [ **UIElement** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) objetos. Como por exemplo:
 
 - [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
 - [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
@@ -97,11 +97,11 @@ A maioria dos entrada do mouse pode ser manipulada por meio dos eventos de entra
 - [**DragLeave**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragleave)
 - [**DragOver**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
 - [**DragStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragstarting)
-- [**Drop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
+- [**Descartar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
 - [**DropCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dropcompleted)
 - [**GettingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gettingfocus)
 - [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
-- [**Holding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
+- [**Mantendo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
 - [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown)
 - [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup)
 - [**LosingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.losingfocus)
@@ -120,21 +120,21 @@ A maioria dos entrada do mouse pode ser manipulada por meio dos eventos de entra
 - [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed)
 - [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)
 - [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
-- [**Eventos PreviewKeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeydown.md)
+- [**PreviewKeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeydown.md)
 - [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup.md)
 - [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
 - [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
 - [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
 
-No entanto, você pode tirar proveito dos recursos específicos de cada dispositivo (como eventos de roda do mouse) usando o ponteiro, gesto e eventos de manipulação no [Input](https://docs.microsoft.com/uwp/api/windows.ui.input).
+No entanto, você pode tirar proveito dos recursos específicos de cada dispositivo (por exemplo, eventos da roda do mouse) usando os ponteiro, gesto e manipulação de eventos no [Windows.UI.Input](https://docs.microsoft.com/uwp/api/windows.ui.input).
 
-**Exemplos:** Consulte nosso [exemplo BasicInput](https://go.microsoft.com/fwlink/p/?LinkID=620302), para.
+**Exemplos:** Consulte nosso [BasicInput exemplo](https://go.microsoft.com/fwlink/p/?LinkID=620302), para.
 
 ## <a name="guidelines-for-visual-feedback"></a>Diretrizes de feedback visual
 
 - Quando o mouse é detectado (por eventos de movimentação ou focalização), mostre a interface do usuário específica do mouse para indicar a funcionalidade exposta pelo elemento. Se o mouse não for movimentado por algum tempo ou se o usuário começar uma interação por toque, faça com que a interface do usuário do mouse desapareça gradualmente. Dessa forma, a interface do usuário fica mais organizada.
 - Não use o cursor para comentário de foco; o comentário apresentado pelo elemento é suficiente (veja Cursores, a seguir).
-- Não exiba respostas visuais quando o elemento não permite manipulação (como texto estático).
+- Não exiba feedback visual quando o elemento não permite manipulação (como texto estático).
 - Não use retângulos de foco nas manipulações por mouse. Reserve-os para as interações por teclado.
 - Exiba respostas visuais simultaneamente para todos os elementos que representam o mesmo destino de entrada.
 - Inclua botões (como + e -) para emular manipulações baseadas em toque, como movimento panorâmico, giro, zoom, etc.
@@ -163,7 +163,7 @@ Se você precisa personalizar o cursor do mouse:
 
 ### <a name="samples"></a>Exemplos
 
-- [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-- [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+- [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+- [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 - [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-- [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)

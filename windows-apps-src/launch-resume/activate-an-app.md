@@ -1,6 +1,6 @@
 ---
-title: Manipular a ativação do aplicativo
-description: Aprenda a tratar ativação de app substituindo o método OnLaunched.
+title: Tratar a ativação do aplicativo
+description: Aprenda a manipular ativação de aplicativo substituindo o método OnLaunched.
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
 ms.date: 07/02/2018
 ms.topic: article
@@ -12,19 +12,19 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: a75136f26aa6cfa330e4118e6709b0b4d4be4054
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929347"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626591"
 ---
-# <a name="handle-app-activation"></a>Tratar a ativação do app
+# <a name="handle-app-activation"></a>Tratar a ativação do aplicativo
 
-Aprenda a manipular ativação de aplicativo substituindo o método [**Application. OnLaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) .
+Saiba como lidar com a ativação do aplicativo, substituindo o [ **Application.OnLaunched** ](/uwp/api/windows.ui.xaml.application.onlaunched) método.
 
 ## <a name="override-the-launch-handler"></a>Substitua o manipulador de inicialização
 
-Quando um aplicativo é ativado, por qualquer motivo, o sistema envia o evento [**Coreapplicationview**](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) . Para obter uma lista de tipos de ativação, consulte a enumeração [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693).
+Quando um aplicativo é ativado por qualquer motivo, o sistema envia o [ **CoreApplicationView.Activated** ](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) eventos. Para obter uma lista de tipos de ativação, consulte a enumeração [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693).
 
 A classe [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) define métodos que você pode substituir para manipular os vários tipos de ativação. Muitos tipos de ativação têm um método específico que você pode substituir. Para os outros tipo de ativação, substitua o método [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330).
 
@@ -40,7 +40,7 @@ Defina a classe do seu aplicativo.
 Substitua o método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). Esse método é chamado sempre que o usuário abre o aplicativo. O parâmetro [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) contém o estado anterior do seu aplicativo e os argumentos de ativação.
 
 > [!NOTE]
-> No Windows, iniciar um aplicativo suspenso do iniciar a lista de bloco ou o aplicativo não chama esse método.
+> No Windows, iniciando um aplicativo suspenso da lista de bloco ou aplicativo de início não chama esse método.
 
 ```csharp
 using System;
@@ -264,14 +264,14 @@ Se o valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/wi
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> Os aplicativos podem pular a inicialização se já houver conteúdo definido na janela atual. Você pode verificar a propriedade [**Tileid**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar se o aplicativo foi iniciado em principal ou um bloco secundário e, com base nisso, decidir se você deve apresentar uma nova ou não retomar a experiência de aplicativo.
+> Os aplicativos podem pular a inicialização se já houver conteúdo definido na janela atual. Você pode verificar a [ **LaunchActivatedEventArgs.TileId** ](https://msdn.microsoft.com/library/windows/apps/br224736) propriedade para determinar se o aplicativo foi iniciado no primário ou um bloco secundário e, com base nessas informações, decida se você deve: apresentar uma nova ou retomar a experiência de aplicativo.
 
 ## <a name="important-apis"></a>APIs Importantes
 * [Windows.ApplicationModel.Activation](https://msdn.microsoft.com/library/windows/apps/br224766)
-* [Windows.UI.Xaml.Automation](https://msdn.microsoft.com/library/windows/apps/br242324)
+* [Windows.UI.Xaml.Application](https://msdn.microsoft.com/library/windows/apps/br242324)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Manipular a suspensão do aplicativo](suspend-an-app.md)
-* [Manipular a retomada do aplicativo](resume-an-app.md)
-* [Diretrizes para suspensão e retomada de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh465088)
+* [Suspender o identificador de aplicativo](suspend-an-app.md)
+* [Identificador de retomada de aplicativo](resume-an-app.md)
+* [Diretrizes para aplicativo suspender e retomar](https://msdn.microsoft.com/library/windows/apps/hh465088)
 * [Ciclo de vida do aplicativo](app-lifecycle.md)

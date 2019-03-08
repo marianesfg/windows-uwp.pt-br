@@ -11,19 +11,19 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 0600e66c672a28683befdb7b0090f5455a28c948
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116318"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624191"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
 ![imagem hero](images/header-acrylic.svg)
 
-Acrílico é um tipo de [Pincel](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush) que cria uma textura translúcida. Você pode aplicar o acrílico em superfícies de aplicativos para adicionar profundidade e ajudar a estabelecer uma hierarquia visual.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
+Tinta acrílica é um tipo de [pincel](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush) que cria uma textura translúcida. Você pode aplicar o acrílico em superfícies de aplicativos para adicionar profundidade e ajudar a estabelecer uma hierarquia visual.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
 
-> **APIs importantes**: [classe AcrylicBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [Propriedade de fundo](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.Background)
+> **APIs importantes**: [Classe AcrylicBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [propriedade do plano de fundo](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.Background)
 
 :::row:::
     :::column:::
@@ -38,7 +38,7 @@ Acrílico é um tipo de [Pincel](https://docs.microsoft.com/en-us/uwp/api/Window
 
 ## <a name="acrylic-and-the-fluent-design-system"></a>Acrílico e o Sistema de Design Fluent
 
- O Sistema de Design Fluent ajuda você a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. O Acrílico é um componente do Sistema de Design Fluent que acrescenta textura física (material) e profundidade ao seu aplicativo. Para saber mais, consulte a [visão geral do Fluent Design para UWP](../fluent-design-system/index.md).
+ O Sistema de Design Fluente ajuda você a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. O Acrílico é um componente do Sistema de Design Fluent que acrescenta textura física (material) e profundidade ao seu aplicativo. Para saber mais, consulte a [visão geral do Design Fluente para UWP](../fluent-design-system/index.md).
 
  ## <a name="video-summary"></a>Resumo do vídeo
 
@@ -68,50 +68,50 @@ A característica mais notável do acrílico é sua transparência. Existem dois
 
  ![Acrílico de aplicativo](images/AppAcrylic_DarkTheme.png)
 
- Coloque diversas superfícies de acrílico com cuidado: várias camadas de acrílico de fundo podem criar ópticas distração.
+ Camada várias superfícies acrílico com cuidado: várias camadas de tinta acrílica do plano de fundo podem criar incômodas ilusões de óptico.
 
 ## <a name="when-to-use-acrylic"></a>Quando usar o acrílico
 
-* Use acrílico no aplicativo para dar suporte a interface do usuário, como em superfícies que podem se sobrepor conteúdo quando rolada ou interage.
-* Use acrílico de fundo para elementos de interface do usuário transitórios, como luz dimsissable da interface do usuário, submenus e menus de contexto.<br />Usar o acrílico em cenários transitórios ajuda a manter uma relação visual com o conteúdo que acionou a UI Transiente.
+* Use tinta acrílica de no aplicativo para dar suporte a interface do usuário, como em superfícies que podem se sobrepor conteúdo quando rolado ou interagir com.
+* Use tinta acrílica do plano de fundo para elementos de interface do usuário transitórios, como menus de contexto, flyouts e dimsissable luz da interface do usuário.<br />Usar tinta Acrílica em cenários transitórios ajuda a manter um relacionamento visual com o conteúdo que disparou a interface do usuário transitório.
 
-Se você estiver usando no aplicativo acrílico em superfícies de navegação, considere a possibilidade de estender o conteúdo sob o painel acrílico para melhorar o fluxo em seu aplicativo. Usar o NavigationView fará isso para você automaticamente. No entanto, para evitar a criação de um efeito de tiragem, não tente colocar várias partes de acrílico-borda - isso pode criar uma fenda indesejada entre as duas superfícies desfocadas. Acrílico é uma ferramenta para trazer harmonia visual aos seus designs, mas quando usado incorretamente, pode resultar em ruído visual.
+Se você estiver usando tinta acrílica de no aplicativo em superfícies de navegação, considere a possibilidade de estender o conteúdo abaixo do painel de acrílico para melhorar o fluxo em seu aplicativo. Usar o NavigationView fará isso para você automaticamente. No entanto, para evitar a criação de um efeito de distribuição, não tente colocar várias partes de acrílico-borda - isso pode criar uma costura indesejada entre as duas superfícies desfocadas. Tinta acrílica é uma ferramenta para trazer harmonia visual para seus designs, mas quando usado incorretamente, pode resultar em poluição visual.
 
-Considere os seguintes padrões de uso para decidir a melhor maneira de incorporar o acrílico em seu aplicativo:
+Considere os seguintes padrões de uso para decidir a melhor maneira de incorporar tinta acrílica em seu aplicativo:
 
-### <a name="horizontal-navigation-or-commanding"></a>Navegação horizontal ou comandos
+### <a name="horizontal-navigation-or-commanding"></a>Navegação horizontal ou dos comandos
 
-Se seu aplicativo não é capaz de aproveitar o NavigationView e você pretende adicionar um acrílico por conta própria, recomendamos usar acrílico relativamente transparente com opacidade de tonalidade de 60%.
+Se seu aplicativo não é capaz de aproveitar o NavigationView e você planeja adicionar tinta acrílica por conta própria, é recomendável usar o tinta acrílica relativamente translúcida com opacidade de tonalidade de 60%.
  - Quando o painel é aberto como uma sobreposição sobre outros conteúdos do aplicativo, isso deve ser [60% de acrílico de aplicativo](#acrylic-theme-resources)
 
 ![Aplicativo de mapas usando o comando horizontal no aplicativo](images/Maps_In_App_Acrylic_1.png)
 
-Além disso, ter seu conteúdo estender ou rolagem sob o acrílico na parte superior dará seu aplicativo uma experiência mais imersiva e perfeita.
+Além disso, ter seu conteúdo estender ou rolagem sob a tinta acrílica na parte superior dará seu aplicativo uma experiência mais imersiva e contínua.
 
 ### <a name="vertical-panes"></a>Painéis verticais
 
-Para painéis verticais ou superfícies que ajudam a seção desativar o conteúdo do seu aplicativo, recomendamos que você use um plano de fundo opaco em vez de acrílico. Se abrir seus painéis verticais sobre conteúdo, como em do NavigationView **compacto** ou modos **mínimo** , sugerimos que usar o acrílico de aplicativo para ajudar a manter o contexto da página quando o usuário tem esse painel aberto.
+Para os painéis verticais ou superfícies que ajudam a seção de conteúdo de seu aplicativo, é recomendável que você use um plano de fundo opaco em vez de tinta acrílica. Se seus painéis verticais abrir na parte superior do conteúdo, como do NavigationView **Compact** ou **mínimo** modos, sugerimos que você use tinta acrílica de no aplicativo para ajudar a manter o contexto da página quando o usuário tem nesse painel aberto.
 
-### <a name="transient-surfaces"></a>Superfícies transitórios
+### <a name="transient-surfaces"></a>Superfícies transitórias
 
-Para aplicativos com menu submenus, pop-ups não modal, ou ignorar painéis, é recomendável usar acrílico de fundo.
+Para aplicativos com submenus de menu, popups não modal, ou descarte suave e painéis, é recomendável usar tinta acrílica do plano de fundo.
 
-![Usando um submenu informativo padrão do aplicativo de email](images/Mail_TransientContextMenu.png)
+![Padrão de aplicativo de email usando um submenu informativa](images/Mail_TransientContextMenu.png)
 
-Muitos dos nossos controles usará o acrílico por padrão. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) e controles semelhantes com luz dimiss pop-ups todos usarão o acrílico transitório quando eles são invocados.
+Muitos dos nossos controles usarão a tinta acrílica por padrão. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) e controles semelhantes com pop-ups de luz dimiss todos usarão a tinta acrílica transitória quando eles são invocados.
 
 > [!Note]
-> Renderização de superfícies é GPU intensivo, que pode aumentar o consumo de energia do dispositivo e reduzir a duração da bateria. Os efeitos acrílicos são automaticamente desativados quando dispositivos entram no modo de economia de bateria, e os usuários podem desativar os efeitos acrílicos para todos os aplicativos, se preferirem.
+> A renderização de superfícies acrílico é o uso intenso da GPU, que pode aumentar o consumo de energia do dispositivo e encurtar o tempo de vida útil da bateria. Efeitos de acrílico automaticamente são desabilitados quando dispositivos entrar no modo de economia de bateria e os usuários podem desabilitar os efeitos de acrílico para todos os aplicativos, se desejarem.
 
 ## <a name="usability-and-adaptability"></a>Usabilidade e adaptabilidade
 O acrílico adapta automaticamente sua aparência para uma variedade de dispositivos e contextos.
 
-No modo Alto Contraste, os usuários continuam visualizando a cor de fundo familiar de sua escolha no lugar do acrílico. Além disso, ambos os acrílicos de plano de fundo e no aplicativo aparecem como uma cor sólida:
- - Quando o usuário desativa a transparência em Configurações gt _ gt _ personalização cor
- - Quando o modo de economia de bateria está ativado
+No modo Alto Contraste, os usuários continuam visualizando a cor de fundo familiar de sua escolha no lugar do acrílico. Além disso, a tinta acrílica do plano de fundo e tinta acrílica de no aplicativo aparecem como uma cor sólida:
+ - Quando o usuário desativa a transparência em Configurações > personalização > cor
+ - Quando o modo de economia de bateria é ativado
  - Quando o aplicativo é executado em hardware de capacidade reduzida
 
-Além disso, apenas o acrílico de fundo irá substituir sua translucency e textura com uma cor sólida:
+Além disso, apenas tinta acrílica do plano de fundo substituirá seu translucência e textura com uma cor sólida:
  - Quando uma janela de aplicativo na área de trabalho é desativada
  - Quando o aplicativo UWP está em execução no telefone, Xbox, HoloLens ou modo tablet
 
@@ -129,7 +129,7 @@ Nós criamos uma coleção de recursos de tema de pincel para tipos de acrílico
     <tr>
         <th align="center">Chave do recurso</th>
         <th align="center">Opacidade do tom</th>
-        <th align="center"><a href="color.md">Cor de retorno</a> </th>
+        <th align="center"><a href="color.md">Cor de fallback</a> </th>
     </tr>
     <tr>
         <td> SystemControlAcrylicWindowBrush, SystemControlAcrylicElementBrush <br/> SystemControlChromeLowAcrylicWindowBrush, SystemControlChromeLowAcrylicElementBrush <br/> SystemControlBaseHighAcrylicWindowBrush, SystemControlBaseHighAcrylicElementBrush <br/> SystemControlBaseLowAcrylicWindowBrush, SystemControlBaseLowAcrylicElementBrush <br/> SystemControlAltHighAcrylicWindowBrush, SystemControlAltHighAcrylicElementBrush <br/> SystemControlAltLowAcrylicWindowBrush, SystemControlAltLowAcrylicElementBrush </td>
@@ -137,7 +137,7 @@ Nós criamos uma coleção de recursos de tema de pincel para tipos de acrílico
         <td> ChromeMedium <br/> ChromeLow <br/><br/> BaseHigh <br/><br/> BaseLow <br/><br/> AltHigh <br/><br/> AltLow </td>
     </tr>
     </tr>
-        <td> <b>Uso recomendado:</b> Esses são recursos acrílicos com finalidades gerais que funcionam bem em uma ampla variedade de aplicações. Se o seu aplicativo utiliza texto secundário de cor AltMedium com tamanho menor que 18px, coloque um recurso acrílico de 80% atrás do texto para <a href="../accessibility/accessible-text-requirements.md">atender os requisitos de taxa de contraste</a>. </td>
+        <td> <b>Uso recomendado:</b> Esses são recursos de finalidade geral acrílico que funcionam bem em uma ampla variedade de usos. Se o seu aplicativo utiliza texto secundário de cor AltMedium com tamanho menor que 18px, coloque um recurso acrílico de 80% atrás do texto para <a href="../accessibility/accessible-text-requirements.md">atender os requisitos de taxa de contraste</a>. </td>
     </tr>
     <tr>
         <td> SystemControlAcrylicWindowMediumHighBrush, SystemControlAcrylicElementMediumHighBrush <br/> SystemControlBaseHighAcrylicWindowMediumHighBrush, SystemControlBaseHighAcrylicElementMediumHighBrush </td>
@@ -145,7 +145,7 @@ Nós criamos uma coleção de recursos de tema de pincel para tipos de acrílico
         <td> ChromeMedium <br/><br/> BaseHigh </td>
     </tr>
     <tr>
-        <td> <b>Uso recomendado:</b> Se seu aplicativo utiliza texto secundário de cor AltMedium com um tamanho de 18px ou maior, você pode colocar esses recursos acrílicos de 70% mais translúcidos atrás do texto. Recomendamos usar esses recursos nas áreas de navegação e comando horizontais superiores do seu aplicativo.  </td>
+        <td> <b>Uso recomendado:</b> Se seu aplicativo usa texto secundário da cor AltMedium com um tamanho de texto de 18px ou maior, você pode colocar esses recursos de acrílico 70% mais translúcidos atrás do texto. Recomendamos usar esses recursos nas áreas de navegação e comando horizontais superiores do seu aplicativo.  </td>
     </tr>
     <tr>
         <td> SystemControlChromeHighAcrylicWindowMediumBrush, SystemControlChromeHighAcrylicElementMediumBrush <br/> SystemControlChromeMediumAcrylicWindowMediumBrush, SystemControlChromeMediumAcrylicElementMediumBrush <br/> SystemControlChromeMediumLowAcrylicWindowMediumBrush, SystemControlChromeMediumLowAcrylicElementMediumBrush <br/> SystemControlBaseHighAcrylicWindowMediumBrush, SystemControlBaseHighAcrylicElementMediumBrush <br/> SystemControlBaseMediumLowAcrylicWindowMediumBrush, SystemControlBaseMediumLowAcrylicElementMediumBrush <br/> SystemControlAltMediumLowAcrylicWindowMediumBrush, SystemControlAltMediumLowAcrylicElementMediumBrush  </td>
@@ -153,7 +153,7 @@ Nós criamos uma coleção de recursos de tema de pincel para tipos de acrílico
         <td> ChromeHigh <br/><br/> ChromeMedium <br/><br/> ChromeMediumLow <br/><br/> BaseHigh <br/><br/> BaseLow <br/><br/> AltMediumLow </td>
     </tr>
     <tr>
-        <td> <b>Uso recomendado:</b> Ao colocar apenas texto primário de cor AltHigh sobre o acrílico, seu aplicativo pode utilizar esses recursos de 60%. Recomendamos pintar o <a href="../controls-and-patterns/navigationview.md">painel de navegação vertical</a> do seu aplicativo, i.e. menu de hambúrgueres, com acrílico de 60%. </td>
+        <td> <b>Uso recomendado:</b> Ao colocar somente texto primário da cor AltHigh ao longo da tinta acrílica, seu aplicativo pode utilizar esses recursos de 60%. Recomendamos pintar o <a href="../controls-and-patterns/navigationview.md">painel de navegação vertical</a> do seu aplicativo, i.e. menu de hambúrgueres, com acrílico de 60%. </td>
     </tr>
 </table>
 
@@ -162,7 +162,7 @@ Além do acrílico de cor neutra, também adicionamos recursos que colorem o acr
     <tr>
         <th align="center">Chave do recurso</th>
         <th align="center">Opacidade do tom</th>
-        <th align="center"><a href="color.md">Tom e cores de Retorno</a> </th>
+        <th align="center"><a href="color.md">Cores de tom e Fallback</a> </th>
     </tr>
     <tr>
         <td> SystemControlAccentAcrylicWindowAccentMediumHighBrush, SystemControlAccentAcrylicElementAccentMediumHighBrush  </td>
@@ -191,21 +191,21 @@ Para pintar uma superfície específica, aplique um dos recursos de tema acima a
 ## <a name="custom-acrylic-brush"></a>Pincel acrílico personalizado
 Você pode optar por adicionar uma tonalidade de cor ao acrílico do seu aplicativo para mostrar a identidade visual ou garantir equilíbrio visual em relação aos outros elementos da página. Para exibir cores ao invés da escala de cinza, você deverá definir seus próprios pincéis acrílicos utilizando as seguintes propriedades.
  - **TintColor**: a cor/tonalidade da camada de sobreposição. Considere especificar o valor RGB da cor e a opacidade do canal alfa.
- - **TintOpacity**: a opacidade da camada de tonalidade. É recomendável 80% de opacidade como ponto de partida, embora cores diferentes possam parecer mais atraentes em outras translucencies.
- - **TintLuminosityOpacity**: controla a quantidade de saturação é permitida por meio de superfície acrílico do plano de fundo.
+ - **TintOpacity**: a opacidade da camada de tonalidade. É recomendável 80% de opacidade como ponto de partida, embora cores diferentes podem parecer mais atraentes em outros translucencies.
+ - **TintLuminosityOpacity**: controla a quantidade de saturação é permitida por meio da superfície acrílico do plano de fundo.
  - **BackgroundSource**: o marcador para especificar se você deseja acrílico de fundo ou de aplicativo.
- - **FallbackColor**: a cor sólida que substitui o acrílico em economia de bateria. Para acrílico de fundo, a cor de retorno também substitui o acrílico quando seu aplicativo não está na janela da área de trabalho ativa ou quando o aplicativo está sendo executado no telefone ou no Xbox.
+ - **FallbackColor**: a cor sólida que substitui a tinta acrílica em economia de bateria. Para acrílico de fundo, a cor de retorno também substitui o acrílico quando seu aplicativo não está na janela da área de trabalho ativa ou quando o aplicativo está sendo executado no telefone ou no Xbox.
 
 ![Amostras de acrílico de tema claro](images/CustomAcrylic_Swatches_LightTheme.png)
 
 ![Amostras de acrílico de tema escuro](images/CustomAcrylic_Swatches_DarkTheme.png)
 
-![Luminosidade opactity em comparação comparada opacidade de tonalidade](images/LuminosityVersusTint.png)
+![Opactity luminosidade comparado a opacidade de tonalidade](images/LuminosityVersusTint.png)
 
 Para adicionar um pincel acrílico, defina os três recursos para temas escuro, claro e de alto contraste. Observe que em alto contraste, recomendamos usar um SolidColorBrush com a mesma x:Key do AcrylicBrush escuro/claro.
 
 > [!Note] 
-> Se você não especificar um valor de TintLuminosityOpacity, o sistema ajustará automaticamente seu valor com base em seu TintColor e TintOpacity.
+> Se você não especificar um valor de TintLuminosityOpacity, o sistema se ajustará automaticamente o seu valor com base em seu TintColor e TintOpacity.
 
 ```xaml
 <ResourceDictionary.ThemeDictionaries>
@@ -319,23 +319,23 @@ Além disso, você precisará desenhar o título do seu aplicativo, que normalme
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 * Use acrílico como material de fundo em superfícies não primárias do aplicativo, como painéis de navegação.
 * Estenda o acrílico para pelo menos uma borda do seu aplicativo para criar uma experiência perfeita, combinando de maneira sutil com os entornos do aplicativo.
-* Não coloque arylic da área de trabalho em superfícies grandes em segundo plano do seu aplicativo - Isso interrompe o modelo mental da acrílico sendo usado principalmente para superfícies transitórios.
+* Não coloque arylic da área de trabalho nas superfícies de plano de fundo grande do seu aplicativo - Isso interrompe o modelo mental de tinta acrílica que está sendo usada principalmente para superfícies transitórias.
 * Não coloque acrílicos de aplicativo e de fundo de forma diretamente adjacente para evitar a tensão visual nas junções.
 * Não coloque vários painéis acrílicos com o mesmo tom e opacidade próximos uns aos outros, pois isso gera uma emenda visível não desejada.
 * Não coloque texto de cores destacadas sobre superfícies acrílicas.
 
 ## <a name="how-we-designed-acrylic"></a>Como projetamos o acrílico
 
-Ajustamos os componentes principais do acrílico para alcançar sua aparência e propriedades únicas. Começamos com translucency, Desfoque e ruído para adicionar profundidade visual e dimensão a superfícies planas. Adicionamos uma camada de modo de mistura de exclusão para garantir contraste e legibilidade da interface de usuário posicionada em um fundo acrílico. Finalmente, adicionamos tonalidade de cor para oportunidades de personalização. Em conjunto, essas camadas constituem um material novo e utilizável.
+Ajustamos os componentes principais do acrílico para alcançar sua aparência e propriedades únicas. Começamos com translucência, Desfoque e ruído para adicionar profundidade visual e a dimensão à superfícies simples. Adicionamos uma camada de modo de mistura de exclusão para garantir contraste e legibilidade da interface de usuário posicionada em um fundo acrílico. Finalmente, adicionamos tonalidade de cor para oportunidades de personalização. Em conjunto, essas camadas constituem um material novo e utilizável.
 
-![Receita acrílica](images/AcrylicRecipe_Diagram.jpg)
+![Receita acrílico](images/AcrylicRecipe_Diagram.jpg)
 <br/>A receita acrílica: fundo, desfoque, mistura de exclusão, sobreposição de cor/tonalidade, ruído.
 
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-[**Realce do Revelação**](reveal.md)
+[**Revelar realce**](reveal.md)

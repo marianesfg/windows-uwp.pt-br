@@ -1,21 +1,21 @@
 ---
 ms.assetid: 3a17e682-40be-41b4-8bd3-fbf0b15259d6
-title: Criar um app Hello, world (JS)
-description: Este tutorial ensina a usar JavaScript e HTML para criar um simples & \#0034; Olá, mundo & \#0034; destinado a Universal Windows Platform (UWP) no Windows 10.
+title: Criar um aplicativo Hello, world (JS)
+description: Este tutorial ensina como usar JavaScript e HTML para criar um simples &\#0034; Olá, mundo &\#0034; o aplicativo que tem como alvo o Windows UWP (plataforma Universal) no Windows 10.
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c5b99c95167940c1ae51dbe96a3e43dc6fb0af34
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928235"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620421"
 ---
-# <a name="create-a-hello-world-app-js"></a>Criar um app Hello, world (JS)
+# <a name="create-a-hello-world-app-js"></a>Criar um aplicativo Hello, world (JS)
 
-Este tutorial ensina a usar JavaScript e HTML para criar um simples "Hello, world" aplicativo direcionado a Universal Windows Platform (UWP) no Windows 10. Com um único projeto no Microsoft Visual Studio, você pode criar um aplicativo que é executado em qualquer dispositivo Windows 10.
+Este tutorial ensina como usar JavaScript e HTML para criar um simples "Hello, world" aplicativo que tem como alvo o Windows UWP (plataforma Universal) no Windows 10. Com um único projeto no Microsoft Visual Studio, você pode criar um aplicativo que é executado em qualquer dispositivo Windows 10.
 
 > [!NOTE]
 > Este tutorial usa o Visual Studio Community 2017. Se você estiver usando uma versão diferente do Visual Studio, ele pode ter uma aparência um pouco diferente.
@@ -23,17 +23,17 @@ Este tutorial ensina a usar JavaScript e HTML para criar um simples "Hello, worl
 
 Aqui, você aprenderá a:
 
--   Crie um novo projeto do **Visual Studio 2017** direcionado ao **Windows 10** e a **UWP**.
+-   Criar um novo **Visual Studio 2017** projeto que tem como alvo **Windows 10** e o **UWP**.
 -   Adicionar conteúdo HTML e JavaScript
 -   Executar o projeto na área de trabalho local no Visual Studio
 
 ## <a name="before-you-start"></a>Antes de começar...
 
 -   [O que é um aplicativo UWP?](universal-application-platform-guide.md).
--   Para concluir este tutorial, você precisa do Windows 10 e Studio2017 Visual. [Prepare-se para começar](get-set-up.md).
+-   Para concluir este tutorial, você precisa do Windows 10 e o Visual Studio 2017. [Prepare-se para começar](get-set-up.md).
 -   Também pressupomos que você esteja usando o layout de janela padrão no Visual Studio. Se você alterar o layout padrão, poderá redefini-lo no menu **Janela** usando o comando **Redefinir Layout da Janela**.
 
-## <a name="step-1-create-a-new-project-in-visual-studio"></a>Etapa 1: crie um novo projeto no Visual Studio.
+## <a name="step-1-create-a-new-project-in-visual-studio"></a>Etapa 1: Crie um novo projeto no Visual Studio.
 
 1.  Inicie o Visual Studio 2017.
 
@@ -43,9 +43,9 @@ Aqui, você aprenderá a:
 
     (Se você não vir nenhum modelo universal, talvez faltem componentes para a criação de aplicativos UWP. Você pode repetir o processo de instalação e adicionar suporte para UWP, clicando em **Abrir Instalador do Visual Studio** na caixa de diálogo *Novo Projeto*. Consulte [Prepare-se para começar](get-set-up.md).
 
-4.  Escolha o modelo **Aplicativo em Branco (Universal do Windows)** e insira "HelloWorld" como **Nome**. Clique em **OK**.
+4.  Escolha o modelo **Aplicativo em branco (Universal Windows)** e insira "HelloWorld" como **nome**. Clique em **OK**.
 
-    ![A janela Novo Projeto](images/win10-js-01.png)
+    ![A janela Novo projeto](images/win10-js-01.png)
 
 > [!NOTE]
 > Se esta foi a primeira vez em que usou o Visual Studio, você poderá ver uma caixa de diálogo Configurações solicitando que você habilite o **Modo de desenvolvedor**. O modo de desenvolvedor é uma configuração especial que habilita determinados recursos, como a permissão para executar apps diretamente, em vez de apenas da Store. Para obter mais informações, leia [Habilitar seu dispositivo para desenvolvimento](enable-your-device-for-development.md). Para continuar com este guia, selecione **Modo de desenvolvedor**, clique em **Sim** e feche a caixa de diálogo.
@@ -84,7 +84,7 @@ Para exibir e editar um arquivo no projeto, clique duas vezes no arquivo no **Ge
 -   Assets/StoreLogo.png representa seu app na Microsoft Store.
 -   Assets/SplashScreen.scale-200.png é a tela inicial que será exibida quando o aplicativo iniciar.
 
-## <a name="step-2-adding-a-button"></a>Etapa 2: adicione um botão
+## <a name="step-2-adding-a-button"></a>Etapa 2: Adicionando um botão
 
 Clique em *index.html* para selecioná-lo no editor e altere o HTML que contém para ler:
 
@@ -114,7 +114,7 @@ Ele deve ser assim:
 Este HTML referencia o *main.js* que conterá o JavaScript e, em seguida, adiciona uma única linha de texto e um único botão ao corpo da página da web. O botão recebe um *ID* para que o JavaScript possa fazer referência a ele.
 
 
-## <a name="step-3-adding-some-javascript"></a>Etapa 3: adicione algum JavaScript
+## <a name="step-3-adding-some-javascript"></a>Etapa 3: Adicionando um pouco de JavaScript
 
 Agora, vamos adicionar o JavaScript. Clique em *main.js* para selecioná-lo e adicione o seguinte:
 
@@ -144,7 +144,7 @@ Esse JavaScript declara duas funções. A função *window.onload* é chamada au
 A segunda função, *sayHello()*, cria e exibe uma caixa de diálogo. Isso é muito parecido com a função *Alert()* que você talvez conheça do desenvolvimento de JavaScript anterior.
 
 
-## <a name="step-4-run-the-app"></a>Etapa 4: execute seu app!
+## <a name="step-4-run-the-app"></a>Etapa 4: Execute o aplicativo!
 
 Agora você pode executar o app pressionando F5. O app será carregado e a página da web será exibida. Clique no botão e a caixa de diálogo será exibida.
 
@@ -157,7 +157,7 @@ Agora você pode executar o app pressionando F5. O app será carregado e a pági
 
 Parabéns, você criou um aplicativo JavaScript para Windows 10 e a UWP! Este é um exemplo incrivelmente simples, porém agora você pode começar a adicionar suas bibliotecas e estruturas JavaScript favoritas para criar seu próprio aplicativo. E como é um aplicativo UWP, você poderá publicá-lo na Loja. Para um exemplo de como estruturas de terceiros podem ser adicionadas, consulte estes projetos:
 
-* [Um jogo simples 2D UWP para a Microsoft Store, escrito em JavaScript e CreateJS](get-started-tutorial-game-js2d.md)
-* [Um jogo 3D UWP para a Microsoft Store, escrito em JavaScript e threeJS](get-started-tutorial-game-js3d.md)
+* [Um UWP 2D simple jogo para a Microsoft Store, escrito em JavaScript e CreateJS](get-started-tutorial-game-js2d.md)
+* [Um jogo para a Microsoft Store, escrito em JavaScript e threeJS UWP 3D](get-started-tutorial-game-js3d.md)
 
 

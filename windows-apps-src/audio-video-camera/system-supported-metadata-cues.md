@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, metadados, indicação, controle por voz, capítulo
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b3753e92524e300252930f48433f91e175353c9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046103"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635851"
 ---
 # <a name="system-supported-timed-metadata-cues"></a>Indicações de metadados programados com suporte do sistema
 Este artigo descreve como tirar proveito dos vários formatos de metadados programados podem ser inseridos em arquivos de mídia ou em fluxos. Os aplicativos UWP podem se registrar em eventos gerados pelo pipeline de mídia durante a reprodução sempre que essas indicações de metadados forem encontradas. Usando a classe [**DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue), os apps podem implementar suas próprias indicações de metadados personalizados, mas este artigo se concentra em vários padrões de metadados detectados automaticamente pelo pipeline de mídia, incluindo:
@@ -100,7 +100,7 @@ No método auxiliar **RegisterMetadataHandlerForChapterCues**, obtenha uma inst�
 
 [!code-cs[RegisterMetadataHandlerForChapterCues](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForChapterCues)]
 
-No manipulador do evento **CueEntered**, você pode verificar a propriedade [**TimedMetadataKind**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.TimedMetadataKind) do objeto [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) passado para o manipulador a fim de verificar se os metadados são para indicações de capítulo. Isso é necessário se você estiver utilizando o mesmo manipulador de evento de indicação de dados para vários tipos de metadados. Se a faixa de metadados associados for do tipo **TimedMetadataKind.Chapter**, converta a indicação de dados contida na propriedade **Indicação** dos [**MediaCueEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.core.mediacueeventargs) em uma [**ChapterCue**](https://docs.microsoft.com/uwp/api/windows.media.core.chaptercue). A propriedade [**Title**](https://docs.microsoft.com/uwp/api/windows.media.core.chaptercue.Title) da **ChapterCue** contém o título do capítulo que acabou de ser alcançado na reprodução.
+No manipulador para o evento **CueEntered**, você pode verificar a propriedade [**TimedMetadataKind**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.TimedMetadataKind) do objeto [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) passado para o manipulador para ver se os metadados são para indicações de capítulo. Isso será necessário se você estiver usando o mesmo manipulador de eventos de indicação de dados para vários tipos de metadados. Se a faixa de metadados associados for do tipo **TimedMetadataKind.Chapter**, converta a indicação de dados contida na propriedade **Indicação** dos [**MediaCueEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.core.mediacueeventargs) em uma [**ChapterCue**](https://docs.microsoft.com/uwp/api/windows.media.core.chaptercue). A propriedade [**Title**](https://docs.microsoft.com/uwp/api/windows.media.core.chaptercue.Title) da **ChapterCue** contém o título do capítulo que acabou de ser alcançado na reprodução.
 
 [!code-cs[ChapterCueEntered](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetChapterCueEntered)]
 
@@ -182,7 +182,7 @@ A próxima parte do exemplo ilustra o cenário em que a reprodução de anúncio
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Reprodução de mídia](media-playback.md)
-* [Itens de mídia, playlists e faixas](media-playback-with-mediasource.md)
+* [Trilhas, as listas de reprodução e itens de mídia](media-playback-with-mediasource.md)
 
 
  

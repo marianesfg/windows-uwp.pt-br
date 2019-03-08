@@ -1,5 +1,5 @@
 ---
-Description: Before you can run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must define your experiment in Partner Center.
+Description: Antes de executar um teste em seu aplicativo de plataforma Universal do Windows (UWP) com um teste a / B, você deve definir seu experimento no Partner Center.
 title: Definir seu experimento no Partner Center
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
 ms.date: 02/08/2017
@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, testes A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: 7818d9e251233c757618d60abaa156d294afb4b5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933673"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624161"
 ---
 # <a name="define-your-experiment-in-partner-center"></a>Definir seu experimento no Partner Center
 
-Depois de você [criar um projeto e definir variáveis remotas no Partner Center](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) e [codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md), você estará pronto para criar um experimento no projeto. Quando você cria o experimento, você definirá os objetivos e as variações as quais os usuários receberão.
+Depois que você [criar um projeto e definir variáveis remotas no Partner Center](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) e [seu aplicativo para experimentação de código](code-your-experiment-in-your-app.md), você está pronto para criar um experimento no projeto. Quando você cria o experimento, você definirá os objetivos e as variações as quais os usuários receberão.
 
 Para um guia passo a passo que demonstra o processo de criação e execução de um experimento de ponta a ponta, veja [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
@@ -34,7 +34,7 @@ Para um guia passo a passo que demonstra o processo de criação e execução de
     > Não marque essa caixa se estiver criando um experimento que você liberará para os clientes (isto é, uma experiência que está associada com a ID do projeto que é usada em uma versão do seu app e está disponível para os clientes). Editar um experimento enquanto ele está ativo invalidará os resultados do experimento.
 
 7. Na lista suspensa **Nome do projeto**, o projeto atual será selecionado automaticamente. Se você deseja adicionar o novo experimento em um projeto diferente, você pode selecionar esse projeto aqui. Caso contrário, deixe esta seleção sozinha.
-8.   Anote o valor do [ID do projeto](run-app-experiments-with-a-b-testing.md#terms). Quando você [codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md), você deve fazer referência essa ID em seu código para que você pode receber dados de variação e relatar eventos de exibição e conversão para o Partner Center.
+8.   Anote o valor do [ID do projeto](run-app-experiments-with-a-b-testing.md#terms). Quando você [seu aplicativo para experimentação de código](code-your-experiment-in-your-app.md), você deve fazer referência a essa ID em seu código para que você possa receber dados de variação e relatar eventos de exibição e conversão para o Partner Center.
 9. Na seção **Evento de visualização**, digite o nome do [evento de visualização](run-app-experiments-with-a-b-testing.md#terms) para o seu experimento no campo **Nome do evento de visualização**.
 10. Na seção **Metas e eventos de conversão**, defina pelo menos uma meta para seu experimento:
   * No campo **Nome da meta**, digite um nome descritivo para sua meta. Depois que você executar um experimento, esse nome aparecerá no resumo dos resultados do experimento.
@@ -50,7 +50,7 @@ Para um guia passo a passo que demonstra o processo de criação e execução de
 
 Em seguida, defina as [variáveis](run-app-experiments-with-a-b-testing.md#terms) remotas e as [variações](run-app-experiments-with-a-b-testing.md#terms) de seu experimento.
 
-1. Na seção **Variáveis remotas e variações**, você verá duas variações do padrão, **Variação A (controle)** e **Variação B**. Se você quiser mais variações, clique em **Adicionar variação**. Opcionalmente, você pode renomear cada variação.
+1. No **remotas variáveis e variações** seção, você deverá ver duas variações do padrão, **variação (controle)** e **B variação**. Se você quiser mais variações, clique em **adicionar variação**. Opcionalmente, você pode renomear cada variação.
 2. Por padrão, as variações são igualmente distribuídas para os usuários do aplicativo. Se você deseja escolher uma porcentagem de distribuição específica, desmarque a caixa de seleção **Distribuir igualmente** e digite as porcentagens na linha **Distribuição (%)**.
 3. Adicione variáveis remotas às suas variações. No controle de lista suspensa na parte inferior desta seção, escolha cada variável que você deseja adicionar e clique em **Adicionar variável**.
     > [!NOTE]
@@ -64,7 +64,7 @@ Em seguida, defina as [variáveis](run-app-experiments-with-a-b-testing.md#terms
 
 Quando você terminar de inserir os campos obrigatórios do seu experimento, clique em **Salvar** para salvar seu experimento.
 
-Se você estiver satisfeito com os parâmetros de seu experimento e estiver pronto para ativá-lo para poder iniciar a coleta de dados do experimento do seu aplicativo, clique em **Ativar**. Quando o experimento está ativo, seu aplicativo pode recuperar as variáveis de variação e relatar eventos de exibição e conversão para o Partner Center. Para obter mais informações, consulte [Executar e gerenciar seu experimento no Partner Center](manage-your-experiment.md).
+Se você estiver satisfeito com os parâmetros de seu experimento e estiver pronto para ativá-lo para poder iniciar a coleta de dados do experimento do seu aplicativo, clique em **Ativar**. Quando o teste está ativo, seu aplicativo pode recuperar as variáveis de variação e relatar eventos de exibição e conversão para o Partner Center. Para obter mais informações, consulte [executar e gerenciar seu experimento no Partner Center](manage-your-experiment.md).
 
 > [!IMPORTANT]
 > Um projeto pode conter apenas um experimento ativo de cada vez. Depois de ativar um experimento, você não pode mais modificar os parâmetros dele, a menos que tenha selecionado a caixa de seleção **Experimento editável** quando criou o experimento. Recomendamos que você codifique o experimento em seu aplicativo antes de ativar seu experimento.
@@ -87,12 +87,12 @@ Para testar seu experimento antes de liberá-lo aos clientes, siga este processo
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Depois de definir seu experimento no Partner Center e codificar o experimento em seu aplicativo, você estará pronto para [Executar e gerenciar seu experimento no Partner Center](manage-your-experiment.md).
+Depois de definir seu experimento no Partner Center e o teste de código em seu aplicativo, você está pronto para [executar e gerenciar seu experimento no Partner Center](manage-your-experiment.md).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar um projeto e definir variáveis remotas no Partner Center](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
-* [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md)
+* [Seu aplicativo para experimentação de código](code-your-experiment-in-your-app.md)
 * [Gerenciar seu experimento no Partner Center](manage-your-experiment.md)
-* [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
-* [Executar experimentos de app com teste A/B](run-app-experiments-with-a-b-testing.md)
+* [Criar e executar seu primeiro experimento com um teste a / B](create-and-run-your-first-experiment-with-a-b-testing.md)
+* [Executar testes de aplicativo com um teste a / B](run-app-experiments-with-a-b-testing.md)

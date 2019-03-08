@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7aeb60d67f0cdee77772797816e45fdd9bdc41b4
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114532"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623611"
 ---
 # <a name="use-the-light-sensor"></a>Usar o sensor de luz
 
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**LightSensor**](https://msdn.microsoft.com/library/windows/apps/BR225790)
@@ -31,7 +31,7 @@ Um sensor de luz ambiente é um dos vários tipos de sensores de ambiente que pe
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você deve estar familiarizado com Extensible Application Markup Language (XAML), Microsoft VisualC c# e eventos.
+Você deve estar familiarizado com o Extensible Application Markup Language (XAML), Microsoft Visual C#e eventos.
 
 O dispositivo ou emulador que você estiver usando deve ter um sensor de luz ambiente.
 
@@ -109,7 +109,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
     }
 ```
 
-Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **LightingCS**, pode substituir `namespace App1` por `namespace LightingCS`.
+Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **LightingCS**, poderá substituir `namespace App1` por `namespace LightingCS`.
 
 -   Abra o arquivo MainPage.xaml e substitua o conteúdo original pelo XML abaixo.
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 696a3f0f065c209bec28f774224da6e4c8d93275
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046319"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635541"
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>Animações de quadro chave e animações com função de easing
 
@@ -33,16 +33,16 @@ No início da animação, se nenhum quadro chave com um **KeyTime** de "0:0:0" e
 
 A duração de uma animação de quadro chave é implicitamente a duração equivalente ao valor **KeyTime** mais alto definido em qualquer um de seus quadros chave. Você pode definir um [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) explícito se desejar, mas tome cuidado para que ele não seja menor do que um **KeyTime** em seus próprios quadros chave, caso contrário, parte da animação será cortada.
 
-Além de [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration), você pode definir todas as propriedades baseadas em [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) em uma animação de quadro chave, da mesma maneira que é possível com uma animação **From**/**To**/**By** porque as classes de animação de quadro chave também são derivadas de **Timeline**. São elas:
+Além de [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration), você pode definir todas as propriedades baseadas em [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) em uma animação de quadro chave, da mesma maneira que é possível com uma animação **From**/**To**/**By** porque as classes de animação de quadro chave também são derivadas de **Timeline**. Elas são:
 
--   [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): depois que o último quadro chave é atingido, os quadros são repetidos na ordem inversa a partir do final. Isso duplica a duração aparente da animação.
+-   [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): quando o último quadro-chave é atingido, os quadros são repetidos na ordem inversa do final. Isso duplica a duração aparente da animação.
 -   [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.begintime): atrasa o início da animação. A linha do tempo dos valores **KeyTime** nos quadros não começa a contar até que **BeginTime** seja atingido, assim, não há risco de que os quadros sejam cortados
--   [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): controla o que acontece quando o último quadro chave é atingido. **FillBehavior** não tem efeito sobre quadros chave intermediários.
+-   [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): controla o que acontece quando o último quadro-chave é atingido. **FillBehavior** não tem efeito sobre quadros chave intermediários.
 -   [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
     -   Se definidos como **Forever**, os quadros chave e sua linha do tempo serão repetidos infinitamente.
     -   Se definida como uma contagem de iteração, a linha do tempo será repetida várias vezes.
     -   Se definida como [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377), a linha do tempo será repetida até que esse tempo seja atingido. Isso pode truncar a animação no meio da sequência de quadros chave se não for um fator inteiro da duração implícita da linha do tempo.
--   [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (não usada com frequência)
+-   [**SpeedRatio** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (não são comumente usados)
 
 ### <a name="linear-key-frames"></a>Quadros chave lineares
 
@@ -75,7 +75,7 @@ Os quadros chave separados não usam interpolação. Quando um **KeyTime** é at
 
 ### <a name="spline-key-frames"></a>Quadros chave de spline
 
-Um quadro chave de spline cria uma transição variável entre valores de acordo com o valor da propriedade **KeySpline**. Essa propriedade especifica o primeiro e o segundo ponto de controle de uma curva de Bézier, que descreve a aceleração da animação. Basicamente, um [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307) define uma relação de função ao longo do tempo em que o gráfico função-tempo é a forma dessa curva de Bézier. Geralmente, você especifica um valor **KeySpline** em uma cadeia de caracteres de atributo XAML abreviada que tem quatro valores [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) separados por espaços ou vírgulas. Esses valores são pares "X, Y" para dois pontos de controle da curva de Bézier. "X" é o tempo e "Y" é o modificador de função para o valor. Cada valor deve estar sempre entre 0 e 1. Sem modificação do ponto de controle para um **KeySpline**, a linha reta de 0,0 a 1,1 é a representação de uma função ao longo do tempo para uma interpolação linear. Seus pontos de controle alteram a forma dessa curva e, assim, o comportamento da função ao longo do tempo da animação de spline. Provavelmente, é melhor conferir isso visualmente em um gráfico. Você pode executar o [Exemplo de visualizador de spline chave do Silverlight](https://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample) em um navegador para ver como os pontos de controle modificam a curva e como uma animação de exemplo é executada quando é usada como um valor **KeySpline** 
+Um quadro chave de spline cria uma transição variável entre valores de acordo com o valor da propriedade **KeySpline**. Essa propriedade especifica o primeiro e o segundo ponto de controle de uma curva de Bézier, que descreve a aceleração da animação. Basicamente, um [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307) define uma relação de função ao longo do tempo em que o gráfico função-tempo é a forma dessa curva de Bézier. Geralmente, você especifica um valor **KeySpline** em uma cadeia de caracteres de atributo XAML abreviada que tem quatro valores [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) separados por espaços ou vírgulas. Esses valores são pares "X, Y" para dois pontos de controle da curva de Bézier. "X" é o tempo e "Y" é o modificador de função para o valor. Cada valor deve estar sempre entre 0 e 1. Sem modificação do ponto de controle para um **KeySpline**, a linha reta de 0,0 a 1,1 é a representação de uma função ao longo do tempo para uma interpolação linear. Seus pontos de controle alteram a forma dessa curva e, assim, o comportamento da função ao longo do tempo da animação de spline. Provavelmente, é melhor conferir isso visualmente em um gráfico. Você pode executar o [Exemplo de visualizador de spline chave do Silverlight](https://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample) em um navegador para ver como os pontos de controle modificam a curva e como uma animação de exemplo é executada quando é usada como um valor **KeySpline**
 
 Este próximo exemplo mostra três quadros chave diferentes aplicados a uma animação, em que o último é uma animação de spline chave para um valor [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) ([**SplineDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210446)). Observe a cadeia de caracteres "0.6,0.0 0.9,0.00" aplicada a **KeySpline**. Isso gera uma curva em que a animação parece ser executada devagar inicialmente, mas depois ela rapidamente atinge o valor logo antes de **KeyTime** ser atingido.
 
@@ -154,17 +154,17 @@ As funções de easing podem ser aplicadas a animações de três maneiras:
 
 Consulte a seguir uma lista das funções de easing:
 
--   [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049): retrai levemente o movimento de uma animação antes que ela comece a se animar no caminho indicado.
--   [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057): cria um efeito de saltos.
--   [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063): cria uma animação que é acelerada ou desacelerada usando uma função circular.
--   [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = t3.
--   [**ElasticEase**](https://msdn.microsoft.com/library/windows/apps/BR210282): cria uma animação que parece uma mola oscilando até descansar.
--   [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294): cria uma animação que é acelerada ou desacelerada usando uma fórmula exponencial.
--   [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = tp, em que p é igual à propriedade [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power).
--   [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = t2.
--   [**QuarticEase**](https://msdn.microsoft.com/library/windows/apps/BR210405): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = t4.
--   [**QuinticEase**](https://msdn.microsoft.com/library/windows/apps/BR210407): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = t5.
--   [**SineEase**](https://msdn.microsoft.com/library/windows/apps/BR210439): cria uma animação que é acelerada ou desacelerada usando uma fórmula seno.
+-   [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049): Retrai o movimento de uma animação um pouco antes de começar a ser animada no caminho indicado.
+-   [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057): Cria um efeito de devolução.
+-   [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063): Cria uma animação que acelera ou desacelerada usando uma função circular.
+-   [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126): Cria uma animação que acelera ou desacelerada usando a fórmula f(t) = t3.
+-   [**ElasticEase**](https://msdn.microsoft.com/library/windows/apps/BR210282): Cria uma animação que se parece com uma mola oscilando para parar e para trás até que se trata de rest.
+-   [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294): Cria uma animação que acelera ou desacelerada usando uma fórmula exponencial.
+-   [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399): Cria uma animação que acelera ou desacelerada usando a fórmula f(t) = tp onde p é igual a [ **Power** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power) propriedade.
+-   [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403): Cria uma animação que acelera ou desacelerada usando a fórmula f(t) = t2.
+-   [**QuarticEase**](https://msdn.microsoft.com/library/windows/apps/BR210405): Cria uma animação que acelera ou desacelerada usando a fórmula f(t) = t4.
+-   [**QuinticEase**](https://msdn.microsoft.com/library/windows/apps/BR210407): Criar uma animação que acelera ou desacelerada usando a fórmula f(t) = t5.
+-   [**SineEase**](https://msdn.microsoft.com/library/windows/apps/BR210439): Cria uma animação que acelera ou desacelerada usando uma fórmula de seno.
 
 Algumas das funções de easing têm suas próprias propriedades. Por exemplo, [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057) tem duas propriedades [**Bounces**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounces.aspx) e [**Bounciness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounciness.aspx) que modificam o comportamento da função ao longo do tempo desse **BounceEase** específico. Outras funções de easing, como [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126) não têm propriedades adicionais além da propriedade [**EasingMode**](https://msdn.microsoft.com/library/windows/apps/BR210275) compartilhada por todas as funções de easeing e sempre produzem o mesmo comportamento de função ao longo do tempo.
 
@@ -194,9 +194,9 @@ Em um exemplo anterior, mostramos como declarar uma função de easing para uma 
 
 Quando uma função de easing é aplicada a uma animação **From**/**To**/**By**, ela altera as características de função ao longo do tempo relacionadas à maneira como o valor é interpolado entre **From** e **To** ao longo da [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) da animação. Sem uma função de easing, seria uma interpolação linear.
 
-## <a name="span-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspandiscrete-object-value-animations"></a><span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>Animações de valor de objeto separado
+## <a name="span-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspandiscrete-object-value-animations"></a><span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>Animações de valor de objeto discreto
 
-Um tipo de animação merece uma menção especial por ser a única maneira de aplicar um valor animado a propriedades que não são do tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) ou [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723). Este é o [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) da animação de quadro chave. Animar usando valores [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) é diferente porque não há a possibilidade de interpolar os valores entre os quadros. Quando o [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR210342) do quadro é atingido, o valor animado é imediatamente definido como o valor especificado no **Value** do quadro chave. Como não há interpolação, há somente um quadro chave que você usa na coleção de quadros chave **ObjectAnimationUsingKeyFrames**: [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132).
+Um tipo de animação merece uma menção especial por ser a única maneira de aplicar um valor animado a propriedades que não são do tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) ou [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723). Este é o [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) da animação de quadro chave. Animar usando valores [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) é diferente porque não há a possibilidade de interpolar os valores entre os quadros. Quando o [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR210342) do quadro é atingido, o valor animado é imediatamente definido como o valor especificado no **Value** do quadro chave. Porque não há nenhum interpolação, há apenas um quadro chave que você usar o **ObjectAnimationUsingKeyFrames** coleção quadros-chave: [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132).
 
 O [**Value**](https://msdn.microsoft.com/library/windows/apps/BR210344) de um [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) geralmente é definido com o uso da sintaxe de elemento de propriedade porque o valor do objeto que você está tentando definir geralmente não pode ser expressado como uma cadeia de caracteres para preencher **Value** na sintaxe de atributo. Você ainda pode usar a sintaxe de atributo se usar uma referência como [StaticResource](https://msdn.microsoft.com/library/windows/apps/Mt185588).
 
@@ -269,7 +269,7 @@ Você pode usar mais de um [**DiscreteObjectKeyFrame**](https://msdn.microsoft.c
 
  ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Sintaxe de Property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586)
+* [Sintaxe do caminho da propriedade](https://msdn.microsoft.com/library/windows/apps/Mt185586)
 * [Visão geral das propriedades de dependência](https://msdn.microsoft.com/library/windows/apps/Mt185583)
-* [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)
+* [**storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)
 * [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.targetpropertyproperty)

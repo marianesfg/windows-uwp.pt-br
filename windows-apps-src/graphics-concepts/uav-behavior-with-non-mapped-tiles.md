@@ -8,13 +8,13 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c72931d2f6bf1e892e174bc409f20a042d5e4c92
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932675"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631621"
 ---
-# <a name="span-iddirect3dconceptsuavbehaviorwithnon-mappedtilesspanuav-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.uav_behavior_with_non-mapped_tiles"></span>Comportamento de UAV com blocos não mapeados
+# <a name="span-iddirect3dconceptsuavbehaviorwithnon-mappedtilesspanuav-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.uav_behavior_with_non-mapped_tiles"></span>Comportamento UAV com blocos não mapeados
 
 
 O comportamento das leituras e gravações de modo de exibição de acesso não ordenado (UAV) depende do nível de suporte do hardware. Para uma análise dos requisitos, veja o comportamento geral de leitura e gravação para [Recursos de streaming que apresentam faixas](streaming-resources-features-tiers.md). Esta seção resume o comportamento ideal.
@@ -26,7 +26,7 @@ As operações de sombreador que tentam gravar em um bloco não mapeado fazem co
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Acesso pipeline aos recursos de streaming](pipeline-access-to-streaming-resources.md)
+[Pipeline de acesso a recursos de streaming](pipeline-access-to-streaming-resources.md)
 
  
 

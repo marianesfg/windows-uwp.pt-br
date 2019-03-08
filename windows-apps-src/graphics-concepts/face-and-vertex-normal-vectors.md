@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2347efc5d68abd53442f52ecabdc060393ee561b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929887"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636551"
 ---
 # <a name="face-and-vertex-normal-vectors"></a>Face e vetores normais de vértice
 
 
 Cada rosto em uma malha tem um vetor normal de unidade perpendicular. Direção do vetor é determinada pela ordem em que os vértices são definidos, e se o sistema de coordenadas é orientado à direita ou esquerda.
 
-## <a name="span-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanperpendicular-unit-normal-vector-for-a-front-face"></a><span id="Perpendicular_unit_normal_vector_for_a_front_face"></span><span id="perpendicular_unit_normal_vector_for_a_front_face"></span><span id="PERPENDICULAR_UNIT_NORMAL_VECTOR_FOR_A_FRONT_FACE"></span>Vetor normal de unidade perpendicular para uma face frontal
+## <a name="span-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanperpendicular-unit-normal-vector-for-a-front-face"></a><span id="Perpendicular_unit_normal_vector_for_a_front_face"></span><span id="perpendicular_unit_normal_vector_for_a_front_face"></span><span id="PERPENDICULAR_UNIT_NORMAL_VECTOR_FOR_A_FRONT_FACE"></span>Vetor de unidade perpendicular normal para uma face frontal
 
 
 Cada rosto em uma malha tem um vetor normal de unidade perpendicular. Direção do vetor é determinada pela ordem em que os vértices são definidos, e se o sistema de coordenadas é orientado à direita ou esquerda. A face normal aponta para longe do lado frontal da face. No Direct3D, somente a frente de um rosto fica visível. Uma face frontal é aquela na qual os vértices estão definidos em ordem no sentido horário.
@@ -28,7 +28,7 @@ A ilustração a seguir mostra um vetor normal para uma face frontal:
 
 ![um vetor normal para uma face frontal](images/nrmlvect.png)
 
-## <a name="span-idcullingbackfacesspanspan-idcullingbackfacesspanspan-idcullingbackfacesspanculling-back-faces"></a><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>Remoção de faces traseiras
+## <a name="span-idcullingbackfacesspanspan-idcullingbackfacesspanspan-idcullingbackfacesspanculling-back-faces"></a><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>Traseira volta faces
 
 
 Qualquer face que não é uma face frontal é uma face traseira. O Direct3D nem sempre renderiza faces traseiras; as faces traseiras normalmente são removidas. Remover a face traseira significa eliminar as faces traseiras da renderização. Você pode alterar o modo de remoção para renderizar faces traseiras se desejar. Consulte [Estado de Remoção](https://msdn.microsoft.com/library/windows/desktop/bb204882) para obter mais informações.
@@ -44,7 +44,7 @@ A ilustração a seguir mostra normais de vértice:
 
 Ao aplicar o sombreamento Gourard em um polígono, o Direct3D usa as normais de vértice para calcular o ângulo entre a fonte de luz e a superfície. Ele calcula os valores de cor e intensidade para os vértices e os interpola para cada ponto entre todas as superfícies do primitivo. O Direct3D calcula o valor de intensidade de luz, usando o ângulo. Quanto maior o ângulo, menos a luz chega à superfície.
 
-## <a name="span-idflatsurfacesspanspan-idflatsurfacesspanspan-idflatsurfacesspanflat-surfaces"></a><span id="Flat_surfaces"></span><span id="flat_surfaces"></span><span id="FLAT_SURFACES"></span>Superfícies planas
+## <a name="span-idflatsurfacesspanspan-idflatsurfacesspanspan-idflatsurfacesspanflat-surfaces"></a><span id="Flat_surfaces"></span><span id="flat_surfaces"></span><span id="FLAT_SURFACES"></span>Superfícies simples
 
 
 Se você estiver criando um objeto plano, defina as normais de vértice para apontar perpendicular à superfície.
@@ -53,7 +53,7 @@ A ilustração a seguir mostra que uma superfície plana composta de dois triân
 
 ![superfície plana composto de dois triângulos com normais de vértice](images/flatvert.png)
 
-## <a name="span-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspansmooth-shading-on-a-non-flat-object"></a><span id="Smooth_shading_on_a_non-flat_object"></span><span id="smooth_shading_on_a_non-flat_object"></span><span id="SMOOTH_SHADING_ON_A_NON-FLAT_OBJECT"></span>Sombreamento suave em um objeto não plano
+## <a name="span-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspansmooth-shading-on-a-non-flat-object"></a><span id="Smooth_shading_on_a_non-flat_object"></span><span id="smooth_shading_on_a_non-flat_object"></span><span id="SMOOTH_SHADING_ON_A_NON-FLAT_OBJECT"></span>Sombreamento suave em um objeto não são simples
 
 
 Em vez de um objeto plano, é mais provável que seu objeto seja composto de faixas de triângulos e os triângulos não sejam coplanares. Uma maneira simples de alcançar o sombreamento suave entre todos os triângulos na faixa é primeiro calcular o vetor normal de superfície para cada face poligonal à qual o vértice está associado. A normal de vértice pode ser definida para fazer um ângulo igual com cada superfície normal. No entanto, esse método talvez não seja eficiente o suficiente para primitivos complexos.
@@ -70,7 +70,7 @@ A ilustração a seguir mostra duas superfícies (S1 e S2) com um vetor normal d
 
 ![duas superfícies (s1 e s2) com um vetor normal de vértice que está na direção de uma face](images/gvert2.png)
 
-## <a name="span-idsharpedgesspanspan-idsharpedgesspanspan-idsharpedgesspansharp-edges"></a><span id="Sharp_edges"></span><span id="sharp_edges"></span><span id="SHARP_EDGES"></span>Bordas afiadas
+## <a name="span-idsharpedgesspanspan-idsharpedgesspanspan-idsharpedgesspansharp-edges"></a><span id="Sharp_edges"></span><span id="sharp_edges"></span><span id="SHARP_EDGES"></span>Bordas nítidas
 
 
 Você pode usar o sombreamento Gouraud para exibir alguns objetos em uma cena 3D com bordas afiadas. Para fazer isso, duplique os vetores de normal de vértice em qualquer interseção de faces onde uma borda afiada é necessária.
@@ -88,7 +88,7 @@ Outra alternativa é alterar para o sombreamento simples ao renderizar objetos c
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Sistemas de coordenadas e geometria](coordinate-systems-and-geometry.md)
+[Sistemas de coordenadas e geometry](coordinate-systems-and-geometry.md)
 
  
 

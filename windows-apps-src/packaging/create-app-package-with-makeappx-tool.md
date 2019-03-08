@@ -1,6 +1,6 @@
 ---
 title: Criar um pacote de aplicativo com a ferramenta MakeAppx.exe
-description: A MakeAppx.exe cria, criptografa, descriptografa e extrai arquivos de pacotes e lotes de app.
+description: A MakeAppx.exe cria, criptografa, descriptografa e extrai arquivos de pacotes e lotes de aplicativos.
 ms.date: 01/02/2019
 ms.topic: article
 keywords: windows 10, uwp, empacotamento
@@ -8,28 +8,28 @@ ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 3c6958491092498451743085af38b2d0fa6bdf8a
-ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991602"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634651"
 ---
-# <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Criar um pacote do aplicativo com a ferramenta MakeAppx.exe
+# <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Criar um pacote de aplicativo com a ferramenta MakeAppx.exe
 
 
-**MakeAppx.exe** cria pacotes de aplicativos (.msix ou. AppX) e lotes de aplicativos (.msixbundle ou. appxbundle). Além disso, a **MakeAppx.exe** extrai arquivos de um pacote ou lote de aplicativo e criptografa ou descriptografa pacotes e lotes de aplicativos. Essa ferramenta está incluída no SDK do Windows 10 e pode ser usada em um prompt de comando ou um arquivo de script.
+**MakeAppx.exe** cria pacotes de aplicativos (.msix ou. AppX) e o aplicativo de pacotes de pacote (.msixbundle ou. appxbundle). Além disso, a **MakeAppx.exe** extrai arquivos de um pacote ou lote de aplicativo e criptografa ou descriptografa pacotes e lotes de aplicativos. Essa ferramenta está incluída no SDK do Windows 10 e pode ser usada em um prompt de comando ou um arquivo de script.
 
 > [!IMPORTANT]
 > Se você usou o Visual Studio para desenvolver seu app, é recomendável que você use o Assistente do Visual Studio para criar e assinar seu pacote de app. Para obter mais informações, consulte [Empacotar um aplicativo UWP com Visual Studio](packaging-uwp-apps.md).
 
 > [!IMPORTANT]
-> Observe que **MakeAppx.exe** não cria um [pacote de aplicativo carregar o arquivo (. appxupload ou .msixupload)](packaging-uwp-apps.md#types-of-app-packages), que é o tipo de pacote de aplicativo válido para [envios para o Partner Center](../publish/upload-app-packages.md)recomendada. O arquivo de upload do pacote de aplicativo normalmente é [criado como parte do processo de empacotamento do Visual Studio](packaging-uwp-apps.md#create-an-app-package-upload-file), embora ele também pode ser criado manualmente.
+> Observe que **MakeAppx.exe** não cria um [arquivo de carregamento de pacote de aplicativo (. appxupload ou .msixupload)](packaging-uwp-apps.md#types-of-app-packages), que é o tipo de pacote de aplicativo válida para recomendada [envios feitos ao Partner Center ](../publish/upload-app-packages.md). O arquivo de carregamento do pacote de aplicativo costuma [criado como parte do processo de empacotamento do Visual Studio](packaging-uwp-apps.md#create-an-app-package-upload-file), embora também podem ser criado manualmente.
 
 ## <a name="using-makeappxexe"></a>Usando a MakeAppx.exe
 
 Dependendo do seu caminho de instalação do SDK, a **MakeAppx.exe** é instalada no computador Windows 10 nos seguintes locais:
-- x86: C:\Program Files (x86) \Windows Kits\10\bin\\&lt;número de compilação&gt;\x86\makeappx.exe
-- x64: C:\Program Files (x86) \Windows Kits\10\bin\\&lt;número de compilação&gt;\x64\makeappx.exe
+- x86: C:\Program arquivos (x86) \Windows Kits\10\bin\\&lt;número de build&gt;\x86\makeappx.exe
+- x64: C:\Program arquivos (x86) \Windows Kits\10\bin\\&lt;número de build&gt;\x64\makeappx.exe
 
 Não há nenhuma versão ARM dessa ferramenta.
 
@@ -71,16 +71,16 @@ Esta lista de opções se aplica a todos os comandos:
 
 A lista a seguir contém argumentos possíveis:
 
-| **Argumento**                          | **Descrição**                       |
+| **Argument**                          | **Descrição**                       |
 |---------------------------------------|---------------------------------------|
-| &lt;output package name&gt;           | O nome do pacote criado. Esse é o nome de arquivo acrescentado .msix ou. AppX. |
-| &lt;encrypted output package name&gt; | O nome do pacote criptografado criado. Esse é o nome de arquivo acrescentado .emsix ou .eappx. |
-| &lt;input package name&gt;            | O nome do pacote. Esse é o nome de arquivo acrescentado .msix ou. AppX. |
-| &lt;encrypted input package name&gt;  | O nome do pacote criptografado. Esse é o nome de arquivo acrescentado .emsix ou .eappx. |
-| &lt;output bundle name&gt;            | O nome do lote criado. Esse é o nome de arquivo acrescentado .msixbundle ou. appxbundle. |
-| &lt;encrypted output bundle name&gt;  | O nome do lote criptografado criado. Esse é o nome de arquivo acrescentado .emsixbundle ou .eappxbundle. |
-| &lt;input bundle name&gt;             | O nome do lote. Esse é o nome de arquivo acrescentado .msixbundle ou. appxbundle. |
-| &lt;encrypted input bundle name&gt;   | O nome do lote criptografado. Esse é o nome de arquivo acrescentado .emsixbundle ou .eappxbundle. |
+| &lt;output package name&gt;           | O nome do pacote criado. Isso é o nome do arquivo anexado com .msix ou. AppX. |
+| &lt;encrypted output package name&gt; | O nome do pacote criptografado criado. Isso é o nome do arquivo anexado com .emsix ou .eappx. |
+| &lt;input package name&gt;            | O nome do pacote. Isso é o nome do arquivo anexado com .msix ou. AppX. |
+| &lt;encrypted input package name&gt;  | O nome do pacote criptografado. Isso é o nome do arquivo anexado com .emsix ou .eappx. |
+| &lt;output bundle name&gt;            | O nome do lote criado. Isso é o nome do arquivo anexado com .msixbundle ou. appxbundle. |
+| &lt;encrypted output bundle name&gt;  | O nome do lote criptografado criado. Isso é o nome do arquivo anexado com .emsixbundle ou .eappxbundle. |
+| &lt;input bundle name&gt;             | O nome do lote. Isso é o nome do arquivo anexado com .msixbundle ou. appxbundle. |
+| &lt;encrypted input bundle name&gt;   | O nome do lote criptografado. Isso é o nome do arquivo anexado com .emsixbundle ou .eappxbundle. |
 | &lt;content directory&gt;             | Caminho do conteúdo do pacote ou lote de aplicativo. |
 | &lt;mapping file&gt;                  | Nome do arquivo que especifica a origem e o destino do pacote. |
 | &lt;output directory&gt;              | Caminho do diretório de pacotes e lotes de saída. |
@@ -90,7 +90,7 @@ A lista a seguir contém argumentos possíveis:
 
 ### <a name="create-an-app-package"></a>Criar um pacote de aplicativo
 
-Um pacote de aplicativo é um conjunto completo de arquivos do aplicativo reunidos em um arquivo de pacote .msix ou. AppX. Para criar um pacote de aplicativo usando o comando **pack**, você deve informar um diretório de conteúdo ou um arquivo de mapeamento para o local do pacote. Você também pode criptografar um pacote ao criá-lo. Se desejar criptografar o pacote, você deverá usar /ep e especificar se está usando um arquivo de chave (/kf) ou a tecla de teste global (/kt). Para obter mais informações sobre como criar um pacote criptografado, consulte [Criptografar ou descriptografar um pacote ou um lote](#encrypt-or-decrypt-a-package-or-bundle).
+Um pacote do aplicativo é um conjunto completo de arquivos do aplicativo empacotado em um arquivo de pacote .msix ou. AppX. Para criar um pacote de aplicativo usando o comando **pack**, você deve informar um diretório de conteúdo ou um arquivo de mapeamento para o local do pacote. Você também pode criptografar um pacote ao criá-lo. Se desejar criptografar o pacote, você deverá usar /ep e especificar se está usando um arquivo de chave (/kf) ou a tecla de teste global (/kt). Para obter mais informações sobre como criar um pacote criptografado, consulte [Criptografar ou descriptografar um pacote ou um lote](#encrypt-or-decrypt-a-package-or-bundle).
 
 Opções específicas ao comando **pack**:
 
@@ -133,7 +133,7 @@ Opções específicas ao comando **bundle**:
 
 | **Opção**    | **Descrição**                       |
 |---------------|---------------------------------------|
-| /bv           | Especifica o número de versão do lote. O número de versão deve estar em quatro partes separadas por pontos no formato: &lt;Principal&gt;.&lt;Secundário&gt;.&lt;Compilação&gt;.&lt;Revisão&gt;. |
+| /bv           | Especifica o número de versão do lote. O número de versão deve estar em quatro partes separadas por pontos na forma: &lt;Principais&gt;.&lt; Pequenas&gt;.&lt; Crie&gt;.&lt; Revisão&gt;. |
 | /f            | Especifica o arquivo de mapeamento.           |
 
 Observe que, se a versão do lote não for especificada ou se estiver definida como "0.0.0.0", o lote será criado com a data e a hora atuais.
@@ -268,6 +268,6 @@ A **MakeAppx.exe** realiza a validação semântica limitada, que é projetada p
 Essa validação garante que:
 - Todos os arquivos referenciados no manifesto do pacote sejam incluídos no pacote de aplicativo.
 - Um app não tenha duas chaves idênticas.
-- Um app não seja registrado para um protocolo proibido desta lista: SMB, FILE, MS-WWA-WEB, MS-WWA.
+- Um aplicativo não registra para um protocolo proibido desta lista: SMB, FILE, MS-WWA-WEB, MS-WWA.
 
 Essa não é uma validação semântica completa, já que é projetada apenas para capturar erros comuns. Os pacotes compilados pela **MakeAppx.exe** não são garantidos como instaláveis.

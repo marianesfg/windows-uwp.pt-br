@@ -1,5 +1,5 @@
 ---
-Description: Special tile templates are unique templates that are either animated, or just allow you to do things that aren't possible with adaptive tiles.
+Description: Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis.
 title: Modelos de blocos especiais
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 template: detail.hbs
@@ -8,31 +8,31 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 09647347134463c8dd2d93f6b869796c8def44e2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944327"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57619801"
 ---
 # <a name="special-tile-templates"></a>Modelos de blocos especiais
  
 
-Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis. Cada modelo de bloco especial foi compilado especificamente para Windows 10, exceto para o modelo de bloco icônico, um modelo especial clássico que foi atualizado para Windows 10. Este artigo aborda três modelos de blocos especiais: Icônico, Fotos e Pessoas.
+Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis. Cada modelo de bloco especial foi desenvolvido especificamente para Windows 10, exceto para o modelo de bloco icônico, um modelo clássico de especial que foi atualizado para Windows 10. Este artigo aborda três modelos de bloco especial: Icônico, fotos e pessoas.
 
 ## <a name="iconic-tile-template"></a>Modelo de bloco icônico
 
 
-O modelo icônico (também conhecido como o modelo "IconWithBadge") permite exibir uma imagem pequena no centro do bloco. Windows 10 é compatível com o modelo em telefone e tablet/desktop.
+O modelo icônico (também conhecido como o modelo "IconWithBadge") permite exibir uma imagem pequena no centro do bloco. Windows 10 dá suporte o modelo no telefone e tablet/área de trabalho.
 
 ![blocos de email pequenos e médios](images/iconic-template-mail-2sizes.png)
 
 ### <a name="how-to-create-an-iconic-tile"></a>Como criar um bloco icônico
 
-As etapas a seguir abrangem tudo o que você precisa saber para criar um bloco icônico para Windows 10. Em um nível alto, você precisa do ativo de imagem icônico e, em seguida, envia uma notificação para o bloco usando o modelo icônico e, por fim, uma notificação de selo que fornece o número a ser exibido no bloco.
+As etapas a seguir abordam tudo o que você precisa saber para criar um bloco icônico para Windows 10. Em um nível alto, você precisa do ativo de imagem icônico e, em seguida, envia uma notificação para o bloco usando o modelo icônico e, por fim, uma notificação de selo que fornece o número a ser exibido no bloco.
 
 ![fluxo de desenvolvedor de bloco icônico](images/iconic-template-dev-flow.png)
 
-**Etapa 1: Criar os ativos de imagem em formato PNG**
+**Etapa 1: Crie seus ativos de imagem no formato PNG**
 
 Crie os ativos de ícone para o bloco e os coloque nos recursos de projeto com os outros ativos. No mínimo, crie um ícone de 200x200 pixels, que funciona para blocos pequenos e médios no telefone e no desktop. Para proporcionar a melhor experiência de usuário, crie um ícone para cada tamanho. Nenhum preenchimento é necessário nesses ativos. Consulte os detalhes de dimensionamento na imagem abaixo.
 
@@ -54,11 +54,11 @@ Para ativos não quadrados, ocorrem a centralização horizontal/vertical autom�
 
 ![dimensionamento de ativo não quadrado, com e sem selo](images/assetguidance26b.png)
 
-**Etapa 2: Criar o bloco base**
+**Etapa 2: Criar seu bloco base**
 
 É possível usar o modelo icônico em blocos primários e secundários. Se estiver usando-o em um bloco secundário, você primeiro precisará criar o bloco secundário ou usar um bloco secundário já fixado. Os blocos primários estão fixos implicitamente e sempre podem receber notificações.
 
-**Etapa 3: Enviar uma notificação para o bloco**
+**Etapa 3: Enviar uma notificação ao seu lado a lado**
 
 Embora essa etapa possa variar com base na notificação enviada localmente ou por push de servidor, a carga XML que você envia permanece a mesma. Para enviar uma notificação de bloco local, crie um [**TileUpdater**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater) para o bloco (primário ou secundário) e envie uma notificação para o bloco que usa o modelo de bloco icônico conforme visto abaixo. O ideal é que você também inclua associações para tamanhos de bloco largo e grande usando [modelos de bloco adaptável](create-adaptive-tiles.md).
 
@@ -82,7 +82,7 @@ Aqui está o código de exemplo da carga XML:
 
 Essa carga XML do modelo de bloco icônico usa um elemento de imagem que aponta para a imagem que você criou na Etapa 1. Agora o bloco está pronto para exibir a notificação próxima do ícone; tudo o que está à esquerda está enviando notificações de selo.
 
-**Etapa 4: Enviar uma notificação de selo para o bloco**
+**Etapa 4: Enviar uma notificação para seu bloco**
 
 Assim como na Etapa 3, essa etapa pode variar com base na notificação enviada localmente ou por push de servidor, além da carga XML que você envia permanecer a mesma. Para enviar uma notificação de selo local, crie um [**BadgeUpdater**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater) para o bloco (primário ou secundário) e envie uma notificação de selo com o valor desejado (ou limpe a notificação).
 
@@ -94,7 +94,7 @@ Aqui está o código de exemplo da carga XML:
 
 A notificação do bloco será atualizada de acordo.
 
-**Etapa 5: Como reunir tudo**
+**Etapa 5: Juntando as peças**
 
 A imagem a seguir ilustra como as diversas APIs e as cargas estão associadas a cada aspecto do modelo de bloco icônico. Uma [notificação de bloco](https://msdn.microsoft.com/library/windows/apps/hh779724) (que contém os elementos &lt;binding&gt;) é usada para especificar o modelo icônico e o ativo de imagem; uma [notificação de selo](https://msdn.microsoft.com/library/windows/apps/hh779719) especifica o valor numérico; as propriedades do bloco controlam o nome de exibição do bloco, a cor e muito mais.
 
@@ -184,7 +184,7 @@ TileContent content = new TileContent()
 ## <a name="people-tile-template"></a>Modelo de bloco Pessoas
 
 
-O aplicativo Pessoas no Windows 10 usa um modelo de bloco especial que exibe uma coleção de imagens em círculos que deslizam vertical ou horizontalmente no bloco. Esse modelo de bloco está disponível desde o Windows 10 compilação 10572, e qualquer pessoa é bem-vindo ao usá-lo em seu aplicativo.
+O aplicativo Pessoas no Windows 10 usa um modelo de bloco especial que exibe uma coleção de imagens em círculos que deslizam vertical ou horizontalmente no bloco. Esse modelo de bloco está disponível desde o Windows 10 Build 10572 e qualquer pessoa que está bem-vindo ao usá-lo em seu aplicativo.
 
 O modelo de bloco Pessoas funciona em blocos destes tamanhos:
 
@@ -261,7 +261,7 @@ TileContent content = new TileContent()
 
 Para obter a melhor experiência do usuário, recomendamos que você forneça o seguinte número de fotos para cada tamanho de bloco:
 
--   Bloco médio: nove fotos
+-   Bloco médio: fotos de 9
 -   Bloco largo: 15 fotos
 -   Bloco grande: 20 fotos
 
@@ -272,7 +272,7 @@ Para enviar a notificação, consulte [Escolher um método de entrega de notific
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-people-tile-template)
+* [Exemplo de código completo no GitHub](https://github.com/WindowsNotifications/quickstart-people-tile-template)
 * [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 * [Blocos, selos e notificações](index.md)
 * [Criar blocos adaptáveis](create-adaptive-tiles.md)

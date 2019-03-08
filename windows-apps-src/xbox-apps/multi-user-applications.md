@@ -7,15 +7,15 @@ keywords: windows 10, uwp
 ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
 ms.localizationpriority: medium
 ms.openlocfilehash: b56140f9a71c8233d2832c2b0da6ed927b5a19ac
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922241"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607711"
 ---
-# <a name="introduction-to-multi-user-applications"></a>Introdução aos apps multiusuário
+# <a name="introduction-to-multi-user-applications"></a>Introdução aos aplicativos multiusuário
 
-Este tópico destina-se a ser uma introdução de alto nível simples para o modelo multiusuário do Xbox.
+Este tópico se destina a ser uma introdução de alto nível simples para o modelo multiusuário do Xbox.
 
 O modelo de usuário do Xbox One está ajustado aos requisitos de um console de jogos que dá suporte a vários usuários jogando de maneira cooperativa em um único dispositivo. Ele permite que vários usuários, cada um com seu próprio controlador, entre e use o console ao mesmo tempo em uma única sessão interativa. Isso é diferente do que ocorre com outros dispositivos Windows. Por exemplo:
 * Os **computadores desktop com o Windows** permitem que vários usuários usem o mesmo dispositivo, mas cada usuário tem sua própria sessão interativa e cada sessão é completamente independente das outras sessões no dispositivo.
@@ -31,7 +31,7 @@ Por padrão, os aplicativos da Plataforma Universal do Windows (UWP) são execut
 Os jogos UWP podem aceitar o modelo multiusuário do Xbox One. Esses *aplicativos multiusuário* (MUAs) são executados no contexto de uma conta do sistema (chamada de conta padrão) e podem tirar proveito da flexibilidade e da potência do modelo de usuário do Xbox One. Para esses jogos, o modelo de usuário do Xbox não gerencia qual usuário está associado ao jogo e sequer exige que um usuário esteja conectado para que o jogo seja executado. Isso significa que eles precisam ser escritos para reconhecerem explicitamente e gerenciarem seus requisitos de usuário: exigindo ou não que um usuário esteja conectado, implementando ou não o conceito de usuário atual, permitindo ou não a entrada simultânea de vários usuários etc.
    
 Para aderir ao modelo multiusuário:   
-1. Abra seu projeto no Visual Studio.   
+1. Abra o projeto no Visual Studio.   
 2. Selecione o arquivo package.appxmanifest.xml.   
 3. Clique com o botão direito do mouse e selecione **Exibir Código**.   
 4. Adicione a seguinte linha na seção `<Properties></Properties>`:

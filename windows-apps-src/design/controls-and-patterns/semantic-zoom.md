@@ -1,6 +1,6 @@
 ---
-Description: A semantic zoom control allows the user to zoom between two different semantic views of the same data set.
-title: Zoom semântico
+Description: Um controle de zoom semântico permite que o usuário aplique zoom entre duas diferentes exibições do mesmo conjunto de dados.
+title: Zoom Semântico
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
@@ -12,13 +12,13 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 210cca8a4b17b77e8c1f9cb490a79bcd1a53b6c7
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058787"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627611"
 ---
-# <a name="semantic-zoom"></a>Zoom semântico
+# <a name="semantic-zoom"></a>Zoom Semântico
 
  
 
@@ -29,7 +29,7 @@ Zoom Semântico permite que o usuário alterne duas exibições diferentes do me
 
 Por exemplo, ao exibir um catálogo de endereços, o usuário pode reduzir a fim de ir rapidamente para a letra "W" e ampliar essa letra para ver os nomes associados a ela. 
 
-> **APIs importantes**: [classe SemanticZoom](https://msdn.microsoft.com/library/windows/apps/hh702601), [classe ListView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx), [classe GridView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)
+> **APIs importantes**: [Classe SemanticZoom](https://msdn.microsoft.com/library/windows/apps/hh702601), [classe ListView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx), [classe GridView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)
 
 **Recursos**:
 
@@ -52,14 +52,14 @@ Não confunda zoom semântico com zoom óptico. Apesar deles compartilharem a me
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/SemanticZoom">abrir o aplicativo e ver o SemanticZoom em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
 </table>
 
-**Aplicativo Fotos**
+**Aplicativo de fotos**
 
 Eis um zoom semântico usado no aplicativo Fotos. As fotos são agrupadas por mês. A seleção do cabeçalho de um mês na exibição em grade padrão é reduzida para a exibição de lista do mês para uma navegação mais rápida.
 
@@ -80,9 +80,9 @@ Os 3 elementos de que você precisa para um Zoom Semântico são:
 - Uma exibição ampliada que mostre os dados no nível do item.
 - Uma exibição reduzida que mostre os dados no nível do grupo.
 
-Antes de usar um Zoom Semântico, você deve entender como usar uma exibição de lista com dados agrupados. Para obter mais informações, consulte o [modo de exibição de lista e exibição de grade](listview-and-gridview.md). 
+Antes de usar um Zoom Semântico, você deve entender como usar uma exibição de lista com dados agrupados. Para obter mais informações, consulte [exibição de lista e exibição de grade](listview-and-gridview.md). 
 
-> **Observação**&nbsp;&nbsp;Para definir as exibições ampliada e reduzida do controle SemanticZoom, você pode usar qualquer um dos controles que implementam a interface [ISemanticZoomInformation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.isemanticzoominformation.aspx). A estrutura XAML fornece 3 controles que implementam essa interface: ListView, GridView e Hub.
+> **Observação**&nbsp;&nbsp;Para definir as exibições ampliada e reduzida do controle SemanticZoom, você pode usar qualquer um dos controles que implementam a interface [ISemanticZoomInformation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.isemanticzoominformation.aspx). A estrutura XAML fornece 3 controles que implementam esta interface: ListView, GridView e Hub.
  
  Esta XAML mostra a estrutura do controle SemanticZoom. Você atribui outros os controles às propriedades ZoomedInView e ZoomedOutView.
  
@@ -140,7 +140,7 @@ A aparência dos cabeçalhos de grupo é definida no recurso `ZoomedInGroupHeade
 </DataTemplate>
 ```
 
-**Definir a exibição reduzida**
+**Definir a exibição**
 
 Esta XAML define um controle ListView para a exibição reduzida. Este exemplo mostra como exibir os cabeçalhos de grupo como texto em uma lista.
 
@@ -161,7 +161,7 @@ Esta XAML define um controle ListView para a exibição reduzida. Este exemplo m
 </DataTemplate>
 ```
 
-**Sincronizar as exibições**
+**Sincronizar os modos de exibição**
 
 As exibições ampliadas e reduzidas devem ser sincronizadas, de forma que se um usuário selecionar um grupo na exibição reduzida, os detalhes desse mesmo grupo sejam mostrados na exibição ampliada. Você pode usar um [CollectionViewSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx) ou adicionar código para sincronizar as exibições.
 
@@ -200,9 +200,9 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Noções básicas de design de navegação](../basics/navigation-basics.md)
-- [Exibição de lista e exibição de grade](listview-and-gridview.md)
-- [Contêineres e modelos de itens](item-containers-templates.md)
+- [Noções básicas sobre o design de navegação](../basics/navigation-basics.md)
+- [Exibição de lista e o modo de exibição de grade](listview-and-gridview.md)
+- [Modelos e contêineres de itens](item-containers-templates.md)
 
 
 

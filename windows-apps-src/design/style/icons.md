@@ -1,5 +1,5 @@
 ---
-Description: Good icons harmonize with typography and with the rest of the design language. They don’t mix metaphors, and they communicate only what’s needed, as speedily and simply as possible.
+Description: Ícones bons se harmonizam com a tipografia e com o restante da linguagem do design. Eles não misturam metáforas e comunicam apenas o que é necessário, com a máxima rapidez e simplicidade possível.
 title: Ícones
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
@@ -12,11 +12,11 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: fb97f69ccdffcec86dfdaf5fa6c5f817644ebd61
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947569"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612441"
 ---
 # <a name="icons-for-uwp-apps"></a>Ícones para aplicativos UWP
 
@@ -136,7 +136,7 @@ Há muitas maneiras de criar um ícone. Você pode usar uma fonte de símbolo co
 
 ## <a name="make-the-icon-do-something"></a>Faça o ícone fazer algo
 
-Quando você tiver um ícone, a próxima etapa é fazê-lo realizar algo, associando-o com o comando ou uma ação de navegação. A melhor maneira de fazer isso é adicionar o ícone a um botão ou uma barra de comandos. 
+Quando você tiver um ícone, a próxima etapa é para torná-lo a fazer algo, associando-a comando ou uma ação de navegação. A melhor maneira de fazer isso é adicionar o ícone para um botão ou uma barra de comandos. 
 
 ![Imagem da barra de comandos](images/icons/app-bar-desktop.svg)
 
@@ -221,4 +221,4 @@ Para saber mais sobre as barras de comandos, consulte o [artigo de barra de coma
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Diretrizes de ativos de bloco e ícone](../shell/tiles-and-notifications/app-assets.md)
+* [Diretrizes para ativos de bloco e ícone](../shell/tiles-and-notifications/app-assets.md)

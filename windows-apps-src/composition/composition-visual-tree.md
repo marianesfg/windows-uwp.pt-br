@@ -1,35 +1,35 @@
 ---
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
-title: Elemento visual de composição
-description: Elementos visuais de composição constituem a estrutura da árvore visual que todos os outros recursos da API de composição usam e têm como referência. A API permite que os desenvolvedores definam e criem um ou vários objetos visuais, cada um representando um único nó em uma árvore visual.
+title: Composição visual
+description: Elementos visuais de composição compõem a estrutura da árvore visual que todos os outros recursos da API de composição usam e têm como referência. A API permite que os desenvolvedores definam e criem um ou vários objetos visuais, cada um representando um único nó em uma árvore visual.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b1c0b78ca45d98428f38518b337b5889f595c49
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943374"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602431"
 ---
-# <a name="composition-visual"></a>Elemento visual de composição
+# <a name="composition-visual"></a>Composição visual
 
-Elementos visuais de composição constituem a estrutura da árvore visual que todos os outros recursos da API de composição usam e têm como referência. A API permite que os desenvolvedores definam e criem um ou vários objetos visuais, cada um representando um único nó em uma árvore visual.
+Elementos visuais de composição compõem a estrutura da árvore visual que todos os outros recursos da API de composição usam e têm como referência. A API permite que os desenvolvedores definam e criem um ou vários objetos visuais, cada um representando um único nó em uma árvore visual.
 
 ## <a name="visuals"></a>Elementos visuais
 
 Há três tipos de elementos visuais que compõem a estrutura da árvore visual, além de uma classe de pincel de base com várias subclasses que afetam o conteúdo de um elemento visual:
 
-- [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – objeto base, a maioria das propriedades está aqui e é herdada por outros objetos visuais.
-- [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – é derivado de [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) e adiciona a capacidade de criar filhos.
-- [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – é derivado de [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e adiciona a capacidade de associar um pincel para que o elemento visual possa renderizar pixels, incluindo imagens, efeitos ou uma cor sólida.
+- [**Visual** ](https://msdn.microsoft.com/library/windows/apps/Dn706858) – base do objeto, a maioria das propriedades estão aqui e herdada por outros objetos visuais.
+- [**ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) – deriva [ **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)e adiciona a capacidade de criar os filhos.
+- [**SpriteVisual** ](https://msdn.microsoft.com/library/windows/apps/Mt589433) – deriva [ **ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) e acrescenta a capacidade de associar um pincel de modo que o Visual pode renderizar pixels, incluindo imagens, efeitos ou um sólido Cor.
 
 Você pode aplicar efeitos e conteúdo a SpriteVisuals usando [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) e suas subclasses, incluindo [**CompositionColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush), [**CompositionSurfaceBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) e [**CompositionEffectBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush). Para saber mais sobre pincéis, veja a nossa [**Visão geral do CompositionBrush**](https://docs.microsoft.com/windows/uwp/composition/composition-brushes).
 
 ## <a name="the-compositionvisual-sample"></a>Amostra CompositionVisual
 
-Aqui, vamos examinar alguns códigos de exemplo que demonstram os três tipos diferentes de elementos visuais listados anteriormente. Embora essa amostra não abranja conceitos como animações ou efeitos mais complexos, ela contém os blocos de construção que todos esses sistemas usam. (O código de exemplo completo está listado ao final deste artigo.)
+Aqui, vamos examinar alguns códigos de exemplo que demonstram os três tipos diferentes de elementos visuais listados anteriormente. Embora esta amostra não abranja conceitos como animações ou efeitos mais complexos, ela contém os blocos de construção que todos esses sistemas usam. (O código de exemplo completo está listado ao final deste artigo.)
 
 Na amostra, há uma série de quadrados de cor sólida que podem ser clicados e arrastados na tela. Quando você clica em um quadrado, ele vai para frente, gira 45 graus e fica opaco quando arrastado.
 
@@ -40,7 +40,7 @@ Isso mostra uma série de conceitos básicos para trabalhar com a API, incluindo
 - Como recortar o elemento visual
 - Como girar o elemento visual
 - Definir a opacidade
-- Alterar a posição do elemento visual na coleção.
+- Alterar a posição do elemento visual na coleção
 
 ## <a name="creating-a-compositor"></a>Criar um compositor
 
@@ -59,7 +59,7 @@ var visual = _compositor.CreateSpriteVisual();
 visual.Brush = _compositor.CreateColorBrush(Color.FromArgb(0xFF, 0xFF, 0xFF, 0xFF));
 ```
 
-Embora seja composto de apenas algumas linhas de código, ele demonstra um conceito importante: os objetos [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) são o coração do sistema de efeitos. O **SpriteVisual** oferece excelente flexibilidade e interação na criação de cores, imagens e efeitos. O **SpriteVisual** é um tipo de elemento visual único que é capaz de preencher um retângulo 2D com um pincel, neste caso, uma cor sólida.
+Embora essa seja apenas algumas linhas de código, ele demonstra um conceito avançado: [**SpriteVisual** ](https://msdn.microsoft.com/library/windows/apps/Mt589433) objetos são o coração do sistema de efeitos. O **SpriteVisual** oferece excelente flexibilidade e relacionamento na criação de cores, imagens e efeitos. O **SpriteVisual** é um tipo de elemento visual único que é capaz de preencher um retângulo 2D com um pincel, neste caso, uma cor sólida.
 
 ## <a name="clipping-a-visual"></a>Recortar um elemento visual
 

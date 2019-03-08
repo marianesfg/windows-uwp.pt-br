@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, pacote
 ms.localizationpriority: medium
 ms.openlocfilehash: 631ba2c278c72f406a0fdd8a6d6d8d8a14c9eb05
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938026"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635401"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Empacotar seu jogo em DirectX da Plataforma Universal do Windows (UWP)
 
 Jogos da Plataforma Universal do Windows (UWP) maiores, principalmente os que dão suporte a vários idiomas com ativos específicos de região ou oferecem ativos de alta definição opcionais, podem inflar para tamanhos maiores. Neste tópico, você aprenderá a usar pacotes e lotes de aplicativos para personalizar seu aplicativo de forma que os clientes recebam apenas os recursos que eles realmente precisam.
 
-Além do modelo de pacote do aplicativo, o Windows 10 dá suporte a pacotes de aplicativo que agrupam dois tipos de pacotes:
+Além do modelo de pacote de aplicativo, o Windows 10 dá suporte a pacotes de aplicativos que agrupar dois tipos de pacotes:
 
 -   Pacotes de aplicativos que contêm arquivos executáveis e bibliotecas específicos da plataforma. Tipicamente, um jogo UWP pode ter até três pacotes de aplicativo: um para cada arquitetura x86, x64 e CPU ARM. Todos os códigos e dados específicos da plataforma de hardware em questão deverão estar incluídos nesse pacote do aplicativo. O pacote do aplicativo também deve conter todos os principais ativos para que o jogo seja executado com um nível básico de fidelidade e desempenho.
 -   Os pacotes de recursos contêm dados opcionais ou expandidos independentes do tipo de plataforma, como ativos do jogo (texturas, malhas, som, texto). Um jogo UWP pode ter um ou mais pacotes de recurso, incluindo pacotes de recurso para ativos ou texturas de alta definição, nível de recursos 11+ do DirectX ou ativos e recursos específicos de idioma.
@@ -43,29 +43,29 @@ Os possíveis conteúdos dos pacotes de recursos dos jogos incluem:
 
 Tudo isso é definido no package.appxmanifest que faz parte do seu projeto UWP e na estrutura do diretório do seu pacote final. Por causa da nova interface de usuário do Visual Studio, se você seguir o processo neste documento, não será preciso editar manualmente.
 
-> **Importante**  o carregamento e o gerenciamento desses recursos são manipulados por meio do **Windows.ApplicationModel.Resources**\ * APIs. Se você usar essas APIs de recursos de modelo de aplicativo para carregar o arquivo correto para uma localidade, um fator de escala ou um nível de recursos de DirectX, não será preciso carregar seus ativos usando caminhos de arquivo explícitos. Em vez disso, você fornece as APIs de recursos somente com o nome de arquivo generalizado do ativo que você quer e deixa o Sistema de Gerenciamento de Recursos obter a variante certa do recurso para a plataforma e a configuração de localidade atuais do usuário (que você também pode especificar diretamente com essas mesmas APIs).
+> **Importante**    o carregamento e o gerenciamento desses recursos são tratadas por meio de **Windows.ApplicationModel.Resources** \* APIs. Se você usar essas APIs de recursos de modelo de aplicativo para carregar o arquivo correto para uma localidade, um fator de escala ou um nível de recursos de DirectX, não será preciso carregar seus ativos usando caminhos de arquivo explícitos. Em vez disso, você fornece as APIs de recursos somente com o nome de arquivo generalizado do ativo que você quer e deixa o Sistema de Gerenciamento de Recursos obter a variante certa do recurso para a plataforma e a configuração de localidade atuais do usuário (que você também pode especificar diretamente com essas mesmas APIs).
 
  
 
 Os recursos para empacotamento de recursos são especificados de uma dessas duas maneiras básicas:
 
--   Os arquivos de recurso têm o mesmo nome de arquivo e as versões específicas do pacote de recursos são colocadas em diretórios com nomes específicos. Esses nomes de diretório são reservados pelo sistema. Por exemplo, \\en-us, \\scale-140, \\dxfl-dx11.
--   Os arquivos de ativos são armazenados em pastas com nomes arbitrários, mas os arquivos são nomeados com um rótulo comum que é anexado com cadeias de caracteres reservadas pelo sistema para denotar idiomas ou outros qualificadores. Especificamente, as cadeias de caracteres de qualificadores são afixadas ao nome de arquivo generalizado após um sublinhado (“\_”). Por exemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_scale-140.png, \\assets\\coolsign\_dxfl-dx11.dds. Você também pode juntar essas cadeias de caracteres. Por exemplo, \\assets\\menu\_option1\_scale-140\_lang-en-us.png.
-    > **Observação**  quando usado em um nome de arquivo em vez de sozinho em um nome de pasta, um qualificador de idioma deve ter o formato "lang -<tag>", por exemplo, "lang-en-us" conforme descrito em [Personalizar os recursos para idioma, escala e outros qualificadores](../app-resources/tailor-resources-lang-scale-contrast.md).
+-   Os arquivos de recurso têm o mesmo nome de arquivo e as versões específicas do pacote de recursos são colocadas em diretórios com nomes específicos. Esses nomes de diretório são reservados pelo sistema. Por exemplo, \\en-us, \\escala-140, \\dxfl dx11.
+-   Os arquivos de ativos são armazenados em pastas com nomes arbitrários, mas os arquivos são nomeados com um rótulo comum que é anexado com cadeias de caracteres reservadas pelo sistema para denotar idiomas ou outros qualificadores. Especificamente, as cadeias de caracteres do qualificador são afixadas ao nome do arquivo generalizada após um caractere de sublinhado ("\_"). Por exemplo, \\ativos\\menu\_option1\_lang-en-us.png \\ativos\\menu\_option1\_140.png de escala, \\ativos\\coolsign\_dxfl dx11.dds. Você também pode juntar essas cadeias de caracteres. Por exemplo, \\ativos\\menu\_option1\_escala 140\_lang-en-us.png.
+    > **Observação**    quando usado em um nome de arquivo em vez de apenas um nome de diretório, um qualificador de idioma deve assumir a forma "lang -<tag>", por exemplo, "lang-en-us" conforme descrito em [adaptar seus recursos de idioma, escala, e outros qualificadores](../app-resources/tailor-resources-lang-scale-contrast.md).
 
      
 
 Para uma especificidade adicional no empacotamento de recursos, os nomes de diretórios podem ser combinados. Contudo, eles não podem ser redundantes. Por exemplo, \\en-us\\menu\_option1\_lang-en-us.png é redundante.
 
-Você pode especificar quaisquer nomes de subdiretório não reservados que precisar abaixo de um diretório de recurso, contanto que a estrutura do diretório seja idêntica em cada diretório de recurso. Por exemplo, \\dxfl-dx10\\assets\\textures\\coolsign.dds. Quando você carrega ou faz referência a um ativo, o nome do caminho deve ser generalizado, removendo quaisquer qualificadores de idioma, escala ou nível de recursos do DirectX, estejam eles em nós de pasta ou nos nomes de pasta. Por exemplo, para fazer referência em código a um ativo para o qual uma das variantes é \\dxfl-dx10\\assets\\textures\\coolsign.dds, use \\assets\\textures\\coolsign.dds. Da mesma forma, para se referir a um ativo com uma variante \\images\\background\_scale-140.png, use \\images\\background.png.
+Você pode especificar quaisquer nomes de subdiretório não reservados que precisar abaixo de um diretório de recurso, contanto que a estrutura do diretório seja idêntica em cada diretório de recurso. Por exemplo, \\dxfl dx10\\ativos\\texturas\\coolsign.dds. Quando você carrega ou faz referência a um ativo, o nome do caminho deve ser generalizado, removendo quaisquer qualificadores de idioma, escala ou nível de recursos do DirectX, estejam eles em nós de pasta ou nos nomes de pasta. Por exemplo referir-se no código a um ativo para que uma das variantes é \\dxfl dx10\\ativos\\texturas\\coolsign.dds, use \\ativos\\texturas\\ coolsign.DDS. Da mesma forma, para se referir a um ativo com uma variante \\imagens\\plano de fundo\_140.png de dimensionamento, use \\imagens\\background.png.
 
 Aqui estão os seguintes nomes de diretório reservados e prefixos de sublinhado de nome do arquivo:
 
 | Tipo de ativo                   | Nome do diretório do pacote de recursos                                                                                                                  | Sufixo do nome de arquivo do pacote de recursos                                                                                                    |
 |------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Ativos localizados             | Todos os idiomas possíveis, ou combinações de idioma e localidade, para Windows 10. (O prefixo qualificador "lang-" não é exigido em um nome de pasta). | Um "\_" seguido pelo especificador de idioma, localidade ou idioma-localidade. Por exemplo, "\_en", "\_us" ou "\_en-us", respectivamente. |
-| Ativos do fator de escala        | scale-100, scale-140, scale-180. Servem para os fatores de escala de interface do usuário 1.0x, 1.4x e 1.8x, respectivamente.                                     | Um "\_" seguido por "scale-100", "scale-140" ou "scale-180".                                                                    |
-| Ativos de nível de recursos do DirectX | dxfl-dx9, dxfl-dx10 e dxfl-dx11. Servem para os níveis de recursos do DirectX 9, 10 e 11, respectivamente.                                     | Um "\_" seguido por "dxfl-dx9", "dxfl-dx10" ou "dxfl-dx11".                                                                     |
+| Ativos localizados             | Idiomas de todos os possíveis, ou combinações de idioma e localidade para o Windows 10. (O prefixo qualificador "lang-" não é exigido em um nome de pasta). | Um "\_" seguido pelo especificador de idioma, localidade ou localidade do idioma. Por exemplo, "\_en","\_EUA", ou "\_en-us", respectivamente. |
+| Ativos do fator de escala        | scale-100, scale-140, scale-180. Servem para os fatores de escala de interface do usuário 1.0x, 1.4x e 1.8x, respectivamente.                                     | Um "\_" seguido por "escala 100", "escala 140" ou "escala 180".                                                                    |
+| Ativos de nível de recursos do DirectX | dxfl-dx9, dxfl-dx10 e dxfl-dx11. Servem para os níveis de recursos do DirectX 9, 10 e 11, respectivamente.                                     | Um "\_" seguido por "dxfl dx9", "dx10 dxfl" ou "dx11 dxfl".                                                                     |
 
  
 
@@ -78,39 +78,39 @@ Ao configurar seu aplicativo para dar suporte a ativos localizados para vários 
 
 -   Crie um subdiretório de aplicativo (ou uma versão de arquivo) para cada idioma e localidade a que você oferecerá suporte (por exemplo, en-us, jp-jp, zh-cn, fr-fr e assim por diante).
 -   Durante o desenvolvimento, coloque cópias de TODOS os ativos (como arquivos de áudio, texturas e gráficos de menu localizados) no subdiretório da localidade do idioma correspondente, mesmo que eles não sejam diferentes entre os idiomas ou localidades. Para proporcionar uma excelente experiência para o usuário, garanta que o usuário seja alertado se ele não tiver obtido um pacote de recursos de idioma disponível para sua localidade se houver um disponível (ou se ele tiver acidentalmente excluído o pacote após o download e a instalação).
--   Certifique-se de que cada arquivo de recursos de ativo ou cadeia de caracteres (.resw) tenha o mesmo nome em cada diretório. Por exemplo, menu\_option1.png deve ter o mesmo nome nos diretórios \\en-us e \\jp-jp, mesmo que o conteúdo do arquivo seja para um idioma diferente. Nesse caso, você os veria como \\en-us\\menu\_option1.png e \\jp-jp\\menu\_option1.png.
-    > **Observação**  , opcionalmente, você pode anexar a localidade ao nome do arquivo e armazená-los no mesmo diretório; Por exemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_lang-JP-jp.PNG..
+-   Certifique-se de que cada arquivo de recursos de ativo ou cadeia de caracteres (.resw) tenha o mesmo nome em cada diretório. Por exemplo, o menu\_option1.png deve ter o mesmo nome em ambos os a \\en-us e \\jp-jp diretórios, mesmo se o conteúdo do arquivo é para um idioma diferente. Nesse caso, você veria-los como \\en-us\\menu\_option1.png e \\jp-jp\\menu\_option1.png.
+    > **Observação**    , opcionalmente, você pode acrescentar a localidade para o nome do arquivo e armazená-los no mesmo diretório; por exemplo, \\ativos\\menu\_option1\_lang-en-us.png, \\ativos\\menus\_option1\_lang-jp-jp.png.
 
      
 
 -   Use as APIs em [**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022) e [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) para especificar e carregar os recursos específicos de localidade para seu aplicativo. Além disso, use referências de ativo que não incluam a localidade específica, já que essas APIs determinam a localidade correta com base nas configurações do usuário e recuperam o recurso certo para ele.
--   No Microsoft Visual Studio2015, selecione **projeto -> loja -> Criar pacote do aplicativo...** e crie o pacote.
+-   No Microsoft Visual Studio 2015, selecione **projeto -> Store -> Criar pacote do aplicativo...**  e criar o pacote.
 
 ## <a name="defining-scaling-factor-resource-packs"></a>Definição do fator de dimensionamento dos pacotes de recursos
 
 
-Windows 10 oferece três fatores de escala de interface de usuário: 1.0 x, 1.4 x e 1.8 x. Os valores de dimensionamento para cada tela são definidos durante a instalação, de acordo com diversos fatores combinados: o tamanho da tela, a resolução da tela e a distância média presumida do usuário em relação à tela. O usuário também pode ajustar fatores de escala para melhorar a legibilidade. Seu jogo deve permitir reconhecimento de DPI e de fator de dimensionamento para a melhor experiência possível. Parte desse reconhecimento significa criar versões de ativos visuais críticos para cada um dos três fatores de dimensionamento. Isso também inclui testes de clique e interação do ponteiro!
+Windows 10 oferece três fatores de dimensionamento de interface de usuário: 1.0 x 1,4 x e 1.8 x. Os valores de dimensionamento para cada tela são definidos durante a instalação, de acordo com diversos fatores combinados: o tamanho da tela, a resolução da tela e a distância média presumida do usuário em relação à tela. O usuário também pode ajustar fatores de escala para melhorar a legibilidade. Seu jogo deve permitir reconhecimento de DPI e de fator de dimensionamento para a melhor experiência possível. Parte desse reconhecimento significa criar versões de ativos visuais críticos para cada um dos três fatores de dimensionamento. Isso também inclui testes de clique e interação do ponteiro!
 
 Quando estiver configurando seu aplicativo para oferecer suporte a pacotes de recursos para diferentes fatores de escala de aplicativo UWP, você deve:
 
 -   Crie um subdiretório do aplicativo (ou versão do arquivo) para cada fator de dimensionamento ao qual você dará suporte (escala-100, escala-140 e escala-180).
 -   Durante o desenvolvimento, coloque cópias apropriadas ao fator de dimensionamento de TODOS os ativos em cada diretório de recursos do fator de dimensionamento, mesmo que eles não sejam diferentes entre os fatores de dimensionamento.
--   Certifique-se de que cada ativo tenha o mesmo nome em cada diretório. Por exemplo, menu\_option1.png deve ter o mesmo nome nos diretórios \\scale-100 e \\scale-180, mesmo que o conteúdo do arquivo seja diferente. Nesse caso, você os veria como \\scale-100\\menu\_option1.png e \\scale-140\\menu\_option1.png.
-    > **Observação**  novamente, você pode, opcionalmente, acrescente o sufixo do fator de escala ao nome do arquivo e armazená-los no mesmo diretório; Por exemplo, \\assets\\menu\_option1\_scale-100.png, \\assets\\menu\_option1\_scale-140.PNG..
+-   Certifique-se de que cada ativo tenha o mesmo nome em cada diretório. Por exemplo, o menu\_option1.png deve ter o mesmo nome em ambos o \\escala 100 e \\escala 180 diretórios, mesmo se o conteúdo do arquivo é diferente. Nesse caso, você veria-los como \\escala 100\\menu\_option1.png e \\escala 140\\menu\_option1.png.
+    > **Observação**    novamente, você pode, opcionalmente, anexar o sufixo de fator de colocação em escala para o nome do arquivo e armazená-los no mesmo diretório; por exemplo, \\ativos\\menu\_option1\_ Scale-100.png \\ativos\\menu\_option1\_140.png de escala.
 
      
 
 -   Use as APIs em [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) para carregar os ativos. As referências a ativos devem ser generalizadas (sem sufixo), omitindo a variação de escala específica. O sistema irá recuperar o recurso de escala apropriado para a exibição e as configurações do usuário.
--   No Visual Studio2015, selecione **projeto -> loja -> Criar pacote do aplicativo...** e crie o pacote.
+-   No Visual Studio 2015, selecione **projeto -> Store -> Criar pacote do aplicativo...**  e criar o pacote.
 
 ## <a name="defining-directx-feature-level-resource-packs"></a>Definição do nível de recursos do DirectX dos pacotes de recursos
 
 
 Os níveis de recursos do DirectX correspondem a configurações de recursos de GPU para versões anteriores e atuais do DirectX (especificamente, o Direct3D). Isso inclui especificações e funcionalidades do modelo de sombreador, suporte a linguagem de sombreador, suporte a compressão de textura e recursos de pipeline de elementos gráficos gerais.
 
-Seu pacote do aplicativo básico deve usar os formatos básicos de compactação de textura: BC1, BC2 ou BC3. Esses formatos podem ser consumidos por qualquer dispositivo UWP, desde plataformas ARM inferiores até estações de trabalho multi-GPU dedicadas e computadores de mídia.
+Seu pacote de aplicativo de linha de base deve usar os formatos de compactação de textura de linha de base: BC1, BC2 ou BC3. Esses formatos podem ser consumidos por qualquer dispositivo UWP, desde plataformas ARM inferiores até estações de trabalho multi-GPU dedicadas e computadores de mídia.
 
-O suporte ao formato de textura no nível de recursos 10 do DirectX ou superior deve ser adicionado em um pacote de recursos para conservar espaço em disco local e largura de banda para download. Isso possibilita o uso dos esquemas de compactação mais avançados para 11, como BC6H e BC7. (Para obter mais detalhes, consulte [Compactação do bloco de textura no Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh308955)). Esses formatos são mais eficientes para ativos de textura de alta resolução suportados por GPUs modernas, sendo que usá-los melhora a aparência, o desempenho e os requisitos de espaço de seu jogo em plataformas de tecnologia de ponta.
+O suporte ao formato de textura no nível de recursos 10 do DirectX ou superior deve ser adicionado em um pacote de recursos para conservar espaço em disco local e largura de banda para download. Isso possibilita o uso dos esquemas de compactação mais avançados para 11, como BC6H e BC7. (Para obter mais detalhes, consulte [compactação de bloco de textura em Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh308955).) Esses formatos são mais eficientes para os ativos de textura de alta resolução com suporte pelo GPUs modernas e usá-los melhora a aparência, desempenho e requisitos de espaço de seu jogo em plataformas high-end.
 
 | Nível de recursos do DirectX | Compactação de textura suportada |
 |-----------------------|-------------------------------|
@@ -122,14 +122,14 @@ O suporte ao formato de textura no nível de recursos 10 do DirectX ou superior 
 
 Além disso, cada nível de recursos do DirectX dá suporte a diferentes versões de modelo de sombreador. Os recursos de sombreador compilado podem ser criados por recurso e podem ser incluídos nos pacotes de recursos do nível de recursos do DirectX. Algumas versões mais recentes de modelos de sombreador podem usar ativos, como mapas normais, que as versões anteriores de sombreador não podiam. Esses ativos específicos do modelo de sombreador também devem ser incluídos em um pacote de recursos do nível de recursos do DirectX.
 
-O mecanismo de recursos concentra-se principalmente nos formatos de textura suportados para os ativos, por isso ele dá suporte a apenas 3 níveis de recursos gerais. Se você precisa ter sombreadores separados para subníveis (versões de ponto) como DX9\_1 vs DX9\_3, seu gerenciamento de ativos e código de renderização devem manipulá-los explicitamente.
+O mecanismo de recursos concentra-se principalmente nos formatos de textura suportados para os ativos, por isso ele dá suporte a apenas 3 níveis de recursos gerais. Se você precisa ter sombreadores separados para subníveis (versões de ponto) como DX9\_vs 1 DX9\_3, seu código de renderização e gerenciamento de ativos deve tratá-las explicitamente.
 
 Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferentes níveis de recursos do DirectX:
 
 -   Crie um subdiretório do aplicativo (ou versão do arquivo) para cada nível de recursos do DirectX ao qual você dará suporte (dxfl-dx9, dxfl-dx10 e dxfl-dx11).
--   Durante o desenvolvimento, coloque ativos específicos do nível de recursos em cada diretório de recursos do nível de recursos. Ao contrário das localidades e dos fatores de dimensionamento, você pode ter diferentes ramificações de código de renderização para cada nível de recursos em seu jogo, e se você tiver texturas, sombreadores compilados ou outros ativos que são usados em um nível ou em um subconjunto de todos os níveis de recursos suportados, coloque os ativos correspondentes apenas nos diretórios dos níveis de recursos que os utilizam. No caso dos ativos que são carregados em todos os níveis de recursos, verifique se cada diretório de recursos do nível de recursos possui uma versão com o mesmo nome. Por exemplo, para uma textura independente de nível de recursos com o nome "coolsign.dds", coloque a versão comprimida BC3 no diretório \\dxfl-dx9 e a versão comprimida BC7 no diretório \\dxfl-dx11.
--   Certifique-se de que cada ativo (se estiverem disponíveis para vários níveis de recursos) tenha o mesmo nome em cada diretório. Por exemplo, coolsign.dds deve ter o mesmo nome nos diretórios \\dxfl-dx9 e \\dxfl-dx11, mesmo que o conteúdo do arquivo seja diferente. Nesse caso, você os veria como \\dxfl-dx9\\coolsign.dds e \\dxfl-dx11\\coolsign.dds.
-    > **Observação**  novamente, você pode, opcionalmente, acrescente o sufixo do nível de recurso ao nome do arquivo e armazená-los no mesmo diretório; Por exemplo, \\textures\\coolsign\_dxfl-dx9.dds, \\textures\\coolsign\_dxfl-dx11.DDS..
+-   Durante o desenvolvimento, coloque ativos específicos do nível de recursos em cada diretório de recursos do nível de recursos. Ao contrário das localidades e dos fatores de dimensionamento, você pode ter diferentes ramificações de código de renderização para cada nível de recursos em seu jogo, e se você tiver texturas, sombreadores compilados ou outros ativos que são usados em um nível ou em um subconjunto de todos os níveis de recursos suportados, coloque os ativos correspondentes apenas nos diretórios dos níveis de recursos que os utilizam. No caso dos ativos que são carregados em todos os níveis de recursos, verifique se cada diretório de recursos do nível de recursos possui uma versão com o mesmo nome. Por exemplo, para uma recurso nível independentes textura denominada "coolsign.dds", coloque a versão compactada BC3 na \\dxfl dx9 diretório e a versão compactada bc7 no momento no \\diretório dxfl dx11.
+-   Certifique-se de que cada ativo (se estiverem disponíveis para vários níveis de recursos) tenha o mesmo nome em cada diretório. Por exemplo, coolsign.dds deve ter o mesmo nome em ambos os \\dxfl dx9 e \\dxfl dx11 diretórios, mesmo se o conteúdo do arquivo é diferente. Nesse caso, você veria-los como \\dxfl dx9\\coolsign.dds e \\dxfl dx11\\coolsign.dds.
+    > **Observação**    novamente, você pode, opcionalmente, anexar o sufixo de nível de recurso para o nome do arquivo e armazená-los no mesmo diretório; por exemplo, \\texturas\\coolsign\_dxfl-dx9.dds \\ texturas\\coolsign\_dxfl dx11.dds.
 
      
 
@@ -187,7 +187,7 @@ Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferente
         ResourceContext::SetGlobalQualifierValue(L"DXFeatureLevel", dxFeatureLevel);
     ```
 
-    > **Observação**em seu código, carregue a textura diretamente pelo nome (ou o caminho abaixo do diretório de nível de recursos). Não inclua o nome do diretório de nível de recursos nem o sufixo. Por exemplo, carregue "textures\\coolsign.dds", não "dxfl-dx11\\textures\\coolsign.dds" ou "textures\\coolsign\_dxfl-dx11.dds".
+    > **Observação**  em seu código, carregue a textura diretamente por nome (ou caminho abaixo do diretório de nível de recurso). Não inclua o nome do diretório de nível de recursos nem o sufixo. Por exemplo, carregar "texturas\\coolsign.dds", e não "dx11 dxfl\\texturas\\coolsign.dds" ou "texturas\\coolsign\_dxfl dx11.dds".
 
      
 
@@ -210,13 +210,13 @@ Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferente
     Platform::String^ resourceName = possibleResource->ValueAsString;
     ```
 
--   No Visual Studio2015, selecione **projeto -> loja -> Criar pacote do aplicativo...** e crie o pacote.
+-   No Visual Studio 2015, selecione **projeto -> Store -> Criar pacote do aplicativo...**  e criar o pacote.
 -   Certifique-se de ativar lotes de aplicativo nas configurações de manifesto package.appxmanifest.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Definindo recursos de aplicativo](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321)
+* [Definindo recursos do aplicativo](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321)
 * [Empacotando aplicativos](https://msdn.microsoft.com/library/windows/apps/mt270969)
 * [Empacotador de aplicativo (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767)
 

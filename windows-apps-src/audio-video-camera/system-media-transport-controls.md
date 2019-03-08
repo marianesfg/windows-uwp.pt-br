@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6be1680d1ce843c1fbe7105dc2027e764095495a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933302"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635651"
 ---
 # <a name="manual-control-of-the-system-media-transport-controls"></a>Controle manual dos controles de transporte de mídia do sistema
 
@@ -74,7 +74,7 @@ Os controles de transporte do sistema exibem informações sobre a linha do temp
 
 -   Você deve fornecer um valor para [**StartTime**](https://msdn.microsoft.com/library/windows/apps/mt218751), [**EndTime**](https://msdn.microsoft.com/library/windows/apps/mt218747) e [**Position**](https://msdn.microsoft.com/library/windows/apps/mt218755) para que os controles do sistema mostrem uma linha do tempo para o item em execução.
 
--   [**MinSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218749) e [**MaxSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218748) permitem que você especifique o intervalo na linha do tempo que o usuário pode buscar. Um cenário típico para isso é permitir que os provedores de conteúdo incluam pausas para anúncios em suas mídias.
+-   [**MinSeekTime** ](https://msdn.microsoft.com/library/windows/apps/mt218749) e [ **MaxSeekTime** ](https://msdn.microsoft.com/library/windows/apps/mt218748) permitem que você especifique o intervalo de dentro do tempo que o usuário pode buscar. Um cenário típico para isso é permitir que os provedores de conteúdo incluam pausas para anúncios em suas mídias.
 
     Você deve configurar [**MinSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218749) e [**MaxSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218748) para que a [**PositionChangeRequest**](https://msdn.microsoft.com/library/windows/apps/mt218755) seja lançada.
 
@@ -111,8 +111,8 @@ Para obter informações sobre como reproduzir áudio em segundo plano, consulte
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
-* [Integrar aos Controles de transporte de mídia do sistema](integrate-with-systemmediatransportcontrols.md) 
-* [Exemplo de transporte de mídia do sistema](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
+* [Controles de transporte se integram com a mídia do sistema](integrate-with-systemmediatransportcontrols.md) 
+* [Exemplo de Tranport de mídia do sistema](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
 
  
 

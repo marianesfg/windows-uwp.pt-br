@@ -1,5 +1,5 @@
 ---
-Description: Basic accessibility info is often categorized into name, role, and value. This topic describes code to help your app expose the basic information that assistive technologies need.
+Description: As informações básicas de acessibilidade costumam ser categorizadas por nome, função e valor. Este tópico descreve códigos para ajudar seu aplicativo a expor as informações básicas de que tecnologias adaptativas precisam.
 ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
 title: Expor informações básicas de acessibilidade
 label: Expose basic accessibility information
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8320b2b4abb5e49bbf589b360cc9cc2e0e033f79
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050326"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625941"
 ---
 # <a name="expose-basic-accessibility-information"></a>Expor informações básicas de acessibilidade  
 
@@ -64,7 +64,7 @@ Por padrão, qualquer classe derivada de [**Control**](https://msdn.microsoft.co
 ## <a name="name-from-inner-text"></a>Nome do texto interno  
 Para facilitar o uso de cadeias de caracteres que já existem na IU visível para valores de nome acessível, muitos dos controles e outros elementos de IU oferecem suporte para determinar automaticamente um nome acessível padrão com base no texto interno dentro do elemento ou a partir de valores de cadeias de caracteres com propriedades de conteúdo.
 
-* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e **RichTextBlock** promovem o valor da propriedade **Text** como o nome acessível padrão.
+* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), [ **RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [ **TextBox** ](https://msdn.microsoft.com/library/windows/apps/BR209683) e **RichTextBlock** cada promover o valor de **texto** a propriedade como o nome acessível do padrão.
 * Qualquer subclasse [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) usa uma técnica "ToString" iterativa para encontrar cadeias de caracteres em seu valor [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) e promove essas cadeias de caracteres como o nome acessível padrão.
 
 > [!NOTE]
@@ -157,5 +157,5 @@ Observe que as propriedades anexadas, como as propriedades [**AutomationProperti
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [Acessibilidade](accessibility.md)
 * [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)
-* [Amostra de acessibilidade XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Exemplo de acessibilidade do XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Testes de acessibilidade](accessibility-testing.md)

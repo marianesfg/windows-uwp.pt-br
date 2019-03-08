@@ -1,5 +1,5 @@
 ---
-Description: Dialogs and flyouts display transient UI elements that appear when the user requests them or when something happens that requires notification or approval.
+Description: Caixas de diálogo e submenus exibem elementos transitórios da interface do usuário que aparecem quando o usuário os solicita ou quando acontece algo que requer notificação ou aprovação.
 title: Controles de submenu
 template: detail.hbs
 ms.date: 05/19/2017
@@ -12,11 +12,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 52de0933bf51adaae6b0923868e12eb92ced4a1a
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037128"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625011"
 ---
 # <a name="flyouts"></a>Submenus
 
@@ -24,13 +24,13 @@ Um submenu é um contêiner de ignorar aberto que pode mostrar uma interface do 
 
 ![Menu de contexto aninhado em um submenu](../images/flyout-nested.png)
 
-> **APIs importantes**: [classe Flyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+> **APIs importantes**: [Classe de submenu](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 * Não use um submenu no lugar de [tooltip](../tooltips.md) ou [menu de contexto](../menus.md). Use tooltip para mostrar uma breve descrição que fica oculta depois de um determinado tempo. Use um menu de contexto para ações contextuais relacionadas a um elemento da interface do usuário, como copiar e colar.
 
-Para obter recomendações sobre quando usar um submenu versus quando usar uma caixa de diálogo (um controle semelhante), consulte [as caixas de diálogo e submenus](index.md). 
+Para obter recomendações sobre quando usar um submenu versus quando usar uma caixa de diálogo (um controle semelhante), consulte [caixas de diálogo e submenus](index.md). 
 
 ## <a name="examples"></a>Exemplos
 
@@ -41,8 +41,8 @@ Para obter recomendações sobre quando usar um submenu versus quando usar uma c
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abrir o aplicativo para ver o <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> ou <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> em ação.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obter o código-fonte (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -51,7 +51,7 @@ Para obter recomendações sobre quando usar um submenu versus quando usar uma c
 ##  <a name="how-to-create-a-flyout"></a>Como criar um submenu
 
 
-Submenus são anexados a controles específicos. Você pode usar a propriedade [Placement](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.Placement) para especificar onde um submenu aparece: parte superior, esquerda, inferior, direita ou inteira. Se você selecionar o [Modo de posicionamento completo](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode), o aplicativo se estende o submenu e centraliza na janela do aplicativo. Alguns controles, como [Button](/uwp/api/Windows.UI.Xaml.Controls.Button), fornecem uma propriedade [Flyout](/uwp/api/Windows.UI.Xaml.Controls.Button.Flyout) que você pode usar para associar a um submenu ou um [menu de contexto](../menus.md).
+Submenus são anexados a controles específicos. Você pode usar o [posicionamento](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.Placement) propriedade para especificar onde um submenu é exibido: Parte superior, esquerda, inferior, direita ou completo. Se você selecionar o [Modo de posicionamento completo](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode), o aplicativo se estende o submenu e centraliza na janela do aplicativo. Alguns controles, como [Button](/uwp/api/Windows.UI.Xaml.Controls.Button), fornecem uma propriedade [Flyout](/uwp/api/Windows.UI.Xaml.Controls.Button.Flyout) que você pode usar para associar a um submenu ou um [menu de contexto](../menus.md).
 
 Este exemplo cria um submenu simples que exibe algum texto quando o botão é pressionado.
 ````xaml
@@ -145,7 +145,7 @@ Para estilizar um submenu, modifique o [FlyoutPresenterStyle](https://docs.micro
 </Flyout>
 ````
 
-## <a name="styling-flyouts-for-10-foot-experiences"></a>Estilo de submenus para experiências de 10 pés
+## <a name="styling-flyouts-for-10-foot-experiences"></a>Submenus de estilo para experiências de 10 pés
 
 Ignore rapidamente os controles, como teclado de interceptação de submenu e foco de gamepad na interface do usuário transitória, até serem ignorados. Para fornecer uma indicação visual desse comportamento, ao ignorar rapidamente os controles de ignorar no Xbox para desenhar uma sobreposição que esmaece o contraste e visibilidade da interface do usuário fora do escopo. Esse comportamento pode ser modificado com a propriedade [`LightDismissOverlayMode`](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.LightDismissOverlayMode). Por padrão, os submenus desenham a sobreposição de ignorar rapidamente no Xbox, mas não em outras famílias de dispositivos, mas os aplicativos podem optar por forçar a sobreposição para estar sempre **Ativada** ou **Desativada**.
 
@@ -210,10 +210,10 @@ private void Folder2_Click(object sender, RoutedEventArgs e)
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
-- [Dicas de ferramenta](../tooltips.md)
-- [Menus e menu de contexto](../menus.md)
-- [Classe Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+- [Dicas de ferramentas](../tooltips.md)
+- [Menus e menus de contexto](../menus.md)
+- [Classe de submenu](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 - [Classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)

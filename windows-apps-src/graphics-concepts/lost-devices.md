@@ -1,6 +1,6 @@
 ---
 title: Dispositivos perdidos
-description: Um dispositivo Direct3D pode estar em um estado operacional ou perdido.
+description: Um dispositivo Direct3D pode estar em um estado operacional ou um estado perdido.
 ms.assetid: 1639CC02-8000-4208-AA95-91C1F0A3B08D
 keywords:
 - Dispositivos perdidos
@@ -8,26 +8,26 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f0b42a10c2cdd61aef84e08d6bd4f6408a978c3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922076"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617311"
 ---
 # <a name="lost-devices"></a>Dispositivos perdidos
 
 
-Um dispositivo Direct3D pode estar em um estado operacional ou um estado perdido. O estado *operacional* é o estado normal do dispositivo no qual o dispositivo é executado e apresenta toda a renderização conforme o esperado. O dispositivo faz uma transição para o estado *perdido* quando um evento, como a perda de foco do teclado em um app de tela inteira, impossibilita a renderização. O estado perdido é caracterizado pela falha silenciosa de todas as operações de renderização, ou seja, os métodos de renderização podem retornar códigos de sucesso mesmo em caso de falha das operações de renderização.
+Um dispositivo Direct3D pode estar em um estado operacional ou um estado perdido. O estado *operacional* é o estado normal do dispositivo no qual o dispositivo é executado e apresenta toda a renderização conforme o esperado. O dispositivo faz uma transição para o *perdido* estado quando um evento, como perda de foco do teclado em um aplicativo de tela inteira, faz com que a renderização para se tornar impossível. O estado perdido é caracterizado pela falha silenciosa de todas as operações de renderização, ou seja, os métodos de renderização podem retornar códigos de sucesso mesmo em caso de falha das operações de renderização.
 
 Por padrão, o conjunto completo de cenários que pode provocar a perda do dispositivo não é especificado. Alguns exemplos típicos incluem perda do foco, como quando o usuário pressionar ALT + TAB ou quando uma caixa de diálogo do sistema é inicializada. Os dispositivos também podem ser perdidos devido a um evento de gerenciamento de energia ou quando outro app assume a operação de tela inteira. Além disso, qualquer falha de redefinição de dispositivo o coloca em um estado perdido.
 
 Todos os métodos derivados de [**IDesconhecido**](https://msdn.microsoft.com/library/windows/desktop/ms680509) têm garantia de funcionar depois que um dispositivo é perdido. Após a perda de dispositivo, cada função geralmente tem três opções:
 
 -   Falhar com um erro "dispositivo perdido": isso significa que o app precisa reconhecer que o dispositivo foi perdido para que o app identifique que algo não está funcionando como o esperado.
--   Falhar de modo silencioso, retornando S\_OK ou qualquer outro código de retorno: se uma função falhar silenciosamente, em geral, o app não consegue diferenciar entre o resultado de "sucesso" e "falha silenciosa".
+-   Falhar em modo silencioso, retornando S\_Okey ou qualquer outro código de retorno - se uma função silenciosamente falhar, o aplicativo geralmente não é possível distinguir entre o resultado de "êxito" e "Falha silenciosa".
 -   Retornar um código de retorno.
 
-## <a name="span-idrespondingtoalostdevicespanspan-idrespondingtoalostdevicespanspan-idrespondingtoalostdevicespanresponding-to-a-lost-device"></a><span id="Responding_to_a_Lost_Device"></span><span id="responding_to_a_lost_device"></span><span id="RESPONDING_TO_A_LOST_DEVICE"></span>Responder a um dispositivo perdido
+## <a name="span-idrespondingtoalostdevicespanspan-idrespondingtoalostdevicespanspan-idrespondingtoalostdevicespanresponding-to-a-lost-device"></a><span id="Responding_to_a_Lost_Device"></span><span id="responding_to_a_lost_device"></span><span id="RESPONDING_TO_A_LOST_DEVICE"></span>Respondendo a um dispositivo perdido
 
 
 Um dispositivo perdido deve recriar recursos (incluindo os recursos de memória de vídeo) depois que for redefinido. Se um dispositivo for perdido, o app consulta o dispositivo para verificar se é possível restaurar o estado operacional. Caso contrário, o app aguarda até que o dispositivo poder ser restaurado.

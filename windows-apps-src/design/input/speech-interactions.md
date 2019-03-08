@@ -1,5 +1,5 @@
 ---
-Description: Incorporate speech into your apps using Cortana voice commands, speech recognition, and speech synthesis.
+Description: Incorpore fala em seus aplicativos usando comandos de voz da Cortana, reconhecimento de fala e sintetização de voz.
 title: Interações de controle por voz
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
@@ -9,15 +9,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 09787d5a83415b65b8946860edb5b7cad09a5846
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050809"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637071"
 ---
 # <a name="speech-interactions"></a>Interações de controle por voz
 
-Integre o reconhecimento de fala e a conversão de texto em fala (também conhecida como TTS ou sintetização de voz) diretamente à experiência do usuário do seu aplicativo.
+Integre reconhecimento de fala e conversão de texto em fala (também conhecida como TTS ou sintetização de voz) diretamente à experiência do usuário do seu aplicativo.
 
 **Reconhecimento de fala:** converte palavras faladas pelo usuário em texto para entrada de formulário e ditado de texto, para especificar uma ação ou um comando e realizar tarefas. As gramáticas predefinidas para ditado de texto livre e pesquisa na Web e as gramáticas personalizadas criadas usando SRGS (Especificação de Gramática de Reconhecimento de Fala) Versão 1.0 têm suporte.
 
@@ -80,12 +80,12 @@ As telas variam de acordo com as restrições especificadas:
 
 -   Gramática predefinida (ditado ou pesquisa na Web)
 
-    -   A tela **Ouvindo**.
+    -   A tela **Ouvindo** .
     -   A tela **Pensando** .
     -   A tela **Ouvi você dizer** ou a tela de erro.
 -   Lista de palavras ou frases, ou um arquivo de gramática SRGS
 
-    -   A tela **Ouvindo**.
+    -   A tela **Ouvindo** .
     -   A tela **Você disse**, se o que o usuário disse puder ser interpretado como mais de um resultado potencial.
     -   A tela **Ouvi você dizer** ou a tela de erro.
 
@@ -179,7 +179,7 @@ Para uma pequena lista de palavras e frases, ou uma lista de palavras e frases u
 
 Para listas maiores de palavras e frases, ou palavras e frases usadas com frequência, você pode criar documentos separados de léxico de pronúncias. Consulte [Sobre léxicos e alfabetos fonéticos](https://msdn.microsoft.com/library/windowsphone/design/hh361646.aspx) para obter mais informações.
 
-## <a name="testing"></a>Testes
+## <a name="testing"></a>Testando
 
 Teste a precisão do reconhecimento de fala e qualquer interface do usuário de suporte com o público-alvo do seu aplicativo. Esta é a melhor maneira de determinar a eficiência da experiência de interação de fala no seu aplicativo. Por exemplo, os usuários estão obtendo resultados de reconhecimento insatisfatórios porque seu aplicativo não está ouvindo uma frase comum?
 
@@ -207,10 +207,10 @@ Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação 
 | Tópico | Descrição |
 | --- | --- |
 | [Reconhecimento de fala](speech-recognition.md) | Use o reconhecimento de fala para fornecer entrada, especificar uma ação ou um comando e realizar tarefas. |
-| [Especificar o idioma do reconhecedor de fala](specify-the-speech-recognizer-language.md) | Saiba como selecionar um idioma instalado para usá-lo para reconhecimento de fala. |
+| [Especifique o idioma de reconhecimento de fala](specify-the-speech-recognizer-language.md) | Saiba como selecionar um idioma instalado para usá-lo para reconhecimento de fala. |
 | [Definir restrições de reconhecimento personalizadas](define-custom-recognition-constraints.md) | Saiba como definir e usar restrições personalizadas para reconhecimento de fala. |
 | [Habilitar o ditado contínuo](enable-continuous-dictation.md) |Saiba como capturar e reconhecer entrada de fala de ditado contínuo de formato longo. |
-| [Gerenciar problemas com entrada de áudio](manage-issues-with-audio-input.md) | Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio. |
+| [Gerenciar problemas com a entrada de áudio](manage-issues-with-audio-input.md) | Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio. |
 | [Definir tempos limite de reconhecimento de fala](set-speech-recognition-timeouts.md) | Defina quanto tempo um reconhecedor de fala ignora o silêncio ou sons não reconhecíveis (murmúrios) e continua escutando a entrada de fala. |
 
 ## <a name="related-articles"></a>Artigos relacionados
@@ -220,7 +220,7 @@ Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação 
 
  **Exemplos**
 
-* [Exemplo de reconhecimento de fala e sintetização de controle por voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

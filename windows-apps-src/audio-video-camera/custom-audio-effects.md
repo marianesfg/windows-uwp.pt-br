@@ -1,5 +1,5 @@
 ---
-Description: This article describes how to create a Windows Runtime component that implements the IBasicAudioEffect interface to allow you to create custom effects for audio streams.
+Description: Este artigo descreve como criar um componente do Tempo de Execução do Windows que implemente a interface IBasicAudioEffect para permitir que você crie efeitos personalizados para fluxos de áudio.
 title: Efeitos de áudio personalizados
 ms.date: 02/08/2017
 ms.topic: article
@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
 ms.openlocfilehash: e04b3a764c170fa3e3e0ce1372e72b73795b5b12
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049323"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617951"
 ---
 # <a name="custom-audio-effects"></a>Efeitos de áudio personalizados
 
@@ -22,7 +22,7 @@ Este artigo descreve como criar um componente do Tempo de Execução do Windows 
 
 Um efeito de áudio personalizado é definido em uma classe que implementa a interface [**IBasicAudioEffect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect). Essa classe não pode ser incluída diretamente no projeto do seu aplicativo. Em vez disso, você deve usar um componente do Tempo de Execução do Windows para hospedar sua classe de efeito de áudio.
 
-**Adicionar um componente do Tempo de Execução do Windows para o efeito de áudio**
+**Adicionar um componente de tempo de execução do Windows para o efeito de áudio**
 
 1.  No Microsoft Visual Studio, com sua solução aberta, vá para o menu **Arquivo** e selecione **Adicionar-&gt;Novo Projeto**.
 2.  Selecione o tipo de projeto **Componente do Tempo de Execução do Windows (Windows Universal)**.
@@ -93,7 +93,7 @@ Agora que os buffers de dados foram obtidos, você pode ler o buffer de entrada 
 
 ### <a name="close-method"></a>Método Close
 
-O sistema chamará o método [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764782) [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764782) em sua classe quando o efeito for encerrado. Você deve usar esse método para descartar quaisquer recursos que você criou. O argumento para o método é um [**MediaEffectClosedReason**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.MediaEffectClosedReason) que permite que você saiba se o efeito foi fechado normalmente, se ocorreu um erro ou se o efeito não é compatível com o formato de codificação necessário.
+O sistema irá chamar o [ **feche** ](https://msdn.microsoft.com/library/windows/apps/dn764782) [ **fechar** ](https://msdn.microsoft.com/library/windows/apps/dn764782) método em sua classe quando o efeito deve ser desligado. Você deve usar esse método para descartar quaisquer recursos que você criou. O argumento para o método é um [**MediaEffectClosedReason**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.MediaEffectClosedReason) que permite que você saiba se o efeito foi fechado normalmente, se ocorreu um erro ou se o efeito não é compatível com o formato de codificação necessário.
 
 [!code-cs[Close](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetClose)]
 
@@ -123,7 +123,7 @@ Para usar o efeito de áudio do seu aplicativo, você deve adicionar uma referê
 
 1.  No Gerenciador de Soluções, no projeto do seu aplicativo, clique com o botão direito do mouse em **Referências** e selecione **Adicionar referência**.
 2.  Expanda a guia **Projetos**, selecione **Solução** e marque a caixa de seleção com o nome do projeto do efeito. Neste exemplo, o nome é *AudioEffectComponent*.
-3.  Clique em **OK**
+3.  Clique em **OK**.
 
 Se sua classe de efeito de áudio declarada for um namespace diferente, inclua esse namespace no seu arquivo de código.
 
@@ -145,9 +145,9 @@ O snippet de código a seguir demonstra como adicionar o efeito de áudio person
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Acesso de visualização de câmera simples](simple-camera-preview-access.md)
-* [Composições e edição de mídia](media-compositions-and-editing.md)
-* [Documentação do Win2D](https://go.microsoft.com/fwlink/p/?LinkId=519078)
+* [Acesso de visualização da câmera simples](simple-camera-preview-access.md)
+* [Composições de mídia e edição](media-compositions-and-editing.md)
+* [Documentação de Win2D](https://go.microsoft.com/fwlink/p/?LinkId=519078)
 * [Reprodução de mídia](media-playback.md)
 
  

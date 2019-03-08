@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, serviços da Store, API de ofertas direcionadas da Microsoft Store, ofertas direcionadas
 ms.localizationpriority: medium
 ms.openlocfilehash: bcf270bd56d17936ef404adbc3663034b58e7a2c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045019"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615681"
 ---
-# <a name="manage-targeted-offers-using-store-services"></a>Gerenciar ofertas direcionadas usando os serviços da Loja
+# <a name="manage-targeted-offers-using-store-services"></a>Gerencie ofertas direcionadas usando os serviços da loja
 
-Se você criar uma *oferta de destino* na página **gt _ prenda ofertas direcionadas** para o seu aplicativo no Partner Center, use a *API de ofertas direcionadas da Microsoft Store* no código do seu aplicativo para recuperar informações que ajuda você a implementar a experiência no aplicativo para o oferta direcionada. Para obter mais informações sobre ofertas direcionadas e como criá-las no painel, consulte [Use ofertas direcionadas para maximizar o engajamento e as conversões](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
+Se você criar um *oferta direcionada* no **acionar > direcionados ofertas** página de seu aplicativo no Partner Center, use o *Microsoft Store direcionados oferece a API* no código do seu aplicativo para recupere informações que ajuda você a implementar a experiência no aplicativo para a oferta de destino. Para obter mais informações sobre ofertas direcionadas e como criá-las no painel, consulte [Use ofertas direcionadas para maximizar o engajamento e as conversões](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
 
 A API de ofertas direcionadas é uma API REST simples que você pode usar para obter as ofertas segmentadas disponíveis para o usuário atual, com base no fato de o usuário fazer parte do segmento de clientes ou não para a oferta segmentada. Para usar esta API no código do seu aplicativo, siga estas etapas:
 
@@ -65,5 +65,5 @@ Este exemplo exige a biblioteca [Json.NET](https://www.newtonsoft.com/json) da N
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Usar ofertas direcionadas para maximizar o envolvimento e as conversões](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)
-* [Receber as ofertas direcionadas](get-targeted-offers.md)
+* [Usar ofertas direcionadas para maximizar o envolvimento e conversões](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)
+* [Obter ofertas direcionadas](get-targeted-offers.md)

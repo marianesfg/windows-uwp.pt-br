@@ -1,5 +1,5 @@
 ---
-Description: This topic describes the schema of the MakePri.exe XML configuration file.
+Description: Este tópico descreve o esquema do arquivo de configuração XML MakePri.exe.
 title: Arquivo de configuração MakePri.exe
 template: detail.hbs
 ms.date: 10/18/2017
@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: ef0e8834310e77084c0bb4a8aad22786a89fb312
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927121"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607791"
 ---
 # <a name="makepriexe-configuration-file"></a>Arquivo de configuração MakePri.exe
 
 Este tópico descreve o esquema do [arquivo de configuração XML MakePri.exe](compile-resources-manually-with-makepri.md); conhecido também como arquivo de configuração PRI. A ferramenta MakePri.exe tem um [comando createconfig](makepri-exe-command-options.md#createconfig-command) que você pode usar para criar um arquivo de configuração PRI novo e inicializado.
 
 > [!NOTE]
-> MakePri.exe é instalado quando você verificar a opção do **SDK do Windows para aplicativos gerenciados do UWP** ao instalar o Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe é instalado quando você verificar a **SDK do Windows para aplicativos gerenciados do UWP** opção durante a instalação do Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 O arquivo de configuração PRI determina quais recursos serão indexados e como isso será feito. O XML de configuração deve estar de acordo com o esquema a seguir.
 
@@ -204,7 +204,7 @@ Este atributo define um sinalizador no arquivo PRI gerado
 - Mesclagem da implantação para identificar se esse arquivo PRI pode ser mesclado.
 - O GetFullyQualifiedReference retorna um erro quando esse sinalizador é definido e o gerenciador de recursos foi inicializado com um arquivo.
 
-O valor padrão desse atributo é `true`. O MakePri.exe só definirá o sinalizador no PRI se você definir o Windows10 como destino.
+O valor padrão desse atributo é `true`. O MakePri.exe só definirá o sinalizador no PRI se você definir o Windows 10 como destino.
 
 É recomendável omitir `isDeploymentMergeable` (ou defini-lo explicitamente para `true`) na criação de pacote de recursos se você definir o Windows 10 como destino.
 
@@ -226,7 +226,7 @@ O MakePri.exe adicionará o valor `isDeploymentMergeable` ao arquivo de despejo 
 
 O valor padrão deste atributo é 1. Se você fornecer um valor explícito e também usar a opção de linha de comando `/VersionMajor(vma)` obsoleta na ferramenta MakePri.exe, o valor no arquivo de configuração terá precedência.
 
-Veja um exemplo a seguir.
+Aqui está um exemplo.
 
 ```xml
 <resources majorVersion="2">
@@ -247,7 +247,7 @@ Indica a versão do sistema operacional de destino. A tabela a seguir mostra os 
 | 6.3.0 (padrão) | Windows 8.1 |
 | 6.2.1 | Windows 8 |
 
-Veja um exemplo a seguir.
+Aqui está um exemplo.
 
 ```xml
 <resources targetOsVersion="10.0.0">
@@ -280,21 +280,21 @@ Estas são algumas condições de erro de exemplo, e a mensagem de erro correspo
 
 | Condição | Gravidade | Mensagem |
 | --------- | -------- | ------- |
-| Uma targetOsVersion diferente de um dos valores com suporte é especificada. | Erro | Configuração Inválida: targetOsVersion inválida especificada. |
-| Uma targetOsVersion "6.2.1" é especificada e um elemento `packaging` está presente. | Erro | Configuração Inválida: nó 'Packaging' incompatível com esta targetOsVersion. |
+| Uma targetOsVersion diferente de um dos valores com suporte é especificada. | Erro | Configuração inválida: TargetOsVersion inválido especificado. |
+| Uma targetOsVersion "6.2.1" é especificada e um elemento `packaging` está presente. | Erro | Configuração inválida: Nó de 'Empacotamento' não é compatível com este targetOsVersion. |
 | Mais de um modo encontrado na configuração. Por exemplo, Manual e AutoResourcePackage especificados. | Erro | Configuração Inválida: o nó 'packaging' não pode ter mais de um modo de operação. |
 | Um qualificador padrão foi listado no pacote de recursos. | Erro | Configuração inválida: <Qualifiername>=<QualifierValue> é um qualificador padrão e seus candidatos não podem ser adicionados a um pacote de recursos. |
-| O qualificador AutoResourcePackage inclui vários qualificadores. Por exemplo, language_scale. | Erro | Configuração Inválida: AutoResourcePackage com vários qualificadores não permitido. |
-| QualifierSet de ResourcePackage com vários qualificadores. Por exemplo, language-en-us_scale-100 | Erro | Configuração Inválida: QualifierSet com vários qualificadores não permitido. |
-| Nome de resourcepack duplicado encontrado. | Erro | Configuração Inválida: nome de pacote de recursos <rpname> duplicado. |
-| Mesmo conjunto de qualificadores definido em dois pacotes de recursos. | Erro | Configuração inválida: várias instâncias de QualifierSet "<qualifier tags>" encontradas. |
+| O qualificador AutoResourcePackage inclui vários qualificadores. Por exemplo, language_scale. | Erro | Configuração inválida: Não há suporte para AutoResourcePackage com vários qualificadores. |
+| QualifierSet de ResourcePackage com vários qualificadores. Por exemplo, language-en-us_scale-100 | Erro | Configuração inválida: Não há suporte para QualifierSet com vários qualificadores. |
+| Nome de resourcepack duplicado encontrado. | Erro | Configuração inválida: Nome do pacote de recurso duplicados <rpname>. |
+| Mesmo conjunto de qualificadores definido em dois pacotes de recursos. | Erro | Configuração inválida: Várias instâncias do QualifierSet "<qualifier tags>" encontrado. |
 | Nenhum candidato encontrado para o QualifierSet listado no nó 'ResourcePackage'. | Aviso | Configuração inválida: Nenhum candidato encontrado para <Resource Package Name>. |
 | Nenhum candidato encontrado para o qualificador listado no nó ‘AutoResourcePackage’. | Aviso | Configuração inválida: Nenhum candidato encontrado para o qualificador <qualifier name>. O pacote de recursos não foi gerado. |
-| Nenhum dos modos foi encontrado. Ou seja, um nó 'packaging' vazio foi encontrado. | Aviso | Configuração inválida: nenhum modo de empacotamento especificado. |
+| Nenhum dos modos foi encontrado. Ou seja, um nó 'packaging' vazio foi encontrado. | Aviso | Configuração inválida: Não foi especificado nenhum modo de empacotamento. |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)
-* [Opções de linha de comando do MakePri.exe &mdash; comando createconfig](makepri-exe-command-options.md#createconfig-command)
-* [Personalizar os recursos para idioma, escala, alto contraste e outros qualificadores](tailor-resources-lang-scale-contrast.md)
-* [Sistema de Gerenciamento de Recursos &mdash; ResourceContext](resource-management-system.md#resourcecontext)
+* [Compilar recursos manualmente com MakePri.exe](compile-resources-manually-with-makepri.md)
+* [Opções de linha de comando MakePri.exe&mdash;createconfig comando](makepri-exe-command-options.md#createconfig-command)
+* [Personalize seus recursos de idioma, escala, alto contraste e outros qualificadores](tailor-resources-lang-scale-contrast.md)
+* [Sistema de gerenciamento de recursos&mdash;resourcecontext)&lt;2}&lt;1}](resource-management-system.md#resourcecontext)

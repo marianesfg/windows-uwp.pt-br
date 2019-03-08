@@ -1,5 +1,5 @@
 ---
-Description: Testing procedures to follow to ensure that your Universal Windows Platform (UWP) app is accessible.
+Description: Os procedimentos de teste a serem seguidos para garantir que o seu aplicativo da Plataforma Universal do Windows (UWP) esteja acessível.
 ms.assetid: 272D9C9E-B179-4F5A-8493-926D007A0225
 title: Testes de acessibilidade
 label: Accessibility testing
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d84683544628a9b6df0eafb2999fabb134465ea8
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049623"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635561"
 ---
 # <a name="accessibility-testing"></a>Testes de acessibilidade  
 
@@ -33,16 +33,16 @@ Você pode iniciar as ferramentas de teste de acessibilidade a partir de um prom
 <span id="accscope"/>
 <span id="ACCSCOPE"/>
 
-### **<a name="accscope"></a>AccScope**  
+### <a name="accscope"></a>**AccScope**  
 
 A ferramenta [**AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239) permite que desenvolvedores e testadores avaliem a acessibilidade do aplicativo durante a criação e o desenvolvimento do mesmo, potencialmente em fases iniciais de protótipo em vez de fases finais de teste de um ciclo de desenvolvimento de aplicativo. Isso é requisitado, especialmente, para testar cenários de acessibilidade do Narrador com o seu aplicativo.
 
 <span id="inspect"/>
 <span id="INSPECT"/>
 
-### **<a name="inspect"></a>Inspect**  
+### <a name="inspect"></a>**Inspect**  
 
-[**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) permite que você selecione qualquer elemento de interface do usuário e visualize seus dados acessíveis. Você pode visualizar as propriedades e padrões de controle Automação da Interface do Usuário da Microsoft e testar a estrutura navegacional dos elementos de automação na árvore de automação da IU. Use **Inspect** conforme desenvolve a interface do usuário para verificar como os tributos de acessibilidade estão expostos na Automação da Interface do Usuário. Em alguns casos, os atributos vêm do suporte à Automação da Interface do Usuário que já está implementado para os controles XAML padrão. Em outros casos, os atributos vêm de valores específicos que você definiu na sua marcação XAML, como as propriedades anexadas [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties).
+[**Inspecionar** ](https://msdn.microsoft.com/library/windows/desktop/Dd318521) permite que você selecione qualquer elemento de interface do usuário e exibir seus dados de acessibilidade. Você pode visualizar as propriedades e padrões de controle Automação da Interface do Usuário da Microsoft e testar a estrutura navegacional dos elementos de automação na árvore de automação da IU. Use **Inspect** conforme desenvolve a interface do usuário para verificar como os tributos de acessibilidade estão expostos na Automação da Interface do Usuário. Em alguns casos, os atributos vêm do suporte à Automação da Interface do Usuário que já está implementado para os controles XAML padrão. Em outros casos, os atributos vêm de valores específicos que você definiu na sua marcação XAML, como as propriedades anexadas [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties).
 
 A imagem a seguir mostra a ferramenta [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) consultando as propriedades de Automação da Interface do Usuário no elemento do menu **Edit** no Bloco de Notas.
 
@@ -51,21 +51,20 @@ A imagem a seguir mostra a ferramenta [**Inspect**](https://msdn.microsoft.com/l
 <span id="ui_accessibility_checker"/>
 <span id="UI_ACCESSIBILITY_CHECKER"/>
 
-### **<a name="ui-accessibility-checker"></a>UI Accessibility Checker**  
+### <a name="ui-accessibility-checker"></a>**UI Accessibility Checker**  
 O **UI Accessibility Checker (AccChecker)** ajuda você a descobrir problemas de acessibilidade durante o tempo de execução. Quando a sua interface do usuário estiver completa e funcional, use o **AccChecker** para testar diferentes situações, verificar a exatidão da acessibilidade do tempo de execução e descobrir problemas no tempo de execução. Você pode executar o **AccChecker** em interface do usuário ou comandar o modo de linha. Para executar a ferramenta do modo de interface do usuário, abra o diretório do **AccChecker** no diretório bin do SDK do Windows, execute acccheckui.exe e clique no menu **Ajuda**.
 
 <span id="ui_automation_verify"/>
 <span id="UI_AUTOMATION_VERIFY"/>
 
-### **<a name="ui-automation-verify"></a>Verificação da Automação da Interface do Usuário**  
+### <a name="ui-automation-verify"></a>**Verificação da Automação de Interface de Usuário**  
 O **UI Automation Verify (UIA Verify)** é uma estrutura automatizada de testes e verificação para implementações da Automação da Interface do Usuário. O **UIA Verify** pode integrar-se no código de teste e conduzir um teste automático e regular ou e verificações específicas de situações de Automação da Interface do Usuário. Para executar o **UIA Verify**, execute VisualUIAVerifyNative.exe do subdiretório UIAVerify.
 
 <span id="accessible_event_watcher"/>
 <span id="ACCESSIBLE_EVENT_WATCHER"/>
 
-### **<a name="accessible-event-watcher"></a>Accessible Event Watcher**  
-[
-              O **Accessible Event Watcher (AccEvent)**](https://msdn.microsoft.com/library/windows/desktop/Dd317979) testa se os elementos de interface do usuário de um aplicativo disparam eventos adequados da Automação da Interface do Usuário e do Microsoft Active Accessibility quando ocorrem mudanças na interface do usuário. As alterações na interface do usuário podem ocorrer quando o foco muda ou quando um elemento de interface do usuário é chamado, selecionado ou sofre uma mudança de estado ou propriedade.
+### <a name="accessible-event-watcher"></a>**Accessible Event Watcher**  
+[**Detector de eventos acessível (AccEvent)** ](https://msdn.microsoft.com/library/windows/desktop/Dd317979) testa se os elementos de interface do usuário do aplicativo disparar eventos de automação de interface do usuário e acessibilidade ativa da Microsoft de adequada quando ocorrem alterações de interface do usuário. As alterações na interface do usuário podem ocorrer quando o foco muda ou quando um elemento de interface do usuário é chamado, selecionado ou sofre uma mudança de estado ou propriedade.
 
 > [!NOTE]
 > A maioria das ferramentas de teste de acessibilidade mencionadas na documentação é executada em um computador, não em um telefone. Você pode executar algumas das ferramentas enquanto desenvolve e utiliza um emulador, mas a maioria dessas ferramentas não pode expor a árvore de Automação da IU dentro do emulador.
@@ -80,7 +79,7 @@ A melhor maneira de testar a acessibilidade do seu teclado é desconectar o mous
 <span id="VERIFY_THE_CONTRAST_RATIO_OF_VISIBLE_TEXT"/>
 
 ## <a name="verify-the-contrast-ratio-of-visible-text"></a>Verificar o contraste do texto visível  
-Use as ferramentas de contraste de cores para verificar se a taxa de contraste de texto visível é aceitável. As exceções incluem elementos da interface do usuário inativos e logotipos ou texto decorativo que não transmita informações e possa ser rearranjado sem alterar o significado. Consulte [Requisitos de texto acessível](accessible-text-requirements.md) para obter mais informações sobre a taxa de contraste e as exceções. Consulte [Técnicas para WCAG 2.0 G18 (seção Recursos)](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) sobre as ferramentas que podem testar taxas de contraste.
+Use as ferramentas de contraste de cores para verificar se a taxa de contraste de texto visível é aceitável. As exceções incluem elementos da interface do usuário inativos e logotipos ou texto decorativo que não transmita informações e possa ser rearranjado sem alterar o significado. Consulte [Requisitos de texto acessível](accessible-text-requirements.md) para obter mais informações sobre a taxa de contraste e as exceções. Consulte [Técnicas para WCAG 2.0 G18 (seção Recursos)](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) sobre as ferramentas que podem testar as taxas de contraste.
 
 > [!NOTE]
 > Algumas das ferramentas listadas pelas Técnicas para WCAG 2.0 G18 não podem ser usadas de forma interativa com um aplicativo UWP. Talvez você precise inserir valores de cor da tela de fundo e de primeiro plano manualmente na ferramenta, fazer capturas de tela da interface do usuário do aplicativo e depois executar a ferramenta de taxa de contraste na imagem da captura de tela. Ou então executar a ferramenta enquanto você abre arquivos de bitmap de origem em um programa de edição de imagens, não enquanto a imagem é carregada pelo aplicativo.
@@ -96,7 +95,7 @@ Use o aplicativo com um tema de alto contraste ativo para verificar se todos os 
 
 ## <a name="verify-your-app-with-display-settings"></a>Verificar o aplicativo com configurações de exibição  
 
-Use as opções de exibição do sistema que ajustam o valor de pontos por polegada (dpi) da exibição, e garanta que a interface de usuário de seu aplicativo seja dimensionada corretamente quando o valor de dpi mudar. (Alguns usuários alteram os valores de dpi como uma opção de acessibilidade, isso está disponível em **Facilidade de Acesso**, bem como em propriedades de vídeo). Se você encontrar problemas, siga as [Diretrizes de experiência do usuário para layout e dimensionamento](https://msdn.microsoft.com/library/windows/apps/Dn611863) e forneça recursos adicionais para diferentes fatores dimensionamento.
+Use as opções de exibição do sistema que ajustam o valor de pontos por polegada (dpi) da exibição, e garanta que a interface de usuário de seu aplicativo seja dimensionada corretamente quando o valor de dpi mudar. (Alguns usuários alterem valores de dpi como uma opção de acessibilidade, está disponível no **facilidade de acesso** , bem como exibir as propriedades.) Se você encontrar problemas, execute as [diretrizes de colocação de layout em](https://msdn.microsoft.com/library/windows/apps/Dn611863) e fornecer recursos adicionais para diferente fatores de dimensionamento.
 
 <span id="verify_main_app_scenarios_by_using_narrator"/>
 <span id="VERIFY_MAIN_APP_SCENARIOS_BY_USING_NARRATOR"/>
@@ -106,7 +105,7 @@ Use o Narrador para testar a experiência de leitura da tela do seu aplicativo.
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode/player]
 
-**Use estas etapas para testar o seu aplicativo usando o Narrador com um mouse e teclado:**
+**Use estas etapas para testar seu aplicativo usando o Narrator com um mouse e teclado:**
 1.  Inicie o Narrador pressionando a tecla de logotipo do _Windows + Ctrl + Enter_. Em versões anteriores à versão 1607 do Windows 10, use _Tecla de logotipo do Windows + Enter_ para iniciar o Narrador.
 2.  Navegue pelo aplicativo com o teclado usando a tecla _Tab_, as teclas direcionais e _Caps Lock + teclas direcionais_.
 3.  Enquanto navega no seu aplicativo, ouça o Narrador lendo os elementos da sua interface do usuário e verifique o seguinte:
@@ -119,15 +118,15 @@ Use o Narrador para testar a experiência de leitura da tela do seu aplicativo.
 
 A partir da versão 1607 do Windows 10, apresentamos um novo modo de desenvolvedor no Narrador. Ativar o modo de desenvolvedor, quando o Narrador já estiver em execução pressionando _Caps Lock + Shift + F12_. Quando o modo de desenvolvedor estiver habilitado, a tela será mascarada e realçará apenas os objetos acessíveis e o texto associado que é exposto por meio de programação para o Narrador. Isso proporciona a você uma boa representação visual das informações que são expostas para o Narrador.
 
-**Use estas etapas para testar seu aplicativo usando o modo de toque do Narrador:**
+**Use estas etapas para testar seu aplicativo usando o modo de toque do Narrator:**
 
 > [!NOTE]
 > O Narrador entra automaticamente no modo de toque em dispositivos que oferecem suporte para mais de 4 contatos. O Narrador não oferece suporte para cenários com vários monitores ou digitalizadores de toque múltiplo na tela principal.
 
 1.  Familiarize-se com a interface do usuário e explore o layout.
 
-    * **Navegue pela interface do usuário usando gestos de passar o dedo.** Deslize o dedo para a esquerda ou direita para mover entre itens e para cima ou para baixo para mudar a categoria de itens navegados. As categorias incluem todos os itens, links, tabelas, cabeçalhos e assim por diante. A navegação com gestos simples de passar o dedo é semelhante à navegação com _Caps Lock + Seta_.
-    * **Use gestos de tabulação para navegar por elementos focalizáveis.** Deslizar três dedos para a direita ou esquerda equivale a navegar com _Tab_ e _Shift + Tab_ em um teclado.
+    * **Navegue por meio da interface do usuário usando gestos de passar o dedo.** Deslize o dedo para a esquerda ou direita para mover entre itens e para cima ou para baixo para mudar a categoria de itens navegados. As categorias incluem todos os itens, links, tabelas, cabeçalhos e assim por diante. A navegação com gestos simples de passar o dedo é semelhante à navegação com _Caps Lock + Seta_.
+    * **Use gestos de guia para navegar pelos elementos focalizáveis.** Deslizar três dedos para a direita ou esquerda equivale a navegar com _Tab_ e _Shift + Tab_ em um teclado.
     * **Investigue espacialmente a interface do usuário com um único dedo.** Arraste um único dedo para cima e para baixo, ou para a esquerda e para a direita, para que o Narrador leia os itens sob seu dedo. É possível usar o mouse como alternativa, pois ele usa a mesma lógica de teste por pressionamento que o gesto de arrastar um único dedo.
     * **Leia a janela inteira e todos os seus conteúdos deslizando três dedos para cima**. Isso equivale a usar _Caps Lock + W_.
 
@@ -137,9 +136,9 @@ A partir da versão 1607 do Windows 10, apresentamos um novo modo de desenvolved
 
     Ações principais incluem ativar um botão, inserir um sinal de intercalação de texto e definir o foco no controle. Ações secundárias incluem selecionar um item de lista ou expandir um botão que oferece várias opções.
 
-    * Para testar uma ação principal: toque duas vezes ou pressione com um dedo e toque com o outro.
-    * Para testar uma ação secundária: toque três vezes ou pressione com um dedo e toque duas vezes com o outro.
-    * Para testar o comportamento de rolagem: use gestões de passar dois dedos para rolar na direção desejada.
+    * Para testar uma ação principal: Toque duas vezes, ou pressione com um dedo e toque em si.
+    * Para testar uma ação secundária: Triplicar toque, ou pressione com um dedo e tocar duas vezes com outra.
+    * Para testar o comportamento de rolagem: Use o dedo com dois dedos para rolar na direção desejada.
 
     Alguns controles fornecem ações adicionais. Para exibir a lista completa, basta um único toque com quatro dedos.
 
@@ -162,7 +161,7 @@ Um aspecto que você pode testar é se há elementos aparecendo na exibição do
 
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [Acessibilidade](accessibility.md)
-* [Práticas que devem ser evitadas](practices-to-avoid.md)
-* [Automação da Interface do Usuário.](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
+* [Práticas a serem evitadas](practices-to-avoid.md)
+* [Automação da Interface do Usuário](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
 * [Acessibilidade no Windows](https://go.microsoft.com/fwlink/p/?LinkId=320802)
 * [Introdução ao Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

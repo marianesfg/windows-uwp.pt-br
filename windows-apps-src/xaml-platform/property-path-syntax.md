@@ -1,19 +1,19 @@
 ---
 description: Você pode usar a classe PropertyPath e a sintaxe de cadeia de caracteres para instanciar um valor PropertyPath em XAML ou em código.
-title: Sintaxe de caminho de propriedade
+title: Sintaxe de Property-path
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f0f49792a92010f97c8388540fd63c38eed5f75e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919292"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632361"
 ---
-# <a name="property-path-syntax"></a>Sintaxe de caminho de propriedade
+# <a name="property-path-syntax"></a>Sintaxe de Property-path
 
 
 Você pode usar a classe [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) e a sintaxe de cadeia de caracteres para instanciar um valor **PropertyPath** vem XAML ou em código. Valores **PropertyPath** são usados por vinculação de dados. Uma sintaxe semelhante é usada para direcionar animações em storyboard. Nos dois cenários, um caminho de propriedade descreve uma passagem de uma ou mais relações objeto-propriedade que eventualmente são resolvidas para uma única propriedade.
@@ -50,11 +50,11 @@ Em cada um dessas etapas, o valor é tratados como um objeto. O tipo do resultad
 
 ### <a name="indexers"></a>Indexadores
 
-Um caminho de propriedade para vinculação de dados pode incluir referências a propriedade indexadas. Isso habilita a associação a listas/vetores ordenados ou a dicionários/mapas. Use caracteres de colchetes "\[\]" para indicar uma propriedade indexada. O conteúdo desses colchetes pode ser um inteiro (em uma lista ordenada) ou uma cadeia de caracteres sem aspas (em dicionários). Você também pode associar a um dicionário onde a chave é um inteiro. É possível usar diferentes propriedades indexadas no mesmo caminho com um ponto separando o objeto-propriedade.
+Um caminho de propriedade para vinculação de dados pode incluir referências a propriedade indexadas. Isso habilita a associação a listas/vetores ordenados ou a dicionários/mapas. Use colchetes "\[\]" caracteres para indicar uma propriedade indexada. O conteúdo desses colchetes pode ser um inteiro (em uma lista ordenada) ou uma cadeia de caracteres sem aspas (em dicionários). Você também pode associar a um dicionário onde a chave é um inteiro. É possível usar diferentes propriedades indexadas no mesmo caminho com um ponto separando o objeto-propriedade.
 
-Por exemplo, considere um objeto comercial em que haja uma lista de "Times" (lista ordenada), cada uma tendo um dicionário de "Jogadores" onde cada jogador é citado pelo último nome. Um exemplo de caminho de propriedade para um jogador específico no segundo time é: "Times\[1\].Jogadores\[Smith\]". (Você usa 1 para indicar o segundo item em "Times" porque a lista é indexada com zero.)
+Por exemplo, considere um objeto comercial em que haja uma lista de "Times" (lista ordenada), cada uma tendo um dicionário de "Jogadores" onde cada jogador é citado pelo último nome. Um exemplo de caminho de propriedade para um player específico da equipe a segunda é: "Teams\[1\].Players\[Smith\]". (Você usa 1 para indicar o segundo item em "Times" porque a lista é indexada com zero.)
 
-**Observação**indexar suporte para fontes de dados C++ é limitado; Consulte a [vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Observação**  suporte de indexação para fontes de dados do C++ é limitado, consulte [vinculação de dados em profundidade](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### <a name="attached-properties"></a>Propriedades anexadas
 
@@ -84,15 +84,15 @@ Você pode animar uma propriedade que é subpropriedade do objeto de destino. Em
 
 ## <a name="specifying-a-particular-child-in-a-collection"></a>Especificando um filho em particular em uma coleção
 
-Para especificar um item filho em uma propriedade de coleção, você pode usar um indexador numérico. Use caracteres de colchetes "\[\]" por fora do valor de índice do inteiro. Você pode fazer referência apenas a listas ordenadas, não a dicionários. Como uma coleção não é um valor que pode ser animado, o uso de um indexador nunca pode ser a propriedade final em um caminho de propriedade.
+Para especificar um item filho em uma propriedade de coleção, você pode usar um indexador numérico. Use colchetes "\[\]" valor de índice de caracteres em torno de inteiro. Você pode fazer referência apenas a listas ordenadas, não a dicionários. Como uma coleção não é um valor que pode ser animado, o uso de um indexador nunca pode ser a propriedade final em um caminho de propriedade.
 
-Por exemplo, para especificar que você deseja animar a primeira cor de interrupção em um [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/br210108) que é aplicado à propriedade [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) de um controle, este é o caminho de propriedade: "(Control.Background).(GradientBrush.GradientStops)\[0\].(GradientStop.Color)". Observe que o indexador não é a última etapa do caminho e que a última etapa deve fazer referência à propriedade [**GradientStop.Color**](https://msdn.microsoft.com/library/windows/apps/br210094) do item 0 da coleção para aplicar um valor animado [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) a ela.
+Por exemplo, para especificar que você deseja animar a cor de primeiro parar cor em um [ **LinearGradientBrush** ](https://msdn.microsoft.com/library/windows/apps/br210108) que é aplicado a um controle [ **em segundo plano** ](https://msdn.microsoft.com/library/windows/apps/br209395) propriedade, esse é o caminho da propriedade: "(Background). (GradientBrush.GradientStops) \[0\]. ( GradientStop.Color) ". Observe que o indexador não é a última etapa do caminho e que a última etapa deve fazer referência à propriedade [**GradientStop.Color**](https://msdn.microsoft.com/library/windows/apps/br210094) do item 0 da coleção para aplicar um valor animado [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) a ela.
 
 ## <a name="animating-an-attached-property"></a>Animando uma propriedade anexada
 
 Não é comum, mas é possível animar uma propriedade anexada, desde que ela tenha um valor de propriedade que corresponda a um tipo de animação. Como o nome que identifica uma propriedade anexada já inclui um ponto, todos os nomes de propriedades anexadas devem estar entre parênteses para que o ponto não seja tratado como uma etapa de objeto-propriedade. Por exemplo, a cadeia de caracteres para especificar que você quer animar a propriedade anexada [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) em um objeto, use o caminho de propriedade "(Grid.Row)".
 
-**Observação**neste exemplo, o valor de [**Grid. Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) é um tipo de propriedade **Int32** . então, você não pode animá-lo com uma animação **Double**. Em vez disso, você definiria um [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) que tem componentes [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132), onde o [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) é definido como um inteiro como "0" ou "1".
+**Observação**  neste exemplo, o valor de [ **Row** ](https://msdn.microsoft.com/library/windows/apps/hh759795) é um **Int32** tipo de propriedade. então, você não pode animá-lo com uma animação **Double**. Em vez disso, você definiria um [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) que tem componentes [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132), onde o [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) é definido como um inteiro como "0" ou "1".
 
 ## <a name="rules-for-the-properties-in-an-animation-targeting-property-path"></a>Regras para as propriedades em um caminho de propriedade de direcionamento de animação
 
@@ -107,13 +107,13 @@ A classe [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br24
 
 Na maioria das vezes, é possível aplicar um [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) em XAML sem usar nenhum código. Mas, em alguns casos, pode ser que você queria definir um objeto **PropertyPath** usando um código e atribuí-lo a uma propriedade em tempo de execução.
 
-[**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) tem um construtor [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261), mas não tem um construtor padrão. A cadeia de caracteres que você passa para esse construtores é definida usando uma sintaxe de caminho de propriedade, como explicado anteriormente. Ela também é a mesma cadeia de caracteres que você usaria para atribuir [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) como atributo XAML. O único outro API da classe **PropertyPath** na propriedade [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260), que é somente para leitura. Você poderia usar essa propriedade como a cadeia de caracteres de construção para outra instância **PropertyPath**.
+[**PropertyPath** ](https://msdn.microsoft.com/library/windows/apps/br244259) tem um [ **PropertyPath(String)** ](https://msdn.microsoft.com/library/windows/apps/br244261) construtor e não tem um construtor padrão. A cadeia de caracteres que você passa para esse construtores é definida usando uma sintaxe de caminho de propriedade, como explicado anteriormente. Ela também é a mesma cadeia de caracteres que você usaria para atribuir [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) como atributo XAML. O único outro API da classe **PropertyPath** na propriedade [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260), que é somente para leitura. Você poderia usar essa propriedade como a cadeia de caracteres de construção para outra instância **PropertyPath**.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946)
-* [Animações de storyboard](https://msdn.microsoft.com/library/windows/apps/mt187354)
-* [Extensão de marcação {Binding}](binding-markup-extension.md)
+* [Associação de dados em camadas](https://msdn.microsoft.com/library/windows/apps/mt210946)
+* [Animações storyboarded](https://msdn.microsoft.com/library/windows/apps/mt187354)
+* [Extensão de marcação {binding}](binding-markup-extension.md)
 * [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)
 * [**Associação**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**Construtor de associação**](https://msdn.microsoft.com/library/windows/apps/br209825)

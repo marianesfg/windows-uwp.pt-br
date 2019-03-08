@@ -1,24 +1,24 @@
 ---
-title: Declarar tarefas em segundo plano no manifesto do aplicativo
+title: Declarar tarefas em segundo plano no manifesto do app
 description: Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo.
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, tarefa em segundo plano
+keywords: o Windows 10, uwp, tarefas em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b30cd39a4440a1ade1ea0dda5a35d3f7c15f963
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114512"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615671"
 ---
-# <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tarefas em segundo plano no manifesto do aplicativo
+# <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tarefas em segundo plano no manifesto do app
 
 
 
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**Esquema de BackgroundTasks**](https://msdn.microsoft.com/library/windows/apps/br224794)
 -   [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847)
@@ -26,7 +26,7 @@ ms.locfileid: "9114512"
 Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo.
 
 > [!Important]
->  Este artigo é específico para tarefas em segundo plano fora do processo. Tarefas em segundo plano no processo não são declaradas no manifesto.
+>  Este artigo é específico para tarefas em segundo plano fora do processo. Tarefas em segundo plano no processo =não são declaradas no manifesto.
 
 As tarefas em segundo plano fora do processo devem ser declaradas no manifesto do aplicativo ou ele não será capaz de registrá-las (uma exceção será gerada). Além disso, as tarefas em segundo plano fora do processo devem ser declaradas no manifesto do aplicativo para passar certificação.
 
@@ -90,7 +90,7 @@ Copie o código no elemento Extensions (você adicionará atributos nas próxima
 
 2.  Modifique a lista de atributos Tipo de Tarefa para indicar o tipo do registro de tarefa usado com essa tarefa em segundo plano. Se a tarefa em segundo plano for registrada com vários tipos de gatilho, adicione outros elementos Task e atributos Type para cada um deles.
 
-    **Observação**Certifique-se de listar cada um dos tipos de gatilho que você estiver usando, ou a tarefa em segundo plano não registrará com os tipos de gatilho não declarados (o método [**registrar**](https://msdn.microsoft.com/library/windows/apps/br224772) falhará e gerará uma exceção).
+    **Observação**  Certifique-se de listar cada um dos tipos de gatilho que você está usando, ou a tarefa em segundo plano não serão registrados com os tipos de gatilho não declarado (o [ **registrar** ](https://msdn.microsoft.com/library/windows/apps/br224772) será de método falhar e lançar uma exceção).
 
     Este exemplo de trecho indica o uso de gatilhos de evento do sistema e notificações por push:
 
@@ -107,7 +107,7 @@ Copie o código no elemento Extensions (você adicionará atributos nas próxima
 
 Repita a etapa 2 para cada classe adicional de tarefa em segundo plano registrada pelo aplicativo.
 
-O exemplo a seguir mostra o elemento Application completo da [amostra de tarefa em segundo plano]( https://go.microsoft.com/fwlink/p/?linkid=227509). Ele ilustra o uso de 2 classes de tarefa em segundo plano com um total de 3 tipos de gatilho. Copie a seção Extensões desse exemplo e modifique-a conforme o necessário para declarar tarefas em segundo plano no manifesto do aplicativo.
+O exemplo a seguir mostra o elemento Application completo da [amostra de tarefa em segundo plano]( https://go.microsoft.com/fwlink/p/?linkid=227509). Ele ilustra o uso de 2 classes de tarefa em segundo plano com um total de 3 tipos de gatilho. Copie a seção Extensões desse exemplo e modifique-a conforme o necessário para declarar tarefas em segundo plano no manifesto do seu aplicativo.
 
 ```xml
 <Applications>
@@ -159,7 +159,7 @@ Você pode especificar onde as tarefas em segundo plano são executadas:
 
 ### <a name="run-in-the-same-process-as-your-foreground-application"></a>Execute no mesmo processo do aplicativo em primeiro plano.
 
-Aqui está o XML de exemplo que declara uma tarefa em segundo plano, a qual é executada no mesmo processo como o aplicativo em primeiro plano.
+Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é executada no mesmo processo como o aplicativo em primeiro plano.
 
 ```xml
 <Extensions>
@@ -209,7 +209,7 @@ Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é execu
 
 ### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>Execute em um novo processo sempre que um gatilho é acionado com o atributo SupportsMultipleInstances
 
-Esse exemplo declara uma tarefa em segundo plano executada em um novo processo que obtém seus próprios limites de recursos (memória e CPU) sempre que um novo gatilho é acionado. Observe o uso de `SupportsMultipleInstances`, que habilita esse comportamento. Para usar esse atributo, você deve usar o SDK versão '10.0.15063' (Windows 10 para criadores) ou superior.
+Esse exemplo declara uma tarefa em segundo plano executada em um novo processo que obtém seus próprios limites de recursos (memória e CPU) sempre que um novo gatilho é acionado. Observe o uso de `SupportsMultipleInstances`, que habilita esse comportamento. Para usar esse atributo, você deve direcionar SDK versão '10.0.15063' (Windows 10 Creators Update) ou superior.
 
 ```xml
 <Package

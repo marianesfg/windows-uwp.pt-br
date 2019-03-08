@@ -1,90 +1,90 @@
 ---
 title: Instale um aplicativo UWP a partir de um servidor IIS
-description: Este tutorial demonstra como configurar um servidor IIS, verifique se seu aplicativo web pode hospedar pacotes de aplicativos e invocar e usar efetivamente o instalador de aplicativo.
+description: Este tutorial demonstra como configurar um servidor IIS, verifique se seu aplicativo web pode hospedar pacotes de aplicativos e invocar e usar o instalador de aplicativos com eficiência.
 ms.date: 05/30/2018
 ms.topic: article
-keywords: Windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, relacionados pacotes opcionais, definidos, servidor IIS
+keywords: Windows 10, uwp, o instalador do aplicativo, AppInstaller, carregar, relacionadas a pacotes definidos, opcionais, servidor do IIS
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a4512229a29a7adc59d6b61edd596eaeb56a5a8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932102"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623561"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>Instale um aplicativo UWP a partir de um servidor IIS
 
-Este tutorial demonstra como configurar um servidor IIS, verifique se seu aplicativo web pode hospedar pacotes de aplicativos e invocar e usar efetivamente o instalador de aplicativo.
+Este tutorial demonstra como configurar um servidor IIS, verifique se seu aplicativo web pode hospedar pacotes de aplicativos e invocar e usar o instalador de aplicativos com eficiência.
 
 O aplicativo do Instalador de aplicativo permite que desenvolvedores e profissionais do setor de TI distribuam aplicativos do Windows 10 hospedando-os em sua própria Rede de disponibilização de conteúdo (CDN. Isso é útil para empresas que não desejam ou precisam publicar seus aplicativos na Microsoft Store, mas ainda querem aproveitar a plataforma de empacotamento e implantação do Windows 10. 
 
 ## <a name="setup"></a>Configuração
 
-Para passar com êxito com este tutorial, você precisará do seguinte:
+Para ir com êxito por meio com este tutorial, você precisará do seguinte:
 
 1. Visual Studio 2017  
-2. Ferramentas de desenvolvimento da Web e do IIS 
+2. Ferramentas de desenvolvimento Web e o IIS 
 3. Pacote do aplicativo UWP: o pacote do aplicativo que você distribuirá
 
-Opcional: [Projeto inicial](https://github.com/AppInstaller/MySampleWebApp) no GitHub. Isso é útil se você não tiver pacotes de aplicativos para trabalhar com, mas ainda quer aprender a usar esse recurso.
+Opcional: [Projeto Starter](https://github.com/AppInstaller/MySampleWebApp) no GitHub. Isso é útil se você não tiver pacotes de aplicativos para trabalhar com, mas ainda desejar aprender a usar esse recurso.
 
 ## <a name="step-1---install-iis-and-aspnet"></a>Etapa 1: instalar o IIS e ASP.NET 
 
-[Internet Information Services](https://www.iis.net/) é um recurso do Windows que pode ser instalado por meio do menu Iniciar. No **menu Iniciar** , procure **Ativar recursos do Windows ativado ou desativado**.
+[Serviços de informações da Internet](https://www.iis.net/) é um recurso do Windows que pode ser instalado por meio do menu Iniciar. Na **menu Iniciar** pesquise **ativar ou desativar recursos do Windows ativar**.
 
-Localizar e selecionar os **Serviços de informações da Internet** para instalar o IIS.
+Localize e selecione **serviços de informações da Internet** para instalar o IIS.
 
 > [!NOTE]
-> Você não precisa selecionar todas as caixas de seleção em serviços de informações da Internet. Somente aqueles selecionado quando você verificar o **Internet Information Services** são suficientes.
+> Você não precisa selecionar todas as caixas de seleção em serviços de informações da Internet. Apenas aqueles selecionados quando você faz check **serviços de informações da Internet** são suficientes.
 
-Você também precisará instalar o ASP.NET 4.5 ou maior. Para instalá-lo, localize **Internet Information Services -> World Wide Web Services -> recursos de desenvolvimento de aplicativo**. Selecione uma versão do ASP.NET que seja maior ou igual a ASP.NET 4.5.
+Você também precisará instalar o ASP.NET 4.5 ou superior. Para instalá-lo, localize **serviços de informações da Internet -> World Wide Web Serviços -> recursos de desenvolvimento de aplicativo**. Selecione uma versão do ASP.NET que é maior que ou igual ao ASP.NET 4.5.
 
 ![Instalar o ASP.NET](images/install-asp.png)
 
 ## <a name="step-2---install-visual-studio-2017-and-web-development-tools"></a>Etapa 2: instalar o Visual Studio 2017 e ferramentas de desenvolvimento da Web 
 
-[Instalar o Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio) se você ainda não tiver instalado-lo. Se você já tiver o Visual Studio 2017, certifique-se de que as cargas de trabalho a seguir estão instaladas. Se as cargas de trabalho não estão presentes em sua instalação, acompanhar usando o instalador do Visual Studio (encontrada no menu Iniciar).  
+[Instalar o Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio) se você ainda não instalou-lo. Se você já tiver o Visual Studio 2017, certifique-se de que as cargas de trabalho a seguir estão instaladas. Se as cargas de trabalho não estiverem presentes em sua instalação, acompanhe usando o instalador do Visual Studio (encontrado no menu Iniciar).  
 
-Durante a instalação, selecione o **desenvolvimento da Web e ASP.NET** e outras cargas de trabalho que você está interessado. 
+Durante a instalação, selecione **ASP.NET e desenvolvimento Web** e quaisquer outras cargas de trabalho que você está interessado. 
 
-Depois que a instalação for concluída, inicie o Visual Studio e crie um novo projeto (**arquivo** -> **Novo projeto**).
+Depois que a instalação for concluída, inicie o Visual Studio e crie um novo projeto (**arquivo** -> **novo projeto**).
 
 ## <a name="step-3---build-a-web-app"></a>Etapa 3: criar um aplicativo Web
 
-Inicie o Visual Studio 2017 como **administrador** e crie um novo projeto de **Aplicativo de Web do Visual c#** com um modelo de projeto **vazio** . 
+Inicie o Visual Studio 2017 como **administrador** e crie um novo **Visual C# aplicativo Web** do projeto com um **vazia** modelo de projeto. 
 
 ![Novo projeto](images/sample-web-app.png)
 
 ## <a name="step-4---configure-iis-with-our-web-app"></a>Etapa 4: configurar o IIS com nosso aplicativo Web 
 
-No Gerenciador de soluções, clique com o botão direito do mouse no projeto raiz e selecione **Propriedades**.
+No Gerenciador de soluções, clique com botão direito no projeto raiz e selecione **propriedades**.
 
-Nas propriedades do aplicativo da web, selecione a guia **Web** . Na seção **servidores** , escolha o **Local IIS** no menu suspenso e clique em **Criar diretório Virtual**. 
+Nas propriedades de aplicativo da web, selecione o **Web** guia. No **servidores** , escolha **Local IIS** na lista suspensa menu e clique em **Create Virtual Directory**. 
 
-![guia Web](images/web-tab.png)
+![na guia Web](images/web-tab.png)
 
-## <a name="step-5---add-an-app-package-to-a-web-application"></a>Etapa 5: adicionar um pacote de aplicativo para um aplicativo da web 
+## <a name="step-5---add-an-app-package-to-a-web-application"></a>Etapa 5: adicionar um pacote do aplicativo a um aplicativo web 
 
-Adicione o pacote do aplicativo que você pretende distribuir no aplicativo da web. Você pode usar o pacote do aplicativo que faz parte dos [pacotes do projeto starter](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) fornecido no GitHub se você não tiver um pacote do aplicativo disponível. O certificado (MySampleApp.cer) que o pacote usou também faz parte da amostra no GitHub. Você deve ter o certificado instalado em seu dispositivo antes de instalar o aplicativo (etapa 9).
+Adicione o pacote do aplicativo que você pretende distribuir para o aplicativo web. Você pode usar o pacote do aplicativo que faz parte do fornecido [pacotes de projeto starter](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) no GitHub, se você não tiver um pacote do aplicativo disponível. O certificado (MySampleApp.cer) que o pacote usou também faz parte da amostra no GitHub. Você deve ter o certificado instalado em seu dispositivo antes de instalar o aplicativo (etapa 9).
 
-No aplicativo da web de projeto inicial, uma nova pasta foi adicionada ao aplicativo web chamado `packages` que contém os pacotes de aplicativo para ser distribuído. Para criar a pasta no Visual Studio, clique com o botão direito do mouse na raiz do Gerenciador de soluções, selecione **Add** -> **Nova pasta** e nomeie- `packages`. Para adicionar pacotes de aplicativos para a pasta, clique com botão direito do `packages` pasta e selecione **Adicionar** -> **Item existente...** e navegue até o aplicativo local do pacote. 
+No aplicativo da web de projeto starter, uma nova pasta foi adicionada ao aplicativo web chamado `packages` que contém os pacotes de aplicativo a ser distribuído. Para criar a pasta no Visual Studio, clique com botão direito na raiz do Gerenciador de soluções, selecione **Add** -> **nova pasta** e nomeie-o `packages`. Para adicionar pacotes de aplicativos para a pasta, clique com botão direito do `packages` pasta e selecione **Add** -> **Item existente...**  e navegue até o local do pacote de aplicativo. 
 
 ![Adicionar pacote](images/add-package.png)
 
-## <a name="step-6---create-a-web-page"></a>Etapa 6 - criar uma página da Web
+## <a name="step-6---create-a-web-page"></a>Etapa 6: criar uma página da Web
 
-Este aplicativo web de exemplo usa HTML simple. Você é livre para criar seu aplicativo web conforme exigido por suas necessidades. 
+Este aplicativo web de exemplo usa HTML simples. Você é livre para compilar seu aplicativo web conforme exigido por suas necessidades. 
 
-Clique com o botão direito do mouse no projeto raiz do Gerenciador de soluções, selecione **Add** -> **Novo Item**, e adicione uma nova **Página HTML** da seção **Web** .
+Clique com botão direito no projeto raiz do Gerenciador de soluções, selecione **Add** -> **Novo Item**e adicione um novo **página HTML** do **Web**seção.
 
-Depois que a página HTML é criada, clique com o botão direito do mouse na página HTML no Gerenciador de soluções e selecione **Definir como página inicial**.  
+Depois de criar a página HTML, clique com o botão direito na página HTML no Gerenciador de soluções e selecione **definir como página inicial**.  
 
-Clique duas vezes no arquivo HTML para abri-lo na janela do editor de código. Neste tutorial, somente os elementos necessários na página da web para invocar o instalador de aplicativo com êxito para instalar um aplicativo do Windows 10 serão usados. 
+Clique duas vezes no arquivo HTML para abri-lo na janela do editor de código. Neste tutorial, apenas os elementos necessários na página da web para invocar o aplicativo do instalador de aplicativo com êxito para instalar um aplicativo do Windows 10 serão usados. 
 
-Inclua o seguinte código HTML em sua página da web. A chave para invocar com êxito o instalador de aplicativo é usar o esquema personalizado que o instalador de aplicativo registra com o sistema operacional: `ms-appinstaller:?source=`. Consulte o exemplo de código abaixo para obter mais detalhes.
+Inclua o seguinte código HTML na página da web. A chave para invocar o instalador de aplicativo com êxito é usar o esquema personalizado que o instalador de aplicativo registra com o sistema operacional: `ms-appinstaller:?source=`. Consulte o exemplo de código abaixo para obter mais detalhes.
 
 > [!NOTE]
-> Certifique-se de que o caminho da URL especificado após o esquema personalizado corresponde à Url do projeto na guia web da sua solução do VS.
+> Verifique se o caminho de URL especificado depois que o esquema personalizado corresponde à Url do projeto na guia web de sua solução de VS.
  
 ```HTML
 <html>
@@ -98,9 +98,9 @@ Inclua o seguinte código HTML em sua página da web. A chave para invocar com �
 </html>
 ```
 
-## <a name="step-7---configure-the-web-app-for-app-package-mime-types"></a>Etapa 7 - configurar o aplicativo web para tipos MIME do pacote de aplicativo
+## <a name="step-7---configure-the-web-app-for-app-package-mime-types"></a>Etapa 7: configurar o aplicativo web para tipos MIME do pacote de aplicativo
 
-Abra o arquivo **Web. config** do Gerenciador de soluções e adicione as seguintes linhas dentro do `<configuration>` elemento. 
+Abra o **Web. config** arquivo do Gerenciador de soluções e adicione as seguintes linhas dentro a `<configuration>` elemento. 
 
 ```xml
 <system.webServer>
@@ -115,11 +115,11 @@ Abra o arquivo **Web. config** do Gerenciador de soluções e adicione as seguin
 </system.webServer>
 ```
 
-## <a name="step-8---add-loopback-exemption-for-app-installer"></a>Etapa 8 - adicionar isenção de loopback para o instalador de aplicativo
+## <a name="step-8---add-loopback-exemption-for-app-installer"></a>Etapa 8 - adicionar isenção de loopback para o instalador do aplicativo
 
-Por causa do isolamento de rede, aplicativos UWP como o instalador de aplicativo são restritos a usar os endereços IP de loopback como http://localhost/. Ao usar o servidor IIS local, o instalador de aplicativo deve ser adicionado à lista de isenção de loopback. 
+Devido ao isolamento de rede, aplicativos da UWP, como o instalador de aplicativo são restritos a usar endereços de loopback IP, como http://localhost/. Ao usar o servidor IIS local, o instalador do aplicativo deve ser adicionado à lista de isenção de loopback. 
 
-Para fazer isso, abra um **Prompt de comando** como **administrador** e digite o seguinte: ' ' linha de comando CheckNetIsolation.exe LoopbackExempt - um-n="microsoft.desktopappinstaller_8wekyb3d8bbwe"
+Para fazer isso, abra **Prompt de comando** como um **administrador** e insira o seguinte: ' ' linha de comando CheckNetIsolation.exe LoopbackExempt - a-n="microsoft.desktopappinstaller_8wekyb3d8bbwe"
 ```
 
 To verify that the app is added to the exempt list, use the following command to display the apps in the loopback exempt list: 
@@ -129,9 +129,9 @@ CheckNetIsolation.exe LoopbackExempt -s
 
 Você deve encontrar `microsoft.desktopappinstaller_8wekyb3d8bbwe` na lista.
 
-Quando a validação de local de instalação de aplicativo por meio do instalador de aplicativo for concluída, você pode remover a isenção de loopback que você adicionou nesta etapa por:
+Quando a validação de local de instalação do aplicativo por meio do instalador do aplicativo for concluída, você pode remover a isenção de loopback que você adicionou nesta etapa por:
 
-' ' Linha de comando CheckNetIsolation.exe LoopbackExempt -d-n="microsoft.desktopappinstaller_8wekyb3d8bbwe"
+```Command Line CheckNetIsolation.exe LoopbackExempt -d -n="microsoft.desktopappinstaller_8wekyb3d8bbwe"
 ```
 
 ## Step 9 - Run the Web App 

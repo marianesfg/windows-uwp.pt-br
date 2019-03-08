@@ -1,6 +1,6 @@
 ---
 title: Exibições de textura
-description: No Direct3D, os recursos de textura são acessados com uma exibição, que é um mecanismo para interpretação de um recurso na memória pelo hardware.
+description: No Direct3D, os recursos de textura são acessados com um modo de exibição, que é um mecanismo para interpretação de hardware de um recurso na memória.
 ms.assetid: 18DABFCE-8A36-4C4E-B08E-10428B05D701
 keywords:
 - Exibições de textura
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e9167db4648dd193acaff0a224f3378486d171ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941060"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57638441"
 ---
 # <a name="texture-views"></a>Exibições de textura
 
 
-No Direct3D, os recursos de textura são acessados com um modo de exibição, que é um mecanismo para interpretação de hardware de um recurso na memória. Uma exibição permite que um estágio de pipeline específico acesse somente os [sub-recursos](resource-types.md) de que precisa, na representação desejado pelo aplicativo.
+No Direct3D, os recursos de textura são acessados com um modo de exibição, que é um mecanismo para interpretação de hardware de um recurso na memória. Um modo de exibição permite que um estágio de pipeline específico acesse somente os [sub-recursos](resource-types.md) de que precisa, na representação desejada pelo app.
 
 Uma exibição dá suporte à noção de um recurso sem especificação de tipo. Um recurso sem especificação de tipo é um recurso criado com um tamanho específico, mas não é um tipo de dados específico. Os dados são interpretados dinamicamente quando são associados ao pipeline.
 

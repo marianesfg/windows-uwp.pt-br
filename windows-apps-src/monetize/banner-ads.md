@@ -1,22 +1,22 @@
 ---
-description: Saiba como usar anúncios em faixa em seu aplicativo UWP.
+description: Saiba como adicionar anúncios em faixa no aplicativo UWP.
 title: Anúncios em faixa
 ms.date: 08/23/2017
 ms.topic: article
-keywords: Windows 10, uwp, anúncios, publicidade, AdControl, anúncios em faixa
+keywords: windows 10, uwp, anúncios, publicidade, AdControl, anúncios em faixa
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f8aea8f204127a0f783f9b751a9f4178667753e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9045874"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627241"
 ---
 # <a name="banner-ads"></a>Anúncios em faixa
 
 Os artigos nesta seção mostram como usar a classe [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) no SDK do Microsoft Advertising para adicionar anúncios em faixa ao seu aplicativo UWP.
 
-Anúncios em faixa são anúncios estáticos que utilizam uma parte retangular de uma página em seu aplicativo para exibir conteúdo promocional. Esses anúncios podem ser atualizados automaticamente em intervalos regulares. Esse é um bom ponto de partida se você ainda não anuncia em seu aplicativo.
+Os anúncios em faixa são anúncios de exibição estática que utilizam uma parte de uma página no aplicativo para exibir conteúdo promocional. Esses anúncios podem ser atualizados automaticamente em intervalos regulares. Esse é um bom ponto de partida se você ainda não anuncia em seu aplicativo.
 
 ![addreferences](images/banner-ad.png)
 
@@ -24,12 +24,12 @@ Anúncios em faixa são anúncios estáticos que utilizam uma parte retangular d
 
 |  Tópico    | Descrição |               
 |----------|-------|
-| [AdControl em XAML e .NET](adcontrol-in-xaml-and--net.md)     | Adicione um anúncio em faixa ao seu aplicativo XAML/.NET.        |
-| [AdControl em HTML 5 e Javascript](adcontrol-in-html-5-and-javascript.md)     | Adicione um anúncio em faixa ao seu aplicativo HTML5/JavaScript.        |
-| [Tamanhos de anúncios de banner compatíveis](supported-ad-sizes-for-banner-ads.md)    |  Examine os tamanhos aceitos para anúncios em faixa em aplicativos UWP.        |
+| [AdControl em XAML e o .NET](adcontrol-in-xaml-and--net.md)     | Adicione um anúncio em faixa ao seu aplicativo XAML/.NET.        |
+| [AdControl em 5 de HTML e Javascript](adcontrol-in-html-5-and-javascript.md)     | Adicione um anúncio em faixa ao seu aplicativo HTML5/JavaScript.        |
+| [Tamanhos de ad de faixa com suporte](supported-ad-sizes-for-banner-ads.md)    |  Consulte os tamanhos de anúncios em faixa aceitos em aplicativos UWP.        |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Exemplos de publicidade no GitHub](https://aka.ms/githubads)
-* [Configurar unidades publicitárias para seu app](set-up-ad-units-in-your-app.md)
+* [Amostras de publicidade no GitHub](https://aka.ms/githubads)
+* [Configurar unidades de ad para seu aplicativo](set-up-ad-units-in-your-app.md)

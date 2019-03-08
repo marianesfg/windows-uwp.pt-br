@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, modelos
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a4491fe9a3bb97a73652c40a2968f2f53c377b5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933364"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634241"
 ---
 # <a name="directx-game-project-templates"></a>Modelos de projeto de jogo DirectX
 
@@ -24,12 +24,12 @@ Os modelos DirectX e UWP (Plataforma Universal do Windows) permitem criar rapida
 
 Para criar o projeto, você precisa:
 
--   [Baixar o Microsoft Visual Studio2015](https://www.visualstudio.com/vs-2015-product-editions). Studio2015 Visual possui ferramentas de programação, como ferramentas de depuração de elementos gráficos. Para uma visão geral dos recursos e das ferramentas de elementos gráficos e jogos em DirectX, veja [Ferramentas do Visual Studio para desenvolvimento de jogos em DirectX](set-up-visual-studio-for-game-development.md).
+-   [Baixe o Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions). Visual Studio 2015 tem as ferramentas de programação, como as ferramentas de depuração de gráficos. Para uma visão geral dos recursos e das ferramentas de elementos gráficos e jogos em DirectX, veja [Ferramentas do Visual Studio para desenvolvimento de jogos em DirectX](set-up-visual-studio-for-game-development.md).
 
 ## <a name="choosing-a-template"></a>Escolhendo um modelo
 
 
-Studio2015 Visual inclui três modelos DirectX e UWP:
+Visual Studio 2015 inclui três modelos de DirectX e UWP:
 
 -   Aplicativo DirectX 11 (Universal Windows) – o modelo Aplicativo DirectX 11 (Universal Windows) cria um projeto UWP, que renderiza diretamente em uma janela de aplicativo usando o DirectX 11.
 -   Aplicativo DirectX 12 (Universal Windows) – o modelo Aplicativo DirectX 12 (Universal Windows) cria um projeto UWP, que renderiza diretamente em uma janela de aplicativo usando o DirectX 12.
@@ -44,9 +44,9 @@ Os modelos DirectX universais do Windows contêm os seguintes arquivos:
 
 -   pch.h e pch.cpp – Suporte de cabeçalho pré-compilado.
 -   Package.appxmanifest – As propriedades do pacote de implantação do aplicativo.
--   \*.pfx – Certificados do aplicativo.
+-   \*. pfx - certificados para o aplicativo.
 -   Dependências externas – Links para arquivos externos usados pelo projeto.
--   \*Main.h and \*Main.cpp – Métodos para gerenciar ativos de aplicativo, atualizando o estado do aplicativo e renderizando o quadro.
+-   \*Main. h e \*cpp - métodos para gerenciamento de ativos de aplicativo, atualizando o estado do aplicativo e o quadro de renderização.
 -   App.h e App.cpp – Ponto de entrada principal do aplicativo. Conecta o aplicativo ao shell do Windows e manipula eventos de ciclo de vida do aplicativo. Esses arquivos só aparecem nos modelos de aplicativo DirectX 11 (Universal Windows) e aplicativo DirectX 12 (Universal Windows).
 -   App.xaml, App.xaml.cpp e App.xaml.h – Ponto de entrada principal do aplicativo. Conecta o aplicativo ao shell do Windows e manipula eventos de ciclo de vida do aplicativo. Esses arquivos só aparecem no modelo de aplicativo DirectX 11 e XAML (Universal Windows).
 -   DirectXPage.xaml, DirectXPage.xaml.cpp e DirectXPage.xaml.h – Uma página que hospeda um SwapChainPanel DirectX. Esses arquivos só aparecem no modelo de aplicativo DirectX 11 e XAML (Universal Windows).
@@ -70,10 +70,10 @@ Agora que você tem um ponto de partida, adicione essas informações para criar
 
 Caso esteja fazendo a portabilidade de um jogo existente, consulte os tópicos a seguir.
 
--   [Portar de OpenGL ES 2.0 para Direct3D 11.1](port-from-opengl-es-2-0-to-directx-11-1.md)
--   [Portar do DirectX 9 para a Plataforma Universal do Windows](porting-your-directx-9-game-to-windows-store.md)
+-   [Compatibilizar do OpenGL ES 2.0 ao Direct3D 11.1](port-from-opengl-es-2-0-to-directx-11-1.md)
+-   [Porta do DirectX 9 para plataforma Universal do Windows](porting-your-directx-9-game-to-windows-store.md)
 
 Caso esteja criando um novo jogo em DirectX, consulte os tópicos a seguir.
 
--   [Criar um jogo UWP simples com o DirectX](tutorial--create-your-first-uwp-directx-game.md)
--   [Desenvolvimento do Marble Maze, um jogo da Plataforma Universal do Windows em C++ e no DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+-   [Criar um jogo simples da Plataforma Universal do Windows (UWP) com DirectX](tutorial--create-your-first-uwp-directx-game.md)
+-   [Desenvolvendo o Marble Maze, um jogo de plataforma Universal do Windows em C++ e DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)

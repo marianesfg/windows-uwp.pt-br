@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 279e650532505467f3c0dbabf3814618b893aedb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927876"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637021"
 ---
 # <a name="depth-buffers"></a>Buffers de profundidade
 
@@ -32,7 +32,7 @@ Se ele cruza, o valor de profundidade - que será a coordenada z em um buffer z,
 
 ![Diagrama de teste de valores de profundidade](images/zbuffer.png)
 
-## <a name="span-idbufferingtechniquesspanspan-idbufferingtechniquesspanspan-idbufferingtechniquesspanbuffering-techniques"></a><span id="Buffering_techniques"></span><span id="buffering_techniques"></span><span id="BUFFERING_TECHNIQUES"></span>Técnicas de buffer
+## <a name="span-idbufferingtechniquesspanspan-idbufferingtechniquesspanspan-idbufferingtechniquesspanbuffering-techniques"></a><span id="Buffering_techniques"></span><span id="buffering_techniques"></span><span id="BUFFERING_TECHNIQUES"></span>Técnicas de armazenamento em buffer
 
 
 Embora a maioria dos aplicativos não use esse recurso, você pode alterar a comparação que o Direct3D usa para determinar quais valores são colocados no buffer de profundidade e, posteriormente, na superfície de destino de renderização. Em alguns itens de hardware, alterar a função de comparação pode desabilitar o teste z hierárquico.

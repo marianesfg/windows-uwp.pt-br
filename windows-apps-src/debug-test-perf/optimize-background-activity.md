@@ -1,17 +1,17 @@
 ---
 ms.assetid: 24351dad-2ee3-462a-ae78-2752bb3374c2
 title: Otimizar a atividade em segundo plano
-description: Crie apps UWP que funcionem com o sistema para usar tarefas em segundo plano economizando a bateria.
+description: Crie aplicativos UWP que funcionem com o sistema para usar tarefas em segundo plano economizando a bateria.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 71a56bc23b4b727d5be2ed35fb77afae03f0689c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940545"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613221"
 ---
 # <a name="optimize-background-activity"></a>Otimizar a atividade em segundo plano
 
@@ -23,7 +23,7 @@ O comportamento da tarefa em segundo plano certamente é o fator mais importante
 
 Em dispositivos desktop e móveis que executam o Windows 10, versão 1607 ou posteriores, os usuários podem exibir seu "uso da bateria pelo app" na seção Bateria do app Configurações. Aqui, ele verá uma lista de aplicativos e a porcentagem da duração da bateria que cada app consumiu (fora a carga da bateria que foi usada desde a última cobrança). Para os aplicativos UWP incluídos nessa lista, os usuários podem selecionar o app para abrir os controles relacionados à atividade em segundo plano.
 
-![uso da bateria por app](images/battery-usage-by-app.png)
+![uso da bateria por aplicativo](images/battery-usage-by-app.png)
 
 ### <a name="background-permissions-on-mobile"></a>Permissões em segundo plano no celular
 
@@ -63,6 +63,6 @@ Teste seu aplicativo em dispositivos reais em quaisquer cenários de alto consum
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e registrar uma tarefa em segundo plano fora do processo](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
-* [Planejando para o desempenho](https://msdn.microsoft.com/windows/uwp/debug-test-perf/planning-and-measuring-performance)  
+* [Criar e registrar uma tarefa em segundo plano do out-of-process](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
+* [Planejando o desempenho](https://msdn.microsoft.com/windows/uwp/debug-test-perf/planning-and-measuring-performance)  
 
