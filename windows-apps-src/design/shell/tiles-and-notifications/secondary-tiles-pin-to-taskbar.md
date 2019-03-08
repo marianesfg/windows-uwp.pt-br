@@ -1,43 +1,43 @@
 ---
-Description: Learn how to pin secondary tiles to taskbar.
+Description: Saiba como fixar blocos secundários na barra de tarefas.
 title: Fixar blocos secundários na barra de tarefas
 label: Pin secondary tiles to taskbar
 template: detail.hbs
 ms.date: 11/28/2018
 ms.topic: article
-keywords: Windows 10, uwp, Fixar na barra de tarefas, o bloco secundário, fixar blocos secundários na barra de tarefas, atalho
+keywords: o Windows 10, uwp, Fixar na barra de tarefas, o bloco secundário, fixar blocos secundários na barra de tarefas, atalho
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ad322fe371b0e1f3605ffb4c29108a15bb28e0c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933170"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57591971"
 ---
 # <a name="pin-secondary-tiles-to-taskbar"></a>Fixar blocos secundários na barra de tarefas
 
-Assim como fixar blocos secundários em Iniciar, você pode fixar blocos secundários na barra de tarefas, dando aos usuários acesso rápido ao conteúdo dentro de seu aplicativo.
+Assim como fixar blocos secundários para iniciar, você pode fixar blocos secundários na barra de tarefas, dando a seus usuários acesso rápido ao conteúdo dentro de seu aplicativo.
 
 <img alt="Taskbar pinning" src="../images/taskbar/pin-secondary-ui.png" width="972"/>
 
 > [!IMPORTANT]
-> **API de acesso limitado**: essa API é um recurso de acesso limitado. Para usar essa API, entre em contato com [taskbarsecondarytile@microsoft.com](mailto:taskbarsecondarytile@microsoft.com?Subject=Limited%20Access%20permission%20to%20use%20secondary%20tiles%20on%20taskbar).
+> **API de acesso limitado**: Essa API é um recurso de acesso limitado. Para usar essa API, entre em contato com [ taskbarsecondarytile@microsoft.com ](mailto:taskbarsecondarytile@microsoft.com?Subject=Limited%20Access%20permission%20to%20use%20secondary%20tiles%20on%20taskbar).
 
-> **Requer outubro de 2018 atualização**: você deve usar o SDK 17763 e executar o build 17763 ou superior para fixar na barra de tarefas.
-
-
-## <a name="guidance"></a>Diretrizes
-
-Um bloco secundário fornece uma maneira consistente e eficiente para os usuários acessarem diretamente áreas específicas dentro de um aplicativo. Embora um usuário escolha se deseja ou não "fixar" um bloco secundário na barra de tarefas, as áreas fixáveis em um aplicativo são determinadas pelo desenvolvedor. Para saber mais, consulte [diretrizes de bloco secundário](secondary-tiles-guidance.md).
+> **Requer a atualização de outubro de 2018**: Você deve ter como destino SDK 17763 e executar o build 17763 ou superior para fixar na barra de tarefas.
 
 
-## <a name="1-determine-if-api-exists-and-unlock-limited-access"></a>1. determine se existe uma API e desbloquear o acesso limitado
+## <a name="guidance"></a>Orientação
 
-Dispositivos mais antigos não têm a barra de tarefas anexação APIs (se você estiver visando versões mais antigas do Windows 10). Portanto, você não deve exibir um botão de pin nesses dispositivos que não são capazes de fixação.
+Um bloco secundário fornece uma maneira consistente e eficiente para que os usuários acessem diretamente a áreas específicas dentro de um aplicativo. Embora um usuário escolhe se deseja ou não "fixar" em um bloco secundário na barra de tarefas, as áreas de conversação em um aplicativo são determinadas pelo desenvolvedor. Para obter instruções, consulte [diretrizes de bloco secundário](secondary-tiles-guidance.md).
 
-Além disso, esse recurso está bloqueado em acesso limitado. Para obter acesso, contate a Microsoft. Chamadas de API para **[TaskbarManager.RequestPinSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.requestpinsecondarytileasync#Windows_UI_Shell_TaskbarManager_RequestPinSecondaryTileAsync_Windows_UI_StartScreen_SecondaryTile_)**, **[TaskbarManager.IsSecondaryTilePinnedAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.issecondarytilepinnedasync)** e **[TaskbarManager.TryUnpinSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.tryunpinsecondarytileasync)** falhará com uma exceção de acesso negado. Os aplicativos não têm permissão para usar essa API sem permissão e a definição de API pode mudar a qualquer momento.
 
-Use o método [ApiInformation.IsMethodPresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.ismethodpresent#Windows_Foundation_Metadata_ApiInformation_IsMethodPresent_System_String_System_String_) para determinar se as APIs estão presentes. E, em seguida, use **[LimitedAccessFeatures](https://docs.microsoft.com/uwp/api/windows.applicationmodel.limitedaccessfeatures)** API tentar desbloquear a API.
+## <a name="1-determine-if-api-exists-and-unlock-limited-access"></a>1. Determine se existe uma API e desbloquear o acesso limitado
+
+Dispositivos mais antigos não têm a fixação de APIs (se você estiver direcionando versões mais antigas do Windows 10) na barra de tarefas. Portanto, você não deve exibir um botão de pin nesses dispositivos que não são capazes de fixar.
+
+Além disso, esse recurso está bloqueado em acesso limitado. Para obter acesso, entre em contato com a Microsoft. Chamadas à API para  **[TaskbarManager.RequestPinSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.requestpinsecondarytileasync#Windows_UI_Shell_TaskbarManager_RequestPinSecondaryTileAsync_Windows_UI_StartScreen_SecondaryTile_)**,  **[TaskbarManager.IsSecondaryTilePinnedAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.issecondarytilepinnedasync)** e **[TaskbarManager.TryUnpinSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.tryunpinsecondarytileasync)** falhará com uma exceção de acesso negado. Aplicativos não têm permissão para usar essa API sem permissão e a definição de API pode mudar a qualquer momento.
+
+Use o [ApiInformation.IsMethodPresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.ismethodpresent#Windows_Foundation_Metadata_ApiInformation_IsMethodPresent_System_String_System_String_) método para determinar se as APIs estão presentes. E, em seguida, use o **[LimitedAccessFeatures](https://docs.microsoft.com/uwp/api/windows.applicationmodel.limitedaccessfeatures)** API para tentar desbloquear a API.
 
 ```csharp
 if (ApiInformation.IsMethodPresent("Windows.UI.Shell.TaskbarManager", "RequestPinSecondaryTileAsync"))
@@ -68,11 +68,11 @@ else
 ```
 
 
-## <a name="2-get-the-taskbarmanager-instance"></a>2. obter a instância de TaskbarManager
+## <a name="2-get-the-taskbarmanager-instance"></a>2. Obter a instância de TaskbarManager
 
-Os aplicativos UWP podem ser executados em uma ampla variedade de dispositivos; nem todas eles são compatíveis com a barra de tarefas. No momento, somente dispositivos desktop são compatíveis com a barra de tarefas. Além disso, a presença da barra de tarefas pode vêm e vão. Para verificar se a barra de tarefas está presente no momento, chame o método **[TaskbarManager.GetDefault](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.getdefault)** e verifique que a instância retornada não é nulo. Não exiba um botão de pin, se a barra de tarefas não estiver presente.
+Os aplicativos UWP podem ser executados em uma ampla variedade de dispositivos; nem todas eles são compatíveis com a barra de tarefas. No momento, somente dispositivos desktop são compatíveis com a barra de tarefas. Além disso, a presença da barra de tarefas pode vêm e vão. Para verificar se a barra de tarefas está presente no momento, chame o **[TaskbarManager.GetDefault](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.getdefault)** método e verifique se a instância retornada não for nulo. Não exiba um botão de pin se a barra de tarefas não estiver presente.
 
-É recomendável segurando na instância para a duração de uma única operação, como fixação e capturar uma nova instância na próxima vez em que você precisa fazer outra operação.
+Recomendamos que espera para a instância para a duração de uma única operação, como fixação e, em seguida, pegando uma nova instância na próxima vez que você precisa fazer outra operação.
 
 ```csharp
 TaskbarManager taskbarManager = TaskbarManager.GetDefault();
@@ -88,9 +88,9 @@ else
 ```
 
 
-## <a name="3-check-whether-your-tile-is-currently-pinned-to-the-taskbar"></a>3. Verifique se o bloco está fixado na barra de tarefas
+## <a name="3-check-whether-your-tile-is-currently-pinned-to-the-taskbar"></a>3. Verifique se o seu bloco atualmente está fixado na barra de tarefas
 
-Se o bloco já está fixado, você deve exibir um botão Desafixar em vez disso. Você pode usar o método **[IsSecondaryTilePinnedAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.issecondarytilepinnedasync)** para verificar se o bloco está fixado no momento (os usuários podem desafixá-lo a qualquer momento). Nesse método, você passa o **TileId** do bloco que você deseja saber está fixado.
+Se seu bloco já está fixado, você deve exibir um botão Desafixar em vez disso. Você pode usar o **[IsSecondaryTilePinnedAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.issecondarytilepinnedasync)** método para verificar se o seu bloco está fixado no momento (os usuários podem desafixá-lo a qualquer momento). Esse método, você pode passar o **TileId** do bloco que você deseja saber é fixado.
 
 ```csharp
 if (await taskbarManager.IsSecondaryTilePinnedAsync("myTileId"))
@@ -105,11 +105,11 @@ else
 ```
 
 
-## <a name="4-check-whether-pinning-is-allowed"></a>4. Verifique se a fixação for permitida
+## <a name="4-check-whether-pinning-is-allowed"></a>4. Verifique se a anexação é permitida
 
-Fixar na barra de tarefas pode ser desabilitado pela política de grupo. A propriedade [Ispinningallowed](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.ispinningallowed) permite que você verifique se a fixação for permitida.
+Fixar na barra de tarefas pode ser desabilitado pela diretiva de grupo. O [TaskbarManager.IsPinningAllowed](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.ispinningallowed) propriedade permite que você verifique se a anexação é permitida.
 
-Quando o usuário clica no botão de pin, você deve verificar essa propriedade e, se for falso, você deve exibir uma caixa de diálogo de mensagem informando ao usuário que não é permitida anexação neste computador.
+Quando o usuário clica o botão de pin, você deve verificar essa propriedade e, se for false, você deve exibir uma caixa de diálogo de mensagem informando ao usuário que fixação não é permitida neste computador.
 
 ```csharp
 TaskbarManager taskbarManager = TaskbarManager.GetDefault();
@@ -130,13 +130,13 @@ else
 ```
 
 
-## <a name="5-construct-and-pin-your-tile"></a>5. construir e fixar o bloco
+## <a name="5-construct-and-pin-your-tile"></a>5. Construir e fixar o bloco
 
-O usuário clicar no botão de pin, e você determinou que as APIs estão presentes, barra de tarefas está presente e fixação for permitida... tempo para fixar!
+O usuário clicou o botão de pin e, em seguida, você determinou que as APIs estão presentes, na barra de tarefas está presente e fixando é permitida.. hora de pin!
 
-Primeiro, construa o bloco secundário exatamente como você faria ao fixar em Iniciar. Você pode saber mais sobre as propriedades de bloco secundário lendo [Fixar blocos secundários em Iniciar](secondary-tiles-pinning.md). No entanto, ao Fixar na barra de tarefas, além de propriedades necessárias anteriormente, Square44x44Logo (Este é o logotipo usado pela barra de tarefas) também é necessária. Caso contrário, uma exceção será gerada.
+Primeiro, construa seu bloco secundário exatamente como você faria ao fixar para iniciar. Você pode aprender mais sobre as propriedades do bloco secundário lendo [fixar blocos secundários para iniciar](secondary-tiles-pinning.md). No entanto, ao Fixar na barra de tarefas, além das propriedades necessárias anteriormente, Square44x44Logo (esse é o logotipo usado pela barra de tarefas) também é necessária. Caso contrário, uma exceção será lançada.
 
-Em seguida, passe o bloco para o método **[RequestPinSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.requestpinsecondarytileasync)** . Como isso é em acesso limitado, isso não exibirá uma caixa de diálogo de confirmação e não exige um thread de interface do usuário. Mas, no futuro quando isso é aberto além do acesso limitado, chamadores não utilizando o acesso limitado receberá uma caixa de diálogo e ser necessário usar o thread de interface do usuário.
+Em seguida, passe o bloco para o **[RequestPinSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.requestpinsecondarytileasync)** método. Uma vez que isso está sob acesso limitado, isso não será exibida uma caixa de diálogo de confirmação e não requer um thread de interface do usuário. Mas no futuro quando isso for aberto para cima além do acesso limitado, os chamadores não utilizar o acesso limitado receberá uma caixa de diálogo e ser necessário usar o thread de interface do usuário.
 
 ```csharp
 // Initialize the tile (all properties below are required)
@@ -150,12 +150,12 @@ tile.VisualElements.Square150x150Logo = new Uri("ms-appdata:///AppIcons/PowerPoi
 bool isPinned = await taskbarManager.RequestPinSecondaryTileAsync(tile);
 ```
 
-Esse método retorna um valor booliano que indica se o bloco agora está fixado na barra de tarefas. Se o bloco já foi fixado, o método atualiza o bloco existente e retorna true. Se não foi permitido fixar ou não é compatível com a barra de tarefas, o método retornará false.
+Esse método retorna um valor booliano que indica se o seu bloco agora está fixado na barra de tarefas. Se seu bloco já foi fixado, o método atualiza o bloco existente e retorna true. Se a anexação não foi permitida ou não há suporte para uma barra de tarefas, o método retornará false.
 
 
 ## <a name="enumerate-tiles"></a>Enumerar os blocos
 
-Para ver todos os blocos que você criou e ainda é fixados em algum lugar (inicial, barra de tarefas ou ambos), usam **[FindAllAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile.findallasync)**. Posteriormente, você pode verificar se esses blocos são fixados para a barra de tarefas e/ou iniciar. Se não houver suporte a superfície, esses métodos retornam falsos.
+Para ver todos os blocos que você criou e ainda são fixados em algum lugar (início, na barra de tarefas ou ambos), use  **[FindAllAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile.findallasync)**. Posteriormente, você pode verificar se esses blocos são fixados para o início e/ou na barra de tarefas. Se não há suporte para a superfície, esses métodos retornam falsos.
 
 ```csharp
 var taskbarManager = TaskbarManager.GetDefault();
@@ -179,16 +179,16 @@ foreach (SecondaryTile tile in await SecondaryTile.FindAllAsync())
 
 ## <a name="update-a-tile"></a>Atualizar um bloco
 
-Para atualizar um bloco já fixado, você pode usar o método [**SecondaryTile.UpdateAsync**](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile.updateasync) conforme descrito em [Atualizando um bloco secundário](secondary-tiles-pinning.md#updating-a-secondary-tile).
+Para atualizar um bloco já fixado, você pode usar o [ **SecondaryTile.UpdateAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile.updateasync) método conforme descrito na [atualização de um bloco secundário](secondary-tiles-pinning.md#updating-a-secondary-tile).
 
 
-## <a name="unpin-a-tile"></a>Desafixar um bloco
+## <a name="unpin-a-tile"></a>Desafixar blocos
 
-Seu aplicativo deve fornecer um botão Desafixar se o bloco está fixado. Para desafixar o bloco, basta chame **[TryUnpinSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.tryunpinsecondarytileasync)**, passando o **TileId** do bloco secundário que quiser desafixado.
+Seu aplicativo deve fornecer um botão Desafixar se o bloco é fixado no momento. Para desafixar o mosaico, simplesmente chame  **[TryUnpinSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.tryunpinsecondarytileasync)**, passando o **TileId** do bloco secundário você gostaria de desafixada.
 
-Esse método retorna um valor booliano que indica se o bloco não está fixado na barra de tarefas. Se o bloco não foi fixado em primeiro lugar, isso também retorna true. Se desafixando não foi permitida, isso retornará false.
+Esse método retorna um valor booliano que indica se o bloco não está fixado na barra de tarefas. Se o bloco não foi fixado em primeiro lugar, isso também retornará true. Se não fosse permitido Desafixar, isso retorna false.
 
-Se o bloco somente foi fixado na barra de tarefas, isso excluirá o bloco já que ele não está fixado em qualquer lugar.
+Se apenas o seu bloco foi fixado na barra de tarefas, isso excluirá o bloco, pois ele não está fixado em qualquer lugar.
 
 ```csharp
 var taskbarManager = TaskbarManager.GetDefault();
@@ -201,9 +201,9 @@ if (taskbarManager != null)
 
 ## <a name="delete-a-tile"></a>Excluir um bloco
 
-Se você quiser Desafixar um bloco de todos os lugares (início, da barra de tarefas), use o método **[RequestDeleteAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile.requestdeleteasync)** .
+Se você quiser Desafixar um bloco de qualquer lugar na barra de tarefas (início), use o **[RequestDeleteAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile.requestdeleteasync)** método.
 
-Isso é adequado para casos em que o usuário fixado de conteúdo não é mais aplicável. Por exemplo, se seu aplicativo permite que você fixar um bloco de anotações para iniciar e barra de tarefas e, em seguida, o usuário exclui o bloco de anotações, você deve excluir o bloco associado com o bloco de anotações simplesmente.
+Isso é adequado para casos em que o usuário fixado de conteúdo não é mais aplicável. Por exemplo, se seu aplicativo permite que você fixar um bloco de anotações para iniciar e barra de tarefas e, em seguida, o usuário exclui o bloco de anotações, você deve simplesmente excluir o bloco associado com o bloco de anotações.
 
 ```csharp
 // Initialize a secondary tile with the same tile ID you want removed.
@@ -215,11 +215,11 @@ await toBeDeleted.RequestDeleteAsync();
 ```
 
 
-## <a name="unpin-only-from-start"></a>Desafixar apenas da tela inicial
+## <a name="unpin-only-from-start"></a>Somente Desafixar da tela inicial
 
-Se você deseja Desafixar um bloco secundário da tela inicial, deixando-lo na barra de tarefas, você pode chamar o método **[StartScreenManager.TryRemoveSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager.tryremovesecondarytileasync)** . Isso excluirá o bloco da mesma forma se ele não for fixado em quaisquer outras superfícies.
+Se você quiser apenas Desafixar um bloco secundário do início, deixando-o na barra de tarefas, você pode chamar o **[StartScreenManager.TryRemoveSecondaryTileAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager.tryremovesecondarytileasync)** método. Isso excluirá o bloco da mesma forma se ele não estiver mais fixado para quaisquer outras superfícies.
 
-Esse método retorna um valor booliano que indica se o bloco não está fixado na tela inicial. Se o bloco não foi fixado em primeiro lugar, isso também retorna true. Se desafixando não fosse permitido ou inicial não é compatível, isso retornará false.
+Esse método retorna um valor booliano que indica se o bloco não está fixado para iniciar. Se o bloco não foi fixado em primeiro lugar, isso também retornará true. Se Desafixar não foi permitido ou não há suporte para iniciar, retorna false.
 
 ```csharp
 await StartScreenManager.GetDefault().TryRemoveSecondaryTileAsync("myTileId");
@@ -229,4 +229,4 @@ await StartScreenManager.GetDefault().TryRemoveSecondaryTileAsync("myTileId");
 ## <a name="resources"></a>Recursos
 
 * [Classe TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager)
-* [Fixar blocos secundários em Iniciar](secondary-tiles-pinning.md)
+* [Fixar blocos secundários para iniciar](secondary-tiles-pinning.md)

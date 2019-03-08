@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: aba44cec7081d05f66e90b2540f0e9609b87ab83
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934292"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596871"
 ---
 # <a name="pointofservice-device-objects"></a>Objetos de dispositivo do PointOfService
 
@@ -45,6 +45,6 @@ Você pode detectar quando um objeto é fechado por qualquer motivo com um ident
 
 > [!TIP]
 > Consulte os tópicos a seguir para obter mais informações sobre o ciclo de vida do aplicativo da Plataforma Universal do Windows (UWP) para Windows 10:
-> - [Ciclo de vida do aplicativo da Plataforma Universal do Windows (UWP) para Windows 10](../launch-resume/app-lifecycle.md)
-> - [Processar a suspensão do aplicativo](../launch-resume/suspend-an-app.md)
-> - [Processar a retomada do aplicativo](../launch-resume/resume-an-app.md)
+> - [Ciclo de vida de aplicativo Windows 10 Universal Windows Platform (UWP)](../launch-resume/app-lifecycle.md)
+> - [Lidar com a suspensão de aplicativos](../launch-resume/suspend-an-app.md)
+> - [Identificador de retomada de aplicativo](../launch-resume/resume-an-app.md)

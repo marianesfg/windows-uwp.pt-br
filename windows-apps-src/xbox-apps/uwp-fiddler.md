@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: fae6caf73cb8a5b569193a17e65e5d8b4f582ff2
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046722"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57652221"
 ---
 # <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>Como usar o Fiddler com o Xbox One ao desenvolver para UWP
 
@@ -35,11 +35,11 @@ Siga estas etapas para instalar e habilitar o Fiddler para monitorar o tráfego 
   | Configuração           | Valor preferido                |
   | ----              | ----                           |
   | Nome              | FiddlerProxy                   |
-  | Grupo             | *Sem valor* |
-  | Perfil           | Todos                            |
-  | Habilitada           | Sim                            |
-  | Ação            | Permitido                          |
-  | Controle manual          | Não                             |
+  | Grupo             | *Nenhum valor* |
+  | Perfil           | Todas                            |
+  | Habilitado           | Sim                            |
+  | Ação            | Permitir                          |
+  | Substituição          | Não                             |
   | Programa           | *Caminho para fiddler.exe*          |
   | LocalAddress      | Qualquer                            |
   | RemoteAddress     | Qualquer                            |
@@ -69,13 +69,13 @@ Siga estas etapas para instalar e habilitar o Fiddler para monitorar o tráfego 
 Para parar de usar o Fiddler como um proxy para a Internet (e parar o rastreamento de todo o tráfego do kit de desenvolvimento de rede pelo Fiddler), faça o seguinte:
 
 1. Navegue até a ferramenta **Rede** na interface do usuário do Device Portal do Xbox.
-2. Clique em **Desativar**.
+2. Clique em **Desabilitar**.
 
 > [!NOTE]
 > Cada computador com o Fiddler instalado usa um certificado raiz Fiddler diferente. Se você tiver mais de um computador que pode ser usado para fornecer um proxy Fiddler para o kit de desenvolvimento, você precisará selecionar o novo certificado raiz ao alternar entre eles. Se você estiver usando apenas um computador, você precisa selecionar o certificado raiz apenas na primeira vez que habilitar o Fiddler. Você ainda deve especificar o endereço IP e a porta.
 
 ## <a name="see-also"></a>Consulte também
-- [Referência de API de configurações Fiddler](wdp-fiddler-api.md)
+- [Referência de API de configurações do Fiddler](wdp-fiddler-api.md)
 - [Perguntas frequentes](frequently-asked-questions.md)
 - [UWP no Xbox One](index.md)
 

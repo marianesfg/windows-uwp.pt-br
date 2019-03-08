@@ -1,5 +1,5 @@
 ---
-Description: Use content links to embed rich data in your text controls.
+Description: Use links de conteúdo para inserir dados avançados em seus controles de texto.
 title: Links de conteúdo em controles de texto
 label: Content links
 template: detail.hbs
@@ -11,11 +11,11 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: a984e30bbdc569522b04d328087775aa9e8ce2bc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946444"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648531"
 ---
 # <a name="content-links-in-text-controls"></a>Links de conteúdo em controles de texto
 
@@ -23,10 +23,10 @@ Links de conteúdo fornecem uma maneira de inserir dados avançados em seus cont
 
 Quando o usuário prefixa uma entrada com um símbolo de e comercial (@) em uma RichEditBox, aparece uma lista de sugestões de pessoas e/ou locais que corresponde à entrada. Em seguida, por exemplo, quando o usuário seleciona um lugar, um ContentLink para esse local é inserido no texto. Quando o usuário invoca o link de conteúdo da RichEditBox, um submenu é mostrado com um mapa e informações adicionais sobre o lugar.
 
-> **APIs importantes**: [classe ContentLink](/uwp/api/windows.ui.xaml.documents.contentlink), [classe ContentLinkInfo](/uwp/api/windows.ui.text.contentlinkinfo), [classe RichEditTextRange](/uwp/api/windows.ui.text.richedittextrange)
+> **APIs importantes**: [Classe ContentLink](/uwp/api/windows.ui.xaml.documents.contentlink), [classe ContentLinkInfo](/uwp/api/windows.ui.text.contentlinkinfo), [RichEditTextRange classe](/uwp/api/windows.ui.text.richedittextrange)
 
 > [!NOTE]
-> As APIs para links de conteúdo estão espalhadas pelos seguintes namespaces: Controls, Documents e UI.
+> As APIs para links de conteúdo são distribuídas entre os namespaces a seguir: Windows, Windows.UI.Xaml.Documents e Windows.UI.Text.
 
 
 
@@ -39,7 +39,7 @@ Há duas maneiras distintas de usar links de conteúdo:
 
 Veja a aparência de links de conteúdo por padrão em uma RichEditBox e em um TextBlock.
 
-![link de conteúdo em caixa de edição avançada](images/content-link-default-richedit.png)
+![caixa de edição de link de conteúdo em rich](images/content-link-default-richedit.png)
 ![link de conteúdo no bloco de texto](images/content-link-default-textblock.png)
 
 Diferenças em uso, renderização e comportamento são abordadas em detalhes nas seções a seguir. Esta tabela dá uma rápida comparação das principais diferenças entre um link de conteúdo em uma RichEditBox e um bloco de texto.
@@ -129,8 +129,8 @@ O objeto ContentLinkInfo contém as informações usadas para exibir, invocar e 
 - **SecondaryText** – Essa cadeia de caracteres é mostrada na dica de ferramenta de um link de conteúdo renderizado.
   - Em um link de conteúdo de lugar criado pelo seletor, ele contém o endereço do local, se disponível.
 - **URI** – O link para obter mais informações sobre o assunto do link de conteúdo. Esse Uri pode abrir um aplicativo instalado ou um site.
-- **Id** - Contador somente leitura, por controle, criado pelo controle RichEditBox. Ele é usado para acompanhar esse ContentLinkInfo durante ações como excluir ou editar. Se ContentLinkInfo for recortar e colar no controle, ele receberá um novo ID. Os valores de Id são incrementais.
-- **LinkContentKind** – Cadeia de caracteres que descreve o tipo de link de conteúdo. Os tipos de conteúdo internos são _Locais_ e _Contatos _. A valor diferencia maiúsculas de minúsculas.
+- **Id** - Contador somente leitura, por controle, criado pelo controle RichEditBox. Ele é usado para acompanhar esse ContentLinkInfo durante ações como excluir ou editar. Se o ContentLinkInfo é recortar e colar no controle, ele receberá uma nova ID. Valores de ID são incrementais.
+- **LinkContentKind** – Cadeia de caracteres que descreve o tipo de link de conteúdo. Os tipos de conteúdo internos são _Locais_ e _Contatos_ . A valor diferencia maiúsculas de minúsculas.
 
 #### <a name="link-content-kind"></a>Tipo de conteúdo de link
 
@@ -154,7 +154,7 @@ O seletor de lugares cria um ContentLinkInfo com uma raiz de Uri de https://maps
 - Se LinkContentKind não for "Locais", ele tenta abrir o aplicativo **Mapas** no local especificado. Por exemplo, isso pode acontecer se você tiver modificado LinkContentKind no manipulador de eventos ContentLinkChanged.
 - Se o Uri não puder ser aberto no aplicativo Mapas, o mapa será aberto no navegador padrão. Isso normalmente acontece quando as configurações _aplicativos para sites_ do usuário não permitirem abrir o Uri com o aplicativo **Mapas**.
 
-##### <a name="people"></a>Pessoas
+##### <a name="people"></a>People
 
 O seletor de pessoas cria um ContentLinkInfo com um Uri que usa o protocolo **ms-people**.
 
@@ -162,7 +162,7 @@ O seletor de pessoas cria um ContentLinkInfo com um Uri que usa o protocolo **ms
 - Se LinkContentKind não for "People", ele abre o aplicativo **Pessoas**. Por exemplo, isso pode acontecer se você tiver modificado LinkContentKind no manipulador de eventos ContentLinkChanged.
 
 > [!TIP]
-> Para obter mais informações sobre como abrir outros aplicativos e sites de seu aplicativo, consulte os tópicos em [Iniciar um aplicativo com um Uri](/windows/uwp/launch-resume/launch-app-with-uri).
+> Para obter mais informações sobre como abrir outros aplicativos e sites do seu aplicativo, consulte os tópicos em [iniciar um aplicativo com um Uri](/windows/uwp/launch-resume/launch-app-with-uri).
 
 #### <a name="invoked"></a>Invocado
 

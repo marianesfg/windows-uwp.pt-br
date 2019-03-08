@@ -1,21 +1,21 @@
 ---
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: Baixar e instalar atualizações de pacote a partir da Store
-description: Saiba como marcar pacotes como obrigatórios no Partner Center e escrever código em seu aplicativo para baixar e instalar atualizações de pacote.
+description: Aprenda a marcar pacotes como obrigatórias no Partner Center e escrever código em seu aplicativo para baixar e instalar atualizações de pacote.
 ms.date: 04/04/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e73452cdcb02798d4ebd225b48272ab77c40fef9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934561"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604441"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Baixar e instalar atualizações de pacote a partir da Store
 
-Desde o Windows 10, versão 1607, você pode usar métodos da classe [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) no namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) para verificar programaticamente se há atualizações do pacote do aplicativo atual na Microsoft Store, baixar e instalar os pacotes atualizados. Você também pode consultar os pacotes que você marcou como obrigatórios no Partner Center e desabilitar a funcionalidade em seu aplicativo até que a atualização obrigatória seja instalada.
+Desde o Windows 10, versão 1607, você pode usar métodos da classe [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) no namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) para verificar programaticamente se há atualizações do pacote do aplicativo atual na Microsoft Store, baixar e instalar os pacotes atualizados. Você também pode consultar para pacotes que você tiver marcado como obrigatório no Partner Center e desabilitar a funcionalidade em seu aplicativo até que a atualização obrigatória de agente está instalada.
 
 Métodos [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) adicionais introduzidos no Windows 10, versão 1803, permitem que você baixe e instale atualizações de pacote silenciosamente (sem exibir uma interface do usuário de notificação para o usuário), desinstale um [pacote opcional](optional-packages.md)e obtenha informações sobre pacotes na fila de download e de instalação para seu aplicativo.
 
@@ -31,9 +31,9 @@ Este exemplo de código demonstra como usar o método [GetAppAndOptionalStorePac
 Este exemplo de código pressupõe que:
 
 * O código é executado no contexto de uma [Page](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx).
-* A **Page** contém uma [ProgressBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressbar.aspx) chamada ```downloadProgressBar``` para informar o status da operação de transferência.
+* A **Page** contém uma [ProgressBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressbar.aspx) chamada ```downloadProgressBar``` para informar o status da operação de download.
 * O arquivo de código tem uma declaração **em uso** para o **Windows.Services.Store**, **Windows.Threading.Tasks** e namespaces **Windows.UI.Popups**.
-* O aplicativo é um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para um [aplicativo multiusuário](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications), use o método [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) para obter um objeto **StoreContext**, e não o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault).
+* O aplicativo seja um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para um [aplicativo multiusuário](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications), use o método [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) para obter um objeto **StoreContext**, e não o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault).
 
 ```csharp
 private StoreContext context = null;
@@ -99,7 +99,7 @@ Este exemplo de código demonstra como usar o método [GetAppAndOptionalStorePac
 
 Este exemplo de código pressupõe que:
 * O arquivo de código tem uma declaração em **uso** para o **Windows.Services.Store**, e namespaces **System.Threading.Tasks**.
-* O aplicativo é um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para um [aplicativo multiusuário](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications), use o método [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) para obter um objeto **StoreContext**, e não o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault).
+* O aplicativo seja um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para um [aplicativo multiusuário](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications), use o método [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) para obter um objeto **StoreContext**, e não o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault).
 
 > [!NOTE]
 > Os métodos **IsNowAGoodTimeToRestartApp**, **RetryDownloadAndInstallLater**, e **RetryInstallLater** chamados pelo código neste exemplo são métodos de espaço reservado que devem ser implementados conforme necessário de acordo com o design de seu próprio aplicativo.
@@ -193,14 +193,14 @@ private async Task InstallUpdate(IReadOnlyList<StorePackageUpdate> storePackageU
 
 ## <a name="mandatory-package-updates"></a>Atualizações de pacote obrigatórias
 
-Quando você cria um envio de pacote no Partner Center para um aplicativo destinado ao Windows 10, versão 1607 ou posterior, você pode [Marcar o pacote como obrigatório](../publish/upload-app-packages.md#mandatory-update) e a data e hora em que ele se torna obrigatório. Quando essa propriedade está definida e o aplicativo descobre que a atualização do pacote está disponível, ele pode determinar se o pacote de atualizações é obrigatório e alterar o comportamento até a atualização ser instalada (por exemplo, o aplicativo pode desabilitar recursos).
+Quando você cria o envio de um pacote no Partner Center para um aplicativo que tem como alvo o Windows 10, versão 1607 ou posterior, você pode [marcar o pacote como obrigatórias](../publish/upload-app-packages.md#mandatory-update) a data e hora em que ele se torna obrigatório. Quando essa propriedade está definida e o aplicativo descobre que a atualização do pacote está disponível, ele pode determinar se o pacote de atualizações é obrigatório e alterar o comportamento até a atualização ser instalada (por exemplo, o aplicativo pode desabilitar recursos).
 
 > [!NOTE]
 > O status obrigatório de uma atualização de pacote não é imposto pela Microsoft, e o sistema operacional não fornece uma interface do usuário para indicar aos usuários que uma atualização de aplicativo obrigatória deve ser instalada. Os desenvolvedores devem usar a configuração obrigatória para impor atualizações obrigatórias de aplicativos no próprio código.  
 
 Para marcar um envio de pacote como obrigatório:
 
-1. Entre no [Partner Center](https://partner.microsoft.com/dashboard) e navegue até a página de visão geral do aplicativo.
+1. Entrar no [Partner Center](https://partner.microsoft.com/dashboard) e navegue até a página de visão geral de seu aplicativo.
 2. Clique no nome do envio que contém a atualização de pacote que você deseja tornar obrigatória.
 3. Navegue até a página **Pacotes** do envio. Na parte inferior dessa página, selecione **Make this update mandatory** e, em seguida, escolha o dia e hora em que a atualização de pacote e se tornará obrigatória. Essa opção se aplica a todos os pacotes UWP no envio.
 
@@ -330,7 +330,7 @@ A partir do Windows 10, versão 1803, você pode usar os métodos [RequestUninst
 
 O exemplo de código a seguir demonstra como chamar [RequestUninstallStorePackageAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackageasync). Este exemplo pressupõe que:
 * O arquivo de código tem uma declaração em **uso** para o **Windows.Services.Store**, e namespaces **System.Threading.Tasks**.
-* O aplicativo é um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para um [aplicativo multiusuário](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications), use o método [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) para obter um objeto **StoreContext**, e não o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault).
+* O aplicativo seja um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para um [aplicativo multiusuário](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications), use o método [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) para obter um objeto **StoreContext**, e não o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault).
 
 ```csharp
 public async Task UninstallPackage(Windows.ApplicationModel.Package package)
@@ -373,7 +373,7 @@ A partir do Windows 10, versão 1803, você pode usar os métodos [GetAssociated
 
 O exemplo de código a seguir demonstra como chamar [GetAssociatedStoreQueueItemsAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getassociatedstorequeueitemsasync) para obter a lista de atualizações de pacote em andamento para o aplicativo atual e recuperar informações sobre o status de cada pacote. Este exemplo pressupõe que:
 * O arquivo de código tem uma declaração em **uso** para o **Windows.Services.Store**, e namespaces **System.Threading.Tasks**.
-* O aplicativo é um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para um [aplicativo multiusuário](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications), use o método [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) para obter um objeto **StoreContext**, e não o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault).
+* O aplicativo seja um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para um [aplicativo multiusuário](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications), use o método [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) para obter um objeto **StoreContext**, e não o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault).
 
 > [!NOTE]
 > Os métodos **MarkUpdateInProgressInUI**, **RemoveItemFromUI**, **MarkInstallCompleteInUI**, **MarkInstallErrorInUI** e **MarkInstallPausedInUI** chamados pelo código neste exemplo são métodos de espaço reservado que se destinam a ser implementados conforme necessário de acordo com o design de seu próprio aplicativo.
@@ -463,4 +463,4 @@ private void StoreItem_StatusChanged(StoreQueueItem sender, object args)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criação de pacotes opcionais e conjunto relacionado](optional-packages.md)
+* [Criação de conjunto relacionado e pacotes opcionais](optional-packages.md)

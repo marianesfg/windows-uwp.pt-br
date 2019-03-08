@@ -1,5 +1,5 @@
 ---
-Description: Content transition animations let you change the content of an area of the screen while keeping the container or background constant. New content fades in. If there is existing content to be replaced, that content fades out.
+Description: Animações de transição de conteúdo permitem que você mude o conteúdo de uma área da tela enquanto mantém constante o contêiner ou o plano de fundo. O novo conteúdo aparece. Se houver conteúdo existente para ser substituído, esse conteúdo desaparecerá.
 title: Diretrizes para animações de transição de conteúdo
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 template: detail.hbs
@@ -11,11 +11,11 @@ design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 096cc0aaa9b0580eb6b45328a3243ba75d82f202
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940565"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649801"
 ---
 # <a name="content-transition-animations"></a>Animações de transição de conteúdo
 
@@ -23,7 +23,7 @@ ms.locfileid: "8940565"
 
 Animações de transição de conteúdo permitem que você mude o conteúdo de uma área da tela enquanto mantém constante o contêiner ou o plano de fundo. O novo conteúdo aparece. Se houver conteúdo existente para ser substituído, esse conteúdo desaparecerá.
 
-> **APIs importantes:**: [**Classe ContentThemeTransition (XAML)**](https://msdn.microsoft.com/library/windows/apps/br243104)
+> **APIs importantes**: [**Classe ContentThemeTransition (XAML)**](https://msdn.microsoft.com/library/windows/apps/br243104)
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
@@ -42,8 +42,8 @@ Animações de transição de conteúdo permitem que você mude o conteúdo de u
 
 **Para desenvolvedores (XAML)**
 * [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Animando transições de conteúdo](https://msdn.microsoft.com/library/windows/apps/xaml/jj649426)
-* [Guia de início rápido: animando sua interface do usuário usando animações da biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Animando as transições de conteúdo](https://msdn.microsoft.com/library/windows/apps/xaml/jj649426)
+* [Guia de início rápido: Animando sua interface do usuário usando animações de biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Classe ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br243104)
 
  

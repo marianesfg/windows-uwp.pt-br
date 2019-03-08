@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0336054b99e5aae6739e22afd29ee344aad3d42c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946549"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662121"
 ---
 # <a name="depth-and-stencil-buffers"></a>Buffers de profundidade e estêncil
 
 
-Um *buffer de profundidade* armazena informações de profundidade para controlar quais áreas de polígonos são renderizadas em vez de serem ocultas da exibição. Um *buffer de estêncil* é usado para mascarar pixels em uma imagem, para produzir efeitos especiais, incluindo composição; decalque; dissolver, esmaecimento e deslizar o dedo; contornos e silhuetas; e estêncil de dois lados.
+Um *buffer de profundidade* armazena informação de profundidade para controlar quais áreas de polígonos são renderizadas em vez de serem ocultadas da exibição. Um *buffer de estêncil* é usado para mascarar pixels em uma imagem, para produzir efeitos especiais, incluindo composição; decalque; dissolver, fade e deslizar; contornos e silhuetas; e estêncil de dois lados.
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>Nesta seção
 
@@ -50,7 +50,7 @@ Um *buffer de profundidade* armazena informações de profundidade para controla
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Guia de aprendizagem de Gráficos do Direct3D](index.md)
+[Guia de aprendizado de gráficos do Direct3D](index.md)
 
  
 

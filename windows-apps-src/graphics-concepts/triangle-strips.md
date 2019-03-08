@@ -1,23 +1,23 @@
 ---
-title: Faixas de triângulos
-description: Uma faixa de triângulo é uma série de triângulos conectados. Como os triângulos são conectados, o aplicativo não precisa especificar repetidamente todos os três vértices de cada triângulo.
+title: Listas de triângulos
+description: Uma faixa de triângulos é uma série de triângulos conectados. Como os triângulos são conectados, o aplicativo não precisa especificar repetidamente todos os três vértices de cada triângulo.
 ms.assetid: BACC74C5-14E5-4ECC-9139-C2FD1808DB82
 keywords:
-- Faixas de triângulos
+- Listas de triângulos
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a420ed5ed8f498eb9c900cbacb1b766c4a01214
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945898"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599281"
 ---
-# <a name="triangle-strips"></a>Faixas de triângulos
+# <a name="triangle-strips"></a>Listas de triângulos
 
 
-Uma faixa de triângulo é uma série de triângulos conectados. Como os triângulos são conectados, o aplicativo não precisa especificar repetidamente todos os três vértices de cada triângulo. Por exemplo, você precisa de apenas sete vértices para definir a faixa de triângulos a seguir.
+Uma faixa de triângulos é uma série de triângulos conectados. Como os triângulos são conectados, o aplicativo não precisa especificar repetidamente todos os três vértices de cada triângulo. Por exemplo, você precisa de apenas sete vértices para definir a faixa de triângulos a seguir.
 
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Exemplo
 

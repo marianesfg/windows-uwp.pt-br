@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, opengl, direct3d 11, portabilidade
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b6d06ff168f778c87e46fa399775492a3cebcaa
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047674"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594211"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portar um renderizador simples do OpenGL ES 2.0 para o Direct3D 11
 
@@ -80,7 +80,7 @@ typedef struct
 
 Essa estrutura tem uma instância e contém todos os componentes necessários para renderizar uma malha de vértice sombreado bem simples.
 
-> **Observação**código de qualquer OpenGL ES 2.0 neste tópico se baseia na implementação do API do Windows fornecida pelo Khronos Group e usa a sintaxe de programação C do Windows.
+> **Observação**  Any OpenGL ES 2.0 código deste tópico baseia-se a implementação da API do Windows fornecida pelo grupo de Khronos e usa a sintaxe de programação de C de Windows.
 
  
 
@@ -112,11 +112,11 @@ Essa estrutura tem uma instância e contém todos os componentes necessários pa
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="port-the-shader-config.md">Compatibilizar os objetos de sombreadores</a></p></td>
+<td align="left"><p><a href="port-the-shader-config.md">Fazer a portabilidade de objetos de sombreador</a></p></td>
 <td align="left"><p>Ao fazer a portabilidade do renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar que o programa principal consegue se comunicar com os objetos de sombreador depois de eles serem compilados.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="port-the-vertex-buffers-and-data-config.md">Fazer a portabilidade de dados e buffers de vértices</a></p></td>
+<td align="left"><p><a href="port-the-vertex-buffers-and-data-config.md">Realizar a portabilidade de dados e buffers de vértice</a></p></td>
 <td align="left"><p>Nesta etapa, você definirá os buffers de vértices que conterão suas malhas e os buffers de índice que permitem que os sombreadores percorram os vértices em uma ordem específica.</p></td>
 </tr>
 <tr class="odd">
@@ -135,9 +135,9 @@ Essa estrutura tem uma instância e contém todos os componentes necessários pa
 ## <a name="span-idadditionalresourcesspanadditional-resources"></a><span id="additional_resources"></span>Recursos adicionais
 
 
--   [Prepare o seu ambiente de desenvolvimento para o desenvolvimento de jogos UWP DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md)
--   [Criar um novo projeto do DirectX 11 para a UWP](user-interface.md)
--   [Mapear conceitos e infraestrutura do OpenGL ES 2.0 com Direct3D 11](map-concepts-and-infrastructure.md)
+-   [Preparar o ambiente de desenvolvimento para desenvolvimento de jogos do DirectX de UWP](prepare-your-dev-environment-for-windows-store-directx-game-development.md)
+-   [Criar um novo projeto do DirectX 11 para UWP](user-interface.md)
+-   [Mapear o OpenGL ES 2.0 conceitos e a infraestrutura para o Direct3D 11](map-concepts-and-infrastructure.md)
 
  
 

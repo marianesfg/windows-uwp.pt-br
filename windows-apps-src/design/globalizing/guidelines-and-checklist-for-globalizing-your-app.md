@@ -1,5 +1,5 @@
 ---
-Description: Design and develop your app in such a way that it functions appropriately on systems with different language and culture configurations.
+Description: Projete e desenvolva seu app de forma que ele funciona corretamente em sistemas com diferentes configurações de idioma e cultura.
 Search.Refinement.TopicID: 180
 title: Diretrizes de globalização
 ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
 ms.openlocfilehash: bdc7e5de3be941f2622c04d515e5e1211247b9a2
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047238"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648241"
 ---
 # <a name="guidelines-for-globalization"></a>Diretrizes de globalização
 
@@ -43,16 +43,16 @@ Projete e desenvolva seu app de forma que ele funciona corretamente em sistemas 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Recomendações para o uso de cadeias de caracteres](/dotnet/standard/base-types/best-practices-strings?branch=live#recommendations_for_string_usage)
-* [Globalize seus formatos data/hora/número.](use-global-ready-formats.md)
-* [Entenda os idiomas de perfil do usuário e idiomas de manifesto do app](manage-language-and-region.md)
+* [Recomendações para uso da cadeia de caracteres](/dotnet/standard/base-types/best-practices-strings?branch=live#recommendations_for_string_usage)
+* [Globalizar seus formatos de data/hora/número](use-global-ready-formats.md)
+* [Entender os idiomas de perfil do usuário e linguagens de manifesto do aplicativo](manage-language-and-region.md)
 * [Marcas de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Os recursos de app e o Sistemas de Gerenciamento de Recursos](../../app-resources/index.md)
-* [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
-* [Ajustar layout e fontes e fornecer suporte a RTL](adjust-layout-and-fonts--and-support-rtl.md)
+* [Recursos do aplicativo e o sistema de gerenciamento de recursos](../../app-resources/index.md)
+* [Como o sistema de gerenciamento de recursos corresponde a marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
+* [Ajustar layout e fontes e fornecer suporte para RTL](adjust-layout-and-fonts--and-support-rtl.md)
 * [Fontes internacionais](loc-international-fonts.md)
-* [Tornar seu app localizável](prepare-your-app-for-localization.md)
+* [Tornar seu aplicativo localizável](prepare-your-app-for-localization.md)
 
 ## <a name="samples"></a>Exemplos
 
-* [Exemplo de preferências de globalização](https://go.microsoft.com/fwlink/p/?linkid=231608)
+* [Amostra de globalização de preferências](https://go.microsoft.com/fwlink/p/?linkid=231608)

@@ -1,43 +1,43 @@
 ---
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: Esta seção descreve como modificar seu aplicativo da web PlayReady para dar suporte a alterações feitas desde a versão anterior do Windows 8.1 para a versão do Windows 10.
+description: Esta seção descreve como modificar seu aplicativo web de PlayReady para dar suporte as alterações feitas a partir da versão anterior do Windows 8.1 para a versão do Windows 10.
 title: Extensão de Mídia Criptografada do PlayReady
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c598868610e42e0f2ad64ef2d4fedfb48c4d91e9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047288"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598611"
 ---
 # <a name="playready-encrypted-media-extension"></a>Extensão de Mídia Criptografada do PlayReady
 
 
 
-Esta seção descreve como modificar seu aplicativo da web PlayReady para dar suporte a alterações feitas desde a versão anterior do Windows 8.1 para a versão do Windows 10.
+Esta seção descreve como modificar seu aplicativo web de PlayReady para dar suporte as alterações feitas a partir da versão anterior do Windows 8.1 para a versão do Windows 10.
 
 O uso de elementos de mídia PlayReady no Internet Explorer permite que desenvolvedores criem um aplicativo Web que possa fornecer conteúdo PlayReady ao usuário enquanto impõe regras de acesso definidas pelo provedor de conteúdo. Esta seção descreve como adicionar elementos de mídia PlayReady aos seus aplicativos Web existentes usando somente HTML5 e JavaScript.
 
 ## <a name="whats-new-in-playready-encrypted-media-extension"></a>Novidades na extensão de mídia criptografada do PlayReady
 
-Esta seção fornece uma lista das alterações feitas à extensão de mídia criptografada do PlayReady (EME) para habilitar a proteção de conteúdo PlayReady no Windows 10.
+Esta seção fornece uma lista das alterações feitas para o PlayReady extensão EME (Encrypted Media) para habilitar a proteção de conteúdo do PlayReady no Windows 10.
 
-A lista a seguir descreve os novos recursos e as alterações feitas à extensão de mídia criptografada do PlayReady para Windows 10:
+A lista a seguir descreve os novos recursos e as alterações feitas em PlayReady criptografado mídia extensão para o Windows 10:
 
--   Inclusão do gerenciamento de direitos digitais (DRM) de hardware
+-   Inclusão do gerenciamento de direitos digitais (DRM) de hardware.
 
     Suporte de proteção de conteúdo baseado em hardware permite a reprodução segura de conteúdo em alta definição (HD) e ultra-alta definição (UHD) em vários dispositivos. O material de chave (incluindo chaves privadas, chaves de conteúdo e qualquer outro material de chave usado para derivar ou desbloquear essas chaves) e amostras de vídeo compactadas e não compactadas descriptografadas são protegidos ao aproveitar a segurança do hardware.
 
 -   Fornece aquisição proativa de licenças não persistentes.
 -   Fornece a aquisição de várias licenças em uma mensagem.
 
-    Você pode usar um objeto PlayReady com vários identificadores-chave (KeyIDs) como no Windows 8.1, ou usar [dados de modelo de descriptografia de conteúdo (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) com várias KeyIDs.
+    Você pode usar um objeto do PlayReady com vários identificadores de chave (KeyIDs) como no Windows 8.1 ou usar [dados de modelo de descriptografia (CDMData) de conteúdo](https://go.microsoft.com/fwlink/p/?LinkID=626819) com vários KeyIDs.
 
     > [!NOTE]
-    > No Windows 10, vários identificadores-chave são suportados em &lt;KeyID&gt; em CDMData.
+    > No Windows 10, vários identificadores de chave têm suporte sob &lt;KeyID&gt; em CDMData.
 
 -   Suporte de vencimento em tempo real ou licença de duração limitada (LDL) adicionada.
 
@@ -262,13 +262,13 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 ```
 
 > [!NOTE]
-> A `<SessionID>B64 encoded session ID</SessionID>` dos dados da parada segura no exemplo acima pode ser um asterisco (\*), que é um curinga para todas as sessões de parada segura registradas. Ou seja, a marcação **SessionID** pode ser uma sessão específica ou um caractere curinga (\*) para selecionar todas as sessões de parada segura.
+> Os dados de seguros stop `<SessionID>B64 encoded session ID</SessionID>` no exemplo acima, pode ser um asterisco (\*), que é um caractere curinga para todas as sessões de parada seguro registradas. Ou seja, o **SessionID** marca pode ser uma sessão específica ou um caractere curinga (\*) para selecionar todas as sessões de parada seguro.
 
 ## <a name="programming-considerations-for-encrypted-media-extension"></a>Considerações sobre a programação de Extensão de mídia criptografada
 
-Esta seção lista as considerações de programação que você deve levar em consideração ao criar seu aplicativo web habilitado para PlayReady para Windows 10.
+Esta seção lista as considerações de programação que você deve levar em conta ao criar seu aplicativo da web habilitado para PlayReady para Windows 10.
 
-Os objetos **MSMediaKeys** e **MSMediaKeySession** criados pelo seu aplicativo devem ser mantidos ativos até o seu aplicativo encerrar. Uma maneira de garantir que esses objetos fiquem ativos é atribuí-los como variáveis globais (as variáveis ficariam fora do escopo e sujeitas à coleta de lixo se declaradas como uma variável local dentro de uma função). Por exemplo, a amostra a seguir atribui as variáveis *g\_msMediaKeys* e *g\_mediaKeySession* como globais, que são, então, atribuídas aos objetos **MSMediaKeys** e **MSMediaKeySession** na função.
+Os objetos **MSMediaKeys** e **MSMediaKeySession** criados pelo seu aplicativo devem ser mantidos ativos até o seu aplicativo encerrar. Uma maneira de garantir que esses objetos fiquem ativos é atribuí-los como variáveis globais (as variáveis ficariam fora do escopo e sujeitas à coleta de lixo se declaradas como uma variável local dentro de uma função). Por exemplo, o exemplo a seguir atribui as variáveis *g\_msMediaKeys* e *g\_mediaKeySession* como variáveis globais, que, em seguida, são atribuídas para o **MSMediaKeys** e **MSMediaKeySession** objetos na função.
 
 ``` syntax
 var g_msMediaKeys;
@@ -299,7 +299,7 @@ function foo() {
 Para obter mais informações, consulte os [aplicativos de exemplo](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738).
 
 ## <a name="see-also"></a>Consulte também
-- [DRM do PlayReady](playready-client-sdk.md)
+- [PlayReady DRM](playready-client-sdk.md)
 
 
 

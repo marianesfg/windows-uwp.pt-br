@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b35fb71e51044ee6be6ed90001e3b5614c8cb45
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945968"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655731"
 ---
 # <a name="camera-space-transformations"></a>Transformações de espaço de câmera
 
@@ -41,15 +41,15 @@ L<sub>dir</sub> = -norm(L<sub>dir</sub> \* wvMatrix)
 
 Para um ponto de luz e um destaque, a direção à luz é calculada da seguinte maneira:
 
-L<sub>dir</sub> = norm(V \ * Lₚ), onde os parâmetros são definidos na tabela a seguir.
+L<sub>dir</sub> = norm (V \* Lₚ), em que os parâmetros são definidos na tabela a seguir.
 
 | Parâmetro       | Valor padrão | Tipo                                          | Descrição                                               |
 |-----------------|---------------|-----------------------------------------------|-----------------------------------------------------------|
 | L<sub>dir</sub> | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Vetor de direção do vértice de objeto à luz          |
-| V               | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição do vértice no espaço da câmera                           |
+| V               | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição do vértice no espaço da câmera                           |
 | wvMatrix        | Identidade      | matriz 4 x 4 de valores de ponto flutuante           | Matriz composta contendo as transformções de modo de exibição e mundo |
 | N               | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Normal de vértice                                             |
-| Lₚ              | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição da luz no espaço da câmera                            |
+| Lₚ              | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição da luz no espaço da câmera                            |
 | vMatrix         | Identidade      | matriz 4 x 4 de valores de ponto flutuante           | Matriz que contém a transformação de modo de exibição                      |
 
  
@@ -57,7 +57,7 @@ L<sub>dir</sub> = norm(V \ * Lₚ), onde os parâmetros são definidos na tabela
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Matemática de iluminação](mathematics-of-lighting.md)
+[Cálculos de iluminação](mathematics-of-lighting.md)
 
  
 

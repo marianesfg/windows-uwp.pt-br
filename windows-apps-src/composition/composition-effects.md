@@ -1,17 +1,17 @@
 ---
 ms.assetid: 6e9b9ff2-234b-6f63-0975-1afb2d86ba1a
 title: Efeitos de composição
-description: As APIs de efeito permitem que os desenvolvedores personalizem como sua interface do usuário será renderizada.
+description: O efeito de APIs permitem que os desenvolvedores personalizem como sua interface do usuário será renderizada.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ebf54e062ef2388562cc970a2f124f0ce1f978c7
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045309"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653821"
 ---
 # <a name="composition-effects"></a>Efeitos de composição
 
@@ -27,10 +27,10 @@ Os efeitos também podem ser aplicados a UIElements XAML usando um pincel de efe
 
 ## <a name="effect-features"></a>Recursos de efeito
 
-- [Biblioteca de efeitos](./composition-effects.md#effect-library)
-- [Efeitos de encadeamento](./composition-effects.md#chaining-effects)
-- [Suporte de animação](./composition-effects.md#animation-support)
-- [Propriedades de efeito constantes versus animadas](./composition-effects.md#constant-vs-animated-effect-properties)
+- [Biblioteca de efeito](./composition-effects.md#effect-library)
+- [Encadeamento de efeitos](./composition-effects.md#chaining-effects)
+- [Suporte a animação](./composition-effects.md#animation-support)
+- [Constante vs. Propriedades do efeito animado](./composition-effects.md#constant-vs-animated-effect-properties)
 - [Várias instâncias de efeito com propriedades independentes](./composition-effects.md#multiple-effect-instances-with-independent-properties)
 
 ### <a name="effect-library"></a>Biblioteca de efeitos
@@ -54,7 +54,7 @@ Atualmente, a composição é compatível com os efeitos a seguir:
 | Sépia                | Converte uma imagem em tons de sépia.                                                                                                                                                                                          |
 | Temperatura e tonalidade | Ajusta a temperatura e/ou a tonalidade de uma imagem.                                                                                                                                                                           |
 
-Consulte o Namespace [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) do Win2D para obter informações mais detalhadas. Os efeitos sem suporte na composição são indicados como \[NoComposition\].
+Consulte o Namespace [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) do Win2D para obter informações mais detalhadas. Não tem suportados na composição de efeitos são indicados, como \[NoComposition\].
 
 ### <a name="chaining-effects"></a>Efeitos de encadeamento
 
@@ -133,12 +133,12 @@ Ao especificar que um parâmetro deve ser dinâmico durante a compilação do ef
 
 Este tutorial de início rápido mostra como fazer uso de alguns dos recursos básicos de efeitos.
 
-- [Instalando o Visual Studio](./composition-effects.md#installing-visual-studio)
-- [Crie um novo projeto](./composition-effects.md#creating-a-new-project)
-- [Instalando o Win2D](./composition-effects.md#installing-win2d)
+- [Instalar o Visual Studio](./composition-effects.md#installing-visual-studio)
+- [Criar um novo projeto](./composition-effects.md#creating-a-new-project)
+- [Instalando Win2D](./composition-effects.md#installing-win2d)
 - [Definindo o básico de composição](./composition-effects.md#setting-your-composition-basics)
 - [Criando um pincel CompositionSurface](./composition-effects.md#creating-a-compositionsurface-brush)
-- [Criando, compilando e aplicando efeitos](./composition-effects.md#creating-compiling-and-applying-effects)
+- [Criar, compilar e aplicação de efeitos](./composition-effects.md#creating-compiling-and-applying-effects)
 
 ### <a name="installing-visual-studio"></a>Instalando o Visual Studio
 
@@ -235,14 +235,14 @@ LoadImage(surfaceBrush);
 
 ![Imagem sem saturação](images/composition-cat-desaturated.png)
 
-## <a name="more-information"></a>Mais informações
+## <a name="more-information"></a>Mais Informações
 
-- [Microsoft – GitHub Composition](https://github.com/Microsoft/composition)
+- [Microsoft – GitHub de composição](https://github.com/Microsoft/composition)
 - [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878)
-- [Equipe do Composition do Windows no Twitter](https://twitter.com/wincomposition)
-- [Visão geral da composição](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
-- [Noções básicas de árvore visual](composition-visual-tree.md)
+- [Equipe da composição do Windows no Twitter](https://twitter.com/wincomposition)
+- [Visão geral de composição](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
+- [Noções básicas de árvore Visual](composition-visual-tree.md)
 - [Pincéis de composição](composition-brushes.md)
 - [XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)
-- [Visão geral de animações](composition-animation.md)
-- [Interoperação nativa entre DirectX e Direct2D de composição com BeginDraw e EndDraw](composition-native-interop.md)
+- [Visão geral da animação](composition-animation.md)
+- [Composição nativo DirectX e Direct2D interoperação com BeginDraw e EndDraw](composition-native-interop.md)

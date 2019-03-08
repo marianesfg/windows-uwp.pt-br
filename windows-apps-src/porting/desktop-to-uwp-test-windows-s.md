@@ -1,5 +1,5 @@
 ---
-Description: Test your app for Windows 10 in S mode.
+Description: Teste seu aplicativo para Windows 10 no modo S.
 Search.Product: eADQiWindows 10XVcnh
 title: Testar seu aplicativo do Windows para o Windows 10 S
 ms.date: 05/11/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10 S, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cf442da9344f37525bf3c17e4a62a319b9c04044
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048453"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655941"
 ---
 # <a name="test-your-windows-app-for-windows-10-in-s-mode"></a>Testar seu aplicativo do Windows para o Windows 10 no modo S
 
@@ -33,10 +33,10 @@ Baixe as políticas de integridade de código do Device Guard [aqui](https://go.
 
 Em seguida, escolha o que faz mais sentido para você. Aqui está o resumo de cada política.
 
-|Política |Imposição |Certificado de autenticação |Nome do arquivo |
+|Política |Imposição |Certificado de autenticação |Nome do Arquivo |
 |--|--|--|--|
-|Política do modo de auditoria |Registra problemas / não bloqueia |Store |SiPolicy_Audit.p7b |
-|Política de modo de produção |Sim |Store |SiPolicy_Enforced.p7b |
+|Política do modo de auditoria |Registra problemas / não bloqueia |Loja |SiPolicy_Audit.p7b |
+|Política de modo de produção |Sim |Loja |SiPolicy_Enforced.p7b |
 |Política de modo de produto com aplicativos auto-assinados |Sim |Certificado de teste do AppX  |SiPolicy_DevModeEx_Enforced.p7b |
 
 Recomendamos que você comece com a política de modo de auditoria. Você pode revisar os registros de eventos de integridade do código e usar essas informações para ajudá-lo a fazer ajustes em seu aplicativo. Em seguida, aplique a política de modo de produção quando estiver pronto para testes finais.
@@ -46,7 +46,7 @@ Aqui está um pouco mais informações sobre cada política.
 ### <a name="audit-mode-policy"></a>Política do modo de auditoria
 Com este modo, seu aplicativo é executado, mesmo que ele execute tarefas que não são suportadas no Windows 10 S. O Windows registra todos os executáveis que teriam sido bloqueados nos Registros de eventos de integridade do código.
 
-Você pode encontrar esses logs ao abrir o **Visualizador de Eventos** e então navegar até este local: Logs de Aplicativo e Serviços -> Microsoft -> Windows -> CodeIntegrity -> Operacional.
+Você pode encontrar esses logs, abrindo o **Visualizador de eventos**e, em seguida, navegando até este local: Logs de aplicativos e serviços -> Microsoft -> Windows -> CodeIntegrity -> operacionais.
 
 ![code-integrity-event-logs](images/desktop-to-uwp/code-integrity-logs.png)
 
@@ -76,7 +76,7 @@ Recomendamos que você aplique essas políticas a uma máquina virtual porque es
 
 Se você deseja aplicar essas políticas à sua máquina local, é melhor começar com a política de Modo de auditoria. Com esta política, você pode revisar os registros de eventos de integridade do código para garantir que nada crítico seja bloqueado em uma política forçada.
 
-Quando estiver pronto para aplicar uma política, encontre o arquivo .P7B para a política escolhida, renomeie-o para **SIPolicy.P7B** e salve esse arquivo neste local do sistema: **C:\Windows\System32\CodeIntegrity\\**.
+Quando você estiver pronto para aplicar uma política, localize o. Arquivo p7b para a política que você escolheu, renomeie-o para **SIPolicy.P7B**e, em seguida, salve esse arquivo para esse local em seu sistema: **C:\Windows\System32\CodeIntegrity\\**.
 
 Em seguida, reinicie o sistema.
 
@@ -85,7 +85,7 @@ Em seguida, reinicie o sistema.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-**Encontrar respostas para suas dúvidas**
+**Encontre respostas para suas perguntas**
 
 Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
@@ -93,10 +93,10 @@ Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [
 
 Consulte [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).
 
-**Examinar um artigo do blog detalhado lançado por nossa Equipe de Consultoria de App**
+**Examine um artigo de blog detalhadas que foi lançado pela nossa equipe de aplicativo, consulte**
 
 Consulte [Como portar e testar seus aplicativos da área de trabalho clássicos no Windows 10 S com a Ponte de Desktop](https://blogs.msdn.microsoft.com/appconsult/2017/06/15/porting-and-testing-your-classic-desktop-applications-on-windows-10-s-with-the-desktop-bridge/).
 
-**Saiba mais sobre as ferramentas que facilitam os testes do Windows no modo S**
+**Saiba mais sobre as ferramentas que facilitam o teste para Windows no modo S**
 
 Consulte [Descompactar, modificar, reempacotar, assinar um APPX](https://blogs.msdn.microsoft.com/appconsult/2017/08/07/unpack-modify-repack-sign-appx/).

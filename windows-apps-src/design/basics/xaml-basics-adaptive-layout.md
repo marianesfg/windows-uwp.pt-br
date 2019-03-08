@@ -6,11 +6,11 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b444a11ab032034976d2f1b269bd10a89bf339e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928980"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593071"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Criar layouts adaptáveis
 
@@ -28,15 +28,15 @@ A **página de detalhes**, exibe uma única foto após ela ter sido selecionada.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* Visual Studio 2017: [Baixar o Visual Studio 2017 Community (gratuito)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
-* SDK do Windows 10 (10.0.15063.468 ou posterior): [Baixe o mais recente SDK do Windows (gratuito)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
-* Emulador do Windows em celulares: [Baixar o emulador do Windows 10 mobile (gratuito)](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
+* Visual Studio 2017: [Baixe o Visual Studio 2017 Community (gratuita)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
+* SDK do Windows 10 (10.0.15063.468 ou posterior):  [Baixe o SDK mais recente do Windows (gratuito)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+* Emulador móvel do Windows: [Baixe o emulador móvel do Windows 10 (gratuito)](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
 
-## <a name="part-0-get-the-starter-code-from-github"></a>Parte 0: Obter o código inicial do github
+## <a name="part-0-get-the-starter-code-from-github"></a>Parte 0: Obtenha o código inicial do github
 
 Para este tutorial, você iniciará com uma versão simplificada do exemplo do PhotoLab. 
 
-1. Vá para [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). Isso levará você para a página do GitHub para ver o exemplo. 
+1. Vá para [ https://github.com/Microsoft/Windows-appsample-photo-lab ](https://github.com/Microsoft/Windows-appsample-photo-lab). Isso levará você para a página do GitHub para ver o exemplo. 
 2. Em seguida, você precisará clonar ou baixar a amostra. Clique no botão **Clonar ou download**. Um submenu aparece.
     <figure>
         <img src="../basics/images/xaml-basics/clone-repo.png" alt="The Clone or download menu on GitHub">
@@ -63,7 +63,7 @@ Assim que o app for iniciado, você provavelmente perceberá que, embora o app f
 
 ![Layout para dispositivos móveis: depois](../basics/images/xaml-basics/adaptive-layout-mobile-before.png)
 
-## <a name="part-2-build-a-tailored-mobile-layout"></a>Parte 2: Compilar um layout para dispositivos móveis adaptado
+## <a name="part-2-build-a-tailored-mobile-layout"></a>Parte 2: Criar um layout móvel sob medido
 Para que esse app tenha uma boa aparência em dispositivos menores, vamos criar um conjunto separado de estilos em nossa página XAML que será usado somente se for detectado um dispositivo móvel.
 
 ### <a name="create-a-new-datatemplate"></a>Criar um novo DataTemplate
@@ -211,7 +211,7 @@ Agora, tente executar o app usando um emulador móvel. O novo layout é exibido 
 
 ![Layout para dispositivos móveis: depois](../basics/images/xaml-basics/adaptive-layout-mobile-after.png)
 
-## <a name="part-3-adapt-to-multiple-window-sizes-on-a-single-device"></a>Parte 3: Adaptar-se a vários tamanhos de janela em um único dispositivo
+## <a name="part-3-adapt-to-multiple-window-sizes-on-a-single-device"></a>Parte 3: Se adaptar a vários tamanhos de janela em um único dispositivo
 A criação de um novo layout adaptado elimina a complexidade do design responsivo para os dispositivos móveis, mas e os desktops e os tablets? O app pode ter uma boa aparência em tela inteira, mas se o usuário diminui a janela, a interface pode ficar estranha. Podemos garantir que o usuário final sempre terá um boa experiência usando o **VisualStateManager** para que haja a adaptação aos vários tamanhos de janela em um único dispositivo.
 
 ![Janela pequena: antes](../basics/images/xaml-basics/adaptive-layout-small-before.png)

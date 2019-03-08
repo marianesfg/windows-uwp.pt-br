@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, suspensão, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b588d6bf6e7cbf43651d94a7fd46e9a767c6f09
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945708"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656031"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a>Como suspender um aplicativo (DirectX e C++)
 
@@ -97,7 +97,7 @@ void App::Run()
 ## <a name="call-trim"></a>Chamar Trim()
 
 
-A partir do Windows 8.1, todos os aplicativos UWP DirectX devem chamar [**Idxgidevice3**](https://msdn.microsoft.com/library/windows/desktop/dn280346) suspensão. Essa chamada pede para o driver gráfico liberar todos os buffers temporários alocados para o aplicativo evitando que o aplicativo seja encerrado para recuperar recursos de memória durante o estado de suspensão. Isso é um requisito de certificação para Windows 8.1.
+A partir do Windows 8.1, todos os aplicativos UWP do DirectX devem chamar [ **IDXGIDevice3::Trim** ](https://msdn.microsoft.com/library/windows/desktop/dn280346) durante a suspensão. Essa chamada pede para o driver gráfico liberar todos os buffers temporários alocados para o aplicativo evitando que o aplicativo seja encerrado para recuperar recursos de memória durante o estado de suspensão. Isso é um requisito de certificação para Windows 8.1.
 
 ```cpp
 void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ args)
@@ -137,7 +137,7 @@ Quando seu aplicativo manipula o evento [**CoreApplication::Suspending**](https:
 ## <a name="remarks"></a>Comentários
 
 
-O sistema suspende o aplicativo sempre que o usuário alterna para outro aplicativo ou para a área de trabalho. O sistema retoma o seu aplicativo sempre que o usuário alterna de volta para ele. Quando o sistema retoma o aplicativo, o conteúdo das variáveis e estruturas de dados é o mesmo de antes da suspensão do aplicativo pelo sistema. O sistema retoma o aplicativo exatamente de onde parou, o que faz parecer ao usuário que ele estava sendo executado em tela de fundo.
+O sistema suspende o aplicativo sempre que o usuário alterna para outro aplicativo ou para a área de trabalho. O sistema retoma o seu aplicativo sempre que o usuário alterna de volta para ele. Quando o sistema retoma o aplicativo, o conteúdo das variáveis e estruturas de dados é o mesmo de antes da suspensão do aplicativo pelo sistema. O sistema restaura o aplicativo exatamente como ele havia parado, de maneira que o usuário tem impressão de que ele estava sendo executado em tela de fundo.
 
 O sistema tenta manter o aplicativo e seus dados na memória enquanto ele está suspenso. Entretanto, caso não tenha recursos suficientes para manter o aplicativo na memória, o sistema encerra o aplicativo. Quando o usuário alterna de volta para um aplicativo suspenso que foi encerrado, o sistema envia um evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) e deve restaurar os dados do aplicativo em seu manipulador para o evento **CoreApplicationView::Activated**.
 
@@ -145,7 +145,7 @@ O sistema não notifica um aplicativo quando ele está encerrado, por isso seu a
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Como retomar um aplicativo (DirectX e C++)](how-to-resume-an-app-directx-and-cpp.md)
+* [Como reiniciar um aplicativo (DirectX e C++)](how-to-resume-an-app-directx-and-cpp.md)
 * [Como ativar um aplicativo (DirectX e C++)](how-to-activate-an-app-directx-and-cpp.md)
 
  

@@ -1,5 +1,5 @@
 ---
-Description: Learn how to create multi-step interactions in your notifications.
+Description: Saiba como criar interações de várias etapas em suas notificações.
 title: Notificação do sistema com ativação de atualização pendente
 label: Toast with pending update activation
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificação do sistema, atualização pendente, atualizaçãopendente, interatividade multietapas, interações de várias etapas
 ms.localizationpriority: medium
 ms.openlocfilehash: b1574ee2913bd2889af204aae1089dc170df95b8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940731"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648551"
 ---
 # <a name="toast-with-pending-update-activation"></a>Notificação do sistema com ativação de atualização pendente
 
@@ -21,15 +21,15 @@ Você pode usar **PendingUpdate** para criar interações multietapas nas notifi
 ![Notificação do sistema com atualizações pendentes](images/toast-pendingupdate.gif)
 
 > [!IMPORTANT]
-> **Requer a Fall Creators Update da Área de trabalho e a biblioteca de Notificações 2.0.0**: você deve executar o build 16299 ou posterior para ver o trabalho de atualização pendente. Você deve usar a versão 2.0.0 ou posterior da [Biblioteca NuGet de notificações do kit de ferramentas da comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para atribuir **PendingUpdate** nos botões. **PendingUpdate** é suportada somente na Área de trabalho e será ignorada em outros dispositivos.
+> **Requer a área de trabalho Fall Creators Update e 2.0.0 da biblioteca de notificações**: Você deve estar executando Desktop build 16299 ou superior para ver o trabalho de atualização pendente. Você deve usar a versão 2.0.0 ou posterior da [Biblioteca NuGet de notificações do kit de ferramentas da comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para atribuir **PendingUpdate** nos botões. **PendingUpdate** é suportada somente na Área de trabalho e será ignorada em outros dispositivos.
 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Este artigo presume um conhecimento prático de...
 
-- [Construção de conteúdo de notificações do sistema](adaptive-interactive-toasts.md)
-- [Enviar uma notificação e processar a ativação em segundo plano](send-local-toast.md)
+- [Construindo o conteúdo de notificação do sistema](adaptive-interactive-toasts.md)
+- [Enviar uma notificação do sistema e manipulação de ativação do plano de fundo](send-local-toast.md)
 
 
 ## <a name="overview"></a>Visão geral
@@ -116,7 +116,7 @@ ToastNotificationManager.CreateToastNotifier().Show(notif);
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-toast-pending-update)
-- [Enviar uma notificação do sistema local e manipular a ativação](send-local-toast.md)
-- [Conteúdo e documentação sobre notificações do sistema](adaptive-interactive-toasts.md)
-- [Barra de progresso da notificação do sistema](toast-progress-bar.md)
+- [Exemplo de código completo no GitHub](https://github.com/WindowsNotifications/quickstart-toast-pending-update)
+- [Enviar uma ativação de notificação do sistema e o identificador de local](send-local-toast.md)
+- [Documentação de conteúdo de notificação do sistema](adaptive-interactive-toasts.md)
+- [Barra de progresso de notificação do sistema](toast-progress-bar.md)

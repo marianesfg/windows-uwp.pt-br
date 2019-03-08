@@ -1,5 +1,5 @@
 ---
-Description: This article is an overview of the concepts and technologies related to accessibility scenarios for Universal Windows Platform (UWP) apps.
+Description: Este artigo é uma visão geral dos conceitos e tecnologias relacionados a cenários de acessibilidade de aplicativos da Plataforma Universal do Windows (UWP).
 ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
 title: Visão geral de acessibilidade
 label: Accessibility overview
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d0c3bea228cae8d9482a8e0cb24c958e36992848
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046569"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649731"
 ---
 # <a name="accessibility-overview"></a>Visão geral de acessibilidade  
 
@@ -43,7 +43,7 @@ Além disso, a vinculação de dados, o estilo e os recursos de modelos facilita
 <span id="ui_automation"/>
 <span id="UI_AUTOMATION"/>
 
-## <a name="ui-automation"></a>Automação de Interface de Usuário  
+## <a name="ui-automation"></a>Automação da Interface de Usuário  
 O suporte à acessibilidade vem principalmente do suporte integrado à estrutura de Automação da IU da Microsoft. Esse suporte é fornecido através de classes base e do comportamento nativo da implementação de classe para tipos de controle, e uma representação da interface da API do provedor de Automação da Interface do Usuário. Cada classe de controle usa os conceitos de pares e padrões de automação da Automação da Interface do Usuário para relatar a função do controle e o conteúdo para os clientes de Automação da Interface do Usuário. O aplicativo é tratado como janela principal pela Automação da Interface do Usuário e pela Estrutura de Automação da IU todo conteúdo relevante à acessibilidade dentro da janela do aplicativo está disponível para um cliente de Automação da Interface do Usuário. Para saber mais sobre Automação da Interface do Usuário, consulte [UI Automation Overview](https://msdn.microsoft.com/library/windows/desktop/Ee684076).
 
 <span id="Assistive_technology"/>
@@ -181,7 +181,7 @@ Para saber mais sobre as declarações de acessibilidade e a publicação do seu
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_CUSTOM_CONTROLS"/>
 
 ## <a name="assistive-technology-support-in-custom-controls"></a>Suporte a tecnologia adaptativa em controles personalizados  
-Quando você cria um controle personalizado, recomendamos que também implemente ou estenda uma ou mais subclasses [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) para fornecer suporte à acessibilidade. Em alguns casos, desde que você use a mesma classe de par que foi usada pela classe de controle de base, o suporte de automação para sua classe derivada é adequado em um nível básico. Entretanto, você deve testar isso e implementar um par ainda é uma prática recomendada, dessa forma, o par pode relatar corretamente o nome da classe de sua nova classe de controle. Implementar um par de automação personalizado envolve algumas etapas. Para saber mais, consulte [Custom automation peers](custom-automation-peers.md).
+Quando você cria um controle personalizado, recomendamos que também implemente ou estenda uma ou mais subclasses [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) para fornecer suporte à acessibilidade. Em alguns casos, desde que você use a mesma classe de par que foi usada pela classe de controle de base, o suporte de automação para sua classe derivada é adequado em um nível básico. Entretanto, você deve testar isso e implementar um par ainda é uma prática recomendada, dessa forma, o par pode relatar corretamente o nome da classe de sua nova classe de controle. Implementar um par de automação personalizado envolve algumas etapas. Para obter mais informações, consulte [Pares de automação personalizados](custom-automation-peers.md).
 
 <span id="Assistive_technology_support_in_apps_that_support_XAML___Microsoft_DirectX_interop"/>
 <span id="assistive_technology_support_in_apps_that_support_xaml___microsoft_directx_interop"/>
@@ -192,7 +192,7 @@ O conteúdo do Microsoft DirectX hospedado em uma interface do usuário XAML (us
 
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
-* [Design de acessibilidade](https://msdn.microsoft.com/library/windows/apps/Hh700407)
-* [Amostra de acessibilidade XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Design para acessibilidade](https://msdn.microsoft.com/library/windows/apps/Hh700407)
+* [Exemplo de acessibilidade do XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Acessibilidade](accessibility.md)
 * [Introdução ao Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

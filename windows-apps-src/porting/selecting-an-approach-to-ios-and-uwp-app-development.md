@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9bf23926a1c17615db5ef838d21f9a46a8921c8c
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114662"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655781"
 ---
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Selecionando uma abordagem para o desenvolvimento de aplicativos iOS e UWP
 
@@ -54,7 +54,7 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 
     Se a sua lógica de negócios principal está escrita em C++, em vez de Objective-C ou Swift, você geralmente pode usar esse código com apenas algumas pequenas alterações em seu projeto. Em seguida, você pode usar XAML para definir sua interface do usuário, como com outros aplicativos Windows, e chamar no código C++ quando necessário.
 
--   [Use o ANGLE para executar o OpenGL ES no Windows](https://go.microsoft.com/fwlink/p/?linkid=618387)
+-   [Use o ÂNGULO para executar o OpenGL ES no Windows](https://go.microsoft.com/fwlink/p/?linkid=618387)
 
     Uma etapa intermediária para portabilidade de seu projeto do OpenGL ES 2.0 é usar o ANGLE. O ANGLE permite executar conteúdo do OpenGL ES no Windows, o que converte chamadas de API do OpenGL ES em chamadas de API do DirectX 11.
 
@@ -68,7 +68,7 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 
     Um ambiente de criação de jogos.
 
--   [Titanium Studio](https://go.microsoft.com/fwlink/p/?LinkID=320482)
+-   [Casca Studio](https://go.microsoft.com/fwlink/p/?LinkID=320482)
 
     Um ambiente de criação para várias plataformas.
 

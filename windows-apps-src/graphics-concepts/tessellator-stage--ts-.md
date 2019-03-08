@@ -1,20 +1,20 @@
 ---
-title: Estágio de mosaico (TS)
+title: Estágio de tessellator (TS)
 description: O estágio de mosaico (TS) cria um padrão de amostragem do domínio que representa o patch de geometria e gera um conjunto de objetos menores (triângulos, os pontos ou linhas) que se conectam a essas amostras.
 ms.assetid: 2F006F3D-5A04-4B3F-8BC7-55567EFCFA6C
 keywords:
-- Estágio de mosaico (TS)
+- Estágio de tessellator (TS)
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7768d63405281d3155affc6c9f09c62568761718
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945503"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607391"
 ---
-# <a name="tessellator-ts-stage"></a>Estágio de mosaico (TS)
+# <a name="tessellator-ts-stage"></a>Estágio de tessellator (TS)
 
 
 O estágio de mosaico (TS) cria um padrão de amostragem do domínio que representa o patch de geometria e gera um conjunto de objetos menores (triângulos, os pontos ou linhas) que se conectam a essas amostras.
@@ -52,9 +52,9 @@ Benefícios do mosaico:
 
 O pipeline de elementos gráficos do Direct3D implementa o mosaico em hardware, suavizando o trabalho da CPU para a GPU. Isso pode levar a melhorias de desempenho muito grandes se um aplicativo implementar um grande número de destinos que mudam de forma e/ou modelos de aplicação de capas/deformação mais sofisticados.
 
-O mosaico é um estágio de funções fixas inicializado associando um [sombreador hull](hull-shader-stage--hs-.md) ao pipeline. (veja [Tutorial: Inicializar o Estágio de Mosaico](https://msdn.microsoft.com/library/windows/desktop/ff476341)). O objetivo do estágio de mosaico é subdividir um domínio (quad, tri ou linha) em muitos objetos menores (triângulos, pontos ou linhas). O mosaico organiza um domínio canônico em um sistema de coordenadas normalizado (zero-para-um). Por exemplo, um domínio quadrupleto é transformado em um quadrado de unidade.
+O mosaico é um estágio de funções fixas inicializado associando um [sombreador hull](hull-shader-stage--hs-.md) ao pipeline. (consulte [How To: Inicializar o estágio de Tessellator](https://msdn.microsoft.com/library/windows/desktop/ff476341)). O objetivo do estágio de mosaico é subdividir um domínio (quad, tri ou linha) em muitos objetos menores (triângulos, pontos ou linhas). O mosaico organiza um domínio canônico em um sistema de coordenadas normalizado (zero-para-um). Por exemplo, um domínio quadrupleto é transformado em um quadrado de unidade.
 
-### <a name="span-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanphases-in-the-tessellator-ts-stage"></a><span id="Phases_in_the_Tessellator__TS__stage"></span><span id="phases_in_the_tessellator__ts__stage"></span><span id="PHASES_IN_THE_TESSELLATOR__TS__STAGE"></span>Fases no estágio de mosaico (TS)
+### <a name="span-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanphases-in-the-tessellator-ts-stage"></a><span id="Phases_in_the_Tessellator__TS__stage"></span><span id="phases_in_the_tessellator__ts__stage"></span><span id="PHASES_IN_THE_TESSELLATOR__TS__STAGE"></span>Fases no estágio de Tessellator (TS)
 
 O estágio de mosaico (TS) funciona em duas fases:
 
@@ -63,22 +63,22 @@ O estágio de mosaico (TS) funciona em duas fases:
 
     | Tipo de particionamento | Intervalo                       |
     |----------------------|-----------------------------|
-    | Fractional\_odd      | \[1...63\]                  |
-    | Fractional\_even     | TessFactor range: \[2..64\] |
-    | Inteiro              | TessFactor range: \[1..64\] |
-    | Pow2                 | TessFactor range: \[1..64\] |
+    | Fracionários\_ímpar      | \[1...63\]                  |
+    | Fracionários\_até mesmo     | Intervalo de TessFactor: \[2..64\] |
+    | Inteiro              | Intervalo de TessFactor: \[1..64\] |
+    | Pow2                 | Intervalo de TessFactor: \[1..64\] |
 
      
 
-O mosaico é implementado com dois estágios de sombreador programável: um [sombreador hull](hull-shader-stage--hs-.md) e um [sombreador de domínio](domain-shader-stage--ds-.md). Esses estágios de sombreador são programados com o código HLSL que é definido no modelo de sombreador 5. Os destinos de sombreador são: hs\_5\_0 and ds\_5\_0. O título cria o sombreador e código para o hardware é extraído dos sombreadores compilados que são passados para o tempo de execução quando os sombreadores são associados ao pipeline.
+O mosaico é implementado com dois estágios de sombreador programável: um [sombreador hull](hull-shader-stage--hs-.md) e um [sombreador de domínio](domain-shader-stage--ds-.md). Esses estágios de sombreador são programados com o código HLSL que é definido no modelo de sombreador 5. Os destinos de sombreador são: hs\_5\_0 e ds\_5\_0. O título cria o sombreador e código para o hardware é extraído dos sombreadores compilados que são passados para o tempo de execução quando os sombreadores são associados ao pipeline.
 
-### <a name="span-idenablingdisablingtessellationspanspan-idenablingdisablingtessellationspanspan-idenablingdisablingtessellationspanenablingdisabling-tessellation"></a><span id="Enabling_disabling_tessellation"></span><span id="enabling_disabling_tessellation"></span><span id="ENABLING_DISABLING_TESSELLATION"></span>Habilitar/desabilitar mosaico
+### <a name="span-idenablingdisablingtessellationspanspan-idenablingdisablingtessellationspanspan-idenablingdisablingtessellationspanenablingdisabling-tessellation"></a><span id="Enabling_disabling_tessellation"></span><span id="enabling_disabling_tessellation"></span><span id="ENABLING_DISABLING_TESSELLATION"></span>Habilitação e desabilitação de mosaico
 
 Habilite o mosaico criando um sombreador hull e vinculando-o ao estágio de sombreador hull (isso configura automaticamente o estágio de mosaico). Para gerar as posições de vértice final dos patches de mosaico, você também precisará criar um [sombreador domínio](domain-shader-stage--ds-.md) e associá-lo ao estágio do sombreador de domínio. Depois que o mosaico é habilitado, a entrada de dados no estágio do Assembler de Entrada (IA) deve ser dados de patch. A topologia de assembler de entrada deve ser uma topologia constante de patch.
 
 Para desabilitar o mosaico, defina os sombreadores hull e o sombreador de domínio **NULL**. Nem o [estágio do Sombreador de Geometria (GS)](geometry-shader-stage--gs-.md) nem o [estágio de Saída de Fluxo (SO)](stream-output-stage--so-.md) podem ler pontos de controle de saída de sombreador hull ou dados de patch.
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entrada
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
 
 
 O mosaico opera uma vez por patch usando os fatores de mosaico (que especificam o quão delicadamente o domínio será transformado em mosaico) e o tipo de particionamento (que especifica o algoritmo usado para dividir um patch) que são transmitidos do estágio de sombreador hull.
@@ -91,7 +91,7 @@ O mosaico gera coordenadas uv (e, opcionalmente, w) e a topologia de superfície
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de elementos gráficos](graphics-pipeline.md)
+[Pipeline de gráficos](graphics-pipeline.md)
 
  
 

@@ -1,32 +1,32 @@
 ---
 ms.assetid: ec3945e7-cfb1-b91a-7ae6-e767a7227f8a
-title: Página de configurações (Dev Home)
-description: Fornece informações sobre a página de configurações do aplicativo Dev Home para o Xbox One.
+title: Página de Configurações (Home Page de Desenvolvimento)
+description: Fornece informações sobre a página Configurações do aplicativo Home Page de Desenvolvimento para Xbox One.
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-settings.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a0a94a7a8e22ee63cb126bb50ad1c74837c4f55
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942152"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654201"
 ---
-# <a name="settings-page-dev-home"></a>Página de configurações (Dev Home)
+# <a name="settings-page-dev-home"></a>Página de Configurações (Home Page de Desenvolvimento)
    
   
-A página de **configurações** de Dev Home fornece acesso às várias configurações para o console de desenvolvimento.   
- ![Página de configurações de Dev Home](images/devhome_settings.png)   
+A página **Configurações** do Home Page de Desenvolvimento fornece acesso a várias configurações para o console de desenvolvimento.   
+ ![Página de configurações de desenvolvimento inicial](images/devhome_settings.png)   
   
-A página **configurações** contém os seguintes painéis:   
+A página **Configurações** contém os seguintes painéis:   
  
    *  [Configurações do console](#ID4EEB)  
    *  [Configurações de atualização de recuperação do sistema operacional](#ID4EOB)  
    *  [Visual Studio](#ID4EYB)  
    *  [Configurações de depuração](#ID4ECC)  
-   *  [Configuração de script autônoma](#ID4EMC)  
+   *  [Configuração de script autônomo](#ID4EMC)  
    *  [Experiência inicial padrão](#ID4E3C)  
 
  
@@ -37,7 +37,7 @@ A página **configurações** contém os seguintes painéis:
 ## <a name="console-settings"></a>Configurações do console  
    
   
-O painel de **configurações do Console** fornece uma exibição "em um relance" de configurações do console e informações. Você pode usar essas ferramentas para exibir e editar o nome do host do console, área restrita e configurações de teclas de acesso de segurança.   
+O painel **Configurações do console** fornece uma exibição "em um relance" das configurações do console e informações. Você pode usar essas ferramentas para visualizar e editar as configurações da chave de acesso de host, sandbox e segurança do console.   
   
 <a id="ID4EOB"></a>
 
@@ -46,7 +46,7 @@ O painel de **configurações do Console** fornece uma exibição "em um relance
 ## <a name="os-recovery-update-settings"></a>Configurações de atualização de recuperação do sistema operacional  
    
   
-O painel de **recuperação do sistema operacional atualizar configurações** configura as configurações de atualização automática do console. Observe que as alterações dessas configurações pode levar até 24 horas para entrar em vigor.   
+O painel **Configurações de atualização de recuperação do sistema operacional** define as configurações de atualização automática do console. Observe que essas alterações podem levar até 24 horas para entrar em vigor.   
   
 <a id="ID4EYB"></a>
 
@@ -55,7 +55,7 @@ O painel de **recuperação do sistema operacional atualizar configurações** c
 ## <a name="visual-studio"></a>Visual Studio  
    
   
-O painel do **Visual Studio** é usado para Emparelhe o console com o Visual Studio. Você também pode remover todas as instâncias do Visual Studio emparelhadas.   
+O painel **Visual Studio** é usado para emparelhar o console com o Visual Studio. Você também pode remover todas as instâncias pares do Visual Studio.   
   
 <a id="ID4ECC"></a>
 
@@ -64,16 +64,16 @@ O painel do **Visual Studio** é usado para Emparelhe o console com o Visual Stu
 ## <a name="debug-settings"></a>Configurações de depuração  
    
   
-O painel de **configurações de depuração** é usado para exibir e alternar comuns configurações de depuração.   
+O painel **Depurar configurações** é usado para exibir e alternar comuns configurações de depuração.   
   
 <a id="ID4EMC"></a>
 
    
 
-## <a name="unattended-script-configuration"></a>Configuração de script autônoma  
+## <a name="unattended-script-configuration"></a>Configuração autônoma de script  
    
   
-O painel de **configuração de script autônomo** gerencia scripts de instalação para consoles Xbox One.   
+O painel **Configuração autônoma de script** gerencia scripts de instalação para consoles Xbox One.   
   
 <a id="ID4E3C"></a>
 
@@ -82,13 +82,13 @@ O painel de **configuração de script autônomo** gerencia scripts de instalaç
 ## <a name="default-home-experience"></a>Experiência inicial padrão  
    
   
-O painel **Padrão Home experiência** determina se a tela inicial de varejo ou a tela [Inicial de desenvolvedor no Console (Dev Home)](dev-home.md) é exibida quando o console é iniciado.   
+O painel **Experiência padrão do Home** determina se a tela Home de varejo ou [Home de desenvolvedor no Console (Home Page de Desenvolvimento)](dev-home.md) será exibida quando o console for iniciado.   
   
 <a id="ID4EJD"></a>
 
    
 
 ## <a name="see-also"></a>Consulte também  
- [Home de desenvolvedor no Console (Dev Home)](dev-home.md)
+ [Página inicial do desenvolvedor no Console (desenvolvimento Home)](dev-home.md)
 
   

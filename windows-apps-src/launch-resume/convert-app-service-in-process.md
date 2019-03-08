@@ -1,17 +1,17 @@
 ---
-title: Converter um serviço de aplicativo para ser executado no mesmo processo de seu aplicativo host
+title: Converter um serviço de app para ser executado no mesmo processo de seu app host
 description: Converta o código de serviço de app executado em um processo separado em segundo plano em código que é executado no mesmo processo de seu provedor de serviços de app.
 ms.date: 11/03/2017
 ms.topic: article
-keywords: serviço de aplicativo do Windows 10, uwp,
+keywords: Windows 10, uwp, o serviço de aplicativo
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
 ms.openlocfilehash: a976ac69d289a5582c2f3546227adba707ac5297
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927108"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57643411"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Converter um serviço de app para ser executado no mesmo processo de seu app host
 
@@ -38,13 +38,13 @@ A transformação de um serviço de aplicativo de modelo fora do processo em um 
 >   </Applications>
 > ```
 
-Remover o `EntryPoint` atributo do `<Extension>` elemento porque agora [onbackgroundactivated ()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) é o ponto de entrada que será usado quando o serviço de aplicativo é invocado.
+Remover o `EntryPoint` de atributos do `<Extension>` elemento porque agora [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) é o ponto de entrada que será usado quando o serviço de aplicativo é invocado.
 
 A segunda alteração é mover a lógica de serviço do seu projeto de tarefa em segundo plano separado para métodos que podem ser chamados de **OnBackgroundActivated()**.
 
-Agora seu aplicativo pode executar diretamente o serviço de aplicativo. Por exemplo, em App.xaml.cs:
+Agora seu aplicativo pode executar diretamente o serviço de aplicativo. Por exemplo, no App.xaml.cs:
 
-[!NOTE] O código a seguir é diferente do fornecido por exemplo 1 (serviço de fora do processo). O código a seguir é fornecido apenas para fins de ilustração e não deve ser usado como parte do exemplo 2 (no processo de serviço).  Para continuar a transição do artigo do exemplo 1 (serviço de fora do processo) no exemplo 2 (no processo de serviço) continuar a usar o código fornecido por exemplo 1 em vez de código de caráter abaixo.
+[!NOTE] O código a seguir é diferente daquele fornecido para o exemplo 1 (serviço de out-of-process). O código a seguir é fornecido apenas para fins ilustrativos e não deve ser usado como parte do exemplo 2 (no processo de serviço).  Para continuar a transição do artigo do exemplo 1 (serviço de out-of-process) no exemplo 2 (serviço em processo) continuam a usar o código fornecido por exemplo, 1 em vez do código ilustrativo abaixo.
 
 ``` cs
 using Windows.ApplicationModel.AppService;

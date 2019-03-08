@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 1caa7361011b535a0dd63da53e0aba2eadff72be
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921444"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654771"
 ---
 # <a name="share-certificates-between-apps"></a>Compartilhar certificados entre aplicativos
 
@@ -35,7 +35,7 @@ Este artigo usa o Microsoft Internet Information Services (IIS) para fins de exe
 ## <a name="create-and-publish-a-secured-web-service"></a>Crie e publique um serviço Web seguro
 
 
-1.  Execute o Microsoft Visual Studio como administrador e selecione **Novo Projeto** na página inicial. O acesso do administrador é obrigatório para publicar um serviço Web em um servidor IIS. Na caixa de diálogo Novo Projeto, altere a estrutura para **.NET Framework 3.5**. Selecione **Visual C#** -&gt; **Web** -&gt; **Visual Studio** -&gt; **Aplicativo de Serviço Web do ASP.NET**. Nomeie o aplicativo como "FirstContosoBank". Clique em **OK** para criar o projeto.
+1.  Execute o Microsoft Visual Studio como administrador e selecione **Novo Projeto** na página inicial. O acesso do administrador é obrigatório para publicar um serviço Web em um servidor IIS. Na caixa de diálogo Novo Projeto, altere a estrutura para **.NET Framework 3.5**. Selecione **Visual C#**   - &gt; **Web**  - &gt; **Visual Studio**  - &gt; **Aplicativo de serviço Web do ASP.NET**. Nomeie o aplicativo como "FirstContosoBank". Clique em **OK** para criar o projeto.
 2.  No arquivo **Service1.asmx.cs**, substitua o método padrão da Web **HelloWorld** pelo seguinte método "Logon".
     ```cs
             [WebMethod]
@@ -61,7 +61,7 @@ Este artigo usa o Microsoft Internet Information Services (IIS) para fins de exe
 2.  Expanda os sites do seu servidor IIS. No **Site padrão**, selecione o novo serviço Web "FirstContosoBank". Na seção **Ações**, selecione **Configurações Avançadas...**.
 3.  Defina o **Pool de aplicativos** como **.NET v2.0** e clique em **OK**.
 4.  No **Gerenciador do Serviços de Informações da Internet (IIS)**, selecione o servidor IIS e, em seguida, clique duas vezes em **Certificados do servidor**. Na seção **Ações**, selecione **Criar Certificado Autoassinado...**. Insira "ContosoBank" como o nome amigável para o certificado e clique em **OK**. Isso criará um novo certificado para uso pelo servidor IIS no formato de "&lt;nome-do-servidor&gt;.&lt;nome-do-domínio&gt;".
-5.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, selecione o site padrão. Na seção **Ações**, selecione **Associação** e então clique em **Adicionar...**. Selecione "https" como o tipo, defina a porta como "443" e insira o nome de host completo do seu servidor IIS ("&lt;nome-do-servidor&gt;.&lt;nome-do-domínio&gt;"). Defina o certificado SSL como "ContosoBank". Clique em **OK**. Clique em **Fechar** na janela **Associações do Site** .
+5.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, selecione o site padrão. Na seção **Ações**, selecione **Associação** e, em seguida, clique em **Adicionar...**. Selecione "https" como o tipo, defina a porta como"443" e insira o nome completo do host para o seu servidor IIS ("&lt;nome-do-servidor&gt;.&lt;nome-do-domínio&gt;"). Defina o certificado SSL como "ContosoBank". Clique em **OK**. Clique em **Fechar** na janela **Associações do Site** .
 6.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, selecione o serviço Web "FirstContosoBank". Clique duas vezes em **Configurações do SSL**. Marque **Requer SSL**. Em **Certificados clientes**, selecione **Requer**. Na seção **Ações**, clique em **Aplicar**.
 7.  Você pode verificar se o serviço Web está configurado corretamente abrindo o seu navegador da Web e inserindo o seguinte endereço da Web: "https://&lt;nome-do-servidor&gt;.&lt;nome -do-domínio&gt;/FirstContosoBank/Service1.asmx". Por exemplo, "https://myserver.example.com/FirstContosoBank/Service1.asmx". Se o seu serviço Web estiver configurado corretamente, você será solicitado a selecionar um certificado cliente, a fim de acessar o serviço Web.
 
@@ -74,7 +74,7 @@ Agora que você já tem um ou mais serviços Web seguros, seus aplicativos podem
 
 Se não houver certificados cliente disponíveis, então o usuário precisará adicionar um certificado ao repositório de certificados. Você pode incluir código em seu aplicativo que permite que um usuário selecione um arquivo PFX que contenha um certificado cliente e, em seguida, importe esse certificado para o repositório de certificados cliente.
 
-**Dica**você pode usar makecert.exe para criar um arquivo PFX a ser usado com este guia de início rápido. Para obter informações sobre como usar makecert.exe, consulte [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
+**Dica**  você pode usar makecert.exe para criar um arquivo PFX para usar com este guia de início rápido. Para obter informações sobre como usar makecert.exe, consulte [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
 
  
 

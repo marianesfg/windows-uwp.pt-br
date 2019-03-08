@@ -1,5 +1,5 @@
 ---
-title: Assinar um pacote de aplicativos usando a SignTool
+title: Assinar um pacote do aplicativo usando a SignTool
 description: Use SignTool para assinar um pacote de aplicativos com um certificado manualmente.
 ms.date: 09/30/2018
 ms.topic: article
@@ -7,13 +7,13 @@ keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a6d39a78ba73dcb598f209ea48c4b131e375ab6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922608"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594801"
 ---
-# <a name="sign-an-app-package-using-signtool"></a>Assinar um pacote de aplicativos usando a SignTool
+# <a name="sign-an-app-package-using-signtool"></a>Assinar um pacote do aplicativo usando a SignTool
 
 
 **SignTool** é uma ferramenta de linha de comando usada para assinar digitalmente um pacote ou lote de aplicativos com um certificado. O certificado pode ser criado pelo usuário (para fins de teste) ou emitido por uma empresa (para distribuição). Assinar um pacote do aplicativo fornece ao usuário uma verificação de que os dados do aplicativo não foram modificados depois que ele foi assinado enquanto também confirma a identidade do usuário ou empresa que assinou. **SignTool** pode assinar pacotes e lotes de aplicativos criptografados ou não criptografados.
@@ -32,8 +32,8 @@ Para obter mais informações sobre assinatura de código e certificados em gera
 
 - **SignTool.exe**  
     Dependendo do seu caminho de instalação do SDK, a **SignTool** é instalada no computador Windows 10 nos seguintes locais:
-    - x86: C:\Arquivos de Programas (x86)\Windows Kits\10\bin\x86\SignTool.exe
-    - x64: C:\Arquivos de Programas (x86)\Windows Kits\10\bin\x64\SignTool.exe
+    - x86: C:\Program Files (x86)\Windows Kits\10\bin\x86\SignTool.exe
+    - x64: C:\Program Files (x86)\Windows Kits\10\bin\x64\SignTool.exe
 
 ## <a name="using-signtool"></a>Usando o SignTool
 
@@ -119,13 +119,13 @@ Um erro mais comum é o 0x8007000B. Para esse tipo de erro, você pode encontrar
  
 Para obter mais informações no log de eventos:
 - Execute Eventvwr.msc
-- Abra o log de eventos: Visualizador de Eventos (Local) -> Aplicativos e Logs de Serviços -> Microsoft -> Windows -> AppxPackagingOM -> Microsoft-Windows-AppxPackaging/Operational
+- Abra o log de eventos: Visualizador de eventos (Local) -> aplicativos e Logs de serviços -> Microsoft -> Windows -> AppxPackagingOM -> Microsoft-Windows-AppxPackaging/Operational
 - Localize o evento de erro mais recente
 
 O erro interno 0x8007000B geralmente corresponde a um destes valores:
 
 | **ID do evento** | **Cadeia de caracteres de evento de exemplo** | **Sugestão** |
 |--------------|--------------------------|----------------|
-| 150          | Erro 0x8007000B: O nome do editor de manifesto de aplicativo (CN = Contoso) deve coincidir com o nome do requerente do certificado de autenticação (CN = Contoso, C = US). | O nome do editor de manifesto de aplicativo deve corresponder exatamente ao nome do assunto após a assinatura.               |
-| 151          | Erro 0x8007000B: O método de hash de assinatura especificado (SHA512) deve coincidir com o método de hash usado no mapa de blocos do pacote de aplicativos (SHA256).     | O hashAlgorithm especificado no parâmetro /fd está incorreto. Execute o **SignTool** usando o hashAlgorithm que corresponda ao mapa de blocos do pacote de aplicativos (usado para criar o pacote de aplicativos)  |
-| 152          | Erro 0x8007000B: O conteúdo do pacote de aplicativos deve ser validado em relação ao mapa de blocos.                                                           | O pacote de aplicativos está corrompido e precisa ser recompilado para gerar um novo mapa de blocos. Para saber mais sobre como criar um pacote de aplicativos, consulte [Criar um pacote de aplicativos com a ferramenta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). |
+| 150          | error 0x8007000B: O nome do Editor de manifesto de aplicativo (CN = Contoso) deve corresponder ao nome da entidade do certificado de autenticação (CN = Contoso, C = US). | O nome do editor de manifesto de aplicativo deve corresponder exatamente ao nome do assunto após a assinatura.               |
+| 151          | error 0x8007000B: O método de hash de assinatura especificado (SHA512) deve corresponder o método de hash usado no mapa de bloco de pacote de aplicativo (SHA256).     | O hashAlgorithm especificado no parâmetro /fd está incorreto. Execute o **SignTool** usando o hashAlgorithm que corresponda ao mapa de blocos do pacote de aplicativos (usado para criar o pacote de aplicativos)  |
+| 152          | error 0x8007000B: O conteúdo do pacote de aplicativo deve validar em relação ao seu mapa de bloco.                                                           | O pacote de aplicativos está corrompido e precisa ser recompilado para gerar um novo mapa de blocos. Para saber mais sobre como criar um pacote de aplicativos, consulte [Criar um pacote de aplicativos com a ferramenta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). |

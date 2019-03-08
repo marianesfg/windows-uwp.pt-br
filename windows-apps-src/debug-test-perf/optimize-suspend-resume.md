@@ -1,24 +1,24 @@
 ---
 ms.assetid: E1943DCE-833F-48AE-8402-CD48765B24FC
 title: Otimizar suspensão/retomada
-description: Crie apps da Plataforma Universal do Windows (UWP) que agilizem o uso do sistema de tempo de vida de processo para continuar de modo eficiente após suspensão ou término.
+description: Crie aplicativos da Plataforma Universal do Windows (UWP) que agilizem o uso do sistema de tempo de vida de processo para continuar de modo eficiente após suspensão ou término.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 06af6241bdd75efdd3ff71e02f74252d60540669
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947424"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653651"
 ---
 # <a name="optimize-suspendresume"></a>Otimizar suspensão/retomada
 
 
 Crie aplicativos da Plataforma Universal do Windows (UWP) que agilizem o uso do sistema de tempo de vida de processo para continuar de modo eficiente após suspensão ou término.
 
-## <a name="launch"></a>Inicialização
+## <a name="launch"></a>Inicializar
 
 Quando reativar um aplicativo após uma suspensão/encerramento, verifique se já se passou muito tempo. Nesse caso, considere a possibilidade de retornar à página de aterrissagem principal do aplicativo em vez de mostrar os dados obsoletos do usuário. Isso também resultará em uma inicialização mais rápida.
 
@@ -64,7 +64,7 @@ As opções disponíveis de tecnologia de serialização para aplicativos .NET s
 
 A partir de uma perspectiva de desempenho, é recomendável usar a classe [**XmlSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx). O **XmlSerializer** tem os menores tempos de serialização e desserialização, além de manter um baixo volume de memória. O **XmlSerializer** tem poucas dependências na estrutura .NET, o que significa que comparado a outras tecnologias de serialização, menos módulos precisam ser carregados em seu aplicativo para usar o **XmlSerializer**.
 
-[**DataContractSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) facilita a serialização de classes personalizadas, embora tenha um impacto de desempenho maior do que **XmlSerializer**. Caso precise de desempenho melhor, considere mudar. No geral, você não deve carregar mais do que um serializador e deve preferir **XmlSerializer**, a menos que precise dos recursos de outro serializador.
+[**DataContractSerializer** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) torna mais fácil serializar classes personalizadas, embora ele tenha um impacto de desempenho maior que **XmlSerializer**. Caso precise de desempenho melhor, considere mudar. No geral, você não deve carregar mais do que um serializador e deve preferir **XmlSerializer**, a menos que precise dos recursos de outro serializador.
 
 ### <a name="reduce-memory-footprint"></a>Reduzir o volume de memória
 
@@ -85,7 +85,7 @@ A maioria dos aplicativos precisa manipular o evento [**Resuming**](https://msdn
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Diretrizes para suspensão e retomada de aplicativo](https://msdn.microsoft.com/library/windows/apps/Hh465088)
+* [Diretrizes para aplicativo suspender e retomar](https://msdn.microsoft.com/library/windows/apps/Hh465088)
  
 
  

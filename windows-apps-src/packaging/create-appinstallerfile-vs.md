@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, instalador do aplicativo, AppInstaller, sideload
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aa7622fe408fcbc1f8da4c0fe0c6b8d54dd2cd6
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115770"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648481"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Criar um arquivo do Instalador de Aplicativo com o Visual Studio
 
-A partir do Windows 10, versão 1803 e Visual Studio 2017, atualização 15.7, aplicativos de sideload podem ser configurados para receber atualizações automáticas usando um `.appinstaller` arquivo. O Visual Studio permite ativar essas atualizações.
+Começando com o Windows 10, versão 1803 e Visual Studio 2017 15.7 de atualização, os aplicativos com sideload podem ser configurados para receber atualizações automáticas usando um `.appinstaller` arquivo. O Visual Studio permite ativar essas atualizações.
 
 ## <a name="app-installer-file-location"></a>Local do arquivo do Instalador de Aplicativo
 O arquivo `.appinstaller` pode ser hospedado em um local compartilhado como um ponto de extremidade HTTP ou uma pasta compartilhada UNC e inclui o caminho para encontrar os pacotes de aplicativos a serem instalados. Os usuários instalam o aplicativo a partir do local compartilhado e ativam verificações periódicas de novas atualizações. 
@@ -25,16 +25,16 @@ O arquivo `.appinstaller` pode ser hospedado em um local compartilhado como um p
 Você pode configurar a propriedade `TargetPlatformMinVersion` quando cria o projeto ou alterá-la mais tarde nas propriedades do projeto. 
 
 >[!IMPORTANT]
-> O arquivo do instalador de aplicativo só é gerado quando o `TargetPlatformMinVersion` é o Windows 10, versão 1803 ou maior.
+> O arquivo do instalador de aplicativo só é gerado quando o `TargetPlatformMinVersion` é o Windows 10, versão 1803 ou posterior.
 
 
 ### <a name="create-packages"></a>Criar pacotes
 
-Para distribuir um aplicativo por meio de sideload, você deve criar um pacote de aplicativo (.appx/.msix) ou lote de aplicativo (.appxbundle/.msixbundle) e publicá-lo em um local compartilhado.
+Para distribuir um aplicativo por meio de sideload, você deve criar um pacote do aplicativo (.appx/.msix) ou um pacote de aplicativos (.appxbundle/.msixbundle) e publicá-lo em um local compartilhado.
 
 Para fazer isso, use o assistente **Criar pacotes de aplicativo** no Visual Studio com as etapas a seguir.
 
-1. Clique com botão direito no projeto e escolha **Store** -> **Criar pacotes de aplicativo**.  
+1. Clique com botão direito no projeto e escolha **Loja** -> **Criar pacotes de aplicativo**.  
 
 ![Menu de contexto com navegação para Criar Pacotes de Aplicativos](images/packaging-screen2.jpg)   
 

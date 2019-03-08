@@ -1,6 +1,6 @@
 ---
 title: Conversão de tipo de dados
-description: As seções a seguir descrevem como o Direct3D manipula conversões entre tipos de dados.
+description: As seções a seguir descrevem como o Direct3D manipula as conversões entre os tipos de dados.
 ms.assetid: B50AB8DE-CAED-465B-B18C-81F3A984B8AC
 keywords:
 - Conversão de tipo de dados
@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 08c6dda8759a6e1452daf7cf0a3cd3e5db9ea1e6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930517"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57590571"
 ---
 # <a name="data-type-conversion"></a>Conversão de tipo de dados
 
 
-As seções a seguir descrevem como o Direct3D manipula conversões entre tipos de dados.
+As seções a seguir descrevem como o Direct3D manipula as conversões entre os tipos de dados.
 
-## <a name="span-iddatatypeterminologyspanspan-iddatatypeterminologyspanspan-iddatatypeterminologyspandata-type-terminology"></a><span id="Data_Type_Terminology"></span><span id="data_type_terminology"></span><span id="DATA_TYPE_TERMINOLOGY"></span>Terminologia de tipo de dados
+## <a name="span-iddatatypeterminologyspanspan-iddatatypeterminologyspanspan-iddatatypeterminologyspandata-type-terminology"></a><span id="Data_Type_Terminology"></span><span id="data_type_terminology"></span><span id="DATA_TYPE_TERMINOLOGY"></span>Terminologia do tipo de dados
 
 
 O conjunto de termos a seguir é usado posteriormente para caracterizar várias conversões de formato.
@@ -30,19 +30,19 @@ O conjunto de termos a seguir é usado posteriormente para caracterizar várias 
 | UNORM | Números inteiros não assinados como normalizados, o que significa que, para um número de n-bits, todo 0 significa 0,0f, e todo o 1 significa 1,0f. É representada uma sequência de valores de ponto flutuante uniformemente espaçados de 0,0f para 1,0f. Por exemplo, um UNORM de 2 bits representa 0,0f, 1/3, 2/3 e 1,0f.                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | SINT  | Inteiro assinado. inteiro complemento de 2. Por exemplo, um SINT de 3 bits representa os valores integrais -4, -3, -2, -1, 0, 1, 2, 3.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | UINT  | Inteiro não assinado. Por exemplo, um UINT de 3 bits representa os valores integrais 0, 1, 2, 3, 4, 5, 6, 7.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| FLOAT | Um valor de ponto flutuante em uma das representações definidas pelo Direct3D.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| FLUTUANTE | Um valor de ponto flutuante em uma das representações definidas pelo Direct3D.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | SRGB  | Semelhante a UNORM, pois em um número n-bits todo 0 significa 0,0f e todo 1 significa 1,0f. No entanto, ao contrário de UNORM, no SRGB a sequência de codificações de inteiros não assinados entre todos os 0 e todos os 1 representa uma progressão não linear na interpretação do ponto flutuante dos números, entre 0,0f e 1,0f. De modo geral, se essa progressão não linear, SRGB, fosse exibida como uma sequência de cores, ela seria exibida como uma rampa linear de níveis de luminosidade para um observador "médio", em condições de exibição "médias", em uma exibição "média". Para obter detalhes completos, consulte o padrão de cor SRGB, IEC 61996-2-1, na IEC (International Electrotechnical Commission).                |
 
  
 
 Os termos acima geralmente são usados como "modificadores de nome de formato", pois eles descrevem como os dados estão dispostos na memória e qual a conversão a ser executada no caminho de transporte (possivelmente incluindo filtragem) da memória para uma unidade de pipeline (ou da unidade de pipeline para a memória) como um sombreador.
 
-## <a name="span-idfloatingpointconversionspanspan-idfloatingpointconversionspanspan-idfloatingpointconversionspanfloating-point-conversion"></a><span id="Floating_Point_Conversion"></span><span id="floating_point_conversion"></span><span id="FLOATING_POINT_CONVERSION"></span>Conversão de ponto flutuante
+## <a name="span-idfloatingpointconversionspanspan-idfloatingpointconversionspanspan-idfloatingpointconversionspanfloating-point-conversion"></a><span id="Floating_Point_Conversion"></span><span id="floating_point_conversion"></span><span id="FLOATING_POINT_CONVERSION"></span>Conversão de ponto de flutuante
 
 
 Sempre que ocorre uma conversão de ponto flutuante entre diferentes representações, incluindo para representações de ponto não flutuante ou de representações de ponto não flutuante, aplicam-se as regras a seguir.
 
-### <a name="span-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanspan-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanspan-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanconververting-from-a-higher-range-representation-to-a-lower-range-representation"></a><span id="Conververting_from_a_higher_range_representation_to_a_lower_range_representation"></span><span id="conververting_from_a_higher_range_representation_to_a_lower_range_representation"></span><span id="CONVERVERTING_FROM_A_HIGHER_RANGE_REPRESENTATION_TO_A_LOWER_RANGE_REPRESENTATION"></span>Conversão de uma representação de intervalo superior para uma representação de intervalo inferior
+### <a name="span-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanspan-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanspan-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanconververting-from-a-higher-range-representation-to-a-lower-range-representation"></a><span id="Conververting_from_a_higher_range_representation_to_a_lower_range_representation"></span><span id="conververting_from_a_higher_range_representation_to_a_lower_range_representation"></span><span id="CONVERVERTING_FROM_A_HIGHER_RANGE_REPRESENTATION_TO_A_LOWER_RANGE_REPRESENTATION"></span>Conververting uma representação mais alto do intervalo em uma representação de intervalo inferior
 
 -   Arredondar para zero é usado durante a conversão para outro formato flutuante. Se o destino for um número inteiro ou formato de ponto fixo, é usado o arredondamento para o número par mais próximo, a menos que a conversão seja explicitamente documentada com o uso de outro comportamento de arredondamento, como arredondamento para o mais próximo para FLOAT para SNORM, FLOAT para UNORM ou FLOAT para SRGB. Outras exceções são as instruções de sombreador ftoi e ftou, que usam o arredondamento em direção ao zero. Por fim, as conversões de flutuante para fixo usadas pela amostra de textura e rasterizador têm uma tolerância especificada medida em ULP (unidade no último lugar) de um ideal infinitamente preciso.
 -   Para valores de fonte maiores do que o intervalo dinâmico de um formato de destino de intervalo inferior (p. ex.: um valor alto flutuante de 32 bits é gravado em um RenderTarget flutuante de 16 bits), os resultados de valor (devidamente assinado) representável máximo, NÃO incluindo o infinito assinado (devido ao arredondamento em direção ao zero descrito acima).
@@ -50,10 +50,10 @@ Sempre que ocorre uma conversão de ponto flutuante entre diferentes representa�
 -   INF em um formato de intervalo superior será convertido em INF no formato de intervalo inferior, se disponível. Se o formato inferior não tiver uma representação INF, ele será convertido para o valor máximo representável. A assinatura será preservada se estiver disponível no formato de destino.
 -   A desnormalização em um formato de intervalo superior será convertida para a representação desnormalizada no formato de intervalo inferior, se estiver disponível no formato de intervalo inferior e a conversão for possível, caso contrário, o resultado será 0. O bit de assinatura será preservado se estiver disponível no formato de destino.
 
-### <a name="span-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanspan-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanspan-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanconverting-from-a-lower-range-representation-to-a-higher-range-representation"></a><span id="Converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="CONVERTING_FROM_A_LOWER_RANGE_REPRESENTATION_TO_A_HIGHER_RANGE_REPRESENTATION"></span>Conversão de uma representação de intervalo inferior para uma representação de intervalo superior
+### <a name="span-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanspan-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanspan-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanconverting-from-a-lower-range-representation-to-a-higher-range-representation"></a><span id="Converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="CONVERTING_FROM_A_LOWER_RANGE_REPRESENTATION_TO_A_HIGHER_RANGE_REPRESENTATION"></span>Convertendo de uma representação de intervalo inferior para uma representação mais alto do intervalo
 
 -   NaN em um formato de intervalo inferior será convertido em representação NaN no formato de intervalo superior se a representação NaN existir no formato de intervalo superior. Se o formato de intervalo superior não tiver uma representação NaN, ela será convertida como 0.
--   INF em um formato de intervalo inferior será convertido em representação INF no formato de intervalo superior se disponível no formato de intervalo superior. Se o formato superior não tiver uma representação INF, ele será convertido para o valor máximo representável (MAX\_FLOAT nesse formato). A assinatura será preservada se estiver disponível no formato de destino.
+-   INF em um formato de intervalo inferior será convertido em representação INF no formato de intervalo superior se disponível no formato de intervalo superior. Se o formato mais alto não tem uma representação de INF, ele será convertido para o valor máximo representável (máx\_FLOAT nesse formato). A assinatura será preservada se estiver disponível no formato de destino.
 -   A desnormalização em um formato de intervalo inferior será convertida em uma representação normalizada no formato de intervalo superior se possível, ou então para uma representação desnormalizada no formato de intervalo superior se existir a representação desnormalizada. Se isso falhar, se o formato de intervalo superior não tiver uma representação desnormalizada, ela será convertida como 0. A assinatura será preservada se estiver disponível no formato de destino. Observe que os números flutuantes de 32 bits contam como um formato sem uma representação desnormalizada (porque as desnormalizações em operações em números flutuantes de 32 bits fluem para assinar 0 preservados).
 
 ## <a name="span-idintegerconversionspanspan-idintegerconversionspanspan-idintegerconversionspaninteger-conversion"></a><span id="Integer_Conversion"></span><span id="integer_conversion"></span><span id="INTEGER_CONVERSION"></span>Conversão de inteiro
@@ -79,7 +79,7 @@ Com inteiros, salvo indicação em contrário, todas as conversões de/para repr
 <tbody>
 <tr class="odd">
 <td align="left">SNORM</td>
-<td align="left">FLOAT</td>
+<td align="left">FLUTUANTE</td>
 <td align="left"><p>Dado um valor inteiro de n-bits que representa o intervalo assinado [-1,0f para 1,0f], a conversão para ponto flutuante é a seguinte.</p>
 <ul>
 <li>O valor mais negativo é mapeado para -1,0f. por exemplo, o valor de 5 bits 10000 é mapeado para -1,0f.</li>
@@ -87,7 +87,7 @@ Com inteiros, salvo indicação em contrário, todas as conversões de/para repr
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">FLOAT</td>
+<td align="left">FLUTUANTE</td>
 <td align="left">SNORM</td>
 <td align="left"><p>Dado um número de ponto flutuante, a conversão para um valor inteiro de n-bits representando o intervalo assinado [-1,0f para 1,0f], é a seguinte.</p>
 <ul>
@@ -106,16 +106,16 @@ Com inteiros, salvo indicação em contrário, todas as conversões de/para repr
 </tr>
 <tr class="odd">
 <td align="left">UNORM</td>
-<td align="left">FLOAT</td>
+<td align="left">FLUTUANTE</td>
 <td align="left"><p>O valor de n-bits inicial é convertido em flutuante (0,0f, 1,0f, 2,0f, etc.) e, em seguida, dividido por (2ⁿ-1).</p></td>
 </tr>
 <tr class="even">
-<td align="left">FLOAT</td>
+<td align="left">FLUTUANTE</td>
 <td align="left">UNORM</td>
 <td align="left"><p>Digamos que c represente o valor inicial.</p>
 <ul>
 <li>Se c for NaN, o resultado será 0.</li>
-<li>Se c &gt; 1.0f, incluindo INF, ele é vinculado a 1,0f.</li>
+<li>Se c &gt; 1,0f, incluindo INF, ele é vinculado a 1,0f.</li>
 <li>Se c &lt; 0,0f, incluindo -INF, ele é vinculado a 0,0f.</li>
 <li>Converter de escala de número flutuante em escala de números inteiros: c = c * (2ⁿ-1).</li>
 <li>Converter em números inteiros.
@@ -128,7 +128,7 @@ Com inteiros, salvo indicação em contrário, todas as conversões de/para repr
 </tr>
 <tr class="odd">
 <td align="left">SRGB</td>
-<td align="left">FLOAT</td>
+<td align="left">FLUTUANTE</td>
 <td align="left"><p>A conversão a seguir é a ideal de SRGB para FLOAT.</p>
 <ul>
 <li>Tome o valor inicial de n-bits, converta-o a um número flutuante (0,0f, 1,0f, 2,0f, etc.); chame isso de c.</li>
@@ -138,7 +138,7 @@ Com inteiros, salvo indicação em contrário, todas as conversões de/para repr
 <p>Essa conversão tem uma tolerância permitida do D3D<em>xx</em>_SRGB_TO_INTEGER_TOLERANCE_IN_ULP Unidade no último lugar (no lado SRGB).</p></td>
 </tr>
 <tr class="even">
-<td align="left">FLOAT</td>
+<td align="left">FLUTUANTE</td>
 <td align="left">SRGB</td>
 <td align="left"><p>A conversão a seguir é a ideal de FLOAT -&gt; SRGB.</p>
 <p>Supondo que o componente de cor SRGB do destino tenha n-bits:</p>
@@ -170,7 +170,7 @@ Com inteiros, salvo indicação em contrário, todas as conversões de/para repr
 <tr class="odd">
 <td align="left">SINT</td>
 <td align="left">UINT com mais bits</td>
-<td align="left"><p>Para converter de SINT em UINT com mais bits: Se negativo, o valor é vinculado como 0. Caso contrário, o número é copiado para os LSBs do formato destino e os MSB adicionais são preenchidos com 0.</p></td>
+<td align="left"><p>Para converter de SANTO UINT com os bits mais: Se for negativo, o valor será fixado como 0. Caso contrário, o número é copiado para os LSBs do formato destino e os MSB adicionais são preenchidos com 0.</p></td>
 </tr>
 <tr class="even">
 <td align="left">UINT</td>
@@ -187,7 +187,7 @@ Com inteiros, salvo indicação em contrário, todas as conversões de/para repr
 
  
 
-## <a name="span-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanfixed-point-integer-conversion"></a><span id="Fixed_Point_Integer_Conversion"></span><span id="fixed_point_integer_conversion"></span><span id="FIXED_POINT_INTEGER_CONVERSION"></span>Conversão de números inteiros de ponto fixo
+## <a name="span-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanfixed-point-integer-conversion"></a><span id="Fixed_Point_Integer_Conversion"></span><span id="fixed_point_integer_conversion"></span><span id="FIXED_POINT_INTEGER_CONVERSION"></span>Conversão de inteiro de ponto fixo
 
 
 Os inteiros de ponto fixo são simplesmente os inteiros de algum tamanho de bit que têm um ponto decimal implícito em um local fixo.
@@ -218,7 +218,7 @@ Representações de inteiro de ponto fixo são usadas de duas maneiras no Direct
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">FLOAT</td>
+<td align="left">FLUTUANTE</td>
 <td align="left">Inteiro de ponto fixo</td>
 <td align="left"><p>A seguir está o procedimento geral para converter um número de ponto flutuante n para um inteiro de ponto fixo inteiro i,f, onde i é o número de bits de números inteiros (assinados) e f é o número de bits fracionários.</p>
 <ul>
@@ -232,10 +232,10 @@ Representações de inteiro de ponto fixo são usadas de duas maneiras no Direct
 </tr>
 <tr class="even">
 <td align="left">Inteiro de ponto fixo</td>
-<td align="left">FLOAT</td>
+<td align="left">FLUTUANTE</td>
 <td align="left"><p>Suponha que a representação de ponto fixo específico sendo convertida em flutuante não contenha mais do que um total de 24 bits de informações, não mais de 23 bits dos quais está no componente fracionário. Suponha que um dado número de ponto fixo, fxp, esteja na forma de i,f (i bits de números inteiros, f bits fracionários). A conversão para flutuante é semelhante ao pseudocódigo a seguir.</p>
-<p>resultado flutuante = (flutuante) (fxp &gt; &gt; f) + / / extrair inteiro</p>
-((flutuante) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); extrair fração</td>
+<p>resultado flutuante= (flutuante) (fxp &gt;&gt; f) + //extrair inteiro</p>
+((float) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); / / extrair fração</td>
 </tr>
 </tbody>
 </table>

@@ -1,31 +1,31 @@
 ---
-Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
+Description: Este guia explica como configurar sua solução do Visual Studio para editar, depurar e empacotar o aplicativo da área de trabalho.
 Search.Product: eADQiWindows 10XVcnh
-title: Empacotar um aplicativo da área de trabalho usando o Visual Studio
+title: Empacotar um aplicativo de desktop usando o Visual Studio
 ms.date: 08/30/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ms.openlocfilehash: 04a16b5e824621b0e7f32c8cb012db326f591d48
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048253"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655961"
 ---
-# <a name="package-a-desktop-application-by-using-visual-studio"></a>Empacotar um aplicativo da área de trabalho usando o Visual Studio
+# <a name="package-a-desktop-application-by-using-visual-studio"></a>Empacotar um aplicativo de desktop usando o Visual Studio
 
-Você pode usar o Visual Studio para gerar um pacote para seu aplicativo da área de trabalho. Em seguida, você pode publicar esse pacote para a Microsoft Store ou carregue-lo em um ou mais computadores.
+Você pode usar o Visual Studio para gerar um pacote para seu aplicativo da área de trabalho. Em seguida, você pode publicar esse pacote para a Microsoft Store ou fazer sideload-lo em um ou mais computadores.
 
 A versão mais recente do Visual Studio fornece uma nova versão do projeto empacotamento que elimina todas as etapas manuais que costumavam ser necessárias para empacotar seu aplicativo. Basta adicionar um projeto de empacotamento, referenciar seu projeto de desktop e depois pressionar F5 para depurar seu aplicativo. Sem ajustes manuais. Essa nova experiência simplificada é uma grande melhoria em relação à experiência disponível na versão anterior do Visual Studio.
 
 >[!IMPORTANT]
->A capacidade de criar um pacote de aplicativo do Windows para seu aplicativo da área de trabalho (também conhecido como a ponte de Desktop) foi introduzida no Windows 10, versão 1607, e pode ser usada somente em projetos para atualização de aniversário do Windows 10 (10.0; Build 14393) ou uma versão posterior no Visual Studio.
+>A capacidade de criar um pacote de aplicativo do Windows para o seu aplicativo da área de trabalho (também conhecido como a ponte de Desktop) foi introduzida no Windows 10, versão 1607, e só pode ser usado em projetos que se destinam a atualização de aniversário do Windows 10 (10.0; Build 14393) ou uma versão posterior no Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Primeiro, prepare seu aplicativo
 
-Examine este guia antes de começar a criar um pacote para seu aplicativo: [preparar para empacotar um aplicativo da área de trabalho](desktop-to-uwp-prepare.md).
+Examine este guia antes de começar a criar um pacote para seu aplicativo: [Preparar para empacotar um aplicativo da área de trabalho](desktop-to-uwp-prepare.md).
 
 <a id="new-packaging-project"/>
 
@@ -58,13 +58,13 @@ Examine este guia antes de começar a criar um pacote para seu aplicativo: [prep
 
    ![Definir ponto de entrada](images/desktop-to-uwp/entry-point-set.png)
 
-6. Crie o projeto de empacotamento para garantir que nenhum erro apareça.  Se você receber erros, abra o **Gerenciador de configuração** e certifique-se de que seus projetos direcionados à mesma plataforma.
+6. Crie o projeto de empacotamento para garantir que nenhum erro apareça.  Se você receber erros, abra **Configuration Manager** e certifique-se de que seus projetos direcionados a mesma plataforma.
 
    ![Gerenciador de configuração](images/desktop-to-uwp/config-manager.png)
 
 7. Use o assistente [Criar pacotes de aplicativo](../packaging/packaging-uwp-apps.md) para gerar um arquivo appxupload.
 
-   Você pode carregar esse arquivo diretamente para a loja.
+   Você pode carregá-lo diretamente para a Store.
 
 **Vídeo**
 
@@ -73,7 +73,7 @@ Examine este guia antes de começar a criar um pacote para seu aplicativo: [prep
 
 ## <a name="next-steps"></a>Próximas etapas
 
-**Encontrar respostas para suas dúvidas**
+**Encontre respostas para suas perguntas**
 
 Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
@@ -83,9 +83,9 @@ Consulte [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows
 
 **Executar, depurar ou testar seu aplicativo da área de trabalho**
 
-Consulte [Executar, depurar e testar um aplicativo da área de trabalho empacotado](desktop-to-uwp-debug.md)
+Consulte [executar, depurar e testar um aplicativo da área de trabalho de pacote](desktop-to-uwp-debug.md)
 
-**Aprimorar seu aplicativo da área de trabalho ao adicionar APIs UWP**
+**Aprimore seu aplicativo da área de trabalho com a adição de APIs de UWP**
 
 Consulte [Aprimorar seu aplicativo da área de trabalho para Windows 10](desktop-to-uwp-enhance.md)
 
@@ -93,6 +93,6 @@ Consulte [Aprimorar seu aplicativo da área de trabalho para Windows 10](desktop
 
 Consulte [Estender seu aplicativo da área de trabalho com componentes UWP modernos](desktop-to-uwp-extend.md).
 
-**Distribua seu aplicativo**
+**Distribuir seu aplicativo**
 
-Consulte [distribuir um aplicativo da área de trabalho empacotado](desktop-to-uwp-distribute.md)
+Consulte [distribuir um aplicativo de área de trabalho do pacote](desktop-to-uwp-distribute.md)

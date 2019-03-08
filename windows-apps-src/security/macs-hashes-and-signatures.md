@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 6517241826d06b63fd88b45237552acffbdc62da
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922317"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651231"
 ---
 # <a name="macs-hashes-and-signatures"></a>MACs, hashes e assinaturas
 
@@ -27,7 +27,7 @@ A criptografia ajuda a impedir que pessoas não autorizadas leiam uma mensagem, 
 
 -   Bob e Alice compartilham uma chave secreta e concordaram em usar uma função MAC.
 -   Bob cria uma mensagem e a insere, juntamente com a chave secreta, em uma função MAC para recuperar um valor MAC.
--   Bob envia para Alice, por uma rede, a mensagem \[não criptografada\] e o valor MAC.
+-   Bob envia o \[não criptografado\] mensagem e o MAC valorizam Alice através de uma rede.
 -   Alice usa a chave secreta e a mensagem como entrada para a função MAC. Ela compara o valor MAC gerado com o valor MAC enviado por Bob. Se forem idênticos, significa que a mensagem não foi alterada em trânsito.
 
 Eva, que está secretamente atenta à conversa entre Bob e Alice, não pode manipular efetivamente a mensagem. Ela não tem acesso à chave privada e, portanto, não pode criar um valor MAC que faria a mensagem adulterada parecer legítima para Alice.
@@ -132,7 +132,7 @@ Uma função hash criptográfica assume um bloco de dados arbitrariamente longo 
 
 -   Bob e Alice compartilham uma chave secreta e concordaram em usar uma função MAC.
 -   Bob cria uma mensagem e a insere, juntamente com a chave secreta, em uma função MAC para recuperar um valor MAC.
--   Bob envia para Alice, por uma rede, a mensagem \[não criptografada\] e o valor MAC.
+-   Bob envia o \[não criptografado\] mensagem e o MAC valorizam Alice através de uma rede.
 -   Alice usa a chave secreta e a mensagem como entrada para a função MAC. Ela compara o valor MAC gerado com o valor MAC enviado por Bob. Se forem idênticos, significa que a mensagem não foi alterada em trânsito.
 
 Observe que Paula enviou uma mensagem não criptografada. Somente o hash foi criptografado. O procedimento garante somente que a mensagem original não foi alterada e, com o uso da chave pública de Alice, garante que o hash da mensagem foi assinado por alguém com acesso à chave particular de Alice, presumivelmente Alice.
@@ -185,7 +185,7 @@ public void SampleReusableHash()
 ## <a name="digital-signatures"></a>Assinaturas digitais
 
 
-As assinaturas digitais são as chaves públicas equivalentes aos códigos de autenticação de mensagens de chaves (MACs). Enquanto MACs utilizam chaves particulares para habilitar um destinatário de mensagem a verificar se uma mensagem não foi alterada durante a transmissão, as assinaturas usam um par de chaves particulares/públicas.
+As assinaturas digitais são as chaves públicas equivalentes aos códigos de autenticação de mensagens de chaves (MACs). Enquanto MACs utilizam chaves particulares para habilitar um destinatário de mensagem a verificar se uma mensagem não foi alterada durante a transmissão, as assinaturas usam um par de chaves privada/pública.
 
 Como a maioria das operações de assinaturas de chaves públicas, geralmente é mais eficiente assinar (criptografar) um hash de mensagem do que assinar a mensagem original. O remetente cria um hash de mensagem, assina e envia a assinatura e a mensagem (não criptografada). O destinatário calcula um hash sobre a mensagem, descriptografa a assinatura e compara a assinatura descriptografada com o valor hash. Se eles combinarem, o destinatário pode estar quase certo de que a mensagem está correta, de fato, veio do remetente e não foi alterada durante a transmissão.
 

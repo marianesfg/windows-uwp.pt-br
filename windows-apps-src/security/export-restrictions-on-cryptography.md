@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d445e5164d542a7e10f136a5fb238c575f35c2d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048806"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656011"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Restrições de exportação na criptografia
 
@@ -21,7 +21,7 @@ Use esta informação para determinar se seu aplicativo usa criptografia de form
 
 O Bureau of Industry and Security do Departamento de Comércio dos Estados Unidos regula a exportação de tecnologia que usa determinados tipos de criptografia. Todos os apps listados na Microsoft Store devem estar em conformidade com estas leis e regulamentações porque os arquivos do aplicativo podem ser armazenados nos Estados Unidos. Mesmo os aplicativos carregados por desenvolvedores de aplicativos de outros países/regiões para distribuição fora dos Estados Unidos devem estar em conformidade com essas regulamentações. Sendo assim, ao enviar um aplicativo para a Microsoft Store, todos os desenvolvedores devem garantir que seus apps não contenham tecnologia proibida por essas regulamentações.
 
-> **Observação**as informações fornecidas aqui fornecem algumas orientações, mas é sua responsabilidade, como desenvolvedor que publica aplicativos na Microsoft Store, certifique-se de que seu aplicativo esteja em conformidade com todas as leis e regulamentos aplicáveis.
+> **Observação**  as informações fornecidas aqui fornecem algumas diretrizes, mas é sua responsabilidade como o desenvolvedor do aplicativo que está publicando aplicativos em que a Microsoft Store para certificar-se de que seu aplicativo está em conformidade com todas as leis e regulamentações aplicáveis.
 
  
 
@@ -33,7 +33,7 @@ Para saber mais sobre os regulamentos EAR (Controle de exportações dos EUA) qu
 
 Primeiro, determine se seu aplicativo usa um tipo de criptografia controlado pelos regulamentos do Controle de exportação dos EUA. A questão inclui os exemplos mostrados nesta lista; mas lembre-se de que esta lista não inclui todos os aplicativos possíveis de criptografia.
 
-> **Importante**considere não apenas o código que você escreveu para seu aplicativo, mas também todas as bibliotecas de software, utilitários e componentes do sistema operacional que seu aplicativo inclui ou se vincula a.
+> **Importante**  considerar não apenas o código que você escreveu para seu aplicativo, mas também todas as bibliotecas de software, utilitários e componentes do sistema operacional que inclui ou contém links para o seu aplicativo.
 
 -   Qualquer uso de uma assinatura digital, como autenticação ou verificação de integridade
 -   Criptografia de dados ou arquivos que seu aplicativo usa ou acessa
@@ -51,7 +51,7 @@ Observe que alguns dos aplicativos de criptografia não são restritos. Estas s�
 
 -   Criptografia de senha
 -   Proteção contra cópia
--   Autenticação
+-   Authentication
 -   Gerenciamento de direitos digitais
 -   Usando assinaturas digitais
 

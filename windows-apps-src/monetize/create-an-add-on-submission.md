@@ -1,22 +1,22 @@
 ---
 ms.assetid: C09F4B7C-6324-4973-980A-A60035792EFC
-description: Use este método na API de envio da Microsoft Store para criar um novo envio de complemento para um aplicativo que está registrado para o Partner Center.
+description: Use esse método na API de envio a Microsoft Store para criar um novo envio de complemento para um aplicativo que está registrado para o Partner Center.
 title: Criar um envio de complemento
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de complemento, produto no app, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: fcc98252efb1157bc539b68656c96f7afec7104a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919312"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661701"
 ---
 # <a name="create-an-add-on-submission"></a>Criar um envio de complemento
 
 
-Use este método na API de envio da Microsoft Store para criar um novo envio de complemento (também conhecido como produto in-App ou IAP) para um aplicativo que está registrado à sua conta do Partner Center. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-an-add-on-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-an-add-on-submission.md) para inclusão e publicação.
+Use esse método na API de envio a Microsoft Store para criar um novo envio de complemento (também conhecido como no aplicativo produto ou IAP) para um aplicativo que é registrado em sua conta no Partner Center. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-an-add-on-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-an-add-on-submission.md) para inclusão e publicação.
 
 Para obter mais informações sobre como esse método se adapta ao processo de criação de um envio de complemento, usando a API de envio da Microsoft Store, consulte [Gerenciar envios de complemento](manage-add-on-submissions.md).
 
@@ -28,8 +28,8 @@ Para obter mais informações sobre como esse método se adapta ao processo de c
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
-* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-* Crie um complemento para um dos seus aplicativos. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o método de [criar um complemento](create-an-add-on.md) .
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
+* Crie um complemento para um dos seus aplicativos. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o [criar um complemento](create-an-add-on.md) método.
 
 ## <a name="request"></a>Solicitação
 
@@ -44,14 +44,14 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | Obrigatório. A ID da Loja do complemento para o qual você deseja criar um envio. A ID da loja está disponível no Partner Center e está incluído nos dados de resposta para solicitações para [criar um complemento](create-an-add-on.md) ou [obter detalhes de complemento](get-all-add-ons.md).  |
+| inAppProductId | cadeia de caracteres | Obrigatório. A ID da Loja do complemento para o qual você deseja criar um envio. A ID de Store está disponível no Partner Center e ele é incluído nos dados de resposta para solicitações para [criar um complemento](create-an-add-on.md) ou [obter detalhes de complemento](get-all-add-ons.md).  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -151,15 +151,15 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 400  | O envio não pôde ser criado porque a solicitação não é válida. |
-| 409  | O envio não pôde ser criado por causa do estado atual do aplicativo, ou o aplicativo usa um recurso do Partner Center [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | O envio de mensagens não pôde ser criado devido ao estado atual do aplicativo ou o aplicativo usa um recurso do Partner Center que está [atualmente não tem suporte da API de envio a Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Gerenciar envios de complemento](manage-add-on-submissions.md)
-* [Obter um envio de complemento](get-an-add-on-submission.md)
-* [Confirmar um envio de complemento](commit-an-add-on-submission.md)
-* [Atualizar um envio de complemento](update-an-add-on-submission.md)
+* [Obtenha um envio de complemento](get-an-add-on-submission.md)
+* [Confirmar envio um complemento](commit-an-add-on-submission.md)
+* [Atualizar uma apresentação de complemento](update-an-add-on-submission.md)
 * [Excluir um envio de complemento](delete-an-add-on-submission.md)
-* [Obter o status de um envio de complemento](get-status-for-an-add-on-submission.md)
+* [Obter o status de envio de um complemento](get-status-for-an-add-on-submission.md)

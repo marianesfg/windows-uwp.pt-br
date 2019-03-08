@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 208a61b565c0522d3e9ce88f3938f57dfa1fbddd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945191"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644841"
 ---
 # <a name="variable-photo-sequence"></a>Sequência de fotos variável
 
@@ -22,7 +22,7 @@ Este artigo mostra como capturar uma sequência de fotos variável que permite q
 Se você deseja capturar imagens em HDR, mas não deseja implementar seu próprio algoritmo de processamento, use a API [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) para utilizar os recursos HDR nativos do Windows. Para obter mais informações, consulte [Captura de fotos em HDR (High Dynamic Range)](high-dynamic-range-hdr-photo-capture.md).
 
 > [!NOTE] 
-> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
+> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que seu aplicativo já tenha uma instância do MediaCapture inicializada corretamente.
 
 ## <a name="set-up-your-app-to-use-variable-photo-sequence-capture"></a>Configurar seu aplicativo para usar a captura de sequência de fotos variável
 
@@ -40,7 +40,7 @@ Depois de iniciar seu [MediaCapture](capture-photos-and-video-with-mediacapture.
 
 [!code-cs[IsVPSSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetIsVPSSupported)]
 
-Obtenha um objeto [**FrameControlCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652548) a partir do controlador de sequência de fotos variável. Esse objeto tem uma propriedade para cada configuração que pode ser definida por quadro de uma sequência de fotos. São elas:
+Obtenha um objeto [**FrameControlCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652548) a partir do controlador de sequência de fotos variável. Esse objeto tem uma propriedade para cada configuração que pode ser definida por quadro de uma sequência de fotos. Como por exemplo:
 
 -   [**Exposição**](https://msdn.microsoft.com/library/windows/apps/dn652552)
 -   [**ExposureCompensation**](https://msdn.microsoft.com/library/windows/apps/dn652560)
@@ -94,7 +94,7 @@ Quando você terminar de capturar as sequências de fotos variáveis ou seu apli
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
-* [Captura básica de fotos, áudio e vídeo com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

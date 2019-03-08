@@ -7,11 +7,11 @@ keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, vincula�
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: bd4a1f6747ea68623039b7eac22ac08aaa15d9ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947738"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651371"
 ---
 # <a name="display-customers-in-a-list"></a>Exibir clientes em uma lista
 
@@ -32,8 +32,8 @@ Cada associação de dados tem duas partes:
 
 Para implementar uma associação de dados, é necessário adicionar código à fonte dos dados para a associação. Você também precisará adicionar uma ou duas extensões de marcação ao seu XAML para especificar as propriedades da fonte de dados. Veja a diferença chave entre os dois:
 
-* [**x: Bind**](../xaml-platform/x-bind-markup-extension.md) é fortemente tipada e gera código no tempo de compilação para melhorar o desempenho. x: Bind assume como padrão uma associação avulsa, que otimiza a exibição rápida de dados somente leitura que não mudam.
-* [**Binding**](../xaml-platform/binding-markup-extension.md) é fracamente tipada e montada no tempo de execução. Isso resulta em um desempenho inferior do que com o x:Bind. Em quase todos os casos, você deve usar x:Bind em vez de Associação. No entanto, é provável encontrar isso no código mais antigo. O padrão da associação é a transferência de dados unidirecional, a qual é otimizada para dados somente leitura que podem mudar na origem.
+* [**X:Bind** ](../xaml-platform/x-bind-markup-extension.md) é fortemente tipada e gera o código em tempo de compilação para melhorar o desempenho. x: Bind assume como padrão uma associação avulsa, que otimiza a exibição rápida de dados somente leitura que não mudam.
+* [**Associando** ](../xaml-platform/binding-markup-extension.md) é fracamente tipado e montados em tempo de execução. Isso resulta em um desempenho inferior do que com o x:Bind. Em quase todos os casos, você deve usar x:Bind em vez de Associação. No entanto, é provável encontrar isso no código mais antigo. O padrão da associação é a transferência de dados unidirecional, a qual é otimizada para dados somente leitura que podem mudar na origem.
 
 Recomendamos que você use **x:Bind** sempre que possível e mostraremos isso em trechos deste artigo. Para obter mais informações sobre as diferenças, consulte a [comparação de recursos de {x: Bind} e {Binding}](../data-binding/data-binding-in-depth.md#xbind-and-binding-feature-comparison).
 
@@ -104,9 +104,9 @@ Fique à vontade para consultar a documentação da [Exibição de Lista](../des
 
 Você exibiu clientes em uma lista, mas dados B = associação permite fazer muito mais. E se fosse possível editar os dados diretamente na interface do usuário? Para fazer isso, primeiro vamos falar sobre os três modos de associação de dados:
 
-* *Única*: essa associação de dados é ativada apenas uma vez e não reage às mudanças.
-* *Unidirecional*: essa associação de dados atualizará a interface do usuário com todas as alterações feitas na fonte de dados.
-* *Bidirecional*: essa associação de dados atualizará a interface do usuário com todas as alterações feitas na fonte de dados e também atualizará os dados com todas as alterações feitas na interface do usuário.
+* *Única*: Essa associação de dados seja ativada apenas uma vez e não reage a alterações.
+* *One-Way*: Essa associação de dados atualizará a interface do usuário com todas as alterações feitas à fonte de dados.
+* *Bidirecional*: Essa associação de dados atualiza a interface com todas as alterações feitas à fonte de dados e também atualizar os dados com todas as alterações feitas na interface do usuário.
 
 Se você seguiu os trechos de código anteriores, a associação feitas usa x: Bind e não especifica um modo, transformando-a em uma Associação única. Se você deseja editar seus Clientes diretamente da interface do usuário, é necessário alterá-la para uma Associação bidirecional para que as alterações dos dados sejam passadas para os objetos de Cliente. Para obter mais informações, consulte [Associação de dados em detalhes](../data-binding/data-binding-in-depth.md).
 
@@ -177,9 +177,9 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 
 | Tópico | Descrição |
 |-------|----------------|
-| [Vinculação de dados em detalhes](../data-binding/data-binding-in-depth.md) | Uma visão geral básica dos princípios de associação de dados |
-| [Visão geral da associação de dados](../data-binding/data-binding-quickstart.md) | Informações conceituais detalhadas sobre a associação de dados. |
-| [Modo de exibição de lista](../design/controls-and-patterns/listview-and-gridview.md) | Informações sobre como criar e configurar um ListView, incluindo a implementação de um **DataTemplate** |
+| [Associação de dados em camadas](../data-binding/data-binding-in-depth.md) | Uma visão geral básica dos princípios de associação de dados |
+| [Visão geral da vinculação de dados](../data-binding/data-binding-quickstart.md) | Informações conceituais detalhadas sobre a associação de dados. |
+| [Exibição de lista](../design/controls-and-patterns/listview-and-gridview.md) | Informações sobre como criar e configurar um ListView, incluindo a implementação de um **DataTemplate** |
 
 ## <a name="useful-code-samples"></a>Exemplos de código úteis
 

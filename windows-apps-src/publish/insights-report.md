@@ -1,34 +1,34 @@
 ---
-Description: The Insights report in Partner Center highlights significant changes about your apps.
+Description: O relatório de Insights no Partner Center realça alterações significativas sobre seus aplicativos.
 title: Relatório de insights
 ms.date: 10/31/2018
 ms.topic: article
-keywords: Windows 10, uwp, insight, tendência, anomalias, anomalias, alterações de dados
+keywords: Windows 10, uwp, insight, tendência, anomalias, anomalias, as alterações de dados
 ms.localizationpriority: medium
 ms.openlocfilehash: 95cb43c45731c88ec758806aef91c3d7d8f36ad6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943542"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661521"
 ---
 # <a name="insights-report"></a>Relatório de insights
 
 
-O relatório de **ideias** no [Partner Center](https://partner.microsoft.com/dashboard) realça alterações significativas (aumentos ou diminuições em uma métrica específica) que detectamos nos últimos 30 dias em suas aquisições, integridade, e/ou dados de uso. Isso permite que você obtenha uma rápida olhada mudanças importantes potencialmente sem precisar exibir todos os gráficos em cada um desses relatórios.
+O **Insights** de relatórios no [Partner Center](https://partner.microsoft.com/dashboard) realça alterações significativas (aumenta ou diminui em uma métrica específica) que foi detectado nos últimos 30 dias em sua aquisições, integridade e/ou uso dados. Isso permite que você obtenha uma visão geral de alterações potencialmente importantes sem precisar exibir todos os gráficos em cada um desses relatórios.
 
 > [!NOTE]
-> Dados neste relatório abrangem os últimos 30 dias. Você não pode selecionar um período de tempo diferente para este relatório.
+> Dados desse relatório abrangem os últimos 30 dias. Você não pode selecionar um período de tempo diferente para este relatório.
 
-O relatório classifica os dados em três guias: **aquisições**, **uso**e **integridade**. Para ver as percepções para uma dessas áreas, selecione a guia.
+O relatório classifica os dados em três guias: **Aquisições**, **Health**, e **uso**. Para ver insights para uma dessas áreas, selecione sua guia.
 
-Percepções são mostradas quando detectarmos uma alteração significativa em seus dados. Para cada insight, vamos mostrar o seguinte:
-- **Tipo de informação**: A área em que a informação foi detectada.
-- **Valor**: A métrica específica que alterado significativamente (ou **todos os** se a alteração se aplica a todo **tipo de informação**).
-- **Data**: A data em que identificamos a alteração. Essa data representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior.
-- **Impacto geral**: A porcentagem que o valor de aumento ou redução em sua base de clientes inteiro. Isso ajuda você a entender como amplo o impacto de uma determinada alteração pode ser, especialmente quando comparando-o com informações de porcentagem mostradas no **principais colaboradores.**
-- **Principais colaboradores**: se aplicável, o segmento específico, pacote ou outros fatores de identificação para ajudar a entender qual os clientes a alteração está relacionada à. Por exemplo, uma alteração pode ser detectada principalmente com os clientes de um mercado específico ou em um determinado tipo de dispositivo. Dados de **integridade,** isso pode incluir hashes de falha específicos ou versões do pacote. Onde for aplicável, também mostraremos a porcentagem que o valor de aumento ou redução para que o fator.
+Insights são mostradas quando detectamos uma alteração significativa nos dados. Para cada insight, vamos mostrar o seguinte:
+- **Tipo de Insight**: A área na qual o insight foi detectado.
+- **Valor**: A métrica específica que alterou significativamente (ou **todos os** se a alteração se aplica a todo **tipo de Insight**).
+- **Data**: A data em que nós identificamos que a alteração. Essa data representa o fim da semana em que foi detectado um aumento significativo ou diminuição em comparação comparada a semana anterior que.
+- **Em geral afeta**: A porcentagem que o valor aumentou ou diminuiu em sua base de todo o cliente. Isso ajuda você a entender como está difundido o impacto de uma determinada alteração pode ser, especialmente ao compará-lo a porcentagem informações exibidas na **principais colaboradores.**
+- **Principais colaboradores**: Se aplicável, o segmento específico, pacote ou outro fator de identificação para ajudar a entender quais clientes a alteração está relacionada ao. Por exemplo, pode ser detectada uma alteração principalmente com os clientes de um mercado específico ou em um determinado tipo de dispositivo. Para **integridade** dados, isso pode incluir os hashes de falha específicos ou versões do pacote. Quando aplicável, também mostraremos a porcentagem que o valor aumentado ou diminuído para que o fator.
 - **Ação**:
-   - Selecione **Mostrar tendência de 14 dias** para exibir um gráfico mostrando como a métrica alterada durante os todo 14 dias à data da informação.
-   - Selecione **Conte-nos se é preciso** envie seus comentários e conte se as informações que fornecemos parecem ser precisas. Seus comentários nos ajudarão a continuar a melhorar os dados que fornecemos aqui. 
+   - Selecione **tendência de 14 dias Show** para exibir um gráfico mostrando como a métrica é alterada nos 14 dias todos levam à data insight.
+   - Selecione **Conte-nos se isso é preciso** nos fornecer seus comentários e informe-nos se os insights que fornecemos parecem ser precisos. Esses comentários poderão nos ajudar a continuar a melhorar os dados que fornecemos aqui. 
 

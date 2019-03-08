@@ -1,5 +1,5 @@
 ---
-Description: This tutorial walks through how to create a basic application user interface. It explains and demonstrates the use of Grid and StackPanel, two of the most common XAML elements.
+Description: Este tutorial explica como criar uma interface do usuário de aplicativo básico. Ele explica e demonstra o uso de Grid e StackPanel, dois dos elementos XAML mais comuns.
 title: Use Grid e StackPanel para criar um aplicativo de clima simples.
 template: detail.hbs
 ms.date: 05/19/2017
@@ -8,20 +8,20 @@ keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b221220d417df5b70927984ac65eff93fae54a4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931245"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646531"
 ---
-# <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>Tutorial: Use Grid e StackPanel para criar um aplicativo de clima simples
+# <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>Tutorial: Use a grade e StackPanel para criar um aplicativo simples de clima
 
-Use XAML para criar o layout de um aplicativo de clima simples usando os elementos **Grid** e **StackPanel**. Com essas ferramentas que você pode criar apps com um visual excelente que funcionam em qualquer dispositivo que tenha o Windows 10 instalado. Este tutorial dura de 10 a 20 minutos.
+Use XAML para criar o layout de um app de clima simples usando os elementos **Grid** e **StackPanel**. Com essas ferramentas que você pode criar apps com um visual excelente que funcionam em qualquer dispositivo que tenha o Windows 10 instalado. Este tutorial dura de 10 a 20 minutos.
 
-> **APIs importantes**: [classe Grid](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid), [classe StackPanel](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.stackpanel)
+> **APIs importantes**: [Classe de grade](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid), [classe StackPanel](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 ## <a name="prerequisites"></a>Pré-requisitos
-- Windows 10 e Microsoft Visual Studio 2015 ou posterior. (Mais recente do Visual Studio para desenvolvimento atual e segurança atualizações recomendadas) [Clique aqui para aprender a preparar-se com o Visual Studio](../../get-started/get-set-up.md).
+- Windows 10 e Microsoft Visual Studio 2015 ou posterior. (Mais recente do Visual Studio para desenvolvimento atual e segurança atualizações recomendadas) [Clique aqui para saber como configurar o Visual Studio](../../get-started/get-set-up.md).
 - Conhecimento de como criar um app "Hello World" básico usando XAML e C#. Se você ainda não o tem, [clique aqui para saber como criar um aplicativo "Hello World"](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="step-1-create-a-blank-app"></a>Etapa 1: Criar um aplicativo em branco
@@ -49,13 +49,13 @@ Para começar a criar um layout, abra **MainPage. XAML** usando o **Gerenciador 
 </Grid>
 ```
 
-O novo **Grid** cria um conjunto de duas linhas e colunas, que define o layout da interface do app. A primeira coluna tem o valor **Width** de "3\*", enquanto a segunda tem "5\*", dividindo o espaço horizontal entre as duas colunas em uma proporção de 3:5. Da mesma forma, as duas linhas têm o valor **Height** de "2\*" e "\*" respectivamente, assim o elemento **Grid** aloca duas vezes mais espaço para a primeira linha do que para a segunda ("\*" é o mesmo que "1\*"). Essas proporções serão mantidas mesmo que a janela seja redimensionada ou o dispositivo seja alterado.
+O novo **Grid** cria um conjunto de duas linhas e colunas, que define o layout da interface do app. A primeira coluna tem um **largura** de "3\*", enquanto o segundo tem "5\*", dividindo o espaço horizontal entre as duas colunas em uma proporção de 3:5. Da mesma forma, as duas linhas têm uma **altura** de "2\*"e"\*", respectivamente, para que o **grade** aloca duas vezes mais espaço para a primeira linha como para a segunda ("\*"é o mesmo que" 1\*"). Essas proporções serão mantidas mesmo que a janela seja redimensionada ou o dispositivo seja alterado.
 
 Para saber mais sobre outros métodos de dimensionamento de linhas e colunas, consulte [Definir layouts com XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml#layout-properties).
 
 Se você executar o app agora, não verá nada além de uma página em branco, pois nenhuma das áreas de **Grid** tem conteúdo. Para mostrar o elemento **Grid** vamos dar a ele uma cor.
 
-## <a name="step-3-color-the-grid"></a>Etapa 3: Colorir o elemento Grid
+## <a name="step-3-color-the-grid"></a>Etapa 3: Cor da grade
 Para colorir o elemento **Grid**, adicionamos três elementos **Border**, cada um com uma cor de plano de fundo diferente. Cada um deles também é atribuído a uma linha e uma coluna no elemento **Grid** pai usando os atributos **Grid.Row** e **Grid.Column**. Os valores desses atributos têm o valor padrão 0, então você não precisa atribuí-los ao primeiro elemento **Border**. Adicione o código a seguir ao elemento **Grid** após as definições de linha e coluna.
 
 ```xml
@@ -103,7 +103,7 @@ Baixe a imagem abaixo e salve-a como um PNG denominado "parcialmente-nublado".
 
 ![Parcialmente nublado](images/partially-cloudy.PNG)
 
-No **Gerenciador de Soluções**, clique com o botão direito do mouse na pasta **Ativos** e selecione **Adicionar** -> **Item existente...** Encontre parcialmente-nublado.png no navegador que é aberto, selecione-o e clique em **Adicionar**.
+No **Gerenciador de soluções**, clique com botão direito do **ativos** pasta e selecione **Add** -> **Item existente...** Localizar cloudy.png parcialmente no navegador pop-up, selecione-o e clique em **adicionar**.
 
 Em seguida, em **MainPage.xaml**, adicione o elemento **Image** seguinte abaixo dos StackPanels da etapa 4.
 

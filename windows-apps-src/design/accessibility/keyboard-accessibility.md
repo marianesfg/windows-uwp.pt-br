@@ -1,5 +1,5 @@
 ---
-Description: If your app does not provide good keyboard access, users who are blind or have mobility issues can have difficulty using your app or may not be able to use it at all.
+Description: Se seu aplicativo não oferecer um bom acesso ao teclado, usuários cegos ou com problemas de mobilidade terão dificuldade para usá-lo ou não poderão usá-lo.
 ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: Acessibilidade do teclado
 label: Keyboard accessibility
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ad64c2a0d4d7569ec2c0c0a44f9236fc4b2819f
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045515"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602061"
 ---
 # <a name="keyboard-accessibility"></a>Acessibilidade do teclado  
 
@@ -93,7 +93,7 @@ XAML
 <span id="keyboard_shortcuts"/>
 <span id="KEYBOARD_SHORTCUTS"/>
 
-## <a name="keyboard-shortcuts"></a>Atalhos do teclado  
+## <a name="keyboard-shortcuts"></a>Atalhos de teclado  
 Além de implementar a navegação pelo teclado e ativação para o seu aplicativo, é recomendável implementar atalhos para a funcionalidade do seu aplicativo. A navegação por tabulação fornece um bom nível básico de suporte ao teclado, mas com formulários complexos, você poderia desejar adicionar suporte às teclas de atalho também. Isso pode tornar o seu aplicativo mais eficiente para usar, mesmo para as pessoas que usam dispositivos de teclado e de ponteiro.
 
 Um *atalho* é uma combinação de teclas que aumenta a produtividade, fornecendo uma maneira eficiente de o usuário acessar a funcionalidade do aplicativo. Existem dois tipos de atalho:
@@ -175,7 +175,7 @@ Geralmente, você implementa a manipulação de chave personalizada para control
 ## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>Um exemplo do estado visual de um indicador de foco  
 Mencionamos anteriormente que qualquer controle personalizado que habilita o usuário a focá-lo deve ter um indicador de foco visual. Normalmente esse indicador de foco é tão simples quanto desenhar uma forma de retângulo imediatamente ao redor do retângulo delimitador normal do controle. O [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) de foco visual é um elemento de par no restante da composição do controle em um modelo de controle, mas é definido inicialmente com um [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) valor de **Collapsed** porque o controle não tem foco ainda. Depois, quando o controle obtém o foco, é invocado um estado visual que define especificamente a **Visibility** do foco visual como **Visible**. Depois que o foco é movido para outro lugar, outro estado visual é chamado, e a **Visibility** se torna **Collapsed**.
 
-Todos os controles XAML padrão exibem um indicador de foco visual adequado quando estão em foco (se puderem ser focalizados). Há também aparências potencialmente diferentes dependendo do tema escolhido do usuário (principalmente se o usuário estiver usando um modo de alto contraste.) Se estiver usando os controles XAML em sua interface do usuário e não substituir os modelos de controle, você não precisa fazer nada mais para obter os indicadores de foco visual nos controles que se comportam e exibem corretamente. Mas se você pretende criar um novo modelo para um controle ou se tiver curiosidade para saber como os controles XAML fornecem os indicadores de foco visual, o restante desta seção explica como isso é feito no XAML e na lógica de controle.
+Todos os controles XAML padrão exibem um indicador de foco visual adequado quando estão em foco (se puderem ser focalizados). Também há aparências potencialmente diferentes dependendo do tema selecionado do usuário (especialmente se o usuário estiver usando um modo de alto contraste). Se você estiver usando os controles XAML em sua interface do usuário e não substituir os modelos de controle, você não precisa fazer nada adicional para obter os indicadores de foco visual em controles que se comportam e exibem corretamente. Mas se você pretende criar um novo modelo para um controle ou se tiver curiosidade para saber como os controles XAML fornecem os indicadores de foco visual, o restante desta seção explica como isso é feito no XAML e na lógica de controle.
 
 Aqui estão alguns exemplos de XAML provenientes do modelo XAML padrão para um [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265).
 
@@ -247,7 +247,7 @@ Os atalhos do teclado não são normalmente relevantes para os aplicativos no Wi
 
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [Acessibilidade](accessibility.md)
-* [Interações por teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607)
-* [Amostra de teclado virtual](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Amostra de acessibilidade XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Interações de teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607)
+* [Exemplo de teclado de toque](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
+* [Exemplo de acessibilidade do XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 

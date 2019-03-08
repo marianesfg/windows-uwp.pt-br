@@ -1,5 +1,5 @@
 ---
-Description: Use the reposition animation to move an element or elements into a new position.
+Description: Use a animação de reposicionamento para mover um elemento ou vários para uma nova posição.
 title: Animações de reposicionamento em aplicativos UWP
 ms.assetid: 25D1EE31-5C25-4F21-B34C-FBD8FB1C8FFF
 label: Motion--Reposition
@@ -9,19 +9,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e2a96169f44802c62f341029b9bc1c5eb7e31de
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920466"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57647721"
 ---
 # <a name="reposition-animations"></a>Animações de reposicionamento
 
 
 
-Use a animação de reposicionamento para mover um ou vários elementos para uma nova posição.
+Use a animação de reposicionamento para mover um elemento ou vários para uma nova posição.
 
-> **APIs importantes**: [**classe RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210421), [**classe RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210429)
+> **APIs importantes**: [**Classe RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210421), [ **RepositionThemeTransition classe**](https://msdn.microsoft.com/library/windows/apps/br210429)
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
@@ -32,8 +32,8 @@ Use a animação de reposicionamento para mover um ou vários elementos para uma
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Animando reposições](https://msdn.microsoft.com/library/windows/apps/xaml/jj649434)
-* [Guia de início rápido: animando sua interface do usuário usando animações da biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Animando reposiciona](https://msdn.microsoft.com/library/windows/apps/xaml/jj649434)
+* [Guia de início rápido: Animando sua interface do usuário usando animações de biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Classe RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210421)
 * [**Classe RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210429)
 

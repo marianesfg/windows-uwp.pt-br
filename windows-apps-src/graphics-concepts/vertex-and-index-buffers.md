@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d2ea6ce4060957ade5dd1007389be51176440f04
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936321"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593571"
 ---
 # <a name="vertex-and-index-buffers"></a>Buffers de vértice e índice
 
 
-Os *buffers de vértice* são buffers de memória que contêm dados de vértice; vértices em um buffer de vértice são processados para executar a transformação, iluminação e corte. Os *buffers de índice* são buffers de memória que contêm dados de índice, que são deslocamentos de inteiro em buffers de vértice, usados para renderizar primitivos.
+Os *buffers de vértice* são buffers de memória que contêm dados de vértice; vértices em um buffer de vértice são processados para executar a transformação, iluminação e corte. *Buffers de índice* são buffers de memória que contêm dados de índice, que são deslocamentos de inteiro em buffers de vértice usados para renderizar primitivas.
 
 Os buffers de vértice podem conter qualquer tipo de vértice - transformado ou não transformado, aceso ou apagado - que pode ser renderizado. Você pode processar os vértices de um buffer de vértice para realizar operações como transformação, iluminação ou gerar sinalizadores de recorte. A transformação sempre é executada.
 
@@ -54,7 +54,7 @@ A flexibilidade dos buffers de vértice os torna pontos de preparo ideais para a
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Guia de aprendizagem de Gráficos do Direct3D](index.md)
+[Guia de aprendizado de gráficos do Direct3D](index.md)
 
  
 

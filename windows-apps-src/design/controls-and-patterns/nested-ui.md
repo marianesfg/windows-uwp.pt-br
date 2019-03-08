@@ -1,5 +1,5 @@
 ---
-Description: Use nested UI to enable multiple actions on a list item
+Description: Usar interface do usuário aninhada para permitir várias ações em um item de lista
 title: Interface do usuário aninhada em itens de lista
 label: Nested UI in list items
 template: detail.hbs
@@ -12,11 +12,11 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8edb38b8ae91d836e283a8eb37830850bf504db4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929099"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661301"
 ---
 # <a name="nested-ui-in-list-items"></a>Interface do usuário aninhada em itens de lista
 
@@ -26,7 +26,7 @@ Interface do usuário aninhada é uma interface do usuário (IU) que expõe cont
 
 Você pode usar a interface do usuário aninhada para apresentar ao usuário opções adicionais que ajudam a acelerar a execução de ações importantes. No entanto, quanto mais ações você expõe, mais complicada sua interface do usuário se torna. Você precisa tomar mais cuidado ao optar por usar esse padrão de interface do usuário. Este artigo fornece diretrizes para ajudar você a determinar o melhor curso de ação para sua interface do usuário específica.
 
-> **APIs importantes**: [classe ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [classe GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
+> **APIs importantes**: [Classe ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [classe GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
 
 Neste artigo, vamos falar sobre a criação da interface do usuário aninhada em itens [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) e [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx). Embora esta seção não fale sobre outros casos de interface do usuário aninhada, esses conceitos são transferíveis. Antes de começar, você deve estar familiarizado com as diretrizes gerais para usar controles ListView ou GridView em sua interface do usuário, que são encontradas nos artigos [Listas](lists.md) e [Exibição de lista e exibição de grade](listview-and-gridview.md).
 

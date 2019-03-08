@@ -1,5 +1,5 @@
 ---
-Description: When you publish an update to a submission, you can choose to gradually roll out the updated packages to a percentage of your app’s customers on Windows 10.
+Description: Quando você publica uma atualização para um envio, pode optar por distribuir gradualmente os pacotes atualizados para um percentual de clientes do seu aplicativo no Windows 10.
 title: Distribuição de pacote gradual
 ms.date: 10/31/2018
 ms.topic: article
@@ -7,15 +7,15 @@ keywords: windows 10, uwp
 ms.assetid: 65d578a6-4e26-484c-90af-b2cd916f3634
 ms.localizationpriority: medium
 ms.openlocfilehash: cada2da4b587340f38901f9a4ec5504d9d3c57de
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927803"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645121"
 ---
 # <a name="gradual-package-rollout"></a>Distribuição de pacote gradual
 
-Quando você publica uma atualização para um envio, você pode optar por distribuir gradualmente os pacotes atualizados para um percentual de clientes do seu aplicativo no Windows 10 (incluindo o Xbox). Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode aumentar a porcentagem (ou parar a atualização) a qualquer tempo sem precisar criar um novo envio. 
+Quando você publica uma atualização em um envio, você pode optar por distribuir gradualmente os pacotes atualizados para uma porcentagem de clientes do seu aplicativo no Windows 10 (incluindo Xbox). Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode aumentar a porcentagem (ou parar a atualização) a qualquer tempo sem precisar criar um novo envio. 
 
 > [!IMPORTANT]
 > Suas seleções de distribuição se aplicam a todos os pacotes, mas se aplicarão somente aos clientes que executam versões do sistema operacional compatíveis com pacotes de pré-lançamento (Windows.Desktop build 10586 ou posterior, Windows.Mobile build 10586.63 ou posterior e Xbox), incluindo os clientes que obtêm o aplicativo via [Licenciamento gerenciado pela Loja (online)](organizational-licensing.md) através da [Microsoft Store para Empresas](https://businessstore.microsoft.com/store) ou da [Microsoft Store para Educação](https://educationstore.microsoft.com/store). Ao usar a distribuição de pacote gradual, os clientes em versões anteriores do sistema operacional não receberão pacotes do envio mais recente até finalizar a distribuição de pacote, conforme descrito a seguir.

@@ -5,11 +5,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 8b8828b060e0401e7938517e497bae20e1234baf
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927482"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645671"
 ---
 # <a name="http-monitor-api-reference"></a>Referência de API do monitor de HTTP   
 Você pode acessar o tráfego HTTP em tempo real para o aplicativo focado usando essa API se o monitor HTTP tiver sido habilitado no console do Xbox, marcando a caixa na Dev Home.
@@ -24,17 +24,17 @@ Método      | URI da solicitação
 :------     | :-----
 GET | /ext/httpmonitor/sessions
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
-- Nenhum(a)
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Resposta**   
 Um objeto JSON com os seguintes campos:
@@ -60,17 +60,17 @@ Método      | URI da solicitação
 :------     | :-----
 Websocket | /ext/httpmonitor/sessions
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
-- Nenhum(a)
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Resposta**   
 Um objeto JSON com os seguintes campos:

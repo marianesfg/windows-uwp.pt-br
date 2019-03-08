@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, entrada, controlador de jogo bruto
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5f4d49ad49cf9f9065fe17788456e9dd2a4a4e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946792"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644621"
 ---
 # <a name="raw-game-controller"></a>Controlador de jogo bruto
 
@@ -231,10 +231,10 @@ if ((oppositeSquared + adjacentSquared) < deadzoneSquared)
 
 The [RawGameControllerUWP sample (GitHub)](TODO: Link) demonstrates how to use raw game controllers. TODO: More information-->
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-* [Entrada para jogos](input-for-games.md)
-* [Práticas de entrada para jogos](input-practices-for-games.md)
+* [A entrada para jogos](input-for-games.md)
+* [Práticas recomendadas de entrada para jogos](input-practices-for-games.md)
 * [Namespace Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)
 * [Classe Windows.Gaming.Input.RawGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.rawgamecontroller)
 * [Interface Windows.Gaming.Input.IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)

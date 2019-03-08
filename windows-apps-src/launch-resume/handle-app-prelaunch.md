@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 11f68d9dd912c92ff7de8b861f576e8f0c4b4dde
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925800"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658701"
 ---
 # <a name="handle-app-prelaunch"></a>Tratar a pré-inicialização do aplicativo
 
@@ -19,9 +19,9 @@ Saiba como manipular a pré-inicialização de aplicativos substituindo o métod
 
 ## <a name="introduction"></a>Introdução
 
-Quando os recursos do sistema disponíveis permitirem, o desempenho de inicialização de aplicativos UWP em dispositivos da família de dispositivos de desktop é melhorado iniciando-se proativamente os aplicativos mais usados do usuário em segundo plano. Um aplicativo pré-lançado é colocado no estado suspenso pouco depois de ser iniciado. Depois, quando o usuário invoca o aplicativo, o aplicativo é retomado com a saída do estado suspenso para o estado em execução – que é mais rápido do que iniciar o aplicativo a frio. A experiência do usuário é que o aplicativo simplesmente iniciou muito rapidamente.
+Ao permitir que os recursos de sistema disponíveis, o desempenho da inicialização de aplicativos UWP em dispositivos de família do dispositivo de desktop é aprimorado iniciando proativamente os aplicativos do usuário usados com mais frequência em segundo plano. Um aplicativo pré-lançado é colocado no estado suspenso pouco depois de ser iniciado. Depois, quando o usuário invoca o aplicativo, o aplicativo é retomado com a saída do estado suspenso para o estado em execução – que é mais rápido do que iniciar o aplicativo a frio. A experiência do usuário é que o aplicativo simplesmente iniciou muito rapidamente.
 
-Antes do Windows 10, os aplicativos não usufruíam automaticamente de pré-inicialização. No Windows 10, versão 1511, todos os aplicativos da plataforma Universal do Windows (UWP) eram candidatos para serem pré-inicializados. No Windows 10, versão 1607, você deve ativar o comportamento de pré-inicialização chamando [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx). Um bom lugar para colocar essa chamada é em `OnLaunched()`, perto do local em que a verificação `if (e.PrelaunchActivated == false)` feita.
+Antes do Windows 10, os aplicativos não usufruíam automaticamente de pré-inicialização. No Windows 10, versão 1511, todos os aplicativos da plataforma Universal do Windows (UWP) eram candidatos para sendo pré-inicializado. No Windows 10, versão 1607, você deve ativar o comportamento de pré-inicialização chamando [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx). Um bom lugar para colocar essa chamada é em `OnLaunched()`, perto do local em que a verificação `if (e.PrelaunchActivated == false)` feita.
 
 A pré-inicialização do aplicativo depende de recursos do sistema. Se o sistema estiver enfrentando pressão dos recursos, os aplicativos não serão pré-inicializados.
 
@@ -35,7 +35,7 @@ Assim que é pré-inicializado, um aplicativo entra no estado suspenso. (Consult
 
 ## <a name="detect-and-handle-prelaunch"></a>Detectar e manipular a pré-inicialização
 
-Os aplicativos recebem o sinalizador [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) durante a ativação. Use esse sinalizador para executar o código que deve executar somente quando o usuário inicia explicitamente o aplicativo, conforme mostrado na seguinte a modificação [**Application. OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
+Os aplicativos recebem o sinalizador [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) durante a ativação. Use esse sinalizador para executar o código execute somente quando o usuário explicitamente inicia o aplicativo, como mostra a seguinte modificação [ **Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -110,9 +110,9 @@ private void TryEnablePrelaunch()
 }
 ```
 
-Observe o `TryEnablePrelaunch()` funcionar, acima. O motivo pelo qual a chamada para `CoreApplication.EnablePrelaunch()` é acrescentado fora para essa função é como quando um método é chamado, o JIT (apenas na compilação) tentará compilar todo o método. Se seu aplicativo é executado em uma versão do Windows 10 que não dá suporte a `CoreApplication.EnablePrelaunch()`, em seguida, o JIT falhará. Analisando a chamada para um método que é chamado apenas quando o aplicativo determina que a plataforma oferece suporte a `CoreApplication.EnablePrelaunch()`, podemos evitar esse problema.
+Observação o `TryEnablePrelaunch()` funcionar, acima. O motivo pelo qual a chamada para `CoreApplication.EnablePrelaunch()` é fatorada out para essa função é como quando um método é chamado, o JIT (just-in-compilação) tentará compilar todo o método. Se o aplicativo é executado em uma versão do Windows 10 que não dá suporte a `CoreApplication.EnablePrelaunch()`, em seguida, o JIT falhará. Criando-se a chamada em um método que é chamado apenas quando o aplicativo determina que a plataforma oferece suporte a `CoreApplication.EnablePrelaunch()`, podemos evitar esse problema.
 
-Há também código no exemplo acima que você remova se seu aplicativo precisa recusar de pré-inicialização quando executado no Windows 10, versão 1511. Na versão 1511, todos os aplicativos UWP foram aceitou automaticamente em pré-inicialização, que pode não ser apropriado para seu aplicativo.
+Há também código no exemplo acima que você pode remover o comentário se seu aplicativo precisa para recusar o pré-lançamento quando em execução no Windows 10, versão 1511. Na versão 1511, todos os aplicativos UWP foram aceitos automaticamente em pré-lançamento, que pode não ser apropriada para seu aplicativo.
 
 ## <a name="use-the-visibilitychanged-event"></a>Usar o evento VisibilityChanged
 
@@ -203,7 +203,7 @@ Se seu aplicativo WinJS direciona uma versão anterior do Windows 10, você pode
     -   Um exemplo de implicação de desempenho é que você poderá aguardar até o usuário alternar para o aplicativo a fim de recuperar as informações de clima atuais, em vez de carregá-las quando o aplicativo é pré-inicializado e, depois, recarregá-las quando o aplicativo ficar visível, para garantir que as informações estejam atualizadas.
 -   Caso o aplicativo limpe o Bloco Dinâmico quando iniciado, adie isso até o evento de visibilidade alterada.
 -   A telemetria do aplicativo deve distinguir ativações de bloco normais e ativações de pré-lançamento para facilitar a limitação do cenário se problemas ocorrerem.
--   Se você tiver o Microsoft Visual Studio2015 atualização 1 e o Windows 10, versão 1511, você pode simular a pré-inicialização do seu aplicativo no Visual Studio2015 escolhendo **Depurar** &gt; **Outros destinos de depuração** &gt; **Depurar aplicativo Universal do Windows Pré-inicialização**.
+-   Se você tiver o Microsoft Visual Studio 2015 atualização 1 e Windows 10, versão 1511, você pode simular o pré-lançamento para o aplicativo de seu aplicativo no Visual Studio 2015 escolhendo **Debug** &gt; **outros destinos de depuração** &gt; **Depurar o aplicativo Universal do Windows o pré-lançamento**.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

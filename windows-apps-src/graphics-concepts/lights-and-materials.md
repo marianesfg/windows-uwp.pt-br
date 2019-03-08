@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 012b0bae7c0abdacba352a3e8f60bcfd0aa1dd54
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935207"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646321"
 ---
 # <a name="lighting"></a>Iluminação
 
 
 As luzes são usadas para iluminar objetos em uma cena. A cor de cada vértice de objeto tem por base o mapa de textura atual, as cores do vértice e as fontes de iluminação.
 
-**Observação**  esta seção é apenas para o pipeline de funções fixas. Os sombreadores programáveis executam toda a iluminação de modo explícito.
+**Observação**    desta seção é apenas para o pipeline de função fixa. Os sombreadores programáveis executam toda a iluminação de modo explícito.
 
  
 
@@ -51,7 +51,7 @@ As luzes são usadas para iluminar objetos em uma cena. A cor de cada vértice d
 <td align="left"><p>As propriedades de luz descrevem o tipo (ponto, direcional, destaque), a atenuação, a cor, a direção, a posição e o intervalo da fonte de luz.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="mathematics-of-lighting.md">Matemática de iluminação</a></p></td>
+<td align="left"><p><a href="mathematics-of-lighting.md">Cálculos de iluminação</a></p></td>
 <td align="left"><p>O modelo de luz do Direct3D abrange a iluminação ambiente, difusa, especular e de emissão. Isso é flexibilidade suficiente para solucionar problemas de uma diversas situações de iluminação. A quantidade total de luz em uma cena é chamada de <em>iluminação global</em>.</p></td>
 </tr>
 </tbody>
@@ -62,7 +62,7 @@ As luzes são usadas para iluminar objetos em uma cena. A cor de cada vértice d
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Guia de aprendizagem de Gráficos do Direct3D](index.md)
+[Guia de aprendizado de gráficos do Direct3D](index.md)
 
  
 

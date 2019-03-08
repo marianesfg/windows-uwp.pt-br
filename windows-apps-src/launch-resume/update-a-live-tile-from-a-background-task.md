@@ -5,18 +5,18 @@ Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
 ms.date: 01/11/2018
 ms.topic: article
-keywords: Windows 10, uwp, tarefa em segundo plano
+keywords: o Windows 10, uwp, tarefas em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: e3c087bac5e166a22098482e5ffe213e3bdce9d6
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114452"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650531"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>Atualizar um bloco dinâmico de uma tarefa em segundo plano
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
 -   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
@@ -152,7 +152,7 @@ Para configurar o manifesto do pacote, abra-o e adicione uma nova declaração d
 6.  Clique ou toque na guia **Interface de Usuário do Aplicativo**.
 7.  Defina **Notificações de tela de bloqueio** como **Notificação e Texto de Bloco**.
 8.  Defina um caminho como um ícone de 24 x 24 pixels no campo **Logotipo de notificação** .
-    **Importante**esse ícone deve usar apenas pixels monocromáticos e transparentes.
+    **Importante**  esse ícone deve usar apenas os pixels monocromáticos e transparentes.
 9.  No campo **Logotipo pequeno**, defina um caminho como um ícone de 30 x 30 pixels.
 10. No campo **Logotipo largo** , defina um caminho como um ícone de 310 x 150 pixels.
 
@@ -161,7 +161,7 @@ Para configurar o manifesto do pacote, abra-o e adicione uma nova declaração d
 
 Crie um [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) para registrar a tarefa.
 
-> **Observação**a partir do Windows 8.1, parâmetros de registro de tarefa em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Seu aplicativo deve ser capaz de manipular cenários em que o registro de tarefas em segundo plano apresenta falha, por exemplo, use uma instrução condicional para verificar se há erros de registro e tente novamente o registro com falha usando valores de parâmetros diferentes.
+> **Observação**  a partir do Windows 8.1, parâmetros de registro de tarefa em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Seu aplicativo deve ser capaz de manipular cenários em que o registro de tarefas em segundo plano apresenta falha, por exemplo, use uma instrução condicional para verificar se há erros de registro e tente novamente o registro com falha usando valores de parâmetros diferentes.
  
 
 Na página principal de seu aplicativo, adicione o método **RegisterBackgroundTask** e chame-o no manipulador de eventos **OnNavigatedTo**.
@@ -259,7 +259,7 @@ Para depurar a tarefa em segundo plano, defina um ponto de interrupção no mét
 * [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
 * [**TileUpdateManager**](https://msdn.microsoft.com/library/windows/apps/br208622)
 * [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616)
-* [Torne seu aplicativo compatível com tarefas em segundo plano](support-your-app-with-background-tasks.md)
+* [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md)
 * [Diretrizes e lista de verificação de blocos e notificações](https://msdn.microsoft.com/library/windows/apps/hh465403)
 
  

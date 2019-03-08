@@ -8,11 +8,11 @@ keywords: windows 10, uwp, barra de título
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 88c613456525648883735850fe831cb3b67f145c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923446"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648811"
 ---
 # <a name="title-bar-customization"></a>Personalização da barra de título
 
@@ -20,7 +20,7 @@ ms.locfileid: "8923446"
 
 Quando seu aplicativo é executado em uma janela da área de trabalho, você pode personalizar as barras de título para corresponder a personalidade do seu aplicativo. Os APIs de personalização da barra de título permitem que você especifique cores para elementos da barra de título, ou estenda o conteúdo do seu aplicativo para a área da barra de título e assuma o controle total dele.
 
-> **APIs importantes**: [Propriedade ApplicationView.TitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview), [Classe ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [Classe CoreApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
+> **APIs importantes**: [Propriedade ApplicationView.TitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview), [classe ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [CoreApplicationViewTitleBar classe](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
 
 ## <a name="how-much-to-customize-the-title-bar"></a>Quanto para personalizar a barra de título
 
@@ -166,7 +166,7 @@ Você pode desenhar conteúdo sob a área de controle de legenda definida por es
 
 Você pode manipular o evento [LayoutMetricsChanged](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.LayoutMetricsChanged) para responder a alterações no tamanho dos botões de legenda. Por exemplo, isso pode acontecer quando o botão Voltar do sistema é mostrado ou ocultado. Manipule esse evento para verificar e atualizar o posicionamento dos elementos de interface do usuário que dependem do tamanho da barra de título.
 
-Este exemplo mostra como ajustar o layout de sua barra de título para levar em conta alterações como o botão Voltar do sistema sendo mostrado ou ocultado. `AppTitleBar`, `LeftPaddingColumn` e `RightPaddingColumn` são declarados no XAML mostrado anteriormente.
+Este exemplo mostra como ajustar o layout de sua barra de título para levar em conta alterações como o botão Voltar do sistema sendo mostrado ou ocultado. `AppTitleBar`, `LeftPaddingColumn`, e `RightPaddingColumn` são declarados no XAML mostrado anteriormente.
 
 ```csharp
 private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sender, object args)
@@ -275,7 +275,7 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 ```
 
 >[!NOTE]
->O modo _Tela inteira_ pode ser inserido somente se suportado por seu aplicativo. Consulte [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode) para obter mais informações. [_Modo Tablet_](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) é uma opção de usuário em hardware com suporte, portanto, um usuário pode optar por executar qualquer aplicativo no modo tablet.
+>O modo _Tela inteira_ pode ser inserido somente se suportado por seu aplicativo. Consulte [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode) para obter mais informações. [_Modo Tablet_ ](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) é uma opção de usuário em um hardware com suporte, para que um usuário pode optar por executar qualquer aplicativo no modo tablet.
 
 ## <a name="full-customization-example"></a>Exemplo de personalização completa
 
@@ -381,5 +381,5 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Acrílico](../style/acrylic.md)
+- [Tinta acrílica](../style/acrylic.md)
 - [Cor](../style/color.md)

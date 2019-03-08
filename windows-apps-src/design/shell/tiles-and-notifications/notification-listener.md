@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use Notification Listener to access all of the user's notifications.
+Description: Saiba como usar o ouvinte de notificação para acessar todas as notificações do usuário.
 title: Ouvinte de notificação
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Chaseable tiles
@@ -9,21 +9,21 @@ ms.topic: article
 keywords: windows 10, uwp, ouvinte de notificação, usernotificationlistener, documentação, notificações de acesso
 ms.localizationpriority: medium
 ms.openlocfilehash: de1032eb3d0d364a62beff0a1af8f84240c11d87
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942258"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649611"
 ---
-# <a name="notification-listener-access-all-notifications"></a>Ouvinte de notificação: acessar todas as notificações
+# <a name="notification-listener-access-all-notifications"></a>Ouvinte da notificação: Acessar todas as notificações
 
-O ouvinte de notificação fornece acessar às notificações de um usuário. Os smartwatches e outros dispositivos acessórios podem usar o ouvinte de notificação para enviar as notificações do telefone ao dispositivo acessório. Aplicativos de automação doméstica podem usar o ouvinte de notificação para executar ações específicas quando as notificações forem recebidas, como fazer que as luzes piscarem quando você receber uma chamada. 
+O ouvinte de notificação fornece acessar às notificações de um usuário. Os smartwatches e outros dispositivos acessórios podem usar o ouvinte de notificação para enviar as notificações do telefone ao dispositivo acessório. Aplicativos de automação doméstica podem usar o ouvinte da notificação para executar ações específicas quando as notificações são recebidas, como transformar que as luzes piscam quando você receber uma chamada. 
 
 > [!IMPORTANT]
-> **Requer Atualização de Aniversário**: você precisa usar o SDK 14393 e estar executando o build 14393 ou posterior para usar o ouvinte de notificação.
+> **Requer a atualização de aniversário do**: Você deve ter como destino do SDK do 14393 e executar o build 14393 ou superior para usar o ouvinte de notificação.
 
 
-> **APIs importantes**: [UserNotificationListener class](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.Management.UserNotificationListener), [UserNotificationChangedTrigger class](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.UserNotificationChangedTrigger)
+> **APIs importantes**: [Classe UserNotificationListener](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.Management.UserNotificationListener), [UserNotificationChangedTrigger classe](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.UserNotificationChangedTrigger)
 
 
 ## <a name="enable-the-listener-by-adding-the-user-notification-capability"></a>Habilitar o ouvinte adicionando a funcionalidade de notificação do usuário 
@@ -91,7 +91,7 @@ switch (accessStatus)
 }
 ```
 
-O usuário pode revogar o acesso a qualquer momento por meio das Configurações do Windows. Portanto, seu aplicativo sempre deve verificar o status do acesso por meio do método [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) antes de executar o código que usa o ouvinte de notificação. Se o usuário revogar o acesso, as APIs apresentarão uma falha silenciosa, em vez de gerar uma exceção (por exemplo, a API que retornará todas as notificações simplesmente retornará uma lista vazia).
+O usuário pode revogar o acesso a qualquer momento por meio das Configurações do Windows. Portanto, seu aplicativo sempre deve verificar o status de acesso por meio de [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) método antes de executar o código que usa o ouvinte da notificação. Se o usuário revogar o acesso, as APIs apresentarão uma falha silenciosa, em vez de gerar uma exceção (por exemplo, a API que retornará todas as notificações simplesmente retornará uma lista vazia).
 
 
 ## <a name="access-the-users-notifications"></a>Acessar as notificações do usuário
@@ -138,7 +138,7 @@ await appLogo.SetSourceAsync(await appLogoStream.OpenReadAsync());
 
 O conteúdo da notificação propriamente, como o texto da notificação, está contido na propriedade [Notification](https://docs.microsoft.com/uwp/api/windows.ui.notifications.usernotification.Notification). Essa propriedade contém a parte visual da notificação. (Se você estiver familiarizado com o envio de notificações no Windows, observará que as propriedades [Visual](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notification.Visual) e [Visual.Bindings](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationvisual.Bindings) no objeto [Notification](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notification) correspondem ao que os desenvolvedores enviam quando exibem uma notificação).
 
-Queremos procurar a associação da notificação do sistema (para código de prova de erro, você deve verificar se a associação não é nula). Na associação, você pode obter os elementos de texto. Você pode escolher quantos elementos de texto deseja exibir. (O ideal é exibir todos eles.) Você pode optar por tratar os elementos de texto de forma diferente; por exemplo, trate o primeiro como texto de título e os elementos subsequentes como corpo do texto.
+Queremos procurar a associação da notificação do sistema (para código de prova de erro, você deve verificar se a associação não é nula). Na associação, você pode obter os elementos de texto. Você pode escolher quantos elementos de texto deseja exibir. (O ideal é que você exibirá todas elas.) Você pode optar por tratar os elementos de texto de forma diferente; Por exemplo, trate o primeiro como o texto do título e elementos subsequentes como corpo de texto.
 
 ```csharp
 // Get the toast binding, if present
@@ -229,7 +229,7 @@ protected override async void OnBackgroundActivated(BackgroundActivatedEventArgs
 
 A tarefa em segundo plano é apenas uma chamada de atenção: ele não fornece nenhuma informação sobre quais notificações foram adicionadas ou removidas. Quando sua tarefa em segundo plano for acionada, você deverá sincronizar as notificações do dispositivo acessório para que elas reflitam as notificações da plataforma. Isso garantirá que, se a tarefa em segundo plano apresentar falha, as notificações no dispositivo acessório ainda poderão ser recuperadas na próxima vez que a tarefa em segundo plano for executada.
 
-`SyncNotifications` é um método que você implementa; a próxima seção mostra como fazer. 
+`SyncNotifications` é um método que você implementar; a próxima seção mostra como. 
 
 
 ## <a name="determining-which-notifications-were-added-and-removed"></a>Determinando quais notificações foram adicionadas e removidas
@@ -277,9 +277,9 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Evento em primeiro plano para notificação adicionada/ignorada
 
 > [!IMPORTANT] 
-> Problema conhecido: O evento em primeiro plano fará um loop de CPU em versões recentes do Windows e anteriormente não funcionou antes disso. Não use o evento em primeiro plano. Em uma atualização futura para Windows, podemos irá corrigir isso.
+> Problema conhecido: O evento de primeiro plano causará um loop de CPU em versões recentes do Windows e anteriormente não funcionavam antes disso. Não use o evento de primeiro plano. Em uma atualização futura para Windows, corrigiremos isso.
 
-Em vez de usar o evento em primeiro plano, use o código mostrado anteriormente para uma tarefa de plano de fundo do [modelo de processo único](../../../launch-resume/create-and-register-an-inproc-background-task.md) . A tarefa em segundo plano também permitirá que você receba evento notificações de alteração de ambos os enquanto seu aplicativo está em execução ou fechado.
+Em vez de usar o evento de primeiro plano, use o código mostrado anteriormente para um [modelo de processo único](../../../launch-resume/create-and-register-an-inproc-background-task.md) tarefa em segundo plano. A tarefa em segundo plano também permitirá que você receba eventos notificações de alteração de ambos os enquanto o aplicativo está em execução ou fechado.
 
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)
@@ -292,6 +292,6 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 ```
 
 
-## <a name="howto-fixdelays-in-the-background-task"></a>Como fixdelays a tarefa em segundo plano
+## <a name="howto-fixdelays-in-the-background-task"></a>Como corrigir atrasos na tarefa em segundo plano
 
-Ao testar seu aplicativo, você pode perceber que a tarefa em segundo plano atrasa algumas vezes e não dispara por vários minutos. Para corrigir o atraso, prompt togo o usuário para as configurações do sistema -> sistema -> bateria -> uso da bateria pelo aplicativo, localizar seu aplicativo na lista, selecione-o e defini-lo para "sempre permitido em segundo plano".Depois disso, a tarefa em segundo plano sempre deve ser disparada dentro em torno de um segundo da notificação sendo recebido.
+Ao testar seu aplicativo, você poderá notar que a tarefa em segundo plano está atrasada, às vezes e não aciona por vários minutos. Para corrigir o atraso, prompt do usuário para ir para as configurações do sistema -> sistema -> bateria -> uso da bateria pelo aplicativo, localize seu aplicativo na lista, selecioná-lo e configurá-lo como "Sempre permitido em segundo plano". Depois disso, a tarefa em segundo plano sempre deve ser acionada dentro em torno de um segundo da notificação que está sendo recebido.

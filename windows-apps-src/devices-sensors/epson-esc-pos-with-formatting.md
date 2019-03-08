@@ -1,24 +1,24 @@
 ---
 ms.assetid: 70667353-152B-4B18-92C1-0178298052D4
-title: ESC/POS Epson com formatação
+title: Epson ESC/POS com formatação
 description: Saiba como usar a linguagem de comando ESC/POS para formatar texto, como caracteres em negrito e tamanho dobrado para sua impressora Ponto de Serviço.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c17fb7de151308e41a2e613d86a9c0413c7517e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047790"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649111"
 ---
-# <a name="epson-escpos-with-formatting"></a>ESC/POS Epson com formatação
+# <a name="epson-escpos-with-formatting"></a>Epson ESC/POS com formatação
 
 
 **APIs importantes**
 
--   [**Impressora PointofService**](https://msdn.microsoft.com/library/windows/apps/Mt426652)
+-   [**PointofService Printer**](https://msdn.microsoft.com/library/windows/apps/Mt426652)
 -   [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071)
 
 Saiba como usar a linguagem de comando ESC/POS para formatar texto, como caracteres em negrito e tamanho dobrado para sua impressora Ponto de Serviço.
@@ -31,7 +31,7 @@ ESC/POS é um sistema de comando criado pela Epson usado em diversos sistemas de
 
 Todos os comandos começam com o caractere ESC (ASCII 27, HEX 1B) ou GS (ASCII 29, HEX 1D), seguido por outro caractere que especifica o comando. O texto normal é simplesmente enviado à impressora, separado por quebras de linha.
 
-A [**API PointOfService do Windows **](https://msdn.microsoft.com/library/windows/apps/Dn298071) fornece uma grande parte dessa funcionalidade para você por meio dos métodos **Print()** ou **PrintLine()**. Entretanto, para obter uma determinada formatação ou para enviar comandos específicos, você deve usar comandos ESC/POS, criados como uma cadeia de caracteres e enviados à impressora.
+A [**API PointOfService do Windows** ](https://msdn.microsoft.com/library/windows/apps/Dn298071) fornece uma grande parte dessa funcionalidade para você por meio dos métodos **Print()** ou **PrintLine()**. Entretanto, para obter uma determinada formatação ou para enviar comandos específicos, você deve usar comandos ESC/POS, criados como uma cadeia de caracteres e enviados à impressora.
 
 ## <a name="example-using-bold-and-double-size-characters"></a>Exemplo usando caracteres em negrito e de tamanho duplo
 

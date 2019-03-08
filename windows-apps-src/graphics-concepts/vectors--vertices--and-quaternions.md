@@ -1,6 +1,6 @@
 ---
 title: Vetores, vértices e quatérnios
-description: Em todo o Direct3D, os vértices descrevem a posição e a orientação. Cada vértice em um primitivo é descrito por um vetor que oferece suas coordenadas de textura, cor e posição, e um vetor normal que oferece a sua orientação.
+description: Em todo o Direct3D, os vértices descrevem a posição e a orientação. Cada vértice em uma primitiva é descrito por um vetor que oferece suas coordenadas de textura, cor e posição, e um vetor normal que oferece a sua orientação.
 ms.assetid: 94EC3D59-43FC-4509-A233-916E9FA8381E
 keywords:
 - Vetores, vértices e quatérnios
@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8942e53b7372e2e8b3cf4ed05f89b4187bdfc4be
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926405"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599861"
 ---
 # <a name="vectors-vertices-and-quaternions"></a>Vetores, vértices e quatérnios
 
 
-Em todo o Direct3D, os vértices descrevem a posição e a orientação. Cada vértice em um primitivo é descrito por um vetor que oferece suas coordenadas de textura, cor e posição, e um vetor normal que oferece a sua orientação.
+Em todo o Direct3D, os vértices descrevem a posição e a orientação. Cada vértice em uma primitiva é descrito por um vetor que oferece suas coordenadas de textura, cor e posição, e um vetor normal que oferece a sua orientação.
 
-Os quatérnios adicionam um quarto elemento ao valores \[x, y, z\] que definem um vetor de três componentes. Os quatérnios são uma alternativa aos métodos de matriz que são normalmente usados para rotações 3D. Um quatérnio representa um eixo no espaço 3D e uma rotação em torno do eixo em questão. Por exemplo, um quatérnio pode representar um eixo (1,1,2) e uma rotação de 1 radiano. Os quatérnios transportam informações úteis, mas seu verdadeiro valor é proveniente das duas operações que você pode executar neles: composição e interpolação.
+Os quatérnios adicionar um quarto elemento para o \[x, y, z\] valores que definem um vetor de três para componente. Os quatérnios são uma alternativa aos métodos de matriz que são normalmente usados para rotações 3D. Um quatérnio representa um eixo no espaço 3D e uma rotação em torno do eixo em questão. Por exemplo, um quatérnio pode representar um eixo (1,1,2) e uma rotação de 1 radiano. Os quatérnios transportam informações úteis, mas seu verdadeiro valor é proveniente das duas operações que você pode executar neles: composição e interpolação.
 
 Realizar a composição em quatérnios é semelhante a combiná-los. A composição de dois quatérnios é representada como a ilustração a seguir.
 
@@ -34,7 +34,7 @@ Quando você usa composição e interpolação juntos, eles fornecem uma maneira
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Sistemas de coordenadas e geometria](coordinate-systems-and-geometry.md)
+[Sistemas de coordenadas e geometry](coordinate-systems-and-geometry.md)
 
  
 

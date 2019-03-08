@@ -1,6 +1,6 @@
 ---
-Description: Design your app to support the layouts and fonts of multiple languages, including RTL (right-to-left) flow direction.
-title: Ajustar layout e fontes e fornecer suporte a RTL
+Description: Projete seu app de forma a dar suporte a layouts e fontes de vários idiomas, incluindo direção de fluxo RTL (da direita para a esquerda).
+title: Ajustar layout e fontes e fornecer suporte para RTL
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
 template: detail.hbs
@@ -9,13 +9,13 @@ ms.topic: article
 keywords: windows 10, uwp, localizabilidade, localização, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: e428dd068337ecd79992e8e27cd193bed112d9c2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930457"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645301"
 ---
-# <a name="adjust-layout-and-fonts-and-support-rtl"></a>Ajustar layout e fontes e fornecer suporte a RTL
+# <a name="adjust-layout-and-fonts-and-support-rtl"></a>Ajustar layout e fontes e fornecer suporte para RTL
 Projete seu app de forma a dar suporte a layouts e fontes de vários idiomas, incluindo direção de fluxo RTL (da direita para a esquerda). Direção de fluxo é a direção na qual o script é criado e exibido e os elementos de interface do usuário na página são visualizados por nós.
 
 ## <a name="layout-guidelines"></a>Diretrizes de layout
@@ -53,7 +53,7 @@ Quando o aplicativo é localizado para idiomas da direita para esquerda (RTL), u
 Defina **FlowDirection** no painel de layout raiz (ou quadro) da sua página ou na própria página. Isso faz com que todos os controles contidos herdem essa propriedade.
 
 > [!IMPORTANT]
-> Entretanto, **FlowDirection** *não* é definido automaticamente com base no idioma de exibição selecionado do usuário nas configurações do Windows; nem muda dinamicamente quando o usuário altera o idioma de exibição. Por exemplo, se o usuário altera as configurações do Windows do inglês para árabe, a propriedade **FlowDirection** *não* muda automaticamente da esquerda para a direita para o contrário. Como o desenvolvedor do aplicativo, você precisa definir **FlowDirection** adequadamente para os idiomas em exibição no momento.
+> Entretanto, **FlowDirection***não* é definido automaticamente com base no idioma de exibição selecionado do usuário nas configurações do Windows; nem muda dinamicamente quando o usuário altera o idioma de exibição. Por exemplo, se o usuário altera as configurações do Windows do inglês para árabe, a propriedade **FlowDirection***não* muda automaticamente da esquerda para a direita para o contrário. Como o desenvolvedor do aplicativo, você precisa definir **FlowDirection** adequadamente para os idiomas em exibição no momento.
 
 A técnica programática é usar a propriedade `LayoutDirection` do idioma de exibição preferencial do usuário para definir a propriedade [**FlowDirection**](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection) (veja o exemplo de código abaixo). A maioria dos controles incluídos no Windows já usam **FlowDirection**. Se você estiver implementando um controle personalizado, é necessário usar **FlowDirection** para fazer alterações de layout apropriado para idiomas RTL e LTR.
 
@@ -124,6 +124,6 @@ Em vez de uma única linha de código para todos os idiomas, isso depende do tra
 * [LanguageFont](/uwp/api/Windows.Globalization.Fonts.LanguageFont?branch=live)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Localizar as cadeias de caracteres em seu IU e o manifesto do pacote do aplicativo](../../app-resources/localize-strings-ui-manifest.md)
-* [Personalizar os recursos de acordo com idioma, escala e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
-* [Entenda os idiomas de perfil do usuário e idiomas de manifesto do app](manage-language-and-region.md)
+* [Localizar cadeias de caracteres em seu manifesto de pacote da interface do usuário e aplicativo](../../app-resources/localize-strings-ui-manifest.md)
+* [Personalize seus recursos de idioma, escala e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [Entender os idiomas de perfil do usuário e linguagens de manifesto do aplicativo](manage-language-and-region.md)

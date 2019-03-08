@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 127d600b840c21eb78c3f6b98a100b7639ea25bc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929139"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660221"
 ---
 # <a name="directx-getting-started"></a>DirectX: Introdução
 
@@ -36,15 +36,15 @@ O tópico sobre como iniciar e retomar apps explica como você pode definir a ex
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="about-the-uwp-user-interface-and-directx.md">O objeto do app e o DirectX</a></p></td>
+<td align="left"><p><a href="about-the-uwp-user-interface-and-directx.md">O objeto de aplicativo e o DirectX</a></p></td>
 <td align="left"><p>Acesse e interopere com o objeto do app diretamente.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="prepare-your-dev-environment-for-windows-store-directx-game-development.md">Modelos de projetos e ferramentas para jogos</a></p></td>
+<td align="left"><p><a href="prepare-your-dev-environment-for-windows-store-directx-game-development.md">Modelos de projeto e ferramentas para jogos</a></p></td>
 <td align="left"><p>Prepare o seu ambiente de desenvolvimento para o desenvolvimento de jogos DirectX UWP.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="launching-and-resuming-apps-directx-and-cpp.md">Início e retomada de apps</a></p></td>
+<td align="left"><p><a href="launching-and-resuming-apps-directx-and-cpp.md">Iniciar e reiniciar aplicativos</a></p></td>
 <td align="left"><p>Iniciar, suspender e retomar seu jogo DirectX UWP.</p></td>
 </tr>
 </tbody>

@@ -13,17 +13,17 @@ dev-contact: tpaine
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e0c709261b08231fa82af615d5398fd66648d4e
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036868"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646461"
 ---
 # <a name="split-view-control"></a>Controle de modo de exibição dividido
 
 Um controle de modo divisão tem um painel que pode ser expandido/recolhido e uma área de conteúdo.
 
-> **APIs importantes**: [classe SplitView](https://msdn.microsoft.com/library/windows/apps/dn864360)
+> **APIs importantes**: [Classe SplitView](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 Veja a seguir um exemplo do aplicativo Microsoft Edge usando SplitView para mostrar seu Hub.
 
@@ -36,7 +36,7 @@ Veja a seguir um exemplo do aplicativo Microsoft Edge usando SplitView para most
 
     O painel ficará oculto até que seja aberto. Quando aberto, o painel se sobrepõe à área de conteúdo.
 
--   **Embutido**
+-   **embutido**
 
     O painel está sempre visível e não sobrepõe-se à área de conteúdo. As áreas do painel e de conteúdo dividem o espaço real disponível na tela.
 
@@ -63,7 +63,7 @@ Se você quiser criar um menu de navegação com um botão expandir/recolher e u
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/SplitView">abrir o aplicativo e ver o SplitView em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>

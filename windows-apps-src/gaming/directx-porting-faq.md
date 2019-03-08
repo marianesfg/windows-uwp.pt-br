@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: d2f883e62cf7c61560295673cf48cf891befed91
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044450"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662611"
 ---
 # <a name="directx-11-porting-faq"></a>Perguntas frequentes de portabilidade do DirectX 11
 
@@ -28,12 +28,12 @@ O Direct3D 11 é uma atualização importante do Direct3D 9. Há diversas mudan�
 ## <a name="what-is-the-new-device-context-for-am-i-supposed-to-replace-my-direct3d-9-device-with-the-direct3d-11-device-the-device-context-or-both"></a>Para que serve o novo contexto de dispositivo? Devo substituir o dispositivo do Direct3D 9 pelo dispositivo/contexto de dispositivo/ambos do Direct3D 11?
 
 
-Agora o dispositivo Direct3D é usado para criar recursos na memória de vídeo, enquanto o contexto de dispositivo é usado para definir o estado do pipeline e gerar comandos de renderização. Para saber mais, consulte [Quais são as mudanças mais importantes desde o Direct3D 9?](understand-direct3d-11-1-concepts.md)
+Agora o dispositivo Direct3D é usado para criar recursos na memória de vídeo, enquanto o contexto de dispositivo é usado para definir o estado do pipeline e gerar comandos de renderização. Para obter mais informações, consulte: [Quais são as mais importantes alterações desde o Direct3D 9?](understand-direct3d-11-1-concepts.md)
 
 ##  <a name="do-i-have-to-update-my-game-timer-for-uwp"></a>Preciso atualizar o cronômetro do jogo para a UWP?
 
 
-[**QueryPerformanceCounter**](https://msdn.microsoft.com/library/windows/desktop/ms644904), junto com [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905), ainda são a melhor maneira de implementar um timer de jogo para aplicativos UWP.
+[**QueryPerformanceCounter**](https://msdn.microsoft.com/library/windows/desktop/ms644904), juntamente com [ **QueryPerformanceFrequency com o propósito**](https://msdn.microsoft.com/library/windows/desktop/ms644905), ainda é a melhor maneira de implementar um temporizador de jogo para aplicativos UWP.
 
 Você deve prestar atenção a um aspecto de temporizador e do ciclo de vida de aplicativos UWP. A suspensão/retomada é diferente da reexecução de um jogo de área de trabalho, pois seu jogo retomará um instantâneo do momento em que foi executado pela última vez. Caso tenha se passado muito tempo (por exemplo, algumas semanas), algumas implementações de cronômetro podem ter comportamento inadequado. Você pode usar eventos de ciclo de vida de aplicativo para redefinir o temporizador quando o jogo é retomado.
 
@@ -44,10 +44,10 @@ Os jogos que ainda usam a instrução RDTSC precisam de uma atualização. Consu
 
 O projeto comunitário [DirectXTK (kit de ferramentas do DirectX)](https://go.microsoft.com/fwlink/p/?LinkID=248929) oferece classes de ajuda para usar com aplicativos em Direct3D 11.
 
-##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>Como manter caminhos de código para a área de trabalho e a Microsoft Store?
+##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>Como manter a caminhos de código para a área de trabalho e a Microsoft Store?
 
 
-Série de artigos de Chuck Walbourn intitulado [Duplo uso técnicas de codificação para jogos](https://go.microsoft.com/fwlink/p/?LinkID=286210) oferece uma orientação sobre compartilhar código entre a área de trabalho e os caminhos de código da Microsoft Store.
+Série de artigos de Chuck Walbourn intitulada [técnicas de codificação de uso duplo para jogos](https://go.microsoft.com/fwlink/p/?LinkID=286210) oferece orientação sobre como compartilhar código entre a área de trabalho e os caminhos de código da Microsoft Store.
 
 ##  <a name="how-do-i-load-image-resources-in-my-directx-uwp-app"></a>Como carregar recursos de imagem em meu aplicativo UWP em DirectX?
 
@@ -83,7 +83,7 @@ Sim:
 
 -   Leia o tópico sobre [conversão para o Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb204851).
 -   Certifique-se de que o jogo não tenha restos do pipeline fixo; veja os [recursos preteridos](https://msdn.microsoft.com/library/windows/desktop/cc308047).
--   Depois, realize as etapas de portabilidade para o DirectX 9: [Fazer a portabilidade do D3D 9 para a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+-   Em seguida, levar o caminho de portabilidade do DirectX 9: [Porta do D3D 9 para UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
 ##  <a name="can-i-port-my-directx-10-or-11-game-to-uwp"></a>Posso fazer a portabilidade de meu jogo em DirectX 10 ou 11 para a UWP?
 
@@ -98,7 +98,7 @@ O usuário pode selecionar o monitor que exibirá o aplicativo. Deixe que o Wind
 ## <a name="how-do-i-turn-on-antialiasing"></a>Como ativo a suavização?
 
 
-A suavização (multiamostragem) é habilitada quando você cria o dispositivo Direct3D. Enumere o suporte à multiamostragem chamando [**CheckMultisampleQualityLevels**](https://msdn.microsoft.com/library/windows/desktop/ff476499) e defina as opções de várias amostras na [**estrutura DXGI\_SAMPLE\_DESC**](https://msdn.microsoft.com/library/windows/desktop/bb173072) ao chamar [**CreateSurface**](https://msdn.microsoft.com/library/windows/desktop/bb174530).
+A suavização (multiamostragem) é habilitada quando você cria o dispositivo Direct3D. Enumerar suporte multisampling chamando [ **CheckMultisampleQualityLevels**](https://msdn.microsoft.com/library/windows/desktop/ff476499), em seguida, definir opções de multisample no [ **DXGI\_exemplo\_Estrutura DESC** ](https://msdn.microsoft.com/library/windows/desktop/bb173072) quando você chama [ **CreateSurface**](https://msdn.microsoft.com/library/windows/desktop/bb174530).
 
 ## <a name="my-game-renders-using-multithreading-andor-deferred-rendering-what-do-i-need-to-know-for-direct3d-11"></a>Meu jogo é renderizado usando multithreading e/ou renderização adiada. O que preciso saber no caso do Direct3D 11?
 
@@ -111,7 +111,7 @@ Visite a [introdução ao multithreading no Direct3D 11](https://msdn.microsoft.
 Visite os seguintes tópicos:
 
 -   [Guia de programação para HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509635)
--   [10 perguntas frequentes sobre o Direct3D](https://msdn.microsoft.com/library/windows/desktop/ee416643)
+-   [Direct3D 10 perguntas frequentes](https://msdn.microsoft.com/library/windows/desktop/ee416643)
 
 ## <a name="what-should-i-use-instead-of-the-x-file-format-for-my-models"></a>O que devo usar em vez do formato de arquivo .x para meus modelos?
 
@@ -121,14 +121,14 @@ Embora não tenhamos uma substituição oficial para o formato de arquivo .x, mu
 ## <a name="how-do-i-debug-my-shaders"></a>Como depurar meus sombreadores?
 
 
-Microsoft Visual Studio2015 inclui ferramentas de diagnóstico para elementos gráficos do DirectX. Veja [Depurando gráficos em DirectX](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
+Microsoft Visual Studio 2015 inclui ferramentas de diagnóstico de gráficos do DirectX. Veja [Depurando gráficos em DirectX](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
 
 ##  <a name="what-is-the-direct3d-11-equivalent-for-x-function"></a>Qual é o equivalente à função *x* no Direct3D 11?
 
 
 Veja o [mapeamento de funções](feature-mapping.md#function-mapping) fornecido no tópico sobre correlação entre recursos do DirectX 9 e APIs do DirectX 11.
 
-##  <a name="what-is-the-dxgiformat-equivalent-of-y-surface-format"></a>Qual é o equivalente DXGI\_FORMAT ao formato de superfície *y*?
+##  <a name="what-is-the-dxgiformat-equivalent-of-y-surface-format"></a>O que é o DXGI\_equivalente a formato *y* formato superfície?
 
 
 Veja o [mapeamento de formatos de superfície](feature-mapping.md#surface-format-mapping) fornecido no tópico sobre correlação entre recursos do DirectX 9 e APIs do DirectX 11.

@@ -7,23 +7,23 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, mapas de sombra, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e661065f86ac173a6ce323281c80fc964d0a4c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928155"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646361"
 ---
 # <a name="support-shadow-maps-on-a-range-of-hardware"></a>Suporte a mapas de sombra em diversos hardwares
 
 
 
 
-Renderize sombras de alta fidelidade em dispositivos mais rápidos e sombras mais velozes em dispositivos com menor desempenho. Parte 4 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
+Renderize sombras de alta fidelidade em dispositivos mais rápidos e sombras mais velozes em dispositivos com menor desempenho. Parte 4 de [passo a passo: Implementar os volumes de sombra usando buffers de profundidade em Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
 ## <a name="comparison-filter-types"></a>Tipos de filtro de comparação
 
 
-Use filtragem linear somente se o dispositivo puder lidar com a perda de desempenho. Geralmente, dispositivos Direct3D com nível de recursos 9\_1 não têm capacidade suficiente para utilizar filtragem linear em sombras. Nesses dispositivos, use a filtragem por pontos. Ao usar a filtragem linear, ajuste o sombreador de pixel de modo a mesclar as bordas da sombra.
+Use filtragem linear somente se o dispositivo puder lidar com a perda de desempenho. Nível em geral, de recursos do Direct3D 9\_1 dispositivos não tem capacidade suficiente de sobra para filtragem linear no sombras. Nesses dispositivos, use a filtragem por pontos. Ao usar a filtragem linear, ajuste o sombreador de pixel de modo a mesclar as bordas da sombra.
 
 Crie a amostra de comparação para filtragem por pontos:
 
@@ -113,12 +113,12 @@ Os mapas de sombra maiores não terão tantos blocos, mas ocuparão mais espaço
 ## <a name="shadow-buffer-depth"></a>Profundidade do buffer de sombra
 
 
-Um buffer de sombra mais preciso gera resultados melhores nos testes de profundidade, o que o ajuda a evitar problemas como conflitos no buffer z. Mas assim como mapas de sombra maiores, o aumento de precisão leva a um maior consumo de memória. Experimente tipos de precisão de profundidade diferentes em seu jogo - DXGI\_FORMAT\_R24G8\_TYPELESS comparado a DXGI\_FORMAT\_R16\_TYPELESS e observe a velocidade e qualidade em níveis de recursos diferentes.
+Um buffer de sombra mais preciso gera resultados melhores nos testes de profundidade, o que o ajuda a evitar problemas como conflitos no buffer z. Mas assim como mapas de sombra maiores, o aumento de precisão leva a um maior consumo de memória. Experimentar os tipos de precisão de camadas diferentes em seu jogo - DXGI\_formato\_R24G8\_TYPELESS versus DXGI\_formato\_R16\_TYPELESS - e observar a velocidade e qualidade em níveis de recurso diferente.
 
 ## <a name="optimizing-precompiled-shaders"></a>Otimizando sombreadores pré-compilados
 
 
-Os aplicativos da Plataforma Universal do Windows (UWP) podem usar a compilação de sombreador dinâmico, mas é mais rápido usar a associação de sombreador dinâmico. Use também diretivas de compilador e blocos de `#ifdef` para criar versões diferentes de sombreadores. Faça isso abrindo o arquivo de projeto do Visual Studio em um editor de texto e adicionando várias entradas `<FxcCompiler>` ao HLSL (cada uma com as definições corretas de pré-processador). Observe que isso precisa de nomes de arquivo diferentes. Nesse caso, o Visual Studio adiciona \_point e \_linear às versões diferentes do sombreador.
+Os aplicativos da Plataforma Universal do Windows (UWP) podem usar a compilação de sombreador dinâmico, mas é mais rápido usar a associação de sombreador dinâmico. Use também diretivas de compilador e blocos de `#ifdef` para criar versões diferentes de sombreadores. Faça isso abrindo o arquivo de projeto do Visual Studio em um editor de texto e adicionando várias entradas `<FxcCompiler>` ao HLSL (cada uma com as definições corretas de pré-processador). Observe que isso necessita de nomes de arquivo diferentes; Nesse caso, o Visual Studio acrescenta \_aponte e \_linear para versões diferentes do sombreador.
 
 A entrada do arquivo de projeto para a versão com filtragem linear do sombreador define LINEAR:
 

@@ -1,5 +1,5 @@
 ---
-Description: User interactions in the Universal Windows Platform (UWP) are a combination of input and output sources (such as mouse, keyboard, pen, touch, touchpad, speech, Cortana, controller, gesture, gaze, and so on), along with various modes or modifiers that enable extended experiences (including mouse wheel and buttons, pen eraser and barrel buttons, touch keyboard, and background app services).
+Description: As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, Cortana, controlador, gesto, olhar, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano).
 title: Cartilha de interação
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 80c834257e883d3aeb8594001344abd6ef14682c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051089"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596561"
 ---
 # <a name="interaction-primer"></a>Cartilha de interação
 
 ![tipos de entrada do windows](images/input-interactions/icons-inputdevices03.png)
 
-As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, **Cortana**, controlador, gesto, foco, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano).
+As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, **Cortana**, controlador, gesto, olhar, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano).
 
 A UWP usa um sistema de interação contextual "inteligente" que, na maioria dos casos, elimina a necessidade de manipular individualmente os tipos de entrada exclusivos recebidos pelo seu aplicativo. Isso inclui manipular a entrada por touch, touchpad, mouse e caneta como um tipo de ponteiro genérico para dar suporte a gestos estáticos, como tocar ou pressionar e segurar, para gestos de manipulação como deslizar para movimento panorâmico ou para renderizar tinta digital.
 
@@ -43,7 +43,7 @@ Acompanhe o foco, a atenção e a presença do usuário com base na localizaçã
 
 ### <a name="more-info"></a>Mais informações
 
-[Interações de foco e rastreamento de olhos](gaze-interactions.md)
+[Mantenha o foco de interações e acompanhamento a olho nu](gaze-interactions.md)
 
 ## <a name="surface-dial"></a>Surface Dial
 
@@ -60,11 +60,11 @@ Com um fator forma com base em uma ação (ou gesto) girar, o Surface Dial desti
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes de design do Surface Dial](windows-wheel-interactions.md)
+[Diretrizes de design Surface Dial](windows-wheel-interactions.md)
 
 ## <a name="cortana"></a>Cortana
 
-No Windows 10, extensibilidade **da Cortana** permite lidar com comandos de voz de um usuário e iniciar seu aplicativo para realizar uma única ação.
+No Windows 10 **Cortana** extensibilidade permite lidar com comandos de voz de um usuário e iniciar o aplicativo para executar uma única ação.
 
 ### <a name="device-support"></a>Suporte a dispositivos
 
@@ -86,14 +86,14 @@ A integração da funcionalidade básica do seu aplicativo e o fornecimento de u
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes para design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
+[Diretrizes de design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
  
 
 ## <a name="speech"></a>Controle por voz
 
 O controle por voz é uma forma eficiente e natural para as pessoas interagirem com aplicativos. É uma maneira fácil e precisa de se comunicar com aplicativos, e permite que as pessoas sejam produtivas e se mantenham informadas em diversas situações.
 
-O controle por voz pode complementar ou, em muitos casos, ser o tipo de entrada principal, dependendo do dispositivo do usuário. Por exemplo, dispositivos como HoloLens e Xbox não dão suporte a tipos de entrada tradicionais (além de um teclado de software em situações específicas). Em vez disso, eles dependem da entrada e saída de voz (geralmente em combinação com outros tipos de entrada não tradicionais, como foco e gesto) para a maioria das interações do usuário.
+O controle por voz pode complementar ou, em muitos casos, ser o tipo de entrada principal, dependendo do dispositivo do usuário. Por exemplo, dispositivos como HoloLens e Xbox não dão suporte a tipos de entrada tradicionais (além de um teclado de software em situações específicas). Em vez disso, eles dependem da entrada e saída de voz (geralmente em combinação com outros tipos de entrada não tradicionais, como olhar e gesto) para a maioria das interações do usuário.
 
 A conversão de texto em fala (também conhecida como TTS ou sintetização de voz) é usada para informar ou direcionar o usuário.
 
@@ -135,14 +135,14 @@ O ditado normalmente é usado quando um aplicativo não precisa compreender o si
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+[Diretrizes de design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
  
 
 ## <a name="pen"></a>Caneta
 
 Uma caneta pode servir como um dispositivo apontador com precisão de pixel, como um mouse, e é o dispositivo ideal para entrada de tinta digital.
 
-**Observação**existem dois tipos de dispositivos de caneta: ativo e passivo.
+**Observação**  há dois tipos de dispositivos de caneta: ativo e passivo.
   -   As canetas passivas não são eletrônicas, e emulam efetivamente a entrada touch de um dedo. Elas exigem uma exibição básica do dispositivo, que reconhece a entrada com base na pressão do contato. Como os usuários geralmente repousam a mão enquanto escrevem na superfície de entrada, os dados de entrada podem ficar poluídos devido a rejeição da palma da mão bem-sucedida.
   -   As canetas ativas são eletrônicas e podem funcionar com telas de dispositivos complexas para fornecer dados de entrada muito mais extensos (incluindo passagem do mouse ou dados de proximidade) ao sistema e seu aplicativo. A rejeição da palma da mão é muito mais robusta.
 
@@ -160,7 +160,7 @@ Quando nos referimos a dispositivos de caneta aqui, estamos fazendo referência 
 
 ### <a name="typical-usage"></a>Uso típico
 
-A plataforma de tinta do Windows, juntamente com uma caneta, oferece uma maneira natural de criar anotações manuscritas, desenhos e anotações. A plataforma dá suporte a captura de dados de tinta por entrada da digitalizador, geração de dados de tinta, renderização desses dados como traços de tinta no dispositivo de saída, gerenciamento dos dados de tinta e reconhecimento de manuscrito. Além de capturar os movimentos espaciais da caneta enquanto o usuário escreve ou desenha, seu aplicativo também pode coletar informações como pressão, forma, cor e opacidade, para oferecer experiências ao usuário que se aproximam bastante do ato de desenhar em papel com caneta esferográfica, lápis ou pincel.
+A plataforma de tinta do Windows, juntamente com uma caneta, oferece uma maneira natural de criar anotações manuscritas, desenhos e anotações. A plataforma dá suporte à captura de dados de tinta por entrada de digitalizador, geração de dados de tinta, renderização desses dados como traços de tinta no dispositivo de saída, gerenciamento dos dados de tinta e reconhecimento de manuscrito. Além de capturar os movimentos espaciais da caneta enquanto o usuário escreve ou desenha, seu aplicativo também pode coletar informações como pressão, forma, cor e opacidade, para oferecer experiências ao usuário que se aproximam bastante do ato de desenhar em papel com caneta esferográfica, lápis ou pincel.
 
 A caneta e o touch apresentam divergências quando o assunto é a capacidade do touch de emular a manipulação direta de elementos da interface do usuário na tela usando gestos físicos executados nesses objetos (por exemplo, passar o dedo, deslizar o dedo, arrastar, girar etc.).
 
@@ -168,7 +168,7 @@ Você deve fornecer comandos de interface do usuário específicos à caneta, ou
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes para design de caneta](https://msdn.microsoft.com/library/windows/apps/dn456352)
+[Diretrizes de design de caneta](https://msdn.microsoft.com/library/windows/apps/dn456352)
  
 
 ## <a name="touch"></a>Touch
@@ -234,7 +234,7 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 
 Um teclado é o dispositivo principal de inserção de texto, e geralmente é indispensável para pessoas portadoras de determinadas deficiências ou usuários que o consideram um método mais rápido e mais eficiente de interagir com um aplicativo.
 
-Com o [Continuum para telefone](https://go.microsoft.com/fwlink/p/?LinkID=699431), uma nova experiência para dispositivos móveis Windows 10 compatíveis, os usuários podem conectar seus telefones a um mouse e teclado para fazê-los funcionar como um notebook.
+Com o [Continuum para Phone](https://go.microsoft.com/fwlink/p/?LinkID=699431), uma nova experiência para dispositivos móveis compatíveis do Windows 10, os usuários podem se conectar seus telefones com um mouse e teclado para fazer com que seus telefones funcione como um laptop.
 
 ### <a name="device-support"></a>Suporte a dispositivos
 
@@ -254,9 +254,9 @@ Os usuários podem interagir com aplicativos Universais do Windows por meio de u
 
 O OSK é um teclado de software visual que você pode usar em vez do teclado físico para digitar e inserir dados usando toque, mouse, caneta ou outro dispositivo apontador (uma tela sensível ao toque não é necessária). O OSK é fornecido para sistemas que não têm um teclado físico ou para usuários cujos problemas de mobilidade impedem o uso de dispositivos de entrada físicos tradicionais. O OSK emula a maior parte, se não toda a funcionalidade de um teclado de hardware.
 
-O teclado virtual é um teclado de software visual usado para entrada de texto por toque. O teclado virtual não é uma substituição ao OSK, pois é usado apenas para entrada de texto (ele não emula o teclado de hardware) e só aparece quando um campo de texto ou outro controle de texto editável é focalizado. O teclado virtual não oferece suporte a comandos de aplicativo ou do sistema.
+O teclado virtual é um teclado de software visual usado para entrada de texto por touch. O teclado virtual não é uma substituição ao OSK, pois é usado apenas para entrada de texto (ele não emula o teclado de hardware) e só aparece quando um campo de texto ou outro controle de texto editável é focalizado. O teclado virtual não oferece suporte a comandos de aplicativo ou do sistema.
 
-**Observação**o OSK tem prioridade sobre o teclado virtual, que não será mostrado se o OSK estiver presente.
+**Observação**  o OSK tem prioridade sobre o teclado de toque, não será mostrado se o OSK está presente.
 
 Em geral, um teclado é:
 
@@ -294,7 +294,7 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes para design de mouse](https://msdn.microsoft.com/library/windows/apps/dn456351)
+[Diretrizes de design de mouse](https://msdn.microsoft.com/library/windows/apps/dn456351)
  
 
 ## <a name="gesture"></a>Gesto

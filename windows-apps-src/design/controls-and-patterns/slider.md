@@ -1,5 +1,5 @@
 ---
-Description: Lets the user set a value in a given range.
+Description: Permite que o usuário defina um valor em um determinado intervalo.
 title: Controles deslizantes
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
@@ -13,11 +13,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f01aec2a0dc6010eab53122d69e64c57fe4f5c3d
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037078"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589921"
 ---
 # <a name="sliders"></a>Controles deslizantes
 
@@ -25,12 +25,12 @@ ms.locfileid: "9037078"
 
 Controle deslizante é um controle que permite que o usuário selecione em uma lista de valores movendo um controle de posição paralelo a uma faixa.
 
-> **APIs importantes**: [classe Slider](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx), [propriedade Value](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx), [evento ValueChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)
+> **APIs importantes**: [Classe de controle deslizante](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx), [propriedade Value](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx), [evento ValueChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)
 
 ![Um controle deslizante](images/controls/slider.png)
 
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use um controle deslizante quando quiser que os usuários tenham condições de estabelecer valores contíguos definidos (como volume ou brilho) ou um intervalo de valores distintos (como configurações de resolução de tela).
 
@@ -41,9 +41,9 @@ Não use um controle deslizante para configurações binárias. Use um [botão d
 Veja a seguir alguns fatores adicionais que você deve considerar ao decidir se irá usar um controle deslizante:
 
 -   **A configuração parece uma quantidade relativa?** Se não parecer, use os [botões de opção](radio-button.md) ou uma [caixa de listagem](lists.md).
--   **A configuração é um valor numérico exato conhecido?** Se sim, use uma [caixa de texto](text-box.md).
--   **O usuário se beneficiaria com um feedback instantâneo sobre o efeito das alterações de configuração?** Se sim, use um controle deslizante. Por exemplo, os usuários podem escolher uma cor com mais facilidade vendo imediatamente o efeito das alterações nos valores de matiz, saturação ou luminosidade.
--   **A configuração tem um intervalo de quatro ou mais valores?** Se não parecer, use os [botões de opção](radio-button.md).
+-   **É a configuração de um exata conhecida do valor numérico?** Se sim, use uma [caixa de texto](text-box.md).
+-   **Um usuário pode se beneficiar de feedback instantâneo sobre o efeito de alterações de configuração?** Se sim, use um controle deslizante. Por exemplo, os usuários podem escolher uma cor com mais facilidade vendo imediatamente o efeito das alterações nos valores de matiz, saturação ou luminosidade.
+-   **A configuração tem um intervalo de valores de quatro ou mais?** Se não parecer, use os [botões de opção](radio-button.md).
 -   **O usuário pode alterar o valor?** Controles deslizantes são destinados para interação do usuário. Se um usuário não puder alterar o valor, use texto somente leitura.
 
 Se você estiver decidindo entre um controle deslizante e uma caixa de texto numérico, use uma caixa de texto numérico se:
@@ -64,7 +64,7 @@ Use um controle deslizante se:
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/Slider">abrir o aplicativo e ver o Slider em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -117,7 +117,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
 -   Dimensione o controle de modo que os usuários possam definir com facilidade o valor que desejam. Para configurações com valores distintos, certifique-se de que o usuário pode facilmente selecionar qualquer valor utilizando o mouse. Confirme que os pontos de extremidade do controle deslizante sempre estejam dentro dos limites de uma visualização.
 -   Forneça feedback imediato enquanto ou após um usuário faz uma seleção (quando for prático). Por exemplo, o controle de volume do Windows emite um som para indicar o volume de áudio selecionado.
--   Use rótulos para mostrar o intervalo de valores. Exceção: se o controle deslizante estiver orientado verticalmente, e o rótulo superior for Máximo, Alto, Mais ou equivalente, você poderá omitir os outros rótulos pois o significado está claro.
+-   Use rótulos para mostrar o intervalo de valores. Exceção: Se o controle deslizante é orientado verticalmente e rótulo superior é no máximo, alto, mais ou equivalente, é possível omitir os outros rótulos porque o significado é claro.
 -   Desative todos os rótulos ou elementos visuais de feedback associados ao desabilitar o controle deslizante.
 -   Considere a direção do texto ao configurar a direção de fluxo e/ou orientação de seu controle deslizante. O script flui da esquerda para direita em alguns idiomas e, da direita para esquerda em outros.
 -   Não use um controle deslizante como indicador de progresso.
@@ -162,14 +162,14 @@ A direção do intervalo é a direção em que você move o controle deslizante 
     -   Posicione rótulos acima do controle deslizante quando ele estiver em um formato que coloque a maioria dos seus rótulos acima dos seus controles.
     -   Posicione rótulos nas laterais quando o controle deslizante estiver em um formato que coloque a maioria dos seus rótulos na lateral dos seus controles.
     -   Evite colocar rótulos abaixo do controle deslizante porque o dedo do usuário pode ocultar o rótulo ao tocar no controle deslizante.
--   **Rótulos de intervalo**
+-   **Intervalo de rótulos**
 
     Rótulos de intervalo, ou de preenchimento, descrevem os valores mínimo e máximo do controle deslizante.
 
     -   Rotule as duas extremidades do intervalo do controle deslizante, a menos que uma orientação vertical torne isso desnecessário.
     -   Use apenas uma palavra, se possível, para cada rótulo.
     -   Não use pontuação final.
-    -   Certifique-se de que esses rótulos sejam descritivos e paralelos. Exemplos: Máximo/Mínimo, Mais/Menos, Baixo/Alto (altura), Baixo/Alto (som).
+    -   Certifique-se de que esses rótulos sejam descritivos e paralelos. Exemplos: Mínimo/máximo, mais/menos, alta/baixa, Soft/barulhento.
 -   **Rótulos de valor**
 
     Um rótulo de valor exibe o valor atual do controle deslizante.
@@ -191,5 +191,5 @@ Quando você está projetando um controle deslizante personalizado, considere me
 - [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-- [Switches de alternância](toggles.md)
-- [Classe Slider](https://msdn.microsoft.com/library/windows/apps/br209614)
+- [Comutadores de alternância](toggles.md)
+- [Classe de controle deslizante](https://msdn.microsoft.com/library/windows/apps/br209614)

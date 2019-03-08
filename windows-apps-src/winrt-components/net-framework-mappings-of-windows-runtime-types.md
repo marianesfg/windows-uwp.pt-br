@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ef98f3f4a9d20e836d5f9bddbc111a232f864bf5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927502"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602611"
 ---
 # <a name="net-framework-mappings-of-windows-runtime-types"></a>Mapeamentos do .NET Framework dos tipos do Windows Runtime
 
@@ -24,7 +24,7 @@ A tabela a seguir lista os mapeamentos que o .NET Framework faz entre os tipos d
 
 A maioria dos tipos com o mesmo nome de namespace e o mesmo nome de tipo na UWP e no .NET Framework é de estruturas (ou tipos associados a estruturas, como enumerações). Na UWP, as estruturas não têm membros que não sejam campos e exigem tipos auxiliares, que o .NET Framework oculta. As versões do .NET Framework dessas estruturas têm propriedades e métodos que oferecem a funcionalidade dos tipos de elemento oculto.
 
-Tabela 1: Tipos UWP mapeados para tipos do .NET Framework com um nome diferente e/ou o namespace.
+Tabela 1: Tipos de UWP que são mapeados para tipos do .NET Framework com um nome diferente e/ou namespace.
 
 | Tipo/namespace da UWP                                            | Tipo/namespace do .NET Framework                                          | Assembly do .NET Framework                           |
 |---------------------------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------|
@@ -57,17 +57,17 @@ Tabela 1: Tipos UWP mapeados para tipos do .NET Framework com um nome diferente 
 
  
 
-Tabela 2: Tipos UWP mapeados para tipos do .NET Framework com o mesmo nome e namespace.
+Tabela 2: Tipos de UWP que são mapeados para tipos do .NET Framework com o mesmo nome e namespace.
 
 | Namespace                           | Tipo               | Assembly do .NET Framework                   |
 |-------------------------------------|--------------------|-------------------------------------------|
-| Windows.UI                          | Color              | System.Runtime.WindowsRuntime.dll         |
+| Windows.UI                          | Cor              | System.Runtime.WindowsRuntime.dll         |
 | Windows.Foundation                  | Point              | System.Runtime.WindowsRuntime.dll         |
 | Windows.Foundation                  | Rect               | System.Runtime.WindowsRuntime.dll         |
-| Windows.Foundation                  | Size               | System.Runtime.WindowsRuntime.dll         |
+| Windows.Foundation                  | Tamanho               | System.Runtime.WindowsRuntime.dll         |
 | Windows.UI.Xaml.Input               | ICommand           | System.ObjectModel.dll                    |
 | Windows.UI.Xaml                     | CornerRadius       | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml                     | Duration           | System.Runtime.WindowsRuntime.UI.Xaml.dll |
+| Windows.UI.Xaml                     | Duração           | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml                     | DurationType       | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml                     | GridLength         | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml                     | GridUnitType       | System.Runtime.WindowsRuntime.UI.Xaml.dll |
@@ -83,4 +83,4 @@ Tabela 2: Tipos UWP mapeados para tipos do .NET Framework com o mesmo nome e nam
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Criando componentes de tempo de execução do Windows em c# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)

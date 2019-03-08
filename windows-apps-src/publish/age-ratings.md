@@ -1,5 +1,5 @@
 ---
-Description: The Age ratings page of the app submission process lets you provide information about your app so it can receive the appropriate age ratings from the International Age Ratings Coalition (IARC).
+Description: A página Classificações etárias do processo de envio de aplicativo permite que você forneça informações sobre seu aplicativo para que ele possa receber as classificações etárias adequadas da International Age Ratings Coalition (IARC).
 title: Classificações etárias
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 ms.date: 05/08/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, classificação etária, classificação de jogos, iarc, classificação, questionário, conselho de classificação, classificação de conteúdo
 ms.localizationpriority: medium
 ms.openlocfilehash: 3582328a0f013c2f7b4ccc9affb5b61ca643761c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049078"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57643441"
 ---
 # <a name="age-ratings"></a>Classificações etárias
 
@@ -24,9 +24,9 @@ Na primeira vez que você enviar um aplicativo (ou na primeira vez que você atu
 > [!IMPORTANT]
 > Se você já preencheu ao questionário do aplicativo em outra vitrine e tem uma ID de classificação da IARC, é possível selecionar a opção para nos informar sua ID de classificação. Usaremos sua ID para associar as classificações existentes ao seu app na Microsoft Store.
 
-É necessário que você responda às perguntas de forma precisa. Para saber mais sobre qualquer pergunta, clique no ícone de informações que aparece ao lado dela. Como parte desse processo, podemos compartilhar seu nome para exibição de editor e endereço de email com o IARC. Depois de preencher o questionário, o sistema de classificação IARC fornecerá as informações de classificação etária e de conteúdo com base em suas respostas. Vamos usar essas informações de classificações ao exibir seu aplicativo aos clientes em diferentes mercados. Você também receberá um email do IARC com uma confirmação de classificação do aplicativo quando seu aplicativo tiver sido publicado.
+Você precisa responder às perguntas com precisão. Para saber mais sobre qualquer pergunta, clique no ícone de informações que aparece ao lado dela. Como parte desse processo, podemos compartilhar seu nome para exibição de editor e endereço de email com o IARC. Depois de preencher o questionário, o sistema de classificação IARC fornecerá as informações de classificação etária e de conteúdo com base em suas respostas. Vamos usar essas informações de classificações ao exibir seu aplicativo aos clientes em diferentes mercados. Você também receberá um email do IARC com uma confirmação de classificação do aplicativo quando seu aplicativo tiver sido publicado.
 
-A primeira pergunta solicita que você escolha a categoria que melhor descreve seu aplicativo (e seus metadados). Depois que fizer uma seleção, você verá perguntas adicionais. As perguntas específicas exibidas variarão de acordo com suas respostas anteriores. Para obter mais detalhes que podem ajudar você a entender como responder a qualquer pergunta, clique no ícone de informações ao lado dessa pergunta. Se você cometer um erro, poderá voltar ou iniciar o questionário novamente para fornecer as respostas certas.
+A primeira pergunta solicita que você escolha a categoria que melhor descreve seu aplicativo (e seus metadados). Depois que fizer uma seleção, você verá perguntas adicionais. As perguntas específicas exibidas variarão de acordo com suas respostas anteriores. Para obter mais detalhes que podem ajudá-lo a entender como responder a qualquer pergunta, clique no ícone de informações ao lado dessa pergunta. Se você cometer um erro, poderá voltar ou iniciar o questionário novamente para fornecer as respostas certas.
 
 Quando tiver terminado de responder às perguntas, clique em **Salvar e gerar**. Você verá todas as classificações atribuídas do aplicativo e poderá continuar com o envio. Você também pode clicar em **Editar** para corrigir qualquer uma das suas respostas ao questionário.
 

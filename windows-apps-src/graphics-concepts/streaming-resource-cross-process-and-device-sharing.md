@@ -8,13 +8,13 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a0bff43cfd26c43bb5f75f37a66c55e556429470
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936126"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593661"
 ---
-# <a name="span-iddirect3dconceptsstreaming-resource-cross-process-and-device-sharingspanstreaming-resource-cross-process-and-device-sharing"></a><span id="direct3dconcepts.streaming-resource-cross-process-and-device-sharing"></span>Processo cruzado de recursos de streaming e compartilhamento de dispositivos
+# <a name="span-iddirect3dconceptsstreaming-resource-cross-process-and-device-sharingspanstreaming-resource-cross-process-and-device-sharing"></a><span id="direct3dconcepts.streaming-resource-cross-process-and-device-sharing"></span>Fluxo de recurso entre processos e compartilhamento de dispositivo
 
 
 Os pools de bloco podem ser compartilhados com outros processos como recursos tradicionais. O streaming de recursos que faz referência a pools de bloco não pode ser compartilhado entre dispositivos e processos. Mas processos separados podem criar seus próprios recursos de streaming que fazem o mapeamento em pools de bloco que são compartilhados entre esses recursos de streaming.
@@ -37,7 +37,7 @@ Os pools de bloco compartilhado não podem ser redimensionados.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="stencil-formats-not-supported-with-streaming-resources.md">Não há suporte para formatos de estêncil com recursos de streaming</a></p></td>
+<td align="left"><p><a href="stencil-formats-not-supported-with-streaming-resources.md">Formatos de estêncil não tem suportados com recursos de streaming</a></p></td>
 <td align="left"><p>Formatos que contêm estêncil não são compatíveis com recursos de streaming.</p></td>
 </tr>
 </tbody>

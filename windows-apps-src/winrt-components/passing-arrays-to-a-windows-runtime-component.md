@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 60c2e2221cd174ffd75a45d6fe8e2f66744d67a0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936199"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657871"
 ---
 # <a name="passing-arrays-to-a-windows-runtime-component"></a>Passagem de matrizes para um componente do Tempo de Execução do Windows
 
@@ -22,7 +22,7 @@ Na Plataforma Universal do Windows (UWP), os parâmetros são de entrada ou de s
 
 -   Para o valor de retorno ou para um parâmetro out (um parâmetro **ByRef** com o atributo [OutAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.outattribute.aspx) no Visual Basic), a matriz é sempre apenas de saída. Não aplique o atributo ReadOnlyArrayAttribute. O atributo WriteOnlyArrayAttribute é permitido em parâmetros de saída, mas é redundante.
 
-    > **Cuidado**compilador do Visual Basic não impõe regras de apenas saída. Nunca se deve ler a partir de um parâmetro de saída; ele pode conter **Nada**. Sempre atribua uma nova matriz.
+    > **Cuidado**  compilador do Visual Basic não impõe regras somente de saída. Nunca se deve ler a partir de um parâmetro de saída; ele pode conter **Nada**. Sempre atribua uma nova matriz.
  
 -   Os parâmetros que tiverem o modificador **ref** (**ByRef** no Visual Basic) não são permitidos. Winmdexp.exe gera um erro.
 -   Para um parâmetro passado por valor, você deve especificar se o conteúdo da matriz é de entrada ou saída aplicando o atributo [ReadOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.readonlyarrayattribute.aspx) ou [WriteOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute.aspx). Especificar ambos os atributos é um erro.
@@ -55,8 +55,8 @@ Recomendamos criar uma cópia da matriz de entrada imediatamente e manipular a c
 
 Parâmetros que tenham o atributo ReadOnlyArrayAttribute ou o atributo WriteOnlyArrayAttribute se comportam de maneira diferente dependendo do chamador estar gravado em código gerenciado ou nativo. Caso o chamador seja um código nativo (extensões de componente Visual C++ ou JavaScript), o conteúdo da matriz é tratado da seguinte maneira:
 
--   ReadOnlyArrayAttribute: a matriz é copiada quando a chamada atravessa o limite da interface binária do aplicativo (ABI). Os elementos são convertidos caso necessário. Portanto, qualquer alteração acidental feita pelo método em uma matriz somente de entrada não permanece visível para o chamador.
--   WriteOnlyArrayAttribute: o método chamado não pode fazer pressuposições sobre o conteúdo da matriz original. Por exemplo, a matriz que o método recebe não pode ser inicializada, ou pode conter valores padrão. O método é esperado para definir os valores de todos os elementos na matriz.
+-   ReadOnlyArrayAttribute: A matriz é copiada quando a chamada cruza o limite ABI (interface binária) do aplicativo. Os elementos são convertidos caso necessário. Portanto, qualquer alteração acidental feita pelo método em uma matriz somente de entrada não permanece visível para o chamador.
+-   WriteOnlyArrayAttribute: O método chamado não pode fazer suposições sobre o conteúdo da matriz original. Por exemplo, a matriz que o método recebe não pode ser inicializada, ou pode conter valores padrão. O método é esperado para definir os valores de todos os elementos na matriz.
 
 Caso o chamador seja um código gerenciado, a matriz original permanece disponível para o método chamado, como estaria em qualquer chamada de método no .NET Framework. O conteúdo da matriz é mutável no código do .NET Framework, logo, qualquer alteração que o método faça na matriz permanece visível para o chamador. É importante lembrar isso porque ele afeta testes de unidade escritos para um componente do Tempo de Execução do Windows. Se os testes forem escritos em código gerenciado, o conteúdo de uma matriz parecerá ser mutável durante o teste.
 
@@ -64,4 +64,4 @@ Caso o chamador seja um código gerenciado, a matriz original permanece disponí
 
 * [ReadOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.readonlyarrayattribute.aspx)
 * [WriteOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute.aspx)
-* [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Criando componentes de tempo de execução do Windows em c# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)

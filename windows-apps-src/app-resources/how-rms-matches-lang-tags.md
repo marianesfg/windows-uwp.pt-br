@@ -1,5 +1,5 @@
 ---
-Description: The previous topic (How the Resource Management System matches and chooses resources) looks at qualifier-matching in general. This topic focuses on language-tag-matching in more detail.
+Description: O tópico anterior (Como o Sistema de Gerenciamento de Recursos faz a correspondência dos recursos e os escolhe) analisar a correspondência de qualificador em geral. Este tópico aborda a correspondência de marca de idioma mais detalhadamente.
 title: Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma
 template: detail.hbs
 ms.date: 11/02/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: ccbfa5f06d336604160f98dd44c27cc0cf1b0aed
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050579"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659141"
 ---
 # <a name="how-the-resource-management-system-matches-language-tags"></a>Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma
 
@@ -19,7 +19,7 @@ O tópico anterior ([Como o Sistema de Gerenciamento de Recursos faz a correspon
 
 ## <a name="introduction"></a>Introdução
 
-Os recursos com qualificadores de marca de idioma são comparados e classificados com base na lista de idiomas de tempo de execução do app. Para obter definições das diferentes listas de idiomas, consulte [Noções básicas sobre idiomas de perfil de usuário e idiomas de manifesto do app](../design/globalizing/manage-language-and-region.md). A correspondência do primeiro idioma em uma lista ocorre antes da correspondência do segundo idioma em uma lista, mesmo para outras variações regionais. Por exemplo, um recurso de en-GB será escolhido em detrimento de um recurso de fr-CA se o idioma de tempo de execução do app for en-US. Somente se não houver nenhum recurso para o formato en, um recurso para fr-CA será escolhido (observe que o idioma padrão do app não pôde ser definido para nenhum formato en nesse caso).
+Os recursos com qualificadores de marca de idioma são comparados e classificados com base na lista de idiomas de tempo de execução do app. Para obter definições das diferentes listas de idiomas, consulte [Noções básicas sobre idiomas de perfil de usuário e idiomas de manifesto do app](../design/globalizing/manage-language-and-region.md). A correspondência para o primeiro idioma de uma lista ocorre antes da correspondência do segundo idioma de uma lista, mesmo para outras variações regionais. Por exemplo, um recurso de en-GB será escolhido em detrimento de um recurso de fr-CA se o idioma de tempo de execução do app for en-US. Somente se não houver nenhum recurso para o formato en, um recurso para fr-CA será escolhido (observe que o idioma padrão do app não pôde ser definido para nenhum formato en nesse caso).
 
 O mecanismo de pontuação usa os dados incluídos no Registro de submarca [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302), além de outras fontes de dados. Ele permite um gradiente de pontuação com diferentes qualidades de correspondência e, quando vários candidatos estão disponíveis, seleciona aquele com a melhor pontuação de correspondência.
 
@@ -70,7 +70,7 @@ As marcas correspondem às submarcas de idioma, script e região, mas diferem em
 
 ### <a name="partial-matches"></a>Correspondências parciais
 
-As marcas correspondem às submarcas de idioma e script, mas diferem na região ou em alguma outra submarca. Por exemplo, en-US corresponde a en ou en-US corresponde a en-\*.
+As marcas correspondem às submarcas de idioma e script, mas diferem na região ou em alguma outra submarca. Por exemplo, en-US corresponde ao en ou corresponde à en-US - en\*.
 
 #### <a name="macro-region-match"></a>Correspondência de macrorregião
 
@@ -126,12 +126,12 @@ Quando uma submarca de idioma tem um valor de Script de Supressão definido no R
 
 Às vezes, a correspondência ocorre como parte de um processo maior de correspondência de um único idioma com uma lista de idiomas. Por exemplo, pode haver uma correspondência de um recurso baseado em um único idioma com a lista de idiomas de um aplicativo. A pontuação da correspondência é ponderada pela posição do primeiro idioma correspondente na lista. Quanto mais baixa a posição do idioma na lista, mas baixa é a pontuação.
 
-Quando a lista de idiomas contém duas ou mais variantes regionais com as mesmas submarcas de idioma e script, as comparações da primeira marca de idioma são classificadas apenas para correspondências exatas, variantes e de região. A pontuação de correspondências parciais é adiada para a última variante regional. Dessa forma, os usuários podem controlar perfeitamente o comportamento da correspondência em sua lista de idiomas. O comportamento da correspondência pode incluir a precedência da correspondência exata de um item secundário na lista sobre uma correspondência parcial do primeiro item na lista, se houver um terceiro item que corresponda ao idioma e ao script do primeiro. Veja um exemplo.
+Quando a lista de idiomas contém duas ou mais variantes regionais com as mesmas submarcas de idioma e script, as comparações da primeira marca de idioma são classificadas apenas para correspondências exatas, variantes e de região. A pontuação de correspondências parciais é adiada para a última variante regional. Dessa forma, os usuários podem controlar perfeitamente o comportamento da correspondência em sua lista de idiomas. O comportamento da correspondência pode incluir a precedência da correspondência exata de um item secundário na lista sobre uma correspondência parcial do primeiro item na lista, se houver um terceiro item que corresponda ao idioma e ao script do primeiro. Aqui está um exemplo.
 
 - Lista de idiomas (em ordem): "pt-PT" (Português (Portugal)), "en-US" (Inglês (Estados Unidos)), "pt-BR" (Português (Brasil)).
 - Recursos: "en-US", "pt-BR".
 - Recurso com pontuação mais alta: "en-US".
-- Descrição: a comparação inicia com "pt-PT", mas não encontra uma correspondência exata. Devido à presença de "pt-BR" na lista de idiomas do usuário, a correspondência parcial é adiada para a comparação com "pt-BR". A próxima comparação de idioma é "en-US", que tem uma correspondência exata. Portanto, o recurso vencedor é "en-US".
+- Descrição: A comparação começa com "pt-PT", mas não encontra uma correspondência exata. Devido à presença de "pt-BR" na lista de idiomas do usuário, a correspondência parcial é adiada para a comparação com "pt-BR". A próxima comparação de idioma é "en-US", que tem uma correspondência exata. Portanto, o recurso vencedor é "en-US".
 
 OU
 
@@ -141,26 +141,26 @@ OU
 
 ## <a name="undetermined-language-und"></a>Idioma indeterminado ("und")
 
-A marca de idioma "und" pode ser usada para especificar um recurso que corresponda a qualquer idioma na ausência de uma correspondência melhor. Ela pode ser considerada similar ao intervalo de idiomas BCP-47 "*" ou "*-&lt;script&gt;". Veja um exemplo a seguir.
+A marca de idioma "und" pode ser usada para especificar um recurso que corresponda a qualquer idioma na ausência de uma correspondência melhor. Ela pode ser considerada similar ao intervalo de idiomas BCP-47 "*" ou "*-&lt;script&gt;". Aqui está um exemplo.
 
 - Lista de idiomas: "en-US", "zh-Hans-CN".
 - Recursos: "zh-Hans-CN", "und".
 - Recurso com a pontuação mais alta: "und".
-- Descrição: a comparação inicia com "en-US", mas não encontra uma correspondência baseada em "en" (parcial ou melhor). Como há um recurso marcado com "und", o algoritmo correspondente usará esse.
+- Descrição: A comparação começa com "en-US", mas não encontra uma correspondência com base em "en" (parcial ou melhor). Como há um recurso marcado com "und", o algoritmo correspondente usará esse.
 
-A marca "und" permite que vários idiomas compartilhem um único recurso e permite que idiomas individuais sejam tratados como exceções. Por exemplo:
+A marca "und" permite que vários idiomas compartilhem um único recurso e permite que idiomas individuais sejam tratados como exceções. Por exemplo,
 
 - Lista de idiomas: "zh-Hans-CN", "en-US".
 - Recursos: "zh-Hans-CN", "und".
 - Recurso com a pontuação mais alta: "zh-Hans-CN".
-- Descrição: a comparação localiza uma correspondência exata do primeiro item e, portanto, não verifica se há recurso rotulado como "und".
+- Descrição: A comparação encontra uma correspondência exata para o primeiro item e, então, ele não verifica se há o recurso rotulado "und".
 
-Você pode usar "und" com uma marca de script para filtrar recursos por script. Por exemplo:
+Você pode usar "und" com uma marca de script para filtrar recursos por script. Por exemplo,
 
 - Lista de idiomas: "ru".
 - Recursos: "und-Latn", "und-Cyrl", "und-Arab".
 - Recurso com a pontuação mais alta: "und-Cyrl".
-- Descrição: a comparação não localiza uma correspondência para "ru" (parcial ou melhor) e, portanto, corresponde à marca de idioma "und". O valor de script de supressão "Cyrl" associado à marca de idioma "ru" corresponde ao recurso "und-Cyrl".
+- Descrição: A comparação não encontra uma correspondência para "ru" (parcial ou melhor) e então corresponde a marca de idioma "und". O valor de script de supressão "Cyrl" associado à marca de idioma "ru" corresponde ao recurso "und-Cyrl".
 
 ## <a name="orthographic-regional-affinity"></a>Afinidade regional ortográfica
 
@@ -170,7 +170,7 @@ Quando duas marcas de idioma com diferenças de submarca de região são corresp
 
 Determinados idiomas têm comunidades extensas de falantes em regiões distintas que usam diferentes variedades desse idioma, como inglês, francês e espanhol, que estão entre os idiomas com maior suporte em aplicativos multilíngues. As diferenças regionais podem incluir variações de ortografia (por exemplo, "color" versus "colour") ou diferenças de dialeto, como vocabulário (por exemplo, "truck" versus "lorry").
 
-Esses idiomas com variantes regionais significativas apresentam alguns desafios à criação de um app para uso internacional: "Quantas variantes regionais diferentes devem ser compatíveis?" "Quais?" "Qual é a maneira mais econômica de gerenciar esses ativos de variante regional para meu app?" Está além do escopo deste tópico responder a todas essas perguntas. No entanto, os mecanismos de correspondência de idioma no Windows fornecem recursos que podem ajudar você a tratar variantes regionais.
+Essas linguagens com variantes regionais significativas apresentam certos desafios ao fazer um aplicativo preparado para o mundo: "Como muitas variantes regionais diferentes devem ser tem suporte?" "Quais?" "Qual é a maneira mais econômica de gerenciar esses ativos de variante regional para meu app?" Está além do escopo deste tópico responder a todas essas perguntas. No entanto, os mecanismos de correspondência de idioma no Windows fornecem recursos que podem ajudar você a tratar variantes regionais.
 
 Os apps geralmente darão suporte a uma única variante de um determinado idioma. Suponha que um app tenha recursos para apenas uma variante do inglês, planejados para uso por falantes do inglês independentemente da região. Nesse caso, a marca "en" sem submarca de região refletirá essa expectativa. Porém, os apps podem ter usado historicamente uma marca como "en-US", que inclui uma submarca de região. Nesse caso, isso também funcionará: o app usa apenas uma variante do inglês, e o Windows lida com a correspondência de um recurso marcado por uma variante regional com uma preferência de idioma de usuário para uma variante regional diferente de maneira adequada.
 
@@ -184,11 +184,11 @@ Suponhamos também que você queira fornecer localizações em espanhol separada
 
 Marcas de idioma de região neutra e submarcas de macroregião podem ser muito eficazes quando você deseja dar suporte a várias variantes regionais. Para minimizar o número de ativos diferentes necessários, você pode qualificar um determinado ativo de uma maneira que reflita a cobertura mais ampla possível à qual ele é aplicável. Em seguida, complemente um ativo amplamente aplicável com uma variante mais específica, conforme necessário. Um ativo com um qualificador de idioma de região neutra será usado para usuários de qualquer variante regional, a menos que exista outro ativo com um qualificador regional mais específico aplicável a esse usuário. Por exemplo, um ativo "en" corresponderá a um usuário falante do inglês australiano, mas um ativo com "en-053" (inglês usado na Austrália ou na Nova Zelândia) será uma correspondência melhor para esse usuário, enquanto um ativo com "en-AU" será a melhor correspondência possível.
 
-O idioma inglês merece consideração especial. Se um app adicionar localização para duas variantes do inglês, estas serão provavelmente para o inglês dos EUA e do Reino Unido, ou inglês "internacional". Como observado acima, certas regiões fora dos EUA seguem as convenções ortográficas dos Estados Unidos, e a correspondência de idioma do Windows leva isso em consideração. Neste cenário, não é recomendável usar a marca de região neutra "en" para uma das variantes. Em vez disso, use "en-GB" e "en-US". (No entanto, se um recurso não exigir variantes separadas, "en" poderá ser usado.) Se "en-GB" ou "en-US" for substituído por "en", isso causará interferência com a afinidade regional ortográfica fornecida pelo Windows. Se uma terceira localização em inglês for adicionada, use uma submarca específica ou de macrorregião para as variantes adicionais, conforme necessário (por exemplo, "en-CA", "en-AU" ou "en-053"), mas continue usando "en-GB" e "en-US".
+O idioma inglês merece consideração especial. Se um app adicionar localização para duas variantes do inglês, estas serão provavelmente para o inglês dos EUA e do Reino Unido, ou inglês "internacional". Como observado acima, certas regiões fora dos EUA seguem as convenções ortográficas dos Estados Unidos, e a correspondência de idioma do Windows leva isso em consideração. Neste cenário, não é recomendável usar a marca de região neutra "en" para uma das variantes. Em vez disso, use "en-GB" e "en-US". (Se um determinado recurso não exige variantes separadas, no entanto, "en" pode ser usado.) Se "en-GB" ou "en-US" é substituído por "en", que irá interferir com a afinidade regional ortográfica fornecida pelo Windows. Se uma terceira localização em inglês for adicionada, use uma submarca específica ou de macrorregião para as variantes adicionais, conforme necessário (por exemplo, "en-CA", "en-AU" ou "en-053"), mas continue usando "en-GB" e "en-US".
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Como o Sistema de Gerenciamento de Recursos faz a correspondência dos recursos e os escolhe](how-rms-matches-and-chooses-resources.md)
+* [Como o sistema de gerenciamento de recursos corresponde e escolhe os recursos](how-rms-matches-and-chooses-resources.md)
 * [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Noções básicas sobre idiomas de perfil de usuário e idiomas de manifesto do app](../design/globalizing/manage-language-and-region.md)
-* [Composição de macrorregiões geográficas (continentais), sub-regiões geográficas, e agrupamentos econômicos e outros agrupamentos selecionados](https://go.microsoft.com/fwlink/p/?LinkId=247929)
+* [Entender os idiomas de perfil do usuário e linguagens de manifesto do aplicativo](../design/globalizing/manage-language-and-region.md)
+* [Composição de regiões geográficas de (continental) macro, subpropriedades de regiões geográficas e agrupamentos econômicos e outros selecionados](https://go.microsoft.com/fwlink/p/?LinkId=247929)

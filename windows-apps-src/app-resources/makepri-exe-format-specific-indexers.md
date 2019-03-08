@@ -1,5 +1,5 @@
 ---
-Description: This topic describes the format-specific indexers used by the MakePri.exe tool to generate its index of resources.
+Description: Este tópico descreve os indexadores específicos de formato usados pela ferramenta MakePri.exe para gerar seu índice de recursos.
 title: Indexadores específicos de formato do MakePri.exe
 template: detail.hbs
 ms.date: 10/18/2017
@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a245c4ec0280f687cf34e85123960e64fe36a57
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044623"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645871"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>Indexadores específicos de formato do MakePri.exe
 
 Este tópico descreve os indexadores específicos de formato usados pela ferramenta [MakePri.exe](compile-resources-manually-with-makepri.md) para gerar seu índice de recursos.
 
 > [!NOTE]
-> MakePri.exe é instalado quando você verificar a opção do **SDK do Windows para aplicativos gerenciados do UWP** ao instalar o Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe é instalado quando você verificar a **SDK do Windows para aplicativos gerenciados do UWP** opção durante a instalação do Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 O MakePri.exe é normalmente usado com o comando `new`, `versioned` ou `resourcepack`. Consulte [Opções de linha de comando do MakePri.exe](makepri-exe-command-options.md). Nesses casos, ele indexa os arquivos de origem para gerar um índice de recursos. O MakePri.exe usa vários indexadores individuais para ler diferentes arquivos de recurso de origem ou contêineres de recursos. O indexador mais simples é o indexador de pasta, que indexa o conteúdo de uma pasta, como imagens `.jpg` ou `.png`.
 
@@ -28,7 +28,7 @@ Os contêineres de recursos encontrados durante a indexação geralmente têm se
 
 Geralmente, os qualificadores encontrados em uma entidade contentora, como uma pasta ou um arquivo `.resw`, são aplicados a todos os recursos nela contidos, como os arquivos armazenados na pasta ou as cadeias de caracteres inseridas no arquivo `.resw`.
 
-## <a name="folder"></a>Folder
+## <a name="folder"></a>Pasta
 
 O indexador de pasta é identificado por um atributo `type` de FOLDER. Ele indexa o conteúdo de uma pasta e determina os qualificadores de recursos a partir dos nomes de pasta e de arquivo. Seu elemento de configuração está em conformidade com o esquema a seguir.
 
@@ -282,7 +282,7 @@ O indexador ResFiles é identificado por um atributo `type` de RESFILES. Ele ind
 </xs:schema>\
 ```
 
-O arquivo `.resfiles` é um arquivo de texto que contém uma lista simples de caminhos de arquivo. Um arquivo `.resfiles` pode conter comentários "//". Veja um exemplo a seguir.
+O arquivo `.resfiles` é um arquivo de texto que contém uma lista simples de caminhos de arquivo. Um arquivo `.resfiles` pode conter comentários "//". Aqui está um exemplo.
 
 ```
 Strings\component1\fr\elements.resjson
@@ -397,7 +397,7 @@ O atributo `initialPath` coloca todos os recursos nesse caminho inicial, inserin
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)
-* [Opções de linha de comando do MakePri.exe](makepri-exe-command-options.md)
+* [Compilar recursos manualmente com MakePri.exe](compile-resources-manually-with-makepri.md)
+* [Opções de linha de comando MakePri.exe](makepri-exe-command-options.md)
 * [Arquivo de configuração MakePri.exe](makepri-exe-configuration.md)
-* [O tipo de mídia de aplicativo/json para JavaScript Object Notation (JSON)](https://www.ietf.org/rfc/rfc4627.txt)
+* [Tipo de mídia application/json para objeto notação JSON (JavaScript)](https://www.ietf.org/rfc/rfc4627.txt)

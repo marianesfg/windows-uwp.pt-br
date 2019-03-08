@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, local, imagens, sobreposição
 ms.localizationpriority: medium
 ms.openlocfilehash: c0c2f07a364980b67a34a519eb5dd8b4da1a18f0
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046429"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57663081"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Sobrepor imagens lado a lado em um mapa
 
@@ -25,7 +25,7 @@ Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fo
 
 Serviços de mapa como Nokia Maps e Bing Mapas cortam mapas em blocos quadrados para recuperação e exibição rápidas. Esses blocos têm 256 pixels por 256 pixels de tamanho e são previamente renderizados em vários níveis de detalhes. Vários serviços de terceiros também oferecem dados baseados em mapa cortados em blocos. Use fontes de blocos para recuperar blocos de terceiros ou criar seus próprios blocos personalizados e os sobreponha no mapa exibido no [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-**Importante**  quando você usa fontes de blocos, você não precisa escrever código para solicitar ou posicionar blocos individuais. O [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) solicita blocos conforme a necessidade. Cada solicitação especifica as coordenadas X e Y e o nível de zoom para o bloco individual. Você simplesmente especifica o formado do Uri ou do nome de arquivo para usar para recuperar os blocos na propriedade **UriFormatString**. Ou seja, você deve inserir parâmetros substituíveis no Uri ou nome de arquivo de base para indicar para onde passar as coordenadas X e Y e o nível de zoom para cada bloco.
+**Importante**    quando você usa fontes de bloco, você não precisa escrever código para solicitar ou posicionar blocos individuais. O [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) solicita blocos conforme a necessidade. Cada solicitação especifica as coordenadas X e Y e o nível de zoom para o bloco individual. Você simplesmente especifica o formado do Uri ou do nome de arquivo para usar para recuperar os blocos na propriedade **UriFormatString**. Ou seja, você deve inserir parâmetros substituíveis no Uri ou nome de arquivo de base para indicar para onde passar as coordenadas X e Y e o nível de zoom para cada bloco.
 
 Aqui está um exemplo da propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) para um [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) que mostra os parâmetros substituíveis para as coordenadas X e Y e o nível de zoom.
 
@@ -420,8 +420,8 @@ Para substituir o mapa padrão inteiramente com blocos de terceiros ou personali
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
-* [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Central de desenvolvedores do Bing Maps](https://www.bingmapsportal.com/)
+* [Exemplo de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo do aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Vídeo da Build 2015: Aproveitando o mapas e local entre o telefone, Tablet e PC em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Exemplo de aplicativo do tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)

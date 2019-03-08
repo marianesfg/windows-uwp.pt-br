@@ -1,5 +1,5 @@
 ---
-title: Impressão 3D do seu aplicativo
+title: Impressão 3D a partir de seu aplicativo
 description: Saiba como adicionar a funcionalidade de impressão 3D ao seu aplicativo Universal do Windows. Esse tópico aborda como iniciar a caixa de diálogo de impressão 3D após verificar se o seu modelo 3D é imprimível e está no formato correto.
 ms.assetid: D78C4867-4B44-4B58-A82F-EDA59822119C
 ms.date: 02/08/2017
@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, 3dprinting, impressão 3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 4013341a3e4e44d6ac2df66d58d4114313573d2a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048263"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57652241"
 ---
-# <a name="3d-printing-from-your-app"></a>Impressão 3D a partir do seu app
+# <a name="3d-printing-from-your-app"></a>Impressão 3D a partir de seu aplicativo
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/dn998169)
 
@@ -89,11 +89,11 @@ O objeto **Printing3DModel** agora está reparado e imprimível. Use [**SaveMode
 ## <a name="execute-printing-task-create-a-taskrequested-handler"></a>Executar a tarefa de impressão: crie um manipulador de TaskRequested
 
 
-Depois, quando a caixa de diálogo de impressão 3D for exibida para o usuário e o usuário optar por iniciar a impressão, o seu aplicativo precisará passar os parâmetros desejados para o pipeline de impressão 3D. A API de impressão 3D acionará o evento **[TaskRequested](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Print3DManager.TaskRequested)**. Você deve escrever um método para manipular esse evento adequadamente. Como sempre, o método de manipulador deve ser do mesmo tipo do evento: o evento **TaskRequested** tem parâmetros [**Print3DManager**](https://msdn.microsoft.com/library/windows/apps/dn998029) (uma referência ao seu objeto remetente) e um objeto [**Print3DTaskRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn998051), que contém a maior parte das informações relevantes.
+Depois, quando a caixa de diálogo de impressão 3D for exibida para o usuário e o usuário optar por iniciar a impressão, o seu aplicativo precisará passar os parâmetros desejados para o pipeline de impressão 3D. A API de impressão 3D acionará o evento **[TaskRequested](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Print3DManager.TaskRequested)**. Você deve escrever um método para manipular esse evento adequadamente. Como sempre, o método do manipulador deve ser do mesmo tipo que o evento: O **TaskRequested** evento tem parâmetros [ **Print3DManager** ](https://msdn.microsoft.com/library/windows/apps/dn998029) (uma referência para seu objeto de remetente) e um [  **Print3DTaskRequestedEventArgs** ](https://msdn.microsoft.com/library/windows/apps/dn998051) objeto, que contém a maioria das informações relevantes.
 
 [!code-cs[MyTaskTitle](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetMyTaskTitle)]
 
-O objetivo principal desse método é usar o parâmetro *args* para enviar um **Printing3D3MFPackage** para o pipeline. O tipo **Print3DTaskRequestedEventArgs** tem uma propriedade: [**Request**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtaskrequestedeventargs.request.aspx). Ela é do tipo [**Print3DTaskRequest**](https://msdn.microsoft.com/library/windows/apps/dn998050) e representa uma solicitação de trabalho de impressão. Seu método [**CreateTask**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtaskrequest.createtask.aspx) permite que o programa envie as informações corretas para o trabalho de impressão, e retorna uma referência para o objeto **Print3DTask** que foi enviado para o pipeline de impressão 3D.
+O objetivo principal desse método é usar o parâmetro *args* para enviar um **Printing3D3MFPackage** para o pipeline. O **Print3DTaskRequestedEventArgs** tipo tem uma propriedade: [**Solicitar**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtaskrequestedeventargs.request.aspx). Ela é do tipo [**Print3DTaskRequest**](https://msdn.microsoft.com/library/windows/apps/dn998050) e representa uma solicitação de trabalho de impressão. Seu método [**CreateTask**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtaskrequest.createtask.aspx) permite que o programa envie as informações corretas para o trabalho de impressão, e retorna uma referência para o objeto **Print3DTask** que foi enviado para o pipeline de impressão 3D.
 
 O **CreateTask** tem os seguintes parâmetros de entrada: uma cadeia de caracteres para o nome do trabalho de impressão, uma cadeia de caracteres para a ID da impressora usar e uma delegação [**Print3DTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtasksourcerequestedhandler.aspx). A delegação é automaticamente invocada quando o evento **3DTaskSourceRequested** é acionado (isso é feito pela API em si). O importante a observar é que tal delegação é invocada quando um trabalho de impressão é iniciado, e é responsável por fornecer o pacote de impressão 3D certo.
 

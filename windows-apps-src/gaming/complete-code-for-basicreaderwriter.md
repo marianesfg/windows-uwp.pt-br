@@ -1,17 +1,17 @@
 ---
 title: Concluir código para BasicReaderWriter
-description: Conclua o código para classe e métodos de leitura e gravação de arquivos de dados binários em geral.
+description: Conclua código para classe e métodos de leitura e gravação de arquivos de dados binários em geral.
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, basicreaderwriter
 ms.localizationpriority: medium
 ms.openlocfilehash: 60c2bf74de1e56004f1f705f317bc6bd1bb34b26
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925104"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594991"
 ---
 # <a name="complete-code-for-basicreaderwriter"></a>Concluir código para BasicReaderWriter
 
@@ -21,7 +21,7 @@ Conclua código para classe e métodos de leitura e gravação de arquivos de da
 
 Este tópico contém estas seções:
 
--   [Tecnologias](#technologies)
+-   [Technologies](#technologies)
 -   [Requisitos](#requirements)
 -   [Exibir o código (C++)](#view-the-code-c)
 

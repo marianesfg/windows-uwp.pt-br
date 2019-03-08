@@ -12,36 +12,36 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e263876f414e5683ffc8a5645a12e5031b3d6fb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946048"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660181"
 ---
 # <a name="texture-addressing-modes"></a>Modos de endereçamento de textura
 
 
 Seu aplicativo Direct3D pode atribuir coordenadas de textura a qualquer vértice de qualquer primitiva. Normalmente, as coordenadas de textura u e v que você atribui a um vértice estão no intervalo de 0.0 a 1.0. No entanto, atribuindo coordenadas de textura fora desse intervalo, você pode criar certos efeitos especiais de texturização. .
 
-Você controla o que o Direct3D faz com as coordenadas de textura que estão fora do intervalo \[0.0, 1.0\] definindo o modo de endereçamento de textura. Por exemplo, você pode fazer com que seu aplicativo defina o modo de endereçamento de textura de forma que uma textura seja colocada lado a lado em uma primitiva.
+Você controla o que Direct3D faz com as coordenadas de textura que estão fora de \[0,0, 1,0\] intervalo, definindo o modo de endereçamento de textura. Por exemplo, você pode fazer com que seu aplicativo defina o modo de endereçamento de textura de forma que uma textura seja colocada lado a lado em uma primitiva.
 
 O Direct3D permite que os aplicativos executem o encapsulamento de textura. Consulte [Encapsulamento de textura](texture-wrapping.md).
 
-Habilitar o encapsulamento de textura torna efetivamente as coordenadas de textura fora do intervalo \[0.0, 1.0\] inválidas, e o comportamento para rasterizar essas coordenadas de textura negligentes é indefinido nesse caso. Quando o encapsulamento de textura está habilitado, os modos de endereçamento de textura não são usados. Tome cuidado para seu aplicativo não especificar coordenadas de textura menores que 0.0 ou maiores que 1.0 quando o encapsulamento de textura estiver habilitado.
+Habilitando a textura encapsulamento efetivamente torna as coordenadas de textura fora o \[0,0, 1,0\] inválida de intervalo e o comportamento para rasterizar essas coordenadas de textura inadimplente é indefinido neste caso. Quando o encapsulamento de textura está habilitado, os modos de endereçamento de textura não são usados. Tome cuidado para seu aplicativo não especificar coordenadas de textura menores que 0.0 ou maiores que 1.0 quando o encapsulamento de textura estiver habilitado.
 
-## <a name="span-idsummaryofthetextureaddressingmodesspanspan-idsummaryofthetextureaddressingmodesspanspan-idsummaryofthetextureaddressingmodesspansummary-of-the-texture-addressing-modes"></a><span id="Summary_of_the_texture_addressing_modes"></span><span id="summary_of_the_texture_addressing_modes"></span><span id="SUMMARY_OF_THE_TEXTURE_ADDRESSING_MODES"></span>Resumo dos modos de endereçamento de textura
+## <a name="span-idsummaryofthetextureaddressingmodesspanspan-idsummaryofthetextureaddressingmodesspanspan-idsummaryofthetextureaddressingmodesspansummary-of-the-texture-addressing-modes"></a><span id="Summary_of_the_texture_addressing_modes"></span><span id="summary_of_the_texture_addressing_modes"></span><span id="SUMMARY_OF_THE_TEXTURE_ADDRESSING_MODES"></span>Resumo da textura modos de endereçamento
 
 
 | Modo de endereçamento de textura | Descrição                                                                                                                           |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Wrap                    | Repete a textura em cada junção de inteiros.                                                                                        |
 | Mirror                  | Espelha a textura em cada limite de inteiro.                                                                                        |
-| Clamp                   | Ancora seu coordenadas de textura ao intervalo \[0.0, 1.0\] variar; o modo Clamp aplica a textura uma vez e depois mancha a cor dos pixels da borda. |
+| Clamp                   | Clamps sua textura de coordenadas para o \[0,0, 1,0\] intervalo; Modo Clamp se aplica a textura de uma vez e, em seguida, mancha a cor de pixels da borda. |
 | Border Color            | Usa uma *cor de borda* arbitrária para qualquer coordenada de textura fora do intervalo de 0.0 e 1.0.                         |
 
  
 
-## <a name="span-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanwrap-texture-address-mode"></a><span id="Wrap_texture_address_mode"></span><span id="wrap_texture_address_mode"></span><span id="WRAP_TEXTURE_ADDRESS_MODE"></span>Modo de endereçamento de textura Wrap
+## <a name="span-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanwrap-texture-address-mode"></a><span id="Wrap_texture_address_mode"></span><span id="wrap_texture_address_mode"></span><span id="WRAP_TEXTURE_ADDRESS_MODE"></span>Encapsular o modo de endereço de textura
 
 
 O modo de endereçamento de textura Wrap faz o Direct3D repetir a textura em cada junção de inteiros.
@@ -52,7 +52,7 @@ Suponhamos que, por exemplo, seu aplicativo crie uma primitiva quadrada e especi
 
 Compare isso com o **modo de endereçamento de textura Mirror** a seguir.
 
-## <a name="span-idmirrortextureaddressmodespanspan-idmirrortextureaddressmodespanspan-idmirrortextureaddressmodespanmirror-texture-address-mode"></a><span id="Mirror_texture_address_mode"></span><span id="mirror_texture_address_mode"></span><span id="MIRROR_TEXTURE_ADDRESS_MODE"></span>Modo de endereçamento de textura Mirror
+## <a name="span-idmirrortextureaddressmodespanspan-idmirrortextureaddressmodespanspan-idmirrortextureaddressmodespanmirror-texture-address-mode"></a><span id="Mirror_texture_address_mode"></span><span id="mirror_texture_address_mode"></span><span id="MIRROR_TEXTURE_ADDRESS_MODE"></span>Modo de endereço de textura de espelho
 
 
 O modo de endereço de textura Mirror faz com que o Direct3D espelhe a textura em cada limite de inteiro.
@@ -63,10 +63,10 @@ Suponhamos que, por exemplo, seu aplicativo crie uma primitiva quadrada e especi
 
 Compare isso com o **modo de endereçamento de textura Wrap** anterior.
 
-## <a name="span-idclamptextureaddressmodespanspan-idclamptextureaddressmodespanspan-idclamptextureaddressmodespanclamp-texture-address-mode"></a><span id="Clamp_texture_address_mode"></span><span id="clamp_texture_address_mode"></span><span id="CLAMP_TEXTURE_ADDRESS_MODE"></span>Modo de endereçamento de textura Clamp
+## <a name="span-idclamptextureaddressmodespanspan-idclamptextureaddressmodespanspan-idclamptextureaddressmodespanclamp-texture-address-mode"></a><span id="Clamp_texture_address_mode"></span><span id="clamp_texture_address_mode"></span><span id="CLAMP_TEXTURE_ADDRESS_MODE"></span>Modo de endereço de textura Clamp
 
 
-O modo de endereçamento de textura Clamp faz com que o Direct3D ancore as coordenadas de textura ao intervalo \[0.0, 1.0\]; o modo Clamp aplica a textura uma vez e depois mancha a cor dos pixels da borda.
+O modo de endereço de textura Clamp faz com que o Direct3D a serem fixados suas coordenadas de textura para o \[0,0, 1,0\] intervalo; Modo Clamp se aplica a textura de uma vez e, em seguida, mancha a cor de pixels da borda.
 
 Suponhamos que seu aplicativo crie uma primitiva quadrada e atribua coordenadas de textura de (0.0,0.0), (0.0,3.0), (3.0,3.0) e (3.0,0.0) aos vértices da primitiva. Definir o modo de endereçamento de textura como "Clamp" faz com que a textura seja aplicada uma vez. As cores dos pixels na parte superior das colunas e no final das linhas são estendidas até a parte superior e à direita da primitiva respectivamente.
 
@@ -74,7 +74,7 @@ A ilustração a seguir mostra uma textura ancorada.
 
 ![ilustração de uma textura e uma textura ancorada](images/clamp.png)
 
-## <a name="span-idbordercolortextureaddressmodespanspan-idbordercolortextureaddressmodespanspan-idbordercolortextureaddressmodespanborder-color-texture-address-mode"></a><span id="Border_Color_texture_address_mode"></span><span id="border_color_texture_address_mode"></span><span id="BORDER_COLOR_TEXTURE_ADDRESS_MODE"></span>Modo de endereçamento de textura Border Color
+## <a name="span-idbordercolortextureaddressmodespanspan-idbordercolortextureaddressmodespanspan-idbordercolortextureaddressmodespanborder-color-texture-address-mode"></a><span id="Border_Color_texture_address_mode"></span><span id="border_color_texture_address_mode"></span><span id="BORDER_COLOR_TEXTURE_ADDRESS_MODE"></span>Modo de endereço de textura de cor da borda
 
 
 O modo de endereçamento de textura Border Color faz com que o Direct3D use uma cor arbitrária, conhecida como a *cor da borda*, para qualquer coordenada de textura fora do intervalo de 0.0 a 1.0.

@@ -1,5 +1,5 @@
 ---
-Description: MakePri.exe has the set of commands createconfig, dump, new, resourcepack, and versioned. This topic details their use.
+Description: O MakePri.exe tem o conjunto de comandos createconfig, dump, new, resourcepack e versioned. Este tópico fornece detalhes sobre seu uso.
 title: Opções de linha de comando do MakePri.exe
 template: detail.hbs
 ms.date: 04/10/2018
@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: bc08376dafec8aad9d65ef5acd8d19943d242eed
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943410"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603391"
 ---
 # <a name="makepriexe-command-line-options"></a>Opções de linha de comando do MakePri.exe
 
 [MakePri.exe](compile-resources-manually-with-makepri.md) tem o conjunto de comandos `createconfig`, `dump`, `new`, `resourcepack` e `versioned`. Este tópico descreve detalhadamente as opções de linha de comando para seu uso.
 
 > [!NOTE]
-> MakePri.exe é instalado quando você verificar a opção do **SDK do Windows para aplicativos gerenciados do UWP** ao instalar o Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe é instalado quando você verificar a **SDK do Windows para aplicativos gerenciados do UWP** opção durante a instalação do Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
-## <a name="getting-help-from-the-command-line"></a>Obter ajuda na linha de comando
+## <a name="getting-help-from-the-command-line"></a>Obtendo ajuda de linha de comando
 
-Você pode executar `MakePri.exe help` ou `MakePri.exe /?` para ver os comandos que você pode usar com MakePri.exe. Você também pode emitir `MakePri.exe <command> /?` para ver detalhes específicos sobre um comando e, em casos raros, até mesmo `MakePri.exe <command> <option>` para ver os detalhes sobre uma opção.
+Você pode executar `MakePri.exe help` ou `MakePri.exe /?` para ver os comandos que você pode usar com MakePri.exe. Você também pode emitir `MakePri.exe <command> /?` para ver detalhes sobre um comando e, em casos raros, até mesmo `MakePri.exe <command> <option>` para ver os detalhes sobre uma opção.
 
 ## <a name="makepri-commands"></a>Comandos MakePri
 
@@ -115,7 +115,7 @@ Help:
 O comando `dump` gera um arquivo xml despejado contendo uma lista de todos os recursos em um arquivo PRI especificado. Execute `MakePri.exe dump /?` para ver uma ajuda detalhada deste comando.
 
 > [!NOTE]
-> Um pacote de recursos sem esquema é aquele que foi criado com a opção *omitSchemaFromResourcePacks* no arquivo de configuração PRI. Para despejar um pacote de recursos sem esquema, use a opção `/es <main_package_PRI_file>`. Se você não especificar o arquivo principal, verá a mensagem de erro "*The resources.pri in the package was corrupted so encryption failed (error PRI222: 0xdef0000f - Unspecified error occurred)*".
+> Um pacote de recursos sem esquema é aquele que foi criado com a opção *omitSchemaFromResourcePacks* no arquivo de configuração PRI. Para despejar um pacote de recursos sem esquema, use a opção `/es <main_package_PRI_file>`. Se você não especificar o arquivo principal, você verá a mensagem de erro "*o resources.pri no pacote estava corrompido para que a criptografia falhou (erro PRI222: 0xdef0000f - erro não especificado ocorreu)*".
 
 ```console
 C:\>makepri dump /?
@@ -416,18 +416,18 @@ Para `resourcepack` e `versioned`, em vez de fornecer um arquivo PRI como parâm
 
 **FILEPATH** é um token que especifica o local do arquivo PRI de entrada ou do arquivo de esquema PRI.
 
-## <a name="47indexoptionsio-option"></a>& #47;IndexOptions(io) opção
+## <a name="47indexoptionsio-option"></a>&#47;Opção IndexOptions(io)
 
-Use a opção de opções de índice (/ e/s) com `new`, `resourcepack`, e `versioned` para especificar as opções que fornecem controle detalhado sobre o comportamento de indexadores de recurso. Opções de índice são desabilitadas por padrão.
+Você usa a opção de opções de índice (/ e/s) com `new`, `resourcepack`, e `versioned` para especificar as opções que fornecem controle detalhado sobre o comportamento de indexadores de recurso. Opções de índice são desabilitadas por padrão.
 
 ```console
 /IndexOptions(io) <OPTIONS>
 ```
 
-**Opções** é uma lista separada por vírgulas composta das opções a seguir.
+**Opções de** é uma lista separada por vírgulas composta das seguintes opções.
 
-- + /-HiddenFiles(hf). Índice (+) ou ignorar (-) arquivos e pastas ocultos.
-- + /-LinkedFiles(lf). Índice (+) ou ignorar (-) vinculado a arquivos e pastas.
+- + /-HiddenFiles(hf). (+) De índice ou ignorar (-) arquivos e pastas ocultos.
+- +/-LinkedFiles(lf). (+) De índice ou ignorar (-) vinculado a arquivos e pastas.
 
 ## <a name="47mappingfilemf-option"></a>Opção &#47;MappingFile(mf)
 
@@ -458,7 +458,7 @@ E este é um conteúdo de exemplo de um arquivo de mapeamento de pacote de recur
 
 ## <a name="output-summary"></a>Resumo de saída
 
-Se os pacotes de recursos forem criados, o resumo de saída de MakePRI.exe será mais detalhado. Veja um exemplo a seguir.
+Se os pacotes de recursos forem criados, o resumo de saída de MakePRI.exe será mais detalhado. Aqui está um exemplo.
 
 ```console
 Index Pass Completed: ResourcePackTests\TestApp_ResourcePack
@@ -501,7 +501,7 @@ Esta é uma condição de erro de exemplo e a mensagem de erro correspondente.
 
 | Condição de erro | Mensagem de erro |
 | --------------- | ------------- |
-| O nome do arquivo de saída é igual a um dos nomes de pacote de recursos na configuração. | Configuração inválida: o nome de pacote de recursos <resource pack name> não pode ser igual ao arquivo de saída <outputfilename.pri>. |
+| O nome do arquivo de saída é igual a um dos nomes de pacote de recursos na configuração. | Configuração inválida: Nome do pacote de recursos <resource pack name> não pode ser o mesmo que o arquivo de saída < outputfilename.pri >. |
 
 ## <a name="reversemaprm-option"></a>Opção /ReverseMap(rm)
 

@@ -6,13 +6,13 @@ ms.topic: article
 keywords: windows 10, uwp, ExtendedJsonData, produtos da Store, esquema
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f51f0fffae3fa8e9a54214f78aa93fe39eab080
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937664"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656101"
 ---
-# <a name="data-schemas-for-store-products"></a>Esquemas de dados para produtos da Store
+# <a name="data-schemas-for-store-products"></a>Esquemas de dados de produtos da Loja
 
 Quando você envia um produto como um app ou um complemento para a Loja, a Loja mantém um conjunto abrangente de dados para o produto e suas licenças. No código do seu app, é possível acessar programaticamente alguns desses dados usando as propriedades no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx). Por exemplo, você pode recuperar a descrição e o preço do app atual ou um complemento para o app atual usando as propriedades [StoreProduct.Description](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Description) e [StoreProduct.Price](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Price).
 
@@ -71,9 +71,9 @@ O esquema a seguir descreve a cadeia de caracteres formatada em JSON retornada p
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md)
-* [Obter informações do produto para apps e complementos](get-product-info-for-apps-and-add-ons.md)
-* [Obter informações de licença para apps e complementos](get-license-info-for-apps-and-add-ons.md)
-* [Habilitar compras nos aplicativos e complementos no aplicativo](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [Compras no aplicativo e avaliação](in-app-purchases-and-trials.md)
+* [Obter informações sobre produtos para os aplicativos e complementos](get-product-info-for-apps-and-add-ons.md)
+* [Obter informações de licença para aplicativos e complementos](get-license-info-for-apps-and-add-ons.md)
+* [Habilitar compras no aplicativo de aplicativos e complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Habilitar compras de complementos consumíveis](enable-consumable-add-on-purchases.md)
-* [Implementar uma versão de avaliação do app](implement-a-trial-version-of-your-app.md)
+* [Implementar uma versão de avaliação do seu aplicativo](implement-a-trial-version-of-your-app.md)

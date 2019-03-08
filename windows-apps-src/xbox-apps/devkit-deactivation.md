@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
 ms.localizationpriority: medium
 ms.openlocfilehash: 5606a8fa6db5b439aa71f5d72b34c0f519d7eea9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947297"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651771"
 ---
 # <a name="xbox-one-developer-mode-deactivation"></a>Desativação do Modo de Desenvolvedor do Xbox One
 
@@ -21,7 +21,7 @@ Se você decidir que não deseja mais usar seu console para desenvolvimento, use
 
 Em primeiro lugar, retorne o console Xbox One para o Modo de Varejo.
 
-1. Abra a **Dev Home**.
+1. Abra **Dev Home**.
 
 2. Selecione **Sair do modo de desenvolvimento**.  Seu console será reiniciado no Modo de Varejo.  
 
@@ -72,9 +72,9 @@ Para redefinir o console, siga estas etapas:
 
 ## <a name="deactivate-your-console-using-partner-center"></a>Desativar seu console usando o Partner Center
 
-Se você não conseguir acessar seu console por qualquer motivo, você também pode desativar o modo de desenvolvedor no seu console usando o Partner Center.
+Se você não conseguir acessar seu console por algum motivo, você também poderá desativar o modo de desenvolvedor no seu console usando o Partner Center.
 
-1. Navegue até a página de [consoles gerenciar Xbox One](https://partner.microsoft.com/xboxdevices) no Partner Center. Você pode ser solicitado a entrar.
+1. Navegue até a [consoles gerenciar Xbox One](https://partner.microsoft.com/xboxdevices) página no Partner Center. Você será solicitado a entrar.
 
 2. Localize o console que você deseja desativar na lista de consoles, correspondendo o número de série, a ID de console ou a ID de dispositivo.  
 
@@ -84,6 +84,6 @@ Se você não conseguir acessar seu console por qualquer motivo, você também p
 
 Se você ainda não retornou o console Xbox One para o Modo de Varejo, faça isso agora, conforme descrito em [Alternar para o modo de varejo](#switch-to-retail-mode).
 
-## <a name="see-also"></a>Veja também
-- [Ativação do Modo de Desenvolvedor do Xbox One](devkit-activation.md)
+## <a name="see-also"></a>Consulte também
+- [Ativação de um modo de desenvolvedor Xbox](devkit-activation.md)
 - [UWP no Xbox One](index.md)

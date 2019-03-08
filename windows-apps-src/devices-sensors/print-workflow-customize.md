@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, impressão
 ms.localizationpriority: medium
 ms.openlocfilehash: 96e308793e60c0367c712fb93a5d25a056397568
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927171"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653231"
 ---
 # <a name="customize-the-print-workflow"></a>Personalizar o fluxo de trabalho de impressão
 
@@ -240,9 +240,9 @@ A diferença é que, embora os WSDAs sejam ativados automaticamente para o usuá
 
 ### <a name="set-the-workflow-apps-policy"></a>Definir a política do app de fluxo de trabalho
 A política do app de fluxo de trabalho é definida pelos comandos do Powershell no dispositivo executará o app de fluxo de trabalho. Os comandos Set-Printer, Add-Printer (porta existente) e Add-Printer (nova porta WSD) serão modificados para permitir que as políticas de fluxo de trabalho sejam definidas. 
-* `Disabled`: Os apps de fluxo de trabalho não serão ativados.
-* `Uninitialized`: Os apps de fluxo de trabalho serão ativados se o DCA de fluxo de trabalho for instalado no sistema. Se o app não estiver instalado, ainda assim, a impressão continuará. 
-* `Enabled`: O contrato do fluxo de trabalho será ativado se o DCA de fluxo de trabalho for instalado no sistema. Se o app não estiver instalado, a impressão apresentará falha. 
+* `Disabled`: Aplicativos de fluxo de trabalho não serão ativados.
+* `Uninitialized`: Aplicativos de fluxo de trabalho serão ativados se o fluxo de trabalho DCA é instalado no sistema. Se o app não estiver instalado, ainda assim, a impressão continuará. 
+* `Enabled`: Contrato de fluxo de trabalho será ativado se o fluxo de trabalho DCA é instalado no sistema. Se o app não estiver instalado, a impressão apresentará falha. 
 
 O comando a seguir torna o app de fluxo de trabalho necessário na impressora especificada.
 ```Powershell
@@ -253,8 +253,8 @@ Um usuário local pode executar essa política em uma impressora local ou, no ca
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo do app de fluxo de trabalho](https://github.com/Microsoft/print-oem-samples)
+[Exemplo de aplicativo de fluxo de trabalho](https://github.com/Microsoft/print-oem-samples)
 
-[Windows.Graphics.Printing.Workflow namespace](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow)
+[Namespace Windows.Graphics.Printing.Workflow](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow)
 
 

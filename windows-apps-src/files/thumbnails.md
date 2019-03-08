@@ -1,5 +1,5 @@
 ---
-Description: How to use thumbnail images to help users preview files in UWP apps.
+Description: Como usar imagens em miniatura para ajudar os usuários visualizar arquivos em aplicativos UWP.
 title: Diretrizes para imagens em miniatura em aplicativos UWP
 label: Thumbnail images
 template: detail.hbs
@@ -8,17 +8,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 15984e00b036bf44d6e4a7f60cb6435ea1add291
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980344"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57642001"
 ---
 # <a name="thumbnail-images"></a>Imagens em miniatura
 
 Essas diretrizes descrevem como usar imagens em miniatura para ajudar os usuários a visualizar arquivos à medida que eles navegam em seu aplicativo UWP. 
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**ThumbnailMode**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
 
@@ -66,17 +66,16 @@ Use miniaturas quando:
 <tr>
 <td> Imagens<br /> Vídeos </td>
 <td> PicturesView <br />VideosView </td>
-<td> <b>Tamanho</b>: médio, preferencialmente pelo menos 190 (se o tamanho da imagem for 190x130) <br />
-<b>Taxa de proporção</b>: taxa de proporção uniforme e ampla de cerca de 0,7 (190x130 se o tamanho for 190) <br />
+<td> <b>Tamanho</b>: Médio, preferencialmente pelo menos 190 (se o tamanho da imagem é 190 x 130) <br />
+<b>Taxa de proporção</b>: Taxa de proporção uniforme e ampla de aproximadamente.7 (190 x 130 se o tamanho for 190) <br />
 Recortado para visualizações. <br /> 
 Ideal para alinhar imagens em uma grade, devido à taxa de proporção uniforme.  </td>
 </tr>
 <tr>
 <td> Documentos<br />Música </td>
 <td> DocumentsView <br />MusicView <br /> ListView</td>
-<td> <b>Tamanho</b>: pequeno, preferencialmente pelo menos 40 x 40 pixels 
- <br />
-<b>Taxa de proporção</b>: taxa de proporção uniforme e quadrada  <br />
+<td> <b>Tamanho</b>: Pequeno, preferencialmente, pelo menos, 40 x 40 pixels <br />
+<b>Taxa de proporção</b>:  Taxa de proporção do quadrado e uniforme  <br />
 Ideal para visualização da capa do álbum devido à taxa de proporção quadrada. <br /> 
 Os documentos têm a mesma aparência apresentada em uma janela do seletor de arquivos (usam os mesmos ícones). </td>
 </tr>
@@ -84,9 +83,8 @@ Os documentos têm a mesma aparência apresentada em uma janela do seletor de ar
 <tr>
 <td> Qualquer item simples (independentemente do tipo de arquivo) </td>
 <td> SingleItem </td>
-<td> <b>Tamanho</b>: pequeno, preferencialmente pelo menos 40 x 40 pixels 
- <br />
-<b>Taxa de proporção</b>: taxa de proporção uniforme e quadrada  <br />
+<td> <b>Tamanho</b>: Pequeno, preferencialmente, pelo menos, 40 x 40 pixels <br />
+<b>Taxa de proporção</b>:  Taxa de proporção do quadrado e uniforme  <br />
 Ideal para visualização da capa do álbum devido à taxa de proporção quadrada. <br /> 
 Os documentos têm a mesma aparência apresentada em uma janela do seletor de arquivos (usam os mesmos ícones). </td>
 </tr>
@@ -167,6 +165,6 @@ Caso contrário, nenhuma miniatura será recuperada.</td>
 ## <a name="related-topics"></a>Tópicos relacionados
 - [Enumeração ThumbnailMode](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
 - [Classe StorageItemThumbnail](https://docs.microsoft.com/uwp/api/Windows.Storage.FileProperties.StorageItemThumbnail)
-- [Classe StorageFile](https://docs.microsoft.com/uwp/api/windows.storage.storagefile)
-- [Exemplo de miniatura de arquivo e pasta (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileThumbnails)
-- [Exibição de lista e de grade](../design/controls-and-patterns/lists.md)
+- [Classe de StorageFile](https://docs.microsoft.com/uwp/api/windows.storage.storagefile)
+- [Exemplo em miniatura do arquivo e pasta (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileThumbnails)
+- [Modo de exibição de lista e grade](../design/controls-and-patterns/lists.md)

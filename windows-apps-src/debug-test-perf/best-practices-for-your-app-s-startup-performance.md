@@ -1,19 +1,19 @@
 ---
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
 title: Práticas recomendadas para o desempenho inicial de seu aplicativo
-description: Crie apps da Plataforma Universal do Windows (UWP) com tempos de inicialização ótimos melhorando a maneira como você manipula a inicialização e a ativação.
+description: Crie aplicativos da Plataforma Universal do Windows (UWP) com tempos de inicialização ótimos melhorando a maneira como você manipula a inicialização e a ativação.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e50d3613e5f7058e99f2e71ba023fb4191e5c734
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051099"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644531"
 ---
-# <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu app
+# <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu aplicativo
 
 
 Crie aplicativos da Plataforma Universal do Windows (UWP) com tempos de inicialização ótimos melhorando a maneira como você manipula a inicialização e a ativação.
@@ -357,7 +357,7 @@ A PageStackEntry também inclui o parâmetro que foi passado para o método Fram
 
 Portanto, é recomendável manter os parâmetros de navegação ao mínimo e limitar o tamanho do BackStack. O BackStack é um vetor padrão (IList em C#, Platform::Vector em C++/CX) e, portanto, pode ser cortado com a simples remoção de entradas.
 
-**Armazenamento de páginas em cache**. Por padrão, quando você navega para uma página com o método Frame.Navigate, uma nova instância da página é instanciada. Da mesma forma, se você retornar à página anterior com Frame.GoBack, uma nova instância da página anterior será alocada.
+**Cache de páginas**. Por padrão, quando você navega para uma página com o método Frame.Navigate, uma nova instância da página é instanciada. Da mesma forma, se você retornar à página anterior com Frame.GoBack, uma nova instância da página anterior será alocada.
 
 O Frame, porém, oferece um cache de página opcional que pode evitar essas criações de instâncias. Para armazenar uma página em cache, use a propriedade Page.NavigationCacheMode. Definindo esse modo como Required forçará a página a ser armazenada em cache, definindo-a como Enabled permitirá que ela seja armazenada em cache. Por padrão, o tamanho do cache é de 10 páginas, mas isso pode ser alterado com a propriedade Frame.CacheSize. Todas as páginas necessárias serão armazenadas em cache, e se houver menos de páginas CacheSize Required, as páginas Enabled também poderão ser armazenadas em cache.
 

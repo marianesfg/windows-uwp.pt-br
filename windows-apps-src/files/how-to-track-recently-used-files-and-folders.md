@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c0eb2b6e668baec9f5ad1ef859b7213f20748beb
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049573"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601621"
 ---
 # <a name="track-recently-used-files-and-folders"></a>Rastrear arquivos e pastas usados recentemente
 
@@ -20,20 +20,20 @@ ms.locfileid: "9049573"
 - [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458)
 - [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/hh738369)
 
-Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à lista de itens usados recentemente de seu aplicativo. A plataforma gerencia os itens usados recentemente para você classificando-os com base na data em que foram acessados pela última vez e removendo o item mais antigo quando o limite de 25 itens é atingido. Todos os aplicativos têm seus próprios itens usados recentemente.
+Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à lista de itens usados recentemente de seu aplicativo. A plataforma gerencia a MRU para você classificando os itens com base na data em que foram acessados pela última vez e removendo o item mais antigo quando o limite de 25 itens é atingido. Todos os aplicativos têm seus próprios itens usados recentemente.
 
 Os itens recém-usados do aplicativo são representados pela classe [**StorageItemMostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207475) que você obtém da propriedade estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458). Os itens recém-usados são armazenados como objetos [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129), portanto, os objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (que representam arquivos) e [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) (que representam pastas) podem ser adicionados aos itens recém-usados.
 
 > [!NOTE]
-> Para exemplos completos, consulte o [exemplo de acesso a arquivos](https://go.microsoft.com/fwlink/p/?linkid=619995)e o [exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994) .
+> Para obter exemplos completos, consulte a [exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994) e o [amostra de acesso de arquivo](https://go.microsoft.com/fwlink/p/?linkid=619995).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
--   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
+-   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
 
     Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
--   **Acessar permissões ao local**
+-   **Permissões de acesso para o local**
 
     Consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
@@ -43,7 +43,7 @@ Os itens recém-usados do aplicativo são representados pela classe [**StorageIt
 
  ## <a name="add-a-picked-file-to-the-mru"></a>Adicionar um arquivo selecionado à lista MRU
 
--   Os arquivos que o usuário seleciona costumam ser os arquivos que eles retornam repetidamente. Portanto, considere adicionar os arquivos selecionados aos itens recém-usados de seu aplicativo assim que eles forem selecionados. Consulte aqui como fazer isso.
+-   Os arquivos que o usuário seleciona costumam ser os arquivos que eles retornam repetidamente. Portanto, considere adicionar os arquivos selecionados aos itens recém-usados de seu aplicativo assim que eles forem selecionados. Veja aqui como fazer isso.
 
     ```cs
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
@@ -52,7 +52,7 @@ Os itens recém-usados do aplicativo são representados pela classe [**StorageIt
     string mruToken = mru.Add(file, "profile pic");
     ```
 
-    [**StorageItemMostRecentlyUsedList.Add**](https://msdn.microsoft.com/library/windows/apps/br207476) está sobrecarregado. No exemplo, usamos [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481) para podermos associar metadados ao arquivo. A configuração de metadados permite que você registre a finalidade do item, por exemplo, "profile pic". Você também pode adicionar o arquivo à lista de itens recém-usados sem metadados chamando [**Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480). Quando você adiciona um item à lista de itens recém-usados, o método retorna uma cadeia de caracteres de identificação exclusiva, denominada token, que é usada para recuperar o item.
+    [**StorageItemMostRecentlyUsedList.Add** ](https://msdn.microsoft.com/library/windows/apps/br207476) está sobrecarregado. No exemplo, usamos [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481) para podermos associar metadados ao arquivo. A configuração de metadados permite que você registre a finalidade do item, por exemplo, "profile pic". Você também pode adicionar o arquivo à lista de itens recém-usados sem metadados chamando [**Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480). Quando você adiciona um item à lista de itens recém-usados, o método retorna uma cadeia de caracteres de identificação exclusiva, denominada token, que é usada para recuperar o item.
 
 > [!TIP]
 > Você precisará do token para recuperar um item da lista MRU, portanto, mantenha-o em algum lugar. Para saber mais sobre dados de aplicativos, consulte [Gerenciando dados do aplicativo](https://msdn.microsoft.com/library/windows/apps/hh465109).

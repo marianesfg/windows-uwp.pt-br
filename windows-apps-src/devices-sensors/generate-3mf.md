@@ -1,24 +1,24 @@
 ---
-Description: Describes the structure of the 3D Manufacturing Format file type and how it can be created and manipulated with the Windows.Graphics.Printing3D API.
+Description: Descreve a estrutura do tipo de arquivo de Formato de Manufatura 3D e como ele pode ser criado e manipulado com a API Windows.Graphics.Printing3D.
 MS-HAID: dev\_devices\_sensors.generate\_3mf
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: Gerar um pacote de 3MF
+title: Gerar um pacote 3MF
 ms.assetid: 968d918e-ec02-42b5-b50f-7c175cc7921b
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a3615dac98c5bc8469c8c8ebc47ef718c0131844
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048433"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653391"
 ---
-# <a name="generate-a-3mf-package"></a>Gerar um pacote de 3MF
+# <a name="generate-a-3mf-package"></a>Gerar um pacote 3MF
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx)
 
@@ -28,14 +28,14 @@ Este guia descreve a estrutura do tipo de arquivo de Formato de Manufatura 3D e 
 
 O Formato de Manufatura 3D é um conjunto de convenções para usar XML para descrever a aparência e a estrutura de modelos 3D para fins de fabricação (impressão em 3D). Ele define um conjunto de partes (algumas necessárias e outras opcionais) e suas relações, com o objetivo de fornecer todas as informações necessárias a um dispositivo de fabricação 3D. Um conjunto de dados que segue o Formato de Manufatura 3D pode ser salvo como um arquivo com a extensão .3mf.
 
-No Windows 10, a classe [**Printing3D3MFPackage**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.aspx) no namespace **printing3d** é análoga a um arquivo único. 3mf e outras classes são mapeadas para os elementos XML específicos no arquivo. Este guia descreve como cada uma das partes principais de um documento 3MF pode ser criada e definida de forma programática, como a Extensão de Materiais 3MF pode ser utilizada e como um objeto **Printing3D3MFPackage** pode ser convertido e salvo como um arquivo .3mf. Para saber mais sobre os padrões de 3MF ou a Extensão de Materiais 3MF, consulte a [Especificação 3MF](https://3mf.io/what-is-3mf/3mf-specification/).
+No Windows 10, o [ **Printing3D3MFPackage** ](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.aspx) classe os **Windows.Graphics.Printing3D** namespace é análogo a um arquivo único .3mf e outros classes são mapeados para o determinados elementos XML no arquivo. Este guia descreve como cada uma das partes principais de um documento 3MF pode ser criada e definida de forma programática, como a Extensão de Materiais 3MF pode ser utilizada e como um objeto **Printing3D3MFPackage** pode ser convertido e salvo como um arquivo .3mf. Para saber mais sobre os padrões de 3MF ou a Extensão de Materiais 3MF, consulte a [Especificação 3MF](https://3mf.io/what-is-3mf/3mf-specification/).
 
 <!-- >**Note** This guide describes how to construct a 3MF document from scratch. If you wish to make changes to an already existing 3MF document provided in the form of a .3mf file, you simply need to convert it to a **Printing3D3MFPackage** and alter the contained classes/properties in the same way (see [link]) below). -->
 
 
 ## <a name="core-classes-in-the-3mf-structure"></a>Classes principais na estrutura 3MF
 
-A classe **Printing3D3MFPackage** representa um documento 3MF completo, e no núcleo de um documento 3MF está sua parte do modelo, representada pela classe [ **Printing3DModel**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dmodel.aspx). A maioria das informações que desejamos especificar sobre um modelo 3D será armazenada por meio da definição das propriedades da classe **Printing3DModel** e das propriedades das classes subjacentes.
+A classe **Printing3D3MFPackage** representa um documento 3MF completo, e no núcleo de um documento 3MF está sua parte do modelo, representada pela classe [**Printing3DModel**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dmodel.aspx). A maioria das informações que desejamos especificar sobre um modelo 3D será armazenada por meio da definição das propriedades da classe **Printing3DModel** e das propriedades das classes subjacentes.
 
 [!code-cs[InitClasses](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetInitClasses)]
 
@@ -83,7 +83,7 @@ O tipo de material padrão é **Material de base**, que tem tanto um valor de **
 [!code-cs[BaseMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetBaseMaterialGroup)]
 
 > [!NOTE]
-> O dispositivo de fabricação 3D determinará quais materiais físicos disponíveis serão mapeados para quais elementos de materiais virtuais armazenados no 3MF. Não é necessário que o mapeamento de material seja 1:1: se uma impressora 3D usa apenas um material, ela imprimirá todo o modelo nesse material, independentemente de quais objetos ou faces sejam atribuídos a materiais diferentes.
+> O dispositivo de fabricação 3D determinará quais mapa materiais físicos disponíveis para o qual os elementos de material virtuais armazenados no 3MF. Não é necessário que o mapeamento de material seja 1:1: se uma impressora 3D usa apenas um material, ela imprimirá todo o modelo nesse material, independentemente de quais objetos ou faces sejam atribuídos a materiais diferentes.
 
 ### <a name="color-materials"></a>Materiais de cor
 
@@ -139,7 +139,7 @@ O método a seguir pega um **Printing3D3MFPackage** concluído e salva os dados 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Impressão 3D a partir de seu aplicativo](https://msdn.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)  
+[Impressão 3D do seu aplicativo](https://msdn.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)  
 [Exemplo UWP de impressão 3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
  
 

@@ -1,47 +1,47 @@
 ---
-title: Adaptar de composição
-description: Use as APIs de composição para adaptar sua interface do usuário, otimizar o desempenho e acomodar as configurações do usuário e características do dispositivo.
+title: Adaptando de composição
+description: Use as APIs de composição para personalizar a interface do usuário, otimizar o desempenho e acomodar as configurações de usuário e características de dispositivo.
 ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bcc9a6d89a143d8fd03d73dbd83b832ed9513ee2
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058707"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644411"
 ---
-# <a name="tailoring-effects--experiences-using-windows-ui"></a>Adaptar efeitos & experiências usando a interface do usuário do Windows
+# <a name="tailoring-effects--experiences-using-windows-ui"></a>Adaptando efeitos & experiências usando a interface do usuário do Windows
 
-Interface do usuário do Windows fornece muitos belos efeitos, animações e meios para diferenciação. No entanto, atendendo às expectativas do usuário para desempenho e personalização ainda é uma parte fundamental da criação de aplicativos com êxito. A plataforma Universal do Windows dá suporte a uma grande e diversificada família de dispositivos, que têm diferentes recursos e funcionalidades. Para proporcionar uma experiência inclusiva para todos os seus usuários, você precisa garantir que sua escala de aplicativos em dispositivos e respeitar as preferências do usuário. Adaptar de interface do usuário pode fornecer uma maneira eficiente para aproveitar os recursos do dispositivo e garantir uma experiência de usuário agradável e inclusivo.
+Interface do usuário do Windows fornece muitos efeitos belos, animações e meios para diferenciação. No entanto, atendendo às expectativas do usuário para desempenho e capacidade de personalização ainda é uma parte necessária da criação de aplicativos com êxito. A plataforma Universal do Windows oferece suporte a uma família de grande e diversificada de dispositivos que têm recursos e funcionalidades diferentes. Para fornecer uma experiência inclusiva para todos os usuários, você precisa garantir que seu dimensionamento de aplicativos entre dispositivos e respeitar as preferências do usuário. Adaptando de interface do usuário pode fornecer uma maneira eficiente de aproveitar os recursos de um dispositivo e garantir uma experiência de usuário agradável e inclusivo.
 
-Adaptar de interface do usuário é uma categoria ampla como englobar trabalho eficiente, interface do usuário bonitas com relação às seguintes áreas:
+Adaptando de interface do usuário é uma categoria ampla que abranja o trabalho de alto desempenho, bela interface do usuário em relação aos seguintes áreas:
 
-- Respeitando e adaptando às configurações do usuário para efeitos
+- Respeitando e se adaptando a configurações de usuário para efeitos
 - Acomodar configurações do usuário para animações
-- Otimizar a interface do usuário para os recursos de hardware determinado
+- Otimizando a interface do usuário para os recursos de hardware específico
 
-Aqui, abordaremos como adaptar seu efeitos e animações com a camada Visual nas áreas acima, mas há muitos outros meios para adaptar seu aplicativo para garantir uma experiência excelente usuário final. Documentos orientações estão disponíveis em como [adaptar sua interface do usuário](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design) para vários dispositivos e [criar a interface do usuário responsiva](/windows/uwp/design/layout/responsive-design).
+Aqui, vamos abordar como adaptar seus efeitos e animações com a camada Visual nas áreas acima, mas há muitos outros meios para personalizar seu aplicativo para garantir uma experiência excelente dos usuários finais. Os documentos de diretrizes estão disponíveis sobre como [adaptar sua interface do usuário](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design) para vários dispositivos e [criar a interface de usuário responsiva](/windows/uwp/design/layout/responsive-design).
 
 ## <a name="user-effects-settings"></a>Configurações de efeitos de usuário
 
-Os usuários podem personalizar a experiência do Windows por vários motivos, quais aplicativos devem respeitar e se adaptar a. Uma área que os usuários finais podem controlar está mudando os tipos de efeitos que eles verão usados em todo o sistema.
+Os usuários podem personalizar sua experiência do Windows para uma variedade de motivos, quais aplicativos devem respeitar e se adaptar a. Uma área que os usuários finais pode controlar é alterar os tipos de efeitos que eles veem usados em todo o seu sistema.
 
 ### <a name="transparency-effects-settings"></a>Configurações de efeitos de transparência
 
-Efeitos de transparência ativar/desativar a transformação é uma configuração assim efeito os usuários podem personalizar. Isso pode ser encontrado no aplicativo configurações em personalização gt _ cores ou por meio de configurações aplicativo gt _ facilidade de acesso gt _ exibição.
+Efeitos de transparência liga/desliga está se tornando um tal configuração de efeito, os usuários podem personalizar. Isso pode ser encontrado no aplicativo de configurações em personalização > cores, ou por meio do aplicativo de configurações > facilidade de acesso > exibição.
 
-![Opção de transparência nas configurações](images/tailoring-transparency-setting.png)
+![Opção nas configurações de transparência](images/tailoring-transparency-setting.png)
 
-Quando ativado, qualquer efeito que usa transparência aparecerão conforme o esperado. Isso se aplica a acrílico, HostBackdropBrush ou qualquer gráfico de efeito personalizado que não é totalmente opaco.
+Quando ativada, qualquer efeito que usa transparência será exibida conforme o esperado. Isso se aplica a tinta Acrílica, HostBackdropBrush ou qualquer outro gráfico efeito personalizado que não é totalmente opaco.
 
-Quando desativadas, material acrílico automaticamente se voltará para uma cor sólida porque pincel acrílico do XAML tem ouvido esse evento por padrão. Aqui, vemos que o aplicativo Calculadora adequadamente voltando para uma cor sólida quando não estão habilitados efeitos de transparência:
+Quando desativado, material acrílico fará automaticamente o fallback para uma cor sólida porque o pincel de acrílico do XAML ouviu esse evento por padrão. Aqui, podemos ver o aplicativo de calculadora adequadamente fazer fallback para uma cor sólida quando efeitos de transparência não estão habilitados:
 
-![Calculadora com acrílico](images/tailoring-acrylic.png)
-![Calculadora com acrílico responder às configurações de transparência](images/tailoring-acrylic-fallback.png)
+![Calculadora com tinta Acrílica](images/tailoring-acrylic.png)
+![Calculadora com tinta Acrílica respondendo às configurações de transparência](images/tailoring-acrylic-fallback.png)
 
-No entanto, para qualquer efeitos personalizados o aplicativo precisa responder à propriedade [UISettings.AdvancedEffectsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.advancedeffectsenabledchanged) ou evento [AdvancedEffectsEnabledChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.advancedeffectsenabledchanged) e alternar o gráfico de efeito/efeito para usar um efeito que tem sem transparência. Um exemplo disso é abaixo:
+No entanto, para qualquer personalizada afeta o aplicativo precisa responder à [UISettings.AdvancedEffectsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.advancedeffectsenabledchanged) propriedade ou [AdvancedEffectsEnabledChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.advancedeffectsenabledchanged) eventos e switch out o efeito/efeito gráfico a ser usado um efeito com nenhuma transparência. Veja abaixo um exemplo disso:
 
 ```cs
 public MainPage()
@@ -59,9 +59,9 @@ private void Uisettings_AdvancedEffectsEnabledChanged(UISettings sender, object 
 
 ## <a name="animations-settings"></a>Configurações de animações
 
-Da mesma forma, os aplicativos devem ouvir e responder à propriedade [UISettings.AnimationsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.animationsenabled) para garantir que as animações são ativadas ou desativada com base nas configurações do usuário em Configurações gt _ facilidade de acesso gt _ exibição.
+Da mesma forma, os aplicativos devem ouvir e responder à [UISettings.AnimationsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.animationsenabled) propriedade para garantir que as animações são ativados ou desativados com base nas configurações do usuário em Configurações > facilidade de acesso > exibição.
 
-![Opção de animações em configurações](images/tailoring-animations-setting.png)
+![Opção de animações nas configurações](images/tailoring-animations-setting.png)
 
 ```cs
 public MainPage()
@@ -75,15 +75,15 @@ public MainPage()
 
 ## <a name="leveraging-the-capabilities-api"></a>Aproveitando os recursos de API
 
-Aproveitando [CompositionCapabilities](/uwp/api/windows.ui.composition.compositioncapabilities) APIs, você pode detectar quais composição são os recursos disponível e eficiente em determinadas hardware e adaptar o design para garantir que os usuários finais obter uma experiência bela e eficiente em qualquer dispositivo. As APIs fornecem um meio para verificar se há recursos do sistema de hardware para implementar o efeito suave dimensionamento em uma variedade de fatores forma. Isso torna mais fácil personalizar adequadamente o aplicativo para criar um belo e uma experiência perfeita ao usuário final.
+Aproveitando os [CompositionCapabilities](/uwp/api/windows.ui.composition.compositioncapabilities) APIs, você pode detectar a composição de quais recursos estão disponíveis e alto desempenho em determinado hardware e ajustar o design para garantir que os usuários finais obtêm uma experiência bonita e alto desempenho em qualquer dispositivo. As APIs fornecem um meio para verificar os recursos de sistema de hardware para implementar o dimensionamento em uma variedade de fatores forma de efeito normal. Isso torna mais fácil de ajustar adequadamente o aplicativo para criar um lindo e uma experiência perfeita ao usuário final.
 
-Essa API fornece métodos e um ouvinte de eventos que pode ser usado para tornar o efeito de dimensionamento de decisões para a interface do usuário do aplicativo. O recurso detecta quão bem o sistema pode manipular complexa composição e renderização operações e, em seguida, retorna as informações em um modelo para os desenvolvedores utilizar fácil consumir.
+Essa API fornece métodos e um ouvinte de evento que pode ser usado para fazer efeito dimensionar decisões para o aplicativo da interface do usuário. O recurso detecta o quão bem o sistema pode manipular composição complexa e operações de renderização e, em seguida, retorna as informações em um modelo fácil de consumir para os desenvolvedores a utilizar.
 
 ### <a name="using-composition-capabilities"></a>Usando recursos de composição
 
-A funcionalidade CompositionCapabilities já está sendo usada para recursos como material acrílico, onde o material utilizará um efeito eficiente mais dependendo do cenário e o hardware.
+A funcionalidade de CompositionCapabilities já é utilizada para recursos como o material acrílico, em que o material reverterá para um efeito de alto desempenho mais dependendo do cenário e hardware.
 
-A API pode ser adicionada ao código existente em algumas etapas simples.
+A API pode ser adicionada ao código existente em poucas etapas simples.
 
 1. Adquira o objeto de recursos no construtor do seu aplicativo.
 
@@ -91,14 +91,14 @@ A API pode ser adicionada ao código existente em algumas etapas simples.
     _capabilities = CompositionCapabilities.GetForCurrentView();
     ```
 
-1. Registre um ouvinte de eventos alterados recursos para seu aplicativo.
+1. Registre um ouvinte de evento de alteração de recursos para seu aplicativo.
 
     ```cs
     _capabilities.Changed += HandleCapabilitiesChanged;
     ```
 
-1. Adicione conteúdo para o método de retorno de chamada do evento para lidar com vários níveis de recursos. Isso pode ou não ser semelhante para a próxima etapa abaixo.
-1. Ao usar efeitos, verifique primeiro o objeto de recursos. Considere usar verificações condicionais ou alternar instruções de controle, dependendo de como você deseja personalizar os efeitos.
+1. Adicione conteúdo para o método de retorno de chamada do evento para lidar com vários níveis de recursos. Isso pode ou não pode ser semelhante à próxima etapa.
+1. Ao usar efeitos, verifique o objeto de recursos primeiro. Considere o uso de verificações condicionais ou instruções de controle, dependendo de como você deseja personalizar os efeitos de troca.
 
     ```cs
     if (_capabilities.AreEffectsSupported())
@@ -112,17 +112,17 @@ A API pode ser adicionada ao código existente em algumas etapas simples.
     }
     ```
 
-Código de exemplo completo pode ser encontrado no [repositório do Github de interface do usuário do Windows](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2015063/CompCapabilities).
+Exemplo de código completo pode ser encontrado na [repositório Github de interface do usuário do Windows](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2015063/CompCapabilities).
 
-## <a name="fast-vs-slow-effects"></a>Rápida versus efeitos lentos
+## <a name="fast-vs-slow-effects"></a>Fast versus efeitos lento
 
-Com base nos comentários dos métodos [AreEffectsSupported](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectssupported) e [AreEffectsFast](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectsfast) fornecidos na API CompositionCapabilities, o aplicativo pode optar por trocar efeitos caros ou sem suporte para outros efeitos de sua escolha que são otimizados para o dispositivo. Alguns efeitos são conhecidos por serem consistentemente mais intensivo que outros e devem ser usados com moderação e outros efeitos podem ser usados mais livremente. Para todos os efeitos, no entanto, cuidado deve ser usado quando encadeamento e Animando como alguns cenários ou combinações podem alterar as características de desempenho de gráfico de efeito. Abaixo estão algumas características de desempenho de regra prática para efeitos individuais:
+Com base nos comentários fornecidos [AreEffectsSupported](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectssupported) e [AreEffectsFast](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectsfast) métodos na API CompositionCapabilities, o aplicativo pode decidir trocar os efeitos de caros ou sem suporte para outros efeitos de sua escolha que são otimizados para o dispositivo. Alguns efeitos são conhecidos como recursos mais intensivamente que outros consistentemente e devem ser usados com moderação e outros efeitos podem ser usados mais livremente. Para todos os efeitos, no entanto, cuidado deve ser usado quando encadeamento e animação como alguns cenários ou combinações podem alterar as características de desempenho do gráfico em vigor. Abaixo estão algumas características de desempenho de regra para efeitos de individuais:
 
-- Efeitos que são conhecidos por ter impacto de alto desempenho são as seguintes – Desfoque Gaussiano, máscara de sombra, BackDropBrush, HostBackDropBrush e camada Visual. Eles não são recomendados para dispositivos de baixa capacidade [(nível de recursos 9.1 9.3)](https://msdn.microsoft.com/library/windows/desktop/ff476876(v=vs.85).aspx)e devem ser usados criteriosamente em dispositivos high-end.
-- Efeitos com impacto no desempenho médio incluem a matriz de cores, determinados BlendModes de efeito de mesclagem (luminosidade, cor, saturação e matiz), (dependendo do cenário), SceneLightingEffect e destaque BorderEffect. Esses efeitos podem funcionar com determinados cenários em dispositivos de baixa capacidade, mas cuidado deve ser usado quando encadeamento e animar. Recomendamos restringir o uso de dois ou menos e animando em transições somente.
-- Todos os outros efeitos têm impacto no desempenho de baixa e funcionam em todos os cenários razoáveis quando animando e encadeamento.
+- Os efeitos que são conhecidos por ter impacto de alto desempenho são os seguintes – Desfoque Gaussiano, máscara de sombra, BackDropBrush, HostBackDropBrush e camada Visual. Não são recomendadas para dispositivos de baixo nível [(9.3 9.1 de nível de recurso)](https://msdn.microsoft.com/library/windows/desktop/ff476876(v=vs.85).aspx)e deve ser usada com cuidado em dispositivos de high-end.
+- Efeitos de impacto de desempenho médio incluem a matriz de cores, determinados BlendModes de efeito do Blend (luminosidade, cor, saturação e matiz), (dependendo do cenário), SceneLightingEffect e destaque BorderEffect. Esses efeitos podem funcionar com determinados cenários em dispositivos de baixo nível, mas cuidado deve ser usado quando o encadeamento e animação. Recomendável restringir o uso para dois ou menos e animação nas transições apenas.
+- Todos os outros efeitos tem impacto baixo desempenho e trabalhar em todos os cenários razoáveis quando a animação e encadeamento.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Técnicas de Design responsivo UWP](https://docs.microsoft.com/windows/uwp/design/layout/responsive-design)
-- [Adaptar de dispositivo UWP](https://docs.microsoft.com/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)
+- [Técnicas de Design dinâmico de UWP](https://docs.microsoft.com/windows/uwp/design/layout/responsive-design)
+- [Adaptando de dispositivo com a UWP](https://docs.microsoft.com/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)

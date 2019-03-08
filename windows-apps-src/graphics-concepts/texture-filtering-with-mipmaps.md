@@ -1,20 +1,20 @@
 ---
-title: Filtragem de textura com mipmaps
+title: Filtragem de textura com mapas MIP
 description: Um mipmap é uma sequência de texturas, cada uma delas é uma representação em resolução mais baixa progressivamente da mesma imagem. A altura e a largura de cada imagem ou nível, no mipmap é uma potência de dois menor do que o nível anterior.
 ms.assetid: 28E863A2-C776-40E4-8551-9851DF7EC93E
 keywords:
-- Filtragem de textura com mipmaps
+- Filtragem de textura com mapas MIP
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 474f97f32439c389be8283bb10e0c0ed716b3f69
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923330"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662041"
 ---
-# <a name="texture-filtering-with-mipmaps"></a>Filtragem de textura com mipmaps
+# <a name="texture-filtering-with-mipmaps"></a>Filtragem de textura com mapas MIP
 
 
 Um *mipmap* é uma sequência de texturas, cada uma delas é uma representação em resolução mais baixa progressivamente da mesma imagem. A altura e a largura de cada imagem ou nível, no mipmap é uma potência de dois menor do que o nível anterior. Mipmaps não precisam ser quadrados.
@@ -41,13 +41,13 @@ Essa é uma maneira mais eficiente de simular perspectiva para texturas. Em vez 
 
 O Direct3D pode avaliar qual textura de um conjunto de mipmaps tem a resolução mais próxima do resultado desejado e pode mapear pixels para seu espaço de texel. Se a resolução da imagem final é entre as resoluções de texturas no conjunto de mipmaps, o Direct3D pode examinar texels nos dois mipmaps e mesclar seus valores de cor.
 
-Para usar mipmaps, seu aplicativo deve criar um conjunto de mipmaps. Os aplicativos aplicam mipmaps selecionando o conjunto de mipmaps como a primeira textura no conjunto de texturas atuais. Consulte [Mesclagem de texturas](texture-blending.md).
+Para usar mipmaps, seu aplicativo deve criar um conjunto de mipmaps. Os aplicativos aplicam mipmaps selecionando o conjunto de mipmaps como a primeira textura no conjunto de texturas atuais. Consulte [Mistura de textura](texture-blending.md).
 
-Em seguida, seu aplicativo deve definir o método de filtragem que o Direct3D usa para fazer a amostragem de texels. O método mais rápido de filtragem de mipmaps é fazer com que o Direct3D selecione o texel mais próximo. Use o valor enumerado D3DTEXF\_POINT para selecionar essa opção. O Direct3D poderá produzir resultados de filtragem melhores se seu aplicativo usar o valor enumerado D3DTEXF\_LINEAR. Isso seleciona o mipmap mais próximo e depois calcula uma média ponderada dos texels ao redor do local na textura para a qual o pixel atual é mapeado.
+Em seguida, seu aplicativo deve definir o método de filtragem que o Direct3D usa para fazer a amostragem de texels. O método mais rápido de filtragem de mipmaps é fazer com que o Direct3D selecione o texel mais próximo. Use o D3DTEXF\_ponto enumerados valor para selecionar isso. Direct3D pode produzir resultados de filtragem melhor se seu aplicativo usa o D3DTEXF\_valor enumerado de LINEAR. Isso seleciona o mipmap mais próximo e depois calcula uma média ponderada dos texels ao redor do local na textura para a qual o pixel atual é mapeado.
 
 As texturas de mipmap são usadas em cenas 3D para reduzir o tempo necessário para renderizar uma cena. Eles também melhoram o realismo da cena. No entanto, eles geralmente exigem grandes quantidades de memória.
 
-**Observação**  cada superfície em uma cadeia de mipmap tem dimensões são metade que da superfície anterior na cadeia. Se o mipmap de nível superior tiver dimensões de 256x128, as dimensões do mipmap do segundo nível serão de 128 x64, do terceiro nível serão de 64x32 e assim por diante, até 1x1. Você não pode solicitar um número de níveis de mipmap em Níveis que possam fazer com que a largura ou altura de qualquer mipmap da cadeia seja menor que 1. No caso simples de uma superfície de mipmap de nível superior de 4x2, o valor máximo permitido para Níveis é três. As dimensões de nível superior são de 4x2, as dimensões do segundo nível são de 2x1 e as dimensões do terceiro nível são de 1x1. Um valor maior que 3 em Níveis resulta em um valor fracionário na altura do mipmap de segundo nível e, portanto, não permitido.
+**Observação**    cada superfície em uma cadeia de mipmap tem dimensões que são uma metade da superfície anterior na cadeia. Se o mipmap de nível superior tiver dimensões de 256x128, as dimensões do mipmap do segundo nível serão de 128 x64, do terceiro nível serão de 64x32 e assim por diante, até 1x1. Você não pode solicitar um número de níveis de mipmap em Níveis que possam fazer com que a largura ou altura de qualquer mipmap da cadeia seja menor que 1. No caso simples de uma superfície de mipmap de nível superior de 4x2, o valor máximo permitido para Níveis é três. As dimensões de nível superior são de 4x2, as dimensões do segundo nível são de 2x1 e as dimensões do terceiro nível são de 1x1. Um valor maior que 3 em Níveis resulta em um valor fracionário na altura do mipmap de segundo nível e, portanto, não permitido.
 
  
 

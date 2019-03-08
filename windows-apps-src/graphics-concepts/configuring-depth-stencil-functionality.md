@@ -1,18 +1,18 @@
 ---
-title: Configurando a funcionalidade de estêncil de profundidade
+title: Configuração da funcionalidade de estêncil de profundidade
 description: Esta seção abrange as etapas para configurar o buffer de estêncil de profundidade e o estado de estêncil de profundidade para o estágio de fusão de saída.
 ms.assetid: B3F6CDAA-93ED-4DC1-8E69-972C557C7920
 keywords:
-- Configurando a funcionalidade de estêncil de profundidade
+- Configuração da funcionalidade de estêncil de profundidade
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 98cb6c62248fbf273a9d7ca1ef0d1d82293122eb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936440"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656181"
 ---
 # <a name="span-iddirect3dconceptsconfiguringdepth-stencilfunctionalityspanconfiguring-depth-stencil-functionality"></a><span id="direct3dconcepts.configuring_depth-stencil_functionality"></span>Configurando a funcionalidade de estêncil de profundidade
 
@@ -21,12 +21,12 @@ Esta seção abrange as etapas para configurar o buffer de estêncil de profundi
 
 Assim que você souber como usar o buffer de estêncil de profundidade e o estado de estêncil de profundidade correspondente, consulte [técnicas avançadas de estêncil](#advanced-stencil-techniques).
 
-## <a name="span-idcreatedepthstencilstatespanspan-idcreatedepthstencilstatespanspan-idcreatedepthstencilstatespancreate-depth-stencil-state"></a><span id="Create_Depth_Stencil_State"></span><span id="create_depth_stencil_state"></span><span id="CREATE_DEPTH_STENCIL_STATE"></span>Criar estado de estêncil de profundidade
+## <a name="span-idcreatedepthstencilstatespanspan-idcreatedepthstencilstatespanspan-idcreatedepthstencilstatespancreate-depth-stencil-state"></a><span id="Create_Depth_Stencil_State"></span><span id="create_depth_stencil_state"></span><span id="CREATE_DEPTH_STENCIL_STATE"></span>Criar o estado de estêncil de profundidade
 
 
 O estado de estêncil de profundidade informa o estágio de fusão de saída sobre como realizar o [teste de profundidade e estêncil](https://msdn.microsoft.com/library/windows/desktop/bb205120). O teste de profundidade e estêncil determina se um determinado pixel deve ser desenhado.
 
-## <a name="span-idbinddepthstenciltotheomstagespanspan-idbinddepthstenciltotheomstagespanspan-idbinddepthstenciltotheomstagespanbind-depth-stencil-data-to-the-om-stage"></a><span id="Bind_Depth_Stencil_to_the_OM_Stage"></span><span id="bind_depth_stencil_to_the_om_stage"></span><span id="BIND_DEPTH_STENCIL_TO_THE_OM_STAGE"></span>Associar dados de estêncil de profundidade ao estágio de OM
+## <a name="span-idbinddepthstenciltotheomstagespanspan-idbinddepthstenciltotheomstagespanspan-idbinddepthstenciltotheomstagespanbind-depth-stencil-data-to-the-om-stage"></a><span id="Bind_Depth_Stencil_to_the_OM_Stage"></span><span id="bind_depth_stencil_to_the_om_stage"></span><span id="BIND_DEPTH_STENCIL_TO_THE_OM_STAGE"></span>Associar dados de estêncil de profundidade para o estágio de OM
 
 
 Associar o estado de estêncil de profundidade.
@@ -38,7 +38,7 @@ Os destinos de renderização devem todos ser do mesmo tipo de recurso. Se a sua
 Quando um buffer é usado como um destino de renderização, os testes de estêncil de profundidade e os destinos de renderização múltiplos não são permitidos.
 
 -   Até 8 destinos de renderização podem ser vinculados ao mesmo tempo.
--   Todos os destinos de renderização devem ter o mesmo tamanho em todas as dimensões (largura, altura, e profundidade para 3D ou tamanho de matriz para os tipos \*Array).
+-   Todos os destinos de renderização devem ter o mesmo tamanho em todas as dimensões (largura e altura e profundidade de 3D ou uma matriz de tamanho de \*tipos de matriz).
 -   Cada destino de renderização pode ter um formato de dados diferente.
 -   As máscaras de gravação controlam quais dados são gravados em um destino de renderização. As máscaras de gravação de saída controlam, a um nível de componente e de destino de renderização, quais dados são gravados nos destinos de renderização.
 
@@ -48,10 +48,10 @@ Quando um buffer é usado como um destino de renderização, os testes de estên
 A parte de estêncil do buffer de estêncil de profundidade pode ser usada para criar efeitos de renderização como composição, decalque e contornos.
 
 -   [Composição](#compositing)
--   [Decalque](#decaling)
--   [Contornos e silhuetas](#outlines-and-silhouettes)
+-   [Decaling](#decaling)
+-   [Contornos e apenas](#outlines-and-silhouettes)
 -   [Estêncil de dois lados](#two-sided-stencil)
--   [Ler o buffer de estêncil de profundidade como uma textura](#reading-the-depth-stencil-buffer-as-a-texture)
+-   [Lendo o Buffer de estêncil de profundidade como uma textura](#reading-the-depth-stencil-buffer-as-a-texture)
 
 ### <a name="span-idcompositingspanspan-idcompositingspanspan-idcompositingspancompositing"></a><span id="Compositing"></span><span id="compositing"></span><span id="COMPOSITING"></span>Composição
 
@@ -59,7 +59,7 @@ Seu app pode usar o buffer de estêncil para compor imagens 2D ou 3D em uma cena
 
 Jogos geralmente são compostos por diversas cenas 3D juntas. Por exemplo, jogos de direção normalmente exibem um espelho retrovisor. O espelho contém o modo de exibição da cena 3D atrás do condutor. Ele é essencialmente uma segunda cena 3D composta pela visão frontal do condutor.
 
-### <a name="span-iddecalingspanspan-iddecalingspanspan-iddecalingspandecaling"></a><span id="Decaling"></span><span id="decaling"></span><span id="DECALING"></span>Decalque
+### <a name="span-iddecalingspanspan-iddecalingspanspan-iddecalingspandecaling"></a><span id="Decaling"></span><span id="decaling"></span><span id="DECALING"></span>Decaling
 
 Aplicativos Direct3D usam decalque para controlar quais pixels de uma determinada imagem primitiva são desenhados na superfície de destino de renderização. Os apps aplicam os decalques às imagens de objetos primitivos para permitir que polígonos coplanares sejam renderizados corretamente.
 
@@ -69,7 +69,7 @@ Para resolver esse problema, use um estêncil para mascarar a seção da parte t
 
 Várias mesclagens de textura podem ser usadas para resolver esse problema.
 
-### <a name="span-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanspan-idoutlines-and-silhouettesoutlines-and-silhouettes"></a><span id="Outlines_and_Silhouettes"></span><span id="outlines_and_silhouettes"></span><span id="OUTLINES_AND_SILHOUETTES"></span><span id="outlines-and-silhouettes">Contornos e silhuetas
+### <a name="span-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanspan-idoutlines-and-silhouettesoutlines-and-silhouettes"></a><span id="Outlines_and_Silhouettes"></span><span id="outlines_and_silhouettes"></span><span id="OUTLINES_AND_SILHOUETTES"></span><span id="outlines-and-silhouettes">Contornos e apenas
 
 Você pode usar o buffer de estêncil para efeitos mais abstratos, como contornos e silhuetas.
 
@@ -87,15 +87,15 @@ Normalmente, todos os valores incrementados e diminuídos cancelam uns aos outro
 
 Isso significa que a geometria de sombra é desenhada duas vezes por fonte de luz, exercendo assim pressão sobre a taxa de transferência de vértice da GPU. O recurso de estêncil de dois lados foi projetado para atenuar essa situação. Nesta abordagem, existem dois conjuntos de estado de estêncil (nomeados abaixo), um conjunto para os triângulos voltados para a frente e outro para os triângulos voltados para trás. Dessa forma, somente uma única passagem é desenhada por volume de sombra, por luz.
 
-### <a name="span-idreadingthedepth-stencilbufferasatexturespanspan-idreadingthedepth-stencilbufferasatexturespanspan-idreadingthedepth-stencilbufferasatexturespanspan-idreading-the-depth-stencil-buffer-as-a-texturespanreading-the-depth-stencil-buffer-as-a-texture"></a><span id="Reading_the_Depth-Stencil_Buffer_as_a_Texture"></span><span id="reading_the_depth-stencil_buffer_as_a_texture"></span><span id="READING_THE_DEPTH-STENCIL_BUFFER_AS_A_TEXTURE"></span><span id="reading-the-depth-stencil-buffer-as-a-texture"></span>Ler o buffer de estêncil de profundidade como uma textura
+### <a name="span-idreadingthedepth-stencilbufferasatexturespanspan-idreadingthedepth-stencilbufferasatexturespanspan-idreadingthedepth-stencilbufferasatexturespanspan-idreading-the-depth-stencil-buffer-as-a-texturespanreading-the-depth-stencil-buffer-as-a-texture"></a><span id="Reading_the_Depth-Stencil_Buffer_as_a_Texture"></span><span id="reading_the_depth-stencil_buffer_as_a_texture"></span><span id="READING_THE_DEPTH-STENCIL_BUFFER_AS_A_TEXTURE"></span><span id="reading-the-depth-stencil-buffer-as-a-texture"></span>Lendo o Buffer de estêncil de profundidade como uma textura
 
 Um buffer de estêncil de profundidade inativo pode ser lido por um sombreador como uma textura. Um app que lê um buffer de estêncil de profundidade como uma textura renderiza em duas passagens, a primeira passagem grava o buffer de estêncil de profundidade e a segunda passagem lê do buffer. Isso permite que um sombreador compare os valores de profundidade ou estêncil gravados anteriormente no buffer com o valor do pixel que está sendo renderizado atualmente. O resultado da comparação pode ser usado para criar efeitos, como o mapeamento de sombra ou partículas suaves em um sistema de partículas.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Estágio de fusão de saída (OM)](output-merger-stage--om-.md)
+[Estágio de fusão (OM) de saída](output-merger-stage--om-.md)
 
-[Pipeline de elementos gráficos](graphics-pipeline.md)
+[Pipeline de gráficos](graphics-pipeline.md)
 
 [Estágio de fusão de saída](https://msdn.microsoft.com/library/windows/desktop/bb205120)

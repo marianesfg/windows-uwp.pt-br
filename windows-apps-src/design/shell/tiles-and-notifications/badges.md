@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use tiles, badges, toasts, and notifications to provide entry points into your app and keep users up-to-date.
+Description: Saiba como usar blocos, selos, notificações do sistema e notificações para fornecer pontos de entrada em seu aplicativo e manter os usuários atualizados.
 title: Notificações de selo para aplicativos UWP
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b41069f1ca964f978ba0cff73f5c34a9db133a10
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920281"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649081"
 ---
 # <a name="badge-notifications-for-uwp-apps"></a>Notificações de selo para aplicativos UWP
 
@@ -35,7 +35,7 @@ Selos de notificação aparecem no ícone de barra de tarefas ícone de seu app 
 <table>
     <tr>
         <th>Valor</th>
-        <th>Selo</th>
+        <th>Badge</th>
         <th>XML</th>
     </tr>
     <tr>
@@ -60,7 +60,7 @@ Em vez de um número, um selo pode exibir um de um conjunto de glifos de status 
     <th>XML</th>
 </tr>
 <tr>
-    <td>nenhum</td>
+    <td>nenhuma</td>
     <td>(Nenhum selo mostrado.)</td>
     <td>`<badge value="none"/>`</td>
 </tr>
@@ -128,7 +128,7 @@ Em vez de um número, um selo pode exibir um de um conjunto de glifos de status 
 
 ## <a name="create-a-badge"></a>Criar um selo
 
-Estes exemplos mostram como criar uma atualização de selo.
+Esses exemplos mostram como criar uma atualização de notificação.
 
 ### <a name="create-a-numeric-badge"></a>Criar um selo numérico
 

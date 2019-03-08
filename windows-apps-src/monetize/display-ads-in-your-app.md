@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, faixa, controle de anúncio, intersticial
 ms.localizationpriority: medium
 ms.openlocfilehash: 84ed7f5f1eb65f06a47e92de962777ca9d3c50c7
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044850"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658491"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Apresentar anúncios em seu app com o SDK do Microsoft Advertising
 
-Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP (Plataforma Universal do Windows) para Windows 10 usando o SDK do Microsoft Advertising. Nossa plataforma de monetização de anúncios oferece uma variedade de formatos de anúncio que pode ser integrada perfeitamente em seu controle de aplicativos e dá suporte com várias redes de anúncios conhecidas. Nossa plataforma está em conformidade com a OpenRTB, 2. x grande, MRAID 2 e 3 VPAID padrões e é compatível com MOAT e IAS. 
+Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP (Plataforma Universal do Windows) para Windows 10 usando o SDK do Microsoft Advertising. Nossa plataforma de monetização do Active Directory oferece uma variedade de formatos de anúncio que pode ser integrado perfeitamente seu mediação de aplicativos e dá suporte a com muitas redes ad populares. Nossa plataforma é compatível com os padrões OpenRTB, VAST 2.x, MRAID 2 e VPAID 3, além de aceitar MOAT e IAS. 
 
 <br/>
 
@@ -32,11 +32,11 @@ Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP
 <tr>
 <td align="left"><img src="images/install-sdk.png" alt="Install SDK icon" /></td>
 <td align="left"><b>Introdução</b><br/><br/>
-    <a href="https://aka.ms/ads-sdk-uwp">Instalar o SDK do Microsoft Advertising</a>
+    <a href="https://aka.ms/ads-sdk-uwp">Instalar o Microsoft Advertising SDK</a>
 </td>
 <td align="left"><img src="images/write-code.png" alt="Develop icon" /></td>
 <td align="left"><b>Guias do desenvolvedor</b><br/><br/>
-    <a href="banner-ads.md">Anúncios em faixa</a>
+    <a href="banner-ads.md">Anúncios</a>
     <br/>
     <a href="interstitial-ads.md">Anúncios intersticiais</a>
     <br/>
@@ -44,11 +44,11 @@ Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP
     </td>
 <td align="left"><img src="images/api-reference.png" alt="API ref icon" /></td>
 <td align="left"><b>Outros recursos</b><br/><br/>
-    <a href="set-up-ad-units-in-your-app.md">Configurar unidades publicitárias em seu aplicativo</a>
+    <a href="set-up-ad-units-in-your-app.md">Configurar unidades de anúncios em seu aplicativo</a>
     <br/>
     <a href="best-practices-for-ads-in-apps.md">Práticas recomendadas</a>
     <br/>
-    <a href="https://msdn.microsoft.com/en-us/library/windows/apps/mt691884.aspx">Referência de API</a>
+    <a href="https://msdn.microsoft.com/en-us/library/windows/apps/mt691884.aspx">Referência da API</a>
     </td>
 </tr>
 </tbody>
@@ -58,7 +58,7 @@ Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP
 
 Para começar, instale o [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp) no computador de desenvolvimento usado para criar seu aplicativo. Para obter instruções de instalação, consulte [este artigo](install-the-microsoft-advertising-libraries.md).
 
-## <a name="step-2-implement-ads-in-your-app"></a>Etapa 2: implementar anúncios no aplicativo
+## <a name="step-2-implement-ads-in-your-app"></a>Etapa 2: Implementa anúncios no aplicativo
 
 O SDK do Microsoft Advertising fornece vários tipos diferentes de controles de anúncios que você pode usar no aplicativo. Escolha quais tipos de anúncios são recomendados para seu cenário e então adicione código ao seu aplicativo para exibir os anúncios. Durante esta etapa, você usará uma unidade de anúncio de teste para ver como o aplicativo renderiza anúncios durante o teste.
 
@@ -88,19 +88,19 @@ Para obter instruções e exemplos de código, consulte [este artigo](native-ads
 
 <span id="ad-mediation"/>
 
-## <a name="step-3-create-an-ad-unit-and-configure-mediation"></a>Etapa 3: criar uma unidade publicitária e configurar a mediação
+## <a name="step-3-create-an-ad-unit-and-configure-mediation"></a>Etapa 3: Criar uma unidade de anúncio e configurar a mediação
 
-Depois que você terminar de testar seu aplicativo e você estará pronto para enviá-lo para a loja, crie uma unidade publicitária na página de [anúncios no app](../publish/in-app-ads.md) no Partner Center. Em seguida, atualize o código do aplicativo para usar essa unidade publicitária para o aplicativo receba anúncios ativos. Para obter mais informações, consulte [Configurar unidades publicitárias no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+Depois de terminar de testar seu aplicativo e você está pronto para enviá-lo para a Store, criar uma unidade de anúncio sobre o [anúncios no aplicativo](../publish/in-app-ads.md) página no Partner Center. Em seguida, atualize o código do aplicativo para usar essa unidade publicitária para o aplicativo receba anúncios ativos. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
 Por padrão, o aplicativo exibirá anúncios da rede da Microsoft para anúncios pagos. Para maximizar a receita do anúncio, você pode habilitar o [controle de anúncios](ad-mediation-service.md) da unidade publicitária para exibir anúncios de outras redes de publicidade pagas, como o Taboola e o Smaato. Você também pode aumentar os recursos de promoção de apps ao veicular anúncios de campanhas promocionais de aplicativos da Microsoft.
 
 Para começar a usar o controle de anúncios em seu aplicativo UWP, [definir configurações de controle de anúncios](../publish/in-app-ads.md#mediation-settings) para sua unidade publicitária. Por padrão, configuramos automaticamente as configurações de controle usando algoritmos de aprendizado de máquina para ajudá-lo a maximizar sua receita de publicidade em todos os mercados que seu aplicativo suporte. No entanto, você também tem a opção de escolher manualmente as redes que deseja usar. De qualquer forma, as configurações de mediação são totalmente configuradas nos nossos servidores; você não precisa fazer alterações de código em seu app.    
 
-## <a name="step-4-submit-your-app-and-review-performance"></a>Etapa 4: Enviar seu app e analisar o desempenho
+## <a name="step-4-submit-your-app-and-review-performance"></a>Etapa 4: Enviar o aplicativo e consultar o desempenho
 
-Após a conclusão do desenvolvimento de seu aplicativo com anúncios, você pode [enviar seu aplicativo atualizado](https://docs.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center para disponibilizá-lo na loja. Os apps que exibem anúncios devem atender aos requisitos adicionais especificados na [seção 10.10 das Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) e no [Anexo E do Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
+Depois de concluir o desenvolvimento de seu aplicativo com anúncios, você poderá [enviar seu aplicativo atualizado](https://docs.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center para disponibilizá-lo na Store. Os apps que exibem anúncios devem atender aos requisitos adicionais especificados na [seção 10.10 das Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) e no [Anexo E do Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
 
-Depois que seu aplicativo for publicado e disponibilizado na loja, você pode analisar seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no Partner Center e continuar a fazer alterações em suas configurações de controle para otimizar o desempenho de seus anúncios. Sua receita de publicidade está incluída no seu [resumo de pagamento](../publish/payout-summary.md).
+Depois que o aplicativo for publicado e disponível na Store, você pode examinar seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no Partner Center e continuar a fazer alterações em suas configurações de mediação para otimizar o desempenho de seus anúncios. Sua receita de publicidade está incluída no seu [resumo de pagamento](../publish/payout-summary.md).
 
 <span id="additional-help" />
 
@@ -122,5 +122,5 @@ Para os aplicativos do Windows 8.1 e Windows Phone 8. x, fornecedos [SDK do Micr
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp)
-* [Relatório de desempenho de anúncios](../publish/advertising-performance-report.md)
-* [Programa de editores de anúncios premium do Windows](windows-premium-ads-publishers-program.md)
+* [Relatório de desempenho da publicidade](../publish/advertising-performance-report.md)
+* [Programa de editores de anúncios do Windows Premium](windows-premium-ads-publishers-program.md)

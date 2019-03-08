@@ -1,5 +1,5 @@
 ---
-title: Recursos do sistema para aplicativos UWP e jogos no Xbox One
+title: Recursos do sistema para jogos e aplicativos UWP no Xbox One
 description: UWP em recursos do sistema do Xbox
 ms.date: 02/08/2017
 ms.topic: article
@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
 ms.openlocfilehash: 0869f5cfc2499a00577f0196cd9f9f84987c0321
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048363"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57647321"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Recursos do sistema para jogos e aplicativos UWP no Xbox One
 
@@ -21,24 +21,24 @@ Aplicativos UWP em execução no Xbox One compartilham recursos com o sistema e 
     * Aplicativos: 1 GB
     * Jogos: 5 GB
 
-A memória máxima disponível para um aplicativo em execução na tela de fundo é 128 MB. O modo de tela de fundo só se aplica a aplicativos simultâneos, como players de música na tela de fundo.  Jogos serão suspenso e encerrados na tela de fundo.
+A memória máxima disponível para um aplicativo em execução em segundo plano é 128 MB. O modo de tela de fundo só se aplica a aplicativos simultâneos, como players de música na tela de fundo.  Jogos serão suspenso e encerrados na tela de fundo.
 
-Exceder essas limitações causará falhas de alocação de memória. Para obter mais informações sobre monitoramento de uso de memória, consulte a referência [Classe MemoryManager](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx).
+Exceder essas limitações causará falhas de alocação de memória. Para obter mais informações sobre monitoramento de uso de memória, consulte a referência [classe MemoryManager](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx).
     
     > [!NOTE]
     > When running your app or game from the Visual Studio debugger, these memory constraints do not apply. This limit is only applicable when not running in debugging mode.
 
 * CPU
     * Aplicativos: compartilhamento de 2 a 4 núcleos de CPU dependendo do número de aplicativos e jogos executados no sistema.
-    * Jogos: 4 núcleos exclusivos e 2 compartilhados de CPU.
+    * Jogos: 4 exclusivo e 2 compartilhado núcleos de CPU.
 
 * GPU
     * Aplicativos: compartilhamento de 45% de GPU dependendo do número de aplicativos e jogos executados no sistema.
     * Jogos: acesso completo à ciclos de GPU disponíveis.
 
 * Suporte a DirectX
-    * Aplicativos: Nível 10 de recursos do DirectX 11.
-    * Jogos: DirectX 12 e Nível 10 de recurso do DirectX 11.
+    * Aplicativos: Nível de recurso do DirectX 11 10.
+    * Jogos: O DirectX 12 e nível de recurso do DirectX 11 10.
 
 * Todos os aplicativos e jogos devem ter como destino a arquitetura x64 para serem desenvolvidos ou enviados para a loja da Xbox.  
 
@@ -54,6 +54,6 @@ Para obter mais informações sobre recursos do sistema para aplicativos UWP no 
 
 ## <a name="see-also"></a>Consulte também
 - [UWP no Xbox One](index.md)
-- [Introdução ao Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)
-- [DirectX e UWP no Xbox One](https://blogs.msdn.microsoft.com/chuckw/2017/12/15/directx-and-uwp-on-xbox-one/)
+- [Comece com o programa de criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)
+- [O DirectX e UWP no Xbox One](https://blogs.msdn.microsoft.com/chuckw/2017/12/15/directx-and-uwp-on-xbox-one/)
 

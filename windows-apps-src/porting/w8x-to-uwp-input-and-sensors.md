@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5847553bed563b724bb142f7abe62403fa8ec097
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922327"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645181"
 ---
 # <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>Portabilidade do Windows Runtime 8.x para UWP para E/S, dispositivo e modelo de aplicativo
 
@@ -32,16 +32,16 @@ Para obter mais informações, consulte [Ciclo de vida do aplicativo](https://ms
 ## <a name="background-audio"></a>Áudio em segundo plano
 
 
-Para a propriedade [**Audiocategory**](https://msdn.microsoft.com/library/windows/apps/br227352) , **ForegroundOnlyMedia** e **BackgroundCapableMedia** foram preteridos para aplicativos do Windows 10. Use o modelo de aplicativo da Loja do Windows Phone. Para obter mais informações, consulte [Áudio em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140).
+Para o [ **MediaElement.AudioCategory** ](https://msdn.microsoft.com/library/windows/apps/br227352) propriedade **ForegroundOnlyMedia** e **BackgroundCapableMedia** foram preteridos em Aplicativos do Windows 10. Use o modelo de aplicativo da Loja do Windows Phone. Para obter mais informações, consulte [Áudio em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140).
 
-## <a name="detecting-the-platform-your-app-is-running-on"></a>Detectando a plataforma em que seu aplicativo está sendo executado
+## <a name="detecting-the-platform-your-app-is-running-on"></a>Detectando a plataforma em que seu aplicativo é executado.
 
 
-A maneira de pensar sobre alterações direcionadas aplicativo com Windows 10. O novo modelo conceitual é um aplicativo direcionado à UWP (Plataforma Universal do Windows) e executado em todos os dispositivos Windows. Ele também pode destacar recursos que sejam exclusivos de famílias de dispositivos específicas. Se necessário, o aplicativo também tem a opção de se limitar a uma ou mais famílias de dispositivos especificamente. Para saber mais sobre o que são famílias de dispositivos (e como decidir qual família de dispositivos priorizar), veja [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+A maneira de pensar sobre alterações de direcionamento de aplicativo com o Windows 10. O novo modelo conceitual é um aplicativo direcionado à UWP (Plataforma Universal do Windows) e executado em todos os dispositivos Windows. Ele também pode destacar recursos que sejam exclusivos de famílias de dispositivos específicas. Se necessário, o aplicativo também tem a opção de se limitar a uma ou mais famílias de dispositivos especificamente. Para saber mais sobre o que são famílias de dispositivos (e como decidir qual família de dispositivos priorizar), veja [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 Se você tiver em seu aplicativo Universal 8.1 um código que detecte qual sistema operacional está em execução, então talvez seja necessário alterar isso, dependendo do motivo dessa lógica. Se o aplicativo estiver passando o valor e não agindo em relação a ele, então talvez você queira continuar a coletar informações do sistema operacional.
 
-**Observação**  , recomendamos que você não use família ou sistema operacional para detectar a presença de recursos. Identificar o sistema operacional ou a família de dispositivos atual normalmente não é a melhor maneira de determinar se um recurso de sistema operacional ou de família de dispositivos está presente. Em vez de detectar o sistema operacional ou a família de dispositivos (e o número de versão), teste a presença do próprio recurso (consulte [Compilação condicional e código adaptável](w8x-to-uwp-porting-to-a-uwp-project.md)). Se você precisar de um determinado sistema operacional ou uma família de dispositivos, certifique-se de usá-la como uma versão mínima compatível, em vez de criar o teste para essa versão.
+**Observação**    é recomendável que você não usa sistema operacional ou da família do dispositivo para detectar a presença de recursos. Identificar o sistema operacional ou a família de dispositivos atual normalmente não é a melhor maneira de determinar se um recurso de sistema operacional ou de família de dispositivos está presente. Em vez de detectar o sistema operacional ou a família de dispositivos (e o número de versão), teste a presença do próprio recurso (consulte [Compilação condicional e código adaptável](w8x-to-uwp-porting-to-a-uwp-project.md)). Se você precisar de um determinado sistema operacional ou uma família de dispositivos, certifique-se de usá-la como uma versão mínima compatível, em vez de criar o teste para essa versão.
 
  
 
@@ -66,10 +66,10 @@ bool isDeviceFamilyNameKnown = qualifiers.TryGetValue("DeviceFamily", out device
 
 Além disso, consulte também [Compilação condicional e código adaptável](w8x-to-uwp-porting-to-a-uwp-project.md).
 
-## <a name="location"></a>Localização
+## <a name="location"></a>Location
 
 
-Quando um aplicativo que declara a funcionalidade de localização em seu manifesto de pacote de aplicativo é executado no Windows 10, o sistema solicita o consentimento do usuário final. Isso é verdadeiro se o aplicativo é um aplicativo da loja do Windows Phone ou um aplicativo do Windows 10. Portanto, se o aplicativo exibir a própria solicitação de consentimento personalizado, ou se ele fornecer um botão ativar/desativar, remova-a de maneira que o usuário final receba apenas uma solicitação.
+Quando um aplicativo que declara a funcionalidade de localização em suas execuções de manifesto de pacote de aplicativo no Windows 10, o sistema solicitará que o usuário final para consentimento. Isso é verdadeiro se o aplicativo é um aplicativo do Windows Phone Store ou um aplicativo do Windows 10. Portanto, se o aplicativo exibir a própria solicitação de consentimento personalizado, ou se ele fornecer um botão ativar/desativar, remova-a de maneira que o usuário final receba apenas uma solicitação.
 
  
 

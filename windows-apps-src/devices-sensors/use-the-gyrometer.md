@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 940f82e5e4cff30a2756c32c80d2f3ab02ae440a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050499"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660501"
 ---
 # <a name="use-the-gyrometer"></a>Usar o girômetro
 
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Girômetro**](https://msdn.microsoft.com/library/windows/apps/BR225718)
+-   [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718)
 
 **Exemplo**
 
@@ -31,7 +31,7 @@ Os girômetros complementam os acelerômetros como controladores de jogos. O ace
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você deve estar familiarizado com Extensible Application Markup Language (XAML), Microsoft VisualC c# e eventos.
+Você deve estar familiarizado com o Extensible Application Markup Language (XAML), Microsoft Visual C#e eventos.
 
 O dispositivo ou emulador que você está usando deve ter suporte para um girômetro.
 
@@ -180,4 +180,4 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
 
  ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Exemplo de girômetro](https://go.microsoft.com/fwlink/p/?linkid=241379)
+* [Exemplo de Girômetro](https://go.microsoft.com/fwlink/p/?linkid=241379)

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8126ac8fa738a2b8a9680d215179fe23f77c5d44
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937840"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659291"
 ---
 # <a name="attenuation-and-spotlight-factor"></a>Fator de atenuação e destaque
 
@@ -26,14 +26,14 @@ A atenuação de uma luz depende do tipo de luz e da distância entre a luz e a 
 
 Atten = 1/( att0<sub>i</sub> + att1<sub>i</sub> \* d + att2<sub>i</sub> \* d²)
 
-Em que:
+Onde:
 
 | Parâmetro        | Valor padrão | Tipo           | Descrição                                     | Intervalo          |
 |------------------|---------------|----------------|-------------------------------------------------|----------------|
 | att0<sub>i</sub> | 0.0           | Ponto flutuante | Fator de atenuação constante                     | 0 para + infinito |
 | att1<sub>i</sub> | 0.0           | Ponto flutuante | Fator de atenuação linear                       | 0 para + infinito |
 | att2<sub>i</sub> | 0.0           | Ponto flutuante | Fator de atenuação quadrática                    | 0 para + infinito |
-| d.                | N/A           | Ponto flutuante | Distância da posição de vértice até a posição da luz | N/A            |
+| d.                | N/D           | Ponto flutuante | Distância da posição de vértice até a posição da luz | N/D            |
 
  
 
@@ -44,11 +44,11 @@ A distância entre a luz e a posição do vértice é sempre positiva.
 
 d = | L<sub>dir</sub> |
 
-Em que:
+Onde:
 
 | Parâmetro       | Valor padrão | Tipo                                             | Descrição                                                 |
 |-----------------|---------------|--------------------------------------------------|-------------------------------------------------------------|
-| L<sub>dir</sub> | N/A           | Vetor 3D com x, y e valores de ponto flutuante de z | Vetor de direção da posição de vértice para a posição da luz |
+| L<sub>dir</sub> | N/D           | Vetor 3D com x, y e valores de ponto flutuante de z | Vetor de direção da posição de vértice para a posição da luz |
 
  
 
@@ -67,14 +67,14 @@ A seguinte equação especifica o fator de destaque.
 
 | Parâmetro         | Valor padrão | Tipo           | Descrição                              | Intervalo                    |
 |-------------------|---------------|----------------|------------------------------------------|--------------------------|
-| rho<sub>i</sub>   | N/A           | Ponto flutuante | cosseno(ângulo) para destaque i            | N/A                      |
+| rho<sub>i</sub>   | N/D           | Ponto flutuante | cosseno(ângulo) para destaque i            | N/D                      |
 | phi<sub>i</sub>   | 0.0           | Ponto flutuante | Ângulo de penumbra de destaque i em radianos | \[theta<sub>i</sub>, pi) |
 | theta<sub>i</sub> | 0.0           | Ponto flutuante | Ângulo de penumbra de destaque i em radianos    | \[0, pi)                 |
 | queda           | 0.0           | Ponto flutuante | Fator de queda                           | (-infinito + infinito)   |
 
  
 
-Em que:
+Onde:
 
 rho = norm(L<sub>dcs</sub>)<sup>.</sup>norm(L<sub>dir</sub>)
 
@@ -82,8 +82,8 @@ e:
 
 | Parâmetro       | Valor padrão | Tipo                                             | Descrição                                                 |
 |-----------------|---------------|--------------------------------------------------|-------------------------------------------------------------|
-| L<sub>dcs</sub> | N/A           | Vetor 3D com x, y e valores de ponto flutuante de z | O negativo da direção da luz no espaço da câmera         |
-| L<sub>dir</sub> | N/A           | Vetor 3D com x, y e valores de ponto flutuante de z | Vetor de direção da posição de vértice para a posição da luz |
+| L<sub>dcs</sub> | N/D           | Vetor 3D com x, y e valores de ponto flutuante de z | O negativo da direção da luz no espaço da câmera         |
+| L<sub>dir</sub> | N/D           | Vetor 3D com x, y e valores de ponto flutuante de z | Vetor de direção da posição de vértice para a posição da luz |
 
  
 
@@ -92,7 +92,7 @@ Depois de computar a atenuação da luz, para calcular os componentes especulare
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Matemática de iluminação](mathematics-of-lighting.md)
+[Cálculos de iluminação](mathematics-of-lighting.md)
 
  
 

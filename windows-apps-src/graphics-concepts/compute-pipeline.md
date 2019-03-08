@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 911546f1c2973a79aea4b597a47352149a4e4210
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929699"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651111"
 ---
 # <a name="compute-pipeline"></a>Calcular o pipeline
 
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não fornece nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
+\[Algumas informações se relacionam ao produto de pré-lançamento que pode ser substancialmente modificado antes do lançamento comercial. Microsoft não oferece garantias, expressas ou implícitas, quanto às informações fornecidas aqui.\]
 
 
 O pipeline de computação do Direct3D foi projetado para tratar os cálculos que podem ser feitos principalmente em paralelo com o pipeline de gráficos. Há apenas algumas etapas no pipeline de computação, com dados de fluxo de entrada para saída por meio do estágio do sombreador de computação programável.
@@ -57,7 +57,7 @@ O pipeline de computação do Direct3D foi projetado para tratar os cálculos qu
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Guia de aprendizagem de Gráficos do Direct3D](index.md)
+[Guia de aprendizado de gráficos do Direct3D](index.md)
 
  
 

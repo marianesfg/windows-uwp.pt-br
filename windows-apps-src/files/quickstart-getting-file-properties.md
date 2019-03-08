@@ -1,17 +1,17 @@
 ---
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Obter propriedades do arquivo
-description: Obtenha as propriedades&\#8212;nível superior, básicas e estendidas&\#8212;de um arquivo representado pelo objeto StorageFile.
+description: Obter propriedades do &\#8212; nível superior, básico e estendido &\#8212; para um arquivo representado por um StorageFile do objeto.
 ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6cde9d8753248614603ee49fb1415ec18ec4669b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044184"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596991"
 ---
 # <a name="get-file-properties"></a>Obter propriedades do arquivo
 
@@ -24,17 +24,17 @@ ms.locfileid: "9044184"
 Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo representado pelo objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
 > [!NOTE]
-> Para obter um exemplo completo, consulte o [exemplo de acesso a arquivos](https://go.microsoft.com/fwlink/p/?linkid=619995).
+> Para obter um exemplo completo, consulte o [exemplo de acesso de arquivo](https://go.microsoft.com/fwlink/p/?linkid=619995).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
--   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
+-   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
 
     Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
--   **Acessar permissões ao local**
+-   **Permissões de acesso para o local**
 
-    Por exemplo, o código nesses exemplos exige a funcionalidade **picturesLibrary**, mas o local talvez exija outra funcionalidade ou até mesmo nenhuma funcionalidade. Para obter mais informações, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
+    Por exemplo, o código nesses exemplos exige a funcionalidade **picturesLibrary**, mas o local talvez exija outra funcionalidade ou até mesmo nenhuma funcionalidade. Para saber mais, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
 ## <a name="getting-a-files-top-level-properties"></a>Obtendo as propriedades de nível superior de um arquivo
 
@@ -88,7 +88,7 @@ foreach (Windows.Storage.StorageFile file in files)
 
 ## <a name="getting-a-files-extended-properties"></a>Obtendo as propriedades estendidas de um arquivo
 
-Além das propriedades de nível superior e básicas (de um arquivo), há muitas propriedades associadas ao conteúdo do arquivo. Essas propriedades estendidas são acessadas com a chamada ao método [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124). (Um objeto [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113) é obtido chamando a propriedade [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225).) Embora propriedades de arquivo de nível superior e básicas sejam acessadas como propriedades de uma classe —[**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) e **BasicProperties**, respectivamente — propriedades estendidas são obtidas transmitindo uma coleção [IEnumerable](https://go.microsoft.com/fwlink/p/?LinkID=313091) de objetos [String](https://go.microsoft.com/fwlink/p/?LinkID=325032) que representam os nomes das propriedades que devem ser recuperadas para o método **BasicProperties.RetrievePropertiesAsync**. Esse método então retorna uma coleção [IDictionary](https://go.microsoft.com/fwlink/p/?LinkId=325238). Cada propriedade estendida é recuperada da coleção, por nome ou índice.
+Além das propriedades de nível superior e básicas (de um arquivo), há muitas propriedades associadas ao conteúdo do arquivo. Essas propriedades estendidas são acessadas com a chamada ao método [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124). (Um [ **BasicProperties** ](https://msdn.microsoft.com/library/windows/apps/br212113) objeto é obtido chamando o [ **StorageFile.Properties** ](https://msdn.microsoft.com/library/windows/apps/br227225) propriedade.) Embora as propriedades de arquivo básico e de alto nível são acessíveis como propriedades de uma classe —[**StorageFile** ](https://msdn.microsoft.com/library/windows/apps/br227171) e **BasicProperties**, respectivamente — são as propriedades estendidas obtido, passando um [IEnumerable](https://go.microsoft.com/fwlink/p/?LinkID=313091) coleção de [cadeia de caracteres](https://go.microsoft.com/fwlink/p/?LinkID=325032) objetos que representam os nomes das propriedades que devem ser recuperados para o  **BasicProperties.RetrievePropertiesAsync** método. Esse método então retorna uma coleção [IDictionary](https://go.microsoft.com/fwlink/p/?LinkId=325238). Cada propriedade estendida é recuperada da coleção, por nome ou índice.
 
 Este exemplo enumera todos os arquivos da biblioteca Imagens, especifica os nomes das propriedades desejadas (**DataAccessed** e **FileOwner**) em um objeto [List](https://go.microsoft.com/fwlink/p/?LinkID=325246), transmite esse objeto [List](https://go.microsoft.com/fwlink/p/?LinkID=325246) para [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124) para recuperar essas propriedades e, em seguida, recupera as propriedades pelo nome do objeto [IDictionary](https://go.microsoft.com/fwlink/p/?LinkId=325238) retornado.
 

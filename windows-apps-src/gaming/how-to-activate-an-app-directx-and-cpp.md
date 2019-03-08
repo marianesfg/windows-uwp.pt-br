@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: 51c2435c8edeac2431198b7b5f3d9b1a307b5b78
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920187"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648841"
 ---
 # <a name="how-to-activate-an-app-directx-and-c"></a>Como ativar um aplicativo (DirectX e C++)
 
@@ -42,7 +42,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## <a name="activate-the-corewindow-instance-for-the-app"></a>Ativar a instância do CoreWindow para o aplicativo
 
 
-Quando seu aplicativo é iniciado, você deve obter uma referência ao [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para ele. **CoreWindow** inclui o dispatcher de mensagem de eventos de janela que seu aplicativo usa para processar os eventos da janela. Obtenha essa referência no retorno de chamada do evento de ativação do aplicativo chamando [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589). Depois que você obtiver essa referência, ative a janela principal do aplicativo chamando [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).
+Quando seu aplicativo é iniciado, você deve obter uma referência ao [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para ele. **O CoreWindow** inclui o dispatcher de mensagem de eventos de janela que seu aplicativo usa para processar os eventos da janela. Obtenha essa referência no retorno de chamada do evento de ativação do aplicativo chamando [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589). Depois que você obtiver essa referência, ative a janela principal do aplicativo chamando [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).
 
 ```cpp
 void App::OnActivated(CoreApplicationView^ applicationView, IActivatedEventArgs^ args)
@@ -86,7 +86,7 @@ void App::Run()
 
 
 * [Como suspender um aplicativo (DirectX e C++)](how-to-suspend-an-app-directx-and-cpp.md)
-* [Como retomar um aplicativo (DirectX e C++)](how-to-resume-an-app-directx-and-cpp.md)
+* [Como reiniciar um aplicativo (DirectX e C++)](how-to-resume-an-app-directx-and-cpp.md)
 
  
 

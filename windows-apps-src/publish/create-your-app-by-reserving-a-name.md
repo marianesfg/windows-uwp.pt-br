@@ -1,5 +1,5 @@
 ---
-Description: The first step in creating a new app in Partner Center is reserving an app name. See how to reserve app names and find suggestions for choosing a great name for your app.
+Description: A primeira etapa na criação de um novo aplicativo no Partner Center é reservar um nome de aplicativo. Veja como reservar nomes e encontrar sugestões para escolher um nome excelente para o seu aplicativo.
 title: Criar seu app reservando um nome
 keywords: windows 10, uwp, reserva de nome, nome do app, nomes de aplicativo, nomes, nome de produto, nomenclatura, nome reservado, título, nomes, títulos
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
@@ -7,22 +7,22 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 41020055e664d58f36e50eaf4e1cff1e28eeec37
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044733"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653031"
 ---
-# <a name="create-your-app-by-reserving-a-name"></a>Crie seu app reservando um nome
+# <a name="create-your-app-by-reserving-a-name"></a>Criar seu app reservando um nome
 
-A primeira etapa na criação de um novo aplicativo no [Partner Center](https://partner.microsoft.com/dashboard) é reservar um nome de aplicativo. Cada nome reservado (às vezes chamado de *título* do seu app) deve ser exclusivo em toda a Microsoft Store.
+A primeira etapa na criação de um novo aplicativo no [Partner Center](https://partner.microsoft.com/dashboard) está reservando um nome de aplicativo. Cada nome reservado (às vezes chamado de *título* do seu app) deve ser exclusivo em toda a Microsoft Store.
 
-Você pode reservar um nome para seu app, mesmo se não tiver começado a criar seu app ainda. É recomendável fazer isso assim que possível, para que ninguém mais possa usar o nome. Observe que você precisará enviar o app dentro de três meses para manter o mesmo nome reservado para seu uso.
+Você pode reservar um nome para seu app, mesmo se não tiver começado a criar seu app ainda. É recomendável fazer isso assim que possível, para que ninguém possa usar o nome. Observe que você precisará enviar o app dentro de três meses para manter o mesmo nome reservado para seu uso.
 
 Ao [carregar os pacotes do app](upload-app-packages.md), o valor [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) deve corresponder ao nome reservado para o app. Se você usar o Microsoft Visual Studio para criar o pacote de seu aplicativo, esse atributo será preenchido para você.
 
 > [!IMPORTANT]
-> Você pode reservar nomes adicionais para um aplicativo, e você pode optar por usar um na versão publicada do seu aplicativo em vez da que reservar quando você cria seu aplicativo no Partner Center. No entanto, lembre-se de que o nome inserido aqui será usado em alguns dos [detalhes de identidade](view-app-identity-details.md), como o **Nome da família de pacote (PFN) do seu aplicativo**. Esses valores podem ser visíveis para alguns usuários e não pode ser alterado, portanto, certifique-se de que o nome reservado é apropriado para esse uso.
+> Você pode reservar nomes adicionais para um aplicativo, e você pode optar por usar uma da versão publicada do seu aplicativo em vez da que reserva quando você cria seu aplicativo no Partner Center. No entanto, lembre-se de que o nome inserido aqui será usado em alguns de seu aplicativo [detalhes de identidade](view-app-identity-details.md), como o **nome da família de pacotes (PFN)**. Esses valores podem ser visíveis para alguns usuários e não pode ser alterado, portanto, certifique-se de que o nome que você reserve é apropriado para esse uso.
 
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>Crie seu aplicativo reservando um novo nome
@@ -36,7 +36,7 @@ Reservar um nome é a primeira etapa na criação de um aplicativo no Partner Ce
 O nome agora está reservado, e você pode começar a trabalhar em seu [envio](app-submissions.md) quando estiver pronto. 
 
 > [!NOTE]
-> Talvez você descubra que não pode reservar um nome, mesmo que não exista nenhum app com esse nome listado na Microsoft Store. Geralmente isso ocorre porque outro desenvolvedor reservou o nome para o app dele, mas ainda não o enviou. Se você não conseguir reservar um nome que tenha sido registrado por você ou sobre o qual você possui outros direitos legais, ou se encontrar outro app na Microsoft Store com o mesmo nome, [contate a Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=233777).
+> Talvez você descubra que não pode reservar um nome, mesmo que não exista nenhum app com esse nome listado na Microsoft Store. Geralmente isso ocorre porque outro desenvolvedor reservou o nome para o aplicativo dele, mas ainda não enviou o aplicativo. Se você não conseguir reservar um nome que tenha sido registrado por você ou sobre o qual você possui outros direitos legais, ou se encontrar outro app na Microsoft Store com o mesmo nome, [contate a Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=233777).
 
 Depois de reservar um nome, você terá três meses para enviar o app. Se você não enviá-lo em um três meses, a reserva do nome expirará e outro desenvolvedor poderá usar o nome em um app. Você pode encontrar um erro se tentar enviar um aplicativo sob um nome que deixou expirar.
 
@@ -47,16 +47,16 @@ Escolher o melhor nome para o aplicativo é uma tarefa importante. Escolha um no
 
 -   **Mantenha-o curto.** O espaço para exibir o nome do seu aplicativo é limitado em muitos lugares; por isso, sugerimos usar o nome mais curto possível. Embora o nome do aplicativo possa ter até 256 caracteres, nem sempre o final de um nome muito longo pode ficar visível aos clientes.
     > [!NOTE]
-    > O número real de caracteres exibidos em vários locais pode variar dependendo do comprimento alocado e dos tipos de caracteres usados no nome do aplicativo. Por exemplo, na fonte Segoe UI que o Windows usa, cerca de 30 caracteres "I" caberão no mesmo espaço que 10 caracteres "W". Devido a essa variação, não se esqueça de testar seu aplicativo e verificar como seu nome aparece em seus blocos (se você optar por sobrepor o nome do aplicativo), nos resultados da pesquisa e dentro do aplicativo em si. Considere também cada idioma no qual você oferece seu aplicativo. Tenha em mente que caracteres do Leste Asiático tendem a ser mais largos que caracteres latinos, portanto, menos caracteres serão exibidos.
--   **Seja original.** Assegure que o nome do aplicativo seja diferente o suficiente para que não seja confundido com um aplicativo existente.
--   **Não use nomes com marca comercial de outros.** Certifique-se de ter os direitos de uso do nome reservado. Caso alguém tenha registrado o nome, ele poderá relatar uma infração, e você não poderá continuar usando o nome. Se isso ocorrer após a publicação do aplicativo, ele será removido da Loja. Desse modo, você precisará alterar o nome do seu aplicativo e todas as instâncias do nome em todo o aplicativo e seu conteúdo antes de [enviar o aplicativo](app-submissions.md) para certificação novamente.
--   **Evite adicionar informações de diferenciação no fim do nome.** Caso as informações que diferenciam vários aplicativos sejam adicionadas ao final do nome, é possível que os clientes não as vejam, principalmente se o nome for longo; assim, parecerá que todos os aplicativos têm o mesmo nome. Se isso for inevitável, use logotipos e imagens do aplicativo diferentes para facilitar a diferenciar um aplicativo de outro.
--   **Não inclua emojis no nome.** Você não poderá reservar um nome que inclua emojis ou outros caracteres não compatíveis.
+    > O número real de caracteres exibidos em vários locais pode variar dependendo do comprimento alocado e dos tipos de caracteres usados no nome do aplicativo. Por exemplo, na fonte Segoe UI que o Windows usa, cerca de 30 caracteres "I" caberão no mesmo espaço que 10 caracteres "W". Por causa dessa variação, não se esqueça de testar seu aplicativo e verificar como o seu nome aparece em seu lado a lado (se você optar por sobrepor o nome do aplicativo), nos resultados da pesquisa e ao próprio aplicativo. Considere também cada idioma no qual você oferece seu aplicativo. Tenha em mente que caracteres do Leste Asiático tendem a ser mais largos que caracteres latinos, portanto, menos caracteres serão exibidos.
+-   **Ser original.** Assegure que o nome do aplicativo seja diferente o suficiente para que não seja confundido com um aplicativo existente.
+-   **Não use nomes com a marca registrados por outras pessoas.** Certifique-se de ter os direitos de uso do nome reservado. Caso alguém tenha registrado o nome, ele poderá relatar uma infração, e você não poderá continuar usando o nome. Se isso ocorrer após a publicação do aplicativo, ele será removido da Loja. Desse modo, você precisará alterar o nome do seu aplicativo e todas as instâncias do nome em todo o aplicativo e seu conteúdo antes de [enviar o aplicativo](app-submissions.md) para certificação novamente.
+-   **Evite adicionar informações de diferenciação no final do nome.** Caso as informações que diferenciam vários aplicativos sejam adicionadas ao final do nome, é possível que os clientes não as vejam, principalmente se o nome for longo; assim, parecerá que todos os aplicativos têm o mesmo nome. Se isso é inevitável, use diferentes logotipos e imagens de aplicativo para tornar mais fácil de diferenciar um aplicativo de outro.
+-   **Não inclua emojis no seu nome.** Você não poderá reservar um nome que inclua emojis ou outros caracteres não compatíveis.
 
 
 ## <a name="manage-additional-app-names"></a>Gerenciar nomes de aplicativos adicionais
 
-Você pode adicionar e gerenciar mais nomes na página **Gerenciar nomes de aplicativo** na seção **gerenciamento de aplicativo** para cada um dos seus aplicativos no Partner Center.
+Você pode adicionar e gerenciar nomes adicionais sobre o **gerenciar nomes de aplicativo** página na **gerenciamento de aplicativo** seção para cada um dos seus aplicativos no Partner Center.
 
 Em alguns casos, convém reservar vários nomes para usar o mesmo aplicativo, como quando você deseja oferecer seu aplicativo em vários idiomas e quer usar nomes diferentes para cada idioma. Você precisará reservar um nome adicional se desejar alterar o nome do aplicativo completamente.
 

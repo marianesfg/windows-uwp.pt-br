@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c9c232bc60bbbb3cccc16618d82ec23452c58ee8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933180"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645951"
 ---
 # <a name="texture3d-subresource-tiling"></a>Sub-recursos lado a lado de Texture3D
 
@@ -21,7 +21,7 @@ Esta tabela mostra como os sub-recursos de [**Texture3D**](https://msdn.microsof
 
 Esta tabela pega o agrupamento lado a lado do [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) e divide cada uma das dimensões x/y por 4 e adiciona 16 camadas de profundidade. Todos os blocos do primeiro plano (plano 2D de blocos definindo as 16 primeiras camadas de profundidade) aparecem antes dos planos subsequentes.
 
-**Observação** Suporte de [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) nos recursos de streaming não é exposto na implementação inicial de recursos de streaming, mas as formas de bloco desejadas estão listadas aqui para um possível suporte em uma versão futura.
+**Observação**  O suporte para   [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) nos recursos de streaming não é exposto na implementação inicial de recursos de streaming, mas as formas de bloco desejadas estão listadas aqui para um possível suporte em uma versão futura.
 
  
 
@@ -37,12 +37,12 @@ Esta tabela pega o agrupamento lado a lado do [**Texture2D**](https://msdn.micro
 
  
 
-Contagens de bits de formato sem suporte com recursos de streaming: formatos de 96 bpp, formatos de vídeo, DXGI\_FORMAT\_R1\_UNORM, DXGI\_FORMAT\_R8G8\_B8G8\_UNORM e DXGI\_FORMAT\_R8R8\_G8B8\_UNORM.
+Contagens de bit de formato não tem suportadas com recursos de streaming são formatos de bpp 96, formatos de vídeo, DXGI\_formato\_R1\_UNORM, DXGI\_formato\_R8G8\_B8G8\_UNORM, e DXGI\_formato\_R8R8\_G8B8\_UNORM.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Como uma área de recurso de streaming é colocada lado a lado](how-a-streaming-resource-s-area-is-tiled.md)
+[Como área do recurso streaming é colocada lado a lado](how-a-streaming-resource-s-area-is-tiled.md)
 
  
 

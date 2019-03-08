@@ -1,5 +1,5 @@
 ---
-Description: Displays images in a collection, such as photos in an album or items in a product details page, one image at a time.
+Description: Exibe imagens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, uma imagem por vez.
 title: Diretrizes para controles de exibição de inversão
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
@@ -12,22 +12,22 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: ac4e5bb7c761ad6661647cb88f831ffa652b6241
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048796"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662421"
 ---
 # <a name="flip-view"></a>Exibição de inversão
 
  
 
-Use um recurso exibição de inversão para procurar imagens ou outros itens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, um item por vez. Em dispositivos sensíveis ao toque, deslizar o dedo em um item move a coleção. Com um mouse, os botões de navegação aparecem no foco do mouse. No teclado, as teclas de seta movem a coleção.
+Use um recurso exibição de inversão para procurar imagens ou outros itens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, um item por vez. Em dispositivos sensíveis ao toque, deslizar o dedo em um item move a coleção. Com um mouse, os botões de navegação aparecem na passagem do mouse. No teclado, as teclas de seta movem a coleção.
 
-> **APIs importantes**: [classe FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx), [propriedade ItemsSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx), [propriedade ItemTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)
+> **APIs importantes**: [Classe FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx), [propriedade ItemsSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx), [propriedade ItemTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)
 
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 O recurso exibição de inversão é melhor para examinar imagens em coleções pequenas a médias (até 25 itens ou algo assim). Exemplos de tais coleções incluem itens em uma página de detalhes do produto ou fotos em um álbum de fotos. Embora não recomendemos o modo de exibição invertido em coleções maiores, o controle é comum para a visualização de imagens individuais em um álbum de fotos.
 
@@ -40,8 +40,8 @@ O recurso exibição de inversão é melhor para examinar imagens em coleções 
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/FlipView">abrir o aplicativo e ver o FlipView em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obter o código-fonte (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -61,9 +61,9 @@ FlipView é um [ItemsControl](https://msdn.microsoft.com/library/windows/apps/wi
 
 Por padrão, o item de dados é exibido no recurso exibição de inversão como a representação do objeto de dados ao qual ele está associado. Para especificar exatamente como os itens em exibição de inversão são exibidos, crie um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.datatemplate.aspx) para definir o layout dos controles usados para exibir cada item. Os controles no layout podem ser associados a propriedades de um objeto de dados ou ter conteúdo definido embutido. Você atribui o DataTemplate à propriedade [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) do FlipView.
 
-### <a name="add-items-to-the-items-collection"></a>Adicionar itens à coleção de itens
+### <a name="add-items-to-the-items-collection"></a>Adicionar itens à coleção Items
 
-Você pode adicionar itens à coleção [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) usando XAML ou código. Normalmente, você adiciona itens dessa maneira quando tem um pequeno número de itens que não mudam e são facilmente definidos no XAML ou quando gera os itens em código no tempo de execução. Este é um recurso exibição de inversão com itens definidos embutidos.
+Você pode adicionar itens à coleção [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) usando XAML ou código. Normalmente, você adiciona itens dessa maneira quando tem um pequeno número de itens que não mudam e são facilmente definidos no XAML ou ao gerar os itens em código no tempo de execução. Este é um recurso exibição de inversão com itens definidos embutidos.
 
 ```xaml
 <FlipView x:Name="flipView1">
@@ -86,7 +86,7 @@ stackPanel1.Children.Add(flipView1);
 
 Quando você adiciona itens a um recurso exibição de inversão, eles são colocados automaticamente no contêiner [**FlipViewItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flipviewitem.aspx). Para alterar como um item é exibido, você pode aplicar um estilo ao contêiner de item definindo a propriedade [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx). 
 
-Quando você define os itens no XAML, eles também são adicionados automaticamente à coleção de Items.
+Quando você define os itens em XAML, eles também são adicionados automaticamente à coleção Items.
 
 ### <a name="set-the-items-source"></a>Definir a origem de itens
 
@@ -110,7 +110,7 @@ flipView1.SelectionChanged += FlipView_SelectionChanged;
 stackPanel1.Children.Add(flipView1);
 ```
 
-Você também pode associar a propriedade ItemsSource a uma coleção no XAML. Para saber mais, veja [Vinculação de dados com XAML](../../data-binding/data-binding-quickstart.md).
+Você também pode associar a propriedade ItemsSource a uma coleção em XAML. Para saber mais, consulte [Vinculação de dados com XAML](../../data-binding/data-binding-quickstart.md).
 
 Aqui, o ItemsSource está associado a um [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx) denominado `itemsViewSource`. 
 
@@ -126,7 +126,7 @@ Aqui, o ItemsSource está associado a um [**CollectionViewSource**](https://msdn
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**Observação**&nbsp;&nbsp;Você pode preencher um recurso exibição de inversão adicionando itens a sua coleção Items ou definindo sua propriedade ItemsSource, mas você não pode usar as duas formas ao mesmo tempo. Se você definir a propriedade ItemsSource e adicionar um item no XAML, o item será ignorado. Se você definir a propriedade ItemsSource e adicionar um item à coleção Items no código, uma exceção será gerada.
+>**Observação**&nbsp;&nbsp;Você pode preencher um recurso exibição de inversão adicionando itens a sua coleção Items ou definindo sua propriedade ItemsSource, mas você não pode usar as duas formas ao mesmo tempo. Se você definir a propriedade ItemsSource e adicionar um item em XAML, o item adicionado será ignorado. Se você definir a propriedade ItemsSource e adicionar um item à coleção Items no código, uma exceção será gerada.
 
 ### <a name="specify-the-look-of-the-items"></a>Especificar a aparência dos itens
 
@@ -227,9 +227,9 @@ Para conferir um código de exemplo que mostra como adicionar um indicador de co
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Diretrizes para listas](lists.md)
-- [**Classe FlipView**](https://msdn.microsoft.com/library/windows/apps/br242678)
+- [**Classe de FlipView**](https://msdn.microsoft.com/library/windows/apps/br242678)

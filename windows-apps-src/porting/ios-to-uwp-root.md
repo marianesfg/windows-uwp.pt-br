@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ddcb64aed8205f18b17706e987cbd9981bb8044
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051059"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655461"
 ---
 # <a name="move-from-ios-to-uwp"></a>Mudar do iOS para a UWP
 
@@ -26,12 +26,12 @@ Hoje em dia, o Windows é executado em um grande número de dispositivos. A UWP 
 
 | Tópico | Descrição |
 |-------|-------------|
-| [Selecionando uma abordagem para o desenvolvimento de aplicativos iOS e UWP](selecting-an-approach-to-ios-and-uwp-app-development.md) | Quais são as opções ao desenvolver aplicativos de plataforma cruzada? |
-| [Introdução à UWP para desenvolvedores iOS](getting-started-with-uwp-for-ios-developers.md) | Se você for um desenvolvedor do iOS e estiver cogitando desenvolver para o Windows 10, esses documentos são um excelente ponto de partida. |
-| [Configurando o seu Mac com o Windows 10](setting-up-your-mac-with-windows-10.md) | Use seu computador Mac atual para desenvolver aplicativos para Windows. |
+| [Selecionando uma abordagem para iOS e desenvolvimento de aplicativos UWP](selecting-an-approach-to-ios-and-uwp-app-development.md) | Quais são as opções ao desenvolver aplicativos de plataforma cruzada? |
+| [Introdução ao UWP para os desenvolvedores de iOS](getting-started-with-uwp-for-ios-developers.md) | Se você for um desenvolvedor do iOS e estiver cogitando desenvolver para o Windows 10, esses documentos são um excelente ponto de partida. |
+| [Como configurar seu Mac com o Windows 10](setting-up-your-mac-with-windows-10.md) | Use seu computador Mac atual para desenvolver aplicativos para Windows. |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 **Para designers e desenvolvedores**
-* [Criando aplicativos Universais do Windows para todos os dispositivos Windows](https://go.microsoft.com/fwlink/p/?LinkID=397871)
+* [Criação de aplicativos Windows Universal para todos os dispositivos do Windows](https://go.microsoft.com/fwlink/p/?LinkID=397871)
 * [Baixar ativos de design para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)

@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
 ms.openlocfilehash: 9fda6fc33ab82283047e4bdf4b78d21f78a577c9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045705"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601631"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
-O Windows programa de ofertas do [Partner Center](https://partner.microsoft.com/dashboard) ambos os individuais e contas em muitos [países e regiões](#developer-account-and-app-submission-markets)da empresa. Qualquer tipo de fornece conta que acesso para publicar aplicativos na loja e participar de outros programas da Microsoft.
+Os Windows programar em [Partner Center](https://partner.microsoft.com/dashboard) oferece dois individual e da empresa contas em muitos [países e regiões](#developer-account-and-app-submission-markets). Um dos tipos de conta fornece acesso para publicar aplicativos para a Store e para participar em programas adicionais da Microsoft.
 
 > [!NOTE]
 > Ao abrir sua conta de desenvolvedor, certifique-se de entrar no [Partner Center](https://partner.microsoft.com/dashboard) com a conta da Microsoft que você deseja usar para sua conta de desenvolvedor. Você terá a opção de [adicionar mais usuários à conta](manage-account-users.md) mais tarde.
@@ -31,18 +31,18 @@ Aqui estão as principais diferenças entre os dois tipos de conta.
 
 | Conta individual | Conta empresarial |
 |--------------------|-----------------|
-| <ul><li>Custa aproximadamente US$ 19 (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type))</li></ul> |
+| <ul><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type))</li></ul> |
 
-As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Por que as [Políticas da Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), aplicativos com determinadas funcionalidades, como aqueles que acessar a conta financeira informações ou que requerem autenticação para acessar a funcionalidade principal (sem usar um provedor de autenticação de terceiros dedicado seguro), só podem ser publicados por contas de empresa.
+As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Pela [Store políticas](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), informações de conta de aplicativos com algumas funcionalidades, como aqueles que acessam financeiros ou que exigem a autenticação para acessar a funcionalidade principal (sem usar um terceiro dedicado e seguro provedor de autenticação), só podem ser publicados por contas da empresa.
 
 ## <a name="account-verification"></a>Verificação da conta
 
-Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, nosso parceiro de verificação Dun & Bradstreet confirmará se você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Você não poderá enviar aplicativos de uma conta corporativa até ele tenham sido verificado, mas enquanto está esperando, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md) continuar compilando e testando aplicativos e funcionam em Preparando seus envios.
+Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, nosso parceiro de verificação Dun & Bradstreet confirmará se você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Você não pode enviar aplicativos de uma conta da empresa até que ele é verificado, mas enquanto você aguarda, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md) continuar compilando e testando aplicativos e trabalha em Preparando seus envios.
 
 Você pode verificar o status da verificação na página **Configurações da conta**. 
 
 
-## <a name="developer-account-and-app-submission-markets"></a>Mercados de conta de desenvolvedor e de envio de app
+## <a name="developer-account-and-app-submission-markets"></a>Mercados de conta de desenvolvedor e de envio de aplicativos
 
 Você pode se registrar para obter uma conta de desenvolvedor e enviar aplicativos se morar ou tiver uma empresa em um país ou região listado a seguir.
 
@@ -51,10 +51,10 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 > [!NOTE]
 > Adicionaremos todas as taxas e tarifas à taxa de registro quando você se inscrever. Além disso, quando pagarmos a você, o seu banco pode cobrar uma taxa para receber o pagamento.
 
-A coluna **Pagamento** descreve como [pagaremos a você](getting-paid-apps.md) o dinheiro que você ganha nos seus apps. Você poderá escolher a [conta de pagamento](setting-up-your-payout-account-and-tax-forms.md) na qual depositaremos o dinheiro.
+A coluna **Pagamento** descreve como [pagaremos a você](getting-paid-apps.md) o dinheiro que você ganha nos seus apps. Você poderá escolher a [conta de pagamento](setting-up-your-payout-account-and-tax-forms.md) em que depositaremos o dinheiro.
 
 > [!NOTE]
-> Alguns mercados não dão suporte a aplicativos pagos (**pagamento**). Nesses mercados, apenas aplicativos gratuitos podem ser enviados.
+> Alguns mercados não dão suporte a aplicativos pagos (**pagamento**). Apenas aplicativos grátis podem ser enviados para esses mercados.
 
 A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte que pode ser usado para sua [conta de pagamento](setting-up-your-payout-account-and-tax-forms.md) (e, exceto onde observado, para sua taxa de registro na conta de desenvolvedor).
 
@@ -99,7 +99,7 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 |  Colômbia | 36.543 COP | 180.000 COP | USD pago ao banco | Não | 
 |  Ilhas Comores | 19 USD | 99 USD | USD pago ao banco | Não | 
 |  Congo | 19 USD | 99 USD | XAF pago ao banco | Não | 
-|  Congo (RDC) | 19 USD | 99 USD | USD pago ao banco | Não | 
+|  Congo (República Democrática) | 19 USD | 99 USD | USD pago ao banco | Não | 
 |  Costa Rica | 9578 CRC | 49725 CRC | CRC pago ao banco | Não | 
 |  Côte d’Ivoire | 19 USD | 99 USD | XOF pago ao banco | Não | 
 |  Croácia | 107 HRK | 500 HRK | HRK pago ao banco | Não | 
@@ -167,7 +167,7 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 |  Malaui | 19 USD | 99 USD | MWK pago ao banco | Não | 
 |  Malásia | 62 MYR | 300 MYR | USD pago ao banco | Não | 
 |  Maldivas | 19 USD | 99 USD | Sem pagamento | Não | 
-|  Mali | 19 USD | 99 USD | XOF pago ao banco | Não | 
+|  Máli | 19 USD | 99 USD | XOF pago ao banco | Não | 
 |  Malta | 14 EUR | 75 EUR | EUR pago ao banco | Sim | 
 |  Ilhas Marshall | 19 USD | 99 USD | Sem pagamento | Não | 
 |  Mauritânia | 5681 MRO | 30046 MRO | Sem pagamento | Não | 
@@ -201,20 +201,20 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 |  Portugal | 14 EUR | 75 EUR | EUR pago ao banco | Sim | 
 |  Catar | 69 QAR | 360 QAR | QAR pago ao banco | Não | 
 |  Romênia | 14 EUR | 75 EUR | USD pago ao banco | Não | 
-|  Rússia | 626 RUB | RUB 3000 | RUB pago ao banco | Sim* | 
+|  Rússia | 626 RUB | 3000 RUB | RUB pago ao banco | Sim* | 
 |  Ruanda | 19 USD | 99 USD | RWF pago ao banco | Não | 
 |  São Cristóvão e Névis | 19 USD | 99 USD | Sem pagamento | Não | 
 |  Santa Lúcia | 19 USD | 99 USD | Sem pagamento | Não | 
 |  São Vicente e Granadinas | 19 USD | 99 USD | XCD pago ao banco | Não | 
 |  Samoa | 19 USD | 99 USD | Sem pagamento | Não | 
 |  San Marino |  14 EUR | 75 EUR | Sem pagamento | Não | 
-|  São Tomé e Príncipe | 19 USD | 99 USD | Sem pagamento | Não | 
+|  São Tomé and Príncipe | 19 USD | 99 USD | Sem pagamento | Não | 
 |  Arábia Saudita | 71 SAR | 380 SAR | SAR pago ao banco | Não | 
 |  Senegal | 19 USD | 99 USD | XOF pago ao banco | Não | 
 |  Sérvia | 1619 RSD | 7000 RSD | USD pago ao banco | Não | 
 |  Seicheles | 19 USD | 99 USD | Sem pagamento | Não | 
 |  Serra Leoa | 19 USD | 99 USD | USD pago ao banco | Não | 
-|  Singapura | 24 SGD | 120 SGD | SGD pago ao banco | Sim | 
+|  Cingapura | 24 SGD | 120 SGD | SGD pago ao banco | Sim | 
 |  Eslováquia | 14 EUR | 75 EUR | EUR pago ao banco | Sim | 
 |  Eslovênia | 14 EUR | 75 EUR | EUR pago ao banco | Sim | 
 |  Ilhas Salomão | 19 USD | 99 USD | Sem pagamento | Não | 
@@ -252,5 +252,5 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 |  Zâmbia | 19 USD | 99 USD | ZMK pago ao banco | Não | 
 |  Zimbábue | 19 USD | 99 USD | USD pago ao banco | Não |
 
-\* PayPal pode ser usado como um método de pagamento para contas de pagamento neste mercado, mas não pode ser usado para pagar a taxa de registro na conta de desenvolvedor.
+\* PayPal pode ser usado como um método de pagamento para contas de pagamento nesse mercado, mas não pode ser usado para pagar a taxa de registro de conta de desenvolvedor.
 

@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 ms.localizationpriority: medium
 ms.openlocfilehash: 963c73bb7667ced5bbe9e33fef0cac561fe1183a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928970"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57591541"
 ---
 # <a name="create-a-certificate-for-package-signing"></a>Criar um certificado para a assinatura de pacote
 
@@ -23,10 +23,10 @@ Este artigo explica como criar e exportar um certificado para a assinatura de pa
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- **Um app empacotado ou não empacotado**  
+- **Um aplicativo compactado ou descompactado**  
 Um app que contém um arquivo AppxManifest.xml. Você precisará fazer referência ao arquivo de manifesto ao criar o certificado que será usado para assinar o pacote do app final. Para obter detalhes sobre como empacotar manualmente um app, consulte [Criar um pacote de apps com a ferramenta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool).
 
-- **Cmdlets da Infraestrutura de Chave Pública (PKI)**  
+- **Cmdlets de infraestrutura de chave pública (PKI)**  
 Você precisa de cmdlets de PKI para criar e exportar o certificado de assinatura. Para obter mais informações, consulte [Cmdlets da Infraestrutura de Chave Pública](https://docs.microsoft.com/powershell/module/pkiclient/).
 
 ## <a name="create-a-self-signed-certificate"></a>Criar um certificado autoassinado
@@ -83,5 +83,5 @@ Export-PfxCertificate -cert Cert:\LocalMachine\My\<Certificate Thumbprint> -File
 
 Depois de criar e exportar o certificado, você está pronto para assinar seu pacote de apps com **SignTool**. Para a próxima etapa no processo de empacotamento manual, consulte [Assinar um pacote de apps usando a SignTool](https://msdn.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool).
 
-## <a name="security-considerations"></a>Considerações sobre segurança 
+## <a name="security-considerations"></a>considerações sobre segurança 
 Ao adicionar um certificado em [repositórios de certificados do computador local](https://msdn.microsoft.com/windows/hardware/drivers/install/local-machine-and-current-user-certificate-stores), você afetará a confiança do certificado de todos os usuários no computador. É recomendável que você remova esses certificados quando eles não são mais necessários para evitar que eles sejam usados para comprometer a confiança do sistema.

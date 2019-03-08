@@ -1,6 +1,6 @@
 ---
 title: Texturas com canais alfa
-description: Há duas maneiras de codificar mapas de texturas que exibem uma transparência mais complexa.
+description: Há duas maneiras de codificar mapas de textura que exibem transparência mais complexa.
 ms.assetid: 768A774A-4F21-4DDE-B863-14211DA92926
 keywords:
 - Texturas com canais alfa
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 88d150383d2be219e7f382e0e690771acbc9d2ee
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934000"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651471"
 ---
 # <a name="textures-with-alpha-channels"></a>Texturas com canais alfa
 
 
-Há duas maneiras de codificar mapas de textura que exibem transparência mais complexa. Em cada caso, um bloco que descreve a transparência precede o bloco de 64 bits já descrito. A transparência é representada como um bitmap 4x4 com 4 bits por pixel (codificação explícita) ou com menos bits e interpolação linear, semelhante ao que é usado para a codificação de cores.
+Há duas maneiras de codificar mapas de textura que exibem transparência mais complexa. Em cada caso, um bloco que descreve a transparência precede o bloco de 64 bits já descrito. A transparência é representada como um bitmap de 4 x 4 com 4 bits por pixel (codificação explícita), ou com menos bits e interpolação linear parecida com a que é usada para a codificação de cores.
 
 O bloco de transparência e o bloco de cores são organizados conforme mostrado na tabela a seguir.
 
@@ -37,7 +37,7 @@ O diagrama a seguir mostra um bloco de transparência de 64 bits.
 
 ![diagrama de um bloco de transparência de 64 bits](images/colors4.png)
 
-**Observação**  o método de compactação do Direct3D usa os quatro bits mais significativos.
+**Observação**    o método de compactação do Direct3D usa os quatro bits mais significativos.
 
  
 
@@ -54,7 +54,7 @@ Layout da palavra 0:
 
  
 
-\*bit menos significativo, bit mais significativo (MSB)
+\*bit menos significativo, mais significativo de bits (MSB)
 
 Layout da palavra 1:
 
@@ -91,10 +91,10 @@ Layout da palavra 3:
 
 A comparação de cores usada em BC1 para determinar se o texel é transparente não é usada nesse formato. Presume-se que, sem a comparação de cores, os dados de cor sejam sempre tratados como se estivessem modo de 4 cores.
 
-## <a name="span-idthree-bit-linear-alpha-interpolationspanspan-idthree-bit-linear-alpha-interpolationspanspan-idthree-bit-linear-alpha-interpolationspanthree-bit-linear-alpha-interpolation"></a><span id="Three-Bit-Linear-Alpha-Interpolation"></span><span id="three-bit-linear-alpha-interpolation"></span><span id="THREE-BIT-LINEAR-ALPHA-INTERPOLATION"></span>Interpolação alfa linear de três bits
+## <a name="span-idthree-bit-linear-alpha-interpolationspanspan-idthree-bit-linear-alpha-interpolationspanspan-idthree-bit-linear-alpha-interpolationspanthree-bit-linear-alpha-interpolation"></a><span id="Three-Bit-Linear-Alpha-Interpolation"></span><span id="three-bit-linear-alpha-interpolation"></span><span id="THREE-BIT-LINEAR-ALPHA-INTERPOLATION"></span>Três bits interpolação linear de alfa
 
 
-A codificação de transparência para o formato BC3 é baseada em um conceito semelhante ao da codificação linear usada para cor. Dois valores alfa de 8 bits e um bitmap 4x4 com três bits por pixel são armazenados nos primeiros oito bytes do bloco. Os valores alfa representativos são usados para interpolar os valores alfa intermediários. Há mais informações disponíveis sobre como os dois valores alfa são armazenados. Se alpha\_0 for maior que alpha\_1, seis valores alfa intermediários serão criados pela interpolação. Caso contrário, os quatro valores alfa intermediários são interpolados entre os extremos alfa especificados. Os dois valores alfa implícitos adicionais são 0 (totalmente transparente) e 255 (totalmente opaco).
+A codificação de transparência para o formato BC3 é baseada em um conceito semelhante ao da codificação linear usada para cor. Dois valores alfa de 8 bits e um bitmap 4x4 com três bits por pixel são armazenados nos primeiros oito bytes do bloco. Os valores alfa representativos são usados para interpolar os valores alfa intermediários. Há mais informações disponíveis sobre como os dois valores alfa são armazenados. Se alfa\_0 é maior que alfa\_1, em seguida, seis valores alfabéticos intermediários são criados pela interpolação. Caso contrário, os quatro valores alfa intermediários são interpolados entre os extremos alfa especificados. Os dois valores alfa implícitos adicionais são 0 (totalmente transparente) e 255 (totalmente opaco).
 
 O exemplo de código a seguir ilustra esse algoritmo.
 

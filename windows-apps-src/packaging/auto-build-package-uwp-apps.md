@@ -7,13 +7,13 @@ keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 4208fd56b16d5130f218492428eb459364b8ada9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923843"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57590891"
 ---
-# <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu app UWP
+# <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu aplicativo UWP
 
 Você pode usar o Visual Studio Team Services (VSTS) para criar compilações automáticas para projetos UWP.
 Neste artigo, vamos analisar algumas maneiras diferentes de fazer isso.  Também mostraremos como executar essas tarefas usando a linha de comando para que você possa integrar com outros sistemas de compilação como o AppVeyor.
@@ -23,7 +23,7 @@ Neste artigo, vamos analisar algumas maneiras diferentes de fazer isso.  Também
 Escolha o tipo de agente de compilação que você deseja que o VSTS use ao executar o processo de compilação.
 Um agente de compilação hospedado é implantado com as ferramentas e sdks mais comuns, e funciona para a maioria dos cenários. Consulte o artigo [Software no servidor de compilação hospedado](https://www.visualstudio.com/docs/build/admin/agents/hosted-pool#software). No entanto, você pode criar um agente de compilação personalizado se precisar de mais controle sobre as etapas de criação. Você pode usar a tabela a seguir para ajudá-lo a tomar essa decisão.
 
-| **Cenário** | **Agente personalizado** | **Agente de compilação hospedado** |
+| **Cenário** | **Agente personalizado** | **Hosted Build Agent** |
 |-------------|----------------|----------------------|
 | Compilação UWP básica (incluindo o .NET Native)| :white_check_mark: | :white_check_mark: |
 | Gerar pacotes para sideload| :white_check_mark: | :white_check_mark: |
@@ -49,7 +49,7 @@ Para executar testes de unidade UWP, você precisará fazer o seguinte:
 
 Vamos começar com a definição padrão de compilação de UWP que está disponível no VSTS e, em seguida, mostraremos como configurar essa definição para que você possa realizar tarefas de compilação mais avançadas.
 
-**Adicionar o certificado do seu projeto a um repositório de código-fonte**
+**Adicione o certificado do seu projeto para um repositório de código-fonte**
 
 O VSTS funciona com TFS e GIT com base em repositórios de código.
 Se você usar um repositório de Git, adicione o arquivo de certificado do seu projeto ao repositório para que o agente de compilação possa assinar o pacote do aplicativo. Se você não fizer isso, o repositório de Git ignorará o arquivo de certificado.
@@ -69,8 +69,8 @@ Na lista de modelos de definição de compilação, escolha o modelo *Plataforma
 
 Essa definição de compilação contém as seguintes tarefas de compilação:
 
-- Restauração do NuGet **\*.sln
-- Compilar solução **\*.sln
+- Restauração do NuGet * *\*. sln
+- Compilar solução * *\*. sln
 - Publicar símbolos
 - Publicar artefato: soltar
 
@@ -82,10 +82,10 @@ Essa tarefa restaura os pacotes NuGet que são definidos em seu projeto. Alguns 
 
 #### <a name="configure-the-build-solution-build-task"></a>Configurar a tarefa de compilação Compilar solução
 
-Essa tarefa compila qualquer solução que esteja na pasta de trabalho para binários e produz o arquivo de pacote de aplicativo de saída.
+Essa tarefa é compilado em qualquer solução que está na pasta de trabalho para binários e produz o arquivo de pacote de aplicativo de saída.
 Essa tarefa usa argumentos MSbuild.  Você precisará especificar o valor desses argumentos. Use a tabela a seguir como guia.
 
-|**Argumento MSBuild**|**Valor**|**Descrição**|
+|**Argumento de MSBuild**|**Valor**|**Descrição**|
 |--------------------|---------|---------------|
 |AppxPackageDir|$(Build.ArtifactStagingDirectory)\AppxPackages|Define a pasta para armazenar os artefatos gerados.|
 |AppxBundlePlatforms|$(Build.BuildPlatform)|Permite que você defina as plataformas a serem incluídas no pacote.|
@@ -114,7 +114,7 @@ O VSTS usa a pasta `$(Build.ArtifactStagingDirectory)\AppxPackages` que definimo
 
 ![artefatos](images/building-screen6.png)
 
-Como definimos a propriedade `UapAppxPackageBuildMode` para `StoreUpload`, a pasta de artefatos inclui o pacote recomendado para envio à Loja (.appxupload). Observe que você também pode enviar um pacote de Apps normal (.appx/.msix) ou um lote de aplicativo (.appxbundle/.msixbundle) para a loja. Para os fins deste artigo, vamos usar o arquivo .appxupload.
+Como definimos a propriedade `UapAppxPackageBuildMode` para `StoreUpload`, a pasta de artefatos inclui o pacote recomendado para envio à Loja (.appxupload). Observe que você também pode enviar um pacote de aplicativo regular (.appx/.msix) ou um pacote de aplicativos (.appxbundle/.msixbundle) para a Store. Para os fins deste artigo, vamos usar o arquivo .appxupload.
 
 >[!NOTE]
 > Por padrão, o agente de VSTS mantém os últimos pacotes de aplicativo gerados. Se você quiser armazenar somente os artefatos da compilação atual, configure a compilação para limpar o diretório de binários. Para fazer isso, adicione uma variável chamada `Build.Clean` e defina-a como o valor `all`. Para saber mais, consulte [Especificar o repositório](https://www.visualstudio.com/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way).
@@ -123,7 +123,7 @@ Como definimos a propriedade `UapAppxPackageBuildMode` para `StoreUpload`, a pas
 
 Em seguida, você usará sua definição de compilação para criar uma compilação automática. A tabela a seguir descreve cada tipo de compilação automática que você pode criar.
 
-|**Tipo de compilação**|**Artefato**|**Frequência recomendada**|**Descrição**|
+|**Tipo de Build**|**Artefato**|**Frequência recomendada**|**Descrição**|
 |-----------------|------------|-------------------------|---------------|
 |Integração contínua|Criar Log, Resultados de Teste|Cada confirmação|Esse tipo de compilação é rápido e executado várias vezes ao dia.|
 |Compilação de implantação contínua para sideload|Pacotes de Implantação|Diário |Esse tipo de compilação pode incluir testes de unidade, mas demora um pouco mais. Ele permite o teste manual e você pode integrá-lo a outras ferramentas como o HockeyApp.|
@@ -138,7 +138,7 @@ Esse tipo de compilação ajuda você a diagnosticar problemas relacionados a c�
 Se você quiser executar testes de unidade UWP como parte de sua compilação CI, precisará usar um agente de compilação personalizado em vez do agente de compilação hospedado.
 
 >[!NOTE]
-> Se você incluir mais de um aplicativo na mesma solução, poderá receber um erro. Consulte o seguinte tópico de ajuda para resolver esse erro: [Corrigir erros que aparecem quando você inclui mais de um aplicativo na mesma solução](#bundle-errors).
+> Se você incluir mais de um aplicativo na mesma solução, poderá receber um erro. Consulte o tópico a seguir para ajudar a resolver esse erro: [Resolva os erros que aparecem quando você agrupar mais de um aplicativo na mesma solução.](#bundle-errors)
 
 ### <a name="configure-a-ci-build-definition"></a>Configurar uma definição de compilação CI
 
@@ -146,8 +146,7 @@ Use o modelo UWP padrão para criar uma definição de compilação. Em seguida,
 
 ![gatilho CI](images/building-screen7.png)
 
-Como a compilação CI não será implantada em usuários, é uma boa ideia manter números diferentes de controle de versão para evitar confusão com compilações de CD. Por exemplo:
-`$(BuildDefinitionName)_0.0.$(DayOfYear)$(Rev:.r)`
+Como a compilação CI não será implantada em usuários, é uma boa ideia manter números diferentes de controle de versão para evitar confusão com compilações de CD. Por exemplo: `$(BuildDefinitionName)_0.0.$(DayOfYear)$(Rev:.r)`
 
 #### <a name="configure-a-custom-build-agent-for-unit-testing"></a>Configurar um agente de compilação personalizado para testes de unidade
 
@@ -171,15 +170,14 @@ Os testes de unidade UWP são executados no contexto de um arquivo appxrecipe de
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp.UnitTest\x86\MyUWPApp.UnitTest_$(AppxVersion)_x86.appxrecipe
 ```
 
-Para que os testes sejam executados, um parâmetro de console precisará ser adicionado a vstest.console.exe. Esse parâmetro pode ser fornecido por meio de: **Opções de execução => Outras opções de console**. Adicione o seguinte parâmetro:
+Para que os testes sejam executados, um parâmetro de console precisará ser adicionado a vstest.console.exe. Esse parâmetro pode ser fornecer por meio de: **Opções de execução = > outras opções do console**. Adicione o seguinte parâmetro:
 
 ```ps
 /framework:FrameworkUap10
 ```
 
 >[!NOTE]
-> Use o seguinte comando para executar os testes de unidade localmente na linha de comando:
-`"%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe"`
+> Use o seguinte comando para executar os testes de unidade localmente da linha de comando: `"%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe"`
 
 #### <a name="access-test-results"></a>Acessar resultados de teste
 
@@ -215,7 +213,7 @@ MakeAppx(0,0): Error : Error info: error 80080204: The package with file name "A
 Esse erro é exibido porque, no nível da solução, não está claro qual aplicativo deve aparecer no pacote.
 Para resolver esse problema, abra cada arquivo de projeto e adicione as seguintes propriedades ao final do primeiro elemento `<PropertyGroup>`:
 
-|**Projeto**|**Propriedades**|
+|**Project**|**Propriedades**|
 |-------|----------|
 |Aplicativo|`<AppxBundle>Always</AppxBundle>`|
 |UnitTests|`<AppxBundle>Never</AppxBundle>`|
@@ -224,7 +222,7 @@ Em seguida, remova o argumento `AppxBundle` msbuild da etapa de compilação.
 
 ## <a name="set-up-a-continuous-deployment-build-for-sideloading"></a>Configurar uma compilação de implantação contínua para sideload
 
-Quando esse tipo de compilação é concluído, os usuários podem baixar o arquivo de lote de aplicativo da seção artefatos da página de resultados da compilação.
+Quando esse tipo de compilação for concluída, os usuários podem baixar o arquivo de pacote de aplicativo da seção de artefatos da página de resultados da compilação.
 Se quiser fazer o teste beta do aplicativo pela criação de uma distribuição mais completa, você pode usar o serviço HockeyApp. Esse serviço oferece recursos avançados para testes beta, análise do usuário e diagnóstico de falhas.
 
 ### <a name="applying-version-numbers-to-your-builds"></a>Aplicação de números de versão a compilações
@@ -259,7 +257,7 @@ Para que você possa extrair o número de versão e aplicá-lo ao manifesto e/ou
 
 A variável `$(AppxVersion)` contém o número de versão. Você pode usar esse número em outras etapas de compilação.
 
-#### <a name="optional-integrate-with-hockeyapp"></a>Opcional: integrar a HockeyApp
+#### <a name="optional-integrate-with-hockeyapp"></a>Opcional: Integrar com o HockeyApp
 
 Primeiro, instale a extensão [HockeyApp](https://marketplace.visualstudio.com/items?itemName=ms.hockeyapp) do Visual Studio. Você precisará instalar essa extensão como um administrador do VSTS.
 
@@ -268,9 +266,9 @@ Primeiro, instale a extensão [HockeyApp](https://marketplace.visualstudio.com/i
 Em seguida, configure a conexão do HockeyApp usando este guia: [Como usar o HockeyApp com o Visual Studio Team Services (VSTS) ou o Team Foundation Server (TFS).](https://support.hockeyapp.net/kb/third-party-bug-trackers-services-and-webhooks/how-to-use-hockeyapp-with-visual-studio-team-services-vsts-or-team-foundation-server-tfs)
 Você pode usar sua conta da Microsoft, conta de mídia social ou apenas um endereço de email para configurar sua conta do HockeyApp. O plano gratuito vem com dois aplicativos, um proprietário e nenhuma restrição de dados.
 
-Em seguida, você pode criar um aplicativo HockeyApp manualmente, ou carregar um arquivo de pacote de aplicativo existente. Para saber mais, consulte [Como criar um novo aplicativo](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app).
+Em seguida, você pode criar um aplicativo HockeyApp manualmente ou carregar um arquivo de pacote de aplicativo existente. Para saber mais, consulte [Como criar um novo aplicativo](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app).
 
-Para usar um arquivo de pacote de aplicativo existente, adicione uma etapa de compilação e defina o parâmetro de caminho do arquivo binário da etapa de compilação.
+Para usar um arquivo de pacote de aplicativo existente, adicione uma etapa de compilação e defina o parâmetro de caminho de arquivo binário da etapa de compilação.
 
 ![configurar o hockey app](images/building-screen15.png)
 
@@ -280,17 +278,17 @@ Para definir esse parâmetro, combine o nome do aplicativo, a variável AppxVers
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUWPApp_$(AppxVersion)_x86_x64_ARM.appxbundle
 ```
 
-Embora a tarefa HockeyApp permite que você especifique o caminho para o arquivo de símbolos, é uma prática recomendada incluir os símbolos com o pacote.
+Embora a tarefa do HockeyApp permite que você especifique o caminho para o arquivo de símbolos, é uma prática recomendada para incluir os símbolos com o pacote.
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Configurar uma compilação de implantação contínua que envia um pacote para a Store
 
 Para gerar pacotes de envio da Loja, associe seu app à Loja usando o Assistente de Associação à Loja no Visual Studio.
 
-![associar à Store](images/building-screen16.png)
+![associar à Loja](images/building-screen16.png)
 
 O Assistente de Associação à Store gera um arquivo chamado Package.StoreAssociation.xml que contém as informações de associação à Store. Se você armazenar seu código-fonte em um repositório público, como o GitHub, esse arquivo irá conter todos os nomes de aplicativo reservados para essa conta. Você pode excluir esse arquivo antes de torná-lo público.
 
-Se você não tiver acesso à conta do Partner Center que foi usada para publicar o aplicativo, você pode seguir as instruções neste documento: [Criando um aplicativo para um participante 3ª? Como empacotar seu aplicativo da loja](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97).
+Se você não tiver acesso à conta do Partner Center que foi usado para publicar o aplicativo, você pode seguir as instruções neste documento: [Criando um aplicativo para um terceiro 3ª? Como empacotar seu aplicativo Store](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97).
 
 Em seguida, você precisa verificar se a etapa de compilação inclui o seguinte parâmetro:
 
@@ -298,17 +296,17 @@ Em seguida, você precisa verificar se a etapa de compilação inclui o seguinte
 /p:UapAppxPackageBuildMode=StoreUpload
 ```
 
-Isso irá gerar um arquivo de upload que pode ser enviado para a loja.
+Isso irá gerar um arquivo de upload que pode ser enviado para a Store.
 
 #### <a name="configure-automatic-store-submission"></a>Configurar o envio automático à Store
 
 Use a extensão do Visual Studio Team Services para a Microsoft Store para integrar-se à API da Store e envie seu pacote de apps para a Store.
 
-Você precisa conectar sua conta do Partner Center com Azure Active Directory (AD) e, em seguida, criar um aplicativo no AD para autenticar as solicitações. Você pode seguir as orientações na página de extensão para fazer isso.
+Você precisa conectar sua conta no Partner Center com o Azure Active Directory (AD) e, em seguida, criar um aplicativo no AD para autenticar as solicitações. Você pode seguir as orientações na página de extensão para fazer isso.
 
-Depois que você tiver configurado a extensão, você pode adicionar a tarefa de compilação e configure-a com sua ID do aplicativo e o local do arquivo de upload.
+Depois de configurar a extensão, você pode adicionar a tarefa de build e configurá-lo com sua ID do aplicativo e o local do arquivo de upload.
 
-![Configurar o partner center](images/building-screen17.png)
+![Configurar o Centro de parceiros](images/building-screen17.png)
 
 Onde o valor do parâmetro `Package File` será:
 
@@ -327,18 +325,18 @@ Você precisa ativar manualmente essa compilação. Você pode usá-la para atua
 
 Se você quiser distribuir seu app sem publicá-lo na Loja, faça o sideload do seu aplicativo diretamente em dispositivos, contanto que os dispositivos confiem no certificado que foi usado para assinar o pacote do aplicativo.
 
-Use o script do PowerShell `Add-AppDevPackage.ps1` para instalar aplicativos. Esse script será adicionar o certificado à seção certificação confiável para o computador local e, em seguida, irá instalar ou atualizar o arquivo de pacote do aplicativo.
+Use o script do PowerShell `Add-AppDevPackage.ps1` para instalar aplicativos. Esse script será adicionar o certificado para a seção de certificação raiz confiáveis para o computador local e, em seguida, será instalar ou atualizar o arquivo de pacote do aplicativo.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Sideload de seu aplicativo com a Atualização de Aniversário do Windows 10
 
-Na atualização de aniversário do Windows 10, você pode duas vezes no arquivo de pacote do aplicativo e instalar seu aplicativo escolhendo o botão instalar em uma caixa de diálogo.
+A atualização de aniversário do Windows 10, você pode duas vezes no arquivo de pacote do aplicativo e instalar o aplicativo escolhendo o botão instalar em uma caixa de diálogo.
 
 ![sideload em rs1](images/building-screen18.png)
 
 >[!NOTE]
 > Esse método não instala o certificado nem as dependências associadas.
 
-Se você quiser distribuir seus pacotes de aplicativo do Windows em um site como VSTS ou HockeyApp, você precisará adicionar o site à lista de sites confiáveis no seu navegador. Caso contrário, o Windows marca o arquivo como bloqueado.
+Se você quiser distribuir seus pacotes de aplicativo do Windows de um site, como VSTS ou do HockeyApp, você precisará adicionar esse site à lista de sites confiáveis no seu navegador. Caso contrário, o Windows marca o arquivo como bloqueado.
 
 <span id="certificates-best-practices"/>
 
@@ -360,13 +358,13 @@ Em seguida, você pode usar a ferramenta Pvk2Pfx para gerar um arquivo PFX que c
 
 Forneça esses certificados para cada função de computador:
 
-|**Máquina**|**Utilização**|**Certificado**|**Repositório de Certificados**|
+|**Machine**|**Uso**|**Certificado**|**Certificado Store**|
 |-----------|---------|---------------|---------------------|
 |Máquina de desenvolvedor/compilação|Assinar compilações|MyCert.PFX|Usuário atual/pessoal|
-|Máquina de desenvolvedor/compilação|Executar|MyCert.cer|Máquina local/pessoas confiáveis|
-|Usuário|Executar|MyCert.cer|Máquina local/pessoas confiáveis|
+|Máquina de desenvolvedor/compilação|Run|MyCert.cer|Máquina local/pessoas confiáveis|
+|Usuário|Run|MyCert.cer|Máquina local/pessoas confiáveis|
 
->Observação: você também pode usar um certificado corporativo que já é confiável para seus usuários.
+>Observação: Você também pode usar um certificado corporativo que já é confiável para seus usuários.
 
 #### <a name="sign-your-uwp-app"></a>Assinar seu aplicativo UWP
 
@@ -388,7 +386,7 @@ A maneira mais rápida de registrar o certificado é clicar duas vezes no arquiv
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Criar seu aplicativo .NET para Windows](https://www.visualstudio.com/docs/build/get-started/dot-net)
-- [Empacotando aplicativos UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
-- [Sideload de aplicativos LOB no Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
-- [Criar um certificado para a assinatura de pacote](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)
+- [Compilar seu aplicativo .NET para Windows](https://www.visualstudio.com/docs/build/get-started/dot-net)
+- [Empacotando aplicativos da UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
+- [Aplicativos LOB de sideload no Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
+- [Criar um certificado de assinatura do pacote](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)

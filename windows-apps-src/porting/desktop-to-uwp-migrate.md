@@ -1,5 +1,5 @@
 ---
-Description: Share code between a desktop application and a UWP app
+Description: Compartilhar código entre um aplicativo da área de trabalho e um aplicativo UWP
 Search.Product: eADQiWindows 10XVcnh
 title: Compartilhar código entre um aplicativo da área de trabalho e um aplicativo UWP
 ms.date: 10/03/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 151584f15013c9d4ab7d9566e175b957a7a84149
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9045735"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644341"
 ---
 # <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>Compartilhar código entre um aplicativo da área de trabalho e um aplicativo UWP
 
@@ -61,9 +61,9 @@ Se seu código não for compatível com o padrão, considere a possibilidade de 
 
 Parte de seu código será específica de plataforma e precisará permanecer em seu projeto de aplicativo da área de trabalho.
 
-### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>Exemplo: Migrando o código de acesso de dados a uma biblioteca .NET Standard 2.0
+### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>Exemplo: Migrando código de acesso de dados em uma biblioteca do .NET Standard 2.0
 
-Vamos supor que temos um aplicativo Windows Forms muito básico que mostra os clientes de nosso banco de dados Northwind.
+Vamos supor que temos um aplicativo bem básico do Windows Forms que mostra os clientes do nosso banco de dados de exemplo Northwind.
 
 ![Aplicativo de formulário do Windows](images/desktop-to-uwp/win-forms-app.png)
 
@@ -268,7 +268,7 @@ Para começar com Android, iOS e projetos de plataforma cruzada, consulte o [Por
 
 ## <a name="next-steps"></a>Próximas etapas
 
-**Encontrar respostas para suas dúvidas**
+**Encontre respostas para suas perguntas**
 
 Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 

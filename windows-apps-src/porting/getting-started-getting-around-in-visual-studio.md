@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 82cb45dae1a4b9b1a9db8fabc044edf8157f1eb1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920440"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646331"
 ---
-# <a name="getting-started-getting-around-in-visual-studio"></a>Introdução: conhecendo o Visual Studio
+# <a name="getting-started-getting-around-in-visual-studio"></a>Guia de Introdução: Conhecendo o Visual Studio
 
 
 ## <a name="getting-around-in-microsoft-visual-studio"></a>Noções básicas do Microsoft Visual Studio
@@ -70,7 +70,7 @@ O Visual Studio é parecido. À direita de **Propriedades**, há um botão de ra
 
 ![lista de eventos de botão no visual studio](images/ios-to-uwp/vs-button-event.png)
 
-Para adicionar códigos para o evento de clique do botão, selecione o botão no painel **Design**. A seguir, clique no botão de raio e clique duas vezes na caixa vazia próximo ao nome **Clique**. O Visual Studio, então, adiciona o evento "myButton\_Click" à caixa **Clique** e adiciona e exibe o manipulador de evento correspondente no arquivo MainPage.xaml.cs, desta forma.
+Para adicionar códigos para o evento de clique do botão, selecione o botão no painel **Design**. A seguir, clique no botão de raio e clique duas vezes na caixa vazia próximo ao nome **Clique**. Em seguida, o Visual Studio adiciona o evento "myButton\_clique em" para o **clique em** caixa e, em seguida, adiciona e exibe o manipulador de eventos correspondentes no arquivo MainPage.xaml.cs, como este.
 
 ```csharp
 private void myButton_Click(object sender, RoutedEventArgs e)
@@ -98,7 +98,7 @@ No Visual Studio, você não precisa associar o controle, já que isso é sempre
 
 ![janela de propriedades de rótulo no visual studio](images/ios-to-uwp/vs-label-properties.png)
 
-Agora, vamos adicionar alguns códigos ao evento de clique do botão. Para fazer isso, toque no arquivo MainPage.xaml.cs e adicione o seguinte código ao manipulador de evento myButton\_Click.
+Agora, vamos adicionar alguns códigos ao evento de clique do botão. Para fazer isso, toque no arquivo MainPage.xaml.cs e adicione o seguinte código para o myButton\_manipulador de eventos de clique.
 
 ```csharp
 private void myButton_Click(object sender, RoutedEventArgs e)
@@ -122,7 +122,7 @@ Por fim, para executar o aplicativo, selecione o menu **Depurar** e, em seguida,
 
 Para encerrar o aplicativo, volte ao Visual Studio, toque no menu **Depurar** e, em seguida, em **Parar Depuração** (ou basta pressionar SHIFT + F5). Observe que o Visual Studio permite que você experimente o aplicativo em vários dispositivos diferentes, para verificar como ele será executado em cada um.
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próximas etapas
 
-[Introdução: controles comuns](getting-started-common-controls.md)
+[Guia de Introdução: Controles comuns](getting-started-common-controls.md)
 

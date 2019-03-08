@@ -1,5 +1,5 @@
 ---
-Description: Extend the basic functionality of Cortana with voice commands that activate a UWP app and execute a single action.
+Description: Estenda a funcionalidade básica da Cortana com comandos de voz que ativam um aplicativo UWP e executem uma única ação.
 title: Interações da Cortana
 ms.assetid: 4C11A7CF-DA26-4CA1-A9B9-FE52670101F5
 label: Cortana
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 49290d0e0ba96a5dce562ca4148b0ebf53bf0ff5
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051119"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648161"
 ---
 # <a name="cortana-interactions-in-uwp-apps"></a>Interações da Cortana em aplicativos UWP
 
@@ -29,14 +29,14 @@ Para saber como estender a Cortana com funcionalidade de um aplicativo UWP usand
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [**Elementos e atributos VCD v1.2**](https://docs.microsoft.com/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)
+* [**V 1.2 de elementos e atributos VCD**](https://docs.microsoft.com/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)
 
 **Designers**
 * [Diretrizes de design de controle por voz](speech-interactions.md)
-* [Diretrizes de design da Cortana para comandos de voz](https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines)
+* [Diretrizes de design do Cortana para comandos de voz](https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines)
 
 **Exemplos**
-* [Amostra de comando de voz da Cortana](https://go.microsoft.com/fwlink/p/?LinkID=619899)
+* [Exemplo de comando de voz Cortana](https://go.microsoft.com/fwlink/p/?LinkID=619899)
  
 
  

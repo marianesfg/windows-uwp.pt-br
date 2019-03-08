@@ -1,31 +1,31 @@
 ---
-Description: View the names that you've reserved for your app, reserve additional names (for other languages or to change your app's name), and delete reserved names that you don't need anymore.
+Description: Exiba os nomes que você já reservou para seu aplicativo, reserve nomes adicionais (para outros idiomas ou para alterar o nome do aplicativo) e exclua nomes reservados de que você não precisa mais.
 title: Gerenciar nomes de aplicativo
 ms.assetid: D95A6227-746E-4729-AE55-648A7102401C
 ms.date: 10/02/2018
 ms.topic: article
-keywords: Windows 10, uwp, nomes de aplicativo, altere o nome do aplicativo, atualização de nome do aplicativo, jogo, nome do produto
+keywords: o Windows 10, uwp, nomes de aplicativo, altere o nome do aplicativo, o nome do aplicativo de atualização, o nome do jogo, nome do produto
 ms.localizationpriority: medium
 ms.openlocfilehash: a27955f64a36fadde9b0f1781337929ce6871a9c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938391"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657601"
 ---
 # <a name="manage-app-names"></a>Gerenciar nomes de aplicativo
 
-Permite o **Gerenciar nomes de aplicativo** exibir todos os nomes que reservou para seu aplicativo, reservar nomes adicionais (para outros idiomas ou para alterar o nome do aplicativo) e excluir nomes que você não precisa. Você pode encontrar essa página no [Partner Center](https://partner.microsoft.com/dashboard) ao expandir a seção de **gerenciamento de aplicativo** no menu de navegação esquerdo para qualquer um dos seus aplicativos.
+O **gerenciar nomes de aplicativo** permite exibir todos os nomes que você reservou para seu aplicativo, reservar nomes adicionais (para outras linguagens ou para alterar o nome do seu aplicativo) e exclua os nomes que você não precisa. Você pode encontrar essa página no [Partner Center](https://partner.microsoft.com/dashboard) expandindo o **gerenciamento de aplicativo** seção no menu de navegação à esquerda de qualquer um dos seus aplicativos.
 
 > [!IMPORTANT]
-> Você pode reservar nomes adicionais para um aplicativo, e você pode optar por usar um na versão publicada do seu aplicativo em vez da que você reservou quando você criou seu aplicativo no Partner Center. No entanto, lembre-se que o primeiro nome reservado para seu produto será usado em alguns dos seu it do [detalhes de identidade](view-app-identity-details.md), como o **Nome da família de pacote (PFN)**. Esses valores podem ser visíveis para alguns usuários e não pode ser alterado, portanto, certifique-se de que o nome reservado primeiro é apropriado para esse uso.
+> Você pode reservar nomes adicionais para um aplicativo, e você pode optar por usar uma da versão publicada do seu aplicativo em vez daquele que você reservou quando criou seu aplicativo pela primeira vez no Partner Center. No entanto, lembre-se de que o primeiro nome reservado para o seu produto será usado em algumas de sua equipe de TI da [detalhes de identidade](view-app-identity-details.md), como o **nome da família de pacotes (PFN)**. Esses valores podem ser visíveis para alguns usuários e não pode ser alterado, portanto, certifique-se de que o nome que você pode reservar primeiro é apropriado para esse uso.
 
 
 ## <a name="reserve-additional-names-for-your-app"></a>Reservar nomes adicionais para seu aplicativo
 
-Você pode reservar vários nomes de aplicativo para usar no mesmo aplicativo. Isso é especialmente útil se você estiver oferecendo seu aplicativo em vários idiomas e quiser usar nomes diferentes para diferentes idiomas. Você também pode reservar um novo nome para alterar o nome de um aplicativo, conforme descrito a seguir.
+Você pode reservar vários nomes de aplicativo para usar no mesmo aplicativo. Isso é especialmente útil se você estiver oferecendo seu aplicativo em vários idiomas e quiser usar nomes diferentes para diferentes idiomas. Você também pode reservar um novo nome para alterar o nome de um aplicativo, conforme descrito abaixo.
 
-Para reservar um novo nome de aplicativo, encontre a caixa de texto na seção **reservar mais nomes** da página **Gerenciar nomes de aplicativo** . Digite o nome que você gostaria de reservar e, em seguida, clique em **Verificar disponibilidade**. Se o nome estiver disponível, clique em **Reservar nome do produto**. Você pode reservar vários nomes de aplicativo por repetir essas etapas, se desejado.
+Para reservar um novo nome de aplicativo, localize a caixa de texto na **reservar nomes mais** seção o **gerenciar nomes de aplicativo** página. Digite o nome que você gostaria de reservar e, em seguida, clique em **Verificar disponibilidade**. Se o nome estiver disponível, clique em **Reservar nome do produto**. Você pode reservar vários nomes de aplicativo, repetindo essas etapas, se desejado.
 
 > [!NOTE]
 > Para saber mais sobre como reservar nomes de aplicativo, e por que um determinado nome pode não estar disponível, consulte [Criar seu aplicativo reservando um nome](create-your-app-by-reserving-a-name.md).
@@ -37,28 +37,28 @@ Se você não quiser usar um nome que já reservou anteriormente, libere-o, excl
 
 Para excluir um dos nomes reservados do seu aplicativo, encontre o nome que você não deseja mais usar e, em seguida, clique em **Excluir**. Na caixa de diálogo de confirmação, clique em **Excluir** novamente para confirmar.
 
-Observe que seu aplicativo deve ter pelo menos um nome reservado. Para remover completamente um aplicativo do Partner Center (e liberar todos os nomes reservados para esse aplicativo), clique em **Excluir este aplicativo** na página **Visão geral do aplicativo** . Se você tiver um envio do aplicativo em andamento, é necessário excluir o envio primeiro. Observe que se você já tiver publicado o aplicativo para a loja, você não pode excluí-lo do Partner Center (embora você pode usar a funcionalidade de **Mostrar/ocultar produtos** em sua página de **Visão geral** para ocultá-lo). 
+Observe que seu aplicativo deve ter pelo menos um nome reservado. Para completamente remover um aplicativo do Partner Center (e todos os nomes que você reservou para o aplicativo de versão), clique em **excluir este aplicativo** da **visão geral do aplicativo** página. Se você tiver um envio do aplicativo em andamento, é necessário excluir o envio primeiro. Observe que, se você já publicou o aplicativo para a Store, você não pode excluí-lo do Partner Center (embora você possa usar o **produtos Mostrar/ocultar** funcionalidades em seus **visão geral** página para ocultá-la). 
 
 
-## <a name="rename-an-app-that-has-already-been-published"></a>Renomear um aplicativo já publicado
+## <a name="rename-an-app-that-has-already-been-published"></a>Renomear um aplicativo que já foi publicado
 
 Se o aplicativo já está na Loja e você deseja renomeá-lo, é possível fazer isso reservando um novo nome para ele (seguindo as etapas descritas acima) e, em seguida, criando um novo envio para o aplicativo. 
 
-Você deve atualizar os pacotes do aplicativo para substituir o nome antigo pelo novo e carregar os pacotes atualizados para seu envio.
-- Primeiro, atualize o arquivo storeassociation para usar o novo nome, seja manualmente ou usando o Visual Studio (**projeto > loja > associar aplicativo à loja...**). Para obter mais informações, consulte o [pacote de um aplicativo UWP com Visual Studio](../packaging/packaging-uwp-apps.md).
+Você deve atualizar o pacote (s) de seu aplicativo para substituir o nome antigo pelo novo e carregar o pacote atualizado (s) seu envio.
+- Primeiro, atualize o arquivo Package.StoreAssociation.xml para usar o novo nome, manualmente ou usando o Visual Studio (**Projeto > Loja > Associar aplicativo à Loja...**). Para obter mais informações, consulte [empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md).
 - Também é necessário atualizar o elemento [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) no manifesto do aplicativo e atualize elementos gráficos ou texto que inclua o nome do aplicativo. 
   > [!IMPORTANT]
   > Certifique-se de atualizar o arquivo Package.StoreAssociation.xml antes de alterar **Pacote/Propriedades/DisplayName** no aplicativo do manifesto ou você poderá receber um erro.
 
-Para atualizar uma listagem da loja para que ele usa o novo nome, vá para a [página de listagem de loja](create-app-store-listings.md) para esse idioma e selecione o nome na lista suspensa **nome do produto** . Certifique-se de revisar a descrição e outras partes da listagem para qualquer citações do nome e fazer atualizações, se necessário.
+Para atualizar uma listagem da Store para que ele use o novo nome, vá para o [página de listagem de Store](create-app-store-listings.md) para o idioma e selecione o nome da **nome do produto** lista suspensa. Certifique-se de examinar a descrição e outras partes da listagem de qualquer menções do nome e fazer atualizações, se necessário.
 
 > [!NOTE]
-> Se seu aplicativo tiver pacotes e/ou listagens da loja em vários idiomas, você precisará atualizar os pacotes e/ou armazenamento listagens para cada idioma em que o nome precisa ser atualizado.
+> Se seu aplicativo tiver pacotes e/ou em listagens de Store em vários idiomas, você precisará atualizar os pacotes e/ou Store listagens para cada idioma no qual o nome precisa ser atualizado.
 
-Quando seu aplicativo tiver sido publicado com o novo nome, você pode excluir todos os nomes mais antigos que você não precisa mais usar.
+Depois que seu aplicativo tiver sido publicado com o novo nome, você pode excluir todos os nomes mais antigos que você não precisa mais usar.
 
 > [!TIP]
-> Cada aplicativo aparecerá no Partner Center usando o nome que você reservou para ele. Se você tiver seguido as etapas acima para renomear um aplicativo, e você quiser que ele seja exibido no Partner Center usando o novo nome, você deve excluir o nome original (clicando em **Excluir** na página **Gerenciar nomes de aplicativo** ). 
+> Cada aplicativo aparece no Partner Center usando o nome que você reservou para ele. Se você tiver seguido as etapas acima para renomear um aplicativo, e você gostaria que ele apareça no Partner Center usando o novo nome, você deve excluir o nome original (clicando **excluir** sobre o **gerenciar nomes de aplicativo** página). 
 
  
 

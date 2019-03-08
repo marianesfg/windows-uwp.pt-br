@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, rede, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: e3dc77b48feb0c7ceba9fa3cede82c1a44687d0d
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114622"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656311"
 ---
 # <a name="networking-for-games"></a>Rede para jogos
 
@@ -45,10 +45,10 @@ Diversas APIs de rede podem ser usadas em jogos DirectX. Portanto, é importante
 
 Estas são algumas das APIs de rede mais populares para jogos:
 
--   TCP e soquetes - Fornece uma conexão confiável. Use o TCP para operações de jogos que não precisem de segurança. O TCP permite que o servidor seja facilmente dimensionado, então ele costuma ser usado em jogos que usam o modelo de infraestrutura (cliente-servidor ou Internet ponto a ponto). O TCP também pode ser usado por jogos ad hoc (ponto a ponto local) via Wi-Fi Direct e Bluetooth. O TCP costuma ser usado para movimento de objetos do jogo, interação entre os personagens, bate-papo com texto e outras operações. A classe [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) fornece um soquete TCP que pode ser usado em jogos da Microsoft Store. A classe **StreamSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) no namespace.
+-   TCP e soquetes - Fornece uma conexão confiável. Use o TCP para operações de jogos que não precisem de segurança. O TCP permite que o servidor seja facilmente dimensionado, então ele costuma ser usado em jogos que usam o modelo de infraestrutura (cliente-servidor ou Internet ponto a ponto). O TCP também pode ser usado por jogos ad hoc (ponto a ponto local) via Wi-Fi Direct e Bluetooth. O TCP costuma ser usado para movimento de objetos do jogo, interação entre os personagens, bate-papo com texto e outras operações. O [ **StreamSocket** ](https://msdn.microsoft.com/library/windows/apps/br226882) classe fornece um soquete TCP que pode ser usado em jogos da Microsoft Store. A classe **StreamSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) no namespace.
 -   TCP e soquetes usando SSL - Fornece uma conexão confiável que impede interceptações. Use conexões TCP com SSL para operações de jogos que precisem de segurança. A criptografia e a sobrecarga de SSL aumentam o custo de latência e desempenho, então ela é usada apenas quando a segurança é necessária. O TCP com SSL costuma ser usado para logon, compra e troca de ativos, criação e gerenciamento de personagens do jogo. A classe [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) fornece um soquete TCP que dá suporte à SSL.
--   UDP e soquetes - Fornece transferências de rede não confiáveis com baixa sobrecarga. O UDP é usado para operações de jogos que exigem baixa latência e podem tolerar alguma perda no pacote. Também costuma ser usado para jogos de luta, tiros e habilidades, áudio de rede e bate-papo de voz. A classe [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319) fornece um soquete UDP que pode ser usado em jogos da Microsoft Store. A classe **DatagramSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) no namespace.
--   HTTP Cliente - Fornece uma conexão confiável para servidores HTTP. O cenário de rede mais comum é para acessar um site da web para recuperar ou armazenar informações. Um exemplo simples seria um jogo que usa um site da web para armazenar informações de usuários e pontuações de jogos. Quando usado com SSL para segurança, um cliente HTTP pode ser usado para logon, compra e troca de ativos, criação e gerenciamento de personagens do jogo. A classe [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) fornece uma HTTP API moderna de cliente para uso em jogos da Microsoft Store. A classe **HttpClient** é usada com as classes relacionadas [**Windows::Web::Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) no namespace.
+-   UDP e soquetes - Fornece transferências de rede não confiáveis com baixa sobrecarga. O UDP é usado para operações de jogos que exigem baixa latência e podem tolerar alguma perda no pacote. Também costuma ser usado para jogos de luta, tiros e habilidades, áudio de rede e bate-papo de voz. O [ **DatagramSocket** ](https://msdn.microsoft.com/library/windows/apps/br241319) classe fornece um soquete UDP que pode ser usado em jogos da Microsoft Store. A classe **DatagramSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) no namespace.
+-   HTTP Cliente - Fornece uma conexão confiável para servidores HTTP. O cenário de rede mais comum é para acessar um site da web para recuperar ou armazenar informações. Um exemplo simples seria um jogo que usa um site da web para armazenar informações de usuários e pontuações de jogos. Quando usado com SSL para segurança, um cliente HTTP pode ser usado para logon, compra e troca de ativos, criação e gerenciamento de personagens do jogo. O [ **HttpClient** ](https://msdn.microsoft.com/library/windows/apps/dn298639) classe fornece um cliente HTTP moderno API para uso em jogos da Microsoft Store. A classe **HttpClient** é usada com as classes relacionadas [**Windows::Web::Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) no namespace.
 
 ## <a name="handling-network-exceptions-in-your-directx-game"></a>Manipulando exceções de rede em seu jogo em DirectX
 
@@ -79,7 +79,7 @@ As APIs de rede permitem diferentes métodos de recuperação das informações 
 
 ### <a name="exceptions-in-windowsnetworkingsockets"></a>Exceções em Windows.Networking.Sockets
 
-O construtor da classe [**HostName**](https://msdn.microsoft.com/library/windows/apps/br207113) usado com soquetes pode gerar uma exceção se a cadeia de caracteres passada não for um nome de host válido (ou seja, contém caracteres que não são permitidos em um nome de host). Se um aplicativo obtiver entrada do usuário para o **HostName** para uma conexão no mesmo nível, o construtor deverá estar em um bloco try/catch. Se uma exceção for gerada, o aplicativo poderá notificar o usuário e solicitar um novo nome de host.
+O construtor da classe [**HostName**](https://msdn.microsoft.com/library/windows/apps/br207113) usado com soquetes pode gerar uma exceção se a cadeia de caracteres passada não for um nome de host válido (ou seja, contém caracteres que não são permitidos em um nome de host). Se um aplicativo obtiver entrada do usuário para o **HostName** para uma conexão no mesmo nível, o construtor deverá estar em um bloco try/catch. Se uma exceção for lançada, o aplicativo poderá notificar o usuário e solicitar um novo nome de host.
 
 Adicionar código para validar uma cadeia para um nome de host do usuário
 
@@ -121,7 +121,7 @@ O namespace [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/
 
 Um erro encontrado na operação [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) ou [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) resulta em uma exceção sendo gerada. A causa da exceção é um valor de erro representado como um valor **HRESULT**. O método [**SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462) é usado para converter um erro de rede de uma operação de soquete em um valor de enumeração [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457). A maioria dos valores de enumeração **SocketErrorStatus** corresponde a um erro retornado pela operação nativa de soquetes do Windows. Um aplicativo pode filtrar por um valor específico de enumeração **SocketErrorStatus** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
 
-Para erros de validação de parâmetro, um aplicativo também pode usar o **HRESULT** baseado na exceção para obter informações mais detalhadas sobre o erro causador da exceção. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror. h*. Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E\_INVALIDARG**.
+Para erros de validação de parâmetro, um aplicativo também pode usar o **HRESULT** baseado na exceção para obter informações mais detalhadas sobre o erro causador da exceção. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror. h*. Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **eletrônico\_INVALIDARG**.
 
 Adicionar código para trabalhar com exceções ao tentar fazer uma conexão de soquete de fluxo
 
@@ -271,9 +271,9 @@ Adicionar código para validar uma cadeia para uma URI do usuário
 
 O namespace [**Windows::Web::Http**](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx) não tem uma função de conveniência. Portanto, o aplicativo que usa [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) e outras classes nesse namespace precisa usar o valor **HRESULT**.
 
-Nos aplicativos em C++, [**Platform::Exception**](https://msdn.microsoft.com/library/windows/apps/hh755825.aspx) representa um erro durante a execução do aplicativo quando há uma exceção. A propriedade [**Platform::Exception::HResult**](https://msdn.microsoft.com/library/windows/apps/hh763371.aspx) retorna o **HRESULT** atribuído à exceção específica. A propriedade [**Platform::Exception::Message**](https://msdn.microsoft.com/library/windows/apps/hh763375.aspx) retorna a cadeia de caracteres fornecida pelo sistema que está associada ao valor de **HRESULT**. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Um aplicativo pode filtrar por valores específicos de **HRESULT** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
+Nos aplicativos em C++, [**Platform::Exception**](https://msdn.microsoft.com/library/windows/apps/hh755825.aspx) representa um erro durante a execução do aplicativo quando há uma exceção. A propriedade [**Platform::Exception::HResult**](https://msdn.microsoft.com/library/windows/apps/hh763371.aspx) retorna o **HRESULT** atribuído à exceção específica. A propriedade [**Platform::Exception::Message**](https://msdn.microsoft.com/library/windows/apps/hh763375.aspx) retorna a cadeia de caracteres fornecida pelo sistema que está associada ao valor de **HRESULT**. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror. h*. Um aplicativo pode filtrar por valores específicos de **HRESULT** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
 
-Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E\_INVALIDARG**. Para algumas chamadas de método ilícitas, o **HRESULT** retornado é **E\_ILLEGAL\_METHOD\_CALL**.
+Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **eletrônico\_INVALIDARG**. Para algumas chamadas de método ilegais, o **HRESULT** retornado é **eletrônico\_ilegal\_método\_chamar**.
 
 Adicionar código para trabalhar com exceções ao tentar usar [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) para se conectar a um servidor HTTP
 
@@ -370,10 +370,10 @@ using namespace Windows::Web::Http;
 
 **Outros recursos**
 
-* [Conectando-se com um soquete de datagrama](https://msdn.microsoft.com/library/windows/apps/xaml/jj635238)
-* [Conectando-se a um recurso de rede com um soquete de fluxo](https://msdn.microsoft.com/library/windows/apps/xaml/jj150599)
-* [Conectando-se aos serviços de rede](https://msdn.microsoft.com/library/windows/apps/xaml/hh452976)
-* [Conectando-se a serviços Web](https://msdn.microsoft.com/library/windows/apps/xaml/hh761504)
+* [Conectar-se com um soquete de datagrama](https://msdn.microsoft.com/library/windows/apps/xaml/jj635238)
+* [Conectar-se a um recurso de rede com um soquete de fluxo](https://msdn.microsoft.com/library/windows/apps/xaml/jj150599)
+* [Conectar-se aos serviços de rede](https://msdn.microsoft.com/library/windows/apps/xaml/hh452976)
+* [Conectar-se aos serviços da web](https://msdn.microsoft.com/library/windows/apps/xaml/hh761504)
 * [Noções básicas de rede](https://msdn.microsoft.com/library/windows/apps/mt280233)
 * [Como configurar recursos de isolamento de rede](https://msdn.microsoft.com/library/windows/apps/hh770532)
 * [Como habilitar loopback e depurar o isolamento de rede](https://msdn.microsoft.com/library/windows/apps/hh780593)

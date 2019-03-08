@@ -1,17 +1,17 @@
 ---
 ms.assetid: 88132B6F-FB50-4B03-BC21-233988746230
 title: Personalizar a interface do usuário para visualização de impressão
-description: Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização de impressão.
+description: Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização da impressão.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, impressão
 ms.localizationpriority: medium
 ms.openlocfilehash: 3783105c054e5d956ab64aabe9971bb952d6cae6
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046379"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57643971"
 ---
 # <a name="customize-the-print-preview-ui"></a>Personalizar a interface do usuário para visualização de impressão
 
@@ -25,7 +25,7 @@ ms.locfileid: "9046379"
 
 Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização da impressão. Para obter mais informações sobre a impressão, consulte [Imprimir no aplicativo](print-from-your-app.md).
 
-**Dica**a maioria dos exemplos neste tópico se baseiam na amostra de impressão. Para ver o código completo, baixe a [amostra de impressão da UWP (Plataforma Universal do Windows)](https://go.microsoft.com/fwlink/p/?LinkId=619984) do [repositório de amostras universais do Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+**Dica**  maioria dos exemplos neste tópico baseiam-se a amostra de impressa. Para ver o código completo, baixe a [amostra de impressão Plataforma Universal do Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619984) do [repositório de amostras universais do Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
  
 
@@ -33,8 +33,8 @@ Esta seção descreve como personalizar as opções de impressão e as configura
 
 Por padrão, a Interface do Usuário para visualização de impressão mostra as opções de impressão [**ColorMode**](https://msdn.microsoft.com/library/windows/apps/BR226478), [**Copies**](https://msdn.microsoft.com/library/windows/apps/BR226479) e [**Orientation**](https://msdn.microsoft.com/library/windows/apps/BR226486): Além delas, há várias outras opções de impressora comuns que você pode adicionar à interface do usuário para visualização de impressão:
 
--   [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR226476)
--   [**Collation**](https://msdn.microsoft.com/library/windows/apps/BR226477)
+-   [**Associação**](https://msdn.microsoft.com/library/windows/apps/BR226476)
+-   [**Agrupamento**](https://msdn.microsoft.com/library/windows/apps/BR226477)
 -   [**Duplex**](https://msdn.microsoft.com/library/windows/apps/BR226480)
 -   [**HolePunch**](https://msdn.microsoft.com/library/windows/apps/BR226481)
 -   [**InputBin**](https://msdn.microsoft.com/library/windows/apps/BR226482)
@@ -48,7 +48,7 @@ Essas opções são definidas na classe [**StandardPrintTaskOptions**](https://m
 
 No entanto, as modificações feitas com o uso desse método só afetam a interface do usuário para visualização de impressão. O usuário sempre pode acessar todas as opções com suporte na impressora tocando em **Mais configurações** na interface do usuário para visualização de impressão.
 
-**Observação**Embora o seu aplicativo pode especificar qualquer opção de impressão a ser exibido, apenas aquelas que têm suporte na impressora selecionada são mostradas na visualização de impressão da interface do usuário. A interface do usuário para impressão não mostrará nenhuma opção para a qual não haja suporte na impressora selecionada.
+**Observação**  embora seu aplicativo pode especificar quaisquer opções de impressão a ser exibido, apenas aqueles que são compatíveis com a impressora selecionada são mostrados na visualização de impressão da interface do usuário. A interface do usuário para impressão não mostrará nenhuma opção para a qual não haja suporte na impressora selecionada.
 
  
 
@@ -96,7 +96,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**Importante**chamada ( [**displayedoptions. Clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)) remove todas as opções de impressão da interface do usuário, incluindo o link **mais configurações** de visualização de impressão. Não deixe de acrescentar as opções que você quer mostrar na interface de usuário para visualização de impressão.
+**Importante**  chamando [ **displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)() remove todas as opções de impressa de visualização de impressão da interface do usuário, incluindo o **mais configurações** link. Não deixe de acrescentar as opções que você quer mostrar na interface de usuário para visualização de impressão.
 
 ### <a name="specify-default-options"></a>Especificar opções padrão
 
@@ -186,5 +186,5 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Diretrizes de design para impressão](https://msdn.microsoft.com/library/windows/apps/Hh868178)
-* [//Vídeo da Compilação 2015: Desenvolvendo aplicativos que imprimem no Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
-* [Exemplo de impressão via UWP](https://go.microsoft.com/fwlink/p/?LinkId=619984)
+* [Vídeo da Build 2015: Desenvolvimento de aplicativos que são impressas no Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
+* [Exemplo de impressão de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619984)

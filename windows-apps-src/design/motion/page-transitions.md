@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use page transitions in your UWP apps.
+Description: Saiba como usar as transições de página em seus aplicativos UWP.
 title: Transições de página em aplicativos UWP
 template: detail.hbs
 ms.date: 04/08/2018
@@ -9,11 +9,11 @@ pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 38fe6b92828459f91ba6ea2f836d274c2cc8d761
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942238"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646451"
 ---
 # <a name="page-transitions"></a>Transições de página
 
@@ -37,7 +37,7 @@ myFrame.Navigate(typeof(Page2), null, new EntranceNavigationTransitionInfo());
 
 ```
 
-**Observação**: um [**Quadro**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame) usa automaticamente [**NavigationThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) para animar a navegação entre duas páginas. Por padrão, a animação é a atualização de página.
+**Observação**: Um [ **quadro** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame) usa automaticamente [ **NavigationThemeTransition** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) para animar a navegação entre as duas páginas. Por padrão, a animação é a atualização de página.
 
 ## <a name="drill"></a>Análise detalhada
 
@@ -54,11 +54,11 @@ A animação de análise detalhada é representada pela classe [**DrillInNavigat
 myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 ```
 
-## <a name="horizontal-slide"></a>Deslizar horizontal
+## <a name="horizontal-slide"></a>Slide horizontal
 
-Use slide horizontal para mostrar que as páginas irmãs aparecem próximos um do outro. O controle [NavigationView](../controls-and-patterns/navigationview.md) usa automaticamente essa animação para navegação superior, mas se você estiver criando sua própria experiência de navegação horizontal, em seguida, você pode implementar slide horizontal com SlideNavigationTransitionInfo.
+Use o slide de horizontal para mostrar que as páginas irmãs aparecem próximos uns dos outros. O [NavigationView](../controls-and-patterns/navigationview.md) controle usa automaticamente essa animação de navegação superior, mas se você estiver criando sua própria experiência de navegação horizontal, em seguida, você pode implementar slide horizontal com SlideNavigationTransitionInfo.
 
-A sensação desejada é que o usuário está navegando entre as páginas que estão próximos um do outro. 
+A sensação desejada é que o usuário está navegando entre as páginas que estão próximos uns dos outros. 
 
 ```csharp
 // Navigate to the right, ie. from LeftPage to RightPage
@@ -87,5 +87,5 @@ Isso poderá ser útil quando você modificar o comportamento de navegação din
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Navegar entre duas páginas](../basics/navigate-between-two-pages.md)
+- [Navegar entre as duas páginas](../basics/navigate-between-two-pages.md)
 - [Movimento em aplicativos UWP](index.md)

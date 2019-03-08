@@ -1,19 +1,19 @@
 ---
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
 description: Este tópico fornece uma visão geral de como adicionar DRM (gerenciamento de direitos digitais) baseado em hardware PlayReady ao seu aplicativo UWP (Plataforma Universal do Windows).
-title: DRM de Hardware
+title: DRM de hardware
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f0a53d0f725c134bbb7adecaa956000a53235b0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928145"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57600901"
 ---
-# <a name="hardware-drm"></a>DRM de Hardware
+# <a name="hardware-drm"></a>DRM de hardware
 
 
 Este tópico fornece uma visão geral de como adicionar DRM (gerenciamento de direitos digitais) baseado em hardware PlayReady ao seu aplicativo UWP (Plataforma Universal do Windows).
@@ -25,7 +25,7 @@ Cada vez mais, os provedores de conteúdo estão migrando para proteções basea
 
 ## <a name="windows-tee-implementation"></a>Implementação do ambiente de execução confiável do Windows
 
-Este tópico fornece uma breve visão geral de como o Windows 10 implementa o ambiente de execução confiável (TEE).
+Este tópico fornece uma visão geral de como o Windows 10 implementa o ambiente de execução confiável (TEE).
 
 Os detalhes da implementação do ambiente de execução confiável do Windows está fora do escopo deste documento. No entanto, uma breve discussão sobre a diferença entre o kit de porta padrão do ambiente de execução confiável e da porta do Windows será benéfica. O Windows implementa a camada de proxy do OEM e transfere as chamadas de funções PRITEE serializadas para um driver de modo de usuário no subsistema do Windows Media Foundation. Isso eventualmente é roteado para o driver do ambiente de execução confiável (Trusted Execution Environment) do Windows ou para o driver de gráficos do OEM. Os detalhes de qualquer uma dessas abordagens está fora do escopo deste documento. O diagrama a seguir mostra a interação de componentes geral para a porta do Windows. Se você quiser desenvolver uma implementação de TEE do PlayReady do Windows, contate <WMLA@Microsoft.com>.
 
@@ -35,8 +35,8 @@ Os detalhes da implementação do ambiente de execução confiável do Windows e
 
 Este tópico fornece uma breve lista de itens que devem ser considerados ao desenvolver aplicativos projetados para usar DRM de hardware. Conforme explicado em [DRM do PlayReady](playready-client-sdk.md#output-protection), com o HWDRM do PlayReady para Windows 10, todas as proteções de saída são impostas dentro da implementação do ambiente de execução confiável do Windows, que tem algumas consequências sobre os comportamentos de proteção de saída:
 
--   **Suporte para o nível de proteção de saída (OPL) para vídeo digital descompactado 270:** o HWDRM do PlayReady para Windows 10 não dá suporte para baixa resolução e irá impor que esse HDCP seja ativado. Recomendamos que o conteúdo de alta definição para o HWDRM tenha um OPL superior a 270, embora não seja necessário. Além disso, recomendamos que você defina restrição de tipo HDCP na licença (HDCP versão 2.2 no Windows 10).
--   **Ao contrário do DRM de software (SWDRM), proteções de saída são impostas em todos os monitores com base no monitor de menor capacidade.** Por exemplo, se o usuário tiver dois monitores conectados, em que um dos monitores oferece suporte à uma HDCP e o outro não, haverá falha na reprodução se a licença exigir uma HDCP, mesmo se o conteúdo só estiver sendo renderizado no monitor que oferece suporte à HDCP. No DRM de software, o conteúdo é reproduzido contanto que esteja sendo renderizado somente no monitor que oferece suporte à HDCP.
+-   **Suporte para o nível de proteção de saída (OPL) para o digital descompactado 270 vídeo:** HWDRM PlayReady para Windows 10 não oferece suporte a resolução de baixo e irá impor que HDCP está envolvido. Recomendamos que o conteúdo de alta definição para o HWDRM tenha um OPL superior a 270, embora não seja necessário. Além disso, recomendamos que você defina restrição de tipo HDCP na licença (HDCP versão 2.2 no Windows 10).
+-   **Ao contrário do software DRM (SWDRM), proteções de saída são aplicadas em todos os monitores com base no monitor menos capaz.** Por exemplo, se o usuário tiver dois monitores conectados, em que um dos monitores oferece suporte à uma HDCP e o outro não, haverá falha na reprodução se a licença exigir uma HDCP, mesmo se o conteúdo só estiver sendo renderizado no monitor que oferece suporte à HDCP. No DRM de software, o conteúdo é reproduzido contanto que esteja sendo renderizado somente no monitor que oferece suporte à HDCP.
 -   **Não há garantia de que o HWDRM seja usado pelo cliente e que seja seguro, a menos que as seguintes condições sejam atendidas** pelas licenças e chaves de conteúdo:
     -   A licença usada para a chave de conteúdo de vídeo deve ter uma propriedade de nível mínimo de segurança de 3000.
     -   O áudio deve ser criptografado em uma chave de conteúdo diferente daquela do vídeo, e a licença usada para áudio deve ter uma propriedade de nível mínimo de segurança de 2000. Como alternativa, o áudio pode não ser criptografado.
@@ -79,10 +79,10 @@ Para cada reprodução de mídia, você precisa definir o **MediaProtectionManag
 mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectionLayer"] = true;
 ```
 
-A melhor maneira de saber se você está em DRM de hardware ou software é verificar em C:\\Users\\&lt;nome de usuário&gt;\\AppData\\Local\\Packages\\&lt;nome do aplicativo&gt;\\LocalCache\\PlayReady\\\*
+A melhor maneira de saber se você estiver no hardware DRM ou software DRM é examinar c:\\os usuários\\&lt;nome de usuário&gt;\\AppData\\Local\\pacotes\\ &lt;nome do aplicativo&gt;\\LocalCache\\PlayReady\\\*
 
 -   Se houver um arquivo mspr.hds, você estará em DRM de software.
--   Se houver outro arquivo \*.hds, você estará em DRM de hardware.
+-   Se você tiver outro \*. HDS será arquivo, você está no hardware DRM.
 -   Você também pode excluir a pasta PlayReady inteira e repetir o teste.
 
 ## <a name="detect-the-type-of-hardware-drm"></a>Detectar o tipo de DRM de hardware
@@ -111,5 +111,5 @@ if (supportsAes128Cbc)
 }
 ```
 
-## <a name="see-also"></a>Veja também
-- [DRM do PlayReady](playready-client-sdk.md)
+## <a name="see-also"></a>Consulte também
+- [PlayReady DRM](playready-client-sdk.md)

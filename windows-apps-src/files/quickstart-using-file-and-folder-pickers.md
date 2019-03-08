@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 09ddb212cd84b9754c35adccdf6e60ad96a4f94f
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050799"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662761"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a>Abrir arquivos e pastas com um seletor
 
@@ -24,16 +24,16 @@ ms.locfileid: "9050799"
 Acesse arquivos e pastas permitindo que o usuário interaja com um seletor. É possível usar as classes [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) e [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para obter acesso a arquivos e [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881) para obter acesso a uma pasta.
 
 > [!NOTE]
-> Para obter um exemplo completo, veja o [Exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994).
+> Para obter um exemplo completo, consulte o [exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 
--   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
+-   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
 
     Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
--   **Acessar permissões ao local**
+-   **Permissões de acesso para o local**
 
     Consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
@@ -46,7 +46,7 @@ Essas informações incluem:
 
 -   A localização atual
 -   O item ou itens que o usuário selecionou
--   Uma árvore de locais em que o usuário pode navegar. Esses locais incluem os locais do sistema de arquivos — como a pasta Músicas ou Transferências — e aplicativos que implementam o contrato do seletor de arquivos (como Câmera, Fotos e Microsoft OneDrive).
+-   Uma árvore de locais em que o usuário pode navegar. Esses locais incluem os locais do sistema de arquivos — como a pasta Músicas ou Downloads — e aplicativos que implementam o contrato do seletor de arquivos (como Câmera, Fotos e Microsoft OneDrive).
 
 Um aplicativo de email pode exibir um seletor de arquivos para que o usuário selecione anexos.
 
@@ -103,9 +103,9 @@ Usar um seletor de arquivos envolve criar e personalizar um objeto de seletor de
     ```
     Defina propriedades no objeto do seletor de arquivos relevantes para os usuários e o aplicativo.
 
-    Este exemplo cria uma exibição visual de qualidade de imagens em um local conveniente que o usuário pode escolher configurando três propriedades: [**ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855), [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) e [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850).
+    Este exemplo cria uma exibição avançada, o visual de imagens em um único local conveniente que o usuário pode escolher, configurando três propriedades: [**ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855), [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854), and [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850).
 
-    -   A configuração de [**ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855) como o valor de enumeração [**PickerViewMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#thumbnail) **Thumbnail** cria uma exibição visual de qualidade usando miniaturas de imagem para representar arquivos no seletor de arquivos. Faça isso para selecionar arquivos visuais, como imagens ou vídeos. Caso contrário, use [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#list). Um aplicativo de email hipotético com os recursos **Anexar Foto ou Vídeo** e **Anexar Documento** configuraria o **ViewMode** apropriado para o recurso antes de mostrar o seletor de arquivos.
+    -   Definindo [ **ViewMode** ](https://msdn.microsoft.com/library/windows/apps/br207855) para o [ **PickerViewMode** ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#thumbnail) **miniatura** valor de enumeração cria uma avançada exibição visual usando miniaturas de imagem para representar arquivos no seletor de arquivos. Faça isso para selecionar arquivos visuais, como imagens ou vídeos. Caso contrário, use [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#list). Um aplicativo de email hipotético com os recursos **Anexar Foto ou Vídeo** e **Anexar Documento** configuraria o **ViewMode** apropriado para o recurso antes de mostrar o seletor de arquivos.
 
     -   Configurar [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) para Imagens usando [**PickerLocationId.PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br207890) permite que o usuário inicie em um local onde provavelmente encontrará imagens. Configure **SuggestedStartLocation** para um local apropriado para o tipo de arquivo selecionado, como Música, Imagens, Vídeos ou Documentos. A partir do local inicial, o usuário pode navegar para outros locais.
 
@@ -113,7 +113,7 @@ Usar um seletor de arquivos envolve criar e personalizar um objeto de seletor de
 
 2.  **Mostrar o FileOpenPicker**
 
-    - **Para selecionar um arquivo**
+    - **Para escolher um único arquivo**
 
         ```cs
         Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();

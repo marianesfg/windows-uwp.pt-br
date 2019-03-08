@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 521e794680df6449ebc49745319c4aeec74405d1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923902"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589951"
 ---
 # <a name="xaml-and-whitespace"></a>XAML e espaço em branco
 
@@ -20,7 +20,7 @@ Conheça as regras de processamento de espaços em branco usadas por XAML.
 
 ## <a name="whitespace-processing"></a>Processamento de espaços em branco
 
-Consistente com XML, caracteres de espaço em branco em XAML são espaço, avanço de linha e tabulação. Elas correspondem aos valores Unicode 0020, 000A e 0009 respectivamente. Por padrão, ocorre a seguinte normalização de espaços em branco quando um processador XAML encontra qualquer texto interno localizado entre elementos de um arquivo XAML:
+De forma consistente com XML, os caracteres de espaço em branco em XAML são espaço, avanço de linha e tabulação. Eles correspondem aos valores Unicode 0020, 000A e 0009, respectivamente. Por padrão, ocorre a seguinte normalização de espaços em branco quando um processador XAML encontra qualquer texto interno localizado entre elementos de um arquivo XAML:
 
 -   Os caracteres de avanço de linha entre caracteres do leste asiático são removidos.
 -   Todos os caracteres de espaço em branco (espaço. avanço de linha, tabulação) são convertidos em espaços.
@@ -50,7 +50,7 @@ Mesmo para modelos de conteúdo que podem pegar cadeias, o comportamento padrão
 
 Várias técnicas de preservação de espaços em branco no código XAML de origem para eventuais apresentações não são afetadas pela normalização de espaços em branco do processador XAML.
 
-`xml:space="preserve"`: especifique esse atributo no nível do elemento em que a preservação de espaços em branco é desejada. Observe que isso preserva todos os espaços em branco, inclusive os espaços que podem ser adicionados por editores de código ou áreas de design, para alinhar elementos de marcação como um aninhamento visualmente intuitivo. Se esses espaços são renderizados ou não é, mais uma vez, uma questão do modelo de conteúdo do respectivo elemento. Não recomendamos que você especifique `xml:space="preserve"` no nível da raiz, pois a maioria dos modelos de objeto não considera os espaços em branco como um meio significativo. É prática recomendada somente definir o atributo especificamente no nível dos elementos que renderizam espaços em branco em cadeias de caracteres ou que sejam coleções significativas de espaços em branco.
+`xml:space="preserve"`: Especifica esse atributo no nível do elemento em que o espaço em branco deve ser preservado. Observe que isso preserva todos os espaços em branco, inclusive os espaços que podem ser adicionados por editores de código ou áreas de design, para alinhar elementos de marcação como um aninhamento visualmente intuitivo. Se esses espaços são renderizados ou não é, mais uma vez, uma questão do modelo de conteúdo do respectivo elemento. Não recomendamos que você especifique `xml:space="preserve"` no nível da raiz, pois a maioria dos modelos de objeto não considera os espaços em branco como um meio significativo. É prática recomendada somente definir o atributo especificamente no nível dos elementos que renderizam espaços em branco em cadeias de caracteres ou que sejam coleções significativas de espaços em branco.
 
-Entidades e espaços sem quebra: o XAML dá suporte à inserção de qualquer entidade Unicode em um modelo de objeto de texto. Você pode usar entidades dedicadas, como espaços sem quebras (na codificação UTF-8). Você também pode usar controles de texto avançados com suporte a caracteres de espaço sem quebras. Seja cauteloso se estiver usando entidades para simular características de layout, como recuos, pois a saída das entidades em tempo de execução vai variar com base em um número maior de fatores do que as unidades de layout gerais, como uso adequado de painéis e margens.
+Entidades e os espaços não separáveis: XAML dá suporte à colocação de qualquer entidade Unicode dentro de um modelo de objeto de texto. Você pode usar entidades dedicadas, como espaços sem quebras (na codificação UTF-8). Você também pode usar controles de texto avançados com suporte a caracteres de espaço sem quebras. Seja cauteloso se estiver usando entidades para simular características de layout, como recuos, pois a saída das entidades em tempo de execução vai variar com base em um número maior de fatores do que as unidades de layout gerais, como uso adequado de painéis e margens.
 

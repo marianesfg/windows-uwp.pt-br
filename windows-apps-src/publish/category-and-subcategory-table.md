@@ -1,5 +1,5 @@
 ---
-Description: Listing your app in the right category and subcategory helps customers find your app and understand more about it.
+Description: A listagem do aplicativo na categoria e subcategoria corretas ajuda os clientes a encontrarem o aplicativo e a saber mais sobre ele.
 title: Tabela de categoria e subcategoria
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ms.date: 10/31/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, categoria, subcategoria, gênero, categorias, gêneros
 ms.localizationpriority: medium
 ms.openlocfilehash: f8c28db9b0ca4437579e98ae156392c7b7b383ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935810"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653641"
 ---
 # <a name="category-and-subcategory-table"></a>Tabela de categoria e subcategoria
 
@@ -20,7 +20,7 @@ A listagem do aplicativo na categoria e subcategoria corretas ajuda os clientes 
 
 Você deve escolher a categoria que melhor descreve seu aplicativo. Como opção, você pode escolher uma subcategoria, se disponível. Se você não sabe ao certo qual categoria ou subcategoria usar, ou se não conseguir encontrar uma exata, escolha aquela os usuários provavelmente pesquisarão na hora de procurar aplicativos semelhantes ao seu.
 
-Se você optar por **jogos** para sua categoria, você precisa selecionar pelo menos uma subcategoria (chamada de *Gênero* para jogos). Você pode escolher a quantidade de gêneros adequada para seu jogo. Observe que, para publicar um jogo para os clientes no Xbox, você deve habilitar o [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) ou pode percorrer o processo de [aprovação de conceito](../gaming/concept-approval.md)). 
+Se você escolher **jogos** para a categoria, você deve selecionar pelo menos uma subcategoria (chamado *gênero* para jogos). Você pode escolher a quantidade de gêneros adequada para seu jogo. Observe que, para publicar um jogo para os clientes no Xbox, você deve habilitar o [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) ou pode percorrer o processo de [aprovação de conceito](../gaming/concept-approval.md)). 
 
 > [!IMPORTANT] 
 > Se você publicar o aplicativo na categoria **Jogos**, você não conseguirá selecionar uma categoria diferente em um novo envio; ele deve ser continuar a ser publicado na categoria **Jogos** (embora você possa alterar as seleções de gênero em um novo envio). Da mesma forma, você não pode escolher a categoria **Jogos** ao enviar um aplicativo publicado anteriormente em uma categoria diferente.
@@ -51,7 +51,7 @@ A Microsoft Store organiza apps nas seguintes categorias e subcategorias.
   </tr>
   <tr>
     <td>Ferramentas de desenvolvedor</td>
-    <td>Banco de dados <br> Ferramentas de design <br> Kits de desenvolvimento <br> Rede <br> Referência + treinamento <br> Servidor <br> Utilitários <br> Hospedagem na Web</td>
+    <td>Banco de dados <br> Ferramentas de design <br> Kits de desenvolvimento <br> Rede <br> Referência + treinamento <br> Servidores <br> Utilitários <br> Hospedagem na Web</td>
   </tr>
   <tr>
     <td>Educação</td>
@@ -62,12 +62,12 @@ A Microsoft Store organiza apps nas seguintes categorias e subcategorias.
     <td>(Nenhum)</td>
   </tr>
   <tr>
-    <td>Bares + restaurantes</td>
+    <td>Alimentação + restaurantes</td>
     <td>(Nenhum)</td>
   </tr>
   <tr>
     <td>Jogos</td>
-    <td>Ação + aventura <br> Cartas + tabuleiro <br> Cassino <br> Clássicos <br> Educacionais <br> Família + crianças <br> Luta <br> Arena de batalha online com vários jogadores <br> Música <br> Outros <br> Plataformas <br> Quebra-cabeça + trívia <br> Corrida + voo <br> RPG <br> Atirador <br> Simulação <br> Esportes <br> Estratégia <br> Ferramentas <br> Word</td>
+    <td>Ação + aventura <br> Cartas + tabuleiro <br> Cassino <br> Clássicos <br> Educacionais <br> Família + crianças <br> Luta <br> Arena de batalha online com vários jogadores <br> Música <br> Outro <br> Plataformas <br> Quebra-cabeça + trívia <br> Corrida + voo <br> RPG <br> Atirador <br> Simulation <br> Esportes <br> Estratégia <br> Ferramentas <br> Word</td>
   </tr>
   <tr>
     <td>Governo + política</td>

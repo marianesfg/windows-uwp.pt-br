@@ -1,21 +1,21 @@
 ---
 ms.assetid: 5BD650D2-AA26-4DE9-8243-374FDB7D932B
-description: Use este método na API de envio da Microsoft Store para criar um complemento para um aplicativo que está registrado na sua conta PartnerCenter.
+description: Use esse método na API de envio a Microsoft Store para criar um complemento para o aplicativo que está registrado para sua conta PartnerCenter.
 title: Criar um complemento
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar complemento, produto in-App, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8465dc7a42961a20fcd33ba8d43c71e2d73727ff
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925933"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651031"
 ---
 # <a name="create-an-add-on"></a>Criar um complemento
 
-Use este método na API de envio da Microsoft Store para criar um complemento (também conhecido como produto in-App ou IAP) para um aplicativo que está registrado à sua conta do Partner Center.
+Use esse método na API de envio a Microsoft Store para criar um complemento (também conhecido como no aplicativo produto ou IAP) para um aplicativo que é registrado em sua conta no Partner Center.
 
 > [!NOTE]
 > Este método cria um complemento sem nenhum envio. Para criar um envio para um complemento, veja os métodos em [Gerenciar envios de complemento](manage-add-on-submissions.md).
@@ -25,7 +25,7 @@ Use este método na API de envio da Microsoft Store para criar um complemento (t
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
-* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
 ## <a name="request"></a>Solicitação
 
@@ -40,7 +40,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -49,9 +49,9 @@ O corpo da solicitação tem os parâmetros a seguir.
 
 |  Parâmetro  |  Tipo  |  Descrição  |  Obrigatório  |
 |------|------|------|------|
-|  applicationIds  |  array  |  Uma matriz que contém a ID da Loja do aplicativo ao qual esse complemento está associado. Essa matriz é compatível com apenas um item.   |  Sim  |
-|  productId  |  string  |  A ID do produto do complemento. Este é um identificador que pode ser usado no código para fazer referência ao complemento. Para obter mais informações, consulte [Definir seu tipo de produto e a ID do produto](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id).  |  Sim  |
-|  productType  |  string  |  O tipo de produto do complemento. Há suporte para os seguintes valores: **Durável** e **Consumíveis**.  |  Sim  |
+|  applicationIds  |  matriz  |  Uma matriz que contém a ID da Loja do aplicativo ao qual esse complemento está associado. Somente um item é compatível nessa matriz.   |  Sim  |
+|  productId  |  cadeia de caracteres  |  A ID do produto do complemento. Este é um identificador que pode ser usado no código para fazer referência ao complemento. Para obter mais informações, consulte [Definir seu tipo de produto e a ID do produto](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id).  |  Sim  |
+|  productType  |  cadeia de caracteres  |  O tipo de produto do complemento. Há suporte para os seguintes valores: **Durável** e **consumível**.  |  Sim  |
 
 
 ### <a name="request-example"></a>Exemplo de solicitação
@@ -97,13 +97,13 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição                                                                                                                                                                           |
 |--------|------------------|
 | 400  | A solicitação é inválida. |
-| 409  | O complemento não pôde ser criado por causa do estado atual ou o complemento usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | O complemento não pôde ser criado devido a seu estado atual ou o complemento usa um recurso do Partner Center que está [atualmente não tem suporte da API de envio a Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Gerenciar envios de complemento](manage-add-on-submissions.md)
 * [Obter todos os complementos](get-all-add-ons.md)
-* [Obter um complemento](get-an-add-on.md)
+* [Adquirir um complemento](get-an-add-on.md)
 * [Excluir um complemento](delete-an-add-on.md)

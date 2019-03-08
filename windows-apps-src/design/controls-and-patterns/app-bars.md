@@ -1,5 +1,5 @@
 ---
-Description: Command bars give users easy access to your app's most common tasks.
+Description: As barras de comandos lhe dar aos usuários acesso fácil às tarefas mais comuns do seu app.
 title: Barra de comandos
 label: App bars/command bars
 template: detail.hbs
@@ -14,21 +14,21 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d2a7d34f00d40429863f08ffe6a9c34222daa32
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050023"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649301"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
 As barras de comandos fornecem aos usuários acesso fácil às tarefas mais comuns do seu aplicativo. As barras de comandos podem fornecer acesso aos comandos no nível do aplicativo ou específicos da página e podem ser usadas com qualquer padrão de navegação.
 
-> **APIs importantes**: [classe CommandBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx), [classe AppBarButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx), [classe AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx), [classe AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx)
+> **APIs importantes**: [Classe de CommandBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx), [classe AppBarButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx), [classe AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx), [classe AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx)
 
 ![Exemplo de uma barra de comandos com ícones](images/controls_appbar_icons.png)
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 O controle CommandBar é um controle de finalidade geral, flexível e leve que pode exibir conteúdo complexo, como imagens ou blocos de texto, e comandos simples, como os controles [AppBarButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx) e [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx).
 
@@ -44,14 +44,14 @@ O controle CommandBar é um controle de finalidade geral, flexível e leve que p
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/CommandBar">abrir o aplicativo e ver o CommandBar em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Baixe o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obter o código-fonte (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
 </table>
 
-Uma barra de comandos expandida no aplicativo Fotos Microsoft.
+Uma barra de comandos expandida no aplicativo Fotos da Microsoft.
 
 ![Barra de comandos no aplicativo Fotos da Microsoft](images/control-examples/command-bar-photos.png)
 
@@ -61,7 +61,7 @@ Uma barra de comandos no calendário do Outlook no Windows Phone.
 
 ## <a name="anatomy"></a>Anatomia
 
-Por padrão, a barra de comandos mostra uma linha de botões de ícones e um botão "veja mais" opcional, que é representado por um sinal de reticências \[•••\]. Esta é a barra de comandos criada pelo código de exemplo mostrado mais adiante. Ela é mostrada em seu estado fechado e compacto.
+Por padrão, a barra de comandos mostra uma linha de botões de ícone e um botão "Veja mais" opcional, que é representado por um sinal de reticências \[• • •\]. Esta é a barra de comandos criada pelo código de exemplo mostrado mais adiante. Ela é mostrada em seu estado fechado e compacto.
 
 ![Uma barra de comandos fechada](images/command-bar-compact.png)
 
@@ -76,7 +76,7 @@ Esta é a mesma barra de comandos em seu estado aberto. Os rótulos identificam 
 A barra de comandos é dividida em 4 áreas principais:
 - A área de conteúdo está alinhada à esquerda da barra. Será exibida se a propriedade [Content](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx) estiver preenchida.
 - A área de comando primária está alinhada à direita da barra. Será exibida se a propriedade [PrimaryCommands](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx) estiver preenchida.  
-- O botão "veja mais" \[•••\] é exibido à direita da barra. Pressionar o botão "veja mais" \[•••\] revela rótulos de comando principal e abre o menu de estouro se houver comandos secundários. O botão não ficará visível quando não houver rótulos de comandos primários ou secundários. Para alterar o comportamento padrão, use a propriedade [OverflowButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx).
+- Consulte"mais" \[• • •\] botão é exibido à direita da barra. Pressionar consulte"mais" \[• • •\] botão revela o principal comando rótulos e abre o menu de estouro, se houver comandos secundários. O botão não ficará visível quando não houver rótulos de comandos primários ou secundários. Para alterar o comportamento padrão, use a propriedade [OverflowButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx).
 - O menu de estouro será mostrado somente quando a barra de comandos estiver aberta e a propriedade [SecondaryCommands](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) estiver preenchida. Quando o espaço é limitado, os comandos principais se movem para a área SecondaryCommands. Para alterar o comportamento padrão, use a propriedade [IsDynamicOverflowEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.isdynamicoverflowenabled.aspx).
 
 O layout é invertido quando [FlowDirection](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.flowdirection.aspx) é **RightToLeft**.
@@ -106,7 +106,7 @@ Este exemplo cria a barra de comandos mostrada anteriormente.
 ```
 
 ## <a name="commands-and-content"></a>Comandos e conteúdo
-O controle CommandBar tem 3 propriedades que você pode usar para adicionar comandos e conteúdo: [PrimaryCommands](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx), [SecondaryCommands](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) e [Content](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx).
+O controle de barra de comandos tem 3 propriedades que você pode usar para adicionar comandos e conteúdo: [PrimaryCommands](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx), [SecondaryCommands](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx), e [conteúdo](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx).
 
 
 ### <a name="commands"></a>Comandos
@@ -119,10 +119,10 @@ Você também pode adicionar comandos à coleção **SecondaryCommands**, exibid
 
 ![Exemplo de barra de comandos com área e ícones "Mais"](images/appbar_rs2_overflow_icons.png)
 
-Você pode mover programaticamente comandos entre PrimaryCommands e SecondaryCommands, conforme necessário.
+Você pode mover programaticamente comandos entre PrimaryCommands e SecondaryCommands conforme necessário.
 
-- *Se houver um comando que deva aparecer consistentemente em várias páginas, é melhor manter esse comando em um local consistente.*
-- *Recomendamos colocar os comandos Aceitar, Sim e OK à esquerda de Rejeitar, Não e Cancelar. A consistência dá aos usuários a confiança para se movimentar no sistema e ajuda-os a transferir seu conhecimento da navegação no aplicativo de um produto para outro.*
+- *Se houver um comando que seria exibido consistentemente em páginas, é melhor manter esse comando em um local consistente.*
+- *É recomendável colocar Accept, Sim, e comandos Okey à esquerda de rejeitam, não e cancelam. A consistência dá aos usuários a confiança necessária para mover-se o sistema e os ajuda a transferir seu conhecimento do painel de navegação do aplicativo de um aplicativo para o aplicativo.*
 
 ### <a name="app-bar-buttons"></a>Botões da barra de aplicativos
 
@@ -179,7 +179,7 @@ Quando [ClosedDisplayMode](https://msdn.microsoft.com/library/windows/apps/xaml/
 
 A barra de comandos pode estar aberta ou fechada. Quando abertos, os botões de comando principal são exibidos com rótulos de texto e o menu de estouro será aberto se comandos secundários estiverem presentes.
 
-Um usuário pode alternar entre esses estados pressionando o botão "veja mais" \[•••\]. Você pode alternar entre eles programaticamente definindo a propriedade [IsOpen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.isopen.aspx). 
+Um usuário pode alternar entre esses estados, consulte"mais" de pressionando \[• • •\] botão. Você pode alternar entre eles programaticamente definindo a propriedade [IsOpen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.isopen.aspx). 
 
 Você pode usar os eventos [Opening](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opening.aspx), [Opened](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opened.aspx), [Closing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closing.aspx) e [Closed](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closed.aspx) para responder à barra de comandos que está sendo aberta ou fechada.  
 - Os eventos Opening e Closing ocorrem antes de começar a animação de transição.
@@ -214,16 +214,16 @@ private void CommandBar_Closing(object sender, object e)
 
 ### <a name="issticky"></a>IsSticky
 
-Se um usuário interagir com outras partes de um aplicativo quando uma barra de comandos estiver aberta, a barra de comandos será fechada automaticamente. Isso é chamado de *light dismiss*. Você pode controlar o comportamento de light dismiss por definir a propriedade [IsSticky](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.issticky.aspx). Quando `IsSticky="true"`, a barra permanece aberta até que o usuário pressione o botão "veja mais" \[•••\] ou selecione um item no menu de estouro. 
+Se um usuário interagir com outras partes de um aplicativo quando uma barra de comandos estiver aberta, a barra de comandos será fechada automaticamente. Isso é chamado de *light dismiss*. Você pode controlar o comportamento de light dismiss por definir a propriedade [IsSticky](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.issticky.aspx). Quando `IsSticky="true"`, a barra permanece aberta até que o usuário pressiona consulte"mais" \[• • •\] botão ou seleciona um item de menu de estouro. 
 
 Recomendamos evitar barras de comandos fixas porque elas não estão em conformidade com as expectativas dos usuários em relação a light dismiss.
 
 ### <a name="display-mode"></a>Modo de Exibição
 
 Você pode controlar como a barra de comandos é mostrada em seu estado fechado definindo a propriedade [ClosedDisplayMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx). Há 3 modos de exibição fechada à sua escolha:
-- **Compact**: o modo padrão. Mostra o conteúdo, os ícones de comando principal sem rótulos e o botão "veja mais" \[•••\].
-- **Minimal**: mostra apenas uma barra fina que age como o botão "veja mais" \[•••\]. O usuário pode pressionar em qualquer lugar na barra para abri-lo.
-- **Hidden**: a barra de comandos não é mostrada quando está fechada. Isso pode ser útil para mostrar os comandos contextuais com uma barra de comandos embutida. Nesse caso, você deve abrir a barra de comandos programaticamente definindo a propriedade **IsOpen** ou alterando ClosedDisplayMode para **Minimal** ou **Compact**.
+- **Compact**: O modo padrão. Mostra o conteúdo, ícones de comando primário sem rótulos e "ver" mais \[• • •\] botão.
+- **Mínimo**: Mostra apenas um thin barra que atua como o "Veja mais" \[• • •\] botão. O usuário pode pressionar em qualquer lugar na barra para abri-lo.
+- **Oculto**: Barra de comandos não é mostrada quando ele é fechado. Isso pode ser útil para mostrar os comandos contextuais com uma barra de comandos embutida. Nesse caso, você deve abrir a barra de comandos programaticamente definindo a propriedade **IsOpen** ou alterando ClosedDisplayMode para **Minimal** ou **Compact**.
 
 Aqui, uma barra de comandos é usada para manter os comandos de formatação simples para um [RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx). Quando a caixa de edição não tiver foco, os comandos de formatação podem distrair o usuário, por isso eles ficam ocultos. Quando a caixa de edição está sendo usada, ClosedDisplayMode da barra de comando é alterado para Compact para que os comandos de formatação fiquem visíveis.
 
@@ -258,7 +258,7 @@ Embora os modos Minimal e Hidden sejam úteis em algumas situações, tenha em m
 
 A alteração de ClosedDisplayMode para fornecer mais ou menos dicas para o usuário afeta o layout dos elementos ao redor. Em contraste, quando CommandBar faz a transição entre fechada e aberta, ela não afeta o layout dos outros elementos.
 
-## <a name="placement"></a>Posicionamento
+## <a name="placement"></a>Colocação
 As barras de comandos podem ser colocadas na parte superior da janela do aplicativo, na parte inferior da janela do aplicativo e embutidas.
 
 ![Exemplo 1 de colocação de barra de aplicativos](images/AppbarGuidelines_Placement1.png)
@@ -272,14 +272,14 @@ As barras de comandos podem ser posicionadas nas seguintes regiões da tela, em 
 
 ![Exemplo 2 de colocação de barra de aplicativos](images/AppbarGuidelines_Placement2.png)
 
->**Dispositivos de toque**: caso seja necessário que a barra de comandos fique visível para o usuário quando o teclado virtual ou o painel de entrada virtual (SIP) for exibido, você poderá atribuir a barra de comandos à propriedade [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx) de uma página e ela será movida para permanecer visível quando o SIP estiver presente. Caso contrário, você deve colocar a barra de comandos embutida e posicionada em relação ao conteúdo do aplicativo.
+>**Dispositivos Touch**: Se a barra de comandos deve permanecer visível para um usuário quando o teclado de toque ou painel de entrada flexível (SIP), que é exibido em seguida, você pode atribuir a barra de comandos para o [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx) propriedade de uma página e ele será movido para permanecem visíveis quando o SIP está presente . Caso contrário, você deve colocar a barra de comandos embutida e posicionada em relação ao conteúdo do aplicativo.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - Veja todos os controles XAML em um formato interativo.
-- [Exemplo de execução de comandos XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo de XAML dos comandos](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Noções básicas de design de comandos para aplicativos UWP](../basics/commanding-basics.md)
-* [Classe CommandBar](https://msdn.microsoft.com/library/windows/apps/dn279427)
+* [Classe de CommandBar](https://msdn.microsoft.com/library/windows/apps/dn279427)

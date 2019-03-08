@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4138fd7275f7e1f9addb7685ff0846e756701003
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942922"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661981"
 ---
 # <a name="resource-types"></a>Tipos de recurso
 
@@ -34,11 +34,11 @@ Há duas maneiras de especificar totalmente o layout (ou volume de memória) de 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span id="Typed"></span><span id="typed"></span><span id="TYPED"></span>Com tipo</p></td>
+<td align="left"><p><span id="Typed"></span><span id="typed"></span><span id="TYPED"></span>Digitado</p></td>
 <td align="left"><p>Especifique totalmente o tipo quando o recurso é criado.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Typeless"></span><span id="typeless"></span><span id="TYPELESS"></span>Sem tipo</p></td>
+<td align="left"><p><span id="Typeless"></span><span id="typeless"></span><span id="TYPELESS"></span>Sem especificação de tipo</p></td>
 <td align="left"><p>Especifique totalmente o tipo quando o recurso é vinculado ao pipeline.</p></td>
 </tr>
 </tbody>
@@ -56,8 +56,8 @@ Um buffer é criado como um recurso não estruturado. Como ele não é estrutura
 ### <a name="span-idbuffertypesspanspan-idbuffertypesspanspan-idbuffertypesspanbuffer-types"></a><span id="Buffer_Types"></span><span id="buffer_types"></span><span id="BUFFER_TYPES"></span>Tipos de buffer
 
 -   [Buffer de vértice](#vertex-buffer)
--   [Buffer de índice](#index-buffer)
--   [Buffer constante](#shader-constant-buffer)
+-   [Buffer de índices](#index-buffer)
+-   [Buffer de constantes](#shader-constant-buffer)
 
 ### <a name="span-idvertexbufferspanspan-idvertexbufferspanspan-idvertexbufferspanspan-idvertex-bufferspanvertex-buffer"></a><span id="Vertex_Buffer"></span><span id="vertex_buffer"></span><span id="VERTEX_BUFFER"></span><span id="vertex-buffer"></span>Buffer de vértice
 
@@ -78,7 +78,7 @@ Para acessar dados de um buffer de vértices, você precisa saber qual vértice 
 
 Antes de criar um buffer de vértices, você precisa definir seu layout criando um objeto de layout de entrada. Depois que o objeto de layout de entrada é criado, você deve associá-lo ao estágio de assembler de entrada (IA).
 
-### <a name="span-idindexbufferspanspan-idindexbufferspanspan-idindexbufferspanspan-idindex-bufferspanindex-buffer"></a><span id="Index_Buffer"></span><span id="index_buffer"></span><span id="INDEX_BUFFER"></span><span id="index-buffer"></span>Buffer de índice
+### <a name="span-idindexbufferspanspan-idindexbufferspanspan-idindexbufferspanspan-idindex-bufferspanindex-buffer"></a><span id="Index_Buffer"></span><span id="index_buffer"></span><span id="INDEX_BUFFER"></span><span id="index-buffer"></span>Buffer de índices
 
 Um buffer de índice contém um conjunto sequencial de índices de 16 ou 32 bits; cada índice é usado para identificar um vértice em um buffer de vértices. Indexação é usar um buffer de índice com um ou mais buffers de vértices para fornecer dados ao estágio de IA. Um buffer de índice pode ser visualizado como na ilustração a seguir.
 
@@ -94,7 +94,7 @@ Um buffer de índice pode unir várias faixas de linha ou de triângulo ([topolo
 
 ![ilustração de um índice de recorte de faixa](images/d3d10-ia-strips-cut-value.png)
 
-### <a name="span-idshaderconstantbufferspanspan-idshaderconstantbufferspanspan-idshaderconstantbufferspanspan-idshader-constant-bufferspanconstant-buffer"></a><span id="Shader_Constant_Buffer"></span><span id="shader_constant_buffer"></span><span id="SHADER_CONSTANT_BUFFER"></span><span id="shader-constant-buffer"></span>Buffer constante
+### <a name="span-idshaderconstantbufferspanspan-idshaderconstantbufferspanspan-idshaderconstantbufferspanspan-idshader-constant-bufferspanconstant-buffer"></a><span id="Shader_Constant_Buffer"></span><span id="shader_constant_buffer"></span><span id="SHADER_CONSTANT_BUFFER"></span><span id="shader-constant-buffer"></span>Buffer de constantes
 
 Direct3D tem um buffer para fornecer constantes de sombreador chamado buffer constante de sombreador ou simplesmente buffer constante. Conceitualmente, ele se parece com um buffer de vértice de elemento único, conforme mostrado na ilustração a seguir.
 
@@ -115,24 +115,24 @@ Consulte [Constantes de sombreador (DirectX HLSL)](https://msdn.microsoft.com/li
 ## <a name="span-idtextureresourcesspanspan-idtextureresourcesspanspan-idtextureresourcesspanspan-idtexture-resourcesspantexture-resources"></a><span id="Texture_Resources"></span><span id="texture_resources"></span><span id="TEXTURE_RESOURCES"></span><span id="texture-resources"></span>Recursos de textura
 
 
-Um recurso de textura é uma coleção estruturada de dados projetada para armazenar texels. Diferente dos buffers, as texturas podem ser filtradas por amostras de texturas à medida que são lidas por unidades de sombreador. O tipo de textura afeta como a textura é filtrada. Um texel representa a menor unidade de uma textura que pode ser lida ou gravada pelo pipeline. Cada texel contém 1 a 4 componentes, organizados em um dos formatos DXGI (consulte [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059)).
+Um recurso de textura é uma coleção estruturada de dados projetada para armazenar texels. Diferente dos buffers, as texturas podem ser filtradas por amostras de texturas à medida que são lidas por unidades de sombreador. O tipo de textura afeta como a textura é filtrada. Um texel representa a menor unidade de uma textura que pode ser lida ou gravada pelo pipeline. Cada texel contém componentes de 1 a 4, organizados em um dos formatos DXGI (consulte [ **DXGI\_formato**](https://msdn.microsoft.com/library/windows/desktop/bb173059)).
 
 Texturas são criadas como um recurso estruturado para que seu tamanho seja conhecido. Entretanto, cada textura pode ter tipos ou não no momento em que recurso é criado, contanto que o tipo seja especificado usando um modo de exibição quando a textura está vinculada ao pipeline.
 
 -   [Tipos de textura](#texture-types)
 -   [Sub-recursos](#subresources)
--   [Tipo forte versus fraco](#typed)
+-   [Forte vs. Tipificação fraca](#typed)
 
 ### <a name="span-idtexturetypesspanspan-idtexturetypesspanspan-idtexturetypesspanspan-idtexture-typesspantexture-types"></a><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span><span id="texture-types"></span>Tipos de textura
 
-Existem vários tipos de texturas: 1D, 2D, 3D, e cada uma pode ser criada com ou sem mipmaps. O Direct3D também oferece suporte a matrizes de textura e texturas de várias amostras.
+Há vários tipos de texturas: 1 D, 2D, 3D, cada um deles pode ser criada com ou sem mipmaps. O Direct3D também oferece suporte a matrizes de textura e texturas multisample.
 
--   [Textura 1D](#texture1d-resource)
--   [Matriz de textura 1D](#texture1d-array-resource)
+-   [1D de textura](#texture1d-resource)
+-   [Matriz de 1D de textura](#texture1d-array-resource)
 -   [Textura 2D e matriz de textura 2D](#texture2d-resource)
 -   [Textura 3D](#texture3d-resource)
 
-### <a name="span-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1d-resourcespan1d-texture"></a><span id="Texture1D_Resource"></span><span id="texture1d_resource"></span><span id="TEXTURE1D_RESOURCE"></span><span id="texture1d-resource"></span>Textura 1D
+### <a name="span-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1d-resourcespan1d-texture"></a><span id="Texture1D_Resource"></span><span id="texture1d_resource"></span><span id="TEXTURE1D_RESOURCE"></span><span id="texture1d-resource"></span>1D de textura
 
 Uma textura 1D em sua forma mais simples contém dados de textura que podem ser tratados com uma coordenada de textura única; pode ser visualizada como uma matriz de texels, conforme mostrado na ilustração a seguir.
 
@@ -144,7 +144,7 @@ Cada texel contém um número de componentes de cor dependendo do formato dos da
 
 Um nível de mipmap é uma textura menor do que o nível superior por uma potência de dois. O nível mais alto contém o máximo de detalhes, cada nível subsequente é menor; para mipmap 1D, o menor nível contém um texel. Os diferentes níveis são identificados por um índice chamado LOD (nível de detalhes); você pode usar o LOD para acessar uma textura menor na renderização de uma geometria que não está tão próxima da câmera.
 
-### <a name="span-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1d-array-resourcespan1d-texture-array"></a><span id="Texture1D_Array_Resource"></span><span id="texture1d_array_resource"></span><span id="TEXTURE1D_ARRAY_RESOURCE"></span><span id="texture1d-array-resource"></span>Matriz de textura 1D
+### <a name="span-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1d-array-resourcespan1d-texture-array"></a><span id="Texture1D_Array_Resource"></span><span id="texture1d_array_resource"></span><span id="TEXTURE1D_ARRAY_RESOURCE"></span><span id="texture1d-array-resource"></span>Matriz de 1D de textura
 
 Direct3D 10 também tem uma nova estrutura de dados para uma matriz de texturas. Uma matriz de texturas 1D conceitualmente parece com a ilustração a seguir.
 
@@ -168,7 +168,7 @@ Um recurso Texture2DArray é uma matriz homogênea de texturas 2D; ou seja, cada
 
 Essa matriz de textura contém três texturas; cada uma de 3 x 5 com dois níveis de mipmap.
 
-### <a name="span-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanusing-a-texture2darray-as-a-texture-cube"></a><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>Usar Texture2DArray como um cubo de textura
+### <a name="span-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanusing-a-texture2darray-as-a-texture-cube"></a><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>Usando uma Texture2DArray como um cubo de textura
 
 Um cubo de textura é uma matriz de textura 2D com 6 texturas, uma para cada face do cubo. Um cubo de textura totalmente preenchida se parece com a ilustração a seguir.
 
@@ -204,7 +204,7 @@ Pense nisso como uma textura única composta por três subtexturas. Cada subtext
 
 ![ilustração de um índice de sub-recurso baseado em zero](images/d3d10-resource-texture1darray-sub-indexing.png)
 
-### <a name="span-idselectingsubresourcesspanspan-idselectingsubresourcesspanspan-idselectingsubresourcesspanselecting-subresources"></a><span id="Selecting_Subresources"></span><span id="selecting_subresources"></span><span id="SELECTING_SUBRESOURCES"></span>Selecionando sub-recursos
+### <a name="span-idselectingsubresourcesspanspan-idselectingsubresourcesspanspan-idselectingsubresourcesspanselecting-subresources"></a><span id="Selecting_Subresources"></span><span id="selecting_subresources"></span><span id="SELECTING_SUBRESOURCES"></span>Selecionando os sub-recursos
 
 Algumas APIs acessam um recurso inteiro e outras acessam uma parte de um recurso. As APIs que acessam uma parte de um recurso geralmente usam uma descrição do modo de exibição para especificar os sub-recursos a acessar.
 
@@ -216,13 +216,13 @@ Dada uma matriz de texturas, cada textura com mipmaps, uma fatia de matriz (repr
 
 ![ilustração de uma fatia de matriz](images/d3d10-resource-array-slice.png)
 
-### <a name="span-idmipslicespanspan-idmipslicespanspan-idmipslicespanmip-slice"></a><span id="Mip_Slice"></span><span id="mip_slice"></span><span id="MIP_SLICE"></span>Tamanho de MIP
+### <a name="span-idmipslicespanspan-idmipslicespanspan-idmipslicespanmip-slice"></a><span id="Mip_Slice"></span><span id="mip_slice"></span><span id="MIP_SLICE"></span>Fatia de MIP
 
 Um tamanho de MIP (representado pelo retângulo branco) inclui um nível de mipmap para cada textura em uma matriz, conforme mostrado na ilustração a seguir.
 
 ![ilustração de um tamanho de MIP](images/d3d10-resource-mip-slice.png)
 
-### <a name="span-idselectingasinglesubresourcespanspan-idselectingasinglesubresourcespanspan-idselectingasinglesubresourcespanselecting-a-single-subresource"></a><span id="Selecting_a_Single_Subresource"></span><span id="selecting_a_single_subresource"></span><span id="SELECTING_A_SINGLE_SUBRESOURCE"></span>Selecionando um sub-recurso único
+### <a name="span-idselectingasinglesubresourcespanspan-idselectingasinglesubresourcespanspan-idselectingasinglesubresourcespanselecting-a-single-subresource"></a><span id="Selecting_a_Single_Subresource"></span><span id="selecting_a_single_subresource"></span><span id="SELECTING_A_SINGLE_SUBRESOURCE"></span>Selecionando um único recurso de secundário
 
 Você pode usar esses dois tipos de fatias para escolher um sub-recurso único, conforme mostrado na ilustração a seguir.
 
@@ -236,7 +236,7 @@ Ou você pode usar esses dois tipos de fatias com o número de níveis de mipmap
 
 Independentemente do tipo de textura que você está usando, com ou sem mipmaps, com ou sem uma matriz de textura, geralmente há funções auxiliares fornecidas para calcular o índice de um sub-recurso específico.
 
-### <a name="span-idtypedspanspan-idtypedspanspan-idtypedspanstrong-vs-weak-typing"></a><span id="Typed"></span><span id="typed"></span><span id="TYPED"></span>Tipo forte versus fraco
+### <a name="span-idtypedspanspan-idtypedspanspan-idtypedspanstrong-vs-weak-typing"></a><span id="Typed"></span><span id="typed"></span><span id="TYPED"></span>Forte vs. Tipificação fraca
 
 Criar um recurso totalmente com tipo restringe o recurso ao formato com o qual ele foi criado. Isso permite que o tempo de execução otimize o acesso, especialmente se o recurso for criado com sinalizadores indicando que ele não pode ser mapeado pelo app. Recursos criados com um tipo específico não podem ser reinterpretados usando o mecanismo de exibição.
 

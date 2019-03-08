@@ -1,5 +1,5 @@
 ---
-Description: At build time, the Resource Management System creates an index of all the different variants of the resources that are packaged up with your app. At run-time, the system detects the user and machine settings that are in effect and loads the resources that are the best match for those settings.
+Description: No momento da compilação, o Sistema de Gerenciamento de Recursos cria um índice de todas as variantes dos recursos que são empacotados com o app. Em tempo de execução, o sistema detecta as configurações do usuário e da máquina que estão em vigor e carrega os recursos que representam a melhor correspondência para essas configurações.
 title: Sistema de Gerenciamento de Recursos
 template: detail.hbs
 ms.date: 10/20/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: bedbad9e4de22ee098863d013a1e4ad16d86543e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931619"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598621"
 ---
 # <a name="resource-management-system"></a>Sistema de Gerenciamento de Recursos
 O Sistema de Gerenciamento de Recursos tem recursos em tempo de compilação e em tempo de execução. No momento da compilação, o sistema cria um índice de todas as variantes dos recursos que são empacotados com o app. Trata-se do índice de recurso do pacote, conhecido também como PRI, que também está incluído no pacote do app. No momento da execução, o sistema detecta as configurações do usuário e da máquina que estão em vigor, consulta as informações no PRI e carrega automaticamente os recursos que oferecem a melhor correspondência para essas configurações.
@@ -42,7 +42,7 @@ O objeto [**ResourceCandidate**](/uwp/api/windows.applicationmodel.resources.cor
 
 Os recursos disponíveis para um app são armazenados em coleções hierárquicas, que você pode acessar com um objeto [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live). A classe **ResourceManager** fornece acesso às várias instâncias de **ResourceMap** de nível superior usadas pelo app, que correspondem aos vários pacotes do app. O valor [**MainResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager.MainResourceMap) corresponde ao mapa de recursos para o pacote de aplicativos atual e exclui quaisquer pacotes de estrutura referenciados. Cada **ResourceMap** é nomeado de acordo com o nome do pacote especificado no manifesto do pacote. Em um **ResourceMap** estão as subárvores (consulte [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)), que ainda contêm os objetos **NamedResource**. As subárvores normalmente correspondem aos arquivos de recurso que contêm o recurso. Para obter mais informações, consulte [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote de aplicativos](localize-strings-ui-manifest.md) e [Carregar imagens e ativos personalizados para escala, tema, alto contraste e outros](images-tailored-for-scale-theme-contrast.md).
 
-Veja um exemplo.
+Aqui está um exemplo.
 
 ```csharp
 // using Windows.ApplicationModel.Resources.Core;
@@ -60,11 +60,11 @@ As APIs [**StorageFile**](/uwp/api/Windows.Storage.StorageFile?branch=live) trat
 ### <a name="resourcecontext"></a>ResourceContext
 Os candidatos a recursos são escolhidos com base em um [**ResourceContext**](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceContext?branch=live) específico, que é uma coleção de valores de qualificador de recurso (idioma, escala, contraste etc.). Um contexto padrão usa a configuração atual do aplicativo para cada valor de qualificador, a menos que seja substituído. Por exemplo, recursos como imagens podem ser qualificados para escala, o que varia de um monitor para o outro e, portanto, de uma exibição de aplicativo para outra. Por esse motivo, cada exibição de aplicativo tem um contexto padrão distinto. O contexto padrão de uma determinada exibição pode ser obtido por meio de [**ResourceContext.GetForCurrentView**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.GetForCurrentView). Sempre que você recupera um candidato a recurso, deve passar uma instância **ResourceContext** para obter o valor mais apropriado para uma determinada exibição.
 
-## <a name="important-apis"></a>APIs importantes
+## <a name="important-apis"></a>APIs Importantes
 * [ResourceLoader](/uwp/api/windows.applicationmodel.resources.resourceloader?branch=live)
 * [ResourceManager](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)
 * [ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](localize-strings-ui-manifest.md)
-* [Carregar imagens e ativos personalizados para escala, tema, alto contraste e outros](images-tailored-for-scale-theme-contrast.md)
+* [Localizar cadeias de caracteres em seu manifesto de pacote da interface do usuário e aplicativo](localize-strings-ui-manifest.md)
+* [Carregamento de imagens e ativos sob medidos para escala, tema, alto contraste e outras pessoas](images-tailored-for-scale-theme-contrast.md)

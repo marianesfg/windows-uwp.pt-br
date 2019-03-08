@@ -1,5 +1,5 @@
 ---
-Description: Create Universal Windows Platform (UWP) apps with intuitive and distinctive user interaction experiences that are optimized for touch but are functionally consistent across input devices.
+Description: Crie aplicativos UWP (Plataforma Universal do Windows) com experiências de interação do usuário intuitivas e exclusivas otimizadas para touch, mas que sejam funcionalmente consistentes em diferentes dispositivos de entrada.
 title: Interações por toque
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b889fede67c7e32ff48c0e48a516f389afda820a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048636"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649231"
 ---
 # <a name="touch-interactions"></a>Interações por toque
 
@@ -74,13 +74,13 @@ A tabela a seguir mostra algumas das diferenças entre os dispositivos de entrad
 
 
 
-**Observação**  entrada indireta teve a vantagem de mais de 25 anos de refinamento. Recursos como dicas de ferramentas disparadas por focalização foram projetadas para solucionar a exploração da interface do usuário especificamente para entradas por touchpad, mouse, caneta e teclado. Elementos da interface do usuário como esses foram reprojetados para uma experiência avançada fornecida pela entrada de toque, sem comprometer a experiência do usuário para outros dispositivos.
+**Observação**    entrada indireta teve o benefício de mais de 25 anos de refinamento. Recursos como dicas de ferramentas disparadas por focalização foram projetadas para solucionar a exploração da interface do usuário especificamente para entradas por touchpad, mouse, caneta e teclado. Elementos da interface do usuário como esses foram reprojetados para uma experiência avançada fornecida pela entrada de toque, sem comprometer a experiência do usuário para outros dispositivos.
 
  
 
 ## <a name="use-touch-feedback"></a>Usar comentário por toque
 
-O feedback visual apropriado durante as interações com o seu aplicativo ajuda os usuários a reconhecer, aprender e se adaptar a como suas interações são interpretadas pelo aplicativo e o Windowsplatform. O feedback visual pode indicar interações bem-sucedidas, retransmitir o status do sistema, aprimorar o sentido de controle, reduzir erros, ajudar os usuários a entenderem o sistema e os dispositivos de entrada, além de estimular a interação.
+Apropriado feedback visual durante as interações com seu aplicativo ajuda os usuários a reconhecer, aprender e adaptar-se a como suas interações são interpretadas pelo aplicativo e a plataforma Windows. O feedback visual pode indicar interações bem-sucedidas, retransmitir o status do sistema, aprimorar o sentido de controle, reduzir erros, ajudar os usuários a entenderem o sistema e os dispositivos de entrada, além de estimular a interação.
 
 A resposta visual é importante quando o usuário recorre à entrada por toque em atividades que exigem exatidão e precisão com base no local. A exibição do feedback sempre que a entrada por toque for detectada ajudará o usuário a entender as regras de direcionamento personalizadas definidas pelo aplicativo e seus respectivos controles.
 
@@ -110,7 +110,7 @@ O direcionamento é otimizado por meio de:
 Crie interações soltas usando:
 
 -   Pontos de alinhamento que facilitam a parada nos locais desejados quando os usuários interagem com o conteúdo.
--   "Trilhos" direcionais que ajudam no movimento panorâmico vertical ou horizontal, mesmo quando a mão se desloca em um leve arco. Para obter mais informações, consulte [Diretrizes para movimento panorâmico](guidelines-for-panning.md).
+-   "Trilhos" direcionais que ajudam no movimento panorâmico vertical ou horizontal, mesmo quando a mão se desloca em um leve arco. Para saber mais, veja [Diretrizes para movimento panorâmico](guidelines-for-panning.md).
 
 ## <a name="occlusion"></a>Oclusão
 
@@ -151,7 +151,7 @@ Além disso, as dicas a seguir são altamente recomendadas:
 -   As interações devem permitir interações combinadas. Por exemplo, pinçar para aplicar zoom e, ao mesmo tempo, arrastar os dedos para fazer movimento panorâmico.
 -   As interações não devem ser diferenciadas por tempo. A mesma interação deve ter o mesmo resultado, independentemente do tempo que leva para realizá-la. Ativações baseadas em tempo geram atrasos obrigatórios para os usuários e fogem de sua natureza imersiva de manipulação direta e percepção da capacidade de resposta do sistema.
 
-    **Observação**uma exceção a isso ocorre quando você usa as interações específicas para ajudar no aprendizado e na exploração (por exemplo, pressionar e segurar).
+    **Observação**  uma exceção a isso é onde você usar interações cronometradas específicas para ajudá-lo no aprendizado e exploração (por exemplo, pressione e segure).
 
      
 
@@ -420,13 +420,13 @@ Veja a seguir uma lista de eventos de manipulação e argumentos de eventos rela
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Evento ManipulationStarting**](https://msdn.microsoft.com/library/windows/apps/br208951)                                   | Ocorre quando o processador de manipulação é criado.                                                                                  |
 | [**Evento ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950)                                     | Ocorre quando um dispositivo de entrada inicia uma manipulação no [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911).                                            |
-| [**Evento ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946)                                         | Ocorre quando o dispositivo de entrada muda de posição durante a manipulação.                                                                      |
+| [**ManipulationDelta event**](https://msdn.microsoft.com/library/windows/apps/br208946)                                         | Ocorre quando o dispositivo de entrada muda de posição durante a manipulação.                                                                      |
 | [**Evento ManipulationInertiaStarting**](https://msdn.microsoft.com/library/windows/apps/hh702425)                | Ocorre quando o dispositivo de entrada perde contato com o objeto [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) durante a manipulação e a inércia começa. |
 | [**Evento ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945)                                 | Ocorre quando uma manipulação e inércia no [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) são concluídas.                                          |
 | [**ManipulationStartingRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702132)               | Fornece dados ao evento [**ManipulationStarting**](https://msdn.microsoft.com/library/windows/apps/br208951).                                         |
 | [**ManipulationStartedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702101)                 | Fornece dados ao evento [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950).                                           |
-| [**Classe ManipulationDeltaRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702051)                     | Fornece dados ao evento [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946).                                               |
-| [**Classe ManipulationInertiaStartingRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702074) | Fornece dados ao evento [**ManipulationInertiaStarting**](https://msdn.microsoft.com/library/windows/apps/br208947).                           |
+| [**ManipulationDeltaRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702051)                     | Fornece dados ao evento [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946).                                               |
+| [**ManipulationInertiaStartingRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702074) | Fornece dados ao evento [**ManipulationInertiaStarting**](https://msdn.microsoft.com/library/windows/apps/br208947).                           |
 | [**ManipulationVelocities**](https://msdn.microsoft.com/library/windows/apps/br242032)                                              | Descreve a velocidade de ocorrência de manipuladores.                                                                                         |
 | [**ManipulationCompletedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702035)             | Fornece dados ao evento [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945).                                       |
 
@@ -436,7 +436,7 @@ Um gesto consiste em uma série de eventos de manipulação. Cada gesto começa 
 
 Em seguida, um ou mais eventos [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) são disparados. Por exemplo, se você toca na tela e, em seguida, arrasta o dedo pela tela. Finalmente, um evento [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945) é gerado quando a interação é concluída.
 
-**Observação**se você não tiver um monitor de tela sensível ao toque, você pode testar seu código de eventos de manipulação no simulador usando uma interface de roda do mouse e mouse.
+**Observação**  se você não tiver um monitor de tela sensível ao toque, você pode testar seu código de manipulação de eventos no simulador usando um mouse e a interface da roda do mouse.
 
  
 
@@ -591,17 +591,17 @@ Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implem
 
 **Exemplos**
 
-* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Exemplos de arquivo morto**
+**Exemplos de arquivo-morto**
 
-* [Entrada: amostra de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos e interações com o GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: Gestos e manipulações com GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
  

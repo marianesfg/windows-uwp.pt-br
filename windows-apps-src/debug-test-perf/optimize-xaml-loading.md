@@ -1,17 +1,17 @@
 ---
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
 title: Otimizar sua marcação XAML
-description: Analisar a marcação XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu app.
+description: Analisar a marcação XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu aplicativo.
 ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ec88af01e46788ea9f24760af7f9a3b81281ba8d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921464"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593121"
 ---
 # <a name="optimize-your-xaml-markup"></a>Otimizar sua marcação XAML
 
@@ -126,7 +126,7 @@ O ListView e seus filhos não são carregados na memória.
 
 Como os painéis de layout têm uma propriedade [Background](https://msdn.microsoft.com/library/windows/apps/BR227512) não é preciso puxar um [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) na frente de um painel apenas para colori-lo.
 
-**Ineficiente**
+**Inefficient**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -135,7 +135,7 @@ Como os painéis de layout têm uma propriedade [Background](https://msdn.micros
 </Grid>
 ```
 
-**Eficiente**
+**Efficient**
 
 ```xaml
 <Grid Background="Black"/>
@@ -234,7 +234,7 @@ Se você usar um recurso em várias páginas em todo o aplicativo, armazenando-o
 </Page>
 ```
 
-Para tornar esse exemplo mais eficiente, mova `SecondPageTextBrush` para _SecondPage.xaml_ e mova `ThirdPageTextBrush` para _ThirdPage.xaml_. `InitialPageTextBrush` pode permanecer em _App.xaml_ porque os recursos de aplicação devem ser analisados na inicialização do aplicativo de qualquer forma.
+Para tornar esse exemplo mais eficiente, mova `SecondPageTextBrush` para _SecondPage.xaml_ e mova `ThirdPageTextBrush` para _ThirdPage.xaml_. `InitialPageTextBrush` pode permanecer no _App. XAML_ porque os recursos do aplicativo deverão ser analisados na inicialização do aplicativo em qualquer caso.
 
 ### <a name="consolidate-multiple-brushes-that-look-the-same-into-one-resource"></a>Consolide vários pinceis com a mesma aparência em um recurso
 
@@ -262,7 +262,7 @@ A plataforma XAML tenta armazenar objetos comumente usados em cache de forma que
 
 Para corrigir a duplicação, defina o pincel como um recurso. Se os controles em outras páginas usam o mesmo pincel, mova-o para _App.xaml_.
 
-**Eficiente.**
+**Efficient.**
 
 ```xaml
 <Page ... >
@@ -304,7 +304,7 @@ Use um elemento composto em vez de mostrar vários elementos em camadas para cri
 </Grid>
 ```
 
-**Eficiente.**
+**Efficient.**
 
 ```xaml
 <Grid>
@@ -334,7 +334,7 @@ Um painel de layout pode ter duas finalidades: colorir uma área e definir o lay
 </GridView>
 ```
 
-**Eficiente.**
+**Efficient.**
 
 ```xaml
 <GridView Background="Blue">
@@ -371,7 +371,7 @@ Use um elemento [Border](https://msdn.microsoft.com/library/windows/apps/BR20925
 </Grid>
 ```
 
-**Eficiente.**
+**Efficient.**
 
 ```xaml
  <Border BorderBrush="Blue" BorderThickness="5" Width="300" Height="45">
@@ -403,7 +403,7 @@ A imagem acima é o resultado, mas este é um mapa das regiões com excesso de d
 
 ![Diagrama de Venn que mostra áreas sobrepostas](images/translucentvenn.png)
 
-**Eficiente.**
+**Efficient.**
 
 ```xaml
 <Canvas Background="White" CacheMode="BitmapCache">
@@ -425,7 +425,7 @@ Para verificar se você tem o XBF2, abra seu aplicativo em um editor binário; o
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Práticas recomendadas para o desempenho inicial de seu app](best-practices-for-your-app-s-startup-performance.md)
-- [Otimizar seu layout XAML](optimize-your-xaml-layout.md)
+- [Práticas recomendadas para desempenho de inicialização do aplicativo](best-practices-for-your-app-s-startup-performance.md)
+- [Otimizar o layout XAML](optimize-your-xaml-layout.md)
 - [Otimização das interfaces do usuário ListView e GridView](optimize-gridview-and-listview.md)
 - [Ferramentas para criação de perfil e desempenho](tools-for-profiling-and-performance.md)

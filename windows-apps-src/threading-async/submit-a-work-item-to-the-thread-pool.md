@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, threads, pool de threads
 ms.localizationpriority: medium
 ms.openlocfilehash: 423f0efa9118f581d6e768a815dd2550801aa87e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048613"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658011"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar um item de trabalho ao pool de threads
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](https://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos do Windows 8.x, consulte o [arquivo morto](https://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 <b>APIs importantes</b>
 
@@ -31,7 +31,7 @@ Crie um item de trabalho chamando [**RunAsync**](https://msdn.microsoft.com/libr
 Três versões de [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) estão disponíveis para que, opcionalmente, você possa especificar a prioridade do item de trabalho e controlar se ele é executado simultaneamente com outros itens de trabalho.
 
 >[!NOTE]
->Use o [**Coredispatcher**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
+>Use [ **CoreDispatcher.RunAsync** ](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
 
 O exemplo a seguir cria um item de trabalho e fornece um lambda para fazer o trabalho:
 
@@ -350,7 +350,7 @@ Observe que o manipulador de conclusão verifica se o item de trabalho foi cance
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
-Você pode saber mais baixando o código neste guia de início rápido em [Criando um ThreadPool amostra de item de trabalho](https://go.microsoft.com/fwlink/p/?LinkID=328569) escritos para Windows 8.1 e reutilizando o código-fonte em um aplicativo win\_unap Windows 10.
+Você pode saber mais, baixando o código neste início rápido na [exemplo de item de criação de um trabalho de ThreadPool](https://go.microsoft.com/fwlink/p/?LinkID=328569) escrito para Windows 8.1 e reutilização de código-fonte em uma vitória\_aplicativo unap Windows 10.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, passo a passo
 ms.localizationpriority: medium
 ms.openlocfilehash: 3084c72d32967d691054b452f5f5f2e903bedd5b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931914"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657591"
 ---
 # <a name="best-practices-for-ads-in-apps"></a>Práticas recomendadas para anúncios nos aplicativos
 
@@ -21,9 +21,9 @@ Os artigos nesta seção fornecem diretrizes de experiência do usuário e diret
 
 |  Tópico    | Descrição |               
 |----------|-------|
-| [Diretrizes de experiência do usuário e de interface do usuário](ui-and-user-experience-guidelines.md) | Fornece diretrizes para proporcionar ótimas experiências do usuário com anúncios em faixa e intersticiais em seus aplicativos. |
-| [Otimizar a visualização das unidades de anúncio](optimize-ad-unit-viewability.md) | Fornece diretrizes para otimizar as impressões visíveis das unidades de anúncio. |
-| [Processamento de erros de anúncio](error-handling-with-advertising-libraries.md)     |  Saiba como processar erros de anúncios em faixa, intersticiais e nativos em seus aplicativos.          |
+| [Diretrizes de experiência do usuário e a interface do usuário](ui-and-user-experience-guidelines.md) | Fornece diretrizes para proporcionar ótimas experiências do usuário com anúncios em faixa e intersticiais em seus aplicativos. |
+| [Otimizar a visualização das suas unidades do ad](optimize-ad-unit-viewability.md) | Fornece diretrizes para otimizar as impressões visíveis das unidades de anúncio. |
+| [Tratar erros de ad](error-handling-with-advertising-libraries.md)     |  Saiba como processar erros de anúncios em faixa, intersticiais e nativos em seus aplicativos.          |
 
 
 

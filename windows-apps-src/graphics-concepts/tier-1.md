@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ae76111f6feefa0bb63fd18516e033050cc06fc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928175"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589881"
 ---
 # <a name="tier-1"></a>Nível 1
 
 
 Esta seção descreve o suporte de nível 1.
 
-## <a name="span-idtier1generallimitationsspanspan-idtier1generallimitationsspanspan-idtier1generallimitationsspantier-1-general-limitations"></a><span id="Tier_1_general_limitations"></span><span id="tier_1_general_limitations"></span><span id="TIER_1_GENERAL_LIMITATIONS"></span>Limitações gerais do Nível 1
+## <a name="span-idtier1generallimitationsspanspan-idtier1generallimitationsspanspan-idtier1generallimitationsspantier-1-general-limitations"></a><span id="Tier_1_general_limitations"></span><span id="tier_1_general_limitations"></span><span id="TIER_1_GENERAL_LIMITATIONS"></span>Limitações gerais de camada 1
 
 
 -   Hardware em nível de recurso mínimo 11.0.
@@ -29,14 +29,14 @@ Esta seção descreve o suporte de nível 1.
 -   Nenhum padrão swizzle (o layout em blocos de 64 KB e na compactação MIP final depende do fornecedor de hardware).
 -   Limitação sobre como os blocos podem ser acessados quando há mapeamentos duplicados. Consulte [Limitações de acesso a blocos com mapeamentos duplicados](tile-access-limitations-with-duplicate-mappings.md).
 
-## <a name="span-idspecificlimitationsaffectingtier1onlyspanspan-idspecificlimitationsaffectingtier1onlyspanspan-idspecificlimitationsaffectingtier1onlyspanspecific-limitations-affecting-tier-1-only"></a><span id="Specific_limitations_affecting_tier_1_only"></span><span id="specific_limitations_affecting_tier_1_only"></span><span id="SPECIFIC_LIMITATIONS_AFFECTING_TIER_1_ONLY"></span>Limitações específicas que afetam apenas o nível 1
+## <a name="span-idspecificlimitationsaffectingtier1onlyspanspan-idspecificlimitationsaffectingtier1onlyspanspan-idspecificlimitationsaffectingtier1onlyspanspecific-limitations-affecting-tier-1-only"></a><span id="Specific_limitations_affecting_tier_1_only"></span><span id="specific_limitations_affecting_tier_1_only"></span><span id="SPECIFIC_LIMITATIONS_AFFECTING_TIER_1_ONLY"></span>Limitações específicas que afetam somente camada 1
 
 
-### <a name="span-idreadingwritingtostreamingresourcesthathavenullmappingsspanspan-idreadingwritingtostreamingresourcesthathavenullmappingsspanspan-idreadingwritingtostreamingresourcesthathavenullmappingsspanreadingwriting-to-streaming-resources-that-have-null-mappings"></a><span id="Reading_writing_to_streaming_resources_that_have_NULL_mappings"></span><span id="reading_writing_to_streaming_resources_that_have_null_mappings"></span><span id="READING_WRITING_TO_STREAMING_RESOURCES_THAT_HAVE_NULL_MAPPINGS"></span>Leitura/gravação em recursos de streaming que têm mapeamentos NULOS
+### <a name="span-idreadingwritingtostreamingresourcesthathavenullmappingsspanspan-idreadingwritingtostreamingresourcesthathavenullmappingsspanspan-idreadingwritingtostreamingresourcesthathavenullmappingsspanreadingwriting-to-streaming-resources-that-have-null-mappings"></a><span id="Reading_writing_to_streaming_resources_that_have_NULL_mappings"></span><span id="reading_writing_to_streaming_resources_that_have_null_mappings"></span><span id="READING_WRITING_TO_STREAMING_RESOURCES_THAT_HAVE_NULL_MAPPINGS"></span>Leitura/gravação a recursos que têm mapeamentos NULL de streaming
 
 Os recursos de streaming pode ter mapeamentos **NULOS**, mas ler a partir de ou gravar nesses recursos gera resultados indefinidos, incluindo dispositivo removido. Os aplicativos podem resolver isso mapeando uma única página fictícia para todas as áreas vazias. Tome cuidado se você for gravar e renderização em uma página mapeada para vários locais de destino de renderização, pois a ordem de gravações será indefinida.
 
-### <a name="span-idnoshaderinstructionsforclampinglodandmappedstatusfeedbackspanspan-idnoshaderinstructionsforclampinglodandmappedstatusfeedbackspanspan-idnoshaderinstructionsforclampinglodandmappedstatusfeedbackspanno-shader-instructions-for-clamping-lod-and-mapped-status-feedback"></a><span id="No_shader_instructions_for_clamping_LOD_and_mapped_status_feedback"></span><span id="no_shader_instructions_for_clamping_lod_and_mapped_status_feedback"></span><span id="NO_SHADER_INSTRUCTIONS_FOR_CLAMPING_LOD_AND_MAPPED_STATUS_FEEDBACK"></span>Não há instruções do sombreador para fixação de nível de detalhe e feedback de status mapeado
+### <a name="span-idnoshaderinstructionsforclampinglodandmappedstatusfeedbackspanspan-idnoshaderinstructionsforclampinglodandmappedstatusfeedbackspanspan-idnoshaderinstructionsforclampinglodandmappedstatusfeedbackspanno-shader-instructions-for-clamping-lod-and-mapped-status-feedback"></a><span id="No_shader_instructions_for_clamping_LOD_and_mapped_status_feedback"></span><span id="no_shader_instructions_for_clamping_lod_and_mapped_status_feedback"></span><span id="NO_SHADER_INSTRUCTIONS_FOR_CLAMPING_LOD_AND_MAPPED_STATUS_FEEDBACK"></span>Não há instruções de sombreador para fixação LOD e comentários de status mapeada
 
 As instruções do sombreador para fixação de nível de detalhe e feedback de status mapeado não estão disponíveis. Consulte [Exposição de recursos de streaming HLSL](hlsl-streaming-resources-exposure.md).
 
@@ -48,20 +48,20 @@ As instruções do sombreador para fixação de nível de detalhe e feedback de 
 
 Os recursos de streaming com qualquer mipmap que não seja um múltiplo do tamanho do bloco padrão em todas as dimensões não podem ter um tamanho de matriz maior que 1.
 
-### <a name="span-idswitchingbetweenreferencingtilesinatilepoolviaabufferandtextureresourcespanspan-idswitchingbetweenreferencingtilesinatilepoolviaabufferandtextureresourcespanspan-idswitchingbetweenreferencingtilesinatilepoolviaabufferandtextureresourcespanswitching-between-referencing-tiles-in-a-tile-pool-via-a-buffer-and-texture-resource"></a><span id="Switching_between_referencing_tiles_in_a_tile_pool_via_a_Buffer_and_Texture_resource"></span><span id="switching_between_referencing_tiles_in_a_tile_pool_via_a_buffer_and_texture_resource"></span><span id="SWITCHING_BETWEEN_REFERENCING_TILES_IN_A_TILE_POOL_VIA_A_BUFFER_AND_TEXTURE_RESOURCE"></span>Alternando entre referências de blocos em um pool de blocos por meio de um recurso Buffer e Texture
+### <a name="span-idswitchingbetweenreferencingtilesinatilepoolviaabufferandtextureresourcespanspan-idswitchingbetweenreferencingtilesinatilepoolviaabufferandtextureresourcespanspan-idswitchingbetweenreferencingtilesinatilepoolviaabufferandtextureresourcespanswitching-between-referencing-tiles-in-a-tile-pool-via-a-buffer-and-texture-resource"></a><span id="Switching_between_referencing_tiles_in_a_tile_pool_via_a_Buffer_and_Texture_resource"></span><span id="switching_between_referencing_tiles_in_a_tile_pool_via_a_buffer_and_texture_resource"></span><span id="SWITCHING_BETWEEN_REFERENCING_TILES_IN_A_TILE_POOL_VIA_A_BUFFER_AND_TEXTURE_RESOURCE"></span>Alternando entre referenciando blocos em um pool de bloco por meio de um recurso de Buffer e textura
 
-Para alternar entre a referência de blocos em um pool de blocos por meio de um recurso [Buffer](introduction-to-buffers.md) e a referência aos mesmos blocos por meio de um recurso [Texture](introduction-to-textures.md) ou vice versa, a atualização mais recente dos mapeamentos de blocos ou a cópia dos mapeamentos de blocos que define os mapeamentos para quem blocos do pool devem ter a mesma dimensão de recurso (Buffer versus Texture\*) como a dimensão de recurso que será usada para acessar os blocos. Caso contrário, o comportamento será indefinido, incluindo a chance de restauração do dispositivo.
+Para alternar entre referenciando blocos em um pool de bloco por meio de um [Buffer](introduction-to-buffers.md) recurso para referenciar os mesmos blocos por meio de uma [textura](introduction-to-textures.md) recurso, ou vice-versa, o mais recente atualização de mapeamentos de bloco ou a cópia mapeamentos de bloco que define os mapeamentos para esses lado a lado de blocos de pool devem ser para a mesma dimensão de recurso (Buffer versus textura\*) como a dimensão de recurso que será usada para acessar os blocos. Caso contrário, o comportamento será indefinido, incluindo a chance de restauração do dispositivo.
 
 Por exemplo, é inválido atualizar os mapeamentos de blocos para defini-los para um Buffer e depois atualizar os mapeamentos de blocos para os mesmos blocos no pool via [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) e, em seguida, acessar os blocos via Buffer. As operações alternativas são redefinir os mapeamentos de blocos para um recurso ao alternar entre Buffer e Texture (ou vice-versa) compartilhando os blocos ou simplesmente nunca compartilhar blocos de um pool entre recursos Buffer e recursos Texture.
 
-### <a name="span-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>Filtragem de redução mínima/máxima
+### <a name="span-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>Filtragem de redução de Min/Max
 
 Não há suporte para a filtragem de redução mínima/máxima. Consulte [Recursos de amostragem de textura de recursos de streaming](streaming-resources-texture-sampling-features.md).
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Níveis de recursos de streaming](streaming-resources-features-tiers.md)
+[As camadas de recursos de recursos de streaming](streaming-resources-features-tiers.md)
 
  
 

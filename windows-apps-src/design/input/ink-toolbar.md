@@ -1,5 +1,5 @@
 ---
-Description: Add a default InkToolbar to a Universal Windows Platform (UWP) inking app, add a custom pen button to the InkToolbar, and bind the custom pen button to a custom pen definition.
+Description: Adicione um InkToolbar padrão a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP), adicione um botão de caneta personalizada ao InkToolbar e vincule o botão de caneta personalizada a uma definição de caneta personalizada.
 title: Adicionar um InkToolbar a um aplicativo UWP (Plataforma Universal do Windows)
 label: Add an InkToolbar to a Universal Windows Platform (UWP) app
 template: detail.hbs
@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
 ms.openlocfilehash: 77bb78fe9509936fec5267162deab382bafffb61
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045289"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650571"
 ---
-# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>Adicionar um InkToolbar a um app de escrita à tinta da Plataforma Universal do Windows (UWP)
+# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>Adicionar um InkToolbar a um aplicativo UWP (Plataforma Universal do Windows)
 
 
 
-Há dois controles diferentes que facilitam a escrita à tinta em aplicativos da Plataforma Universal do Windows (UWP): [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
+Há dois controles diferentes que facilitam a escrita à tinta em aplicativos da plataforma Universal do Windows (UWP): [**InkCanvas** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [ **InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
 
 O controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) fornece a funcionalidade básica do Windows Ink. Use-o para renderizar a entrada à caneta como traço de tinta (usando as configurações padrão de cor e espessura) ou como traço de apagar.
 
@@ -35,14 +35,14 @@ Como uma sobreposição completamente transparente, o InkCanvas não fornece qua
 
   Vamos falar sobre o InkToolbar neste tópico.
 
-> **APIs importantes**: [**classe InkCanvas**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [**classe InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [**classe InkPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **APIs importantes**: [**Classe InkCanvas**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [ **classe InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [ **classe InkPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [ **Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 ## <a name="default-inktoolbar"></a>InkToolbar padrão
 
-Por padrão, o [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) inclui botões para desenhar, apagar, realçar e exibir um estêncil (régua ou transferidor). Dependendo do recurso, outras configurações e comandos, como a cor da tinta, a espessura do traço, apagar toda a tinta, são fornecidos em um submenu.
+Por padrão, o [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) inclui botões para desenhar, apagar, realçar e exibir um estêncil (régua ou transferidor). Dependendo do recurso, outras configurações e comandos, como cor da tinta, espessura do traço, apagar toda a tinta, são fornecidos em um submenu.
 
 ![InkToolbar](./images/ink/ink-tools-invoked-toolbar-small.png)  
-*Barra de ferramentas do Windows Ink padrão*
+*Barra de ferramentas padrão Windows Ink*
 
 Para adicionar um [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) padrão a um aplicativo de escrita à tinta, basta colocá-lo na mesma página que o [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) e associar os dois controles.
 
@@ -77,7 +77,7 @@ Para adicionar um [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui
 
 ## <a name="basic-customization"></a>Personalização básica
 
-Nesta seção, abordamos alguns cenários de personalização básica da barra de ferramentas do Windows Ink.
+Nesta seção, abordamos alguns cenários de personalização básica de barra de ferramentas do Windows Ink.
 
 ### <a name="specify-location-and-orientation"></a>Especificar a localização e a orientação
 
@@ -90,7 +90,7 @@ Especifique explicitamente a localização e a orientação da barra de ferramen
 | Padrão | Explícita |
 | --- | --- |
 | ![Localização e orientação padrão da barra de ferramentas de tinta](./images/ink/location-default-small.png) | ![Localização e orientação explícita da barra de ferramentas de tinta](./images/ink/location-explicit-small.png) |
-| *Localização e orientação padrão da barra de ferramentas do Windows Ink* | *Localização e orientação explícita da barra de ferramentas do Windows Ink* |
+| *Orientação e o local do Windows Ink barra de ferramentas padrão* | *Orientação e o local de explícita de barra de ferramentas do Windows Ink* |
 
 Aqui está o código para configurar explicitamente a localização e a orientação da barra de ferramentas de tinta em XAML.
 ```xaml
@@ -101,7 +101,7 @@ Aqui está o código para configurar explicitamente a localização e a orienta�
     TargetInkCanvas="{x:Bind inkCanvas}" />
 ```
 
-**Inicializar com base nas preferências do usuário ou no estado do dispositivo**
+**Inicializar com base em Preferências do usuário ou o estado do dispositivo**
 
 Em alguns casos, talvez você queira definir a localização e a orientação da barra de ferramentas de tinta com base nas preferências do usuário ou no estado do dispositivo. O exemplo a seguir demonstra como configurar a localização e a orientação da barra de ferramentas de tinta com base nas preferências de escrita pela mão esquerda ou direita especificadas por meio de **Configurações > Dispositivos > Caneta e Windows Ink > Caneta > Escolher com qual mão você escreve**.
 
@@ -110,7 +110,7 @@ Em alguns casos, talvez você queira definir a localização e a orientação da
 
 Você pode consultar essa configuração por meio da propriedade HandPreference do Windows.UI.ViewManagement e definir o [HorizontalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.HorizontalAlignment) com base no valor retornado. Neste exemplo, localizamos a barra de ferramentas no lado esquerdo do aplicativo para uma pessoa canhota e no lado direito para uma pessoa destra.
 
-**Baixe esse exemplo em [Exemplo de localização e orientação da barra de ferramentas de tinta (básico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)**
+**Baixar esse exemplo no [tinta da barra de ferramentas local e a orientação da amostra (basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)**
 
 ```csharp
 public MainPage()
@@ -127,11 +127,11 @@ public MainPage()
 }
 ```
 
-**Ajustar dinamicamente ao estado do usuário ou do dispositivo**
+**Ajustar dinamicamente para o estado de usuário ou dispositivo**
 
 Você também pode usar a associação para cuidar das atualizações da interface do usuário baseadas em alterações nas preferências do usuário, nas configurações ou nos estados do dispositivo. No exemplo a seguir, expandimos o exemplo anterior e mostramos como posicionar a barra de ferramentas de tinta dinamicamente com base na orientação do dispositivo usando a associação, um objeto ViewMOdel e a interface [INotifyPropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged). 
 
-**Baixe esse exemplo em [Exemplo de localização e orientação da barra de ferramentas de tinta (dinâmico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)**
+**Baixar esse exemplo no [tinta da barra de ferramentas local e a orientação da amostra (dinâmico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)**
 
 1. Primeiro, vamos adicionar nosso ViewModel.
     1. Adicione uma nova pasta ao seu projeto e chame-a de **ViewModels**.
@@ -170,7 +170,7 @@ Você também pode usar a associação para cuidar das atualizações da interfa
         }
         ```
 
-    1. Adicione duas propriedades boolianas à classe InkToolbarSnippetHostViewModel: **LeftHandedLayout** (mesma funcionalidade do exemplo somente XAML anterior) e **PortraitLayout** (orientação do dispositivo).
+    1. Adicione duas bool propriedades à classe InkToolbarSnippetHostViewModel: **LeftHandedLayout** (a mesma funcionalidade que o exemplo anterior somente XAML) e **PortraitLayout** (orientação do dispositivo).
         >[!NOTE] 
         > A propriedade PortraitLayout é configurável e inclui a definição do evento [PropertyChanged](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged).
 

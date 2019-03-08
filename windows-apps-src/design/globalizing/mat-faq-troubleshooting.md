@@ -1,5 +1,5 @@
 ---
-Description: This topic provides answers to frequently-asked questions and issues related to the Multilingual App Toolkit (MAT) 4.0.
+Description: Este tópico fornece respostas a perguntas frequentes e problemas relacionados ao Kit de Ferramentas de Aplicativo Multilíngue (MAT) 4.0.
 title: Perguntas frequentes e solução de problemas do Kit de Ferramentas de Aplicativo Multilíngue
 template: detail.hbs
 ms.date: 11/13/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e27256fbf19ed31a7b087e94dea9e5514db516f
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050589"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648261"
 ---
 # <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a>Perguntas frequentes e solução de problemas do Kit de Ferramentas de Aplicativo Multilíngue 4.0
 
@@ -142,7 +142,7 @@ O processo de importação executa uma validação básica antes da importação
 
 ## <a name="what-if-my-translator-doesnt-have-windows-10-andor-visual-studio-andor-the-multilingual-app-toolkit-installed"></a>E se meu tradutor não tiver o Windows 10, e/ou Visual Studio e/ou o Kit de Ferramentas de Aplicativo Multilíngue instalado?
 
-Quando você seleciona **Saída: destinatário do e-mail** na caixa de diálogo Exportar recursos de sequência, o e-mail inclui um link para baixar e instalar o Kit de Ferramentas de Aplicativo Multilíngue (MAT) 4.0. Seu tradutor ainda poderá instalar a ferramenta Editor Multilíngue autônomo MAT 4.0 mesmo sem o Windows 10 ou o Visual Studio.
+Quando você seleciona **saída: Destinatário do email** no diálogo de recursos de cadeia de caracteres de exportação, o email inclui um link para baixar e instalar o Multilingual App Toolkit (MAT) 4.0. Seu tradutor ainda poderá instalar a ferramenta Editor Multilíngue autônomo MAT 4.0 mesmo sem o Windows 10 ou o Visual Studio.
 
 Para mais informações, consulte [Use o Kit de Ferramentas de Aplicativo Multilíngue 4.0](use-mat.md).
 
@@ -177,6 +177,6 @@ Antes de começar o processo de Certificação da Microsoft Store, exclua o arqu
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Use o Kit de Ferramentas de Aplicativo Multilíngue 4.0](use-mat.md)
+* [Use o Multilingual App Toolkit 4.0](use-mat.md)
 * [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)
-* [Opções de linha de comando do MakePri.exe](../../app-resources/makepri-exe-command-options.md)
+* [Opções de linha de comando MakePri.exe](../../app-resources/makepri-exe-command-options.md)

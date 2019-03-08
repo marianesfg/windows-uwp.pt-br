@@ -7,15 +7,15 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 796266565965a62d3f168b48893d62e1cdd7df44
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921189"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646161"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>Implementar uma versão de avaliação do aplicativo
 
-Se você [configurar seu aplicativo como uma avaliação gratuita no Partner Center](../publish/set-app-pricing-and-availability.md#free-trial) para que os clientes podem usar seu aplicativo gratuitamente durante um período de avaliação, incentive seus clientes a atualizarem para a versão completa do seu aplicativo, excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que o seu aplicativo permita que eles funcionem após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
+Se você [configurar seu aplicativo como uma avaliação gratuita no Partner Center](../publish/set-app-pricing-and-availability.md#free-trial) para que os clientes podem usar seu aplicativo gratuitamente durante um período de avaliação, você pode atrair seus clientes para atualizar para a versão completa do seu aplicativo, excluindo ou limitar a alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que seu aplicativo permita que eles funcionem apenas após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
 
 Este artigo mostra como usar membros da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para determinar se o usuário tem uma licença da versão de avaliação do seu aplicativo e ser notificado se o estado da licença mudar enquanto seu aplicativo estiver em execução. 
 
@@ -32,22 +32,22 @@ Analise sobre o tipo de aplicativo sendo criado e uma boa estratégia de avalia�
 
 Nos aplicativos não destinados a jogos, a configuração de uma data de expiração funciona bem, pois os usuários podem desenvolver um bom entendimento do aplicativo como um todo. Veja aqui alguns cenários comuns de expiração e as opções para lidar com eles.
 
--   **A licença de avaliação expira enquanto o aplicativo está em execução**
+-   **Licença de avaliação expirar enquanto o aplicativo está em execução**
 
     Se a avaliação expirar enquanto o aplicativo estiver em execução, o aplicativo poderá:
 
     -   Não fazer nada.
     -   Exibir uma mensagem para o cliente.
-    -   Fechar.
+    -   Feche.
     -   Solicitar que o cliente faça a compra.
 
     A prática recomendada é exibir uma mensagem com uma solicitação de compra do aplicativo e, se o cliente comprá-lo, continuar com todos os recursos habilitados. Se o usuário não se decidir pela compra, feche o aplicativo ou lembre periodicamente o usuário para comprá-lo.
 
--   **A licença de avaliação expira antes de o aplicativo ser iniciado**
+-   **Licença de avaliação expira antes que o aplicativo é iniciado**
 
     Se a avaliação expirar antes de o usuário iniciar o aplicativo, ele não será iniciado. Em vez disso, os usuários veem uma caixa de diálogo que lhes dá a opção de comprar o aplicativo na loja.
 
--   **O cliente compra o aplicativo enquanto ele está em execução**
+-   **Cliente adquire o aplicativo enquanto ele está em execução.**
 
     Se o cliente comprar o aplicativo enquanto ele estiver em execução, aqui estão algumas ações que o aplicativo poderá executar.
 
@@ -61,7 +61,7 @@ Lembre-se de explicar como o app se comportará durante e após o período de av
 
 Este exemplo tem os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior.
-* Você criou um aplicativo no Partner Center for configurado como uma [avaliação gratuita](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) sem tempo limite e esse aplicativo é publicado na loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você criou um aplicativo no Partner Center que é configurado como um [avaliação gratuita](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) sem limite de tempo e este aplicativo é publicado na Store. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Store enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
 
 O código neste exemplo pressupõe que:
 * O código seja executado no contexto de uma [Página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contenha um [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` e um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Esses objetos sejam usados para indicar que uma operação assíncrona está ocorrendo e exibir mensagens de saída, respectivamente.
@@ -80,13 +80,13 @@ Nesse ponto, se um usuário comprou o aplicativo, é uma prática recomendada fo
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[ImplementTrial](./code/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs#ImplementTrial)]
 
-Para obter um aplicativo de exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Para obter um app de exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md)
-* [Obter informações do produto para apps e complementos](get-product-info-for-apps-and-add-ons.md)
-* [Obter informações de licença para apps e complementos](get-license-info-for-apps-and-add-ons.md)
-* [Habilitar compras nos aplicativos e complementos no aplicativo](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [Compras no aplicativo e avaliação](in-app-purchases-and-trials.md)
+* [Obter informações sobre produtos para os aplicativos e complementos](get-product-info-for-apps-and-add-ons.md)
+* [Obter informações de licença para aplicativos e complementos](get-license-info-for-apps-and-add-ons.md)
+* [Habilitar compras no aplicativo de aplicativos e complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Habilitar compras de complementos consumíveis](enable-consumable-add-on-purchases.md)
-* [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
+* [Exemplo de Store](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)

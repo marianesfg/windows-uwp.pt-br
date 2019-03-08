@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx 9, directx 11, portabilidade
 ms.localizationpriority: medium
 ms.openlocfilehash: 90a9273c33dd45904e2050af02fd52ddeaedb7e5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940004"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658221"
 ---
 # <a name="moving-from-directx-9-to-directx-11-and-universal-windows-platform-uwp"></a>Mudando do DirectX 9 para o DirectX 11 e a Plataforma Universal do Windows (UWP)
 
@@ -32,15 +32,15 @@ Esta seção guia você na portabilidade do jogo de área de trabalho em DirectX
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="plan-your-directx-port.md">Planeje a compatibilização do DirectX</a></p></td>
+<td align="left"><p><a href="plan-your-directx-port.md">Planejar sua porta do DirectX</a></p></td>
 <td align="left"><p>Planeje o seu projeto de portabilidade de jogo do DirectX 9 para o DirectX 11 e UWP: atualize o código dos elementos gráficos e coloque o seu jogo no ambiente do Windows Runtime.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="understand-direct3d-11-1-concepts.md">Alterações importantes do Direct3D 9 para o Direct3D 11.1</a></p></td>
+<td align="left"><p><a href="understand-direct3d-11-1-concepts.md">Alterações importantes do Direct3D 9 Direct3D 11.1</a></p></td>
 <td align="left"><p>Este tópico explica as diferenças de alto nível entre o DirectX 9 e o DirectX 11.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="feature-mapping.md">Mapear recursos do DirectX 9 para APIs do DirectX 11.1</a></p></td>
+<td align="left"><p><a href="feature-mapping.md">Mapear recursos do DirectX 9 para as APIs do DirectX 11.1</a></p></td>
 <td align="left"><p>Entenda como os recursos do seu jogo em Direct3D 9 serão traduzidos para Direct3D 11 e UWP.</p></td>
 </tr>
 </tbody>

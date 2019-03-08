@@ -1,20 +1,20 @@
 ---
-title: Amostra
+title: Exemplo
 description: A amostragem é o processo de leitura de valores de entrada de uma textura ou outros recursos. A \ 0034;amostra \ 0034; é qualquer objeto que lê a partir de recursos.
 ms.assetid: 7ECE13BB-9FC5-44A3-B1B2-2FE163F1D627
 keywords:
-- Amostra
+- Exemplo
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e80e160e1225e510ab95f52cbd9f21049c890457
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942467"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57663651"
 ---
-# <a name="sampler"></a>Amostra
+# <a name="sampler"></a>Exemplo
 
 
 A amostragem é o processo de leitura de valores de entrada de uma textura ou outros recursos. Uma "amostra" é qualquer objeto que lê a partir de recursos.

@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
 ms.openlocfilehash: 93d4da26dbb4c5eee1856b3a594214aabbbbaa00
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047561"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645071"
 ---
 # <a name="respond-to-customer-feedback"></a>Responder ao feedback dos clientes
 
@@ -22,7 +22,7 @@ Você pode usar o [Relatório de comentários](feedback-report.md) para analisar
 
 Para dar uma resposta a qualquer comentário, clique no link **Respond to feedback** exibido no comentário no **Relatório de comentários**.
 
-[Partner Center](https://partner.microsoft.com/dashboard) oferece suporte a três opções para responder aos clientes que fornecem comentários sobre seu aplicativo. Independentemente da opção que você escolher, tenha em mente que há um limite de 1.000 caracteres para cada resposta.
+[Partner Center](https://partner.microsoft.com/dashboard) dá suporte a três opções para responder aos clientes que fornecem comentários sobre seu aplicativo. Independentemente da opção que você escolher, tenha em mente que há um limite de 1.000 caracteres para cada resposta.
 
 ## <a name="public-comments-in-feedback-hub"></a>Comentários públicos no Hub de Feedback
 
@@ -44,8 +44,8 @@ Uma terceira opção para uma resposta pública é definir o status em comentár
 
 Para usar essa opção, selecione o botão de opção **Atualizar status**. Em seguida, selecione uma das seguintes opções:
 
-- **Investigando**: Você está ciente de um problema e o está examinando.
-- **Trabalhando nele**: Você está em meio ao processo de correção de um problema ou adição de um recurso solicitado.
+- **Investigando**: Você está ciente de um problema e você estiver procurando para ele.
+- **Estamos trabalhando nisso**: Você está no processo de correção de um problema ou adicionando um recurso solicitado.
 - **Concluído**: Você publicou uma atualização para corrigir o problema ou adicionar o recurso solicitado.
 
 Com a atualização do status, você pode inserir um comentário para fornecer mais informações, como uma estimativa de quando acha que um problema será corrigido ou obter mais informações sobre as alterações mais recentes. Esta descrição será exibida na parte superior da lista de comentários (e o Relatório de comentários exibirá o status e a descrição atuais).

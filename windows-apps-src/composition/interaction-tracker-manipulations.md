@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animação
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d2c965bcfbf81efe73ce8aff93cdb8b31163fbd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941731"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653841"
 ---
 # <a name="custom-manipulation-experiences-with-interactiontracker"></a>Experiências personalizadas de manipulação com o InteractionTracker
 
@@ -20,8 +20,8 @@ Neste artigo, mostramos como usar o InteractionTracker para criar experiências 
 
 Aqui, presumimos que você esteja familiarizado com os conceitos abordados neste artigo:
 
-- [Animações controladas por entrada](input-driven-animations.md)
-- [Animações baseadas em relações](relation-animations.md)
+- [Controlado por entrada animações](input-driven-animations.md)
+- [Animações de relação com base](relation-animations.md)
 
 ## <a name="why-create-custom-manipulation-experiences"></a>Por que criar experiências de manipulação personalizadas?
 
@@ -59,11 +59,11 @@ Como máquina de estado, as propriedades do InteractionTracker podem ser control
 
 ### <a name="interactiontracker-state-machine"></a>Máquina de estado InteractionTracker
 
-Como mencionado anteriormente, o InteractionTracker é uma máquina de estado com 4 estados; cada um deles pode fazer a transição para qualquer um dos outros fourstates a. (Para obter mais informações sobre como o InteractionTracker faz a transição entre esses estados, consulte a documentação de classe do [InteractionTracker](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontracker).)
+Conforme mencionado anteriormente, InteractionTracker é uma máquina de estado com 4 estados – cada um deles pode fazer a transição para qualquer um dos quatro estados. (Para obter mais informações sobre como o InteractionTracker faz a transição entre esses estados, consulte a documentação de classe do [InteractionTracker](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontracker).)
 
 | Estado | Descrição |
 |-------|-------------|
-| Ocioso | Nenhuma entrada ativa sendo gerada ou animações |
+| Idle | Nenhuma entrada ativa sendo gerada ou animações |
 | Interação | Entrada de usuário ativa detectada |
 | Inércia | Movimento ativo resultante da entrada ativa ou da velocidade programática |
 | CustomAnimation | Movimento ativo resultante de uma animação personalizada |
@@ -78,7 +78,7 @@ Para que o InteractionTracker seja controlado por entrada, você precisará cone
 
 1. A região de teste de acertos em que essa entrada será rastreada e o espaço de coordenadas em que os gestos serão detectados
 1. As configurações de entrada que serão detectadas e roteadas incluem:
-    - Gestos detectáveis: posições X e Y (panorâmica horizontal e vertical), escala (pinçagem)
+    - Gestos detectáveis: Posição X e Y (horizontal e vertical de movimento panorâmico), escala de (exibição aperto)
     - Inércia
     - Trilhos e encadeamento
     - Modos de redirecionamento: quais dados de entrada são redirecionados automaticamente para o InteractionTracker
@@ -167,5 +167,5 @@ private void InteractionTrackerSetup(Compositor compositor, Visual hitTestRoot)
 
 Para usos mais avançados do InteractionTracker, consulte os seguintes artigos:
 
-- [Criar pontos de ajuste com InertiaModifiers](inertia-modifiers.md)
-- [Puxar para atualizar com SourceModifiers](source-modifiers.md)
+- [Criar pontos de alinhamento com InertiaModifiers](inertia-modifiers.md)
+- [Pull para atualizar com SourceModifiers](source-modifiers.md)

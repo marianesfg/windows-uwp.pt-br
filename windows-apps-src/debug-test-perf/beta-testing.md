@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2eca388b37cc95803b7ecb94bc0b0b5b990f5de3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921366"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654101"
 ---
 # <a name="beta-testing"></a>Teste beta
 
 
 
-O *teste beta* oferece a você a oportunidade de melhorar seu aplicativo com base nos comentários de pessoas de fora da sua equipe de desenvolvimento que experimentam o aplicativo ainda não lançado em seus próprios dispositivos.
+O *teste beta* dá a você a chance de aprimorar seu aplicativo com base nos comentários de pessoas de fora de sua equipe de desenvolvimento que experimentam seu aplicativo não lançado em seus próprios dispositivos.
 
 Esta seção descreve as opções de teste beta de Aplicativos Universais do Windows.
 
@@ -32,7 +32,7 @@ Com o teste beta, você pode:
 -   Testar seu aplicativo em uma variedade de dispositivos.
 -   Identificar problemas de desempenho e outros bugs que talvez você não encontrasse de outra forma.
 -   Obter informações de uso do mundo real que podem ser usadas para melhorar a experiência do usuário.
--   Receba comentários sem afetar classificações públicas na Microsoft Store.
+-   Receba comentários sem afetar as classificações públicas em que a Microsoft Store.
 
 ## <a name="when-to-beta-test"></a>Quando fazer o teste beta
 
@@ -40,7 +40,7 @@ Com o teste beta, você pode:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-No [Partner Center](https://partner.microsoft.com/dashboard), você pode limitar a distribuição dos seus aplicativos somente para os testadores, independentemente de quais sistemas operacionais seu aplicativo se destina. Não é necessário criar uma versão separada de seu aplicativo com um nome e identificador de pacote separados; você pode fazer o teste e criar um novo envio quando estiver pronto para disponibilizar o aplicativo para todos. É claro, você pode criar um aplicativo separado apenas para testes se preferir. Se você fizer isso, certifique-se de dar um nome diferente do que pretende como o nome do aplicativo final público.
+Na [Partner Center](https://partner.microsoft.com/dashboard), você pode limitar a distribuição de seus aplicativos para somente seus testadores, independentemente de quais sistemas operacionais de destino do seu aplicativo. Não é necessário criar uma versão separada de seu aplicativo com um nome e identificador de pacote separados; você pode fazer o teste e criar um novo envio quando estiver pronto para disponibilizar o aplicativo para todos. É claro, você pode criar um aplicativo separado apenas para testes se preferir. Se você fizer isso, certifique-se de dar um nome diferente do que pretende como o nome do aplicativo final público.
 
 Consulte [Teste beta e distribuição direcionada](../publish/beta-testing-and-targeted-distribution.md) para saber como enviar seu aplicativo para a loja para teste beta.
 

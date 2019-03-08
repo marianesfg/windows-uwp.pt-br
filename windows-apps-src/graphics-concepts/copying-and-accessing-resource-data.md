@@ -1,6 +1,6 @@
 ---
 title: Copiando e acessando dados de recursos
-description: Sinalizadores de uso indicam como o app pretende usar os dados de recurso para colocar os recursos na área mais eficiente de memória possível. Os dados de recursos são copiados em todos os recursos para que a CPU ou GPU possa acessá-los sem afetar o desempenho.
+description: Os sinalizadores de uso indicam como o app pretende usar os dados de recurso, para colocar os recursos na área mais eficiente possível da memória. Os dados de recursos são copiados em todos os recursos para que a CPU ou GPU possa acessá-los sem afetar o desempenho.
 ms.assetid: 6A09702D-0FF2-4EA6-A353-0F95A3EE34E2
 keywords:
 - Copiando e acessando dados de recursos
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d4364bf9973b69587ae042a809d026b553ee2ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932141"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662311"
 ---
 # <a name="copying-and-accessing-resource-data"></a>Copiando e acessando dados de recursos
 
 
-Sinalizadores de uso indicam como o app pretende usar os dados de recurso para colocar os recursos na área mais eficiente de memória possível. Os dados de recursos são copiados em todos os recursos para que a CPU ou GPU possa acessá-los sem afetar o desempenho.
+Os sinalizadores de uso indicam como o app pretende usar os dados de recurso, para colocar os recursos na área mais eficiente possível da memória. Os dados de recursos são copiados em todos os recursos para que a CPU ou GPU possa acessá-los sem afetar o desempenho.
 
 Não é necessário pensar nos recursos como sendo criados na memória de vídeo ou memória do sistema, ou para decidir se o tempo de execução deve ou não gerenciar a memória. Com a arquitetura do WDDM (Windows Display Driver Model), os apps criam recursos Direct3D com sinalizadores de uso de diferentes para indicar como o app pretende usar os dados de recurso. Esse modelo de driver virtualiza a memória usada por recursos; é responsabilidade do gerenciador de memória/driver/sistema operacional colocar os recursos na área mais eficiente possível da memória, dado o uso esperado.
 
@@ -85,7 +85,7 @@ Sendo assim, se um app quiser mapear um recurso que tem origem na memória de v�
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Quadro</th>
+<th align="left">Frame</th>
 <th align="left">Status da GPU/CPU</th>
 </tr>
 </thead>

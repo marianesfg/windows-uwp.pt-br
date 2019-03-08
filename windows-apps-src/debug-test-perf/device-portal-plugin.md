@@ -4,16 +4,16 @@ title: Escrever um plug-in personalizado para o Device Portal
 description: Saiba como escrever um aplicativo UWP que use o Windows Device Portal para hospedar uma página da Web e fornecer informações de diagnóstico.
 ms.date: 03/24/2017
 ms.topic: article
-keywords: Windows 10, uwp, portal de dispositivos
+keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
 ms.openlocfilehash: d9e11445d77434320c8842608bf8183a078c0660
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919322"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644461"
 ---
-# <a name="write-a-custom-plugin-for-device-portal"></a>Criar um plug-in personalizado para o Device Portal
+# <a name="write-a-custom-plugin-for-device-portal"></a>Criar um plug-in personalizado para o Portal de Dispositivos
 
 Saiba como escrever um aplicativo UWP que use o Windows Device Portal para hospedar uma página da Web e fornecer informações de diagnóstico.
 
@@ -108,7 +108,7 @@ public void Run(IBackgroundTaskInstance taskInstance) {
 }
 ```
 
-Há dois eventos que devem ser manipulados pelo aplicativo para concluir a solicitação de manipulação de loop: **Closed**, para sempre que o serviço Device Portal for desligado, e solicitações de [**RequestReceived**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), que expõe HTTP de entrada e fornece a principal funcionalidade do provedor Device Portal. 
+Há dois eventos que devem ser tratados pelo aplicativo para concluir a loop de tratamento de solicitação: **Fechado**, para sempre que o serviço do Portal do dispositivo é desligado, e [ **RequestReceived**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), que cobrem solicitações de HTTP de entrada e fornece a funcionalidade principal do Portal do dispositivo provedor. 
 
 ## <a name="handle-the-requestreceived-event"></a>Manipular o evento RequestReceived
 O evento **RequestReceived** será gerado assim que que cada solicitação HTTP seja feita na Rota do Manipulador especificada em seu plug-in. A solicitação de manipulação de loop para provedores do Device Portal é semelhante à do NodeJS Express: os objetos de solicitação e resposta são fornecidos junto com o evento e o manipulador responde preenchendo o objeto de resposta. Em provedores do Device Portal, o evento **RequestReceived** e seus manipuladores usam os objetos [**Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httprequestmessage) e [**HttpResponseMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httpresponsemessage).   
@@ -188,7 +188,7 @@ Para depurar a tarefa em segundo plano, você deve alterar a maneira como o Visu
 2.  Na guia Depuração, na seção da ação Iniciar, selecione "Não executar, mas depurar o meu código quando ele for iniciado".  
 ![colocar o plug-in em modo de depuração](images/device-portal/plugin-debug-mode.png)
 3.  Defina um ponto de interrupção na função do manipulador RequestReceived.
-![ponto de interrupção no manipulador requestreceived](images/device-portal/plugin-requestreceived-breakpoint.png)
+![ponto de interrupção no manipulador de requestreceived](images/device-portal/plugin-requestreceived-breakpoint.png)
 > [!NOTE] 
 > Verifique se a arquitetura de compilação corresponde exatamente à arquitetura do destino. Se estiver usando um computador de 64 bits, você deve implantar usando uma compilação AMD64. 
 4.  Pressione F5 para implantar seu app
@@ -197,6 +197,6 @@ Para depurar a tarefa em segundo plano, você deve alterar a maneira como o Visu
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Visão geral do Windows Device Portal](device-portal.md)
-* [Criar e consumir um serviço de app](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
+* [Criar e consumir um serviço de aplicativo](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
 
 

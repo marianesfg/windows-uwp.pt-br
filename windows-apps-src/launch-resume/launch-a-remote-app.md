@@ -1,5 +1,5 @@
 ---
-title: Iniciar um aplicativo em um dispositivo remoto
+title: Iniciar um app em um dispositivo remoto
 description: Saiba como iniciar um aplicativo em um dispositivo remoto usando o projeto Roma.
 ms.date: 02/12/2018
 ms.topic: article
@@ -7,11 +7,11 @@ keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, proj
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
 ms.openlocfilehash: 26a67816195105572d9f690599b9a880ece90c98
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930777"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658411"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>Iniciar um app em um dispositivo remoto
 
@@ -23,9 +23,9 @@ O recurso de inicialização remota proporciona experiências de usuário orient
 
 ## <a name="preliminary-setup"></a>Configuração preliminar
 
-### <a name="add-the-remotesystem-capability"></a>Adicionar funcionalidade remoteSystem
+### <a name="add-the-remotesystem-capability"></a>Adicionar a funcionalidade remoteSystem
 
-Para seu app iniciar um app em um dispositivo remoto, você deve adicionar a funcionalidade `remoteSystem` ao manifesto do conjunto de aplicativo. Você pode usar o designer de manifesto de pacote para adicioná-lo selecionando Sistema Remoto na guia **Remote System** em **Funcionalidades**, ou adicionar manualmente a linha a seguir ao arquivo _Package.appxmanifest_ do projeto.
+Para seu app iniciar um app em um dispositivo remoto, você deve adicionar a funcionalidade `remoteSystem` ao manifesto do pacote do aplicativo. Você pode usar o designer de manifesto de pacote para adicioná-lo selecionando Sistema Remoto na guia **Remote System** em **Funcionalidades**, ou adicionar manualmente a linha a seguir ao arquivo _Package.appxmanifest_ do projeto.
 
 ``` xml
 <Capabilities>
@@ -35,7 +35,7 @@ Para seu app iniciar um app em um dispositivo remoto, você deve adicionar a fun
 
 ### <a name="enable-cross-device-sharing"></a>Habilite compartilhamento entre dispositivos
 
-Além disso, o dispositivo cliente deve ser definido para permitir o compartilhamento entre dispositivos. Essa configuração, que é acessada em **Configurações**: **Sistema** > **Experiências compartilhadas** > **Compartilhar em todos os dispositivos**, é habilitada por padrão. 
+Além disso, o dispositivo cliente deve ser definido para permitir o compartilhamento entre dispositivos. Essa configuração, que pode é acessada no **configurações**: **Sistema** > **compartilhado experiências** > **compartilhamento entre dispositivos**, é habilitado por padrão. 
 
 ![página de configuração de experiências compartilhadas](images/shared-experiences-settings.png)
 
@@ -74,7 +74,7 @@ O objeto [**RemoteLaunchUriStatus**](https://msdn.microsoft.com/library/windows/
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Referência de API de sistemas remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
-[Visão geral de aplicativos e dispositivos conectados (projeto Roma)](connected-apps-and-devices.md)  
+[Referência da API de sistemas remota](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
+[Visão de geral (projeto Roma) aplicativos e dispositivos conectado](connected-apps-and-devices.md)  
 [Descobrir dispositivos remotos](discover-remote-devices.md)  
 [Exemplo de sistemas remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems) demonstra como descobrir um sistema remoto, iniciar um apps em um sistema remoto e usar os serviços de apps para enviar mensagens entre apps em execução em dois sistemas.

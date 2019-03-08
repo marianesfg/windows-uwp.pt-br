@@ -1,5 +1,5 @@
 ---
-Description: Extend your desktop application with Windows UIs and components
+Description: Estender seu aplicativo da área de trabalho com interfaces do usuário e componentes do Windows
 Search.Product: eADQiWindows 10XVcnh
 title: Estender seu aplicativo da área de trabalho com interfaces do usuário e componentes do Windows
 ms.date: 06/08/2018
@@ -7,20 +7,20 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2d1fac6d735d4f6915dea1af531dffa666607fe3
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117806"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641701"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Estender seu aplicativo da área de trabalho com componentes UWP modernos
 
 Algumas experiências do Windows 10 (por exemplo, uma página da interface do usuário habilitada para toque) devem ser executadas dentro de um contêiner de app moderno. Se você quiser adicionar essas experiências, estenda seu aplicativo da área de trabalho com projetos UWP e componentes do Tempo de Execução do Windows.
 
-Em muitos casos, você pode chamar APIs do Windows Runtime diretamente do seu aplicativo da área de trabalho, portanto, antes de examinar este guia, consulte [aprimorar para o Windows 10](desktop-to-uwp-enhance.md).
+Em muitos casos, você pode chamar APIs do Windows Runtime diretamente do seu aplicativo da área de trabalho, portanto, antes de você examine neste guia, consulte [aprimorar para Windows 10](desktop-to-uwp-enhance.md).
 
 >[!NOTE]
->Este guia considera que você tenha criado um pacote de aplicativo do Windows para seu aplicativo da área de trabalho. Se você ainda não tiver feito isso, consulte [aplicativos da área de trabalho do pacote](desktop-to-uwp-root.md).
+>Este guia pressupõe que você criou um pacote de aplicativo do Windows para o seu aplicativo da área de trabalho. Se você ainda não fez isso, consulte [empacotar aplicativos da área de trabalho](desktop-to-uwp-root.md).
 
 Se você estiver pronto, vamos começar.
 
@@ -36,13 +36,13 @@ Esta imagem mostra um exemplo de solução.
 
 ![Estender projeto inicial](images/desktop-to-uwp/extend-start-project.png)
 
-Se sua solução não contiver um projeto de empacotamento, consulte o [pacote do seu aplicativo da área de trabalho usando o Visual Studio](desktop-to-uwp-packaging-dot-net.md).
+Se sua solução não contiver um projeto de empacotamento, consulte [empacotar seu aplicativo da área de trabalho usando o Visual Studio](desktop-to-uwp-packaging-dot-net.md).
 
 ### <a name="configure-the-desktop-application"></a>Configurar o aplicativo da área de trabalho
 
 Certifique-se de que seu aplicativo da área de trabalho tem referências aos arquivos que você precisa chamar APIs do Windows Runtime.
 
-Para fazer isso, consulte a seção [primeiro, configure seu projeto](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project) do tópico [aprimorar seu aplicativo da área de trabalho para Windows 10](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project).
+Para fazer isso, consulte a [pela primeira vez, seu projeto de instalação](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project) seção do tópico [Aprimore seu aplicativo da área de trabalho para Windows 10](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project).
 
 ### <a name="add-a-uwp-project"></a>Adicionar um projeto UWP
 
@@ -74,9 +74,9 @@ Em seguida, no projeto UWP, adicione uma referência ao componente de tempo de e
 
 ![Referência do componente de tempo de execução](images/desktop-to-uwp/runtime-component-reference.png)
 
-### <a name="build-your-solution"></a>Desenvolver sua solução
+### <a name="build-your-solution"></a>Compile sua solução
 
-Desenvolver sua solução para garantir que nenhum erro apareça. Se você receber erros, abra o **Gerenciador de configuração** e certifique-se de que seus projetos direcionados à mesma plataforma.
+Compile sua solução para garantir que nenhum erro for exibido. Se você receber erros, abra **Configuration Manager** e certifique-se de que seus projetos direcionados a mesma plataforma.
 
 ![Gerenciador de configuração](images/desktop-to-uwp/config-manager.png)
 
@@ -93,21 +93,21 @@ Esta imagem mostra um aplicativo Windows Forms que abre uma interface do usuári
 ![adaptive-design](images/desktop-to-uwp/extend-xaml-ui.png)
 
 >[!NOTE]
->Este exemplo mostra uma UI XAML adicionando um projeto UWP à solução. Que é a abordagem com suporte estável mostrando interfaces do usuário XAML em um aplicativo da área de trabalho. A alternativa para essa abordagem é adicionar controles UWP XAML diretamente para seu aplicativo da área de trabalho usando uma ilha de XAML. Ilhas XAML estão disponíveis atualmente como uma visualização de desenvolvedor. Embora Encorajamos você a experimentá-los em seu próprio código de protótipo agora, não recomendamos que você usá-los no código de produção neste momento. Esses controles e APIs continuará a se desenvolver e estabilizar em futuras versões do Windows. Para saber mais sobre Ilhas XAML, consulte [controles UWP em aplicativos da área de trabalho](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+>Este exemplo mostra um XAML UI, adicionando um projeto UWP à solução. Que é a abordagem com suporte estável mostrando interfaces do usuário XAML em um aplicativo da área de trabalho. A alternativa para essa abordagem é adicionar os controles UWP XAML diretamente para seu aplicativo da área de trabalho usando uma ilha de XAML. Ilhas de XAML está atualmente disponíveis como uma visualização do desenvolvedor. Embora incentivamos você a experimentá-las em seu próprio código de protótipo agora, não recomendamos que você usá-los no código de produção neste momento. Esses controles e APIs continuará a amadurecer e se estabilizar em futuras versões do Windows. Para saber mais sobre como ilhas de XAML, consulte [controles UWP em aplicativos da área de trabalho](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>O padrão de design
 
 Para mostrar uma interface do usuário baseada em XAML, faça o seguinte:
 
-:um: [Configurar a solução](#solution-setup)
+: um: [Configurar sua solução](#solution-setup)
 
-:dois: [Criar uma interface do usuário XAML](#xaml-UI)
+: dois: [Criar uma interface do usuário XAML](#xaml-UI)
 
-:três: [Adicione uma extensão de protocolo ao projeto UWP](#add-a-protocol-extension)
+: três: [Adicionar uma extensão de protocolo para o projeto UWP](#add-a-protocol-extension)
 
-:quatro: [Inicie o aplicativo UWP do seu aplicativo da área de trabalho](#start)
+: quatro: [Iniciar o aplicativo UWP do aplicativo da área de trabalho](#start)
 
-:cinco: [No projeto UWP, mostre a página desejada](#parse)
+:five: [No projeto UWP, mostrar a página que você deseja](#parse)
 
 <a id="solution-setup" />
 
@@ -151,7 +151,7 @@ Adicione uma interface do usuário XAML ao seu projeto UWP. Veja o XAML do mapa 
 
 ### <a name="add-a-protocol-extension"></a>Adicionar uma extensão de protocolo
 
-No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução e adicione essa extensão.
+Na **Gerenciador de soluções**, abra o **Package. appxmanifest** arquivo de projeto de empacotamento em sua solução e adicionar essa extensão.
 
 ```xml
 <Extensions>
@@ -219,7 +219,7 @@ protected override void OnActivated(Windows.ApplicationModel.Activation.IActivat
 }
 ```
 
-No code-behind da página XAML, substitua o ``OnNavigatedTo`` método para usar os parâmetros passados para a página. Nesse caso, usaremos a latitude e longitude passado para essa página a fim de mostrar uma localização em um mapa.
+No código por trás de sua página XAML, substitua o ``OnNavigatedTo`` método para usar os parâmetros passados para a página. Nesse caso, usaremos a latitude e longitude passado para essa página a fim de mostrar uma localização em um mapa.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -250,25 +250,25 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 Você pode tornar seu aplicativo da área de trabalho um destino de compartilhamento para que os usuários possam compartilhar com facilidade dados como imagens de outros aplicativos que dão suporte a compartilhamento.
 
-Por exemplo, os usuários podem escolher seu aplicativo para compartilhar fotos do Microsoft Edge, o aplicativo de fotos. Aqui está um aplicativo WPF de exemplo que tem esse recurso.
+Por exemplo, os usuários poderiam escolher seu aplicativo para compartilhar imagens do Microsoft Edge, o aplicativo de fotos. Aqui está um aplicativo de exemplo do WPF que tem esse recurso.
 
 ![compartilhar destino](images/desktop-to-uwp/share-target.png).
 
-Consulte o exemplo completo [aqui](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/ShareTarget)
+Consulte a amostra completa [aqui](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/ShareTarget)
 
 ### <a name="the-design-pattern"></a>O padrão de design
 
 Para tornar seu aplicativo um destino de compartilhamento, faça o seguinte:
 
-:one: [Adicione uma extensão de destino de compartilhamento](#share-extension)
+: um: [Adicionar uma extensão de compartilhamento de destino](#share-extension)
 
-: two: [Substituir o manipulador de eventos OnShareTargetActivated](#override)
+: dois: [Substituir o manipulador de eventos OnShareTargetActivated](#override)
 
-: three: [Adicionar extensões de área de trabalho ao projeto UWP](#desktop-extensions)
+: três: [Adicionar extensões da área de trabalho para o projeto UWP](#desktop-extensions)
 
-: four: [Adicionar a extensão do processo de confiança total](#full-trust)
+: quatro: [Adicionar a extensão do processo de confiança total](#full-trust)
 
-: cinco: [modificar o aplicativo da área de trabalho para obter o arquivo compartilhado](#modify-desktop)
+:five: [Modificar o aplicativo da área de trabalho para obter o arquivo compartilhado](#modify-desktop)
 
 <a id="share-extension" />
 
@@ -276,7 +276,7 @@ As etapas a seguir
 
 ### <a name="add-a-share-target-extension"></a>Adicionar uma extensão de destino de compartilhamento
 
-No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução e adicione a extensão de destino de compartilhamento.
+Na **Gerenciador de soluções**, abra o **Package. appxmanifest** arquivo da embalagem do projeto em sua solução e adicione a extensão de compartilhamento de destino.
 
 ```xml
 <Extensions>
@@ -294,15 +294,15 @@ No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do pr
 </Extensions>  
 ```
 
-Forneça o nome do executável produzido pelo projeto UWP e o nome da classe de ponto de entrada. Essa marcação pressupõe que o nome do executável de seu aplicativo UWP é `ShareTarget.exe`.
+Forneça o nome do executável produzido pelo projeto UWP e o nome da classe de ponto de entrada. Essa marcação pressupõe que o nome do executável para seu aplicativo UWP é `ShareTarget.exe`.
 
-Você também precisará especificar os tipos de arquivos que poderão ser compartilhados com seu app. Neste exemplo, estamos fazendo o aplicativo da área de trabalho do [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) um destino de compartilhamento para imagens de bitmap, portanto, podemos especificar `Bitmap` para o tipo de arquivo com suporte.
+Você também precisará especificar os tipos de arquivos que poderão ser compartilhados com seu app. Neste exemplo, estamos fazendo a [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) aplicativo da área de trabalho, um destino de compartilhamento para o bitmap de imagens para que podemos especificar `Bitmap` para o tipo de arquivo com suporte.
 
 <a id="override" />
 
 ### <a name="override-the-onsharetargetactivated-event-handler"></a>Substituir o manipulador de eventos OnShareTargetActivated
 
-Substitua o manipulador de eventos **OnShareTargetActivated** na classe **App** do seu projeto UWP.
+Substituir a **OnShareTargetActivated** manipulador de eventos na **aplicativo** classe do seu projeto UWP.
 
 Esse manipulador de eventos é chamado quando os usuários escolhem seu app para compartilhar seus arquivos.
 
@@ -329,21 +329,21 @@ private async void shareWithDesktopApplication(ShareOperation shareOperation)
 }
 ```
 
-Nesse código, podemos salvar a imagem que está sendo compartilhada pelo usuário em uma pasta de armazenamento local de aplicativos. Mais tarde, podemos modificará o aplicativo da área de trabalho para imagens de recepção na mesma pasta. O aplicativo da área de trabalho pode fazer isso porque ele está incluído no mesmo pacote em que o aplicativo UWP.
+Nesse código, vamos salvar a imagem que está sendo compartilhada pelo usuário em uma pasta de armazenamento local de aplicativos. Posteriormente, modificaremos o aplicativo de desktop para imagens de pull da mesma pasta. O aplicativo da área de trabalho pode fazer isso porque ele está incluído no mesmo pacote que o aplicativo UWP.
 
 <a id="desktop-extensions" />
 
-### <a name="add-desktop-extensions-to-the-uwp-project"></a>Adicionar extensões de área de trabalho ao projeto UWP
+### <a name="add-desktop-extensions-to-the-uwp-project"></a>Adicionar extensões da área de trabalho para o projeto UWP
 
-Adicione a extensão de **Extensões de área de trabalho do Windows para a UWP** ao projeto de aplicativo UWP.
+Adicione a **extensões de área de trabalho do Windows para a UWP** extensão para o projeto de aplicativo UWP.
 
 ![extensão da área de trabalho](images/desktop-to-uwp/desktop-extensions.png)
 
 <a id="full-trust" />
 
-### <a name="add-the-full-trust-process-extension"></a>Adicione a extensão do processo de confiança total
+### <a name="add-the-full-trust-process-extension"></a>Adicionar a extensão do processo de confiança total
 
-No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução e, em seguida, adicione a extensão do processo de confiança total ao lado a extensão de destino de compartilhamento que você adicionar esse arquivo anteriormente.
+Na **Gerenciador de soluções**, abra o **Package. appxmanifest** arquivo de projeto de empacotamento em sua solução e, em seguida, adicione a extensão do processo de confiança total ao lado da extensão de compartilhamento de destino que você adicione isso arquivo anteriormente.
 
 ```xml
 <Extensions>
@@ -353,19 +353,19 @@ No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do pr
 </Extensions>  
 ```
 
-Essa extensão permitem que o aplicativo UWP iniciar o aplicativo da área de trabalho para o qual você gostaria de compartilhamento de um arquivo. No exemplo, nos referimos para o executável do aplicativo da área de trabalho [PhotoStoreDemo WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) .
+Essa extensão permitirá que o aplicativo UWP iniciar o aplicativo da área de trabalho ao qual você gostaria que o compartilhamento de um arquivo. No exemplo, chamamos o executável dos [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) aplicativo da área de trabalho.
 
 <a id="modify-desktop" />
 
 ### <a name="modify-the-desktop-application-to-get-the-shared-file"></a>Modificar o aplicativo da área de trabalho para obter o arquivo compartilhado
 
-Modificar seu aplicativo da área de trabalho para encontrar e processar o arquivo compartilhado. Neste exemplo, o aplicativo UWP armazenou o arquivo compartilhado na pasta de dados de aplicativo local. Portanto, podemos seria modificar o aplicativo da área de trabalho do [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) para fotos de recepção dessa pasta.
+Modifique seu aplicativo da área de trabalho para localizar e processar o arquivo compartilhado. Neste exemplo, o aplicativo UWP armazenou o arquivo compartilhado na pasta de dados do aplicativo local. Portanto, podemos modificaria o [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) aplicativo de desktop para fotos pull dessa pasta.
 
 ```csharp
 Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-Para abrir instâncias do aplicativo da área de trabalho que já estão pelo usuário, também pode manipular o evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) e passar o caminho para o local do arquivo. Dessa forma todas as instâncias do aplicativo da área de trabalho mostrará a foto compartilhada.
+Instâncias do aplicativo da área de trabalho que já estão abertos pelo usuário, podemos também pode tratar a [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) evento e transmita o caminho para o local do arquivo. Dessa forma, todas as instâncias abertas do aplicativo da área de trabalho mostrará as fotos compartilhadas.
 
 ```csharp
 ...
@@ -407,11 +407,11 @@ Consulte o exemplo completo [aqui](https://github.com/Microsoft/Windows-Packagin
 
 Para criar um serviço em segundo plano, faça o seguinte:
 
-:one: [Implementar a tarefa em segundo plano](#implement-task)
+: um: [Implementar a tarefa em segundo plano](#implement-task)
 
-:two: [Configurar a tarefa em segundo plano](#configure-background-task)
+: dois: [Configurar a tarefa em segundo plano](#configure-background-task)
 
-:three: [Registrar a tarefa em segundo plano](#register-background-task)
+: três: [Registre-se a tarefa em segundo plano](#register-background-task)
 
 <a id="implement-task" />
 
@@ -458,7 +458,7 @@ public sealed class SiteVerifier : IBackgroundTask
 
 ### <a name="configure-the-background-task"></a>Configurar a tarefa em segundo plano
 
-No designer de manifesto, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução.
+No designer de manifesto, abra o **Package. appxmanifest** arquivo de projeto de empacotamento da solução.
 
 Na guia **Declarações**, adicione uma declaração **Tarefas em segundo plano**.
 
@@ -502,7 +502,7 @@ public void RegisterBackgroundTask(String triggerName)
 
 ## <a name="support-and-feedback"></a>Suporte e comentários
 
-**Encontrar respostas para suas dúvidas**
+**Encontre respostas para suas perguntas**
 
 Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 

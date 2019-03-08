@@ -1,5 +1,5 @@
 ---
-Description: Use chaseable tile notifications to find out what your app displayed on its Live Tile when the user clicked it.
+Description: Use as notificações de bloco rastreáveis para descobrir o que o app exibiu no Bloco Dinâmico quando o usuário clicou nele.
 title: Notificações de blocos rastreáveis
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Chaseable tile notifications
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, blocos rastreáveis, blocos dinâmicos, notificações de bloco rastreáveis
 ms.localizationpriority: medium
 ms.openlocfilehash: 90a43ad803ca4cfe4a7403117c268344d1192d74
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937996"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592641"
 ---
 # <a name="chaseable-tile-notifications"></a>Notificações de blocos rastreáveis
 
@@ -21,10 +21,10 @@ As notificações de bloco rastreáveis permitem que você determine quais notif
 Por exemplo, um app de notícias pode usar esse recurso para determinar qual notícia o Bloco Dinâmico estava exibindo quando o usuário o inicializou; isso pode garantir que a notícia seja exibida com destaque para que o usuário consiga encontrá-la. 
 
 > [!IMPORTANT]
-> **Requer a Atualização de Aniversário**: para usar notificações de bloco rastreáveis com C#, C++ ou aplicativos UWP com base em VB, você deve usar o SDK 14393 e executar o build 14393 ou posterior. Para aplicativos UWP com base em JavaScript, você deve usar o SDK 17134 e executar novamente o build 17134 ou posterior. 
+> **Requer a atualização de aniversário do**: Para usar notificações de bloco chaseable com C#, C++ ou UWP baseados em VB aplicativos, você deve ter como destino do SDK do 14393 e executar o build 14393 ou superior. Para aplicativos UWP com base em JavaScript, você deve usar o SDK 17134 e executar novamente o build 17134 ou posterior. 
 
 
-> **APIs importantes**: [propriedade LaunchActivatedEventArgs.TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [classe TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
+> **APIs importantes**: [Propriedade LaunchActivatedEventArgs.TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [TileActivatedInfo classe](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
 
 
 ## <a name="how-it-works"></a>Como funciona
@@ -40,7 +40,7 @@ As notificações de bloco rastreáveis são normalmente usadas quando você est
 
 ## <a name="what-to-do-with-a-chaseable-tile-notifications"></a>O que fazer com uma notificação de bloco rastreável
 
-O mais importante a ser observado é que, na maioria dos cenários, **você NÃO deve navegar diretamente para a notificação específica** que estava no Bloco quando o usuário clicou nele. O Bloco Dinâmico é usado como um ponto de entrada para seu aplicativo. Dois cenários são possíveis quando um usuário clica no Bloco Dinâmico: (1) ele queria iniciar o app normalmente ou (2) queria ver mais informações sobre uma notificação específica que estava no Bloco Dinâmico. Como não há nenhuma maneira de o usuário dizer explicitamente qual comportamento ele deseja, a experiência ideal é **iniciar o app normalmente, certificando-se de que a notificação vista pelo usuário pode ser descoberta facilmente**.
+O mais importante a ser observado é que, na maioria dos cenários, **você NÃO deve navegar diretamente para a notificação específica** que estava no Bloco quando o usuário clicou nele. O Bloco Dinâmico é usado como um ponto de entrada para seu aplicativo. Pode haver dois cenários quando um usuário clica em seu bloco dinâmico: (1) que quisessem iniciar seu aplicativo normalmente ou (2) eles queriam ver mais informações sobre uma notificação específica que estava no Live Tile. Como não há nenhuma maneira de o usuário dizer explicitamente qual comportamento ele deseja, a experiência ideal é **iniciar o app normalmente, certificando-se de que a notificação vista pelo usuário pode ser descoberta facilmente**.
 
 Por exemplo, clicar no Bloco Dinâmico do app MSN Notícias iniciará o app normalmente: ele exibirá a home page ou qualquer artigo que o usuário tenha lido anteriormente. No entanto, na home page, o app garante que a notícia lida no Bloco Dinâmico poderá ser facilmente descoberta. Dessa forma, os dois cenários têm suporte: o cenário em que você simplesmente deseja a inicialização/retomada do app e o cenário em que você deseja exibir a notícia específica.
 
@@ -111,7 +111,7 @@ O objeto LaunchActivatedEventArgs tem uma propriedade que habilita notificaçõe
 
 O [objeto TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo) contém uma propriedade chamada [RecentlyShownNotifications](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo.RecentlyShownNotifications), que contém uma lista de notificações exibida no bloco nos últimos 15 minutos. O primeiro item na lista representa a notificação atual do bloco, enquanto os itens subsequentes representam as notificações que o usuário viu antes da notificação atual. Se o bloco foi limpo, essa lista estará vazia.
 
-Cada um Argumentsproperty ShownTileNotificationhas. O Argumentsproperty será inicializado com o argumentsstring de sua carga de notificação de bloco ou nulo se a carga não incluiu o argumentsstring.
+Cada ShownTileNotification tem uma propriedade de argumentos. A propriedade argumentos será inicializada com a cadeia de caracteres de argumentos de sua carga de notificação de bloco ou nulo se o seu conteúdo não inclui a cadeia de caracteres de argumentos.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs args)

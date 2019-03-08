@@ -8,20 +8,20 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 00d6c16ecaa64abf7d83154fdb864671dbff3eae
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936278"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57643481"
 ---
 # <a name="hlsl-streaming-resources-exposure"></a>Exposição de recursos de streaming HLSL
 
 
-Uma sintaxe específica da Microsoft High Level Shader Language (HLSL) é necessária para dar suporte a recursos de streaming no [Modelo de Sombreador 5](https://msdn.microsoft.com/library/windows/desktop/ff471356).
+Uma sintaxe específica da Microsoft HLSL High Level Shader Language (HLSL) é necessária para dar suporte a recursos de streaming no [Modelo de sombreador 5](https://msdn.microsoft.com/library/windows/desktop/ff471356).
 
 A sintaxe HLSL para o Modelo de Sombreador 5 é permitida apenas em dispositivos com suporte a recursos de streaming. Cada método HLSL relevante para streaming de recursos na tabela a seguir aceita um (feedback) ou dois (vinculação e feedback nesta ordem) parâmetros opcionais adicionais. Por exemplo, um método de **Amostra** é:
 
-**Amostra(amostra, local \[, deslocamento \[, vinculação \[, feedback\] \] \])**
+**Exemplo (amostra, localização \[, deslocamento \[, clamp \[, comentários\] \] \])**
 
 Um exemplo de um método de **Amostra** é [**Texture2D.Sample(S,float,int,float,uint)**](https://msdn.microsoft.com/library/windows/desktop/dn393787).
 
@@ -33,9 +33,9 @@ O parâmetro de feedback é uma variável **uint** que você pode fornecer para 
 
 Veja aqui a sintaxe de [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083):
 
-**bool CheckAccessFullyMapped(em uint FeedbackVar);**
+**bool CheckAccessFullyMapped(in uint FeedbackVar);**
 
-[**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083) interpreta o valor de *FeedbackVar* e retorna true se todos os dados que estão sendo acessados foram mapeados no recurso; caso contrário, **CheckAccessFullyMapped** retorna false.
+[**CheckAccessFullyMapped** ](https://msdn.microsoft.com/library/windows/desktop/dn292083) interpreta o valor de *FeedbackVar* e retorna true se todos os dados que está sendo acessados foi mapeada no recurso; caso contrário, **CheckAccessFullyMapped**retorna false.
 
 Se o parâmetro de feedback ou vinculação estiver presente, o compilador emite uma variante de instrução básica. Por exemplo, o exemplo de um recurso de streaming gera a instrução `sample_cl_s`.
 
@@ -93,7 +93,7 @@ Esta é a tabela resumida dos métodos HLSL que são alterados para dar suporte 
 <p>SampleLevel</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[RW]Texture1D</p>
+<td align="left"><p>[RW] Texture1D</p>
 <p>[RW]Texture1DArray</p>
 <p>[RW]Texture2D</p>
 <p>Texture2DMS</p>
@@ -113,7 +113,7 @@ Esta é a tabela resumida dos métodos HLSL que são alterados para dar suporte 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Acesso pipeline aos recursos de streaming](pipeline-access-to-streaming-resources.md)
+[Pipeline de acesso a recursos de streaming](pipeline-access-to-streaming-resources.md)
 
  
 

@@ -1,5 +1,5 @@
 ---
-Description: Used to select or deselect action items. Can be used for a single list item or for multiple list items.
+Description: Usadas para selecionar ou desmarcar itens de ação. Podem ser usadas para um item de lista único ou vários itens de lista.
 title: Caixas de seleção
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
@@ -13,11 +13,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a13c0c3d0e91a3932b4f9a26e564fbf364e5551
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037118"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648891"
 ---
 # <a name="check-boxes"></a>Caixas de seleção
 
@@ -25,12 +25,12 @@ ms.locfileid: "9037118"
 
 Uma caixa de seleção é usada para marcar ou desmarcar itens de ação. Ela pode ser usada para um único item ou para uma lista de vários itens que um usuário pode escolher. O controle possui três estados de seleção: não selecionado, selecionado e indeterminado. Use o estado indeterminado quando uma coleção de subopções tiver tanto o estado não selecionado quanto o estado selecionado.
 
-> **APIs importantes**: [classe CheckBox](https://msdn.microsoft.com/library/windows/apps/br209316), [evento Checked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [propriedade IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
+> **APIs importantes**: [Classe de caixa de seleção](https://msdn.microsoft.com/library/windows/apps/br209316), [eventos marcados](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [propriedade IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
 
 ![Exemplo de estados de caixa de seleção](images/templates-checkbox-states-default.png)
 
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use uma **única caixa de seleção** para uma opção de binário Sim/Não, como com um cenário de logon do tipo "Memorizar minhas informações?" ou com termos de um contrato de serviço.
 
@@ -58,8 +58,8 @@ Ambos os controles de **caixa de seleção** e **botão de opção** permitem qu
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/CheckBox">abrir o aplicativo e ver o CheckBox em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Baixe o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obter o código-fonte (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -185,7 +185,7 @@ private void toppingsCheckbox_Click(object sender, RoutedEventArgs e)
 
 O controle CheckBox herda de [ToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.aspx) e pode ter três estados: 
 
-Estado | Propriedade | Value
+Estado | Propriedade | Valor
 ------|----------|------
 marcado | IsChecked | **true** 
 desmarcado | IsChecked | **false** 
@@ -282,7 +282,7 @@ private void SetCheckedState()
 -   Verifique se a finalidade e o estado atual da caixa de seleção estão claros.
 -   Limite o conteúdo do texto da caixa de seleção a no máximo duas linhas.
 -   Formule o rótulo da caixa de seleção como uma afirmação de que a marca de seleção implica em verdadeiro, e a falta dela, em falso.
--   Use a fonte padrão, a menos que as diretrizes da marca o orientem de outra forma.
+-   Use fonte padrão, a menos que as diretrizes da marca o orientem de outra forma.
 -   Se o conteúdo do texto for dinâmico, leve em consideração como o controle será redimensionado e o que acontecerá com a aparência ao seu redor.
 -   Se houver duas ou mais opções mutuamente exclusivas para escolha, considere usar [botões de opção](radio-button.md).
 -   Não coloque dois grupos de caixas de seleção próximos um do outro. Use rótulos para separar os grupos.
@@ -294,16 +294,16 @@ private void SetCheckedState()
 
     ![Uma caixa de seleção indeterminada](images/checkbox4_spicy.png)
 
-    Em vez disso, use um grupo de botões de opção com três opções: Não temperado, Temperado e Extra temperado.
+    Em vez disso, use um grupo de botões de opção que tem três opções: Não spicy Spicy e Extra spicy.
 
-    ![Grupo de botões de opção com três opções: Não temperado, Temperado e Extratemperado](images/spicyoptions.png)
+    ![Grupo de botões de opção com três opções: Não spicy Spicy e Extra spicy](images/spicyoptions.png)
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Classe CheckBox](https://msdn.microsoft.com/library/windows/apps/br209316) 
+- [Classe de caixa de seleção](https://msdn.microsoft.com/library/windows/apps/br209316) 
 - [Botões de opção](radio-button.md)
 - [Switch de alternância](toggles.md)

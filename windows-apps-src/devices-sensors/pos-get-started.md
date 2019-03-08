@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 518529fecff9f25a83a03847b1623bf9f09a8145
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115996"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661151"
 ---
 # <a name="getting-started-with-point-of-service"></a>Introdução ao Ponto de Serviço
 
@@ -152,7 +152,7 @@ catch (Exception ex)
 ```
 
 ### <a name="retaining-the-device"></a>Retenção do dispositivo
-Ao usar um dispositivo de Ponto de Serviço em uma rede ou conexão Bluetooth, talvez você queira compartilhar o dispositivo com outros aplicativos na rede. (Para obter mais informações sobre isso, consulte [Sharing Devices](#sharing-a-device-between-apps).) Em outros casos, pode ser que você queira manter o dispositivo para uso prolongado. Este exemplo mostra como manter um scanner de código de barras declarado depois que outro aplicativo solicitou que o dispositivo seja lançado.
+Ao usar um dispositivo de Ponto de Serviço em uma rede ou conexão Bluetooth, talvez você queira compartilhar o dispositivo com outros aplicativos na rede. (Para obter mais informações sobre isso, consulte [compartilhamento dispositivos](#sharing-a-device-between-apps).) Em outros casos, convém manter o dispositivo para uso prolongado. Este exemplo mostra como manter um scanner de código de barras declarado depois que outro aplicativo solicitou que o dispositivo seja lançado.
 
 ```Csharp
 claimedBarcodeScanner.ReleaseDeviceRequested += claimedBarcodeScanner_ReleaseDeviceRequested;
@@ -207,10 +207,10 @@ if (claimedBarcodeScanner != null)
 > [!NOTE]
 > As classes de dispositivos de Ponto de Serviço declarados e não declarados implementam [Interface IClosable](https://docs.microsoft.com/uwp/api/windows.foundation.iclosable). Se um dispositivo for conectado a um aplicativo por meio de rede ou bluetooth, os objetos declarados e não declarados devem ser descartados antes que outro aplicativo possa se conectar.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 + [Exemplo de scanner de código de barras](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
-+ [Exemplo de caixa registradora]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
-+ [Exemplo de display de balcão](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)
-+ [Exemplo de leitor de tarjas magnéticas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MagneticStripeReader)
-+ [Exemplo de impressora de Ponto de Serviço](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PosPrinter)
++ [Exemplo de gaveta de pagamento à vista]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
++ [Exemplo de exibição de linha](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)
++ [Amostra de leitor magnética](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MagneticStripeReader)
++ [Exemplo de POSPrinter](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PosPrinter)
 

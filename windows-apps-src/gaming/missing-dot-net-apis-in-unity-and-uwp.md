@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, .net, unity
 ms.localizationpriority: medium
 ms.openlocfilehash: 247761f47b578099bf8672d9e1b2469e6506682e
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116075"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641781"
 ---
-# <a name="missing-net-apis-in-unity-and-uwp"></a>.NET APIs ausentes no Unity e na UWP
+# <a name="missing-net-apis-in-unity-and-uwp"></a>APIs .NET ausentes no Unity e na UWP
 
 Ao criar um jogo UWP usando o .NET, você pode descobrir que algumas APIs que você poderia usar no editor do Unity ou em um jogo de computador autônomo não estão presentes para UWP. Isso ocorre porque o .NET para aplicativos UWP inclui um subconjunto dos tipos fornecidos no .NET Framework completo para cada namespace.
 
-Além disso, alguns mecanismos de jogos usam diferentes versões do .NET que não são totalmente compatíveis com o .NET para UWP, como o Mono do Unity. Por isso, quando você estiver escrevendo seu jogo, tudo poderá estar funcionando bem no editor, mas, quando você começar a realizar a compilação para UWP, erros como este poderão aparecer: **O tipo ou namespace 'Formatters' não existe no namespace 'System.Runtime.Serialization' (há uma referência de assembly ausente?)**
+Além disso, alguns mecanismos de jogos usam diferentes versões do .NET que não são totalmente compatíveis com o .NET para UWP, como o Mono do Unity. Portanto, quando você estiver escrevendo seu jogo, tudo o que pode funcionar bem no editor, mas quando você vai criar para UWP, você poderá receber erros como este: **Os namespace ou tipo 'formatadores' não existe no namespace 'Serialization' (uma referência de assembly está faltando?)**
 
-Felizmente, o Unity fornece algumas dessas APIs ausentes como métodos de extensão e tipos de substituição, que são descritas em [Plataforma Universal do Windows: tipos .NET ausentes no back-end de script do .NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html). No entanto, se a funcionalidade que você precisa não estiver aqui, [Visão geral do .NET para apps do Windows 8.x](https://msdn.microsoft.com/library/windows/apps/br230302) aborda maneiras de você converter o código para usar WinRT ou .NET nas APIs UWP. (Ele aborda o Windows 8, mas também aplica-se aos aplicativos UWP do Windows 10.)
+Felizmente, o Unity fornece algumas dessas APIs ausentes que métodos de extensão e tipos de substituição, que são descritos em [plataforma Universal do Windows: Não tem os tipos de .NET no script de back-end do .NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html). No entanto, se a funcionalidade que você precisa não estiver aqui, [Visão geral do .NET para apps do Windows 8.x](https://msdn.microsoft.com/library/windows/apps/br230302) aborda maneiras de você converter o código para usar WinRT ou .NET nas APIs UWP. (Ele aborda o Windows 8, mas também aplica-se aos aplicativos UWP do Windows 10.)
 
 ## <a name="net-standard"></a>.NET Standard
 
@@ -43,7 +43,7 @@ Por fim, você deve definir **Api Compatibility Level** para a versão do .NET n
 
 Em geral, em **Scripting Runtime Version** e **Api Compatibility Level**, você deve selecionar a versão mais recente disponível para ter mais compatibilidade com o .NET Framework e, assim, permitir que você use mais .NET APIs.
 
-![Configuração: Scripting Runtime Version; Scripting Backend; Api Compatibility Level](images/missing-dot-net-apis-in-unity-1.png)
+![Configuração: Versão de tempo de execução do script; Script de back-end; Nível de compatibilidade de API](images/missing-dot-net-apis-in-unity-1.png)
 
 ## <a name="platform-dependent-compilation"></a>Compilação dependente de plataforma
 
@@ -60,7 +60,7 @@ Use as seguintes diretivas para compilar o código somente quando ele estiver se
 ```
 
 > [!NOTE]
-> `NETFX_CORE` Serve apenas para verificar se você está compilando o código C# no back-end de script do .NET. Se você estiver usando outro back-end de script, como IL2CPP, use `UNITY_WSA_10_0`.
+> `NETFX_CORE` serve para verificar se você estiver compilando C# código contra o back-end de script de .NET. Se você estiver usando outro back-end de script, como IL2CPP, use `UNITY_WSA_10_0`.
 
 Para obter a lista completa de diretivas de compilação dependente de plataforma, consulte [Compilação dependente de plataforma](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html).
 
@@ -142,8 +142,8 @@ Alguns dos namespaces **System&period;Net.***, como [System.Net.Mail](https://do
 
 No caso de **System.Net.Mail**, use o namespace [Windows.ApplicationModel.Email](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email). Consulte [Enviar email](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) para obter mais informações.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-* [Plataforma Universal do Windows: tipos .NET ausentes no back-end de script do .NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)
-* [Visão geral do .NET para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/br230302)
+* [Plataforma universal do Windows: Tipos de .NET ausentes no script de back-end do .NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)
+* [.NET para visão geral de aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/br230302)
 * [Guias de portabilidade de UWP do Unity](https://unity3d.com/partners/microsoft/porting-guides)

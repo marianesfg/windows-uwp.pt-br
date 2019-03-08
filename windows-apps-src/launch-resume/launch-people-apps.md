@@ -1,5 +1,5 @@
 ---
-title: Iniciar o aplicativo Pessoas
+title: Iniciar o app Pessoas
 description: Este tópico descreve o esquema de URI ms-people. Seu app pode usar esse esquema de URI para iniciar o app Pessoas para ações específicas.
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
 ms.date: 02/08/2017
@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ab10acab42ab3f03121a7c5a462cb651b0f3f31b
-ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9014701"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595561"
 ---
 # <a name="launch-the-people-app"></a>Iniciar o app Pessoas
 
-Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo Pessoas para ações específicas.
+Este tópico descreve o **pessoas ms:** Esquema de URI. Seu app pode usar esse esquema de URI para iniciar o app Pessoas para ações específicas.
 
-## <a name="ms-people-uri-scheme-reference"></a>Referência do esquema de URI ms-people:
+## <a name="ms-people-uri-scheme-reference"></a>ms-people: Referência de esquema URI
 
 <table>
 <colgroup>
@@ -58,7 +58,7 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar 
 </div>
 <div> 
 </div></td>
-<td align="left">MS-people: viewcontact?ContactId =&lt;contactid&gt;&amp;AggregatedId =&lt;aggid&gt;&amp;PhoneNumber = &lt;phonenum&gt;&amp;Email =&lt;email&gt;&amp;ContactName =&lt;nome&gt;&amp;Contact =&lt;contactobj&gt;</td>
+<td align="left">ms-people:viewcontact?ContactId=&lt;contactid&gt;&amp;AggregatedId=&lt;aggid&gt;&amp;PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;&amp;Contact=&lt;contactobj&gt;</td>
 </tr>
 <tr class="odd">
 <td align="left">Inicia uma página para salvar contato no aplicativo Pessoas a fim de salvar o contato indicado com o número de telefone ou o endereço de email fornecido.
@@ -213,7 +213,7 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><b>Company</b></td>
+<td align="left"><b>Empresa</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Nome da empresa do contato.</p></td>
 
@@ -291,7 +291,7 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar 
 </tr>
 
 <tr class="even">
-<td align="left"><b>Observações</b></td>
+<td align="left"><b>Notas</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Observações sobre o contato.</p></td>
 </tr>
@@ -315,13 +315,13 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar 
 </tr>
 
 <tr class="even">
-<td align="left"><b>Title</b></td>
+<td align="left"><b>Título</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Título do contato.</p></td>
 </tr>
 
 <tr class="odd">
-<td align="left"><b>Website</b></td>
+<td align="left"><b>Site</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Site do contato.</p></td>
 </tr>
@@ -363,7 +363,7 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar 
 </tr>
 
 <tr class="even">
-<td align="left"><b>WorkPhone</b></td>
+<td align="left"><b>Telefone comercial</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Número de telefone do trabalho do contato.</p></td>
 </tr>

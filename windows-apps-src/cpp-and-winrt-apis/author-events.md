@@ -6,27 +6,27 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, evento
 ms.localizationpriority: medium
 ms.openlocfilehash: ace1c276b878d07f5750483740dfe90ed8cb6211
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042358"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644481"
 ---
 # <a name="author-events-in-cwinrt"></a>Criar eventos com C++/WinRT
 
 Este tópico demonstra como criar um componente do Tempo de Execução do Windows que contém uma classe de tempo de execução representando uma conta bancária, que gera um evento quando seu saldo entra em débito. Ele também demonstra um aplicativo principal que consome a classe de tempo de execução de conta bancária, chama uma função para ajustar o saldo e manipula todos os eventos resultantes.
 
 > [!NOTE]
-> Para obter informações sobre como instalar e usar o [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) extensão do Visual Studio (VSIX) (que oferece suporte ao modelo de projeto) consulte [suporte do Visual Studio para C++ c++ WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para obter informações sobre como instalar e usar o [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) consulte Visual Studio VSIX (extensão) (que fornece suporte de modelo de projeto) [suporte do Visual Studio para C + + c++ /CLI WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 > [!IMPORTANT]
 > Para conceitos e termos essenciais que dão suporte ao entendimento de como consumir e criar classes de tempo de execução com C++/WinRT, consulte [Consumir APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).
 
 ## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Criar um componente do Tempo de Execução do Windows (BankAccountWRC)
 
-Comece criando um novo projeto no Microsoft Visual Studio. Criar um **Visual C++** > **Universal do Windows** > **componente do Windows Runtime (C++ c++ WinRT)** de projeto e nomeie- *BankAccountWRC* (para "conta bancária componente do tempo de execução do Windows").
+Comece criando um novo projeto no Microsoft Visual Studio. Criar uma **Visual C++** > **Windows Universal** > **componente de tempo de execução do Windows (C + + c++ /CLI WinRT)** de projeto e nomeie-  *BankAccountWRC* (para "conta bancária de componente de tempo de execução do Windows").
 
-O projeto recém-criado contém um arquivo chamado `Class.idl`. Renomeie o arquivo `BankAccount.idl` (renomear o `.idl` arquivo renomeia automaticamente o dependente `.h` e `.cpp` arquivos, também). Substitua o conteúdo do `BankAccount.idl` com a lista abaixo.
+O projeto recém-criado contém um arquivo chamado `Class.idl`. Renomear esse arquivo `BankAccount.idl` (renomeando o `.idl` arquivo renomeia automaticamente o dependente `.h` e `.cpp` arquivos demais). Substitua o conteúdo do `BankAccount.idl` com a listagem a seguir.
 
 ```idl
 // BankAccountWRC.idl
@@ -41,9 +41,9 @@ namespace BankAccountWRC
 }
 ```
 
-Salve o arquivo. O projeto não será compilado para a conclusão no momento, mas criando agora é algo útil porque ele gera os arquivos de código de origem no qual você implementará a classe de tempo de execução de **BankAccount** . Portanto, vá em frente e crie agora (os erros de compilação que você pode esperar ver neste estágio tem a ver com `Class.h` e `Class.g.h` não foi encontrado). Durante o processo de compilação, o `midl.exe` ferramenta é executada para criar o arquivo de metadados do componente do tempo de execução do Windows (que é `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`). Em seguida, a ferramenta `cppwinrt.exe` é executada (com a opção `-component`) para gerar arquivos de código fonte para dar suporte a você na criação do componente. Esses arquivos incluem stubs para ajudar você a começar a implementar a classe de tempo de execução **BankAccount** que foi declarada em sua IDL. Esses stubs são `\BankAccountWRC\BankAccountWRC\Generated Files\sources\BankAccount.h` e `BankAccount.cpp`.
+Salve o arquivo. O projeto não será compilado até a conclusão no momento, mas criar agora é uma coisa útil porque ele gera os arquivos de código-fonte no qual você implementará o **BankAccount** classe de tempo de execução. Portanto, vá em frente e crie agora mesmo (os erros de compilação, você pode esperar ver neste estágio tem a ver com `Class.h` e `Class.g.h` não foi encontrada). Durante o processo de compilação, o `midl.exe` ferramenta é executada para criar o arquivo de metadados do componente em tempo de execução do Windows (que é `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`). Em seguida, a ferramenta `cppwinrt.exe` é executada (com a opção `-component`) para gerar arquivos de código fonte para dar suporte a você na criação do componente. Esses arquivos incluem stubs para você começar a implementar o **BankAccount** classe de tempo de execução que você declarou em seu IDL. Esses stubs são `\BankAccountWRC\BankAccountWRC\Generated Files\sources\BankAccount.h` e `BankAccount.cpp`.
 
-Clique com botão direito no nó do projeto e clique em **Abrir pasta no Explorador de arquivos**. Isso abre a pasta do projeto no Explorador de arquivos. Lá, copie os arquivos stub `BankAccount.h` e `BankAccount.cpp` da pasta `\BankAccountWRC\BankAccountWRC\Generated Files\sources\` e para a pasta que contém os arquivos de projeto, que é `\BankAccountWRC\BankAccountWRC\`e substituir os arquivos no destino. Agora, vamos abrir `BankAccount.h` e `BankAccount.cpp` e implementar nossa classe de tempo de execução. Em `BankAccount.h`, adicione dois membros privados à implementação (*não* a implementação de fábrica) de BankAccount.
+Clique com botão direito no nó do projeto e clique em **Abrir pasta no Explorador de arquivos**. Isso abre a pasta do projeto no Explorador de arquivos. Lá, copie os arquivos de stub `BankAccount.h` e `BankAccount.cpp` da pasta `\BankAccountWRC\BankAccountWRC\Generated Files\sources\` e para a pasta que contém os arquivos de projeto, que é `\BankAccountWRC\BankAccountWRC\`e substituir os arquivos no destino. Agora, vamos abrir `BankAccount.h` e `BankAccount.cpp` e implementar nossa classe de tempo de execução. Em `BankAccount.h`, adicione dois membros privados à implementação (*não* a implementação de fábrica) de BankAccount.
 
 ```cppwinrt
 // BankAccount.h
@@ -62,7 +62,7 @@ namespace winrt::BankAccountWRC::implementation
 ...
 ```
 
-Como você pode ver acima, o evento é implementado em termos de modelo de struct [**winrt::event**](/uwp/cpp-ref-for-winrt/event) parametrizado por um determinado tipo de representante.
+Como você pode ver acima, o evento é implementado em termos do [ **winrt::event** ](/uwp/cpp-ref-for-winrt/event) struct de modelo, parametrizado por um tipo específico de delegado.
 
 Em `BankAccount.cpp`, implemente as funções, conforme mostrado no exemplo de código abaixo. Em C++/WinRT, um evento declarado por IDL é implementado como um conjunto de funções sobrecarregadas (semelhante à forma como um propriedade é implementada como um par de funções get e set sobrecarregadas). Uma sobrecarga resulta no registro de um delegado e retorna um token. O outro recebe um token e revoga o registro do delegado associado.
 
@@ -93,13 +93,13 @@ Se não precisar implementar a sobrecarga do revogador do evento (para obter mai
 
 Você também pode ver acima que essa implementação da função **AdjustBalance** gera o evento **AccountIsInDebit** se o saldo ficar negativo.
 
-Se quaisquer avisos impedirem-lo de construção, resolvê-los ou defina a propriedade do projeto **C/C++** > **Geral** > **Tratar avisos como erros** **não (/ /WX-)** e compile o projeto novamente.
+Se todos os avisos impediram a construção, resolvê-los ou definir a propriedade project **C/C++** > **geral** > **tratar avisos como erros** ao **não (/ WX-)** e compile o projeto novamente.
 
 ## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>Criar um aplicativo principal (BankAccountCoreApp) para testar o componente do Tempo de Execução do Windows
 
-Agora crie um novo projeto (em sua solução `BankAccountWRC` ou em uma nova). Criar um **Visual C++** > **Universal do Windows** > **aplicativo principal (C++ c++ WinRT)** de projeto e nomeie-o *BankAccountCoreApp*.
+Agora crie um novo projeto (em sua solução `BankAccountWRC` ou em uma nova). Criar uma **Visual C++** > **Windows Universal** > **aplicativo Core (C + + c++ /CLI WinRT)** de projeto e nomeie- *BankAccountCoreApp* .
 
-Adicione uma referência e navegue até `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (ou adicione uma referência de projeto a projeto, se os dois projetos estiverem na mesma solução). Clique em **Adicionar** e, depois, em **OK**. Agora crie BankAccountCoreApp. No evento improvável que você vir um erro que o arquivo de carga `readme.txt` não existir, exclua esse arquivo do projeto do componente de tempo de execução do Windows, reconstrua-o e recompile BankAccountCoreApp.
+Adicionar uma referência e, em seguida, navegue até `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (ou adicione uma referência de projeto a projeto, se os dois projetos estão na mesma solução). Clique em **Adicionar** e, depois, em **OK**. Agora crie BankAccountCoreApp. No evento improvável que você vê um erro que o arquivo de carga `readme.txt` não existir, exclua esse arquivo de projeto do componente de tempo de execução do Windows, recriá-lo e recompilar BankAccountCoreApp.
 
 Durante o processo de compilação, a ferramenta `cppwinrt.exe` é executada para processar o arquivo `.winmd` referenciado nos arquivos de código-fonte que contêm tipos projetados para ajudar você a consumir o componente. O cabeçalho dos tipos projetados de suas classes de tempo de execução do componente&mdash;nomeado `BankAccountWRC.h`&mdash;é gerado na pasta `\BankAccountCoreApp\BankAccountCoreApp\Generated Files\winrt\`.
 
@@ -142,15 +142,15 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 };
 ```
 
-Cada vez que você clicar na janela, subtraia 1 do saldo da conta bancária. Para demonstrar que o evento está sendo acionado conforme o esperado, insira um ponto de interrupção dentro da expressão lambda que está manipulando o evento **AccountIsInDebit** , execute o aplicativo e clique dentro da janela.
+Cada vez que você clicar na janela, subtraia 1 do saldo da conta bancária. Para demonstrar que o evento está sendo gerado conforme o esperado, coloque um ponto de interrupção dentro da expressão lambda que está manipulando o **AccountIsInDebit** evento, execute o aplicativo e clique dentro da janela.
 
-## <a name="parameterized-delegates-and-simple-signals-across-an-abi"></a>Representantes parametrizados e sinais simples, entre uma ABI
+## <a name="parameterized-delegates-and-simple-signals-across-an-abi"></a>Delegados com parâmetros e sinaliza simples, em uma ABI
 
-Se o evento deve ser acessível em uma interface binária do aplicativo (ABI)&mdash;como entre um componente e seu aplicativo consumo&mdash;, em seguida, o evento deve usar um tipo de representante de tempo de execução do Windows. O exemplo acima usa o tipo de delegado [**Windows::Foundation::EventHandler\<T\>**](/uwp/api/windows.foundation.eventhandler) tempo de execução do Windows. [**TypedEventHandler\<TSender, TResult\>**](/uwp/api/windows.foundation.eventhandler) é outro exemplo de um tipo de representante de tempo de execução do Windows.
+Se o evento deve ser acessível em uma interface de binária de aplicativo (ABI)&mdash;tais como entre um componente e seu aplicativo de consumo&mdash;e em seguida, o evento deve usar um tipo de delegado de tempo de execução do Windows. O exemplo acima usa a [ **Windows::Foundation::EventHandler\<T\>**  ](/uwp/api/windows.foundation.eventhandler) tipo de delegado de tempo de execução do Windows. [**TypedEventHandler\<TSender, TResult\>**  ](/uwp/api/windows.foundation.eventhandler) é outro exemplo de um tipo de delegado de tempo de execução do Windows.
 
-Os parâmetros de tipo para esses tipos de dois delegado têm cruzar a ABI, portanto, os parâmetros de tipo devem ser tipos de tempo de execução do Windows, também. Isso inclui classes de tempo de execução de primeiro e de terceiros, bem como tipos primitivos, como números e cadeias de caracteres. O compilador ajuda você com um erro "*deve ser tipo WinRT*" Se você esquecer essa restrição.
+Os parâmetros de tipo para esses tipos de dois delegado têm cruzar a ABI, portanto, os parâmetros de tipo devem ser tipos do tempo de execução do Windows, também. Isso inclui classes de tempo de execução do primeiro e terceiro, bem como tipos primitivos, como números e cadeias de caracteres. O compilador ajuda você com um "*deve ser do tipo de WinRT*" erro se você esquecer essa restrição.
 
-Se você não precisará passar os parâmetros ou argumentos com seu evento, você pode definir seu próprio tipo de representante de tempo de execução do Windows simples. O exemplo a seguir mostra uma versão mais simples da classe de tempo de execução **BankAccount** . Ele declara um tipo de representante chamado **SignalDelegate** e, em seguida, que ele usa para acionar um evento em vez de um evento com um parâmetro de tipo de sinal.
+Se você não precisar passar qualquer parâmetro ou os argumentos com seu evento, em seguida, você pode definir seu próprio tipo de delegado de tempo de execução do Windows simples. O exemplo a seguir mostra uma versão mais simples dos **BankAccount** classe de tempo de execução. Ele declara um tipo delegado chamado **SignalDelegate** e, em seguida, ele usa isso para gerar um evento de tipo de sinal em vez de um evento com um parâmetro.
 
 ```idl
 // BankAccountWRC.idl
@@ -242,11 +242,11 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 };
 ```
 
-## <a name="parameterized-delegates-simple-signals-and-callbacks-within-a-project"></a>Representantes parametrizados, sinais simples e retornos de chamada dentro de um projeto
+## <a name="parameterized-delegates-simple-signals-and-callbacks-within-a-project"></a>Delegados com parâmetros, sinais simples e retornos de chamada dentro de um projeto
 
-Se o evento é usado apenas internamente dentro do C++ c++ WinRT projeto (não em binários), então você usa o modelo de struct [**winrt::event**](/uwp/cpp-ref-for-winrt/event) , mas você parametrizá-lo com C++ c++ WinRT:: delegate [**de Windows Runtime do WinRT&lt;... T&gt; **](/uwp/cpp-ref-for-winrt/delegate) modelo de struct, que é um representante eficiente, contagem de referência. Ele dá suporte a qualquer número de parâmetros, e não estão limitados a tipos de tempo de execução do Windows.
+Se o evento é usado apenas internamente no C + c++ /CLI WinRT do projeto (não em binários), em seguida, você ainda usar o [ **winrt::event** ](/uwp/cpp-ref-for-winrt/event) struct de modelo, mas você parametriza com C + + c++ /CLI do WinRT não-Windows-tempo de execução [ **winrt::delegate&lt;... T&gt;**  ](/uwp/cpp-ref-for-winrt/delegate) struct modelo, que é um delegado eficiente, contado por referência. Ele dá suporte a qualquer número de parâmetros, e eles não são limitados aos tipos de tempo de execução do Windows.
 
-Primeiro, o exemplo a seguir mostra um delegado assinatura que não usa nenhum parâmetro (essencialmente um sinal simple) e, em seguida, que aceita uma cadeia de caracteres.
+O exemplo a seguir primeiro mostra um delegado de assinatura que não usa parâmetros (basicamente, um sinal simple) e, em seguida, outro que usa uma cadeia de caracteres.
 
 ```cppwinrt
 winrt::event<winrt::delegate<>> signal;
@@ -260,7 +260,7 @@ log.add([](std::wstring const& message) { Persist(message); });
 log(L"Hello, World!");
 ```
 
-Observe como você pode adicionar ao evento tantos delegados assinantes conforme desejar. No entanto, há algumas sobrecarga associada a um evento. Se você só precisará de um retorno de chamada simple com apenas um único delegado da assinatura, você pode usar WinRT:: delegate [**&lt;... T&gt; **](/uwp/cpp-ref-for-winrt/delegate) por conta própria.
+Observe como você pode adicionar ao evento tantos delegados de assinaturas como desejar. No entanto, há alguma sobrecarga associada a um evento. Se tudo o que você precisa é um retorno de chamada simple com apenas um único delegado da assinatura e, em seguida, você pode usar [ **winrt::delegate&lt;... T&gt;**  ](/uwp/cpp-ref-for-winrt/delegate) por conta própria.
 
 ```cppwinrt
 winrt::delegate<> signalCallback;
@@ -272,17 +272,17 @@ logCallback = [](std::wstring const& message) { std::wcout << message.c_str() <<
 logCallback(L"Hello, World!");
 ```
 
-Se você estiver fazendo a portabilidade do C++ c++ /CX codebase onde eventos e delegados são usados internamente dentro de um projeto e, em seguida, **WinRT:: delegate** ajudará você a replicar esse padrão em C++ c++ WinRT.
+Se você estiver portando a partir de um c++ /CLI CX codebase onde delegados e eventos são usados internamente em um projeto, então **winrt::delegate** ajudará você a replicar esse padrão em C + + c++ /CLI WinRT.
 
 ## <a name="design-guidelines"></a>Diretrizes de design
 
-É recomendável que você passe eventos e delegados não, como parâmetros de função. A função **Adicionar** [**winrt::event**](/uwp/cpp-ref-for-winrt/event) é a única exceção, porque você deve passar um delegado nesse caso. O motivo para essa diretriz é como representantes podem levar formas diferentes em diferentes idiomas de tempo de execução do Windows (em termos de se eles oferecem suporte de registro de um cliente, ou vários). Eventos, com o modelo de vários assinante, constituem uma opção muito mais previsível e consistente.
+É recomendável que você passe eventos e não delegados, como parâmetros de função. O **adicione** função de [ **winrt::event** ](/uwp/cpp-ref-for-winrt/event) é a única exceção, porque você deve passar um delegado nesse caso. A razão para essa diretriz é porque delegados podem assumir diferentes formas em diversas linguagens de tempo de execução do Windows (em termos de se eles dão suporte a registro de um cliente ou múltiplo). Eventos, com seus vários modelos de assinante, constituem uma opção muito mais previsível e consistente.
 
-A assinatura de um representante do manipulador de eventos deve consistem em dois parâmetros: o *remetente* (**IInspectable**) e *argumentos* (alguns eventos tipo de argumento, por exemplo [**RoutedEventArgs**](/uwp/api/windows.ui.xaml.routedeventargs)).
+A assinatura para um delegado de manipulador de eventos deve consistir em dois parâmetros: *remetente* (**IInspectable**), e *args* (algum tipo de argumento de evento, por exemplo [ **RoutedEventArgs**](/uwp/api/windows.ui.xaml.routedeventargs)).
 
-Observe que essas diretrizes não necessariamente se aplicam se você estiver criando uma API interna. Embora, APIs internas geralmente se tornar públicas ao longo do tempo.
+Observe que essas diretrizes não necessariamente se aplicam se você estiver criando uma API interna. No entanto, as APIs internas geralmente se tornar públicas ao longo do tempo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Criar APIs com C++/WinRT](author-apis.md)
-* [Consumir APIs com C++/WinRT](consume-apis.md)
-* [Manejar eventos usando delegados em C++/WinRT](handle-events.md)
+* [Criar APIs com C + + c++ /CLI WinRT](author-apis.md)
+* [Consumir APIs com C + + c++ /CLI WinRT](consume-apis.md)
+* [Manipular eventos usando delegados em C + + c++ /CLI WinRT](handle-events.md)

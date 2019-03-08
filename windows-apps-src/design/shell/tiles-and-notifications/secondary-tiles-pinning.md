@@ -1,6 +1,6 @@
 ---
-Description: Learn how to pin a secondary tile to Start from your UWP app.
-title: Fixar blocos secundários em Iniciar
+Description: Saiba como fixar um bloco secundário para o início do aplicativo UWP.
+title: Fixar blocos secundários para iniciar
 label: Pin secondary tiles to Start
 template: detail.hbs
 ms.date: 05/25/2017
@@ -8,13 +8,13 @@ ms.topic: article
 keywords: windows 10, uwp, blocos secundários, fixar, fixando, guia de início rápido, exemplo de código, exemplo, secondarytile
 ms.localizationpriority: medium
 ms.openlocfilehash: 4bebee86c824242cf031503617d4a880ebbb74df
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939662"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653151"
 ---
-# <a name="pin-secondary-tiles-to-start"></a>Fixar blocos secundários em Iniciar
+# <a name="pin-secondary-tiles-to-start"></a>Fixar blocos secundários para iniciar
 
 
 Este tópico o orienta pelas etapas de criação de um bloco secundário para um aplicativo UWP e de sua fixação no menu Iniciar.
@@ -37,10 +37,10 @@ using Windows.UI.StartScreen;
 
 Blocos secundários são compostos de alguns componentes principais...
 
-* **TileId**: um identificador exclusivo que permite identificar o bloco entre outros blocos secundários.
-* **DisplayName**: o nome que você deseja mostrar no bloco.
-* **Arguments**: os argumentos que você deseja que sejam passados novamente ao aplicativo quando o usuário clicar no bloco.
-* **Square150x150Logo**: o logotipo obrigatório, exibido no bloco médio (e redimensionado para o bloco pequeno se nenhum logotipo pequeno for fornecido).
+* **TileId**: Um identificador exclusivo que permite que você identifique o bloco entre seus outros blocos secundários.
+* **DisplayName**: O nome que você deseja que apareçam no bloco.
+* **Argumentos**: Os argumentos desejar passado volta para seu aplicativo quando o usuário clica em seu bloco.
+* **Square150x150Logo**: O logotipo necessário, exibido no tamanho médio lado a lado (e redimensionado para o bloco de tamanho pequeno se nenhum logotipo pequeno fornecido).
 
 Você **DEVE** fornecer valores inicializados para todas as propriedades acima, caso contrário, obterá uma exceção.
 
@@ -67,7 +67,7 @@ SecondaryTile tile = new SecondaryTile(
 ```
 
 
-## <a name="optional-add-support-for-larger-tile-sizes"></a>Opcional: adicionar suporte a blocos de tamanhos maiores
+## <a name="optional-add-support-for-larger-tile-sizes"></a>Opcional: Adicionar suporte para tamanhos de bloco maiores
 
 Se você for exibir notificações de bloco avançadas no bloco secundário, permita que o usuário redimensione a largura e o tamanho do bloco para que ele possa ver ainda mais o conteúdo.
 
@@ -88,7 +88,7 @@ tile.VisualElements.Square44x44Logo = new Uri("ms-appx:///Assets/CityTiles/Squar
 ```
 
 
-## <a name="optional-enable-showing-the-display-name"></a>Opcional: habilitar a apresentação do nome de exibição
+## <a name="optional-enable-showing-the-display-name"></a>Opcional: Habilitar mostrando o nome de exibição
 
 Por padrão, o nome de exibição NÃO será mostrado. Para mostrar o nome de exibição em um bloco médio/largo/grande, adicione o código a seguir.
 
@@ -100,7 +100,7 @@ tile.VisualElements.ShowNameOnSquare310x310Logo = true;
 ```
 
 
-## <a name="optional-3d-secondary-tiles"></a>Opcional: blocos secundários em 3D
+## <a name="optional-3d-secondary-tiles"></a>Opcional: Blocos secundários 3D
 Você pode aprimorar o bloco secundário do Windows Mixed Reality adicionando recursos 3D. Os usuários podem colocar os blocos 3D diretamente a página inicial do Windows Mixed Reality em vez do menu Iniciar ao usar seu aplicativo em um ambiente de realidade misturada. Por exemplo, você pode criar fotoesferas 360° associadas diretamente a um aplicativo do visualizador de fotos 360° ou permitir que os usuários coloquem um modelo 3D de uma cadeira de um catálogo de móveis que abre uma página de detalhes sobre as opções de preço e cores do objeto quando selecionado. Para começar, consulte a [documentação do desenvolvedor de Realidade Misturada](https://developer.microsoft.com/windows/mixed-reality/implementing_3d_deep_links_for_your_app_in_the_windows_mixed_reality_home).
 
 
@@ -180,7 +180,7 @@ Para saber como exibir conteúdo sofisticado no bloco por meio de notificações
 ## <a name="related"></a>Relacionado
 
 * [Visão geral de blocos secundários](secondary-tiles.md)
-* [Diretriz de blocos secundários](secondary-tiles-guidance.md)
+* [Diretrizes de blocos secundários](secondary-tiles-guidance.md)
 * [Ativos de bloco](app-assets.md)
-* [Documentação sobre conteúdo de blocos](create-adaptive-tiles.md)
+* [Documentação de conteúdo do bloco](create-adaptive-tiles.md)
 * [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md)

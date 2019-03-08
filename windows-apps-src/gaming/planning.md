@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogo, planejamento, acessibilidade, nuvem, monetizar, pacote, tecnologia, conceito, aprovação
 ms.localizationpriority: medium
 ms.openlocfilehash: 47f613ff814788df947ee39590af0e01b7e3622f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945998"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653771"
 ---
 # <a name="planning-for-uwp-games"></a>Planejamento para jogos UWP
 
@@ -30,7 +30,7 @@ Esta seção fornece informações sobre o planejamento de seu jogo UWP.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="game-development-platform-guide.md">Tecnologias de jogos</a></p></td>
+<td align="left"><p><a href="game-development-platform-guide.md">Tecnologias de jogo</a></p></td>
 <td align="left"><p>Uma lista das tecnologias para ajudá-lo a desenvolver jogos.</p></td>
 </tr>
 <tr class="even">
@@ -46,7 +46,7 @@ Esta seção fornece informações sobre o planejamento de seu jogo UWP.
 <td align="left"><p>Maneiras de monetizar seu jogo.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="package-your-windows-store-directx-game.md">Empacotar seu jogo</a></p></td>
+<td align="left"><p><a href="package-your-windows-store-directx-game.md">Embalar seu jogo</a></p></td>
 <td align="left"><p>Prepare seu pacote de jogos para a Microsoft Store.</p></td>
 </tr>
 <tr class="even">

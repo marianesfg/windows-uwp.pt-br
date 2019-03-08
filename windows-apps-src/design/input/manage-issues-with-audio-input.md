@@ -1,5 +1,5 @@
 ---
-Description: Learn how to manage issues with speech-recognition accuracy caused by audio-input quality.
+Description: Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio.
 title: Gerenciar problemas com entrada de áudio
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
 label: Manage audio input issues
@@ -9,21 +9,21 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5d2c80fd30d158f0890ed70311cdf83dce2058e5
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046619"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644901"
 ---
 # <a name="manage-issues-with-audio-input"></a>Gerenciar problemas com entrada de áudio
 
 
-Saiba como gerenciar problemas na precisão do reconhecimento de fala causados pela qualidade da entrada de áudio.
+Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio.
 
 > **APIs importantes**: [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243), [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
 
 
-## <a name="assess-audio-input-quality"></a>Avaliar a qualidade da entrada de áudio
+## <a name="assess-audio-input-quality"></a>Avaliar a qualidade de entrada de áudio
 
 
 Quando o reconhecimento de fala estiver ativo, use o evento [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) de seu reconhecedor de fala para determinar se um ou mais problemas de áudio podem estar interferindo na entrada de fala. O argumento do evento ([**SpeechRecognitionQualityDegradingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn631430)) fornece a propriedade [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431), que descreve os problemas detectados com a entrada de áudio.
@@ -108,7 +108,7 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 * [Interações de controle por voz](speech-interactions.md)
 
 **Exemplos**
-* [Exemplo de reconhecimento de fala e sintetização de controle por voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

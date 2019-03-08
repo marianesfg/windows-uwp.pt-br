@@ -13,11 +13,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925608"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658591"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>Comandos contextuais para coleções e listas
 
@@ -25,7 +25,7 @@ ms.locfileid: "8925608"
 
 Muitos aplicativos contêm coleções de conteúdo na forma de listas, grades e árvores que os usuários podem manipular. Por exemplo, os usuários podem excluir, renomear, sinalizar ou atualizar os itens. Este artigo mostra como usar os comandos contextuais para implementar esses tipos de ações de maneira que fornece a melhor experiência possível para todos os tipos de entrada.  
 
-> **APIs importantes**: [interface ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand), [propriedade UIElement.ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), [interface INotifyPropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged)
+> **APIs importantes**: [Interface ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand), [propriedade UIElement.ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), [interface INotifyPropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged)
 
 ![Usar uma variedade de entradas para executar o comando de favorito](images/ContextualCommand_AddFavorites.png)
 
@@ -43,9 +43,9 @@ Esta tabela mostra alguns comandos típicos de coleção e os modos de expor ess
 | Um item favorito | Menu de contexto   | Focalizar botão      | F, Ctrl+S            | Passar o dedo para incluir nos Favoritos |
 
 
-* **Em geral, você deve disponibilizar todos os comandos de um item no [menu de contexto](menus.md) do item.** Os menus de contexto são acessíveis aos usuários, independentemente do tipo de entrada e devem conter todos os comandos contextuais que o usuário pode executar.
+* **Em geral, você deve disponibilizar todos os comandos para um item no item de [menu de contexto](menus.md).** Os menus de contexto são acessíveis aos usuários, independentemente do tipo de entrada e devem conter todos os comandos contextuais que o usuário pode executar.
 
-* **Para comandos acessados com frequência, considere o uso de aceleradores de entrada.** Os aceleradores de entrada permitem que o usuário execute ações rapidamente com base em seus dispositivos de entrada. Os aceleradores de entrada incluem:
+* **Para comandos acessados com frequência, considere usar entradas aceleradores.** Os aceleradores de entrada permitem que o usuário execute ações rapidamente com base em seus dispositivos de entrada. Os aceleradores de entrada incluem:
     - Ação de passar o dedo (acelerador de toque)
     - Puxe para atualizar dados (acelerador de toque)
     - Atalhos de teclado (acelerador de teclado)
@@ -55,7 +55,7 @@ Esta tabela mostra alguns comandos típicos de coleção e os modos de expor ess
 > [!NOTE]
 > Os usuários devem ser capazes de acessar todos os comandos de qualquer tipo de dispositivo. Por exemplo, se os comandos do seu aplicativo são expostos somente por meio de aceleradores de ponteiro do botão de foco, os usuários de toque não poderão acessá-los. No mínimo, use um menu de contexto para fornecer acesso a todos os comandos.  
 
-## <a name="example-the-podcastobject-data-model"></a>Exemplo: o modelo de dados PodcastObject
+## <a name="example-the-podcastobject-data-model"></a>Exemplo: O modelo de dados PodcastObject
 
 Para demonstrar nossas recomendações de comandos, este artigo cria uma lista de podcasts para um aplicativo de podcast. O exemplo de código demonstra como permitir que o usuário salve como "favorito" um podcast específico de uma lista.
 
@@ -238,11 +238,11 @@ O usuário pode invocar os menus de contexto usando essas "ações de contexto":
 | -------- | --------------------------------------- |
 | Mouse    | Clique com o botão direito do mouse                             |
 | Teclado | Shift+F10, botão de Menu                  |
-| Toque    | Pressionamento prolongado em item                      |
+| Touch    | Pressionamento prolongado em item                      |
 | Caneta      | Pressionamento de botão do cilindro da caneta, um pressionamento prolongado em item |
 | Gamepad  | Botão Menu                             |
 
-**Como o usuário pode abrir um menu de contexto independentemente do tipo de entrada, o menu de contexto deve conter todos os comandos contextuais disponíveis para o item de lista.**
+**Uma vez que o usuário pode abrir um menu de contexto, independentemente do tipo de entrada, seu menu de contexto deve conter todos os comandos contextuais disponíveis para o item de lista.**
 
 ### <a name="contextflyout"></a>ContextFlyout
 
@@ -370,13 +370,13 @@ Os botões exibidos no estado de foco podem ser acessados somente por meio do ti
 
 ### <a name="touch-accelerators"></a>Aceleradores de toque
 
-#### <a name="swipe"></a>Deslizar o dedo
+#### <a name="swipe"></a>Passar o dedo
 
 ![Deslizar o dedo sobre um item para revelar o comando](images/ContextualCommand_Swipe.png)
 
 Os comandos efetuados ao deslizar o dedo são aceleradores de toque que permitem aos usuários em dispositivos sensíveis ao toque executar ações comuns secundárias. Ao deslizar o dedo, os usuários podem interagir com conteúdo de maneira rápida e natural, usando as ações comuns como passar o dedo para excluir ou passar o dedo para invocar. Consulte o artigo sobre [comandos de deslizar o dedo](swipe.md) para saber mais.
 
-Para integrar o passar o dedo na sua coleção, você precisa de dois componentes: SwipeItems, que guarda os comandos; e um SwipeControl, que envolve o item e permite a interação do passar o dedo.
+Para integrar o dedo em sua coleção, você precisa de dois componentes: SwipeItems, que hospeda os comandos; e um SwipeControl, que encapsula o item e permite a interação de passar o dedo.
 
 Os SwipeItems podem ser definidos como um Recurso no PodcastUserControl. Neste exemplo, o SwipeItems contém um comando para tornar um item Favorito.
 
@@ -452,8 +452,8 @@ Para otimizar seu aplicativo para entrada de caneta, consulte o artigo [interaç
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Interface ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)
-* [Menus e menus de contexto](menus.md)
-* [Passar o dedo](swipe.md)
-* [Puxar para atualizar](pull-to-refresh.md)
-* [Interação com caneta](../input/pen-and-stylus-interactions.md)
-* [Adaptar seu aplicativo para gamepad e Xbox](../devices/designing-for-tv.md)
+* [Menus e Menus de contexto](menus.md)
+* [Passe o dedo](swipe.md)
+* [Deslizar para atualizar](pull-to-refresh.md)
+* [Interação de caneta e caneta](../input/pen-and-stylus-interactions.md)
+* [Personalize seu aplicativo para gamepad e Xbox](../devices/designing-for-tv.md)

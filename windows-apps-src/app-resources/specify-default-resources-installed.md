@@ -1,5 +1,5 @@
 ---
-Description: If your app doesn't have resources that match the particular settings of a customer device, then the app's default resources are used. This topic explains how to specify what those default resources are.
+Description: Se o app não tiver recursos que correspondam às configurações específicas de um dispositivo de cliente, os recursos padrão do app serão usados. Este tópico explica como especificar quais são esses recursos padrão.
 title: Especificar os recursos padrão usados pelo app
 template: detail.hbs
 ms.date: 11/14/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: b11f6dfec2941ae4eaa277f37de66965bd1ea4aa
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048899"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593981"
 ---
 # <a name="specify-the-default-resources-that-your-app-uses"></a>Especificar os recursos padrão usados pelo app
 
@@ -102,6 +102,6 @@ Salve e feche o arquivo, e recompile o projeto.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores](tailor-resources-lang-scale-contrast.md)
+* [Personalize seus recursos de idioma, escala, alto contraste e outros qualificadores](tailor-resources-lang-scale-contrast.md)
 * [Marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)
+* [Compilar recursos manualmente com MakePri.exe](compile-resources-manually-with-makepri.md)

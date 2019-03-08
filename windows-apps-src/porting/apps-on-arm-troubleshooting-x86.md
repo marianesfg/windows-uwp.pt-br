@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10 s, sempre conectado, emulação x86 no ARM, solução de problemas
 ms.localizationpriority: medium
 ms.openlocfilehash: 396bb0bf2c5ba5236e0e46e7b474867ffacb8c75
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938607"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589851"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>Solução de problemas de aplicativos de área de trabalho x86
 >[!IMPORTANT]
@@ -39,7 +39,7 @@ Um aplicativo pode colocar chaves de registro na exibição do registro nativo o
 ## <a name="drivers"></a>Drivers 
 Todos os drivers de modo kernel, drivers [Estrutura de Driver em Modo de Usuário (UMDF)](https://docs.microsoft.com/windows-hardware/drivers/wdf/overview-of-the-umdf) e drivers de impressão devem ser compilados para corresponder à arquitetura do SO. Se um aplicativo x86 tiver um driver, esse driver deverá ser recompilado para ARM64. O aplicativo x86 pode ser executado sem problemas em emulação. No entanto, seu driver precisa ser recompilado para ARM64 e nenhuma experiência de aplicativo que dependa do driver estará disponível. Para obter mais informações sobre a compilação do seu driver para ARM64, consulte [Criando drivers ARM64 com o WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers).
 
-## <a name="shell-extensions"></a>Extensões de shell 
+## <a name="shell-extensions"></a>Extensões de shell do 
 Aplicativos que tentam interceptar componentes do Windows ou carregar suas DLLs em processos do Windows precisarão recompilar essas DLLs para corresponder à arquitetura do sistema. ou seja, ARM64. Normalmente, eles são usados por editores de método de entrada (IMEs), tecnologias assistenciais e aplicativos de extensão do shell (por exemplo, para mostrar ícones de armazenamento em nuvem no Explorador ou um menu de contexto do botão direito do mouse). Para saber como recompilar seus aplicativos ou DLLs para ARM64, veja a postagem de blog [Visualização antecipada de suporte do Visual Studio para Windows 10 no desenvolvimento do ARM](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/). 
 
 ## <a name="debugging"></a>Depuração

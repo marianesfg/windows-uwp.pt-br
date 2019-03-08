@@ -11,17 +11,17 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c5736e917d77415eeb6df53b3fd92f7ab584884
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036898"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644921"
 ---
 # <a name="rating-control"></a>Controle de classificação
 
 O controle de classificação permite que os usuários facilmente visualizem e definam classificações que refletem o grau de satisfação com o conteúdo e serviços. Os usuários podem interagir com o controle de classificação com toque, caneta, mouse, gamepad e teclado. Diretrizes a seguir mostra como usar os recursos do controle de classificação para oferecem flexibilidade e personalização.
 
-> **APIs importantes**: [classe RatingControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.ratingcontrol)
+> **APIs importantes**: [Classe RatingControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.ratingcontrol)
 
 ![Exemplo de controle de classificações](images/rating_rs2_doc_ratings_intro.png)
 
@@ -34,7 +34,7 @@ O controle de classificação permite que os usuários facilmente visualizem e d
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RatingControl">abrir o aplicativo e ver o RatingControl em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>

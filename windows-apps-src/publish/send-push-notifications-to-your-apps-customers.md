@@ -1,5 +1,5 @@
 ---
-Description: Learn how to send notifications from Partner Center to your app to encourage groups of customers to take an action, such as rating an app or buying an add-on.
+Description: Saiba como enviar notificações do Partner Center ao seu aplicativo a fim de incentivar a grupos de clientes para executar uma ação, como um aplicativo de classificação ou comprar um complemento.
 title: Enviar notificações por push direcionadas para clientes do seu app
 ms.date: 10/31/2018
 ms.topic: article
@@ -7,17 +7,17 @@ keywords: windows 10, uwp, notificações direcionadas, notificações por push,
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9858665eaf36f5cd261dd1098b23aeecccf9179c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045775"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653211"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificações para clientes do seu aplicativo
 
 Interagir com seus clientes no momento certo e com a mensagem certa é essencial para o sucesso como um desenvolvedor de aplicativos. As notificações podem incentivar os clientes a executar uma ação, como classificar um aplicativo, comprar um complemento, experimentar um novo recurso ou baixar outro aplicativo (talvez gratuitamente com um [código promocional](generate-promotional-codes.md) fornecido por você).
 
-O [Partner Center](https://partner.microsoft.com/dashboard) fornece uma controlada por dados plataforma de envolvimento de cliente, você pode usar para enviar notificações para todos os clientes do seu aplicativo, ou direcionadas apenas a um subconjunto de clientes do seu aplicativo do Windows 10 que atendem aos critérios definidos em um cliente [ segmento](create-customer-segments.md). Você também pode criar uma notificação para ser enviada para os clientes de mais de um dos seus aplicativos.
+[Partner Center](https://partner.microsoft.com/dashboard) fornece um controlado por dados plataforma de engajamento do cliente pode usar para enviar notificações para todos os clientes do seu aplicativo, ou apenas destinado a um subconjunto de clientes do Windows 10 do seu aplicativo que atendem aos critérios que você definiu em uma [segmento de clientes](create-customer-segments.md). Você também pode criar uma notificação para ser enviado para os clientes de mais de um dos seus aplicativos.
 
 > [!IMPORTANT]
 > Essas notificações podem ser usadas somente com aplicativos UWP.
@@ -35,27 +35,27 @@ Ao considerar o conteúdo de suas notificações, tenha em mente:
 
 Em um nível superior, você precisa executar três ações para usar notificações e interagir com seus clientes.
 
-1. **Registre seu aplicativo para receber notificações por push.** Você pode fazer isso adicionando uma referência ao Microsoft Store Services SDK em seu aplicativo e, em seguida, adicionando algumas linhas de código que registra um canal de notificação entre Partner Center e seu aplicativo. Usaremos este canal para disponibilizar as notificações para seus clientes. Para obter mais detalhes, consulte [Configurar seu aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
-2. **Decida quais serão os clientes de destino.** Você pode enviar a notificação para todos os clientes do seu app, ou (para notificações criadas para um único app) para um grupo de clientes chamado um *segmento*, que você pode definir com base em critérios demográficos ou de receita. Para obter mais informações, consulte [Criar segmentos de clientes](create-customer-segments.md).
-3. **Crie o conteúdo da notificação e o envie.** Por exemplo, você pode criar uma notificação que incentive os novos clientes a classificar seu app, ou pode enviar uma notificação que promova uma oferta especial para adquirir um complemento.
+1. **Registre seu aplicativo para receber notificações por push.** Você pode fazer isso adicionando uma referência para o do Microsoft Store Services SDK em seu aplicativo e, em seguida, adicionar algumas linhas de código que registra um canal de notificação entre o Partner Center e o seu aplicativo. Usaremos este canal para disponibilizar as notificações para seus clientes. Para obter mais detalhes, consulte [Configurar seu aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+2. **Decida quais clientes-alvo.** Você pode enviar a notificação para todos os clientes do seu app, ou (para notificações criadas para um único app) para um grupo de clientes chamado um *segmento*, que você pode definir com base em critérios demográficos ou de receita. Para obter mais informações, consulte [Criar segmentos de clientes](create-customer-segments.md).
+3. **Criar seu conteúdo de notificação e enviá-las.** Por exemplo, você pode criar uma notificação de que incentiva a novos clientes para seu aplicativo ou enviar uma notificação ao promover uma oferta especial para comprar um complemento.
 
 
 ## <a name="to-create-and-send-a-notification"></a>Para criar e enviar uma notificação
 
-Siga estas etapas para criar uma notificação no Partner Center e enviá-lo para um segmento de cliente específico.
+Siga estas etapas para criar uma notificação no Partner Center e enviá-lo a um segmento de cliente específico.
 
 > [!NOTE]
-> Para que um aplicativo possa receber notificações do Partner Center, primeiro você deve chamar o método [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) em seu aplicativo para registrar seu aplicativo para receber notificações. Esse método está disponível no [Microsoft Store Services SDK](https://aka.ms/store-em-sdk). Para obter mais informações sobre como chamar esse método, incluindo um exemplo de código, consulte [Configurar o aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+> Antes de um aplicativo pode receber notificações do Partner Center, você deve primeiro chamar o [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) método em seu aplicativo para registrar seu aplicativo para receber notificações. Esse método está disponível no [Microsoft Store Services SDK](https://aka.ms/store-em-sdk). Para obter mais informações sobre como chamar esse método, incluindo um exemplo de código, consulte [Configurar o aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
-1. No [Partner Center](https://partner.microsoft.com/dashboard), expanda a seção de **interagir** e, em seguida, selecione **as notificações**.
+1. Na [Partner Center](https://partner.microsoft.com/dashboard), expanda o **acionar** seção e, em seguida, selecione **notificações**.
 2. Na página **Notificações**, selecione **Nova notificação**.
-3. Na seção **Selecionar um modelo** , escolha o [tipo de notificação](#notification-template-types) que você deseja enviar e, em seguida, clique em **Okey**.
-4. Na próxima página, use o menu suspenso para escolher um **Único aplicativo** ou **Vários aplicativos** para qual (quais) você deseja gerar uma notificação. Você pode selecionar apenas os aplicativos que foram [configurados para receber notificações usando o Microsoft Store Services SDK](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
-5. Na seção **Configurações de notificação**, escolha um **Nome** para a sua notificação e, se aplicável, escolha o **Grupo de clientes** para o qual você deseja enviar a notificação. (As notificações enviadas para vários aplicativos só podem ser enviadas para todos os clientes desses aplicativos). Se você quiser usar um segmento que você ainda não criou, selecione **Criar novo grupo de cliente**. Observe que serão necessárias 24 horas para que você possa usar um novo segmento para notificações. Para obter mais informações, consulte [Criar segmentos de clientes](create-customer-segments.md).
+3. No **selecione um modelo** , escolha o [tipo de notificação](#notification-template-types) que deseja enviar e, em seguida, clique em **Okey**.
+4. Na próxima página, use o menu suspenso para escolher um **Único aplicativo** ou **Vários aplicativos** para qual (quais) você deseja gerar uma notificação. Você pode selecionar apenas os aplicativos que foram [configurado para receber notificações usando o do Microsoft Store Services SDK](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+5. Na seção **Configurações de notificação**, escolha um **Nome** para a sua notificação e, se aplicável, escolha o **Grupo de clientes** para o qual você deseja enviar a notificação. (As notificações enviadas para vários aplicativos só podem ser enviadas a todos os clientes desses aplicativos.) Se quiser usar um segmento que ainda não foi criado, selecione **Criar novo grupo de clientes**. Observe que serão necessárias 24 horas para que você possa usar um novo segmento para notificações. Para obter mais informações, consulte [Criar segmentos de clientes](create-customer-segments.md).
 6. Se você quiser especificar quando a notificação deverá ser enviada, desmarque a caixa de seleção **Enviar a notificação imediatamente** e escolha uma data e uma hora específicas (no horário UTC para todos os clientes, a menos que você especifique o uso do fuso horário local de cada cliente).
 7. Se você quiser que a notificação expire em algum momento, limpe a caixa de seleção **Notificação nunca expira** e escolha data e hora de expiração específicas (em UTC).
-8. **Para notificações para um único aplicativo:** se você deseja filtrar os destinatários para que sua notificação seja entregue apenas à pessoas que usam certos idiomas ou que estão em um fuso horário específico, marque a caixa de seleção **Usar filtros**. Em seguida, você pode especificar as opções de idioma e/ou fuso horário que deseja usar.
-8. **Para notificações para vários aplicativos:** especificar se deseja enviar a notificação somente para o último aplicativo ativo em cada dispositivo (por cliente), ou para todos os aplicativos em cada dispositivo.
+8. **Para receber notificações para um único aplicativo:** Se você deseja filtrar os destinatários para que a notificação seja entregue apenas para pessoas que usam determinados idiomas ou que estejam em fusos horários específicos, marque a caixa de seleção **Usar filtros**. Em seguida, você pode especificar as opções de idioma e/ou fuso horário que deseja usar.
+8. **Para receber notificações para vários aplicativos:** Especifique se deseja enviar a notificação somente para o último aplicativo Active Directory em cada dispositivo (por cliente) ou para todos os aplicativos em cada dispositivo.
 10. Na seção **Conteúdo da notificação**, no menu **Idioma**, escolha os idiomas em que você deseja que sua notificação seja exibida. Para obter mais informações, consulte [Traduzir suas notificações](#translate-your-notifications).
 11. Na seção **Opções**, insira texto e configure as outras opções que desejar. Se você começou com um modelo, parte disso é fornecido por padrão, mas você pode fazer quaisquer alterações que desejar.
 
@@ -70,7 +70,7 @@ Siga estas etapas para criar uma notificação no Partner Center e enviá-lo par
     * **Adicionar consulta de imagem** (tipo de notificação do sistema interativa). Para obter mais detalhes, consulte [addImageQuery](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual#attributes-and-elements).
     * **Visual**. Uma imagem, vídeo ou som. Para obter mais detalhes, consulte [visual](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual).
     * **Entrada**/**Ação**/**Seleção** (tipo de notificação do sistema interativa). Permite que você possibilite aos usuários interagirem com a notificação. Para obter mais informações, consulte [Notificações do sistema interativas e adaptáveis](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md).
-    * **Associar** (tipo de bloco interativo). O modelo de notificação do sistema. Para obter mais detalhes, consulte [associação](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-binding).
+    * **Associar** (tipo de bloco interativo). O modelo de notificação do sistema. Para obter mais detalhes, veja [binding](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-binding).
 
     > [!TIP]
     > Tente usar o aplicativo [Visualizador de Notificações](https://www.microsoft.com/store/apps/9nblggh5xsl1) para projetar e testar os blocos adaptáveis e as notificações interativas do sistema.
@@ -82,23 +82,23 @@ Siga estas etapas para criar uma notificação no Partner Center e enviá-lo par
 
 Você pode escolher dentre uma variedade de modelos de notificação.
 
--   **Em branco (Notificação do sistema).** Comece com uma notificação do sistema vazia que você pode personalizar. Notificação do sistema é uma interface do usuário pop-up que aparece na tela para permitir que seu aplicativo se comunique com o cliente quando o cliente está em outro aplicativo, na tela inicial ou na área de trabalho.
--   **Em branco (Bloco).** Comece com uma notificação de bloco vazia que você pode personalizar. Blocos são a representação de um aplicativo na tela inicial. Os blocos são "dinâmicos", pois o conteúdo exibido se modifica em resposta às notificações.
--   **Peça classificações (Notificação do sistema).** Uma notificação do sistema que pede que seus clientes classifiquem seu aplicativo. Quando o cliente seleciona a notificação, a página de classificações da Loja para seu aplicativo é exibida.
--   **Pedir comentários (Notificação do sistema).** Uma notificação do sistema que pede que seus clientes façam comentários sobre o aplicativo. Quando o cliente seleciona a notificação, a página do Hub de Feedback do seu aplicativo é exibida.
+-   **Espaço em branco (notificação do sistema).** Comece com uma notificação do sistema vazia que você pode personalizar. Notificação do sistema é uma interface do usuário pop-up que aparece na tela para permitir que seu aplicativo se comunique com o cliente quando o cliente está em outro aplicativo, na tela inicial ou na área de trabalho.
+-   **Espaço em branco (lado a lado).** Comece com uma notificação de bloco vazia que você pode personalizar. Blocos são a representação de um aplicativo na tela inicial. Os blocos são "dinâmicos", pois o conteúdo exibido se modifica em resposta às notificações.
+-   **Peça para classificações (Toast).** Uma notificação do sistema que pede que seus clientes classifiquem seu aplicativo. Quando o cliente seleciona a notificação, a página de classificações da Loja para seu aplicativo é exibida.
+-   **Solicitar comentários (Toast).** Uma notificação do sistema que pede que seus clientes façam comentários sobre o aplicativo. Quando o cliente seleciona a notificação, a página do Hub de Feedback do seu aplicativo é exibida.
     > [!NOTE]
     > Se você escolher esse tipo de modelo, na caixa **Iniciar**, lembre-se de substituir o valor de espaço reservado {PACKAGE_FAMILY_NAME} pelo PFN (Nome da Família de Pacotes) real do seu aplicativo. Você pode encontrar o PFN do seu aplicativo na página [Identidade do aplicativo](view-app-identity-details.md) (**Gerenciamento de aplicativo** > **Identidade de aplicativo**).
 
     ![Caixa Iniciar da notificação do sistema de comentários](images/push-notifications-feedback-toast-launch-box.png)
 
--   **Promover (Notificação do sistema).** Uma notificação do sistema para promover um aplicativo diferente de sua escolha. Quando o cliente seleciona a notificação, os detalhes da listagem da Loja do outro aplicativo são exibidos.
+-   **Promover cruzada (Toast).** Uma notificação do sistema para promover um aplicativo diferente de sua escolha. Quando o cliente seleciona a notificação, os detalhes do outro aplicativo na Loja são exibidos.
     > [!NOTE]
     > Se você escolher esse tipo de modelo, na caixa **Iniciar**, lembre-se de substituir o valor de espaço reservado **{ProductId que você deseja promover aqui}** pela ID da Loja real do item que você deseja promover. Você pode encontrar a ID da Loja na página [Identidade do aplicativo](view-app-identity-details.md) (**Gerenciamento de aplicativo** > **Identidade do aplicativo**).
 
     ![Caixa Iniciar da notificação do sistema de promover](images/push-notifications-promote-toast-launch-box.png)
 
--   **Promover uma venda (Notificação do sistema).** Uma notificação do sistema que você pode usar para anunciar uma promoção para seu aplicativo. Quando o cliente seleciona a notificação, os detalhes de seu aplicativo na Loja são exibidos.
--   **Solicitação de atualização (Notificação do sistema).** Uma notificação do sistema que incentiva os clientes que estejam executando uma versão mais antiga do seu aplicativo a instalarem a versão mais recente. Quando o cliente seleciona a notificação, o app da Store é iniciado, mostrando a lista **Downloads e atualizações**. Observe que esse modelo só pode ser usado com um único app, e você não pode direcionar para um determinado segmento de clientes ou definir um tempo para enviá-lo; sempre agendaremos essa notificação para que ela seja enviada dentro de 24 horas e estamos fazendo nosso melhor esforço para termos como destino todos os usuários que ainda não estejam executando a última versão do seu app.
+-   **Promova uma venda (Toast).** Uma notificação do sistema que você pode usar para anunciar uma promoção para seu aplicativo. Quando o cliente seleciona a notificação, os detalhes de seu aplicativo na Loja são exibidos.
+-   **Solicitar atualização (Toast).** Uma notificação do sistema que incentiva os clientes que estejam executando uma versão mais antiga do seu aplicativo a instalarem a versão mais recente. Quando o cliente seleciona a notificação, o app da Store é iniciado, mostrando a lista **Downloads e atualizações**. Observe que esse modelo só pode ser usado com um único app, e você não pode direcionar para um determinado segmento de clientes ou definir um tempo para enviá-lo; sempre agendaremos essa notificação para que ela seja enviada dentro de 24 horas e estamos fazendo nosso melhor esforço para termos como destino todos os usuários que ainda não estejam executando a última versão do seu app.
 
 
 ## <a name="measure-notification-performance"></a>Avalie o desempenho das notificações
@@ -109,36 +109,36 @@ Você pode avaliar quão bem está interagindo com seus clientes por meio de cad
 ### <a name="to-measure-notification-performance"></a>Avaliar o desempenho das notificações
 
 1.  Quando você cria uma notificação, na seção **Conteúdo da notificação**, selecione a caixa de diálogo **Acompanhar taxa de inicialização do aplicativo**.
-2.  Em seu aplicativo, chame o método [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) para notificar o Partner Center que seu aplicativo foi iniciado em resposta a uma notificação de destino. Esse método é fornecido pelo Microsoft Store Services SDK. Para obter mais informações sobre como chamar esse método, consulte [configurar seu aplicativo para receber notificações do Partner Center](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+2.  Em seu aplicativo, chame o [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) método para notificar o Partner Center que seu aplicativo foi iniciado em resposta a uma notificação de destino. Esse método é fornecido pelo Microsoft Store Services SDK. Para obter mais informações sobre como chamar esse método, consulte [configurar seu aplicativo para receber notificações do Partner Center](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
 
 ### <a name="to-view-notification-performance"></a>Para exibir o desempenho de notificação
 
-Quando você tiver configurado a notificação e seu aplicativo para medir o desempenho de notificação conforme descrito acima, você pode ver o quão bem suas notificações.
+Quando você tiver configurado a notificação e o seu aplicativo para medir o desempenho de notificação conforme descrito acima, você pode ver como as notificações estão sendo executado.
 
-Para analisar os dados detalhados para cada notificação:
+Para examinar dados detalhados para cada notificação:
 
-1.  No Partner Center, expanda a seção de **interagir** e selecione **notificações**.
-2.  Na tabela de notificações existentes, selecionar **em andamento** ou **concluído**e, em seguida, examine as colunas de **taxa de entrega** e **taxa de inicialização do aplicativo** para ver o desempenho de alto nível de cada notificação.
+1.  No Centro de parceiros, expanda o **acionar** seção e selecione **notificações**.
+2.  Na tabela de notificações existentes, selecione **em andamento** ou **concluído**e, em seguida, examine o **taxa de entrega** e **taxa de inicialização do aplicativo**colunas para ver o desempenho de alto nível de cada notificação.
 3.  Para ver mais detalhes de desempenho granular, selecione um nome de notificação. Na seção **Estatísticas de entrega**, você pode exibir as informações **Contagem** e **Porcentagem** para os seguintes tipos de **Status** de notificação:
-    * **Falha**: A notificação não foi enviada por algum motivo. Isso pode acontecer, por exemplo, se ocorrer um problema no Serviço de Notificação do Windows (WNS).
+    * **Falha ao**: A notificação não foi entregue por algum motivo. Isso pode acontecer, por exemplo, se ocorrer um problema no Serviço de Notificação do Windows (WNS).
     * **Falha de expiração de canal**: A notificação não pôde ser entregue porque o canal entre o aplicativo e o Partner Center expirou. Isso pode acontecer, por exemplo, se o cliente não abre o aplicativo há muito tempo.
-    * **Enviando**: A notificação está na fila para ser enviada.
-    * **Enviada**: A notificação foi enviada.
-    * **Inicia**: A notificação foi enviada, o cliente clicou nela e o aplicativo foi aberto em resultado disso. Observe que isso apenas rastreia inicializações de aplicativos. Notificações que convidam o cliente para realizar outras ações, como iniciar a Loja para deixar uma classificação, não são incluídas nesse status.
+    * **Enviando**: A notificação está na fila a ser enviada.
+    * **Enviado**: A notificação foi enviada.
+    * **Inicia o**: A notificação foi enviada, o cliente clica nele e seu aplicativo foi aberto como resultado. Observe que isso apenas rastreia inicializações de aplicativos. Notificações que convidam o cliente para realizar outras ações, como iniciar a Loja para deixar uma classificação, não são incluídas nesse status.
     * **Desconhecido**: Não foi possível determinar o status dessa notificação.
 
-Para analisar os dados de atividade do usuário para todas as suas notificações:
+Para analisar dados de atividade de usuário para todas as notificações:
 
-1.  No Partner Center, expanda a seção de **interagir** e selecione **notificações**.
-2.  Na página de **notificações** , clique na guia **Analisar** . Este guia exibe os seguintes dados:
-    * Modos de exibição de gráfico dos vários estados de ação do usuário para suas notificações do sistema e notificações da Central de ações.
-    * Modos de exibição de mapa de mundo o clique por meio de taxas para suas notificações do sistema e a ação de centro de notificações.
-3. Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é 30D (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode expandir **filtros** para filtrar todos os dados por aplicativo e mercado.
+1.  No Centro de parceiros, expanda o **acionar** seção e selecione **notificações**.
+2.  Sobre o **notificações** , clique no **analisar** guia. Essa guia exibe os seguintes dados:
+    * Modos de exibição de gráfico de vários estados de ação do usuário para suas notificações do sistema e notificações da Central de ações.
+    * Modos de exibição de mapa de mundo a clique por meio de taxas para notificações do sistema e a ação de centro de notificações.
+3. Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é 30D (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode expandir **filtros** para filtrar todos os dados pelo aplicativo e do mercado.
 
 ## <a name="translate-your-notifications"></a>Traduza suas notificações
 
-Para maximizar o impacto de suas notificações, considere traduzi-las para os idiomas que seus clientes preferem. Partner Center torna mais fácil para você traduzir suas notificações automaticamente, aproveitando a capacidade do serviço [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) .
+Para maximizar o impacto de suas notificações, considere traduzi-las para os idiomas que seus clientes preferem. Partner Center torna mais fácil para você traduzir suas notificações automaticamente, aproveitando o poder do [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) service.
 
 1.  Depois de escrever sua notificação em seu idioma padrão, selecione **Adicionar idiomas** (abaixo do menu **Idiomas** na seção **Conteúdo da notificação**).
 2.  Na janela **Adicionar idiomas**, selecione os idiomas adicionais em que você deseja que suas notificações apareçam e selecione **Atualizar**.
@@ -151,7 +151,7 @@ Coisas a serem lembradas sobre tradução:
  - Se você alterar o texto em inglês depois que a notificação for traduzida, vamos atualizar automaticamente as notificações traduzidas para corresponder à alteração. No entanto, isso não vai acontecer se você tiver escolhido previamente substituir a tradução inicial.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-- [Blocos de aplicativos UWP](../design/shell/tiles-and-notifications/creating-tiles.md)
-- [Visão geral do WNS (Serviços de Notificação por Push do Windows)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)
-- [Aplicativo Visualizador de Notificações](https://www.microsoft.com/store/apps/9nblggh5xsl1)
+- [Blocos para aplicativos UWP](../design/shell/tiles-and-notifications/creating-tiles.md)
+- [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)
+- [Aplicativo de Visualizador de notificações](https://www.microsoft.com/store/apps/9nblggh5xsl1)
 - [StoreServicesEngagementManager.RegisterNotificationChannelAsync() | método registerNotificationChannelAsync()](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync)

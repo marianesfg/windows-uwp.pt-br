@@ -4,14 +4,14 @@ title: Device Portal para celulares
 description: Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo móvel remotamente.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, portal de dispositivos
+keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
 ms.openlocfilehash: 879f4b9fd8806565eedeabda95f0c24c5b7931d7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925227"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597221"
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal para celulares
 
@@ -31,9 +31,9 @@ Na primeira vez que você se conectar ao Device Portal, será solicitado a forne
 
 ![Configurações da descoberta de dispositivos do Modo de desenvolvedor](images/device-portal/mob-dev-mode-pairing.png)
 
-Você pode escolher entre 3 maneiras de se conectar ao Device Portal: USB, host local e pela rede local (incluindo VPN e compartilhamento).
+Você pode escolher entre 3 maneiras de se conectar ao Portal de dispositivo: USB, o host local e pela rede local (incluindo VPN e compartilhamento).
 
-**Para se conectar ao Device Portal**
+**Para se conectar ao Portal do dispositivo**
 
 1. Em seu navegador, insira o endereço mostrado aqui para o tipo de conexão que você está usando.
 
@@ -81,7 +81,7 @@ O Device Portal em dispositivos móveis fornece o conjunto padrão de páginas. 
 - Dispositivos
 - Rede
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-* [Visão geral do Portal de Dispositivos do Windows](device-portal.md)
-* [Referência de API central do Portal de Dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Visão geral do Windows Device Portal](device-portal.md)
+* [Núcleo do Portal de dispositivo referência de API](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

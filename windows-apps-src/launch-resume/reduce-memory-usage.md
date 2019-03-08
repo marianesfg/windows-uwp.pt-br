@@ -1,17 +1,17 @@
 ---
 ms.assetid: 3a3ea86e-fa47-46ee-9e2e-f59644c0d1db
 description: Este artigo mostra como reduzir memória quando o aplicativo é movido para segundo plano.
-title: Reduzir o uso da memória quando o app é movido para o estado em segundo plano
+title: Reduzir o uso da memória quando o aplicativo é movido para o estado em segundo plano
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 28c21b3d3b3e53def2181e96a58b53998ee0f04a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046599"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660721"
 ---
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memória quando seu app é movido para o segundo plano
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e04170fb8952ecd5802b6190816d44012f56d8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926995"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661431"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos
 
@@ -22,17 +22,17 @@ Uma biblioteca é uma coleção virtual de pastas, que contém uma pasta conheci
 ## <a name="prerequisites"></a>Pré-requisitos
 
 
--   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
+-   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
 
     Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
--   **Acessar permissões ao local**
+-   **Permissões de acesso para o local**
 
     No Visual Studio, abra o arquivo de manifesto do aplicativo no Designer de Manifesto. Na página **Recursos**, selecione as bibliotecas que seu aplicativo gerencia.
 
-    -   **Biblioteca de Músicas**
-    -   **Biblioteca de Imagens**
-    -   **Biblioteca de Vídeos**
+    -   **Biblioteca de música**
+    -   **Biblioteca de imagens**
+    -   **Biblioteca de vídeos**
 
     Para saber mais, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
@@ -117,7 +117,7 @@ Os locais são:
 
 -   Pasta **Imagens**. Contém imagens.
 
-    -   Pasta **Imagens da Câmera**. Contém fotos e vídeo da câmera interna.
+    -   Pasta **Imagens da Câmera** Contém fotos e vídeo da câmera interna.
 
     -   Pasta **Imagens Salvas**. Contém imagens que o usuário salvou de outros aplicativos.
 
@@ -173,7 +173,7 @@ Nos dispositivos em que a câmera salva imagens de baixa resolução e de alta r
 
 As Imagens da câmera e a pasta Imagens salvas não oferecem suporte a consultas avançadas.
 
-**Abrir uma foto no aplicativo em que foi capturada**
+**Abrindo uma foto no aplicativo que capturou isso**
 
 Se quiser permitir que o usuário abra novamente uma foto no aplicativo em que foi capturada, você pode salvar a **CreatorAppId** com os metadados da foto usando um código similar ao exemplo seguinte. Neste exemplo, **testPhoto** é um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 

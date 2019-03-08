@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: aacce5710f8ed0066e5efdfb5e0344473f718f9b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049443"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651541"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
-Este artigo descreve a nova tecnologia Windows Hello que é fornecido como parte do sistema operacional Windows 10 e aborda como os desenvolvedores podem implementar essa tecnologia para proteger os aplicativos da plataforma Universal do Windows (UWP) e os serviços back-end. Ele destaca os recursos específicos dessas tecnologias que ajudam a mitigar os riscos decorrentes das credenciais convencionais e orienta sobre como projetar e implantar essas tecnologias como parte de sua distribuição do Windows 10.
+Este artigo descreve a novo Windows Hello tecnologia que é fornecido como parte do sistema operacional Windows 10 e discute como os desenvolvedores podem implementar essa tecnologia para proteger seus aplicativos de plataforma Universal do Windows (UWP) e serviços de back-end. Ele destaca os recursos específicos dessas tecnologias que ajudam a mitigar os riscos decorrentes das credenciais convencionais e orienta sobre como projetar e implantar essas tecnologias como parte de sua distribuição do Windows 10.
 
-Observe que este artigo se concentra no desenvolvimento de apps. Para obter informações sobre os detalhes da arquitetura e da implementação do Windows Hello, consulte o [Guia do Windows Hello no TechNet](https://technet.microsoft.com/library/mt589441.aspx).
+Observe que este artigo se concentra no desenvolvimento de aplicativos. Para obter informações sobre os detalhes da arquitetura e da implementação do Windows Hello, consulte o [Guia do Windows Hello no TechNet](https://technet.microsoft.com/library/mt589441.aspx).
 
 Para obter um exemplo de código completo, consulte [Exemplo de código do Windows Hello no GitHub](https://go.microsoft.com/fwlink/?LinkID=717812).
 
@@ -43,7 +43,7 @@ A abordagem comum para o uso de um endereço de email como nome de usuário pior
 
 ### <a name="12-solving-credential-problems"></a>1.2 Solucionando problemas com credenciais
 
-Resolver os problemas que as senhas trazem é complicado. Apenas apertar políticas de senha não será suficiente: os usuários podem simplesmente reciclar, compartilhar ou anotar as senhas. Embora a educação do usuário seja crítica para a segurança da autenticação, ela sozinha não elimina o problema.
+É complicado resolver os problemas que as senhas acarretam. Apenas apertar políticas de senha não será suficiente: os usuários podem simplesmente reciclar, compartilhar ou anotar as senhas. Embora a educação do usuário seja crítica para a segurança da autenticação, só ela também não elimina o problema.
 
 O Windows Hello substitui senhas com forte autenticação por dois fatores (2FA) ao verificar credenciais existentes e criar uma credencial específica para o dispositivo, protegida por PIN ou liberação biométrica. 
 
@@ -52,7 +52,7 @@ O Windows Hello substitui senhas com forte autenticação por dois fatores (2FA)
 
 Windows Hello é o nome que Microsoft deu ao novo sistema biométrico de entrada inserido no Windows 10. Como foi integrado diretamente no sistema operacional, o Windows Hello permite a identificação de face ou impressão digital para desbloquear os dispositivos dos usuários. A autenticação acontece quando o usuário fornece seu identificador biométrico exclusivo para acessar as credenciais específicas do dispositivo. Dessa maneira, alguém que roubar o dispositivo não conseguirá fazer logon, a menos que tenha o PIN. O repositório seguro de credenciais do Windows protege os dados biométricos no dispositivo. Ao usar o Windows Hello para desbloquear um dispositivo, o usuário autorizado tem acesso à experiência do Windows e a todos os aplicativos, dados, sites e serviços.
 
-O autenticador Windows Hello é conhecido como Hello. O Hello é exclusivo para a combinação de um dispositivo separado e um usuário específico. Ele não usa perfil móvel entre dispositivos, não é compartilhado com um servidor ou aplicativo de chamada e não pode ser facilmente extraído de um dispositivo. Se vários usuários compartilharem um dispositivo, cada um deles precisará configurar a própria conta. Cada conta recebe um Hello exclusivo para esse dispositivo. Você pode pensar em um Hello como um token que pode usar para desbloquear (ou liberar) uma credencial armazenada. O Hello em si não autentica você para um app ou serviço, mas libera credenciais que podem fazer isso. Em outras palavras, o Hello não é uma credencial de usuário, e sim um segundo fator do processo de autenticação.
+O autenticador Windows Hello é conhecido como Hello. O Hello é exclusivo para a combinação de um dispositivo separado e um usuário específico. Ele não usa perfil móvel entre dispositivos, não é compartilhado com um servidor ou aplicativo de chamada e não pode ser facilmente extraído de um dispositivo. Se vários usuários compartilharem um dispositivo, cada um deles precisará configurar a própria conta. Cada conta recebe um Hello exclusivo para esse dispositivo. Você pode pensar em um Hello como um token que pode usar para desbloquear (ou liberar) uma credencial armazenada. O Hello em si não autentica você para um aplicativo ou serviço, mas libera credenciais que podem fazer isso. Em outras palavras, o Hello não é uma credencial de usuário, e sim um segundo fator do processo de autenticação.
 
 ### <a name="21-windows-hello-authentication"></a>2.1 Autenticação do Windows Hello
 
@@ -76,13 +76,13 @@ Sempre que possível, a Microsoft recomenda o uso de hardware do TPM. O TPM prot
 
 Quando um usuário deseja acessar o material da chave protegido, o processo de autenticação começa com o usuário inserindo um PIN ou um gesto biométrico para desbloquear o dispositivo, um processo às vezes chamado de "liberação da chave".
 
-Um aplicativo jamais pode usar as chaves de outro aplicativo, e ninguém nunca pode usar as chaves de outro usuário. Essas chaves são usadas para assinar solicitações enviadas para o provedor de identidade ou o IDP, em busca do acesso a recursos especificados. Os aplicativos podem usar APIs específicas para solicitar operações que exijam material da chave para determinadas ações. O acesso por meio dessas APIs não requer uma validação explícita por meio de um gesto do usuário, e o material da chave não é exposto ao app solicitante. Em vez disso, o app solicita uma ação específica, como assinar uma parte de dados, e a camada do Windows Hello lida com o trabalho real e retorna os resultados.
+Um aplicativo jamais pode usar as chaves de outro aplicativo, e ninguém nunca pode usar as chaves de outro usuário. Essas chaves são usadas para assinar solicitações enviadas para o provedor de identidade ou o IDP, em busca do acesso a recursos especificados. Os aplicativos podem usar APIs específicas para solicitar operações que exijam material da chave para determinadas ações. O acesso por meio dessas APIs não requer uma validação explícita por meio de um gesto do usuário, e o material da chave não é exposto ao aplicativo solicitante. Em vez disso, o app solicita uma ação específica, como assinar uma parte de dados, e a camada do Windows Hello lida com o trabalho real e retorna os resultados.
 
 ### <a name="23-getting-ready-to-implement-windows-hello"></a>2.3 Preparar para implementar o Windows Hello
 
 Agora que temos uma compreensão básica de como o Windows Hello funciona, vamos dar uma olhada em como implementá-lo nos próprios apps.
 
-Existem cenários diferentes que podemos implementar usando o Windows Hello. Por exemplo, basta fazer logon no app em um dispositivo. O outro cenário comum seria autenticar usando um serviço. Em vez de usar um nome de logon e uma senha, você usará o Windows Hello. Nos capítulos a seguir, abordaremos a implementação de alguns cenários diferentes, inclusive como autenticar usando os serviços com o Windows Hello e como fazer a conversão de um sistema de nome de usuário e senha de logon existente em um sistema do Windows Hello.
+Existem cenários diferentes que podemos implementar usando o Windows Hello. Por exemplo, basta fazer logon no aplicativo em um dispositivo. O outro cenário comum seria autenticar usando um serviço. Em vez de usar um nome de logon e uma senha, você usará o Windows Hello. Nos capítulos a seguir, abordaremos a implementação de alguns cenários diferentes, inclusive como autenticar usando os serviços com o Windows Hello e como fazer a conversão de um sistema de nome de usuário e senha de logon existente em um sistema do Windows Hello.
 
 Por fim, lembre-se de que as APIs do Windows Hello exigem o uso do SDK do Windows 10, que corresponde ao sistema operacional em que o app será usado. Em outras palavras, o SDK do Windows 10.0.10240 deve ser usado para aplicativos que serão implantados no Windows 10, e o 10.0.10586 deve ser usado para aplicativos que serão implantados no Windows 10, versão 1511.
 
@@ -96,7 +96,7 @@ A próxima seção aborda como migrar de um sistema de nome de usuário/senha ex
 
 Começamos com um serviço totalmente novo que usará o Windows Hello e um novo usuário hipotético que está pronto para se inscrever em um novo dispositivo.
 
-A primeira etapa é verificar se o usuário pode usar o Windows Hello. O app verifica as configurações do usuário e os recursos de máquina para assegurar que pode criar chaves de ID de usuário. Se o app determinar que o usuário ainda não habilitou o Windows Hello, ele pede para o usuário configurá-lo antes de usar o app.
+A primeira etapa é verificar se o usuário pode usar o Windows Hello. O aplicativo verifica as configurações do usuário e os recursos de máquina para assegurar que pode criar chaves de ID de usuário. Se o app determinar que o usuário ainda não habilitou o Windows Hello, ele pede para o usuário configurá-lo antes de usar o app.
 
 Para habilitar o Windows Hello, o usuário precisa configurar somente um PIN nas configurações do Windows, a menos que o configure durante a experiência imediata (OOBE).
 
@@ -215,7 +215,7 @@ Seu aplicativo pode atribuir ao usuário um nível de autorização diferente, d
 
 ### <a name="32-logging-on-with-windows-hello"></a>3.2 Logon com o Windows Hello
 
-Depois de ser registrado no sistema, o usuário poderá usar o app. Dependendo do cenário, você pode pedir para os usuários se autenticarem antes que possam começar a usar o aplicativo ou apenas pedir para que eles se autentiquem assim que começarem a usar os serviços back-end.
+Depois de ser registrado no sistema, o usuário poderá usar o aplicativo. Dependendo do cenário, você pode pedir para os usuários se autenticarem antes que possam começar a usar o aplicativo ou apenas pedir para que eles se autentiquem assim que começarem a usar os serviços back-end.
 
 ### <a name="33-force-the-user-to-sign-in-again"></a>3.3 Forçar o usuário a fazer logon novamente
 
@@ -245,7 +245,7 @@ O fluxo de trabalho do cliente pode parecer com o seguinte gráfico:
 
 ![Fluxo de trabalho do cliente do Windows Hello](images/passport-client-workflow.png)
 
-Quando o app chama o serviço no back-end, o servidor envia um desafio. O desafio é assinado com o seguinte código:
+Quando o aplicativo chama o serviço no back-end, o servidor envia um desafio. O desafio é assinado com o seguinte código:
 
 ```csharp
 var openKeyResult = await KeyCredentialManager.OpenAsync(AccountId);
@@ -275,9 +275,9 @@ Um fluxo de desafio – resposta básico é mostrado neste diagrama de sequênci
 
 ![Resposta do desafio do Windows Hello](images/passport-challenge-response.png)
 
-Em seguida, o servidor precisa validar a assinatura. Quando você solicita a chave pública e enviá-lo para o servidor a ser usado para validação futura, ela está em um blob publicKeyInfo codificado por ASN. 1. Se você examinar o [Windows Hello código exemplo no GitHub](https://go.microsoft.com/fwlink/?LinkID=717812), você verá que há classes auxiliares para encapsular funções Crypt32 para o blob codificado por ASN. 1 um blob CNG, que é mais comumente usado. O blob contém o algoritmo de chave pública, que é o RSA, e a chave pública RSA.
+Em seguida, o servidor precisa validar a assinatura. Quando você solicita a chave pública e enviá-lo para o servidor a ser usado para validação de futuros, é em um blob publicKeyInfo codificada em ASN.1. Se você examinar a [Windows Olá, código de exemplo no GitHub](https://go.microsoft.com/fwlink/?LinkID=717812), você verá que há classes auxiliares para encapsular funções Crypt32 para traduzir o blob codificada em ASN.1 para um blob CNG, que é usado com mais frequência. O blob contém o algoritmo de chave pública, que é o RSA, e a chave pública RSA.
 
-No exemplo, o motivo pelo qual podemos converter o blob codificado por ASN. 1 em um blob CNG é para que ele pode ser usado com CNG (/ / desktop/SecCNG/cng-portal do windows) e a API BCrypt. Se você consultar o blob CNG, ele apontará para a [estrutura BCRYPT_KEY_BLOB](/windows/desktop/api/bcrypt/ns-bcrypt-_bcrypt_key_blob)de relacionados. Essa superfície de API pode ser usado para autenticação e criptografia em aplicativos do Windows. ASN. 1 é um padrão documentado para comunicação estruturas de dados que podem ser serializadas e ele costuma ser usado na criptografia de chave pública e com certificados. É por isso que as informações da chave públicas são retornadas dessa maneira. A chave pública é uma chave RSA; e esse é o algoritmo usado pelo Windows Hello quando assina dados.
+No exemplo, o motivo pelo qual converter o blob codificada em ASN.1 para um blob CNG é para que ele pode ser usado com a CNG (/ / área de trabalho/SecCNG/cng-portal do windows) e a API BCrypt. Se você consultar o blob CNG, ele apontarão para relacionado [estrutura BCRYPT_KEY_BLOB](/windows/desktop/api/bcrypt/ns-bcrypt-_bcrypt_key_blob). Essa superfície de API pode ser usada para autenticação e criptografia em aplicativos do Windows. ASN.1 é um padrão documentado para comunicar-se as estruturas de dados que podem ser serializadas e ela é normalmente usada na criptografia de chave pública e com certificados. É por isso que as informações de chave públicas são retornadas dessa maneira. A chave pública é uma chave RSA; e isso é o algoritmo usado pelo Windows Hello quando ele se conecta a dados.
 
 Depois que tiver o blob CNG, você precisará validar o desafio assinado em relação à chave pública do usuário. Como todos usam o próprio sistema ou tecnologia back-end, não existe maneira genérica de implementar essa lógica. Sempre usamos SHA256 como o algoritmo de hash e Pkcs1 para SignaturePadding, logo, certifique-se de que seja o que você usa ao validar a resposta assinada do cliente. Mais uma vez, refira-se ao exemplo como uma maneira de fazer isso em .NET 4.6 no servidor, mas em geral será algo parecido com isto:
 
@@ -338,7 +338,7 @@ Implementar o mecanismo de resposta de desafio correto está fora do escopo dest
 
 ### <a name="35-enrolling-another-device"></a>3.5 Registro de outro dispositivo
 
-Hoje em dia, é bastante comum que os usuários tenham vários dispositivos com os mesmos apps instalados. Como isso funciona quando se usa o Windows Hello com vários dispositivos?
+Hoje em dia, é bastante comum que os usuários tenham vários dispositivos com os mesmos aplicativos instalados. Como isso funciona quando se usa o Windows Hello com vários dispositivos?
 
 Ao usar o Windows Hello, cada dispositivo criará um conjunto de chaves pública e privada exclusivo. Isso significa que, caso você queira que um usuário possa usar vários dispositivos, o back-end deve ser capaz de armazenar várias chaves públicas desse usuário. Consulte o diagrama de banco de dados na seção 2.1 para obter um exemplo da estrutura da tabela.
 
@@ -357,7 +357,7 @@ Para facilitar ainda mais para o usuário reconhecer quais dispositivos estão r
 
 ### <a name="36-using-multiple-accounts-in-your-app"></a>3.6 Como usar várias contas no aplicativo
 
-Além de oferecer suporte a vários dispositivos para uma única conta, também é comum dar suporte a várias contas em um único aplicativo. Por exemplo, talvez você esteja se conectando a várias contas do Twitter de dentro de seu app. Com o Windows Hello, é possível criar vários pares de chaves e oferecer suporte a várias contas dentro do app.
+Além de oferecer suporte a vários dispositivos para uma única conta, também é comum dar suporte a várias contas em um único aplicativo. Por exemplo, talvez você esteja se conectando a várias contas do Twitter de dentro de seu aplicativo. Com o Windows Hello, é possível criar vários pares de chaves e oferecer suporte a várias contas dentro do app.
 
 Uma maneira de fazer isso é armazenar o nome do usuário ou o identificador exclusivo descrito no capítulo anterior e colocá-lo no armazenamento isolado. Assim, sempre que você criar uma nova conta, coloque a ID da conta no armazenamento isolado.
 
@@ -371,7 +371,7 @@ O restante do fluxo é o mesmo, conforme descrito antes. Para ser claro, todas e
 
 ## <a name="4-migrating-an-existing-system-to-windows-hello"></a>4 Migrar de um sistema atual para o Windows Hello
 
-Nesta seção, vamos abordar um aplicativo Plataforma Universal do Windows existente e um sistema back-end que usa um banco de dados que armazena o nome de usuário e a senha com hash. Esses apps coletam credenciais do usuário quando o app é iniciado e fornecem as credenciais quando o sistema back-end retorna o desafio de autenticação.
+Nesta seção, vamos abordar um aplicativo Plataforma Universal do Windows existente e um sistema back-end que usa um banco de dados que armazena o nome de usuário e a senha com hash. Esses aplicativos coletam credenciais do usuário quando o aplicativo é iniciado e fornecem as credenciais quando o sistema back-end retorna o desafio de autenticação.
 
 Aqui, descreveremos quais partes precisam ser alteradas ou substituídas para que o Windows Hello funcione.
 
@@ -407,9 +407,9 @@ Missão cumprida! Você acabou de tornar a Internet um lugar seguro!
 
 ### <a name="61-articles-and-sample-code"></a>6.1 Artigos e código de exemplo
 
-- [Visão geral do Windows Hello](https://windows.microsoft.com/windows-10/getstarted-what-is-hello)
-- [Detalhes da implementação do Windows Hello](https://msdn.microsoft.com/library/mt589441)
-- [Amostra de código do Windows Hello no GitHub](https://go.microsoft.com/fwlink/?LinkID=717812)
+- [Visão de geral Windows Hello](https://windows.microsoft.com/windows-10/getstarted-what-is-hello)
+- [Detalhes de implementação para o Windows Hello](https://msdn.microsoft.com/library/mt589441)
+- [Windows Hello exemplo de código no GitHub](https://go.microsoft.com/fwlink/?LinkID=717812)
 
 ### <a name="62-terminology"></a>6.2 Terminologia
 
@@ -420,9 +420,9 @@ Missão cumprida! Você acabou de tornar a Internet um lugar seguro!
 | IDP | IDP é um provedor de identidade. Um exemplo é a compilação IDP da Microsoft para contas da Microsoft. Sempre que precisa se autenticar usando um MSA, um aplicativo pode chamar o IDP MSA. |
 | PKI | A infraestrutura de chave pública é usada geralmente para apontar para um ambiente hospedado pela própria organização e responsável pela criação de chaves, revogação de chaves etc. |
 | TPM | O trusted platform module (TPM) pode ser usado para criar pares de chaves pública/privada criptográficas de maneira que a chave privada jamais possa ser revelada ou usada fora do TPM (ou seja, a chave é não migrável). |
-| Atestado de chave do TPM | Um protocolo que prova criptograficamente que uma tecla está associada ao TPM. Esse tipo de atestado pode ser usado para garantir que uma determinada operação criptográfica ocorreu no TPM de um computador específico. |
+| Atestado de chave de TPM | Um protocolo que prova criptograficamente que uma tecla está associada ao TPM. Esse tipo de atestado pode ser usado para garantir que uma determinada operação criptográfica ocorreu no TPM de um computador específico. |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Aplicativo de logon do Windows Hello](microsoft-passport-login.md)
-* [Serviço de logon do Windows Hello](microsoft-passport-login-auth-service.md)
+* [Aplicativo de logon Windows Hello](microsoft-passport-login.md)
+* [Serviço de logon Windows Hello](microsoft-passport-login-auth-service.md)

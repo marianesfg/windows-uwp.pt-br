@@ -1,5 +1,5 @@
 ---
-Description: Common questions about ad campaigns
+Description: Perguntas comuns sobre campanhas publicitárias
 title: Perguntas comuns sobre campanhas publicitárias
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
 ms.date: 10/31/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6875f5b06bbd253b7fe80fbc53936fe0dcf1a6b9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924839"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597061"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Perguntas comuns sobre campanhas publicitárias
 
@@ -21,7 +21,7 @@ Realmente depende de você, mas lembre-se: quanto mais você gastar, mais pessoa
 
 ### <a name="how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign"></a>Como posso aumentar o valor do orçamento mensal máximo permitido para minha campanha publicitária?
 
-Se você pretende gastar mais de US$10.000 por mês em suas campanhas publicitárias, entre em contato com [aiacare@microsoft.com](mailto:aiacare@microsoft.com). Vamos atualizar sua conta para premium, o que permite gastar até US$50.000 por campanha. Uma conta premium também oferece funcionalidades adicionais, como a capacidade de definir as datas de início e término da campanha e especificar uma URL de destino para a campanha.
+Se você pretende gastar mais de US$10.000 por mês em suas campanhas publicitárias, entre em contato com [aiacare@microsoft.com](mailto:aiacare@microsoft.com). Vamos atualizar sua conta para premium, o que permite gastar até US$ 50.000 por campanha. Uma conta premium também oferece funcionalidades adicionais, como a capacidade de definir as datas de início e término da campanha e especificar uma URL de destino para a campanha.
 
 ### <a name="can-i-run-ads-for-one-of-my-apps-in-my-other-apps"></a>Posso executar anúncios de um dos meus apps em meus outros apps?
 
@@ -37,7 +37,7 @@ Se usar um dos modelos de anúncios padrão, você poderá escolher o tamanho, a
 
 ### <a name="where-will-my-ad-appear"></a>Onde aparecerá o meu anúncio?
 
-Seu anúncio aparecerá em aplicativos que compartilharem a sua classificação etária e versão do sistema operacional. Você define essas propriedades ao publicar seu aplicativo na Microsoft Store. Para campanhas "Universal", seus anúncios também aparecerão em MSN.com, Outlook.com, Skype e outras propriedades de premium da Microsoft.
+Seu anúncio aparecerá em aplicativos que compartilharem a sua classificação etária e versão do sistema operacional. Quando você publica seu aplicativo em que a Microsoft Store, você definir essas propriedades. Para campanhas "Universal", seus anúncios também aparecerão em MSN.com, Outlook.com, Skype e outras propriedades de premium da Microsoft.
 
 As campanhas publicitárias atualmente têm suporte nestes países e regiões:
 

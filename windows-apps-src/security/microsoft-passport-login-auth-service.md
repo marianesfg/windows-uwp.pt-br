@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: de4d8fc797efe2a0dde7340f42208a97bccf0b10
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927982"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645101"
 ---
 # <a name="create-a-windows-hello-login-service"></a>Criar um serviço de logon do Windows Hello
 
@@ -19,7 +19,7 @@ Esta é a Parte 2 de um guia passo a passo completo sobre como usar o Windows He
 
 Para criar esse projeto, você precisará de alguma experiência em C# e XAML. Você também precisa estar usando o Visual Studio 2015 (Community Edition ou superior) em um computador com Windows 10.
 
-## <a name="exercise-1-server-side-logic"></a>Exercício 1: Lógica de servidor
+## <a name="exercise-1-server-side-logic"></a>Exercício 1: Lógica do lado do servidor
 
 
 Neste exercício, você começará com o app Windows Hello criado no primeiro laboratório, além da criação de um servidor e um banco de dados locais fictícios. Este laboratório prático foi projetado para ensinar como o Windows Hello poderia ser integrado a um sistema existente. Usando um servidor e um banco de dados fictícios, grande parte da configuração não relacionada é eliminada. Em seus próprios aplicativos, você precisará substituir os objetos fictícios por serviços e bancos de dados reais.
@@ -358,7 +358,7 @@ Neste exercício, você começará com o app Windows Hello criado no primeiro la
     }
     ```
 
-- Na classe MockStore, adicione um método que adicionará as informações relacionadas ao Windows Hello a uma UserAccount existente. Esse método se chamará PassportUpdateDetails e usará parâmetros para identificar o usuário e os detalhes do Windows Hello. A classe KeyAttestationResult foi comentada durante a criação da PassportDevice. Em um app do mundo real, isso seria obrigatório.
+- Na classe MockStore, adicione um método que adicionará as informações relacionadas ao Windows Hello a uma UserAccount existente. Esse método se chamará PassportUpdateDetails e usará parâmetros para identificar o usuário e os detalhes do Windows Hello. A classe KeyAttestationResult foi comentada durante a criação da PassportDevice. Em um aplicativo do mundo real, isso seria obrigatório.
 
     ```cs
     using Windows.Security.Credentials;
@@ -535,7 +535,7 @@ Neste exercício, você começará com o app Windows Hello criado no primeiro la
     }
     ```
 
-## <a name="exercise-2-client-side-logic"></a>Exercício 2: Lógica do cliente
+## <a name="exercise-2-client-side-logic"></a>Exercício 2: Lógica de cliente
 
 Neste exercício, você alterará os modos de exibição e as classes auxiliares do lado do cliente do primeiro laboratório para usar a classe AuthService. No mundo real, a classe AuthService seria o servidor de autenticação e você precisaria usar a API da Web para enviar e receber dados do servidor. Neste laboratório prático, o cliente e o servidor são locais para simplificar. O objetivo é aprender a usar as APIs do Windows Hello.
 
@@ -804,7 +804,7 @@ Neste exercício, você alterará os modos de exibição e as classes auxiliares
     }
     ```
 
--   Como você usará AuthService ao remover uma conta, a referência a AccountHelper no método Button\_Forget\_User\_Click pode ser removida. O método agora deve ter a aparência abaixo.
+-   Como você usará o AuthService ao remover uma conta a referência para o AccountHelper no botão\_esquecer\_usuário\_Clique método pode ser removido. O método agora deve ter a aparência abaixo.
 
     ```cs
     private void Button_Forget_User_Click(object sender, RoutedEventArgs e)
@@ -1060,7 +1060,7 @@ Neste exercício, você alterará os modos de exibição e as classes auxiliares
     }
     ```
 
--   Você deve ter notado no método GetKeyAttestationAsync que acabou de adicionar que a última linha foi comentada. Essa última linha será um novo método criado que enviará todas as informações do Windows Hello para o AuthService. No mundo real, você precisaria enviá-lo para um servidor real com uma API da Web.
+-   Você deve ter notado no método GetKeyAttestationAsync que acabou de ser adicionado que a última linha foi comentada. Essa última linha será um novo método que você criará para enviar todas as informações do Windows Hello para a AuthService. No mundo real, você precisaria enviá-lo para um servidor real com uma API da Web.
 
     ```cs
     using System.Runtime.InteropServices.WindowsRuntime;
@@ -1078,7 +1078,7 @@ Neste exercício, você alterará os modos de exibição e as classes auxiliares
     ```
 
 -   Remova o comentário da última linha no método GetKeyAttestationAsync para que as informações do Windows Hello sejam enviadas para a AuthService.
--   Compile e execute o app e entre com as credenciais padrão como antes. Na tela de boas-vindas, agora você verá que a ID do dispositivo é exibida. Se você tiver se conectado em outro dispositivo, ele também apareceria aqui (se você tivesse um serviço de autenticação hospedado na nuvem). Neste laboratório prático, a ID do dispositivo real está sendo exibida. Em uma implementação real, você desejaria exibir um nome amigável que uma pessoa poderia entender e usar para determinar cada dispositivo.
+-   Compile e execute o aplicativo e entre com as credenciais padrão como antes. Na tela de boas-vindas, agora você verá que a ID do dispositivo é exibida. Se você tiver se conectado em outro dispositivo, ele também apareceria aqui (se você tivesse um serviço de autenticação hospedado na nuvem). Neste laboratório prático, a ID do dispositivo real está sendo exibida. Em uma implementação real, você desejaria exibir um nome amigável que uma pessoa poderia entender e usar para determinar cada dispositivo.
 
     ![Logon bem-sucedido da id de dispositivo do Windows Hello](images/passport-auth-5.png)
 
@@ -1164,7 +1164,7 @@ Neste exercício, você alterará os modos de exibição e as classes auxiliares
     }
     ```
 
--   Durante este exercício, você atualizou o aplicativo do lado do cliente para usar a AuthService. Ao fazer isso, você conseguiu eliminar a necessidade da classe Account e da classe AccountHelper. Exclua a classe Account, a pasta Models e a classe AccountHelper na pasta Utils. Você precisará remover todas as referências ao namespace Models em todo o app para que a solução seja compilada com êxito.
+-   Durante este exercício, você atualizou o aplicativo do lado do cliente para usar a AuthService. Ao fazer isso, você conseguiu eliminar a necessidade da classe Account e da classe AccountHelper. Exclua a classe Account, a pasta Models e a classe AccountHelper na pasta Utils. Você precisará remover todas as referências ao namespace Models em todo o aplicativo para que a solução seja compilada com êxito.
 -   Compile e execute o app, e divirta-se usando o Windows Hello com o serviço e o banco de dados fictícios.
 
 Neste laboratório prático, você aprendeu a usar as APIs do Windows Hello para substituir as senhas ao usar autenticação em um computador com Windows 10. Quando você pensa na quantidade de energia que as pessoas gastam mantendo senhas e dando suporte a senhas perdidas nos sistemas existentes, você deve ver a vantagem de mudar para esse novo sistema de autenticação chamado Windows Hello.
@@ -1174,4 +1174,4 @@ Deixamos para você como um exercício os detalhes de como implementar a autenti
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Windows Hello](microsoft-passport.md)
-* [Aplicativo de logon do Windows Hello](microsoft-passport-login.md)
+* [Aplicativo de logon Windows Hello](microsoft-passport-login.md)

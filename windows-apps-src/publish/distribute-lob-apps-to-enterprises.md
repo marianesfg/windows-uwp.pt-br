@@ -1,5 +1,5 @@
 ---
-Description: You can publish line-of-business (LOB) apps directly to enterprises for volume acquisition via the Microsoft Store for Business or Microsoft Store for Education, without making the apps broadly available in the Store.
+Description: Você pode publicar aplicativos LOB (linha de negócios) diretamente para empresas para aquisição de grande volume pela Microsoft Store para Empresas ou Microsoft Store para Educação, sem tornar os aplicativos amplamente disponíveis na Loja.
 title: Distribuir os aplicativos LOB para empresas
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ms.date: 10/31/2018
@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, lob, linha de negócios, aplicativos corporativos, store para empresas, store para educação, empresa
 ms.localizationpriority: medium
 ms.openlocfilehash: c6e1eafbce5eca1570161da1656c0242228ff7de
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044583"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653011"
 ---
-# <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicativos LOB para empresas
+# <a name="distribute-lob-apps-to-enterprises"></a>Distribuir os aplicativos LOB para empresas
 
 
 Você pode publicar aplicativos LOB (linha de negócios) diretamente para empresas para aquisição de grande volume pela Microsoft Store para Empresas ou Microsoft Store para Educação, sem tornar os aplicativos amplamente disponíveis na Store.
@@ -22,7 +22,7 @@ Você pode publicar aplicativos LOB (linha de negócios) diretamente para empres
 > No momento, somente aplicativos gratuitos podem ser distribuídos exclusivamente para empresas por meio da Microsoft Store para Empresas ou da Microsoft Store para Educação. Se você enviar um aplicativo pago como LOB, ele não estará disponível para a empresa. 
 
 > [!IMPORTANT]
-> Não é possível usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para publicar aplicativos LOB diretamente para empresas. Todos os envios de aplicativos LOB devem ser publicados por meio do Partner Center.
+> Não é possível usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para publicar aplicativos LOB diretamente para empresas. Todos os envios para aplicativos LOB devem ser publicados por meio do Partner Center.
 
 
 ## <a name="set-up-the-enterprise-association"></a>Configurar a associação empresarial
@@ -54,11 +54,11 @@ Você deve selecionar pelo menos uma empresa para publicar um aplicativo como li
 
 ### <a name="organizational-licensing"></a>Licenciamento para organizações
 
-Por padrão, a caixa para **licenciamento por volume gerenciado pela Store (online)** é marcada quando você envia um aplicativo. Na publicação de aplicativos LOB, essa caixa permanecer marcada, para que a empresa possa adquirir seu aplicativo em volume. Isso não tornará o aplicativo disponível para qualquer pessoa fora das empresas que você selecionou na seção **Distribuição e visibilidade**.
+Por padrão, a caixa para **licenciamento por volume gerenciado pela Loja (online)** é marcada quando você envia um aplicativo. Na publicação de aplicativos LOB, essa caixa permanecer marcada, para que a empresa possa adquirir seu aplicativo em volume. Isso não tornará o aplicativo disponível para qualquer pessoa fora das empresas que você selecionou na seção **Distribuição e visibilidade**.
 
 Se você quiser disponibilizar o aplicativo para a empresa por meio de licenciamento desconectado (offline), poderá marcar também a caixa **Licenciamento desconectado (offline)**.
 
-Para saber mais, consulte [Opções de licenciamento para organizações](organizational-licensing.md).
+Para obter mais informações, consulte [Opções de licenciamento para organizações](organizational-licensing.md).
 
 
 ### <a name="age-ratings"></a>Classificações etárias
@@ -68,7 +68,7 @@ Para aplicativos LOB, a etapa de [classificação etária](age-ratings.md) do pr
 
 ## <a name="enterprise-deployment-of-lob-apps"></a>Implantação empresarial de aplicativos LOB
 
-Depois de clicar em **Enviar à Store**, o aplicativo passará pelo processo de certificação. Quando estiver pronto, um administrador da empresa deverá adicioná-lo ao seu repositório particular no portal da Microsoft Store para Empresas ou Microsoft Store para Educação. A empresa poderá então implantar o aplicativo para seus usuários.
+Depois de clicar em **Enviar à Loja**, o aplicativo passará pelo processo de certificação. Quando estiver pronto, um administrador da empresa deverá adicioná-lo ao seu repositório particular no portal da Microsoft Store para Empresas ou Microsoft Store para Educação. A empresa poderá então implantar o aplicativo para seus usuários.
 
 > [!NOTE]
 > Para obter o aplicativo LOB, a organização deve estar localizada em um [mercado com suporte](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets), e você não deve ter [excluído esse mercado](define-pricing-and-market-selection.md) ao enviar o aplicativo. 
@@ -78,7 +78,7 @@ Para saber mais, veja [Trabalhando com aplicativos de linha de negócios](https:
 
 ## <a name="update-lob-apps"></a>Atualizar aplicativos LOB
 
-Para publicar atualizações de um aplicativo que você já publicou como LOB, basta criar um novo envio. Você pode carregar novos pacotes ou fazer quaisquer outras alterações e, em seguida, clicar em **Enviar à Store** para disponibilizar a versão atualizada. Certifique-se de manter as mesmas seleções da empresa em **Visibilidade**, a menos que você queira realmente alterá-las, como, por exemplo, selecionar uma empresa adicional para adquirir o aplicativo ou remover uma das empresas às quais você o distribuiu anteriormente.
+Para publicar atualizações de um aplicativo que você já publicou como LOB, basta criar um novo envio. Você pode carregar novos pacotes ou fazer quaisquer outras alterações e, em seguida, clicar em **Enviar à Loja** para disponibilizar a versão atualizada. Certifique-se de manter as mesmas seleções da empresa em **Visibilidade**, a menos que você queira realmente alterá-las, como, por exemplo, selecionar uma empresa adicional para adquirir o aplicativo ou remover uma das empresas às quais você o distribuiu anteriormente.
 
 Se quiser parar de oferecer um aplicativo publicado anteriormente como linha de negócios, e impedir novas aquisições, você deverá criar um novo envio. Primeiro, você precisará alterar sua seleção em **Visibilidade** de **Distribuição de linha de negócios (LOB)** para **Distribuição comercial**. Em seguida,na seção [Detectabilidade](choose-visibility-options.md#discoverability), selecione **Disponibilizar este produto mas não torná-lo detectável na Store** com a opção **Parar aquisição**.
 
@@ -92,7 +92,7 @@ Depois que o envio passar pelo processo de certificação, o aplicativo não est
 
 A disponibilização de aplicativos para uma empresa pela Microsoft Store para Empresas ou Microsoft Store para Educação garante que o aplicativo foi assinado pela Store e está em conformidade com as Políticas da Store padrão.
 
-Em alguns casos, as empresas podem não querer que seus aplicativos LOB sejam enviado por meio do Partner Center (como motivos relacionados a conformidade ou aplicativos que precisam de recursos adicionais). Nesse caso, a empresa pode implantar os aplicativos diretamente nos computadores por meio de sideload, sem usar a Microsoft Store para Empresas ou a Microsoft Store para Educação.
+Em alguns casos, as empresas podem não querer seus aplicativos LOB para ser enviado por meio do Partner Center (por exemplo, questões de conformidade ou para aplicativos que precisam de recursos adicionais). Nesse caso, a empresa pode implantar os aplicativos diretamente nos computadores por meio de sideload, sem usar a Microsoft Store para Empresas ou a Microsoft Store para Educação.
 
 Para saber mais, veja [Sideload de aplicativos LOB no Windows 10](https://go.microsoft.com/fwlink/p/?LinkId=623433).
 

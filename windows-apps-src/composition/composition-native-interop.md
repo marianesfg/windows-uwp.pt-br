@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cab06db098312531a488731fb50bae99d8f2c8f6
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058827"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645061"
 ---
 # <a name="composition-native-interoperation-with-directx-and-direct2d"></a>Interoperação nativa com DirectX e Direct2D
 
@@ -39,11 +39,11 @@ Por motivos de desempenho, quando um aplicativo chama [**BeginDraw**](https://ms
 
 ## <a name="usage-example"></a>Exemplo de uso
 
-O exemplo de código a seguir ilustra um cenário de interoperação. O exemplo combina tipos da área de superfície com base em tempo de execução do Windows da composição do Windows, juntamente com tipos dos cabeçalhos de interoperabilidade e o código que renderiza o texto usando as APIs de Direct2D e DirectWrite baseado em COM. O exemplo usa [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) e [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) para torná-lo perfeita a interoperabilidade entre essas tecnologias. O exemplo usa o DirectWrite para dispor o texto e, em seguida, ele usa o Direct2D para renderizá-lo. O dispositivo gráficos de composição aceita o dispositivo Direct2D diretamente no momento da inicialização. Isso permite que **BeginDraw** retornar um ponteiro de interface **ID2D1DeviceContext** , que é consideravelmente mais eficiente do que fazer com que o aplicativo criar um contexto de Direct2D para encapsular uma interface ID3D11Texture2D retornada em cada operação de desenho.
+O exemplo de código a seguir ilustra um cenário de interoperação. O exemplo combina tipos da área de superfície com base em tempo de execução do Windows de composição do Windows, junto com os tipos de interoperabilidade cabeçalhos e código que renderiza o texto usando as APIs de Direct2D e DirectWrite baseada em COM. O exemplo utiliza [ **BeginDraw** ](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) e [ **EndDraw** ](https://msdn.microsoft.com/library/windows/apps/mt620060) para torná-lo perfeita de interoperar entre essas tecnologias. O exemplo usa o DirectWrite para dispor o texto e, em seguida, ele usa o Direct2D para renderizá-lo. O dispositivo gráficos de composição aceita o dispositivo Direct2D diretamente no momento da inicialização. Isso permite **BeginDraw** para retornar uma **ID2D1DeviceContext** ponteiro de interface, que é consideravelmente mais eficiente do que o aplicativo crie um contexto do Direct2D para encapsular um retornado Interface ID3D11Texture2D em cada operação de desenho.
 
-Há dois exemplos de código abaixo. Primeiro, um [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) exemplo (que é concluído) e, em seguida, C++ c++ exemplo de código CX (que omite as partes DirectWrite e Direct2D do exemplo).
+Há dois exemplos de código abaixo. Primeiro, uma [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) exemplo (que é concluído) e, em seguida, C + c++ /CLI exemplo de código do CX (que omite as partes do DirectWrite e o Direct2D do exemplo).
 
-Usar C++ c++ WinRT exemplo de código abaixo, primeiro crie um novo **aplicativo principal (C++ c++ WinRT)** projeto no Visual Studio (para requisitos, consulte [suporte do Visual Studio para C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). Ao criar o projeto, selecione como sua versão de destino **Windows 10, versão 1803 (10.0; Build 17134)**. Essa é a versão que esse código foi compilado e testado. Substitua o conteúdo do seu `App.cpp` arquivo de código de origem com a listagem de código abaixo, em seguida, compilar e executar. O aplicativo processa a cadeia de caracteres "Hello, World!" no texto preto em um plano de fundo transparente.
+Para usar a c++ /CLI WinRT exemplo de código abaixo, primeiro crie uma nova **aplicativo Core (C + + c++ /CLI WinRT)** projeto no Visual Studio (para requisitos, consulte [suporte do Visual Studio para C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). Ao criar o projeto, selecione como sua versão de destino **Windows 10, versão 1803 (10.0; Build 17134)**. Essa é a versão em relação ao qual esse código foi criado e testado. Substitua o conteúdo do seu `App.cpp` arquivo de código de origem com a listagem de códigos abaixo, em seguida, compilar e executar. O aplicativo processa a cadeia de caracteres "Olá, mundo!" em texto preto em um plano de fundo transparente.
 
 ```cppwinrt
 // App.cpp

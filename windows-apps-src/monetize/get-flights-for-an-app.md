@@ -1,28 +1,28 @@
 ---
 ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
-description: Use este método na API de envio da Microsoft Store para recuperar informações de versão de pré-lançamento do pacote para um aplicativo que está registrado à sua conta do Partner Center.
-title: Obter pacotes de pré-lançamento de um aplicativo
+description: Use esse método na API de envio a Microsoft Store para recuperar informações de voo do pacote para um aplicativo que é registrado em sua conta no Partner Center.
+title: Obter pacotes de pré-lançamento de um app
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, versões de pré-lançamento, pacotes de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: c7e7ab4db7690cee86b76e39caa30b3c0fb25618
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937255"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659871"
 ---
-# <a name="get-package-flights-for-an-app"></a>Obter pacotes de pré-lançamento de um aplicativo
+# <a name="get-package-flights-for-an-app"></a>Obter pacotes de pré-lançamento de um app
 
-Use este método na API de envio da Microsoft Store para listar os pacotes de pré-lançamento para um aplicativo que está registrado à sua conta do Partner Center. Para obter mais informações sobre pacotes de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).
+Use esse método na API de envio a Microsoft Store para listar os voos de pacote para um aplicativo que é registrado em sua conta no Partner Center. Para obter mais informações sobre pacotes de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
-* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
 ## <a name="request"></a>Solicitação
 
@@ -37,14 +37,14 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
 |  Nome  |  Tipo  |  Descrição  |  Obrigatório  |
 |------|------|------|------|
-|  applicationId  |  string  |  A ID da Loja do aplicativo para o qual você deseja recuperar os pacotes de pré-lançamento. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Sim  |
+|  applicationId  |  cadeia de caracteres  |  A ID da Loja do aplicativo para o qual você deseja recuperar os pacotes de pré-lançamento. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Sim  |
 |  top  |  int  |  O número de itens a serem retornados na solicitação (ou seja, o número de pacotes de pré-lançamento a serem retornados). Se a conta tiver mais pacotes de pré-lançamento que o valor especificado na consulta, o corpo da resposta incluirá um caminho relativo do URI que você pode acrescentar ao URI do método para solicitar a próxima página de dados.  |  Não  |
 |  skip  |  int  |  O número de itens a serem ignorados na consulta antes de retornar os itens restantes. Use este parâmetro para percorrer conjuntos de dados. Por exemplo, top=10 e skip=0 recuperam os itens de 1 a 10, top=10 e skip=10 recuperam os itens de 11 a 20 e assim por diante.  |  Não  |
 
@@ -101,8 +101,8 @@ O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicita
 
 | Valor      | Tipo   | Descrição       |
 |------------|--------|---------------------|
-| @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 2, mas houver 4 pacotes de pré-lançamento para o aplicativo, o corpo da resposta incluirá um@nextLink valor ```applications/{applicationid}/listflights/?skip=2&top=2```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2```  para solicitar os próximos 2 pacotes de pré-lançamento. |
-| value      | array  | Uma matriz de objetos que fornecem informações sobre pacotes de pré-lançamento para o aplicativo especificado. Para obter mais informações sobre os dados em cada objeto, consulte [Recurso da versão de pré-lançamento](get-app-data.md#flight-object).               |
+| @nextLink  | cadeia de caracteres | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 2, mas houver 4 pacotes de pré-lançamento para o aplicativo, o corpo da resposta incluirá um@nextLink valor ```applications/{applicationid}/listflights/?skip=2&top=2```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2```  para solicitar os próximos 2 pacotes de pré-lançamento. |
+| value      | matriz  | Uma matriz de objetos que fornecem informações sobre pacotes de pré-lançamento para o aplicativo especificado. Para obter mais informações sobre os dados em cada objeto, consulte [Recurso da versão de pré-lançamento](get-app-data.md#flight-object).               |
 | totalCount | int    | O número total de linhas no resultado dos dados da consulta (ou seja, o número total de pacotes de pré-lançamento do aplicativo especificado).   |
 
 
@@ -113,12 +113,12 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 404  | Nenhum pacote de pré-lançamento foi encontrado. |
-| 409  | O aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | O aplicativo usa um recurso do Partner Center que está [atualmente não tem suporte da API de envio a Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Obter todos os apps](get-all-apps.md)
+* [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Obter todos os aplicativos](get-all-apps.md)
 * [Obter um aplicativo](get-an-app.md)
 * [Obter complementos para um aplicativo](get-add-ons-for-an-app.md)

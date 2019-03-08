@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c11ee9c5decffff57a2d443e1385398ce40d89
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934531"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658461"
 ---
 # <a name="manage-creatives"></a>Gerenciar criativos
 
@@ -27,7 +27,7 @@ Para saber mais sobre a relação entre criativos e campanhas publicitárias, li
 Para usar esses métodos, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](run-ad-campaigns-using-windows-store-services.md#prerequisites) da API de promoções da Microsoft Store.
-* [Obtenha um token de acesso do Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+* [Obtenha um token de acesso do Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
 
 ## <a name="request"></a>Solicitação
@@ -47,7 +47,7 @@ Esses métodos têm os seguintes URIs.
 
 | Cabeçalho        | Tipo   | Descrição         |
 |---------------|--------|---------------------|
-| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 | ID de rastreamento   | GUID   | Opcional. Uma ID que rastreia o fluxo de chamada.                                  |
 
 
@@ -116,14 +116,14 @@ O corpo da solicitação e resposta desses métodos contêm os campos a seguir. 
 | Campo        | Tipo   |  Descrição      |  Somente leitura  | Padrão  |  Obrigatório para POST |  
 |--------------|--------|---------------|------|-------------|------------|
 |  id   |  número inteiro   |  A ID do criativo.     |   Sim    |      |    Não   |       
-|  nome   |  cadeia   |   O nome do criativo.    |    Não   |      |  Sim     |       
-|  content   |  cadeia   |  O conteúdo da imagem do criativo, no formato codificado de Base64.<br/><br/>**Observação**&nbsp;&nbsp;o número máximo permitido de tamanho para o creative é de 40 KB. Se você enviar um arquivo criativo maior do que isso, essa API não retornará um erro, mas a campanha não será criada com êxito.     |  Não     |      |   Sim    |       
+|  name   |  cadeia de caracteres   |   O nome do criativo.    |    Não   |      |  Sim     |       
+|  content   |  cadeia de caracteres   |  O conteúdo da imagem do criativo, no formato codificado de Base64.<br/><br/>**Observação**&nbsp;&nbsp;o número máximo permitido de tamanho para o creative é de 40 KB. Se você enviar um arquivo criativo maior do que isso, essa API não retornará um erro, mas a campanha não será criada com êxito.     |  Não     |      |   Sim    |       
 |  height   |  número inteiro   |   A altura do criativo.    |    Não    |      |   Sim    |       
 |  width   |  número inteiro   |  A largura do criativo.     |  Não    |     |    Sim   |       
-|  landingUrl   |  cadeia   |  Se você estiver usando uma campanha de rastreamento de serviço como Kochava, AppsFlyer ou Tune para medir análises de instalação do seu aplicativo, atribua a URL de rastreamento nesse campo quando você chama o método POST (se especificado, esse valor deve ser um URI válido). Se você não estiver usando uma serviço de rastreamento de campanha, ao omitir esse valor quando você chama o método POST (nesse caso, a URL será criada automaticamente).   |  Não    |     |   Sim    |       
-|  format   |  cadeia   |   O formato da publicidade. Atualmente, o único valor com suporte é **Faixa de notificação**.    |   Não    |  Faixa   |  Não     |       
+|  landingUrl   |  cadeia de caracteres   |  Se você estiver usando uma campanha de rastreamento de serviço como Kochava, AppsFlyer ou Tune para medir análises de instalação do seu aplicativo, atribua a URL de rastreamento nesse campo quando você chama o método POST (se especificado, esse valor deve ser um URI válido). Se você não estiver usando uma serviço de rastreamento de campanha, ao omitir esse valor quando você chama o método POST (nesse caso, a URL será criada automaticamente).   |  Não    |     |   Sim    |       
+|  format   |  cadeia de caracteres   |   O formato da publicidade. Atualmente, o único valor com suporte é **Faixa de notificação**.    |   Não    |  Faixa   |  Não     |       
 |  imageAttributes   | [ImageAttributes](#image-attributes)    |   Fornece atributos para o criativo.     |   Não    |      |   Sim    |       
-|  storeProductId   |  cadeia   |   A [ID da loja](in-app-purchases-and-trials.md#store-ids) do app ao qual a campanha publicitária está associada. Um exemplo de ID da loja para um produto é 9nblggh42cfd.    |   Não    |    |  Não     |   |  
+|  storeProductId   |  cadeia de caracteres   |   A [ID da loja](in-app-purchases-and-trials.md#store-ids) do app ao qual a campanha publicitária está associada. Um exemplo de ID da loja para um produto é 9nblggh42cfd.    |   Não    |    |  Não     |   |  
 
 
 <span id="image-attributes"/>
@@ -132,13 +132,13 @@ O corpo da solicitação e resposta desses métodos contêm os campos a seguir. 
 
 | Campo        | Tipo   |  Descrição      |  Somente leitura  | Valor padrão  | Obrigatório para POST |  
 |--------------|--------|---------------|------|-------------|------------|
-|  imageExtension   |   cadeia  |   Um dos seguintes valores **PNG** ou **JPG**.    |    Não   |      |   Sim    |       |
+|  imageExtension   |   cadeia de caracteres  |   Um dos seguintes valores: **PNG** ou **JPG**.    |    Não   |      |   Sim    |       |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Veicular campanhas publicitárias usando os serviços da Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
+* [Executar campanhas publicitárias usando serviços da Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
 * [Gerenciar campanhas publicitárias](manage-ad-campaigns.md)
-* [Gerenciar linhas de entrega de campanhas publicitárias](manage-delivery-lines-for-ad-campaigns.md)
-* [Gerenciar perfis de direcionamento de campanhas publicitárias](manage-targeting-profiles-for-ad-campaigns.md)
-* [Obter dados de desempenho da campanha publicitária](get-ad-campaign-performance-data.md)
+* [Gerenciar linhas de entrega para campanhas publicitárias](manage-delivery-lines-for-ad-campaigns.md)
+* [Gerenciar perfis de direcionamento para campanhas publicitárias](manage-targeting-profiles-for-ad-campaigns.md)
+* [Obter dados de desempenho de campanha de anúncio](get-ad-campaign-performance-data.md)

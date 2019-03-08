@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b5061f9193d78d4ff23f5fa707b0bea67a10f98
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929831"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657001"
 ---
 # <a name="controller-api-reference"></a>Referência de API do controle   
 Você pode obter o número de controles físicos conectados e desativá-los de usando a API REST.
@@ -25,17 +25,17 @@ Método      | URI da solicitação
 :------     | :-----
 GET | /ext/remoteinput/controllers
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
-- Nenhum(a)
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhuma
 
 **Corpo da solicitação**   
 
-- Nenhum(a)
+- Nenhuma
 
 **Resposta**   
 
@@ -61,21 +61,21 @@ Método      | URI da solicitação
 :------     | :-----
 DELETE | /ext/remoteinput/controllers
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
-- Nenhum(a)
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhuma
 
 **Corpo da solicitação**   
 
-- Nenhum(a)
+- Nenhuma
 
 **Resposta**   
 
-- Nenhum(a) 
+- Nenhuma 
 
 **Código de status**
 

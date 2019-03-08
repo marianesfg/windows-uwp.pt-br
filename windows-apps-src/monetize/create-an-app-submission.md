@@ -1,23 +1,23 @@
 ---
 ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
-description: Use este método na API de envio da Microsoft Store para criar um novo envio para um aplicativo que está registrado à sua conta do Partner Center.
-title: Criar um envio de app
+description: Use esse método na API de envio a Microsoft Store para criar um novo envio para um aplicativo que é registrado em sua conta no Partner Center.
+title: Criar um envio de aplicativo
 ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: a90be116a9d85eeae7cb7c44c2bbfe96da472f65
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943950"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594441"
 ---
-# <a name="create-an-app-submission"></a>Criar um envio de app
+# <a name="create-an-app-submission"></a>Criar um envio de aplicativo
 
-Use este método na API de envio da Microsoft Store para criar um novo envio para um aplicativo que está registrado à sua conta do Partner Center. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-an-app-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-an-app-submission.md) para inclusão e publicação.
+Use esse método na API de envio a Microsoft Store para criar um novo envio para um aplicativo que é registrado em sua conta no Partner Center. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-an-app-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-an-app-submission.md) para inclusão e publicação.
 
-Para obter mais informações sobre como esse método se adapta ao processo de criação de um envio de aplicativo, usando a API de envio da Microsoft Store, consulte [Gerenciar envios de aplicativo](manage-app-submissions.md).
+Para obter mais informações sobre como esse método se adapta ao processo de criação de um envio de app, usando a API de envio da Microsoft Store, consulte [Gerenciar envios de aplicativo](manage-app-submissions.md).
 
 
 ## <a name="prerequisites"></a>Pré-requisitos
@@ -25,7 +25,7 @@ Para obter mais informações sobre como esse método se adapta ao processo de c
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
-* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 * Verifique se o aplicativo já tem pelo menos um envio com as informações de [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
 
 ## <a name="request"></a>Solicitação
@@ -41,14 +41,14 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um envio. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um envio. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -186,14 +186,14 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 400  | O envio não pôde ser criado porque a solicitação não é válida. |
-| 409  | O envio não pôde ser criado por causa do estado atual do aplicativo, ou o aplicativo usa um recurso do Partner Center [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | O envio de mensagens não pôde ser criado devido ao estado atual do aplicativo ou o aplicativo usa um recurso do Partner Center que está [atualmente não tem suporte da API de envio a Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Obter um envio de aplicativo](get-an-app-submission.md)
+* [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Obtenha um envio de aplicativo](get-an-app-submission.md)
 * [Confirmar um envio de aplicativo](commit-an-app-submission.md)
 * [Atualizar um envio de aplicativo](update-an-app-submission.md)
 * [Excluir um envio de aplicativo](delete-an-app-submission.md)
-* [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md)
+* [Obter o status de envio de um aplicativo](get-status-for-an-app-submission.md)

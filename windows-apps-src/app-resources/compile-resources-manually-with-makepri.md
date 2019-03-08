@@ -1,5 +1,5 @@
 ---
-Description: MakePri.exe is a command line tool that you can use to create and dump PRI files. It is integrated as part of MSBuild within Microsoft Visual Studio, but it could be useful to you for creating packages manually or with a custom build system.
+Description: O MakePri.exe é uma ferramenta de linha de comando que você pode usar para criar e despejar arquivos PRI. Ele é integrado como parte do MSBuild no Microsoft Visual Studio, mas pode ser útil para criar pacotes manualmente ou com um sistema de compilação personalizado.
 title: Compilar recursos manualmente com o MakePri.exe
 template: detail.hbs
 ms.date: 10/23/2017
@@ -7,27 +7,27 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f4feff88507ae5f84bccf044aa9ab6711d6b8bb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919857"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645761"
 ---
 # <a name="compile-resources-manually-with-makepriexe"></a>Compilar recursos manualmente com o MakePri.exe
 
 O MakePri.exe é uma ferramenta de linha de comando que você pode usar para criar e despejar arquivos PRI. Ele é integrado como parte do MSBuild no Microsoft Visual Studio, mas pode ser útil para criar pacotes manualmente ou com um sistema de compilação personalizado.
 
 > [!NOTE]
-> MakePri.exe é instalado quando você verificar a opção do **SDK do Windows para aplicativos gerenciados do UWP** ao instalar o Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe é instalado quando você verificar a **SDK do Windows para aplicativos gerenciados do UWP** opção durante a instalação do Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 O limite de tamanho em um arquivo PRI é 64 KB.
 
 ## <a name="in-this-section"></a>Nesta seção
 |Tópico|Descrição|
 |-|-|
-| [Opções de linha de comando do MakePri.exe](makepri-exe-command-options.md) | O MakePri.exe tem o conjunto de comandos `createconfig`, `dump`, `new`, `resourcepack` e `versioned`. Este tópico descreve detalhadamente as opções de linha de comando para seu uso. |
+| [Opções de linha de comando MakePri.exe](makepri-exe-command-options.md) | O MakePri.exe tem o conjunto de comandos `createconfig`, `dump`, `new`, `resourcepack` e `versioned`. Este tópico descreve detalhadamente as opções de linha de comando para seu uso. |
 | [Arquivo de configuração MakePri.exe](makepri-exe-configuration.md) | Este tópico descreve o esquema do arquivo de configuração XML MakePri.exe. |
-| [Indexadores específicos de formato do MakePri.exe](makepri-exe-format-specific-indexers.md) | Este tópico descreve os indexadores específicos de formato usados pela ferramenta MakePri.exe para gerar seu índice de recursos. |
+| [Indexadores de formato específicas de MakePri.exe](makepri-exe-format-specific-indexers.md) | Este tópico descreve os indexadores específicos de formato usados pela ferramenta MakePri.exe para gerar seu índice de recursos. |
 
 ## <a name="makepriexe-command-line-options"></a>Opções de linha de comando do MakePri.exe
 
@@ -66,7 +66,7 @@ Os sistemas de compilação também podem usar o indexador específico de format
 Quando forem criados arquivos PRI para outros componentes, bibliotecas de classes, assemblies, DLLs e SDKs, a configuração **initialPath** deverá ser usada para garantir que os recursos de componente tenham seus próprios mapas de sub-recursos que não gerem conflitos com o app no qual estão incluídos.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Opções de linha de comando do MakePri.exe](makepri-exe-command-options.md)
-* [Configuração do MakePri.exe](makepri-exe-configuration.md)
-* [Indexadores específicos de formato do MakePri.exe](makepri-exe-format-specific-indexers.md)
-* [Personalizar os recursos para idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md)
+* [Opções de linha de comando MakePri.exe](makepri-exe-command-options.md)
+* [Configuração de MakePri.exe](makepri-exe-configuration.md)
+* [Indexadores de formato específicas de MakePri.exe](makepri-exe-format-specific-indexers.md)
+* [Personalize seus recursos de idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md)

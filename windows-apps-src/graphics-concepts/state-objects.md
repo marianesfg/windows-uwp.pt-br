@@ -8,33 +8,33 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3437119979073a5cec27948fc90f954e06c2fc93
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944927"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596081"
 ---
 # <a name="state-objects"></a>Objetos de estado
 
 
 O estado do dispositivo é agrupado em objetos de estado que reduzem enormemente o custo de alterações de estado. Há vários objetos de estado, e cada um deles é projetado para inicializar um conjunto de estado para um estágio de pipeline específico. Objetos de estado variam de acordo com a versão do Direct3D.
 
-## <a name="span-idinputlayoutspanspan-idinputlayoutspanspan-idinputlayoutspaninput-layout-state"></a><span id="Input_Layout"></span><span id="input_layout"></span><span id="INPUT_LAYOUT"></span>Estado de layout de entrada
+## <a name="span-idinputlayoutspanspan-idinputlayoutspanspan-idinputlayoutspaninput-layout-state"></a><span id="Input_Layout"></span><span id="input_layout"></span><span id="INPUT_LAYOUT"></span>Estado de Layout de entrada
 
 
 Esse grupo de estado determina como o [estágio do Assembler de Entrada (IA)](input-assembler-stage--ia-.md) lê os dados fora dos buffer de entrada e os monta para serem usados pelo sombreador de vértice. Isso inclui o estado, como o número de elementos no buffer de entrada e a assinatura dos dados de entrada. O estágio do Assembler de Entrada (IA) flui os primitivos da memória para o pipeline.
 
-## <a name="span-idrasterizerspanspan-idrasterizerspanspan-idrasterizerspanrasterizer-state"></a><span id="Rasterizer"></span><span id="rasterizer"></span><span id="RASTERIZER"></span>Estado do rasterizador
+## <a name="span-idrasterizerspanspan-idrasterizerspanspan-idrasterizerspanrasterizer-state"></a><span id="Rasterizer"></span><span id="rasterizer"></span><span id="RASTERIZER"></span>Estado de rasterizador
 
 
 Esse grupo de estado inicializa o [estágio do Rasterizador (RS)](rasterizer-stage--rs-.md). Esse objeto inclui o estado como modos preenchimento ou eliminação, permitindo o recorte de um retângulo de corte e a configuração de parâmetros de várias amostras. Este estágio rasteriza os primitivos em pixels, realizando operações como recorte e mapeamento de primitivos no visor.
 
-## <a name="span-iddepthstencilspanspan-iddepthstencilspanspan-iddepthstencilspandepth-stencil-state"></a><span id="DepthStencil"></span><span id="depthstencil"></span><span id="DEPTHSTENCIL"></span>Estado do estêncil de profundidade
+## <a name="span-iddepthstencilspanspan-iddepthstencilspanspan-iddepthstencilspandepth-stencil-state"></a><span id="DepthStencil"></span><span id="depthstencil"></span><span id="DEPTHSTENCIL"></span>Estado de estêncil de profundidade
 
 
 Esse grupo de estado inicializa a parte do estêncil de profundidade do [estágio de Fusão de Saída (OM)](output-merger-stage--om-.md). Mais especificamente, esse objeto inicializa os testes de estêncil e profundidade.
 
-## <a name="span-idblendspanspan-idblendspanspan-idblendspanblend-state"></a><span id="Blend"></span><span id="blend"></span><span id="BLEND"></span>Estado de mesclagem
+## <a name="span-idblendspanspan-idblendspanspan-idblendspanblend-state"></a><span id="Blend"></span><span id="blend"></span><span id="BLEND"></span>Estado do Blend
 
 
 Esse grupo de estado inicializa a parte de mesclagem do [estágio de Fusão de Saída (OM)](output-merger-stage--om-.md).
@@ -60,7 +60,7 @@ Como alternativa, você pode optar por usar o sistema de efeito que gerenciará 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de elementos gráficos](graphics-pipeline.md)
+[Pipeline de gráficos](graphics-pipeline.md)
 
 [Modos de exibição](views.md)
 

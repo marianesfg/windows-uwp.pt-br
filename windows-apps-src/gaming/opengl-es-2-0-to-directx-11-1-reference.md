@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, opengl, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: e3b86054048aaa6aa80f37f66ebc57ab9b8e6b50
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939301"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644071"
 ---
 # <a name="opengl-es-20-to-direct3d-11-reference"></a>Referência do OpenGL ES 2.0 para Direct3D 11
 
@@ -32,7 +32,7 @@ Use estes tópicos de referência para procurar por mapeamento de API e exemplos
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="glsl-to-hlsl-reference.md">Referência de GLSL para HLSL</a></p></td>
+<td align="left"><p><a href="glsl-to-hlsl-reference.md">Referência do GLSL para HLSL</a></p></td>
 <td align="left"><p>Porte seu código GLSL (OpenGL Shader Language) para código Microsoft HLSL (High Level Shader Language) ao <a href="port-from-opengl-es-2-0-to-directx-11-1.md">portar sua arquitetura gráfica do OpenGL ES 2.0 para o Direct3D 11</a> para criar um jogo para a UWP (Plataforma Universal do Windows).</p></td>
 </tr>
 </tbody>

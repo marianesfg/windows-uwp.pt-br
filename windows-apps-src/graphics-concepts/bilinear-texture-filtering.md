@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 437650883b4782ca02c0daf24cc8ebed01d954f6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932925"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651251"
 ---
 # <a name="bilinear-texture-filtering"></a>Filtragem bilinear de textura
 
@@ -27,7 +27,7 @@ Texturas são endereçadas sempre linearmente de (0,0, 0,0) no canto superior es
 
 ![ilustração de textura 4 x 4 com blocos sólidas de cor](images/bilinear-fig7a.png)
 
-As texturas geralmente são representadas como se fossem compostas de blocos sólidos de cor, mas é mais correto pensar nas texturas da mesma maneira que você pensaria na exibição de rasterização: cada texel é definido no centro exato de uma célula de grade, conforme mostrado na ilustração a seguir.
+Texturas geralmente são representadas como se eles eram compostos de blocos sólidos da cor, mas é realmente mais correto pensar texturas da mesma forma, você deve pensar a exibição de varredura: Cada texel é definido no centro exato de uma célula da grade, conforme mostrado na ilustração a seguir.
 
 ![ilustração de textura 4 x 4 com texels definidos no centro das células de grade](images/bilinear-fig7b.png)
 

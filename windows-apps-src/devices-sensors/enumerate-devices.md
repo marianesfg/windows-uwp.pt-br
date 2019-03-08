@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 538f7e953d430ce36ae8aa679865aa634ec49553
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047651"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601711"
 ---
 # <a name="enumerate-devices"></a>Enumerar dispositivos
 
@@ -42,13 +42,13 @@ Essas APIs podem enumerar dispositivos sobre qualquer um dos seguintes protocolo
 -   Barramentos fisicamente conectados. Isso inclui PCI e USB. Por exemplo, tudo que você pode ver no **Gerenciador de Dispositivos**.
 -   [UPnP](https://msdn.microsoft.com/library/windows/desktop/Aa382303)
 -   Digital Living Network Alliance (DLNA)
--   [**Descoberta e Inicialização (DIAL)**](https://msdn.microsoft.com/library/windows/apps/Dn946818)
--   [**Descoberta de Serviços DNS (DNS-SD)**](https://msdn.microsoft.com/library/windows/apps/Dn895183)
--   [Serviços Web em Dispositivos (WSD)](https://msdn.microsoft.com/library/windows/desktop/Aa826001)
+-   [**Descoberta e inicie (DISCAGEM)**](https://msdn.microsoft.com/library/windows/apps/Dn946818)
+-   [**Descoberta de serviço DNS (SD DNS)**](https://msdn.microsoft.com/library/windows/apps/Dn895183)
+-   [Serviços Web em dispositivos (WSD)](https://msdn.microsoft.com/library/windows/desktop/Aa826001)
 -   [Bluetooth](https://msdn.microsoft.com/library/windows/desktop/Aa362932)
 -   [**Wi-Fi Direct**](https://msdn.microsoft.com/library/windows/apps/Dn297687)
 -   WiGig
--   [**Ponto de Serviço**](https://msdn.microsoft.com/library/windows/apps/Dn298071)
+-   [**Point of Service**](https://msdn.microsoft.com/library/windows/apps/Dn298071)
 
 Em muitos casos, você não precisa se preocupar em usar as APIs de enumeração. Isso ocorre porque muitas APIs que usam dispositivos selecionarão automaticamente o dispositivo padrão apropriado ou fornecerão uma API de enumeração mais simplificada. Por exemplo, [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926) usará automaticamente o dispositivo renderizador de áudio padrão. Contanto que seu aplicativo possa usar o dispositivo padrão, não é necessário usar as APIs de enumeração em seu aplicativo. As APIs de enumeração fornecem uma maneira geral e flexível para você descobrir e se conectar aos dispositivos disponíveis. Este tópico fornece informações sobre como enumerar dispositivos e descreve as quatro maneiras comuns de enumerar dispositivos.
 
@@ -82,7 +82,7 @@ O [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841) �
 
 Enquanto o [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841) estiver sendo exibido, o conteúdo da interface do usuário será atualizado automaticamente se dispositivos forem adicionados, removidos ou atualizados.
 
-**Observação**não é possível especificar [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) usando o [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841). Se quiser ter dispositivos de determinado **DeviceInformationKind**, você precisará criar um [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) e fornecer sua própria interface do usuário.
+**Observação**  não é possível especificar o [ **DeviceInformationKind** ](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) usando o [ **DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841). Se quiser ter dispositivos de determinado **DeviceInformationKind**, você precisará criar um [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) e fornecer sua própria interface do usuário.
 
  
 
@@ -123,7 +123,7 @@ Para criar um [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/app
 
 Inspecionar dispositivos como uma tarefa em segundo plano é muito semelhante à criação de um [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) conforme descrito anteriormente. Na verdade, você ainda precisa criar um objeto **DeviceWatcher** normal primeiro conforme descrito na seção anterior. Depois de criá-lo, você chama [**GetBackgroundTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.enumerationcompleted.aspx), em vez de [**DeviceWatcher.Start**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.start). Ao chamar **GetBackgroundTrigger**, você deve especificar quais notificações são de seu interesse: adição, remoção ou atualização. Você não pode solicitar atualização ou remoção sem solicitar adição também. Depois de registrar o gatilho, a execução do **DeviceWatcher** será iniciada imediatamente em segundo plano. Desse ponto em diante, sempre que ele receber uma nova notificação para seu aplicativo que corresponder aos critérios, a tarefa em segundo plano será disparada e fornecerá as últimas alterações desde o último disparo de seu aplicativo.
 
-**Importante**na primeira vez em que um [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) dispara seu aplicativo será quando o Inspetor atinge o estado **EnumerationCompleted** . Isso significa que ele conterá todos os resultados iniciais. Nas próximas vezes que seu aplicativo for disparado, ele conterá apenas notificações de adição, atualização e remoção que ocorreram desde o último disparo. Isso é um pouco diferente de um objeto [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) de primeiro plano porque os resultados iniciais não vêm um de cada vez e só são fornecidos em um pacote depois que o **EnumerationCompleted** é atingido.
+**Importante**  na primeira vez que um [ **DeviceWatcherTrigger** ](https://msdn.microsoft.com/library/windows/apps/Dn913838) gatilhos que seu aplicativo será quando o Inspetor de atinge o **EnumerationCompleted**  estado. Isso significa que ele conterá todos os resultados iniciais. Nas próximas vezes que seu aplicativo for disparado, ele conterá apenas notificações de adição, atualização e remoção que ocorreram desde o último disparo. Isso é um pouco diferente de um objeto [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) de primeiro plano porque os resultados iniciais não vêm um de cada vez e só são fornecidos em um pacote depois que o **EnumerationCompleted** é atingido.
 
  
 
@@ -131,7 +131,7 @@ Alguns protocolos sem fio se comportam de maneira diferente quando fazem a verif
 
 | Comportamento                                  | Impacto                                                                                                                                  |
 |-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| Mesmo comportamento em seguindo plano               | Nenhum                                                                                                                                    |
+| Mesmo comportamento em seguindo plano               | Nenhuma                                                                                                                                    |
 | Somente verificações passivas são possíveis em segundo plano | O dispositivo pode demorar mais tempo para ser descoberto enquanto aguarda uma verificação passiva.                                                           |
 | Não há suporte para verificações em segundo plano            | Nenhum dispositivos poderá ser detectado pelo [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838), e nenhuma atualização será relatada. |
 
@@ -153,7 +153,7 @@ Ao enumerar objetos **AssociationEndpoint**, **AssociationEndpointContainer** ou
 ## <a name="save-a-device-for-later-use"></a>Salvar um dispositivo para uso posterior
 
 
-Qualquer objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) exclusivamente identificado por uma combinação de duas informações: [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) e [**DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx). Se você mantiver essas duas informações, poderá recriar um objeto **DeviceInformation** depois de perdê-lo fornecendo essas informações para [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/br225425.aspx). Se fizer isso, você poderá salvar as preferências do usuário para um dispositivo que se integra ao seu aplicativo.
+Qualquer [ **DeviceInformation** ](https://msdn.microsoft.com/library/windows/apps/BR225393) objeto é identificado exclusivamente por uma combinação de duas informações: [**DeviceInformation.Id** ](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) e [ **DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx). Se você mantiver essas duas informações, poderá recriar um objeto **DeviceInformation** depois de perdê-lo fornecendo essas informações para [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/br225425.aspx). Se fizer isso, você poderá salvar as preferências do usuário para um dispositivo que se integra ao seu aplicativo.
 
 
  

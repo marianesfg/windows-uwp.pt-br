@@ -1,5 +1,5 @@
 ---
-Description: Use the ParallaxView control to add depth and movement to your app.
+Description: Use o controle ParallaxView para adicionar profundidade e movimento ao seu aplicativo.
 title: Como usar o controle ParallaxView para adicionar profundidade e movimento ao seu aplicativo.
 ms.assetid: ''
 label: Parallax View
@@ -13,17 +13,17 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 719a150c6750116a368d59fff9600fcf65bf8f61
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115803"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57590681"
 ---
 # <a name="parallax"></a>Paralaxe
 
 Paralaxe é um efeito visual onde os itens mais próximos ao visualizador se movem mais rápido do que itens no plano de fundo. A Paralaxe cria uma sensação de profundidade, perspectiva e movimento. Em um aplicativo UWP, você pode usar o controle ParallaxView para criar um efeito de paralaxe.  
 
-> **APIs importantes**: [classe ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [propriedade VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [propriedade HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
+> **APIs importantes**: [Classe ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [propriedade VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [HorizontalShift propriedade](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
 
 ## <a name="examples"></a>Exemplos
 
@@ -34,8 +34,8 @@ Paralaxe é um efeito visual onde os itens mais próximos ao visualizador se mov
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ParallaxView">abrir o aplicativo e ver o ParallaxView em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obter o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obter o código-fonte (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -43,11 +43,11 @@ Paralaxe é um efeito visual onde os itens mais próximos ao visualizador se mov
 
 ## <a name="parallax-and-the-fluent-design-system"></a>Paralaxe e o Sistema de Design Fluent
 
- O Sistema de Design Fluent ajuda você a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Paralaxe é um componente do Sistema de Design Fluent que acrescenta movimento, profundidade e escala ao seu aplicativo. Para saber mais, consulte a [visão geral do Fluent Design para UWP](../fluent-design-system/index.md).
+ O Sistema de Design Fluente ajuda você a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Paralaxe é um componente do Sistema de Design Fluent que acrescenta movimento, profundidade e escala ao seu aplicativo. Para saber mais, consulte a [visão geral do Design Fluente para UWP](../fluent-design-system/index.md).
 
 ## <a name="how-it-works-in-a-user-interface"></a>Como ele funciona em uma interface de usuário
 
-Em uma interface de usuário, você pode criar um efeito paralaxe movendo objetos diferentes em diferentes taxas quando a interface de usuário é rolada ou faz um movimento panorâmico. <!-- Parallax is an important tool in adding depth to applications along with other techniques like transition animations, perspective tilt, and layering. --> Para demonstrar, vamos examinar duas camadas de conteúdo, uma lista e uma imagem de fundo.  A lista é colocada sobre a imagem de fundo, o que já gera a ilusão de que a lista está mais perto para o visualizador.  Agora, para obter o efeito paralaxe, queremos que o objeto mais próximo de nós se desloque "mais rápido" do que o objeto mais distante.  Conforme o usuário rola a interface, a lista se move a uma taxa mais rápida que a imagem de fundo, o que cria a ilusão de profundidade.
+Em uma interface de usuário, você pode criar um efeito paralaxe movendo objetos diferentes em diferentes taxas quando a interface de usuário é rolada ou faz um movimento panorâmico. <!-- Parallax is an important tool in adding depth to applications along with other techniques like transition animations, perspective tilt, and layering. --> Para demonstrar, vamos dar uma olhada em duas camadas de conteúdo, uma lista e uma imagem de plano de fundo.  A lista é colocada sobre a imagem de fundo, o que já gera a ilusão de que a lista está mais perto para o visualizador.  Agora, para obter o efeito paralaxe, queremos que o objeto mais próximo de nós se desloque "mais rápido" do que o objeto mais distante.  Conforme o usuário rola a interface, a lista se move a uma taxa mais rápida que a imagem de fundo, o que cria a ilusão de profundidade.
 
  ![Um exemplo de paralaxe com uma lista e uma imagem de fundo](images/_Parallax_v2.gif)
 
@@ -106,8 +106,8 @@ O ParallaxView ajusta automaticamente o tamanho da imagem para que ela funcione 
 
 As propriedades VerticalShift e HorizontalShift permitem controlar o nível do efeito paralaxe.
 
-* A propriedade VerticalShift especifica o quanto queremos que a tela de fundo se desloque verticalmente durante toda a operação de paralaxe. Um valor 0 significa que o plano de fundo não se move.
-* A propriedade HorizontalShift especifica o quanto queremos que a tela de fundo se desloque horizontalmente durante toda a operação de paralaxe. Um valor 0 significa que o plano de fundo não se move.
+* A propriedade VerticalShift especifica o quanto queremos que a tela de fundo se desloque verticalmente durante toda a operação de paralaxe. Um valor de 0 significa que o plano de fundo não é movido.
+* A propriedade HorizontalShift especifica o quanto queremos que a tela de fundo se desloque horizontalmente durante toda a operação de paralaxe. Um valor de 0 significa que o plano de fundo não é movido.
 
 Valores maiores criam um efeito mais dramático. 
 
@@ -121,10 +121,10 @@ Para obter uma lista completa das maneiras de personalizar a paralaxe, consulte 
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Classe ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 
-- [Fluent Design para UWP](../fluent-design-system/index.md)
-- [Ciência no sistema: Fluent Design e profundidade](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
+- [Design Fluent para UWP](../fluent-design-system/index.md)
+- [Ciência no sistema: Profundidade e Design Fluent](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)

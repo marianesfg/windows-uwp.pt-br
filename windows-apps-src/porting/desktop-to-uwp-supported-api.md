@@ -1,5 +1,5 @@
 ---
-Description: Packaged desktop apps can use a wide range of Universal Windows Platform (UWP) APIs, even if they have not fully transitioned to a UWP app. This article lists the available classes your packaged app can use.
+Description: Os aplicativos de desktop empacotados podem usar uma ampla variedade de APIs da Plataforma Universal do Windows (UWP), mesmo se eles não tiverem sido totalmente convertidos em aplicativos UWP. Este artigo lista as classes disponíveis que seu aplicativo empacotado pode usar.
 Search.Product: eADQiWindows 10XVcnh
 title: APIs UWP disponíveis para um aplicativo de área de trabalho empacotado (Ponte de Desktop)
 ms.date: 10/27/2017
@@ -8,13 +8,13 @@ keywords: windows 10, uwp
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
 ms.openlocfilehash: c3131207c04b421a6d8ab6aeeb16aa3107bbf21d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048846"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644711"
 ---
-# <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>APIs UWP disponíveis para um aplicativo da área de trabalho empacotado
+# <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>APIs de UWP disponíveis para um aplicativo empacotado de área de trabalho
 
 Os aplicativos de desktop empacotados podem usar uma ampla variedade de APIs da Plataforma Universal do Windows (UWP), mesmo se eles não tiverem sido totalmente convertidos em aplicativos UWP. Este artigo lista as classes disponíveis que seu aplicativo empacotado pode usar.
 
@@ -26,11 +26,11 @@ A maioria das APIs UWP funciona bem em aplicativos da área de trabalho empacota
 <tr><td>Tarefas em segundo plano</td><td>Embora os aplicativos empacotados possam registrar tarefas em segundo plano, apenas os aplicativos totalmente UWP podem ser executados <i>como</i> uma tarefa em segundo plano. Para obter mais informações, consulte o <a href="https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample">Exemplo de tarefa em segundo plano no GitHub</a>.</td></tr>
 <tr><td>Bluetooth</td><td>Nem todas as APIs têm suporte para aplicativos empacotados.</td></tr>
 <tr><td>Chamadas e chat</td><td>Os aplicativos empacotados não podem ser executados em dispositivos móveis até que eles sejam totalmente portados para UWP.</td></tr>
-<tr><td>Ativação por contrato</td><td>Somente os aplicativos UWP completos podem ser ativados por um contrato.</td></tr>
+<tr><td>Ativação por contrato</td><td>Somente aplicativos da UWP completos podem ser ativados por um contrato.</td></tr>
 <tr><td>Criptografia</td><td>Nem todas as APIs têm suporte para aplicativos empacotados.</td></tr>
 <tr><td>Geolocalização</td><td>Nem todas as APIs têm suporte para aplicativos empacotados.</td></tr>
 <tr><td>Seletores de arquivos e pastas</td><td>Os aplicativos empacotados têm acesso ao sistema de arquivos completo e não precisam de seletores UWP.</td></tr>
-<tr><td>Mídia</td><td>Nem todas as APIs têm suporte para aplicativos empacotados.</td></tr>
+<tr><td>Media</td><td>Nem todas as APIs têm suporte para aplicativos empacotados.</td></tr>
 <tr><td>Ponto de serviço</td><td>Nem todas as APIs têm suporte para aplicativos empacotados.</td></tr>
 <tr><td>Cartões inteligentes</td><td>Nem todas as APIs têm suporte para aplicativos empacotados.</td></tr>
 <tr><td>PlayReady</td><td>Nem todas as APIs têm suporte para aplicativos empacotados.</td></tr>
@@ -42,7 +42,7 @@ A maioria das APIs UWP funciona bem em aplicativos da área de trabalho empacota
 
 Ocasionalmente, as APIs nessas áreas podem aparecer funcionar corretamente. No entanto, se uma API não estiver listada explicitamente como compatível, evite usá-la, pois seu uso poderá surtir efeitos colaterais ou comportamento não intencionais. O suporte para essas APIs pode se tornar disponível em versões futuras. Por enquanto, seu aplicativo deve usar APIS Win32 ou .NET correspondentes.
 
-Não há suporte para algumas APIs UWP para aplicativos de desktop completos para apps empacotados. Se seu aplicativo da área de trabalho usa APIs UWP antes da conversão, verifique se essas APIs ainda têm suporte. Para saber mais, consulte [APIs do Windows Runtime para aplicativos de desktop](https://msdn.microsoft.com/library/windows/desktop/dn554295(v=vs.85).aspx).
+Não há suporte para algumas APIs UWP para aplicativos de desktop completos para apps empacotados. Se seu aplicativo de desktop usa APIs UWP antes da conversão, verifique se essas APIs ainda têm suporte. Para saber mais, consulte [APIs do Windows Runtime para aplicativos de desktop](https://msdn.microsoft.com/library/windows/desktop/dn554295(v=vs.85).aspx).
 
 ## <a name="list-of-apis"></a>Lista de APIs
 
@@ -570,7 +570,7 @@ Para obter exemplos sobre como usar APIs WinRT, consulte os [Exemplos de Ponte d
 * [Windows.Devices.Sensors.OrientationSensor](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Sensors.OrientationSensor)
 * [Windows.Devices.Sensors.OrientationSensorReading](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Sensors.OrientationSensorReading)
 * [Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs)
-* [Windows.Devices.Sensors.Pedometer](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Sensors.Pedometer)
+* [Windows.Dispositivos.Sensores.Pedômetro](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Sensors.Pedometer)
 * [Windows.Devices.Sensors.PedometerReading](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Sensors.PedometerReading)
 * [Windows.Devices.Sensors.PedometerReadingChangedEventArgs](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Sensors.PedometerReadingChangedEventArgs)
 * [Windows.Devices.Sensors.ProximitySensor](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Sensors.ProximitySensor)
@@ -642,7 +642,7 @@ Para obter exemplos sobre como usar APIs WinRT, consulte os [Exemplos de Ponte d
 * [Windows.Foundation.Collections.ValueSet](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.ValueSet)
 * [Windows.Foundation.Deferral](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Deferral)
 * [Windows.Foundation.PropertyValue](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.PropertyValue)
-* [Windows.Foundation.TypedEventHandler < Tsender,. TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx(d=robot))
+* [Windows.Foundation.TypedEventHandler<Tsender,.TResult>](https://msdn.microsoft.com/library/windows/apps/br225997.aspx(d=robot))
 * [Windows.Foundation.Uri](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Uri)
 * [Windows.Foundation.WwwFormUrlDecoder](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.WwwFormUrlDecoder)
 * [Windows.Foundation.WwwFormUrlDecoderEntry](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.WwwFormUrlDecoderEntry)
@@ -1048,7 +1048,7 @@ Para obter exemplos sobre como usar APIs WinRT, consulte os [Exemplos de Ponte d
 
 ## <a name="next-steps"></a>Próximas etapas
 
-**Encontrar respostas para suas dúvidas**
+**Encontre respostas para suas perguntas**
 
 Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 

@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, API de análise da Microsoft Store, baixar CAB
 ms.localizationpriority: medium
 ms.openlocfilehash: a4643f94236e62c46c12fd656ab5ddba5e1e0632
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934751"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594531"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-app"></a>Baixar o arquivo CAB de um erro em seu aplicativo
 
-Use este método na API de análise da Microsoft Store para baixar o arquivo CAB associado um erro específico em seu aplicativo que foi relatado para o Partner Center. Este método pode apenas baixar o arquivo CAB de um erro de app que ocorreu nos últimos 30 dias. Downloads de arquivo CAB também estão disponíveis na seção **falhas** do [relatório de integridade](../publish/health-report.md) no Partner Center.
+Use esse método na API de análise de Microsoft Store para baixar o arquivo CAB que está associado um determinado erro em seu aplicativo que foi relatado ao Partner Center. Este método pode apenas baixar o arquivo CAB de um erro de app que ocorreu nos últimos 30 dias. Downloads de arquivos CAB também estão disponíveis na **falhas** seção o [relatório de integridade](../publish/health-report.md) no Partner Center.
 
 Antes de usar esse método, primeiro você deverá usar o método [obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md) para recuperar a ID do arquivo CAB que deseja baixar.
 
@@ -42,15 +42,15 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  |
 |---------------|--------|---------------|------|
-| applicationId | string | A ID da Loja do aplicativo para o qual você deseja baixar um arquivo CAB. A ID da loja está disponível na [página de identidade de aplicativo](../publish/view-app-identity-details.md) do Partner Center. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
-| cabId | string | A ID exclusiva do arquivo CAB que você deseja baixar. Para obter essa ID, use o método [obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md) para recuperar os detalhes de um erro específico em seu app, e use o valor de **cabId** no corpo da resposta desse método. |  Sim  |
+| applicationId | cadeia de caracteres | A ID da Loja do aplicativo para o qual você deseja baixar um arquivo CAB. A ID de Store está disponível na [página de aplicativo de identidade](../publish/view-app-identity-details.md) do Partner Center. Um exemplo de ID da Loja é 9WZDNCRFJ3Q8. |  Sim  |
+| cabId | cadeia de caracteres | A ID exclusiva do arquivo CAB que você deseja baixar. Para obter essa ID, use o método [obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md) para recuperar os detalhes de um erro específico em seu app, e use o valor de **cabId** no corpo da resposta desse método. |  Sim  |
 
  
 ### <a name="request-example"></a>Exemplo de solicitação
@@ -69,7 +69,7 @@ Esse método retorna um código de resposta 302 (redirecionamento) e o cabeçalh
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Relatório de integridade](../publish/health-report.md)
-* [Acessar dados analíticos usando serviços da Microsoft Store](access-analytics-data-using-windows-store-services.md)
-* [Obter dados de relatórios de erros](get-error-reporting-data.md)
-* [Obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md)
-* [Obter o rastreamento de pilha de um erro em seu app](get-the-stack-trace-for-an-error-in-your-app.md)
+* [Dados de análise de acesso usando os serviços da Microsoft Store](access-analytics-data-using-windows-store-services.md)
+* [Obter dados de relatório de erros](get-error-reporting-data.md)
+* [Obter detalhes sobre um erro em seu aplicativo](get-details-for-an-error-in-your-app.md)
+* [Obter o rastreamento de pilha para um erro em seu aplicativo](get-the-stack-trace-for-an-error-in-your-app.md)

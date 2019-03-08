@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, elementos gráficos
 ms.localizationpriority: medium
 ms.openlocfilehash: fc93111d48f71a6ca8acad8191a2afb535fad2f0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931493"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660931"
 ---
 # <a name="draw-to-the-screen"></a>Desenhar na tela
 
 
 
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)
 -   [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582)
@@ -28,20 +28,20 @@ Por fim, compatibilizamos o código que desenha o cubo giratório na tela.
 
 No OpenGL ES 2.0, o contexto de desenho é definido como um tipo EGLContext, que contém os parâmetros de janela e superfície, além dos recursos necessários para desenhar em destinos de renderização que serão usados para compor a imagem final exibida na janela. Use esse contexto para configurar os recursos gráficos e apresentar corretamente os resultados do pipeline do sombreador na exibição. Um dos recursos principais é o "buffer de fundo" (ou "objeto de buffer de quadros"), que contém os destinos de renderização finais (compostos), prontos para apresentação na exibição.
 
-Com o Direct3D, o processo de configuração dos recursos gráficos para desenhar na tela é mais didático e requer bem menos APIs. (Porém, um modelo Direct3D do Microsoft Visual Studio pode simplificar bastante esse processo!) Para obter um contexto (chamado de um contexto de dispositivo Direct3D), primeiro você deve obter um objeto [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) e usá-lo para criar e configurar um objeto [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). Esses dois objetos são usados em conjunto para configurar recursos específicos de desenho na exibição.
+Com o Direct3D, o processo de configuração dos recursos gráficos para desenhar na tela é mais didático e requer bem menos APIs. (Um modelo do Microsoft Visual Studio Direct3D pode simplificar significativamente esse processo, porém!) Para obter um contexto (chamado de um contexto de dispositivo de Direct3D), você deve primeiro obter um [ **ID3D11Device1** ](https://msdn.microsoft.com/library/windows/desktop/hh404575) de objeto e usá-lo para criar e configurar um [ **ID3D11DeviceContext1**  ](https://msdn.microsoft.com/library/windows/desktop/hh404598) objeto. Esses dois objetos são usados em conjunto para configurar recursos específicos de desenho na exibição.
 
 Resumindo: as APIs da DXGI contêm principalmente recursos de gerenciamento relacionados diretamente ao adaptador gráfico, e o Direct3D contém APIs que permitem a interação entre a GPU e o programa principal executado na CPU.
 
 Para fins de comparação nesta amostra, consulte os tipos relevantes de APIs:
 
--   [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575): oferece uma representação visual do dispositivo de elementos gráficos e de seus recursos.
--   [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598): oferece a interface de configuração de buffers e emissão de comandos de renderização.
--   [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631): a cadeia de troca é análoga ao buffer de fundo no OpenGL ES 2.0. No adaptador gráfico, corresponde à região da memória que contém as imagens finais renderizadas para exibição. Ela é chamada de "cadeia de troca" porque tem diversos buffers que podem ser gravados e "trocados" para apresentar o renderizador mais recente na tela.
--   [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582): contém o buffer de bitmap 2D no qual o contexto de dispositivo Direct3D desenha e que é apresentado pela cadeia de troca. Assim como no OpenGL ES 2.0, você pode ter vários destinos de renderização, alguns não vinculados à cadeia de troca, mas usados para técnicas de sombreamento com passagem múltipla.
+-   [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575): fornece uma representação virtual do dispositivo de gráficos e seus recursos.
+-   [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598): fornece a interface para configurar buffers e emitir comandos de renderização.
+-   [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631): a cadeia de troca é análoga ao buffer de fundo em OpenGL ES 2.0. No adaptador gráfico, corresponde à região da memória que contém as imagens finais renderizadas para exibição. Ela é chamada de "cadeia de troca" porque tem diversos buffers que podem ser gravados e "trocados" para apresentar o renderizador mais recente na tela.
+-   [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582): ele contém o buffer de bitmap 2D que o contexto do dispositivo Direct3D desenha na e qual é apresentado pela cadeia de troca. Assim como no OpenGL ES 2.0, você pode ter vários destinos de renderização, alguns não vinculados à cadeia de troca, mas usados para técnicas de sombreamento com passagem múltipla.
 
 No modelo, o objeto de renderizador contém os seguintes campos:
 
-Direct3D 11: declarações de dispositivo e contexto de dispositivo
+Direct3D 11: Dispositivo e declarações de contexto de dispositivo
 
 ``` syntax
 Platform::Agile<Windows::UI::Core::CoreWindow>       m_window;
@@ -71,11 +71,11 @@ Para saber mais sobre o contexto de dispositivo Direct3D relacionado a EGL e ao 
 
 ## <a name="instructions"></a>Instruções
 
-### <a name="step-1-rendering-the-scene-and-displaying-it"></a>Etapa 1: renderizando a cena e exibindo-a
+### <a name="step-1-rendering-the-scene-and-displaying-it"></a>Etapa 1: Renderização da cena e exibi-la
 
 Depois de atualizar os dados do cubo (neste caso, girando-o um pouco em torno do eixo y), o método Render define o visor de acordo com as dimensões do contexto de desenho (EGLContext). Esse contexto contém o buffer de cor que será exibido na superfície da janela (uma EGLSurface), usando a exibição configurada (EGLDisplay). Neste momento, o exemplo atualiza os atributos de dados de vértice, vincula o buffer de índice novamente, desenha o cubo e alterna para o buffer de cor desenhado pelo pipeline de sombreamento na superfície de exibição.
 
-OpenGL ES 2.0: renderizando um quadro para exibição
+OpenGL ES 2.0: Renderização de um quadro para exibição
 
 ``` syntax
 void Render(GraphicsContext *drawContext)
@@ -133,7 +133,7 @@ No Direct3D 11, o processo é muito parecido (supomos que você esteja usando a 
 -   Envie os vértices indexados pelos sombreadores e gere os resultados de cores no buffer de destino de renderização com [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409).
 -   Exiba o buffer de destino de renderização com [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797).
 
-Direct3D 11: renderizando um quadro para exibição
+Direct3D 11: Renderização de um quadro para exibição
 
 ``` syntax
 void RenderObject::Render()
@@ -210,8 +210,8 @@ Este exemplo fala muito da complexidade de configurar recursos de dispositivo, p
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Como: compatibilizar um renderizador simples do OpenGL ES 2.0 ao Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
-* [Compatibilizar os objetos de sombreadores](port-the-shader-config.md)
+* [Como: um renderizador simple do OpenGL ES 2.0 ao Direct3D 11 da porta](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
+* [Fazer a portabilidade de objetos de sombreador](port-the-shader-config.md)
 * [Fazer a portabilidade do GLSL](port-the-glsl.md)
 * [Desenhar na tela](draw-to-the-screen.md)
 

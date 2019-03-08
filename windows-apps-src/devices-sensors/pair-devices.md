@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bb5c156dc29f8229db9e4cb215fe462b4be6af6
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050429"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653381"
 ---
 # <a name="pair-devices"></a>Emparelhar dispositivos
 
@@ -21,13 +21,13 @@ ms.locfileid: "9050429"
 
 - [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
-Alguns dispositivos precisam ser emparelhados antes de serem usados. O namespace [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) oferece suporte a três maneiras diferentes de emparelhar dispositivos.
+Alguns dispositivos precisam ser emparelhados antes de serem usados. O namespace [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) dá suporte a três maneiras diferentes de emparelhar dispositivos.
 
 -   Emparelhamento automático
 -   Emparelhamento básico
 -   Emparelhamento personalizado
 
-**Dica**alguns dispositivos não precisam ser emparelhados para serem usados. Isso é abordado na seção sobre emparelhamento automático.
+**Dica**  alguns dispositivos não precisam ser emparelhado para ser usado. Isso é abordado na seção sobre emparelhamento automático.
 
  
 
@@ -65,7 +65,7 @@ Desemparelhar um dispositivo só é relevante nas situações de emparelhamento 
 
 O primeiro passo para desemparelhar um dispositivo é obter o objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) para o dispositivo que você quer desemparelhar. Em seguida, você precisa recuperar a propriedade [**DeviceInformation.Pairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx) e chamar [**DeviceInformationPairing.UnpairAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationpairing.unpairasync). Assim como com o emparelhamento, é bom **esperar** o resultado. O resultado da ação de desemparelhamento será retornado e, desde que nenhum erro seja retornado, o dispositivo será desemparelhado.
 
-## <a name="sample"></a>Amostra
+## <a name="sample"></a>Exemplo
 
 
 Para baixar uma amostra de como usar as APIs [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459), clique [aqui](https://go.microsoft.com/fwlink/?LinkID=620536).

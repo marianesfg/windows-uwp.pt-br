@@ -1,5 +1,5 @@
 ---
-Description: Secondary tiles allow users to pin specific content and deep links from your app onto their Start menu, providing easy future access to the content within your app.
+Description: Blocos secundários permitem que os usuários fixem conteúdo específico e links profundos do seu app no menu Iniciar, fornecendo acesso futuro fácil ao conteúdo em seu app.
 title: Blocos secundários
 label: Secondary tiles
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, blocos secundários
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f95699fd6eb0803824c9bcdea46d275ab4383ac
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940615"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653181"
 ---
 # <a name="secondary-tiles"></a>Blocos secundários
 
@@ -31,7 +31,7 @@ Ao adicionar blocos secundários ao seu app, você ajuda o usuário a se envolve
 
 | Artigo | Descrição |
 | --- | --- |
-| [Diretrizes sobre os blocos secundários](secondary-tiles-guidance.md) | Saiba quando e onde você deve usar blocos secundários. |
+| [Orientação sobre os blocos secundários](secondary-tiles-guidance.md) | Saiba quando e onde você deve usar blocos secundários. |
 | [Fixar blocos secundários](secondary-tiles-pinning.md) | Saiba como fixar um bloco secundário. |
 | [Fixar a partir do aplicativo da área de trabalho](secondary-tiles-desktop-pinning.md) | Os aplicativos da área de trabalho do Windows podem fixar blocos secundários graças à Ponte de Desktop! |
 
@@ -66,9 +66,9 @@ No entanto, os blocos secundários são diferentes dos blocos primários de algu
 * Os usuários podem excluir os blocos secundários a qualquer momento sem excluir o aplicativo pai.
 * Os blocos secundários podem ser criados no tempo de execução. Os blocos de aplicativos só podem ser criados durante a instalação.
 * Um submenu solicita a confirmação do usuário antes de adicionar um bloco secundário.
-* Eles não podem ser selecionados de forma programada para a tela de bloqueio por meio de uma solicitação ao usuário. O usuário deve adicionar manualmente o bloco secundário por meio da página Personalizar nas configurações do computador.
+* Eles não podem ser selecionados de forma programada para a tela de bloqueio por meio de uma solicitação ao usuário. O usuário deve adicionar o bloco secundário por meio da página Personalizar manualmente nas configurações do PC.
 
-Para enviar notificações, métodos específicos são fornecidos para atualizadores de blocos e notificações e canais de notificação por push são usados com blocos secundários. Eles fazem paralelo com as versões usadas com blocos primários. Por exemplo, CreateBadgeUpdaterForApplication x CreateBadgeUpdaterForSecondaryTile.
+Para enviar notificações, métodos específicos são fornecidos para atualizadores de blocos e notificações e canais de notificação por push são usados com blocos secundários. Eles fazem paralelo com as versões usadas com blocos primários. Por exemplo, CreateBadgeUpdaterForApplication vs. CreateBadgeUpdaterForSecondaryTile.
 
 
 ## <a name="guidance-on-secondary-tiles"></a>Diretrizes sobre os blocos secundários

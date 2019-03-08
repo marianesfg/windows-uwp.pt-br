@@ -4,11 +4,11 @@ title: Conteúdo como objetos
 template: detail.hbs
 ms.localizationpriority: medium
 ms.openlocfilehash: ed2ac8530d69929cc0e0e921cfb1cc5368058cd2
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981440"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593111"
 ---
 # <a name="content-as-objects"></a>Conteúdo como objetos
 
@@ -16,7 +16,7 @@ ms.locfileid: "8981440"
 
 Você pode manipular a profundidade ou ordem z dos elementos para criar uma hierarquia visual que ajuda a tornar o aplicativo mais fácil de usar.  
 
-> Observação: Este artigo é um rascunho inicial de um novo recurso para Windows 10 RS2. Os nomes, a terminologia e a funcionalidade dos recursos não são finais. 
+> Observação: Este artigo é um esboço inicial para um novo recurso do Windows 10 RS2. Os nomes, a terminologia e a funcionalidade dos recursos não são finais. 
 
 ## <a name="why-visual-hierarchy-is-important"></a>Por que a hierarquia visual é importante
 
@@ -76,12 +76,12 @@ Com o Windows 10 RS2, nós literalmente adicionamos outra dimensão: profundidad
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<b>Além do plano de fundo</b> Essa camada fica atrás do aplicativo.  Ao mover elementos para essa camada, é recomendável torná-los não interativos. Elementos nesta camada têm o paralaxe mais lento e estão recortados para a janela do aplicativo. TODO: Essa camada é dimensionada? 
+<b>Além do plano de fundo</b> essa camada reside atrás de aplicativo.  Ao mover elementos para essa camada, é recomendável torná-los não interativos. Elementos nesta camada têm o paralaxe mais lento e estão recortados para a janela do aplicativo. TODO: Essa camada é dimensionado? 
 
-<p>Exemplo de elementos de tela de fundo incluem imagem atrás de conteúdo, TODO: Exemplo, TODO: Exemplo.</p>
+<p>Elementos de plano de fundo de exemplo incluem a imagem do conteúdo, TODO: Exemplo, TODO: Exemplo.</p>
   </div>
   <div class="side-by-side-content-right">
-    <a href="images/content-as-objects/elements-forward-backward.png">A camada da tela de fundo acima de um aplicativo</a>
+    <a href="images/content-as-objects/elements-forward-backward.png">Camada de um aplicativo de plano de fundo do além</a>
     
   </div>
 </div>
@@ -92,9 +92,9 @@ Com o Windows 10 RS2, nós literalmente adicionamos outra dimensão: profundidad
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<b>Camada passiva</b> Essa é a camada base do aplicativo, onde os elementos de interface do usuário moram por padrão.  Elementos movem em tempo real nessa camada (nenhum paralaxe), são cortados para a janela do aplicativo e renderizados em escala de 100%. 
+<b>Camada passiva</b> isso é a camada base do aplicativo, onde os elementos de interface do usuário ao vivo por padrão.  Elementos movem em tempo real nessa camada (nenhum paralaxe), são cortados para a janela do aplicativo e renderizados em escala de 100%. 
 
-<p>Elementos de exemplo: A tela de fundo do aplicativo, texto, interface do usuário secundária, como interface de usuário de navegação do aplicativo.</p>
+<p>Elementos de exemplo: O aplicativo em segundo plano, texto, secundária da interface do usuário, como navegação de aplicativo da interface do usuário.</p>
   </div>
   <div class="side-by-side-content-right">
     <a href="images/content-as-objects/elements-forward-backward.png">A camada passiva de um aplicativo</a>
@@ -108,12 +108,12 @@ Com o Windows 10 RS2, nós literalmente adicionamos outra dimensão: profundidad
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<b>Chamadas para ação</b> Essa camada é para itens interativos que você prioriza acima dos elementos de camada passiva. Elementos nesta camada apresentam paralaxe médio e estão recortados para a janela do aplicativo. TODO: Colocar elementos nessa escala de camada ou adicionar uma sombra?
+<b>Planos de ação</b> essa camada destina-se itens interativos que priorizar acima dos elementos de camada passiva. Elementos nesta camada apresentam paralaxe médio e estão recortados para a janela do aplicativo. TODO: Fazer os elementos nessa escala de camada ou tem uma sombra?
 
-<p>Elementos de exemplo: listas, grades, comandos principais (TODO: como....).</p> 
+<p>Elementos de exemplo: listas, grades, comandos primários (TODO: Such as...).</p> 
   </div>
   <div class="side-by-side-content-right">
-    <a href="images/content-as-objects/elements-forward-backward.png">A camada de chamada de ação de um aplicativo</a>
+    <a href="images/content-as-objects/elements-forward-backward.png">A camada de um aplicativo de chamada de ação</a>
     
   </div>
 </div>
@@ -123,7 +123,7 @@ Com o Windows 10 RS2, nós literalmente adicionamos outra dimensão: profundidad
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<b>Camada de herói</b> Essa camada é para o elemento de maior prioridade na tela no momento.  Elementos nessa camada podem quebrar os limites da janela do aplicativo, eles podem ser redimensionados e receber uma sombra automaticamente.
+<b>Camada de Hero</b> essa camada destina-se o elemento de prioridade mais alto na tela no momento.  Elementos nessa camada podem quebrar os limites da janela do aplicativo, eles podem ser redimensionados e receber uma sombra automaticamente.
 
 <p>Elementos de exemplo: elementos fotográficos, o item atualmente selecionado.</p>  
   </div>
@@ -140,8 +140,8 @@ Com o Windows 10 RS2, nós literalmente adicionamos outra dimensão: profundidad
 Depth is meaningful; it establishes visual and interactive hierarchy for users to efficiently complete tasks. Depth orients users in our system. 
 -->
 
-## <a name="example-tbd"></a>Exemplo: TBD
-> TODO: Mostra como adaptar um padrão de interface do usuário comum para usar a ordem z. Nós devemos mostrar ilustrações e código. 
+## <a name="example-tbd"></a>Exemplo: A ser definido
+> TODO: Mostre como adaptar um padrão comum de interface do usuário para usar a ordenação z. Nós devemos mostrar ilustrações e código. 
 
 ## <a name="download-the-code-samples"></a>Baixar as amostras de código
 >TODO: Link para exemplos que demonstram esse recurso. 

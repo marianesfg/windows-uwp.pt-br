@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, opengl, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: b17f18876ebc2faead08d8c777c7502e937aef86
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944005"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662751"
 ---
 # <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a>Planejar a portabilidade do OpenGL ES 2.0 para o Direct3D
 
 
 
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080)
 -   [Visual C++](https://msdn.microsoft.com/library/windows/apps/60k1461a.aspx)
@@ -36,7 +36,7 @@ Os tópicos sobre portabilidade nesta seção fazem referência à implementaç�
 
 Esta documentação usa apenas a as APIs da especificação 2.0 do código e da referência OpenGL ES. Mesmo que você esteja realizando a portabilidade a partir do OpenGL ES 1.1 ou 3.0, este conteúdo ainda terá utilidade, embora alguns exemplos de códigos e contextos do OpenGL ES 2.0 sejam diferentes.
 
-Os exemplos de Direct3D 11 destes tópicos usam o Microsoft Windows C++ com CX (extensões de componentes). Para saber mais sobre essa versão da sintaxe C++, leia os tópicos sobre [Visual C++](https://msdn.microsoft.com/library/windows/apps/60k1461a.aspx), [extensões de componentes para plataformas de Tempo de Execução](https://msdn.microsoft.com/library/windows/apps/xey702bw.aspx) e [referência rápida (C++\\CX)](https://msdn.microsoft.com/library/windows/apps/br212455.aspx).
+Os exemplos de Direct3D 11 destes tópicos usam o Microsoft Windows C++ com CX (extensões de componentes). Para obter mais informações sobre esta versão da sintaxe do C++, leia [Visual C++](https://msdn.microsoft.com/library/windows/apps/60k1461a.aspx), [extensões de componentes para plataformas de tempo de execução](https://msdn.microsoft.com/library/windows/apps/xey702bw.aspx), e [referência rápida (C++\\CX)](https://msdn.microsoft.com/library/windows/apps/br212455.aspx).
 
 ## <a name="understand-your-hardware-requirements-and-resources"></a>Compreenda os requisitos e recursos de hardware
 
@@ -48,7 +48,7 @@ Para facilitar o trabalho de portabilidade inicial, comece com um modelo de Dire
 ## <a name="understand-direct3d-feature-levels"></a>Compreenda os níveis de recursos do Direct3D
 
 
-O Direct3D 11 oferece suporte a "níveis de recursos" de hardware, do 9\_1 (Direct3D 9.1) ao 11\_1. Esses níveis indicam a disponibilidade de certos recursos gráficos. Normalmente, a maioria das plataformas do OpenGL ES 2.0 oferece suporte ao conjunto de recursos do Direct3D 9.1 (nível 9\_1).
+Direct3D 11 oferece suporte para hardware "níveis de recurso" de 9\_1 (Direct3D 9.1) para 11\_1. Esses níveis indicam a disponibilidade de certos recursos gráficos. Normalmente, a maioria das plataformas de OpenGL ES 2.0 oferecem suporte a um 9.1 Direct3D (9 de nível de recurso\_1) conjunto de recursos.
 
 ## <a name="review-directx-graphics-features-and-apis"></a>Confira as APIs e os recursos gráficos do DirectX
 
@@ -56,7 +56,7 @@ O Direct3D 11 oferece suporte a "níveis de recursos" de hardware, do 9\_1 (Dire
 | Família de APIs                                                | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534)                     | A DXGI (infraestrutura gráfica do DirectX) oferece uma interface entre o hardware gráfico e o Direct3D. Ela define o adaptador do dispositivo e as configurações de hardware usando as interfaces COM [**IDXGIAdapter**](https://msdn.microsoft.com/library/windows/desktop/bb174523) e [**IDXGIDevice1**](https://msdn.microsoft.com/library/windows/desktop/hh404543). Use-a para criar e configurar os buffers e outros recursos de janela. Destaque para o padrão de fábrica [**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556), usado para adquirir os recursos gráficos, incluindo a cadeia de troca (um conjunto de buffers de quadro). Como a cadeia de troca pertence à DXGI, a interface [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) é usada para apresentar os quadros na tela. |
-| [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476080)       | O Direct3D é um conjunto de APIs que fornecem uma representação visual da interface gráfica e permitem desenhar gráficos usando-a. Com relação aos recursos, de modo geral a versão 11 se compara ao OpenGL 4.3. (Por outro lado, o OpenGL ES 2.0 é semelhante ao DirectX9, quando se trata de recursos, e ao OpenGL 2.0, mas com o pipeline de sombreador unificado do OpenGL 3.0). A maior parte do trabalho pesado é feita com as interfaces ID3D11Device1 e ID3D11DeviceContext1, que fornecem, respectivamente: acesso a recursos e sub-recursos; e o contexto de renderização.                                                                                                                                          |
+| [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476080)       | O Direct3D é um conjunto de APIs que fornecem uma representação visual da interface gráfica e permitem desenhar gráficos usando-a. Com relação aos recursos, de modo geral a versão 11 se compara ao OpenGL 4.3. (OpenGL ES 2.0, por outro lado, é semelhante ao DirectX9, feature-wise e OpenGL 2.0, mas com do OpenGL 3.0 unified pipeline sombreador). A maioria do trabalho pesado é feito com as interfaces ID3D11Device1 e ID3D11DeviceContext1 que fornecem acesso a recursos individuais e sub-recursos e o contexto de renderização, respectivamente.                                                                                                                                          |
 | [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990)                      | O Direct2D fornece um conjunto de APIs para renderização 2D acelerada por GPU. Sua finalidade pode ser considerada semelhante à do OpenVG.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038)            | O DirectWrite fornece um conjunto de APIs para renderização de fontes de alta qualidade acelerada por GPU.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833)                  | O DirectXMath fornece um conjunto de APIs e macros para lidar com tipos, valores e funções algébricas lineares e trigonométricas comuns. Esses tipos e funções foram desenvolvidos para desempenhar um bom trabalho com o Direct3D e suas operações de renderizador.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -110,7 +110,7 @@ Mas o Direct3D é compatível com um sistema de coordenadas de mão direita. O D
 ## <a name="opengl-es20-to-direct3d-11-porting-frequently-asked-questions"></a>Perguntas frequentes sobre portabilidade do OpenGL ES2.0 para Direct3D 11
 
 
--   Pergunta: "De modo geral, posso pesquisar certas cadeias ou padrões em meu código OpenGL e substituí-los por equivalentes em Direct3D?"
+-   Pergunta: "Em geral, posso procurar determinadas cadeias de caracteres ou padrões em meu código OpenGL e substituí-los com os equivalentes de Direct3D?"
 -   Resposta: Não. O OpenGL ES 2.0 e o Direct3D 11 vêm de gerações diferentes do modelo de pipeline gráfico. Embora haja algumas semelhanças entre os conceitos e APIs referentes à superfície, como o contexto de renderização e a instanciação de sombreadores, você deve conferir estas instruções e a referência do Direct3D 11 para fazer as melhores escolhas ao recriar o pipeline em vez de tentar um mapeamento de 1 para 1. Porém, se você estiver fazendo a portabilidade do GLSL para o HLSL, a criação de um conjunto de aliases comuns para variáveis, intrínsecos e funções GLSL pode tornar a portabilidade mais fácil e, além disso, permitir que você mantenha apenas um conjunto de arquivos de código do sombreador.
 
  

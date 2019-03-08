@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análises da Microsoft Store, informações de resposta
 ms.localizationpriority: medium
 ms.openlocfilehash: 0497b5eec67f9204139cd10d4523b534d6c8779f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928832"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595551"
 ---
 # <a name="get-response-info-for-reviews"></a>Obter informações de resposta para análises
 
@@ -40,15 +40,15 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
 | Parâmetro        | Tipo   | Descrição                                     |  Obrigatório  |
 |---------------|--------|--------------------------------------------------|--------------|
-| applicationId | cadeia | A ID da Loja do aplicativo que contém a análise para a qual você deseja determinar se pode responder. A ID da loja está disponível na [página de identidade de aplicativo](../publish/view-app-identity-details.md) no Partner Center. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
-| reviewId | cadeia | A ID da revisão que você deseja responder (este é um GUID). As IDs de revisão estão disponíveis nos dados de resposta do método [obter avaliações de app](get-app-reviews.md) na API de análise da Microsoft Store e no [download offline](../publish/download-analytic-reports.md) do [Relatório de avaliações](../publish/reviews-report.md). <br/>Se você omitir esse parâmetro, o corpo da resposta para esse método indicará se você tem permissões para responder a quaisquer análises para o aplicativo especificado. |  Não  |
+| applicationId | cadeia de caracteres | A ID da Loja do aplicativo que contém a análise para a qual você deseja determinar se pode responder. A ID de Store está disponível na [página de aplicativo de identidade](../publish/view-app-identity-details.md) no Partner Center. Um exemplo de ID da Loja é 9WZDNCRFJ3Q8. |  Sim  |
+| reviewId | cadeia de caracteres | A ID da revisão que você deseja responder (este é um GUID). As IDs de revisão estão disponíveis nos dados de resposta do método [obter avaliações de app](get-app-reviews.md) na API de análise da Microsoft Store e no [download offline](../publish/download-analytic-reports.md) do [Relatório de avaliações](../publish/reviews-report.md). <br/>Se você omitir esse parâmetro, o corpo da resposta para esse método indicará se você tem permissões para responder a quaisquer análises para o aplicativo especificado. |  Não  |
 
 
 ### <a name="request-example"></a>Exemplo de solicitação
@@ -68,7 +68,7 @@ Authorization: Bearer <your access token>
 | Valor      | Tipo   | Descrição    |  
 |------------|--------|-----------------------|
 | CanRespond      | Booliano  | O valor **true** indica que você pode responder à análise especificado, ou que você tem permissões para responder a qualquer análise do aplicativo especificado. Caso contrário, esse valor é **false**.       |
-| DefaultSupportEmail  | cadeia |  O [endereço de email de suporte](../publish/enter-app-properties.md#support-contact-info) do seu aplicativo, conforme especificado na listagem da Loja do seu aplicativo. Se você não especificar um endereço de email de suporte, esse campo ficará vazio.    |
+| DefaultSupportEmail  | cadeia de caracteres |  O [endereço de email de suporte](../publish/enter-app-properties.md#support-contact-info) do seu aplicativo, conforme especificado na listagem da Loja do seu aplicativo. Se você não especificar um endereço de email de suporte, esse campo ficará vazio.    |
 
  
 ### <a name="response-example"></a>Exemplo de resposta
@@ -85,6 +85,6 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Enviar respostas às análises usando a API de análise da Microsoft Store](submit-responses-to-app-reviews.md)
-* [Responder às críticas dos clientes usando o Partner Center](../publish/respond-to-customer-reviews.md)
-* [Responder às críticas usando serviços da Microsoft Store](respond-to-reviews-using-windows-store-services.md)
-* [Obter avaliações de aplicativo](get-app-reviews.md)
+* [Responder a revisões de cliente usando o Partner Center](../publish/respond-to-customer-reviews.md)
+* [Responder às revisões usando os serviços da Microsoft Store](respond-to-reviews-using-windows-store-services.md)
+* [Obter revisões de aplicativo](get-app-reviews.md)

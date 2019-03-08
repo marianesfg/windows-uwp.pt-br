@@ -1,23 +1,23 @@
 ---
 title: Introdução aos pacotes de ativo
-description: Pacotes de ativo são um tipo de pacote que atuam como um local centralizado para arquivos comuns de um aplicativo, eliminando a necessidade de arquivos duplicados nos pacotes de arquitetura.
+description: Pacotes de ativo são um tipo de pacote que atuam como um local centralizado para arquivos comuns de um aplicativo, eliminando efetivamente a necessidade de arquivos duplicados através de seus pacotes de arquitetura.
 ms.date: 09/30/2018
 ms.topic: article
-keywords: windows 10, empacotamento, layout do pacote, pacote de ativo
+keywords: windows 10, empacotamento, layout do pacote, pacote do ativo
 ms.localizationpriority: medium
 ms.openlocfilehash: b7ae65d13f92f5ab28f2f5eda468032bb7f83793
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944347"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594661"
 ---
 # <a name="introduction-to-asset-packages"></a>Introdução aos pacotes de ativo
 
 > [!IMPORTANT]
 > Se você pretender enviar seu aplicativo para a Store, precisará entrar em contato com [Suporte ao desenvolvedor Windows](https://developer.microsoft.com/windows/support) e receber aprovação para usar pacotes de ativo.
 
-Pacotes de ativo são um tipo de pacote que atuam como um local centralizado para arquivos comuns de um aplicativo, eliminando a necessidade de arquivos duplicados nos pacotes de arquitetura. Os pacotes de ativo são semelhantes aos pacotes de recursos porque ambos foram criados para conter conteúdo estático necessário para que seu aplicativo seja executado, mas são diferentes porque todos os pacotes de ativo são sempre baixados, independentemente da arquitetura do sistema do usuário, da linguagem ou da escala de exibição.
+Pacotes de ativo são um tipo de pacote que atuam como um local centralizado para arquivos comuns de um aplicativo, eliminando efetivamente a necessidade de arquivos duplicados através de seus pacotes de arquitetura. Os pacotes de ativo são semelhantes aos pacotes de recursos porque ambos foram criados para conter conteúdo estático necessário para que seu aplicativo seja executado, mas são diferentes porque todos os pacotes de ativo são sempre baixados, independentemente da arquitetura do sistema do usuário, da linguagem ou da escala de exibição.
 
 ![Diagrama de pacote de ativo](images/primary-bundle.png)
 
@@ -26,7 +26,7 @@ Como os pacotes de ativo contêm todos os arquivos independentes de arquitetura,
 ### <a name="how-do-asset-packages-affect-publishing"></a>Como os pacotes de ativo afetam a publicação?
 A vantagem mais óbvia de pacotes de ativo é o tamanho reduzido de aplicativos empacotados. Pacotes de aplicativo menores aceleram o processo de publicação do aplicativo, permitindo que a Store processe menos arquivos. No entanto, isso não é o benefício mais importante dos pacotes de ativo.
 
-Quando um pacote de ativo é criado, você pode especificar se o pacote deve ter permissão para ser executado. Como os pacotes de ativo devem conter apenas arquivos independentes da arquitetura, eles geralmente não contêm todos os arquivos .dll ou .exe. Assim, os pacotes de ativo normalmente não precisam ser executados. A importância dessa distinção é que, durante o processo de publicação, todos os pacotes executáveis devem ser examinados para garantir que não contenham malware, e esse processo de verificação leva mais tempo para pacotes maiores. No entanto, se um pacote for designado como não executável, a instalação do aplicativo garantirá que os arquivos contidos nesse pacote não possam ser executados. Essa garantia elimina a necessidade de um exame completo do pacote e reduzirá consideravelmente o tempo de varredura de malware durante a publicação do aplicativo (e nas atualizações também). Isso agiliza muito a publicação de aplicativos que usam pacotes de ativo. Observe que [pacotes simples do aplicativo](flat-bundles.md) também deve ser usado para obter esse benefício de publicação, pois isso permite que a Store processe cada arquivo do pacote. AppX ou .msix em paralelo. 
+Quando um pacote de ativo é criado, você pode especificar se o pacote deve ter permissão para ser executado. Como os pacotes de ativo devem conter apenas arquivos independentes da arquitetura, eles geralmente não contêm todos os arquivos .dll ou .exe. Assim, os pacotes de ativo normalmente não precisam ser executados. A importância dessa distinção é que, durante o processo de publicação, todos os pacotes executáveis devem ser examinados para garantir que não contenham malware, e esse processo de verificação leva mais tempo para pacotes maiores. No entanto, se um pacote for designado como não executável, a instalação do aplicativo garantirá que os arquivos contidos nesse pacote não possam ser executados. Essa garantia elimina a necessidade de um exame completo do pacote e reduzirá consideravelmente o tempo de varredura de malware durante a publicação do aplicativo (e nas atualizações também). Isso agiliza muito a publicação de aplicativos que usam pacotes de ativo. Observe que [pacotes de aplicativos do pacote simples](flat-bundles.md) também deve ser usado para obter esse benefício de publicação, já que este é o que permite que o Store processar cada arquivo de pacote. AppX ou .msix em paralelo. 
 
 
 ### <a name="should-i-use-asset-packages"></a>Devo usar pacotes de ativo?

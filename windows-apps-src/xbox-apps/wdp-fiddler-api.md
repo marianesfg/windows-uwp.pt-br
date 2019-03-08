@@ -7,40 +7,40 @@ keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
 ms.openlocfilehash: f60f3fc8678208f694a9ffabde06fa60de759a45
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937807"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603331"
 ---
 # <a name="fiddler-settings-api-reference"></a>Referência de API de configurações Fiddler   
 Você pode habilitar e desabilitar o rastreamento de rede Fiddler no seu devkit usando essa API REST.
 
-## <a name="determine-if-fiddler-tracing-is-enabled"></a>Determinar se o rastreamento de Fiddler está habilitado
+## <a name="determine-if-fiddler-tracing-is-enabled"></a>Determinar se o rastreamento do Fiddler está habilitado
 
 **Solicitação**
 
-Você pode verificar se o rastreamento de Fiddler está habilitado no dispositivo usando a solicitação a seguir.
+Você pode verificar se o rastreamento do Fiddler está habilitado no dispositivo usando a solicitação a seguir.
 
 Método      | URI da solicitação
 :------     | :-----
 GET | /ext/fiddler
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
-- Nenhum(a)
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Corpo da solicitação**   
 
-- Nenhum(a)
+- Nenhuma
 
 **Resposta**   
 
-- A propriedade bool JSON IsProxyEnabled quais especificadores se o proxy está habilitado ou não.
+- A propriedade booliana JSON IsProxyEnabled que especifica se o proxy está habilitado ou não.
 
 **Código de status**
 
@@ -62,7 +62,7 @@ Método      | URI da solicitação
 :------     | :-----
 POST | /ext/fiddler
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -75,7 +75,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Corpo da solicitação**
 
@@ -83,7 +83,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Resposta**   
 
-- Nenhum(a)  
+- Nenhuma  
 
 **Código de status**
 
@@ -105,21 +105,21 @@ Método      | URI da solicitação
 :------     | :-----
 DELETE | /ext/fiddler
 <br />
-**Parâmetros do URI**
+**Parâmetros de URI**
 
-- Nenhum(a)
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhuma
 
 **Corpo da solicitação**   
 
-- Nenhum(a)
+- Nenhuma
 
 **Resposta**   
 
-- Nenhum(a) 
+- Nenhuma 
 
 **Código de status**
 
@@ -137,5 +137,5 @@ Código de status HTTP      | Descrição
 * Windows Xbox
 
 ## <a name="see-also"></a>Consulte também
-- [Configurando o Fiddler para UWP no Xbox](uwp-fiddler.md)
+- [Configurando o Fiddler para UWP Xbox](uwp-fiddler.md)
 

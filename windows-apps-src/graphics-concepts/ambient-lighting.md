@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 558d7e655a54b22f1fc74591a718a7180d90366f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934435"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57663641"
 ---
 # <a name="ambient-lighting"></a>Iluminação ambiente
 
@@ -23,9 +23,9 @@ A iluminação ambiente é o tipo mais rápido de iluminação, mas produz resul
 
 A iluminação ambiente para uma cena é descrita pela seguinte equação.
 
-Iluminação ambiente = Cₐ\*\[Gₐ + sum(Atten<sub>i</sub>\*Spot<sub>i</sub>\*L<sub>ai</sub>)\]
+Luz ambiente = Cₐ\*\[Gₐ + sum (Atten<sub>eu</sub>\*especiais<sub>eu</sub>\*L<sub>ai</sub>)\]
 
-Em que:
+Onde:
 
 | Parâmetro         | Valor padrão | Tipo          | Descrição                                                                                                       |
 |-------------------|---------------|---------------|-------------------------------------------------------------------------------------------------------------------|
@@ -33,24 +33,24 @@ Em que:
 | Gₐ                | (0,0,0,0)     | D3DCOLORVALUE | Cor ambiente global                                                                                              |
 | Atten<sub>i</sub> | (0,0,0,0)     | D3DCOLORVALUE | Atenuação de luz da luz ith. Consulte [Fator de atenuação e destaque](attenuation-and-spotlight-factor.md). |
 | Ponto<sub>i</sub>  | (0,0,0,0)     | D3DVECTOR     | Fator de destaque da luz ith. Consulte [Fator de atenuação e destaque](attenuation-and-spotlight-factor.md).  |
-| soma               | N/D           | N/A           | Soma da luz ambiente                                                                                          |
+| soma               | N/D           | N/D           | Soma da luz ambiente                                                                                          |
 | L<sub>ai</sub>    | (0,0,0,0)     | D3DVECTOR     | Cor ambiente da luz da luz ith                                                                              |
 
  
 
 O valor de Cₐ é:
 
--   vértice color1, se AMBIENTMATERIALSOURCE = D3DMCS\_COLOR1, e a primeira cor do vértice for fornecida na declaração de vértice.
--   vértice color2, se AMBIENTMATERIALSOURCE = D3DMCS\_COLOR2, e a segunda cor do vértice for fornecida na declaração de vértice.
+-   vértice color1, se AMBIENTMATERIALSOURCE = D3DMCS\_COLOR1 e a primeira cor do vértice é fornecido na declaração de vértice.
+-   vértice cor2, se AMBIENTMATERIALSOURCE = D3DMCS\_cor2 e a segunda cor de vértice é fornecido na declaração de vértice.
 -   cor ambiente do material.
 
-**Observação**  se qualquer uma das opções AMBIENTMATERIALSOURCE for usada e a cor do vértice não for fornecida, a cor ambiente do material é usada.
+**Observação**    se qualquer opção AMBIENTMATERIALSOURCE for usada e a cor do vértice não for fornecida, a cor ambiente material é usada.
 
  
 
 Para usar a cor ambiente do material, use SetMaterial, conforme mostrado no exemplo de código abaixo.
 
-Gₐ é a cor ambiente global. Ela é definida usando SetRenderState(D3DRS\_AMBIENT). Há uma cor ambiente global em uma cena do Direct3D. Este parâmetro não está associado um objeto de luz do Direct3D.
+Gₐ é a cor ambiente global. Ele é definido usando SetRenderState (D3DRS\_ambientes). Há uma cor ambiente global em uma cena do Direct3D. Este parâmetro não está associado um objeto de luz do Direct3D.
 
 L<sub>ai</sub> é a cor ambiente da luz ith na cena. Cada luz do Direct3D tem um conjunto de propriedades, uma delas é a cor ambiente. O termo, sum(L<sub>ai</sub>) é a soma de todas as cores ambiente na cena.
 
@@ -83,7 +83,7 @@ Para dar uma aparência mais realista aos objetos, aplique iluminação especula
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Matemática de iluminação](mathematics-of-lighting.md)
+[Cálculos de iluminação](mathematics-of-lighting.md)
 
  
 

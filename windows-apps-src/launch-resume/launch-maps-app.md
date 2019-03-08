@@ -1,5 +1,5 @@
 ---
-title: Iniciar o aplicativo Mapas do Windows
+title: Iniciar o app Mapas do Windows
 description: Saiba como iniciar o app Mapas do Windows a partir de seu app.
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
 ms.date: 02/08/2017
@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 021e3142a4e94f762cc48dbc86905dcf0b658772
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045695"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645231"
 ---
 # <a name="launch-the-windows-maps-app"></a>Iniciar o app Mapas do Windows
 
 
 
 
-Saiba como iniciar o app Mapas do Windows a partir de seu app. Este tópico descreve os esquemas de URI (Uniform Resource Identifier) de **bingmaps:, *ms-drive-to:, ms-walk-to:** and **ms-settings**: Use esses esquemas de URI para iniciar o aplicativo Mapas do Windows para ver mapas, trajetos e resultados de pesquisa específicos ou para baixar mapas offline de Mapas do Windows no aplicativo Configurações.
+Saiba como iniciar o app Mapas do Windows a partir de seu app. Este tópico descreve o **bingmaps:, *ms-unidade-to:, movimentação da ms para:**  e **ms-configurações:** Esquemas de Uniform Resource Identifier (URI). Use esses esquemas de URI para iniciar o aplicativo Mapas do Windows para ver mapas, trajetos e resultados de pesquisa específicos ou para baixar mapas offline de Mapas do Windows no aplicativo Configurações.
 
 **Dica** Para saber mais sobre como iniciar o aplicativo Mapas do Windows a partir de seu aplicativo, baixe a [amostra de mapas da Plataforma Universal do Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977) do [repositório de amostras universais do Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
@@ -26,9 +26,9 @@ Saiba como iniciar o app Mapas do Windows a partir de seu app. Este tópico desc
 
 Os esquemas de URI permitem que você abra aplicativos clicando em hiperlinks (ou programaticamente, em seu aplicativo). Assim como você pode iniciar um novo email usando **mailto:** ou abrir um navegador da Web usando **http:**, é possível abrir o aplicativo Mapas do Windows usando **bingmaps:**, **ms-drive-to:** e **ms-walk-to:**.
 
--   O URI **bingmaps:** fornece mapas de locais, resultados de pesquisa, trajetos e tráfego.
--   O URI **ms-drive-to:** fornece o trajeto de carro, curva a curva, a partir de sua localização atual.
--   O URI **ms-walk-to:** fornece o trajeto a pé, curva a curva, a partir de sua localização atual.
+-   O **bingmaps:** URI fornece mapas para locais, os resultados da pesquisa, instruções e tráfego.
+-   O **unidade ms para:** URI fornece indicações de ativar a curva do seu local atual.
+-   O **movimentação da ms para:** URI fornece instruções de movimentação de ativar a curva do seu local atual.
 
 Por exemplo, o URI a seguir abre o aplicativo Mapas do Windows e exibe um mapa centralizado na cidade de Nova York.
 
@@ -51,7 +51,7 @@ Para obter uma lista completa dos parâmetros disponíveis, consulte a referênc
 ## <a name="launch-a-uri-from-your-app"></a>Iniciar um URI a partir de seu aplicativo
 
 
-Para iniciar o aplicativo Mapas do Windows de seu aplicativo, chame o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) com um URI **bingmaps:**, **ms-drive-to:** ou **ms-walk-to:**. O exemplo a seguir inicia o mesmo URI do exemplo anterior. Para saber mais sobre como iniciar aplicativos via URI, consulte [Iniciar o aplicativo padrão para um URI](launch-default-app.md).
+Para iniciar o aplicativo de mapas do Windows do seu aplicativo, chame o [ **LaunchUriAsync** ](https://msdn.microsoft.com/library/windows/apps/hh701476) método com um **bingmaps:**, **ms-unidade-to:**, ou  **movimentação da MS para:** URI. O exemplo a seguir inicia o mesmo URI do exemplo anterior. Para saber mais sobre como iniciar aplicativos via URI, consulte [Iniciar o aplicativo padrão para um URI](launch-default-app.md).
 
 ```cs
 // Center on New York City
@@ -80,7 +80,7 @@ Para controlar o tipo de exibição, use os parâmetros *sty* (estilo) e *ss* (S
 | bingmaps:?bb=39.719\_-74.52~41.71\_-73.5                                   | Exibe um mapa da cidade de Nova York, que é a área específica no argumento **bb**.                                                                                                           |
 | bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&cp=47~-122                        | Exibe um mapa da cidade de Nova York, que é a área especifica no argumento de caixa delimitadora. O ponto central de Seattle especificado no argumento **cp** é ignorado porque *bb* é especificado. |
 | bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16 | Exibe um mapa com um ponto denominado Caesars Palace (em Las Vegas) e define o nível de zoom para 16.                                                                                                 |
-| bingmaps:?collection=point.40.726966\_-74.006076\_Some%255FBusiness        | Exibe um mapa com um ponto denominado Some\_Business (em Las Vegas).                                                                                                                               |
+| bingmaps:?Collection=Point.40.726966\_-74.006076\_alguns 255FBusiness %        | Exibe um mapa com um ponto de chamada alguns\_comerciais (em Las Vegas).                                                                                                                               |
 | bingmaps:?cp=40.726966~-74.006076&trfc=1&sty=a                             | Exibe um mapa da cidade de Nova York com tráfego e estilo de mapa aéreo.                                                                                                                          |
 | bingmaps:?cp=47.6204~-122.3491&sty=3d                                      | Mostra a exibição 3D do Space Needle.                                                                                                                                                        |
 | bingmaps:?cp=47.6204~-122.3491&sty=3d&rad=200&pit=75&hdg=165               | Mostra a exibição 3D do Space Needle com um raio de 200 m, uma rotação sobre o eixo x de 75 graus e um título de 165 graus.                                                                             |
@@ -97,7 +97,7 @@ Ao pesquisar por locais usando o parâmetro *q*, recomendamos o uso de termos es
 | bingmaps:?q=1600%20Pennsylvania%20Ave,%20Washington,%20DC     | Exibe um mapa e pesquisa o endereço da Casa Branca em Washington, D.C. |
 | bingmaps:?q=coffee&where=Seattle                              | Pesquisa por café em Seattle.                                                    |
 | bingmaps:?cp=40.726966~-74.006076&where=New%20York            | Pesquisa por Nova York próximo ao ponto central especificado.                             |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&q=pizza              | Pesquisa por pizza na caixa delimitadora especificada (ou seja, na cidade de Nova York).      |
+| bingmaps:? bb = 39.719\_-74.52 ~ 41.71\_-73.5 & q = pizza              | Pesquisa por pizza na caixa delimitadora especificada (ou seja, na cidade de Nova York).      |
 
  
 ## <a name="display-multiple-points"></a>Exibir vários pontos
@@ -107,10 +107,10 @@ Use o parâmetro *collection* para mostrar um conjunto personalizado de pontos n
 
 | URI de Exemplo | Resultados                                                                                                                   |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace                                                                                                | Pesquisa por Caesar's Palace em Las Vegas e exibe os resultados em um mapa na melhor exibição de mapa.                         |
+| bingmaps:?Collection=Point.36.116584\_-115.176753\_Caesars % 20Palace                                                                                                | Pesquisa por Caesar's Palace em Las Vegas e exibe os resultados em um mapa na melhor exibição de mapa.                         |
 | bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16                                                                                         | Exibe um pino denominado Caesars Palace em Las Vegas e define o zoom para nível 16.                                               |
-| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669                   | Exibe um pino denominado Caesars Palace e um pino denominado The Bellagio em Las Vegas e define o zoom para nível 16.              |
-| bingmaps:?collection=point.40.726966\_-74.006076\_Fake%255FBusiness%255Fwith%255FUnderscore                                                                        | Exibe a cidade de Nova York com um pino denominado Fake\_Business\_with\_Underscore.                                                  |
+| bingmaps:?Collection=Point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_a % 20Bellagio & lvl = 16 & cp = 36.114902 ~-115.176669                   | Exibe um pino denominado Caesars Palace e um pino denominado The Bellagio em Las Vegas e define o zoom para nível 16.              |
+| bingmaps:?collection=point.40.726966\_-74.006076\_Fake%255FBusiness%255Fwith%255FUnderscore                                                                        | Nova York é exibido com um pino chamado falsificação\_comerciais\_com\_sublinhado.                                                  |
 | bingmaps:?collection=name.Hotel%20List~point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669 | Exibe uma lista denominada Lista de Hotéis e dois pinos para Caesars Palace e The Bellagio em Las Vegas, e define o zoom para nível 16. |
 
  
@@ -126,7 +126,7 @@ Você pode exibir o trajeto entre dois pontos usando o parâmetro *rtp*. Esses p
 |-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | bingmaps:?rtp=pos.44.9160\_-110.4158~pos.45.0475\_-109.4187                                                             | Exibe um mapa com trajeto ponto a ponto. Como *mode* não é especificado, o trajeto será fornecido usando o modo de preferência de transporte do usuário. |
 | bingmaps:?cp=43.0332~-87.9167&trfc=1                                                                                    | Exibe um mapa centralizado na cidade de Milwaukee, WI, com tráfego.                                                                                                        |
-| bingmaps:?rtp=adr.One Microsoft Way, Redmond, WA 98052~pos.39.0731\_-108.7238                                           | Exibe um mapa com o trajeto do endereço especificado para o local especificado.                                                                            |
+| bingmaps:? rtp = adr. One Microsoft Way, Redmond, WA 98052~pos.39.0731\_-108.7238                                           | Exibe um mapa com o trajeto do endereço especificado para o local especificado.                                                                            |
 | bingmaps:?rtp=adr.1%20Microsoft%20Way,%20Redmond,%20WA,%2098052~pos.36.1223\_-111.9495\_Grand%20Canyon%20northern%20rim | Exibe o trajeto de 1 Microsoft Way, Redmond, WA, 98052 até a borda norte do Grand Canyon.                                                                |
 | bingmaps:?rtp=adr.Davenport, CA~adr.Yosemite Village                                                                    | Exibe um mapa com trajetos para dirigir com endereço especificado para o ponto de referência especificado.                                                                   |
 | bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=d                      | Exibe com trajetos de carro de Mountain View, CA para o San Francisco International Airport, CA.                                                                  |
@@ -136,9 +136,9 @@ Você pode exibir o trajeto entre dois pontos usando o parâmetro *rtp*. Esses p
 ## <a name="display-turn-by-turn-directions"></a>Exibir trajeto curva a curva
 
 
-Os esquemas de URI **ms-drive-to:** e **ms-walk-to:** permitem que você inicie diretamente em um modo de exibição de curva a curva de uma rota. Esses esquemas de URI só podem fornecer o trajeto da localização atual do usuário. Se você tiver de fornecer o trajeto entre pontos que não incluem a localização atual do usuário, use o esquema de URI **bingmaps:** conforme descrito na seção anterior. Para saber mais sobre esses esquemas de URI, consulte as referências de parâmetro [ms-drive-to:](#ms-drive-to-param-reference) e [ms-walk-to:](#ms-walk-to-param-reference).
+O **ms-unidade-to:** e **movimentação da ms para:** Esquemas de URI permitem que você inicie diretamente em uma exibição de ativar a curva de uma rota. Esses esquemas de URI só podem fornecer o trajeto da localização atual do usuário. Se você deve fornecer as direções entre os pontos que não incluem o local do usuário atual, use o **bingmaps:** Esquema URI, conforme descrito na seção anterior. Para saber mais sobre esses esquemas de URI, consulte as referências de parâmetro [ms-drive-to:](#ms-drive-to-param-reference) e [ms-walk-to:](#ms-walk-to-param-reference).
 
-> **Importante**  Quando os esquemas de URI **ms-drive-to:** ou **ms-walk-to:** são iniciados, o aplicativo Mapas verifica se o dispositivo passou por uma correção de localização do GPS. Em caso afirmativo, o aplicativo Mapas continuará com o trajeto curva a curva. Caso contrário, o aplicativo exibirá a visão geral da rota, conforme descrito em [Exibir trajeto e tráfego](#display-directions-and-traffic).
+> **Importante** quando o **ms-unidade-to:** ou **movimentação da ms para:** Esquemas de URI são iniciadas, o aplicativo de mapas verificará se o dispositivo tenha um local de GPS corrigir. Em caso afirmativo, o aplicativo Mapas continuará com o trajeto curva a curva. Caso contrário, o aplicativo exibirá a visão geral da rota, conforme descrito em [Exibir trajeto e tráfego](#display-directions-and-traffic).
 
 ![um exemplo de trajeto curva a curva](images/windowsmapsappdirections.png)
 
@@ -150,7 +150,7 @@ Os esquemas de URI **ms-drive-to:** e **ms-walk-to:** permitem que você inicie 
 
 ## <a name="download-offline-maps"></a>Baixar mapas offline
 
-O esquema de URI **ms-settings:** permite que você inicie diretamente em uma página específica no aplicativo Configurações. Embora o esquema de URI **ms-settings:** não inicie o aplicativo Mapas, ele permite que você acesse diretamente a página Mapas Offline no aplicativo Configurações e exibe uma caixa de diálogo de confirmação para baixar os mapas offline usados pelo aplicativo Mapas. O esquema de URI aceita um ponto especificado por uma latitude e longitude e determina automaticamente se há mapas offline disponíveis para uma região que contém esse ponto.  Se a latitude e longitude informadas estiverem em várias regiões de download, a caixa de diálogo de confirmação permitirá que o usuário escolha qual essas regiões baixar. Se mapas offline não estiverem disponíveis para uma região que contém esse ponto, a página Mapas offline no aplicativo Configurações será exibida com uma caixa de diálogo de erro.
+O **ms-configurações:** Esquema de URI permite que você inicie diretamente em uma página específica no aplicativo configurações. Enquanto o **ms-configurações:** O aplicativo de mapas de esquema de URI não inicia, mas permitem que você inicie diretamente para a página mapas Offline no aplicativo configurações e exibe uma caixa de diálogo de confirmação para baixar os mapas offline usados pelo aplicativo de mapas. O esquema de URI aceita um ponto especificado por uma latitude e longitude e determina automaticamente se há mapas offline disponíveis para uma região que contém esse ponto.  Se a latitude e longitude informadas estiverem em várias regiões de download, a caixa de diálogo de confirmação permitirá que o usuário escolha qual essas regiões baixar. Se mapas offline não estiverem disponíveis para uma região que contém esse ponto, a página Mapas offline no aplicativo Configurações será exibida com uma caixa de diálogo de erro.
 
 | URI de Exemplo  | Resultados |
 |-------------|---------|
@@ -209,7 +209,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 </tr>
 <tr class="odd">
 <td align="left"><p><b>where</b></p></td>
-<td align="left"><p>Localização</p></td>
+<td align="left"><p>Location</p></td>
 <td align="left"><p>where = "where=" whereval</p>
 <p>whereval = 1 *( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "*" / "+" / "," / ";" / ":" / "@" / "/" / "?")</p>
 <p>Exemplo:</p>
@@ -241,13 +241,13 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>sty=a</p></td>
 <td align="left"><p>Define o estilo de mapa. Os valores válidos para esse parâmetro incluem:</p>
 <ul>
-<li>**a**: exibe uma vista aérea do mapa.</li>
-<li>**r**: exibe uma vista das ruas do mapa.</li>
-<li>**3d**: exibe uma vista em 3D do mapa. Use em conjunto com o parâmetro **cp** e, opcionalmente, com o parâmetro **rad**.</li>
+<li>**a**: Exibe uma vista aérea do mapa.</li>
+<li>**r**: Exiba um modo de exibição do mapa rodoviário.</li>
+<li>**3d**: Exiba um modo de exibição 3D do mapa. Use em conjunto com o parâmetro **cp** e, opcionalmente, com o parâmetro **rad**.</li>
 </ul>
 <p>No Windows 10, os estilos de vista aérea e exibição 3D são os mesmos.</p>
 <div class="alert">
-**Observação**omitir o parâmetro **sty** produz os mesmos resultados que sty = r.
+**Observação**  Omitting as **sty** parâmetro produz os mesmos resultados que sty = r.
 </div>
 <div>
  
@@ -285,7 +285,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>ss=1</p></td>
 <td align="left"><p>Indica as imagens em nível de rua que serão mostradas quando <code>ss=1</code>. Omitir o parâmetro <b>ss</b> produz os mesmos resultados que <code>ss=0</code>. Use em conjunto com o parâmetro <b>cp</b> para especificar o local do modo de exibição em nível de rua.</p>
 <div class="alert">
-**Observação**imagens em nível de rua não está disponível em todas as regiões.
+**Observação**  imagens do nível da rua não está disponível em todas as regiões.
 </div>
 <div>
  
@@ -293,13 +293,13 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 </tr>
 <tr class="odd">
 <td align="left"><p><b>trfc</b></p></td>
-<td align="left"><p>Trânsito</p></td>
+<td align="left"><p>Tráfego</p></td>
 <td align="left"><p>trfc = "trfc=" BIT</p>
 <p>Exemplo:</p>
 <p>trfc=1</p></td>
 <td align="left"><p>Especifica se as informações de trânsito estão incluídas no mapa. Omitir o parâmetro trfc produz os mesmos resultados que <code>trfc=0</code>.</p>
 <div class="alert">
-**Observação**os dados de tráfego não estão disponíveis em todas as regiões.
+**Observação**  dados de tráfego não estão disponíveis em todas as regiões.
 </div>
 <div>
  
@@ -328,7 +328,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>Nenhuma linha de rota é desenhada quando uma rota incompleta é determinada.</p>
 <p>Use em conjunto com o parâmetro **mode** para especificar o modo de transporte (de carro, transporte público ou a pé). Se **mode** não for especificado, o trajeto será fornecido usando o modo de preferência de transporte do usuário.</p>
 <div class="alert">
-**Observação**um título pode ser usado para um local se o local for especificado pelo valor do parâmetro **pos** . Em vez de mostrar a latitude e a longitude, o título será exibido.
+**Observação**  um título pode ser usado para um local se o local for especificado o **pos** valor do parâmetro. Em vez de mostrar a latitude e a longitude, o título será exibido.
 </div>
 <div>
  
@@ -342,15 +342,15 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>mode=d</p></td>
 <td align="left"><p>Define o modo de transporte. Os valores válidos para esse parâmetro incluem:</p>
 <ul>
-<li>**d**: exibe a visão geral dos trajetos por automóvel</li>
-<li>**t**: exibe a visão geral dos trajetos</li>
-<li>**w**: exibe a visão geral dos trajetos a pé</li>
+<li>**d**: Visão geral de rota exibe para referências de local</li>
+<li>**t**: Visão geral de instruções de trânsito de rota exibe</li>
+<li>**w**: Visão geral para percorrer as direções de rota exibe</li>
 </ul>
 <p>Use em conjunto com o parâmetro **rtp** para o trajeto de transporte. Se **mode** não for especificado, o trajeto será fornecido usando o modo de preferência de transporte do usuário. Um **modo** pode ser fornecido sem nenhum parâmetro de rota para inserir entradas de trajeto para o modo em questão do local atual.</p></td>
 </tr>
 
 <tr class="even">
-<td align="left"><p><b>collection</b></p></td>
+<td align="left"><p><b>coleção</b></p></td>
 <td align="left"><p>Coleção</p></td>
 <td align="left"><p>collection = "collection="(name"~"/)point["~"point]</p>
 <p>name = "name." whereval </p>
@@ -410,7 +410,7 @@ O URI para iniciar uma solicitação de trajetos a pé curva a curva não precis
 
 ## <a name="ms-settings-parameter-reference"></a>Referência de parâmetro ms-settings:
 
-A sintaxe para parâmetros específicos do aplicativo Mapas para o esquema de URI **ms-settings:** é definida abaixo. **mapas downloadmaps** é especificado junto com a URI **ms-settings:** na forma de **ms-configurações: mapas-downloadmaps?** para indicar a página de configurações de mapas offline. 
+A sintaxe para mapeia parâmetros específicos do aplicativo para o **ms-configurações:** Esquema de URI está definido abaixo. **mapas downloadmaps** é especificado junto com o **ms-configurações:** URI na forma de **ms-: mapas de configurações-downloadmaps?** para indicar a página de configurações de mapas offline. 
 
 | Parâmetro | Definição | Exemplo | Detalhes |
 |-----------|------------|---------|----------|

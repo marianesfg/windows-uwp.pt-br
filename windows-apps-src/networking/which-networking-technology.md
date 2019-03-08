@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b64ddadd0e543930fa72d0c44a6cacf0a873df89
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050679"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656301"
 ---
 # <a name="which-networking-technology"></a>Qual tecnologia de rede?
 
@@ -22,7 +22,7 @@ Uma rápida visão geral das tecnologias de rede disponíveis para um desenvolve
 
 Use [soquetes](sockets.md) quando você se comunicar com outro dispositivo e desejar usar seu próprio protocolo.
 
-Há duas implementações de soquetes disponíveis para desenvolvedores da Plataforma Universal do Windows (UWP): [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) e [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms740673). Se você estiver escrevendo código novo, Windows.Networking.Sockets tem a vantagem de ser uma API moderna, desenvolvida para uso por desenvolvedores UWP. Se você estiver usando bibliotecas de rede de plataforma cruzada ou outro código Winsock existente, ou se preferir a API Winsock, use essa.
+Duas implementações de soquetes estão disponíveis para os desenvolvedores da plataforma Universal do Windows (UWP): [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960), e [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms740673). Se você estiver escrevendo código novo, Windows.Networking.Sockets tem a vantagem de ser uma API moderna, desenvolvida para uso por desenvolvedores UWP. Se você estiver usando bibliotecas de rede de plataforma cruzada ou outro código Winsock existente, ou se preferir a API Winsock, use essa.
 
 ### <a name="when-to-use-sockets"></a>Quando usar soquetes
 
@@ -55,21 +55,21 @@ Use [HttpClient](httpclient.md) (e o restante da API namespace [**Windows.Web.Ht
 ### <a name="when-to-use-httpclient"></a>Quando usar um HttpClient
 
 -   Quando usar HTTP(S) para se comunicar com serviços Web.
--   Quando fizer upload ou transferência de um pequeno número de arquivos menores.
+-   Quando fizer upload ou download de um pequeno número de arquivos menores.
 -   Se os WebSockets (as classes [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) e [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)) atenderem às suas necessidades de comunicações (TCP de/para um servidor Web), e o servidor Web em questão suportar WebSockets, considere a possibilidade de usá-los em vez de desperdiçar tempo e recursos de desenvolvimento para implementar funcionalidade semelhante com HttpClient.
 -   Quando você está transmitindo conteúdo através da rede.
 
 ### <a name="when-not-to-use-httpclient"></a>Quando não usar HttpClient
 
 -   Se você estiver transferindo arquivos grandes ou grande número de arquivos, considere usar transferências em segundo plano.
--   Se quiser restringir os limites de transferência/upload com base no tipo de conexão ou se quiser salvar o andamento e retomar o transferência/upload após uma interrupção, você deverá usar transferências em segundo plano.
+-   Se quiser restringir os limites de download/upload com base no tipo de conexão ou se quiser salvar o andamento e retomar o download/upload após uma interrupção, você deverá usar transferências em segundo plano.
 -   Se você estiver se comunicando com dois dispositivos e nenhum deles for projetado para atuar como um servidor HTTP(S), você deverá usar soquetes. Não tente implementar seu próprio servidor HTTP e usar [HttpClient](httpclient.md) para se comunicar com ele.
 
 ## <a name="background-transfers"></a>Transferências em segundo plano
 
-Use a [API de transferência em segundo plano](background-transfers.md) quando desejar transferir arquivos de forma confiável pela rede. A API de transferência em segundo plano fornece recursos avançados de upload e transferência que são executados em segundo plano durante a suspensão do aplicativo e persistem após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de transferência se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. Esses recursos são essenciais quando o aplicativo é executado em dispositivos móveis ou alimentados por bateria. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para downloads.
+Use a [API de transferência em segundo plano](background-transfers.md) quando desejar transferir arquivos de forma confiável pela rede. A API de transferência em segundo plano fornece recursos avançados de upload e download que são executados em segundo plano durante a suspensão do aplicativo e persistem após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de download se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. Esses recursos são essenciais quando o aplicativo é executado em dispositivos móveis ou alimentados por bateria. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para downloads.
 
-Um novo recurso de transferência em segundo plano no Windows 10 é a capacidade de disparar pós-processamento quando uma transferência de arquivo for concluída, para que você possa atualizar catálogos locais, ativar outros aplicativos ou notificar o usuário quando um download for concluído.
+Um novo recurso de transferência em segundo plano no Windows 10 é a capacidade de disparar após o processamento quando uma transferência de arquivos for concluído, para que você pode atualizar catálogos locais, ativar outros aplicativos ou notificar o usuário quando um download for concluído.
 
 ### <a name="when-to-use-background-transfers"></a>Quando usar transferências em segundo plano
 
@@ -127,7 +127,7 @@ A API [**Windows.Devices.WiFiDirect.Services**](https://msdn.microsoft.com/libra
 
 ### <a name="mobile-operators"></a>Operadoras móveis
 
-Windows 10 expõe para um público de desenvolvedores algumas APIs que só eram expostos a fabricantes de dispositivos e operadoras móveis. Embora estejam expostas agora, essas APIs também são limitadas por recursos de aplicativo específicos que devem ser aprovados pela Microsoft para que um aplicativo possa ser publicado. O uso real dessas APIs continuará limitado principalmente a fabricantes de dispositivos e operadoras móveis.
+Windows 10 expõe a um público de desenvolvedores ampla algumas APIs que anteriormente só foram expostos para fabricantes de dispositivos e operadoras de celular. Embora estejam expostas agora, essas APIs também são limitadas por recursos de aplicativo específicos que devem ser aprovados pela Microsoft para que um aplicativo possa ser publicado. O uso real dessas APIs continuará limitado principalmente a fabricantes de dispositivos e operadoras móveis.
 
 ### <a name="network-operations"></a>Operações de rede
 

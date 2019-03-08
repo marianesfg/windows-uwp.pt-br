@@ -7,16 +7,16 @@ keywords: windows 10, uwp, código de exemplo, exemplos de código
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
 ms.openlocfilehash: 4cdf38a4bd77c4f6affb813c9e1de68463c43100
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049713"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598531"
 ---
 # <a name="get-uwp-app-samples"></a>Obter exemplos de aplicativo UWP
 
 Os exemplos de aplicativo UWP (Plataforma Universal do Windows) são disponibilizados por meio de repositórios no GitHub. Consulte [Exemplos](https://developer.microsoft.com/windows/samples "Amostras do Centro de Desenvolvimento") para obter uma lista pesquisável e categorizada ou navegue pelo repositório [Microsoft/Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples "repositório de exemplos de aplicativo da Plataforma Universal do Windows do GitHub"), que contém exemplos que demonstram todos os recursos UWP e seus padrões de uso de API.  
-![Repositório de exemplo UWP do GitHub](images/GitHubUWPSamplesPage.png)
+![Repositório de exemplo do GitHub UWP](images/GitHubUWPSamplesPage.png)
 
 ## <a name="download-the-code"></a>Baixe o código
 
@@ -45,7 +45,7 @@ Depois de baixar o arquivo zip, abra os exemplos no Visual Studio:
 
     ![Pastas de idiomas](images/SamplesUnzip3.png)
 
-4.  Selecione o idioma que você gostaria de usar, como CS para C\#, e você verá um arquivo de solução do Visual Studio, que é possível abrir no Visual Studio.
+4.  Selecione o idioma que você deseja usar, como CS para C\#, e você verá um arquivo de solução do Visual Studio, que pode ser aberto no Visual Studio.
 
     ![Solução do VS](images/SamplesUnzip4.png)
 

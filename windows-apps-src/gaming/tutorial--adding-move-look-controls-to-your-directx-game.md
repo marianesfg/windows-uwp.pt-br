@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, move-look, controles
 ms.localizationpriority: medium
 ms.openlocfilehash: 222f46bbda165442003aecea0bbd138bcb844a3b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943273"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604371"
 ---
-# <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles move-look para jogos
+# <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles de mover a consulta para jogos
 
 
 
@@ -145,28 +145,28 @@ Nosso código contém quatro grupos de campos privados. Examinaremos a finalidad
 
 Primeiro, definimos alguns campos úteis para conter informações atualizadas sobre o ponto de vista da câmera.
 
--   **m\_position** é a posição da câmera (e, portanto, do plano de visão) na cena 3D, usando coordenadas da cena.
--   **m\_pitch** é a rotação sobre o eixo x da câmera, ou sua rotação para cima e para baixo em torno do eixo x do plano de visão, em radianos.
--   **m\_yaw** é a rotação sobre o eixo y da câmera, ou sua rotação para a esquerda e para a direita em torno do eixo y do plano de visão, em radianos.
+-   **m\_posição** é a posição da câmera (e, portanto, o viewplane) na cena 3D, usando coordenadas da cena.
+-   **m\_tom** é o tom de câmera ou a rotação de cima para baixo em torno do eixo x do viewplane, em radianos.
+-   **m\_yaw** é o desvio de câmera ou sua rotação esquerda-direita em torno do eixo y do viewplane, em radianos.
 
 Agora definiremos os campos que serão usados para armazenar informações sobre o status e a posição de nossos controladores. Primeiro definimos os campos necessários para o controlador de movimento baseado em toque. (A implementação do teclado como controlador de movimento não exige nada de especial. Simplesmente lemos os eventos de teclado com manipuladores específicos.)
 
--   **m\_moveInUse** indica se o controlador de movimento está em uso.
--   **m\_movePointerID** é o ID exclusivo do ponteiro de movimento atual. Nós o usamos para diferenciar o ponteiro de visão do ponteiro de movimento quando verificamos o valor do ID de ponteiro.
--   **m\_moveFirstDown** é o ponto na tela onde o jogador tocou inicialmente a área de ponteiro do controlador de movimento. Esse valor será usado posteriormente para definir uma zona morta a fim de evitar que movimentos minúsculos façam o ponto de vista oscilar.
--   **m\_movePointerPosition** é o ponto na tela para o qual o jogador moveu o ponteiro no momento. Nós o usamos para determinar a direção para a qual o jogador quis se mover examinando-a em relação a **m\_moveFirstDown**.
--   **m\_moveCommand** é o comando final calculado para o controlador de movimento: para cima (para a frente), para baixo (para trás), para a esquerda ou para a direita.
+-   **m\_moveInUse** indica se o controlador de movimentação está em uso.
+-   **m\_movePointerID** é a ID exclusiva para o ponteiro de movimento atual. Nós o usamos para diferenciar o ponteiro de visão do ponteiro de movimento quando verificamos o valor do ID de ponteiro.
+-   **m\_moveFirstDown** é o ponto na tela em que o jogador tocadas pela primeira vez a área de ponteiro de controlador de movimentação. Esse valor será usado posteriormente para definir uma zona morta a fim de evitar que movimentos minúsculos façam o ponto de vista oscilar.
+-   **m\_movePointerPosition** é o ponto na tela, o player no momento foi movido para o ponteiro para. Podemos usá-lo para determinar qual direção o player desejava mover examinando-a relação à **m\_moveFirstDown**.
+-   **m\_moveCommand** é o comando final computado para o controlador de movimentação: até (Avançar), para baixo (Voltar), esquerda ou direita.
 
 Agora definimos os campos que usaremos para o controlador de visão, nas implementações para mouse e touch.
 
--   **m\_lookInUse** indica se o controle de visão está em uso.
--   **m\_lookPointerID** é o ID exclusivo do ponteiro de visão atual. Nós o usamos para diferenciar o ponteiro de visão do ponteiro de movimento quando verificamos o valor do ID de ponteiro.
+-   **m\_lookInUse** indica se o controle de aparência está em uso.
+-   **m\_lookPointerID** é a ID exclusiva para o ponteiro de aparência atual. Nós o usamos para diferenciar o ponteiro de visão do ponteiro de movimento quando verificamos o valor do ID de ponteiro.
 -   **m\_lookLastPoint** é o último ponto, em coordenadas da cena, que foi capturado no quadro anterior.
--   **m\_lookLastDelta** é a diferença calculada entre o atual **m\_position** e **m\_lookLastPoint**.
+-   **m\_lookLastDelta** é a diferença computada entre atual **m\_posição** e **m\_lookLastPoint**.
 
 Finalmente, definimos seis valores booleanos para os seis graus de movimento, que usamos para indicar o estado atual de cada ação de movimento direcional (ativa ou inativa):
 
--   **m\_forward**, **m\_back**, **m\_left**, **m\_right**, **m\_up** e **m\_down**.
+-   **m\_forward**, **m\_volta**, **m\_esquerdo**, **m\_direita**, **m\_para cima** e **m\_para baixo**.
 
 Usamos os seis manipuladores de eventos para capturar os dados de entrada empregados para atualizar o estado dos controladores:
 
@@ -181,7 +181,7 @@ Finalmente, usamos esses métodos e propriedades para inicializar, acessar e atu
 -   **Initialize**. O aplicativo chama esse manipulador de eventos para inicializar os controles e anexá-los ao objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que descreve a janela de exibição.
 -   **SetPosition**. O aplicativo chama esse método para definir as coordenadas (x, y e z) dos controles no espaço da cena.
 -   **SetOrientation**. O aplicativo chama esse método para definir a rotação sobre o eixo x e a rotação sobre o eixo y da câmera.
--   **get\_Position**. O aplicativo acessa essa propriedade para obter a posição atual da câmera no espaço da cena. Essa propriedade é usada como um método para comunicar a posição atual da câmera ao aplicativo.
+-   **Obtenha\_posição**. O aplicativo acessa essa propriedade para obter a posição atual da câmera no espaço da cena. Essa propriedade é usada como um método para comunicar a posição atual da câmera ao aplicativo.
 -   **get\_LookPoint**. O aplicativo acessa essa propriedade para obter o ponto para o qual a câmera do controlador está voltada atualmente.
 -   **Update**. Lê o estado dos controladores de movimento e visão e atualiza a posição da câmera. Esse método é chamado continuamente a partir do loop principal do aplicativo para atualizar os dados do controlador da câmera e a posição da câmera no espaço da cena.
 
@@ -251,9 +251,9 @@ _In_ PointerEventArgs^ args)
 }
 ```
 
-Esse manipulador de eventos verifica se o ponteiro não é o mouse (para os fins deste exemplo, que dá suporte a mouse e toque) e se está na área do controlador de movimento. Caso ambos os critérios sejam verdadeiros, ele verifica se o ponteiro acabou de ser pressionado – especificamente, se esse clique não está relacionado a uma entrada de movimento ou visão anterior – testando se **m\_moveInUse** é false. Em caso afirmativo, o manipulador captura o ponto na área do controlador de movimento em que o pressionamento ocorreu e define **m\_moveInUse** como true para que, ao ser chamado novamente, esse manipulador não sobregrave a posição inicial da interação de entrada do controlador de movimento. Ele também atualiza a ID do ponteiro do controlador de movimento para a ID do ponteiro atual.
+Esse manipulador de eventos verifica se o ponteiro não é o mouse (para os fins deste exemplo, que dá suporte a mouse e toque) e se está na área do controlador de movimento. Se ambos os critérios forem verdadeiros, ele verifica se o ponteiro foi apenas pressionado, especificamente, se esse clique está relacionada à anterior mover ou procure a entrada, testando se **m\_moveInUse** é false. Se assim, o manipulador de captura o ponto na área de controlador de movimentação em que a imprensa aconteceu e define **m\_moveInUse** como true, para que quando esse manipulador é chamado novamente, ele não substituirá a posição inicial da mudança interação de entrada do controlador. Ele também atualiza a ID do ponteiro do controlador de movimento para a ID do ponteiro atual.
 
-Caso o ponteiro seja o mouse ou o ponteiro de toque não esteja na área do controlador de movimento, ele deverá estar na área do controlador de visão. O manipulador define **m\_lookLastPoint** como a posição atual em que o usuário pressionou o botão do mouse, ou tocou e pressionou a tela, redefine o delta e atualiza a ID do ponteiro do controlador de visão para a ID do ponteiro atual. Além disso, define o estado do controlador de visão como ativo.
+Caso o ponteiro seja o mouse ou o ponteiro de toque não esteja na área do controlador de movimento, ele deverá estar na área do controlador de visão. Ele define **m\_lookLastPoint** na posição atual em que o usuário pressionou o botão do mouse ou tocadas e pressionado, redefine o delta e atualiza ponteiro ID do controlador de aparência para a ID atual do ponteiro. Além disso, define o estado do controlador de visão como ativo.
 
 **OnPointerMoved**
 
@@ -303,7 +303,7 @@ Se for o controlador de movimento, simplesmente atualizamos a posição do ponte
 
 Se for o controlador de visão, as coisas são um pouco mais complicadas. Como precisamos calcular um novo ponto de visão e centralizar a câmera nele, calculamos o delta entre o último ponto de visão e a posição atual da tela e o multiplicamos pelo nosso fator de escala, que pode ser ajustado para tornar os movimentos de visão menores ou maiores com relação à distância do movimento na tela. Usando esse valor, calculamos a inclinação longitudinal e a rotação.
 
-Finalmente, temos que desativar os comportamentos do controlador de movimento ou de visão quando o jogador para de mover o mouse ou de tocar a tela. Usamos **OnPointerReleased**, que é chamado quando [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) é acionado, para definir **m\_moveInUse** ou **m\_lookInUse** como FALSE e interromper o movimento panorâmico da câmera e zerar a ID do ponteiro.
+Finalmente, temos que desativar os comportamentos do controlador de movimento ou de visão quando o jogador para de mover o mouse ou de tocar a tela. Usamos **OnPointerReleased**, que chamamos de quando [ **PointerReleased** ](https://msdn.microsoft.com/library/windows/apps/br208279) é acionado, para definir **m\_moveInUse** ou **m\_lookInUse** para FALSE e desativar o movimento de panorâmica da câmera e para zerar a ID do ponteiro.
 
 **OnPointerReleased**
 
@@ -384,7 +384,7 @@ Quando a tecla é liberada, esse manipulador de eventos define-o novamente como 
 
 Agora conectaremos os eventos e inicializaremos todos os campos de estado de controladores.
 
-**Initialize**
+**inicializar**
 
 ```cpp
 void MoveLookController::Initialize( _In_ CoreWindow^ window )
@@ -470,7 +470,7 @@ DirectX::XMFLOAT3 MoveLookController::get_LookPoint()
 ## <a name="updating-the-controller-state-info"></a>Atualizando as informações de estado do controlador
 
 
-Agora efetuamos os cálculos para converter as informações de coordenadas do ponteiro rastreadas em **m\_movePointerPosition** em novas informações de coordenadas relativas ao sistema de coordenadas do nosso mundo. Nosso aplicativo chama esse método cada vez que seu loop principal é atualizado. Portanto, é aqui que calculamos as informações de posição do novo ponto de visão que queremos passar ao aplicativo para que a matriz de visualização seja atualizada antes da projeção no visor.
+Agora, podemos executar nossos cálculos que convertem as informações de coordenadas do ponteiro rastreadas em **m\_movePointerPosition** em novas informações de coordenadas respectivas do nosso sistema de coordenadas de mundo. Nosso aplicativo chama esse método cada vez que seu loop principal é atualizado. Portanto, é aqui que calculamos as informações de posição do novo ponto de visão que queremos passar ao aplicativo para que a matriz de visualização seja atualizada antes da projeção no visor.
 
 ```cpp
 void MoveLookController::Update(CoreWindow ^window)
@@ -557,7 +557,7 @@ Como não queremos movimentos erráticos quando o jogador usar o controlador de 
 
 Quando calculamos a velocidade, também traduzimos as coordenadas recebidas dos controladores de movimento e visão para o movimento do ponto de visão real que enviamos ao método responsável pelo cálculo da matriz de visualização da cena. Primeiro invertemos a coordenada x, porque quando clicamos-movemos ou arrastamos para a esquerda ou para a direita com o controlador de visão, o ponto de visão gira em direção oposta à cena, como na rotação de uma câmera sobre o seu eixo central. Em seguida, trocamos os eixos y e z, porque o pressionamento de uma tecla para cima/para baixo ou um movimento de tocar e arrastar (lidos como um comportamento no eixo y) no controlador de movimento devem se traduzir em uma ação da câmera que move o ponto de visão para perto ou para longe da tela (o eixo z).
 
-A posição final do ponto de visão para o jogador é a última posição mais a velocidade calculada, e é isso que é lido pelo renderizador quando chama o método **get\_Position** (muito provavelmente durante a configuração para cada quadro). Depois disso, redefinimos o comando de movimento para zero.
+A posição final do ponto de aparência para o player é a última posição mais a velocidade calculada, e isso é o que é lido pelo renderizador quando ele chama o **Obtenha\_posição** método (provavelmente durante a instalação para cada quadro). Depois disso, redefinimos o comando de movimento para zero.
 
 ## <a name="updating-the-view-matrix-with-the-new-camera-position"></a>Atualizando a matriz de visualização com a nova posição da câmera
 

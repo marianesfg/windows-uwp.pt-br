@@ -1,5 +1,5 @@
 ---
-description: Soquetes são uma tecnologia de transferência de dados de baixo nível sobre qual muitos protocolos de rede são implementados. UWP oferece classes de soquete de TCP e UDP para o cliente-servidor ou aplicativos ponto a ponto, se as conexões tiverem vida longa ou se uma conexão estabelecida não for necessária.
+description: Soquetes são uma tecnologia de transferência de dados de baixo nível sobre o qual muitos protocolos de rede são implementados. UWP oferece classes de soquete de TCP e UDP para o cliente-servidor ou aplicativos ponto a ponto, se as conexões tiverem vida longa ou se uma conexão estabelecida não for necessária.
 title: Soquetes
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
 ms.date: 06/03/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4cdad8f3405420e0548974c734ad23bfd44f2c6b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046752"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648821"
 ---
 # <a name="sockets"></a>Soquetes
 Soquetes são uma tecnologia de transferência de dados de baixo nível sobre o qual muitos protocolos de rede são implementados. UWP oferece classes de soquete de TCP e UDP para o cliente-servidor ou aplicativos ponto a ponto, se as conexões tiverem vida longa ou se uma conexão estabelecida não for necessária.
@@ -1002,7 +1002,7 @@ Você pode usar o agente de soquete e gatilhos de canal, para garantir que seu a
 ## <a name="batched-sends"></a>Envios em lote
 Sempre que você gravar no fluxo associado a um soquete, uma transição ocorre do modo de usuário (seu código) para o modo de kernel (onde a pilha de rede está). Se você estiver escrevendo vários buffers de cada vez, então estas transições repetidas irão compor em considerável sobrecarga. Envios em lote é uma maneira de enviar vários buffers de dados juntos e evitar essa sobrecarga. Isso é especialmente útil se seu aplicativo está fazendo VoIP, VPN ou outras tarefas que envolvem mover uma grande quantidade de dados de forma mais eficiente possível.
 
-Esta seção demonstra algumas técnicas envios em lote que você pode usar com um [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) ou um [**DatagramSocket **](/uwp/api/Windows.Networking.Sockets.DatagramSocket) conectado.
+Esta seção demonstra algumas técnicas envios em lote que você pode usar com um [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) ou um [**DatagramSocket** ](/uwp/api/Windows.Networking.Sockets.DatagramSocket) conectado.
 
 Para obter uma linha de base, vamos ver como enviar um grande número de buffers de forma ineficiente. Aqui está uma demonstração mínima, usando um **StreamSocket**.
 
@@ -1202,7 +1202,7 @@ private async void BatchedSendsCSharpOnly(Windows.Networking.Sockets.StreamSocke
 }
 ```
 
-O exemplo a seguir é adequado para qualquer linguagem UWP, não apenas para C#. Ele depende do comportamento em [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) e [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream) que envia em lotes juntos. A técnica chama [**FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) nesse fluxo de saída que, a partir do Windows 10, é garantido que irá retornar somente depois que todas as operações no fluxo de saída são concluídas.
+O exemplo a seguir é adequado para qualquer linguagem UWP, não apenas para C#. Ele depende do comportamento em [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) e [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream) que envia em lotes juntos. As chamadas de técnica [ **FlushAsync** ](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) naquele fluxo de saída que, a partir do Windows 10, é garantido para retornar somente depois de concluíram todas as operações no fluxo de saída.
 
 ```csharp
 // An implementation of batched sends suitable for any UWP language.
@@ -1276,14 +1276,14 @@ Existem algumas limitações importantes impostas por usar envios em lote no seu
 
 -   Você não pode modificar o conteúdo das instâncias **IBuffer** que estão sendo gravadas até que a gravação assíncrona seja concluída.
 -   O padrão **FlushAsync** só funciona em **StreamSocket.OutputStream** e **DatagramSocket.OutputStream**.
--   O padrão de **FlushAsync** só funciona no Windows 10 em diante.
+-   O **FlushAsync** padrão só funciona no Windows 10 em diante.
 -   Em outros casos, use [**Task.WaitAll**](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___), em vez do padrão **FlushAsync**.
 
 ## <a name="port-sharing-for-datagramsocket"></a>Compartilhamento de DatagramSocket de porta
 Você pode configurar um [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) para coexistir com outros soquetes multicast do Win32 ou UWP associados ao mesmo endereço/porta. Você faz isso definindo [**DatagramSocketControl.MulticastOnly**](/uwp/api/Windows.Networking.Sockets.DatagramSocketControl.MulticastOnly) para `true` antes da associação ou conexão do soquete. Acessar uma instância do **DatagramSocketControl** a partir do próprio objeto **DatagramSocket** por meio de sua propriedade [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.datagramsocket.Control).
 
-## <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Fornecendo um certificado de cliente com a classe StreamSocket
-[**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) dá suporte ao uso de SSL/TLS para autenticar o servidor o qual o aplicativo do cliente se comunica. Em certos casos, o aplicativo cliente também precisa autenticar-se ao servidor usando um certificado cliente SSL/TLS. Você pode fornecer um certificado de cliente com a propriedade [**StreamSocketControl.ClientCertificate**](/uwp/api/windows.networking.sockets.streamsocketcontrol.ClientCertificate) antes da associação ou conexão do soquete (ele deve ser definido antes do handshake SSL/TLS ser iniciado). Acessar uma instância do **StreamSocketControl** a partir do próprio objeto **StreamSocket** por meio de sua propriedade [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.streamsocket.Control). Se o servidor solicitar o certificado cliente, então o Windows responderá com o certificado cliente fornecido.
+## <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Fornecendo um certificado cliente com a classe StreamSocket
+[**StreamSocket** ](/uwp/api/Windows.Networking.Sockets.StreamSocket) dá suporte ao uso de SSL/TLS para autenticar o servidor que está se comunicando com o aplicativo cliente. Em certos casos, o aplicativo cliente também precisa autenticar-se ao servidor usando um certificado cliente SSL/TLS. Você pode fornecer um certificado de cliente com a propriedade [**StreamSocketControl.ClientCertificate**](/uwp/api/windows.networking.sockets.streamsocketcontrol.ClientCertificate) antes da associação ou conexão do soquete (ele deve ser definido antes do handshake SSL/TLS ser iniciado). Acessar uma instância do **StreamSocketControl** a partir do próprio objeto **StreamSocket** por meio de sua propriedade [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.streamsocket.Control). Se o servidor solicitar o certificado cliente, então o Windows responderá com o certificado cliente fornecido.
 
 Use uma substituição dos [**StreamSocket.ConnectAsync**](/uwp/api/windows.networking.sockets.streamsocket.connectasync) que leva um [**SocketProtectionLevel**](/uwp/api/windows.networking.sockets.socketprotectionlevel), conforme mostrado neste exemplo mínimo de código.
 
@@ -1378,10 +1378,10 @@ O construtor [**HostName**](/uwp/api/Windows.Networking.HostName) pode gerar uma
 * [Windows.Networking.Sockets](/uwp/api/Windows.Networking.Sockets)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Comunicação entre aplicativos](/windows/uwp/app-to-app/index)
-* [Simultaneidade e operações assíncronas com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)
+* [Comunicação de aplicativo a aplicativo](/windows/uwp/app-to-app/index)
+* [Simultaneidade e operações assíncronas com C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)
 * [Como definir recursos de rede](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx)
-* [Windows Sockets 2 (Winsock)](https://msdn.microsoft.com/library/windows/desktop/ms740673)
+* [Windows Sockets (Winsock) de 2](https://msdn.microsoft.com/library/windows/desktop/ms740673)
 
 ## <a name="samples"></a>Exemplos
 * [Exemplo do StreamSocket](https://go.microsoft.com/fwlink/p/?LinkId=620609)

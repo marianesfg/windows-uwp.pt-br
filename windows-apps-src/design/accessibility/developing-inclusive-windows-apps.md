@@ -1,5 +1,5 @@
 ---
-Description: Learn to develop accessible Windows 10 UWP apps that include keyboard navigation, color and contrast settings, and support for assistive technologies.
+Description: Aprenda a desenvolver aplicativos UWP para Windows 10 acessíveis que incluem navegação de teclado, configurações de cor e contraste, além de suporte para as tecnologias assistenciais.
 ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: Desenvolvendo aplicativos inclusivos do Windows 10
 label: Developing inclusive Windows 10 apps
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 58e9ab90115566059fb79220b7b8c0b9c5ce677e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047963"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649721"
 ---
 # <a name="developing-inclusive-windows-apps"></a>Desenvolvendo aplicativos inclusivos do Windows  
 
@@ -73,7 +73,7 @@ Veja a seguir uma versão abreviada da lista de verificação de acessibilidade:
 
 1. Defina o nome acessível (obrigatório) e a descrição (opcional) dos elementos de interface de usuário interativa e do conteúdo em seu aplicativo.
 2. Implemente a acessibilidade do teclado.
-3. Verifique sua interface do usuário para garantir que o contraste do texto esteja adequado, que os elementos renderizem corretamente nos temas em alto contraste e que as cores estejam sendo usadas corretamente.
+3. Observe a interface do usuário para confirmar se o contraste do texto está adequado, se os elementos são renderizados corretamente nos temas de alto contraste e se as cores são usadas corretamente.
 4. Execute ferramentas de acessibilidade, resolva problemas relatados e verifique a experiência de leitura da tela. (Veja o tópico Testes de acessibilidade)
 5. Verifique se as configurações do manifesto do aplicativo seguem as diretrizes de acessibilidade.
 6. Declare seu aplicativo como acessível na Microsoft Store. (Veja o tópico [Acessibilidade na loja](accessibility-in-the-store.md)).
@@ -81,9 +81,9 @@ Veja a seguir uma versão abreviada da lista de verificação de acessibilidade:
 Para obter mais detalhes, veja o tópico [Lista de verificação de acessibilidade](accessibility-checklist.md) inteiro.
 
 ## <a name="related-topics"></a>Tópicos relacionados  
-* [Criando software inclusivo](designing-inclusive-software.md)  
+* [Projetando software inclusivo](designing-inclusive-software.md)  
 * [Design inclusivo](https://design.microsoft.com/inclusive)
-* [Práticas de acessibilidade a evitar](practices-to-avoid.md)
+* [Práticas recomendadas de acessibilidade para evitar](practices-to-avoid.md)
 * [Software de engenharia para acessibilidade](https://www.microsoft.com/download/details.aspx?id=19262)
-* [Hub de desenvolvedor de acessibilidade da Microsoft](https://msdn.microsoft.com/enable)
+* [Cenários de desenvolvedor de acessibilidade do Microsoft](https://msdn.microsoft.com/enable)
 * [Acessibilidade](accessibility.md)

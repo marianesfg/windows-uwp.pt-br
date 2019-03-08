@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f6a1277dbb2d756f0d3a4ffc1fd545f892a2096
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047205"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596501"
 ---
 # <a name="block-compression"></a>Compactação de bloco
 
@@ -24,16 +24,16 @@ Mesmo com perdas, a compactação de bloco funciona bem e é recomendada para to
 
 Uma textura compactada em bloco deve ser criada como um múltiplo do tamanho de 4 em todas as dimensões e não pode ser usada como uma saída do pipeline.
 
-## <a name="span-idbasicsspanspan-idbasicsspanspan-idbasicsspanhow-block-compression-works"></a><span id="Basics"></span><span id="basics"></span><span id="BASICS"></span>Como a compactação de bloco funciona
+## <a name="span-idbasicsspanspan-idbasicsspanspan-idbasicsspanhow-block-compression-works"></a><span id="Basics"></span><span id="basics"></span><span id="BASICS"></span>Como bloquear compactação funciona
 
 A compactação de bloco é uma técnica para reduzir a quantidade de memória necessária para armazenar dados de cor. Armazenando algumas cores no tamanho original e outras cores usando um esquema de codificação, você pode reduzir significativamente a quantidade de memória necessária para armazenar a imagem. Como o hardware decodifica automaticamente os dados compactados, não há nenhuma penalidade de desempenho para o uso de texturas compactadas.
 
 Para ver como funciona a compactação, examine os dois exemplos a seguir. O primeiro exemplo descreve a quantidade de memória usada para armazenar dados não compactados; o segundo exemplo descreve a quantidade de memória usada para armazenar dados compactados.
 
-- [Armazenando dados compactados](#storing-uncompressed-data)
-- [Armazenando dados compactados](#storing-compressed-data)
+- [Armazenar dados descompactados](#storing-uncompressed-data)
+- [Armazenamento de dados compactados](#storing-compressed-data)
 
-### <a name="span-idstoringuncompresseddataspanspan-idstoringuncompresseddataspanspan-idstoringuncompresseddataspanspan-idstoring-uncompressed-dataspanstoring-uncompressed-data"></a><span id="Storing_Uncompressed_Data"></span><span id="storing_uncompressed_data"></span><span id="STORING_UNCOMPRESSED_DATA"></span><span id="storing-uncompressed-data"></span>Armazenando dados compactados
+### <a name="span-idstoringuncompresseddataspanspan-idstoringuncompresseddataspanspan-idstoringuncompresseddataspanspan-idstoring-uncompressed-dataspanstoring-uncompressed-data"></a><span id="Storing_Uncompressed_Data"></span><span id="storing_uncompressed_data"></span><span id="STORING_UNCOMPRESSED_DATA"></span><span id="storing-uncompressed-data"></span>Armazenar dados descompactados
 
 A ilustração a seguir representa uma textura de 4 × 4 não compactada. Suponha que cada cor contenha um componente único de cor (vermelho, por exemplo) e é armazenado em um byte de memória.
 
@@ -43,7 +43,7 @@ Os dados não compactados são dispostos na memória sequencialmente e exigem 16
 
 ![dados não compactados na memória sequencial](images/d3d10-block-compress-2.png)
 
-### <a name="span-idstoringcompresseddataspanspan-idstoringcompresseddataspanspan-idstoringcompresseddataspanspan-idstoring-compressed-dataspanstoring-compressed-data"></a><span id="Storing_Compressed_Data"></span><span id="storing_compressed_data"></span><span id="STORING_COMPRESSED_DATA"></span><span id="storing-compressed-data"></span>Armazenando dados compactados
+### <a name="span-idstoringcompresseddataspanspan-idstoringcompresseddataspanspan-idstoringcompresseddataspanspan-idstoring-compressed-dataspanstoring-compressed-data"></a><span id="Storing_Compressed_Data"></span><span id="storing_compressed_data"></span><span id="STORING_COMPRESSED_DATA"></span><span id="storing-compressed-data"></span>Armazenamento de dados compactados
 
 Agora que você já viu quanta memória uma imagem descompactada utiliza, dê uma olhada na quantidade de memória poupada por uma imagem compactada. O formato de compactação [BC1](#bc1) armazena 2 cores (1 byte cada) e 16 índices de 3 bits (48 bits, ou 6 bytes) que são usados para interpolar as cores originais na textura, conforme mostrado na ilustração a seguir.
 
@@ -55,7 +55,7 @@ A economia de memória substancial proporcionada pelo compactação de bloco pod
 
 A próxima seção mostra como o Direct3D possibilita o uso de compactação de bloco em um app.
 
-## <a name="span-idusingblockcompressionspanspan-idusingblockcompressionspanspan-idusingblockcompressionspanusing-block-compression"></a><span id="Using_Block_Compression"></span><span id="using_block_compression"></span><span id="USING_BLOCK_COMPRESSION"></span>Usando a compactação de bloco
+## <a name="span-idusingblockcompressionspanspan-idusingblockcompressionspanspan-idusingblockcompressionspanusing-block-compression"></a><span id="Using_Block_Compression"></span><span id="using_block_compression"></span><span id="USING_BLOCK_COMPRESSION"></span>Usar a compactação de bloco
 
 Crie uma textura compactada em bloco da mesma forma que uma textura descompactada, exceto pelo fato de você especificar um formato compactado em bloco.
 
@@ -105,13 +105,13 @@ O Direct3D implementa vários esquemas de compactação, cada um implementa um e
 
 ### <a name="span-idbc1spanspan-idbc1spanbc1"></a><span id="BC1"></span><span id="bc1"></span>BC1
 
-Use o primeiro formato de compactação de bloco (BC1) (DXGI\_FORMAT\_BC1\_TYPELESS, DXGI\_FORMAT\_BC1\_UNORM, ou DXGI\_BC1\_UNORM\_SRGB) para armazenar dados de cor de três componentes usando cor 5:6:5 (5 bits de vermelho, 6 bits de verde, e 5 bits de azul). Isso vale até mesmo quando os dados também contêm alfa de 1 bit. Pressupondo uma textura de 4 × 4 usando o formato de dados maior possível, o formato BC1 reduz a memória necessária de 48 bytes (16 cores × 3 componentes/cor × 1 byte/componente) para 8 bytes de memória.
+Use o formato de compactação de bloco (BC1) primeira (ambos DXGI\_formato\_BC1\_TYPELESS, DXGI\_formato\_BC1\_UNORM ou DXGI\_BC1\_UNORM \_SRGB) para armazenar dados de três componentes de cor usando um 5: cor 6:5 (5 bits vermelhos, 6 bits verdes, 5 bits azuis). Isso vale até mesmo quando os dados também contêm alfa de 1 bit. Pressupondo uma textura de 4 × 4 usando o formato de dados maior possível, o formato BC1 reduz a memória necessária de 48 bytes (16 cores × 3 componentes/cor × 1 byte/componente) para 8 bytes de memória.
 
-O algoritmo funciona em blocos de texels de 4 × 4. Em vez de armazenar 16 cores, o algoritmo salva 2 cores de referência (color\_0 e color\_1) e 16 índices de cor 2 bits (blocos a–p), conforme mostrado no diagrama a seguir.
+O algoritmo funciona em blocos de texels de 4 × 4. Em vez de armazenar 16 cores, o algoritmo salva 2 cores de referência (cor\_0 e a cor\_1) e de 16 Tile cores de 2 bits (blocos a – p), conforme mostrado no diagrama a seguir.
 
 ![o layout de compactação bc1](images/d3d10-compression-bc1.png)
 
-Os índices de cor (a–p) são usados para procurar as cores originais em uma tabela de cores. A tabela de cores contém 4 cores. As duas primeiras cores, color\_0 e color\_1, são as cores mínima e máxima. As outras duas cores, color\_2 e color\_3, são cores intermediárias calculadas com uma interpolação linear.
+Os índices de cor (a–p) são usados para procurar as cores originais em uma tabela de cores. A tabela de cores contém 4 cores. As primeiras duas cores — cor\_0 e a cor\_1 — são as cores de mínimas e máxima. As outras duas cores, cor\_2 e a cor\_3, são cores intermediárias calculadas com uma interpolação linear.
 
 ```cpp
 color_2 = 2/3*color_0 + 1/3*color_1
@@ -129,7 +129,7 @@ color_3 = 11
 
 Por fim, todas as cores nos blocos a–p são comparadas com as quatro cores na tabela de cores e o índice para a cor mais próxima é armazenado nos blocos de 2 bits.
 
-Esse algoritmo se compromete a dados que também contêm alfa de 1 bit. A única diferença é que color\_3 é definida como 0 (que representa uma cor transparente) e color\_2 é uma mistura linear de color\_0 e color\_1.
+Esse algoritmo se compromete a dados que também contêm alfa de 1 bit. A única diferença é essa cor\_3 é definido como 0 (que representa uma cor transparente) e cor\_2 é uma combinação linear de cor\_0 e a cor\_1.
 
 ```cpp
 color_2 = 1/2*color_0 + 1/2*color_1;
@@ -138,7 +138,7 @@ color_3 = 0;
 
 ### <a name="span-idbc2spanspan-idbc2spanbc2"></a><span id="BC2"></span><span id="bc2"></span>BC2
 
-Use o formato BC2 (DXGI\_FORMAT\_BC2\_TYPELESS, DXGI\_FORMAT\_BC2\_UNORM, ou DXGI\_BC2\_UNORM\_SRGB) para armazenar dados que contêm dados de cor e alfa com baixa coerência (use [BC3](#bc3) para dados alfa altamente coerentes). O formato BC2 armazena dados RGB como uma cor 5:6:5 (5 bits de vermelho, 6 bits de verde, 5 bits de azul) e alfa como um valor de 4 bits separado. Pressupondo uma textura de 4 × 4 usando o formato de dados maior possível, essa técnica de compactação reduz a memória necessária de 64 bytes (16 cores × 4 componentes/cor × 1 byte/componente) para 16 bytes de memória.
+Use o formato BC2 (ambos DXGI\_formato\_BC2\_TYPELESS, DXGI\_formato\_BC2\_UNORM ou DXGI\_BC2\_UNORM\_SRGB) para armazenar dados que contém dados de cor e alfa com baixa coerência (use [BC3](#bc3) para dados altamente coerente de alfa). O formato BC2 armazena dados RGB como uma cor 5:6:5 (5 bits de vermelho, 6 bits de verde, 5 bits de azul) e alfa como um valor de 4 bits separado. Pressupondo uma textura de 4 × 4 usando o formato de dados maior possível, essa técnica de compactação reduz a memória necessária de 64 bytes (16 cores × 4 componentes/cor × 1 byte/componente) para 16 bytes de memória.
 
 O formato BC2 armazena cores com o mesmo número de bits e dados de layout como o formato [BC1](#bc1), no entanto, o BC2 requer 64-bits adicionais de memória para armazenar os dados alfa, conforme mostrado no diagrama a seguir.
 
@@ -146,17 +146,17 @@ O formato BC2 armazena cores com o mesmo número de bits e dados de layout como 
 
 ### <a name="span-idbc3spanspan-idbc3spanbc3"></a><span id="BC3"></span><span id="bc3"></span>BC3
 
-Use o formato BC3 (DXGI\_FORMAT\_BC3\_TYPELESS, DXGI\_FORMAT\_BC3\_UNORM, ou DXGI\_BC3\_UNORM\_SRGB) para armazenar dados de cores altamente coerentes (use [BC2](#bc2) com dados alfa menos coerentes). O formato BC3 armazena dados de cor usando cor 5:6:5 (5 bits de vermelho, 6 bits de verde, 5 bits de azul) e dados alfa usando um byte. Pressupondo uma textura de 4 × 4 usando o formato de dados maior possível, essa técnica de compactação reduz a memória necessária de 64 bytes (16 cores × 4 componentes/cor × 1 byte/componente) para 16 bytes de memória.
+Use o formato BC3 (ambos DXGI\_formato\_BC3\_TYPELESS, DXGI\_formato\_BC3\_UNORM ou DXGI\_BC3\_UNORM\_SRGB) para armazenar dados de cor altamente coerente (use [BC2](#bc2) com menos coerentes dados alfabéticos). O formato BC3 armazena dados de cor usando cor 5:6:5 (5 bits de vermelho, 6 bits de verde, 5 bits de azul) e dados alfa usando um byte. Pressupondo uma textura de 4 × 4 usando o formato de dados maior possível, essa técnica de compactação reduz a memória necessária de 64 bytes (16 cores × 4 componentes/cor × 1 byte/componente) para 16 bytes de memória.
 
 O formato BC3 armazena cores com o mesmo número de bits e layout de dados que o formato [BC1](#bc1), no entanto, o BC3 requer 64 bits adicionais de memória para armazenar os dados alfa. O formato BC3 manipula o alfa armazenando dois valores de referência e interpolando entre eles (da mesma forma como o BC1 armazena cor RGB).
 
-O algoritmo funciona em blocos de texels de 4 × 4. Em vez de armazenar 16 valores alfa, o algoritmo armazena 2 alfas de referência (alpha\_0 e alpha\_1) e 16 índices de cor de 3 bits (alfa a-p), conforme mostrado no diagrama a seguir.
+O algoritmo funciona em blocos de texels de 4 × 4. Em vez de armazenar os valores alfa 16, o algoritmo armazena Alfas de referência 2 (alpha\_alfa e 0\_1) e de 16 Tile cores de 3 bits (alfa por meio das p), conforme mostrado no diagrama a seguir.
 
 ![o layout de compactação bc3](images/d3d10-compression-bc3.png)
 
-O formato BC3 usa os índices de alfa (a–p) para procurar as cores originais em uma tabela de pesquisa que contém 8 valores. Os dois primeiros valores, alpha\_0 e alpha\_1, são os valores mínimo e máximo, os outros seis valores intermediários são calculados usando interpolação linear.
+O formato BC3 usa os índices de alfa (a–p) para procurar as cores originais em uma tabela de pesquisa que contém 8 valores. Os dois primeiros valores — alpha\_alfa e 0\_1 — são os valores mínimos e máximo; outros seis valores intermediários são calculados usando uma interpolação linear.
 
-O algoritmo determina o número de valores alfa interpolados examinando os dois valores alfa de referência. Se alpha\_0 for maior que alpha\_1, o BC3 interpolará 6 valores alfa, caso contrário, ele interpolará 4. Quando o BC3 interpola apenas 4 valores alfa, ele define dois valores alfa adicionais (0 para totalmente transparente e 255 para totalmente opaco). O BC3 compacta os valores alfabéticos na área de texel de 4 × 4, armazenando o código de bit correspondente aos valores alfa interpolados que melhor correspondem ao alfa original para um determinado texel.
+O algoritmo determina o número de valores alfa interpolados examinando os dois valores alfa de referência. Se alfa\_0 é maior que alfa\_1 e, em seguida, BC3 interpola 6 valores alfabéticos; caso contrário, ele faz a interpolação 4. Quando o BC3 interpola apenas 4 valores alfa, ele define dois valores alfa adicionais (0 para totalmente transparente e 255 para totalmente opaco). O BC3 compacta os valores alfabéticos na área de texel de 4 × 4, armazenando o código de bit correspondente aos valores alfa interpolados que melhor correspondem ao alfa original para um determinado texel.
 
 ```cpp
 if( alpha_0 > alpha_1 )
@@ -183,15 +183,15 @@ else
 
 ### <a name="span-idbc4spanspan-idbc4spanbc4"></a><span id="BC4"></span><span id="bc4"></span>BC4
 
-Use o formato BC4 para armazenar dados de cor de um componente usando 8 bits para cada cor. Como resultado da precisão maior (em comparação com [BC1](#bc1)), o BC4 é ideais para armazenar dados de ponto flutuante no intervalo de \[0 a 1\] usando o formato DXGI\_FORMAT\_BC4\_UNORM e \[-1 a + 1\] usando o formato de DXGI\_FORMAT\_BC4\_SNORM. Pressupondo uma textura de 4 × 4 usando o formato de dados maior possível, essa técnica de compactação reduz a memória necessária de 16 bytes (16 cores × 1 componentes/cor × 1 byte/componente) para 8 bytes.
+Use o formato BC4 para armazenar dados de cor de um componente usando 8 bits para cada cor. Como resultado de aumento de precisão (em comparação com [BC1](#bc1)), BC4 é ideal para armazenar dados de ponto flutuante no intervalo de \[de 0 a 1\] usando o DXGI\_formato\_BC4\_Formato UNORM e \[-1 até + 1\] usando o DXGI\_formato\_BC4\_formato SNORM. Pressupondo uma textura de 4 × 4 usando o formato de dados maior possível, essa técnica de compactação reduz a memória necessária de 16 bytes (16 cores × 1 componentes/cor × 1 byte/componente) para 8 bytes.
 
-O algoritmo funciona em blocos de texels de 4 × 4. Em vez de armazenar 16 cores, o algoritmo armazena 2 cores de referência (red\_0 e red\_1) e 16 índices de cor de 3 bits (vermelho a até vermelho p), conforme mostrado no diagrama a seguir.
+O algoritmo funciona em blocos de texels de 4 × 4. Em vez de armazenar 16 cores, o algoritmo armazena 2 cores de referência (vermelha\_0 e vermelho\_1) e os índices de 16 cores de 3 bits (vermelho por meio das p vermelho), conforme mostrado no diagrama a seguir.
 
 ![o layout de compactação bc4](images/d3d10-compression-bc4.png)
 
-O algoritmo usa os índices de 3 bits para procurar as cores em uma tabela de cores que contém 8 cores. As duas primeiras cores, red\_0 e red\_1, são as cores mínima e máxima. O algoritmo calcula as cores restantes usando interpolação linear.
+O algoritmo usa os índices de 3 bits para procurar as cores em uma tabela de cores que contém 8 cores. As primeiras duas cores — vermelho\_0 e vermelho\_1 — são as cores de mínimas e máxima. O algoritmo calcula as cores restantes usando interpolação linear.
 
-O algoritmo determina o número de valores de cor interpolados examinando os dois valores de referência. Se red\_0 for maior que red\_1, o BC4 interpolará 6 valores de cor, caso contrário, ele interpolará 4. Quando o BC4 interpola apenas 4 valores de cor, ele define dois valores de cor adicional (0.0f para totalmente transparente e 1.0f para totalmente opaco). O BC4 compacta os valores alfabéticos na área de texel de 4 × 4, armazenando o código de bit correspondente aos valores alfa interpolados que melhor correspondem ao alfa original para um determinado texel.
+O algoritmo determina o número de valores de cor interpolados examinando os dois valores de referência. Se vermelho\_0 é maior que vermelho\_1 e, em seguida, BC4 interpola 6 valores de cor; caso contrário, ele faz a interpolação 4. Quando o BC4 interpola apenas 4 valores de cor, ele define dois valores de cor adicional (0.0f para totalmente transparente e 1.0f para totalmente opaco). O BC4 compacta os valores alfabéticos na área de texel de 4 × 4, armazenando o código de bit correspondente aos valores alfa interpolados que melhor correspondem ao alfa original para um determinado texel.
 
 - [BC4\_UNORM](#bc4-unorm)
 - [BC4\_SNORM](#bc4-snorm)
@@ -229,7 +229,7 @@ As cores de referência recebem índices de 3 bits (000 – 111, uma vez que há
 
 ### <a name="span-idbc4snormspanspan-idbc4snormspanspan-idbc4-snormspanbc4snorm"></a><span id="BC4_SNORM"></span><span id="bc4_snorm"></span><span id="bc4-snorm"></span>BC4\_SNORM
 
-O DXGI\_FORMAT\_BC4\_SNORM é exatamente o mesmo, exceto que os dados são codificados no intervalo SNORM e quando 4 valores de cor são interpolados. A interpolação dos dados de componente único é feita como no exemplo de código a seguir.
+O DXGI\_formato\_BC4\_SNORM é exatamente o mesmo, exceto pelo fato dos dados são codificados no intervalo SNORM e quando 4 valores de cores são interpoladas. A interpolação dos dados de componente único é feita como no exemplo de código a seguir.
 
 ```cpp
 signed word red_0, red_1;
@@ -260,18 +260,18 @@ As cores de referência recebem índices de 3 bits (000 – 111, uma vez que há
 
 ### <a name="span-idbc5spanspan-idbc5spanbc5"></a><span id="BC5"></span><span id="bc5"></span>BC5
 
-Use o formato BC5 para armazenar dados de cor de dois componentes usando 8 bits para cada cor. Como resultado da precisão maior (em comparação com [BC1](#bc1)), o BC5 é ideais para armazenar dados de ponto flutuante no intervalo de \[0 a 1\] usando o formato DXGI\_FORMAT\_BC5\_UNORM e \[-1 a + 1\] usando o formato de DXGI\_FORMAT\_BC5\_SNORM. Pressupondo uma textura de 4 × 4 usando o formato de dados maior possível, essa técnica de compactação reduz a memória necessária de 32 bytes (16 cores × 2 componentes/cor × 1 byte/componente) para 16 bytes.
+Use o formato BC5 para armazenar dados de cor de dois componentes usando 8 bits para cada cor. Como resultado de aumento de precisão (em comparação com [BC1](#bc1)), BC5 é ideal para armazenar dados de ponto flutuante no intervalo de \[de 0 a 1\] usando o DXGI\_formato\_BC5\_Formato UNORM e \[-1 até + 1\] usando o DXGI\_formato\_BC5\_formato SNORM. Pressupondo uma textura de 4 × 4 usando o formato de dados maior possível, essa técnica de compactação reduz a memória necessária de 32 bytes (16 cores × 2 componentes/cor × 1 byte/componente) para 16 bytes.
 
 - [BC5\_UNORM](#bc5-unorm)
 - [BC5\_SNORM](#bc5-snorm)
 
-O algoritmo funciona em blocos de texels de 4 × 4. Em vez de armazenar 16 cores para ambos os componentes, o algoritmo armazena 2 cores de referência para cada componente (red\_0, red\_1, green\_0 e green\_1) e 16 índices de cor de 3 bits para cada componente (vermelho a até vermelho p, e verde a até verde p), conforme mostrado no diagrama a seguir.
+O algoritmo funciona em blocos de texels de 4 × 4. Em vez de armazenar 16 cores para os dois componentes, o algoritmo armazena 2 cores de referência para cada componente (vermelha\_0, vermelho\_1, verde\_0 e verde\_1) e os índices de 16 cores de 3 bits para cada componente (vermelho um a p vermelho e verde por meio das p verde), conforme mostrado no diagrama a seguir.
 
 ![o layout de compactação bc5](images/d3d10-compression-bc5.png)
 
-O algoritmo usa os índices de 3 bits para procurar as cores em uma tabela de cores que contém 8 cores. As duas primeiras cores, red\_0 e red\_1 (ou green\_0 e green\_1), são as cores mínima e máxima. O algoritmo calcula as cores restantes usando interpolação linear.
+O algoritmo usa os índices de 3 bits para procurar as cores em uma tabela de cores que contém 8 cores. As primeiras duas cores — vermelho\_0 e vermelho\_1 (ou verde\_0 e verde\_1) — são as cores de mínimas e máxima. O algoritmo calcula as cores restantes usando interpolação linear.
 
-O algoritmo determina o número de valores de cor interpolados examinando os dois valores de referência. Se red\_0 for maior que red\_1, o BC5 interpolará 6 valores de cor, caso contrário, ele interpolará 4. Quando o BC5 interpola apenas 4 valores de cor, ele define os dois valores de cor restantes em 0.0f e 1.0f.
+O algoritmo determina o número de valores de cor interpolados examinando os dois valores de referência. Se vermelho\_0 é maior que vermelho\_1 e, em seguida, BC5 interpola 6 valores de cor; caso contrário, ele faz a interpolação 4. Quando o BC5 interpola apenas 4 valores de cor, ele define os dois valores de cor restantes em 0.0f e 1.0f.
 
 ### <a name="span-idbc5unormspanspan-idbc5unormspanspan-idbc5-unormspanbc5unorm"></a><span id="BC5_UNORM"></span><span id="bc5_unorm"></span><span id="bc5-unorm"></span>BC5\_UNORM
 
@@ -306,7 +306,7 @@ As cores de referência recebem índices de 3 bits (000 – 111, uma vez que há
 
 ### <a name="span-idbc5snormspanspan-idbc5snormspanspan-idbc5-snormspanbc5snorm"></a><span id="BC5_SNORM"></span><span id="bc5_snorm"></span><span id="bc5-snorm"></span>BC5\_SNORM
 
-O DXGI\_FORMAT\_BC5\_SNORM é exatamente o mesmo, exceto que os dados são codificados no intervalo SNORM e quando 4 valores de dados são interpolados, os dois valores adicionais são -1.0f e 1.0f. A interpolação dos dados de componente único é feita como no exemplo de código a seguir. Os cálculos para os componentes verdes são semelhantes.
+O DXGI\_formato\_BC5\_SNORM é exatamente o mesmo, exceto que os dados são codificados no intervalo SNORM e quando os valores de 4 dados são interpolados, os dois valores adicionais são - 1.0f e 1.0f. A interpolação dos dados de componente único é feita como no exemplo de código a seguir. Os cálculos para os componentes verdes são semelhantes.
 
 ```cpp
 signed word red_0, red_1;

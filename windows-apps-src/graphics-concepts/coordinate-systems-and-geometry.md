@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 962002d635c3e6edbf1f9581a4cbc57fbd5b1d96
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931675"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646291"
 ---
 # <a name="coordinate-systems-and-geometry"></a>Sistemas de coordenadas e geometria
 
@@ -39,11 +39,11 @@ A programação de apps Direct3D requer familiaridade ao trabalhar com princípi
 <td align="left"><p>Normalmente, os apps de elementos gráficos 3D usam um dos dois tipos de sistemas de coordenadas cartesianas de esquerda e direita. Em ambos os sistemas de coordenadas, o eixo x positivo aponta para a direita e o eixo y positivo aponta para cima.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="primitives.md">Primitivas</a></p></td>
+<td align="left"><p><a href="primitives.md">Primitivos</a></p></td>
 <td align="left"><p>Uma <em>primitiva</em> 3D é uma coleção de vértices que formam uma única entidade 3D.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="face-and-vertex-normal-vectors.md">Face e vetores normais de vértice</a></p></td>
+<td align="left"><p><a href="face-and-vertex-normal-vectors.md">Vetores normais de detecção facial e de vértice</a></p></td>
 <td align="left"><p>Cada rosto em uma malha tem um vetor normal de unidade perpendicular. Direção do vetor é determinada pela ordem em que os vértices são definidos, e se o sistema de coordenadas é orientado à direita ou esquerda.</p></td>
 </tr>
 <tr class="even">
@@ -55,7 +55,7 @@ A programação de apps Direct3D requer familiaridade ao trabalhar com princípi
 <td align="left"><p>Durante a renderização, o pipeline interpola os dados de vértice em cada triângulo. Os dados de vértice podem ser uma ampla variedade de dados e podem incluir (mas sem estarem limitados a isso): cor difusa, cor especular, alfa difuso (opacidade de triângulo), alfa especular, e fator de nevoeiro.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="vectors--vertices--and-quaternions.md">Vetores, vértices e quatérnios</a></p></td>
+<td align="left"><p><a href="vectors--vertices--and-quaternions.md">Vetores, vértices e quaternions</a></p></td>
 <td align="left"><p>Em todo o Direct3D, os vértices descrevem a posição e a orientação. Cada vértice em uma primitiva é descrito por um vetor que oferece suas coordenadas de textura, cor e posição, e um vetor normal que oferece a sua orientação.</p></td>
 </tr>
 <tr class="odd">
@@ -74,7 +74,7 @@ A programação de apps Direct3D requer familiaridade ao trabalhar com princípi
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Guia de aprendizagem de Gráficos do Direct3D](index.md)
+[Guia de aprendizado de gráficos do Direct3D](index.md)
 
  
 

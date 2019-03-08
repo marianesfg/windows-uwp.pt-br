@@ -1,17 +1,17 @@
 ---
 ms.assetid: 37F2C162-4910-4336-BEED-8536C88DCA65
-description: Use estes métodos na API de envio da Microsoft Store para gerenciar pacotes de pré-lançamento dos aplicativos que estão registrados em sua conta do Partner Center.
+description: Use esses métodos na API de envio a Microsoft Store para gerenciar os voos de pacote para aplicativos que são registrados em sua conta no Partner Center.
 title: Gerenciar pacotes de pré-lançamento
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 8678ee4d73f13e241a2c72d6dac532289af13ced
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923694"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601241"
 ---
 # <a name="manage-package-flights"></a>Gerenciar pacotes de pré-lançamento
 
@@ -36,17 +36,17 @@ Esses métodos só podem ser usados para obter, criar ou excluir os pacotes de p
 <tr>
 <td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}</td>
-<td align="left"><a href="get-a-flight.md">Obter um pacote de pré-lançamento</a></td>
+<td align="left"><a href="get-a-flight.md">Obtenha um voo de pacote</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights</td>
-<td align="left"><a href="create-a-flight.md">Criar um pacote de pré-lançamento</a></td>
+<td align="left"><a href="create-a-flight.md">Criar um voo de pacote</a></td>
 </tr>
 <tr>
 <td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}</td>
-<td align="left"><a href="delete-a-flight.md">Excluir um pacote de pré-lançamento</a></td>
+<td align="left"><a href="delete-a-flight.md">Excluir um voo de pacote</a></td>
 </tr>
 </tbody>
 </table>
@@ -57,5 +57,5 @@ Se você ainda não tiver feito isso, preencha todos os [pré-requisitos](create
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md)
+* [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Gerenciar envios de voo do pacote](manage-flight-submissions.md)

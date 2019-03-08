@@ -1,5 +1,5 @@
 ---
-Description: Use the pull-to-refresh control to get new content into a list.
+Description: Use o controle de puxar para atualizar para obter o novo conteúdo em uma lista.
 title: Puxar para atualizar
 label: Pull-to-refresh
 template: detail.hbs
@@ -13,11 +13,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 2efd091d90a856e45d76c0b1357f30417812160a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932832"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659251"
 ---
 # <a name="pull-to-refresh"></a>Puxar para atualizar
 
@@ -27,7 +27,7 @@ A ação de Puxar para atualizar permite a um usuário extrair uma lista de dado
 
 ![gif puxar para atualizar](images/Pull-To-Refresh.gif)
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use o padrão puxar para atualizar quando você tiver uma lista ou uma grade de dados que o usuário talvez queira atualizar regularmente, e é provável que seu aplicativo seja executado em dispositivos móveis touch-first.
 
@@ -48,7 +48,7 @@ A visualização de atualização padrão é um controle giratório progresso ci
 
  A distância que o usuário precisa puxe para baixo em uma lista para iniciar uma atualização é chamada a _limite_. O visualizador [estado](/uwp/api/windows.ui.xaml.controls.refreshvisualizer.State) é determinado pelo estado pull que diz respeito a esse limite. Os valores possíveis são contidos na enumeração [RefreshVisualizerState](/uwp/api/windows.ui.xaml.controls.refreshvisualizerstate).
 
-### <a name="idle"></a>Ocioso
+### <a name="idle"></a>Idle
 
 O estado padrão do Visualizador é **Idle**. O usuário não está interagindo com o RefreshContainer através do toque e não há uma atualização em andamento.
 
@@ -70,7 +70,7 @@ Quando o usuário agrupa a lista na direção especificada pela propriedade Pull
 
     Visualmente, o ícone alterna para 100% de opacidade e pulsos no tamanho até 150% e depois retornar para 100% do tamanho durante a transição.
 
-### <a name="pending"></a>Pendente
+### <a name="pending"></a>Pending (Pendente)
 
 Quando o usuário ter recebido a lista ultrapassou o limite, o visualizador consta o estado **pendente**.
 
@@ -101,7 +101,7 @@ Quando o usuário recebe a direção de atualização de uma posição inicial e
 
 Por padrão, o usuário recebe uma lista de cima para baixo para iniciar uma atualização. Se você tiver uma lista ou grade com uma orientação diferente, você deve alterar a direção de pull do contêiner de atualização para corresponder.
 
-O [PullDirection](/uwp/api/windows.ui.xaml.controls.refreshcontainer.PullDirection) propriedade usa um destes valores [RefreshPullDirection](/uwp/api/windows.ui.xaml.controls.refreshpulldirection): **BottomToTop**, **TopToBottom**, **RightToLeft**, ou **LeftToRight**.
+O [PullDirection](/uwp/api/windows.ui.xaml.controls.refreshcontainer.PullDirection) propriedade usa um desses [RefreshPullDirection](/uwp/api/windows.ui.xaml.controls.refreshpulldirection) valores: **BottomToTop**, **TopToBottom**, **RightToLeft**, ou **LeftToRight**.
 
 Quando você altera o dircetion pull, a posição inicial do controle giratório de progresso do visualizador gira automaticamente para a seta é iniciado na posição apropriada para a direção de recepção. Se necessário, você pode alterar a propriedade [RefreshVisualizer.Orientation](/uwp/api/windows.ui.xaml.controls.refreshvisualizer.Orientation) para substituir o comportamento automático. Na maioria dos casos, recomendamos deixar o valor padrão de **automática**.
 
@@ -116,7 +116,7 @@ Para adicionar a funcionalidade de recepção para atualizar para uma lista requ
 > [!NOTE]
 > Você pode instanciar um RefreshVisualizer por conta própria. No entanto, recomendamos que você encapsula seu conteúdo em um RefreshContainer e use o RefreshVisualizer fornecido pela propriedade RefreshContainer.Visualizer, até mesmo para cenários não sensíveis ao toque. Neste artigo, presumimos que o visualizador sempre é obtido do contêiner de atualização.
 
-> Além disso, use RequestRefresh e RefreshRequested membros de atualização do contêiner por conveniência. `refreshContainer.RequestRefresh()` é equivalente a `refreshContainer.Visualizer.RequestRefresh()`, e nenhuma irá disparar eventos RefreshContainer.RefreshRequested e os eventos RefreshVisualizer.RefreshRequested.
+> Além disso, use RequestRefresh e RefreshRequested membros de atualização do contêiner por conveniência. `refreshContainer.RequestRefresh()` é equivalente a `refreshContainer.Visualizer.RequestRefresh()`, e qualquer um irá gerar o evento RefreshContainer.RefreshRequested e os eventos de RefreshVisualizer.RefreshRequested.
 
 ### <a name="request-a-refresh"></a>Solicitar uma atualização
 
@@ -334,6 +334,6 @@ public class ListItemData
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Interações por toque](../input/touch-interactions.md)
-- [Exibição de lista e exibição de grade](listview-and-gridview.md)
-- [Contêineres e modelos de itens](item-containers-templates.md)
+- [Exibição de lista e o modo de exibição de grade](listview-and-gridview.md)
+- [Modelos e contêineres de itens](item-containers-templates.md)
 - [Animações de expressão](../../composition/composition-animation.md)

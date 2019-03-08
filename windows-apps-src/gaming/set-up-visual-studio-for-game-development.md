@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, o visual studio, ferramentas, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a3938f486d52942031944b1184a711ddbc579db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924640"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653471"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>Ferramentas do Visual Studio para programação de jogos
 
@@ -19,7 +19,7 @@ ms.locfileid: "8924640"
 
 **Resumo**
 
--   [Criar um projeto de jogo em DirectX usando um modelo](user-interface.md)
+-   [Criar um projeto de jogo do DirectX de um modelo](user-interface.md)
 -   Ferramentas do Visual Studio para programação de jogos em DirectX
 
 
@@ -45,7 +45,7 @@ Crie [arquivos de compilação personalizada](#build-customizations-for-3d-asset
 
 Para obter mais informações, consulte [Trabalhando com texturas e imagens](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
-> **Observação**o Editor de imagens não se destina a ser um substituto para um aplicativo de edição de imagens completo de recursos, mas é adequado para muitos simples de exibição e edição de cenários.
+> **Observação**  o Editor de imagens não pretende ser uma substituição para uma aplicativo de edição de imagem completo de recursos, mas é adequado para muitos exibição simples e cenários de edição.
 
  
 
@@ -64,7 +64,7 @@ Consulte uma captura de tela de um modelo no editor com iluminação aplicada.
 
 Para obter mais informações, consulte [Trabalhando com modelos 3D](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx).
 
-> **Observação**o Editor de modelos não se destina a ser um substituto para um modelo completo de aplicativo de edição, mas é adequado para muitos simples de exibição e edição de cenários.
+> **Observação**  o Editor de modelo não pretende ser uma substituição para um modelo de recurso completo editando o aplicativo, mas é adequado para muitos exibição simples e cenários de edição.
 
  
 
@@ -116,7 +116,7 @@ Para obter mais informações, consulte [Trabalhando com sombreadores](https://m
 
 Você pode adicionar compilações personalizadas ao seu projeto para que o Visual Studio converta recursos em formatos utilizáveis. Depois disso, você pode carregar os ativos no aplicativo e usá-los ao criar e preencher recursos DirectX, igual faria em qualquer outro aplicativo em DirectX.
 
-Para adicionar uma compilação personalizada, você clique com botão direito no projeto no **Gerenciador de soluções** e selecione **Criar personalizações...**. Você pode adicionar os seguintes tipos de compilações personalizadas ao seu projeto.
+Para adicionar uma compilação personalizada, no **Gerenciador de Soluções**, clique com o botão direito no projeto e selecione **Compilações Personalizadas...**. Você pode adicionar os tipos de compilação personalizada a seguir ao seu projeto.
 
 -   O pipeline de conteúdo de imagem usa arquivos de imagem como entrada e produz arquivos de superfície do DirectDraw (.dds).
 -   O pipeline de conteúdo de malha usa arquivos de malha (como .fbx) e produz arquivos de malha .cmo.

@@ -6,11 +6,11 @@ ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a79edb39cc4bfa5794d79d68f4fb8d5b0e976105
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050629"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645311"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Novidades dos documentos de desenvolvedor do Windows em dezembro de 2017
 
@@ -20,7 +20,7 @@ A documentação do desenvolvedor do Windows está sendo constantemente atualiza
 
 ## <a name="features"></a>Recursos
 
-### <a name="windows-mixed-reality-enthusiasts-guide"></a>Windows Mixed Reality: guia do entusiasta
+### <a name="windows-mixed-reality-enthusiasts-guide"></a>Realidade mista do Windows: Guia do entusiasta
 
 Destinado a entusiastas de tecnologia explorando o mundo da realidade misturada, o [Guia do entusiasta](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/) responde às principais questões sobre o Windows Mixed Reality. 
 
@@ -46,7 +46,7 @@ Em dispositivos que permitem interações por toque, adicione a funcionalidade d
 
 O portal Microsoft Collaborate fornece ferramentas e serviços para simplificar a colaboração de engenharia dentro do ecossistema da Microsoft habilitando o compartilhamento de itens de trabalho do sistema de engenharia (bugs, solicitações de recursos etc.) e a distribuição de conteúdo (compilações, documentos, especificações). [Saiba mais](https://docs.microsoft.com/en-us/collaborate).
 
-![Microsoft Collaborate no Partner Center](images/microsoft_collaborate_screenshot.PNG)
+![Microsoft colaborar no Partner Center](images/microsoft_collaborate_screenshot.PNG)
 
 ### <a name="package-desktop-applications-with-uwp-projects"></a>Empacotar aplicativos da área de trabalho com projetos UWP
 
@@ -58,13 +58,13 @@ Consulte [Estender seu aplicativo da área de trabalho com componentes UWP moder
 
 ### <a name="subscription-add-ons-are-now-available-to-developers-in-the-windows-dev-center-insider-program"></a>Agora os complementos de assinatura estão disponíveis para os desenvolvedores no Programa Insider do Centro de Desenvolvimento do Windows.
 
-Todos os desenvolvedores que ingressaram no Programa Insider do Centro de Desenvolvimento agora podem usar complementos de assinatura para vender produtos digitais nos aplicativos (como recursos de aplicativo ou conteúdo digital) com períodos de cobrança recorrentes automatizados. Para obter mais detalhes, consulte [Habilitar complementos de assinatura para o aplicativo](../monetize/enable-subscription-add-ons-for-your-app.md).
+Todos os desenvolvedores que se associaram o programa Dev Center Insider agora podem usar complementos de assinaturas para vender produtos digitais em seu aplicativo de aplicativos (como recursos de aplicativo ou conteúdo digital) com períodos de cobrança recorrentes automatizados. Para obter mais detalhes, consulte [Habilitar complementos de assinatura para o aplicativo](../monetize/enable-subscription-add-ons-for-your-app.md).
 
 ## <a name="developer-guidance"></a>Diretrizes para desenvolvedor
 
 ### <a name="color"></a>Cor
 
-Adicionamos algumas novas diretrizes sobre como usar cor no aplicativo para obter a melhor experiência de usuário possível. Isso inclui cenários de uso de API e orientações gerais sobre design de interface do usuário e acessibilidade. Também atualizamos a lista de cores de destaque do usuário disponível no Xbox. [Confira o artigo Cor atualizado aqui.](../design/style/color.md)
+Adicionamos algumas novas diretrizes sobre como usar cor no aplicativo para obter a melhor experiência de usuário possível. Isso inclui cenários de uso de API e orientações gerais sobre design de interface do usuário e acessibilidade. Também atualizamos a lista de cores de destaque do usuário disponível no Xbox. [Confira o artigo de cor atualizado aqui.](../design/style/color.md)
 
 ![paleta de cores universal do windows](../design/basics/images/colors.png)
 
@@ -78,7 +78,7 @@ Além disso, adicionamos nosso [guia do SQLite](../data-access/sqlite-databases.
 
 Adicionamos um novo artigo sobre [como construir formulários nos seus aplicativos](../design/controls-and-patterns/forms.md), para coletar e enviar dados dos usuários. Isso inclui informações específicas sobre implementação de formulários e diretrizes gerais sobre quando e onde usá-los.
 
-### <a name="intro-to-app-design"></a>Introdução ao design do aplicativo
+### <a name="intro-to-app-design"></a>Introdução ao design de app
 
 As orientações sobre design da Plataforma Universal do Windows (UWP) são um recurso que ajuda você a projetar e criar aplicativos belos e refinados. [Nossa nova introdução](../design/basics/design-and-ui-intro.md) fornece uma visão geral dos recursos de design universais que são incluídos em todos os aplicativos UWP e mostra como você pode usar os documentos para criar interfaces de usuário que se adequam perfeitamente a vários dispositivos.
 

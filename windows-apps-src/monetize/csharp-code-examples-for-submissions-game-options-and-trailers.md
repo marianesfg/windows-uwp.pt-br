@@ -6,13 +6,13 @@ ms.topic: article
 keywords: Windows 10, uwp, API de envio da Microsoft Store, exemplos de código, opções de jogos, trailers, listagens avançadas, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: 277d455fe3387452a4afe91fd74e5c2099f76ce4
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044257"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594071"
 ---
-# <a name="c-sample-app-submission-with-game-options-and-trailers"></a>Exemplo de C#: envio de aplicativo com opções de jogo e trailers
+# <a name="c-sample-app-submission-with-game-options-and-trailers"></a>C\# exemplo: envio de aplicativo com opções de jogo e trailers
 
 Este artigo fornece exemplos de código C# que demonstram como usar a [API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md) para estas tarefas:
 
@@ -22,7 +22,7 @@ Este artigo fornece exemplos de código C# que demonstram como usar a [API de en
 * Carregue o arquivo ZIP que contém os pacotes, as imagens de listagem e os arquivos de trailer para o envio de aplicativo.
 * Confirme o envio de aplicativo.
 
-Você pode examinar cada exemplo para saber mais sobre a tarefa que ele demonstra ou compilar todos os exemplos de código neste artigo em um aplicativo de console. Para compilar os exemplos, crie um aplicativo de console C# chamado **DevCenterApiSample** no Visual Studio, copie cada exemplo em um arquivo de código separado no projeto e compile o projeto.
+É possível examinar cada exemplo para saber mais sobre a tarefa que ele demonstra ou compilar todos os exemplos de código neste artigo em um aplicativo de console. Para compilar os exemplos, crie um aplicativo de console C# chamado **DevCenterApiSample** no Visual Studio, copie cada exemplo em um arquivo de código separado no projeto e compile o projeto.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -37,7 +37,7 @@ Estes exemplos têm os seguintes requisitos:
 
 A classe ```CreateAndSubmitSubmissionExample``` define um método ```Execute``` público que chama outros métodos de exemplo para usar a API de envio da Microsoft Store para criar e confirmar um envio de aplicativo que contém as opções de jogo e um trailer. Para adaptar este código para seu próprio uso:
 
-* Atribua a variável ```tenantId``` à ID do locatário do seu app e atribua as variáveis ```clientId``` e ```clientSecret``` à ID e a chave do cliente para seu app. Para obter mais informações, consulte [como associar um aplicativo do Azure AD com sua conta do Partner Center](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
+* Atribua a variável ```tenantId``` à ID do locatário do seu app e atribua as variáveis ```clientId``` e ```clientSecret``` à ID e a chave do cliente para seu app. Para obter mais informações, consulte [como associar um aplicativo do AD do Azure com sua conta no Partner Center](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 * Atribua a variável ```applicationId``` à [ID da Loja](in-app-purchases-and-trials.md#store-ids) do app para o qual você deseja criar um envio.
 
 > [!div class="tabbedCodeSnippets"]
@@ -63,4 +63,4 @@ A classe ```DevCenterClient``` define os métodos auxiliares que invocam uma var
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)

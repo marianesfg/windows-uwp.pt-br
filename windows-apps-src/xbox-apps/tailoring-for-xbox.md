@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e273b1b3bb84929005cfbe4a205397fa298ea1c8
-ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "9059727"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657121"
 ---
 # <a name="xbox-best-practices"></a>Práticas recomendadas para o Xbox
 
@@ -20,32 +20,32 @@ Por padrão, todos os aplicativos UWP serão executados em Xbox One sem nenhum e
 
 ## <a name="to-build-the-best-experiences-for-xbox-one"></a>Para criar as melhores experiências para Xbox One
 
-### <a name="do-turn-off-mouse-mode"></a>*Desativar:* modo mouse
+### <a name="do-turn-off-mouse-mode"></a>*Faça:* Desativar o modo de mouse
 
-Os usuários do Xbox adoram seus controladores. Otimizar para entrada, o controlador [Desabilitar o modo de mouse](how-to-disable-mouse-mode.md) e habilitar a navegação direcional (também conhecido como [interação e navegação de foco do plano XY](../design/input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction)). Cuidado com interceptações de foco e interface do usuário inacessível.
+Os usuários do Xbox gostam de seus controladores. Para otimizar a entrada do controlador [desabilitar o modo de mouse](how-to-disable-mouse-mode.md) e habilitar a navegação direcional (também conhecido como [XY concentre-se a navegação e interação](../design/input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction)). Cuidado com foco interceptações e inacessível da interface do usuário.
 
-### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*Desenhe:* um retângulo de foco apropriado para uma experiência de 10 pés
+### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*Faça:* Desenhar um retângulo de foco é apropriado para uma experiência de 10 pés
 
 Como a maioria dos usuários do Xbox permanece sentada na sala de estar diante da TV, lembre-se de que o retângulo de foco padrão é difícil de ver a dez pés de distância. Para garantir que o elemento da interface do usuário com o foco de entrada esteja claramente visível para o usuário sempre, siga as diretrizes de [Foco visual](../design/input/gamepad-and-remote-interactions.md#focus-visual). Em XAML, você terá esse comportamento gratuitamente quando o aplicativo for executado em Xbox, mas aplicativos HTML precisarão usar um estilo CSS personalizado.
 
-### <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*Integre-se:* à classe SystemMediaTransportControls
+### <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*Faça:* Integrar com a classe SystemMediaTransportControls
 
 Os usuários do Xbox querem controlar aplicativos de mídia com o Xbox Media Remote, a Cortana (especialmente os comandos de voz "Executar" e "Pausar") e o Xbox SmartGlass. Para obter esses recursos gratuitamente, o aplicativo deve usar a classe [SystemMediaTransportControls](https://msdn.microsoft.com/library/windows/apps/windows.media.systemmediatransportcontrols.aspx), incluída automaticamente nos controles de mídia do Xbox. Se o aplicativo tiver controles de mídia personalizados, verifique se eles se integram à classe **SystemMediaTransportControls** para oferecer esses recursos aos usuários. Se você estiver criando um aplicativo de música em segundo plano, integre-o à classe **SystemMediaTransportControls** para garantir que os controles de música em segundo plano funcionem corretamente na guia multitarefa do Xbox.
 
 <!-- ### *Do:* Use adaptive UI to account for snapped apps
 One of the unique features of Xbox One is that users can snap apps such as Cortana next to any other app, so your app should respond gracefully when it runs in *fill mode*. Implement [adaptive UI](../get-started/universal-application-platform-guide.md#design-adaptive-ui-with-adaptive-panels) and make sure to test your app during development by snapping an app next to it. -->
 
-### <a name="consider-draw-to-the-edge-of-the-screen"></a>*Considere:* desenhar a borda da tela
+### <a name="consider-draw-to-the-edge-of-the-screen"></a>*Considere:* Desenhar a borda da tela
 
 Muitas TVs cortam as bordas da tela, de maneira que todo o conteúdo importante do aplicativo deva ser exibido dentro da [área de segurança da TV](../design/devices/designing-for-tv.md#tv-safe-area). A UWP usa *overscan* para manter o conteúdo dentro da área de segurança da TV, mas esse comportamento padrão pode desenhar uma borda evidenciada em torno do aplicativo. Para proporcionar a melhor experiência, desative o comportamento padrão e siga as instruções em [Como desenhar a interface para a borda da tela](turn-off-overscan.md).
 > [!IMPORTANT]
   > Se você desabilitar overscan, será sua responsabilidade se certificar de que os elementos interativos e o texto permaneçam dentro da área de segurança da TV. 
 
-### <a name="consider-use-tv-safe-colors"></a>*Considere:* o uso de cores seguras para TV
+### <a name="consider-use-tv-safe-colors"></a>*Considere:* Usar cores de TV-safe
 
-As TVs não manipulam intensidades de cores extremas, assim como fazem os monitores de computadores. Evite cores de alta intensidade no aplicativo, de maneira que os usuários não vejam efeitos de faixa estranhos ou uma imagem lavada. Além disso, lembre-se de que as diferenças entre as TVs indicam que as cores que aparente corretas na *sua* TV podem parecer muito diferentes para os usuários. Leia [as cores](../design/devices/designing-for-tv.md#colors) para entender como deixar o aplicativo bem para todo mundo!
+As TVs não manipulam intensidades de cores extremas, assim como fazem os monitores de computadores. Evite cores de alta intensidade no aplicativo, de maneira que os usuários não vejam efeitos de faixa estranhos ou uma imagem lavada. Além disso, lembre-se de que as diferenças entre as TVs indicam que as cores que aparente corretas na *sua* TV podem parecer muito diferentes para os usuários. Leia [cores](../design/devices/designing-for-tv.md#colors) para entender como tornar seu aplicativo ótimo para todos!
 
-### <a name="remember-you-can-disable-scaling"></a>*Lembre-se:* você pode desabilitar a escala
+### <a name="remember-you-can-disable-scaling"></a>*Lembre-se:* Você pode desabilitar o dimensionamento
 
 Os aplicativos UWP são dimensionados automaticamente para garantir que os elementos da interface do usuário, como controles e fontes, permaneçam legíveis em todos os dispositivos. Os aplicativos que usam XAML são dimensionados em 200%, e os aplicativos que usam HTML são dimensionados em 150%. Se você quiser mais controle sobre a aparência do aplicativo no Xbox, desabilite o fator de escala padrão para usar as dimensões de pixel reais de uma HDTV (1920x1080). Observe [Como desativar a colocação em escala](disable-scaling.md) e [Dimensionamento e pixels efetivos](../design/basics/design-and-ui-intro.md#effective-pixels-and-scaling) para obter informações sobre como personalizar o aplicativo para deixá-lo incrível no Xbox.
 
@@ -58,20 +58,20 @@ Para obter uma prévia dessas práticas aplicadas a um aplicativo UWP, confira e
 
 A seguir, no [Channel 9](https://channel9.msdn.com/), uma excelente fonte de informações para a compilação de aplicativos incríveis em Xbox:
 
-- [Compilação de excelentes aplicativos da Plataforma Universal do Windows (UWP) para Xbox](https://channel9.msdn.com/Events/Build/2016/B883)
-- [Adaptar o aplicativo para Xbox One e TV](https://channel9.msdn.com/Events/Build/2016/T651-R1)
-- [Desenvolvimento de UWP 1: compilação de uma interface do usuário adaptável](https://channel9.msdn.com/Events/Build/2016/L724-R1)
-- [Aplicativos Web além do navegador: plataforma cruzada encontra entre dispositivos](https://channel9.msdn.com/Events/Build/2016/B888)
+- [Criação de aplicativos UWP (plataforma) do Windows Universal excelente para Xbox](https://channel9.msdn.com/Events/Build/2016/B883)
+- [Adaptar seu aplicativo para Xbox One e TV](https://channel9.msdn.com/Events/Build/2016/T651-R1)
+- [Desenvolvimento de UWP 1: Criando uma interface do usuário adaptável](https://channel9.msdn.com/Events/Build/2016/L724-R1)
+- [Além de aplicativos Web do navegador: Atende de plataforma cruzada entre o dispositivo](https://channel9.msdn.com/Events/Build/2016/B888)
 
 ## <a name="app-dev-on-xbox"></a>Desenvolvimento de aplicativo no Xbox
 
-O evento de **Desenvolvimento de aplicativo no Xbox** é um ótimo ponto de partida para desenvolvedores novos criação de aplicativos no Xbox.
+O **App Dev Xbox** eventos é um ótimo ponto de partida para desenvolvedores novos à criação de aplicativos no Xbox.
 
-* [Assista as sessões gravadas](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
+* [Assista às sessões gravadas](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
 * [Leia as postagens de blog](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#BlogSeries)
 
 ## <a name="see-also"></a>Consulte também
 
 - [UWP no Xbox One](index.md)
-- [Projetando para Xbox e TV](../design/devices/designing-for-tv.md)
-- [Aplicativos Web progressivos para Xbox One](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/xbox-considerations)
+- [Projetando para TV e Xbox](../design/devices/designing-for-tv.md)
+- [Aplicativos Web progressivo para Xbox One](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/xbox-considerations)

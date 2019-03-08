@@ -1,5 +1,5 @@
 ---
-Description: This is a hub topic covering the full developer picture of how Windows Information Protection (WIP) relates to files, buffers, clipboard, networking, background tasks, and data protection under lock.
+Description: Este é um tópico central que abrange toda a imagem do desenvolvedor de como a Proteção de Informações do Windows (WIP) se relaciona com arquivos, buffers, área de transferência, redes, tarefas em segundo plano e proteção de dados sob bloqueio.
 MS-HAID: dev\_enterprise.edp\_hub
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -10,11 +10,11 @@ keywords: windows 10, uwp, proteção de informações do Windows, dados corpora
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
 ms.openlocfilehash: f6938118b3a9041eea27367c3916e94ce34d468e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049493"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595471"
 ---
 # <a name="windows-information-protection-wip"></a>Proteção de Informações do Windows (WIP)
 
@@ -42,8 +42,8 @@ Se os usuários cancelarem o registro de seus dispositivos no sistema MDM da org
 ![Ciclo de vida do Wip](images/wip-lifecycle.png)
 
 > **Leia mais sobre WIP** <br>
-* [Apresentando a Proteção de Informações do Windows](https://blogs.technet.microsoft.com/windowsitpro/2016/06/29/introducing-windows-information-protection/)
-* [Proteger os dados corporativos usando a WIP (Proteção de Informações do Windows)](https://technet.microsoft.com/library/dn985838(v=vs.85).aspx)
+* [Apresentando a proteção de informações do Windows](https://blogs.technet.microsoft.com/windowsitpro/2016/06/29/introducing-windows-information-protection/)
+* [Proteger seus dados empresariais usando a proteção de informações do Windows (WIP)](https://technet.microsoft.com/library/dn985838(v=vs.85).aspx)
 
 Se seu aplicativo estiver na lista de permissões, todos os dados produzidos por seu aplicativo estarão sujeitos às restrições de política. Isso significa que, se os administradores revogarem o acesso do usuário aos dados corporativos, esses usuários perderão acesso a todos os dados produzidos por seu aplicativo.
 
@@ -61,11 +61,11 @@ Por exemplo, se a política permitir que os usuários colem dados corporativos e
 
 Se você estiver pronto para capacitar seu aplicativo, consulte um destes procedimentos:
 
-**Para aplicativos da plataforma Universal do Windows (UWP) que você cria usando c#**
+**Para aplicativos de plataforma Universal do Windows (UWP) que você cria usandoC#**
 
 [Guia do desenvolvedor de Proteção de Informações do Windows (WIP)](wip-dev-guide.md).
 
-**Para aplicativos da área de trabalho que você criar usando C++**
+**Para aplicativos da área de trabalho que você cria usando o C++**
 
 [Guia do desenvolvedor de Proteção de Informações do Windows (WIP) (C++)](https://go.microsoft.com/fwlink/?LinkId=822192).
 

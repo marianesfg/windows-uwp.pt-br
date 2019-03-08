@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 63660883f327547a82eac4a3accec475995a651a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919222"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593581"
 ---
 # <a name="view-transform"></a>Transformação da exibição
 
@@ -29,7 +29,7 @@ Nessa fórmula, V é a matriz de visualização que está sendo criada, T é uma
 
 As matrizes de rotação aplicam rotações de magnitude igual, porém oposta, aos modelos na cena. A matriz de visualização de câmera inclui uma rotação de -90 graus em torno do eixo x. A matriz de rotação é combinada com a matriz de translação para criar uma matriz de exibição que ajusta a posição e a orientação dos objetos na cena para que sua parte superior fique voltada para a câmera, dando a impressão de que a câmera está acima do modelo.
 
-## <a name="span-idsettingupaviewmatrixspanspan-idsettingupaviewmatrixspanspan-idsettingupaviewmatrixspansetting-up-a-view-matrix"></a><span id="Setting_Up_a_View_Matrix"></span><span id="setting_up_a_view_matrix"></span><span id="SETTING_UP_A_VIEW_MATRIX"></span>Configurando uma matriz de exibição
+## <a name="span-idsettingupaviewmatrixspanspan-idsettingupaviewmatrixspanspan-idsettingupaviewmatrixspansetting-up-a-view-matrix"></a><span id="Setting_Up_a_View_Matrix"></span><span id="setting_up_a_view_matrix"></span><span id="SETTING_UP_A_VIEW_MATRIX"></span>Como configurar uma matriz de exibição
 
 
 O Direct3D usa as matrizes de mundo e modo de exibição para configurar várias estruturas de dados internas. Cada vez que você define um novo mundo ou uma matriz de exibição, o sistema recalcula as estruturas internas associadas. Definir essas matrizes com frequência é algo computacionalmente demorado. Você pode minimizar o número de cálculos necessários concatenando as matrizes de mundo e modo de exibição em uma matriz de exibição de mundo que você define como matriz de mundo, e, em seguida, definindo a matriz de visualização para a identidade. Mantenha cópias em cache das matrizes individuais de mundo e modo de exibição para que você possa modificar, concatenar e restaurar a matriz de mundo conforme necessário.

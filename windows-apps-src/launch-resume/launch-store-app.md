@@ -1,36 +1,36 @@
 ---
 title: Iniciar o aplicativo da Microsoft Store
-description: Este tópico descreve o esquema de URI ms-windows-store. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo Microsoft Store para páginas específicas na loja.
+description: Este tópico descreve o esquema de URI ms-windows-store. Seu aplicativo pode usar este esquema URI para iniciar o aplicativo Microsoft Store para páginas específicas na Store.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cda37ee9964a3e7e02f4e4ce3829a8b55e823692
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981530"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660891"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Iniciar o aplicativo da Microsoft Store
 
 
 
-Este tópico descreve o esquema de URI **ms-windows-store:**. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo Microsoft Store para páginas específicas na loja usando o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
+Este tópico descreve o **ms-windows-store:** Esquema de URI. O aplicativo pode usar este esquema URI para iniciar o aplicativo Microsoft Store para páginas específicas no repositório usando o [ **LaunchUriAsync** ](https://msdn.microsoft.com/library/windows/apps/hh701476) método.
 
-Este exemplo mostra como abrir o armazenamento para a página de jogos:
+Este exemplo mostra como abrir a Microsoft Store para a página de Jogos:
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
 ```
 
-## <a name="ms-windows-store-uri-scheme-reference"></a>Referência do esquema de URI ms-windows-store:
+## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows-store: Referência de esquema URI
 
 <table>
 <tr><th>Descrição</th><th></th><th>Esquema de URI</th></tr>
 <tr><td>Abre a página inicial da Loja.</td><td /><td>ms-windows-store://home</td></tr>
-<tr><td>Inicia um vertical de nível superior na loja.<p>Observação: Nem todos os usuários têm acesso a todos os verticais.</p>
+<tr><td>Inicia um vertical de nível superior na loja.<p>Observação: Nem todos os usuários têm acesso a todas as verticais.</p>
 </td><td /><td>
 <p>ms-windows-store://navigatetopage/?Id=Apps </p>
 <p>ms-windows-store://navigatetopage/?Id=Games</p>
@@ -40,11 +40,11 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </td>
 </tr>
 <tr>
-<td rowspan="4">Inicia a página de detalhes (PDP) de um produto. <p>O ID da Loja é recomendado para clientes no Windows 10 e funcionará em todas as versões de sistema operacional, mas as maneiras anteriores de fazer isso (ex: PFN) ainda têm suporte.</p>
-<p>Esses valores podem ser encontrados no <a href="https://partner.microsoft.com/dashboard">Partner Center</a> na página <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">identidade do aplicativo</a> na seção Gerenciamento do aplicativo para cada aplicativo.</p>
+<td rowspan="4">Inicia a página de detalhes (PDP) de um produto. <p>ID de Store é recomendada para os clientes no Windows 10 e funcionarão em todas as versões de sistema operacional, mas as formas anteriores de fazê-lo (por exemplo: PFN) ainda é suportado.</p>
+<p>Esses valores podem ser encontrados na <a href="https://partner.microsoft.com/dashboard">Partner Center</a> sobre o <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">identidade de aplicativo</a> página na seção de gerenciamento de aplicativo para cada aplicativo.</p>
 </td>
 <td>
-ID da Loja <p>(Recomendado)</p>
+ID da Store <p>(Recomendado)</p>
 </td>
 <td>
 <p>ms-windows-store://pdp/?ProductId=9WZDNCRFHVJL</p>
@@ -66,7 +66,7 @@ ID da Loja <p>(Recomendado)</p>
 </tr>
 <tr>
 <td rowspan="4">Inicia a gravação de uma experiência de revisão para um produto.</td>
-<td>ID da Loja <p>(Recomendado)</p></td>
+<td>ID da Store <p>(Recomendado)</p></td>
 <td>ms-windows-store://review/?ProductId=9WZDNCRFHVJL </td>
 </tr>
 <tr>

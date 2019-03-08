@@ -1,5 +1,5 @@
 ---
-Description: This guide helps you enlighten your app to handle enterprise data managed by Windows Information Protection (WIP) policy as well as personal data.
+Description: Este guia ajuda você a capacitar seu aplicativo para manipular dados empresariais gerenciados pela política Proteção de Informações do Windows (WIP), bem como dados pessoais.
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Guia do desenvolvedor de Proteção de Informações do Windows (WIP)
@@ -9,11 +9,11 @@ keywords: windows 10, uwp, wip, Proteção de Informações do Windows, dados co
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f022045787512f6baea679633d5327b6ba4caf8
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048353"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657931"
 ---
 # <a name="windows-information-protection-wip-developer-guide"></a>Guia do desenvolvedor de Proteção de Informações do Windows (WIP)
 
@@ -23,7 +23,7 @@ Neste guia, mostraremos como criar uma. Quando você terminar, os administradore
 
 __Observação__ Este guia ajuda você a capacitar um aplicativo UWP. Se você quiser habilitar um aplicativo de área de trabalho do Windows C++, consulte [Guia do desenvolvedor de Proteção de Informações do Windows (WIP) (C++)](https://go.microsoft.com/fwlink/?LinkId=822192).
 
-Você pode ler mais sobre WIP e aplicativos capacitados aqui: [Proteção de Informações do Windows (WIP)](wip-hub.md).
+Você pode ler mais sobre WIP e habilitado para aplicativos aqui: [Proteção de informações do Windows (WIP)](wip-hub.md).
 
 Você pode encontrar um exemplo completo [aqui](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/EnterpriseDataProtection).
 
@@ -41,15 +41,15 @@ Você precisará do seguinte:
 
 Você executará as seguintes tarefas:
 
-* [Instalar o Assistente de desenvolvedor de instalação do WIP na VM de teste](#install-assistant)
+* [Instalar o WIP desenvolvedor Assistente de configuração para a VM de teste](#install-assistant)
 
-* [Criar uma política de proteção usando o Assistente de desenvolvedor de instalação do WIP](#create-protection-policy)
+* [Criar uma política de proteção usando o Assistente de desenvolvedor de configuração WIP](#create-protection-policy)
 
 * [Configurar um projeto do Visual Studio](#setup-vs-project)
 
-* [Configurar depuração remota](#setup-remote-debugging)
+* [Configurar a depuração remota](#setup-remote-debugging)
 
-* [Adicionar namespaces aos seus arquivos de código](#add-namespaces)
+* [Adicionar namespaces a seus arquivos de código](#add-namespaces)
 
 <a id="install-assistant" />
 
@@ -57,7 +57,7 @@ Você executará as seguintes tarefas:
 
  Use essa ferramenta para configurar uma política de Proteção de Informações do Windows na VM de teste.
 
- Baixe a ferramenta aqui: [Assistente de desenvolvedor de instalação do WIP](https://www.microsoft.com/store/p/wip-setup-developer-assistant/9nblggh526jf).
+ Baixe a ferramenta aqui: [Assistente de desenvolvimento do programa de instalação WIP](https://www.microsoft.com/store/p/wip-setup-developer-assistant/9nblggh526jf).
 
 <a id="create-protection-policy" />
 
@@ -65,7 +65,7 @@ Você executará as seguintes tarefas:
 
 Defina sua política adicionando informações a cada seção do Assistente de desenvolvedor de instalação do WIP. Escolha o ícone de ajuda ao lado de qualquer configuração para saber mais sobre como usá-lo.
 
-Para obter diretrizes gerais sobre como usar essa ferramenta, consulte a seção Notas de versão na página de transferência do aplicativo.
+Para obter diretrizes gerais sobre como usar essa ferramenta, consulte a seção Notas de versão na página de download do aplicativo.
 
 <a id="setup-vs-project" />
 
@@ -82,7 +82,7 @@ Para obter diretrizes gerais sobre como usar essa ferramenta, consulte a seção
     ```xml
        <rescap:Capability Name="enterpriseDataPolicy"/>
     ```
-   >*Leitura Opcional*: o prefixo "rescap" significa *Recurso Restrito*. Consulte [Funcionalidades especiais e restritas](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+   >*Leitura opcional*: O prefixo "rescap" significa *recurso restrito*. Consulte [Funcionalidades especiais e restritas](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
 4. Adicione este namespace ao seu arquivo de manifesto do pacote:
 
@@ -109,7 +109,7 @@ Consulte [Instruções para computador remoto](https://msdn.microsoft.com/window
 
 ### <a name="add-these-namespaces-to-your-code-files"></a>Adicionar esses namespaces aos seus arquivos de código
 
-Adicione estas instruções usando a parte superior de seus arquivos de código (os trechos de código neste guia as usam):
+Adicione estas instruções "using" à parte superior de seus arquivos de código (os trechos de código neste guia as usa):
 
 ```csharp
 using System;
@@ -290,7 +290,7 @@ private static async Task<IBuffer> GetDataFromNetworkHelperMethod(Uri resourceUR
 }
 ```
 
-**(Opcional) Use um token de cabeçalho em vez de criar um contexto de conversa protegido**
+**(Opcional) Use um token de cabeçalho em vez de criar um contexto de thread protegido**
 
 ```csharp
 public static async Task<IBuffer> GetDataFromNetworkbyUsingHeader(Uri resourceURI)
@@ -389,7 +389,7 @@ private static async Task<IBuffer> GetDataFromNetworkRedirectHelperMethod(Uri re
 
 ### <a name="read-data-from-the-clipboard"></a>Ler os dados da área de transferência
 
-**Obter permissão para usar dados da área de transferência**
+**Obter permissão para usar os dados da área de transferência**
 
 Para obter dados da área de transferência, peça permissão ao Windows. Use [**DataPackageView.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn706645.aspx) para fazer isso.
 
@@ -414,7 +414,7 @@ public static async Task PasteText(TextBox textBox)
 > **APIs** <br>
 [DataPackageView.RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/dn706645.aspx)
 
-**Ocultar ou desabilitar os recursos que usam dados da área de transferência**
+**Ocultar ou desabilitar os recursos que usam dados de área de transferência**
 
 Determine se a exibição atual tem permissão para acessar dados que estão na área de transferência.
 
@@ -443,7 +443,7 @@ private bool IsClipboardAllowedAsync()
 [ProtectionPolicyManager.GetForCurrentView](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview.aspx)<br>
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)
 
-**Impedir que os usuários sejam avisados com uma caixa de diálogo de consentimento**
+**Impedir que os usuários sejam solicitados com uma caixa de diálogo de consentimento**
 
 Um novo documento não é *pessoal* nem *empresarial*. É apenas novo. Se um usuário colar os dados empresariais nele, o Windows aplicará a política e o usuário será avisado com uma caixa de diálogo de consentimento. Esse código impede que isso ocorra. Essa tarefa não pretende ajudar a proteger os dados. É mais sobre como impedir que os usuários recebam a caixa de diálogo de consentimento em casos em que seu aplicativo cria um novo item.
 
@@ -545,15 +545,15 @@ Protege dados empresariais que deixam o aplicativo. Os dados deixam seu aplicati
 
 **Nesta seção:**
 
-* [Proteger dados que aparecem nas páginas](#protect-pages)
+* [Proteger os dados que aparece nas páginas](#protect-pages)
 * [Proteger dados em um arquivo como um processo em segundo plano](#protect-background)
-* [Proteger parte de um arquivo](#protect-part-file)
+* [Proteger a parte de um arquivo](#protect-part-file)
 * [Ler a parte protegida de um arquivo](#read-protected)
 * [Proteger dados em uma pasta](#protect-folder)
-* [Proteger dados para um ponto de extremidade de rede](#protect-network)
-* [Proteger dados que seu aplicativo compartilha por meio de um contrato de compartilhamento](#protect-share)
-* [Proteger arquivos que você copia em outro local](#protect-other-location)
-* [Proteger dados corporativos quando a tela do dispositivo está bloqueada](#protect-locked)
+* [Proteger os dados para um ponto de extremidade de rede](#protect-network)
+* [Proteger os dados que seu aplicativo compartilha por meio de um contrato de compartilhamento](#protect-share)
+* [Proteger os arquivos que você copiar para outro local](#protect-other-location)
+* [Proteger dados da empresa quando a tela do dispositivo está bloqueada](#protect-locked)
 
 <a id="protect-pages" />
 
@@ -563,7 +563,7 @@ Quando você mostra dados em uma página, informe ao Windows qual é o tipo dos 
 
 Quando você marca a exibição ou o processo, o Windows impõe a política nele. Isso ajuda a evitar a perda de dados resultante de ações que seu aplicativo não controla. Por exemplo, em um computador, um usuário pode usar CTRL-V para copiar informações corporativas de uma exibição e, em seguida, colá-las em outro aplicativo. O Windows protege contra isso. O Windows também ajuda a impor contratos de compartilhamento.
 
-**Marcar a exibição atual do aplicativo**
+**Marca o modo de exibição atual do aplicativo**
 
 Faça isso se seu aplicativo tiver várias exibições entre as quais algumas consomem dados empresariais e outras, dados pessoais.
 
@@ -581,7 +581,7 @@ ProtectionPolicyManager.GetForCurrentView().Identity = String.Empty;
 [ProtectionPolicyManager.GetForCurrentView](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview.aspx)<br>
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)
 
-**Marcar o processo**
+**O processo de marca**
 
 Faça isso se todas as exibições do aplicativo trabalharem apenas com um tipo de dados (pessoais ou empresariais).
 
@@ -608,7 +608,7 @@ ProtectionPolicyManager.ClearProcessUIPolicy();
 
 Crie um arquivo protegido e, em seguida, grave-o.
 
-**Etapa 1: Determinar se o seu aplicativo pode criar um arquivo empresarial**
+**Etapa 1: Determinar se seu aplicativo pode criar um arquivo da empresa**
 
 Seu aplicativo pode criar um arquivo empresarial se a cadeia de caracteres de identidade for gerenciada por política e seu aplicativo estiver na lista de permissões da política.
 
@@ -634,7 +634,7 @@ FileProtectionInfo fileProtectionInfo =
 > **APIs** <br>
 [FileProtectionManager.ProtectAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.protectasync.aspx)
 
-**Etapa 3: Gravar esse fluxo ou buffer no arquivo**
+**Etapa 3: Esse fluxo ou buffer de gravação para o arquivo**
 
 *Gravar um fluxo*
 
@@ -654,7 +654,7 @@ FileProtectionInfo fileProtectionInfo =
     }
 ```
 
-*Gravar um buffer*
+*Um buffer de gravação*
 
 ```csharp
      if (fileProtectionInfo.Status == FileProtectionStatus.Protected)
@@ -679,7 +679,7 @@ Esse código pode ser executado enquanto a tela do dispositivo está bloqueada. 
 
 Você precisará usar uma abordagem que mantém o identificador de arquivo aberto ao criar um arquivo.  
 
-**Etapa 1: Determinar se você pode criar um arquivo empresarial**
+**Etapa 1: Determinar se você pode criar um arquivo da empresa**
 
 Você poderá criar um arquivo empresarial se a identidade que estiver usando for gerenciada por política e seu aplicativo estiver na lista de permissões da política.
 
@@ -690,7 +690,7 @@ if (!ProtectionPolicyManager.IsIdentityManaged(identity)) return false;
 > **APIs** <br>
 [ProtectionPolicyManager.IsIdentityManaged](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.isidentitymanaged.aspx)
 
-**Etapa 2: Criar um arquivo e protegê-lo para a identidade**
+**Etapa 2: Crie um arquivo e protegê-lo para a identidade**
 
 O [**FileProtectionManager.CreateProtectedAndOpenAsync**](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.createprotectedandopenasync.aspx) cria um arquivo protegido e mantém o identificador de arquivo aberto enquanto você grava nele.
 
@@ -705,7 +705,7 @@ ProtectedFileCreateResult protectedFileCreateResult =
 > **APIs** <br>
 [FileProtectionManager.CreateProtectedAndOpenAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.createprotectedandopenasync.aspx)
 
-**Etapa 3: Gravar um fluxo ou um buffer no arquivo**
+**Etapa 3: Um fluxo ou buffer de gravação para o arquivo**
 
 Este exemplo grava um fluxo em um arquivo.
 
@@ -744,7 +744,7 @@ Na maioria dos casos, é melhor armazenar dados pessoais e empresariais separada
 
 Criptografe os dados empresariais, mas não todo o arquivo. Dessa forma, os usuários poderão continuar a usar esse arquivo mesmo se cancelarem o registro do MDM ou seus direitos de acesso a dados empresariais forem revogados. Além disso, seu aplicativo deve manter o controle de quais dados ele criptografa para que saiba quais dados proteger ao ler o arquivo na memória.
 
-**Etapa 1: Adicionar dados empresariais a um fluxo criptografado ou buffer**
+**Etapa 1: Adicionar dados da empresa para um buffer ou fluxo criptografado**
 
 ```csharp
 string enterpriseDataString = "<employees><employee><name>Bill</name><social>xxx-xxx-xxxx</social></employee></employees>";
@@ -763,7 +763,7 @@ enterpriseData= result.Buffer;
 [BufferProtectUnprotectResult.buffer](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.bufferprotectunprotectresult.buffer.aspx)
 
 
-**Etapa 2: Adicionar dados pessoais a um fluxo não criptografado ou buffer**
+**Etapa 2: Adicionar dados pessoais em um fluxo não criptografado ou o buffer**
 
 ```csharp
 string personalDataString = "<recipies><recipe><name>BillsCupCakes</name><cooktime>30</cooktime></recipe></recipies>";
@@ -772,7 +772,7 @@ var personalData = Windows.Security.Cryptography.CryptographicBuffer.ConvertStri
     personalDataString, Windows.Security.Cryptography.BinaryStringEncoding.Utf8);
 ```
 
-**Etapa 3: Gravar fluxos ou buffers em um arquivo**
+**Etapa 3: Fluxos ou buffers de gravação em um arquivo**
 
 ```csharp
 StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
@@ -797,7 +797,7 @@ using (var outputStream = stream.GetOutputStreamAt(0))
 }
 ```
 
-**Etapa 4: Manter controle da localização dos dados empresariais no arquivo**
+**Etapa 4: Manter controle sobre a localização dos seus dados corporativos no arquivo.**
 
 É responsabilidade do seu aplicativo manter o controle dos dados que são empresariais nesse arquivo.
 
@@ -819,7 +819,7 @@ await Windows.Storage.FileIO.WriteTextAsync
 
 Veja a seguir como você lerá os dados empresariais fora desse arquivo.
 
-**Etapa 1: Obter a posição de seus dados empresariais no arquivo**
+**Etapa 1: Obtenha a posição dos seus dados corporativos no arquivo.**
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder =
@@ -841,7 +841,7 @@ uint endPosition =
     Convert.ToUInt16((doc.FirstChild.Attributes.GetNamedItem("end")).InnerText);
 ```
 
-**Etapa 2: Abrir o arquivo de dados e certificar-se de que ele não esteja protegido**
+**Etapa 2: Abra o arquivo de dados e certifique-se de que ele não está protegido**
 
 ```csharp
 Windows.Storage.StorageFile dataFile =
@@ -859,7 +859,7 @@ if (protectionInfo.Status == FileProtectionStatus.Protected)
 [FileProtectionInfo](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.aspx)<br>
 [FileProtectionStatus](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionstatus.aspx)<br>
 
-**Etapa 3: Ler dados empresariais do arquivo**
+**Etapa 3: Ler os dados da empresa do arquivo**
 
 ```csharp
 var stream = await dataFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite);
@@ -871,7 +871,7 @@ Windows.Storage.Streams.Buffer tempBuffer = new Windows.Storage.Streams.Buffer(5
 IBuffer enterpriseData = await stream.ReadAsync(tempBuffer, endPosition, InputStreamOptions.None);
 ```
 
-**Etapa 4: Descriptografar o buffer que contém dados empresariais**
+**Etapa 4: Descriptografar o buffer que contém os dados da empresa**
 
 ```csharp
 DataProtectionInfo dataProtectionInfo =
@@ -1097,9 +1097,9 @@ private async void ProtectionPolicyManager_ProtectedAccessSuspending(object send
 
 #### <a name="add-back-sensitive-data-when-the-device-is-unlocked"></a>Adicionar dados confidenciais novamente quando o dispositivo for desbloqueado
 
-[**ProtectionPolicyManager.ProtectedAccessResumed**](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.protectedaccessresumed.aspx) é acionado quando o dispositivo é desbloqueado e as chaves estão disponíveis novamente no dispositivo.
+[**ProtectionPolicyManager.ProtectedAccessResumed** ](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.protectedaccessresumed.aspx) é gerado quando o dispositivo seja desbloqueado, e as chaves estão disponíveis no dispositivo novamente.
 
-[**ProtectedAccessResumedEventArgs.Identities**](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectedaccessresumedeventargs.identities.aspx) será uma coleção vazia se o administrador não tiver configurado uma proteção de dados seguros sob a política de bloqueio.
+[**ProtectedAccessResumedEventArgs.Identities** ](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectedaccessresumedeventargs.identities.aspx) é uma coleção vazia se o administrador não tiver configurado uma proteção de dados seguros na política de bloqueio.
 
 Este exemplo faz o inverso do exemplo anterior. Descriptografa o buffer, adiciona as informações desse buffer de volta para a caixa de texto e, em seguida, descarta o buffer.
 
@@ -1163,4 +1163,4 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Exemplo de Proteção de Informações do Windows (WIP)](https://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
+[Exemplo de proteção de informações do Windows (WIP)](https://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)

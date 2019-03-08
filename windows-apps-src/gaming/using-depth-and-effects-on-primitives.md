@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, profundidade, efeitos, primitivos, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 02911338da858e3718235736cee7969a7bdebae2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939735"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646581"
 ---
 # <a name="use-depth-and-effects-on-primitives"></a>Usar efeitos e profundidade em primitivas
 
@@ -19,7 +19,7 @@ ms.locfileid: "8939735"
 
 Aqui mostramos a você como usar profundidade, perspectiva, cor e outros efeitos em primitivas.
 
-**Objetivo:** criar um objeto 3D e aplicar iluminação de vértice básica e coloração a ela.
+**Objetivo:** Para criar um objeto 3D e aplicar o vértice básico de iluminação e colorir a ele.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -28,7 +28,7 @@ Partimos do princípio de que você conhece C++. Você também precisa ter exper
 
 Também supomos que você leu [Guia de início rápido: configurando recursos DirectX e exibindo uma imagem](setting-up-directx-resources.md) e [Criando sombreadores e desenhando primitivas](creating-shaders-and-drawing-primitives.md).
 
-**Tempo para concluir:** 20 minutos.
+**Tempo para conclusão:** 20 minutos.
 
 <a name="instructions"></a>Instruções
 ------------
@@ -66,7 +66,7 @@ private:
 
 ### <a name="2-creating-a-depth-stencil-view"></a>2. Criando um modo de exibição de estêncil de profundidade
 
-Além de criar o modo de exibição de destino de renderização, também criamos um modo de exibição de estêncil de profundidade. O modo de exibição de estêncil de profundidade permite que o Direct3D renderiza de forma eficiente os objetos mais próximos à câmera na frente dos objetos mais longe da câmera. Antes de podemos criar um modo de exibição para um buffer de estêncil de profundidade, devemos criar o buffer de estêncil de profundidade. Populamos um [**D3D11\_TEXTURE2D\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253) para descrever o buffer de estêncil de profundidade e chamamos [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521) para criar o buffer de estêncil de profundidade. Para criar o modo de exibição de estêncil de profundidade, populamos uma [**D3D11\_DEPTH\_STENCIL\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476112) para descrever o modo de exibição de estêncil de profundidade e passar a descrição do modo de exibição de estêncil de profundidade e a textura para o [**ID3D11Device::CreateDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476507).
+Além de criar o modo de exibição de destino de renderização, também criamos um modo de exibição de estêncil de profundidade. O modo de exibição de estêncil de profundidade permite que o Direct3D renderiza de forma eficiente os objetos mais próximos à câmera na frente dos objetos mais longe da câmera. Antes de podemos criar um modo de exibição para um buffer de estêncil de profundidade, devemos criar o buffer de estêncil de profundidade. Podemos preencher uma [ **D3D11\_TEXTURE2D\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476253) para descrever o buffer de estêncil de profundidade e, em seguida, chamar [ **ID3D11Device::CreateTexture2D**  ](https://msdn.microsoft.com/library/windows/desktop/ff476521) para criar o buffer de estêncil de profundidade. Para criar o modo de exibição de estêncil de profundidade, podemos preencher uma [ **D3D11\_PROFUNDIDADE\_ESTÊNCIL\_exibição\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476112) para descrever o modo de exibição de estêncil de profundidade e passar a descrição do modo de exibição de estêncil de profundidade e o buffer de estêncil de profundidade [ **ID3D11Device::CreateDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476507).
 
 ```cpp
         // Once the render target view is created, create a depth stencil view.  This
@@ -111,7 +111,7 @@ Além de criar o modo de exibição de destino de renderização, também criamo
             );
 ```
 
-### <a name="3-updating-perspective-with-the-window"></a>3. Atualizando perspectiva com a janela
+### <a name="3-updating-perspective-with-the-window"></a>3. Atualizando o ponto de vista com a janela
 
 Atualizamos os parâmetros de projeção de perspectiva para o buffer constante, dependendo das dimensões da janela. Podemos corrigir os parâmetros para um campo de visão de 70 graus, com um intervalo de profundidade de 0,01 a 100.
 
@@ -144,19 +144,19 @@ Atualizamos os parâmetros de projeção de perspectiva para o buffer constante,
             );
 ```
 
-### <a name="4-creating-vertex-and-pixel-shaders-with-color-elements"></a>4. Criando sombreadores de vértice e pixel com elementos de cor
+### <a name="4-creating-vertex-and-pixel-shaders-with-color-elements"></a>4. Criação de sombreadores de pixel e vértice com elementos de cor
 
 Neste aplicativo, criamos sombreadores de vértice e pixel mais complexos do que o que descrevemos no tutorial anterior, [Criando sombreadores e desenhando primitivas](creating-shaders-and-drawing-primitives.md). O sombreador de vértice deste aplicativo transforma cada posição de vértice no espaço de projeção e passa a cor de vértice para o sombreador de pixel.
 
-A matriz do aplicativo de estruturas [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) que descrevem o layout do código sombreador do vértice tem dois elementos de layout: um elemento define a posição do vértice e o outro elemento define a cor.
+A matriz do aplicativo de [ **D3D11\_entrada\_elemento\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) estruturas que descrevem o layout do código de sombreador de vértice tem dois elementos de layout: um elemento Define a posição de vértice e o outro elemento define a cor.
 
 Podemos criar buffers de vértice, índice e constante para definir um cubo em órbita.
 
 **Para definir um cubo em órbita**
 
 1.  Primeiro, definimos o cubo. Atribuímos a cada vértice uma cor, além de uma posição. Isso permite que o sombreador de pixels colora cada face de forma diferente, para que a face possa ser distinguida.
-2.  Em seguida, descrevemos os buffers de vértice e índice ([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) e [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)) usando a definição do cubo. Chamamos [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) uma vez para cada buffer.
-3.  Em seguida, criamos um buffer constante ([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092)) para passar matrizes de modelo, exibição e projeção para o sombreador de vértice. Mais tarde, podemos usar o buffer constante para girar o cubo e aplicar uma projeção de perspectiva a ele. Chamamos [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) para criar o buffer constante.
+2.  Em seguida, descreveremos os buffers de índice e vértice ([**D3D11\_BUFFER\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) e [ **D3D11\_SUBRESOURCE\_Dados**](https://msdn.microsoft.com/library/windows/desktop/ff476220)) usando a definição do cubo. Chamamos [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) uma vez para cada buffer.
+3.  Em seguida, criamos um buffer de constantes ([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092)) para passar matrizes de modelo, exibição e projeção para o sombreador de vértices. Mais tarde, podemos usar o buffer constante para girar o cubo e aplicar uma projeção de perspectiva a ele. Chamamos [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) para criar o buffer constante.
 4.  Em seguida, podemos especificar a transformação da exibição que corresponde a uma posição de câmera de X = 0, Y = 1, Z = 2.
 5.  Finalmente, declaramos uma variável de *grau* que usaremos para animar o cubo, girando cada quadro dele.
 
@@ -334,7 +334,7 @@ Podemos criar buffers de vértice, índice e constante para definir um cubo em �
         
 ```
 
-### <a name="5-rotating-and-drawing-the-cube-and-presenting-the-rendered-image"></a>5. Girando e desenhando o cubo e apresentando a imagem renderizada
+### <a name="5-rotating-and-drawing-the-cube-and-presenting-the-rendered-image"></a>5. Girando e desenhar o cubo e apresentar a imagem renderizada
 
 Entramos em um loop infinito para processar e exibir a cena continuamente. Chamamos a função em linha (BasicMath.h) **rotationY** com uma quantidade de rotação para definir valores que vão girar a matriz de modelo do cubo em torno do eixo Y. Em seguida, chamamos [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) para atualizar o buffer constante e girar o modelo de cubo. Chamamos [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar o destino de renderização como o destino de saída. Nesta chamada a **OMSetRenderTargets**, passamos o modo de exibição de estêncil de profundidade. Chamamos [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) para limpar o destino de renderização para uma cor azul sólida e chamamos [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387) para limpar o buffer de profundidade.
 
@@ -344,7 +344,7 @@ No loop sem fim, também desenhamos o cubo na superfície azul.
 
 1.  Primeiro, chamamos [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) para descrever como os dados de buffer de vértices são transmitidos para o estágio de assembler de entrada.
 2.  Em seguida, chamamos [**ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) e [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453) para associar os buffers de vértice e índice para o estágio de assembler de entrada.
-3.  Depois, chamamos [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455) com o valor [**D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLESTRIP**](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) especificando para o estágio de assembler de entrada interpretar os dados de vértice como uma faixa de triângulos.
+3.  Em seguida, chamamos [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) com o [ **D3D11\_PRIMITIVO\_topologia\_ TRIANGLESTRIP** ](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) valor a ser especificado para o estágio do assembler de entrada interpretar os dados de vértice como uma faixa de triângulo.
 4.  Chamamos [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) para iniciar o estágio de sombreador de vértice com o código de sombreador de vértice e [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472) para iniciar o estágio de sombreador de pixel com o código de sombreador de pixel.
 5.  Chamamos [**ID3D11DeviceContext::VSSetConstantBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476491) para definir o buffer constante que é usado pelo estágio de pipeline do sombreador de vértice.
 6.  Finalmente, chamamos [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) para desenhar o cubo e enviá-lo para a pipeline de renderização.
@@ -448,7 +448,7 @@ Usamos profundidade, perspectiva, cor e outros efeitos em primitivas.
 
 Em seguida, aplicamos texturas a primitivas.
 
-[Aplicando texturas a primitivas](applying-textures-to-primitives.md)
+[Aplicar texturas a primitivos](applying-textures-to-primitives.md)
 
  
 

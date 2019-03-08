@@ -1,5 +1,5 @@
 ---
-Description: Ink tools described
+Description: Ferramentas de tinta descritas
 title: Controles de escrita à tinta
 label: Inking Controls
 template: detail.hbs
@@ -9,17 +9,17 @@ keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
 ms.openlocfilehash: fcbed8400b31616f92f20aa3a64a4dd8603dc7b0
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047890"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650891"
 ---
 # <a name="inking-controls"></a>Controles de escrita à tinta
 
 
 
-Há dois controles diferentes que facilitam a escrita à tinta em aplicativos da Plataforma Universal do Windows (UWP): [InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
+Há dois controles diferentes que facilitam a escrita à tinta em aplicativos da plataforma Universal do Windows (UWP): [InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
 
 O controle InkCanvas renderiza uma entrada à caneta como um traço de tinta (usando as configurações padrão de cor e espessura) ou um traço de apagar. Esse controle é uma sobreposição transparente que não inclui interfaces do usuário internas para alterar as propriedades de traço de tinta padrão.
 
@@ -35,10 +35,10 @@ Por padrão, o InkToolbar inclui botões para desenhar, apagar, realçar e exibi
 
 <img src="images/ink-tools-invoked-toolbar.png" width="300" alt="InkToolbar palette flyout">
 
-> **APIs importantes**: [classe InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [classe InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [classe InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [Windows.UI.Input.Inking](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **APIs importantes**: [Classe InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [classe InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [classe InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [Windows.UI.Input.Inking](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use o InkCanvas quando você precisar habilitar recursos básicos de escrita à tinta em seu aplicativo sem fornecer todas as configurações de tinta ao usuário.
 
@@ -58,8 +58,8 @@ Emparelhe o InkCanvas com um InkToolbar a fim de oferecer uma interface do usuá
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/InkCanvas">abrir o aplicativo e ver o InkCanvas em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obter o código-fonte (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -70,10 +70,10 @@ Emparelhe o InkCanvas com um InkToolbar a fim de oferecer uma interface do usuá
 O Microsoft Edge usa o InkCanvas e InkToolbar para **Anotações Web**.  
 ![InkCanvas é usado para tinta no Microsoft Edge](images/ink-tools-edge.png)
 
-**Espaço de Trabalho do Windows Ink**
+**O espaço de trabalho do Windows Ink**
 
 O InkCanvas e InkToolbar também são usados para **Bloco de esboços** e **Esboço da tela** no **Espaço de Trabalho do Windows Ink**.  
-![InkToolbar no Espaço de Trabalho do Windows Ink](images/ink-tools-ink-workspace.png)
+![InkToolbar no espaço de trabalho de tinta do Windows](images/ink-tools-ink-workspace.png)
 
 ## <a name="create-an-inkcanvas-and-inktoolbar"></a>Criar um InkCanvas e InkToolbar
 
@@ -111,7 +111,7 @@ Você pode personalizar os atributos de paleta de cores e tamanho (mín, máx, p
 
 - Borracha – exclui qualquer traço de tinta tocado. Observe que o inteiro traço de tinta é excluído, não apenas a parte sob o traço da borracha.
 
-**Alternância**
+**Alternar**
 
 - Régua – mostra ou oculta a régua. Desenhar perto da borda da régua faz com que o traço de tinta se ajuste à régua.  
  ![Elemento visual de régua associado ao InkToolbar](images/inking-tools-ruler.png)
@@ -137,7 +137,7 @@ Dependendo de seu aplicativo e da funcionalidade de escrita à tinta necessária
 - Alternância personalizada – define o estado de um recurso definido pelo aplicativo como ativado ou desativado. Quando ativado, o recurso funciona com a ferramenta ativa.
 
 > [!NOTE]
-> Não é possível alterar a ordem de exibição dos botões internos. A ordem de exibição padrão é: caneta esferográfica, lápis, marca-texto, borracha e régua. Canetas personalizadas são acrescentadas à última caneta padrão, botões de ferramenta personalizados são adicionados entre o último botão de caneta e o botão de borracha e botões de alternância personalizados são adicionados após o botão de régua. (Os botões personalizados são adicionados na ordem em que são especificados.)
+> Não é possível alterar a ordem de exibição dos botões internos. A ordem de exibição padrão é: Caneta Esferográfica, Lápis, marca-texto, borracha e régua. Canetas personalizadas são acrescentadas à última caneta padrão, botões de ferramenta personalizados são adicionados entre o último botão de caneta e o botão de borracha e botões de alternância personalizados são adicionados após o botão de régua. (Os botões personalizados são adicionados na ordem em que são especificados.)
 
 Embora o InkToolbar possa ser um item de nível superior, ele normalmente é exposto por meio de um botão ou comando de "Escrita à tinta". Recomendamos usar o glifo EE56 da fonte Segoe MLD2 Assets como um ícone de nível superior.
 
@@ -148,7 +148,7 @@ Todos os botões de caneta e ferramenta internos contêm um submenu onde as prop
 O submenu é mostrado quando o botão de uma ferramenta ativa é selecionado novamente. Quando a cor ou o tamanho forem alterados, o submenu será ignorado automaticamente e a escrita à tinta poderá ser retomada. As canetas e ferramentas personalizadas podem usar o submenu padrão ou especificar um submenu personalizado.
 
 A borracha também tem um submenu que fornece o comando **Apagar Toda a Tinta**.  
-![InkToolbar com o submenu de borracha invocado](images/ink-tools-erase-all-ink.png)
+![InkToolbar com submenu de borracha invocado](images/ink-tools-erase-all-ink.png)
 
  Para obter informações sobre personalização e extensibilidade, confira o [exemplo SimpleInk](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk).
 
@@ -166,10 +166,10 @@ A borracha também tem um submenu que fornece o comando **Apagar Toda a Tinta**.
 
 - O [exemplo SimpleInk](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk) - Demonstra 8 cenários de recursos de personalização e extensibilidade dos controles InkCanvas e InkToolbar. Cada cenário fornece orientação básica sobre situações comuns de escrita à tinta e implementações de controle.
 - [Exemplo de ComplexInk](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk) - Demonstra cenários de escrita à tinta mais avançados.
-- [Exemplo de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) -Ver todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Interações com caneta em aplicativos UWP](https://windowsstyleguide/input/pen-and-stylus-interactions/)
+- [Interações de caneta e caneta em aplicativos UWP](https://windowsstyleguide/input/pen-and-stylus-interactions/)
 - [Reconhecer traços de tinta](https://windowsstyleguide/input/convert-ink-to-text/)
-- [Armazenar e recuperar traços de tinta](https://windowsstyleguide/input/save-and-load-ink/)
+- [Store e recuperar os traços de tinta](https://windowsstyleguide/input/save-and-load-ink/)

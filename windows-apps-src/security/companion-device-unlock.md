@@ -7,19 +7,19 @@ keywords: Windows 10, uwp, segurança
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
 ms.openlocfilehash: fb1ff6431b3ccf609b7362db819569c2f6cebc48
-ms.sourcegitcommit: 9448348d7bc6590849db3a41e988dff9470ec111
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "9031382"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657011"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueio do Windows com dispositivos complementares (IoT) do Windows Hello
 
 Dispositivo complementar do Windows Hello é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a estrutura de dispositivo complementar do Windows Hello, um dispositivo complementar pode fornecer uma experiência avançada para o Windows Hello mesmo quando a biometria não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo leitor de impressão digital, por exemplo).
 
-> **Observação** A Microsoft será o ser substituindo a Windows Hello estrutura de dispositivo complementar no futuro e publicará a data de início para garantir que os clientes têm prazo adequado para implantar soluções alternativas.
+> **Observação** Microsoft será substituída a estrutura do dispositivo de complementar Windows Hello no futuro e publicará a data no início para garantir que os clientes têm um prazo adequado para implantar soluções alternativas.
 
-> **Observação** A estrutura de dispositivo complementar do Windows Hello é um recurso especializado não disponível para todos os desenvolvedores de aplicativos. Para usar essa estrutura, seu app deve ser especificamente provisionado pela Microsoft e listar a funcionalidade restrita *secondaryAuthenticationFactor* em seu manifesto. Para obter aprovação, entre em contato com [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
+> **Observação** A estrutura de dispositivo complementar do Windows Hello é um recurso especializado não disponível para todos os desenvolvedores de aplicativos. Para usar essa estrutura, seu aplicativo deve ser especificamente provisionado pela Microsoft e listar a funcionalidade restrita *secondaryAuthenticationFactor* em seu manifesto. Para obter aprovação, entre em contato com [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
 
 ## <a name="introduction"></a>Introdução
 
@@ -66,9 +66,9 @@ Normalmente, dispositivos complementares são fornecidos com um aplicativo para 
 
 Cada dispositivo complementar do Windows Hello deve ser combinado com um aplicativo que dê suporte a três sinais do usuário. Esses sinais podem ser no formato de uma ação ou de um gesto.
 
-- **Sinal de intenção**: permite que o usuário mostre sua intenção de desbloquear, por exemplo, pressionando um botão no dispositivo complementar do Windows Hello. O sinal de intenção deve ser coletado no lado do **dispositivo complementar do Windows Hello**.
-- **Sinal de presença do usuário**: prova a presença do usuário. O dispositivo complementar do Windows Hello pode, por exemplo, exigir um PIN antes de poder ser usado para desbloquear o computador (isso não deve ser confundido com o PIN do computador) ou pode exigir o pressionamento de um botão.
-- **Sinal de diferenciação**: remove a ambiguidade de qual área de trabalho do Windows 10 o usuário deseja desbloquear quando várias opções estão disponíveis para o dispositivo complementar do Windows Hello.
+- **Sinal intenção**: Permite ao usuário Mostrar sua intenção de desbloqueio por, por exemplo, pressionar um botão do Windows Hello complementar o dispositivo. O sinal de intenção deve ser coletado no lado do **dispositivo complementar do Windows Hello**.
+- **Sinal de presença do usuário**: Prova a presença do usuário. O dispositivo complementar do Windows Hello pode, por exemplo, exigir um PIN antes de poder ser usado para desbloquear o computador (isso não deve ser confundido com o PIN do computador) ou pode exigir o pressionamento de um botão.
+- **Sinal de Desambiguidade**: Remove a ambiguidade dos quais o usuário deseja desbloquear quando várias opções estão disponíveis para o dispositivo Windows Hello complementar do Windows 10 desktop.
 
 Qualquer número desses sinais de usuário pode ser combinado em um único sinal. Sinais de presença e intenção do usuário devem ser necessários em cada uso.
 
@@ -178,10 +178,10 @@ No entanto, fornecedores de dispositivos complementares podem criar um serviço 
 
 Fornecedores de dispositivos complementares podem implementar um serviço Web que pode ser usado para os seguintes cenários:
 
-- Um serviço de filtro para uma empresa: uma empresa pode limitar o conjunto de dispositivos complementares do Windows Hello que podem funcionar em seu ambiente para selecionar apenas alguns de um fornecedor específico. Por exemplo, a empresa Contoso pode encomendar do Fornecedor X 10.000 dispositivos complementares do Modelo Y e garantir que apenas esses dispositivos funcionarão no domínio da Contoso (e não em qualquer outro modelo de dispositivo do Fornecedor X).
-- Inventário: uma empresa pode determinar a lista de dispositivos complementares existente usados em um ambiente corporativo.
-- Revogação em tempo real: se um funcionário comunicar que seu dispositivo complementar foi perdido ou roubado, o serviço Web poderá ser usado para revogar esse dispositivo.
-- Roaming: basta que um usuário registre seu dispositivo complementar, e ele funcionará em todas as suas áreas de trabalho do Windows 10 e dispositivos móveis.
+- Um serviço de filtro para a empresa: Uma empresa pode limitar o conjunto de Windows Hello dispositivo complementar que pode funcionar em seu ambiente para uma seleção menor número de um fornecedor específico. Por exemplo, a empresa Contoso pode encomendar do Fornecedor X 10.000 dispositivos complementares do Modelo Y e garantir que apenas esses dispositivos funcionarão no domínio da Contoso (e não em qualquer outro modelo de dispositivo do Fornecedor X).
+- Inventário:  Uma empresa pode determinar a lista de dispositivos existentes de complementar usado em um ambiente corporativo.
+- Revogação em tempo real: Se um funcionário se reporta que o seu dispositivo complementar seja perdido ou roubado, o serviço web pode ser usado para revogar esse dispositivo.
+- Roaming: Um usuário só precisa registrar seu dispositivo complementar uma vez e funciona em todas as suas áreas de trabalho do Windows 10 e Mobile.
 
 A implementação desses recursos requer que aplicativo de dispositivo complementar do Windows Hello faça uma verificação com o serviço Web na ocasião do registro e do uso. O aplicativo de dispositivo complementar do Windows Hello pode ser otimizado para cenários de logon em cache, por exemplo, exigindo a verificação com o serviço Web apenas uma vez por dia (às custas de prolongar o tempo de revogação a até um dia).  
 
@@ -201,11 +201,11 @@ O fluxo geral da API é o seguinte:
     * Certifique-se de que aplicativo de dispositivo complementar do Windows Hello armazene chaves HMAC (se permitido) e ele descarte suas cópias
 2. Registrar sua tarefa em segundo plano
 3. Aguarde o evento certo na tarefa em segundo plano
-    * WaitingForUserConfirmation: aguarde este evento se a ação ou o gesto do usuário no lado do dispositivo complementar do Windows Hello for necessária para iniciar o fluxo de autenticação
-    * CollectingCredential: aguarde esse evento se o dispositivo complementar do Windows Hello depender da ação ou do gesto do usuário no lado do computador para iniciar o fluxo de autenticação (por exemplo, pressionando a barra de espaço)
-    * Outro gatilho, como um cartão inteligente: certifique-se de consultar o estado atual de autenticação chamar as APIs certas.
+    * WaitingForUserConfirmation: Aguarde esse evento se a ação/gesto do usuário no Windows Hello complementar lado do dispositivo é necessário para iniciar o fluxo de autenticação
+    * CollectingCredential: Aguarde esse evento se o dispositivo Windows Hello complementar depende de ação/gesto do usuário no lado do PC para iniciar o fluxo de autenticação (por exemplo, ao pressionar a barra de espaços)
+    * Outro disparador, como um cartão inteligente: Certifique-se de consultar o estado atual de autenticação chamar o direito de APIs.
 4. Manter o usuário informado sobre mensagens de erro ou próximas etapas necessárias chamando ShowNotificationMessageAsync. Chame essa API somente depois que um sinal de intenção for coletado
-5. Desbloquear
+5. Unlock
     * Certifique-se de que os sinais de intenção e presença do usuário tenham sido coletados
     * Chame StartAuthenticationAsync
     * Comunique-se com o dispositivo complementar para realizar operações de HMAC necessárias
@@ -216,7 +216,7 @@ O fluxo geral da API é o seguinte:
 
 ### <a name="registration-and-de-registration"></a>Registro e cancelamento do registro
 
-O registro requer duas chamadas de API para o Serviço de Autenticação Complementar: RequestStartRegisteringDeviceAsync e FinishRegisteringDeviceAsync.
+O registro requer duas chamadas de API para o serviço de autenticação complementares: RequestStartRegisteringDeviceAsync e FinishRegisteringDeviceAsync.
 
 Antes que qualquer uma dessas chamadas seja feita, o aplicativo de dispositivo complementar do Windows Hello deve garantir que o dispositivo complementar do Windows Hello esteja disponível. Se o dispositivo complementar do Windows Hello for responsável pela geração de chaves HMAC (chaves de autenticação e dispositivo), o aplicativo de dispositivo complementar do Windows Hello também deverá solicitar que o dispositivo complementar as gere antes de fazer qualquer uma das duas chamadas acima. Se o aplicativo de dispositivo complementar do Windows Hello for responsável pela geração de chaves HMAC, ele deverá fazer isso antes de fazer as duas chamadas acima.
 
@@ -346,9 +346,9 @@ namespace SecondaryAuthFactorSample
 }
 ```
 
-### <a name="authentication"></a>Autenticação
+### <a name="authentication"></a>Authentication
 
-A autenticação exige duas chamadas de API para o Serviço de Autenticação Complementar: StartAuthenticationAsync e FinishAuthencationAsync.
+A autenticação requer duas chamadas de API para o serviço de autenticação complementares: StartAuthenticationAsync e FinishAuthencationAsync.
 
 A primeira API de inicialização retornará um identificador usado pela segunda API.  A primeira chamada retorna, entre outras coisas, um nonce que, quando concatenado com outros elementos, precisa ser codificado em HMAC com a chave de dispositivo armazenada no dispositivo complementar do Windows Hello. A segunda chamada retorna os resultados do HMAC com a chave de dispositivo e pode terminar em uma autenticação bem-sucedida (isto é, o usuário verá sua área de trabalho).
 
@@ -394,7 +394,7 @@ Estes são os detalhes de cada um desses estados:
 
 
 
-Os aplicativos de dispositivo complementar do Windows Hello só devem chamar as duas APIs de autenticação nos dois primeiros estados. Aplicativos de dispositivo complementar do Windows Hello devem verificar em que cenário esse evento está sendo disparado. Há duas possibilidades: desbloqueio ou pós-desbloqueio. Atualmente, apenas há suporte para desbloqueio. Em versões futuras, é possível que haja suporte para cenários pós-desbloqueio. A enumeração SecondaryAuthenticationFactorAuthenticationScenario captura estas duas opções:
+Aplicativos de dispositivo complementar do Windows Hello só devem chamar as duas APIs de autenticação nos dois primeiros estados. Aplicativos de dispositivo complementar do Windows Hello devem verificar em que cenário esse evento está sendo disparado. Há duas possibilidades: desbloqueio ou pós-desbloqueio. Atualmente, apenas há suporte para desbloqueio. Em versões futuras, é possível que haja suporte para cenários pós-desbloqueio. A enumeração SecondaryAuthenticationFactorAuthenticationScenario captura estas duas opções:
 
 ```C#
 {
@@ -634,7 +634,7 @@ As mensagens de erro são sempre mostradas e serão exibidas após fornecer um s
 
 Mensagens de erro e orientações estão estruturadas da seguinte maneira. O nome do dispositivo é um parâmetro transmitido pelo aplicativo de dispositivo complementar como parte de ShowNotificationMessageAsync.
 
-**Diretrizes**
+**Orientação**
 
 - "Passe o dedo para cima ou pressione a barra de espaço para entrar com o *nome do dispositivo*"
 - "Configurando o dispositivo complementar. Aguarde ou use outra opção de entrada".

@@ -1,30 +1,30 @@
 ---
 ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
-description: Este artigo descreve como exibir rapidamente o fluxo de visualização de câmera em uma página XAML de um aplicativo UWP (Plataforma Universal do Windows).
+description: Este artigo descreve como exibir rapidamente o fluxo de visualização de câmera em uma página XAML em um aplicativo UWP (Plataforma Universal do Windows).
 title: Exibir a visualização da câmera
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 24b2885597599607ca405e858a9f713f5a6af4c7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938528"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644871"
 ---
 # <a name="display-the-camera-preview"></a>Exibir a visualização da câmera
 
 
-Este artigo descreve como exibir rapidamente o fluxo de visualização de câmera em uma página XAML de um aplicativo UWP (Plataforma Universal do Windows). Criar um aplicativo que captura fotos e vídeos usando a câmera exige que você realize tarefas como manipular a orientação do dispositivo e da câmera ou definir opções de codificação para o arquivo capturado. Em alguns cenários de aplicativo, talvez você queira simplesmente mostrar o fluxo de visualização da câmera sem se preocupar com essas outras considerações. Este artigo mostra como fazer isso com um mínimo de código. Observe que você deve sempre desligar o fluxo de visualização corretamente quando o tiver concluído, seguindo as etapas abaixo.
+Este artigo descreve como exibir rapidamente o fluxo de visualização de câmera em uma página XAML em um aplicativo UWP (Plataforma Universal do Windows). Criar um aplicativo que captura fotos e vídeos usando a câmera exige que você realize tarefas como manipular a orientação do dispositivo e da câmera ou definir opções de codificação para o arquivo capturado. Em alguns cenários de aplicativo, talvez você queira simplesmente mostrar o fluxo de visualização da câmera sem se preocupar com essas outras considerações. Este artigo mostra como fazer isso com um mínimo de código. Observe que você deve sempre desligar o fluxo de visualização corretamente quando o tiver concluído, seguindo as etapas abaixo.
 
 Para saber mais sobre como desenvolver um aplicativo de câmera que capture fotos ou vídeos, consulte [Captura básica de fotos, vídeo e áudio com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md).
 
-## <a name="add-capability-declarations-to-the-app-manifest"></a>Adicionar declarações de funcionalidade ao manifesto do aplicativo
+## <a name="add-capability-declarations-to-the-app-manifest"></a>Adicionar declarações de funcionalidades ao manifesto do aplicativo
 
-Para que seu aplicativo acesse a câmera do dispositivo, você deve declarar que seu aplicativo usa as funcionalidades de *webcam* e *microphone* do dispositivo. 
+Para que seu app acesse a câmera do dispositivo, você deve declarar que o app usa as funcionalidades de *webcam* e *microphone* do dispositivo. 
 
-**Adicionar funcionalidades ao manifesto do aplicativo**
+**Adicionar recursos ao manifesto do aplicativo**
 
 1.  No Microsoft Visual Studio, no **Gerenciador de Soluções**, abra o designer do manifesto do aplicativo clicando duas vezes no item **package.appxmanifest**.
 2.  Selecione a guia **Recursos**.
@@ -99,5 +99,5 @@ No manipulador de eventos **Suspending**, verifique primeiro se a página está 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
-* [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Obter um quadro de visualização](get-a-preview-frame.md)
+* [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Obtenha um quadro de visualização](get-a-preview-frame.md)

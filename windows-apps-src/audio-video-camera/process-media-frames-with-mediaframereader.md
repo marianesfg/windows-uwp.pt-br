@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a1d5a15bd88b7adc23ccc835001c384a91e65a31
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050699"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597981"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Processar quadros de mídia com o MediaFrameReader
 
@@ -32,7 +32,7 @@ Se o seu interesse for simplesmente capturar vídeo ou fotos, como um aplicativo
 ## <a name="setting-up-your-project"></a>Configurando seu projeto
 Como com qualquer aplicativo que usa **MediaCapture**, você deve declarar que seu aplicativo usa a funcionalidade de *webcam* antes de tentar acessar qualquer dispositivo de câmera. Se seu aplicativo fizer a captura de um dispositivo de áudio, você deve declarar também a funcionalidade do dispositivo *microfone*. 
 
-**Adicionar funcionalidades ao manifesto do aplicativo**
+**Adicionar recursos ao manifesto do aplicativo**
 
 1.  No Microsoft Visual Studio, no **Gerenciador de Soluções**, abra o designer do manifesto do aplicativo clicando duas vezes no item **package.appxmanifest**.
 2.  Selecione a guia **Recursos**.
@@ -44,11 +44,11 @@ O código de exemplo deste artigo usa APIs dos namespaces a seguir, além dos in
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
 ## <a name="select-frame-sources-and-frame-source-groups"></a>Selecionar origens de quadro e grupos de origens de quadro
-Muitos aplicativos que processam quadros de mídia precisam obter quadros de várias origens ao mesmo tempo, como câmeras de profundidade e em cores de um dispositivo. O objeto [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) representa um conjunto de origens de quadro de mídia que podem ser usadas simultaneamente. Chame o método estático [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) para obter uma lista de todos os grupos de origens de quadro compatíveis com o dispositivo atual.
+Muitos aplicativos que processam quadros de mídia precisam obter quadros de várias origens ao mesmo tempo, como câmeras de profundidade e em cores de um dispositivo. O [ **MediaFrameSourceGroup** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) objeto representa um conjunto de origens de quadro de mídia que podem ser usados simultaneamente. Chame o método estático [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) para obter uma lista de todos os grupos de origens de quadro compatíveis com o dispositivo atual.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-Você também pode criar um [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) usando [**deviceinformation. Createwatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) e o valor retornado do [**mediaframesourcegroup. Getdeviceselector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) para receber notificações quando a fonte de quadro disponíveis grupos no dispositivo mudar, por exemplo, quando uma câmera externa é conectada. Para obter mais informações, consulte [**Enumerar dispositivos**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
+Você também pode criar uma [ **DeviceWatcher** ](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) usando [ **DeviceInformation.CreateWatcher** ](https://msdn.microsoft.com/library/windows/apps/br225427) e o valor retornado do [ **MediaFrameSourceGroup.GetDeviceSelector** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) para receber notificações quando a fonte de quadros disponíveis agrupa sobre as alterações de dispositivo, como quando uma câmera externa está conectada. Para obter mais informações, consulte [**Enumerar dispositivos**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
 
 Um [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) tem uma coleção de objetos [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) que descrevem as origens de quadro incluídas no grupo. Depois de recuperar os grupos de origens de quadro disponíveis no dispositivo, você pode selecionar o grupo que expõe as origens nas quais você está interessado.
 
@@ -81,10 +81,10 @@ O objeto **MediaCapture** normalmente é usado em vários locais em seu aplicati
 
 Crie uma instância do objeto **MediaCapture** chamando o construtor. Em seguida, crie um objeto [**MediaCaptureSettings**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSettings) que será usado para inicializar o objeto **MediaCapture**. Neste exemplo, as configurações a seguir serão usadas:
 
-* [**SourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SourceGroup) - Informa ao sistema qual grupo de origens você usará para obter os quadros. Lembre-se de que o grupo de origens define um conjunto de origens de quadros de mídia que podem ser usadas simultaneamente.
-* [**SharingMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SharingMode) - Informa ao sistema se você precisa de controle exclusivo sobre os dispositivos de origem de captura. Se você defini-lo como [**ExclusiveControl**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode), poderá alterar as configurações do dispositivo de captura, como o formato dos quadros que ele produz, mas isso significa que se outro aplicativo já tiver controle exclusivo, ocorrerá uma falha quando ele tentar inicializar o dispositivo de captura de mídia. Se você defini-lo como [**SharedReadOnly**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode), poderá receber quadros das origens, mesmo se eles estiverem sendo usados por outro aplicativo, mas você não poderá alterar as configurações dos dispositivos.
-* [**MemoryPreference**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.MemoryPreference) - Se você especificar [**CPU**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureMemoryPreference), o sistema usará a memória da CPU que garante que quando os quadros forem recebidos, eles estarão disponíveis como objetos [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.SoftwareBitmap). Se você especificar [**Auto**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureMemoryPreference), o sistema escolherá dinamicamente o local de memória ideal para armazenar os quadros. Se o sistema opta por usar a memória da GPU, os quadros de mídia chegarão como um objeto [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) e não como um **SoftwareBitmap**.
-* [**StreamingCaptureMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.StreamingCaptureMode) - Defina-o como [**Video**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.StreamingCaptureMode) para indicar que não é necessário o streaming de áudio.
+* [**SourceGroup** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SourceGroup) -isso informa ao sistema qual grupo de origem que você usará para obter quadros. Lembre-se de que o grupo de origens define um conjunto de origens de quadros de mídia que podem ser usadas simultaneamente.
+* [**SharingMode** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SharingMode) -isso informa ao sistema se você precisa que o controle exclusivo sobre os dispositivos de origem de captura. Se você defini-lo como [**ExclusiveControl**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode), poderá alterar as configurações do dispositivo de captura, como o formato dos quadros que ele produz, mas isso significa que se outro aplicativo já tiver controle exclusivo, ocorrerá uma falha quando ele tentar inicializar o dispositivo de captura de mídia. Se você defini-lo como [**SharedReadOnly**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode), poderá receber quadros das origens, mesmo se eles estiverem sendo usados por outro aplicativo, mas você não poderá alterar as configurações dos dispositivos.
+* [**MemoryPreference** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.MemoryPreference) – se você especificar [ **CPU**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureMemoryPreference), o sistema usará a memória da CPU que garante que quando os quadros chegam, elas estarão disponíveis como [  **SoftwareBitmap** ](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.SoftwareBitmap) objetos. Se você especificar [**Auto**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureMemoryPreference), o sistema escolherá dinamicamente o local de memória ideal para armazenar os quadros. Se o sistema opta por usar a memória da GPU, os quadros de mídia chegarão como um objeto [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) e não como um **SoftwareBitmap**.
+* [**StreamingCaptureMode** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.StreamingCaptureMode) -defina isso como [ **vídeo** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.StreamingCaptureMode) para indicar que áudio não precisa ser transmitido.
 
 Chame [**InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598) para inicializar o **MediaCapture** com as configurações desejadas. Certifique-se de chamá-lo em um bloco *try* em caso de falha de inicialização.
 
@@ -252,8 +252,8 @@ Para obter mais informações sobre como usar perfis de câmera, consulte [Perfi
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
-* [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Quadros da câmera de exemplo](https://go.microsoft.com/fwlink/?LinkId=823230)
+* [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Exemplo de quadros de câmera](https://go.microsoft.com/fwlink/?LinkId=823230)
  
 
  

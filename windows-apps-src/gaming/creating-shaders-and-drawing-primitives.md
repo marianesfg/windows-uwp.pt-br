@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, sombreadores, primitivas, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 5173adc26e0730ccb80f93fe0c12af286b0c1a49
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923466"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589761"
 ---
 # <a name="create-shaders-and-drawing-primitives"></a>Criar sombreadores e desenhando primitivas
 
@@ -21,7 +21,7 @@ Aqui, mostramos a você como usar arquivos de origem HLSL para compilar e criar 
 
 Podemos criar e desenhar um triângulo amarelo usando sombreadores de vértice e pixel. Depois de criarmos o dispositivo Direct3D, a cadeia de troca e o modo de exibição de destino de processamento, podemos ler dados dos arquivos de objeto de sombreador binário no disco.
 
-**Objetivo:** criar sombreadores e desenhar primitivas.
+**Objetivo:** Para criar sombreadores e desenhar primitivas.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -30,11 +30,11 @@ Partimos do princípio de que você conhece C++. Você também precisa ter exper
 
 Também supomos que você leu [Guia de início rápido: configurando recursos DirectX e exibindo uma imagem](setting-up-directx-resources.md).
 
-**Tempo para concluir:** 20 minutos.
+**Tempo para conclusão:** 20 minutos.
 
 ## <a name="instructions"></a>Instruções
 
-### <a name="1-compiling-hlsl-source-files"></a>1. Compilar arquivos de origem HLSL
+### <a name="1-compiling-hlsl-source-files"></a>1. Compilando arquivos de origem HLSL
 
 O Microsoft Visual Studio usa o compilador de código HLSL [fxc.exe](https://msdn.microsoft.com/library/windows/desktop/bb232919) para compilar os arquivos-fonte .hlsl (SimpleVertexShader.hlsl e SimplePixelShader.hlsl) nos arquivos de objeto de sombreador binário .cso (SimpleVertexShader.cso e SimplePixelShader.cso). Para saber mais sobre o compilador de código HLSL, consulte a Ferramenta Compilador de Efeitos. Para saber mais sobre o código de sombreador de compilação, consulte [Compilando sombreadores](https://msdn.microsoft.com/library/windows/desktop/bb509633).
 
@@ -77,15 +77,15 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 }
 ```
 
-### <a name="2-reading-data-from-disk"></a>2. Ler dados do disco
+### <a name="2-reading-data-from-disk"></a>2. Ler dados no disco
 
 Usamos a função DX::ReadDataAsync do DirectXHelper.h no modelo de aplicativo do DirectX 11 (Windows Universal) para ler dados de forma assíncrona em um arquivo no disco.
 
-### <a name="3-creating-vertex-and-pixel-shaders"></a>3. Criar sombreadores de vértice e de pixel
+### <a name="3-creating-vertex-and-pixel-shaders"></a>3. Criação de sombreadores de pixel e vértice
 
-Lemos os dados do arquivo SimpleVertexShader.cso e atribuímos os dados à matriz de bytes *vertexShaderBytecode*. Chamamos [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) com a matriz de bytes para criar o sombreador de vértice ([**ID3D11VertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476641)). Definimos o valor de profundidade de vértice como 0,5 na origem SimpleVertexShader.hlsl para garantir que nosso triângulo seja desenhado. Populamos uma matriz de estruturas [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) para descrever o layout do código de sombreador de vértice e chamar [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) para criar o layout. A matriz tem um elemento de layout que define a posição do vértice. Lemos os dados do arquivo SimplePixelShader.cso e atribuímos os dados à matriz de bytes *pixelShaderBytecode*. Chamamos [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) com a matriz de bytes para criar o sombreador de vértice ([**ID3D11PixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476576)). Definimos o valor de pixel como (1,1,1,1) na origem SimplePixelShader.hlsl para fazer nosso triângulo ficar amarelo. Você pode alterar a cor alterando este valor.
+Lemos os dados do arquivo SimpleVertexShader.cso e atribuímos os dados à matriz de bytes *vertexShaderBytecode*. Chamamos [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) com a matriz de bytes para criar o sombreador de vértice ([**ID3D11VertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476641)). Definimos o valor de profundidade de vértice como 0,5 na origem SimpleVertexShader.hlsl para garantir que nosso triângulo seja desenhado. Podemos preencher uma matriz de [ **D3D11\_entrada\_elemento\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) estruturas para descrever o layout do código de sombreador de vértice e, em seguida, chamar [ **ID3D11Device::CreateInputLayout** ](https://msdn.microsoft.com/library/windows/desktop/ff476512) para criar o layout. A matriz tem um elemento de layout que define a posição do vértice. Lemos os dados do arquivo SimplePixelShader.cso e atribuímos os dados à matriz de bytes *pixelShaderBytecode*. Chamamos [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) com a matriz de bytes para criar o sombreador de vértice ([**ID3D11PixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476576)). Definimos o valor de pixel como (1,1,1,1) na origem SimplePixelShader.hlsl para fazer nosso triângulo ficar amarelo. Você pode alterar a cor alterando este valor.
 
-Podemos criar buffers de vértice e de índice que definem um triângulo simples. Para fazer isso, definimos primeiro o triângulo, descrevemos os buffers de vértice e índice ([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) e [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)) usando a definição do triângulo e finalmente chamamos [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) uma vez em cada buffer.
+Podemos criar buffers de vértice e de índice que definem um triângulo simples. Para fazer isso, primeiro definimos o triângulo, em seguida, descreva os buffers de índice e vértice ([**D3D11\_BUFFER\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) e [ **D3D11\_ SUBRESOURCE\_dados**](https://msdn.microsoft.com/library/windows/desktop/ff476220)) usando a definição do triângulo e, finalmente, chame [ **ID3D11Device::CreateBuffer** ](https://msdn.microsoft.com/library/windows/desktop/ff476501) uma vez para cada buffer.
 
 ```cpp
         auto loadVSTask = DX::ReadDataAsync(L"SimpleVertexShader.cso");
@@ -200,7 +200,7 @@ Podemos criar buffers de vértice e de índice que definem um triângulo simples
 
 Usamos os sombreadores de vértice e de índice, o layout de sombreador de vértice e os buffers de vértice e de índice para desenhar um triângulo amarelo.
 
-### <a name="4-drawing-the-triangle-and-presenting-the-rendered-image"></a>4. Desenhar o triângulo e apresentar a imagem renderizada
+### <a name="4-drawing-the-triangle-and-presenting-the-rendered-image"></a>4. O triângulo de desenho e apresentar a imagem renderizada
 
 Entramos em um loop infinito para processar e exibir a cena continuamente. Chamamos [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar o destino de renderização como o destino de saída. Chamamos [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) com { 0.071f, 0.04f, 0.561f, 1.0f } para limpar o destino de renderização para uma cor azul sólida.
 
@@ -210,7 +210,7 @@ No loop sem fim, desenhamos um triângulo amarelo na superfície azul.
 
 1.  Primeiro, chamamos [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) para descrever como os dados de buffer de vértices são transmitidos para o estágio de assembler de entrada.
 2.  Em seguida, chamamos [**ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) e [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453) para associar os buffers de vértice e índice para o estágio de assembler de entrada.
-3.  Depois, chamamos [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455) com o valor [**D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLESTRIP**](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) especificando para o estágio de assembler de entrada interpretar os dados de vértice como uma faixa de triângulos.
+3.  Em seguida, chamamos [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) com o [ **D3D11\_PRIMITIVO\_topologia\_ TRIANGLESTRIP** ](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) valor a ser especificado para o estágio do assembler de entrada interpretar os dados de vértice como uma faixa de triângulo.
 4.  Chamamos [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) para iniciar o estágio de sombreador de vértice com o código de sombreador de vértice e [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472) para iniciar o estágio de sombreador de pixel com o código de sombreador de pixel.
 5.  Finalmente, chamamos [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) para desenhar o triângulo e enviá-lo ao pipeline de renderização.
 
@@ -287,7 +287,7 @@ Criamos e desenhamos um triângulo amarelo usando sombreadores de vértice e de 
 
 Em seguida, criamos um cubo 3D em órbita e aplicamos os efeitos de iluminação nele.
 
-[Usando efeitos e profundidade em primitivas](using-depth-and-effects-on-primitives.md)
+[Usando a profundidade e efeitos em primitivos](using-depth-and-effects-on-primitives.md)
 
  
 

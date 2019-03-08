@@ -1,5 +1,5 @@
 ---
-Description: This topic describes Windows zooming and resizing elements and provides user experience guidelines for using these interaction mechanisms in your apps.
+Description: Este tópico descreve o zoom e o redimensionamento de elementos do Windows e fornece as diretrizes da experiência do usuário para o uso desses mecanismos de interação em seus aplicativos.
 title: Diretrizes de zoom óptico e redimensionamento
 ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
 label: Optical zoom and resizing
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fcbaa0a3db826ef971878acd6a553dd7a836508
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931222"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594961"
 ---
 # <a name="optical-zoom-and-resizing"></a>Zoom óptico e redimensionamento
 
@@ -21,7 +21,7 @@ ms.locfileid: "8931222"
 
 Este artigo descreve o zoom e o redimensionamento de elementos do Windows e fornece as diretrizes da experiência do usuário para o uso desses mecanismos de interação em seus aplicativos.
 
-> **APIs importantes**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Input (XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **APIs importantes**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [ **entrada (XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
 O zoom óptico permite que os usuários ampliem o modo de exibição do conteúdo em uma área de conteúdo (isso é executado na própria área de conteúdo), enquanto o redimensionamento permite que alterem o tamanho relativo de um ou mais objetos sem alterar o modo de exibição da área de conteúdo (isso é executado em objetos na área de conteúdo).
 
@@ -29,15 +29,15 @@ As interações de zoom óptico e de redimensionamento são realizadas com os ge
 
 Os diagramas a seguir demonstram as diferenças entre redimensionamento e zoom óptico.
 
-**Zoom óptico**: o usuário seleciona uma área e amplia a área inteira.
+**Zoom ótico**: Usuário seleciona uma área e, em seguida, aplica zoom em toda a área.
 
 ![juntar os dedos aumenta o zoom e afastar os dedos o diminui](images/areazoom.png)
 
-**Redimensionar**: o usuário seleciona um objeto em uma área e redimensiona esse objeto.
+**Resize**: Usuário seleciona um objeto dentro de uma área e redimensiona esse objeto.
 
 ![juntar os dedos reduz um objeto e separá-los o aumenta](images/objectresize.png)
 
-**Observação**  zoom óptico não deve ser confundido com o [Zoom semântico](../controls-and-patterns/semantic-zoom.md). Embora essas interações compartilhem os mesmos gestos, o zoom semântico refere-se à apresentação e à navegação de conteúdo organizado em um único modo de exibição (como a estrutura de pastas de um computador, uma biblioteca de documentos ou um álbum de fotografias).
+**Observação**    zoom ótico não deve ser confundido com [Zoom semântico](../controls-and-patterns/semantic-zoom.md). Embora essas interações compartilhem os mesmos gestos, o zoom semântico refere-se à apresentação e à navegação de conteúdo organizado em um único modo de exibição (como a estrutura de pastas de um computador, uma biblioteca de documentos ou um álbum de fotografias).
 
  
 
@@ -54,10 +54,10 @@ Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento o
     Existem dois tipos de pontos de ajuste:
 
     -   Proximidade: depois que o contato for levantado, um ponto de ajuste será selecionado se a inércia parar dentro do limite de distância do ponto de ajuste. Os pontos de ajuste de proximidade ainda permitem que um zoom ou redimensionamento seja finalizado entre pontos de ajuste.
-    -   Obrigatório - o ponto de ajuste escolhido é aquele que antecede ou sucede imediatamente o último ponto de ajuste cruzado antes que o contato fosse erguido (dependendo da direção e velocidade do gesto). Uma manipulação precisa ser finalizada em um ponto de ajuste obrigatório.
--   Use a física da inércia. Isso inclui:
-    -   Desaceleração: ocorre quando o usuário para de pinçar ou ampliar. Isso é semelhante a deslizar até parar em uma superfície escorregadia.
-    -   Salto: um efeito de leve salto ocorre quando uma restrição ou limite de tamanho é passada.
+    -   Obrigatório: o ponto de alinhamento escolhido é aquele que antecede ou sucede imediatamente o último ponto de alinhamento cruzado antes que o contato seja retirado (dependendo da direção e da velocidade do gesto). Uma manipulação precisa ser finalizada em um ponto de ajuste obrigatório.
+-   Use a física da inércia. Entre eles estão os seguintes:
+    -   Desaceleração: Ocorre quando o usuário para de apertar ou alongando. Isso é semelhante a deslizar até parar em uma superfície escorregadia.
+    -   Elástico: Um pequeno efeito de retorno ocorre quando uma restrição de tamanho ou o limite é passado.
 -   Posicione os controles de acordo com as [Diretrizes de direcionamento](guidelines-for-targeting.md).
 -   Forneça alças de dimensionamento para redimensionamento restrito. O redimensionamento isométrico ou proporcional será o padrão se as alças não forem especificadas.
 -   Não use o zoom para navegar pela interface do usuário ou expor controles adicionais no seu aplicativo. Em vez disso, use uma região de movimento panorâmico. Para saber mais sobre movimento panorâmico, veja [Diretrizes de movimento panorâmico](guidelines-for-panning.md).
@@ -65,7 +65,7 @@ Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento o
     -   Aplicativos de desenho em que itens redimensionáveis podem aparecer em uma tela ou quadro redimensionável.
     -   Páginas da Web com um objeto incorporado, como um mapa.
 
-    **Observação**  em todos os casos, a área de conteúdo será redimensionada, a menos que todos os pontos de toque estejam dentro do objeto redimensionável.
+    **Observação**    em todos os casos, a área de conteúdo é redimensionada, a menos que todos os pontos de toque estão dentro do objeto redimensionável.
 
      
 
@@ -73,20 +73,20 @@ Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento o
 
 
 **Exemplos**
-* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Exemplos de arquivo-morto**
-* [Entrada: amostra de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: exemplo de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de teste de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: amostra de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: amostra de gestos no Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: amostra de manipulações e gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Amostra de entrada por toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+**Amostras de arquivo-morto**
+* [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: Exemplo de teste de hit de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: Exemplo simplificado de tinta](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: Exemplo de gestos do Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Entrada: Manipulações e exemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Exemplo de entrada de toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

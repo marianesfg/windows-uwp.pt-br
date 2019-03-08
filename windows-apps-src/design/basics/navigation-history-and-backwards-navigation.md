@@ -1,5 +1,5 @@
 ---
-Description: Learn how to implement backwards navigation for traversing the user's navigation history within an UWP app.
+Description: Saiba como implementar a navegação para percorrer o histórico de navegação do usuário dentro de um aplicativo UWP com versões anteriores.
 title: Histórico de navegação e navegação retroativa (aplicativos do Windows)
 template: detail.hbs
 op-migration-status: ready
@@ -8,15 +8,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c74d4ebd08dfeddfb4a0149cffcd7bb845ceff11
-ms.sourcegitcommit: 4ee300bfa6a238d3ce7674036ec1c574bb025210
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "9029939"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595041"
 ---
-# <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Histórico de navegação e navegação retroativa para apps UWP
+# <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Histórico de navegação e navegação retroativa para aplicativos UWP
 
-> **APIs importantes**: [BackRequested event](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [SystemNavigationManager class](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)
+> **APIs importantes**: [Evento BackRequested](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [classe SystemNavigationManager](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)
 
 A Plataforma Universal do Windows (UWP) oferece um sistema de navegação regressiva consistente a fim de percorrer o histórico de navegação do usuário dentro de um aplicativo e, dependendo do dispositivo, de aplicativo para aplicativo.
 
@@ -26,7 +26,7 @@ O usuário espera que o botão Voltar navegue para o local anterior no históric
 
 ## <a name="back-button"></a>Botão Voltar
 
-Para criar um botão Voltar, use o controle de [botão](../controls-and-patterns/buttons.md) com o `NavigationBackButtonNormalStyle` estilo e posicione o botão no canto superior esquerdo da interface do usuário do seu aplicativo (para obter detalhes, consulte os exemplos de código XAML abaixo).
+Para criar um botão Voltar, use o [botão](../controls-and-patterns/buttons.md) controlar com o `NavigationBackButtonNormalStyle` de estilo e colocar o botão no canto superior esquerdo da interface de usuário do seu aplicativo (para obter detalhes, consulte os exemplos de código XAML abaixo).
 
 ![Botão Voltar na parte superior esquerda da interface do usuário do aplicativo](images/back-nav/BackEnabled.png)
 
@@ -43,7 +43,7 @@ Se seu aplicativo tiver um [CommandBar](../controls-and-patterns/app-bars.md) su
 Style="{StaticResource NavigationBackButtonNormalStyle}"/>
 ```
 
-Para minimizar a movimentação em seu aplicativo de elementos de interface do usuário, mostre um botão Voltar desabilitado quando não há nada no backstack (veja o exemplo de código abaixo). No entanto, se você espera que seu aplicativo nunca terá um backstack, você não precisará exibir o botão Voltar.
+Para minimizar a movimentação em seu aplicativo de elementos de interface do usuário, mostre um botão Voltar desabilitado quando não há nada no backstack (veja o exemplo de código abaixo). No entanto, se você espera que seu aplicativo nunca terá uma backstack, você não precisa exibir o botão Voltar em todos os.
 
 ![Estados do botão Voltar](images/back-nav/BackDisabled.png)
 
@@ -167,9 +167,9 @@ namespace winrt::PageNavTest::implementation
 }
 ```
 
-Acima, manipulamos para trás navegação para uma única página. Se você quiser excluir páginas específicas da navegação regressiva ou quiser executar código em nível de página antes de exibir a página, você pode manipular a navegação em cada página.
+Acima, lidamos com versões anteriores com a navegação para uma única página. Se você deseja excluir páginas específicas da navegação de retorno, ou você deseja executar o código de nível de página antes de exibir a página, você pode manipular a navegação em cada página.
 
-Para manipular a navegação para um aplicativo inteiro para trás, você precisará registrar um ouvinte global para o evento [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) no `App.xaml` arquivo code-behind.
+Para lidar com versões anteriores a navegação para um aplicativo inteiro, você irá registrar um ouvinte global para o [ **BackRequested** ](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) evento no `App.xaml` arquivo code-behind.
 
 code-behind App.xaml:
 
@@ -261,9 +261,9 @@ bool App::On_BackRequested()
 
 Esse design de navegação regressiva é aplicável a todos os dispositivos, mas diferentes fatores forma e dispositivos podem se beneficiar com a otimização. Isso também depende do botão Voltar do hardware compatível com capas diferentes.
 
-- **Telefone/Tablet**: um botão Voltar do hardware ou software está sempre presente em celulares e tablet, mas nós recomendamos desenhar um botão Voltar no aplicativo para maior clareza.
-- **Desktop/Hub**: desenhe o botão Voltar no aplicativo no canto superior esquerdo da interface do usuário do seu aplicativo.
-- **Xbox/TV**: não desenhe um botão Voltar, pois isso adicionará confusão desnecessária na interface do usuário. Em vez disso, conte com o botão Gamepad B para navegar para trás.
+- **Telefone/Tablet**: Um botão Voltar do hardware ou software está sempre presente em dispositivos móveis e tablet, mas é recomendável a desenhar um botão de voltar no aplicativo para maior clareza.
+- **Área de trabalho para o Hub**: Desenhe o botão de voltar no aplicativo no canto superior esquerdo da interface de usuário do seu aplicativo.
+- **Xbox/TV**: Não desenhe um botão Voltar, para que ele adicionará uma desordem desnecessária da interface do usuário. Em vez disso, conte com o botão Gamepad B para navegar para trás.
 
 Se seu aplicativo será executado em vários dispositivos, [crie um gatilho visual personalizado para Xbox](../devices/designing-for-tv.md#custom-visual-state-trigger-for-xbox) para alternar a visibilidade do botão. O controle NavigationView alternará automaticamente a visibilidade do botão Voltar se seu aplicativo for executado no Xbox. 
 
@@ -282,22 +282,22 @@ Os exemplos de código fornecidos acima demonstram como manipular todas essas en
 
 ## <a name="system-back-behavior-for-backward-compatibilities"></a>Comportamento de regresso do sistema para compatibilidades com versões anteriores
 
-Anteriormente, os aplicativos UWP usavam [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility) para navegação regressiva. A API continuará a ter suporte para garantir a compatibilidade com versões anteriores, mas não recomendamos mais depender [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility). Em vez disso, seu aplicativo deve desenhar seu próprio botão Voltar no aplicativo.
+Anteriormente, os aplicativos UWP usavam [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility) para navegação regressiva. A API continuará a ter suporte para garantir a compatibilidade com versões anteriores, mas recomendamos não precisa mais depender [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility). Em vez disso, seu aplicativo deve desenhar seu próprio botão Voltar no aplicativo.
 
-Se seu aplicativo continua usando [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), em seguida, o sistema de interface do usuário renderizará o sistema botão Voltar na barra de título. (As interações de usuário e a aparência do botão Voltar ficam inalteradas de compilações anteriores).
+Se seu aplicativo continua usando [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), em seguida, o sistema de interface do usuário será renderizado o botão Voltar do sistema dentro da barra de título. (As interações de aparência e o usuário para o botão Voltar são as mesmas compilações anteriores.)
 
-![Botão Voltar barra de título](images/nav-back-pc.png)
+![Título do botão Voltar da barra](images/nav-back-pc.png)
 
-### <a name="system-back-bar"></a>Voltar do sistema barra
+### <a name="system-back-bar"></a>Backup de sistema barra
 
 > [!NOTE]
-> "Voltar do sistema barra" é apenas uma descrição, não é um nome oficial.
+> "Backup de sistema barra" é apenas uma descrição, e não um nome oficial.
 
-Voltar do sistema barra é uma "faixa" inserida entre a faixa de guia e a área de conteúdo do aplicativo. A faixa passa pela largura do aplicativo, com o botão Voltar na borda esquerda. O faixa tem uma altura vertical de 32 pixels para garantir que o tamanho de destino de toque adequado para o botão Voltar.
+O sistema para trás barra é uma "banda" que é inserida entre a faixa de guia e a área de conteúdo do aplicativo. A faixa passa pela largura do aplicativo, com o botão Voltar na borda esquerda. A banda tem uma altura vertical de 32 pixels para garantir que o tamanho de destino de toque adequado para o botão Voltar.
 
-A barra de voltar do sistema é exibida dinamicamente com base na visibilidade do botão Voltar. Quando o botão Voltar estiver visível, Voltar do sistema barra é inserida, mudando o conteúdo do aplicativo por 32 pixels abaixo da faixa da guia. Quando o botão Voltar é oculto, Voltar do sistema barra é removida dinamicamente, mudando o conteúdo do aplicativo para cima por 32 pixels para atender a faixa da guia. Para evitar que shift de interface do usuário do seu aplicativo para cima ou para baixo, é recomendável desenhar um [botão Voltar no aplicativo](#back-button).
+A barra de voltar do sistema é exibida dinamicamente com base na visibilidade do botão Voltar. Quando o botão Voltar é visível, o sistema para trás barra é inserida, mudando o conteúdo do aplicativo para baixo por 32 pixels abaixo da faixa de guia. Quando o botão Voltar é oculto, o sistema para trás barra dinamicamente é removida, aumentando de conteúdo do aplicativo 32 pixels para atender a faixa da guia. Para evitar que o deslocamento de interface do usuário do seu aplicativo para cima ou para baixo, é recomendável que o desenho de um [botão de voltar no aplicativo](#back-button).
 
-[Personalizações da barra de título](../shell/title-bar.md) serão transferidas para a guia do aplicativo e o sistema volta barra. Se seu aplicativo especifica as propriedades de cor de plano de fundo e de primeiro plano com [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), as cores serão aplicadas à parte traseira do sistema e guia barra.
+[Personalizações da barra de título](../shell/title-bar.md) serão transferidos para a guia aplicativo e o sistema volta barra. Se seu aplicativo especifica as propriedades de cor de primeiro plano e plano de fundo com [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), em seguida, serão aplicadas as cores para o guia e do sistema de volta barra.
 
 ## <a name="guidelines-for-custom-back-navigation-behavior"></a>Diretrizes para o comportamento da navegação regressiva personalizada
 
@@ -313,7 +313,7 @@ Se você optar por fornecer sua própria pilha Voltar de navegação, a experiê
 </thead>
 <tbody>
 <tr class="odd">
-<td style="vertical-align:top;"><strong>Página para página, grupos de pares diferentes</strong></td>
+<td style="vertical-align:top;"><strong>Página para página grupos diferentes de pares</strong></td>
 <td style="vertical-align:top;"><strong>Sim</strong>
 <p>Nesta ilustração, o usuário navega do nível 1 do aplicativo ao nível 2, cruzando grupos de par, de maneira que a navegação é adicionada ao histórico de navegação.</p>
 <p><img src="images/back-nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Navigation across peer groups" /></p>
@@ -321,28 +321,28 @@ Se você optar por fornecer sua própria pilha Voltar de navegação, a experiê
 <p><img src="images/back-nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Navigation across peer groups" /></p></td>
 </tr>
 <tr class="even">
-<td style="vertical-align:top;"><strong>Página a página, mesmo grupo de par, sem elemento de navegação na tela</strong>
-<p>O usuário navega de uma página para outra com o mesmo grupo de pares. Há não na tela elemento de navegação (por exemplo, o <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>) que ofereça navegação direta para as duas páginas.</p></td>
+<td style="vertical-align:top;"><strong>Página para página, mesmo emparelhar grupo, não na tela elemento de navegação</strong>
+<p>O usuário navega de uma página para outra com o mesmo grupo de pares. Não na tela não há elemento de navegação (como <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>) que fornece navegação direta para ambas as páginas.</p></td>
 <td style="vertical-align:top;"><strong>Sim</strong>
-<p>Na ilustração a seguir, o usuário navega entre duas páginas no mesmo grupo de pares e a navegação deve ser adicionada ao histórico de navegação.</p>
+<p>Na ilustração a seguir, o usuário navega entre duas páginas no mesmo grupo de mesmo nível e a navegação deve ser adicionada ao histórico de navegação.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
-<td style="vertical-align:top;"><strong>Página a página, mesmo grupo de par, com elemento de navegação na tela</strong>
-<p>O usuário navega de uma página para outra no mesmo grupo de pares. Ambas as páginas são mostradas no mesmo elemento de navegação, como o <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>.</p></td>
-<td style="vertical-align:top;"><strong>Depende</strong>
-<p>Sim, adicione ao histórico de navegação, com duas exceções notáveis. Se você espera que os usuários do seu aplicativo alternem entre as páginas no grupo de pares com frequência, ou se desejar preservar a hierarquia de navegação, em seguida, não adicione ao histórico de navegação. Nesse caso, quando o usuário pressiona Voltar, ele retorna para a última página visitada antes do usuário navegar para o grupo de pares atual. </p>
+<td style="vertical-align:top;"><strong>Página a página, o mesmo grupo de ponto a ponto, com na tela elemento de navegação</strong>
+<p>O usuário navega de uma página para outra no mesmo grupo de pares. Ambas as páginas são mostradas no mesmo elemento de navegação, como <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>.</p></td>
+<td style="vertical-align:top;"><strong>Ele depende</strong>
+<p>Sim, adicione ao histórico de navegação, com duas exceções notáveis. Se você espera que os usuários do seu aplicativo para alternar entre as páginas no grupo de ponto a ponto com frequência, ou se você desejar preservar a hierarquia de navegação, em seguida, não adicione ao histórico de navegação. Nesse caso, quando o usuário pressiona Voltar, ele retorna para a última página visitada antes do usuário navegar para o grupo de pares atual. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">
-<td style="vertical-align:top;"><strong>Exibir uma interface do usuário transitória</strong>
+<td style="vertical-align:top;"><strong>Mostrar uma interface do usuário transitório</strong>
 <p>O aplicativo exibe uma janela pop-up ou filho, como uma caixa de diálogo, tela inicial, ou teclado virtual, ou o aplicativo entra em um modo especial, como o modo de seleção múltipla.</p></td>
 <td style="vertical-align:top;"><strong>Não</strong>
 <p>Quando o usuário pressionar o botão Voltar, descarte a interface do usuário transitória (ocultar o teclado virtual, cancelar a caixa de diálogo, etc) e retorne à página que gerou a interface do usuário transitória.</p>
 <p><img src="images/back-nav/back-transui.png" alt="Showing a transient UI" /></p></td>
 </tr>
 <tr class="odd">
-<td style="vertical-align:top;"><strong>Enumerar os itens</strong>
+<td style="vertical-align:top;"><strong>Enumerar itens</strong>
 <p>O aplicativo exibe o conteúdo para um item virtual, como os detalhes de um item selecionado na lista mestre/de detalhes.</p></td>
 <td style="vertical-align:top;"><strong>Não</strong>
 <p>A enumeração de itens é semelhante à navegação dentro de um grupo de pares. Quando o usuário pressionar Voltar, navegue até a página anterior à página atual com a enumeração de item.</p>

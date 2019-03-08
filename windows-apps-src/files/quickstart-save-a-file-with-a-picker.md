@@ -1,17 +1,17 @@
 ---
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: Salvar um arquivo com um seletor
-description: Use o FileSavePicker para permitir que os usuários especifiquem o nome e o local em que desejam que o app salve um arquivo.
+description: Use o FileSavePicker para permitir que os usuários especifiquem o nome e o local em que desejam que o aplicativo salve um arquivo.
 ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c61a34b983b0faaedc509b68fd4225ea0859a7d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044826"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660521"
 ---
 # <a name="save-a-file-with-a-picker"></a>Salvar um arquivo com um seletor
 
@@ -23,18 +23,18 @@ ms.locfileid: "9044826"
 Use o [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir que os usuários especifiquem o nome e o local onde desejam que o aplicativo salve um aplicativo.
 
 > [!NOTE]
-> Para obter um exemplo completo, veja o [Exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994).
+> Para obter um exemplo completo, consulte o [exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994).
 
  
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 
--   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
+-   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
 
     Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
--   **Acessar permissões ao local**
+-   **Permissões de acesso para o local**
 
     Consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
@@ -54,21 +54,21 @@ Use um [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br20
     savePicker.SuggestedFileName = "New Document";
     ```
 
-Defina propriedades no objeto do seletor de arquivos que forem relevantes para seus usuários e seu aplicativo. Este exemplo define três propriedades: [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880), [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) e [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878).
+Defina propriedades no objeto do seletor de arquivos que forem relevantes para seus usuários e seu aplicativo. Este exemplo define três propriedades: [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880), [ **FileTypeChoices** ](https://msdn.microsoft.com/library/windows/apps/br207875) e [ **SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878).
      
 - Como nosso usuário está salvando um documento ou arquivo de texto, a amostra define [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880) como a pasta local do aplicativo usando [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621). Configure [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) para um local apropriado para o tipo de arquivo que será salvo, como Música, Imagens, Vídeos ou Documentos. A partir do local inicial, o usuário pode navegar para outros locais.
 
 - Como desejamos que nosso aplicativo abra o arquivo depois dele ser salvo, usamos [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) para especificar os tipos de arquivos que a amostra suporta (documentos do Microsoft Word e arquivos de texto). Certifique-se de que todos os tipos de arquivos sejam suportados por seu aplicativo. Os usuários poderão salvar seus arquivos como qualquer tipo de arquivo que você especificar. Eles também podem alterar o tipo de arquivo selecionando outro tipo de arquivo que você especificou. A primeira opção de tipo de arquivo na lista será selecionada por padrão: para controlar isso, configure a propriedade [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873).
 
     > [!NOTE]
-    > O seletor de arquivos também utiliza o tipo de arquivo atualmente selecionado para filtrar quais arquivos são exibidos, de forma que os únicos tipos de arquivos que correspondem aos tipos de arquivos selecionados são exibidos para o usuário.
+    > O seletor de arquivos também usa o tipo de arquivo selecionado no momento para filtrar quais arquivos que ele exibe, de modo que somente os tipos de arquivos que correspondem aos tipos de arquivos selecionados são exibidos ao usuário.
 
 - Para poupar o usuário da digitação, o exemplo define um [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878). Torne seu nome de arquivo sugerido relevante para o arquivo que está sendo salvo. Por exemplo, como no Word, você pode sugerir o nome de arquivo existente se houver um, ou a primeira linha de um documento se o usuário estiver salvando um arquivo que ainda não possui nome.
 
 > [!NOTE]
->Objetos [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) exibem o seletor de arquivos usando o modo de exibição [**Pickerviewmode**](https://msdn.microsoft.com/library/windows/apps/br207891) .
+> [**FileSavePicker** ](https://msdn.microsoft.com/library/windows/apps/br207871) objetos de exibem o seletor de arquivo usando o [ **PickerViewMode.List** ](https://msdn.microsoft.com/library/windows/apps/br207891) modo de exibição.
 
-2.  **Mostrar o FileSavePicker e salvar no arquivo selecionado**
+2.  **Mostrar o FileSavePicker e salve o arquivo separado**
 
     Exiba o seletor de arquivos chamando [**PickSaveFileAsync**](https://msdn.microsoft.com/library/windows/apps/br207876). Depois que o usuário especifica o nome, o tipo de arquivo e o local e confirma o arquivo a ser salvo, **PickSaveFileAsync** retorna um objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo salvo. Você pode capturar e processar esse arquivo agora que tem acesso de leitura e gravação a ele.
 

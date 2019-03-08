@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, diretrizes, visualização
 ms.localizationpriority: medium
 ms.openlocfilehash: 87e21f4e98c58f79f397c369891212eccb196c18
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919345"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662261"
 ---
 # <a name="optimize-the-viewability-of-your-ad-units"></a>Otimizar a visualização das unidades de anúncio
 
@@ -18,17 +18,17 @@ O [relatório de desempenho de publicidade](../publish/advertising-performance-r
 
 Alinhado com as diretrizes de visualização do IAB, uma impressão de anúncio em faixa é contabilizada como visível se atender aos seguintes critérios:
 
-* Requisito de pixel: 50% ou mais dos pixels no anúncio estavam no espaço visível do aplicativo.
-* Requisito de tempo: o tempo em que o requisito de pixel foi atendido foi maior ou igual a um segundo contínuo após a renderização do anúncio.
+* Requisito de pixel: Maior que ou igual a 50% dos pixels no anúncio do estava no espaço visível do aplicativo.
+* Requisito de tempo: O tempo que o requisito de pixel é atendido foi maior que ou igual a um segundo contínuo, renderização de anúncio de postagem.
 
 Uma impressão de anúncio em vídeo é contabilizada como visível se atender aos seguintes critérios:
 
-* Requisito de pixel: 50% ou mais dos pixels no anúncio estavam na parte visível do aplicativo.
-* Requisito de tempo: o vídeo atendeu ao requisito de pixel e foi reproduzido por dois segundos contínuos após a renderização do anúncio.
+* Requisito de pixel: Maior que ou igual a 50% dos pixels no anúncio do estava na parte visível do aplicativo.
+* Requisito de tempo: O vídeo atender o requisito de pixel e reproduzido por dois segundos contínuos renderizar de anúncio de postagem.
 
 A visualização é calculada usando a seguinte fórmula:
 
-**Visualização = [Impressões visualizadas] * 100 / [Total de impressões de anúncios]**
+**Visualização = [exibido impressões] * 100 / [Total de impressões de anúncio]**
 
 ## <a name="guidelines-to-improve-ad-unit-viewability"></a>Diretrizes para melhorar a visualização da unidade publicitária
 

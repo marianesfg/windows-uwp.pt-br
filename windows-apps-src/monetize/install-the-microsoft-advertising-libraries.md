@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, instalação, SDK, biblioteca do publicidade
 ms.localizationpriority: medium
 ms.openlocfilehash: 121accdfc8996c609c616838f645f19e2377c7c5
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047747"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658031"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Instalar o SDK do Microsoft Advertising
 
 Para exibir anúncio em aplicativos UWP para Windows 10, instale o [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp). Esse SDK é uma extensão do Visual Studio 2015 e versões posteriores.
 
 > [!NOTE]
-> Se você estiver desenvolvendo um aplicativo UWP JavaScript/HTML e você tiver instalado o SDK do Windows 10 versão 10.0.14393 (atualização de aniversário) ou posterior, você também deve instalar a biblioteca [WinJS](https://github.com/winjs/winjs) . Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows 10, mas a partir da versão 10.0.14393 do SDK do Windows 10 (Atualização de Aniversário), ela deve ser instalada separadamente.
+> Se você estiver desenvolvendo um aplicativo UWP JavaScript/HTML e você tiver instalado o SDK do Windows 10 versão 10.0.14393 (atualização de aniversário) ou posterior, você também deve instalar o [WinJS](https://github.com/winjs/winjs) biblioteca. Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows 10, mas a partir da versão 10.0.14393 do SDK do Windows 10 (Atualização de Aniversário), ela deve ser instalada separadamente.
 
 <span id="install-msi" />
 
@@ -80,7 +80,7 @@ Para instalar o SDK do Microsoft Advertising em um projeto UWP específico por m
 
 Depois de instalar o SDK do Microsoft Advertising, siga estas instruções para fazer referência o SDK em seu projeto para que você possa usar as APIs de publicidade.
 
-1. Abra seu projeto no Visual Studio.
+1. Abra o projeto no Visual Studio.
     > [!NOTE]
     > Se o seu projeto tem direcionamento **Any CPU**, atualize-o para usar uma saída de compilação de arquitetura específica (por exemplo, **x86**). Se o seu projeto tem direcionamento **Any CPU**, você não conseguirá adicionar uma referência ao SDK do Microsoft Advertising nas etapas a seguir. Para obter mais informações, consulte [Erros de referência causados pelo direcionamento Any CPU em seu projeto](known-issues-for-the-advertising-libraries.md#reference_errors).
 
@@ -94,8 +94,8 @@ Para orientações passo a passo que mostram como começar a usar as APIs de pub
 
 * [Anúncios intersticiais](interstitial-ads.md)
 * [Anúncios nativos](native-ads.md)
-* [AdControl em XAML e .NET](adcontrol-in-xaml-and--net.md)
-* [AdControl em HTML 5 e Javascript](adcontrol-in-html-5-and-javascript.md)
+* [AdControl em XAML e o .NET](adcontrol-in-xaml-and--net.md)
+* [AdControl em 5 de HTML e Javascript](adcontrol-in-html-5-and-javascript.md)
 
 <span id="framework" />
 
@@ -103,6 +103,6 @@ Para orientações passo a passo que mostram como começar a usar as APIs de pub
 
 A biblioteca Microsoft.Advertising.dll no [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp) (para aplicativos UWP) está configurada como um *pacote de estrutura*. Essa biblioteca contém as APIs de publicidade nos namespaces [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising) e [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui).
 
-Como esta biblioteca é um pacote de estrutura, isso significa que depois que um usuário instala uma versão do seu aplicativo que usa esta biblioteca, esta biblioteca é atualizada automaticamente em seu dispositivo através do Windows Update sempre que publicamos uma nova versão da biblioteca com correções e melhorias de desempenho. Isso ajuda a garantir que seus clientes sempre terão a versão mais recente da biblioteca instalada nos dispositivos deles.
+Como essa biblioteca é um pacote de estrutura, isso significa que, após um usuário instalar uma versão do seu aplicativo que usa essa biblioteca, ela é atualizada automaticamente em seus dispositivos por meio do Windows Update sempre que publicarmos uma nova versão da biblioteca com correções e melhorias de desempenho. Isso ajuda a garantir que seus clientes sempre terão a versão mais recente da biblioteca instalada nos dispositivos deles.
 
 Se nós lançamos uma nova versão do SDK que apresenta novas APIs ou recursos dessa biblioteca, você precisará instalar a versão mais recente do SDK para usar esses recursos. Nesse cenário, você também precisa publicar seu aplicativo atualizado na Loja.

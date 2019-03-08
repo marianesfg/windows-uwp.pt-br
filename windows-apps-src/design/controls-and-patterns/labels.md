@@ -1,5 +1,5 @@
 ---
-Description: Use a label to indicate to the user what they should enter into an adjacent control. You can also label a group of related controls, or display instructional text near a group of related controls.
+Description: Utilize um rótulo para indicar ao usuário o que ele deve inserir em um controle adjacente. Você também pode rotular um grupo de controles relacionados ou exibir texto de instrução próximo a um grupo de controles relacionados.
 title: Rótulos
 ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
@@ -12,11 +12,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 4345daf5b879fed7ba9805e4a448c473299031d7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926025"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654141"
 ---
 # <a name="labels"></a>Rótulos
 
@@ -24,7 +24,7 @@ ms.locfileid: "8926025"
 
 Rótulo é o nome ou o título de um controle ou de um grupo de controles relacionados.
 
-> **APIs importantes**: propriedade Header, [classe TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)
+> **APIs importantes**: Propriedade de cabeçalho, [classe TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)
 
 No XAML, muitos controles têm uma propriedade Header interna que é usada para especificar o rótulo. Para os controles sem uma propriedade Header ou para rotular grupos de controles, você pode utilizar um [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652).
 
@@ -33,13 +33,13 @@ No XAML, muitos controles têm uma propriedade Header interna que é usada para 
 ## <a name="recommendations"></a>Recomendações
 
 
--   Utilize um rótulo para indicar ao usuário o que ele deve inserir em um controle adjacente. Você também pode rotular um grupo de controles relacionados, ou exibir texto de instrução próximo a um grupo de controles relacionados.
+-   Utilize um rótulo para indicar ao usuário o que ele deve inserir em um controle adjacente. Você também pode rotular um grupo de controles relacionados ou exibir texto de instrução próximo a um grupo de controles relacionados.
 -   Ao rotular os controles, grave o rótulo como um substantivo ou uma frase nominal concisa, não como uma oração nem como texto de instrução. Evite usar dois-pontos ou outros sinais de pontuação.
 -   Quando tiver texto de instrução em um rótulo, você poderá ser mais generoso com o comprimento da cadeia de texto e também usar pontuação.
 
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
-* [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Exemplo de Noções básicas de XAML UI](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Controles de texto](text-controls.md)
@@ -51,7 +51,7 @@ No XAML, muitos controles têm uma propriedade Header interna que é usada para 
 * [Propriedade Slider.Header](https://msdn.microsoft.com/library/windows/apps/dn252829)
 * [Propriedade ComboBox.Header](https://msdn.microsoft.com/library/windows/apps/dn279416)
 * [Propriedade RichEditBox.Header](https://msdn.microsoft.com/library/windows/apps/dn252726)
-* [Classe TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)
+* [Classe de TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)
 
  
 

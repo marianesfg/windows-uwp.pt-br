@@ -1,5 +1,5 @@
 ---
-Description: Panning and scrolling allows users to reach content that extends beyond the bounds of the screen.
+Description: O movimento panorâmico e a rolagem permitem que usuários acessem conteúdos que se estendem além das fronteiras da tela.
 title: Controles do visualizador de rolagem
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scrollbars
@@ -13,11 +13,11 @@ dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 6578ddfd077e121e0eca5a5fcc8c06cdec26aa42
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058607"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656051"
 ---
 # <a name="scroll-viewer-controls"></a>Controles do visualizador de rolagem
 
@@ -25,7 +25,7 @@ ms.locfileid: "9058607"
 
 Quando há mais conteúdo de interface do usuário para mostrar do que pode se encaixar em uma área, use o controle de visualizador de rolagem.
 
-> **APIs importantes**: [classe ScrollViewer](https://msdn.microsoft.com/library/windows/apps/br209527), [classe ScrollBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)
+> **APIs importantes**: [Classe de ScrollViewer](https://msdn.microsoft.com/library/windows/apps/br209527), [classe ScrollBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)
 
 Os visualizadores de rolagem habilitam conteúdo além dos limites do visor (área visível). Os usuários chegam a esse conteúdo manipulando a superfície do visualizador de rolagem por toque, pela roda do mouse, teclado ou um gamepad, ou usando o cursor do mouse ou caneta para interagir com a barra de rolagem do visualizador de rolagem. Esta imagem mostra vários exemplos de controles do visualizador de rolagem.
 
@@ -60,7 +60,7 @@ See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ScrollViewer">abrir o aplicativo e ver o ScrollViewer em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -87,7 +87,7 @@ Para adicionar a rolagem vertical à página, encapsule o conteúdo da página e
 </Page>
 ```
 
-Este XAML mostra como habilitar rolagem horizontal, coloque uma imagem em um visualizador de rolagem e habilitar o zoom.
+Este XAML mostra como habilitar a rolagem horizontal, colocar uma imagem em um visualizador de rolagem e habilitar o zoom.
 
 ```xaml
 <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10"
@@ -105,7 +105,7 @@ Quando uma parte de **ScrollViewer** existe em um controle, o controle host muit
 
 Para que seja possível que controles que incluem um ScrollViewer influenciem alguns dos comportamentos e das propriedades provenientes da parte de ScrollViewer, ScrollViewer define uma série de propriedades XAML anexadas que podem ser definidas em estilos e usadas em associações de modelos. Para obter mais informações sobre propriedades anexadas, consulte [Visão geral das propriedades anexadas](../../xaml-platform/attached-properties-overview.md).
 
-**Propriedades XAML anexadas de ScrollViewer**
+**Propriedades anexadas do XAML ScrollViewer**
 
 ScrollViewer define as seguintes propriedades XAML anexadas:
 
@@ -153,4 +153,4 @@ Para os casos em que um ScrollViewer é explícito na sua XAML, conforme mostrad
 
 **Para desenvolvedores (XAML)**
 
-* [Classe ScrollViewer](https://msdn.microsoft.com/library/windows/apps/br209527)
+* [Classe de ScrollViewer](https://msdn.microsoft.com/library/windows/apps/br209527)

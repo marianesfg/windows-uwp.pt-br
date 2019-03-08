@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e90e460cf5f5bda7d90447440d76cf6898a83747
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931839"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660201"
 ---
 # <a name="lighting-overview"></a>Visão geral de iluminação
 
@@ -27,7 +27,7 @@ A forma como você trabalha com a iluminação e os materiais faz uma grande dif
 
 As luzes não são necessárias para renderizar uma cena, mas os detalhes em uma cena renderizada sem luz não estão visíveis. Na melhor das hipóteses, a renderização de uma cena apagada resulta em uma silhueta dos objetos nela. Isso não fornece detalhes suficientes para a maioria das finalidades.
 
-## <a name="span-iddirectlightvsambientlightspanspan-iddirectlightvsambientlightspandirect-light-vs-ambient-light"></a><span id="direct_light_vs._ambient_light"></span><span id="DIRECT_LIGHT_VS._AMBIENT_LIGHT"></span>Luz direta e luz ambiente
+## <a name="span-iddirectlightvsambientlightspanspan-iddirectlightvsambientlightspandirect-light-vs-ambient-light"></a><span id="direct_light_vs._ambient_light"></span><span id="DIRECT_LIGHT_VS._AMBIENT_LIGHT"></span>Luz direta versus luz ambiente
 
 
 Embora as luzes direta e ambiente iluminem objetos em uma cena, elas são independentes uma da outra, têm efeitos muito diferentes e exigem que você trabalhe com elas de formas completamente diferentes.
@@ -40,7 +40,7 @@ A cor de luz ambiente assume a forma de um valor RGBA, onde cada componente é u
 
 Os componentes vermelhos, verdes e azuis são combinados para formar a cor final da luz ambiente. O componente alfa controla a transparência da cor. Ao usar a aceleração de hardware ou a emulação de RGB, o componente alfa é ignorado.
 
-## <a name="span-iddirect3dlightmodelvsnaturespanspan-iddirect3dlightmodelvsnaturespandirect3d-light-model-vs-nature"></a><span id="direct3d_light_model_vs._nature"></span><span id="DIRECT3D_LIGHT_MODEL_VS._NATURE"></span>Modelo de luz do Direct3D em comparação à natural
+## <a name="span-iddirect3dlightmodelvsnaturespanspan-iddirect3dlightmodelvsnaturespandirect3d-light-model-vs-nature"></a><span id="direct3d_light_model_vs._nature"></span><span id="DIRECT3D_LIGHT_MODEL_VS._NATURE"></span>Modelo de luz Direct3D versus natureza
 
 
 Na natureza, quando a luz é emitida de uma fonte, ela é refletido por centenas, se não milhares ou milhões de objetos antes de chegar aos olhos do usuário. Cada vez que ele é refletido, uma luz é absorvida por uma superfície, algumas estão espalhados em direções aleatórias e o restante prossegue para outra superfície ou a atenção do usuário. Esse processo continua até que a luz seja reduzida a nada ou um usuário perceba a luz.
@@ -57,7 +57,7 @@ A luz direta é gerada por uma fonte em uma cena; sempre tem cor e a intensidade
 
 Além disso, o material do polígono tem propriedades que afetam como ele reflete a luz recebida. Você define uma única característica de reflexão que descreve como o material reflete a luz ambiente, além de definir características individuais para determinar a reflexão especulares e difusa do material.
 
-## <a name="span-idcolorvaluesforlightsandmaterialsspanspan-idcolorvaluesforlightsandmaterialsspanspan-idcolorvaluesforlightsandmaterialsspancolor-values-for-lights-and-materials"></a><span id="Color_Values_for_Lights_and_Materials"></span><span id="color_values_for_lights_and_materials"></span><span id="COLOR_VALUES_FOR_LIGHTS_AND_MATERIALS"></span>Valores de cores para luzes e materiais
+## <a name="span-idcolorvaluesforlightsandmaterialsspanspan-idcolorvaluesforlightsandmaterialsspanspan-idcolorvaluesforlightsandmaterialsspancolor-values-for-lights-and-materials"></a><span id="Color_Values_for_Lights_and_Materials"></span><span id="color_values_for_lights_and_materials"></span><span id="COLOR_VALUES_FOR_LIGHTS_AND_MATERIALS"></span>Valores de cor para materiais e luzes
 
 
 O Direct3D descreve as cores em termos de quatro componentes (vermelho, verde, azul e alfa), que são combinadas para compor uma cor final. Cada componente varia de 0,0 a 1,0. Embora as luzes e os materiais usem a mesma estrutura para descrever a cor, os valores são usados de modo um pouco diferente pelas luzes e pelos materiais.
@@ -73,7 +73,7 @@ Consulte [Tipos de luzes](light-types.md) e [Propriedades de luzes](light-proper
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Luzes e materiais](lights-and-materials.md)
+[Materiais e luzes](lights-and-materials.md)
 
  
 

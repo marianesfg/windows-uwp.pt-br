@@ -1,5 +1,5 @@
 ---
-Description: A color picker lets a user browse through and select colors.
+Description: Um selecionador de cores permite que um usuário navegue e selecione cores.
 title: Seletor de Cores
 label: Color Picker
 template: detail.hbs
@@ -12,22 +12,22 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 215a15e3a8e1b0264987adcf6228ec52a696f50c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047095"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654471"
 ---
-# <a name="color-picker"></a>Seletor de cores
+# <a name="color-picker"></a>Seletor de cor
 
 Um seletor de cores é usado para navegar e selecionar cores. Por padrão, ele permite que um usuário navegue por cores dentre uma variedade de opções ou especifique uma cor em caixas de texto RGB, valor de matiz e saturação (HSV) ou Hexadecimal.
 
-> **APIs importantes**: [classe ColorPicker](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker), [propriedade Color](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [evento ColorChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
+> **APIs importantes**: [Classe ColorPicker](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker), [propriedade de cor](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [ColorChanged evento](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
 
 ![Um selecionador de cores padrão](images/color-picker-default.png)
 
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use o selecionador de cores para permitir que o usuário selecione cores no aplicativo. Por exemplo, usá-lo para alterar as configurações de cor, como cores de fonte, tela de fundo ou cores do tema de aplicativo.
 
@@ -42,8 +42,8 @@ Se seu aplicativo for para tarefas de desenho ou semelhantes usando a caneta, co
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ColorPicker">abrir o aplicativo e ver o ColorPicker em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Baixe o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obter o código-fonte (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -209,11 +209,11 @@ Valores hexadecimais | IsHexInputVisible
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Interações com caneta em aplicativos UWP](../input/pen-and-stylus-interactions.md)
+- [Interações de caneta e caneta em aplicativos UWP](../input/pen-and-stylus-interactions.md)
 - [Escrita à tinta](inking-controls.md)
 
 <!--

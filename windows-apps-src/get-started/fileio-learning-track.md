@@ -7,11 +7,11 @@ keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, arquivos
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: e0abc146820ca27ee83662ba5f8b79a1daf90bab
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045525"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662501"
 ---
 # <a name="work-with-files"></a>Trabalhar com arquivos
 
@@ -53,15 +53,15 @@ var listOfStrings = new List<string> { "line1", "line2", "line3" };
 await Windows.Storage.FileIO.AppendLinesAsync(file, listOfStrings); // each entry in the list is written to the file on its own line.
 ```
 
-Primeiro, identifique onde o arquivo deve estar localizado. `Windows.Storage.ApplicationData.Current.LocalFolder` fornece acesso à pasta de dados local, que é criada para o aplicativo durante a instalação. Consulte [Acessar o sistema de arquivos](#access-the-file-system) para obter detalhes sobre as pastas que o aplicativo pode acessar.
+Primeiro, identifique onde o arquivo deve estar localizado. `Windows.Storage.ApplicationData.Current.LocalFolder` fornece acesso à pasta de dados local, que é criado para seu aplicativo quando ele está instalado. Consulte [Acessar o sistema de arquivos](#access-the-file-system) para obter detalhes sobre as pastas que o aplicativo pode acessar.
 
 Em seguida, usamos **StorageFolder** para criar o arquivo (ou abri-lo se já existir).
 
-A classe **FileIO** fornece uma maneira conveniente de gravar texto no arquivo. `FileIO.WriteTextAsync()` substitui o conteúdo inteiro do arquivo pelo texto fornecido. `FileIO.AppendLinesAsync()` acrescenta uma coleção de cadeias de caracteres ao arquivo, escrevendo uma cadeia de caracteres por linha.
+A classe **FileIO** fornece uma maneira conveniente de gravar texto no arquivo. `FileIO.WriteTextAsync()` substitui todo o conteúdo do arquivo com o texto fornecido. `FileIO.AppendLinesAsync()` acrescenta uma coleção de cadeias de caracteres para o arquivo--gravar uma cadeia de caracteres por linha.
 
 ## <a name="read-text-from-a-file"></a>Ler texto de um arquivo
 
-Assim como acontece na gravação, a leitura começa ao especificar onde o arquivo está localizado. Vamos usar o mesmo local como no exemplo acima. Em seguida, usaremos a classe **FileIO** para ler o conteúdo.
+Assim como acontece na gravação, a leitura começa ao especificar onde o arquivo está localizado. Vamos usar o mesmo local como no exemplo acima. Em seguida, vamos usar o **FileIO** classe para ler seu conteúdo.
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
@@ -78,15 +78,15 @@ Na plataforma UWP, o acesso à pasta é restrito para garantir a integridade e a
 
 ### <a name="app-folders"></a>Pastas de aplicativo
 
-Quando um aplicativo UWP é instalado, várias pastas são criadas em c:\users\<nome do usuário>\AppData\Local\Packages\<identificador do pacote de aplicativo>\ para armazenar os arquivos locais, em roaming e temporário do aplicativo, entre outras coisas. O aplicativo não precisa declarar as funcionalidades para acessar essas pastas, que não podem ser acessadas por outros aplicativos. Essas pastas também são removidas quando o aplicativo é desinstalado.
+Quando um aplicativo UWP é instalado, várias pastas são criadas em c:\users\<nome de usuário > \AppData\Local\Packages\<identificador de pacote do aplicativo > \ para armazenar, entre outras coisas, os arquivos do aplicativo local, móveis e temporário. O aplicativo não precisa declarar as funcionalidades para acessar essas pastas, que não podem ser acessadas por outros aplicativos. Essas pastas também são removidas quando o aplicativo é desinstalado.
 
 Veja algumas das pastas de aplicativo que você normalmente usará:
 
-- **LocalState**: para dados locais do dispositivo atual. Quando é feito o backup do dispositivo, os dados nesse diretório são salvos em uma imagem de backup no OneDrive. Se o usuário redefinir ou substituir o dispositivo, os dados serão restaurados. Acesse essa pasta com `Windows.Storage.ApplicationData.Current.LocalFolder.`Salve os dados locais que você não deseja que estejam no backup do OneDrive em **LocalCacheFolder**, que podem ser acessados com `Windows.Storage.ApplicationData.Current.LocalCacheFolder`.
+- **LocalState**: Para dados locais para o dispositivo atual. Quando é feito o backup do dispositivo, os dados nesse diretório são salvos em uma imagem de backup no OneDrive. Se o usuário redefinir ou substituir o dispositivo, os dados serão restaurados. Acesse essa pasta com `Windows.Storage.ApplicationData.Current.LocalFolder.`Salve os dados locais que você não deseja que estejam no backup do OneDrive em **LocalCacheFolder**, que podem ser acessados com `Windows.Storage.ApplicationData.Current.LocalCacheFolder`.
 
-- **RoamingState**: para dados que devem ser replicados em todos os dispositivos nos quais o aplicativo está instalado. O Windows limita a quantidade de dados em roaming, portanto, salve somente as configurações do usuário e pequenos arquivos aqui. Acesse a pasta roaming com `Windows.Storage.ApplicationData.Current.RoamingFolder`.
+- **RoamingState**: Para dados que devem ser replicados em todos os dispositivos em que o aplicativo está instalado. O Windows limita a quantidade de dados em roaming, portanto, salve somente as configurações do usuário e pequenos arquivos aqui. Acesse a pasta roaming com `Windows.Storage.ApplicationData.Current.RoamingFolder`.
 
-- **TempState**: para dados que podem ser excluídos quando o aplicativo não estiver em execução. Acesse essa pasta com `Windows.Storage.ApplicationData.Current.TemporaryFolder`.
+- **TempState**: Para os dados que podem ser excluídos quando o aplicativo não está em execução. Acesse essa pasta com `Windows.Storage.ApplicationData.Current.TemporaryFolder`.
 
 ### <a name="access-the-rest-of-the-file-system"></a>Acessar o resto sistema de arquivos
 
@@ -119,30 +119,30 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 | [Windows.Storage.Pickers.FolderPicker](https://docs.microsoft.com/uwp/api/windows.storage.pickers.folderpicker) |  Permite que o usuário escolha uma pasta e retorna um **StorageFolder** para ele. Isso é como você pode obter acesso aos locais que o aplicativo não pode acessar por padrão. |
 | [Windows.Storage.Pickers.FileOpenPicker](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker) | Permite que o usuário escolha um arquivo para abrir e retorna um **StorageFile** para ele. Isso é como você pode obter acesso a um arquivo que o aplicativo não pode acessar por padrão. |
 | [Windows.Storage.Pickers.FileSavePicker](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker) | Permite que o usuário escolha o nome, a extensão e o local de armazenamento para um arquivo. Retorna um **StorageFile**. Isso é como você pode salvar um arquivo em um local que o aplicativo não pode acessar por padrão. |
-|  [Namespace Windows.Storage.Streams](https://docs.microsoft.com/uwp/api/windows.storage.streams) | Abrange a leitura e gravação de fluxos. Analise especificamente as classes [DataReader](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader) e [DataWriter](https://docs.microsoft.com/uwp/api/windows.storage.streams.datawriter) que fazem a leitura e gravação de buffers, bytes, inteiros, GUIDs, TimeSpans e muito mais. |
+|  [Windows.Storage.Streams namespace](https://docs.microsoft.com/uwp/api/windows.storage.streams) | Abrange a leitura e gravação de fluxos. Analise especificamente as classes [DataReader](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader) e [DataWriter](https://docs.microsoft.com/uwp/api/windows.storage.streams.datawriter) que fazem a leitura e gravação de buffers, bytes, inteiros, GUIDs, TimeSpans e muito mais. |
 
 ### <a name="useful-docs"></a>Documentos úteis
 
 | Tópico | Descrição |
 |-------|----------------|
-| [Namespace do Windows.Storage](https://docs.microsoft.com/uwp/api/windows.storage) | Documentos de referência do API. |
+| [Namespace Storage](https://docs.microsoft.com/uwp/api/windows.storage) | Documentos de referência do API. |
 | [Arquivos, pastas e bibliotecas](https://docs.microsoft.com/windows/uwp/files/) | Documentos conceituais. |
 | [Criar, gravar e ler um arquivo](https://docs.microsoft.com/windows/uwp/files/quickstart-reading-and-writing-files) | Capas de criação, leitura e gravação de texto, dados binários e fluxos. |
-| [Introdução ao armazenamento de dados de aplicativo localmente](https://blogs.windows.com/buildingapps/2016/05/10/getting-started-storing-app-data-locally/#pCbJKGjcShh5DTV5.97) | Além de cobrir as práticas recomendadas para salvar os dados locais, abrange a finalidade da pasta LocalSettings e LocalCache. |
-| [Introdução aos Dados de aplicativo em roaming](https://blogs.windows.com/buildingapps/2016/05/03/getting-started-with-roaming-app-data/#RgjgLt5OkU9DbVV8.97) | Uma série de duas partes sobre como usar dados de aplicativo em roaming. |
-| [Diretrizes de dados de aplicativo em roaming](https://msdn.microsoft.com/library/windows/apps/hh465094) | Siga essas diretrizes de dados em roaming ao projetar seu aplicativo. |
-| [Armazenar e recuperar configurações e outros dados de aplicativo](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data) | Fornece uma visão geral de várias fontes de dados de aplicativo, como as pastas locais, em roaming e temporárias. Consulte a seção [Dados em roaming](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#roaming-data) para ver diretrizes e mais informações sobre a gravação de dados em roaming entre os dispositivos. |
-| [Permissões de acesso a arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions) | Informações sobre quais locais do sistema de arquivo que o aplicativo pode acessar. |
+| [Obter Introdução armazenando dados de aplicativo localmente](https://blogs.windows.com/buildingapps/2016/05/10/getting-started-storing-app-data-locally/#pCbJKGjcShh5DTV5.97) | Além de cobrir as práticas recomendadas para salvar os dados locais, abrange a finalidade da pasta LocalSettings e LocalCache. |
+| [Introdução a dados de aplicativo móvel](https://blogs.windows.com/buildingapps/2016/05/03/getting-started-with-roaming-app-data/#RgjgLt5OkU9DbVV8.97) | Uma série de duas partes sobre como usar dados de aplicativo em roaming. |
+| [Diretrizes para os dados de aplicativo em roaming](https://msdn.microsoft.com/library/windows/apps/hh465094) | Siga essas diretrizes de dados em roaming ao projetar seu aplicativo. |
+| [Armazene e recupere configurações e outros dados de aplicativo](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data) | Fornece uma visão geral de várias fontes de dados de aplicativo, como as pastas locais, em roaming e temporárias. Consulte a seção [Dados em roaming](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#roaming-data) para ver diretrizes e mais informações sobre a gravação de dados em roaming entre os dispositivos. |
+| [Permissões de acesso de arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions) | Informações sobre quais locais do sistema de arquivo que o aplicativo pode acessar. |
 | [Abrir arquivos e pastas com um seletor](https://docs.microsoft.com/windows/uwp/files/quickstart-using-file-and-folder-pickers) | Mostra como acessar arquivos e pastas permitindo que o usuário decida por uma interface do usuário do seletor. |
 | [Windows.Storage.Streams](https://docs.microsoft.com/uwp/api/windows.storage.streams) | Tipos usados para ler e gravar fluxos. |
-| [Arquivos e pastas nas bibliotecas de Música, Imagens e Vídeos](https://docs.microsoft.com/windows/uwp/files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries) | Aborda como remover pastas de bibliotecas, obter a lista de pastas em uma biblioteca e descobrir fotos, músicas e vídeos armazenados. |
+| [Arquivos e pastas nas bibliotecas de música, imagens e vídeos](https://docs.microsoft.com/windows/uwp/files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries) | Aborda como remover pastas de bibliotecas, obter a lista de pastas em uma biblioteca e descobrir fotos, músicas e vídeos armazenados. |
 
 ## <a name="useful-code-samples"></a>Exemplos de código úteis
 
 | Exemplo de código | Descrição |
 |-----------------|---------------|
-| [Amostra de dados de aplicativos](https://code.msdn.microsoft.com/windowsapps/ApplicationData-sample-fb043eb2) | Mostra como armazenar e recuperar dados específicos de cada usuário usando as APIs de dados de aplicativos. |
-| [Exemplo de acesso a arquivos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) | Mostra como criar, ler, gravar, copiar e excluir um arquivo. |
-| [Exemplo do seletor de arquivos](https://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | Mostra como acessar arquivos e pastas, permitindo que o usuário as escolha com a interface do usuário e como salvar um arquivo para que o usuário possa especificar o nome, o tipo e o local de um arquivo para salvar. |
-| [Amostra de JSON](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Json) | Mostra como codificar e decodificar objetos JavaScript Object Notation (JSON), matrizes, cadeias de caracteres, números e boolianos usando o [namespace Windows.Data.Json](https://docs.microsoft.com/uwp/api/Windows.Data.Json). |
+| [Exemplo de dados de aplicativo](https://code.msdn.microsoft.com/windowsapps/ApplicationData-sample-fb043eb2) | Mostra como armazenar e recuperar dados específicos de cada usuário usando as APIs de dados de aplicativos. |
+| [Exemplo de acesso de arquivo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) | Mostra como criar, ler, gravar, copiar e excluir um arquivo. |
+| [Exemplo de seletor de arquivos](https://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | Mostra como acessar arquivos e pastas, permitindo que o usuário as escolha com a interface do usuário e como salvar um arquivo para que o usuário possa especificar o nome, o tipo e o local de um arquivo para salvar. |
+| [Exemplo de JSON](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Json) | Mostra como codificar e decodificar objetos JavaScript Object Notation (JSON), matrizes, cadeias de caracteres, números e boolianos usando o [namespace Windows.Data.Json](https://docs.microsoft.com/uwp/api/Windows.Data.Json). |
 | [Exemplos de código adicionais](https://developer.microsoft.com//windows/samples) | Escolha **Arquivos, pastas e bibliotecas** na lista suspensa categoria. |

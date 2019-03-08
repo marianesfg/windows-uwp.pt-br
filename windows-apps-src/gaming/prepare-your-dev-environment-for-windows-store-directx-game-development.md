@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, modelos, ferramentas, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: a272c579fb3ead676fe76f16c33b70f557de4ed8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941169"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653761"
 ---
 # <a name="project-templates-and-tools-for-games"></a>Modelos de projeto e ferramentas para jogos
 
@@ -22,10 +22,10 @@ Este tópico mostra o que você precisa para iniciar a programação de jogos em
 
 Primeiro, você precisa do Visual Studio.
 
-## <a name="get-visual-studio"></a>Obter Visual Studio
+## <a name="get-visual-studio"></a>Obter o Visual Studio
 
 
-[Baixe e instale o Microsoft Visual Studio2015](https://www.visualstudio.com/vs-2015-product-editions).
+[Baixe e instale o Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions).
 
 <table>
 <colgroup>
@@ -40,11 +40,11 @@ Primeiro, você precisa do Visual Studio.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="user-interface.md">Modelos de projeto de jogo DirectX</a></p></td>
+<td align="left"><p><a href="user-interface.md">Modelos de projeto de jogo do DirectX</a></p></td>
 <td align="left"><p>Saiba mais sobre os modelos para criar jogo DirectX e UWP.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="set-up-visual-studio-for-game-development.md">Ferramentas do Visual Studio para programação de jogos</a></p></td>
+<td align="left"><p><a href="set-up-visual-studio-for-game-development.md">Ferramentas do Visual Studio para a programação de jogo</a></p></td>
 <td align="left"><p>Uma visão geral das ferramentas específicas do DirectX disponíveis no Visual Studio.</p></td>
 </tr>
 <tr class="odd">
@@ -59,15 +59,15 @@ Primeiro, você precisa do Visual Studio.
 ## <a name="next-steps"></a>Próximas etapas
 
 
-Se você não estiver fazendo a portabilidade de um jogo existente, veja os tópicos a seguir.
+Caso esteja fazendo a portabilidade de um jogo existente, consulte os tópicos a seguir.
 
--   [Fazer a portabilidade do OpenGL ES 2.0 para o DirectX 11](port-from-opengl-es-2-0-to-directx-11-1.md)
--   [Fazer a portabilidade do DirectX 9 para o UWP](porting-your-directx-9-game-to-windows-store.md)
+-   [Compatibilizar do OpenGL ES 2.0 ao DirectX 11](port-from-opengl-es-2-0-to-directx-11-1.md)
+-   [Porta do DirectX 9 para UWP](porting-your-directx-9-game-to-windows-store.md)
 
 Caso esteja criando um novo jogo em DirectX, consulte os tópicos a seguir.
 
--   [Criar um jogo UWP simples com o DirectX](tutorial--create-your-first-uwp-directx-game.md)
--   [Desenvolvimento do Marble Maze, um jogo da Plataforma Universal do Windows em C++ e no DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+-   [Criar um jogo simples da Plataforma Universal do Windows (UWP) com DirectX](tutorial--create-your-first-uwp-directx-game.md)
+-   [Desenvolvendo o Marble Maze, um jogo de plataforma Universal do Windows em C++ e DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c5e1c294da2b4ef24ff8f62b686890cb8c69c06
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942938"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646281"
 ---
 # <a name="input-assembler-ia-stage"></a>Estágio do assembler de entrada (IA)
 
@@ -30,7 +30,7 @@ Informações de adjacência são visíveis para um app apenas em um sombreador 
 
 Quando o estágio IA é solicitado para gerar dados de adjacência, os dados de entrada devem incluir dados de adjacência. Isso pode exigir o fornecimento de um vértice fictício (formando um triângulo degenerado), ou talvez sinalização em um dos atributos de vértice, seja o vértice existente ou não. Isso também precisaria ser detectado e manipulado por um sombreador de geometria, embora a seleção da geometria degenerada aconteça no estágio de rasterizador.
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entrada
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
 
 
 O estágio IA lê os dados da memória: dados primitivos (pontos, linhas e/ou triângulos) dos buffers preenchidos pelo usuário.
@@ -60,7 +60,7 @@ O estágio IA reúne os dados em primitivas e anexa valores gerados pelo sistema
 <td align="left"><p>O Direct3D dá suporte a várias topologias primitivas, que definem como os vértices são interpretados e renderizados pelo pipeline, como listas de ponto, listas de linha e faixas de triângulos.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="using-system-generated-values.md">Usando valores gerados pelo sistema</a></p></td>
+<td align="left"><p><a href="using-system-generated-values.md">Usando os valores gerados pelo sistema</a></p></td>
 <td align="left"><p>Valores gerados pelo sistema são gerados pelo estágio de assembler de entrada (IA) (com base na <a href="https://msdn.microsoft.com/library/windows/desktop/bb509647">semântica</a>) da entrada fornecida pelo usuário para permitir determinadas eficiências em operações do sombreador. Anexando dados, como uma ID de instância (visível para o <a href="vertex-shader-stage--vs-.md">estágio do sombreador de vértice (VS)</a>), uma ID de vértice (visível para VS) ou uma ID primitiva (visível para <a href="geometry-shader-stage--gs-.md">estágio do sombreador de geometria (GS)</a>/<a href="pixel-shader-stage--ps-.md">estágio do sombreador de pixel (PS)</a>), um estágio do sombreador subsequente pode acessar esses valores do sistema para otimizar o processamento nesse estágio.</p></td>
 </tr>
 </tbody>
@@ -71,7 +71,7 @@ O estágio IA reúne os dados em primitivas e anexa valores gerados pelo sistema
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de elementos gráficos](graphics-pipeline.md)
+[Pipeline de gráficos](graphics-pipeline.md)
 
  
 

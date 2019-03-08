@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animação
 ms.localizationpriority: medium
 ms.openlocfilehash: 834f631cd5c4b8696e75f83f194b95f809b1cf8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932592"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649861"
 ---
 # <a name="pull-to-refresh-with-source-modifiers"></a>Puxar para atualizar com modificadores de origem
 
@@ -20,9 +20,9 @@ Neste artigo, abordaremos detalhadamente como usar o recurso SourceModifier de u
 
 Aqui, presumimos que você esteja familiarizado com os conceitos abordados neste artigo:
 
-- [Animações controladas por entrada](input-driven-animations.md)
-- [Experiências personalizadas de manipulação com o InteractionTracker](interaction-tracker-manipulations.md)
-- [Animações baseadas em relações](relation-animations.md)
+- [Controlado por entrada animações](input-driven-animations.md)
+- [Experiências de manipulação personalizada com InteractionTracker](interaction-tracker-manipulations.md)
+- [Animações de relação com base](relation-animations.md)
 
 ## <a name="what-is-a-sourcemodifier-and-why-are-they-useful"></a>O que é um SourceModifier e por que eles são úteis?
 
@@ -67,7 +67,7 @@ ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.IsScrollInertiaEnabled="F
 </StackPanel>
 ```
 
-Como a ListView (`ThumbnailList`) é um controle XAML que já faz a rolagem, você precisará que a rolagem seja encadeada até o item pai (`ContentPanel`) quando esta atingir o primeiro item e não puder mais avançar a rolagem. (É no ContentPanel que você aplicará os modificadores de origem). Para que isso aconteça, é necessário definir ScrollViewer.IsVerticalScrollChainingEnabled como **true** na marcação ListView. Você também precisará definir o modo de encadeamento no VisualInteractionSource para **Always**.
+Como a ListView (`ThumbnailList`) é um controle XAML que já faz a rolagem, você precisará que a rolagem seja encadeada até o item pai (`ContentPanel`) quando esta atingir o primeiro item e não puder mais avançar a rolagem. (ContentPanel é onde você aplicará os modificadores de origem). Para isso ocorrer você precisará definir ScrollViewer.IsVerticalScrollChainingEnabled para **verdadeira** na marcação ListView. Você também precisará definir o modo de encadeamento no VisualInteractionSource para **Always**.
 
 Você precisa definir o manipulador PointerPressedEvent com o parâmetro _handledEventsToo_ como **true**. Sem essa opção, o PointerPressedEvent não será encadeado até o ContentPanel, pois o controle ListView marcará esses eventos como manipulados e eles não serão enviados à cadeia visual.
 

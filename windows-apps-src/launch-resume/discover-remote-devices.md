@@ -7,11 +7,11 @@ ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma
 ms.localizationpriority: medium
 ms.openlocfilehash: 7788cb546eddf77292210b5b1e8268239504a843
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930852"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592131"
 ---
 # <a name="discover-remote-devices"></a>Descobrir dispositivos remotos
 O aplicativo pode usar a rede sem fio, Bluetooth e uma conexão na nuvem para descobrir dispositivos Windows conectados com a mesma conta da Microsoft que o dispositivo de descoberta. Os dispositivos remotos não precisam ter nenhum software especial instalado para ser descoberto.
@@ -31,16 +31,16 @@ Os objetos de filtro devem ser construídos antes ou enquanto o objeto **RemoteS
 
 > [!NOTE]
 > O valor de filtro "proximal" não garante o grau de proximidade física. Para cenários que exigem uma proximidade física confiável, use o valor [**RemoteSystemDiscoveryType.SpatiallyProximal**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemdiscoverytype) no filtro. No momento, esse filtro permite somente dispositivos descobertos por Bluetooth. Como novos mecanismos de descoberta e protocolos que garantem a proximidade física são compatíveis, eles serão incluídos aqui também.  
-Há também uma propriedade na classe [**RemoteSystem**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem)que indica se um dispositivo descoberto está na verdade na proximidade física: [**RemoteSystem.IsAvailableBySpatialProximity**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem.IsAvailableByProximity).
+Também é uma propriedade de [ **RemoteSystem** ](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) classe que indica se um dispositivo descoberto na verdade está dentro de proximidade física: [**RemoteSystem.IsAvailableBySpatialProximity**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem.IsAvailableByProximity).
 
 > [!NOTE]
 > Se você pretende descobrir dispositivos em uma rede local (determinada pela seleção do filtro de tipo de descoberta), a rede precisa usar um perfil "privado" ou de "domínio". O dispositivo não vai descobrir outros dispositivos em uma rede "pública".
 
-Depois que uma lista de objetos [**IRemoteSystemFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.IRemoteSystemFilter) é criada, ela pode ser transmitida para o construtor de um **RemoteSystemWatcher**.
+Depois de criar uma lista de objetos [**IRemoteSystemFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.IRemoteSystemFilter), ela pode ser transmitida para o construtor de um **RemoteSystemWatcher**.
 
 [!code-cs[Main](./code/DiscoverDevices/MainPage.xaml.cs#SnippetCreateWatcher)]
 
-Quando o método [**Start**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher.Start) desse inspetor for chamado, ele acionará o evento [**RemoteSystemAdded** ](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher.RemoteSystemAdded) somente se for detectado um dispositivo que atenda a todos os seguintes critérios:
+Quando o método [**Start**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher.Start) desse inspetor for chamado, ele acionará o evento [**RemoteSystemAdded**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher.RemoteSystemAdded) somente se for detectado um dispositivo que atenda a todos os seguintes critérios:
 * Ele é detectável por conexão proximal
 * É um desktop ou um telefone
 * Ele é classificado como disponível
@@ -90,10 +90,10 @@ if (!RemoteSystem.IsAuthorizationKindEnabled(RemoteSystemAuthorizationKind.Anony
 
 Para alterar essa configuração, o usuário deve abrir o aplicativo de **Configurações**. No menu **Sistema** > **Experiências compartilhadas** > **Compartilhar entre dispositivos**, há uma caixa de lista suspensa na qual o usuário pode especificar com quais dispositivos o sistema pode ser compartilhado.
 
-![página de configurações de experiências compartilhadas](images/shared-experiences-settings.png)
+![página de configuração de experiências compartilhadas](images/shared-experiences-settings.png)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Apps e dispositivos conectados (projeto Roma)](connected-apps-and-devices.md)
-* [Iniciar um aplicativo remoto](launch-a-remote-app.md)
-* [Referência de API de sistemas remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)
+* [Aplicativos conectados e dispositivos (projeto Roma)](connected-apps-and-devices.md)
+* [Inicie um aplicativo remoto](launch-a-remote-app.md)
+* [Referência da API de sistemas remota](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)
 * [Exemplo de Sistemas Remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)

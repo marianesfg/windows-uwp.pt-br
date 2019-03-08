@@ -6,11 +6,11 @@ ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a296cc877279292f73b591a86ede9136b0d9758
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044164"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645191"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>Novidades dos documentos de desenvolvedor do Windows em setembro de 2017
 
@@ -36,10 +36,10 @@ Escrevemos quatro [tutoriais de noções básicas de XAML](https://docs.microsof
 
 Visão geral rápida dos novos artigos:
 
-+ [**Criar interfaces de usuário**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-ui) mostra como criar a interface básica da galeria de fotos.
-+ [**Criar associações de dados**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-data-binding) mostra como adicionar associações de dados à galeria de fotos, preenchendo-a com dados da imagem real.
-+ [**Criar estilos personalizados**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-style) mostra como adicionar estilos personalizados sofisticados aa menu de edição de fotos.
-+ [**Criar layouts adaptáveis**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-adaptive-layout) mostra como tornar o layout de galeria adaptável para que tenha uma boa aparência em todos os tamanhos de dispositivo e tela.
++ [**Criar interfaces do usuário** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-ui) mostra como criar a interface de galeria de foto básico.
++ [**Criar associações de dados** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-data-binding) mostra como adicionar associações de dados para a Galeria de fotos, populá-lo com dados de imagem real.
++ [**Criar estilos personalizados** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-style) mostra como adicionar estilos personalizados sofisticados para a menu de edição de fotos.
++ [**Criar layouts adaptáveis** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-adaptive-layout) mostra como fazer o layout da Galeria adaptável, para que fique bem em todos os tamanhos de tela e de dispositivo.
 
 ### <a name="get-started-tutorials"></a>Tutoriais de introdução
 

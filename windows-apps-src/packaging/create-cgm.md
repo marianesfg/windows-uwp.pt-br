@@ -1,19 +1,19 @@
 ---
 ms.assetid: ff2523cb-8109-42be-9dfc-cb5d09002574
-title: Crie e converta um mapa de grupo de conteúdo de origem
+title: Criar e converter um mapa de grupo de conteúdo de origem
 description: Para preparar o seu aplicativo Universal Windows Platform (UWP) para a instalação de streaming de aplicativos UWP, você precisará criar um mapa de grupo de conteúdo. Este artigo irá ajudá-lo com as especificidades de criar e converter um mapa de grupo de conteúdo, fornecendo algumas dicas e truques ao longo do caminho.
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp, mapa de grupo de conteúdo, instalação de streaming, instalação de streaming de aplicativos uwp, mapa de grupo de conteúdo de origem
 ms.localizationpriority: medium
 ms.openlocfilehash: 882db0a6a97c5ee203a072156ca3eb82615607bb
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115863"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57647941"
 ---
-# <a name="create-and-convert-a-source-content-group-map"></a>Crie e converta um mapa de grupo de conteúdo de origem
+# <a name="create-and-convert-a-source-content-group-map"></a>Criar e converter um mapa de grupo de conteúdo de origem
 
 Para preparar o seu aplicativo Universal Windows Platform (UWP) para a instalação de streaming de aplicativos UWP, você precisará criar um mapa de grupo de conteúdo. Este artigo irá ajudá-lo com as especificidades de criar e converter um mapa de grupo de conteúdo, fornecendo algumas dicas e truques ao longo do caminho.
 
@@ -23,7 +23,7 @@ Você precisará criar um arquivo `SourceAppxContentGroupMap.xml` e, em seguida,
 
 Vamos caminhar através de um cenário simples onde a instalação de streaming de aplicativos UWP é benéfica. 
 
-Digamos que você criou um jogo UWP, mas o tamanho do seu aplicativo final é superior a 100 GB. Isso vai levar muito tempo para baixar da Microsoft Store, que pode ser inconveniente. Se você optar por usar a instalação de streaming de aplicativos UWP, poderá especificar a ordem em que os arquivos do seu aplicativo são baixados. Ao dizer à loja que faça o download de arquivos essenciais primeiro, o usuário poderá se envolver com seu aplicativo mais cedo, enquanto outros arquivos não essenciais serão baixados em segundo plano.
+Digamos que você criou um jogo UWP, mas o tamanho do seu aplicativo final é superior a 100 GB. Isso vai levar um longo tempo para baixar o Microsoft Store, que pode ser inconveniente. Se você optar por usar a instalação de streaming de aplicativos UWP, poderá especificar a ordem em que os arquivos do seu aplicativo são baixados. Ao dizer à loja que faça o download de arquivos essenciais primeiro, o usuário poderá se envolver com seu aplicativo mais cedo, enquanto outros arquivos não essenciais serão baixados em segundo plano.
 
 > [!NOTE]
 > Usar a instalação de streaming de aplicativo UWP depende muito da organização de arquivos do seu aplicativo. Recomenda-se que você pense sobre o layout de conteúdo do seu aplicativo em relação à instalação de streaming de aplicativo UWP o mais rápido possível para tornar mais simples a segmentação dos arquivos de seu aplicativo.
@@ -71,7 +71,7 @@ Veja o trecho do nosso arquivo de exemplo original `SourceAppxContentGroupMap.xm
 
 Há algumas coisas importantes a serem observadas aqui:
 
-- O `<ContentGroup>` dentro do elemento `<Required>` **deve** ser nomeado para "Necessário." Este nome é reservado apenas para o grupo de conteúdo necessário e não pode ser usado com nenhum outro`<ContentGroup>` no mapa do grupo de conteúdo final.
+- O `<ContentGroup>` dentro do elemento `<Required>`**deve** ser nomeado para "Necessário." Este nome é reservado apenas para o grupo de conteúdo necessário e não pode ser usado com nenhum outro`<ContentGroup>` no mapa do grupo de conteúdo final.
 - Há apenas um `<ContentGroup>`. Isso é intencional, uma vez que deve haver apenas um grupo de arquivos essenciais.
 - O arquivo neste exemplo é um único arquivo `.exe`. Um grupo de conteúdo necessário não está restrito a um arquivo, pode haver vários. 
 
@@ -166,4 +166,4 @@ Para obter mais informações sobre as opções que você pode usar com o **Make
 MakeAppx convertCGM /?
 ```
 
-Isso é tudo o que você precisa para deixar seu `AppxContentGroupMap.xml` final pronto para seu aplicativo! Há ainda mais a fazer antes de seu aplicativo esteja totalmente pronto para a Microsoft Store. Para obter mais informações sobre o processo completo de adição da instalação de streaming de aplicativo UWP, confira [esta postagem no blog ](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).
+Isso é tudo o que você precisa para deixar seu `AppxContentGroupMap.xml` final pronto para seu aplicativo! Há ainda mais o que fazer antes de seu aplicativo está totalmente pronto para a Microsoft Store. Para obter mais informações sobre o processo completo de adição da instalação de streaming de aplicativo UWP, confira [esta postagem no blog ](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).

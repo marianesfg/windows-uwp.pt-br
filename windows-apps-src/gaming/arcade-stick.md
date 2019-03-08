@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, joystick de arcade, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f9e3ff29dfb17b6e2a07df52153013b5266206e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933811"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593141"
 ---
 # <a name="arcade-stick"></a>Joystick de arcade
 
@@ -22,21 +22,21 @@ Ao ler esta página, você saberá como:
 * obter uma lista de joysticks de arcade conectados e seus usuários
 * detectar se um joystick de arcade foi adicionado ou removido
 * ler a entrada de um ou mais joysticks de arcade
-* como os joysticks de arcade se comportam como dispositivos de navegação da interface do usuário
+* como os cartões arcade se comportam como dispositivos de navegação da interface do usuário
 
 ## <a name="arcade-stick-overview"></a>Visão geral do joystick de arcade
 
 Os joysticks de arcade são dispositivos de entrada valorizados por reproduzirem a sensação de máquinas de arcade de fliperama e por seus controles digitais de alta precisão. Os joysticks de arcade são o dispositivo de entrada perfeito para luta "mano a mano" e outros jogos estilo arcade e são adequados para qualquer jogo que funcione bem com controles inteiramente digitais. Os joysticks de arcade têm suporte em aplicativos UWP do Windows 10 e do Xbox One pelo namespace [Windows.Gaming.Input][].
 
-Os joysticks de arcade Xbox One são equipados com um joystick digital de 8 vias, seis botões de **ação** (representados como A1 A6 na imagem abaixo) e dois botões **especiais** (representados como S1 e S2); eles são dispositivos de entrada inteiramente digitais que não dão suporte a controles analógicos ou vibração. Os joysticks de arcade Xbox One também são equipados com botões **Exibir** e **Menu** usado para dar suporte à navegação da interface do usuário, mas eles não estiverem aceitam comandos e não podem ser prontamente acessados como botões de joystick.
+Cartões de arcade Xbox One são equipados com um joystick digital de 8 vias, seis **ação** botões (representados como A6 A1 na imagem abaixo) e dois **especial** botões (representados como S1 e S2); eles são digital de todos os dispositivos de entrada que não dão suporte a controles analógicos ou vibração. Cartões de arcade Xbox One também são equipados com **modo de exibição** e **Menu** botões usados para oferecer suporte à navegação da interface do usuário, mas não estiver se destina a dar suporte a comandos de jogo e não podem ser acessados prontamente como botões de joystick .
 
-![Joystick com 4 direcional joystick, de Arcade 6 botões de ação (A1-A6) e 2 botões especiais (S1 e S2)](images/arcade-stick-1.png)
+![Arcade pen drive com joystick 4-direcional, botões de ação 6 (A1-A6) e 2 botões especiais (S1 e S2)](images/arcade-stick-1.png)
 
 ### <a name="ui-navigation"></a>Navegação da interface do usuário
 
 Para aliviar a sobrecarga do suporte para muitos dispositivos de entrada diferentes para a navegação de interface do usuário e para incentivar a consistência entre dispositivos e jogos, os dispositivos de entrada mais _físicos_ atuam simultaneamente como um dispositivo de entrada _lógico_ separado chamado de [controlador de navegação da interface do usuário](ui-navigation-controller.md). O controlador de navegação da interface do usuário fornece um vocabulário comum para comandos de navegação da interface do usuário em dispositivos de entrada.
 
-Como um controlador de navegação da interface do usuário, os joysticks de arcade mapeiam o [conjunto necessário](ui-navigation-controller.md#required-set) de comandos de navegação para o joystick e os botões de **modo de exibição**, **Menu**, **ação 1**e **2 de ação** .
+Como um controlador de navegação da interface do usuário, arcade pen drives mapa o [necessário conjunto](ui-navigation-controller.md#required-set) dos comandos de navegação para o controle e **exibição**, **Menu**, **1 ação**, e **ação 2** botões.
 
 | Comando de navegação | Entrada do joystick de arcade  |
 | ------------------:| ------------------- |
@@ -47,13 +47,13 @@ Como um controlador de navegação da interface do usuário, os joysticks de arc
 |               Exibir | Botão Exibir         |
 |               Menu | Botão Menu         |
 |             Aceitar | Botão de ação 1     |
-|             Cancelar | Botão de ação 2     |
+|             Cancel | Botão de ação 2     |
 
 Os joysticks de arcade não mapeiam qualquer um dos comandos de navegação do [conjunto opcional](ui-navigation-controller.md#optional-set).
 
 ## <a name="detect-and-track-arcade-sticks"></a>Detectar e rastrear joysticks de arcade
 
-Detectando e controle de Arcade funciona exatamente da mesma maneira como faz para gamepads, exceto com a classe [ArcadeStick][] em vez da classe [Gamepad](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad) . Consulte [Gamepad e vibração](gamepad-and-vibration.md) para obter mais informações.
+Detectar e acompanhar arcade cartões funcionam exatamente da mesma maneira como faz para gamepads, exceto com o [ArcadeStick][] classe, em vez da [Gamepad](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad) classe. Consulte [Gamepad e vibração](gamepad-and-vibration.md) para obter mais informações.
 
 <!-- Arcade sticks are managed by the system, therefore you don't have to create or initialize them. The system provides a list of connected arcades sticks and events to notify you when an arcade stick is added or removed.
 
@@ -141,14 +141,14 @@ Além do estado do joystick de arcade, cada leitura inclui um carimbo de data e 
 
 ### <a name="reading-the-buttons"></a>Lendo os botões
 
-Cada um dos botões de joystick de arcade&mdash;as quatro direções do joystick, seis botões de **ação** e dois botões **especiais** &mdash;fornece uma leitura digital que indica se ele foi pressionado (para baixo) ou liberado (para cima). Para garantir a eficiência, as leituras dos botões não são representadas como valores booleanos individuais; em vez disso, elas são reunidas em um único campo de bits que é representado pela enumeração [ArcadeStickButtons][] .
+Cada um dos botões pen drive arcade&mdash;quatro direções de joystick, seis **ação** botões e dois **especial** botões&mdash;fornece uma leitura digital que indica se ele tem pressionado (para baixo) ou liberado (para cima). Para obter eficiência, leituras de botão não são representadas como valores boolianos individuais; em vez disso, eles são todos empacotados em um único campo de bits que é representado pela [ArcadeStickButtons][] enumeração.
 
 > [!NOTE]
-> Os joysticks de Arcade são equipados com botões adicionais usados para navegação na interface do usuário, como os botões de **modo de exibição** e **Menu** . Esses botões não fazem parte da enumeração `ArcadeStickButtons` e só podem ser lidos acessando o joystick de arcade como um dispositivo de navegação da interface do usuário. Para obter mais informações, consulte [Dispositivo de navegação da interface do usuário](ui-navigation-controller.md).
+> Cartões Arcade são equipados com botões adicionais usados para navegação de interface do usuário, como o **modo de exibição** e **Menu** botões. Esses botões não fazem parte da enumeração `ArcadeStickButtons` e só podem ser lidos acessando o joystick de arcade como um dispositivo de navegação da interface do usuário. Para obter mais informações, consulte [Dispositivo de navegação da interface do usuário](ui-navigation-controller.md).
 
 Os valores dos botões são lidos na propriedade `Buttons` da estrutura [ArcadeStickReading][]. Como essa propriedade é um campo de bits, o mascaramento bit a bit é usado para isolar o valor do botão de interesse. O botão está pressionado (para baixo) quando o bit correspondente está definido; caso contrário, ele está liberado (para acima).
 
-O exemplo a seguir determina se o botão **ação 1** está pressionado.
+O exemplo a seguir determina se o **ação 1** é pressionado.
 
 ```cpp
 if (ArcadeStickButtons::Action1 == (reading.Buttons & ArcadeStickButtons::Action1))
@@ -157,7 +157,7 @@ if (ArcadeStickButtons::Action1 == (reading.Buttons & ArcadeStickButtons::Action
 }
 ```
 
-O exemplo a seguir determina se o botão **ação 1** está liberado.
+O exemplo a seguir determina se o **ação 1** botão é liberado.
 
 ```cpp
 if (ArcadeStickButtons::None == (reading.Buttons & ArcadeStickButtons::Action1))
@@ -168,7 +168,7 @@ if (ArcadeStickButtons::None == (reading.Buttons & ArcadeStickButtons::Action1))
 
 Às vezes, convém determinar quando um botão passa de pressionado para liberado ou vice-versa, se vários botões foram pressionados ou liberados ou se um conjunto de botões está organizado de determinada maneira &mdash; alguns pressionados, outros, não. Para obter informações sobre como detectar essas condições, consulte [Detectando transições do botão](input-practices-for-games.md#detecting-button-transitions) e [Detectando organizações complexas de botão](input-practices-for-games.md#detecting-complex-button-arrangements).
 
-## <a name="run-the-inputinterfacing-sample"></a>Executar a amostra InputInterfacing
+## <a name="run-the-inputinterfacing-sample"></a>Executar o exemplo InputInterfacing
 
 A [amostra InputInterfacingUWP _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP) demonstra como usar joysticks de arcade e diferentes tipos de dispositivos de entrada em conjunto e como esses dispositivos de entrada se comportam como controladores de navegação da interface do usuário.
 
@@ -176,7 +176,7 @@ A [amostra InputInterfacingUWP _(github)_](https://github.com/Microsoft/Xbox-ATG
 
 * [Windows.Gaming.Input.UINavigationController][]
 * [Windows.Gaming.Input.IGameController][]
-* [Práticas de entrada para jogos](input-practices-for-games.md)
+* [Práticas recomendadas de entrada para jogos](input-practices-for-games.md)
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.IGameController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.aspx

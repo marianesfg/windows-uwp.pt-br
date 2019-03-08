@@ -1,28 +1,28 @@
 ---
 title: Concluir código para DDSTextureLoader
-description: Conclua o código para a classe e o método que carrega uma textura DDS da memória.
+description: Conclua código para a classe e o método que carrega uma textura DDS da memória.
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, ddstextureloader
 ms.localizationpriority: medium
 ms.openlocfilehash: 1501a13b188a995d591b7348202792dfbfd27ac8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941649"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662441"
 ---
 # <a name="complete-code-for-ddstextureloader"></a>Concluir código para DDSTextureLoader
 
 
 
-Conclua o código para a classe e o método que carrega uma textura DDS da memória.
+Conclua código para a classe e o método que carrega uma textura DDS da memória.
 Consulte [Carregar recursos no seu jogo DirectX](load-a-game-asset.md) para ver uma discussão sobre texturas e como usar esse exemplo.
 
 Este tópico contém estas seções:
 
--   [Tecnologias](#technologies)
+-   [Technologies](#technologies)
 -   [Requisitos](#requirements)
 -   [Exibir o código (C++)](#view-the-code-c)
 

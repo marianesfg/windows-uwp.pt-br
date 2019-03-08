@@ -1,5 +1,5 @@
 ---
-Description: This topic describes the use of contact geometry for touch targeting and provides best practices for targeting in Windows Runtime apps.
+Description: Este tópico descreve o uso da geometria de contato por área de toque e fornece as práticas recomendadas de direcionamento em aplicativos do Windows Runtime.
 title: Direcionamento
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e8425232512650d5c80bf6fee9745b261aee8d9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929000"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646051"
 ---
 # <a name="guidelines-for-targeting"></a>Diretrizes de direcionamento
 
@@ -53,7 +53,7 @@ Por exemplo, quando um toque é detectado, ele é registrado se o objeto for arr
 ## <a name="target-sizes"></a>Tamanhos do alvo
 
 
-Em geral, defina o tamanho do alvo de toque como 9mm ou maior (48x48 pixels em uma tela de 135PPI em um nível de ajuste predefinido de 1,0x). Evite usar alvos de toque que tenham menos de 7mm.
+Em geral, defina o tamanho do alvo de toque como 9 mm ou maior (48x48 pixels em uma tela de 135 PPI em um nível de ajuste predefinido de 1,0x). Evite usar alvos de toque que tenham menos de 7 mm.
 
 O diagrama a seguir mostra como o tamanho do destino normalmente é uma combinação do destino visual, do tamanho do destino real e de qualquer área de preenchimento entre o destino real e outros destinos possíveis.
 
@@ -88,8 +88,8 @@ A tabela a seguir lista os tamanhos mínimos e recomendados para os componentes 
 </tr>
 <tr class="odd">
 <td align="left">Tamanho real do alvo</td>
-<td align="left">7mm</td>
-<td align="left">Maior ou igual a 9mm (48 x 48 px em 1x)</td>
+<td align="left">7 mm</td>
+<td align="left">Maior ou igual a 9 mm (48 x 48 px em 1x)</td>
 </tr>
 <tr class="even">
 <td align="left">Tamanho total do alvo</td>
@@ -104,8 +104,8 @@ A tabela a seguir lista os tamanhos mínimos e recomendados para os componentes 
 
 Essas recomendações de tamanho de destino podem ser ajustadas de acordo com determinado cenário. Algumas das considerações incluídas nessas recomendações são:
 
--   Frequência de toques: considere tornar os destinos pressionados repetidas vezes ou com frequência maiores que o tamanho mínimo.
--   Consequência do erro: destinos com consequências graves quando tocados por engano devem ter preenchimento maior e ser colocados mais distantes da extremidade da área de conteúdo. Isso vale principalmente para destinos que são tocados com frequência.
+-   Frequência de toques: Considere tornar destinos que são frequentemente ou repetidamente pressionados maiores do que o tamanho mínimo.
+-   Consequência de erro: Destinos que têm sérias consequências se tocadas em erro devem ter o preenchimento maior e ser colocados mais longe da borda da área de conteúdo. Isso vale principalmente para destinos que são tocados com frequência.
 -   Posição na área de conteúdo
 -   Fator forma e tamanho da tela
 -   Postura do dedo
@@ -131,7 +131,7 @@ O compartilhamento é uma indicação visual (um conector de um ponto de contato
 
 Esse recurso não está exposto para desenvolvedores de aplicativos UWP que usam o JavaScript.
 
-## <a name="scrubbing"></a>Esfregar
+## <a name="scrubbing"></a>Anulação
 
 
 Esfregar significa tocar em qualquer lugar dentro de um campo de alvos e deslizar para selecionar o alvo desejado sem tirar o dedo até que esteja sobre o alvo desejado. Isso também é conhecido como "ativação sem largar", onde o objeto que é ativado é aquele que foi tocado por último quando o dedo foi suspenso da tela.
@@ -150,20 +150,20 @@ Siga estas diretrizes para criar interações de esfregar:
 
 
 **Exemplos**
-* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Exemplos de arquivo-morto**
-* [Entrada: amostra de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: exemplo de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de teste de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: amostra de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: amostra de gestos no Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: amostra de manipulações e gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Amostra de entrada por toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+**Amostras de arquivo-morto**
+* [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: Exemplo de teste de hit de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: Exemplo simplificado de tinta](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: Exemplo de gestos do Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Entrada: Manipulações e exemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Exemplo de entrada de toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

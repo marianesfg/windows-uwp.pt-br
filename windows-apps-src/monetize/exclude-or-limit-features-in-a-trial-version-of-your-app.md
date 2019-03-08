@@ -1,5 +1,5 @@
 ---
-Description: If you enable customers to use your app for free during a trial period, you can entice your customers to upgrade to the full version of your app by excluding or limiting some features during the trial period.
+Description: Se você permitir que os clientes usem seu app gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do app excluindo ou limitando alguns recursos durante o período de avaliação.
 title: Excluir ou limitar recursos em uma versão de avaliação
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
 keywords: windows 10, uwp, compra no aplicativo, avaliação, IAP, Windows.ApplicationModel.Store
@@ -7,24 +7,24 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 36d7ada6567db95609203f8f163b78631e141b4f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943230"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655561"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>Excluir ou limitar recursos em uma versão de avaliação
 
-Se você permitir que os clientes usem seu app gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do app excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que o seu aplicativo permita que eles funcionem após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
+Se você permitir que os clientes usem seu app gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do app excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que seu aplicativo permita que eles funcionem apenas após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
 
 > [!IMPORTANT]
-> Este artigo demonstra como usar os membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para implementar a funcionalidade de demonstração. Esse namespace não está sendo atualizado com os novos recursos e recomendamos que você use o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) em vez disso. O namespace **Windows.Services.Store** dá suporte a tipos de complemento mais recentes, como complementos consumíveis gerenciado pela loja e assinaturas e foi projetado para ser compatível com futuros tipos de produtos e recursos compatíveis com o Partner Center e o armazenamento. O namespace **Windows.Services.Store** foi introduzido no Windows 10, versão 1607 e pode ser usada somente em projetos para **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio. Para obter informações sobre como implementar a funcionalidade de demonstração usando o namespace **Windows.Services.Store**, consulte [este artigo](implement-a-trial-version-of-your-app.md).
+> Este artigo demonstra como usar os membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para implementar a funcionalidade de demonstração. Esse namespace não está sendo atualizado com os novos recursos e recomendamos que você use o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) em vez disso. O **Windows.Services.Store** namespace oferece suporte a tipos de complemento mais recente, como gerenciado pelo Store consumíveis complementos e assinaturas e é projetado para ser compatível com tipos futuros de produtos e recursos suportados pelo parceiro Centro e a Store. O namespace **Windows.Services.Store** foi introduzido no Windows 10, versão 1607 e pode ser usada somente em projetos para **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio. Para obter informações sobre como implementar a funcionalidade de demonstração usando o namespace **Windows.Services.Store**, consulte [este artigo](implement-a-trial-version-of-your-app.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Um aplicativo do Windows no qual devem ser adicionados os recursos que os clientes podem comprar.
 
-## <a name="step-1-pick-the-features-you-want-to-enable-or-disable-during-the-trial-period"></a>Etapa 1: Escolha os recursos que você deseja habilitar ou desabilitar durante o período de avaliação.
+## <a name="step-1-pick-the-features-you-want-to-enable-or-disable-during-the-trial-period"></a>Etapa 1: Escolher os recursos que você deseja habilitar ou desabilitar durante o período de avaliação
 
 O estado da licença atual de seu app é armazenado como propriedades da classe [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157). Geralmente, você coloca as funções que dependem do estado da licença em um bloco condicional, conforme descrito na próxima etapa. Ao considerar esses recursos, verifique se você pode implementá-los de maneira que funcionem em todos os estados de licença.
 
@@ -34,22 +34,22 @@ Analise sobre o tipo de aplicativo sendo criado e uma boa estratégia de avalia�
 
 Nos aplicativos não destinados a jogos, a configuração de uma data de expiração funciona bem, pois os usuários podem desenvolver um bom entendimento do aplicativo como um todo. Veja aqui alguns cenários comuns de expiração e as opções para lidar com eles.
 
--   **A licença de avaliação expira enquanto o aplicativo está em execução**
+-   **Licença de avaliação expirar enquanto o aplicativo está em execução**
 
     Se a avaliação expirar enquanto o aplicativo estiver em execução, o aplicativo poderá:
 
     -   Não fazer nada.
     -   Exibir uma mensagem para o cliente.
-    -   Fechar.
+    -   Feche.
     -   Solicitar que o cliente faça a compra.
 
     A prática recomendada é exibir uma mensagem com uma solicitação de compra do aplicativo e, se o cliente comprá-lo, continuar com todos os recursos habilitados. Se o usuário não se decidir pela compra, feche o aplicativo ou lembre periodicamente o usuário para comprá-lo.
 
--   **A licença de avaliação expira antes de o aplicativo ser iniciado**
+-   **Licença de avaliação expira antes que o aplicativo é iniciado**
 
     Se a avaliação expirar antes de o usuário iniciar o aplicativo, ele não será iniciado. Em vez disso, os usuários veem uma caixa de diálogo que lhes dá a opção de comprar o aplicativo na loja.
 
--   **O cliente compra o aplicativo enquanto ele está em execução**
+-   **Cliente adquire o aplicativo enquanto ele está em execução.**
 
     Se o cliente comprar o aplicativo enquanto ele estiver em execução, aqui estão algumas ações que o aplicativo poderá executar.
 
@@ -68,21 +68,21 @@ Por enquanto, você receberá informações de licença simuladas usando [Curren
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTest)]
 
-Em seguida, adicione um manipulador de eventos para receber as notificações quando a licença for alterada durante a execução do app. A licença do aplicativo pode ser alterada quando o período de avaliação expira ou o cliente compra o aplicativo por meio de uma Loja, por exemplo.
+Em seguida, adicione um manipulador de eventos para receber as notificações quando a licença for alterada durante a execução do app. A licença do app poderá ser alterada se o período de avaliação expirar ou o cliente comprar o app por meio de uma Loja, por exemplo.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTestWithEvent)]
 
-## <a name="step-3-code-the-features-in-conditional-blocks"></a>Etapa 3: Codificar recursos em blocos condicionais
+## <a name="step-3-code-the-features-in-conditional-blocks"></a>Etapa 3: Os recursos em blocos condicionais de código
 
 Quando o evento de alteração da licença for gerado, o app deverá chamar a API de Licença para determinar se o status de avaliação foi alterado. O código nesta etapa mostra como estruturar o manipulador desse evento. Nesse ponto, se um usuário comprou o aplicativo, é uma prática recomendada fornecer comentários para o usuário informando que o status de licença foi alterado. Você pode precisar solicitar que o usuário reinicie o aplicativo, caso este tenha sido codificado assim. Mas faça essa transição de maneira mais transparente e suave possível.
 
-Este exemplo mostra como avaliar o status de licença do aplicativo para que você possa habilitar ou desabilitar um recurso do aplicativo de forma adequada.
+Este exemplo mostra como avaliar o status de licença do app para que você possa habilitar ou desabilitar um recurso do app de forma adequada.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#ReloadLicense)]
 
-## <a name="step-4-get-an-apps-trial-expiration-date"></a>Etapa 4: Obter uma data de expiração da avaliação do aplicativo
+## <a name="step-4-get-an-apps-trial-expiration-date"></a>Etapa 4: Obter a data de expiração da avaliação do aplicativo
 
 Inclua o código para determinar a data de expiração da avaliação do app.
 
@@ -91,13 +91,13 @@ O código neste exemplo define uma função para obter a data de expiração da 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#DisplayTrialVersionExpirationTime)]
 
-## <a name="step-5-test-the-features-using-simulated-calls-to-the-license-api"></a>Etapa 5: Testar os recursos usando chamadas simuladas à API de Licença
+## <a name="step-5-test-the-features-using-simulated-calls-to-the-license-api"></a>Etapa 5: Testar os recursos usando chamadas simuladas para a API de licença
 
-Agora, teste seu app usando dados simulados. **CurrentAppSimulator** obtém informações específicas do teste de um arquivo XML denominado WindowsStoreProxy.xml, localizado em %UserProfile%\\AppData\\local\\packages\\&lt;nome do pacote&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. Você pode editar o WindowsStoreProxy.xml para alterar as datas de expiração simuladas do app e seus recursos. Teste todas as configurações possíveis de expiração e licença para verificar se tudo funciona conforme o esperado. Para obter mais informações, consulte [Usando o arquivo WindowsStoreProxy.xml com CurrentAppSimulator](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy).
+Agora, teste seu app usando dados simulados. **CurrentAppSimulator** obtém especificidades do teste licenciamento informações de um arquivo XML chamado WindowsStoreProxy.xml, localizado em % UserProfile %\\AppData\\local\\pacotes\\ &lt; nome do pacote&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. Você pode editar o WindowsStoreProxy.xml para alterar as datas de expiração simuladas do app e seus recursos. Teste todas as configurações possíveis de expiração e licença para verificar se tudo funciona conforme o esperado. Para obter mais informações, consulte [Usando o arquivo WindowsStoreProxy.xml com CurrentAppSimulator](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy).
 
 Se esse caminho e esse arquivo não existirem, você deverá criá-los ou fornecê-los durante a instalação ou em tempo de execução. Se você tentar acessar a propriedade [CurrentAppSimulator.LicenseInformation](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.licenseinformation) sem o WindowsStoreProxy.xml estar presente nesse local específico, receberá um erro.
 
-## <a name="step-6-replace-the-simulated-license-api-methods-with-the-actual-api"></a>Etapa 6: Substituir os métodos da API de Licença simulada pela API real
+## <a name="step-6-replace-the-simulated-license-api-methods-with-the-actual-api"></a>Etapa 6: Substitua os métodos da API de licença simulados com a API real
 
 Depois de testar seu app com o servidor de licenças simuladas, e antes de enviá-lo a uma Loja para certificação, substitua **CurrentAppSimulator** por **CurrentApp**, conforme mostrado no código de exemplo a seguir.
 
@@ -107,7 +107,7 @@ Depois de testar seu app com o servidor de licenças simuladas, e antes de envi�
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
 
-## <a name="step-7-describe-how-the-free-trial-works-to-your-customers"></a>Etapa 7: Descrever para os clientes como funciona a versão de avaliação gratuita
+## <a name="step-7-describe-how-the-free-trial-works-to-your-customers"></a>Etapa 7: Descrever como funciona a avaliação gratuita para seus clientes
 
 Lembre-se de explicar como o app se comportará durante e após o período de avaliação gratuita, assim os clientes não serão surpreendidos pelo comportamento do app.
 
@@ -115,8 +115,8 @@ Para saber mais sobre a descrição de seu aplicativo, consulte [Criar descriç�
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Exemplo da Loja (demonstra avaliações e compras no aplicativo)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
-* [Definir a disponibilidade e o preço do aplicativo](https://msdn.microsoft.com/library/windows/apps/mt148548)
+* [Exemplo de Store (demonstra as avaliações e compras no aplicativo)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
+* [Disponibilidade e preços do conjunto de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt148548)
 * [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765)
 * [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766)
  

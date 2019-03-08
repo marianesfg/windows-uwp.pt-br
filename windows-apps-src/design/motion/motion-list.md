@@ -1,5 +1,5 @@
 ---
-Description: List animations let you insert or remove single or multiple items from a collection, such as a photo album or a list of search results.
+Description: Animações de lista permitem inserir ou remover um ou vários itens de uma coleção, como um álbum de fotos ou uma lista de resultados de pesquisa.
 title: Adicionar e excluir animações em aplicativos UWP
 ms.assetid: A85006AE-4992-457a-B514-500B8BEF5DC8
 label: Motion--add and delete animations
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c7ca332b73aba067c2ae003d458e8d0d97c7a7e3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942882"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57642831"
 ---
 # <a name="add-and-delete-animations"></a>Adicionar e excluir animações
 
@@ -21,7 +21,7 @@ ms.locfileid: "8942882"
 
 Animações de lista permitem inserir ou remover um ou vários itens de uma coleção, como um álbum de fotos ou uma lista de resultados de pesquisa.
 
-> **APIs importantes**: [**classe AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br243048)
+> **APIs importantes**: [**Classe AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br243048)
 
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
@@ -39,8 +39,8 @@ Animações de lista permitem inserir ou remover um ou vários itens de uma cole
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Animando adições e exclusões de lista](https://msdn.microsoft.com/library/windows/apps/xaml/jj649430)
-* [Guia de início rápido: animando sua interface do usuário usando animações da biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Animando lista adições e exclusões](https://msdn.microsoft.com/library/windows/apps/xaml/jj649430)
+* [Guia de início rápido: Animando sua interface do usuário usando animações de biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Classe AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br243048)
 
  

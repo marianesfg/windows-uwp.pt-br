@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10 s, sempre conectado, solução de problemas de compatibilidade, windows no ARM
 ms.localizationpriority: medium
 ms.openlocfilehash: 763b00a5790274d81b6daa2838ef926936e458db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946364"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57647611"
 ---
 # <a name="program-compatibility-troubleshooter-on-arm"></a>Solução de problemas de compatibilidade de programas no ARM
 Emulação para dar suporte a aplicativos x86 é um novo recurso criado para Windows 10 no ARM64. Às vezes, a emulação executa otimizações que não resultam na melhor experiência. Você pode usar a Solução de problemas de compatibilidade de programas para ativar/desativar as configurações de emulação para seu aplicativo x86, reduzindo as otimizações de padrão e possivelmente aumentando a compatibilidade.
@@ -32,7 +32,7 @@ Todas as opções ativam as configurações que são aplicáveis e aplicadas em 
 
 Você pode alternar configurações de emulação clicando com o botão direito do mouse no executável e selecionando **Propriedades**.
 
-No ARM, uma seção intitulada **Windows 10 no ARM** estará disponível na guia **Compatibilidade**. Clique em **Alterar configurações de emulação** para iniciar uma segunda janela como esta.
+No ARM, uma seção intitulada **Windows 10 no ARM** estará disponível na **compatibilidade** guia. Clique em **alterar configurações de emulação** para iniciar uma segunda janela como a seguir.
 
 ![Captura de tela de Alterar configurações de emulação](images/arm/Capture.png)
 

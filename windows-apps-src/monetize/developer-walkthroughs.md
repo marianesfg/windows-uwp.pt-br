@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, passo a passo
 ms.localizationpriority: medium
 ms.openlocfilehash: 8bf2605c55b9b73ccd3376f9c812da31339caedc
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050709"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662661"
 ---
 # <a name="implement-ads-in-your-app"></a>Implementa anúncios no aplicativo
 
@@ -22,9 +22,9 @@ Os artigos desta seção para mostram como adicionar anúncios em faixa, anúnci
 |  Tópico    | Descrição |               
 |----------|-------|
 | [Anúncios em faixa](banner-ads.md)     | Fornece instruções para adicionar um anúncio em faixa ao seu aplicativo UWP usando a classe [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) no SDK do Microsoft Advertising.        |
-| [Anúncios Intersticiais](interstitial-ads.md)    | Fornece instruções para adicionar um anúncio intersticial ao seu aplicativo UWP usando a classe [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) no SDK do Microsoft Advertising.       |
+| [Anúncios intersticiais](interstitial-ads.md)    | Fornece instruções para adicionar um anúncio intersticial ao seu aplicativo UWP usando a classe [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) no SDK do Microsoft Advertising.       |
 | [Anúncios nativos](native-ads.md)       | Fornece instruções para adicionar um anúncio nativo ao seu aplicativo UWP usando as classes [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) e [NativeAdV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) no SDK do Microsoft Advertising.  |
-| [Mostrar anúncios em conteúdo de vídeo](add-advertisements-to-video-content.md)     |  Fornece instruções para mostrar anúncios durante o conteúdo de vídeo em seu aplicativo UWP (esse recurso atualmente tem suporte somente para aplicativos criados usando em JavaScript com HTML). |
+| [Mostrar anúncios no conteúdo de vídeo](add-advertisements-to-video-content.md)     |  Fornece instruções para mostrar anúncios durante o conteúdo de vídeo em seu aplicativo UWP (esse recurso atualmente tem suporte somente para aplicativos criados usando em JavaScript com HTML). |
 
 
 
