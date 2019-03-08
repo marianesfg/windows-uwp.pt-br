@@ -1,30 +1,30 @@
 ---
-description: Você começa o processo de portabilidade ao criar um novo projeto do Windows 10 no Visual Studio e copiar seus arquivos nele.
-title: Portando projetos WindowsPhone Silverlight para projetos UWP
+description: Você pode começar o processo de portabilidade criando um novo projeto do Windows 10 no Visual Studio e copiar os arquivos nele.
+title: Portabilidade de projetos do Windows Phone Silverlight para projetos da UWP
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: fe07e19a66bb7fc85a69a3bd542894e0b22aba9b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045382"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634181"
 ---
-# <a name="porting-windowsphone-silverlight-projects-to-uwp-projects"></a>Portando projetos WindowsPhone Silverlight para projetos UWP
+# <a name="porting-windowsphone-silverlight-projects-to-uwp-projects"></a>Portabilidade de projetos do Windows Phone Silverlight para projetos da UWP
 
 
 O tópico anterior era [Mapeamentos de namespace e de classe](wpsl-to-uwp-namespace-and-class-mappings.md).
 
-Você começa o processo de portabilidade ao criar um novo projeto do Windows 10 no Visual Studio e copiar seus arquivos nele.
+Você pode começar o processo de portabilidade criando um novo projeto do Windows 10 no Visual Studio e copiar os arquivos nele.
 
 ## <a name="create-the-project-and-copy-files-to-it"></a>Crie o projeto e copie os arquivos nele
 
-1.  Inicie o Microsoft Visual Studio2015 e crie um novo projeto de aplicativo em branco (Universal do Windows). Para obter mais informações, consulte [Iniciar rapidamente seu aplicativo do Windows Runtime 8. x usando modelos (c#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Seu novo projeto cria um pacote do aplicativo (um arquivo appx) que será executado em todas as famílias de dispositivos.
-2.  No seu projeto de aplicativo do WindowsPhone Silverlight, identifique todos os arquivos de código-fonte e arquivos de ativo visual que você deseja reutilizar. Usando o Explorador de Arquivos, copie modelos de dados, modelos de exibição, ativos visuais, dicionários de recursos, estrutura de pastas e tudo mais que deseja reutilizar em seu novo projeto. Copie ou crie subpastas no disco conforme necessário.
-3.  Copie também os modos de exibição (por exemplo, MainPage.xaml e MainPage.xaml.cs) para o nó do novo projeto. Novamente, crie novas subpastas conforme necessário e remova os modos de exibição existentes do projeto. Porém, antes de substituir ou remover um modo de exibição gerado pelo Visual Studio, mantenha uma cópia, pois ela pode ser útil para referência posterior. A primeira fase da portabilidade de um aplicativo do WindowsPhone Silverlight se concentra em fazer com que ele aparência boa e funcione bem em uma família de dispositivos. Mais tarde, você voltará sua atenção para certificar-se de que os modos de exibição adaptam-se bem a todos os fatores forma e, opcionalmente, adicionar qualquer código adaptável para tirar o máximo proveito de uma família de dispositivos específica.
+1.  Inicie o Microsoft Visual Studio 2015 e criar um novo projeto de aplicativo em branco (Universal Windows). Para obter mais informações, consulte [Jumpstart seu tempo de execução do Windows 8.x aplicativo usando modelos (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Seu novo projeto cria um pacote do aplicativo (um arquivo appx) que será executado em todas as famílias de dispositivos.
+2.  Em seu projeto de aplicativo do Windows Phone Silverlight, identifique todos os arquivos de código-fonte e arquivos de ativos visuais que você deseja reutilizar. Usando o Explorador de Arquivos, copie modelos de dados, modelos de exibição, ativos visuais, dicionários de recursos, estrutura de pastas e tudo mais que deseja reutilizar em seu novo projeto. Copie ou crie subpastas no disco conforme necessário.
+3.  Copie também os modos de exibição (por exemplo, MainPage.xaml e MainPage.xaml.cs) para o nó do novo projeto. Novamente, crie novas subpastas conforme necessário e remova os modos de exibição existentes do projeto. Porém, antes de substituir ou remover um modo de exibição gerado pelo Visual Studio, mantenha uma cópia, pois ela pode ser útil para referência posterior. A primeira fase de portabilidade de um aplicativo do Windows Phone Silverlight se concentra em fazê-lo parecer BOM e funcionam bem em um dispositivo da família. Mais tarde, você voltará sua atenção para certificar-se de que os modos de exibição adaptam-se bem a todos os fatores forma e, opcionalmente, adicionar qualquer código adaptável para tirar o máximo proveito de uma família de dispositivos específica.
 4.  No **Gerenciador de Soluções**, verifique se **Mostrar Todos os Arquivos** está ativado. Selecione os arquivos copiados, clique neles com o botão direito do mouse e clique em **Incluir no Projeto**. Isso incluirá automaticamente suas pastas continentes. Em seguida, você pode desativar **Mostrar Todos os Arquivos**, se desejar. Um fluxo de trabalho alternativo, se preferir, é usar o comando **Adicionar Item Existente**, tendo criado qualquer subpasta necessária no **Gerenciador de Soluções** do Visual Studio. Verifique se os ativos visuais têm **Ação de Compilação** definida como **Conteúdo** e **Copiar para Diretório de Saída** definida como **Não Copiar**.
 5.  As diferenças nos nomes de namespace e classe gerarão muitos erros de compilação nesse estágio. Por exemplo, se você abrir os modos de exibição gerados pelo Visual Studio, verá que eles são do tipo [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) e não **PhoneApplicationPage**. Existem muitas diferenças de marcação XAML e de código imperativo que os tópicos a seguir abordam em detalhes neste guia de portabilidade. Mas você fará rápido progresso apenas seguindo estas etapas gerais: altere "clr-namespace" para "using" em suas declarações de prefixo de namespace na marcação XAML; use o tópico [Mapeamentos de classes e namespaces](wpsl-to-uwp-namespace-and-class-mappings.md) e o comando **Localizar e Substituir** do Visual Studio para fazer alterações em massa em seu código-fonte (por exemplo, substituir "System.Windows" por "Windows.UI.Xaml"); e no editor de código imperativo no Visual Studio, use os comandos **Resolver** e **Organizar Usos** no menu de contexto para alterações mais direcionadas.
 
@@ -34,7 +34,7 @@ A maioria das APIs da Plataforma Universal do Windows (UWP) que o aplicativo por
 
 Em caso de erros de compilação sobre namespaces ou tipos ou membros que não foram encontrados, essa deve ser a provável causa. Abra o tópico da API na documentação de referência da API e navegue até a seção Requisitos; ele informará qual é a implementação da família de dispositivos. Se essa não for a família de dispositivos de destino, para disponibilizar a API para o projeto, você precisará de uma referência para o SDK de extensão dessa família de dispositivos.
 
-Clique em **Projeto** &gt; **Adicionar Referência** &gt; **Windows Universal** &gt; **Extensões** e selecione o SDK de extensão apropriado. Por exemplo, se as APIs que você deseja chamar estão disponíveis somente na família de dispositivos móveis e elas foram introduzidas na versão 10.0.x.y, selecione **Extensões do Windows Mobile para UWP**.
+Clique em **Project** &gt; **adicionar referência** &gt; **Windows Universal** &gt; **extensões** e Selecione o SDK de extensão apropriado. Por exemplo, se as APIs que você deseja chamar estão disponíveis somente na família de dispositivos móveis e elas foram introduzidas na versão 10.0.x.y, selecione **Extensões do Windows Mobile para UWP**.
 
 Isso adicionará a seguinte referência ao seu arquivo de projeto:
 
@@ -62,12 +62,12 @@ Você descobrirá que refatorar um pouco, e/ou adicionar código adaptável (que
 -   É possível que seu aplicativo detecte a família de dispositivos em que ele esteja sendo executado e navegue para um modo de exibição que foi projetado especificamente para essa família de dispositivos. Para saber mais, confira [Detectando a plataforma em que seu aplicativo é executado](wpsl-to-uwp-input-and-sensors.md).
 -   Uma técnica semelhante que pode ser útil, caso não haja alternativa, é dar um nome especial a um arquivo de marcação ou arquivo **ResourceDictionary** (ou à pasta que contém o arquivo), de maneira que ele seja carregado automaticamente no tempo de execução somente quando o aplicativo é executado em uma família de dispositivos em especial. Essa técnica é ilustrada no estudo de caso [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md).
 -   Para usar recursos que não estejam disponíveis em todas as famílias de dispositivos (por exemplo, impressoras, scanners ou o botão da câmera), você pode escrever um código adaptável. Consulte o terceiro exemplo em [Compilação condicional e código adaptável](#conditional-compilation-and-adaptive-code) neste tópico.
--   Se você quiser dar suporte a WindowsPhone Silverlight e Windows 10, em seguida, você poderá compartilhar arquivos de código-fonte entre projetos. Veja como: no Visual Studio, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções**, selecione **Adicionar Item Existente**, selecione os arquivos a serem compartilhados e clique em **Adicionar como Link**. Armazene seus arquivos de código-fonte em uma pasta comum no sistema de arquivos onde os projetos vinculados a eles possam vê-los, e não se esqueça de adicioná-los ao controle do código-fonte. Caso possa fatorar o código-fonte imperativo de maneira que a maior parte de um arquivo, se não todo ele, funcione em ambas as plataformas, você não precisa ter duas cópias dele. É possível encapsular qualquer lógica específica da plataforma no arquivo dentro das diretivas de compilação condicional, onde possível, ou das condições de tempo de execução, onde necessário. Consulte a próxima seção abaixo e [Diretivas de pré-processador C#](https://msdn.microsoft.com/library/ed8yd1ha.aspx).
--   Para reutilização no nível binário, em vez de nível do código-fonte, há bibliotecas de classes portáteis, que oferecem suporte ao subconjunto de APIs .NET que estão disponíveis no WindowsPhone Silverlight e o subconjunto de aplicativos do Windows 10 (.NET Core). As assemblies da Biblioteca de Classes Portátil são compatíveis com binários nas plataformas .NET e mais. Use o Visual Studio para criar um projeto direcionado a uma Biblioteca de Classes Portátil. Consulte [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](https://msdn.microsoft.com/library/gg597391.aspx).
+-   Se você quiser dar suporte a Windows Phone Silverlight e Windows 10, em seguida, você poderá compartilhar arquivos entre projetos de código-fonte. Veja como: no Visual Studio, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções**, selecione **Adicionar Item Existente**, selecione os arquivos a serem compartilhados e clique em **Adicionar como Link**. Armazene seus arquivos de código-fonte em uma pasta comum no sistema de arquivos onde os projetos vinculados a eles possam vê-los, e não se esqueça de adicioná-los ao controle do código-fonte. Caso possa fatorar o código-fonte imperativo de maneira que a maior parte de um arquivo, se não todo ele, funcione em ambas as plataformas, você não precisa ter duas cópias dele. É possível encapsular qualquer lógica específica da plataforma no arquivo dentro das diretivas de compilação condicional, onde possível, ou das condições de tempo de execução, onde necessário. Consulte a próxima seção abaixo e [Diretivas de pré-processador C#](https://msdn.microsoft.com/library/ed8yd1ha.aspx).
+-   Para reutilização no nível binário, em vez de no nível do código fonte, há bibliotecas de classes portáteis que suporte o subconjunto de APIs do .NET que estão disponíveis no Windows Phone Silverlight, bem como o subconjunto para aplicativos do Windows 10 (.NET Core). As assemblies da Biblioteca de Classes Portátil são compatíveis com binários nas plataformas .NET e mais. Use o Visual Studio para criar um projeto direcionado a uma Biblioteca de Classes Portátil. Consulte [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](https://msdn.microsoft.com/library/gg597391.aspx).
 
 ## <a name="conditional-compilation-and-adaptive-code"></a>Compilação condicional e código adaptável
 
-Se você quiser dar suporte ao WindowsPhone Silverlight e Windows 10 em um único arquivo de código, em seguida, você pode fazer isso. Se você examinar o projeto do Windows 10 páginas de propriedades do projeto, você verá que o projeto define WINDOWS\_UAP como um símbolo de compilação condicional. Em geral, você pode usar a lógica a seguir para realizar uma compilação condicional.
+Se você quiser dar suporte a Windows Phone Silverlight e Windows 10 em um arquivo de código único, em seguida, você pode fazer isso. Se você olhar no seu projeto do Windows 10 em páginas de propriedades de projeto, você verá que o projeto define WINDOWS\_UAP como um símbolo de compilação condicional. Em geral, você pode usar a lógica a seguir para realizar uma compilação condicional.
 
 ```csharp
 #if WINDOWS_UAP
@@ -77,7 +77,7 @@ Se você quiser dar suporte ao WindowsPhone Silverlight e Windows 10 em um únic
 #endif // WINDOWS_UAP
 ```
 
-Se você tiver o código compartilhado entre um aplicativo WindowsPhone Silverlight e um aplicativo do Windows Runtime 8. x, em seguida, você já pode ter código-fonte com lógica da seguinte forma:
+Se você tiver um código que você tenha sido compartilhando entre um aplicativo do Windows Phone Silverlight e um aplicativo do Windows Runtime 8.x, você já pode ter o código-fonte com lógica como este:
 
 ```csharp
 #if NETFX_CORE
@@ -87,7 +87,7 @@ Se você tiver o código compartilhado entre um aplicativo WindowsPhone Silverli
 #endif // NETFX_CORE
 ```
 
-Em caso afirmativo, e agora deseja dar suporte a Windows 10, em seguida, você pode fazer isso, também.
+Nesse caso, e se quiser dar suporte a Windows 10 Além disso, em seguida, você pode fazer isso, muito.
 
 ```csharp
 #if WINDOWS_UAP
@@ -116,7 +116,7 @@ Você pode ter usado compilação condicional para limitar a manipulação do bo
 
 ```
 
-Você pode ter usado compilação condicional para limitar a manipulação do botão da câmera do hardware para o Windows Phone. No Windows 10, o botão de câmera do hardware é um conceito específico à família de dispositivos móveis. Como um pacote do aplicativo será executado em todos os dispositivos, mudaremos nossa condição em tempo de compilação para uma condição em tempo de execução usando o que é conhecido como código adaptável. Para isso, usamos a classe [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar, em tempo de execução, a presença da classe [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** é definido no SDK de extensão móvel, portanto, precisamos adicionar uma referência a esse SDK ao nosso projeto para que esse código seja compilado. Porém, o manipulador só será executado em um dispositivo que implementa os tipos definidos no SDK de extensão móvel, que é a família de dispositivos móveis. Assim, o código a seguir tem o cuidado em usar apenas recursos que estão presentes, embora consiga isso de maneira diferente da compilação condicional.
+Você pode ter usado compilação condicional para limitar a manipulação do botão da câmera do hardware para o Windows Phone. No Windows 10, o botão de câmera de hardware é um conceito específico para a família de dispositivos móveis. Como um pacote do aplicativo será executado em todos os dispositivos, mudaremos nossa condição em tempo de compilação para uma condição em tempo de execução usando o que é conhecido como código adaptável. Para isso, usamos a classe [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar, em tempo de execução, a presença da classe [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** é definido no SDK de extensão móvel, portanto, precisamos adicionar uma referência a esse SDK ao nosso projeto para que esse código seja compilado. Porém, o manipulador só será executado em um dispositivo que implementa os tipos definidos no SDK de extensão móvel, que é a família de dispositivos móveis. Assim, o código a seguir tem o cuidado em usar apenas recursos que estão presentes, embora consiga isso de maneira diferente da compilação condicional.
 
 ```csharp
        // Note: Cache the value instead of querying it more than once.
@@ -145,7 +145,7 @@ As configurações no projeto (inclusive todas as referências de SDKs de extens
 
 Vale a pena saber como editar o manifesto do pacote do aplicativo, pois os tópicos a seguir tratam sobre como usá-lo para diversas declarações, funcionalidades e outras configurações de que alguns recursos precisam. Você pode usar o editor de manifesto de pacote de aplicativo do Visual Studio para editá-lo. Se o **Gerenciador de Soluções** não for mostrado, escolha-o no menu **Exibir**. Clique duas vezes em **Package.appxmanifest**. Isso abre a janela do editor de manifesto. Selecione a guia apropriada para fazer alterações e salve as alterações. Certifique-se de que o elemento **pm:PhoneIdentity** no manifesto do aplicativo portado corresponda ao que está no manifesto do aplicativo que você está portando (para obter detalhes, consulte o tópico [**pm:PhoneIdentity**](https://msdn.microsoft.com/library/windows/apps/dn934763)).
 
-Consulte a [referência do esquema do Windows 10 de manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/dn934820).
+Ver [referência de esquema de manifesto de pacote para o Windows 10](https://msdn.microsoft.com/library/windows/apps/dn934820).
 
 O próximo tópico é [Solução de problemas](wpsl-to-uwp-troubleshooting.md).
 

@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use the powerful Visits Tracking feature for more practical location tracking.
+Description: Saiba como usar o recurso de rastreamento de visitas potente para rastreamento de localização mais prático.
 title: Diretrizes para usar o rastreamento de visitas
 ms.assetid: 0c101684-48a9-4592-9ed5-6c20f3b830f2
 ms.date: 05/18/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, localização, geovisit, geovisits
 ms.localizationpriority: medium
 ms.openlocfilehash: db351660722cd13a4e8f14bebb651d60f33d1671
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927534"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640771"
 ---
 # <a name="guidelines-for-using-visits-tracking"></a>Diretrizes para usar o rastreamento de visitas
 
@@ -269,6 +269,6 @@ Isso estabelece que uma classe de tarefa em segundo plano chamada `VisitBackgrou
 Seu aplicativo deve ser capaz de registrar a tarefa em segundo plano de manipulação de visitas, e essa tarefa deve ser ativada sempre que o dispositivo fizer uma alteração de estado relacionada à visita. Você precisará preencher a lógica em sua classe de tarefa em segundo plano para determinar o que fazer com essa informação de alteração de estado.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Criar e registrar uma tarefa em segundo plano fora do processo](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)
+* [Criar e registrar uma tarefa em segundo plano do out-of-process](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)
 * [Obter a localização do usuário](get-location.md)
 * [Namespace Windows.Devices.Geolocation](https://docs.microsoft.com/uwp/api/windows.devices.geolocation)

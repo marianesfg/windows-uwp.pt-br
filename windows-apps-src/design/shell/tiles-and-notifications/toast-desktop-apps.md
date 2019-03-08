@@ -1,5 +1,5 @@
 ---
-Description: Discover the different options desktop Win32 apps have for sending toast notifications
+Description: Descubra as diferentes opções de aplicativos de desktop do Win32 têm para o envio de notificações do sistema
 title: Notificações do sistema a partir de aplicativos da área de trabalho
 label: Toast notifications from desktop apps
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, win32, desktop, notificações do sistema, ponte de desktop, opções para enviar notificações do sistema, servidor com, ativador com, com, com falso, sem com, não com, enviar notificação do sistema
 ms.localizationpriority: medium
 ms.openlocfilehash: bab89962bdc7986f7653e39c7e5967a493421f05
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933877"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636081"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificações do sistema a partir de aplicativos da área de trabalho
 
@@ -30,8 +30,8 @@ A tabela a seguir ilustra as opções para oferecer suporte a notificações do 
 
 | Opção | Elementos visuais | Ações | Entradas | Ativas no processo |
 | -- | -- | -- | -- | -- |
-| [Ativador COM](#preferred-option---com-activator) | ✔️ | ✔️ | ✔️ | ✔️ |
-| [Nenhum CLSID COM/Stub](#alternative-option---no-com--stub-clsid) | ✔️ | ✔️ | ❌ | ❌ |
+| [Ativador de COM](#preferred-option---com-activator) | ✔️ | ✔️ | ✔️ | ✔️ |
+| [Não há COM / CLSID de Stub](#alternative-option---no-com--stub-clsid) | ✔️ | ✔️ | ❌ | ❌ |
 
 
 ## <a name="preferred-option---com-activator"></a>Opção preferida - ativador COM
@@ -81,6 +81,6 @@ Para aplicativos clássicos do Win32, configure a AUMID para que você pode envi
 
 ## <a name="resources"></a>Recursos
 
-* [Enviar uma notificação do sistema local a partir de aplicativos C# da área de trabalho](send-local-toast-desktop.md)
-* [Enviar uma notificação do sistema local a partir de aplicativos C++ do WRK para área de trabalho](send-local-toast-desktop-cpp-wrl.md)
-* [Conteúdo e documentação sobre notificações do sistema](adaptive-interactive-toasts.md)
+* [Enviar uma notificação do sistema local a partir da área de trabalho C# aplicativos](send-local-toast-desktop.md)
+* [Enviar uma notificação do sistema local do WRL C++ da área de trabalho aplicativos](send-local-toast-desktop-cpp-wrl.md)
+* [Documentação de conteúdo de notificação do sistema](adaptive-interactive-toasts.md)

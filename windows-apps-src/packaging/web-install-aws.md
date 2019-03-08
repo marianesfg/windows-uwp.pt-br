@@ -1,79 +1,79 @@
 ---
 title: Hospedagem de pacotes de aplicativo UWP no AWS para instalação pela Web
-description: Tutorial para configurar o servidor de web AWS validar a instalação do aplicativo por meio do instalador de aplicativo do aplicativo
+description: Tutorial para configurar o servidor de web do AWS validar a instalação do aplicativo por meio do instalador do aplicativo
 ms.date: 05/30/2018
 ms.topic: article
-keywords: Windows 10, Windows 10, UWP, sideload do instalador, AppInstaller, aplicativo, relacionados pacotes opcionais, definidos AWS
+keywords: o Windows 10, Windows 10, UWP, fazer sideload do instalador, AppInstaller, aplicativo, relacionadas a pacotes definidos, opcionais, AWS
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fe01a1c1a825377e886e042b4eef3868cbf5eb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931506"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628051"
 ---
 # <a name="hosting-uwp-app-packages-on-aws-for-web-install"></a>Hospedagem de pacotes de aplicativo UWP no AWS para instalação pela Web
 
 O aplicativo do Instalador de aplicativo permite que desenvolvedores e profissionais do setor de TI distribuam aplicativos do Windows 10 hospedando-os em sua própria Rede de disponibilização de conteúdo (CDN. Isso é útil para empresas que não desejam ou precisam publicar seus aplicativos na Microsoft Store, mas ainda querem aproveitar a plataforma de empacotamento e implantação do Windows 10.
 
-Este tópico descreve as etapas para configurar um site Amazon Web Services (AWS) para pacotes do aplicativo host UWP e como usar o instalador de aplicativo para instalar os pacotes de aplicativos.
+Este tópico descreve as etapas para configurar um site do Amazon Web Services (AWS) para hospedar pacotes do aplicativo UWP e como usar o aplicativo instalador de aplicativo para instalar os pacotes de aplicativo.
 
 ## <a name="setup"></a>Configuração
 
 Para seguir com sucesso este tutorial, você precisará do seguinte:
  
-1. Assinatura AWS 
+1. Assinatura do AWS 
 2. Página da Web
 3. Pacote do aplicativo UWP: o pacote do aplicativo que você distribuirá
 
-Opcional: [Projeto inicial](https://github.com/AppInstaller/MySampleWebApp) no GitHub. Isso é útil se você não tem um pacote do aplicativo ou página da Web para trabalhar, mas ainda quer aprender a usar esse recurso.
+Opcional: [Projeto Starter](https://github.com/AppInstaller/MySampleWebApp) no GitHub. Isso é útil se você não tem um pacote do aplicativo ou página da Web para trabalhar, mas ainda quer aprender a usar esse recurso.
 
-Este tutorial passará pela como configurar uma página da web e pacotes de host no AWS. Isso exigirá uma assinatura AWS. Dependendo da operação de escala, você pode usar sua associação gratuita para seguir este tutorial. 
+Este tutorial apresentará como configurar uma página da web e hospedar pacotes em AWS. Isso exigirá uma assinatura do AWS. Dependendo da escala de sua operação, você pode usar sua participação gratuita para acompanhar este tutorial. 
 
-## <a name="step-1---aws-membership"></a>Etapa 1 - associação AWS
-Para obter uma associação AWS, visite a [página de detalhes da conta AWS](https://aws.amazon.com/free/). Para os fins deste tutorial, você pode usar uma associação gratuita.
+## <a name="step-1---aws-membership"></a>Etapa 1 - associação do AWS
+Para obter uma associação do AWS, visite o [página de detalhes de conta do AWS](https://aws.amazon.com/free/). Para os fins deste tutorial, você pode usar uma associação gratuita.
 
-## <a name="step-2---create-an-amazon-s3-bucket"></a>Etapa 2 - criar uma classificação Amazon S3
+## <a name="step-2---create-an-amazon-s3-bucket"></a>Etapa 2: criar um bucket do Amazon S3
 
-Amazon Simple Storage Service (S3) é um AWS oferecendo para coletar, armazenar e analisar dados. S3 buckets são uma maneira conveniente de pacotes de aplicativo UWP de host e páginas da web para distribuição. 
+Amazon Simple Storage Service (S3) é uma oferta para coletar, armazenar e analisar dados AWS. S3 buckets são uma maneira conveniente de páginas da web para distribuição e pacotes de aplicativos UWP do host. 
 
-Depois de fazer logon AWS com suas credenciais, em `Services` localizar `S3`. 
+Depois de fazer logon AWS com suas credenciais, sob `Services` localizar `S3`. 
 
-Selecione a **classificação de criar**e insira um **nome de partição de memória** para seu site. Siga os prompts de caixa de diálogo para definir propriedades e permissões. Para garantir que seu aplicativo UWP pode ser distribuído pelo seu site, habilitar a **leitura** e permissões de **gravação** para sua classificação e selecione **conceder acesso de leitura público para esse compartimento de memória**.
+Selecione **criar bucket**e insira um **nome do Bucket** para seu site. Siga os prompts de caixa de diálogo para definir as propriedades e permissões. Para garantir que seu aplicativo UWP pode ser distribuído do seu site, habilite **leitura** e **escrever** permissões para o bucket e selecione **conceder acesso de leitura público para esse recipiente** .
 
-![Definir permissões no compartimento de memória Amazon S3](images/aws-permissions.png) 
+![Definir permissões no bucket do Amazon S3](images/aws-permissions.png) 
 
-Revise o resumo para garantir que as opções selecionadas são refletidas. Clique em **Criar partição de memória** para concluir esta etapa. 
+Examine o resumo para verificar se que as opções selecionadas são refletidas. Clique em **criar bucket** para concluir esta etapa. 
 
-## <a name="step-3---upload-uwp-app-package-and-web-pages-to-an-s3-bucket"></a>Etapa 3 - carregar o pacote de aplicativo UWP e páginas da web para uma classificação S3
+## <a name="step-3---upload-uwp-app-package-and-web-pages-to-an-s3-bucket"></a>Etapa 3: carregar o pacote de aplicativo UWP e páginas da web para um bucket S3
 
-Um você criou uma classificação Amazon S3, você poderá vê-lo em sua exibição Amazon S3. Aqui está um exemplo da aparência de nossa classificação de demonstração:
+Um você ter criado um bucket do Amazon S3, você poderá vê-lo no modo de exibição do Amazon S3. Aqui está um exemplo da aparência de nossa bucket de demonstração:
 
-![Modo de exibição de classificação Amazon S3](images/aws-post-create.png)
+![Exibição de bucket do Amazon S3](images/aws-post-create.png)
 
-Agora estamos prontos para carregar os pacotes de aplicativo e páginas da web que gostaríamos para hospedar nosso compartimento Amazon S3 em. 
+Agora estamos prontos para carregar os pacotes de aplicativos e páginas da web que gostaríamos de hospedar no nosso bucket do Amazon S3. 
 
-Clique no compartimento de memória recém-criado para carregar o conteúdo. O compartimento de memória está vazio, já que nada tenha sido carregado. Clique no botão **carregar** e selecione os pacotes de aplicativos e arquivos de página da web que você deseja carregar.
+Clique no bucket de recém-criado para carregar o conteúdo. O número de buckets está vazio, pois nada tiver sido carregado. Clique o **carregar** botão e selecione os pacotes de aplicativos e arquivos de página da web que você deseja carregar.
 
 > [!NOTE]
 > Você pode usar o pacote do aplicativo que faz parte do repositório de [Projeto inicial](https://github.com/AppInstaller/MySampleWebApp) fornecido no GitHub se não tiver um pacote do aplicativo disponível. O certificado (MySampleApp.cer) que o pacote usou também faz parte da amostra no GitHub. O certificado deve ser instalado em seu dispositivo antes de instalar o aplicativo.
 
-![Carregue o pacote do aplicativo](images/aws-upload-package.png)
+![carregar pacote de aplicativos](images/aws-upload-package.png)
 
-Semelhante às permissões para a criação de uma classificação Amazon S3, o conteúdo no compartimento de memória também deve ter permissões de **conceder acesso de leitura público para esse objeto (s)** , **gravar**e **ler**.
+Assim como as permissões para a criação de um bucket do Amazon S3, o conteúdo no bucket também deve ter **leia**, **escrever**, e **conceder acesso de leitura público para esse objeto (s)** permissões.
 
-Se você quiser testar carregar uma página da web, mas não tiver um, você pode usar a página de html de exemplo (default) do [Projeto inicial](https://github.com/AppInstaller/MySampleWebApp/blob/master/MySampleWebApp/default.html).
+Se você gostaria de testar o carregamento de uma página da web, mas não tiver uma, você pode usar a página html de exemplo (default. HTML) do [projeto Starter](https://github.com/AppInstaller/MySampleWebApp/blob/master/MySampleWebApp/default.html).
 
 > [!IMPORTANT]
-> Antes de carregar a página da web, confirme se a referência do pacote do aplicativo na página da web está correta. 
+> Antes de carregar a página da web, confirme se a referência de pacote de aplicativo em sua página da web está correta. 
 
-Para obter a referência do pacote de aplicativo, carregue o pacote do aplicativo pela primeira vez e copie a URL do pacote de aplicativo. Edite a página da web html para refletir o caminho do pacote de aplicativo correto. Consulte o exemplo de código para obter mais detalhes. 
+Para obter a referência de pacote de aplicativo, carregue o pacote do aplicativo pela primeira vez e copie a URL do pacote de aplicativo. Edite a página da web html para refletir o caminho do pacote de aplicativo correto. Consulte o exemplo de código para obter mais detalhes. 
 
-Selecione o arquivo do pacote do aplicativo carregados para obter o link de referência para o pacote do aplicativo, ele deve ser semelhante a este exemplo:
+Selecione o arquivo de pacote do aplicativo carregado para obter o link de referência para o pacote do aplicativo, ele deve ser semelhante a este exemplo:
 
-![caminho do pacote carregados](images/aws-package-path.png)
+![caminho de pacote carregado](images/aws-package-path.png)
 
-**Copie** o link para o aplicativo do pacote e adicionar a referência em sua página da web. 
+**Cópia** o link para o aplicativo de pacote e adicionar a referência em sua página da web. 
 
 ```html
 <html>
@@ -86,18 +86,18 @@ Selecione o arquivo do pacote do aplicativo carregados para obter o link de refe
     </body>
 </html>
 ```
-Carregue o arquivo html para sua classificação Amazon S3. Lembre-se de definir as permissões para permitir o acesso de **leitura** e **gravação** .
+Carregue o arquivo html para o bucket do Amazon S3. Lembre-se de definir as permissões para permitir **leia** e **gravar** acesso.
 
 ## <a name="step-4---test"></a>Etapa 4 - teste
 
-Depois que a página da web são carregados em sua classificação Amazon S3, obtenha o link para a página da web, selecionando o arquivo html carregados.
+Depois que a página da web é carregada para o bucket do Amazon S3, obter o link para a página da web, selecionando o arquivo html carregado.
 
-Use o link para abrir a página da web. Como definimos permissões para conceder acesso público para o pacote do aplicativo e a página da web, qualquer pessoa com o link para a página da web poderão acessá-lo e instalar seus pacotes de aplicativo UWP usando o instalador de aplicativo. Observe que o instalador de aplicativo é parte da plataforma Windows 10. Como desenvolvedor, você não precisará adicionar qualquer código adicional ou recursos ao seu aplicativo para habilitar o uso do instalador de aplicativo. 
+Use o link para abrir a página da web. Uma vez que podemos definir permissões para conceder acesso público para o pacote do aplicativo e a página da web, qualquer pessoa com o link para a página da web poderá acessá-lo e instalar seus pacotes de aplicativo UWP usando o instalador do aplicativo. Observe que o instalador de aplicativo é parte da plataforma do Windows 10. Como desenvolvedor, você não precisará adicionar qualquer código adicional ou recursos ao seu aplicativo para habilitar o uso do instalador do aplicativo. 
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
 ### <a name="app-installer-fails-to-install"></a>Falha na instalação do instalador de aplicativo 
 
-Instalação do aplicativo falhará se o certificado assinado com o pacote do aplicativo não estiver instalado no dispositivo. Para corrigir isso, você precisará instalar o certificado antes da instalação do aplicativo. Se você estiver hospedando um pacote do aplicativo para distribuição pública, é recomendável assinar o pacote de aplicativo com um certificado de autoridade de certificação. 
+Instalação do aplicativo falhará se o certificado assinado com o pacote do aplicativo não estiver instalado no dispositivo. Para corrigir isso, você precisará instalar o certificado antes da instalação do aplicativo. Se você estiver hospedando um pacote do aplicativo para distribuição pública, é recomendável para assinar seu pacote de aplicativo com um certificado de autoridade de certificação. 
 
 

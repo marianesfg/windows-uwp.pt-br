@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, renderização, cena, teste de profundidade, direct3d, sombras
 ms.localizationpriority: medium
 ms.openlocfilehash: 237da82ef51466ae2460c3be27486091bf4066f3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924515"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630451"
 ---
 # <a name="render-the-scene-with-depth-testing"></a>Renderizar a cena com teste de profundidade
 
 
 
 
-Crie um efeito de sombra adicionando testes de profundidade ao sombreador de vértice (ou geometria) e ao sombreador de pixel. Parte 3 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
+Crie um efeito de sombra adicionando testes de profundidade ao sombreador de vértice (ou geometria) e ao sombreador de pixel. Parte 3 de [passo a passo: Implementar os volumes de sombra usando buffers de profundidade em Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
 ## <a name="include-transformation-for-light-frustum"></a>Incluir transformação para tronco de luz
 
@@ -67,7 +67,7 @@ Em seguida, o sombreador de pixel usará a posição interpolada do espaço de l
 ## <a name="test-whether-the-position-is-in-the-light-frustum"></a>Testar se a posição está no tronco de luz
 
 
-Primeiro, confira se o pixel está no tronco de exibição da luz, normalizando as coordenadas X e Y. Caso ambas estejam no intervalo \[0, 1\], é possível que o pixel esteja na sombra. Caso contrário, pule o teste de profundidade. Um sombreador pode fazer esse teste rapidamente chamando [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231) e comparando o resultado com o valor original.
+Primeiro, confira se o pixel está no tronco de exibição da luz, normalizando as coordenadas X e Y. Se eles estiverem dentro do intervalo \[0, 1\] e em seguida, é possível que o pixel em sombra. Caso contrário, pule o teste de profundidade. Um sombreador pode fazer esse teste rapidamente chamando [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231) e comparando o resultado com o valor original.
 
 ```cpp
 // Compute texture coordinates for the current point's location on the shadow map.
