@@ -1,17 +1,17 @@
 ---
 ms.assetid: DE5B084C-DAC1-430B-A15B-5B3D5FB698F7
 title: Otimizar animações, mídia e imagens
-description: Crie apps da Plataforma Universal do Windows (UWP) com animações suaves, taxa de quadros elevada e captura e reprodução de mídia de alto desempenho.
+description: Crie aplicativos da Plataforma Universal do Windows (UWP) com animações suaves, taxa de quadros elevada e captura e reprodução de mídia de alto desempenho.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 14b26274dd005813fe5c8ced2d90f6380e4d7f21
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946520"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640791"
 ---
 # <a name="optimize-animations-media-and-images"></a>Otimizar animações, mídia e imagens
 
@@ -37,8 +37,8 @@ Todos estes tipos de animação são garantidamente independentes:
 
     -   [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.rendertransform)
     -   [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d)
-    -   [**Projeção**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection)
-    -   [**Clipe**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
+    -   [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection)
+    -   [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
 
 Animações dependentes afetam o layout, que, portanto, não pode ser calculado sem entrada extra do thread de interface do usuário. As animações dependentes incluem modificações a propriedades como [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) e [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height). Por padrão, as animações dependentes não são executadas e exigem uma aceitação do desenvolvedor do aplicativo. Quando habilitadas, elas são executadas suavemente caso o thread de interface do usuário permaneça desbloqueado, mas começarão a tremer caso a estrutura ou o aplicativo esteja tendo muito trabalho no thread de interface do usuário.
 
@@ -54,7 +54,7 @@ O conteúdo Web dentro de um controle [**WebView**](https://msdn.microsoft.com/l
 
 Animar um [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) também é má ideia. Além do detrimento de desempenho, isso pode causar ruptura ou outros artefatos no conteúdo de vídeo sendo reproduzido.
 
-> **Observação**  as recomendações neste artigo para **MediaPlayerElement** também se aplicam a [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** só está disponível no Windows 10, versão 1607, portanto se você está criando um aplicativo para uma versão anterior do Windows, precisará usar o **MediaElement**.
+> **Observação**    as recomendações neste artigo para **MediaPlayerElement** também se aplicam ao [ **MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** só está disponível no Windows 10, versão 1607, portanto se você está criando um aplicativo para uma versão anterior do Windows, precisará usar o **MediaElement**.
 
 ### <a name="use-infinite-animations-sparingly"></a>Use animações infinitas com moderação
 
@@ -66,7 +66,7 @@ Adicionar um manipulador para [**CompositionTarget.Rendering**](https://msdn.mic
 
 O namespace [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/BR243232) inclui uma biblioteca de animações suaves de alto desempenho que têm aspecto consistente com outras animações do Windows. As classes relevantes têm "Theme" no nome e estão descritas em [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/Mt187350). Esta biblioteca é compatível com vários cenários de animação comuns, como a animação da primeira exibição do aplicativo e a criação de transições de estado e conteúdo. É recomendável usar essa biblioteca de animação sempre que possível, para aumentar o desempenho e a consistência para a interface do usuário do UWP.
 
-> **Observação**  a biblioteca de animação não pode animar todas as propriedades possíveis. Para todos os cenários XAML onde a biblioteca de animação não se aplica, consulte [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/Mt187354).
+> **Observação**    a biblioteca de animação não é possível animar todas as propriedades possíveis. Para todos os cenários XAML onde a biblioteca de animação não se aplica, consulte [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/Mt187354).
 
 
 ### <a name="animate-compositetransform3d-properties-independently"></a>Animar propriedades CompositeTransform3D independentemente
@@ -107,7 +107,7 @@ Consulte algumas situações em que você deve liberar a solicitação de exibi�
 
 Com frequência, aplicativos oferecem uma exibição incorporada onde o vídeo é exibido em uma página. Agora, você obviamente perdeu a otimização em tela cheia, porque o [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) não tem o tamanho da página e há outros objetos XAML desenhados. Cuidado para não entrar sem querer nesse modo desenhando uma margem em torno de um **MediaPlayerElement**.
 
-Não desenhe elementos XAML por cima do vídeo quando estiver em modo incorporado. Se fizer isso, a estrutura será forçada a fazer um trabalho extra para compor a cena.. Posicionar controles de transporte abaixo de um elemento de mídia incorporado em vez de em cima do vídeo é um bom exemplo de otimização para esta situação. Nesta imagem, a barra vermelha indica um conjunto de transportes de controle (reproduzir, pausar, parar etc.).
+Não desenhe elementos XAML por cima do vídeo quando estiver em modo incorporado. Se fizer isso, a estrutura será forçada a fazer um trabalho extra para compor a cena. Posicionar controles de transporte abaixo de um elemento de mídia incorporado em vez de em cima do vídeo é um bom exemplo de otimização para esta situação. Nesta imagem, a barra vermelha indica um conjunto de transportes de controle (reproduzir, pausar, parar etc.).
 
 ![MediaPlayerElement com elementos sobrepostos](images/videowithoverlay.png)
 
@@ -117,7 +117,7 @@ Não coloque estes controles em cima de mídia que não esteja em tela cheia. Em
 
 ### <a name="delay-setting-the-source-for-a-mediaplayerelement"></a>Atrasar a definição da fonte de um MediaPlayerElement
 
-Os mecanismos de mídia são objetos caros e a estrutura XAML atrasa o carregamento de DLLs e a criação de objetos maiores o quanto for possível. [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) é forçado a fazer esse trabalho depois que sua origem é definida por meio da propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx). Configurá-lo quando o usuário estiver realmente pronto para executar mídia atrasa a maioria do custo associado com o **MediaPlayerElement** o quanto for possível.
+Os mecanismos de mídia são objetos caros e a estrutura XAML atrasa o carregamento de DLLs e a criação de objetos maiores o quanto for possível. [  **MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) é forçado a fazer esse trabalho depois que sua origem é definida por meio da propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx). Configurá-lo quando o usuário estiver realmente pronto para executar mídia atrasa a maioria do custo associado com o **MediaPlayerElement** o quanto for possível.
 
 ### <a name="set-mediaplayerelementpostersource"></a>Definir MediaPlayerElement.PosterSource
 
@@ -190,14 +190,14 @@ Caso você não configure um tamanho de decodificação explícito, o XAML fará
 -   A imagem é oculta definindo [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) como 0 ou [**Visibility**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility) como **Collapsed** no elemento de imagem host, no pincel ou em qualquer elemento pai.
 -   O controle de imagem ou pincel usa um [**Stretch**](https://msdn.microsoft.com/library/windows/apps/BR242968) de **None**.
 -   A imagem é usada como um [**NineGrid**](https://msdn.microsoft.com/library/windows/apps/BR242756).
--   `CacheMode="BitmapCache"` é definido no elemento de imagem ou em qualquer elemento pai.
+-   `CacheMode="BitmapCache"` é configurado no elemento de imagem ou em qualquer elemento pai.
 -   O pincel de imagem é não retangular (como quando aplicado a uma forma ou um texto).
 
 Nas situações acima, definir um tamanho de decodificação explícito é a única maneira de conseguir economia de memória.
 
 Você sempre deve anexar uma [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235) à árvore ativa antes de definir a origem. Sempre que um elemento de imagem ou um pincel for especificado na marcação, esse será automaticamente o caso. Exemplos são fornecidos abaixo, sob o título "Exemplos de árvore ativa". Você sempre deve evitar usar [**SetSource**](https://msdn.microsoft.com/library/windows/apps/BR243255) e usar, ao invés, [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522) quando estiver configurando uma fonte de fluxo. E é uma boa ideia evitar ocultar conteúdo de imagem (seja com opacidade zero ou visibilidade colapsada) enquanto espera que o evento [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx) seja acionado. Isso é uma chamada de julgamento: você não se beneficiará com a decodificação de tamanho certo automática se for feita. Se seu aplicativo deve ocultar conteúdo de imagem inicialmente, então, ele também deve definir o tamanho de decodificação explicitamente, se possível.
 
-**Exemplos de árvore ativa**
+**Exemplos de árvore em tempo real**
 
 Exemplo 1 (bom) - Uniform Resource Identifier (URI) especificado em marcação.
 
@@ -219,7 +219,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-Exemplo 2 code-behind (ruim) — Configurando o UriSource do BitmapImage antes de conectá-lo à árvore.
+Exemplo 2 de lógica (ruim) — definindo o UriSource de BitmapImage antes de conectar-se à árvore.
 
 ```csharp
 var bitmapImage = new BitmapImage();
@@ -250,7 +250,7 @@ Quando uma imagem é usada para um pincel não retangular ou para um [**NineGrid
 O XAML tem uma otimização interna que permite que ele decodifique o conteúdo de uma imagem de forma assíncrona para uma superfície na memória de hardware, sem a necessidade de uma superfície intermediária na memória de software. Isso reduz o pico de uso da memória e a latência de renderização. Esse recurso será desativado se qualquer uma das seguintes condições for atendida.
 
 -   A imagem é usada como um [**NineGrid**](https://msdn.microsoft.com/library/windows/apps/BR242756).
--   `CacheMode="BitmapCache"` é definido no elemento de imagem ou em qualquer elemento pai.
+-   `CacheMode="BitmapCache"` é configurado no elemento de imagem ou em qualquer elemento pai.
 -   O pincel de imagem é não retangular (como quando aplicado a uma forma ou um texto).
 
 ### <a name="softwarebitmapsource"></a>SoftwareBitmapSource
@@ -263,7 +263,7 @@ Seu aplicativo deve usar [**SoftwareBitmap**](https://msdn.microsoft.com/library
 
 ### <a name="use-getthumbnailasync-for-thumbnails"></a>Use GetThumbnailAsync para miniaturas
 
-Um caso de uso para o dimensionamento de imagens é a criação de miniaturas. Embora você possa usar [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) e [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) para providenciar versões menores de imagens, a UWP fornece APIs ainda mais eficientes para a recuperação de miniaturas. [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210) fornece as miniaturas para imagens que já têm o sistema de arquivo em cache. Isso oferece um desempenho ainda melhor do que as APIs do XAML porque a imagem não precisa ser aberta ou decodificada.
+Um caso de uso para o dimensionamento de imagens é a criação de miniaturas. Embora você possa usar [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) e [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) para providenciar versões menores de imagens, a UWP fornece APIs ainda mais eficientes para a recuperação de miniaturas. [**GetThumbnailAsync** ](https://msdn.microsoft.com/library/windows/apps/BR227210) fornece as miniaturas para imagens com o sistema de arquivos já armazenado em cache. Isso oferece um desempenho ainda melhor do que as APIs do XAML porque a imagem não precisa ser aberta ou decodificada.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp

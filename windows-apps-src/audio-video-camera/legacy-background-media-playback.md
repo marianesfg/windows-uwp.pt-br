@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ea8d387becaef171175fd5e91bfc3a1402e79faa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927640"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616611"
 ---
 # <a name="legacy-background-media-playback"></a>Reprodução de mídia em segundo plano herdada
 
@@ -19,7 +19,7 @@ ms.locfileid: "8927640"
 Este artigo descreve o modelo herdado de dois processos para adicionar suporte para áudio em segundo plano ao seu aplicativo UWP. A partir do Windows 10, versão 1607, é usado um modelo de processo único para áudio em segundo plano que é muito mais simples de implementar. Para obter mais informações sobre as recomendações atuais para áudio em segundo plano, consulte [Reproduzir mídia em segundo plano](background-audio.md). Este artigo tem o objetivo de fornecer suporte para aplicativos que já foram desenvolvidos usando o modelo herdado de dois processos.
 
 > [!NOTE]
-> A partir do Windows, versão 1703, **BackgroundMediaPlayer** foi preterido e pode não estar disponível em versões futuras do Windows.
+> Começando com o Windows, versão 1703, **BackgroundMediaPlayer** foi preterido e pode não estar disponível em versões futuras do Windows.
 
 ## <a name="background-audio-architecture"></a>Arquitetura de áudio em segundo plano
 
@@ -114,11 +114,11 @@ No entanto, observe que isso não significa que o primeiro plano seja dependente
 
 A tabela a seguir lista as políticas que são aplicadas em quais tipos de dispositivos.
 
-| Subpolítica             | Área de trabalho  | Dispositivos móveis   | Outros    |
+| Subpolítica             | Área de Trabalho  | Móvel   | Outro    |
 |------------------------|----------|----------|----------|
-| **Exclusividade**        | Desabilitada | Habilitada  | Habilitada  |
-| **Tempo limite de inatividade** | Desabilitada | Habilitada  | Desabilitada |
-| **Tempo de vida compartilhado**    | Habilitada  | Desabilitada | Desabilitada |
+| **Exclusividade**        | Desabilitada | Habilitado  | Habilitado  |
+| **Tempo limite de inatividade** | Desabilitada | Habilitado  | Desabilitada |
+| **Tempo de vida compartilhado**    | Habilitado  | Desabilitada | Desabilitada |
 
 
  

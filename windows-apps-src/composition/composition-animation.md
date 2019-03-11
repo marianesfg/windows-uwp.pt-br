@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b94f14b32c5dd74e0aefb9b9a99f64bbd905a05d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937335"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616701"
 ---
 # <a name="composition-animations"></a>Animações de composição
 
@@ -19,9 +19,9 @@ As APIs Windows.UI.Composition permitem criar, animar, transformar e manipular o
 
 ## <a name="motion-in-windows"></a>Movimento no Windows
 
-Pense no design de movimento como um filme. As transições perfeitas mantêm você focado na história e trazem vida às suas experiências. Podemos incorporar essa sensação nos nossos projetos, levando as pessoas de uma tarefa para a próxima com facilidade cinematográfica. O movimento é geralmente o fator de diferenciação entre uma Interface do usuário e uma experiência do usuário.
+Pense no design de movimento como um filme. As transições perfeitas mantêm você focado na história e trazem vida às suas experiências. Podemos incorporar essa sensação nos nossos projetos, levando as pessoas a fazer a transição de uma tarefa para a outra com facilidade cinematográfica. Movimento geralmente é o fator de diferenciação entre uma Interface do usuário e uma experiência de usuário.
 
-Como um componente fundamental da plataforma da interface do usuário do Windows, CompositionAnimations fornecem uma maneira avançada e eficiente para criar experiências de movimento na interface do usuário do seu aplicativo. O mecanismo de animação foi projetado desde o início para cima para garantir que sua animação seja executada em 60 FPS independente do thread da interface do usuário. Essas animações são projetadas para oferecer a flexibilidade para criar experiências de movimento inovadora com base no tempo, entrada e outras propriedades.
+Como um bloco de construção fundamental da plataforma de interface do usuário do Windows, CompositionAnimations fornecem uma maneira poderosa e eficiente para criar experiências de movimento na interface de usuário do seu aplicativo. O mecanismo de animação foi projetado desde o backup para garantir que sua animação seja executada em 60 FPS, independente do thread da interface do usuário. Essas animações são projetadas para fornecer a flexibilidade para criar experiências inovadoras de movimento com base no tempo, entrada e outras propriedades.
 
 ### <a name="examples-of-motion"></a>Exemplos de movimento
 
@@ -33,28 +33,28 @@ Aqui, um aplicativo usa uma animação conectada para animar uma imagem conforme
 
 Aqui, um efeito de paralaxe visual move objetos diferentes em diferentes taxas quando a interface de usuário rola ou faz um movimento panorâmico para criar uma sensação de profundidade, perspectiva e movimento.
 
-![Um exemplo de paralaxe com uma imagem de fundo e uma lista](images/animation/parallax-example.gif)
+![Um exemplo de paralaxe com uma lista e uma imagem de fundo](images/animation/parallax-example.gif)
 
-## <a name="using-compositionanimations-to-create-motion"></a>Usando o CompositionAnimations para criar um movimento
+## <a name="using-compositionanimations-to-create-motion"></a>Usando CompositionAnimations para criar um movimento
 
-Para gerar movimento na interface do usuário, os desenvolvedores podem acessar animações em XAML (link para Storyboards aqui) ou a camada Visual. As animações na camada Visual fornecem os desenvolvedores com uma série de benefícios:
+Para gerar o movimento na interface do usuário, os desenvolvedores podem acessar as animações em XAML (link para Storyboards aqui), ou camada Visual. Animações na camada Visual oferecem aos desenvolvedores uma série de benefícios:
 
-- Desempenho – em vez de animação associada ao Thread de interface do usuário tradicional, animações na plataforma de interface do usuário Windows operam em um thread independente a 60 FPS, habilitar experiências de movimento suave.
-- Modelo de modelagem – animações na camada da interface do usuário do Windows são modelos, o significado pode usar uma única animação em vários objetos e ajuste as propriedades ou parâmetros sem se preocupar em obstruir anterior usa.
-- Personalização – a camada de interface do usuário do Windows não apenas torna mais fácil fazer belo interface do usuário, mas com uma ampla variedade de tipos de animação, possível criar novos e incríveis experiências com um gradiente de personalizações
+- Desempenho – em vez da animação de limite de Thread de interface do usuário tradicional, animações na plataforma da interface do usuário do Windows operam em um thread independente em 60 FPS, possibilitar experiências de movimento suave.
+- Modelo de modelagem – animações na camada de interface do usuário do Windows são modelos, o significado pode usar uma única animação em vários objetos e ajustar as propriedades ou parâmetros sem se preocupar de obstruindo anterior usa.
+- Personalização – a camada de interface do usuário do Windows não apenas torna mais fácil fazer a interface do usuário Linda, mas com uma gama completa de tipos de animação, o possível para criar novas e incríveis experiências com um gradiente de personalizações
 
-Como um desenvolvedor de criação de experiências na camada da interface do usuário do Windows, você tem acesso a uma variedade de conceitos de animação para dar vida a seus designs. Você pode usar qualquer um desses conceitos para animar uma propriedade ou subchannel componente (quando aplicável) de qualquer CompositionObject.
-
-> [!NOTE]
-> Nem todas as propriedades de um CompositionObject sejam animáveis. Consulte a documentação de CompositionObject individual para determinar se uma propriedade é animável.
+Como um desenvolvedor de criação de experiências na camada de interface do usuário do Windows, você tem acesso a uma variedade de conceitos de animação para dar vida a seus designs. Você pode usar qualquer um desses conceitos para animar uma propriedade ou subchannel componente (quando aplicável) de qualquer CompositionObject.
 
 > [!NOTE]
-> O termo _subcanal_ se refere a uma forma de componente de uma propriedade. Por exemplo, X ou XY subchannel de uma propriedade deslocamento Vector3.
+> Nem todas as propriedades de um CompositionObject sejam animáveis. Consulte a documentação do CompositionObject individual para determinar se uma propriedade é animável.
+
+> [!NOTE]
+> O termo _subchannel_ refere-se a um formulário de componente de uma propriedade. Por exemplo, X ou XY subchannel de uma propriedade de deslocamento Vector3.
 
 | Conceito de animação | Descrição |
 | ----------------- | ----------- |
-| [Movimento baseadas em tempo com KeyFrameAnimations](time-animations.md)  | Os KeyFrameAnimations são usados para controlar diretamente na íntegra uma experiência de movimento durante um período de tempo. Desenvolvedores descrevendo um movimento inicial, final, a interpolação entre e duração de maneira keyframed tradicionais. |
-| [Movimento relativo com os ExpressionAnimations](relation-animations.md)  | Os ExpressionAnimations são usados para descrever como um movimento de uma propriedade de objeto deve ser orientado em relação à propriedade do outro objeto. Os desenvolvedores definem uma equação matemática que define a relação de referência. |
-| ImplicitAnimations | Essas animações são baseados em gatilhos e são definidas separadamente da lógica principal do aplicativo. ImplicitAnimations são usados para descrever como e quando as animações ocorrem como uma resposta às alterações de propriedade direta. |
-| [Movimento controladas por entrada com animações de entrada](input-driven-animations.md)  | Animações de entrada abrange um conjunto de cenários que permitem que os desenvolvedores descrever o movimento com base em manipulação por meio de toque ou outras modalidades de entrada. Essas animações são controladas por com base na entrada do usuário ativo ou gestos. |
-| [Movimento baseados na física com os NaturalMotionAnimations](natural-animations.md)  | Os NaturalMotionAnimations são usados para descrever o movimento natural e familiar forçar o movimento controladas por experiências com base no mundo real. Em vez de definir o tempo, os desenvolvedores definir características do movimento (por exemplo, damping proporção para molas) |
+| [Com base no tempo de animação com KeyFrameAnimations](time-animations.md)  | KeyFrameAnimations são usados para controlar diretamente a totalidade de uma experiência de movimento em um período de tempo. Desenvolvedores que descrevem o início, final, a interpolação entre e duração de uma forma tradicional keyframed um movimento. |
+| [Movimento relativo com ExpressionAnimations](relation-animations.md)  | ExpressionAnimations são usados para descrever como um movimento de uma propriedade de objeto deve ser orientado em relação à propriedade de outro objeto. Os desenvolvedores definem uma equação matemática que define a relação de referência. |
+| ImplicitAnimations | Essas animações são baseados em gatilho e são definidas separadamente da lógica do aplicativo principal. ImplicitAnimations são usados para descrever como e quando animações ocorrem como uma resposta às alterações de propriedade direta. |
+| [Animação controlada por entrada com animações de entrada](input-driven-animations.md)  | Animações de entrada aborda um conjunto de cenários que permitem aos desenvolvedores descrever o movimento com base em manipulação por meio de toque ou outras modalidades de entrada. Essas animações são conduzidas com base na entrada do usuário do Active Directory ou gestos. |
+| [Movimento com base em física com NaturalMotionAnimations](natural-animations.md)  | NaturalMotionAnimations são usados para descrever o movimento natural e familiar, forçar o movimento orientado por experiências com base no mundo real. Em vez de definir o tempo, os desenvolvedores definem as características do movimento (por exemplo, amortecimento taxa para Springs) |

@@ -1,28 +1,28 @@
 ---
-Description: You can programmatically pin your app to the taskbar,  bnd you can check if it's currently pinned.
-title: Fixar seu aplicativo na barra de tarefas
+Description: Você pode fixar programaticamente seu app na barra de tarefas e verificar se ele está fixado.
+title: Fixar seu app na barra de tarefas
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, barra de tarefas, gerenciador de barra de tarefas, fixar na barra de tarefas, bloco principal
 ms.localizationpriority: medium
 ms.openlocfilehash: 640dc637a1c50718210d87af87cb8b8e706a5ab7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937564"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604091"
 ---
-# <a name="pin-your-app-to-the-taskbar"></a>Fixar seu aplicativo na barra de tarefas
+# <a name="pin-your-app-to-the-taskbar"></a>Fixar seu app na barra de tarefas
 
 Programaticamente, você pode fixar o bloco principal do seu app na barra de tarefa, da mesma forma que pode [fixar seu app no menu Iniciar](tiles-and-notifications/primary-tile-apis.md). E você pode verificar se seu app está fixado e se a barra de tarefas permite que se fixe apps. 
 
 ![Barra de tarefas](images/taskbar/taskbar.png)
 
 > [!IMPORTANT]
-> **Requer a Fall Creators Update**: você precisa usar o SDK 16299 e executar a compilação 16299 ou mais recente para usar as APIs de barra de tarefa.
+> **Requer a atualização dos criadores de outono**: Você deve ter como destino 16299 do SDK e estar executando a compilação 16299 ou superior para usar a APIs da barra de tarefas.
 
-> **APIs importantes**: [classe TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager) 
+> **APIs importantes**: [Classe TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager) 
 
 
 ## <a name="when-should-you-ask-the-user-to-pin-your-app-to-the-taskbar"></a>Quando você deve pedir ao usuário para fixar seu app na barra de tarefas? 
@@ -68,7 +68,7 @@ bool isPinningAllowed = TaskbarManager.GetDefault().IsPinningAllowed;
 > Se você não quiser fixar seu app na barra de tarefas e apenas quiser saber se a barra de tarefas está disponível, use a [propriedade TaskbarManager.IsSupported](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.IsSupported).
 
 
-## <a name="3-check-whether-your-app-is-currently-pinned-to-the-taskbar"></a>3. Verifique se o seu app está atualmente fixado na barra de tarefas
+## <a name="3-check-whether-your-app-is-currently-pinned-to-the-taskbar"></a>3. Verifique se o seu aplicativo no momento está fixado na barra de tarefas
 
 Obviamente, não faz sentido pedir ao usuário para permitir que você fixe o app na barra de tarefas se ele já estiver fixado lá. Você pode usar o [método TaskbarManager.IsCurrentAppPinnedAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.IsCurrentAppPinnedAsync) para verificar se o app já está fixado antes de pedir que o usuário.
 
@@ -87,7 +87,7 @@ else
 ```
 
 
-##  <a name="4-pin-your-app"></a>4. Fixe seu app
+##  <a name="4-pin-your-app"></a>4. Fixar o seu aplicativo
 
 Se a barra de tarefas estiver presente e a fixação for permitida e seu app não estiver fixado, você talvez queira mostrar uma dica sutil para que os usuários saibam que podem fixar seu app. Por exemplo, você pode mostrar um ícone de fixação em algum lugar na interface do usuário no qual o usuário poderá clicar. 
 
@@ -108,6 +108,6 @@ Esse método retorna um valor booliano que indica se o seu app está fixado na b
 
 ## <a name="resources"></a>Recursos
 
-* [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-pin-to-taskbar)
+* [Exemplo de código completo no GitHub](https://github.com/WindowsNotifications/quickstart-pin-to-taskbar)
 * [Classe TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager)
-* [Fixar um app no menu Iniciar](tiles-and-notifications/primary-tile-apis.md)
+* [Fixar um aplicativo no menu Iniciar](tiles-and-notifications/primary-tile-apis.md)

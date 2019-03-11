@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 52ab0dfba6261a5e278a42f38ea13c632df400f9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050769"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637381"
 ---
 # <a name="dependency-properties-overview"></a>Visão geral das propriedades de dependência
 
@@ -21,7 +21,7 @@ Este tópico explica o sistema de propriedades de dependência que está dispon�
 
 Uma propriedade de dependência é um tipo especializado de propriedade. Especificamente, é uma propriedade cujo valor é controlado e influenciado por um sistema de propriedades dedicado que é parte do Tempo de Execução do Windows.
 
-Para dar suporte a uma propriedade de dependência, o objeto que define a propriedade deve ser um [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) (em outras palavras, uma classe que tem a classe base **DependencyObject** em algum lugar de sua herança). Muitos dos tipos que você usa para suas definições de interface do usuário para um aplicativo UWP com XAML serão uma subclasse **DependencyObject** e dará suporte a propriedades de dependência. Entretanto, qualquer tipo que venha de um namespace do Tempo de Execução do Windows que não possua "XAML" em seu nome não dará suporte a propriedades de dependência; as propriedades de tais tipos são propriedades comuns que não terão o comportamento de dependência do sistema de propriedades.
+Para dar suporte a uma propriedade de dependência, o objeto que define a propriedade deve ser um [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) (em outras palavras, uma classe que tem a classe base **DependencyObject** em algum lugar de sua herança). Muitos dos tipos que você usa para suas definições de interface do usuário para um aplicativo UWP com o XAML será um **DependencyObject** subclasse e oferecerá suporte a propriedades de dependência. Entretanto, qualquer tipo que venha de um namespace do Tempo de Execução do Windows que não possua "XAML" em seu nome não dará suporte a propriedades de dependência; as propriedades de tais tipos são propriedades comuns que não terão o comportamento de dependência do sistema de propriedades.
 
 A finalidade das propriedades de dependência é oferecer uma forma sistêmica de computar o valor de uma propriedade com base em outras entradas (outras propriedades, eventos e estados que ocorrem em seu aplicativo enquanto ele é executado). Essas outras entradas podem incluir:
 
@@ -30,7 +30,7 @@ A finalidade das propriedades de dependência é oferecer uma forma sistêmica d
 - Padrões de modelagem para múltiplos usos; por exemplo, recursos e estilos
 - Valores conhecidos por meio das relações pai-filho com outros elementos da árvore de objetos
 
-Uma propriedade de dependência representa ou permite um recurso específico do modelo de programação para a definição de um aplicativo do Windows Runtime com XAML para interface do usuário e c#, Microsoft Visual Basic ou VisualC + + extensões de componente (C++ c++ /CX) para código. Esses recursos incluem:
+Uma propriedade de dependência representa ou dá suporte a um recurso específico do modelo de programação para definir um aplicativo de tempo de execução do Windows com o XAML para interface do usuário e C#, extensões de componentes do Microsoft Visual Basic ou Visual C++ (C + + c++ /CX) para código. Esses recursos incluem:
 
 - Vinculação de dados
 - Estilos
@@ -74,10 +74,9 @@ public bool IsSpinning
 ```
 
 > [!NOTE]
-> O exemplo anterior não serve como um exemplo completo de como criar uma propriedade de dependência personalizada. Ele tem a finalidade de mostrar os conceitos de propriedade de dependência para qualquer um que prefira conceitos de aprendizagem através de código. Para um exemplo mais complexo, consulte [Propriedades de dependência personalizada](custom-dependency-properties.md).
+> O exemplo anterior não se destina como o exemplo completo de como criar uma propriedade de dependência personalizada. Ele tem a finalidade de mostrar os conceitos de propriedade de dependência para qualquer um que prefira conceitos de aprendizagem através de código. Para um exemplo mais complexo, consulte [Propriedades de dependência personalizada](custom-dependency-properties.md).
 
 ## <a name="dependency-property-value-precedence"></a>Precedência do valor da propriedade de dependência 
-
 
 Quando você obtém o valor de uma propriedade de dependência, está obtendo um valor que foi definido para essa propriedade por meio de qualquer uma das entradas que participam do sistema de propriedades do Tempo de execução do Windows. A precedência do valor de propriedade de dependência existe de forma que o sistema de propriedades do Tempo de Execução do Windows possa calcular valores de uma forma previsível, e é importante que você também esteja familiarizado com a ordem de precedência básica. Caso contrário, você pode se encontrar em uma situação em que esteja tentando definir uma propriedade em um nível, mas algo (o sistema, chamadores de terceiros, parte de seu próprio código) a está definindo em outro nível, e você ficará frustrado tentando descobrir qual valor da propriedade é usado e de onde esse valor veio.
 
@@ -85,14 +84,13 @@ Por exemplo, os estilos e modelos destinam-se a ser um ponto de partida comparti
 
 ### <a name="dependency-property-precedence-list"></a>Lista de precedência das propriedades de dependência 
 
-
 A seguir está a ordem definitiva que o sistema de propriedades usa ao atribuir o valor do tempo de execução de uma propriedade de dependência. A maior precedência é listada primeiro. Você encontrará explicações mais detalhadas logo após essa lista.
 
-1. **Valores animados:** animações ativas, animações de estado visual ou animações com um comportamento [**HoldEnd**](https://msdn.microsoft.com/library/windows/apps/br210306). Para ter efeito prático, uma animação aplicada a uma propriedade deve ter precedência sobre o valor básico (não animado), mesmo que esse valor seja definido localmente.
-1. **Valor local:** um valor local pode ser definido por meio da conveniência do wrapper da propriedade, que também equivale à configuração como um elemento de atributo ou de propriedade na XAML ou por uma chamada ao método [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) usando uma propriedade de uma instância específica. Se você definir um valor local usando uma associação ou um recurso estático, eles atuarão na precedência como se um valor local fosse definido, e as referências de associações ou de recursos serão apagadas se um novo valor local for definido.
-1. **Propriedades modelo:** um elemento as tem se tiver sido criado como parte de um modelo (um [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) ou [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)).
-1. **Setters de estilo:** valores de um [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) em estilos de recursos de página ou aplicativo.
-1. **Valor padrão:** uma propriedade de dependência pode ter um valor padrão como parte de seus metadados.
+1. **Valores animados:** Animações ativas, visual estado animações ou animações com um [ **HoldEnd** ](https://msdn.microsoft.com/library/windows/apps/br210306) comportamento. Para ter efeito prático, uma animação aplicada a uma propriedade deve ter precedência sobre o valor básico (não animado), mesmo que esse valor seja definido localmente.
+1. **Valor local:** Um valor local pode ser definido por meio da conveniência do wrapper de propriedade, que também equivale à configuração como um atributo ou elemento de propriedade em XAML ou por uma chamada para o [ **SetValue** ](https://msdn.microsoft.com/library/windows/apps/br242361) método usando uma propriedade de uma instância específica. Se você definir um valor local usando uma associação ou um recurso estático, eles atuarão na precedência como se um valor local fosse definido, e as referências de associações ou de recursos serão apagadas se um novo valor local for definido.
+1. **Propriedades do modelo:** Um elemento possui os seguintes se ele foi criado como parte de um modelo (de um [ **ControlTemplate** ](https://msdn.microsoft.com/library/windows/apps/br209391) ou [ **DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)).
+1. **Setters de estilo:** Valores de um [ **Setter** ](https://msdn.microsoft.com/library/windows/apps/br208817) em estilos da página ou do aplicativo de recursos.
+1. **Valor padrão:** Uma propriedade de dependência pode ter um valor padrão como parte de seus metadados.
 
 ### <a name="templated-properties"></a>Propriedades modelo
 
@@ -119,7 +117,7 @@ Entretanto, uma animação que especifica um **To** com um comportamento [**Hold
 
 Várias animações podem ser aplicadas a uma única propriedade. Cada uma dessas animações pode ter sido definida para substituir valores base que vêm de pontos diferentes na precedência de valor. Entretanto, essas animações serão executadas simultaneamente no tempo de execução, e isso frequentemente significa que elas devem combinar seus valores porque cada animação tem a mesma influência no valor. Isso depende exatamente de como as animações são definidas, e do tipo do valor que está sendo animado.
 
-Para obter mais informações, consulte [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/mt187354).
+Para saber mais, consulte [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/mt187354).
 
 ### <a name="default-values"></a>Valores padrão
 
@@ -151,7 +149,7 @@ O exemplo a seguir define o valor [**Text**](https://msdn.microsoft.com/library/
 Você também pode estabelecer associações usando código em vez de XAML. Veja [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257).
 
 > [!NOTE]
-> Associações como essas são tratadas como um valor local para fins de precedência de valor de propriedade de dependência. Se você definir outro valor local para uma propriedade que originalmente tinha um valor [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820), você substituirá totalmente a associação, não apenas o valor de tempo de execução da associação. As associações {x: Bind} são implementadas usando o código gerado que definirá um valor local para a propriedade. Se você definir um valor local para uma propriedade que está usando {x:Bind}, em seguida, esse valor será substituído na próxima vez que a associação for avaliada, por exemplo, quando observar uma propriedade alterar em seu objeto de origem.
+> Associações assim são tratadas como um valor local para fins de precedência de valor de propriedade de dependência. Se você definir outro valor local para uma propriedade que originalmente tinha um valor [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820), você substituirá totalmente a associação, não apenas o valor de tempo de execução da associação. As associações {x: Bind} são implementadas usando o código gerado que definirá um valor local para a propriedade. Se você definir um valor local para uma propriedade que está usando {x:Bind}, em seguida, esse valor será substituído na próxima vez que a associação for avaliada, por exemplo, quando observar uma propriedade alterar em seu objeto de origem.
 
 ### <a name="binding-sources-binding-targets-the-role-of-frameworkelement"></a>Associar origens, associar destinos, a função de FrameworkElement
 
@@ -164,7 +162,7 @@ Tanto para código ou XAML, lembre-se que [**DataContext**](https://msdn.microso
 Conectar a associação não é a única coisa que é necessária para a maioria dos cenários de associação. Para uma associação unidirecional ou bidirecional ser eficaz, a propriedade de origem deve dar suporte a notificações de alteração que se propagam para o sistema de associação e, portanto, o destino. Para fontes de associação personalizadas, isso significa que a propriedade deve ser uma propriedade de dependência ou o objeto deve suportar [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx). As coleções devem dar suporte a [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx). Determinadas classes dão suporte a uma dessas interfaces em suas implementações para que sejam úteis como classes básicas para situações de vinculação de dados; um exemplo dessa classe é [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx). Para saber mais sobre vinculação de dados e como a vinculação de dados se relaciona ao sistema de propriedades, consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 > [!NOTE]
-> As fontes de dados do Microsoft .NET tipos listados aqui dão suporte às. As fontes de dados C++/CX usam interfaces diferentes para notificação de alteração ou comportamento observável, consulte a seção [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
+> As fontes de dados do Microsoft .NET tipos listados suporte aqui. As fontes de dados C++/CX usam interfaces diferentes para notificação de alteração ou comportamento observável, consulte a seção [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### <a name="styles-and-templates"></a>Estilos e modelos
 
@@ -190,7 +188,7 @@ O Windows 10 apresenta o método [**RegisterPropertyChangedCallback**](https://m
 
 ### <a name="default-value-and-clearvalue"></a>Valor padrão e **ClearValue**
 
-Uma propriedade de dependência pode ter um valor padrão definido como parte de seus metadados de propriedade. Para uma propriedade de dependência, seu valor padrão não se torna irrelevante depois que a propriedade tiver sido definida pela primeira vez. O valor padrão talvez se aplique novamente no tempo de execução sempre que outro determinante na precedência do valor desaparece. (A precedência do valor das propriedades de dependência é discutida na próxima seção.) Por exemplo, você pode deliberadamente remover um valor de estilo ou uma animação que se aplica a uma propriedade, mas quer que o valor seja um padrão razoável após fazê-lo. O valor padrão de propriedade de dependência pode fornecer esse valor, sem a necessidade de definir especificamente o valor de cada propriedade como um passo extra.
+Uma propriedade de dependência pode ter um valor padrão definido como parte de seus metadados de propriedade. Para uma propriedade de dependência, seu valor padrão não se torna irrelevante depois que a propriedade tiver sido definida pela primeira vez. O valor padrão talvez se aplique novamente no tempo de execução sempre que outro determinante na precedência do valor desaparece. (Precedência de valor de propriedade de dependência é discutida na próxima seção). Por exemplo, você deliberadamente pode remover um valor de estilo ou uma animação que se aplica a uma propriedade, mas você deseja que o valor seja uma opção razoável, depois de fazer isso. O valor padrão de propriedade de dependência pode fornecer esse valor, sem a necessidade de definir especificamente o valor de cada propriedade como um passo extra.
 
 Você pode definir deliberadamente uma propriedade para o valor padrão, mesmo depois de a ter definido com um valor local. Para redefinir um valor para ser o padrão novamente e também para permitir outros participantes na precedência que possam substituir o padrão, mas não um valor local, chame o método [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357) (referência à propriedade para limpar como um parâmetro do método). Você nem sempre quer que a propriedade use literalmente o valor padrão, mas limpar o valor local e reverter para o valor padrão pode permitir outro item na precedência que você quer que atue agora, como usar o valor que veio de um setter de estilo em um modelo de controle.
 
@@ -206,9 +204,9 @@ Os aspectos de threading de [**DependencyObject**](https://msdn.microsoft.com/li
 
 - [Propriedades de dependência personalizadas](custom-dependency-properties.md)
 - [Visão geral das propriedades anexadas](attached-properties-overview.md)
-- [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946)
-- [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/mt187354)
-- [Criando componentes do Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
+- [Associação de dados em camadas](https://msdn.microsoft.com/library/windows/apps/mt210946)
+- [Animações storyboarded](https://msdn.microsoft.com/library/windows/apps/mt187354)
+- [Criando componentes do tempo de execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 - [Usuário XAML e exemplo de controles personalizados](https://go.microsoft.com/fwlink/p/?linkid=238581)
 
 ## <a name="apis-related-to-dependency-properties"></a>APIs relacionadas às propriedades de dependência

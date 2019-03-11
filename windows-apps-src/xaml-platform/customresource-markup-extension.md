@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7eabcb188aa1687d36d4b4e6f432783aa68969de
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934043"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613241"
 ---
 # <a name="customresource-markup-extension"></a>Extensão de marcação {CustomResource}
 
@@ -28,7 +28,7 @@ Fornece um valor para qualquer atributo XAML avaliando uma referência a um recu
 
 | Termo | Descrição |
 |------|-------------|
-| chave | A chave para o recurso solicitado. A forma como a chave é inicialmente atribuída é específica da implementação da classe [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) registrada atualmente para uso. |
+| key | A chave para o recurso solicitado. A forma como a chave é inicialmente atribuída é específica da implementação da classe [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) registrada atualmente para uso. |
 
 ## <a name="remarks"></a>Comentários
 
@@ -44,11 +44,11 @@ O uso de um `{CustomResource}` não funciona por padrão (a implementação bás
 2.  Defina [**CustomXamlResourceLoader.Current**](https://msdn.microsoft.com/library/windows/apps/br243328) para referência de sua classe na lógica de inicialização. Isso deve acontecer antes de ser carregado qualquer XAML de nível de página, que inclui o uso da extensão `{CustomResource}`. Um local para definir **CustomXamlResourceLoader.Current** é o construtor da subclasse [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) gerado para você nos modelos code-behind de App.xaml.
 3.  Agora você pode usar as extensões `{CustomResource}` no XAML que seu aplicativo carrega como páginas, ou de dentro de dicionários de recursos XAML.
 
-**CustomResource** é uma extensão de marcação. As extensões de marcação geralmente são implementadas quando é necessário efetuar um escape de valores de atributo para que sejam diferentes de valores literais ou nomes de manipulador e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em XAML usam os caracteres "\{" e "\}" na sintaxe de atributo, sendo esta a convenção pela qual um processador XAML reconhece que uma extensão de marcação deve processar o atributo.
+**CustomResource** é uma extensão de marcação. As extensões de marcação geralmente são implementadas quando é necessário efetuar um escape de valores de atributo para que sejam diferentes de valores literais ou nomes de manipulador e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação no uso XAML a "\{"e"\}" caracteres na sintaxe de atributo, que é a convenção pela qual um processador XAML reconhece que uma extensão de marcação precisa processar o atributo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Referências de recursos de ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
+* [Referências de recurso de ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
 * [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327)
 * [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340)
 

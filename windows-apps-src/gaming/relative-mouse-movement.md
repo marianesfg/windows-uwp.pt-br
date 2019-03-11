@@ -7,17 +7,17 @@ keywords: windows 10, uwp, jogos, mouse, entrada
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
 ms.localizationpriority: medium
 ms.openlocfilehash: 71985841e6c0fa764201c179fb12408581823e5e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931559"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639651"
 ---
 # <a name="relative-mouse-movement-and-corewindow"></a>Movimento relativo do mouse e CoreWindow
 
 Em jogos, o mouse é uma opção de controle comum que é familiar para muitos jogadores, além de ser essencial para muitos gêneros de jogos, incluindo atiradores em primeira e terceira pessoas, e jogos de estratégia em tempo real. Aqui discutimos a implementação de controles relativos de mouse, que não usam o cursor do sistema e não retornam coordenadas absolutas da tela; em vez disso, rastreiam o delta de pixel entre os movimentos do mouse.
 
-Alguns apps, como jogos, usam o mouse como um dispositivo de entrada mais geral. Por exemplo, um modelador 3D pode usar a entrada de mouse para orientar um objeto 3D simulando um trackball virtual; ou um jogo pode usar o mouse para mudar a direção da câmera de visualização por meio de controles de mouse-look. 
+Alguns aplicativos, como jogos, usam o mouse como um dispositivo de entrada mais geral. Por exemplo, um modelador 3D pode usar a entrada de mouse para orientar um objeto 3D simulando um trackball virtual; ou um jogo pode usar o mouse para mudar a direção da câmera de visualização por meio de controles de mouse-look. 
 
 Nesses cenários, o aplicativo requer dados relativos do mouse. Os valores relativos do mouse representam a distância que o mouse se moveu desde o último quadro, em vez de valores absolutos da coordenada x-y em uma janela ou tela. Além disso, os aplicativos geralmente ocultam o cursor do mouse desde que a posição do cursor com relação às coordenadas da tela não seja relevante durante a manipulação de um objeto ou cena 3D. 
 
@@ -98,5 +98,5 @@ Quando o aplicativo está no modo de manipulação de objeto/cena 3D (processame
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Controles move-look para jogos](tutorial--adding-move-look-controls-to-your-directx-game.md) 
+* [Controles de mover a consulta para jogos](tutorial--adding-move-look-controls-to-your-directx-game.md) 
 * [Controles de toque para jogos](tutorial--adding-touch-controls-to-your-directx-game.md)

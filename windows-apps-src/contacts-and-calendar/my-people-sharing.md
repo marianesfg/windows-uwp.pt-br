@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 91d88dc78fd02ae3f16e1d980aa207d1dd458417
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945392"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597821"
 ---
 # <a name="my-people-sharing"></a>Compartilhamento de Minhas Pessoas
 
@@ -27,8 +27,8 @@ O recurso Minhas Pessoas permite que os usuários fixem contatos na barra de tar
 
 Há três etapas que você deve seguir para habilitar seu aplicativo como destino de compartilhamento de Minhas Pessoas:
 
-1. [Declare o suporte para o contrato de ativação shareTarget no manifesto do aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [Anote os contatos com os quais os usuários podem compartilhar usando seu aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
+1. [Declare suporte para o contrato de ativação shareTarget no manifesto do aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+2. [Anote os contatos que os usuários podem compartilhar a usar seu aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3. Dê suporte a várias instâncias do aplicativo em execução ao mesmo tempo.  Os usuários devem poder interagir com a versão completa de seu aplicativo enquanto também o usam para compartilhar com outras pessoas. Eles podem usá-lo em várias janelas de compartilhamento ao mesmo tempo. Para dar suporte a isso, seu aplicativo precisa ser capaz de executar várias exibições simultaneamente. Para saber como fazer isso, consulte o artigo ["Mostrar vários modos de exibição para um aplicativo"](https://docs.microsoft.com/en-us/windows/uwp/layout/show-multiple-views).
 
 Feito isso, seu aplicativo será exibido como destino de compartilhamento na janela de compartilhamento de Minhas Pessoas, que pode ser iniciada de duas maneiras:
@@ -40,7 +40,7 @@ Feito isso, seu aplicativo será exibido como destino de compartilhamento na jan
 Para declarar suporte para seu aplicativo como destino de compartilhamento, abra seu aplicativo no Visual Studio. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo **Package.appxmanifest** e selecione **Abrir com**. No menu, selecione **Editor de XML (texto)** e clique em **OK**. Em seguida, faça as seguintes alterações no manifesto:
 
 
-**Antes**
+**Antes de**
 ```xml
 <Applications>
     <Application Id="MyApp"
@@ -50,7 +50,7 @@ Para declarar suporte para seu aplicativo como destino de compartilhamento, abra
 </Applications>
 ```
 
-**Depois**
+**Depois de**
 
 ```xml
 <Applications>
@@ -103,7 +103,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-O "appId" é o Nome da Família de Pacotes, seguido por '!' e a ID da Classe Ativável. Para localizar o nome de família do pacote, abra **Package. appxmanifest** usando o editor padrão e procure na guia "Packaging". Aqui, o "App" é a classe ativável correspondente ao modo de exibição de destino de compartilhamento.
+O "appId" é o Nome da Família de Pacotes, seguido por '!' e a ID da Classe Ativável. Para localizar o Nome da Família de Pacotes, abra **Package.appxmanifest** usando o editor padrão e procure na guia "Packaging". Aqui, o "App" é a Classe Ativável correspondente para o modo de exibição de destino de compartilhamento.
 
 ## <a name="running-as-a-my-people-share-target"></a>Execução como destino de compartilhamento de Minhas Pessoas
 
@@ -131,7 +131,7 @@ protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs arg
 }
 ```
 
-## <a name="see-also"></a>Veja também
-+ [Adicionando suporte para Minhas Pessoas](my-people-support.md)
+## <a name="see-also"></a>Consulte também
++ [Adicionar pessoas Meu suporte](my-people-support.md)
 + [Classe ShareTarget](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appxmanifestschema/element-sharetarget)
 + [Exemplo de integração de cartão de contato](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)

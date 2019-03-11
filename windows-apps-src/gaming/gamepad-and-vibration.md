@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, gamepad, vibração
 ms.localizationpriority: medium
 ms.openlocfilehash: e65b22039c381bd333516bd9f98c60bbddb9621c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940867"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646921"
 ---
 # <a name="gamepad-and-vibration"></a>Gamepad e vibração
 
@@ -23,32 +23,32 @@ Ao ler esta página, você saberá como:
 * detectar se um gamepad foi adicionado ou removido
 * ler entradas de um ou mais gamepads
 * enviar comandos de vibração e impulso
-* os gamepads se comportam como dispositivos de navegação da interface do usuário
+* como gamepads se comportam como dispositivos de navegação da interface do usuário
 
 ## <a name="gamepad-overview"></a>Visão geral do gamepad
 
 Gamepads como o Controle sem Fio Xbox e o Controle sem Fio Xbox S são dispositivos de entrada de jogos de finalidade geral. Eles são o dispositivo de entrada padrão no Xbox One e uma opção comum para jogadores do Windows quando eles não gostam de usar teclado e mouse. Gamepads têm suporte em aplicativos UWP do Windows 10 e Xbox pelo namespace [Windows.Gaming.Input][].
 
-Gamepads do Xbox One são equipados com um teclado direcional (ou D-pad); **A**, **B**, **X**, **Y**, **modo de exibição**e botões de **Menu** ; thumbsticks esquerdo e direito, botões superiores e gatilhos; e um total de quatro motores de vibração. Os dois botões direcionais fornecem leituras duplamente analógicas nos eixos X e Y e também funcionam como um botão comum quando pressionados para dentro. Cada gatilho fornece uma leitura analógica que representa a distância é extraída novamente.
+Xbox One gamepads são equipados com um teclado direcional (ou direcional); **Um**, **B**, **X**, **Y**, **exibição**, e **Menu** botões; esquerda e alavancas direcionais à direita, complementos e gatilhos; e um total de quatro motores de vibração. Os dois botões direcionais fornecem leituras duplamente analógicas nos eixos X e Y e também funcionam como um botão comum quando pressionados para dentro. Cada gatilho fornece uma analógica leitura que representa o quanto é obtidos.
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **Paddle** buttons on its underside. These can be used to provide redundant access to game commands that are difficult to use together (such as the right thumbstick together with any of the **A**, **B**, **X**, or **Y** buttons) or to provide dedicated access to additional commands. -->
 
 > [!NOTE]
-> `Windows.Gaming.Input.Gamepad` também dá suporte a gamepads do Xbox 360, que têm o mesmo layout de controle dos gamepads padrão Xbox One.
+> `Windows.Gaming.Input.Gamepad` também dá suporte a gamepads Xbox 360, que têm o mesmo layout de controle padrão gamepads Xbox One.
 
 ### <a name="vibration-and-impulse-triggers"></a>Gatilhos de vibração e impulso
 
 Os gamepads do Xbox One fornecem dois motores independentes para vibração forte e sutil do gamepad, bem como dois motores dedicados para fornecer uma vibração acentuada a cada gatilho (esse recurso exclusivo é o motivo pelo qual os gatilhos do gamepad do Xbox One são chamados de _gatilhos de impulso_).
 
 > [!NOTE]
-> Gamepads do Xbox 360 não são equipados com _gatilhos de impulso_.
+> Xbox 360 gamepads não estejam equipados com _gatilhos impulso_.
 
 Para obter mais informações, consulte [Visão geral dos gatilhos de vibração e impulso](#vibration-and-impulse-triggers-overview).
 
 ### <a name="thumbstick-deadzones"></a>Zonas mortas dos botões
 
-O ideal é que um botão em repouso na posição central produza a mesma leitura neutra nos eixos X e Y sempre. Entretanto, devido à força mecânica e sensibilidade do botão, as leituras reais na posição central apenas se aproximam do valor neutro ideal e podem variar entre as leituras subsequentes. Por esse motivo, você sempre deve usar um pequeno _zona morta_&mdash;um intervalo de valores próximos à posição ideal central que são ignorados&mdash;para compensar diferenças de fabricação, o desgaste mecânico ou outros problemas do gamepad.
+O ideal é que um botão em repouso na posição central produza a mesma leitura neutra nos eixos X e Y sempre. Entretanto, devido à força mecânica e sensibilidade do botão, as leituras reais na posição central apenas se aproximam do valor neutro ideal e podem variar entre as leituras subsequentes. Por esse motivo, você sempre deve usar um pequeno _deadzone_&mdash;um intervalo de valores próximos a posição central ideal que são ignorados&mdash;para compensar diferenças de fabricação, desgaste mecânica ou outro gamepad problemas.
 
 Zonas mortas maiores oferecem uma estratégia simples para separar a entrada intencional da entrada não intencional.
 
@@ -58,7 +58,7 @@ Para obter mais informações, consulte [Lendo os botões de controle](#reading-
 
 Para aliviar a sobrecarga do suporte para diferentes dispositivos de entrada para a navegação de interface do usuário e para incentivar a consistência entre dispositivos e jogos, os dispositivos de entrada mais _físicos_ atuam simultaneamente como um dispositivo de entrada _lógico_ separado chamado de [controlador de navegação da interface do usuário](ui-navigation-controller.md). O controlador de navegação da interface do usuário fornece um vocabulário comum para comandos de navegação da interface do usuário em dispositivos de entrada.
 
-Como um controlador de navegação da interface do usuário, o Gamepad mapeia o [conjunto necessário](ui-navigation-controller.md#required-set) de comandos de navegação para o botão esquerdo, direcional, **Exibir**, **Menu**, **A**e **B** botões.
+Como um controlador de navegação da interface do usuário, gamepads mapear os [necessário conjunto](ui-navigation-controller.md#required-set) dos comandos de navegação para o analógico esquerdo, direcional, **exibição**, **Menu**, **um**, e **B** botões.
 
 | Comando de navegação | Entrada do gamepad                       |
 | ------------------:| ----------------------------------- |
@@ -69,7 +69,7 @@ Como um controlador de navegação da interface do usuário, o Gamepad mapeia o 
 |               Exibir | Botão Exibir                         |
 |               Menu | Botão Menu                         |
 |             Aceitar | Botão A                            |
-|             Cancelar | Botão B                            |
+|             Cancel | Botão B                            |
 
 Além disso, o gamepad mapeia todo o [conjunto opcional](ui-navigation-controller.md#optional-set) de comandos de navegação para as entradas restantes.
 
@@ -79,10 +79,10 @@ Além disso, o gamepad mapeia todo o [conjunto opcional](ui-navigation-controlle
 |          Página abaixo | Gatilho direito          |
 |          Página à esquerda | Botão superior esquerdo            |
 |         Página à direita | Botão superior direito           |
-|          Role para cima | Botão direito para cima    |
+|          Rolar para cima | Botão direito para cima    |
 |        Rolar para baixo | Botão direito para baixo  |
-|        Rolar para a esquerda | Botão direito para a esquerda  |
-|       Rolar para a direita | Botão direito para a direita |
+|        Rolar para esquerda | Botão direito para a esquerda  |
+|       Rolar para direita | Botão direito para a direita |
 |          Contexto 1 | Botão X               |
 |          Contexto 2 | Botão Y               |
 |          Contexto 3 | Pressionar o botão esquerdo  |
@@ -94,9 +94,9 @@ Os gamepads são gerenciados pelo sistema. Portanto, você não precisa criá-lo
 
 ### <a name="the-gamepads-list"></a>A lista de gamepads
 
-A classe [Gamepad][] fornece uma propriedade estática, [Gamepads][], que é uma lista somente leitura de gamepads que estão conectados no momento. Como você pode estar interessado apenas em alguns dos gamepads conectados, é recomendável manter sua própria coleção em vez de acessá-los por meio do `Gamepads` propriedade.
+A classe [Gamepad][] fornece uma propriedade estática, [Gamepads][], que é uma lista somente leitura de gamepads que estão conectados no momento. Como você só pode estar interessado em alguns do gamepads conectado, é recomendável que você mantenha sua própria coleção em vez de acessá-los por meio de `Gamepads` propriedade.
 
-O exemplo a seguir copia todos os gamepads conectados para uma nova coleção. Observe que, como outros threads em segundo plano acessarão essa coleção (nos eventos [GamepadAdded][] e [GamepadRemoved][] ), você precisa colocar um bloqueio em torno de qualquer código que lê ou atualiza a coleção.
+O exemplo a seguir copia todos os gamepads conectados para uma nova coleção. Observe que, como outros threads em segundo plano terá acesso a essa coleção (na [GamepadAdded][] e [GamepadRemoved][] eventos), você precisa colocar um bloqueio em torno de qualquer código que lê ou atualizações de coleção.
 
 ```cpp
 auto myGamepads = ref new Vector<Gamepad^>();
@@ -142,7 +142,7 @@ private void GetGamepads()
 
 ### <a name="adding-and-removing-gamepads"></a>Adicionando e removendo gamepads
 
-Quando um gamepad é adicionado ou removido, os eventos [GamepadAdded][] e [GamepadRemoved][] são gerados. Você pode registrar manipuladores para esses eventos para rastrear os gamepads que estão conectados no momento.
+Quando um gamepad é adicionado ou removido, o [GamepadAdded][] e [GamepadRemoved][] eventos são gerados. Você pode registrar manipuladores para esses eventos para rastrear os gamepads que estão conectados no momento.
 
 O exemplo a seguir começa a rastrear um gamepad que foi adicionado.
 
@@ -179,7 +179,7 @@ Gamepad.GamepadAdded += (object sender, Gamepad e) =>
 };
 ```
 
-O exemplo a seguir interrompe o rastreamento de um gamepad que foi removido. Você também precisará manipular o que acontece com os gamepads que você está controlando quando forem removidas; Por exemplo, esse código apenas rastreia entrada de um gamepad e simplesmente define-o `nullptr` quando ele é removido. Você precisará verificar cada quadro, caso o gamepad está ativo e quais gamepad você estiver coleta de entrada do quando controladores são conectados e desconectados de atualização.
+O exemplo a seguir interrompe um gamepad que é removido de acompanhamento. Você também precisará lidar com o que acontece com o gamepads que você está acompanhando quando eles foram removidos; Por exemplo, esse código apenas rastreia a entrada de um gamepad e simplesmente define como `nullptr` quando ele é removido. Você precisará verificar cada quadro, se seu gamepad estiver ativo e update quais gamepad está reunindo entrada do quando os controladores são conectados e desconectados.
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -219,7 +219,7 @@ Gamepad.GamepadRemoved += (object sender, Gamepad e) =>
 };
 ```
 
-Consulte [as práticas de entrada para jogos](input-practices-for-games.md) para obter mais informações.
+Ver [práticas recomendadas para jogos de entrada](input-practices-for-games.md) para obter mais informações.
 
 ### <a name="users-and-headsets"></a>Usuários e headsets
 
@@ -253,7 +253,7 @@ Além do estado do gamepad, cada leitura inclui um carimbo de data e hora que in
 
 ### <a name="reading-the-thumbsticks"></a>Lendo os botões de controle
 
-Cada botão fornece uma leitura analógica entre -1,0 e + 1,0 nos eixos X e Y. No eixo X, um valor de -1,0 corresponde à posição mais à esquerda do botão; um valor de +1,0 corresponde à posição mais à direita. No eixo Y, um valor de -1,0 corresponde à posição mais inferior do botão; um valor de +1,0 corresponde à posição mais superior. Nos dois eixos, o valor é de aproximadamente 0,0 quando o joystick está na posição central, mas é normal que o valor exato varie, até mesmo entre as leituras subsequentes; estratégias para atenuar essa variação são discutidas posteriormente nesta seção.
+Cada botão fornece uma leitura analógica entre -1,0 e + 1,0 nos eixos X e Y. No eixo X, um valor de -1,0 corresponde à posição mais à esquerda do botão; um valor de +1,0 corresponde à posição mais à direita. No eixo Y, um valor de -1,0 corresponde à posição mais inferior do botão; um valor de +1,0 corresponde à posição mais superior. Em ambos os eixos, o valor é de aproximadamente 0,0 quando o pen drive está na posição central, mas é normal que o valor preciso variar, até mesmo entre leituras subsequentes; estratégias para atenuar essa variação são discutidas mais adiante nesta seção.
 
 O valor do eixo X do botão esquerdo é lido na propriedade `LeftThumbstickX` da estrutura [GamepadReading][]; o valor do eixo Y é lido na propriedade `LeftThumbstickY`. O valor do eixo X do botão direito é lido na propriedade `RightThumbstickX`; o valor do eixo Y é lido na propriedade `RightThumbstickY`.
 
@@ -271,7 +271,7 @@ double rightStickX = reading.RightThumbstickX; // returns a value between -1.0 a
 double rightStickY = reading.RightThumbstickY; // returns a value between -1.0 and +1.0
 ```
 
-Na leitura dos valores dos botões, você observará que eles não produzem uma leitura neutra confiável de 0,0 quando o botão está em repouso na posição central; eles produzirão valores diferentes próximos de 0,0 cada vez que o botão for movido e retornado para a posição central. Para atenuar essas variações, você pode implementar uma pequena _zona morta_, que é um intervalo de valores próximos à posição central ideal que são ignorados. Uma maneira de implementar uma zona morta é determinar a que distância do centro o botão foi movido e ignorar as leituras mais próximas em vez da distância que você escolher. Você pode calcular a distância aproximadamente&mdash;não é exata porque as leituras dos botões são essencialmente valores polares, não planares&mdash;usando apenas o Teorema de Pitágoras. Isso produz uma zona morta radial.
+Na leitura dos valores dos botões, você observará que eles não produzem uma leitura neutra confiável de 0,0 quando o botão está em repouso na posição central; eles produzirão valores diferentes próximos de 0,0 cada vez que o botão for movido e retornado para a posição central. Para atenuar essas variações, você pode implementar uma pequena _zona morta_, que é um intervalo de valores próximos à posição central ideal que são ignorados. Uma maneira de implementar uma zona morta é determinar a que distância do centro o botão foi movido e ignorar as leituras mais próximas em vez da distância que você escolher. Você pode calcular a distância de aproximadamente&mdash;não é exatamente como analógico leituras são, essencialmente, polares, não planares, os valores&mdash;apenas usando o Teorema de Pitágoras. Isso produz uma zona morta radial.
 
 O exemplo a seguir demonstra uma zona morta radial básica usando o Teorema de Pitágoras.
 
@@ -331,12 +331,12 @@ double rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1
 
 ### <a name="reading-the-buttons"></a>Lendo os botões
 
-Cada um dos botões de gamepad&mdash;as quatro direções do direcional, botões superiores esquerdos e direito, pressionar o botão esquerdo e direito, **A**, **B**, **X**, **Y**, **modo de exibição**e **Menu**&mdash;fornece um digital ler Indica se ele foi pressionado (para baixo) ou liberado (para cima). Para garantir a eficiência, as leituras dos botões não são representadas como valores booleanos individuais; em vez disso, elas são reunidas em um único campo de bits que é representado pela enumeração [GamepadButtons][] .
+Cada um dos botões gamepad&mdash;quatro direções de direcional, complementos de left e right, pressione analógico esquerdo e direito, **um**, **B**, **X**, **Y**, **modo de exibição**, e **Menu**&mdash;fornece uma leitura digital que indica se ele tiver pressionado () ou liberado (para cima). Para obter eficiência, leituras de botão não são representadas como valores boolianos individuais; em vez disso, eles são todos empacotados em um único campo de bits que é representado pela [GamepadButtons][] enumeração.
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **paddle** buttons on its underside. These buttons are also represented in the `GamepadButtons` enumeration and their values are read in the same way as the standard gamepad buttons. -->
 
-Os valores dos botões são lidos na propriedade `Buttons` da estrutura [GamepadReading][]. Como essa propriedade é um campo de bits, o mascaramento bit a bit é usado para isolar o valor do botão de seu interesse. O botão está pressionado (para baixo) quando o bit correspondente está definido; caso contrário, ele está liberado (para acima).
+Os valores dos botões são lidos na propriedade `Buttons` da estrutura [GamepadReading][]. Como essa propriedade é um campo de bits, o mascaramento bit a bit é usado para isolar o valor do botão de interesse. O botão está pressionado (para baixo) quando o bit correspondente está definido; caso contrário, ele está liberado (para acima).
 
 O exemplo a seguir determina se o botão A está pressionado.
 
@@ -370,7 +370,7 @@ if (GamepadButtons.None == (reading.Buttons & GamepadButtons.A))
 }
 ```
 
-Às vezes, convém determinar quando um botão passa de pressionado para liberado ou vice-versa, se vários botões foram pressionados ou liberados ou se um conjunto de botões está organizado de determinada maneira&mdash;alguns pressionados, outros não. Para obter informações sobre como detectar cada uma dessas condições, consulte [Detectando transições do botão](input-practices-for-games.md#detecting-button-transitions) e [Detectando organizações complexas de botão](input-practices-for-games.md#detecting-complex-button-arrangements).
+Às vezes, você talvez queira determinar quando um botão faz a transição de pressionado para lançamento ou liberado para pressionado, se vários botões são pressionados ou liberados, ou se um conjunto de botões é organizado em uma determinada maneira&mdash;alguns pressionado, outros não. Para obter informações sobre como detectar cada uma dessas condições, consulte [Detectando transições do botão](input-practices-for-games.md#detecting-button-transitions) e [Detectando organizações complexas de botão](input-practices-for-games.md#detecting-complex-button-arrangements).
 
 ## <a name="run-the-gamepad-input-sample"></a>Executar a amostra de entrada de gamepad
 
@@ -380,13 +380,13 @@ A [amostra GamepadUWP _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/
 
 Os motores de vibração dentro de um gamepad fornecem feedback tátil ao usuário. Os jogos usam essa capacidade para criar uma noção maior de imersão, para ajudar a comunicar informações de status (como sofrendo danos), para sinalizar a proximidade a objetos importantes ou para outros usos criativos.
 
-Os gamepads do Xbox One são equipados com um total de quatro motores de vibração independentes. Dois são motores grandes localizados no corpo do gamepad; o motor esquerdo fornece vibração bruta de alta amplitude, enquanto o motor direito fornece uma vibração mais sutil e suave. Os outros dois são motores pequenos, dentro de cada gatilho, que fornecem picos acentuados de vibração diretamente para os dedos de gatilho do usuário; essa habilidade única do gamepad do Xbox One é o motivo pelo qual seus gatilhos são chamados de _gatilhos de impulso_. Ao orquestrar esses motores juntos, uma ampla variedade de sensações táteis pode ser produzida.
+Os gamepads do Xbox One são equipados com um total de quatro motores de vibração independentes. Duas são grandes motores localizadas no corpo gamepad; o motor à esquerda fornece vibração aproximada, alta amplitude, enquanto o motor à direita fornece vibração mais suave e, mais sutil. Os outros dois são motores pequenos, dentro de cada gatilho, que fornecem picos acentuados de vibração diretamente para os dedos de gatilho do usuário; essa habilidade única do gamepad do Xbox One é o motivo pelo qual seus gatilhos são chamados de _gatilhos de impulso_. Ao orquestrar esses motores juntos, uma ampla variedade de sensações táteis pode ser produzida.
 
 ## <a name="using-vibration-and-impulse"></a>Usando vibração e impulso
 
-A vibração do gamepad é controlada por meio da propriedade [Vibration][] da classe [Gamepad][]. `Vibration` é uma instância da estrutura [GamepadVibration][] que é composta de quatro valores de ponto flutuante; cada valor representa a intensidade de um dos motores.
+A vibração do gamepad é controlada por meio da propriedade [Vibração][] da classe [Gamepad][]. `Vibration` é uma instância das [GamepadVibration][] estrutura que é composta de quatro flutuante valores de ponto; cada valor representa a intensidade de um dos motores.
 
-Embora os membros do `Gamepad.Vibration` propriedade pode ser modificada diretamente, é recomendável que você inicializar um separado `GamepadVibration` instância para os valores que você deseja e, em seguida, copie-o para o `Gamepad.Vibration` propriedade para alterar as intensidades reais do motoras de uma vez.
+Embora os membros do `Gamepad.Vibration` propriedade pode ser modificada diretamente, é recomendável que você inicializa um separado `GamepadVibration` instância para os valores que você deseja e, em seguida, copiá-lo para o `Gamepad.Vibration` propriedade para alterar as intensidades de motoras reais ao mesmo tempo.
 
 O exemplo a seguir demonstra como alterar as intensidades do motor de uma vez.
 
@@ -436,7 +436,7 @@ vibration.RightMotor = 0.25; // sets the intensity of the right motor to 25%
 mainGamepad.Vibration = vibration;
 ```
 
-Lembre-se de que esses dois motores não são idênticos. Portanto, definir essas propriedades com o mesmo valor não produz a mesma vibração em um motor como no outro. Para qualquer valor, o motor esquerdo produz uma vibração mais forte com uma frequência menor que direita r motor que&mdash;para o mesmo valor&mdash;produz uma vibração mais suave e com maior frequência. Mesmo no valor máximo, o motor esquerdo não consegue produzir as frequências altas do motor direito, nem o motor direito consegue produzir as forças altas do motor esquerdo. Ainda assim, como os motores são rigidamente conectados ao corpo do gamepad, os jogadores não sentem as vibrações totalmente de forma independente mesmo os motores tendo características diferentes e podendo vibrar com intensidades diferentes. Esse esquema permite produzir uma variedade mais ampla e mais expressiva de sensações do que se os motores fossem idênticos.
+Lembre-se de que esses dois motores não são idênticos. Portanto, definir essas propriedades com o mesmo valor não produz a mesma vibração em um motor como no outro. Para qualquer valor, o motor esquerdo produz uma vibração mais forte com uma frequência menor do que o direito de r motor que&mdash;para o mesmo valor&mdash;produz uma vibração mais suave e em uma frequência maior. Mesmo no valor máximo, o motor esquerdo não consegue produzir as frequências altas do motor direito, nem o motor direito consegue produzir as forças altas do motor esquerdo. Ainda assim, como os motores são rigidamente conectados ao corpo do gamepad, os jogadores não sentem as vibrações totalmente de forma independente mesmo os motores tendo características diferentes e podendo vibrar com intensidades diferentes. Esse esquema permite produzir uma variedade mais ampla e mais expressiva de sensações do que se os motores fossem idênticos.
 
 ### <a name="using-the-impulse-triggers"></a>Usando os gatilhos de impulso
 
@@ -468,7 +468,7 @@ A [amostra GamepadVibrationUWP _(github)_](https://github.com/Microsoft/Xbox-ATG
 
 * [Windows.Gaming.Input.UINavigationController][]
 * [Windows.Gaming.Input.IGameController][]
-* [Práticas de entrada para jogos](input-practices-for-games.md)
+* [Práticas recomendadas de entrada para jogos](input-practices-for-games.md)
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.UINavigationController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationcontroller.aspx
@@ -478,7 +478,7 @@ A [amostra GamepadVibrationUWP _(github)_](https://github.com/Microsoft/Xbox-ATG
 [gamepadadded]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepadadded.aspx
 [gamepadremoved]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepadremoved.aspx
 [getcurrentreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.getcurrentreading.aspx
-[vibration]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.vibration.aspx
+[Vibração]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.vibration.aspx
 [gamepadreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadreading.aspx
 [gamepadbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadbuttons.aspx
 [gamepadvibration]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadvibration.aspx

@@ -1,7 +1,7 @@
 ---
-Description: Describes the requirements for declaring your Universal Windows Platform (UWP) app as accessible in the Microsoft Store.
+Description: Descreve os requisitos para declarar o seu aplicativo da Plataforma Universal do Windows (UWP) como acessível na Microsoft Store.
 ms.assetid: 59FA3B87-75A6-4B30-BA7C-A0E769D68050
-title: Acessibilidade na Store
+title: Acessibilidade na Loja
 label: Accessibility in the Store
 template: detail.hbs
 ms.date: 02/08/2017
@@ -9,13 +9,13 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a9991cd4a0a3fce630b1c7be64650c79daf74e6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936417"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597401"
 ---
-# <a name="accessibility-in-the-store"></a>Acessibilidade na Store  
+# <a name="accessibility-in-the-store"></a>Acessibilidade na Loja  
 
 
 

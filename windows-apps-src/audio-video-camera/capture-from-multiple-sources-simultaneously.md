@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, captura, vídeo
 ms.localizationpriority: medium
 ms.openlocfilehash: c474221769bf3aec6e32c80f21386ac1ca2620ea
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058627"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636611"
 ---
 # <a name="capture-from-multiple-sources-using-mediaframesourcegroup"></a>Capturar de várias fontes usando o MediaFrameSourceGroup
 
@@ -31,7 +31,7 @@ Observe que nem todo dispositivo conterá um grupo de fontes com duas câmeras c
 [!code-cs[MultiRecordFindSensorGroups](./code/SimpleCameraPreview_Win10/cs/MainPage.MultiRecord.xaml.cs#SnippetMultiRecordFindSensorGroups)]
 
 ## <a name="initialize-the-mediacapture-object"></a>Inicializar o objeto MediaCapture
-**[MediaCapture](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture)** é a principal classe usada na maioria das operações de captura de áudio, vídeo e fotos nos aplicativos UWP. Inicialize o objeto chamando **[InitializeAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.InitializeAsync)**, passando um objeto **[MediaCaptureInitializationSettings](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings)** que contenha parâmetros de inicialização. Neste exemplo, a única configuração especificada é a propriedade **[SourceGroup](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.SourceGroup)**, que é definida como o **MediaFrameSourceGroup** recuperado no exemplo de código anterior.
+ **[MediaCapture](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture)** é a principal classe usada na maioria das operações de captura de áudio, vídeo e fotos nos aplicativos UWP. Inicialize o objeto chamando **[InitializeAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.InitializeAsync)**, passando um objeto **[MediaCaptureInitializationSettings](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings)** que contenha parâmetros de inicialização. Neste exemplo, a única configuração especificada é a propriedade **[SourceGroup](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.SourceGroup)**, que é definida como o **MediaFrameSourceGroup** recuperado no exemplo de código anterior.
 
 Para obter informações sobre outras operações que você pode realizar com **MediaCapture** e outros recursos do aplicativo UWP para captura de mídia, consulte [Câmera](camera.md).
 
@@ -56,7 +56,7 @@ O exemplo a seguir mostra como inicializar um objeto **TimedMetadataStreamDescri
 
 [!code-cs[GetStreamDescriptor](./code/SimpleCameraPreview_Win10/cs/MainPage.MultiRecord.xaml.cs#SnippetGetStreamDescriptor)]
 
-Chame [**Settimedmetadatatracks**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks) para adicionar o descritor de streaming de metadados ao perfil de codificação. O exemplo a seguir mostra um método auxiliar que usa dois descritores de streaming de vídeo, um descritor de streaming de áudio e descritor de streaming de metadados e retorna um **MediaEncodingProfile** que pode ser usado para codificar os fluxos.
+Chame [ **MediaEncodingProfile.SetTimedMetadataTracks** ](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks) para adicionar o descritor de fluxo de metadados para o perfil de codificação. O exemplo a seguir mostra um método auxiliar que usa dois descritores de streaming de vídeo, um descritor de streaming de áudio e descritor de streaming de metadados e retorna um **MediaEncodingProfile** que pode ser usado para codificar os fluxos.
 
 [!code-cs[GetMediaEncodingProfile](./code/SimpleCameraPreview_Win10/cs/MainPage.MultiRecord.xaml.cs#SnippetGetMediaEncodingProfile)]
 
@@ -70,9 +70,9 @@ Quando a operação for concluída, um arquivo de vídeo terá sido criado, cont
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
-* [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Processar quadros de mídia com o MediaFrameReader](process-media-frames-with-mediaframereader.md)
-* [Itens de mídia, playlists e faixas](media-playback-with-mediasource.md)
+* [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Quadros de processos de mídia com MediaFrameReader](process-media-frames-with-mediaframereader.md)
+* [Trilhas, as listas de reprodução e itens de mídia](media-playback-with-mediasource.md)
 
 
  

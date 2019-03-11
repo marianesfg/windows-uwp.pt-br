@@ -1,5 +1,5 @@
 ---
-Description: Use visual feedback to show users when their interactions with a UWP app are detected, interpreted, and handled.
+Description: Use o feedback visual para mostrar aos usuários quando suas interações com um aplicativo da UWP são detectadas, interpretadas e manipuladas.
 title: Feedback visual
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
@@ -9,15 +9,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b043ec71eb7d5883a1b22c4f0d8f43824034d454
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929278"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640781"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Diretrizes de feedback visual
 
-Use o feedback visual para mostrar aos usuários quando suas interações são detectadas, interpretadas e manipuladas. O feedback visual poderá ajudar os usuários incentivando a interação. Ele indica o sucesso da interação, o que oferece ao usuário uma sensação de controle. Ele também retransmite o status do sistema e reduz os erros.
+Use o feedback visual para mostrar aos usuários quando suas interações são detectadas, interpretadas e manipuladas. O feedback visual poderá ajudar os usuários incentivando a interação. Ele indica o sucesso da interação, o que oferece ao usuário uma sensação de controle. Além de retransmitir o status do sistema, também reduz os erros.
 
 > **APIs importantes**:  [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
 
@@ -31,7 +31,7 @@ Use o feedback visual para mostrar aos usuários quando suas interações são d
 - Não exiba comentários a menos que seja absolutamente necessário. Mantenha a interface do usuário clara e organizada sem mostrar o feedback visual, a menos que você esteja agregando valor que não esteja disponível em nenhum outro lugar.
 - Tente não personalizar os comportamentos do feedback visual dos gestos internos do Windows em excesso, porque isso pode criar uma experiência inconsistente e confusa para o usuário.
 
-## <a name="additional-usage-guidance"></a>Diretrizes de uso adicionais
+## <a name="additional-usage-guidance"></a>Diretriz de uso adicional
 
 As visualizações por contato são especialmente críticas para as interações por toque que exigem exatidão e precisão. Por exemplo, seu app deve indicar claramente o local de um toque para permitir que um usuário saiba se errou o seu destino, o quanto errou e quais ajustes deve fazer.
 
@@ -62,10 +62,10 @@ Para a **experiência de 10 pés** típica do uso de Xbox e programa de TV, o Wi
 
 ## <a name="color-branding--customizing"></a>Personalização e identidade visual de cores
 
-**Propriedades da borda**
+**Propriedades de borda**
 
 Há duas partes nos elementos visuais de foco de alta visibilidade: a borda principal e a borda secundária. A borda principal apresenta espessura de **2px** e é moldada em torno da parte *externa* da borda secundária. A borda secundária apresenta espessura de **1px** e é moldada em torno da parte *interna* da borda secundária.
-![Linhas vermelhas dos elementos visuais de foco de alta visibilidade](images/FocusRectRedlines.png)
+![Visual de foco de alta visibilidade redlines](images/FocusRectRedlines.png)
 
 Para alterar a espessura de qualquer tipo de borda (principal ou secundária), use **FocusVisualPrimaryThickness** ou **FocusVisualSecondaryThickness**, respectivamente:
 ```XAML
@@ -73,7 +73,7 @@ Para alterar a espessura de qualquer tipo de borda (principal ou secundária), u
 ```
 ![Espessuras de margem do elemento visual de foco de alta visibilidade](images/FocusMargin.png)
 
-A margem é uma propriedade do tipo [**Thickness**](https://msdn.microsoft.com/library/system.windows.thickness); portanto, a margem pode ser personalizada para aparecer somente em determinados lados do controle. Veja abaixo: ![Apenas a espessura da margem do elemento visual de foco de alta visibilidade inferior](images/FocusThicknessSide.png)
+A margem é uma propriedade do tipo [**Thickness**](https://msdn.microsoft.com/library/system.windows.thickness); portanto, a margem pode ser personalizada para aparecer somente em determinados lados do controle. Consulte abaixo: ![Alta visibilidade foco margem visual espessura somente inferior](images/FocusThicknessSide.png)
 
 A margem é o espaço entre os limites do controle visual e o início da *borda secundária* dos elementos visuais de foco. A margem padrão está **1px** além dos limites de controle. Você pode editar essa margem em uma base por controle. Basta alterar a propriedade **FocusVisualMargin**:
 ```XAML
@@ -81,7 +81,7 @@ A margem é o espaço entre os limites do controle visual e o início da *borda 
 ```
 ![Diferenças de margem dos elementos visuais de foco de alta visibilidade](images/FocusPlusMinusMargin.png)
 
-*Uma margem negativa colocará a borda além do centro do controle, e uma margem positiva moverá a borda para mais perto do centro do controle.*
+*Uma margem negativa enviará por push a borda fora do centro do controle e uma margem positiva moverá a borda mais próximo ao centro do controle.*
 
 Para desativar totalmente os elementos visuais de foco no controle, basta desabilitar **UseSystemFocusVisuals**:
 ```XAML
@@ -115,20 +115,20 @@ Para alterar as cores em uma base por controle, edite as propriedades dos elemen
 * [Interações personalizadas do usuário](https://msdn.microsoft.com/library/windows/apps/mt185599)
 
 **Exemplos**
-* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Exemplos de arquivo-morto**
-* [Entrada: amostra de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: exemplo de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: amostra de teste de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: amostra de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: amostra de gestos no Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: amostra de manipulações e gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Amostra de entrada por toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+**Amostras de arquivo-morto**
+* [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: Exemplo de teste de hit de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: Exemplo simplificado de tinta](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: Exemplo de gestos do Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Entrada: Manipulações e exemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Exemplo de entrada de toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

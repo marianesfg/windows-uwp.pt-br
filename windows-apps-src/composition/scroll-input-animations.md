@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, animação
 ms.localizationpriority: medium
 ms.openlocfilehash: 118b3f6e306e60d1d8d569f0d58f2d77ea30d9a8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932685"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635061"
 ---
 # <a name="enhance-existing-scrollviewer-experiences"></a>Aprimorar as experiências existentes do ScrollViewer
 
@@ -20,8 +20,8 @@ Este artigo explica como usar um ScrollViewer XAML e o ExpressionAnimations para
 
 Aqui, presumimos que você esteja familiarizado com os conceitos abordados neste artigo:
 
-- [Animações controladas por entrada](input-driven-animations.md)
-- [Animações baseadas em relações](relation-animations.md)
+- [Controlado por entrada animações](input-driven-animations.md)
+- [Animações de relação com base](relation-animations.md)
 
 ## <a name="why-build-on-top-of-scrollviewer"></a>Por que criar sobre o ScrollViewer?
 
