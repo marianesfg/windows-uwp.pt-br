@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c3929c2b3765bd90dbe0be687834e94b4f222fc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943771"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594871"
 ---
 # <a name="media-items-playlists-and-tracks"></a>Itens de mídia, playlists e faixas
 
 
- Este artigo mostra como usar a classe [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), que fornece uma maneira comum de referenciar e reproduzir mídia de diferentes fontes, como arquivos locais ou remotos, e expõe um modelo comum para acessar dados de mídia, independentemente do formato de mídia subjacente. A classe [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) estende a funcionalidade do **MediaSource**, permitindo que você gerencie e selecione várias faixas de áudio, vídeo e metadados contidas em um item de mídia. [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite que você crie playlists a partir de um ou mais itens de reprodução de mídia.
+ Este artigo mostra como usar a classe [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), que fornece uma maneira comum de referenciar e reproduzir mídia de diferentes fontes, como arquivos locais ou remotos, e expõe um modelo comum para acessar dados de mídia, independentemente do formato de mídia subjacente. A classe [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) estende a funcionalidade do **MediaSource**, permitindo que você gerencie e selecione várias faixas de áudio, vídeo e metadados contidas em um item de mídia. [**MediaPlaybackList** ](https://msdn.microsoft.com/library/windows/apps/dn930955) permite que você crie listas de reprodução da mídia de um ou mais itens de reprodução.
 
 
 ## <a name="create-and-play-a-mediasource"></a>Criar e executar um MediaSource
@@ -114,13 +114,13 @@ O gerenciamento de itens de mídia com várias faixas de áudio funciona exatame
 
 Além de áudio e vídeo, um objeto **MediaPlaybackItem** pode conter zero ou mais objetos [**TimedMetadataTrack**](https://msdn.microsoft.com/library/windows/apps/dn956580). Uma faixa de metadados com tempo pode conter texto de legenda ou pode conter dados personalizados que são próprios de seu aplicativo. Uma faixa de metadados com tempo contém uma lista de indicações representadas por objetos herdados de [**IMediaCue**](https://msdn.microsoft.com/library/windows/apps/dn930899), como [**DataCue**](https://msdn.microsoft.com/library/windows/apps/dn930892) ou [**TimedTextCue**](https://msdn.microsoft.com/library/windows/apps/dn956655) Cada indicação tem uma hora de início e uma duração que determinam quando a indicação será ativada e por quanto tempo.
 
-Semelhante às faixas de áudio e vídeo, as faixas de metadados com tempo de um item de mídia podem ser descobertas manipulando o evento [**TimedMetadataTracksChanged**](https://msdn.microsoft.com/library/windows/apps/dn930952) de um **MediaPlaybackItem**. Com as faixas de metadados com tempo, porém, o usuário pode habilitar mais de uma faixa de metadados por vez. Além disso, dependendo do cenário do aplicativo, convém habilitar ou desabilitar faixas de metadados automaticamente, sem a intervenção do usuário. Para fins de ilustração, esse exemplo adiciona um [**ToggleButton**](https://msdn.microsoft.com/library/windows/apps/br209795) para cada controle de metadados em um item de mídia a fim de permitir que o usuário habilite ou desabilite o controle. A propriedade **Tag** de cada botão está definida no índice do controle de metadados associado para que possa ser identificado quando o botão é acionado.
+Semelhante às faixas de áudio e vídeo, as faixas de metadados com tempo de um item de mídia podem ser descobertas manipulando o evento [**TimedMetadataTracksChanged**](https://msdn.microsoft.com/library/windows/apps/dn930952) de um **MediaPlaybackItem**. Com as faixas de metadados com tempo, porém, o usuário pode habilitar mais de uma faixa de metadados por vez. Além disso, dependendo do cenário do aplicativo, convém habilitar ou desabilitar faixas de metadados automaticamente, sem a intervenção do usuário. Para fins de ilustração, este exemplo adiciona um [**ToggleButton**](https://msdn.microsoft.com/library/windows/apps/br209795) para cada faixa de metadados em um item de mídia para permitir que o usuário habilite e desabilite a faixa. A propriedade **Tag** de cada botão é definida como o índice da faixa de metadados associada para que ela possa ser identificada quando o botão for pressionado.
 
 [!code-xml[MetaStackPanel](./code/MediaSource_RS1/cs/MainPage.xaml#SnippetMetaStackPanel)]
 
 [!code-cs[TimedMetadataTrackschanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetTimedMetadataTrackschanged)]
 
-Como mais de uma faixa de metadados pode estar ativa por vez, você simplesmente não define o índice ativo para a lista de faixas de metadados. Em vez disso, chame o método [**SetPresentationMode**](https://msdn.microsoft.com/library/windows/apps/dn986977) do objeto **MediaPlaybackItem**, passando o índice da faixa que você deseja alternar e fornecendo um valor da enumeração [**TimedMetadataTrackPresentationMode**](https://msdn.microsoft.com/library/windows/apps/dn987016). O modo de apresentação que você escolher depende da implementação de seu aplicativo. Neste exemplo, a faixa de metadados é definida como **PlatformPresented** quando habilitada. Para controles com base em texto, isso significa que o sistema exibe automaticamente as indicações de texto no controle. Quando o botão de alternância é desativado, o modo de apresentação é definido como **Desabilitado**, ou seja, nenhum texto é exibido e nenhum evento de indicação é gerado. Os eventos de indicação são explicados mais adiante neste artigo.
+Como mais de uma faixa de metadados pode estar ativa por vez, você simplesmente não define o índice ativo para a lista de faixas de metadados. Em vez disso, chame o método [**SetPresentationMode**](https://msdn.microsoft.com/library/windows/apps/dn986977) do objeto **MediaPlaybackItem**, passando o índice da faixa que você deseja alternar e fornecendo um valor da enumeração [**TimedMetadataTrackPresentationMode**](https://msdn.microsoft.com/library/windows/apps/dn987016). O modo de apresentação que você escolher depende da implementação de seu aplicativo. Neste exemplo, a faixa de metadados é definida como **PlatformPresented** quando habilitada. Para faixas baseadas em texto, isso significa que o sistema exibirá automaticamente as indicações de texto na faixa. Quando o botão de alternância é desativado, o modo de apresentação é definido como **Disabled**, o que significa que nenhum texto é exibido e nenhum evento de indicação é lançado. Os eventos de indicação são explicados mais adiante neste artigo.
 
 [!code-cs[ToggleChecked](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetToggleChecked)]
 
@@ -129,7 +129,7 @@ Como mais de uma faixa de metadados pode estar ativa por vez, você simplesmente
 Na medida em que processa as faixas de metadados, você pode acessar o conjunto de indicações dentro da faixa acessando a propriedade [**Cues**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.TimedMetadataTrack.Cues) ou [**ActiveCues**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.TimedMetadataTrack.ActiveCues). Você pode fazer isso para atualizar a interface do usuário a fim de mostrar os locais de indicação de um item de mídia.
 
 ## <a name="handle-unsupported-codecs-and-unknown-errors-when-opening-media-items"></a>Manipular codecs incompatíveis e erros desconhecidos durante a abertura de itens de mídia
-Desde o Windows 10, versão 1607, você pode verificar se o codec necessário para reprodução de um item de mídia é compatível ou parcialmente compatível com o dispositivo no qual o aplicativo está em execução. No manipulador de evento eventos com alteração controlada de **MediaPlaybackItem**, como [**AudioTracksChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.AudioTracksChanged), primeiro verifique se o controle de alterações é uma inserção do novo controle. Caso afirmativo, você pode obter uma referência para que continue inserido usando o índice passado no parâmetro **IVectorChangedEventArgs.Index** com a coleção de controle adequada do parâmetro **MediaPlaybackItem**, como a coleção [**AudioTracks**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.AudioTracks).
+Desde o Windows 10, versão 1607, você pode verificar se o codec necessário para reprodução de um item de mídia é compatível ou parcialmente compatível com o dispositivo no qual o aplicativo está em execução. No manipulador de eventos dos eventos alterados por faixas **MediaPlaybackItem**, como [**AudioTracksChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.AudioTracksChanged), primeiro verifique se a alteração da faixa é uma inserção de uma nova faixa. Assim, você pode obter uma referência para a faixa inserida usando o índice passado no parâmetro **IVectorChangedEventArgs.Index** com a coleção de faixas apropriada do parâmetro **MediaPlaybackItem**, como a coleção [**AudioTracks**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.AudioTracks).
 
 Quando você tem uma referência à faixa inserida, verifique o [**DecoderStatus**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrackSupportInfo.DecoderStatus) da propriedade [**SupportInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrack.SupportInfo) da faixa. Se o valor for [**FullySupported**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus), o codec adequado necessário para reproduzir a faixa estará presente no dispositivo. Se o valor for [**Degraded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus), a faixa poderá ser reproduzida pelo sistema, mas a reprodução será degradada de alguma forma. Por exemplo, uma faixa de áudio 5.1 pode ser reproduzida como estéreo em 2 canais. Se esse for o caso, será necessário atualizar a interface do usuário para alertar o usuário da degradação. Se o valor for [**UnsupportedSubtype**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus) ou [**UnsupportedEncoderProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus), a faixa não poderá ser reproduzida em todos os codecs atuais no dispositivo. É necessário alertar o usuário e ignorar a reprodução do item ou implementar a interface do usuário para permitir que o usuário baixe o codec correto. O método [**GetEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrack.GetEncodingProperties) da faixa pode ser usado para determinar o codec necessário para reprodução.
 
@@ -162,7 +162,7 @@ Registre todos os seus objetos **TimedTextSource** com o **MediaSource** adicion
 
 [!code-cs[TimedTextSource](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetTimedTextSource)]
 
-No manipulador para o evento [**TimedTextSource.Resolved**](https://msdn.microsoft.com/library/windows/apps/dn965540), verifique a propriedade **Error** do [**TimedTextSourceResolveResultEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn965537) passado para o manipulador para determinar se ocorreu um erro ao tentar carregar os dados de texto com tempo. Se o item for resolvido com êxito, você pode usar esse manipulador para atualizar as propriedades adicionais do controle resolvido. Esse exemplo adiciona um rótulo para cada controle com base no URI armazenado anteriormente no **Dicionário**.
+No manipulador para o evento [**TimedTextSource.Resolved**](https://msdn.microsoft.com/library/windows/apps/dn965540), verifique a propriedade **Error** do [**TimedTextSourceResolveResultEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn965537) passado para o manipulador para determinar se ocorreu um erro ao tentar carregar os dados de texto com tempo. Se o item for resolvido com êxito, você poderá usar esse manipulador para atualizar as propriedades adicionais da faixa resolvida. Este exemplo adiciona um rótulo para cada faixa com base no URI armazenado anteriormente no **Dictionary**.
 
 [!code-cs[TimedTextSourceResolved](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetTimedTextSourceResolved)]
 
@@ -172,7 +172,7 @@ Você pode criar faixas de metadados personalizadas dinamicamente no código e a
 
 Crie um novo [**TimedMetadataTrack**](https://msdn.microsoft.com/library/windows/apps/dn956580) chamando o construtor e especificando um ID, o identificador do idioma e um valor da enumeração [**TimedMetadataKind**](https://msdn.microsoft.com/library/windows/apps/dn956578). Registre manipuladores para os eventos [**CueEntered**](https://msdn.microsoft.com/library/windows/apps/dn956583) e [**CueExited**](https://msdn.microsoft.com/library/windows/apps/dn956584). Esses eventos são lançados na chegada da hora de início de uma indicação e quando a duração de uma indicação tiver expirado, respectivamente.
 
-Crie um novo objeto de indicação, adequado para o tipo de controle de metadados criado, e defina a ID, a hora de início e a duração do controle. Esse exemplo cria um controle de dados, portanto, um conjunto de objetos [**DataCue**](https://msdn.microsoft.com/library/windows/apps/dn930892) é gerado e um buffer contendo dados específicos do aplicativo é fornecido para cada indicação. Para registrar a nova faixa, adicione-a à coleção [**ExternalTimedMetadataTracks**](https://msdn.microsoft.com/library/windows/apps/dn930915) do objeto **MediaSource**.
+Crie um novo objeto de indicação, adequado para o tipo de faixa de metadados que você criou, e defina a ID, a hora de início e a duração da faixa. Este exemplo cria uma faixa de dados, então, um conjunto de objetos [**DataCue**](https://msdn.microsoft.com/library/windows/apps/dn930892) é gerado, e um buffer que contém dados específicos do aplicativo é fornecido para cada indicação. Para registrar a nova faixa, adicione-a à coleção [**ExternalTimedMetadataTracks**](https://msdn.microsoft.com/library/windows/apps/dn930915) do objeto **MediaSource**.
 
 A partir do Windows 10, versão 1703, a propriedade **DataCue.Properties** expõe um [**PropertySet**](https://docs.microsoft.com/uwp/api/windows.foundation.collections.propertyset) que você pode usar para armazenar propriedades personalizadas em pares de chave/dados que podem ser recuperados nos eventos **CueEntered** e **CueExited**.  
 
@@ -190,9 +190,9 @@ Este exemplo adiciona uma faixa de texto personalizada especificando **TimedMeta
 
 ## <a name="play-a-list-of-media-items-with-mediaplaybacklist"></a>Reproduzir uma lista de itens de mídia com MediaPlaybackList
 
-[**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite criar uma playlist de itens de mídia, que são representados por objetos **MediaPlaybackItem**.
+[  **MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite criar uma playlist de itens de mídia, que são representados por objetos **MediaPlaybackItem**.
 
-**Observação**itens em uma [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) são renderizados por meio de reprodução sem intervalos. O sistema usará metadados fornecidos em arquivos MP3 ou AAC codificados para determinar o atraso ou a compensação de preenchimento necessária à reprodução sem intervalos. Se os arquivos MP3 ou AAC codificados não fornecerem esses metadados, o sistema determinará o atraso ou o preenchimento heuristicamente. Para os formatos sem perdas, como PCM, FLAC ou ALAC, o sistema não executa nenhuma ação porque esses codificadores não apresentam atraso ou preenchimento.
+**Observação**  itens em uma [ **MediaPlaybackList** ](https://msdn.microsoft.com/library/windows/apps/dn930955) são renderizados usando reprodução sem sobreposição. O sistema usará metadados fornecidos em arquivos MP3 ou AAC codificados para determinar o atraso ou a compensação de preenchimento necessária à reprodução sem intervalos. Se os arquivos MP3 ou AAC codificados não fornecerem esses metadados, o sistema determinará o atraso ou o preenchimento heuristicamente. Para os formatos sem perdas, como PCM, FLAC ou ALAC, o sistema não executa nenhuma ação porque esses codificadores não apresentam atraso ou preenchimento.
 
 Para começar, declare uma variável para armazenar seu **MediaPlaybackList**.
 
@@ -228,7 +228,7 @@ Defina a propriedade [**AutoRepeatEnabled**](https://msdn.microsoft.com/library/
 [!code-cs[RepeatButton](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetRepeatButton)]
 
 
-### <a name="handle-the-failure-of-media-items-in-a-playback-list"></a>Manipular a falha de itens de mídia em uma playlist
+### <a name="handle-the-failure-of-media-items-in-a-playback-list"></a>Manipular a falha de itens de mídia em uma lista de reprodução
 O evento [**ItemFailed**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.ItemFailed) é acionado quando um item na lista deixa de abrir. A propriedade [**ErrorCode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItemError.ErrorCode) do objeto [**MediaPlaybackItemError**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItemError) passado para o manipulador enumera a causa específica da falha quando possível, inclusive erros de rede, de decodificação ou de criptografia.
 
 [!code-cs[ItemFailed](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetItemFailed)]
@@ -261,7 +261,7 @@ A partir do Windows 10, versão 1703, você pode fornecer uma [**AdaptiveMediaSo
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
-* [Reproduzir áudio e vídeo com o MediaPlayer](play-audio-and-video-with-mediaplayer.md)
-* [Integrar aos controles de transporte de mídia do sistema](integrate-with-systemmediatransportcontrols.md)
+* [Reproduzir áudio e vídeo com o Media Player](play-audio-and-video-with-mediaplayer.md)
+* [Integrar com os controles de transporte de mídia do sistema](integrate-with-systemmediatransportcontrols.md)
 * [Reproduzir mídia em segundo plano](background-audio.md)
 

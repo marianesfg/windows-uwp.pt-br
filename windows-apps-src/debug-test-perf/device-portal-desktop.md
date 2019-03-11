@@ -4,18 +4,18 @@ title: Portal de Dispositivos para desktop Windows
 description: Saiba como o Windows Device Portal abre diagnósticos e automação em sua área de trabalho do Windows.
 ms.date: 02/6/2019
 ms.topic: article
-keywords: Windows 10, uwp, portal de dispositivos
+keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
 ms.openlocfilehash: 4fe1f2a51199dd12cd1d285c17c5d48c9a25b969
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117796"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654521"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de Dispositivos para desktop Windows
 
-O Portal de Dispositivos do Windows permite exibir informações de diagnóstico e interagir com seu desktop por HTTP em uma janela de seu navegador. Você pode usar o Portal de Dispositivos para fazer o seguinte:
+O Portal de Dispositivos do Windows permite exibir informações de diagnóstico e interagir com seu desktop por HTTP em uma janela de seu navegador. Você pode usar o Device Portal para fazer o seguinte:
 - Ver e manipular uma lista de processos em execução
 - Instalar, excluir, iniciar e encerrar os aplicativos
 - Alterar perfis de Wi-Fi, exibir a intensidade do sinal e ver ipconfig
@@ -71,26 +71,26 @@ O Portal de Dispositivos na área de trabalho do Windows fornece o conjunto padr
 - Recursos
 - Realidade Misturada
 - Depurador de instalação de streaming
-- Local
+- Location
 - Rascunho
 
 ## <a name="more-device-portal-options"></a>Mais opções do Portal de Dispositivos
 
 ### <a name="registry-based-configuration-for-device-portal"></a>Configuração baseada no registro para o Portal de Dispositivos
 
-Se você quiser selecionar números de porta para o Portal de Dispositivos (como 80 e 443), será possível definir as seguintes chaves do registro:
+Se você quiser selecionar números de porta para o Device Portal (como 80 e 443), será possível definir as seguintes chaves do registro:
 
-- Na opção `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service`
-    - `UseDynamicPorts`: A um DWORD necessário. Defina como 0 para manter os números de porta que você escolheu.
-    - `HttpPort`: A um DWORD necessário. Contém o número da porta na qual o Portal de Dispositivos escutará conexões HTTP.    
-    - `HttpsPort`: A um DWORD necessário. Contém o número da porta na qual o Portal de Dispositivos escutará conexões HTTPS.
+- Em `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service`
+    - `UseDynamicPorts`: Um DWORD necessário. Defina como 0 para manter os números de porta que você escolheu.
+    - `HttpPort`: Um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTP.    
+    - `HttpsPort`: Um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTPS.
     
 No mesmo caminho da chave do registro, você também pode desativar o requisito de autenticação:
 - `UseDefaultAuthorizer` - `0` para desabilitado, `1` para habilitado.  
     - Isso controla o requisito de autenticação básica para cada conexão e o redirecionamento de HTTP para HTTPS.  
     
 ### <a name="command-line-options-for-device-portal"></a>Opções de linha de comando para o Portal de Dispositivos
-Em um prompt de comando administrativo, você pode ativar e configurar partes do Portal de Dispositivos. Para ver o último conjunto de comandos compatível com a compilação, você pode executar `webmanagement /?`
+Em um prompt de comando administrativo, você pode ativar e configurar partes do Portal de Dispositivos. Para ver o último conjunto de comandos com suporte em sua compilação, você pode executar `webmanagement /?`
 
 - `sc start webmanagement` ou `sc stop webmanagement` 
     - Ativar ou desativar o serviço. Isso ainda requer que o modo de desenvolvedor esteja habilitado. 
@@ -107,29 +107,29 @@ Em um prompt de comando administrativo, você pode ativar e configurar partes do
 
 ## <a name="common-errors-and-issues"></a>Erros e problemas comuns
 
-Abaixo estão alguns erros comuns que você pode encontrar ao configurar o Portal de dispositivos.
+Abaixo estão alguns erros comuns que você pode encontrar ao configurar o Portal do dispositivo.
 
 ### <a name="windowsupdatesearch-returns-invalid-number-of-updates-0x800f0950-cbseinvalidwindowsupdatecount"></a>WindowsUpdateSearch retorna o número de atualizações inválido (0x800f0950 CBS_E_INVALID_WINDOWS_UPDATE_COUNT)
 
-Você pode obter esse erro ao tentar instalar os pacotes de desenvolvedor em uma compilação de pré-lançamento do Windows 10. Esses pacotes de recursos sob demanda (FoD) são hospedados no Windows Update e baixá-las em compilações de pré-lançamento requer que você escolhe de pré-lançamento. Se não tiver optado pela sua instalação em pré-lançamento para a combinação de toque e compilação certa, a carga não estará disponível para download. Verificar o seguinte:
+Você pode obter esse erro ao tentar instalar os pacotes de desenvolvedor em uma compilação de pré-lançamento do Windows 10. Esses pacotes de recursos sob demanda (FoD) são hospedados no Windows Update e baixá-los em compilações de pré-lançamento exige que você opte nas flighting. Se a instalação não aceitada flighting para a combinação de anel e compilação certa, a carga não será para download. Verifique o seguinte:
 
-1. Navegue até **Configurações gt _ atualização & segurança gt _ programa Windows Insider** e confirme se a seção **Windows Insider conta** tem suas informações de conta correto. Se você não vir essa seção, selecione **vincular uma conta do Windows Insider**, adicione sua conta de email e confirmar se ele é exibida sob o título de **conta do Windows Insider** (talvez seja necessário selecionar **vincular uma conta do Windows Insider** uma segunda vez para Na verdade, vincule uma conta do recém-adicionado).
+1. Navegue até **Configurações > atualização e segurança > Windows Insider Program** e confirme se o **conta de Windows Insider** seção tem suas informações de conta correta. Se você não vir essa seção, selecione **vincular uma conta do Windows Insider**, adicione sua conta de email e confirmar que ele aparece sob o **conta do Windows Insider** título (talvez você precise selecionar **Vincular uma conta do Windows Insider** um segundo tempo para o link, na verdade, uma conta adicionada recentemente).
  
-2. Sob **que tipo de conteúdo você gostaria de receber?**, certifique-se de **desenvolvimento ativo do Windows** é selecionado.
+2. Sob **que tipo de conteúdo você gostaria de receber?**, verifique se **desenvolvimento ativo do Windows** está selecionado.
  
-3. Sob **qual ritmo você deseja obter novas compilações?**, verifique se **Windows Insider-modo rápido** está selecionado.
+3. Sob **o ritmo você deseja obter novas compilações?**, verifique se **Windows Insider Fast** está selecionado.
  
-4. Agora você deve ser capaz de instalar os FoDs. Se você tiver confirmado que você está no Windows Insider rápido e ainda não pode instalar os FoDs, forneça comentários e anexar arquivos de log em **c:\Windows\Logs\CBS.**.
+4. Agora, você poderá instalar o FoDs. Se você confirmou que você está no Windows Insider rápida e ainda não é possível instalar o FoDs, por favor, fornecer comentários e anexar os arquivos de log em **c:\Windows\Logs\CBS**.
 
 ### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>[SC] StartService: OpenService falha 1060: O serviço especificado não existe como um serviço instalado
 
-Você pode obter esse erro se os pacotes de desenvolvedor não são instalados. Sem os pacotes de desenvolvedor, não há nenhum serviço de gerenciamento da web. Tente instalar os pacotes de desenvolvedor novamente.
+Você pode obter esse erro se os pacotes de desenvolvedor não estão instalados. Sem os pacotes de desenvolvedor, não há nenhum serviço de gerenciamento da web. Tente instalar os pacotes de desenvolvedor novamente.
 
-### <a name="cbs-cannot-start-download-because-the-system-is-on-metered-network-cbsemeterednetwork"></a>CBS não pode iniciar o download porque o sistema está em rede limitada (CBS_E_METERED_NETWORK)
+### <a name="cbs-cannot-start-download-because-the-system-is-on-metered-network-cbsemeterednetwork"></a>CBS não é possível iniciar o download porque o sistema está na rede limitada (CBS_E_METERED_NETWORK)
 
-Se você estiver em uma conexão de internet limitada, você pode obter esse erro. Você não conseguirá baixar os pacotes de desenvolvedor em uma conexão limitada.
+Você pode obter esse erro se você estiver em uma conexão de internet limitada. Você não conseguirá baixar os pacotes de desenvolvedor em uma conexão limitada.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-* [Visão geral do Portal de Dispositivos do Windows](device-portal.md)
-* [Referência de API central do Portal de Dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Visão geral do Windows Device Portal](device-portal.md)
+* [Núcleo do Portal de dispositivo referência de API](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
