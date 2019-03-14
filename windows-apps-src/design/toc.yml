@@ -3,7 +3,7 @@ items:
   items:
   - name: Visão geral
     href: basics/index.md
-  - name: Introdução ao design de app
+  - name: Introdução ao design de aplicativo
     href: basics/design-and-ui-intro.md
   - name: Sistema de Design Fluente
     href: fluent-design-system/index.md
@@ -23,7 +23,7 @@ items:
     items:
     - name: Criar uma interface do usuário
       href: basics/xaml-basics-ui.md
-    - name: Crie um layout adaptável
+    - name: Criar um layout adaptável
       href: basics/xaml-basics-adaptive-layout.md
     - name: Definir o estilo de um controle
       href: basics/xaml-basics-style.md
@@ -35,11 +35,11 @@ items:
     href: layout/page-layout.md
   - name: Tamanhos de tela e pontos de interrupção
     href: layout/screen-sizes-and-breakpoints-for-responsive-design.md
-  - name: Técnicas de design dinâmicas
+  - name: Técnicas de design responsivo
     href: layout/responsive-design.md
   - name: Layouts com XAML
     href: layout/layouts-with-xaml.md
-  - name: Mostrar vários modos de exibição
+  - name: Mostrar várias exibições
     href: layout/show-multiple-views.md
   - name: Alinhamento, margem e preenchimento
     href: layout/alignment-margin-padding.md
@@ -47,7 +47,7 @@ items:
     items:
     - name: Visão geral
       href: layout/layout-panels.md
-    - name: 'Tutorial: usar painéis de layout'
+    - name: 'Tutorial: Usar painéis de layout'
       href: layout/grid-tutorial.md
     - name: Modo divisão
       href: controls-and-patterns/split-view.md
@@ -67,6 +67,8 @@ items:
     href: controls-and-patterns/index.md
   - name: Introdução aos controles e eventos
     href: controls-and-patterns/controls-and-events-intro.md
+  - name: Introdução aos comandos
+    href: controls-and-patterns/commanding.md
   - name: Índice de controles por função
     href: controls-and-patterns/controls-by-function.md
   - name: Entrada básica
@@ -85,7 +87,7 @@ items:
       href: controls-and-patterns/rating.md
     - name: Controle deslizante
       href: controls-and-patterns/slider.md
-    - name: Alternância
+    - name: Alternar
       href: controls-and-patterns/toggles.md
   - name: Coleções
     items:
@@ -98,21 +100,21 @@ items:
       items:
       - name: Contêineres e modelos de itens
         href: controls-and-patterns/item-containers-templates.md
-      - name: Modelos de item para visualização de lista
+      - name: Modelos de item para exibição de lista
         href: controls-and-patterns/item-templates-listview.md
-      - name: Modelos de item para visualização de grade
+      - name: Modelos de item para exibição de grade
         href: controls-and-patterns/item-templates-gridview.md
     - name: Listas invertidas
       href: controls-and-patterns/inverted-lists.md
     - name: Puxar para atualizar
       href: controls-and-patterns/pull-to-refresh.md
-    - name: Interface do usuário localizada
+    - name: Interface do usuário aninhada
       href: controls-and-patterns/nested-ui.md
     - name: Comando de coleção
       href: controls-and-patterns/collection-commanding.md
-    - name: Deslizar o dedo
+    - name: Passar o dedo
       href: controls-and-patterns/swipe.md
-    - name: Modo de exibição de árvore
+    - name: Modo de exibição em árvore
       href: controls-and-patterns/tree-view.md
   - name: Caixas de diálogo e submenus
     items:
@@ -154,7 +156,7 @@ items:
       href: controls-and-patterns/navigationview.md
     - name: Pivô
       href: controls-and-patterns/pivot.md
-  - name: Pessoas
+  - name: People
     items:
     - name: Cartão de visita
       href: controls-and-patterns/contact-card.md
@@ -178,7 +180,7 @@ items:
     items:
     - name: Controles de rolagem e movimento panorâmico
       href: controls-and-patterns/scroll-controls.md
-    - name: Zoom semântico
+    - name: Zoom Semântico
       href: controls-and-patterns/semantic-zoom.md
   - name: Pesquisa
     href: controls-and-patterns/search.md
@@ -196,7 +198,7 @@ items:
       href: controls-and-patterns/auto-suggest-box.md
     - name: Bloco de texto
       href: controls-and-patterns/text-block.md
-    - name: Bloco de rich text
+    - name: Bloco rich text
       href: controls-and-patterns/rich-text-block.md
     - name: Caixa de texto
       href: controls-and-patterns/text-box.md
@@ -208,7 +210,7 @@ items:
       href: controls-and-patterns/labels.md
     - name: Links de conteúdo
       href: controls-and-patterns/content-links.md
-    - name: Modo de exibição de manuscrito
+    - name: Exibição de manuscrito
       href: controls-and-patterns/text-handwriting-view.md
 - name: Estilo
   items:
@@ -222,7 +224,7 @@ items:
     items:
     - name: Visão geral
       href: style/icons.md
-    - name: Ícones e logotipos de apps
+    - name: Ícones e logotipos de aplicativos
       href: style/app-icons-and-logos.md
     - name: Ícones Segoe MDL2
       href: style/segoe-ui-symbol-font.md
@@ -230,7 +232,7 @@ items:
     href: style/acrylic.md
   - name: Realce de revelação
     href: style/reveal.md
-  - name: Foco do Revelação
+  - name: Foco de revelação
     href: style/reveal-focus.md
   - name: Som
     href: style/sound.md
@@ -253,7 +255,7 @@ items:
     href: motion/index.md
   - name: Tempo e suavização
     href: motion/timing-and-easing.md
-  - name: Direção e gravidade
+  - name: Direcionalidade e gravidade
     href: motion/directionality-and-gravity.md
   - name: Movimento na prática
     href: motion/motion-in-practice.md
@@ -268,7 +270,7 @@ items:
     items:
     - name: Animações de propriedade
       href: motion/xaml-property-animations.md
-    - name: Animações de storyboard
+    - name: Animações com storyboard
       href: motion/storyboarded-animations.md
     - name: Animações de quadro chave e com função de easing
       href: motion/key-frame-and-easing-function-animations.md
@@ -280,11 +282,11 @@ items:
     - name: Blocos secundários
       href: shell/tiles-and-notifications/secondary-tiles.md
       items:
-      - name: Diretrizes
+      - name: Orientação
         href: shell/tiles-and-notifications/secondary-tiles-guidance.md
       - name: Fixar em Iniciar
         href: shell/tiles-and-notifications/secondary-tiles-pinning.md
-      - name: Fixar na barra de tarefas
+      - name: Fixar à barra de tarefas
         href: shell/tiles-and-notifications/secondary-tiles-pin-to-taskbar.md
       - name: Aplicativos da área de trabalho
         href: shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md
@@ -302,7 +304,7 @@ items:
       href: shell/tiles-and-notifications/primary-tile-apis.md
     - name: Suporte para blocos e notificações do sistema para idioma, escala e contraste
       href: shell/tiles-and-notifications/tile-toast-language-scale-contrast.md
-  - name: Fixar seu app na barra de tarefas
+  - name: Fixar seu aplicativo na barra de tarefas
     href: shell/pin-to-taskbar.md
   - name: Personalização da barra de título
     href: shell/title-bar.md
@@ -316,15 +318,15 @@ items:
         href: shell/tiles-and-notifications/adaptive-interactive-toasts.md
       - name: Esquema de conteúdo de notificação do sistema
         href: shell/tiles-and-notifications/toast-schema.md
-      - name: Enviar notificação local do sistema
+      - name: Enviar notificação do sistema local
         href: shell/tiles-and-notifications/send-local-toast.md
         items:
-        - name: Apps da área de trabalho
+        - name: Aplicativos da área de trabalho
           href: shell/tiles-and-notifications/toast-desktop-apps.md
           items:
-          - name: Apps em C#
+          - name: Aplicativos em C#
             href: shell/tiles-and-notifications/send-local-toast-desktop.md
-          - name: Apps em C++ WRL
+          - name: Aplicativos em C++ WRL
             href: shell/tiles-and-notifications/send-local-toast-desktop-cpp-wrl.md
       - name: Áudio personalizado
         href: shell/tiles-and-notifications/custom-audio-on-toasts.md
@@ -332,13 +334,13 @@ items:
         href: shell/tiles-and-notifications/toast-progress-bar.md
       - name: Atualização pendente
         href: shell/tiles-and-notifications/toast-pending-update.md
-      - name: Carimbos de data e hora personalizados
+      - name: Carimbos de data/hora personalizados
         href: shell/tiles-and-notifications/custom-timestamps-on-toasts.md
       - name: Coleções
         href: shell/tiles-and-notifications/toast-collections.md
       - name: Cabeçalhos
         href: shell/tiles-and-notifications/toast-headers.md
-      - name: Ouvinte de notificação
+      - name: Ouvinte da notificação
         href: shell/tiles-and-notifications/notification-listener.md
       - name: Espelhamento de notificação
         href: shell/tiles-and-notifications/notification-mirroring.md
@@ -348,7 +350,7 @@ items:
       href: shell/tiles-and-notifications/badges.md
     - name: Visualizador de notificações
       href: shell/tiles-and-notifications/notifications-visualizer.md
-    - name: Métodos de entrega de notificações
+    - name: Métodos de entrega de notificação
       href: shell/tiles-and-notifications/choosing-a-notification-delivery-method.md
       items:
       - name: Tipos de canal de notificação
@@ -379,7 +381,7 @@ items:
   - name: Caneta e Windows Ink
     href: input/pen-and-stylus-interactions.md
     items:
-    - name: 'Tutorial: Adicionar suporte à escrita à tinta ao seu app'
+    - name: 'Tutorial: Adicionar suporte a escrita à tinta para seu aplicativo'
       href: input/ink-walkthrough.md
     - name: Reconhecer traços de tinta
       href: input/convert-ink-to-text.md
@@ -415,7 +417,7 @@ items:
   - name: Surface Dial
     href: input/windows-wheel-interactions.md
     items:
-    - name: 'Tutorial: Adicionar suporte ao Surface Dial ao seu app'
+    - name: 'Tutorial: Adicionar suporte do Surface Dial ao seu aplicativo'
       href: input/radialcontroller-walkthrough.md
   - name: Interações de controle por voz
     href: input/speech-interactions.md
@@ -437,13 +439,13 @@ items:
     items:
     - name: Diretrizes de design
       href: https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines
-    - name: Ativar um app em primeiro plano
+    - name: Ativar um aplicativo em primeiro plano
       href: https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana
     - name: Modificar listas de frases de VCD
       href: https://docs.microsoft.com/cortana/voice-commands/dynamically-modify-voice-command-definition-vcd-phrase-lists
     - name: Iniciar um aplicativo em segundo plano
       href: https://docs.microsoft.com/cortana/voice-commands/launch-a-background-app-with-voice-commands-in-cortana
-    - name: Interagir com um app em segundo plano
+    - name: Interagir com um aplicativo em segundo plano
       href: https://docs.microsoft.com/cortana/voice-commands/interact-with-a-background-app-in-cortana
     - name: Link profundo de um aplicativo em segundo plano
       href: https://docs.microsoft.com/cortana/voice-commands/deep-link-into-your-app-from-cortana
@@ -457,7 +459,7 @@ items:
     href: input/identify-input-devices.md
   - name: Entrada de texto personalizado
     href: input/custom-text-input.md
-  - name: Dimensionamento de texto
+  - name: Colocar texto em escala
     href: input/text-scaling.md
   - name: Arrastar e soltar
     href: input/drag-and-drop.md
@@ -477,7 +479,7 @@ items:
   items:
   - name: Visão geral
     href: devices/index.md
-  - name: Projetando para Xbox e TV
+  - name: Projetar para TV e Xbox
     href: devices/designing-for-tv.md
   - name: Realidade Misturada
     href: devices/designing-for-MR.md
@@ -496,7 +498,7 @@ items:
       href: accessibility/developing-inclusive-windows-apps.md
     - name: Testes de acessibilidade
       href: accessibility/accessibility-testing.md
-    - name: Acessibilidade na Store
+    - name: Acessibilidade na Loja
       href: accessibility/accessibility-in-the-store.md
     - name: Lista de verificação de acessibilidade
       href: accessibility/accessibility-checklist.md
@@ -529,21 +531,21 @@ items:
     items:
     - name: Diretrizes de globalização
       href: globalizing/guidelines-and-checklist-for-globalizing-your-app.md
-    - name: Noções básicas sobre idiomas de perfil de usuário e manifesto do app
+    - name: Noções básicas sobre idiomas de perfil do usuário e manifesto do aplicativo
       href: globalizing/manage-language-and-region.md
-    - name: Globalize seus formatos data/hora/número.
+    - name: Globalize seus formatos data/hora/número
       href: globalizing/use-global-ready-formats.md
     - name: Usar modelos e padrões para formatar datas e horas
       href: globalizing/use-patterns-to-format-dates-and-times.md
-    - name: Ajustar layout e fontes e fornecer suporte a RTL
+    - name: Ajustar layout e fontes e fornecer suporte para RTL
       href: globalizing/adjust-layout-and-fonts--and-support-rtl.md
     - name: Valores de NumeralSystem
       href: globalizing/glob-numeralsystem-values.md
-    - name: Torne seu app localizável
+    - name: Torne seu aplicativo localizável
       href: globalizing/prepare-your-app-for-localization.md
     - name: Fontes internacionais
       href: globalizing/loc-international-fonts.md
-    - name: Projetar seu app para texto bidirecional
+    - name: Projetar seu aplicativo para texto bidirecional
       href: globalizing/design-for-bidi-text.md
     - name: Use o Kit de Ferramentas de Aplicativo Multilíngue 4.0
       href: globalizing/use-mat.md
@@ -551,7 +553,7 @@ items:
       href: globalizing/mat-faq-troubleshooting.md
     - name: Prepare seu aplicativo para a mudança de era japonesa
       href: globalizing/japanese-era-change.md
-  - name: Diretrizes da ajuda do app
+  - name: Diretrizes da ajuda do aplicativo
     href: in-app-help/guidelines-for-app-help.md
     items:
     - name: Interface do usuário instrucional
@@ -562,9 +564,9 @@ items:
       href: in-app-help/external-help.md
 - name: Kits de ferramentas de design
   href: downloads/index.md
-ms.openlocfilehash: af1472f7650982783ac08da2c73ebb5046401f3c
-ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
+ms.openlocfilehash: b6430ee5f121d672282513fa524a50e7788f404c
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004562"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582163"

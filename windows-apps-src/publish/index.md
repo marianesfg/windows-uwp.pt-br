@@ -1,22 +1,16 @@
 ---
 layout: LandingPage
-Description: See how to publish your Windows apps to the Microsoft Store.
-title: Publicar aplicativos do Windows
+Description: Veja como publicar seus aplicativos do Windows na Microsoft Store.
+title: Publique aplicativos do Windows
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows 10, uwp, publicação, publicar, venda, vender, distribuir, distribuição, store, painel
+keywords: 'windows 10, uwp, publicação, publicar, venda, vender, distribuir, distribuição, store, painel'
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b9d78014b2416cae7d387261ec1732b1f8932ad
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980304"
 ---
 # <a name="publish-windows-apps-and-games"></a>Publicar aplicativos e jogos do Windows  
  
-Você pode usar o [Partner Center](https://partner.microsoft.com/dashboard) para publicar seus aplicativos e jogos na Microsoft Store. <a href="//developer.microsoft.com/store/register">Inscreva-se hoje!</a>
+Você pode usar [Partner Center](https://partner.microsoft.com/dashboard) para publicar seus aplicativos e jogos para a Microsoft Store. <a href="//developer.microsoft.com/store/register">Inscreva-se hoje mesmo.</a>
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>
@@ -32,7 +26,7 @@ Você pode usar o [Partner Center](https://partner.microsoft.com/dashboard) para
                         <h3>Envios de aplicativos</h3>
                         <p>Descubra o que você precisa para criar um envio e certificar seu aplicativo.</p>
                         <ul>
-                        <li><a href="app-submissions.md">Lista de verificação de envio de aplicativo</a></li>
+                        <li><a href="app-submissions.md">Lista de verificação de envio do aplicativo</a></li>
                         <li><a href="the-app-certification-process.md">O processo de certificação</a></li>                      
                         <li><a href="//docs.microsoft.com/legal/windows/agreements/store-policies">Políticas da Microsoft Store</a></li>   
                     </ul>
@@ -100,7 +94,7 @@ Você pode usar o [Partner Center](https://partner.microsoft.com/dashboard) para
                 </div>
                 <div class="cardText">
                     <h3>Pagamentos e relatórios</h3>                  
-                    <p><a href="getting-paid-apps.md">Recebimento de pagamentos</a></p>
+                    <p><a href="getting-paid-apps.md">Recebendo pagamentos</a></p>
                     <p><a href="in-app-ads.md">Anúncios no aplicativo</a></p>
                     <p><a href="analytics.md">Relatórios analíticos</a></p>                   
                 </div>
@@ -118,7 +112,7 @@ Você pode usar o [Partner Center](https://partner.microsoft.com/dashboard) para
                     </div>
                 </div>
                 <div class="cardText">
-                    <h3>Promover seus aplicativos</h3>   
+                    <h3>Promova seus aplicativos</h3>   
                     <p><a href="create-an-ad-campaign-for-your-app.md">Criar campanhas publicitárias</a></p>
                     <p><a href="generate-promotional-codes.md">Gerar códigos promocionais</a></p>
                     <p><a href="put-apps-and-add-ons-on-sale.md">Oferecer preço de venda</a></p>
@@ -199,7 +193,7 @@ Você pode usar o [Partner Center](https://partner.microsoft.com/dashboard) para
                 <div class="cardText">
                     <h3>Estratégias de teste</h3>
                     <p><a href="beta-testing-and-targeted-distribution.md">Teste beta e distribuição direcionada</a></p>
-                    <p><a href="choose-visibility-options.md#audience">Audiência particular</a></p>
+                    <p><a href="choose-visibility-options.md#audience">Público-alvo particular</a></p>
                     <p><a href="package-flights.md">Pacotes de pré-lançamento</a></p>
                      <p><a href="gradual-package-rollout.md">Distribuição gradual</a></p>
                 </div>
@@ -259,7 +253,7 @@ Você pode usar o [Partner Center](https://partner.microsoft.com/dashboard) para
                                 </div>
                             </div>
                             <div class="cardText">
-                                <h3>Contrato de Desenvolvedor de Aplicativos da Microsoft</h3>
+                                <h3>Contrato de Desenvolvedor de Aplicativo</h3>
                             </div>
                         </div>
                     </div>

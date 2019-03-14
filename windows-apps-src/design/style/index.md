@@ -1,24 +1,18 @@
 ---
-description: Saiba como usar cores, tipografia e ícones para definir a personalidade do seu aplicativo UWP com o guia de estilo UWP.
-keywords: guia de estilo da UWP, diretrizes de design, tipografia, movimento, som, movimento, desenvolvimento de aplicativos
+description: 'Saiba como usar cores, tipografia e ícones para definir a personalidade do seu aplicativo UWP com o guia de estilo UWP.'
+keywords: 'guia de estilo da UWP, diretrizes de design, tipografia, movimento, som, movimento, desenvolvimento de aplicativos'
 title: Estilo para aplicativos UWP
 ms.date: 08/10/2017
 ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1d313e35b7d1ab3ebe72bd3a073323fe8782098a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946615"
 ---
 # <a name="style-for-uwp-apps"></a>Estilo para aplicativos UWP
 
-![imagem hero](images/header-style.svg)
+![imagem Hero](images/header-style.svg)
 
-O estilo é o que faz o aplicativo se destacar. As diretrizes de estilo nessa seção ajudam a criar um Design fluente por meio de cor, tipografia e novos recursos, como material acrílico e realce de revelação.
+Estilo faz com que seu aplicativo se destaque. As diretrizes de estilo nessa seção ajudam a criar um Design Fluente por meio de cor, tipografia e novos recursos, como material acrílico e de realce de revelação.
 
 :::row:::
     :::column:::
@@ -29,7 +23,7 @@ O estilo é o que faz o aplicativo se destacar. As diretrizes de estilo nessa se
     :::column:::
         ![hero image](images/header-typography.svg)
         ### [Typography](typography.md)
-       Como a representação visual da linguagem, a tarefa principal da tipografia é ser clara. Seu estilo nunca deve atrapalhar essa meta. Concentre-se as seguintes diretrizes sobre como usar a tipografia para ajudar os usuários a entenderem o conteúdo facilmente. 
+       Como a representação visual da linguagem, a tarefa principal da tipografia é ser clara. Seu estilo nunca deve atrapalhar essa meta. As diretrizes a seguir se concentram em como usar tipografia para ajudar os usuários a entender o conteúdo com facilidade. 
     :::column-end:::
 :::row-end:::
 

@@ -26,7 +26,7 @@ items:
     items:
     - name: Áudio para jogos
       href: ../gaming/working-with-audio-in-your-directx-game.md
-    - name: Captura e transmissão de jogo
+    - name: Captura e difusão de jogo
       href: ../gaming/game-broadcast-and-capture.md
       items:
       - name: Gerenciar transmissão de jogo
@@ -46,7 +46,7 @@ items:
         href: ../gaming/flight-stick.md
       - name: Controlador de jogo bruto
         href: ../gaming/raw-game-controller.md
-      - name: Fone de ouvido com microfone
+      - name: Headset
         href: ../gaming/headset.md
       - name: Controlador de navegação da interface do usuário
         href: ../gaming/ui-navigation-controller.md
@@ -77,7 +77,7 @@ items:
         href: ../gaming/set-up-visual-studio-for-game-development.md
       - name: Ferramentas de diagnóstico de gráficos
         href: ../gaming/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md
-    - name: Inicialização e resumo de aplicativos
+    - name: Iniciando e retomando aplicativos
       href: ../gaming/launching-and-resuming-apps-directx-and-cpp.md
       items:
       - name: Ativar um aplicativo
@@ -94,7 +94,7 @@ items:
       items:
       - name: Configurar o projeto
         href: ../gaming/tutorial--setting-up-the-games-infrastructure.md
-      - name: Estrutura UWP
+      - name: Estrutura da UWP
         href: ../gaming/tutorial--building-the-games-uwp-app-framework.md
       - name: Gerenciamento de fluxo de jogo
         href: ../gaming/tutorial-game-flow-management.md
@@ -112,7 +112,7 @@ items:
         href: ../gaming/tutorial--adding-sound.md
       - name: Estender o jogo
         href: ../gaming/tutorial-resources.md
-    - name: Marble Maze
+    - name: Labirinto
       href: ../gaming/developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md
       items:
       - name: Conceitos básicos
@@ -174,7 +174,7 @@ items:
         href: ../graphics-concepts/introduction-to-buffers.md
       - name: Buffers de índice
         href: ../graphics-concepts/index-buffers.md
-    - name: Devices
+    - name: Dispositivos
       href: ../graphics-concepts/devices.md
       items:
       - name: Tipos de dispositivos
@@ -421,12 +421,12 @@ items:
         items:
         - name: Formato de BC6H
           href: ../graphics-concepts/bc6h-format.md
-        - name: Formato BC7
+        - name: Formato de BC7
           href: ../graphics-concepts/bc7-format.md
   - name: Conceitos básicos
     href: ../gaming/directx-fundamentals.md
     items:
-    - name: elementos gráficos 2D
+    - name: Elementos gráficos 2D
       href: ../gaming/working-with-2d-graphics-in-your-directx-game.md
     - name: Elementos gráficos 3D básicos
       href: ../gaming/an-introduction-to-3d-graphics-with-directx.md
@@ -473,7 +473,7 @@ items:
       href: ../gaming/asynchronous-programming-directx-and-cpp.md
     - name: Cenários de dispositivo removido
       href: ../gaming/handling-device-lost-scenarios.md
-    - name: Multisampling
+    - name: Amostragem múltipla
       href: ../gaming/multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md
     - name: Otimizar entrada e loop de renderização
       href: ../gaming/optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md
@@ -481,7 +481,7 @@ items:
       href: ../gaming/reduce-latency-with-dxgi-1-3-swap-chains.md
     - name: Dimensionamento e sobreposições de cadeia de troca
       href: ../gaming/multisampling--scaling--and-overlay-swap-chains.md
-  - name: Fazer a portabilidade do DirectX 9 para o UWP
+  - name: Fazer a portabilidade do DirectX 9 para a UWP
     href: ../gaming/porting-your-directx-9-game-to-windows-store.md
     items:
     - name: DirectX 9 para DirectX 11.1
@@ -515,7 +515,7 @@ items:
         href: ../gaming/target-a-range-of-hardware.md
     - name: Perguntas frequentes
       href: ../gaming/directx-porting-faq.md
-  - name: Fazer portabilidade de OpenGL para Direct3D
+  - name: Fazer portabilidade do OpenGL para o Direct3D
     href: ../gaming/port-from-opengl-es-2-0-to-directx-11-1.md
     items:
     - name: Correlacionar OpenGL com Direct3D
@@ -554,7 +554,7 @@ items:
     href: ../xbox-apps/whats-new.md
   - name: Ativação do Modo de Desenvolvedor do Xbox One
     href: ../xbox-apps/devkit-activation.md
-  - name: Desabilitando o modo de desenvolvedor no Xbox One
+  - name: Desativando o modo de desenvolvedor no Xbox One
     href: ../xbox-apps/devkit-deactivation.md
   - name: Configuração do ambiente de desenvolvimento
     href: ../xbox-apps/development-environment-setup.md
@@ -582,7 +582,7 @@ items:
         href: ../xbox-apps/devhome-networking.md
       - name: Página de desempenho
         href: ../xbox-apps/devhome-performance.md
-    - name: Complemento do Modo Desenvolvedor do Xbox
+    - name: Complemento do modo de desenvolvimento do Xbox
       href: ../xbox-apps/xbox-dev-mode-companion.md
     - name: Fiddler
       href: ../xbox-apps/uwp-fiddler.md
@@ -644,8 +644,8 @@ items:
 - name: Xbox Live
   href: ../xbox-live/TOC.md
 ms.openlocfilehash: 0d44f8286586f3019864097357051e43fa88fbae
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8962578"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582170"

@@ -1,22 +1,16 @@
 ---
-Description: Dialogs and flyouts display transient UI elements that appear when the user requests them or when something happens that requires notification or approval.
+Description: Caixas de diálogo e submenus exibem elementos transitórios da interface do usuário que aparecem quando o usuário os solicita ou quando acontece algo que requer notificação ou aprovação.
 title: Caixas de diálogo e submenus
 template: detail.hbs
 ms.date: 07/06/2018
 ms.topic: article
-keywords: windows 10, uwp
+keywords: 'windows 10, uwp'
 ms.assetid: ad6affd9-a3c0-481f-a237-9a1ecd561be8
 pm-contact: yulikl
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d542c9809eb939553a851508886e34265f269263
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036858"
 ---
 # <a name="dialogs-and-flyouts"></a>Caixas de diálogo e submenus
 
@@ -24,7 +18,7 @@ ms.locfileid: "9036858"
 
 Caixas de diálogo e submenus são elementos transitórios da interface do usuário que aparecem quando acontece algo que requer notificação, aprovação ou informações adicionais do usuário.
 
-> **APIs importantes**: [classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog), [classe de submenu](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+> **APIs importantes**: [Classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog), [classe Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
 
 :::row:::
@@ -47,9 +41,9 @@ Caixas de diálogo e submenus são elementos transitórios da interface do usuá
 :::row-end:::
 
 
-## <a name="is-this-the-right-control"></a>Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-Caixas de diálogo e submenus certificam-se de que os usuários estão cientes da informações importantes, mas eles também interrompem a experiência do usuário. Como as caixas de diálogo são modais (bloqueando), elas interrompem os usuários, impedindo que façam algo até que interajam com a caixa. Submenus fornecem uma experiência menos desagradável, mas exibir muitos submenus pode ser uma decisão traiçoeira.
+Caixas de diálogo e submenus certificam-se de que os usuários estão cientes da informações importantes, mas eles também interrompem a experiência do usuário. Como caixas de diálogo são modais (bloqueando), elas interrompem os usuários, impedindo que façam algo até que interajam com a caixa. Submenus fornecem uma experiência menos desagradável, mas exibir muitos submenus pode ser uma decisão traiçoeira.
 
 Depois de determinar que você deseja usar uma caixa de diálogo ou menu suspenso, você precisa escolher qual usar.
 
@@ -84,7 +78,7 @@ Considerando que as caixas de diálogo bloqueiam interações e os submenus não
 :::row-end:::
 
 
-## <a name="ways-to-avoid-using-dialogs-and-flyouts"></a>Formas de evitar o uso de caixas de diálogo e submenus
+## <a name="ways-to-avoid-using-dialogs-and-flyouts"></a>Maneiras de evitar o uso de caixas de diálogo e submenus
 
 Considere a importância das informações que você deseja compartilhar: é importante o suficiente para interromper o usuário? Considere também a frequência com que as informações precisam ser exibidas. Se você estiver mostrando uma caixa de diálogo ou notificação a cada poucos minutos, convém alocar espaço para essas informações na interface do usuário principal, em vez disso. Por exemplo, em um cliente de chat, em vez de mostrar um submenu sempre que um amigo entra, você pode exibir uma lista de amigos que estão online no momento e realçar amigos conforme eles entrarem.
 
@@ -92,11 +86,11 @@ As caixas de diálogo são usadas para confirmar uma ação (como excluir um arq
 
 ## <a name="how-to-create-a-dialog"></a>Como criar uma caixa de diálogo
 
-Consulte o [artigo de caixas de diálogo](dialogs.md). 
+Consulte o [Artigo de caixas de diálogo](dialogs.md). 
 
 ## <a name="how-to-create-a-flyout"></a>Como criar um submenu
 
-Consulte o [artigo do submenu](flyouts.md). 
+Consulte o [Artigo de submenu](flyouts.md). 
 
 ## <a name="examples"></a>Exemplos
 
@@ -108,7 +102,7 @@ Consulte o [artigo do submenu](flyouts.md).
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abrir o aplicativo para ver o <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> ou <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> em ação.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obter o código-fonte (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
 </tr>

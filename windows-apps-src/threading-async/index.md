@@ -1,17 +1,11 @@
 ---
 ms.assetid: beac6333-655a-4bcf-9caf-bba15f715ea5
 title: Programação threading e assíncrona
-description: A programação threading e assíncrona permite que seu app realize o trabalho de forma assíncrona em threads paralelos.
+description: A programação threading e assíncrona permite que seu aplicativo realize o trabalho de forma assíncrona em threads paralelos.
 ms.date: 05/14/2018
 ms.topic: article
-keywords: windows 10, uwp, assíncrono, threads, threading
+keywords: 'windows 10, uwp, assíncrono, threads, threading'
 ms.localizationpriority: medium
-ms.openlocfilehash: 22c151b90be30b39da7decd9a0ce3109e29b7fb7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937375"
 ---
 # <a name="threading-and-async-programming"></a>Programação threading e assíncrona
 A programação threading e assíncrona permite que seu aplicativo realize o trabalho de forma assíncrona em threads paralelos.
@@ -30,9 +24,9 @@ O pool de threads é mais eficiente no gerenciamento de threads porque reduz a s
 
 | Tópico                                                                                                          | Descrição                         |
 |----------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| [Programação assíncrona (aplicativos UWP)](asynchronous-programming-universal-windows-platform-apps.md)              | Este tópico descreve a programação assíncrona na plataforma Universal do Windows (UWP) e sua representação em c#, Microsoft Visual Basic.NET VisualC + + extensões de componente (C++ c++ /CX) e JavaScript. |
+| [Programação assíncrona (aplicativos UWP)](asynchronous-programming-universal-windows-platform-apps.md)              | Este tópico descreve a programação assíncrona na UWP (Plataforma Universal do Windows) e sua declaração em C#, Microsoft Visual Basic .NET e extensões de componentes Visual C++ (C++/CX) e JavaScript. |
 | [Programação assíncrona em C++/CX (aplicativos UWP)](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)| Este artigo descreve a maneira recomendada de consumir métodos assíncronos em C++/CX usando a classe <code>task</code><code>concurrency</code> que é definida no namespace  em ppltasks.h. |
-| [Práticas recomendadas para usar o pool de threads](best-practices-for-using-the-thread-pool.md)                         | Este tópico descreve as práticas recomendadas para trabalhar com o pool de threads. |
+| [Práticas recomendadas para usar o pool de threads](best-practices-for-using-the-thread-pool.md)                         | Este tópico descreve práticas recomendadas para trabalhar com o pool de threads. |
 | [Chamar APIs assíncronas no Visual Basic ou C#](call-asynchronous-apis-in-csharp-or-visual-basic.md)             | A Plataforma Universal do Windows (UWP) inclui muitas APIs assíncronas para garantir que o seu aplicativo permaneça responsivo ao executar trabalhos demorados. Este tópico descreve como usar métodos assíncronos da UWP em C# ou Microsoft Visual Basic. |
 | [Criar um item de trabalho periódico](create-a-periodic-work-item.md)                                                   | Saiba como criar um item de trabalho periódico que se repete periodicamente. |
 | [Enviar um item de trabalho ao pool de threads](submit-a-work-item-to-the-thread-pool.md)                               | Aprenda a trabalhar em um thread separado enviando um item de trabalho ao pool de threads. |

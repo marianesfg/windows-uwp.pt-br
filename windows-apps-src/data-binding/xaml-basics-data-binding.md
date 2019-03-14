@@ -6,17 +6,17 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 21a053934d7391d12f7cd987026524b9ff4c279d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923113"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639981"
 ---
 # <a name="create-data-bindings"></a>Criar vinculações de dados
 
 Suponhamos que você tenha projetado e implementado uma interface do usuário de boa aparência, repleta imagens de espaço reservado, texto clichê "lorem ipsum" e controles que ainda não fazem nada. Em seguida, você a conectará a dados reais, e ela deixará de ser um protótipo de design para se transformar em um app dinâmico. 
 
-Neste tutorial, você aprenderá a substituir seu clichê por vinculações de dados e criar outros links diretos entre a interface do usuário e os dados. Você também aprenderá a formatar ou converter os dados para exibição e manter a interface do usuário e os dados sincronizados. Quando você concluir este tutorial, será capaz de melhorar a simplicidade e a organização do XAML e do código C#, facilitando a manutenção e a extensão.
+Neste tutorial, você aprenderá a substituir seu clichê por vinculações de dados e criar outros links diretos entre a interface do usuário e os dados. Você também aprenderá como formatar ou converter os dados para exibição e manter seus dados e a interface do usuário em sincronia. Quando você concluir este tutorial, você poderá melhorar a simplicidade e a organização do XAML e C# código, tornando mais fácil de manter e estender.
 
 Você iniciará com uma versão simplificada do exemplo do PhotoLab. Esta versão de iniciante inclui a camada de dados completa, além dos layouts de página XAML básicos, e deixa de fora muitos recursos para facilitar a navegação do código. Este tutorial não é compilado para o app completo; portanto, confira a versão final para ver recursos como animações personalizadas e suporte por telefone. Você pode encontrar a versão final na pasta raiz do repositório [Windows-appsample-photo-laboratório](https://github.com/Microsoft/Windows-appsample-photo-lab). 
 
@@ -29,19 +29,19 @@ O ponto de partida deste laboratório é o repositório de exemplos do PhotoLab,
 
 O app PhotoLab tem duas páginas principais:
 
-**MainPage.xaml:** exibe o modo de exibição de galeria de fotos, juntamente com algumas informações sobre cada arquivo de imagem.
+**MainPage. XAML:** exibe uma exibição de galeria de fotos, juntamente com algumas informações sobre cada arquivo de imagem.
 ![MainPage](../design/basics/images/xaml-basics/mainpage.png)
 
 **DetailPage.xaml:** exibe uma única foto após ela ter sido selecionada. Um menu de edição de submenu permite que a foto seja alterada, renomeada e salva.
 ![DetailPage](../design/basics/images/xaml-basics/detailpage.png)
 
-## <a name="part-1-replace-the-placeholders"></a>Parte 1: Substituir os espaços reservados
+## <a name="part-1-replace-the-placeholders"></a>Parte 1: Substitua os espaços reservados
 
 Aqui você criará ligações únicas no modelo de dados XAML para exibir imagens reais e metadados de imagem, em vez de conteúdo de espaço reservado. 
 
 As vinculações únicas destinam-se a dados somente leitura e inalteráveis, o que significa que eles são de alto desempenho e fáceis de criar, permitindo que você exiba grandes conjuntos de dados grandes nos controles **GridView** e **ListView**. 
 
-**Substitua os espaços reservados por vinculações únicas**
+**Substitua os espaços reservados com associações de uso únicas**
 
 1. Abra a pasta xaml-basics-starting-points\data-binding e inicie o arquivo PhotoLab.sln. 
 
@@ -60,7 +60,7 @@ As vinculações únicas destinam-se a dados somente leitura e inalteráveis, o 
 
 4. Adicione um valor **x: DataType** ao modelo. 
 
-    **Depois:**
+    **Depois de:**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -79,7 +79,7 @@ As vinculações únicas destinam-se a dados somente leitura e inalteráveis, o 
            Stretch="Uniform" />
     ```
     
-    **Depois:**
+    **Depois de:**
     ```xaml
     <Image x:Name="ItemImage" 
            Source="{x:Bind ImageSource}" 
@@ -105,7 +105,7 @@ As vinculações únicas destinam-se a dados somente leitura e inalteráveis, o 
     <telerikInput:RadRating Value="3" ... />
     ```
     
-    **Depois:**
+    **Depois de:**
     ```xaml
     <TextBlock Text="{x:Bind ImageTitle}" ... />
     <StackPanel ... >
@@ -122,7 +122,7 @@ Execute o app para ver sua aparência até agora. Não há mais espaços reserva
 > [!Note]
 > Se você quiser fazer mais testes, tente adicionar um novo TextBlock ao modelo de dados e use o truque x:Bind IntelliSense para localizar uma propriedade a ser exibida. 
 
-## <a name="part-2-use-binding-to-connect-the-gallery-ui-to-the-images"></a>Parte 2: Usar a vinculação para conectar a interface do usuário da galeria às imagens
+## <a name="part-2-use-binding-to-connect-the-gallery-ui-to-the-images"></a>Parte 2: Usar a associação para conectar-se a Galeria de interface do usuário para as imagens
 
 Aqui, você criará vinculações únicas na página XAML para conectar a exibição da galeria à coleção de imagens, substituindo o código de procedimento existente que faz isso no code-behind. Você também criará um botão **Excluir** para ver como a exibição da galeria muda quando as imagens são removidas da coleção. Ao mesmo tempo, você aprenderá a vincular eventos a manipuladores de eventos para obter mais flexibilidade do que a fornecido pelos manipuladores de eventos tradicionais. 
 
@@ -132,7 +132,7 @@ As expressões **x:Bind** fora dos modelos de dados sempre estão vinculadas à 
 
 No exemplo do PhotoLab, uma as funções de uma vinculação como estsa é conectar o controle **GridView** principal diretamente à coleção de imagens, em vez de fazê-lo no code-behind. Mais tarde, você verá outros exemplos. 
 
-**Vincular o controle GridView principal à coleção de imagens**
+**Associar o controle GridView principal para a coleção de imagens**
 
 1. No MainPage.xaml.cs, localize o método **OnNavigatedTo** e remova o código que define **ItemsSource**.
 
@@ -141,7 +141,7 @@ No exemplo do PhotoLab, uma as funções de uma vinculação como estsa é conec
     ImageGridView.ItemsSource = Images;
     ```
 
-    **Depois:**
+    **Depois de:**
     ```c#
     // Replaced with XAML binding:
     // ImageGridView.ItemsSource = Images;
@@ -154,13 +154,13 @@ No exemplo do PhotoLab, uma as funções de uma vinculação como estsa é conec
     <GridView x:Name="ImageGridView" 
     ```
 
-    **Depois:**
+    **Depois de:**
     ```xaml
     <GridView x:Name="ImageGridView" 
               ItemsSource="{x:Bind Images}" 
     ```
 
-    A propriedade **Images** é do tipo **ObservableCollection\<ImageFileInfo\>**; portanto, os itens individuais exibidos no **GridView** são do tipo **ImageFileInfo**. Isso corresponde ao valor **x: DataType** descrito na Parte 1. 
+    O **imagens** propriedade é do tipo **ObservableCollection\<ImageFileInfo\>**, portanto, os itens individuais são exibidos no **GridView** são do tipo **ImageFileInfo**. Isso corresponde ao valor **x: DataType** descrito na Parte 1. 
 
 Todas as vinculações que examinamos até agora são únicas e somente leitura, que é o comportamento padrão das expressões **x:Bind** sem formatação. Os dados são carregados apenas na inicialização, o que torna as vinculações de alto desempenho perfeito para suporte a várias exibições complexas de grandes conjuntos de dados. 
 
@@ -171,9 +171,9 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     = new ObservableCollection<ImageFileInfo>();
 ```
 
-O valor da propriedade **Images** nunca muda, mas como a propriedade é do tipo **ObservableCollection\<T\>**, o *conteúdo* da coleção pode ser alterado, e a vinculação perceberá automaticamente as alterações e atualizará a interface do usuário. 
+O **imagens** nunca muda o valor da propriedade, mas porque a propriedade é do tipo **ObservableCollection\<T\>**, o *conteúdo* das coleção pode alterar, e a associação automaticamente observar as alterações e atualizar a interface do usuário. 
 
-Para testar isso, vamos adicionar temporariamente um botão que exclua a imagem atualmente selecionada. Esse botão não está na versão final porque a seleção de uma imagem o levará a uma página de detalhes. No entanto, o comportamento de **ObservableCollection\<T\>** 1 ainda é importante no exemplo final do PhotoLab porque o XAML é inicializado no construtor da página (por meio da chamada do método **InitializeComponent** ), mas a coleção **Images** é preenchida posteriormente no método **OnNavigatedTo**. 
+Para testar isso, vamos adicionar temporariamente um botão que exclua a imagem atualmente selecionada. Esse botão não está na versão final porque a seleção de uma imagem o levará a uma página de detalhes. No entanto, o comportamento de **ObservableCollection\<T\>**  ainda é importante na amostra PhotoLab final porque o XAML é inicializado no construtor da página (por meio de  **InitializeComponent** chamada de método), mas o **imagens** coleção é preenchida posteriormente no **OnNavigatedTo** método. 
 
 **Adicionar um botão Excluir**
 
@@ -198,7 +198,7 @@ Para testar isso, vamos adicionar temporariamente um botão que exclua a imagem 
 
     Esse método simplesmente exclui a imagem selecionada da coleção **Images**. 
 
-Agora execute o app e use o botão para apagar algumas imagens. Como você pode ver, a interface do usuário é atualizada automaticamente, graças à vinculação de dados e ao tipo **ObservableCollection\ < T\ >**. 
+Agora execute o app e use o botão para apagar algumas imagens. Como você pode ver, a interface do usuário é atualizada automaticamente, graças à vinculação de dados e o **ObservableCollection\<T\>**  tipo. 
 
 > [!Note]
 > Se você quiser um desafio ainda maior, tente adicionar dois botões que movam a imagem selecionada para cima ou para baixo na lista e, em seguida, aplique a expressão x:Bind a seus eventos Click para dois novos métodos similares a DeleteSelectedImage.
@@ -207,11 +207,11 @@ Agora execute o app e use o botão para apagar algumas imagens. Como você pode 
 
 Nesta parte, você criará vinculações unidirecionais de um controle no modelo de dados para o controle deslizante de zoom, que está fora do modelo. Você também aprenderá que pode usar a vinculação de dados com várias propriedades de controle, e não apenas com as mais óbvias, como **TextBlock.Text** e **Image.Source**. 
 
-**Vincular o modelo de dados da imagem ao controle deslizante de zoom**
+**Associar o modelo de dados de imagem para o controle deslizante de zoom**
 
 * Localize o **DataTemplate** chamado **ImageGridView_DefaultItemTemplate** e substitua os valores **Height** e **Width** do controle **Grid** na parte superior do modelo.
 
-    **Antes**
+    **Antes de**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -220,7 +220,7 @@ Nesta parte, você criará vinculações unidirecionais de um controle no modelo
               Margin="{StaticResource LargeItemMargin}">
     ```
     
-    **Depois**
+    **Depois de**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -255,7 +255,7 @@ Nesta parte, você adicionará uma propriedade personalizada **ItemSize** ao cod
 
 Diferente das propriedades de controle internas, as propriedades personalizadas não atualizam automaticamente a interface do usuário, mesmo com vinculações unidirecionais e bidirecionais. Elas funcionam bem com vinculações **únicas**, mas se você quiser que as alterações de propriedade apareçam na interface do usuário, você precisará executar outras etapas. 
 
-**Criar a propriedade ItemSize de modo que ela atualize a interface do usuário**
+**Criar a propriedade ItemSize para que ele atualiza a interface do usuário**
 
 1. No MainPage.xaml.cs, altere a assinatura da classe **MainPage** para que ela implemente a interface **INotifyPropertyChanged**.
 
@@ -264,7 +264,7 @@ Diferente das propriedades de controle internas, as propriedades personalizadas 
     public sealed partial class MainPage : Page
     ```
 
-    **Depois:**
+    **Depois de:**
     ```c#
     public sealed partial class MainPage : Page, INotifyPropertyChanged
     ```
@@ -303,7 +303,7 @@ Diferente das propriedades de controle internas, as propriedades personalizadas 
 
 4. No MainPage.xaml, localize o **DataTemplate** chamado **ImageGridView_DefaultItemTemplate** e substitua os valores **Height** e **Width** do controle **Grid** na parte superior do modelo. (Se você fez a vinculação entre controles na parte anterior deste tutorial, as únicas alterações serão substituir **Value** por **ItemSize** e **ZoomSlider** por **page**. Não deixe de fazer isso para Height e Width!)
 
-    **Antes**
+    **Antes de**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -312,7 +312,7 @@ Diferente das propriedades de controle internas, as propriedades personalizadas 
             Margin="{StaticResource LargeItemMargin}">
     ```
     
-    **Depois**
+    **Depois de**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -323,7 +323,7 @@ Diferente das propriedades de controle internas, as propriedades personalizadas 
 
 Agora que a interface do usuário pode responder às alterações de **ItemSize**, você precisa fazer algumas alterações. Como mencionado anteriormente, o valor **ItemSize** é calculado a partir do estado atual de vários controles de interface do usuário, mas o cálculo deve ser executado sempre que esses controles mudarem de estado. Para fazer isso, você usará a vinculação de eventos para que determinadas alterações de interface do usuário chamem um método auxiliar que atualize **ItemSize**. 
 
-**Atualizar o valor da propriedade ItemSize**
+**Atualize o valor da propriedade ItemSize**
 
 1. Adicione o método **DeleteSelectedImage** a MainPage.xaml.cs.
 
@@ -375,7 +375,7 @@ Agora que a interface do usuário pode responder às alterações de **ItemSize*
     <Page x:Name="page"  
     ```
 
-    **Depois:**
+    **Depois de:**
     ```xaml
     <Page x:Name="page" 
           SizeChanged="{x:Bind DetermineItemSize}"
@@ -388,7 +388,7 @@ Agora que a interface do usuário pode responder às alterações de **ItemSize*
     <Slider x:Name="ZoomSlider"
     ```
 
-    **Depois:**
+    **Depois de:**
     ```xaml
     <Slider x:Name="ZoomSlider"
             ValueChanged="{x:Bind DetermineItemSize}"
@@ -401,7 +401,7 @@ Agora que a interface do usuário pode responder às alterações de **ItemSize*
     <ToggleSwitch x:Name="FitScreenToggle"
     ```
 
-    **Depois:**
+    **Depois de:**
     ```xaml
     <ToggleSwitch x:Name="FitScreenToggle"
                   Toggled="{x:Bind DetermineItemSize}"
@@ -415,7 +415,7 @@ Execute o app e use o controle deslizante de zoom e a alternância **Fit to scre
 > Se quiser um desafio ainda maior, tente adicionar um **TextBlock** após o **ZoomSlider** e vincular a propriedade **Text** à propriedade **ItemSize**. Como não se trata de um modelo de dados, você pode usar **x:Bind**, em vez de **Binding**, como nas vinculações **ItemSize** anteriores.  
 }
 
-## <a name="part-5-enable-user-edits"></a>Parte 5: Habilitar edições do usuário
+## <a name="part-5-enable-user-edits"></a>Parte 5: Ativar as edições do usuário
 
 Aqui, você criará vinculações bidirecionais para permitir aos usuários atualizar valores, incluindo o título da imagem, a classificação e vários efeitos visuais. 
 
@@ -428,14 +428,14 @@ No entanto, primeiro você precisa anexar o **DetailPage** para que o app navegu
 1. No MainPage.xaml, localize o **GridView** chamado **ImageGridView** e adicione um valor **ItemClick**. 
 
     > [!TIP] 
-    > Se você digitar a alteração abaixo, em vez de copiá-la ou colá-la, verá um pop-up IntelliSense informando "\<New Event Handler\>". Se você pressionar a tecla Tab, ela preencherá o valor com um nome de manipulador de método padrão e desligará automaticamente o método mostrado na próxima etapa. Pressione F12 para navegar até o método no code-behind. 
+    > Se você digitar a alteração abaixo, em vez de copiar/colar, você verá um pop-up do IntelliSense que diz "\<novo manipulador de eventos\>". Se você pressionar a tecla Tab, ela preencherá o valor com um nome de manipulador de método padrão e desligará automaticamente o método mostrado na próxima etapa. Pressione F12 para navegar até o método no code-behind. 
 
     **Antes:**
     ```xaml
     <GridView x:Name="ImageGridView"
     ```
 
-    **Depois:**
+    **Depois de:**
     ```xaml
     <GridView x:Name="ImageGridView"
               ItemClick="ImageGridView_ItemClick"
@@ -463,7 +463,7 @@ Como você pode ver, a caixa de texto do título exibe o título e permite que v
 
 Todos os controles já estão vinculados por meio da expressão **x:Bind** sem formatação que abordamos na Parte 1. Se você relembrar, isso significa que todas as vinculações são únicas, o que explica por que as alterações nos valores não são registradas. Para corrigir isso, tudo o que temos a fazer é transformá-las em vinculações bidirecionais. 
 
-**Tornar os controles de edição interativos**
+**Verifique os controles de edição interativas**
 
 1. No DetailPage.xaml, localize o **TextBlock** chamado **TitleTextBlock** e, em seguida, o controle **RadRating**; atualize suas expressões **x:Bind** de modo que incluam **Mode=TwoWay**.
 
@@ -476,7 +476,7 @@ Todos os controles já estão vinculados por meio da expressão **x:Bind** sem f
                             ... >
     ```
 
-    **Depois:**
+    **Depois de:**
     ```xaml
     <TextBlock x:Name="TitleTextBlock" 
                Text="{x:Bind item.ImageTitle, Mode=TwoWay}" 
@@ -502,7 +502,7 @@ Assim como as vinculações unidirecionais abordadas anteriormente, agora essas 
 
 Execute o app e teste os controles de edição. Como você pode ver, quando você fizer uma alteração, ela agora afetará os valores de imagem, e essas alterações persistirão quando você retornar à página principal. 
 
-## <a name="part-6-format-values-through-function-binding"></a>Parte 6: Formatar valores por meio da vinculação de função
+## <a name="part-6-format-values-through-function-binding"></a>Parte 6: Valores de formato por meio de associação de função
 
 Um último problema permanece. Quando você move os controles deslizantes de efeito, as etiquetas ao lado deles ainda não são alteradas. 
 
@@ -510,7 +510,7 @@ Um último problema permanece. Quando você move os controles deslizantes de efe
 
 A parte final deste tutorial é adicionar vinculações que formatam os valores do controle deslizante para exibição.
 
-**Vincular as etiquetas do controle deslizante de efeito e formatar os valores para exibição**
+**Associar os rótulos de controle deslizante do efeito e formatar os valores para exibição**
 
 1. Localize o **TextBlock** após o controle deslizante **Exposure** e substitua o valor **Text** pela expressão de vinculação mostrada aqui.
 
@@ -520,7 +520,7 @@ A parte final deste tutorial é adicionar vinculações que formatam os valores 
     <TextBlock ... Text="0.00" />
     ```
 
-    **Depois:**
+    **Depois de:**
     ```xaml
     <Slider Header="Exposure" ... />
     <TextBlock ... Text="{x:Bind item.Exposure.ToString('N', culture), Mode=OneWay}" />
@@ -561,7 +561,7 @@ Agora, quando você executa o app, tudo funciona, inclusive as etiquetas do cont
 
 Este tutorial fez uma demonstração da vinculação de dados e mostrou algumas das funcionalidades disponíveis. Um aviso antes de concluir: nem tudo pode ser vinculado e, às vezes, os valores que você tenta conectar são incompatíveis com as propriedades que você está tentando vincular. O processo de vinculação é muito flexível, mas não funcionará em todas as situações.
 
-Um exemplo de um problema não abordado pela vinculação é quando um controle não tem propriedades adequadas às quais vincular, como o recurso de zoom da página de detalhes. Esse controle deslizante de zoom precisará interagir com o **ScrollViewer** que exibe a imagem, mas **ScrollViewer** só pode ser atualizado por meio do método **ChangeView**. Nesse caso, usamos os manipuladores de eventos convencionais para manter o **ScrollViewer** e o controle deslizante de zoom em sincronia; consulte os métodos **DetailPage**, **ZoomSlider_ValueChanged** e **MainImageScroll_ViewChanged** para obter detalhes.
+Um exemplo de um problema não abordado pela vinculação é quando um controle não tem propriedades adequadas às quais vincular, como o recurso de zoom da página de detalhes. Esse controle deslizante de zoom precisará interagir com o **ScrollViewer** que exibe a imagem, mas **ScrollViewer** só pode ser atualizado por meio do método **ChangeView**. Nesse caso, usaremos os manipuladores de eventos convencional para manter o **ScrollViewer** e o controle deslizante de zoom na sincronização; Consulte o **DetailPage** **ZoomSlider_ValueChanged** e **MainImageScroll_ViewChanged** métodos para obter detalhes.
 
 No entanto, a vinculação é uma maneira eficaz e flexível de simplificar o código e manter a lógica de interface do usuário separada da lógica de dados. Isso facilitará muito o ajuste para ambos os lados, reduzindo o risco de inserção de bugs no outro lado. 
 
@@ -595,5 +595,5 @@ Como você deve ter notado, se alterar o nível de zoom na página de detalhes, 
     
 Você tem todas as informações necessárias neste tutorial, mas, se precisar de mais orientação, os documentos de vinculação de dados estão a apenas um clique de distância. Iniciar aqui:
 
-+ [Extensão de marcação {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
-+ [Vinculação de dados em detalhes](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)
++ [extensão de marcação {X:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
++ [Associação de dados em camadas](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)

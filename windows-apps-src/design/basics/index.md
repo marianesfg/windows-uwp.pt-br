@@ -1,16 +1,16 @@
 ---
 description: Saiba como projetar e codificar um aplicativo UWP que seja fácil de navegar e tenha um visual espetacular em uma variedade de dispositivos e tamanhos de tela.
 title: Noções básicas de design
-keywords: 'layout do aplicativo uwp, plataforma universal do windows, design do aplicativo, interface'
+keywords: 'layout do aplicativo UWP, Plataforma Universal do Windows, design do aplicativo, interface'
 ms.date: 03/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ---
 # <a name="design-basics-for-uwp-apps"></a>Noções básicas de design para aplicativos UWP
 
-![imagem hero](images/header-design-basics.svg)
+![imagem Hero](images/header-design-basics.svg)
 
-As orientações sobre design da Plataforma Universal do Windows (UWP) são um recurso que ajuda você a projetar e criar aplicativos belos e refinados. Não é uma lista de regras prescritivas – é um documento dinâmico, projetado para se adaptar ao nosso Sistema Design Fluente em evolução, bem como às necessidades de nossa comunidade de criação de aplicativos. 
+As orientações sobre design da UWP (Plataforma Universal do Windows) são um recurso que ajuda você a projetar e criar aplicativos belos e refinados. Não é uma lista de regras prescritivas – é um documento dinâmico, projetado para se adaptar ao nosso Sistema de Design Fluente em evolução, bem como às necessidades de nossa comunidade de criação de aplicativos. 
 
 ## <a name="overview"></a>Visão geral
 
@@ -20,7 +20,7 @@ Uma introdução aos recursos da UWP combinada às práticas recomendadas para c
 
 [**Sistema de Design Fluente**](../fluent-design-system/index.md)
 
-O sistema de Design Fluente apresenta nossas metas e princípios para criar interfaces do usuários adaptáveis, abrangentes e belas.
+O sistema de Design Fluente apresenta nossas metas e princípios para criar interfaces do usuário adaptáveis, abrangentes e belas.
 
 ## <a name="basics"></a>Noções básicas
 
@@ -41,14 +41,14 @@ O objetivo principal de qualquer aplicativo é fornecer acesso ao conteúdo: em 
 Saiba como criar um aplicativo de edição de fotos básico em XAML e C#.
 <!-- <img src="images/landing-page/photolab-50.png" style="{height: 339px}" alt=" " /> -->
 
-[**1. Crie uma interface de usuário básica**](xaml-basics-ui.md)
+[**1. Criar uma interface do usuário básica**](xaml-basics-ui.md)
 
 Use o XAML para criar uma interface do usuário básica.
 
-[**2. Crie um layout adaptável**](xaml-basics-adaptive-layout.md)
+[**2. Criar um layout adaptável**](xaml-basics-adaptive-layout.md)
 
 Dê um layout adaptável ao aplicativo de edição de fotos.
 
-[**3. Crie estilos personalizados**](xaml-basics-style.md)
+[**3. Criar estilos personalizados**](xaml-basics-style.md)
 
 Dê sua própria aparência e sensação a nossos controles UWP criando estilos personalizados.

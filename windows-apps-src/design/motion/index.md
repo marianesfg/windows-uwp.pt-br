@@ -1,29 +1,23 @@
 ---
-Description: Purposeful, well-designed motion brings your app to life and makes the experience feel crafted and polished. Help users understand context changes, and tie experiences together with visual transitions.
+Description: Um movimento proposital e bem projetado traz vida ao seu aplicativo e faz com que a experiência seja elaborada e refinada. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais.
 title: Movimento e animação em aplicativos UWP
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: windows 10, uwp
+keywords: 'windows 10, uwp'
 pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2701844ccefdc5a535fa8fc20086c550cb7bc29e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936905"
 ---
 # <a name="motion-for-uwp-apps"></a>Movimento para aplicativos UWP
 
-![imagem hero](images/header-motion2.svg)
+![imagem Hero](images/header-motion2.svg)
 
-O movimento fluente tem um propósito em seu aplicativo. Ele fornece um comentários inteligentes com base no comportamento do usuário, mantém a interface do usuário ativa e guia a navegação do usuário no aplicativo. O movimento fluente gera uma conexão emocional entre um usuário e sua experiência digital. Aproveitamos uma base de movimento natural que o usuário já entende do mundo físico e ampliamos nosso sistema a partir daí.
+O movimento fluente tem um propósito em seu aplicativo. Ele fornece comentários inteligentes com base no comportamento do usuário, mantém a interface do usuário ativa e guia a navegação do usuário no aplicativo. O movimento fluente gera uma conexão emocional entre um usuário e sua experiência digital. Aproveitamos uma base de movimento natural que o usuário já entende do mundo físico e ampliamos nosso sistema com base nisso.
 
 ## <a name="fluent-motion-principles"></a>Princípios de movimento fluente
 
@@ -32,7 +26,7 @@ O movimento fluente tem um propósito em seu aplicativo. Ele fornece um comentá
 Objetos em movimento apresentam comportamentos de objetos no mundo real. Um movimento fluente e dinâmico faz com que a experiência seja natural, criando conexões emocionais e adicionando personalidade.
 
 ![Exemplo de interface do usuário de movimento físico](images/Physical.gif)
-> Quando você interage com a interface do usuário por meio de toque, o movimento da interface está diretamente relacionado à velocidade da interação. Como o toque é a manipulação direta, o objeto com o qual você interage afeta os objetos ao redor.
+> Quando você interage com a interface do usuário por meio de toque, o movimento da interface do usuário está diretamente relacionado à velocidade da interação. Como o toque é a manipulação direta, o objeto com o qual você interage afeta os objetos ao redor.
 
 ### <a name="functional"></a>Funcional
 
@@ -50,10 +44,10 @@ O movimento fluente de um ponto a outro naturalmente atrai a atenção e orienta
 
 ### <a name="contextual"></a>Contextual
 
-Movimento inteligente fornece comentários ao usuário de forma alinhada com a manipulação da interface do usuário. A interação está centralizada no usuário. O movimento parece apropriado ao fator forma e é projetado tendo em vista o cenário. Deve ser confortável para cada usuário.
+O movimento inteligente fornece comentários ao usuário de forma alinhada com a manipulação da interface do usuário. A interação está centralizada no usuário. O movimento parece apropriado ao fator forma e é projetado tendo em vista o cenário. Deve ser confortável para cada usuário.
 
 ![Exemplo de interface do usuário de movimento contextual](images/Contextual.gif)
-> A animação deve se relacionar à interação do usuário. Um menu de contexto é implantado a partir do ponto em que o usuário o ativa. 
+> A animação deve se relacionar à interação do usuário. Um menu de contexto é implantado de um o ponto em que o usuário o ativa. 
 
 ## <a name="motion-articles"></a>Artigos sobre movimento
 

@@ -1,23 +1,17 @@
 ---
 author: mijacobs
 layout: LandingPage
-description: A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer dispositivo Windows — computadores, telefones, Xbox One, HoloLens e muito mais — e publicá-los na Store.
-title: Documentação da UWP - desenvolvedor de aplicativo UWP | Documentos da Microsoft
+description: 'A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer dispositivo Windows — computadores, telefones, Xbox One, HoloLens e muito mais — e publicá-los na Store.'
+title: Documentação da UWP – desenvolvedor de aplicativo UWP | Microsoft Docs
 ms.topic: landing-page
 ms.author: mijacobs
 ms.date: 08/4/2017
-keywords: uwp do windows, plataforma universal do windows, APIs do Windows Runtime, api do windows, ref. de api do windows, api do winrt, referência de api do windows, api uwp, referência de api uwp, desenvolver uwp, criar uwp, publicar uwp
+keywords: 'uwp do windows, plataforma universal do windows, APIs do Windows Runtime, api do windows, ref. de api do windows, api do winrt, referência de api do windows, api uwp, referência de api uwp, desenvolver uwp, criar uwp, publicar uwp'
 ms.localizationpriority: medium
 ms.technology: uwp-conceptual-docs
-ms.openlocfilehash: ce1923fa071344a848b4b0c4fab1ed6da6da48f7
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047145"
 ---
 # <a name="universal-windows-platform-documentation"></a>Documentação da Plataforma Universal do Windows
-A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer dispositivo Windows — computadores, telefones, Xbox One, HoloLens e muito mais — e publicá-los na Microsoft Store.
+A UWP (Plataforma Universal do Windows) permite criar aplicativos para qualquer dispositivo Windows — computadores, telefones, Xbox One, HoloLens e muito mais — e publicá-los na Microsoft Store.
 
 <ul class="panelContent cardsF">
     <li>
@@ -35,7 +29,7 @@ A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer 
                             <a href="whats-new/windows-10-version-latest.md">Novas APIs e funcionalidades</a>
                         </p>
                         <p>
-                            <a href="whats-new/windows-docs-latest.md">Quais são as novidades nos docs</a>
+                            <a href="whats-new/windows-docs-latest.md">Quais são as novidades no Docs</a>
                         </p>
                         <p>
                             <a href="whats-new/experimental-apis.md">APIs experimentais</a>
@@ -66,7 +60,7 @@ A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer 
                             <a href="get-started/get-set-up.md">Prepare-se para começar</a>
                         </p>
                         <p>
-                            <a href="get-started/your-first-app.md">Crie seu primeiro aplicativo</a>
+                            <a href="get-started/your-first-app.md">Criar seu primeiro aplicativo</a>
                         </p>
                     </div>
                 </div>
@@ -116,22 +110,22 @@ A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer 
                             <a href="enterprise/index.md">Aplicativos corporativos</a>
                         </p>
                         <p>
-                            <a href="packaging/index.md">Empacotar aplicativos</a>
+                            <a href="packaging/index.md">Empacotando aplicativos</a>
                         </p>
                         <p>
                             <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Kit de Ferramentas da Comunidade do Windows</a>
                         </p>
                         <p>
-                            <a href="porting/index.md">Portabilidade de aplicativos para o Windows 10</a>
+                            <a href="porting/index.md">Portando aplicativos para o Windows 10</a>
                         </p>
                         <p>
-                            <a href="winrt-components/index.md">Componentes do Tempo de Execução do Windows</a>
+                            <a href="winrt-components/index.md">Componentes do Windows Runtime</a>
                         </p>
                         <p>
-                            <a href="apps-for-education/index.md">Apps educacionais</a>
+                            <a href="apps-for-education/index.md">Aplicativos de educação</a>
                         </p>
                         <p>
-                            <a href="porting/apps-on-arm.md">Windows 10 em execução no ARM</a>
+                            <a href="porting/apps-on-arm.md">Windows 10 no ARM</a>
                         </p>
                     </div>
                 </div>
@@ -187,7 +181,7 @@ A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer 
                             <a href="publish/the-app-certification-process.md">Processo de certificação de aplicativos</a>
                         </p>
                         <p>
-                            <a href="publish/upload-app-packages.md">Carregar pacotes de aplicativo</a>
+                            <a href="publish/upload-app-packages.md">Carregue os pacotes do aplicativo</a>
                         </p>
                         <p>
                             <a href="publish/create-your-app-by-reserving-a-name.md">Reservar um nome</a>
@@ -210,12 +204,12 @@ A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer 
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Referência da API</h3>
+                        <h3>Referência de API</h3>
                         <p>
                             <a href="//docs.microsoft.com/uwp/">APIs da Plataforma Universal do Windows</a>
                         </p>
                         <p>
-                            <a href="//docs.microsoft.com/uwp/API">Namespaces de UWP do Windows</a>
+                            <a href="//docs.microsoft.com/uwp/API">Namespaces da UWP do Windows</a>
                         </p>
                         <p>
                             <a href="//docs.microsoft.com/uwp/extension-sdks">SDKs de extensão</a>
@@ -252,7 +246,7 @@ A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer 
                             <a href="//docs.microsoft.com/uwp/extension-sdks">Contratos de API e SDKs de extensão de família de dispositivos</a>
                         </p>
                         <p>
-                            <a href="//docs.microsoft.com/uwp/schemas/">Especificações de esquema de arquivo e XML para aplicativos UWP</a>
+                            <a href="//docs.microsoft.com/uwp/schemas/">Especificações de esquema XML e de arquivo para aplicativos UWP</a>
                         </p>
                     </div>
                 </div>
@@ -271,13 +265,13 @@ A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer 
                     <div class="cardText">
                         <h3>Comunidade e suporte</h3>
                         <p>
-                            <a href="https://twitter.com/WindowsDocs">@WindowsDocsno Twitter</a>
+                            <a href="https://twitter.com/WindowsDocs">@WindowsDocs no Twitter</a>
                         </p>
                         <p>
                             <a href="https://aka.ms/OneDevMinute">OneDevMinute no YouTube</a>
                         </p>
                         <p>
-                            <a href="https://developer.microsoft.com/windows/support">Suporte para desenvolvedores do Windows</a>
+                            <a href="https://developer.microsoft.com/windows/support">Suporte Developer do Windows</a>
                         </p>
                     </div>
                 </div>

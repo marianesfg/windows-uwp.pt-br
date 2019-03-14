@@ -19,7 +19,7 @@ items:
     href: ../publish/add-users-groups-and-azure-ad-applications.md
   - name: Definir funções e permissões personalizadas
     href: ../publish/set-custom-permissions-for-account-users.md
-- name: Criar seu aplicativo reservando um nome
+- name: Criar seu app reservando um nome
   href: ../publish/create-your-app-by-reserving-a-name.md
 - name: Envios de aplicativos
   href: ../publish/app-submissions.md
@@ -35,7 +35,7 @@ items:
       href: ../publish/configure-precise-release-scheduling.md
     - name: Definir e agendar o preço do aplicativo
       href: ../publish/set-and-schedule-app-pricing.md
-    - name: Opções de licenciamento organizacional
+    - name: Opções de licenciamento para organizações
       href: ../publish/organizational-licensing.md
   - name: Insira as propriedades do aplicativo
     href: ../publish/enter-app-properties.md
@@ -55,20 +55,20 @@ items:
       href: ../publish/app-package-requirements.md
     - name: Numeração de versão do pacote
       href: ../publish/package-version-numbering.md
-    - name: Idiomas com suporte
+    - name: Idiomas compatíveis
       href: ../publish/supported-languages.md
-    - name: Diretrizes para gerenciamento do pacote do aplicativo
+    - name: Orientação para gerenciamento do pacote de aplicativo
       href: ../publish/guidance-for-app-package-management.md
-  - name: Criar listagens da Store do app
+  - name: Criar listagens de aplicativos da Loja
     href: ../publish/create-app-store-listings.md
     items:
     - name: Escrever uma ótima descrição do aplicativo
       href: ../publish/write-a-great-app-description.md
     - name: Capturas de tela, imagens e trailers do aplicativo
       href: ../publish/app-screenshots-and-images.md
-    - name: Importar e exportar as listagens da Loja
+    - name: Importar e exportar as listagens da Store
       href: ../publish/import-and-export-store-listings.md
-    - name: Criar listagens específicas de plataforma da Store
+    - name: Criar listagens específicas de plataforma da Loja
       href: ../publish/create-platform-specific-store-listings.md
   - name: Gerenciar opções de envio
     href: ../publish/manage-submission-options.md
@@ -84,7 +84,7 @@ items:
       href: ../publish/avoid-common-certification-failures.md
   - name: Pacotes de pré-lançamento
     href: ../publish/package-flights.md
-  - name: Distribuição gradual de pacote
+  - name: Distribuição de pacote gradual
     href: ../publish/gradual-package-rollout.md
   - name: Teste beta e distribuição direcionada
     href: ../publish/beta-testing-and-targeted-distribution.md
@@ -99,11 +99,11 @@ items:
     href: ../publish/enter-add-on-properties.md
   - name: Definir disponibilidade e preço de complemento
     href: ../publish/set-add-on-pricing-and-availability.md
-  - name: Criar listagens de complementos da Store
+  - name: Criar listagens de complementos da Loja
     href: ../publish/create-add-on-store-listings.md
 - name: Anúncios no aplicativo
   href: ../publish/in-app-ads.md
-- name: Gerenciamento de apps e serviços
+- name: Gerenciamento de aplicativos e serviços
   href: ../publish/app-management-and-services.md
   items:
   - name: Exibir detalhes de identidade do aplicativo
@@ -117,7 +117,7 @@ items:
   items:
   - name: Gerar códigos promocionais
     href: ../publish/generate-promotional-codes.md
-  - name: Criar uma campanha publicitária para seu aplicativo
+  - name: Criar uma campanha publicitária para seu app
     href: ../publish/create-an-ad-campaign-for-your-app.md
     items:
     - name: Gerenciar sua campanha publicitária
@@ -128,9 +128,9 @@ items:
       href: ../publish/about-community-ads.md
     - name: Perguntas comuns sobre campanhas publicitárias
       href: ../publish/common-questions.md
-  - name: Criar uma campanha personalizada de promoção de aplicativo
+  - name: Criar uma campanha personalizada de promoção de app
     href: ../publish/create-a-custom-app-promotion-campaign.md
-  - name: Colocar aplicativos e complementos à venda
+  - name: Colocar apps e complementos à venda
     href: ../publish/put-apps-and-add-ons-on-sale.md
   - name: Diretrizes para marketing de aplicativos
     href: ../publish/app-marketing-guidelines.md
@@ -138,7 +138,7 @@ items:
     href: ../publish/link-to-your-app.md
   - name: Facilitar a promoção do seu aplicativo
     href: ../publish/make-your-app-easier-to-promote.md
-- name: Envolver-se com os clientes
+- name: Envolva-se com os clientes
   href: ../publish/engage-with-your-customers.md
   items:
   - name: Criar grupos de clientes
@@ -148,7 +148,7 @@ items:
       href: ../publish/create-customer-segments.md
     - name: Criar grupos de usuários conhecidos
       href: ../publish/create-known-user-groups.md
-  - name: Responder às críticas dos clientes
+  - name: Responder às avaliações de clientes
     href: ../publish/respond-to-customer-reviews.md
   - name: Responder ao feedback dos clientes
     href: ../publish/respond-to-customer-feedback.md
@@ -171,7 +171,7 @@ items:
     href: ../publish/ratings-report.md
   - name: Relatório de avaliações
     href: ../publish/reviews-report.md
-  - name: Relatório de feedback
+  - name: Relatório de comentários
     href: ../publish/feedback-report.md
   - name: Relatório de análise do Xbox
     href: ../publish/xbox-analytics-report.md
@@ -179,11 +179,11 @@ items:
     href: ../publish/insights-report.md
   - name: Relatório de desempenho de anúncios
     href: ../publish/advertising-performance-report.md
-  - name: Relatório de campanha publicitária
+  - name: Relatório de campanha de anúncios
     href: ../publish/ad-campaign-report.md
   - name: Baixar relatórios de análise
     href: ../publish/download-analytic-reports.md
-- name: Recebendo pagamento
+- name: Sendo pago
   href: ../publish/getting-paid-apps.md
   items:
   - name: Configurar a conta de pagamento e formulários de imposto
@@ -192,7 +192,7 @@ items:
     href: ../publish/payment-thresholds-methods-and-timeframes.md
   - name: Resumo do pagamento
     href: ../publish/payout-summary.md
-  - name: Detalhes de impostos
+  - name: Detalhes de imposto
     href: ../publish/tax-details-for-paid-apps.md
   - name: Noções sobre os formulários fiscais da Receita Federal dos EUA
     href: ../publish/understand-irs-tax-forms.md
@@ -208,13 +208,13 @@ items:
     items:
     - name: Histórico de alterações
       href: https://docs.microsoft.com/legal/windows/agreements/store-policies-change-history
-  - name: Qualidade do app
+  - name: Qualidade do Aplicativo
     href: https://docs.microsoft.com/legal/windows/agreements/store-app-quality
   - name: Código de Conduta do Desenvolvedor
     href: https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct
 ms.openlocfilehash: d44affff4838b8799bfd2e82e4f57058d60e657b
-ms.sourcegitcommit: b9ee49402db7a8999cade1c5cf7f7b6ac4d783db
-ms.translationtype: MT
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042466"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57581952"

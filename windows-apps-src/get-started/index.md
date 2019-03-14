@@ -1,21 +1,15 @@
 ---
 layout: LandingPage
-description: Introdução à Plataforma Universal do Windows (UWP) e ao desenvolvimento de aplicativos para Windows 10.
-title: Introdução à Plataforma Universal do Windows (UWP)
+description: Introdução à UWP (Plataforma Universal do Windows) e ao desenvolvimento de aplicativos para Windows 10.
+title: Introdução à UWP (Plataforma Universal do Windows)
 ms.date: 03/23/2018
 ms.topic: article
-keywords: introdução, windows 10, uwp, xaml, c#
+keywords: 'introdução, windows 10, uwp, xaml, c#'
 ms.localizationpriority: medium
-ms.openlocfilehash: a2a1452de6fe602c8fd21e510de070f49d806eec
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934721"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Introdução aos aplicativos do Windows 10 
  
-Crie apps que funcionam em todos os dispositivos Windows 10 ou aprimore seus apps existentes com recursos novos e atualizados.  
+Crie aplicativos que funcionam em todos os dispositivos Windows 10 ou aprimore seus aplicativos existentes com recursos novos e atualizados.  
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>
@@ -29,7 +23,7 @@ Crie apps que funcionam em todos os dispositivos Windows 10 ou aprimore seus app
                     </div>
                     <div class="cardText">
                         <h3>Saiba mais sobre aplicativos Windows 10</h3>
-                        <p>O Windows 10 e a Plataforma Universal do Windows permitem a você criar apps que funcionam bem e têm ótima aparência em todos os tipos de dispositivo Windows, ou atualizar os apps existentes com recursos modernos.</p>
+                        <p>O Windows 10 e a Plataforma Universal do Windows permitem a você criar aplicativos que funcionam bem e têm ótima aparência em todos os tipos de dispositivo Windows ou atualizar os aplicativos existentes com recursos modernos.</p>
                         <ul>
                           <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">O que é um aplicativo UWP?</a></li>
                         </ul>
@@ -48,8 +42,8 @@ Crie apps que funcionam em todos os dispositivos Windows 10 ou aprimore seus app
                         </div>
                     </div>
                     <div class="cardText">
-                    <h3>Prepare-se</h3>
-                    <p>O Visual Studio Community e o Windows 10 SDK fornecem a você todo o necessário para a criação de ótimos apps – e são de graça!</p>
+                    <h3>Prepare-se para começar</h3>
+                    <p>O Visual Studio Community e o Windows 10 SDK fornecem a você todo o necessário para a criação de ótimos aplicativos – e são de graça!</p>
                     <ul>
                         <li><a href="//docs.microsoft.com/windows/uwp/get-started/get-set-up">Baixar as ferramentas e o SDK</a></li>
                     </ul>
@@ -69,7 +63,7 @@ Crie apps que funcionam em todos os dispositivos Windows 10 ou aprimore seus app
                     </div>
                     <div class="cardText">
                         <h3>Comece a codificar</h3>
-                        <p>Se você for um desenvolvedor experiente ou se estiver criando seu primeiro app, obtenha experiência prática com a plataforma Windows 10 e documentos.</p>
+                        <p>Se você for um desenvolvedor experiente ou se estiver criando seu primeiro aplicativo, obtenha experiência prática com a plataforma Windows 10 e documentos.</p>
                         <ul>
                             <li><a href="//docs.microsoft.com/windows/uwp/get-started/create-uwp-apps">Comece a codificar</a></li>
                         </ul>
@@ -92,10 +86,10 @@ Crie apps que funcionam em todos os dispositivos Windows 10 ou aprimore seus app
                 </div>
                 <div class="cardText">
                     <h3>Tutoriais</h3>
-                    <p>Procurando uma experiência de aprendizagem interativa? Estes tutoriais serão muito úteis.</p>
+                    <p>Procurando uma experiência de aprendizagem interativa? Estes tutoriais vão ajudar.</p>
                     <br>
-                    <p><a href="//docs.microsoft.com/windows/uwp/design/basics/xaml-basics-ui">Noções básicas sobre a interface do usuário</a></p>
-                    <p><a href="//docs.microsoft.com/windows/uwp/data-binding/xaml-basics-data-binding">Associação de dados</a></p>
+                    <p><a href="//docs.microsoft.com/windows/uwp/design/basics/xaml-basics-ui">Noções básicas de interface do usuário</a></p>
+                    <p><a href="//docs.microsoft.com/windows/uwp/data-binding/xaml-basics-data-binding">Vinculação de dados</a></p>
                     <p><a href="//docs.microsoft.com/windows/uwp/design/basics/xaml-basics-style">Estilos personalizados</a></p>
                 </div>
             </div>
@@ -196,7 +190,7 @@ Crie apps que funcionam em todos os dispositivos Windows 10 ou aprimore seus app
                                 </div>
                             </div>
                             <div class="cardText">
-                                <h3>Traga seu app para o Windows</h3>
+                                <h3>Traga seu aplicativo para o Windows</h3>
                             </div>
                         </div>
                     </div>

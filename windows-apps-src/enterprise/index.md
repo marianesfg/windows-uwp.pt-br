@@ -1,6 +1,6 @@
 ---
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
-description: Este mapa fornece uma visão geral dos recursos empresariais principais para aplicativos do Windows 10 e da plataforma Universal do Windows (UWP).
+description: Este mapa fornece uma visão geral dos principais recursos corporativos para aplicativos do Windows 10 e da UWP (Plataforma Universal do Windows).
 title: Enterprise
 ms.date: 08/30/2018
 ms.topic: article
@@ -9,64 +9,64 @@ ms.localizationpriority: medium
 ---
 # <a name="enterprise"></a>Enterprise
 
-Este artigo fornece uma visão geral dos recursos empresariais principais fornecidos pela plataforma Universal do Windows (UWP) para aplicativos do Windows 10. Para obter um vídeo que demonstra alguns desses recursos em detalhes, veja [Rapidamente construir aplicativos LOB com UWP e o Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502).
+Este artigo apresenta uma visão geral dos principais recursos corporativos fornecidos pela UWP (Plataforma Universal do Windows) para aplicativos do Windows 10. Para obter um vídeo que demonstra alguns desses recursos em detalhes, veja [Construir rapidamente aplicativos LOB com UWP e Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502).
 
 <a id="template-studio" />
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Windows Template Studio é uma extensão de 2017 Visual Studio que acelera a criação de novos aplicativos da plataforma Universal do Windows (UWP) usando uma experiência com base em assistente. O projeto UWP resultante é válido, legível código que incorpora os recursos mais recentes do Windows 10 ao implementar comprovadas padrões e práticas recomendadas.
+O Windows Template Studio é uma extensão Visual Studio 2017 que agiliza a criação de novos aplicativos UWP (Plataforma Universal do Windows) usando uma experiência baseada em assistente. O projeto UWP resultante é um código bem formado e legível que incorpora os recursos mais recentes do Windows 10 enquanto implementa padrões comprovados e melhores práticas.
 
 ![Windows Template Studio](images/windows-template-studio.png)
 
-Consulte [Windows Template Studio](https://marketplace.visualstudio.com/items?itemName=WASTeamAccount.WindowsTemplateStudio)
+Veja [Windows Template Studio](https://marketplace.visualstudio.com/items?itemName=WASTeamAccount.WindowsTemplateStudio)
 
 <a id="desktop-style-UI" />
 
-### <a name="controls-to-create-desktop-style-uis"></a>Controles para criar interfaces do usuário estilo de área de trabalho
+### <a name="controls-to-create-desktop-style-uis"></a>Controles para criar interfaces do usuário no estilo desktop
 
-Lançamos novos controles XAML da UWP que preencher a lacuna entre um aplicativo da área de trabalho tradicional da interface do usuário e uma UI UWP.
+Lançamos novos controles UWP XAML que fecham a lacuna entre uma interface do usuário de aplicativo da área de trabalho tradicional e uma interface do usuário da UWP.
 
-Por exemplo, os novos controles de [barra de menus](/windows/uwp/design/controls-and-patterns/menus), [DropDownButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [divisão](/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)e [CommandBarFlyout](/windows/uwp/design/controls-and-patterns/command-bar-flyout) oferecem formas mais flexíveis para expor comandos, e o [EditableComboBox](/windows/uwp/design/controls-and-patterns/combo-box#make-a-combo-box-editable) vamos o usuário inserir valores que não estejam listadas em uma lista predefinida de opções.
+Por exemplo, os novos controles [MenuBar](/windows/uwp/design/controls-and-patterns/menus), [DropDownButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [SplitButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button) e [CommandBarFlyout](/windows/uwp/design/controls-and-patterns/command-bar-flyout) oferecem maneiras mais flexíveis de expor comandos, e a [EditableComboBox](/windows/uwp/design/controls-and-patterns/combo-box#make-a-combo-box-editable) permite ao usuário inserir valores que não estão listados em uma lista predefinida de opções.
 
-![Barra de menus](images/menu-bar.png)
+![MenuBar](images/menu-bar.png)
 
 <a id="enterprise" />
 
 ### <a name="controls-to-support-enterprise-scenarios"></a>Controles para dar suporte a cenários corporativos
 
-[DataGridView](https://docs.microsoft.com/en-us/windows/communitytoolkit/controls/datagrid) fornece uma maneira flexível de exibir uma coleção de dados em linhas e colunas.
+O [DataGridView](https://docs.microsoft.com/en-us/windows/communitytoolkit/controls/datagrid) oferece uma maneira flexível de exibir um conjunto de dados em linhas e colunas.
 
-O [TreeView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view) habilita uma lista hierárquica com expansão e recolhimento de nós que contêm itens aninhados. Ele pode ser usado para ilustrar uma estrutura de pastas ou relacionamentos aninhados em sua interface do usuário.
+A [TreeView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view) habilita uma lista hierárquica com nós em expansão e em colapso que contêm itens aninhados. Ela pode ser usada para ilustrar uma estrutura de pastas ou relacionamentos aninhados em sua interface do usuário.
 
 ![Controle DataGrid](images/DataGrid.gif)
 
 
-### <a name="windows-ui-library"></a>Biblioteca de interface do usuário do Windows
+### <a name="windows-ui-library"></a>Biblioteca de Interface do Usuário do Windows
 
-Biblioteca de interface do usuário do Windows é um conjunto de pacotes NuGet que fornecem controles e outros elementos de interface do usuário para aplicativos UWP. Ele também permite baixo nível compatibilidade com versões anteriores do Windows 10, para que seu aplicativo funcione mesmo se os usuários não têm o sistema operacional mais recente.
+A biblioteca de interface do usuário do Windows é um conjunto de pacotes NuGet que fornecem controles e outros elementos de interface do usuário para aplicativos UWP. Ela também permite compatibilidade com versões anteriores do Windows 10 para que seu aplicativo funcione mesmo que os usuários não tenham o sistema operacional mais recente.
 
-![Biblioteca de interface do usuário do Windows](images/win-ui.png)
+![Biblioteca de Interface do Usuário do Windows](images/win-ui.png)
 
-Consulte a [Biblioteca de interface do usuário do Windows (versão prévia)](https://docs.microsoft.com/uwp/toolkits/winui/).
+Veja [Biblioteca de Interface do Usuário do Windows (versão prévia)](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 <a id="xaml-islands" />
 
 ### <a name="uwp-controls-in-desktop-applications"></a>Controles UWP em aplicativos da área de trabalho
 
-Windows 10 agora permite que você use controles UWP em C++ Win32, Windows Forms e WPF aplicativos da área de trabalho. Isso significa que você pode aprimorar a aparência e a funcionalidade de seus aplicativos da área de trabalho existentes com os recursos de interface do usuário do Windows 10 mais recentes que só estão disponíveis por meio de controles UWP, como o Windows Ink e controles que dão suporte ao sistema de Design Fluent. Esse recurso é chamado Ilhas XAML.
+O Windows 10 agora permite que você use controles em aplicativos da área de trabalho de WPF, Windows Forms e C++ Win32. Isso significa que você pode aprimorar a aparência, a percepção e a funcionalidade de seus aplicativos da área de trabalho existentes com os recursos mais recentes de interface do usuário do Windows 10 que só estão disponíveis por meio de controles UWP, como Windows Ink e controles que dão suporte ao Sistema de Design Fluente. Esse recurso é chamado de ilhas XAML.
 
-Consulte [controles UWP em aplicativos da área de trabalho](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
+Veja [Controles UWP em aplicativos da área de trabalho](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
 
 <a id="standard" />
 
 ### <a name="net-standard-20"></a>.NET Standard 2.0
 
-.NET Standard inclui mais de 20.000 APIs mais que o .NET Standard 1. x. Isso torna muito mais fácil migrar bibliotecas existentes do .NET Framework e, em seguida, usá-los em todos os aplicativos .NET diferentes, incluindo seu aplicativo UWP.
+O .NET Standard inclui mais de 20.000 APIs a mais que o .NET Standard 1.x. Isso torna muito mais fácil migrar as bibliotecas do .NET Framework existentes e, em seguida, usá-las entre diferentes aplicativos .NET, incluindo o seu aplicativo UWP.
 
-![NET standard](images/dot-net-standard-project-template.png)
+![net-standard](images/dot-net-standard-project-template.png)
 
-Consulte [compartilhar código entre um aplicativo da área de trabalho e um aplicativo UWP](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate).
+Veja [Compartilhar código entre um aplicativo da área de trabalho e um aplicativo UWP](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate).
 
 <a id="sql-server" />
 
@@ -74,25 +74,25 @@ Consulte [compartilhar código entre um aplicativo da área de trabalho e um apl
 
 Seu aplicativo pode se conectar diretamente a um banco de dados do SQL Server e, em seguida, armazenar e recuperar dados usando classes no namespace [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN&view=netframework-4.7.2).
 
-Consulte [Usar um banco de dados do SQL Server em um aplicativo UWP](https://docs.microsoft.com/en-us/windows/uwp/data-access/sql-server-databases).
+Veja [Usar um banco de dados do SQL Server em um aplicativo UWP](https://docs.microsoft.com/en-us/windows/uwp/data-access/sql-server-databases).
 
 <a id="MSIX" />
 
 ### <a name="msix-deployment"></a>Implantação de MSIX
 
-MSIX é o formato de pacote de aplicativo do Windows que oferece uma experiência de empacotamento modernos para todos os aplicativos do Windows. O formato de pacote MSIX preserva a funcionalidade de pacotes de aplicativo existente e instalar arquivos além de habilitar recursos de empacotamento e implantação novos e modernos para aplicativos Win32, WPF e Windows Forms.
+O MSIX é o formato de pacote do aplicativo do Windows que oferece uma experiência de empacotamento moderna para todos os aplicativos do Windows. O formato de pacote MSIX preserva a funcionalidade de pacotes existentes do aplicativo e arquivos de instalação, além de habilitar recursos de empacotamento e implantação novos e modernos para aplicativos Win32, WPF e Windows Forms.
 
-MSIX é um formato de empacotamento criado para ser seguro, seguro e confiável, com base em uma combinação de. msi, AppX, tecnologias de instalação do App-V e ClickOnce.
+MSIX é um formato de empacotamento criado para ser seguro, protegido e confiável, baseado em uma combinação de tecnologias de instalação .msi, .appx, App-V e ClickOnce.
 
 ![Ícone MSIX](images/MSIX-App-Package.ico)
 
-Consulte a [documentação da MSIX](https://docs.microsoft.com/windows/msix/).
+Veja a [Documentação do MSIX](https://docs.microsoft.com/windows/msix/).
 
 <a id="distribution" />
 
 ## <a name="security"></a>Segurança
 
-Windows 10 oferece um conjunto de recursos de segurança para os desenvolvedores de aplicativos protejam a identidade de seus usuários, a segurança de redes corporativas e os dados de negócios armazenados em dispositivos. Novos para Windows 10 é o Microsoft Passport, uma alternativa de senha de dois fatores fácil de implantar que seja acessível por meio de um PIN ou Windows Hello, que fornece segurança de nível empresarial e dá suporte à impressão digital, rosto e íris com base em reconhecimento.
+O Windows 10 oferece um pacote de recursos de segurança para que os desenvolvedores de aplicativos protejam a identidade de seus usuários, a segurança de redes corporativas e todos os dados de negócios armazenados nos dispositivos. Uma novidade no Windows 10 é o Microsoft Passport, uma alternativa de senha de dois fatores fácil de implantar com acesso por PIN ou pelo Windows Hello, que fornece segurança de nível corporativo e dá suporte ao reconhecimento por impressão digital, rosto e íris.
 
 | Tópico | Descrição |
 |-------|-------------|
@@ -103,7 +103,7 @@ Windows 10 oferece um conjunto de recursos de segurança para os desenvolvedores
 
 ## <a name="data-binding-and-databases"></a>Bancos de dados e vinculação de dados
 
-A vinculação de dados é uma maneira de a interface do usuário do aplicativo exibir dados de uma origem externa, como um banco de dados e, opcionalmente, manter esses dados sincronizados. A vinculação de dados permite separar a preocupação dos dados da preocupação da interface do usuário, e isso resulta em um modelo conceitual mais simples, bem como melhor legibilidade, capacidade de teste e capacidade de manutenção do seu aplicativo.
+A vinculação de dados é uma maneira de a interface do usuário do aplicativo exibir dados de uma origem externa, como um banco de dados e, opcionalmente, manter esses dados sincronizados. A vinculação de dados permite separar a questão dos dados da questão da interface do usuário, e isso resulta em um modelo conceitual mais simples, bem como melhor legibilidade, capacidade de teste e capacidade de manutenção do seu aplicativo.
 
 | Tópico | Descrição |
 |-------|-------------|
@@ -140,29 +140,29 @@ Muitos usuários hoje levam para o trabalho o próprio celular ou tablet, com di
 | Tópico | Descrição |
 |-------|-------------|
 | [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631) | Neste guia introdutório, você vai se familiarizar com a Plataforma Universal do Windows 10. Entre outras coisas, ele define família de dispositivos e orienta como decidir para qual direcionar, apresenta novos painéis e controles de interface do usuário, que permitem que você adapte a sua interface do usuário a diferentes fatores forma de dispositivo diferentes, e explica como entender e controlar a superfície de API que está disponível para seu aplicativo. |
-| [Amostra de código de interface do usuário XAML adaptável](https://go.microsoft.com/fwlink/p/?LinkId=619992) | Essa amostra de código mostra todas as opções de layout e controles para seu aplicativo possíveis, independentemente do tipo de dispositivo, e permite que você interaja com os painéis para mostrar como obter qualquer layout que estiver procurando. Além de mostrar como cada controle responde a diferentes fatores forma, o próprio aplicativo é dinâmico e mostra vários métodos para alcançar a interface do usuário adaptável. |
-| [Tópico Xamarin](/xamarin/) | Xamarin para direcionamento de telefone |
+| [Exemplo de código de interface do usuário XAML adaptável](https://go.microsoft.com/fwlink/p/?LinkId=619992) | Essa amostra de código mostra todas as opções de layout e controles para seu aplicativo possíveis, independentemente do tipo de dispositivo, e permite que você interaja com os painéis para mostrar como obter qualquer layout que estiver procurando. Além de mostrar como cada controle responde a diferentes fatores forma, o próprio aplicativo é dinâmico e mostra vários métodos para alcançar a interface do usuário adaptável. |
+| [Tópico do Xamarin](/xamarin/) | Xamarin para direcionar para telefone |
 
 ## <a name="deployment"></a>Implantação
 
-Você tem opções para distribuir aplicativos aos usuários da sua organização. Você pode usar a Microsoft Store para empresas, gerenciamento de dispositivo móvel existente, ou você pode fazer o sideload de aplicativos para dispositivos. Você pode também disponibilizar seus aplicativos para geral pública por publicação na Microsoft Store.
+Você tem opções para distribuir aplicativos aos usuários da sua organização. Você pode usar a Microsoft Store para Empresas e o gerenciamento de dispositivo móvel existente ou pode executar sideload de aplicativos para dispositivos. Você também pode disponibilizar seus aplicativos ao público em geral publicando-os na Microsoft Store.
 
 | Tópico | Descrição |
 |-------|-------------|
-| [Distribuir os aplicativos LOB para empresas](https://msdn.microsoft.com/library/windows/apps/mt608995) | Você pode publicar aplicativos de linha de negócios diretamente para empresas para aquisição de grande volume pela Microsoft Store para empresas, sem tornar os aplicativos amplamente disponíveis ao público. |
-| [Fazer sideload de apps](https://technet.microsoft.com/library/mt269549) | Ao fazer sideload de um aplicativo, você implanta um pacote do aplicativo assinado em um dispositivo. Você mantém a assinatura, a hospedagem e a implantação desses aplicativos. O processo de sideload de aplicativos é simplificado para Windows 10.             |
-| [Publicar aplicativos na Microsoft Store](https://dev.windows.com/publish) | A Microsoft Store unificada permite que você publicar e gerenciar todos os seus aplicativos para todos os dispositivos do Windows. Personalize a disponibilidade de seu aplicativo com o preço por mercado, controles de distribuição e visibilidade, além de outras opções. |
+| [Distribua aplicativos LOB às empresas](https://msdn.microsoft.com/library/windows/apps/mt608995) | Você pode publicar aplicativos de linha de negócios diretamente para as empresas por meio da Microsoft Store para Empresas, para aquisição por volume, sem tornar os aplicativos amplamente disponíveis ao público. |
+| [Sideload de apps](https://technet.microsoft.com/library/mt269549) | Ao fazer sideload de um aplicativo, você implanta um pacote do aplicativo assinado em um dispositivo. Você mantém a assinatura, a hospedagem e a implantação desses aplicativos. O processo de sideload de aplicativos é simplificado para Windows 10.             |
+| [Publicar aplicativos para a Microsoft Store](https://dev.windows.com/publish) | A Microsoft Store unificada permite que você publique e gerencie todos os seus aplicativos para todos os dispositivos Windows. Personalize a disponibilidade de seu aplicativo com o preço por mercado, controles de distribuição e visibilidade além de outras opções. |
 
-## <a name="enterprise-uwp-samples"></a>Exemplos de Enterprise UWP
+## <a name="enterprise-uwp-samples"></a>Amostras da UWP corporativa
 
 | Tópico |  Descrição |
 |------ |--------------|
-| [Amostra de estoque VanArsdel](https://github.com/Microsoft/InventorySample) | Um aplicativo de exemplo UWP que mostra os cenários de linha de negócios. O exemplo é baseado em torno de criação e gerenciamento de clientes, pedidos e produtos da empresa fictícia VanArsdel. |
-| [Exemplo de banco de dados de pedidos do cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Um aplicativo de exemplo UWP que apresenta recursos úteis para desenvolvedores corporativos, como autenticação do Azure Active Directory (AAD), controles (incluindo uma grade de dados) da interface do usuário, integração de banco de dados Sqlite e SQL Azure, Entity Framework e serviços de nuvem da API. O exemplo é baseado em torno de criação e gerenciamento de contas de clientes, pedidos e produtos da empresa fictícia Contoso. |
+| [Exemplo de inventário de VanArsdel](https://github.com/Microsoft/InventorySample) | Um aplicativo de exemplo UWP que demonstra os cenários de linha de negócios. O exemplo é baseado na criação e no gerenciamento de clientes, pedidos e produtos para a empresa fictícia VanArsdel. |
+| [Exemplo de Banco de Dados de Pedidos do Cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Um aplicativo de exemplo UWP que demonstra recursos úteis para desenvolvedores corporativos, como autenticação do AAD (Azure Active Directory), controles (incluindo uma grade de dados) da interface do usuário, integração de banco de dados Sqlite e SQL Azure, Entity Framework e serviços da API de nuvem. O exemplo é baseado na criação e no gerenciamento de contas de clientes, pedidos e produtos para a empresa fictícia Contoso. |
 
 ## <a name="patterns-and-practices"></a>Padrões e práticas
 
-Bases de código para grande escala, aplicativos de nível corporativo podem ficar difíceis de gerenciar. O Prism é uma estrutura para criar aplicativos de XAML flexível, sustentável e testáveis no WPF, Windows 10 UWP e Xamarin Forms. O Prism fornece a implementação de uma coleção de padrões de design que são úteis para escrever aplicativos de XAML bem estruturados e que possam ser mantidos, incluindo o MVVM, injeção de dependência, comandos, EventAggregator, entre outros.
+Bases de código para grande escala, aplicativos de nível corporativo podem ficar difíceis de gerenciar. O Prism é uma estrutura para criar aplicativos XAML com acoplamento flexível e que possam ser mantidos e testados no WPF, na UWP do Windows 10 e no Xamarin Forms. O Prism fornece a implementação de uma coleção de padrões de design que são úteis para escrever aplicativos de XAML bem estruturados e que possam ser mantidos, incluindo o MVVM, injeção de dependência, comandos, EventAggregator, entre outros.
 
 Para obter mais informações sobre o Prism, consulte [GitHub repo](https://github.com/PrismLibrary/Prism).
 

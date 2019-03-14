@@ -1,17 +1,11 @@
 ---
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
-description: Esta seção fornece informações sobre como criar aplicativos da Plataforma Universal do Windows (UWP) que capturam, reproduzem ou editem fotos, vídeos ou áudio.
-title: Áudio, vídeo e câmera
+description: 'Esta seção fornece informações sobre como criar aplicativos da Plataforma Universal do Windows (UWP) que capturam, reproduzem ou editem fotos, vídeos ou áudio.'
+title: 'Áudio, vídeo e câmera'
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp
+keywords: 'windows 10, uwp'
 ms.localizationpriority: medium
-ms.openlocfilehash: 6aecc5b9a43d6cb00b42b1535a196afd8a138af9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921477"
 ---
 # <a name="audio-video-and-camera"></a>Áudio, vídeo e câmera
 
@@ -23,7 +17,7 @@ Esta seção fornece informações sobre como criar aplicativos da Plataforma Un
 | [Câmera](camera.md) | Lista os recursos da câmera que estão disponíveis para aplicativos UWP e links para os artigos de instruções que mostram como usá-los. |
 | [Reprodução de mídia](media-playback.md) | Fornece informações sobre como criar aplicativos UWP que usam a reprodução de áudio e vídeo. |
 | [Detectar rostos em imagens ou vídeos](detect-and-track-faces-in-an-image.md) | Mostra como usar o [FaceTracker](https://msdn.microsoft.com/library/windows/apps/dn974150) para acompanhamento facial ao longo do tempo em uma sequência de quadros de vídeo. |
-| [Composições e edição de mídia](media-compositions-and-editing.md) | Mostra como usar as APIs no namespace [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) para desenvolver rapidamente aplicativos que permitem que os usuários criem composições de mídia de arquivos de origem de áudio e vídeo. |
+| [Composições de mídia e edição](media-compositions-and-editing.md) | Mostra como usar as APIs no namespace [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) para desenvolver rapidamente aplicativos que permitem que os usuários criem composições de mídia de arquivos de origem de áudio e vídeo. |
 | [Efeitos de vídeo personalizados](custom-video-effects.md) | Descreve como criar um componente do Tempo de Execução do Windows que implementa a interface **IBasicVideoEffect** para permitir que você crie efeitos personalizados para fluxos de vídeo. |
 | [Efeitos de áudio personalizados](custom-audio-effects.md) | Descreve como criar um componente do Tempo de Execução do Windows que implementa a interface **IBasicAudioEffect** para permitir que você crie efeitos personalizados para fluxos de áudio. |
 | [Criar, editar e salvar imagens de bitmap](imaging.md) | Explica como carregar e salvar arquivos de imagem usando o objeto [SoftwareBitmap](https://msdn.microsoft.com/library/windows/apps/dn887358) para representar imagens de bitmap.  |
@@ -39,7 +33,7 @@ Esta seção fornece informações sobre como criar aplicativos da Plataforma Un
 | [Consulta de codecs instalados](codec-query.md) | Mostra como consultar para obter áudio e vídeo codificadores e decodificadores instalados em um dispositivo. |
 | [Captura de tela](screen-capture.md) | Descreve como usar o [namespace Windows.Graphics.Capture](https://docs.microsoft.com/uwp/api/windows.graphics.capture) para obter quadros de uma tela ou de uma janela de aplicativo para criar fluxos de vídeo ou instantâneos para criar experiências colaborativas e interativas. |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 - [Desenvolver aplicativos UWP](https://developer.microsoft.com/windows/develop)
 
  

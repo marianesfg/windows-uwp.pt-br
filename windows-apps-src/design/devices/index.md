@@ -1,19 +1,13 @@
 ---
-Description: Getting to know the devices that support Universal Windows Platform (UWP) apps will help you offer the best user experience for each form factor.
+Description: Conhecer os dispositivos que dão suporte a aplicativos UWP (Plataforma Universal do Windows) o ajudará a oferecer a melhor experiência de usuário para cada fator forma.
 title: Cartilha de dispositivos para aplicativos UWP (Plataforma Universal do Windows)
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
-keywords: dispositivo, entrada, interação
+keywords: 'dispositivo, entrada, interação'
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 127c01321c0341e7125e8c6da955c789c4c65f2f
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049903"
 ---
 #  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>Cartilha de dispositivos para aplicativos UWP (Plataforma Universal do Windows)
 
@@ -129,7 +123,7 @@ Recursos típicos do dispositivo
 
 O mais usado de todos os dispositivos de computação, o telefone pode fazer muito com o tamanho da tela limitado e entradas básicas. Os telefones estão disponíveis em uma variedade de tamanhos; telefones maiores são chamados de phablets. As experiências de aplicativo nos phablets são semelhantes às dos telefones, mas o espaço maior da tela dos phablets permite algumas mudanças importantes no consumo de conteúdo.
 
-Com o Continuum para telefones, uma nova experiência para dispositivos móveis Windows 10 compatíveis, os usuários podem conectar seus telefones a um monitor e até mesmo usar um mouse e teclado para fazê-los funcionar como um notebook. (Para saber mais, veja o artigo [Continuum para telefone](https://go.microsoft.com/fwlink/p/?LinkID=699431).)
+Com o Continuum para Telefones, uma nova experiência para dispositivos móveis compatíveis com o Windows 10, os usuários podem conectar seus telefones a um monitor e até mesmo usar um mouse e um teclado para fazer seus telefones funcionarem como um notebook. (Para saber mais, veja o artigo [Continuum para telefone](https://go.microsoft.com/fwlink/p/?LinkID=699431).)
 
 Tamanhos de tela
 -   De 4 a 5 polegadas para telefone

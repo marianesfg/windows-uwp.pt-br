@@ -1,5 +1,5 @@
 items:
-- name: Documentos
+- name: Docs
   tocHref: /
   topicHref: /
   items:
@@ -52,13 +52,13 @@ items:
           - name: Acessibilidade
             tocHref: /windows/uwp/design/accessibility/
             topicHref: /windows/uwp/design/accessibility/accessibility
-          - name: Configurações e dados do aplicativo
+          - name: Dados e configurações do aplicativo
             tocHref: /windows/uwp/design/app-settings/
             topicHref: /windows/uwp/design/app-settings/app-settings-and-data
           - name: Globalização e localização
             tocHref: /windows/uwp/design/globalizing/
             topicHref: /windows/uwp/design/globalizing/globalizing-portal
-          - name: Diretrizes da ajuda do app
+          - name: Diretrizes da ajuda do aplicativo
             tocHref: /windows/uwp/design/guidelines-for-app-help/
             topicHref: /windows/uwp/design/guidelines-for-app-help/index
         - name: Kits de ferramentas de design
@@ -68,10 +68,10 @@ items:
         tocHref: /windows/uwp/develop/
         topicHref: /windows/uwp/develop/index
         items:
-        - name: Recursos do app
+        - name: Recursos do aplicativo
           tocHref: /windows/uwp/app-resources/
           topicHref: /windows/uwp/app-resources/index
-        - name: Comunicação entre aplicativos
+        - name: Comunicação de aplicativo a aplicativo
           tocHref: /windows/uwp/app-to-app/
           topicHref: /windows/uwp/app-to-app/index
         - name: Áudio, vídeo e câmera
@@ -83,7 +83,7 @@ items:
         - name: Acesso a dados
           tocHref: /windows/uwp/data-access/
           topicHref: /windows/uwp/data-access/index
-        - name: Associação de dados
+        - name: Vinculação de dados
           tocHref: /windows/uwp/data-binding/
           topicHref: /windows/uwp/data-binding/index
         - name: Depuração, teste e desempenho
@@ -95,19 +95,19 @@ items:
         - name: Dispositivos, sensores e consumo de energia
           tocHref: /windows/uwp/devices-sensors/
           topicHref: /windows/uwp/devices-sensors/index
-        - name: Empresa
+        - name: Enterprise
           tocHref: /windows/uwp/enterprise/
           topicHref: /windows/uwp/enterprise/index
         - name: Arquivos, pastas e bibliotecas
           tocHref: /windows/uwp/files/
           topicHref: /windows/uwp/files/index
-        - name: Elementos gráficos
+        - name: Gráficos
           tocHref: /windows/uwp/graphics/
           topicHref: /windows/uwp/graphics/index
         - name: Aplicativos Web hospedados
           tocHref: /windows/uwp/bridges/
           topicHref: /windows/uwphttps://developer.microsoft.com/en-us/windows/bridges/hosted-web-apps
-        - name: Inicialização, retomada e execução de tarefas em segundo plano
+        - name: Início, retomada e tarefas em segundo plano
           tocHref: /windows/uwp/launch-resume/
           topicHref: /windows/uwp/launch-resume/index
         - name: Machine Learning
@@ -122,10 +122,10 @@ items:
         - name: Serviços de rede e Web
           tocHref: /windows/uwp/networking/
           topicHref: /windows/uwp/networking/index
-        - name: Empacotar aplicativos
+        - name: Empacotando apps
           tocHref: /windows/uwp/packaging/
           topicHref: /windows/uwp/packaging/index
-        - name: Portabilidade de aplicativos para o Windows 10
+        - name: Portando apps para o Windows 10
           tocHref: /windows/uwp/porting/
           topicHref: /windows/uwp/porting/index
         - name: Segurança
@@ -168,7 +168,7 @@ items:
         - name: Programação DirectX
           tocHref: /windows/uwp/directx-programming/
           topicHref: /windows/uwp/directx-programming/index
-        - name: Guia de aprendizagem de elementos gráficos do Direct3D
+        - name: Guia de aprendizagem de gráficos do Direct3D
           tocHref: /windows/uwp/graphics-concepts/
           topicHref: /windows/uwp/graphics-concepts/index
         - name: Xbox Live
@@ -178,8 +178,8 @@ items:
         tocHref: /windows/uwp/publish/
         topicHref: /windows/uwp/publish/index
 ms.openlocfilehash: 1d79038daa4f2a50dd287da879fa8153ca3fb118
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8962498"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57581989"

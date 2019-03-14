@@ -1,6 +1,6 @@
 ---
 description: Saiba como tornar seu aplicativo inclusivo e acessível para pessoas ao redor do mundo.
-keywords: acessibilidade do aplicativo UWP, globalização, aplicativos de design inclusivo, requisitos de aplicativo de acessibilidade
+keywords: 'acessibilidade do aplicativo UWP, globalização, aplicativos de design inclusivo, requisitos de aplicativo de acessibilidade'
 title: Usabilidade em aplicativos UWP – Desenvolvimento de aplicativos do Windows
 layout: LandingPage
 template: detail.hbs
@@ -8,12 +8,6 @@ ms.date: 10/18/2017
 ms.topic: landing-page
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
-ms.openlocfilehash: f218df3b4118508049023218b64e6c7321fbbda9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937930"
 ---
 # <a name="usability-for-uwp-apps"></a>Usabilidade para aplicativos UWP
 
@@ -45,7 +39,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/designing-inclusive-software.md">Criando software inclusivo</a></b><br/>Saiba mais sobre como evoluir o design inclusivo com aplicativos da Plataforma Universal do Windows (UWP) para o Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente.</p>
+<p><b><a href="../accessibility/designing-inclusive-software.md">Projetando software inclusivo</a></b><br/>Saiba mais sobre como evoluir o design inclusivo com aplicativos da Plataforma Universal do Windows (UWP) para o Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente.</p>
                     </div>
                 </div>
             </div>
@@ -202,7 +196,7 @@ As configurações do aplicativo permitem que o usuário personalize seu aplicat
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../app-settings/store-and-retrieve-app-data.md">Armazenar e recuperar dados de aplicativo</a></b><br/>Como armazenar e recuperar dados de aplicativo locais, em roaming e temporários.</p>
+<p><b><a href="../app-settings/store-and-retrieve-app-data.md">Armazene e recupere dados de aplicativo</a></b><br/>Como armazenar e recuperar dados de aplicativo locais, em roaming e temporários.</p>
                     </div>
                 </div>
             </div>

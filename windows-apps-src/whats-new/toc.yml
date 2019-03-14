@@ -4,26 +4,26 @@ items:
   items:
   - name: Adições de API no Windows 10, build 17763
     href: ../whats-new/windows-10-build-17763-api-diff.md
-- name: Novidades do Windows docs, janeiro de 2019
+- name: Novidades no Windows Docs, janeiro de 2019
   href: ../whats-new/windows-docs-january-2019.md
   items:
-  - name: Novidades dos documentos do Windows, setembro de 2018
+  - name: Novidades no Windows Docs, setembro de 2018
     href: ../whats-new/windows-docs-september-2018.md
-  - name: Novidades dos documentos do Windows, agosto de 2018
+  - name: Novidades no Windows Docs, agosto de 2018
     href: ../whats-new/windows-docs-august-2018.md
-  - name: Novidades dos documentos do Windows, julho de 2018
+  - name: Novidades no Windows Docs, julho de 2018
     href: ../whats-new/windows-docs-july-2018.md
-  - name: Novidades dos documentos do Windows, maio de 2018
+  - name: Novidades no Windows Docs, maio de 2018
     href: ../whats-new/windows-docs-may-2018.md
-  - name: Novidades dos documentos do Windows, fevereiro de 2018
+  - name: Novidades no Windows Docs, fevereiro de 2018
     href: ../whats-new/windows-docs-february-2018.md
-  - name: Novidades dos documentos do Windows, dezembro de 2017
+  - name: Novidades no Windows Docs, dezembro de 2017
     href: ../whats-new/windows-docs-december-2017.md
-  - name: Novidades dos documentos do Windows, setembro de 2017
+  - name: Novidades no Windows Docs, setembro de 2017
     href: ../whats-new/windows-docs-september-2017.md
-  - name: Novidades dos documentos do Windows, agosto de 2017
+  - name: Novidades no Windows Docs, agosto de 2017
     href: ../whats-new/windows-docs-august-2017.md
-  - name: Novidades dos documentos do Windows, julho de 2017
+  - name: Novidades no Windows Docs, julho de 2017
     href: ../whats-new/windows-docs-july-2017.md
 - name: Versões anteriores do Windows 10
   items:
@@ -54,8 +54,8 @@ items:
 - name: APIs experimentais
   href: ../whats-new/experimental-apis.md
 ms.openlocfilehash: 136c6bd34dd3358d3f089aa06a664029a446b368
-ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9013935"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57581954"

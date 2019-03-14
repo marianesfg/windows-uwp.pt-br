@@ -1,7 +1,7 @@
 ---
-description: Otimize seu aplicativo para caneta, Surface Dial e outros tipos de entrada.
+description: 'Otimize seu aplicativo para caneta, Surface Dial e outros tipos de entrada.'
 title: Entrada e interações
-keywords: entradas de aplicativo, personalizar o aplicativo UWP
+keywords: 'entradas de aplicativo, personalizar o aplicativo UWP'
 label: Input and interactions
 layout: LandingPage
 template: detail.hbs
@@ -9,12 +9,6 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f66d808cafcc6fba89cebde352d191335068925
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918974"
 ---
 # <a name="input-and-interactions"></a>Entrada e interações
 
@@ -23,7 +17,7 @@ ms.locfileid: "8918974"
   <img src="images/input-interactions/icons-inputdevices03.png" />
 </div> -->
 
-Os aplicativos UWP processam automaticamente uma ampla variedade de entradas e funcionam em uma variedade de dispositivos, você não precisa fazer mais nada para habilitar a entrada touch, por exemplo. Mas há momentos em que você pode querer otimizar seu aplicativo para certos tipos de entrada ou dispositivos. Por exemplo, se você estiver criando um aplicativo de pintura, convém personalizar a maneira como a entrada de caneta é processada.
+Os aplicativos UWP processam automaticamente uma ampla variedade de entradas e podem ser executados em uma variedade de dispositivos, você não precisa fazer mais nada para habilitar a entrada touch, por exemplo. Mas há momentos em que você pode querer otimizar seu aplicativo para certos tipos de entrada ou dispositivos. Por exemplo, se você estiver criando um aplicativo de pintura, convém personalizar a maneira como a entrada de caneta é processada.
 
 As instruções de design e codificação nesta seção ajudam você a personalizar seu aplicativo UWP para tipos específicos de entrada.
 
@@ -84,7 +78,7 @@ See our <b>[Input primer](index.md)</b> to familiarize yourself with each input 
                         <p style="display: block;"><a  href="/windows/uwp/design/input/identify-input-devices">Identificar dispositivos de entrada</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/handle-pointer-input">Ponteiro</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/pen-and-stylus-interactions">Caneta e Windows Ink</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/touch-interactions">Touch</a></p>
+                        <p style="display: block;"><a  href="/windows/uwp/design/input/touch-interactions">Toque</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/mouse-interactions">Mouse</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/keyboard-interactions">Teclado</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/gamepad-and-remote-interactions">Gamepad e controle remoto</a></p>
@@ -109,7 +103,7 @@ See our <b>[Input primer](index.md)</b> to familiarize yourself with each input 
                         <p style="display: block;"><a  href="/windows/uwp/design/input/guidelines-for-rotation">Rotação</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/guidelines-for-textselection">Selecionando texto e imagens</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/guidelines-for-targeting">Direcionamento</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/guidelines-for-visualfeedback">Feedback visual</a></p>
+                        <p style="display: block;"><a  href="/windows/uwp/design/input/guidelines-for-visualfeedback">Comentários visuais</a></p>
                     </div>
                 </div>
             </div>
@@ -121,7 +115,7 @@ See our <b>[Input primer](index.md)</b> to familiarize yourself with each input 
                 <div style="display:block" class="card">
                     <div style="display:block" class="cardText">
                         <h3>Fala e IA</h3>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/speech-interactions">Fala</a></p>
+                        <p style="display: block;"><a  href="/windows/uwp/design/input/speech-interactions">Controle por voz</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/cortana-interactions">Cortana</a></p>  
                     </div>
                 </div>

@@ -1,48 +1,48 @@
 ---
-description: Conheça o Design Fluente e como incorporá-lo nos apps.
-title: Sistema de Design fluente para Windows
-keywords: 'layout do aplicativo uwp, plataforma universal do Windows, design do app, interface, sistema de design fluent'
+description: Conheça o Design Fluente e como incorporá-lo a seus aplicativos.
+title: Sistema de Design Fluente para Windows
+keywords: 'layout do aplicativo uwp, plataforma universal do Windows, design do aplicativo, interface, sistema de design fluente'
 ms.date: 03/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
-# <a name="the-fluent-design-system-for-windows-app-creators"></a>Os criadores de aplicativo do sistema de Design fluente para Windows
+# <a name="the-fluent-design-system-for-windows-app-creators"></a>Os criadores de aplicativos do Sistema de Design Fluente para Windows
 
-![Cabeçalho de Design fluente](images/fluentdesign-app-header.jpg)
+![Cabeçalho de Design Fluente](images/fluentdesign-app-header.jpg)
 
 ## <a name="introduction"></a>Introdução
 
-O sistema de Design fluente é nosso sistema para criar adaptáveis, abrangentes e interfaces do usuário bonitas.
+O sistema de Design Fluente é nosso sistema para criar interfaces do usuário adaptáveis, empáticas e bonitas.
 
 ## <a name="principles"></a>Princípios
 
-**Adaptável: Experiências de Fluent parecem naturais em cada dispositivo**
+**Adaptável: Experiências Fluent parecem naturais em cada dispositivo**
 
-Experiências de Fluent se adaptam ao ambiente. Uma experiência de Fluent parece confortável em um tablet, um computador desktop e um Xbox — também funciona muito bem em um headset de realidade misturada. E quando você adiciona mais hardware, como um monitor adicional para o seu computador, uma experiência de Fluent tira proveito dele.
+Experiências Fluent se adaptam ao ambiente. Uma experiência Fluent parece confortável em um tablet, um computador desktop e um Xbox – ela também funciona muito bem em um headset de realidade misturada. E quando você adiciona mais hardware, como um monitor adicional para o seu computador, uma experiência Fluent tira proveito dele.
 
-**Compreensivo: Experiências de Fluent são intuitivas e potentes**
+**Empática: experiências Fluent são intuitivas e potentes**
 
-Experiências de Fluent se ajustam ao comportamento e intenção&mdash;elas compreendem e preveem o que é necessário. Elas unem pessoas e ideias, sejam em lados opostos do mundo ou estando um de frente ao outro.
+Experiências Fluent ajustam-se ao comportamento e intenção&mdash;elas compreendem e preveem o que é necessário. Elas unem pessoas e ideias, sejam em lados opostos do mundo ou estando um de frente ao outro.
 
-**Lindo: Experiências de Fluent são envolventes e imersivas**
+**Belos: as experiências Fluent são envolventes e imersivas**
 
-Ao incorporar elementos do mundo físico, uma experiência de Fluent toca em algo fundamental. Ele usa luz, sombra, movimento, profundidade e textura para organizar as informações de maneira que parece intuitiva e instintiva.
+Ao incorporar elementos do mundo físico, uma experiência Fluent toca em algo fundamental. Ele usa luz, sombra, movimento, profundidade e textura para organizar as informações de maneira que parece intuitiva e instintiva.
 
 
-## <a name="applying-fluent-design-to-your-app-with-uwp"></a>Aplicação de Design fluente ao seu aplicativo com UWP
+## <a name="applying-fluent-design-to-your-app-with-uwp"></a>Aplicando o Design Fluente a seu aplicativo com a UWP
 
-![Logotipo do design fluente](images/fluentdesign_header.png)
+![Logotipo do Design Fluente](images/fluentdesign_header.png)
 
-Nossas diretrizes de design explicam como aplicar os princípios de Design fluente para aplicativos. Que tipo de aplicativos? Embora muitas das nossas diretrizes podem ser aplicadas a qualquer plataforma, criamos UWP (plataforma Universal do Windows) para dar suporte ao Design fluente.
+Nossas diretrizes de design explicam como aplicar os princípios de Design Fluente a aplicativos. Que tipo de aplicativos? Embora muitas das nossas diretrizes possam ser aplicadas a qualquer plataforma, criamos a UWP (Plataforma Universal do Windows) para dar suporte ao Design Fluente.
 
-Recursos de Design Fluente estão integrados ao UWP. Alguns desses recursos&mdash;como pixels efetivos e o sistema de entrada universal&mdash;são automáticos. Você não precisa escrever nenhum código extra para utilizá-los. Outras características, como o acrílico, são opcionais; você as inclui em seu aplicativo escrevendo um código para incluí-los.
+Recursos de Design Fluente estão integrados ao UWP. Alguns desses recursos&mdash;como pixels efetivos e o sistema de entrada universal&mdash;são automáticos. Você não precisa escrever nenhum código extra para utilizá-los. Outras características, como o acrílico, são opcionais; você as adiciona a seu aplicativo escrevendo um código para incluí-los.
 
-> Estamos trazendo os controles da UWP até a área de trabalho para que você possa melhorar a aparência e a funcionalidade dos aplicativos atuais do WPF ou do Windows com recursos de Design Fluente. Para saber mais, consulte [controles de Host UWP em aplicativos WPF e Windows Forms](/windows/uwp/xaml-platform/xaml-host-controls).
+> Estamos trazendo os controles da UWP até a área de trabalho para que você possa melhorar a aparência e a funcionalidade dos aplicativos atuais do WPF ou do Windows com recursos de Design Fluente. Para saber mais, veja [Hospedar controles UWP em aplicativos WPF e Windows Forms](/windows/uwp/xaml-platform/xaml-host-controls).
 
 <!-- To apply Fluent Design to your app, follow our guidelines and use UWP (Universal Windows Platform) you can use UWP UI features combined with best practices for creating apps that perform beautifully on all types of Windows-powered devices. -->
 
-Além de diretrizes de design, nossos artigos de Design fluente também mostram como escrever o código que faz com que seus designs acontecer. UWP usa XAML, uma linguagem de marcação com base em que torna mais fácil criar interfaces do usuário. Veja um exemplo:
+Além das orientações de design, nossos artigos de Design Fluente também mostram como escrever o código que faz com que seus designs se concretizem. A UWP usa XAML, uma linguagem baseada em marcação que torna mais fácil criar interfaces do usuário. Aqui está um exemplo:
 
 ```xaml
 <Grid BorderBrush="Blue" BorderThickness="4">
@@ -53,7 +53,7 @@ Além de diretrizes de design, nossos artigos de Design fluente também mostram 
 ![](images/xaml-example.png)
 
 
-> Se você for iniciante no desenvolvimento de UWP, Confira nosso [começar com a página UWP](https://developer.microsoft.com/windows/apps/getstarted).
+> Se você não tem experiência em desenvolvimento de UWP, confira nossa [página de Introdução à UWP](https://developer.microsoft.com/windows/apps/getstarted).
 
 ## <a name="find-a-natural-fit"></a>Encontrar uma opção natural
 
@@ -109,13 +109,13 @@ Como fazer com que um aplicativo pareça natural em uma variedade de dispositivo
         [Learn about inputs and interactions](/windows/uwp/design/input/input-primer)
 :::row-end:::
 
-## <a name="make-it-intuitive"></a>Torná-lo intuitiva
+## <a name="make-it-intuitive"></a>Torne-a intuitiva
 
-Uma experiência parece intuitiva quando ele se comporta da maneira que o usuário espera. Usando controles estabelecidos e padrões e tirar proveito do suporte da plataforma para globalização e acessibilidade, você cria uma experiência sem esforço que ajuda os usuários a serem mais produtivos.
+Uma experiência parece intuitiva quando ela se comporta da forma que o usuário espera. Usando controles estabelecidos e padrões e tirar proveito do suporte da plataforma para globalização e acessibilidade, você cria uma experiência sem esforço que ajuda os usuários a serem mais produtivos.
 
 Demonstrar empatia tem a ver com fazer a coisa certa no momento certo.
 
-Experiências de Fluent usam controles e padrões de forma consistente, para que eles se comportem de maneiras que o usuário aprendeu a esperar. Experiências de Fluent são acessíveis para pessoas com uma ampla variedade de características físicas e incorporam recursos de globalização para que pessoas em todo o mundo possam usá-los.
+Experiências Fluent usam controles e padrões de forma consistente, para que eles se comportem das maneiras que o usuário aprendeu a esperar. Experiências Fluent são acessíveis para pessoas com uma ampla variedade de características físicas e incorporam recursos de globalização para que pessoas em todo o mundo possam usá-los.
 
 :::row:::
     :::column:::
@@ -168,9 +168,9 @@ Experiências de Fluent usam controles e padrões de forma consistente, para que
 
 Design Fluente não tem a ver com efeitos extravagantes. Ele incorpora efeitos físicos que realmente melhoram a experiência do usuário, porque simulam experiências que nossos cérebros estão programados para processar de maneira eficiente.
 
-## <a name="use-light"></a>Use luz
+## <a name="use-light"></a>Usar luz
 
-A luz atrai nossa atenção. Ela cria atmosfera e um senso de lugar, e é uma ferramenta prática para iluminar a informação.
+A luz atrai nossa atenção. Ela cria atmosfera e um senso de lugar, além de ser uma ferramenta prática para iluminar a informação.
 
 Adicione luz a seu aplicativo do UWP:
 
@@ -210,7 +210,7 @@ Adicione profundidade a seu aplicativo do UWP:
         [Parallax](../motion/parallax.md) creates the illusion of depth by making items in the foreground appear to move more quickly than items in the background.
 :::row-end:::
 
-## <a name="incorporate-motion"></a>Incorpore movimento
+## <a name="incorporate-motion"></a>Incorporar movimento
 
 Pense no design de movimento como um filme. As transições perfeitas mantêm você focado na história e trazem vida às suas experiências. Podemos incorporar essas sensações nos nossos projetos, levando as pessoas a fazerem a transição de uma tarefa para a outra com facilidade cinematográfica.
 
@@ -228,7 +228,7 @@ Adicione movimento a seu aplicativo do UWP:
 
 ## <a name="build-it-with-the-right-material"></a>Crie-o com o material correto
 
-As coisas que nos cercam no mundo real são sensoriais e revigorantes. Elas se curvam, esticam, saltam, destroem e deslizam. Essas qualidades materiais se convertem em ambientes digitais, fazendo com que as pessoas desejem acessar e tocar nossos projetos.
+As coisas que nos cercam no mundo real são sensoriais e revigorantes. Elas se curvam, alongam-se, saltam, estilhaçam-se e deslizam. Essas qualidades materiais se convertem em ambientes digitais, fazendo com que as pessoas desejem acessar e tocar nossos projetos.
 
 Adicione material a seu aplicativo do UWP:
 

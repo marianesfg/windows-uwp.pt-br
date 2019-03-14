@@ -1,23 +1,17 @@
 ---
 description: Obtenha os downloads e ferramentas mais recentes para o layout da interface do usuário e designs de controle de aplicativos UWP.
-keywords: layout de aplicativo UWP, interface do usuário, designs de interface do usuário, downloads, ferramentas UWP
+keywords: 'layout de aplicativo UWP, interface do usuário, designs de interface do usuário, downloads, ferramentas de UWP'
 title: Projetar kits de ferramentas e amostras para aplicativos UWP
 ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: cbe17d8e7093a15c66e482acd935974bc57074ec
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050869"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Projetar kits de ferramentas e amostras para aplicativos UWP
  
 
-Design e downloads relacionados à interface do usuário para aplicativos de Design fluente/UWP. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/downloads">nossa página principal de downloads</a>. 
+Downloads relacionados à interface do usuário e design para aplicativos de Design Fluente/UWP. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/downloads">nossa página principal de downloads</a>. 
 
 
 ## <a name="design-toolkits"></a>Kits de ferramentas de design
@@ -98,34 +92,34 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
         <a href="https://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
-      **Gerador de bloco e ícone para o Adobe Photoshop** Este conjunto de ações para Adobe Photoshop gera os 68 ativos recomendados de bloco e ícone em apenas 7 arquivos. <br/><a href="https://go.microsoft.com/fwlink/p/?LinkId=760394">Baixar o gerador de bloco e ícone</a></p>
+      **Gerador de bloco e ícone para Adobe Photoshop** Esse conjunto de ações para Adobe Photoshop gera os 68 ativos de bloco e ícone recomendados usando apenas 7 arquivos. <br/><a href="https://go.microsoft.com/fwlink/p/?LinkId=760394">Baixe o gerador de bloco e ícone</a></p>
     :::column-end:::
 :::row-end:::
 
     
 ## <a name="samples"></a>Exemplos
 
-![Imagem Fluent do Editor de tema XAML](images/XamlThemeEditor_screenshot.png)
-**Editor de tema XAML fluente**<br>
-O Editor de tema XAML fluente é uma ferramenta que ajuda a demonstrar a flexibilidade do sistema de Design Fluent, bem como é compatível com o processo de desenvolvimento de aplicativo, geração de marcação XAML para nossa estrutura ResourceDictionary usada em aplicativos da plataforma Universal do Windows (UWPs).
-<a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Baixe o exemplo de ferramenta</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Confira a ferramenta no GitHub</a>
+![Imagem do Editor de Tema do XAML Fluente](images/XamlThemeEditor_screenshot.png)
+**Imagem do Editor de Tema do XAML Fluente**<br>
+O Editor de Tema XAML Fluente é uma ferramenta que ajuda a demonstrar a flexibilidade do Sistema de Design Fluente, além de dar suporte ao processo de desenvolvimento de aplicativo gerando marcação XAML para nossa estrutura ResourceDictionary usada em aplicativos UWP (Plataforma Universal do Windows).
+<a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Baixar o exemplo de ferramenta</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Confira a ferramenta no GitHub</a>
 
 ![Imagem de VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-O aplicativo de exemplo UWP Van Arsdel, Ltd. ponta a ponta foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso dos novos controles e densidade aprimorada na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos poderosos subjacentes da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência avançada e produtiva para gerenciar e comprando dispositivos IoT (nesse caso, lâmpadas).<br>
-<a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Baixe a amostra VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Confira a amostra VanArsdel no GitHub</a>
+O aplicativo de exemplo da UWP de ponta a ponta Van Arsdel, Ltd. foi criado para demonstrar a próxima onda do Sistema de Design Fluente do Microsoft. Ele faz amplo uso da densidade aprimorada e de novos controles na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de Interface do Usuário do Windows</a>, bem como os eficazes recursos subjacentes da composição e estrutura de experiência do usuário. O exemplo mostra como você pode criar uma experiência rica e produtiva para gerenciar e adquirir dispositivos de IoT (neste caso, lâmpadas).<br>
+<a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Baixar o exemplo de VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Confira o exemplo de VanArsdel no GitHub</a>
 
-![criar a imagem de conversão](images/buildcast.png)
+![criar imagem de conversão](images/buildcast.png)
 **BuildCast**<br>
-O BuildCast é uma amostra de ponta a ponta criada para demonstrar o sistema de Design fluente e UWP. Ele permite navegar, baixar e executar podcasts em vídeo seletos, incluindo uma amostra dos mais populares do Channel 9 e alguns feeds populares de entusiasta da tecnologia do Windows. Ele também apresenta anotações à tinta, indicadores e execução remota. Essa amostra foi inicialmente mostrada na conferência Build de 2017 durante a palestra <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Crie aplicativos incríveis com o Design Fluent</a>. <br>
+BuildCast é uma amostra de ponta a ponta criada para apresentar o Sistema de Design Fluente e a UWP. Ele permite navegar, baixar e executar podcasts em vídeo seletos, incluindo uma amostragem dos mais populares do Canal 9 e alguns feeds populares de entusiasta da tecnologia do Windows. Ele também apresenta anotações à tinta, indicadores e execução remota. Essa amostra foi inicialmente exibida na conferência Build de 2017 durante a palestra <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Crie aplicativos incríveis com o Design Fluente</a>. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Baixe a amostra do BuildCast</a> <br><a href="https://github.com/Microsoft/BuildCast">Confira a amostra do BuildCast no GitHub</a>
 
-![Almoço Agendador](images/lunchscheduler.png)
-**Lunch Scheduler**<br>
-Uma amostra da plataforma UWP que agenda almoços com amigos e colegas de trabalho. Marque um almoço, convide amigos para um restaurante de interesse e deixe que o aplicativo cuide da organização desse almoço para todas as pessoas envolvidas. Esse aplicativo incorpora elementos do Sistema Design Fluente em um aplicativo UWP, incluindo acrílico, revelação e animações conectadas. <br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler/archive/master.zip">Baixar a amostra do Lunch Scheduler</a><br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler">Confira a amostra do Lunch Scheduler no GitHub</a></p>  
+![Agendador de Almoço](images/lunchscheduler.png)
+**Agendador de Almoço**<br>
+Uma amostra da plataforma UWP que agenda almoços com amigos e colegas de trabalho. Marque um almoço, convide amigos para um restaurante de interesse e deixe que o aplicativo cuide da organização desse almoço para todas as pessoas envolvidas. Esse aplicativo incorpora elementos do Sistema Design Fluente em um aplicativo UWP, incluindo acrílico, revelação e animações conectadas. <br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler/archive/master.zip">Baixar a amostra do Agendador de Almoço</a><br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler">Confira a amostra do Agendador de Almoço no GitHub</a></p>  
 
 ![Galeria de controles XAML](images/xaml-controls-gallery.png)
-**XAML Controls Gallery**<br>
+**Galeria de controles XAML**<br>
 Essa amostra fornece uma demonstração interativa de todos os controles XAML. Ela mostra uma variedade de layouts, do básico ao adaptável, e exibe uma marcação que você pode copiar no seu próprio projeto. Observação: o arquivo de download e o repositório GitHub atualmente referem-se a essa amostra de aplicativo como "Noções básicas de interface do usuário (XAML)". <br/><a href="https://github.com/Microsoft/Windows-universal-samples/archive/master.zip">Baixar a amostra do XAML Controls Gallery</a><br/><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Confira a amostra do XAML Controls Gallery no GitHub</a> <br/><a href="https://www.microsoft.com/store/apps/9msvh128x2zt">Baixe o aplicativo XAML Controls Gallery na Store</a></p>
 
 ## <a name="want-more-code"></a>Quer mais código?
