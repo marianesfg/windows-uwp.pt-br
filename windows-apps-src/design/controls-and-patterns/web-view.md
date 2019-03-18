@@ -278,7 +278,7 @@ private void webView_NavigationStarting(WebView sender, WebViewNavigationStartin
 
 Para obter mais informações, consulte [WebView.AddWebAllowedObject](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.addweballowedobject.aspx). 
 
-Além disso, o conteúdo confiável do JavaScript em um modo de exibição da Web pode ter permissão para acessar diretamente as APIs do Windows Runtime. Isso proporciona poderosas capacidades nativas para aplicativos Web hospedados em um modo de exibição da Web. Para habilitar esse recurso, o URI do conteúdo confiável deve estar na lista branca e no ApplicationContentUriRules do aplicativo em Package.appxmanifest, com WindowsRuntimeAccess especificamente definido para "all". 
+Além disso, o conteúdo confiável do JavaScript em um modo de exibição da Web pode ter permissão para acessar diretamente as APIs do Windows Runtime. Isso proporciona poderosas capacidades nativas para aplicativos Web hospedados em um modo de exibição da Web. Para habilitar esse recurso, o URI do conteúdo confiável deve estar na lista de permissões e no ApplicationContentUriRules do aplicativo em Package.appxmanifest, com WindowsRuntimeAccess especificamente definido para "all". 
 
 Este exemplo mostra uma seção do manifesto do aplicativo. Aqui, um URI local recebe acesso ao Windows Runtime. 
 

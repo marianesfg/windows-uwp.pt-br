@@ -91,7 +91,7 @@ Novo em sistemas de controle de versão? Introdução ao Git e o sistema de arqu
 * [Reprodução de vídeo Games do Mainstream sem visão](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Playing-Mainstream-Video-Games-Without-Sight) -SightlessKombat, defensor de acessibilidade
 * [Como melhora o desenvolvimento de colaboração da comunidade](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-How-Community-Collaboration-Improves-Development) -Jason Canam desde jogos domésticos
 * [Como a transmissão ao vivo traz a inclusão de nível próximo](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Beyond-Gaming-How-Live-Streaming-Brings-Next-Level-Inclusion) -Tara Voelker do Mixer
-* [Todos os jogadores surdas deseja fazer é ter alguns divertido](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-All-Deaf-Gamers-Wanna-Do-is-Have-Some-Fun) -alto-falantes do painel: Chris Robinson e Kristen Piersa, defende acessibilidade. Michael Anthony da Microsoft
+* [Tudo o que os jogadores deficientes auditivos querem é se divertr](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-All-Deaf-Gamers-Wanna-Do-is-Have-Some-Fun) -alto-falantes do painel: Chris Robinson e Kristen Piersa, defende acessibilidade. Michael Anthony da Microsoft
 * [Uma letra de amor muito no setor de jogos](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-A-Fraught-Love-Letter-to-the-Games-Industry) -Cherry Thompson, defensor de acessibilidade
 * [Histórico de jogos acessível](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Accessible-Gaming-History) -Barrie Ellis do OneSwitch e efeito especial
 

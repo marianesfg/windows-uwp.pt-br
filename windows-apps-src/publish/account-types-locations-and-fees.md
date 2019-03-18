@@ -116,7 +116,7 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 |  Eritreia | 19 USD | 99 USD | USD pago ao banco | Não | 
 |  Estônia | 14 EUR | 75 EUR | EUR pago ao banco | Sim | 
 |  Etiópia | 19 USD | 99 USD | ETB pago ao banco | Não | 
-|  Ilhas Faroés | 19 USD | 99 USD | Sem pagamento | Não | 
+|  Ilhas Faroe | 19 USD | 99 USD | Sem pagamento | Não | 
 |  Fiji | 19 USD | 99 USD | FJD pago ao banco | Não | 
 |  Finlândia | 14 EUR | 75 EUR | EUR pago ao banco | Sim | 
 |  França | 14 EUR | 75 EUR | EUR pago ao banco | Sim | 

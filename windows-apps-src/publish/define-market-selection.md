@@ -160,7 +160,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
     <td>Ilhas Malvinas</td>
   </tr>
   <tr>
-    <td>Ilhas Faroés</td>
+    <td>Ilhas Faroe</td>
     <td>Fiji</td>
     <td>Finlândia *</td>
     <td>França *</td>
@@ -563,7 +563,7 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
   </tr>
   <tr>
     <td>Ilhas Malvinas</td>
-    <td>Ilhas Faroés</td>
+    <td>Ilhas Faroe</td>
     <td>Fiji</td>
     <td>Guiana Francesa</td>
   </tr>

@@ -46,7 +46,7 @@ Para habilitar o Portal de Dispositivos do Xbox no seu console Xbox One:
 
 6. Selecione **Fechar** e, na guia **Início**, observe o URL listado na ferramenta **Acesso Remoto**.
 
-7. Insira o URL no navegador. Você receberá um aviso sobre o certificado que foi fornecido, semelhante à captura de tela a seguir, porque o certificado de segurança assinado por seu console Xbox One não é considerado um publicador confiável conhecido. No Edge, clique em **Detalhes** e, em seguida, em **Ir para a página da Web** para acessar o Portal de Dispositivos do Xbox.
+7. Insira o URL no navegador. Você receberá um aviso sobre o certificado que foi fornecido, semelhante à captura de tela a seguir, porque o certificado de segurança assinado por seu console Xbox One não é considerado um publicador confiável conhecido. No Microsoft Edge, clique em **Detalhes** e, em seguida, em **Ir para a página da Web** para acessar o Portal de Dispositivos do Xbox.
 
     ![Aviso de certificado segurança](images/introduction-to-xbox-one-tools-3.png)
 

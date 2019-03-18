@@ -14,7 +14,7 @@ ms.lasthandoff: 03/06/2019
 ms.locfileid: "57660321"
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Trazendo jogos HTML para o UWP no Xbox
-O Xbox One é uma plataforma excelente para jogos HTML 5. Jogos HTML 5 são executados no mecanismo do navegador [Edge](https://developer.microsoft.com/microsoft-edge/). O Edge é rápido e totalmente compatível com recursos HTML 5 e CSS 3 como WebGL e canvas.
+O Xbox One é uma plataforma excelente para jogos HTML 5. Jogos HTML 5 são executados no mecanismo do navegador [Edge](https://developer.microsoft.com/microsoft-edge/). O Microsoft Edge é rápido e totalmente compatível com recursos HTML 5 e CSS 3 como WebGL e canvas.
 
 Mecanismos de jogos populares, como [Construct 2](https://www.scirra.com/blog/176/announcing-xbox-one-export-beta) têm suporte para Xbox One. Não testamos todas as estruturas e mecanismos HTML, mas pelo que vimos até agora acreditamos que a maioria deles funcionará no Xbox One.
 

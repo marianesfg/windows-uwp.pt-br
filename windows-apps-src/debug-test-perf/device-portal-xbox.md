@@ -35,7 +35,7 @@ As etapas a seguir mostram como habilitar o Portal de Dispositivos do Xbox, que 
 
 6. Insira a URL em seu navegador e entre com as credenciais que você configurou.
 
-7. Você receberá um aviso sobre o certificado que foi fornecido, semelhante ao mostrado a seguir. No Edge, clique em **Detalhes** e então em **Ir para a página da Web** para acessar o Portal de Dispositivos do Xbox. Na caixa de diálogo que aparecer, digite o nome de usuário e a senha que você inseriu anteriormente no seu Xbox.
+7. Você receberá um aviso sobre o certificado que foi fornecido, semelhante ao mostrado a seguir. No Microsoft Edge, clique em **Detalhes** e então em **Ir para a página da Web** para acessar o Portal de Dispositivos do Xbox. Na caixa de diálogo que aparecer, digite o nome de usuário e a senha que você inseriu anteriormente no seu Xbox.
 
     ![Erro de certificado do Device Portal](images/device-portal-xbox-3.png)
 

@@ -8,7 +8,7 @@ keywords: windows 10, uwp, impostos, impostos do aplicativo, requisitos fiscais,
 ms.localizationpriority: medium
 ms.openlocfilehash: e5ada027b835e852d1db728ef124a798540abdf7
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57607661"
@@ -101,7 +101,7 @@ Para entender suas considerações de imposto para a seleção de preço e de im
 | Etiópia                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Guiné Equatorial                | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Ilhas Malvinas                 | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Ilhas Faroés                    | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
+| Ilhas Faroe                    | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Fiji                             | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Finlândia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 24%) | Microsoft          |
 | França                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 20%) | Microsoft          |

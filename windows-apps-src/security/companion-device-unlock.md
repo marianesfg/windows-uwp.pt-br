@@ -164,7 +164,7 @@ Os usuários podem remover um dispositivo complementar do Windows Hello de área
 As empresas têm duas opções para controlar a estrutura de dispositivo complementar do Windows Hello:
 
 - Ativar ou desativar o recurso
-- Definir a lista branca de dispositivos complementares do Windows Hello permitidos usando o cofre de aplicativo do Windows
+- Definir a lista de permissões de dispositivos complementares do Windows Hello permitidos usando o cofre de aplicativo do Windows
 
 A estrutura de dispositivo complementar do Windows Hello não dá suporte a uma maneira centralizada de manter o inventário de dispositivos complementares disponíveis ou a um método para filtrar ainda mais quais instâncias de um tipo de dispositivo complementar do Windows Hello são permitidas (por exemplo, apenas dispositivos complementares com números de série entre X e Y são permitidos). No entanto, os desenvolvedores de aplicativos podem criar um serviço para fornecer essa funcionalidade. Para obter mais detalhes, consulte a seção Serviço de roaming, revogação e filtro.
 

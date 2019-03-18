@@ -814,7 +814,7 @@ Baixe o [Kit de Laboratório de Hardware (HLK)](https://docs.microsoft.com/windo
 * [GPIO WinRT funcional e testes de estresse](https://docs.microsoft.com/windows-hardware/test/hlk/testref/f1fc0922-1186-48bd-bfcd-c7385a2f6f96)
 * [Testes de gravação do WinRT I2C (EEPROM Obrigado)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2ab0df1b-3369-4aaf-a4d5-d157cb7bf578)
 * [Testes de leitura do WinRT I2C (EEPROM Obrigado)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/ca91c2d2-4615-4a1b-928e-587ab2b69b04)
-* [Testes de endereço I2C WinRT subordinado inexistente](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2746ad72-fe5c-4412-8231-f7ed53d95e71)
+* [Testes de endereço subordinado não existentes I2C WinRT](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2746ad72-fe5c-4412-8231-f7ed53d95e71)
 * [I2C WinRT avançada testes funcionais (mbed LPC1768 necessária)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/a60f5a94-12b2-4905-8416-e9774f539f1d)
 * [Testes de verificação de frequência de relógio SPI WinRT (mbed LPC1768 necessária)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/50cf9ccc-bbd3-4514-979f-b0499cb18ed8)
 * [Testes de transferência de e/s (mbed LPC1768 necessárias) do SPI WinRT](https://docs.microsoft.com/windows-hardware/test/hlk/testref/00c892e8-c226-4c71-9c2a-68349fed7113)

@@ -14,7 +14,7 @@ ms.lasthandoff: 03/06/2019
 ms.locfileid: "57656621"
 ---
 # <a name="how-to-disable-mouse-mode"></a>Como desabilitar o modo do mouse
-O modo de mouse está ativado por padrão para todos os aplicativos, o que significa que todos os aplicativos que não o desativaram receberão um ponteiro de mouse (semelhante ao do navegador Edge no console). É altamente recomendável desativar essa opção e otimizar para navegação direcional de controlador.   
+O modo de mouse está ativado por padrão para todos os aplicativos, o que significa que todos os aplicativos que não o desativaram receberão um ponteiro de mouse (semelhante ao do navegador Microsoft Edge no console). É altamente recomendável desativar essa opção e otimizar para navegação direcional de controlador.   
    
 ## <a name="html"></a>HTML   
 Para ativar a navegação de controlador direcional em um aplicativo da Plataforma Universal do Windows (UWP) JavaScript, use a biblioteca JavaScript de [navegação direcional TVHelpers](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation). Inclua o arquivo JavaScript de navegação direcional no pacote do aplicativo e adicione uma referência a ele em todas as páginas HTML que exigem navegação de controlador direcional:
