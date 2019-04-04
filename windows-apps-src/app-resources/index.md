@@ -1,12 +1,18 @@
 ---
-Description: 'Esta seção mostra como criar, empacotar e consumir recursos de arquivo, imagem e cadeia de caracteres do aplicativo.'
+Description: Esta seção mostra como criar, empacotar e consumir recursos de arquivo, imagem e cadeia de caracteres do aplicativo.
 title: Os recursos de aplicativo e o Sistema de Gerenciamento de Recursos
 label: Intro
 template: detail.hbs
 ms.date: 10/20/2017
 ms.topic: article
-keywords: 'windows 10, uwp, recurso, imagem, ativo, MRT, qualificador'
+keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
+ms.openlocfilehash: a5af904c099b92e399f169221cae3122f358be19
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57581958"
 ---
 # <a name="app-resources-and-the-resource-management-system"></a>Os recursos de aplicativo e o Sistema de Gerenciamento de Recursos
 

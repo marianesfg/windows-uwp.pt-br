@@ -1,10 +1,16 @@
 ---
 description: Saiba como projetar e codificar um aplicativo UWP que seja fácil de navegar e tenha um visual espetacular em uma variedade de dispositivos e tamanhos de tela.
 title: Noções básicas de design
-keywords: 'layout do aplicativo UWP, Plataforma Universal do Windows, design do aplicativo, interface'
+keywords: layout do aplicativo UWP, Plataforma Universal do Windows, design do aplicativo, interface
 ms.date: 03/07/2018
 ms.topic: article
 ms.localizationpriority: medium
+ms.openlocfilehash: 6afaada45c3f332085135212be39e43bb1c3fe8f
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57581993"
 ---
 # <a name="design-basics-for-uwp-apps"></a>Noções básicas de design para aplicativos UWP
 

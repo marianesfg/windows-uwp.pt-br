@@ -1,12 +1,18 @@
 ---
 description: Obtenha os downloads e ferramentas mais recentes para o layout da interface do usuário e designs de controle de aplicativos UWP.
-keywords: 'layout de aplicativo UWP, interface do usuário, designs de interface do usuário, downloads, ferramentas de UWP'
+keywords: layout de aplicativo UWP, interface do usuário, designs de interface do usuário, downloads, ferramentas de UWP
 title: Projetar kits de ferramentas e amostras para aplicativos UWP
 ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
+ms.openlocfilehash: cbe17d8e7093a15c66e482acd935974bc57074ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582166"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Projetar kits de ferramentas e amostras para aplicativos UWP
  

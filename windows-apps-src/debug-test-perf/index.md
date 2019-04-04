@@ -1,11 +1,17 @@
 ---
 ms.assetid: 16976d00-1564-49fe-81ad-2568e25e9e41
-title: 'Depuração, teste e desempenho'
+title: Depuração, teste e desempenho
 description: Use o Microsoft Visual Studio e outras ferramentas para depurar e testar seu aplicativo e prepará-lo para o processo de certificação da Microsoft Store.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: 757de9201d1cb7f753419024271f2be5c1aa67f4
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582037"
 ---
 # <a name="debugging-testing-and-performance"></a>Depuração, teste e desempenho
 

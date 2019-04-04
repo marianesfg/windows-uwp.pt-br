@@ -1,11 +1,17 @@
 ---
-title: 'Início, retomada e tarefas em segundo plano'
-description: 'Esta seção descreve o que acontece quando um aplicativo UWP (Plataforma Universal do Windows) é iniciado, suspenso, retomado e encerrado.'
+title: Início, retomada e tarefas em segundo plano
+description: Esta seção descreve o que acontece quando um aplicativo UWP (Plataforma Universal do Windows) é iniciado, suspenso, retomado e encerrado.
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 ms.date: 10/04/2017
 ms.topic: article
-keywords: 'Windows 10, uwp, tarefa em segundo plano, serviço de aplicativo, dispositivos conectados, sistemas remotos'
+keywords: Windows 10, uwp, tarefa em segundo plano, serviço de aplicativo, dispositivos conectados, sistemas remotos
 ms.localizationpriority: medium
+ms.openlocfilehash: d12113329381c6602edf87a11fc1cc6b822dab4e
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582151"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>Início, retomada e tarefas em segundo plano
 

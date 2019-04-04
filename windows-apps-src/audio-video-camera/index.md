@@ -1,11 +1,17 @@
 ---
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
-description: 'Esta seção fornece informações sobre como criar aplicativos da Plataforma Universal do Windows (UWP) que capturam, reproduzem ou editem fotos, vídeos ou áudio.'
-title: 'Áudio, vídeo e câmera'
+description: Esta seção fornece informações sobre como criar aplicativos da Plataforma Universal do Windows (UWP) que capturam, reproduzem ou editem fotos, vídeos ou áudio.
+title: Áudio, vídeo e câmera
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: 6aecc5b9a43d6cb00b42b1535a196afd8a138af9
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57581969"
 ---
 # <a name="audio-video-and-camera"></a>Áudio, vídeo e câmera
 

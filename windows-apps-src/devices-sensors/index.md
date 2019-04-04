@@ -1,11 +1,17 @@
 ---
 ms.assetid: 0b891f63-02fa-4c30-b307-9fbcccac5caa
-title: 'Dispositivos, sensores e consumo de energia'
-description: 'Para proporcionar uma experiência de qualidade para seus usuários, talvez seja necessário integrar dispositivos externos ou sensores ao seu aplicativo.'
+title: Dispositivos, sensores e consumo de energia
+description: Para proporcionar uma experiência de qualidade para seus usuários, talvez seja necessário integrar dispositivos externos ou sensores ao seu aplicativo.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: 06dd8355cd0afd3889c0db2c337c93b5fbedf0fa
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582043"
 ---
 # <a name="devices-sensors-and-power"></a>Dispositivos, sensores e consumo de energia
 

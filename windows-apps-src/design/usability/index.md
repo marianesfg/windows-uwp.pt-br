@@ -1,6 +1,6 @@
 ---
 description: Saiba como tornar seu aplicativo inclusivo e acessível para pessoas ao redor do mundo.
-keywords: 'acessibilidade do aplicativo UWP, globalização, aplicativos de design inclusivo, requisitos de aplicativo de acessibilidade'
+keywords: acessibilidade do aplicativo UWP, globalização, aplicativos de design inclusivo, requisitos de aplicativo de acessibilidade
 title: Usabilidade em aplicativos UWP – Desenvolvimento de aplicativos do Windows
 layout: LandingPage
 template: detail.hbs
@@ -8,6 +8,12 @@ ms.date: 10/18/2017
 ms.topic: landing-page
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
+ms.openlocfilehash: f218df3b4118508049023218b64e6c7321fbbda9
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582021"
 ---
 # <a name="usability-for-uwp-apps"></a>Usabilidade para aplicativos UWP
 

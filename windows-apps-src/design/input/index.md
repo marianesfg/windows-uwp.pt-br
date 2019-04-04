@@ -1,7 +1,7 @@
 ---
-description: 'Otimize seu aplicativo para caneta, Surface Dial e outros tipos de entrada.'
+description: Otimize seu aplicativo para caneta, Surface Dial e outros tipos de entrada.
 title: Entrada e interações
-keywords: 'entradas de aplicativo, personalizar o aplicativo UWP'
+keywords: entradas de aplicativo, personalizar o aplicativo UWP
 label: Input and interactions
 layout: LandingPage
 template: detail.hbs
@@ -9,6 +9,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
+ms.openlocfilehash: 4f66d808cafcc6fba89cebde352d191335068925
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57581982"
 ---
 # <a name="input-and-interactions"></a>Entrada e interações
 

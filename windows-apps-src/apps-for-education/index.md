@@ -3,9 +3,15 @@ title: Desenvolva aplicativos de educação.
 description: Esta seção descreve os recursos de Aplicativos Universais do Windows que estão disponíveis para escrever aplicativos de educação para a plataforma Windows 10.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp, educação'
+keywords: windows 10, uwp, educação
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
+ms.openlocfilehash: 7696cd785b4a8720f6eefb7bc897d13ffb0c7115
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582060"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>Desenvolver aplicativos Universais do Windows para educação
 ![captura de tela do aplicativo “fazer um teste”](images/take-a-test-screen-small.png)

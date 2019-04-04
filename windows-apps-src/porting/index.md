@@ -1,11 +1,17 @@
 ---
 ms.assetid: ba2ac5f5-1e0d-4f1d-a6f8-6a65b4cff501
-description: 'Esta seção descreve como portar seus aplicativos existentes para a UWP (Plataforma Universal do Windows), em que você pode criar um único pacote do aplicativo do Windows 10 que os clientes podem instalar em todos os tipos de dispositivos. Seu aplicativo se beneficiará com o novo hardware instigante, ótimas oportunidades de monetização, um conjunto de APIs modernas, controles de interface do usuário adaptáveis e uma variedade de modalidades de entrada, incluindo mouse/teclado, toque e fala.'
+description: Esta seção descreve como portar seus aplicativos existentes para a UWP (Plataforma Universal do Windows), em que você pode criar um único pacote do aplicativo do Windows 10 que os clientes podem instalar em todos os tipos de dispositivos. Seu aplicativo se beneficiará com o novo hardware instigante, ótimas oportunidades de monetização, um conjunto de APIs modernas, controles de interface do usuário adaptáveis e uma variedade de modalidades de entrada, incluindo mouse/teclado, toque e fala.
 title: Portando aplicativos para o Windows 10
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: eefebbd7087070f85ead09e562f154f43ed49e37
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582058"
 ---
 # <a name="porting-apps-to-windows10"></a>Portando aplicativos para o Windows 10
 

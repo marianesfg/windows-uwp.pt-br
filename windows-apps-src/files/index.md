@@ -1,11 +1,17 @@
 ---
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
-title: 'Arquivos, pastas e bibliotecas'
-description: 'Aprenda como ler e gravar configurações do aplicativo, seletores de pastas e arquivos e sobre locais especiais de área restrita, como a biblioteca de vídeo/música.'
+title: Arquivos, pastas e bibliotecas
+description: Aprenda como ler e gravar configurações do aplicativo, seletores de pastas e arquivos e sobre locais especiais de área restrita, como a biblioteca de vídeo/música.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: 01efd2cfd88143f99bf9058e8140308eb6afe458
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582048"
 ---
  # <a name="files-folders-and-libraries"></a>Arquivos, pastas e bibliotecas
 

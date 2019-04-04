@@ -1,11 +1,17 @@
 ---
 title: Visão geral de mapas e local
-description: 'Esta seção explica como é possível exibir mapas, usar serviços de mapa, encontrar o local e configurar uma cerca geográfica no aplicativo. Esta seção também mostra como iniciar o aplicativo Mapas do Windows em um mapa específico, rota ou um conjunto de trajetos passo a passo.'
+description: Esta seção explica como é possível exibir mapas, usar serviços de mapa, encontrar o local e configurar uma cerca geográfica no aplicativo. Esta seção também mostra como iniciar o aplicativo Mapas do Windows em um mapa específico, rota ou um conjunto de trajetos passo a passo.
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp, mapa, local, serviços de mapa'
+keywords: windows 10, uwp, mapa, local, serviços de mapa
 ms.localizationpriority: medium
+ms.openlocfilehash: 3482370719a658f303964204661f1fb5d69ae5b4
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582015"
 ---
 # <a name="maps-and-location-overview"></a>Visão geral de mapas e local
 

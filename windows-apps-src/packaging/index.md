@@ -4,8 +4,14 @@ title: Empacotando apps
 description: Esta seção contém links ou se vincula a artigos sobre empacotamento de aplicativos da Plataforma Universal do Windows (UWP).
 ms.date: 09/30/2018
 ms.topic: article
-keywords: 'windows 10, uwp, empacotamento'
+keywords: windows 10, uwp, empacotamento
 ms.localizationpriority: medium
+ms.openlocfilehash: 04736c9ac4de5adf162d32191ff30f7a981d6a6f
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582168"
 ---
 # <a name="packaging-apps"></a>Empacotando apps
 

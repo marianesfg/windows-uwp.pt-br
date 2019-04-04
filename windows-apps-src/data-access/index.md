@@ -4,8 +4,14 @@ title: Acesso a dados
 description: Esta seção aborda o armazenamento de dados no dispositivo em um banco de dados privado e o uso do mapeamento relacional de objeto em aplicativos da Plataforma Universal do Windows (UWP).
 ms.date: 11/13/2017
 ms.topic: article
-keywords: 'windows 10, uwp, dados, banco de dados, relacional, tabelas, sqlite'
+keywords: windows 10, uwp, dados, banco de dados, relacional, tabelas, sqlite
 ms.localizationpriority: medium
+ms.openlocfilehash: eb5adbdd3ae12d039d934e8d0cbe468ae5c1187c
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582033"
 ---
 # <a name="data-access"></a>Acesso a dados
 
