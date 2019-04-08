@@ -63,6 +63,6 @@ Teste seu aplicativo em dispositivos reais em quaisquer cenários de alto consum
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e registrar uma tarefa em segundo plano do out-of-process](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
+* [Criar e registrar uma tarefa em segundo plano fora do processo](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
 * [Planejando o desempenho](https://msdn.microsoft.com/windows/uwp/debug-test-perf/planning-and-measuring-performance)  
 

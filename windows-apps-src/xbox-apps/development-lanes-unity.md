@@ -59,5 +59,5 @@ Se forem feitas alterações em algo que não seja um script, para que essas alt
 Há algumas situações comuns onde adicionar partes desse diretório UWP recentemente gerado ao controle de versão se torna necessário. Por exemplo, se você estiver adicionando uma nova dependência ao projeto UWP (por exemplo, SDK do Xbox Live).  Vamos examinar este exemplo em detalhes em [Controle de versão do seu projeto UWP](development-lanes-unity-versioning.md).
 
 ## <a name="see-also"></a>Consulte também
-- [Trazendo existente de jogos para Xbox](development-lanes-landing.md)
+- [Trazendo jogos existentes para o Xbox](development-lanes-landing.md)
 - [UWP no Xbox One](index.md)

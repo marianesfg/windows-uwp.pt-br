@@ -473,7 +473,7 @@ Em cenários avançados, você pode implementar uma classe que pode ter um compo
  
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794)
+* [Dicionário de recurso](https://msdn.microsoft.com/library/windows/apps/br208794)
 * [Visão geral do XAML](https://msdn.microsoft.com/library/windows/apps/mt185595)
 * [Extensão de marcação StaticResource](../../xaml-platform/staticresource-markup-extension.md)
 * [Extensão de marcação ThemeResource](../../xaml-platform/themeresource-markup-extension.md)

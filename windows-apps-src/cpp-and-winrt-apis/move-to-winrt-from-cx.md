@@ -7,7 +7,7 @@ keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, 
 ms.localizationpriority: medium
 ms.openlocfilehash: fe988bffbf024308fb5d43da7ed538e5330b58de
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57635071"
@@ -281,12 +281,12 @@ O C++/CX fornece vários tipos de dados no namespace **Platform**. Esses tipos n
 
 | C++/CX | C++/WinRT |
 | ---- | ---- |
-| **Platform:: Agile\^** | [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) |
+| **Platform:: Agile\^** | [**WinRT::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) |
 | **Platform:: array\^** | Ver [porta **Platform:: array\^**](#port-platformarray) |
-| **Platform:: Exception\^** | [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) |
-| **Platform::InvalidArgumentException\^** | [**winrt::hresult_invalid_argument**](/uwp/cpp-ref-for-winrt/error-handling/hresult-invalid-argument) |
-| **Platform:: Object\^** | **winrt::Windows::Foundation::IInspectable** |
-| **Platform:: String\^** | [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
+| **Platform:: Exception\^** | [**WinRT::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) |
+| **Platform:: invalidargumentexception\^** | [**WinRT::hresult_invalid_argument**](/uwp/cpp-ref-for-winrt/error-handling/hresult-invalid-argument) |
+| **Platform:: Object\^** | **WinRT::Windows::Foundation::IInspectable** |
+| **Platform:: String\^** | [**WinRT::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
 
 ### <a name="port-platformagile-to-winrtagileref"></a>Porta **Platform:: Agile\^**  para **winrt::agile_ref**
 O **Platform:: Agile\^**  tipo no C + + c++ /CX representa uma classe de tempo de execução do Windows que pode ser acessada de qualquer thread. O C + + c++ /CLI é equivalente do WinRT [ **winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref).
@@ -327,19 +327,19 @@ O C++/WinRT fornece essas classes de exceção.
 
 | Tipo de exceção | Classe base | HRESULT |
 | ---- | ---- | ---- |
-| [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) | | chamar [**hresult_error::to_abi**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresulterrortoabi-function) |
-| [**winrt::hresult_access_denied**](/uwp/cpp-ref-for-winrt/error-handling/hresult-access-denied) | **winrt::hresult_error** | E_ACCESSDENIED |
-| [**winrt::hresult_canceled**](/uwp/cpp-ref-for-winrt/error-handling/hresult-canceled) | **winrt::hresult_error** | ERROR_CANCELLED |
-| [**winrt::hresult_changed_state**](/uwp/cpp-ref-for-winrt/error-handling/hresult-changed-state) | **winrt::hresult_error** | E_CHANGED_STATE |
-| [**winrt::hresult_class_not_available**](/uwp/cpp-ref-for-winrt/error-handling/hresult-class-not-available) | **winrt::hresult_error** | CLASS_E_CLASSNOTAVAILABLE |
-| [**winrt::hresult_illegal_delegate_assignment**](/uwp/cpp-ref-for-winrt/error-handling/hresult-illegal-delegate-assignment) | **winrt::hresult_error** | E_ILLEGAL_DELEGATE_ASSIGNMENT |
-| [**winrt::hresult_illegal_method_call**](/uwp/cpp-ref-for-winrt/error-handling/hresult-illegal-method-call) | **winrt::hresult_error** | E_ILLEGAL_METHOD_CALL |
-| [**winrt::hresult_illegal_state_change**](/uwp/cpp-ref-for-winrt/error-handling/hresult-illegal-state-change) | **winrt::hresult_error** | E_ILLEGAL_STATE_CHANGE |
-| [**winrt::hresult_invalid_argument**](/uwp/cpp-ref-for-winrt/error-handling/hresult-invalid-argument) | **winrt::hresult_error** | E_INVALIDARG |
-| [**winrt::hresult_no_interface**](/uwp/cpp-ref-for-winrt/error-handling/hresult-no-interface) | **winrt::hresult_error** | E_NOINTERFACE |
-| [**winrt::hresult_not_implemented**](/uwp/cpp-ref-for-winrt/error-handling/hresult-not-implemented) | **winrt::hresult_error** | E_NOTIMPL |
-| [**winrt::hresult_out_of_bounds**](/uwp/cpp-ref-for-winrt/error-handling/hresult-out-of-bounds) | **winrt::hresult_error** | E_BOUNDS |
-| [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/error-handling/hresult-wrong-thread) | **winrt::hresult_error** | RPC_E_WRONG_THREAD |
+| [**WinRT::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) | | chamar [**hresult_error::to_abi**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresulterrortoabi-function) |
+| [**WinRT::hresult_access_denied**](/uwp/cpp-ref-for-winrt/error-handling/hresult-access-denied) | **WinRT::hresult_error** | E_ACCESSDENIED |
+| [**WinRT::hresult_canceled**](/uwp/cpp-ref-for-winrt/error-handling/hresult-canceled) | **WinRT::hresult_error** | ERROR_CANCELLED |
+| [**WinRT::hresult_changed_state**](/uwp/cpp-ref-for-winrt/error-handling/hresult-changed-state) | **WinRT::hresult_error** | E_CHANGED_STATE |
+| [**WinRT::hresult_class_not_available**](/uwp/cpp-ref-for-winrt/error-handling/hresult-class-not-available) | **WinRT::hresult_error** | CLASS_E_CLASSNOTAVAILABLE |
+| [**WinRT::hresult_illegal_delegate_assignment**](/uwp/cpp-ref-for-winrt/error-handling/hresult-illegal-delegate-assignment) | **WinRT::hresult_error** | E_ILLEGAL_DELEGATE_ASSIGNMENT |
+| [**WinRT::hresult_illegal_method_call**](/uwp/cpp-ref-for-winrt/error-handling/hresult-illegal-method-call) | **WinRT::hresult_error** | E_ILLEGAL_METHOD_CALL |
+| [**WinRT::hresult_illegal_state_change**](/uwp/cpp-ref-for-winrt/error-handling/hresult-illegal-state-change) | **WinRT::hresult_error** | E_ILLEGAL_STATE_CHANGE |
+| [**WinRT::hresult_invalid_argument**](/uwp/cpp-ref-for-winrt/error-handling/hresult-invalid-argument) | **WinRT::hresult_error** | E_INVALIDARG |
+| [**WinRT::hresult_no_interface**](/uwp/cpp-ref-for-winrt/error-handling/hresult-no-interface) | **WinRT::hresult_error** | E_NOINTERFACE |
+| [**WinRT::hresult_not_implemented**](/uwp/cpp-ref-for-winrt/error-handling/hresult-not-implemented) | **WinRT::hresult_error** | E_NOTIMPL |
+| [**WinRT::hresult_out_of_bounds**](/uwp/cpp-ref-for-winrt/error-handling/hresult-out-of-bounds) | **WinRT::hresult_error** | E_BOUNDS |
+| [**WinRT::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/error-handling/hresult-wrong-thread) | **WinRT::hresult_error** | RPC_E_WRONG_THREAD |
 
 Observe que cada classe (pela classe base **hresult_error**) fornece uma função [**to_abi**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresulterrortoabi-function), que retorna o HRESULT do erro e uma função [**message**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresulterrormessage-function), que retorna a representação da cadeia de caracteres desse HRESULT.
 
@@ -398,7 +398,7 @@ A cadeia de ferramentas do C++/WinRT gera o código-fonte semelhante a isso.
 void LogWrapLine(winrt::hstring const& str);
 ```
 
-#### <a name="tostring"></a>ToString()
+#### <a name="tostring"></a>ToString)
 
 C + + c++ /CLI CX fornece o [Object:: ToString](/cpp/cppcx/platform-object-class?view=vs-2017#tostring) método.
 
@@ -416,17 +416,17 @@ auto s{ std::to_wstring(i) }; // s is a std::wstring with value L"2".
 
 ## <a name="important-apis"></a>APIs Importantes
 * [WinRT::delegate struct modelo](/uwp/cpp-ref-for-winrt/delegate)
-* [winrt::hresult_error struct](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
+* [struct WinRT::hresult_error](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
 * [struct WinRT::hstring](/uwp/cpp-ref-for-winrt/hstring)
-* [winrt namespace](/uwp/cpp-ref-for-winrt/winrt)
+* [namespace winrt](/uwp/cpp-ref-for-winrt/winrt)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
 * [Criar eventos em C + + c++ /CLI WinRT](author-events.md)
 * [Simultaneidade e operações assíncronas com C + + c++ /CLI WinRT](concurrency.md)
-* [Consumir APIs com C + + c++ /CLI WinRT](consume-apis.md)
+* [Consumir APIs com C++/WinRT](consume-apis.md)
 * [Manipular eventos usando delegados em C + + c++ /CLI WinRT](handle-events.md)
-* [Interoperabilidade entre C + + c++ /CLI WinRT e C + + c++ /CX](interop-winrt-cx.md)
+* [Interoperabilidade entre C++/WinRT e C++/CX](interop-winrt-cx.md)
 * [Referência de Microsoft Interface Definition Language 3.0](/uwp/midl-3)
-* [Mover para C + + c++ /CLI WinRT da WRL](move-to-winrt-from-wrl.md)
+* [Mudar do WRL para o C++/WinRT](move-to-winrt-from-wrl.md)
 * [Cadeia de caracteres de tratamento em C + + c++ /CLI WinRT](strings.md)

@@ -65,7 +65,7 @@ O relatório de **Desempenho de anúncios** inclui dados para as seguintes métr
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Anúncios no aplicativo](in-app-ads.md)
-* [Exibir anúncios em seu aplicativo com o Microsoft Advertising SDK](../monetize/display-ads-in-your-app.md)
+* [Exibir anúncios em seu aplicativo com o SDK do Microsoft Advertising](../monetize/display-ads-in-your-app.md)
 * [Otimizar a visualização das suas unidades do ad](../monetize/optimize-ad-unit-viewability.md)
 
 

@@ -23,7 +23,7 @@ O aplicativo de exemplo descrito neste artigo permite que o usuário selecione u
 
 Para mais detalhes sobre os diferentes recursos do aplicativo Universal do Windows utilizados nessa amostra, consulte:
 
--   [Transcodifique arquivos de mídia](transcode-media-files.md)
+-   [Transcodificar arquivos de mídia](transcode-media-files.md)
 -   [Iniciar tarefas de retomada e segundo plano](https://msdn.microsoft.com/library/windows/apps/mt227652)
 -   [Selos de blocos e notificações](https://msdn.microsoft.com/library/windows/apps/mt185606)
 

@@ -65,7 +65,7 @@ Outro uso de `RelativeSource={RelativeSource Self}` é como uma maneira de defin
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Visão geral do XAML](xaml-overview.md)
-* [Associação de dados em camadas](https://msdn.microsoft.com/library/windows/apps/mt210946)
+* [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [Extensão de marcação {binding}](binding-markup-extension.md)
 * [**Associação**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)

@@ -8,7 +8,7 @@ keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, lis
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ae5b68d73a3776adf6250dbb96de827a106a6c5
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57610181"
@@ -207,7 +207,7 @@ Há requisitos adicionais dependendo do tipo de arquivo.
 <ul>
 <li>Codec: AAC-LC</li>
 <li>Canais: Estéreo ou surround som</li>
-<li>Taxa de amostragem: 48 KHz</li>
+<li>Taxa de amostragem: 48 kHz</li>
 <li>A taxa de bits de áudio: 384 KB/s para estéreo, 512 KB/s para o som surround</li>
 </ul>
 </td>

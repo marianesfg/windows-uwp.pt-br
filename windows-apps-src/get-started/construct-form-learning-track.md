@@ -171,6 +171,6 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 | Exemplo de código | Descrição |
 |-----------------|---------------|
 | [Tutorial de layout adaptável](../design/basics/xaml-basics-adaptive-layout.md) | Uma experiência guiada passo a passo de layouts adaptáveis e design dinâmico. | 
-| [Banco de dados de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Veja o layout e os formulários em ação em uma amostra empresarial de várias páginas. |
+| [Banco de dados de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Veja o layout e os formulários em ação em uma amostra empresarial de várias páginas. |
 | [Galeria de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery) | Veja uma seleção de controles XAML e como são implementados. |
 | [Exemplos de código adicionais](https://developer.microsoft.com//windows/samples) | Escolha **Controles, layout e texto** na lista suspensa de categoria para ver exemplos de códigos relacionados. |

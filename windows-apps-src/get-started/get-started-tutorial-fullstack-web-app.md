@@ -626,7 +626,7 @@ Parabéns! Você concluiu a criação do aplicativo Web! Vamos testá-lo.
 
     Você também pode comparar seu código com o código fornecido na pasta Final.
 
-4. Para interromper o jogo, no prompt de comando digite: **Ctrl + C**, **Y**. 
+4. Para interromper o jogo, no prompt de comando digite: **CTRL + C**, **Y**. 
 
 ### <a name="going-further"></a>Aprofundamento
 

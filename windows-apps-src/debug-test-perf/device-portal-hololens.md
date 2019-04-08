@@ -89,12 +89,12 @@ Cada HoloLens gera um certificado autoassinado exclusivo para sua conexão SSL. 
 A sessão do Device Portal é iniciada na home page. Acesse outras páginas a partir da barra de navegação no lado esquerdo da página inicial.
 
 A barra de ferramentas na parte superior da página fornece acesso a recursos e status normalmente usados.
-- **Online**: Indica se o dispositivo está conectado ao Wi-Fi.
+- **On-line**: Indica se o dispositivo está conectado ao Wi-Fi.
 - **Desligamento**: Desativa o dispositivo.
 - **Reiniciar**: Os ciclos de energia no dispositivo.
 - **Segurança**: Abre a página de segurança do dispositivo.
 - **Legal**: Indica a temperatura do dispositivo.
-- **A/C**: Indica se o dispositivo está conectado e cobrança.
+- **CA**: Indica se o dispositivo está conectado e cobrança.
 - **Ajudar a**: Abre a página de documentação de interface REST.
 
 A página inicial mostra as seguintes informações:

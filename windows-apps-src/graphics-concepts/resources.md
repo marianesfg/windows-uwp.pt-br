@@ -17,7 +17,7 @@ ms.locfileid: "57631471"
 # <a name="resources"></a>Recursos
 
 
-Um recurso é uma área na memória que pode ser acessada pelo pipeline de Direct3D. Para que o pipeline acesse a memória com eficiência, os dados fornecidos ao pipeline (como geometria de entrada, recursos de sombreador e texturas) devem ser armazenados em um recurso. Existem dois tipos de recursos a partir dos quais todos os recursos de Direct3D são derivados: um buffer ou uma textura. Até 128 recursos podem estar ativos para cada estágio do pipeline.
+Um recurso é uma área na memória que pode ser acessada pelo pipeline de Direct3D. Para que o pipeline acesse a memória com eficiência, os dados fornecidos ao pipeline (como geometria de entrada, recursos de sombreador e texturas) devem ser armazenados em um recurso. Existem dois tipos de recursos dos quais todos os recursos de Direct3D são derivados: um buffer ou uma textura. Até 128 recursos podem estar ativos para cada estágio do pipeline.
 
 Cada app normalmente criará muitos recursos. Exemplos de recursos incluem: buffers de vértice, buffer de índice, buffer constante, texturas e recursos de sombreador. Existem várias opções que determinam como os recursos podem ser usados. Você pode criar recursos com tipo forte ou sem tipo; você pode controlar se os recursos têm tanto acesso de leitura quanto de gravação; você pode disponibilizar recursos somente para CPU, GPU ou ambas. Naturalmente, haverá compensação entre velocidade versus funcionalidade: quanto maior a funcionalidade que você permitir a um recurso, o menor será o desempenho esperado.
 

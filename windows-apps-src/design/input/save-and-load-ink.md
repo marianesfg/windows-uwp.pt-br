@@ -23,7 +23,7 @@ Os aplicativos UWP que dão suporte ao Windows Ink podem serializar e desseriali
 > [!NOTE]
 > O ISF é a representação mais compacta e persistente de tinta. Ele pode ser inserido em um formato de documento binário, como um arquivo GIF, ou colocado diretamente na Área de Transferência.
 
-> **APIs importantes**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **APIs importantes**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [ **Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 ## <a name="save-ink-strokes-to-a-file"></a>Salvar traços de tinta em um arquivo
 

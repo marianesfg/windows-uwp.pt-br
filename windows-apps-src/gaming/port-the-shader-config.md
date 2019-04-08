@@ -193,7 +193,7 @@ No nosso exemplo de OpenGL ES 2.0, temos um **uniforme** a declarar para o pipel
 E dois valores de **atributo** para os dados do vértice:
 
 -   **uma\_posição**: um vetor de float de 4 para as coordenadas do modelo de um vértice.
--   **a\_color**: Um vetor de float de 4 para o valor de cor RGBA associado ao vértice.
+-   **uma\_cor**: Um vetor de float de 4 para o valor de cor RGBA associado ao vértice.
 
 Open GL ES 2.0: Definições do GLSL uniformes e atributos
 

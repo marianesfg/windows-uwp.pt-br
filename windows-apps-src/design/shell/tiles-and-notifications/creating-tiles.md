@@ -47,8 +47,8 @@ Para editar seu bloco, clique duas vezes no arquivo **Package.appxmanifest** em 
 
 Há alguns itens que você deve atualizar:
 
--   DisplayName: Substitua esse valor com o nome que você deseja exibir em seu bloco.
--   ShortName: Porque não há espaço limitado para seu nome de exibição caber em blocos, é recomendável que você especifique um nome curto, para garantir que o nome do seu aplicativo não ser truncados.
+-   Nome para exibição: Substitua esse valor com o nome que você deseja exibir em seu bloco.
+-   Nome curto: Porque não há espaço limitado para seu nome de exibição caber em blocos, é recomendável que você especifique um nome curto, para garantir que o nome do seu aplicativo não ser truncados.
 -   Imagens de logotipo:
 
     Você deve substituir essas imagens por suas próprias. Você pode fornecer imagens para diferentes escalas visuais, mas não é necessário fornecer para todas elas. Para garantir que seu aplicativo tenha uma boa aparência em um vários dispositivos, recomendamos que você ofereça versões de escala em 100%, 200% e 400% de cada imagem. Consulte [Ativos de bloco e ícone](app-assets.md) para saber mais sobre a geração desses ativos.

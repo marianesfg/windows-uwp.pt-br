@@ -33,14 +33,14 @@ Este tópico descreve os seguintes esquemas de URI integrados ao Windows:
 |[bingmaps: unidade ms para: e a movimentação da ms para: ](#maps-app-uri-schemes) | Aplicativo Mapas |
 |[http:](#http-uri-scheme) | Navegador da Web padrão |
 |[mailto:](#email-uri-scheme) | Aplicativo de email padrão |
-|[ms-call:](#call-app-uri-scheme) |  Aplicativo de chamada |
-|[ms-chat:](#messaging-app-uri-scheme) | Aplicativo de mensagens |
-|[ms-people:](#people-app-uri-scheme) | Aplicativo Pessoas |
-|[ms-photos:](#photos-app-uri-scheme) | Aplicativo Fotos |
-|[ms-settings:](#settings-app-uri-scheme) | Aplicativo Configurações |
-|[ms-store:](#store-app-uri-scheme)  | Aplicativo da Loja |
-|[ms-tonepicker:](#tone-picker-uri-scheme) | Seletor de tom |
-|[ms-yellowpage:](#nearby-numbers-app-uri-scheme) | Aplicativo Números nas Proximidades |
+|[chamada de MS:](#call-app-uri-scheme) |  Aplicativo de chamada |
+|[MS-bate-papo:](#messaging-app-uri-scheme) | Aplicativo de mensagens |
+|[MS-pessoas:](#people-app-uri-scheme) | Aplicativo Pessoas |
+|[MS-fotos:](#photos-app-uri-scheme) | Aplicativo Fotos |
+|[configurações de MS:](#settings-app-uri-scheme) | Aplicativo Configurações |
+|[MS-store:](#store-app-uri-scheme)  | Aplicativo da Loja |
+|[MS-tonepicker:](#tone-picker-uri-scheme) | Seletor de tom |
+|[MS-yellowpage:](#nearby-numbers-app-uri-scheme) | Aplicativo Números nas Proximidades |
 |[msnweather:](#weather-app-uri-scheme) | Aplicativo meteorológico |
 
 <br>
@@ -217,7 +217,7 @@ Ou para editar um vídeo: `ms-photos:videoedit?InputToken=123abc&Action=Trim&Sta
 |------------|--------|
 | ms-photos:viewer?fileName={filename} | Inicia o aplicativo Fotos para exibir a imagem especificada onde {filename} é um nome de caminho totalmente qualificado. Por exemplo: `c:\users\userName\Pictures\ImageToView.jpg` |
 | ms-photos:videoedit?InputToken={input token} | Inicia o aplicativo Fotos no modo de edição de vídeo para o arquivo representado pelo token de arquivo. **InputToken** é necessária. Use o [SharedStorageAccessManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) para obter um token para um arquivo. |
-| ms-photos:videoedit?Action={action} | Um parâmetro opcional que abre o aplicativo de fotos no modo de edição especificado vídeo onde {action} é um dos: **SlowMotion**, **FrameExtraction**, **Trim**, **View**, **Ink**. Se não especificado, usa o padrão **View** |
+| ms-photos:videoedit?Action={action} | Um parâmetro opcional que abre o aplicativo de fotos no modo de edição especificado vídeo onde {action} é um dos: **SlowMotion**, **FrameExtraction**, **cortar**, **exibição**, **tinta**. Se não especificado, usa o padrão **View** |
 | ms-photos:videoedit?StartTime={timespan} | Um parâmetro opcional que especifica o local iniciar a reprodução do vídeo. `{timespan}` deve estar no formato `"hh:mm:ss.ffff"`. Se não for especificado, assume como padrão `00:00:00.0000` |
 
 ### <a name="settings-app-uri-scheme"></a>Esquema de URI do aplicativo Configurações
@@ -244,4 +244,4 @@ Use o **msnweather:** Esquema URI para iniciar o aplicativo de clima.
 
 | Esquema de URI | Resultados |
 |------------|---------|
-| msnweather://forecast?la=\[latitude\]&lo=\[longitude\] | Inicia o aplicativo de clima na página de previsão com base em um coordenadas da localização geográfica.<br>`latitude` refere-se a latitude da localização.<br> `longitude` refere-se a longitude do local.<br> |
+| msnweather://Forecast?la=\[latitude\]& lo =\[longitude\] | Inicia o aplicativo de clima na página de previsão com base em um coordenadas da localização geográfica.<br>`latitude` refere-se a latitude da localização.<br> `longitude` refere-se a longitude do local.<br> |

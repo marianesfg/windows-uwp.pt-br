@@ -71,10 +71,10 @@ As APIs do Windows Runtime fornecem a infraestrutura geral dos aplicativos UWP. 
 
 As principais APIs do Windows Runtime usadas na portabilidade do pipeline de elementos gráficos incluem:
 
--   [**Windows::UI::Core::CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)
--   [**Windows::UI::Core::CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)
--   [**Windows::ApplicationModel::Core::IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)
--   [**Windows::ApplicationModel::Core::CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)
+-   [**Windows::UI::core::CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)
+-   [**Windows::UI::core::CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)
+-   [**Windows::ApplicationModel::core::IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)
+-   [**Windows::ApplicationModel::core::CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)
 
 Além disso a WRL (Biblioteca de Modelos C++ do Windows Runtime) é uma biblioteca de modelos que proporciona um modo específico de modificar e usar os componentes do Tempo de Execução do Windows. As APIs do Direct3D 11 para aplicativos UWP são mais bem utilizadas em conjunto com as interfaces e os tipos dessa biblioteca, como ponteiros inteligentes ([ComPtr](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)). Para saber mais sobre a WRL, leia [Biblioteca de Modelos C++ do Windows Runtime (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx).
 

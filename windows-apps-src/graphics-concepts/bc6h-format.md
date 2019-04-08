@@ -26,9 +26,9 @@ O formato BC6H fornece compactação de alta qualidade para imagens que usam can
 
 BC6H é especificado pelo DXGI seguir\_Formatar valores de enumeração:
 
--   **DXGI\_FORMAT\_BC6H\_TYPELESS**.
--   **DXGI\_FORMAT\_BC6H\_UF16**. Esse formato BC6H não usa um bit de sinal nos valores de canal de cor da ponto flutuante de 16 bits.
--   **DXGI\_FORMAT\_BC6H\_SF16**. Esse formato BC6H usa um bit de sinal nos valores de canal de cor da ponto flutuante de 16 bits.
+-   **DXGI\_FORMATO\_BC6H\_TYPELESS**.
+-   **DXGI\_FORMATO\_BC6H\_UF16**. Esse formato BC6H não usa um bit de sinal nos valores de canal de cor da ponto flutuante de 16 bits.
+-   **DXGI\_FORMATO\_BC6H\_SF16**. Esse formato BC6H usa um bit de sinal nos valores de canal de cor da ponto flutuante de 16 bits.
 
 **Observação**    o flutuante formato de ponto para canais de cores de 16 bits é conhecido como formato de ponto de flutuante "meio". Esse formato tem o seguinte layout de bit:
 |                       |                                                 |
@@ -143,18 +143,18 @@ Os nomes dos campos na tabela acima são definidos da seguinte maneira:
 |-------|-------------------|
 | m     | modo              |
 | d.     | índice de forma       |
-| rw    | endpt\[0\].A\[0\] |
-| rx    | endpt\[0\].B\[0\] |
-| ry    | endpt\[1\].A\[0\] |
-| rz    | endpt\[1\].B\[0\] |
-| gw    | endpt\[0\].A\[1\] |
-| gx    | endpt\[0\].B\[1\] |
-| gy    | endpt\[1\].A\[1\] |
-| gz    | endpt\[1\].B\[1\] |
-| bw    | endpt\[0\].A\[2\] |
-| bx    | endpt\[0\].B\[2\] |
-| by    | endpt\[1\].A\[2\] |
-| bz    | endpt\[1\].B\[2\] |
+| rw    | Endpt\[0\]. Um\[0\] |
+| rx    | Endpt\[0\]. B\[0\] |
+| ry    | Endpt\[1\]. Um\[0\] |
+| rz    | Endpt\[1\]. B\[0\] |
+| gw    | Endpt\[0\]. Um\[1\] |
+| gx    | Endpt\[0\]. B\[1\] |
+| gy    | Endpt\[1\]. Um\[1\] |
+| gz    | Endpt\[1\]. B\[1\] |
+| bw    | Endpt\[0\]. Um\[2\] |
+| bx    | Endpt\[0\]. B\[2\] |
+| by    | Endpt\[1\]. Um\[2\] |
+| bz    | Endpt\[1\]. B\[2\] |
 
  
 

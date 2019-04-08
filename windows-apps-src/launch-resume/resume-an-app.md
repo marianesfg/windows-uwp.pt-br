@@ -127,5 +127,5 @@ Para aplicativos da Loja do Windows Phone, o evento [**Resuming**](https://msdn.
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Ciclo de vida do aplicativo](app-lifecycle.md)
-* [Manipular a ativação de aplicativo](activate-an-app.md)
-* [Suspender o identificador de aplicativo](suspend-an-app.md)
+* [Tratar a ativação do aplicativo](activate-an-app.md)
+* [Tratar a suspensão do aplicativo](suspend-an-app.md)

@@ -37,7 +37,7 @@ Algumas dessas regras são uma única opção onde a IEEE-754 oferece opções.
     A exceção é - 0; sqrt(-0) produz - 0 e rsq(-0) produz -INF.
 -   INF - INF = NaN
 -   (+/-)INF / (+/-)INF = NaN
--   (+/-)INF \* 0 = NaN
+-   (+/-) INF \* 0 = NaN
 -   Qualquer valor NaN (qualquer OP) = NaN
 -   As comparações EQ, GT, GE, LT e LE, quando um ou ambos operandos for NaN retornará **FALSE**.
 -   As comparações ignoram o sinal de 0 (sendo assim, +0 igual -0).

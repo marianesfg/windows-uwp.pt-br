@@ -24,7 +24,7 @@ A página **Home** contém os seguintes painéis:
  
    *  [Ações rápidas](#ID4EEB)  
    *  [Aplicativos e jogos](#ID4EPC)  
-   *  [Contas de teste](#ID4EQD)  
+   *  [Contas teste](#ID4EQD)  
    *  [Conecte-se com seu navegador](#ID4EFE)  
 
  

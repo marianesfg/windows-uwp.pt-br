@@ -428,7 +428,7 @@ Teoricamente, você pode usar comandos de configurações para tudo. No entanto,
 
 [Classe AccountsSettingsPane](https://msdn.microsoft.com/library/windows/apps/windows.ui.applicationsettings.accountssettingspane)
 
-[O Web authentication broker](web-authentication-broker.md)
+[Agente de autenticação na Web](web-authentication-broker.md)
 
 [Exemplo de Web de gerenciamento de conta](https://go.microsoft.com/fwlink/p/?LinkId=620621)
 

@@ -42,8 +42,8 @@ Para saber como enviar uma notificação, consulte [Enviar notificação do sist
 As notificações do sistema são uma combinação de algumas propriedades de dados como Marcação/Grupo (que permitem a você identificar a notificação) e o *conteúdo da notificação do sistema*.
 
 Os componentes principais de conteúdo da notificação do sistema são...
-* **launch**: Isso define quais argumentos serão passados de volta para seu aplicativo quando o usuário clica em sua notificação do sistema, permitindo que você ao link profundo no que a notificação do sistema foi exibindo conteúdo correto. Para saber mais, consulte [Enviar notificação do sistema local](send-local-toast.md).
-* **visual**: A parte visual da notificação do sistema, incluindo o genérico de associação que contém texto e imagens.
+* **Iniciar**: Isso define quais argumentos serão passados de volta para seu aplicativo quando o usuário clica em sua notificação do sistema, permitindo que você ao link profundo no que a notificação do sistema foi exibindo conteúdo correto. Para saber mais, consulte [Enviar notificação do sistema local](send-local-toast.md).
+* **Visual**: A parte visual da notificação do sistema, incluindo o genérico de associação que contém texto e imagens.
 * **ações**: A parte interativa de notificação do sistema, incluindo as entradas e ações.
 * **áudio**: Controles de áudio reproduzida quando a notificação do sistema é mostrada ao usuário.
 

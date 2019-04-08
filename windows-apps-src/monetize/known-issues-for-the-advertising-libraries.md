@@ -67,7 +67,7 @@ Quando uma unidade de anúncios em tempo real estiver atendendo a anúncios de t
 
 Ao usar as bibliotecas do SDK do Microsoft Advertising, você não pode direcionar para **Qualquer CPU** em seu projeto. Se o seu projeto for direcionado para a plataforma **Any CPU**, você poderá ver um aviso depois de adicionar a referência semelhante a esta.
 
-![referenceerror\-solutionexplorer](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
+![ReferenceError\-solutionexplorer](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
 
 Para remover esse aviso, atualize seu projeto para usar uma saída de compilação específica da arquitetura (por exemplo, **x86**). Use o **Gerenciador de Configurações** para definir os destinos de plataforma para depuração e configurações de versão.
 

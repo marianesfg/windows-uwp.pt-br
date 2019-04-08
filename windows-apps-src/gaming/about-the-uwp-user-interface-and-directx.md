@@ -27,10 +27,10 @@ Consulte a [Glossário de gráficos do Direct3D](../graphics-concepts/index.md) 
 Primeiramente, vejamos os namespaces do Windows Runtime que você deve incluir (com **using**) no seu aplicativo UWP. Vamos entrar um pouco em detalhes.
 
 -   [**Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865)
--   [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766)
+-   [**ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224766)
 -   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
--   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
+-   [**Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
 > **Observação**    se você não estiver desenvolvendo um aplicativo UWP, use os componentes de interface do usuário fornecidos nas bibliotecas de JavaScript ou XAML específico e namespaces em vez de tipos fornecidos nesses namespaces.
 
@@ -70,7 +70,7 @@ Aqui estão os principais tipos de interface do usuário no Windows Runtime que 
 
 -   [**Windows.ApplicationModel.Core.CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)
 -   [**Windows.UI.Core.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)
--   [**Windows.UI.Core.CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)
+-   [**Coredispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)
 
 Você pode usar esses tipos para acessar a exibição do seu aplicativo, em especial, os bits que desenham os conteúdos da janela pai do aplicativo, e manipular os eventos disparados pela janela. O processo da janela do aplicativo é um *single-threaded apartment de aplicativo* (ASTA) que fica isolado e manipula todos retornos de chamadas.
 

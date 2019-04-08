@@ -49,7 +49,7 @@ Escolha o tipo correto de hiperlink com base em suas necessidades:
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/HyperlinkButton">abrir o aplicativo e ver o HyperlinkButton em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -156,7 +156,7 @@ Esta seção aplica-se apenas ao elemento de texto de hiperlink, não para o con
 
 Como um hiperlink não é um [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx), ele não tem o conjunto de eventos de entrada de elemento da interface do usuário, como Tapped, PointerPressed e assim por diante. Em vez disso, um hiperlink tem seu próprio evento Click, além do comportamento implícito do sistema que carrega qualquer URI especificado como o NavigateUri. O sistema manipula todas as ações de entrada que devem invocar as ações de hiperlink e aciona o evento Click em resposta.
 
-**Content**
+**Conteúdo**
 
 O hiperlink tem restrições sobre o conteúdo que podem existir na sua coleção [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). Especificamente, um hiperlink só permite [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) e outros tipos de [Span](/uwp/api/windows.ui.xaml.documents.span) que não são outro hiperlink. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) não pode estar na coleção Inlines de um hiperlink. Tentar adicionar conteúdo restrito gera uma exceção de argumento inválido ou uma exceção de análise XAML.
 
@@ -184,4 +184,4 @@ A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a
 
 **Para desenvolvedores (XAML)**
 - [Classe Windows.UI.Xaml.Documents.Hyperlink](https://msdn.microsoft.com/library/windows/apps/dn279356)
-- [Windows.UI.Xaml.Controls.HyperlinkButton class](https://msdn.microsoft.com/library/windows/apps/br242739)
+- [Classe Windows.UI.Xaml.Controls.HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/br242739)

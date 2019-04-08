@@ -157,7 +157,7 @@ Em geral, a melhor opção é a interface mais próxima do tipo. Por exemplo, pa
 <tr class="odd">
 <td align="left">WME1039</td>
 <td align="left"><p>Método '{0}'tem um parâmetro do tipo'{1}' na sua assinatura. Embora esse tipo genérico não seja um tipo de Tempo de Execução do Windows válido, o tipo ou os parâmetros genéricos implementam interfaces que são tipos de Tempo de Execução do Windows válidos. {2}</p>
-> **Observação**  para {2}, Winmdexp.exe acrescenta uma lista de alternativas, como "considere alterar o tipo ' Generic&lt;T&gt;' na assinatura do método a um dos seguintes tipos de em vez disso: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
+> **Observação**  para {2}, Winmdexp.exe acrescenta uma lista de alternativas, como "considere alterar o tipo ' Generic&lt;T&gt;' na assinatura do método a um dos seguintes tipos de em vez disso: "IList&lt;T&gt;, IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
 </td>
 </tr>
 <tr class="even">
@@ -250,5 +250,5 @@ O código JavaScript pode acessar os parâmetros de saída de um método por nom
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criando componentes de tempo de execução do Windows em c# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Criando componentes do Windows Runtime em C# ou Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
 * [Winmdexp.exe (ferramenta de exportação de metadados de tempo de execução do Windows)](https://msdn.microsoft.com/library/hh925576.aspx)

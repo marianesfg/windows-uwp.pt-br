@@ -15,7 +15,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57651171"
 ---
-# <a name="package-a-desktop-application-manually"></a>Empacotar um aplicativo de área de trabalho manualmente
+# <a name="package-a-desktop-application-manually"></a>Empacotar manualmente um aplicativo da área de trabalho
 
 Este tópico mostra como empacotar seu aplicativo sem usar ferramentas como o Visual Studio ou o Desktop App Converter (DAC).
 

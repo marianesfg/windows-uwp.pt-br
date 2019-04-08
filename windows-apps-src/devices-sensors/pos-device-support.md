@@ -25,45 +25,45 @@ ms.locfileid: "57663091"
 
 | Fabricante  | Modelo                          | Capacidade | Conexão    | Tipo         | Modo                      |
 |---------------|--------------------------------|------------|--------------|--------------|---------------------------|
-| Código          | Reader™ 950                    | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| Código          | Reader™ 1021                   | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| Código          | Reader™ 1421                   | 2D         | USB          | Handheld     | Scanner de POS HID           |
+| Código          | Reader™ 950                    | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| Código          | Reader™ 1021                   | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| Código          | Reader™ 1421                   | 2D         | USB          | Portátil     | Scanner de POS HID           |
 | Código          | Reader™ 5000                   | 2D         | USB          | Apresentação | Scanner de POS HID           |
 | Honeywell     | Gênese 7580g                  | 2D         | USB          | Apresentação | Scanner de POS HID           |
-| Honeywell     | Granit 198Xi                   | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| Honeywell     | Granit 191Xi                   | 2D         | USB          | Handheld     | Scanner de POS HID           |
+| Honeywell     | Granit 198Xi                   | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| Honeywell     | Granit 191Xi                   | 2D         | USB          | Portátil     | Scanner de POS HID           |
 | Honeywell     | N5680                          | 2D         | Interna     | Componente    | Scanner de POS HID           |
 | Honeywell     | N3680                          | 2D         | Interna     | Componente    | Scanner de POS HID           |
 | Honeywell     | Órbita 7190g                    | 2D         | USB          | Apresentação | Scanner de POS HID           |
 | Honeywell     | Stratos 2700                   | 2D         | USB          | No contador   | Scanner de POS HID           |
-| Honeywell     | Voyager 1200g                  | 1D         | USB          | Handheld     | Scanner de POS HID           |
-| Honeywell     | Voyager 1202g                  | 1D         | USB          | Handheld     | Scanner de POS HID           |
-| Honeywell     | Voyager 1202-bf                | 1D         | USB          | Handheld     | Scanner de POS HID           |
-| Honeywell     | Voyager 145Xg                  | 1D / 2D¹   | USB          | Handheld     | Scanner de POS HID           |
-| Honeywell     | Voyager 1602g                  | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| Honeywell     | Xenon 1900g                    | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| Honeywell     | Xenon 1902g                    | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| Honeywell     | Xenon 1902g-bf                 | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| Honeywell     | Xenon 1900h                    | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| Honeywell     | Xenon 1902h                    | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| HP            | Scanner de código de barras de valor (HR2150) | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| Intermec      | SG20                           | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| Soquete Mobile | CHS 7Ci                        | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Soquete Mobile | CHS 7Di                        | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Soquete Mobile | CHS 7Mi                        | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Soquete Mobile | CHS 7Pi                        | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Soquete Mobile | CHS 8Ci                        | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Soquete Mobile | DuraScan D700                  | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Soquete Mobile | DuraScan D730                  | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Soquete Mobile | DuraScan D740                  | 2D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Soquete Mobile | SocketScan S700                | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Soquete Mobile | SocketScan S730                | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Soquete Mobile | SocketScan S740                | 2D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Soquete Mobile | SocketScan S800                | 1D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Soquete Mobile | SocketScan S850                | 2D         | Bluetooth    | Handheld     | Perfil de porta serial (SPP) |
-| Zebra         | DS2208²                        | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| Zebra         | DS2278                         | 2D         | USB          | Handheld     | Scanner de POS HID           |
-| Zebra         | DS8108³                        | 2D         | USB          | Handheld     | Scanner de POS HID           |
+| Honeywell     | Voyager g 1200                  | 1D         | USB          | Portátil     | Scanner de POS HID           |
+| Honeywell     | Voyager 1202g                  | 1D         | USB          | Portátil     | Scanner de POS HID           |
+| Honeywell     | Voyager 1202-bf                | 1D         | USB          | Portátil     | Scanner de POS HID           |
+| Honeywell     | Voyager 145Xg                  | 1-D / 2D ¹   | USB          | Portátil     | Scanner de POS HID           |
+| Honeywell     | Voyager g 1602                  | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| Honeywell     | Xenônio 1900g                    | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| Honeywell     | Xenônio 1902g                    | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| Honeywell     | 1902g-bf xenônio                 | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| Honeywell     | Xenônio 1900h                    | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| Honeywell     | Xenônio 1902h                    | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| HP            | Scanner de código de barras de valor (HR2150) | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| Intermec      | SG20                           | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| Soquete Mobile | CHS 7Ci                        | 1D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Soquete Mobile | CHS 7Di                        | 1D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Soquete Mobile | CHS Mi 7                        | 1D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Soquete Mobile | CHS 7Pi                        | 1D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Soquete Mobile | CHS 8Ci                        | 1D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Soquete Mobile | DuraScan D700                  | 1D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Soquete Mobile | DuraScan D730                  | 1D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Soquete Mobile | DuraScan D740                  | 2D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Soquete Mobile | SocketScan S700                | 1D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Soquete Mobile | SocketScan S730                | 1D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Soquete Mobile | SocketScan S740                | 2D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Soquete Mobile | SocketScan S800                | 1D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Soquete Mobile | SocketScan S850                | 2D         | Bluetooth    | Portátil     | Perfil de porta serial (SPP) |
+| Zebra         | DS2208²                        | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| Zebra         | DS2278                         | 2D         | USB          | Portátil     | Scanner de POS HID           |
+| Zebra         | DS8108³                        | 2D         | USB          | Portátil     | Scanner de POS HID           |
 |
 
 
@@ -88,8 +88,8 @@ Firmware de mínimo ³ 016 (2018.01.18) necessário. Atualizável usando Zebra [
 | Honeywell      | CT50   | Windows Mobile   |
 | Honeywell      | D75e | Windows Mobile   |
 | Janam          | XT2      | Windows Mobile   |
-| Panasonic      | FZ-E1 | Windows Mobile   |
-| Panasonic      | FZ-F1 |Windows Mobile   |
+| Panasonic      | FZ E1 | Windows Mobile   |
+| Panasonic      | FZ F1 |Windows Mobile   |
 | PointMobile    | PM80 | Windows Mobile   |
 | Zebra          | TC700j | Windows Mobile   |
 | HP             | X3 elite jaquetas | Windows Mobile   |

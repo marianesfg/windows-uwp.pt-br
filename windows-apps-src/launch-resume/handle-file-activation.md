@@ -145,7 +145,7 @@ Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que v
 ### <a name="tasks"></a>Tarefas
 
 * [Iniciar o aplicativo padrão para um arquivo](launch-the-default-app-for-a-file.md)
-* [Manipular a ativação de URI](handle-uri-activation.md)
+* [Tratar a ativação do URI](handle-uri-activation.md)
 
 ### <a name="guidelines"></a>Diretrizes
 

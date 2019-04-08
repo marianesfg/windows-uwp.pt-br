@@ -25,19 +25,19 @@ A tabela de mapeamento ajudará quando você estiver trabalhando em um projeto U
 **Observação**  Windows 10 dá suporte a muito mais do que o .NET Framework que um aplicativo do Windows Phone Store. Por exemplo, o Windows 10 tem vários System. ServiceModel. \* namespaces, bem como Sockets, NetworkInformation e System.Net.
 Além disso, em um aplicativo do Windows 10, você será beneficiado com .NET Native, que uma tecnologia de compilação ahead of time que converte o MSIL em código executável nativo de máquina. Aplicativos .NET Native iniciam com mais rapidez, usam menos memória e bateria do que seus equivalentes MSIL.
 
-| Windows Phone Silverlight | Tempo de execução do Windows |
+| Windows Phone Silverlight | Tempo de execução do Windows |
 | ------------------------- | --------------- |
 | Publicidade | |
 | Classe **Microsoft.Advertising.Mobile.UI.AdControl** | Classe [AdControl](https://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx) |
 | Alarmes, lembretes e agentes de segundo plano | |
 | Classe **Microsoft.Phone.BackgroundAgent** | [**BackgroundTaskBuilder** ](https://msdn.microsoft.com/library/windows/apps/br224768) classe |
-| Namespace **Microsoft.Phone.Scheduler** | [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847) namespace |
+| Namespace **Microsoft.Phone.Scheduler** | [**Windows.ApplicationModel.Background** ](https://msdn.microsoft.com/library/windows/apps/br224847) namespace |
 | Classe **Microsoft.Phone.Scheduler.Alarm** | [**BackgroundTaskBuilder** ](https://msdn.microsoft.com/library/windows/apps/br224768) e [ **ToastNotificationManager** ](https://msdn.microsoft.com/library/windows/apps/br208642) classes |
 | Classes **Microsoft.Phone.Scheduler.PeriodicTask**, **ScheduledAction**, **ScheduledActionService**, **ScheduledTask** , **ScheduledTaskAgent** | [**BackgroundTaskBuilder** ](https://msdn.microsoft.com/library/windows/apps/br224768) classe |
 | Classe **Microsoft.Phone.Scheduler.Reminder** | [**BackgroundTaskBuilder** ](https://msdn.microsoft.com/library/windows/apps/br224768) e [ **ToastNotificationManager** ](https://msdn.microsoft.com/library/windows/apps/br208642) classes |
 | Classe **Microsoft.Phone.PictureDecoder** | [**{5&gt;{6&gt;BitmapDecoder&lt;6}&lt;5** ](https://msdn.microsoft.com/library/windows/apps/br226176) classe |
-| Namespace **Microsoft.Phone.BackgroundAudio** | [**Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) namespace |
-| Namespace **Microsoft.Phone.BackgroundTransfer** | [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) namespace |
+| Namespace **Microsoft.Phone.BackgroundAudio** | [**Windows.Media.Playback** ](https://msdn.microsoft.com/library/windows/apps/dn640562) namespace |
+| Namespace **Microsoft.Phone.BackgroundTransfer** | [**Windows.Networking.BackgroundTransfer** ](https://msdn.microsoft.com/library/windows/apps/br207242) namespace |
 | Modelo de aplicativo e ambiente | |
 | Classe **System.AppDomain** | Nenhuma equivalência direta. Veja as classes [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324), [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016) |
 | Classe **System.Environment** | Nenhuma equivalência direta |
@@ -47,7 +47,7 @@ Além disso, em um aplicativo do Windows 10, você será beneficiado com .NET Na
 | **Classes System.Threading.Thread**, **System.Threading.ThreadPool** | [**ThreadPool** ](https://msdn.microsoft.com/library/windows/apps/br229621) classe |
 | (ST = **System.Threading**) <br/> Método **ST.Thread.MemoryBarrier** | (ST = **System.Threading**) <br/> Método **ST.Interlocked.MemoryBarrier** |
 | (ST = **System.Threading**) <br/> Propriedade **ST.Thread.ManagedThreadId** | (S = **System**) <br/> Propriedade **S.Environment.ManagedThreadId** |
-| Classe **System.Threading.Timer** | [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/br230587) class |
+| Classe **System.Threading.Timer** | [**ThreadPoolTimer** ](https://msdn.microsoft.com/library/windows/apps/br230587) classe |
 | (SWT = **System.Windows.Threading**) <br/> Classe **SWT.Dispatcher** | [**CoreDispatcher** ](https://msdn.microsoft.com/library/windows/apps/br208211) classe |
 | (SWT = **System.Windows.Threading**) <br/> Classe **SWT.DispatcherTimer** | [**DispatcherTimer** ](https://msdn.microsoft.com/library/windows/apps/br244250) classe |
 | Blend for Visual Studio | |
@@ -66,12 +66,12 @@ Além disso, em um aplicativo do Windows 10, você será beneficiado com .NET Na
 | (MPU = **Microsoft.Phone.UserData**) <br/> Classe **MPU.Contacts** | [**ContactStore** ](https://msdn.microsoft.com/library/windows/apps/dn624859) classe |
 | Controles e infraestrutura de interface do usuário | |
 | Classe **ControlTiltEffect.TiltEffect** | As animações da biblioteca de animação do Windows Runtime são incorporadas os estilos padrão dos controles comuns. Consulte [Animação](wpsl-to-uwp-porting-xaml-and-ui.md). |
-| Namespace **Microsoft.Phone.Controls** | [**Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227716) namespace |
-| (MPC = **Microsoft.Phone.Controls**) <br/> Classe **MPC.ContextMenu** | [**PopupMenu**](https://msdn.microsoft.com/library/windows/apps/br208693) class |
+| Namespace **Microsoft.Phone.Controls** | [**Windows** ](https://msdn.microsoft.com/library/windows/apps/br227716) namespace |
+| (MPC = **Microsoft.Phone.Controls**) <br/> Classe **MPC.ContextMenu** | [**PopupMenu** ](https://msdn.microsoft.com/library/windows/apps/br208693) classe |
 | (MPC = **Microsoft.Phone.Controls**) <br/>Classe **MPC.DatePickerPage** | [**DatePickerFlyout** ](https://msdn.microsoft.com/library/windows/apps/dn625013) classe |
 | (MPC = **Microsoft.Phone.Controls**) <br/>Classe **MPC.GestureListener** | [**GestureRecognizer** ](https://msdn.microsoft.com/library/windows/apps/br241937) classe |
 | (MPC = **Microsoft.Phone.Controls**) <br/>Classe **MPC.LongListSelector** | [**SemanticZoom** ](https://msdn.microsoft.com/library/windows/apps/hh702601) classe |
-| (MPC = **Microsoft.Phone.Controls**) <br/>Classe **MPC.ObscuredEventArgs** | [**SystemProtection**](https://msdn.microsoft.com/library/windows/apps/jj585394), [**WindowActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208377) classes |
+| (MPC = **Microsoft.Phone.Controls**) <br/>Classe **MPC.ObscuredEventArgs** | [**SystemProtection**](https://msdn.microsoft.com/library/windows/apps/jj585394), [ **WindowActivatedEventArgs** ](https://msdn.microsoft.com/library/windows/apps/br208377) classes |
 | (MPC = **Microsoft.Phone.Controls**) <br/>Classe **MPC.Panorama** | [**Hub** ](https://msdn.microsoft.com/library/windows/apps/dn251843) classe |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.PhoneApplicationFrame**,<br/>(SWN = **System.Windows.Navigation**) <br/>Classes **SWN.NavigationService** | [**Quadro** ](https://msdn.microsoft.com/library/windows/apps/br242682) classe |
 | (MPC = **Microsoft.Phone.Controls**) <br/>Classe **MPC.PhoneApplicationPage** | [**Página** ](https://msdn.microsoft.com/library/windows/apps/br227503) classe |
@@ -86,19 +86,19 @@ Além disso, em um aplicativo do Windows 10, você será beneficiado com .NET Na
 | (MPI = **Microsoft.Phone.Info**) <br/>Classes **MPI.DeviceExtendedProperties**, **DeviceStatus** | [**EasClientDeviceInformation**](https://msdn.microsoft.com/library/windows/apps/hh701390), [ **MemoryManager** ](https://msdn.microsoft.com/library/windows/apps/dn633831) classes. Para obter mais detalhes, consulte [Status do dispositivo](wpsl-to-uwp-input-and-sensors.md). |
 | (MPI = **Microsoft.Phone.Info**) <br/>Classe **MPI.MediaCapabilities** | Nenhuma equivalência direta |
 | (MPI = **Microsoft.Phone.Info**) <br/>Classe **MPI.UserExtendedProperties** | [**AdvertisingManager** ](https://msdn.microsoft.com/library/windows/apps/dn363391) classe |
-| Namespace **System.Windows** | [**Windows.UI.Xaml**](https://msdn.microsoft.com/library/windows/apps/br209045) namespace |
-| Namespace **System.Windows.Automation** | [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/br209179) namespace |
-| Namespaces **System.Windows.Controls**, **System.Windows.Input** | [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227716) namespaces |
+| Namespace **System.Windows** | [**Windows.UI.Xaml** ](https://msdn.microsoft.com/library/windows/apps/br209045) namespace |
+| Namespace **System.Windows.Automation** | [**Windows.UI.Xaml.Automation** ](https://msdn.microsoft.com/library/windows/apps/br209179) namespace |
+| Namespaces **System.Windows.Controls**, **System.Windows.Input** | [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [ **Windows** ](https://msdn.microsoft.com/library/windows/apps/br227716) namespaces |
 | Classes **System.Windows.Controls.DrawingSurface**, **DrawingSurfaceBackgroundGrid** | [**SwapChainPanel** ](https://msdn.microsoft.com/library/windows/apps/dn252834) classe |
 | Classe **System.Windows.Controls.RichTextBox** | [**RichEditBox** ](https://msdn.microsoft.com/library/windows/apps/br227548) classe |
 | Classe **System.Windows.Controls.WrapPanel** | Não há equivalente direto para fins de layout geral. [**ItemsWrapGrid** ](https://msdn.microsoft.com/library/windows/apps/dn298849) e [ **WrapGrid** ](https://msdn.microsoft.com/library/windows/apps/br227717) podem ser usados no modelo de painel de itens de um controle de itens. |
-| Namespace **System.Windows.Controls.Primitives** | [**Windows.UI.Xaml.Controls.Primitives**](https://msdn.microsoft.com/library/windows/apps/br209818) namespace |
-| Namespace **System.Windows.Controls.Shapes** | [**Windows.UI.Xaml.Controls.Shapes**](/uwp/api/Windows.UI.Xaml.Shapes) namespace |
-| Namespace **System.Windows.Data** | [**Windows.UI.Xaml.Data**](https://msdn.microsoft.com/library/windows/apps/br209917) namespace |
-| Namespace **System.Windows.Documents** | [**Windows.UI.Xaml.Documents**](https://msdn.microsoft.com/library/windows/apps/br209984) namespace |
+| Namespace **System.Windows.Controls.Primitives** | [**Primitives** ](https://msdn.microsoft.com/library/windows/apps/br209818) namespace |
+| Namespace **System.Windows.Controls.Shapes** | [**Windows.UI.Xaml.Controls.Shapes** ](/uwp/api/Windows.UI.Xaml.Shapes) namespace |
+| Namespace **System.Windows.Data** | [**Windows.UI.Xaml.Data** ](https://msdn.microsoft.com/library/windows/apps/br209917) namespace |
+| Namespace **System.Windows.Documents** | [**Windows.UI.Xaml.Documents** ](https://msdn.microsoft.com/library/windows/apps/br209984) namespace |
 | Namespace **System.Windows.Ink** | Nenhuma equivalência direta |
-| Namespace **System.Windows.Markup** | [**Windows.UI.Xaml.Markup**](https://msdn.microsoft.com/library/windows/apps/br228046) namespace | 
-| Namespace **System.Windows.Navigation** | [**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300) namespace |
+| Namespace **System.Windows.Markup** | [**Windows.UI.Xaml.Markup** ](https://msdn.microsoft.com/library/windows/apps/br228046) namespace | 
+| Namespace **System.Windows.Navigation** | [**Windows.UI.Xaml.Navigation** ](https://msdn.microsoft.com/library/windows/apps/br243300) namespace |
 | Evento **System.Windows.UIElement.Tap**, **EventHandler&lt;GestureEventArgs&gt;** delegado | [**Tocado** ](https://msdn.microsoft.com/library/windows/apps/br208985) evento [ **TappedEventHandler** ](https://msdn.microsoft.com/library/windows/apps/br227993) delegar |
 | Dados e serviços |  |
 | Classe **System.Data.Linq.DataContext** | Nenhuma equivalência direta |
@@ -124,20 +124,20 @@ Além disso, em um aplicativo do Windows 10, você será beneficiado com .NET Na
 | **XNA. \***  namespaces, [biblioteca de classes do XNA Framework](https://go.microsoft.com/fwlink/p/?LinkId=263769), [biblioteca de classe do Pipeline de conteúdo](https://go.microsoft.com/fwlink/p/?LinkId=263770) | Nenhuma equivalência direta. Em geral, use [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) com C++. Consulte [Desenvolvendo jogos](https://msdn.microsoft.com/library/windows/apps/hh452744) e [Interoperabilidade entre DirectX e XAML](https://msdn.microsoft.com/library/windows/apps/hh825871). |
 | Classe **Microsoft.Xna.Framework.Audio.Microphone** | [**MediaCapture** ](https://msdn.microsoft.com/library/windows/apps/br241124) classe |
 | Classe **Microsoft.Xna.Framework.Audio.SoundEffect** | [**MediaElement** ](https://msdn.microsoft.com/library/windows/apps/br242926) classe |
-| Namespace **Microsoft.Xna.Framework.GamerServices** | (WPS = **Windows.Phone.System**) <br/> [**WPS.UserProfile.GameServices.Core**](https://msdn.microsoft.com/library/windows/apps/jj207609) namespace |
+| Namespace **Microsoft.Xna.Framework.GamerServices** | (WPS = **Windows.Phone.System**) <br/> [**WPS. UserProfile.GameServices.Core** ](https://msdn.microsoft.com/library/windows/apps/jj207609) namespace |
 | Classe **Microsoft.Xna.Framework.GamerServices.Guide** | Nenhuma equivalência direta |
 | Classe **Microsoft.Xna.Framework.Input.GamePad** | [**HardwareButtons** ](https://msdn.microsoft.com/library/windows/apps/jj207557) classe |
 | Classe **Microsoft.Xna.Framework.Input.Touch.TouchPanel** | [**GestureRecognizer** ](https://msdn.microsoft.com/library/windows/apps/br241937) classe |
 | (MXFM = **Microsoft.Xna.Framework.Media**) <br/> Classes **MXFM.MediaLibrary**, **MXFM.PhoneExtensions.MediaLibraryExtensions** | [**KnownFolders** ](https://msdn.microsoft.com/library/windows/apps/br227151) classe |
 | Classe **Microsoft.Xna.Framework.Media.MediaQueue** | [**SystemMediaTransportControls** ](https://msdn.microsoft.com/library/windows/apps/dn278677) classe |
 | Classe **Microsoft.Xna.Framework.Media.Playlist** | [**BackgroundMediaPlayer** ](https://msdn.microsoft.com/library/windows/apps/dn652527) classe |
-| Namespace **System.Windows.Media** | [**Windows.UI.Xaml.Media**](/uwp/api/Windows.UI.Xaml.Media) namespace |
+| Namespace **System.Windows.Media** | [**UI** ](/uwp/api/Windows.UI.Xaml.Media) namespace |
 | Classe **System.Windows.Media.RadialGradientBrush** | Nenhuma equivalência direta. Consulte [Mídia e elementos gráficos](wpsl-to-uwp-porting-xaml-and-ui.md). |
-| Namespace **System.Windows.Media.Animation** | [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/br243232) namespace |
+| Namespace **System.Windows.Media.Animation** | [**Animation** ](https://msdn.microsoft.com/library/windows/apps/br243232) namespace |
 | Namespace **System.Windows.Media.Effects** | Nenhuma equivalência direta |
-| Namespace **System.Windows.Media.Imaging** | [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) namespace |
-| Namespace **System.Windows.Media.Media3D** | [**Windows.UI.Xaml.Media.Media3D**](https://msdn.microsoft.com/library/windows/apps/br243274) namespace |
-| Namespace **System.Windows.Shapes** | [**Windows.UI.Xaml.Shapes**](/uwp/api/Windows.UI.Xaml.Shapes) namespace |
+| Namespace **System.Windows.Media.Imaging** | [**Imaging** ](https://msdn.microsoft.com/library/windows/apps/br243258) namespace |
+| Namespace **System.Windows.Media.Media3D** | [**Windows.UI.Xaml.Media.Media3D** ](https://msdn.microsoft.com/library/windows/apps/br243274) namespace |
+| Namespace **System.Windows.Shapes** | [**Windows.UI.Xaml.Shapes** ](/uwp/api/Windows.UI.Xaml.Shapes) namespace |
 | Iniciadores e seletores | |
 | Classes **Microsoft.Phone.Tasks.AddressChooserTask**, **EmailAddressChooserTask**, **PhoneNumberChooserTask** | [**ContactPicker** ](https://msdn.microsoft.com/library/windows/apps/br224913) classe |
 | Classes **Microsoft.Phone.Tasks.AddWalletItemTask**, **AddWalletItemResult** | [**Windows.ApplicationModel.Wallet** ](https://msdn.microsoft.com/library/windows/apps/dn631399) namespace |
@@ -155,19 +155,19 @@ Além disso, em um aplicativo do Windows 10, você será beneficiado com .NET Na
 | Classe **Microsoft.Phone.Tasks.SaveRingtoneTask** | Nenhuma equivalência direta |
 | Classes **Microsoft.Phone.Tasks.ShareLinkTask**, **ShareMediaTask**, **ShareStatusTask** | [**DataPackage** ](https://msdn.microsoft.com/library/windows/apps/br205873) classe |
 | Location | |
-| Namespace **System.Device.Location** | [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603) namespace |
+| Namespace **System.Device.Location** | [**Windows.Devices.Geolocation** ](https://msdn.microsoft.com/library/windows/apps/br225603) namespace |
 | Classe **System.Device.GeoCoordinateWatcher** | [**Geolocator** ](https://msdn.microsoft.com/library/windows/apps/br225534) classe |
 | Mapas | |
-| Namespaces **Microsoft.Phone.Maps** | [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) namespace |
-| Namespace **Microsoft.Phone.Maps.Controls** | [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/library/windows/apps/dn610751) namespace |
+| Namespaces **Microsoft.Phone.Maps** | [**Windows.Services.Maps** ](https://msdn.microsoft.com/library/windows/apps/dn636979) namespace |
+| Namespace **Microsoft.Phone.Maps.Controls** | [**Windows.UI.Xaml.Controls.Maps** ](https://msdn.microsoft.com/library/windows/apps/dn610751) namespace |
 | Classe **Microsoft.Phone.Maps.Controls.Map** | [**MapControl** ](https://msdn.microsoft.com/library/windows/apps/dn637004) classe |
-| Namespace **Microsoft.Phone.Maps.Services** | [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) namespace |
-| Classes **Microsoft.Phone.Maps.Services.GeocodeQuery**, **ReverseGeocodeQuery** | [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) class |
+| Namespace **Microsoft.Phone.Maps.Services** | [**Windows.Services.Maps** ](https://msdn.microsoft.com/library/windows/apps/dn636979) namespace |
+| Classes **Microsoft.Phone.Maps.Services.GeocodeQuery**, **ReverseGeocodeQuery** | [**MapLocationFinder** ](https://msdn.microsoft.com/library/windows/apps/dn627550) classe |
 | Classe **System.Device.Location.GeoCoordinate** | [**Geopoint** ](https://msdn.microsoft.com/library/windows/apps/dn263675) classe |
 | Classe **Microsoft.Phone.Maps.Services.Route** | [**MapRoute** ](https://msdn.microsoft.com/library/windows/apps/dn636937) classe |
-| Classe **Microsoft.Phone.Maps.Services.RouteQuery** | [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) class |
+| Classe **Microsoft.Phone.Maps.Services.RouteQuery** | [**MapRouteFinder** ](https://msdn.microsoft.com/library/windows/apps/dn636938) classe |
 | Monetização | |
-| Namespace **Microsoft.Phone.Marketplace** | [**Windows.ApplicationModel.Store**](https://msdn.microsoft.com/library/windows/apps/br225197) namespace |
+| Namespace **Microsoft.Phone.Marketplace** | [**Windows.ApplicationModel.Store** ](https://msdn.microsoft.com/library/windows/apps/br225197) namespace |
 | Media | |
 | Namespace **Microsoft.Phone.Media** | [**MediaElement** ](https://msdn.microsoft.com/library/windows/apps/br242926) classe |
 | Rede | |
@@ -197,13 +197,13 @@ Além disso, em um aplicativo do Windows 10, você será beneficiado com .NET Na
 | (SN = **System.Net**) <br/> Classe **SN.WriteStreamClosedEventHandler** | [**HttpClient** ](https://msdn.microsoft.com/library/windows/apps/dn298639) classe (ou [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx)) |
 | Classe **System.UriFormatException** | Classe **System.FormatException** |
 | Notificações | |
-| Namespace MPN = **Microsoft.Phone.Notification** | [**Windows.UI.Notifications**](https://msdn.microsoft.com/library/windows/apps/br208661), [**Windows.Networking.PushNotifications**](https://msdn.microsoft.com/library/windows/apps/br241307) namespaces |
+| Namespace MPN = **Microsoft.Phone.Notification** | [**Windows**](https://msdn.microsoft.com/library/windows/apps/br208661), [ **Windows.Networking.PushNotifications** ](https://msdn.microsoft.com/library/windows/apps/br241307) namespaces |
 | MPN = **Microsoft.Phone.Notification** <br/> Classe **MPN.HttpNotification** | [**TileNotification** ](https://msdn.microsoft.com/library/windows/apps/br208616) classe |
 | MPN = **Microsoft.Phone.Notification** <br/> Classe **MPN.HttpNotificationChannel** | [**PushNotificationChannel** ](https://msdn.microsoft.com/library/windows/apps/br241283) classe |
 | Programação | |
-| Namespace **System** | [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021) namespace |
+| Namespace **System** | [**Foundation** ](https://msdn.microsoft.com/library/windows/apps/br226021) namespace |
 | Classes **System.Diagnostics.StackFrame**, **StackTrace** | Nenhuma equivalência direta |
-| Namespace **System.Diagnostics** | [**Windows.Foundation.Diagnostics**](https://msdn.microsoft.com/library/windows/apps/br206677) namespace |
+| Namespace **System.Diagnostics** | [**Windows** ](https://msdn.microsoft.com/library/windows/apps/br206677) namespace |
 | Interface **System.ICloneable** | Um método personalizado que retorna o tipo adequado. |
 | Classe **System.Reflection.Emit.ILGenerator** | Nenhuma equivalência direta |
 | Extensões reativas | |
@@ -214,7 +214,7 @@ Além disso, em um aplicativo do Windows 10, você será beneficiado com .NET Na
 | Classe **System.Resources.ResourceManager** | (WA = **Windows.ApplicationModel**)<br/>[**WA. Resources.Core** ](https://msdn.microsoft.com/library/windows/apps/br225039) e [ **WA. Recursos** ](https://msdn.microsoft.com/library/windows/apps/br206022) namespaces, [ **ResourceManager** ](https://msdn.microsoft.com/library/windows/apps/br206078) classe. Consulte [Criando e recuperando recursos em aplicativos do Windows Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh694557.aspx). |
 | Elemento seguro | |
 | (MPS = **Microsoft.Phone.SecureElement**) <br/> Classes **MPS.SecureElementChannel**, **MPS.SecureElementSession** | [**SmartCardConnection** ](https://msdn.microsoft.com/library/windows/apps/dn608002) classe |
-| (MPS = **Microsoft.Phone.SecureElement**) <br/> Classe **MPS.SecureElementReader** | [**SmartCardReader**](https://msdn.microsoft.com/library/windows/apps/dn263857) class |
+| (MPS = **Microsoft.Phone.SecureElement**) <br/> Classe **MPS.SecureElementReader** | [**Leitora de cartão inteligente** ](https://msdn.microsoft.com/library/windows/apps/dn263857) classe |
 | Segurança | |
 | (SSC = **System.Security.Cryptography**) <br/> Classes **SSC.Aes**, **SSC.RSA** | [**CryptographicEngine** ](https://msdn.microsoft.com/library/windows/apps/br241490) classe |
 | (SSC = **System.Security.Cryptography**) <br/> Classes **SSC.HMACSHA256**, **SSC.SHA256** | [**HashAlgorithmProvider** ](https://msdn.microsoft.com/library/windows/apps/br241511) classe |
@@ -226,7 +226,7 @@ Além disso, em um aplicativo do Windows 10, você será beneficiado com .NET Na
 | (MPSh = **Microsoft.Phone.Shell**) <br/> Classe **MPSh.ApplicationBarIconButton** | [**AppBarButton** ](https://msdn.microsoft.com/library/windows/apps/dn279244) classe (quando usado dentro de [ **PrimaryCommands** ](https://msdn.microsoft.com/library/windows/apps/dn279430) propriedade) |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> Classe **MPSh.ApplicationBarMenuItem** | [**AppBarButton** ](https://msdn.microsoft.com/library/windows/apps/dn279244) classe (quando usado dentro de [ **SecondaryCommands** ](https://msdn.microsoft.com/library/windows/apps/dn279434) propriedade) |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> Classes **MPSh.CycleTileData**, **MPSh.FlipTileData**, **MPSh.IconicTileData**, **MPSh.ShellTileData**, **MPSh.StandardTileData** | [**TileTemplateType** ](https://msdn.microsoft.com/library/windows/apps/br208621) classe |
-| (MPSh = **Microsoft.Phone.Shell**) <br/> Classe **MPSh.PhoneApplicationService** | [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016), [**DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/br241816) classes |
+| (MPSh = **Microsoft.Phone.Shell**) <br/> Classe **MPSh.PhoneApplicationService** | [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016), [ **DisplayRequest** ](https://msdn.microsoft.com/library/windows/apps/br241816) classes |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> Classe **MPSh.ProgressIndicator** | [**StatusBarProgressIndicator** ](https://msdn.microsoft.com/library/windows/apps/dn633865) classe |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> Classe **MPSh.ShellTile** | [**SecondaryTile** ](https://msdn.microsoft.com/library/windows/apps/br242183) classe |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> Classe **MPSh.ShellTileSchedule** | [**TileUpdater** ](https://msdn.microsoft.com/library/windows/apps/br208628) classe |
@@ -234,7 +234,7 @@ Além disso, em um aplicativo do Windows 10, você será beneficiado com .NET Na
 | (MPSh = **Microsoft.Phone.Shell**) <br/> Classe **MPSh.SystemTray** | [**StatusBar** ](https://msdn.microsoft.com/library/windows/apps/dn633864) classe |
 | Armazenamento e E/S | |
 | Classes **Microsoft.Phone.Storage.ExternalStorage**, **ExternalStorageDevice**, **ExternalStorageFile**, **ExternalStorageFolder** | [**KnownFolders** ](https://msdn.microsoft.com/library/windows/apps/br227151) classe |
-| Namespace **System.IO** | [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346), [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/br241791) namespaces |
+| Namespace **System.IO** | [**Storage**](https://msdn.microsoft.com/library/windows/apps/br227346), [ **Windows.Storage.Streams** ](https://msdn.microsoft.com/library/windows/apps/br241791) namespaces |
 | Classe **System.IO.Directory** | [**StorageFolder** ](https://msdn.microsoft.com/library/windows/apps/br227230) classe |
 | Classe **System.IO.File** | [**StorageFile** ](https://msdn.microsoft.com/library/windows/apps/br227171) e [ **PathIO** ](https://msdn.microsoft.com/library/windows/apps/hh701663) classes
 | (SII = **System.IO.IsolatedStorage**) <br/> Classe **SII.IsolatedStorageFile** |[**ApplicationData.LocalFolder** ](https://msdn.microsoft.com/library/windows/apps/br241621) propriedade |

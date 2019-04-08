@@ -100,7 +100,7 @@ Esta tabela lista os possíveis valores do [**IsChecked**](https://msdn.microsof
 | Valor **IsChecked** | Estado da **CheckBox** | Aparência da **CheckBox** |
 | **true**            | `Checked`          | Contém um "X".        |
 | **false**           | `Unchecked`        | Vazio.                  |
-| **null**            | `Indeterminate`    | Contém um círculo.      |
+| **NULL**            | `Indeterminate`    | Contém um círculo.      |
 
 
 Você especifica a aparência de um controle quando ele está em um determinado estado usando os objetos [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007). Um **VisualState** contém um [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) ou [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br243053) que muda a aparência dos elementos no [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). Quando o controle entra no estado que a propriedade [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031) especifica, as alterações de propriedade no **Setter** ou [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490) são aplicadas. Quando o controle sai do estado, as alterações são removidas. Adicione objetos **VisualState** aos objetos [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014). Adicione objetos **VisualStateGroup** à propriedade [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) anexada, a qual você definiu na raiz do [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) do **ControlTemplate**.

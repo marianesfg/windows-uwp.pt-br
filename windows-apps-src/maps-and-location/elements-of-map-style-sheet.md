@@ -63,32 +63,32 @@ Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da e
 |------------------------------|---------------------------|------|------|------|------|----------------|
 | version                      | [Version](#version)       |  ✔   |  ✔   |  ✔   |  ✔   | A versão de folha de estilos que você deseja usar. |
 | configurações                     | [Configurações](#settings)     |  ✔   |  ✔   |  ✔   |  ✔   | As configurações que se aplicam à folha de estilos inteira. |
-| mapElement                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | A entrada pai para todas as entradas do mapa. |
-| > baseMapElement             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | A entrada pai para todas as entradas que não foram feitas por usuário. |
-| >> area                      | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Usam áreas que descreve a Terra.  Eles não devem para ser confundido com os prédios físicos que estão sob a entrada de estrutura. |
-| >>> airport                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam aeroportos. |
-| >>> areaOfInterest           | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Áreas em que há uma alta concentração de empresas ou pontos de interessante. |
-| >>> cemetery                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam cemeteries. |
-| >>> continent                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rótulos de área continente. |
-| >>> education                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam escolas e outros recursos educacionais. |
-| >>> indigenousPeoplesReserve | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Reserva de áreas que englobam peoples nativos. |
-| >>> industrial               | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Áreas que são usadas para fins de industriais. |
-| >>> island                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rótulos de área de ilha. |
-| >>> medical                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que são usadas para fins de médicos (por exemplo: um campus hospital). |
-| >>> military                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abrangem a militares bases ou tem a militares usa. |
-| >>> nautical                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que são usadas para fins relacionados náuticos. |
-| >>> neighborhood             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rótulos de área de vizinhança. |
-| >>> runway                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que é usado como uma pista de avião. |
-| >>> sand                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas arenosas, como praias. |
-| >>> shoppingCenter           | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas de chão alocadas para shopping centers ou outros centros comerciais. |
-| >>> stadium                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam Estádio. |
-| >>> underground              | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Áreas subterrâneas (por exemplo: um volume de estação de metrô). |
-| >>> vegetation               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Florestas, áreas gramadas etc. |
-| >>>> forest                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas de floresta. |
-| >>>> golfCourse              | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam Golfe cursos. |
-| >>>> park                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam parques. |
-| >>>> playingField            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Campos extraídos, como um campo de baseball ou uma quadra de tênis. |
-| >>>> reserve                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam a natureza de reserva. |
+| mapElement                   | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | A entrada pai para todas as entradas do mapa. |
+| > baseMapElement             | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | A entrada pai para todas as entradas que não foram feitas por usuário. |
+| >> area                      | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Usam áreas que descreve a Terra.  Eles não devem para ser confundido com os prédios físicos que estão sob a entrada de estrutura. |
+| >>> airport                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam aeroportos. |
+| >>> areaOfInterest           | [mapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Áreas em que há uma alta concentração de empresas ou pontos de interessante. |
+| >>> cemetery                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam cemeteries. |
+| >>> continent                | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rótulos de área continente. |
+| >>> education                | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam escolas e outros recursos educacionais. |
+| >>> indigenousPeoplesReserve | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Reserva de áreas que englobam peoples nativos. |
+| >>> industrial               | [mapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Áreas que são usadas para fins de industriais. |
+| >>> island                   | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rótulos de área de ilha. |
+| >>> medical                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que são usadas para fins de médicos (por exemplo: um campus hospital). |
+| >>> military                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abrangem a militares bases ou tem a militares usa. |
+| >>> nautical                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que são usadas para fins relacionados náuticos. |
+| >>> neighborhood             | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rótulos de área de vizinhança. |
+| >>> runway                   | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que é usado como uma pista de avião. |
+| >>> sand                     | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas arenosas, como praias. |
+| >>> shoppingCenter           | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas de chão alocadas para shopping centers ou outros centros comerciais. |
+| >>> stadium                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam Estádio. |
+| >>> underground              | [mapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Áreas subterrâneas (por exemplo: um volume de estação de metrô). |
+| >>> vegetation               | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Florestas, áreas gramadas etc. |
+| >>>> forest                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas de floresta. |
+| >>>> golfCourse              | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam Golfe cursos. |
+| >>>> park                    | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam parques. |
+| >>>> playingField            | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Campos extraídos, como um campo de baseball ou uma quadra de tênis. |
+| >>>> reserve                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que englobam a natureza de reserva. |
 | >> point                     | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Todos os recursos de ponto são desenhados com um ícone de algum tipo. |
 | >>> address                  | [PointStyle](#pointstyle) |      |      |  ✔   |  ✔   | Rótulos de números de endereço. |
 | >>> naturalPoint             | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Ícones que representam recursos naturais. |
@@ -117,36 +117,36 @@ Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da e
 | >>> countryRegion            | [BorderedMapElement](#borderedmapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bordas de região de país e rótulos. |
 | >>> adminDistrict            | [BorderedMapElement](#borderedmapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Admin1, estados, províncias, etc., bordas e rótulos. |
 | >>> district                 | [BorderedMapElement](#borderedmapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Admin2, municípios, etc., bordas e rótulos. |
-| >> structure                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Edifícios e outras estruturas de construção semelhantes. |
-| >>> building                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Prédios. |
-| >>>> educationBuilding       | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Usado para educação de prédios. |
-| >>>> medicalBuilding         | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Usado para fins de médicos, como hospitais de prédios. |
-| >>>> transitBuilding         | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Usado para o trânsito, como aeroportos de prédios. |
-| >> transportation            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que fazem parte da rede de transporte (por exemplo: rodovias, trens e barcas). |
-| >>> road                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam todas as estradas. |
-| >>>> controlledAccessHighway | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam rodovias grande acesso controlado. |
-| >>>>> highSpeedRamp          | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam Rampas de alta velocidade que normalmente se conectam ao controlado rodovias de acesso. |
-| >>>> highway                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam vias expressas. |
-| >>>> majorRoad               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam as principais estradas. |
-| >>>> arterialRoad            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam arterial estradas. |
-| >>>> street                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam ruas. |
-| >>>>> ramp                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam Rampas que normalmente se conectam ao vias expressas. |
-| >>>>> unpavedStreet          | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam ruas unpaved. |
-| >>>> tollRoad                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam as estradas que custam dinheiro para usar. |
-| >>> railway                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas de estrada de ferro. |
-| >>> trail                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Percorrendo trilhas em parques ou fazendo caminhadas. |
-| >>> rolante                  | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Rolante com privilégios elevados. |
-| >>> waterRoute               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas de rota de barcas |
-| >> water                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Qualquer coisa que se parece com água. Isso inclui oceanos e rios. |
-| >>> river                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rios, córregos ou outras passagens de água.  Observe que isso pode ser uma linha ou um polígono e pode se conectar a corpos de água diferentes de rios. |
-| > routeMapElement            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Todas as entradas relacionadas roteamentos. |
-| >> routeLine                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rotear linha as entradas relacionadas. |
-| >>> drivingRoute             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam rotas de condução. |
-| >>> scenicRoute              | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Linhas que representam rotas scenic de condução. |
-| >>> walkingRoute             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam a movimentação de rotas. |
-| > userMapElement             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Todas as entradas do usuário. |
-| >> userBillboard             | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | O estilo das instâncias padrão de [MapBillboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard). |
-| >> userLine                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | O estilo das instâncias padrão de [MapPolyline](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mappolyline). |
+| >> structure                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Edifícios e outras estruturas de construção semelhantes. |
+| >>> building                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Prédios. |
+| >>>> educationBuilding       | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Usado para educação de prédios. |
+| >>>> medicalBuilding         | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Usado para fins de médicos, como hospitais de prédios. |
+| >>>> transitBuilding         | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Usado para o trânsito, como aeroportos de prédios. |
+| >> transportation            | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que fazem parte da rede de transporte (por exemplo: rodovias, trens e barcas). |
+| >>> road                     | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam todas as estradas. |
+| >>>> controlledAccessHighway | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam rodovias grande acesso controlado. |
+| >>>>> highSpeedRamp          | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam Rampas de alta velocidade que normalmente se conectam ao controlado rodovias de acesso. |
+| >>>> highway                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam vias expressas. |
+| >>>> majorRoad               | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam as principais estradas. |
+| >>>> arterialRoad            | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam arterial estradas. |
+| >>>> street                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam ruas. |
+| >>>>> ramp                   | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam Rampas que normalmente se conectam ao vias expressas. |
+| >>>>> unpavedStreet          | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam ruas unpaved. |
+| >>>> tollRoad                | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam as estradas que custam dinheiro para usar. |
+| >>> railway                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas de estrada de ferro. |
+| >>> trail                    | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Percorrendo trilhas em parques ou fazendo caminhadas. |
+| >>> rolante                  | [mapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Rolante com privilégios elevados. |
+| >>> waterRoute               | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas de rota de barcas |
+| >> water                     | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Qualquer coisa que se parece com água. Isso inclui oceanos e rios. |
+| >>> river                    | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rios, córregos ou outras passagens de água.  Observe que isso pode ser uma linha ou um polígono e pode se conectar a corpos de água diferentes de rios. |
+| > routeMapElement            | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Todas as entradas relacionadas roteamentos. |
+| >> routeLine                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rotear linha as entradas relacionadas. |
+| >>> drivingRoute             | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam rotas de condução. |
+| >>> scenicRoute              | [mapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Linhas que representam rotas scenic de condução. |
+| >>> walkingRoute             | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam a movimentação de rotas. |
+| > userMapElement             | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Todas as entradas do usuário. |
+| >> userBillboard             | [mapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | O estilo das instâncias padrão de [MapBillboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard). |
+| >> userLine                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | O estilo das instâncias padrão de [MapPolyline](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mappolyline). |
 | >> userModel3D               | [MapElement3D](#mapelement3d) |      |  ✔   |  ✔   |  ✔   | O estilo das instâncias padrão de [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d).  Isso acontece principalmente para configurar renderAsSurface. |
 | >> userPoint                 | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | O estilo das instâncias padrão de [MapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapicon). |
 

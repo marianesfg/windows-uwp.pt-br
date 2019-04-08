@@ -26,9 +26,9 @@ Um sombreador de computação é um estágio de sombreador programável por [HLS
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de computação](compute-pipeline.md)
+[Computar o pipeline](compute-pipeline.md)
 
-[Pipeline de gráficos](graphics-pipeline.md)
+[Pipeline de elementos gráficos](graphics-pipeline.md)
 
  
 

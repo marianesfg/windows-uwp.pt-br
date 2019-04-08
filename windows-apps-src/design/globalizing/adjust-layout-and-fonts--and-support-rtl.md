@@ -124,6 +124,6 @@ Em vez de uma única linha de código para todos os idiomas, isso depende do tra
 * [LanguageFont](/uwp/api/Windows.Globalization.Fonts.LanguageFont?branch=live)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Localizar cadeias de caracteres em seu manifesto de pacote da interface do usuário e aplicativo](../../app-resources/localize-strings-ui-manifest.md)
+* [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](../../app-resources/localize-strings-ui-manifest.md)
 * [Personalize seus recursos de idioma, escala e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [Entender os idiomas de perfil do usuário e linguagens de manifesto do aplicativo](manage-language-and-region.md)

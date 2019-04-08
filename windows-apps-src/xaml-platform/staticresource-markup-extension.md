@@ -82,7 +82,7 @@ Como uma chave de recurso existe como parte de qualquer uso de **{StaticResource
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Referências de recurso de ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
-* [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
+* [**Dicionário de recurso**](https://msdn.microsoft.com/library/windows/apps/br208794)
 * [atributo X:Key](x-key-attribute.md)
 * [Extensão de marcação {ThemeResource}](themeresource-markup-extension.md)
 

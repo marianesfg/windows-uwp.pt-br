@@ -37,13 +37,13 @@ Além de aplicativos UWP, Windows 10 no ARM também pode executar seu x86 Win32 
 ## <a name="in-this-section"></a>Nesta seção
 |Tópico | Descrição |
 |-----|-----|
-|[Como x86 emulação funciona no ARM](apps-on-arm-x86-emulation.md)|Uma visão geral detalhando como aplicativos x86 são emulados em ARM.|
-|[Solução de problemas de x86 aplicativos no ARM](apps-on-arm-troubleshooting-x86.md)|Problemas comuns com aplicativos x86 quando executados em ARM e como corrigi-los. |
+|[Como a emulação x86 funciona no ARM](apps-on-arm-x86-emulation.md)|Uma visão geral detalhando como aplicativos x86 são emulados em ARM.|
+|[Solução de problemas de aplicativos x86 no ARM](apps-on-arm-troubleshooting-x86.md)|Problemas comuns com aplicativos x86 quando executados em ARM e como corrigi-los. |
 |[Solucionar problemas de aplicativos do ARM no ARM](apps-on-arm-troubleshooting-arm32.md)|Problemas comuns com aplicativos ARM32 e ARM64 quando em execução no ARM e como corrigi-los. |
-|[Solução de problemas de compatibilidade de programa no ARM](apps-on-arm-program-compat-troubleshooter.md)|Diretrizes para ajustar as configurações de compatibilidade se seu aplicativo não estiver funcionando corretamente no ARM. |
+|[Solução de problemas de compatibilidade de programas no ARM](apps-on-arm-program-compat-troubleshooter.md)|Diretrizes para ajustar as configurações de compatibilidade se seu aplicativo não estiver funcionando corretamente no ARM. |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 |Tópico | Descrição |
 |-----|-----|
-|[Criação de Drivers ARM64 com o WDK](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers)|Instruções para a criação de um driver ARM64. |
+|[Criando drivers ARM64 com o WDK](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers)|Instruções para a criação de um driver ARM64. |
 | [Depuração x86 aplicativos no ARM](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-arm64) | Diretrizes para depuração de aplicativos x86 em ARM. |

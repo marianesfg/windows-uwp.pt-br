@@ -34,7 +34,7 @@ Os seguintes recursos foram adicionados para o Windows builds do Insider Preview
 
 * TreeView foi aprimorado para dar suporte a [vinculação de dados, modelos de item e arrastar e soltar.](../design/controls-and-patterns/tree-view.md)
 
-### <a name="package-support-framework"></a>Estrutura de suporte do pacote
+### <a name="package-support-framework"></a>PSF (estrutura de suporte do pacote)
 
 A estrutura de suporte do pacote é um kit de software livre que ajuda você a aplicar correções para o seu aplicativo win32 quando você não tem acesso ao código-fonte, para que ele pode ser executado em um contêiner de MSIX.
 

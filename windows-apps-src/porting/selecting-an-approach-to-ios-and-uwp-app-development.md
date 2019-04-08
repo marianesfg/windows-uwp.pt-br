@@ -80,7 +80,7 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 
     Uma biblioteca de jogos em HTML.
 
--   [Marmalade](https://go.microsoft.com/fwlink/p/?LinkID=320487)
+-   [Geleia](https://go.microsoft.com/fwlink/p/?LinkID=320487)
 
     Um SDK para várias plataformas.
 

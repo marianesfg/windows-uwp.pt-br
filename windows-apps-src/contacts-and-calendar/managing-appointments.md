@@ -569,7 +569,7 @@ Agora, você já conhece as noções básicas de como gerenciar compromissos. Ba
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Exemplo de API de compromissos](https://go.microsoft.com/fwlink/p/?linkid=309836)
+* [Amostra da API de compromissos](https://go.microsoft.com/fwlink/p/?linkid=309836)
  
 
  

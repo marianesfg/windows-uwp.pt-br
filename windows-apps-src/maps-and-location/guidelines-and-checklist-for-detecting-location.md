@@ -20,7 +20,7 @@ ms.locfileid: "57624471"
 
 **APIs importantes**
 
--   [**Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603)
+-   [**Localização geográfica**](https://msdn.microsoft.com/library/windows/apps/br225603)
 -   [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)
 
 Este tópico descreve as diretrizes de desempenho para aplicativos que exigem acesso ao local de um usuário.
@@ -162,7 +162,7 @@ A localização geográfica do usuário faz parte das PII (informações de iden
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Configurar uma cerca geográfica](https://msdn.microsoft.com/library/windows/apps/mt219702)
-* [Obter o local atual](https://msdn.microsoft.com/library/windows/apps/mt219698)
+* [Obter a localização atual](https://msdn.microsoft.com/library/windows/apps/mt219698)
 * [Exibir mapas com 2D, 3D e modos de exibição de Streetside](https://msdn.microsoft.com/library/windows/apps/mt219695)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
 * [Exemplo de localização UWP (localização geográfica)](https://go.microsoft.com/fwlink/p/?linkid=533278)

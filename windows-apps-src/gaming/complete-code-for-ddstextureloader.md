@@ -22,7 +22,7 @@ Consulte [Carregar recursos no seu jogo DirectX](load-a-game-asset.md) para ver 
 
 Este tópico contém estas seções:
 
--   [Technologies](#technologies)
+-   [Tecnologias](#technologies)
 -   [Requisitos](#requirements)
 -   [Exibir o código (C++)](#view-the-code-c)
 

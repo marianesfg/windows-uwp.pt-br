@@ -24,7 +24,7 @@ Modos de exibição ordenados por rasterizador permitem que algoritmos de "Trans
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Modos de exibição](views.md)
+[Exibições](views.md)
 
  
 

@@ -131,7 +131,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 | OpenGL ES 2.0 | Direct3D 11                                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| glViewport    | [**CD3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/jj151722), [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) |
+| glViewport    | [**CD3D11\_visor**](https://msdn.microsoft.com/library/windows/desktop/jj151722), [ **ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) |
 
  
 
@@ -190,7 +190,7 @@ Leia a [referência de GLSL para HLSL](glsl-to-hlsl-reference.md) e conheça mel
 ## <a name="porting-the-opengl-intrinsics-to-hlsl-semantics"></a>Fazendo a portabilidade de intrínsecos do OpenGL para semântica do HLSL
 
 
-A semântica HLSL do Direct3D 11 é composta de cadeias que, como um nome de atributo ou uniforme, são usadas para identificar um valor passado de um aplicativo para um programa de sombreador (e vice-versa). Embora haja uma grande variedade de cadeias possíveis, o melhor a fazer é usar uma cadeia, como POSITION ou COLOR, que indique o uso. Você deve atribuir essa semântica ao construir um buffer constante ou um layout de entrada de buffer. Você também pode adicionar um número de 0 a 7 à semântica, o que permite usar Registros separados para valores semelhantes. Por exemplo: COLOR0, COLOR1, COLOR2...
+A semântica HLSL do Direct3D 11 é composta de cadeias que, como um nome de atributo ou uniforme, são usadas para identificar um valor passado de um aplicativo para um programa de sombreador (e vice-versa). Embora haja uma grande variedade de cadeias possíveis, o melhor a fazer é usar uma cadeia, como POSITION ou COLOR, que indique o uso. Você deve atribuir essa semântica ao construir um buffer constante ou um layout de entrada de buffer. Você também pode adicionar um número de 0 a 7 à semântica, o que permite usar Registros separados para valores semelhantes. Por exemplo: COR2 COLOR0, COLOR1,...
 
 Semânticas que são prefixadas com "SV\_" são a semântica de valor do sistema que são gravados pelo seu programa sombreador; seu aplicativo em si (em execução na CPU) não é possível modificá-los. Normalmente, esses valores são entradas ou saídas de outro estágio do sombreador no pipeline gráfico ou são completamente gerados pela GPU.
 
@@ -201,10 +201,10 @@ Veja algumas correlações com intrínsecos de sombreador comuns do OpenGL ES 2.
 | Valor de sistema no OpenGL | Use esta semântica HLSL                                                                                                                                                   |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GL\_posição        | POSITION(n) dos dados do buffer de vértice. VA\_posição fornece uma posição de pixel para o sombreador de pixel e não pode ser gravada pelo seu aplicativo.                                        |
-| gl\_Normal          | NORMAL(n) de dados normais fornecidos pelo buffer de vértice.                                                                                                                 |
-| gl\_TexCoord\[n\]   | TEXCOORD(n) de dados de coordenadas UV (ST em alguns documentos do OpenGL) de textura fornecidos a um sombreador.                                                                       |
-| gl\_FragColor       | COLOR(n) de dados de cor RGBA fornecidos a um sombreador. Não se esqueça de que eles são tratados de forma idêntica aos dados de coordenadas; a semântica simplesmente o ajuda a identificar que são dados de cor. |
-| gl\_FragData\[n\]   | SV\_alvo\[n\] para gravação de um sombreador de pixel para uma textura de destino ou outro buffer de pixel.                                                                               |
+| GL\_Normal          | NORMAL(n) de dados normais fornecidos pelo buffer de vértice.                                                                                                                 |
+| GL\_TexCoord\[n\]   | TEXCOORD(n) de dados de coordenadas UV (ST em alguns documentos do OpenGL) de textura fornecidos a um sombreador.                                                                       |
+| GL\_FragColor       | COLOR(n) de dados de cor RGBA fornecidos a um sombreador. Não se esqueça de que eles são tratados de forma idêntica aos dados de coordenadas; a semântica simplesmente o ajuda a identificar que são dados de cor. |
+| GL\_FragData\[n\]   | SV\_alvo\[n\] para gravação de um sombreador de pixel para uma textura de destino ou outro buffer de pixel.                                                                               |
 
  
 

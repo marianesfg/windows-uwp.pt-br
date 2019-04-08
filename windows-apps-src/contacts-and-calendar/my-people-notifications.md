@@ -51,15 +51,15 @@ O nó da imagem na associação deve incluir os seguintes parâmetros:
 
 + **src**
     + O URI do ativo. Isso pode ser um URI HTTP/HTTPS da Web, um URI msappx ou um caminho para um arquivo local.
-+ **spritesheet-src**
++ **src spritesheet**
     + O URI do ativo. Isso pode ser um URI HTTP/HTTPS da Web, um URI msappx ou um caminho para um arquivo local. Só é necessário para animações em spritesheet.
-+ **spritesheet-height**
++ **altura spritesheet**
     + A altura do quadro (em pixels). Só é necessário para animações em spritesheet.
-+ **spritesheet-fps**
++ **fps spritesheet**
     + Quadros por segundo (FPS). Só é necessário para animações em spritesheet. Somente valores de 1 a 120 têm suporte.
-+ **spritesheet-startingFrame**
++ **spritesheet startingFrame**
     + O número do quadro para iniciar a animação. Somente usado para animações em spritesheet, e o padrão será 0 se não especificado.
-+ **alt**
++ **ALT**
     + Cadeia de texto usada para narração do leitor de tela.
 
 > [!NOTE]

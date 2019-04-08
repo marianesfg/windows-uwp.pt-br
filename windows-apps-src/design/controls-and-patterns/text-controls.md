@@ -79,7 +79,7 @@ Há muitas maneiras de se obter a entrada do usuário em seu aplicativo. Estas p
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/category/Text">abrir o aplicativo e ver os controles de texto em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -144,7 +144,7 @@ Para obter mais informações, consulte [Usar o escopo de entrada para alterar o
 
 ## <a name="color-fonts"></a>Fontes de cores
 
-**Aplica-se a:** TextBlock, RichTextBlock, TextBox, RichEditBox
+**Aplica-se a:** TextBlock, RichEditBox RichTextBlock, caixa de texto
 
 No Windows, as fontes podem incluir várias camadas coloridas para cada glifo. Por exemplo, a fonte Segoe UI Emoji define versões de cor do Emoticon e outros personagens Emoji.
 
@@ -174,7 +174,7 @@ Seu aplicativo pode inserir um separador de parágrafo entre parágrafos de text
 
 ## <a name="guidelines-for-spell-checking"></a>Diretrizes para verificação ortográfica
 
-**Aplica-se a:** TextBox, RichEditBox
+**Aplica-se a:** Caixa de texto, RichEditBox
 
 Durante a edição e a entrada de texto, a verificação ortográfica informa o usuário que uma palavra está com grafia incorreta realçando-a com uma linha ondulada vermelha e fornece uma maneira de o usuário corrigir o erro de ortografia.
 

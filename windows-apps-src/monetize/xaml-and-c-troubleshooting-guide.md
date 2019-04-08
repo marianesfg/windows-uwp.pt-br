@@ -8,7 +8,7 @@ keywords: windows 10, uwp, anúncios, publicidade, AdControl, solução de probl
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d92795ac7de2ab09fd0b3b86e05aa33669c54dd
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57615911"
@@ -22,7 +22,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
   * [Caixa preta pisca e desaparece](#xaml-blackboxblinksdisappears)
   * [Anúncios não atualizando](#xaml-adsnotrefreshing)
 
-* [C#](#csharp)
+* [EM C#](#csharp)
   * [AdControl não aparecem](#csharp-adcontrolnotappearing)
   * [Caixa preta pisca e desaparece](#csharp-blackboxblinksdisappears)
   * [Anúncios não atualizando](#csharp-adsnotrefreshing)

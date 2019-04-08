@@ -133,7 +133,7 @@ Vamos fazer o seguinte:
 
 : quatro: Recupere dados do banco de dados SQLite.
 
-:five: Adicione uma interface do usuário básica.
+: cinco: Adicione uma interface do usuário básica.
 
 ### <a name="prepare-the-data-access-class"></a>Preparar a classe de acesso de dados
 

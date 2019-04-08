@@ -69,7 +69,7 @@ O objeto UserIdentity contém os parâmetros a seguir.
 |----------------------|--------|-------------------|----------|
 | identityType         | cadeia de caracteres | Especifique o valor de cadeia de caracteres **b2b**.    | Sim      |
 | identityValue        | cadeia de caracteres | Uma [chave ID da Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa a identidade do usuário para o qual você quer declarar um produto consumível como providenciado.      | Sim      |
-| localTicketReference | cadeia de caracteres | O identificador solicitado para resposta retornada. É recomendável que você use o mesmo valor que o *userId*[declaração](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) na chave de ID do Microsoft Store.   | Sim      |
+| localTicketReference | cadeia de caracteres | O identificador solicitado para resposta retornada. É recomendável que você use o mesmo valor que o *userId*[declaração](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) na chave de ID do Microsoft Store. | Sim      |
 
 
 ### <a name="request-examples"></a>Exemplos de solicitação

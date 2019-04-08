@@ -8,7 +8,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0446269fcbde87dfa25b7bff25f7160335950fba
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57636721"
@@ -86,7 +86,7 @@ Este exemplo demonstra como usar o método [GetConsumableBalanceRemainingAsync](
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Compras no aplicativo e avaliação](in-app-purchases-and-trials.md)
+* [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md)
 * [Obter informações sobre produtos para os aplicativos e complementos](get-product-info-for-apps-and-add-ons.md)
 * [Obter informações de licença para aplicativos e complementos](get-license-info-for-apps-and-add-ons.md)
 * [Habilitar compras no aplicativo de aplicativos e complementos](enable-in-app-purchases-of-apps-and-add-ons.md)

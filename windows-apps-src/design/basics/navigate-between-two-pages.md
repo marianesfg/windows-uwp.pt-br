@@ -24,7 +24,7 @@ ms.locfileid: "57616201"
 
 Saiba como usar um quadro e páginas para habilitar a navegação básica ponto a ponto no aplicativo. 
 
-> **APIs importantes**: [**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) class, [**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503) class, [**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300) namespace
+> **APIs importantes**: [**Windows.UI.Xaml.Controls.Frame** ](https://msdn.microsoft.com/library/windows/apps/br242682) classe, [ **Windows.UI.Xaml.Controls.Page** ](https://msdn.microsoft.com/library/windows/apps/br227503) classe [ **Windows.UI.Xaml.Navigation** ](https://msdn.microsoft.com/library/windows/apps/br243300) namespace
 
 ![navegação ponto a ponto](images/peertopeer.png)
 

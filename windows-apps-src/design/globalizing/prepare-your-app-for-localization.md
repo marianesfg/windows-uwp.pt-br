@@ -183,8 +183,8 @@ A classificação segue o formato do **Painel de Controle Regional**.
 ## <a name="related-topics"></a>Tópicos relacionados
 
 - [Diretrizes para globalização](guidelines-and-checklist-for-globalizing-your-app.md)
-- [Localizar cadeias de caracteres em seu manifesto de pacote da interface do usuário e aplicativo](../../app-resources/localize-strings-ui-manifest.md)
-- [Personalize seus recursos de idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
+- [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](../../app-resources/localize-strings-ui-manifest.md)
+- [Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 - [Ajustar layout e fontes e fornecer suporte para RTL](adjust-layout-and-fonts--and-support-rtl.md)
 - [Atualizando imagens em resposta ao valor do qualificador de eventos de alteração](../../app-resources/images-tailored-for-scale-theme-contrast.md#updating-images-in-response-to-qualifier-value-change-events)
 

@@ -96,6 +96,6 @@ Um buffer de estêncil de profundidade inativo pode ser lido por um sombreador c
 
 [Estágio de fusão (OM) de saída](output-merger-stage--om-.md)
 
-[Pipeline de gráficos](graphics-pipeline.md)
+[Pipeline de elementos gráficos](graphics-pipeline.md)
 
 [Estágio de fusão de saída](https://msdn.microsoft.com/library/windows/desktop/bb205120)

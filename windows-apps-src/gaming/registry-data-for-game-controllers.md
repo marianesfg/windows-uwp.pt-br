@@ -1347,6 +1347,6 @@ Windows Registry Editor Version 5.00
 
 ## <a name="see-also"></a>Consulte também
 
-* [Windows.Gaming.Input Namespace](https://docs.microsoft.com/uwp/api/windows.gaming.input)
+* [Namespace Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)
 * [Namespace Windows.Gaming.Input.Custom](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
 * [Arquivos INF](https://docs.microsoft.com/windows-hardware/drivers/install/inf-files)

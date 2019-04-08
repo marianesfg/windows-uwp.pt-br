@@ -133,8 +133,8 @@ A tabela a seguir descreve os campos na sequência de dados formatados em JSON.
 | Campo          | Descrição                                                                                                                                   |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | *status*       | Uma sequência que indica se o cliente enviou com êxito uma classificação ou opinião. Os valores com suporte são **success** e **aborted**. |
-| *data*         | Um objeto que contém um único valor booliano chamado *updated*. Este valor indica se o cliente atualizou uma classificação ou opinião existente. O objeto *data* é incluído somente em respostas de êxito. |
-| *errorDetails* | Uma sequência que contém os detalhes do erro para a solicitação.                                                                                     |
+| *Dados*         | Um objeto que contém um único valor booliano chamado *updated*. Este valor indica se o cliente atualizou uma classificação ou opinião existente. O objeto *data* é incluído somente em respostas de êxito. |
+| *ErrorDetails* | Uma sequência que contém os detalhes do erro para a solicitação.                                                                                     |
 
 ## <a name="launch-the-rating-and-review-page-for-your-app-in-the-store"></a>Inicie a página de classificação e opinião para seu app na Store
 
@@ -155,5 +155,5 @@ Para analisar os dados de classificações e opiniões de seus clientes, você t
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Enviar solicitações para a Store](send-requests-to-the-store.md)
-* [Inicie o aplicativo Microsoft Store](../launch-resume/launch-store-app.md)
+* [Iniciar o aplicativo da Microsoft Store](../launch-resume/launch-store-app.md)
 * [Relatório de avaliações](../publish/reviews-report.md)

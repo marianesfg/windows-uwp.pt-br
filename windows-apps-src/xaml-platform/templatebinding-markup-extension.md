@@ -78,7 +78,7 @@ Neste exemplo, o **TextBlock. Text** propriedade for avaliada como **Button.Cont
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Guia de início rápido: Modelos de controle](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
-* [Associação de dados em camadas](https://msdn.microsoft.com/library/windows/apps/mt210946)
+* [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)
 * [Visão geral do XAML](xaml-overview.md)
 * [Visão geral das propriedades de dependência](dependency-properties-overview.md)

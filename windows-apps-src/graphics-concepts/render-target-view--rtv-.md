@@ -22,7 +22,7 @@ Renderizar destinos permite que uma cena seja renderizada em um buffer intermedi
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Modos de exibição](views.md)
+[Exibições](views.md)
 
  
 

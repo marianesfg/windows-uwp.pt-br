@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57610621"
 ---
-# <a name="getting-started-common-controls"></a>Guia de Introdução: Controles comuns
+# <a name="getting-started-common-controls"></a>Introdução: Controles comuns
 
 
 ## <a name="common-controls-list"></a>Lista de controles comuns

@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57620771"
 ---
-# <a name="getting-started-choosing-a-programming-language"></a>Guia de Introdução: Escolhendo uma linguagem de programação
+# <a name="getting-started-choosing-a-programming-language"></a>Introdução: Escolhendo uma linguagem de programação
 
 
 ## <a name="choosing-a-programming-language"></a>Escolhendo uma linguagem de programação
@@ -40,7 +40,7 @@ Como desenvolvedor do iOS, você está habituado ao Objective-C e Swift. A lingu
 
 -   [Criar seu primeiro aplicativo de UWP usando C# ou o Visual Basic](../get-started/create-a-hello-world-app-xaml-universal.md)
 -   [Exemplos de aplicativos UWP que usamC#](https://go.microsoft.com/fwlink/p/?LinkId=263453)
--   [Visual C#](https://go.microsoft.com/fwlink/p/?LinkId=263450)
+-   [Visual c#](https://go.microsoft.com/fwlink/p/?LinkId=263450)
 
 A seguir, há uma classe escrita em Objective-C e C#. A versão Objective-C é exibida primeiro, seguida pela versão C#.
 

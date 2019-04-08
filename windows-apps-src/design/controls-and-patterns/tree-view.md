@@ -57,7 +57,7 @@ As APIs TreeView oferecem suporte aos seguintes recursos:
 <td>
     <p>Se você tiver o <strong style="font-weight: semi-bold">da Galeria de controles XAML</strong> aplicativo instalado, clique aqui para <a href="xamlcontrolsgallery:/item/TreeView">abrir o aplicativo e ver o modo de exibição de árvore em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -177,11 +177,11 @@ Essas APIs estão disponíveis para gerenciar a hierarquia de dados do seu modo 
 
 | **[TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode)** | |
 | - | - |
-| [Children](/uwp/api/windows.ui.xaml.controls.treeviewnode.children) | Adicione objetos TreeViewNode à coleção de filhos de um nó pai para criar hierarquia seu nó. Um nó é o **pai** de todos os nós na sua coleção **filhos**. |
-| [HasChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.haschildren) | **True** se o nó tem filhos percebidos. **False** indica uma pasta vazia ou um item. |
+| [Filhos](/uwp/api/windows.ui.xaml.controls.treeviewnode.children) | Adicione objetos TreeViewNode à coleção de filhos de um nó pai para criar hierarquia seu nó. Um nó é o **pai** de todos os nós na sua coleção **filhos**. |
+| [Lt;haschildren>1</haschildren&gt](/uwp/api/windows.ui.xaml.controls.treeviewnode.haschildren) | **True** se o nó tem filhos percebidos. **False** indica uma pasta vazia ou um item. |
 | [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) | Use essa propriedade se você estiver preenchendo nós conforme eles estiverem expandidos. Consulte _preencher um nó quando ele está se expandindo_ posteriormente neste artigo. |
 | [profundidade](/uwp/api/windows.ui.xaml.controls.treeviewnode.depth) | Indica a distância do nó raiz que é um nó filho. |
-| [Parent](/uwp/api/windows.ui.xaml.controls.treeviewnode.parent) | Obtém o TreeViewNode que possui o **filhos** que esse nó é parte da coleção. |
+| [Pai](/uwp/api/windows.ui.xaml.controls.treeviewnode.parent) | Obtém o TreeViewNode que possui o **filhos** que esse nó é parte da coleção. |
 
 O modo de exibição de árvore usa o **HasChildren** e **HasUnrealizedChildren** propriedades para determinar se o ícone de expandir/recolher é exibido. Se qualquer propriedade for **true**, o ícone é exibido; Caso contrário, ele não é mostrado.
 
@@ -339,7 +339,7 @@ Um usuário pode invocar uma ação (tratando o item como um botão) em vez de s
 > [!NOTE]
 > Ao contrário de ListView, que tem a propriedade [IsItemClickEnabled](/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled), invocando um item está sempre habilitada no modo de exibição de árvore. Você ainda pode escolher se manipular o evento ou não.
 
-**[TreeViewItemInvokedEventArgs](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs) class**
+**[TreeViewItemInvokedEventArgs](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs) classe**
 
 Os argumentos do evento ItemInvoked dão acesso ao item invocado. A propriedade [InvokedItem](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs.invokeditem) tem o nó que foi invocado. Você pode convertê-lo para TreeViewNode e obter o item de dados da propriedade TreeViewNode.Content.
 

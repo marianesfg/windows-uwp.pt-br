@@ -88,8 +88,8 @@ Para obter uma tabela de referência de todos os valores de qualificador possív
 * [Personalize seus recursos de idioma, escala e outros qualificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [Diretrizes para ativos de bloco e ícone](app-assets.md).
 * [Globalização e localização](../../globalizing/globalizing-portal.md)
-* [Localizar cadeias de caracteres em seu manifesto de pacote da interface do usuário e aplicativo](../../../app-resources/localize-strings-ui-manifest.md)
+* [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](../../../app-resources/localize-strings-ui-manifest.md)
 * [Fazer referência a uma imagem ou outros ativos de código e marcação XAML](../../../app-resources/images-tailored-for-scale-theme-contrast.md)
-* [addImageQuery](/uwp/schemas/tiles/tilesschema/element-visual?branch=live)
+* [AddImageQuery](/uwp/schemas/tiles/tilesschema/element-visual?branch=live)
 * [Esquema de bloco](/uwp/schemas/tiles/tilesschema/schema-root?branch=live)
 * [Esquema de notificação do sistema](/uwp/schemas/tiles/toastschema/schema-root?branch=live)

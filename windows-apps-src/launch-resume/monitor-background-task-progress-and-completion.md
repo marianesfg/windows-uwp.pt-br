@@ -288,12 +288,12 @@ void SampleBackgroundTask::OnNavigatedTo(NavigationEventArgs^ e)
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
-* [Criar e registrar uma tarefa em segundo plano do out-of-process](create-and-register-a-background-task.md)
-* [Declare as tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
-* [Lidar com uma tarefa em segundo plano foi cancelada](handle-a-cancelled-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
+* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
-* [Defina as condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
+* [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
 * [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)

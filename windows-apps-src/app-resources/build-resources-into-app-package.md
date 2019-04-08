@@ -97,6 +97,6 @@ Há uma etapa final que você precisa executar. **Mas somente se você tiver exc
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md)
-* [Compilar recursos manualmente com MakePri.exe](compile-resources-manually-with-makepri.md)
-* [Especificar os recursos padrão que usa seu aplicativo](specify-default-resources-installed.md)
+* [União de um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md)
+* [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)
+* [Especificar os recursos padrão usados pelo aplicativo](specify-default-resources-installed.md)

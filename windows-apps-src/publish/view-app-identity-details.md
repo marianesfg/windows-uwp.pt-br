@@ -27,7 +27,7 @@ Os valores a seguir devem ser incluídos em seu manifesto de pacote. Se você [u
 
 -   **Nome/de identidade de pacote**
 -   **Identidade/pacote/publicador**
--   **Package/Properties/PublisherDisplayName**
+-   **Propriedades/pacote/PublisherDisplayName**
 
 Para saber mais, consulte [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) na [Referência de esquemas de manifesto do pacote](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root).
 

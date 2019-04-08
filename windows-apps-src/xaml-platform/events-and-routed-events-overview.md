@@ -232,7 +232,7 @@ O Windows Runtime com C#, Microsoft Visual Basic ou C++/CX aceita o conceito de 
 - [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup.md)
 - [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
 - [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
-- [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
+- [**Tocado**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
 
 Um evento roteado é um evento que é potencialmente passado adiante (*roteado*) de um objeto filho para cada um dos seus sucessivos objetos pais em uma árvore de objetos. A estrutura XAML da interface do usuário se aproxima dessa árvore, sendo que a raiz da árvore é o elemento raiz do XAML. A verdadeira árvore de objetos pode variar um pouco do aninhamento de elementos XAML porque a árvore de objetos não inclui recursos da linguagem XAML – como marcas de elementos de propriedades. Você pode conceber o evento roteado como *decorrente* de qualquer elemento filho de elemento de objeto XAML que aciona o evento em direção ao elemento de objeto pai que o contém. O evento e seus dados podem ser manipulados em vários objetos ao longo da rota de evento. Se nenhum elemento tiver manipuladores, a rota se mantém potencialmente em movimento até que o elemento raiz seja alcançado.
 

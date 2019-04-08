@@ -343,7 +343,7 @@ Depois de fazer suas alterações, você não precisa executar o conversor novam
 
 **Vídeos**
 
-|Modificar e reempacotar a saída |Demo: Modificar e reempacotar a saída|
+|Modificar e reempacotar a saída |Demonstração: Modificar e reempacotar a saída|
 |---|---|
 |<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Video-Modifying-and-Repackaging-Output-from-Desktop-App-Converter-OwpAJ3WhD_6706218965" width="426" height="472" allowFullScreen frameBorder="0"></iframe>|<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Modify-Output-from-Desktop-App-Converter-gEnsa3WhD_8606218965" width="426" height="472" allowFullScreen frameBorder="0"></iframe>|
 

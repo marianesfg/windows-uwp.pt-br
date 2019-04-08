@@ -267,11 +267,11 @@ Se o valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/wi
 > Os aplicativos podem pular a inicialização se já houver conteúdo definido na janela atual. Você pode verificar a [ **LaunchActivatedEventArgs.TileId** ](https://msdn.microsoft.com/library/windows/apps/br224736) propriedade para determinar se o aplicativo foi iniciado no primário ou um bloco secundário e, com base nessas informações, decida se você deve: apresentar uma nova ou retomar a experiência de aplicativo.
 
 ## <a name="important-apis"></a>APIs Importantes
-* [Windows.ApplicationModel.Activation](https://msdn.microsoft.com/library/windows/apps/br224766)
+* [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/br224766)
 * [Windows.UI.Xaml.Application](https://msdn.microsoft.com/library/windows/apps/br242324)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Suspender o identificador de aplicativo](suspend-an-app.md)
-* [Identificador de retomada de aplicativo](resume-an-app.md)
+* [Tratar a suspensão do aplicativo](suspend-an-app.md)
+* [Tratar a retomada do aplicativo](resume-an-app.md)
 * [Diretrizes para aplicativo suspender e retomar](https://msdn.microsoft.com/library/windows/apps/hh465088)
 * [Ciclo de vida do aplicativo](app-lifecycle.md)

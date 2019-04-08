@@ -8,14 +8,14 @@ keywords: windows 10, uwp, aplicativo de demonstração varejo
 ms.localizationpriority: medium
 ms.openlocfilehash: b66435dd7c94762874461b48e19e9a60224f287b
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57596751"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>Adicionar recursos de demonstração (RDX) do varejo ao seu aplicativo
 
-Inclua um modo de demonstração de varejo em seu aplicativo do Windows para que os clientes que experimentar os PCs e dispositivos no chão de vendas podem começar imediatamente.
+Inclua um modo de demonstração de varejo em seu aplicativo do Windows para que os clientes que experimentarem PCs e dispositivos na área de vendas possam começar imediatamente.
 
 Quando os clientes estão em uma loja de varejo, eles esperam poder experimentar demonstrações de PCs e dispositivos. Eles geralmente gastam uma parte considerável do tempo brincar com aplicativos por meio de [experiência de demonstração (RDX) de varejo](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience).
 

@@ -8,7 +8,7 @@ keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a245c4ec0280f687cf34e85123960e64fe36a57
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57645871"
@@ -397,7 +397,7 @@ O atributo `initialPath` coloca todos os recursos nesse caminho inicial, inserin
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Compilar recursos manualmente com MakePri.exe](compile-resources-manually-with-makepri.md)
+* [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)
 * [Opções de linha de comando MakePri.exe](makepri-exe-command-options.md)
 * [Arquivo de configuração MakePri.exe](makepri-exe-configuration.md)
 * [Tipo de mídia application/json para objeto notação JSON (JavaScript)](https://www.ietf.org/rfc/rfc4627.txt)
