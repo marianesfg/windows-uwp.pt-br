@@ -19,7 +19,7 @@ ms.locfileid: "57606251"
 
 Saiba como capturar e reconhecer entrada de fala de ditado contínuo de formato longo.
 
-> **APIs importantes**: [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896), [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)
+> **APIs importantes**: [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896), [ **ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)
 
 Em [Reconhecimento de fala](speech-recognition.md), você aprendeu como capturar e reconhecer entradas de fala relativamente curtas usando o método [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) ou o método [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245) de um objeto [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), por exemplo, ao compor uma mensagem SMS curta ou fazer uma pergunta.
 

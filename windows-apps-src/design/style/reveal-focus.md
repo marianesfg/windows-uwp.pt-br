@@ -43,7 +43,7 @@ Isso é especialmente útil em cenários de 10 pés em que o usuário pode não 
 <td>
     <p>Se você tiver o <strong style="font-weight: semi-bold">da Galeria de controles XAML</strong> aplicativo instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RevealFocus">abrir o aplicativo e ver o foco revelar em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>

@@ -27,7 +27,7 @@ Este artigo aborda as quatro opções de notificação - local, agendada, perió
 
 Existem quatro mecanismos que um aplicativo pode usar para entregar uma notificação:
 
--   **Local**
+-   **local**
 -   **Agendado**
 -   **Periódica**
 -   **envio por push**
@@ -138,7 +138,7 @@ Por padrão, as notificações periódicas expiram três dias depois que a sonda
 
 Para saber mais, consulte estes tópicos:
 
--   [Visão geral de notificação periódica](periodic-notification-overview.md)
+-   [Visão geral de notificações periódicas](periodic-notification-overview.md)
 -   [Exemplos de código de notificações do Universal Windows Platform (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 ## <a name="push-notifications"></a>Notificações por push
@@ -164,7 +164,7 @@ Para obter mais informações, consulte:
 * [Enviar uma notificação do sistema local](send-local-toast.md)
 * [Diretrizes para notificações por push](https://msdn.microsoft.com/library/windows/apps/hh761462)
 * [Diretrizes para notificações do sistema](https://msdn.microsoft.com/library/windows/apps/hh465391)
-* [Visão geral de notificação periódica](periodic-notification-overview.md)
+* [Visão geral de notificações periódicas](periodic-notification-overview.md)
 * [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
 * [Notificações do Universal Windows Platform (UWP) exemplos de código no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
  

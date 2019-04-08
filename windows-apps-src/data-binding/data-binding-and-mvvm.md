@@ -53,7 +53,7 @@ Para obter orientação adicional sobre como usar o MVVM básico, out-of-the-box
 
 ### <a name="topics"></a>Tópicos
 
-[Associação de dados em camadas](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)  
+[Vinculação de dados em detalhes](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)  
 [extensão de marcação {X:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)  
 
 ### <a name="samples"></a>Exemplos

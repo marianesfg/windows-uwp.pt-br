@@ -25,7 +25,7 @@ ms.locfileid: "57620121"
 
 Aprenda a escrever códigos para uma classe personalizada [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), implementando os métodos [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) e [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) e usando a propriedade [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514). 
 
-> **APIs importantes**: [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711),[**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 
+> **APIs importantes**: [**Painel**](https://msdn.microsoft.com/library/windows/apps/br227511), [ **ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711),[**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 
 
 O exemplo de código mostra uma implementação de painel personalizado, mas não vamos perder muito tempo explicando os conceitos de layout que influenciam como você pode personalizar cenários de layouts diferentes. Se quiser mais informações sobre esses conceitos de layout e como eles se aplicam ao seu cenário de layout específico, consulte [Visão geral de painéis personalizados XAML](custom-panels-overview.md).
 

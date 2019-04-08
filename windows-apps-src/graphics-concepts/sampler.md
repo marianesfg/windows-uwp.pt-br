@@ -26,7 +26,7 @@ Outro problema ocorre quando a área que está sendo renderizada está em um ân
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Modos de exibição](views.md)
+[Exibições](views.md)
 
  
 

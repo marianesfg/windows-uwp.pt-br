@@ -135,7 +135,7 @@ Perceba como a imagem gira em torno do centro quando a propriedade [**CenterOfRo
 </Image>
 ```
 
-**CenterOfRotationX = "0.9" (right-hand edge)**
+**CenterOfRotationX = "0.9" (borda superior direita)**
 
 ![CenterOfRotationX igual a 0,9](images/3dcenterofrotationx0point9.png)
 

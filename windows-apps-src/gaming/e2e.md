@@ -8,7 +8,7 @@ keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
 ms.openlocfilehash: 38fc73eb602c1307fdd345d02c621791feb89dc2
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57652321"
@@ -186,7 +186,7 @@ Há muitas amostras de jogos e aplicativos do Windows 10 disponíveis para ajuda
     </tr>
     <tr>
         <td>Exemplos de elementos gráficos Direct3D 11</td>
-        <td><a href="https://github.com/walbourn/directx-sdk-samples">directx-sdk-samples</a></td>
+        <td><a href="https://github.com/walbourn/directx-sdk-samples">exemplos de sdk do DirectX</a></td>
     </tr>
     <tr>
         <td>Amostra de jogo em primeira pessoa do Direct3D 11</td>
@@ -210,7 +210,7 @@ Há muitas amostras de jogos e aplicativos do Windows 10 disponíveis para ajuda
     </tr>
     <tr>
         <td>Exemplos do Xbox Live</td>
-        <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox-live-samples</a></td>
+        <td><a href="https://github.com/Microsoft/xbox-live-samples">Xbox live-exemplos</a></td>
     </tr>
     <tr>
         <td>Exemplos de jogos do Xbox One (XGD)</td>
@@ -874,7 +874,7 @@ Se você tiver um jogo existente, há muitos recursos e guias disponíveis para 
     </colgroup>
     <tr>
         <td>Fazendo a portabilidade de um aplicativo do Windows 8 para um aplicativo da Plataforma Universal do Windows (vídeo)</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt238322">Mover do Windows Runtime 8.x para a UWP</a></td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt238322">Mudar do Windows Runtime 8.x para a UWP</a></td>
     </tr>
     <tr>
         <td>Fazendo a portabilidade de um aplicativo do Windows 8 para um aplicativo da Plataforma Universal do Windows (vídeo)</td>
@@ -910,7 +910,7 @@ Se você tiver um jogo existente, há muitos recursos e guias disponíveis para 
     </tr>
     <tr>
         <td>OpenGL ES para Direct3D 11 usando o ANGLE</td>
-        <td><a href="https://go.microsoft.com/fwlink/p/?linkid=618387">ANGLE</a></td>
+        <td><a href="https://go.microsoft.com/fwlink/p/?linkid=618387">ÂNGULO</a></td>
     </tr>
     <tr>
         <td>Equivalentes das APIs clássicas do Windows na UWP</td>
@@ -1130,7 +1130,7 @@ Um mapa da interface do usuário é um layout de navegação e dos menus do jogo
     </colgroup>
     <tr>
         <td>Guia do mapa da interface do usuário</td>
-        <td><a href="https://go.microsoft.com/fwlink/?LinkId=535008">Práticas recomendadas: UI Map</a></td>
+        <td><a href="https://go.microsoft.com/fwlink/?LinkId=535008">Práticas recomendadas: Mapa de interface do usuário</a></td>
     </tr>
 </table>
 
@@ -1259,7 +1259,7 @@ O kit de ferramentas DirectX, a biblioteca de processamento de texturas DirectX,
     </tr>
     <tr>
         <td>Baixar o Kit de ferramentas do DirectX para DirectX 12</td>
-        <td><a href="https://go.microsoft.com/fwlink/?LinkID=615561">DirectXTK 12</a></td>
+        <td><a href="https://go.microsoft.com/fwlink/?LinkID=615561">12 DirectXTK</a></td>
     </tr>
     <tr>
         <td>Baixar a biblioteca de processamento de texturas DirectX</td>
@@ -1293,7 +1293,7 @@ Esta é a documentação adicional do DirectX criada por parceiros externos.
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Nvidia: Prós de DX12 e contras (postagem de blog) </td>
+        <td>NVIDIA: Prós de DX12 e contras (postagem de blog) </td>
         <td><a href="https://developer.nvidia.com/dx12-dos-and-donts-updated">DirectX 12 em GPUs Nvidia</a></td>
     </tr>
     <tr>
@@ -1563,7 +1563,7 @@ Você usará [Partner Center](https://partner.microsoft.com/dashboard) para publ
     </tr>
     <tr>
         <td>Criar pacotes opcionais como conteúdo de jogo DLC</td>
-        <td><a href="../packaging/optional-packages.md">Criação de conjunto relacionado e pacotes opcionais</a></td>
+        <td><a href="../packaging/optional-packages.md">Criação de pacotes opcionais e conjunto relacionado</a></td>
     </tr>
     <tr>
         <td>Empacotar seu jogo UWP</td>
@@ -1607,7 +1607,7 @@ Não deixe que problemas de certificação atrasem o lançamento de seu jogo. Aq
     </tr>
     <tr>
         <td>Políticas para publicar aplicativos na Microsoft Store</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/dn764944">Políticas do Microsoft Store</a></td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/dn764944">Políticas da Microsoft Store</a></td>
     </tr>
     <tr>
         <td>Como evitar alguns problemas comuns de certificação de aplicativo</td>
@@ -1627,7 +1627,7 @@ O manifesto da loja (StoreManifest.xml) é um arquivo de configuração opcional
     </colgroup>
     <tr>
         <td>Esquema do manifesto da loja</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt617335">StoreManifest schema (Windows 10)</a></td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt617335">Esquema de StoreManifest (Windows 10)</a></td>
     </tr>
 </table>
  

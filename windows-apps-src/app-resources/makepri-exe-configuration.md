@@ -294,7 +294,7 @@ Estas são algumas condições de erro de exemplo, e a mensagem de erro correspo
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Compilar recursos manualmente com MakePri.exe](compile-resources-manually-with-makepri.md)
+* [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)
 * [Opções de linha de comando MakePri.exe&mdash;createconfig comando](makepri-exe-command-options.md#createconfig-command)
-* [Personalize seus recursos de idioma, escala, alto contraste e outros qualificadores](tailor-resources-lang-scale-contrast.md)
+* [Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores](tailor-resources-lang-scale-contrast.md)
 * [Sistema de gerenciamento de recursos&mdash;resourcecontext)&lt;2}&lt;1}](resource-management-system.md#resourcecontext)

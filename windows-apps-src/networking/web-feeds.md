@@ -20,7 +20,7 @@ ms.locfileid: "57660301"
 
 -   [**Windows.Data.Xml.Dom**](https://msdn.microsoft.com/library/windows/apps/br240819)
 -   [**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609)
--   [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632)
+-   [**Windows**](https://msdn.microsoft.com/library/windows/apps/br243632)
 
 Recupere ou crie o conteúdo da Web mais atual e popular usando feeds sindicalizados gerados de acordo com os padrões RSS e Atom, usando os recursos no namespace [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632).
 

@@ -146,7 +146,7 @@ Geralmente é possível determinar o que não está funcionando usando logs oper
     -   Início de navegação: Logs quando o AuthHost é iniciado e contém informações sobre as URLs de início e término.
     -   ![ilustra os detalhes do início da navegação](images/wab-event-viewer-2.png)
     -   Navegação completa: Registra a conclusão do carregamento de uma página da web.
-    -   Meta Tag: Logs quando uma marca meta é encontrada, incluindo os detalhes.
+    -   Marca meta: Logs quando uma marca meta é encontrada, incluindo os detalhes.
     -   Encerrar a navegação: Navegação encerrada pelo usuário.
     -   Erro de navegação: AuthHost encontra um erro de navegação em uma URL incluindo HttpStatusCode.
     -   Fim de navegação: Encerrando a URL é encontrado.

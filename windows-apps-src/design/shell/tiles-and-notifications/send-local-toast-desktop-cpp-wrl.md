@@ -102,7 +102,7 @@ Se você estiver usando a Ponte de Desktop (ou se ambos forem compatíveis), no 
 4. **com:Extension** do ativador COM usando a GUID da etapa 4. Certifique-se de incluir `Arguments="-ToastActivated"` para saber que a inicialização foi de uma notificação do sistema
 5. **desktop:Extension** para **windows.toastNotificationActivation** a fim de declarar a CLSID do ativador de notificação do sistema (a GUID da etapa 4).
 
-**Package.appxmanifest**
+**Package. appxmanifest**
 
 ```xml
 <Package

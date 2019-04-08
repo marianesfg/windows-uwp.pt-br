@@ -63,7 +63,7 @@ O estágio de mosaico (TS) funciona em duas fases:
 
     | Tipo de particionamento | Intervalo                       |
     |----------------------|-----------------------------|
-    | Fracionários\_ímpar      | \[1...63\]                  |
+    | Fracionários\_ímpar      | \[1... 63\]                  |
     | Fracionários\_até mesmo     | Intervalo de TessFactor: \[2..64\] |
     | Inteiro              | Intervalo de TessFactor: \[1..64\] |
     | Pow2                 | Intervalo de TessFactor: \[1..64\] |
@@ -91,7 +91,7 @@ O mosaico gera coordenadas uv (e, opcionalmente, w) e a topologia de superfície
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de gráficos](graphics-pipeline.md)
+[Pipeline de elementos gráficos](graphics-pipeline.md)
 
  
 

@@ -18,7 +18,7 @@ ms.locfileid: "57607621"
 
 Ajude os usuários a serem mais produtivos permitindo que eles exibam partes independentes do aplicativo em janelas separadas. Quando você cria várias janelas para um aplicativo, cada janela se comporta de maneira independente. A barra de tarefas mostra cada janela separadamente. Os usuários podem mover, redimensionar, mostrar e ocultar janelas do aplicativo de maneira independente e alternar janelas do aplicativo como se elas fossem aplicativos separados. Cada janela funciona no próprio thread.
 
-> **APIs importantes**: [**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094), [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)
+> **APIs importantes**: [**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094), [ **CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)
 
 ## <a name="when-should-an-app-use-multiple-views"></a>Quando um aplicativo deve usar vários modos de exibição?
 Há vários cenários que podem se beneficiar com vários modos de exibição. Veja aqui alguns exemplos:

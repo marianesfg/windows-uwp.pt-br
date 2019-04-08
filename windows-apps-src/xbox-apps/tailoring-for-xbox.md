@@ -58,10 +58,10 @@ Para obter uma prévia dessas práticas aplicadas a um aplicativo UWP, confira e
 
 A seguir, no [Channel 9](https://channel9.msdn.com/), uma excelente fonte de informações para a compilação de aplicativos incríveis em Xbox:
 
-- [Criação de aplicativos UWP (plataforma) do Windows Universal excelente para Xbox](https://channel9.msdn.com/Events/Build/2016/B883)
-- [Adaptar seu aplicativo para Xbox One e TV](https://channel9.msdn.com/Events/Build/2016/T651-R1)
+- [Criação de excelentes aplicativos da UWP (Plataforma Universal do Windows) para Xbox](https://channel9.msdn.com/Events/Build/2016/B883)
+- [Adaptar o aplicativo para Xbox One e TV](https://channel9.msdn.com/Events/Build/2016/T651-R1)
 - [Desenvolvimento de UWP 1: Criando uma interface do usuário adaptável](https://channel9.msdn.com/Events/Build/2016/L724-R1)
-- [Além de aplicativos Web do navegador: Atende de plataforma cruzada entre o dispositivo](https://channel9.msdn.com/Events/Build/2016/B888)
+- [Além de aplicativos Web do navegador: Multiplataforma encontra multidispositivo](https://channel9.msdn.com/Events/Build/2016/B888)
 
 ## <a name="app-dev-on-xbox"></a>Desenvolvimento de aplicativo no Xbox
 
@@ -74,4 +74,4 @@ O **App Dev Xbox** eventos é um ótimo ponto de partida para desenvolvedores no
 
 - [UWP no Xbox One](index.md)
 - [Projetando para TV e Xbox](../design/devices/designing-for-tv.md)
-- [Aplicativos Web progressivo para Xbox One](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/xbox-considerations)
+- [Aplicativos Web progressivos para Xbox One](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/xbox-considerations)

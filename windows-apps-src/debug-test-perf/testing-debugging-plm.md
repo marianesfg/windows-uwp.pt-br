@@ -84,5 +84,5 @@ em que `Game` é o nome do processo e `279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0.
 Cada chamada para **/enableDebug** deverá ser acoplada posteriormente a outra chamada PLMDebug com a opção **/disableDebug**. Além disso, o caminho para um depurador deve ser absoluto (caminhos relativos não são compatíveis).
 
 ## <a name="related-topics"></a>Tópicos relacionados
-- [Implantar e depurar aplicativos UWP](deploying-and-debugging-uwp-apps.md)
+- [Implantando e depurando aplicativos UWP](deploying-and-debugging-uwp-apps.md)
 - [Depuração, teste e desempenho](index.md)

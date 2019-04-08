@@ -81,24 +81,24 @@ Na maior parte, tudo o que é compatível, a menos quando explicitamente citado 
 
 ### <a name="whats-not-yet-supported"></a>O que ainda não tem suporte
 
-:no_entry_sign: Ferramentas de acessibilidade que funcionam perfeitamente no aplicativo e os controles hospedados.
+: no_entry_sign: Ferramentas de acessibilidade que funcionam perfeitamente no aplicativo e os controles hospedados.
 
-:no_entry_sign: Conteúdo localizado nos controles que você adiciona a aplicativos que não contêm um pacote de aplicativo do Windows.
+: no_entry_sign: Conteúdo localizado nos controles que você adiciona a aplicativos que não contêm um pacote de aplicativo do Windows.
 
-:no_entry_sign: Referências de ativos feitas no XAML nos aplicativos que não contêm um pacote de aplicativo do Windows.
+: no_entry_sign: Referências de ativos feitas no XAML nos aplicativos que não contêm um pacote de aplicativo do Windows.
 
-:no_entry_sign: Controles de responder corretamente a alterações em DPI e escala.
+: no_entry_sign: Controles de responder corretamente a alterações em DPI e escala.
 
-:no_entry_sign: Adicionando um **WebView** controle a um controle de usuário personalizada, (no thread, fora do thread ou fora do processo).
+: no_entry_sign: Adicionando um **WebView** controle a um controle de usuário personalizada, (no thread, fora do thread ou fora do processo).
 
-:no_entry_sign: O [revelam Realce](https://docs.microsoft.com/windows/uwp/design/style/reveal) efeito Fluent.
+: no_entry_sign: O [revelam Realce](https://docs.microsoft.com/windows/uwp/design/style/reveal) efeito Fluent.
 
-:no_entry_sign: Escrita à tinta embutido, @Places, e @People para controles de entrada.
+: no_entry_sign: Escrita à tinta embutido, @Places, e @People para controles de entrada.
 
-:no_entry_sign: Atribuindo teclas de aceleração.
+: no_entry_sign: Atribuindo teclas de aceleração.
 
-:no_entry_sign: Controles de terceiros baseados em C++.
+: no_entry_sign: Controles de terceiros baseados em C++.
 
-:no_entry_sign: Hospedando controles de usuário personalizados.
+: no_entry_sign: Hospedando controles de usuário personalizados.
 
 Os itens nessa lista provavelmente são alterados à medida que melhoramos a experiência fluente para a área de trabalho.  

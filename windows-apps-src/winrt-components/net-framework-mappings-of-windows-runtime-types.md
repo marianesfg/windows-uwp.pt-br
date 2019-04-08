@@ -83,4 +83,4 @@ Tabela 2: Tipos de UWP que são mapeados para tipos do .NET Framework com o mesm
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criando componentes de tempo de execução do Windows em c# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Criando componentes do Windows Runtime em C# ou Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)

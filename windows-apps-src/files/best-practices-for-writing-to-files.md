@@ -7,7 +7,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8bed97e060015f92ff95c9f7d797bbcb83db431
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57605831"
@@ -76,11 +76,11 @@ Esta tabela apresenta os códigos de erro comuns que os desenvolvedores de aplic
 |  Erro de nome (valor)  |  Etapas  |  Causas  |  Soluções  |
 |----------------------|---------|----------|-------------|
 |  ERROR_ACCESS_DENIED (0X80070005)  |  5  |  O arquivo original pode ser marcado para exclusão, possivelmente a partir de uma operação anterior.  |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
-|  ERROR_SHARING_VIOLATION (0x80070020)  |  5  |  O arquivo original é aberto por outro gravação exclusivo.   |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
-|  ERROR_UNABLE_TO_REMOVE_REPLACED (0x80070497)  |  19-20  |  Não foi possível substituir o arquivo original (arquivo. txt), porque ele está em uso. Outro processo ou operação obteve acesso ao arquivo antes que ele pode ser substituído.  |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
-|  ERROR_DISK_FULL (0x80070070)  |  7, 14, 16, 20  |  O modelo transacionado cria um arquivo extra e isso consome armazenamento extra.  |    |
+|  ERROR_SHARING_VIOLATION (0X80070020)  |  5  |  O arquivo original é aberto por outro gravação exclusivo.   |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
+|  ERROR_UNABLE_TO_REMOVE_REPLACED (0X80070497)  |  19-20  |  Não foi possível substituir o arquivo original (arquivo. txt), porque ele está em uso. Outro processo ou operação obteve acesso ao arquivo antes que ele pode ser substituído.  |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
+|  ERROR_DISK_FULL (0X80070070)  |  7, 14, 16, 20  |  O modelo transacionado cria um arquivo extra e isso consome armazenamento extra.  |    |
 |  ERROR_OUTOFMEMORY (0X8007000E)  |  14, 16  |  Isso pode acontecer devido a várias operações de e/s pendentes ou tamanhos de arquivos grandes.  |  Uma abordagem mais granular, controlando o fluxo pode resolver o erro.  |
-|  E_FAIL (0x80004005) |  Qualquer  |  Diversos  |  Repita a operação. Se ele ainda falhar, ele pode ser um erro de plataforma e o aplicativo deve ser interrompido porque ele está em um estado inconsistente. |
+|  E_FAIL (0X80004005) |  Qualquer  |  Diversos  |  Repita a operação. Se ele ainda falhar, ele pode ser um erro de plataforma e o aplicativo deve ser interrompido porque ele está em um estado inconsistente. |
 
 ## <a name="other-considerations-for-file-states-that-might-lead-to-errors"></a>Outras considerações para estados de arquivo que podem levar a erros
 

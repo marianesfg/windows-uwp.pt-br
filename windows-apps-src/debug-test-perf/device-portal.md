@@ -131,7 +131,7 @@ A página de desempenho mostra gráficos em tempo real de informações de diagn
 Estas são as métricas disponíveis:
 - **CPU**: Porcentagem de utilização de CPU total disponível
 - **Memória**: Total, em uso, disponível e confirmado, paginável e não-paginável
-- **I/O**: Quantidades de dados de leitura e gravação
+- **E/S**: Quantidades de dados de leitura e gravação
 - **Rede**: Dados recebidos e enviados
 - **GPU**: Porcentagem de utilização total disponível do mecanismo de GPU
 

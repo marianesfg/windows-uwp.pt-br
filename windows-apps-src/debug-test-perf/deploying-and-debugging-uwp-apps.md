@@ -242,5 +242,5 @@ Um dos comandos mais populares no WinDbg é `!analyze -v`, que é usado para rec
 Para obter uma lista completa de todos os comandos WinDbg, consulte [Comandos do depurador](https://msdn.microsoft.com/library/ff540507).
 
 ## <a name="related-topics"></a>Tópicos relacionados
-- [Teste e as ferramentas de depuração para o gerenciamento de tempo de vida de processo (PLM)](testing-debugging-plm.md)
+- [Testando e depurando ferramentas para PLM (Gerenciamento do Tempo de Vida do Processo)](testing-debugging-plm.md)
 - [Depuração, teste e desempenho](index.md)

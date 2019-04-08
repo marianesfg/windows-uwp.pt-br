@@ -422,4 +422,4 @@ O projeto agora deve ser compilado. Execute o projeto e verifique se você pode 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criando componentes de tempo de execução do Windows em C++](creating-windows-runtime-components-in-cpp.md)
+* [Criando componentes do Windows Runtime no C++](creating-windows-runtime-components-in-cpp.md)

@@ -169,7 +169,7 @@ Você pode fazer com que a animação execute várias iterações. Por exemplo, 
 
 Para saber mais sobre os valores [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411) e a sintaxe XAML, consulte [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411).
 
-### <a name="fillbehaviorstop"></a>**FillBehavior="Stop"**
+### <a name="fillbehaviorstop"></a>**FillBehavior = "Stop"**
 
 Por padrão, quando uma animação termina, ela deixa o valor da propriedade como o **To** final ou o valor modificado por **By** mesmo depois que sua duração é ultrapassada. No entanto, se você definir o valor da propriedade [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) como [**FillBehavior.Stop**](https://msdn.microsoft.com/library/windows/apps/BR210306), o valor do valor animado será revertido para o valor anterior à aplicação da animação ou, mais precisamente, o valor efetivo atual conforme determinado pelo sistema de propriedades de dependência (para saber mais sobre essa distinção, consulte [Visão geral das propriedades de dependência](https://msdn.microsoft.com/library/windows/apps/Mt185583)).
 
@@ -239,7 +239,7 @@ Uma animação é independente quando tem qualquer uma destas características:
 
 -   A [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) da animação é de 0 segundo (veja o aviso)
 -   A animação direciona [**UIElement.Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)
--   A animação atinge um valor de subpropriedade desses [ **UIElement** ](https://msdn.microsoft.com/library/windows/apps/BR208911) propriedades: [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx), [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980), [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection.aspx), [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
+-   A animação atinge um valor de subpropriedade desses [ **UIElement** ](https://msdn.microsoft.com/library/windows/apps/BR208911) propriedades: [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx), [ **RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980), [ **projeção**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection.aspx), [ **Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
 -   A animação direciona [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/Hh759771) ou [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/Hh759772)
 -   A animação direciona um valor [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) e usa um [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962), animando seu [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color)
 -   A animação é um [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)
@@ -337,7 +337,7 @@ Até agora, mostramos as animações personalizadas que são animadas entre dois
 * [Animações storyboarded para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)
 * [Modelos de controle](https://msdn.microsoft.com/library/windows/apps/Mt210948)
 * [**storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)
-* [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/Hh759824)
+* [**TargetProperty**](https://msdn.microsoft.com/library/windows/apps/Hh759824)
  
 
  

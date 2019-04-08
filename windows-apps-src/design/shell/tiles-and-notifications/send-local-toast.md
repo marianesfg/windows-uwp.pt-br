@@ -61,7 +61,7 @@ Para entender completamente este tópico, os itens a seguir serão úteis...
 
 Recomendamos a instalação destes dois pacotes NuGet para o projeto. Nosso exemplo de código usará esses pacotes. No final do artigo, forneceremos os trechos de código "Baunilha" que não usam pacotes NuGet.
 
-* [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/): Gere cargas de notificação do sistema por meio de objetos em vez de XML bruto.
+* [Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/): Gere cargas de notificação do sistema por meio de objetos em vez de XML bruto.
 * [QueryString.NET](https://www.nuget.org/packages/QueryString.NET/): Gerar e analisar cadeias de caracteres de consulta comC#
 
 

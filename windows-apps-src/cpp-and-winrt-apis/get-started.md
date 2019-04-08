@@ -7,7 +7,7 @@ keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, introdução, p
 ms.localizationpriority: medium
 ms.openlocfilehash: c0d11a8718f61666d6285d8a1c91b48992044b22
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57602231"
@@ -162,12 +162,12 @@ Você agora pode compilar e vincular e adicionar C + + c++ /CLI WinRT código ao
 * [Método SyndicationClient::RetrieveFeedAsync](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
 * [Propriedade SyndicationFeed.Items](/uwp/api/windows.web.syndication.syndicationfeed.items)
 * [struct WinRT::hstring](/uwp/cpp-ref-for-winrt/hstring)
-* [winrt::hresult-error struct](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
+* [Erro WinRT::HRESULT struct](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
-* [Tratamento de erros com C + + c++ /CLI WinRT](error-handling.md)
-* [Interoperabilidade entre C + + c++ /CLI WinRT e C + + c++ /CX](interop-winrt-cx.md)
-* [Interoperabilidade entre C + + c++ /CLI WinRT e ABI](interop-winrt-abi.md)
-* [Mover para C + + c++ /CLI WinRT da C + + c++ /CLI CX](move-to-winrt-from-cx.md)
+* [Tratamento de erro com C++/WinRT](error-handling.md)
+* [Interoperabilidade entre C++/WinRT e C++/CX](interop-winrt-cx.md)
+* [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md)
+* [Mover do C++/CX para C++/WinRT](move-to-winrt-from-cx.md)
 * [Cadeia de caracteres de tratamento em C + + c++ /CLI WinRT](strings.md)

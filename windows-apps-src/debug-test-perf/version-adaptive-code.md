@@ -80,7 +80,7 @@ Este exemplo mostra como verificar se o valor de enumeração **ChatWithoutEmoji
 > [!TIP]
 > Quando você verificar uma API, use cadeias estáticas em vez de usar recursos de linguagem .NET. Caso contrário, o aplicativo pode tentar acessar um tipo que não esteja definido e falhar no tempo de execução.
 
-**C#**
+**EM C#**
 ```csharp
 // Create a TextBox control for sending messages 
 // and initialize an InputScope object.
@@ -125,7 +125,7 @@ No exemplo anterior, um controle TextBox é criada e todas as propriedades são 
          Loaded="messageBox_Loaded"/>
 ```
 
-**C#**
+**EM C#**
 ```csharp
 private void messageBox_Loaded(object sender, RoutedEventArgs e)
 {
@@ -198,7 +198,7 @@ O `MediaPlayerUserControl` encapsula um **MediaPlayerElement** e vários botões
 </UserControl>
 ```
 
-**C#**
+**EM C#**
 ```csharp
 using System;
 using Windows.Media.Core;
@@ -271,7 +271,7 @@ O `MediaElementUserControl` encapsula um controle **MediaElement**.
 
 No tempo de execução, você chama **ApiInformation.IsTypePresent** para verificar se há o MediaPlayerElement. Se ele estiver presente, você carrega `MediaPlayerUserControl`. Se não estiver, você carrega `MediaElementUserControl`.
 
-**C#**
+**EM C#**
 ```csharp
 public MainPage()
 {
@@ -307,7 +307,7 @@ Você deve usar gatilhos de estado para código adaptável somente quando tiver 
 
 A primeira etapa na configuração de um gatilho de estado extensível é subclassificar a classe [StateTriggerBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.statetriggerbase.aspx) para criar um gatilho personalizado que será acionado com base na presença de uma API. Este exemplo mostra um gatilho que é acionado se a presença da propriedade corresponder à variável `_isPresent` definida em XAML.
 
-**C#**
+**EM C#**
 ```csharp
 class IsPropertyPresentTrigger : StateTriggerBase
 {
@@ -375,7 +375,7 @@ O gatilho neste exemplo verifica se a propriedade está presente. Se a proprieda
 
 Este exemplo mostra como definir valores de enumeração diferentes com base em se um valor estiver presente. Ele usa um gatilho de estado personalizado para obter o mesmo resultado conforme o exemplo anterior de chat. Neste exemplo, você usa o novo escopo de entrada ChatWithoutEmoji se o dispositivo estiver executando o Windows 10, versão 1607. Caso contrário, o escopo de entrada **Chat** é usado. Os estados visuais que usam esse gatilho são configurados em estilo *if-else* em que o escopo de entrada é escolhido com base na presença do novo valor de enumeração.
 
-**C#**
+**EM C#**
 ```csharp
 class IsEnumPresentTrigger : StateTriggerBase
 {

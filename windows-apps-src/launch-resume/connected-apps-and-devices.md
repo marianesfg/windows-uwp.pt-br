@@ -33,7 +33,7 @@ Para obter mais informações gerais sobre o Project Rome, incluindo recursos de
 |-------|-------------|
 | [Iniciar um aplicativo em um dispositivo remoto](launch-a-remote-app.md) | Saiba como iniciar um aplicativo em um dispositivo remoto. Este tópico aborda os casos de uso mais simples e a configuração preliminar.  |
 | [Descobrir dispositivos remotos](discover-remote-devices.md)  | Saiba como descobrir dispositivos aos quais você pode se conectar. |
-| [Se comunicar com um serviço de aplicativo remoto](communicate-with-a-remote-app-service.md) | Saiba como interagir com um app em um dispositivo remoto. |
+| [Comunicar-se com um serviço de aplicativo remoto](communicate-with-a-remote-app-service.md) | Saiba como interagir com um app em um dispositivo remoto. |
 | [Conectar dispositivos por meio de sessões remotas](remote-sessions.md) | Crie experiências compartilhadas em vários dispositivos ingressando-os em uma sessão remota. |
-| [Continuar a atividade do usuário, mesmo entre dispositivos](useractivities.md)| Ajude os usuários que estavam fazendo em seu aplicativo, até mesmo em vários dispositivos de retomar.|
+| [Continue a atividade do usuário, mesmo entre dispositivos](useractivities.md)| Ajude os usuários que estavam fazendo em seu aplicativo, até mesmo em vários dispositivos de retomar.|
 | [Práticas recomendadas de atividades de usuário](useractivities-best-practices.md)| Aprenda as práticas recomendadas para criação e atualização de atividades do usuário.|

@@ -100,5 +100,5 @@ Adicione dependências às DLLs e WINMDs colocando-as na sua pasta**Ativos do Un
 ***ScrapyardPhoenix (Windows Universal)*** é o projeto ao qual você adicionaria uma referência, por exemplo, o SDK do Xbox Live.
 
 ## <a name="see-also"></a>Consulte também
-- [Trazendo existente de jogos para Xbox](development-lanes-landing.md)
+- [Trazendo jogos existentes para o Xbox](development-lanes-landing.md)
 - [UWP no Xbox One](index.md)

@@ -37,7 +37,7 @@ Lₚ = Lₚ \* vMatrix
 
 A direção para a luz no espaço da câmera para uma luz direcional é calculada multiplicando a direção da fonte de luz pela matriz de visualização, normalizando e anulando o resultado.
 
-L<sub>dir</sub> = -norm(L<sub>dir</sub> \* wvMatrix)
+L<sub>dir</sub> = - norm (L<sub>dir</sub> \* wvMatrix)
 
 Para um ponto de luz e um destaque, a direção à luz é calculada da seguinte maneira:
 

@@ -150,7 +150,7 @@ Quando uma chave de recurso existe como parte de qualquer uso **{ThemeResource}*
 
 * [Referências de recurso de ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
 * [Recursos de tema do XAML](https://msdn.microsoft.com/library/windows/apps/mt187274)
-* [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
+* [**Dicionário de recurso**](https://msdn.microsoft.com/library/windows/apps/br208794)
 * [atributo X:Key](x-key-attribute.md)
  
 

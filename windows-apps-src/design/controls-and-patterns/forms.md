@@ -118,9 +118,9 @@ Controle | Uso | Exemplo
 ### <a name="selection"></a>Seleção
 Controle | Uso | Exemplo
 - | - | - 
-| [CheckBox](checkbox.md) | Marque ou desmarque uma ou mais itens de ação | Concordar com os termos e condições, adicionar itens opcionais, selecione todas as alternativas aplicáveis
-[RadioButton](radio-button.md) | Selecione uma opção de duas ou mais opções | Escolha tipo de envio de método, etc.
-[ToggleSwitch](toggles.md) | Escolha uma das duas opções mutuamente exclusivas | On/off
+| [Caixa de seleção](checkbox.md) | Marque ou desmarque uma ou mais itens de ação | Concordar com os termos e condições, adicionar itens opcionais, selecione todas as alternativas aplicáveis
+[Botão de opção](radio-button.md) | Selecione uma opção de duas ou mais opções | Escolha tipo de envio de método, etc.
+[ToggleSwitch](toggles.md) | Escolha uma das duas opções mutuamente exclusivas | Ativar/desativar
 
 > **Observação**: Se houver cinco ou mais itens de seleção, use um controle de lista.
 

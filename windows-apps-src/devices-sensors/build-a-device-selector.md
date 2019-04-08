@@ -44,7 +44,7 @@ A tabela a seguir lista os operadores AQS e os tipos de parâmetros a que dão s
 
 | Operador                       | Tipos com suporte                                                             |
 |--------------------------------|-----------------------------------------------------------------------------|
-| **COP\_EQUAL**                 | Cadeia de caracteres, booliano, GUID, UInt16, UInt32                                       |
+| **COP\_IGUAL**                 | Cadeia de caracteres, booliano, GUID, UInt16, UInt32                                       |
 | **COP\_NOTEQUAL**              | Cadeia de caracteres, booliano, GUID, UInt16, UInt32                                       |
 | **COP\_LESSTHAN**              | UInt16, UInt32                                                              |
 | **COP\_GREATERTHAN**           | UInt16, UInt32                                                              |
@@ -52,12 +52,12 @@ A tabela a seguir lista os operadores AQS e os tipos de parâmetros a que dão s
 | **COP\_GREATERTHANOREQUAL**    | UInt16, UInt32                                                              |
 | **COP\_VALOR\_CONTAINS**       | Cadeia de caracteres, matriz de cadeia de caracteres, matriz booliana, matriz GUID, matriz UInt16, matriz UInt32 |
 | **COP\_VALOR\_NOTCONTAINS**    | Cadeia de caracteres, matriz de cadeia de caracteres, matriz booliana, matriz GUID, matriz UInt16, matriz UInt32 |
-| **COP\_VALUE\_STARTSWITH**     | String                                                                      |
+| **COP\_VALOR\_STARTSWITH**     | String                                                                      |
 | **COP\_VALOR\_ENDSWITH**       | String                                                                      |
 | **COP\_DOSWILDCARDS**          | Sem suporte                                                               |
-| **COP\_WORD\_EQUAL**           | Sem suporte                                                               |
+| **COP\_WORD\_IGUAL**           | Sem suporte                                                               |
 | **COP\_WORD\_STARTSWITH**      | Sem suporte                                                               |
-| **COP\_APPLICATION\_SPECIFIC** | Sem suporte                                                               |
+| **COP\_APLICATIVO\_ESPECÍFICO** | Sem suporte                                                               |
 
 
 > **Dica**  você pode especificar **nulo** para **COP\_igual** ou **COP\_NOTEQUAL**. Isso se traduz em uma propriedade sem valor ou cujo valor não existe. No AQS, você deve especificar **nulo** com o uso de colchetes vazios \[ \].

@@ -7,7 +7,7 @@ keywords: windows 10, uwp, ExtendedJsonData, produtos da Store, esquema
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f51f0fffae3fa8e9a54214f78aa93fe39eab080
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57656101"
@@ -71,7 +71,7 @@ O esquema a seguir descreve a cadeia de caracteres formatada em JSON retornada p
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Compras no aplicativo e avaliação](in-app-purchases-and-trials.md)
+* [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md)
 * [Obter informações sobre produtos para os aplicativos e complementos](get-product-info-for-apps-and-add-ons.md)
 * [Obter informações de licença para aplicativos e complementos](get-license-info-for-apps-and-add-ons.md)
 * [Habilitar compras no aplicativo de aplicativos e complementos](enable-in-app-purchases-of-apps-and-add-ons.md)

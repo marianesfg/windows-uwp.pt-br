@@ -122,7 +122,7 @@ O corpo da solicitação e resposta desses métodos contêm os campos a seguir. 
 |  width   |  número inteiro   |  A largura do criativo.     |  Não    |     |    Sim   |       
 |  landingUrl   |  cadeia de caracteres   |  Se você estiver usando uma campanha de rastreamento de serviço como Kochava, AppsFlyer ou Tune para medir análises de instalação do seu aplicativo, atribua a URL de rastreamento nesse campo quando você chama o método POST (se especificado, esse valor deve ser um URI válido). Se você não estiver usando uma serviço de rastreamento de campanha, ao omitir esse valor quando você chama o método POST (nesse caso, a URL será criada automaticamente).   |  Não    |     |   Sim    |       
 |  format   |  cadeia de caracteres   |   O formato da publicidade. Atualmente, o único valor com suporte é **Faixa de notificação**.    |   Não    |  Faixa   |  Não     |       
-|  imageAttributes   | [ImageAttributes](#image-attributes)    |   Fornece atributos para o criativo.     |   Não    |      |   Sim    |       
+|  imageAttributes   | [imageAttributes](#image-attributes)    |   Fornece atributos para o criativo.     |   Não    |      |   Sim    |       
 |  storeProductId   |  cadeia de caracteres   |   A [ID da loja](in-app-purchases-and-trials.md#store-ids) do app ao qual a campanha publicitária está associada. Um exemplo de ID da loja para um produto é 9nblggh42cfd.    |   Não    |    |  Não     |   |  
 
 

@@ -153,7 +153,7 @@ Essa propriedade obtém os dados de agendamento recuperados do servidor de anún
 Esse evento é acionado quando a reprodução do anúncio atinge pontos de verificação de quartil. O segundo parâmetro do manipulador de eventos (*eventInfo*) é um objeto JSON com os membros a seguir:
 
 * **progresso**: O status de reprodução do ad (um dos **MediaProgress** valores de enumeração definidos no AdScheduler.js).
-* **clip**: O clipe de vídeo que está sendo reproduzido. Essa objeto não deve ser utilizado em seu código.
+* **Clip**: O clipe de vídeo que está sendo reproduzido. Essa objeto não deve ser utilizado em seu código.
 * **adPackage**: Um objeto que representa a parte da carga do ad que corresponde ao ad que está sendo reproduzido. Essa objeto não deve ser utilizado em seu código.
 
 ### <a name="onallcomplete"></a>onAllComplete  

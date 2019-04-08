@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57601441"
 ---
-# <a name="getting-started-creating-a-project"></a>Guia de Introdução: Criando um projeto
+# <a name="getting-started-creating-a-project"></a>Introdução: Criando um projeto
 
 ## <a name="creating-a-project"></a>Criando um projeto
 

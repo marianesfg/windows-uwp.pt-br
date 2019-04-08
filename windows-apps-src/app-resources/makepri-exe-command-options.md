@@ -427,7 +427,7 @@ Você usa a opção de opções de índice (/ e/s) com `new`, `resourcepack`, e 
 **Opções de** é uma lista separada por vírgulas composta das seguintes opções.
 
 - + /-HiddenFiles(hf). (+) De índice ou ignorar (-) arquivos e pastas ocultos.
-- +/-LinkedFiles(lf). (+) De índice ou ignorar (-) vinculado a arquivos e pastas.
+- + /-LinkedFiles(lf). (+) De índice ou ignorar (-) vinculado a arquivos e pastas.
 
 ## <a name="47mappingfilemf-option"></a>Opção &#47;MappingFile(mf)
 

@@ -20,7 +20,7 @@ ms.locfileid: "57638521"
 
 Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma Universal do Windows (UWP) e os recursos e atributos.
 
-> **APIs importantes**: [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
+> **APIs importantes**: [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383), [ **Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 
 ## <a name="retrieve-mouse-properties"></a>Recuperar as propriedades do mouse
 

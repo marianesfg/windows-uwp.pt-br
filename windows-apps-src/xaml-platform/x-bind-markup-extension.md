@@ -50,7 +50,7 @@ Os objetos de associação criados por **{x:Bind}** e **{Binding}** são em gran
 |------|-------------|
 | _propertyPath_ | Uma cadeia de caracteres que especifica o caminho de propriedade para a associação. Mais informações estão na seção [caminho de propriedade](#property-path) abaixo. |
 | _bindingProperties_ |
-| _propName_=_value_\[, _propName_=_value_\]* | Uma ou mais propriedades de associação que são especificadas usando uma sintaxe de par nome/valor. |
+| _propName_=_valor_\[, _propName_=_valor_\]* | Uma ou mais propriedades de associação que são especificadas usando uma sintaxe de par nome/valor. |
 | _propName_ | O nome da cadeia de caracteres da propriedade a ser definida no objeto Binding. Por exemplo, "Converter". |
 | _Valor_ | O valor a se definir a propriedade. A sintaxe do argumento depende da propriedade que está sendo definida. Veja um exemplo de uso de _propName_=_value_ em que o valor é uma extensão de marcação: `Converter={StaticResource myConverterClass}`. Para obter mais informações, consulte a seção [Propriedades que você pode definir com {x: Bind}](#properties-that-you-can-set-with-xbind) a seguir. |
 
@@ -135,11 +135,11 @@ Essas propriedades funcionam da mesma forma que as propriedades da classe [**Bin
 
 | Propriedade | Descrição |
 |----------|-------------|
-| **Path** | Consulte a seção [Caminho de propriedade](#property-path) acima. |
+| **caminho** | Consulte a seção [Caminho de propriedade](#property-path) acima. |
 | **Conversor** | Especifica o objeto de conversor que é chamado pelo mecanismo de associação. O conversor pode ser definido em XAML, mas somente se você se referir a uma instância de objeto atribuída em uma referência [{StaticResource} markup extension](staticresource-markup-extension.md) ao objeto no dicionário de recursos. |
 | **ConverterLanguage** | Especifica a cultura a ser usada pelo conversor. (Se você estiver definindo **ConverterLanguage** você também deve definir **conversor**.) A cultura é definida como um identificador com base em padrões. Para saber mais, veja [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880). |
-| **ConverterParameter** | Especifica o parâmetro do conversor que pode ser usado na lógica de conversão. (Se você estiver definindo **ConverterParameter** você também deve definir **conversor**.) A maioria dos conversores usar lógica simples que obtém todas as informações de que precisam de valor transmitido para converter, e não precisa de uma **ConverterParameter** valor. O parâmetro **ConverterParameter** é para implementações moderadamente avançadas que têm mais de uma lógica que controla o que for passado em **ConverterParameter**. Você também pode escrever um conversor que usa valores diferentes de cadeias de caracteres, mas isso é incomum; veja Comentários em [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827) para saber mais. |
-| **FallbackValue** | Especifica um valor a ser exibido quando a fonte ou o caminho não podem ser resolvidos. |
+| **converterParameter** | Especifica o parâmetro do conversor que pode ser usado na lógica de conversão. (Se você estiver definindo **ConverterParameter** você também deve definir **conversor**.) A maioria dos conversores usar lógica simples que obtém todas as informações de que precisam de valor transmitido para converter, e não precisa de uma **ConverterParameter** valor. O parâmetro **ConverterParameter** é para implementações moderadamente avançadas que têm mais de uma lógica que controla o que for passado em **ConverterParameter**. Você também pode escrever um conversor que usa valores diferentes de cadeias de caracteres, mas isso é incomum; veja Comentários em [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827) para saber mais. |
+| **fallbackValue** | Especifica um valor a ser exibido quando a fonte ou o caminho não podem ser resolvidos. |
 | **Modo** | Especifica o modo de associação, como uma dessas cadeias de caracteres: "OneTime", "OneWay" ou "TwoWay". O padrão é "OneTime". Observe que isso é diferente do padrão para **{Binding}**, que é "OneWay" na maioria dos casos. |
 | **TargetNullValue** | Especifica um valor a ser exibido quando o valor de origem é solucionado, mas é explicitamente **null**. |
 | **BindBack** | Especifica uma função a ser usada na direção inversa de uma associação bidirecional. |

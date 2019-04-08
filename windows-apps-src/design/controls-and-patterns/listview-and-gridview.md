@@ -14,7 +14,7 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 4efbdaef0fbcbe076133be1c491f7ed173c01257
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57653571"
@@ -48,7 +48,7 @@ Para obter uma comparação mais detalhada e orientação sobre qual controle us
 <td>
     <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abrir o aplicativo e ver o <a href="xamlcontrolsgallery:/item/ListView">ListView</a> ou <a href="xamlcontrolsgallery:/item/GridView">GridView</a> em ação.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -82,7 +82,7 @@ Veja a seguir uma exibição de lista com itens definidos embutidos em XAML. Qua
 
 Veja a seguir a exibição de lista criada em código. A lista resultante é igual à criada anteriormente em XAML.
 
-**C#**
+**EM C#**
 ```csharp
 // Create a new ListView and add content. 
 ListView listView1 = new ListView(); 
@@ -106,7 +106,7 @@ Geralmente, você usa uma exibição de lista para exibir dados de uma fonte, co
 
 Aqui, o ItemsSource da exibição de lista está definido em código diretamente como uma instância de uma coleção.
 
-**C#**
+**EM C#**
 ```csharp 
 // Instead of hard coded items, the data could be pulled 
 // asynchronously from a database or the internet.
@@ -134,7 +134,7 @@ Aqui, o ItemsSource está associado a uma propriedade pública denominada `Items
 <ListView x:Name="itemListView" ItemsSource="{x:Bind Items}"/>
 ```
 
-**C#**
+**EM C#**
 ```csharp
 private ObservableCollection<string> _items = new ObservableCollection<string>();
 
@@ -307,7 +307,7 @@ Você pode definir essas propriedades em XAML ou em código, conforme mostrado a
 <GridView x:Name="myGridView" SelectionMode="None" IsItemClickEnabled="True"/> 
 ```
 
-**C#**
+**EM C#**
 ```csharp
 myListView.SelectionMode = ListViewSelectionMode.Multiple; 
 
@@ -382,7 +382,7 @@ Este exemplo mostra como manipular o evento **SelectionChanged** e acessar as di
 </StackPanel> 
 ```
 
-**C#**
+**EM C#**
 ```csharp
 private void ListView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
 {
@@ -429,7 +429,7 @@ Veja a seguir uma exibição de lista com itens clicáveis. O código no manipul
 </ListView>
 ```
 
-**C#**
+**EM C#**
 ```csharp
 private void ListView1_ItemClick(object sender, ItemClickEventArgs e)
 {
@@ -490,7 +490,7 @@ Você pode selecionar todos os itens de uma coleção chamando o método SelectA
 </StackPanel>
 ```
 
-**C#**
+**EM C#**
 ```csharp
 private void SelectAllButton_Click(object sender, RoutedEventArgs e)
 {

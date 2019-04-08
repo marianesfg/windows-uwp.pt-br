@@ -188,7 +188,7 @@ O idioma inglês merece consideração especial. Se um app adicionar localizaç�
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Como o sistema de gerenciamento de recursos corresponde e escolhe os recursos](how-rms-matches-and-chooses-resources.md)
+* [Como o Sistema de Gerenciamento de Recursos faz a correspondência dos recursos e os escolhe](how-rms-matches-and-chooses-resources.md)
 * [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Entender os idiomas de perfil do usuário e linguagens de manifesto do aplicativo](../design/globalizing/manage-language-and-region.md)
 * [Composição de regiões geográficas de (continental) macro, subpropriedades de regiões geográficas e agrupamentos econômicos e outros selecionados](https://go.microsoft.com/fwlink/p/?LinkId=247929)

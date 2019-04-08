@@ -34,7 +34,7 @@ O tronco de exibição é definido por fov (campo de visão) e por distâncias d
 
 Neste diagrama, a variável D é a distância da câmera até a origem do espaço que foi definido na última parte do pipeline de geometria - a transformação de exibição. Este é o espaço em torno do qual você organiza os limites de seu tronco de exibição. Para obter informações sobre como essa variável D é usada para criar a matriz de projeção, consulte a [Transformação de projeção](projection-transform.md)
 
-## <a name="span-idviewportrectanglespanspan-idviewportrectanglespanspan-idviewportrectanglespanviewport-rectangle"></a><span id="Viewport_Rectangle"></span><span id="viewport_rectangle"></span><span id="VIEWPORT_RECTANGLE"></span>Viewport Rectangle
+## <a name="span-idviewportrectanglespanspan-idviewportrectanglespanspan-idviewportrectanglespanviewport-rectangle"></a><span id="Viewport_Rectangle"></span><span id="viewport_rectangle"></span><span id="VIEWPORT_RECTANGLE"></span>Retângulo do visor
 
 
 Uma estrutura de visor contém quatro membros (X, Y, largura, altura) que definem a área da superfície do destino de renderização na qual uma cena será renderizada. Esses valores correspondem ao retângulo de destino ou retângulo do visor, conforme mostrado no diagrama a seguir.
@@ -82,7 +82,7 @@ Onde: x, y, z e w representam as coordenadas de vértice depois que a transforma
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Sistemas de coordenadas e geometry](coordinate-systems-and-geometry.md)
+[Sistemas de coordenadas e geometria](coordinate-systems-and-geometry.md)
 
  
 

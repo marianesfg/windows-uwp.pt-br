@@ -8,7 +8,7 @@ keywords: o Windows 10, uwp, tarefas em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: af8e45e13eb89185e346c3c8e8cd5303da399471
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57658731"
@@ -91,14 +91,14 @@ Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tip
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
-* [Criar e registrar uma tarefa em segundo plano do out-of-process](create-and-register-a-background-task.md)
-* [Declare as tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
+* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
-* [Lidar com uma tarefa em segundo plano foi cancelada](handle-a-cancelled-background-task.md)
-* [Monitorar o progresso da tarefa em segundo plano e conclusão](monitor-background-task-progress-and-completion.md)
+* [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
-* [Defina as condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
+* [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
 * [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)

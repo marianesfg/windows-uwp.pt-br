@@ -28,6 +28,6 @@ Para saber como transformar seu console em um kit de desenvolvimento e como impl
 
 
 ## <a name="see-also"></a>Consulte também
-- [Trazendo existente de jogos para Xbox](development-lanes-landing.md)
+- [Trazendo jogos existentes para o Xbox](development-lanes-landing.md)
 - [UWP no Xbox One](index.md)
 

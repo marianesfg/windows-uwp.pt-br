@@ -43,7 +43,7 @@ O Marble Maze oferece várias maneiras de um usuário interagir com o tabuleiro 
 
 
 -   Windows 10 Creators Update
--   [Microsoft Visual Studio 2017](https://www.visualstudio.com/downloads/)
+-   [Microsoft Visual Studio 2017](https://www.visualstudio.com/downloads/)
 -   Conhecimento em programação C++
 -   Familiaridade com DirectX e terminologia do DirectX
 -   Conhecimentos básicos de COM
