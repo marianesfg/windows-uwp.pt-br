@@ -26,7 +26,7 @@ Os modos de exibição de acesso não ordenados são um pouco mais dispendiosos 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Modos de exibição](views.md)
+[Exibições](views.md)
 
  
 

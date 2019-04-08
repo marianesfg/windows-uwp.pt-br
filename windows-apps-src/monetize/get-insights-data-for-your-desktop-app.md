@@ -77,7 +77,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 |---------------------|--------|-------------------------------------------|
 | applicationId       | cadeia de caracteres | A ID do produto do aplicativo da área de trabalho para o qual você recuperou dados do insights.     |
 | insightDate                | cadeia de caracteres | A data em que nós identificamos que a alteração em uma métrica específica. Essa data representa o fim da semana em que foi detectado um aumento significativo ou diminuir em uma métrica em comparação com a semana antes disso. |
-| dataType     | cadeia de caracteres | Uma cadeia de caracteres que especifica a área de análise geral que informa a esse insight. Atualmente, este método só aceita **integridade**.    |
+| Tipo de dados     | cadeia de caracteres | Uma cadeia de caracteres que especifica a área de análise geral que informa a esse insight. Atualmente, este método só aceita **integridade**.    |
 | insightDetail          | matriz | Um ou mais [InsightDetail valores](#insightdetail-values) que representam os detalhes para o insight atual.    |
 
 

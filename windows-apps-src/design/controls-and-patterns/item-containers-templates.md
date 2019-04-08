@@ -14,7 +14,7 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1dcf0176e20e498f8c6744a542010b5197689b8a
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57639931"
@@ -86,7 +86,7 @@ Em seguida, preenchemos uma **List** com um objeto `NamedColor` para cada cor no
 
 Este é o código para definir a classe e popular a lista `NamedColors`.
 
-**C#**
+**EM C#**
 ```csharp
 using System.Collections.Generic;
 using System.Linq;
@@ -430,13 +430,13 @@ Esta tabela mostra os estados visuais comum e de seleção para ListViewItem e o
 
 Nome do estado/pincel | Estilo embutido | Estilo de sobreposição
 ------------|--------------|--------------
-<b>Normal</b><ul><li><b>CheckBoxBrush="Red"</b></li></ul> | ![Seleção normal de itens embutidos](images/listview-item-normal.png) | ![Seleção normal de itens sobrepostos](images/gridview-item-normal.png)
-<b>PointerOver</b><ul><li><b>PointerOverForeground="DarkOrange"</b></li><li><b>PointerOverBackground="MistyRose"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![Ponteiro sobre seleção de itens embutidos](images/listview-item-pointerover.png) | ![Ponteiro sobre seleção de itens sobrepostos](images/gridview-item-pointerover.png)
-<b>Pressionado</b><ul><li><b>PressedBackground="LightCyan"</b></li><li>PointerOverForeground="DarkOrange"</li><li>CheckBoxBrush="Red"</li></ul> | ![Seleção de itens embutidos pressionados](images/listview-item-pressed.png) | ![Seleção de itens sobrepostos pressionados](images/gridview-item-pressed.png)
-<b>Selected</b><ul><li><b>SelectedForeground="Navy"</b></li><li><b>SelectedBackground="Khaki"</b></li><li><b>CheckBrush="Green"</b></li><li>CheckBoxBrush="Red" (somente embutido)</li></ul> | ![Seleção de itens embutidos selecionados](images/listview-item-selected.png) | ![Seleção de itens sobrepostos selecionados](images/gridview-item-selected.png)
-<b>PointerOverSelected</b><ul><li><b>SelectedPointerOverBackground="Lavender"</b></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki" (somente sobreposição)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red" (somente embutido)</li></ul> | ![Ponteiro sobre seleção de itens embutidos selecionados](images/listview-item-pointeroverselected.png) | ![Ponteiro sobre seleção de itens sobrepostos selecionados](images/gridview-item-pointeroverselected.png)
-<b>PressedSelected</b><ul><li><b>SelectedPressedBackground="MediumTurquoise"</b></li></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki" (somente sobreposição)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red" (somente embutido)</li></ul> | ![Seleção de itens embutidos pressionados selecionados](images/listview-item-pressedselected.png) | ![Seleção de itens sobrepostos pressionados selecionados](images/gridview-item-pressedselected.png)
-<b>Com foco</b><ul><li><b>FocusBorderBrush="Crimson"</b></li><li><b>FocusSecondaryBorderBrush="Gold"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![Seleção de itens embutidos focalizados](images/listview-item-focused.png) | ![Seleção de itens sobrepostos focalizados](images/gridview-item-focused.png)
+<b>Normal</b><ul><li><b>CheckBoxBrush = "Vermelho"</b></li></ul> | ![Seleção normal de itens embutidos](images/listview-item-normal.png) | ![Seleção normal de itens sobrepostos](images/gridview-item-normal.png)
+<b>PointerOver</b><ul><li><b>PointerOverForeground = "DarkOrange"</b></li><li><b>PointerOverBackground = "MistyRose"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![Ponteiro sobre seleção de itens embutidos](images/listview-item-pointerover.png) | ![Ponteiro sobre seleção de itens sobrepostos](images/gridview-item-pointerover.png)
+<b>Pressionado</b><ul><li><b>PressedBackground = "LightCyan"</b></li><li>PointerOverForeground="DarkOrange"</li><li>CheckBoxBrush="Red"</li></ul> | ![Seleção de itens embutidos pressionados](images/listview-item-pressed.png) | ![Seleção de itens sobrepostos pressionados](images/gridview-item-pressed.png)
+<b>Selecionado</b><ul><li><b>SelectedForeground = "Marinha"</b></li><li><b>SelectedBackground = "Cáqui"</b></li><li><b>CheckBrush = "Green"</b></li><li>CheckBoxBrush="Red" (somente embutido)</li></ul> | ![Seleção de itens embutidos selecionados](images/listview-item-selected.png) | ![Seleção de itens sobrepostos selecionados](images/gridview-item-selected.png)
+<b>PointerOverSelected</b><ul><li><b>SelectedPointerOverBackground = "Lavanda"</b></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki" (somente sobreposição)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red" (somente embutido)</li></ul> | ![Ponteiro sobre seleção de itens embutidos selecionados](images/listview-item-pointeroverselected.png) | ![Ponteiro sobre seleção de itens sobrepostos selecionados](images/gridview-item-pointeroverselected.png)
+<b>PressedSelected</b><ul><li><b>SelectedPressedBackground = "MediumTurquoise"</b></li></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki" (somente sobreposição)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red" (somente embutido)</li></ul> | ![Seleção de itens embutidos pressionados selecionados](images/listview-item-pressedselected.png) | ![Seleção de itens sobrepostos pressionados selecionados](images/gridview-item-pressedselected.png)
+<b>Com foco</b><ul><li><b>FocusBorderBrush = "Crimson"</b></li><li><b>FocusSecondaryBorderBrush = "Ouro"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![Seleção de itens embutidos focalizados](images/listview-item-focused.png) | ![Seleção de itens sobrepostos focalizados](images/gridview-item-focused.png)
 
 ListViewItemPresenter tem outras propriedades de pincel para estados de espaços reservados de dados e arrastar. Se você usa o carregamento incremental ou arrastar e soltar em sua exibição de lista, considere se é necessário também modificar essas propriedades adicionais do pincel. Veja a classe ListViewItemPresenter para obter a lista completa das propriedades que você pode modificar. 
 

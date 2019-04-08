@@ -1,5 +1,5 @@
 ---
-description: C + + c++ /CLI WinRT pode ajudá-lo a criar componentes COM clássicos, exatamente como ele ajuda a criar classes de tempo de execução do Windows.
+description: C++/WinRT pode ajudá-lo a criar componentes COM clássicos, exatamente como ajuda a criar classes no Windows Runtime.
 title: Criar componentes COM com C++/WinRT
 ms.date: 09/06/2018
 ms.topic: article
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: e6b77f8be6c75070336ad48f0c6471fc0a824a4c
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57616561"
@@ -530,6 +530,6 @@ struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows:
 * [WinRT::Implements struct modelo](/uwp/cpp-ref-for-winrt/implements)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Criar APIs com C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
-* [Consumir componentes COM C + + c++ /CLI WinRT](consume-com.md)
+* [Criar APIs com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
+* [Consumir componentes COM com C++/WinRT](consume-com.md)
 * [Enviar uma notificação do sistema local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

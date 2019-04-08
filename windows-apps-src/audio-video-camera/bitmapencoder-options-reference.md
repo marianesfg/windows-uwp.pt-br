@@ -37,7 +37,7 @@ Esse artigo lista as opções de codificação que podem ser usadas com [**Bitma
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar, editar e salvar imagens de bitmap](imaging.md)
-* [Codecs com suporte](supported-codecs.md)
+* [Codecs compatíveis](supported-codecs.md)
 
  
 

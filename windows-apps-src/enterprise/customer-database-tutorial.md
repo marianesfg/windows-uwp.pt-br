@@ -1,5 +1,5 @@
 ---
-title: Criar um aplicativo de banco de dados do cliente
+title: Criar um aplicativo de banco de dados de clientes
 description: Criar um aplicativo de banco de dados do cliente e saiba como implementar funções de aplicativo empresarial básico.
 keywords: cliente de tutorial, Enterprise, dados, criar autenticação de exclusão, REST, atualize, leia
 ms.date: 05/07/2018
@@ -7,12 +7,12 @@ ms.topic: article
 ms.localizationpriority: med
 ms.openlocfilehash: 9c09e0fb73e42fd8a3d0c70bbb5396be32624387
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57623241"
 ---
-# <a name="tutorial-create-a-customer-database-application"></a>Tutorial: Criar um aplicativo de banco de dados do cliente
+# <a name="tutorial-create-a-customer-database-application"></a>Tutorial: Criar um aplicativo de banco de dados de clientes
 
 Este tutorial cria um aplicativo simples para gerenciar uma lista de clientes. Dessa forma, ele apresenta uma seleção de conceitos básicos para aplicativos empresariais na UWP. Você aprenderá a:
 

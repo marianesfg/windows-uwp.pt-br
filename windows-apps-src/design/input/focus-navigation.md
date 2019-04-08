@@ -125,7 +125,7 @@ Neste exemplo, o [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml
 </Grid>
 ```
 
-### <a name="enabledhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxyfocuskeyboardnavigationmode"></a>[Enabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
+### <a name="enabledhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxyfocuskeyboardnavigationmode"></a>[habilitado](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
 
 Defina **XYFocusKeyboardNavigation** como **Habilitado** para oferecer suporte à navegação direcional 2D para um controle e cada um dos seus objetos filho [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement).
 

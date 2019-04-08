@@ -96,7 +96,7 @@ A tabela a seguir descreve as opções de **WinAppDeployCmd.exe**.
 
 A tabela a seguir descreve as opções de **WinAppDeployCmd.exe**.
 
-| **Argument**           | **Descrição**                                                              |
+| **argumento**           | **Descrição**                                                              |
 |------------------------|------------------------------------------------------------------------------|
 | &lt;x&gt;              | Tempo limite em segundos. (O padrão é 10)                                          |
 | &lt;address&gt;        | Endereço IP ou identificador exclusivo do dispositivo de destino.                        |

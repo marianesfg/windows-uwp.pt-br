@@ -97,9 +97,9 @@ Você precisará de todas as informações obrigatórias para pelo menos um dos 
 | **Logotipos da Store**               | Recomendado; necessário em algumas versões do sistema operacional | [Logotipos da Store](app-screenshots-and-images.md#store-logos)             |
 | **Trailers**                  | Opcional                                    | [Trailers](app-screenshots-and-images.md#trailers)                | 
 | **Imagem do Windows 10 e Xbox (arte de Super hero 16: 9)**     | Recomendações        | [Windows 10 e Xbox imagem (arte de Super hero 16: 9)
-](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
 | **Imagens do Xbox**     | Necessário para a exibição correta, se você publicar em Xbox        | [Xbox imagens
-](app-screenshots-and-images.md#xbox-images) |
+] (#xbox – imagens de aplicativo capturas de tela e images.md) |
 | **Campos complementares**  | Opcional                                    | [Campos complementares](create-app-store-listings.md#supplemental-fields) 
 | **Termos de pesquisa**              | Opcional                                    | [Termos de pesquisa](create-app-store-listings.md#search-terms)         |
 | **Informações de direitos autorais e marcas** | Opcional                                 | [Informações de direitos autorais e marcas](create-app-store-listings.md#copyright-and-trademark-info) |

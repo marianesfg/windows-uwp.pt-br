@@ -29,7 +29,7 @@ Nas seções a seguir, você aprenderá o que pode fazer para preparar e testar 
 1. Navegue até **Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Calendars\Japanese\Eras**.
 2. Selecione **Editar > Novo > Valor da sequência** e nomeie como **2019 05 01**.
 3. Clique com o botão direito na chave e selecione **Modificar**.
-4. No **dados do valor** , insira **?？\_？\_??????\_?** (você pode copiar e colar daqui para facilitar).
+4. No **dados do valor** , insira **??\_?\_?????? \_?** (você pode copiar e colar daqui para facilitar).
 
 Consulte [Gerenciamento de eras para o calendário japonês](https://docs.microsoft.com/windows/desktop/Intl/era-handling-for-the-japanese-calendar) para ler mais sobre o formato dessas chaves de registro.
 
@@ -69,7 +69,7 @@ Para testar se o seu aplicativo funciona com a nova era, é necessário avançar
 
 ## <a name="test-your-application"></a>Teste seu aplicativo
 
-Agora, teste como seu aplicativo lida com a nova era. Verifique os lugares em que a data é exibida, como carimbos de data e hora e seletores de data. Certifique-se de que a era está correta antes 1 de maio de 2019 (Heisei, 平成) de propriedades e depois (?？).
+Agora, teste como seu aplicativo lida com a nova era. Verifique os lugares em que a data é exibida, como carimbos de data e hora e seletores de data. Certifique-se de que a era está correta antes 1 de maio de 2019 (Heisei, 平成) de propriedades e depois (??).
 
 ### <a name="gannen-"></a>*Gannen* (元年)
 
@@ -121,12 +121,12 @@ As seguintes APIs serão afetadas:
 ### <a name="win32"></a>Win32
 
 * [cabeçalho datetimeapi.h](https://docs.microsoft.com/windows/desktop/api/datetimeapi/)
-    * [GetDateFormatA function](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformata)
+    * [Função GetDateFormatA](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformata)
     * [Função GetDateFormatEx](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformatex)
-    * [GetDateFormatW function](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformatw)
+    * [Função GetDateFormatW](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformatw)
 * [cabeçalho winnls.h](https://docs.microsoft.com/windows/desktop/api/winnls/)
     * [Função EnumDateFormatsA](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-enumdateformatsa)
-    * [EnumDateFormatsExA function](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-enumdateformatsexa)
+    * [Função EnumDateFormatsExA](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-enumdateformatsexa)
     * [Função EnumDateFormatsExEx](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-enumdateformatsexex)
     * [Função EnumDateFormatsExW](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-enumdateformatsexw)
     * [Função EnumDateFormatsW](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-enumdateformatsw)
@@ -139,6 +139,6 @@ As seguintes APIs serão afetadas:
 * [Era tratamento para o calendário japonês](https://docs.microsoft.com/windows/desktop/Intl/era-handling-for-the-japanese-calendar)
 * [Momento do calendário japonês de Y2K](https://blogs.msdn.microsoft.com/shawnste/2018/04/12/the-japanese-calendars-y2k-moment/)
 * [Usando o registro para testar a nova Era de japonês no Windows](https://blogs.msdn.microsoft.com/shawnste/2018/08/07/using-the-registry-to-test-the-new-japanese-era-on-windows/)
-* [Gannen vs Ichinen](https://blogs.msdn.microsoft.com/shawnste/2018/11/12/gannen-vs-ichinen/)
+* [Vs Gannen Ichinen](https://blogs.msdn.microsoft.com/shawnste/2018/11/12/gannen-vs-ichinen/)
 * [Atualizações para 2019 Japão Era podem mudar](https://support.microsoft.com/help/4470918/updates-for-may-2019-japan-era-change)
 * [Tratamento de uma nova era no calendário japonês no .NET](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/)

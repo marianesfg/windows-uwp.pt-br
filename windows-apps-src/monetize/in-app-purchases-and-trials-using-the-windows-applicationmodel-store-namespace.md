@@ -405,13 +405,13 @@ Este elemento fornece informações sobre o app para um determinado país/regiã
 |  **Descrição**  |    Sim  |  1   |      A descrição do app para esse país/região.       |
 |  **Preço**  |    Sim  |  1   |     O preço do app nesse país/região.        |
 |  **CurrencySymbol**  |    Sim  |  1   |     O símbolo de moeda usado nesse país/região.        |
-|  **CurrencyCode**  |    Não  |  0 ou 1      |      O código de moeda usado nesse país/região.         |  |
+|  **currencyCode**  |    Não  |  0 ou 1      |      O código de moeda usado nesse país/região.         |  |
 
 **MarketData** tem os atributos a seguir.
 
 |  Atributo  |  Obrigatório  |  Descrição   |
 |-------------|------------|----------------|
-|  **xml:lang**  |    Sim        |     Especifica o país/região ao qual as informações de dados do mercado se aplicam.          |  |
+|  **XML: lang**  |    Sim        |     Especifica o país/região ao qual as informações de dados do mercado se aplicam.          |  |
 
 <span id="product-child-of-listinginformation"/>
 
@@ -425,7 +425,7 @@ Este elemento descreve um complemento para o app. **Product** é um filho opcion
 |-------------|------------|----------------|
 |  **ProductId**  |    Sim        |    Contém a cadeia de caracteres usada pelo app para identificar o complemento.           |
 |  **LicenseDuration**  |    Não        |    Indica o número de dias em que a licença será válida após a aquisição do item. A data de expiração da nova licença criada pela compra de um produto é a data de compra mais a duração da licença. Este atributo é usado somente se o atributo **ProductType** for **Durable**; esse atributo é ignorado para complementos consumíveis.           |
-|  **ProductType**  |    Não        |    Contém um valor para identificar a persistência do produto no aplicativo. Os valores com suporte são **Durable** (o padrão) e **Consumable**. Para os tipos duráveis, as informações adicionais são descritas por um elemento [Product](#product-child-of-licenseinformation) em [LicenseInformation](#licenseinformation); para os tipos consumíveis, as informações adicionais são descritas por um elemento [Product](#product-child-of-consumableinformation) em [ConsumableInformation](#consumableinformation).           |  |
+|  **productType**  |    Não        |    Contém um valor para identificar a persistência do produto no aplicativo. Os valores com suporte são **Durable** (o padrão) e **Consumable**. Para os tipos duráveis, as informações adicionais são descritas por um elemento [Product](#product-child-of-licenseinformation) em [LicenseInformation](#licenseinformation); para os tipos consumíveis, as informações adicionais são descritas por um elemento [Product](#product-child-of-consumableinformation) em [ConsumableInformation](#consumableinformation).           |  |
 
 <span id="marketdata-child-of-product"/>
 
@@ -440,17 +440,17 @@ Este elemento fornece informações sobre o complemento para um determinado paí
 |  **Nome**  |    Sim   |  1   |   O nome do complemento nesse país/região.        |
 |  **Preço**  |    Sim  |  1   |     O preço do complemento nesse país/região.        |
 |  **CurrencySymbol**  |    Sim  |  1   |     O símbolo de moeda usado nesse país/região.        |
-|  **CurrencyCode**  |    Não  |  0 ou 1      |      O código de moeda usado nesse país/região.         |  
+|  **currencyCode**  |    Não  |  0 ou 1      |      O código de moeda usado nesse país/região.         |  
 |  **Descrição**  |    Não  |   0 ou 1   |      A descrição do complemento para esse país/região.       |
-|  **Tag**  |    Não  |   0 ou 1   |      Os [dados personalizados do desenvolvedor](../publish/enter-add-on-properties.md#custom-developer-data) (também chamados de tag) para o complemento.       |
+|  **Marca**  |    Não  |   0 ou 1   |      Os [dados personalizados do desenvolvedor](../publish/enter-add-on-properties.md#custom-developer-data) (também chamados de tag) para o complemento.       |
 |  **Palavras-chave**  |    Não  |   0 ou 1   |      Contém até 10 elementos **Keyword** que contêm as [palavras-chave](../publish/enter-add-on-properties.md#keywords) para o complemento.       |
-|  **ImageUri**  |    Não  |   0 ou 1   |      O [URI da imagem](../publish/create-add-on-store-listings.md#icon) na descrição do complemento.           |  |
+|  **imageUri**  |    Não  |   0 ou 1   |      O [URI da imagem](../publish/create-add-on-store-listings.md#icon) na descrição do complemento.           |  |
 
 **MarketData** tem os atributos a seguir.
 
 |  Atributo  |  Obrigatório  |  Descrição   |
 |-------------|------------|----------------|
-|  **xml:lang**  |    Sim        |     Especifica o país/região ao qual as informações de dados do mercado se aplicam.          |  |
+|  **XML: lang**  |    Sim        |     Especifica o país/região ao qual as informações de dados do mercado se aplicam.          |  |
 
 <span id="licenseinformation"/>
 
@@ -485,7 +485,7 @@ Este elemento descreve a licença do app. **App** é um filho obrigatório do el
 |  Elemento  |  Obrigatório  |  Quantidade  | Descrição   |
 |-------------|------------|--------|--------|
 |  **IsActive**  |    Sim   |  1   |    Descreve o estado atual da licença do app. O valor **true** indica que a licença é válida; **false** indica uma licença inválida. Normalmente, esse valor é **true**, não importa se o app tem um modo de avaliação ou não.  Defina esse valor como **false** para testar o comportamento do app quando ele tem uma licença inválida.           |
-|  **IsTrial**  |    Sim  |  1   |      Descreve o estado atual da avaliação do app. O valor **true** indica que o app está sendo usado durante o período de avaliação; **false** indica que o app não está em uma avaliação, porque foi comprado ou o período de avaliação expirou.         |
+|  **isTrial**  |    Sim  |  1   |      Descreve o estado atual da avaliação do app. O valor **true** indica que o app está sendo usado durante o período de avaliação; **false** indica que o app não está em uma avaliação, porque foi comprado ou o período de avaliação expirou.         |
 |  **ExpirationDate**  |    Não  |  0 ou 1       |     A data em que o período de avaliação do app expira, no Tempo Universal Coordenado (UTC). A data deve ser expressa como: yyyy-mm-ddThh:mm:ss.ssZ. Por exemplo, 05:00 em 19 de janeiro de 2015 deve ser especificada como 2015-01-19T05:00:00.00Z. Esse elemento é necessário quando **IsTrial** é **true**. Caso contrário, não será necessário.          |  |
 
 <span id="product-child-of-licenseinformation"/>
@@ -550,6 +550,6 @@ Este elemento descreve um complemento consumível. **Product** é um filho opcio
 |  Atributo  |  Obrigatório  |  Descrição   |
 |-------------|------------|----------------|
 |  **ProductId**  |    Sim        |   Contém a cadeia de caracteres usada pelo app para identificar o complemento consumível.            |
-|  **TransactionId**  |     Sim       |   Contém um GUID (como uma cadeia de caracteres) usado pelo app para acompanhar a transação de compra de um consumível pelo processo de atendimento. Consulte [Habilitar compras de produtos consumíveis realizada em aplicativo](enable-consumable-in-app-product-purchases.md).            |
+|  **transactionId**  |     Sim       |   Contém um GUID (como uma cadeia de caracteres) usado pelo app para acompanhar a transação de compra de um consumível pelo processo de atendimento. Consulte [Habilitar compras de produtos consumíveis realizada em aplicativo](enable-consumable-in-app-product-purchases.md).            |
 |  **Status**  |      Sim      |  Contém a cadeia de caracteres usada pelo app para indicar o status de atendimento de um consumível. Os valores podem ser **Active**, **PurchaseReverted**, **PurchasePending** ou **ServerError**.             |
 |  **OfferId**  |     Não       |    Contém a cadeia de caracteres usada pelo app para identificar a categoria à qual pertence o consumível. Isso fornece suporte para catálogos abrangentes de itens, conforme descrito em [Gerenciar um catálogo abrangente de produtos no aplicativo](manage-a-large-catalog-of-in-app-products.md).           |

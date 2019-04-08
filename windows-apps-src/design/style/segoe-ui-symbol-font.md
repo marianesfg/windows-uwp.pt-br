@@ -62,7 +62,7 @@ Você também pode usar o recurso estático `SymbolThemeFontFamily` para acessar
 
 
 ## <a name="how-do-i-get-this-font"></a>Como obtenho essa fonte?
-* On Windows 10: Não há nada que você precise fazer, a fonte é fornecido com o Windows.
+* No Windows 10: Não há nada que você precise fazer, a fonte é fornecido com o Windows.
 * Em um Mac, você precisa baixar e instalar a fonte: <a href="https://aka.ms/SegoeFonts">Obter as fontes de ícone Segoe UI e MDL2</a>
 
 ## <a name="icon-list"></a>Lista de ícones

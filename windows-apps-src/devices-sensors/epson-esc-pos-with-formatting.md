@@ -18,8 +18,8 @@ ms.locfileid: "57649111"
 
 **APIs importantes**
 
--   [**PointofService Printer**](https://msdn.microsoft.com/library/windows/apps/Mt426652)
--   [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071)
+-   [**Impressora PointofService**](https://msdn.microsoft.com/library/windows/apps/Mt426652)
+-   [**Pointofservice**](https://msdn.microsoft.com/library/windows/apps/Dn298071)
 
 Saiba como usar a linguagem de comando ESC/POS para formatar texto, como caracteres em negrito e tamanho dobrado para sua impressora Ponto de Serviço.
 

@@ -268,7 +268,7 @@ O qualificador `theme` é usado para fornecer os recursos que melhor corresponde
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Pixels efetivos e o fator de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
-* [Sistema de gerenciamento de recursos](resource-management-system.md)
+* [Sistema de Gerenciamento de Recursos](resource-management-system.md)
 * [Como se preparar para localização](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
 * [Detectar a plataforma de seu aplicativo está sendo executado](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
 * [Visão geral de famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)

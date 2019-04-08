@@ -163,8 +163,8 @@ Algumas operações críticas de dispositivos, como atualizações de firmware d
 
 Tarefas em segundo plano podem indicar o progresso, a conclusão e o cancelamento para o seu aplicativo usando eventos e o armazenamento local. Seu aplicativo também pode capturar exceções lançadas por uma tarefa em segundo plano, além de gerenciar o registro desse tipo de tarefa durante atualizações de aplicativo. Para obter mais informações, consulte:
 
-[Lidar com uma tarefa em segundo plano foi cancelada](handle-a-cancelled-background-task.md)  
-[Monitorar o progresso da tarefa em segundo plano e conclusão](monitor-background-task-progress-and-completion.md)
+[Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)  
+[Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 
 Verifique o registro de tarefa em segundo plano durante a inicialização do aplicativo. Certifique-se de que as tarefas em segundo plano não agrupadas do aplicativo estão presentes em BackgroundTaskBuilder.AllTasks. Registre novamente aqueles que não estão presentes. Cancele o registro de todas as tarefas que não são mais necessárias. Isso garante que todos os registros de tarefas em segundo plano são atualizados sempre que o aplicativo é iniciado.
 
@@ -177,23 +177,23 @@ Verifique o registro de tarefa em segundo plano durante a inicialização do apl
 **Diretrizes de tarefa em segundo plano relacionadas**
 
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
-* [Sensores de acesso e dispositivos a partir de uma tarefa em segundo plano](access-sensors-and-devices-from-a-background-task.md)
-* [Criar e registrar uma tarefa de plano de fundo em processo](create-and-register-an-inproc-background-task.md)
-* [Criar e registrar uma tarefa em segundo plano do out-of-process](create-and-register-a-background-task.md)
+* [Acessar sensores e dispositivos de uma tarefa em segundo plano](access-sensors-and-devices-from-a-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano em processo](create-and-register-an-inproc-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 * [Converter uma tarefa de plano de fundo de out-of-process em uma tarefa de plano de fundo em processo](convert-out-of-process-background-task.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Declare as tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
-* [Registro de tarefa do plano de fundo de grupo](group-background-tasks.md)
-* [Lidar com uma tarefa em segundo plano foi cancelada](handle-a-cancelled-background-task.md)
+* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Registo de tarefas em segundo plano em grupo](group-background-tasks.md)
+* [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Como disparar suspender, continuar e eventos em aplicativos UWP do plano de fundo (durante a depuração)](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio)
-* [Monitorar o progresso da tarefa em segundo plano e conclusão](monitor-background-task-progress-and-completion.md)
+* [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Executar uma tarefa em segundo plano quando seu aplicativo UWP é atualizado](run-a-background-task-during-updatetask.md)
 * [Executar em segundo plano indefinidamente](run-in-the-background-indefinetly.md)
-* [Defina as condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
+* [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
 * [Disparar uma tarefa em segundo plano do seu aplicativo](trigger-background-task-from-app.md)
 * [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)

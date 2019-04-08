@@ -91,7 +91,7 @@ Para exibir e editar um arquivo no projeto, clique duas vezes no arquivo no **Ge
 -   MainPage.xaml.cs é a página code-behind de MainPage.xaml. É onde você adiciona a lógica e os manipuladores de eventos do aplicativo.
 -   Juntos, esses dois arquivos definem uma nova classe chamada `MainPage`, que herda de [**Page**](https://msdn.microsoft.com/library/windows/apps/BR227503), no namespace `HelloWorld`.
 
-*Package.appxmanifest*
+*Package. appxmanifest*
 -   Um arquivo de manifesto que descreve seu aplicativo: nome, descrição, bloco, página de início, etc.
 -   Inclui uma lista de dependências, recursos e arquivos que contém seu aplicativo.
 

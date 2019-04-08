@@ -30,7 +30,7 @@ Esta seção fornece informações sobre o desenvolvimento de jogos UWP com Dire
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="directx-getting-started.md">Guia de Introdução</a></p></td>
+<td align="left"><p><a href="directx-getting-started.md">Introdução</a></p></td>
 <td align="left"><p>Introdução à programação no DirectX.</p></td>
 </tr>
 <tr class="even">

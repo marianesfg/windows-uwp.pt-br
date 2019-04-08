@@ -22,7 +22,7 @@ Configure uma [**cerca geográfica**](https://msdn.microsoft.com/library/windows
 
 **Dica**  Para saber mais sobre como acessar o local no aplicativo, baixe a amostra a seguir no [Repositório Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
--   [Exemplo de mapa do Universal Windows Platform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Amostra de mapa da UWP (Plataforma Universal do Windows)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>Habilitar a funcionalidade de local
 
@@ -481,6 +481,6 @@ Para que o aplicativo possa acessar a localização, é necessário habilitar **
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Exemplo de localização geográfica UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Amostra de geolocalização da UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Diretrizes de design para o isolamento geográfico](https://msdn.microsoft.com/library/windows/apps/dn631756)
-* [Diretrizes de design para aplicativos com reconhecimento de local](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [Diretrizes de design para aplicativos com detecção de localização](https://msdn.microsoft.com/library/windows/apps/hh465148)

@@ -161,6 +161,6 @@ Por padrão, as classes no componente que podem ser ativadas são ágeis. No ent
 Para objetos que são executados no segmento da interface de usuário e lançam exceções quando são chamados de um segmento diferente do segmento da interface de usuário, você pode usar o objeto [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029) do segmento da interface de usuário para despachar a chamada.
 
 ## <a name="see-also"></a>Consulte também
-[C#Guia](/dotnet/csharp/)
+[Guia de C#](/dotnet/csharp/)
 
 [Guia do Visual Basic](/dotnet/visual-basic/)

@@ -689,7 +689,7 @@ E pronto! Tente executar o jogo novamente. Se você tiver seguido as etapas acim
 
 ![Fim de jogo](images/monogame-tutorial-4.png)
 
-## <a name="publish-to-the-microsoft-store"></a>Publicar para a Microsoft Store
+## <a name="publish-to-the-microsoft-store"></a>Publicar na Microsoft Store
 Porque nós o construímos esse jogo como um aplicativo UWP, é possível publicar esse projeto para a Microsoft Store. Há algumas etapas para o processo.
 
 Você precisa estar [registrado](https://developer.microsoft.com/en-us/store/register) como desenvolvedor no Windows.

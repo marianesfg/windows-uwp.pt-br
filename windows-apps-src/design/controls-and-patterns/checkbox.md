@@ -58,7 +58,7 @@ Ambos os controles de **caixa de seleção** e **botão de opção** permitem qu
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/CheckBox">abrir o aplicativo e ver o CheckBox em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -189,7 +189,7 @@ Estado | Propriedade | Valor
 ------|----------|------
 marcado | IsChecked | **true** 
 desmarcado | IsChecked | **false** 
-indeterminado | IsChecked | **null** 
+indeterminado | IsChecked | **NULL** 
 
 Para que a caixa de seleção para indique o estado indeterminado, você deve definir a propriedade [IsThreeState](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.isthreestate.aspx) como **true**. 
 

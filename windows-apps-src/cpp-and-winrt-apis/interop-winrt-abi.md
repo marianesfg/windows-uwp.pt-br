@@ -7,7 +7,7 @@ keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, 
 ms.localizationpriority: medium
 ms.openlocfilehash: a33a52cd8c18b312dc9e020a4c4ba518c33b0dd9
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57639941"
@@ -246,11 +246,11 @@ int main()
 ## <a name="important-apis"></a>APIs Importantes
 * [Função AddRef](https://msdn.microsoft.com/library/windows/desktop/ms691379)
 * [Função QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
-* [winrt::attach_abi function](/uwp/cpp-ref-for-winrt/attach-abi)
+* [função WinRT::attach_abi](/uwp/cpp-ref-for-winrt/attach-abi)
 * [WinRT::com_ptr struct modelo](/uwp/cpp-ref-for-winrt/com-ptr)
-* [winrt::copy_from_abi function](/uwp/cpp-ref-for-winrt/copy-from-abi)
-* [winrt::copy_to_abi function](/uwp/cpp-ref-for-winrt/copy-to-abi)
-* [winrt::detach_abi function](/uwp/cpp-ref-for-winrt/detach-abi)
-* [winrt::get_abi function](/uwp/cpp-ref-for-winrt/get-abi)
+* [função WinRT::copy_from_abi](/uwp/cpp-ref-for-winrt/copy-from-abi)
+* [função WinRT::copy_to_abi](/uwp/cpp-ref-for-winrt/copy-to-abi)
+* [função WinRT::detach_abi](/uwp/cpp-ref-for-winrt/detach-abi)
+* [função WinRT::get_abi](/uwp/cpp-ref-for-winrt/get-abi)
 * [WinRT::Windows::Foundation::IUnknown:: como função de membro](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 * [função de membro WinRT::Windows::Foundation::IUnknown::try_as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)

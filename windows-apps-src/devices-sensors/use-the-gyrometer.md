@@ -19,7 +19,7 @@ ms.locfileid: "57660501"
 **APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718)
+-   [**girômetro**](https://msdn.microsoft.com/library/windows/apps/BR225718)
 
 **Exemplo**
 

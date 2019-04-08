@@ -81,7 +81,7 @@ O sombreador de geometria pode executar operações de amostragem de textura e c
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de gráficos](graphics-pipeline.md)
+[Pipeline de elementos gráficos](graphics-pipeline.md)
 
  
 

@@ -105,7 +105,7 @@ Os detalhes a respeito do Windows Update podem ser encontrados em:
 
 A entrada de Fornecedor no manifesto do pacote de aplicativo do Windows deve corresponder ao Assunto do certificado que você está assinando.  Você pode usar qualquer um dos seguintes métodos para ver o assunto do certificado.
 
-**Opção 1: Powershell**
+**Opção 1: PowerShell**
 
 Execute o seguinte comando do PowerShell: Ambos .cer ou .pfx pode ser usado como o arquivo de certificado, pois eles têm as mesmas informações de fornecedor.
 

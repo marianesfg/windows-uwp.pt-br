@@ -133,14 +133,14 @@ No GLSL, você deve aplicar modificadores (qualificadores) a uma declaração de
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>uniform</strong></p>
+<td align="left"><p><strong>Uniforme</strong></p>
 <p>Você passa uma variável uniforme do código do aplicativo para o sombreador de vértice, para o sombreador de fragmento ou para ambos. Você deve definir os valores de todos os uniformes antes de desenhar triângulos com os sombreadores, de modo que os valores sejam os mesmos em todo o desenho de uma malha de triângulos. Esses valores são uniformes. Alguns uniformes são definidos para todo e quadro, e outros são exclusivos de um par específico de sombreadores de vértice-pixel.</p>
 <p>As variáveis uniformes são específicas dos polígonos.</p></td>
 <td align="left"><p>Use buffers constantes.</p>
 <p>Consulte <a href="https://msdn.microsoft.com/library/windows/desktop/ff476896">como: Criar um Buffer de constantes</a> e <a href="https://msdn.microsoft.com/library/windows/desktop/bb509581">constantes de sombreadores</a>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>varying</strong></p>
+<td align="left"><p><strong>variados</strong></p>
 <p>Inicialize uma variável de variação dentro do sombreador de vértice e passe-a para uma variável de variação com nome idêntico no sombreador de fragmento. Como o sombreador de vértice define apenas o valor das variáveis diversas em cada vértice, o rasterizador interpola esses valores (de modo a corrigir a perspectiva) para gerar valores por fragmento, que serão passados no sombreador de fragmento. Essas variáveis variam em cada triângulo.</p></td>
 <td align="left">Use a estrutura retornada do sombreador de vértice como entrada do sombreador de pixel. Verifique se valores semânticos correspondem.</td>
 </tr>
@@ -151,7 +151,7 @@ No GLSL, você deve aplicar modificadores (qualificadores) a uma declaração de
 <p>Crie um layout de entrada no código de seu aplicativo Direct3D e corresponda os valores semânticos aos da entrada do vértice. Consulte <a href="https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout">Criar o layout de entrada</a>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>const</strong></p>
+<td align="left"><p><strong>Const</strong></p>
 <p>Constantes que são compiladas no sombreador e nunca mudam.</p></td>
 <td align="left">Use uma <strong>static const</strong>. <strong>static</strong> indica que o valor não é exposto a buffers constantes; <strong>const</strong> indica que o sombreador não pode alterar o valor. Por isso, o valor é conhecido no momento da compilação com base em seu inicializador.</td>
 </tr>
@@ -324,7 +324,7 @@ Use esta tabela para portar variáveis globais predefinidas do GLSL para o HLSL.
 <p>Por exemplo: cor float4 [4]: SV_Target;</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>gl_FragData[n]</strong></p>
+<td align="left"><p><strong>gl_FragData [n]</strong></p>
 <p>Esta variável é do tipo <strong>vec4</strong>.</p>
 <p>Cor do fragmento para o anexo de cor n</p></td>
 <td align="left"><p>SV_Target[n]</p>

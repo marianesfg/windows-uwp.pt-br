@@ -47,20 +47,20 @@ A tabela a seguir lista as marcas HLS que têm suporte para aplicativos UWP.
 | 4.3.3.6.  EXT-X-I-FRAMES-ONLY |4|7|OPCIONAL|Sem suporte|Sem suporte|Sem suporte|
 |4.3.4.  Marcas de playlist mestre                 |             |                   |         |             |     |    |
 | 4.3.4.1.  EXT-X-MEDIA |4|7|OPCIONAL|Com suporte|Com suporte|Com suporte|
-|&nbsp;&nbsp;&nbsp;  TYPE|4|7|Atributo|"AUDIO, VIDEO"|"AUDIO, VIDEO"|"AUDIO, VIDEO, SUBTITLES"|
+|&nbsp;&nbsp;&nbsp;  TIPO|4|7|Atributo|"AUDIO, VIDEO"|"AUDIO, VIDEO"|"AUDIO, VIDEO, SUBTITLES"|
 |&nbsp;&nbsp;&nbsp;  URI|4|7|Atributo|Com suporte|Com suporte|Com suporte|
-|&nbsp;&nbsp;&nbsp;  GROUP-ID|4|7|Atributo|Com suporte|Com suporte|Com suporte|
+|&nbsp;&nbsp;&nbsp;  ID DO GRUPO|4|7|Atributo|Com suporte|Com suporte|Com suporte|
 |&nbsp;&nbsp;&nbsp;  IDIOMA|4|7|Atributo|Com suporte|Com suporte|Com suporte|
 |&nbsp;&nbsp;&nbsp;  ASSOC-LANGUAGE|6|13|Atributo|Sem suporte|Sem suporte|Sem suporte|
-|&nbsp;&nbsp;&nbsp;  NAME|4|7|Atributo|Sem suporte|Sem suporte|Com suporte|
+|&nbsp;&nbsp;&nbsp;  NOME|4|7|Atributo|Sem suporte|Sem suporte|Com suporte|
 |&nbsp;&nbsp;&nbsp;  PADRÃO|4|7|Atributo|Sem suporte|Sem suporte|Sem suporte|
-|&nbsp;&nbsp;&nbsp;  AUTOSELECT|4|7|Atributo|Sem suporte|Sem suporte|Sem suporte|
+|&nbsp;&nbsp;&nbsp;  SELEÇÃO AUTOMÁTICA|4|7|Atributo|Sem suporte|Sem suporte|Sem suporte|
 |&nbsp;&nbsp;&nbsp;  FORÇADO|5|9|Atributo|Sem suporte|Sem suporte|Sem suporte|
 |&nbsp;&nbsp;&nbsp;  ID DO FLUXO|6|12|Atributo|Sem suporte|Sem suporte|Sem suporte|
 |&nbsp;&nbsp;&nbsp;  CARACTERÍSTICAS|5|9|Atributo|Sem suporte|Sem suporte|Sem suporte|
 | 4.3.4.2.  EXT-X-STREAM-INF  |1|0|OBRIGATÓRIA|Com suporte|Com suporte|Com suporte|
-|&nbsp;&nbsp;&nbsp;  BANDWIDTH|1|0|Atributo|Com suporte|Com suporte|Com suporte|
-|&nbsp;&nbsp;&nbsp;  PROGRAM-ID|1|0|Atributo|N/D|N/D|N/D|
+|&nbsp;&nbsp;&nbsp;  LARGURA DE BANDA|1|0|Atributo|Com suporte|Com suporte|Com suporte|
+|&nbsp;&nbsp;&nbsp;  ID DO PROGRAMA|1|0|Atributo|N/D|N/D|N/D|
 |&nbsp;&nbsp;&nbsp;  LARGURA DE BANDA MÉDIA|7|14|Atributo|Sem suporte|Sem suporte|Sem suporte|
 |&nbsp;&nbsp;&nbsp;  CODECS|1|0|Atributo|Com suporte|Com suporte|Com suporte|
 |&nbsp;&nbsp;&nbsp;  RESOLUÇÃO|2|3|Atributo|Com suporte|Com suporte|Com suporte|
@@ -76,7 +76,7 @@ A tabela a seguir lista as marcas HLS que têm suporte para aplicativos UWP.
 | 4.3.5.1.  EXT-X-INDEPENDENT-SEGMENTS |6|13|OPCIONAL|Sem suporte|Com suporte|Com suporte|
 | 4.3.5.2.  EXT-X-START  |6|12|OPCIONAL|Sem suporte|Com suporte parcial|Com suporte parcial|
 |&nbsp;&nbsp;&nbsp;  DIFERENÇA DE HORÁRIO|6|12|Atributo|Sem suporte|Com suporte|Com suporte|
-|&nbsp;&nbsp;&nbsp;  PRECISE|6|12|Atributo|Sem suporte|"SEM" suporte padrão|"SEM" suporte padrão|
+|&nbsp;&nbsp;&nbsp;  PRECISO|6|12|Atributo|Sem suporte|"SEM" suporte padrão|"SEM" suporte padrão|
 
 
 

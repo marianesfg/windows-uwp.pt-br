@@ -10,7 +10,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 539acb242cfe6ee70d1311133a3f1a193860541a
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57631721"
@@ -21,7 +21,7 @@ ms.locfileid: "57631721"
 
 Saiba como definir e usar restrições personalizadas para reconhecimento de fala.
 
-> **APIs importantes**: [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446), [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421), [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
+> **APIs importantes**: [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446), [ **SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421), [ **SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
 
 
 O reconhecimento de fala requer pelo menos uma restrição para definir um vocabulário reconhecível. Se nenhuma restrição for especificada, será usada a gramática de ditado predefinida de Aplicativos Universais do Windows. Consulte [Reconhecimento de fala](speech-recognition.md).

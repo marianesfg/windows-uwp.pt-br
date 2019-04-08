@@ -41,7 +41,7 @@ Por meio da exposição das bordas ocultas ao redor de objetos, o Revelação pr
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/Reveal">abrir o aplicativo e ver o Revelação em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -63,7 +63,7 @@ O Revelação funciona automaticamente para alguns controles. Para outros contro
 - [**TreeView**](../controls-and-patterns/tree-view.md)
 - [**NavigationView**](../controls-and-patterns/navigationview.md)
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
-- [**CommandBar**](../controls-and-patterns/app-bars.md)
+- [**Barra de comandos**](../controls-and-patterns/app-bars.md)
 
 Estas ilustrações mostram revelar realçar em vários controles diferentes:
 

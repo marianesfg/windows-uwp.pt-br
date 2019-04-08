@@ -67,7 +67,7 @@ O "d": Namespace XAML destina-se ao suporte do designer, suporte do designer esp
 -   **atributo d:DesignSource:** Especifica uma fonte de dados de tempo de design para um [ **CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833), substituindo [ **origem**](https://msdn.microsoft.com/library/windows/apps/br209835).
 -   **extensões de marcação d:DesignInstance e d:DesignData:** Essas extensões de marcação são usados para fornecer os recursos de dados de tempo de design para qualquer um **d:DataContext** ou **d:DesignSource**. Não documentamos totalmente aqui a maneira de usar os recursos de dados de tempo de design. Para obter mais informações, consulte [Atributos de tempo de design](https://go.microsoft.com/fwlink/p/?LinkId=272504). Para obter alguns exemplos de uso, consulte [Dados de exemplo na área de design e para a criação de protótipo](https://msdn.microsoft.com/library/windows/apps/mt517866).
 
-### <a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>**mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
+### <a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>**MC: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 
 " mc:" indica e dá suporte ao modo de compatibilidade de marcação para leitura de XAML. Normalmente, o prefixo "d:" prefix é associado ao atributo **mc:Ignorable**. Essa técnica permite que os analisadores XAML de tempo de execução ignorem os atributos de design em "d:".
 
@@ -75,7 +75,7 @@ O "d": Namespace XAML destina-se ao suporte do designer, suporte do designer esp
 
 "local:" é um prefixo que geralmente é mapeado para você nas páginas XAML para um projeto modelo de aplicativo UWP. Ele é mapeado para se referir ao mesmo namespace que é criado para conter o [x:Class attribute](x-class-attribute.md) e o código para todos os arquivos XAML, inclusive app.xaml. Contanto que defina as classes personalizadas que deseja usar no XAML nesse mesmo namespace, você pode usar o prefixo **local:** para se referir aos seus tipos personalizados em XAML. Um prefixo relacionado proveniente de um projeto modelo de aplicativo UWP é **common:**. Esse prefixo se refere a um namespace "Common" aninhado que contém classes de utilitários, como conversores e comandos, e você pode encontrar as definições na pasta Common no modo de exibição do **Gerenciador de Soluções**.
 
-### <a name="vsm"></a>**vsm:**
+### <a name="vsm"></a>**VSM:**
 
 Não use. "vsm:" é um prefixo que, às vezes, é visto em modelos XAML antigos importados de outras tecnologias Microsoft. Originalmente, o namespace tratava de um problema de ferramenta de namespace herdado. Exclua definições de namespace XAML para "vsm:" em qualquer XAML que usar para o Windows Runtime e mude todos os usos de prefixo de [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014) e objetos relacionados para usar o namespace XAML padrão. Para saber mais sobre migração de XAML, veja [Migrando XAML/código do Silverlight ou WPF para um aplicativo do Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/br229571).
 

@@ -8,7 +8,7 @@ keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
 ms.openlocfilehash: 74ad832d5516a4fa9bef849c5f691e2909c6c3d4
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57610111"
@@ -162,7 +162,7 @@ Antes de começar o processo de Certificação da Microsoft Store, exclua o arqu
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Localizar cadeias de caracteres em seu manifesto de pacote da interface do usuário e aplicativo](../../app-resources/localize-strings-ui-manifest.md)
+* [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](../../app-resources/localize-strings-ui-manifest.md)
 * [Globalização e localização](globalizing-portal.md)
 * [Diretrizes para globalização](guidelines-and-checklist-for-globalizing-your-app.md)
 * [Tornar seu aplicativo localizável](prepare-your-app-for-localization.md)

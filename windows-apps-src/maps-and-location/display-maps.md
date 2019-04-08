@@ -454,11 +454,11 @@ Trate mudanças que acontecem quando o usuário ou o aplicativo altera as config
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Central de desenvolvedores do Bing Maps](https://www.bingmapsportal.com/)
-* [Exemplo de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Obter o local atual](get-location.md)
-* [Diretrizes de design para aplicativos com reconhecimento de local](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
+* [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Obter a localização atual](get-location.md)
+* [Diretrizes de design para aplicativos com detecção de localização](https://msdn.microsoft.com/library/windows/apps/hh465148)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo da Build 2015: Aproveitando o mapas e local entre o telefone, Tablet e PC em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo de aplicativo do tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Vídeo da Build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Exemplo de aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)

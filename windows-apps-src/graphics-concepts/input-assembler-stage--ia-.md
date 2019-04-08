@@ -71,7 +71,7 @@ O estágio IA reúne os dados em primitivas e anexa valores gerados pelo sistema
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de gráficos](graphics-pipeline.md)
+[Pipeline de elementos gráficos](graphics-pipeline.md)
 
  
 

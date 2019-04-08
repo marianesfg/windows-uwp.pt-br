@@ -15,7 +15,7 @@ doc-status: ''
 ms.localizationpriority: medium
 ms.openlocfilehash: b988859422a80b31d94a133e36631b078ac7c14e
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57610491"
@@ -34,7 +34,7 @@ Quase todos os aplicativos UWP existentes serão executados no ambiente de reali
 
 Tanto as HoloLens quanto os headsets do Windows Mixed Reality oferecem suporte a aplicativos sendo executados na plataforma UWP, e ambos suportam dois tipos de experiência distintos. 
 
-### <a name="2d-vs-immersive-experience"></a>2D vs. Experiência de imersão
+### <a name="2d-vs-immersive-experience"></a>Vs 2D. Experiência de imersão
 
 Um aplicativo imersivo assume a tela inteira visível ao usuário, posicionando-o no centro de uma visualização criada pelo aplicativo. Por exemplo, um jogo imersivo pode colocar o usuário na superfície de um planeta alienígena ou um aplicativo de tour guia pode colocar o usuário em uma vila da América do Sul. Criar um aplicativo imersivo requer elementos gráficos 3D ou vídeo estereográfico capturado. Aplicativos imersivos geralmente são desenvolvidos usando um mecanismo de jogo de terceiros como Unity ou com DirectX.
 
@@ -105,7 +105,7 @@ Ao criar um aplicativo UWP que possivelmente será usado em uma plataforma de re
 * Um aplicativo 2D recebe automaticamente uma [barra de aplicativos](https://developer.microsoft.com/windows/mixed-reality/app_bar_and_bounding_box) para permitir que o usuário mova e dimensione-a no ambiente virtual. Os modos de exibição podem ser redimensionados verticalmente ou redimensionados mantendo a mesma taxa de proporção.
 
 
-## <a name="2d-app-design-considerations-uiux"></a>Considerações de design de aplicativo 2D: UI/UX
+## <a name="2d-app-design-considerations-uiux"></a>Considerações de design de aplicativo 2D: INTERFACE DO USUÁRIO/EXPERIÊNCIA DO USUÁRIO
 
 * Controles XAML que implementam o [Sistema de Design Fluente](https://docs.microsoft.com/windows/uwp/design/fluent-design-system/), como o [Modo de exibição de navegação](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview) e efeitos como [Acrílico](https://docs.microsoft.com/windows/uwp/design/style/acrylic) tudo funciona especialmente bem nos aplicativos de realidade misturada 2D.
 

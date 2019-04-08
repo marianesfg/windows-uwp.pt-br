@@ -57,7 +57,7 @@ O XAML UWP API de hospedagem tem esses pré-requisitos.
 
 * Para usar o XAML UWP API de hospedagem em seu aplicativo da área de trabalho, você precisará configurar seu projeto para que você possa chamar as APIs da UWP.
 
-    * **C++ Win32:** É recomendável que você configure seu projeto para usar [C + + c++ /CLI WinRT](../cpp-and-winrt-apis/index.md). Para obter instruções, consulte [modificar um projeto de aplicativo de área de trabalho do Windows para adicionar o C + + c++ /CLI WinRT suporte](/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
+    * **C++ do Win32:** É recomendável que você configure seu projeto para usar [C + + c++ /CLI WinRT](../cpp-and-winrt-apis/index.md). Para obter instruções, consulte [modificar um projeto de aplicativo de área de trabalho do Windows para adicionar o C + + c++ /CLI WinRT suporte](/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
     * **Windows Forms e WPF:** Siga [estas instruções](../porting/desktop-to-uwp-enhance.md).
 
@@ -160,9 +160,9 @@ Aqui estão as etapas principais para usar o XAML UWP API de hospedagem para hos
 
 Para obter exemplos completos que demonstram essas tarefas no contexto de um aplicativo de exemplo funcional, consulte os arquivos de código a seguir:
 
-  * **C++ Win32:** Consulte a [cpp](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting/blob/master/XamlHostingSample/Main.cpp) arquivo na [XamlHostingSample](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting) exemplo ou o [Desktop.cpp](https://github.com/clarkezone/cppwinrt/blob/master/Desktop/XamlIslandsWin32/Desktop.cpp) de arquivo no [XamlIslands32](https://github.com/clarkezone/cppwinrt/tree/master/Desktop/XamlIslandsWin32) exemplo.
+  * **C++ do Win32:** Consulte a [cpp](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting/blob/master/XamlHostingSample/Main.cpp) arquivo na [XamlHostingSample](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting) exemplo ou o [Desktop.cpp](https://github.com/clarkezone/cppwinrt/blob/master/Desktop/XamlIslandsWin32/Desktop.cpp) de arquivo no [XamlIslands32](https://github.com/clarkezone/cppwinrt/tree/master/Desktop/XamlIslandsWin32) exemplo.
   * **WPF:** Consulte a [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.cs) e [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHost.cs) arquivos no Kit de ferramentas de comunidade do Windows.  
-  * **Windows Forms:** Consulte a [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.cs) e [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHost.cs) arquivos no Kit de ferramentas de comunidade do Windows.
+  * **Formulários do Windows:** Consulte a [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.cs) e [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHost.cs) arquivos no Kit de ferramentas de comunidade do Windows.
 
 
 ## <a name="how-to-host-custom-uwp-xaml-controls"></a>Como para o host personalizado XAML UWP controles
@@ -194,7 +194,7 @@ O XAML UWP API de hospedagem fornece vários tipos e membros para ajudá-lo a re
 
 Para obter exemplos que demonstram como fazer isso no contexto de um aplicativo de exemplo funcional, consulte os arquivos de código a seguir:
   * **WPF:** Consulte a [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs) arquivo no Kit de ferramentas de comunidade do Windows.  
-  * **Windows Forms:** Consulte a [WindowsXamlHostBase.KeyboardFocus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.KeyboardFocus.cs) arquivo no Kit de ferramentas de comunidade do Windows.
+  * **Formulários do Windows:** Consulte a [WindowsXamlHostBase.KeyboardFocus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.KeyboardFocus.cs) arquivo no Kit de ferramentas de comunidade do Windows.
 
 ## <a name="how-to-handle-layout-changes"></a>Como manipular as alterações de layout
 
@@ -210,7 +210,7 @@ Quando o usuário altera o tamanho do elemento pai da interface do usuário, voc
 
 Para obter exemplos que demonstram como fazer isso no contexto de um aplicativo de exemplo funcional, consulte os arquivos de código a seguir:
   * **WPF:** Consulte a [WindowsXamlHost.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Layout.cs) arquivo no Kit de ferramentas de comunidade do Windows.  
-  * **Windows Forms:** Consulte a [WindowsXamlHost.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.Layout.cs) arquivo no Kit de ferramentas de comunidade do Windows.
+  * **Formulários do Windows:** Consulte a [WindowsXamlHost.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.Layout.cs) arquivo no Kit de ferramentas de comunidade do Windows.
 
 ## <a name="how-to-handle-dpi-changes"></a>Como manipular as alterações DPI
 

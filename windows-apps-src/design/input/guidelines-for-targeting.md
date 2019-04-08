@@ -10,7 +10,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e8425232512650d5c80bf6fee9745b261aee8d9
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57646051"
@@ -20,7 +20,7 @@ ms.locfileid: "57646051"
 
 A seleção por área touch no Windows usa a área de contato total de cada dedo detectado por um digitalizador de toque. O conjunto maior e mais complexo de dados de entrada relatados pelo digitalizador é usado para aumentar a precisão ao determinar o destino desejado (ou mais provável) pelo usuário.
 
-> **APIs importantes**: [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **APIs importantes**: [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [ **Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
 Este tópico descreve o uso da geometria de contato para seleção por área de toque e fornece as práticas recomendadas de direcionamento em aplicativos UWP.
 

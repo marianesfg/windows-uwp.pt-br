@@ -107,7 +107,7 @@ Para mostrar uma interface do usuário baseada em XAML, faça o seguinte:
 
 : quatro: [Iniciar o aplicativo UWP do aplicativo da área de trabalho](#start)
 
-:five: [No projeto UWP, mostrar a página que você deseja](#parse)
+: cinco: [No projeto UWP, mostrar a página que você deseja](#parse)
 
 <a id="solution-setup" />
 
@@ -268,7 +268,7 @@ Para tornar seu aplicativo um destino de compartilhamento, faça o seguinte:
 
 : quatro: [Adicionar a extensão do processo de confiança total](#full-trust)
 
-:five: [Modificar o aplicativo da área de trabalho para obter o arquivo compartilhado](#modify-desktop)
+: cinco: [Modificar o aplicativo da área de trabalho para obter o arquivo compartilhado](#modify-desktop)
 
 <a id="share-extension" />
 

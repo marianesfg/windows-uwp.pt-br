@@ -596,4 +596,4 @@ Como você deve ter notado, se alterar o nível de zoom na página de detalhes, 
 Você tem todas as informações necessárias neste tutorial, mas, se precisar de mais orientação, os documentos de vinculação de dados estão a apenas um clique de distância. Iniciar aqui:
 
 + [extensão de marcação {X:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
-+ [Associação de dados em camadas](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)
++ [Vinculação de dados em detalhes](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)

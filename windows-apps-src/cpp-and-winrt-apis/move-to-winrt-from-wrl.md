@@ -7,7 +7,7 @@ keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, 
 ms.localizationpriority: medium
 ms.openlocfilehash: e81f82fe823ee0fdf81741c89576adf268940d91
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57630741"
@@ -214,6 +214,6 @@ HRESULT __stdcall DllCanUnloadNow(void)
 * [struct WinRT::Windows::Foundation::IUnknown](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Introdução ao C + + c++ /CLI WinRT](intro-to-using-cpp-with-winrt.md)
-* [Mover para C + + c++ /CLI WinRT da C + + c++ /CLI CX](move-to-winrt-from-cx.md)
-* [Biblioteca de modelos C++ do Windows Runtime (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl)
+* [Introdução ao C++/WinRT](intro-to-using-cpp-with-winrt.md)
+* [Mover do C++/CX para C++/WinRT](move-to-winrt-from-cx.md)
+* [WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](/cpp/windows/windows-runtime-cpp-template-library-wrl)

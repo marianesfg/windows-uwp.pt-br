@@ -105,7 +105,7 @@ Fique à vontade para consultar a documentação da [Exibição de Lista](../des
 Você exibiu clientes em uma lista, mas dados B = associação permite fazer muito mais. E se fosse possível editar os dados diretamente na interface do usuário? Para fazer isso, primeiro vamos falar sobre os três modos de associação de dados:
 
 * *Única*: Essa associação de dados seja ativada apenas uma vez e não reage a alterações.
-* *One-Way*: Essa associação de dados atualizará a interface do usuário com todas as alterações feitas à fonte de dados.
+* *Unidirecional*: Essa associação de dados atualizará a interface do usuário com todas as alterações feitas à fonte de dados.
 * *Bidirecional*: Essa associação de dados atualiza a interface com todas as alterações feitas à fonte de dados e também atualizar os dados com todas as alterações feitas na interface do usuário.
 
 Se você seguiu os trechos de código anteriores, a associação feitas usa x: Bind e não especifica um modo, transformando-a em uma Associação única. Se você deseja editar seus Clientes diretamente da interface do usuário, é necessário alterá-la para uma Associação bidirecional para que as alterações dos dados sejam passadas para os objetos de Cliente. Para obter mais informações, consulte [Associação de dados em detalhes](../data-binding/data-binding-in-depth.md).
@@ -166,7 +166,7 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 | API | Descrição |
 |------|---------------|
 | [Modelo de dados](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) | Descreve a estrutura visual de um objeto de dados, permitindo a exibição de elementos específicos da interface do usuário. |
-| [x:Bind](../xaml-platform/x-bind-markup-extension.md) | Documentação sobre a extensão de marcação x:Bind recomendada. |
+| [X:Bind](../xaml-platform/x-bind-markup-extension.md) | Documentação sobre a extensão de marcação x:Bind recomendada. |
 | [Associação](../xaml-platform/binding-markup-extension.md) | Documentação sobre a extensão de marcação de Associação antiga. |
 | [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) | Um controle da interface do usuário que exibe itens de dados em uma pilha vertical. |
 | [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Um controle de texto básico para exibir os dados de texto editáveis da interface do usuário. |
@@ -177,7 +177,7 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 
 | Tópico | Descrição |
 |-------|----------------|
-| [Associação de dados em camadas](../data-binding/data-binding-in-depth.md) | Uma visão geral básica dos princípios de associação de dados |
+| [Vinculação de dados em detalhes](../data-binding/data-binding-in-depth.md) | Uma visão geral básica dos princípios de associação de dados |
 | [Visão geral da vinculação de dados](../data-binding/data-binding-quickstart.md) | Informações conceituais detalhadas sobre a associação de dados. |
 | [Exibição de lista](../design/controls-and-patterns/listview-and-gridview.md) | Informações sobre como criar e configurar um ListView, incluindo a implementação de um **DataTemplate** |
 

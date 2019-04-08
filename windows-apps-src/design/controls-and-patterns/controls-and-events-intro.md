@@ -19,7 +19,7 @@ ms.locfileid: "57630791"
 
 No desenvolvimento de aplicativos UWP, um *controle* é um elemento de interface do usuário que exibe conteúdo ou permite interação. Crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário.
 
-> **APIs importantes**: [Windows.UI.Xaml.Controls namespace](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+> **APIs importantes**: [Namespace do Windows](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 
 Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o [mestre/detalhes](master-details.md) padrão é uma maneira que você pode usar um [SplitView](split-view.md) controle de navegação do aplicativo. Da mesma forma, você pode personalizar o modelo de um [NavigationView](navigationview.md) controle para implementar o padrão de guia.
 
@@ -144,7 +144,7 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 ## <a name="related-topics"></a>Tópicos relacionados
 
 -   [Índice de controles por função](controls-by-function.md)
--   [Windows.UI.Xaml.Controls namespace](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+-   [Namespace do Windows](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 -   [Layout](../layout/index.md)
 -   [Estilo](../style/index.md)
 -   [Usabilidade](../usability/index.md)

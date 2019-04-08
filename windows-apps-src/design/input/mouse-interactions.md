@@ -10,7 +10,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f81634fdb0f9382b1f660394764e5555189783e4
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57622351"
@@ -124,7 +124,7 @@ A maioria dos mouse de entrada podem ser tratadas por meio de eventos de entrada
 - [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup.md)
 - [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
 - [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
-- [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
+- [**Tocado**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
 
 No entanto, você pode tirar proveito dos recursos específicos de cada dispositivo (por exemplo, eventos da roda do mouse) usando os ponteiro, gesto e manipulação de eventos no [Windows.UI.Input](https://docs.microsoft.com/uwp/api/windows.ui.input).
 

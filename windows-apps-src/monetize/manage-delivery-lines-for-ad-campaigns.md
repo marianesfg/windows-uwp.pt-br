@@ -139,8 +139,8 @@ O corpo da solicitação e resposta desses métodos contêm os campos a seguir. 
 |--------------|--------|---------------|------|-------------|------------|
 |  id   |  número inteiro   |  A ID da linha de entrega.     |   Sim    |      |  Não      |    
 |  name   |  cadeia de caracteres   |   O nome da linha de entrega.    |    Não   |      |  POST     |     
-|  configuredStatus   |  cadeia de caracteres   |  Um dos seguintes valores que especifica o status da linha de entrega especificada pelo desenvolvedor: <ul><li>**Active**</li><li>**inativo**</li></ul>     |  Não     |      |   POST    |       
-|  effectiveStatus   |  cadeia de caracteres   |   Um dos seguintes valores que especifica o status eficaz da linha de entrega com base na validação do sistema: <ul><li>**Active**</li><li>**inativo**</li><li>**Processamento**</li><li>**Falha**</li></ul>    |    Sim   |      |  Não      |      
+|  configuredStatus   |  cadeia de caracteres   |  Um dos seguintes valores que especifica o status da linha de entrega especificada pelo desenvolvedor: <ul><li>**Active Directory**</li><li>**inativo**</li></ul>     |  Não     |      |   POST    |       
+|  effectiveStatus   |  cadeia de caracteres   |   Um dos seguintes valores que especifica o status eficaz da linha de entrega com base na validação do sistema: <ul><li>**Active Directory**</li><li>**inativo**</li><li>**Processamento**</li><li>**Falha**</li></ul>    |    Sim   |      |  Não      |      
 |  effectiveStatusReasons   |  matriz   |  Um ou mais dos seguintes valores que especificam o motivo para o status eficaz da linha de entrega: <ul><li>**AdCreativesInactive**</li><li>**ValidationFailed**</li></ul>      |  Sim     |     |    Não    |           
 |  startDatetime   |  cadeia de caracteres   |  A data e hora de início para a linha de entrega no formato ISO 8601. Esse valor não pode ser alterado se já estiver no passado.     |    Não   |      |    POST, PUT     |
 |  endDatetime   |  cadeia de caracteres   |  A data e hora de término para a linha de entrega no formato ISO 8601. Esse valor não pode ser alterado se já estiver no passado.     |   Não    |      |  POST, PUT     |

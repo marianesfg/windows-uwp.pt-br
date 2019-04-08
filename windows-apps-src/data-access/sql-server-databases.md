@@ -47,7 +47,7 @@ Nesta seção, nós faremos o seguinte:
 
 : quatro: Adicione uma interface do usuário básica.
 
-:five: Preencha a interface do usuário com os produtos.
+: cinco: Preencha a interface do usuário com os produtos.
 
 >[!NOTE]
 > Esta seção ilustra uma maneira de organizar seu código de acesso de dados. Ele deve apenas fornecer um exemplo de como você pode usar o [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) para armazenar e recuperar dados de um banco de dados do SQL Server. Você pode organizar seu código de qualquer maneira que faça mais sentido para o design do seu aplicativo.

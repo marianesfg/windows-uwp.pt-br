@@ -52,7 +52,7 @@ Em cada um dessas etapas, o valor é tratados como um objeto. O tipo do resultad
 
 Um caminho de propriedade para vinculação de dados pode incluir referências a propriedade indexadas. Isso habilita a associação a listas/vetores ordenados ou a dicionários/mapas. Use colchetes "\[\]" caracteres para indicar uma propriedade indexada. O conteúdo desses colchetes pode ser um inteiro (em uma lista ordenada) ou uma cadeia de caracteres sem aspas (em dicionários). Você também pode associar a um dicionário onde a chave é um inteiro. É possível usar diferentes propriedades indexadas no mesmo caminho com um ponto separando o objeto-propriedade.
 
-Por exemplo, considere um objeto comercial em que haja uma lista de "Times" (lista ordenada), cada uma tendo um dicionário de "Jogadores" onde cada jogador é citado pelo último nome. Um exemplo de caminho de propriedade para um player específico da equipe a segunda é: "Teams\[1\].Players\[Smith\]". (Você usa 1 para indicar o segundo item em "Times" porque a lista é indexada com zero.)
+Por exemplo, considere um objeto comercial em que haja uma lista de "Times" (lista ordenada), cada uma tendo um dicionário de "Jogadores" onde cada jogador é citado pelo último nome. Um exemplo de caminho de propriedade para um player específico da equipe a segunda é: "As equipes\[1\]. Os jogadores\[Smith\]". (Você usa 1 para indicar o segundo item em "Times" porque a lista é indexada com zero.)
 
 **Observação**  suporte de indexação para fontes de dados do C++ é limitado, consulte [vinculação de dados em profundidade](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
@@ -111,10 +111,10 @@ Na maioria das vezes, é possível aplicar um [**PropertyPath**](https://msdn.mi
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Associação de dados em camadas](https://msdn.microsoft.com/library/windows/apps/mt210946)
+* [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [Animações storyboarded](https://msdn.microsoft.com/library/windows/apps/mt187354)
 * [Extensão de marcação {binding}](binding-markup-extension.md)
-* [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)
+* [**propertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)
 * [**Associação**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**Construtor de associação**](https://msdn.microsoft.com/library/windows/apps/br209825)
 * [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)

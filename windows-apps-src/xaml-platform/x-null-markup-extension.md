@@ -34,7 +34,7 @@ Alguns tipos do Windows Runtime são anuláveis. Quando um tipo que permite valo
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [**Nullable<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)
+* [**Permite valor nulo<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)
 * [**IReference<T>**](https://msdn.microsoft.com/library/windows/apps/br225864)
  
 

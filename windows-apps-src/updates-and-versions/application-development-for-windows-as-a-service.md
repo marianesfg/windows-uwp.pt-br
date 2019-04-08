@@ -18,7 +18,7 @@ ms.locfileid: "57658631"
 **Aplica-se a**
 -   Windows 10
 -   Windows 10 Mobile
--   Windows 10 IoT Core 
+-   Windows 10 IoT Core 
 
 No ambiente de hoje, onde as expectativas do usuário com frequência são definidas por experiências centradas no dispositivo, os ciclos de produtos completos precisam ser medido em meses, não anos. Além disso, novas versões devem ser disponibilizadas continuamente e implantadas com um impacto mínimo sobre os usuários. A Microsoft desenvolveu o Windows 10 para atender a estes requisitos implementando uma nova abordagem à inovação, desenvolvimento e entrega denominada [Windows como um serviço (WaaS)](https://docs.microsoft.com/windows/deployment/update/waas-overview). A chave para habilitar ciclos de produtos significativamente menores enquanto mantém os níveis de alta qualidade, é uma abordagem centrada na comunidade inovadora para testes que a Microsoft implementou para o Windows 10. A comunidade, conhecida como Participantes do Programa Windows Insider, é composta por milhões de usuários em todo o mundo. Quando os participantes do Programa Windows Insider optam por ingressarem na comunidade, eles testam várias compilações ao longo do curso do ciclo de vida do produto e fornecem feedback à Microsoft por meio de uma metodologia interativa denominada de liberação de versões de pré-lançamento.
 

@@ -69,13 +69,13 @@ A lista a seguir descreve os novos recursos e as alterações feitas em DRM do P
 
 As novas interfaces, classes e enumerações a seguir foram adicionadas ao DRM do PlayReady:
 
--   [**IPlayReadyLicenseAcquisitionServiceRequest**](https://msdn.microsoft.com/library/windows/apps/dn986077) interface
--   [**IPlayReadyLicenseSession**](https://msdn.microsoft.com/library/windows/apps/dn986080) interface
--   [**IPlayReadySecureStopServiceRequest**](https://msdn.microsoft.com/library/windows/apps/dn986090) interface
+-   [**IPlayReadyLicenseAcquisitionServiceRequest** ](https://msdn.microsoft.com/library/windows/apps/dn986077) interface
+-   [**IPlayReadyLicenseSession** ](https://msdn.microsoft.com/library/windows/apps/dn986080) interface
+-   [**IPlayReadySecureStopServiceRequest** ](https://msdn.microsoft.com/library/windows/apps/dn986090) interface
 -   [**PlayReadyLicenseSession** ](https://msdn.microsoft.com/library/windows/apps/dn986309) classe
 -   [**PlayReadySecureStopIterable** ](https://msdn.microsoft.com/library/windows/apps/dn986371) classe
 -   [**PlayReadySecureStopIterator** ](https://msdn.microsoft.com/library/windows/apps/dn986375) classe
--   [**PlayReadyHardwareDRMFeatures**](https://msdn.microsoft.com/library/windows/apps/dn986265) enumerator
+-   [**PlayReadyHardwareDRMFeatures** ](https://msdn.microsoft.com/library/windows/apps/dn986265) enumerador
 
 Uma nova amostra foi criada para demonstrar como usar os novos recursos DRM do PlayReady. A amostra pode ser baixada de [https://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](https://go.microsoft.com/fwlink/p/?linkid=331670).
 
@@ -397,7 +397,7 @@ A tabela a seguir descreve a implementação do DRM do PlayReady para Windows 10
 
 Antes de começar a criar seu aplicativo UWP protegido pelo PlayReady, o seguinte software deve ser instalado no sistema:
 
--   Windows 10.
+-   Windows 10.
 -   Se você estiver compilando qualquer um dos exemplos para PlayReady DRM para aplicativos UWP, você deve usar o Microsoft Visual Studio 2015 ou posterior para compilar os exemplos. Você ainda pode usar o Microsoft Visual Studio 2013 para compilar qualquer um dos exemplos do PlayReady DRM para aplicativos do Windows 8.1 Store.
 
 <!--This is no longer available-->

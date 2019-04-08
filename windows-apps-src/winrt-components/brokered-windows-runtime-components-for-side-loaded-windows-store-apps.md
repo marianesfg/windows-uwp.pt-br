@@ -521,13 +521,13 @@ MyWinRTComponent.Proxies
 
 **C/C++ > definições de pré-processador > Adicionar**
 
-"WIN32;\_WINDOWS;REGISTER\_PROXY\_DLL"
+"WIN32; \_WINDOWS; REGISTRE\_PROXY\_DLL "
 
 **C/C++ > cabeçalho pré-compilado: Selecione "Não usando o cabeçalho pré-compilado"**
 
 **Vinculador > Geral > Ignorar biblioteca de importações: Selecione "Sim"**
 
-**Vinculador > entrada > dependências adicionais: Add rpcrt4.lib;runtimeobject.lib**
+**Vinculador > entrada > dependências adicionais: Adicionar rpcrt4.lib;runtimeobject.lib**
 
 **Vinculador > metadados do Windows > Gerar metadados do Windows: Selecione "Não"**
 
@@ -539,7 +539,7 @@ O proxy deve ser registrado globalmente. A maneira mais simples de fazer isso é
 
 Uma etapa de configuração adicional deve ser realizada. Para que o processo de sideload carregue e execute o proxy, o diretório deve ser marcado como "ler/executar" para ALL_APPLICATION_PACKAGES. Isso é feito por meio de **icacls.exe** ferramenta de linha de comando. Esse comando deve ser executado no diretório em que a implementação **winmd** e dll de proxy/stub reside:
 
-*icacls . /T /grant \*S-1-15-2-1:RX*
+*icacls. /T /grant \*S-1-15-2-1:RX*
 
 ## <a name="patterns-and-performance"></a>Padrões e desempenho
 

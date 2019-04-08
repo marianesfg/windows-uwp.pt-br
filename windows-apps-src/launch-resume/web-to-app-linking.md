@@ -71,7 +71,7 @@ O Windows estabelecerá uma conexão https com seu site e procurará o arquivo J
 
 O exemplo de arquivo JSON acima demonstra o uso de curingas. Os curingas permitem que você dê suporte a uma ampla variedade de links com menos linhas de código. A vinculação de aplicativos à Web dá suporte a dois tipos de curingas no arquivo JSON:
 
-| **Wildcard** | **Descrição**               |
+| **Curinga** | **Descrição**               |
 |--------------|-------------------------------|
 | **\***       | Representa qualquer subcadeia de caracteres      |
 | **?**        | Representa um único caractere |
@@ -154,13 +154,13 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 Você pode testar a configuração do seu aplicativo e do site executando a ferramenta de verificação de registro de host de aplicativo que está disponível em:
 
-%windir%\\system32\\**AppHostRegistrationVerifier.exe**
+% windir %\\system32\\**AppHostRegistrationVerifier.exe**
 
 Teste a configuração do seu aplicativo e do site executando essa ferramenta com os seguintes parâmetros:
 
 **AppHostRegistrationVerifier.exe** *hostname packagefamilyname filepath*
 
--   Hostname: Seu site (por exemplo, microsoft.com)
+-   Nome do host: Seu site (por exemplo, microsoft.com)
 -   Nome de família de pacotes (PFN): PFN do seu aplicativo
 -   Caminho do arquivo: O arquivo JSON para validação de local (por exemplo, c:\\SomeFolder\\windows-aplicativo-web-link)
 

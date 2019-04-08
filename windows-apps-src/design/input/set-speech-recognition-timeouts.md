@@ -20,7 +20,7 @@ ms.locfileid: "57627161"
 
 Defina quanto tempo um reconhecedor de fala ignora o silêncio ou sons não reconhecíveis (murmúrios) e continua escutando a entrada de fala.
 
-> **APIs importantes**: [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253), [**SpeechRecognizerTimeouts**](https://msdn.microsoft.com/library/windows/apps/dn653230)
+> **APIs importantes**: [**Tempos limite**](https://msdn.microsoft.com/library/windows/apps/dn653253), [ **SpeechRecognizerTimeouts**](https://msdn.microsoft.com/library/windows/apps/dn653230)
 
 ## <a name="set-a-timeout"></a>Definir um tempo limite
 

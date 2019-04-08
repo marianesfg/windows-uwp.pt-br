@@ -21,7 +21,7 @@ ms.locfileid: "57621371"
 **APIs importantes**
 
 -   [Semântica HLSL](https://msdn.microsoft.com/library/windows/desktop/bb205574)
--   [Shader Constants (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581)
+-   [Constantes de sombreador HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581)
 
 Quando você tiver movido o código que cria e configura os seus buffers e objetos de sombreador, será o momento de fazer a portabilidade do código dentro dos sombreadores da linguagem de sombreadores GL do OpenGL ES 2.0 (GLSL) para a linguagem de sombreadores de alto nível do Direct3D 11 (HLSL).
 

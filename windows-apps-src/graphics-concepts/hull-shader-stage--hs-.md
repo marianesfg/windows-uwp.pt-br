@@ -9,7 +9,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9137f7ef46da1b861976dbac680327febf315dac
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57601051"
@@ -73,7 +73,7 @@ Consulte [como: Criar um sombreador de envoltório](https://msdn.microsoft.com/l
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de gráficos](graphics-pipeline.md)
+[Pipeline de elementos gráficos](graphics-pipeline.md)
 
  
 

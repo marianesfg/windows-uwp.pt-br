@@ -417,7 +417,7 @@ namespace SplashScreenExample
 }
 ```
 
-### <a name="appxamlcs"></a>App.xaml.cs
+### <a name="appxamlcs"></a>App.XAML.cs
 
 Este projeto foi criado usando o aplicativo UWP **aplicativo em branco (XAML)** modelo de projeto no Visual Studio. Os manipuladores de eventos `OnNavigationFailed` e `OnSuspending` são gerados automaticamente e não precisam ser modificados para implementar uma tela inicial estendida. Esse tópico só modifica `OnLaunched`.
 

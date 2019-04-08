@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57646331"
 ---
-# <a name="getting-started-getting-around-in-visual-studio"></a>Guia de Introdução: Conhecendo o Visual Studio
+# <a name="getting-started-getting-around-in-visual-studio"></a>Introdução: Conhecendo o Visual Studio
 
 
 ## <a name="getting-around-in-microsoft-visual-studio"></a>Noções básicas do Microsoft Visual Studio

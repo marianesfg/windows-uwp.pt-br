@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57608621"
 ---
-# <a name="getting-started-animation"></a>Guia de Introdução: Animação
+# <a name="getting-started-animation"></a>Introdução: Animação
 
 
 ## <a name="adding-animations"></a>Adicionando animações

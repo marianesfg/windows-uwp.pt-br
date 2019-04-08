@@ -7,7 +7,7 @@ keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle,
 ms.localizationpriority: medium
 ms.openlocfilehash: c3551ebcc59ebfe426b0be8d5bd20f7578517a25
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57649201"
@@ -121,9 +121,9 @@ void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
 Agora compile e execute o projeto. Clique no botão para executar o manipulador de eventos de **Clique**. Vimos que a implementação de **Anexar** aciona um evento para informar à interface do usuário que a coleção foi alterada; e o **ListBox** consulta novamente a coleção para atualizar seu próprio valor de **Itens**. Exatamente como antes, o título de um dos livros muda; e essa alteração de título será refletida no botão e na caixa de listagem.
 
 ## <a name="important-apis"></a>APIs Importantes
-* [IObservableVector&lt;T&gt;::VectorChanged](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged)
+* [IObservableVector&lt;T&gt;:: VectorChanged](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged)
 * [modelo de função WinRT::make](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Consumir APIs com C + + c++ /CLI WinRT](consume-apis.md)
-* [Criar APIs com C + + c++ /CLI WinRT](author-apis.md)
+* [Consumir APIs com C++/WinRT](consume-apis.md)
+* [Criar APIs com C++/WinRT](author-apis.md)

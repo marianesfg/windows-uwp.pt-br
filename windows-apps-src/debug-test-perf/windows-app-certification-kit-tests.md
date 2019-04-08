@@ -668,5 +668,5 @@ Atualize o código JavaScript em segundo plano para chamar Close() corretamente.
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Testes de aplicativo de ponte de Desktop do Windows](windows-desktop-bridge-app-tests.md)
-* [Políticas do Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
  

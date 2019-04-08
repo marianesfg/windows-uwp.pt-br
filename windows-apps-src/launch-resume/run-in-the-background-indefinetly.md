@@ -27,7 +27,7 @@ Se você estiver desenvolvendo um aplicativo que não se destina a ser enviado p
 
 A funcionalidade `extendedExecutionUnconstrained` é adicionada como um recurso restrito no manifesto do aplicativo. Consulte [Declarações de funcionalidades do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) para obter mais informações sobre recursos restritos.
 
-_Package.appxmanifest_
+_Package. appxmanifest_
 ```xml
 <Package ...>
 ...
@@ -66,7 +66,7 @@ Registrar-se para o evento **Revoked** permitirá que seu aplicativo realize qua
 
 Na Plataforma Universal do Windows, tarefas em segundo plano são processos executados em segundo plano sem qualquer forma de interface do usuário. Tarefas em segundo plano geralmente podem ser executadas por um máximo de 25 segundos antes de serem canceladas. Algumas das tarefas de execução mais longas também têm uma verificação para garantir que a tarefa em segundo plano não está inutilizada ou usando memória. Na Atualização do Windows para Criadores (versão 1703), a funcionalidade restrita [extendedBackgroundTaskTime](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) foi introduzida para remover esses limites. A funcionalidade **extendedBackgroundTaskTime** é adicionada como um recurso restrito no arquivo do manifesto do aplicativo:
 
-_Package.appxmanifest_
+_Package. appxmanifest_
 ```xml
 <Package ...>
    <Capabilities>  

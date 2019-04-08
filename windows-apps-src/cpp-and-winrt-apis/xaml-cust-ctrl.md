@@ -1,5 +1,5 @@
 ---
-description: Este tópico orienta você pelas etapas de criação de um controle personalizado simples usando o C + + c++ /CLI WinRT. Você pode criar as informações para criar seus próprios controles de interface do usuário recursos sofisticados e personalizáveis.
+description: Este tópico orienta você pelas etapas de criação de um controle personalizado simples usando C++/WinRT. Você pode usar as informações aqui como base para criar seus próprios controles de interface do usuário personalizáveis e ricos em recursos.
 title: Controles personalizados (modelos) XAML com C++/WinRT
 ms.date: 10/03/2018
 ms.topic: article

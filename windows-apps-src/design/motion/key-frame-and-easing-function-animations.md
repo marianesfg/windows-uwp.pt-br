@@ -272,4 +272,4 @@ Você pode usar mais de um [**DiscreteObjectKeyFrame**](https://msdn.microsoft.c
 * [Sintaxe do caminho da propriedade](https://msdn.microsoft.com/library/windows/apps/Mt185586)
 * [Visão geral das propriedades de dependência](https://msdn.microsoft.com/library/windows/apps/Mt185583)
 * [**storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)
-* [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.targetpropertyproperty)
+* [**TargetProperty**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.targetpropertyproperty)

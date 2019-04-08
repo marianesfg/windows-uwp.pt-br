@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dd4b8c137d65339701b40027bb3230162e2c2456
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57620471"
@@ -18,7 +18,7 @@ ms.locfileid: "57620471"
 **APIs importantes**
 
 -   [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)
--   [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)
+-   [**Windows**](https://msdn.microsoft.com/library/windows/apps/dn279692)
 -   [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631)
 
 Use [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) e o restante da API do namespace [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) para enviar e receber informações usando os protocolos HTTP 2.0 e HTTP 1.1.

@@ -19,7 +19,7 @@ ms.locfileid: "57622791"
 
 Use os parâmetros nesta seção para definir pools de bloco ao criar um buffer.
 
-<span id="Size"></span><span id="size"></span><span id="SIZE"></span>**Size**  
+<span id="Size"></span><span id="size"></span><span id="SIZE"></span>**Tamanho**  
 Tamanho da alocação, como um múltiplo de 64 KB. 0 é válido porque você pode redimensionar o pool de blocos mais tarde.
 
 <span id="Supported_Resource_Misc_Flags"></span><span id="supported_resource_misc_flags"></span><span id="SUPPORTED_RESOURCE_MISC_FLAGS"></span>**Sinalizadores de diversos recursos com suporte**  

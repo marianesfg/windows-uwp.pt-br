@@ -477,7 +477,7 @@ A implementação para registrar uma propriedade em C++/CX é mais complicada qu
 ## <a name="related-topics"></a>Tópicos relacionados
 
 - [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
-- [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)
+- [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/hh701829)
 - [Visão geral das propriedades de dependência](dependency-properties-overview.md)
 - [Usuário XAML e exemplo de controles personalizados](https://go.microsoft.com/fwlink/p/?linkid=238581)
  

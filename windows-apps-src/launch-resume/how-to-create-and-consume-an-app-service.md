@@ -459,6 +459,6 @@ namespace MyAppService
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Converter um serviço de aplicativo para ser executado no mesmo processo que seu aplicativo de host](convert-app-service-in-process.md)
+* [Converter um serviço de aplicativo para ser executado no mesmo processo de seu aplicativo host](convert-app-service-in-process.md)
 * [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md)
 * [Exemplo de código do serviço de aplicativo (C#, C++ e VB)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)

@@ -80,10 +80,10 @@ Se o valor que você passa para [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/e
 
 Como as APIs do Windows relatam erros no tempo de execução usando vários tipos de valor de retorno, existem algumas outras funções auxiliares úteis além de **winrt::check_bool** para verificar os valores e gerar exceções.
 
-- [**winrt::check_hresult**](/uwp/cpp-ref-for-winrt/error-handling/check-hresult). Verifica se o código HRESULT representa um erro e, em caso afirmativo, chama **winrt::throw_hresult**.
-- [**winrt::check_nt**](/uwp/cpp-ref-for-winrt/error-handling/check-nt). Verifica se um código representa um erro e, em caso afirmativo, chama **winrt::throw_hresult**.
-- [**winrt::check_pointer**](/uwp/cpp-ref-for-winrt/error-handling/check-pointer). Verifica se um ponteiro é nulo e, em caso afirmativo, chama **winrt::throw_last_error**.
-- [**winrt::check_win32**](/uwp/cpp-ref-for-winrt/error-handling/check-win32). Verifica se um código representa um erro e, em caso afirmativo, chama **winrt::throw_hresult**.
+- [**WinRT::check_hresult**](/uwp/cpp-ref-for-winrt/error-handling/check-hresult). Verifica se o código HRESULT representa um erro e, em caso afirmativo, chama **winrt::throw_hresult**.
+- [**WinRT::check_nt**](/uwp/cpp-ref-for-winrt/error-handling/check-nt). Verifica se um código representa um erro e, em caso afirmativo, chama **winrt::throw_hresult**.
+- [**WinRT::check_pointer**](/uwp/cpp-ref-for-winrt/error-handling/check-pointer). Verifica se um ponteiro é nulo e, em caso afirmativo, chama **winrt::throw_last_error**.
+- [**WinRT::check_win32**](/uwp/cpp-ref-for-winrt/error-handling/check-win32). Verifica se um código representa um erro e, em caso afirmativo, chama **winrt::throw_hresult**.
 
 Você pode usar essas funções auxiliares para tipos comuns de código de retorno ou você pode responder a qualquer condição de erro e chamar [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error) ou [**winrt::throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult). 
 
@@ -130,10 +130,10 @@ WINRT_VERIFY_(TRUE, ::CloseHandle(value));
 * [modelo de função WinRT::check_pointer](/uwp/cpp-ref-for-winrt/error-handling/check-pointer)
 * [modelo de função WinRT::check_win32](/uwp/cpp-ref-for-winrt/error-handling/check-win32)
 * [struct WinRT::Handle](/uwp/cpp-ref-for-winrt/handle)
-* [winrt::hresult_error struct](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
+* [struct WinRT::hresult_error](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
 * [função WinRT::throw_hresult](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult)
-* [winrt::throw_last_error function](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error)
-* [winrt::to_hresult function](/uwp/cpp-ref-for-winrt/error-handling/to-hresult)
+* [função WinRT::throw_last_error](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error)
+* [função WinRT::to_hresult](/uwp/cpp-ref-for-winrt/error-handling/to-hresult)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Erros e tratamento de exceções (C++ moderno)](/cpp/cpp/errors-and-exception-handling-modern-cpp)

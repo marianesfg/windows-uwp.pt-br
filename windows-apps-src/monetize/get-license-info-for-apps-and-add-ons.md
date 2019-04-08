@@ -8,7 +8,7 @@ keywords: windows 10, uwp, licenças, aplicativos, complementos, compras no apli
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d7c832907af17436d588f0fac6c5039d4affa82
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57641911"
@@ -48,7 +48,7 @@ Para obter um app de exemplo completo, consulte o [Exemplo da Loja](https://gith
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Compras no aplicativo e avaliação](in-app-purchases-and-trials.md)
+* [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md)
 * [Obter informações sobre produtos para os aplicativos e complementos](get-product-info-for-apps-and-add-ons.md)
 * [Habilitar compras no aplicativo de aplicativos e complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Habilitar compras de complementos consumíveis](enable-consumable-add-on-purchases.md)

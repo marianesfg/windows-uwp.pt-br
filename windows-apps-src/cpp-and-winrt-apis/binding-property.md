@@ -7,7 +7,7 @@ keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle,
 ms.localizationpriority: medium
 ms.openlocfilehash: 4033327fa51b0801583a518a0dea055f59e57fc8
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57616621"
@@ -281,5 +281,5 @@ Para a versão lançada atualmente disponível do C + + c++ /CLI WinRT, para que
 * [modelo de função WinRT::make](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Consumir APIs com C + + c++ /CLI WinRT](consume-apis.md)
-* [Criar APIs com C + + c++ /CLI WinRT](author-apis.md)
+* [Consumir APIs com C++/WinRT](consume-apis.md)
+* [Criar APIs com C++/WinRT](author-apis.md)

@@ -48,7 +48,7 @@ Projete e desenvolva seu app de forma que ele funciona corretamente em sistemas 
 * [Entender os idiomas de perfil do usuário e linguagens de manifesto do aplicativo](manage-language-and-region.md)
 * [Marcas de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Recursos do aplicativo e o sistema de gerenciamento de recursos](../../app-resources/index.md)
-* [Como o sistema de gerenciamento de recursos corresponde a marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
+* [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
 * [Ajustar layout e fontes e fornecer suporte para RTL](adjust-layout-and-fonts--and-support-rtl.md)
 * [Fontes internacionais](loc-international-fonts.md)
 * [Tornar seu aplicativo localizável](prepare-your-app-for-localization.md)

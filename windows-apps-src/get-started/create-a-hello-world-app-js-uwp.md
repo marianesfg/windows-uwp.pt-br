@@ -67,15 +67,15 @@ Apesar de ser um modelo básico, **Aplicativo em Branco (Universal do Windows)**
 
 Para exibir e editar um arquivo no projeto, clique duas vezes no arquivo no **Gerenciador de Soluções**. 
 
-*default.css*
+*default. CSS*
 
 -  A folha de estilos padrão usada pelo app.
 
-*main.js*
+*Main*
 
 - O arquivo JavaScript padrão. Ele é referenciado no arquivo index.html.
 
-*index.html*
+*index. HTML*
 
 - A página da web do app, carregada e exibida quando o app é iniciado.
 

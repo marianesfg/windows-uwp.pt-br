@@ -8,7 +8,7 @@ keywords: windows 10, uwp, jogos, instalação, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 252d7ccb8e50e773a19282afaf19bb18d4c5d5a6
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57608701"
@@ -38,7 +38,7 @@ Um modelo do Visual Studio é uma coleção de configurações e arquivos de có
 O modelo usado para este tutorial é chamado **DirectX 11 App (Universal Windows)**. 
 
 Etapas para criar um projeto de jogo em DirectX 11 no Visual Studio:
-1.  Selecione **arquivo...** &gt; **Novos** &gt; **projeto...** 
+1.  Selecione **arquivo...** &gt; **Novos** &gt; **projeto...**
 2.  No painel esquerdo, selecione **Installed** &gt; **modelos** &gt; **Visual C++** &gt; **Universal do Windows**
 3.  No painel central, selecione **Aplicativo DirectX 11 (Universal Windows)**
 4.  Dê um nome ao projeto de jogo e clique em **OK**.

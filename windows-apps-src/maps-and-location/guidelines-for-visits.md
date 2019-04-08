@@ -269,6 +269,6 @@ Isso estabelece que uma classe de tarefa em segundo plano chamada `VisitBackgrou
 Seu aplicativo deve ser capaz de registrar a tarefa em segundo plano de manipulação de visitas, e essa tarefa deve ser ativada sempre que o dispositivo fizer uma alteração de estado relacionada à visita. Você precisará preencher a lógica em sua classe de tarefa em segundo plano para determinar o que fazer com essa informação de alteração de estado.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Criar e registrar uma tarefa em segundo plano do out-of-process](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)
+* [Criar e registrar uma tarefa em segundo plano fora do processo](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)
 * [Obter a localização do usuário](get-location.md)
 * [Namespace Windows.Devices.Geolocation](https://docs.microsoft.com/uwp/api/windows.devices.geolocation)

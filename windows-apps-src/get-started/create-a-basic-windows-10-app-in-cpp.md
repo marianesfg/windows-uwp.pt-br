@@ -105,10 +105,10 @@ Cada arquivo .xaml em uma pasta de projeto tem um arquivo .xaml.h e .xaml.cpp co
 
 Primeiro, vamos examinar os arquivos de projeto.
 
--   **App.xaml, App.xaml.h, App.xaml.cpp:** Representa o objeto de aplicativo, que é o ponto de entrada do aplicativo. O App.xaml não contém uma marcação de interface do usuário específica, mas você pode adicionar estilos de interface do usuário e outros elementos que quer que sejam acessíveis de qualquer página. Os arquivos code-behind contém manipuladores para os eventos **OnLaunched** e **OnSuspending**. Normalmente, você adiciona o código personalizado aqui para inicializar o aplicativo quando ele iniciar e executar a limpeza quando ele for suspenso ou encerrado.
+-   **App. XAML, App.xaml.h, App.xaml.cpp:** Representa o objeto de aplicativo, que é o ponto de entrada do aplicativo. O App.xaml não contém uma marcação de interface do usuário específica, mas você pode adicionar estilos de interface do usuário e outros elementos que quer que sejam acessíveis de qualquer página. Os arquivos code-behind contém manipuladores para os eventos **OnLaunched** e **OnSuspending**. Normalmente, você adiciona o código personalizado aqui para inicializar o aplicativo quando ele iniciar e executar a limpeza quando ele for suspenso ou encerrado.
 -   **MainPage.xaml, MainPage.xaml.h, MainPage.xaml.cpp:** contém uma marcação XAML e code-behind para a página "inicial" padrão em um aplicativo. Ele não possui suporte para navegação ou controles internos.
--   **pch.h, pch.cpp:** Um arquivo de cabeçalho pré-compilado e o arquivo que inclui-lo em seu projeto. No pch.h, você pode incluir quaisquer cabeçalhos que não mudam com frequência e estão incluídos em outros arquivos na solução.
--   **Package.appxmanifest:** Um arquivo XML que descreve os recursos de dispositivo que exige que seu aplicativo, e informações de versão do aplicativo e outros metadados. Para abrir esse arquivo no **Criador de Manifestos**, basta clicar duas vezes nele.
+-   **pch. h, pch. cpp:** Um arquivo de cabeçalho pré-compilado e o arquivo que inclui-lo em seu projeto. No pch.h, você pode incluir quaisquer cabeçalhos que não mudam com frequência e estão incluídos em outros arquivos na solução.
+-   **Package. appxmanifest:** Um arquivo XML que descreve os recursos de dispositivo que exige que seu aplicativo, e informações de versão do aplicativo e outros metadados. Para abrir esse arquivo no **Criador de Manifestos**, basta clicar duas vezes nele.
 -   **HelloWorld\_1&gt;temporarykey.pfx&lt;1:** uma chave que permite a implantação do aplicativo neste computador, do Visual Studio.
 
 ## <a name="a-first-look-at-the-code"></a>Primeira análise do código

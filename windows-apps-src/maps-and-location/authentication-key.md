@@ -22,7 +22,7 @@ Seu [aplicativo Universal do Windows](https://msdn.microsoft.com/library/windows
 
 **Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe a amostra a seguir do [repositório Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
 
--   [Exemplo de mapa do Universal Windows Platform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Amostra de mapa da UWP (Plataforma Universal do Windows)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="get-a-key"></a>Obter uma chave
 
@@ -89,8 +89,8 @@ Para usar serviços no namespace [**Windows.Services.Maps**](https://msdn.micros
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Central de desenvolvedores do Bing Maps](https://www.bingmapsportal.com/)
-* [Exemplo de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
+* [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo da Build 2015: Aproveitando o mapas e local entre o telefone, Tablet e PC em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo de aplicativo do tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Vídeo da Build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Exemplo de aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)

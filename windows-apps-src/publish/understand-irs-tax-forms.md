@@ -35,7 +35,7 @@ Os formulários de imposto serão enviados a você dos seguintes endereços:
 <table>
 <tr><th>Grupo de negócios</th><th>Entidade legal</th><th>Endereço</th></tr>
 <tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond WA 98052, EUA</td></tr>
-<tr><td>Publicidade</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 EUA</td></tr>
+<tr><td>Publicidade</td><td>Microsoft Online Inc.</td><td>6100 Neil estrada<br>Reno, NV 89511 EUA</td></tr>
 <table> 
 
 **Cidadãos fora dos EUA:**
@@ -43,7 +43,7 @@ Os formulários de imposto serão enviados a você dos seguintes endereços:
 <tr><th>Grupo de negócios</th><th>Entidade legal</th><th>Endereço</th></tr>
 <tr><td>Windows, Office, Azure</td><td>Microsoft Ireland Operations Limited (pagamento será feito pela Microsoft Corporation, por meio do Microsoft Ireland atuando como intermediário qualificado para a Microsoft Corporation)</td><td>Um único local da Microsoft<br>Sul&nbsp;município&nbsp;Business&nbsp;Park<br>Leopardstown, Dublin 18, Irlanda</td></tr>
 <tr><td>Anunciando *</td><td>Microsoft Ireland Operations Limited (pagamento será feito pela Microsoft Inc. de Online por meio do Microsoft Ireland atuando como agente de pagamento para o Microsoft Online Inc.)</td><td>Um único local da Microsoft<br>Sul&nbsp;município&nbsp;Business&nbsp;Park<br>Leopardstown, Dublin 18, Irlanda</td></tr>
-<tr><td>Publicidade</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 EUA</td></tr>
+<tr><td>Publicidade</td><td>Microsoft Online Inc.</td><td>6100 Neil estrada<br>Reno, NV 89511 EUA</td></tr>
 <tr><td colspan="3">* Cidadãos dos seguintes países a obtenção de receitas de publicidade serão paga por meio do Microsoft Ireland Operations Limited: Áustria, Bélgica, Bulgária, Croácia, Chipre, República Tcheca, Dinamarca, Estônia, Finlândia, França, Alemanha, Grécia, Hungria, Irlanda, ilha de Man, Itália, Letônia, Liechtenstein, Lituânia, Luxemburgo, Malta, Mônaco, países baixos, Noruega, Polônia, Portugal, Romênia, Eslováquia, Eslovênia, África do Sul, Espanha, Suécia, Suíça, Reino Unido</td></tr>
 </table>
 
@@ -56,7 +56,7 @@ Os formulários de imposto serão enviados a você dos seguintes endereços:
   </tr>
   <tr> 
      <td valign="top">Atingi a marca de <b>mais de 200 vendas de app</b> com um valor total de compra dessas vendas <b>superior a USD 20.000</b> no ano fiscal aplicável (<b>sem</b> contar vendas feitas no Brasil e na China por meio da Microsoft Store no Windows 10).</td>
-    <td valign="top"><b>1099-K</b> :<br>Servidor de dados: Microsoft Corporation<br>EIN: *****4442<br><br><b>Importante</b>: Contém o formulário 1099-K <b>bruta de compra</b> valores, não os pagamentos feitos a você.</td>
+    <td valign="top"><b>1099-K</b> :<br>Servidor de dados: Microsoft Corporation<br>EIN: * * * 4442<br><br><b>Importante</b>: Contém o formulário 1099-K <b>bruta de compra</b> valores, não os pagamentos feitos a você.</td>
   </tr>
   <tr> 
      <td valign="top">Recebi <b>pelo menos US$ 10 em pagamentos</b> por (i) vendas de app feitas no Brasil e na China por meio da Microsoft Store no Windows 10 ou (ii) vendas no Minecraft Marketplace.<br>
@@ -64,7 +64,7 @@ Os formulários de imposto serão enviados a você dos seguintes endereços:
 <b>OR</b><br>
 <br>
 Recebi pelo menos US$ 600 em pagamentos não relacionados a vendas de app da Microsoft no ano fiscal aplicável (por exemplo, pagamentos de incentivos ou pagamentos de prêmio de um concurso ou promoção)</td>
-    <td valign="top"><b>1099-MISC</b> :<br>Pagador: Microsoft Corporation<br>EIN: *****4442<br><br><b>Importante</b>: Determinadas entidades de negócios não receberão formulários 1099 MISC independentemente dos valores de pagamento recebidos da Microsoft.  Consulte seu contador para obter mais informações.</td>
+    <td valign="top"><b>1099-MISC</b> :<br>Pagador: Microsoft Corporation<br>EIN: * * * 4442<br><br><b>Importante</b>: Determinadas entidades de negócios não receberão formulários 1099 MISC independentemente dos valores de pagamento recebidos da Microsoft.  Consulte seu contador para obter mais informações.</td>
   </tr>
   <tr>
     <td valign="top">Nenhuma das opções acima.</td>
@@ -80,7 +80,7 @@ Recebi pelo menos US$ 600 em pagamentos não relacionados a vendas de app da Mic
   </tr>
   <tr> 
      <td valign="top">Recebi <b>pelo menos US$ 600 em pagamentos</b> de anúncios em aplicativos no ano fiscal aplicável</td>
-    <td valign="top"><b>1099-MISC</b> :<br>Pagador: Microsoft Online Inc<br>EIN: *****0505<br><br><b>Importante</b>: Determinadas entidades de negócios não receberão formulários 1099 MISC independentemente dos valores de pagamento recebidos da Microsoft.  Consulte seu contador para obter mais informações.</td>
+    <td valign="top"><b>1099-MISC</b> :<br>Pagador: Inc Online da Microsoft<br>EIN: * * * 0505<br><br><b>Importante</b>: Determinadas entidades de negócios não receberão formulários 1099 MISC independentemente dos valores de pagamento recebidos da Microsoft.  Consulte seu contador para obter mais informações.</td>
   </tr>
   <tr> 
      <td valign="top">Recebi <b>menos de US$ 600 em pagamentos</b> de anúncios em aplicativos no ano fiscal aplicável</td>

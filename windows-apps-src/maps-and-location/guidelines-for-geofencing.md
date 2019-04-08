@@ -128,7 +128,7 @@ Se seu aplicativo precisar usar cercas geográficas com raios pequenos, sugira a
 
 
 * [Configurar uma cerca geográfica](https://msdn.microsoft.com/library/windows/apps/mt219702)
-* [Obter o local atual](https://msdn.microsoft.com/library/windows/apps/mt219698)
+* [Obter a localização atual](https://msdn.microsoft.com/library/windows/apps/mt219698)
 * [Exemplo de localização UWP (localização geográfica)](https://go.microsoft.com/fwlink/p/?linkid=533278)
  
 

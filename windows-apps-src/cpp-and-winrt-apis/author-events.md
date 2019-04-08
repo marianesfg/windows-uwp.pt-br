@@ -7,7 +7,7 @@ keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, evento
 ms.localizationpriority: medium
 ms.openlocfilehash: ace1c276b878d07f5750483740dfe90ed8cb6211
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57644481"
@@ -283,6 +283,6 @@ A assinatura para um delegado de manipulador de eventos deve consistir em dois p
 Observe que essas diretrizes não necessariamente se aplicam se você estiver criando uma API interna. No entanto, as APIs internas geralmente se tornar públicas ao longo do tempo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Criar APIs com C + + c++ /CLI WinRT](author-apis.md)
-* [Consumir APIs com C + + c++ /CLI WinRT](consume-apis.md)
+* [Criar APIs com C++/WinRT](author-apis.md)
+* [Consumir APIs com C++/WinRT](consume-apis.md)
 * [Manipular eventos usando delegados em C + + c++ /CLI WinRT](handle-events.md)

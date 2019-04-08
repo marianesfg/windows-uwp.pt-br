@@ -1,6 +1,6 @@
 ---
 title: Implantar um aplicativo por meio de registro de arquivo flexível
-description: Este guia mostra como usar o layout de arquivo flexível para validar e compartilhar aplicativos do Windows 10 sem a necessidade de empacotá-las.
+description: Este guia mostra como usar o layout de arquivo flexível para validar e compartilhar aplicativos do Windows 10 sem necessidade de empacotá-los.
 ms.date: 6/1/2018
 ms.topic: article
 keywords: Windows 10, uwp, portal do dispositivo, Gerenciador de aplicativos, implantação e sdk
@@ -14,7 +14,7 @@ ms.locfileid: "57635421"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Implantar um aplicativo por meio de registro de arquivo flexível 
 
-Este guia mostra como usar o layout de arquivo flexível para validar e compartilhar aplicativos do Windows 10 sem a necessidade de empacotá-las. Registrar os layouts de arquivo flexível permite aos desenvolvedores validar rapidamente seus aplicativos sem a necessidade de empacotar e instalar os aplicativos. 
+Este guia mostra como usar o layout de arquivo flexível para validar e compartilhar aplicativos do Windows 10 sem necessidade de empacotá-los. Registrar os layouts de arquivo flexível permite aos desenvolvedores validar rapidamente seus aplicativos sem a necessidade de empacotar e instalar os aplicativos. 
 
 ## <a name="what-is-a-loose-file-layout"></a>O que é um layout de arquivo flexível?
 

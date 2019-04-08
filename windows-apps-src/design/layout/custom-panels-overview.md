@@ -26,7 +26,7 @@ ms.locfileid: "57620341"
 Um *painel* é um objeto que fornece um comportamento de layout para elementos filho que ele contém, quando o sistema de layout XAML (Extensible Application Markup Language) é executado e a interface do usuário do aplicativo é renderizada. 
 
 
-> **APIs importantes**: [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711), [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
+> **APIs importantes**: [**Painel**](https://msdn.microsoft.com/library/windows/apps/br227511), [ **ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711), [ **MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
 
 Você pode definir painéis personalizados para layouts XAML derivando uma classe personalizado da classe [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). Você fornece o comportamento para o seu painel, substituindo [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) e [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711), fornecendo uma lógica que mede e organiza os elementos filhos.
 
@@ -86,7 +86,7 @@ Uma grande parte do que faz o trabalho de sistema de layout funcionar é que qua
 -   [**DesiredSize** ](https://msdn.microsoft.com/library/windows/apps/br208921) (na verdade, um [ **UIElement** ](https://msdn.microsoft.com/library/windows/apps/br208911) propriedade)
 -   [**ActualHeight** ](https://msdn.microsoft.com/library/windows/apps/br208707) e [ **ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)
 -   [**Altura** ](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) e [ **largura**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)
--   [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)
+-   [**Margem**](https://msdn.microsoft.com/library/windows/apps/br208724)
 -   [**LayoutUpdated** ](https://msdn.microsoft.com/library/windows/apps/br208722) evento
 -   [**HorizontalAlignment** ](https://msdn.microsoft.com/library/windows/apps/br208720) e [ **VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
 -   [**ArrangeOverride** ](https://msdn.microsoft.com/library/windows/apps/br208711) e [ **MeasureOverride** ](https://msdn.microsoft.com/library/windows/apps/br208730) métodos

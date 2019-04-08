@@ -4,7 +4,7 @@ title: API JavaScript Fazer um Teste.
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
 ms.date: 08/08/2018
 ms.topic: article
-keywords: Windows 10, uwp, educação
+keywords: windows 10, uwp, educação
 ms.localizationpriority: medium
 ms.openlocfilehash: bee8a04e3b4d57caf7da3e21f2be3c789d83be90
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
@@ -32,11 +32,11 @@ O namespace de segurança permite que você bloquear o dispositivo, verifique a 
 
 | Método | Descrição   |
 |--------|---------------|
-|[lockDown](#lockDown) | Bloqueia o dispositivo para teste. |
+|[bloqueio de segurança](#lockDown) | Bloqueia o dispositivo para teste. |
 |[isEnvironmentSecure](#isEnvironmentSecure) | Determina se o contexto de bloqueio continua aplicado ao dispositivo. |
 |[getDeviceInfo](#getDeviceInfo) | Obtém detalhes sobre a plataforma em que o aplicativo de teste é executado. |
 |[examineProcessList](#examineProcessList)|Obtém a lista de processos de usuário e sistema em execução.|
-|[close](#close) | Fecha o navegador e desbloqueia o dispositivo. |
+|[Fechar](#close) | Fecha o navegador e desbloqueia o dispositivo. |
 |[getPermissiveMode](#getPermissiveMode)|Verifica se o modo permissivo está ativado ou desativado.|
 |[setPermissiveMode](#setPermissiveMode)|Ativa ou desativa o modo permissivo.|
 |[emptyClipBoard](#emptyClipBoard)|Limpa a área de transferência do sistema.|
@@ -101,7 +101,7 @@ Obtém detalhes sobre a plataforma em que o aplicativo de teste é executado. É
 **Parâmetros**  
 * `callback` -A função para chamar quando esta função é concluída. Ela deve estar no formato `Function(String infoObj)`, em que `infoObj` é uma cadeia de caracteres JSON que contém vários campos. Há suporte para os seguintes campos:
     * `os` representa o tipo de sistema operacional (por exemplo: Windows, macOS, Linux, iOS, Android, etc.)
-    * `name` representa o nome de versão do sistema operacional, se houver (por exemplo: Sierra, Ubuntu).
+    * `name` representa o nome de versão do sistema operacional, se houver (por exemplo: Serra, Ubuntu).
     * `version` representa a versão do sistema operacional (por exemplo: 10.1, 10 pro, etc.)
     * `brand` representa a identidade visual do navegador seguro (por exemplo: OAKS, CA, SmarterApp, etc.)
     * `model` representa o modelo do dispositivo para dispositivos móveis. /não utilizados para navegadores de desktop.

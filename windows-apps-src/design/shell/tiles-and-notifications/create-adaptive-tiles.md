@@ -414,7 +414,7 @@ new AdaptiveText()
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
-| &lt;text hint-style="\*" /&gt; | Altura da fonte               | Espessura da fonte |
+| &lt;texto de dica-style = "\*" /&gt; | Altura da fonte               | Espessura da fonte |
 | caption                        | 12 pixels efetivos (epx) | Regular     |
 | body                           | 15 epx                    | Regular     |
 | base                           | 15 epx                    | Semibold    |

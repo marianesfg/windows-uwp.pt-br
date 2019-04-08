@@ -20,13 +20,13 @@ Esta seção descreve como usar um URI (Uniform Resource Identifier) para inicia
 | Tópico | Descrição |
 |-------|-------------|
 | [Iniciar o aplicativo padrão para um URI](launch-default-app.md) | Saiba como iniciar o app padrão para um URI (Uniform Resource Identifier). Os URIs permitem iniciar outro aplicativo para realizar uma tarefa específica. Este tópico também apresenta uma visão geral dos muitos esquemas de URI compilados no Windows. |
-| [Manipular a ativação de URI](handle-uri-activation.md) | Saiba como registrar um app para ser o manipulador padrão de um nome de esquema de URI (Uniform Resource Identifier). |
+| [Tratar a ativação do URI](handle-uri-activation.md) | Saiba como registrar um app para ser o manipulador padrão de um nome de esquema de URI (Uniform Resource Identifier). |
 | [Iniciar um aplicativo para obter resultados](how-to-launch-an-app-for-results.md) | Saiba como iniciar um app a partir de outro app e trocar dados entre os dois. Isso é chamado de "iniciar" um app para obter resultados. |
-| [Escolha e salve sons usando o esquema URI tonepicker ms](launch-ringtone-picker.md) | Este tópico descreve o esquema de URI ms-tonepicker e como usá-lo para exibir um seletor de tom para selecionar e salvar um tom e obter o nome amigável para ele. |
-| [Inicie o Windows as configurações aplicativo](launch-settings-app.md) | Saiba como iniciar o app Configurações do Windows a partir de seu app. Este tópico descreve o esquema de URI ms-settings. Use esse esquema de URI para iniciar o app Configurações do Windows para páginas de configurações específicas. |
-| [Inicie o aplicativo UWP](launch-store-app.md) | Este tópico descreve o esquema de URI ms-windows-store. Seu app pode usar esse esquema de URI para iniciar o aplicativo UWP para páginas específicas na Store. |
-| [Inicie o Windows app de mapas](launch-maps-app.md) | Saiba como iniciar o app Mapas do Windows a partir de seu app. |
-| [Inicie o aplicativo de pessoas](launch-people-apps.md) | Este tópico descreve o esquema de URI ms-people. Seu app pode usar esse esquema de URI para iniciar o app Pessoas para ações específicas. |
+| [Escolher e salvar tons usando o esquema de URI ms-tonepicker](launch-ringtone-picker.md) | Este tópico descreve o esquema de URI ms-tonepicker e como usá-lo para exibir um seletor de tom para selecionar e salvar um tom e obter o nome amigável para ele. |
+| [Iniciar o aplicativo Configurações do Windows](launch-settings-app.md) | Saiba como iniciar o app Configurações do Windows a partir de seu app. Este tópico descreve o esquema de URI ms-settings. Use esse esquema de URI para iniciar o app Configurações do Windows para páginas de configurações específicas. |
+| [Inicie o aplicativo UWP](launch-store-app.md) | Este tópico descreve o esquema de URI ms-windows-store. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo UWP para páginas específicas na Store. |
+| [Iniciar o aplicativo Mapas do Windows](launch-maps-app.md) | Saiba como iniciar o app Mapas do Windows a partir de seu app. |
+| [Iniciar o aplicativo Pessoas](launch-people-apps.md) | Este tópico descreve o esquema de URI ms-people. Seu app pode usar esse esquema de URI para iniciar o app Pessoas para ações específicas. |
 | [Inicie a captura de tela](launch-screen-snipping.md) | Saiba como usar esquemas de URI para abrir uma nova captura ou para abrir o aplicativo de recorte & esboço. |
 | [Habilitar aplicativos para sites usando manipuladores URI do aplicativo](web-to-app-linking.md) | Proporcione o envolvimento do usuário com seu aplicativo ao oferecer suporte ao recurso de Aplicativos para sites. |
 

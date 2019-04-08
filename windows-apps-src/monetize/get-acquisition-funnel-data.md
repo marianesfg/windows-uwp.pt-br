@@ -62,7 +62,7 @@ Há suporte para os campos de filtro a seguir. Valores de cadeia de caracteres d
 | campaignId | A cadeia de caracteres de ID para uma [campanha de promoção de apps personalizados](../publish/create-a-custom-app-promotion-campaign.md) associada à aquisição. |
 | market | Uma cadeia de caracteres que contém o código de país ISO 3166 do mercado onde ocorreu a aquisição. |
 | deviceType | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo no qual ocorreu a aquisição:<ul><li><strong>PC</strong></li><li><strong>Telefone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconhecido</strong></li></ul> |
-| ageGroup | Uma das cadeias de caracteres a seguir que especifica a faixa etária do usuário que concluiu a aquisição:<ul><li><strong>0 – 17</strong></li><li><strong>18 – 24</strong></li><li><strong>25 – 34</strong></li><li><strong>35 – 49</strong></li><li><strong>50 ou acima</strong></li><li><strong>Desconhecido</strong></li></ul> |
+| ageGroup | Uma das cadeias de caracteres a seguir que especifica a faixa etária do usuário que concluiu a aquisição:<ul><li><strong>0 – 17</strong></li><li><strong>18 a 24</strong></li><li><strong>25 – 34</strong></li><li><strong>35 e 49</strong></li><li><strong>50 ou acima</strong></li><li><strong>Desconhecido</strong></li></ul> |
 | gender | Uma das cadeias de caracteres a seguir que especifica o gênero do usuário que concluiu a aquisição:<ul><li><strong>M</strong></li><li><strong>F</strong></li><li><strong>Desconhecido</strong></li></ul> |
 
 

@@ -47,7 +47,7 @@ Quando o tamanho da tela é menor do que 640 px, o painel de navegação totalme
 
 ![Painel de navegação mínima](images/navview-minimal.svg)
 
-### <a name="top-nav"></a>Top nav
+### <a name="top-nav"></a>Barra de navegação superior
 
 Barra de navegação superior também pode atuar como navegação de nível superior. Enquanto a barra de navegação esquerda é recolhível, barra de navegação superior está sempre visível. O [NavigationView](../controls-and-patterns/navigationview.md) controle implementa o padrão de navegação e guias principais para UWP.
 
@@ -92,7 +92,7 @@ Um [formulário](../controls-and-patterns/forms.md) é um grupo de controles que
 
 ## <a name="sample-apps"></a>Exemplos de aplicativos
 Para ver como esses padrões podem ser implementados, Confira nossos [aplicativos de exemplo do UWP](https://developer.microsoft.com/en-us/windows/samples):
-- [BuildCast Video Player](https://github.com/Microsoft/BuildCast)
+- [Player de BuildCast vídeo](https://github.com/Microsoft/BuildCast)
 - [Lunch Scheduler](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)
 - [Livro de Colorir](https://github.com/Microsoft/Windows-appsample-coloringbook)
 - [Banco de dados de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database)

@@ -58,7 +58,7 @@ O processo de desenvolvimento de jogos requer planejamento. Se você for novo no
 
 -   [Direct3D 11 gráficos](https://msdn.microsoft.com/library/windows/desktop/ff476080): Descreve o Direct3D 11, um poderoso acelerada por hardware, gráficos 3D API para a renderização de geometria 3D na plataforma Windows.
 -   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990): Descreve o Direct2D, uma API de gráficos 2D, acelerada por hardware que fornece alto desempenho e renderização de alta qualidade para geometria 2D, bitmaps e texto.
--   [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038): Descreve o DirectWrite, que dá suporte à renderização de texto de alta qualidade.
+-   [O DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038): Descreve o DirectWrite, que dá suporte à renderização de texto de alta qualidade.
 -   [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719902): Descreve o WIC, uma plataforma extensível que fornece a API de nível inferior para imagens digitais.
 
 ### <a name="feature-levels"></a>Níveis de recursos

@@ -45,10 +45,10 @@ Por padrão, o Visual Studio armazena seus ativos de ícone em um subdiretório 
 | Nome do ícone | Aparece no | Nome do arquivo de ativo |
 | ---      | ---        | --- |
 | Bloco pequeno | Menu Iniciar |  SmallTile.png  |
-| Bloco médio |Menu Iniciar, listagem da Microsoft Store\*  |  Square150x150Logo.png |
-| Bloco largo  | Menu Iniciar   | Wide310x150Logo.png |
+| Bloco médio |Menu Iniciar, listagem da Microsoft Store\*  |  Square150x150Logo.PNG |
+| Bloco largo  | Menu Iniciar   | Wide310x150Logo.PNG |
 | Bloco grande   | Menu Iniciar, listagem da Microsoft Store\* |  LargeTile.png  |
-| Ícone do aplicativo | Lista de aplicativos no menu Iniciar, a barra de tarefas, o Gerenciador de tarefas | Square44x44Logo.png |
+| Ícone do aplicativo | Lista de aplicativos no menu Iniciar, a barra de tarefas, o Gerenciador de tarefas | Square44x44Logo.PNG |
 | Tela inicial | Tela inicial do aplicativo | SplashScreen.png  |
 | Logotipo de notificação | Blocos do aplicativo | BadgeLogo.png  |
 | Logotipo do pacote logotipo/Store | Instalador de aplicativo, Partner Center, a opção "Um aplicativo de relatório" na Store, a opção "Escrever uma resenha" na Store | StoreLogo.png  |
@@ -185,7 +185,7 @@ Ativos dimensionados ícone siga essa convenção de nomenclatura de arquivo:
 
 Por exemplo,
 
-Square150x150Logo-scale-100.png, Square150x150Logo-scale-200.png, Square150x150Logo-scale-400.png
+Square150x150Logo-scale-100.png, Square150x150Logo de escala de 200.png, Square150x150Logo de escala de 400.png
 
 Observe que o Visual Studio não gera um logotipo de notificação por padrão. Isso ocorre porque seu logotipo de notificação é exclusivo e provavelmente não deve coincidir com outros ícones do aplicativo. Para obter mais informações, consulte o [notificação notificações para o artigo de aplicativos UWP](/windows/uwp/design/shell/tiles-and-notifications/badges). 
 
@@ -208,11 +208,11 @@ Aqui está a lista de ativos de tamanho de destino:
 
 | Tamanho do ativo | Exemplo de nome de arquivo                  |
 |------------|------------------------------------|
-| 16x16\*    | Square44x44Logo.targetsize-16.png  |
-| 24x24\*    | Square44x44Logo.targetsize-24.png  |
-| 32x32\*    | Square44x44Logo.targetsize-32.png  |
-| 48x48\*    | Square44x44Logo.targetsize-48.png  |
-| 256x256\*  | Square44x44Logo.targetsize-256.png |
+| 16 x 16\*    | Square44x44Logo.targetsize-16.png  |
+| 24 x 24\*    | Square44x44Logo.targetsize-24.png  |
+| 32 x 32\*    | Square44x44Logo.targetsize-32.png  |
+| 48 x 48\*    | Square44x44Logo.targetsize-48.png  |
+| 256 x 256\*  | Square44x44Logo.targetsize-256.png |
 | 20x20      | Square44x44Logo.targetsize-20.png  |
 | 30x30      | Square44x44Logo.targetsize-30.png  |
 | 36x36      | Square44x44Logo.targetsize-36.png  |

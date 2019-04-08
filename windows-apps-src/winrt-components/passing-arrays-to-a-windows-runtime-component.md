@@ -64,4 +64,4 @@ Caso o chamador seja um código gerenciado, a matriz original permanece disponí
 
 * [ReadOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.readonlyarrayattribute.aspx)
 * [WriteOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute.aspx)
-* [Criando componentes de tempo de execução do Windows em c# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Criando componentes do Windows Runtime em C# ou Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)

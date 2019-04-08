@@ -39,10 +39,10 @@ Por padrão, a Interface do Usuário para visualização de impressão mostra as
 -   [**HolePunch**](https://msdn.microsoft.com/library/windows/apps/BR226481)
 -   [**InputBin**](https://msdn.microsoft.com/library/windows/apps/BR226482)
 -   [**MediaSize**](https://msdn.microsoft.com/library/windows/apps/BR226483)
--   [**MediaType**](https://msdn.microsoft.com/library/windows/apps/BR226484)
--   [**NUp**](https://msdn.microsoft.com/library/windows/apps/BR226485)
+-   [**Tipo de mídia**](https://msdn.microsoft.com/library/windows/apps/BR226484)
+-   [**Mpeza**](https://msdn.microsoft.com/library/windows/apps/BR226485)
 -   [**PrintQuality**](https://msdn.microsoft.com/library/windows/apps/BR226487)
--   [**Staple**](https://msdn.microsoft.com/library/windows/apps/BR226488)
+-   [**Grampeamento**](https://msdn.microsoft.com/library/windows/apps/BR226488)
 
 Essas opções são definidas na classe [**StandardPrintTaskOptions**](https://msdn.microsoft.com/library/windows/apps/BR226475). Você pode adicionar ou remover opções na lista de opções exibida na interface do usuário para visualização de impressão. Também pode mudar a ordem de exibição dessas opções e definir as configurações padrão que são apresentadas para o usuário.
 

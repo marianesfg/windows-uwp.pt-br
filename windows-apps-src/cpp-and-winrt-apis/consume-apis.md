@@ -7,7 +7,7 @@ keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, impl
 ms.localizationpriority: medium
 ms.openlocfilehash: 488516f94a53eb26b4a9e2f49927b8399c62bff5
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57645141"
@@ -265,6 +265,6 @@ BankAccountWRC::BankAccount account = factory.ActivateInstance<BankAccountWRC::B
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Criar eventos em C + + c++ /CLI WinRT](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component)
-* [Interoperabilidade entre C + + c++ /CLI WinRT e ABI](interop-winrt-abi.md)
-* [Introdução ao C + + c++ /CLI WinRT](intro-to-using-cpp-with-winrt.md)
-* [Controles XAML; associar a C + + / propriedade WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)
+* [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md)
+* [Introdução ao C++/WinRT](intro-to-using-cpp-with-winrt.md)
+* [Controles XAML; associar a uma propriedade C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)

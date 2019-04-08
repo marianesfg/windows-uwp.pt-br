@@ -169,7 +169,7 @@ Para cenários em que você deseja fornecer uma funcionalidade diferente, que ba
 
 * [Controles de tempo, data e calendário](../controls-and-patterns/date-and-time.md)
 * [Entender os idiomas de perfil do usuário e linguagens de manifesto do aplicativo](manage-language-and-region.md)
-* [Personalize seus recursos de idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 
 ## <a name="samples"></a>Exemplos
 

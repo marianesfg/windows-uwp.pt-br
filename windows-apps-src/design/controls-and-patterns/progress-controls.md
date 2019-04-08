@@ -54,7 +54,7 @@ Além disso, um controle de progresso é somente leitura, não é interativo. Is
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abrir o aplicativo para ver o <a href="xamlcontrolsgallery:/item/ProgressBar">ProgressBar</a> ou <a href="xamlcontrolsgallery:/item/ProgressRing">ProgressRing</a> em ação.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -96,7 +96,7 @@ Nem sempre é óbvio qual controle ou estado (determinado vs indeterminado) usar
 
     Se a sua operação se enquadrar nessas palavras-chave, ou se você estiver mostrando texto junto com a operação de progresso que corresponda a essas palavras-chave, considere o uso de um ProgressRing:
 
-    - *Refreshing*
+    - *A atualização*
     - *Entrando...*
     - *Conectar-se...*
 

@@ -71,7 +71,7 @@ Esta lista de opções se aplica a todos os comandos:
 
 A lista a seguir contém argumentos possíveis:
 
-| **Argument**                          | **Descrição**                       |
+| **argumento**                          | **Descrição**                       |
 |---------------------------------------|---------------------------------------|
 | &lt;output package name&gt;           | O nome do pacote criado. Isso é o nome do arquivo anexado com .msix ou. AppX. |
 | &lt;encrypted output package name&gt; | O nome do pacote criptografado criado. Isso é o nome do arquivo anexado com .emsix ou .eappx. |
@@ -268,6 +268,6 @@ A **MakeAppx.exe** realiza a validação semântica limitada, que é projetada p
 Essa validação garante que:
 - Todos os arquivos referenciados no manifesto do pacote sejam incluídos no pacote de aplicativo.
 - Um app não tenha duas chaves idênticas.
-- Um aplicativo não registra para um protocolo proibido desta lista: SMB, FILE, MS-WWA-WEB, MS-WWA.
+- Um aplicativo não registra para um protocolo proibido desta lista: SMB, ARQUIVO, MS-WWA-WEB, MS-WWA.
 
 Essa não é uma validação semântica completa, já que é projetada apenas para capturar erros comuns. Os pacotes compilados pela **MakeAppx.exe** não são garantidos como instaláveis.

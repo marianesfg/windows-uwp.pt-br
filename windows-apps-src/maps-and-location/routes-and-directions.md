@@ -241,8 +241,8 @@ private async void ShowRouteOnMap()
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Central de desenvolvedores do Bing Maps](https://www.bingmapsportal.com/)
-* [Exemplo de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
+* [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo da Build 2015: Aproveitando o mapas e local entre o telefone, Tablet e PC em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo de aplicativo do tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Vídeo da Build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Exemplo de aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)

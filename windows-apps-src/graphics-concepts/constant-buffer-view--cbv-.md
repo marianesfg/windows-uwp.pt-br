@@ -26,7 +26,7 @@ O layout de buffer constante deve corresponder ao layout HLSL (consulte [Regras 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Modos de exibição](views.md)
+[Exibições](views.md)
 
  
 

@@ -1,5 +1,5 @@
 ---
-description: O tempo de execução do Windows é um sistema de contagem de referência; e, em um sistema desse tipo é importante que você conheça o significado de e a distinção entre, referências fortes e fracas.
+description: O Windows Runtime é um sistema de contagem de referência; e, em um sistema desse tipo, é importante que você conheça o significado e a distinção entre referências fortes e fracas.
 title: Referências fracas em C++/WinRT
 ms.date: 10/03/2018
 ms.topic: article
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 507b3cee71819df1d0163380a494e6a15936109f
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57630811"
@@ -396,5 +396,5 @@ Não importa onde o struct de marcador apareça no pacote de parâmetros variadi
 ## <a name="important-apis"></a>APIs Importantes
 * [função Implements::get_weak](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
 * [modelo de função WinRT::make_weak](/uwp/cpp-ref-for-winrt/make-weak)
-* [winrt::no_weak_ref marker struct](/uwp/cpp-ref-for-winrt/no-weak-ref)
+* [WinRT::no_weak_ref marcador struct](/uwp/cpp-ref-for-winrt/no-weak-ref)
 * [WinRT::weak_ref struct modelo](/uwp/cpp-ref-for-winrt/weak-ref)

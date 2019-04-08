@@ -28,7 +28,7 @@ Este artigo lista as propriedades de informações de dispositivo relacionadas a
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Enumerar os dispositivos](../devices-sensors/enumerate-devices.md)
+* [Enumerar dispositivos](../devices-sensors/enumerate-devices.md)
 * [Propriedades de informações do dispositivo](../devices-sensors/device-information-properties.md)
 * [Criar um seletor de dispositivo](../devices-sensors/build-a-device-selector.md)
 * [Reprodução de mídia](media-playback.md)

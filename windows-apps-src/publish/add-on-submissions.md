@@ -55,7 +55,7 @@ Aqui está uma lista das informações que você fornece ao criar o envio do com
 
 | Nome do campo                    | Observações                                       |
 |-------------------------------|---------------------------------------------|
-| [**Markets**](set-add-on-pricing-and-availability.md#markets)  | Default: Todos os mercados possíveis |
+| [**Mercados**](set-add-on-pricing-and-availability.md#markets)  | Default: Todos os mercados possíveis |
 | [**Visibilidade**](set-add-on-pricing-and-availability.md#visibility)   | Default: Disponível para compra. Pode ser exibido nos detalhes do aplicativo |
 | [**Agenda**](set-add-on-pricing-and-availability.md#schedule)    | Default: Versão assim que possível
 | [**Preços**](set-add-on-pricing-and-availability.md#pricing)                | Obrigatório                                    |
@@ -70,7 +70,7 @@ Uma listagem de Loja é necessária. É recomendável fornecer as listagens de L
 |-------------------------------|---------------------------------------------|
 | [**Título**](create-add-on-store-listings.md#title)                    | Obrigatório (limite de 100 caracteres)           |
 | [**Descrição**](create-add-on-store-listings.md#description)       | Opcional (limite de 200 caracteres)            |
-| [**Icon**](create-add-on-store-listings.md#icon)                    | Opcional (.png, 300 x 300 pixels)            |
+| [**Ícone**](create-add-on-store-listings.md#icon)                    | Opcional (.png, 300 x 300 pixels)            |
 
 
 Quando você terminar de inserir essas informações, clique em **Enviar para a loja**. Na maioria dos casos, o processo de certificação leva cerca de uma hora. Depois disso, seu complemento será publicado na Loja e estará pronto para os clientes comprarem.

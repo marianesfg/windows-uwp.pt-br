@@ -33,7 +33,7 @@ O parâmetro de feedback é uma variável **uint** que você pode fornecer para 
 
 Veja aqui a sintaxe de [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083):
 
-**bool CheckAccessFullyMapped(in uint FeedbackVar);**
+**bool CheckAccessFullyMapped (em uint FeedbackVar);**
 
 [**CheckAccessFullyMapped** ](https://msdn.microsoft.com/library/windows/desktop/dn292083) interpreta o valor de *FeedbackVar* e retorna true se todos os dados que está sendo acessados foi mapeada no recurso; caso contrário, **CheckAccessFullyMapped**retorna false.
 

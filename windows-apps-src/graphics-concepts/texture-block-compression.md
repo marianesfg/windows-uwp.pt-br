@@ -46,9 +46,9 @@ Os formatos BC1, BC2 e BC3 são equivalentes aos formatos de compactação de te
 
 | Formato de compactação de bloco | Formato DXGI                                                                           | Formato equivalente do Direct3D 9                               | Bytes por bloco de pixels 4x4 |
 |--------------------------|---------------------------------------------------------------------------------------|------------------------------------------------------------|---------------------------|
-| BC1                      | DXGI\_FORMAT\_BC1\_UNORM, DXGI\_FORMAT\_BC1\_UNORM\_SRGB, DXGI\_FORMAT\_BC1\_TYPELESS | D3DFMT\_DXT1, FourCC="DXT1"                                | 8                         |
-| BC2                      | DXGI\_FORMAT\_BC2\_UNORM, DXGI\_FORMAT\_BC2\_UNORM\_SRGB, DXGI\_FORMAT\_BC2\_TYPELESS | D3DFMT\_DXT2\*, FourCC="DXT2", D3DFMT\_DXT3, FourCC="DXT3" | 16                        |
-| BC3                      | DXGI\_FORMAT\_BC3\_UNORM, DXGI\_FORMAT\_BC3\_UNORM\_SRGB, DXGI\_FORMAT\_BC3\_TYPELESS | D3DFMT\_DXT4\*, FourCC="DXT4", D3DFMT\_DXT5, FourCC="DXT5" | 16                        |
+| BC1                      | DXGI\_FORMATO\_BC1\_UNORM, DXGI\_FORMATO\_BC1\_UNORM\_SRGB, DXGI\_FORMATO\_BC1\_TYPELESS | D3DFMT\_DXT1, FourCC = "DXT1"                                | 8                         |
+| BC2                      | DXGI\_FORMATO\_BC2\_UNORM, DXGI\_FORMATO\_BC2\_UNORM\_SRGB, DXGI\_FORMATO\_BC2\_TYPELESS | D3DFMT\_DXT2\*, FourCC = "DXT2", D3DFMT\_DXT3, FourCC = "DXT3" | 16                        |
+| BC3                      | DXGI\_FORMATO\_BC3\_UNORM, DXGI\_FORMATO\_BC3\_UNORM\_SRGB, DXGI\_FORMATO\_BC3\_TYPELESS | D3DFMT\_DXT4\*, FourCC = "DXT4", D3DFMT\_DXT5, FourCC = "DXT5" | 16                        |
 
  
 
@@ -59,19 +59,19 @@ Os formatos BC1, BC2 e BC3 são equivalentes aos formatos de compactação de te
 
 | Formato de compactação de bloco | Formato DXGI                                                                     | Formato equivalente do Direct3D 9 | Bytes por bloco de pixels 4x4 |
 |--------------------------|---------------------------------------------------------------------------------|------------------------------|---------------------------|
-| BC4                      | DXGI\_FORMAT\_BC4\_UNORM, DXGI\_FORMAT\_BC4\_SNORM, DXGI\_FORMAT\_BC4\_TYPELESS | FourCC="ATI1"                | 8                         |
-| BC5                      | DXGI\_FORMAT\_BC5\_UNORM, DXGI\_FORMAT\_BC5\_SNORM, DXGI\_FORMAT\_BC5\_TYPELESS | FourCC="ATI2"                | 16                        |
+| BC4                      | DXGI\_FORMATO\_BC4\_UNORM, DXGI\_FORMATO\_BC4\_SNORM, DXGI\_FORMATO\_BC4\_TYPELESS | FourCC="ATI1"                | 8                         |
+| BC5                      | DXGI\_FORMATO\_BC5\_UNORM, DXGI\_FORMATO\_BC5\_SNORM, DXGI\_FORMATO\_BC5\_TYPELESS | FourCC="ATI2"                | 16                        |
 
  
 
-## <a name="span-idbc6hformatspanspan-idbc6hformatspanspan-idbc6hformatspanbc6h-format"></a><span id="BC6H_Format"></span><span id="bc6h_format"></span><span id="BC6H_FORMAT"></span>BC6H Format
+## <a name="span-idbc6hformatspanspan-idbc6hformatspanspan-idbc6hformatspanbc6h-format"></a><span id="BC6H_Format"></span><span id="bc6h_format"></span><span id="BC6H_FORMAT"></span>Formato de BC6H
 
 
 Para obter mais informações sobre esse formato, consulte a documentação do [formato BC6H](https://msdn.microsoft.com/library/windows/desktop/hh308952).
 
 | Formato de compactação de bloco | Formato DXGI                                                                      | Formato equivalente do Direct3D 9 | Bytes por bloco de pixels 4x4 |
 |--------------------------|----------------------------------------------------------------------------------|------------------------------|---------------------------|
-| BC6H                     | DXGI\_FORMAT\_BC6H\_UF16, DXGI\_FORMAT\_BC6H\_SF16, DXGI\_FORMAT\_BC6H\_TYPELESS | N/D                          | 16                        |
+| BC6H                     | DXGI\_FORMATO\_BC6H\_UF16, DXGI\_FORMATO\_BC6H\_SF16, DXGI\_FORMATO\_BC6H\_TYPELESS | N/D                          | 16                        |
 
  
 
@@ -84,7 +84,7 @@ Para obter mais informações sobre esse formato, consulte a documentação do [
 
 | Formato de compactação de bloco | Formato DXGI                                                                           | Formato equivalente do Direct3D 9 | Bytes por bloco de pixels 4x4 |
 |--------------------------|---------------------------------------------------------------------------------------|------------------------------|---------------------------|
-| BC7                      | DXGI\_FORMAT\_BC7\_UNORM, DXGI\_FORMAT\_BC7\_UNORM\_SRGB, DXGI\_FORMAT\_BC7\_TYPELESS | N/D                          | 16                        |
+| BC7                      | DXGI\_FORMATO\_BC7 NO MOMENTO\_UNORM, DXGI\_FORMATO\_BC7 NO MOMENTO\_UNORM\_SRGB, DXGI\_FORMATO\_BC7 NO MOMENTO\_TYPELESS | N/D                          | 16                        |
 
  
 

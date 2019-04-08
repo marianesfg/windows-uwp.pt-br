@@ -119,7 +119,7 @@ Você pode usar qualquer combinação dos slots de destinos de renderização (a
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de gráficos](graphics-pipeline.md)
+[Pipeline de elementos gráficos](graphics-pipeline.md)
 
  
 

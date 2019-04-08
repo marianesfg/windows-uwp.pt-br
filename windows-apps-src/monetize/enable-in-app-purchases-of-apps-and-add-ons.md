@@ -8,7 +8,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a64a52005221c418ea82e8fffa9ecf94b6d1bef3
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57661721"
@@ -57,7 +57,7 @@ Assista ao vídeo a seguir para obter uma visão geral de como implementar compr
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Compras no aplicativo e avaliação](in-app-purchases-and-trials.md)
+* [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md)
 * [Obter informações sobre produtos para os aplicativos e complementos](get-product-info-for-apps-and-add-ons.md)
 * [Obter informações de licença para aplicativos e complementos](get-license-info-for-apps-and-add-ons.md)
 * [Habilitar compras de complementos consumíveis](enable-consumable-add-on-purchases.md)

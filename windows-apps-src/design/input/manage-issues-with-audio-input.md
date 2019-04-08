@@ -20,7 +20,7 @@ ms.locfileid: "57644901"
 
 Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio.
 
-> **APIs importantes**: [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243), [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
+> **APIs importantes**: [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), [ **RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243), [ **SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
 
 
 ## <a name="assess-audio-input-quality"></a>Avaliar a qualidade de entrada de áudio

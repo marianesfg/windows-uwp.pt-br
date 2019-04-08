@@ -36,8 +36,8 @@ Em seguida, adicione uma referência a esses arquivos.
 |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
 |System.Runtime.WindowsRuntime.UI.Xaml|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
 |System.Runtime.InteropServices.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-|Windows.Foundation.UniversalApiContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\<*sdk version*>\Windows.Foundation.UniversalApiContract\<*version*>|
-|Windows.Foundation.FoundationContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\<*sdk version*>\Windows.Foundation.FoundationContract\<*version*>|
+|Windows.Foundation.UniversalApiContract.winmd|C:\Program arquivos (x86) \Windows Kits\10\References\<*versão do sdk*> \Windows.Foundation.UniversalApiContract\<*versão*>|
+|Windows.Foundation.FoundationContract.winmd|C:\Program arquivos (x86) \Windows Kits\10\References\<*versão do sdk*> \Windows.Foundation.FoundationContract\<*versão*>|
 
 Na janela **Propriedades**, defina o campo **Cópia Local** de cada arquivo *.winmd* como **False**.
 

@@ -35,7 +35,7 @@ A definição de CUSTOMVERTEX seria então passada para o driver de gráficos ao
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Modos de exibição](views.md)
+[Exibições](views.md)
 
  
 

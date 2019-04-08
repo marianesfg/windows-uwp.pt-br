@@ -201,20 +201,20 @@ Você pode usar gpedit.msc para definir as políticas de grupo para habilitar se
 1.  Execute **regedit**.
 2.  Para habilitar o sideload, defina o valor deste DWORD como 1:
 
-    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps**
+    -   **HKLM\\softwares\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps**
 
     - OU -
 
     Para habilitar o modo de desenvolvedor, defina os valores deste DWORD como 1:
 
-    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
+    -   **HKLM\\softwares\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
 
 **Usar o PowerShell para habilitar seu dispositivo**
 
 1.  Execute o PowerShell com privilégios de administrador.
 2.  Para habilitar o sideload, execute este comando:
 
-    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"**
+    -   **PS c:\\WINDOWS\\system32&gt; reg adicionar "HKEY\_LOCAL\_máquina\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ /T AppModelUnlock"REG\_DWORD /f /v"AllowAllTrustedApps"/d"1"**
 
     - OU -
 
@@ -233,7 +233,7 @@ Ao criar ou fazer sideload de aplicativos em seu dispositivo Windows 8.1, você 
 
 Depois disso, você precisa habilitar seu dispositivo para o desenvolvimento, conforme descrito neste tópico, para que possa continuar a desenvolver nele. Se não fizer isso, poderá ocorrer um erro quando você depurar seu aplicativo ou tentar criar um pacote para ele. Aqui está um exemplo desse erro:
 
-Erro: DEP0700 : Falha no registro do aplicativo.
+Erro: DEP0700: Falha no registro do aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 

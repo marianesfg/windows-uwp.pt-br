@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57636591"
 ---
-# <a name="getting-started-navigation"></a>Guia de Introdução: Navegação
+# <a name="getting-started-navigation"></a>Introdução: Navegação
 
 
 ## <a name="adding-navigation"></a>Adicionando navegação

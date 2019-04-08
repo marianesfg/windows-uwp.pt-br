@@ -48,7 +48,7 @@ A diferença da área principal para definição de uma propriedade anexada pers
 
 A assinatura do acessador **Get**_PropertyName_ deve ser esta.
 
-`public static` _valueType_ **Get**_PropertyName_ `(DependencyObject target)`
+`public static` _valueType_ **Obtenha**_PropertyName_ `(DependencyObject target)`
 
 Para Microsoft Visual Basic, é esta.
 

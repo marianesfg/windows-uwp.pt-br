@@ -43,7 +43,7 @@ Esta tabela mostra as propriedades que você pode usar para modificar a renderiz
 | [Escala](/uwp/api/windows.ui.xaml.uielement.scale) | Vector3 | Escala do elemento, centralizada no PontoCentral |
 | [Rotação](/uwp/api/windows.ui.xaml.uielement.rotation) | Float | Girar o elemento em torno de RotationAxis e PontoCentral |
 | [RotationAxis](/uwp/api/windows.ui.xaml.uielement.rotationaxis) | Vector3 | O eixo de rotação |
-| [CenterPoint](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | O ponto central de escala e rotação |
+| [PontoCentral](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | O ponto central de escala e rotação |
 
 O valor da propriedade TransformMatrix é combinado com as propriedades de escala, rotação e translação na seguinte ordem:  TransformMatrix, escala, rotação, translação.
 
@@ -74,7 +74,7 @@ As propriedades que podem ser animadas com um CompositionAnimation são substitu
 
 - [RenderTransform](/uwp/api/windows.ui.xaml.uielement.rendertransform)
 - [RenderTransformOrigin](/uwp/api/windows.ui.xaml.uielement.rendertransformorigin)
-- [Projection](/uwp/api/windows.ui.xaml.uielement.projection)
+- [Projeção](/uwp/api/windows.ui.xaml.uielement.projection)
 - [Transform3D](/uwp/api/windows.ui.xaml.uielement.transform3d)
 
 Quando você define (ou anima) qualquer uma das novas propriedades, é possível usar as propriedades antigas. Por outro lado, se você definir (ou anima) qualquer uma das propriedades antigas, você não pode usar as novas propriedades.

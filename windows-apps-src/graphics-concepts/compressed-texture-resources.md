@@ -59,7 +59,7 @@ O Direct3D fornece serviços para compactar superfícies que são usadas para a 
 <td align="left"><p>Há duas maneiras de codificar mapas de textura que exibem transparência mais complexa. Em cada caso, um bloco que descreve a transparência precede o bloco de 64 bits já descrito. A transparência é representada como um bitmap de 4 x 4 com 4 bits por pixel (codificação explícita), ou com menos bits e interpolação linear parecida com a que é usada para a codificação de cores.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="block-compression.md">compactação de bloco</a></p></td>
+<td align="left"><p><a href="block-compression.md">Compactação de bloco</a></p></td>
 <td align="left"><p>A compactação de bloco é uma técnica de compactação de textura com perdas para reduzir o volume de memória e o tamanho da textura, dando um aumento de desempenho. Uma textura compactada em bloco pode ser menor do que uma textura com 32 bits por cor.</p></td>
 </tr>
 <tr class="even">

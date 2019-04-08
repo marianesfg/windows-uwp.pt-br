@@ -7,7 +7,7 @@ keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, impl
 ms.localizationpriority: medium
 ms.openlocfilehash: e4ca6946df327dbe6697a71d1050e6401ed531fe
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57626661"
@@ -403,5 +403,5 @@ Até você fazer a edição descrita acima (para passar esse parâmetro do const
 * [WinRT::Windows::Foundation::IUnknown:: como função](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Consumir APIs com C + + c++ /CLI WinRT](consume-apis.md)
-* [Controles XAML; associar a C + + / propriedade WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)
+* [Consumir APIs com C++/WinRT](consume-apis.md)
+* [Controles XAML; associar a uma propriedade C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)

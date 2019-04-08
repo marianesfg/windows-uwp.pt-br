@@ -58,7 +58,7 @@ A parte do Direct3D que leva a geometria através do pipeline de geometria de fu
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Sistemas de coordenadas e geometry](coordinate-systems-and-geometry.md)
+[Sistemas de coordenadas e geometria](coordinate-systems-and-geometry.md)
 
  
 

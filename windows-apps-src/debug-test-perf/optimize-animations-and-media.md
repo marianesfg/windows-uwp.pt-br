@@ -37,7 +37,7 @@ Todos estes tipos de animação são garantidamente independentes:
 
     -   [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.rendertransform)
     -   [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d)
-    -   [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection)
+    -   [**Projeção**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection)
     -   [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
 
 Animações dependentes afetam o layout, que, portanto, não pode ser calculado sem entrada extra do thread de interface do usuário. As animações dependentes incluem modificações a propriedades como [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) e [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height). Por padrão, as animações dependentes não são executadas e exigem uma aceitação do desenvolvedor do aplicativo. Quando habilitadas, elas são executadas suavemente caso o thread de interface do usuário permaneça desbloqueado, mas começarão a tremer caso a estrutura ou o aplicativo esteja tendo muito trabalho no thread de interface do usuário.

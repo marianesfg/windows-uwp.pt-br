@@ -17,7 +17,7 @@ ms.locfileid: "57630231"
 Saiba como coletar rapidamente uma lista de arquivos e respectivas propriedades em uma biblioteca e usá-las em um app.  
 
 Pré-requisitos 
-- **Programação para aplicativos da plataforma Universal do Windows (UWP) assíncrona**   você pode aprender como escrever aplicativos assíncronos no C# ou Visual Basic, consulte [chamar APIs assíncronas em C# ou Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).     Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps). 
+- **Programação para aplicativos da plataforma Universal do Windows (UWP) assíncrona**   você pode aprender como escrever aplicativos assíncronos no C# ou Visual Basic, consulte [chamar APIs assíncronas em C# ou Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps). 
 - **Permissões de acesso aos bibliotecas**   exige que o código nesses exemplos o **picturesLibrary** recurso, mas o local do arquivo pode exigir uma funcionalidade diferente ou nenhum recurso em todos os. Para saber mais, consulte [Permissões de acesso a arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions). 
 - **Enumeração de arquivo simples**    Este exemplo usa [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) definir algumas propriedades avançadas de enumeração. Para saber mais sobre como obter uma lista simples de arquivos para um diretório menor, consulte [Enumerar e consultar arquivos e pastas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders). 
 
@@ -117,6 +117,6 @@ Os apps podem solicitar ao usuário que adicione o local ao índice usando [Stor
 ## <a name="see-also"></a>Consulte também
 [Referência da API QueryOptions](https://docs.microsoft.com/uwp/api/windows.storage.search.queryoptions)  
 [Enumerar e consultar arquivos e pastas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)  
-[Permissões de acesso de arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)  
+[Permissões de acesso a arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)  
  
  

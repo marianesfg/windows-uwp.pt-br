@@ -28,7 +28,7 @@ Você também pode ver vários controles da IU do Windows em ação baixando o [
 <td>
     <p>Se você tiver o <strong style="font-weight: semi-bold">da Galeria de controles XAML</strong> aplicativo instalado, clique aqui para <a href="xamlcontrolsgallery:/item/NavigationView">abrir o aplicativo e ver o NavigationView em ação</a> </p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -82,7 +82,7 @@ Uma barra de aplicativos especializada que lida com o redimensionamento de eleme
     <AppBarButton Icon="Play" Label="Play" Click="AppBarButton_Click"/>
 </CommandBar>
 ```
-Referência: [CommandBar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx) 
+Referência: [Barra de comandos](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx) 
 
 Design e como fazer: [Guia de controle de barra de aplicativo e a barra de comandos](app-bars.md)
 
@@ -307,7 +307,7 @@ Uma janela pop-up que exibe as informações de um elemento.
         ToolTipService.ToolTip="Click to perform action" />
 ```
 
-Referência: [ToolTip](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.tooltip.aspx), [ToolTipService](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.tooltipservice.aspx) 
+Referência: [Dica de ferramenta](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.tooltip.aspx), [ToolTipService](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.tooltipservice.aspx) 
 
 Design e como fazer: Diretrizes de dicas de ferramenta 
 
@@ -389,7 +389,7 @@ Um painel de layout que dá suporte ao posicionamento absoluto de elementos filh
 </Canvas>
 ```
 
-Referência: [Canvas](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)
+Referência: [Tela](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)
  
 ### <a name="grid"></a>Grid
 Um painel de layout que dá suporte à organização de elementos filho em linhas e colunas.
@@ -435,7 +435,7 @@ Referência: [RelativePanel](https://msdn.microsoft.com/library/windows/apps/xam
 ### <a name="scroll-bar"></a>Barra de rolagem
 Consulte Visualizador de rolagem. (ScrollBar é um elemento do ScrollViewer. Você normalmente não o usa como um controle independente.)
 
-Referência: [ScrollBar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.scrollbar.aspx)
+Referência: [Barra de rolagem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.scrollbar.aspx)
  
 ### <a name="scroll-viewer"></a>Visualizador de rolagem
 Um controle de contêiner que permite aplicar panorâmica e zoom ao conteúdo.
@@ -749,7 +749,7 @@ Representa um controle que um usuário pode marcar e desmarcar.
           Checked="CheckBox_Checked"/>
 ```
 
-Referência: [CheckBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.checkbox.aspx) 
+Referência: [Caixa de seleção](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.checkbox.aspx) 
 
 Design e como fazer: [Guia de controle de caixa de seleção](checkbox.md) 
 
@@ -785,7 +785,7 @@ Um controle que apresenta uma lista embutida de itens, na qual o usuário pode f
 </ListBox>
 ```
 
-Referência: [ListBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listbox.aspx) 
+Referência: [Caixa de listagem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listbox.aspx) 
 
 Design e como fazer: [Listas](lists.md) 
 
@@ -803,7 +803,7 @@ Um controle que permite ao usuário selecionar uma única opção em uma lista d
              Checked="RadioButton_Checked"/>
 ```
 
-Referência: [RadioButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.radiobutton.aspx) 
+Referência: [Botão de opção](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.radiobutton.aspx) 
 
 Design e como fazer: [Guia de controle de botão de rádio](radio-button.md)
  

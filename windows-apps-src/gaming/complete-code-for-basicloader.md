@@ -21,7 +21,7 @@ Conclua código para classe e métodos que convertam e carreguem recursos gráfi
 
 Este tópico contém estas seções:
 
--   [Technologies](#technologies)
+-   [Tecnologias](#technologies)
 -   [Requisitos](#requirements)
 -   [Exibir o código (C++)](#view-the-code-c)
 

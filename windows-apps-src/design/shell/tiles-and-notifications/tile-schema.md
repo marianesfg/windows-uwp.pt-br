@@ -66,7 +66,7 @@ O objeto de associação possui o conteúdo visual para um tamanho de bloco espe
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **Content** | [ITileBindingContent](#itilebindingcontent) | false | O conteúdo visual a ser exibido no bloco. Uma das [TileBindingContentAdaptive](#tilebindingcontentadaptive), [TileBindingContentIconic](#TileBindingContentIconic), [TileBindingContentContact](#TileBindingContentContact), [TileBindingContentPeople](#TileBindingContentPeople) ou [TileBindingContentPhotos](#TileBindingContentPhotos). |
+| **Conteúdo** | [ITileBindingContent](#itilebindingcontent) | false | O conteúdo visual a ser exibido no bloco. Uma das [TileBindingContentAdaptive](#tilebindingcontentadaptive), [TileBindingContentIconic](#TileBindingContentIconic), [TileBindingContentContact](#TileBindingContentContact), [TileBindingContentPeople](#TileBindingContentPeople) ou [TileBindingContentPhotos](#TileBindingContentPhotos). |
 | **Identidade Visual** | TileBranding | false | O formato que o bloco deve usar para exibir a marca do app. Por padrão, herda a identidade visual do bloco padrão. |
 | **DisplayName** | cadeia de caracteres | false | Uma cadeia de caracteres opcional que substitui o nome de exibição do bloco neste tamanho de bloco. |
 | **Argumentos** | cadeia de caracteres | false | Novo na atualização de aniversário: Dados definidos pelo aplicativo que são passados de volta para seu aplicativo por meio da propriedade TileActivatedInfo em LaunchActivatedEventArgs quando o usuário inicia o aplicativo de blocos dinâmicos. Informa a você quais notificações de bloco o usuário viu quando tocou no Bloco Dinâmico. Nos dispositivos sem a Atualização de Aniversário, isso simplesmente será ignorado. |
@@ -92,7 +92,7 @@ Compatível com todos os tamanhos. Esta é a maneira recomendada de especificar 
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **Children** | IList<ITileBindingContentAdaptiveChild> | false | Os elementos visuais embutidos. Os objetos [AdaptiveText](#adaptivetext), [AdaptiveImage](#adaptiveimage) e [AdaptiveGroup](#adaptivegroup) podem ser adicionados. Os filhos são exibidos em um StackPanel vertical. |
+| **Filhos** | IList<ITileBindingContentAdaptiveChild> | false | Os elementos visuais embutidos. Os objetos [AdaptiveText](#adaptivetext), [AdaptiveImage](#adaptiveimage) e [AdaptiveGroup](#adaptivegroup) podem ser adicionados. Os filhos são exibidos em um StackPanel vertical. |
 | **BackgroundImage** | [TileBackgroundImage](#tilebackgroundimage) | false | Uma imagem de plano de fundo opcional exibida atrás do conteúdo do bloco, sangramento total. |
 | **PeekImage** | [TilePeekImage](#tilepeekimage) | false | Uma imagem opcional animada que surge da parte superior do bloco. |
 | **TextStacking** | [TileTextStacking](#tiletextstacking) | false | Controla o empilhamento de texto (alinhamento vertical) do conteúdo filho como um todo. |
@@ -117,24 +117,24 @@ O estilo de texto controla o tamanho, a espessura e opacidade da fonte. A opacid
 
 | Valor | Significado |
 |---|---|
-| **Default** | Valor padrão. O estilo é determinado pelo renderizador. |
+| **Padrão** | Valor padrão. O estilo é determinado pelo renderizador. |
 | **Legenda** | Tamanho menor do que a fonte de parágrafo. |
-| **CaptionSubtle** | Mesmo que Caption, mas com opacidade sutil. |
+| **captionSubtle** | Mesmo que Caption, mas com opacidade sutil. |
 | **Corpo** | Tamanho da fonte de parágrafo. |
-| **BodySubtle** | Mesmo que Body, mas com opacidade sutil. |
-| **Base** | Tamanho da fonte de parágrafo, a espessura é negrito. Essencialmente a versão em negrito do corpo. |
-| **BaseSubtle** | Mesmo que Base, mas com opacidade sutil. |
+| **bodySubtle** | Mesmo que Body, mas com opacidade sutil. |
+| **Base de dados de** | Tamanho da fonte de parágrafo, a espessura é negrito. Essencialmente a versão em negrito do corpo. |
+| **baseSubtle** | Mesmo que Base, mas com opacidade sutil. |
 | **Subtítulo** | Tamanho da fonte H4. |
-| **SubtitleSubtle** | Mesmo que Subtitle, mas com opacidade sutil. |
+| **subtitleSubtle** | Mesmo que Subtitle, mas com opacidade sutil. |
 | **Título** | Tamanho da fonte H3. |
-| **TitleSubtle** | Mesmo que Title, mas com opacidade sutil. |
-| **TitleNumeral** | Igual a Title, mas com preenchimento superior ou inferior removido. |
-| **Subheader** | Tamanho da fonte H2. |
-| **SubheaderSubtle** | Mesmo que Subheader, mas com opacidade sutil. |
-| **SubheaderNumeral** | Igual a Subheader, mas com preenchimento superior ou inferior removido. |
+| **titleSubtle** | Mesmo que Title, mas com opacidade sutil. |
+| **titleNumeral** | Igual a Title, mas com preenchimento superior ou inferior removido. |
+| **Subcabeçalho** | Tamanho da fonte H2. |
+| **subheaderSubtle** | Mesmo que Subheader, mas com opacidade sutil. |
+| **subheaderNumeral** | Igual a Subheader, mas com preenchimento superior ou inferior removido. |
 | **Cabeçalho** | Tamanho da fonte H1. |
-| **HeaderSubtle** | Mesmo que Header, mas com opacidade sutil. |
-| **HeaderNumeral** | Igual a Header, mas com preenchimento superior ou inferior removido. |
+| **headerSubtle** | Mesmo que Header, mas com opacidade sutil. |
+| **headerNumeral** | Igual a Header, mas com preenchimento superior ou inferior removido. |
 
 
 ### <a name="adaptivetextalign"></a>AdaptiveTextAlign
@@ -142,10 +142,10 @@ Controla o alinhamento horizontal de texto.
 
 | Valor | Significado |
 |---|---|
-| **Default** | Valor padrão. O alinhamento é determinado automaticamente pelo renderizador. |
+| **Padrão** | Valor padrão. O alinhamento é determinado automaticamente pelo renderizador. |
 | **Automático** | O alinhamento é determinado por idioma e cultura atual. |
-| **Left** | Alinha o texto horizontalmente à esquerda. |
-| **Center** | Alinha o texto horizontalmente no centro. |
+| **À esquerda** | Alinha o texto horizontalmente à esquerda. |
+| **Centro** | Alinha o texto horizontalmente no centro. |
 | **Certo** | Alinha o texto horizontalmente à direita. |
 
 
@@ -167,9 +167,9 @@ Especifica o recorte desejado da imagem.
 
 | Valor | Significado |
 |---|---|
-| **Default** | Valor padrão. Comportamento de corte determinado pelo renderizador. |
+| **Padrão** | Valor padrão. Comportamento de corte determinado pelo renderizador. |
 | **Nenhum** | A imagem não é cortada. |
-| **Circle** | A imagem é cortada na forma de círculo. |
+| **Círculo** | A imagem é cortada na forma de círculo. |
 
 
 ### <a name="adaptiveimagealign"></a>AdaptiveImageAlign
@@ -177,10 +177,10 @@ Especifica o alinhamento horizontal de uma imagem.
 
 | Valor | Significado |
 |---|---|
-| **Default** | Valor padrão. Comportamento de alinhamento determinado pelo renderizador. |
+| **Padrão** | Valor padrão. Comportamento de alinhamento determinado pelo renderizador. |
 | **Stretch** | A imagem é esticada para preencher a largura disponível (e a altura possivelmente disponível também, dependendo de onde a imagem é colocada). |
-| **Left** | Alinhe a imagem à esquerda, exibindo a imagem na resolução nativa. |
-| **Center** | Alinhe a imagem horizontalmente no centro, exibindo a imagem na resolução nativa. |
+| **À esquerda** | Alinhe a imagem à esquerda, exibindo a imagem na resolução nativa. |
+| **Centro** | Alinhe a imagem horizontalmente no centro, exibindo a imagem na resolução nativa. |
 | **Certo** | Alinhe a imagem à direita, exibindo a imagem na resolução nativa. |
 
 
@@ -189,7 +189,7 @@ Os grupos identificam semanticamente que o conteúdo do grupo deve ser exibido c
 
 | Propriedade | Tipo | Obrigatório |Descrição |
 |---|---|---|---|
-| **Children** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | false | Subgrupos são exibidos como colunas verticais. Você deve usar subgrupos para fornecer qualquer conteúdo em um AdaptiveGroup. |
+| **Filhos** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | false | Subgrupos são exibidos como colunas verticais. Você deve usar subgrupos para fornecer qualquer conteúdo em um AdaptiveGroup. |
 
 
 ## <a name="adaptivesubgroup"></a>AdaptiveSubgroup
@@ -197,7 +197,7 @@ Os subgrupos são colunas verticais que podem conter texto e imagens.
 
 | Propriedade | Tipo | Obrigatório |Descrição |
 |---|---|---|---|
-| **Children** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | false | [AdaptiveText](#adaptivetext) e [AdaptiveImage](#adaptiveimage) são filhos válidos de subgrupos. |
+| **Filhos** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | false | [AdaptiveText](#adaptivetext) e [AdaptiveImage](#adaptiveimage) são filhos válidos de subgrupos. |
 | **HintWeight** | int? | false | Controle a largura da coluna do subgrupo ao especificar a espessura em relação aos outros subgrupos. |
 | **HintTextStacking** | [AdaptiveSubgroupTextStacking](#adaptivesubgrouptextstacking) | false | Controle o alinhamento vertical do conteúdo deste subgrupo. |
 
@@ -216,9 +216,9 @@ TextStacking especifica o alinhamento vertical do conteúdo.
 
 | Valor | Significado |
 |---|---|
-| **Default** | Valor padrão. O renderizador selecionará automaticamente o alinhamento vertical padrão. |
-| **Top** | Alinhamento vertical com a parte superior. |
-| **Center** | Alinhamento vertical com o centro. |
+| **Padrão** | Valor padrão. O renderizador selecionará automaticamente o alinhamento vertical padrão. |
+| **Início** | Alinhamento vertical com a parte superior. |
+| **Centro** | Alinhamento vertical com o centro. |
 | **parte inferior** | Alinhamento vertical com a parte inferior. |
 
 
@@ -239,9 +239,9 @@ Controla o recorte da imagem de plano de fundo.
 
 | Valor | Significado |
 |---|---|
-| **Default** | O corte usa o comportamento padrão do renderizador. |
+| **Padrão** | O corte usa o comportamento padrão do renderizador. |
 | **Nenhum** | A imagem não é cortada, exibida em um quadrado. |
-| **Circle** | A imagem é cortada em círculo. |
+| **Círculo** | A imagem é cortada em círculo. |
 
 
 ## <a name="tilepeekimage"></a>TilePeekImage
@@ -261,9 +261,9 @@ Controla o recorte da imagem que surge.
 
 | Valor | Significado |
 |---|---|
-| **Default** | O corte usa o comportamento padrão do renderizador. |
+| **Padrão** | O corte usa o comportamento padrão do renderizador. |
 | **Nenhum** | A imagem não é cortada, exibida em um quadrado. |
-| **Circle** | A imagem é cortada em círculo. |
+| **Círculo** | A imagem é cortada em círculo. |
 
 
 ### <a name="tiletextstacking"></a>TileTextStacking
@@ -271,9 +271,9 @@ O empilhamento de texto especifica o alinhamento vertical do conteúdo.
 
 | Valor | Significado |
 |---|---|
-| **Default** | Valor padrão. O renderizador selecionará automaticamente o alinhamento vertical padrão. |
-| **Top** | Alinhamento vertical com a parte superior. |
-| **Center** | Alinhamento vertical com o centro. |
+| **Padrão** | Valor padrão. O renderizador selecionará automaticamente o alinhamento vertical padrão. |
+| **Início** | Alinhamento vertical com a parte superior. |
+| **Centro** | Alinhamento vertical com o centro. |
 | **parte inferior** | Alinhamento vertical com a parte inferior. |
 
 

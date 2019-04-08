@@ -8,7 +8,7 @@ keywords: Windows 10, uwp, serviços da Store, API de ofertas direcionadas da Mi
 ms.localizationpriority: medium
 ms.openlocfilehash: bcf270bd56d17936ef404adbc3663034b58e7a2c
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57615681"

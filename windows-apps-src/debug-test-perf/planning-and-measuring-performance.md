@@ -79,7 +79,7 @@ As metas de eficiência específicas e mensuráveis para seu aplicativo podem in
 
 Agora você pode usar suas metas de desempenho para influenciar o design de seu aplicativo. Usando o aplicativo de exemplo para alimentos e refeições, depois que o usuário navega para a página da receita, você pode optar por [atualizar itens de forma incremental](optimize-gridview-and-listview.md#update-items-incrementally) para que o nome da receita seja renderizado primeiro, a exibição dos ingredientes seja adiada e a exibição das imagens seja ainda mais adiada. Isso mantém a capacidade de resposta e uma interface do usuário flexível ao movimento panorâmico/rolagem, com a renderização de total fidelidade ocorrendo depois que a interação diminui a um ritmo que permita que o thread de interface do usuário acompanhe. Consulte a seguir outros aspectos que devem ser levados em consideração.
 
-**UI**
+**INTERFACE DO USUÁRIO**
 
 -   Maximize o tempo de análise e carregamento e a eficiência da memória para cada página da interface do usuário do seu aplicativo (especialmente a página inicial) [otimizando sua marcação XAML](optimize-xaml-loading.md). Resumindo, adie o carregamento da interface do usuário e do código até que seja necessário.
 -   Para [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705), crie todos os itens do mesmo tamanho e use o máximo de [técnicas de otimização de ListView e GridView](optimize-gridview-and-listview.md) possível.

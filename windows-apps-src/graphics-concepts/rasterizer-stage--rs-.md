@@ -47,7 +47,7 @@ Usar o estágio de sombreador de pixel (PS) é opcional. O estágio do rasteriza
 
 [Rasterização regras](rasterization-rules.md)
 
-[Pipeline de gráficos](graphics-pipeline.md)
+[Pipeline de elementos gráficos](graphics-pipeline.md)
 
  
 

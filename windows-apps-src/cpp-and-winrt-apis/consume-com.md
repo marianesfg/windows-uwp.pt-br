@@ -1,5 +1,5 @@
 ---
-description: Este tópico usa um exemplo de código completo do Direct2D para mostrar como usar C + + c++ /CLI WinRT para consumir classes e interfaces COM.
+description: Este tópico usa um exemplo de código completo do Direct2D para mostrar como usar C++/WinRT para consumir classes e interfaces COM.
 title: Consumir componentes COM com C++/WinRT
 ms.date: 07/23/2018
 ms.topic: article
@@ -7,7 +7,7 @@ keywords: Windows 10, uwp, standard, c + +, cpp, winrt, COM, componente, classe,
 ms.localizationpriority: medium
 ms.openlocfilehash: 129477689e12de2634b422a0fc4487b283e3bf03
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57644801"
@@ -78,7 +78,7 @@ DWriteCreateFactory(
     reinterpret_cast<IUnknown**>(dwriteFactory2.put()));
 ```
 
-## <a name="re-seat-a-winrtcomptr"></a>Re-seat a **winrt::com_ptr**
+## <a name="re-seat-a-winrtcomptr"></a>Instale novamente um **winrt::com_ptr**
 
 > [!IMPORTANT]
 > Se você tiver um [ **winrt::com_ptr** ](/uwp/cpp-ref-for-winrt/com-ptr) que já está encaixado (seu ponteiro bruto interno já tem um destino) e você deseja encaixá-la para apontar para um objeto diferente de novamente, em seguida, você primeiro precisará atribuir `nullptr` a ele&mdash;conforme mostrado no exemplo de código abaixo. Se você não fizer isso, em seguida, um já fixada **com_ptr** desenhará o problema para a sua atenção (quando você chama [ **com_ptr::put** ](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) ou [ **com_ptr:: put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)), confirmando que seu ponteiro interno não é nulo.

@@ -22,7 +22,7 @@ Os modos de exibição de saída de fluxo permitem que as informações de vért
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Modos de exibição](views.md)
+[Exibições](views.md)
 
  
 

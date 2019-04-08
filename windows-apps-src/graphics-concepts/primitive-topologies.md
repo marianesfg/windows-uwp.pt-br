@@ -80,7 +80,7 @@ Para obter mais informações sobre a geração de várias faixas, consulte [Est
 
 [Estágio do Assembler de entrada (IA)](input-assembler-stage--ia-.md)
 
-[Pipeline de gráficos](graphics-pipeline.md)
+[Pipeline de elementos gráficos](graphics-pipeline.md)
 
  
 

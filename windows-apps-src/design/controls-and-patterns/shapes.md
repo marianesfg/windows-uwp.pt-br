@@ -63,7 +63,7 @@ Quando uma [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) está posicion
 
 Um conjunto de seis elementos [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) faz parte do modelo de controle para o controle [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/BR227538), e dois elementos **Ellipse** concêntricos fazem parte de um [**RadioButton**](https://msdn.microsoft.com/library/windows/apps/BR227544).
 
-## <a name="span-idrectanglespanspan-idrectanglespanspan-idrectanglespanrectangle"></a><span id="Rectangle"></span><span id="rectangle"></span><span id="RECTANGLE"></span>Rectangle
+## <a name="span-idrectanglespanspan-idrectanglespanspan-idrectanglespanrectangle"></a><span id="Rectangle"></span><span id="rectangle"></span><span id="RECTANGLE"></span>Retângulo
 
 Um [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) é uma forma quadrilátera com lados opostos e iguais. Para criar um **Rectangle** básico, especifique valores para [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width), [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) e [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill).
 

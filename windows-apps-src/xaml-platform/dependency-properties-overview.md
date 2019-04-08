@@ -204,7 +204,7 @@ Os aspectos de threading de [**DependencyObject**](https://msdn.microsoft.com/li
 
 - [Propriedades de dependência personalizadas](custom-dependency-properties.md)
 - [Visão geral das propriedades anexadas](attached-properties-overview.md)
-- [Associação de dados em camadas](https://msdn.microsoft.com/library/windows/apps/mt210946)
+- [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946)
 - [Animações storyboarded](https://msdn.microsoft.com/library/windows/apps/mt187354)
 - [Criando componentes do tempo de execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 - [Usuário XAML e exemplo de controles personalizados](https://go.microsoft.com/fwlink/p/?linkid=238581)

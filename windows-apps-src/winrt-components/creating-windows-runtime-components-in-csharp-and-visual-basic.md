@@ -17,7 +17,7 @@ ms.lasthandoff: 03/06/2019
 ms.locfileid: "57619961"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Criação de componentes do Windows Runtime em C# e Visual Basic
-Começando com o .NET Framework 4.5, você pode usar código gerenciado para criar seus próprios tipos de tempo de execução do Windows e empacotá-las em um componente de tempo de execução do Windows. Você pode usar o componente nos aplicativos de plataforma Universal do Windows (UWP) que são escritos em C++, JavaScript, Visual Basic, ou C#. Este tópico descreve as regras para a criação de um componente e descreve alguns aspectos do suporte do .NET Framework para o tempo de execução do Windows. Em geral, esse suporte foi projetado para ser transparente para o programador do .NET Framework. No entanto, ao criar um componente a ser usado com JavaScript ou C++, você precisa estar ciente das diferenças na maneira como essas linguagens dão suporte ao Windows Runtime.
+Começando com o .NET Framework 4.5, você pode usar código gerenciado para criar seus próprios tipos de tempo de execução do Windows e empacotá-las em um componente de tempo de execução do Windows. Você pode usar o componente nos aplicativos de plataforma Universal do Windows (UWP) que são escritos em C++, JavaScript, Visual Basic, ou C#. Este tópico descreve as regras para a criação de um componente e descreve alguns aspectos do suporte do .NET Framework para o Windows Runtime. Em geral, esse suporte foi projetado para ser transparente para o programador do .NET Framework. No entanto, ao criar um componente a ser usado com JavaScript ou C++, você precisa estar ciente das diferenças na maneira como essas linguagens dão suporte ao Windows Runtime.
 
 Se você estiver criando um componente para usar apenas em aplicativos UWP que são escritos em Visual Basic ou C#, e o componente não contiver controles UWP, em seguida, considere a possibilidade de usar o **biblioteca de classes** em vez do modelo de **Windows Componente de tempo de execução** modelo de projeto no Microsoft Visual Studio. Existem menos restrições em uma biblioteca de classes simples.
 
@@ -86,7 +86,7 @@ A tabela a seguir lista os tipos de interface genérica mais comuns, além de ou
 | IVectorView&lt;T&gt;                             | IReadOnlyList&lt;T&gt;                            |
 | IMap&lt;K, V&gt;                                 | IDictionary&lt;TKey, TValue&gt;                   |
 | IMapView&lt;K, V&gt;                             | IReadOnlyDictionary&lt;TKey, TValue&gt;           |
-| IKeyValuePair&lt;K, V&gt;                        | KeyValuePair&lt;TKey, TValue&gt;                  |
+| 1&gt;{2&gt;Platform::Collections::inputiterator&lt;ikeyvaluepair&lt;k&lt;K, V&gt;                        | KeyValuePair&lt;TKey, TValue&gt;                  |
 | IBindableIterable                                | IEnumerable                                       |
 | IBindableVector                                  | IList                                             |
 | Windows.UI.Xaml.Data.INotifyPropertyChanged      | System.ComponentModel.INotifyPropertyChanged      |
