@@ -1,5 +1,5 @@
 ---
-description: Este tópico descreve as diversas categorias de valores que existem em C++. Você já deve ter ouvido de lvalues e rvalues, mas há outros tipos, muito.
+description: Este tópico descreve as diversas categorias de valores que existem em C++. Você já deve ter ouvido falar de lvalues e rvalues, mas há outros tipos também.
 title: Categorias de valor e as referências a eles
 ms.date: 08/11/2018
 ms.topic: article
@@ -114,7 +114,7 @@ Um glvalue (generalizado lvalue) tem uma identidade.
 ### <a name="lvalue-im"></a>lvalue (eu\&\!m)
 Um lvalue (um tipo de glvalue) tem uma identidade, mas não é móvel. Estes são os valores de leitura / gravação normalmente que você passa ao redor por referência ou por referência const ou valor se a cópia é barato. Não pode ser associado a um lvalue em uma referência rvalue.
 
-### <a name="xvalue-im"></a>xvalue (i\&m)
+### <a name="xvalue-im"></a>xValue (eu\&m)
 Um xvalue (um tipo de glvalue, mas também um tipo de rvalue) tem uma identidade e também é movido. Isso pode ser um lvalue a mesma que você decidiu mover como a cópia é cara, e você vai ter cuidado para não acessá-lo posteriormente. Aqui está como você pode transformar um lvalue em uma xvalue.
 
 ```cppwinrt
@@ -153,7 +153,7 @@ void bar(A&& a) // a is a named rvalue reference; it's an lvalue.
 A&& get_by_rvalue_ref() { ... } // This unnamed rvalue reference is an xvalue.
 ```
 
-### <a name="im"></a>\!i\&\!m
+### <a name="im"></a>\!Eu\&\!m
 O tipo de valor que não tem identidade e não é móvel é a combinação de um que ainda não discutimos. Mas podemos poderá ignorá-lo, porque essa categoria não é uma ideia útil na linguagem C++.
 
 ## <a name="reference-collapsing-rules"></a>Regras de recolhimento de referência

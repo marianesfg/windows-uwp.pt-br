@@ -47,4 +47,4 @@ Você pode detectar quando um objeto é fechado por qualquer motivo com um ident
 > Consulte os tópicos a seguir para obter mais informações sobre o ciclo de vida do aplicativo da Plataforma Universal do Windows (UWP) para Windows 10:
 > - [Ciclo de vida de aplicativo Windows 10 Universal Windows Platform (UWP)](../launch-resume/app-lifecycle.md)
 > - [Lidar com a suspensão de aplicativos](../launch-resume/suspend-an-app.md)
-> - [Identificador de retomada de aplicativo](../launch-resume/resume-an-app.md)
+> - [Tratar a retomada do aplicativo](../launch-resume/resume-an-app.md)

@@ -48,7 +48,7 @@ Essas APIs podem enumerar dispositivos sobre qualquer um dos seguintes protocolo
 -   [Bluetooth](https://msdn.microsoft.com/library/windows/desktop/Aa362932)
 -   [**Wi-Fi Direct**](https://msdn.microsoft.com/library/windows/apps/Dn297687)
 -   WiGig
--   [**Point of Service**](https://msdn.microsoft.com/library/windows/apps/Dn298071)
+-   [**Ponto de serviço**](https://msdn.microsoft.com/library/windows/apps/Dn298071)
 
 Em muitos casos, você não precisa se preocupar em usar as APIs de enumeração. Isso ocorre porque muitas APIs que usam dispositivos selecionarão automaticamente o dispositivo padrão apropriado ou fornecerão uma API de enumeração mais simplificada. Por exemplo, [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926) usará automaticamente o dispositivo renderizador de áudio padrão. Contanto que seu aplicativo possa usar o dispositivo padrão, não é necessário usar as APIs de enumeração em seu aplicativo. As APIs de enumeração fornecem uma maneira geral e flexível para você descobrir e se conectar aos dispositivos disponíveis. Este tópico fornece informações sobre como enumerar dispositivos e descreve as quatro maneiras comuns de enumerar dispositivos.
 

@@ -85,5 +85,5 @@ Se você não conseguir acessar seu console por algum motivo, você também pode
 Se você ainda não retornou o console Xbox One para o Modo de Varejo, faça isso agora, conforme descrito em [Alternar para o modo de varejo](#switch-to-retail-mode).
 
 ## <a name="see-also"></a>Consulte também
-- [Ativação de um modo de desenvolvedor Xbox](devkit-activation.md)
+- [Ativação do Modo de Desenvolvedor do Xbox One](devkit-activation.md)
 - [UWP no Xbox One](index.md)

@@ -86,7 +86,7 @@ Estado | Descrição
 :----- | :-------
 **Nenhum** | Esse é o estado inicializado para o controlador. Todas as entradas são ignoradas desde que o jogo não esteja esperando nenhuma entrada do controlador.
 **WaitForInput** | O controlador está esperando que o player confirme uma mensagem do jogo usando um clique esquerdo do mouse, um evento por toque ou o botão do mouse em um gamepad.
-**Active** | O controlador está no modo de reprodução do jogo ativo.
+**Active Directory** | O controlador está no modo de reprodução do jogo ativo.
 
 
 

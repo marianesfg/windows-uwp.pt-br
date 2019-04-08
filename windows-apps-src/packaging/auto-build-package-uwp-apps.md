@@ -23,7 +23,7 @@ Neste artigo, vamos analisar algumas maneiras diferentes de fazer isso.  Também
 Escolha o tipo de agente de compilação que você deseja que o VSTS use ao executar o processo de compilação.
 Um agente de compilação hospedado é implantado com as ferramentas e sdks mais comuns, e funciona para a maioria dos cenários. Consulte o artigo [Software no servidor de compilação hospedado](https://www.visualstudio.com/docs/build/admin/agents/hosted-pool#software). No entanto, você pode criar um agente de compilação personalizado se precisar de mais controle sobre as etapas de criação. Você pode usar a tabela a seguir para ajudá-lo a tomar essa decisão.
 
-| **Cenário** | **Agente personalizado** | **Hosted Build Agent** |
+| **Cenário** | **Agente personalizado** | **Agente de compilação hospedado** |
 |-------------|----------------|----------------------|
 | Compilação UWP básica (incluindo o .NET Native)| :white_check_mark: | :white_check_mark: |
 | Gerar pacotes para sideload| :white_check_mark: | :white_check_mark: |
@@ -213,7 +213,7 @@ MakeAppx(0,0): Error : Error info: error 80080204: The package with file name "A
 Esse erro é exibido porque, no nível da solução, não está claro qual aplicativo deve aparecer no pacote.
 Para resolver esse problema, abra cada arquivo de projeto e adicione as seguintes propriedades ao final do primeiro elemento `<PropertyGroup>`:
 
-|**Project**|**Propriedades**|
+|**Projeto**|**Propriedades**|
 |-------|----------|
 |Aplicativo|`<AppxBundle>Always</AppxBundle>`|
 |UnitTests|`<AppxBundle>Never</AppxBundle>`|
@@ -358,7 +358,7 @@ Em seguida, você pode usar a ferramenta Pvk2Pfx para gerar um arquivo PFX que c
 
 Forneça esses certificados para cada função de computador:
 
-|**Machine**|**Uso**|**Certificado**|**Certificado Store**|
+|**Máquina**|**Uso**|**Certificado**|**Certificado Store**|
 |-----------|---------|---------------|---------------------|
 |Máquina de desenvolvedor/compilação|Assinar compilações|MyCert.PFX|Usuário atual/pessoal|
 |Máquina de desenvolvedor/compilação|Run|MyCert.cer|Máquina local/pessoas confiáveis|

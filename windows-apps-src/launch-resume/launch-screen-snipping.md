@@ -40,7 +40,7 @@ O **screensketch ms:** URI permite que você iniciar o aplicativo de recorte & e
 | sharedAccessToken | cadeia de caracteres | não | Um token de identificação de arquivo a ser aberto no aplicativo do esboço & de recorte. Recuperados [SharedStorageAccessManager.AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). Se esse parâmetro for omitido, o aplicativo será iniciado sem um arquivo aberto. |
 | secondarySharedAccessToken | cadeia de caracteres | não | Uma cadeia de caracteres que identifica um arquivo JSON com metadados sobre o recorte. Os metadados podem incluir um **clipPoints** campo com uma matriz de coordenadas x, y, e/ou um [userActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity). |
 | Código-fonte | cadeia de caracteres | não | Uma cadeia de forma livre para indicar a origem que iniciou o URI. |
-| isTemporary | bool | não | Se definido como True, a tela de esboço tentará excluir o arquivo depois de abri-lo. |
+| IsTemporary | bool | não | Se definido como True, a tela de esboço tentará excluir o arquivo depois de abri-lo. |
 
 A exemplo a seguir chama o [LaunchUriAsync](https://docs.microsoft.com/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_) método para enviar uma imagem para recorte & Esboço do aplicativo do usuário.
 

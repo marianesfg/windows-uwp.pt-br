@@ -63,8 +63,8 @@ Os candidatos a recursos são escolhidos com base em um [**ResourceContext**](/u
 ## <a name="important-apis"></a>APIs Importantes
 * [ResourceLoader](/uwp/api/windows.applicationmodel.resources.resourceloader?branch=live)
 * [ResourceManager](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)
-* [ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
+* [Resourcecontext)&lt;2}&lt;1}](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Localizar cadeias de caracteres em seu manifesto de pacote da interface do usuário e aplicativo](localize-strings-ui-manifest.md)
-* [Carregamento de imagens e ativos sob medidos para escala, tema, alto contraste e outras pessoas](images-tailored-for-scale-theme-contrast.md)
+* [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](localize-strings-ui-manifest.md)
+* [Carregar imagens e ativos personalizados para escala, tema, alto contraste e outros](images-tailored-for-scale-theme-contrast.md)

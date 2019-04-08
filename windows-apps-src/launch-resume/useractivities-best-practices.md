@@ -102,6 +102,6 @@ No exemplo a seguir, os metadados do conteúdo JSON, seguindo os padrões de mer
 * [Atividades do usuário (documentos do projeto Roma)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [Cartões adaptáveis](https://docs.microsoft.com/adaptive-cards/)
 * [Visualizador de cartões adaptáveis, exemplos](https://adaptivecards.io/)
-* [Manipular a ativação de URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+* [Tratar a ativação do URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 * [Interação com seus clientes em qualquer plataforma usando o Microsoft Graph, o Feed de atividades e os cartões adaptáveis](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph/)

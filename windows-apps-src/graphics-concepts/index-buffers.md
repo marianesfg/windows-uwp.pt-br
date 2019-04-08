@@ -40,7 +40,7 @@ O app pode gravar diretamente índices em um buffer de índice alocado na memór
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Buffers de índice e vértice](vertex-and-index-buffers.md)
+[Buffers de vértice e índice](vertex-and-index-buffers.md)
 
  
 

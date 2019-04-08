@@ -152,42 +152,42 @@ A seguinte tabela contém exemplos do que o usuário veria na sua interface do u
 <td align="left">Inglês (GB)</td>
 <td align="left">nenhuma</td>
 <td align="left">Inglês (GB)</td>
-<td align="left">UI: Inglês (GB)<br>As datas/horas/números: Inglês (GB)</td>
+<td align="left">INTERFACE DO USUÁRIO: Inglês (GB)<br>As datas/horas/números: Inglês (GB)</td>
 </tr>
 <tr>
 <td align="left">Alemão (Alemanha) (padrão); Francês (França); Italiano (Itália)</td>
 <td align="left">Francês (Áustria)</td>
 <td align="left">nenhuma</td>
 <td align="left">Francês (Áustria)</td>
-<td align="left">UI: Francês (França) (fallback de francês (Áustria))<br>As datas/horas/números: Francês (Áustria)</td>
+<td align="left">INTERFACE DO USUÁRIO: Francês (França) (fallback de francês (Áustria))<br>As datas/horas/números: Francês (Áustria)</td>
 </tr>
 <tr>
 <td align="left">Inglês (EUA) (padrão); Francês (França); Inglês (Reino Unido)</td>
 <td align="left">Inglês (Canadá); Francês (Canadá)</td>
 <td align="left">nenhuma</td>
 <td align="left">Inglês (Canadá); Francês (Canadá)</td>
-<td align="left">UI: Inglês (EUA) (fallback de inglês (Canadá))<br>As datas/horas/números: Inglês (Canadá)</td>
+<td align="left">INTERFACE DO USUÁRIO: Inglês (EUA) (fallback de inglês (Canadá))<br>As datas/horas/números: Inglês (Canadá)</td>
 </tr>
 <tr>
 <td align="left">Espanhol (Espanha) (padrão); Espanhol (México); Espanhol (América Latina); Português (Brasil)</td>
 <td align="left">Inglês (EUA)</td>
 <td align="left">nenhuma</td>
 <td align="left">Espanhol (Espanha)</td>
-<td align="left">UI: Espanhol (Espanha) (usa padrão desde nenhum fallback disponível em inglês)<br>Datas/horas/números: Espanhol (Espanha)</td>
+<td align="left">INTERFACE DO USUÁRIO: Espanhol (Espanha) (usa padrão desde nenhum fallback disponível em inglês)<br>Datas/horas/números: Espanhol (Espanha)</td>
 </tr>
 <tr>
 <td align="left">Catalão (padrão); Espanhol (Espanha); Francês (França)</td>
 <td align="left">Catalão; Francês (França)</td>
 <td align="left">nenhuma</td>
 <td align="left">Catalão; Francês (França)</td>
-<td align="left">UI: Principalmente catalão e alguns francês (França) porque nem todas as cadeias de caracteres estão em catalão<br>As datas/horas/números: Catalão</td>
+<td align="left">INTERFACE DO USUÁRIO: Principalmente catalão e alguns francês (França) porque nem todas as cadeias de caracteres estão em catalão<br>As datas/horas/números: Catalão</td>
 </tr>
 <tr>
 <td align="left">Inglês (Reino Unido) (padrão); Francês (França); Alemão (Alemanha)</td>
 <td align="left">Alemão (Alemanha); Inglês (Reino Unido)</td>
 <td align="left">Inglês (Reino Unido) (escolhido pelo usuário na interface do usuário do aplicativo)</td>
 <td align="left">Inglês (Reino Unido); Alemão (Alemanha)</td>
-<td align="left">UI: Inglês (GB) (substituição de idioma)<br>Datas/horas/números: Inglês (GB)</td>
+<td align="left">INTERFACE DO USUÁRIO: Inglês (GB) (substituição de idioma)<br>Datas/horas/números: Inglês (GB)</td>
 </tr>
 </tbody>
 </table>
@@ -210,10 +210,10 @@ A seguinte tabela contém exemplos do que o usuário veria na sua interface do u
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Registro de submarca de idioma IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)
-* [Personalize seus recursos de idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [Idiomas com suporte](../../publish/supported-languages.md)
 * [Globalizar seus formatos de data/hora/número](use-global-ready-formats.md)
-* [Como o sistema de gerenciamento de recursos corresponde a marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
+* [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
 
 ## <a name="samples"></a>Exemplos
 * [Exemplo de localização e recursos de aplicativo](https://go.microsoft.com/fwlink/p/?linkid=231501)

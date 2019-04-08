@@ -46,7 +46,7 @@ Na lista suspensa **Lançamento**, você pode definir quando deseja que o aplica
 
 Estas são as opções que você pode configurar para o agendamento do **Lançamento** de um produto:
 - **Assim que possível**: O produto liberará assim que ele é certificado e publicado. Essa é a opção padrão.
-- **at**: O produto liberará na data e hora em que você selecionar. Você tem duas opções adicionais:
+- **em**: O produto liberará na data e hora em que você selecionar. Você tem duas opções adicionais:
    - **UTC**: A hora em que você selecionar será o tempo de Horário Coordenado Universal (UTC), para que as versões do aplicativo ao mesmo tempo em todos os lugares.
    - **Local**: A hora em que você selecionar serão usados em cada fuso horário associado a um mercado. (Observe que, no caso de mercados que incluem mais de um fuso horário, apenas um fuso horário desse mercado será usado. Para os Estados Unidos, o fuso horário do Leste dos EUA é usado.
 - **não agendado**: O aplicativo não estará disponível na Store. Se você escolher essa opção, poderá disponibilizar o aplicativo na Loja mais tarde, criando um novo envio e escolhendo uma das outras opções.

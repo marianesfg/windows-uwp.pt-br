@@ -34,6 +34,6 @@ O limite de tamanho em um arquivo PRI é 64 KB.
 * [Indexação de referência (PRI) de recurso do pacote](https://msdn.microsoft.com/library/windows/desktop/mt845690)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Compilar recursos manualmente com MakePri.exe](makepri-exe-command-options.md)
+* [Compilar recursos manualmente com o MakePri.exe](makepri-exe-command-options.md)
 * [Consumindo funções de DLL não gerenciada](/dotnet/framework/interop/consuming-unmanaged-dll-functions?branch=live)
-* [Sistema de gerenciamento de recursos](resource-management-system.md)
+* [Sistema de Gerenciamento de Recursos](resource-management-system.md)

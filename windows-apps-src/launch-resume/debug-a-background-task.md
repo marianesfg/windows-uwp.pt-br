@@ -105,10 +105,10 @@ Para obter mais informações sobre como usar o VS para depurar uma tarefa em se
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e registrar uma tarefa em segundo plano do out-of-process](create-and-register-a-background-task.md)
-* [Criar e registrar uma tarefa de plano de fundo em processo](create-and-register-an-inproc-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano em processo](create-and-register-an-inproc-background-task.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
-* [Declare as tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Como disparar suspender, continuar e eventos em aplicativos UWP em segundo plano](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
 * [Analisando a qualidade do código de aplicativos UWP com análise de código do Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)

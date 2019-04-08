@@ -74,7 +74,7 @@ void App::Initialize(
 A cena de jogo precisará renderizar quando o jogo for iniciado. As instruções para renderização começam no método  [__GameMain::Run__](#gamemainrun-method), conforme mostrado abaixo.
 
 O fluxo simples é:
-1. __Update__
+1. __Atualização__
 2. __Renderizar__
 3. __Presente__
 
@@ -537,7 +537,7 @@ O Direct3D 11 é um conjunto de APIs que nos ajudam a criar elementos gráficos 
 
 Para usuários novatos, pode-se considerar os recursos (também conhecidos como recursos de dispositivo) como informações sobre como renderizar um objeto, como textura, posição, cor. Os recursos fornecem dados para o pipeline e definem o que é renderizado durante a cena. Os recursos podem ser carregados a partir da mídia de jogo ou criados dinamicamente no momento de execução.
 
-Na verdade, um recurso é uma área na memória que pode ser acessada pelo [pipeline](#rendering-pipeline) de Direct3D. Para que o pipeline acesse a memória com eficiência, os dados fornecidos ao pipeline (como geometria de entrada, recursos de sombreador e texturas) devem ser armazenados em um recurso. Existem dois tipos de recursos a partir dos quais todos os recursos de Direct3D são derivados: um buffer ou uma textura. Até 128 recursos podem estar ativos para cada estágio do pipeline. Para obter mais informações, consulte [Recursos](../graphics-concepts/resources.md).
+Na verdade, um recurso é uma área na memória que pode ser acessada pelo [pipeline](#rendering-pipeline) de Direct3D. Para que o pipeline acesse a memória com eficiência, os dados fornecidos ao pipeline (como geometria de entrada, recursos de sombreador e texturas) devem ser armazenados em um recurso. Existem dois tipos de recursos dos quais todos os recursos de Direct3D são derivados: um buffer ou uma textura. Até 128 recursos podem estar ativos para cada estágio do pipeline. Para obter mais informações, consulte [Recursos](../graphics-concepts/resources.md).
 
 #### <a name="subresource"></a>Sub-recurso
 

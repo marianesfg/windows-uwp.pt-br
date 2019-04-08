@@ -106,7 +106,7 @@ Nesse código, você define um layout para os vértices; especificamente, quais 
 
     "Porém, o valor de enumeração indica RGB, não XYZ!" você observa. Muito bem! Nos dois casos de dados de cor e dados de coordenada, você geralmente usa 3 ou 4 valores de componentes, então, por que não usar o mesmo formato em ambos? A semântica HLSL, não o nome do formato, indica como o sombreador trata os dados.
 
--   **COLOR**: Essa é um semântica para dados de cores do HLSL. Como em **POSITION**, ela consiste em três valores de ponto de flutuação de 32 bits (DirectX::XMFLOAT3). Cada valor contém um componente de cor: vermelho (r), azul (b) ou verde (g), expressos como um número flutuante entre 0 e 1.
+-   **COR**: Essa é um semântica para dados de cores do HLSL. Como em **POSITION**, ela consiste em três valores de ponto de flutuação de 32 bits (DirectX::XMFLOAT3). Cada valor contém um componente de cor: vermelho (r), azul (b) ou verde (g), expressos como um número flutuante entre 0 e 1.
 
     Os valores **COLOR** são tipicamente retornados como um valor RGBA de componente 4 no final do pipeline de sombreador. Para esse exemplo, você definirá o valor alfabético "A" como 1.0 (opacidade máxima) no pipeline de sombreador para todos os pixels.
 

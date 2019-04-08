@@ -46,8 +46,8 @@ O exemplo a seguir consulta para determinar se um codificador de áudio FLAC est
 
 * [Reprodução de mídia](media-playback.md)
 * [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Transcodifique arquivos de mídia](transcode-media-files.md)
-* [Codecs com suporte](supported-codecs.md)
+* [Transcodificar arquivos de mídia](transcode-media-files.md)
+* [Codecs compatíveis](supported-codecs.md)
  
 
  

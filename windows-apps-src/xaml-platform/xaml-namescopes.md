@@ -83,7 +83,7 @@ Em função dos namescopes XAML separados, localizar elementos nomeados em um mo
 * [Visão geral do XAML](xaml-overview.md)
 * [atributo X:Name](x-name-attribute.md)
 * [Guia de início rápido: Modelos de controle](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
-* [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)
+* [**XamlReader**](https://msdn.microsoft.com/library/windows/apps/br228048)
 * [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)
  
 

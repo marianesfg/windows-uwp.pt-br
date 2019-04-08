@@ -12,7 +12,7 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e898b0552a9485cd15079a37940a2151e4bc9f9
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57590731"
@@ -220,7 +220,7 @@ Se nenhuma correspondência for identificada, o acelerador é inválido e uma me
 O evento Invoked do objeto [KeyboardAccelerator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardaccelerator) é disparado quando o acelerador é executado. O evento do objeto [KeyboardAcceleratorInvokedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs) inclui as seguintes propriedades:
 
 - [**Manipulado** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.handled) (Boolean): Definir isso como true impede que o evento disparando o padrão de controle e interrompe a propagação de eventos do acelerador. O padrão é False.
-- [**Element**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.element) (DependencyObject): O objeto associado com o acelerador.
+- [**Elemento** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.element) (DependencyObject): O objeto associado com o acelerador.
 - [**KeyboardAccelerator**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.keyboardaccelerator): O Acelerador de teclado usado para gerar o evento Invoked.
 
 Aqui, demonstraremos como definir uma coleção de aceleradores de teclado para itens em um ListView e como tratar o evento para cada acelerador.

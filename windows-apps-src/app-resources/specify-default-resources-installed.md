@@ -102,6 +102,6 @@ Salve e feche o arquivo, e recompile o projeto.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Personalize seus recursos de idioma, escala, alto contraste e outros qualificadores](tailor-resources-lang-scale-contrast.md)
+* [Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores](tailor-resources-lang-scale-contrast.md)
 * [Marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Compilar recursos manualmente com MakePri.exe](compile-resources-manually-with-makepri.md)
+* [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)

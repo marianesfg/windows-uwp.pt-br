@@ -320,7 +320,7 @@ Considere a adição de suporte para navegação de chave de seta ao usar os seg
       <p><img src="images/keyboard/dialog.png" alt="Dialog buttons"/></p>
       <p><sup>Botões da caixa de diálogo</sup></p>
       <p><img src="images/keyboard/radiobutton.png" alt="Radio buttons"/></p>
-      <p><sup>RadioButtons</sup></p>     
+      <p><sup>Botões de opção</sup></p>     
     </td>
     <td>
       <p><img src="images/keyboard/appbar.png" alt="AppBar buttons"/></p>

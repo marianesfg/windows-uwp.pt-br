@@ -95,4 +95,4 @@ Quando a tarefa em segundo plano é concluída, você pode iniciar o aplicativo 
 
 ## <a name="see-also"></a>Consulte também
 
-[Criar e registrar uma tarefa em segundo plano do out-of-process](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)
+[Criar e registrar uma tarefa em segundo plano fora do processo](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)

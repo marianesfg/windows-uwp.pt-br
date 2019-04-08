@@ -36,9 +36,9 @@ O Windows fornece várias opções diferentes para iniciar o manipulador padrão
 | Opção | Método | Descrição |
 |--------|--------|-------------|
 | Início padrão | [**LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) | Inicie o arquivo especificado com o manipulador padrão. |
-| Início com Abrir com | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicie o arquivo especificado deixando que o usuário escolha o manipulador na caixa de diálogo Abrir com. |
-| Iniciar com um fallback do aplicativo recomendado | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicie o arquivo especificado com o manipulador padrão. Se nenhum manipulador estiver instalado no sistema, recomende ao usuário um aplicativo na Loja. |
-| Iniciar com um modo de exibição restante desejado | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) (Windows-only) | Inicie o arquivo especificado com o manipulador padrão. Especifique uma preferência para permanecer na tela após a inicialização e solicite um tamanho específico de janela. [**LauncherOptions.DesiredRemainingView** ](https://msdn.microsoft.com/library/windows/apps/dn298314) não é compatível com a família de dispositivos móveis. |
+| Início com Abrir com | [**LaunchFileAsync (IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicie o arquivo especificado deixando que o usuário escolha o manipulador na caixa de diálogo Abrir com. |
+| Iniciar com um fallback do aplicativo recomendado | [**LaunchFileAsync (IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicie o arquivo especificado com o manipulador padrão. Se nenhum manipulador estiver instalado no sistema, recomende ao usuário um aplicativo na Loja. |
+| Iniciar com um modo de exibição restante desejado | [**LaunchFileAsync (IStorageFile, LauncherOptions)** ](https://msdn.microsoft.com/library/windows/apps/hh701465) (somente Windows) | Inicie o arquivo especificado com o manipulador padrão. Especifique uma preferência para permanecer na tela após a inicialização e solicite um tamanho específico de janela. [**LauncherOptions.DesiredRemainingView** ](https://msdn.microsoft.com/library/windows/apps/dn298314) não é compatível com a família de dispositivos móveis. |
 
 ### <a name="default-launch"></a>Início padrão
 

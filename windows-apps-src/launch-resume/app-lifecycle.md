@@ -77,7 +77,7 @@ A classe [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/wi
 
 [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797)  
 [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)  
-[**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799)  [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801)  
+[**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799)[**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801)  
 [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336)  
 [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806)
 
@@ -206,8 +206,8 @@ O código básico que é relevante ao ciclo de vida do aplicativo é fornecido n
 ## <a name="key-application-lifecycle-apis"></a>APIs principais do ciclo de vida do aplicativo
 
 -   [**Windows.ApplicationModel** ](https://msdn.microsoft.com/library/windows/apps/br224691) namespace
--   [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766) namespace
--   [**Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865) namespace
+-   [**ApplicationModel** ](https://msdn.microsoft.com/library/windows/apps/br224766) namespace
+-   [**Windows.ApplicationModel.Core** ](https://msdn.microsoft.com/library/windows/apps/br205865) namespace
 -   [**Windows.UI.Xaml.Application** ](https://msdn.microsoft.com/library/windows/apps/br242324) classe (XAML)
 -   [**Windows.UI.Xaml.Window** ](https://msdn.microsoft.com/library/windows/apps/br209041) classe (XAML)
 
@@ -215,10 +215,10 @@ O código básico que é relevante ao ciclo de vida do aplicativo é fornecido n
 
 * [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)
 * [Diretrizes para aplicativo suspender e retomar](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [Identificador de aplicativo pré-lançamento](handle-app-prelaunch.md)
-* [Manipular a ativação de aplicativo](activate-an-app.md)
-* [Suspender o identificador de aplicativo](suspend-an-app.md)
-* [Identificador de retomada de aplicativo](resume-an-app.md)
+* [Tratar a pré-inicialização do aplicativo](handle-app-prelaunch.md)
+* [Tratar a ativação do aplicativo](activate-an-app.md)
+* [Tratar a suspensão do aplicativo](suspend-an-app.md)
+* [Tratar a retomada do aplicativo](resume-an-app.md)
 * [Atividade em segundo plano com o modelo de processo único](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)
 * [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 

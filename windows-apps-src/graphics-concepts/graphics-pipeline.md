@@ -70,4 +70,4 @@ Os mais utilizados são o estágio de sombreador de vértice (VS) e o estágio d
 
 - [Guia de aprendizado de gráficos do Direct3D](index.md)
 
-- [Pipeline de computação](compute-pipeline.md)
+- [Computar o pipeline](compute-pipeline.md)

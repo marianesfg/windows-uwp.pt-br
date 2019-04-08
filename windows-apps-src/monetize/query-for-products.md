@@ -59,7 +59,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 | modifiedAfter     | datetime     | Se especificado, o serviço retorna apenas produtos que foram modificados após essa data.        | Não       |
 | parentProductId   | cadeia de caracteres       | Se especificado, o serviço retorna apenas complementos que correspondem ao aplicativo especificado.      | Não       |
 | productSkuIds     | list&lt;ProductSkuId&gt; | Se especificado, o serviço retornará apenas os produtos aplicáveis aos pares produto/SKU fornecidos. Para obter mais informações, consulte a tabela abaixo.      | Não       |
-| productTypes      | list&lt;string&gt;       | Especifica quais tipos de produtos para retornar nos resultados da consulta. Os tipos de produto com suporte são **Application**, **Durable** e **UnmanagedConsumable**.     | Sim       |
+| productTypes      | lista&lt;cadeia de caracteres&gt;       | Especifica quais tipos de produtos para retornar nos resultados da consulta. Os tipos de produto com suporte são **Application**, **Durable** e **UnmanagedConsumable**.     | Sim       |
 | validityType      | cadeia de caracteres       | Quando definido como **All**, todos os produtos para um usuário serão retornados, incluindo itens expirados. Quando definido como **Valid**, somente os produtos que são válidos serão retornados nesse momento (ou seja, eles têm um status ativo, data de início &lt; agora e data de término é &gt; agora). | Não       |
 
 

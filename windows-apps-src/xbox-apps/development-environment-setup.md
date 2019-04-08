@@ -121,7 +121,7 @@ Para que você possa implantar um aplicativo em seu Xbox One, precisa ter um usu
 Parabéns! Você criou e implantou com êxito o seu primeiro aplicativo UWP no Xbox!
 
 ## <a name="see-also"></a>Consulte também
-- [Ativação de um modo de desenvolvedor Xbox](devkit-activation.md)  
+- [Ativação do Modo de Desenvolvedor do Xbox One](devkit-activation.md)  
 - [Downloads e ferramentas para Windows 10](https://dev.windows.com/downloads)  
 - [Programa Windows Insider](https://go.microsoft.com/fwlink/?LinkId=780552)  
 - [Introdução às ferramentas Xbox One](introduction-to-xbox-tools.md) 

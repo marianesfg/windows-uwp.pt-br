@@ -32,5 +32,5 @@ Este vídeo apresenta mais detalhes sobre aplicativos Web empacotados e aplicati
 Para começar, baixe o mecanismo de sua preferência e procure instruções para aplicativos do Windows 10. Também não deixe de ler o [guia de introdução](getting-started.md) para obter informações sobre como transformar seu console em um kit de desenvolvimento e como implantar no Visual Studio.
 
 ## <a name="see-also"></a>Consulte também
-- [Trazendo existente de jogos para Xbox](development-lanes-landing.md)
+- [Trazendo jogos existentes para o Xbox](development-lanes-landing.md)
 - [UWP no Xbox One](index.md)

@@ -53,7 +53,7 @@ O estágio de saída de fluxo dá suporte a até 4 buffers simultaneamente.
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de gráficos](graphics-pipeline.md)
+[Pipeline de elementos gráficos](graphics-pipeline.md)
 
  
 

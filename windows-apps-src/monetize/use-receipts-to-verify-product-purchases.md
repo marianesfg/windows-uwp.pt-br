@@ -8,7 +8,7 @@ keywords: windows 10, uwp, compras no aplicativo, IAPs, recebimentos, Windows.Ap
 ms.localizationpriority: medium
 ms.openlocfilehash: 9449a2dd265128a83f7840872ce4995df05a4e78
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57605721"
@@ -129,7 +129,7 @@ Este elemento contém informações de compra para o app atual.
 
 |  Atributo  |  Descrição   |
 |-------------|-------------------|
-|  **Id**  |    Identifica a compra.           |
+|  **ID**  |    Identifica a compra.           |
 |  **AppId**  |     O valor do Nome da Família de Pacotes que o sistema operacional usa para o app.           |
 |  **LicenseType**  |    **Full**, se o usuário tiver adquirido a versão completa do app. **Trial**, se o usuário baixou uma versão de avaliação do app.           |  
 |  **PurchaseDate**  |    A data de aquisição do app.          |  |
@@ -144,10 +144,10 @@ Esse elemento contém informações sobre uma compra realizada em aplicativo par
 
 |  Atributo  |  Descrição   |
 |-------------|-------------------|
-|  **Id**  |    Identifica a compra.           |
+|  **ID**  |    Identifica a compra.           |
 |  **AppId**  |     Identifica o app por meio do qual o usuário fez a compra.           |
 |  **ProductId**  |     Identifica o produto adquirido.           |
-|  **ProductType**  |    Determina o tipo do produto. No momento só é compatível com um valor **Durable**.          |  
+|  **productType**  |    Determina o tipo do produto. No momento só é compatível com um valor **Durable**.          |  
 |  **PurchaseDate**  |    A data em que ocorreu a compra.          |  |
 
  

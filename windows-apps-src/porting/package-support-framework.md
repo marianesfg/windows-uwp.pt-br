@@ -186,11 +186,11 @@ Criar um nome de arquivo ``config.json``e salve esse arquivo para a pasta raiz d
 
 A seguir está um guia para o esquema config:
 
-| Array | key | Valor |
+| matriz | key | Valor |
 |-------|-----------|-------|
 | applications | id |  Use o valor da `Id` atributo do `Application` elemento no manifesto do pacote. |
 | applications | executável | O caminho relativo do pacote para o executável que você deseja iniciar. Na maioria dos casos, você pode obter esse valor de seu arquivo de manifesto de pacote antes de modificá-lo. É o valor da `Executable` atributo do `Application` elemento. |
-| applications | workingDirectory | (Opcional) Um caminho relativo do pacote a ser usado como o diretório de trabalho do aplicativo que é iniciado. Se você não definir esse valor, o sistema operacional usa o `System32` diretório como o diretório de trabalho do aplicativo. |
+| applications | WorkingDirectory | (Opcional) Um caminho relativo do pacote a ser usado como o diretório de trabalho do aplicativo que é iniciado. Se você não definir esse valor, o sistema operacional usa o `System32` diretório como o diretório de trabalho do aplicativo. |
 | processos | executável | Na maioria dos casos, esse será o nome da `executable` configurado acima com a extensão de arquivo e caminho removida. |
 | correções | DLL | Caminho relativo do pacote para a correção,.msix/.appx para carregar. |
 | correções | config | (Opcional) Controla como a lista de distribuição de correção se comporta. O formato exato desse valor varia de acordo com uma base de correção por correção como cada correção pode interpretar esse "blob" quanto desejar. |
@@ -399,11 +399,11 @@ Adicione um arquivo chamado ``config.json`` ao seu projeto de empacotamento, em 
 
 Forneça um valor para cada chave. Use essa tabela como um guia.
 
-| Array | key | Valor |
+| matriz | key | Valor |
 |-------|-----------|-------|
 | applications | id |  Use o valor da `Id` atributo do `Application` elemento no manifesto do pacote. |
 | applications | executável | O caminho relativo do pacote para o executável que você deseja iniciar. Na maioria dos casos, você pode obter esse valor de seu arquivo de manifesto de pacote antes de modificá-lo. É o valor da `Executable` atributo do `Application` elemento. |
-| applications | workingDirectory | (Opcional) Um caminho relativo do pacote a ser usado como o diretório de trabalho do aplicativo que é iniciado. Se você não definir esse valor, o sistema operacional usa o `System32` diretório como o diretório de trabalho do aplicativo. |
+| applications | WorkingDirectory | (Opcional) Um caminho relativo do pacote a ser usado como o diretório de trabalho do aplicativo que é iniciado. Se você não definir esse valor, o sistema operacional usa o `System32` diretório como o diretório de trabalho do aplicativo. |
 | processos | executável | Na maioria dos casos, esse será o nome da `executable` configurado acima com a extensão de arquivo e caminho removida. |
 | correções | DLL | Caminho relativo do pacote para a correção DLL seja carregada. |
 | correções | config | (Opcional) Controla como a correção DLL se comporta. O formato exato desse valor varia de acordo com uma base de correção por correção como cada correção pode interpretar esse "blob" quanto desejar. |

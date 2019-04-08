@@ -1,6 +1,6 @@
 ---
 title: Criando componentes do Tempo de Execução do Windows em C++
-description: Este tópico mostra como usar C + + c++ /CX para criar um componente de tempo de execução do Windows, que é um componente que pode ser chamado por um aplicativo Universal Windows criado usando C#, Visual Basic, C++ ou Javascript.
+description: Este tópico mostra como usar C++/CX para criar um componente do Tempo de Execução do Windows, que é um componente que pode ser chamado por um aplicativo Universal Windows criado usando C#, Visual Basic, C++ ou JavaScript.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 ms.date: 05/14/2018
 ms.topic: article
@@ -17,7 +17,7 @@ ms.locfileid: "57600861"
 > [!NOTE]
 > Este tópico existe para ajudar você na manutenção do seu aplicativo C++/CX. Recomendamos que você use [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para novos aplicativos. C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows. Para saber como criar um componente de tempo de execução do Windows usando C + + c++ /CLI WinRT, consulte [criar eventos em C + + c++ /CLI WinRT](../cpp-and-winrt-apis/author-events.md).
 
-Este tópico mostra como usar C + + c++ /CX para criar um componente de tempo de execução do Windows, que é um componente que pode ser chamado por um aplicativo Universal Windows criado usando C#, Visual Basic, C++ ou Javascript.
+Este tópico mostra como usar C++/CX para criar um componente do Tempo de Execução do Windows, que é um componente que pode ser chamado por um aplicativo Universal Windows criado usando C#, Visual Basic, C++ ou JavaScript.
 
 Há vários motivos para a criação de um componente de tempo de execução do Windows.
 - Obter a vantagem em termos de desempenho do C++ em operações complexas ou intensivas.

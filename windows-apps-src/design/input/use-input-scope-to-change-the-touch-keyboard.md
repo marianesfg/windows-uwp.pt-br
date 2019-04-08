@@ -22,7 +22,7 @@ Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft I
 
 ### <a name="important-apis"></a>APIs Importantes
 - [InputScope](https://msdn.microsoft.com/library/windows/apps/hh702632)
-- [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/hh702028)
+- [inputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/hh702028)
 
 
 O teclado virtual pode ser usado para entrada de texto, quando o aplicativo é executado em um dispositivo com tela sensível ao toque. O teclado virtual é invocado quando o usuário toca em um campo de entrada editável, como um **[TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)** ou um **[RichEditBox](https://msdn.microsoft.com/library/windows/apps/br227548)**. Você pode tornar a entrada de dados muito mais rápida e fácil para os usuários em seu aplicativo definindo o *escopo de entrada* do controle de texto para corresponder ao tipo de dados que o usuário deve inserir. O escopo de entrada oferece uma dica para o sistema sobre o tipo de entrada de texto esperado pelo controle, para que o sistema possa fornecer um layout de teclado virtual especializado para o tipo de entrada.

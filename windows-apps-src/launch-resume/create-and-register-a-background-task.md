@@ -12,7 +12,7 @@ dev_langs:
 - cpp
 ms.openlocfilehash: 9df6eef44d45db37e17610d6a5333f3a387b5cf6
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57592161"
@@ -449,10 +449,10 @@ Veja os seguintes tópicos relacionados para obter referência de API, diretriz 
 
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
-* [Defina as condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
+* [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
-* [Lidar com uma tarefa em segundo plano foi cancelada](handle-a-cancelled-background-task.md)
-* [Monitorar o progresso da tarefa em segundo plano e conclusão](monitor-background-task-progress-and-completion.md)
+* [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
 * [Converter uma tarefa de plano de fundo de out-of-process em uma tarefa de plano de fundo em processo](convert-out-of-process-background-task.md)  

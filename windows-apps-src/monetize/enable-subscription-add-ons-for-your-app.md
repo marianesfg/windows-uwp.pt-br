@@ -7,7 +7,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cda22488f613c508b2c753c6b530b2b34b10909d
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57589981"
@@ -131,5 +131,5 @@ No momento, os cenários a seguir não têm suporte para complementos de assinat
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Compras no aplicativo e avaliação](in-app-purchases-and-trials.md)
+* [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md)
 * [Obter informações sobre produtos para os aplicativos e complementos](get-product-info-for-apps-and-add-ons.md)

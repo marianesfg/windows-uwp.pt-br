@@ -4,7 +4,7 @@ title: Solução de problemas com Fazer um Teste da Microsoft com o visualizador
 ms.assetid: 9218e542-f520-4616-98fc-b113d5a08e0f
 ms.date: 10/06/2017
 ms.topic: article
-keywords: Windows 10, uwp, educação
+keywords: windows 10, uwp, educação
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f4bdcf45c7dd37dd540a666d99b5fa2fd2d49f8
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f

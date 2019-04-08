@@ -182,7 +182,7 @@ Finalmente, usamos esses métodos e propriedades para inicializar, acessar e atu
 -   **SetPosition**. O aplicativo chama esse método para definir as coordenadas (x, y e z) dos controles no espaço da cena.
 -   **SetOrientation**. O aplicativo chama esse método para definir a rotação sobre o eixo x e a rotação sobre o eixo y da câmera.
 -   **Obtenha\_posição**. O aplicativo acessa essa propriedade para obter a posição atual da câmera no espaço da cena. Essa propriedade é usada como um método para comunicar a posição atual da câmera ao aplicativo.
--   **get\_LookPoint**. O aplicativo acessa essa propriedade para obter o ponto para o qual a câmera do controlador está voltada atualmente.
+-   **Obtenha\_LookPoint**. O aplicativo acessa essa propriedade para obter o ponto para o qual a câmera do controlador está voltada atualmente.
 -   **Update**. Lê o estado dos controladores de movimento e visão e atualiza a posição da câmera. Esse método é chamado continuamente a partir do loop principal do aplicativo para atualizar os dados do controlador da câmera e a posição da câmera no espaço da cena.
 
 Agora já temos todos os componentes necessários para implementar os controles move-look. Portanto, chegou o momento de conectar todas essas peças.

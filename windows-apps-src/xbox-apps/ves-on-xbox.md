@@ -65,13 +65,13 @@ Fonte do nome em ordem de prioridade:
 ## <a name="actionable-controls"></a>Controles acionáveis ##
 VES considera acionáveis se ele implementa os seguintes padrões de controle de automação um controle:
 
-- **InvokePattern** (eg. Botão)-representa os controles que iniciam ou executam uma ação única não ambígua e não mantêm o estado quando ativado.
+- **InvokePattern** (por exemplo. Botão)-representa os controles que iniciam ou executam uma ação única não ambígua e não mantêm o estado quando ativado.
 
 - **TogglePattern** (por exemplo. Caixa de seleção) – representa um controle que pode percorrer um conjunto de estados e manter um estado definido uma vez.
 
 - **SelectionItemPattern** (por exemplo. Caixa de combinação) – representa um controle que atua como um contêiner para uma coleção de itens filhos selecionáveis.
 
-- **ExpandCollapsePattern** (eg. Caixa de combinação) - representa os controles que visualmente expandem para exibir o conteúdo e recolher para ocultar o conteúdo.
+- **ExpandCollapsePattern** (por exemplo. Caixa de combinação) - representa os controles que visualmente expandem para exibir o conteúdo e recolher para ocultar o conteúdo.
 
 - **ScrollPattern** (por exemplo. Lista) – representa controles que atuam como contêineres roláveis para uma coleção de elementos filho.
 

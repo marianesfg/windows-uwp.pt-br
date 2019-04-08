@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2089f9fcd54989234b52f95eb3ee9535f9b3ede3
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603111"
+---
 # <a name="contributing-to-uwp-conceptual-documentation"></a>Contribuição para a documentação conceitual de UWP
 
 Obrigado por seu interesse na documentação da Plataforma Universal do Windows (UWP)! Agradecemos seus comentários, edições e adições para nossos documentos.

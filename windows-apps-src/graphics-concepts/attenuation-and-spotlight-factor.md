@@ -24,7 +24,7 @@ Os componentes de iluminação especular e difusa da equação de iluminação g
 
 A atenuação de uma luz depende do tipo de luz e da distância entre a luz e a posição do vértice. Para calcular a atenuação, use uma das seguintes equações.
 
-Atten = 1/( att0<sub>i</sub> + att1<sub>i</sub> \* d + att2<sub>i</sub> \* d²)
+Atten = 1 / (att0<sub>eu</sub> + att1<sub>eu</sub> \* 1!d + att2<sub>eu</sub> \* d²)
 
 Onde:
 
@@ -68,7 +68,7 @@ A seguinte equação especifica o fator de destaque.
 | Parâmetro         | Valor padrão | Tipo           | Descrição                              | Intervalo                    |
 |-------------------|---------------|----------------|------------------------------------------|--------------------------|
 | rho<sub>i</sub>   | N/D           | Ponto flutuante | cosseno(ângulo) para destaque i            | N/D                      |
-| phi<sub>i</sub>   | 0.0           | Ponto flutuante | Ângulo de penumbra de destaque i em radianos | \[theta<sub>i</sub>, pi) |
+| phi<sub>i</sub>   | 0.0           | Ponto flutuante | Ângulo de penumbra de destaque i em radianos | \[teta<sub>eu</sub>, pi) |
 | theta<sub>i</sub> | 0.0           | Ponto flutuante | Ângulo de penumbra de destaque i em radianos    | \[0, pi)                 |
 | queda           | 0.0           | Ponto flutuante | Fator de queda                           | (-infinito + infinito)   |
 

@@ -8,7 +8,7 @@ keywords: windows 10, uwp, acessibilidade, jogos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e1d9d25fc63dd2fbb8d258fdaee692ccdfdc911
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57592931"
@@ -113,7 +113,7 @@ Identificando lacunas, você pode otimizar, iterar e melhorar o conceito do desi
 
 Quase todas as soluções de acessibilidade podem ser divididas em dois princípios. O primeiro é dar aos jogadores as opções para personalizarem a experiência dos jogos. Se já tiver uma base de fãs grandes, você poderá ter uma parte significativa do público-alvo que não queira que a experiência mude de maneira alguma. Tudo bem. Dê aos jogadores a capacidade de ativar e desativar esses recursos, além de torná-los configuráveis individualmente. É preciso permitir que as pessoas experienciem o jogo da forma que melhor atenda a suas necessidades e preferências.
 
-### <a name="reinforce-communicate-information-in-more-than-one-way"></a>Reinforce: Informações de mais de uma maneira de comunicar-se
+### <a name="reinforce-communicate-information-in-more-than-one-way"></a>Reforçar: Informações de mais de uma maneira de comunicar-se
 
 O secundo princípio é onde entra em cena o conceito de design universal, uma abordagem única que não só inclui mais jogadores, mas que também melhora a experiência para todos. Por exemplo, uma imagem e um texto, um símbolo e uma cor. Um mapa que se baseia em vários marcadores coloridos diferentes não é só impossível de ser usado por jogadores daltônicos, mas também é frustrante para todos os outros que devem se lembrar ao que tudo corresponde. Adicionar símbolos proporciona uma experiência melhor para todos.
 
@@ -127,7 +127,7 @@ Considerar a acessibilidade permite abordar o projeto a partir de uma nova persp
 
 A acessibilidade é uma medida de qualidade. Deve ser um requisito de recurso e não um item de trabalho desejável. Por exemplo, "Adaptar o minimapa para os daltônicos" não é considerado um item de trabalho de baixa prioridade que se obtém quando há um tempo extra. Se tal item de trabalho não é feito, isso simplesmente significa que todo o recurso de minimapa está incompleto e não pode ser enviado.
 
-### <a name="evangelize-make-accessibility-a-priority-in-your-game-studio"></a>Evangelize: Faça uma prioridade de acessibilidade no seu jogo studio
+### <a name="evangelize-make-accessibility-a-priority-in-your-game-studio"></a>Evangelizar: Faça uma prioridade de acessibilidade no seu jogo studio
 
 Como o desenvolvimento de jogos está sempre seguindo um cronograma apertado, priorizar a acessibilidade ajudará a torná-la um processo mais fácil. Uma maneira é criar desde o início tendo a acessibilidade em mente. Quanto mais cedo a acessibilidade é considerada, mas rápida e barata ela se torna. 
 

@@ -65,15 +65,15 @@ A tabela a seguir conecta alguns dos recursos a APIs do Windows Runtime.
 
 | Funcionalidade do Dispositivo        | API             | 
 |--------------------------|-----------------|
-| AllJoyn                  | [**Windows.Devices.AllJoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) | 
+| AllJoyn                  | [**Alljoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) | 
 | Mensagens de Chat Bloqueadas    | [**Windows.ApplicationModel.CommunicationBlocking**](https://msdn.microsoft.com/library/windows/apps/Dn974207) | 
 | Location                 | Veja [Visão geral de localização e mapas](https://msdn.microsoft.com/library/windows/apps/Mt219699) para saber mais. | 
-| Telefonema               | [**Windows.ApplicationModel.Calls**](https://msdn.microsoft.com/library/windows/apps/Dn297266) | 
-| Informações de Conta de Usuário | [**Windows.System.UserProfile**](https://msdn.microsoft.com/library/windows/apps/BR241881) | 
-| Chamada VOIP             | [**Windows.ApplicationModel.Calls**](https://msdn.microsoft.com/library/windows/apps/Dn297266) | 
+| Telefonema               | [**ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/Dn297266) | 
+| Informações de Conta de Usuário | [**USERPROFILE**](https://msdn.microsoft.com/library/windows/apps/BR241881) | 
+| Chamada VOIP             | [**ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/Dn297266) | 
 | USB                      | [**Windows.Devices.Usb**](https://msdn.microsoft.com/library/windows/apps/Dn278466) | 
 | HID                      | [**Windows.Devices.HumanInterfaceDevice**](https://msdn.microsoft.com/library/windows/apps/Dn264174) | 
 | GATT Bluetooth           | [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) | 
 | Bluetooth RFCOMM         | [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) | 
-| Ponto de Serviço         | [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) |
+| Ponto de Serviço         | [**Pointofservice**](https://msdn.microsoft.com/library/windows/apps/Dn298071) |
 

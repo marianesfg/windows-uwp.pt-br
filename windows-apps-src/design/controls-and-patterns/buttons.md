@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: f585d278d9420865c895d4e20fa1730196d9f0cd
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57593021"
@@ -34,7 +34,7 @@ Controle | Descrição
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Um botão que aciona um evento de clique continuamente enquanto pressionado.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Um botão que tem o estilo como um hiperlink, usado para navegação. Para saber mais, consulte [Hiperlinks](hyperlinks.md).
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Um botão com uma divisa para abrir um submenu anexado.
-[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | Um botão com dois lados. Um dos lados inicia uma ação e o outro lado abre um menu.
+[Botão de divisão](/uwp/api/windows.ui.xaml.controls.splitbutton) | Um botão com dois lados. Um dos lados inicia uma ação e o outro lado abre um menu.
 [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | Um botão de alternância com dois lados. Um dos lados alterna liga/desliga, e o outro lado abre um menu.
 
 | **Obter a biblioteca de interface do usuário do Windows** |
@@ -67,7 +67,7 @@ Use uma **SplitButton** quando deseja que o usuário seja capaz de iniciar uma a
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/Button">abrir o aplicativo e ver o Botão em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo da Galeria de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>

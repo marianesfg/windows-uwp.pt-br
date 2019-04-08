@@ -149,8 +149,8 @@ Um adiamento não aumenta a quantidade de código que precisa ser executado ante
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Ciclo de vida do aplicativo](app-lifecycle.md)
-* [Manipular a ativação de aplicativo](activate-an-app.md)
-* [Identificador de retomada de aplicativo](resume-an-app.md)
+* [Tratar a ativação do aplicativo](activate-an-app.md)
+* [Tratar a retomada do aplicativo](resume-an-app.md)
 * [Diretrizes de experiência do usuário para iniciar, suspender e retomar](https://msdn.microsoft.com/library/windows/apps/dn611862)
 * [Execução estendida](run-minimized-with-extended-execution.md)
 

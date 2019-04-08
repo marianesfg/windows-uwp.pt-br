@@ -8,7 +8,7 @@ keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f4749b8560624ed58f43b33fe3373d909919347
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57592021"
@@ -190,13 +190,13 @@ private void RefreshUIImages()
 ```
 
 ## <a name="important-apis"></a>APIs Importantes
-* [ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
+* [Resourcecontext)&lt;2}&lt;1}](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
 * [ResourceContext.SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
 * [MapChanged](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Personalize seus recursos de idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md)
-* [Localizar cadeias de caracteres em seu manifesto de pacote da interface do usuário e aplicativo](localize-strings-ui-manifest.md)
+* [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](localize-strings-ui-manifest.md)
 * [Armazene e recupere configurações e outros dados de aplicativo](../design/app-settings/store-and-retrieve-app-data.md)
 * [Suportam de bloco e notificação do sistema para o idioma, escala e alto contraste](tile-toast-language-scale-contrast.md)
 * [Itens localizáveis de manifesto](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)

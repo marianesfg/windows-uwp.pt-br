@@ -35,7 +35,7 @@ Existem dois tipos de dados de aplicativo: configurações e arquivos.
     -   **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
     -   **valor booliano**
     -   **Char16**, **String**
-    -   [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576), [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996)
+    -   [**Data e hora**](https://msdn.microsoft.com/library/windows/apps/br206576), [ **TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996)
     -   **GUID**, [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)
     -   [**ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588): Um conjunto de configurações de aplicativo relacionado que deve ser serializado e desserializado atomicamente. Use configurações compostas para lidar com facilidade com atualizações atômicas ou configurações interdependentes. O sistema assegura a integridade das configurações compostas durante o acesso e o roaming. As configurações compostas são otimizadas para pequenas quantidades de dados e o desempenho pode ser ruim se você as utilizar para conjuntos grandes de dados.
 -   **Arquivos**
@@ -434,7 +434,7 @@ Como opção, você pode converter os dados do aplicativo para seu aplicativo. I
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [**Windows.Storage.ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587)
+* [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587)
 * [**Windows.Storage.ApplicationData.RoamingSettings**](https://msdn.microsoft.com/library/windows/apps/br241624)
 * [**Windows.Storage.ApplicationData.RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623)
 * [**Windows.Storage.ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625)

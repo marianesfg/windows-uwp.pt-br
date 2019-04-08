@@ -58,7 +58,7 @@ Este tópico descreve o **pessoas ms:** Esquema de URI. Seu app pode usar esse e
 </div>
 <div> 
 </div></td>
-<td align="left">ms-people:viewcontact?ContactId=&lt;contactid&gt;&amp;AggregatedId=&lt;aggid&gt;&amp;PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;&amp;Contact=&lt;contactobj&gt;</td>
+<td align="left">MS-pessoas: viewcontact? ID de contato =&lt;contactid&gt;&amp;AggregatedId =&lt;aggid&gt;&amp;PhoneNumber = &lt;phonenum&gt;&amp;Email =&lt;email &gt; &amp;ContactName =&lt;nome&gt;&amp;contato =&lt;contactobj&gt;</td>
 </tr>
 <tr class="odd">
 <td align="left">Inicia uma página para salvar contato no aplicativo Pessoas a fim de salvar o contato indicado com o número de telefone ou o endereço de email fornecido.
@@ -255,7 +255,7 @@ Este tópico descreve o **pessoas ms:** Esquema de URI. Seu app pode usar esse e
 
 </tr>
 <tr class="even">
-<td align="left"><b>HomePhone</b></td>
+<td align="left"><b>homePhone</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Número de telefone residencial do contato.</p></td>
 </tr>
@@ -267,7 +267,7 @@ Este tópico descreve o **pessoas ms:** Esquema de URI. Seu app pode usar esse e
 </tr>
 
 <tr class="even">
-<td align="left"><b>LastName</b></td>
+<td align="left"><b>Sobrenome</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Sobrenome do contato.</p></td>
 </tr>
@@ -285,7 +285,7 @@ Este tópico descreve o **pessoas ms:** Esquema de URI. Seu app pode usar esse e
 </tr>
 
 <tr class="odd">
-<td align="left"><b>Nickname</b></td>
+<td align="left"><b>Apelido</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Apelido do contato.</p></td>
 </tr>
@@ -309,7 +309,7 @@ Este tópico descreve o **pessoas ms:** Esquema de URI. Seu app pode usar esse e
 </tr>
 
 <tr class="odd">
-<td align="left"><b>Suffix</b></td>
+<td align="left"><b>Sufixo</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Sufixo do contato.</p></td>
 </tr>
@@ -357,7 +357,7 @@ Este tópico descreve o **pessoas ms:** Esquema de URI. Seu app pode usar esse e
 </tr>
 
 <tr class="odd">
-<td align="left"><b>WorkEmail</b></td>
+<td align="left"><b>Email corporativo</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Email de trabalho do contato.</p></td>
 </tr>

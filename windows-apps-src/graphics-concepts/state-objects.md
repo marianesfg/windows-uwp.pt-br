@@ -60,9 +60,9 @@ Como alternativa, você pode optar por usar o sistema de efeito que gerenciará 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Pipeline de gráficos](graphics-pipeline.md)
+[Pipeline de elementos gráficos](graphics-pipeline.md)
 
-[Modos de exibição](views.md)
+[Exibições](views.md)
 
  
 

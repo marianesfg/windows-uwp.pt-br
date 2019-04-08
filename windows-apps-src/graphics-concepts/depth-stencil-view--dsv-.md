@@ -24,7 +24,7 @@ Existem alguns usos mais avançados de buffers de estêncil além de definir uma
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Modos de exibição](views.md)
+[Exibições](views.md)
 
  
 

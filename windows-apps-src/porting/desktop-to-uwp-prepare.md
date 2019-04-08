@@ -14,7 +14,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57600891"
 ---
-# <a name="prepare-to-package-a-desktop-application"></a>Preparar para empacotar um aplicativo da área de trabalho
+# <a name="prepare-to-package-a-desktop-application"></a>Preparar um pacote para um aplicativo de área de trabalho
 
 Este artigo lista as coisas que você precisa saber antes de empacotar seu aplicativo da área de trabalho. Talvez você não precise fazer muito para preparar seu aplicativo para o processo de empacotamento, mas se qualquer um dos itens a seguir aplica-se ao seu aplicativo, você precisará solucioná-lo antes do empacotamento. Lembre-se de que a Microsoft Store lida com o licenciamento e a atualização automática para você, portanto, você pode remover qualquer recurso relacionado a essas tarefas de seu código base.
 

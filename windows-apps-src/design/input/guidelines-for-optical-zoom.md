@@ -33,7 +33,7 @@ Os diagramas a seguir demonstram as diferenças entre redimensionamento e zoom �
 
 ![juntar os dedos aumenta o zoom e afastar os dedos o diminui](images/areazoom.png)
 
-**Resize**: Usuário seleciona um objeto dentro de uma área e redimensiona esse objeto.
+**Redimensionar**: Usuário seleciona um objeto dentro de uma área e redimensiona esse objeto.
 
 ![juntar os dedos reduz um objeto e separá-los o aumenta](images/objectresize.png)
 

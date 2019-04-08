@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57603271"
 ---
-# <a name="getting-started-what-next"></a>Guia de Introdução: O que fazer em seguida?
+# <a name="getting-started-what-next"></a>Introdução: O que fazer em seguida?
 
 
 ## <a name="next-steps"></a>Próximas etapas

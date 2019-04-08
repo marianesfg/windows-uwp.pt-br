@@ -8,7 +8,7 @@ ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a6d39a78ba73dcb598f209ea48c4b131e375ab6
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57594801"
@@ -32,8 +32,8 @@ Para obter mais informações sobre assinatura de código e certificados em gera
 
 - **SignTool.exe**  
     Dependendo do seu caminho de instalação do SDK, a **SignTool** é instalada no computador Windows 10 nos seguintes locais:
-    - x86: C:\Program Files (x86)\Windows Kits\10\bin\x86\SignTool.exe
-    - x64: C:\Program Files (x86)\Windows Kits\10\bin\x64\SignTool.exe
+    - x86: C:\Program arquivos (x86) \Windows Kits\10\bin\x86\SignTool.exe
+    - x64: C:\Program arquivos (x86) \Windows Kits\10\bin\x64\SignTool.exe
 
 ## <a name="using-signtool"></a>Usando o SignTool
 
@@ -126,6 +126,6 @@ O erro interno 0x8007000B geralmente corresponde a um destes valores:
 
 | **ID do evento** | **Cadeia de caracteres de evento de exemplo** | **Sugestão** |
 |--------------|--------------------------|----------------|
-| 150          | error 0x8007000B: O nome do Editor de manifesto de aplicativo (CN = Contoso) deve corresponder ao nome da entidade do certificado de autenticação (CN = Contoso, C = US). | O nome do editor de manifesto de aplicativo deve corresponder exatamente ao nome do assunto após a assinatura.               |
-| 151          | error 0x8007000B: O método de hash de assinatura especificado (SHA512) deve corresponder o método de hash usado no mapa de bloco de pacote de aplicativo (SHA256).     | O hashAlgorithm especificado no parâmetro /fd está incorreto. Execute o **SignTool** usando o hashAlgorithm que corresponda ao mapa de blocos do pacote de aplicativos (usado para criar o pacote de aplicativos)  |
-| 152          | error 0x8007000B: O conteúdo do pacote de aplicativo deve validar em relação ao seu mapa de bloco.                                                           | O pacote de aplicativos está corrompido e precisa ser recompilado para gerar um novo mapa de blocos. Para saber mais sobre como criar um pacote de aplicativos, consulte [Criar um pacote de aplicativos com a ferramenta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). |
+| 150          | Erro: 0x8007000B: O nome do Editor de manifesto de aplicativo (CN = Contoso) deve corresponder ao nome da entidade do certificado de autenticação (CN = Contoso, C = US). | O nome do editor de manifesto de aplicativo deve corresponder exatamente ao nome do assunto após a assinatura.               |
+| 151          | Erro: 0x8007000B: O método de hash de assinatura especificado (SHA512) deve corresponder o método de hash usado no mapa de bloco de pacote de aplicativo (SHA256).     | O hashAlgorithm especificado no parâmetro /fd está incorreto. Execute o **SignTool** usando o hashAlgorithm que corresponda ao mapa de blocos do pacote de aplicativos (usado para criar o pacote de aplicativos)  |
+| 152          | Erro: 0x8007000B: O conteúdo do pacote de aplicativo deve validar em relação ao seu mapa de bloco.                                                           | O pacote de aplicativos está corrompido e precisa ser recompilado para gerar um novo mapa de blocos. Para saber mais sobre como criar um pacote de aplicativos, consulte [Criar um pacote de aplicativos com a ferramenta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). |

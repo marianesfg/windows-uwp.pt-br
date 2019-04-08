@@ -92,7 +92,7 @@ Depois de enviar essa solicitação, a propriedade [Response](https://docs.micro
 |----------------------|---------------|
 |  *Anônimo*                   |  Um valor Booleano, onde **true** indica que a identidade do usuário ou do dispositivo não estava presente na solicitação, e **false** indica que a identidade do usuário ou dispositivo estava presente na solicitação.  |
 |  *name*                   |  Uma cadeia de caracteres que contém o nome do grupo de versão de pré-lançamento melhor classificado ao qual o dispositivo ou usuário pertence.  |
-|  *settings*                   |  Um dicionário de pares de chave/valor que contêm o nome e o valor das variáveis remotas que o desenvolvedor configurou para o grupo de versão de pré-lançamento.  |
+|  *Configurações*                   |  Um dicionário de pares de chave/valor que contêm o nome e o valor das variáveis remotas que o desenvolvedor configurou para o grupo de versão de pré-lançamento.  |
 
 O exemplo a seguir demonstra um valor de retorno para essa solicitação.
 

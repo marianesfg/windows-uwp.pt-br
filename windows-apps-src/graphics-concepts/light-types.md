@@ -33,7 +33,7 @@ Uma lâmpada é um bom exemplo de luz pontual. As luzes pontuais são afetadas p
 
 As luzes direcionais têm somente cor e direção, mas não têm posição. Elas emitem luz paralela. Ou seja, todas as luzes geradas pelas luzes direcionais percorrem uma cena na mesma direção. Imagine uma luz direcional como uma fonte de luz a uma distância quase infinita, como o sol. As luzes direcionais não são afetadas por atenuação ou intervalos, portanto, a direção e a cor especificadas são fatores considerados somente quando o Direct3D calcula cores de vértice. Devido ao pequeno número de fatores de iluminação, essas são as luzes menos intensas para usar.
 
-## <a name="span-idspotlightspanspan-idspotlightspanspan-idspotlightspanspotlight"></a><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>SpotLight
+## <a name="span-idspotlightspanspan-idspotlightspanspan-idspotlightspanspotlight"></a><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>Em destaque
 
 
 Os destaques têm cor, posição e direção para emissão de luz. A luz emitida de um destaque é composta por um cone interno brilhante e um cone externo maior, com a intensidade de luz entre os dois diminuindo conforme mostrado na ilustração a seguir.

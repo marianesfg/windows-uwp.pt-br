@@ -8,7 +8,7 @@ keywords: windows 10, uwp, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: 24ec2013735597efae73aee31bb4aee1a8e1413e
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57594981"
@@ -29,7 +29,7 @@ Atualmente, o Microsoft Store Services SDK dá suporte aos seguintes cenários p
 |  Cenário  |  Descrição   |
 |------------|----------------|
 |  [Execute testes no seu aplicativo UWP com um teste a / B](run-app-experiments-with-a-b-testing.md)    |  Execute testes A/B em seu aplicativo UWP (Plataforma Universal do Windows) para medir a eficácia de recursos em alguns clientes antes de liberar os recursos para todos. Depois de definir um experimento no Partner Center, use o [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) de classe para obter variações para seu experimento em seu aplicativo, use esses dados para modificar o comportamento do recurso que você está testando e, em seguida, use o [LogForVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation) método para enviar eventos de exibição e eventos de conversão ao Partner Center. Por fim, use o Centro de parceiros para exibir os resultados e gerenciar o experimento.  |
-|  [Inicie o Hub de comentários do aplicativo UWP](launch-feedback-hub-from-your-app.md)    |  Use a classe [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) em seu aplicativo UWP para direcionar os clientes do Windows 10 ao Hub de Feedback, onde eles podem enviar problemas, sugestões e aprovações. Em seguida, gerenciar esses comentários na [relatório de comentários](../publish/feedback-report.md) no Partner Center. |
+|  [Inicie o Hub de comentários do aplicativo UWP](launch-feedback-hub-from-your-app.md)    |  Use a classe [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) em seu aplicativo UWP para direcionar os clientes do Windows 10 ao Hub de Feedback, onde eles podem enviar problemas, sugestões e aprovações. Em seguida, gerencie esses comentários em [Relatório de comentários](../publish/feedback-report.md) no Partner Center. |
 |  [Configurar seu aplicativo UWP para receber notificações de push do Partner Center](configure-your-app-to-receive-dev-center-notifications.md)    |  Use o [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) classe em seu aplicativo UWP para registrar seu aplicativo para receber notificações por push direcionadas que enviam para seus clientes usando o Partner Center.  |
 |   [Registrar eventos personalizados em seu aplicativo UWP para o relatório de uso no Partner Center](log-custom-events-for-dev-center.md)   |  Use o [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) classe em seu aplicativo UWP para registrar eventos personalizados que estão associados a seu aplicativo no Partner Center. Em seguida, examine o total de ocorrências para seus eventos personalizados na **eventos personalizados** seção o [relatório de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) no Partner Center.  |
 
@@ -141,5 +141,5 @@ Se nós lançamos uma nova versão do SDK que apresenta novas APIs ou recursos d
 * [Referência da API do Microsoft Store Services SDK](https://docs.microsoft.com/uwp/api/overview/engagement)
 * [Execute experimentos com testes A/B](run-app-experiments-with-a-b-testing.md)
 * [Inicie o Hub de Feedback em seu aplicativo](launch-feedback-hub-from-your-app.md)
-* [Configurar seu aplicativo para receber notificações de push do Partner Center](configure-your-app-to-receive-dev-center-notifications.md)
-* [Registrar eventos personalizados para o Centro de parceiros](log-custom-events-for-dev-center.md)
+* [Configurar seu aplicativo para receber notificações por push do Partner Center](configure-your-app-to-receive-dev-center-notifications.md)
+* [Registrar eventos personalizados para o Partner Center](log-custom-events-for-dev-center.md)

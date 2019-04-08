@@ -286,4 +286,4 @@ Remova todas as chaves de assinatura de código privado (como arquivos .snk e .p
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Políticas do Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)

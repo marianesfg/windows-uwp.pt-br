@@ -514,7 +514,7 @@ Quando o `Slider` exige envolvimento de foco, o usuário pode acessar o botão �
 
 Além do controle [Slider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider), há outros controles para os quais você talvez possa exigir envolvimento, tais como:
 
-- [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox)
+- [Caixa de listagem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox)
 - [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
 - [GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [FlipView]https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView)

@@ -126,7 +126,7 @@ O ListView e seus filhos não são carregados na memória.
 
 Como os painéis de layout têm uma propriedade [Background](https://msdn.microsoft.com/library/windows/apps/BR227512) não é preciso puxar um [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) na frente de um painel apenas para colori-lo.
 
-**Inefficient**
+**Ineficiente**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -135,7 +135,7 @@ Como os painéis de layout têm uma propriedade [Background](https://msdn.micros
 </Grid>
 ```
 
-**Efficient**
+**Eficiente**
 
 ```xaml
 <Grid Background="Black"/>
@@ -198,7 +198,7 @@ Aqui, como _InitialPage.xaml_ usa um recurso de _ExampleResourceDictionary.xaml_
 
 Se você usar um recurso em várias páginas em todo o aplicativo, armazenando-o em _App.xaml_ é uma boa prática e evita a duplicação. Mas _App.xaml_ é analisado na inicialização do aplicativo para que qualquer recurso usado em apenas uma página (a menos que essa página seja a página inicial) seja colocado nos recursos locais da página. Este exemplo mostra um _App.xaml_ que contém recursos que são usados por apenas uma página (que não é a página inicial). Isso aumenta desnecessariamente o tempo de inicialização do aplicativo.
 
-**App.xaml**
+**App. XAML**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -262,7 +262,7 @@ A plataforma XAML tenta armazenar objetos comumente usados em cache de forma que
 
 Para corrigir a duplicação, defina o pincel como um recurso. Se os controles em outras páginas usam o mesmo pincel, mova-o para _App.xaml_.
 
-**Efficient.**
+**Eficiente.**
 
 ```xaml
 <Page ... >
@@ -304,7 +304,7 @@ Use um elemento composto em vez de mostrar vários elementos em camadas para cri
 </Grid>
 ```
 
-**Efficient.**
+**Eficiente.**
 
 ```xaml
 <Grid>
@@ -334,7 +334,7 @@ Um painel de layout pode ter duas finalidades: colorir uma área e definir o lay
 </GridView>
 ```
 
-**Efficient.**
+**Eficiente.**
 
 ```xaml
 <GridView Background="Blue">
@@ -371,7 +371,7 @@ Use um elemento [Border](https://msdn.microsoft.com/library/windows/apps/BR20925
 </Grid>
 ```
 
-**Efficient.**
+**Eficiente.**
 
 ```xaml
  <Border BorderBrush="Blue" BorderThickness="5" Width="300" Height="45">
@@ -403,7 +403,7 @@ A imagem acima é o resultado, mas este é um mapa das regiões com excesso de d
 
 ![Diagrama de Venn que mostra áreas sobrepostas](images/translucentvenn.png)
 
-**Efficient.**
+**Eficiente.**
 
 ```xaml
 <Canvas Background="White" CacheMode="BitmapCache">

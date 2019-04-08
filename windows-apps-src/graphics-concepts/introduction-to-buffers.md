@@ -84,7 +84,7 @@ Para ler um buffer constante de sombreador de um sombreador, use uma função de
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Buffers de índice e vértice](vertex-and-index-buffers.md)
+[Buffers de vértice e índice](vertex-and-index-buffers.md)
 
  
 
