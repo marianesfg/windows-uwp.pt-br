@@ -2,16 +2,16 @@
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referência de API central do Device Portal
 description: Saiba mais sobre as APIs REST centrais do Windows Device Portal que você pode usar para acessar os dados e controlar seu dispositivo de forma programática.
-ms.date: 03/22/2017
+ms.date: 4/8/2019
 ms.topic: article
 keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f541a27a96b88b37d3f32b98246ba0ccbe2c8cf
-ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.openlocfilehash: 58ae7d83c0889131313d136c13048b83a861f601
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/08/2019
-ms.locfileid: "59067851"
+ms.locfileid: "59244132"
 ---
 # <a name="device-portal-core-api-reference"></a>Referência de API central do Device Portal
 
@@ -2803,7 +2803,8 @@ Define a configuração de IPV4 com o IP estático e o DNS. Se não for especifi
 | SecondayDNS | (**necessária** se *PrimaryDNS* não for nulo) DNS secundário estático para definir. |
 
 Para maior clareza, para definir uma interface para DHCP, serializar apenas o `AdapterName` durante a transmissão:
-```
+
+```json
 {
     "AdapterName":"{82F86C1B-2BAE-41E3-B08D-786CA44FEED7}"
 }
