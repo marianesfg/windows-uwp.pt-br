@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, excluir versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: fa3fa78c695538ec13dbd20d38a24224c560463e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a3455973d86b0c9e7c779cca429e36fa32266ed6
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641831"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335104"
 ---
 # <a name="delete-a-package-flight"></a>Excluir um pacote de pré-lançamento
 
@@ -31,7 +31,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| DELETE    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}``` |
+| DELETE    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -58,7 +58,7 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como excluir um pacote de pré-lançamento.
 
-```
+```json
 DELETE https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights/43e448df-97c9-4a43-a0bc-2a445e736bcd HTTP/1.1
 Authorization: Bearer <your access token>
 ```

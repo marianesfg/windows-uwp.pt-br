@@ -5,16 +5,16 @@ ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
 op-migration-status: ready
-ms.date: 12/1/2017
+ms.date: 12/01/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b2d85d97fa704b4fb79e93cf95fdd1bfcc41f8ca
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 0e5b46223ea7dfa5e43b5a50a04a4c3f31307d49
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594581"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913956"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>Noções básicas de design de conteúdo para aplicativos UWP
 
@@ -80,7 +80,7 @@ Para criar esses padrões de página, você precisará usar uma combinação de 
 <tr class="odd">
 <td align="left">Áudio e vídeo<br/><br/>
     <img src="images/content-basics/media-transport.png" alt="media transport control" /></td>
-<td align="left"><a href="../controls-and-patterns/media-playback.md">Controles de reprodução e transporte de mídia</a></td>
+<td align="left"><a href="../controls-and-patterns/media-playback.md">Controles de transporte de mídia do sistema</a></td>
 <td align="left">Reproduz áudio e vídeo.</td>
 </tr>
 <tr class="even">
@@ -92,7 +92,7 @@ Para criar esses padrões de página, você precisará usar uma combinação de 
 <tr class="odd">
 <td align="left">Coleções <br/><br/>
     <img src="images/content-basics/listview.png" alt="list view" /></td>
-<td align="left"><a href="../controls-and-patterns/lists.md">Exibição de lista e o modo de exibição de grade</a></td>
+<td align="left"><a href="../controls-and-patterns/lists.md">Exibição de lista e exibição de grade</a></td>
 <td align="left">Apresenta itens em uma lista interativa ou em uma grade. Use esses elementos para permitir que os usuários selecionem um filme em uma lista de lançamentos ou gerenciem um estoque.</td>
 </tr>
 <tr class="even">

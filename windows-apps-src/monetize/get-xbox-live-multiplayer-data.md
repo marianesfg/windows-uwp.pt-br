@@ -5,20 +5,20 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, multijogador
 ms.localizationpriority: medium
-ms.openlocfilehash: 74f1a64bde32fe68a51527527a0b049d811d0853
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 58f470abdf7cbf0770bf01dd123a8fdfd2c2cbea
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662031"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162991"
 ---
 # <a name="get-xbox-live-multiplayer-data"></a>Obter dados de multijogador do Xbox Live
 
 
-Use este método na API de análise da Microsoft Store para obter dados de multijogador para seu [jogo habilitado para Xbox Live](../xbox-live/index.md) por dia ou por mês. Essas informações também estão disponíveis na [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
+Use este método na API de análise da Microsoft Store para obter dados de multijogador para seu [jogo habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live//index.md) por dia ou por mês. Essas informações também estão disponíveis na [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
 
 > [!IMPORTANT]
-> Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](../xbox-live/developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -34,7 +34,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Método | URI da solicitação       |
 |--------|----------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
+| OBTER    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -55,8 +55,8 @@ Para usar este método, primeiro você precisa do seguinte:
 | endDate | date | A data final no intervalo de datas de dados de multijogador a serem recuperados. O padrão é a data atual. |  Não  |
 | top | int | O número de linhas de dados a serem retornadas na solicitação. O valor máximo e o valor padrão; se não forem especificados, será 10.000. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
 | skip | int | O número de linhas a serem ignoradas na consulta. Use este parâmetro para percorrer grandes conjuntos de dados. Por exemplo, top=10000 e skip=0 recuperam as primeiras 10.000 linhas de dados, top=10000 e skip=10000 recuperam as próximas 10.000 linhas de dados e assim por diante. |  Não  |
-| filter | cadeia de caracteres  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>deviceType</strong></li><li><strong>PackageVersion</strong></li><li><strong>mercado</strong></li><li><strong>SubscriptionName</strong></li></ul> | Não   |
-| groupby | cadeia de caracteres | Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>Data</strong></li><li><strong>deviceType</strong></li><li><strong>PackageVersion</strong></li><li><strong>mercado</strong></li><li><strong>SubscriptionName</strong></li></ul><p/>Se você especificar um ou mais campos *groupby*, qualquer outro campo *groupby* não especificado terá o valor **All** no corpo da resposta. |  Não  |
+| filter | cadeia de caracteres  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li><li><strong>market</strong></li><li><strong>subscriptionName</strong></li></ul> | Não   |
+| groupby | cadeia de caracteres | Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>date</strong></li><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li><li><strong>market</strong></li><li><strong>subscriptionName</strong></li></ul><p/>Se você especificar um ou mais campos *groupby*, qualquer outro campo *groupby* não especificado terá o valor **All** no corpo da resposta. |  Não  |
 
 
 ### <a name="request-example"></a>Exemplo de solicitação

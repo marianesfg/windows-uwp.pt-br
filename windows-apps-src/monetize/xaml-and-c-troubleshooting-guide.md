@@ -6,12 +6,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, solução de problemas, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d92795ac7de2ab09fd0b3b86e05aa33669c54dd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 94af97e1e678c6ee92aaa731057c5f67185e25c5
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615911"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334654"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>Guia de solução de problemas de XAML e C#
 
@@ -22,7 +22,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
   * [Caixa preta pisca e desaparece](#xaml-blackboxblinksdisappears)
   * [Anúncios não atualizando](#xaml-adsnotrefreshing)
 
-* [EM C#](#csharp)
+* [C#](#csharp)
   * [AdControl não aparecem](#csharp-adcontrolnotappearing)
   * [Caixa preta pisca e desaparece](#csharp-blackboxblinksdisappears)
   * [Anúncios não atualizando](#csharp-adsnotrefreshing)
@@ -171,7 +171,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 2.  Verifique se o **AdControl** está instanciado. Se o **AdControl** não estiver instanciado, ele não estará disponível.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
+    [!code-csharp[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
 
 3.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder a ID do aplicativo e a ID de unidade do ad que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
@@ -236,7 +236,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     Esse código C# recupera a mensagem de erro e a exibe no **TextBlock**.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet2)]
+    [!code-csharp[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet2)]
 
     O erro mais comum que causa uma caixa preta é “Nenhum anúncio disponível”. Esse erro significa que não há anúncios disponíveis para serem retornados da solicitação.
 
@@ -253,7 +253,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     O exemplo a seguir demonstra como chamar o método **Refresh**.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet3)]
+    [!code-csharp[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet3)]
 
 3.  O **AdControl** está funcionando normalmente. Às vezes, o mesmo anúncio aparecerá mais do que uma vez em uma linha, dando a impressão de que anúncios não estão sendo atualizados.
 

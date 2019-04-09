@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, controle de anúncio, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: 9abf761aa141ef3d0c19d6d5401b6815542d4172
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6283c4d69a511e4dd4aa342b547c18624952be29
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603911"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335114"
 ---
 # <a name="interstitial-ads"></a>Anúncios intersticiais
 
@@ -66,22 +66,22 @@ Esta seção fornece exemplos em C#, mas também há suporte para Visual Basic e
 
 3.  No arquivo de código apropriado no aplicativo (por exemplo, em MainPage.xaml.cs ou um arquivo de código para alguma outra página), adicione a seguinte referência de namespace.
 
-    [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet1)]
+    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet1)]
 
 4.  Em um local indicado no aplicativo (por exemplo, em ```MainPage``` ou em alguma outra página), declare um objeto [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) e diversos campos da cadeia de caracteres que representam a ID do aplicativo e a ID da unidade de anúncio para o anúncio intersticial. O exemplo de código a seguir atribui os campos `myAppId` e `myAdUnitId` aos [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para anúncios intersticiais.
 
     > [!NOTE]
     > Cada **InterstitialAd** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade de anúncio consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu aplicativo para a Store, você deve [substitua esses valores com os valores em tempo real de teste](#release) do Partner Center.
 
-    [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet2)]
+    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet2)]
 
 5.  No código executado na inicialização (por exemplo, no construtor da página), instancie o objeto **InterstitialAd** e conecte os manipuladores de eventos do objeto.
 
-    [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet3)]
+    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet3)]
 
 6.  Se você quiser mostrar uma *vídeo intersticial* ad: Aproximadamente 30 a 60 segundos antes que o ad, você precisa usar o [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) método a buscar previamente o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **AdType.Video** para o tipo de anúncio.
 
-    [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet4)]
+    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet4)]
 
     Se você quiser mostrar uma *intersticial faixa* ad: Aproximadamente 5 a 8 segundos antes que o ad, você precisa usar o [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) método a buscar previamente o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **AdType.Display** para o tipo de anúncio.
 
@@ -91,11 +91,11 @@ Esta seção fornece exemplos em C#, mas também há suporte para Visual Basic e
 
 6.  No momento em que você deseja mostrar o vídeo intersticial ou anúncio em faixa intersticial, confirme que o **InterstitialAd** está pronto para ser mostrado e mostre-o usando o método [Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show).
 
-    [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet5)]
+    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet5)]
 
 7.  Defina os manipuladores de eventos para o objeto **InterstitialAd**.
 
-    [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet6)]
+    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet6)]
 
 8.  Compile e teste o aplicativo para confirmar se ele está mostrando anúncios de teste.
 

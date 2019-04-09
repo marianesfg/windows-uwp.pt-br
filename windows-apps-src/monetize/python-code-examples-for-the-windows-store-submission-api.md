@@ -6,12 +6,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, exemplos de código, python
 ms.localizationpriority: medium
-ms.openlocfilehash: 157c11484de150d363157e5b6e5de00a35bafd5f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: bc3959b4e26bd54542edc3f69666f6d97cddba26
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634401"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334824"
 ---
 # <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Exemplo de Python: envios para apps, complementos e versões de pré-lançamento
 
@@ -30,7 +30,7 @@ Este artigo fornece exemplos de código Python que demonstram como usar a [API d
 
 O exemplo a seguir demonstra como [obter um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) que é possível usar para chamar métodos na API de envio da Microsoft Store. Depois de obter um token, você tem 60 minutos para usá-lo em chamadas para a API de envio da Microsoft Store antes que ele expire. Depois que o token expirar, será possível gerar um novo.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L1-L20)]
+[!code-python[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L1-L20)]
 
 <span id="create-add-on" />
 
@@ -38,7 +38,7 @@ O exemplo a seguir demonstra como [obter um token de acesso do Azure AD](create-
 
 O exemplo a seguir demonstra como [criar](create-an-add-on.md) e depois [excluir](delete-an-add-on.md) um complemento.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L26-L52)]
+[!code-python[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L26-L52)]
 
 <span id="create-package-flight" />
 
@@ -46,7 +46,7 @@ O exemplo a seguir demonstra como [criar](create-an-add-on.md) e depois [excluir
 
 O exemplo a seguir demonstra como [criar](create-a-flight.md) e depois [excluir](delete-a-flight.md) um pacote de pré-lançamento.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L58-L87)]
+[!code-python[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L58-L87)]
 
 <span id="create-app-submission" />
 
@@ -61,7 +61,7 @@ O exemplo a seguir mostra como usar diversos métodos na API de envio da Microso
 5. Em seguida, ele [atualizações](update-an-app-submission.md) e, em seguida [confirma](commit-an-app-submission.md) o envio de novo ao Partner Center.
 6. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-an-app-submission.md) até que o envio seja confirmado com êxito.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L93-L166)]
+[!code-python[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L93-L166)]
 
 <span id="create-add-on-submission" />
 
@@ -76,7 +76,7 @@ O exemplo a seguir mostra como usar diversos métodos na API de envio da Microso
 5. Em seguida, ele [atualizações](update-an-add-on-submission.md) e, em seguida [confirma](commit-an-add-on-submission.md) o envio de novo ao Partner Center.
 6. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-an-add-on-submission.md) até que o envio seja confirmado com êxito.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L172-L245)]
+[!code-python[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L172-L245)]
 
 <span id="create-flight-submission" />
 
@@ -91,7 +91,7 @@ O exemplo a seguir mostra como usar diversos métodos na API de envio da Microso
 5. Em seguida, ele [atualizações](update-a-flight-submission.md) e, em seguida [confirma](commit-a-flight-submission.md) o envio de novo ao Partner Center.
 6. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-a-flight-submission.md) até que o envio seja confirmado com êxito.
 
-[!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L251-L325)]
+[!code-python[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L251-L325)]
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

@@ -6,12 +6,12 @@ ms.date: 10/18/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a245c4ec0280f687cf34e85123960e64fe36a57
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: e07c0b2730da258126465fbeea917b32ef9d23e6
+ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645871"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320599"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>Indexadores específicos de formato do MakePri.exe
 
@@ -284,12 +284,14 @@ O indexador ResFiles é identificado por um atributo `type` de RESFILES. Ele ind
 
 O arquivo `.resfiles` é um arquivo de texto que contém uma lista simples de caminhos de arquivo. Um arquivo `.resfiles` pode conter comentários "//". Aqui está um exemplo.
 
-```
+<blockquote>
+<pre>
 Strings\component1\fr\elements.resjson
 Images\logo.scale-100.png
 Images\logo.scale-140.png
 Images\logo.scale-180.png
-```
+</pre>
+</blockquote>
 
 ## <a name="resjson"></a>ResJSON
 

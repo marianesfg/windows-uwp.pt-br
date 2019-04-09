@@ -6,14 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 ms.localizationpriority: medium
-ms.openlocfilehash: 402d535bf6ff9ced24bc642c17d13b2d48d79681
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 54a15be26adf0da97105f15f3a44f26ee7bfc96d
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240034"
 ---
-# <a name="developer-settings-api-reference"></a>Referência da API de configurações do desenvolvedor   
+# <a name="developer-settings-api-reference"></a>Referência da API de configurações do desenvolvedor
+
 É possível acessar configurações do Xbox One que sejam úteis para o desenvolvimento usando essa API.
 
 ## <a name="get-all-developer-settings-at-once"></a>Obter todas as configurações do desenvolvedor de uma só vez
@@ -24,9 +25,9 @@ ms.locfileid: "57598641"
 
 Método      | URI da solicitação
 :------     | :-----
-GET | /ext/settings
-<br />
-**Parâmetros de URI**
+OBTER | /ext/settings
+
+**Parâmetros do URI**
 
 - Nenhuma
 
@@ -49,10 +50,12 @@ A resposta é uma matriz JSON de configurações que contém todas as configura�
 * Tipo - ("Texto" | "Número" | "Booleano" | "Selecionar") Este campo indica o tipo uma configuração: texto de entrada, um valor booleano ("true" ou "false"), um número com um mín. e máx. ou selecione com uma lista de valores específicos.
 
 Se a configuração é um número:
+
 * Min - (número) esse campo indica o valor numérico mínimo da configuração.
 * Max - (número) esse campo indica o valor numérico máximo da configuração.
 
 Se a configuração for selecionada:
+
 * OptionsVariable - ("Sim" | "Não") neste campo indica se as opções de configuração são variáveis, se as opções válidas podem alterar sem uma reinicialização.
 * Opções - Array JSON com as opções de seleção válidas como cadeias de caracteres.
 
@@ -67,6 +70,7 @@ Código de status HTTP      | Descrição
 5XX | Códigos de erro
 
 ## <a name="get-settings-one-at-a-time"></a>Obter configurações uma por vez
+
 As configurações também podem ser recuperadas individualmente.
 
 **Solicitação**
@@ -75,9 +79,9 @@ As configurações também podem ser recuperadas individualmente.
 
 Método      | URI da solicitação
 :------     | :-----
-GET | /ext/Settings/\<nome da configuração\>
-<br />
-**Parâmetros de URI**
+OBTER | /ext/Settings/\<nome da configuração\>
+
+**Parâmetros do URI**
 
 - Nenhuma
 
@@ -100,10 +104,12 @@ A resposta é um objeto JSON com os seguintes campos:
 * Tipo - ("Texto" | "Número" | "Booleano" | "Selecionar") Este campo indica o tipo uma configuração: texto de entrada, um valor booleano ("true" ou "false"), um número com um mín. e máx. ou selecione com uma lista de valores específicos.
 
 Se a configuração é um número:
+
 * Min - (número) esse campo indica o valor numérico mínimo da configuração.
 * Max - (número) esse campo indica o valor numérico máximo da configuração.
 
 Se a configuração for selecionada:
+
 * OptionsVariable - ("Sim" | "Não") neste campo indica se as opções de configuração são variáveis, se as opções válidas podem alterar sem uma reinicialização.
 * Opções - Array JSON com as opções de seleção válidas como cadeias de caracteres.
 
@@ -118,6 +124,7 @@ Código de status HTTP      | Descrição
 5XX | Códigos de erro
 
 ## <a name="set-the-value-of-a-setting"></a>Defina o valor de uma configuração
+
 É possível definir o valor de uma configuração.
 
 **Solicitação**
@@ -127,8 +134,8 @@ Código de status HTTP      | Descrição
 Método      | URI da solicitação
 :------     | :-----
 PUT | /ext/Settings/\<nome da configuração\>
-<br />
-**Parâmetros de URI**
+
+**Parâmetros do URI**
 
 - Nenhuma
 
@@ -154,7 +161,6 @@ Código de status HTTP      | Descrição
 4XX | Códigos de erro
 5XX | Códigos de erro
 
-<br />
 **Famílias de dispositivos disponíveis**
 
 * Windows Xbox

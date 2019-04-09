@@ -6,12 +6,12 @@ ms.date: 08/21/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: 24ec2013735597efae73aee31bb4aee1a8e1413e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: b74cb2b23b5fbfc7487d18be0531ff26170cbe3f
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594981"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334504"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Envolver os clientes com o Microsoft Store Services SDK
 
@@ -62,7 +62,7 @@ Para instalar o Microsoft Store Services SDK por meio do instalador MSI:
 1.  Feche todas as instâncias do Visual Studio.
 
 2. Se você já tiver instalado qualquer versão anterior do SDK do Microsoft Store Engagement and Monetization, do SDK do Universal Ad Client ou da extensão do Ad Mediator, desinstale essas versões do SDK agora. Opcionalmente, abra uma janela do **Prompt de Comando** e execute esses comandos para limpar quaisquer versões mais antigas do SDK do Advertising que possam ter sido instaladas com o Visual Studio, mas que podem não aparecer na lista de programas instalados em seu computador:
-    ```
+    ```console
     MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
     MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
@@ -85,7 +85,7 @@ Para instalar as bibliotecas de SDK da Microsoft Store Services por meio do NuGe
 1.  Feche todas as instâncias do Visual Studio.
 
 2. Se você já tiver instalado qualquer versão anterior do SDK do Microsoft Store Engagement and Monetization, do SDK do Universal Ad Client ou da extensão do Ad Mediator, desinstale essas versões do SDK agora. Opcionalmente, abra uma janela do **Prompt de Comando** e execute esses comandos para limpar quaisquer versões mais antigas do SDK do Advertising que possam ter sido instaladas com o Visual Studio, mas que podem não aparecer na lista de programas instalados em seu computador:
-    ```
+    ```console
     MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
     MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
@@ -99,7 +99,7 @@ Para instalar as bibliotecas de SDK da Microsoft Store Services por meio do NuGe
 
 5. Na caixa de pesquisa, digite **Microsoft.Services.Store.Engagement** e instale o pacote Microsoft.Services.Store.Engagement. Quando terminar a instalação do pacote, salve sua solução.
     > [!NOTE]
-    > Se a janela **Saída** relatar um erro *Pacote-Instalação* que indica que o caminho especificado é muito longo, talvez seja necessário configurar o NuGet para extrair pacotes em um local alternativo com um caminho mais curto do que o local padrão. Para fazer isso, adicione o valor ```repositoryPath``` a um arquivo nuget.config em seu computador e o atribua a um caminho de pasta curto onde os pacotes NuGet possam ser extraídos. Para obter mais informações, consulte [este artigo](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) na documentação do NuGet. Você também pode tentar mover seu projeto do Visual Studio para uma pasta alternativa com um caminho mais curto. O problema também pode ser causado por seu caminho de pacotes globais muito longo. Nesse caso, adicione o ```globalPackagesFolder``` valor em seu arquivo config.
+    > Se a janela **Saída** relatar um erro *Pacote-Instalação* que indica que o caminho especificado é muito longo, talvez seja necessário configurar o NuGet para extrair pacotes em um local alternativo com um caminho mais curto do que o local padrão. Para fazer isso, adicione o valor `repositoryPath` a um arquivo nuget.config em seu computador e o atribua a um caminho de pasta curto onde os pacotes NuGet possam ser extraídos. Para obter mais informações, consulte [este artigo](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) na documentação do NuGet. Você também pode tentar mover seu projeto do Visual Studio para uma pasta alternativa com um caminho mais curto. O problema também pode ser causado por seu caminho de pacotes globais muito longo. Nesse caso, adicione o `globalPackagesFolder` valor em seu arquivo config.
 
 6. Feche a solução do Visual Studio que contém seu projeto e, em seguida, reabra a solução.
 

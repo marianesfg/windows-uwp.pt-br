@@ -5,12 +5,12 @@ ms.date: 01/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, API do WinRT, WNS
 localizationpriority: medium
-ms.openlocfilehash: ba8630a2e877345adeac7eb443dd3e418d3ed277
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: bf224b6c0997ce8af86ab2919a1d0513f619a8a3
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59067821"
 ---
 # <a name="alternate-push-channels-using-webpush-and-vapid-in-uwp"></a>Canais de push alternativo usando Webpush e VAPID na UWP 
 A partir o Fall Creators Update, aplicativos da UWP podem usar push web com autenticação VAPID a enviar notificações por push.  
@@ -45,7 +45,7 @@ private async void AppCreateVAPIDChannelAsync(string appChannelId, IBuffer appli
     //               The resulting key is an uncompressed point in ANSI X9.62 format             
     // ChannelId is an app provided value for it to identify the channel later.  
     // case of this app it is from the set { "Football", "News", "Baseball" } 
-    PushNotificationChannel webChannel = await PushNotificationChannelManager.Current.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(applicationServerKey, appChannelId); 
+    PushNotificationChannel webChannel = await PushNotificationChannelManager.GetDefault().CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(applicationServerKey, appChannelId); 
  
     //Save the channel  
     AppUpdateChannelMapping(appChannelId, webChannel); 
@@ -106,8 +106,8 @@ Você pode usar qualquer esquema de criptografia você considere mais útil para
 Se você quiser usar outra forma de criptografia, a chave é o uso bruto. Propriedade Headers. Ele contém todos os cabeçalhos de criptografia que foram incluídos na solicitação POST para o servidor de envio por push. A partir daí, seu aplicativo pode usar as chaves para descriptografar a mensagem.  
 
 ## <a name="related-topics"></a>Tópicos relacionados
-- [Tipos de canais de notificação](channel-types.md)
-- [Serviços de notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
+- [Tipos de canal de notificação](channel-types.md)
+- [Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
 - [Classe PushNotificationChannel](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannel)
 - [Classe PushNotificationChannelManager](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager)
 

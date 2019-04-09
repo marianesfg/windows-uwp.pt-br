@@ -6,19 +6,18 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: a90be116a9d85eeae7cb7c44c2bbfe96da472f65
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 5563b8281a713b57f98c48ae04153b19062f2f12
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594441"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334934"
 ---
 # <a name="create-an-app-submission"></a>Criar um envio de aplicativo
 
 Use esse método na API de envio a Microsoft Store para criar um novo envio para um aplicativo que é registrado em sua conta no Partner Center. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-an-app-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-an-app-submission.md) para inclusão e publicação.
 
 Para obter mais informações sobre como esse método se adapta ao processo de criação de um envio de app, usando a API de envio da Microsoft Store, consulte [Gerenciar envios de aplicativo](manage-app-submissions.md).
-
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -34,8 +33,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` |
-
+| POSTAR    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions` |
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
 
@@ -43,13 +41,11 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 |---------------|--------|-----------------------------------------------------------------------------|
 | Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
-
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um envio. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-
 
 ### <a name="request-body"></a>Corpo da solicitação
 
@@ -59,7 +55,7 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como criar um novo envio para um aplicativo.
 
-```
+```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/submissions HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -187,7 +183,6 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 |--------|------------------|
 | 400  | O envio não pôde ser criado porque a solicitação não é válida. |
 | 409  | O envio de mensagens não pôde ser criado devido ao estado atual do aplicativo ou o aplicativo usa um recurso do Partner Center que está [atualmente não tem suporte da API de envio a Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
-
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

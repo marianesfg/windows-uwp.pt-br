@@ -4,170 +4,97 @@ title: Direcionamento
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e8425232512650d5c80bf6fee9745b261aee8d9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 5c05b6686d31606a9510b1433339dc8829a52893
+ms.sourcegitcommit: 7a1d5198345d114c58287d8a047eadc4fe10f012
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59247174"
 ---
-# <a name="guidelines-for-targeting"></a>Diretrizes de direcionamento
+# <a name="guidelines-for-touch-targets"></a>Diretrizes para destinos de toque
 
+Todos os elementos de interface do usuário interativos em seu aplicativo da plataforma Universal do Windows (UWP) devem ser grandes o suficiente para os usuários acessem com precisão e usar, independentemente do método de entrada ou de tipo de dispositivo.
 
-A seleção por área touch no Windows usa a área de contato total de cada dedo detectado por um digitalizador de toque. O conjunto maior e mais complexo de dados de entrada relatados pelo digitalizador é usado para aumentar a precisão ao determinar o destino desejado (ou mais provável) pelo usuário.
+Suporte a entrada de toque (e a natureza relativamente imprecisa da área de contato de toque) requer a otimização adicional em relação ao layout de tamanho e o controle de destino como o conjunto de maior e mais complexo de relatado pelo digitalizador do toque de dados de entrada é usado para determinar o destino do usuário pretendida (ou mais provável).
 
-> **APIs importantes**: [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [ **Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+Todos os controles UWP foram projetados com tamanhos padrão de destino de toque e layouts que permitem criar aplicativos visualmente equilibrados e atraentes que são fáceis de usar, confortável e transmitir confiança.
 
-Este tópico descreve o uso da geometria de contato para seleção por área de toque e fornece as práticas recomendadas de direcionamento em aplicativos UWP.
+Neste tópico, descreveremos esses comportamentos padrão, portanto, você pode projetar seu aplicativo para facilitar o uso máximo usando controles de plataforma e controles personalizados (deve seu aplicativo exigi-los).
 
-## <a name="measurements-and-scaling"></a>Medidas e dimensionamento
+> **APIs importantes**: [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
+## <a name="fluent-standard-sizing"></a>Dimensionamento padrão Fluent
 
-Para manter-se consistente entre diferentes tamanhos de tela e densidades de pixels, todos os tamanhos desejados são apresentados em unidades físicas (milímetros). As unidades físicas podem ser convertidas para pixels ao usar a seguinte equação:
+*Dimensionamento padrão Fluent* foi criado para fornecer um equilíbrio entre o conforto de densidade e o usuário de informações. Na verdade, todos os itens na tela alinham a um destino efetivo de 40 x 40 pixels (epx), que permite que elementos de interface do usuário se alinham com uma grade e dimensionada de forma adequada com base em dimensionamento do nível do sistema.
 
-Pixels = densidade de pixels × medida
+> [!NOTE]
+>Para obter mais informações sobre pixels relevantes e dimensionamento, consulte [Introdução ao design de aplicativos UWP](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)
+>
+> Para obter mais informações sobre o dimensionamento de nível de sistema, consulte [alinhamento, margem, preenchimento](../layout/alignment-margin-padding.md).
 
-O exemplo a seguir usa essa fórmula para calcular o tamanho do pixel de um destino de 9 mm em uma exibição de 135 PPI (pixels por polegada) em um nível de ajuste predefinido de 1x:
+## <a name="fluent-compact-sizing"></a>Dimensionamento Compact Fluent
 
-Pixels = 135 PPI × 9 mm
+Aplicativos podem exibir um nível mais alto de densidade de informações com *dimensionamento Fluent Compact*. Dimensionamento Compact alinha os elementos de interface do usuário para um destino de 32 x 32 epx, que permite que os elementos de interface do usuário para alinhar-se para uma grade mais rigorosa e uma escala adequadamente com base na escala de nível de sistema.
 
-Pixels = 135 PPI × (0,03937 polegadas por mm × 9 mm)
+### <a name="examples"></a>Exemplos
 
-Pixels = 135 PPI × 0,35433 polegadas
+Compact dimensionamento pode ser aplicado no nível de página ou grade.
 
-Pixels = 48 pixels
+### <a name="page-level"></a>Nível de página
 
-Esse resultado deve ser ajustado de acordo com cada nível de ajuste predefinido pelo sistema.
+```xaml
+<Page.Resources>
+    <ResourceDictionary Source="ms-appx:///Microsoft.UI.Xaml/DensityStyles/Compact.xaml" />
+</Page.Resources>
+```
 
-## <a name="thresholds"></a>Limites
+### <a name="grid-level"></a>Nível de grade
 
+```xaml
+<Grid>
+    <Grid.Resources>
+        <ResourceDictionary Source="ms-appx:///Microsoft.UI.Xaml/DensityStyles/Compact.xaml" />
+    </Grid.Resources>
+</Grid>
+```
 
-Os limites de distância e tempo podem ser usados para determinar o resultado de uma interação.
+## <a name="target-size"></a>Tamanho de destino
 
-Por exemplo, quando um toque é detectado, ele é registrado se o objeto for arrastado em menos de 2,7 mm do ponto de toque e o dedo for levantado em 0,1 segundo ou menos depois do toque. Mover o dedo além desse limite de 2,7 mm faz com que o objeto seja arrastado e selecionado ou movido (para saber mais, veja [Diretrizes de deslizamento transversal](guidelines-for-cross-slide.md)). Dependendo do seu aplicativo, segurar o dedo por mais de 0,1 segundo pode fazer com que o sistema faça uma interação de autorrevelação (para saber mais, veja [Diretrizes de feedback visual](guidelines-for-visualfeedback.md)).
+Em geral, defina seu tamanho de destino de toque ao intervalo de quadrados de 7,5 mm (40 x 40 pixels em uma exibição PPI 135 em um 1.0 x dimensionamento sammamish). Normalmente, os controles UWP alinham com o destino de toque de 7,5 mm (Isso pode variar com base no controle específico e padrões comuns de uso). Ver [controlar o tamanho e densidade](../style/spacing.md) para obter mais detalhes.
 
-## <a name="target-sizes"></a>Tamanhos do alvo
+Essas recomendações de tamanho de destino podem ser ajustadas de acordo com determinado cenário. Aqui estão algumas coisas a considerar:
 
-
-Em geral, defina o tamanho do alvo de toque como 9 mm ou maior (48x48 pixels em uma tela de 135 PPI em um nível de ajuste predefinido de 1,0x). Evite usar alvos de toque que tenham menos de 7 mm.
-
-O diagrama a seguir mostra como o tamanho do destino normalmente é uma combinação do destino visual, do tamanho do destino real e de qualquer área de preenchimento entre o destino real e outros destinos possíveis.
-
-![diagrama mostrando os tamanhos recomendados para o destino visual, o destino real e o preenchimento.](images/targeting-size.png)
-
-A tabela a seguir lista os tamanhos mínimos e recomendados para os componentes de um alvo de toque.
-
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Componente alvo</th>
-<th align="left">Tamanho mínimo</th>
-<th align="left">Tamanho recomendado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Preenchimento</td>
-<td align="left">2 mm</td>
-<td align="left">Não aplicável.</td>
-</tr>
-<tr class="even">
-<td align="left">Tamanho visual do destino</td>
-<td align="left">&lt;60% do tamanho real</td>
-<td align="left">90-100% do tamanho real
-<p>A maioria dos usuários não vai perceber que um destino visual pode ser tocado, se ele for menor que 4,2 mm quadrados (60% do tamanho do destino mínimo recomendado de 7 mm).</p></td>
-</tr>
-<tr class="odd">
-<td align="left">Tamanho real do alvo</td>
-<td align="left">7 mm</td>
-<td align="left">Maior ou igual a 9 mm (48 x 48 px em 1x)</td>
-</tr>
-<tr class="even">
-<td align="left">Tamanho total do alvo</td>
-<td align="left">11 x 11 mm (aproximadamente 60 px: três unidades de grade de 20 px em 1x)</td>
-<td align="left">13,5 x 13,5 mm (72 x 72 px em 1x)
-<p>Isto implica que o tamanho do destino real e o preenchimento combinados devem ser maiores que os seus mínimos respectivos.</p></td>
-</tr>
-</tbody>
-</table>
-
- 
-
-Essas recomendações de tamanho de destino podem ser ajustadas de acordo com determinado cenário. Algumas das considerações incluídas nessas recomendações são:
-
--   Frequência de toques: Considere tornar destinos que são frequentemente ou repetidamente pressionados maiores do que o tamanho mínimo.
--   Consequência de erro: Destinos que têm sérias consequências se tocadas em erro devem ter o preenchimento maior e ser colocados mais longe da borda da área de conteúdo. Isso vale principalmente para destinos que são tocados com frequência.
--   Posição na área de conteúdo
--   Fator forma e tamanho da tela
--   Postura do dedo
--   Visualizações por toque
--   Hardware e digitalizadores de toque
-
-## <a name="targeting-assistance"></a>Assistência de direcionamento
-
-
-O Windows oferece assistência de direcionamento para suportar cenários onde as recomendações de tamanho ou de preenchimento mínimos apresentados aqui não são aplicáveis, por exemplo, hiperlinks em uma página da Web, controles de calendário, listas suspensas e caixas de combinação ou seleção de texto.
-
-Essas melhorias na plataforma de direcionamento e os comportamentos da interface do usuário funcionam junto com a resposta visual (interface do usuário de desambiguização) para aumentar a precisão e a confiança do usuário. Para obter mais informações, consulte [Diretrizes de resposta visual](guidelines-for-visualfeedback.md).
-
-Se um elemento tocável deve ser menor que o tamanho mínimo de alvo recomendado, as seguintes técnicas podem ser usadas para minimizar os problemas de direcionamento resultantes.
-
-## <a name="tethering"></a>Conector
-
-
-O compartilhamento é uma indicação visual (um conector de um ponto de contato até o retângulo delimitador de um objeto) usada para indicar ao usuário que ele está conectado e interagindo com um objeto, mesmo que o contato de entrada não esteja diretamente em contato com o objeto. Isso pode ocorrer quando:
-
--   Um contato de toque foi detectado primeiro dentro de algum limite de proximidade com um objeto, e esse objeto foi identificado como o destino mais provável do contato.
--   Um contato de toque foi movido para fora de um objeto, mas ainda está dentro do limite de proximidade.
-
-Esse recurso não está exposto para desenvolvedores de aplicativos UWP que usam o JavaScript.
-
-## <a name="scrubbing"></a>Anulação
-
-
-Esfregar significa tocar em qualquer lugar dentro de um campo de alvos e deslizar para selecionar o alvo desejado sem tirar o dedo até que esteja sobre o alvo desejado. Isso também é conhecido como "ativação sem largar", onde o objeto que é ativado é aquele que foi tocado por último quando o dedo foi suspenso da tela.
-
-Siga estas diretrizes para criar interações de esfregar:
-
--   Esfregar é usado em conjunto com a IU de desambiguidade. Para obter mais informações, consulte [Diretrizes de resposta visual](guidelines-for-visualfeedback.md).
--   O tamanho mínimo recomendado para o destino de toque de esfregar é de 20 px (3,75 mm em 1x).
--   Esfregar tem prioridade quando realizada em uma área de movimento panorâmico, como uma página da Web.
--   Os destinos de esfregar devem ficar juntos.
--   Uma ação é cancelada quando o usuário arrasta o dedo para fora do destino de esfregar.
--   O conector de um destino de esfregar é especificado quando as ações realizadas pelo destino não são destrutivas, como alternar entre datas no calendário.
--   O conector é especificado em uma única direção, horizontal ou vertical.
+- Frequência de toques - Considere tornar destinos que são frequentemente ou repetidamente pressionados maiores do que o tamanho mínimo.
+- Erro consequência - destinos que têm sérias consequências se tocadas em erro deve ter o preenchimento maior e ser colocada mais longe da borda da área de conteúdo. Isso vale principalmente para destinos que são tocados com frequência.
+- Posição na área de conteúdo.
+- Tamanho da tela e fatores de formulário.
+- Postura de dedo.
+- Visualizações de toque.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
+- [Introdução ao design de aplicativos UWP](../basics/design-and-ui-intro.md)
+- [Controle de tamanho e densidade](../style/spacing.md)
+- [Alinhamento, margem, preenchimento](../layout/alignment-margin-padding.md)
 
-**Exemplos**
-* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+### <a name="samples"></a>Exemplos
 
-**Amostras de arquivo-morto**
-* [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: Exemplo de teste de hit de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: Exemplo simplificado de tinta](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: Exemplo de gestos do Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: Manipulações e exemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Exemplo de entrada de toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+- [Exemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+- [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+- [Exemplo do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+- [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
- 
+### <a name="archive-samples"></a>Exemplos de arquivo
 
-
-
-
+- [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
+- [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+- [Entrada: Exemplo de teste de hit de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
+- [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+- [Entrada: Exemplo simplificado de tinta](https://go.microsoft.com/fwlink/p/?linkid=246570)
+- [Entrada: Exemplo de gestos do Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+- [Entrada: Manipulações e exemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+- [Amostra de entrada por toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)

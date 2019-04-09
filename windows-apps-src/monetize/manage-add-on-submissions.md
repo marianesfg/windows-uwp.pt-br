@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de complemento, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 45fc2274ac22eee4a4c249397f25c1b0405cb856
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d3bf92e308d42b9dd93539ebbe44525067f23b6f
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57647211"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335124"
 ---
 # <a name="manage-add-on-submissions"></a>Gerenciar envios de complemento
 
@@ -41,17 +41,17 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 </thead>
 <tbody>
 <tr>
-<td align="left">GET</td>
+<td align="left">OBTER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
 <td align="left"><a href="get-an-add-on-submission.md">Obtenha um envio de complemento existente</a></td>
 </tr>
 <tr>
-<td align="left">GET</td>
+<td align="left">OBTER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/status</td>
 <td align="left"><a href="get-status-for-an-add-on-submission.md">Obter o status de um envio de complemento existente</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions</td>
 <td align="left"><a href="create-an-add-on-submission.md">Criar um novo envio de complemento</a></td>
 </tr>
@@ -61,7 +61,7 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 <td align="left"><a href="update-an-add-on-submission.md">Atualizar uma apresentação existente do complemento</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit</td>
 <td align="left"><a href="commit-an-add-on-submission.md">Confirmar o envio de um complemento novos ou atualizados</a></td>
 </tr>
@@ -85,7 +85,7 @@ Para criar um envio de um complemento, siga este processo.
 
 3. Execute o seguinte método na API de envio da Microsoft Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado. Para saber mais, veja [Criar um envio de complemento](create-an-add-on-submission.md).
 
-    ```
+    ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions
     ```
 
@@ -98,7 +98,7 @@ Para criar um envio de um complemento, siga este processo.
 
 5. Atualize os dados de [envio de complemento](#add-on-submission-object) com as alterações necessárias para o novo envio e execute o método a seguir para atualizar o envio. Para saber mais, veja [Atualizar um envio de complemento](update-an-add-on-submission.md).
 
-    ```
+    ```json
     PUT https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}
     ```
       > [!NOTE]
@@ -121,13 +121,13 @@ Para criar um envio de um complemento, siga este processo.
 
 5. Confirme o envio executando o método a seguir. Isso alertará o Partner Center que você concluiu o envio e que as atualizações agora devem ser aplicadas à sua conta. Para saber mais, veja [Confirmar um envio de complemento](commit-an-add-on-submission.md).
 
-    ```
+    ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit
     ```
 
 6. Verifique o status de confirmação executando o método a seguir. Para obter mais informações, consulte [Obter o status de um envio de complemento](get-status-for-an-add-on-submission.md).
 
-    ```
+    ```json
     GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/status
     ```
 
@@ -253,7 +253,7 @@ Esse recurso contém [informações de listagem de um complemento](../publish/cr
 
 | Valor           | Tipo    | Descrição       |
 |-----------------|---------|------|
-|  description               |    cadeia de caracteres     |   A descrição da listagem do complemento.   |     
+|  descrição               |    cadeia de caracteres     |   A descrição da listagem do complemento.   |     
 |  ícone               |   objeto      |Um [recurso de ícone](#icon-object) que contém dados do ícone para a listagem de complemento.    |
 |  title               |     cadeia de caracteres    |   O título da listagem do complemento.   |  
 
@@ -297,7 +297,7 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição           |
 |-----------------|---------|------|
-|  name               |    cadeia de caracteres     |   O nome da promoção.    |     
+|  nome               |    cadeia de caracteres     |   O nome da promoção.    |     
 |  basePriceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
 |  startDate               |   cadeia de caracteres      |   A data de início da promoção no formato ISO 8601.  |     
 |  endDate               |   cadeia de caracteres      |  A data de término da promoção no formato ISO 8601.      |     
@@ -324,7 +324,7 @@ Esse recurso contém informações adicionais sobre todos os erros ou avisos rel
 | Valor           | Tipo    | Descrição    |
 |-----------------|---------|------|
 |  code               |    cadeia de caracteres     |   Um [código de status do envio](#submission-status-code) que descreve o tipo de erro ou aviso.   |     
-|  details               |     cadeia de caracteres    |  Uma mensagem com mais detalhes sobre o problema.     |
+|  detalhes               |     cadeia de caracteres    |  Uma mensagem com mais detalhes sobre o problema.     |
 
 <span id="certification-report-object" />
 
@@ -337,7 +337,7 @@ Esse recurso dá acesso aos dados do relatório de certificação para um envio.
 |     date            |    cadeia de caracteres     |  A data e hora que o relatório foi gerado, no formato ISO 8601.    |
 |     reportUrl            |    cadeia de caracteres     |  A URL na qual é possível acessar o relatório.    |
 
-## <a name="enums"></a>Enumerações
+## <a name="enums"></a>Enums
 
 Esses métodos usam as enumerações a seguir.
 

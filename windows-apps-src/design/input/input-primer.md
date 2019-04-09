@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 80c834257e883d3aeb8594001344abd6ef14682c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: bae6e5b21369c30c8ed067fe7283c0a116d220b8
+ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596561"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343285"
 ---
 # <a name="interaction-primer"></a>Cartilha de interação
 
@@ -82,11 +82,11 @@ No Windows 10 **Cortana** extensibilidade permite lidar com comandos de voz de u
 
 Um comando de voz é uma fala única, definida em um arquivo VCD (Definição de Comando de Voz), direcionada a um aplicativo instalado por meio da **Cortana**. O aplicativo pode ser iniciado em primeiro ou segundo plano, dependendo do nível e da complexidade da interação. Por exemplo, comandos de voz que exigem contexto adicional ou a entrada do usuário são mais bem manipulados em primeiro plano, enquanto os comandos básicos podem ser manipulados em segundo plano.
 
-A integração da funcionalidade básica do seu aplicativo e o fornecimento de um ponto de entrada central para o usuário realizar a maioria das tarefas sem abrir o aplicativo diretamente permitem que a **Cortana** se torne uma ligação entre seu aplicativo e o usuário. Em muitos casos, isso pode economizar muito tempo e esforço do usuário. Para saber mais, consulte [Diretrizes de design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233).
+A integração da funcionalidade básica do seu aplicativo e o fornecimento de um ponto de entrada central para o usuário realizar a maioria das tarefas sem abrir o aplicativo diretamente permitem que a **Cortana** se torne uma ligação entre seu aplicativo e o usuário. Em muitos casos, isso pode economizar muito tempo e esforço do usuário. Para saber mais, consulte [Diretrizes de design da Cortana](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines).
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes de design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
+[Diretrizes de design da Cortana](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines)
  
 
 ## <a name="speech"></a>Controle por voz

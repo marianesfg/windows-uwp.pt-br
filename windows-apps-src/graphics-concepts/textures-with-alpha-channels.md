@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 88d150383d2be219e7f382e0e690771acbc9d2ee
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1a75c854d413f4681960c890691d99dd2529cc97
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651471"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291684"
 ---
 # <a name="textures-with-alpha-channels"></a>Texturas com canais alfa
-
 
 Há duas maneiras de codificar mapas de textura que exibem transparência mais complexa. Em cada caso, um bloco que descreve a transparência precede o bloco de 64 bits já descrito. A transparência é representada como um bitmap de 4 x 4 com 4 bits por pixel (codificação explícita), ou com menos bits e interpolação linear parecida com a que é usada para a codificação de cores.
 
@@ -25,8 +24,6 @@ O bloco de transparência e o bloco de cores são organizados conforme mostrado 
 |--------------|-----------------------------------|
 | 3:0          | Bloco de transparência                |
 | 7:4          | Bloco de 64 bits descrito anteriormente |
-
- 
 
 ## <a name="span-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanexplicit-texture-encoding"></a><span id="Explicit-Texture-Encoding"></span><span id="explicit-texture-encoding"></span><span id="EXPLICIT-TEXTURE-ENCODING"></span>Codificação de textura explícita
 
@@ -98,7 +95,7 @@ A codificação de transparência para o formato BC3 é baseada em um conceito s
 
 O exemplo de código a seguir ilustra esse algoritmo.
 
-```
+```cpp
 // 8-alpha or 6-alpha block?    
 if (alpha_0 > alpha_1) {    
     // 8-alpha block:  derive the other six alphas.    
@@ -126,13 +123,13 @@ O layout da memória do bloco de alfa é o seguinte:
 
 | Byte | Alfa                                                          |
 |------|----------------------------------------------------------------|
-| 0    | Alfa\_0                                                       |
-| 1    | Alfa\_1                                                       |
+| 0    | Alpha\_0                                                       |
+| 1    | Alpha\_1                                                       |
 | 2    | \[0\]\[2\] (2 MSBs), \[0\]\[1\], \[0\]\[0\]                    |
-| 3    | \[1\]\[1\] (1 MSB), \[1\]\[0\], \[0\]\[3\], \[0\] \[2\] (1 LSB) |
+| 3    | \[1\]\[1\] (1 MSB), \[1\]\[0\], \[0\]\[3\], \[0\]\[2\] (1 LSB) |
 | 4    | \[1\]\[3\], \[1\]\[2\], \[1\]\[1\] (2 LSBs)                    |
 | 5    | \[2\]\[2\] (2 MSBs), \[2\]\[1\], \[2\]\[0\]                    |
-| 6    | \[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\] \[2\] (1 LSB) |
+| 6    | \[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\]\[2\] (1 LSB) |
 | 7    | \[3\]\[3\], \[3\]\[2\], \[3\]\[1\] (2 LSBs)                    |
 
  

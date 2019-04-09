@@ -5,12 +5,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, API de envio da Microsoft Store, exemplos de código, opções de jogos, trailers, listagens avançadas, python
 ms.localizationpriority: medium
-ms.openlocfilehash: 59306e32fe1fcc68978c977b89934e64d85b8cc8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 5d68058d1bf53d936c9d88a3725c7c1dd9a3f443
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57629911"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334984"
 ---
 # <a name="python-sample-app-submission-with-game-options-and-trailers"></a>Exemplo de Python: envio de aplicativo com opções de jogo e trailers
 
@@ -28,11 +28,11 @@ Este artigo fornece exemplos de código Python que demonstram como usar a [API d
 
 Esse código chama outras classes e funções de exemplo para usar a API de envio da Microsoft Store para criar e confirmar um envio de aplicativo que contém as opções de jogo e um trailer. Para adaptar este código para seu próprio uso:
 
-* Atribua a variável ```tenant``` à ID do locatário do seu app e atribua as variáveis ```client``` e ```secret``` à ID e a chave do cliente para seu app. Para obter mais informações, consulte [como associar um aplicativo do AD do Azure com sua conta no Partner Center](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
-* Atribua a variável ```application_id``` à [ID da Loja](in-app-purchases-and-trials.md#store-ids) do app para o qual você deseja criar um envio.
+* Atribua a variável `tenant` à ID do locatário do seu app e atribua as variáveis `client` e `secret` à ID e a chave do cliente para seu app. Para obter mais informações, consulte [como associar um aplicativo do AD do Azure com sua conta no Partner Center](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
+* Atribua a variável `application_id` à [ID da Loja](in-app-purchases-and-trials.md#store-ids) do app para o qual você deseja criar um envio.
 
 > [!div class="tabbedCodeSnippets"]
-[!code[SubmissionApi](./code/StoreServicesExamples_SubmissionAdvancedListings/python/CreateAndSubmitAppSubmissionExample.py#L1-L74)]
+[!code-python[SubmissionApi](./code/StoreServicesExamples_SubmissionAdvancedListings/python/CreateAndSubmitAppSubmissionExample.py#L1-L74)]
 
 <span id="token" />
 
@@ -40,11 +40,11 @@ Esse código chama outras classes e funções de exemplo para usar a API de envi
 
 O exemplo a seguir define estas classes:
 
-* A classe ```DevCenterAccessTokenClient``` define um método auxiliar que usa os seus valores ```tenantId```, ```clientId``` e ```clientSecret``` para criar um token de acesso Azure AD a ser usado com a API de envio da Microsoft Store.
-* A classe ```DevCenterClient``` define os métodos auxiliares que invocam uma variedade de métodos na API de envio da Microsoft Store e carregam o arquivo ZIP que contém os pacotes, as imagens de listagem e os arquivos de trailer para o envio de aplicativo.
+* A classe `DevCenterAccessTokenClient` define um método auxiliar que usa os seus valores `tenantId`, `clientId` e `clientSecret` para criar um token de acesso Azure AD a ser usado com a API de envio da Microsoft Store.
+* A classe `DevCenterClient` define os métodos auxiliares que invocam uma variedade de métodos na API de envio da Microsoft Store e carregam o arquivo ZIP que contém os pacotes, as imagens de listagem e os arquivos de trailer para o envio de aplicativo.
 
 > [!div class="tabbedCodeSnippets"]
-[!code[SubmissionApi](./code/StoreServicesExamples_SubmissionAdvancedListings/python/devcenterclient.py#L1-L126)]
+[!code-python[SubmissionApi](./code/StoreServicesExamples_SubmissionAdvancedListings/python/devcenterclient.py#L1-L126)]
 
 <span id="token" />
 
@@ -53,7 +53,7 @@ O exemplo a seguir define estas classes:
 O exemplo a seguir define as funções auxiliares que retornam dados de listagem formatados em JSON para um novo envio de aplicativo de exemplo.
 
 > [!div class="tabbedCodeSnippets"]
-[!code[SubmissionApi](./code/StoreServicesExamples_SubmissionAdvancedListings/python/submissiondatasamples.py#L1-L170)]
+[!code-python[SubmissionApi](./code/StoreServicesExamples_SubmissionAdvancedListings/python/submissiondatasamples.py#L1-L170)]
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

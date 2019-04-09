@@ -7,12 +7,12 @@ keywords: dispositivo, digitalizador, entrada, interação, injeção
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: de3f0b1377d4f4209dc012ff56adb2de9c68625f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 2699917beed9330dd2044704f19b3c25256c3ca8
+ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602321"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343235"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>Simular a entrada do usuário por meio de injeção de entrada
 
@@ -169,11 +169,11 @@ Neste exemplo, demonstramos como usar as APIs de injeção de entrada ([Windows.
     
     Neste trecho, declaramos nossos objetos globais e declaramos ouvintes de eventos de ponteiro ([AddHandler](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler)) dentro do mouse área de entrada que pode ser marcada como identificada nos eventos de clique com o botão.
 
-    O objeto [InputInjector](https://docs.microsoft.com/api/windows.ui.input.preview.injection.inputinjector) representa o dispositivo de entrada virtual para enviar os dados de entrada.
+    O objeto [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) representa o dispositivo de entrada virtual para enviar os dados de entrada.
 
     No identificador `ContainerInput_PointerPressed` é possível chamar a função de injeção por toque.
 
-    No identificador `ContainerInput_PointerReleased`, chamamos UninitializeTouchInjection para desligar o objeto [InputInjector](https://docs.microsoft.com/api/windows.ui.input.preview.injection.inputinjector).
+    No identificador `ContainerInput_PointerReleased`, chamamos UninitializeTouchInjection para desligar o objeto [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector).
 
     ```csharp
     public sealed partial class MainPage : Page
@@ -250,7 +250,7 @@ Neste exemplo, demonstramos como usar as APIs de injeção de entrada ([Windows.
     ```
 3. Veja a função de injeção de entrada de toque.
 
-    Primeiro, chamamos [TryCreate](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.trycreate) para instanciar o objeto [InputInjector](https://docs.microsoft.com/api/windows.ui.input.preview.injection.inputinjector).
+    Primeiro, chamamos [TryCreate](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.trycreate) para instanciar o objeto [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector).
 
     Em seguida, chamamos [InitializeTouchInjection](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.initializetouchinjection) com um [InjectedInputVisualizationMode](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputvisualizationmode) de `Default`.
 

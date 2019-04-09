@@ -2,16 +2,16 @@
 title: Dados do Registro para controladores de jogo
 description: Saiba mais sobre os dados que você pode adicionar ao Registro do computador para permitir que o controlador seja usado em jogos UWP.
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
-ms.date: 06/25/2018
+ms.date: 4/8/2019
 ms.topic: article
 keywords: windows 10, uwp, jogos, entrada, registro, personalizado
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d30c19a7fd7641d76e810912d33a96dbbeb3132
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5578faeb5a35ae909e590741de759c2597b9c7ed
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244392"
 ---
 # <a name="registry-data-for-game-controllers"></a>Dados do Registro para controladores de jogo
 
@@ -33,7 +33,7 @@ A tabela a seguir explica os valores esperados no local raiz do dispositivo:
         <th>Nome</th>
         <th>Tipo</th>
         <th>Necessário?</th>
-        <th>Informações</th>
+        <th>Info</th>
     </tr>
     <tr>
         <td>Desabilitada</td>
@@ -66,7 +66,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **Gam
     <tr>
         <th>Subchave</th>
         <th>Necessário?</th>
-        <th>Informações</th>
+        <th>Info</th>
     </tr>
     <tr>
         <td>Menu</td>
@@ -179,7 +179,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **Rac
     <tr>
         <th>Subchave</th>
         <th>Necessário?</th>
-        <th>Informações</th>
+        <th>Info</th>
     </tr>
     <tr>
         <td>PreviousGear</td>
@@ -338,7 +338,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **Arc
     <tr>
         <th>Subchave</th>
         <th>Necessário?</th>
-        <th>Informações</th>
+        <th>Info</th>
     </tr>
     <tr>
         <td>Action 1</td>
@@ -399,7 +399,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **Fli
     <tr>
         <th>Subchave</th>
         <th>Necessário?</th>
-        <th>Informações</th>
+        <th>Info</th>
     </tr>
     <tr>
         <td>FirePrimary</td>
@@ -442,7 +442,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **UIN
     <tr>
         <th>Subchave</th>
         <th>Necessário?</th>
-        <th>Informações</th>
+        <th>Info</th>
     </tr>
     <tr>
         <td>Menu</td>
@@ -597,7 +597,7 @@ A tabela a seguir lista os valores que são necessários para mapear um botão. 
         </td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Opção</td>
+        <td rowspan="3" style="vertical-align: middle;">Alternar</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Sim</td>
@@ -610,7 +610,7 @@ A tabela a seguir lista os valores que são necessários para mapear um botão. 
         <td>
             <p>Indica a posição do comutador que fará com que o botão mapeado relate que está sendo pressionado. Os valores de posição podem ser uma destas cadeias de caracteres:</p>
             <ul>
-                <li>Para cima</li> 
+                <li>Para cima</li>
                 <li>UpRight</li>
                 <li>Direita</li>
                 <li>DownRight</li>
@@ -713,7 +713,7 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
         <td>Indica que o valor do eixo mapeado deverá ser invertido antes de ser retornado.</td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Opção</td>
+        <td rowspan="3" style="vertical-align: middle;">Alternar</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Sim</td>
@@ -820,7 +820,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
     <tr>
         <td>SwitchKind</td>
         <td>REG_SZ</td>
-        <td><b>TwoWay</b>, <b>FourWay</b>, ou <b>EightWay</b>
+        <td><b>TwoWay</b>, <b>FourWay</b> ou <b>EightWay</b>
     </tr>
     <tr>
         <td>UpButtonIndex</td>
@@ -898,7 +898,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
         <td>DWORD</td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Opção</td>
+        <td rowspan="3" style="vertical-align: middle;">Alternar</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Índice na matriz de comutadores <b>RawGameController</b>.
@@ -1121,10 +1121,10 @@ A chave **Axes** mapeará cada uma das posições do eixo na matriz de eixos do 
 
 ### <a name="switch-labels"></a>Rótulos de comutador
 
-A chave **Switches** mapeia as posições do comutador para rótulos. Os valores seguem esta convenção de nomenclatura: para rotular uma posição de um comutador, cujo índice é *x* na matriz de comutadores do **RawGameController**, adicione estes valores na subchave **Switches**: 
+A chave **Switches** mapeia as posições do comutador para rótulos. Os valores seguem esta convenção de nomenclatura: para rotular uma posição de um comutador, cujo índice é *x* na matriz de comutadores do **RawGameController**, adicione estes valores na subchave **Switches**:
 
-* SwitchxUp 
-* SwitchxUpRight 
+* SwitchxUp
+* SwitchxUpRight
 * SwitchxRight
 * SwitchxDownRight
 * SwitchxDown
@@ -1132,7 +1132,7 @@ A chave **Switches** mapeia as posições do comutador para rótulos. Os valores
 * SwitchxUpLeft
 * SwitchxLeft
 
-A tabela a seguir mostra um conjunto de exemplo de rótulos para posições de um comutador de 4 direções que aparece no índice 0 no **RawGameController**: 
+A tabela a seguir mostra um conjunto de exemplo de rótulos para posições de um comutador de 4 direções que aparece no índice 0 no **RawGameController**:
 
 <table>
     <tr>
@@ -1232,7 +1232,7 @@ A tabela a seguir mostra um conjunto de exemplo de rótulos para posições de u
 
 Para mostrar como todos esses mapeamentos e valores se encaixam, aqui está um exemplo de arquivo do Registro para uma **RacingWheel** genérica:
 
-```
+```text
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GameInput\Devices\1234567800010004]

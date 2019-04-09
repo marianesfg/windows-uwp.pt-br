@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4efbdaef0fbcbe076133be1c491f7ed173c01257
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 786c9bc4962d26c58950e06a82140e524b967db1
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240054"
 ---
 # <a name="list-view-and-grid-view"></a>Exibição de lista e exibição de grade
 
@@ -82,7 +82,7 @@ Veja a seguir uma exibição de lista com itens definidos embutidos em XAML. Qua
 
 Veja a seguir a exibição de lista criada em código. A lista resultante é igual à criada anteriormente em XAML.
 
-**EM C#**
+**C#**
 ```csharp
 // Create a new ListView and add content. 
 ListView listView1 = new ListView(); 
@@ -106,7 +106,7 @@ Geralmente, você usa uma exibição de lista para exibir dados de uma fonte, co
 
 Aqui, o ItemsSource da exibição de lista está definido em código diretamente como uma instância de uma coleção.
 
-**EM C#**
+**C#**
 ```csharp 
 // Instead of hard coded items, the data could be pulled 
 // asynchronously from a database or the internet.
@@ -134,7 +134,7 @@ Aqui, o ItemsSource está associado a uma propriedade pública denominada `Items
 <ListView x:Name="itemListView" ItemsSource="{x:Bind Items}"/>
 ```
 
-**EM C#**
+**C#**
 ```csharp
 private ObservableCollection<string> _items = new ObservableCollection<string>();
 
@@ -182,7 +182,7 @@ Neste exemplo, o item de dados é uma cadeia de caracteres simples. Você usa um
                 <Image Source="Assets/placeholder.png" Width="32" Height="32" 
                        HorizontalAlignment="Left"/>
                 <TextBlock Text="{x:Bind}" Foreground="Teal" 
-                           FontSize="15" Grid.Column="1"/>
+                           FontSize="14" Grid.Column="1"/>
             </Grid> 
         </DataTemplate>
     </ListView.ItemTemplate>
@@ -307,7 +307,7 @@ Você pode definir essas propriedades em XAML ou em código, conforme mostrado a
 <GridView x:Name="myGridView" SelectionMode="None" IsItemClickEnabled="True"/> 
 ```
 
-**EM C#**
+**C#**
 ```csharp
 myListView.SelectionMode = ListViewSelectionMode.Multiple; 
 
@@ -382,7 +382,7 @@ Este exemplo mostra como manipular o evento **SelectionChanged** e acessar as di
 </StackPanel> 
 ```
 
-**EM C#**
+**C#**
 ```csharp
 private void ListView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
 {
@@ -429,7 +429,7 @@ Veja a seguir uma exibição de lista com itens clicáveis. O código no manipul
 </ListView>
 ```
 
-**EM C#**
+**C#**
 ```csharp
 private void ListView1_ItemClick(object sender, ItemClickEventArgs e)
 {
@@ -490,7 +490,7 @@ Você pode selecionar todos os itens de uma coleção chamando o método SelectA
 </StackPanel>
 ```
 
-**EM C#**
+**C#**
 ```csharp
 private void SelectAllButton_Click(object sender, RoutedEventArgs e)
 {
@@ -526,5 +526,5 @@ Os controles ListView e GridView permitem arrastar e soltar itens dentro deles m
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Listas](lists.md)
-- [Modelos e contêineres de itens](item-containers-templates.md)
+- [Contêineres e modelos de itens](item-containers-templates.md)
 - [Arrastar e soltar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)

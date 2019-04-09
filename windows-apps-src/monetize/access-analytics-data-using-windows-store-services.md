@@ -2,17 +2,17 @@
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: Use a API de análise da Microsoft Store para recuperar dados de análise de aplicativos que são registrados em seu ou sua organização de forma programática ' s conta no Partner Center do Windows.
 title: Acessar dados analíticos usando serviços da Store
-ms.date: 06/04/2018
+ms.date: 03/06/2019
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 72e0941bb42a2a507af652758432ce51212c1042
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: ab3e223c99a13e4520d5bc603454881803a3cb64
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592651"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334854"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Store
 
@@ -54,7 +54,7 @@ Antes de chamar qualquer um dos métodos na API de análise da Microsoft Store, 
 
 Para obter o token de acesso, siga as instruções em [Chamadas de serviço a serviço usando credenciais do cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar um HTTP POST para o ponto de extremidade ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Aqui está um exemplo de solicitação.
 
-```
+```json
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
 Host: login.microsoftonline.com
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -75,13 +75,19 @@ Depois que seu token de acesso expirar, você poderá atualizá-lo seguindo as i
 
 Depois que tiver um token de acesso do Azure AD, você estará pronto para chamar a API de análise da Microsoft Store. Você deve passar o token de acesso no cabeçalho **Autorização** de cada método.
 
-### <a name="methods-for-uwp-apps"></a>Métodos para aplicativos UWP
+### <a name="methods-for-uwp-apps-and-games"></a>Métodos para jogos e aplicativos UWP
+Os métodos a seguir estão disponíveis para aplicativos e jogos aquisições e aquisições de complemento: 
+
+* [Obter dados de aquisições para seus aplicativos e jogos](acquisitions-data.md)
+* [Obter dados de aquisições de complemento para seus aplicativos e jogos](add-on-acquisitions-data.md)
+
+### <a name="methods-for-uwp-apps"></a>Métodos para aplicativos UWP 
 
 Os métodos de análise a seguir estão disponíveis para aplicativos UWP no Partner Center.
 
 | Cenário       | Métodos      |
 |---------------|--------------------|
-| Aquisições, conversões, instalações e uso |  <ul><li>[Obter aquisições de aplicativo](get-app-acquisitions.md)</li><li>[Obter dados de funil de aquisição de aplicativo](get-acquisition-funnel-data.md)</li><li>[Obter as conversões de aplicativo por canal](get-app-conversions-by-channel.md)</li><li>[Obter aquisições de complemento](get-in-app-acquisitions.md)</li><li>[Obter assinatura aquisições de complemento](get-subscription-acquisitions.md)</li><li>[Obter as conversões de complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obter as instalações de aplicativos](get-app-installs.md)</li><li>[Obter o uso diário do aplicativo](get-app-usage-daily.md)</li><li>[Obter o uso mensal de aplicativo](get-app-usage-monthly.md)</li></ul> |
+| Aquisições, conversões, instalações e uso |  <ul><li>[Obter aquisições de aplicativo](get-app-acquisitions.md) (herdado)</li><li>[Obter dados de funil de aquisição de aplicativo](get-acquisition-funnel-data.md) (herdado)</li><li>[Obter as conversões de aplicativo por canal](get-app-conversions-by-channel.md)</li><li>[Obter aquisições de complemento](get-in-app-acquisitions.md)</li><li>[Obter assinatura aquisições de complemento](get-subscription-acquisitions.md)</li><li>[Obter as conversões de complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obter as instalações de aplicativos](get-app-installs.md)</li><li>[Obter o uso diário do aplicativo](get-app-usage-daily.md)</li><li>[Obter o uso mensal de aplicativo](get-app-usage-monthly.md)</li></ul> |
 | Erros de app | <ul><li>[Obter dados de relatório de erros](get-error-reporting-data.md)</li><li>[Obter detalhes sobre um erro em seu aplicativo](get-details-for-an-error-in-your-app.md)</li><li>[Obter o rastreamento de pilha para um erro em seu aplicativo](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Baixe o arquivo CAB para um erro em seu aplicativo](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
 | Insights | <ul><li>[Obter dados de insights para seu aplicativo](get-insights-data-for-your-app.md)</li></ul>  |
 | Classificações e opiniões | <ul><li>[Obtenha as classificações do aplicativo](get-app-ratings.md)</li><li>[Obter revisões de aplicativo](get-app-reviews.md)</li></ul> |
@@ -100,7 +106,7 @@ Os métodos de análise a seguir estão disponíveis para uso por contas de dese
 
 ### <a name="methods-for-xbox-live-services"></a>Métodos para serviços Xbox Live
 
-Os métodos adicionais a seguir estão disponíveis para uso por contas de desenvolvedor com jogos que usam os [serviços Xbox Live](../xbox-live/developer-program-overview.md).
+Os métodos adicionais a seguir estão disponíveis para uso por contas de desenvolvedor com jogos que usam os [serviços Xbox Live](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md).
 
 | Cenário       | Métodos      |
 |---------------|--------------------|
@@ -126,7 +132,7 @@ Contas de desenvolvedor que pertencem à [programa de painel do Windows hardware
 O exemplo de código a seguir demonstra como obter um token de acesso do Azure AD e chamar a API de análise da Microsoft Store de um aplicativo de console C#. Para usar este exemplo de código, atribua as variáveis *tenantId*, *clientId*, *clientSecret* e *appID* aos valores adequados ao seu cenário. Este exemplo exige o [pacote Json.NET](https://www.newtonsoft.com/json) da Newtonsoft para desserializar os dados JSON retornados pela API de análise da Microsoft Store.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[AnalyticsApi](./code/StoreServicesExamples_Analytics/cs/Program.cs#AnalyticsApiExample)]
+[!code-csharp[AnalyticsApi](./code/StoreServicesExamples_Analytics/cs/Program.cs#AnalyticsApiExample)]
 
 ## <a name="error-responses"></a>Respostas de erro
 

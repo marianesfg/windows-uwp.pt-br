@@ -5,12 +5,12 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f8bed97e060015f92ff95c9f7d797bbcb83db431
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: e0fcb903bd272bd10d434a27d41e6e4558a624ea
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605831"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334894"
 ---
 # <a name="best-practices-for-writing-to-files"></a>Práticas recomendadas para gravar em arquivos
 
@@ -21,7 +21,9 @@ ms.locfileid: "57605831"
 
 Os desenvolvedores, às vezes, são executados em um conjunto de problemas comuns ao usar o **escrever** métodos das [ **FileIO** ](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) e [ **PathIO** ](https://docs.microsoft.com/uwp/api/windows.storage.pathio) classes para executar operações de e/s do sistema de arquivos. Por exemplo, problemas comuns incluem:
 
-• Um arquivo parcialmente é gravado • o aplicativo recebe uma exceção ao chamar um dos métodos. • As operações de deixam para trás. Arquivos TMP com um nome de arquivo semelhante ao nome do arquivo de destino.
+* Um arquivo parcialmente é gravado.
+* O aplicativo recebe uma exceção ao chamar um dos métodos.
+* As operações de deixar para trás. Arquivos TMP com um nome de arquivo semelhante ao nome do arquivo de destino.
 
 O **escrever** métodos das [ **FileIO** ](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) e [ **PathIO** ](https://docs.microsoft.com/uwp/api/windows.storage.pathio) classes incluem o seguinte:
 
@@ -35,7 +37,7 @@ O **escrever** métodos das [ **FileIO** ](https://docs.microsoft.com/uwp/api/Wi
 > [!NOTE]
 > Este artigo enfoca os **FileIO** métodos em exemplos e discussões. No entanto, o **PathIO** métodos seguem um padrão semelhante e a maioria das diretrizes neste artigo aplica-se também a esses métodos. 
 
-## <a name="conveience-vs-control"></a>Conveience x controle
+## <a name="convenience-vs-control"></a>Conveniência x controle
 
 Um [ **StorageFile** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) objeto não é um identificador de arquivo, como o modelo de programação nativo do Win32. Em vez disso, uma [ **StorageFile** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) é uma representação de um arquivo com métodos para manipular seu conteúdo.
 
@@ -76,11 +78,11 @@ Esta tabela apresenta os códigos de erro comuns que os desenvolvedores de aplic
 |  Erro de nome (valor)  |  Etapas  |  Causas  |  Soluções  |
 |----------------------|---------|----------|-------------|
 |  ERROR_ACCESS_DENIED (0X80070005)  |  5  |  O arquivo original pode ser marcado para exclusão, possivelmente a partir de uma operação anterior.  |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
-|  ERROR_SHARING_VIOLATION (0X80070020)  |  5  |  O arquivo original é aberto por outro gravação exclusivo.   |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
-|  ERROR_UNABLE_TO_REMOVE_REPLACED (0X80070497)  |  19-20  |  Não foi possível substituir o arquivo original (arquivo. txt), porque ele está em uso. Outro processo ou operação obteve acesso ao arquivo antes que ele pode ser substituído.  |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
-|  ERROR_DISK_FULL (0X80070070)  |  7, 14, 16, 20  |  O modelo transacionado cria um arquivo extra e isso consome armazenamento extra.  |    |
+|  ERROR_SHARING_VIOLATION (0x80070020)  |  5  |  O arquivo original é aberto por outro gravação exclusivo.   |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
+|  ERROR_UNABLE_TO_REMOVE_REPLACED (0x80070497)  |  19-20  |  Não foi possível substituir o arquivo original (arquivo. txt), porque ele está em uso. Outro processo ou operação obteve acesso ao arquivo antes que ele pode ser substituído.  |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
+|  ERROR_DISK_FULL (0x80070070)  |  7, 14, 16, 20  |  O modelo transacionado cria um arquivo extra e isso consome armazenamento extra.  |    |
 |  ERROR_OUTOFMEMORY (0X8007000E)  |  14, 16  |  Isso pode acontecer devido a várias operações de e/s pendentes ou tamanhos de arquivos grandes.  |  Uma abordagem mais granular, controlando o fluxo pode resolver o erro.  |
-|  E_FAIL (0X80004005) |  Qualquer  |  Diversos  |  Repita a operação. Se ele ainda falhar, ele pode ser um erro de plataforma e o aplicativo deve ser interrompido porque ele está em um estado inconsistente. |
+|  E_FAIL (0x80004005) |  Qualquer  |  Diversos  |  Repita a operação. Se ele ainda falhar, ele pode ser um erro de plataforma e o aplicativo deve ser interrompido porque ele está em um estado inconsistente. |
 
 ## <a name="other-considerations-for-file-states-that-might-lead-to-errors"></a>Outras considerações para estados de arquivo que podem levar a erros
 

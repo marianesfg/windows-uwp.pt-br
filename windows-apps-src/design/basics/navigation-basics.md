@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bba6d42e6ce494c0655c6b6c60db91c1e2e006e8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 3d516343798b7d8c221a5af12210a4897a3124a9
+ms.sourcegitcommit: 358abe22243da4592c30e18d6fc322778f091c8d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636091"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58362946"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -197,6 +197,21 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
 
 :::row:::
     :::column:::
+         ![tabs and pivot image](images/nav/thumbnail-tabs-pivot.svg)
+    :::column-end:::
+        :::column span="2":::
+    [**Pivot**](../controls-and-patterns/pivot.md)
+    
+    Semelhante ao [exibição de navegação](../controls-and-patterns/navigationview.md), mas com suporte adicional para toque e o comportamento de navegação de um pouco diferente.
+    
+    Usar uma tabela dinâmica quando:-você quiser que seu aplicativo para permitir que o dedo para toque entre categorias
+        - Você deseja que as opções de navegação para infintely carrossel
+        - Não é necessário controle abrangente sobre o comportamento de navegação entre as categorias
+
+:::row-end:::
+
+:::row:::
+    :::column:::
         ![navview image](images/nav/thumbnail-navview.svg)
     :::column-end:::
     :::column span="2":::
@@ -207,9 +222,9 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
         - As páginas existirem no nível superior.
         - Há muitos itens de navegação (mais de 5)
         - Você não espera que os usuários alternem entre as páginas com frequência.
-        
-:::row-end:::
 
+:::row-end:::
+        
 :::row:::
     :::column:::
         ![Master details image](images/nav/thumbnail-master-detail.svg)

@@ -5,17 +5,17 @@ ms.date: 05/30/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: e81f82fe823ee0fdf81741c89576adf268940d91
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1d11d0dcdf13982e0754a84de00f22c02090e822
+ms.sourcegitcommit: 9031a51f9731f0b675769e097aa4d914b4854e9e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630741"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618383"
 ---
 # <a name="move-to-cwinrt-from-wrl"></a>Mudar de WRL para C++/WinRT
-Este tópico mostra como portar [biblioteca de modelos em C++ Windows Runtime (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) código para seu equivalente em [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+Este tópico mostra como portar [tempo de execução do Windows C++ biblioteca de modelos (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) a seu equivalente em código [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
-A primeira etapa na portabilidade para C + + c++ /CLI WinRT é adicionar manualmente C + + c++ /CLI WinRT suporte ao seu projeto (consulte [suporte do Visual Studio para C + + c++ /CLI WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). Para fazer isso, instale o [pacote do Microsoft.Windows.CppWinRT NuGet](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) em seu projeto. Abra o projeto no Visual Studio, clique em **Project** \> **gerenciar pacotes NuGet...** \> **Navegue**, digite ou cole **Microsoft.Windows.CppWinRT** na caixa de pesquisa, selecione o item nos resultados da pesquisa e, em seguida, clique em **instalar** para instalar o pacote para o projeto. Um efeito dessa alteração é que o suporte para [C + + c++ /CX](/cpp/cppcx/visual-c-language-reference-c-cx) está desativado no projeto. Se estiver usando o C++/CX no projeto, você pode deixar o suporte desativado e atualizar o código do C++/CX para C++/WinRT (consulte [Mudar do C++/CX para C++/WinRT](move-to-winrt-from-cx.md)). Ou você pode ativar o suporte novamente (nas propriedades do projeto **C/C++** \> **geral** \> **consumir extensão de tempo de execução do Windows** \> **Sim (/ZW)**) e o foco primeiro como portar seu código WRL. C + + c++ /CLI CX e C + + c++ /CLI código WinRT pode coexistir no mesmo projeto, com exceção do suporte a compilador de XAML e componentes de tempo de execução do Windows (consulte [mover para C + + c++ /CLI WinRT da C + + c++ /CLI CX](move-to-winrt-from-cx.md)).
+A primeira etapa na portabilidade para o C++/WinRT é adicionar manualmente C++/WinRT suporte ao seu projeto (consulte [suporte do Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). Para fazer isso, instale o [pacote do Microsoft.Windows.CppWinRT NuGet](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) em seu projeto. Abra o projeto no Visual Studio, clique em **Project** \> **gerenciar pacotes NuGet...** \> **Navegue**, digite ou cole **Microsoft.Windows.CppWinRT** na caixa de pesquisa, selecione o item nos resultados da pesquisa e, em seguida, clique em **instalar** para instalar o pacote para o projeto. Um efeito dessa alteração é que o suporte para [ C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) está desativado no projeto. Se estiver usando o C++/CX no projeto, você pode deixar o suporte desativado e atualizar o código do C++/CX para C++/WinRT (consulte [Mudar do C++/CX para C++/WinRT](move-to-winrt-from-cx.md)). Ou você pode ativar o suporte novamente (nas propriedades do projeto **C/C++** \> **geral** \> **consumir extensão de tempo de execução do Windows** \> **Sim (/ZW)**) e o foco primeiro como portar seu código WRL. C++/CX e C++/código WinRT pode coexistir no mesmo projeto, com exceção do suporte a compilador de XAML e componentes de tempo de execução do Windows (consulte [mover para C++/WinRT do C++/CX](move-to-winrt-from-cx.md)).
 
 Defina a propriedade do projeto **gerais** \> **versão da plataforma de destino** para 10.0.17134.0 (Windows 10, versão 1803) ou maior.
 
@@ -28,7 +28,7 @@ No arquivo de cabeçalho pré-compilado (em geral, `pch.h`), inclua `winrt/base.
 Se você incluir qualquer cabeçalho de API C++/WinRT projetado do Windows (por exemplo, `winrt/Windows.Foundation.h`), não é necessário incluir explicitamente `winrt/base.h` dessa forma, pois será incluído automaticamente para você.
 
 ## <a name="porting-wrl-com-smart-pointers-microsoftwrlcomptrcppwindowscomptr-class"></a>Fazer a portabilidade de ponteiros inteligentes COM do WRL ([Microsoft::WRL::ComPtr](/cpp/windows/comptr-class))
-Qualquer código que usa a porta **Microsoft::WRL::ComPtr\<T\>**  usar [ **winrt::com_ptr\<T\>**](/uwp/cpp-ref-for-winrt/com-ptr). Veja um exemplo anterior e posterior do código. Na versão *posterior*, a função de membro [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) recupera o ponteiro bruto subjacente para poder defini-lo.
+Qualquer código que usa a porta **Microsoft::WRL::ComPtr\<T\>**  usar [ **winrt::com_ptr\<T\>**](/uwp/cpp-ref-for-winrt/com-ptr). Veja um exemplo anterior e posterior do código. Na versão *posterior*, a função de membro [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrput-function) recupera o ponteiro bruto subjacente para poder defini-lo.
 
 ```cpp
 ComPtr<IDXGIAdapter1> previousDefaultAdapter;
@@ -41,7 +41,7 @@ winrt::check_hresult(m_dxgiFactory->EnumAdapters1(0, previousDefaultAdapter.put(
 ```
 
 > [!IMPORTANT]
-> Se você tiver um [ **winrt::com_ptr** ](/uwp/cpp-ref-for-winrt/com-ptr) que já está encaixado (seu ponteiro bruto interno já tem um destino) e você deseja encaixá-la para apontar para um objeto diferente de novamente, em seguida, você primeiro precisará atribuir `nullptr` a ele&mdash;conforme mostrado no exemplo de código abaixo. Se você não fizer isso, em seguida, um já fixada **com_ptr** desenhará o problema para a sua atenção (quando você chama [ **com_ptr::put** ](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) ou [ **com_ptr:: put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)), confirmando que seu ponteiro interno não é nulo.
+> Se você tiver um [ **winrt::com_ptr** ](/uwp/cpp-ref-for-winrt/com-ptr) que já está encaixado (seu ponteiro bruto interno já tem um destino) e você deseja encaixá-la para apontar para um objeto diferente de novamente, em seguida, você primeiro precisará atribuir `nullptr` a ele&mdash;conforme mostrado no exemplo de código abaixo. Se você não fizer isso, em seguida, um já fixada **com_ptr** desenhará o problema para a sua atenção (quando você chama [ **com_ptr::put** ](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrput-function) ou [ **com_ptr:: put_void**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrput_void-function)), confirmando que seu ponteiro interno não é nulo.
 
 ```cppwinrt
 winrt::com_ptr<IDXGISwapChain1> m_pDXGISwapChain1;
@@ -59,7 +59,7 @@ winrt::check_hresult(
 );
 ```
 
-No exemplo a seguir, (na versão *posterior*), a função de membro [**com_ptr::put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function) recupera o ponteiro bruto subjacente como um ponteiro para anulação.
+No exemplo a seguir, (na versão *posterior*), a função de membro [**com_ptr::put_void**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrput_void-function) recupera o ponteiro bruto subjacente como um ponteiro para anulação.
 
 ```cpp
 ComPtr<ID3D12Debug> debugController;
@@ -77,7 +77,7 @@ if (SUCCEEDED(D3D12GetDebugInterface(__uuidof(debugController), debugController.
 }
 ```
 
-Substitua **ComPtr::Get** por [**com_ptr::get**](/uwp/cpp-ref-for-winrt/com-ptr#comptrget-function).
+Substitua **ComPtr::Get** por [**com_ptr::get**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrget-function).
 
 ```cpp
 m_d3dDevice->CreateDepthStencilView(m_depthStencil.Get(), &dsvDesc, m_dsvHeap->GetCPUDescriptorHandleForHeapStart());
@@ -87,7 +87,7 @@ m_d3dDevice->CreateDepthStencilView(m_depthStencil.Get(), &dsvDesc, m_dsvHeap->G
 m_d3dDevice->CreateDepthStencilView(m_depthStencil.get(), &dsvDesc, m_dsvHeap->GetCPUDescriptorHandleForHeapStart());
 ```
 
-Quando você quer passar o ponteiro bruto subjacente para uma função que espera um ponteiro para **IUnknown**, use o [ **winrt::get_unknown** ](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#getunknown-function) livre de função, como mostra o próximo passo exemplo.
+Quando você quer passar o ponteiro bruto subjacente para uma função que espera um ponteiro para **IUnknown**, use o [ **winrt::get_unknown** ](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#get_unknown-function) livre de função, como mostra o próximo passo exemplo.
 
 ```cpp
 ComPtr<IDXGISwapChain1> swapChain;

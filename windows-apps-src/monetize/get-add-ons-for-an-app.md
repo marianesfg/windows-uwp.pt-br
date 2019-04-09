@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, complementos, produtos no aplicativo, IAPs
 ms.localizationpriority: medium
-ms.openlocfilehash: ec065eef5d411e35515837b169fd57d71e4ef6ac
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 8211d65f04b7487aeca6f683375fe87b80d1b9a9
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594551"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334994"
 ---
 # <a name="get-add-ons-for-an-app"></a>Obter complementos para um app
 
@@ -30,7 +30,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts``` |
+| OBTER    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -58,14 +58,14 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como listar todos os complementos de um aplicativo.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listinappproducts HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
 O exemplo a seguir demonstra como listar os 10 primeiros complementos de um aplicativo.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listinappproducts?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -97,7 +97,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicita
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | cadeia de caracteres | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 50 complementos para o aplicativo, o corpo da resposta incluirá um valor @nextLink de ```applications/{applicationid}/listinappproducts/?skip=10&top=10```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10``` para solicitar os próximos 10 complementos. |
+| @nextLink  | cadeia de caracteres | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação `https://manage.devcenter.microsoft.com/v1.0/my/` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 50 complementos para o aplicativo, o corpo da resposta incluirá um valor @nextLink de `applications/{applicationid}/listinappproducts/?skip=10&top=10`, o que indica que você pode chamar `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10` para solicitar os próximos 10 complementos. |
 | value      | matriz  | Uma matriz de objetos que listam a ID da Loja de cada complemento para o aplicativo especificado. Para obter mais informações sobre os dados em cada objeto, consulte [recurso do complemento](get-app-data.md#add-on-object).                                                                                                                           |
 | totalCount | int    | O número total de linhas no resultado dos dados da consulta (ou seja, o número total de complementos do aplicativo especificado).    |
 

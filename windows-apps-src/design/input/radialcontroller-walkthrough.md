@@ -3,15 +3,15 @@ ms.assetid: ''
 title: Suporte ao Surface Dial (e a outros dispositivos de roda de rolagem) no aplicativo UWP
 description: Um tutorial passo a passo para adicionar suporte ao Surface Dial (e a outros dispositivos de roda de rolagem) no aplicativo UWP.
 keywords: dial, radial, tutorial
-ms.date: 01/25/2018
+ms.date: 03/11/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d8729826c2f372b3d3b5607ce828aaf515e47f3d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1c8042bbe3ad8a37802b592e4e638a7c42e79a6d
+ms.sourcegitcommit: 99271798fe53d9768fc52b21366de05268cadcb0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643981"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221462"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>Tutorial: Suporte ao Surface Dial (e a outros dispositivos de roda de rolagem) no aplicativo UWP
 
@@ -612,3 +612,35 @@ Para ver isso em ação (você precisará do Surface Studio):
 ## <a name="summary"></a>Resumo
 
 Parabéns, você concluiu o *Tutorial de Introdução: Suporte Surface Dial (e outros dispositivos de roda) em seu aplicativo UWP*! Mostramos a você o código básico necessário para oferecer suporte a um dispositivo de roda de rolagem nos aplicativos UWP e proporcionar algumas experiências de usuário mais sofisticadas compatíveis com as APIs **RadialController**.
+
+## <a name="related-articles"></a>Artigos relacionados
+
+[Interações do Surface Dial](windows-wheel-interactions.md)
+
+### <a name="api-reference"></a>Referência de API
+
+- [**RadialController** classe](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController)
+- [**RadialControllerButtonClickedEventArgs** classe](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
+- [**RadialControllerConfiguration** classe](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerConfiguration) 
+- [**RadialControllerControlAcquiredEventArgs** classe](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerControlAcquiredEventArgs) 
+- [**RadialControllerMenu** classe](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenu) 
+- [**RadialControllerMenuItem** classe](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuItem) 
+- [**RadialControllerRotationChangedEventArgs** classe](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerRotationChangedEventArgs) 
+- [**RadialControllerScreenContact** classe](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContact) 
+- [**RadialControllerScreenContactContinuedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs) 
+- [**RadialControllerScreenContactStartedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactStartedEventArgs)
+- [**RadialControllerMenuKnownIcon** enum](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuKnownIcon) 
+- [**RadialControllerSystemMenuItemKind** enum](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerSystemMenuItemKind) 
+
+### <a name="samples"></a>Exemplos
+
+#### <a name="topic-samples"></a>Exemplos de tópico
+
+[Personalização de RadialController](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)
+
+#### <a name="other-samples"></a>Outros exemplos
+[Exemplo do livro de cores](https://github.com/Microsoft/Windows-appsample-coloringbook)
+
+[Exemplos de plataforma Windows universais (C# e do C++)](https://go.microsoft.com/fwlink/?linkid=832713)
+
+[Exemplo de área de trabalho clássico do Windows](https://aka.ms/radialcontrollerclassicsample)

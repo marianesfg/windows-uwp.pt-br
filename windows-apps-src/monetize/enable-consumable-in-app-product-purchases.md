@@ -6,12 +6,12 @@ keywords: uwp, consumíveis, complementos, compras no aplicativo, IAPs, Windows.
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5588558eff3e9c9b2954f0726995765a2862c43b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: e3673db795e3edc2a7c9d83a3ba1036ad8feb659
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57655641"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334564"
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>Habilitar compras de produtos consumíveis no aplicativo
 
@@ -33,7 +33,7 @@ A solicitação de compra inicial é feita com [RequestProductPurchaseAsync](htt
 O próximo exemplo mostra uma solicitação de compra de produto no aplicativo consumível. Você perceberá comentários de código que indicam quando seu app deve realizar seu atendimento local do produto consumível no aplicativo para dois cenários diferentes — quando a solicitação é bem-sucedida e quando ela não é bem-sucedida devido a uma compra não atendida do mesmo produto.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#MakePurchaseRequest)]
+[!code-csharp[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#MakePurchaseRequest)]
 
 ## <a name="step-2-tracking-local-fulfillment-of-the-consumable"></a>Etapa 2: Acompanhamento de cumprimento de local do consumíveis
 
@@ -45,7 +45,7 @@ Ao conceder ao seu cliente acesso ao produto consumível no aplicativo, é impor
 O exemplo a seguir demonstra o uso das propriedades [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392) da chamada a [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) na etapa anterior para identificar o produto comprado para atendimento. Uma coleção é usada para armazenar as informações do produto em um local que, mais tarde, pode ser referenciado para confirmar se o atendimento local foi bem-sucedido.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#GrantFeatureLocally)]
+[!code-csharp[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#GrantFeatureLocally)]
 
 Este próximo exemplo mostra como usar a matriz do exemplo anterior para acessar pares de ID do produto/ID da transação que, mais tarde, serão usados para relatar o atendimento à Loja.
 
@@ -53,7 +53,7 @@ Este próximo exemplo mostra como usar a matriz do exemplo anterior para acessar
 > Seja qual for a metodologia que seu aplicativo use para controlar e confirmar o atendimento, o aplicativo precisa demonstrar discernimento para garantir que os clientes não sejam cobrados por itens que não receberam.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#IsLocallyFulfilled)]
+[!code-csharp[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#IsLocallyFulfilled)]
 
 ## <a name="step-3-reporting-product-fulfillment-to-the-store"></a>Etapa 3: Relatório de cumprimento de produto para a Store
 
@@ -63,7 +63,7 @@ Concluído o atendimento local, o app deve fazer uma chamada a [ReportConsumable
 > A falha em gerar relatórios de produtos no aplicativo consumíveis atendidos para a Loja fará com que o usuário não possa comprar o produto novamente enquanto o atendimento da compra anterior não for relatado.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#ReportFulfillment)]
+[!code-csharp[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#ReportFulfillment)]
 
 ## <a name="step-4-identifying-unfulfilled-purchases"></a>Etapa 4: Identificação de compras não cumpridas
 
@@ -72,7 +72,7 @@ Seu app pode usar o método [GetUnfulfilledConsumablesAsync](https://docs.micros
 O exemplo a seguir demonstra como [GetUnfulfilledConsumablesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getunfulfilledconsumablesasync) pode ser usado para enumerar consumíveis não atendidos e como o seu app pode iterar por essa lista para concluir o atendimento local.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#GetUnfulfilledConsumables)]
+[!code-csharp[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#GetUnfulfilledConsumables)]
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

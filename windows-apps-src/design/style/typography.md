@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0943273dab239669be75b30070222d698246aa41
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 76196add0829dcfa0aa638a2d8ae6995fafce69e
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610021"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244382"
 ---
 # <a name="typography"></a>Tipografia
 
@@ -72,7 +72,7 @@ Devido ao funcionamento do sistema de dimensionamento, você está projetando em
 
 A rampa de tipos da UWP estabelece relações específicas entre os estilos de tipo em uma página, ajudando os usuários a ler o conteúdo facilmente. Todos os tamanhos estão em pixels efetivos e são otimizados para aplicativos UWP executados em todos os dispositivos.
 
-![Rampa de tipos](images/type/type-ramp.svg)
+![Rampa de tipos](images/type/type-ramp.png)
 
 ### <a name="using-the-type-ramp"></a>Uso da rampa de tipos
 
@@ -348,6 +348,6 @@ As fontes serif são adequadas para apresentar grandes quantidades de texto.
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Controles de texto](../controls-and-patterns/text-controls.md)
-* [Recursos de tema do XAML](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)
-* [Estilos XAML](../controls-and-patterns/xaml-styles.md)
+* [Recursos de temas XAML](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)
+* [Estilos de XAML](../controls-and-patterns/xaml-styles.md)
 * [Tipografia da Microsoft](https://docs.microsoft.com/typography/)

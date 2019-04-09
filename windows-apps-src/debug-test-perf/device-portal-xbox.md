@@ -6,12 +6,12 @@ ms.date: 02/12/2017
 ms.topic: article
 keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 42077756beff4269cc91624502fb9958c580bbc0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9cbf94420b8ed7a2e030ccb2799a8636f56bef2f
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635711"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162922"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal para Xbox
 
@@ -53,7 +53,7 @@ Em **Contas de teste do Xbox Live**, você pode gerenciar as contas associadas a
 
 ### <a name="xbox-live-game-saves"></a>Xbox Live (Jogo salva)
 
-Tanto o Portal de Dispositivos do Windows quanto o Portal de Dispositivos do Xbox têm uma página **Xbox Live**. No entanto, o Portal de Dispositivo Xbox tem uma seção exclusiva, **Jogos salvos do Xbox Live**, onde você pode salvar dados de jogos instalados no seu Xbox. Insira o **ID de configuração de serviço (SCID)** (veja [configuração do serviço Xbox Live](../xbox-live/xbox-live-service-configuration.md#get-your-ids) para obter mais informações), **NomeDoMembro (MSA)**, e **Nome da Família de Pacotes (PFN)** associados com o título e o salvamento de jogo, procure o **Arquivo de entrada (.json ou. xml)** e, em seguida, selecione um dos botões (**Redefinir**, **Importar**, **Exportar**, e **Excluir**) para manipular os dados salvos.
+Tanto o Portal de Dispositivos do Windows quanto o Portal de Dispositivos do Xbox têm uma página **Xbox Live**. No entanto, o Portal de Dispositivo Xbox tem uma seção exclusiva, **Jogos salvos do Xbox Live**, onde você pode salvar dados de jogos instalados no seu Xbox. Insira o **ID de configuração de serviço (SCID)** (veja [configuração do serviço Xbox Live](https://docs.microsoft.com/gaming/xbox-live//xbox-live-service-configuration.md#get-your-ids) para obter mais informações), **NomeDoMembro (MSA)**, e **Nome da Família de Pacotes (PFN)** associados com o título e o salvamento de jogo, procure o **Arquivo de entrada (.json ou. xml)** e, em seguida, selecione um dos botões (**Redefinir**, **Importar**, **Exportar**, e **Excluir**) para manipular os dados salvos.
 
 Na seção **Gerar**, você pode gerar dados fictícios e salvar o arquivo de entrada especificado. Basta inserir os **Contêineres (padrão 2)**, **Blobs (padrão 3)**, e **Tamanho de Blob (padrão 1024)** e selecione **Gerar**.
 

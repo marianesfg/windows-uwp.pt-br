@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b94f14b32c5dd74e0aefb9b9a99f64bbd905a05d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 18208986d7d07e4d437e52dce844deecc03cf1f6
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240024"
 ---
 # <a name="composition-animations"></a>Animações de composição
 
@@ -37,7 +37,7 @@ Aqui, um efeito de paralaxe visual move objetos diferentes em diferentes taxas q
 
 ## <a name="using-compositionanimations-to-create-motion"></a>Usando CompositionAnimations para criar um movimento
 
-Para gerar o movimento na interface do usuário, os desenvolvedores podem acessar as animações em XAML (link para Storyboards aqui), ou camada Visual. Animações na camada Visual oferecem aos desenvolvedores uma série de benefícios:
+Para gerar o movimento na interface do usuário, os desenvolvedores podem acessar as animações no XAML ou camada Visual. Animações na camada Visual oferecem aos desenvolvedores uma série de benefícios:
 
 - Desempenho – em vez da animação de limite de Thread de interface do usuário tradicional, animações na plataforma da interface do usuário do Windows operam em um thread independente em 60 FPS, possibilitar experiências de movimento suave.
 - Modelo de modelagem – animações na camada de interface do usuário do Windows são modelos, o significado pode usar uma única animação em vários objetos e ajustar as propriedades ou parâmetros sem se preocupar de obstruindo anterior usa.

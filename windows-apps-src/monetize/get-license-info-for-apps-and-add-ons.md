@@ -6,12 +6,12 @@ ms.date: 12/04/2017
 ms.topic: article
 keywords: windows 10, uwp, licenças, aplicativos, complementos, compras no aplicativo, IAPs, Windows.Services.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d7c832907af17436d588f0fac6c5039d4affa82
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7aede57db3ba727445b1ff01f46e00d6be7abdfd
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641911"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334594"
 ---
 # <a name="get-license-info-for-apps-and-add-ons"></a>Obter informações de licença para apps e complementos
 
@@ -42,7 +42,7 @@ Para obter informações de licença para o aplicativo atual, use o método [Get
 Para acessar as licenças para complementos duráveis do app atual que o usuário tem o direito de usar, use a propriedade [AddOnLicenses](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense.addonlicenses) do objeto [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx). Essa propriedade retorna uma coleção de objetos [StoreLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storelicense.aspx) que representam as licenças do complemento.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[GetLicenseInfo](./code/InAppPurchasesAndLicenses_RS1/cs/GetLicenseInfoPage.xaml.cs#GetLicenseInfo)]
+[!code-csharp[GetLicenseInfo](./code/InAppPurchasesAndLicenses_RS1/cs/GetLicenseInfoPage.xaml.cs#GetLicenseInfo)]
 
 Para obter um app de exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 

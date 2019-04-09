@@ -2,16 +2,16 @@
 Description: Exibir detalhes relacionados a cada um dos seus aplicativos no Partner Center e configurar os serviços como A / B, teste e é mapeado.
 title: Gerenciamento de aplicativos e serviços
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
-ms.date: 10/31/2018
+ms.date: 03/21/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d6261a7cce86c82b4865d7ca1d68c082cba9ccca
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: ba28fb49accc213f570e470142e259c08122b704
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610001"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334574"
 ---
 # <a name="app-management-and-services"></a>Gerenciamento de aplicativos e serviços
 
@@ -27,7 +27,7 @@ A seção **Serviços** permite que você gerencie vários serviços diferentes 
 
 Se você estiver publicando um jogo, você pode habilitar o [programa de criadores do Xbox Live](https://xbox.com/developers/creators-program) nesta página. Isso permite começar a configurar e testar recursos do Xbox Live e eventualmente publicar seu jogo do programa de criadores do Xbox Live.
 
-Para obter mais informações, consulte [começar com o programa de criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) e [criar um novo título do programa de criadores do Xbox Live e publicar no ambiente de teste](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
+Para obter mais informações, consulte [começar com o programa de criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators) e [criar um novo título do programa de criadores do Xbox Live e publicar no ambiente de teste](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/create-and-test-a-new-creators-title).
 
 ## <a name="experimentation"></a>Experimentação
 

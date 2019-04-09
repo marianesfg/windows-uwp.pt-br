@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d2a7d34f00d40429863f08ffe6a9c34222daa32
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 461d6d135838a5141e6606d4c77ce21972a45fe1
+ms.sourcegitcommit: aeebfe35330aa471d22121957d9b510f6ebacbcf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649301"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58901644"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
@@ -121,8 +121,8 @@ Você também pode adicionar comandos à coleção **SecondaryCommands**, exibid
 
 Você pode mover programaticamente comandos entre PrimaryCommands e SecondaryCommands conforme necessário.
 
-- *Se houver um comando que seria exibido consistentemente em páginas, é melhor manter esse comando em um local consistente.*
-- *É recomendável colocar Accept, Sim, e comandos Okey à esquerda de rejeitam, não e cancelam. A consistência dá aos usuários a confiança necessária para mover-se o sistema e os ajuda a transferir seu conhecimento do painel de navegação do aplicativo de um aplicativo para o aplicativo.*
+- *Se houver um comando que deva aparecer consistentemente em várias páginas, é melhor manter esse comando em um local consistente.*
+- *Recomendamos colocar os comandos Aceitar, Sim e OK à esquerda de Rejeitar, Não e Cancelar. A consistência dá aos usuários a confiança para se movimentar no sistema e os ajuda a transferir seu conhecimento da navegação no aplicativo de um produto para outro.*
 
 ### <a name="app-bar-buttons"></a>Botões da barra de aplicativos
 
@@ -177,7 +177,8 @@ Quando [ClosedDisplayMode](https://msdn.microsoft.com/library/windows/apps/xaml/
 
 ## <a name="open-and-closed-states"></a>Estados abertos e fechados
 
-A barra de comandos pode estar aberta ou fechada. Quando abertos, os botões de comando principal são exibidos com rótulos de texto e o menu de estouro será aberto se comandos secundários estiverem presentes.
+A barra de comandos pode estar aberta ou fechada. Quando ele estiver aberto, ele mostra os botões de comando primário com rótulos de texto e ele abre o menu de estouro (se não houver comandos secundários).
+A barra de comando abre o menu de estouro para cima (acima dos comandos primários) ou para baixo (os principais comandos abaixo). A direção padrão está ativo, mas se não houver espaço suficiente para abrir o menu de estouro para cima, a barra de comandos ele será aberto para baixo. 
 
 Um usuário pode alternar entre esses estados, consulte"mais" de pressionando \[• • •\] botão. Você pode alternar entre eles programaticamente definindo a propriedade [IsOpen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.isopen.aspx). 
 
@@ -216,7 +217,7 @@ private void CommandBar_Closing(object sender, object e)
 
 Se um usuário interagir com outras partes de um aplicativo quando uma barra de comandos estiver aberta, a barra de comandos será fechada automaticamente. Isso é chamado de *light dismiss*. Você pode controlar o comportamento de light dismiss por definir a propriedade [IsSticky](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.issticky.aspx). Quando `IsSticky="true"`, a barra permanece aberta até que o usuário pressiona consulte"mais" \[• • •\] botão ou seleciona um item de menu de estouro. 
 
-Recomendamos evitar barras de comandos fixas porque elas não estão em conformidade com as expectativas dos usuários em relação a light dismiss.
+Recomendamos evitar barras de comando adesivo porque ele não atende às expectativas dos usuários para o [luz ignorar e comportamento de foco do teclado](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus#light-dismiss).
 
 ### <a name="display-mode"></a>Modo de Exibição
 
@@ -277,9 +278,9 @@ As barras de comandos podem ser posicionadas nas seguintes regiões da tela, em 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
 - [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
-- [Exemplo de XAML dos comandos](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+- [Exemplo de execução de comandos XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Noções básicas de design de comandos para aplicativos UWP](../basics/commanding-basics.md)
-* [Classe de CommandBar](https://msdn.microsoft.com/library/windows/apps/dn279427)
+* [Classe CommandBar](https://msdn.microsoft.com/library/windows/apps/dn279427)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, registrar eventos
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
-ms.openlocfilehash: d7b338fd3b34d530ad365b0377d6b6c6c65398b7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 368e2fb7b3c6d78f68235b829e088d79b5673cf2
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604231"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334754"
 ---
 # <a name="log-custom-events-for-partner-center"></a>Registrar eventos personalizados para o Partner Center
 
@@ -39,10 +39,10 @@ Antes de poder revisar eventos de log personalizado na **relatório de uso** par
 5. Na lista de SDKs, clique na caixa de seleção ao lado de **Microsoft Engagement Framework** e clique em **OK**.
 
 6. Adicione a seguinte instrução à parte superior de cada arquivo de código onde deseja registrar eventos personalizados.
-    [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#EngagementNamespace)]
+    [!code-csharp[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#EngagementNamespace)]
 
 7. Em cada seção do seu código onde deseja registrar um evento personalizado, obtenha um objeto [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) e, em seguida, chame o método [Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log). Transmita a string de evento personalizado para o método.
-    [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#Log)]
+    [!code-csharp[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#Log)]
 
     > [!NOTE]
     > O [Relatório de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) pode demorar muito tempo para carregar caso o aplicativo registre muitos eventos personalizados com nomes longos. Recomendamos que você use nomes curtos para os eventos personalizados. 

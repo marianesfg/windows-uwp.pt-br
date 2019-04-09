@@ -6,28 +6,30 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 1f0eb76e-fe3e-4674-a27e-229beec7e63d
 ms.localizationpriority: medium
-ms.openlocfilehash: e248a6ff666efe7dca262daa81a21ab44a4dc5aa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a1040ec91af767d9472842b5ba656d347e7782d0
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244062"
 ---
-# <a name="developer-folder-api-reference"></a>Pasta de API da pasta do desenvolvedor   
+# <a name="developer-folder-api-reference"></a>Pasta de API da pasta do desenvolvedor
+
 Você pode acessar arquivos relacionados ao desenvolvimento no Xbox One usando um Explorador de Arquivos padrão. Isso permite exibir facilmente e substituir arquivos do computador para o console.
 
 **Solicitação**
 
-Você pode acessar a pasta de desenvolvedor usando a solicitação a seguir. A solicitação retornará:    
+Você pode acessar a pasta de desenvolvedor usando a solicitação a seguir. A solicitação retornará:
+
 * O local do compartilhamento de arquivos. Esse local pode ser inserido na barra de endereços em um Explorador de Arquivos.
 * O nome de usuário para acessar o compartilhamento de arquivos.
 * A senha para acessar o compartilhamento de arquivos.
 
 Método      | URI da solicitação
 :------     | :-----
-GET | /ext/smb/developerfolder
-<br />
-**Parâmetros de URI**
+OBTER | /ext/smb/developerfolder
+
+**Parâmetros do URI**
 
 - Nenhuma
 
@@ -53,7 +55,7 @@ Código de status HTTP      | Descrição
 200 | A solicitação para acessar as credenciais do compartilhamento de arquivos foi concedida.
 4XX | Códigos de erro
 5XX | Códigos de erro
-<br />
+
 **Famílias de dispositivos disponíveis**
 
 * Windows Xbox

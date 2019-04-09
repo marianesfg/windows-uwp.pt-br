@@ -2,16 +2,16 @@
 Description: Você pode usar pacotes de pré-lançamento para distribuir pacotes que são dados apenas para um grupo de teste limitado.
 title: Pacotes de pré-lançamento
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
-ms.date: 10/31/2018
+ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp, liberação de versões de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 568fbff28d6c57acb6214bf274becc9cbc7f8830
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 2070d1312df8f840c2368600197ca2bd7c506cdc
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244292"
 ---
 # <a name="package-flights"></a>Pacotes de pré-lançamento
 
@@ -70,7 +70,7 @@ Para obter mais informações, consulte [Distribuição gradual de pacote](gradu
 
 ## <a name="configure-additional-package-flight-options"></a>Configurar opções adicionais de pacote de pré-lançamento
 
-Por padrão, seu pacote de pré-lançamento será publicado e disponibilizado para o seu grupo de versões de pré-lançamento assim que passar pelo processo de certificação. Se você quiser alterar a [data de publicação](set-app-pricing-and-availability.md#publish-date) ou adicionar [Notas para certificação](notes-for-certification.md), é possível fazer isso na seção **Opções de versão de pré-lançamento**. Clique em **Salvar** para retornar à página de visão geral do pacote de pré-lançamento. 
+Por padrão, seu pacote de pré-lançamento será publicado e disponibilizado para o seu grupo de versões de pré-lançamento assim que passar pelo processo de certificação. Se você quiser alterar o [data de publicação](set-app-pricing-and-availability.md#publish-date), você pode fazer isso na **Flight opções** seção. Clique em **Salvar** para retornar à página de visão geral do pacote de pré-lançamento. 
 
 
 ## <a name="submit-your-package-flight-to-the-store"></a>Enviar seu pacote de pré-lançamento para a Loja

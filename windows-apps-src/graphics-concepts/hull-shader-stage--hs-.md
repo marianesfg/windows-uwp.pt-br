@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9137f7ef46da1b861976dbac680327febf315dac
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: ec132ccb3099f7b5c9f4763a2b276bf6270da859
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601051"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291644"
 ---
 # <a name="hull-shader-hs-stage"></a>Estágio de sombreador Hull (HS)
-
 
 O estágio de Sombreador Hull (HS) é um dos estágios de mosaico, que divide uma única superfície de um modelo em vários triângulos com eficiência. O estágio de sombreador Hull (HS) produz um patch de geometria (e constantes de patch) que corresponde a cada entrada de patch (quad, triângulo ou linha). Um sombreador hull é chamado uma vez por patch e transforma os pontos de controle de entrada que definem uma superfície de ordem baixa em pontos de controle que formam um patch. Ela também faz alguns cálculos por patch para fornecer dados para o [estágio de Mosaico (TS)](tessellator-stage--ts-.md) e o [estágio do Sombreador de Domínio (DS)](domain-shader-stage--ds-.md).
 
@@ -52,7 +51,7 @@ Entre 1 e 32 pontos de controle de saída, que juntos formam um patch.
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Exemplo
 
 
-```
+```hlsl
 [patchsize(12)]
 [patchconstantfunc(MyPatchConstantFunc)]
 MyOutPoint main(uint Id : SV_ControlPointID,

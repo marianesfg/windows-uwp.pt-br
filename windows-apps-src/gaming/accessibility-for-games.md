@@ -6,12 +6,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, acessibilidade, jogos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e1d9d25fc63dd2fbb8d258fdaee692ccdfdc911
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 38060d0a6bead360ef8a682902a433670c79b495
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592931"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162774"
 ---
 #  <a name="making-games-accessible"></a>Tronando os jogos acessíveis
 
@@ -113,7 +113,7 @@ Identificando lacunas, você pode otimizar, iterar e melhorar o conceito do desi
 
 Quase todas as soluções de acessibilidade podem ser divididas em dois princípios. O primeiro é dar aos jogadores as opções para personalizarem a experiência dos jogos. Se já tiver uma base de fãs grandes, você poderá ter uma parte significativa do público-alvo que não queira que a experiência mude de maneira alguma. Tudo bem. Dê aos jogadores a capacidade de ativar e desativar esses recursos, além de torná-los configuráveis individualmente. É preciso permitir que as pessoas experienciem o jogo da forma que melhor atenda a suas necessidades e preferências.
 
-### <a name="reinforce-communicate-information-in-more-than-one-way"></a>Reforçar: Informações de mais de uma maneira de comunicar-se
+### <a name="reinforce-communicate-information-in-more-than-one-way"></a>Reinforce: Informações de mais de uma maneira de comunicar-se
 
 O secundo princípio é onde entra em cena o conceito de design universal, uma abordagem única que não só inclui mais jogadores, mas que também melhora a experiência para todos. Por exemplo, uma imagem e um texto, um símbolo e uma cor. Um mapa que se baseia em vários marcadores coloridos diferentes não é só impossível de ser usado por jogadores daltônicos, mas também é frustrante para todos os outros que devem se lembrar ao que tudo corresponde. Adicionar símbolos proporciona uma experiência melhor para todos.
 
@@ -127,7 +127,7 @@ Considerar a acessibilidade permite abordar o projeto a partir de uma nova persp
 
 A acessibilidade é uma medida de qualidade. Deve ser um requisito de recurso e não um item de trabalho desejável. Por exemplo, "Adaptar o minimapa para os daltônicos" não é considerado um item de trabalho de baixa prioridade que se obtém quando há um tempo extra. Se tal item de trabalho não é feito, isso simplesmente significa que todo o recurso de minimapa está incompleto e não pode ser enviado.
 
-### <a name="evangelize-make-accessibility-a-priority-in-your-game-studio"></a>Evangelizar: Faça uma prioridade de acessibilidade no seu jogo studio
+### <a name="evangelize-make-accessibility-a-priority-in-your-game-studio"></a>Evangelize: Faça uma prioridade de acessibilidade no seu jogo studio
 
 Como o desenvolvimento de jogos está sempre seguindo um cronograma apertado, priorizar a acessibilidade ajudará a torná-la um processo mais fácil. Uma maneira é criar desde o início tendo a acessibilidade em mente. Quanto mais cedo a acessibilidade é considerada, mas rápida e barata ela se torna. 
 
@@ -196,7 +196,7 @@ Se seu título permitir que os jogadores se comuniquem usando voz e enviem mensa
 
 As pessoas que não têm microfones conectados a seu dispositivo de jogo ainda podem ter uma conversação por voz com um interlocutor. Elas podem digitar textos na janela de chat e tê-los convertidos em voz. Isso permite àqueles que não ouvem muito bem ler as mensagens SMS transcritas da pessoa com quem estão tendo um chat de voz.
 
-Para os desenvolvedores no ID@Xbox e programa de parceiros gerenciados, os recursos de conversão de texto em fala e conversão de fala em texto estão disponíveis como parte dos [Recursos de acessibilidade de chat no jogo 2](../xbox-live/multiplayer/chat/using-game-chat-2.md#accessibility) no serviço Xbox Live. Para obter mais informações, consulte [Visão geral de chat no jogo 2](../xbox-live/multiplayer/chat/game-chat-2-overview.md).
+Para os desenvolvedores no ID@Xbox e programa de parceiros gerenciados, os recursos de conversão de texto em fala e conversão de fala em texto estão disponíveis como parte dos [Recursos de acessibilidade de chat no jogo 2](https://docs.microsoft.com/gaming/xbox-live//multiplayer/chat/using-game-chat-2.md#accessibility) no serviço Xbox Live. Para obter mais informações, consulte [Visão geral de chat no jogo 2](https://docs.microsoft.com/gaming/xbox-live//multiplayer/chat/game-chat-2-overview.md).
 
 ### <a name="sound-feedback"></a>Retorno sonoro
 

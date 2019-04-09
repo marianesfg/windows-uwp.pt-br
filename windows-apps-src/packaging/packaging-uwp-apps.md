@@ -2,19 +2,19 @@
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Empacotando aplicativos UWP
 description: Para distribuir ou vender seu aplicativo UWP (Plataforma Universal do Windows), será necessário criar um pacote de apps para ele.
-ms.date: 01/02/2019
+ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: f2e89490a76c9174c1e938466bf1fbcc9cc13455
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d5ed75cb79488eb994135dcfef74483ec078a32e
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599131"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58173022"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>União de um aplicativo UWP com o Visual Studio
 
@@ -149,12 +149,12 @@ Para fazer sideload de seu aplicativo em um dispositivo Windows 10 Mobile, use o
 
 ### <a name="sideload-your-app-package-on-windows-10-anniversary-update-or-later"></a>Fazer sideload de seu aplicativo do pacote na atualização de aniversário do Windows 10 ou posterior
 
-Introduzidos no Windows 10 Anniversary Update, os pacotes do app podem ser instalados simplesmente clicando duas vezes no arquivo de pacote do app. Para usar isso, navegue até seu pacote do aplicativo ou arquivo de pacote do aplicativo e clique duas vezes nele. O Instalador de App é iniciado e fornece as informações básicas sobre o app, bem como um botão de instalação, a barra de progresso da instalação e as mensagens de erro relevantes.
+Introduzido no Windows 10 Anniversary Update (Windows 10, versão 1607), pacotes de aplicativos podem ser instalados simplesmente clicando duas vezes o arquivo de pacote do aplicativo. Para usar isso, navegue até seu pacote do aplicativo ou arquivo de pacote do aplicativo e clique duas vezes nele. [O instalador de aplicativo](https://docs.microsoft.com/windows/msix/app-installer/app-installer-root) inicia e fornece as informações de aplicativo básico, bem como um botão instalar, barra de progresso da instalação e quaisquer mensagens de erro relevantes.
 
 ![O Instalador de App é exibido para a instalação de um app de exemplo chamado Contoso](images/appinstaller-screen.png)
 
 > [!NOTE]
-> O Instalador de App presume que o app seja confiável para o dispositivo. Se você estiver fazendo sideload de um app de desenvolvedor ou corporativo, será necessário instalar o certificado de autenticação no repositório Autoridades Certificação de Fornecedores ou Pessoas Confiáveis no dispositivo. Se você não tiver certeza de como fazer isso, consulte [Instalação de certificados de teste](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates).
+> O instalador de aplicativo pressupõe que o aplicativo é confiável pelo dispositivo. Se você estiver fazendo sideload de um app de desenvolvedor ou corporativo, será necessário instalar o certificado de autenticação no repositório Autoridades Certificação de Fornecedores ou Pessoas Confiáveis no dispositivo. Se você não tiver certeza de como fazer isso, consulte [Instalação de certificados de teste](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates).
 
 ### <a name="sideload-your-app-package-on-previous-versions-of-windows"></a>Fazer sideload de seu aplicativo de pacote em versões anteriores do Windows
 

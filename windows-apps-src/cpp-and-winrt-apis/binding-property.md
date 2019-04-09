@@ -5,15 +5,15 @@ ms.date: 08/21/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, vínculo, propriedade
 ms.localizationpriority: medium
-ms.openlocfilehash: 4033327fa51b0801583a518a0dea055f59e57fc8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9bdbfef54b799f8dff23ad739007cec9fef98af8
+ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616621"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921722"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>Controles XAML; associar a uma propriedade C++/WinRT
-Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Essa ideia é baseada no padrão de design do software conhecido como o *padrão do observador*. Este tópico mostra como implementar propriedades observable em [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)e como associar controles XAML a eles.
+Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Essa ideia é baseada no padrão de design do software conhecido como o *padrão do observador*. Este tópico mostra como implementar propriedades observable em [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)e como associar controles XAML a eles.
 
 > [!IMPORTANT]
 > Para conceitos e termos essenciais que dão suporte ao entendimento de como consumir e criar classes de tempo de execução com C++/WinRT, consulte [Consumir APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).
@@ -24,10 +24,10 @@ Digamos que uma classe de tempo de execução nomeada **BookSku** tem uma propri
 Um elemento de texto ou controle de XAML pode se associar a e manipular esses eventos, recuperando os valores atualizados e, em seguida, atualizando ele mesmo para mostrar o novo valor.
 
 > [!NOTE]
-> Para obter informações sobre como instalar e usar o C + + c++ /CLI consulte WinRT Visual Studio VSIX (extensão) (que fornece suporte de modelo de projeto) [suporte do Visual Studio para C + + c++ /CLI WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para obter informações sobre como instalar e usar o C++WinRT Visual Studio VSIX (extensão) e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), consulte [suporte para Visual Studio C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="create-a-blank-app-bookstore"></a>Criar um Aplicativo em branco (Bookstore)
-Comece criando um novo projeto no Microsoft Visual Studio. Criar uma **Visual C++** > **Windows Universal** > **aplicativo em branco (C + + c++ /CLI WinRT)** de projeto e nomeie- *livraria*.
+Comece criando um novo projeto no Microsoft Visual Studio. Criar uma **Visual C++**   >  **Windows Universal** > **aplicativo em branco (C++/WinRT)** do projeto e nomeie-  *Livraria*.
 
 Vamos criar uma nova classe para representar um livro que tem uma propriedade de título observável. Estamos criando e consumindo a classe dentro da mesma unidade de compilação. Mas queremos poder associar a essa classe do XAML, e por isso ela será uma classe de tempo de execução. E vamos usar C++/WinRT para criar e consumi-lo.
 
@@ -53,7 +53,7 @@ namespace Bookstore
 
 Salve o arquivo e compile o projeto. Durante o processo de compilação, a ferramenta `midl.exe` é executada para criar um arquivo de metadados do componente do Tempo de Execução do Windows (`\Bookstore\Debug\Bookstore\Unmerged\BookSku.winmd`), descrevendo a classe de tempo de execução. Em seguida, a ferramenta `cppwinrt.exe` é executada para gerar arquivos de código fonte para dar suporte a você na criação e no consumo da classe de tempo de execução. Esses arquivos incluem stubs para ajudar você a começar a implementar a classe de tempo de execução **BookSku** que foi declarada em sua IDL. Esses stubs são `\Bookstore\Bookstore\Generated Files\sources\BookSku.h` e `BookSku.cpp`.
 
-Clique com botão direito no nó do projeto e clique em **Abrir pasta no Explorador de arquivos**. Isso abre a pasta do projeto no Explorador de arquivos. Lá, copie os arquivos de stub `BookSku.h` e `BookSku.cpp` da `\Bookstore\Bookstore\Generated Files\sources\` pasta e na pasta do projeto, que é `\Bookstore\Bookstore\`. No **Gerenciador de Soluções**, verifique se **Mostrar Todos os Arquivos** está ativado. Clique nos arquivos stub com o botão direito do mouse e clique em **Incluir no projeto**.
+Clique com botão direito no nó do projeto e clique em **Abrir pasta no Explorador de arquivos**. Isso abre a pasta do projeto no Explorador de arquivos. Lá, copie os arquivos de stub `BookSku.h` e `BookSku.cpp` da `\Bookstore\Bookstore\Generated Files\sources\` pasta e na pasta do projeto, que é `\Bookstore\Bookstore\`. Na **Gerenciador de soluções**, com o nó do projeto selecionado, certifique-se **Mostrar todos os arquivos** é ativado. Clique nos arquivos stub com o botão direito do mouse e clique em **Incluir no projeto**.
 
 ## <a name="implement-booksku"></a>Implemente **BookSku**
 Agora, vamos abrir `\Bookstore\Bookstore\BookSku.h` e `BookSku.cpp` e implementar nossa classe de tempo de execução. Em `BookSku.h`, adicione um construtor que leva um [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring), um membro particular para armazenar a cadeia de caracteres do título e outro para o evento que criaremos quando o título mudar. Depois de fazer essas alterações, seu `BookSku.h` terá esta aparência.
@@ -273,12 +273,12 @@ Abra `MainPage.xaml`, que contém a marcação XAML para nossa página da interf
 
 Agora compile e execute o projeto. Clique no botão para executar o manipulador de eventos de **Clique**. Esse manipulador chama a função de modificador de título do livro; Esse modificador aciona um evento para informar a interface do usuário que a propriedade de **Título** foi alterada; e o botão consulta novamente o valor dessa propriedade para atualizar seu próprio valor de **Conteúdo**.
 
-## <a name="using-the-binding-markup-extension-with-cwinrt"></a>Usando a extensão de marcação {Binding} com C + + c++ /CLI WinRT
-Para a versão lançada atualmente disponível do C + + c++ /CLI WinRT, para que seja possível usar a extensão de marcação {Binding} você precisará implementar o [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) e [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) interfaces.
+## <a name="using-the-binding-markup-extension-with-cwinrt"></a>Usando a extensão de marcação {Binding} com o C++/WinRT
+Para a versão lançada atualmente do C++/WinRT, para que seja possível usar a extensão de marcação {Binding} você precisará implementar o [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) e [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) interfaces.
 
 ## <a name="important-apis"></a>APIs Importantes
 * [INotifyPropertyChanged::PropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)
-* [modelo de função WinRT::make](/uwp/cpp-ref-for-winrt/make)
+* [Modelo de função winrt::make](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Consumir APIs com C++/WinRT](consume-apis.md)

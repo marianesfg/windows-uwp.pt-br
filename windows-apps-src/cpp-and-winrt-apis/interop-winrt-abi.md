@@ -5,29 +5,29 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, interoperabilidade, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: a33a52cd8c18b312dc9e020a4c4ba518c33b0dd9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 3eee6b75d3ea86c183293ffc27289e9cae2929ce
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639941"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291674"
 ---
 # <a name="interop-between-cwinrt-and-the-abi"></a>Interoperabilidade entre C++/WinRT e ABI
 
-Este tópico mostra como converter entre a interface de binária de aplicativo (ABI) do SDK e [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) objetos. Você pode usar essas técnicas para favorecer a interoperabilidade entre o código que usa essas duas maneiras de programação com o Windows Runtime ou pode usá-las à medida que migra gradativamente o código da ABI para o C++/WinRT.
+Este tópico mostra como converter entre a interface de binária de aplicativo (ABI) do SDK e [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) objetos. Você pode usar essas técnicas para favorecer a interoperabilidade entre o código que usa essas duas maneiras de programação com o Windows Runtime ou pode usá-las à medida que migra gradativamente o código da ABI para o C++/WinRT.
 
 ## <a name="what-is-the-windows-runtime-abi-and-what-are-abi-types"></a>Qual é a ABI do Windows Runtime e quais são os tipos ABI?
 Uma classe do Windows Runtime (classe do tempo de execução) é uma abstração. Essa abstração define uma interface binária (a Interface binária do aplicativo ou ABI), que permite a interação entre várias linguagens de programação com um objeto. Independentemente da linguagem de programação, a interação do código de cliente com um objeto do Windows Runtime acontece no nível mais baixo, com construções de linguagem do cliente convertidas em chamadas na ABI do objeto.
 
 Os cabeçalhos do SDK do Windows na pasta "%WindowsSdkDir%Include\10.0.17134.0\winrt" (ajuste o número de versão do SDK para a sua ocorrência, se necessário) são os arquivos de cabeçalho ABI do Windows Runtime. Eles foram gerados pelo compilador MIDL. Este é um exemplo da inclusão de um desses cabeçalhos.
 
-```
+```cpp
 #include <windows.foundation.h>
 ```
 
 Veja um exemplo simplificado de um dos tipos de ABI que você encontrará nesse cabeçalho de SDK específico. Observe o namespace do **ABI**; **Windows::Foundation**, e os demais namespaces do Windows são declarados pelos cabeçalhos do SDK no namespace do **ABI**.
 
-```
+```cpp
 namespace ABI::Windows::Foundation
 {
     IUriRuntimeClass : public IInspectable
@@ -51,7 +51,7 @@ Por exemplo, se você analisar a pasta "%WindowsSdkDir%Include\10.0.17134.0\cppw
 
 A partir desse cabeçalho, obtemos o equivalente (simplificado) do C++/WinRT desse tipo de ABI que acabamos de ver.
 
-```
+```cppwinrt
 namespace winrt::Windows::Foundation
 {
     struct Uri : IUriRuntimeClass, ...
@@ -67,7 +67,7 @@ A interface aqui é o C++ padrão moderno. Ele dispensa os **HRESULT**s (o C++/W
 Este tópico serve nos casos em que você desejar fazer a portabilidade ou interoperabilidade com um código que funciona na camada da Interface binária do aplicativo (ABI).
 
 ## <a name="converting-to-and-from-abi-types-in-code"></a>Realizando a conversão dos tipos de ABI no código
-Para fins de segurança e praticidade, nas conversões em ambas as direções, você pode simplesmente usar [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr), [**com_ptr::as**](/uwp/cpp-ref-for-winrt/com-ptr#comptras-function) e [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function). Veja um exemplo de código (com base no modelo de projeto do **Aplicativo de console**), que também ilustra como você pode usar aliases de namespace para as ilhas diferentes a fim de solucionar possíveis conflitos de namespace entre as projeção do C++/WinRT e o ABI.
+Para fins de segurança e praticidade, nas conversões em ambas as direções, você pode simplesmente usar [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr), [**com_ptr::as**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptras-function) e [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function). Veja um exemplo de código (com base no modelo de projeto do **Aplicativo de console**), que também ilustra como você pode usar aliases de namespace para as ilhas diferentes a fim de solucionar possíveis conflitos de namespace entre as projeção do C++/WinRT e o ABI.
 
 ```cppwinrt
 // pch.h
@@ -175,7 +175,7 @@ T convert_from_abi(::IUnknown* from)
 
 A função simplesmente chama [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521) para consultar a interface padrão do tipo de C++/WinRT solicitado.
 
-Como vimos, não é necessário ter uma função auxiliar para converter um objeto C++/WinRT em um ponteiro de interface ABI equivalente. Basta usar a função de membro [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (ou [**try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)) para consultar a interface solicitada. As funções **as** e **try_as** retornam um objeto [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que encapsula o tipo de ABI solicitado.
+Como vimos, não é necessário ter uma função auxiliar para converter um objeto C++/WinRT em um ponteiro de interface ABI equivalente. Basta usar a função de membro [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (ou [**try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function)) para consultar a interface solicitada. As funções **as** e **try_as** retornam um objeto [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que encapsula o tipo de ABI solicitado.
 
 ## <a name="code-example-using-convertfromabi"></a>Exemplo de código que usa convert_from_abi
 Este é um exemplo de código que mostra essa função auxiliar na prática.
@@ -246,11 +246,11 @@ int main()
 ## <a name="important-apis"></a>APIs Importantes
 * [Função AddRef](https://msdn.microsoft.com/library/windows/desktop/ms691379)
 * [Função QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
-* [função WinRT::attach_abi](/uwp/cpp-ref-for-winrt/attach-abi)
+* [winrt::attach_abi function](/uwp/cpp-ref-for-winrt/attach-abi)
 * [WinRT::com_ptr struct modelo](/uwp/cpp-ref-for-winrt/com-ptr)
-* [função WinRT::copy_from_abi](/uwp/cpp-ref-for-winrt/copy-from-abi)
-* [função WinRT::copy_to_abi](/uwp/cpp-ref-for-winrt/copy-to-abi)
-* [função WinRT::detach_abi](/uwp/cpp-ref-for-winrt/detach-abi)
-* [função WinRT::get_abi](/uwp/cpp-ref-for-winrt/get-abi)
+* [winrt::copy_from_abi function](/uwp/cpp-ref-for-winrt/copy-from-abi)
+* [winrt::copy_to_abi function](/uwp/cpp-ref-for-winrt/copy-to-abi)
+* [winrt::detach_abi function](/uwp/cpp-ref-for-winrt/detach-abi)
+* [winrt::get_abi function](/uwp/cpp-ref-for-winrt/get-abi)
 * [WinRT::Windows::Foundation::IUnknown:: como função de membro](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
-* [função de membro WinRT::Windows::Foundation::IUnknown::try_as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)
+* [função de membro WinRT::Windows::Foundation::IUnknown::try_as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function)

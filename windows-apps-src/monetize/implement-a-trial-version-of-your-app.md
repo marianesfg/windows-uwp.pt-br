@@ -6,12 +6,12 @@ keywords: windows 10, uwp, avaliação, compras no aplicativo, Windows.Services.
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 796266565965a62d3f168b48893d62e1cdd7df44
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 49d57f32961726507c0114aed648787dd7f6bd1f
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646161"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334704"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>Implementar uma versão de avaliação do aplicativo
 
@@ -78,7 +78,7 @@ Quando seu aplicativo estiver inicializando, obtenha o objeto [StoreAppLicense](
 Nesse ponto, se um usuário comprou o aplicativo, é uma prática recomendada fornecer comentários para o usuário informando que o status de licença foi alterado. Você pode precisar solicitar que o usuário reinicie o aplicativo, caso este tenha sido codificado assim. Mas faça essa transição de maneira mais transparente e suave possível.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[ImplementTrial](./code/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs#ImplementTrial)]
+[!code-csharp[ImplementTrial](./code/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs#ImplementTrial)]
 
 Para obter um app de exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 

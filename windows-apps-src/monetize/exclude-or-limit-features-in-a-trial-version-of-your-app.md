@@ -6,12 +6,12 @@ keywords: windows 10, uwp, compra no aplicativo, avaliação, IAP, Windows.Appli
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 36d7ada6567db95609203f8f163b78631e141b4f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 38590282a95e29ab240486e9c4a3f9cb9afe229c
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57655561"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335093"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>Excluir ou limitar recursos em uma versão de avaliação
 
@@ -66,12 +66,12 @@ Quando seu app estiver sendo inicializado, obtenha o objeto [LicenseInformation]
 Por enquanto, você receberá informações de licença simuladas usando [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766), em vez de [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765). Antes de enviar a versão do seu app à **Loja**, você deve substituir todas as referências a **CurrentAppSimulator** em seu código por **CurrentApp**.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTest)]
+[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTest)]
 
 Em seguida, adicione um manipulador de eventos para receber as notificações quando a licença for alterada durante a execução do app. A licença do app poderá ser alterada se o período de avaliação expirar ou o cliente comprar o app por meio de uma Loja, por exemplo.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTestWithEvent)]
+[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTestWithEvent)]
 
 ## <a name="step-3-code-the-features-in-conditional-blocks"></a>Etapa 3: Os recursos em blocos condicionais de código
 
@@ -80,7 +80,7 @@ Quando o evento de alteração da licença for gerado, o app deverá chamar a AP
 Este exemplo mostra como avaliar o status de licença do app para que você possa habilitar ou desabilitar um recurso do app de forma adequada.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#ReloadLicense)]
+[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#ReloadLicense)]
 
 ## <a name="step-4-get-an-apps-trial-expiration-date"></a>Etapa 4: Obter a data de expiração da avaliação do aplicativo
 
@@ -89,7 +89,7 @@ Inclua o código para determinar a data de expiração da avaliação do app.
 O código neste exemplo define uma função para obter a data de expiração da licença de avaliação do aplicativo. Se a licença ainda for válida, exiba a data de expiração com o número de dias que restam até a expiração da avaliação.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#DisplayTrialVersionExpirationTime)]
+[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#DisplayTrialVersionExpirationTime)]
 
 ## <a name="step-5-test-the-features-using-simulated-calls-to-the-license-api"></a>Etapa 5: Testar os recursos usando chamadas simuladas para a API de licença
 
@@ -105,7 +105,7 @@ Depois de testar seu app com o servidor de licenças simuladas, e antes de envi�
 > Seu app deverá usar o objeto **CurrentApp** quando você o enviar a uma Store; caso contrário, haverá falha na certificação.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
+[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
 
 ## <a name="step-7-describe-how-the-free-trial-works-to-your-customers"></a>Etapa 7: Descrever como funciona a avaliação gratuita para seus clientes
 

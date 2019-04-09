@@ -5,26 +5,26 @@ ms.date: 07/18/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, evento
 ms.localizationpriority: medium
-ms.openlocfilehash: ace1c276b878d07f5750483740dfe90ed8cb6211
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 5c410d209972a0221928548901f79bd599c67eae
+ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644481"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921692"
 ---
 # <a name="author-events-in-cwinrt"></a>Criar eventos com C++/WinRT
 
 Este tópico demonstra como criar um componente do Tempo de Execução do Windows que contém uma classe de tempo de execução representando uma conta bancária, que gera um evento quando seu saldo entra em débito. Ele também demonstra um aplicativo principal que consome a classe de tempo de execução de conta bancária, chama uma função para ajustar o saldo e manipula todos os eventos resultantes.
 
 > [!NOTE]
-> Para obter informações sobre como instalar e usar o [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) consulte Visual Studio VSIX (extensão) (que fornece suporte de modelo de projeto) [suporte do Visual Studio para C + + c++ /CLI WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para obter informações sobre como instalar e usar o [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio VSIX (extensão) e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), consulte [suporte do Visual Studio para C++/ WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 > [!IMPORTANT]
 > Para conceitos e termos essenciais que dão suporte ao entendimento de como consumir e criar classes de tempo de execução com C++/WinRT, consulte [Consumir APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).
 
 ## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Criar um componente do Tempo de Execução do Windows (BankAccountWRC)
 
-Comece criando um novo projeto no Microsoft Visual Studio. Criar uma **Visual C++** > **Windows Universal** > **componente de tempo de execução do Windows (C + + c++ /CLI WinRT)** de projeto e nomeie-  *BankAccountWRC* (para "conta bancária de componente de tempo de execução do Windows").
+Comece criando um novo projeto no Microsoft Visual Studio. Criar uma **Visual C++**   >  **Windows Universal** > **componente de tempo de execução do Windows (C++/WinRT)** do projeto e nomeie-  *BankAccountWRC* (para "conta bancária de componente de tempo de execução do Windows").
 
 O projeto recém-criado contém um arquivo chamado `Class.idl`. Renomear esse arquivo `BankAccount.idl` (renomeando o `.idl` arquivo renomeia automaticamente o dependente `.h` e `.cpp` arquivos demais). Substitua o conteúdo do `BankAccount.idl` com a listagem a seguir.
 
@@ -97,7 +97,7 @@ Se todos os avisos impediram a construção, resolvê-los ou definir a proprieda
 
 ## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>Criar um aplicativo principal (BankAccountCoreApp) para testar o componente do Tempo de Execução do Windows
 
-Agora crie um novo projeto (em sua solução `BankAccountWRC` ou em uma nova). Criar uma **Visual C++** > **Windows Universal** > **aplicativo Core (C + + c++ /CLI WinRT)** de projeto e nomeie- *BankAccountCoreApp* .
+Agora crie um novo projeto (em sua solução `BankAccountWRC` ou em uma nova). Criar uma **Visual C++**   >  **Windows Universal** > **aplicativo Core (C++/WinRT)** do projeto e nomeie-  *BankAccountCoreApp*.
 
 Adicionar uma referência e, em seguida, navegue até `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (ou adicione uma referência de projeto a projeto, se os dois projetos estão na mesma solução). Clique em **Adicionar** e, depois, em **OK**. Agora crie BankAccountCoreApp. No evento improvável que você vê um erro que o arquivo de carga `readme.txt` não existir, exclua esse arquivo de projeto do componente de tempo de execução do Windows, recriá-lo e recompilar BankAccountCoreApp.
 
@@ -244,7 +244,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 
 ## <a name="parameterized-delegates-simple-signals-and-callbacks-within-a-project"></a>Delegados com parâmetros, sinais simples e retornos de chamada dentro de um projeto
 
-Se o evento é usado apenas internamente no C + c++ /CLI WinRT do projeto (não em binários), em seguida, você ainda usar o [ **winrt::event** ](/uwp/cpp-ref-for-winrt/event) struct de modelo, mas você parametriza com C + + c++ /CLI do WinRT não-Windows-tempo de execução [ **winrt::delegate&lt;... T&gt;**  ](/uwp/cpp-ref-for-winrt/delegate) struct modelo, que é um delegado eficiente, contado por referência. Ele dá suporte a qualquer número de parâmetros, e eles não são limitados aos tipos de tempo de execução do Windows.
+Se o evento é usado somente internamente em seu C++/WinRT de projeto (não em binários), em seguida, você ainda usar o [ **winrt::event** ](/uwp/cpp-ref-for-winrt/event) struct de modelo, mas você parametrizá-la com C++do /WinRT não-Windows-tempo de execução [ **winrt::delegate&lt;... T&gt;**  ](/uwp/cpp-ref-for-winrt/delegate) struct modelo, que é um delegado eficiente, contado por referência. Ele dá suporte a qualquer número de parâmetros, e eles não são limitados aos tipos de tempo de execução do Windows.
 
 O exemplo a seguir primeiro mostra um delegado de assinatura que não usa parâmetros (basicamente, um sinal simple) e, em seguida, outro que usa uma cadeia de caracteres.
 
@@ -272,7 +272,7 @@ logCallback = [](std::wstring const& message) { std::wcout << message.c_str() <<
 logCallback(L"Hello, World!");
 ```
 
-Se você estiver portando a partir de um c++ /CLI CX codebase onde delegados e eventos são usados internamente em um projeto, então **winrt::delegate** ajudará você a replicar esse padrão em C + + c++ /CLI WinRT.
+Se você estiver portando de um C++/CX codebase onde delegados e eventos são usados internamente em um projeto, em seguida, **winrt::delegate** ajudará você a replicar esse padrão em C++/WinRT.
 
 ## <a name="design-guidelines"></a>Diretrizes de design
 
@@ -285,4 +285,4 @@ Observe que essas diretrizes não necessariamente se aplicam se você estiver cr
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Criar APIs com C++/WinRT](author-apis.md)
 * [Consumir APIs com C++/WinRT](consume-apis.md)
-* [Manipular eventos usando delegados em C + + c++ /CLI WinRT](handle-events.md)
+* [Processar eventos usando delegados em C++/WinRT](handle-events.md)

@@ -5,12 +5,12 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a296cc877279292f73b591a86ede9136b0d9758
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 0ae5001e907d7d38cbf05fd6863b192337fe365f
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645191"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162881"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>Novidades dos documentos de desenvolvedor do Windows em setembro de 2017
 
@@ -24,7 +24,7 @@ A Atualização de criadores do segundo semestre também está chegando, portant
 
 ### <a name="xbox-live-creators-program"></a>Programa de Criadores do Xbox Live
 
-O programa de criadores do Xbox Live agora é dinâmico, permitindo que você crie e publique facilmente jogos UWP que podem ser executados em computadores com Windows 10 e consoles Xbox One. Para obter mais informações, consulte [Introdução ao Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
+O programa de criadores do Xbox Live agora é dinâmico, permitindo que você crie e publique facilmente jogos UWP que podem ser executados em computadores com Windows 10 e consoles Xbox One. Para obter mais informações, consulte [Introdução ao Programa de Criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="developer-guidance"></a>Diretrizes para desenvolvedor
 

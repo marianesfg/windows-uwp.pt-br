@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dd4b8c137d65339701b40027bb3230162e2c2456
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 304c023251a15995ce15f5b3d846c662797661cd
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244322"
 ---
 # <a name="httpclient"></a>HttpClient
 
-**APIs importantes**
+**APIs Importantes**
 
 -   [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)
--   [**Windows**](https://msdn.microsoft.com/library/windows/apps/dn279692)
+-   [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)
 -   [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631)
 
 Use [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) e o restante da API do namespace [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) para enviar e receber informações usando os protocolos HTTP 2.0 e HTTP 1.1.
@@ -158,10 +158,10 @@ int main()
 
 ## <a name="post-binary-data-over-http"></a>Dados de POSTAGEM binários via HTTP
 
-O [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis) código de exemplo abaixo ilustra o uso de dados de formulário e uma solicitação POST para enviar uma pequena quantidade de dados binários como um upload de arquivo para um servidor web. O código usa o [ **HttpBufferContent** ](/uwp/api/windows.web.http.httpbuffercontent) classe para representar os dados binários e o [ **HttpMultipartFormDataContent** ](/uwp/api/windows.web.http.httpmultipartformdatacontent) classe a representam os dados de formulário de várias partes.
+O [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis) código de exemplo abaixo ilustra o uso de dados de formulário e uma solicitação POST para enviar uma pequena quantidade de dados binários como um upload de arquivo para um servidor web. O código usa o [ **HttpBufferContent** ](/uwp/api/windows.web.http.httpbuffercontent) classe para representar os dados binários e o [ **HttpMultipartFormDataContent** ](/uwp/api/windows.web.http.httpmultipartformdatacontent) classe a representam os dados de formulário de várias partes.
 
 > [!NOTE]
-> Chamando **obter** (como visto no exemplo de código abaixo) não é adequada para um thread de interface do usuário. Para a técnica correta usar nesse caso, consulte [simultaneidade e operações assíncronas com C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
+> Chamando **obter** (como visto no exemplo de código abaixo) não é adequada para um thread de interface do usuário. Para a técnica correta usar nesse caso, consulte [simultaneidade e operações assíncronas com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
 
 ```cppwinrt
 // pch.h
@@ -183,19 +183,6 @@ int main()
 {
     init_apartment();
 
-    Windows::Web::Http::HttpClient httpClient;
-
-    Uri requestUri{ L"https://www.contoso.com/post" };
-
-    Windows::Web::Http::HttpMultipartFormDataContent postContent;
-    Windows::Web::Http::Headers::HttpContentDispositionHeaderValue disposition{ L"form-data" };
-    postContent.Headers().ContentDisposition(disposition);
-    // The 'name' directive contains the name of the form field representing the data.
-    disposition.Name(L"fileForUpload");
-    // Here, the 'filename' directive is used to indicate to the server a file name
-    // to use to save the uploaded data.
-    disposition.FileName(L"file.dat");
-
     auto buffer{
         Windows::Security::Cryptography::CryptographicBuffer::ConvertStringToBinary(
             L"A sentence of text to encode into binary to serve as sample data.",
@@ -207,6 +194,15 @@ int main()
     // it's not necessarily an image file.
     binaryContent.Headers().Append(L"Content-Type", L"image/jpeg");
 
+    Windows::Web::Http::Headers::HttpContentDispositionHeaderValue disposition{ L"form-data" };
+    binaryContent.Headers().ContentDisposition(disposition);
+    // The 'name' directive contains the name of the form field representing the data.
+    disposition.Name(L"fileForUpload");
+    // Here, the 'filename' directive is used to indicate to the server a file name
+    // to use to save the uploaded data.
+    disposition.FileName(L"file.dat");
+
+    Windows::Web::Http::HttpMultipartFormDataContent postContent;
     postContent.Add(binaryContent); // Add the binary data content as a part of the form data content.
 
     // Send the POST request asynchronously, and retrieve the response as a string.
@@ -216,6 +212,8 @@ int main()
     try
     {
         // Send the POST request.
+        Uri requestUri{ L"https://www.contoso.com/post" };
+        Windows::Web::Http::HttpClient httpClient;
         httpResponseMessage = httpClient.PostAsync(requestUri, postContent).get();
         httpResponseMessage.EnsureSuccessStatusCode();
         httpResponseBody = httpResponseMessage.Content().ReadAsStringAsync().get();

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: o Windows 10, uwp, tarefas em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: af8e45e13eb89185e346c3c8e8cd5303da399471
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 0b25a3d31ed32d5629f9dcc2b5a89959472bac08
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242374"
 ---
 # <a name="guidelines-for-background-tasks"></a>Diretrizes para tarefas em segundo plano
 
@@ -39,7 +39,7 @@ Se você usar uma tarefa em segundo plano para reproduzir mídia em segundo plan
 
 **Gerencie tarefas em segundo plano:** Seu aplicativo deve obter uma lista de tarefas em segundo plano, registre-se para manipuladores de progresso e conclusão e manipular esses eventos adequadamente. Suas classes de tarefa em segundo plano devem relatar progresso, cancelamento e conclusão. Para obter mais informações, consulte [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)e [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md).
 
-**Use [BackgroundTaskDeferral](https://msdn.microsoft.com/library/windows/apps/hh700499):** Se sua classe de tarefa em segundo plano executa o código assíncrono, certifique-se de usar adiamentos. Caso contrário, sua tarefa em segundo plano poderá ser encerrada prematuramente quando o método [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) (ou [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) no caso de tarefas em segundo plano dentro do processo). Para obter mais informações, consulte [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
+**Use [BackgroundTaskDeferral](https://msdn.microsoft.com/library/windows/apps/hh700499):** Se sua classe de tarefa em segundo plano executa o código assíncrono, certifique-se de usar adiamentos. Caso contrário, a tarefa em segundo plano pode ser encerrada prematuramente quando o [executados](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) retorno do método (ou o [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) método no caso de tarefas do plano de fundo em processo). Para obter mais informações, consulte [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 
 Se preferir, solicite um adiamento e use **async/await** para concluir as chamadas de método assíncronas. Feche o adiamento após as chamadas do método **await**.
 
@@ -57,14 +57,14 @@ As tarefas em segundo plano que são executadas no mesmo processo do aplicativo 
 
 **Prepare para atualizações do aplicativo:** Se seu aplicativo será atualizado, criar e registrar um **ServicingComplete** tarefa em segundo plano (consulte [SystemTriggerType](https://msdn.microsoft.com/library/windows/apps/br224839)) para cancelar o registro de tarefas em segundo plano para a versão anterior do aplicativo e registrar o tarefas em segundo plano para a nova versão. Também é um momento apropriado para realizar atualizações do aplicativo que possam ser necessárias fora do contexto de execução em primeiro plano.
 
-**Solicitação para executar tarefas em segundo plano:**
+**Solicitar a execução de tarefas em segundo plano:**
 
 > **Importante**  começando no Windows 10, aplicativos não são mais necessários para estar na tela de bloqueio como um pré-requisito para executar tarefas em segundo plano.
 
 Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tipos de tarefas com suporte sem serem fixados na tela de bloqueio. No entanto, os aplicativos devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de tarefa em segundo plano. Esse método retornará [**BackgroundAccessStatus.DeniedByUser**](https://msdn.microsoft.com/library/windows/apps/hh700439) se o usuário tiver explicitamente negado permissões de tarefas em segundo plano para seu aplicativo nas configurações do dispositivo. Para obter mais informações sobre a escolha do usuário em relação à atividade em segundo plano e economia de bateria, consulte [Otimizar a atividade em segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity). 
 ## <a name="background-task-checklist"></a>Lista de verificação da tarefa em segundo plano
 
-*Aplica-se a ambas as tarefas em segundo plano em processo e fora de processo*
+*Aplica-se a ambas as tarefas em segundo plano dentro e fora do processo*
 
 -   Associe a sua tarefa em segundo plano ao gatilho correto.
 -   Adicione condições que ajudem a garantir uma execução bem-sucedida da tarefa em segundo plano.
@@ -73,7 +73,7 @@ Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tip
 -   Verifique se há erros de registro de tarefas em segundo plano. Se for apropriado, tente registrar a tarefa em segundo plano novamente com valores de parâmetros diferentes.
 -   Para todas as famílias de dispositivos, exceto desktop, caso haja pouca memória, as tarefas em segundo plano podem ser encerradas. Se uma exceção de falta de memória não surgir ou se o aplicativo não manipulá-la, a tarefa em segundo plano será encerrada sem aviso e sem gerar o evento OnCanceled. Isso ajuda a assegurar a experiência do usuário do aplicativo em primeiro plano. A tarefa em segundo plano deve ser projetada para tratar desse cenário.
 
-*Aplica-se somente a tarefas em segundo plano do out-of-process*
+*Aplica-se apenas a tarefas em segundo plano fora do processo*
 
 -   Crie sua tarefa em segundo plano em um Componente do Tempo de Execução do Windows.
 -   Não exiba elementos da interface do usuário diferentes de notificações do sistema, blocos e atualizações de selo da tarefa em segundo plano.
@@ -82,7 +82,7 @@ Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tip
 -   Declare cada tarefa em segundo plano no manifesto do aplicativo, juntamente com o tipo dos gatilhos usados. Verifique se o ponto de entrada e os tipos de gatilho estão corretos.
 -   Não especifique um elemento executável no manifesto, a menos que você esteja usando um gatilho que deva ser executado no mesmo contexto do aplicativo (como o [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)).
 
-*Aplica-se somente para tarefas em segundo plano em processo*
+*Aplica-se apenas a tarefas em segundo plano dentro do processo*
 
 - Ao cancelar uma tarefa, certifique-se de que o manipulador de eventos `BackgroundActivated` seja encerrado antes que ocorra o cancelamento ou todo o processo será finalizado.
 -   Elabore tarefas em segundo plano de curta duração. As tarefas em segundo plano estão limitadas a 30 segundos de uso do relógio.
@@ -91,8 +91,8 @@ Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tip
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
-* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
-* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-a-background-task.md)
+* [Declarar tarefas em segundo plano no manifesto do app](declare-background-tasks-in-the-application-manifest.md)
 * [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
@@ -103,7 +103,7 @@ Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tip
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar suspender, continuar e eventos em aplicativos UWP do plano de fundo (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 

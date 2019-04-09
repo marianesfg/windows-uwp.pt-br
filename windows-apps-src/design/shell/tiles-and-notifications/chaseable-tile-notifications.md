@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows 10, uwp, blocos rastreáveis, blocos dinâmicos, notificações de bloco rastreáveis
 ms.localizationpriority: medium
-ms.openlocfilehash: 90a43ad803ca4cfe4a7403117c268344d1192d74
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6e27dec0e7256cfc035ecc3150bd976f69743fe3
+ms.sourcegitcommit: f15cf141c299bde9cb19965d8be5198d7f85adf8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592641"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358611"
 ---
 # <a name="chaseable-tile-notifications"></a>Notificações de blocos rastreáveis
 
@@ -137,6 +137,49 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
  
     // TODO: Initialize app
 }
+```
+
+
+### <a name="accessing-onlaunched-from-desktop-applications"></a>Acesso OnLaunched de aplicativos da área de trabalho
+
+Aplicativos de desktop (como o Win32, WPF, etc.) usando o [ponte de Desktop](https://developer.microsoft.com/windows/bridges/desktop), também pode usar blocos chaseable! A única diferença está acessando os argumentos OnLaunched. Observe que você deve primeiro [empacotar seu aplicativo com o Desktop Bridge](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
+
+> [!IMPORTANT]
+> **Requer a atualização de outubro de 2018**: Para usar o `AppInstance.GetActivatedEventArgs()` API, você deve ter como destino SDK 17763 e executar o build 17763 ou superior.
+
+Para aplicativos da área de trabalho, para acessar os argumentos de inicialização, faça o seguinte...
+
+```csharp
+
+static void Main()
+{
+    Application.EnableVisualStyles();
+    Application.SetCompatibleTextRenderingDefault(false);
+
+    // API only available on build 17763 or higher
+    var args = AppInstance.GetActivatedEventArgs();
+    switch (args.Kind)
+    {
+        case ActivationKind.Launch:
+
+            var launchArgs = args as LaunchActivatedEventArgs;
+
+            // If clicked on from tile
+            if (launchArgs.TileActivatedInfo != null)
+            {
+                // If tile notification(s) were present
+                if (launchArgs.TileActivatedInfo.RecentlyShownNotifications.Count > 0)
+                {
+                    // Get arguments from the notifications that were recently displayed
+                    string[] allTileArgs = launchArgs.TileActivatedInfo.RecentlyShownNotifications
+                    .Select(i => i.Arguments)
+                    .ToArray();
+     
+                    // TODO: Highlight each story in the app
+                }
+            }
+    
+            break;
 ```
 
 

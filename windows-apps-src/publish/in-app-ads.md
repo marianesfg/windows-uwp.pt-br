@@ -2,16 +2,16 @@
 Description: Se seu aplicativo é exibido usando o Microsoft Advertising SDK de anúncios, use a página de anúncios de no aplicativo do Partner Center para gerenciar seu uso de anúncios.
 title: Anúncios no aplicativo
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
-ms.date: 10/31/2018
+ms.date: 03/25/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cfdc4bd81a96d3bbdb2dd369cbdd0444ca22ea4c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 4b8fc913818d5abe3317582cc18d5cb676a7a2fe
+ms.sourcegitcommit: 9f23bc9265c13f7ccedbc826261ceed2aff5ab83
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658021"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417052"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
@@ -117,7 +117,7 @@ A tabela a seguir lista as redes pagas atualmente com suporte para cada tipo de 
 | Outbrain |  Selecione esta opção para veicular anúncios da [Outbrain](https://www.outbrain.com/). |  Faixa, faixa intersticial  |
 | Revcontent |  Selecione esta opção para veicular anúncios da [Revcontent](https://www.revcontent.com/). |  Faixa, nativo  |
 | Smaato |  Selecione esta opção para veicular anúncios da [Smaato](https://www.smaato.com/). |  Faixa  |
-| smartclip |  Selecione esta opção para veicular anúncios da [smartclip](https://www.smartclip.com/). |  Intersticial em vídeo  |
+| smartclip |  Selecione esta opção para veicular anúncios da [smartclip](http://www.smartclip.com/). |  Intersticial em vídeo  |
 | SpotX |  Selecione esta opção para veicular anúncios da [SpotX](https://www.spotx.tv/). |  Intersticial em vídeo  |
 | Taboola |  Selecione esta opção para veicular anúncios da [Taboola](https://www.taboola.com/). |  Faixa  |
 | Undertone | Selecione esta opção para servir ads partir [Undertone](https://www.undertone.com/). | Faixa intersticial |

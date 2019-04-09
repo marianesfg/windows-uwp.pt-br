@@ -5,16 +5,16 @@ ms.date: 01/10/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: e4ca6946df327dbe6697a71d1050e6401ed531fe
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 05997549b5f1c0d13b12d47e0bb180d54617dcf2
+ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626661"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921712"
 ---
 # <a name="author-apis-with-cwinrt"></a>Criar APIs com C++/WinRT
 
-Este tópico mostra como criar [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) APIs usando o [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) base struct, direta ou indiretamente. Sinônimos parar *criar* neste contexto são *produzir* ou *implementar*. Este tópico aborda os seguintes cenários para a implementação de APIs em um tipo de C++/WinRT, nesta ordem.
+Este tópico mostra como criar [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) APIs usando o [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) base struct, direta ou indiretamente. Sinônimos parar *criar* neste contexto são *produzir* ou *implementar*. Este tópico aborda os seguintes cenários para a implementação de APIs em um tipo de C++/WinRT, nesta ordem.
 
 - Você *não* está criando uma classe do Windows Runtime (classe do tempo de execução); você quer apenas implementar uma ou mais interfaces do Windows Runtime para consumo local dentro de seu aplicativo. Você pode derivar diretamente de **winrt::implements** neste caso e implementar funções.
 - Você *está* criando uma classe de tempo de execução. Você pode criar um componente a ser consumido a partir de um aplicativo. Ou você pode estar criando um tipo a ser consumido da interface do usuário de XAML, e nesse caso você está implementando e consumindo uma classe de tempo de execução dentro da mesma unidade de compilação. Nesses casos, você permite que as ferramentas gerem classes que derivam de **winrt::implements**.
@@ -28,9 +28,9 @@ Em ambos os casos, o tipo que implementa suas APIs do C++/WinRT é chamado de *t
 O cenário mais simples é onde você está implementando uma interface do Windows Runtime para consumo local. Você não precisa de uma classe de tempo de execução; apenas uma classe C++ comum. Por exemplo, você pode estar escrevendo um aplicativo com base em [**CoreApplication**](/uwp/api/windows.applicationmodel.core.coreapplication).
 
 > [!NOTE]
-> Para obter informações sobre como instalar e usar o C + + c++ /CLI consulte WinRT Visual Studio VSIX (extensão) (que fornece suporte de modelo de projeto) [suporte do Visual Studio para C + + c++ /CLI WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para obter informações sobre como instalar e usar o C++WinRT Visual Studio VSIX (extensão) e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), consulte [suporte para Visual Studio C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
-No Visual Studio, o **Visual C++** > **Windows Universal** > **aplicativo Core (C + + c++ /CLI WinRT)** modelo de projeto ilustra a **CoreApplication** padrão. O padrão começa com a passagem de uma implementação de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) para [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
+No Visual Studio, o **Visual C++**   >  **Windows Universal** > **aplicativo Core (C++/WinRT)** ilustra o modelo de projeto o **CoreApplication** padrão. O padrão começa com a passagem de uma implementação de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) para [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
@@ -258,7 +258,7 @@ IStringable istringable = winrt::make<MyType>();
 > [!NOTE]
 > No entanto, se você estiver fazendo referência a seu tipo de sua interface de usuário do XAML, então haverá um tipo de implementação e um tipo projetado no mesmo projeto. Nesse caso, **tornar** retorna uma instância do tipo projetado. Para obter um exemplo de código desse cenário, consulte [Controles XAML; associar a uma propriedade C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
-Nós só podemos usar `istringable` (no exemplo de código acima) para chamar membros da interface **IStringable**. Mas uma interface C++/WinRT (que é uma interface projetada) deriva de [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Portanto, você pode chamar [ **IUnknown::as** ](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (ou [ **IUnknown::try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function))-la para consultar outros tipos projetados ou interfaces, o que você pode também use ou retornar.
+Nós só podemos usar `istringable` (no exemplo de código acima) para chamar membros da interface **IStringable**. Mas uma interface C++/WinRT (que é uma interface projetada) deriva de [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Portanto, você pode chamar [ **IUnknown::as** ](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (ou [ **IUnknown::try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function))-la para consultar outros tipos projetados ou interfaces, o que você pode também use ou retornar.
 
 ```cppwinrt
 istringable.ToString();
@@ -294,7 +294,7 @@ void ImplFromIClosable(IClosable const& from)
 }
 ```
 
-Mas somente o objeto original da interface mantém uma referência. Se *você* quiser mantê-lo nele, então você pode chamar [**com_ptr::copy_from**](/uwp/cpp-ref-for-winrt/com-ptr#comptrcopyfrom-function).
+Mas somente o objeto original da interface mantém uma referência. Se *você* quiser mantê-lo nele, então você pode chamar [**com_ptr::copy_from**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcopy_from-function).
 
 ```cppwinrt
 winrt::com_ptr<MyType> impl;
@@ -393,14 +393,14 @@ O construtor de classe base espera um **ToggleButton**. E **MySpecializedToggleB
 Até você fazer a edição descrita acima (para passar esse parâmetro do construtor para a classe base), o compilador sinalizará o construtor e mostrará que não há um construtor padrão apropriado disponível em um tipo chamado (neste caso) **MySpecializedToggleButtonAutomationPeer_base&lt;MySpecializedToggleButtonAutomationPeer&gt;**. Essa é, na verdade, a classe base da classe base de seu tipo de implementação.
 
 ## <a name="important-apis"></a>APIs Importantes
-* [WinRT::com_ptr struct modelo](/uwp/cpp-ref-for-winrt/com-ptr)
-* [função WinRT::com_ptr::copy_from](/uwp/cpp-ref-for-winrt/com-ptr#comptrcopyfrom-function)
-* [modelo de função WinRT::from_abi](/uwp/cpp-ref-for-winrt/from-abi)
+* [Modelo de struct winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
+* [winrt::com_ptr::copy_from function](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcopy_from-function)
+* [Modelo de função winrt::from_abi](/uwp/cpp-ref-for-winrt/from-abi)
 * [modelo de função WinRT::get_self](/uwp/cpp-ref-for-winrt/get-self)
-* [WinRT::Implements struct modelo](/uwp/cpp-ref-for-winrt/implements)
-* [modelo de função WinRT::make](/uwp/cpp-ref-for-winrt/make)
-* [modelo de função WinRT::make_self](/uwp/cpp-ref-for-winrt/make-self)
-* [WinRT::Windows::Foundation::IUnknown:: como função](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
+* [Modelo de estrutura winrt::implements](/uwp/cpp-ref-for-winrt/implements)
+* [Modelo de função winrt::make](/uwp/cpp-ref-for-winrt/make)
+* [Modelo de função winrt::make_self](/uwp/cpp-ref-for-winrt/make-self)
+* [Função winrt::Windows::Foundation::IUnknown::as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Consumir APIs com C++/WinRT](consume-apis.md)

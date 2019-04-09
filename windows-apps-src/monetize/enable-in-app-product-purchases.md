@@ -6,12 +6,12 @@ keywords: uwp, complementos, compras no aplicativo, IAPs, Windows.ApplicationMod
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a203ef79fc6ebb45107cd9ac9d79cadf330f7a5d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9be40d78e00e583988ba8c6b318e7a8941d7f971
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604361"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334974"
 ---
 # <a name="enable-in-app-product-purchases"></a>Habilitar compras de produtos no aplicativo
 
@@ -34,7 +34,7 @@ Seja seu app gratuito ou não, você pode vender conteúdo, outros apps ou uma n
 Quando seu app estiver em processo de inicialização, obtenha o objeto [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157) para seu app inicializando [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) ou [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) para habilitar compras de um produto no aplicativo.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#InitializeLicenseTest)]
+[!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#InitializeLicenseTest)]
 
 ## <a name="step-2-add-the-in-app-offers-to-your-app"></a>Etapa 2: Adicione as ofertas no aplicativo ao seu aplicativo
 
@@ -61,7 +61,7 @@ Para cada recurso a ser disponibilizado por meio de uma transação de produto n
     Veja a seguir um exemplo que mostra como é possível codificar um recurso de produto chamado **featureName** em um bloco condicional específico da licença. A cadeia de caracteres **featureName** é o token que identifica esse produto de forma exclusiva no app, e também é usada para identificá-lo na Loja.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#CodeFeature)]
+    [!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#CodeFeature)]
 
 3.  **Adicionar a compra da interface do usuário para esse recurso**
 
@@ -70,7 +70,7 @@ Para cada recurso a ser disponibilizado por meio de uma transação de produto n
     Veja aqui como testar se o cliente já possui um produto no aplicativo e, se não tiver, se ele pode visualizar a caixa de diálogo para fazer a compra. Substitua o comentário "mostrar a caixa de diálogo de compra" pelo código personalizado da caixa de diálogo de compra (como uma página com um botão "Compre este app!" ).
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#BuyFeature)]
+    [!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#BuyFeature)]
 
 ## <a name="step-3-change-the-test-code-to-the-final-calls"></a>Etapa 3: Alterar o código de teste para as chamadas finais
 

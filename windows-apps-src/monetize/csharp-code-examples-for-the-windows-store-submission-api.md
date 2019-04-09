@@ -6,12 +6,12 @@ ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, exemplos de código, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 19cfec890d6a434a392ce08257cad6bbeee4cda1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: b3073e2a5ffa445a39bdf6d54dd288be97c88207
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627511"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334964"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>C\# exemplo: envios de voos, aplicativos e complementos
 
@@ -39,7 +39,7 @@ O exemplo a seguir implementa um programa de linha de comando que chama os outro
 * Atribua as propriedades ```ClientId``` e ```ClientSecret``` para a ID e a chave do cliente para seu app e substitua a cadeia de caracteres *tenantid* na URL de ```TokenEndpoint``` pela ID de locatário de seu app. Para obter mais informações, consulte [como associar um aplicativo do AD do Azure com sua conta no Partner Center](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/Program.cs#Main)]
+[!code-csharp[SubmissionApi](./code/StoreServicesExamples_Submission/cs/Program.cs#Main)]
 
 <span id="clientconfiguration" />
 
@@ -48,7 +48,7 @@ O exemplo a seguir implementa um programa de linha de comando que chama os outro
 O app de exemplo usa a classe auxiliar ```ClientConfiguration``` para transmitir dados do Azure Active Directory e dados do app para cada um dos métodos de exemplo que usam a API de envio da Microsoft Store.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/ClientConfiguration.cs#ClientConfiguration)]
+[!code-csharp[SubmissionApi](./code/StoreServicesExamples_Submission/cs/ClientConfiguration.cs#ClientConfiguration)]
 
 <span id="create-app-submission" />
 
@@ -64,7 +64,7 @@ O exemplo a seguir implementa uma classe que usa vários métodos na API de envi
 6. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-an-app-submission.md) até que o envio seja confirmado com êxito.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/AppSubmissionUpdateSample.cs#AppSubmissionUpdateSample)]
+[!code-csharp[SubmissionApi](./code/StoreServicesExamples_Submission/cs/AppSubmissionUpdateSample.cs#AppSubmissionUpdateSample)]
 
 <span id="create-add-on-submission" />
 
@@ -79,7 +79,7 @@ O exemplo a seguir implementa uma classe que usa vários métodos na API de envi
 5. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-an-add-on-submission.md) até que o envio seja confirmado com êxito.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/InAppProductSubmissionCreateSample.cs#InAppProductSubmissionCreateSample)]
+[!code-csharp[SubmissionApi](./code/StoreServicesExamples_Submission/cs/InAppProductSubmissionCreateSample.cs#InAppProductSubmissionCreateSample)]
 
 <span id="update-add-on-submission" />
 
@@ -94,7 +94,7 @@ O exemplo a seguir implementa uma classe que usa vários métodos na API de envi
 6. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-an-add-on-submission.md) até que o envio seja confirmado com êxito.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/InAppProductSubmissionUpdateSample.cs#InAppProductSubmissionUpdateSample)]
+[!code-csharp[SubmissionApi](./code/StoreServicesExamples_Submission/cs/InAppProductSubmissionUpdateSample.cs#InAppProductSubmissionUpdateSample)]
 
 <span id="create-flight-submission" />
 
@@ -110,7 +110,7 @@ O exemplo a seguir implementa uma classe que usa vários métodos na API de envi
 6. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-a-flight-submission.md) até que o envio seja confirmado com êxito.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/FlightSubmissionUpdateSample.cs#FlightSubmissionUpdateSample)]
+[!code-csharp[SubmissionApi](./code/StoreServicesExamples_Submission/cs/FlightSubmissionUpdateSample.cs#FlightSubmissionUpdateSample)]
 
 <span id="ingestionclient" />
 
@@ -123,7 +123,7 @@ A classe ```IngestionClient``` fornece métodos auxiliares que são usados por o
 * Processar as solicitações HTTP para a API de envio da Microsoft Store.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/IngestionClient.cs#IngestionClient)]
+[!code-csharp[SubmissionApi](./code/StoreServicesExamples_Submission/cs/IngestionClient.cs#IngestionClient)]
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

@@ -6,12 +6,12 @@ keywords: windows 10, uwp, consumíveis, complementos, compras no aplicativo, IA
 ms.date: 05/09/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0446269fcbde87dfa25b7bff25f7160335950fba
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 142c9f90161f4fd61946ccb7452af7ee91f66baa
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636721"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334814"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>Habilitar compras de complementos consumíveis
 
@@ -73,7 +73,7 @@ Depois que o usuário [comprar o complemento](enable-in-app-purchases-of-apps-an
 Este exemplo demonstra como relatar um consumível gerenciado pela Loja como providenciado.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/ConsumeAddOnPage.xaml.cs#ConsumeAddOn)]
+[!code-csharp[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/ConsumeAddOnPage.xaml.cs#ConsumeAddOn)]
 
 <span id="get_balance" />
 
@@ -82,7 +82,7 @@ Este exemplo demonstra como relatar um consumível gerenciado pela Loja como pro
 Este exemplo demonstra como usar o método [GetConsumableBalanceRemainingAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getconsumablebalanceremainingasync) da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para obter o saldo restante de um complemento consumível gerenciado pela Loja.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/GetRemainingAddOnBalancePage.xaml.cs#GetRemainingAddOnBalance)]
+[!code-csharp[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/GetRemainingAddOnBalancePage.xaml.cs#GetRemainingAddOnBalance)]
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

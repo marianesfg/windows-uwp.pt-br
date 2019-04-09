@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f585d278d9420865c895d4e20fa1730196d9f0cd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 286b278d0c41edfbc5c008f31e5a8e28fa30f93a
+ms.sourcegitcommit: aeebfe35330aa471d22121957d9b510f6ebacbcf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593021"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58901634"
 ---
 # <a name="buttons"></a>Botões
 
@@ -30,11 +30,11 @@ A estrutura XAML fornece um controle de botão padrão, bem como vários control
 
 Controle | Descrição
 ------- | -----------
-[Button](/uwp/api/windows.ui.xaml.controls.button) | Inicia uma ação imediata. Pode ser usado com uma associação de comando ou evento de clique.
+[Botão](/uwp/api/windows.ui.xaml.controls.button) | Inicia uma ação imediata. Pode ser usado com uma associação de comando ou evento de clique.
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Um botão que aciona um evento de clique continuamente enquanto pressionado.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Um botão que tem o estilo como um hiperlink, usado para navegação. Para saber mais, consulte [Hiperlinks](hyperlinks.md).
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Um botão com uma divisa para abrir um submenu anexado.
-[Botão de divisão](/uwp/api/windows.ui.xaml.controls.splitbutton) | Um botão com dois lados. Um dos lados inicia uma ação e o outro lado abre um menu.
+[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | Um botão com dois lados. Um dos lados inicia uma ação e o outro lado abre um menu.
 [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | Um botão de alternância com dois lados. Um dos lados alterna liga/desliga, e o outro lado abre um menu.
 
 | **Obter a biblioteca de interface do usuário do Windows** |
@@ -140,7 +140,7 @@ Geralmente, o conteúdo de um botão é texto. Veja as recomendações de design
 
 <table>
 <tr>
-<td> <b>Preciso corrigir:</b><br> Botões com estouro de texto. </td>
+<td> <b>Você precisa corrigir:</b><br> Botões com estouro de texto. </td>
 <td> <img src="images/button-wraptext.png"/> </td>
 </tr>
 <tr>
@@ -211,7 +211,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 Um [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) é um botão que mostra uma divisa como um indicador visual que tem um submenu anexado que contém mais opções. Ele tem o mesmo comportamento que um botão padrão com um submenu; apenas a aparência é diferente.
 
-Na lista suspensa do botão herda o evento de clique, mas você normalmente não usá-lo. Em vez disso, você deve usar a propriedade de submenu para anexar um submenu e invocar ações usando as opções de menu no submenu. O menu suspenso é aberto automaticamente quando o botão é clicado.
+Na lista suspensa do botão herda o evento de clique, mas você normalmente não usá-lo. Em vez disso, você deve usar a propriedade de submenu para anexar um submenu e invocar ações usando as opções de menu no submenu. O menu suspenso é aberto automaticamente quando o botão é clicado. Certifique-se de especificar o [posicionamento](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) propriedade do seu submenu para garantir que o posicionamento desejado em relação ao botão. O algoritmo de posicionamento padrão pode não produzir o posicionamento desejado em todas as situações.
 
 > [!TIP]
 > Para obter mais informações sobre submenus, consulte [Menus e menus de contexto](menus.md).
@@ -224,7 +224,7 @@ Este exemplo mostra como criar um botão suspenso com um submenu que contém com
 
 ```xaml
 <DropDownButton ToolTipService.ToolTip="Alignment">
-    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="16" Text="&#xE8E4;"/>
+    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="14" Text="&#xE8E4;"/>
     <DropDownButton.Flyout>
         <MenuFlyout Placement="BottomEdgeAlignedLeft">
             <MenuFlyoutItem Text="Left" Icon="AlignLeft" Tag="left"
@@ -284,6 +284,7 @@ O comportamento típico para um botão de divisão é:
 ### <a name="example---split-button"></a>Exemplo - botão de divisão
 
 Este exemplo mostra como criar um botão de divisão é usado para alterar a cor de primeiro plano do texto selecionado em um RichEditBox. (Para obter mais informações e código, consulte [caixa de edição de Rich](rich-edit-box.md)).
+Usos de submenu do botão de divisão [BottomEdgeAlignedLeft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutplacementmode) como o valor padrão para seu [posicionamento](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) propriedade. Você não pode substituir esse valor.
 
 ![Um botão de divisão para a seleção de cor de primeiro plano](images/split-button-rtb.png)
 
@@ -292,7 +293,7 @@ Este exemplo mostra como criar um botão de divisão é usado para alterar a cor
              Click="BrushButtonClick">
     <Border x:Name="SelectedColorBorder" Width="20" Height="20"/>
     <SplitButton.Flyout>
-        <Flyout x:Name="BrushFlyout" Placement="BottomEdgeAlignedLeft">
+        <Flyout x:Name="BrushFlyout">
             <!-- Set SingleSelectionFollowsFocus="False"
                  so that keyboard navigation works correctly. -->
             <GridView ItemsSource="{x:Bind ColorOptions}" 
@@ -380,7 +381,7 @@ Um [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tem 
 Um botão de divisão de alternância é normalmente usado para habilitar ou desabilitar um recurso quando o recurso tem várias opções que o usuário pode escolher. Por exemplo, em um editor de documento, ela pode ser usada para ativar ou desativar, a listas enquanto a lista suspensa é usada para escolher o estilo da lista.
 
 > [!NOTE]
-> Quando chamado com toque, o botão de divisão se comporta como um botão suspenso. Com outros métodos de entrada, um usuário pode invocar qualquer parte do botão separadamente. Com o toque, as duas metades do botão invocar o menu suspenso. Portanto, você deve incluir uma opção em seu conteúdo de submenu para o botão de alternância ativada ou desativada.
+> Quando chamado com toque, o botão de divisão de alternância se comporta como um botão suspenso. Com outros métodos de entrada, um usuário pode ativar/desativar e invocar as duas metades do botão separadamente. Com o toque, as duas metades do botão invocar o menu suspenso. Portanto, você deve incluir uma opção em seu conteúdo de submenu para o botão de alternância ativada ou desativada.
 
 ### <a name="differences-with-togglebutton"></a>Diferenças com ToggleButton
 
@@ -393,6 +394,7 @@ Diferentemente [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.toggl
 ### <a name="example---toggle-split-button"></a>Exemplo - botão de divisão de alternância
 
 O exemplo a seguir mostra como uma alternância de botão de divisão pode ser usado para ativar ou desativar a formatação de lista e alterar o estilo da lista, em um RichEditBox. (Para obter mais informações e código, consulte [caixa de edição de Rich](rich-edit-box.md)).
+Usos de submenu do botão de divisão de alternância [BottomEdgeAlignedLeft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutplacementmode) como o valor padrão para seu [posicionamento](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) propriedade. Você não pode substituir esse valor.
 
 ![Um botão de divisão de alternância para selecionar estilos de lista](images/toggle-split-button-open.png)
 
@@ -401,9 +403,9 @@ O exemplo a seguir mostra como uma alternância de botão de divisão pode ser u
                    ToolTipService.ToolTip="List style"
                    Click="ListButton_Click"
                    IsCheckedChanged="ListStyleButton_IsCheckedChanged">
-    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="16" Text="&#xE8FD;"/>
+    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="14" Text="&#xE8FD;"/>
     <ToggleSplitButton.Flyout>
-        <Flyout Placement="BottomEdgeAlignedLeft">
+        <Flyout>
             <ListView x:Name="ListStylesListView"
                       SelectionChanged="ListStylesListView_SelectionChanged" 
                       SingleSelectionFollowsFocus="False">
@@ -533,7 +535,7 @@ O botão Voltar é um elemento de interface do usuário fornecida pelo sistema q
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Classe de botão](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
+- [Classe Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
 - [Botões de opção](radio-button.md)
 - [Caixas de seleção](checkbox.md)
-- [Comutadores de alternância](toggles.md)
+- [Switches de alternância](toggles.md)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pacote, envio de versão de pré-lançamento, atualização, porcentagem
 ms.assetid: ee9aa223-e945-4c11-b430-1f4b1e559743
 ms.localizationpriority: medium
-ms.openlocfilehash: 025db5cb0beb36a5b4a3ca1b765b5da3434c9d7a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d5f7a388eed193e780fe2b7be9cafa5d249f6653
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57638971"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334797"
 ---
 # <a name="update-the-rollout-percentage-for-a-flight-submission"></a>Atualizar a porcentagem de distribuição para um envio de versão de pré-lançamento
 
@@ -33,7 +33,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| POST   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage``` |
+| POSTAR   | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -61,7 +61,7 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como atualizar a porcentagem da distribuição de pacote para um envio do pacote de pré-lançamento.
 
-```
+```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights/43e448df-97c9-4a43-a0bc-2a445e736bcd/submissions/1152921504621243680/updatepackagerolloutpercentage?percentage=25 HTTP/1.1
 Authorization: Bearer <your access token>
 ```

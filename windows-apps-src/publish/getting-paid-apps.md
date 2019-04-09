@@ -2,16 +2,16 @@
 Description: Saiba mais sobre o recebimento de pagamentos para seus aplicativos, complementos (produtos no aplicativo) e o anúncio ganhos.
 title: Sendo pago
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
-ms.date: 10/31/2018
+ms.date: 03/05/2019
 ms.topic: article
 keywords: windows 10, uwp, pagamentos, vendas de aplicativos, receita do aplicativo, pagamento, taxa da store, pagamento em espera, porcentagem
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d59519e23955b53b32d2178e37e75f195fd54eb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 293f24122129e56fbb1521a0d3dd7e2ff51e4923
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596491"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244102"
 ---
 # <a name="getting-paid"></a>Sendo pago
 Eis algumas informações importantes sobre o recebimento de pagamento para seus aplicativos, complementos e ganhos de publicidade.
@@ -23,7 +23,7 @@ Eis algumas informações importantes sobre o recebimento de pagamento para seus
 
 Ao [se inscrever para uma conta de desenvolvedor](https://go.microsoft.com/fwlink/p/?LinkID=615100), você aceita o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Esse contrato explica o relacionamento entre você e a Microsoft em relação à venda de apps na Microsoft Store, incluindo a taxa da Store cobrada pela Microsoft por cada venda feita.
 
-Em muitos casos, a taxa da Loja é 30%. As taxas estão oficialmente definidas no [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Sempre que tiver alguma dúvida, leia esse documento.
+As taxas estão oficialmente definidas no [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Sempre que tiver alguma dúvida, leia esse documento.
 
 A taxa da Store é aplicada a todas as vendas de aplicativos recolhidas pela Microsoft Store, incluindo complementos.
 

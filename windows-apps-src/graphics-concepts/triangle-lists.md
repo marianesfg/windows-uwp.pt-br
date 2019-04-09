@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: aae797db890c6bee141c3b4a79a6a85a55a6b512
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 53fd2b132fda018030b7555a9cdac718ec1f1cc4
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653741"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291554"
 ---
 # <a name="triangle-lists"></a>Listas de triângulos
-
 
 Uma lista de triângulos é uma lista de triângulos isolados. Os triângulos isolados podem ou não estar próximos uns dos outros. Uma lista de triângulos deve ter pelo menos três vértices e o número total de vértices deve ser divisível por três.
 
@@ -32,7 +31,7 @@ A ilustração a seguir ilustra uma lista de triângulos renderizada.
 
 O código a seguir mostra como criar vértices para essa lista de triângulos.
 
-```
+```cpp
 struct CUSTOMVERTEX
 {
     float x,y,z;
@@ -52,7 +51,7 @@ CUSTOMVERTEX Vertices[] =
 
 O exemplo de código abaixo mostra como renderizar essa lista de triângulos no Direct3D.
 
-```
+```cpp
 //
 // It is assumed that d3dDevice is a valid
 // pointer to a device interface.

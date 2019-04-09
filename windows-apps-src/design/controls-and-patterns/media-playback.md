@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: afda713e4a3d0ae30a4ee1ad9e9308d835062108
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a39faf77237596179486eb6c1a0a59a40049155c
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640021"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58914006"
 ---
 # <a name="media-player"></a>Media player
 
@@ -173,7 +173,7 @@ Se o aplicativo precisar ter acesso sem a interação do usuário com as pastas 
 
 O [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/br207847) não precisa de recursos especiais para acessar os arquivos no sistema de arquivos local, como as pastas **Música** ou **Vídeo** do usuário, já que o usuário tem controle total sobre qual arquivo está sendo acessado. Em relação à segurança e à privacidade, é melhor minimizar as funcionalidades que seu aplicativo usa.
 
-**Para abrir a mídia local usando o FileOpenPicker**
+**Para abrir a mídia local usando FileOpenPicker**
 
 1.  Chame [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/br207847) para permitir que o usuário escolha um arquivo de mídia.
 
@@ -259,8 +259,9 @@ private DisplayRequest appDisplayRequest = null;
 3.  Chame [RequestRelease](https://msdn.microsoft.com/library/windows/apps/br241819) para liberar a solicitação de exibição sempre que a reprodução do vídeo por parada, pausada ou interrompida por um erro de reprodução. Quando o seu aplicativo não tem mais solicitações de exibição ativas, o Windows economiza a duração da bateria ao reduzir a luminosidade da tela (e, depois, desligando-a) quando o dispositivo não estiver em uso.
 
     Cada [MediaPlayerElement.MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx) tem uma [PlaybackSession](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.playbacksession.aspx) do tipo [MediaPlaybackSession](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.aspx) que controla diversos aspectos da reprodução de mídia como [PlaybackRate](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackrate.aspx), [PlaybackState](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackstate.aspx) e [Position](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx). Aqui, você usa o evento [PlaybackStateChanged](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackstatechanged.aspx) em [MediaPlayer.PlaybackSession](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.playbacksession.aspx) para detectar situações em que deve liberar a solicitação de exibição. Em seguida, use a propriedade [NaturalVideoHeight](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.naturalvideoheight.aspx) para determinar se um arquivo de áudio ou vídeo está sendo executado, e mantenha a tela ativa somente se o vídeo estiver sendo executado.
+
     ```xaml
-<MediaPlayerElement x:Name="mpe" Source="Media/video1.mp4"/>
+    <MediaPlayerElement x:Name="mpe" Source="Media/video1.mp4"/>
     ```
 
     ```csharp
@@ -396,4 +397,4 @@ Embora os controles padrão tenham sido otimizados para reprodução de mídia, 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Noções básicas de design de comandos para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958433)
-- [Noções básicas de design do conteúdo para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958434)
+- [Noções básicas de design de conteúdo para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958434)

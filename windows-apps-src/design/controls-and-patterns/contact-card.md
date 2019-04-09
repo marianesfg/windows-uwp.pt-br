@@ -9,18 +9,18 @@ design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
-ms.openlocfilehash: 71a3108e21455086e2742987db1d7125c733f6e2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 4c227629ace1f3fdbb2af8582401f9273cf11c2e
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57638821"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913976"
 ---
 # <a name="contact-card"></a>Cartão de visita
 
-O cartão de visita exibe informações de contato, como o nome, número de telefone e endereço, para um [Contato](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) (o mecanismo que UWP usa para representar pessoas e empresas).  O cartão de visita também permite que o usuário edite informações de contato. Você pode optar por exibir um cartão de visita compacto ou completo que contém informações adicionais.
+O cartão de visita exibe informações de contato, como o nome, número de telefone e endereço, para um [Contato](/uwp/api/Windows.ApplicationModel.Contacts.Contact) (o mecanismo que UWP usa para representar pessoas e empresas).  O cartão de visita também permite que o usuário edite informações de contato. Você pode optar por exibir um cartão de visita compacto ou completo que contém informações adicionais.
 
-> **APIs importantes**: [Método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard), [método ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_), [método IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [entre em contato com a classe](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
+> **APIs importantes**: [Método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard), [método ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard), [método IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [entre em contato com a classe](/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
 
 Há duas maneiras de exibir o cartão de visita:  
 * Como um cartão de contato padrão que é exibido em um submenu é light-rejeitável relativa às ações – o cartão de contato dissapears quando o usuário clica fora dele. 
@@ -146,7 +146,7 @@ private void OnUserClickShowContactCard(object sender, RoutedEventArgs e)
 
 ## <a name="show-a-full-contact-card"></a>Exibir um cartão de contato completo
 
-Para mostrar o cartão de contato completas, chame o método [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_) em vez de [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard).
+Para mostrar o cartão de contato completas, chame o método [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard) em vez de [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard).
 
 ```csharp
 private void onUserClickShowContactCard() 
@@ -181,5 +181,5 @@ Os exemplos neste artigo criam um contato simples. Em um aplicativo real, você 
 
 ## <a name="related-articles"></a>Artigos relacionados
 - [Contatos e calendário](/windows/uwp/contacts-and-calendar/)
-- [Exemplo de cartões de visita](https://go.microsoft.com/fwlink/p/?LinkId=624040)
+- [Exemplo de cartões de contato](https://go.microsoft.com/fwlink/p/?LinkId=624040)
 - [Controle de imagem de pessoas](/windows/uwp/controls-and-patterns/person-picture/)

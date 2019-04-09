@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4227a3ad77eadaa40e47420a5fdab6d65c875da5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 74768202554a3eb49c0df8ee5f17a4fe5f979be8
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594001"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291804"
 ---
 # <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Texturas alfabéticos opacas e 1 bit
-
 
 O formato de textura BC1 destina-se a texturas que são opacas ou que têm uma única cor transparente.
 
@@ -29,7 +28,7 @@ Na codificação de três cores, há uma cor derivada e o quarto código de 2 bi
 
 O exemplo de código a seguir ilustra o algoritmo para decidir se a codificação de três ou quatro cores está selecionada:
 
-```
+```cpp
 if (color_0 > color_1) 
 {
     // Four-color block: derive the other two colors. 
@@ -117,7 +116,7 @@ Palavra de bitmap\_1 são dispostos da seguinte maneira:
 
 Como um exemplo de codificação opaca, considere que as cores vermelho e preto são os extremos. Vermelho é a cor\_0 e o preto é a cor\_1. Existem quatro cores interpoladas que formam o gradiente distribuído uniformemente entre elas. Para determinar os valores do bitmap de 4 x 4, os seguintes cálculos são usados:
 
-```
+```cpp
 00 ? color_0
 01 ? color_1
 10 ? 2/3 color_0 + 1/3 color_1
@@ -149,7 +148,7 @@ Onde a imagem aparece como branco, o texel deve ser codificado como transparente
 
 A codificação de bitmap para as cores e a transparência é determinada usando os seguintes cálculos.
 
-```
+```cpp
 00 ? color_0
 01 ? color_1
 10 ? 1/2 color_0 + 1/2 color_1

@@ -5,26 +5,26 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 70876ab6-8222-4940-b4fb-65b581a77d6a
-ms.openlocfilehash: c934a88dd1825fb0111083d71eb25e477956d79c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 71c47767cf026b962f682fb30ca93758dbd5e227
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627361"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244072"
 ---
 #<a name="xbox-live-user-management"></a>Gerenciamento de usuário em tempo real do Xbox #
 
-**Solicitação**
+## <a name="request"></a>Solicitação
 
 Você pode obter a lista de usuários no console ou atualizar a lista adicionando, removendo, entrando, saindo ou modificando usuários existentes.
 
 | Método        | URI da solicitação     | 
 | ------------- |-----------------|
-| GET           | /ext/user |
+| OBTER           | /ext/user |
 | PUT           | /ext/user |
-<br>
 
-**Parâmetros de URI**
+
+**Parâmetros do URI**
 
 * Nenhuma
 
@@ -45,7 +45,7 @@ As chamadas para PUT devem incluir uma matriz JSON com a seguinte estrutura:
   * SponsoredUser (opcional): bool especificando se é necessário adicionar um usuário patrocinado ou não.
   * Delete (opcional): booliano que especifica para excluir esse usuário no console do
 
-###<a name="response"></a>Resposta # # #
+## <a name="response"></a>Resposta
 
 **Corpo da resposta**
 
@@ -70,6 +70,3 @@ Esta API tem os códigos de status esperados a seguir.
 | 204                | A chamada para PUT foi bem-sucedida e os usuários no console foram atualizados |
 | 4XX                | Diversos erros de dados ou formato de solicitação inválidos |
 | 5XX                | Códigos de erro de falhas inesperadas |
-<br>
-
-

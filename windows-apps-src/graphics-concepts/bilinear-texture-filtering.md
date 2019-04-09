@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 437650883b4782ca02c0daf24cc8ebed01d954f6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1e76aeceafa3f75c78bd7078f57fa9a3b1edee2f
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651251"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291654"
 ---
 # <a name="bilinear-texture-filtering"></a>Filtragem bilinear de textura
-
 
 A *filtragem bilinear* calcula a média ponderada dos 4 texels mais próximos do ponto de amostragem. Essa abordagem de filtragem é mais precisa e comum que a filtragem por ponto mais próximo. Essa abordagem é eficiente porque ela é implementado no hardware de gráficos moderno.
 
@@ -37,13 +36,13 @@ O esquema mais simples é simplesmente pedir à amostra que retorne a cor do tex
 
 Um esquema de filtragem ligeiramente mais preciso e comum é calcular a média ponderada dos 4 texels mais próximos ao ponto amostragem; isso é chamado de *filtragem bilinear*. O custo extra computacional para a filtragem bilinear é geralmente insignificante porque esta rotina é implementada em hardwares de gráfico modernos. Veja as cores que obtemos em alguns pontos de amostragem diferentes usando a filtragem bilinear:
 
-```
+```cpp
 UV: (0.5, 0.5)
 ```
 
 Esse ponto fica localizado na borda exata entre os texels vermelhos, verdes, azuis e brancos. A cor retornada pela amostragem é cinza:
 
-```
+```cpp
   0.25 * (255, 0, 0)
   0.25 * (0, 255, 0) 
   0.25 * (0, 0, 255) 
@@ -52,13 +51,13 @@ Esse ponto fica localizado na borda exata entre os texels vermelhos, verdes, azu
 = (128, 128, 128)
 ```
 
-```
+```cpp
 UV: (0.5, 0.375)
 ```
 
 Esse ponto fica localizado no ponto intermediário da borda entre os texels vermelhos e verdes. A cor retornada pela amostragem é amarelo-cinza (observe que as contribuições de texels azuis e brancos são dimensionadas como 0):
 
-```
+```cpp
   0.5 * (255, 0, 0)
   0.5 * (0, 255, 0) 
   0.0 * (0, 0, 255) 
@@ -67,13 +66,13 @@ Esse ponto fica localizado no ponto intermediário da borda entre os texels verm
 = (128, 128, 0)
 ```
 
-```
+```cpp
 UV: (0.375, 0.375)
 ```
 
 Esse é o endereço do texel vermelho, que é a cor retornada (todos os outros texels do cálculo de filtragem são ponderados para 0):
 
-```
+```cpp
   1.0 * (255, 0, 0)
   0.0 * (0, 255, 0) 
   0.0 * (0, 0, 255) 

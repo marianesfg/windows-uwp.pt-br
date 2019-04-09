@@ -6,15 +6,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b6be8ee8aa67196581907087d99e0324d741a00
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a01814729e38668e05201b4b7c8876dc150c488e
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640141"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291764"
 ---
 # <a name="transform-overview"></a>Visão geral da transformação
-
 
 As transformações de matriz lidam com muita a matemática de nível inferior dos gráficos 3D.
 
@@ -63,7 +62,7 @@ Matrizes são escritas na ordem das colunas de linha. Uma matriz que dimensiona 
 
 No C++, o Direct3D declara matrizes como uma matriz bidimensional, usando uma estrutura de matriz. O exemplo a seguir mostra como inicializar uma estrutura [**D3DMATRIX**](https://msdn.microsoft.com/library/windows/desktop/bb172573) para atuar como uma matriz de dimensionamento uniforme (fator de escala "s").
 
-```
+```cpp
 D3DMATRIX scale = {
     5.0f,            0.0f,            0.0f,            0.0f,
     0.0f,            5.0f,            0.0f,            0.0f,
@@ -81,7 +80,7 @@ A seguinte equação traduz o ponto (x, y, z) para um novo ponto (x', y', z').
 
 Você pode criar manualmente uma matriz de translação em C++. O exemplo a seguir mostra o código-fonte para uma função que cria uma matriz para traduzir vértices.
 
-```
+```cpp
 D3DXMATRIX Translate(const float dx, const float dy, const float dz) {
     D3DXMATRIX ret;
 
@@ -121,7 +120,7 @@ Nessas matrizes de exemplo, a letra grega "teta" significa o ângulo de rotaçã
 
 O código a seguir mostra uma função para manipular a rotação sobre o eixo X.
 
-```
+```cpp
     // Inputs are a pointer to a matrix (pOut) and an angle in radians.
     float sin, cos;
     sincosf(angle, &sin, &cos);  // Determine sin and cos of angle

@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f4749b8560624ed58f43b33fe3373d909919347
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 57f8d7d57c016c015d01e80b07fc0e2c0260ef7f
+ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592021"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320609"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>Carregar imagens e ativos personalizados para escala, tema, alto contraste e outros
 O app pode carregar arquivos de recurso de imagem (ou outros arquivos de ativo) personalizados para [fator de escala de exibição](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), tema, alto contraste e outros contextos de tempo de execução. Essas imagens podem ser referenciadas no código imperativo ou na marcação XAML, por exemplo, como a propriedade **Source** de uma **Imagem**. Elas também podem aparecer no arquivo de origem do manifesto do pacote de aplicativos (o arquivo `Package.appxmanifest`), por exemplo, como o valor do ícone de aplicativo na guia Ativos Visuais do Designer de Manifesto do Visual Studio, ou em seus blocos e notificações do sistema. Usando qualificadores nos nomes de arquivo das imagens e, opcionalmente, carregando-os dinamicamente com a ajuda de um [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live), você pode fazer com que o arquivo de imagem que melhor corresponde às configurações de tempo de execução do usuário para escala de exibição, tema, alto contraste, idiomas e outros contextos seja carregado.
@@ -23,21 +23,27 @@ Alguns qualificadores comuns para imagens são [scale](tailor-resources-lang-sca
 ## <a name="qualify-an-image-resource-for-scale-theme-and-contrast"></a>Qualificar um recurso de imagem para escala, tema e contraste
 O valor padrão do qualificador `scale` é `scale-100`. Portanto, essas duas variantes são equivalentes (elas fornecem uma imagem em escala 100 ou fator de escala 1).
 
-```
+<blockquote>
+<pre>
 \Assets\Images\logo.png
 \Assets\Images\logo.scale-100.png
-```
+</pre>
+</blockquote>
+
 
 Você pode usar qualificadores nos nomes de pasta, e não nos nomes de arquivo. Essa será uma estratégia melhor se você tiver vários arquivos de ativo por qualificador. Para fins de ilustração, essas duas variantes são equivalentes às duas acima.
 
-```
+<blockquote>
+<pre>
 \Assets\Images\logo.png
 \Assets\Images\scale-100\logo.png
-```
+</pre>
+</blockquote>
 
 Veja a seguir um exemplo de como você pode fornecer variantes de um recurso de imagem, &mdash;denominado `/Assets/Images/logo.png`&mdash;, para as diferentes configurações de escala de exibição, tema e alto contraste. Este exemplo usa a pasta de nomenclatura.
 
-```
+<blockquote>
+<pre>
 \Assets\Images\contrast-standard\theme-dark
     \scale-100\logo.png
     \scale-200\logo.png
@@ -47,7 +53,8 @@ Veja a seguir um exemplo de como você pode fornecer variantes de um recurso de 
 \Assets\Images\contrast-high
     \scale-100\logo.png
     \scale-200\logo.png
-```
+</pre>
+</blockquote>
 
 ## <a name="reference-an-image-or-other-asset-from-xaml-markup-and-code"></a>Fazer referência a uma imagem ou outro ativo no código e na marcação XAML
 O nome &mdash;ou identificador&mdash; de um recurso de imagem é seu caminho e nome de arquivo com todos os qualificadores removidos. Se você nomear pastas e/ou arquivos como qualquer um dos exemplos na seção anterior, terá um recurso de imagem único e seu nome (como um caminho absoluto) será `/Assets/Images/logo.png`. Veja como usar esse nome na marcação XAML.
@@ -83,7 +90,8 @@ Para qualquer um dos cenários mostrados nestes exemplos, use a sobrecarga do [c
 
 Observe como, nestes URIs de exemplo, o esquema ("`ms-appx`" ou "`ms-appx-web`") é seguido por "`://`", que é acompanhado por um caminho absoluto. Em um caminho absoluto, o símbolo "`/`" à esquerda faz com que o caminho seja interpretado da raiz do pacote.
 
-**Observação** Os esquemas URI `ms-resource` (para [recursos de cadeia de caracteres](localize-strings-ui-manifest.md)) e `ms-appx(-web)` (para imagens e outros ativos) fazem a correspondência automática de qualificador para localizar o recurso mais apropriado para o contexto atual. O esquema URI `ms-appdata` (que é usado para carregar dados de app) não executa nenhuma correspondência automática, mas você pode responder ao conteúdo de [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) e carregar explicitamente os ativos apropriados a partir dos dados de app usando seu nome de arquivo físico completo no URI. Para obter mais informações sobre dados de aplicativo, consulte [Armazenar e recuperar configurações e outros dados de app](../design/app-settings/store-and-retrieve-app-data.md). Esquemas URI da Web (por exemplo, `http`, `https` e `ftp`) não executam quaisquer correspondências automáticas. Para obter informações sobre o que fazer nesse caso, consulte [Hospedando e carregando imagens na nuvem](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md#hosting-and-loading-images-in-the-cloud).
+> [!NOTE]
+> O `ms-resource` (para [recursos de cadeia de caracteres](localize-strings-ui-manifest.md)) e `ms-appx(-web)` (para imagens e outros ativos) a esquemas URI fazer a correspondência de qualificador automático para localizar o recurso que é mais apropriado para o contexto atual. O esquema URI `ms-appdata` (que é usado para carregar dados de app) não executa nenhuma correspondência automática, mas você pode responder ao conteúdo de [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) e carregar explicitamente os ativos apropriados a partir dos dados de app usando seu nome de arquivo físico completo no URI. Para obter mais informações sobre dados de aplicativo, consulte [Armazenar e recuperar configurações e outros dados de app](../design/app-settings/store-and-retrieve-app-data.md). Esquemas URI da Web (por exemplo, `http`, `https` e `ftp`) não executam quaisquer correspondências automáticas. Para obter informações sobre o que fazer nesse caso, consulte [Hospedando e carregando imagens na nuvem](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md#hosting-and-loading-images-in-the-cloud).
 
 Os caminhos absolutos serão uma boa opção se os arquivos de imagem permanecerem onde estão na estrutura do projeto. Se você deseja mover um arquivo de imagem, mas deseja mantê-lo no mesmo local em relação ao seu arquivo de marcação XAML de referência, use um caminho relativo ao arquivo de marcação que o contêm, em vez de usar um caminho absoluto. Se você fizer isso, não precisará usar um esquema de URI. Você ainda tirará proveito da correspondência automática de qualificador nesse caso, mas apenas porque está usando o caminho relativo na marcação XAML.
 
@@ -96,23 +104,29 @@ Consulte também [Suporte a bloco e notificações do sistema para idioma, escal
 ## <a name="qualify-an-image-resource-for-targetsize"></a>Qualifica um recurso de imagem para targetsize
 Você pode usar os qualificadores `scale` e `targetsize` em variantes diferentes do mesmo recurso de imagem, mas não poderá usar os dois em uma única variante de um recurso. Além disso, você precisa definir pelo menos uma variante sem um qualificador `TargetSize`. Essa variante deve definir um valor para `scale` ou deixá-la assumir `scale-100` como valor padrão. Portanto, estas duas variantes do recurso `/Assets/Square44x44Logo.png` são válidas.
 
-```
+<blockquote>
+<pre>
 \Assets\Square44x44Logo.scale-200.png
 \Assets\Square44x44Logo.targetsize-24.png
-```
+</pre>
+</blockquote>
 
 E essas duas variantes são válidas. 
 
-```
+<blockquote>
+<pre>
 \Assets\Square44x44Logo.png // defaults to scale-100
 \Assets\Square44x44Logo.targetsize-24.png
-```
+</pre>
+</blockquote>
 
 Mas essa variante não é válida.
 
-```
+<blockquote>
+<pre>
 \Assets\Square44x44Logo.scale-200_targetsize-24.png
-```
+</pre>
+</blockquote>
 
 ## <a name="refer-to-an-image-file-from-your-app-package-manifest"></a>Consulte um arquivo de imagem do manifesto do conjunto de aplicativo
 Se você nomear pastas e/ou arquivos como em qualquer um dos dois exemplos válidos da seção anterior, terá um único recurso de imagem de ícone de app e seu nome (como caminho relativo) será `Assets\Square44x44Logo.png`. No manifesto do conjunto de aplicativo, basta fazer referência ao recurso pelo nome. Não é necessário para usar qualquer esquema de URI.
@@ -190,7 +204,7 @@ private void RefreshUIImages()
 ```
 
 ## <a name="important-apis"></a>APIs Importantes
-* [Resourcecontext)&lt;2}&lt;1}](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
+* [ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
 * [ResourceContext.SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
 * [MapChanged](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live)
 

@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: bbde90d848d3bc8fb18a5ecf370c85121adc02f6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c38259c303673c3c3c5494470d721856fcaaf6c9
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620491"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291714"
 ---
 # <a name="domain-shader-ds-stage"></a>Estágio de sombreador de domínio (DS)
-
 
 O estágio do Sombreador de Domínio (DS) calcula a posição de vértice de um ponto subdividido no patch saída; ele calcula a posição do vértice que corresponde a cada amostra de domínio. Um sombreador de domínio é executado uma vez por ponto de saída do estágio de mosaico e tem acesso somente leitura às constantes do patch de saída, ao patch de saída do sombreador e às coordenadas UV de saída do estágio de mosaico.
 
@@ -45,7 +44,7 @@ Depois que o sombreador de domínio é concluído, o mosaico é concluído e os 
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Exemplo
 
 
-```
+```hlsl
 void main( out    MyDSOutput result, 
            float2 myInputUV : SV_DomainPoint, 
            MyDSInput DSInputs,

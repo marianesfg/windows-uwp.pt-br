@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, recebimentos, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 9449a2dd265128a83f7840872ce4995df05a4e78
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6cae88e57a61e6d4e982f1eac7e65582861ef5d2
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605721"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335004"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para verificar compras de produtos
 
@@ -92,7 +92,7 @@ Para validar a autenticidade do recibo, você precisa de seu sistema back-end (u
 Veja aqui um exemplo desse processo de validação. Esse código é executado em um app de console do .NET Framework que inclui uma referência ao assembly **System. Security**.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
+[!code-csharp[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
 
 <span id="receipt-descriptions" />
 
@@ -129,7 +129,7 @@ Este elemento contém informações de compra para o app atual.
 
 |  Atributo  |  Descrição   |
 |-------------|-------------------|
-|  **ID**  |    Identifica a compra.           |
+|  **Id**  |    Identifica a compra.           |
 |  **AppId**  |     O valor do Nome da Família de Pacotes que o sistema operacional usa para o app.           |
 |  **LicenseType**  |    **Full**, se o usuário tiver adquirido a versão completa do app. **Trial**, se o usuário baixou uma versão de avaliação do app.           |  
 |  **PurchaseDate**  |    A data de aquisição do app.          |  |
@@ -144,10 +144,10 @@ Esse elemento contém informações sobre uma compra realizada em aplicativo par
 
 |  Atributo  |  Descrição   |
 |-------------|-------------------|
-|  **ID**  |    Identifica a compra.           |
+|  **Id**  |    Identifica a compra.           |
 |  **AppId**  |     Identifica o app por meio do qual o usuário fez a compra.           |
 |  **ProductId**  |     Identifica o produto adquirido.           |
-|  **productType**  |    Determina o tipo do produto. No momento só é compatível com um valor **Durable**.          |  
+|  **ProductType**  |    Determina o tipo do produto. No momento só é compatível com um valor **Durable**.          |  
 |  **PurchaseDate**  |    A data em que ocorreu a compra.          |  |
 
  

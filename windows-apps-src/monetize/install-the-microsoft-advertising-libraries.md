@@ -6,12 +6,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, instalação, SDK, biblioteca do publicidade
 ms.localizationpriority: medium
-ms.openlocfilehash: 121accdfc8996c609c616838f645f19e2377c7c5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: baf70cc6df7b0683f3dc362436c63eb1e688e678
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658031"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334694"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Instalar o SDK do Microsoft Advertising
 
@@ -29,7 +29,7 @@ Para instalar o SDK do Microsoft Advertising por meio do instalador MSI:
 1.  Feche todas as instâncias do Visual Studio.
 
 2. Se você já instalou qualquer versão anterior do SDK do Microsoft Advertising, do SDK do Universal AD Client, da extensão Ad Mediator ou do SDK do Microsoft Store Engagement and Monetization, desinstale essas versões do SDK agora. Opcionalmente, abra uma janela do **Prompt de Comando** e execute esses comandos para limpar quaisquer versões mais antigas do SDK do Advertising que possam ter sido instaladas com o Visual Studio, mas que podem não aparecer na lista de programas instalados em seu computador:
-    ```
+    ```console
     MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
     MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
@@ -52,7 +52,7 @@ Para instalar o SDK do Microsoft Advertising em um projeto UWP específico por m
 1.  Feche todas as instâncias do Visual Studio.
 
 2.  Se você já instalou qualquer versão anterior do SDK do Microsoft Advertising, do SDK do Universal AD Client, da extensão Ad Mediator ou do SDK do Microsoft Store Engagement and Monetization, desinstale essas versões do SDK agora. Opcionalmente, abra uma janela do **Prompt de Comando** e execute esses comandos para limpar quaisquer versões mais antigas do SDK do Advertising que possam ter sido instaladas com o Visual Studio, mas que podem não aparecer na lista de programas instalados em seu computador:
-    ```
+    ```console
     MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
     MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
@@ -66,7 +66,7 @@ Para instalar o SDK do Microsoft Advertising em um projeto UWP específico por m
 
 5. Na caixa de pesquisa, digite **Microsoft.Advertising.XAML** (para um projeto XAML) ou **Microsoft.Advertising.JS** (para um projeto JavaScript/HTML) e instale o pacote correspondente. Quando terminar a instalação do pacote, salve sua solução.
     > [!NOTE]
-    > Se a janela **Saída** relatar um erro *Pacote-Instalação* que indica que o caminho especificado é muito longo, talvez seja necessário configurar o NuGet para extrair pacotes em um local alternativo com um caminho mais curto do que o local padrão. Para fazer isso, adicione o valor ```repositoryPath``` a um arquivo nuget.config em seu computador e o atribua a um caminho de pasta curto onde os pacotes NuGet possam ser extraídos. Para obter mais informações, consulte [este artigo](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) na documentação do NuGet. Você também pode tentar mover seu projeto do Visual Studio para uma pasta alternativa com um caminho mais curto.
+    > Se a janela **Saída** relatar um erro *Pacote-Instalação* que indica que o caminho especificado é muito longo, talvez seja necessário configurar o NuGet para extrair pacotes em um local alternativo com um caminho mais curto do que o local padrão. Para fazer isso, adicione o valor `repositoryPath` a um arquivo nuget.config em seu computador e o atribua a um caminho de pasta curto onde os pacotes NuGet possam ser extraídos. Para obter mais informações, consulte [este artigo](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) na documentação do NuGet. Você também pode tentar mover seu projeto do Visual Studio para uma pasta alternativa com um caminho mais curto.
 
 6. Feche sua solução e depois a reabra.
 

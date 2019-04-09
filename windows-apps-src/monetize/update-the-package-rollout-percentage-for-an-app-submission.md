@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pacote, envio de aplicativo, atualização, porcentagem
 ms.assetid: 4c82d837-7a25-4f3a-997e-b7be33b521cc
 ms.localizationpriority: medium
-ms.openlocfilehash: 172c750d370f8fd8822d78265a04e694bc958ddf
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 175f4e562d7c91580e7783f6328b73f06a80095e
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605701"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335034"
 ---
 # <a name="update-the-rollout-percentage-for-an-app-submission"></a>Atualizar o percentual de distribuição para um envio de aplicativo
 
@@ -34,7 +34,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| POST   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage``` |
+| POSTAR   | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -61,7 +61,7 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como atualizar a porcentagem da distribuição de pacote para um envio de aplicativo.
 
-```
+```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/submissions/1152921504621243680/updatepackagerolloutpercentage?percentage=25 HTTP/1.1
 Authorization: Bearer <your access token>
 ```

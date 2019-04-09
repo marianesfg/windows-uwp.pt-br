@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, confirmar envio de versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 820e10695cce2d6242a51b0017d2fe3981cf77b1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 0cf1abcb1575252456383fd8fe187962567a6096
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603471"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334404"
 ---
 # <a name="commit-a-package-flight-submission"></a>Confirmar um envio de pacote de pré-lançamento
 
@@ -33,15 +33,13 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit``` |
-
+| POSTAR    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit` |
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
-
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
@@ -51,7 +49,6 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 | flightId | cadeia de caracteres | Obrigatório. A ID do pacote de pré-lançamento que contém o envio para confirmar. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md). Para um voo que foi criado no Partner Center, essa ID também está disponível na URL para a página de voo no Partner Center.  |
 | submissionId | cadeia de caracteres | Obrigatório. A ID do envio para confirmar. Esse ID está disponível nos dados de resposta para solicitações para [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL para a página de envio no Partner Center.  |
 
-
 ### <a name="request-body"></a>Corpo da solicitação
 
 Não forneça um corpo da solicitação para esse método.
@@ -60,7 +57,7 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como confirmar o envio de um pacote de pré-lançamento.
 
-```
+```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights/43e448df-97c9-4a43-a0bc-2a445e736bcd/submissions/1152921504621243649/commit HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -81,7 +78,6 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | status           | cadeia de caracteres  | O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>  |
 
-
 ## <a name="error-codes"></a>Códigos de erro
 
 Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
@@ -91,7 +87,6 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | 400  | Os parâmetros de solicitação não são válidos. |
 | 404  | O envio especificado não pôde ser encontrado. |
 | 409  | O envio especificado foi encontrado, mas não pôde ser confirmada em seu estado atual ou o aplicativo usa um recurso do Partner Center que está [atualmente não tem suporte da API de envio a Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
-
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
-ms.openlocfilehash: f60f3fc8678208f694a9ffabde06fa60de759a45
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 4cbdae1084f96901e90f8237d71bd59bf2d4c592
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240014"
 ---
 # <a name="fiddler-settings-api-reference"></a>Referência de API de configurações Fiddler   
 Você pode habilitar e desabilitar o rastreamento de rede Fiddler no seu devkit usando essa API REST.
@@ -24,9 +24,10 @@ Você pode verificar se o rastreamento do Fiddler está habilitado no dispositiv
 
 Método      | URI da solicitação
 :------     | :-----
-GET | /ext/fiddler
-<br />
-**Parâmetros de URI**
+OBTER | /ext/fiddler
+
+
+**Parâmetros do URI**
 
 - Nenhuma
 
@@ -60,9 +61,9 @@ Você pode habilitar o rastreamento Fiddler para o devkit usando a solicitação
 
 Método      | URI da solicitação
 :------     | :-----
-POST | /ext/fiddler
-<br />
-**Parâmetros de URI**
+POSTAR | /ext/fiddler
+
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -71,7 +72,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | proxyAddress       | O endereço IP ou nome de host do dispositivo que executa o Fiddler |
 | proxyPort          | A porta que o Fiddler está usando para monitorar o tráfego. O padrão é 8888 |
 | updateCert (opcional)| Um valor booliano que indica se o certificado de Fiddler raiz é fornecido. Isso deve ser "true" se o Fiddler nunca foi configurado neste devkit ou foi configurado para um host diferente.  |
-<br>
+
 
 **Cabeçalhos de solicitação**
 
@@ -104,8 +105,8 @@ Você pode desabilitar o rastreamento de Fiddler no dispositivo usando a solicit
 Método      | URI da solicitação
 :------     | :-----
 DELETE | /ext/fiddler
-<br />
-**Parâmetros de URI**
+
+**Parâmetros do URI**
 
 - Nenhuma
 
@@ -131,11 +132,11 @@ Código de status HTTP      | Descrição
 4XX | Códigos de erro
 5XX | Códigos de erro
 
-<br />
+
 **Famílias de dispositivos disponíveis**
 
 * Windows Xbox
 
 ## <a name="see-also"></a>Consulte também
-- [Configurando o Fiddler para UWP Xbox](uwp-fiddler.md)
+- [Configurando o Fiddler para UWP no Xbox](uwp-fiddler.md)
 

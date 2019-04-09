@@ -6,12 +6,12 @@ keywords: tinta, escrita à tinta, tutorial
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bc28a4b1cb8afd70ef68a2e297b51ad0a5a0fc5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: be7005e64a431d65006315fbee551e5c6c3a2a6f
+ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661911"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343275"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>Tutorial: Oferecer suporte à tinta no aplicativo UWP
 
@@ -27,7 +27,7 @@ Centraremos a atenção no seguinte:
 * Oferecendo suporte básico a reconhecimento de formas
 * Salvando e carregando tinta
 
-Para obter mais detalhes sobre como implementar esses recursos, consulte [Interações da Caneta e Windows Ink nos aplicativos UWP](https://docs.microsoft.com/windows/uwp/input/pen-and-stylus-interactions).
+Para obter mais detalhes sobre como implementar esses recursos, consulte [Interações da Caneta e Windows Ink nos aplicativos UWP](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions).
 
 ## <a name="introduction"></a>Introdução
 
@@ -119,7 +119,7 @@ Para adicionar funcionalidade básica de escrita à tinta, basta colocar um cont
     <InkCanvas x:Name="inkCanvas" />
 ```
 
-Pronto! 
+É só isso! 
 
 Agora execute o aplicativo novamente. Vá em frente e rabisque, escreva seu nome ou (se você estiver segurando um espelho ou tem uma memória muito boa) desenhe seu autorretrato.
 

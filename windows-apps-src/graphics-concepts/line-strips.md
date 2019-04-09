@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 869f0ac2b255c0dee231828f6d9064a917668821
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d17a79c14e981ab0c2c0414074aff17c90a0b478
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646371"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291624"
 ---
 # <a name="line-strips"></a>Faixas de linhas
-
 
 Uma faixa de linhas é um primitivo composto de segmentos de linha conectados. O app pode usar faixas de linhas para criar polígonos não fechados. Um polígono fechado tem o último vértice conectado ao primeiro por um segmento de linhas. Se o app faz polígonos com base em faixas alinhadas, os vértices não têm garantia de estar coplanares.
 
@@ -28,7 +27,7 @@ A ilustração a seguir mostra uma faixa de linhas renderizada.
 
 O código a seguir mostra como criar vértices para essa faixa de linhas.
 
-```
+```cpp
 struct CUSTOMVERTEX
 {
     float x,y,z;
@@ -47,7 +46,7 @@ CUSTOMVERTEX Vertices[] =
 
 O exemplo de código abaixo mostra como renderizar uma faixa de linhas no Direct3D.
 
-```
+```cpp
 //
 // It is assumed that d3dDevice is a valid
 // pointer to an IDirect3DDevice interface.

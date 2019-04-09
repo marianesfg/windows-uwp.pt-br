@@ -6,15 +6,14 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 82e5ba10b8f0480f4d996840df26817e324111d8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c2f2638e93ecbe346cc5dccb503d94d926ddcdae
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613111"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335144"
 ---
 # <a name="create-and-manage-submissions"></a>Criar e gerenciar envios
-
 
 Use o *API de envio da Microsoft Store* voos consultar programaticamente e criar os envios de aplicativos, complementos e pacote para a conta no Partner Center ou a organização. Essa API será útil se sua conta gerenciar muitos aplicativos ou complementos e você quiser automatizar e otimizar o processo de envio para esses ativos. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
 
@@ -82,7 +81,7 @@ Antes de chamar qualquer um dos métodos na API de envio da Microsoft Store, pri
 
 Para obter o token de acesso, siga as instruções em [Chamadas de serviço a serviço usando credenciais do cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar um HTTP POST para o ponto de extremidade ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Aqui está um exemplo de solicitação.
 
-```
+```json
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
 Host: login.microsoftonline.com
 Content-Type: application/x-www-form-urlencoded; charset=utf-8

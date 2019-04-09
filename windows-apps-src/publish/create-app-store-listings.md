@@ -2,16 +2,16 @@
 Description: A seção de listagens de Store do processo de envio de aplicativo é onde você fornece o texto e imagens que os clientes verão durante a exibição de que listagem de seu aplicativo em que a Microsoft Store.
 title: Criar listagens de aplicativos da Loja
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
-ms.date: 10/31/2018
+ms.date: 03/13/2019
 ms.topic: article
 keywords: windows 10, uwp, listagem, descrição, página da store, notas de versão, título
 ms.localizationpriority: medium
-ms.openlocfilehash: a913c522450a8d28c03066c922df2e3e2972f92f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: cc0c257be2343244872945de17d8c90a23d736ae
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601851"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57977449"
 ---
 # <a name="create-app-store-listings"></a>Criar listagens de aplicativos da Loja
 
@@ -130,7 +130,7 @@ Uma descrição mais curta e interessante que pode ser usada na parte superior d
 
 Para jogos, a descrição curta também pode aparecer na seção Informações do Hub de jogos no Xbox One.
 
-Para obter melhores resultados, mantenha a breve descrição em 270 caracteres. O campo tem um limite de 500 caracteres, mas em alguns modos de exibição, somente os caracteres primeiro 270 serão mostrados (com um link disponível para exibir o resto da descrição curta).
+Para obter melhores resultados, mantenha a breve descrição em 270 caracteres. O campo tem um limite de 1000 caracteres, mas em alguns modos de exibição, somente os caracteres primeiro 270 serão mostrados (com um link disponível para exibir o resto da descrição curta).
 
 
 ### <a name="additional-system-requirements"></a>Requisitos adicionais do sistema

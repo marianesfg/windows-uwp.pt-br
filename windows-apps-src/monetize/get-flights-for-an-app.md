@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, versões de pré-lançamento, pacotes de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: c7e7ab4db7690cee86b76e39caa30b3c0fb25618
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6f55a218c0cb4f4964fe12eb8e2eeb5b504f6405
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57659871"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334774"
 ---
 # <a name="get-package-flights-for-an-app"></a>Obter pacotes de pré-lançamento de um app
 
@@ -30,7 +30,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights``` |
+| OBTER    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -57,14 +57,14 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como listar todos os pacotes de pré-lançamento de um aplicativo.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listflights HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
 O exemplo a seguir demonstra como listar o primeiro pacote de pré-lançamento de um aplicativo.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listflights?top=1 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -101,7 +101,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicita
 
 | Valor      | Tipo   | Descrição       |
 |------------|--------|---------------------|
-| @nextLink  | cadeia de caracteres | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 2, mas houver 4 pacotes de pré-lançamento para o aplicativo, o corpo da resposta incluirá um@nextLink valor ```applications/{applicationid}/listflights/?skip=2&top=2```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2```  para solicitar os próximos 2 pacotes de pré-lançamento. |
+| @nextLink  | cadeia de caracteres | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação `https://manage.devcenter.microsoft.com/v1.0/my/` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 2, mas houver 4 pacotes de pré-lançamento para o aplicativo, o corpo da resposta incluirá um@nextLink valor `applications/{applicationid}/listflights/?skip=2&top=2`, o que indica que você pode chamar `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2`  para solicitar os próximos 2 pacotes de pré-lançamento. |
 | value      | matriz  | Uma matriz de objetos que fornecem informações sobre pacotes de pré-lançamento para o aplicativo especificado. Para obter mais informações sobre os dados em cada objeto, consulte [Recurso da versão de pré-lançamento](get-app-data.md#flight-object).               |
 | totalCount | int    | O número total de linhas no resultado dos dados da consulta (ou seja, o número total de pacotes de pré-lançamento do aplicativo especificado).   |
 

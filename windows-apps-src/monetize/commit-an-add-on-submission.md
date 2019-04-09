@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, confirmar envio de complemento, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: efab4412486566ae817eb66e78f5407533a30d5b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c748d2e8544a27e8cca58fd8aa96154319f77b47
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608211"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334604"
 ---
 # <a name="commit-an-add-on-submission"></a>Confirmar um envio de complemento
 
@@ -33,7 +33,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions/{submissionId}/commit``` |
+| POSTAR    | `https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions/{submissionId}/commit` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -59,7 +59,7 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como confirmar um envio de complemento.
 
-```
+```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP/submissions/1152921504621230023/commit HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -80,7 +80,6 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | status           | cadeia de caracteres  | O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>  |
 
-
 ## <a name="error-codes"></a>Códigos de erro
 
 Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
@@ -90,7 +89,6 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | 400  | Os parâmetros de solicitação não são válidos. |
 | 404  | O envio especificado não pôde ser encontrado. |
 | 409  | O envio especificado foi encontrado, mas não pôde ser confirmada em seu estado atual ou o complemento usa um recurso do Partner Center que está [atualmente não tem suporte da API de envio a Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
-
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

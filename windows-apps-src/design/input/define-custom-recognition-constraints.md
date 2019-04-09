@@ -8,35 +8,30 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 539acb242cfe6ee70d1311133a3f1a193860541a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a83cbc547ede1977f0222298bf451611905fad50
+ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631721"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343255"
 ---
 # <a name="define-custom-recognition-constraints"></a>Definir restrições de reconhecimento personalizadas
 
-
-
 Saiba como definir e usar restrições personalizadas para reconhecimento de fala.
 
-> **APIs importantes**: [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446), [ **SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421), [ **SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
-
+> **APIs importantes**: [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446), [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421), [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
 
 O reconhecimento de fala requer pelo menos uma restrição para definir um vocabulário reconhecível. Se nenhuma restrição for especificada, será usada a gramática de ditado predefinida de Aplicativos Universais do Windows. Consulte [Reconhecimento de fala](speech-recognition.md).
 
-
 ## <a name="add-constraints"></a>Adicionar restrições
-
 
 Use a propriedade [**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) para adicionar restrições a um reconhecedor de fala.
 
-Aqui, abordamos os três tipos de restrições de reconhecimento de fala usados de dentro de um aplicativo. Para restrições de comando de voz, consulte [Iniciar um aplicativo em primeiro plano com comandos de voz na Cortana](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana).
+Aqui, abordamos os três tipos de restrições de reconhecimento de fala usados de dentro de um aplicativo. (Para restrições de comando de voz Cortana, consulte [inicie um aplicativo de primeiro plano com comandos de voz na Cortana](https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana).)
 
--   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)— uma restrição com base em uma gramática predefinida (pesquisa de ditado ou web).
--   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)— uma restrição com base em uma lista de palavras ou frases.
--   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)— uma restrição definida em um arquivo de especificação de gramática de reconhecimento de fala (SRGS).
+- [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)— uma restrição com base em uma gramática predefinida (pesquisa de ditado ou web).
+- [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)— uma restrição com base em uma lista de palavras ou frases.
+- [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)— uma restrição definida em um arquivo de especificação de gramática de reconhecimento de fala (SRGS).
 
 Cada reconhecedor de fala pode ter uma coleção de restrição. Somente essas combinações de restrições são válidas:
 
@@ -88,13 +83,12 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 ## <a name="specify-a-programmatic-list-constraint-speechrecognitionlistconstraint"></a>Especifique uma restrição de lista programática (SpeechRecognitionListConstraint)
 
-
 Restrições de lista devem ser adicionadas à coleção de restrições de um reconhecedor de fala.
 
 Lembre-se bem do seguinte:
 
--   É possível adicionar várias restrições de lista a uma coleção de restrições.
--   É possível usar qualquer coleção que implemente **IIterable&lt;String&gt;** para os valores da cadeia de caracteres.
+- É possível adicionar várias restrições de lista a uma coleção de restrições.
+- É possível usar qualquer coleção que implemente **IIterable&lt;String&gt;** para os valores da cadeia de caracteres.
 
 Aqui, especificamos programaticamente uma matriz de palavras como uma restrição de lista e a adicionamos à coleção de restrições de um reconhecedor de fala.
 
@@ -128,28 +122,27 @@ private async void YesOrNo_Click(object sender, RoutedEventArgs e)
 
 ## <a name="specify-an-srgs-grammar-constraint-speechrecognitiongrammarfileconstraint"></a>Especifique uma restrição de gramática SRGS (SpeechRecognitionGrammarFileConstraint)
 
-
 Arquivos de gramática SRGS devem ser adicionados à coleção de restrições de um reconhecedor de fala.
 
 SRGS versão 1.0 é a linguagem de marcação padrão do setor para a criação de gramáticas em formato XML para reconhecimento de fala. Embora os Aplicativos Universais do Windows ofereçam alternativas ao uso da SRGS para criar gramáticas de reconhecimento de fala, você poderá descobrir que usar a SRGS para criar gramáticas produz os melhores resultados, especialmente para cenários de reconhecimento de fala mais complexos.
 
 As gramáticas da SRGS fornecem um conjunto completo de recursos para ajudar você a definir a complexa arquitetura da interação de voz para seus aplicativos. Por exemplo, com as gramáticas da SRGS você pode:
 
--   Especificar a ordem na qual as palavras e frases devem ser ditas para serem reconhecidas.
--   Combinar palavras de várias listas e frases para serem reconhecidas.
--   Criar um link para outras gramáticas.
--   Atribuir um peso a uma outra palavra ou frase para aumentar ou diminuir a probabilidade de que ela será usada para corresponder à entrada de fala.
--   Incluir palavras ou frases opcionais.
--   Utilize regras especiais que ajudam a filtrar entradas inesperadas ou não especificadas, como fala aleatória que não corresponde à gramática, ou ruído de fundo.
--   Use a semântica para definir o reconhecimento de fala por meio de seu aplicativo.
--   Especifique as pronúncias, quer em linha com uma gramática ou por meio de um link de um léxico.
+- Especificar a ordem na qual as palavras e frases devem ser ditas para serem reconhecidas.
+- Combinar palavras de várias listas e frases para serem reconhecidas.
+- Criar um link para outras gramáticas.
+- Atribuir um peso a uma outra palavra ou frase para aumentar ou diminuir a probabilidade de que ela será usada para corresponder à entrada de fala.
+- Incluir palavras ou frases opcionais.
+- Utilize regras especiais que ajudam a filtrar entradas inesperadas ou não especificadas, como fala aleatória que não corresponde à gramática, ou ruído de fundo.
+- Use a semântica para definir o reconhecimento de fala por meio de seu aplicativo.
+- Especifique as pronúncias, quer em linha com uma gramática ou por meio de um link de um léxico.
 
 Para saber mais sobre elementos e atributos da SRGS, consulte a [Referência XML para gramáticas da SRGS](https://go.microsoft.com/fwlink/p/?LinkID=269886). Para começar a criar uma gramática SRGS, consulte [Como criar uma gramática XML básica](https://go.microsoft.com/fwlink/p/?LinkID=269887).
 
 Lembre-se bem do seguinte:
 
--   É possível adicionar várias restrições de lista à coleção de restrições.
--   Use a extensão de arquivo .grxml para documentos de gramática baseados em XML que estão em conformidade com as regras SRGS.
+- É possível adicionar várias restrições de lista à coleção de restrições.
+- Use a extensão de arquivo .grxml para documentos de gramática baseados em XML que estão em conformidade com as regras SRGS.
 
 Esse exemplo usa uma gramática SRGS definida em um arquivo denominado srgs.grxml (descrito posteriormente). Nas propriedades do arquivo, **Ação de Pacote** é definida para **Conteúdo** com **Copiar para diretório de saída** definido para **Copiar sempre**:
 
@@ -219,7 +212,6 @@ Aqui, escutamos as variantes de "sim" e "não".
 
 ## <a name="manage-constraints"></a>Gerenciar restrições
 
-
 Depois que uma coleção de restrições for carregada para reconhecimento, seu aplicativo poderá gerenciar quais restrições são permitidas para operações de reconhecimento definindo a propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402) de uma restrição como **true** ou **false**. A configuração padrão é **true**.
 
 Geralmente, é mais eficaz carregar restrições uma vez e, em seguida, habilitá-las ou desabilitá-las conforme necessário, em vez de carregar, descarregar e compilar restrições para cada operação de reconhecimento. Use a propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402), conforme necessário.
@@ -232,15 +224,8 @@ Para avisar o usuário sobre o que pode ser falado, use as propriedades [**Speec
 
 ## <a name="related-articles"></a>Artigos relacionados
 
+- [Interações de controle por voz](speech-interactions.md)
 
-* [Interações de controle por voz](speech-interactions.md)
+### <a name="samples"></a>Exemplos
 
-**Exemplos**
-* [Reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
-
- 
-
-
-
-
+- [Reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)

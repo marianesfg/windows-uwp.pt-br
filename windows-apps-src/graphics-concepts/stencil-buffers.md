@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 285e4a70062c57c957530aa1e548c22c4cf7711e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: bd59c1d32b4f09b58b7e78281e468fbb00a777d9
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57629461"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291874"
 ---
 # <a name="stencil-buffers"></a>Buffers de estêncil
-
 
 Um *buffer de estêncil* é usado para mascarar pixels em uma imagem, para gerar efeitos especiais. A máscara controla se o pixel é desenhado ou não. Esses efeitos especiais incluem composição, decalque, desintegração, esmaecimento, deslizar o dedo, contornos, silhuetas, e estêncil de dois lados. Alguns dos efeitos mais comuns são mostrados abaixo.
 
@@ -25,7 +24,6 @@ Informações de buffer de estêncil são incorporadas nos dados do buffer z.
 
 ## <a name="span-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanhow-the-stencil-buffer-works"></a><span id="How_the_Stencil_Buffer_Works"></span><span id="how_the_stencil_buffer_works"></span><span id="HOW_THE_STENCIL_BUFFER_WORKS"></span>Como funciona o buffer de estêncil
 
-
 O Direct3D realiza um teste no conteúdo do buffer de estêncil em uma base de pixel por pixel. Para cada pixel na superfície do destino, ele executa um teste usando o valor correspondente no buffer de estêncil, um valor de referência de estêncil e um valor de máscara de estêncil. Se o teste for aprovado, o Direct3D executa uma ação. O teste é realizado usando as seguintes etapas.
 
 1.  Execute uma operação AND bit a bit do valor de referência do estêncil com a máscara de estêncil.
@@ -34,7 +32,7 @@ O Direct3D realiza um teste no conteúdo do buffer de estêncil em uma base de p
 
 As etapas acima são mostradas na seguinte linha de código:
 
-```
+```cpp
 (StencilRef & StencilMask) CompFunc (StencilBufferValue & StencilMask)
 ```
 

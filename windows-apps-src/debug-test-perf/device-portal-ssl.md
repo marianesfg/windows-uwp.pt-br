@@ -2,28 +2,31 @@
 ms.assetid: e04ebe3f-479c-4b48-99d8-3dd4bb9bfaf4
 title: Provisionar o Portal de Dispositivos com um certificado SSL personalizado
 description: A ser definido
-ms.date: 07/11/2017
+ms.date: 4/8/2019
 ms.topic: article
 keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: faef15d523f56b6e45f77e0ccdbb2f5846f7a15a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cbe813a58124b1cd80f352ae11e9dcff59b21da4
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244332"
 ---
 # <a name="provision-device-portal-with-a-custom-ssl-certificate"></a>Provisionar o Portal de Dispositivos com um certificado SSL personalizado
-Na Atualização do Windows 10 para Criadores, o Windows Device Portal adicionou uma maneira de os administradores de dispositivo para instalar um certificado personalizado para uso na comunicação HTTPS. 
+
+Na Atualização do Windows 10 para Criadores, o Windows Device Portal adicionou uma maneira de os administradores de dispositivo para instalar um certificado personalizado para uso na comunicação HTTPS.
 
 Embora seja possível fazer isso em seu próprio computador, esse recurso destina-se principalmente a empresas que têm uma infraestrutura de certificado em vigor.  
 
-Por exemplo, uma empresa pode ter uma autoridade de certificação (CA) para assinar certificados de sites de intranet por HTTPS. Além disso, esse recurso funciona sobre essa infraestrutura. 
+Por exemplo, uma empresa pode ter uma autoridade de certificação (CA) para assinar certificados de sites de intranet por HTTPS. Além disso, esse recurso funciona sobre essa infraestrutura.
 
 ## <a name="overview"></a>Visão geral
+
 Por padrão, o Device Portal gera uma autoridade de certificação raiz autoassinada e, em seguida, a utiliza para assinar certificados SSL para cada ponto de extremidade no qual esteja realizando a escuta. Isso inclui `localhost`, `127.0.0.1` e `::1` (IPv6 localhost).
 
-Também estão incluídos o nome de host do dispositivo (por exemplo, `https://LivingRoomPC`) e o endereço IP de link local atribuído ao dispositivo (até dois [IPv4, IPv6] por adaptador de rede). Você pode ver os endereços IP de link local de um dispositivo analisando a ferramenta de rede no Device Portal. Eles começarão com `10.` ou `192.` para IPv4 ou `fe80:` para IPv6. 
+Também estão incluídos o nome de host do dispositivo (por exemplo, `https://LivingRoomPC`) e o endereço IP de link local atribuído ao dispositivo (até dois [IPv4, IPv6] por adaptador de rede).
+Você pode ver os endereços IP de link local de um dispositivo analisando a ferramenta de rede no Device Portal. Eles começarão com `10.` ou `192.` para IPv4 ou `fe80:` para IPv6.
 
 Na configuração padrão, um aviso de certificado pode aparecer no navegador devido à autoridade de certificação raiz não confiável. Especificamente, o certificado SSL fornecido pelo Device Portal é assinado por uma autoridade de certificação raiz na qual o navegador ou o computador não confie. Isso pode ser corrigido por meio da criação de uma nova autoridade de certificação raiz confiável.
 
@@ -42,7 +45,7 @@ $rootCA = New-SelfSignedCertificate -certstorelocation cert:\currentuser\my -Sub
 $rootCAFile = Export-Certificate -Cert $rootCA -FilePath $FilePath
 ```
 
-Depois que isso for criado, use o arquivo _WdpTestCA.cer_ para assinar certificados SSL. 
+Depois que isso for criado, use o arquivo _WdpTestCA.cer_ para assinar certificados SSL.
 
 ## <a name="create-an-ssl-certificate-with-the-root-ca"></a>Criar um certificado SSL com a autoridade de certificação raiz
 
@@ -66,18 +69,19 @@ $certFile = Export-PfxCertificate -cert $cert -FilePath $FilePath -Password (Con
 
 Se você tiver vários dispositivos, poderá reutilizar os arquivos .pfx do localhost, mas ainda precisará criar certificados de endereço IP e nome de host para cada dispositivo separadamente.
 
-Quando o pacote de arquivos .pfx for gerado, você precisará carregá-los no Windows Device Portal. 
+Quando o pacote de arquivos .pfx for gerado, você precisará carregá-los no Windows Device Portal.
 
 ## <a name="provision-device-portal-with-the-certifications"></a>Provisionar Device Portal com as certificações
 
 Para cada arquivo .pfx que você criou para um dispositivo, será necessário executar o seguinte comando em um prompt de comandos com privilégios elevados.
 
-```
-WebManagement.exe -SetCert <Path to .pfx file> <password for pfx> 
+```cmd
+WebManagement.exe -SetCert <Path to .pfx file> <password for pfx>
 ```
 
 Veja a seguir o uso do exemplo:
-```
+
+```cmd
 WebManagement.exe -SetCert localhost.pfx PickAPassword
 WebManagement.exe -SetCert --1.pfx PickAPassword
 WebManagement.exe -SetCert MyLivingRoomPC.pfx PickAPassword
@@ -85,7 +89,7 @@ WebManagement.exe -SetCert MyLivingRoomPC.pfx PickAPassword
 
 Após instalar os certificados, basta reiniciar o serviço para que as alterações entrem em vigor:
 
-```
+```cmd
 sc stop webmanagement
 sc start webmanagement
 ```

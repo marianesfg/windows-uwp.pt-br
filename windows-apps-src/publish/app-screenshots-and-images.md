@@ -2,16 +2,16 @@
 Description: Você pode selecionar as capturas de tela, os logotipos e outros ativos de arte (como trailers e imagens promocionais) para incluir na listagem da Loja do aplicativo.
 title: Capturas de tela, imagens e trailers do aplicativo
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
-ms.date: 10/31/2018
+ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ae5b68d73a3776adf6250dbb96de827a106a6c5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a27763d76d2be65c7e0d2c6ccaeb0cd13123bdae
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610181"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244302"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do aplicativo
 
@@ -128,7 +128,7 @@ Siga estas recomendações para que seus trailers sejam eficazes:
 
 Você também deve cumprir os requisitos listados a seguir.
 
-**Para adicionar trechos para sua listagem:**
+**Para adicionar trailers à listagem:**
 1. Carregue o **arquivo de vídeo** do trailer na caixa indicada. Uma caixa suspensa também é mostrada caso você queira reutilizar um trailer que já tenha sido carregado (talvez para uma listagem da Loja em outro idioma).
 2. Após carregar o trailer, você precisará carregar uma **imagem em miniatura** para acompanhá-lo. Essa imagem deve ser um arquivo .png de 1920 x 1080 pixels e é geralmente uma imagem estática obtida a partir do trailer.
 3. Clique no ícone de lápis para adicionar um **título** para o trailer (255 caracteres ou menos).
@@ -144,7 +144,7 @@ Para remover um trailer da lista, clique em **X** ao lado do nome de arquivo. Vo
 
 Ao fornecer os trailers, verifique estes requisitos estão sendo cumpridos:
 
-- O formato do vídeo deve ser MOV ou MP4. 
+- O formato do vídeo deve ser MOV ou MP4. Se você estiver carregando um vídeo de 4K, MP4 somente tem suporte.
 - A duração do vídeo não deve exceder 60 segundos.
 - O arquivo do trailer deve ter no máximo 2 GB. 
 - A resolução de vídeo deve ser 1920 x 1080 pixels ou 3840 x 2160 pixels.
@@ -158,61 +158,19 @@ Há requisitos adicionais dependendo do tipo de arquivo.
 
 #### <a name="mov"></a>MOV
 
-<table>
-<tr>
-<td>
+| Vídeo | Áudio | 
+| --- | --- | 
+| <ul><li>ProRes 1080p (HQ quando apropriado)</li><li>Taxa de quadros nativa; 29,97 FPS (preferencial)</li></ul> | <ul><li>Estéreo necessário</li><li>Nível de áudio recomendado: -16 LKFS/LUFS</li></ul> |
 
-**Vídeo:**
-
-<ul>
-<li>ProRes 1080p (HQ quando apropriado)</li>
-<li>Taxa de quadros nativa; 29,97 FPS (preferencial)</li>
-</ul>
-</td>
-<td>
-
-**Áudio:**
-
-<ul>
-<li>Estéreo necessário</li>
-<li>Nível de áudio recomendado: -16 LKFS/LUFS</li>
-</ul> 
-</td>
-</tr>
-</table>
 
 #### <a name="mp4"></a>MP4
 
-<table>
-<tr>
-<td>
+| Vídeo | Áudio |
+| --- | --- |
+| <ul><li>Codec: [H.264](https://docs.microsoft.com/en-us/windows/desktop/DirectShow/h-264-video-types) (AVC1)  </li><li>Varredura progressiva (sem entrelaçamento)</li><li>Alto Perfil</li><li>Dois quadros B consecutivos</li><li>GOP fechado. GOP da metade da taxa de quadros</li><li>CABAC</li><li>50 MB/s </li><li>Espaço de cores: 4.2.0</li></ul> | <ul><li>Codec: AAC-LC</li><li>Canais: Estéreo ou surround som</li><li>Taxa de amostragem: 48 KHz</li><li>A taxa de bits de áudio: 384 KB/s para estéreo, 512 KB/s para o som surround</li></ul> |
 
-**Vídeo:**
-
-<ul>
-<li>Codec: H.264</li>
-<li>Varredura progressiva (sem entrelaçamento)</li>
-<li>Alto Perfil</li>
-<li>Dois quadros B consecutivos</li>
-<li>GOP fechado. GOP da metade da taxa de quadros</li>
-<li>CABAC</li>
-<li>50 MB/s </li>
-<li>Espaço de cores: 4.2.0</li>
-</ul>
-</td>
-<td>
-
-**Áudio:**
-
-<ul>
-<li>Codec: AAC-LC</li>
-<li>Canais: Estéreo ou surround som</li>
-<li>Taxa de amostragem: 48 kHz</li>
-<li>A taxa de bits de áudio: 384 KB/s para estéreo, 512 KB/s para o som surround</li>
-</ul>
-</td>
-</tr>
-</table>
+> [!WARNING]
+> Os clientes não podem ouvir o áudio de arquivos MP4 codificados com codecs que não seja AVC1.
 
 Para arquivos H.264 Mezzanine, é recomendável:
 - Contêiner: MP4

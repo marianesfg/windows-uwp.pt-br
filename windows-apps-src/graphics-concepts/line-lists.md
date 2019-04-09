@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 43013dc820c0f0f67df2e9502d3c57c77e03f250
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: ac66066a4140ace5905ff6bc52a7b1290341beea
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599241"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291576"
 ---
 # <a name="line-lists"></a>Listas de linhas
-
 
 Uma lista de linhas contém segmentos de linha reta isolados. As listas de linhas são úteis para tarefas como adicionar chuva com neve ou pesada a uma cena 3D. Os apps criam uma lista de linhas preenchendo uma matriz de vértices. Observe que o número de vértices em uma lista de linhas deve ser um número par maior ou igual a dois.
 
@@ -33,7 +32,7 @@ Você pode aplicar materiais e texturas a uma lista de linhas. As cores no mater
 
 O código a seguir mostra como criar vértices para essa lista de linhas.
 
-```
+```cpp
 struct CUSTOMVERTEX
 {
     float x,y,z;
@@ -52,7 +51,7 @@ CUSTOMVERTEX Vertices[] =
 
 O exemplo de código abaixo mostra como renderizar uma lista de linhas no Direct3D.
 
-```
+```cpp
 //
 // It is assumed that d3dDevice is a valid
 // pointer to an IDirect3DDevice interface.

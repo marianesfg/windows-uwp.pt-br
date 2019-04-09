@@ -5,12 +5,12 @@ keywords: cliente de tutorial, Enterprise, dados, criar autenticação de exclus
 ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: med
-ms.openlocfilehash: 9c09e0fb73e42fd8a3d0c70bbb5396be32624387
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7bd3a180762c3ef06d7c24ae001fb2c7fb7fc55e
+ms.sourcegitcommit: 6df46d7d5b5522805eab11a9c0e07754f28673c6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57623241"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808294"
 ---
 # <a name="tutorial-create-a-customer-database-application"></a>Tutorial: Criar um aplicativo de banco de dados de clientes
 
@@ -38,7 +38,7 @@ Depois de clonado/baixar o repositório, você pode editar o projeto abrindo **C
 
 Se você executar seu aplicativo imediatamente após abri-lo, você verá alguns botões na parte superior de uma tela em branco. Embora não seja visível para você, o aplicativo já inclui um banco de dados SQLite local provisionado com alguns clientes de teste. A partir daqui, você vai começar com a implementação de um controle de interface do usuário para exibir os clientes e, em seguida, passar para a adição em operações no banco de dados. Antes de começar, aqui é onde você trabalhará.
 
-### <a name="views"></a>Modos de exibição
+### <a name="views"></a>Exibições
 
 **CustomerListPage.xaml** é o modo de exibição do aplicativo, que define a interface do usuário para a página única neste tutorial. Sempre que precisar adicionar ou alterar um elemento visual na interface do usuário, você fará isso neste arquivo. Este tutorial orientará você pela adição desses elementos:
 
@@ -247,7 +247,7 @@ Adicionando um novo cliente apresenta um desafio, como o cliente será exibido c
         get => _newCustomer;
         set
         {
-            if {_newCustomer != value}
+            if (_newCustomer != value)
             {
                 _newCustomer = value;
                 OnPropertyChanged();
@@ -447,7 +447,7 @@ As etapas necessárias para se conectar ao banco de dados remoto são indicadas 
 * Associe o aplicativo com a Microsoft Store.
 * Copiar sobre a [projeto de serviço](https://github.com/Microsoft/Windows-appsample-customers-orders-database/tree/master/ContosoService) em seu aplicativo e implantá-lo para o Azure.
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Autenticação
 
 Você precisará criar um botão para iniciar uma sequência de autenticação e um pop-up ou uma página separada para coletar informações do usuário. Depois de criado, você precisará fornecer o código que solicita informações do usuário e o utiliza para adquirir um token de acesso. O exemplo de banco de dados de pedidos de cliente encapsula chamadas do Microsoft Graph com o **contas** biblioteca para adquirir um token e lidar com a autenticação para uma conta do AAD.
 

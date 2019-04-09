@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 94d50554baf412c7329521df68eb19f58340387f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c899334b43353fbc69c3080cfd329df0ef9e0797
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658651"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913966"
 ---
 # <a name="calendar-date-picker"></a>Seletor de data do calendário
 
@@ -91,7 +91,7 @@ Quando você define a data em código, o valor é restringido pelas propriedades
 Você pode manipular o evento [DateChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx) para ser notificado quando o valor Date for alterado.
 
 > [!NOTE]
-Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo Controles de data e hora.
+> Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo Controles de data e hora.
 
 ### <a name="setting-a-header-and-placeholder-text"></a>Definindo um texto de cabeçalho e o espaço reservado
 

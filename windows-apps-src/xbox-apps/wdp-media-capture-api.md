@@ -6,25 +6,25 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 3f92c8fd-4096-4972-97da-01ae5db6423c
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a27d13f7ceedd14a84d5b4b4aa1233445037a1f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7dcd4c6c39a983ab11bfacd391bfa78942601258
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244052"
 ---
 # <a name="media-capture-api-reference"></a>Referência de API da captura de mídia #
 
-**Solicitação**
+## <a name="request"></a>Solicitação
 
 Você pode capturar uma representação PNG da tela atual usando o formato de solicitação a seguir.
 
 | Método        | URI da solicitação     | 
 | ------------- |-----------------|
-| GET           | /ext/screenshot |
-<br>
+| OBTER           | /ext/screenshot |
 
-**Parâmetros de URI**
+
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -32,7 +32,6 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | Parâmetro do URI      | Descrição     | 
 | ------------------ |-----------------|
 | download (opcional)| Um valor booliano que indica se os cabeçalhos de resposta HTTP devem ser definidos indicando que o navegador do host precisa baixar a captura de tela como anexo em vez renderizá-lo no navegador.  |
-<br>
 
 **Cabeçalhos de solicitação**
 
@@ -42,7 +41,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 * Nenhuma
 
-###<a name="response"></a>Resposta # # #
+## <a name="response"></a>Resposta
 
 **Código de status**
 

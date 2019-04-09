@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 7aabaa932c8bd21baf81970564b15421931ad39f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: fa5b5a62348a36f7758468a86e19b744cdde8754
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604861"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335068"
 ---
 # <a name="manage-app-submissions"></a>Gerenciar envios de aplicativo
 
@@ -45,17 +45,17 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 </thead>
 <tbody>
 <tr>
-<td align="left">GET</td>
+<td align="left">OBTER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}</td>
 <td align="left"><a href="get-an-app-submission.md">Obtenha um envio de aplicativo existente</a></td>
 </tr>
 <tr>
-<td align="left">GET</td>
+<td align="left">OBTER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status</td>
 <td align="left"><a href="get-status-for-an-app-submission.md">Obter o status de um envio de aplicativo existente</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions</td>
 <td align="left"><a href="create-an-app-submission.md">Criar um novo envio de aplicativo</a></td>
 </tr>
@@ -65,7 +65,7 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 <td align="left"><a href="update-an-app-submission.md">Atualizar um envio de aplicativo existente</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit</td>
 <td align="left"><a href="commit-an-app-submission.md">Confirmar o envio de um aplicativo novo ou atualizado</a></td>
 </tr>
@@ -91,7 +91,7 @@ Para criar um envio de um aplicativo, siga este processo.
 
 3. [Criar um envio de aplicativo](create-an-app-submission.md) executando o seguinte método na API de envio da Microsoft Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado.
 
-    ```
+    ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions
     ```
 
@@ -104,7 +104,7 @@ Para criar um envio de um aplicativo, siga este processo.
 
 5. Revise os dados de [envio de aplicativo](#app-submission-object) com as alterações necessárias para o novo envio e execute o método a seguir para [atualizar o envio de aplicativo](update-an-app-submission.md).
 
-    ```
+    ```json
     PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
     ```
       > [!NOTE]
@@ -127,13 +127,13 @@ Para criar um envio de um aplicativo, siga este processo.
 
 5. [Confirme o envio de aplicativo](commit-an-app-submission.md) executando o método a seguir. Isso alertará o Partner Center que você concluiu o envio e que as atualizações agora devem ser aplicadas à sua conta.
 
-    ```
+    ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
     ```
 
 6. Verifique o status de confirmação executando o método a seguir para [obter o status de envio de aplicativo](get-status-for-an-app-submission.md).
 
-    ```
+    ```json
     GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status
     ```
 
@@ -170,22 +170,22 @@ Depois que uma distribuição de pacote gradual for habilitada para um envio de 
 </thead>
 <tbody>
 <tr>
-<td align="left">GET</td>
+<td align="left">OBTER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout</td>
 <td align="left"><a href="get-package-rollout-info-for-an-app-submission.md">Obter as informações de distribuição gradual para um envio de aplicativo</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage</td>
 <td align="left"><a href="update-the-package-rollout-percentage-for-an-app-submission.md">Atualizar o percentual de distribuição gradual para um envio de aplicativo</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout</td>
 <td align="left"><a href="halt-the-package-rollout-for-an-app-submission.md">Interromper a distribuição gradual para um envio de aplicativo</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout</td>
 <td align="left"><a href="finalize-the-package-rollout-for-an-app-submission.md">Finalizar a distribuição gradual para um envio de aplicativo</a></td>
 </tr>
@@ -394,7 +394,7 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição    |
 |-----------------|---------|------|
-|  name               |    cadeia de caracteres     |   O nome da promoção.    |     
+|  nome               |    cadeia de caracteres     |   O nome da promoção.    |     
 |  basePriceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
 |  startDate               |   cadeia de caracteres      |   A data de início da promoção no formato ISO 8601.  |     
 |  endDate               |   cadeia de caracteres      |  A data de término da promoção no formato ISO 8601.      |     
@@ -426,7 +426,7 @@ Esse recurso contém informações de listagem base de um aplicativo. Esse recur
 |  privacyPolicy                |   cadeia de caracteres      |   Este valor está obsoleto. Para definir ou alterar a URL da política de privacidade para o seu aplicativo, você deve fazer isso na [propriedades](../publish/enter-app-properties.md#privacy-policy-url) página no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.       |
 |  supportContact                |   cadeia de caracteres      |  Este valor está obsoleto. Para definir ou alterar o suporte de contato URL ou endereço de email para seu aplicativo, você deve fazer isso na [propriedades](../publish/enter-app-properties.md#support-contact-info) página no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.        |
 |  websiteUrl                |   cadeia de caracteres      |  Este valor está obsoleto. Para definir ou alterar a URL da página da web para seu aplicativo, você deve fazer isso na [propriedades](../publish/enter-app-properties.md#website) página no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.      |    
-|  description               |    cadeia de caracteres     |   A [descrição](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) dos detalhes do aplicativo.   |     
+|  descrição               |    cadeia de caracteres     |   A [descrição](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) dos detalhes do aplicativo.   |     
 |  features               |    matriz     |  Uma matriz de até 20 cadeias de caracteres que lista os [recursos](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) do seu aplicativo.     |
 |  releaseNotes               |  cadeia de caracteres       |  As [notas de versão](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) do aplicativo.    |
 |  images               |   matriz      |  Uma matriz de recursos de [imagem e ícone](#image-object) para a listagem do aplicativo.  |
@@ -450,7 +450,7 @@ Esse recurso contém dados de imagem e ícone para uma listagem do aplicativo. P
 |  fileName               |    cadeia de caracteres     |   O nome do arquivo de imagem no arquivo ZIP que você carregou para o envio.    |     
 |  fileStatus               |   cadeia de caracteres      |  O status do arquivo de imagem. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
 |  id  |  cadeia de caracteres  | A ID da imagem. Esse valor é fornecido pelo Centro de parceiros.  |
-|  description  |  cadeia de caracteres  | A descrição da imagem.  |
+|  descrição  |  cadeia de caracteres  | A descrição da imagem.  |
 |  imageType  |  cadeia de caracteres  | Indica o tipo da imagem. Há suporte para as seguintes cadeias de caracteres. <p/>[Imagens de captura de tela](../publish/app-screenshots-and-images.md#screenshots): <ul><li>Captura de tela (use esse valor para a captura de tela da área de trabalho)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[Logotipos da Loja](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>Ícone (use esse valor para o logotipo 1:1 de 300 x 300 pixels)</li></ul><p/>[Imagens promocionais](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Imagens do Xbox](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[Imagens promocionais opcionais](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
 
 
@@ -526,7 +526,7 @@ Esse recurso contém informações adicionais sobre todos os erros ou avisos rel
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
 |  code               |    cadeia de caracteres     |   Um [código de status do envio](#submission-status-code) que descreve o tipo de erro ou aviso.   |     
-|  details               |     cadeia de caracteres    |  Uma mensagem com mais detalhes sobre o problema.     |
+|  detalhes               |     cadeia de caracteres    |  Uma mensagem com mais detalhes sobre o problema.     |
 
 
 <span id="application-package-object" />
@@ -705,11 +705,11 @@ Esse recurso descreve a imagem em miniatura para um trailer. Esse recurso tem os
 |-----------------|---------|------|
 |  fileName               |    cadeia de caracteres     |   O nome do arquivo de imagem em miniatura no arquivo ZIP que você carregou para o envio.    |     
 |  id  |  cadeia de caracteres  | A ID da imagem em miniatura. Esse valor é fornecido pelo Centro de parceiros.  |
-|  description  |  cadeia de caracteres  | A descrição da imagem em miniatura. Esse valor é composto somente por metadados e não é exibido para os usuários.   |
+|  descrição  |  cadeia de caracteres  | A descrição da imagem em miniatura. Esse valor é composto somente por metadados e não é exibido para os usuários.   |
 
 <span/>
 
-## <a name="enums"></a>Enumerações
+## <a name="enums"></a>Enums
 
 Esses métodos usam as enumerações a seguir.
 

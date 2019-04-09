@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pacote, envio do aplicativo, interromper
 ms.assetid: 4ce79fe3-deda-4d31-b938-d672c3869051
 ms.localizationpriority: medium
-ms.openlocfilehash: 08450b7aa9608e610a31d114059dd49e3ef3e10c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 5262089a2eab57ff84f399637fd98e58ec3e13ed
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57637321"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334664"
 ---
 # <a name="halt-the-rollout-for-an-app-submission"></a>Interromper a distribuição para um envio de aplicativo
 
@@ -37,7 +37,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| POST   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout``` |
+| POSTAR   | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -63,7 +63,7 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como parar a distribuição de pacote para um envio de aplicativo.
 
-```
+```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/submissions/1152921504621243680/haltpackagerollout HTTP/1.1
 Authorization: Bearer <your access token>
 ```

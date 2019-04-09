@@ -5,16 +5,16 @@ ms.date: 10/20/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, ágil, objeto, agilidade, IAgileObject
 ms.localizationpriority: medium
-ms.openlocfilehash: 2481396d9348250e14ebfc2d1f940b663b405f77
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 0b390161a4eb2c4f38fed9bce226c5a5e92c5ad8
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639661"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291774"
 ---
-# <a name="agile-objects-in-cwinrt"></a>Objetos Agile no C + + c++ /CLI WinRT
+# <a name="agile-objects-in-cwinrt"></a>Objetos Agile em C++/WinRT
 
-Na grande maioria dos casos, uma instância de uma classe de tempo de execução do Windows pode ser acessada de qualquer thread (assim como podem fazer objetos C++ padrão mais). Essa classe de tempo de execução do Windows é *agile*. Somente um pequeno número de classes de tempo de execução do Windows que acompanham o Windows é não agile, mas quando você consumi-los, você precisa levar em consideração seu modelo de threading e comportamento de marshaling (marshaling é passar dados em um limite de apartment). Ele é um bom padrão para cada objeto de tempo de execução do Windows ágeis, portanto, seus próprios [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) tipos são agile por padrão.
+Na grande maioria dos casos, uma instância de uma classe de tempo de execução do Windows pode ser acessada de qualquer thread (assim como podem fazer objetos C++ padrão mais). Essa classe de tempo de execução do Windows é *agile*. Somente um pequeno número de classes de tempo de execução do Windows que acompanham o Windows é não agile, mas quando você consumi-los, você precisa levar em consideração seu modelo de threading e comportamento de marshaling (marshaling é passar dados em um limite de apartment). Ele é um bom padrão para cada objeto de tempo de execução do Windows ágeis, portanto, seus próprios [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) tipos são agile por padrão.
 
 Mas você pode recusá-lo. Você pode ter um motivo convincente para exigir que um objeto do tipo residir, por exemplo, em um determinado single-threaded apartment. Normalmente, isso envolve os requisitos de reentrância. Entretanto, cada vez mais, até mesmo APIs da interface do usuário oferecem objetos ágeis. Em geral, a agilidade é a opção mais simples e eficiente. Além disso, quando você implementa uma fábrica de ativação, ela deve ser ágil mesmo que a sua classe de tempo de execução correspondente não seja.
 
@@ -23,7 +23,7 @@ Mas você pode recusá-lo. Você pode ter um motivo convincente para exigir que 
 
 ## <a name="code-examples"></a>Exemplos de código
 
-Vamos usar um exemplo de implementação de uma classe de tempo de execução para ilustrar como C + + c++ /CLI WinRT dá suporte a agilidade.
+Vamos usar um exemplo de implementação de uma classe de tempo de execução para ilustrar como C++/WinRT dá suporte a agilidade.
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>
@@ -46,7 +46,7 @@ winrt::com_ptr<MyType> myimpl{ winrt::make_self<MyType>() };
 winrt::com_ptr<IAgileObject> iagileobject{ myimpl.as<IAgileObject>() };
 ```
 
-Em vez de manipular uma exceção, você pode chamar [**IUnknown::try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function).
+Em vez de manipular uma exceção, você pode chamar [**IUnknown::try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function).
 
 ```cppwinrt
 winrt::com_ptr<IAgileObject> iagileobject{ myimpl.try_as<IAgileObject>() };
@@ -111,18 +111,18 @@ NonAgileType nonagile_obj_again{ agile.get() };
 winrt::hstring message{ nonagile_obj_again.Message() };
 ```
 
-A chamada [**agile_ref::get**](/uwp/cpp-ref-for-winrt/agile-ref#agilerefget-function) retorna um proxy que pode ser utilizado com segurança dentro do contexto de thread no qual **get** é chamado.
+A chamada [**agile_ref::get**](/uwp/cpp-ref-for-winrt/agile-ref#agile_refget-function) retorna um proxy que pode ser utilizado com segurança dentro do contexto de thread no qual **get** é chamado.
 
 ## <a name="important-apis"></a>APIs Importantes
 
 * [Interface IAgileObject](https://msdn.microsoft.com/library/windows/desktop/hh802476)
-* [Interface IMarshal](https://docs.microsoft.com/previous-versions/windows/embedded/ms887993)
-* [WinRT::agile_ref struct modelo](/uwp/cpp-ref-for-winrt/agile-ref)
+* [Interface IMarshal](/windows/desktop/api/objidl/nn-objidl-imarshal)
+* [winrt::agile_ref struct template](/uwp/cpp-ref-for-winrt/agile-ref)
 * [WinRT::Implements struct modelo](/uwp/cpp-ref-for-winrt/implements)
 * [modelo de função WinRT::make_agile](/uwp/cpp-ref-for-winrt/make-agile)
-* [WinRT::non_agile marcador struct](/uwp/cpp-ref-for-winrt/non-agile)
+* [winrt::non_agile marker struct](/uwp/cpp-ref-for-winrt/non-agile)
 * [WinRT::Windows::Foundation::IUnknown:: como função](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
-* [função WinRT::Windows::Foundation::IUnknown::try_as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)
+* [função WinRT::Windows::Foundation::IUnknown::try_as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

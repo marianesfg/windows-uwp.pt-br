@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, complementos, produtos no aplicativo, IAPs
 ms.localizationpriority: medium
-ms.openlocfilehash: 50733bc0617d56b7e6b8596b661aff8056961f18
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 84b55ea8bc62955e3556fcff4e8d608738eb59ce
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599901"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334424"
 ---
 # <a name="get-all-add-ons"></a>Obter todos os complementos
 
@@ -30,7 +30,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` |
+| OBTER    | `https://manage.devcenter.microsoft.com/v1.0/my/inappproducts` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -58,14 +58,14 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como recuperar todos os dados de complemento de todos os aplicativos que estão registrados em sua conta.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
 O exemplo a seguir demonstra como recuperar somente os 10 primeiros complementos.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -133,7 +133,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicita
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | cadeia de caracteres | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 100 complementos registrados em sua conta, o corpo da resposta incluirá um valor @nextLink de ```inappproducts?skip=10&top=10```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?skip=10&top=10``` para solicitar os próximos 10 complementos. |
+| @nextLink  | cadeia de caracteres | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação `https://manage.devcenter.microsoft.com/v1.0/my/` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 100 complementos registrados em sua conta, o corpo da resposta incluirá um valor @nextLink de `inappproducts?skip=10&top=10`, o que indica que você pode chamar `https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?skip=10&top=10` para solicitar os próximos 10 complementos. |
 | value            | matriz  |  Uma matriz que contém objetos que fornecem informações sobre cada complemento. Para saber mais, veja [recurso de complemento](manage-add-ons.md#add-on-object).   |
 | totalCount   | int  | O número de objetos de aplicativo na matriz *value* do corpo da resposta.     |
 

@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de complemento, excluir, produto no aplicativo, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: cdcd74b86ce846f19f8a4eb912781762adb66a2d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 4a694846c745fbfbc175781dd76cc983e402b676
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57655771"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334914"
 ---
 # <a name="delete-an-add-on-submission"></a>Excluir um envio de complemento
 
@@ -30,7 +30,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| DELETE    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions/{submissionId}``` |
+| DELETE    | `https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions/{submissionId}` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -57,7 +57,7 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como excluir um envio de complemento.
 
-```
+```json
 DELETE https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP/submissions/1152921504621230023 HTTP/1.1
 Authorization: Bearer <your access token>
 ```

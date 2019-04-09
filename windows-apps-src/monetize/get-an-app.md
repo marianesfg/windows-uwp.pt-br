@@ -6,12 +6,12 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, app
 ms.localizationpriority: medium
-ms.openlocfilehash: ccb5473f85cba08c170af2334b0894a11e27a15a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c6f4a4cb86bb5cf23e84e75ad99750dd6cff9539
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57590511"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334535"
 ---
 # <a name="get-an-app"></a>Obter um app
 
@@ -30,7 +30,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}``` |
+| OBTER    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -55,7 +55,7 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como recuperar informações sobre um app com o valor de ID da Store 9NBLGGH4R315.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315 HTTP/1.1
 Authorization: Bearer <your access token>
 ```

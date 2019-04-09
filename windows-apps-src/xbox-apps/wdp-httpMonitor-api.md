@@ -4,12 +4,12 @@ description: Saiba como acessar o tráfego HTTP do aplicativo focado em um Xbox.
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
-ms.openlocfilehash: 8b8828b060e0401e7938517e497bae20e1234baf
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1e7c07c92c1671cd9051393586e1e8562fa756d0
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244092"
 ---
 # <a name="http-monitor-api-reference"></a>Referência de API do monitor de HTTP   
 Você pode acessar o tráfego HTTP em tempo real para o aplicativo focado usando essa API se o monitor HTTP tiver sido habilitado no console do Xbox, marcando a caixa na Dev Home.
@@ -22,9 +22,9 @@ Você pode obter se o monitor de HTTP foi habilitado na Dev Home.
 
 Método      | URI da solicitação
 :------     | :-----
-GET | /ext/httpmonitor/sessions
-<br />
-**Parâmetros de URI**
+OBTER | /ext/httpmonitor/sessions
+
+**Parâmetros do URI**
 
 - Nenhuma
 
@@ -52,6 +52,7 @@ Código de status HTTP      | Descrição
 5XX | Códigos de erro
 
 ## <a name="get-http-traffic-from-the-focused-app"></a>Obter o tráfego HTTP do aplicativo focado
+
 **Solicitação**
 
 Obtenha o tráfego de HTTP do aplicativo focado no Xbox, desde que não seja um aplicativo do sistema, em tempo real, se o monitor de HTTP tiver sido habilitado na Dev Home.
@@ -59,8 +60,8 @@ Obtenha o tráfego de HTTP do aplicativo focado no Xbox, desde que não seja um 
 Método      | URI da solicitação
 :------     | :-----
 Websocket | /ext/httpmonitor/sessions
-<br />
-**Parâmetros de URI**
+
+**Parâmetros do URI**
 
 - Nenhuma
 
@@ -98,7 +99,7 @@ Código de status HTTP      | Descrição
 403 | Monitor de HTTP desabilitado, deve ser habilitado na Dev Home
 5XX | Códigos de erro
 
-<br />
+
 **Famílias de dispositivos disponíveis**
 
 * Windows Xbox

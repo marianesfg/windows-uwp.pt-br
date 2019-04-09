@@ -8,19 +8,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f631f3178b4af4fe1c1d2d8b27e8ae6ac25c6ad1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d58587c8a7e391c51dc3267dd6ebb069170604a4
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244272"
 ---
 # <a name="rotation"></a>Rotação
 
 
 Este artigo descreve a nova IU do Windows para rotação. Também fornece diretrizes para a experiência do usuário que devem ser consideradas ao usar esse novo mecanismo de interação no seu aplicativo UWP.
 
-> **APIs importantes**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [ **Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **APIs importantes**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
@@ -29,7 +29,7 @@ Este artigo descreve a nova IU do Windows para rotação. Também fornece diretr
 ## <a name="additional-usage-guidance"></a>Diretriz de uso adicional
 
 
-**Visão geral de rotação**
+**Visão geral da rotação**
 
 A rotação é uma técnica otimizada para toque usada por aplicativos UWP para permitir que os usuários girem um objeto em uma direção circular (sentido horário ou anti-horário).
 
@@ -48,20 +48,20 @@ Use a rotação para ajudar os usuários a girarem os elementos da interface dir
 
 A primeira foto mostra os pontos inicial (polegar) e secundário (dedo indicador): o dedo indicador está tocando uma árvore e o polegar está tocando uma tora.
 
-![Imagem mostrando os dois pontos de toque inicial para o gesto de rotação.](images/ux-rotate-points1.png)
+![imagem mostrando os dois pontos iniciais de toque para o gesto de girar.](images/ux-rotate-points1.png)
 Nesta segunda foto, a rotação é realizada em torno do ponto de toque inicial (dedão). Após a rotação, o dedo indicador permanece tocando o tronco da árvore e o polegar a tora (o ponto de rotação).
 
-![Imagem mostrando uma imagem girada com o ponto de rotação restritos a um dos dois pontos de toque inicial.](images/ux-rotate-points2.png)
+![imagem mostrando uma foto girada com o ponto de rotação restringido a um dos dois pontos de toque iniciais.](images/ux-rotate-points2.png)
 Nesta terceira foto, o centro da rotação foi definido pelo aplicativo (ou definido pelo usuário) para ser o ponto central da foto. Após a rotação, como a foto não foi girada por um dos dedos, a ilusão de uma manipulação direta é quebrada (a menos que o usuário tenha escolhido essa configuração).
 
-![Imagem mostrando uma imagem girada com o ponto de rotação é restrito para o centro da imagem em vez de qualquer um dos dois pontos de toque inicial.](images/ux-rotate-points3.png)
+![imagem mostrando uma foto girada com o ponto de rotação restringido ao centro da foto em vez de algum dos dois pontos de toque iniciais.](images/ux-rotate-points3.png)
 Nesta última foto, o centro da rotação foi definido pelo aplicativo (ou definido pelo usuário) para ser um ponto no meio da borda esquerda da foto. Novamente, a menos que o usuário tenha escolhido essa configuração, nesse caso, a ilusão de uma manipulação direta é quebrada.
 
 ![imagem mostrando uma foto girada com o ponto de rotação restringido ao centro mais à esquerda da foto em vez de a um dos dois pontos de toque iniciais.](images/ux-rotate-points4.png)
 
  
 
-Windows 8 oferece suporte a três tipos de rotação: gratuito, restrita e combinados.
+Windows 10 dá suporte a três tipos de rotação: gratuito, restrita e combinados.
 
 <table>
 <colgroup>
@@ -103,20 +103,20 @@ Windows 8 oferece suporte a três tipos de rotação: gratuito, restrita e combi
 
 
 **Exemplos**
-* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Exemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Exemplo do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Amostra de elementos visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Amostras de arquivo-morto**
+**Exemplos de arquivo**
 * [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: Exemplo de teste de hit de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Entrada: Exemplo simplificado de tinta](https://go.microsoft.com/fwlink/p/?linkid=246570)
 * [Entrada: Gestos e manipulações com GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: Manipulações e exemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Exemplo de entrada de toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [Amostra de entrada por toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

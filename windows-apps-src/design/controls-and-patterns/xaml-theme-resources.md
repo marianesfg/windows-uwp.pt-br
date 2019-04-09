@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e65ad1f4dcb5a83eb7336fc8e1eb794b107dcf01
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7cae075b0d71925eb35ac2362aef291994b29801
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244402"
 ---
 # <a name="xaml-theme-resources"></a>Recursos de temas XAML
 
@@ -159,7 +159,7 @@ Esta tabela lista as cores de todo o sistema que XAML fornece como objetos de re
 | SystemColorHighlightColor     | **Texto Selecionado** (em segundo plano) | Highlight                | \#FF3399FF      |
 | SystemColorHighlightTextColor | **Texto Selecionado** (em primeiro plano) | HighlightAlt             | \#FFFFFFFF      |
 | SystemColorHotlightColor      | **Hiperlinks**                 | Hyperlink                | \#FF0066CC      |
-| SystemColorWindowColor        | **Em segundo plano**                 | PageBackground           | \#FFFFFFFF      |
+| SystemColorWindowColor        | **Histórico**                 | PageBackground           | \#FFFFFFFF      |
 | SystemColorWindowTextColor    | **Texto**                       | PageText                 | \#FF000000      |
 
 O Windows oferece diferentes temas de alto contraste e permite que o usuário defina as cores específicas para as configurações de alto contraste na Central de Facilidade de Acesso, conforme mostrado aqui. Por isso, não é possível fornecer uma lista definitiva de valores de cores de alto contraste.
@@ -240,7 +240,7 @@ Fornece as propriedades comuns para todos os outros estilos de contêiner [TextB
 <Style x:Key="BaseTextBlockStyle" TargetType="TextBlock">
     <Setter Property="FontFamily" Value="Segoe UI"/>
     <Setter Property="FontWeight" Value="SemiBold"/>
-    <Setter Property="FontSize" Value="15"/>
+    <Setter Property="FontSize" Value="14"/>
     <Setter Property="TextTrimming" Value="None"/>
     <Setter Property="TextWrapping" Value="Wrap"/>
     <Setter Property="LineStackingStrategy" Value="MaxHeight"/>
@@ -318,7 +318,7 @@ Fornece as propriedades comuns para todos os outros estilos de contêiner [TextB
 <Style x:Key="BodyTextBlockStyle" TargetType="TextBlock" 
        BasedOn="{StaticResource BaseTextBlockStyle}">
     <Setter Property="FontWeight" Value="Normal"/>
-    <Setter Property="FontSize" Value="15"/>
+    <Setter Property="FontSize" Value="14"/>
 </Style>
 ```
 
@@ -352,7 +352,7 @@ Fornece as propriedades comuns para todos os outros estilos de contêiner [RichT
 <Style x:Key="BaseRichTextBlockStyle" TargetType="RichTextBlock">
     <Setter Property="FontFamily" Value="Segoe UI"/>
     <Setter Property="FontWeight" Value="SemiBold"/>
-    <Setter Property="FontSize" Value="15"/>
+    <Setter Property="FontSize" Value="14"/>
     <Setter Property="TextTrimming" Value="None"/>
     <Setter Property="TextWrapping" Value="Wrap"/>
     <Setter Property="LineStackingStrategy" Value="MaxHeight"/>

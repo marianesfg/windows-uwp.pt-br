@@ -6,12 +6,12 @@ ms.date: 10/23/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f4feff88507ae5f84bccf044aa9ab6711d6b8bb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c6674fc38d41e3a18709dcb81edc95d164f9f86c
+ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645761"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320589"
 ---
 # <a name="compile-resources-manually-with-makepriexe"></a>Compilar recursos manualmente com o MakePri.exe
 
@@ -43,17 +43,13 @@ O MakePri.exe é normalmente usado com as opções `new`, `versioned` e `resourc
 
 ## <a name="makepriexe-warnings-and-error-messages"></a>Mensagens de erro e de aviso do MakePri.exe
 
-```
-Resources found for language(s) '<language(s)>' but no resources found for default language(s): '<language(s)>'. Change the default language or qualify resources with the default language.
-```
+### <a name="resources-found-for-languages-languages-but-no-resources-found-for-default-languages-languages-change-the-default-language-or-qualify-resources-with-the-default-language"></a>Idiomas de padrão de recursos localizados para idiomas '< idiomas >', mas nenhum recurso encontrado para: '< idiomas >'. Alterar o idioma padrão ou qualifique recursos com o idioma padrão.
 
-O aviso acima é exibido quando o MakePri.exe ou o MSBuild descobre arquivos ou recursos de cadeia de caracteres para um determinado recurso nomeado que parece estar marcado com qualificadores de idioma, mas não existem candidatos para um idioma padrão. O processo para usar qualificadores nos nomes de arquivo e de pasta é descrito em [Personalizar os recursos para idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md). Um arquivo ou uma pasta pode conter um nome de idioma, mas não é descoberto nenhum recurso qualificado para o idioma padrão exato. Por exemplo, se um projeto usa "en-US" como idioma padrão e tem um arquivo chamado "de/logo.png", mas não tem nenhum arquivo marcado com o idioma padrão "en-US", esse aviso será exibido. Para remover esse aviso, algum arquivo ou recurso de cadeia de caracteres deve estar qualificado com o idioma padrão ou o idioma padrão deve ser alterado. Para alterar o idioma padrão, com sua solução aberta no Visual Studio, abra `Package.appxmanifest`. Na guia Aplicativo, confirme se o idioma padrão está definido corretamente (por exemplo, "en" ou "en-US").
+Esse aviso é exibido quando MakePri.exe ou MSBuild descobre arquivos ou recursos de cadeia de caracteres para um determinado recurso nomeado que parecem ser marcado com qualificadores de linguagem, mas nenhuma candidata é encontrada para um idioma padrão. O processo para usar qualificadores nos nomes de arquivo e de pasta é descrito em [Personalizar os recursos para idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md). Um arquivo ou uma pasta pode conter um nome de idioma, mas não é descoberto nenhum recurso qualificado para o idioma padrão exato. Por exemplo, se um projeto usa "en-US" como idioma padrão e tem um arquivo chamado "de/logo.png", mas não tem nenhum arquivo marcado com o idioma padrão "en-US", esse aviso será exibido. Para remover esse aviso, algum arquivo ou recurso de cadeia de caracteres deve estar qualificado com o idioma padrão ou o idioma padrão deve ser alterado. Para alterar o idioma padrão, com sua solução aberta no Visual Studio, abra `Package.appxmanifest`. Na guia Aplicativo, confirme se o idioma padrão está definido corretamente (por exemplo, "en" ou "en-US").
 
-```
-No default or neutral resource given for '<resource identifier>'. The application may throw an exception for certain user configurations when retrieving the resources.
-```
+### <a name="no-default-or-neutral-resource-given-for-resource-identifier-the-application-may-throw-an-exception-for-certain-user-configurations-when-retrieving-the-resources"></a>Nenhum padrão ou o recurso neutro fornecido para '<resource identifier>'. O aplicativo pode lançar uma exceção para determinadas configurações de usuário ao recuperar os recursos.
 
-O aviso acima é exibido quando o MakePri.exe ou o MSBuild descobre arquivos ou recursos que parecem estar marcados com qualificadores de idioma cujos recursos não são claros. Há qualificadores, mas não há garantia de que um candidato a recurso específico possa ser retornado para esse identificador de recurso no tempo de execução. Se não for possível encontrar nenhum candidato a recurso de um determinado idioma, região ou outro qualificador que seja um padrão ou que sempre corresponda ao contexto de um usuário, esse aviso será exibido. Em tempo de execução, para configurações de usuário específicas, como preferências de idioma ou local de residência de um usuário (**Configurações** > **Hora e idioma** > **Região e idioma**), as APIs usadas para recuperar o recurso podem gerar uma exceção inesperada. Para remover esse aviso, devem ser fornecidos recursos padrão, como um recurso no idioma padrão ou na região de residência global (homeregion-001) do projeto.
+Esse aviso é exibido quando MakePri.exe ou MSBuild descobre arquivos ou recursos que parecem ser marcado com qualificadores de idioma para o qual os recursos são claras. Há qualificadores, mas não há garantia de que um candidato a recurso específico possa ser retornado para esse identificador de recurso no tempo de execução. Se não for possível encontrar nenhum candidato a recurso de um determinado idioma, região ou outro qualificador que seja um padrão ou que sempre corresponda ao contexto de um usuário, esse aviso será exibido. Em tempo de execução, para configurações de usuário específicas, como preferências de idioma ou local de residência de um usuário (**Configurações** > **Hora e idioma** > **Região e idioma**), as APIs usadas para recuperar o recurso podem gerar uma exceção inesperada. Para remover esse aviso, devem ser fornecidos recursos padrão, como um recurso no idioma padrão ou na região de residência global (homeregion-001) do projeto.
 
 ## <a name="using-makepriexe-in-a-build-system"></a>Usando o MakePri.exe em um sistema de compilação
 

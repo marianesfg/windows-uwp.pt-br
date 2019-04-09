@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pacote, envio do aplicativo, finalizar
 ms.assetid: c7dd39e6-5162-455a-b03b-1ed76bffcf6e
 ms.localizationpriority: medium
-ms.openlocfilehash: c8fe211268190ac269018a6bd47acb4b824d2075
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7271d5892c4abbe94945a34787fbbf6b020149da
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607881"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334554"
 ---
 # <a name="finalize-the-rollout-for-an-app-submission"></a>Finalizar a distribuição para um envio de app
 
@@ -33,7 +33,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| POST   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout``` |
+| POSTAR   | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -59,7 +59,7 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como finalizar a distribuição de pacote para um envio do pacote de pré-lançamento.
 
-```
+```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/submissions/1152921504621243680/finalizepackagerollout HTTP/1.1
 Authorization: Bearer <your access token>
 ```

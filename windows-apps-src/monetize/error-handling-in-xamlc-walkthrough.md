@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, tratamento de erros, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: fe01a01dc97b67c339d015a260288176a5ba57da
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c0b8389d2319a670dd314417726b24e98378cd49
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642141"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334464"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a>Tratamento de erros no passo a passo do XAML/C#
 
@@ -69,7 +69,7 @@ Estes exemplos pressupõem que você tenha um aplicativo XAML/C# que contém um 
     ```
 
 4.  Compile e execute o projeto. Depois que o aplicativo estiver em execução, você verá uma mensagem semelhante a que está abaixo na janela **Saída** do Visual Studio.
-    ```
+    ```json
     AdControl error (): MicrosoftAdvertising.Shared.AdException: all ad requests must use the same application ID within a single application (0, d25517cb-12d4-4699-8bdc-52040c712cab) ErrorCode: ClientConfiguration
     ```
 

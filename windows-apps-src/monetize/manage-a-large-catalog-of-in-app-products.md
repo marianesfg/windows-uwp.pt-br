@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, catálogo, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 2335e09253570d09c33422d2f5ba4179697e4ea7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6b6c799c0bbf05e113bfc3d28816c6600d678f18
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57637351"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334714"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>Gerenciar um catálogo abrangente de produtos no aplicativo
 
@@ -35,7 +35,7 @@ A Loja usará somente a *offerId* da solicitação de compra nos [PurchaseResult
 A solicitação de compra para um produto específico em um catálogo abrangente é efetuada da mesma maneira como qualquer outra solicitação de compra em um aplicativo. Quando o aplicativo chama a nova sobrecarga do método [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), o aplicativo fornece *OfferId* e um objeto [ProductPurchaseDisplayProperties](https://msdn.microsoft.com/library/windows/apps/dn263390) populado com o nome do produto no aplicativo.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#MakePurchaseRequest)]
+[!code-csharp[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#MakePurchaseRequest)]
 
 ## <a name="report-fulfillment-of-the-in-app-offer"></a>Relatar o atendimento da oferta no aplicativo
 
@@ -46,7 +46,7 @@ Como mencionado antes, a Loja usa apenas a informação da oferta fornecida para
 O seguinte código demonstra a chamada de atendimento, e um padrão de mensagem de IU onde a informação sobre a oferta específica é inserida. Na ausência dessas informações de produto específicas, o exemplo usará informações do produto [ListingInformation](https://msdn.microsoft.com/library/windows/apps/br225163).
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#ReportFulfillment)]
+[!code-csharp[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#ReportFulfillment)]
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

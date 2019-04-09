@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 19ddd43d4e61480764882f1b10e6240aa2afeb8c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 74d93c700ecbfe3db39bf1ffc4c90e107b80f5a5
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662721"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335065"
 ---
 # <a name="manage-package-flight-submissions"></a>Gerenciar envios de pacote de pré-lançamento
 
@@ -41,17 +41,17 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 </thead>
 <tbody>
 <tr>
-<td align="left">GET</td>
+<td align="left">OBTER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
 <td align="left"><a href="get-a-flight-submission.md">Obtenha um envio de voo do pacote existente</a></td>
 </tr>
 <tr>
-<td align="left">GET</td>
+<td align="left">OBTER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status</td>
 <td align="left"><a href="get-status-for-a-flight-submission.md">Obter o status de um envio de voo do pacote existente</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions</td>
 <td align="left"><a href="create-a-flight-submission.md">Criar um novo envio de voo do pacote</a></td>
 </tr>
@@ -61,7 +61,7 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 <td align="left"><a href="update-a-flight-submission.md">Atualizar uma apresentação de voo de pacote existente</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit</td>
 <td align="left"><a href="commit-a-flight-submission.md">Confirmar envio de voo de um pacote novo ou atualizado</a></td>
 </tr>
@@ -85,7 +85,7 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
 
 3. [Criar um envio de pacote de pré-lançamento](create-a-flight-submission.md) executando o seguinte método na API de envio da Microsoft Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado.
 
-    ```
+    ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications{applicationId}/flights/{flightId}/submissions
     ```
 
@@ -98,7 +98,7 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
 
 5. Revise os dados de [envio de versão de pré-lançamento](#flight-submission-object) com as alterações necessárias para o novo envio e execute o método a seguir para [atualizar o envio de pacote de pré-lançamento](update-a-flight-submission.md).
 
-    ```
+    ```json
     PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}
     ```
       > [!NOTE]
@@ -121,13 +121,13 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
 
 5. [Confirme o envio do pacote de pré-lançamento](commit-a-flight-submission.md) realizando o método a seguir. Isso alertará o Partner Center que você concluiu o envio e que as atualizações agora devem ser aplicadas à sua conta.
 
-    ```
+    ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit
     ```
 
 6. Verifique o status de confirmação executando o método a seguir para [obter o status de envio de pacote de pré-lançamento](get-status-for-a-flight-submission.md).
 
-    ```
+    ```json
     GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status
     ```
 
@@ -180,22 +180,22 @@ Depois que uma distribuição de pacote gradual for habilitada para um envio de 
 </thead>
 <tbody>
 <tr>
-<td align="left">GET</td>
+<td align="left">OBTER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/packagerollout</td>
 <td align="left"><a href="get-package-rollout-info-for-a-flight-submission.md">Obter as informações de distribuição gradual para o envio de voo de um pacote</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage</td>
 <td align="left"><a href="update-the-package-rollout-percentage-for-a-flight-submission.md">O percentual de distribuição gradual para o envio de voo de um pacote de atualização</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/haltpackagerollout</td>
 <td align="left"><a href="halt-the-package-rollout-for-a-flight-submission.md">Interromper a distribuição gradual para o envio de voo de um pacote</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/finalizepackagerollout</td>
 <td align="left"><a href="finalize-the-package-rollout-for-a-flight-submission.md">Finalizar a distribuição gradual para o envio de voo de um pacote</a></td>
 </tr>
@@ -290,7 +290,7 @@ Esse recurso contém informações adicionais sobre todos os erros ou avisos rel
 | Valor           | Tipo    | Descrição       |
 |-----------------|---------|------|
 |  code               |    cadeia de caracteres     |   Um [código de status do envio](#submission-status-code) que descreve o tipo de erro ou aviso. |  
-|  details               |     cadeia de caracteres    |  Uma mensagem com mais detalhes sobre o problema.     |
+|  detalhes               |     cadeia de caracteres    |  Uma mensagem com mais detalhes sobre o problema.     |
 
 
 <span id="certification-report-object" />
@@ -393,7 +393,7 @@ Esse recurso contém [configurações de distribuição de pacote](#manage-gradu
 
 <span/>
 
-## <a name="enums"></a>Enumerações
+## <a name="enums"></a>Enums
 
 Esses métodos usam as enumerações a seguir.
 

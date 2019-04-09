@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e898b0552a9485cd15079a37940a2151e4bc9f9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9cc696746de837c4883ae4a9ee8ebcf42cb78b12
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57590731"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57822881"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -220,7 +220,7 @@ Se nenhuma correspondência for identificada, o acelerador é inválido e uma me
 O evento Invoked do objeto [KeyboardAccelerator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardaccelerator) é disparado quando o acelerador é executado. O evento do objeto [KeyboardAcceleratorInvokedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs) inclui as seguintes propriedades:
 
 - [**Manipulado** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.handled) (Boolean): Definir isso como true impede que o evento disparando o padrão de controle e interrompe a propagação de eventos do acelerador. O padrão é False.
-- [**Elemento** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.element) (DependencyObject): O objeto associado com o acelerador.
+- [**Element**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.element) (DependencyObject): O objeto associado com o acelerador.
 - [**KeyboardAccelerator**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.keyboardaccelerator): O Acelerador de teclado usado para gerar o evento Invoked.
 
 Aqui, demonstraremos como definir uma coleção de aceleradores de teclado para itens em um ListView e como tratar o evento para cada acelerador.
@@ -347,7 +347,7 @@ Talvez isso não seja sempre possível devido às diferenças na funcionalidade 
 | Reduzir | Ctrl + - | 
 | Zoom para o modo de exibição padrão | Ctrl + 0 | 
 | Salvar | Ctrl + S | 
-| Fechar | Ctrl + W | 
+| Feche | Ctrl + W | 
 | Print | Ctrl + P | 
 
 Observe que algumas dessas combinações não são válidas para versões localizadas do Windows. Por exemplo, na versão em espanhol do Windows, Ctrl + N é usado para negrito em vez de Ctrl + B. É recomendável fornecer aceleradores de teclado localizados, se o aplicativo for localizado.
@@ -618,12 +618,9 @@ public class MyListView : ListView
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Interações de teclado](keyboard-interactions.md)
-* [Chaves de acesso](access-keys.md)
+- [Interações de teclado](keyboard-interactions.md)
+- [Chaves de acesso](access-keys.md)
 
-**Exemplos**
-* [Galeria de controles XAML (também conhecido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+### <a name="samples"></a>Exemplos
 
-
- 
-
+- [Galeria de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery)

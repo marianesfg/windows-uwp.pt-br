@@ -6,15 +6,14 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, confirmar envio de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a860239bcd266f577abca3af1cfc994393cae8e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9e44f5672c817f9e1ab00df341a2fd78b23f2944
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594271"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334144"
 ---
 # <a name="commit-an-app-submission"></a>Confirmar um envio de aplicativo
-
 
 Use esse método na API de envio a Microsoft Store para confirmar o envio de um aplicativo novo ou atualizado Partner Center. Confirmar ação alertas Partner Center que os dados de envio foi carregados (incluindo todos os pacotes relacionados e imagens). Em resposta, o Partner Center confirma as alterações nos dados de envio para inclusão e publicação. Depois que a operação de confirmação for bem-sucedida, as alterações para o envio são mostradas no Partner Center.
 
@@ -34,7 +33,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` |
+| POSTAR    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -51,7 +50,6 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 | applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo que contém o envio que você deseja confirmar. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 | submissionId | cadeia de caracteres | Obrigatório. A ID do envio que você deseja confirmar. Esse ID está disponível nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL para a página de envio no Partner Center.  |
 
-
 ### <a name="request-body"></a>Corpo da solicitação
 
 Não forneça um corpo da solicitação para esse método.
@@ -60,7 +58,7 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como confirmar um envio de aplicativo.
 
-```
+```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/submissions/1152921504621243610/commit HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -81,7 +79,6 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | status           | cadeia de caracteres  | O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>  |
 
-
 ## <a name="error-codes"></a>Códigos de erro
 
 Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
@@ -91,7 +88,6 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | 400  | Os parâmetros de solicitação não são válidos. |
 | 404  | O envio especificado não pôde ser encontrado. |
 | 409  | O envio especificado foi encontrado, mas não pôde ser confirmada em seu estado atual ou o aplicativo usa um recurso do Partner Center que está [atualmente não tem suporte da API de envio a Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
-
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

@@ -5,16 +5,16 @@ ms.date: 10/03/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, vínculo, coleção
 ms.localizationpriority: medium
-ms.openlocfilehash: c3551ebcc59ebfe426b0be8d5bd20f7578517a25
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c4bf1805b16d869e7a29c49e8fe53c01cf469132
+ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649201"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921662"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>Controles de itens XAML; associar a uma coleção C++/WinRT
 
-Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma coleção *observável*. Essa ideia é baseada no padrão de design do software conhecido como o *padrão do observador*. Este tópico mostra como implementar coleções observáveis [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), e todos os itens como XAML de associar controles a eles.
+Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma coleção *observável*. Essa ideia é baseada no padrão de design do software conhecido como o *padrão do observador*. Este tópico mostra como implementar coleções observáveis [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), e todos os itens como XAML de associar controles a eles.
 
 Este passo a passo se baseia no projeto criado em [Controles XAML; vincular a uma propriedade C++/WinRT](binding-property.md), e ele adiciona aos conceitos explicados nesse tópico.
 
@@ -25,7 +25,7 @@ Este passo a passo se baseia no projeto criado em [Controles XAML; vincular a um
 Se uma classe de tempo de execução que representa uma coleção escolhe acionar o evento [**IObservableVector&lt;T&gt;::VectorChanged**](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged) sempre que um elemento é adicionado a ele ou removido dele, então a classe de tempo de execução é um coleção observável. Um controle de itens XAML pode se associar a e manipular esses eventos, recuperando a coleção atualizada e, em seguida, atualizando ele mesmo para mostrar os elementos atuais.
 
 > [!NOTE]
-> Para obter informações sobre como instalar e usar o C + + c++ /CLI consulte WinRT Visual Studio VSIX (extensão) (que fornece suporte de modelo de projeto) [suporte do Visual Studio para C + + c++ /CLI WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para obter informações sobre como instalar e usar o C++WinRT Visual Studio VSIX (extensão) e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), consulte [suporte para Visual Studio C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="add-a-bookskus-collection-to-bookstoreviewmodel"></a>Adicionar uma coleção **BookSkus** a **BookstoreViewModel**
 
@@ -121,8 +121,8 @@ void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
 Agora compile e execute o projeto. Clique no botão para executar o manipulador de eventos de **Clique**. Vimos que a implementação de **Anexar** aciona um evento para informar à interface do usuário que a coleção foi alterada; e o **ListBox** consulta novamente a coleção para atualizar seu próprio valor de **Itens**. Exatamente como antes, o título de um dos livros muda; e essa alteração de título será refletida no botão e na caixa de listagem.
 
 ## <a name="important-apis"></a>APIs Importantes
-* [IObservableVector&lt;T&gt;:: VectorChanged](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged)
-* [modelo de função WinRT::make](/uwp/cpp-ref-for-winrt/make)
+* [IObservableVector&lt;T&gt;::VectorChanged](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged)
+* [Modelo de função winrt::make](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Consumir APIs com C++/WinRT](consume-apis.md)

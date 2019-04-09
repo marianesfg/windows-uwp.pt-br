@@ -2,7 +2,7 @@
 title: Criar e registrar uma tarefa em segundo plano fora do processo.
 description: Crie uma classe de tarefa em segundo plano fora do processo e a registre para ser executada quando seu aplicativo não estiver em primeiro plano.
 ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
-ms.date: 07/02/2018
+ms.date: 2/27/2019
 ms.topic: article
 keywords: o Windows 10, uwp, tarefas em segundo plano
 ms.localizationpriority: medium
@@ -10,16 +10,16 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 9df6eef44d45db37e17610d6a5333f3a387b5cf6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1420b41ef48123e302b546c45669a75545927d89
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240044"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Criar e registrar uma tarefa em segundo plano fora do processo.
 
-**APIs importantes**
+**APIs Importantes**
 
 -   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
 -   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
@@ -150,7 +150,7 @@ O código de exemplo a seguir obtém o adiamento, salva-o e o libera quando o c�
 BackgroundTaskDeferral _deferral; // Note: defined at class scope so that we can mark it complete inside the OnCancel() callback if we choose to support cancellation
 public async void Run(IBackgroundTaskInstance taskInstance)
 {
-    _deferral = taskInstance.GetDeferral()
+    _deferral = taskInstance.GetDeferral();
     //
     // TODO: Insert code to start one or more asynchronous methods using the
     //       await keyword, for example:
@@ -200,7 +200,7 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 ```
 
 > [!NOTE]
-> Em C#, os métodos assíncronos da tarefa em segundo plano podem ser chamados usando as palavras-chave **async/await**. No C + + c++ /CX, um resultado semelhante pode ser obtido usando uma cadeia de tarefas.
+> Em C#, os métodos assíncronos da tarefa em segundo plano podem ser chamados usando as palavras-chave **async/await**. No C++/CX, um resultado semelhante pode ser obtido usando uma cadeia de tarefas.
 
 Para mais informações sobre padrões assíncronos, consulte [Programação assíncrona](https://msdn.microsoft.com/library/windows/apps/mt187335). Para exemplos adicionais sobre como usar os adiamentos para evitar que uma tarefa em segundo plano pare antecipadamente, consulte a [amostra de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666).
 
@@ -445,7 +445,7 @@ Veja os seguintes tópicos relacionados para obter referência de API, diretriz 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-**Tópicos de instrução de tarefa em segundo plano detalhado**
+**Tópicos de instruções detalhadas de tarefa em segundo plano**
 
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
@@ -455,13 +455,13 @@ Veja os seguintes tópicos relacionados para obter referência de API, diretriz 
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
-* [Converter uma tarefa de plano de fundo de out-of-process em uma tarefa de plano de fundo em processo](convert-out-of-process-background-task.md)  
+* [Converter uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo](convert-out-of-process-background-task.md)  
 
-**Diretrizes de tarefa em segundo plano**
+**Diretrizes da tarefa em segundo plano**
 
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar suspender, continuar e eventos em aplicativos UWP do plano de fundo (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
 **Referência de API de tarefa em segundo plano**
 

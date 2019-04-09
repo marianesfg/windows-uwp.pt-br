@@ -7,20 +7,18 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a420ed5ed8f498eb9c900cbacb1b766c4a01214
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 62ad93fa480f0515c4ed6df2d73a745454197ac6
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599281"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291634"
 ---
 # <a name="triangle-strips"></a>Listas de triângulos
-
 
 Uma faixa de triângulos é uma série de triângulos conectados. Como os triângulos são conectados, o aplicativo não precisa especificar repetidamente todos os três vértices de cada triângulo. Por exemplo, você precisa de apenas sete vértices para definir a faixa de triângulos a seguir.
 
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Exemplo
-
 
 ![ilustração de uma faixa de triângulos com sete vértices](images/tristrip.png)
 
@@ -34,7 +32,7 @@ A ilustração a seguir ilustra uma faixa de triângulos renderizado.
 
 O código a seguir mostra como criar vértices para essa faixa de triângulos.
 
-```
+```cpp
 struct CUSTOMVERTEX
 {
 float x,y,z;
@@ -53,7 +51,7 @@ CUSTOMVERTEX Vertices[] =
 
 O exemplo de código abaixo mostra como renderizar essa faixa de triângulos no Direct3D.
 
-```
+```cpp
 //
 // It is assumed that d3dDevice is a valid
 // pointer to a device interface.

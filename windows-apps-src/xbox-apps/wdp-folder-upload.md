@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e1a2c7f0-0040-4ce7-94de-17224736e20b
 ms.localizationpriority: medium
-ms.openlocfilehash: 0805dbeedcf66bc3596f3d284f51e8f177608396
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 870d203271cb75ecf5531106bb2c10b3736db9b9
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244042"
 ---
 # <a name="upload-a-folder-to-the-development-directory"></a>Carregar uma pasta para o diretório de desenvolvimento
 
@@ -21,16 +21,16 @@ ms.locfileid: "57617601"
 
 Método      | URI da solicitação
 :------     | :------
-POST | /api/app/packagemanager/upload 
-<br />
-**Parâmetros de URI**
+POSTAR | /api/app/packagemanager/upload 
+
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
 Parâmetro do URI      | Descrição
 :------     | :-----
 destinationFolder (obrigatória) | O nome da pasta de destino da pasta a ser carregada. Essa pasta será colocada em d:\developmentfiles\LooseApps no console. Este nome de pasta deverá ser codificado em base64 porque pode conter separadores de caminho se a pasta estiver em uma subpasta em LooseApps.
-<br />
+
 
 **Cabeçalhos de solicitação**
 
@@ -51,7 +51,7 @@ Código de status HTTP      | Descrição
 200 | Êxito
 4XX | Códigos de erro
 5XX | Códigos de erro
-<br />
+
 **Famílias de dispositivos disponíveis**
 
 * Windows Xbox

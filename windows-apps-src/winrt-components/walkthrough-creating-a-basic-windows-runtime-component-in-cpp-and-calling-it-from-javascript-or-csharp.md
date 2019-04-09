@@ -6,16 +6,16 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fce4ed3f32c0207e55b37a765b4d48d234343e38
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: f1f147d98b8d88e912cc9fec40d5e29c34748167
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625031"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291894"
 ---
 # <a name="walkthrough-creating-a-windows-runtime-component-in-ccx-and-calling-it-from-javascript-or-c"></a>Passo a passo: Criar um componente do Windows Runtime em C++/CX e chamando-o por JavaScript ou C#
 > [!NOTE]
-> Este tópico existe para ajudar você na manutenção do seu aplicativo C++/CX. Recomendamos que você use [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para novos aplicativos. C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows. Para saber como criar um componente de tempo de execução do Windows usando C + + c++ /CLI WinRT, consulte [criar eventos em C + + c++ /CLI WinRT](../cpp-and-winrt-apis/author-events.md).
+> Este tópico existe para ajudar você na manutenção do seu aplicativo C++/CX. Recomendamos que você use [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para novos aplicativos. C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows. Para saber como criar um componente de tempo de execução do Windows usando C++/WinRT, consulte [criar eventos em C++/WinRT](../cpp-and-winrt-apis/author-events.md).
 
 Este procedimento passo a passo mostra como criar uma DLL de componente do Tempo de Execução do Windows básica que pode ser chamada em JavaScript, C# ou Visual Basic. Antes de começar este procedimento passo a passo, assegure-se de que você compreendeu conceitos como a Abstract Binary Interface (ABI), as classes ref e as extensões de componente do Visual C++ que facilitam o trabalho com classes ref. Para obter mais informações, consulte [Criação de componentes do Tempo de Execução do Windows em C++](creating-windows-runtime-components-in-cpp.md) e [Referência da linguagem Visual C++ (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
@@ -421,7 +421,7 @@ function ButtonClear_Click() {
 }
 ```
 
-Adicione um código para incluir os ouvintes de eventos, substituindo a chamada existente para WinJS.UI.processAll em app.onactivated em default.js com o código a seguir que implementa o registro de evento em um bloco then. Para obter uma explicação detalhada sobre isso, consulte Criar um aplicativo "Hello World" (JS).
+Adicione um código para incluir os ouvintes de eventos, substituindo a chamada existente para WinJS.UI.processAll em app.onactivated em default.js com o código a seguir que implementa o registro de evento em um bloco then. Para obter uma explicação detalhada de isso, consulte [criar um aplicativo "Olá, mundo" (JS)](/windows/uwp/get-started/create-a-hello-world-app-js-uwp).
 
 ```JavaScript
 args.setPromise(WinJS.UI.processAll().then( function completed() {
@@ -610,4 +610,4 @@ Caso o código JavaScript não reconheça as propriedades públicas ou os métod
 Caso remova um projeto de componente do Tempo de Execução do Windows C++ de uma solução, você também deve remover manualmente a referência do projeto JavaScript. Deixar de fazer isso impede operações de depuração ou compilação subsequentes. Caso necessário, é possível adicionar uma referência de assembly à DLL.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Criando componentes de tempo de execução do Windows em C + + c++ /CX](creating-windows-runtime-components-in-cpp.md)
+* [Criando componentes de tempo de execução do Windows em C++/CX](creating-windows-runtime-components-in-cpp.md)

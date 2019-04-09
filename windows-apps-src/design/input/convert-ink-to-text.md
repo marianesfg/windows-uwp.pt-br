@@ -8,19 +8,18 @@ keywords: Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, Ink
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9bdd122f438cc9584b5e1eff2236c625adea9c2b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c7bcb66396ca2731de1ccb2237bb982bf9b541df
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633741"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334954"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Reconhecer traços do Windows Ink como texto e formas
 
 Converta traços de tinta em texto e formas usando os recursos de reconhecimento integrados ao Windows Ink.
 
-> **APIs importantes**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [ **Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
-
+> **APIs importantes**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 ## <a name="free-form-recognition-with-ink-analysis"></a>Reconhecimento de forma livre com análise de tinta
 
@@ -33,9 +32,10 @@ Neste exemplo, o reconhecimento é iniciado quando o usuário clica em um botão
 
 **Baixar esse exemplo no [exemplo de análise de tinta (basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)**
 
-1.  Primeiro, configuramos a interface do usuário (MainPage.xaml). 
+1. Primeiro, configuramos a interface do usuário (MainPage.xaml). 
 
     A interface do usuário inclui um botão "Reconhecer", um [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) e um [**Canvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas) padrão. Quando o botão "Reconhecer" é pressionado, todos os traços de tinta na tela de tinta são analisados e (se reconhecido) as formas e o texto correspondentes são desenhados na tela padrão. Os traços de tinta originais são então excluídos da tela de tinta.
+
 ```xaml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -63,21 +63,25 @@ Neste exemplo, o reconhecimento é iniciado quando o usuário clica em um botão
         </Grid>
     </Grid>
 ```
+
 2. No arquivo UI code-behind (MainPage.xaml.cs), adicione as referências de tipo de namespace necessárias para a nossa funcionalidade de análise de tinta e tinta:
     - [Windows.UI.Input.Inking](https://docs.microsoft.com/uwp/api/windows.ui.input.inking)
     - [Windows.UI.Input.Inking.Analysis](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis)
     - [Windows.UI.Xaml.Shapes](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes)
 
 3. Em seguida, podemos especificar nossas variáveis globais:
+
 ```csharp
     InkAnalyzer inkAnalyzer = new InkAnalyzer();
     IReadOnlyList<InkStroke> inkStrokes = null;
     InkAnalysisResult inkAnalysisResults = null;
 ```
-4.  Em seguida, definimos alguns comportamentos básicos de entrada à tinta:
+
+4. Em seguida, definimos alguns comportamentos básicos de entrada à tinta:
     - O [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar dados de entrada de caneta, mouse e toque como traços de tinta ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 
     - Os traços de tinta são renderizados em [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) usando [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050) especificados. 
     - Um ouvinte para o evento de clique no botão "Recognize" também é declarado.
+
 ```csharp
 /// <summary>
 /// Initialize the UI page.
@@ -103,7 +107,8 @@ public MainPage()
         recognize.Click += RecognizeStrokes_Click;
     }
 ```
-5.  Para este exemplo, realizamos a análise de tinta no manipulador de eventos de clique do botão "Reconhecer".
+
+5. Para este exemplo, realizamos a análise de tinta no manipulador de eventos de clique do botão "Reconhecer".
     - Primeiro, chame [**GetStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkstrokecontainer.GetStrokes) no [**StrokeContainer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkpresenter.StrokeContainer) do [**InkCanvas**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) para obter a coleção de todos os traços de tinta atual.
     - Se os traços de tinta estiverem presentes, passe-os em uma chamada para [**AddDataForStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer#Windows_UI_Input_Inking_Analysis_InkAnalyzer_AddDataForStrokes_Windows_Foundation_Collections_IIterable_Windows_UI_Input_Inking_InkStroke__) do InkAnalyzer.
     - Tentamos reconhecer desenhos e texto, mas você pode usar o método [**SetStrokeDataKind**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind) para especificar se está interessado apenas em texto (incluindo a estrutura do documento e as listas com marcadores) ou apenas em desenhos (incluindo o reconhecimento de formas).
@@ -111,6 +116,7 @@ public MainPage()
     - Se [**Status**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) retornar um estado de **Updated**, chame [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) para ambos [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) e [**InkAnalysisNodeKind.InkDrawing**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind).
     - Itere através de ambos os conjuntos de tipos de nó e desenhe o respectivo texto ou forma na tela de reconhecimento (abaixo da tela de tinta).
     - Por fim, exclua os nós reconhecidos do InkAnalyzer e os traços de tinta correspondentes da tela de tinta.
+
 ```csharp
 /// <summary>
 /// The "Analyze" button click handler.
@@ -208,7 +214,9 @@ private async void RecognizeStrokes_Click(object sender, RoutedEventArgs e)
         }
     }
 ```
+
 6. Aqui está a função para desenhar um TextBlock na nossa tela de reconhecimento. Usamos o retângulo delimitador do traço de tinta associado na tela de tinta para definir a posição e tamanho da fonte do TextBlock.
+
 ```csharp
 /// <summary>
 /// Draw ink recognition text string on the recognitionCanvas.
@@ -227,7 +235,9 @@ private void DrawText(string recognizedText, Rect boundingRect)
     recognitionCanvas.Children.Add(text);
 }
 ```
+
 7. Aqui estão as funções para desenhar elipses e polígonos em nossa tela de reconhecimento. Usamos o retângulo delimitador do traço de tinta associado na tela de tinta para definir a posição e tamanho da fonte das formas.
+
 ```csharp
     // Draw an ellipse on the recognitionCanvas.
     private void DrawEllipse(InkAnalysisInkDrawing shape)
@@ -271,7 +281,6 @@ Aqui está essa amostra em ação:
 | --- | --- |
 | ![Antes da análise](images/ink/ink-analysis-raw2-small.png) | ![Depois da análise](images/ink/ink-analysis-analyzed2-small.png) |
 
----
 ## <a name="constrained-handwriting-recognition"></a>Reconhecimento de manuscrito restrito
 
 Na seção anterior ([Reconhecimento de forma livre com análise de tinta](#free-form-recognition-with-ink-analysis)), demonstramos como usar as [APIs de análise de tinta](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis) para analisar e reconhecer traços de tinta arbitrários dentro da área de InkCanvas.
@@ -285,11 +294,11 @@ Neste exemplo, o reconhecimento é iniciado quando o usuário clica em um botão
 
 **Baixar esse exemplo no [exemplo de reconhecimento de manuscrito de tinta](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)**
 
-1.  Primeiro, definimos a interface do usuário.
+1. Primeiro, definimos a interface do usuário.
 
     A interface do usuário inclui um botão "Recognize", [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) e uma área para exibir os resultados de reconhecimento.    
 
-    ```    XAML
+    ```xaml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -324,8 +333,7 @@ Neste exemplo, o reconhecimento é iniciado quando o usuário clica em um botão
     - [Windows.UI.Input](https://docs.microsoft.com/uwp/api/windows.ui.input)
     - [Windows.UI.Input.Inking](https://docs.microsoft.com/uwp/api/windows.ui.input.inking)
 
-
-3.  Em seguida, definimos alguns comportamentos básicos de entrada à tinta.
+3. Em seguida, definimos alguns comportamentos básicos de entrada à tinta.
 
     O [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). Os traços de tinta são renderizados em [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) usando [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050) especificados. Um ouvinte para o evento de clique no botão "Recognize" também é declarado.
 
@@ -351,7 +359,7 @@ Neste exemplo, o reconhecimento é iniciado quando o usuário clica em um botão
         }
     ```
 
-4.  Por fim, executamos o reconhecimento de manuscrito básico. Para este exemplo, usamos o manipulador de eventos de clique do botão "Recognize" para executar o reconhecimento de manuscrito.
+4. Por fim, executamos o reconhecimento de manuscrito básico. Para este exemplo, usamos o manipulador de eventos de clique do botão "Recognize" para executar o reconhecimento de manuscrito.
 
     Um [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) armazena todos os traços de tinta em um objeto [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492). Os traços são expostos por meio da propriedade [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) de **InkPresenter** e recuperados usando o método [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499).
 
@@ -479,22 +487,21 @@ Seu aplicativo pode consultar o conjunto de mecanismos de reconhecimento de manu
 
 Para instalar novos pacotes de idiomas e habilitar o reconhecimento de manuscrito para o idioma:
 
-1.  Vá para **Configurações &gt; Hora e Idioma &gt; Região e Idioma**.
-2.  Selecione **Adicionar um idioma**.
-3.  Selecione um idioma na lista e escolha a versão da região. O idioma agora é listado na página **Região e Idioma**.
-4.  Clique no idioma e selecione **Opções**.
-5.  Na página **Opções de Idioma**, baixe o **Handwriting recognition engine** (também é possível baixar o pacote de idiomas completo, o mecanismo de reconhecimento de fala e o layout do teclado aqui).
-
- 
+1. Vá para **Configurações &gt; Hora e Idioma &gt; Região e Idioma**.
+2. Selecione **Adicionar um idioma**.
+3. Selecione um idioma na lista e escolha a versão da região. O idioma agora é listado na página **Região e Idioma**.
+4. Clique no idioma e selecione **Opções**.
+5. Na página **Opções de Idioma**, baixe o **Handwriting recognition engine** (também é possível baixar o pacote de idiomas completo, o mecanismo de reconhecimento de fala e o layout do teclado aqui).
 
 Aqui, demonstramos como usar o mecanismo de reconhecimento de manuscrito para interpretar um conjunto de traços em [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) com base no reconhecedor selecionado.
 
 O reconhecimento é iniciado quando o usuário clica em um botão ao terminar de escrever.
 
-1.  Primeiro, definimos a interface do usuário.
+1. Primeiro, definimos a interface do usuário.
 
     A interface do usuário inclui um botão "Recognize", uma caixa de combinação que lista todos os reconhecedores de manuscrito instalados, [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) e uma área para exibir resultados de reconhecimento.
-```    XAML
+
+```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -536,13 +543,14 @@ O reconhecimento é iniciado quando o usuário clica em um botão ao terminar de
     </Grid>
 ```
 
-2.  Em seguida, definimos alguns comportamentos básicos de entrada à tinta.
+2. Em seguida, definimos alguns comportamentos básicos de entrada à tinta.
 
     O [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). Os traços de tinta são renderizados em [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) usando [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050) especificados.
 
     Chamamos uma função `InitializeRecognizerList` para popular a caixa de combinação do reconhecedor com uma lista de reconhecedores de manuscrito instalados.
 
     Também declaramos ouvintes para o evento de clique no botão "Recognize" e o evento de alteração de seleção na caixa de combinação do reconhecedor.
+
 ```csharp
  public MainPage()
      {
@@ -572,9 +580,10 @@ O reconhecimento é iniciado quando o usuário clica em um botão ao terminar de
      }
 ```
 
-3.  Populamos a caixa de combinação do reconhecedor com uma lista de reconhecedores de manuscrito instalados.
+3. Populamos a caixa de combinação do reconhecedor com uma lista de reconhecedores de manuscrito instalados.
 
     Um [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) é criado para gerenciar o processo de reconhecimento de manuscrito. Use esse objeto para chamar [**GetRecognizers**](https://msdn.microsoft.com/library/windows/apps/br208480) e recuperar a lista de reconhecedores instalados para popular a caixa de combinação do reconhecedor.
+
 ```csharp
 // Populate the recognizer combo box with installed recognizers.
     private void InitializeRecognizerList()
@@ -593,9 +602,10 @@ O reconhecimento é iniciado quando o usuário clica em um botão ao terminar de
     }
 ```
 
-4.  Atualize o reconhecedor de manuscrito se a seleção da caixa de combinação do reconhecedor for alterada.
+4. Atualize o reconhecedor de manuscrito se a seleção da caixa de combinação do reconhecedor for alterada.
 
     Use [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) para chamar [**SetDefaultRecognizer**](https://msdn.microsoft.com/library/windows/apps/hh920328) com base no reconhecedor selecionado na caixa de combinação do reconhecedor.
+
 ```csharp
 // Handle recognizer change.
     private void comboInstalledRecognizers_SelectionChanged(
@@ -606,9 +616,10 @@ O reconhecimento é iniciado quando o usuário clica em um botão ao terminar de
     }
 ```
 
-5.  Por fim, executamos o reconhecimento de manuscrito com base no reconhecedor de manuscrito selecionado. Para este exemplo, usamos o manipulador de eventos de clique do botão "Recognize" para executar o reconhecimento de manuscrito.
+5. Por fim, executamos o reconhecimento de manuscrito com base no reconhecedor de manuscrito selecionado. Para este exemplo, usamos o manipulador de eventos de clique do botão "Recognize" para executar o reconhecimento de manuscrito.
 
     Um [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) armazena todos os traços de tinta em um objeto [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492). Os traços são expostos por meio da propriedade [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) de **InkPresenter** e recuperados usando o método [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499).
+
 ```csharp
 // Get all strokes on the InkCanvas.
     IReadOnlyList<InkStroke> currentStrokes =
@@ -652,7 +663,7 @@ string str = "Recognition result\n";
 ```
 
     Here's the click handler example, in full.
-    
+
 ```csharp
 // Handle button click to initiate recognition.
     private async void Recognize_Click(object sender, RoutedEventArgs e)
@@ -719,14 +730,16 @@ Embora os dois exemplos anteriores exijam que o usuário pressione um botão par
 
 Para este exemplo, usaremos a mesma interface do usuário e as configurações de traço que o exemplo anterior de reconhecimento internacional.
 
-1. Estes objetos globais ([InkAnalyzer](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis.inkanalyzer), [InkStroke](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstroke), [InkAnalysisResult](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult), [DispatcherTimer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dispatchertimer)) são usados em todo o nosso aplicativo.    
+1. Estes objetos globais ([InkAnalyzer](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis.inkanalyzer), [InkStroke](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstroke), [InkAnalysisResult](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult), [DispatcherTimer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dispatchertimer)) são usados em todo o nosso aplicativo.
+
 ```csharp
     // Stroke recognition globals.
     InkAnalyzer inkAnalyzer;
     DispatcherTimer recoTimer;
 ```
 
-2.  Em vez de um botão para iniciar o reconhecimento, adicionamos ouvintes de dois eventos de traço [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) ([**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024) e [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)) e configuramos um temporizador básico ([**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)) com um intervalo [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) de um segundo.    
+2. Em vez de um botão para iniciar o reconhecimento, adicionamos ouvintes de dois eventos de traço [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) ([**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024) e [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)) e configuramos um temporizador básico ([**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)) com um intervalo [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) de um segundo.
+
 ```csharp
     public MainPage()
     {
@@ -755,7 +768,7 @@ Para este exemplo, usaremos a mesma interface do usuário e as configurações d
     }
 ```
 
-3.  Em seguida, definimos os manipuladores para os eventos InkPresenter que declaramos na primeira etapa (também substituímos o evento de página [**OnNavigatingFrom**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.page.onnavigatingfrom) para gerenciar nosso temporizador).
+3. Em seguida, definimos os manipuladores para os eventos InkPresenter que declaramos na primeira etapa (também substituímos o evento de página [**OnNavigatingFrom**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.page.onnavigatingfrom) para gerenciar nosso temporizador).
 
     - [**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
     Adicione traços de tinta ([**AddDataForStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.adddataforstrokes)) ao InkAnalyzer e inicie o temporizador de reconhecimento quando o usuário parar de escrever à tinta (levantando a caneta ou o dedo, ou soltando o botão do mouse). Depois de um segundo sem nenhuma entrada à tinta, o reconhecimento é iniciado.  
@@ -764,6 +777,7 @@ Para este exemplo, usaremos a mesma interface do usuário e as configurações d
 
     - [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
     Se um novo traço for iniciado antes do próximo evento de tique do temporizador, interrompa o temporizador, pois o novo traço é provavelmente a continuação de uma única entrada de manuscrito.
+
 ```csharp
     // Handler for the InkPresenter StrokeStarted event.
     // Don't perform analysis while a stroke is in progress.
@@ -802,11 +816,12 @@ Para este exemplo, usaremos a mesma interface do usuário e as configurações d
     } 
 ```
 
-4.  Por fim, executamos o reconhecimento de manuscrito. Para este exemplo, usamos o manipulador de eventos [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) de [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250) para iniciar o reconhecimento de manuscrito.
+4. Por fim, executamos o reconhecimento de manuscrito. Para este exemplo, usamos o manipulador de eventos [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) de [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250) para iniciar o reconhecimento de manuscrito.
     - Chame [**AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync) para iniciar a análise de tinta e obter o [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult).
     - Se [**Status**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) retornar um estado de **Updated**, chame [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) para tipos de nó de  [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind).
     - Itere pelos nós e exiba o texto reconhecido.
     - Por fim, exclua os nós reconhecidos do InkAnalyzer e os traços de tinta correspondentes da tela de tinta.
+
 ```csharp
     private async void recoTimer_TickAsync(object sender, object e)
     {
@@ -855,19 +870,18 @@ Para este exemplo, usaremos a mesma interface do usuário e as configurações d
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Interações por caneta](pen-and-stylus-interactions.md)
+- [Interações por caneta](pen-and-stylus-interactions.md)
 
-**Exemplos do tópico**
-* [Exemplo de análise de tinta (basic) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
-* [Exemplo de reconhecimento de manuscrito de tinta (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
+### <a name="topic-samples"></a>Exemplos de tópico
 
-**Outros exemplos**
-* [Exemplo de tinta simples (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Exemplo de tinta complexo (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [Exemplo de tinta (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Tutorial de Introdução: Suporte a tinta no seu aplicativo UWP](https://aka.ms/appsample-ink)
-* [Exemplo do livro de cores](https://aka.ms/cpubsample-coloringbook)
-* [Exemplo de anotações de família](https://aka.ms/cpubsample-familynotessample)
+- [Exemplo de análise de tinta (basic) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
+- [Exemplo de reconhecimento de manuscrito de tinta (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
 
+### <a name="other-samples"></a>Outros exemplos
 
- 
+- [Exemplo de tinta simples (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
+- [Exemplo de tinta complexo (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+- [Exemplo de tinta (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
+- [Tutorial de Introdução: Suporte a tinta no seu aplicativo UWP](https://aka.ms/appsample-ink)
+- [Exemplo do livro de cores](https://aka.ms/cpubsample-coloringbook)
+- [Exemplo de anotações de família](https://aka.ms/cpubsample-familynotessample)

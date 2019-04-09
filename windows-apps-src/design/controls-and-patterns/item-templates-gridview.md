@@ -5,12 +5,12 @@ template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: 1e2c8b7d9fb7bdc61595296a137c4448cadf52d3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: f1cc576bbc7fe7fc326d86072e22b7a385cfeb8b
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57629261"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913946"
 ---
 # <a name="item-templates-for-grid-view"></a>Modelos de item para visualização de grade
 
@@ -19,7 +19,7 @@ Esta seção contém modelos de item que você pode usar com um controle [**Grid
 Para demonstrar a ligação de dados, esses modelos se associar **GridViewItems** para a classe de gravação de exemplo do [visão geral da vinculação de dados](../../data-binding/data-binding-quickstart.md).
 
 > [!NOTE] 
-No momento, quando um **DataTemplate** contém vários controles (por exemplo, mais de um único **TextBlock**), o nome acessível padrão para leitores de tela é proveniente de .ToString () no item. Para fins de praticidade, você pode definir o [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties) no elemento raiz de **DataTemplate**. Para obter mais informações sobre acessibilidade, consulte [Visão geral de acessibilidade](../accessibility/accessibility-overview.md).
+> No momento, quando um **DataTemplate** contém vários controles (por exemplo, mais de um único **TextBlock**), o nome acessível padrão para leitores de tela é proveniente de .ToString () no item. Para fins de praticidade, você pode definir o [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties) no elemento raiz de **DataTemplate**. Para obter mais informações sobre acessibilidade, consulte [Visão geral de acessibilidade](../accessibility/accessibility-overview.md).
 
 ## <a name="icon-and-text"></a>Ícone e texto
 Use esses modelos para exibir uma coleção de apps em uma grade com ícone e texto.
@@ -156,8 +156,8 @@ Use esse modelo para exibir uma coleção de mídias com sobreposição de texto
 ```
 
 ## <a name="related-articles"></a>Artigos relacionados
-- [Classe de GridView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.GridView)
+- [Classe GridView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [Visão geral da vinculação de dados](../../data-binding/data-binding-quickstart.md)
-- [Visão geral de Accessibililty](../accessibility/accessibility-overview.md)
+- [Visão geral sobre acessibilidade](../accessibility/accessibility-overview.md)
 - [Exemplo de ListView e GridView (Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
 - [Imagens em miniatura](../../files/thumbnails.md)

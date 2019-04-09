@@ -6,12 +6,12 @@ ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e303027aaf3b10260090c500df573f1bf484e20
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 5c7a60de3440106e446f6c3e896cd747741e4db2
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636861"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334684"
 ---
 # <a name="create-a-package-flight-submission"></a>Criar um envio de pacote de pré-lançamento
 
@@ -36,7 +36,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions``` |
+| POSTAR    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -62,7 +62,7 @@ Não forneça um corpo da solicitação para esse método.
 
 O exemplo a seguir demonstra como criar um novo envio de pacote de pré-lançamento para um aplicativo que tem a ID da Loja 9WZDNCRD91MD.
 
-```
+```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights/43e448df-97c9-4a43-a0bc-2a445e736bcd/submissions HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -118,7 +118,6 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 |--------|------------------|
 | 400  | Não foi possível criar o envio do pacote de pré-lançamento porque a solicitação é inválida. |
 | 409  | O envio de voo do pacote não pôde ser criado devido ao estado atual do aplicativo ou o aplicativo usa um recurso do Partner Center que está [atualmente não tem suporte da API de envio a Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
-
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
