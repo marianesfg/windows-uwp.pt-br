@@ -1,4 +1,6 @@
 items:
+- name: Visão geral
+  href: index.md
 - name: Tipos de aplicativo
   items:
   - name: Aplicativos de educação
@@ -482,15 +484,19 @@ items:
       - name: Acessar os dados analíticos
         href: ../monetize/access-analytics-data-using-windows-store-services.md
         items:
+        - name: Obter dados de aquisições para seus jogos e aplicativos
+          href: ../monetize/acquisitions-data.md
+        - name: Obter dados de aquisições de complemento para seus jogos e aplicativos
+          href: ../monetize/add-on-acquisitions-data.md
         - name: Aplicativos UWP
           items:
           - name: Obter dados de aquisições e instalações
             items:
-            - name: Obter aquisições de app
+            - name: Obter aquisições de aplicativo (herdado)
               href: ../monetize/get-app-acquisitions.md
             - name: Obter instalações do aplicativo
               href: ../monetize/get-app-installs.md
-            - name: Obter dados de funil de aquisição do aplicativo
+            - name: Obter dados de funil de aquisição de aplicativo (herdado)
               href: ../monetize/get-acquisition-funnel-data.md
             - name: Obter conversões de aplicativo por canal
               href: ../monetize/get-app-conversions-by-channel.md
@@ -762,23 +768,6 @@ items:
       items:
       - name: Pacotes opcionais com código executável
         href: ../packaging/optional-packages-with-executable-code.md
-    - name: Instalar aplicativos UWP com o Instalador de Aplicativo
-      href: ../packaging/appinstaller-root.md
-      items:
-      - name: Criar um arquivo do Instalador de Aplicativo com o Visual Studio
-        href: ../packaging/create-appinstallerfile-vs.md
-      - name: Instalar aplicativos UWP de uma página da Web
-        href: ../packaging/installing-UWP-apps-web.md
-      - name: Instalar um conjunto relacionado usando um arquivo do Instalador de Aplicativo
-        href: ../packaging/install-related-set.md
-      - name: Solucionar problemas de instalação com o arquivo do Instalador de Aplicativo
-        href: ../packaging/troubleshoot-appinstaller-issues.md
-      - name: Instalar um aplicativo UWP de um aplicativo Web do Azure
-        href: ../packaging/web-install-azure.md
-      - name: Instale um aplicativo UWP de um servidor IIS
-        href: ../packaging/web-install-iis.md
-      - name: Hospedagem de pacotes de aplicativo UWP no AWS para instalação pela Web
-        href: ../packaging/web-install-aws.md
     - name: Instalar apps usando a ferramenta WinAppDeployCmd.exe
       href: ../packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md
     - name: Declarações de funcionalidades do app
@@ -949,11 +938,20 @@ items:
       href: ../composition/composition-native-interop.md
     - name: Personalizando sua interface do usuário
       href: ../composition/composition-tailoring.md
-    - name: Usando XAML
+    - name: Usando XAML da UWP
       href: ../composition/using-the-visual-layer-with-xaml.md
       items:
       - name: Iluminação XAML
         href: ../composition/xaml-lighting.md
+    - name: Modernizar aplicativos da área de trabalho
+      href: ../composition/visual-layer-in-desktop-apps.md
+      items:
+      - name: Usando o WPF
+        href: ../composition/using-the-visual-layer-with-wpf.md
+      - name: Usando o Windows Forms
+        href: ../composition/using-the-visual-layer-with-windows-forms.md
+      - name: Usando o Win32
+        href: ../composition/using-the-visual-layer-with-win32.md
   - name: Windows como serviço
     href: ../updates-and-versions/application-development-for-windows-as-a-service.md
   - name: Componentes do Tempo de Execução do Windows
@@ -1515,9 +1513,9 @@ items:
       href: ../threading-async/use-a-timer-to-submit-a-work-item.md
     - name: Usando objetos do Windows Runtime em um ambiente de vários threads
       href: ../threading-async/using-windows-runtime-objects-in-a-multithreaded-environment.md
-ms.openlocfilehash: e9c39734eb066058d549ed8c36ad73b2c2c6a5e1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 36d2fba58373cd35321c7787856b782b1291b12d
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57582185"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57822931"

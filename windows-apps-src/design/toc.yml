@@ -43,7 +43,7 @@ items:
     href: layout/show-multiple-views.md
   - name: Alinhamento, margem e preenchimento
     href: layout/alignment-margin-padding.md
-  - name: Painéis de layout
+  - name: Painéis
     items:
     - name: Visão geral
       href: layout/layout-panels.md
@@ -55,6 +55,8 @@ items:
       href: layout/custom-panels-overview.md
     - name: 'Exemplo de painel personalizado: BoxPanel'
       href: layout/boxpanel-example-custom-panel.md
+  - name: Layout anexado
+    href: layout/attached-layouts.md
   - name: Transformações
     items:
     - name: Visão geral
@@ -93,8 +95,14 @@ items:
     items:
     - name: Visão geral
       href: controls-and-patterns/lists.md
+    - name: Comando de coleção
+      href: controls-and-patterns/collection-commanding.md
+    - name: Exibições de coleção personalizadas
+      href: controls-and-patterns/items-repeater.md
     - name: Exibição de inversão
       href: controls-and-patterns/flipview.md
+    - name: Listas invertidas
+      href: controls-and-patterns/inverted-lists.md
     - name: Exibição de lista e exibição de grade
       href: controls-and-patterns/listview-and-gridview.md
       items:
@@ -104,14 +112,10 @@ items:
         href: controls-and-patterns/item-templates-listview.md
       - name: Modelos de item para exibição de grade
         href: controls-and-patterns/item-templates-gridview.md
-    - name: Listas invertidas
-      href: controls-and-patterns/inverted-lists.md
-    - name: Puxar para atualizar
-      href: controls-and-patterns/pull-to-refresh.md
     - name: Interface do usuário aninhada
       href: controls-and-patterns/nested-ui.md
-    - name: Comando de coleção
-      href: controls-and-patterns/collection-commanding.md
+    - name: Puxar para atualizar
+      href: controls-and-patterns/pull-to-refresh.md
     - name: Passar o dedo
       href: controls-and-patterns/swipe.md
     - name: Modo de exibição em árvore
@@ -124,6 +128,8 @@ items:
       href: controls-and-patterns/dialogs-and-flyouts/dialogs.md
     - name: Submenus
       href: controls-and-patterns/dialogs-and-flyouts/flyouts.md
+    - name: Dica de ensino
+      href: controls-and-patterns/dialogs-and-flyouts/teaching-tip.md
   - name: Formulários
     href: controls-and-patterns/forms.md
   - name: Mídia, elementos gráficos e formas
@@ -236,6 +242,8 @@ items:
     href: style/reveal-focus.md
   - name: Som
     href: style/sound.md
+  - name: Espaçamento
+    href: style/spacing.md
   - name: Estilo de escrita
     href: style/writing-style.md
   - name: Pincéis em XAML
@@ -564,9 +572,9 @@ items:
       href: in-app-help/external-help.md
 - name: Kits de ferramentas de design
   href: downloads/index.md
-ms.openlocfilehash: b6430ee5f121d672282513fa524a50e7788f404c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: af847479fb2f9e8e2f9f033a7b63cdad750a903f
+ms.sourcegitcommit: 7a1d5198345d114c58287d8a047eadc4fe10f012
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57582163"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59247194"
