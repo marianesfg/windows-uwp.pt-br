@@ -120,7 +120,7 @@ Obtém a lista de todos os processos em execução no computador cliente pertenc
 `void SecureBrowser.security.examineProcessList(String[] blacklistedProcessList, Function callback);`
 
 **Parâmetros**  
-* `blacklistedProcessList` -A lista de processos que o aplicativo de teste possui na lista negra.  
+* `blacklistedProcessList` -A lista de processos que o aplicativo de teste possui na lista de bloqueio.  
 `callback` -A função para invocar uma vez que os processos ativos foram encontrados. Deve estar no formato: `Function(String foundBlacklistedProcesses)` em que `foundBlacklistedProcesses` está no formato: `"['process1.exe','process2.exe','processEtc.exe']"`. Ele estará vazio se nenhum processo não autorizado tiver sido encontrado. Se for nulo, isso indica que ocorreu um erro na chamada da função original.
 
 **Comentários** A lista não inclui processos do sistema.

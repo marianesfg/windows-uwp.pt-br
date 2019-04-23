@@ -470,7 +470,7 @@ O campo *país* no objeto [TargetingProfile](#targeting-profile) contém um ou m
 |     225      |            RE                  |
 |     246      |            PR                  |
 
-Para obter os valores aceitos pelo campo *país* de modo programático, você pode chamar o método GET a seguir.  Para o ```Authorization``` cabeçalho, passar o token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;.
+Para obter os valores aceitos pelo campo *país/região* de modo programático, você pode chamar o método GET a seguir.  Para o ```Authorization``` cabeçalho, passar o token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/country
