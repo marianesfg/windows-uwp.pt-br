@@ -8,7 +8,7 @@ keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f1d618a111ee207eacfceb52680859c8272e0ed
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57601131"
@@ -30,7 +30,7 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | Azerbaidjano (Latino) | az-Latn-AZ | Segoe UI |
 | bangla (Bangladesh) | bn-BD | Nirmala UI |
 | bangla (Índia) | bn-IN | Nirmala UI |
-| basco (País Basco) | eu-ES | Segoe UI |
+| basco (basco) | eu-ES | Segoe UI |
 | Bielorrusso | be-BY | Segoe UI |
 | bósnio (latino) | bs-Latn-BA | Segoe UI |
 | Búlgaro | bg-BG | Segoe UI |

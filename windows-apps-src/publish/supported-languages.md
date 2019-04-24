@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 716a6e86e03feb6edcbc5cde5aa37d0282df6aca
 ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/08/2019
 ms.locfileid: "59244282"
@@ -36,7 +36,7 @@ Códigos de idioma que não estão incluídos aqui não são compatíveis com o 
 | armênio              | hy, hy-am                                                                                                                                                                                             |
 | assamês              | as, as-in                                                                                                                                                                                             |
 | Azerbaijano           | az-arab, az-arab-az, az-cyrl, az-cyrl-az, az-latn, az-latn-az                                                                                                                                     |
-| basco (País Basco)       | eu, eu-es                                                                                                                                                                                             |
+| basco (basco)       | eu, eu-es                                                                                                                                                                                             |
 | Bielorrusso            | be, be-by                                                                                                                                                                                             |
 | Bengali                | bn, bn-bd, bn-in                                                                                                                                                                                      |
 | Bósnio               | bs, bs-cyrl, bs-cyrl-ba, bs-latn, bs-latn-ba                                                                                                                                                          |
