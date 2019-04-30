@@ -8,7 +8,7 @@ keywords: windows 10, jogo, capturar, áudio, vídeo, metadados
 ms.localizationpriority: medium
 ms.openlocfilehash: c4d4d764395d7f383e9cefcb9d8b1121db098780
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57601931"
@@ -48,7 +48,7 @@ As APIs de gravação de áudio e vídeo e de criação de capturas de tela dire
 
 1. No Visual Studio, em **Gerenciador de Soluções**, expanda o projeto UWP, clique com botão direito do mouse em **Referências** e selecione **Adicionar Referência...**. 
 2. Expanda o nó **Universal do Windows** e selecione **Extensões**.
-3. Na lista de extensões, marque a caixa de seleção ao lado da entrada ***Extensões de Área de Trabalho do Windows para a UWP** que corresponde à compilação de destino do projeto. Para os recursos de transmissão de app, a versão deve ser 1709 ou superior.
+3. Na lista de extensões, marque a caixa de seleção ao lado da entrada **Extensões de Área de Trabalho do Windows para a UWP** que corresponde à compilação de destino do projeto. Para os recursos de transmissão de app, a versão deve ser 1709 ou superior.
 4. Clique em **OK**.
 
 ## <a name="get-an-instance-of-apprecordingmanager"></a>Obter uma instância do AppRecordingManager
