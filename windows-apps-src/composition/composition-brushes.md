@@ -2,16 +2,17 @@
 ms.assetid: 03dd256f-78c0-e1b1-3d9f-7b3afab29b2f
 title: Pincéis de composição
 description: Um pincel pinta a área de um Visual com sua saída. Pincéis diferentes têm diferentes tipos de saída.
-ms.date: 02/08/2017
+ms.date: 04/19/2019
 ms.topic: article
+ms.custom: 19H1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eb0d48cee4fe6698ec371c882c913affa5af7729
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d51bc945c721ae15889dece8f84959f9a78192bc
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644881"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63790528"
 ---
 # <a name="composition-brushes"></a>Pincéis de composição
 Todos os itens na tela de um aplicativo UWP são visíveis devido à pintura com um Pincel. Pincéis permitem pintar objetos de interface de usuário com conteúdo que varia de cores simples e sólidas para imagens ou desenhos até uma cadeia de efeitos complexos. Este tópico apresenta os conceitos de pintura com CompositionBrush.
@@ -23,7 +24,8 @@ Ao trabalhar com a amada Visual, é necessário usar um CompositionBrush para pi
 -   [Pré-requisitos](./composition-brushes.md#prerequisites)
 -   [Pintar com CompositionBrush](./composition-brushes.md#paint-with-a-compositionbrush)
     -   [Pintar com uma cor sólida](./composition-brushes.md#paint-with-a-solid-color)
-    -   [Pintar com um gradiente linear](./composition-brushes.md#paint-with-a-linear-gradient)
+    -   [Pintar com um gradiente linear](./composition-brushes.md#paint-with-a-linear-gradient) 
+    -   [Pintar com um gradiente radial](./composition-brushes.md#paint-with-a-radial-gradient)
     -   [Pintar com uma imagem](./composition-brushes.md#paint-with-an-image)
     -   [Pintar com um desenho personalizado](./composition-brushes.md#paint-with-a-custom-drawing)
     -   [Pintar com um vídeo](./composition-brushes.md#paint-with-a-video)
@@ -44,13 +46,14 @@ Um [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.
 
 |Classe                                   |Detalhes                                         |Introduzido em|
 |-------------------------------------|---------------------------------------------------------|--------------------------------------|
-|[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush)         |Pinta uma área com uma cor sólida                        |Atualização do Windows 10 de novembro do Windows (SDK 10586)|
-|[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush)       |Pinta uma área com o conteúdo de um [ICompositionSurface](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.ICompositionSurface)|Atualização do Windows 10 de novembro do Windows (SDK 10586)|
-|[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)        |Pinta uma área com o conteúdo de um efeito de composição |Atualização do Windows 10 de novembro do Windows (SDK 10586)|
-|[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)          |Pinta um visual usando um CompositionBrush com uma máscara de opacidade |Atualização de aniversário do Windows 10 (SDK 14393)
-|[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)      |Pinta uma área com uma CompositionBrush usando uma ampliação NineGrid |Atualização de aniversário do Windows 10 SDK (14393)
-|[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)|Pinta uma área com um gradiente linear                    |Atualização para Windows 10 Fall Creators Update (SDK do Insider Preview)
-|[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)     |Pinta uma área pela amostragem dos pixels de fundo de um aplicativo ou dos pixels diretamente por trás da janela do aplicativo na área de trabalho. Usado como uma entrada para outro CompositionBrush como um CompositionEffectBrush | Atualização de Aniversário do Windows 10 (SDK 14393)
+|[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush)         |Pinta uma área com uma cor sólida                        |Windows 10, versão 1511 (10586 SDK)|
+|[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush)       |Pinta uma área com o conteúdo de um [ICompositionSurface](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.ICompositionSurface)|Windows 10, versão 1511 (10586 SDK)|
+|[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)        |Pinta uma área com o conteúdo de um efeito de composição |Windows 10, versão 1511 (10586 SDK)|
+|[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)          |Pinta um visual usando um CompositionBrush com uma máscara de opacidade |Windows 10, versão 1607 (SDK 14393)
+|[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)      |Pinta uma área com uma CompositionBrush usando uma ampliação NineGrid |Windows 10, versão 1607 (SDK 14393)
+|[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)|Pinta uma área com um gradiente linear                    |Windows 10, versão 1709 (16299 do SDK)
+|[CompositionRadialGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionradialgradientbrush)|Pinta uma área com um gradiente radial                    |Windows 10, versão 1903 (SDK do Insider Preview)
+|[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)     |Pinta uma área pela amostragem dos pixels de fundo de um aplicativo ou dos pixels diretamente por trás da janela do aplicativo na área de trabalho. Usado como uma entrada para outro CompositionBrush como um CompositionEffectBrush | Windows 10, versão 1607 (SDK 14393)
 
 ### <a name="paint-with-a-solid-color"></a>Pintar com uma cor sólida
 
@@ -105,6 +108,29 @@ _redyellowBrush.ColorStops.Add(_compositor.CreateColorGradientStop(1, Colors.Yel
 _gradientVisual = _compositor.CreateSpriteVisual();
 _gradientVisual.Brush = _redyellowBrush;
 _gradientVisual.Size = new Vector2(156, 156);
+```
+
+### <a name="paint-with-a-radial-gradient"></a>Pintar com um gradiente radial
+
+Um [CompositionRadialGradientBrush](/uwp/api/windows.ui.composition.compositionradialgradientbrush) pinta uma área com um gradiente radial. Um gradiente radial combina duas ou mais cores com gradiente a partir do centro da elipse e terminando ao raio. Objetos GradientStop são usados para definir as cores e sua localização no gradiente.
+
+A ilustração e o código a seguir mostra um SpriteVisual pintado com um RadialGradientBrush com 2 GradientStops.
+
+![CompositionRadialGradientBrush](images/radial-gradient-brush.png)
+
+```cs
+Compositor _compositor;
+SpriteVisual _gradientVisual;
+CompositionRadialGradientBrush RGBrush;
+
+_compositor = Window.Current.Compositor;
+
+RGBrush = _compositor.CreateRadialGradientBrush();
+RGBrush.ColorStops.Add(_compositor.CreateColorGradientStop(0, Colors.Aquamarine));
+RGBrush.ColorStops.Add(_compositor.CreateColorGradientStop(1, Colors.DeepPink));
+_gradientVisual = _compositor.CreateSpriteVisual();
+_gradientVisual.Brush = RGBrush;
+_gradientVisual.Size = new Vector2(200, 200);
 ```
 
 ### <a name="paint-with-an-image"></a>Pintar com uma imagem

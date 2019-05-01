@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp, operadoras móveis, cobrança de celular, cobrança da operadora móvel
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f23e40abfb269e2b52e9dc5b66c2486da071c9b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 760c7ea7929d287c241ddcba48bc6687e9bc2b51
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57591831"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63827657"
 ---
 # <a name="mobile-operator-billing"></a>Cobrança da operadora móvel
 
@@ -25,33 +25,33 @@ Estamos trabalhando regularmente com as operadoras para expandir a disponibilida
 
 No momento, a Cobrança da Operadora Móvel tem o suporte destas operadoras de celular.
 
-| País/região  | Operadoras móveis                 |
-|-----------------|----------------------------------|
-| Austrália       | Optus                            |
-| Áustria         | Hutchison 3G Austria, A1 Telekom, T-Mobile / tele.ring  |
-| Bélgica         | Base, Proximus                   |
-| Canadá          | Telus                            |
-| República Tcheca  | T-Mobile                         |
-| Dinamarca         | 3, TDC / YouSee, Telenor, Telia  |
-| Finlândia         | DNA, Elisa                       |
-| França          | Orange                           |
-| Alemanha         | O2, Telekom Deutschland          |
-| Hungria         | Telenor                          |
-| Itália           | Wind, Tre                        |
-| Malásia        | Digi                             |
-| Países Baixos     | KPN / Telfort                    |
-| Noruega          | Telenor / Talkmore, Telia / OneCall   |
-| Polônia          | Laranja, Play                     |
-| Cingapura       | M1 Limited, StarHub              |
-| Eslováquia        | Slovak Telekom                   |
-| Espanha           | Orange                           |
-| Suécia          | Telenor, 3                       |
-| Suíça     | Swisscom, Sunrise                |
-| Taiwan          | FarEasTone                       |
-| Turquia          | Turkcell                         |
-| Emirados Árabes Unidos | Etisalat                    |
-| Estados Unidos   | Sprint, Verizon                  |
-| Reino Unido  | O2, 3 UK, EE                     |
+| País/região       | Operadoras móveis                                        |
+|----------------------|---------------------------------------------------------|
+| Austrália            | Optus                                                   |
+| Áustria              | Hutchison 3G Austria, A1 Telekom, T-Mobile / tele.ring  |
+| Bélgica              | Base, Proximus                                          |
+| Canadá               | Telus                                                   |
+| República Tcheca       | T-Mobile                                                |
+| Dinamarca              | 3, TDC / YouSee, Telenor, Telia                         |
+| Finlândia              | DNA, Elisa                                              |
+| França               | Orange                                                  |
+| Alemanha              | O2, Telekom Deutschland, Vodafone                       |
+| Hungria              | Telenor                                                 |
+| Itália                | Wind, Tre                                               |
+| Malásia             | Digi                                                    |
+| Países Baixos          | KPN / Telfort                                           |
+| Noruega               | Telenor / Talkmore, Telia / OneCall                     |
+| Polônia               | Laranja, Play                                            |
+| Cingapura            | M1 Limited, StarHub                                     |
+| Eslováquia             | Slovak Telekom                                          |
+| Espanha                | Orange                                                  |
+| Suécia               | Telenor, 3                                              |
+| Suíça          | Swisscom, Sunrise                                       |
+| Taiwan               | FarEasTone                                              |
+| Turquia               | Turkcell                                                |
+| Emirados Árabes Unidos | Etisalat                                                |
+| Estados Unidos        | Sprint, Verizon                                         |
+| Reino Unido       | O2, 3 UK, EE                                            |
 
  
 

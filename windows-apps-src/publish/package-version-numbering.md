@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a8ce14094733ef5598c510198f4268744cb581e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: bf71e5f6dd77da025a50866d32caca2870d3525b
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621871"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63788431"
 ---
 # <a name="package-version-numbering"></a>Numeração de versão do pacote
 
@@ -45,9 +45,9 @@ Você pode usar as regras de controle de versão do pacote gradualmente mover se
 | Envio | Conteúdo                                                  | Experiência do cliente                                                                                                                                                                             |
 |------------|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1          | -Versão package: 1.1.10.0 <br> -Família do dispositivo: Windows.Desktop, minVersion 10.0.10240.0 <br> <br> -Versão package: 1.1.0.0 <br> -Família do dispositivo: Windows.Mobile, minVersion 10.0.10240.0     | -   Dispositivos na compilação Windows 10 Desktop 10.0.10240.0 e superior receberão 1.1.10.0 <br> -   Dispositivos na compilação Windows 10 Mobile 10.0.10240.0 e superior receberão 1.1.0.0 <br> -   Outras famílias de dispositivos não poderá comprar e instalar o aplicativo |
-| 2          | -Versão package: 1.1.10.0 <br> -Família do dispositivo: Windows.Desktop, minVersion 10.0.10240.0 <br> <br> -Versão package: 1.1.0.0 <br> -Família do dispositivo: Windows.Mobile, minVersion 10.0.10240.0 <br> <br> -Versão package: 1.0.0.0 <br> -Família do dispositivo: Universal, minVersion 10.0.10240.0    | -   Dispositivos na compilação Windows 10 Desktop 10.0.10240.0 e superior receberão 1.1.10.0 <br> -   Dispositivos na compilação Windows 10 Mobile 10.0.10240.0 e superior receberão 1.1.0.0 <br> -   Outras famílias de dispositivos (que não sejam móveis, nem desktop) receberão 1.0.0.0 quando forem introduzidas <br> -   Os dispositivos móveis e desktop que já tiverem o aplicativo instalado não verão nenhuma atualização (porque já têm a melhor versão disponível: 1.1.10.0 e 1.1.0.0 são maiores do que 1.0.0.0) |
-| 3          | -Versão package: 1.1.10.0 <br> -Família do dispositivo: Windows.Desktop, minVersion 10.0.10240.0 <br> <br> -Versão package: 1.1.5.0 <br> -Família do dispositivo: Universal, minVersion 10.0.10250.0 <br> <br> -Versão package: 1.0.0.0 <br> -Família do dispositivo: Universal, minVersion 10.0.10240.0    | -   Dispositivos na compilação Windows 10 Desktop 10.0.10240.0 e superior receberão 1.1.10.0 <br> -   Dispositivos na compilação Windows 10 Mobile 10.0.10250.0 e superior receberão 1.1.5.0 <br> -   Dispositivos na compilação Windows 10 Mobile >= 10.0.10240.0 e < 10.010250.0 receberão 1.1.0.0 
-| 4          | -Versão package: 2.0.0.0 <br> -Família do dispositivo: Universal, minVersion 10.0.10240.0   | -   Todos os clientes em todas as famílias de dispositivos na compilação Windows 10 v10.0.10240.0 e superior receberão pacotes 2.0.0.0 | 
+| 2          | -Versão package: 1.1.10.0 <br> -Família do dispositivo: Windows.Desktop, minVersion 10.0.10240.0 <br> <br> -Versão package: 1.1.0.0 <br> -Família do dispositivo: Windows.Mobile, minVersion 10.0.10240.0 <br> <br> -Versão package: 1.0.0.0 <br> -Família do dispositivo: Windows.Universal, minVersion 10.0.10240.0    | -   Dispositivos na compilação Windows 10 Desktop 10.0.10240.0 e superior receberão 1.1.10.0 <br> -   Dispositivos na compilação Windows 10 Mobile 10.0.10240.0 e superior receberão 1.1.0.0 <br> -   Outras famílias de dispositivos (que não sejam móveis, nem desktop) receberão 1.0.0.0 quando forem introduzidas <br> -   Os dispositivos móveis e desktop que já tiverem o aplicativo instalado não verão nenhuma atualização (porque já têm a melhor versão disponível: 1.1.10.0 e 1.1.0.0 são maiores do que 1.0.0.0) |
+| 3          | -Versão package: 1.1.10.0 <br> -Família do dispositivo: Windows.Desktop, minVersion 10.0.10240.0 <br> <br> -Versão package: 1.1.5.0 <br> -Família do dispositivo: Windows.Universal, minVersion 10.0.10250.0 <br> <br> -Versão package: 1.0.0.0 <br> -Família do dispositivo: Windows.Universal, minVersion 10.0.10240.0    | -   Dispositivos na compilação Windows 10 Desktop 10.0.10240.0 e superior receberão 1.1.10.0 <br> -   Dispositivos na compilação Windows 10 Mobile 10.0.10250.0 e superior receberão 1.1.5.0 <br> -   Dispositivos na compilação Windows 10 Mobile >= 10.0.10240.0 e < 10.010250.0 receberão 1.1.0.0 
+| 4          | -Versão package: 2.0.0.0 <br> -Família do dispositivo: Windows.Universal, minVersion 10.0.10240.0   | -   Todos os clientes em todas as famílias de dispositivos na compilação Windows 10 v10.0.10240.0 e superior receberão pacotes 2.0.0.0 | 
 
 > [!NOTE]
 >  Em todos os casos, os dispositivos cliente receberá o pacote que tem o maior número de versão possível que eles se qualificam para. Por exemplo, no terceiro envio acima, todos os dispositivos da área de trabalho obterão v1.1.10.0, mesmo se eles tiverem a versão de sistema operacional 10.0.10250.0 ou superior e, portanto, também podem aceitar v1.1.5.0. Como 1.1.10.0 é o maior número de versão disponível para eles, esse é o pacote que eles receberão.

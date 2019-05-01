@@ -2,19 +2,19 @@
 title: Iniciar o app Configurações do Windows
 description: Saiba como iniciar o app Configurações do Windows a partir de seu app. Este tópico descreve o esquema de URI ms-settings. Use esse esquema de URI para iniciar o app Configurações do Windows para páginas de configurações específicas.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
-ms.date: 01/08/2019
+ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 87074e9871fae6be32e2862fc547097898baede8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.custom: 19H1
+ms.openlocfilehash: fb0e5aee9e7b3e57ebf0ebeaf3d035180e52c65b
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646951"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63817510"
 ---
 # <a name="launch-the-windows-settings-app"></a>Iniciar o app Configurações do Windows
-
 
 **APIs importantes**
 
@@ -64,7 +64,6 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 
 <!-- TODO: 
 * ms-settings:controlcenter
-* ms-settings:cortana-windowssearch
 * ms-settings:holographic
 * ms-settings:keyboard-advanced
 * ms-settings:regionlanguage-adddisplaylanguage (crashed)
@@ -80,7 +79,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 | Acessar trabalho ou escola | ms-settings:workplace |
 | Contas de email e aplicativo  | ms-settings:emailandaccounts |
 | Família e outras pessoas | ms-settings:otherusers |
-| Configurar um quiosque | MS-configurações: assignedaccess |
+| Configurar um quiosque | ms-settings:assignedaccess |
 | Opções de entrada | ms-settings:signinoptions<br>ms-settings:signinoptions-dynamiclock |
 | Sincronizar suas configurações | ms-settings:sync |
 | Instalação do Windows Hello | ms-settings:signinoptions-launchfaceenrollment<br>ms-settings:signinoptions-launchfingerprintenrollment |
@@ -103,10 +102,11 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 
 |Página de configurações| URI |
 |-------------|-----|
-| & Histórico de permissões | ms-settings:cortana-permissions |
-| Mais detalhes | ms-settings:cortana-moredetails |
 | Cortana em meus dispositivos | ms-settings:cortana-notifications |
-| Converse com a Cortana | ms-settings:cortana-language<br/>MS-configurações: cortana<br/>MS-configurações: cortana-talktocortana |
+| Mais detalhes | ms-settings:cortana-moredetails |
+| & Histórico de permissões | ms-settings:cortana-permissions |
+| Pesquisa do Windows | ms-settings:cortana-windowssearch |
+| Converse com a Cortana | ms-settings:cortana-language<br/>ms-settings:cortana<br/>ms-settings:cortana-talktocortana |
 
 > [!NOTE] 
 > Esta seção de configurações na área de trabalho será chamada pesquisa quando o computador está definido como regiões em que a Cortana não está disponível no momento ou Cortana foi desabilitada. Nesse caso, páginas específicas de Cortana (Cortana em todos os meus dispositivos) e falar Cortana não serão listadas. 
@@ -115,7 +115,6 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 
 |Página de configurações| URI |
 |-------------|-----|
-| Áudio e fala | ms-settings:holographic-audio (disponível somente se o aplicativo do Portal de Realidade Misturada é instalado — disponíveis na Microsoft Store) |
 | AutoPlay | ms-settings:autoplay |
 | Bluetooth | ms-settings:bluetooth |
 | Dispositivos conectados | ms-settings:connecteddevices |
@@ -135,13 +134,12 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 |-------------|-----|
 | Áudio | ms-settings:easeofaccess-audio |
 | Legendas ocultas | ms-settings:easeofaccess-closedcaptioning |
-| Filtros de cores | MS-configurações: easeofaccess-colorfilter |
-| Tamanho do cursor & ponteiro | MS-configurações: easeofaccess-cursorandpointersize |
+| Filtros de cores | ms-settings:easeofaccess-colorfilter |
+| Tamanho do cursor & ponteiro | ms-settings:easeofaccess-cursorandpointersize |
 | Vídeo | ms-settings:easeofaccess-display |
 | Controle com os olhos | ms-settings:easeofaccess-eyecontrol |
 | Fontes | ms-settings:fonts |
 | Alto contraste | ms-settings:easeofaccess-highcontrast |
-| Headset para holografia | ms-settings:holographic-headset (exige hardware holográfico) |
 | Teclado | ms-settings:easeofaccess-keyboard |
 | Lupa | ms-settings:easeofaccess-magnifier |
 | Mouse | ms-settings:easeofaccess-mouse |
@@ -173,6 +171,17 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 |-------------|-----|
 | Página inicial de configurações | ms-settings: |
 
+## <a name="mixed-reality"></a>Realidade misturada
+
+> [!NOTE]
+> Essas configurações só estão disponíveis se o aplicativo do Portal de realidade mista está instalado.
+
+| Página de configurações | URI |
+|---------------|-----|
+| Áudio e fala | ms-settings:holographic-audio |
+| Ambiente | ms-settings:privacy-holographic-environment |
+| Exibição de fone de ouvido | ms-settings:holographic-headset |
+| Desinstalar | ms-settings:holographic-management |
 
 ## <a name="network--internet"></a>Rede e Internet
 
@@ -188,7 +197,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 | Hotspot móvel | ms-settings:network-mobilehotspot |
 | NFC | ms-settings:nfctransactions |
 | Proxy | ms-settings:network-proxy |
-| Status | ms-settings:network-status<br/>MS-rede: configurações |
+| Status | ms-settings:network-status<br/>ms-settings:network |
 | VPN | ms-settings:network-vpn |
 | Wi-Fi | ms-settings:network-wifi (disponível somente se o dispositivo tiver um adaptador de rede Wi-Fi) |
 | Chamada de Wi-Fi | ms-settings:network-wificalling (disponível somente se a chamada de Wi-Fi estiver habilitada) |
@@ -199,7 +208,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 |-------------|-----|
 | Histórico | ms-settings:personalization-background |
 | Escolher quais pastas são exibidas em Iniciar | ms-settings:personalization-start-places |
-| Cores | ms-settings:personalization-colors<br/>MS-configurações: cores |
+| Cores | ms-settings:personalization-colors<br/>ms-settings:colors |
 | Noções básicas | MS-configurações: personalização-rapidamente (**preteridos no Windows 10, versão posterior e 1809**) |
 | Tela de bloqueio | ms-settings:lockscreen |
 | Barra de navegação | MS-configurações: personalização-barra de navegação (**preteridos no Windows 10, versão posterior e 1809**) |
@@ -212,7 +221,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 
 |Página de configurações| URI |
 |-------------|-----|
-| Seu telefone | ms-settings:mobile-devices<br/>MS-configurações: mobile-dispositivos-addphone<br/>MS-configurações: mobile-dispositivos-addphone-direto (abre **seu telefone** app) |
+| Seu telefone | ms-settings:mobile-devices<br/>ms-settings:mobile-devices-addphone<br/>MS-configurações: mobile-dispositivos-addphone-direto (abre **seu telefone** app) |
 
 ## <a name="privacy"></a>Privacidade
 
@@ -247,6 +256,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 | Controle por voz, escrita à tinta e digitação |ms-settings:privacy-speechtyping |
 | Tarefas | ms-settings:privacy-tasks |
 | Vídeos | ms-settings:privacy-videos |
+| Ativação de voz | ms-settings:privacy-voiceactivation |
 
 ## <a name="surface-hub"></a>Surface Hub
 
@@ -264,10 +274,11 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 |-------------|-----|
 | Sobre | ms-settings:about |
 | Configurações avançadas de vídeo | ms-settings:display-advanced (disponível somente em dispositivos que suporte avançado a opções de exibição) |
+| Preferências de volume e o dispositivo do aplicativo | ms-settings:apps-volume |
 | Economia de Bateria | ms-settings:batterysaver (disponível somente em dispositivos que possuem bateria, como um tablet) |
 | Configurações de economia de bateria | ms-settings:batterysaver-settings (disponível somente em dispositivos que possuem bateria, como um tablet) |
 | Uso da bateria | ms-settings:batterysaver-usagedetails (disponível somente em dispositivos que possuem bateria, como um tablet) |
-| Área de Transferência | MS-configurações: área de transferência |
+| Área de Transferência | ms-settings:clipboard |
 | Vídeo | ms-settings:display |
 | Locais de salvamento padrão | ms-settings:savelocations |
 | Vídeo | ms-settings:screenrotation |
@@ -288,7 +299,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 | Área de Trabalho Remota | ms-settings:remotedesktop |
 | Phone | MS-configurações: telefone (**preteridos no Windows 10, versão posterior e 1809**) |
 | Ligar/Desligar e suspensão | ms-settings:powersleep |
-| Som | MS-configurações: som |
+| Som | ms-settings:sound |
 | Armazenamento | ms-settings:storagesense |
 | Sensor de Armazenamento | ms-settings:storagepolicies |
 
@@ -298,7 +309,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 |-------------|-----|
 | Data e hora | ms-settings:dateandtime |
 | Configurações de IME do Japão | ms-settings:regionlanguage-jpnime (disponível se o editor de método de entrada do Microsoft Japão está instalado) |
-| Idioma | MS-configurações: teclado<br/>ms-settings:regionlanguage<br/>MS-configurações: regionlanguage-bpmfime<br/>MS-configurações: regionlanguage-cangjieime<br/>MS-configurações: regionlanguage-chsime-pinyin-domainlexicon<br/>MS-configurações: regionlanguage-chsime-pinyin-keyconfig<br/>MS-configurações: regionlanguage-chsime-pinyin-udp<br/>MS-configurações: regionlanguage-chsime-wubi-udp<br/>MS-configurações: regionlanguage-quickime |
+| Idioma | ms-settings:keyboard<br/>ms-settings:regionlanguage<br/>ms-settings:regionlanguage-bpmfime<br/>ms-settings:regionlanguage-cangjieime<br/>ms-settings:regionlanguage-chsime-pinyin-domainlexicon<br/>ms-settings:regionlanguage-chsime-pinyin-keyconfig<br/>ms-settings:regionlanguage-chsime-pinyin-udp<br/>ms-settings:regionlanguage-chsime-wubi-udp<br/>ms-settings:regionlanguage-quickime |
 | Configurações de IME Pinyin | ms-settings:regionlanguage-chsime-pinyin (disponível se o editor de método de entrada do Microsoft Japão está instalado) |
 | Controle por voz | ms-settings:speech |
 | Configurações do Wubi IME  | ms-settings:regionlanguage-chsime-wubi (disponível se o editor de método de entrada do Microsoft Wubi está instalado) |
@@ -313,9 +324,9 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 | Localizar Meu Dispositivo | ms-settings:findmydevice |
 | Para desenvolvedores | ms-settings:developers |
 | Recuperação | ms-settings:recovery |
-| Solução de problemas | ms-settings:troubleshoot |
+| Solucionar problemas | ms-settings:troubleshoot |
 | Segurança do Windows | ms-settings:windowsdefender |
-| Programa Windows Insider | ms-settings:windowsinsider (somente presente se o usuário está inscrito no WIP)<br/>MS-configurações: windowsinsider-optin |
+| Programa Windows Insider | ms-settings:windowsinsider (somente presente se o usuário está inscrito no WIP)<br/>ms-settings:windowsinsider-optin |
 | Windows Update | ms-settings:windowsupdate<br>ms-settings:windowsupdate-action |
 | Opções Avançadas do Windows Update | ms-settings:windowsupdate-options |
 | Opções de reinicialização do Windows Update | ms-settings:windowsupdate-restartoptions |

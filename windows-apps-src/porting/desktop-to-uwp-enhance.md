@@ -2,16 +2,17 @@
 Description: Aprimore seu aplicativo da área de trabalho para usuários do Windows 10 usando o Universal Windows Platform (UWP) APIs.
 Search.Product: eADQiWindows 10XVcnh
 title: Aprimorar seu aplicativo da área de trabalho para Windows 10
-ms.date: 10/15/2018
+ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e06de7d33604981e0055d9d57f774d280753db2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.custom: 19H1
+ms.openlocfilehash: 55e91c96b7a978f0c90365073aa655553d4a658a
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57628031"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63805722"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Aprimorar seu aplicativo da área de trabalho para Windows 10
 
@@ -36,8 +37,9 @@ Em seguida, adicione uma referência a esses arquivos.
 |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
 |System.Runtime.WindowsRuntime.UI.Xaml|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
 |System.Runtime.InteropServices.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-|Windows.Foundation.UniversalApiContract.winmd|C:\Program arquivos (x86) \Windows Kits\10\References\<*versão do sdk*> \Windows.Foundation.UniversalApiContract\<*versão*>|
-|Windows.Foundation.FoundationContract.winmd|C:\Program arquivos (x86) \Windows Kits\10\References\<*versão do sdk*> \Windows.Foundation.FoundationContract\<*versão*>|
+|windows.winmd|C:\Program arquivos (x86) \Windows Kits\10\UnionMetadata\\<*sdk versão*> \Facade|
+|Windows.Foundation.UniversalApiContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\\<*sdk version*>\Windows.Foundation.UniversalApiContract\<*version*>|
+|Windows.Foundation.FoundationContract.winmd|C:\Program arquivos (x86) \Windows Kits\10\References\\<*sdk versão*> \Windows.Foundation.FoundationContract\<*versão*>|
 
 Na janela **Propriedades**, defina o campo **Cópia Local** de cada arquivo *.winmd* como **False**.
 
@@ -45,9 +47,9 @@ Na janela **Propriedades**, defina o campo **Cópia Local** de cada arquivo *.wi
 
 ### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Modificar um projeto do C++ para usar APIs do Windows Runtime
 
-Use [C + + c++ /CLI WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) consumir APIs do Windows Runtime. C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows.
+Use [ C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) consumir APIs do Windows Runtime. C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows.
 
-Para configurar seu projeto para C + + c++ /CLI WinRT, consulte [modificar um projeto de aplicativo de área de trabalho do Windows para adicionar o C + + c++ /CLI WinRT suporte](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
+Para configurar seu projeto para C++/WinRT, consulte [modificar um projeto de aplicativo de área de trabalho do Windows para adicionar C++suporte /WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
 ## <a name="add-windows-10-experiences"></a>Adicionar experiências do Windows 10
 

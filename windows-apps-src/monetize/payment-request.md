@@ -4,12 +4,12 @@ title: Simplificar pagamentos com a API de Solicitação de Pagamento
 ms.date: 09/26/2017
 ms.topic: article
 keywords: Windows 10, uwp, solicitação de pagamento
-ms.openlocfilehash: 36078c65d6762c8ed477a3a1342f3b6a0acaaa6f
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: a40b8265e3445319bd7baa530df0f9e9eaae0f31
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334584"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63804478"
 ---
 # <a name="simplify-payments-with-the-payment-request-api"></a>Simplificar pagamentos com a API de Solicitação de Pagamento
 A API de solicitação de pagamento para aplicativos UWP se baseia a [especificações de API de solicitação de pagamento de W3C](https://w3c.github.io/browser-payment-api/). Ele fornece a capacidade de simplificar o processo de check-out em seus aplicativos UWP. Os usuários podem acelerar por meio do check-out, usando as opções de pagamento e já salvos com a respectiva conta da Microsoft de endereços para entrega. Você pode aumentar sua taxa de conversão e reduzir o risco de violações de dados, pois as informações de pagamento são indexadas. Começando com o Windows 10 Creators Update, os usuários podem usar suas opções de pagamento salvo para pagar com facilidade entre as experiências em aplicativos UWP.

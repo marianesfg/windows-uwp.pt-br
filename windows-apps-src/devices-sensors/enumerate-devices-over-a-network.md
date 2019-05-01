@@ -2,16 +2,17 @@
 ms.assetid: E0B9532F-1195-4927-99BE-F41565D891AD
 title: Enumerar dispositivos em uma rede
 description: Além da descoberta de dispositivos conectados localmente, você pode usar as APIs Windows.Devices.Enumeration para enumerar dispositivos por meio de protocolos de rede e sem fio.
-ms.date: 02/08/2017
+ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e80d16b3338291c756b543018812e9db1370a4ac
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.custom: 19H1
+ms.openlocfilehash: 2011bf0ed1e0f1536c0863729ee99415059641a6
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630411"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63772771"
 ---
 # <a name="enumerate-devices-over-a-network"></a>Enumerar dispositivos em uma rede
 
@@ -46,6 +47,7 @@ Quando você cria seu próprio seletor, é altamente recomendável limitar o esc
 | Provisionamento de Wi-Fi para impressoras HP           | **{c85ef710-f344-4792-bb6d-85a4346f1e69}** |
 | Bluetooth                                    | **{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}** |
 | Bluetooth LE                                 | **{bb7bb05e-5972-42b5-94fc-76eaa7084d49}** |
+| Câmera de rede                               | **{b8238652-b500-41eb-b4f3-4234f7f5ae99}** |
 
  
 

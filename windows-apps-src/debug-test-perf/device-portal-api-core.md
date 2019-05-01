@@ -2,16 +2,17 @@
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referência de API central do Device Portal
 description: Saiba mais sobre as APIs REST centrais do Windows Device Portal que você pode usar para acessar os dados e controlar seu dispositivo de forma programática.
-ms.date: 4/8/2019
+ms.custom: 19H1
+ms.date: 04/19/2019
 ms.topic: article
 keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 58ae7d83c0889131313d136c13048b83a861f601
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 910e3108009704d444fb81b195f9dd9eae3daa9d
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244132"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63798188"
 ---
 # <a name="device-portal-core-api-reference"></a>Referência de API central do Device Portal
 
@@ -29,7 +30,7 @@ Você pode instalar um aplicativo usando o formato de solicitação a seguir.
 | :------     | :----- |
 | POSTAR | /api/app/packagemanager/package |
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -67,7 +68,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Instalar um conjunto relacionado
+
+### <a name="install-a-related-set"></a>Instalar um conjunto relacionado
 
 **Solicitação**
 
@@ -77,7 +79,7 @@ Você pode instalar um [conjunto relacionado](https://blogs.msdn.microsoft.com/a
 | :------     | :------ |
 | POSTAR | /api/app/packagemanager/package |
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -115,7 +117,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Registre um aplicativo em uma pasta flexível
+
+### <a name="register-an-app-in-a-loose-folder"></a>Registre um aplicativo em uma pasta flexível
 
 **Solicitação**
 
@@ -125,7 +128,7 @@ Você pode registrar um aplicativo em uma pasta flexível usando o formato de so
 | :------     | :----- |
 | POSTAR | /api/app/packagemanager/networkapp |
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -166,7 +169,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Registrar um conjunto relacionado em pastas de arquivo flexível
+
+### <a name="register-a-related-set-in-loose-file-folders"></a>Registrar um conjunto relacionado em pastas de arquivo flexível
 
 **Solicitação**
 
@@ -176,7 +180,7 @@ Você pode registrar um [conjunto relacionado](https://blogs.msdn.microsoft.com/
 | :------     | :----- |
 | POSTAR | /api/app/packagemanager/networkapp |
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -226,7 +230,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter o status de instalação do aplicativo
+
+### <a name="get-app-installation-status"></a>Obter o status de instalação do aplicativo
 
 **Solicitação**
 
@@ -236,7 +241,7 @@ Você pode obter o status de uma instalação de aplicativo que esteja em andame
 | :------     | :----- |
 | OBTER | /api/app/packagemanager/state |
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -269,7 +274,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Desinstalar um aplicativo
+
+### <a name="uninstall-an-app"></a>Desinstalar um aplicativo
 
 **Solicitação**
 
@@ -279,7 +285,7 @@ Você pode desinstalar um aplicativo usando o seguinte formato de solicitação:
 | :------     | :----- |
 | DELETE | /api/app/packagemanager/package |
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
@@ -314,7 +320,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter aplicativos instalados
+
+### <a name="get-installed-apps"></a>Obter aplicativos instalados
 
 **Solicitação**
 
@@ -325,7 +332,7 @@ Você pode obter uma lista de aplicativos instalados no sistema usando o seguint
 | OBTER | /api/app/packagemanager/packages |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -383,7 +390,9 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## Bluetooth
+
+## <a name="bluetooth"></a>Bluetooth
+
 <hr>
 
 ### <a name="get-the-bluetooth-radios-on-the-machine"></a>Ouça rádios Bluetooth no computador
@@ -398,7 +407,7 @@ Você pode obter uma lista rádios Bluetooth instaladas no computador usando o s
 | GET/WebSocket | /API/BT/getradios |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -443,7 +452,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Ativar ou desativar a rádio Bluetooth
+
+### <a name="turn-the-bluetooth-radio-on-or-off"></a>Ativar ou desativar a rádio Bluetooth
 
 **Solicitação**
 
@@ -453,7 +463,7 @@ Define uma rádio Bluetooth específica como ativada ou desativada.
 | :------   | :------ |
 | POSTAR   | /api/bt/setradio |
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -488,10 +498,172 @@ Esta API tem os códigos de status esperados a seguir.
 * HoloLens
 * IoT
 
+---
+### <a name="get-a-list-of-paired-bluetooth-devices"></a>Obter uma lista de dispositivos Bluetooth emparelhados
+
+**Solicitação**
+
+Você pode obter uma lista de dispositivos Bluetooth emparelhados atualmente usando o seguinte formato de solicitação. Isso pode ser atualizado para uma conexão WebSocket com os mesmos dados JSON. Durante o tempo de vida da conexão de WebSocket, pode alterar a lista de dispositivos. Uma lista completa de dispositivos será enviada sobre a conexão de WebSocket sempre que há uma atualização.
+
+| Método        | URI da solicitação       |
+| :---          | :---              |
+| OBTER           | /api/bt/getpaired |
+| GET/WebSocket | /api/bt/getpaired |
+
+**Parâmetros de URI**
+
+- Nenhuma
+
+**Cabeçalhos de solicitação**
+
+- Nenhuma
+
+**Corpo da solicitação**
+
+- Nenhuma
+
+**Resposta**
+
+A resposta inclui uma matriz JSON dos dispositivos Bluetooth emparelhados no momento.
+```json
+{"PairedDevices": [
+    {
+        "Name" : string,
+        "ID" : string,
+        "AudioConnectionStatus" : string
+    },...
+]}
+```
+O *AudioConnectionStatus* campo estará presente se o dispositivo pode ser usado para áudio neste sistema. (As políticas e componentes opcionais podem afetar isso.) *AudioConnectionStatus* será "Conectado" ou "Desconectado".
+
+---
+### <a name="get-a-list-of-available-bluetooth-devices"></a>Obter uma lista de dispositivos Bluetooth disponíveis
+
+**Solicitação**
+
+Você pode obter uma lista dos dispositivos Bluetooth disponíveis para o emparelhamento usando o seguinte formato de solicitação. Isso pode ser atualizado para uma conexão WebSocket com os mesmos dados JSON. Durante o tempo de vida da conexão de WebSocket, pode alterar a lista de dispositivos. Uma lista completa de dispositivos será enviada sobre a conexão de WebSocket sempre que há uma atualização.
+
+| Método        | URI da solicitação          |
+| :---          | :---                 |
+| OBTER           | /api/bt/getavailable |
+| GET/WebSocket | /api/bt/getavailable |
+
+**Parâmetros de URI**
+
+- Nenhuma
+
+**Cabeçalhos de solicitação**
+
+- Nenhuma
+
+**Corpo da solicitação**
+
+- Nenhuma
+
+**Resposta**
+
+A resposta inclui uma matriz JSON dos dispositivos Bluetooth que estão atualmente disponíveis para o emparelhamento.
+```json
+{"AvailableDevices": [
+    {
+        "Name" : string,
+        "ID" : string
+    },...
+]}
+```
+
+---
+### <a name="connect-a-bluetooth-device"></a>Conectar um dispositivo Bluetooth
+
+**Solicitação**
+
+Se conectará ao dispositivo se o dispositivo pode ser usado para áudio neste sistema. (As políticas e componentes opcionais podem afetar isso.)
+
+| Método       | URI da solicitação           |
+| :---         | :---                  |
+| POSTAR         | /api/bt/connectdevice |
+
+**Parâmetros de URI**
+
+| Parâmetro do URI | Descrição |
+| :---          | :--- |
+| ID            | (**necessária**) a ID de ponto de extremidade de associação para o dispositivo Bluetooth e deve ser codificada em Base64. |
+
+**Cabeçalhos de solicitação**
+
+- Nenhuma
+
+**Corpo da solicitação**
+
+- Nenhuma
+
+**Resposta**
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+| Código de status HTTP | Descrição |
+| :---             | :--- |
+| 200              | OK |
+| 4XX              | Códigos de erro |
+| 5XX              | Códigos de erro |
+
+**Famílias de dispositivos disponíveis**
+
+* Área de Trabalho do Windows
+* HoloLens
+* IoT
+
+
+---
+### <a name="disconnect-a-bluetooth-device"></a>Desconectar um dispositivo Bluetooth
+
+**Solicitação**
+
+Desconecta o dispositivo se o dispositivo pode ser usado para áudio neste sistema. (As políticas e componentes opcionais podem afetar isso.)
+
+| Método       | URI da solicitação              |
+| :---         | :---                     |
+| POSTAR         | /api/bt/disconnectdevice |
+
+**Parâmetros de URI**
+
+| Parâmetro do URI | Descrição |
+| :---          | :--- |
+| ID            | (**necessária**) a ID de ponto de extremidade de associação para o dispositivo Bluetooth e deve ser codificada em Base64. |
+
+**Cabeçalhos de solicitação**
+
+- Nenhuma
+
+**Corpo da solicitação**
+
+- Nenhuma
+
+**Resposta**
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+| Código de status HTTP | Descrição |
+| :---             | :--- |
+| 200              | OK |
+| 4XX              | Códigos de erro |
+| 5XX              | Códigos de erro |
+
+**Famílias de dispositivos disponíveis**
+
+* Área de Trabalho do Windows
+* HoloLens
+* IoT
+
+---
+## <a name="device-manager"></a>Gerenciador de dispositivos
 <hr>
-## Gerenciador de dispositivos
-<hr>
-### Obter os dispositivos instalados no computador
+
+### <a name="get-the-installed-devices-on-the-machine"></a>Obter os dispositivos instalados no computador
 
 **Solicitação**
 
@@ -501,7 +673,7 @@ Você pode obter uma lista de dispositivos que estão instalados no computador u
 | :------     | :----- |
 | OBTER | /api/devicemanager/devices |
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -547,7 +719,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter dados em dispositivos USB/Hubs conectados
+
+### <a name="get-data-on-connected-usb-deviceshubs"></a>Obter dados em dispositivos USB/Hubs conectados
 
 **Solicitação**
 
@@ -558,7 +731,7 @@ Você pode obter uma lista de descritores USB para os dispositivos USB e Hubs us
 | OBTER | /ext/Devices/usbdevices |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -589,7 +762,7 @@ A resposta é o JSON que inclui DeviceID para o dispositivo USB, juntamente com 
 }
 ```
 
-**Dados de retorno de exemplo**
+**Retornar dados de exemplo**
 ```json
 {
     "DeviceList": [{
@@ -631,9 +804,12 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## Coleta de despejo
+
+## <a name="dump-collection"></a>Coleta de despejo
+
 <hr>
-### Obter a lista de todos os despejos de memória para aplicativos
+
+### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Obter a lista de todos os despejos de memória para aplicativos
 
 **Solicitação**
 
@@ -644,7 +820,7 @@ Você pode obter a lista de todos os despejos de memória disponíveis para todo
 | OBTER | /api/debug/dump/usermode/dumps |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -678,7 +854,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter configurações da coleta de despejo de memória para um app
+
+### <a name="get-the-crash-dump-collection-settings-for-an-app"></a>Obter configurações da coleta de despejo de memória para um app
 
 **Solicitação**
 
@@ -689,7 +866,7 @@ Você pode obter as configurações da coleta de despejo de memória para um apl
 | OBTER | /api/debug/dump/usermode/crashcontrol |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -730,7 +907,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Excluir um despejo de memória para um app de sideload
+
+### <a name="delete-a-crash-dump-for-a-sideloaded-app"></a>Excluir um despejo de memória para um app de sideload
 
 **Solicitação**
 
@@ -741,7 +919,7 @@ Você pode excluir um despejo de memória de um aplicativo de sideload usando o 
 | DELETE | /api/debug/dump/usermode/crashdump |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -778,7 +956,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Desabilitar despejos de memória para um app de sideload
+
+### <a name="disable-crash-dumps-for-a-sideloaded-app"></a>Desabilitar despejos de memória para um app de sideload
 
 **Solicitação**
 
@@ -789,7 +968,7 @@ Você pode desabilitar despejos de memória para um aplicativo de sideload usand
 | DELETE | /api/debug/dump/usermode/crashcontrol |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -825,7 +1004,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Baixar o despejo de memória para um app de sideload
+
+### <a name="download-the-crash-dump-for-a-sideloaded-app"></a>Baixar o despejo de memória para um app de sideload
 
 **Solicitação**
 
@@ -836,7 +1016,7 @@ Você pode baixar um despejo de memória de um aplicativo de sideload usando o s
 | OBTER | /api/debug/dump/usermode/crashdump |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -875,7 +1055,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Habilitar despejos de memória para um app de sideload
+
+### <a name="enable-crash-dumps-for-a-sideloaded-app"></a>Habilitar despejos de memória para um app de sideload
 
 **Solicitação**
 
@@ -886,7 +1067,7 @@ Você pode habilitar despejos de memória para um aplicativo de sideload usando 
 | POSTAR | /api/debug/dump/usermode/crashcontrol |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -920,7 +1101,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter a lista de arquivos de verificação de erro
+
+### <a name="get-the-list-of-bugcheck-files"></a>Obter a lista de arquivos de verificação de erro
 
 **Solicitação**
 
@@ -931,7 +1113,7 @@ Você pode obter a lista de arquivos de minidespejo de verificação de erro usa
 | OBTER | /api/debug/dump/kernel/dumplist |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -969,7 +1151,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Baixar um arquivo de despejo de verificação de erro
+
+### <a name="download-a-bugcheck-dump-file"></a>Baixar um arquivo de despejo de verificação de erro
 
 **Solicitação**
 
@@ -980,7 +1163,7 @@ Você pode baixar um arquivo de despejo de verificação de erro usando o seguin
 | OBTER | /api/debug/dump/kernel/dump |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -1017,7 +1200,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter as configurações de controle de falhas de verificação de erro
+
+### <a name="get-the-bugcheck-crash-control-settings"></a>Obter as configurações de controle de falhas de verificação de erro
 
 **Solicitação**
 
@@ -1028,7 +1212,7 @@ Você pode obter essas configurações de controle de falhas de verificação de
 | OBTER | /api/debug/dump/kernel/crashcontrol |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1078,7 +1262,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter um despejo de kernel dinâmico
+
+### <a name="get-a-live-kernel-dump"></a>Obter um despejo de kernel dinâmico
 
 **Solicitação**
 
@@ -1089,7 +1274,7 @@ Você pode obter um despejo de kernel dinâmico usando o seguinte formato de sol
 | OBTER | /api/debug/dump/livekernel |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1121,7 +1306,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter um despejo de um processo de usuário dinâmico
+
+### <a name="get-a-dump-from-a-live-user-process"></a>Obter um despejo de um processo de usuário dinâmico
 
 **Solicitação**
 
@@ -1132,7 +1318,7 @@ Você pode obter o despejo para o processo de usuário dinâmico usando o seguin
 | OBTER | /api/debug/dump/usermode/live |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -1168,7 +1354,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Definir as configurações de controle de falhas de verificação de erro
+
+### <a name="set-the-bugcheck-crash-control-settings"></a>Definir as configurações de controle de falhas de verificação de erro
 
 **Solicitação**
 
@@ -1179,7 +1366,7 @@ Você pode definir as configurações para coletar dados de verificação de err
 | POSTAR | /api/debug/dump/kernel/crashcontrol |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -1216,9 +1403,12 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## ETW
+
+## <a name="etw"></a>ETW
+
 <hr>
-### Criar uma sessão ETW em tempo real por um Websocket
+
+### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Criar uma sessão ETW em tempo real por um Websocket
 
 **Solicitação**
 
@@ -1229,7 +1419,7 @@ Você pode criar uma sessão ETW em tempo real usando o seguinte formato de soli
 | GET/WebSocket | /api/etw/session/realtime |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1312,7 +1502,8 @@ Exemplo:
 ```
 
 <hr>
-### Enumerar os provedores ETW registrados
+
+### <a name="enumerate-the-registered-etw-providers"></a>Enumerar os provedores ETW registrados
 
 **Solicitação**
 
@@ -1323,7 +1514,7 @@ Você pode enumerar os provedores registrados usando o seguinte formato de solic
 | OBTER | /api/etw/providers |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1363,7 +1554,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Enumere os provedores ETW personalizados expostos pela plataforma.
+
+### <a name="enumerate-the-custom-etw-providers-exposed-by-the-platform"></a>Enumere os provedores ETW personalizados expostos pela plataforma.
 
 **Solicitação**
 
@@ -1374,7 +1566,7 @@ Você pode enumerar os provedores registrados usando o seguinte formato de solic
 | OBTER | /api/etw/customproviders |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1411,7 +1603,9 @@ Você pode enumerar os provedores registrados usando o seguinte formato de solic
 * IoT
 
 <hr>
-## Local padrão
+
+## <a name="location"></a>Location
+
 <hr>
 
 ### <a name="get-location-override-mode"></a>Obter modo de substituição de local
@@ -1425,7 +1619,7 @@ Você pode obter o status da substituição de pilha de locais do dispositivo us
 | OBTER | /ext/location/override |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1474,7 +1668,7 @@ Você pode definir o status da substituição de pilha de locais do dispositivo 
 | PUT | /ext/location/override |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1525,7 +1719,7 @@ Você pode obter o local injetado (falsificado) do dispositivo usando o formato 
 | OBTER | /ext/location/position |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1577,7 +1771,7 @@ Você pode definir o local injetado (falsificado) do dispositivo usando o format
 | PUT | /ext/location/override |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1624,9 +1818,12 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## Informações do sistema operacional
+
+## <a name="os-information"></a>Informações do sistema operacional
+
 <hr>
-### Obter o nome do computador
+
+### <a name="get-the-machine-name"></a>Obter o nome do computador
 
 **Solicitação**
 
@@ -1637,7 +1834,7 @@ Você pode obter o nome de um computador usando o seguinte formato de solicitaç
 | OBTER | /api/os/machinename |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1676,7 +1873,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter as informações do sistema operacional
+
+### <a name="get-the-operating-system-information"></a>Obter as informações do sistema operacional
 
 **Solicitação**
 
@@ -1687,7 +1885,7 @@ Você pode obter as informações do sistema operacional de um computador usando
 | OBTER | /api/os/info |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1732,7 +1930,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter a família de dispositivos 
+
+### <a name="get-the-device-family"></a>Obter a família de dispositivos 
 
 **Solicitação**
 
@@ -1743,7 +1942,7 @@ Você pode obter a família de dispositivos (Xbox, telefone, área de trabalho e
 | OBTER | /api/os/devicefamily |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1786,7 +1985,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Definir o nome do computador
+
+### <a name="set-the-machine-name"></a>Definir o nome do computador
 
 **Solicitação**
 
@@ -1797,13 +1997,13 @@ Você pode definir o nome de um computador usando o seguinte formato de solicita
 | POSTAR | /api/os/machinename |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
-| nome | (**necessário**) O novo nome para o computador. |
+| name | (**necessário**) O novo nome para o computador. |
 
 **Cabeçalhos de solicitação**
 
@@ -1832,9 +2032,12 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## Informações do usuário
+
+## <a name="user-information"></a>Informações do usuário
+
 <hr>
-### Obter o usuário ativo
+
+### <a name="get-the-active-user"></a>Obter o usuário ativo
 
 **Solicitação**
 
@@ -1845,7 +2048,7 @@ Você pode obter o nome do usuário ativo no dispositivo usando o seguinte forma
 | OBTER | /api/users/activeuser |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1895,9 +2098,12 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## Dados de desempenho
+
+## <a name="performance-data"></a>Dados de desempenho
+
 <hr>
-### Obter a lista de processos em execução
+
+### <a name="get-the-list-of-running-processes"></a>Obter a lista de processos em execução
 
 **Solicitação**
 
@@ -1909,7 +2115,7 @@ Você pode obter a lista de processos atualmente em execução usando o seguinte
 | GET/WebSocket | /api/resourcemanager/processes |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -1958,7 +2164,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter as estatísticas de desempenho do sistema
+
+### <a name="get-the-system-performance-statistics"></a>Obter as estatísticas de desempenho do sistema
 
 **Solicitação**
 
@@ -1971,7 +2178,7 @@ Você pode obter as estatísticas de desempenho do sistema usando o seguinte for
 
 Isso também pode ser atualizado para uma conexão WebSocket.  Isso fornece os mesmos dados JSON a seguir uma vez por segundo. 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -2037,9 +2244,12 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## Potência
+
+## <a name="power"></a>Potência
+
 <hr>
-### Obter o estado atual da bateria
+
+### <a name="get-the-current-battery-state"></a>Obter o estado atual da bateria
 
 **Solicitação**
 
@@ -2050,7 +2260,7 @@ Você pode obter o estado atual da bateria usando o seguinte formato de solicita
 | OBTER | /api/power/battery |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -2096,7 +2306,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter o esquema de energia ativo
+
+### <a name="get-the-active-power-scheme"></a>Obter o esquema de energia ativo
 
 **Solicitação**
 
@@ -2107,7 +2318,7 @@ Você pode obter o esquema de energia ativo usando o seguinte formato de solicit
 | OBTER | /api/power/activecfg |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -2142,7 +2353,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter o subvalor para um esquema de energia
+
+### <a name="get-the-sub-value-for-a-power-scheme"></a>Obter o subvalor para um esquema de energia
 
 **Solicitação**
 
@@ -2155,7 +2367,7 @@ Você pode obter o subvalor para um esquema de energia usando o seguinte formato
 Opções:
 - SCHEME_CURRENT
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -2185,7 +2397,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter o estado de energia do sistema
+
+### <a name="get-the-power-state-of-the-system"></a>Obter o estado de energia do sistema
 
 **Solicitação**
 
@@ -2196,7 +2409,7 @@ Você pode verificar o estado de energia do sistema usando o seguinte formato de
 | OBTER | /api/power/state |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -2232,7 +2445,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Definir o esquema de energia ativo
+
+### <a name="set-the-active-power-scheme"></a>Definir o esquema de energia ativo
 
 **Solicitação**
 
@@ -2243,7 +2457,7 @@ Você pode definir o esquema de energia ativo usando o seguinte formato de solic
 | POSTAR | /api/power/activecfg |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -2277,7 +2491,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Definir o subvalor para um esquema de energia
+
+### <a name="set-the-sub-value-for-a-power-scheme"></a>Definir o subvalor para um esquema de energia
 
 **Solicitação**
 
@@ -2288,7 +2503,7 @@ Você pode definir o subvalor para um esquema de energia usando o seguinte forma
 | POSTAR | /api/power/cfg/*<power scheme path>* |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -2321,7 +2536,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter um relatório de estudo de suspensão
+
+### <a name="get-a-sleep-study-report"></a>Obter um relatório de estudo de suspensão
 
 **Solicitação**
 
@@ -2331,7 +2547,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 Você pode obter um relatório de estudo de suspensão usando o seguinte formato de solicitação:
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
 | nome_de_arquivo | (**necessário**) O nome completo do arquivo que você deseja baixar. Esse valor deve ser codificado em hex64. |
@@ -2364,7 +2580,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Enumerar os relatórios de estudo de suspensão disponíveis
+
+### <a name="enumerate-the-available-sleep-study-reports"></a>Enumerar os relatórios de estudo de suspensão disponíveis
 
 **Solicitação**
 
@@ -2375,7 +2592,7 @@ Você pode enumerar os relatórios de estudo de suspensão disponíveis usando o
 | OBTER | /api/power/sleepstudy/reports |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -2415,7 +2632,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter a transformação de estudo de suspensão
+
+### <a name="get-the-sleep-study-transform"></a>Obter a transformação de estudo de suspensão
 
 **Solicitação**
 
@@ -2426,7 +2644,7 @@ Você pode obter o relatório de estudo de suspensão usando o seguinte formato 
 | OBTER | /api/power/sleepstudy/transform |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -2458,9 +2676,12 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## Controle remoto
+
+## <a name="remote-control"></a>Controle remoto
+
 <hr>
-### Reiniciar o computador de destino
+
+### <a name="restart-the-target-computer"></a>Reiniciar o computador de destino
 
 **Solicitação**
 
@@ -2471,7 +2692,7 @@ Você pode reiniciar o computador de destino usando o seguinte formato de solici
 | POSTAR | /api/control/restart |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -2502,7 +2723,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Desligar o computador de destino
+
+### <a name="shut-down-the-target-computer"></a>Desligar o computador de destino
 
 **Solicitação**
 
@@ -2513,7 +2735,7 @@ Você pode desligar o computador de destino usando o seguinte formato de solicit
 | POSTAR | /api/control/shutdown |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -2546,9 +2768,12 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## Gerenciador de tarefas
+
+## <a name="task-manager"></a>Gerenciador de tarefas
+
 <hr>
-### Iniciar um aplicativo moderno
+
+### <a name="start-a-modern-app"></a>Iniciar um aplicativo moderno
 
 **Solicitação**
 
@@ -2559,7 +2784,7 @@ Você pode iniciar um aplicativo moderno usando o seguinte formato de solicitaç
 | POSTAR | /api/taskmanager/app |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -2597,7 +2822,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Parar um aplicativo moderno
+
+### <a name="stop-a-modern-app"></a>Parar um aplicativo moderno
 
 **Solicitação**
 
@@ -2608,7 +2834,7 @@ Você pode parar um aplicativo moderno usando o seguinte formato de solicitaçã
 | DELETE | /api/taskmanager/app |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -2646,7 +2872,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Interromper o processo por PID
+
+### <a name="kill-process-by-pid"></a>Interromper o processo por PID
 
 **Solicitação**
 
@@ -2657,7 +2884,7 @@ Você pode interromper um processo usando o formato de solicitação a seguir.
 | DELETE | /api/taskmanager/process |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -2692,9 +2919,12 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## Rede
+
+## <a name="networking"></a>Rede
+
 <hr>
-### Obter a configuração de IP atual
+
+### <a name="get-the-current-ip-configuration"></a>Obter a configuração de IP atual
 
 **Solicitação**
 
@@ -2705,7 +2935,7 @@ Você pode obter a configuração de IP atual usando o seguinte formato de solic
 | OBTER | /api/networking/ipconfig |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -2780,7 +3010,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Definir um endereço IP estático (configuração de IPV4)
+
+### <a name="set-a-static-ip-address-ipv4-configuration"></a>Definir um endereço IP estático (configuração de IPV4)
 
 **Solicitação**
 
@@ -2791,7 +3022,7 @@ Define a configuração de IPV4 com o IP estático e o DNS. Se não for especifi
 | PUT | /api/networking/ipv4config |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 | Parâmetro do URI | Descrição |
 | :---          | :--- |
@@ -2837,8 +3068,10 @@ Esta API tem os códigos de status esperados a seguir.
 * Xbox
 * HoloLens
 * IoT
+
 <hr>
-### Enumerar as interfaces de rede sem fio
+
+### <a name="enumerate-wireless-network-interfaces"></a>Enumerar as interfaces de rede sem fio
 
 **Solicitação**
 
@@ -2849,7 +3082,7 @@ Você pode enumerar as interfaces de rede sem fio disponíveis usando o seguinte
 | OBTER | /api/wifi/interfaces |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -2900,7 +3133,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Enumerar as redes sem fio
+
+### <a name="enumerate-wireless-networks"></a>Enumerar as redes sem fio
 
 **Solicitação**
 
@@ -2911,7 +3145,7 @@ Você pode enumerar a lista de redes sem fio na interface especificada usando o 
 | OBTER | /api/wifi/networks |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -2970,7 +3204,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Conectar-se a uma rede Wi-Fi e desconectar-se dela
+
+### <a name="connect-and-disconnect-to-a-wi-fi-network"></a>Conectar-se a uma rede Wi-Fi e desconectar-se dela
 
 **Solicitação**
 
@@ -2981,7 +3216,7 @@ Você pode se conectar a uma rede Wi-Fi ou se desconectar dela usando o seguinte
 | POSTAR | /api/wifi/network |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -3020,7 +3255,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Excluir um perfil de Wi-Fi
+
+### <a name="delete-a-wi-fi-profile"></a>Excluir um perfil de Wi-Fi
 
 **Solicitação**
 
@@ -3031,7 +3267,7 @@ Você pode excluir um perfil associado a uma rede em uma interface específica u
 | DELETE | /api/wifi/profile |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -3067,9 +3303,12 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## Relatório de Erros do Windows (WER)
+
+## <a name="windows-error-reporting-wer"></a>Relatório de Erros do Windows (WER)
+
 <hr>
-### Baixar um arquivo de relatório de erros do Windows (WER)
+
+### <a name="download-a-windows-error-reporting-wer-file"></a>Baixar um arquivo de relatório de erros do Windows (WER)
 
 **Solicitação**
 
@@ -3080,15 +3319,15 @@ Você pode baixar um arquivo relacionado a WER usando o formato de solicitação
 | OBTER | /api/wer/report/file |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
 | usuário   | (**necessário**) O nome de usuário associado ao relatório. |
-| Tipo   | (**necessário**) O tipo de relatório. Pode ser **queried** ou **archived**. |
-| nome   | (**necessário**) O nome do relatório. Isso deve ser codificado em base64. |
+| type   | (**necessário**) O tipo de relatório. Pode ser **queried** ou **archived**. |
+| name   | (**necessário**) O nome do relatório. Isso deve ser codificado em base64. |
 | arquivo   | (**necessário**) O nome do arquivo a ser baixado do relatório. Isso deve ser codificado em base64. |
 
 **Cabeçalhos de solicitação**
@@ -3120,7 +3359,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Enumerar arquivos em um relatório de erros do Windows (WER)
+
+### <a name="enumerate-files-in-a-windows-error-reporting-wer-report"></a>Enumerar arquivos em um relatório de erros do Windows (WER)
 
 **Solicitação**
 
@@ -3131,15 +3371,15 @@ Você pode enumerar os arquivos em um relatório WER usando o seguinte formato d
 | OBTER | /api/wer/report/files |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
 | usuário   | (**necessário**) O usuário associado ao relatório. |
-| Tipo   | (**necessário**) O tipo de relatório. Pode ser **queried** ou **archived**. |
-| nome   | (**necessário**) O nome do relatório. Isso deve ser codificado em base64. |
+| type   | (**necessário**) O tipo de relatório. Pode ser **queried** ou **archived**. |
+| name   | (**necessário**) O nome do relatório. Isso deve ser codificado em base64. |
 
 **Cabeçalhos de solicitação**
 
@@ -3175,7 +3415,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Listar os relatórios WER (Relatório de Erros do Windows)
+
+### <a name="list-the-windows-error-reporting-wer-reports"></a>Listar os relatórios WER (Relatório de Erros do Windows)
 
 **Solicitação**
 
@@ -3186,7 +3427,7 @@ Você pode obter os relatórios WER usando o seguinte formato de solicitação:
 | OBTER | /api/wer/reports |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -3233,9 +3474,12 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## Windows Performance Recorder (WPR) 
+
+## <a name="windows-performance-recorder-wpr"></a>Windows Performance Recorder (WPR) 
+
 <hr>
-### Inicie o rastreamento com um perfil personalizado
+
+### <a name="start-tracing-with-a-custom-profile"></a>Inicie o rastreamento com um perfil personalizado
 
 **Solicitação**
 
@@ -3246,7 +3490,7 @@ Você pode carregar um perfil WPR e iniciar o rastreamento com esse perfil usand
 | POSTAR | /api/wpr/customtrace |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -3287,7 +3531,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Iniciar uma sessão de rastreamento de desempenho de inicialização
+
+### <a name="start-a-boot-performance-tracing-session"></a>Iniciar uma sessão de rastreamento de desempenho de inicialização
 
 **Solicitação**
 
@@ -3298,7 +3543,7 @@ Você pode iniciar uma sessão de rastreamento de WPR de inicialização usando 
 | POSTAR | /api/wpr/boottrace |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -3343,7 +3588,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Parar uma sessão de rastreamento de desempenho de inicialização
+
+### <a name="stop-a-boot-performance-tracing-session"></a>Parar uma sessão de rastreamento de desempenho de inicialização
 
 **Solicitação**
 
@@ -3354,7 +3600,7 @@ Você pode parar uma sessão WPR de rastreamento de inicialização usando o seg
 | OBTER | /api/wpr/boottrace |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -3388,7 +3634,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Iniciar uma sessão de rastreamento de desempenho
+
+### <a name="start-a-performance-tracing-session"></a>Iniciar uma sessão de rastreamento de desempenho
 
 **Solicitação**
 
@@ -3399,7 +3646,7 @@ Você pode iniciar uma sessão WPR de rastreamento usando o seguinte formato de 
 | POSTAR | /api/wpr/trace |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -3444,7 +3691,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Parar uma sessão de rastreamento de desempenho
+
+### <a name="stop-a-performance-tracing-session"></a>Parar uma sessão de rastreamento de desempenho
 
 **Solicitação**
 
@@ -3455,7 +3703,7 @@ Você pode parar uma sessão WPR de rastreamento usando o seguinte formato de so
 | OBTER | /api/wpr/trace |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -3489,7 +3737,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Recuperar o status de uma sessão de rastreamento
+
+### <a name="retrieve-the-status-of-a-tracing-session"></a>Recuperar o status de uma sessão de rastreamento
 
 **Solicitação**
 
@@ -3500,7 +3749,7 @@ Você pode recuperar o status da sessão WPR atual usando o seguinte formato de 
 | OBTER | /api/wpr/status |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -3541,7 +3790,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Listar sessões de rastreamento concluídas (ETLs)
+
+### <a name="list-completed-tracing-sessions-etls"></a>Listar sessões de rastreamento concluídas (ETLs)
 
 **Solicitação**
 
@@ -3552,7 +3802,7 @@ Você pode obter uma lista dos rastreamentos de ETL no dispositivo usando o segu
 | OBTER | /api/wpr/tracefiles |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -3598,7 +3848,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Baixar uma sessão de rastreamento (ETL)
+
+### <a name="download-a-tracing-session-etl"></a>Baixar uma sessão de rastreamento (ETL)
 
 **Solicitação**
 
@@ -3609,7 +3860,7 @@ Você pode baixar um arquivo de rastreamento (rastreamento de inicialização ou
 | OBTER | /api/wpr/tracefile |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar o seguinte parâmetro adicional no URI da solicitação:
 
@@ -3647,7 +3898,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Excluir uma sessão de rastreamento (ETL)
+
+### <a name="delete-a-tracing-session-etl"></a>Excluir uma sessão de rastreamento (ETL)
 
 **Solicitação**
 
@@ -3658,7 +3910,7 @@ Você pode excluir um arquivo de rastreamento (rastreamento de inicialização o
 | DELETE | /api/wpr/tracefile |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 Você pode especificar o seguinte parâmetro adicional no URI da solicitação:
 
@@ -3696,9 +3948,12 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-## Marcas de DNS-SD 
+
+## <a name="dns-sd-tags"></a>Marcas de DNS-SD 
+
 <hr>
-### Exibir Marcas
+
+### <a name="view-tags"></a>Exibir Marcas
 
 **Solicitação**
 
@@ -3709,7 +3964,7 @@ Veja as marcas atualmente aplicadas para o dispositivo.  Elas são anunciadas po
 | OBTER | /api/dns-sd/tags |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -3751,7 +4006,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Excluir Marcas
+
+### <a name="delete-tags"></a>Excluir Marcas
 
 **Solicitação**
 
@@ -3762,7 +4018,7 @@ Exclua todas as marcas atualmente anunciadas pelo DNS-SD.
 | DELETE | /api/dns-sd/tags |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -3796,7 +4052,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Excluir Marca
+
+### <a name="delete-tag"></a>Excluir Marca
 
 **Solicitação**
 
@@ -3807,7 +4064,7 @@ Exclua uma marca atualmente anunciada pelo DNS-SD.
 | DELETE | /api/dns-sd/tag |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
@@ -3842,7 +4099,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
  
 <hr>
-### Adicionar uma Marca
+
+### <a name="add-a-tag"></a>Adicionar uma Marca
 
 **Solicitação**
 
@@ -3853,7 +4111,7 @@ Adicione uma marca do anúncio DNS-SD.
 | POSTAR | /api/dns-sd/tag |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
@@ -3891,7 +4149,8 @@ Esta API tem os códigos de status esperados a seguir.
 ## <a name="app-file-explorer"></a>Aplicativo Explorador de Arquivos
 
 <hr>
-### Obter pastas conhecidas
+
+### <a name="get-known-folders"></a>Obter pastas conhecidas
 
 **Solicitação**
 
@@ -3902,7 +4161,7 @@ Obtenha uma lista de pastas de nível superior acessíveis.
 | OBTER | /api/filesystem/apps/knownfolders |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 
@@ -3941,7 +4200,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Obter arquivos
+
+### <a name="get-files"></a>Obter arquivos
 
 **Solicitação**
 
@@ -3952,7 +4212,7 @@ Obtenha uma lista de arquivos em uma pasta.
 | OBTER | /api/filesystem/apps/files |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
@@ -4001,7 +4261,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Baixar um arquivo
+
+### <a name="download-a-file"></a>Baixar um arquivo
 
 **Solicitação**
 
@@ -4011,7 +4272,7 @@ Obtenha um arquivo de uma pasta conhecida ou appLocalData.
 | :------     | :----- |
 | OBTER | /api/filesystem/apps/file |
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
@@ -4049,7 +4310,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Renomear um arquivo
+
+### <a name="rename-a-file"></a>Renomear um arquivo
 
 **Solicitação**
 
@@ -4060,7 +4322,7 @@ Renomeie um arquivo em uma pasta.
 | POSTAR | /api/filesystem/apps/rename |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
@@ -4101,7 +4363,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Excluir um arquivo
+
+### <a name="delete-a-file"></a>Excluir um arquivo
 
 **Solicitação**
 
@@ -4111,7 +4374,7 @@ Exclua um arquivo em uma pasta.
 | :------     | :----- |
 | DELETE | /api/filesystem/apps/file |
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
@@ -4151,7 +4414,8 @@ Esta API tem os códigos de status esperados a seguir.
 * IoT
 
 <hr>
-### Carregar um arquivo
+
+### <a name="upload-a-file"></a>Carregar um arquivo
 
 **Solicitação**
 
@@ -4161,7 +4425,7 @@ Carregue um arquivo em uma pasta.  Isso sobrescreverá um arquivo existente com 
 | :------     | :----- |
 | POSTAR | /api/filesystem/apps/file |
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |

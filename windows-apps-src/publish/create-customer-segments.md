@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, segmento, segmentos, grupo de destino, clientes
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
-ms.openlocfilehash: d0df23f0da4efe01877c45e5b2b6b5f4e2142a92
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e12db88c51fd2328ccd0fc84100fee1219260fbf
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613201"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63813496"
 ---
 # <a name="create-customer-segments"></a>Criar segmentos de cliente
 
@@ -50,7 +50,7 @@ Observações importantes sobre segmentos de cliente:
     Portanto, se você quisesse refinar esse segmento para incluir somente clientes masculinos que estão na faixa etária especificada, selecione **Adicionar outro filtro** e, em seguida, selecione os critérios de filtro adicionais [**Demográfico**] [**Sexo**] [**é**] [**Masculino**]. Para este exemplo, a **Definição do segmento** exibiria **Faixa etária == 18 a 24 && Sexo == Masculino**.
 
     ![Exemplo de critérios de filtro de um segmento](images/create-segment-inclusions.png)
-6. Selecione **Salvar**.
+6. Clique em **Salvar**.
 
 > [!IMPORTANT]
 > Não será possível usar um segmento que inclui poucos clientes. Se sua definição de segmento não incluir suficiente clientes, você poderá ajustar os critérios de segmento ou tentar novamente mais tarde, quando seu aplicativo talvez tiver adquirido mais clientes que atendem aos critérios de segmento.

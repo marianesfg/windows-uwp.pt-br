@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, agenda, data de lançamento, datas, lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: a1477a426a9cdf240e694efb19bd7521fcd734cb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e247d59253d24fd309b26aebc450dcc7b5e9051d
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597201"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63787135"
 ---
 # <a name="configure-precise-release-scheduling"></a>Configurar o agendamento preciso do lançamento
 
@@ -46,7 +46,7 @@ Na lista suspensa **Lançamento**, você pode definir quando deseja que o aplica
 
 Estas são as opções que você pode configurar para o agendamento do **Lançamento** de um produto:
 - **Assim que possível**: O produto liberará assim que ele é certificado e publicado. Essa é a opção padrão.
-- **em**: O produto liberará na data e hora em que você selecionar. Você tem duas opções adicionais:
+- **at**: O produto liberará na data e hora em que você selecionar. Você tem duas opções adicionais:
    - **UTC**: A hora em que você selecionar será o tempo de Horário Coordenado Universal (UTC), para que as versões do aplicativo ao mesmo tempo em todos os lugares.
    - **Local**: A hora em que você selecionar serão usados em cada fuso horário associado a um mercado. (Observe que, no caso de mercados que incluem mais de um fuso horário, apenas um fuso horário desse mercado será usado. Para os Estados Unidos, o fuso horário do Leste dos EUA é usado.
 - **não agendado**: O aplicativo não estará disponível na Store. Se você escolher essa opção, poderá disponibilizar o aplicativo na Loja mais tarde, criando um novo envio e escolhendo uma das outras opções.

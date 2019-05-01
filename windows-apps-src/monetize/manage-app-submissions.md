@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: fa5b5a62348a36f7758468a86e19b744cdde8754
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 474abc2ec43b7f8eab408bd75cca33653d27d932
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335068"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63789671"
 ---
 # <a name="manage-app-submissions"></a>Gerenciar envios de aplicativo
 
@@ -345,12 +345,12 @@ Esse recurso tem os valores a seguir.
 | targetPublishDate           | cadeia de caracteres  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |  
 | listings           |   objeto  |  Um dicionário de pares de chave e valor, em que cada chave é um código de país e cada valor é um [recurso de listagem](#listing-object) que contém informações de listagem do aplicativo.       |   
 | hardwarePreferences           |  matriz  |   Uma matriz de cadeias de caracteres que definem as [preferências de hardware](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Touch</li><li>Teclado</li><li>Mouse</li><li>Câmera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonia</li></ul>     |   
-| automaticBackupEnabled           |  booliano  |   Indica se o Windows pode incluir dados do aplicativo em backups automáticos no OneDrive. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
-| canInstallOnRemovableMedia           |  booliano  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
-| isGameDvrEnabled           |  booliano |   Indica se o DVR de jogos está habilitado para o aplicativo.    |   
+| automaticBackupEnabled           |  boolean  |   Indica se o Windows pode incluir dados do aplicativo em backups automáticos no OneDrive. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
+| canInstallOnRemovableMedia           |  boolean  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| isGameDvrEnabled           |  boolean |   Indica se o DVR de jogos está habilitado para o aplicativo.    |   
 | gamingOptions           |  matriz |   Uma matriz que contém um [recurso de opções de jogo](#gaming-options-object) que define as configurações relacionadas a jogos para o app.     |   
-| hasExternalInAppProducts           |     booliano          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Microsoft Store. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
-| meetAccessibilityGuidelines           |    booliano           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
+| hasExternalInAppProducts           |     boolean          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Microsoft Store. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| meetAccessibilityGuidelines           |    boolean           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
 | notesForCertification           |  cadeia de caracteres  |   Contém [observações de certificação](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
 | status           |   cadeia de caracteres  |  O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   objeto  | Um [recurso de detalhes do status](#status-details-object) que contém detalhes adicionais sobre o status do envio, inclusive informações sobre eventuais erros.       |    
@@ -358,7 +358,7 @@ Esse recurso tem os valores a seguir.
 | applicationPackages           |   matriz  | Uma matriz de [recursos do pacote de aplicativos](#application-package-object) que dão detalhes sobre cada pacote no envio. |    
 | packageDeliveryOptions    | objeto  | Um [recurso de opções de entrega do pacote](#package-delivery-options-object) que contém configurações da distribuição de pacote gradual e da atualização obrigatória para o envio.  |
 | enterpriseLicensing           |  cadeia de caracteres  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
-| allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  booliano   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
+| allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
 | allowTargetFutureDeviceFamilies           | objeto   |  Um dicionário de pares de chave e valor, onde cada chave é uma [família de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) e cada valor é um valor booliano que indica se seu aplicativo tem permissão para segmentar a família de dispositivos especificadas.     |    
 | friendlyName           |   cadeia de caracteres  |  O nome amigável do envio, conforme mostrado no Partner Center. Esse valor é gerado para você ao criar o envio.       |  
 | trailers           |  matriz |   Uma matriz que contém até 15 [recursos de trailer](#trailer-object) que representam trailers de vídeo para a listagem de apps.<br/><br/>   |  
@@ -376,7 +376,7 @@ Esse recurso contém informações de preço do aplicativo. Esse recurso tem os 
 |  marketSpecificPricings               |    objeto     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.      |     
 |  sales               |   matriz      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do aplicativo.   |     
 |  priceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) do aplicativo.   |     
-|  isAdvancedPricingModel               |   booliano      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
+|  isAdvancedPricingModel               |   boolean      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
 
 
 <span id="sale-object" />
@@ -394,7 +394,7 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição    |
 |-----------------|---------|------|
-|  nome               |    cadeia de caracteres     |   O nome da promoção.    |     
+|  name               |    cadeia de caracteres     |   O nome da promoção.    |     
 |  basePriceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
 |  startDate               |   cadeia de caracteres      |   A data de início da promoção no formato ISO 8601.  |     
 |  endDate               |   cadeia de caracteres      |  A data de término da promoção no formato ISO 8601.      |     
@@ -426,7 +426,7 @@ Esse recurso contém informações de listagem base de um aplicativo. Esse recur
 |  privacyPolicy                |   cadeia de caracteres      |   Este valor está obsoleto. Para definir ou alterar a URL da política de privacidade para o seu aplicativo, você deve fazer isso na [propriedades](../publish/enter-app-properties.md#privacy-policy-url) página no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.       |
 |  supportContact                |   cadeia de caracteres      |  Este valor está obsoleto. Para definir ou alterar o suporte de contato URL ou endereço de email para seu aplicativo, você deve fazer isso na [propriedades](../publish/enter-app-properties.md#support-contact-info) página no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.        |
 |  websiteUrl                |   cadeia de caracteres      |  Este valor está obsoleto. Para definir ou alterar a URL da página da web para seu aplicativo, você deve fazer isso na [propriedades](../publish/enter-app-properties.md#website) página no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.      |    
-|  descrição               |    cadeia de caracteres     |   A [descrição](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) dos detalhes do aplicativo.   |     
+|  description               |    cadeia de caracteres     |   A [descrição](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) dos detalhes do aplicativo.   |     
 |  features               |    matriz     |  Uma matriz de até 20 cadeias de caracteres que lista os [recursos](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) do seu aplicativo.     |
 |  releaseNotes               |  cadeia de caracteres       |  As [notas de versão](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) do aplicativo.    |
 |  images               |   matriz      |  Uma matriz de recursos de [imagem e ícone](#image-object) para a listagem do aplicativo.  |
@@ -450,7 +450,7 @@ Esse recurso contém dados de imagem e ícone para uma listagem do aplicativo. P
 |  fileName               |    cadeia de caracteres     |   O nome do arquivo de imagem no arquivo ZIP que você carregou para o envio.    |     
 |  fileStatus               |   cadeia de caracteres      |  O status do arquivo de imagem. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
 |  id  |  cadeia de caracteres  | A ID da imagem. Esse valor é fornecido pelo Centro de parceiros.  |
-|  descrição  |  cadeia de caracteres  | A descrição da imagem.  |
+|  description  |  cadeia de caracteres  | A descrição da imagem.  |
 |  imageType  |  cadeia de caracteres  | Indica o tipo da imagem. Há suporte para as seguintes cadeias de caracteres. <p/>[Imagens de captura de tela](../publish/app-screenshots-and-images.md#screenshots): <ul><li>Captura de tela (use esse valor para a captura de tela da área de trabalho)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[Logotipos da Loja](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>Ícone (use esse valor para o logotipo 1:1 de 300 x 300 pixels)</li></ul><p/>[Imagens promocionais](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Imagens do Xbox](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[Imagens promocionais opcionais](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
 
 
@@ -489,17 +489,17 @@ Esse recurso tem os valores a seguir.
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
 |  gêneros               |    matriz     |  Uma matriz de uma ou mais das seguintes cadeias de caracteres que descrevem os gêneros do jogo: <ul><li>Games_ActionAndAdventure</li><li>Games_CardAndBoard</li><li>Games_Casino</li><li>Games_Educational</li><li>Games_FamilyAndKids</li><li>Games_Fighting</li><li>Games_Music</li><li>Games_Platformer</li><li>Games_PuzzleAndTrivia</li><li>Games_RacingAndFlying</li><li>Games_RolePlaying</li><li>Games_Shooter</li><li>Games_Simulation</li><li>Games_Sports</li><li>Games_Strategy</li><li>Games_Word</li></ul>    |
-|  isLocalMultiplayer               |    booliano     |  Indica se o jogo dá suporte a multijogador local.      |     
-|  isLocalCooperative               |   booliano      |  Indica se o jogo dá suporte a cooperação local.    |     
-|  isOnlineMultiplayer               |   booliano      |  Indica se o jogo dá suporte a multijogador online.    |     
-|  isOnlineCooperative               |   booliano      |  Indica se o jogo dá suporte a cooperação online.    |     
+|  isLocalMultiplayer               |    boolean     |  Indica se o jogo dá suporte a multijogador local.      |     
+|  isLocalCooperative               |   boolean      |  Indica se o jogo dá suporte a cooperação local.    |     
+|  isOnlineMultiplayer               |   boolean      |  Indica se o jogo dá suporte a multijogador online.    |     
+|  isOnlineCooperative               |   boolean      |  Indica se o jogo dá suporte a cooperação online.    |     
 |  localMultiplayerMinPlayers               |   int      |   Especifica o número mínimo de jogadores a que o jogo dá suporte para multijogador local.   |     
 |  localMultiplayerMaxPlayers               |   int      |   Especifica o número máximo de jogadores a que o jogo dá suporte para multijogador local.  |     
 |  localCooperativeMinPlayers               |   int      |   Especifica o número mínimo de jogadores a que o jogo dá suporte para cooperação local.  |     
 |  localCooperativeMaxPlayers               |   int      |   Especifica o número máximo de jogadores a que o jogo dá suporte para cooperação local.  |     
-|  isBroadcastingPrivilegeGranted               |   booliano      |  Indica se o jogo dá suporte a difusão.   |     
-|  isCrossPlayEnabled               |   booliano      |   Indica se o jogo oferece suporte a sessões multijogador entre jogadores no Xbox e em computadores Windows 10.  |     
-|  kinectDataForExternal               |   cadeia de caracteres      |  Um dos seguintes valores de cadeia de caracteres que indica se o jogo pode coletar dados do Kinect e enviá-los a serviços externos: <ul><li>NotSet</li><li>Desconhecido</li><li>Habilitado</li><li>Desabilitada</li></ul>   |
+|  isBroadcastingPrivilegeGranted               |   boolean      |  Indica se o jogo dá suporte a difusão.   |     
+|  isCrossPlayEnabled               |   boolean      |   Indica se o jogo oferece suporte a sessões multijogador entre jogadores no Xbox e em computadores Windows 10.  |     
+|  kinectDataForExternal               |   cadeia de caracteres      |  Um dos seguintes valores de cadeia de caracteres que indica se o jogo pode coletar dados do Kinect e enviá-los a serviços externos: <ul><li>NotSet</li><li>Desconhecido</li><li>Enabled</li><li>Desabilitada</li></ul>   |
 
 > [!NOTE]
 > O recurso *gamingOptions* foi adicionado em maio de 2017, depois que a API de envio da Microsoft Store foi lançada pela primeira vez para desenvolvedores. Se você tiver criado um envio para um app por meio da API de envio antes da introdução desse recurso e se esse envio ainda estiver em andamento, esse recurso será nulo para envios para o app até que você confirme com êxito o envio ou o exclua. Se o recurso *gamingOptions* não estiver disponível para envios para um app, o campo *hasAdvancedListingPermission* do [recurso Application](get-app-data.md#application_object) retornado pelo método [obter um app](get-an-app.md) será falso.
@@ -620,7 +620,7 @@ Esse recurso tem os valores a seguir.
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
 | packageRollout   |   objeto      |  Um [recurso de distribuição de pacote](#package-rollout-object) que contém configurações da distribuição de pacote gradual para o envio.   |  
-| isMandatoryUpdate    | booliano    |  Indica se você deseja tratar os pacotes nesse envio como obrigatórios para instalar automaticamente atualizações de aplicativo. Para obter mais informações sobre pacotes obrigatórios para instalar automaticamente as atualizações de aplicativos, consulte [Baixar e instalar atualizações de pacote para seu app](../packaging/self-install-package-updates.md).    |  
+| isMandatoryUpdate    | boolean    |  Indica se você deseja tratar os pacotes nesse envio como obrigatórios para instalar automaticamente atualizações de aplicativo. Para obter mais informações sobre pacotes obrigatórios para instalar automaticamente as atualizações de aplicativos, consulte [Baixar e instalar atualizações de pacote para seu app](../packaging/self-install-package-updates.md).    |  
 | mandatoryUpdateEffectiveDate    |  date   |  A data e hora em que os pacotes nesse envio se tornam obrigatórios, em formato ISO 8601 e fuso horário UTC.   |        
 
 <span id="package-rollout-object" />
@@ -631,7 +631,7 @@ Esse recurso contém [configurações de distribuição de pacote](#manage-gradu
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
-| isPackageRollout   |   booliano      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
+| isPackageRollout   |   boolean      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
 | packageRolloutPercentage    | flutuante    |  O percentual de usuários que receberão os pacotes na distribuição gradual.    |  
 | packageRolloutStatus    |  cadeia de caracteres   |  Uma das seguintes sequências que indicam o status da distribuição de pacote gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
 | fallbackSubmissionId    |  cadeia de caracteres   |  A ID do envio que será recebida por clientes que não recebem os pacotes de distribuição gradual.   |          
@@ -705,7 +705,7 @@ Esse recurso descreve a imagem em miniatura para um trailer. Esse recurso tem os
 |-----------------|---------|------|
 |  fileName               |    cadeia de caracteres     |   O nome do arquivo de imagem em miniatura no arquivo ZIP que você carregou para o envio.    |     
 |  id  |  cadeia de caracteres  | A ID da imagem em miniatura. Esse valor é fornecido pelo Centro de parceiros.  |
-|  descrição  |  cadeia de caracteres  | A descrição da imagem em miniatura. Esse valor é composto somente por metadados e não é exibido para os usuários.   |
+|  description  |  cadeia de caracteres  | A descrição da imagem em miniatura. Esse valor é composto somente por metadados e não é exibido para os usuários.   |
 
 <span/>
 

@@ -6,12 +6,12 @@ ms.date: 03/05/2019
 ms.topic: article
 keywords: windows 10, uwp, pagamentos, vendas de aplicativos, receita do aplicativo, pagamento, taxa da store, pagamento em espera, porcentagem
 ms.localizationpriority: medium
-ms.openlocfilehash: 293f24122129e56fbb1521a0d3dd7e2ff51e4923
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: f0e9439ee31c25657aac1f55dc277123f901209a
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244102"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63790986"
 ---
 # <a name="getting-paid"></a>Sendo pago
 Eis algumas informações importantes sobre o recebimento de pagamento para seus aplicativos, complementos e ganhos de publicidade.

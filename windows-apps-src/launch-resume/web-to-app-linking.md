@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: 66284538c97aee1a11c27beaa483dcfe109b6615
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 176009cb3a2fb14eb5071d48d59a0b807d4c81d6
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641071"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63770366"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Permitir aplicativos para sites que usam manipuladores de URI do aplicativo
 
@@ -46,7 +46,7 @@ Por exemplo, se o endereço do site for "msn.com", faça a seguinte entrada no m
 </Applications>
 ```
 
-A declaração acima registra seu aplicativo para lidar com os links do host especificado. Se seu site tiver vários endereços (por exemplo: m.example.com, www.example.com e example.com), inclua uma entrada `<uap3:Host Name=... />` separada no `<uap3:AppUriHandler>` para cada endereço.
+A declaração acima registra seu aplicativo para lidar com os links do host especificado. Se o site tiver vários endereços (por exemplo: m.example.com, www\.exemplo.com e example.com), em seguida, adicione um separado `<uap3:Host Name=... />` entrada dentro do `<uap3:AppUriHandler>` para cada endereço.
 
 ## <a name="associate-your-app-and-website-with-a-json-file"></a>Associar seu aplicativo e o site com um arquivo JSON
 
@@ -55,7 +55,7 @@ Para garantir que somente seu aplicativo possa abrir conteúdo em seu site, incl
 >[!Important]
 > O arquivo JSON não deve ter um sufixo de arquivo .json.
 
-Crie um arquivo JSON (sem a extensão de arquivo .json) chamado **windows-app-web-link** e forneça o nome de família do pacote do aplicativo. Por exemplo:
+Crie um arquivo JSON (sem a extensão de arquivo .json) chamado **windows-app-web-link** e forneça o nome de família do pacote do aplicativo. Por exemplo: 
 
 ``` JSON
 [{
@@ -71,7 +71,7 @@ O Windows estabelecerá uma conexão https com seu site e procurará o arquivo J
 
 O exemplo de arquivo JSON acima demonstra o uso de curingas. Os curingas permitem que você dê suporte a uma ampla variedade de links com menos linhas de código. A vinculação de aplicativos à Web dá suporte a dois tipos de curingas no arquivo JSON:
 
-| **Curinga** | **Descrição**               |
+| **Wildcard** | **Descrição**               |
 |--------------|-------------------------------|
 | **\***       | Representa qualquer subcadeia de caracteres      |
 | **?**        | Representa um único caractere |
@@ -154,13 +154,13 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 Você pode testar a configuração do seu aplicativo e do site executando a ferramenta de verificação de registro de host de aplicativo que está disponível em:
 
-% windir %\\system32\\**AppHostRegistrationVerifier.exe**
+%windir%\\system32\\**AppHostRegistrationVerifier.exe**
 
 Teste a configuração do seu aplicativo e do site executando essa ferramenta com os seguintes parâmetros:
 
 **AppHostRegistrationVerifier.exe** *hostname packagefamilyname filepath*
 
--   Nome do host: Seu site (por exemplo, microsoft.com)
+-   Hostname: Seu site (por exemplo, microsoft.com)
 -   Nome de família de pacotes (PFN): PFN do seu aplicativo
 -   Caminho do arquivo: O arquivo JSON para validação de local (por exemplo, c:\\SomeFolder\\windows-aplicativo-web-link)
 
@@ -186,7 +186,7 @@ Se você quiser seguir a lógica de ativação de protocolo, defina um ponto de 
 ## <a name="appurihandlers-tips"></a>Dicas sobre AppUriHandlers:
 
 - Certifique-se de especificar somente links que seu aplicativo possa manipular.
-- Liste todos os hosts aos quais você dará suporte.  Observe que www.example.com e example.com são hosts diferentes.
+- Liste todos os hosts aos quais você dará suporte.  Observe que www\.exemplo.com e exemplo.com são hosts diferentes.
 - Os usuários podem escolher qual aplicativo preferem para lidar com sites em Configurações.
 - Seu arquivo JSON deve ser carregado para um servidor https.
 - Se você precisar alterar os caminhos aos quais deseja dar suporte, você pode republicar seu arquivo JSON sem precisar republicar seu aplicativo. Os usuários verão as alterações em 1 a 8 dias.
