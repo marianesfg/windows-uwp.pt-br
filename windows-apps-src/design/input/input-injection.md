@@ -7,12 +7,12 @@ keywords: dispositivo, digitalizador, entrada, interação, injeção
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2699917beed9330dd2044704f19b3c25256c3ca8
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.openlocfilehash: 2ff3150d4c1ed713451669b8918906141daa9659
+ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343235"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65065241"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>Simular a entrada do usuário por meio de injeção de entrada
 
@@ -50,7 +50,8 @@ Neste exemplo, demonstramos como usar as APIs de injeção de entrada ([Windows.
 1. Primeiro, configuramos a interface do usuário (MainPage.xaml).
 
     Temos duas áreas de grade (um para entrada de mouse e outra para entrada por touch injetado), cada uma com quatro botões.
-       > [!NOTE] The Grid background must be assigned a value (`Transparent`, in this case), otherwise pointer events are not detected.
+      > [!NOTE] 
+      > O plano de fundo da grade deve ser atribuído um valor (`Transparent`, nesse caso), caso contrário, os eventos de ponteiro não são detectados.
 
     Quando qualquer clique é detectado na área de entrada, um evento de toque correspondente é injetado na área de injeção de entrada. Cliques de botão de entrada de inserção são relatados na área de título.
 
