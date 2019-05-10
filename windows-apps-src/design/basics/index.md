@@ -5,16 +5,16 @@ keywords: layout do aplicativo UWP, Plataforma Universal do Windows, design do a
 ms.date: 03/07/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6afaada45c3f332085135212be39e43bb1c3fe8f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 03e30aa091a04e16ee84f38832dc962d34659e1b
+ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57581993"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65065444"
 ---
 # <a name="design-basics-for-uwp-apps"></a>Noções básicas de design para aplicativos UWP
 
-![imagem Hero](images/header-design-basics.svg)
+![Ícone de design básico](../images/basics-2x.png)
 
 As orientações sobre design da UWP (Plataforma Universal do Windows) são um recurso que ajuda você a projetar e criar aplicativos belos e refinados. Não é uma lista de regras prescritivas – é um documento dinâmico, projetado para se adaptar ao nosso Sistema de Design Fluente em evolução, bem como às necessidades de nossa comunidade de criação de aplicativos. 
 
