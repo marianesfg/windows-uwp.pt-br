@@ -11,18 +11,33 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4bb6f0ba60e89720a6daa37604cbe93696fb2bb7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ef005ffd018bf52d70067cdfedbb9c98b079bd89
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603071"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444209"
 ---
 # <a name="directionality-and-gravity"></a>Direção e gravidade
 
 Os sinais de direção ajudam a solidificar o modelo mental da jornada do usuário nas experiências. É importante que a direção de qualquer movimento ofereça suporte à continuidade do espaço, bem como à integridade dos objetos no espaço.
 
 O movimento direcional está sujeito às forças como a gravidade. A aplicação de forças ao movimento reforça a aparência natural do movimento.
+
+## <a name="examples"></a>Exemplos
+
+<table>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>Se você tiver o <strong style="font-weight: semi-bold">da Galeria de controles XAML</strong> aplicativo instalado, clique aqui para <a href="xamlcontrolsgallery:/category/Motion">abrir o aplicativo e ver o movimento em ação</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="direction-of-movement"></a>Direção do movimento
 

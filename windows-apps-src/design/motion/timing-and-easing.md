@@ -11,16 +11,31 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5b9a0719e4967f9d527d2b2565818a0dea1be0a6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b736a10a7284e3cc9aa193e082dc654e908afe40
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645261"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444176"
 ---
 # <a name="timing-and-easing"></a>Tempo e suavização
 
-Enquanto o movimento é baseado no mundo real, também estamos em um meio digital, que traz a expectativa de velocidade e desempenho. 
+Enquanto o movimento é baseado no mundo real, também estamos em um meio digital, que traz a expectativa de velocidade e desempenho.
+
+## <a name="examples"></a>Exemplos
+
+<table>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>Se você tiver o <strong style="font-weight: semi-bold">da Galeria de controles XAML</strong> aplicativo instalado, clique aqui para <a href="xamlcontrolsgallery:/item/EasingFunction">abrir o aplicativo e ver as funções de Easing em ação</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="how-fluent-motion-uses-time"></a>Como o movimento fluente usa o tempo
 
@@ -40,8 +55,8 @@ O tempo de movimento em fluente usa 500 ms (ou meio segundo) como uma linha de b
 
 :::row:::
     :::column:::
-        Use for objects or pages that are exiting the scene or closing.
-        Allows for very quick directional feedback of exiting UI where timing does not impede upon framerate to achieve a smooth animation.
+Use para objetos ou páginas que estão saindo da cena ou fechar.
+Permite um feedback direcional muito rápido de saída da interface do usuário, onde o tempo não impede a taxa de quadros de atingir uma animação suave.
     :::column-end:::
     :::column:::
         ![150ms motion](images/150msAlt.gif)
@@ -52,8 +67,8 @@ O tempo de movimento em fluente usa 500 ms (ou meio segundo) como uma linha de b
 
 :::row:::
     :::column:::
-        Use for objects or pages that are entering the scene or opening.
-        Allows a reasonable amount of time to celebrate content as it enters the scene.
+Use as páginas que estão inserindo a cena ou abrindo ou objetos.
+Permite que uma quantidade razoável de tempo para comemorar o conteúdo quando entra em cena.
     :::column-end:::
     :::column:::
         ![300ms motion](images/300ms.gif)
@@ -64,7 +79,7 @@ O tempo de movimento em fluente usa 500 ms (ou meio segundo) como uma linha de b
 
 :::row:::
     :::column:::
-        Use for objects which are translating across a single scene or multiple scenes. 
+Use objetos que estão sendo traduzidas em uma única cena ou várias cenas. 
     :::column-end:::
     :::column:::
         ![500ms motion](images/500ms.gif)
@@ -87,10 +102,10 @@ Os exemplos de código mostram como aplicar valores de suavização recomendados
 
 :::row:::
     :::column:::
-        Use for UI or objects that are exiting the scene.
+Uso para a interface do usuário ou objetos que estão saindo da cena.
 
-        Objects become powered and gain momentum until they reach escape velocity.
-        The resulting feel is that the object is trying its hardest to get out of the user's way and make room for new content to come in.
+Objetos tornam-se da e ganhar momentum até atingirem a velocidade de escape.
+A aparência resultante é que o objeto está tentando seu mais difícil obter fora do caminho do usuário e liberar espaço para o novo conteúdo para entrar.
     :::column-end:::
     :::column:::
         ![accelerate easing](images/accelEase.gif)
@@ -126,12 +141,12 @@ _exitAnimation.Duration = TimeSpan.FromMilliseconds(150);
 
 :::row:::
     :::column:::
-        Use for objects or UI entering the scene, either navigating or spawning.
+Uso da interface do usuário inserindo a cena, o navegar ou ao gerar ou objetos.
 
-        Once on-scene, the object is met with extreme friction, which slows the object to rest.
-        The resulting feel is that the object traveled from a long distance away and entered at an extreme velocity, or is quickly returning to a rest state.
+Depois que na cena, o objeto for atendido com atrito extremo, o que reduz o objeto para o restante.
+A aparência resultante é que o objeto percorrida a partir de uma longa distância e inserido em uma velocidade extrema ou é retornar rapidamente para um estado rest.
 
-        Even if it's preceded by a moment of unresponsiveness, the velocity of the incoming object has the effect of feeling fast and responsive.
+Mesmo se ele é precedido por um momento de falta de resposta, a velocidade do objeto de entrada tem o efeito de se sentindo rápidos e responsivos.
     :::column-end:::
     :::column:::
         ![decelerate easing](images/decelEase.gif)
@@ -167,10 +182,10 @@ _enterAnimation.Duration = TimeSpan.FromMilliseconds(300);
 
 :::row:::
     :::column:::
-        This is the baseline easing for any animated parameter change inside of the system.
-        Use standard easing for objects that change from state to state on-screen, such as a simple position change. Also, use it for objects morphing in-scene, like an object that grows.
+Essa é a linha de base para qualquer alteração de parâmetro animado dentro do sistema de easing.
+Use a suavização padrão para objetos que mudam de um estado para outro na tela, como uma simples mudança de posição. Além disso, use-o para objetos que se transformam na cena, como um objeto que cresce.
 
-        The resulting feel is that objects changing state from A to B are overcoming, and taken over by, natural forces.
+A aparência resultante é que superar os objetos de alteração do estado de A para B e tomadas pelo, força o natural.
     :::column-end:::
     :::column:::
         ![standard easing](images/standardEase.gif)

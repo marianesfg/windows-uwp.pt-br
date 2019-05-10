@@ -8,18 +8,34 @@ keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 38fe6b92828459f91ba6ea2f836d274c2cc8d761
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9b3244c24ff4fa8e3c85ee9970536b1b35d8efd5
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646451"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444196"
 ---
 # <a name="page-transitions"></a>Transições de página
 
 As transições de página navegam entre as páginas de um app, fornecendo comentários como o relacionamento entre as páginas. As transições de página ajudam os usuários a compreender se eles estão na parte superior de uma hierarquia de navegação, movendo entre as páginas irmãs ou navegando pela hierarquia da página.
 
 Duas animações diferentes são fornecidas para navegação entre páginas em um aplicativo, *Atualização de página* e *Análise detalhada*, e são representadas por subclasses de [**NavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo).
+
+## <a name="examples"></a>Exemplos
+
+<table>
+<th align="left">XAML Controls Gallery<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>Se você tiver o <strong style="font-weight: semi-bold">da Galeria de controles XAML</strong> aplicativo instalado, clique aqui para <a href="xamlcontrolsgallery:/item/PageTransition">abrir o aplicativo e ver as transições de página em ação</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="page-refresh"></a>Atualização de página
 
@@ -62,10 +78,10 @@ A sensação desejada é que o usuário está navegando entre as páginas que es
 
 ```csharp
 // Navigate to the right, ie. from LeftPage to RightPage
-myFrame.Navigate(typeof(RightPage), null, new SlideNavigationTransitionInfo() { SlideNavigationTransitionEffect.FromRight } );
+myFrame.Navigate(typeof(RightPage), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight } );
 
 // Navigate to the left, ie. from RightPage to LeftPage
-myFrame.Navigate(typeof(LeftPage), null, new SlideNavigationTransitionInfo() { SlideNavigationTransitionEffect.FromLeft } );
+myFrame.Navigate(typeof(LeftPage), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromLeft } );
 ```
 
 ## <a name="suppress"></a>Supressão

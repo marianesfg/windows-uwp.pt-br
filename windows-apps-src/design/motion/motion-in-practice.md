@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6eafbfd965d2783c0f72e75c91a04e5ac1cb119f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7272abca9862eaf5ed7ceb161e433849497369a2
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599401"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444217"
 ---
 # <a name="bringing-it-together"></a>Reunião
 
@@ -78,10 +78,24 @@ Veja três maneiras de aplicar os conceitos básicos de movimento fluente em seu
     :::column-end:::
 :::row-end:::
 
+## <a name="examples"></a>Exemplos
+
+<table>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>Se você tiver o <strong style="font-weight: semi-bold">da Galeria de controles XAML</strong> aplicativo instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ImplicitTransition">abrir o aplicativo e ver as transições implícitas em ação</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
+
 ## <a name="implicit-animations"></a>Animações implícitas
 
 > Animações implícitas exigem o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior.
-
 
 Animações implícitas são uma forma simple de obter o movimento Fluent pela interpolação automaticamente entre os valores novos e antigos durante uma alteração de parâmetro.
 
@@ -100,7 +114,7 @@ Cada propriedade que pode ter alterações animadas implicitamente tem um corres
 
 | Propriedade animada | Propriedade de transição | Tipo de transição implícita |
 | -- | -- | -- |
-| [Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
+| [UIElement.Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
 | [UIElement.Rotation](/uwp/api/windows.ui.xaml.uielement.rotation) | [RotationTransition](/uwp/api/windows.ui.xaml.uielement.rotationtransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
 | [UIElement.Scale](/uwp/api/windows.ui.xaml.uielement.scale) | [ScaleTransition](/uwp/api/windows.ui.xaml.uielement.scaletransition) | [Vector3Transition](/uwp/api/windows.ui.xaml.vector3transition) |
 | [UIElement.Translation](/uwp/api/windows.ui.xaml.uielement.scale) | [TranslationTransition](/uwp/api/windows.ui.xaml.uielement.translationtransition) | [Vector3Transition](/uwp/api/windows.ui.xaml.vector3transition) |

@@ -8,12 +8,12 @@ pm-contact: stmoy
 design-contact: jeffarn
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 81da1e769ab171e47a4f4046e8ec7e7c84ecf2d1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 183a5433553ff6fdfcb09f6960f6a642f2c8bc08
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630351"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444160"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>Animação de elementos XAML com animações de composição
 
@@ -31,6 +31,22 @@ A partir do Windows 10, versão 1809, você pode animar as propriedades de um UI
 > [!NOTE]
 > Para usar essas propriedades em UIElement, sua versão de destino do projeto UWP deve ser 1809 ou posterior. Para obter mais informações sobre como configurar sua versão do projeto, consulte [versão dos aplicativos adaptáveis](../../debug-test-perf/version-adaptive-apps.md).
 
+## <a name="examples"></a>Exemplos
+
+<table>
+<th align="left">XAML Controls Gallery<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>Se você tiver o <strong style="font-weight: semi-bold">da Galeria de controles XAML</strong> aplicativo instalado, clique aqui para <a href="xamlcontrolsgallery:/item/XamlCompInterop">abrir o aplicativo e ver a interoperabilidade de animação em ação</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
+
 ## <a name="new-rendering-properties-replace-old-rendering-properties"></a>Novas propriedades de renderização substituir as propriedades de renderização antigo
 
 Esta tabela mostra as propriedades que você pode usar para modificar a renderização de um UIElement, que também pode ser animado com um [CompositionAnimation](/uwp/api/windows.ui.composition.compositionanimation).
@@ -43,7 +59,7 @@ Esta tabela mostra as propriedades que você pode usar para modificar a renderiz
 | [Escala](/uwp/api/windows.ui.xaml.uielement.scale) | Vector3 | Escala do elemento, centralizada no PontoCentral |
 | [Rotação](/uwp/api/windows.ui.xaml.uielement.rotation) | Float | Girar o elemento em torno de RotationAxis e PontoCentral |
 | [RotationAxis](/uwp/api/windows.ui.xaml.uielement.rotationaxis) | Vector3 | O eixo de rotação |
-| [PontoCentral](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | O ponto central de escala e rotação |
+| [CenterPoint](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | O ponto central de escala e rotação |
 
 O valor da propriedade TransformMatrix é combinado com as propriedades de escala, rotação e translação na seguinte ordem:  TransformMatrix, escala, rotação, translação.
 
@@ -74,7 +90,7 @@ As propriedades que podem ser animadas com um CompositionAnimation são substitu
 
 - [RenderTransform](/uwp/api/windows.ui.xaml.uielement.rendertransform)
 - [RenderTransformOrigin](/uwp/api/windows.ui.xaml.uielement.rendertransformorigin)
-- [Projeção](/uwp/api/windows.ui.xaml.uielement.projection)
+- [Projection](/uwp/api/windows.ui.xaml.uielement.projection)
 - [Transform3D](/uwp/api/windows.ui.xaml.uielement.transform3d)
 
 Quando você define (ou anima) qualquer uma das novas propriedades, é possível usar as propriedades antigas. Por outro lado, se você definir (ou anima) qualquer uma das propriedades antigas, você não pode usar as novas propriedades.

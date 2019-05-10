@@ -12,12 +12,12 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 719a150c6750116a368d59fff9600fcf65bf8f61
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 953a92cdb8cc3168a2cbeae9a1f3610f771c6339
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57590681"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444181"
 ---
 # <a name="parallax"></a>Paralaxe
 
@@ -30,7 +30,7 @@ Paralaxe é um efeito visual onde os itens mais próximos ao visualizador se mov
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ParallaxView">abrir o aplicativo e ver o ParallaxView em ação</a>.</p>
     <ul>
@@ -47,7 +47,7 @@ Paralaxe é um efeito visual onde os itens mais próximos ao visualizador se mov
 
 ## <a name="how-it-works-in-a-user-interface"></a>Como ele funciona em uma interface de usuário
 
-Em uma interface de usuário, você pode criar um efeito paralaxe movendo objetos diferentes em diferentes taxas quando a interface de usuário é rolada ou faz um movimento panorâmico. <!-- Parallax is an important tool in adding depth to applications along with other techniques like transition animations, perspective tilt, and layering. --> Para demonstrar, vamos dar uma olhada em duas camadas de conteúdo, uma lista e uma imagem de plano de fundo.  A lista é colocada sobre a imagem de fundo, o que já gera a ilusão de que a lista está mais perto para o visualizador.  Agora, para obter o efeito paralaxe, queremos que o objeto mais próximo de nós se desloque "mais rápido" do que o objeto mais distante.  Conforme o usuário rola a interface, a lista se move a uma taxa mais rápida que a imagem de fundo, o que cria a ilusão de profundidade.
+Em uma interface de usuário, você pode criar um efeito paralaxe movendo objetos diferentes em diferentes taxas quando a interface de usuário é rolada ou faz um movimento panorâmico. <!-- Parallax is an important tool in adding depth to applications along with other techniques like transition animations, perspective tilt, and layering. --> Para demonstrar, vamos examinar duas camadas de conteúdo, uma lista e uma imagem de fundo.  A lista é colocada sobre a imagem de fundo, o que já gera a ilusão de que a lista está mais perto para o visualizador.  Agora, para obter o efeito paralaxe, queremos que o objeto mais próximo de nós se desloque "mais rápido" do que o objeto mais distante.  Conforme o usuário rola a interface, a lista se move a uma taxa mais rápida que a imagem de fundo, o que cria a ilusão de profundidade.
 
  ![Um exemplo de paralaxe com uma lista e uma imagem de fundo](images/_Parallax_v2.gif)
 
@@ -118,10 +118,6 @@ Para obter uma lista completa das maneiras de personalizar a paralaxe, consulte 
 - Use a paralaxe em listas com uma imagem de fundo
 - Considere usar a paralaxe em ListViewItems quando ListViewItems contêm uma imagem
 - Não use-a em qualquer lugar, o uso excessivo pode diminuir seu impacto
-
-## <a name="get-the-sample-code"></a>Obter o código de exemplo
-
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

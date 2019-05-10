@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a205fb151d1c9e6614dc97ccde639e43720aa8a9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 901aa1fa5c37c18a815e5e70becdf15001ed74c4
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618191"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444231"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>Animação conectada para aplicativos UWP
 
@@ -24,7 +24,22 @@ Uma animação conectada, um elemento é exibido em "Continuar" entre dois modos
 
 > **APIs importantes**:  [Classe ConnectedAnimation](/uwp/api/windows.ui.xaml.media.animation.connectedanimation), [ConnectedAnimationService classe](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
 
-## <a name="see-it-in-action"></a>Veja em ação
+
+## <a name="examples"></a>Exemplos
+
+<table>
+<th align="left">XAML Controls Gallery<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>Se você tiver o <strong style="font-weight: semi-bold">da Galeria de controles XAML</strong> aplicativo instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ConnectedAnimation">abrir o aplicativo e ver a animação conectada em ação</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 Neste breve vídeo, um aplicativo usa uma animação conectada para animar uma imagem do item que ele "continue" para se tornar parte do cabeçalho da página seguinte. O efeito ajuda a manter o contexto de usuário entre a transição.
 
@@ -87,7 +102,7 @@ Para obter os diversos efeitos, algumas configurações ignorar essas propriedad
 | - | - | - |
 | Gravidade | Sim | Sim* <br/> **A tradução básica de A para B usa essa função de easing, mas o dip"gravidade" tem sua própria função de easing.*  |
 | Direto | Não <br/> *Anima a mais de 150 ms.*| Não <br/> *Usa o Decelerate a função de easing.* |
-| Básico | Sim | Sim |
+| Basic | Sim | Sim |
 
 ## <a name="how-to-implement-connected-animation"></a>Como implementar a animação conectada
 
@@ -318,10 +333,6 @@ void OnNavigatedTo(NavigationEventArgs e)
 - Use [DirectConnectedAnimationConfiguration](/uwp/api/windows.ui.xaml.media.animation.directconnectedanimationconfiguration) para fazer a navegação.
 - Não espere mais em solicitações de rede ou outras operações assíncronas de longa duração entre a preparação e o início de uma animação conectada. Talvez seja necessário carregar previamente as informações necessárias para executar a transição antecipadamente, ou utilizar uma imagem de baixa resolução no lugar enquanto uma imagem de alta resolução é carregada na exibição de destino.
 - Use [SuppressNavigationTransitionInfo](/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) para impedir que uma animação de transição em um **quadro** se você estiver usando **ConnectedAnimationService**, desde as animações conectadas não deve ser usada simultaneamente com as transições de navegação padrão. Consulte [NavigationThemeTransition](/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) para obter mais informações sobre como usar as transições de navegação.
-
-## <a name="download-the-code-samples"></a>Baixar as amostras de código
-
-Consulte [Amostra de Animação Conectada](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2014393/ConnectedAnimationSample) na galera de amostras [Windowsinterface de usuárioDevLabs](https://github.com/Microsoft/WindowsUIDevLabs).
 
 ## <a name="related-articles"></a>Artigos relacionados
 
