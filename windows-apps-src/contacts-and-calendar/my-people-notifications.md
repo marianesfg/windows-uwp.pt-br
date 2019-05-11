@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e4657c9dfb651c1e7f6bb4e2cafdc49d0a11237b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 291c2a922e2b2df7111da8bfc6aefb57b87e84bb
+ms.sourcegitcommit: 4bad5f9427e7db27b57bedc6d7df19077c62e8c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630561"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65535196"
 ---
 # <a name="my-people-notifications"></a>Notificações de Minhas Pessoas
 
@@ -51,15 +51,15 @@ O nó da imagem na associação deve incluir os seguintes parâmetros:
 
 + **src**
     + O URI do ativo. Isso pode ser um URI HTTP/HTTPS da Web, um URI msappx ou um caminho para um arquivo local.
-+ **src spritesheet**
++ **spritesheet-src**
     + O URI do ativo. Isso pode ser um URI HTTP/HTTPS da Web, um URI msappx ou um caminho para um arquivo local. Só é necessário para animações em spritesheet.
-+ **altura spritesheet**
++ **spritesheet-height**
     + A altura do quadro (em pixels). Só é necessário para animações em spritesheet.
-+ **fps spritesheet**
++ **spritesheet-fps**
     + Quadros por segundo (FPS). Só é necessário para animações em spritesheet. Somente valores de 1 a 120 têm suporte.
-+ **spritesheet startingFrame**
++ **spritesheet-startingFrame**
     + O número do quadro para iniciar a animação. Somente usado para animações em spritesheet, e o padrão será 0 se não especificado.
-+ **ALT**
++ **alt**
     + Cadeia de texto usada para narração do leitor de tela.
 
 > [!NOTE]
@@ -68,7 +68,7 @@ O nó da imagem na associação deve incluir os seguintes parâmetros:
 Além disso, o nó de nível superior da notificação do sistema deve incluir o parâmetro **hint-people** para especificar o contato remetente. Esse parâmetro pode ter qualquer um dos seguintes valores:
 
 + **Endereço de email** 
-    + Ex. mailto:johndoe@mydomain.com
+    + Ex. ` mailto:johndoe@mydomain.com `
 + **Número de telefone** 
     + Ex. tel:888-888-8888
 + **ID remota** 
