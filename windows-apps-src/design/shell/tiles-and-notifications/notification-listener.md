@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: windows 10, uwp, ouvinte de notificação, usernotificationlistener, documentação, notificações de acesso
 ms.localizationpriority: medium
-ms.openlocfilehash: de1032eb3d0d364a62beff0a1af8f84240c11d87
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d6c18740cbba0ea037440300edbe2d7ba4fd116e
+ms.sourcegitcommit: 1d04910a6bbfcaa985d2074caf8f898c35eab7ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649611"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933164"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Ouvinte da notificação: Acessar todas as notificações
 
@@ -277,17 +277,17 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Evento em primeiro plano para notificação adicionada/ignorada
 
 > [!IMPORTANT] 
-> Problema conhecido: O evento de primeiro plano causará um loop de CPU em versões recentes do Windows e anteriormente não funcionavam antes disso. Não use o evento de primeiro plano. Em uma atualização futura para Windows, corrigiremos isso.
+> Problema conhecido: Em compilações antes de compilar 17763 / outubro de 2018 atualização / 1809 de versão, o evento de primeiro plano fará com que um loop de CPU e/ou não funcionou. Se você precisar de suporte dessas compilações anteriores, use a tarefa em segundo plano.
 
-Em vez de usar o evento de primeiro plano, use o código mostrado anteriormente para um [modelo de processo único](../../../launch-resume/create-and-register-an-inproc-background-task.md) tarefa em segundo plano. A tarefa em segundo plano também permitirá que você receba eventos notificações de alteração de ambos os enquanto o aplicativo está em execução ou fechado.
+Você também pode escutar as notificações de um manipulador de eventos na memória...
 
 ```csharp
-// Subscribe to foreground event (DON'T USE THIS)
+// Subscribe to foreground event
 listener.NotificationChanged += Listener_NotificationChanged;
  
 private void Listener_NotificationChanged(UserNotificationListener sender, UserNotificationChangedEventArgs args)
 {
-    // NOTE: This event WILL CAUSE CPU LOOPS, DO NOT USE. Use the background task instead.
+    // Your code for handling the notification
 }
 ```
 

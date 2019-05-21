@@ -7,12 +7,12 @@ ms.date: 03/07/2018
 ms.topic: article
 keywords: Windows 10, uwp, win32, área de trabalho, notificações do sistema, enviar uma notificação do sistema, enviar notificações do sistema local, ponte de desktop, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: 82de349009350c970fce923a2aa503df0801c3b7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: af6c4392d97bdbf06c3e185b8a1c0235225bfe5a
+ms.sourcegitcommit: 81021b7930905beb67383a08b09520cf95c68fd9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57609841"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940307"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar uma notificação do sistema local a partir de aplicativos C++ WRL da área de trabalho
 
@@ -62,7 +62,7 @@ using namespace Microsoft::WRL;
 
 ## <a name="step-4-implement-the-activator"></a>Etapa 4: Implementar o ativador
 
-Você deve implementar um manipulador de ativação de notificação do sistema para que, quando o usuário clicar em sua notificação do sistema, seu aplicativo pode fazer algo. Isso é necessário para a notificação do sistema persistir na Central de Ações (pois a notificação do sistema pode ser clicada dias depois quando o aplicativo é fechado). Essa classe pode ser colocada em qualquer lugar do projeto.
+Você deve implementar um manipulador para a ativação do sistema, para que quando o usuário clica em sua notificação do sistema, seu aplicativo possa fazer algo. Isso é necessário para a notificação do sistema persistir na Central de Ações (pois a notificação do sistema pode ser clicada dias depois quando o aplicativo é fechado). Essa classe pode ser colocada em qualquer lugar do projeto.
 
 Implemente a interface de **INotificationActivationCallback** como visto abaixo, incluindo uma UUID e também chame **CoCreatableClass** para sinalizar sua classe como criável para COM. Para a UUID, crie uma GUID exclusiva usando um dos muitos geradores de GUID online. Essa CLSID (identificador de classe) de GUID é como a Central de Ações sabe qual classe ativar para COM.
 
@@ -102,7 +102,7 @@ Se você estiver usando a Ponte de Desktop (ou se ambos forem compatíveis), no 
 4. **com:Extension** do ativador COM usando a GUID da etapa 4. Certifique-se de incluir `Arguments="-ToastActivated"` para saber que a inicialização foi de uma notificação do sistema
 5. **desktop:Extension** para **windows.toastNotificationActivation** a fim de declarar a CLSID do ativador de notificação do sistema (a GUID da etapa 4).
 
-**Package. appxmanifest**
+**Package.appxmanifest**
 
 ```xml
 <Package
