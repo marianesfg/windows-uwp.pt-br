@@ -1,18 +1,17 @@
 ---
 Description: Compare os recursos entre as plataformas iOS, Android e Windows 10.
-Search.Product: eADQiWindows 10XVcnh
 title: Mapeamento do conceito de aplicativos do Windows para desenvolvedores do Android e iOS
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d4739442414b02358f3afea8967b0fc404ff7f9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 737e169e2502076f370eaed91658eae59be84a0b
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641331"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984246"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Mapeamento do conceito de aplicativos do Windows para desenvolvedores do Android e iOS
 
@@ -67,7 +66,7 @@ Consulte também o conteúdo de portabilidade em [Move from iOS to UWP](ios-to-u
 <td align="left"><strong>Associação de dados.</strong> <br><br>Um padrão de design de software que permite que a interface do usuário de seu aplicativo renderize dados e, opcionalmente, fique em sincronia com esses dados.</td>
 <td align="left">Uma <strong>biblioteca de vinculação de dados</strong> é fornecida, mas ainda está em versão beta.</td>
 <td align="left">Não há nenhum sistema de vinculação interno no iOS. <strong>A observação de valor-chave</strong> pode ser construída para realizar a vinculação de dados com o uso de uma biblioteca de terceiros ou com a escrita de um código adicional. Os controles usam uma abordagem de delegação/retorno de chamada para obtenção de dados.</td>
-<td align="left">A plataforma UWP manipula a <strong>vinculação de dados</strong> para você. Você usa a extensão de marcação <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt204783.aspx">{x: Bind}</a></strong> para tirar proveito da associação de alto desempenho ou <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt204782.aspx">{Binding}</a></strong> para aproveitar mais recursos. Em seguida, basta configurar sua associação para escolher se a plataforma usa <strong>associação unidirecional</strong> para exibir valores de uma fonte de dados em sua interface do usuário, ou se ela também observa esses valores e atualiza a interface do usuário quando mudam com a <strong>associação bidirecional</strong>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt210947.aspx">Vinculação de dados</a></td>
+<td align="left">A plataforma UWP manipula a <strong>vinculação de dados</strong> para você. Você usa a extensão de marcação <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt204783.aspx">{x: Bind}</a></strong> para tirar proveito da associação de alto desempenho ou <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt204782.aspx">{Binding}</a></strong> para aproveitar mais recursos. Em seguida, basta configurar sua associação para escolher se a plataforma usa <strong>associação unidirecional</strong> para exibir valores de uma fonte de dados em sua interface do usuário, ou se ela também observa esses valores e atualiza a interface do usuário quando mudam com a <strong>associação bidirecional</strong>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt210947.aspx">Associação de dados</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Automação de interface do usuário.</strong> <br><br>Acesso programático a elementos de interface do usuário, tornando os aplicativos acessíveis para produtos de tecnologia adaptativa e habilitando scripts de teste automatizados para interagirem com a interface do usuário.</td>
@@ -580,7 +579,7 @@ Consulte também o conteúdo de portabilidade em [Move from iOS to UWP](ios-to-u
 <td align="left">Você pode incorporar mapas em seus aplicativos usando o controle XAML integrado <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx">MapControl</a></strong> que fornece visualizações 2D, 3D e streetside. Você pode adicionar pontos de interesse com um alfinete, uma imagem ou uma forma usando classes como <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapicon.aspx">MapIcon</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mappolygon.aspx">MapPolygon</a></strong> e <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mappolyline.aspx">MapPolyline</a></strong>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219695.aspx">Exibir mapas com modos de exibição 2D, 3D e Streetside</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219696.aspx">Exibir pontos de interesse (POI) em um mapa</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>Isolamento geográfico.</strong> <br><br>Monitora a entrada e a saída de uma determinada região geográfica.</td>
+<td align="left"><strong>Geofencing.</strong> <br><br>Monitora a entrada e a saída de uma determinada região geográfica.</td>
 <td align="left">As cercas geográficas são monitoradas usando os <strong>serviços de localização</strong> no SDK do Google Play Services.</td>
 <td align="left">As regiões são monitoradas com a classe <strong>CLCircularRegion</strong> e registradas com o <strong>CLLocationManager.startMonitoringForRegion:</strong>.</td>
 <td align="left">Você pode criar uma cerca geográfica com a classe <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geofencing.geofence.aspx">Geofence</a></strong> e definir seus <strong>estados monitorados</strong> como entrada ou saída de uma região. Manipule eventos de cerca geográfica em primeiro plano com a <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geofencing.geofencemonitor.aspx">classe GeofenceMonitor</a></strong>e em segundo plano com a <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.locationtrigger.aspx">classe de segundo plano LocationTrigger</a></strong>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219702.aspx">Configurar uma cerca geográfica</a></td>

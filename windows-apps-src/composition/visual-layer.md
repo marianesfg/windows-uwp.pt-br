@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 599c2625bffff40a30f26bfb40f7cce9c97acdd1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4607280fd031fa556bfc5d1c719f4b4e1aeb928e
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626401"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984096"
 ---
 # <a name="visual-layer"></a>Camada visual
 
@@ -61,6 +61,12 @@ Para obter mais informações, consulte a visão geral de [Animações de compos
 Você pode acessar um Visual criado pela estrutura XAML e apoiar um FrameworkElement visível usando a classe [**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/Mt608976) em [**Windows.UI.Xaml.Hosting**](https://msdn.microsoft.com/library/windows/apps/Hh701908). Observe que os elementos visuais criados pela estrutura para você vêm com alguns limites em termos de personalização. Isso ocorre porque a estrutura está gerenciando deslocamentos, transformações e tempos de vida. No entanto, você pode criar seus próprios Visuals e anexá-los a um elemento XAML existente por meio de ElementCompositionPreview ou adicionando-os a um ContainerVisual existente em algum lugar na estrutura de árvore visual.
 
 Para saber mais, confira a visão geral [Uso da camada Visual com XAML](using-the-visual-layer-with-xaml.md).
+
+### <a name="working-with-your-desktop-app"></a>Trabalhando com seu aplicativo de desktop
+
+Você pode usar a camada Visual para aprimorar a aparência, a aparência e a funcionalidade do seu WPF, Windows Forms, e C++ aplicativos de desktop do Win32. Você pode migrar ilhas de conteúdo para usar a camada Visual e manter o restante da sua interface do usuário em sua estrutura existente. Isso significa que você pode fazer atualizações significativas e aprimoramentos para o seu aplicativo da interface do usuário sem precisar fazer grandes alterações em seu código existente base.
+
+Para obter mais informações, consulte [Modernize seu aplicativo da área de trabalho usando a camada Visual](/windows/apps/desktop/modernize/visual-layer-in-desktop-apps).
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
