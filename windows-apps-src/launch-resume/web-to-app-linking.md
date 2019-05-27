@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: 176009cb3a2fb14eb5071d48d59a0b807d4c81d6
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 464aa35aa8362049042ad23a6816c4de21b25634
+ms.sourcegitcommit: 559d3387d5929431212d147d9e085895e162916a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63770366"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66184525"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Permitir aplicativos para sites que usam manipuladores de URI do aplicativo
 
@@ -76,7 +76,7 @@ O exemplo de arquivo JSON acima demonstra o uso de curingas. Os curingas permite
 | **\***       | Representa qualquer subcadeia de caracteres      |
 | **?**        | Representa um único caractere |
 
-Por exemplo, o `"excludePaths" : [ "/news/*", "/blog/*" ]` fornecido no exemplo acima, seu aplicativo dará suporte a todos os caminhos que começam com o endereço do site (por exemplo, msn.com), **exceto** aqueles em `/news/` e `/blog/`. **msn.com/weather.html** terá suporte, mas não ****msn.com/news/topnews.html****.
+Por exemplo, o `"excludePaths" : [ "/news/*", "/blog/*" ]` fornecido no exemplo acima, seu aplicativo dará suporte a todos os caminhos que começam com o endereço do site (por exemplo, msn.com), **exceto** aqueles em `/news/` e `/blog/`. **MSN.com/Weather.HTML** terá suporte, mas não **msn.com/news/topnews.html**.
 
 ### <a name="multiple-apps"></a>Vários aplicativos
 

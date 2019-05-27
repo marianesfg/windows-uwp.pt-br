@@ -1,16 +1,16 @@
 ---
 description: Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Este tópico mostra como implementar e consumir uma propriedade observável e como associar um controle XAML a ela.
 title: Controles XAML; associar a uma propriedade C++/WinRT
-ms.date: 08/21/2018
+ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, vínculo, propriedade
 ms.localizationpriority: medium
-ms.openlocfilehash: 9bdbfef54b799f8dff23ad739007cec9fef98af8
-ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.openlocfilehash: 2fe5c03eebd2b68e98ae908ea4624471fbd2b3d2
+ms.sourcegitcommit: d23dab1533893b7fe0f01ca6eb273edfac4705e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921722"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65627665"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>Controles XAML; associar a uma propriedade C++/WinRT
 Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Essa ideia é baseada no padrão de design do software conhecido como o *padrão do observador*. Este tópico mostra como implementar propriedades observable em [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)e como associar controles XAML a eles.
@@ -27,7 +27,7 @@ Um elemento de texto ou controle de XAML pode se associar a e manipular esses ev
 > Para obter informações sobre como instalar e usar o C++WinRT Visual Studio VSIX (extensão) e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), consulte [suporte para Visual Studio C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="create-a-blank-app-bookstore"></a>Criar um Aplicativo em branco (Bookstore)
-Comece criando um novo projeto no Microsoft Visual Studio. Criar uma **Visual C++**   >  **Windows Universal** > **aplicativo em branco (C++/WinRT)** do projeto e nomeie-  *Livraria*.
+Comece criando um novo projeto no Microsoft Visual Studio. Criar uma **aplicativo em branco (C++/WinRT)** do projeto e nomeie- *livraria*.
 
 Vamos criar uma nova classe para representar um livro que tem uma propriedade de título observável. Estamos criando e consumindo a classe dentro da mesma unidade de compilação. Mas queremos poder associar a essa classe do XAML, e por isso ela será uma classe de tempo de execução. E vamos usar C++/WinRT para criar e consumi-lo.
 
@@ -61,7 +61,6 @@ Agora, vamos abrir `\Bookstore\Bookstore\BookSku.h` e `BookSku.cpp` e implementa
 ```cppwinrt
 // BookSku.h
 #pragma once
-
 #include "BookSku.g.h"
 
 namespace winrt::Bookstore::implementation
@@ -89,6 +88,7 @@ Em `BookSku.cpp`, implemente as funções desta forma.
 // BookSku.cpp
 #include "pch.h"
 #include "BookSku.h"
+#include "BookSku.g.cpp"
 
 namespace winrt::Bookstore::implementation
 {
@@ -142,18 +142,17 @@ namespace Bookstore
 }
 ```
 
-Salvar e compilar. Copie `BookstoreViewModel.h` e `BookstoreViewModel.cpp` da pasta `Generated Files` para a pasta de projeto e os inclua no projeto. Abrir esses arquivos e implementar a classe de tempo de execução, conforme mostrado abaixo. Observe como, no `BookstoreViewModel.h`, estamos incluindo `BookSku.h`, que declara o tipo de implementação (**winrt::Bookstore::implementation::BookSku**). E podemos estiver restaurando o construtor padrão, removendo `= delete`.
+Salvar e compilar. Copie `BookstoreViewModel.h` e `BookstoreViewModel.cpp` da pasta `Generated Files\sources` para a pasta de projeto e os inclua no projeto. Abrir esses arquivos e implementar a classe de tempo de execução, conforme mostrado abaixo. Observe como, no `BookstoreViewModel.h`, estamos incluindo `BookSku.h`, que declara o tipo de implementação **BookSku** (que é **winrt::Bookstore::implementation::BookSku**). E podemos está removendo `= default` do construtor padrão.
 
 ```cppwinrt
 // BookstoreViewModel.h
 #pragma once
-
 #include "BookstoreViewModel.g.h"
 #include "BookSku.h"
 
 namespace winrt::Bookstore::implementation
 {
-    struct BookstoreViewModel final : BookstoreViewModelT<BookstoreViewModel>
+    struct BookstoreViewModel : BookstoreViewModelT<BookstoreViewModel>
     {
         BookstoreViewModel();
 
@@ -169,6 +168,7 @@ namespace winrt::Bookstore::implementation
 // BookstoreViewModel.cpp
 #include "pch.h"
 #include "BookstoreViewModel.h"
+#include "BookstoreViewModel.g.cpp"
 
 namespace winrt::Bookstore::implementation
 {
@@ -208,9 +208,9 @@ Salve o arquivo. O projeto não será compilado até a conclusão no momento, ma
 
 Se você omitir a inclusão de `BookstoreViewModel.idl` (consulte a listagem de `MainPage.idl` acima), em seguida, você verá o erro **esperando \< quase "MainViewModel"**. Outra dica é certificar-se de que você deixe todos os tipos no mesmo namespace: o namespace que é mostrado nas listagens de código.
 
-Para resolver o erro que esperamos ver, agora será necessário copiar os stubs de acessador para o **MainViewModel** propriedade fora os arquivos gerados (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` e `MainPage.cpp`) e em `\Bookstore\Bookstore\MainPage.h` e `MainPage.cpp`.
+Para resolver o erro que esperamos ver, agora será necessário copiar os stubs de acessador para o **MainViewModel** propriedade fora os arquivos gerados (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` e `MainPage.cpp`) e em `\Bookstore\Bookstore\MainPage.h` e `MainPage.cpp`. As etapas para fazer isso são descritas a seguir.
 
-Na `\Bookstore\Bookstore\MainPage.h`, inclua `BookstoreViewModel.h`, que declara o tipo de implementação (**winrt::Bookstore::implementation::BookstoreViewModel**). Adicione um membro particular para armazenar o modelo de exibição. Observe que a função de acessador de propriedade (e o membro m_mainViewModel) são implementados em termos de **Bookstore::BookstoreViewModel**, que é o tipo projetado. O tipo de implementação está no mesmo projeto (unidade de compilação) que o aplicativo, portanto, podemos construir m_mainViewModel via a sobrecarga de construtor que utiliza `nullptr_t`. Também remover os **MyProperty** propriedade.
+Na `\Bookstore\Bookstore\MainPage.h`, inclua `BookstoreViewModel.h`, que declara o tipo de implementação **BookstoreViewModel** (que é **winrt::Bookstore::implementation::BookstoreViewModel**). Adicione um membro particular para armazenar o modelo de exibição. Observe que a função de acessador de propriedade (e o membro m_mainViewModel) são implementados em termos de tipo projetado para **BookstoreViewModel** (que é **Bookstore::BookstoreViewModel**). O tipo de implementação está no mesmo projeto (unidade de compilação) que o aplicativo, portanto, podemos construir m_mainViewModel via a sobrecarga de construtor que utiliza `nullptr_t`. Também remover os **MyProperty** propriedade.
 
 ```cppwinrt
 // MainPage.h
@@ -240,6 +240,7 @@ Na `\Bookstore\Bookstore\MainPage.cpp`, chame [ **winrt::make** ](/uwp/cpp-ref-f
 // MainPage.cpp
 #include "pch.h"
 #include "MainPage.h"
+#include "MainPage.g.cpp"
 
 using namespace winrt;
 using namespace Windows::UI::Xaml;
@@ -278,7 +279,7 @@ Para a versão lançada atualmente do C++/WinRT, para que seja possível usar a 
 
 ## <a name="important-apis"></a>APIs Importantes
 * [INotifyPropertyChanged::PropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)
-* [Modelo de função winrt::make](/uwp/cpp-ref-for-winrt/make)
+* [modelo de função WinRT::make](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Consumir APIs com C++/WinRT](consume-apis.md)

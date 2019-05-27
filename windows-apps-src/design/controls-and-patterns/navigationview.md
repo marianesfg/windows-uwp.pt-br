@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4ba3a45701d82ad0b43591469bf390190ec18db0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1a396377eb332052ae7f238a23865f2b7dc0aa16
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642221"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984178"
 ---
 # <a name="navigation-view"></a>Modo de exibição de navegação
 
@@ -624,7 +624,7 @@ private void On_Navigated(object sender, NavigationEventArgs e)
 }
 ```
 
-Abaixo está uma [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/index) versão do **NavView_ItemInvoked** manipulador o C# exemplo de código acima. A técnica no C + c++ /CLI WinRT manipulador envolve você primeiro armazenar (na marca do [ **NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)) o nome de tipo completo da página para o qual você deseja navegar. No manipulador, você pode converter esse valor, transformá-lo em um [ **Windows::UI::Xaml::Interop::TypeName** ](/uwp/api/windows.ui.xaml.interop.typename) de objeto e usá-lo para navegar até a página de destino. Não é necessário para a variável de mapeamento nomeada `_pages` que você vê o C# exemplo; e você poderá criar testes de unidade para confirmar que os valores dentro de suas marcas são de um tipo válido. Consulte também [conversão Boxing e unboxing valores escalares para IInspectable com C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/boxing).
+Abaixo está uma [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) versão do **NavView_ItemInvoked** manipulador o C# exemplo de código acima. A técnica no C + c++ /CLI WinRT manipulador envolve você primeiro armazenar (na marca do [ **NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)) o nome de tipo completo da página para o qual você deseja navegar. No manipulador, você pode converter esse valor, transformá-lo em um [ **Windows::UI::Xaml::Interop::TypeName** ](/uwp/api/windows.ui.xaml.interop.typename) de objeto e usá-lo para navegar até a página de destino. Não é necessário para a variável de mapeamento nomeada `_pages` que você vê o C# exemplo; e você poderá criar testes de unidade para confirmar que os valores dentro de suas marcas são de um tipo válido. Consulte também [conversão Boxing e unboxing valores escalares para IInspectable com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/boxing).
 
 ```cppwinrt
 void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* sender */, Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs const & args)
@@ -715,4 +715,4 @@ Este exemplo mostra como substituir os recursos de tema em App. XAML. Quando voc
 - [Classe do NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 - [Mestre/detalhes](master-details.md)
 - [Noções básicas de navegação](../basics/navigation-basics.md)
-- [Design Fluent para visão geral UWP](../fluent-design-system/index.md)
+- [Design Fluent para visão geral UWP](/windows/apps/fluent-design-system)

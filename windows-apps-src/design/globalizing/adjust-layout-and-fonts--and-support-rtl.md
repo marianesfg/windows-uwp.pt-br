@@ -10,7 +10,7 @@ keywords: windows 10, uwp, localizabilidade, localização, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: e428dd068337ecd79992e8e27cd193bed112d9c2
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57645301"
@@ -53,7 +53,7 @@ Quando o aplicativo é localizado para idiomas da direita para esquerda (RTL), u
 Defina **FlowDirection** no painel de layout raiz (ou quadro) da sua página ou na própria página. Isso faz com que todos os controles contidos herdem essa propriedade.
 
 > [!IMPORTANT]
-> Entretanto, **FlowDirection***não* é definido automaticamente com base no idioma de exibição selecionado do usuário nas configurações do Windows; nem muda dinamicamente quando o usuário altera o idioma de exibição. Por exemplo, se o usuário altera as configurações do Windows do inglês para árabe, a propriedade **FlowDirection***não* muda automaticamente da esquerda para a direita para o contrário. Como o desenvolvedor do aplicativo, você precisa definir **FlowDirection** adequadamente para os idiomas em exibição no momento.
+> Entretanto, **FlowDirection** *não* é definido automaticamente com base no idioma de exibição selecionado do usuário nas configurações do Windows; nem muda dinamicamente quando o usuário altera o idioma de exibição. Por exemplo, se o usuário altera as configurações do Windows do inglês para árabe, a propriedade **FlowDirection** *não* muda automaticamente da esquerda para a direita para o contrário. Como o desenvolvedor do aplicativo, você precisa definir **FlowDirection** adequadamente para os idiomas em exibição no momento.
 
 A técnica programática é usar a propriedade `LayoutDirection` do idioma de exibição preferencial do usuário para definir a propriedade [**FlowDirection**](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection) (veja o exemplo de código abaixo). A maioria dos controles incluídos no Windows já usam **FlowDirection**. Se você estiver implementando um controle personalizado, é necessário usar **FlowDirection** para fazer alterações de layout apropriado para idiomas RTL e LTR.
 

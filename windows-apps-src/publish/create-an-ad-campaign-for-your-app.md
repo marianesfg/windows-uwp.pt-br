@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, campanhas, promover
 ms.localizationpriority: medium
-ms.openlocfilehash: d442792cb2b4175294ea8da053784ef0a99d18e2
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 0d38d47c1b5e228e984faa4657cd12735e98bcf9
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63811844"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215229"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Criar uma campanha publicitária para seu app
 
@@ -20,7 +20,7 @@ Você pode criar campanhas de anúncios na [Partner Center](https://partner.micr
 Você pode criar campanhas publicitárias somente para aplicativos que passaram na fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md).
 
 > [!NOTE]
-> Esta seção da documentação descreve como criar uma campanha publicitária no Partner Center. Como alternativa, você pode usar a [API de promoções da Microsoft Store](../monetize/run-ad-campaigns-using-windows-store-services.md) para criar e gerenciar as campanhas publicitárias de forma programática.
+> Esta seção da documentação descreve como criar uma campanha publicitária no Partner Center. Outras opções de campanha para criar e gerenciar campanhas de anúncios por meio de programação incluem [Vungle](https://vungle.com/) e o [promoções da Microsoft Store API](../monetize/run-ad-campaigns-using-windows-store-services.md).
 
 ## <a name="instructions"></a>Instruções
 
@@ -36,8 +36,8 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 5.  Examine o nome fornecido para a campanha no campo **Nome da campanha** e faça as alterações, se desejado.
 6.  Em **Tipo de campanha**, escolha uma destas opções:
     * **Paga ad**: Esses ads serão executado em qualquer aplicativo que corresponde ao dispositivo e a categoria do seu aplicativo. Para novas campanhas criadas após 9 de janeiro de 2017, esses anúncios também serão exibidos no MSN.com, Outlook.com, Skype e outras propriedades premium da Microsoft. Campanhas de promoção de aplicativos destinados a propriedades premium da Microsoft e são conhecidas como campanhas *universais*.
-    * **Anúncio da comunidade (gratuito)**: Esses ads executará aplicativos publicados por outros desenvolvedores que também criar campanhas de anúncios de comunidade. Antes de poder selecionar essa opção, você deve optar por mostrar anúncios da comunidade na página **Monetizar** -> **Anúncios no app**. Para saber mais, consulte [Sobre anúncios da comunidade](about-community-ads.md).
-    * **Anúncio do próprio (gratuito)**: Esses ads só serão executado em seus aplicativos que correspondem ao tipo de dispositivo do aplicativo anunciado. Anúncios domésticos são gratuitos. Para saber mais, veja [Sobre anúncios domésticos](about-house-ads.md).
+    * **Anúncio da comunidade (gratuito)** : Esses ads executará aplicativos publicados por outros desenvolvedores que também criar campanhas de anúncios de comunidade. Antes de poder selecionar essa opção, você deve optar por mostrar anúncios da comunidade na página **Monetizar** -> **Anúncios no app**. Para saber mais, consulte [Sobre anúncios da comunidade](about-community-ads.md).
+    * **Anúncio do próprio (gratuito)** : Esses ads só serão executado em seus aplicativos que correspondem ao tipo de dispositivo do aplicativo anunciado. Anúncios domésticos são gratuitos. Para saber mais, veja [Sobre anúncios domésticos](about-house-ads.md).
 
 7.  Para campanhas publicitárias pagas, confirme a **Duração de campanha** (o período de tempo em que seu orçamento da campanha será gasto). A opção padrão é **Mensal**, ou seja, o orçamento da campanha será gasto por mês de forma recorrente até você parar a campanha. Como alternativa, se você tiver uma conta premium, selecione **Personalizado** para especificar um intervalo de data e hora personalizado durante o qual o orçamento da campanha será gasto. Para obter mais informações sobre contas premium, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign).
 
@@ -90,7 +90,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 
 12.  Se você tiver uma [conta premium](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign), pode usar a caixa **URL de destino** para controlar o que acontece quando um cliente clica em seu anúncio.
     * Se você deixar a caixa vazia, quando um cliente clicar em seu anúncio, a listagem da Loja do seu app será exibida.
-    * Se você estiver usando o Kochava ou o Tune para medir análises de instalação de seu app, insira URL de rastreamento de instalação do Kochava ou do Tune. Quando você salvar a campanha, a URL de rastreamento será validada para garantir que ela seja resolvida como a página de listagem para seu app na Microsoft Store. Para obter mais informações sobre o controle de instalação com Kochava e Tune, consulte a documentação do [Kochava](https://support.kochava.com/) e do [Tune](https://help.tune.com/).
+    * Se você estiver usando Vungle, Kochava, ajustar ou ajuste para medir a análise de instalação para seu aplicativo, insira a URL de rastreamento de instalação. Quando você salvar a campanha, a URL de rastreamento será validada para garantir que ela seja resolvida como a página de listagem para seu app na Microsoft Store. Para obter mais informações sobre o controle de instalação com esses serviços, consulte a [ajustar](https://docs.adjust.com/en/), [Kochava](https://support.kochava.com/), [ajustar](https://help.tune.com/), e [Vungle](https://support.vungle.com/) documentação .
     * Se você escolheu **Aumentar o envolvimento do app** como objetivo da campanha, pode especificar um [URI de um link profundo](../launch-resume/handle-uri-activation.md) para redirecionar os clientes no segmento selecionado para uma página específica em seu app.
     * Se você especificar um destino que não seja a página de descrição do seu app ou uma página dentro de seu app, sua campanha será pausada automaticamente.
 

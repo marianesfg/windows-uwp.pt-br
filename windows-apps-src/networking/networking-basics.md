@@ -6,12 +6,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ffc2f31b52e7913905c7d64ab797b2939cfb313d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8ed003fbae285f003724e5f540612d86902ee2d4
+ms.sourcegitcommit: f282c906cddf0d57217484e61a5cbd2fe8469421
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651651"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65852250"
 ---
 # <a name="networking-basics"></a>Noções básicas de rede
 Coisas que você deve fazer para qualquer aplicativo habilitado por rede.
@@ -31,9 +31,9 @@ Há outros recursos que podem ser necessários para o seu aplicativo, em determi
 
 | Capacidade | Descrição |
 |------------|-------------|
-| **enterpriseAuthentication** | Permite que um aplicativo se conecte a recursos de rede que exigem credenciais de domínio. Esse recurso exigirá que um administrador do domínio habilite a funcionalidade em todos os aplicativos. Um exemplo seria um aplicativo que recupera dados de servidores do SharePoint em uma intranet privada. <br/> Com esse recurso, suas credenciais podem ser usadas para acessar os recursos de rede em uma rede que exige credenciais. Um aplicativo com esse recurso pode representá-lo na rede. <br/> Essa funcionalidade não é obrigatória para que um aplicativo acesse a Internet por meio de um proxy de autenticação. |
-| **proximidade** | Obrigatório para comunicação por proximidade a curta distância com dispositivos próximos ao computador. A proximidade a curta distância pode ser usada para enviar para ou se conectar a um aplicativo em um dispositivo próximo. <br/> Essa funcionalidade permite que um aplicativo acesse a rede para conectar-se a um dispositivo em proximidade a curta distância, com o consentimento do usuário para enviar ou aceitar um convite. |
-| **sharedUserCertificates** | Esta funcionalidade permite que um aplicativo acesse certificados de software e de hardware, como certificados de cartão inteligente. Quando a funcionalidade é invocada no tempo de execução, o usuário deve agir, por exemplo, inserindo um cartão ou selecionando um certificado. <br/> Com esse recurso, os certificados de software e de hardware ou um cartão inteligente são usados para a identificação no aplicativo. Ele pode ser usado pelo seu empregador, banco ou serviços governamentais para identificação. |
+| **enterpriseAuthentication** | Permite que um aplicativo se conecte a recursos de rede que exigem credenciais de domínio. Por exemplo, um aplicativo que recupera dados de servidores do SharePoint em uma Intranet privada. Com esse recurso, suas credenciais podem ser usadas para acessar os recursos de rede em uma rede que exige credenciais. Um aplicativo com esse recurso pode representá-lo na rede. Você não precisa desse recurso para permitir que seu aplicativo acessar a Internet por meio de um proxy de autenticação.<br/><br/>Para obter mais detalhes, consulte a documentação para o *Enterprise* cenário do recurso no [restrito recursos](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities). |
+| **proximidade** | Obrigatório para comunicação por proximidade a curta distância com dispositivos próximos ao computador. A proximidade a curta distância pode ser usada para enviar para ou se conectar a um aplicativo em um dispositivo próximo. <br/><br/> Essa funcionalidade permite que um aplicativo acesse a rede para conectar-se a um dispositivo em proximidade a curta distância, com o consentimento do usuário para enviar ou aceitar um convite. |
+| **sharedUserCertificates** | Esta funcionalidade permite que um aplicativo acesse certificados de software e de hardware, como certificados de cartão inteligente. Quando a funcionalidade é invocada no tempo de execução, o usuário deve agir, por exemplo, inserindo um cartão ou selecionando um certificado. <br/><br/> Com esse recurso, os certificados de software e de hardware ou um cartão inteligente são usados para a identificação no aplicativo. Ele pode ser usado pelo seu empregador, banco ou serviços governamentais para identificação. |
 
 ## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>Comunicando-se quando seu aplicativo não está em primeiro plano
 [Dar suporte a seu aplicativo com tarefas em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt299103) contém informações gerais sobre o uso de tarefas em segundo plano para trabalhar quando o aplicativo não está no primeiro plano Mais especificamente, seu código deve seguir etapas especiais para ser notificado quando ele não for o aplicativo em primeiro plano atual e chegarem dados pela rede para ele. Você usou gatilhos de canal de controle para essa finalidade no Windows 8, e eles ainda são suportados no Windows 10. Informações completas sobre o uso de gatilhos de canal de controle estão disponíveis [**aqui**](https://msdn.microsoft.com/library/windows/apps/hh701032). Uma nova tecnologia no Windows 10 fornece funcionalidade melhor com sobrecarga mais baixa para alguns cenários, como soquetes de fluxo habilitado para envio por push: o agente de soquete e gatilhos de atividade de soquete.
@@ -460,7 +460,7 @@ Além da criptografia TLS/SSL, um servidor por exigir um valor de cabeçalho **S
 
 Caso a solicitação inicial do cliente não contenha esse valor ou forneça um valor que não corresponde ao esperado pelo servidor, o valor esperado será enviado do servidor para o cliente no erro de handshake WebSocket.
 
-## <a name="authentication"></a>Authentication
+## <a name="authentication"></a>Autenticação
 Como fornecer as credenciais de autenticação ao conectar-se pela rede.
 
 ### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Fornecendo um certificado cliente com a classe StreamSocket

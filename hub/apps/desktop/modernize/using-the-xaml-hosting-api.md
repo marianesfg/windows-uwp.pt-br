@@ -4,14 +4,16 @@ title: Usando o XAML UWP API de hospedagem em um aplicativo da área de trabalho
 ms.date: 04/16/2019
 ms.topic: article
 keywords: Windows 10, uwp, do windows forms, wpf, win32, Ilhas de xaml
+ms.author: mcleans
+author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 9b318b922541180108dfdd053ba28ce98ad9ebcb
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 545e1e1b220de9edf444ca06c3b21140227e8284
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65985006"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215146"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Usando o XAML UWP API de hospedagem em um aplicativo da área de trabalho
 
@@ -202,13 +204,13 @@ Quando o usuário altera o tamanho do elemento pai da interface do usuário, voc
 
 * Em um C++ aplicativo do Win32, quando seu aplicativo lida com a mensagem WM_SIZE que ele pode reposicionar a ilha de XAML hospedado usando o [SetWindowPos](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-setwindowpos) função. Por exemplo, consulte o [SampleApp.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/SampleApp.cpp#L191) arquivo de código na [ C++ Win32 sample](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island).
 
-* Quando o elemento pai da interface do usuário precisa obter o tamanho da área retangular necessário para se ajustarem a **Windows.UI.Xaml.UIElement** que você estiver hospedando na **DesktopWindowXamlSource**, chame o [ **Medida** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) método da **Windows.UI.Xaml.UIElement**. Por exemplo:
+* Quando o elemento pai da interface do usuário precisa obter o tamanho da área retangular necessário para se ajustarem a **Windows.UI.Xaml.UIElement** que você estiver hospedando na **DesktopWindowXamlSource**, chame o [ **Medida** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) método da **Windows.UI.Xaml.UIElement**. Por exemplo: 
 
     * Em um aplicativo WPF, você pode fazer isso a partir de [ **MeasureOverride** ](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.measureoverride) método do [ **HwndHost** ](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) que hospeda o  **DesktopWindowXamlSource**. Por exemplo, consulte o [WindowsXamlHostBase.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Layout.cs) arquivo no Kit de ferramentas de comunidade do Windows.
 
     * Em um aplicativo Windows Forms, você pode fazer isso a partir de [ **GetPreferredSize** ](https://docs.microsoft.com/dotnet/api/system.windows.forms.control.getpreferredsize) método da [ **controle** ](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) que hospeda o **DesktopWindowXamlSource**. Por exemplo, consulte o [WindowsXamlHostBase.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.Layout.cs) arquivo no Kit de ferramentas de comunidade do Windows.
 
-* Quando altera o tamanho do elemento pai da interface do usuário, chame o [ **Arrange** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) método da raiz **Windows.UI.Xaml.UIElement** que você estiver hospedando no  **DesktopWindowXamlSource**. Por exemplo:
+* Quando altera o tamanho do elemento pai da interface do usuário, chame o [ **Arrange** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) método da raiz **Windows.UI.Xaml.UIElement** que você estiver hospedando no  **DesktopWindowXamlSource**. Por exemplo: 
 
     * Em um aplicativo WPF, você pode fazer isso a partir de [ **ArrangeOverride** ](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.arrangeoverride) método da [ **HwndHost** ](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) objeto que hospeda o **DesktopWindowXamlSource**. Por exemplo, consulte o [WindowsXamlHost.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Layout.cs) arquivo no Kit de ferramentas de comunidade do Windows.
 

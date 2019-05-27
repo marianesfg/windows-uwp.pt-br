@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b725a823f31309c2419bcdc5095a78994d1929c0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e22a10e74a834daf4d256313f0e353a6829911c0
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57582063"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984237"
 ---
 # <a name="xaml-platform"></a>Plataforma XAML
 
@@ -26,4 +26,4 @@ Esta seção inclui tópicos que explicam os conceitos de programação que gera
 | [Visão geral das propriedades anexadas](attached-properties-overview.md) | Explica o conceito de uma propriedade anexada no XAML e fornece alguns exemplos. |
 | [Propriedades anexadas personalizadas](custom-attached-properties.md) | Explica como implementar uma propriedade anexada XAML como uma propriedade de dependência e como definir a convenção do acessador necessária para que a propriedade anexada possa ser usada no XAML. |
 | [Visão geral de eventos e eventos roteados](events-and-routed-events-overview.md) | Descrevemos o conceito de programação de eventos em um aplicativo do Windows Runtime quando você usa as extensões de componente C#, Visual Basic ou C++/CX como a linguagem de programação e o XAML para a definição da interface do usuário. Você pode atribuir manipuladores de eventos como parte das declarações para elementos da interface do usuário em XAML ou pode adicionar manipuladores no código. O Windows Runtime dá suporte a **eventos roteados**: determinados eventos de entrada e eventos de dados podem ser manipulados por outros objetos além do objeto que acionou o evento. Eventos roteados são úteis quando você define modelos de controle ou usa páginas ou contêineres de layout. |
-|[Hospedar controles UWP em aplicativos WPF e Windows Forms](xaml-host-controls.md)| Explica como usar controles XAML da UWP para aprimorar a interface do usuário de um aplicativo da área de trabalho do WPF ou do Windows Forms.|
+|[Controles da UWP em aplicativos da área de trabalho (ilhas de XAML)](/windows/apps/desktop/modernize/xaml-islands)| Explica como usar controles XAML da UWP para aprimorar a interface do usuário de um aplicativo da área de trabalho do WPF, Win32 ou Windows Forms.|

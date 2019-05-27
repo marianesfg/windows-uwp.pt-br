@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2089f9fcd54989234b52f95eb3ee9535f9b3ede3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f8e74688d0f7048276b12680237b85663d7e2b81
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603111"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66214743"
 ---
 # <a name="contributing-to-uwp-conceptual-documentation"></a>Contribuição para a documentação conceitual de UWP
 
@@ -34,7 +34,7 @@ Os revisores atribuído podem aprovar ou rejeitar a solicitação de pull ou tra
 
 ## <a name="internal-contributions"></a>Contribuições internas
 
-Se você for um funcionário da Microsoft, você pode contribuir com por meio de [repositório de conteúdo particular](https://cpubwin.visualstudio.com/_git/windows-uwp). Você pode encontrar diretrizes sobre como usar este repositório na [guia de criação do Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/?branch=master). Documentação sobre recursos futuros deve ter contribuída por meio do repositório privado.
+Se você for um funcionário da Microsoft, você pode contribuir com por meio de [repositório de conteúdo particular](https://github.com/microsoftdocs/windows-uwp-pr). Você pode encontrar diretrizes sobre como usar este repositório na [guia de criação do Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/?branch=master). Documentação sobre recursos futuros deve ter contribuída por meio do repositório privado.
 
 ### <a name="editing-a-file"></a>Editar um arquivo
 

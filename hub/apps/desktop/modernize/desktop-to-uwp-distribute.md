@@ -5,17 +5,19 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
+ms.author: mcleans
+author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 274f69c71890423d9962efe67cca81646a1e8e68
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 2e1aa424fe038a50a5e29364c7f8246e324dc07c
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984476"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215005"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>Distribuir seu aplicativo empacotado de área de trabalho
 
-Se você decidir [empacotar seu aplicativo da área de trabalho em um pacote MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root), você pode publicar seu aplicativo empacotado para a Microsoft Store ou fazer sideload-a em um ou mais dispositivos.
+Se você decidir [empacotar seu aplicativo da área de trabalho em um pacote MSIX](/windows/msix/desktop/desktop-to-uwp-root), você pode publicar seu aplicativo empacotado para a Microsoft Store ou fazer sideload-a em um ou mais dispositivos.
 
 > [!NOTE]
 > Você tem um plano para como você pode fazer a transição usuários ao seu aplicativo empacotado? Antes de distribuir seu aplicativo, consulte a seção [Transição de usuários para seu aplicativo empacotado](#transition-users) deste guia para obter algumas ideias.
@@ -26,12 +28,12 @@ A [Microsoft Store](https://www.microsoft.com/store/apps) é uma maneira conveni
 
 Publica seu aplicativo para a Microsoft Store para alcançar o público mais amplo. Além disso, os clientes organizacionais podem adquirir seu aplicativo para distribuir internamente para suas organizações por meio de [Microsoft Store para empresas](https://www.microsoft.com/business-store).
 
-Caso planeje publicar na Microsoft Store, você verá algumas perguntas adicionais como parte do processo de envio. Isso ocorre porque o manifesto do pacote declara uma funcionalidade restrita denominada **runFullTrust** e precisamos aprovar o uso desse recurso pelo aplicativo. Você pode ler mais sobre este requisito aqui: [Somente recursos restritos e](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
+Caso planeje publicar na Microsoft Store, você verá algumas perguntas adicionais como parte do processo de envio. Isso ocorre porque o manifesto do pacote declara uma funcionalidade restrita denominada **runFullTrust** e precisamos aprovar o uso desse recurso pelo aplicativo. Você pode ler mais sobre este requisito aqui: [Somente recursos restritos e](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
 Você não precisa assinar seu aplicativo antes de enviá-lo para a Store.
 
 >[!IMPORTANT]
-> Se você planeja publicar seu aplicativo para a Microsoft Store, certifique-se de que seu aplicativo funcione corretamente em dispositivos que executam o Windows 10 S. Este é um requisito da Store. Consulte [Testar seu aplicativo do Windows para o Windows 10 S](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-test-windows-s).
+> Se você planeja publicar seu aplicativo para a Microsoft Store, certifique-se de que seu aplicativo funcione corretamente em dispositivos que executam o Windows 10 S. Este é um requisito da Store. Consulte [Testar seu aplicativo do Windows para o Windows 10 S](/windows/msix/desktop/desktop-to-uwp-test-windows-s).
 
 <a id="side-load" />
 
@@ -43,7 +45,7 @@ Isso pode fazer sentido se você deseja ter mais controle sobre a experiência d
 
 Para distribuir seu aplicativo para outros dispositivos sem colocá-lo na Store, você precisa obter um certificado, assinar seu aplicativo por meio desse certificado e, em seguida, fazer sideload de seu aplicativo para esses dispositivos.
 
-Você pode [criar um certificado](/windows/uwp/packaging/create-certificate-package-signing.md) ou obtê-lo de um fornecedor popular, como o [Verisign](https://www.verisign.com/).
+Você pode [criar um certificado](/windows/uwp/packaging/create-certificate-package-signing) ou obtê-lo de um fornecedor popular, como o [Verisign](https://www.verisign.com/).
 
 Se você planeja distribuir seu aplicativo em dispositivos que executam o Windows 10 S, seu aplicativo deve ser assinado pela Microsoft Store, portanto, você terá que passar pelo processo de envio de Store antes de distribuir seu aplicativo para esses dispositivos.
 
@@ -52,9 +54,9 @@ Se você criar um certificado, você precisa instalá-lo na loja de certificados
 > [!IMPORTANT]
 > Certifique-se de que o nome do fornecedor no certificado corresponde ao nome do fornecedor do seu aplicativo.
 
-Para assinar seu aplicativo usando um certificado, consulte [assinar um pacote de aplicativo usando o SignTool](/windows/uwp/packaging/sign-app-package-using-signtool.md).
+Para assinar seu aplicativo usando um certificado, consulte [assinar um pacote de aplicativo usando o SignTool](/windows/uwp/packaging/sign-app-package-using-signtool).
 
-Para fazer sideload de seu aplicativo em outros dispositivos, consulte [aplicativos de LOB de Sideload no Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10).
+Para fazer sideload de seu aplicativo em outros dispositivos, consulte [aplicativos de LOB de Sideload no Windows 10](/windows/application-management/sideload-apps-in-windows-10).
 
 **Vídeos**
 

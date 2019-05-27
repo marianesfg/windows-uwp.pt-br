@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0600e66c672a28683befdb7b0090f5455a28c948
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4731ab089189a8a03656281d1a9a6da6e4d24e89
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624191"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984256"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -38,7 +38,7 @@ Tinta acrílica é um tipo de [pincel](https://docs.microsoft.com/en-us/uwp/api/
 
 ## <a name="acrylic-and-the-fluent-design-system"></a>Acrílico e o Sistema de Design Fluent
 
- O Sistema de Design Fluente ajuda você a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. O Acrílico é um componente do Sistema de Design Fluent que acrescenta textura física (material) e profundidade ao seu aplicativo. Para saber mais, consulte a [visão geral do Design Fluente para UWP](../fluent-design-system/index.md).
+ O Sistema de Design Fluente ajuda você a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. O Acrílico é um componente do Sistema de Design Fluent que acrescenta textura física (material) e profundidade ao seu aplicativo. Para saber mais, consulte a [visão geral do Design Fluente para UWP](/windows/apps/fluent-design-system).
 
  ## <a name="video-summary"></a>Resumo do vídeo
 
@@ -48,14 +48,14 @@ Tinta acrílica é um tipo de [pincel](https://docs.microsoft.com/en-us/uwp/api/
 
 :::row:::
     :::column span:::
-        ![Some image](images/XAML-controls-gallery-app-icon.png)
+![Algumas imagens](images/XAML-controls-gallery-app-icon.png)
     :::column-end:::
     :::column span="2":::
-        **XAML Controls Gallery**<br>
-        If you have the XAML Controls Gallery app installed, click <a href="xamlcontrolsgallery:/item/Acrylic">here</a> to open the app and see acrylic in action.
+**Galeria de controles XAML**<br>
+Se você tiver o aplicativo da Galeria de controles XAML instalado, clique em <a href="xamlcontrolsgallery:/item/Acrylic">aqui</a> para abrir o aplicativo e ver a tinta acrílica em ação.
 
-        <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
-        <a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Get the source code (GitHub)</a>
+<a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a><br>
+<a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a>
     :::column-end:::
 :::row-end:::
 
@@ -73,7 +73,7 @@ A característica mais notável do acrílico é sua transparência. Existem dois
 ## <a name="when-to-use-acrylic"></a>Quando usar o acrílico
 
 * Use tinta acrílica de no aplicativo para dar suporte a interface do usuário, como em superfícies que podem se sobrepor conteúdo quando rolado ou interagir com.
-* Use tinta acrílica do plano de fundo para elementos de interface do usuário transitórios, como menus de contexto, flyouts e dimsissable luz da interface do usuário.<br />Usar tinta Acrílica em cenários transitórios ajuda a manter um relacionamento visual com o conteúdo que disparou a interface do usuário transitório.
+* Use tinta acrílica do plano de fundo para elementos de interface do usuário transitórios, como ignorável a luz da interface do usuário, submenus e menus de contexto.<br />Usar tinta Acrílica em cenários transitórios ajuda a manter um relacionamento visual com o conteúdo que disparou a interface do usuário transitório.
 
 Se você estiver usando tinta acrílica de no aplicativo em superfícies de navegação, considere a possibilidade de estender o conteúdo abaixo do painel de acrílico para melhorar o fluxo em seu aplicativo. Usar o NavigationView fará isso para você automaticamente. No entanto, para evitar a criação de um efeito de distribuição, não tente colocar várias partes de acrílico-borda - isso pode criar uma costura indesejada entre as duas superfícies desfocadas. Tinta acrílica é uma ferramenta para trazer harmonia visual para seus designs, mas quando usado incorretamente, pode resultar em poluição visual.
 
@@ -98,7 +98,7 @@ Para aplicativos com submenus de menu, popups não modal, ou descarte suave e pa
 
 ![Padrão de aplicativo de email usando um submenu informativa](images/Mail_TransientContextMenu.png)
 
-Muitos dos nossos controles usarão a tinta acrílica por padrão. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) e controles semelhantes com pop-ups de luz dimiss todos usarão a tinta acrílica transitória quando eles são invocados.
+Muitos dos nossos controles usarão a tinta acrílica por padrão. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) e controles semelhantes com descarte suave e pop-ups todos usarão a tinta acrílica transitória quando eles são invocados.
 
 > [!Note]
 > A renderização de superfícies acrílico é o uso intenso da GPU, que pode aumentar o consumo de energia do dispositivo e encurtar o tempo de vida útil da bateria. Efeitos de acrílico automaticamente são desabilitados quando dispositivos entrar no modo de economia de bateria e os usuários podem desabilitar os efeitos de acrílico para todos os aplicativos, se desejarem.
@@ -319,7 +319,7 @@ Além disso, você precisará desenhar o título do seu aplicativo, que normalme
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 * Use acrílico como material de fundo em superfícies não primárias do aplicativo, como painéis de navegação.
 * Estenda o acrílico para pelo menos uma borda do seu aplicativo para criar uma experiência perfeita, combinando de maneira sutil com os entornos do aplicativo.
-* Não coloque arylic da área de trabalho nas superfícies de plano de fundo grande do seu aplicativo - Isso interrompe o modelo mental de tinta acrílica que está sendo usada principalmente para superfícies transitórias.
+* Não coloque a tinta acrílica da área de trabalho nas superfícies de plano de fundo grande do seu aplicativo - Isso interrompe o modelo mental de tinta acrílica que está sendo usada principalmente para superfícies transitórias.
 * Não coloque acrílicos de aplicativo e de fundo de forma diretamente adjacente para evitar a tensão visual nas junções.
 * Não coloque vários painéis acrílicos com o mesmo tom e opacidade próximos uns aos outros, pois isso gera uma emenda visível não desejada.
 * Não coloque texto de cores destacadas sobre superfícies acrílicas.

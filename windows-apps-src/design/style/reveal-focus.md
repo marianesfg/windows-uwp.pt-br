@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bcceb8d44b6d92cab05a9c077531b3fe1b05c79
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5de4b51687e152ef5d25a583f949cdd108f2f029
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651751"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984207"
 ---
 # <a name="reveal-focus"></a>Revelar o foco
 
@@ -168,7 +168,7 @@ Outra maneira de personalizar a revelar o foco é recusar os visuais de foco for
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>Revelar o foco e o sistema de Design Fluent
 
-Revele o que foco é um componente de sistema de Design Fluent que adiciona a luz ao seu aplicativo. Para saber mais sobre o sistema de Design Fluente e seus outros componentes, consulte a [visão geral do Design Fluente para UWP](../fluent-design-system/index.md).
+Revele o que foco é um componente de sistema de Design Fluent que adiciona a luz ao seu aplicativo. Para saber mais sobre o sistema de Design Fluente e seus outros componentes, consulte a [visão geral do Design Fluente para UWP](/windows/apps/fluent-design-system).
 
 ## <a name="related-articles"></a>Artigos relacionados
 

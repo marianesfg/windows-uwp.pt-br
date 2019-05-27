@@ -6,12 +6,12 @@ ms.date: 03/25/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 355cff08c6ab98b0837b8cc95f2480aa1fb17bd4
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: bdcb8132052cd12444c192c93170fb2f8e94113a
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63784729"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215220"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
@@ -40,7 +40,7 @@ Para criar uma unidade de anúncio para um [Anúncio em faixa](../monetize/banne
     * Se você estiver mostrando um anúncio de vídeo intersticial ou faixa intersticial em seu aplicativo, selecione **vídeo intersticial** ou **faixa intersticial** (não se esqueça de selecionar a opção apropriada para o tipo de intersticial ad que você deseja mostrar).
     * Se você estiver mostrando um anúncio nativo em seu aplicativo, selecione **nativo**.
 
-5. Na lista suspensa **Família de dispositivos**, selecione a família de dispositivos direcionada pelo aplicativo no qual a unidade publicitária será usada. As opções disponíveis são: **UWP (Windows 10)**, **PC/Tablet (Windows 8.1)**, ou **móveis (Windows Phone 8.x)**.
+5. Na lista suspensa **Família de dispositivos**, selecione a família de dispositivos direcionada pelo aplicativo no qual a unidade publicitária será usada. As opções disponíveis são: **UWP (Windows 10)** , **PC/Tablet (Windows 8.1)** , ou **móveis (Windows Phone 8.x)** .
 
 6. Defina as seguintes configurações adicionais conforme desejado:
 
@@ -120,6 +120,7 @@ A tabela a seguir lista as redes pagas atualmente com suporte para cada tipo de 
 | smartclip |  Selecione esta opção para veicular anúncios da [smartclip](http://www.smartclip.com/). |  Intersticial em vídeo  |
 | SpotX |  Selecione esta opção para veicular anúncios da [SpotX](https://www.spotx.tv/). |  Intersticial em vídeo  |
 | Taboola |  Selecione esta opção para veicular anúncios da [Taboola](https://www.taboola.com/). |  Faixa  |
+| Vungle | Selecione esta opção para servir ads de [Vungle](https://vungle.com/) | Intersticial em vídeo |
 | Undertone | Selecione esta opção para servir ads partir [Undertone](https://www.undertone.com/). | Faixa intersticial |
 
 

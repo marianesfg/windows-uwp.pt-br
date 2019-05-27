@@ -4,14 +4,16 @@ title: Modernize aplicativos empacotados de área de trabalho
 ms.date: 04/22/2019
 ms.topic: article
 keywords: windows 10, uwp
+ms.author: mcleans
+author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6d71233bc7b96af9d9b261406d6b149f36f65f29
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 191a8b8a007a866f37780a7c52cd40047dc9817f
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65985286"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215205"
 ---
 # <a name="features-that-require-package-identity"></a>Recursos que exigem a identidade do pacote
 

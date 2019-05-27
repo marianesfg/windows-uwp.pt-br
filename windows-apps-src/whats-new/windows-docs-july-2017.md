@@ -5,12 +5,12 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1875fecbdfa6b97cdc30413c8afa6cc58d3251ef
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 03bc41ca76f6c6b20f06c98b0e71e2bc5a361992
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595031"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984199"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Novidades dos documentos de desenvolvedor do Windows em julho de 2017
 
@@ -112,7 +112,7 @@ Foi adicionado um escopo "UWP" à documentação [Conceitual de UWP](../get-star
 
 ### <a name="test-your-windows-app-for-windows-10-s"></a>Testar seu aplicativo do Windows para o Windows 10 S
 
-Teste seu aplicativo do Windows para garantir que ele funcione corretamente em dispositivos que executam o Windows S. Use [este novo guia](../porting/desktop-to-uwp-test-windows-s.md) para saber como. 
+Teste seu aplicativo do Windows para garantir que ele funcione corretamente em dispositivos que executam o Windows S. Use [este novo guia](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-test-windows-s) para saber como.
 
 ## <a name="samples"></a>Exemplos
 

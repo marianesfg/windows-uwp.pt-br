@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: aeba4dbd734ea4b521033726968e90c232c154cb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0f6a4fef72206058874edf845d5fbbe0768c53ec
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57628661"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984217"
 ---
 # <a name="reveal-highlight"></a>Revelar realce
 
@@ -63,7 +63,7 @@ O Revelação funciona automaticamente para alguns controles. Para outros contro
 - [**TreeView**](../controls-and-patterns/tree-view.md)
 - [**NavigationView**](../controls-and-patterns/navigationview.md)
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
-- [**Barra de comandos**](../controls-and-patterns/app-bars.md)
+- [**CommandBar**](../controls-and-patterns/app-bars.md)
 
 Estas ilustrações mostram revelar realçar em vários controles diferentes:
 
@@ -282,13 +282,13 @@ Quando você habilita a revelação em um controle personalizado ou re-modelo ou
 
 ## <a name="reveal-and-the-fluent-design-system"></a>Revelação e o Sistema de Design Fluente
 
- O Sistema de Design Fluente ajuda você a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Revelação é um componente do Sistema de Design Fluente que acrescenta luz ao seu aplicativo. Para saber mais, consulte a [visão geral do Design Fluente para UWP](../fluent-design-system/index.md).
+ O Sistema de Design Fluente ajuda você a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Revelação é um componente do Sistema de Design Fluente que acrescenta luz ao seu aplicativo. Para saber mais, consulte a [visão geral do Design Fluente para UWP](/windows/apps/fluent-design-system).
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Classe RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush)
 - [Tinta acrílica](acrylic.md)
 - [Efeitos de composição](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
-- [Design Fluent para UWP](../fluent-design-system/index.md)
+- [Design Fluent para UWP](/windows/apps/fluent-design-system)
 - [Ciência no sistema: Profundidade e Design Fluent](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [Ciência no sistema: Luz e Design Fluent](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

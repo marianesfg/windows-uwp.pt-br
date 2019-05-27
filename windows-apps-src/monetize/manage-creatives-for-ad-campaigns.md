@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
-ms.openlocfilehash: 41c11ee9c5decffff57a2d443e1385398ce40d89
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3411ee4c947d809009c2185389f5513a49afce98
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658461"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215040"
 ---
 # <a name="manage-creatives"></a>Gerenciar criativos
 
@@ -36,8 +36,8 @@ Esses métodos têm os seguintes URIs.
 
 | Tipo de método | URI da solicitação     |  Descrição  |
 |--------|-----------------------------|---------------|
-| POST   | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative``` |  Gera um novo criativo.  |
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative/{creativeId}``` |  Obtém o criativo especificado pelo *creativeId*.  |
+| POSTAR   | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative``` |  Gera um novo criativo.  |
+| OBTER    | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative/{creativeId}``` |  Obtém o criativo especificado pelo *creativeId*.  |
 
 > [!NOTE]
 > No momento, esta API não dá suporte a um método PUT.
@@ -120,9 +120,9 @@ O corpo da solicitação e resposta desses métodos contêm os campos a seguir. 
 |  content   |  cadeia de caracteres   |  O conteúdo da imagem do criativo, no formato codificado de Base64.<br/><br/>**Observação**&nbsp;&nbsp;o número máximo permitido de tamanho para o creative é de 40 KB. Se você enviar um arquivo criativo maior do que isso, essa API não retornará um erro, mas a campanha não será criada com êxito.     |  Não     |      |   Sim    |       
 |  height   |  número inteiro   |   A altura do criativo.    |    Não    |      |   Sim    |       
 |  width   |  número inteiro   |  A largura do criativo.     |  Não    |     |    Sim   |       
-|  landingUrl   |  cadeia de caracteres   |  Se você estiver usando uma campanha de rastreamento de serviço como Kochava, AppsFlyer ou Tune para medir análises de instalação do seu aplicativo, atribua a URL de rastreamento nesse campo quando você chama o método POST (se especificado, esse valor deve ser um URI válido). Se você não estiver usando uma serviço de rastreamento de campanha, ao omitir esse valor quando você chama o método POST (nesse caso, a URL será criada automaticamente).   |  Não    |     |   Sim    |       
+|  landingUrl   |  cadeia de caracteres   |  Se você estiver usando uma campanha de controle de serviço, como AppsFlyer, Kochava, ajustar ou Vungle para medir a análise de instalação para seu aplicativo, atribua o URL de rastreamento neste campo quando você chama o método POST (se especificado, esse valor deve ser um URI válido). Se você não estiver usando uma serviço de rastreamento de campanha, ao omitir esse valor quando você chama o método POST (nesse caso, a URL será criada automaticamente).   |  Não    |     |   Sim    |
 |  format   |  cadeia de caracteres   |   O formato da publicidade. Atualmente, o único valor com suporte é **Faixa de notificação**.    |   Não    |  Faixa   |  Não     |       
-|  imageAttributes   | [imageAttributes](#image-attributes)    |   Fornece atributos para o criativo.     |   Não    |      |   Sim    |       
+|  imageAttributes   | [ImageAttributes](#image-attributes)    |   Fornece atributos para o criativo.     |   Não    |      |   Sim    |       
 |  storeProductId   |  cadeia de caracteres   |   A [ID da loja](in-app-purchases-and-trials.md#store-ids) do app ao qual a campanha publicitária está associada. Um exemplo de ID da loja para um produto é 9nblggh42cfd.    |   Não    |    |  Não     |   |  
 
 

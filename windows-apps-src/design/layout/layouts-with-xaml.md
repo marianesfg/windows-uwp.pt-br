@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d07a90ce34e9b4613eed6782338cbd889d7935c9
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 53a69393d945be1640f733b47410f88631fc7714
+ms.sourcegitcommit: 13fe5d04bdb43c75d0fc4de18c2c3d4ae58ff982
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58081868"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66221045"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Layouts dinâmicos com o XAML
 
@@ -27,7 +27,7 @@ Na prática, você usa uma combinação de elementos estáticos e fluidos para c
 Discutiremos aqui como usar painéis de layout e propriedades XAML para criar um layout fluido.
 
 ### <a name="layout-properties"></a>Propriedades do layout
-As propriedade de layout controlam o tamanho e a posição de um elemento. Para criar um layout fluido, use o dimensionamento automático ou proporcional de elementos e permite que os painéis de layout posicionem seus filhos conforme necessário. 
+As propriedade de layout controlam o tamanho e a posição de um elemento. Para criar um layout fluido, use o dimensionamento automático ou proporcional para elementos e permitir que os painéis de layout posicionar seus filhos, conforme necessário. 
 
 Aqui estão algumas propriedades de layout comuns e como usá-las para criar layouts fluidos.
 
@@ -348,7 +348,7 @@ Você pode adicionar o qualificador ao nome do arquivo ou adicionar o arquivo a 
 
 **Usar nome de arquivo**
 
-Para usar o nome do qualificador com o arquivo, use este formato: *[pageName]*.DeviceFamily-*[qualifierString]*.xaml.
+Para usar o nome do qualificador com o arquivo, use este formato: *[pageName]* .DeviceFamily- *[qualifierString]* .xaml.
 
 Consultemos um exemplo de um arquivo chamado MainPage.xaml. Para criar um modo de exibição para dispositivos de tablet, atribua um nome ao modo de exibição XAML MainPage.DeviceFamily-Tablet.xaml. Para criar um modo de exibição para os dispositivos do computador, dê um nome para o modo de exibição MainPage.DeviceFamily-Desktop.xaml. Aqui está como a solução fica no Microsoft Visual Studio.
 
@@ -356,7 +356,7 @@ Consultemos um exemplo de um arquivo chamado MainPage.xaml. Para criar um modo d
 
 **Use o nome da pasta**
 
-Para organizar os modos de exibição no projeto do Visual Studio usando pastas, você pode usar o nome de qualificador com a pasta. Para fazer isso, nomeie a pasta como este: DeviceFamily-*[qualifierString]*. Neste caso, cada arquivo do modo de exibição XAML tem o mesmo nome. Não inclua o qualificador no nome do arquivo.
+Para organizar os modos de exibição no projeto do Visual Studio usando pastas, você pode usar o nome de qualificador com a pasta. Para fazer isso, nomeie a pasta como este: DeviceFamily- *[qualifierString]* . Neste caso, cada arquivo do modo de exibição XAML tem o mesmo nome. Não inclua o qualificador no nome do arquivo.
 
 Aqui está um exemplo, novamente para um arquivo chamado MainPage.xaml. Para criar um modo de exibição para dispositivos de tablet, crie uma pasta chamada "DeviceFamily-Tablet" e coloque um modo de exibição XAML chamado MainPage.xaml nela. Para criar um modo de exibição para dispositivos de computador, crie uma pasta chamada "DeviceFamily-Desktop" e coloque outro modo de exibição XAML chamado MainPage.xaml nela. Aqui está como a solução fica no Visual Studio.
 
