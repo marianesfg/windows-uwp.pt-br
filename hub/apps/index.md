@@ -4,13 +4,16 @@ Description: Saiba como começar a criar aplicativos de desktop para PCs Windows
 title: Criar aplicativos para Windows
 ms.topic: landing-page
 ms.date: 04/18/2019
+ms.author: mcleans
+author: mcleanbyron
 keywords: Windows, win32, desenvolvimento de área de trabalho
-ms.openlocfilehash: c73121458c3b9c5a8d51b69e088a7711a479986f
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.localizationpriority: medium
+ms.openlocfilehash: 8cb104d873e810a9c5bedaa68675fd346cb3f33d
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984316"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215055"
 ---
 # <a name="build-apps-for-windows"></a>Criar aplicativos para Windows
 
