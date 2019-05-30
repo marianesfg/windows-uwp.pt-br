@@ -6,12 +6,12 @@ ms.date: 03/24/2017
 ms.topic: article
 keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: d9e11445d77434320c8842608bf8183a078c0660
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: debc4572a26db9e849dd31f17b114f15aa9ef055
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644461"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362487"
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Criar um plug-in personalizado para o Portal de Dispositivos
 
@@ -75,7 +75,7 @@ Dois novos recursos são necessários para essa funcionalidade. eles também dev
 ```
 
 > [!NOTE]
-> A funcionalidade "devicePortalProvider" é restrita ("rescap"), o que significa que você deve obter aprovação anterior da Loja para que seu app possa ser publicado lá. No entanto, isso não impede que você teste seu app localmente por meio de sideload. Para sabe rmais sobre funcionalidades restritas, veja [Declarações de funcionalidades do app](https://msdn.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities).
+> A funcionalidade "devicePortalProvider" é restrita ("rescap"), o que significa que você deve obter aprovação anterior da Loja para que seu app possa ser publicado lá. No entanto, isso não impede que você teste seu app localmente por meio de sideload. Para sabe rmais sobre funcionalidades restritas, veja [Declarações de funcionalidades do app](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
 ## <a name="set-up-your-background-task-and-winrt-component"></a>Configurar sua tarefa em segundo plano e o Componente WinRT
 Para configurar a conexão do Device Portal, seu app deve vincular uma conexão de serviço de app do serviço Device Portal com a instância do Device Portal em execução no app. Para fazer isso, adicione um novo componente WinRT ao seu aplicativo com uma classe que implemente [**IBackgroundTask**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.ibackgroundtask).

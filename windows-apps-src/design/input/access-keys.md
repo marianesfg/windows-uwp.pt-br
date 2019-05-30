@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: bd71e4715b26f9e06326690d3642b4d19e23d292
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6c13ac8f1421fe785ebce70789c8ea6d0bf6c068
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617261"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364022"
 ---
 # <a name="access-keys"></a>Teclas de acesso
 
@@ -353,7 +353,7 @@ Este exemplo demonstra como alterar esses recursos do aplicativo:
 
 A estrutura XAML expõe Propriedades de Automação que permitem que clientes da Automação da interface de usuário descubram informações sobre elementos da interface de usuário.
 
-Se você especificar a propriedade AccessKey em um controle de UIElement ou TextElement, você pode usar a propriedade [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) para obter esse valor. Os clientes de acessibilidade, como o Narrador, lê o valor dessa propriedade cada vez que um elemento recebe o foco.
+Se você especificar a propriedade AccessKey em um controle de UIElement ou TextElement, você pode usar a propriedade [AutomationProperties.AccessKey](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) para obter esse valor. Os clientes de acessibilidade, como o Narrador, lê o valor dessa propriedade cada vez que um elemento recebe o foco.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

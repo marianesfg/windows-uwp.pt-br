@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 24b2885597599607ca405e858a9f713f5a6af4c7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7fba78a619f18d7da2e190758d73ac7a56b12fb9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644871"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360662"
 ---
 # <a name="display-the-camera-preview"></a>Exibir a visualização da câmera
 
@@ -32,7 +32,7 @@ Para que seu app acesse a câmera do dispositivo, você deve declarar que o app 
 
 ## <a name="add-a-captureelement-to-your-page"></a>Adicionar um CaptureElement à sua página
 
-Use um [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) para exibir o fluxo de visualização na página XAML.
+Use um [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement) para exibir o fluxo de visualização na página XAML.
 
 [!code-xml[CaptureElement](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml#SnippetCaptureElement)]
 
@@ -40,7 +40,7 @@ Use um [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br20
 
 ## <a name="use-mediacapture-to-start-the-preview-stream"></a>Usar o MediaCapture para iniciar o fluxo de visualização
 
-O objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) é a interface do seu aplicativo para a câmera do dispositivo. Esta classe é um membro do namespace Windows.Media.Capture. O exemplo deste artigo também usa APIs dos namespaces [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) e [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx), além daqueles incluídos pelo modelo de projeto padrão.
+O objeto [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) é a interface do seu aplicativo para a câmera do dispositivo. Esta classe é um membro do namespace Windows.Media.Capture. O exemplo deste artigo também usa APIs dos namespaces [**Windows.ApplicationModel**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel) e [System.Threading.Tasks](https://docs.microsoft.com/dotnet/api/system.threading.tasks?redirectedfrom=MSDN), além daqueles incluídos pelo modelo de projeto padrão.
 
 Adicione usando diretivas para incluir os seguintes namespaces no arquivo. cs da sua página.
 
@@ -50,19 +50,19 @@ Declare uma variável de membro de classe para o objeto **MediaCapture** e um va
 
 [!code-cs[DeclareMediaCapture](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetDeclareMediaCapture)]
 
-Declare uma variável do tipo [**DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest) que será usada para garantir que a exibição não seja desativada enquanto a visualização estiver em execução.
+Declare uma variável do tipo [**DisplayRequest**](https://docs.microsoft.com/uwp/api/Windows.System.Display.DisplayRequest) que será usada para garantir que a exibição não seja desativada enquanto a visualização estiver em execução.
 
 [!code-cs[DeclareDisplayRequest](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetDeclareDisplayRequest)]
 
 Crie um método auxiliar para iniciar a visualização de câmera, chamada **StartPreviewAsync** neste exemplo. Dependendo do cenário do aplicativo, você pode querer chamá-lo a partir do manipulador de eventos **OnNavigatedTo** que é chamado quando a página é carregada ou esperar e iniciar a visualização em resposta a eventos da interface do usuário.
 
-Crie uma nova instância da classe **MediaCapture** e chame [**InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598) para inicializar o dispositivo de captura. Esse método pode falhar em dispositivos que não têm uma câmera, por exemplo. Por isso, você deve chamá-lo de dentro de um bloco **try**. Uma **UnauthorizedAccessException** será lançada quando você tentar inicializar a câmera, se o usuário tiver desabilitado o acesso à câmera nas configurações de privacidade do dispositivo. Você também verá essa exceção durante o desenvolvimento, se não tiver adicionado os recursos adequados ao manifesto do seu aplicativo.
+Crie uma nova instância da classe **MediaCapture** e chame [**InitializeAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.initializeasync) para inicializar o dispositivo de captura. Esse método pode falhar em dispositivos que não têm uma câmera, por exemplo. Por isso, você deve chamá-lo de dentro de um bloco **try**. Uma **UnauthorizedAccessException** será lançada quando você tentar inicializar a câmera, se o usuário tiver desabilitado o acesso à câmera nas configurações de privacidade do dispositivo. Você também verá essa exceção durante o desenvolvimento, se não tiver adicionado os recursos adequados ao manifesto do seu aplicativo.
 
-**Importante** Em algumas famílias de dispositivos, uma solicitação de consentimento do usuário é exibida para o usuário antes de seu aplicativo receber acesso à câmera do dispositivo. Por esse motivo, você só deve chamar [**MediaCapture.InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598) do thread de interface do usuário principal. Tentar iniciar a câmera de outro thread pode resultar em falha de inicialização.
+**Importante** Em algumas famílias de dispositivos, uma solicitação de consentimento do usuário é exibida para o usuário antes de seu aplicativo receber acesso à câmera do dispositivo. Por esse motivo, você só deve chamar [**MediaCapture.InitializeAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.initializeasync) do thread de interface do usuário principal. Tentar iniciar a câmera de outro thread pode resultar em falha de inicialização.
 
-Conecte a **MediaCapture** ao **CaptureElement** definindo a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280). Inicie a visualização chamando [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613). Esse método gerará uma **FileLoadException** se outro app tiver controle exclusivo do dispositivo de captura. Veja a próxima seção para obter informações sobre as alterações no controle exclusivo.
+Conecte a **MediaCapture** ao **CaptureElement** definindo a propriedade [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.captureelement.source). Inicie a visualização chamando [**StartPreviewAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.startpreviewasync). Esse método gerará uma **FileLoadException** se outro app tiver controle exclusivo do dispositivo de captura. Veja a próxima seção para obter informações sobre as alterações no controle exclusivo.
 
-Chame [**RequestActive**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestActive) para garantir que o dispositivo não entre em suspensão enquanto a visualização estiver em execução. Por fim, defina a propriedade [**DisplayInformation.AutoRotationPreferences**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Display.DisplayInformation.AutoRotationPreferences) como [**Landscape**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Display.DisplayOrientations) para impedir que a interface do usuário e o **CaptureElement** girem quando o usuário mudar a orientação do dispositivo. Para obter mais informações sobre como lidar com alterações de orientação do dispositivo, consulte [**Manipular a orientação do dispositivo com o MediaCapture**](handle-device-orientation-with-mediacapture.md).  
+Chame [**RequestActive**](https://docs.microsoft.com/uwp/api/windows.system.display.displayrequest.requestactive) para garantir que o dispositivo não entre em suspensão enquanto a visualização estiver em execução. Por fim, defina a propriedade [**DisplayInformation.AutoRotationPreferences**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.autorotationpreferences) como [**Landscape**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations) para impedir que a interface do usuário e o **CaptureElement** girem quando o usuário mudar a orientação do dispositivo. Para obter mais informações sobre como lidar com alterações de orientação do dispositivo, consulte [**Manipular a orientação do dispositivo com o MediaCapture**](handle-device-orientation-with-mediacapture.md).  
 
 [!code-cs[StartPreviewAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStartPreviewAsync)]
 
@@ -75,23 +75,23 @@ Conforme mencionado na seção anterior, **StartPreviewAsync** gerará uma **Fil
 
 Ao terminar de usar o fluxo de visualização, você sempre deve desligar o fluxo e dispor corretamente dos recursos associados para garantir que a câmera esteja disponível para outros aplicativos no dispositivo. As etapas necessárias para desligar o fluxo de visualização são:
 
--   Se a câmera estiver atualmente em visualização, chame [**StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622) para interromper o fluxo de visualização. Uma exceção será gerada se você chamar **StopPreviewAsync** enquanto a visualização não estiver em execução.
--   Defina a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) do **CaptureElement** como nulo. Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para garantir que essa chamada seja executada no thread de interface do usuário.
--   Chame o método [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) do objeto **MediaCapture** para liberar o objeto. Novamente, use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para garantir que essa chamada seja executada no thread de interface do usuário.
+-   Se a câmera estiver atualmente em visualização, chame [**StopPreviewAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.stoppreviewasync) para interromper o fluxo de visualização. Uma exceção será gerada se você chamar **StopPreviewAsync** enquanto a visualização não estiver em execução.
+-   Defina a propriedade [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.captureelement.source) do **CaptureElement** como nulo. Use [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para garantir que essa chamada seja executada no thread de interface do usuário.
+-   Chame o método [**Dispose**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.dispose) do objeto **MediaCapture** para liberar o objeto. Novamente, use [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para garantir que essa chamada seja executada no thread de interface do usuário.
 -   Defina a variável do membro do **MediaCapture** como nulo.
--   Chame [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestRelease) para permitir que a tela seja desativada quando inativa.
+-   Chame [**RequestRelease**](https://docs.microsoft.com/uwp/api/windows.system.display.displayrequest.requestrelease) para permitir que a tela seja desativada quando inativa.
 
 [!code-cs[CleanupCameraAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetCleanupCameraAsync)]
 
-Você deve desligar o fluxo de visualização quando o usuário navegar para fora de sua página, substituindo o método [**OnNavigatedFrom**](https://msdn.microsoft.com/library/windows/apps/br227507).
+Você deve desligar o fluxo de visualização quando o usuário navegar para fora de sua página, substituindo o método [**OnNavigatedFrom**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom).
 
 [!code-cs[OnNavigatedFrom](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetOnNavigatedFrom)]
 
-Você também deve desligar o fluxo de visualização corretamente quando seu aplicativo estiver suspenso. Para fazer isso, registre um manipulador para o evento [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860) no construtor da página.
+Você também deve desligar o fluxo de visualização corretamente quando seu aplicativo estiver suspenso. Para fazer isso, registre um manipulador para o evento [**Application.Suspending**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.suspending) no construtor da página.
 
 [!code-cs[RegisterSuspending](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetRegisterSuspending)]
 
-No manipulador de eventos **Suspending**, verifique primeiro se a página está exibindo o [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) do aplicativo, comparando o tipo de página com a propriedade [**CurrentSourcePageType**](https://msdn.microsoft.com/library/windows/apps/hh702390). Se a página não estiver sendo exibida no momento, o evento **OnNavigatedFrom** já deve tiver sido gerado e o fluxo de visualização encerrado. Se a página estiver sendo exibida no momento, obtenha um objeto [**SuspendingDeferral**](https://msdn.microsoft.com/library/windows/apps/br224684) dos argumentos de evento passados para o manipulador para garantir que o sistema não suspenda seu aplicativo até que o fluxo de visualização seja encerrado. Depois de desligar o fluxo, chame o método [**Complete**](https://msdn.microsoft.com/library/windows/apps/br224685) de adiamento para permitir que o sistema continue a suspender seu aplicativo.
+No manipulador de eventos **Suspending**, verifique primeiro se a página está exibindo o [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) do aplicativo, comparando o tipo de página com a propriedade [**CurrentSourcePageType**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.currentsourcepagetype). Se a página não estiver sendo exibida no momento, o evento **OnNavigatedFrom** já deve tiver sido gerado e o fluxo de visualização encerrado. Se a página estiver sendo exibida no momento, obtenha um objeto [**SuspendingDeferral**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.SuspendingDeferral) dos argumentos de evento passados para o manipulador para garantir que o sistema não suspenda seu aplicativo até que o fluxo de visualização seja encerrado. Depois de desligar o fluxo, chame o método [**Complete**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.suspendingdeferral.complete) de adiamento para permitir que o sistema continue a suspender seu aplicativo.
 
 [!code-cs[SuspendingHandler](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetSuspendingHandler)]
 

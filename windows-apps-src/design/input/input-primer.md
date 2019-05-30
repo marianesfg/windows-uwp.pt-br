@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bae6e5b21369c30c8ed067fe7283c0a116d220b8
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.openlocfilehash: 55879c33e30564f4639b8880c3a12f4b4181245e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343285"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365921"
 ---
 # <a name="interaction-primer"></a>Cartilha de interação
 
@@ -135,7 +135,7 @@ O ditado normalmente é usado quando um aplicativo não precisa compreender o si
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes de design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+[Diretrizes de design de controle por voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
  
 
 ## <a name="pen"></a>Caneta
@@ -168,7 +168,7 @@ Você deve fornecer comandos de interface do usuário específicos à caneta, ou
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes de design de caneta](https://msdn.microsoft.com/library/windows/apps/dn456352)
+[Diretrizes de design de caneta](https://docs.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions)
  
 
 ## <a name="touch"></a>Touch
@@ -203,7 +203,7 @@ Em geral, o touch é:
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes para design de touch](https://msdn.microsoft.com/library/windows/apps/hh465370)
+[Diretrizes para design de touch](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-user-interaction)
  
 
 ## <a name="touchpad"></a>Touchpad
@@ -227,7 +227,7 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes de design do touchpad](https://msdn.microsoft.com/library/windows/apps/dn456353)
+[Diretrizes de design do touchpad](https://docs.microsoft.com/windows/uwp/input-and-devices/touch-interactions)
  
 
 ## <a name="keyboard"></a>Teclado
@@ -267,7 +267,7 @@ Em geral, um teclado é:
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes de design do teclado](https://msdn.microsoft.com/library/windows/apps/hh972345)
+[Diretrizes de design do teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
  
 
 ## <a name="mouse"></a>Mouse
@@ -294,7 +294,7 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes de design de mouse](https://msdn.microsoft.com/library/windows/apps/dn456351)
+[Diretrizes de design de mouse](https://docs.microsoft.com/windows/uwp/input-and-devices/mouse-interactions)
  
 
 ## <a name="gesture"></a>Gesto

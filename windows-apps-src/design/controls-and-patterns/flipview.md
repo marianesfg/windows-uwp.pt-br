@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ac4e5bb7c761ad6661647cb88f831ffa652b6241
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7942839b43739ca5fb15106abbfa1877ead81dc2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662421"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362767"
 ---
 # <a name="flip-view"></a>Exibição de inversão
 
@@ -24,7 +24,7 @@ ms.locfileid: "57662421"
 
 Use um recurso exibição de inversão para procurar imagens ou outros itens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, um item por vez. Em dispositivos sensíveis ao toque, deslizar o dedo em um item move a coleção. Com um mouse, os botões de navegação aparecem na passagem do mouse. No teclado, as teclas de seta movem a coleção.
 
-> **APIs importantes**: [Classe FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx), [propriedade ItemsSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx), [propriedade ItemTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)
+> **APIs importantes**: [Classe FlipView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [propriedade ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [propriedade ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)
 
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
@@ -57,13 +57,13 @@ O recurso exibição de inversão também pode ser procurado verticalmente:
 
 ## <a name="create-a-flip-view"></a>Criar um recurso exibição de inversão
 
-FlipView é um [ItemsControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.aspx) e, por isso, pode conter uma coleção de itens de qualquer tipo. Para popular a exibição, adicione itens à coleção de [**Itens**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) ou defina a propriedade [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) como uma fonte de dados.
+FlipView é um [ItemsControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol) e, por isso, pode conter uma coleção de itens de qualquer tipo. Para popular a exibição, adicione itens à coleção de [**Itens**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) ou defina a propriedade [**ItemsSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) como uma fonte de dados.
 
-Por padrão, o item de dados é exibido no recurso exibição de inversão como a representação do objeto de dados ao qual ele está associado. Para especificar exatamente como os itens em exibição de inversão são exibidos, crie um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.datatemplate.aspx) para definir o layout dos controles usados para exibir cada item. Os controles no layout podem ser associados a propriedades de um objeto de dados ou ter conteúdo definido embutido. Você atribui o DataTemplate à propriedade [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) do FlipView.
+Por padrão, o item de dados é exibido no recurso exibição de inversão como a representação do objeto de dados ao qual ele está associado. Para especificar exatamente como os itens em exibição de inversão são exibidos, crie um [**DataTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) para definir o layout dos controles usados para exibir cada item. Os controles no layout podem ser associados a propriedades de um objeto de dados ou ter conteúdo definido embutido. Você atribui o DataTemplate à propriedade [**ItemTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) do FlipView.
 
 ### <a name="add-items-to-the-items-collection"></a>Adicionar itens à coleção Items
 
-Você pode adicionar itens à coleção [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) usando XAML ou código. Normalmente, você adiciona itens dessa maneira quando tem um pequeno número de itens que não mudam e são facilmente definidos no XAML ou ao gerar os itens em código no tempo de execução. Este é um recurso exibição de inversão com itens definidos embutidos.
+Você pode adicionar itens à coleção [**Items**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) usando XAML ou código. Normalmente, você adiciona itens dessa maneira quando tem um pequeno número de itens que não mudam e são facilmente definidos no XAML ou ao gerar os itens em código no tempo de execução. Este é um recurso exibição de inversão com itens definidos embutidos.
 
 ```xaml
 <FlipView x:Name="flipView1">
@@ -84,13 +84,13 @@ flipView1.Items.Add("Item 2");
 stackPanel1.Children.Add(flipView1);
 ```
 
-Quando você adiciona itens a um recurso exibição de inversão, eles são colocados automaticamente no contêiner [**FlipViewItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flipviewitem.aspx). Para alterar como um item é exibido, você pode aplicar um estilo ao contêiner de item definindo a propriedade [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx). 
+Quando você adiciona itens a um recurso exibição de inversão, eles são colocados automaticamente no contêiner [**FlipViewItem**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipViewItem). Para alterar como um item é exibido, você pode aplicar um estilo ao contêiner de item definindo a propriedade [**ItemContainerStyle**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle). 
 
 Quando você define os itens em XAML, eles também são adicionados automaticamente à coleção Items.
 
 ### <a name="set-the-items-source"></a>Definir a origem de itens
 
-Geralmente, você usa um recurso de exibição de inversão para exibir dados de uma origem, como um banco de dados ou a Internet. Para popular um recurso exibição de inversão em uma fonte de dados, você define sua propriedade [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) como uma coleção de itens de dados.
+Geralmente, você usa um recurso de exibição de inversão para exibir dados de uma origem, como um banco de dados ou a Internet. Para popular um recurso exibição de inversão em uma fonte de dados, você define sua propriedade [**ItemsSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) como uma coleção de itens de dados.
 
 Aqui, o ItemsSource do recurso exibição de inversão está definido diretamente no código em uma instância de uma coleção.
 
@@ -112,7 +112,7 @@ stackPanel1.Children.Add(flipView1);
 
 Você também pode associar a propriedade ItemsSource a uma coleção em XAML. Para saber mais, consulte [Vinculação de dados com XAML](../../data-binding/data-binding-quickstart.md).
 
-Aqui, o ItemsSource está associado a um [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx) denominado `itemsViewSource`. 
+Aqui, o ItemsSource está associado a um [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) denominado `itemsViewSource`. 
 
 ```xaml
 <Page.Resources>
@@ -130,7 +130,7 @@ Aqui, o ItemsSource está associado a um [**CollectionViewSource**](https://msdn
 
 ### <a name="specify-the-look-of-the-items"></a>Especificar a aparência dos itens
 
-Por padrão, o item de dados é exibido no recurso exibição de inversão como a representação do objeto de dados ao qual ele está associado. Você geralmente quer mostrar uma apresentação mais sofisticada de seus dados. Para especificar exatamente como os itens são exibidos no recurso exibição de inversão, você cria o [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx). O XAML no DataTemplate define o layout e a aparência dos controles usados para exibir cada item. Os controles no layout podem ser associados a propriedades de um objeto de dados ou ter conteúdo definido embutido. O DataTemplate é atribuído à propriedade [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) do controle FlipView.
+Por padrão, o item de dados é exibido no recurso exibição de inversão como a representação do objeto de dados ao qual ele está associado. Você geralmente quer mostrar uma apresentação mais sofisticada de seus dados. Para especificar exatamente como os itens são exibidos no recurso exibição de inversão, você cria o [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate). O XAML no DataTemplate define o layout e a aparência dos controles usados para exibir cada item. Os controles no layout podem ser associados a propriedades de um objeto de dados ou ter conteúdo definido embutido. O DataTemplate é atribuído à propriedade [**ItemTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) do controle FlipView.
 
 Neste exemplo, o ItemTemplate de um FlipView é definido embutido. Uma sobreposição é adicionada à imagem para exibir o nome da imagem. 
 
@@ -159,7 +159,7 @@ Modelo de recurso exibição de inversão.
 
 ### <a name="set-the-orientation-of-the-flip-view"></a>Definir a orientação do recurso exibição de inversão
 
-Por padrão, o recurso exibição de inversão inverte horizontalmente. Para fazê-lo inverter verticalmente, use um painel de pilha com uma orientação vertical como o [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) do recurso exibição de inversão.
+Por padrão, o recurso exibição de inversão inverte horizontalmente. Para fazê-lo inverter verticalmente, use um painel de pilha com uma orientação vertical como o [**ItemsPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) do recurso exibição de inversão.
 
 Este exemplo mostra como usar o painel de pilha com uma orientação vertical como o ItemsPanel de um FlipView.
 
@@ -232,4 +232,4 @@ Para conferir um código de exemplo que mostra como adicionar um indicador de co
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Diretrizes para listas](lists.md)
-- [**Classe de FlipView**](https://msdn.microsoft.com/library/windows/apps/br242678)
+- [**Classe de FlipView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView)

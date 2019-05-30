@@ -5,12 +5,12 @@ ms.date: 07/07/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d010816b1ba4c9941aea7bdcdb4bd4c50038aca6
-ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.openlocfilehash: 72bad5bff8092e63a73cc1e32f4424b70867d245
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59067831"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366037"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a>Escolhendo o tipo de canal de notificação por push certo
 
@@ -38,10 +38,10 @@ Esses são os canais mais usados no Windows atualmente e eles são úteis em pra
 
 ### <a name="what-do-primary-channels-enable"></a>O que os canais primários permitem?
 
--   **Enviar atualizações de bloco ou selo ao bloco primário.** Se o usuário tiver optado por fixar seu bloco na tela inicial, essa é a sua chance de mostrar. Enviar atualizações com informações ou lembretes úteis de experiências dentro de seu aplicativo. 
--   **Enviar notificações do sistema.** As notificações do sistema são uma oportunidade de apresentar informações ao usuário imediatamente. Elas são pintadas pelo shell sobre a maioria dos aplicativos e residem na central de ações para que o usuário possa voltar e interagir com elas posteriormente. 
--   **Enviar notificações brutas para acionar uma tarefa em segundo plano.** Às vezes você deseja fazer algum trabalho em nome do usuário com base em uma notificação. As notificações brutas permitem que as tarefas em segundo plano do seu aplicativo sejam executadas 
--   **Criptografia de mensagem em trânsito fornecida pelo Windows usando o TLS.** As mensagens são criptografadas durante a transmissão tanto na chegada ao WNS como na ida para o dispositivo do usuário.  
+-   **Enviando atualizações de bloco ou notificação ao bloco primário.** Se o usuário tiver optado por fixar seu bloco na tela inicial, essa é a sua chance de mostrar. Enviar atualizações com informações ou lembretes úteis de experiências dentro de seu aplicativo. 
+-   **Enviando notificações do sistema.** As notificações do sistema são uma oportunidade de apresentar informações ao usuário imediatamente. Elas são pintadas pelo shell sobre a maioria dos aplicativos e residem na central de ações para que o usuário possa voltar e interagir com elas posteriormente. 
+-   **Enviando notificações brutas para disparar uma tarefa em segundo plano.** Às vezes você deseja fazer algum trabalho em nome do usuário com base em uma notificação. As notificações brutas permitem que as tarefas em segundo plano do seu aplicativo sejam executadas 
+-   **Criptografia de mensagens em trânsito fornecida pelo Windows usando o TLS.** As mensagens são criptografadas durante a transmissão tanto na chegada ao WNS como na ida para o dispositivo do usuário.  
 
 ### <a name="limitations-of-primary-channels"></a>Limitações de canais primários
 
@@ -108,12 +108,12 @@ Aqui está uma rápida comparação entre os diferentes tipos de canal:
 
 <tr class="header">
 <th align="left"><b>Tipo</b></th>
-<th align="left"><b>Envia notificação do sistema?</b></th>
-<th align="left"><b>Envia notificações de bloco/selo?</b></th>
-<th align="left"><b>Envia notificações brutas?</b></th>
+<th align="left"><b>Enviar por push do sistema?</b></th>
+<th align="left"><b>Enviar notificação de bloco /?</b></th>
+<th align="left"><b>Enviar notificações brutas?</b></th>
 <th align="left"><b>Autenticação</b></th>
 <th align="left"><b>API</b></th>
-<th align="left"><b>É necessário o registro na Store?</b></th>
+<th align="left"><b>Registro de Store necessário?</b></th>
 <th align="left"><b>Canais</b></th>
 <th align="left"><b>Criptografia</b></th>
 </tr>
@@ -167,11 +167,11 @@ Em geral, recomendamos que você use o canal primário no aplicativo, com alguma
 
 * [Enviar uma notificação de bloco local](../tiles-and-notifications/sending-a-local-tile-notification.md)
 * [Notificações do sistema interativas e adaptáveis](../tiles-and-notifications/adaptive-interactive-toasts.md)
-* [Guia de início rápido: Enviar uma notificação por push](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)
-* [Como atualizar uma notificação por meio de notificações por push](https://msdn.microsoft.com/library/windows/apps/hh465450)
-* [Como solicitar, criar e salvar um canal de notificação](https://msdn.microsoft.com/library/windows/apps/hh465412)
-* [Como interceptar notificações para aplicativos em execução](https://msdn.microsoft.com/library/windows/apps/hh465450)
-* [Como autenticar com o Serviço de Notificação por Push do Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/hh465407)
-* [Cabeçalhos de solicitação e resposta de serviço de notificação por push](https://msdn.microsoft.com/library/windows/apps/hh465435)
-* [Diretrizes e lista de verificação de notificações por push](https://msdn.microsoft.com/library/windows/apps/hh761462)
+* [Guia de início rápido: Enviar uma notificação por push](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
+* [Como atualizar uma notificação por meio de notificações por push](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
+* [Como solicitar, criar e salvar um canal de notificação](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
+* [Como interceptar as notificações para aplicativos em execução](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
+* [Como autenticar com o serviço de notificação por Push o Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
+* [Cabeçalhos de solicitação e resposta do serviço de notificação de push](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
+* [Diretrizes e lista de verificação para notificações por push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
 * [Notificações brutas](raw-notification-overview.md)

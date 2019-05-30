@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 02d8c67c92a070fbeaaab81ef6c5145dec90e411
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 92511c1f5b7ad8991900d80d4ec52659d6e74f88
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631351"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361409"
 ---
 # <a name="supported-codecs"></a>Codecs compatíveis
 
@@ -339,7 +339,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 
  
 
-### <a name="mobile"></a>Móvel
+### <a name="mobile"></a>Celular
 
 <table>
 <colgroup>
@@ -1812,7 +1812,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 
  
 
-### <a name="mobile"></a>Móvel
+### <a name="mobile"></a>Celular
 
 <table>
 <colgroup>
@@ -2757,4 +2757,4 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 <sup>2</sup> Imagens DNG com uma visualização incorporada não RAW têm suporte.  
 <sup>3</sup> Somente determinados formatos de câmera RAW têm suporte.  
 
-Para obter mais informações sobre codecs de imagem, consulte [Codecs WIC nativos](https://msdn.microsoft.com/library/windows/desktop/gg430027.aspx).
+Para obter mais informações sobre codecs de imagem, consulte [Codecs WIC nativos](https://docs.microsoft.com/windows/desktop/wic/native-wic-codecs).

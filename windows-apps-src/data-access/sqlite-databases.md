@@ -5,12 +5,12 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, SQLite, banco de dados
 ms.localizationpriority: medium
-ms.openlocfilehash: 552de1ccb8f8e69a4ad716e54557ae0b5cd3a3f4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 465376214f1bf1b390ec6db8609783e4e7872196
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635661"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362792"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Usar um banco de dados do SQLite em um aplicativo UWP
 Você pode usar o SQLite para armazenar e recuperar dados em um banco de dados leve nos dispositivos dos usuários. Esse guia mostra como fazer isso.
@@ -39,7 +39,7 @@ Para experimentar, consulte [Introdução ao EF Core na Plataforma Universal do 
 
 ### <a name="sqlite-library"></a>Biblioteca SQLite
 
-A biblioteca [Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) implementa as interfaces no namespace [System.Data.Common](https://msdn.microsoft.com/library/system.data.common.aspx). A Microsoft mantém ativamente essas implementações, e elas fornecem um wrapper intuitivo em torno da API do SQLite nativo de baixo nível.
+A biblioteca [Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) implementa as interfaces no namespace [System.Data.Common](https://docs.microsoft.com/dotnet/api/system.data.common?redirectedfrom=MSDN). A Microsoft mantém ativamente essas implementações, e elas fornecem um wrapper intuitivo em torno da API do SQLite nativo de baixo nível.
 
 O restante deste guia ajuda você a usar essa biblioteca.
 
@@ -133,7 +133,7 @@ Vamos fazer o seguinte:
 
 : quatro: Recupere dados do banco de dados SQLite.
 
-: cinco: Adicione uma interface do usuário básica.
+:five: Adicione uma interface do usuário básica.
 
 ### <a name="prepare-the-data-access-class"></a>Preparar a classe de acesso de dados
 

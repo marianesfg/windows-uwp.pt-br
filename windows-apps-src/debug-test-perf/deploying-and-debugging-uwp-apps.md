@@ -6,12 +6,12 @@ ms.date: 4/8/2019
 ms.topic: article
 keywords: windows 10, uwp, depuração, teste, desempenho
 ms.localizationpriority: medium
-ms.openlocfilehash: c210f84c4fc3d07ba5a3d81eef059e17fdf9f308
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 3263f7a0f1c353cfd15bf83e6fe1b0004b3bcc94
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244432"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362683"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implantando e depurando aplicativos UWP
 
@@ -92,7 +92,7 @@ Para implantar em um computador remoto pré-atualização dos criadores, o compu
 
 Para fazer isso, pesquise **Depurador Remoto** no menu **Iniciar**, inicie-o e, se solicitado, permita que o depurador defina as configurações de firewall. Por padrão, o depurador é iniciado com a autenticação do Windows. Isso requer credenciais de usuário, caso o usuário conectado não seja o mesmo em ambos os computadores.
 
-Para alterá-lo para **sem autenticação**, no **depurador remoto**, vá para **ferramentas**  - &gt; **opções**, e em seguida, defina-o como **sem autenticação**. Depois que o depurador remoto estiver configurado, você também deve garantir que você configurou o dispositivo host para [Modo de Desenvolvedor](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). Depois disso, você poderá implementar do seu computador de desenvolvimento.
+Para alterá-lo para **sem autenticação**, no **depurador remoto**, vá para **ferramentas**  - &gt; **opções**, e em seguida, defina-o como **sem autenticação**. Depois que o depurador remoto estiver configurado, você também deve garantir que você configurou o dispositivo host para [Modo de Desenvolvedor](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). Depois disso, você poderá implementar do seu computador de desenvolvimento.
 
 Para obter mais informações, consulte a página [Centro de Download Visual Studio](https://www.visualstudio.com/downloads/).
 
@@ -119,7 +119,7 @@ Depois que você especificar os argumentos de linha de comando, poderá acessar 
 
 Há três modos de autenticação para implantação de computadores remotos:
 
-- **Universal (protocolo não criptografado)**: Use este modo de autenticação, sempre que você estiver implantando em um dispositivo remoto. Atualmente, isso é para dispositivos IoT, dispositivos Xbox e dispositivos HoloLens, bem como para atualização dos criadores ou computadores mais recentes. Universal (protocolo não criptografado) só deve ser usado em redes confiáveis. A conexão de depuração é vulnerável a usuários mal-intencionados que podem interceptar e alterar dados passados entre o desenvolvimento e o computador remoto.
+- **Universal (protocolo não criptografado)** : Use este modo de autenticação, sempre que você estiver implantando em um dispositivo remoto. Atualmente, isso é para dispositivos IoT, dispositivos Xbox e dispositivos HoloLens, bem como para atualização dos criadores ou computadores mais recentes. Universal (protocolo não criptografado) só deve ser usado em redes confiáveis. A conexão de depuração é vulnerável a usuários mal-intencionados que podem interceptar e alterar dados passados entre o desenvolvimento e o computador remoto.
 - **Windows**: Esse modo de autenticação é destinado apenas a ser usado para um computador remoto (desktop ou laptop) executando as ferramentas remotas do Visual Studio. Use esse modo de autenticação quando você tiver acesso às credenciais do usuário conectado no computador de destino. Esse é o canal mais seguro para a implantação remota.
 - **Nenhum**: Esse modo de autenticação é destinado apenas a ser usado para um computador remoto (desktop ou laptop) executando as ferramentas remotas do Visual Studio. Use esse modo de autenticação quando você tiver uma configuração de computador de teste em um ambiente que tenha uma conta de teste conectada e você não possa inserir as credenciais. Certifique-se de que as configurações do depurador remoto estão definidas para aceitar Sem Autenticação.
 
@@ -172,13 +172,13 @@ Para obter ajuda com isso, consulte os exemplos a seguir:
 
 - Exemplo 1 (pasta local do layout, acessível como um compartilhamento de rede):
   - **Caminho da pasta de layout** = `D:\Layouts\App1`
-  - **Caminho do registro do pacote** = `\\NETWORK-SHARE\Layouts\App1`
+  - **Caminho de registro do pacote** = `\\NETWORK-SHARE\Layouts\App1`
 
 - Exemplo 2 (pasta de layout de rede):
   - **Caminho da pasta de layout** = `\\NETWORK-SHARE\Layouts\App1`
-  - **Caminho do registro do pacote** = `\\NETWORK-SHARE\Layouts\App1`
+  - **Caminho de registro do pacote** = `\\NETWORK-SHARE\Layouts\App1`
 
-Quando você registra pela primeira vez o layout da rede, suas credenciais serão ser armazenados em cache no dispositivo de destino para que você não precise entrar repetidamente. Para remover as credenciais armazenadas em cache, você pode usar a [ferramenta WinAppDeployCmd.exe](https://msdn.microsoft.com/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool) do SDK do Windows 10 com o comando **deletecreds**.
+Quando você registra pela primeira vez o layout da rede, suas credenciais serão ser armazenados em cache no dispositivo de destino para que você não precise entrar repetidamente. Para remover as credenciais armazenadas em cache, você pode usar a [ferramenta WinAppDeployCmd.exe](https://docs.microsoft.com/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool) do SDK do Windows 10 com o comando **deletecreds**.
 
 Você não pode selecionar **manter todos os arquivos no dispositivo** ao registrar o layout da rede, pois não há arquivos fisicamente que são copiados para o dispositivo remoto.
 
@@ -189,7 +189,7 @@ No dispositivo remoto, o layout é registrado no seguinte local padrão, depende
 
 ## <a name="debugging-options"></a>Opções de depuração
 
-No Windows 10, o desempenho de inicialização de aplicativos UWP é aprimorado iniciando proativamente e suspensão, em seguida, os aplicativos em uma técnica chamada [pré-inicializar](https://msdn.microsoft.com/library/windows/apps/Mt593297). Muitos aplicativos não precisam fazer nada especial para trabalhar nesse modo, mas alguns aplicativos talvez precisem ajustar seu comportamento. Para ajudar a depurar problemas nesses caminhos de código, você pode iniciar o aplicativo do Visual Studio no modo de pré-inicialização.
+No Windows 10, o desempenho de inicialização de aplicativos UWP é aprimorado iniciando proativamente e suspensão, em seguida, os aplicativos em uma técnica chamada [pré-inicializar](https://docs.microsoft.com/windows/uwp/launch-resume/handle-app-prelaunch). Muitos aplicativos não precisam fazer nada especial para trabalhar nesse modo, mas alguns aplicativos talvez precisem ajustar seu comportamento. Para ajudar a depurar problemas nesses caminhos de código, você pode iniciar o aplicativo do Visual Studio no modo de pré-inicialização.
 
 Há suporte para depuração ambos a partir de um projeto do Visual Studio (**Debug**  - &gt; **outros destinos de depuração**  - &gt; **depurar Universal Pré-lançamento do Windows App**) e para aplicativos já instalados no computador (**Debug**  - &gt; **outros destinos de depuração**  - &gt; **Depurar pacote do aplicativo instalado** selecionando o **Ativar aplicativo com pré-inicialização** caixa de seleção). Para obter mais informações, consulte [Depurar pré-inicialização de UWP](https://go.microsoft.com/fwlink/p/?LinkId=717245).
 
@@ -204,7 +204,7 @@ Você pode definir as seguintes opções de implementação na página da propri
   - Sobre o C# e Visual Basic **depurar** página de propriedades, desmarque o **permitir loopback de rede local** caixa de seleção.
   - Na página da propriedade **Depuração** do JavaScript e do C++, defina o valor **Permitir Loopback de Rede Local** como **Não**.
 
-- **Não iniciar, mas depurar meu código quando ele é iniciado/Iniciar aplicativo**
+- **Não iniciar, mas depurar meu código quando ele é iniciado / Iniciar aplicativo**
 
   Para configurar a implantação para iniciar uma sessão de depuração quando o aplicativo for iniciado automaticamente:
 
@@ -226,7 +226,7 @@ Para carregar símbolos em uma sessão de depuração com [WinDbg](#windbg), def
 .reload
 ```
 
-Você pode adicionar mais caminhos usando o delimitador `‘;’` ou usar o comando `.sympath+`. Para operações de símbolos mais avançadas que usam WinDbg, consulte [Símbolos públicos e privados](https://msdn.microsoft.com/library/windows/hardware/ff553493).
+Você pode adicionar mais caminhos usando o delimitador `‘;’` ou usar o comando `.sympath+`. Para operações de símbolos mais avançadas que usam WinDbg, consulte [Símbolos públicos e privados](https://docs.microsoft.com/windows-hardware/drivers/debugger/public-and-private-symbols).
 
 ## <a name="windbg"></a>WinDbg
 
@@ -246,7 +246,7 @@ Um dos comandos mais populares no WinDbg é `!analyze -v`, que é usado para rec
 - EXCEPTION_RECORD: endereço, código e sinalizadores da exceção atual
 - STACK_TEXT: rastreamento de pilha antes da exceção
 
-Para obter uma lista completa de todos os comandos WinDbg, consulte [Comandos do depurador](https://msdn.microsoft.com/library/ff540507).
+Para obter uma lista completa de todos os comandos WinDbg, consulte [Comandos do depurador](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-commands).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

@@ -5,12 +5,12 @@ ms.date: 6/1/2018
 ms.topic: article
 keywords: Windows 10, uwp, portal do dispositivo, Gerenciador de aplicativos, implantação e sdk
 ms.localizationpriority: medium
-ms.openlocfilehash: 928c07bd23228f0fefd78be6019a0d116b2e6e4b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: adc944f3e84e2ea7ba3dacd2021bc2e141bf8cdd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635421"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362316"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Implantar um aplicativo por meio de registro de arquivo flexível 
 
@@ -34,7 +34,7 @@ Layout de arquivo flexível é simplesmente o ato de colocar o conteúdo do apli
 Windows fornece várias ferramentas de desenvolvedor para registrar os layouts de arquivo flexível em dispositivos locais e remotos. Você pode escolher entre `WinDeployAppCmd` (ferramenta do SDK do Windows), Windows Device Portal, PowerShell, e [Visual Studio](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#register-layout-from-network). Abaixo, falaremos sobre como registrar arquivos flexíveis usando essas ferramentas. Mas primeiro, certifique-se de que você tenha após a instalação:
 
 - Os dispositivos devem estar no Windows 10 Creators Update (Build 14965) ou posterior.
-- Você precisará habilitar [modo de desenvolvedor](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) e [descoberta de dispositivo](https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development#device-discovery) em todos os dispositivos.
+- Você precisará habilitar [modo de desenvolvedor](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) e [descoberta de dispositivo](https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development#device-discovery) em todos os dispositivos.
 
 > [!IMPORTANT]
 > Registro de arquivo flexível só está disponível em dispositivos que suportam o protocolo de compartilhamento de rede (SMB): Área de trabalho e Xbox. 

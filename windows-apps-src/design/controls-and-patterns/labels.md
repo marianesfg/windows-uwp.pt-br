@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4345daf5b879fed7ba9805e4a448c473299031d7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5996fb15c0d7302c7360c2e45613f0da2720d415
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654141"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364648"
 ---
 # <a name="labels"></a>Rótulos
 
@@ -24,9 +24,9 @@ ms.locfileid: "57654141"
 
 Rótulo é o nome ou o título de um controle ou de um grupo de controles relacionados.
 
-> **APIs importantes**: Propriedade de cabeçalho, [classe TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)
+> **APIs importantes**: Propriedade de cabeçalho, [classe TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
-No XAML, muitos controles têm uma propriedade Header interna que é usada para especificar o rótulo. Para os controles sem uma propriedade Header ou para rotular grupos de controles, você pode utilizar um [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652).
+No XAML, muitos controles têm uma propriedade Header interna que é usada para especificar o rótulo. Para os controles sem uma propriedade Header ou para rotular grupos de controles, você pode utilizar um [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock).
 
 ![uma captura de tela que ilustra o controle de rótulo padrão](images/label-standard.png)
 
@@ -43,15 +43,15 @@ No XAML, muitos controles têm uma propriedade Header interna que é usada para 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Controles de texto](text-controls.md)
-* [Propriedade TextBox.Header](https://msdn.microsoft.com/library/windows/apps/dn252861)
-* [Propriedade PasswordBox.Header](https://msdn.microsoft.com/library/windows/apps/dn299051)
-* [Propriedade ToggleSwitch.Header](https://msdn.microsoft.com/library/windows/apps/br209713)
-* [Propriedade DatePicker.Header](https://msdn.microsoft.com/library/windows/apps/dn279460)
-* [Propriedade TimePicker.Header](https://msdn.microsoft.com/library/windows/apps/dn299286)
-* [Propriedade Slider.Header](https://msdn.microsoft.com/library/windows/apps/dn252829)
-* [Propriedade ComboBox.Header](https://msdn.microsoft.com/library/windows/apps/dn279416)
-* [Propriedade RichEditBox.Header](https://msdn.microsoft.com/library/windows/apps/dn252726)
-* [Classe de TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)
+* [Propriedade TextBox.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.header)
+* [Propriedade PasswordBox.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.header)
+* [Propriedade ToggleSwitch.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.header)
+* [Propriedade DatePicker.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.datepicker.header)
+* [Propriedade TimePicker.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepicker.header)
+* [Propriedade Slider.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider.header)
+* [Propriedade ComboBox.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox.header)
+* [Propriedade RichEditBox.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.header)
+* [Classe de TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
  
 
