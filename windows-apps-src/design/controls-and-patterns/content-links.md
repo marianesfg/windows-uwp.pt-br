@@ -10,12 +10,12 @@ pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: a984e30bbdc569522b04d328087775aa9e8ce2bc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3fc54662b29255b73e972bcfb0fa4b6bb2dcf968
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648531"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363056"
 ---
 # <a name="content-links-in-text-controls"></a>Links de conteúdo em controles de texto
 
@@ -303,7 +303,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 ```
 
 > [!TIP]
-> Quando você usa um ContentLink em um controle de texto com outros elementos de texto no XAML, coloque o conteúdo em um contêiner [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) e aplicar o atributo `xml:space="preserve"` para manter o espaço em branco entre o ContentLink e os outros elementos.
+> Quando você usa um ContentLink em um controle de texto com outros elementos de texto no XAML, coloque o conteúdo em um contêiner [Span](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.span) e aplicar o atributo `xml:space="preserve"` para manter o espaço em branco entre o ContentLink e os outros elementos.
 
 ## <a name="examples"></a>Exemplos
 

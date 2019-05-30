@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, porta, buffers de vértice, dados, direct3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c961a8852fb1e03e4e86209f62bda821b980f8c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8445339d442fb740e9e2aba5e9d1cb0388c746ef
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592811"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368238"
 ---
 # <a name="port-the-vertex-buffers-and-data"></a>Realizar a portabilidade de dados e buffers de vértice
 
@@ -20,9 +20,9 @@ ms.locfileid: "57592811"
 
 **APIs importantes**
 
--   [**ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)
--   [**ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456)
--   [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb173588)
+-   [**ID3DDevice::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer)
+-   [**ID3DDeviceContext::IASetVertexBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers)
+-   [**ID3D11DeviceContext::IASetIndexBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-iasetindexbuffer)
 
 Nesta etapa, você definirá os buffers de vértices que conterão suas malhas e os buffers de índice que permitem que os sombreadores percorram os vértices em uma ordem específica.
 
@@ -130,7 +130,7 @@ Em OpenGL ES 2.0, layouts de entrada são implícitos; você levar a uma finalid
 
 No Direct3D, você deve fornecer um layout de entrada para descrever a estrutura dos dados de vértice no buffer de vértices quando cria o buffer, em vez de antes de desenhar a geometria. Para isso, se usa um layout de entrada que corresponde ao layout dos dados dos nossos vértices individuais na memória. É muito importante especificar de forma precisa!
 
-Aqui, você pode criar uma descrição de entrada como uma matriz de [ **D3D11\_entrada\_elemento\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) estruturas.
+Aqui, você pode criar uma descrição de entrada como uma matriz de [ **D3D11\_entrada\_elemento\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_input_element_desc) estruturas.
 
 Direct3D: Defina uma descrição de layout de entrada.
 
@@ -151,11 +151,11 @@ const D3D11_INPUT_ELEMENT_DESC vertexDesc[] =
 
 ```
 
-Esta descrição de entrada define um vértice como um par de dois vetores com três coordenadas: um vetor 3D para armazenar a posição do vértice em coordenadas de modelo e outro vetor 3D para armazenar o valor de cor RGB associado ao vértice. Neste caso, use o formato de três pontos flutuantes de 32 bits, elementos representados em código como `XMFLOAT3(X.Xf, X.Xf, X.Xf)`. Você deve usar tipos da livraria [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/ee415574) sempre que for manipular dados que serão usados por um sombreador, pois isso assegura o compactação e o alinhamento adequados desses dados. (Por exemplo, use [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475) ou [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) para dados de vetor e [**XMFLOAT4X4**](https://msdn.microsoft.com/library/windows/desktop/ee419621) para matrizes).
+Esta descrição de entrada define um vértice como um par de dois vetores com três coordenadas: um vetor 3D para armazenar a posição do vértice em coordenadas de modelo e outro vetor 3D para armazenar o valor de cor RGB associado ao vértice. Neste caso, use o formato de três pontos flutuantes de 32 bits, elementos representados em código como `XMFLOAT3(X.Xf, X.Xf, X.Xf)`. Você deve usar tipos da livraria [DirectXMath](https://docs.microsoft.com/windows/desktop/dxmath/ovw-xnamath-reference) sempre que for manipular dados que serão usados por um sombreador, pois isso assegura o compactação e o alinhamento adequados desses dados. (Por exemplo, use [**XMFLOAT3**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat3) ou [**XMFLOAT4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4) para dados de vetor e [**XMFLOAT4X4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4x4) para matrizes).
 
-Para obter uma lista de todos os tipos possíveis de formato, consulte [ **DXGI\_formato**](https://msdn.microsoft.com/library/windows/desktop/bb173059).
+Para obter uma lista de todos os tipos possíveis de formato, consulte [ **DXGI\_formato**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format).
 
-Como o layout de entrada por vértice definido, você cria o objeto de layout. No código a seguir, você escrevê-lo para **m\_inputLayout**, uma variável do tipo **ComPtr** (que aponta para um objeto do tipo [ **ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)). **fileData** contém o objeto de sombreador de vértice compilado da etapa anterior, [Compatibilizar os sombreadores](port-the-shader-config.md).
+Como o layout de entrada por vértice definido, você cria o objeto de layout. No código a seguir, você escrevê-lo para **m\_inputLayout**, uma variável do tipo **ComPtr** (que aponta para um objeto do tipo [ **ID3D11InputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11inputlayout)). **fileData** contém o objeto de sombreador de vértice compilado da etapa anterior, [Compatibilizar os sombreadores](port-the-shader-config.md).
 
 Direct3D: Crie o layout de entrada usado pelo buffer de vértice.
 
@@ -188,11 +188,11 @@ glBindBuffer(GL_ARRAY_BUFFER, renderer->vertexBuffer);
 glBufferData(GL_ARRAY_BUFFER, sizeof(VERTEX) * CUBE_VERTICES, renderer->vertices, GL_STATIC_DRAW);   
 ```
 
-No Direct3D, buffers de sombreador acessíveis são representadas como [ **D3D11\_SUBRESOURCE\_DATA** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) estruturas. Para associar o local desse buffer ao objeto de sombreador, você precisará criar um CD3D11\_BUFFER\_estrutura DESC para cada buffer com [ **ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)e, em seguida, defina o buffer de contexto do dispositivo Direct3D chamando um método set específico para o tipo de buffer, como [ **ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456).
+No Direct3D, buffers de sombreador acessíveis são representadas como [ **D3D11\_SUBRESOURCE\_DATA** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) estruturas. Para associar o local desse buffer ao objeto de sombreador, você precisará criar um CD3D11\_BUFFER\_estrutura DESC para cada buffer com [ **ID3DDevice::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer)e, em seguida, defina o buffer de contexto do dispositivo Direct3D chamando um método set específico para o tipo de buffer, como [ **ID3DDeviceContext::IASetVertexBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers).
 
 Quando você definir o buffer, precisará definir o passo (o tamanho do elemento de dados de um vértice individual) e o deslocamento (onde a matriz de dados de vértice de fato começa) do começo do buffer.
 
-Observe que podemos atribuir o ponteiro para o **vertexIndices** de matriz para o **pSysMem** campo dos [ **D3D11\_SUBRESOURCE\_dados** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) estrutura. Se isso não estiver certo, sua malha estará corrompida ou vazia!
+Observe que podemos atribuir o ponteiro para o **vertexIndices** de matriz para o **pSysMem** campo dos [ **D3D11\_SUBRESOURCE\_dados** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) estrutura. Se isso não estiver certo, sua malha estará corrompida ou vazia!
 
 Direct3D: Crie e defina o buffer de vértice
 
@@ -248,7 +248,7 @@ glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, renderer->indexBuffer);
 glDrawElements (GL_TRIANGLES, renderer->numIndices, GL_UNSIGNED_INT, 0);
 ```
 
-Com o Direct3D, é um processo bem parecido, embora um pouco mais didático. Forneça o buffer de índice como um sub-recurso Direct3D ao [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) que você criou ao configurar o Direct3D. Você faz isso chamando [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb173588) com o sub-recurso configurado para a matriz de índice, como a seguir. (Novamente, observe que você atribua o ponteiro para o **cubeIndices** de matriz para o **pSysMem** campo dos [ **D3D11\_SUBRESOURCE\_dados** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) estrutura.)
+Com o Direct3D, é um processo bem parecido, embora um pouco mais didático. Forneça o buffer de índice como um sub-recurso Direct3D ao [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) que você criou ao configurar o Direct3D. Você faz isso chamando [**ID3D11DeviceContext::IASetIndexBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-iasetindexbuffer) com o sub-recurso configurado para a matriz de índice, como a seguir. (Novamente, observe que você atribua o ponteiro para o **cubeIndices** de matriz para o **pSysMem** campo dos [ **D3D11\_SUBRESOURCE\_dados** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) estrutura.)
 
 Direct3D: Crie o buffer de índices.
 
@@ -274,7 +274,7 @@ m_d3dContext->IASetIndexBuffer(
   0);
 ```
 
-Depois, você desenhará triângulos com uma chamada para [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) (ou [**ID3D11DeviceContext::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407) para vértices não indexados), como a seguir. (Para saber mais, vá direto para [Desenhar na tela](draw-to-the-screen.md).)
+Depois, você desenhará triângulos com uma chamada para [**ID3D11DeviceContext::DrawIndexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed) (ou [**ID3D11DeviceContext::Draw**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw) para vértices não indexados), como a seguir. (Para saber mais, vá direto para [Desenhar na tela](draw-to-the-screen.md).)
 
 Direct3D: Desenhe os vértices indexados.
 
@@ -301,7 +301,7 @@ m_d3dContext->DrawIndexed(
 
 ## <a name="remarks"></a>Comentários
 
-Ao estruturar o seu Direct3D, separe o código que chama métodos em [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) em um método que é chamado sempre os recursos do dispositivo precisam ser recriados. (No modelo de projeto do Direct3D, esse código está nos métodos **CreateDeviceResource** do objeto de renderização. O código que atualiza o contexto de dispositivo ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)), por outro lado, é colocado no método **Render**, já que é onde se cria, de fato, os estágios de sombreador e se associa os dados.
+Ao estruturar o seu Direct3D, separe o código que chama métodos em [**ID3D11Device**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11device) em um método que é chamado sempre os recursos do dispositivo precisam ser recriados. (No modelo de projeto do Direct3D, esse código está nos métodos **CreateDeviceResource** do objeto de renderização. O código que atualiza o contexto de dispositivo ([**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)), por outro lado, é colocado no método **Render**, já que é onde se cria, de fato, os estágios de sombreador e se associa os dados.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

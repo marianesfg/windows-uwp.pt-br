@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6aecc5b9a43d6cb00b42b1535a196afd8a138af9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 98bc1e93c918310b902c70709df1c2cc1b38a238
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57581969"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360850"
 ---
 # <a name="audio-video-and-camera"></a>Áudio, vídeo e câmera
 
@@ -22,16 +22,16 @@ Esta seção fornece informações sobre como criar aplicativos da Plataforma Un
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Câmera](camera.md) | Lista os recursos da câmera que estão disponíveis para aplicativos UWP e links para os artigos de instruções que mostram como usá-los. |
 | [Reprodução de mídia](media-playback.md) | Fornece informações sobre como criar aplicativos UWP que usam a reprodução de áudio e vídeo. |
-| [Detectar rostos em imagens ou vídeos](detect-and-track-faces-in-an-image.md) | Mostra como usar o [FaceTracker](https://msdn.microsoft.com/library/windows/apps/dn974150) para acompanhamento facial ao longo do tempo em uma sequência de quadros de vídeo. |
-| [Composições de mídia e edição](media-compositions-and-editing.md) | Mostra como usar as APIs no namespace [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) para desenvolver rapidamente aplicativos que permitem que os usuários criem composições de mídia de arquivos de origem de áudio e vídeo. |
+| [Detectar rostos em imagens ou vídeos](detect-and-track-faces-in-an-image.md) | Mostra como usar o [FaceTracker](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.FaceTracker) para acompanhamento facial ao longo do tempo em uma sequência de quadros de vídeo. |
+| [Composições de mídia e edição](media-compositions-and-editing.md) | Mostra como usar as APIs no namespace [**Windows.Media.Editing**](https://docs.microsoft.com/uwp/api/Windows.Media.Editing) para desenvolver rapidamente aplicativos que permitem que os usuários criem composições de mídia de arquivos de origem de áudio e vídeo. |
 | [Efeitos de vídeo personalizados](custom-video-effects.md) | Descreve como criar um componente do Tempo de Execução do Windows que implementa a interface **IBasicVideoEffect** para permitir que você crie efeitos personalizados para fluxos de vídeo. |
 | [Efeitos de áudio personalizados](custom-audio-effects.md) | Descreve como criar um componente do Tempo de Execução do Windows que implementa a interface **IBasicAudioEffect** para permitir que você crie efeitos personalizados para fluxos de áudio. |
-| [Criar, editar e salvar imagens de bitmap](imaging.md) | Explica como carregar e salvar arquivos de imagem usando o objeto [SoftwareBitmap](https://msdn.microsoft.com/library/windows/apps/dn887358) para representar imagens de bitmap.  |
+| [Criar, editar e salvar imagens de bitmap](imaging.md) | Explica como carregar e salvar arquivos de imagem usando o objeto [SoftwareBitmap](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) para representar imagens de bitmap.  |
 | [Propriedades de informações do dispositivo de áudio](audio-device-information-properties.md)  | Lista as propriedades de informações de dispositivo relacionadas a dispositivos de áudio. |
 | [Detectar e responder a alterações de estado de áudio](detect-and-respond-to-audio-state-changes.md)  | Explica como os aplicativos UWP podem detectar e responder a alterações iniciadas pelo sistema em níveis de fluxo de áudio. |
-| [Transcodificar arquivos de mídia](transcode-media-files.md) | Mostra como usar as APIs [Windows.Media.Transcoding](https://msdn.microsoft.com/library/windows/apps/br207105) para transcodificar arquivos de vídeo de um formato para outro. |
-| [Processar arquivos de mídia em segundo plano](process-media-files-in-the-background.md) | Mostra como usar o [MediaProcessingTrigger](https://msdn.microsoft.com/library/windows/apps/dn806005) e uma tarefa em segundo plano para processar arquivos de mídia em segundo plano. |
-| [Gráficos de áudio](audio-graphs.md) | Mostra como usar as APIs no namespace [Windows.Media.Audio](https://msdn.microsoft.com/library/windows/apps/dn914341) para criar gráficos de áudio para cenários de roteamento, mixagem e processamento de áudio. |
+| [Transcodificar arquivos de mídia](transcode-media-files.md) | Mostra como usar as APIs [Windows.Media.Transcoding](https://docs.microsoft.com/uwp/api/Windows.Media.Transcoding) para transcodificar arquivos de vídeo de um formato para outro. |
+| [Processar arquivos de mídia em segundo plano](process-media-files-in-the-background.md) | Mostra como usar o [MediaProcessingTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MediaProcessingTrigger) e uma tarefa em segundo plano para processar arquivos de mídia em segundo plano. |
+| [Gráficos de áudio](audio-graphs.md) | Mostra como usar as APIs no namespace [Windows.Media.Audio](https://docs.microsoft.com/uwp/api/Windows.Media.Audio) para criar gráficos de áudio para cenários de roteamento, mixagem e processamento de áudio. |
 | [MIDI](midi.md) | Mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo UWP. |
 | [Importar mídia de um dispositivo](import-media-from-a-device.md) | Descreve como importar mídia de um dispositivo, inclusive procurar fontes de mídia disponíveis, importar arquivos, como vídeos, fotos e arquivos secundários, e excluir os arquivos importados do dispositivo de origem. |
 | [Lanterna independente da câmera](camera-independent-flashlight.md) | Mostra como acessar e usar a lâmpada do dispositivo, se houver. A funcionalidade da lâmpada é gerenciada separadamente da funcionalidade da câmera e do flash da câmera do dispositivo. |

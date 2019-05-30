@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2347efc5d68abd53442f52ecabdc060393ee561b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7146fe6489d61c641b7104e8c7c25728550c1c54
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636551"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370660"
 ---
 # <a name="face-and-vertex-normal-vectors"></a>Face e vetores normais de vértice
 
@@ -31,7 +31,7 @@ A ilustração a seguir mostra um vetor normal para uma face frontal:
 ## <a name="span-idcullingbackfacesspanspan-idcullingbackfacesspanspan-idcullingbackfacesspanculling-back-faces"></a><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>Traseira volta faces
 
 
-Qualquer face que não é uma face frontal é uma face traseira. O Direct3D nem sempre renderiza faces traseiras; as faces traseiras normalmente são removidas. Remover a face traseira significa eliminar as faces traseiras da renderização. Você pode alterar o modo de remoção para renderizar faces traseiras se desejar. Consulte [Estado de Remoção](https://msdn.microsoft.com/library/windows/desktop/bb204882) para obter mais informações.
+Qualquer face que não é uma face frontal é uma face traseira. O Direct3D nem sempre renderiza faces traseiras; as faces traseiras normalmente são removidas. Remover a face traseira significa eliminar as faces traseiras da renderização. Você pode alterar o modo de remoção para renderizar faces traseiras se desejar. Consulte [Estado de Remoção](https://docs.microsoft.com/windows/desktop/direct3d9/culling-state) para obter mais informações.
 
 ## <a name="span-idvertexunitnormalsspanspan-idvertexunitnormalsspanspan-idvertexunitnormalsspanvertex-unit-normals"></a><span id="Vertex_unit_normals"></span><span id="vertex_unit_normals"></span><span id="VERTEX_UNIT_NORMALS"></span>Normais de unidade de vértice
 

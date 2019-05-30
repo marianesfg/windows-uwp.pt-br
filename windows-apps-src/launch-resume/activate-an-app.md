@@ -1,6 +1,6 @@
 ---
 title: Tratar a ativação do aplicativo
-description: Aprenda a manipular ativação de aplicativo substituindo o método OnLaunched.
+description: Aprenda a tratar ativação de app substituindo o método OnLaunched.
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
 ms.date: 07/02/2018
 ms.topic: article
@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: a75136f26aa6cfa330e4118e6709b0b4d4be4054
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 622fc4246c0ce8051135feab07295034b55a82e4
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626591"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370821"
 ---
 # <a name="handle-app-activation"></a>Tratar a ativação do aplicativo
 
@@ -24,9 +24,9 @@ Saiba como lidar com a ativação do aplicativo, substituindo o [ **Application.
 
 ## <a name="override-the-launch-handler"></a>Substitua o manipulador de inicialização
 
-Quando um aplicativo é ativado por qualquer motivo, o sistema envia o [ **CoreApplicationView.Activated** ](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) eventos. Para obter uma lista de tipos de ativação, consulte a enumeração [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693).
+Quando um aplicativo é ativado por qualquer motivo, o sistema envia o [ **CoreApplicationView.Activated** ](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) eventos. Para obter uma lista de tipos de ativação, consulte a enumeração [**ActivationKind**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ActivationKind).
 
-A classe [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) define métodos que você pode substituir para manipular os vários tipos de ativação. Muitos tipos de ativação têm um método específico que você pode substituir. Para os outros tipo de ativação, substitua o método [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330).
+A classe [**Windows.UI.Xaml.Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) define métodos que você pode substituir para manipular os vários tipos de ativação. Muitos tipos de ativação têm um método específico que você pode substituir. Para os outros tipo de ativação, substitua o método [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated).
 
 Defina a classe do seu aplicativo.
 
@@ -37,7 +37,7 @@ Defina a classe do seu aplicativo.
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 ```
 
-Substitua o método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). Esse método é chamado sempre que o usuário abre o aplicativo. O parâmetro [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) contém o estado anterior do seu aplicativo e os argumentos de ativação.
+Substitua o método [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched). Esse método é chamado sempre que o usuário abre o aplicativo. O parâmetro [**LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) contém o estado anterior do seu aplicativo e os argumentos de ativação.
 
 > [!NOTE]
 > No Windows, iniciando um aplicativo suspenso da lista de bloco ou aplicativo de início não chama esse método.
@@ -187,7 +187,7 @@ void App::EnsurePageCreatedAndActivate()
 
 ## <a name="restore-application-data-if-app-was-suspended-then-terminated"></a>Restaurar os dados de aplicativo se o aplicativo foi suspenso e depois terminado
 
-Quando o usuário muda para o seu aplicativo encerrado, o sistema manda o evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018), com [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) definido como **Abrir** e [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) definido como **Encerrado** ou **ClosedByUser**. O aplicativo deve carregar seus dados salvos e atualizar o conteúdo exibido.
+Quando o usuário muda para o seu aplicativo encerrado, o sistema manda o evento [**Activated**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.activated), com [**Kind**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.kind) definido como **Abrir** e [**PreviousExecutionState**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate) definido como **Encerrado** ou **ClosedByUser**. O aplicativo deve carregar seus dados salvos e atualizar o conteúdo exibido.
 
 ```csharp
 async protected override void OnLaunched(LaunchActivatedEventArgs args)
@@ -259,19 +259,19 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 }
 ```
 
-Se o valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) estiver como **NotRunning**, o aplicativo não conseguiu salva seus dados com sucesso e ele deve iniciar novamente como se estivesse sido aberto inicialmente.
+Se o valor de [**PreviousExecutionState**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate) estiver como **NotRunning**, o aplicativo não conseguiu salva seus dados com sucesso e ele deve iniciar novamente como se estivesse sido aberto inicialmente.
 
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> Os aplicativos podem pular a inicialização se já houver conteúdo definido na janela atual. Você pode verificar a [ **LaunchActivatedEventArgs.TileId** ](https://msdn.microsoft.com/library/windows/apps/br224736) propriedade para determinar se o aplicativo foi iniciado no primário ou um bloco secundário e, com base nessas informações, decida se você deve: apresentar uma nova ou retomar a experiência de aplicativo.
+> Os aplicativos podem pular a inicialização se já houver conteúdo definido na janela atual. Você pode verificar a [ **LaunchActivatedEventArgs.TileId** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.tileid) propriedade para determinar se o aplicativo foi iniciado no primário ou um bloco secundário e, com base nessas informações, decida se você deve: apresentar uma nova ou retomar a experiência de aplicativo.
 
-## <a name="important-apis"></a>APIs Importantes
-* [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/br224766)
-* [Windows.UI.Xaml.Application](https://msdn.microsoft.com/library/windows/apps/br242324)
+## <a name="important-apis"></a>APIs importantes
+* [Windows.ApplicationModel.Activation](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation)
+* [Windows.UI.Xaml.Application](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Tratar a suspensão do aplicativo](suspend-an-app.md)
 * [Tratar a retomada do aplicativo](resume-an-app.md)
-* [Diretrizes para aplicativo suspender e retomar](https://msdn.microsoft.com/library/windows/apps/hh465088)
+* [Diretrizes para aplicativo suspender e retomar](https://docs.microsoft.com/windows/uwp/launch-resume/index)
 * [Ciclo de vida do aplicativo](app-lifecycle.md)

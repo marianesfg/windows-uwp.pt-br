@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: o Windows 10, uwp, tarefas em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b30cd39a4440a1ade1ea0dda5a35d3f7c15f963
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 471c2851f72027c364fdd0c9c295c8c9babe17c5
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615671"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366179"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tarefas em segundo plano no manifesto do app
 
@@ -20,8 +20,8 @@ ms.locfileid: "57615671"
 
 **APIs importantes**
 
--   [**Esquema de BackgroundTasks**](https://msdn.microsoft.com/library/windows/apps/br224794)
--   [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847)
+-   [**Esquema de BackgroundTasks**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
 
 Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo.
 
@@ -90,7 +90,7 @@ Copie o código no elemento Extensions (você adicionará atributos nas próxima
 
 2.  Modifique a lista de atributos Tipo de Tarefa para indicar o tipo do registro de tarefa usado com essa tarefa em segundo plano. Se a tarefa em segundo plano for registrada com vários tipos de gatilho, adicione outros elementos Task e atributos Type para cada um deles.
 
-    **Observação**  Certifique-se de listar cada um dos tipos de gatilho que você está usando, ou a tarefa em segundo plano não serão registrados com os tipos de gatilho não declarado (o [ **registrar** ](https://msdn.microsoft.com/library/windows/apps/br224772) será de método falhar e lançar uma exceção).
+    **Observação**  Certifique-se de listar cada um dos tipos de gatilho que você está usando, ou a tarefa em segundo plano não serão registrados com os tipos de gatilho não declarado (o [ **registrar** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) será de método falhar e lançar uma exceção).
 
     Este exemplo de trecho indica o uso de gatilhos de evento do sistema e notificações por push:
 
@@ -171,7 +171,7 @@ Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é execu
 </Extensions>
 ```
 
-Ao especificar o **EntryPoint**, o aplicativo recebe um retorno de chamada para o método especificado quando o gatilho é acionado. Se você não especificar um **EntryPoint**, o aplicativo recebe o retorno de chamada por meio de [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).  Consulte [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) para obter mais detalhes.
+Ao especificar o **EntryPoint**, o aplicativo recebe um retorno de chamada para o método especificado quando o gatilho é acionado. Se você não especificar um **EntryPoint**, o aplicativo recebe o retorno de chamada por meio de [OnBackgroundActivated()](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated).  Consulte [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) para obter mais detalhes.
 
 ### <a name="specify-where-your-background-task-runs-with-the-resourcegroup-attribute"></a>Especifique onde sua tarefa em segundo plano é executada com o atributo ResourceGroup.
 

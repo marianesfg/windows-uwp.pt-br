@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, latência, dxgi, cadeias de troca, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: acb5c58eebafa53fe140442550356f7eb7534efe
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: dbf4935abc543b1c11fbbee32812a7702298cd79
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594911"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368179"
 ---
 # <a name="reduce-latency-with-dxgi-13-swap-chains"></a>Reduzir a latência com cadeias de troca DXGI 1.3
 
@@ -22,20 +22,20 @@ Use o DXGI 1.3 para reduzir a latência de quadros eficaz aguardando a cadeia de
 ## <a name="how-does-waiting-on-the-back-buffer-reduce-latency"></a>Como a espera no buffer de fundo reduz a latência?
 
 
-Com a cadeia de troca do modelo de inversão, "inversões" do buffer de fundo são enfileiradas sempre que o jogo chama [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576). Quando o loop de renderização chama Present(), o sistema bloqueia o thread até este concluir a apresentação de um quadro anterior, liberando espaço para enfileirar o novo quadro, antes que realmente seja apresentado. Isso gera latência adicional entre o tempo em que o jogo desenha um quadro e o tempo em que o sistema o permite exibir esse quadro. Em muitos casos, o sistema atingirá um ponto de equilíbrio em que o jogo está sempre esperando quase um quadro adicional inteiro entre o tempo em que é renderizado e o tempo em que apresenta cada quadro. É melhor aguardar até que o sistema esteja pronto para aceitar um novo quadro, renderizar o quadro com base nos dados atuais e enfileirá-lo imediatamente.
+Com a cadeia de troca do modelo de inversão, "inversões" do buffer de fundo são enfileiradas sempre que o jogo chama [**IDXGISwapChain::Present**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-present). Quando o loop de renderização chama Present(), o sistema bloqueia o thread até este concluir a apresentação de um quadro anterior, liberando espaço para enfileirar o novo quadro, antes que realmente seja apresentado. Isso gera latência adicional entre o tempo em que o jogo desenha um quadro e o tempo em que o sistema o permite exibir esse quadro. Em muitos casos, o sistema atingirá um ponto de equilíbrio em que o jogo está sempre esperando quase um quadro adicional inteiro entre o tempo em que é renderizado e o tempo em que apresenta cada quadro. É melhor aguardar até que o sistema esteja pronto para aceitar um novo quadro, renderizar o quadro com base nos dados atuais e enfileirá-lo imediatamente.
 
-Criar uma cadeia de troca de espera com o [ **DXGI\_SWAP\_cadeia\_sinalizador\_quadro\_LATÊNCIA\_WAITABLE\_objeto** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) sinalizador. As cadeias de troca criadas dessa maneira podem notificar seu loop de renderização quando o sistema na verdade está pronto para aceitar um novo quadro. Isso permite que o jogo se renderize com base nos dados atuais e coloque o resultado na fila atual imediatamente.
+Criar uma cadeia de troca de espera com o [ **DXGI\_SWAP\_cadeia\_sinalizador\_quadro\_LATÊNCIA\_WAITABLE\_objeto** ](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) sinalizador. As cadeias de troca criadas dessa maneira podem notificar seu loop de renderização quando o sistema na verdade está pronto para aceitar um novo quadro. Isso permite que o jogo se renderize com base nos dados atuais e coloque o resultado na fila atual imediatamente.
 
 ## <a name="step-1-create-a-waitable-swap-chain"></a>Etapa 1: Criar uma cadeia de troca de espera
 
 
-Especifique o [ **DXGI\_trocar\_cadeia\_sinalizador\_quadro\_LATÊNCIA\_WAITABLE\_objeto** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) Sinalizador quando você chama [ **CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559).
+Especifique o [ **DXGI\_trocar\_cadeia\_sinalizador\_quadro\_LATÊNCIA\_WAITABLE\_objeto** ](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) Sinalizador quando você chama [ **CreateSwapChainForCoreWindow**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow).
 
 ```cpp
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
 ```
 
-> **Observação**    em contraste com alguns sinalizadores, esse sinalizador não podem ser adicionado ou removidos usando [ **ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). O DXGI retornará um código de erro se esse sinalizador for definido de maneira diferente de quando a cadeia de troca foi criada.
+> **Observação**    em contraste com alguns sinalizadores, esse sinalizador não podem ser adicionado ou removidos usando [ **ResizeBuffers**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-resizebuffers). O DXGI retornará um código de erro se esse sinalizador for definido de maneira diferente de quando a cadeia de troca foi criada.
 
  
 
@@ -53,7 +53,7 @@ HRESULT hr = m_swapChain->ResizeBuffers(
 ## <a name="step-2-set-the-frame-latency"></a>Etapa 2: Definir a latência de quadro
 
 
-Defina a latência de quadros com a API [**IDXGISwapChain2::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/dn268313), em vez de chamar [**IDXGIDevice1::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/ff471334).
+Defina a latência de quadros com a API [**IDXGISwapChain2::SetMaximumFrameLatency**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-setmaximumframelatency), em vez de chamar [**IDXGIDevice1::SetMaximumFrameLatency**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgidevice1-setmaximumframelatency).
 
 Por padrão, a latência de quadros para cadeias de troca que podem esperar é definida como 1, o que resulta na menor latência possível porém também reduz o paralelismo CPU-GPU. Se você precisar de maior paralelismo CPU-GPU para atingir 60 FPS (quadros por segundo) – ou seja, se a CPU e a GPU cada uma gastarem menos de 16,7 ms por quadro ao processar o trabalho de renderização, mas sua soma combinada ainda for superior a 16,7 ms, defina a latência de quadros como 2. Isso permite que a GPU processe trabalho enfileirado pela CPU durante o quadro anterior, ao mesmo tempo permitindo que a CPU envie comandos de renderização para o quadro atual de maneira independente.
 
@@ -71,7 +71,7 @@ Por padrão, a latência de quadros para cadeias de troca que podem esperar é d
 ## <a name="step-3-get-the-waitable-object-from-the-swap-chain"></a>Etapa 3: Obter o objeto de espera de cadeia de troca
 
 
-Chame [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://msdn.microsoft.com/library/windows/desktop/dn268309) para recuperar o identificador de espera. O identificador de espera é um ponteiro para o objeto de espera. Armazene esse identificador para ser usado pelo loop de renderização.
+Chame [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getframelatencywaitableobject) para recuperar o identificador de espera. O identificador de espera é um ponteiro para o objeto de espera. Armazene esse identificador para ser usado pelo loop de renderização.
 
 ```cpp
 // Get the frame latency waitable object, which is used by the WaitOnSwapChain method. This
@@ -83,7 +83,7 @@ m_frameLatencyWaitableObject = swapChain2->GetFrameLatencyWaitableObject();
 ## <a name="step-4-wait-before-rendering-each-frame"></a>Etapa 4: Aguardar antes de processar cada quadro
 
 
-O loop de renderização deve esperar a cadeia de troca sinalizar através do objeto de espera antes de começar a renderizar cada quadro. Isso inclui o primeiro quadro renderizado com a cadeia de troca. Use [**WaitForSingleObjectEx**](https://msdn.microsoft.com/library/windows/desktop/ms687036), fornecendo o identificador de espera recuperado na Etapa 2, para sinalizar o início de cada quadro.
+O loop de renderização deve esperar a cadeia de troca sinalizar através do objeto de espera antes de começar a renderizar cada quadro. Isso inclui o primeiro quadro renderizado com a cadeia de troca. Use [**WaitForSingleObjectEx**](https://docs.microsoft.com/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobjectex), fornecendo o identificador de espera recuperado na Etapa 2, para sinalizar o início de cada quadro.
 
 O exemplo a seguir mostra o loop de renderização do exemplo de DirectXLatency:
 
@@ -148,13 +148,13 @@ Para saber mais sobre programação multithreaded no Windows, consulte os seguin
 
 
 * [Exemplo de DirectXLatency](https://go.microsoft.com/fwlink/p/?LinkID=317361)
-* [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://msdn.microsoft.com/library/windows/desktop/dn268309)
-* [**WaitForSingleObjectEx**](https://msdn.microsoft.com/library/windows/desktop/ms687036)
-* [**Windows.System.Threading**](https://msdn.microsoft.com/library/windows/apps/br229642)
-* [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334)
-* [Processos e Threads](https://msdn.microsoft.com/library/windows/desktop/ms684841)
-* [Sincronização](https://msdn.microsoft.com/library/windows/desktop/ms686353)
-* [Usando objetos de evento (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms686915)
+* [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getframelatencywaitableobject)
+* [**WaitForSingleObjectEx**](https://docs.microsoft.com/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobjectex)
+* [**Windows.System.Threading**](https://docs.microsoft.com/uwp/api/Windows.System.Threading)
+* [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)
+* [Processos e Threads](https://docs.microsoft.com/windows/desktop/ProcThread/processes-and-threads)
+* [Sincronização](https://docs.microsoft.com/windows/desktop/Sync/synchronization)
+* [Usando objetos de evento (Windows)](https://docs.microsoft.com/windows/desktop/Sync/using-event-objects)
 
  
 

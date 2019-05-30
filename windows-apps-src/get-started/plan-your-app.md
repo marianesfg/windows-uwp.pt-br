@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f4c80ca1d031c69f5f70cdf85e90ea1d5887830
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 43423bc1475e446fcc0c6ab3f0d65b5a844d19d2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605661"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370687"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Compilando um app complexo da Plataforma Universal do Windows (UWP)
 
@@ -128,7 +128,7 @@ Técnicas comuns:
 -   **Reproduzir em**  permitem que seus usuários aproveitem o áudio, vídeo ou imagens transmitidas do seu aplicativo para outros dispositivos em sua rede doméstica.
 -   **Seletor de arquivos e extensões de seletor de arquivo**   permitem aos usuários carregar e salvar seus arquivos do sistema de arquivos local, dispositivos de armazenamento conectados, grupo doméstico ou até mesmo outros aplicativos. Você também pode oferecer uma extensão de seletor de arquivos para que outros aplicativos possam rodar o conteúdo do seu aplicativo.
 
-Para saber mais, consulte as [extensões e contratos de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh464906).
+Para saber mais, consulte as [extensões e contratos de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464906(v=win.10)).
 <!-- Win 8 page. Should have replacement. -->
 
 **Exibições diferentes fatores forma e as configurações de hardware**  Windows colocam os usuários em seu aplicativo em primeiro plano e de cobrança. Você provavelmente deseja que a interface do usuário do seu aplicativo chame a atenção independentemente do tipo de dispositivo, do modo de entrada, da orientação de exibição, da configuração de hardware e das circunstâncias que o usuário decida usá-lo.
@@ -148,15 +148,15 @@ Claro, você pode se beneficiar de inúmeras vantagens de interações de toque,
 **Personalização**
 
 -   **As configurações**  permitem que os usuários criar a experiência que eles querem, salvando as configurações do aplicativo. Consolide todas as suas configurações em uma tela, e então permita que os usuários configurem o seu aplicativo usando um mecanismo comum com o qual já estejam familiarizados. Saiba mais sobre [adicionar configurações de aplicativos](../design/app-settings/app-settings-and-data.md).
--   **Roaming**  criar uma experiência contínua entre dispositivos, roaming de dados que permite aos usuários escolher um direito de tarefa de onde parou e preserva a experiência do usuário que eles se preocupam mais com, independentemente do dispositivo que está sendo usada. Facilite o uso do seu aplicativo em qualquer lugar—na cozinha, no computador da família ou de trabalho, no tablet pessoal, e outros fatores forma—mantendo configurações e estados com roaming. Saiba mais sobre [gerenciamento de dados de aplicativos](../design/app-settings/store-and-retrieve-app-data.md) e consulte [Diretrizes de dados de aplicativo em roaming](https://msdn.microsoft.com/library/windows/apps/hh465094).
+-   **Roaming**  criar uma experiência contínua entre dispositivos, roaming de dados que permite aos usuários escolher um direito de tarefa de onde parou e preserva a experiência do usuário que eles se preocupam mais com, independentemente do dispositivo que está sendo usada. Facilite o uso do seu aplicativo em qualquer lugar—na cozinha, no computador da família ou de trabalho, no tablet pessoal, e outros fatores forma—mantendo configurações e estados com roaming. Saiba mais sobre [gerenciamento de dados de aplicativos](../design/app-settings/store-and-retrieve-app-data.md) e consulte [Diretrizes de dados de aplicativo em roaming](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data).
 -   **Blocos do usuário**    tornar seu aplicativo mais pessoal para seus usuários ao carregar sua imagem de bloco de usuário ou permitir que os usuários definir o conteúdo de seu aplicativo como seu bloco pessoal em todo o Windows.
 
 **Recursos do dispositivo**  Certifique-se de que seu aplicativo tira total proveito dos recursos dos dispositivos atuais.
 
--   **Gestos de proximidade**  permitir que os usuários se conectar a dispositivos com outros usuários que estão fisicamente próximos, tocando fisicamente os dispositivos juntos (jogos com vários participantes). Saiba mais sobre [proximidade e toques](https://msdn.microsoft.com/library/windows/apps/hh465229).
--   **Câmeras e dispositivos de armazenamento externo**  que os usuários se conectem suas câmeras internas ou conectado para bate-papo e conferência, gravação vlogs, levando pics de perfil, documentando o mundo ao redor deles, ou qualquer atividade de seu aplicativo é excelente. Saiba mais sobre o [acesso a conteúdo em armazenamento removível](https://msdn.microsoft.com/library/windows/apps/hh465189).
+-   **Gestos de proximidade**  permitir que os usuários se conectar a dispositivos com outros usuários que estão fisicamente próximos, tocando fisicamente os dispositivos juntos (jogos com vários participantes). Saiba mais sobre [proximidade e toques](https://docs.microsoft.com/previous-versions/windows/apps/hh465229(v=win.10)).
+-   **Câmeras e dispositivos de armazenamento externo**  que os usuários se conectem suas câmeras internas ou conectado para bate-papo e conferência, gravação vlogs, levando pics de perfil, documentando o mundo ao redor deles, ou qualquer atividade de seu aplicativo é excelente. Saiba mais sobre o [acesso a conteúdo em armazenamento removível](https://docs.microsoft.com/previous-versions/windows/apps/hh465189(v=win.10)).
 -   **Outros sensores e acelerômetros**     dispositivos vêm com um número de sensores hoje em dia. O seu aplicativo pode esmaecer ou clarear o seu visor com base na luz ambiente, redirecionar o fluxo da IU caso o usuário girar o visor, ou reagir a qualquer movimento físico. Saiba mais sobre [sensores](../devices-sensors/sensors.md).
--   **Geolocalização**  Use informações de localização geográfica de dados padrão da web ou de sensores de localização geográfica para ajudar os usuários a resolver, localizar sua posição em um mapa ou obter avisos nas proximidades de pessoas, atividades e destinos. Saiba mais sobre [localização geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
+-   **Geolocalização**  Use informações de localização geográfica de dados padrão da web ou de sensores de localização geográfica para ajudar os usuários a resolver, localizar sua posição em um mapa ou obter avisos nas proximidades de pessoas, atividades e destinos. Saiba mais sobre [localização geográfica](https://docs.microsoft.com/previous-versions/windows/apps/hh465139(v=win.10)).
 
 Vamos considerar o aplicativo de viagens novamente. Para ser ótimo em ajudar amigos a criar de forma colaborativa itinerários de viagens em grupo, você pode usar alguns destes recursos:
 
@@ -203,7 +203,7 @@ Vamos dar uma olhada no fluxo "Compartilhar itinerários para que amigos e famil
 
 Durante esse processo, você começa a ver que IU você precisa criar e os detalhes adicionais que você precisa descobrir (como escrever um texto cliché de email padrão para amigos que ainda não usam o aplicativo). Você também pode começar a eliminar etapas desnecessárias. Talvez o usuário não precise realmente ver os detalhes da viagem antes de compartilhá-la, por exemplo. Quanto mais limpo o fluxo, mais fácil usá-lo.
 
-Para saber mais sobre como usar superfícies diferentes, confira <!--[Command design basics](../design/basics/commanding-basics.md)-->.
+Para obter mais detalhes sobre como usar superfícies diferentes, dê uma olhada em <!--[Command design basics](../design/basics/commanding-basics.md)-->.
 
 **O que o fluxo deve parecer como?** Quando definir as etapas que o usuário realizará, você pode transformar esse fluxo em metas de desempenho. Para saber mais, consulte [Planejar o desempenho](../debug-test-perf/planning-and-measuring-performance.md).
 
@@ -212,9 +212,9 @@ Para saber mais sobre como usar superfícies diferentes, confira <!--[Command de
 -   **Sempre tente usar o conteúdo.**    Sempre que possível, permitem que os usuários manipulam diretamente o conteúdo na tela do aplicativo, em vez de adicionar comandos que atuam no conteúdo. Por exemplo, no aplicativo de viagens, permita que os usuários reorganizem seu itinerário, arrastando e soltando as atividades em uma lista na tela, em vez de selecionar a atividade e usar botões de comando Para cima ou Para baixo.
 -   **Se você não pode usar o conteúdo.** Coloque comandos em uma destas superfícies de IU se você não puder usar o conteúdo:
 
-    -   No [barra de comandos](https://msdn.microsoft.com/library/windows/apps/hh465302): Você deve colocar a maioria dos comandos na barra de comandos, que normalmente é oculto até que o usuário toca para torná-la visível.
+    -   No [barra de comandos](https://docs.microsoft.com/windows/uwp/controls-and-patterns/app-bars): Você deve colocar a maioria dos comandos na barra de comandos, que normalmente é oculto até que o usuário toca para torná-la visível.
     -   Na tela do aplicativo: Se o usuário estiver em uma página ou exibição que tem uma finalidade única, você pode fornecer comandos para essa finalidade diretamente na tela. Deve haver muito pouco desses comandos presentes.
-    -   Em um [menu de contexto](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/menus): Você pode usar os menus de contexto para ações de área de transferência (como Recortar, copiar e colar), ou para os comandos que se aplicam ao conteúdo que não pode ser selecionado (como adicionar um pin de envio por push para um local em um mapa).
+    -   Em um [menu de contexto](https://docs.microsoft.com/windows/uwp/controls-and-patterns/menus): Você pode usar os menus de contexto para ações de área de transferência (como Recortar, copiar e colar), ou para os comandos que se aplicam ao conteúdo que não pode ser selecionado (como adicionar um pin de envio por push para um local em um mapa).
 
 **Decida como dispor do seu aplicativo em cada exibição.**    Orientações retrato e paisagem e dá suporte ao redimensionamento de aplicativos de tela inteira para uma largura mínima para qualquer largura, dá suporte ao Windows. Você quer que o seu aplicativo tenha uma boa aparência e funcione perfeitamente em qualquer site, em qualquer tela, em ambas as orientações. Isso significa que você precisa planejar o layout dos elementos da interface para diferentes tamanhos e exibições. Ao fazer isso, a IU do seu aplicativo muda de maneira fluida para atender às necessidades e preferências do usuário.
 
@@ -238,4 +238,4 @@ Pense naquilo que você quer que os usuários pensem, sintam ou façam assim que
 
 Antes de você se aprofundar muito no desenvolvimento do seu aplicativo, deve validar o seu design ou protótipo de acordo com diretrizes, impressões de usuário e exigências para evitar ter que refazer o trabalho depois. Cada recurso tem um conjunto de diretrizes de experiência do usuário para ajudá-lo a melhorar sua e um conjunto de requisitos de Store que você precisa cumprir para publicar seu aplicativo em que a Microsoft Store. Você pode usar o [Kit de Certificação de Aplicativos Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para testar a conformidade técnica com os requisitos da Loja. Você também pode usar as ferramentas de desempenho no Microsoft Visual Studio para garantir que o usuário tenha uma excelente experiência em todos os cenários.
 
-Use as [Diretrizes detalhadas de experiência do usuário para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/hh465424) para manter o foco em recursos importantes. Use as [ferramentas de desempenho do Visual Studio](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx) para analisar o desempenho de cada uma das situações do seu aplicativo.
+Use as [Diretrizes detalhadas de experiência do usuário para aplicativos UWP](https://developer.microsoft.com/windows/design) para manter o foco em recursos importantes. Use as [ferramentas de desempenho do Visual Studio](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015) para analisar o desempenho de cada uma das situações do seu aplicativo.

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 604ad25bb65486b3b388a9a03d7503b0c1ce9c03
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 40b959feed09546791840dafe15ab98d65f0ea09
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632521"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371150"
 ---
 # <a name="move-and-draw-commands-syntax"></a>Sintaxe de comandos de movimentação e desenho
 
@@ -20,20 +20,20 @@ Saiba mais sobre os comandos de movimentação e desenho (uma minilinguagem) que
 
 ## <a name="properties-that-use-move-and-draw-command-strings"></a>Propriedades que usam cadeias de comandos de movimentação e desenho
 
-A sintaxe de comandos de movimentação e desenho tem suporte em um conversor de tipos internos para XAML, que analisa os comandos e produz uma representação de elementos gráficos de tempo de execução. Essa representação é basicamente um conjunto acabado de vetores que está pronto para apresentação. Os vetores propriamente ditos não completam os detalhes de apresentação; você precisa definir outros valores nos elementos. Para um objeto [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path), você também precisa de valores para [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill), [**Stroke**](https://msdn.microsoft.com/library/windows/apps/br243383) e outras propriedades e, em seguida, esse **Path** deve ser conectado à árvore visual de alguma maneira. Para um objeto [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722), defina a propriedade [**Foreground**](https://msdn.microsoft.com/library/windows/apps/dn251974).
+A sintaxe de comandos de movimentação e desenho tem suporte em um conversor de tipos internos para XAML, que analisa os comandos e produz uma representação de elementos gráficos de tempo de execução. Essa representação é basicamente um conjunto acabado de vetores que está pronto para apresentação. Os vetores propriamente ditos não completam os detalhes de apresentação; você precisa definir outros valores nos elementos. Para um objeto [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path), você também precisa de valores para [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill), [**Stroke**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.stroke) e outras propriedades e, em seguida, esse **Path** deve ser conectado à árvore visual de alguma maneira. Para um objeto [**PathIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PathIcon), defina a propriedade [**Foreground**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.iconelement.foreground).
 
-Há duas propriedades de tempo de execução do Windows que pode usar uma cadeia de caracteres que representa a movimentação e comandos de desenho: [**Path** ](https://msdn.microsoft.com/library/windows/apps/br243356) e [ **PathIcon.Data**](https://msdn.microsoft.com/library/windows/apps/dn252723). Se você definir uma dessas propriedades especificando os comandos de movimentação e desenho, geralmente a definirá como um valor de atributo XAML junto com outros atributos obrigatórios desse elemento. Sem entrar em especificidades, veja um exemplo a seguir:
+Há duas propriedades de tempo de execução do Windows que pode usar uma cadeia de caracteres que representa a movimentação e comandos de desenho: [**Path** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data) e [ **PathIcon.Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon.data). Se você definir uma dessas propriedades especificando os comandos de movimentação e desenho, geralmente a definirá como um valor de atributo XAML junto com outros atributos obrigatórios desse elemento. Sem entrar em especificidades, veja um exemplo a seguir:
 
 ```xml
 <Path x:Name="Arrow" Fill="White" Height="11" Width="9.67"
   Data="M4.12,0 L9.67,5.47 L4.12,10.94 L0,10.88 L5.56,5.47 L0,0.06" />
 ```
 
-[**PathGeometry.Figures** ](https://msdn.microsoft.com/library/windows/apps/br210169) também pode usar o movimento e comandos de desenho. Você pode combinar um objeto [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) que use os comandos de movimentação e desenho com outros tipos [**Geometry**](/uwp/api/Windows.UI.Xaml.Media.Geometry) em um objeto [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/br210057), que então seria usado como o valor de [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Mas isso não é tão comum quanto usar os comandos de movimentação e desenho para dados definidos por atributos.
+[**PathGeometry.Figures** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathgeometry.figures) também pode usar o movimento e comandos de desenho. Você pode combinar um objeto [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) que use os comandos de movimentação e desenho com outros tipos [**Geometry**](/uwp/api/Windows.UI.Xaml.Media.Geometry) em um objeto [**GeometryGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.GeometryGroup), que então seria usado como o valor de [**Path.Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data). Mas isso não é tão comum quanto usar os comandos de movimentação e desenho para dados definidos por atributos.
 
 ## <a name="using-move-and-draw-commands-versus-using-a-pathgeometry"></a>Uso de comandos de movimentação e desenho versus uso de **PathGeometry**
 
-Para XAML do Windows Runtime, os comandos de movimentação e desenho produzem uma [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) com um único objeto [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/br210143) com um valor de propriedade [**Figures**](https://msdn.microsoft.com/library/windows/apps/br210169). Cada comando de desenho produz uma classe derivada [**PathSegment**](https://msdn.microsoft.com/library/windows/apps/br210174) na coleção [**Segments**](https://msdn.microsoft.com/library/windows/apps/br210164) de **PathFigure**, o comando move altera o [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/br210166), e a existência de um comando close define [**IsClosed**](https://msdn.microsoft.com/library/windows/apps/br210159) como **true**. Você pode navegar nessa estrutura como um modelo de objeto se examinar os valores de **Data** no tempo de execução.
+Para XAML do Windows Runtime, os comandos de movimentação e desenho produzem uma [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) com um único objeto [**PathFigure**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathFigure) com um valor de propriedade [**Figures**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathgeometry.figures). Cada comando de desenho produz uma classe derivada [**PathSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathSegment) na coleção [**Segments**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.segments) de **PathFigure**, o comando move altera o [**StartPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.startpoint), e a existência de um comando close define [**IsClosed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.isclosed) como **true**. Você pode navegar nessa estrutura como um modelo de objeto se examinar os valores de **Data** no tempo de execução.
 
 ## <a name="the-basic-syntax"></a>A sintaxe básica
 
@@ -51,7 +51,7 @@ As regras gerais dessa sintaxe são:
 -   Cada comando, com exceção do comando de fechamento, é normalmente seguido por um ou mais números.
 -   Se houver mais de um número para um comando, separe-os com uma vírgula ou um espaço.
 
-**\[**_fillRule_ **\]** _moveCommand_ _drawCommand_ **\[**  _drawCommand_ **\* \]** **\[** _closeCommand_**\]**
+**\[** _fillRule_ **\]** _moveCommand_ _drawCommand_ **\[** _drawCommand_ **\*\]** **\[** _closeCommand_ **\]**
 
 Muitos comandos de desenho usam pontos, nos quais você fornece um valor _x,y_. Sempre que você vir uma \* _pontos_ espaço reservado que você pode supor que você terá dois valores decimais para o _x, y_ valor de um ponto.
 
@@ -63,7 +63,7 @@ Não use vírgulas como separador decimal para números decimais; a cadeia do co
 
 **Preencher regra**
 
-Há dois valores possíveis para a regra de preenchimento opcionais: **F0** ou **F1**. (O **F** está sempre em maiusculas.) **F0** é o valor padrão; ela produz **EvenOdd** preencher o comportamento, portanto, normalmente você não especificá-lo. Use **F1** para obter o comportamento de preenchimento **Nonzero**. Esses valores de preenchimento se alinham aos valores da enumeração [**FillRule**](https://msdn.microsoft.com/library/windows/apps/br210030).
+Há dois valores possíveis para a regra de preenchimento opcionais: **F0** ou **F1**. (O **F** está sempre em maiusculas.) **F0** é o valor padrão; ela produz **EvenOdd** preencher o comportamento, portanto, normalmente você não especificá-lo. Use **F1** para obter o comportamento de preenchimento **Nonzero**. Esses valores de preenchimento se alinham aos valores da enumeração [**FillRule**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.FillRule).
 
 **Comando Mover**
 
@@ -71,11 +71,11 @@ Especifica o ponto inicial de uma nova figura.
 
 | Sintaxe |
 |--------|
-| `M ` _ponto de partida_ <br/>- ou -<br/>`m` _ponto de partida_|
+| `M ` _startPoint_ <br/>- ou -<br/>`m` _startPoint_|
 
 | Termo | Descrição |
 |------|-------------|
-| _ponto de partida_ | [**ponto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/>O ponto inicial de uma nova figura.|
+| _startPoint_ | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/>O ponto inicial de uma nova figura.|
 
 Um **M** maiúsculo indica que *startPoint* é uma coordenada absoluta; um **m** minúsculo indica que *startPoint* é um deslocamento do ponto anterior, ou (0,0) se não há ponto anterior.
 
@@ -91,15 +91,15 @@ Os pontos de controle de um segmento são relativos ao ponto final do segmento a
 
 **Linha de comando**
 
-Cria uma linha reta entre o ponto atual e o ponto final especificado. `l 20 30` e `L 20,30` são exemplos de comandos de linha válidos. Define o equivalente a um objeto [**LineGeometry**](https://msdn.microsoft.com/library/windows/apps/br210117).
+Cria uma linha reta entre o ponto atual e o ponto final especificado. `l 20 30` e `L 20,30` são exemplos de comandos de linha válidos. Define o equivalente a um objeto [**LineGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.LineGeometry).
 
 | Sintaxe |
 |--------|
-| `L` _ponto de extremidade_ <br/>- ou -<br/>`l` _ponto de extremidade_ |
+| `L` _endPoint_ <br/>- ou -<br/>`l` _endPoint_ |
 
 | Termo | Descrição |
 |------|-------------|
-| endPoint | [**ponto**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/>O ponto final da linha.|
+| endPoint | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/>O ponto final da linha.|
 
 **Comando de linha horizontal**
 
@@ -107,11 +107,11 @@ Cria uma linha horizontal entre o ponto atual e a coordenada x especificada. `H 
 
 | Sintaxe |
 |--------|
-| `H ` _X_ <br/> - ou - <br/>`h ` _X_ |
+| `H ` _x_ <br/> - ou - <br/>`h ` _x_ |
 
 | Termo | Descrição |
 |------|-------------|
-| x | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> A coordenada x do ponto final da linha. |
+| x | [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) <br/> A coordenada x do ponto final da linha. |
 
 **Comando de linha vertical**
 
@@ -123,76 +123,76 @@ Cria uma linha vertical entre o ponto atual e a coordenada y especificada. `v 90
 
 | Termo | Descrição |
 |------|-------------|
-| *y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> A coordenada y do ponto final da linha. |
+| *y* | [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) <br/> A coordenada y do ponto final da linha. |
 
 **Comando de curva de Bézier cúbico**
 
-Cria uma curva de Bézier cúbica entre o ponto atual e o ponto final especificado usando os dois pontos de controle especificados (*controlPoint1* e *controlPoint2*). `C 100,200 200,400 300,200` é um exemplo de um comando de curva válido. Define o equivalente a um objeto [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) com um objeto [**BezierSegment**](https://msdn.microsoft.com/library/windows/apps/br228068).
+Cria uma curva de Bézier cúbica entre o ponto atual e o ponto final especificado usando os dois pontos de controle especificados (*controlPoint1* e *controlPoint2*). `C 100,200 200,400 300,200` é um exemplo de um comando de curva válido. Define o equivalente a um objeto [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) com um objeto [**BezierSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.BezierSegment).
 
 | Sintaxe |
 |--------|
-| `C ` *controlPoint1* *controlPoint2* *ponto de extremidade* <br/> - ou - <br/> `c ` *controlPoint1* *controlPoint2* *ponto de extremidade* |
+| `C ` *controlPoint1* *controlPoint2* *endPoint* <br/> - ou - <br/> `c ` *controlPoint1* *controlPoint2* *endPoint* |
 
 | Termo | Descrição |
 |------|-------------|
-| *controlPoint1* | [**ponto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> O primeiro ponto de controle da curva, que determina a tangente inicial da curva. |
-| *controlPoint2* | [**ponto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> O segundo ponto de controle da curva, que determina a tangente final da curva. |
-| *ponto de extremidade* | [**ponto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> O ponto no qual a curva é desenhada. | 
+| *controlPoint1* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> O primeiro ponto de controle da curva, que determina a tangente inicial da curva. |
+| *controlPoint2* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> O segundo ponto de controle da curva, que determina a tangente final da curva. |
+| *endPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> O ponto no qual a curva é desenhada. | 
 
 **Comando de curva de Bézier quadrática**
 
-Cria uma curva de Bézier quadrática entre o ponto atual e o ponto final especificado usando o ponto de controle especificado (*controlPoint*). `q 100,200 300,200` é um exemplo de um comando de curva de Bézier quadrática válido. Define o equivalente a um objeto [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) com um objeto [**QuadraticBezierSegment**](https://msdn.microsoft.com/library/windows/apps/br210249).
+Cria uma curva de Bézier quadrática entre o ponto atual e o ponto final especificado usando o ponto de controle especificado (*controlPoint*). `q 100,200 300,200` é um exemplo de um comando de curva de Bézier quadrática válido. Define o equivalente a um objeto [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) com um objeto [**QuadraticBezierSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.QuadraticBezierSegment).
 
 | Sintaxe |
 |--------|
-| `Q ` *ponto de extremidade controlPoint* <br/> - ou - <br/> `q ` *ponto de extremidade controlPoint* |
+| `Q ` *controlPoint endPoint* <br/> - ou - <br/> `q ` *controlPoint endPoint* |
 
 | Termo | Descrição |
 |------|-------------|
-| *controlPoint* | [**ponto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> O ponto de controle da curva, que determina as tangentes inicial e final da curva. |
-| *ponto de extremidade* | [**ponto**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> O ponto no qual a curva é desenhada. |
+| *controlPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> O ponto de controle da curva, que determina as tangentes inicial e final da curva. |
+| *endPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/> O ponto no qual a curva é desenhada. |
 
 **Comando de curva de Bézier cúbico suave**
 
-Cria uma curva de Bézier cúbica entre o ponto atual e o ponto final especificado. O primeiro ponto de controle é considerado o reflexo do segundo ponto de controle do comando anterior em relação ao ponto atual. Caso não haja comando anterior ou caso o comando anterior não seja um comando de curva de Bézier cúbica ou um comando de curva de Bézier cúbica suave, suponha que o primeiro ponto de controle coincide com o ponto atual. O segundo ponto de controle, o ponto de controle do final da curva, é especificado por *controlPoint2*. Por exemplo, `S 100,200 200,300` é um comando de curva de Bézier cúbica suave válido. Esse comando define o equivalente a uma [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) com um [**BezierSegment**](https://msdn.microsoft.com/library/windows/apps/br228068) em que havia um segmento de curva precedente.
+Cria uma curva de Bézier cúbica entre o ponto atual e o ponto final especificado. O primeiro ponto de controle é considerado o reflexo do segundo ponto de controle do comando anterior em relação ao ponto atual. Caso não haja comando anterior ou caso o comando anterior não seja um comando de curva de Bézier cúbica ou um comando de curva de Bézier cúbica suave, suponha que o primeiro ponto de controle coincide com o ponto atual. O segundo ponto de controle, o ponto de controle do final da curva, é especificado por *controlPoint2*. Por exemplo, `S 100,200 200,300` é um comando de curva de Bézier cúbica suave válido. Esse comando define o equivalente a uma [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) com um [**BezierSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.BezierSegment) em que havia um segmento de curva precedente.
 
 | Sintaxe |
 |--------|
-| `S` *controlPoint2* *ponto de extremidade* <br/> - ou - <br/>`s` *ponto de extremidade controlPoint2* |
+| `S` *controlPoint2* *endPoint* <br/> - ou - <br/>`s` *controlPoint2 endPoint* |
 
 | Termo | Descrição |
 |------|-------------|
-| *controlPoint2* | [**ponto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> O ponto de controle da curva, que determina a tangente final da curva. |
-| *ponto de extremidade* | [**ponto**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> O ponto no qual a curva é desenhada. |
+| *controlPoint2* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> O ponto de controle da curva, que determina a tangente final da curva. |
+| *endPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/> O ponto no qual a curva é desenhada. |
 
 **Comando de curva de Bézier quadrático suave**
 
-Cria uma curva de Bézier quadrática entre o ponto atual e o ponto final especificado. O ponto de controle é considerado o reflexo do ponto de controle do comando anterior em relação ao ponto atual. Caso não haja comando anterior ou caso o comando anterior não seja um comando de curva de Bézier quadrática ou um comando de curva de Bézier quadrática suave, suponha que o ponto de controle coincide com o ponto atual. Esse comando define o equivalente a uma [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) com um [**QuadraticBezierSegment**](https://msdn.microsoft.com/library/windows/apps/br210249) em que havia um segmento de curva precedente.
+Cria uma curva de Bézier quadrática entre o ponto atual e o ponto final especificado. O ponto de controle é considerado o reflexo do ponto de controle do comando anterior em relação ao ponto atual. Caso não haja comando anterior ou caso o comando anterior não seja um comando de curva de Bézier quadrática ou um comando de curva de Bézier quadrática suave, suponha que o ponto de controle coincide com o ponto atual. Esse comando define o equivalente a uma [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) com um [**QuadraticBezierSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.QuadraticBezierSegment) em que havia um segmento de curva precedente.
 
 | Sintaxe |
 |--------|
-| `T` *controlPoint* *ponto de extremidade* <br/> - ou - <br/> `t` *controlPoint* *ponto de extremidade* |
+| `T` *controlPoint* *endPoint* <br/> - ou - <br/> `t` *controlPoint* *endPoint* |
 
 | Termo | Descrição |
 |------|-------------|
-| *controlPoint* | [**ponto**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> O ponto de controle da curva, que determina a tangente inicial da curva. |
-| *ponto de extremidade* | [**ponto**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> O ponto no qual a curva é desenhada. |
+| *controlPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/> O ponto de controle da curva, que determina a tangente inicial da curva. |
+| *endPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/> O ponto no qual a curva é desenhada. |
 
 **Comando de arco elíptico**
 
-Cria um arco elíptico entre o ponto atual e a ponto final especificado. Define o equivalente a um objeto [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) com um [**ArcSegment**](https://msdn.microsoft.com/library/windows/apps/br228054).
+Cria um arco elíptico entre o ponto atual e a ponto final especificado. Define o equivalente a um objeto [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) com um [**ArcSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ArcSegment).
 
 | Sintaxe |
 |--------|
-| `A ` *tamanho* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *ponto de extremidade* <br/> - ou - <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
+| `A ` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* <br/> - ou - <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
 
 | Termo | Descrição |
 |------|-------------|
-| *Tamanho* | [**Tamanho**](https://msdn.microsoft.com/library/windows/apps/br225995)<br/>O raio de x e o raio de y do arco. |
-| *rotationAngle* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> A rotação da elipse, em graus. |
+| *size* | [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size)<br/>O raio de x e o raio de y do arco. |
+| *rotationAngle* | [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) <br/> A rotação da elipse, em graus. |
 | *isLargeArcFlag* | Defina como 1 se o ângulo do arco deve ser maior ou igual a 180; caso contrário, defina como 0. |
 | *sweepDirectionFlag* | Defina como 1 se o arco estiver desenhado em uma direção de ângulo positivo; caso contrário, defina como 0. |
-| *ponto de extremidade* | [**ponto**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> O ponto no qual o arco é desenhado.|
+| *endPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> O ponto no qual o arco é desenhado.|
  
 **Comando Fechar**
 
@@ -204,7 +204,7 @@ Termina a figura atual e cria uma linha que liga o ponto atual ao ponto inicial 
 
 **Sintaxe de ponto**
 
-Descreve as coordenadas x e y de um ponto. Consulte também [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870).
+Descreve as coordenadas x e y de um ponto. Consulte também [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point).
 
 | Sintaxe |
 |--------|
@@ -212,8 +212,8 @@ Descreve as coordenadas x e y de um ponto. Consulte também [**Point**](https://
 
 | Termo | Descrição |
 |------|-------------|
-| *x* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> A coordenada x do ponto. |
-| *y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> A coordenada y do ponto. |
+| *x* | [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) <br/> A coordenada x do ponto. |
+| *y* | [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) <br/> A coordenada y do ponto. |
 
 **Observações adicionais**
 
@@ -229,14 +229,14 @@ Em vez de usar decimais ou inteiros, você pode usar notação científica. Por 
 
 Usando o **caneta** ferramenta e outras ferramentas de desenho no Blend for Microsoft Visual Studio 2015 geralmente produzem uma [ **caminho** ](/uwp/api/Windows.UI.Xaml.Shapes.Path) de objeto, com mudança e comandos de desenho.
 
-É possível que você veja dados de comandos de movimentação e desenho existentes em algumas partes de controle definidas nos modelos padrão de controles do Windows Runtime XAML. Por exemplo, alguns controles usam um [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722) que tem dados definidos como comandos de movimentação e desenho.
+É possível que você veja dados de comandos de movimentação e desenho existentes em algumas partes de controle definidas nos modelos padrão de controles do Windows Runtime XAML. Por exemplo, alguns controles usam um [**PathIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PathIcon) que tem dados definidos como comandos de movimentação e desenho.
 
-Há exportadores ou plug-ins disponíveis para outras ferramentas de desenho gráfico vetorial comuns que podem produzir o vetor na forma de XAML. Geralmente elas criam objetos [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) em um contêiner de layout, com comandos de movimentação e desenho para [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Pode haver vários elementos **Path** no XAML, de modo que pincéis diferentes podem ser aplicados. Muitos desses Exportadores ou plug-ins foram originalmente escritos para XAML do Windows Presentation Foundation (WPF) ou Silverlight, mas a sintaxe de caminho do XAML é idêntica com XAML do tempo de execução do Windows. Normalmente, você pode usar trechos de XAML de um exportador e colá-los diretamente em uma página XAML do Windows Runtime. (Contudo, você não poderá usar um **RadialGradientBrush**, se ele fazia parte do XAML convertido, porque o XAML do Windows Runtime não dá suporte ao pincel.)
+Há exportadores ou plug-ins disponíveis para outras ferramentas de desenho gráfico vetorial comuns que podem produzir o vetor na forma de XAML. Geralmente elas criam objetos [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) em um contêiner de layout, com comandos de movimentação e desenho para [**Path.Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data). Pode haver vários elementos **Path** no XAML, de modo que pincéis diferentes podem ser aplicados. Muitos desses Exportadores ou plug-ins foram originalmente escritos para XAML do Windows Presentation Foundation (WPF) ou Silverlight, mas a sintaxe de caminho do XAML é idêntica com XAML do tempo de execução do Windows. Normalmente, você pode usar trechos de XAML de um exportador e colá-los diretamente em uma página XAML do Windows Runtime. (Contudo, você não poderá usar um **RadialGradientBrush**, se ele fazia parte do XAML convertido, porque o XAML do Windows Runtime não dá suporte ao pincel.)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Desenhar formas](https://msdn.microsoft.com/library/windows/apps/mt280380)
-* [Usar pincéis](https://msdn.microsoft.com/library/windows/apps/mt280383)
-* [**Path**](https://msdn.microsoft.com/library/windows/apps/br243356)
-* [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722)
+* [Desenhar formas](https://docs.microsoft.com/windows/uwp/graphics/drawing-shapes)
+* [Usar pincéis](https://docs.microsoft.com/windows/uwp/graphics/using-brushes)
+* [**Path.Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data)
+* [**PathIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PathIcon)
 

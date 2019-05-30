@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, renderização, mapa de sombra, buffer de profundidade, direct3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 27cd535dc51a330937c345acf352677a42c652eb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a8ae67df457d4abafc8fb689a747139f62ca0e0e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621331"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368071"
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>Renderizar o mapa de sombra para o buffer de profundidade
 
@@ -37,7 +37,7 @@ Para a passagem de renderização de sombra, especifique um buffer de profundida
 
 Especifique o visor de luz, um sombreador de vértice e defina buffers constantes do espaço de luz. Use o conjunto de face frontal desta passagem para otimizar os valores de profundidade definidos no buffer de sombra.
 
-Não se esqueça de que, na maioria dos dispositivos, você pode especificar nullptr para o sombreador de pixel (ou simplesmente não especificar um sombreador de pixel). Porém, alguns drivers podem emitir uma exceção quando você chama a operação de desenho no dispositivo Direct3D com um sombreador de pixel nulo definido. Para evitar essa exceção, você pode definir um sombreador de pixel mínimo para a passagem de renderização de sombra. A saída desse sombreador é descartada; ele pode chamar [**discard**](https://msdn.microsoft.com/library/windows/desktop/bb943995) em todos os pixels.
+Não se esqueça de que, na maioria dos dispositivos, você pode especificar nullptr para o sombreador de pixel (ou simplesmente não especificar um sombreador de pixel). Porém, alguns drivers podem emitir uma exceção quando você chama a operação de desenho no dispositivo Direct3D com um sombreador de pixel nulo definido. Para evitar essa exceção, você pode definir um sombreador de pixel mínimo para a passagem de renderização de sombra. A saída desse sombreador é descartada; ele pode chamar [**discard**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-discard) em todos os pixels.
 
 Renderize os objetos que podem projetar sombras, mas não se preocupe em renderizar geometrias que não possam fazer isso (como o chão de uma sala ou objetos removidos da passagem de sombra para fins de otimização).
 
@@ -125,7 +125,7 @@ void ShadowSceneRenderer::RenderShadowMap()
 }
 ```
 
-**Otimize o frustum do modo de exibição:**  Certifique-se de que sua implementação calcula um frustum estreito do modo de exibição para que você obtenha mais precisão de seu buffer de profundidade. Consulte as [técnicas comuns para melhorar mapas de profundidade de sombra](https://msdn.microsoft.com/library/windows/desktop/ee416324) para conhecer mais dicas sobre técnicas de sombreamento.
+**Otimize o frustum do modo de exibição:**  Certifique-se de que sua implementação calcula um frustum estreito do modo de exibição para que você obtenha mais precisão de seu buffer de profundidade. Consulte as [técnicas comuns para melhorar mapas de profundidade de sombra](https://docs.microsoft.com/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps) para conhecer mais dicas sobre técnicas de sombreamento.
 
 ## <a name="vertex-shader-for-shadow-pass"></a>Sombreador de vértice para passagem de sombra
 

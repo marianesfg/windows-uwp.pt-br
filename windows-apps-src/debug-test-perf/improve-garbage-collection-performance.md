@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f22b893d0c55cb9220e0894527836a0bb5e750b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6dfdc0c8a888890d4052dda1ac7cbf0ed2b6a667
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625971"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362380"
 ---
 # <a name="improve-garbage-collection-performance"></a>Melhore o desempenho de coleta de lixo
 
 
-Os aplicativos da Plataforma Universal do Windows (UWP) em C# e Visual Basic fazem o gerenciamento de memória automático a partir do coletor de lixo do .NET. Esta seção resume as melhores práticas de comportamento e desempenho para o coletor de lixo .NET em aplicativos UWP. Para obter mais informações sobre o funcionamento do coletor de lixo do .NET e sobre as ferramentas de depuração e análise de desempenho do coletor de lixo, consulte [Coleta de lixo](https://msdn.microsoft.com/library/windows/apps/xaml/0xy59wtx.aspx).
+Os aplicativos da Plataforma Universal do Windows (UWP) em C# e Visual Basic fazem o gerenciamento de memória automático a partir do coletor de lixo do .NET. Esta seção resume as melhores práticas de comportamento e desempenho para o coletor de lixo .NET em aplicativos UWP. Para obter mais informações sobre o funcionamento do coletor de lixo do .NET e sobre as ferramentas de depuração e análise de desempenho do coletor de lixo, consulte [Coleta de lixo](https://docs.microsoft.com/dotnet/standard/garbage-collection/index).
 
-**Observação**  precise interferir no comportamento padrão do coletor de lixo é fortemente uma indicação geral de problemas de memória com seu aplicativo. Para obter mais informações, consulte [Ferramenta de uso de memória durante a depuração no Visual Studio 2015](https://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tópico se aplica somente a C# e Visual Basic.
+**Observação**  precise interferir no comportamento padrão do coletor de lixo é fortemente uma indicação geral de problemas de memória com seu aplicativo. Para obter mais informações, consulte [Ferramenta de uso de memória durante a depuração no Visual Studio 2015](https://blogs.msdn.microsoft.com/devops/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015/). Este tópico se aplica somente a C# e Visual Basic.
 
  
 
@@ -34,23 +34,23 @@ O coletor de lixo determina quando deve ser executado, equilibrando o consumo de
 
 ### <a name="release-references"></a>Referências de versão
 
-Uma referência a um objeto em seu aplicativo impede que o objeto, e todos os objetos que ele referencia, seja coletado. O compilador .NET faz um bom trabalho de detecção de quando uma variável não está mais em uso, de forma que os objetos mantidos por ela se tornem qualificados para a coleta. Mas em alguns casos pode não ser óbvio que alguns objetos façam referência a outros objetos porque parte do elemento gráfico do objeto pode ser de propriedade de bibliotecas usadas por seu aplicativo. Para aprender sobre as ferramentas e técnicas para descobrir quais objetos sobrevivem a uma coleta de lixo, consulte [Coleta de lixo e desempenho](https://msdn.microsoft.com/library/windows/apps/xaml/ee851764.aspx).
+Uma referência a um objeto em seu aplicativo impede que o objeto, e todos os objetos que ele referencia, seja coletado. O compilador .NET faz um bom trabalho de detecção de quando uma variável não está mais em uso, de forma que os objetos mantidos por ela se tornem qualificados para a coleta. Mas em alguns casos pode não ser óbvio que alguns objetos façam referência a outros objetos porque parte do elemento gráfico do objeto pode ser de propriedade de bibliotecas usadas por seu aplicativo. Para aprender sobre as ferramentas e técnicas para descobrir quais objetos sobrevivem a uma coleta de lixo, consulte [Coleta de lixo e desempenho](https://docs.microsoft.com/dotnet/standard/garbage-collection/performance).
 
 ### <a name="induce-a-garbage-collection-if-its-useful"></a>Induzir uma coleta de lixo se ela for útil
 
 Induza uma coleta de lixo somente depois de medir o desempenho de seu aplicativo e determinar que a indução de uma coleta melhorará esse desempenho.
 
-É possível induzir uma coleta de lixo de uma geração chamando [**GC.Collect(n)**](https://msdn.microsoft.com/library/windows/apps/xaml/y46kxc5e.aspx), em que n é a geração que você deseja coletar (0, 1 ou 2).
+É possível induzir uma coleta de lixo de uma geração chamando [**GC.Collect(n)** ](https://docs.microsoft.com/dotnet/api/system.gc.collect?redirectedfrom=MSDN#System_GC_Collect_System_Int32_), em que n é a geração que você deseja coletar (0, 1 ou 2).
 
 **Observação**  é recomendável que você não forçar uma coleta de lixo em seu aplicativo porque o coletor de lixo usa muitos heurística para determinar o melhor momento para executar uma coleta e forçar uma coleta é em muitos casos, um uso desnecessário da CPU. Mas se você souber que tem um grande número de objetos em seu aplicativo que não são mais usados e desejar retornar essa memória para o sistema, poderá ser adequado impor uma coleta de lixo. Por exemplo, você pode induzir uma coleta no final de uma sequência de carregamento em um jogo para liberar memória antes de começar a jogar.
  
-Para evitar a indução inadvertida de coletas de lixo em excesso, é possível definir [**GCCollectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/bb495757.aspx) como **Optimized**. Esse recurso instrui o coletor de lixo a iniciar a coleta somente se ele determinar que a coleta será produtiva o bastante para ser justificada.
+Para evitar a indução inadvertida de coletas de lixo em excesso, é possível definir [**GCCollectionMode**](https://docs.microsoft.com/dotnet/api/system.gccollectionmode?redirectedfrom=MSDN) como **Optimized**. Esse recurso instrui o coletor de lixo a iniciar a coleta somente se ele determinar que a coleta será produtiva o bastante para ser justificada.
 
 ## <a name="reduce-garbage-collection-time"></a>Reduzir o tempo de coleta de lixo
 
 Esta seção se aplica se você tiver analisado seu aplicativo e observado tempos de coleta de lixo longos. Os tempos de pausa relacionados à coleta de lixo incluem: o tempo levado na execução de uma única passagem de coleta de lixo e o tempo total gasto por seu aplicativo em coletas de lixo. O tempo que uma coleta demora depende da quantidade de dados ao vivo o coletor precisa analisar. A geração 0 e a geração 1 são limitadas por tamanho, mas a geração 2 continua a crescer à medida que objetos de vida longa estejam ativos em seu aplicativo. Isso significa que os tempos de coleta para a geração 0 e a geração 1 são limitados, enquanto que as coletas de geração 2 podem demorar mais. A frequência em que coletas de lixo serão executadas dependerá muito da quantidade de memória alocada, uma vez que uma coleta de lixo libera memória para satisfazer solicitações de alocação.
 
-Ocasionalmente, o coletor de lixo pausa seu aplicativo para executar trabalho, mas não pausa necessariamente seu aplicativo o tempo todo em que estiver fazendo a coleta. Os tempos de pausa geralmente não são percebidos pelo usuário em seu aplicativo, em especial para as coletas de geração 0 e geração 1. O recurso [Coleta de lixo em segundo plano](https://msdn.microsoft.com/library/windows/apps/xaml/ee787088.aspx#background-garbage-collection) do coletor de lixo do .NET permite que as coletas de Geração 2 sejam executadas concomitantemente enquanto seu aplicativo estiver em execução e só pausará seu aplicativo por períodos curtos. Mas nem sempre será possível fazer uma coleta de Geração 2 como uma coleta em segundo plano. Nesse caso, a pausa poderá ser percebida pelo usuário se você tiver uma pilha grande o suficiente (com mais de 100 MB).
+Ocasionalmente, o coletor de lixo pausa seu aplicativo para executar trabalho, mas não pausa necessariamente seu aplicativo o tempo todo em que estiver fazendo a coleta. Os tempos de pausa geralmente não são percebidos pelo usuário em seu aplicativo, em especial para as coletas de geração 0 e geração 1. O recurso [Coleta de lixo em segundo plano](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals) do coletor de lixo do .NET permite que as coletas de Geração 2 sejam executadas concomitantemente enquanto seu aplicativo estiver em execução e só pausará seu aplicativo por períodos curtos. Mas nem sempre será possível fazer uma coleta de Geração 2 como uma coleta em segundo plano. Nesse caso, a pausa poderá ser percebida pelo usuário se você tiver uma pilha grande o suficiente (com mais de 100 MB).
 
 Coletas de lixo frequentes podem contribuir para maior consumo de CPU (e, portanto, de energia), tempos de carregamento maiores ou taxas de quadro menores em seu aplicativo. A seguir, algumas técnicas que você pode usar para reduzir o tempo de coleta de lixo e as pausas relacionadas à coleta em seu aplicativo UWP gerenciado.
 
@@ -74,7 +74,7 @@ Qualquer objeto com 85 KB ou mais é alocado na pilha de objetos grandes (LOH) e
 
 ### <a name="avoid-reference-rich-objects"></a>Evitar objetos com muitas referências
 
-O coletor de lixo determina quais objetos estão vivos seguindo referências entre objetos, começando das raiz de seu aplicativo. Para obter mais informações, consulte [O que acontece durante a coleta de lixo](https://msdn.microsoft.com/library/windows/apps/xaml/ee787088.aspx#what-happens-during-a-garbage-collection). Se um objeto contiver muitas referências, haverá mais trabalho para o coletor de lixo. Uma técnica comum (especialmente com objetos grandes) é converter objetos com muitas referências em objetos sem referências (por exemplo, em vez de armazenar uma referência, armazenar um índice). É claro que essa técnica só funciona quando for logicamente possível fazer isso.
+O coletor de lixo determina quais objetos estão vivos seguindo referências entre objetos, começando das raiz de seu aplicativo. Para obter mais informações, consulte [O que acontece durante a coleta de lixo](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals). Se um objeto contiver muitas referências, haverá mais trabalho para o coletor de lixo. Uma técnica comum (especialmente com objetos grandes) é converter objetos com muitas referências em objetos sem referências (por exemplo, em vez de armazenar uma referência, armazenar um índice). É claro que essa técnica só funciona quando for logicamente possível fazer isso.
 
 Substituir referências de objeto por índices pode ser uma alteração prejudicial e complicada para seu aplicativo e é mais eficiente para objetos grandes com um grande número de referências. Faça isso somente se estiver observando tempos muito grandes de coleta de lixo em seu aplicativo com relação a objetos com muitas referências.
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, arquivos, io de arquivo, ler arquivo, gravar arquivo, criar arquivo, escrever texto, ler texto
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e0abc146820ca27ee83662ba5f8b79a1daf90bab
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5480638e201dca8a5eb5363d7a5944422c626f67
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662501"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366897"
 ---
 # <a name="work-with-files"></a>Trabalhar com arquivos
 
@@ -119,7 +119,7 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 | [Windows.Storage.Pickers.FolderPicker](https://docs.microsoft.com/uwp/api/windows.storage.pickers.folderpicker) |  Permite que o usuário escolha uma pasta e retorna um **StorageFolder** para ele. Isso é como você pode obter acesso aos locais que o aplicativo não pode acessar por padrão. |
 | [Windows.Storage.Pickers.FileOpenPicker](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker) | Permite que o usuário escolha um arquivo para abrir e retorna um **StorageFile** para ele. Isso é como você pode obter acesso a um arquivo que o aplicativo não pode acessar por padrão. |
 | [Windows.Storage.Pickers.FileSavePicker](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker) | Permite que o usuário escolha o nome, a extensão e o local de armazenamento para um arquivo. Retorna um **StorageFile**. Isso é como você pode salvar um arquivo em um local que o aplicativo não pode acessar por padrão. |
-|  [Namespace Windows.Storage.Streams](https://docs.microsoft.com/uwp/api/windows.storage.streams) | Abrange a leitura e gravação de fluxos. Analise especificamente as classes [DataReader](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader) e [DataWriter](https://docs.microsoft.com/uwp/api/windows.storage.streams.datawriter) que fazem a leitura e gravação de buffers, bytes, inteiros, GUIDs, TimeSpans e muito mais. |
+|  [Windows.Storage.Streams namespace](https://docs.microsoft.com/uwp/api/windows.storage.streams) | Abrange a leitura e gravação de fluxos. Analise especificamente as classes [DataReader](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader) e [DataWriter](https://docs.microsoft.com/uwp/api/windows.storage.streams.datawriter) que fazem a leitura e gravação de buffers, bytes, inteiros, GUIDs, TimeSpans e muito mais. |
 
 ### <a name="useful-docs"></a>Documentos úteis
 
@@ -130,7 +130,7 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 | [Criar, gravar e ler um arquivo](https://docs.microsoft.com/windows/uwp/files/quickstart-reading-and-writing-files) | Capas de criação, leitura e gravação de texto, dados binários e fluxos. |
 | [Obter Introdução armazenando dados de aplicativo localmente](https://blogs.windows.com/buildingapps/2016/05/10/getting-started-storing-app-data-locally/#pCbJKGjcShh5DTV5.97) | Além de cobrir as práticas recomendadas para salvar os dados locais, abrange a finalidade da pasta LocalSettings e LocalCache. |
 | [Introdução a dados de aplicativo móvel](https://blogs.windows.com/buildingapps/2016/05/03/getting-started-with-roaming-app-data/#RgjgLt5OkU9DbVV8.97) | Uma série de duas partes sobre como usar dados de aplicativo em roaming. |
-| [Diretrizes para os dados de aplicativo em roaming](https://msdn.microsoft.com/library/windows/apps/hh465094) | Siga essas diretrizes de dados em roaming ao projetar seu aplicativo. |
+| [Diretrizes para os dados de aplicativo em roaming](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data) | Siga essas diretrizes de dados em roaming ao projetar seu aplicativo. |
 | [Armazene e recupere configurações e outros dados de aplicativo](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data) | Fornece uma visão geral de várias fontes de dados de aplicativo, como as pastas locais, em roaming e temporárias. Consulte a seção [Dados em roaming](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#roaming-data) para ver diretrizes e mais informações sobre a gravação de dados em roaming entre os dispositivos. |
 | [Permissões de acesso a arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions) | Informações sobre quais locais do sistema de arquivo que o aplicativo pode acessar. |
 | [Abrir arquivos e pastas com um seletor](https://docs.microsoft.com/windows/uwp/files/quickstart-using-file-and-folder-pickers) | Mostra como acessar arquivos e pastas permitindo que o usuário decida por uma interface do usuário do seletor. |

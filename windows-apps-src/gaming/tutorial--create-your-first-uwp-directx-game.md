@@ -6,12 +6,12 @@ keywords: jogo de exemplo em DirectX, exemplo de jogo, UWP (Plataforma Universal
 ms.date: 12/01/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: dc602e2dd29231c1e6554d7ef55e9666a373fa31
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c2ee2795410c083a6dd460a8537115dc8d20de31
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642861"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367701"
 ---
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>Criar um jogo simples UWP (Plataforma Universal do Windows) com DirectX
 
@@ -32,7 +32,7 @@ Antes de começar este tutorial, você precisar se familiarizar com estes assunt
 -   Álgebra linear básica com conceitos de física Newtoniana.
 -   Terminologia básica de programação gráfica.
 -   Conceitos básicos de programação no Windows.
--   Familiaridade básica com APIs de [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) e [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
+-   Familiaridade básica com APIs de [Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) e [Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/how-to-use-direct3d-11).
 
 ##  <a name="direct3d-uwp-shooting-game-sample"></a>Exemplo de jogo de tiro em Direct3D UWP
 
@@ -61,5 +61,5 @@ O exemplo demonstra os conceitos do jogo:
 | [Framework de renderização II: Renderização de jogos](tutorial-game-rendering.md) | Na segunda parte do tópico renderização, saiba como preparar os dados necessários antes da renderização. |
 | [Adicionar uma interface do usuário](tutorial--adding-a-user-interface.md) | Adicione opções de menu simples e componentes de painel transparente, fornecendo comentários ao player. |
 | [Adicionar controles](tutorial--adding-controls.md) | Adicionar controles move-look ao jogo &mdash; controles básicos de toque, de mouse e de controlador de jogo. |
-| [Adicionar som](tutorial--adding-sound.md) | Saiba como criar sons para o jogo usando APIs de [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813). |
+| [Adicionar som](tutorial--adding-sound.md) | Saiba como criar sons para o jogo usando APIs de [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-introduction). |
 | [Estender o exemplo do jogo](tutorial-resources.md) | Recursos para aprofundar seu conhecimento sobre desenvolvimento de jogos DirectX, inclui o uso de XAML para criar sobreposições. |

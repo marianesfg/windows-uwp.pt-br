@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e3faf82ab9786f6ba079e44d79b6ed49394b881
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2db08cc577a82ddf6973cb33e41f9bdb39fdffde
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602681"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364228"
 ---
 # <a name="text-box"></a>Caixa de texto
 
@@ -24,11 +24,11 @@ O controle TextBox permite que um usuário digite texto em um aplicativo. Em ger
 
 O controle TextBox tem vários recursos que podem simplificar a entrada de texto. Ele é fornecido com um menu de contexto familiar, integrado, com suporte para copiar e colar texto. O botão "Limpar tudo" permite que um usuário exclua rapidamente todo o texto que foi digitado. Ele também tem recursos de verificação ortográfica integrados e habilitados por padrão.
 
-> **APIs importantes**: [Classe de caixa de texto](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [propriedade Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)
+> **APIs importantes**: [Classe de caixa de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), [propriedade Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-Use o controle **TextBox** para permitir que o usuário digite e edite texto não formatado, como em um formulário. Você pode usar a propriedade [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) para obter e definir o texto em um TextBox.
+Use o controle **TextBox** para permitir que o usuário digite e edite texto não formatado, como em um formulário. Você pode usar a propriedade [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) para obter e definir o texto em um TextBox.
 
 Você pode tornar um TextBox somente leitura, mas deve ser um estado temporário e condicional. Se o texto nunca for editável, considere usar um [TextBlock](text-block.md).
 
@@ -81,7 +81,7 @@ Consulte a caixa de texto resultante desse XAML.
 
 ### <a name="use-a-text-box-for-data-input-in-a-form"></a>Use uma caixa de texto para entrada de dados em um formulário
 
-É comum usar uma caixa de texto para aceitar a entrada de dados em um formulário e usar a propriedade [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) para obter a cadeia de caracteres de texto completa da caixa de texto. Em geral, é usado um evento, como um clique no botão Enviar, para acessar a propriedade Text, mas você poderá manipular o evento [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanged.aspx) ou [TextChanging](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanging.aspx) se precisar fazer algo quando o texto for alterado.
+É comum usar uma caixa de texto para aceitar a entrada de dados em um formulário e usar a propriedade [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) para obter a cadeia de caracteres de texto completa da caixa de texto. Em geral, é usado um evento, como um clique no botão Enviar, para acessar a propriedade Text, mas você poderá manipular o evento [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) ou [TextChanging](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanging) se precisar fazer algo quando o texto for alterado.
 
 Este exemplo mostra como obter e definir o conteúdo atual de uma caixa de texto.
 
@@ -95,9 +95,9 @@ string sampleText = SampleTextBox.Text;
 SampleTextBox.Text = "Sample text retrieved";
 ```
 
-Você pode adicionar um [Header](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.header.aspx) (ou rótulo) e [PlaceholderText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.placeholdertext.aspx) (ou marca d'água) à caixa de texto para fornecer ao usuário uma indicação da finalidade da caixa de texto. Para personalizar a aparência do cabeçalho, você pode definir a propriedade [HeaderTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.headertemplate.aspx) em vez de Header. *Para obter informações de design, veja Diretrizes para rótulos*.
+Você pode adicionar um [Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.header) (ou rótulo) e [PlaceholderText](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.placeholdertext) (ou marca d'água) à caixa de texto para fornecer ao usuário uma indicação da finalidade da caixa de texto. Para personalizar a aparência do cabeçalho, você pode definir a propriedade [HeaderTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.headertemplate) em vez de Header. *Para obter informações de design, veja Diretrizes para rótulos*.
 
-Você pode restringir o número de caracteres que o usuário pode digitar definindo a propriedade [MaxLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.maxlength.aspx). No entanto, MaxLength não restringe o comprimento do texto colado. Use o evento [Paste](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.paste.aspx) para modificar o texto colado se isso for importante para o seu aplicativo.
+Você pode restringir o número de caracteres que o usuário pode digitar definindo a propriedade [MaxLength](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.maxlength). No entanto, MaxLength não restringe o comprimento do texto colado. Use o evento [Paste](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.paste) para modificar o texto colado se isso for importante para o seu aplicativo.
 
 A caixa de texto inclui um botão Limpar tudo ("X") que aparece quando o texto é digitado na caixa. Quando um usuário clicar no "X", o texto na caixa será limpo. Ela terá a aparência a seguir.
 
@@ -126,7 +126,7 @@ SampleTextBox.Text = "Sample text retrieved";
 
 ### <a name="make-a-text-box-read-only"></a>Tornar uma caixa de texto somente leitura
 
-Você pode tornar uma caixa de texto somente leitura definindo a propriedade [IsReadOnly](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.isreadonly.aspx) como **true**. Em geral, você alterna essa propriedade no código do aplicativo com base nas condições em seu aplicativo. Se precisar que o texto seja sempre somente leitura, considere usar TextBlock.
+Você pode tornar uma caixa de texto somente leitura definindo a propriedade [IsReadOnly](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.isreadonly) como **true**. Em geral, você alterna essa propriedade no código do aplicativo com base nas condições em seu aplicativo. Se precisar que o texto seja sempre somente leitura, considere usar TextBlock.
 
 Você pode tornar um TextBox somente leitura definindo a propriedade IsReadOnly como true. Por exemplo, você pode ter um TextBox para o usuário inserir comentários que seja habilitada apenas em determinadas condições. É possível tornar o TextBox somente leitura até que as condições sejam atendidas. Se você só precisar exibir texto, considere usar TextBlock ou RichTextBlock.
 
@@ -138,14 +138,14 @@ IsEnabled
 
 Há duas propriedades que você pode usar para determinar se a caixa de texto exibe texto em mais de uma linha. Em geral, as duas propriedades são definidas para fazer uma caixa de texto de várias linhas.
 
-- Para que a caixa de texto permita e exiba os caracteres newline ou return, defina a propriedade [AcceptsReturn](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.acceptsreturn.aspx) como **true**.
-- Para habilitar a disposição do texto, defina a propriedade [TextWrapping](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textwrapping.aspx) como **Wrap**. Isso faz com que o texto seja encapsulado ao atingir a borda da caixa de texto, independente dos caracteres separadores de linha.
+- Para que a caixa de texto permita e exiba os caracteres newline ou return, defina a propriedade [AcceptsReturn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.acceptsreturn) como **true**.
+- Para habilitar a disposição do texto, defina a propriedade [TextWrapping](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textwrapping) como **Wrap**. Isso faz com que o texto seja encapsulado ao atingir a borda da caixa de texto, independente dos caracteres separadores de linha.
 
 > **Observação**&nbsp;&nbsp;TextBox e RichEditBox não dão suporte ao valor **WrapWholeWords** para suas propriedades TextWrapping. Se você tentar usar WrapWholeWords como um valor para TextBox.TextWrapping ou RichEditBox.TextWrapping, será gerada uma exceção de argumento inválido.
 
-Uma caixa de texto de várias linhas continuará a aumentar verticalmente à medida que o texto for inserido, a menos que seja restringida por sua propriedade [Height](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) ou [MaxHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxheight.aspx) ou por um contêiner pai. Você deve confirmar que uma caixa de texto de várias linhas não ultrapasse a área visível e, se isso acontecer, restringir seu crescimento. Recomendamos que você sempre especifique uma altura apropriada para uma caixa de texto de várias linhas e não a deixe aumentar de tamanho enquanto o usuário digita.
+Uma caixa de texto de várias linhas continuará a aumentar verticalmente à medida que o texto for inserido, a menos que seja restringida por sua propriedade [Height](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) ou [MaxHeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxheight) ou por um contêiner pai. Você deve confirmar que uma caixa de texto de várias linhas não ultrapasse a área visível e, se isso acontecer, restringir seu crescimento. Recomendamos que você sempre especifique uma altura apropriada para uma caixa de texto de várias linhas e não a deixe aumentar de tamanho enquanto o usuário digita.
 
-A rolagem usando uma roda de rolagem ou toque é habilitada automaticamente quando necessário. No entanto, as barras de rolagem verticais não são visíveis por padrão. Você pode mostrar as barras de rolagem verticais definindo [ScrollViewer.VerticalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility.aspx) como **Auto** no ScrollViewer incorporado, conforme mostrado aqui.
+A rolagem usando uma roda de rolagem ou toque é habilitada automaticamente quando necessário. No entanto, as barras de rolagem verticais não são visíveis por padrão. Você pode mostrar as barras de rolagem verticais definindo [ScrollViewer.VerticalScrollBarVisibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility) como **Auto** no ScrollViewer incorporado, conforme mostrado aqui.
 
 ```xaml
 <TextBox AcceptsReturn="True" TextWrapping="Wrap"
@@ -169,9 +169,9 @@ A caixa de texto tem a seguinte aparência depois que texto é adicionado.
 
 ### <a name="format-the-text-display"></a>Formatar a exibição de texto
 
-Use a propriedade [TextAlignment](/uwp/api/windows.ui.xaml.controls.textbox.textalignment) para alinhar o texto em uma caixa de texto. Para alinhar a caixa de texto ao layout da página, use as propriedades [HorizontalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) e [VerticalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx).
+Use a propriedade [TextAlignment](/uwp/api/windows.ui.xaml.controls.textbox.textalignment) para alinhar o texto em uma caixa de texto. Para alinhar a caixa de texto ao layout da página, use as propriedades [HorizontalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) e [VerticalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment).
 
-Embora a caixa de texto seja compatível apenas com texto não formatado, você pode personalizar como o texto é exibido na caixa para corresponder à sua marca. Você pode definir propriedades [Control](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.aspx) padrão, como [FontFamily](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontfamily.aspx), [FontSize](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontsize.aspx), [FontStyle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontstyle.aspx), [Background](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx), [Foreground](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.foreground.aspx) e [CharacterSpacing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.characterspacing.aspx), para alterar a aparência do texto. Essas propriedades afetam apenas como a caixa de texto exibe o texto localmente, portanto, se você copiar e colar o texto em um controle Rich Text, por exemplo, nenhuma formatação será aplicada.
+Embora a caixa de texto seja compatível apenas com texto não formatado, você pode personalizar como o texto é exibido na caixa para corresponder à sua marca. Você pode definir propriedades [Control](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) padrão, como [FontFamily](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.fontfamily), [FontSize](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.fontsize), [FontStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.fontstyle), [Background](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background), [Foreground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.foreground) e [CharacterSpacing](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.characterspacing), para alterar a aparência do texto. Essas propriedades afetam apenas como a caixa de texto exibe o texto localmente, portanto, se você copiar e colar o texto em um controle Rich Text, por exemplo, nenhuma formatação será aplicada.
 
 Este exemplo mostra uma caixa de texto somente leitura com várias propriedades definidas para personalizar a aparência do texto.
 
@@ -215,15 +215,15 @@ Colar | a área de transferência contém texto.
 Selecionar tudo | a TextBox contém texto.
 Desfazer | texto foi alterado.
 
-Para modificar os comandos mostrados no menu de contexto, manipule o evento [ContextMenuOpening](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.contextmenuopening.aspx). Para obter um exemplo disso, consulte o cenário 2 do [exemplo de ContextMenu](https://go.microsoft.com/fwlink/p/?linkid=234891). Para obter informações de design, consulte Diretrizes para ver os menus de contexto.
+Para modificar os comandos mostrados no menu de contexto, manipule o evento [ContextMenuOpening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening). Para obter um exemplo disso, consulte o cenário 2 do [exemplo de ContextMenu](https://go.microsoft.com/fwlink/p/?linkid=234891). Para obter informações de design, consulte Diretrizes para ver os menus de contexto.
 
 ### <a name="select-copy-and-paste"></a>Selecionar, copiar e colar
 
-Você pode obter ou definir o texto selecionado em uma caixa de texto usando a propriedade [SelectedText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectedtext.aspx). Use as propriedades [SelectionStart](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionstart.aspx) e [SelectionLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionlength.aspx) e os métodos [Select](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.select.aspx) e [SelectAll](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectall.aspx) para manipular a seleção de texto. Manipule o evento [SelectionChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionchanged.aspx) para fazer algo quando o usuário selecionar ou desmarcar texto. Você pode alterar a cor usada para realçar o texto selecionado, definindo a propriedade [SelectionHighlightColor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionhighlightcolor.aspx).
+Você pode obter ou definir o texto selecionado em uma caixa de texto usando a propriedade [SelectedText](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectedtext). Use as propriedades [SelectionStart](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionstart) e [SelectionLength](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionlength) e os métodos [Select](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.select) e [SelectAll](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectall) para manipular a seleção de texto. Manipule o evento [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionchanged) para fazer algo quando o usuário selecionar ou desmarcar texto. Você pode alterar a cor usada para realçar o texto selecionado, definindo a propriedade [SelectionHighlightColor](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionhighlightcolor).
 
-A TextBox dá suporte às ações de copiar e colar por padrão. Você pode fornecer tratamento personalizado do evento [Paste](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.paste.aspx) em controles de texto editáveis em seu aplicativo Por exemplo, é possível remover as quebras de linha de um endereço de vários linhas ao colá-lo em uma caixa de pesquisa de linha única. Você também pode verificar o comprimento do texto colado e avisar o usuário se ele exceder o tamanho máximo que pode ser salvo em um banco de dados. Para obter mais informações e exemplos, consulte o evento [Paste](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.paste.aspx).
+A TextBox dá suporte às ações de copiar e colar por padrão. Você pode fornecer tratamento personalizado do evento [Paste](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.paste) em controles de texto editáveis em seu aplicativo Por exemplo, é possível remover as quebras de linha de um endereço de vários linhas ao colá-lo em uma caixa de pesquisa de linha única. Você também pode verificar o comprimento do texto colado e avisar o usuário se ele exceder o tamanho máximo que pode ser salvo em um banco de dados. Para obter mais informações e exemplos, consulte o evento [Paste](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.paste).
 
-Aqui, nós temos um exemplo destas propriedades e métodos em uso. Quando você selecionar texto na primeira caixa de texto, o texto selecionado será exibido na segunda caixa, que é somente leitura. Os valores das propriedades [SelectionLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionlength.aspx) e [SelectionStart](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionstart.aspx) são mostrados em dois blocos de texto. Isso é feito usando o evento [SelectionChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionchanged.aspx).
+Aqui, nós temos um exemplo destas propriedades e métodos em uso. Quando você selecionar texto na primeira caixa de texto, o texto selecionado será exibido na segunda caixa, que é somente leitura. Os valores das propriedades [SelectionLength](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionlength) e [SelectionStart](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionstart) são mostrados em dois blocos de texto. Isso é feito usando o evento [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionchanged).
 
 ```xaml
 <StackPanel>
@@ -257,13 +257,13 @@ Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft I
 
 O teclado virtual pode ser usado para entrada de texto, quando o aplicativo é executado em um dispositivo com tela sensível ao toque. O teclado virtual é invocado quando o usuário toca em um campo de entrada editável, como um TextBox ou um RichEditBox. Você pode tornar a entrada de dados muito mais rápida e fácil para os usuários em seu aplicativo definindo o escopo de entrada do controle de texto para corresponder ao tipo de dados que o usuário deve inserir. O escopo de entrada oferece uma dica para o sistema sobre o tipo de entrada de texto esperado pelo controle, para que o sistema possa fornecer um layout de teclado virtual especializado para o tipo de entrada.
 
-Por exemplo, se uma caixa de texto for usada somente para a inserção de um PIN de 4 dígitos, defina a propriedade [InputScope](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.inputscope.aspx) como **Number**. Isso informa o sistema para mostrar o layout do teclado numérico, facilitando a inserção do PIN.
+Por exemplo, se uma caixa de texto for usada somente para a inserção de um PIN de 4 dígitos, defina a propriedade [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) como **Number**. Isso informa o sistema para mostrar o layout do teclado numérico, facilitando a inserção do PIN.
 
 > **Importante**&nbsp;&nbsp;O escopo de entrada não faz com que validações de entrada sejam executadas e não impede que o usuário forneça entradas por meio de um teclado de hardware nem de outro dispositivo de entrada. Você ainda é o responsável pela validação da entrada em seu código, conforme necessário.
 
-Outras propriedades que afetam o teclado virtual são [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.isspellcheckenabled.aspx), [IsTextPredictionEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.istextpredictionenabled.aspx) e [PreventKeyboardDisplayOnProgrammaticFocus](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus.aspx). (IsSpellCheckEnabled também afeta o TextBox quando um teclado de hardware é usado.)
+Outras propriedades que afetam o teclado virtual são [IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.isspellcheckenabled), [IsTextPredictionEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled) e [PreventKeyboardDisplayOnProgrammaticFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus). (IsSpellCheckEnabled também afeta o TextBox quando um teclado de hardware é usado.)
 
-Para obter mais informações e exemplos, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://msdn.microsoft.com/library/windows/apps/mt280229) e a documentação de propriedade.
+Para obter mais informações e exemplos, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://docs.microsoft.com/windows/uwp/design/input/use-input-scope-to-change-the-touch-keyboard) e a documentação de propriedade.
 
 ## <a name="recommendations"></a>Recomendações
 
@@ -315,8 +315,8 @@ Para obter mais informações e exemplos, consulte [Usar o escopo de entrada par
 
 - [Controles de texto](text-controls.md)
 - [Diretrizes para verificação ortográfica](text-controls.md)
-- [Adicionando uma pesquisa](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [Adicionando uma pesquisa](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
 - [Diretrizes para a entrada de texto](text-controls.md)
-- [Classe de caixa de texto](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [Classe PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [Classe de caixa de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Classe PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
 - [Propriedade String. Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

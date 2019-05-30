@@ -8,19 +8,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 363ea5728b94d6b42f29299e8d240bcfc6242b4c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5fc43d5229ecd2bd9502fd74fef7f5197f758c62
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625111"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363587"
 ---
 # <a name="guidelines-for-panning"></a>Diretrizes de movimento panorâmico
 
 
 O movimento panorâmico ou rolagem permite aos usuários navegar dentro de uma única exibição, para ver o conteúdo da exibição que não se encaixa no visor. Exemplos de exibição incluem a estrutura de pastas de um computador, uma biblioteca de documentos ou um álbum de fotos.
 
-> **APIs importantes**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [ **Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **APIs importantes**: [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
 
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
@@ -79,10 +79,9 @@ O movimento panorâmico ou rolagem permite aos usuários navegar dentro de uma �
 O movimento horizontal com o uso de toque, com gestos de passar ou deslizar o dedo usando um ou mais dedos, é semelhante à rolagem com o mouse. A interação do deslocamento horizontal é similar ao ato de girar a roda do mouse ou deslizar a barra de rolagem, ao invés de clicar na barra de rolagem. A menos que uma distinção é feita em uma API ou exigida por algumas interfaces do usuário de Windows específicos do dispositivo, simplesmente chamamos ambas as interações como movimento panorâmico.
 
 > <div id="main">
-> <strong>Windows 10 Fall Creators Update - alteração de comportamento</strong>
-> </div>
-> Por padrão, em vez de seleção de texto, uma caneta ativa agora fará rolagem/movimento panorâmico em aplicativos UWP (como touch, touchpad e caneta passiva).  
+> <strong>Windows 10 Fall Creators Update - alteração de comportamento</strong> por padrão, em vez de seleção de texto, uma caneta de Active Directory agora rola/pans em aplicativos UWP (como toque, teclado sensível ao toque e caneta passiva).  
 > Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, consulte o tópico de referência de API para o <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer classe</a>.
+> </div>
 
 Dependendo do dispositivo de entrada, o usuário faz o deslocamento horizontal dentro da região com o movimento panorâmico usando um dos seguintes:
 
@@ -172,9 +171,9 @@ Essa diretriz também é útil para aplicativos como, por exemplo, álbuns de fo
 ## <a name="related-articles"></a>Artigos relacionados
 
 
-* [Interações personalizadas do usuário](https://msdn.microsoft.com/library/windows/apps/mt185599)
-* [Otimizar o ListView e GridView](https://msdn.microsoft.com/library/windows/apps/mt204776)
-* [Acessibilidade do teclado](https://msdn.microsoft.com/library/windows/apps/mt244347)
+* [Interações personalizadas do usuário](https://developer.microsoft.com/windows/design/inputs-devices)
+* [Otimizar o ListView e GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)
+* [Acessibilidade do teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
 
 **Exemplos**
 * [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)

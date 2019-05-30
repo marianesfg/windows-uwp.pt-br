@@ -8,18 +8,18 @@ keywords: feedback visual, feedback de foco, feedback de toque, visualização d
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b043ec71eb7d5883a1b22c4f0d8f43824034d454
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1f716b930a4d8b96a55a5741e5a520be624526fa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640781"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363537"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Diretrizes de feedback visual
 
 Use o feedback visual para mostrar aos usuários quando suas interações são detectadas, interpretadas e manipuladas. O feedback visual poderá ajudar os usuários incentivando a interação. Ele indica o sucesso da interação, o que oferece ao usuário uma sensação de controle. Além de retransmitir o status do sistema, também reduz os erros.
 
-> **APIs importantes**:  [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [ **Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
+> **APIs importantes**:  [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
 
 ## <a name="recommendations"></a>Recomendações
 
@@ -27,7 +27,7 @@ Use o feedback visual para mostrar aos usuários quando suas interações são d
     - Consulte [estilos XAML](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles) para obter mais informações sobre como personalizar as propriedades de um controle, incluindo propriedades de estado visual.
     - Consulte a [Classe UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) para obter mais detalhes sobre como fazer alterações em um modelo de controle
     - Considere criar seu próprio controle de modelo personalizado se precisar fazer alterações significativas em um modelo de controle. Para obter um exemplo de um controle de modelo personalizado, consulte o [exemplo de Controle de edição personalizado](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
-- Não use visualizações de toque em situações em que possam interferir com o uso do aplicativo. Para obter mais informações, consulte [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
+- Não use visualizações de toque em situações em que possam interferir com o uso do aplicativo. Para obter mais informações, consulte [**ShowGestureFeedback**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback).
 - Não exiba comentários a menos que seja absolutamente necessário. Mantenha a interface do usuário clara e organizada sem mostrar o feedback visual, a menos que você esteja agregando valor que não esteja disponível em nenhum outro lugar.
 - Tente não personalizar os comportamentos do feedback visual dos gestos internos do Windows em excesso, porque isso pode criar uma experiência inconsistente e confusa para o usuário.
 
@@ -44,7 +44,7 @@ Usar os controles da plataforma padrão XAML disponíveis garante que o aplicati
 
 O feedback visual geralmente depende do dispositivo de entrada (toque, touchpad, mouse, caneta, teclado, etc.). Por exemplo, o feedback interno de um mouse geralmente envolve movimentar e mudar o cursor, enquanto o toque e a caneta exigem visualizações de contato e entrada de teclado e a navegação usa retângulos de foco e destaque.
 
-Use [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969) para configurar o comportamento de feedback para gestos da plataforma.
+Use [**ShowGestureFeedback**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback) para configurar o comportamento de feedback para gestos da plataforma.
 
 Se você estiver personalizando a interface do usuário de feedback, lembre-se de fornecer feedback que dê suporte e seja adequado a todos os modos de entrada.
 
@@ -73,7 +73,7 @@ Para alterar a espessura de qualquer tipo de borda (principal ou secundária), u
 ```
 ![Espessuras de margem do elemento visual de foco de alta visibilidade](images/FocusMargin.png)
 
-A margem é uma propriedade do tipo [**Thickness**](https://msdn.microsoft.com/library/system.windows.thickness); portanto, a margem pode ser personalizada para aparecer somente em determinados lados do controle. Consulte abaixo: ![Alta visibilidade foco margem visual espessura somente inferior](images/FocusThicknessSide.png)
+A margem é uma propriedade do tipo [**Thickness**](https://docs.microsoft.com/dotnet/api/system.windows.thickness?redirectedfrom=MSDN); portanto, a margem pode ser personalizada para aparecer somente em determinados lados do controle. Consulte abaixo: ![Alta visibilidade foco margem visual espessura somente inferior](images/FocusThicknessSide.png)
 
 A margem é o espaço entre os limites do controle visual e o início da *borda secundária* dos elementos visuais de foco. A margem padrão está **1px** além dos limites de controle. Você pode editar essa margem em uma base por controle. Basta alterar a propriedade **FocusVisualMargin**:
 ```XAML
@@ -112,7 +112,7 @@ Para alterar as cores em uma base por controle, edite as propriedades dos elemen
 * [Diretrizes de movimento panorâmico](guidelines-for-panning.md)
 
 **Para desenvolvedores**
-* [Interações personalizadas do usuário](https://msdn.microsoft.com/library/windows/apps/mt185599)
+* [Interações personalizadas do usuário](https://developer.microsoft.com/windows/design/inputs-devices)
 
 **Exemplos**
 * [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)

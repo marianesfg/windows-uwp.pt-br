@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d0c3bea228cae8d9482a8e0cb24c958e36992848
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 001f7cb641b7bb210897ef9406c2324bbc20a2bd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649731"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362072"
 ---
 # <a name="accessibility-overview"></a>Visão geral de acessibilidade  
 
@@ -44,7 +44,7 @@ Além disso, a vinculação de dados, o estilo e os recursos de modelos facilita
 <span id="UI_AUTOMATION"/>
 
 ## <a name="ui-automation"></a>Automação da Interface de Usuário  
-O suporte à acessibilidade vem principalmente do suporte integrado à estrutura de Automação da IU da Microsoft. Esse suporte é fornecido através de classes base e do comportamento nativo da implementação de classe para tipos de controle, e uma representação da interface da API do provedor de Automação da Interface do Usuário. Cada classe de controle usa os conceitos de pares e padrões de automação da Automação da Interface do Usuário para relatar a função do controle e o conteúdo para os clientes de Automação da Interface do Usuário. O aplicativo é tratado como janela principal pela Automação da Interface do Usuário e pela Estrutura de Automação da IU todo conteúdo relevante à acessibilidade dentro da janela do aplicativo está disponível para um cliente de Automação da Interface do Usuário. Para saber mais sobre Automação da Interface do Usuário, consulte [UI Automation Overview](https://msdn.microsoft.com/library/windows/desktop/Ee684076).
+O suporte à acessibilidade vem principalmente do suporte integrado à estrutura de Automação da IU da Microsoft. Esse suporte é fornecido através de classes base e do comportamento nativo da implementação de classe para tipos de controle, e uma representação da interface da API do provedor de Automação da Interface do Usuário. Cada classe de controle usa os conceitos de pares e padrões de automação da Automação da Interface do Usuário para relatar a função do controle e o conteúdo para os clientes de Automação da Interface do Usuário. O aplicativo é tratado como janela principal pela Automação da Interface do Usuário e pela Estrutura de Automação da IU todo conteúdo relevante à acessibilidade dentro da janela do aplicativo está disponível para um cliente de Automação da Interface do Usuário. Para saber mais sobre Automação da Interface do Usuário, consulte [UI Automation Overview](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-uiautomationoverview).
 
 <span id="Assistive_technology"/>
 <span id="assistive_technology"/>
@@ -83,7 +83,7 @@ Existem várias outras propriedades de automação disponíveis (incluindo as pr
 <span id="KEYBOARD_SUPPORT"/>
 
 ## <a name="keyboard-support"></a>Suporte ao teclado  
-Para fornecer um bom suporte ao teclado, você precisa assegurar que todas as partes de seu aplicativo possam ser usadas com teclado. Se o seu aplicativo usa basicamente os controles padrão e não usa controles personalizados, você já avançou bastante. O modelo de controle XAML básico fornece suporte interno a teclado, incluindo navegação da guia, entrada de texto, e suporte específico de controle. Os elementos que servem como contêineres de layout (como painéis) usam a ordem do layout para estabelecer uma ordem de tabulação padrão. Essa ordem costuma ser a ordem de guia correta a se usar em uma representação acessível de interface do usuário. Se você usa os controles [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) para exibir dados, eles fornecem navegação interna por setas. Ou se você usa um controle [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265), ele já lida com a barra de espaço e a tecla enter para ativação de botões.
+Para fornecer um bom suporte ao teclado, você precisa assegurar que todas as partes de seu aplicativo possam ser usadas com teclado. Se o seu aplicativo usa basicamente os controles padrão e não usa controles personalizados, você já avançou bastante. O modelo de controle XAML básico fornece suporte interno a teclado, incluindo navegação da guia, entrada de texto, e suporte específico de controle. Os elementos que servem como contêineres de layout (como painéis) usam a ordem do layout para estabelecer uma ordem de tabulação padrão. Essa ordem costuma ser a ordem de guia correta a se usar em uma representação acessível de interface do usuário. Se você usa os controles [**ListBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox) e [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) para exibir dados, eles fornecem navegação interna por setas. Ou se você usa um controle [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button), ele já lida com a barra de espaço e a tecla enter para ativação de botões.
 
 Para saber mais sobre todos os aspectos de suporte a teclado, incluindo a ordem de tabulação e a ativação ou navegação baseada em teclas, consulte [Acessibilidade de teclado](keyboard-accessibility.md).
 
@@ -92,7 +92,7 @@ Para saber mais sobre todos os aspectos de suporte a teclado, incluindo a ordem 
 <span id="MEDIA_AND_CAPTIONING"/>
 
 ## <a name="media-and-captioning"></a>Mídia e legendas  
-Você costuma exibir mídia audiovisual através de um objeto [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926). Você pode usar APIs do **MediaElement** para controlar a reprodução de mídia. Por questões de acessibilidade, forneça controles que permitam que os usuários reproduzam, pausem e interrompam a mídia quando necessário. Às vezes, a mídia inclui componentes adicionais que são destinados à acessibilidade, como legendagem ou faixas de áudio alternativas que incluem descrições narrativas.
+Você costuma exibir mídia audiovisual através de um objeto [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement). Você pode usar APIs do **MediaElement** para controlar a reprodução de mídia. Por questões de acessibilidade, forneça controles que permitam que os usuários reproduzam, pausem e interrompam a mídia quando necessário. Às vezes, a mídia inclui componentes adicionais que são destinados à acessibilidade, como legendagem ou faixas de áudio alternativas que incluem descrições narrativas.
 
 <span id="Accessible_text"/>
 <span id="accessible_text"/>
@@ -121,7 +121,7 @@ Ao projetar seus aplicativos, leve em consideração como eles podem ser usados 
 
 Em muitos casos, você pode transportar informações essenciais usando várias técnicas para ampliar a sua audiência. Por exemplo, você pode destacar informações usando informações de ícone e de cor para ajudar aos usuários que são cegos e exibir alertas visuais com efeitos sonoros para ajudar aos usuários que possuem deficiência de audição.
 
-Se necessário, você pode fornecer elementos de interface do usuário acessíveis e alternativos que removem completamente os elementos e animações não essenciais e fornecem outras simplificações para dinamizar a experiência do usuário. O exemplo de código a seguir demonstra como exibir uma instância [**UserControl**](https://msdn.microsoft.com/library/windows/apps/BR227647) em um lugar de outra, de acordo com a configuração do usuário.
+Se necessário, você pode fornecer elementos de interface do usuário acessíveis e alternativos que removem completamente os elementos e animações não essenciais e fornecem outras simplificações para dinamizar a experiência do usuário. O exemplo de código a seguir demonstra como exibir uma instância [**UserControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) em um lugar de outra, de acordo com a configuração do usuário.
 
 XAML
 ```xml
@@ -181,18 +181,18 @@ Para saber mais sobre as declarações de acessibilidade e a publicação do seu
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_CUSTOM_CONTROLS"/>
 
 ## <a name="assistive-technology-support-in-custom-controls"></a>Suporte a tecnologia adaptativa em controles personalizados  
-Quando você cria um controle personalizado, recomendamos que também implemente ou estenda uma ou mais subclasses [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) para fornecer suporte à acessibilidade. Em alguns casos, desde que você use a mesma classe de par que foi usada pela classe de controle de base, o suporte de automação para sua classe derivada é adequado em um nível básico. Entretanto, você deve testar isso e implementar um par ainda é uma prática recomendada, dessa forma, o par pode relatar corretamente o nome da classe de sua nova classe de controle. Implementar um par de automação personalizado envolve algumas etapas. Para obter mais informações, consulte [Pares de automação personalizados](custom-automation-peers.md).
+Quando você cria um controle personalizado, recomendamos que também implemente ou estenda uma ou mais subclasses [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) para fornecer suporte à acessibilidade. Em alguns casos, desde que você use a mesma classe de par que foi usada pela classe de controle de base, o suporte de automação para sua classe derivada é adequado em um nível básico. Entretanto, você deve testar isso e implementar um par ainda é uma prática recomendada, dessa forma, o par pode relatar corretamente o nome da classe de sua nova classe de controle. Implementar um par de automação personalizado envolve algumas etapas. Para obter mais informações, consulte [Pares de automação personalizados](custom-automation-peers.md).
 
 <span id="Assistive_technology_support_in_apps_that_support_XAML___Microsoft_DirectX_interop"/>
 <span id="assistive_technology_support_in_apps_that_support_xaml___microsoft_directx_interop"/>
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_APPS_THAT_SUPPORT_XAML___MICROSOFT_DIRECTX_INTEROP"/>
 
 ## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>Suporte a tecnologia adaptativa em aplicativos que dão suporte à interoperabilidade de XAML/Microsoft DirectX  
-O conteúdo do Microsoft DirectX hospedado em uma interface do usuário XAML (usando [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn252834) or [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/Hh702041)) não é acessível por padrão. [XAML SwapChainPanel DirectX interop sample](https://go.microsoft.com/fwlink/p/?LinkID=309155) mostra como criar pares de Automação da Interface do Usuário para o conteúdo DirectX hospedado. Essa técnica deixa o conteúdo hospedado acessível na Automação da Interface do Usuário.
+O conteúdo do Microsoft DirectX hospedado em uma interface do usuário XAML (usando [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) or [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource)) não é acessível por padrão. [XAML SwapChainPanel DirectX interop sample](https://go.microsoft.com/fwlink/p/?LinkID=309155) mostra como criar pares de Automação da Interface do Usuário para o conteúdo DirectX hospedado. Essa técnica deixa o conteúdo hospedado acessível na Automação da Interface do Usuário.
 
 ## <a name="related-topics"></a>Tópicos relacionados  
-* [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
-* [Design para acessibilidade](https://msdn.microsoft.com/library/windows/apps/Hh700407)
+* [**Windows.UI.Xaml.Automation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation)
+* [Design para acessibilidade](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
 * [Exemplo de acessibilidade do XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Acessibilidade](accessibility.md)
 * [Introdução ao Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, toque, controles, directx, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: e8892219b485d320bb77f90ac0d172e8e2403392
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b1f683f2d357057e33f3daa613e1b027a83776af
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618731"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367762"
 ---
 # <a name="touch-controls-for-games"></a>Controles de toque para jogos
 
@@ -119,7 +119,7 @@ Usamos estes três manipuladores de eventos para atualizar as informações de e
 
 Por fim, usamos estes métodos e propriedades para iniciar, acessar e atualizar as informações de estado do controlador da câmera.
 
--   **Initialize** é um manipulador de evento chamado pelo aplicativo para iniciar os controles e associá-los ao objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que descreve sua janela de exibição.
+-   **Initialize** é um manipulador de evento chamado pelo aplicativo para iniciar os controles e associá-los ao objeto [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) que descreve sua janela de exibição.
 -   **SetPosition** é um método chamado pelo aplicativo para definir as coordenadas (x,y e z) dos controles no espaço da cena. Observe que as coordenadas z são 0 neste tutorial.
 -   **Obtenha\_posição** é uma propriedade que nosso aplicativo acessa para obter a posição atual da câmera no espaço de cena. Use essa propriedade como meio de comunicar o aplicativo a respeito da posição atual da câmera.
 -   **Obtenha\_FixedLookPoint** é uma propriedade que nosso aplicativo acessa para obter o ponto atual em direção ao qual a câmera do controlador está enfrentando. Neste exemplo, ela está bloqueada em um vetor normal em relação ao plano x-y.
@@ -134,15 +134,15 @@ Agora, vamos juntar todos os pedaços.
 
 O dispatcher de eventos do Windows Runtime fornece três eventos com os quais queremos que nosso aplicativo lide:
 
--   [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)
--   [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)
--   [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)
+-   [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed)
+-   [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved)
+-   [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased)
 
-Esses eventos são implementados no tipo [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Presumimos que você tenha um objeto **CoreWindow** para trabalhar. Para obter mais informações, veja [Como configurar o seu aplicativo C++ UWP para mostrar uma visualização DirectX](https://msdn.microsoft.com/library/windows/apps/hh465077).
+Esses eventos são implementados no tipo [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow). Presumimos que você tenha um objeto **CoreWindow** para trabalhar. Para obter mais informações, veja [Como configurar o seu aplicativo C++ UWP para mostrar uma visualização DirectX](https://docs.microsoft.com/previous-versions/windows/apps/hh465077(v=win.10)).
 
 Como esses eventos são acionados durante a execução do aplicativo, os manipuladores atualizam as informações de estado do controlador da câmera definidas nos campos privados.
 
-Primeiro, vamos preencher os manipuladores de eventos de ponteiro de toque. No primeiro manipulador de evento, **OnPointerPressed**, obtemos as coordenadas x-y do ponteiro na [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que gerencia a exibição quando o usuário toca na tela ou clica no mouse.
+Primeiro, vamos preencher os manipuladores de eventos de ponteiro de toque. No primeiro manipulador de evento, **OnPointerPressed**, obtemos as coordenadas x-y do ponteiro na [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) que gerencia a exibição quando o usuário toca na tela ou clica no mouse.
 
 **OnPointerPressed**
 
@@ -190,7 +190,7 @@ void CameraPanController::OnPointerMoved(
 }
 ```
 
-Por fim, precisamos desativar o comportamento de movimento panorâmico da câmera quando o jogador para de tocar na tela. Usamos **OnPointerReleased**, que é chamado quando [ **PointerReleased** ](https://msdn.microsoft.com/library/windows/apps/br208279) é acionado, para definir **m\_panInUse** como FALSE e desativar o movimento de panorâmica da câmera e defina a ID de ponteiro como 0.
+Por fim, precisamos desativar o comportamento de movimento panorâmico da câmera quando o jogador para de tocar na tela. Usamos **OnPointerReleased**, que é chamado quando [ **PointerReleased** ](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) é acionado, para definir **m\_panInUse** como FALSE e desativar o movimento de panorâmica da câmera e defina a ID de ponteiro como 0.
 
 **OnPointerReleased**
 
@@ -239,7 +239,7 @@ void CameraPanController::Initialize( _In_ CoreWindow^ window )
 }
 ```
 
-**Initialize** recebe uma referência à instância de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do aplicativo como um parâmetro e registra os manipuladores de eventos que desenvolvemos para os eventos apropriados nessa **CoreWindow**.
+**Initialize** recebe uma referência à instância de [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) do aplicativo como um parâmetro e registra os manipuladores de eventos que desenvolvemos para os eventos apropriados nessa **CoreWindow**.
 
 ## <a name="getting-and-setting-the-position-of-the-camera-controller"></a>Obtendo e definindo a posição do controlador da câmera
 

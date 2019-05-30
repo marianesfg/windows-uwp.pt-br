@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, portabilidade, direct3d 9, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: c7569c6b2f041f5535e0eabe934a91da86b60b9a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5d4aef73b9b28d631a492436ff90761541134220
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634221"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367422"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Passo a passo: Portar um aplicativo simple do Direct3D 9 DirectX 11 e plataforma Universal do Windows (UWP)
 
@@ -41,7 +41,7 @@ Este exercício de portabilidade mostra como levar uma estrutura de renderizaç�
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md">O loop do jogo da porta</a></p></td>
-<td align="left"><p>Mostra como implementar uma janela para um jogo UWP e como ativar o loop do jogo, inclusive como criar uma <a href="https://msdn.microsoft.com/library/windows/apps/hh700478"><strong>IFrameworkView</strong></a> para controlar uma <a href="https://msdn.microsoft.com/library/windows/apps/br208225"><strong>CoreWindow</strong></a> em tela inteira.</p></td>
+<td align="left"><p>Mostra como implementar uma janela para um jogo UWP e como ativar o loop do jogo, inclusive como criar uma <a href="https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView"><strong>IFrameworkView</strong></a> para controlar uma <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow"><strong>CoreWindow</strong></a> em tela inteira.</p></td>
 </tr>
 </tbody>
 </table>
@@ -61,9 +61,9 @@ Depois de concluir este guia passo a passo, você conhecerá as seguintes difere
 -   A diferença entre dispositivo, contexto de dispositivo e infraestrutura gráfica.
 -   O processo de compilação de sombreadores e carregar códigos de bytes de sombreadores em tempo de execução.
 -   Como configurar dados por vértices para o estágio de IA (assembler de entrada).
--   Como usar uma [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) para criar uma exibição CoreWindow.
+-   Como usar uma [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView) para criar uma exibição CoreWindow.
 
-Observe que este passo a passo usa [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) por questão de simplicidade e não abrange a interoperabilidade com XAML.
+Observe que este passo a passo usa [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) por questão de simplicidade e não abrange a interoperabilidade com XAML.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -76,11 +76,11 @@ Visite o tópico sobre [conceitos e considerações sobre portabilidade](porting
 
 **Direct3D**
 
-* [Escrevendo sombreadores HLSL no Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+* [Escrevendo sombreadores HLSL no Direct3D 9](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-writing-shaders-9)
 * [Modelos de projeto de jogo do DirectX](user-interface.md)
 
 **Microsoft Store**
 
-* [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
-* [**Operador Handle to Object (^)**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)
+* [**Microsoft::WRL::ComPtr**](https://docs.microsoft.com/cpp/windows/comptr-class)
+* [**Operador Handle to Object (^)** ](https://docs.microsoft.com/cpp/windows/handle-to-object-operator-hat-cpp-component-extensions)
 

@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a13c0c3d0e91a3932b4f9a26e564fbf364e5551
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3905ef8786a06d4221ce42511f786927c3173ba6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648891"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363165"
 ---
 # <a name="check-boxes"></a>Caixas de seleção
 
@@ -25,7 +25,7 @@ ms.locfileid: "57648891"
 
 Uma caixa de seleção é usada para marcar ou desmarcar itens de ação. Ela pode ser usada para um único item ou para uma lista de vários itens que um usuário pode escolher. O controle possui três estados de seleção: não selecionado, selecionado e indeterminado. Use o estado indeterminado quando uma coleção de subopções tiver tanto o estado não selecionado quanto o estado selecionado.
 
-> **APIs importantes**: [Classe de caixa de seleção](https://msdn.microsoft.com/library/windows/apps/br209316), [eventos marcados](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [propriedade IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
+> **APIs importantes**: [Classe de caixa de seleção](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox), [eventos marcados](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked), [propriedade IsChecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked)
 
 ![Exemplo de estados de caixa de seleção](images/templates-checkbox-states-default.png)
 
@@ -67,7 +67,7 @@ Ambos os controles de **caixa de seleção** e **botão de opção** permitem qu
 
 ## <a name="create-a-checkbox"></a>Criar uma caixa de seleção
 
-Para atribuir um rótulo à caixa de seleção, defina a propriedade [Content](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content.aspx). O rótulo é exibido perto da caixa de seleção.
+Para atribuir um rótulo à caixa de seleção, defina a propriedade [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content). O rótulo é exibido perto da caixa de seleção.
 
 Este XAML cria uma única caixa de seleção que é usada para aceitar os termos de serviço antes que um formulário possa ser enviado. 
 
@@ -85,9 +85,9 @@ checkBox1.Content = "I agree to the terms of service.";
 
 ### <a name="bind-to-ischecked"></a>Associar a IsChecked
 
-Use a propriedade [IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) para determinar se a caixa de seleção está marcada ou desmarcada. Você pode associar o valor da propriedade IsChecked a outro valor binário. No entanto, como IsChecked é um valor booliano [anulável](https://msdn.microsoft.com/library/windows/apps/b3h38hb0.aspx), você deve usar um conversor de valor para associá-la a um valor booliano.
+Use a propriedade [IsChecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked) para determinar se a caixa de seleção está marcada ou desmarcada. Você pode associar o valor da propriedade IsChecked a outro valor binário. No entanto, como IsChecked é um valor booliano [anulável](https://docs.microsoft.com/dotnet/api/system.nullable-1?redirectedfrom=MSDN), você deve usar um conversor de valor para associá-la a um valor booliano.
 
-Neste exemplo, a propriedade **IsChecked** da caixa de seleção para aceitar os termos de serviço está associada a [IsEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isenabled.aspx) de um botão Enviar. O botão Enviar é habilitado apenas quando os termos de serviço são aceitos.
+Neste exemplo, a propriedade **IsChecked** da caixa de seleção para aceitar os termos de serviço está associada a [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) de um botão Enviar. O botão Enviar é habilitado apenas quando os termos de serviço são aceitos.
 
 > Observação&nbsp;&nbsp;Mostramos apenas o código relevante aqui. Para saber mais sobre vinculação de dados e conversores de valor, consulte a [Visão geral da vinculação de dados](../../data-binding/data-binding-quickstart.md).
 
@@ -130,7 +130,7 @@ public class NullableBooleanToBooleanConverter : IValueConverter
 
 ### <a name="handle-click-and-checked-events"></a>Manipular eventos Click e Checked
 
-Para realizar uma ação quando o estado da caixa de seleção é alterado, você pode manipular o evento [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) ou os eventos [Checked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx) e [Unchecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.unchecked.aspx). 
+Para realizar uma ação quando o estado da caixa de seleção é alterado, você pode manipular o evento [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) ou os eventos [Checked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) e [Unchecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.unchecked). 
 
 O evento **Click** ocorre sempre que o estado marcado é modificado. Se você manipular o evento Click, use a propriedade **IsChecked** para determinar o estado da caixa de seleção.
 
@@ -183,15 +183,15 @@ private void toppingsCheckbox_Click(object sender, RoutedEventArgs e)
 
 ### <a name="use-the-indeterminate-state"></a>Usar o estado indeterminado
 
-O controle CheckBox herda de [ToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.aspx) e pode ter três estados: 
+O controle CheckBox herda de [ToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton) e pode ter três estados: 
 
 Estado | Propriedade | Valor
 ------|----------|------
 marcado | IsChecked | **true** 
 desmarcado | IsChecked | **false** 
-indeterminado | IsChecked | **NULL** 
+indeterminado | IsChecked | **null** 
 
-Para que a caixa de seleção para indique o estado indeterminado, você deve definir a propriedade [IsThreeState](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.isthreestate.aspx) como **true**. 
+Para que a caixa de seleção para indique o estado indeterminado, você deve definir a propriedade [IsThreeState](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.isthreestate) como **true**. 
 
 Quando opções podem ser agrupadas, você pode usar uma caixa de seleção indeterminada para representar o grupo inteiro. Use o estado indeterminate da caixa de seleção quando um usuário selecionar alguns subitens do grupo, mas não todos.
 
@@ -304,6 +304,6 @@ private void SetCheckedState()
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Classe de caixa de seleção](https://msdn.microsoft.com/library/windows/apps/br209316) 
+- [Classe de caixa de seleção](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) 
 - [Botões de opção](radio-button.md)
 - [Switch de alternância](toggles.md)

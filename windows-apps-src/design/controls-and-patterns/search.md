@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: caf0e8e63716f6ba140ef9346257687f0e7293bb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5c6eb22fbe0488fa9a36160ce9e704d10727e4c9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631001"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364478"
 ---
 # <a name="search-and-find-in-page"></a>Pesquisar e localizar na página
 
@@ -24,7 +24,7 @@ ms.locfileid: "57631001"
 
 A pesquisa é uma das principais maneiras para os usuários encontrarem conteúdo em seu aplicativo. As diretrizes neste artigo abordam elementos da experiência de pesquisa, escopos da pesquisa, implementação e exemplos de pesquisa em contexto.
 
-> **APIs importantes**: [Classe AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/dn633874)
+> **APIs importantes**: [Classe AutoSuggestBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)
 
 ## <a name="elements-of-the-search-experience"></a>Elementos da experiência de pesquisa
 

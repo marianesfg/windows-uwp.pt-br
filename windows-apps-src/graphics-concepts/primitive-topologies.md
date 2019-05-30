@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 85d1c41fc10f509f3872fb1e4a0af5fa1e1e7c30
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0b7a60b3eba8545eeeea4cf477a40e044578c166
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631391"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371239"
 ---
 # <a name="primitive-topologies"></a>Topologias primitivas
 
@@ -69,7 +69,7 @@ Os símbolos na ilustração anterior estão descritos na tabela a seguir.
 ## <a name="span-idgeneratingmultiplestripsspanspan-idgeneratingmultiplestripsspanspan-idgeneratingmultiplestripsspangenerating-multiple-strips"></a><span id="Generating_Multiple_Strips"></span><span id="generating_multiple_strips"></span><span id="GENERATING_MULTIPLE_STRIPS"></span>Gerando várias faixas
 
 
-Você pode gerar várias faixas por meio de corte de faixa. Você pode executar um corte de faixa explicitamente chamando a função HLSL [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660), ou inserindo um valor de índice especial para o buffer de índice. Esse valor é -1, que é 0xffffffff para índices de 32 bits ou 0xffff para índices de 16 bits.
+Você pode gerar várias faixas por meio de corte de faixa. Você pode executar um corte de faixa explicitamente chamando a função HLSL [RestartStrip](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-so-restartstrip), ou inserindo um valor de índice especial para o buffer de índice. Esse valor é -1, que é 0xffffffff para índices de 32 bits ou 0xffff para índices de 16 bits.
 
 Um índice de – 1 indica um "corte" ou "reinício" explícito da faixa atual. O índice anterior conclui a primitiva anterior, ou a faixa, e o próximo índice inicia um novo primitivo ou faixa.
 

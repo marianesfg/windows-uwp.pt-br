@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 66b61b9db88392c7ca7370f06fb2150deba7c8c3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c00bf23a8539f7ee37974e16586a4477cc6b78bb
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606821"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360398"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>Usando a Camada Visual com XAML
 
@@ -45,12 +45,12 @@ Para obter exemplos de código, veja a página de referência de [**XamlLight**]
 
 ## <a name="the-elementcompositionpreview-class"></a>A classe ElementCompositionPreview
 
-[**ElementCompositionPreview** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.aspx) é uma classe estática que fornece funcionalidade de interoperabilidade XAML e camada Visual. Para obter uma visão geral da Camada Visual e sua funcionalidade, consulte [Camada Visual](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer). A classe **ElementCompositionPreview** fornece os seguintes métodos:
+[**ElementCompositionPreview** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview) é uma classe estática que fornece funcionalidade de interoperabilidade XAML e camada Visual. Para obter uma visão geral da Camada Visual e sua funcionalidade, consulte [Camada Visual](https://docs.microsoft.com/windows/uwp/graphics/visual-layer). A classe **ElementCompositionPreview** fornece os seguintes métodos:
 
--   [**GetElementVisual**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): Obter um Visual que é usado para renderizar esse elemento "folheto"
--   [**SetElementChildVisual**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual.aspx): Define uma "handin" Visual como o último filho de árvore visual do elemento. Esse elemento visual será desenhado sobre o restante do elemento. 
--   [**GetElementChildVisual**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): Recuperar o conjunto Visual usando **SetElementChildVisual**
--   [**GetScrollViewerManipulationPropertySet**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): Obter um objeto que pode ser usado para criar animações de 60fps com base no deslocamento de rolagem em um **ScrollViewer**
+-   [**GetElementVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): Obter um Visual que é usado para renderizar esse elemento "folheto"
+-   [**SetElementChildVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): Define uma "handin" Visual como o último filho de árvore visual do elemento. Esse elemento visual será desenhado sobre o restante do elemento. 
+-   [**GetElementChildVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): Recuperar o conjunto Visual usando **SetElementChildVisual**
+-   [**GetScrollViewerManipulationPropertySet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): Obter um objeto que pode ser usado para criar animações de 60fps com base no deslocamento de rolagem em um **ScrollViewer**
 
 ## <a name="remarks-on-elementcompositionpreviewgetelementvisual"></a>Comentários sobre ElementCompositionPreview.GetElementVisual
 
@@ -96,7 +96,7 @@ O **ElementCompositionPreview.SetElementChildVisual** permite ao desenvolvedor f
 
 ## <a name="getalphamask-methods"></a>Métodos **GetAlphaMask**
 
-[**Imagem**](https://msdn.microsoft.com/library/windows/apps/br242752), [ **TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652), e [ **forma** ](/uwp/api/Windows.UI.Xaml.Shapes.Shape) cada implementar um método chamado  **GetAlphaMask** que retorna um **CompositionBrush** que representa uma imagem em escala de cinza com a forma do elemento. Esse **CompositionBrush** pode servir como uma entrada para uma composição **DropShadow**, portanto, a sombra pode refletir a forma do elemento em vez de um retângulo. Isso permite sombras de pixel baseadas em contorno perfeitas para texto, imagens com alfa e formas. Consulte *Sombra* abaixo para obter um exemplo dessa API.
+[**Imagem**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image), [ **TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), e [ **forma** ](/uwp/api/Windows.UI.Xaml.Shapes.Shape) cada implementar um método chamado  **GetAlphaMask** que retorna um **CompositionBrush** que representa uma imagem em escala de cinza com a forma do elemento. Esse **CompositionBrush** pode servir como uma entrada para uma composição **DropShadow**, portanto, a sombra pode refletir a forma do elemento em vez de um retângulo. Isso permite sombras de pixel baseadas em contorno perfeitas para texto, imagens com alfa e formas. Consulte *Sombra* abaixo para obter um exemplo dessa API.
 
 ## <a name="recipes"></a>Receitas
 
@@ -362,8 +362,8 @@ private void InitializeFrostedGlass(UIElement glassHost)
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Visão geral de camada Visual](https://msdn.microsoft.com/windows/uwp/composition/visual-layer)
-- [**ElementCompositionPreview** classe](https://msdn.microsoft.com/library/windows/apps/mt608976)
+- [Visão geral de camada Visual](https://docs.microsoft.com/windows/uwp/composition/visual-layer)
+- [**ElementCompositionPreview** classe](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview)
 - Exemplos de Interface do usuário avançada e composição no [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs)
 - [Exemplo de BasicXamlInterop](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2010586/BasicXamlInterop)
 - [Exemplo de ParallaxingListItems](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2010586/ParallaxingListItems)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, mapas de sombra, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: d0e661065f86ac173a6ce323281c80fc964d0a4c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1087a063fa19bea716b86143c10097711cef9205
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646361"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367903"
 ---
 # <a name="support-shadow-maps-on-a-range-of-hardware"></a>Suporte a mapas de sombra em diversos hardwares
 
@@ -108,7 +108,7 @@ return float4(input.color * (light + shadow), 1.f);
 ## <a name="shadow-buffer-size"></a>Tamanho do buffer de sombra
 
 
-Os mapas de sombra maiores não terão tantos blocos, mas ocuparão mais espaço na memória gráfica. Experimente mapas de sombra com tamanhos diferentes em seu jogo e observe os resultados em tipos de dispositivos e tamanhos de exibição distintos. Pense em uma otimização como mapas de sombra em cascata para obter resultados melhores consumindo menos memória gráfica. Consulte [Técnicas comuns para aprimorar os mapas de profundidade de sombra](https://msdn.microsoft.com/library/windows/desktop/ee416324).
+Os mapas de sombra maiores não terão tantos blocos, mas ocuparão mais espaço na memória gráfica. Experimente mapas de sombra com tamanhos diferentes em seu jogo e observe os resultados em tipos de dispositivos e tamanhos de exibição distintos. Pense em uma otimização como mapas de sombra em cascata para obter resultados melhores consumindo menos memória gráfica. Consulte [Técnicas comuns para aprimorar os mapas de profundidade de sombra](https://docs.microsoft.com/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps).
 
 ## <a name="shadow-buffer-depth"></a>Profundidade do buffer de sombra
 

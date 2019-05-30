@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a3bf2ce69105787b7ca9e83c7f7fe5db8ae1038
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 14f5fa06cfa0a6a7e393f3e2d513af0898d1f822
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624851"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360939"
 ---
 # <a name="periodic-notification-overview"></a>Visão geral de notificações periódicas
  
@@ -34,14 +34,14 @@ As notificações periódicas permitem que seu aplicativo obtenha atualizações
 
 As notificações periódicas requerem que seu aplicativo hospede um serviço de nuvem. O serviço será sondado periodicamente por todos os usuários que tiverem o aplicativo instalado. A cada intervalo de sondagem, como uma vez por hora, o Windows envia uma solicitação HTTP GET para o URI, baixa o conteúdo da notificação ou do bloco solicitado (como XML), que é fornecido em resposta à solicitação, e exibe o conteúdo no bloco do aplicativo.
 
-Observe que as atualizações periódicas não podem ser usadas com notificações do sistema. As notificações do sistema funcionam melhor por meio de notificações [programadas](https://msdn.microsoft.com/library/windows/apps/hh465417) ou [por push](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252).
+Observe que as atualizações periódicas não podem ser usadas com notificações do sistema. As notificações do sistema funcionam melhor por meio de notificações [programadas](https://docs.microsoft.com/previous-versions/windows/apps/hh465417(v=win.10)) ou [por push](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10)).
 
 ## <a name="uri-location-and-xml-content"></a>Local do URI e conteúdo XML
 
 
 Qualquer endereço HTTP ou HTTPS válido pode ser usado como o URI a ser sondado.
 
-A resposta do servidor de nuvem inclui o conteúdo baixado. O conteúdo retornado do URI deve estar em conformidade com a especificação de esquema XML do [Bloco](adaptive-tiles-schema.md) ou da [Notificação](https://msdn.microsoft.com/library/windows/apps/br212851) e deve estar codificado em UTF-8. Você pode usar cabeçalhos HTTP definidos para especificar o [tempo de expiração](#expiration-of-tile-and-badge-notifications) ou a marca da notificação.
+A resposta do servidor de nuvem inclui o conteúdo baixado. O conteúdo retornado do URI deve estar em conformidade com a especificação de esquema XML do [Bloco](adaptive-tiles-schema.md) ou da [Notificação](https://docs.microsoft.com/uwp/schemas/tiles/badgeschema/schema-root) e deve estar codificado em UTF-8. Você pode usar cabeçalhos HTTP definidos para especificar o [tempo de expiração](#expiration-of-tile-and-badge-notifications) ou a marca da notificação.
 
 ## <a name="polling-behavior"></a>Comportamento de sondagem
 
@@ -84,13 +84,13 @@ Por exemplo, durante um dia de negociação ativo do mercado de ações, você p
 ## <a name="periodic-notifications-in-the-notification-queue"></a>Notificações periódicas na fila de notificações
 
 
-Você pode usar atualizações de bloco periódicas com [ciclos de notificações](https://msdn.microsoft.com/library/windows/apps/hh781199). Por padrão, um bloco na tela inicial mostra o conteúdo de uma única notificação até que ela seja substituída por uma nova. Ao habilitar os ciclos de notificações, até cinco notificações são mantidas na fila e os bloco alterna entre elas.
+Você pode usar atualizações de bloco periódicas com [ciclos de notificações](https://docs.microsoft.com/previous-versions/windows/apps/hh781199(v=win.10)). Por padrão, um bloco na tela inicial mostra o conteúdo de uma única notificação até que ela seja substituída por uma nova. Ao habilitar os ciclos de notificações, até cinco notificações são mantidas na fila e os bloco alterna entre elas.
 
-Se a fila tiver atingido a capacidade de cinco notificações, a próxima notificação nova substituirá a mais antiga na fila. Porém, definindo marcas em suas notificações, você pode influenciar a política de substituição da fila. Uma marca é uma cadeia de caracteres de até 16 caracteres alfanuméricos específica do aplicativo e que não diferencia maiúsculas de minúsculas, especificada no cabeçalho HTTP [X-WNS-Tag](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_tag) na carga da resposta. O Windows compara a marca de uma notificação de entrada com as marcas de todas as notificações que já estão na fila. Se for encontrada uma correspondência, a nova notificação substituirá a notificação da fila com a mesma marca. Se nenhuma correspondência for encontrada, a regra de substituição padrão será aplicada e a nova notificação substituirá a antiga na fila.
+Se a fila tiver atingido a capacidade de cinco notificações, a próxima notificação nova substituirá a mais antiga na fila. Porém, definindo marcas em suas notificações, você pode influenciar a política de substituição da fila. Uma marca é uma cadeia de caracteres de até 16 caracteres alfanuméricos específica do aplicativo e que não diferencia maiúsculas de minúsculas, especificada no cabeçalho HTTP [X-WNS-Tag](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) na carga da resposta. O Windows compara a marca de uma notificação de entrada com as marcas de todas as notificações que já estão na fila. Se for encontrada uma correspondência, a nova notificação substituirá a notificação da fila com a mesma marca. Se nenhuma correspondência for encontrada, a regra de substituição padrão será aplicada e a nova notificação substituirá a antiga na fila.
 
 Você pode usar a marcação e a fila de notificações para implementar diversos cenários avançados de notificação. Por exemplo, um aplicativo de ações pode enviar cinco notificações, cada uma sobre uma ação diferente e marcada com um nome de ação. Isso evita que a fila contenha duas notificações para a mesma ação, uma delas mais antiga e desatualizada.
 
-Para saber mais, veja [Usando a fila de notificações](https://msdn.microsoft.com/library/windows/apps/hh781199).
+Para saber mais, veja [Usando a fila de notificações](https://docs.microsoft.com/previous-versions/windows/apps/hh781199(v=win.10)).
 
 ### <a name="enabling-the-notification-queue"></a>Habilitando a fila de notificações
 
@@ -103,7 +103,7 @@ Você deve fornecer um URI exclusivo para cada notificação que quiser que o Wi
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Diretrizes para notificações periódicas](https://msdn.microsoft.com/library/windows/apps/hh761461)
-* [Como configurar notificações periódicas para notificações](https://msdn.microsoft.com/library/windows/apps/hh761476)
-* [Como configurar notificações periódicas para blocos](https://msdn.microsoft.com/library/windows/apps/hh761476)
+* [Diretrizes para notificações periódicas](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-periodic-notification-overview)
+* [Como configurar notificações periódicas para notificações](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
+* [Como configurar notificações periódicas para blocos](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
  

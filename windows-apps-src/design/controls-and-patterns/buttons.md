@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 286b278d0c41edfbc5c008f31e5a8e28fa30f93a
-ms.sourcegitcommit: aeebfe35330aa471d22121957d9b510f6ebacbcf
+ms.openlocfilehash: 210431928c5dd7c5d5dfb99855322f1560e91dd7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58901634"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363226"
 ---
 # <a name="buttons"></a>Botões
 
@@ -30,7 +30,7 @@ A estrutura XAML fornece um controle de botão padrão, bem como vários control
 
 Controle | Descrição
 ------- | -----------
-[Botão](/uwp/api/windows.ui.xaml.controls.button) | Inicia uma ação imediata. Pode ser usado com uma associação de comando ou evento de clique.
+[Button](/uwp/api/windows.ui.xaml.controls.button) | Inicia uma ação imediata. Pode ser usado com uma associação de comando ou evento de clique.
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Um botão que aciona um evento de clique continuamente enquanto pressionado.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Um botão que tem o estilo como um hiperlink, usado para navegação. Para saber mais, consulte [Hiperlinks](hyperlinks.md).
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Um botão com uma divisa para abrir um submenu anexado.
@@ -120,16 +120,16 @@ private async void SubscribeButton_Click(object sender, RoutedEventArgs e)
 
 ### <a name="button-interaction"></a>Interação de botão
 
-Quando você toca em um botão com um dedo ou uma caneta, ou pressiona o botão esquerdo do mouse enquanto o ponteiro está sobre ele, o botão gera o evento [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx). Se um botão tem foco do teclado, pressionar a tecla Enter ou a barra de espaço também aciona o evento Click.
+Quando você toca em um botão com um dedo ou uma caneta, ou pressiona o botão esquerdo do mouse enquanto o ponteiro está sobre ele, o botão gera o evento [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Se um botão tem foco do teclado, pressionar a tecla Enter ou a barra de espaço também aciona o evento Click.
 
-Geralmente, não se pode manipular eventos de baixo nível [PointerPressed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) em um Botão porque, em vez disso, ele tem o comportamento Click. Para saber mais, consulte [Events and routed events overview](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx).
+Geralmente, não se pode manipular eventos de baixo nível [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) em um Botão porque, em vez disso, ele tem o comportamento Click. Para saber mais, consulte [Events and routed events overview](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
 
 Você pode alterar a forma como um botão aciona o evento Click alterando a propriedade [ClickMode](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.clickmode). O valor ClickMode padrão é **Release**, mas você também pode definir ClickMode de um botão como **Passar o mouse sobre** ou **Pressionar**. Se ClickMode for **Hover**, o evento Click não poderá ser chamado com o teclado ou o toque.
 
 
 ### <a name="button-content"></a>Conteúdo do botão
 
-Botão é um [ContentControl](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.aspx). Sua propriedade de conteúdo XAML é [Content](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx), que habilita uma sintaxe semelhante para XAML: `<Button>A button's content</Button>`. Você pode definir qualquer objeto como conteúdo do botão. Se o conteúdo for um [UIElement](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx), ele é renderizado no botão. Se o conteúdo for outro tipo de objeto, a representação da cadeia de caracteres é mostrada no botão.
+Botão é um [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl). Sua propriedade de conteúdo XAML é [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content), que habilita uma sintaxe semelhante para XAML: `<Button>A button's content</Button>`. Você pode definir qualquer objeto como conteúdo do botão. Se o conteúdo for um [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), ele é renderizado no botão. Se o conteúdo for outro tipo de objeto, a representação da cadeia de caracteres é mostrada no botão.
 
 Geralmente, o conteúdo de um botão é texto. Veja as recomendações de design para botões com conteúdo de texto:
 -   Utilize um texto conciso, específico e autoexplicativo que descreva claramente a ação executada pelo botão. Geralmente, o conteúdo de texto do botão é uma única palavra, um verbo.
@@ -140,7 +140,7 @@ Geralmente, o conteúdo de um botão é texto. Veja as recomendações de design
 
 <table>
 <tr>
-<td> <b>Você precisa corrigir:</b><br> Botões com estouro de texto. </td>
+<td> <b>Preciso corrigir:</b><br> Botões com estouro de texto. </td>
 <td> <img src="images/button-wraptext.png"/> </td>
 </tr>
 <tr>
@@ -175,7 +175,7 @@ O botão fica assim.
 
 ## <a name="create-a-repeat-button"></a>Criar um botão de repetição
 
-Um [RepeatButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx) é um botão que gera eventos [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) repetidas vezes a partir do momento em que é pressionado até ser liberado. Defina a propriedade [Delay](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.delay.aspx) para especificar o tempo que o RepeatButton aguarda após ser pressionado antes de começar a repetir a ação de clique. Defina a propriedade [Interval](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.interval.aspx) para especificar o tempo entre as repetições da ação de clique. O tempo para as duas propriedades são especificados em milissegundos.
+Um [RepeatButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) é um botão que gera eventos [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) repetidas vezes a partir do momento em que é pressionado até ser liberado. Defina a propriedade [Delay](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton.delay) para especificar o tempo que o RepeatButton aguarda após ser pressionado antes de começar a repetir a ação de clique. Defina a propriedade [Interval](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton.interval) para especificar o tempo entre as repetições da ação de clique. O tempo para as duas propriedades são especificados em milissegundos.
 
 O exemplo a seguir mostra dois controles RepeatButton cujos respectivos eventos Click são usados para aumentar e diminuir o valor mostrado em um bloco de texto.
 
@@ -268,7 +268,7 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 
 > Botão de divisão requer o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior, ou o [biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Um [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) tem duas partes que podem ser invocados separadamente. Uma parte se comporta como um botão padrão e invoca uma ação imediata. A outra parte invoca um submenu que contém opções adicionais que o usuário pode escolher.
+Um [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) tem duas partes que podem ser invocados separadamente. Uma parte se comporta como um botão padrão e invoca uma ação imediata. A outra parte invoca um submenu que contém opções adicionais dentre as quais o usuário pode escolher.
 
 > [!NOTE]
 > Quando chamado com toque, o botão de divisão se comporta como uma lista suspensa do botão; as duas metades do botão de invocar o menu suspenso. Com outros métodos de entrada, um usuário pode invocar qualquer parte do botão separadamente.
@@ -376,7 +376,7 @@ public sealed partial class MainPage : Page
 
 > ToggleSplitButton requer o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior, ou o [biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Um [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tem duas partes que podem ser invocados separadamente. Uma parte se comporta como um botão de alternância que pode ser ativada ou desativada. A outra parte invoca um submenu que contém opções adicionais que o usuário pode escolher.
+Um [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tem duas partes que podem ser invocados separadamente. Uma parte se comporta como um botão de alternância que pode ser ativado ou desativado. A outra parte invoca um submenu que contém opções adicionais dentre as quais o usuário pode escolher.
 
 Um botão de divisão de alternância é normalmente usado para habilitar ou desabilitar um recurso quando o recurso tem várias opções que o usuário pode escolher. Por exemplo, em um editor de documento, ela pode ser usada para ativar ou desativar, a listas enquanto a lista suspensa é usada para escolher o estilo da lista.
 
@@ -535,7 +535,7 @@ O botão Voltar é um elemento de interface do usuário fornecida pelo sistema q
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Classe Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
+- [Classe de botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button)
 - [Botões de opção](radio-button.md)
 - [Caixas de seleção](checkbox.md)
-- [Switches de alternância](toggles.md)
+- [Comutadores de alternância](toggles.md)

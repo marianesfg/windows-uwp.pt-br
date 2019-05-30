@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, programação
 ms.localizationpriority: medium
-ms.openlocfilehash: 84d5068c2f474af22d789dea6428f911087f9ff0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b855bc9adc79b3ae5dd5ab7128be7035a78a4aa0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639211"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369102"
 ---
 # <a name="game-programming-resources"></a>Recursos para programação de jogos
 
@@ -23,13 +23,13 @@ Para saber mais sobre programação de jogos no Windows, confira os recursos a s
 ## <a name="game-programming-reference"></a>Referência de programação de jogo
 
 
--   [Gráficos e jogos](https://msdn.microsoft.com/library/windows/desktop/ee663279)
+-   [Gráficos e jogos](https://docs.microsoft.com/windows/desktop/graphics-and-multimedia)
 -   [Referência do OpenGL](https://go.microsoft.com/fwlink/p/?LinkID=288875)
 
 ## <a name="game-design-guidance"></a>Orientações sobre design de jogos
 
 
--   [Diretrizes de índice de experiência do usuário para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/hh465424)
+-   [Diretrizes de índice de experiência do usuário para aplicativos UWP](https://developer.microsoft.com/windows/design)
 
 ## <a name="blogs"></a>Blogs
 
@@ -43,19 +43,19 @@ Para saber mais sobre programação de jogos no Windows, confira os recursos a s
 
 -   [Kit de ferramentas do DirectX](  https://go.microsoft.com/fwlink/p/?LinkID=248929)
 -   [Biblioteca de processamento de textura do DirectXTex](  https://go.microsoft.com/fwlink/p/?LinkID=248926)
--   [Diagnóstico de elementos gráficos](https://msdn.microsoft.com/library/windows/apps/hh873207.aspx) do Microsoft Visual Studio
+-   [Diagnóstico de elementos gráficos](https://docs.microsoft.com/visualstudio/debugger/overview-of-visual-studio-graphics-diagnostics?view=vs-2015) do Microsoft Visual Studio
 -   [Win2D](https://github.com/Microsoft/Win2D) - Uma API de Windows Runtime fácil de usar para renderização de gráficos 2D de modo imediato com aceleração da GPU.
 -   [ÂNGULO para a Microsoft Store](https://go.microsoft.com/fwlink/p/?linkid=618387) -conteúdo de execuções OpenGL ES no Windows, convertendo o OpenGL ES API chama a chamadas à API do DirectX 11.
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Vídeos da sessão de desenvolvimento de jogos GDC 2015
 
 
--   [The Future of Gaming Across the Microsoft Ecosystem](https://channel9.msdn.com/Events/GDC/GDC-2015/The-Future-of-Gaming-Across-the-Microsoft-Ecosystem) – Phil Spencer
+-   [O futuro dos jogos no ecossistema da Microsoft](https://channel9.msdn.com/Events/GDC/GDC-2015/The-Future-of-Gaming-Across-the-Microsoft-Ecosystem) – Phil Spencer
 -   [Desenvolvimento de jogos para Windows 10](https://channel9.msdn.com/Events/GDC/GDC-2015/Developing-Games-for-Windows-10) – Chris Tector, Don Xbox
--   [Advanced DirectX 12 Graphics and Performance](https://channel9.msdn.com/Events/GDC/GDC-2015/Advanced-DirectX12-Graphics-and-Performance) – Max McMullen
+-   [Elementos gráficos DirectX 12 e desempenho avançados](https://channel9.msdn.com/Events/GDC/GDC-2015/Advanced-DirectX12-Graphics-and-Performance) – Max McMullen
 -   [Experiência de consumidor de jogos no Windows 10](https://channel9.msdn.com/Events/GDC/GDC-2015/Gaming-Consumer-Experience-on-Windows-10) – Bill Schiefelbein
--   [New Opportunities for Independent Developers](https://channel9.msdn.com/Events/GDC/GDC-2015/New-Opportunities-for-Independent-Developers) – Chris Charla
--   [Developing with Xbox Live for Windows 10](https://channel9.msdn.com/Events/GDC/GDC-2015/Developing-with-Xbox-Live-for-Windows-10) – Vijay Gajjala, Brian Tyler
+-   [Novas oportunidades para os desenvolvedores independentes](https://channel9.msdn.com/Events/GDC/GDC-2015/New-Opportunities-for-Independent-Developers) – Chris Charla
+-   [Desenvolvendo com o Xbox Live para o Windows 10](https://channel9.msdn.com/Events/GDC/GDC-2015/Developing-with-Xbox-Live-for-Windows-10) – Vijay Gajjala, Brian Tyler
 -   [Multiplayer do Xbox Live: Introdução aos serviços de compatibilidade de plataforma cruzada e jogos](https://channel9.msdn.com/Events/GDC/GDC-2015/Xbox-Live-Multiplayer-Introducing-services-for-cross-platform-matchmaking-and-gameplay) – Ferdinand Schober
 -   [Legendas Fable: Jogabilidade entre dispositivos com o Xbox Live](https://channel9.msdn.com/Events/GDC/GDC-2015/Fable-Legends-Cross-device-Gameplay-with-Xbox-Live) – Raymond Arifianto, Davis juliano
 -   [Práticas recomendadas para utilizar as estatísticas e as conquistas do usuário baseado em nuvem no Xbox Live](https://channel9.msdn.com/Events/GDC/GDC-2015/Best-Practices-for-Leveraging-Cloud-Based-User-Stats-and-Achievements-in-Xbox-Live) – Cierra McDonald
@@ -70,7 +70,7 @@ Para saber mais sobre programação de jogos no Windows, confira os recursos a s
 
 -   [Apresentando o Win2D: Desenho baseados em DirectX no C# ](https://channel9.msdn.com/Events/Build/2015/2-631) – Simon Tao
 -   [ÂNGULO DE: Executando o código do OpenGL ES 2.0 gráficos no Windows](https://channel9.msdn.com/Events/Build/2015/3-686) – Tony Balogh
--   [Elementos gráficos DirectX 12 e desempenho avançados](https://channel9.msdn.com/Events/Build/2015/3-673) – Max McMullen
+-   [Elementos gráficos DirectX12 e desempenho avançados](https://channel9.msdn.com/Events/Build/2015/3-673) – Max McMullen
 
 ## <a name="other-resources"></a>Outros recursos
 

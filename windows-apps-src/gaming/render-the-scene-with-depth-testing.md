@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, renderização, cena, teste de profundidade, direct3d, sombras
 ms.localizationpriority: medium
-ms.openlocfilehash: 237da82ef51466ae2460c3be27486091bf4066f3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d1c2c4e5d45b28c318085f4ce257b587f23f1426
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630451"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368103"
 ---
 # <a name="render-the-scene-with-depth-testing"></a>Renderizar a cena com teste de profundidade
 
@@ -67,7 +67,7 @@ Em seguida, o sombreador de pixel usará a posição interpolada do espaço de l
 ## <a name="test-whether-the-position-is-in-the-light-frustum"></a>Testar se a posição está no tronco de luz
 
 
-Primeiro, confira se o pixel está no tronco de exibição da luz, normalizando as coordenadas X e Y. Se eles estiverem dentro do intervalo \[0, 1\] e em seguida, é possível que o pixel em sombra. Caso contrário, pule o teste de profundidade. Um sombreador pode fazer esse teste rapidamente chamando [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231) e comparando o resultado com o valor original.
+Primeiro, confira se o pixel está no tronco de exibição da luz, normalizando as coordenadas X e Y. Se eles estiverem dentro do intervalo \[0, 1\] e em seguida, é possível que o pixel em sombra. Caso contrário, pule o teste de profundidade. Um sombreador pode fazer esse teste rapidamente chamando [Saturate](https://docs.microsoft.com/windows/desktop/direct3dhlsl/saturate) e comparando o resultado com o valor original.
 
 ```cpp
 // Compute texture coordinates for the current point's location on the shadow map.
@@ -89,7 +89,7 @@ if ((saturate(shadowTexCoords.x) == shadowTexCoords.x) &&
 ## <a name="depth-test-against-the-shadow-map"></a>Teste de profundidade com base no mapa de sombra
 
 
-Use um exemplo de função de comparação ([SampleCmp](https://msdn.microsoft.com/library/windows/desktop/bb509696) ou [SampleCmpLevelZero](https://msdn.microsoft.com/library/windows/desktop/bb509697)) para testar a profundidade do pixel no espaço de luz em relação ao mapa de profundidade. Calcule o valor de profundidade do espaço de luz normalizada, que é `z / w`, e passe o valor para a função de comparação. Como nós usamos um teste de comparação LessOrEqual para a amostra, a função intrínseca retorna zero quando o teste de comparação é transmitido; isso indica que o pixel está na sombra.
+Use um exemplo de função de comparação ([SampleCmp](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmp) ou [SampleCmpLevelZero](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmplevelzero)) para testar a profundidade do pixel no espaço de luz em relação ao mapa de profundidade. Calcule o valor de profundidade do espaço de luz normalizada, que é `z / w`, e passe o valor para a função de comparação. Como nós usamos um teste de comparação LessOrEqual para a amostra, a função intrínseca retorna zero quando o teste de comparação é transmitido; isso indica que o pixel está na sombra.
 
 ```cpp
 // Use an offset value to mitigate shadow artifacts due to imprecise 

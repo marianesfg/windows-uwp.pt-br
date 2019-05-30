@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: df03c6f10f106868213fe812b2f303d7675c567b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6850a5d2458c29c81bacc195106af697b37dd23b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626891"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359898"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Testar com o Emulador Microsoft para Windows 10 Mobile
 
@@ -41,7 +41,7 @@ Sistema operacional
 -   64 bits
 -   Edição Pro ou superior
 
-Para verificar os requisitos de BIOS, confira [Como habilitar Hyper-V para o emulador para Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/xaml/jj863509.aspx).
+Para verificar os requisitos de BIOS, confira [Como habilitar Hyper-V para o emulador para Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj863509(v=vs.105)).
 
 Para verificar os requisitos de RAM e do sistema operacional, no Painel de Controle, selecione **Sistema e Segurança**e, em seguida, selecione **Sistema**.
 
@@ -96,7 +96,7 @@ Além dos novos recursos mencionados na seção anterior, você pode testar os r
 
 -   **Ciclo de vida da aplicação e marcação para exclusão**. Teste o comportamento ou seu aplicativo quando este estiver desativado ou marcado para exclusão ao alterar o valor da opção **Marcar para exclusão mediante desabilitação ao depurar** na página **Depurar** das propriedades do projeto.
 
--   **Pasta de armazenamento local (anteriormente conhecida como um armazenamento isolado)**. Os dados no armazenamento isolado persistem enquanto o emulador está sendo executado, mas são perdidos logo que o emulador se fecha.
+-   **Pasta de armazenamento local (anteriormente conhecida como um armazenamento isolado)** . Os dados no armazenamento isolado persistem enquanto o emulador está sendo executado, mas são perdidos logo que o emulador se fecha.
 
 -   **Microfone**. Requer e utiliza o microfone no computador host.
 
@@ -196,7 +196,7 @@ Depois que ambos os emuladores estiverem em execução:
 -   Clique no botão **Tocar**. Isso simulará os dispositivos tocando um no outro, e você deverá ouvir o som de notificação de toque da NFC
 -   Para desconectar os dois dispositivos, simplesmente toque no botão **Cancelar toque**.
 
-Como alternativa, você pode habilitar a caixa de seleção **Cancelar toque automaticamente em (segundos)**, onde você pode especificar o tempo em segundos que deseja que os dispositivos permaneçam em contato, e o cancelamento será automático após o tempo especificado (simulando o que seria esperado de um usuário na vida real; eles mantém seus telefones juntos por um curto período de tempo). Observe, porém, que atualmente o log de mensagens não estará disponível depois que a conexão for cancelada.
+Como alternativa, você pode habilitar a caixa de seleção **Cancelar toque automaticamente em (segundos)** , onde você pode especificar o tempo em segundos que deseja que os dispositivos permaneçam em contato, e o cancelamento será automático após o tempo especificado (simulando o que seria esperado de um usuário na vida real; eles mantém seus telefones juntos por um curto período de tempo). Observe, porém, que atualmente o log de mensagens não estará disponível depois que a conexão for cancelada.
 
 Para simular a leitura de mensagens de uma marca ou receber mensagens de outro dispositivo:
 
@@ -215,7 +215,7 @@ Usando o modo de proximidade, você pode injetar mensagens como se viessem de um
 -   NDEF:URI
 -   NDEF:WKT. U
 
-Você pode criar essas mensagens editando as janelas de **Conteúdo** ou fornecendo-as em um arquivo. Para saber mais sobre esses tipos e como usá-los, consulte a seção de Comentários da página de referência [**ProximityDevice.PublishBinaryMessage**](https://msdn.microsoft.com/library/windows/apps/Hh701129).
+Você pode criar essas mensagens editando as janelas de **Conteúdo** ou fornecendo-as em um arquivo. Para saber mais sobre esses tipos e como usá-los, consulte a seção de Comentários da página de referência [**ProximityDevice.PublishBinaryMessage**](https://docs.microsoft.com/uwp/api/windows.networking.proximity.proximitydevice.publishbinarymessage).
 
 O Kit de Driver do Windows 8 (WDK) inclui uma amostra de driver que expõe o mesmo protocolo que o emulador do Windows Phone 8. Você precisará baixar o DDK, criar esse driver de amostra, instalá-lo em um dispositivo Windows 8 e, em seguida, adicionar o nome de host ou endereço IP do dispositivo Windows 8 à lista de dispositivos e tocar nele com outro dispositivo Windows 8 ou com um emulador do Windows Phone 8.
 
@@ -268,7 +268,7 @@ A seguir, uma referência para a qual a funcionalidade está disponível:
 
 ### <a name="smart-card-reader-mode"></a>Modo de Leitor de Cartão Inteligente
 
-O emulador pode ser conectado a um dispositivo de leitor de cartão inteligente no computador host, de modo que cartões inteligentes inseridos ou tocados apareçam em seu aplicativo de telefone e possam ter comunicação com as APDUs, usando a classe [**Windows.Devices.SmartCards.SmartCardConnection**](https://msdn.microsoft.com/library/windows/apps/Dn608002). Para que isso funcione, você precisará de um dispositivo de leitor de cartão inteligente compatível conectado ao computador. Leitores de cartão inteligente USB (NFC/sem contato e de inserção/contato) estão amplamente disponíveis. Para habilitar o emulador a funcionar com um leitor de cartão inteligente conectado, escolha primeiramente o modo **Leitor de Cartão Inteligente**, que deve mostrar uma caixa suspensa listando todos os leitores de cartão inteligente compatíveis conectados ao sistema host. Em seguida, escolha o dispositivo de leitor de cartão inteligente com o qual gostaria de conectar-se.
+O emulador pode ser conectado a um dispositivo de leitor de cartão inteligente no computador host, de modo que cartões inteligentes inseridos ou tocados apareçam em seu aplicativo de telefone e possam ter comunicação com as APDUs, usando a classe [**Windows.Devices.SmartCards.SmartCardConnection**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardConnection). Para que isso funcione, você precisará de um dispositivo de leitor de cartão inteligente compatível conectado ao computador. Leitores de cartão inteligente USB (NFC/sem contato e de inserção/contato) estão amplamente disponíveis. Para habilitar o emulador a funcionar com um leitor de cartão inteligente conectado, escolha primeiramente o modo **Leitor de Cartão Inteligente**, que deve mostrar uma caixa suspensa listando todos os leitores de cartão inteligente compatíveis conectados ao sistema host. Em seguida, escolha o dispositivo de leitor de cartão inteligente com o qual gostaria de conectar-se.
 
 Observe que nem todos os leitores de cartão inteligente compatíveis com NFC dão suporte a todos os tipos de cartões NFC, e alguns não dão suporte a comandos de APDU dos cartões de armazenamento padrão PC/SC.
 
@@ -319,7 +319,7 @@ Teste aplicativos que usam navegação ou cerca geográfica usando a aba **Local
 
 Você pode testar seu aplicativo enquanto simula a mudança de uma localização a outra em diferentes velocidades e com diferentes precisões de perfis. O simulador de localização pode ajudá-lo a identificar mudanças em seu uso da localização do uso de APIs que melhoram a experiência do usuário. Por exemplo, a ferramenta pode ajudá-lo a identificar se você tem que ajustar parâmetros de cerca geográfica como tamanho e duração de testes, para detectar as cercas geográficas bem sucedidas em diferentes cenários.
 
-A aba **Localização** suporta três modos. Em todos os modos, quando o emulador recebe uma nova posição, esta posição está disponível para lançar [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/BR225540) o evento ou responder a uma [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/Hh973536) chamada em seu aplicativo de localização.
+A aba **Localização** suporta três modos. Em todos os modos, quando o emulador recebe uma nova posição, esta posição está disponível para lançar [**PositionChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.positionchanged) o evento ou responder a uma [**GetGeopositionAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.getgeopositionasync) chamada em seu aplicativo de localização.
 
 -   No modo **Pin** você coloca pinos de pressão no mapa. Quando você clica em **Tocar todos os pontos**, o simulador de localização de cada pin para o emulador um depois do outro, no intervalo especificado na caixa de texto **Segundos por pin**.
 
@@ -660,7 +660,7 @@ Para encontrar respostas e resolver problemas ao começar a trabalhar com as fer
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Executar aplicativos do Windows Phone no emulador](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
+* [Executar aplicativos do Windows Phone no emulador](https://docs.microsoft.com/visualstudio/debugger/run-windows-phone-apps-in-the-emulator?view=vs-2015)
 * [Arquivo morto do SDK do Windows e do Windows Phone](https://dev.windows.com/downloads/sdk-archive)
  
 

@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c899334b43353fbc69c3080cfd329df0ef9e0797
-ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.openlocfilehash: 4de2f1cefc47e8740bfebbe7853ae317d25ab9d0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913966"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363216"
 ---
 # <a name="calendar-date-picker"></a>Seletor de data do calendário
 
@@ -25,7 +25,7 @@ ms.locfileid: "58913966"
 
 O seletor de data do calendário é um controle suspenso otimizado para escolher uma única data em uma exibição de calendário onde informações contextuais como dia da semana ou integridade do calendário são importantes. Você pode modificar o calendário para fornecer contexto adicional ou limitar as datas disponíveis.
 
-> **APIs importantes**: [Classe CalendarDatePicker](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx), [propriedade de datas](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx), [DateChanged evento](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx)
+> **APIs importantes**: [Classe CalendarDatePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker), [propriedade de datas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.date), [DateChanged evento](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.datechanged)
 
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
@@ -70,13 +70,13 @@ O seletor de data do calendário resultante tem esta aparência:
 
 ![Exemplo de seletor de data do calendário](images/calendar-date-picker-closed.png)
 
-O seletor de data do calendário tem um [CalendarView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx) interno para selecionar uma data. Há um subconjunto das propriedades CalendarView, como [IsTodayHighlighted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.istodayhighlighted.aspx) e [FirstDayOfWeek](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.firstdayofweek.aspx), no CalendarDatePicker e elas são encaminhadas para CalendarView interno para permitir que você o modifique. 
+O seletor de data do calendário tem um [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView) interno para selecionar uma data. Há um subconjunto das propriedades CalendarView, como [IsTodayHighlighted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.istodayhighlighted) e [FirstDayOfWeek](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.firstdayofweek), no CalendarDatePicker e elas são encaminhadas para CalendarView interno para permitir que você o modifique. 
 
-No entanto, você não pode alterar o [SelectionMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selectionmode.aspx) do CalendarView interno para permitir seleção múltipla. Se você precisa permitir que o usuário selecione várias datas ou de um calendário que esteja sempre visível, considere usar um modo de exibição de calendário em vez de um seletor de data do calendário. Consulte o artigo [Calendar view](calendar-view.md) para saber mais sobre como você pode modificar a exibição de calendário.
+No entanto, você não pode alterar o [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selectionmode) do CalendarView interno para permitir seleção múltipla. Se você precisa permitir que o usuário selecione várias datas ou de um calendário que esteja sempre visível, considere usar um modo de exibição de calendário em vez de um seletor de data do calendário. Consulte o artigo [Calendar view](calendar-view.md) para saber mais sobre como você pode modificar a exibição de calendário.
 
 ### <a name="selecting-dates"></a>Selecionando datas
 
-Use a propriedade [Data](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx) para obter ou definir a data selecionada. Por padrão, a propriedade Date é **null**. Quando um usuário seleciona uma data na exibição de calendário, essa propriedade é atualizada. Um usuário pode limpar a data clicando na data selecionada na exibição de calendário para desmarcá-la. 
+Use a propriedade [Data](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.date) para obter ou definir a data selecionada. Por padrão, a propriedade Date é **null**. Quando um usuário seleciona uma data na exibição de calendário, essa propriedade é atualizada. Um usuário pode limpar a data clicando na data selecionada na exibição de calendário para desmarcá-la. 
 
 Você pode definir a data no seu código assim.
 
@@ -84,18 +84,18 @@ Você pode definir a data no seu código assim.
 myCalendarDatePicker.Date = new DateTime(1977, 1, 5);
 ```
 
-Quando você define a data em código, o valor é restringido pelas propriedades [MinDate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.mindate.aspx) e [MaxDate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.maxdate.aspx).
+Quando você define a data em código, o valor é restringido pelas propriedades [MinDate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.mindate) e [MaxDate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.maxdate).
 - Se **Date** é menor que **MinDate**, o valor é definido como **MinDate**.
 - Se **Date** é maior que **MaxDate**, o valor é definido como **MaxDate**.
 
-Você pode manipular o evento [DateChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx) para ser notificado quando o valor Date for alterado.
+Você pode manipular o evento [DateChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.datechanged) para ser notificado quando o valor Date for alterado.
 
 > [!NOTE]
 > Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo Controles de data e hora.
 
 ### <a name="setting-a-header-and-placeholder-text"></a>Definindo um texto de cabeçalho e o espaço reservado
 
-Você pode adicionar um [Header](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.header.aspx) (ou rótulo) e um [PlaceholderText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.placeholdertext.aspx) (ou marca d'água) para o seletor de data do calendário fornecer ao usuário uma indicação de para que ele é usado. Para personalizar a aparência do cabeçalho, você pode definir a propriedade [HeaderTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.headertemplate.aspx) em vez de Header.
+Você pode adicionar um [Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.header) (ou rótulo) e um [PlaceholderText](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.placeholdertext) (ou marca d'água) para o seletor de data do calendário fornecer ao usuário uma indicação de para que ele é usado. Para personalizar a aparência do cabeçalho, você pode definir a propriedade [HeaderTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.headertemplate) em vez de Header.
 
 O texto de espaço reservado padrão é "selecionar uma data". Você pode remover isso definindo a propriedade PlaceholderText como uma cadeia de caracteres vazia ou pode fornecer texto personalizado conforme mostrado aqui.
 

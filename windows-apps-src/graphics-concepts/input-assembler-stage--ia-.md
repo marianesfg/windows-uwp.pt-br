@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c5e1c294da2b4ef24ff8f62b686890cb8c69c06
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 70957cbce10da25943b3c6347ccbbc81aafb5739
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646281"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370769"
 ---
 # <a name="input-assembler-ia-stage"></a>Estágio do assembler de entrada (IA)
 
@@ -22,7 +22,7 @@ O estágio do assembler de entrada fornece dados primitivos e de adjacência ao 
 ## <a name="span-idpurpose-and-usesspanspan-idpurpose-and-usesspanspan-idpurpose-and-usesspanpurpose-and-uses"></a><span id="Purpose-and-uses"></span><span id="purpose-and-uses"></span><span id="PURPOSE-AND-USES"></span>Finalidade e usos
 
 
-A finalidade do estágio de assembler de entrada (IA) é ler dados primitivos (pontos, linhas e triângulos) de buffers preenchidos pelo usuário e reunir os dados em primitivas que serão usadas por outros estágios de pipeline e anexar [valores gerados pelo sistema](https://msdn.microsoft.com/library/windows/desktop/bb509647) para ajudar a tornar os sombreadores mais eficientes. Valores gerados pelo sistema são cadeias de caracteres de texto que também são chamadas de semântica. Os estágios de sombreador programáveis são construídos em um núcleo comum de sombreador que usa valores gerados pelo sistema (como uma ID primitiva, ID de instância ou ID de vértice) para que o estágio do sombreador possa reduzir o processamento a apenas primitivas, instâncias ou vértices que ainda não foram processados.
+A finalidade do estágio de assembler de entrada (IA) é ler dados primitivos (pontos, linhas e triângulos) de buffers preenchidos pelo usuário e reunir os dados em primitivas que serão usadas por outros estágios de pipeline e anexar [valores gerados pelo sistema](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics) para ajudar a tornar os sombreadores mais eficientes. Valores gerados pelo sistema são cadeias de caracteres de texto que também são chamadas de semântica. Os estágios de sombreador programáveis são construídos em um núcleo comum de sombreador que usa valores gerados pelo sistema (como uma ID primitiva, ID de instância ou ID de vértice) para que o estágio do sombreador possa reduzir o processamento a apenas primitivas, instâncias ou vértices que ainda não foram processados.
 
 O estágio de IA pode reunir vértices em vários [tipos primitivos](primitive-topologies.md) diferentes (por exemplo, listas de linha, faixas de triângulos ou primitivas com adjacência). Tipos primitivos, como uma lista de triângulos com adjacência e uma lista de linhas com adjacência, suportam o [estágio do sombreador de geometria (GS)](geometry-shader-stage--gs-.md).
 
@@ -61,7 +61,7 @@ O estágio IA reúne os dados em primitivas e anexa valores gerados pelo sistema
 </tr>
 <tr class="even">
 <td align="left"><p><a href="using-system-generated-values.md">Usando os valores gerados pelo sistema</a></p></td>
-<td align="left"><p>Valores gerados pelo sistema são gerados pelo estágio de assembler de entrada (IA) (com base na <a href="https://msdn.microsoft.com/library/windows/desktop/bb509647">semântica</a>) da entrada fornecida pelo usuário para permitir determinadas eficiências em operações do sombreador. Anexando dados, como uma ID de instância (visível para o <a href="vertex-shader-stage--vs-.md">estágio do sombreador de vértice (VS)</a>), uma ID de vértice (visível para VS) ou uma ID primitiva (visível para <a href="geometry-shader-stage--gs-.md">estágio do sombreador de geometria (GS)</a>/<a href="pixel-shader-stage--ps-.md">estágio do sombreador de pixel (PS)</a>), um estágio do sombreador subsequente pode acessar esses valores do sistema para otimizar o processamento nesse estágio.</p></td>
+<td align="left"><p>Valores gerados pelo sistema são gerados pelo estágio de assembler de entrada (IA) (com base na <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics">semântica</a>) da entrada fornecida pelo usuário para permitir determinadas eficiências em operações do sombreador. Anexando dados, como uma ID de instância (visível para o <a href="vertex-shader-stage--vs-.md">estágio do sombreador de vértice (VS)</a>), uma ID de vértice (visível para VS) ou uma ID primitiva (visível para <a href="geometry-shader-stage--gs-.md">estágio do sombreador de geometria (GS)</a>/<a href="pixel-shader-stage--ps-.md">estágio do sombreador de pixel (PS)</a>), um estágio do sombreador subsequente pode acessar esses valores do sistema para otimizar o processamento nesse estágio.</p></td>
 </tr>
 </tbody>
 </table>

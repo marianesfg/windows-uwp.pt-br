@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08a186e0a8e7293b139f756b69966cd8d4b49c92
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1e4b4c89fff2854c36bd76cc680197fad1aa8dff
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598211"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370401"
 ---
 # <a name="aep-service-class-ids"></a>IDs de classe de serviço AEP
 
@@ -23,7 +23,7 @@ ms.locfileid: "57598211"
 
 Os serviços do Ponto de Extremidade de Associação (AEP) oferecem um contrato de programação para serviços compatível com um dispositivo via um determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles. Esses contratos são identificados com a propriedade **System.Devices.AepService.ServiceClassId**. Este tópico lista várias IDs de classe de serviço AEP conhecidas. A ID de classe de serviço AEP também é aplicável a protocolos com IDs de classe personalizada.
 
-Um desenvolvedor de aplicativos deve usar filtros de sintaxe de consulta avançada (AQS) com base nas IDs de classe para limitar suas consultas aos serviços AEP que pretendem usar. Isso limitará os resultados da consulta aos serviços relevantes e aumentará consideravelmente o desempenho, a duração da bateria e a qualidade de serviço do dispositivo. Por exemplo, um aplicativo pode usar essas IDs de classe de serviço para usar um dispositivo como uma sincronização de Miracast ou um renderizador de mídia digital DLNA (DMR). Para obter mais informações sobre como dispositivos e serviços interagem uns com os outros, consulte [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991).
+Um desenvolvedor de aplicativos deve usar filtros de sintaxe de consulta avançada (AQS) com base nas IDs de classe para limitar suas consultas aos serviços AEP que pretendem usar. Isso limitará os resultados da consulta aos serviços relevantes e aumentará consideravelmente o desempenho, a duração da bateria e a qualidade de serviço do dispositivo. Por exemplo, um aplicativo pode usar essas IDs de classe de serviço para usar um dispositivo como uma sincronização de Miracast ou um renderizador de mídia digital DLNA (DMR). Para obter mais informações sobre como dispositivos e serviços interagem uns com os outros, consulte [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind).
 
 ## <a name="bluetooth-and-bluetooth-le-services"></a>Serviços Bluetooth e Bluetooth LE
 
@@ -72,7 +72,7 @@ O protocolo Bluetooth oferece suporte a vários serviços, todos seguindo o mesm
 
  
 
-Para uma lista mais completa de serviços Bluetooth disponíveis, consulte as páginas de protocolo e serviço de Bluetooth [aqui](https://go.microsoft.com/fwlink/p/?LinkID=619586) e [aqui](https://go.microsoft.com/fwlink/p/?LinkID=619587). Você também pode usar a API [**GattServiceUuids**](https://msdn.microsoft.com/library/windows/apps/Dn297571) para obter alguns serviços GATT comuns.
+Para uma lista mais completa de serviços Bluetooth disponíveis, consulte as páginas de protocolo e serviço de Bluetooth [aqui](https://go.microsoft.com/fwlink/p/?LinkID=619586) e [aqui](https://go.microsoft.com/fwlink/p/?LinkID=619587). Você também pode usar a API [**GattServiceUuids**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceUuids) para obter alguns serviços GATT comuns.
 
 ## <a name="custom-bluetooth-le-services"></a>Serviços Bluetooth LE personalizados
 
@@ -118,7 +118,7 @@ Em geral, todos os serviços WSD têm seus nomes com hash em um GUID usando o al
 
 ## <a name="aqs-sample"></a>Amostra de AQS
 
-Esse AQS filtrará para todos os objetos **AssociationEndpointService** UPnP que ofereçam suporte para DIAL. Neste caso, [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) é definido como **AsssociationEndpointService**.
+Esse AQS filtrará para todos os objetos **AssociationEndpointService** UPnP que ofereçam suporte para DIAL. Neste caso, [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind) é definido como **AsssociationEndpointService**.
 
 ``` syntax
 System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" AND

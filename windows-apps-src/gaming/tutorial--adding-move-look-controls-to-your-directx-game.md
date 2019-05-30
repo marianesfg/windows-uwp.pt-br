@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, move-look, controles
 ms.localizationpriority: medium
-ms.openlocfilehash: 222f46bbda165442003aecea0bbd138bcb844a3b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f1516ada043ac5e9d5c059f7cd2b91cb69a5eab1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604371"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367850"
 ---
 # <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles de mover a consulta para jogos
 
@@ -178,11 +178,11 @@ Usamos os seis manipuladores de eventos para capturar os dados de entrada empreg
 
 Finalmente, usamos esses métodos e propriedades para inicializar, acessar e atualizar as informações de estado dos controladores.
 
--   **Initialize**. O aplicativo chama esse manipulador de eventos para inicializar os controles e anexá-los ao objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que descreve a janela de exibição.
+-   **Initialize**. O aplicativo chama esse manipulador de eventos para inicializar os controles e anexá-los ao objeto [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) que descreve a janela de exibição.
 -   **SetPosition**. O aplicativo chama esse método para definir as coordenadas (x, y e z) dos controles no espaço da cena.
 -   **SetOrientation**. O aplicativo chama esse método para definir a rotação sobre o eixo x e a rotação sobre o eixo y da câmera.
 -   **Obtenha\_posição**. O aplicativo acessa essa propriedade para obter a posição atual da câmera no espaço da cena. Essa propriedade é usada como um método para comunicar a posição atual da câmera ao aplicativo.
--   **Obtenha\_LookPoint**. O aplicativo acessa essa propriedade para obter o ponto para o qual a câmera do controlador está voltada atualmente.
+-   **get\_LookPoint**. O aplicativo acessa essa propriedade para obter o ponto para o qual a câmera do controlador está voltada atualmente.
 -   **Update**. Lê o estado dos controladores de movimento e visão e atualiza a posição da câmera. Esse método é chamado continuamente a partir do loop principal do aplicativo para atualizar os dados do controlador da câmera e a posição da câmera no espaço da cena.
 
 Agora já temos todos os componentes necessários para implementar os controles move-look. Portanto, chegou o momento de conectar todas essas peças.
@@ -192,17 +192,17 @@ Agora já temos todos os componentes necessários para implementar os controles 
 
 O dispatcher de eventos do Windows Runtime fornece cinco eventos que deverão ser manipulados por instâncias da classe **MoveLookController** para manipular:
 
--   [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)
--   [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)
--   [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)
--   [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271)
--   [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270)
+-   [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed)
+-   [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved)
+-   [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased)
+-   [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keyup)
+-   [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keydown)
 
-Esses eventos são implementados no tipo [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Presumimos que você tenha um objeto **CoreWindow** para trabalhar. Se não souber como obter um, veja [Como configurar o seu aplicativo C++ da Plataforma Universal do Windows (UWP) para mostrar uma visualização DirectX](https://msdn.microsoft.com/library/windows/apps/hh465077).
+Esses eventos são implementados no tipo [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow). Presumimos que você tenha um objeto **CoreWindow** para trabalhar. Se não souber como obter um, veja [Como configurar o seu aplicativo C++ da Plataforma Universal do Windows (UWP) para mostrar uma visualização DirectX](https://docs.microsoft.com/previous-versions/windows/apps/hh465077(v=win.10)).
 
 Como esses eventos são acionados enquanto o aplicativo está sendo executado, os manipuladores atualizam as informações de estado dos controladores definidas nos campos privados.
 
-Primeiro, preencheremos os manipuladores de eventos dos ponteiros de mouse e de toque. No primeiro manipulador de eventos, **OnPointerPressed()**, obtemos as coordenadas x-y do ponteiro do [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que gerencia a exibição quando o usuário clica o mouse ou toca a tela na região do controlador de visão.
+Primeiro, preencheremos os manipuladores de eventos dos ponteiros de mouse e de toque. No primeiro manipulador de eventos, **OnPointerPressed()** , obtemos as coordenadas x-y do ponteiro do [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) que gerencia a exibição quando o usuário clica o mouse ou toca a tela na região do controlador de visão.
 
 **OnPointerPressed**
 
@@ -299,11 +299,11 @@ void MoveLookController::OnPointerMoved(
 
 O manipulador de eventos **OnPointerMoved** é acionado sempre que o ponteiro se move; nesse caso, o ponteiro da tela sensível ao toque sendo arrastado ou o ponteiro do mouse sendo movido com o botão esquerdo pressionado. Se a ID do ponteiro for idêntico à ID do ponteiro do controlador de movimento, trata-se do ponteiro de movimento; caso contrário, verificamos se o ponteiro ativo é o controlador de visão.
 
-Se for o controlador de movimento, simplesmente atualizamos a posição do ponteiro. Continuamos atualizando a posição enquanto o evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) continuar sendo acionado, porque queremos comparar a posição final à primeira posição capturada com o manipulador de eventos **OnPointerPressed**.
+Se for o controlador de movimento, simplesmente atualizamos a posição do ponteiro. Continuamos atualizando a posição enquanto o evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) continuar sendo acionado, porque queremos comparar a posição final à primeira posição capturada com o manipulador de eventos **OnPointerPressed**.
 
 Se for o controlador de visão, as coisas são um pouco mais complicadas. Como precisamos calcular um novo ponto de visão e centralizar a câmera nele, calculamos o delta entre o último ponto de visão e a posição atual da tela e o multiplicamos pelo nosso fator de escala, que pode ser ajustado para tornar os movimentos de visão menores ou maiores com relação à distância do movimento na tela. Usando esse valor, calculamos a inclinação longitudinal e a rotação.
 
-Finalmente, temos que desativar os comportamentos do controlador de movimento ou de visão quando o jogador para de mover o mouse ou de tocar a tela. Usamos **OnPointerReleased**, que chamamos de quando [ **PointerReleased** ](https://msdn.microsoft.com/library/windows/apps/br208279) é acionado, para definir **m\_moveInUse** ou **m\_lookInUse** para FALSE e desativar o movimento de panorâmica da câmera e para zerar a ID do ponteiro.
+Finalmente, temos que desativar os comportamentos do controlador de movimento ou de visão quando o jogador para de mover o mouse ou de tocar a tela. Usamos **OnPointerReleased**, que chamamos de quando [ **PointerReleased** ](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) é acionado, para definir **m\_moveInUse** ou **m\_lookInUse** para FALSE e desativar o movimento de panorâmica da câmera e para zerar a ID do ponteiro.
 
 **OnPointerReleased**
 
@@ -424,7 +424,7 @@ void MoveLookController::Initialize( _In_ CoreWindow^ window )
 }
 ```
 
-**Initialize** recebe uma referência à instância de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do aplicativo como um parâmetro e registra os manipuladores de eventos que desenvolvemos para os eventos apropriados nessa **CoreWindow**. Ele inicializa os IDs dos ponteiros de movimento e visão, zera o vetor de comando para nossa implementação do controlador de movimento de tela sensível ao toque e coloca a câmera voltada diretamente para a frente quando o aplicativo é iniciado.
+**Initialize** recebe uma referência à instância de [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) do aplicativo como um parâmetro e registra os manipuladores de eventos que desenvolvemos para os eventos apropriados nessa **CoreWindow**. Ele inicializa os IDs dos ponteiros de movimento e visão, zera o vetor de comando para nossa implementação do controlador de movimento de tela sensível ao toque e coloca a câmera voltada diretamente para a frente quando o aplicativo é iniciado.
 
 ## <a name="getting-and-setting-the-position-and-orientation-of-the-camera"></a>Obtendo e definindo a posição e a orientação da câmera
 

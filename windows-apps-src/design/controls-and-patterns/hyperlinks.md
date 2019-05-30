@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9aa5053d83518c61335807874cd0d31943a60695
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b17220a039612e0b13cd9842800c37c39bf194dd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606471"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362754"
 ---
 # <a name="hyperlinks"></a>Hiperlinks
 
@@ -25,7 +25,7 @@ ms.locfileid: "57606471"
 
 Os hiperlinks levam o usuário para outra parte do aplicativo, para outro aplicativo ou para iniciar um URI (Uniform Resource Identifier) específico usando um aplicativo de navegador separado. Há duas formas de se adicionar um hiperlink a um aplicativo XAML: o elemento de texto **Hyperlink** e o controle **HyperlinkButton**.
 
-> **APIs importantes**: [Elemento de texto de hiperlink](https://msdn.microsoft.com/library/windows/apps/dn279356), [controle HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/br242739)
+> **APIs importantes**: [Elemento de texto de hiperlink](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [controle HyperlinkButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
 
 ![Um botão de hiperlink](images/controls/hyperlink-button.png)
 
@@ -38,7 +38,7 @@ Escolha o tipo correto de hiperlink com base em suas necessidades:
 
 -   Use um elemento de texto **Hyperlink** embutido dentro de um controle de texto. Um elemento Hyperlink flui com outros elementos de texto e você pode usá-lo em qualquer InlineCollection. Use um hiperlink de texto se quiser uma quebra de texto automática e não precisar necessariamente de um destino de toque grande. O texto do hiperlink pode ser pequeno e ser difícil de direcionar, especialmente para toque.
 -   Use um **HyperlinkButton** para hiperlinks autônomos. Um HyperlinkButton é um controle de botão especializado que você pode usar em qualquer lugar onde usaria um botão.
--   Use um **HyperlinkButton** com uma [(Imagem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.aspx) como seu conteúdo para criar uma imagem clicável.
+-   Use um **HyperlinkButton** com uma [(Imagem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image) como seu conteúdo para criar uma imagem clicável.
 
 ## <a name="examples"></a>Exemplos
 
@@ -58,7 +58,7 @@ Escolha o tipo correto de hiperlink com base em suas necessidades:
 
 ## <a name="create-a-hyperlink-text-element"></a>Criar um elemento de texto de hiperlink
 
-Este exemplo mostra como usar um elemento de texto de hiperlink dentro de um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).
+Este exemplo mostra como usar um elemento de texto de hiperlink dentro de um [TextBlock](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock).
 
 ```xml
 <StackPanel Width="200">
@@ -73,7 +73,7 @@ O hiperlink aparece embutido e flui com o texto ao redor:
 
 ![Exemplo de um hiperlink como um elemento de texto](images/controls_hyperlink-element.png) 
 
-> **Dica**&nbsp;&nbsp;Quando você usa um hiperlink em um controle de texto com outros elementos de texto no XAML, coloque o conteúdo em um contêiner [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) e aplique o atributo `xml:space="preserve"` ao Span para manter o espaço em branco entre o hiperlink e os outros elementos.
+> **Dica**&nbsp;&nbsp;Quando você usa um hiperlink em um controle de texto com outros elementos de texto no XAML, coloque o conteúdo em um contêiner [Span](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.span) e aplique o atributo `xml:space="preserve"` ao Span para manter o espaço em branco entre o hiperlink e os outros elementos.
 
 ## <a name="create-a-hyperlinkbutton"></a>Criar um HyperlinkButton
 
@@ -116,7 +116,7 @@ Para usar o hiperlink para navegar para um URI, defina a propriedade NavigateUri
 > [!NOTE]
 > Um URI é representado pela classe [Windows.Foundation](/uwp/api/windows.foundation.uri). Ao programar com .NET, essa classe é oculto e você deve usar a classe [System. URI](https://docs.microsoft.com/dotnet/api/system.uri). Para obter mais informações, consulte as páginas de referência para essas classes.
 
-Você não precisa usar esquemas **http:** ou **https:**. Será possível usar esquemas como **ms-appx:**, **ms-appdata:**, ou **ms-resources:**, se houver conteúdo do recurso nesses locais que seja indicado para ser carregado em um navegador. No entanto, o esquema **file:** é especificamente bloqueado. Para obter mais informações, consulte [Esquemas de URI](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
+Você não precisa usar esquemas **http:** ou **https:** . Será possível usar esquemas como **ms-appx:** , **ms-appdata:** , ou **ms-resources:** , se houver conteúdo do recurso nesses locais que seja indicado para ser carregado em um navegador. No entanto, o esquema **file:** é especificamente bloqueado. Para obter mais informações, consulte [Esquemas de URI](https://docs.microsoft.com/previous-versions/windows/apps/jj655406(v=win.10)).
 
 Quando um usuário clica no hiperlink, o valor da propriedade NavigateUri é passado para um manipulador do sistema para esquemas e tipos de URI. Em seguida, o sistema inicia o aplicativo que está registrado para o esquema do URI fornecido para NavigateUri.
 
@@ -125,7 +125,7 @@ Se você não quiser que o hiperlink carregue conteúdo em um navegador da Web p
 
 **Manipular o evento de clique**
 
-Use o evento Click para ações que não sejam iniciar um URI em um navegador, como navegação dentro do aplicativo. Por exemplo, se você quiser carregar uma nova página de aplicativo, em vez de abrir um navegador, chame um método [Frame.Navigate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.frame.navigate.aspx) dentro de seu manipulador de eventos Click para navegar para a nova página do aplicativo. Se você quiser que um URI absoluto externo seja carregado dentro de um controle de [WebView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webview.aspx) que também existe em seu aplicativo, chame [WebView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webview.navigate.aspx) como parte da lógica de seu manipulador de cliques.
+Use o evento Click para ações que não sejam iniciar um URI em um navegador, como navegação dentro do aplicativo. Por exemplo, se você quiser carregar uma nova página de aplicativo, em vez de abrir um navegador, chame um método [Frame.Navigate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate) dentro de seu manipulador de eventos Click para navegar para a nova página do aplicativo. Se você quiser que um URI absoluto externo seja carregado dentro de um controle de [WebView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview) que também existe em seu aplicativo, chame [WebView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigate) como parte da lógica de seu manipulador de cliques.
 
 Você normalmente não manipula o evento Click tão bem quanto especifica um valor de NavigateUri, uma vez que esses representam duas maneiras diferentes de usar o elemento hyperlink. Se sua intenção for abrir o URI no navegador padrão, e você tiver especificado um valor para NavigateUri, não manipule o evento Click. Por outro lado, se você manipular o evento Click, não especifique um NavigateUri.
 
@@ -136,15 +136,15 @@ Por padrão, os hiperlinks são sublinhados. Esse sublinhado é importante porqu
 
 **Elementos de texto do hiperlink**
 
-Você pode definir a propriedade [UnderlineStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.hyperlink.underlinestyle.aspx) para desabilitar o sublinhado. Se o fizer, considere o uso de [FontWeight](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.fontweight.aspx) ou de [FontStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.fontstyle.aspx) para diferenciar o texto do link.
+Você pode definir a propriedade [UnderlineStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.hyperlink.underlinestyle) para desabilitar o sublinhado. Se o fizer, considere o uso de [FontWeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement.fontweight) ou de [FontStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement.fontstyle) para diferenciar o texto do link.
 
 **HyperlinkButton** 
 
-Por padrão, o HyperlinkButton aparece como texto sublinhado quando você configura uma cadeia de caracteres como o valor da propriedade [Content](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content.aspx).
+Por padrão, o HyperlinkButton aparece como texto sublinhado quando você configura uma cadeia de caracteres como o valor da propriedade [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content).
 
 O texto não aparece sublinhado nos seguintes casos:
-- Você define um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) como o valor da propriedade Content e define a propriedade [Text](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.text.aspx) no TextBlock.
-- Você remodela o HyperlinkButton e altera o nome da parte do modelo [ContentPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentpresenter.aspx).
+- Você define um [TextBlock](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock) como o valor da propriedade Content e define a propriedade [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text) no TextBlock.
+- Você remodela o HyperlinkButton e altera o nome da parte do modelo [ContentPresenter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentpresenter).
 
 Se você precisar de um botão que apareça como texto sem sublinhado, considere usar um controle de botão padrão e aplicar o recurso interno do sistema `TextBlockButtonStyle` para sua propriedade Style.
 
@@ -154,17 +154,17 @@ Esta seção aplica-se apenas ao elemento de texto de hiperlink, não para o con
 
 **Eventos de entrada**
 
-Como um hiperlink não é um [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx), ele não tem o conjunto de eventos de entrada de elemento da interface do usuário, como Tapped, PointerPressed e assim por diante. Em vez disso, um hiperlink tem seu próprio evento Click, além do comportamento implícito do sistema que carrega qualquer URI especificado como o NavigateUri. O sistema manipula todas as ações de entrada que devem invocar as ações de hiperlink e aciona o evento Click em resposta.
+Como um hiperlink não é um [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement), ele não tem o conjunto de eventos de entrada de elemento da interface do usuário, como Tapped, PointerPressed e assim por diante. Em vez disso, um hiperlink tem seu próprio evento Click, além do comportamento implícito do sistema que carrega qualquer URI especificado como o NavigateUri. O sistema manipula todas as ações de entrada que devem invocar as ações de hiperlink e aciona o evento Click em resposta.
 
-**Conteúdo**
+**Content**
 
-O hiperlink tem restrições sobre o conteúdo que podem existir na sua coleção [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). Especificamente, um hiperlink só permite [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) e outros tipos de [Span](/uwp/api/windows.ui.xaml.documents.span) que não são outro hiperlink. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) não pode estar na coleção Inlines de um hiperlink. Tentar adicionar conteúdo restrito gera uma exceção de argumento inválido ou uma exceção de análise XAML.
+O hiperlink tem restrições sobre o conteúdo que podem existir na sua coleção [Inlines](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.span.inlines). Especificamente, um hiperlink só permite [Run](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.run) e outros tipos de [Span](/uwp/api/windows.ui.xaml.documents.span) que não são outro hiperlink. [InlineUIContainer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.inlineuicontainer) não pode estar na coleção Inlines de um hiperlink. Tentar adicionar conteúdo restrito gera uma exceção de argumento inválido ou uma exceção de análise XAML.
 
 **Comportamento de hiperlink e estilo de tema /**
 
-O hiperlink não herda [Control](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.aspx), portanto, ele não tem uma propriedade [Style](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.style.aspx) ou um [Template](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.template.aspx). Você pode editar as propriedades que são herdadas de [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.aspx), como Foreground ou FontFamily, para alterar a aparência de um hiperlink, mas você não pode usar um estilo ou modelo comum para aplicar as alterações. Em vez de usar um modelo, considere usar recursos comuns para valores de propriedades de hiperlink para fornecer consistência. Algumas propriedades de hiperlink usam padrões de um valor de extensão de marcação {ThemeResource} fornecidos pelo sistema. Isso permite que a aparência do hiperlink seja alternada de maneiras apropriadas quando o usuário altera o tema do sistema em tempo de execução.
+O hiperlink não herda [Control](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control), portanto, ele não tem uma propriedade [Style](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.style) ou um [Template](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.template). Você pode editar as propriedades que são herdadas de [TextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement), como Foreground ou FontFamily, para alterar a aparência de um hiperlink, mas você não pode usar um estilo ou modelo comum para aplicar as alterações. Em vez de usar um modelo, considere usar recursos comuns para valores de propriedades de hiperlink para fornecer consistência. Algumas propriedades de hiperlink usam padrões de um valor de extensão de marcação {ThemeResource} fornecidos pelo sistema. Isso permite que a aparência do hiperlink seja alternada de maneiras apropriadas quando o usuário altera o tema do sistema em tempo de execução.
 
-A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a propriedade [Foreground](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.foreground.aspx) para substituir isso.
+A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a propriedade [Foreground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement.foreground) para substituir isso.
 
 ## <a name="recommendations"></a>Recomendações
 
@@ -183,5 +183,5 @@ A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a
 - [Diretrizes para dicas de ferramentas](tooltips.md)
 
 **Para desenvolvedores (XAML)**
-- [Classe Windows.UI.Xaml.Documents.Hyperlink](https://msdn.microsoft.com/library/windows/apps/dn279356)
-- [Classe Windows.UI.Xaml.Controls.HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/br242739)
+- [Classe Windows.UI.Xaml.Documents.Hyperlink](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink)
+- [Windows.UI.Xaml.Controls.HyperlinkButton class](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)

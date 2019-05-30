@@ -9,25 +9,25 @@ template: detail.hbs
 keywords: teclado, acessibilidade, navegação, foco, texto, entrada e interação do usuário
 ms.date: 02/08/2017
 ms.topic: article
-ms.openlocfilehash: 1350c6e0eae057386fb721a358f71acb19c4efc1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c522e21c45a3edd08a14b081cc227a83f19a3ea0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57591761"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365360"
 ---
 # <a name="use-input-scope-to-change-the-touch-keyboard"></a>Usar o escopo de entrada para alterar o teclado virtual
 
 Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira.
 
 ### <a name="important-apis"></a>APIs Importantes
-- [InputScope](https://msdn.microsoft.com/library/windows/apps/hh702632)
-- [inputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/hh702028)
+- [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope)
+- [InputScopeNameValue](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue)
 
 
-O teclado virtual pode ser usado para entrada de texto, quando o aplicativo é executado em um dispositivo com tela sensível ao toque. O teclado virtual é invocado quando o usuário toca em um campo de entrada editável, como um **[TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)** ou um **[RichEditBox](https://msdn.microsoft.com/library/windows/apps/br227548)**. Você pode tornar a entrada de dados muito mais rápida e fácil para os usuários em seu aplicativo definindo o *escopo de entrada* do controle de texto para corresponder ao tipo de dados que o usuário deve inserir. O escopo de entrada oferece uma dica para o sistema sobre o tipo de entrada de texto esperado pelo controle, para que o sistema possa fornecer um layout de teclado virtual especializado para o tipo de entrada.
+O teclado virtual pode ser usado para entrada de texto, quando o aplicativo é executado em um dispositivo com tela sensível ao toque. O teclado virtual é invocado quando o usuário toca em um campo de entrada editável, como um **[TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)** ou um **[RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)** . Você pode tornar a entrada de dados muito mais rápida e fácil para os usuários em seu aplicativo definindo o *escopo de entrada* do controle de texto para corresponder ao tipo de dados que o usuário deve inserir. O escopo de entrada oferece uma dica para o sistema sobre o tipo de entrada de texto esperado pelo controle, para que o sistema possa fornecer um layout de teclado virtual especializado para o tipo de entrada.
 
-Por exemplo, se uma caixa de texto for usada somente para a inserção de um PIN de 4 dígitos, defina a propriedade [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) como **Number**. Isso informa o sistema para mostrar o layout do teclado numérico, facilitando a inserção do PIN.
+Por exemplo, se uma caixa de texto for usada somente para a inserção de um PIN de 4 dígitos, defina a propriedade [**InputScope**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) como **Number**. Isso informa o sistema para mostrar o layout do teclado numérico, facilitando a inserção do PIN.
 
 > [!IMPORTANT]
 > - Essas informações se aplicam somente ao SIP. Elas não se aplicam a teclados de hardware nem ao Teclado Virtual disponível nas opções de Facilidade de Acesso do Windows.
@@ -35,19 +35,19 @@ Por exemplo, se uma caixa de texto for usada somente para a inserção de um PIN
 
 ## <a name="changing-the-input-scope-of-a-text-control"></a>Alterando o escopo de entrada de um controle de texto
 
-Os escopos de entrada disponíveis para seu aplicativo são membros da enumeração **[InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/hh702028)**. Você pode definir a propriedade **InputScope** de uma **[TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)** ou **[RichEditBox](https://msdn.microsoft.com/library/windows/apps/br227548)** para um desses valores.
+Os escopos de entrada disponíveis para seu aplicativo são membros da enumeração **[InputScopeNameValue](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue)** . Você pode definir a propriedade **InputScope** de uma **[TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)** ou **[RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)** para um desses valores.
 
 > [!IMPORTANT]
-> O **[InputScope](https://msdn.microsoft.com/library/windows/apps/dn996570)** propriedade **[PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)** dá suporte apenas a **senha** e  **NumericPin** valores. Qualquer outro valor é ignorado.
+> O **[InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.inputscope)** propriedade **[PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)** dá suporte apenas a **senha** e  **NumericPin** valores. Qualquer outro valor é ignorado.
 
 Aqui, você altera o escopo de entrada de várias caixas de texto para corresponder aos dados esperados para cada caixa de texto.
 
 **Para alterar o escopo de entrada em XAML**
 
 1.  No arquivo XAML para sua página, localize a marca para o controle de texto que você deseja alterar.
-2.  Adicione o atributo [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) ao sinalizador e especifique o valor [**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028) que corresponde à entrada esperada.
+2.  Adicione o atributo [**InputScope**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) ao sinalizador e especifique o valor [**InputScopeNameValue**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue) que corresponde à entrada esperada.
 
-    Aqui estão algumas caixas de texto que podem aparecer em um formulário comum de contato com o cliente. Com o [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) definido, um teclado de toque com um layout adequado para os dados aparece para cada caixa de texto.
+    Aqui estão algumas caixas de texto que podem aparecer em um formulário comum de contato com o cliente. Com o [**InputScope**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) definido, um teclado de toque com um layout adequado para os dados aparece para cada caixa de texto.
 
     ```xaml
     <StackPanel Width="300">
@@ -60,37 +60,37 @@ Aqui, você altera o escopo de entrada de várias caixas de texto para correspon
 
 **Para alterar o escopo de entrada no código**
 
-1.  No arquivo XAML para sua página, localize a marca para o controle de texto que você deseja alterar. Se não estiver definido, defina o [atributo x:Name](https://msdn.microsoft.com/library/windows/apps/mt204788) para poder referenciar o controle no seu código.
+1.  No arquivo XAML para sua página, localize a marca para o controle de texto que você deseja alterar. Se não estiver definido, defina o [atributo x:Name](https://docs.microsoft.com/windows/uwp/xaml-platform/x-name-attribute) para poder referenciar o controle no seu código.
 
     ```csharp
     <TextBox Header="Telephone Number" x:Name="phoneNumberTextBox"/>
     ```
 
-2.  Instancie um novo objeto [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702025).
+2.  Instancie um novo objeto [**InputScope**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScope).
 
     ```csharp
     InputScope scope = new InputScope();
     ```
 
-3.  Crie uma instância de um novo objeto [**InputScopeName**](https://msdn.microsoft.com/library/windows/apps/hh702027).
+3.  Crie uma instância de um novo objeto [**InputScopeName**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeName).
     
     ```csharp
     InputScopeName scopeName = new InputScopeName();
     ```
 
-4.  Defina a propriedade [**NameValue**](https://msdn.microsoft.com/library/windows/apps/hh702032) do objeto [**InputScopeName**](https://msdn.microsoft.com/library/windows/apps/hh702027) como um valor da enumeração [**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028).
+4.  Defina a propriedade [**NameValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopename.namevalue) do objeto [**InputScopeName**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeName) como um valor da enumeração [**InputScopeNameValue**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue).
 
     ```csharp
     scopeName.NameValue = InputScopeNameValue.TelephoneNumber;
     ```
 
-5.  Adicione o objeto [**InputScopeName**](https://msdn.microsoft.com/library/windows/apps/hh702027) à coleção [**Names**](https://msdn.microsoft.com/library/windows/apps/hh702034) do objeto [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702025).
+5.  Adicione o objeto [**InputScopeName**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeName) à coleção [**Names**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscope.names) do objeto [**InputScope**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScope).
 
     ```csharp
     scope.Names.Add(scopeName);
     ```
 
-6.  Defina o objeto [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702025) como o valor da propriedade [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) do controle de texto.
+6.  Defina o objeto [**InputScope**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScope) como o valor da propriedade [**InputScope**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) do controle de texto.
 
     ```csharp
     phoneNumberTextBox.InputScope = scope;
@@ -117,17 +117,17 @@ phoneNumberTextBox.InputScope = new InputScope()
 
 ## <a name="text-prediction-spell-checking-and-auto-correction"></a>Previsão de texto, verificação ortográfica e correção automática
 
-Os controles [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) e [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548) têm várias propriedades que influenciam o comportamento do SIP. Para fornecer a melhor experiência para seus usuários, é importante entender como essas propriedades afetam a entrada de texto usando toque.
+Os controles [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) e [**RichEditBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox) têm várias propriedades que influenciam o comportamento do SIP. Para fornecer a melhor experiência para seus usuários, é importante entender como essas propriedades afetam a entrada de texto usando toque.
 
--   [**IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/br209688)— quando a verificação ortográfica está habilitada para um controle de texto, o controle interage com o mecanismo de verificação ortográfica do sistema para marcar as palavras que não são reconhecidas. Você pode tocar em uma palavra para ver uma lista de correções sugeridas. A verificação ortográfica é habilitada por padrão.
+-   [**IsSpellCheckEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.isspellcheckenabled)— quando a verificação ortográfica está habilitada para um controle de texto, o controle interage com o mecanismo de verificação ortográfica do sistema para marcar as palavras que não são reconhecidas. Você pode tocar em uma palavra para ver uma lista de correções sugeridas. A verificação ortográfica é habilitada por padrão.
 
     Para o escopo de entrada **Default**, essa propriedade também habilita o uso automático de maiúsculas da primeira palavra em uma frase e a correção automática das palavras conforme você digita. Esses recursos de correção automática podem estar desabilitados em outros escopos de entrada. Para saber mais, consulte as tabelas mais adiante neste tópico.
 
--   [**IsTextPredictionEnabled**](https://msdn.microsoft.com/library/windows/apps/br209690)— quando a previsão de texto está habilitada para um controle de texto, o sistema mostra uma lista de palavras que você pode estar começando a digitar. Você pode selecionar na lista para não precisar digitar a palavra inteira. A previsão de texto é habilitada por padrão.
+-   [**IsTextPredictionEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled)— quando a previsão de texto está habilitada para um controle de texto, o sistema mostra uma lista de palavras que você pode estar começando a digitar. Você pode selecionar na lista para não precisar digitar a palavra inteira. A previsão de texto é habilitada por padrão.
 
-    A previsão de texto poderá estar desabilitada se o escopo de entrada for diferente de **Default**, mesmo se a propriedade [**IsTextPredictionEnabled**](https://msdn.microsoft.com/library/windows/apps/br209690) for **true**. Para saber mais, consulte as tabelas mais adiante neste tópico.
+    A previsão de texto poderá estar desabilitada se o escopo de entrada for diferente de **Default**, mesmo se a propriedade [**IsTextPredictionEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled) for **true**. Para saber mais, consulte as tabelas mais adiante neste tópico.
 
--   [**PreventKeyboardDisplayOnProgrammaticFocus**](https://msdn.microsoft.com/library/windows/apps/dn299273)— quando essa propriedade for **verdadeiro**, impede que o sistema mostrando o SIP quando o foco é definido por meio de programação em um controle de texto. Em vez disso, o teclado só será mostrado quando o usuário interagir com o controle.
+-   [**PreventKeyboardDisplayOnProgrammaticFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus)— quando essa propriedade for **verdadeiro**, impede que o sistema mostrando o SIP quando o foco é definido por meio de programação em um controle de texto. Em vez disso, o teclado só será mostrado quando o usuário interagir com o controle.
 
 ## <a name="touch-keyboard-index-for-windows"></a>Índice de teclado de toque para Windows
 
@@ -162,14 +162,14 @@ O layout de teclado padrão de números e símbolos.
 - Uso automático de maiúsculas: sempre desabilitada
 - Previsão de texto: ativada por padrão, pode ser desabilitada
  
-### <a name="url"></a>Url
+### <a name="url"></a>url
 
 `<TextBox InputScope="Url"/>`
 
 ![Teclado virtual do Windows para URLs](images/input-scopes/url.png)
 
-- Inclui as teclas **.com** e ![tecla ir](images/input-scopes/kbdgokey.png) (Ir). Pressione e segure a **.com** tecla para exibir opções adicionais (**. org**, **.net**e sufixos de específico da região)
-- Inclui o **:**, **-**, e **/** chaves
+- Inclui as teclas **.com** e ![tecla ir](images/input-scopes/kbdgokey.png) (Ir). Pressione e segure a **.com** tecla para exibir opções adicionais ( **. org**, **.net**e sufixos de específico da região)
+- Inclui o **:** , **-** , e **/** chaves
 - Verificação ortográfica: desativada por padrão, pode ser habilitada
 - Correção automática: desativada por padrão, pode ser habilitada
 - Capitalização automática: desativada por padrão, pode ser habilitada
@@ -181,7 +181,7 @@ O layout de teclado padrão de números e símbolos.
 `<TextBox InputScope="EmailSmtpAddress"/>`
 
 ![Teclado virtual do Windows para endereços de email](images/input-scopes/emailsmtpaddress.png)
-- Inclui as teclas **@** e **.com**. Pressione e segure a **.com** tecla para exibir opções adicionais (**. org**, **.net**e sufixos de específico da região)
+- Inclui as teclas **@** e **.com**. Pressione e segure a **.com** tecla para exibir opções adicionais ( **. org**, **.net**e sufixos de específico da região)
 - Inclui o **_** e **-** chaves
 - Verificação ortográfica: desativada por padrão, pode ser habilitada
 - Correção automática: desativada por padrão, pode ser habilitada
@@ -189,7 +189,7 @@ O layout de teclado padrão de números e símbolos.
 - Previsão de texto: desativada por padrão, pode ser habilitada
 
 
-### <a name="number"></a>Número
+### <a name="number"></a>Number
 
 `<TextBox InputScope="Number"/>`
 
@@ -237,7 +237,7 @@ O layout de teclado padrão de números e símbolos.
 
 ![Windows teclado de toque para fórmula](images/input-scopes/formula.png)
 - Inclui o **=** chave
-- Também inclui o **%**, **$**, e **+** chaves
+- Também inclui o **%** , **$** , e **+** chaves
 - Verificação ortográfica: ativada por padrão, pode ser desabilitada
 - Correção automática: ativada por padrão, pode ser desabilitada
 - Uso automático de maiúsculas: sempre desabilitada

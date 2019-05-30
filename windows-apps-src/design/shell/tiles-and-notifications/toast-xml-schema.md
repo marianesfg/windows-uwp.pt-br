@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b9535cd8c2dd82b0c209919080df9a88bb80ccc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 33244391ca9f2ffcba21adacccebf2e9b1d73419
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612771"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363356"
 ---
 # <a name="toast-content-xml-schema"></a>Esquema XML de conteúdo de notificação do sistema
 
@@ -79,15 +79,15 @@ scenario?
 
 lang?
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obter detalhes sobre esse atributo opcional.
 
 baseUri?
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obter detalhes sobre esse atributo opcional.
 
 addImageQuery?
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obter detalhes sobre esse atributo opcional.
 
 **Os atributos no &lt;associação&gt;**
 
@@ -99,27 +99,27 @@ template?
 
 lang?
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obter detalhes sobre esse atributo opcional.
 
 baseUri?
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obter detalhes sobre esse atributo opcional.
 
 addImageQuery?
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obter detalhes sobre esse atributo opcional.
 
 **Os atributos no &lt;texto&gt;**
 
 lang?
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obter detalhes sobre esse atributo opcional.
 
 **Os atributos no &lt;imagem&gt;**
 
 src
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230844) para obter detalhes sobre esse atributo obrigatório.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-image) para obter detalhes sobre esse atributo obrigatório.
 
 placement?
 
@@ -131,11 +131,11 @@ placement?
 
 alt?
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230844) para obter detalhes sobre esse atributo opcional.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-image) para obter detalhes sobre esse atributo opcional.
 
 addImageQuery?
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230844) para obter detalhes sobre esse atributo opcional.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-image) para obter detalhes sobre esse atributo opcional.
 
 hint-crop?
 
@@ -148,15 +148,15 @@ hint-crop?
 
 src?
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230842) para obter detalhes sobre esse atributo opcional.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-audio) para obter detalhes sobre esse atributo opcional.
 
 loop?
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230842) para obter detalhes sobre esse atributo opcional.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-audio) para obter detalhes sobre esse atributo opcional.
 
 silent?
 
--   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230842) para obter detalhes sobre esse atributo opcional.
+-   Consulte [este artigo sobre o esquema de elementos](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-audio) para obter detalhes sobre esse atributo opcional.
 
 ## <a name="schemas-ltactiongt"></a>Esquemas: &lt;ação&gt;
 

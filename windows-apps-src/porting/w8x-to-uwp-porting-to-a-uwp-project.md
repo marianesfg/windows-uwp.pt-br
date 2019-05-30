@@ -6,24 +6,24 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c7a40d81171113656a39dda2fe02e0701fdd8ba4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fac31b773c2326f8a9e0ed50cdf876552fee5689
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596651"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372253"
 ---
 # <a name="porting-a-windows-runtime-8x-project-to-a-uwp-project"></a>Portabilidade de um projeto do Windows Runtime 8.x para um projeto UWP
 
 
 
-Você tem duas opções ao começar o processo de portabilidade. Uma é editar uma cópia dos arquivos do seu projeto existente, inclusive o manifesto do pacote do aplicativo (para essa opção, consulte as informações sobre como atualizar seus arquivos de projeto em [Migrar aplicativos para a UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/mt148501.aspx)). A outra opção é criar um novo projeto do Windows 10 no Visual Studio e copie os arquivos para ele. A primeira seção deste tópico descreve a segunda opção, mas o restante do tópico tem informações adicionais aplicáveis às duas opções. Você também pode optar por manter o seu novo projeto do Windows 10 na mesma solução que seus projetos existentes e compartilhar arquivos de código-fonte usando um projeto compartilhado. Ou é possível manter o novo projeto em uma solução própria e compartilhar arquivos de código-fonte usando-se o recurso de arquivos vinculados no Visual Studio.
+Você tem duas opções ao começar o processo de portabilidade. Uma é editar uma cópia dos arquivos do seu projeto existente, inclusive o manifesto do pacote do aplicativo (para essa opção, consulte as informações sobre como atualizar seus arquivos de projeto em [Migrar aplicativos para a UWP (Plataforma Universal do Windows)](https://docs.microsoft.com/visualstudio/misc/migrate-apps-to-the-universal-windows-platform-uwp?view=vs-2015)). A outra opção é criar um novo projeto do Windows 10 no Visual Studio e copie os arquivos para ele. A primeira seção deste tópico descreve a segunda opção, mas o restante do tópico tem informações adicionais aplicáveis às duas opções. Você também pode optar por manter o seu novo projeto do Windows 10 na mesma solução que seus projetos existentes e compartilhar arquivos de código-fonte usando um projeto compartilhado. Ou é possível manter o novo projeto em uma solução própria e compartilhar arquivos de código-fonte usando-se o recurso de arquivos vinculados no Visual Studio.
 
 ## <a name="create-the-project-and-copy-files-to-it"></a>Crie o projeto e copie os arquivos nele
 
 Essas etapas se concentrar na opção de criar um novo projeto do Windows 10 no Visual Studio e copie os arquivos para ele. Alguns dos detalhes relativos ao número de projetos que você cria e quais arquivos devem ser copiados dependem de fatores e decisões descritos em [Se você tiver um aplicativo Universal 8.1](w8x-to-uwp-root.md) e nas seções que seguem. Estas etapas supõem o caso mais simples.
 
-1.  Inicie o Microsoft Visual Studio 2015 e criar um novo projeto de aplicativo em branco (Universal Windows). Para obter mais informações, consulte [Jumpstart seu tempo de execução do Windows 8.x aplicativo usando modelos (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Seu novo projeto cria um pacote do aplicativo (um arquivo appx) que será executado em todas as famílias de dispositivos.
+1.  Inicie o Microsoft Visual Studio 2015 e criar um novo projeto de aplicativo em branco (Universal Windows). Para obter mais informações, consulte [Jumpstart seu tempo de execução do Windows 8.x aplicativo usando modelos (C#, C++, Visual Basic)](https://docs.microsoft.com/previous-versions/windows/apps/hh768232(v=win.10)). Seu novo projeto cria um pacote do aplicativo (um arquivo appx) que será executado em todas as famílias de dispositivos.
 2.  No seu projeto de aplicativo Universal 8.1, identifique todos os arquivos de código-fonte e arquivos de ativo visual que você deseja reutilizar. Usando o Explorador de Arquivos, copie modelos de dados, modelos de exibição, ativos visuais, dicionários de recursos, estrutura de pastas e tudo mais que deseja reutilizar em seu novo projeto. Copie ou crie subpastas no disco conforme necessário.
 3.  Copie também os modos de exibição (por exemplo, MainPage.xaml e MainPage.xaml.cs) para o novo projeto. Novamente, crie novas subpastas conforme necessário e remova os modos de exibição existentes do projeto. Porém, antes de substituir ou remover um modo de exibição gerado pelo Visual Studio, mantenha uma cópia, pois ela pode ser útil para referência posterior. A primeira fase da portabilidade de um aplicativo Universal 8.1 concentra-se em fazer com que ele tenha uma aparência boa e funcione bem em uma família de dispositivos. Mais tarde, você voltará sua atenção para certificar-se de que os modos de exibição adaptam-se bem a todos os fatores forma e, opcionalmente, adicionar qualquer código adaptável para tirar o máximo proveito de uma família de dispositivos específica.
 4.  No **Gerenciador de Soluções**, verifique se **Mostrar Todos os Arquivos** está ativado. Selecione os arquivos copiados, clique neles com o botão direito do mouse e clique em **Incluir no Projeto**. Isso incluirá automaticamente suas pastas continentes. Em seguida, você pode desativar **Mostrar Todos os Arquivos**, se desejar. Um fluxo de trabalho alternativo, se preferir, é usar o comando **Adicionar Item Existente**, tendo criado qualquer subpasta necessária no **Gerenciador de Soluções** do Visual Studio. Verifique se os ativos visuais têm **Ação de Compilação** definida como **Conteúdo** e **Copiar para Diretório de Saída** definida como **Não Copiar**.
@@ -39,7 +39,7 @@ Você descobrirá que refatorar um pouco, e/ou adicionar código adaptável (que
 -   Você deve ser capaz de eliminar grande parte das diretivas de compilação condicional no código-fonte do seu aplicativo Universal 8.1 se precisar apenas dar suporte ao Windows 10. Consulte [Compilação condicional e código adaptável](#conditional-compilation-and-adaptive-code) neste tópico.
 -   Para usar recursos que não estejam disponíveis em todas as famílias de dispositivos (por exemplo, impressoras, scanners ou o botão da câmera), você pode escrever um código adaptável. Consulte o terceiro exemplo em [Compilação condicional e código adaptável](#conditional-compilation-and-adaptive-code) neste tópico.
 -   Se você quiser dar suporte a Windows 8.1, Windows Phone 8.1 e Windows 10, você pode manter três projetos na mesma solução e compartilhar código com um projeto compartilhado. Como alternativa, você pode compartilhar arquivos de código-fonte entre projetos. Veja como: no Visual Studio, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções**, selecione **Adicionar Item Existente**, selecione os arquivos a serem compartilhados e clique em **Adicionar como Link**. Armazene seus arquivos de código-fonte em uma pasta comum no sistema de arquivos onde os projetos vinculados a eles possam vê-los. E não se esqueça de adicioná-los ao controle do código-fonte.
--   Para reutilização no nível binário, em vez do nível do código-fonte, consulte [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](https://msdn.microsoft.com/library/windows/apps/xaml/br230301.aspx). Também há bibliotecas de classes portáteis que suporte o subconjunto de APIs do .NET que estão disponíveis no .NET Framework para aplicativos do Windows 10 (.NET Core), Windows Phone 8.1 e Windows 8.1 e o .NET Framework completo. Os assemblies da Biblioteca de Classes Portáteis são compatíveis com binários em todas essas plataformas. Use o Visual Studio para criar um projeto direcionado a uma Biblioteca de Classes Portátil. Consulte [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](https://msdn.microsoft.com/library/gg597391.aspx).
+-   Para reutilização no nível binário, em vez do nível do código-fonte, consulte [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br230301(v=vs.140)). Também há bibliotecas de classes portáteis que suporte o subconjunto de APIs do .NET que estão disponíveis no .NET Framework para aplicativos do Windows 10 (.NET Core), Windows Phone 8.1 e Windows 8.1 e o .NET Framework completo. Os assemblies da Biblioteca de Classes Portáteis são compatíveis com binários em todas essas plataformas. Use o Visual Studio para criar um projeto direcionado a uma Biblioteca de Classes Portátil. Consulte [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](https://docs.microsoft.com/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library).
 
 ## <a name="extension-sdks"></a>SDKs de extensão
 
@@ -63,7 +63,7 @@ O nome e o número da versão correspondem às pastas no local instalado do SDK.
 
 `\Program Files (x86)\Windows Kits\10\Extension SDKs\WindowsMobile\10.0.x.y`
 
-A menos que o aplicativo seja segmentado para a família de dispositivos que implementa a API, você precisará usar a classe [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para testar a presença da API antes de chamá-la (isso se chama código adaptável. Essa condição então será avaliada onde quer que seu aplicativo seja executado, mas só será avaliada como "true" em dispositivos em que a API esteja presente e, portanto, disponível para ser chamada. Só use SDKs de extensão e código adaptável depois de verificar primeiramente se existe uma API universal. Alguns exemplos são fornecidos na seção abaixo.
+A menos que o aplicativo seja segmentado para a família de dispositivos que implementa a API, você precisará usar a classe [**ApiInformation**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.ApiInformation) para testar a presença da API antes de chamá-la (isso se chama código adaptável. Essa condição então será avaliada onde quer que seu aplicativo seja executado, mas só será avaliada como "true" em dispositivos em que a API esteja presente e, portanto, disponível para ser chamada. Só use SDKs de extensão e código adaptável depois de verificar primeiramente se existe uma API universal. Alguns exemplos são fornecidos na seção abaixo.
 
 Além disso, consulte [Manifesto do pacote do aplicativo](#app-package-manifest).
 
@@ -83,7 +83,7 @@ Esse primeiro exemplo mostra o padrão de uso para a API **PickSingleFileAsync**
 #endif // WINDOWS_APP
 ```
 
-Windows 10 é convertido na [ **PickSingleFileAsync** ](https://msdn.microsoft.com/library/windows/apps/jj635275) API, assim, seu código simplifica a este:
+Windows 10 é convertido na [ **PickSingleFileAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync) API, assim, seu código simplifica a este:
 
 ```csharp
     // Use Windows.Storage.Pickers.FileOpenPicker.PickSingleFileAsync
@@ -106,7 +106,7 @@ Neste exemplo, lidamos com o botão Voltar do hardware, mas somente no Windows P
 #endif // WINDOWS_PHONE_APP
 ```
 
-No Windows 10, o evento do botão Voltar é um conceito universal. Os botões Voltar implementados no hardware ou no software acionarão o evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596), logo, este é o evento a ser manipulado.
+No Windows 10, o evento do botão Voltar é um conceito universal. Os botões Voltar implementados no hardware ou no software acionarão o evento [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.backrequested), logo, este é o evento a ser manipulado.
 
 ```csharp
     Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested +=
@@ -137,7 +137,7 @@ void HardwareButtons_CameraPressed(object sender, Windows.Phone.UI.Input.CameraE
 #endif // WINDOWS_PHONE_APP
 ```
 
-No Windows 10, o botão de câmera de hardware é um conceito específico para a família de dispositivos móveis. Como um pacote do aplicativo será executado em todos os dispositivos, mudaremos nossa condição em tempo de compilação para uma condição em tempo de execução usando o que é conhecido como código adaptável. Para isso, usamos a classe [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar, em tempo de execução, a presença da classe [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** é definido no SDK de extensão móvel, portanto, precisamos adicionar uma referência a esse SDK ao nosso projeto para que esse código seja compilado. Porém, o manipulador só será executado em um dispositivo que implementa os tipos definidos no SDK de extensão móvel, que é a família de dispositivos móveis. Portanto, esse código é equivalente ao código universal 8.1 no sentido de que é cuidadoso em usar somente recursos que estão presentes, embora consiga isso de uma maneira diferente.
+No Windows 10, o botão de câmera de hardware é um conceito específico para a família de dispositivos móveis. Como um pacote do aplicativo será executado em todos os dispositivos, mudaremos nossa condição em tempo de compilação para uma condição em tempo de execução usando o que é conhecido como código adaptável. Para isso, usamos a classe [**ApiInformation**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.ApiInformation) para consultar, em tempo de execução, a presença da classe [**HardwareButtons**](https://docs.microsoft.com/uwp/api/Windows.Phone.UI.Input.HardwareButtons). **HardwareButtons** é definido no SDK de extensão móvel, portanto, precisamos adicionar uma referência a esse SDK ao nosso projeto para que esse código seja compilado. Porém, o manipulador só será executado em um dispositivo que implementa os tipos definidos no SDK de extensão móvel, que é a família de dispositivos móveis. Portanto, esse código é equivalente ao código universal 8.1 no sentido de que é cuidadoso em usar somente recursos que estão presentes, embora consiga isso de uma maneira diferente.
 
 ```csharp
     // Note: Cache the value instead of querying it more than once.
@@ -162,9 +162,9 @@ Consulte também [Detectando a plataforma em que seu aplicativo está sendo exec
 
 ## <a name="app-package-manifest"></a>Manifesto do pacote do aplicativo
 
-O [o que mudou no Windows 10](https://msdn.microsoft.com/library/windows/apps/dn705793) tópico lista as alterações à referência de esquema de manifesto do pacote para Windows 10, incluindo elementos que foram adicionados, removidos e alterados. Para obter informações de referência sobre todos os elementos, atributos e tipos do esquema, consulte [Hierarquia de elementos](https://msdn.microsoft.com/library/windows/apps/dn934819). Se você estiver portando um aplicativo da loja do Windows Phone, ou se seu aplicativo é uma atualização para um aplicativo da Windows Phone Store, certifique-se de que o elemento **PM: phoneidentity** corresponda ao que está no manifesto do aplicativo do seu aplicativo anterior (use os mesmos GUIDs que foram atribuídos ao aplicativo pela loja). Isso garante que os usuários do seu aplicativo que estiverem atualizando para o Windows 10 receberão seu novo aplicativo como uma atualização, não uma duplicação. Consulte o tópico [**PM: phoneidentity**](https://msdn.microsoft.com/library/windows/apps/dn934763) de referência para obter mais detalhes.
+O [o que mudou no Windows 10](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/what-s-changed-in-windows-10) tópico lista as alterações à referência de esquema de manifesto do pacote para Windows 10, incluindo elementos que foram adicionados, removidos e alterados. Para obter informações de referência sobre todos os elementos, atributos e tipos do esquema, consulte [Hierarquia de elementos](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/root-elements). Se você estiver portando um aplicativo da loja do Windows Phone, ou se seu aplicativo é uma atualização para um aplicativo da Windows Phone Store, certifique-se de que o elemento **PM: phoneidentity** corresponda ao que está no manifesto do aplicativo do seu aplicativo anterior (use os mesmos GUIDs que foram atribuídos ao aplicativo pela loja). Isso garante que os usuários do seu aplicativo que estiverem atualizando para o Windows 10 receberão seu novo aplicativo como uma atualização, não uma duplicação. Consulte o tópico [**PM: phoneidentity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-pm-phoneidentity) de referência para obter mais detalhes.
 
-As configurações no projeto (inclusive todas as referências de SDKs de extensão) determinam a área da superfície da API que o aplicativo pode chamar. Porém, o manifesto do pacote do aplicativo é o que determina o conjunto real de dispositivos em que os clientes podem instalar o aplicativo da Loja. Para obter mais informações, consulte exemplos em [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903).
+As configurações no projeto (inclusive todas as referências de SDKs de extensão) determinam a área da superfície da API que o aplicativo pode chamar. Porém, o manifesto do pacote do aplicativo é o que determina o conjunto real de dispositivos em que os clientes podem instalar o aplicativo da Loja. Para obter mais informações, consulte exemplos em [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily).
 
 É possível editar o manifesto do pacote do aplicativo para definir diversas declarações, recursos e outras configurações de que alguns recursos precisam. Você pode usar o editor de manifesto de pacote de aplicativo do Visual Studio para editá-lo. Se o **Gerenciador de Soluções** não for mostrado, escolha-o no menu **Exibir**. Clique duas vezes em **Package.appxmanifest**. Isso abre a janela do editor de manifesto. Selecione a guia apropriada para fazer alterações e salve.
 
@@ -172,8 +172,8 @@ O próximo tópico é [Solução de problemas](w8x-to-uwp-troubleshooting.md).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Desenvolver aplicativos para a plataforma Windows Universal](https://msdn.microsoft.com/library/dn975273.aspx)
-* [Iniciar rapidamente seu tempo de execução do Windows 8.x aplicativo usando modelos (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)
-* [Criando componentes de tempo de execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
-* [Desenvolvimento de plataforma cruzada com a biblioteca de classes portátil](https://msdn.microsoft.com/library/gg597391.aspx)
+* [Desenvolver aplicativos para a plataforma Windows Universal](https://docs.microsoft.com/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp?view=vs-2015)
+* [Iniciar rapidamente seu tempo de execução do Windows 8.x aplicativo usando modelos (C#, C++, Visual Basic)](https://docs.microsoft.com/previous-versions/windows/apps/hh768232(v=win.10))
+* [Criando componentes de tempo de execução do Windows](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
+* [Desenvolvimento de plataforma cruzada com a biblioteca de classes portátil](https://docs.microsoft.com/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)
 

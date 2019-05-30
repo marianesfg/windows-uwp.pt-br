@@ -6,12 +6,12 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
-ms.openlocfilehash: 42ec5c1e91fbeebcaad68f346f317893fdfb2e1c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3f979edbd49699447040880964dd1378bc7c94c0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606881"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362078"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Testes de app de Ponte de Desktop do Windows
 
@@ -118,7 +118,7 @@ A imagem {image name} está ausente no pacote.  | Uma imagem necessária está a
 A imagem {image name} não é um arquivo de imagem válido.  | Verifique se todas as imagens do aplicativo atendem às restrições adequadas de tipo de formato de arquivo. Na mensagem real, {image name} contém o nome da imagem que não é válida. 
 A imagem "BadgeLogo" tem um valor ABGR {value} na posição (x, y) que não é válido. O pixel deve ser branco (##FFFFFF) ou transparente (00######)  | O logotipo de selo é uma imagem mostrada ao lado da notificação de selo para identificar o aplicativo na tela de bloqueio. Essa imagem deve ser monocromática (pode conter somente pixels brancos ou transparentes). Na mensagem real, {value} contém o valor da cor na imagem que não é válido. 
 A imagem "BadgeLogo" tem um valor ABGR {value} na posição (x, y) que não é válido para a imagem branca de alto contraste. O pixel deve ser (##2A2A2A) ou mais escuro, ou transparente (00######).  | O logotipo de selo é uma imagem mostrada ao lado da notificação de selo para identificar o aplicativo na tela de bloqueio. Como o logotipo do selo é mostrado em uma tela de fundo branca quando está em branco de alto contraste, ele deve ser uma versão mais escura do logotipo padrão do selo. No banco de alto contraste, o logotipo do selo pode conter somente pixels que são mais escuros que (##2A2A2A) ou transparentes. Na mensagem real, {value} contém o valor da cor na imagem que não é válido. 
-A imagem deve definir pelo menos uma variante, sem um qualificador TargetSize. Ela deve definir um qualificador Scale ou deixar Scale e TargetSize não especificados, que tem o padrão Scale-100.  | Para saber mais, veja os guias sobre [design responsivo](https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx) e [recursos do app](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data). 
+A imagem deve definir pelo menos uma variante, sem um qualificador TargetSize. Ela deve definir um qualificador Scale ou deixar Scale e TargetSize não especificados, que tem o padrão Scale-100.  | Para saber mais, veja os guias sobre [design responsivo](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) e [recursos do app](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data). 
 O pacote tem um arquivo "resources.pri" ausente.  | Se você tiver conteúdo localizável no manifesto do aplicativo, verifique se o pacote do aplicativo inclui um arquivo resources.pri válido. 
 O arquivo "resources.pri" deve conter um mapa de recursos com um nome que corresponda ao nome do pacote {package full name}  | Você pode obter esse erro quando o manifesto é alterado e o nome do mapa de recursos no resources.pri não corresponde mais ao nome do pacote no manifesto. Na mensagem real, {package full name} contém o nome do pacote que resources.pri deve conter. Para corrigir isso, você precisa recompilar o resources.pri e a maneira mais fácil de fazer isso é recompilando o pacote do app. 
 O arquivo "resources.pri" não deve ter o AutoMerge habilitado.  | O MakePRI.exe oferece suporte a uma opção denominada AutoMerge. O valor padrão de AutoMerge é desativar. Quando está habilitado, o AutoMerge mescla os recursos de pacote de idiomas do app em um único resources.pri no tempo de execução. Não recomendamos isso para aplicativos que você pretende distribuir por meio do Microsoft Store. O resources.pri de um aplicativo que é distribuído por meio do Microsoft Store deve estar na raiz do pacote do aplicativo e contêm todas as referências de linguagem que o aplicativo é compatível. 
@@ -156,7 +156,7 @@ Seu app pode declarar os tipos de arquivo aos quais ele pode ser associado. Uma 
 * **Regra de dependência de estrutura**  
 Esse teste enfatiza o requisito de que os app declarem as devidas dependências na UWP. Se existir uma dependência inadequada, o teste falhará. Se houver incompatibilidade entre a versão do sistema operacional ao qual o aplicativo se destina e as dependências de estrutura que foram feitas, o teste falhará. O teste também falha quando o aplicativo se refere a versões de "visualização" das dlls de estrutura.
 * **Verificação de comunicação entre processos (IPC)**  
-Esse teste impõe o requisito de que os apps de Ponte de Desktop não se comunicam fora do contêiner do app para componentes de desktop. A comunicação entre processos é destinada apenas a aplicativos de sideload. Os aplicativos que especificarem o [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) com nome igual a `DesktopApplicationPath` falharão nesse teste.  
+Esse teste impõe o requisito de que os apps de Ponte de Desktop não se comunicam fora do contêiner do app para componentes de desktop. A comunicação entre processos é destinada apenas a aplicativos de sideload. Os aplicativos que especificarem o [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute) com nome igual a `DesktopApplicationPath` falharão nesse teste.  
 
 **Ação corretiva**  
 Analise o manifesto do aplicativo em relação aos requisitos descritos em [Requisitos do pacote do aplicativo](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements).
@@ -217,10 +217,10 @@ Esse teste verifica todos os componentes da UWP no app:
 Isso pode ser corrigido, garantindo que o app foi compilado como um build de versão e não como um build de depuração. 
 
 > [!NOTE]
-> O build de depuração de um aplicativo falhará esse teste, mesmo que o aplicativo usa somente [APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx). Examine as mensagens de erro para identificar a API de presente que não é uma API permitida para aplicativos UWP. 
+> O build de depuração de um aplicativo falhará esse teste, mesmo que o aplicativo usa somente [APIs para aplicativos UWP](https://docs.microsoft.com/uwp/). Examine as mensagens de erro para identificar a API de presente que não é uma API permitida para aplicativos UWP. 
 
 > [!NOTE]
-> Aplicativos C++ que são criados em uma configuração de depuração falhará nesse teste, mesmo se a configuração usa apenas APIs do SDK do Windows para aplicativos UWP. Ver [alternativas para APIs do Windows em aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) para obter mais informações.
+> Aplicativos C++ que são criados em uma configuração de depuração falhará nesse teste, mesmo se a configuração usa apenas APIs do SDK do Windows para aplicativos UWP. Ver [alternativas para APIs do Windows em aplicativos UWP](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps) para obter mais informações.
 
 ### <a name="6-user-account-control-uac-test"></a>6. Teste UAC (controle) da conta de usuário  
 
@@ -286,4 +286,4 @@ Remova todas as chaves de assinatura de código privado (como arquivos .snk e .p
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies)

@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, versões de pré-lançamento, pacotes de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f55a218c0cb4f4964fe12eb8e2eeb5b504f6405
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 66e64f2c499835a345bb9563fd005b86a926a4d2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334774"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372010"
 ---
 # <a name="get-package-flights-for-an-app"></a>Obter pacotes de pré-lançamento de um app
 
-Use esse método na API de envio a Microsoft Store para listar os voos de pacote para um aplicativo que é registrado em sua conta no Partner Center. Para obter mais informações sobre pacotes de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).
+Use esse método na API de envio a Microsoft Store para listar os voos de pacote para um aplicativo que é registrado em sua conta no Partner Center. Para obter mais informações sobre pacotes de pré-lançamento, consulte [Pacotes de pré-lançamento](https://docs.microsoft.com/windows/uwp/publish/package-flights).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -44,7 +44,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 |  Nome  |  Tipo  |  Descrição  |  Obrigatório  |
 |------|------|------|------|
-|  applicationId  |  cadeia de caracteres  |  A ID da Loja do aplicativo para o qual você deseja recuperar os pacotes de pré-lançamento. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Sim  |
+|  applicationId  |  cadeia de caracteres  |  A ID da Loja do aplicativo para o qual você deseja recuperar os pacotes de pré-lançamento. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Sim  |
 |  top  |  int  |  O número de itens a serem retornados na solicitação (ou seja, o número de pacotes de pré-lançamento a serem retornados). Se a conta tiver mais pacotes de pré-lançamento que o valor especificado na consulta, o corpo da resposta incluirá um caminho relativo do URI que você pode acrescentar ao URI do método para solicitar a próxima página de dados.  |  Não  |
 |  skip  |  int  |  O número de itens a serem ignorados na consulta antes de retornar os itens restantes. Use este parâmetro para percorrer conjuntos de dados. Por exemplo, top=10 e skip=0 recuperam os itens de 1 a 10, top=10 e skip=10 recuperam os itens de 11 a 20 e assim por diante.  |  Não  |
 

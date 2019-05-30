@@ -7,12 +7,12 @@ ms.date: 04/19/2019
 ms.topic: article
 keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 910e3108009704d444fb81b195f9dd9eae3daa9d
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: b2e1e2dfdb1dd52e1dd07a146badd78a6bb809fa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63798188"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359927"
 ---
 # <a name="device-portal-core-api-reference"></a>Referência de API central do Device Portal
 
@@ -1373,7 +1373,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | Parâmetro do URI | Descrição |
 | :---          | :--- |
 | autoreboot   | (**opcional**) True ou false. Isso indica se o sistema reinicia automaticamente após alguma falha ou bloqueio. |
-| dumptype   | (**opcional**) O tipo de despejo. Para os valores aceitos, consulte [Enumeração de CrashDumpType](https://msdn.microsoft.com/library/azure/microsoft.azure.management.insights.models.crashdumptype.aspx).|
+| dumptype   | (**opcional**) O tipo de despejo. Para os valores aceitos, consulte [Enumeração de CrashDumpType](https://docs.microsoft.com/previous-versions/azure/reference/dn802457(v=azure.100)).|
 | maxdumpcount   | (**opcional**) O número máximo de despejos para salvar. |
 | overwrite   | (**opcional**) True ou false. Isso indica a substituição ou não de despejos antigos quando o limite do contador de despejos especificado pelo *maxdumpcount* foi atingido. |
 
@@ -2362,7 +2362,7 @@ Você pode obter o subvalor para um esquema de energia usando o seguinte formato
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/power/cfg/*<power scheme path>* |
+| OBTER | /api/power/cfg/ *<power scheme path>* |
 
 Opções:
 - SCHEME_CURRENT
@@ -2500,7 +2500,7 @@ Você pode definir o subvalor para um esquema de energia usando o seguinte forma
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/power/cfg/*<power scheme path>* |
+| POSTAR | /api/power/cfg/ *<power scheme path>* |
 
 
 **Parâmetros de URI**

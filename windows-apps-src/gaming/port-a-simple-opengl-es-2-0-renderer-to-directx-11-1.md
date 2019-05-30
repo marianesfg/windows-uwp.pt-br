@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, opengl, direct3d 11, portabilidade
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b6d06ff168f778c87e46fa399775492a3cebcaa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3c17e0b8ceb5938b7ca224f4a67198929a37a7f4
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594211"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368367"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portar um renderizador simples do OpenGL ES 2.0 para o Direct3D 11
 
@@ -27,7 +27,7 @@ Para este exercício de portabilidade, vamos começar com noções básicas: tra
 
 Este tópico começa após a criação de um novo projeto do DirectX 11. Para aprender a criar um novo projeto DirectX 11, leia [Criar um novo projeto DirectX 11 para a Plataforma Universal do Windows (UWP)](user-interface.md).
 
-O projeto criado de algum desses links tem todos os códigos para a infraestrutura [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476345) preparada e você pode iniciar imediatamente o processo de portabilidade do seu renderizador Open GL ES 2.0 para o Direct3D 11.
+O projeto criado de algum desses links tem todos os códigos para a infraestrutura [Direct3D](https://docs.microsoft.com/windows/desktop/direct3d11/dx-graphics-overviews) preparada e você pode iniciar imediatamente o processo de portabilidade do seu renderizador Open GL ES 2.0 para o Direct3D 11.
 
 Este tópico mostra dois caminhos de código que realizam a mesma tarefa básica relativa a gráficos: exibir um cubo giratório sombreado por vértices em uma janela. Nos dois casos, o código abrange o seguinte processo:
 
@@ -89,7 +89,7 @@ Essa estrutura tem uma instância e contém todos os componentes necessários pa
 
 ### <a name="technologies"></a>Tecnologias
 
--   [Microsoft Visual C++](https://msdn.microsoft.com/library/vstudio/60k1461a.aspx)
+-   [Microsoft Visual C++](https://docs.microsoft.com/previous-versions/60k1461a(v=vs.140))
 -   OpenGL ES 2.0
 
 ### <a name="prerequisites"></a>Pré-requisitos

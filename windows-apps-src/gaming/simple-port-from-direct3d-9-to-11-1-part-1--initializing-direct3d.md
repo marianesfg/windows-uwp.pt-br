@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, direct3d 11, inicialização, fazendo a portabilidade, direct3d 9
 ms.localizationpriority: medium
-ms.openlocfilehash: 2aaf6dcc001a09e33588ac18898767b9cf92819c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c5a7f33ddbc6d70af5293b92165892c2098e452d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604181"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368028"
 ---
 # <a name="initialize-direct3d-11"></a>Inicializar o Direct3D 11
 
@@ -29,7 +29,7 @@ Mostra como converter o código de inicialização do Direct3D 9 para o Direct3D
 ## <a name="initialize-the-direct3d-device"></a>Inicializar o dispositivo Direct3D
 
 
-No Direct3D 9, criamos um identificador para o dispositivo Direct3D chamando [**IDirect3D9::CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174313). Começamos pela obtenção de um ponteiro para [**IDirect3D9 interface**](https://msdn.microsoft.com/library/windows/desktop/bb174300) e especificamos alguns parâmetros para controlar a configuração do dispositivo Direct3D e da cadeia de troca. Antes disso, chamamos [**GetDeviceCaps**](https://msdn.microsoft.com/library/windows/desktop/dd144877) para garantir que não estávamos solicitando ao dispositivo algo que não pudesse fazer.
+No Direct3D 9, criamos um identificador para o dispositivo Direct3D chamando [**IDirect3D9::CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-createdevice). Começamos pela obtenção de um ponteiro para [**IDirect3D9 interface**](https://docs.microsoft.com/windows/desktop/api/d3d9helper/nn-d3d9helper-idirect3d9) e especificamos alguns parâmetros para controlar a configuração do dispositivo Direct3D e da cadeia de troca. Antes disso, chamamos [**GetDeviceCaps**](https://docs.microsoft.com/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) para garantir que não estávamos solicitando ao dispositivo algo que não pudesse fazer.
 
 Direct3D 9
 
@@ -69,7 +69,7 @@ m_pD3D->CreateDevice(
 
 No Direct3D 11, o contexto de dispositivo e a infraestrutura gráfica são considerados separadamente do dispositivo em si. A inicialização é dividida em várias etapas.
 
-Primeiramente, criamos o dispositivo. Vamos obter uma lista de níveis de recursos compatíveis com o dispositivo; ela contém a maior parte das informações de que precisamos sobre a GPU. Além disso, não precisamos criar uma interface apenas para acessar o Direct3D. Em vez disso, usamos a API básica [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082). Ela fornece um identificador para o dispositivo e seu contexto imediato, usado para definir o estado do pipeline e gerar comandos de renderização.
+Primeiramente, criamos o dispositivo. Vamos obter uma lista de níveis de recursos compatíveis com o dispositivo; ela contém a maior parte das informações de que precisamos sobre a GPU. Além disso, não precisamos criar uma interface apenas para acessar o Direct3D. Em vez disso, usamos a API básica [**D3D11CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice). Ela fornece um identificador para o dispositivo e seu contexto imediato, usado para definir o estado do pipeline e gerar comandos de renderização.
 
 Após a criação do dispositivo Direct3D 11 e de seu contexto, podemos usar a funcionalidade do ponteiro COM para obter as versões mais recentes das interfaces, que incluem recursos adicionais e são sempre recomendadas.
 
@@ -125,7 +125,7 @@ O Direct3D 11 inclui uma API de dispositivo chamada DXGI (infraestrutura de elem
 
 O dispositivo Direct3D implementa uma interface COM para DXGI. Primeiro precisamos obter essa interface e usá-la para solicitar o adaptador DXGI que hospeda o dispositivo. Depois, usamos o adaptador DXGI para criar uma fábrica DXGI.
 
-> **Observação**    elas são interfaces COM, portanto, sua primeira resposta pode ser usar [ **QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Porém, em vez disso, use ponteiros inteligentes [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx). Em seguida, chame o método [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx), fornecendo um ponteiro COM vazio do tipo de interface correto.
+> **Observação**    elas são interfaces COM, portanto, sua primeira resposta pode ser usar [ **QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). Porém, em vez disso, use ponteiros inteligentes [**Microsoft::WRL::ComPtr**](https://docs.microsoft.com/cpp/windows/comptr-class). Em seguida, chame o método [**As()** ](https://docs.microsoft.com/previous-versions/br230426(v=vs.140)), fornecendo um ponteiro COM vazio do tipo de interface correto.
 
  
 
@@ -147,7 +147,7 @@ dxgiAdapter->GetParent(
     );
 ```
 
-Agora que temos a fábrica DXGI, podemos usá-la para criar a cadeia de permuta. É hora de definir os parâmetros da cadeia de troca. É necessário especificar o formato de superfície; Vamos escolher [ **DXGI\_formato\_B8G8R8A8\_UNORM** ](https://msdn.microsoft.com/library/windows/desktop/bb173059) porque ele é compatível com o Direct2D. Desativaremos a colocação da exibição em escala, a multiamostragem e a renderização estéreo, pois elas não são usadas neste exemplo. Como a execução é feita diretamente em uma CoreWindow, podemos deixar a largura e altura como 0 e obter os valores de tela inteira automaticamente.
+Agora que temos a fábrica DXGI, podemos usá-la para criar a cadeia de permuta. É hora de definir os parâmetros da cadeia de troca. É necessário especificar o formato de superfície; Vamos escolher [ **DXGI\_formato\_B8G8R8A8\_UNORM** ](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) porque ele é compatível com o Direct2D. Desativaremos a colocação da exibição em escala, a multiamostragem e a renderização estéreo, pois elas não são usadas neste exemplo. Como a execução é feita diretamente em uma CoreWindow, podemos deixar a largura e altura como 0 e obter os valores de tela inteira automaticamente.
 
 > **Observação**    sempre conjunto a *SDKVersion* parâmetro D3D11\_SDK\_versão para aplicativos UWP.
 
@@ -167,9 +167,9 @@ dxgiFactory->CreateSwapChainForCoreWindow(
 swapChain.As(&m_swapChain);
 ```
 
-Para garantir que não são de renderização com mais frequência que a tela pode mostrar, na verdade, definimos a latência de quadro como 1 e o uso [ **DXGI\_trocar\_efeito\_INVERTER\_SEQUENCIAL** ](https://msdn.microsoft.com/library/windows/desktop/bb173077). Assim, é possível economizar energia e atender a um requisito de certificação da loja; a parte 2 deste guia passo a passo fala mais sobre apresentação na tela.
+Para garantir que não são de renderização com mais frequência que a tela pode mostrar, na verdade, definimos a latência de quadro como 1 e o uso [ **DXGI\_trocar\_efeito\_INVERTER\_SEQUENCIAL** ](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_effect). Assim, é possível economizar energia e atender a um requisito de certificação da loja; a parte 2 deste guia passo a passo fala mais sobre apresentação na tela.
 
-> **Observação**    você pode usar multithreading (por exemplo, [ **ThreadPool** ](https://msdn.microsoft.com/library/windows/apps/br229642) itens de trabalho) para continuar a outro trabalho enquanto o thread de renderização é bloqueado.
+> **Observação**    você pode usar multithreading (por exemplo, [ **ThreadPool** ](https://docs.microsoft.com/uwp/api/Windows.System.Threading) itens de trabalho) para continuar a outro trabalho enquanto o thread de renderização é bloqueado.
 
  
 

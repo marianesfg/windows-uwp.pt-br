@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, latência de entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 537dd6e9d3f300666a0692b66f422ce00dd68460
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a74e2e24810dee058aa166800091af91d55cdef4
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601741"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368453"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Otimizar a latência de entrada para jogos em DirectX da Plataforma Universal do Windows (UWP)
 
@@ -65,7 +65,7 @@ Mostraremos a implementação do loop de jogos para cada um dos cenários mencio
 
 A primeira iteração do jogo de quebra-cabeça apenas atualiza a tela quando um usuário move uma peça do quebra-cabeça. Um usuário pode arrastar uma peça do quebra-cabeça ou encaixá-la no lugar selecionando-a e depois tocando no destino correto. No segundo caso, a peça pulará para o destino sem nenhuma animação ou efeito.
 
-O código tem um loop de jogo de thread único dentro do método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) que usa **CoreProcessEventsOption::ProcessOneAndAllPending**. Usar essa opção despacha todos os eventos atualmente disponíveis na fila. Se nenhum evento estiver pendente, o loop de jogos aguarda até um aparecer.
+O código tem um loop de jogo de thread único dentro do método [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run) que usa **CoreProcessEventsOption::ProcessOneAndAllPending**. Usar essa opção despacha todos os eventos atualmente disponíveis na fila. Se nenhum evento estiver pendente, o loop de jogos aguarda até um aparecer.
 
 ``` syntax
 void App::Run()
@@ -96,7 +96,7 @@ void App::Run()
 
 Na segunda iteração, o jogo é modificado para que quando um usuário selecionar uma peça do quebra-cabeça e, em seguida, tocar no destino correto para essa peça, uma animação seja exibida na tela até a peça chegar a seu destino.
 
-Como antes, o código tem um loop de jogo de thread único que usa **ProcessOneAndAllPending** para despachar os eventos de entrada na fila. Agora, a diferença é que, durante a animação, o loop muda para usar **CoreProcessEventsOption::ProcessAllIfPresent**, de modo que ele não fica esperando para novos eventos de entrada. Se não houver eventos pendentes, [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) retorna imediatamente e permite que o aplicativo apresente o próximo quadro na animação. Quando a animação está completa, o loop volta para **ProcessOneAndAllPending**, para limitar as atualizações de tela.
+Como antes, o código tem um loop de jogo de thread único que usa **ProcessOneAndAllPending** para despachar os eventos de entrada na fila. Agora, a diferença é que, durante a animação, o loop muda para usar **CoreProcessEventsOption::ProcessAllIfPresent**, de modo que ele não fica esperando para novos eventos de entrada. Se não houver eventos pendentes, [**ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) retorna imediatamente e permite que o aplicativo apresente o próximo quadro na animação. Quando a animação está completa, o loop volta para **ProcessOneAndAllPending**, para limitar as atualizações de tela.
 
 ``` syntax
 void App::Run()
@@ -182,7 +182,7 @@ No entanto, essa facilidade de desenvolvimento tem um preço. A renderização a
 
 Alguns jogos podem conseguir ignorar ou compensar o aumento na latência de entrada observada no cenário 3. No entanto, se a baixa latência de entrada for crítica para a experiência do jogo e para a detecção dos comentários do jogador, os jogos que renderizam 60 quadros por segundo precisam processar a entrada em um thread separado.
 
-A quarta iteração do jogo de quebra-cabeça cria o cenário 3 dividindo o processamento de entrada e a renderização de gráficos do loop de jogos para os threads separados. Ter threads separados para cada um garante que a entrada nunca seja atrasada pela saída de elementos gráficos; entretanto, o código se torna mais complexo como resultado. Na situação 4, o thread de entrada chama [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) com [**CoreProcessEventsOption::ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208217), que espera por novos eventos e despacha todos os eventos disponíveis. Esse comportamento continua até a janela ser fechada ou o jogo chamar [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows/apps/br208260).
+A quarta iteração do jogo de quebra-cabeça cria o cenário 3 dividindo o processamento de entrada e a renderização de gráficos do loop de jogos para os threads separados. Ter threads separados para cada um garante que a entrada nunca seja atrasada pela saída de elementos gráficos; entretanto, o código se torna mais complexo como resultado. Na situação 4, o thread de entrada chama [**ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) com [**CoreProcessEventsOption::ProcessUntilQuit**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreProcessEventsOption), que espera por novos eventos e despacha todos os eventos disponíveis. Esse comportamento continua até a janela ser fechada ou o jogo chamar [**CoreWindow::Close**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.close).
 
 ``` syntax
 void App::Run()
@@ -233,7 +233,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-O **DirectX 11 e XAML App (Windows Universal)** modelo no Microsoft Visual Studio 2015 divide o loop do jogo em vários threads de maneira semelhante. Ele usa o objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) para iniciar um thread dedicado a manipular a entrada e também cria um thread de renderização independente do thread de interface do usuário XAML. Para obter mais detalhes sobre esses modelos, leia [Create a Universal Windows Platform and DirectX game project from a template](user-interface.md).
+O **DirectX 11 e XAML App (Windows Universal)** modelo no Microsoft Visual Studio 2015 divide o loop do jogo em vários threads de maneira semelhante. Ele usa o objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreIndependentInputSource) para iniciar um thread dedicado a manipular a entrada e também cria um thread de renderização independente do thread de interface do usuário XAML. Para obter mais detalhes sobre esses modelos, leia [Create a Universal Windows Platform and DirectX game project from a template](user-interface.md).
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>Maneiras adicionais de reduzir a latência de entrada
 

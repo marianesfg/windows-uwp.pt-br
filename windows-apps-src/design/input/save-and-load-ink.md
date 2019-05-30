@@ -8,12 +8,12 @@ keywords: Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, Ink
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c12e5cb7012ba9ff9a4ed383427e37b79835983
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7eb7f085c5e4daa46cfa6c256ec3938be3c13d82
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645841"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365353"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Armazenar e recuperar dados de traço do Windows Ink
 
@@ -23,17 +23,17 @@ Os aplicativos UWP que dão suporte ao Windows Ink podem serializar e desseriali
 > [!NOTE]
 > O ISF é a representação mais compacta e persistente de tinta. Ele pode ser inserido em um formato de documento binário, como um arquivo GIF, ou colocado diretamente na Área de Transferência.
 
-> **APIs importantes**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [ **Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **APIs importantes**: [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas), [**Windows.UI.Input.Inking**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
 
 ## <a name="save-ink-strokes-to-a-file"></a>Salvar traços de tinta em um arquivo
 
-Aqui, demonstramos como salvar traços de tinta desenhados em um controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+Aqui, demonstramos como salvar traços de tinta desenhados em um controle [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
 **Baixar esse exemplo no [salvar e carregar os traços de tinta de um arquivo de formato tinta serializada (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
 1.  Primeiro, definimos a interface do usuário.
 
-    A interface do usuário inclui os botões "Salvar", "Carregar", "Limpar", bem como [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+    A interface do usuário inclui os botões "Salvar", "Carregar", "Limpar", bem como [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -63,7 +63,7 @@ Aqui, demonstramos como salvar traços de tinta desenhados em um controle [**Ink
 
 2.  Em seguida, definimos alguns comportamentos básicos de entrada à tinta.
 
-    [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), e os ouvintes dos eventos de clique nos botões são declarados.
+    [  **InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)), e os ouvintes dos eventos de clique nos botões são declarados.
 ```csharp
 public MainPage()
     {
@@ -85,11 +85,11 @@ public MainPage()
 
 3.  Por fim, salvamos os dados à tinta no manipulador de eventos de clique do botão **Salvar**.
 
-    [  **FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) permite que o usuário selecione o arquivo e o local onde os dados à tinta serão salvos.
+    [  **FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) permite que o usuário selecione o arquivo e o local onde os dados à tinta serão salvos.
 
-    Depois de selecionar um arquivo, abrimos um fluxo [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) definido como [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241635).
+    Depois de selecionar um arquivo, abrimos um fluxo [**IRandomAccessStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IRandomAccessStream) definido como [**ReadWrite**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode).
 
-    Em seguida, chamamos [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/br242114) para serializar os traços de tinta gerenciados por [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) para o fluxo.
+    Em seguida, chamamos [**SaveAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.iinkstrokecontainer.saveasync) para serializar os traços de tinta gerenciados por [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) para o fluxo.
 
 ```csharp
 // Save ink data to a file.
@@ -155,17 +155,17 @@ public MainPage()
 ```
 
 > [!NOTE]
-> O formato GIF é o único formato de arquivo compatível para salvar dados à tinta. Entretanto, o método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) (demonstrado na próxima seção) dá suporte a outros formatos para compatibilidade com versões anteriores.
+> O formato GIF é o único formato de arquivo compatível para salvar dados à tinta. Entretanto, o método [**LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.loadasync) (demonstrado na próxima seção) dá suporte a outros formatos para compatibilidade com versões anteriores.
 
 ## <a name="load-ink-strokes-from-a-file"></a>Carregar traços de tinta de um arquivo
 
-Aqui, demonstramos como carregar traços de tinta de um arquivo e renderizá-los em um controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+Aqui, demonstramos como carregar traços de tinta de um arquivo e renderizá-los em um controle [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
 **Baixar esse exemplo no [salvar e carregar os traços de tinta de um arquivo de formato tinta serializada (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
 1.  Primeiro, definimos a interface do usuário.
 
-    A interface do usuário inclui os botões "Salvar", "Carregar", "Limpar", bem como [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+    A interface do usuário inclui os botões "Salvar", "Carregar", "Limpar", bem como [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -195,7 +195,7 @@ Aqui, demonstramos como carregar traços de tinta de um arquivo e renderizá-los
 
 2.  Em seguida, definimos alguns comportamentos básicos de entrada à tinta.
 
-    [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), e os ouvintes dos eventos de clique nos botões são declarados.
+    [  **InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)), e os ouvintes dos eventos de clique nos botões são declarados.
 ```csharp
 public MainPage()
     {
@@ -217,11 +217,11 @@ public MainPage()
 
 3.  Por fim, carregamos os dados à tinta no manipulador de eventos de clique do botão **Carregar**.
 
-    [  **FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) permite que o usuário selecione o arquivo e o local de onde recuperar os dados à tinta salvos.
+    [  **FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) permite que o usuário selecione o arquivo e o local de onde recuperar os dados à tinta salvos.
 
-    Depois de selecionar um arquivo, abrimos um fluxo [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) definido como [**Read**](https://msdn.microsoft.com/library/windows/apps/br241635).
+    Depois de selecionar um arquivo, abrimos um fluxo [**IRandomAccessStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IRandomAccessStream) definido como [**Read**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode).
 
-    Em seguida, chamamos [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) para ler, desserializar e carregar os traços de tinta salvos em [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492). Carregar os traços em **InkStrokeContainer** faz com que [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) os renderize imediatamente para [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+    Em seguida, chamamos [**LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.loadasync) para ler, desserializar e carregar os traços de tinta salvos em [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer). Carregar os traços em **InkStrokeContainer** faz com que [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) os renderize imediatamente para [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
     > [!NOTE]
     > Todos os traços existentes em InkStrokeContainer são apagados antes de novos traços serem carregados.
@@ -260,9 +260,9 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 ```
 
 > [!NOTE]
-> O formato GIF é o único formato de arquivo compatível para salvar dados à tinta. Entretanto, o método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) oferece suporte aos formatos a seguir para compatibilidade com versões anteriores.
+> O formato GIF é o único formato de arquivo compatível para salvar dados à tinta. Entretanto, o método [**LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.loadasync) oferece suporte aos formatos a seguir para compatibilidade com versões anteriores.
 
-| Formato                    | Descrição |
+| Formatar                    | Descrição |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | InkSerializedFormat       | Especifica dados à tinta persistentes usando ISF. Essa é a representação mais compacta e persistente de tinta. Ela pode ser inserida em um formato de documento binário ou colocada diretamente na Área de Transferência.                                                                                                                                                                                                         |
 | Base64InkSerializedFormat | Especifica dados à tinta persistentes codificando o ISF como um fluxo base64. Esse formato é oferecido para que dados à tinta possam ser codificados diretamente em um arquivo XML ou HTML.                                                                                                                                                                                                                                                |
@@ -273,7 +273,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 
 Aqui, demonstramos como usar a área de transferência para transferir os traços de tinta entre aplicativos.
 
-Para dar suporte à funcionalidade de área de transferência, os comandos recortar e colar [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) internos precisam que um ou mais traços de tinta sejam selecionados.
+Para dar suporte à funcionalidade de área de transferência, os comandos recortar e colar [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) internos precisam que um ou mais traços de tinta sejam selecionados.
 
 Para este exemplo, habilitamos a seleção de traço quando a entrada é modificada com um botão da caneta (ou o botão direito do mouse). Para obter um exemplo completo de como implementar a seleção de traço, consulte Entrada de passagem para processamento avançado em [Interações por caneta](pen-and-stylus-interactions.md).
 
@@ -281,7 +281,7 @@ Para este exemplo, habilitamos a seleção de traço quando a entrada é modific
 
 1.  Primeiro, definimos a interface do usuário.
 
-    A interface do usuário inclui os botões "Recortar", "Copiar" e "Limpar", juntamente com [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) e uma tela de seleção.
+    A interface do usuário inclui os botões "Recortar", "Copiar" e "Limpar", juntamente com [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) e uma tela de seleção.
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -317,7 +317,7 @@ Para este exemplo, habilitamos a seleção de traço quando a entrada é modific
 
 2.  Em seguida, definimos alguns comportamentos básicos de entrada à tinta.
 
-    O [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). Os ouvintes dos eventos de clique nos botões, bem como os eventos de ponteiro e de traço para a funcionalidade de seleção, também são declarados aqui.
+    O [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)). Os ouvintes dos eventos de clique nos botões, bem como os eventos de ponteiro e de traço para a funcionalidade de seleção, também são declarados aqui.
 
     Para obter um exemplo completo de como implementar a seleção de traço, consulte Entrada de passagem para processamento avançado em [Interações por caneta](pen-and-stylus-interactions.md).
 ```csharp
@@ -367,9 +367,9 @@ public MainPage()
 
 3.  Por fim, depois de adicionar suporte à seleção de traço, implementamos a funcionalidade de área de transferência nos manipuladores de eventos de clique nos botões **Recortar**, **Copiar** e **Colar**.
 
-    Para recortar, chamamos primeiro [**CopySelectedToClipboard**](https://msdn.microsoft.com/library/windows/apps/br244232) em [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) de [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
+    Para recortar, chamamos primeiro [**CopySelectedToClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.copyselectedtoclipboard) em [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) de [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter).
 
-    Em seguida, chamamos [**DeleteSelected**](https://msdn.microsoft.com/library/windows/apps/br244233) para remover os traços da tela de tinta.
+    Em seguida, chamamos [**DeleteSelected**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.deleteselected) para remover os traços da tela de tinta.
 
     Por fim, excluímos todos os traços de seleção da tela de seleção.
     
@@ -403,7 +403,7 @@ private void btnCut_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-Para copiar, basta chamar [**CopySelectedToClipboard**](https://msdn.microsoft.com/library/windows/apps/br244232) no [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) do [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
+Para copiar, basta chamar [**CopySelectedToClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.copyselectedtoclipboard) no [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) do [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter).
 
 
 ```csharp
@@ -413,9 +413,9 @@ private void btnCopy_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-Para colar, chamamos [**CanPasteFromClipboard**](https://msdn.microsoft.com/library/windows/apps/br208495) para garantir que o conteúdo na área de transferência pode ser colado na tela de tinta.
+Para colar, chamamos [**CanPasteFromClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.canpastefromclipboard) para garantir que o conteúdo na área de transferência pode ser colado na tela de tinta.
 
-Nesse caso, chamamos [**PasteFromClipboard**](https://msdn.microsoft.com/library/windows/apps/br208503) para inserir os traços de tinta da área de transferência no [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) do [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011), que renderiza os traços na tela de tinta.
+Nesse caso, chamamos [**PasteFromClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.pastefromclipboard) para inserir os traços de tinta da área de transferência no [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) do [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter), que renderiza os traços na tela de tinta.
 
 ```csharp
 private void btnPaste_Click(object sender, RoutedEventArgs e)

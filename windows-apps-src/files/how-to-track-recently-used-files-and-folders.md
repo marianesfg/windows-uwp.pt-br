@@ -6,23 +6,23 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c0eb2b6e668baec9f5ad1ef859b7213f20748beb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 97ad2485abab0bd4733699bc4ffcf29e17a22844
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601621"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369445"
 ---
 # <a name="track-recently-used-files-and-folders"></a>Rastrear arquivos e pastas usados recentemente
 
 **APIs importantes**
 
-- [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458)
-- [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/hh738369)
+- [**MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist)
+- [**FileOpenPicker**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-fileopenpicker)
 
 Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à lista de itens usados recentemente de seu aplicativo. A plataforma gerencia a MRU para você classificando os itens com base na data em que foram acessados pela última vez e removendo o item mais antigo quando o limite de 25 itens é atingido. Todos os aplicativos têm seus próprios itens usados recentemente.
 
-Os itens recém-usados do aplicativo são representados pela classe [**StorageItemMostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207475) que você obtém da propriedade estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458). Os itens recém-usados são armazenados como objetos [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129), portanto, os objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (que representam arquivos) e [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) (que representam pastas) podem ser adicionados aos itens recém-usados.
+Os itens recém-usados do aplicativo são representados pela classe [**StorageItemMostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList) que você obtém da propriedade estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist). Os itens recém-usados são armazenados como objetos [**IStorageItem**](https://docs.microsoft.com/uwp/api/Windows.Storage.IStorageItem), portanto, os objetos [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) (que representam arquivos) e [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) (que representam pastas) podem ser adicionados aos itens recém-usados.
 
 > [!NOTE]
 > Para obter exemplos completos, consulte a [exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994) e o [amostra de acesso de arquivo](https://go.microsoft.com/fwlink/p/?linkid=619995).
@@ -31,7 +31,7 @@ Os itens recém-usados do aplicativo são representados pela classe [**StorageIt
 
 -   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
 
-    Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
+    Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 -   **Permissões de acesso para o local**
 
@@ -52,18 +52,18 @@ Os itens recém-usados do aplicativo são representados pela classe [**StorageIt
     string mruToken = mru.Add(file, "profile pic");
     ```
 
-    [**StorageItemMostRecentlyUsedList.Add** ](https://msdn.microsoft.com/library/windows/apps/br207476) está sobrecarregado. No exemplo, usamos [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481) para podermos associar metadados ao arquivo. A configuração de metadados permite que você registre a finalidade do item, por exemplo, "profile pic". Você também pode adicionar o arquivo à lista de itens recém-usados sem metadados chamando [**Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480). Quando você adiciona um item à lista de itens recém-usados, o método retorna uma cadeia de caracteres de identificação exclusiva, denominada token, que é usada para recuperar o item.
+    [**StorageItemMostRecentlyUsedList.Add** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add) está sobrecarregado. No exemplo, usamos [**Add(IStorageItem, String)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add) para podermos associar metadados ao arquivo. A configuração de metadados permite que você registre a finalidade do item, por exemplo, "profile pic". Você também pode adicionar o arquivo à lista de itens recém-usados sem metadados chamando [**Add(IStorageItem)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add). Quando você adiciona um item à lista de itens recém-usados, o método retorna uma cadeia de caracteres de identificação exclusiva, denominada token, que é usada para recuperar o item.
 
 > [!TIP]
-> Você precisará do token para recuperar um item da lista MRU, portanto, mantenha-o em algum lugar. Para saber mais sobre dados de aplicativos, consulte [Gerenciando dados do aplicativo](https://msdn.microsoft.com/library/windows/apps/hh465109).
+> Você precisará do token para recuperar um item da lista MRU, portanto, mantenha-o em algum lugar. Para saber mais sobre dados de aplicativos, consulte [Gerenciando dados do aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh465109(v=win.10)).
 
 ## <a name="use-a-token-to-retrieve-an-item-from-the-mru"></a>Usar um token para recuperar um item da lista MRU
 
 Use o método de recuperação mais apropriado para o item a ser recuperado.
 
--   Recupere um arquivo como [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) usando [**GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br207486).
--   Recupere uma pasta como [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) usando [**GetFolderAsync**](https://msdn.microsoft.com/library/windows/apps/br207489).
--   Recupere um [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129) genérico que pode representar um arquivo ou pasta usando [**GetItemAsync**](https://msdn.microsoft.com/library/windows/apps/br207492).
+-   Recupere um arquivo como [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) usando [**GetFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.getfileasync).
+-   Recupere uma pasta como [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) usando [**GetFolderAsync**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.getfolderasync).
+-   Recupere um [**IStorageItem**](https://docs.microsoft.com/uwp/api/Windows.Storage.IStorageItem) genérico que pode representar um arquivo ou pasta usando [**GetItemAsync**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.getitemasync).
 
 Consulte aqui como recuperar o arquivo que acabamos de adicionar.
 
@@ -83,7 +83,7 @@ foreach (Windows.Storage.AccessCache.AccessListEntry entry in mru.Entries)
 }
 ```
 
-O [**AccessListEntryView**](https://msdn.microsoft.com/library/windows/apps/br227349) permite que você promova a iteração de itens recém-usados. Essas entradas são estruturas de [**AccessListEntry**](https://msdn.microsoft.com/library/windows/apps/br227348) que contêm o token e os metadados de um item.
+O [**AccessListEntryView**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.AccessListEntryView) permite que você promova a iteração de itens recém-usados. Essas entradas são estruturas de [**AccessListEntry**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.AccessListEntry) que contêm o token e os metadados de um item.
 
 ## <a name="removing-items-from-the-mru-when-its-full"></a>Removendo itens da lista MRU quando ela está cheia
 
@@ -91,9 +91,9 @@ Quando o limite de 25 itens da MRU for atingido e você tentar adicionar um novo
 
 ## <a name="future-access-list"></a>Lista de acesso futuro
 
-Além da lista MRU, seu aplicativo também tem uma lista de acesso futuro. Selecionando arquivos e pastas, o usuário concede a seu aplicativo permissão para acessar itens que podem não estar acessíveis de outra maneira. Se você adicionar esses itens à sua lista de acesso futuro, manterá essa permissão quando seu aplicativo quiser acessar esses itens novamente mais tarde. A lista de acesso futuro do seu aplicativo é representada pela classe [**StorageItemAccessList**](https://msdn.microsoft.com/library/windows/apps/br207459) que você obtém da propriedade estática [**StorageApplicationPermissions.FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457).
+Além da lista MRU, seu aplicativo também tem uma lista de acesso futuro. Selecionando arquivos e pastas, o usuário concede a seu aplicativo permissão para acessar itens que podem não estar acessíveis de outra maneira. Se você adicionar esses itens à sua lista de acesso futuro, manterá essa permissão quando seu aplicativo quiser acessar esses itens novamente mais tarde. A lista de acesso futuro do seu aplicativo é representada pela classe [**StorageItemAccessList**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.StorageItemAccessList) que você obtém da propriedade estática [**StorageApplicationPermissions.FutureAccessList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.futureaccesslist).
 
 Quando um usuário seleciona um item, considere adicioná-lo à sua lista de acesso futuro, bem como à seus itens recém-usados.
 
--   O [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) comporta até 1000 itens. Lembre-se: ele pode conter pastas, bem como arquivos, portanto, muitas pastas.
--   A plataforma nunca remove itens de [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) para você. Quando você atingir o limite de 1000 itens, não poderá adicionar outro item até liberar espaço com o método [**Remove**](https://msdn.microsoft.com/library/windows/apps/br207497).
+-   O [**FutureAccessList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.futureaccesslist) comporta até 1000 itens. Lembre-se: ele pode conter pastas, bem como arquivos, portanto, muitas pastas.
+-   A plataforma nunca remove itens de [**FutureAccessList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.futureaccesslist) para você. Quando você atingir o limite de 1000 itens, não poderá adicionar outro item até liberar espaço com o método [**Remove**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.remove).

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, elementos gráficos
 ms.localizationpriority: medium
-ms.openlocfilehash: 5dbdf6072f57d12d424f0787cfa2e8993a1624af
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 556c5c74e5c8284e56047b4b8a9b2c2bf9c0155c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621791"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369070"
 ---
 # <a name="basic-3d-graphics-for-directx-games"></a>Elementos gráficos 3D básicos para jogos DirectX
 
@@ -28,18 +28,18 @@ Partimos do princípio de que você conhece C++. Você também precisa ter exper
 
 **Tempo total para concluir:** 30 minutos.
 
-## <a name="where-to-go-from-here"></a>Para onde ir em seguida
+## <a name="where-to-go-from-here"></a>Para onde ir a partir daqui
 
 
-Aqui, podemos falar sobre como desenvolver elementos gráficos 3D com o DirectX e C++\\Cx. Este tutorial em cinco partes introduz a API [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) e os conceitos e códigos que também são usados em muitas das outras amostras de DirectX. Essas partes se complementam, desde a configuração do DirectX para seu aplicativo em C++ da UWP até a texturização de primitivos e a adição de efeitos.
+Aqui, podemos falar sobre como desenvolver elementos gráficos 3D com o DirectX e C++\\Cx. Este tutorial em cinco partes introduz a API [Direct3D](https://docs.microsoft.com/windows/desktop/direct3d) e os conceitos e códigos que também são usados em muitas das outras amostras de DirectX. Essas partes se complementam, desde a configuração do DirectX para seu aplicativo em C++ da UWP até a texturização de primitivos e a adição de efeitos.
 
-> **Observação**  este tutorial usa um sistema de coordenadas destro com vetores de coluna. Muitos exemplos e aplicativos em DirectX usam um sistema de coordenadas à esquerda, com vetores de linha. Para uma solução matemática de elementos gráficos mais completa e que suporte um sistema de coordenadas canhoto com vetores linha, considere o uso de [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833). Para obter mais informações, consulte [Usando DirectXMath com Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
+> **Observação**  este tutorial usa um sistema de coordenadas destro com vetores de coluna. Muitos exemplos e aplicativos em DirectX usam um sistema de coordenadas à esquerda, com vetores de linha. Para uma solução matemática de elementos gráficos mais completa e que suporte um sistema de coordenadas canhoto com vetores linha, considere o uso de [DirectXMath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal). Para obter mais informações, consulte [Usando DirectXMath com Direct3D](https://docs.microsoft.com/windows/desktop/dxmath/pg-xnamath-migration-d3dx).
 
  
 
 Nós lhe mostramos como:
 
--   Inicializar as interfaces [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) usando o Windows Runtime
+-   Inicializar as interfaces [Direct3D](https://docs.microsoft.com/windows/desktop/direct3d) usando o Windows Runtime
 -   Aplicar operações de sombreador por vértice
 -   Configurar a geometria
 -   Rasterize a cena (achatando a cena 3D para uma projeção 2D)
@@ -56,9 +56,9 @@ Em seguida, criamos um dispositivo Direct3D, uma cadeia de troca e um modo de ex
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Direct3D 11 gráficos](https://msdn.microsoft.com/library/windows/desktop/ff476080)
-* [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534)
-* [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561)
+* [Direct3D 11 gráficos](https://docs.microsoft.com/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11)
+* [DXGI](https://docs.microsoft.com/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
+* [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl)
 
  
 

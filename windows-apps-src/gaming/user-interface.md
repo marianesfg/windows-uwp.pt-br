@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, modelos
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a4491fe9a3bb97a73652c40a2968f2f53c377b5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5eb36b66cc067111e2749ebd51a05994a011ba01
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634241"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367473"
 ---
 # <a name="directx-game-project-templates"></a>Modelos de projeto de jogo DirectX
 
@@ -33,7 +33,7 @@ Visual Studio 2015 inclui três modelos de DirectX e UWP:
 
 -   Aplicativo DirectX 11 (Universal Windows) – o modelo Aplicativo DirectX 11 (Universal Windows) cria um projeto UWP, que renderiza diretamente em uma janela de aplicativo usando o DirectX 11.
 -   Aplicativo DirectX 12 (Universal Windows) – o modelo Aplicativo DirectX 12 (Universal Windows) cria um projeto UWP, que renderiza diretamente em uma janela de aplicativo usando o DirectX 12.
--   Aplicativo DirectX 11 e XAML (Universal Windows) – O modelo Aplicativo DirectX 11 e XAML (Universal Windows) cria um projeto UWP, que renderiza dentro de um controle XAML usando DirectX 11. Esse modelo usa um [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834), de maneira que você possa usar controles da interface do usuário XAML. Isso pode tornar mais fácil adicionar elementos de interface do usuário, mas usar o modelo XAML pode resultar em um desempenho inferior.
+-   Aplicativo DirectX 11 e XAML (Universal Windows) – O modelo Aplicativo DirectX 11 e XAML (Universal Windows) cria um projeto UWP, que renderiza dentro de um controle XAML usando DirectX 11. Esse modelo usa um [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel), de maneira que você possa usar controles da interface do usuário XAML. Isso pode tornar mais fácil adicionar elementos de interface do usuário, mas usar o modelo XAML pode resultar em um desempenho inferior.
 
 O modelo escolhido depende do desempenho e das tecnologias que você deseja usar.
 

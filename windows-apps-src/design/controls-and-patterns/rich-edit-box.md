@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: fea636f78f4430d5bf8917c1ed720faeac7c4017
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 78f6fe36fb8955b6234cdf3cb42e4db02a602f4a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651731"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364353"
 ---
 # <a name="rich-edit-box"></a>Caixa de edição com formato
 
@@ -24,7 +24,7 @@ ms.locfileid: "57651731"
 
 É possível usar um controle RichEditBox para inserir e editar documentos rich text que contenham texto formatado, hiperlinks e imagens. Você pode tornar um RichEditBox somente leitura definindo sua propriedade IsReadOnly como **true**.
 
-> **APIs importantes**: [Classe RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [propriedade de documento](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx), [propriedade IsReadOnly](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isreadonly.aspx), [IsSpellCheckEnabled propriedade](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx)
+> **APIs importantes**: [Classe RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [propriedade de documento](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.document), [propriedade IsReadOnly](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [IsSpellCheckEnabled propriedade](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -58,9 +58,9 @@ Essa caixa de edição com formato contém um documento rich text aberto. Os bot
 
 ## <a name="create-a-rich-edit-box"></a>Criar uma caixa de edição com formato
 
-Por padrão, RichEditBox dá suporte à verificação ortográfica. Para desabilitar o corretor ortográfico, defina a propriedade [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx) como **false**. Para obter mais informações, consulte o artigo [Diretrizes para verificação ortográfica](text-controls.md).
+Por padrão, RichEditBox dá suporte à verificação ortográfica. Para desabilitar o corretor ortográfico, defina a propriedade [IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled) como **false**. Para obter mais informações, consulte o artigo [Diretrizes para verificação ortográfica](text-controls.md).
 
-Use a propriedade [Document](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx) de RichEditBox para obter seu conteúdo. O conteúdo de RichEditBox é um objeto [Windows.UI.Text.ITextDocument](https://msdn.microsoft.com/library/windows/apps/xaml/bb774052.aspx), ao contrário do controle RichTextBlock, que usa objetos [Windows.UI.Xaml.Documents.Block](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.block.aspx) como conteúdo. A interface ITextDocument fornece um modo de carregar e salvar o documento em um fluxo, recuperar faixas de texto, obter a seleção ativa, desfazer e refazer alterações, definir atributos de formatação padrão, entre outras coisas.
+Use a propriedade [Document](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.document) de RichEditBox para obter seu conteúdo. O conteúdo de RichEditBox é um objeto [Windows.UI.Text.ITextDocument](https://docs.microsoft.com/windows/desktop/api/tom/nn-tom-itextdocument), ao contrário do controle RichTextBlock, que usa objetos [Windows.UI.Xaml.Documents.Block](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Block) como conteúdo. A interface ITextDocument fornece um modo de carregar e salvar o documento em um fluxo, recuperar faixas de texto, obter a seleção ativa, desfazer e refazer alterações, definir atributos de formatação padrão, entre outras coisas.
 
 Este exemplo mostra como editar, carregar e salvar um arquivo .rtf (Rich Text Format) em RichEditBox.
 
@@ -205,7 +205,7 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 
 Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira. O layout do teclado padrão é geralmente apropriado para trabalhar com documentos rich text.
 
-Para obter mais informações sobre como usar escopos de entrada, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://msdn.microsoft.com/library/windows/apps/mt280229).
+Para obter mais informações sobre como usar escopos de entrada, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://docs.microsoft.com/windows/uwp/design/input/use-input-scope-to-change-the-touch-keyboard).
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
@@ -226,5 +226,5 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 - [Diretrizes para verificação ortográfica](text-controls.md)
 - [Adicionando uma pesquisa](search.md)
 - [Diretrizes para a entrada de texto](text-controls.md)
-- [Classe de caixa de texto](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [Classe PasswordBox Windows](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [Classe de caixa de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Classe PasswordBox Windows](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)

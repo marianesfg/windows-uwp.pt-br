@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c7d40765e0d12e3543f198aebd5acd15ed3aff3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2e1eba68d1046892a67d779d353fd9b2e6bf224e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595491"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366939"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Criar um jogo 3D em JavaScript usando three.js
 
@@ -1075,7 +1075,7 @@ function lockChange() {
 
 ---
 
-Pronto! Foi uma longa jornada, mas agora temos um jogo feito com **three.js**.
+É só isso! Foi uma longa jornada, mas agora temos um jogo feito com **three.js**.
 
 Volte para o topo da página para ver o [CodePen final](#introduction)!
 
@@ -1084,7 +1084,7 @@ Volte para o topo da página para ver o [CodePen final](#introduction)!
 Agora você tem um aplicativo UWP, é possível publicá-lo para a Microsoft Store (supondo que você o melhoraram pela primeira vez!) Há algumas etapas para o processo.
 
 1.  Você precisa estar [registrado](https://developer.microsoft.com/store/register) como desenvolvedor no Windows.
-2.  Você deve usar a [lista de verificação](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) do envio de aplicativo.
-3.  O app deve ser enviado para [certificação](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process).
+2.  Você deve usar a [lista de verificação](https://docs.microsoft.com/windows/uwp/publish/app-submissions) do envio de aplicativo.
+3.  O app deve ser enviado para [certificação](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process).
 Para obter mais detalhes, consulte [publicando seu aplicativo UWP](https://developer.microsoft.com/store/publish-apps).
 

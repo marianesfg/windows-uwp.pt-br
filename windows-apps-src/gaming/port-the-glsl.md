@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, glsl, porta
 ms.localizationpriority: medium
-ms.openlocfilehash: 809440f9e77af19c01f4a050eee3b6f8d1c709b7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 210f98476a06b88e7d3d543006a6d4ec886cfd45
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621371"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368250"
 ---
 # <a name="port-the-glsl"></a>Fazer a portabilidade do GLSL
 
@@ -20,14 +20,14 @@ ms.locfileid: "57621371"
 
 **APIs importantes**
 
--   [Semântica HLSL](https://msdn.microsoft.com/library/windows/desktop/bb205574)
--   [Constantes de sombreador HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581)
+-   [Semântica HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dcl-usage---ps)
+-   [Shader Constants (HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants)
 
 Quando você tiver movido o código que cria e configura os seus buffers e objetos de sombreador, será o momento de fazer a portabilidade do código dentro dos sombreadores da linguagem de sombreadores GL do OpenGL ES 2.0 (GLSL) para a linguagem de sombreadores de alto nível do Direct3D 11 (HLSL).
 
 Em OpenGL ES 2.0, sombreadores retornam dados após a execução usando intrínsecos, como **gl\_posição**, **gl\_FragColor**, ou **gl\_FragData \[n\]**  (em que n é o índice para um destino de renderização específico). No Direct3D, não há intrínsecos específicos e os sombreadores devolvem dados como o tipo de retorno das duas respectivas funções principais().
 
-Dados que você quer interpolados entre estágios de sombreador, como a posição do vértice ou normal, são manipulados pelo uso da declaração **varying**. Entretanto, o Direct3D não tem essa declaração. Em vez disso, cada dado que você quer que passe entre os estágios de sombreador devem ser marcados com uma [semântica HLSL](https://msdn.microsoft.com/library/windows/desktop/bb205574). A semântica específica selecionada indica (e é) a finalidade dos dados. Por exemplo, você deve declarar os dados que deseja interpolar entre o sombreador de fragmento como:
+Dados que você quer interpolados entre estágios de sombreador, como a posição do vértice ou normal, são manipulados pelo uso da declaração **varying**. Entretanto, o Direct3D não tem essa declaração. Em vez disso, cada dado que você quer que passe entre os estágios de sombreador devem ser marcados com uma [semântica HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dcl-usage---ps). A semântica específica selecionada indica (e é) a finalidade dos dados. Por exemplo, você deve declarar os dados que deseja interpolar entre o sombreador de fragmento como:
 
 `float4 vertPos : POSITION;`
 
@@ -54,7 +54,7 @@ cbuffer ModelViewProjectionConstantBuffer : register(b0)
 };
 ```
 
-Aqui, o buffer constante usa registro b0 para colocar em espera o buffer em pacote. Todos os registros são chamados no formulário b\#. Para saber mais sobre a implementação HLSL de buffers constantes, registros e remessa de dados, leia [Shader Constants (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581).
+Aqui, o buffer constante usa registro b0 para colocar em espera o buffer em pacote. Todos os registros são chamados no formulário b\#. Para saber mais sobre a implementação HLSL de buffers constantes, registros e remessa de dados, leia [Shader Constants (HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants).
 
 <a name="instructions"></a>Instruções
 ------------
@@ -159,10 +159,10 @@ A cor do pixel na posição é gravada no destino de renderização. Agora, vamo
 ---------
 [Desenhar na tela](draw-to-the-screen.md) Observações
 -------
-Entender a semântica HLSL e o compactação de buffers constantes pode evitar certa dor de cabeça, e oferecer oportunidade de otimização. Se você receber uma chance, leia [variável sintaxe HLSL ()](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Introdução aos Buffers no Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898), e [como: Criar um Buffer de constantes](https://msdn.microsoft.com/library/windows/desktop/ff476896). Caso não consiga fazer isso, consulte algumas dicas iniciais sobre semântica e buffers constantes para ter sempre em mente:
+Entender a semântica HLSL e o compactação de buffers constantes pode evitar certa dor de cabeça, e oferecer oportunidade de otimização. Se você receber uma chance, leia [variável sintaxe HLSL ()](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-variable-syntax), [Introdução aos Buffers no Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-intro), e [como: Criar um Buffer de constantes](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-constant-how-to). Caso não consiga fazer isso, consulte algumas dicas iniciais sobre semântica e buffers constantes para ter sempre em mente:
 
 -   Sempre confira duas vezes o código da configuração Direct3D do renderizador para garantir que: as estruturas dos buffers constantes correspondam às declarações da estrutura cbuffer no HLSL; e que os tipos escalares do componente coincidam em ambas as declarações.
--   No código C++ do renderizador, use os tipos [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833) nas declarações de buffer constante para garantir o empacotamento correto dos dados.
+-   No código C++ do renderizador, use os tipos [DirectXMath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal) nas declarações de buffer constante para garantir o empacotamento correto dos dados.
 -   O melhor modo de usar buffers constantes de modo eficiente é organizar as variáveis de sombreador em buffers constantes com base na frequência de atualização. Por exemplo, caso tenha alguns dados uniformes atualizados uma vez por quadro e outros atualizados somente quando a câmera se move, talvez seja o caso de separar os dados em dois buffers constantes distintos.
 -   Os primeiros erros de origem de compilação de sombreador (FXC) serão gerados pela semântica que você se esqueceu de aplicar ou aplicada incorretamente. Confira-as com atenção! Os documentos podem ser um pouco confusos, pois muitas páginas e exemplos antigos mencionam versões diferentes da semântica HLSL, anteriores ao Direct3D 11.
 -   Certifique-se de que sabe qual nível de recurso do Direct3D você tem como objetivo para cada sombreador. A semântica de recurso de nível 9\_ \* são diferentes para 11\_1.

@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, enviar notificações do sistema, notificações, enviar notificações, notificações do sistema, como fazer, guia de início rápido, introdução, exemplo de código, passo a passo
 ms.localizationpriority: medium
-ms.openlocfilehash: 410e8121aecfe13805586c9287f62444f80a1b1b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4c8def5d1a220fe0458dd5c244d875b991b2b76c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605921"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365935"
 ---
 # <a name="send-a-local-toast-notification"></a>Enviar uma notificação do sistema local
 
@@ -54,14 +54,14 @@ Para entender completamente este tópico, os itens a seguir serão úteis...
 > Diferente do Windows 8/8.1, você não precisa mais declarar no manifesto do aplicativo que ele é capaz de mostrar notificações do sistema. Todos os aplicativos são capazes de enviar e exibir notificações do sistema.
 
 > [!NOTE]
-> **Aplicativos do Windows 8/8.1**: Use o [documentação arquivada](https://msdn.microsoft.com/library/windows/apps/xaml/hh868254.aspx).
+> **Aplicativos do Windows 8/8.1**: Use o [documentação arquivada](https://docs.microsoft.com/previous-versions/windows/apps/hh868254(v=win.10)).
 
 
 ## <a name="install-nuget-packages"></a>Instalar pacotes NuGet
 
 Recomendamos a instalação destes dois pacotes NuGet para o projeto. Nosso exemplo de código usará esses pacotes. No final do artigo, forneceremos os trechos de código "Baunilha" que não usam pacotes NuGet.
 
-* [Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/): Gere cargas de notificação do sistema por meio de objetos em vez de XML bruto.
+* [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/): Gere cargas de notificação do sistema por meio de objetos em vez de XML bruto.
 * [QueryString.NET](https://www.nuget.org/packages/QueryString.NET/): Gerar e analisar cadeias de caracteres de consulta comC#
 
 
@@ -238,7 +238,7 @@ toast.ExpirationTime = DateTime.Now.AddDays(2);
 
 Se você quiser remover ou substituir a notificação enviada por meio de programação, é necessário usar a propriedade Tag (e, opcionalmente, a propriedade Group) a fim de fornecer uma chave primária para a notificação. Em seguida, você pode usar essa chave primária no futuro para remover ou substituir a notificação.
 
-Para ver mais detalhes sobre como substituir/remover já entregue notificações do sistema, consulte [guia de início rápido: Gerenciar notificações do sistema na Central de ações (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/dn631260.aspx).
+Para ver mais detalhes sobre como substituir/remover já entregue notificações do sistema, consulte [guia de início rápido: Gerenciar notificações do sistema na Central de ações (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10)).
 
 Tag e Group combinadas atuam como uma chave primária composta. Grupo é o identificador mais genérico, onde você pode atribuir grupos como "wallPosts", "mensagens", "friendRequests", etc. E, em seguida, marca deve identificar exclusivamente a notificação em si de dentro do grupo. Ao usar um grupo genérico, você pode remover todas as notificações dele usando a [API RemoveGroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_).
 
@@ -270,7 +270,7 @@ Veja um exemplo do que um aplicativo de mensagens deve fazer...
 3. O aplicativo abre a conversa e, em seguida, apaga todas as notificações do sistema relativas a ela (usando [RemoveGroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_) no grupo fornecido pelo aplicativo para a conversa)
 4. Agora, a Central de Ações do usuário reflete adequadamente o estado da notificação, pois não há notificações obsoletas dessa conversa na Central de Ações.
 
-Para saber mais sobre como limpar todas as notificações ou remover notificações específicas, consulte [guia de início rápido: Gerenciar notificações do sistema na Central de ações (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/dn631260.aspx).
+Para saber mais sobre como limpar todas as notificações ou remover notificações específicas, consulte [guia de início rápido: Gerenciar notificações do sistema na Central de ações (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10)).
 
 
 ## <a name="handling-activation"></a>Manipular a ativação

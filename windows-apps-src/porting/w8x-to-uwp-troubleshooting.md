@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c31d414bab1e551b418a1ff653678665d66aea5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 64a54dfaef6b6e89a345651c1f6013930cc936e0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602601"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372382"
 ---
 # <a name="troubleshooting-porting-windows-runtime-8x-to-uwp"></a>Solucionando problemas de portabilidade do Windows Runtime 8.x para UWP
 
@@ -32,7 +32,7 @@ Um último recurso é uma divisão binária. Remova cerca da metade da marcaçã
 
 Esta seção explica o que fazer se, ao abrir um projeto do Windows 10 no Visual Studio, você verá a mensagem "atualização do Visual Studio necessária. Um ou mais projetos exigem um SDK <version> da plataforma que não está instalado ou que faz parte de uma atualização futura do Visual Studio".
 
--   Primeiro, determine o número de versão do SDK para Windows 10 que você instalou. Navegue até **c:\\arquivos de programas (x86)\\Windows Kits\\10\\Include\\ <versionfoldername>**  e anote *<versionfoldername>*, que estará na notação quadrangular, "Major".
+-   Primeiro, determine o número de versão do SDK para Windows 10 que você instalou. Navegue até **c:\\arquivos de programas (x86)\\Windows Kits\\10\\Include\\ <versionfoldername>**  e anote *<versionfoldername>* , que estará na notação quadrangular, "Major".
 -   Abra o arquivo do projeto para editar e encontre os elementos `TargetPlatformVersion` e `TargetPlatformMinVersion`. Edite-os como a seguir, substituindo *<versionfoldername>* pelo número da versão em notação quádrupla encontrado no disco:
 
 ```xml
@@ -48,9 +48,9 @@ As informações de solução da tabela destinam-se a dar instruções suficient
 |---------|--------|
 | Como abrir um projeto do Windows 10 no Visual Studio, você verá que a mensagem "atualização do Visual Studio necessária. Um ou mais projetos exigem um SDK &lt;versão&gt; da plataforma que não está instalado ou que faz parte de uma atualização futura do Visual Studio". | Consulte a seção [TargetPlatformVersion](#targetplatformversion) neste tópico. |
 | Um System.InvalidCastException é gerado quando InitializeComponent é chamado em um arquivo xaml.cs.| Isso pode acontecer quando você tem mais de um arquivo xaml (sendo que pelo menos um deles contém qualificadores MRT) que compartilham o mesmo arquivo xaml.cs e os elementos têm atributos x:Name inconsistentes entre os dois arquivos xaml. Tente adicionar o mesmo nome aos mesmos elementos nos dois arquivos xaml ou omita todos os nomes. |
-| Quando executado no dispositivo, o aplicativo termina, ou quando iniciado a partir do Visual Studio, você verá o erro "não é possível ativar o Windows Runtime 8.x aplicativo \[... \]. A solicitação de ativação falhou com o erro "O Windows não pôde se comunicar com o aplicativo de destino". Isso geralmente indica que o processo do aplicativo de destino foi anulado. \[... \]". | O problema poderia ser o código imperativo sendo executado em suas próprias páginas ou em propriedades vinculadas (ou outros tipos) durante a inicialização. Ou, isso pode acontecer durante a análise do arquivo XAML prestes a ser exibido quando o aplicativo foi encerrado (se inicializado no Visual Studio, essa será a página de inicialização). Procure chaves de recurso inválidas e/ou tente algumas das diretrizes da seção "Rastreando problemas" neste tópico.|
+| Quando executado no dispositivo, o aplicativo termina, ou quando iniciado a partir do Visual Studio, você verá o erro "não é possível ativar o Windows Runtime 8.x aplicativo \[... \]. A solicitação de ativação falhou com o erro "O Windows não pôde se comunicar com o aplicativo de destino". Isso geralmente indica que o processo do aplicativo de destino foi anulado. \[…\]”. | O problema poderia ser o código imperativo sendo executado em suas próprias páginas ou em propriedades vinculadas (ou outros tipos) durante a inicialização. Ou, isso pode acontecer durante a análise do arquivo XAML prestes a ser exibido quando o aplicativo foi encerrado (se inicializado no Visual Studio, essa será a página de inicialização). Procure chaves de recurso inválidas e/ou tente algumas das diretrizes da seção "Rastreando problemas" neste tópico.|
 | O analisador ou o compilador de XAML, ou uma exceção de tempo de execução, mostra o erro "*O recurso "<resourcekey>" não pôde ser resolvido*". | A chave de recurso não se aplica a aplicativos da Plataforma Universal do Windows (UWP) (isso acontece com alguns recursos do Windows Phone, por exemplo). Encontre o recurso equivalente correto e atualize sua marcação. Exemplos que você pode encontrar imediatamente são chaves de sistema, como `PhoneAccentBrush`. |
-| O C# compilador retorna o erro "*o nome do namespace ou tipo '<name>' não pôde ser encontrado \[... \]* "ou"*o nome do namespace ou tipo '<name>' não existe no namespace \[... \]* "ou"*o nome do namespace ou tipo '<name>' não existe no contexto atual*". | Isso provavelmente significa que o tipo é implementado em um SDK de extensão (embora possa haver casos em que a solução não seja tão simples). Use o conteúdo de referência [APIs do Windows](https://msdn.microsoft.com/library/windows/apps/bg124285) para determinar qual SDK de extensão implementa a API e, em seguida, use o comando **Adicionar** > **Referência** do Visual Studio para adicionar uma referência a esse SDK ao seu projeto. Caso o aplicativo esteja direcionado para o conjunto de APIs conhecido como a família de dispositivos universais, é essencial que você use a classe [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para testar em tempo de execução a presença do SDK de extensão antes de chamá-los (isso é chamado de código adaptável). Caso haja uma API universal, ela é sempre preferível a uma API no SDK de extensão. Para obter mais informações, consulte [SDKs de extensão](w8x-to-uwp-porting-to-a-uwp-project.md). |
+| O C# compilador retorna o erro "*o nome do namespace ou tipo '<name>' não pôde ser encontrado \[... \]* "ou"*o nome do namespace ou tipo '<name>' não existe no namespace \[... \]* "ou"*o nome do namespace ou tipo '<name>' não existe no contexto atual*". | Isso provavelmente significa que o tipo é implementado em um SDK de extensão (embora possa haver casos em que a solução não seja tão simples). Use o conteúdo de referência [APIs do Windows](https://docs.microsoft.com/uwp/) para determinar qual SDK de extensão implementa a API e, em seguida, use o comando **Adicionar** > **Referência** do Visual Studio para adicionar uma referência a esse SDK ao seu projeto. Caso o aplicativo esteja direcionado para o conjunto de APIs conhecido como a família de dispositivos universais, é essencial que você use a classe [**ApiInformation**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.ApiInformation) para testar em tempo de execução a presença do SDK de extensão antes de chamá-los (isso é chamado de código adaptável). Caso haja uma API universal, ela é sempre preferível a uma API no SDK de extensão. Para obter mais informações, consulte [SDKs de extensão](w8x-to-uwp-porting-to-a-uwp-project.md). |
 
 O próximo tópico é [Portando XAML e a interface do usuário](w8x-to-uwp-porting-xaml-and-ui.md).
 

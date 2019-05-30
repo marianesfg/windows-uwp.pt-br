@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 503f7baad0d91f4e7c29010145ecb162f98bc81c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b1ea41a509b1673b7c4f5812d34db93dd6b0c93e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606281"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365940"
 ---
 # <a name="choose-a-notification-delivery-method"></a>Escolher um método de entrega de notificação
 
@@ -27,7 +27,7 @@ Este artigo aborda as quatro opções de notificação - local, agendada, perió
 
 Existem quatro mecanismos que um aplicativo pode usar para entregar uma notificação:
 
--   **local**
+-   **Local**
 -   **Agendado**
 -   **Periódica**
 -   **envio por push**
@@ -153,7 +153,7 @@ Por padrão, as notificações por push expiram três dias depois que são receb
 Para obter mais informações, consulte:
 
 -   [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
--   [Diretrizes para notificações por push](https://msdn.microsoft.com/library/windows/apps/hh761462)
+-   [Diretrizes para notificações por push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
 -   [Exemplos de código de notificações do Universal Windows Platform (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 
@@ -162,8 +162,8 @@ Para obter mais informações, consulte:
 
 * [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md)
 * [Enviar uma notificação do sistema local](send-local-toast.md)
-* [Diretrizes para notificações por push](https://msdn.microsoft.com/library/windows/apps/hh761462)
-* [Diretrizes para notificações do sistema](https://msdn.microsoft.com/library/windows/apps/hh465391)
+* [Diretrizes para notificações por push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [Diretrizes para notificações do sistema](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-badges-notifications)
 * [Visão geral de notificações periódicas](periodic-notification-overview.md)
 * [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
 * [Notificações do Universal Windows Platform (UWP) exemplos de código no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)

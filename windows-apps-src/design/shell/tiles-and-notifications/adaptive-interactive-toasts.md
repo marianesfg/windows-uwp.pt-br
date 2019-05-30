@@ -8,12 +8,12 @@ ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, uwp, notificações do sistema, notificações do sistema interativas, notificações do sistema adaptáveis, conteúdo de notificação do sistema, conteúdo da notificação do sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: a75e39dfcddbef5bb5c37c2a253a46a7b9cc9577
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 75e5ea7e83a1a274b90b14588f7d809a4aa91269
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596821"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366873"
 ---
 # <a name="toast-content"></a>Conteúdo da notificação do sistema
 
@@ -22,7 +22,7 @@ As notificações do sistema interativas e adaptáveis permitem a criação de n
 > **APIs importantes**: [Pacote do nuget de notificações de kit de ferramentas de comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 > [!NOTE]
-> Para ver os modelos de herdado do Windows 8.1 e Windows Phone 8.1, consulte o [catálogo de modelos de notificação do sistema herdado](https://msdn.microsoft.com/library/windows/apps/hh761494).
+> Para ver os modelos de herdado do Windows 8.1 e Windows Phone 8.1, consulte o [catálogo de modelos de notificação do sistema herdado](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10)).
 
 
 ## <a name="getting-started"></a>Introdução
@@ -42,8 +42,8 @@ Para saber como enviar uma notificação, consulte [Enviar notificação do sist
 As notificações do sistema são uma combinação de algumas propriedades de dados como Marcação/Grupo (que permitem a você identificar a notificação) e o *conteúdo da notificação do sistema*.
 
 Os componentes principais de conteúdo da notificação do sistema são...
-* **Iniciar**: Isso define quais argumentos serão passados de volta para seu aplicativo quando o usuário clica em sua notificação do sistema, permitindo que você ao link profundo no que a notificação do sistema foi exibindo conteúdo correto. Para saber mais, consulte [Enviar notificação do sistema local](send-local-toast.md).
-* **Visual**: A parte visual da notificação do sistema, incluindo o genérico de associação que contém texto e imagens.
+* **launch**: Isso define quais argumentos serão passados de volta para seu aplicativo quando o usuário clica em sua notificação do sistema, permitindo que você ao link profundo no que a notificação do sistema foi exibindo conteúdo correto. Para saber mais, consulte [Enviar notificação do sistema local](send-local-toast.md).
+* **visual**: A parte visual da notificação do sistema, incluindo o genérico de associação que contém texto e imagens.
 * **ações**: A parte interativa de notificação do sistema, incluindo as entradas e ações.
 * **áudio**: Controles de áudio reproduzida quando a notificação do sistema é mostrada ao usuário.
 

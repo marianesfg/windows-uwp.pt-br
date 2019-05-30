@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c72af86edd3d0a20ab8a0f062b5e0ccf8608e8a9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6e7b3cd9185e64d701571532d0b632c270476492
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653431"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362559"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Dados de exemplo na superfície de design e para a criação de protótipo
 =============================================================================================
 
 
 
-**Observação**  o grau ao qual você precisa de dados de exemplo — e quanto ele irá ajudá-lo — depende de se usam as associações a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) ou o [extensão de marcação {X:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). As técnicas descritas neste tópico se baseiam no uso de um [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) e, portanto, apenas são apropriadas para **{Binding}**. Porém, se você estiver usando **{x:Bind}**, suas associações mostrarão pelo menos valores de espaço reservado na superfície de design (até mesmo para controles de itens) e, portanto, a necessidade de usar dados de amostra não é tão grande.
+**Observação**  o grau ao qual você precisa de dados de exemplo — e quanto ele irá ajudá-lo — depende de se usam as associações a [extensão de marcação {Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) ou o [extensão de marcação {X:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension). As técnicas descritas neste tópico se baseiam no uso de um [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) e, portanto, apenas são apropriadas para **{Binding}** . Porém, se você estiver usando **{x:Bind}** , suas associações mostrarão pelo menos valores de espaço reservado na superfície de design (até mesmo para controles de itens) e, portanto, a necessidade de usar dados de amostra não é tão grande.
 
 Pode ser impossível ou indesejado (talvez por motivos de privacidade ou desempenho) que seu aplicativo exiba dados dinâmicos na superfície de design no Microsoft Visual Studio ou no Blend for Visual Studio. Para que seus controles sejam populados com dados (e você possa trabalhar no layout, nos modelos e em outras propriedades visuais do seu aplicativo), há várias maneiras de usar dados de amostra de tempo de design. Os dados de exemplo também podem ser muito úteis e economizar tempo se você estiver criando um aplicativo de esboço (ou protótipo). Você pode usar dados de exemplo em seu esboço ou protótipo em tempo de execução para ilustrar suas ideias sem a necessidade de conexão com dados reais e dinâmicos.
 
@@ -30,7 +30,7 @@ Pode ser impossível ou indesejado (talvez por motivos de privacidade ou desempe
 <a name="setting-datacontext-in-markup"></a>Definindo DataContext na marcação
 -----------------------------
 
-Uma prática bastante comum entre os desenvolvedores é usar um código imperativo (no code-behind) para definir uma página ou o [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) de um controle de usuário para visualizar uma instância de modelo.
+Uma prática bastante comum entre os desenvolvedores é usar um código imperativo (no code-behind) para definir uma página ou o [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) de um controle de usuário para visualizar uma instância de modelo.
 
 ``` csharp
 public MainPage()
@@ -44,7 +44,7 @@ Porém, se você fizer isso, sua página não será tão "projetável" quanto po
 
 ![Interface de usuário com design escasso.](images/displaying-data-in-the-designer-01.png)
 
-A primeira solução que pode ser tentada é assinalar como comentário essa atribuição de **DataContext** e, em vez disso, definir o **DataContext** na marcação da sua página. Dessa maneira, seus dados dinâmicos aparecerão em tempo de design e também em tempo de execução. Para isso, primeiro abra sua página XAML. Em seguida, nos **Document Outline** janela, clique no elemento de raiz projetáveis (geralmente com o rótulo  **\[página\]**) para selecioná-lo. Na janela **Propriedades**, localize a propriedade **DataContext** (dentro da categoria Comum) e depois clique em **Novo**. Clique no seu tipo de modelo de exibição na caixa de diálogo **Selecionar Objeto** e depois em **OK**.
+A primeira solução que pode ser tentada é assinalar como comentário essa atribuição de **DataContext** e, em vez disso, definir o **DataContext** na marcação da sua página. Dessa maneira, seus dados dinâmicos aparecerão em tempo de design e também em tempo de execução. Para isso, primeiro abra sua página XAML. Em seguida, nos **Document Outline** janela, clique no elemento de raiz projetáveis (geralmente com o rótulo  **\[página\]** ) para selecioná-lo. Na janela **Propriedades**, localize a propriedade **DataContext** (dentro da categoria Comum) e depois clique em **Novo**. Clique no seu tipo de modelo de exibição na caixa de diálogo **Selecionar Objeto** e depois em **OK**.
 
 ![Interface do usuário para definir DataContext.](images/displaying-data-in-the-designer-02.png)
 
@@ -81,7 +81,7 @@ Você pode usar um localizador de modelo de exibição se for necessário passar
 
 Se, por qualquer motivo, nenhuma das opções na seção anterior funcionar para você, ainda há diversas opções de dados de tempo de design disponíveis por meio de recursos de ferramentas XAML e atributos de tempo de design. Uma boa opção é o recurso **Criar Dados de Exemplo da Classe** no Blend for Visual Studio. Você pode encontrar esse comando em um dos botões na parte superior do painel **Dados**.
 
-Basta especificar uma classe para o comando usar. O comando executa duas ações importantes para você. Primeiramente, ele gera um arquivo XAML que contém dados de exemplo adequados para recuperar uma instância da classe escolhida e todos os seus membros, recursivamente (na verdade, as ferramentas funcionam igualmente bem com arquivos XAML ou JSON). Em segundo lugar, ele preenche o painel **Dados** com o esquema da sua classe escolhida. Em seguida, você pode arrastar membros do painel **Dados** até a superfície de design para realizar várias tarefas. Dependendo do conteúdo que você arrasta e de onde esse conteúdo é solto, é possível adicionar associações a controles existentes (usando **{Binding}**) ou criar novos controles e associá-los ao mesmo tempo. Seja qual for o caso, a operação também define um contexto de dados em tempo de design (**d:DataContext**) para você (se ainda não houver um definido) na raiz de layout da sua página. Esse contexto de dados em tempo de design usa o atributo **d:DesignData** para obter seus dados de amostra do arquivo XAML que foi gerado (que, a propósito, você tem a opção de encontrar no seu projeto e editar de forma que ele contenha os dados de amostra desejados).
+Basta especificar uma classe para o comando usar. O comando executa duas ações importantes para você. Primeiramente, ele gera um arquivo XAML que contém dados de exemplo adequados para recuperar uma instância da classe escolhida e todos os seus membros, recursivamente (na verdade, as ferramentas funcionam igualmente bem com arquivos XAML ou JSON). Em segundo lugar, ele preenche o painel **Dados** com o esquema da sua classe escolhida. Em seguida, você pode arrastar membros do painel **Dados** até a superfície de design para realizar várias tarefas. Dependendo do conteúdo que você arrasta e de onde esse conteúdo é solto, é possível adicionar associações a controles existentes (usando **{Binding}** ) ou criar novos controles e associá-los ao mesmo tempo. Seja qual for o caso, a operação também define um contexto de dados em tempo de design (**d:DataContext**) para você (se ainda não houver um definido) na raiz de layout da sua página. Esse contexto de dados em tempo de design usa o atributo **d:DesignData** para obter seus dados de amostra do arquivo XAML que foi gerado (que, a propósito, você tem a opção de encontrar no seu projeto e editar de forma que ele contenha os dados de amostra desejados).
 
 ``` xaml
 <Page ...
@@ -95,11 +95,11 @@ Basta especificar uma classe para o comando usar. O comando executa duas ações
 </Page>
 ```
 
-As várias declarações xmlns significam que atributos com o prefixo **d:** são interpretados apenas em tempo de design e são ignorados em tempo de execução. Portanto, o atributo **d:DataContext** afeta somente o valor da propriedade [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) em tempo de design, não tendo qualquer efeito em tempo de execução. Se quiser, você pode até mesmo definir tanto **d:DataContext** quanto **DataContext** na marcação. **d:DataContext** será substituído em tempo de design, enquanto a propriedade **DataContext** será substituída em tempo de execução. Essas mesmas regras de substituição se aplicam a todos os atributos em tempo de design e em tempo de execução.
+As várias declarações xmlns significam que atributos com o prefixo **d:** são interpretados apenas em tempo de design e são ignorados em tempo de execução. Portanto, o atributo **d:DataContext** afeta somente o valor da propriedade [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) em tempo de design, não tendo qualquer efeito em tempo de execução. Se quiser, você pode até mesmo definir tanto **d:DataContext** quanto **DataContext** na marcação. **d:DataContext** será substituído em tempo de design, enquanto a propriedade **DataContext** será substituída em tempo de execução. Essas mesmas regras de substituição se aplicam a todos os atributos em tempo de design e em tempo de execução.
 
 O atributo **d:DataContext** e todos os outros atributos em tempo de design estão documentados no tópico sobre [atributos em tempo de design](https://go.microsoft.com/fwlink/p/?LinkId=272504), que ainda é válido para aplicativos UWP (Plataforma Universal do Windows).
 
-[**CollectionViewSource** ](https://msdn.microsoft.com/library/windows/apps/BR209833) não tem um **DataContext** propriedade, mas tem um **origem** propriedade. Consequentemente, há uma propriedade **d:Source** que você pode usar para definir dados de amostra somente em tempo de design em um **CollectionViewSource**.
+[**CollectionViewSource** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) não tem um **DataContext** propriedade, mas tem um **origem** propriedade. Consequentemente, há uma propriedade **d:Source** que você pode usar para definir dados de amostra somente em tempo de design em um **CollectionViewSource**.
 
 ``` xaml
     <Page.Resources>
@@ -148,6 +148,6 @@ Para a criação de protótipo, você quer dados de exemplo em tempo de design e
 
 Em vez de especificar uma classe, você pode projetar o esquema da fonte de dados de exemplo diretamente no painel **Dados** . Você também pode editar valores de dados de exemplo no painel **Dados**: não é necessário abrir e editar um arquivo (embora você ainda possa fazer isso se preferir).
 
-O recurso **Novos Dados de Exemplo** usa [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) e não **d:DataContext**, para que os dados de exemplo estejam disponíveis quando você executar seu esboço ou protótipo e durante a criação. E o painel **Dados** realmente acelera as tarefas de design e associação. Por exemplo, basta arrastar uma propriedade de coleção do painel **Dados** para a superfície de design para gerar um controle de itens de ligação de dados e os modelos necessários, tudo pronto para compilação e execução.
+O recurso **Novos Dados de Exemplo** usa [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) e não **d:DataContext**, para que os dados de exemplo estejam disponíveis quando você executar seu esboço ou protótipo e durante a criação. E o painel **Dados** realmente acelera as tarefas de design e associação. Por exemplo, basta arrastar uma propriedade de coleção do painel **Dados** para a superfície de design para gerar um controle de itens de ligação de dados e os modelos necessários, tudo pronto para compilação e execução.
 
 ![Dados de exemplo para criação de protótipo.](images/displaying-data-in-the-designer-04.png)

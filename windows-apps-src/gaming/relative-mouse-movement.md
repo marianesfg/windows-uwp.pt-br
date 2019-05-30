@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, mouse, entrada
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
 ms.localizationpriority: medium
-ms.openlocfilehash: 71985841e6c0fa764201c179fb12408581823e5e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1d36d81aa3f4e0124f79cf8c736b715eb91590d0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639651"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368190"
 ---
 # <a name="relative-mouse-movement-and-corewindow"></a>Movimento relativo do mouse e CoreWindow
 
@@ -39,7 +39,7 @@ Com esse padrão, o local do cursor do mouse absoluto é preservado ao entrar no
 ## <a name="handling-relative-mouse-movement"></a>Manipulando o movimento relativo do mouse
 
 
-Para acessar os valores delta relativos do mouse, registre o evento [MouseDevice::MouseMoved](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.input.mousedevice.mousemoved.aspx) conforme mostrado aqui.
+Para acessar os valores delta relativos do mouse, registre o evento [MouseDevice::MouseMoved](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved) conforme mostrado aqui.
 
 
 ```cpp
@@ -85,13 +85,13 @@ void MoveLookController::OnMouseMoved(
 
 ```
 
-O manipulador de eventos neste exemplo de código, **OnMouseMoved**, renderiza a visualização com base nos movimentos do mouse. A posição do ponteiro do mouse é transmitida para o manipulador como um objeto [MouseEventArgs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.input.mouseeventargs.aspx). 
+O manipulador de eventos neste exemplo de código, **OnMouseMoved**, renderiza a visualização com base nos movimentos do mouse. A posição do ponteiro do mouse é transmitida para o manipulador como um objeto [MouseEventArgs](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseEventArgs). 
 
-Pule o processamento de dados absolutos do mouse do evento [CoreWindow::PointerMoved](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointermoved.aspx) quando o aplicativo mudar para manipular valores de movimentos relativos do mouse. Entretanto, só pule essa entrada se o evento **CoreWindow::PointerMoved** tiver ocorrido como resultado da entrada do mouse (em oposição à entrada por toque). O cursor é ocultado ao definir o [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) como **nullptr**. 
+Pule o processamento de dados absolutos do mouse do evento [CoreWindow::PointerMoved](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) quando o aplicativo mudar para manipular valores de movimentos relativos do mouse. Entretanto, só pule essa entrada se o evento **CoreWindow::PointerMoved** tiver ocorrido como resultado da entrada do mouse (em oposição à entrada por toque). O cursor é ocultado ao definir o [CoreWindow::PointerCursor](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor) como **nullptr**. 
 
 ## <a name="returning-to-absolute-mouse-movement"></a>Retornando para o movimento absoluto do mouse
 
-Quando o aplicativo sai do modo de manipulação de objeto ou cena 3D e deixa de usar o movimento relativo do mouse (como quando retorna para uma tela de menu), retorna para o processamento normal do movimento absoluto do mouse. Neste momento, para de ler os dados relativos do mouse, reinicia o processamento de eventos do mouse padrão (e ponteiro) e define o [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) como um valor que não é nulo. 
+Quando o aplicativo sai do modo de manipulação de objeto ou cena 3D e deixa de usar o movimento relativo do mouse (como quando retorna para uma tela de menu), retorna para o processamento normal do movimento absoluto do mouse. Neste momento, para de ler os dados relativos do mouse, reinicia o processamento de eventos do mouse padrão (e ponteiro) e define o [CoreWindow::PointerCursor](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor) como um valor que não é nulo. 
 
 > **Observação**  
 Quando o aplicativo está no modo de manipulação de objeto/cena 3D (processamento de movimentos relativos do mouse com o cursor desativado), o mouse não pode chamar a interface do usuário da borda como os botões, pilha voltar ou barra de aplicativos. Portanto, é importante fornecer um mecanismo para sair desse modo específico, como a tecla **Esc** normalmente usada.

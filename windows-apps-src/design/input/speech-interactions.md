@@ -8,12 +8,12 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 09787d5a83415b65b8946860edb5b7cad09a5846
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fb292ad5cba892275709fbc89d5d53fa136144f3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57637071"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365295"
 ---
 # <a name="speech-interactions"></a>Interações de controle por voz
 
@@ -164,7 +164,7 @@ Uma gramática personalizada é projetada e criada por você e instalada com o s
     -   Cada gramática deve ser pequena. Gramáticas com poucas frases tendem a oferecer um reconhecimento mais preciso do que gramáticas maiores com muitas frases. É preferível ter várias gramáticas menores para cenários específicos a ter uma única gramática para o aplicativo inteiro.
     -   Permita que os usuários saibam o que dizer para cada contexto do aplicativo e habilitem e desabilitem gramáticas conforme necessário.
     -   Projete cada gramática para que os usuários possam falar um comando de diversas maneiras. Por exemplo, você pode usar a regra **GARBAGE** para fazer correspondência da entrada de fala que sua gramática não define. Isso permite que os usuários digam palavras adicionais que não tenham significado para seu aplicativo. Por exemplo, "me dê", "e", "hum", "talvez", etc.
-    -   Use o elemento [sapi:subset](https://msdn.microsoft.com/library/windowsphone/design/jj572474.aspx) para ajudar na correspondência da entrada de fala. Essa é uma extensão da Microsoft para a especificação SRGS para ajudar na correspondência de frases parciais.
+    -   Use o elemento [sapi:subset](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/jj572474(v=office.14)) para ajudar na correspondência da entrada de fala. Essa é uma extensão da Microsoft para a especificação SRGS para ajudar na correspondência de frases parciais.
     -   Evite definir frases que contenham apenas uma sílaba na sua gramática. O reconhecimento tende a ser mais preciso em frases com duas ou mais sílabas.
     -   Evite frases que pareçam iguais. Por exemplo, palavras como "cumprimento" e "comprimento" podem confundir o mecanismo de reconhecimento e resultar em reconhecimento pouco preciso.
 
@@ -175,11 +175,11 @@ Uma gramática personalizada é projetada e criada por você e instalada com o s
 
 Se seu aplicativo tiver vocabulário especializado com palavras incomuns ou fictícias, ou ainda, palavras com pronúncias incomuns, você poderá melhorar o desempenho do reconhecimento para essas palavras ao definir pronúncias personalizadas.
 
-Para uma pequena lista de palavras e frases, ou uma lista de palavras e frases usadas com pouca frequência, você pode criar pronúncias personalizadas em uma gramática SRGS. Consulte [elemento token](https://msdn.microsoft.com/library/windowsphone/design/hh361600.aspx) para obter mais informações.
+Para uma pequena lista de palavras e frases, ou uma lista de palavras e frases usadas com pouca frequência, você pode criar pronúncias personalizadas em uma gramática SRGS. Consulte [elemento token](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361600(v=office.14)) para obter mais informações.
 
-Para listas maiores de palavras e frases, ou palavras e frases usadas com frequência, você pode criar documentos separados de léxico de pronúncias. Consulte [Sobre léxicos e alfabetos fonéticos](https://msdn.microsoft.com/library/windowsphone/design/hh361646.aspx) para obter mais informações.
+Para listas maiores de palavras e frases, ou palavras e frases usadas com frequência, você pode criar documentos separados de léxico de pronúncias. Consulte [Sobre léxicos e alfabetos fonéticos](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361646(v=office.14)) para obter mais informações.
 
-## <a name="testing"></a>Testando
+## <a name="testing"></a>Testes
 
 Teste a precisão do reconhecimento de fala e qualquer interface do usuário de suporte com o público-alvo do seu aplicativo. Esta é a melhor maneira de determinar a eficiência da experiência de interação de fala no seu aplicativo. Por exemplo, os usuários estão obtendo resultados de reconhecimento insatisfatórios porque seu aplicativo não está ouvindo uma frase comum?
 
@@ -200,7 +200,7 @@ Você deve ouvir todas as cadeias de caracteres da TTS para garantir que sejam i
 -   Encadear uma sequência incomum de palavras ou falar números de peças ou pontuação podem tornar uma frase inteligível.
 -   A fala pode parecer artificial quando a prosódia ou a cadência é diferente de como um falante nativo diria a frase.
 
-Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação como entrada para o sintetizador de voz. Para obter mais informações sobre SSML, consulte [Usar SSML para controlar a fala sintetizada](https://msdn.microsoft.com/library/windowsphone/design/hh378454.aspx) e [Referência da linguagem de marcação da sintetização de voz](https://msdn.microsoft.com/library/windowsphone/design/hh378377.aspx).
+Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação como entrada para o sintetizador de voz. Para obter mais informações sobre SSML, consulte [Usar SSML para controlar a fala sintetizada](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) e [Referência da linguagem de marcação da sintetização de voz](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14)).
 
 ## <a name="other-articles-in-this-section"></a>Outros artigos nesta seção 
 
@@ -215,8 +215,8 @@ Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação 
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Interações de controle por voz](https://msdn.microsoft.com/library/windows/apps/mt185614)
-* [Interações da Cortana](https://msdn.microsoft.com/library/windows/apps/mt185598)
+* [Interações de controle por voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
+* [Interações da Cortana](https://docs.microsoft.com/windows/uwp/input-and-devices/cortana-interactions)
 
  **Exemplos**
 

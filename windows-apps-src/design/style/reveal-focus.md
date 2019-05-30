@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 5de4b51687e152ef5d25a583f949cdd108f2f029
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 2cb91b37b1d2a6924a80bbe666129343ad778d8e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984207"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370473"
 ---
 # <a name="reveal-focus"></a>Revelar o foco
 
@@ -176,6 +176,6 @@ Revele o que foco é um componente de sistema de Design Fluent que adiciona a lu
 - [Projetando para TV e Xbox](/windows/uwp/design/devices/designing-for-tv)
 - [Interações de Gamepad e controle remoto](https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions)
 - [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
-- [Efeitos de composição](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
+- [Efeitos de composição](https://docs.microsoft.com/windows/uwp/graphics/composition-effects)
 - [Ciência no sistema: Profundidade e Design Fluent](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [Ciência no sistema: Luz e Design Fluent](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

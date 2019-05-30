@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, texturas, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: a857f62839841a2e20c4f6b6cf753e9d85dcb32c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1c1412029b20ffded0d33567713e969bc0fd5dc5
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601651"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369125"
 ---
 # <a name="apply-textures-to-primitives"></a>Aplicar texturas a primitivas
 
@@ -64,15 +64,15 @@ private:
 
 Aqui, criamos sombreadores de vértice e pixel mais complexos do que no tutorial anterior, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md). O sombreador de vértice desse aplicativo transforma cada posição de vértice em espaço de projeção e as coordenadas de textura de vértice para o sombreador de pixel.
 
-A matriz do aplicativo de [ **D3D11\_entrada\_elemento\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) estruturas que descrevem o layout do código de sombreador de vértice tem três elementos de layout: um elemento Define a posição de vértice, outro elemento define o vetor normal superfície (a direção que a superfície de faces normalmente) e o terceiro elemento define as coordenadas de textura.
+A matriz do aplicativo de [ **D3D11\_entrada\_elemento\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_input_element_desc) estruturas que descrevem o layout do código de sombreador de vértice tem três elementos de layout: um elemento Define a posição de vértice, outro elemento define o vetor normal superfície (a direção que a superfície de faces normalmente) e o terceiro elemento define as coordenadas de textura.
 
 Criamos índice de vértice e buffers constantes que definem um cubo texturizado em órbita.
 
 **Para definir um cubo de textura em órbita**
 
 1.  Primeiro, definimos o cubo. Para cada vértice é atribuída uma posição, um vetor normal de superfície e coordenas de textura. Usamos vários vértices para cada canto, para permitir diferentes vetores normais e coordenadas de textura para serem definidas para cada face.
-2.  Em seguida, descreveremos os buffers de índice e vértice ([**D3D11\_BUFFER\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) e [ **D3D11\_SUBRESOURCE\_Dados**](https://msdn.microsoft.com/library/windows/desktop/ff476220)) usando a definição do cubo. Chamamos [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) uma vez para cada buffer.
-3.  Em seguida, criamos um buffer de constantes ([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092)) para passar matrizes de modelo, exibição e projeção para o sombreador de vértices. Mais tarde, podemos usar o buffer constante para girar o cubo e aplicar uma projeção de perspectiva a ele. Chamamos [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) para criar o buffer constante.
+2.  Em seguida, descreveremos os buffers de índice e vértice ([**D3D11\_BUFFER\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc) e [ **D3D11\_SUBRESOURCE\_Dados**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data)) usando a definição do cubo. Chamamos [**ID3D11Device::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer) uma vez para cada buffer.
+3.  Em seguida, criamos um buffer de constantes ([**D3D11\_BUFFER\_DESC**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc)) para passar matrizes de modelo, exibição e projeção para o sombreador de vértices. Mais tarde, podemos usar o buffer constante para girar o cubo e aplicar uma projeção de perspectiva a ele. Chamamos [**ID3D11Device::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer) para criar o buffer constante.
 4.  Finalmente, especificamos a transformação de exibição que corresponde à posição de câmera de X = 0, Y = 1, Z = 2.
 
 ```cppcx
@@ -270,10 +270,10 @@ Usamos dados de textura brutos para criar texturas.
 **Para criar texturas e amostras**
 
 1.  Primeiro, lemos dados de textura brutos do arquivo exturedata.bin no disco.
-2.  Em seguida, podemos construir uma [ **D3D11\_SUBRESOURCE\_DATA** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) estrutura que faz referência a esses dados brutos de textura.
-3.  Em seguida, podemos preencher uma [ **D3D11\_TEXTURE2D\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476253) estrutura para descrever a textura. Em seguida, passamos a [ **D3D11\_SUBRESOURCE\_DATA** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) e **D3D11\_TEXTURE2D\_DESC** estruturas em um chamada para [ **ID3D11Device::CreateTexture2D** ](https://msdn.microsoft.com/library/windows/desktop/ff476521) para criar a textura.
-4.  Em seguida, criamos uma exibição de recurso de sombreador da textura, para que sombreadores possam usar a textura. Para criar o modo de exibição de recurso de sombreador, nós preenchemos uma [ **D3D11\_SOMBREADOR\_RESOURCE\_exibição\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476211) para descrever o modo de exibição de recurso do sombreador e passe a descrição do modo de exibição de recurso do sombreador e a textura [ **ID3D11Device::CreateShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476519). Em geral, a descrição de exibição corresponde com a descrição de textura.
-5.  Em seguida, criamos o estado de amostra para a textura. Esse estado de amostra usa os dados de textura relevantes para definir como a cor para uma determinada coordenada de textura é determinada. Podemos preencher uma [ **D3D11\_amostra\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476207) estrutura para descrever o estado de amostra. Em seguida, passamos a **D3D11\_DEMONSTRADOR\_DESC** estrutura em uma chamada para [ **ID3D11Device::CreateSamplerState** ](https://msdn.microsoft.com/library/windows/desktop/ff476518) para criar o estado de amostra.
+2.  Em seguida, podemos construir uma [ **D3D11\_SUBRESOURCE\_DATA** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) estrutura que faz referência a esses dados brutos de textura.
+3.  Em seguida, podemos preencher uma [ **D3D11\_TEXTURE2D\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_texture2d_desc) estrutura para descrever a textura. Em seguida, passamos a [ **D3D11\_SUBRESOURCE\_DATA** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) e **D3D11\_TEXTURE2D\_DESC** estruturas em um chamada para [ **ID3D11Device::CreateTexture2D** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createtexture2d) para criar a textura.
+4.  Em seguida, criamos uma exibição de recurso de sombreador da textura, para que sombreadores possam usar a textura. Para criar o modo de exibição de recurso de sombreador, nós preenchemos uma [ **D3D11\_SOMBREADOR\_RESOURCE\_exibição\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_shader_resource_view_desc) para descrever o modo de exibição de recurso do sombreador e passe a descrição do modo de exibição de recurso do sombreador e a textura [ **ID3D11Device::CreateShaderResourceView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createshaderresourceview). Em geral, a descrição de exibição corresponde com a descrição de textura.
+5.  Em seguida, criamos o estado de amostra para a textura. Esse estado de amostra usa os dados de textura relevantes para definir como a cor para uma determinada coordenada de textura é determinada. Podemos preencher uma [ **D3D11\_amostra\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_sampler_desc) estrutura para descrever o estado de amostra. Em seguida, passamos a **D3D11\_DEMONSTRADOR\_DESC** estrutura em uma chamada para [ **ID3D11Device::CreateSamplerState** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createsamplerstate) para criar o estado de amostra.
 6.  Finalmente, declaramos uma variável de *grau* que usaremos para animar o cubo, girando cada quadro dele.
 
 ```cppcx
@@ -386,22 +386,22 @@ float degree = 0.0f;
 
 ### <a name="4-rotating-and-drawing-the-textured-cube-and-presenting-the-rendered-image"></a>4. Girando e desenhar o cubo de textura e apresentar a imagem renderizada
 
-Como nos tutoriais anteriores, inserimos um loop infinito para renderizar e exibir continuamente a cena. Chamamos a função em linha (BasicMath.h) **rotationY** com uma quantidade de rotação para definir valores que vão girar a matriz de modelo do cubo em torno do eixo Y. Em seguida, chamamos [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) para atualizar o buffer constante e girar o modelo de cubo. Depois, chamamos [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar o destino de renderização e a exibição de profundidade e estêncil. Chamamos [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) para limpar o destino de renderização para uma cor azul sólida e chamamos [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387) para limpar o buffer de profundidade.
+Como nos tutoriais anteriores, inserimos um loop infinito para renderizar e exibir continuamente a cena. Chamamos a função em linha (BasicMath.h) **rotationY** com uma quantidade de rotação para definir valores que vão girar a matriz de modelo do cubo em torno do eixo Y. Em seguida, chamamos [**ID3D11DeviceContext::UpdateSubresource**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-updatesubresource) para atualizar o buffer constante e girar o modelo de cubo. Depois, chamamos [**ID3D11DeviceContext::OMSetRenderTargets**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-omsetrendertargets) para especificar o destino de renderização e a exibição de profundidade e estêncil. Chamamos [**ID3D11DeviceContext::ClearRenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-clearrendertargetview) para limpar o destino de renderização para uma cor azul sólida e chamamos [**ID3D11DeviceContext::ClearDepthStencilView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-cleardepthstencilview) para limpar o buffer de profundidade.
 
 No loop infinito, também desenhamos o cubo texturizado na superfície azul.
 
 **Para desenhar o cubo de textura**
 
-1.  Primeiro, chamamos [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) para descrever como os dados de buffer de vértices são transmitidos para o estágio de assembler de entrada.
-2.  Em seguida, chamamos [**ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) e [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453) para associar os buffers de vértice e índice para o estágio de assembler de entrada.
-3.  Em seguida, chamamos [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) com o [ **D3D11\_PRIMITIVO\_topologia\_ TRIANGLESTRIP** ](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) valor a ser especificado para o estágio do assembler de entrada interpretar os dados de vértice como uma faixa de triângulo.
-4.  Chamamos [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) para iniciar o estágio de sombreador de vértice com o código de sombreador de vértice e [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472) para iniciar o estágio de sombreador de pixel com o código de sombreador de pixel.
-5.  Chamamos [**ID3D11DeviceContext::VSSetConstantBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476491) para definir o buffer constante que é usado pelo estágio de pipeline do sombreador de vértice.
-6.  Chamamos [**PSSetShaderResources**](https://msdn.microsoft.com/library/windows/desktop/ff476473) para associar a exibição de recurso de sombreador da textura ao estágio de pipeline do sombreador de pixel.
-7.  Chamamos [**PSSetSamplers**](https://msdn.microsoft.com/library/windows/desktop/ff476471) para definir o estágio de amostra para o estágio de pipeline do sombreador de pixel.
-8.  Finalmente, chamamos [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) para desenhar o cubo e enviá-lo para a pipeline de renderização.
+1.  Primeiro, chamamos [**ID3D11DeviceContext::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout) para descrever como os dados de buffer de vértices são transmitidos para o estágio de assembler de entrada.
+2.  Em seguida, chamamos [**ID3D11DeviceContext::IASetVertexBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers) e [**ID3D11DeviceContext::IASetIndexBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetindexbuffer) para associar os buffers de vértice e índice para o estágio de assembler de entrada.
+3.  Em seguida, chamamos [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology) com o [ **D3D11\_PRIMITIVO\_topologia\_ TRIANGLESTRIP** ](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ff476189(v=vs.85)) valor a ser especificado para o estágio do assembler de entrada interpretar os dados de vértice como uma faixa de triângulo.
+4.  Chamamos [**ID3D11DeviceContext::VSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vssetshader) para iniciar o estágio de sombreador de vértice com o código de sombreador de vértice e [**ID3D11DeviceContext::PSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader) para iniciar o estágio de sombreador de pixel com o código de sombreador de pixel.
+5.  Chamamos [**ID3D11DeviceContext::VSSetConstantBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vssetconstantbuffers) para definir o buffer constante que é usado pelo estágio de pipeline do sombreador de vértice.
+6.  Chamamos [**PSSetShaderResources**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshaderresources) para associar a exibição de recurso de sombreador da textura ao estágio de pipeline do sombreador de pixel.
+7.  Chamamos [**PSSetSamplers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetsamplers) para definir o estágio de amostra para o estágio de pipeline do sombreador de pixel.
+8.  Finalmente, chamamos [**ID3D11DeviceContext::DrawIndexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed) para desenhar o cubo e enviá-lo para a pipeline de renderização.
 
-Como nos tutoriais anteriores, chamamos [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) para apresentar a imagem renderizada à janela.
+Como nos tutoriais anteriores, chamamos [**IDXGISwapChain::Present**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-present) para apresentar a imagem renderizada à janela.
 
 ```cppcx
 // Update the constant buffer to rotate the cube model.

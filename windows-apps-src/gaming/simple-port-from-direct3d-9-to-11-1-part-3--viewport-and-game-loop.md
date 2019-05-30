@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, fazendo a portabilidade, loop do jogo, direct3d 9, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 2087959bc29d2b2b02cdc9a2f373a8b62ea8c25a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: bd6a17b5e1684fbee21965158295dba123737bd6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627981"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367908"
 ---
 # <a name="port-the-game-loop"></a>Fazer a portabilidade do loop do jogo
 
@@ -24,20 +24,20 @@ ms.locfileid: "57627981"
 -   Parte 3: Fazer a portabilidade do loop do jogo
 
 
-Mostra como implementar uma janela para um jogo da Plataforma Universal do Windows (UWP) e como ativar o loop do jogo, inclusive como criar uma [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) para controlar uma [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) em tela inteira. Parte 3 do guia passo a passo de [portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Mostra como implementar uma janela para um jogo da Plataforma Universal do Windows (UWP) e como ativar o loop do jogo, inclusive como criar uma [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView) para controlar uma [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) em tela inteira. Parte 3 do guia passo a passo de [portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
 ## <a name="create-a-window"></a>Criar uma janela
 
 
 Para configurar uma janela da área de trabalho com um visor do Direct3D 9, era necessário implementar a estrutura original de janelas para aplicativos de área de trabalho. Tínhamos que criar um HWND, definir o tamanho da janela, fornecer um retorno de chamada de processamento de janela, torná-la visível, entre outras coisas.
 
-O ambiente UWP tem um sistema muito mais simples. Em vez de configurar uma janela tradicional, um jogo da Microsoft Store que usa DirectX implementa [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478). Essa interface existe para que aplicativos e jogos em DirectX sejam executados diretamente em uma [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), dentro do contêiner de aplicativo.
+O ambiente UWP tem um sistema muito mais simples. Em vez de configurar uma janela tradicional, um jogo da Microsoft Store que usa DirectX implementa [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView). Essa interface existe para que aplicativos e jogos em DirectX sejam executados diretamente em uma [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow), dentro do contêiner de aplicativo.
 
-> **Observação**    Windows fornece ponteiros gerenciados a recursos como o objeto de aplicativo de origem e o [ **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulte [**operador Handle to Object (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **Observação**    Windows fornece ponteiros gerenciados a recursos como o objeto de aplicativo de origem e o [ **CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow). Consulte [**operador Handle to Object (^)** ]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
  
 
-Sua classe de "main" deve herdar de [ **IFrameworkView** ](https://msdn.microsoft.com/library/windows/apps/hh700478) e implementar os cinco **IFrameworkView** métodos: [**Inicializar**](https://msdn.microsoft.com/library/windows/apps/hh700495), [ **SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [ **carga**](https://msdn.microsoft.com/library/windows/apps/hh700501), [ **executar** ](https://msdn.microsoft.com/library/windows/apps/hh700505), e [ **Cancelar inicialização**](https://msdn.microsoft.com/library/windows/apps/hh700523). Além de criar **IFrameworkView**, que é (essencialmente) onde ficará o jogo, você precisa implementar uma classe de fábrica que crie uma instância da **IFrameworkView**. O jogo ainda possui um executável com um método chamado **main()**, mas tudo que ele pode fazer é usar a fábrica para criar a instância de **IFrameworkView**.
+Sua classe de "main" deve herdar de [ **IFrameworkView** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView) e implementar os cinco **IFrameworkView** métodos: [**Inicializar**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.initialize), [ **SetWindow**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.setwindow), [ **carga**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.load), [ **executar** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run), e [ **Cancelar inicialização**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.uninitialize). Além de criar **IFrameworkView**, que é (essencialmente) onde ficará o jogo, você precisa implementar uma classe de fábrica que crie uma instância da **IFrameworkView**. O jogo ainda possui um executável com um método chamado **main()** , mas tudo que ele pode fazer é usar a fábrica para criar a instância de **IFrameworkView**.
 
 Função principal
 
@@ -103,9 +103,9 @@ while(WM_QUIT != msg.message)
 
 O loop do jogo é semelhante (porém, mais simples) na versão UWP:
 
-O loop do jogo vai no método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) (em vez de **main()**) porque o jogo funciona na classe [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478).
+O loop do jogo vai no método [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run) (em vez de **main()** ) porque o jogo funciona na classe [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView).
 
-Em vez de implementar uma estrutura de manipulação de mensagens e chamar [**PeekMessage**](https://msdn.microsoft.com/library/windows/desktop/ms644943), podemos chamar o método [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) interno ao [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) da janela do aplicativo. O jogo não precisa ramificar e manipular mensagens; basta chamar **ProcessEvents** e continuar.
+Em vez de implementar uma estrutura de manipulação de mensagens e chamar [**PeekMessage**](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-peekmessagea), podemos chamar o método [**ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) interno ao [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) da janela do aplicativo. O jogo não precisa ramificar e manipular mensagens; basta chamar **ProcessEvents** e continuar.
 
 Loop em um jogo da Microsoft Store com Direct3D 11
 

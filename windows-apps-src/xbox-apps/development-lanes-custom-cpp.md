@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 6ae36021-94d3-43df-9e96-69a93cfe8b56
 ms.localizationpriority: medium
-ms.openlocfilehash: 23dfb8843ed8e70fc6f979bd778a517d0c30327a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 585289fdc66b8730036f3d14faeafce8c22c09a7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613871"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371367"
 ---
 # <a name="bring-custom-c-games-to-uwp-on-xbox"></a>Trazer jogos personalizados em C++ para a UWP no Xbox
 
@@ -19,7 +19,7 @@ Se você estiver elaborando um mecanismo em C++ personalizado, o Xbox One tem su
 
 Jogos C++ na Plataforma Universal do Windows (UWP) usam o DirectX para renderização. Saiba mais em [Gráficos do DirectX e jogos](https://msdn.microsoft.com/library/windows/desktop/ee663274(v=vs.85).aspx).
 
-Você pode escrever [C++ com extensões de componente](https://msdn.microsoft.com/library/windows/apps/hh699871.aspx) (C + + /CX) ou [C++ padrão](https://msdn.microsoft.com/library/windows/apps/mt592904.aspx) (Win32 e COM).
+Você pode escrever [C++ com extensões de componente](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx) (C + + /CX) ou [C++ padrão](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps) (Win32 e COM).
 
 Para saber como transformar seu console em um kit de desenvolvimento e como implantar do Visual Studio, veja [Jogos e DirectX](../gaming/index.md) e o guia de [introdução](getting-started.md).
 

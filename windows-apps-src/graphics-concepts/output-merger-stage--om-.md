@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a77048bed3ad27f2040a672d93380d0250f9aa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 177d5a8fed47396fa694bd8fb88baea8d8b7bbb3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641091"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371181"
 ---
 # <a name="output-merger-om-stage"></a>Estágio de fusão de saída (OM)
 
@@ -37,7 +37,7 @@ A mesclagem combina um ou mais valores de pixel para criar uma cor de pixel fina
 
 ![diagrama de como funciona a mesclagem de dados](images/d3d10-blend-state.png)
 
-Conceitualmente, você pode visualizar esse gráfico de fluxo implementado duas vezes no estágio de fusão de saída: o primeiro mescla dados RGB, e, em paralelo, um outro mescla dados alfa. Para ver como usar a API para criar e definir o estado de mesclagem, consulte [Configurando a funcionalidade de mesclagem](https://msdn.microsoft.com/library/windows/desktop/bb205072).
+Conceitualmente, você pode visualizar esse gráfico de fluxo implementado duas vezes no estágio de fusão de saída: o primeiro mescla dados RGB, e, em paralelo, um outro mescla dados alfa. Para ver como usar a API para criar e definir o estado de mesclagem, consulte [Configurando a funcionalidade de mesclagem](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-blend-state).
 
 A mesclagem de função fixa pode ser habilitada independentemente para cada destino de renderização. No entanto, há apenas um conjunto de controles de mesclagem para que a mesma mesclagem seja aplicada a todos os RenderTargets com mesclagem habilitada. Valores de mesclagem (incluindo BlendFactor) sempre são vinculados ao intervalo do formato de destino de renderização antes da mesclagem. A vinculação é feita por destino de renderização, respeitando o tipo de destino de renderização. A única exceção é para os formatos float16, float11 ou float10, que não são vinculados para que as operações de mesclagem nesses formatos possam ser feitas com precisão/intervalo, no mínimo, igual ao formato de saída. NaNs e zeros assinados são propagados para todos os casos (incluindo pesos de mesclagem de 0,0).
 

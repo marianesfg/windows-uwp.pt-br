@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d10dbf52f0ed01d46f9e5cba83cd14d48bfc88d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9d4910a514c9fc1f16c29056319043393506a9e2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639171"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366911"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Criar um jogo UWP em JavaScript
 
@@ -51,7 +51,7 @@ O modo mais simples de começar é visitar GitHub, clicar no botão verde **Clon
 
 ![Clonando o repositório](images/JS2D_2.png)
 
-Você também pode baixar o projeto como um arquivo zip ou usar alguma outra maneira padrão de trabalhar com projetos [GitHub](https://msdn.microsoft.com/en-us/windows/uwp/get-started/get-uwp-app-samples).
+Você também pode baixar o projeto como um arquivo zip ou usar alguma outra maneira padrão de trabalhar com projetos [GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
 Depois que a solução tiver sido carregada no Visual Studio, você verá vários arquivos, inclusive:
 
@@ -177,7 +177,7 @@ Agora, vamos fazer nuvens se moverem. O segredo para mover nuvens - e mover qual
 
 Esse código vai chamar uma função chamada **gameLoop()** entre 30 e 60 quadros por segundo. A velocidade exata depende da velocidade do computador.
 
-Procure a função **gameLoop()** e mais para baixo, em direção ao final, você verá uma função chamada **animateClouds()**. Edite-a para que não seja comentada.
+Procure a função **gameLoop()** e mais para baixo, em direção ao final, você verá uma função chamada **animateClouds()** . Edite-a para que não seja comentada.
 
 ```
     // Move clouds
@@ -204,7 +204,7 @@ Se executar o app agora, você verá que as nuvens começaram a se mover. Por fi
 
 ### <a name="4-adding-keyboard-and-mouse-input"></a>4. Adicionar entrada de mouse e teclado
 
-Um jogo em que você não pode interagir não é um jogo. Portanto, vamos permitir que o jogador use o teclado ou o mouse para fazer algo. Novamente na função **loadingComplete()**, você verá o seguinte. Remover os comentários.
+Um jogo em que você não pode interagir não é um jogo. Portanto, vamos permitir que o jogador use o teclado ou o mouse para fazer algo. Novamente na função **loadingComplete()** , você verá o seguinte. Remover os comentários.
 
 ```
     // This code will call the method 'keyboardPressed' is the user presses a key.
@@ -214,9 +214,9 @@ Um jogo em que você não pode interagir não é um jogo. Portanto, vamos permit
     stage.on("stagemousedown", mouseClicked);
 ```
 
-Agora temos duas funções que estão sendo chamadas sempre que o jogador aperta uma tecla ou clica com o mouse. Ambos os eventos chamarão **userDidSomething()**, uma função que analisa a variável gamestate para decidir o que o jogo está fazendo no momento, e o que precisa ser feito em seguida como resultado.
+Agora temos duas funções que estão sendo chamadas sempre que o jogador aperta uma tecla ou clica com o mouse. Ambos os eventos chamarão **userDidSomething()** , uma função que analisa a variável gamestate para decidir o que o jogo está fazendo no momento, e o que precisa ser feito em seguida como resultado.
 
-Gamestate é um padrão de design comum usado em jogos. Tudo o que acontece, acontece na função **gameLoop()**, chamada pelo temporizador do ticker. O gameLoop() monitora se o jogo está reproduzindo ou em um "estado de fim de jogo" ou em um "estado pronto para reproduzir" ou qualquer outro estado definido pelo autor, usando uma variável. Esta variável de estado é testada em uma instrução de comutador, e isso define quais outras funções são chamadas. Assim, se o estado for definido como "reproduzindo", as funções para fazer o dinossauro pular e fazer os barris se moverem serão chamadas. Se o dinossauro for morto por algo, a variável gamestate será definida como "estado fim de jogo" e a mensagem "Fim de jogo!" será exibida. Se você estiver interessado em padrões de design de jogo, o livro [Game Programming Patterns](https://gameprogrammingpatterns.com/) é muito útil.
+Gamestate é um padrão de design comum usado em jogos. Tudo o que acontece, acontece na função **gameLoop()** , chamada pelo temporizador do ticker. O gameLoop() monitora se o jogo está reproduzindo ou em um "estado de fim de jogo" ou em um "estado pronto para reproduzir" ou qualquer outro estado definido pelo autor, usando uma variável. Esta variável de estado é testada em uma instrução de comutador, e isso define quais outras funções são chamadas. Assim, se o estado for definido como "reproduzindo", as funções para fazer o dinossauro pular e fazer os barris se moverem serão chamadas. Se o dinossauro for morto por algo, a variável gamestate será definida como "estado fim de jogo" e a mensagem "Fim de jogo!" será exibida. Se você estiver interessado em padrões de design de jogo, o livro [Game Programming Patterns](https://gameprogrammingpatterns.com/) é muito útil.
 
 Tente executar o app novamente e, finalmente você poderá começar a jogar. Pressione espaço (ou clique com o mouse ou toque na tela) para fazer as coisas acontecerem. 
 
@@ -261,8 +261,8 @@ Agora você tem um aplicativo UWP, é possível publicá-lo para a Microsoft Sto
 Há algumas etapas para o processo.
 
 1. Você precisa estar [registrado](https://developer.microsoft.com/en-us/store/register) como desenvolvedor no Windows.
-2. Você deve usar a [lista de verificação](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) do envio de aplicativo.
-3. O app deve ser enviado para [certificação](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process).
+2. Você deve usar a [lista de verificação](https://docs.microsoft.com/windows/uwp/publish/app-submissions) do envio de aplicativo.
+3. O app deve ser enviado para [certificação](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process).
 
 Para obter mais detalhes, consulte [publicando seu aplicativo UWP](https://developer.microsoft.com/en-us/store/publish-apps).
 

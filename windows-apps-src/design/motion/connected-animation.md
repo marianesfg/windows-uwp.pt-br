@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 21e7c026d336507b1a82badba770ac3bb50e19f8
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: d1d459ab10614ddf9186275b1a6b66e8fa5703ec
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984124"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364954"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>Animação conectada para aplicativos UWP
 
@@ -63,7 +63,7 @@ Ao navegar entre páginas, é importante para o usuário entender qual novo cont
 
 ## <a name="when-to-use-connected-animation"></a>Quando usar a animação conectada
 
-As animações conectadas geralmente são usadas na troca de páginas, embora possam ser aplicadas em qualquer experiência onde ocorra troca de conteúdo na interface de usuário e o usuário deva manter o contexto. Você deve considerar usar uma animação conectada em vez de um [furo na transição da navegação](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.navigationthemetransition.aspx) sempre que há uma imagem ou outra parte da interface de usuário compartilhada entre as exibições de origem e destino.
+As animações conectadas geralmente são usadas na troca de páginas, embora possam ser aplicadas em qualquer experiência onde ocorra troca de conteúdo na interface de usuário e o usuário deva manter o contexto. Você deve considerar usar uma animação conectada em vez de um [furo na transição da navegação](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) sempre que há uma imagem ou outra parte da interface de usuário compartilhada entre as exibições de origem e destino.
 
 ## <a name="configure-connected-animation"></a>Configurar a animação conectada
 

@@ -8,12 +8,12 @@ keywords: touchpad, PTP, toque, ponteiro, entrada, interação do usuário
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 895bf1ffe4fc79a65fdf452235ee9466e91b7215
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7a4c3c5e2c3041aef3e2223e3bb45c1c3d3d37ad
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593901"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365267"
 ---
 # <a name="touchpad-design-guidelines"></a>Diretrizes de design do touchpad
 
@@ -42,7 +42,7 @@ Os dados de entrada fornecidos pelo sensor de touchpad podem ser:
 
 Um touchpad combina a entrada multitoque indireta com a entrada de precisão de um dispositivo apontador, como um mouse. Essa combinação torna o touchpad adequado à interface do usuário otimizada para toque e aos destinos geralmente menores de aplicativos de produtividade e do ambiente de área de trabalho. Otimize o design do seu aplicativo UWP para entrada por toque e obtenha, por padrão, o suporte básico para touchpad.
 
-Devido à convergência de experiências de interação compatíveis com touchpads, recomendamos o uso do evento [**PointerEntered**](https://msdn.microsoft.com/library/windows/apps/br208968) para fornecer comandos de interface do usuário estilo mouse, além do suporte interno para entrada touch. Por exemplo, use os botões anterior e próximo para permitir que os usuários virem as páginas de conteúdo e também movimentem o conteúdo panoramicamente.
+Devido à convergência de experiências de interação compatíveis com touchpads, recomendamos o uso do evento [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered) para fornecer comandos de interface do usuário estilo mouse, além do suporte interno para entrada touch. Por exemplo, use os botões anterior e próximo para permitir que os usuários virem as páginas de conteúdo e também movimentem o conteúdo panoramicamente.
 
 Os gestos e as diretrizes discutidos neste tópico podem ajudar a garantir que seu aplicativo dê suporte à entrada por touchpad de forma integrada e com um mínimo de código.
 
@@ -119,7 +119,7 @@ Aqui estão alguns exemplos de gestos otimizados de touchpad para realizar taref
 ## <a name="hardware"></a>Hardware
 
 
-Consulte os recursos de dispositivo do mouse ([**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)) para identificar os aspectos da interface do usuário do seu aplicativo que o hardware de touchpad pode acessar diretamente. Recomendamos que você forneça uma interface do usuário para entrada por toque e mouse.
+Consulte os recursos de dispositivo do mouse ([**MouseCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseCapabilities)) para identificar os aspectos da interface do usuário do seu aplicativo que o hardware de touchpad pode acessar diretamente. Recomendamos que você forneça uma interface do usuário para entrada por toque e mouse.
 
 Para saber mais sobre como consultar os recursos do dispositivo, veja [Identificar dispositivos de entrada](identify-input-devices.md).
 
@@ -132,14 +132,14 @@ Para saber mais sobre como consultar os recursos do dispositivo, veja [Identific
 -   Não use retângulos de foco nas interações por touchpad; Reserve-os para as interações por teclado.
 -   Exiba respostas visuais simultaneamente para todos os elementos que representam o mesmo destino de entrada.
 
-Para obter diretrizes gerais sobre feedback visual, veja [Diretrizes de feedback visual](https://msdn.microsoft.com/library/windows/apps/hh465342).
+Para obter diretrizes gerais sobre feedback visual, veja [Diretrizes de feedback visual](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-visualfeedback).
 
 ## <a name="cursors"></a>Cursores
 
 
 Um conjunto de cursores padrão está disponível para ponteiros de touchpad. São usados para indicar a ação primária de um elemento.
 
-Cada cursor padrão tem uma imagem padrão correspondente associada. O usuário ou um aplicativo substitui a imagem padrão associada a qualquer cursor padrão quando desejado. Aplicativos UWP especificam uma imagem de cursor usando a função [**PointerCursor**](https://msdn.microsoft.com/library/windows/apps/br208273).
+Cada cursor padrão tem uma imagem padrão correspondente associada. O usuário ou um aplicativo substitui a imagem padrão associada a qualquer cursor padrão quando desejado. Aplicativos UWP especificam uma imagem de cursor usando a função [**PointerCursor**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor).
 
 Se você precisa personalizar o cursor do mouse:
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b8c4777e1c34bca36200bf6e8a96c35d6a0b1079
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 727abc5724914e3a8ad4463645455b9d63933bd7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640301"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372188"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
 
@@ -26,8 +26,8 @@ Quando você se registra para manipular um evento na UWP, acessador add retorna 
 
 Felizmente, o Visual Basic e C# compiladores simplificam esse processo: Quando você declara um evento com acessadores personalizados em um componente de tempo de execução do Windows, os compiladores usam automaticamente o padrão UWP. Por exemplo, você obtém um erro de compilador caso o acessador add não retorne um token. O .NET Framework fornece dois tipos para dar suporte à implementação:
 
--   A estrutura [EventRegistrationToken](https://msdn.microsoft.com/library/windows/apps/windows.foundation.eventregistrationtoken.aspx) representa o token.
--   A classe [EventRegistrationTokenTable&lt;T&gt;](https://msdn.microsoft.com/library/hh138412.aspx) cria tokens e mantém um mapeamento entre tokens e manipuladores de eventos. O argumento de tipo genérico é o tipo de argumento do evento. Você cria uma instância dessa classe para cada evento na primeira vez em que um manipulador de eventos é registrado para esse evento.
+-   A estrutura [EventRegistrationToken](https://docs.microsoft.com/uwp/api/windows.foundation.eventregistrationtoken) representa o token.
+-   A classe [EventRegistrationTokenTable&lt;T&gt;](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.eventregistrationtokentable-1?redirectedfrom=MSDN) cria tokens e mantém um mapeamento entre tokens e manipuladores de eventos. O argumento de tipo genérico é o tipo de argumento do evento. Você cria uma instância dessa classe para cada evento na primeira vez em que um manipulador de eventos é registrado para esse evento.
 
 O código a seguir do evento NumberChanged mostra o padrão básico de eventos UWP. Neste exemplo, o construtor do objeto de argumento do evento, NumberChangedEventArgs, utiliza um único parâmetro inteiro que representa o valor numérico alterado.
 
@@ -101,16 +101,16 @@ O método estático (compartilhado em Visual Basic) GetOrCreateEventRegistration
 
 > **Importante**  para garantir acesso thread-safe, o campo que contém a instância do evento de EventRegistrationTokenTable&lt;T&gt; deve ser um campo de nível de classe. Caso ele seja um campo de nível de classe, o método GetOrCreateEventRegistrationTokenTable garante que, quando vários threads tentam criar a tabela de tokens, todos os threads obtêm a mesma instância da tabela. Para um determinado evento, todas as chamadas para o método GetOrCreateEventRegistrationTokenTable devem usar o mesmo campo de nível de classe.
 
-Chamar o método GetOrCreateEventRegistrationTokenTable no acessador remove e no método [RaiseEvent](https://msdn.microsoft.com/library/fwd3bwed.aspx) (o método OnRaiseEvent em C#) garante que nenhuma exceção ocorra caso esses métodos sejam chamados antes de qualquer representante do manipulador de eventos ter sido adicionado.
+Chamar o método GetOrCreateEventRegistrationTokenTable no acessador remove e no método [RaiseEvent](https://docs.microsoft.com/dotnet/articles/visual-basic/language-reference/statements/raiseevent-statement) (o método OnRaiseEvent em C#) garante que nenhuma exceção ocorra caso esses métodos sejam chamados antes de qualquer representante do manipulador de eventos ter sido adicionado.
 
 Entre os outros membros da classe EventRegistrationTokenTable&lt;T&gt; que são usados no padrão de evento UWP estão os seguintes:
 
--   O método [AddEventHandler](https://msdn.microsoft.com/library/hh138458.aspx) gera um token para o representante do manipulador de eventos, armazena o representante na tabela, adiciona-o à lista de invocações e devolve o token.
--   A sobrecarga de método [RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx) remove o representante da tabela e da lista de invocações.
+-   O método [AddEventHandler](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.eventregistrationtokentable-1.addeventhandler?redirectedfrom=MSDN#System_Runtime_InteropServices_WindowsRuntime_EventRegistrationTokenTable_1_AddEventHandler__0_) gera um token para o representante do manipulador de eventos, armazena o representante na tabela, adiciona-o à lista de invocações e devolve o token.
+-   A sobrecarga de método [RemoveEventHandler(EventRegistrationToken)](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.eventregistrationtokentable-1.removeeventhandler?redirectedfrom=MSDN#System_Runtime_InteropServices_WindowsRuntime_EventRegistrationTokenTable_1_RemoveEventHandler_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken_) remove o representante da tabela e da lista de invocações.
 
     >**Observação**  métodos AddEventHandler The e RemoveEventHandler(EventRegistrationToken) bloqueiam a tabela para ajudar a garantir acesso thread-safe.
 
--   A propriedade [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) retorna um representante que inclui todos os manipuladores de eventos registrados no momento para manipular o evento. Use esse representante para acionar o evento ou use os métodos da classe Delegate para invocar os manipuladores individualmente.
+-   A propriedade [InvocationList](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.eventregistrationtokentable-1.invocationlist?redirectedfrom=MSDN#System_Runtime_InteropServices_WindowsRuntime_EventRegistrationTokenTable_1_InvocationList) retorna um representante que inclui todos os manipuladores de eventos registrados no momento para manipular o evento. Use esse representante para acionar o evento ou use os métodos da classe Delegate para invocar os manipuladores individualmente.
 
     >**Observação**  é recomendável que você siga o padrão mostrado no exemplo fornecido neste artigo e copia o delegado a uma variável temporária antes de invocá-lo. Isso evita uma condição de corrida em que um thread remove o último manipulador, o que reduz o representante para nulo antes de outro thread tentar invocar o representante. Como os representantes são imutáveis, a cópia continua sendo válida.
 
@@ -118,12 +118,12 @@ Coloque o próprio código nos acessadores conforme apropriado. Caso a seguranç
 
 C#usuários: Quando você escreve acessadores de eventos personalizados no padrão de evento da UWP, o compilador não fornece os atalhos sintáticos comuns. Ele gera erros caso você use o nome do evento no código.
 
-Usuários do Visual Basic: No .NET Framework, um evento é um delegado multicast que representa todos os manipuladores de eventos registrados. Acionar o evento significa apenas invocar o representante. A sintaxe do Visual Basic normalmente oculta as interações com o representante, e o compilador copia o representante antes de invocá-lo, conforme descrito na observação sobre segurança do thread. Ao criar um evento personalizado em um componente do Tempo de Execução do Windows, você precisa lidar com o representante diretamente. Isso também significa ser possível, por exemplo, usar o método [MulticastDelegate.GetInvocationList](https://msdn.microsoft.com/library/system.multicastdelegate.getinvocationlist.aspx) para obter uma matriz que contém um representante separado para cada manipulador de eventos, caso você queira invocar os manipuladores separadamente.
+Usuários do Visual Basic: No .NET Framework, um evento é um delegado multicast que representa todos os manipuladores de eventos registrados. Acionar o evento significa apenas invocar o representante. A sintaxe do Visual Basic normalmente oculta as interações com o representante, e o compilador copia o representante antes de invocá-lo, conforme descrito na observação sobre segurança do thread. Ao criar um evento personalizado em um componente do Tempo de Execução do Windows, você precisa lidar com o representante diretamente. Isso também significa ser possível, por exemplo, usar o método [MulticastDelegate.GetInvocationList](https://docs.microsoft.com/dotnet/api/system.multicastdelegate.getinvocationlist?redirectedfrom=MSDN#System_MulticastDelegate_GetInvocationList) para obter uma matriz que contém um representante separado para cada manipulador de eventos, caso você queira invocar os manipuladores separadamente.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Eventos (Visual Basic)](https://msdn.microsoft.com/library/ms172877.aspx)
-* [Eventos (guia de programação em c#)](https://msdn.microsoft.com/library/awbftdfh.aspx)
-* [.NET para visão geral de aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
-* [.NET para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
+* [Eventos (Visual Basic)](https://docs.microsoft.com/dotnet/articles/visual-basic/programming-guide/language-features/events/index)
+* [Eventos (guia de programação em c#)](https://docs.microsoft.com/dotnet/articles/csharp/programming-guide/events/index)
+* [.NET para visão geral de aplicativos UWP](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))
+* [.NET para aplicativos UWP](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0)
 * [Passo a passo: Criando um componente de tempo de execução do Windows simples e chamando-o por JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

@@ -10,30 +10,30 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 53107ca6add4193737ab0d00497bbe6324bee44f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d59d5cd7a2ffbc55b36f0169939859bf1b6b9db5
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661851"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370562"
 ---
 # <a name="use-a-maintenance-trigger"></a>Usar um gatilho de manutenção
 
 **APIs importantes**
 
-- [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517)
-- [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
-- [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834)
+- [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger)
+- [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+- [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition)
 
-Saiba como usar a classe [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) para executar um código leve em segundo plano enquanto o dispositivo estiver conectado.
+Saiba como usar a classe [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) para executar um código leve em segundo plano enquanto o dispositivo estiver conectado.
 
 ## <a name="create-a-maintenance-trigger-object"></a>Criar um objeto de gatilho de manutenção
 
-Este exemplo pressupõe que você tenha um código leve que possa executar em segundo plano para melhorar o aplicativo enquanto o dispositivo está conectado. Este tópico se concentra na [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517), que é semelhante a [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
+Este exemplo pressupõe que você tenha um código leve que possa executar em segundo plano para melhorar o aplicativo enquanto o dispositivo está conectado. Este tópico se concentra na [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger), que é semelhante a [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType).
 
 Mais informações sobre como escrever uma classe de tarefa em segundo plano estão disponíveis em [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou em [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md).
 
-Crie um novo objeto [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517). O segundo parâmetro, *OneShot*, especifica se a tarefa de manutenção só será executada uma vez ou se continuará a ser executada periodicamente. Se *OneShot* for definido como verdadeiro, o primeiro parâmetro (*FreshnessTime*) especificará o número de minutos aguardados até que a tarefa em segundo plano seja agendada. Se *OneShot* for definido como falso, *FreshnessTime* especificará com que frequência a tarefa em segundo plano será executada.
+Crie um novo objeto [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger). O segundo parâmetro, *OneShot*, especifica se a tarefa de manutenção só será executada uma vez ou se continuará a ser executada periodicamente. Se *OneShot* for definido como verdadeiro, o primeiro parâmetro (*FreshnessTime*) especificará o número de minutos aguardados até que a tarefa em segundo plano seja agendada. Se *OneShot* for definido como falso, *FreshnessTime* especificará com que frequência a tarefa em segundo plano será executada.
 
 > [!NOTE]
 > Se *FreshnessTime* for definido como menor que 15 minutos, uma exceção é lançada ao tentar registrar a tarefa em segundo plano.
@@ -59,7 +59,7 @@ MaintenanceTrigger ^ taskTrigger = ref new MaintenanceTrigger(waitIntervalMinute
 
 - Se necessário, crie uma condição de tarefa em segundo plano para controlar quando a tarefa será executada. Uma condição impede que sua tarefa em segundo plano seja executada até que a condição em questão seja atendida. Para obter mais informações, consulte [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md).
 
-Neste exemplo, a condição é definida como **InternetAvailable** para que a manutenção seja executada quando a Internet estiver (ou ficar) disponível. Para obter uma lista das possíveis condições de tarefa em segundo plano, veja [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
+Neste exemplo, a condição é definida como **InternetAvailable** para que a manutenção seja executada quando a Internet estiver (ou ficar) disponível. Para obter uma lista das possíveis condições de tarefa em segundo plano, veja [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType).
 
 O código a seguir adiciona uma condição ao criador de tarefa de manutenção:
 
@@ -108,9 +108,9 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 > Para todas as famílias de dispositivos, exceto desktop, caso haja pouca memória, as tarefas em segundo plano podem ser encerradas. Se uma exceção de falta de memória não surgir ou se o aplicativo não manipulá-la, a tarefa em segundo plano será encerrada sem aviso e sem gerar o evento OnCanceled. Isso ajuda a assegurar a experiência do usuário do aplicativo em primeiro plano. A tarefa em segundo plano deve ser projetada para tratar desse cenário.
 
 > [!NOTE]
-> Aplicativos da plataforma Windows universal devem chamar [ **RequestAccessAsync** ](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer um dos tipos de gatilho em segundo plano.
+> Aplicativos da plataforma Windows universal devem chamar [ **RequestAccessAsync** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) antes de registrar qualquer um dos tipos de gatilho em segundo plano.
 
-Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização para o aplicativo, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para obter mais informações, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
+Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização para o aplicativo, chame [**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) e, em seguida, chame [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) quando seu aplicativo for iniciado após a atualização. Para obter mais informações, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
 > [!NOTE]
 > Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo trata tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.

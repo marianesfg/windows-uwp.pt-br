@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4607280fd031fa556bfc5d1c719f4b4e1aeb928e
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 7c61f6580039b9fe3da915491acd84c939088370
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984096"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361393"
 ---
 # <a name="visual-layer"></a>Camada visual
 
@@ -38,7 +38,7 @@ As funções principais de camada Visual são:
 
 ### <a name="content"></a>Conteúdo
 
-O conteúdo é hospedado, transformado e disponibilizado para uso pelo sistema de animação e de efeitos usando elementos visuais. Na base da hierarquia de classe, há a classe [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), um proxy de threads leve e ágil no processo do app para o estado visual no compositor. Incluem subpastas de classes do Visual  [**ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) para permitir a filhos criar árvores de elementos visuais e [ **SpriteVisual** ](https://msdn.microsoft.com/library/windows/apps/Mt589433) que contém o conteúdo e pode ser pintado com qualquer um dos cores sólidas, efeitos personalizados de conteúdo ou visuais desenhados. Juntos, esses tipos de Visual compõem a estrutura de árvore visual para a interface do usuário 2D e contêm os FrameworkElements XAML mais visíveis.
+O conteúdo é hospedado, transformado e disponibilizado para uso pelo sistema de animação e de efeitos usando elementos visuais. Na base da hierarquia de classe, há a classe [**Visual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual), um proxy de threads leve e ágil no processo do app para o estado visual no compositor. Incluem subpastas de classes do Visual  [**ContainerVisual** ](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ContainerVisual) para permitir a filhos criar árvores de elementos visuais e [ **SpriteVisual** ](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual) que contém o conteúdo e pode ser pintado com qualquer um dos cores sólidas, efeitos personalizados de conteúdo ou visuais desenhados. Juntos, esses tipos de Visual compõem a estrutura de árvore visual para a interface do usuário 2D e contêm os FrameworkElements XAML mais visíveis.
 
 Para saber mais, veja a visão geral de [Composição de Visual](composition-visual-tree.md).
 
@@ -58,7 +58,7 @@ Para obter mais informações, consulte a visão geral de [Animações de compos
 
 ### <a name="working-with-your-xaml-uwp-app"></a>Como trabalhar com seu aplicativo UWP XAML
 
-Você pode acessar um Visual criado pela estrutura XAML e apoiar um FrameworkElement visível usando a classe [**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/Mt608976) em [**Windows.UI.Xaml.Hosting**](https://msdn.microsoft.com/library/windows/apps/Hh701908). Observe que os elementos visuais criados pela estrutura para você vêm com alguns limites em termos de personalização. Isso ocorre porque a estrutura está gerenciando deslocamentos, transformações e tempos de vida. No entanto, você pode criar seus próprios Visuals e anexá-los a um elemento XAML existente por meio de ElementCompositionPreview ou adicionando-os a um ContainerVisual existente em algum lugar na estrutura de árvore visual.
+Você pode acessar um Visual criado pela estrutura XAML e apoiar um FrameworkElement visível usando a classe [**ElementCompositionPreview**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview) em [**Windows.UI.Xaml.Hosting**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting). Observe que os elementos visuais criados pela estrutura para você vêm com alguns limites em termos de personalização. Isso ocorre porque a estrutura está gerenciando deslocamentos, transformações e tempos de vida. No entanto, você pode criar seus próprios Visuals e anexá-los a um elemento XAML existente por meio de ElementCompositionPreview ou adicionando-os a um ContainerVisual existente em algum lugar na estrutura de árvore visual.
 
 Para saber mais, confira a visão geral [Uso da camada Visual com XAML](using-the-visual-layer-with-xaml.md).
 
@@ -70,7 +70,7 @@ Para obter mais informações, consulte [Modernize seu aplicativo da área de tr
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-* [**Documentação de referência completa para a API**](https://msdn.microsoft.com/library/windows/apps/Dn706878)
+* [**Documentação de referência completa para a API**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
 * Exemplos de Interface do usuário avançada e composição no [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs)
 * [Galeria de exemplos de Windows.UI.Composition](https://aka.ms/winuiapp)
 * [@windowsui Feed do Twitter ](https://twitter.com/windowsui)

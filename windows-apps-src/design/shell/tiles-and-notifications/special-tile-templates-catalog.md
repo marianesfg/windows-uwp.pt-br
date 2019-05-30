@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 09647347134463c8dd2d93f6b869796c8def44e2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 739abc139eabc9f773938f55c15d3e18aaf562ce
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57619801"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365958"
 ---
 # <a name="special-tile-templates"></a>Modelos de blocos especiais
  
@@ -96,7 +96,7 @@ A notificação do bloco será atualizada de acordo.
 
 **Etapa 5: Juntando as peças**
 
-A imagem a seguir ilustra como as diversas APIs e as cargas estão associadas a cada aspecto do modelo de bloco icônico. Uma [notificação de bloco](https://msdn.microsoft.com/library/windows/apps/hh779724) (que contém os elementos &lt;binding&gt;) é usada para especificar o modelo icônico e o ativo de imagem; uma [notificação de selo](https://msdn.microsoft.com/library/windows/apps/hh779719) especifica o valor numérico; as propriedades do bloco controlam o nome de exibição do bloco, a cor e muito mais.
+A imagem a seguir ilustra como as diversas APIs e as cargas estão associadas a cada aspecto do modelo de bloco icônico. Uma [notificação de bloco](https://docs.microsoft.com/previous-versions/windows/apps/hh779724(v=win.10)) (que contém os elementos &lt;binding&gt;) é usada para especificar o modelo icônico e o ativo de imagem; uma [notificação de selo](https://docs.microsoft.com/previous-versions/windows/apps/hh779719(v=win.10)) especifica o valor numérico; as propriedades do bloco controlam o nome de exibição do bloco, a cor e muito mais.
 
 ![apis e cargas associadas ao modelo de bloco icônico](images/iconic-template-properties-info.png)
 

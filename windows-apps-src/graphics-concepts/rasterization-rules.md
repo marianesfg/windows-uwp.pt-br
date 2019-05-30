@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c622c037f878d1ad34cdadf897dde10683532832
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 28376f6e96cc490c7c44f4ed60093591e873300e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660861"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371001"
 ---
 # <a name="rasterization-rules"></a>Regras de rasterização
 
@@ -97,7 +97,7 @@ Regras de rasterização para primitivos são, em geral, inalteradas por suaviza
 
 -   Para um ponto, um teste de cobertura é realizado para cada local de amostra (não para um centro de pixel).
 
-Formatos de várias amostras podem ser usados em destinos de renderização que podem ser lidas novamente em sombreadores usando [carregar](https://msdn.microsoft.com/library/windows/desktop/bb509694), já que nenhuma resolução é necessária para amostras individuais acessadas pelo sombreador. Não há suporte para formatos de profundidade para recurso de várias amostras. Portanto, os formatos de profundidade são restritos a somente destinos de renderização.
+Formatos de várias amostras podem ser usados em destinos de renderização que podem ser lidas novamente em sombreadores usando [carregar](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-load), já que nenhuma resolução é necessária para amostras individuais acessadas pelo sombreador. Não há suporte para formatos de profundidade para recurso de várias amostras. Portanto, os formatos de profundidade são restritos a somente destinos de renderização.
 
 Formatos sem tipo dão suporte a várias amostras para permitir que um modo de exibição de recurso interprete dados de diferentes maneiras. Por exemplo, você pode criar um recurso de multisample usando R8G8B8A8\_TYPELESS, renderize-o usando um recurso de exibição de destino de renderização com um R8G8B8A8\_UINT Formatar e, em seguida, resolver o conteúdo de outro recurso com um R8G8B8A8\_Formato de dados UNORM.
 

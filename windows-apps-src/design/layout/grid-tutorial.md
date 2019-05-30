@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b221220d417df5b70927984ac65eff93fae54a4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2ad32f67dc8cfaf90b96523429bb0ac4b6722abb
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646531"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365075"
 ---
 # <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>Tutorial: Use a grade e StackPanel para criar um aplicativo simples de clima
 
@@ -22,11 +22,11 @@ Use XAML para criar o layout de um app de clima simples usando os elementos **Gr
 
 ## <a name="prerequisites"></a>Pré-requisitos
 - Windows 10 e Microsoft Visual Studio 2015 ou posterior. (Mais recente do Visual Studio para desenvolvimento atual e segurança atualizações recomendadas) [Clique aqui para saber como configurar o Visual Studio](../../get-started/get-set-up.md).
-- Conhecimento de como criar um app "Hello World" básico usando XAML e C#. Se você ainda não o tem, [clique aqui para saber como criar um aplicativo "Hello World"](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
+- Conhecimento de como criar um app "Hello World" básico usando XAML e C#. Se você ainda não o tem, [clique aqui para saber como criar um aplicativo "Hello World"](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="step-1-create-a-blank-app"></a>Etapa 1: Criar um aplicativo em branco
 1. No menu Visual Studio, selecione **Arquivo** > **Novo Projeto**.
-2. No painel esquerdo da caixa de diálogo **Novo Projeto**, selecione **Visual C#** > **Windows** > **Universal** ou **Visual C++** > **Windows** > **Universal**.
+2. No painel esquerdo da caixa de diálogo **Novo Projeto**, selecione **Visual C#**  > **Windows** > **Universal** ou **Visual C++**  > **Windows** > **Universal**.
 3. No painel central, selecione **Aplicativo em Branco**.
 4. Na caixa **Nome**, insira **WeatherPanel** e selecione **OK**.
 5. Para executar o programa, selecione **Depurar** > **Iniciar Depuração** no menu ou pressione F5.
@@ -51,7 +51,7 @@ Para começar a criar um layout, abra **MainPage. XAML** usando o **Gerenciador 
 
 O novo **Grid** cria um conjunto de duas linhas e colunas, que define o layout da interface do app. A primeira coluna tem um **largura** de "3\*", enquanto o segundo tem "5\*", dividindo o espaço horizontal entre as duas colunas em uma proporção de 3:5. Da mesma forma, as duas linhas têm uma **altura** de "2\*"e"\*", respectivamente, para que o **grade** aloca duas vezes mais espaço para a primeira linha como para a segunda ("\*"é o mesmo que" 1\*"). Essas proporções serão mantidas mesmo que a janela seja redimensionada ou o dispositivo seja alterado.
 
-Para saber mais sobre outros métodos de dimensionamento de linhas e colunas, consulte [Definir layouts com XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml#layout-properties).
+Para saber mais sobre outros métodos de dimensionamento de linhas e colunas, consulte [Definir layouts com XAML](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml).
 
 Se você executar o app agora, não verá nada além de uma página em branco, pois nenhuma das áreas de **Grid** tem conteúdo. Para mostrar o elemento **Grid** vamos dar a ele uma cor.
 
@@ -120,6 +120,6 @@ Pronto! Você criou com êxito o layout de um app de clima simples. Se você exe
 Se desejar, experimente o layout acima e explore formas diferentes de representar dados do clima.
 
 ## <a name="related-articles"></a>Artigos relacionados
-Para obter uma introdução ao design de layouts de aplicativos UWP, consulte [Introdução ao design de aplicativos UWP](https://msdn.microsoft.com/windows/uwp/layout/design-and-ui-intro)
+Para obter uma introdução ao design de layouts de aplicativos UWP, consulte [Introdução ao design de aplicativos UWP](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro)
 
-Para saber mais sobre como criar layouts dinâmicos que se adaptem a diferentes tamanhos de tela, consulte [Definir layouts de página com XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml)
+Para saber mais sobre como criar layouts dinâmicos que se adaptem a diferentes tamanhos de tela, consulte [Definir layouts de página com XAML](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)

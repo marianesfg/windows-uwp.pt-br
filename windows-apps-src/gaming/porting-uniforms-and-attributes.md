@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, opengl, direct3d, buffers, uniformes, atributos de vértice
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a1db1890e47257412a7e2ee8e08c40164d0d927
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9d79a4573438aec49d4aa1b828c90e72c04150de
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57656241"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368150"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>Comparar buffers, uniformes e atributos de vértice do OpenGL ES 2.0 com os do Direct3D
 
@@ -20,9 +20,9 @@ ms.locfileid: "57656241"
 
 **APIs importantes**
 
--   [**ID3D11Device1::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/hh404575)
--   [**ID3D11Device1::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512)
--   [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)
+-   [**ID3D11Device1::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1)
+-   [**ID3D11Device1::CreateInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout)
+-   [**ID3D11DeviceContext1::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout)
 
 Durante o processo de portabilidade do OpenGL ES 2.0 para Direct3D 11, você deve alterar a sintaxe e o comportamento da API para passar dados entre o aplicativo e os programas de sombreador.
 
@@ -34,9 +34,9 @@ Este é o mapeamento básico:
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | uniforme                   | campo (**cbuffer**) de buffer constante.                                                                                                                                                |
 | atributo                 | campo do elemento buffer de vértices, designado por um layout de entrada e marcado com uma semântica específica de HLSL.                                                                                |
-| objeto de buffer             | buffer; Ver [ **D3D11\_SUBRESOURCE\_DATA** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) e [ **D3D11\_BUFFER\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092)e definições de um buffer de uso geral. |
-| objeto de buffer de quadro (FBO) | renderizar destino(s); Consulte [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) com [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635).                                       |
-| buffer de fundo               | cadeia de troca com superfície de "buffer de fundo"; Consulte [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) com anexo [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/ff471343).                       |
+| objeto de buffer             | buffer; Ver [ **D3D11\_SUBRESOURCE\_DATA** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) e [ **D3D11\_BUFFER\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc)e definições de um buffer de uso geral. |
+| objeto de buffer de quadro (FBO) | renderizar destino(s); Consulte [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) com [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d).                                       |
+| buffer de fundo               | cadeia de troca com superfície de "buffer de fundo"; Consulte [**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1) com anexo [**IDXGISurface1**](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgisurface1).                       |
 
  
 
@@ -73,9 +73,9 @@ Outros buffers incluem buffers de pixel e mapas, como texturas. O pipeline do so
 
 No Direct3D 11, elementos de dados de buffer são considerados "sub-recursos" e podem variar de elementos de dados de vértice individuais a texturas MIP-map.
 
--   Preencher uma [ **D3D11\_SUBRESOURCE\_DATA** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) estrutura com a configuração para um elemento de dados do buffer.
--   Preencher uma [ **D3D11\_BUFFER\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) estrutura com o tamanho dos elementos individuais no buffer, bem como o tipo de buffer.
--   Chame [**ID3D11Device1::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/hh404575) com essas duas estruturas.
+-   Preencher uma [ **D3D11\_SUBRESOURCE\_DATA** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) estrutura com a configuração para um elemento de dados do buffer.
+-   Preencher uma [ **D3D11\_BUFFER\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc) estrutura com o tamanho dos elementos individuais no buffer, bem como o tipo de buffer.
+-   Chame [**ID3D11Device1::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) com essas duas estruturas.
 
 Direct3D 11: Criando e preenchendo um buffer de vértice e um buffer de índice.
 
@@ -106,7 +106,7 @@ m_d3dDevice->CreateBuffer(
     
 ```
 
-Buffers de pixel ou mapas graváveis, como um buffer de quadro, podem ser criados como objetos [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635). Eles podem ser ligados como recursos a um [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) ou [**ID3D11ShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476628), que, uma vez desenhado, pode ser exibido com a cadeia de troca associada ou passado para um sombreador, respectivamente.
+Buffers de pixel ou mapas graváveis, como um buffer de quadro, podem ser criados como objetos [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d). Eles podem ser ligados como recursos a um [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) ou [**ID3D11ShaderResourceView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11shaderresourceview), que, uma vez desenhado, pode ser exibido com a cadeia de troca associada ou passado para um sombreador, respectivamente.
 
 Direct3D 11: Criando um objeto de buffer de quadro.
 
@@ -147,7 +147,7 @@ Open GL ES 2.0: Declaração uniforme do GLSL
 uniform mat4 u_mvpMatrix;
 ```
 
-O Direct3D designa dados de uniforme como "buffers constantes", que, como uniformes, contêm dados constantes fornecidos a sombreadores individuais. Assim como em buffers de uniforme, é importante empacotar os dados de buffer constante na memória da mesma forma que o sombreador espera interpretá-los. Usando tipos DirectXMath (como [ **XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608)), em vez de tipos de plataforma (como **float\***  ou **float\[4\]** ) garante o alinhamento do elemento de dados apropriados.
+O Direct3D designa dados de uniforme como "buffers constantes", que, como uniformes, contêm dados constantes fornecidos a sombreadores individuais. Assim como em buffers de uniforme, é importante empacotar os dados de buffer constante na memória da mesma forma que o sombreador espera interpretá-los. Usando tipos DirectXMath (como [ **XMFLOAT4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4)), em vez de tipos de plataforma (como **float\***  ou **float\[4\]** ) garante o alinhamento do elemento de dados apropriados.
 
 Buffers constantes devem ter um registro de GPU associado usado para referenciar aqueles dados à GPU. Os dados são empacotados no local do Registro, conforme indicado pelo layout do buffer.
 
@@ -224,7 +224,7 @@ attribute vec4 a_position;
 attribute vec4 a_color;                     
 ```
 
-Em certos aspectos, o mesmo processo é válido para o Direct3D. Em vez de atributos, os dados de vértice são fornecidos em buffers de entrada, que incluem buffers de vértice e os buffers de índice correspondentes. Mas como o Direct3D não tem declaração de "atributos", você deve especificar um layout de entrada que declare o componente individual dos elementos de dados no buffer de vértice e a semântica HLSL que indica onde e como esses componentes devem ser interpretados pelo sombreador de vértice. A semântica HLSL requer a definição de uso de cada componente com uma cadeia específica, que informa sua finalidade ao mecanismo do sombreador. Por exemplo, os dados de posição do vértice são marcados como POSITION; os dados normais são marcados como NORMAL; e os dados de cores do vértice são marcados como COLOR (Outros estágios de sombreador também exigem uma semântica específica, e essas semânticas tem interpretações diferentes com base no estágio de sombreador.) Para obter mais informações sobre a semântica HLSL, leia [portar seu pipeline sombreador](change-your-shader-loading-code.md) e [HLSL semântica](https://msdn.microsoft.com/library/windows/desktop/bb205574).
+Em certos aspectos, o mesmo processo é válido para o Direct3D. Em vez de atributos, os dados de vértice são fornecidos em buffers de entrada, que incluem buffers de vértice e os buffers de índice correspondentes. Mas como o Direct3D não tem declaração de "atributos", você deve especificar um layout de entrada que declare o componente individual dos elementos de dados no buffer de vértice e a semântica HLSL que indica onde e como esses componentes devem ser interpretados pelo sombreador de vértice. A semântica HLSL requer a definição de uso de cada componente com uma cadeia específica, que informa sua finalidade ao mecanismo do sombreador. Por exemplo, os dados de posição do vértice são marcados como POSITION; os dados normais são marcados como NORMAL; e os dados de cores do vértice são marcados como COLOR (Outros estágios de sombreador também exigem uma semântica específica, e essas semânticas tem interpretações diferentes com base no estágio de sombreador.) Para obter mais informações sobre a semântica HLSL, leia [portar seu pipeline sombreador](change-your-shader-loading-code.md) e [HLSL semântica](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dcl-usage---ps).
 
 De forma conjunta, o processo de definir os buffers de vértice e índice e o layout de entrada é chamado de estágio IA (assembly de entrada) do pipeline gráfico do Direct3D.
 
@@ -255,7 +255,7 @@ Um layout de entrada é declarado e associado a um sombreador de vértice declar
 -   Uma coordenada de posição do vértice, representada na memória principal por XMFLOAT3, que é uma matriz alinhada de três valores de ponto flutuante de 32 bits para as coordenadas (x, y, z).
 -   Um valor de cor do vértice, representado por XMFLOAT4, que é uma matriz alinhada de quatro valores de ponto flutuante de 32 bits para a cor (RGBA).
 
-Você atribui uma semântica para cada um, assim como um tipo de formato. Em seguida, você passa a descrição para [**ID3D11Device1::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512). O layout de entrada é usado quando chamamos [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) quando se define o assembly de saída durante nosso método de renderização.
+Você atribui uma semântica para cada um, assim como um tipo de formato. Em seguida, você passa a descrição para [**ID3D11Device1::CreateInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout). O layout de entrada é usado quando chamamos [**ID3D11DeviceContext1::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout) quando se define o assembly de saída durante nosso método de renderização.
 
 Direct3D 11: Descrever um layout de entrada com uma semântica específica
 

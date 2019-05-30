@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: feef520614e1cc6076e6abc388fe419fe61d3a92
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.openlocfilehash: a02d562b73f61094f820e74a213614d80c4fb5e1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343245"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365841"
 ---
 # <a name="mouse-interactions"></a>Interações por mouse
 
@@ -145,7 +145,7 @@ Para obter diretrizes mais gerais sobre comentários visuais, consulte [Diretriz
 
 Um conjunto de cursores padrão está disponível para ponteiros de mouse. São usados para indicar a ação primária de um elemento.
 
-Cada cursor padrão tem uma imagem padrão correspondente associada. O usuário ou um aplicativo substitui a imagem padrão associada a qualquer cursor padrão quando desejado. Especifique uma imagem de cursor usando a função [**PointerCursor**](https://msdn.microsoft.com/library/windows/apps/br208273).
+Cada cursor padrão tem uma imagem padrão correspondente associada. O usuário ou um aplicativo substitui a imagem padrão associada a qualquer cursor padrão quando desejado. Especifique uma imagem de cursor usando a função [**PointerCursor**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor).
 
 Se você precisa personalizar o cursor do mouse:
 

@@ -7,12 +7,12 @@ template: detail.hbs
 keywords: teclado, acessibilidade, navegação, foco, texto, entrada e interação do usuário
 ms.date: 07/13/2018
 ms.topic: article
-ms.openlocfilehash: e44b7cf5a61a795e52490f6d603aea0bcf87bea2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 192c016dfa61f39074d99bccf58ff9371f16d16f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658291"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365424"
 ---
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>Responder à presença do teclado virtual
 
@@ -66,7 +66,7 @@ Estas são algumas recomendações básicas para controles de entrada de texto p
 
     ![um formulário com e sem o teclado virtual em exibição](images/touch-keyboard-pan1.png)
 
-    Em alguns casos, há elementos da interface do usuário que devem ficar na tela o tempo todo. Projete a interface do usuário de forma que os controles do formulário fiquem em uma região de movimento panorâmico e os elementos importantes da interface fiquem estáticos. Por exemplo:
+    Em alguns casos, há elementos da interface do usuário que devem ficar na tela o tempo todo. Projete a interface do usuário de forma que os controles do formulário fiquem em uma região de movimento panorâmico e os elementos importantes da interface fiquem estáticos. Por exemplo: 
 
     ![um formulário que contém áreas que devem ser sempre exibidas](images/touch-keyboard-pan2.png)
 
@@ -211,8 +211,8 @@ void Scenario2_ShowHideEvents::OnHiding(InputPane^ /*sender*/, InputPaneVisibili
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Interações de teclado](keyboard-interactions.md)
-- [Acessibilidade do teclado](https://msdn.microsoft.com/library/windows/apps/mt244347)
-- [Pares de automação personalizados](https://msdn.microsoft.com/library/windows/apps/mt297667)
+- [Acessibilidade do teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
+- [Pares de automação personalizados](https://docs.microsoft.com/windows/uwp/accessibility/custom-automation-peers)
 
 **Exemplos**
 

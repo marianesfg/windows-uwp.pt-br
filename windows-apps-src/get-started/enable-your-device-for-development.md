@@ -3,15 +3,15 @@ ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: Habilitar seu dispositivo para desenvolvimento
 description: Configure seu dispositivo Windows 10 para desenvolvimento e depuração.
 keywords: Introdução, Licença de desenvolvedor, Visual Studio, licença de desenvolvedor, habilitar dispositivo
-ms.date: 05/30/2018
+ms.date: 4/9/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 90ff8e8c0d11e58d251e9c2f5bfb00f3b8aedf1a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f927d8bce1e59ba9a8ed9b0f3f08ce3575c6d7bd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618951"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367027"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
 
@@ -93,11 +93,11 @@ Esta imagem mostra os recursos de desenvolvedor para o Windows 10:
 Para saber mais sobre o Device Portal, consulte [Visão geral do Windows Device Portal](../debug-test-perf/device-portal.md).
 
 Para obter instruções de instalação específicas ao dispositivo, consulte:
-- [Portal do dispositivo para a área de trabalho](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
+- [Portal do dispositivo para a área de trabalho](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
 - [Portal de dispositivo para HoloLens](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
 - [Portal do dispositivo para IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [Portal do dispositivo para dispositivos móveis](../debug-test-perf/device-portal-mobile.md)
-- [Portal do dispositivo para Xbox](../debug-test-perf/device-portal-xbox.md)
+- [Portal do dispositivo para Xbox](../xbox-apps/device-portal-xbox.md)
 
 Se você tiver problemas para habilitar o Modo de Desenvolvedor ou o Device Portal, consulte o fórum dos [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para encontrar soluções alternativas para esses problemas ou visite [Falha ao instalar o pacote do Modo de Desenvolvedor](#failure-to-install-developer-mode-package) para obter detalhes adicionais e saber quais KBs WSUS você deve permitir para desbloquear o pacote do Modo de Desenvolvedor.
 
@@ -133,7 +133,7 @@ Em versões anteriores do Windows 10 Mobile, uma opção Despejos de Memória es
 
 Há várias ferramentas que você pode usar para implantar um app de um computador Windows 10 para um dispositivo Windows 10. Ambos os dispositivos devem estar conectados à mesma sub-rede da rede por uma conexão com ou sem fio, ou eles devem estar conectados por USB. Ambas as maneiras listadas instalam somente o pacote do aplicativo (.appx/.appxbundle); elas não instalam certificados.
 
--   Use a ferramenta de implantação de aplicativos do Windows 10 (WinAppDeployCmd). Saiba mais sobre [a ferramenta WinAppDeployCmd](https://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
+-   Use a ferramenta de implantação de aplicativos do Windows 10 (WinAppDeployCmd). Saiba mais sobre [a ferramenta WinAppDeployCmd](https://docs.microsoft.com/previous-versions/windows/apps/mt203806(v=vs.140)).
 -   Você pode usar o [Portal de Dispositivos](../debug-test-perf/device-portal.md) para implantar do seu navegador para um dispositivo móvel executando o Windows 10, versão 1511 ou posterior. Use a página **[Aplicativos](../debug-test-perf/device-portal.md#apps-manager)** no Device Portal para carregar um pacote de aplicativo (.appx) e instalá-lo no dispositivo.
 
 ## <a name="failure-to-install-developer-mode-package"></a>Falha ao instalar o pacote do Modo de Desenvolvedor
@@ -201,20 +201,20 @@ Você pode usar gpedit.msc para definir as políticas de grupo para habilitar se
 1.  Execute **regedit**.
 2.  Para habilitar o sideload, defina o valor deste DWORD como 1:
 
-    -   **HKLM\\softwares\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps**
+    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps**
 
     - OU -
 
     Para habilitar o modo de desenvolvedor, defina os valores deste DWORD como 1:
 
-    -   **HKLM\\softwares\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
+    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
 
 **Usar o PowerShell para habilitar seu dispositivo**
 
 1.  Execute o PowerShell com privilégios de administrador.
 2.  Para habilitar o sideload, execute este comando:
 
-    -   **PS c:\\WINDOWS\\system32&gt; reg adicionar "HKEY\_LOCAL\_máquina\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ /T AppModelUnlock"REG\_DWORD /f /v"AllowAllTrustedApps"/d"1"**
+    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"**
 
     - OU -
 
@@ -233,7 +233,7 @@ Ao criar ou fazer sideload de aplicativos em seu dispositivo Windows 8.1, você 
 
 Depois disso, você precisa habilitar seu dispositivo para o desenvolvimento, conforme descrito neste tópico, para que possa continuar a desenvolver nele. Se não fizer isso, poderá ocorrer um erro quando você depurar seu aplicativo ou tentar criar um pacote para ele. Aqui está um exemplo desse erro:
 
-Erro: DEP0700: Falha no registro do aplicativo.
+Erro: DEP0700 : Falha no registro do aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 
