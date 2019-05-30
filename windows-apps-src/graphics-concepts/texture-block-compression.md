@@ -7,21 +7,21 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: dec33768eff90b9bd35a3ea60f3158fce663345e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a8d88ad4db56b40490f2fc4d034b1569eb0850ba
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640181"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370922"
 ---
 # <a name="texture-block-compression"></a>Compactação de bloco de textura
 
 
 O suporte para texturas de compactação de bloco (BC) foi estendido no Direct3D 11 para incluir os algoritmos de BC6H e BC7. O BC6H dá suporte a dados de origem de cor de intervalo altamente dinâmico e o BC7 fornece compactação de qualidade melhor que a média com menos artefatos para dados de origem RGB padrão.
 
-Para obter informações mais específicas sobre o suporte do algoritmo de compactação de bloco antes do Direct3D 11, incluindo o suporte para os formatos BC1 a BC5, consulte [Compactação de bloco (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb694531).
+Para obter informações mais específicas sobre o suporte do algoritmo de compactação de bloco antes do Direct3D 11, incluindo o suporte para os formatos BC1 a BC5, consulte [Compactação de bloco (Direct3D 10)](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression).
 
-**Observação sobre formatos de arquivo:  ** Os formatos de compactação de textura BC6H e bc7 no momento usam o formato de arquivo DDS para armazenar os dados de textura compactada. Para obter mais informações, consulte o [Guia de programação para DDS](https://msdn.microsoft.com/library/windows/desktop/bb943991) para obter detalhes.
+**Observação sobre formatos de arquivo:  ** Os formatos de compactação de textura BC6H e bc7 no momento usam o formato de arquivo DDS para armazenar os dados de textura compactada. Para obter mais informações, consulte o [Guia de programação para DDS](https://docs.microsoft.com/windows/desktop/direct3ddds/dx-graphics-dds-pguide) para obter detalhes.
 
 ## <a name="span-idblockcompressionformatssupportedindirect3d11spanspan-idblockcompressionformatssupportedindirect3d11spanspan-idblockcompressionformatssupportedindirect3d11spanblock-compression-formats-supported-in-direct3d-11"></a><span id="Block_Compression_Formats_Supported_in_Direct3D_11"></span><span id="block_compression_formats_supported_in_direct3d_11"></span><span id="BLOCK_COMPRESSION_FORMATS_SUPPORTED_IN_DIRECT3D_11"></span>Bloquear os formatos de compactação com suporte no Direct3D 11
 
@@ -46,9 +46,9 @@ Os formatos BC1, BC2 e BC3 são equivalentes aos formatos de compactação de te
 
 | Formato de compactação de bloco | Formato DXGI                                                                           | Formato equivalente do Direct3D 9                               | Bytes por bloco de pixels 4x4 |
 |--------------------------|---------------------------------------------------------------------------------------|------------------------------------------------------------|---------------------------|
-| BC1                      | DXGI\_FORMATO\_BC1\_UNORM, DXGI\_FORMATO\_BC1\_UNORM\_SRGB, DXGI\_FORMATO\_BC1\_TYPELESS | D3DFMT\_DXT1, FourCC = "DXT1"                                | 8                         |
-| BC2                      | DXGI\_FORMATO\_BC2\_UNORM, DXGI\_FORMATO\_BC2\_UNORM\_SRGB, DXGI\_FORMATO\_BC2\_TYPELESS | D3DFMT\_DXT2\*, FourCC = "DXT2", D3DFMT\_DXT3, FourCC = "DXT3" | 16                        |
-| BC3                      | DXGI\_FORMATO\_BC3\_UNORM, DXGI\_FORMATO\_BC3\_UNORM\_SRGB, DXGI\_FORMATO\_BC3\_TYPELESS | D3DFMT\_DXT4\*, FourCC = "DXT4", D3DFMT\_DXT5, FourCC = "DXT5" | 16                        |
+| BC1                      | DXGI\_FORMAT\_BC1\_UNORM, DXGI\_FORMAT\_BC1\_UNORM\_SRGB, DXGI\_FORMAT\_BC1\_TYPELESS | D3DFMT\_DXT1, FourCC="DXT1"                                | 8                         |
+| BC2                      | DXGI\_FORMAT\_BC2\_UNORM, DXGI\_FORMAT\_BC2\_UNORM\_SRGB, DXGI\_FORMAT\_BC2\_TYPELESS | D3DFMT\_DXT2\*, FourCC="DXT2", D3DFMT\_DXT3, FourCC="DXT3" | 16                        |
+| BC3                      | DXGI\_FORMAT\_BC3\_UNORM, DXGI\_FORMAT\_BC3\_UNORM\_SRGB, DXGI\_FORMAT\_BC3\_TYPELESS | D3DFMT\_DXT4\*, FourCC="DXT4", D3DFMT\_DXT5, FourCC="DXT5" | 16                        |
 
  
 
@@ -59,19 +59,19 @@ Os formatos BC1, BC2 e BC3 são equivalentes aos formatos de compactação de te
 
 | Formato de compactação de bloco | Formato DXGI                                                                     | Formato equivalente do Direct3D 9 | Bytes por bloco de pixels 4x4 |
 |--------------------------|---------------------------------------------------------------------------------|------------------------------|---------------------------|
-| BC4                      | DXGI\_FORMATO\_BC4\_UNORM, DXGI\_FORMATO\_BC4\_SNORM, DXGI\_FORMATO\_BC4\_TYPELESS | FourCC="ATI1"                | 8                         |
-| BC5                      | DXGI\_FORMATO\_BC5\_UNORM, DXGI\_FORMATO\_BC5\_SNORM, DXGI\_FORMATO\_BC5\_TYPELESS | FourCC="ATI2"                | 16                        |
+| BC4                      | DXGI\_FORMAT\_BC4\_UNORM, DXGI\_FORMAT\_BC4\_SNORM, DXGI\_FORMAT\_BC4\_TYPELESS | FourCC="ATI1"                | 8                         |
+| BC5                      | DXGI\_FORMAT\_BC5\_UNORM, DXGI\_FORMAT\_BC5\_SNORM, DXGI\_FORMAT\_BC5\_TYPELESS | FourCC="ATI2"                | 16                        |
 
  
 
-## <a name="span-idbc6hformatspanspan-idbc6hformatspanspan-idbc6hformatspanbc6h-format"></a><span id="BC6H_Format"></span><span id="bc6h_format"></span><span id="BC6H_FORMAT"></span>Formato de BC6H
+## <a name="span-idbc6hformatspanspan-idbc6hformatspanspan-idbc6hformatspanbc6h-format"></a><span id="BC6H_Format"></span><span id="bc6h_format"></span><span id="BC6H_FORMAT"></span>BC6H Format
 
 
-Para obter mais informações sobre esse formato, consulte a documentação do [formato BC6H](https://msdn.microsoft.com/library/windows/desktop/hh308952).
+Para obter mais informações sobre esse formato, consulte a documentação do [formato BC6H](https://docs.microsoft.com/windows/desktop/direct3d11/bc6h-format).
 
 | Formato de compactação de bloco | Formato DXGI                                                                      | Formato equivalente do Direct3D 9 | Bytes por bloco de pixels 4x4 |
 |--------------------------|----------------------------------------------------------------------------------|------------------------------|---------------------------|
-| BC6H                     | DXGI\_FORMATO\_BC6H\_UF16, DXGI\_FORMATO\_BC6H\_SF16, DXGI\_FORMATO\_BC6H\_TYPELESS | N/D                          | 16                        |
+| BC6H                     | DXGI\_FORMAT\_BC6H\_UF16, DXGI\_FORMAT\_BC6H\_SF16, DXGI\_FORMAT\_BC6H\_TYPELESS | N/D                          | 16                        |
 
  
 
@@ -80,11 +80,11 @@ O formato BC6H pode selecionar diferentes modos de codificação para cada bloco
 ## <a name="span-idbc7formatspanspan-idbc7formatspanspan-idbc7formatspanbc7-format"></a><span id="BC7_Format"></span><span id="bc7_format"></span><span id="BC7_FORMAT"></span>Formato de bc7 no momento
 
 
-Para obter mais informações sobre esse formato, consulte a documentação do [formato BC7](https://msdn.microsoft.com/library/windows/desktop/hh308953).
+Para obter mais informações sobre esse formato, consulte a documentação do [formato BC7](https://docs.microsoft.com/windows/desktop/direct3d11/bc7-format).
 
 | Formato de compactação de bloco | Formato DXGI                                                                           | Formato equivalente do Direct3D 9 | Bytes por bloco de pixels 4x4 |
 |--------------------------|---------------------------------------------------------------------------------------|------------------------------|---------------------------|
-| BC7                      | DXGI\_FORMATO\_BC7 NO MOMENTO\_UNORM, DXGI\_FORMATO\_BC7 NO MOMENTO\_UNORM\_SRGB, DXGI\_FORMATO\_BC7 NO MOMENTO\_TYPELESS | N/D                          | 16                        |
+| BC7                      | DXGI\_FORMAT\_BC7\_UNORM, DXGI\_FORMAT\_BC7\_UNORM\_SRGB, DXGI\_FORMAT\_BC7\_TYPELESS | N/D                          | 16                        |
 
  
 
@@ -95,7 +95,7 @@ O formato BC7 pode selecionar diferentes modos de codificação para cada bloco 
 
 [Apêndices](appendix.md)
 
-[Texturas](https://msdn.microsoft.com/library/windows/desktop/ff476902)
+[Texturas](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-textures)
 
  
 

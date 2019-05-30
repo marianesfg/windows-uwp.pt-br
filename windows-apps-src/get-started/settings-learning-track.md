@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, configurações, salvar configurações, carregar configurações
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4aa56bf24d2dfa1fd4ae1947a5b0edf7f312ea2f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 490dd8f0f3841fae089626ec9c283d54cc0d8cd9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57614631"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370491"
 ---
 # <a name="save-and-load-settings-in-a-uwp-app"></a>Salvar e carregar configurações em um aplicativo UWP
 
@@ -86,7 +86,7 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 
 | API | Descrição |
 |------|---------------|
-| [ApplicationData.LocalSettings](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.temporaryfolder) | Obtém o contêiner do aplicativo do armazenamento de dados do aplicativo local. |
+| [ApplicationData.LocalSettings](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.temporaryfolder) | Obtém o contêiner do aplicativo do armazenamento de dados do aplicativo local. |
 | [ApplicationData.RoamingSettings](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingsettings) | Obtém o contêiner de configurações do aplicativo do armazenamento de dados do aplicativo em roaming. |
 | [ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) | Um contêiner de configurações de aplicativo que oferece suporte para criar, excluir, enumerar e percorrer a hierarquia do contêiner. |
 | [Namespace Windows.UI.ApplicationSettings](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings) | Fornece classes que você usará para definir as configurações do aplicativo que aparecem no painel configurações do Shell do Windows. |

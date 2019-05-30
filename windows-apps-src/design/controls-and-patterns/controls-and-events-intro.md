@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ff3f89887235fc9c8d9d7afbbdea3d79bace810
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 671f33cf106eabf11b317b00d5c2a6cd9abcf3d0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630791"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363034"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introdução a controles e padrões
 
 No desenvolvimento de aplicativos UWP, um *controle* é um elemento de interface do usuário que exibe conteúdo ou permite interação. Crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário.
 
-> **APIs importantes**: [Namespace do Windows](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+> **APIs importantes**: [Windows.UI.Xaml.Controls namespace](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
 
 Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o [mestre/detalhes](master-details.md) padrão é uma maneira que você pode usar um [SplitView](split-view.md) controle de navegação do aplicativo. Da mesma forma, você pode personalizar o modelo de um [NavigationView](navigationview.md) controle para implementar o padrão de guia.
 
@@ -144,7 +144,7 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 ## <a name="related-topics"></a>Tópicos relacionados
 
 -   [Índice de controles por função](controls-by-function.md)
--   [Namespace do Windows](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+-   [Windows.UI.Xaml.Controls namespace](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
 -   [Layout](../layout/index.md)
 -   [Estilo](../style/index.md)
 -   [Usabilidade](../usability/index.md)

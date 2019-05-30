@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, API de coleção da Microsoft Store, providenciado, consumível
 ms.localizationpriority: medium
-ms.openlocfilehash: cea8937af3df0ad1e80434d649f431d188521667
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 994113abc34a0a5f7905bff00aa77c6785409927
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615801"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372769"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>Declarar produtos consumíveis como providenciados
 
@@ -39,7 +39,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 | Método | URI da solicitação                                                   |
 |--------|---------------------------------------------------------------|
-| POST   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
+| POSTAR   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -60,7 +60,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 | itemId        | cadeia de caracteres       | O valor *itemID* retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com *trackingId*      | Não       |
 | trackingId    | guid         | Uma ID de rastreamento exclusiva fornecida pelo desenvolvedor. Use esse parâmetro com *itemId*.         | Não       |
 | productId     | cadeia de caracteres       | O valor de *productId* retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com *transactionId*   | Não       |
-| transactionId | guid         | Um valor de ID de transação que é obtido de uma das seguintes fonte. Use esse parâmetro com *productId*.<ul><li>A propriedade [TransactionID](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.purchaseresults.transactionid) da classe [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).</li><li>O recibo do aplicativo ou produto que é retornado por [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) ou [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync).</li><li>O parâmetro *transactionId* retornado por uma [consulta por produtos](query-for-products.md).</li></ul>   | Não       |
+| transactionId | guid         | Um valor de ID de transação que é obtido de uma das seguintes fonte. Use esse parâmetro com *productId*.<ul><li>A propriedade [TransactionID](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.purchaseresults.transactionid) da classe [PurchaseResults](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.PurchaseResults).</li><li>O recibo do aplicativo ou produto que é retornado por [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) ou [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync).</li><li>O parâmetro *transactionId* retornado por uma [consulta por produtos](query-for-products.md).</li></ul>   | Não       |
 
 
 O objeto UserIdentity contém os parâmetros a seguir.

@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de aplicativo, atualização
 ms.localizationpriority: medium
-ms.openlocfilehash: b61508edf2ebc2ab155110189fe67df63e2bab30
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 77c033ff09d56448f42d1f8084265ac0aa5d5212
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634611"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371436"
 ---
 # <a name="update-an-app-submission"></a>Atualizar um envio de aplicativo
 
@@ -47,7 +47,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja atualizar um envio. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja atualizar um envio. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 | submissionId | cadeia de caracteres | Obrigatório. A ID do envio para atualizar. Esse ID está disponível nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL para a página de envio no Partner Center.  |
 
 
@@ -57,25 +57,25 @@ O corpo da solicitação tem os parâmetros a seguir.
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| applicationCategory           | cadeia de caracteres  |   Uma cadeia de caracteres que especifica a [categoria e/ou subcategoria](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) para o aplicativo. Categorias e subcategorias são combinadas em uma única cadeia de caracteres com o caractere de sublinhado '_', como **BooksAndReference_EReader**.      |  
+| applicationCategory           | cadeia de caracteres  |   Uma cadeia de caracteres que especifica a [categoria e/ou subcategoria](https://docs.microsoft.com/windows/uwp/publish/category-and-subcategory-table) para o aplicativo. Categorias e subcategorias são combinadas em uma única cadeia de caracteres com o caractere de sublinhado '_', como **BooksAndReference_EReader**.      |  
 | pricing           |  objeto  | Um objeto que contém informações de preços do aplicativo. Para saber mais, veja a seção [Recurso de preços](manage-app-submissions.md#pricing-object).       |   
 | visibilidade           |  cadeia de caracteres  |  A visibilidade do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
 | targetPublishMode           | cadeia de caracteres  | O modo de publicação do envio. Isso pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | cadeia de caracteres  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |  
 | listings           |   objeto  |  Um dicionário de pares de chave e valor, no qual cada chave é um código de país e cada valor é um objeto [recurso de listagem](manage-app-submissions.md#listing-object) objeto que contém as informações de listagem do aplicativo.       |   
-| hardwarePreferences           |  matriz  |   Uma matriz de cadeias de caracteres que definem as [preferências de hardware](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Touch</li><li>Teclado</li><li>Mouse</li><li>Câmera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonia</li></ul>     |   
-| automaticBackupEnabled           |  booliano  |   Indica se o Windows pode incluir dados do aplicativo em backups automáticos no OneDrive. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
-| canInstallOnRemovableMedia           |  booliano  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
-| isGameDvrEnabled           |  booliano |   Indica se o DVR de jogos está habilitado para o aplicativo.    |   
+| hardwarePreferences           |  matriz  |   Uma matriz de cadeias de caracteres que definem as [preferências de hardware](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties) do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Touch</li><li>Teclado</li><li>Mouse</li><li>Câmera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonia</li></ul>     |   
+| automaticBackupEnabled           |  boolean  |   Indica se o Windows pode incluir dados do aplicativo em backups automáticos no OneDrive. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).   |   
+| canInstallOnRemovableMedia           |  boolean  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| isGameDvrEnabled           |  boolean |   Indica se o DVR de jogos está habilitado para o aplicativo.    |   
 | gamingOptions           |  objeto |   Uma matriz que contém um [recurso de opções de jogo](manage-app-submissions.md#gaming-options-object) que define as configurações relacionadas a jogos para o app.     |   
-| hasExternalInAppProducts           |     booliano          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Microsoft Store. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
-| meetAccessibilityGuidelines           |    booliano           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
-| notesForCertification           |  cadeia de caracteres  |   Contém [observações de certificação](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
+| hasExternalInAppProducts           |     boolean          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Microsoft Store. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| meetAccessibilityGuidelines           |    boolean           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).      |   
+| notesForCertification           |  cadeia de caracteres  |   Contém [observações de certificação](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
 | applicationPackages           |   matriz  | Contém objetos que fornecem detalhes sobre cada pacote no envio. Para saber mais, veja a seção [Pacote de aplicativos](manage-app-submissions.md#application-package-object). Durante a chamada desse método para atualizar um envio de aplicativo, somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion* e *minimumSystemRam* desses objetos são necessários no corpo da solicitação. Os outros valores são preenchidos pela Central de parceiro.   |    
 | packageDeliveryOptions    | objeto  | Contém as configurações de distribuição de pacote gradual e de atualização obrigatória para o envio. Para obter mais informações, consulte [Objeto de opções de entrega de pacote](manage-app-submissions.md#package-delivery-options-object).  |
 | enterpriseLicensing           |  cadeia de caracteres  |  Um dos [valores de licenciamento empresarial](manage-app-submissions.md#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
-| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  booliano   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
-| allowTargetFutureDeviceFamilies           | booliano   |  Indica se o aplicativo tem permissão para [segmentar famílias de dispositivos Windows 10 futuras](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).     |   
+| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability).    |    
+| allowTargetFutureDeviceFamilies           | boolean   |  Indica se o aplicativo tem permissão para [segmentar famílias de dispositivos Windows 10 futuras](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability).     |   
 | trailers           |  matriz |   Uma matriz que contém até [recursos de trailer](manage-app-submissions.md#trailer-object) que representam trailers de vídeo para a listagem de apps.   |   
 
 

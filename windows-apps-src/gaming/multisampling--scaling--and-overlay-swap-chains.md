@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, escala de sobreposições, sobreposições, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 12aede6c4af61c4b86d1f1090a2ec3d0e5ecce68
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 77e5dac007654449fcfbe2053fda65b123e073fa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644191"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368341"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a>Dimensionamento e sobreposições de cadeia de troca
 
@@ -119,7 +119,7 @@ Quando seu jogo está sendo executado em hardware de nível inferior, ou hardwar
 ## <a name="create-a-hardware-overlay-swap-chain-for-ui-elements"></a>Criar uma cadeia de troca de sobreposição de hardware para elementos da interface do usuário
 
 
-Ao usar redimensionamento da cadeia de troca, há uma desvantagem inerente no sentido de que a interface do usuário também é reduzida, possivelmente tornando-a desfocada e mais difícil de usar. Em dispositivos com suporte de hardware a cadeia de troca de sobreposição, esse problema é totalmente solucionado pela renderização da interface do usuário em resolução nativa em uma cadeia de troca que esteja separada do conteúdo do jogo em tempo real. Observe que essa técnica aplica-se somente a cadeias de troca [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), e não pode ser usada com interoperabilidade XAML.
+Ao usar redimensionamento da cadeia de troca, há uma desvantagem inerente no sentido de que a interface do usuário também é reduzida, possivelmente tornando-a desfocada e mais difícil de usar. Em dispositivos com suporte de hardware a cadeia de troca de sobreposição, esse problema é totalmente solucionado pela renderização da interface do usuário em resolução nativa em uma cadeia de troca que esteja separada do conteúdo do jogo em tempo real. Observe que essa técnica aplica-se somente a cadeias de troca [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow), e não pode ser usada com interoperabilidade XAML.
 
 Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use o recurso de sobreposição de hardware. Estas etapas são executadas depois da criação de uma cadeia de troca para conteúdo de jogo em tempo real conforme descrito anteriormente.
 
@@ -142,7 +142,7 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
         );
     ```
 
-    O adaptador DXGI dá suporte a sobreposições se o adaptador de saída retornar True para [**SupportsOverlays**](https://msdn.microsoft.com/library/windows/desktop/dn280411).
+    O adaptador DXGI dá suporte a sobreposições se o adaptador de saída retornar True para [**SupportsOverlays**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgioutput2-supportsoverlays).
 
     ```cpp
     m_overlaySupportExists = dxgiOutput2->SupportsOverlays() ? true : false;
@@ -152,11 +152,11 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
 
      
 
-2.  Crie uma cadeia de troca de primeiro plano com [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559). As opções a seguir devem ser definidas [ **DXGI\_trocar\_cadeia\_DESC1** ](https://msdn.microsoft.com/library/windows/desktop/hh404528) fornecido para o *apresentado a pDesc* parâmetro:
+2.  Crie uma cadeia de troca de primeiro plano com [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow). As opções a seguir devem ser definidas [ **DXGI\_trocar\_cadeia\_DESC1** ](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1) fornecido para o *apresentado a pDesc* parâmetro:
 
-    -   Especifique o [ **DXGI\_PERMUTA\_cadeia\_sinalizador\_primeiro plano\_camada** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) alternar o sinalizador da cadeia para indicar uma cadeia de troca de primeiro plano.
-    -   Use o [ **DXGI\_ALPHA\_modo\_RECALCULADO** ](https://msdn.microsoft.com/library/windows/desktop/hh404496) sinalizador de modo alfa. As cadeias de troca de primeiro plano são sempre pré-multiplicadas.
-    -   Defina as [ **DXGI\_SCALING\_NONE** ](https://msdn.microsoft.com/library/windows/desktop/hh404526) sinalizador. As cadeias de troca de primeiro plano são sempre executadas em resolução nativa.
+    -   Especifique o [ **DXGI\_PERMUTA\_cadeia\_sinalizador\_primeiro plano\_camada** ](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) alternar o sinalizador da cadeia para indicar uma cadeia de troca de primeiro plano.
+    -   Use o [ **DXGI\_ALPHA\_modo\_RECALCULADO** ](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ne-dxgi1_2-dxgi_alpha_mode) sinalizador de modo alfa. As cadeias de troca de primeiro plano são sempre pré-multiplicadas.
+    -   Defina as [ **DXGI\_SCALING\_NONE** ](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ne-dxgi1_2-dxgi_scaling) sinalizador. As cadeias de troca de primeiro plano são sempre executadas em resolução nativa.
 
     ```cpp
      foregroundSwapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FOREGROUND_LAYER;
@@ -164,7 +164,7 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
      foregroundSwapChainDesc.AlphaMode = DXGI_ALPHA_MODE_PREMULTIPLIED; // Foreground swap chain alpha values must be premultiplied.
     ```
 
-    > **Observação**    defina o [ **DXGI\_SWAP\_cadeia\_sinalizador\_em primeiro plano\_camada** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) novamente cada hora em que a cadeia de troca é redimensionada.
+    > **Observação**    defina o [ **DXGI\_SWAP\_cadeia\_sinalizador\_em primeiro plano\_camada** ](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) novamente cada hora em que a cadeia de troca é redimensionada.
 
     ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(
@@ -199,7 +199,7 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
 
 4.  As cadeias de troca de primeiro plano sempre usam alfa premultiplicado. Espera-se que os valores de cor de cada pixel já estejam multiplicados pelo valor alfa antes de o quadro ser apresentado. Por exemplo, um pixel BGRA de 100% branco em alfa de 50% é definido como (0,5 - 0,5 - 0,5 - 0,5).
 
-    A etapa premultiplication alfa pode ser feita no estágio de fusão de saída por meio da aplicação de um estado de aplicativo do blend (consulte [ **ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476349)) com o [ **D3D11\_ RENDERIZAR\_alvo\_BLEND\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476200) da estrutura **SrcBlend** campo definido como **D3D11\_SRC\_ALPHA**. Os ativos com valores de alfa pré-multiplicado também podem ser usados.
+    A etapa premultiplication alfa pode ser feita no estágio de fusão de saída por meio da aplicação de um estado de aplicativo do blend (consulte [ **ID3D11BlendState**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11blendstate)) com o [ **D3D11\_ RENDERIZAR\_alvo\_BLEND\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_render_target_blend_desc) da estrutura **SrcBlend** campo definido como **D3D11\_SRC\_ALPHA**. Os ativos com valores de alfa pré-multiplicado também podem ser usados.
 
     Se a etapa de premultiplicação de alfa não for executada, as cores na cadeia de troca de primeiro plano estarão mais brilhantes do que o esperado.
 

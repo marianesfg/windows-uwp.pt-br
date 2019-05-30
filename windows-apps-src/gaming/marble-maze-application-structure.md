@@ -6,19 +6,19 @@ ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, estrutura
 ms.localizationpriority: medium
-ms.openlocfilehash: 55b933db7f9b26de2caa3877bde445f96c08d561
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a04e6714772d9b17c281f81ad93582d1fb691c9b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653721"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368498"
 ---
 # <a name="marble-maze-application-structure"></a>Estrutura do aplicativo Marble Maze
 
 
 
 
-A estrutura de um aplicativo UWP (Plataforma Universal do Windows) DirectX é diferente daquela de um aplicativo de área de trabalho tradicional. Em vez de funcionar com tipos de identificador como [HWND](https://msdn.microsoft.com/library/windows/desktop/aa383751) e funções como [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679), o Windows Runtime oferece interfaces como [Windows::UI::Core::ICoreWindow](https://msdn.microsoft.com/library/windows/apps/br208296) para que seja possível desenvolver aplicativos UWP de uma maneira mais moderna orientada a objetos. Esta seção da documentação mostra como o código do app Marble Maze está estruturado.
+A estrutura de um aplicativo UWP (Plataforma Universal do Windows) DirectX é diferente daquela de um aplicativo de área de trabalho tradicional. Em vez de funcionar com tipos de identificador como [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types) e funções como [CreateWindow](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-createwindowa), o Windows Runtime oferece interfaces como [Windows::UI::Core::ICoreWindow](https://docs.microsoft.com/uwp/api/Windows.UI.Core.ICoreWindow) para que seja possível desenvolver aplicativos UWP de uma maneira mais moderna orientada a objetos. Esta seção da documentação mostra como o código do app Marble Maze está estruturado.
 
 > [!NOTE]
 > O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](https://go.microsoft.com/fwlink/?LinkId=624011).
@@ -79,7 +79,7 @@ Por motivos didáticos, o projeto Marble Maze inclui tanto o formato de tempo de
 ##  <a name="application-life-cycle"></a>Ciclo de vida do aplicativo
 
 
-O Marble Maze segue o ciclo de vida de um aplicativo UWP típico. Para saber mais sobre o ciclo de vida um aplicativo UWP, consulte [Ciclo de vida do aplicativo](https://msdn.microsoft.com/library/windows/apps/mt243287).
+O Marble Maze segue o ciclo de vida de um aplicativo UWP típico. Para saber mais sobre o ciclo de vida um aplicativo UWP, consulte [Ciclo de vida do aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle).
 
 Quando um jogo UWP é inicializado, ele normalmente inicializa componentes de tempo de execução, como o Direct3D, o Direct2D e qualquer biblioteca de entrada, áudio ou física que precisa usar. Ele também carrega recursos específicos que são necessários antes de o jogo começar. Essa inicialização ocorre uma única vez durante uma sessão do jogo.
 
@@ -100,7 +100,7 @@ O exemplo a seguir mostra onde o método **App::SetWindow** cria o objeto de cla
 
 A classe **App** também começa a carregar os recursos adiados para o jogo. Consulte a próxima seção para saber mais detalhes.
 
-Além disso, a classe **App** configura os manipuladores dos eventos [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow). Quando os manipuladores desses eventos são chamados, eles passam a entrada para a classe **MarbleMazeMain***.
+Além disso, a classe **App** configura os manipuladores dos eventos [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow). Quando os manipuladores desses eventos são chamados, eles passam a entrada para a classe **MarbleMazeMain*** .
 
 ## <a name="loading-game-assets-in-the-background"></a>Carregando ativos de jogo em segundo plano
 
@@ -240,7 +240,7 @@ O Marble Maze realiza as seguintes tarefas para dar suporte aos processos de sus
 -   Ele responde a notificações de suspensão salvando seu estado no armazenamento persistente.
 -   Ele responde a notificações de retomada carregando seu estado a partir do armazenamento persistente. Ele também carrega o estado anterior durante a inicialização.
 
-Para dar suporte a processos de suspensão e retomada, o Marble Maze define a classe **PersistentState**. (Consulte **PersistentState.h** e **PersistentState.cpp**). Essa classe usa a interface [Windows::Foundation::Collections::IPropertySet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IPropertySet) para ler e gravar propriedades. A classe **PersistentState** fornece métodos que fazem a leitura e a gravação de tipos de dados primitivos (como **bool**, **int**, **float**, [XMFLOAT3](https://msdn.microsoft.com/library/windows/desktop/ee419475), e [Platform:: string](https://docs.microsoft.com/cpp/cppcx/platform-string-class)), de e em um repositório de suporte.
+Para dar suporte a processos de suspensão e retomada, o Marble Maze define a classe **PersistentState**. (Consulte **PersistentState.h** e **PersistentState.cpp**). Essa classe usa a interface [Windows::Foundation::Collections::IPropertySet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IPropertySet) para ler e gravar propriedades. A classe **PersistentState** fornece métodos que fazem a leitura e a gravação de tipos de dados primitivos (como **bool**, **int**, **float**, [XMFLOAT3](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat3), e [Platform:: string](https://docs.microsoft.com/cpp/cppcx/platform-string-class)), de e em um repositório de suporte.
 
 ```cpp
 ref class PersistentState
@@ -414,7 +414,7 @@ void MarbleMazeMain::LoadState()
 > [!IMPORTANT]
 > O Marble Maze não faz distinção entre partida a frio, ou seja, começar pela primeira vez sem um evento de suspensão anterior, e retomada a partir de um estado suspenso. Este é um design recomendado para todos os aplicativos UWP.
 
-Para saber mais sobre dados de aplicativo, consulte [Armazenar e recuperar configurações e outros dados de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt299098).
+Para saber mais sobre dados de aplicativo, consulte [Armazenar e recuperar configurações e outros dados de aplicativo](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data).
 
 ##  <a name="next-steps"></a>Próximas etapas
 

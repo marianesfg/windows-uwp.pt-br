@@ -6,20 +6,20 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bfd617c3c08cdcb7815010648c6036a5f39ee3ab
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 15ea49ea0e8e334158000248caf26f662ee5bd35
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57623801"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369640"
 ---
 # <a name="use-the-inclinometer"></a>Usar o inclinômetro
 
 
 **APIs importantes**
 
--   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**inclinômetro**](https://msdn.microsoft.com/library/windows/apps/BR225766)
+-   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**inclinômetro**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer)
 
 **Exemplo**
 
@@ -41,7 +41,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
 
 ###  <a name="instructions"></a>Instruções
 
--   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#**.
+-   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#** .
 
 -   Abra o arquivo MainPage.xaml.cs do projeto e substitua o código existente pelo exemplo abaixo.
 

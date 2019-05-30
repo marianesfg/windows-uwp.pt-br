@@ -8,18 +8,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: fcbed8400b31616f92f20aa3a64a4dd8603dc7b0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0eb5a03a2a6de8624e8b414fa31c6eec51c04bbc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57650891"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364885"
 ---
 # <a name="inking-controls"></a>Controles de escrita à tinta
 
 
 
-Há dois controles diferentes que facilitam a escrita à tinta em aplicativos da plataforma Universal do Windows (UWP): [InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
+Há dois controles diferentes que facilitam a escrita à tinta em aplicativos da plataforma Universal do Windows (UWP): [InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) e [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar).
 
 O controle InkCanvas renderiza uma entrada à caneta como um traço de tinta (usando as configurações padrão de cor e espessura) ou um traço de apagar. Esse controle é uma sobreposição transparente que não inclui interfaces do usuário internas para alterar as propriedades de traço de tinta padrão.
 
@@ -35,7 +35,7 @@ Por padrão, o InkToolbar inclui botões para desenhar, apagar, realçar e exibi
 
 <img src="images/ink-tools-invoked-toolbar.png" width="300" alt="InkToolbar palette flyout">
 
-> **APIs importantes**: [Classe InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [classe InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [classe InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [Windows.UI.Input.Inking](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **APIs importantes**: [Classe InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), [classe InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar), [classe InkPresenter](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter), [Windows.UI.Input.Inking](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
 
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
@@ -47,7 +47,7 @@ Por padrão, os traços são renderizados como tinta ao usar a ponta da caneta (
 Emparelhe o InkCanvas com um InkToolbar a fim de oferecer uma interface do usuário para ativar recursos de tinta e configurar propriedades de tinta básicas, como tamanho do traço, cor e forma da ponta da caneta.
 
 > [!NOTE] 
-> Para obter uma personalização mais abrangente da renderização do traço de tinta em um InkCanvas, use o objeto [InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx) subjacente.
+> Para obter uma personalização mais abrangente da renderização do traço de tinta em um InkCanvas, use o objeto [InkPresenter](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter) subjacente.
 
 ## <a name="examples"></a>Exemplos
 

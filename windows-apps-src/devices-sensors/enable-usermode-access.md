@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: 442b3b9328212a5115384b5175b519b76286dd28
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f41bf9f56b63f59844bec976e9d6e5e3d650b271
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620301"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370268"
 ---
 # <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>Habilitar o acesso de modo do usuário para GPIO, I2C, SPI
 
@@ -41,7 +41,7 @@ Device(RHPX)
 * _CID – ID compatível. Deve ser "MSFT8000".
 * _UID – ID exclusiva. Defina como 1.
 
-Em seguida, declaramos cada um dos recursos GPIO e SPB que devem ser expostos ao modo do usuário. A ordem em que os recursos são declarados é importante porque os índices de recurso são usados para associar propriedades a recursos. Se houver vários barramentos I2C ou SPI expostos, o primeiro barramento declarado será considerado o barramento 'padrão' para esse tipo, e será a instância retornada pelos métodos `GetDefaultAsync()`[Windows.Devices.I2c.I2cController](https://msdn.microsoft.com/library/windows/apps/windows.devices.i2c.i2ccontroller.aspx) e [Windows.Devices.Spi.SpiController](https://msdn.microsoft.com/library/windows/apps/windows.devices.spi.spicontroller.aspx).
+Em seguida, declaramos cada um dos recursos GPIO e SPB que devem ser expostos ao modo do usuário. A ordem em que os recursos são declarados é importante porque os índices de recurso são usados para associar propriedades a recursos. Se houver vários barramentos I2C ou SPI expostos, o primeiro barramento declarado será considerado o barramento 'padrão' para esse tipo, e será a instância retornada pelos métodos `GetDefaultAsync()`[Windows.Devices.I2c.I2cController](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2ccontroller) e [Windows.Devices.Spi.SpiController](https://docs.microsoft.com/uwp/api/windows.devices.spi.spicontroller).
 
 ### <a name="spi"></a>SPI
 
@@ -156,7 +156,7 @@ Isso cria um barramento chamado "SPI1" e o associa ao índice de recurso 2.
 #### <a name="spi-driver-requirements"></a>Requisitos de driver SPI
 
 * Deve usar `SpbCx` ou ser compatível com SpbCx
-* Deve ter sido aprovado nos [Testes SPI MITT](https://msdn.microsoft.com/library/windows/hardware/dn919873.aspx)
+* Deve ter sido aprovado nos [Testes SPI MITT](https://docs.microsoft.com/windows-hardware/drivers/spb/spi-tests-in-mitt)
 * Deve aceitar a velocidade de clock de 4Mhz
 * Deve aceitar o tamanho de dados de 8 bits
 * Deve oferecer suporte a todos os modos de SPI: 0, 1, 2, 3
@@ -201,7 +201,7 @@ Os campos a seguir são espaços reservados para os valores especificados pelo u
 #### <a name="i2c-driver-requirements"></a>Requisitos de driver I2C
 
 * Deve usar SpbCx ou ser compatível com SpbCx
-* Deve ter sido aprovado nos [Testes I2C MITT](https://msdn.microsoft.com/library/windows/hardware/dn919852.aspx)
+* Deve ter sido aprovado nos [Testes I2C MITT](https://docs.microsoft.com/windows-hardware/drivers/spb/run-mitt-tests-for-an-i2c-controller-)
 * Deve aceitar endereçamento de 7 bits
 * Deve aceitar velocidade de clock de 100kHz
 * Deve aceitar velocidade de clock de 400kHz
@@ -228,7 +228,7 @@ GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, “\\_SB.GPI0”,) { 5 }
 
 Os requisitos a seguir devem ser observados ao se declarar pinos GPIO:
 
-* Só há suporte para controladores GPIO mapeados na memória. Não há suporte para controladores GPIO com interface sobre I2C/SPI. O driver do controlador é um controlador de memória mapeado se ele definir o sinalizador [MemoryMappedController](https://msdn.microsoft.com/library/windows/hardware/hh439449.aspx) na estrutura [CLIENT_CONTROLLER_BASIC_INFORMATION](https://msdn.microsoft.com/library/windows/hardware/hh439358.aspx) em resposta ao retorno de chamada [CLIENT_QueryControllerBasicInformation](https://msdn.microsoft.com/library/windows/hardware/hh439399.aspx).
+* Só há suporte para controladores GPIO mapeados na memória. Não há suporte para controladores GPIO com interface sobre I2C/SPI. O driver do controlador é um controlador de memória mapeado se ele definir o sinalizador [MemoryMappedController](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/ns-gpioclx-_controller_attribute_flags) na estrutura [CLIENT_CONTROLLER_BASIC_INFORMATION](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/ns-gpioclx-_client_controller_basic_information) em resposta ao retorno de chamada [CLIENT_QueryControllerBasicInformation](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/nc-gpioclx-gpio_client_query_controller_basic_information).
 * Cada pino requer um recurso GpioIO e GpioInt. O recurso GpioInt deve seguir imediatamente o recurso GpioIO e deve se referir ao mesmo número de pino.
 * Os recursos GPIO devem ser ordenados, aumentando o número de pino.
 * Cada recurso GpioIO e GpioInt deve conter exatamente um número de pino na lista de pinos.
@@ -282,7 +282,7 @@ Se a numeração de pino nativa for usada, você também deverá especificar a p
 Package (2) { “GPIO-PinCount”, 54 },
 ```
 
-A propriedade **PinCount** deve corresponder ao valor retornado pela propriedade **TotalPins** no retorno de chamada [CLIENT_QueryControllerBasicInformation](https://msdn.microsoft.com/library/windows/hardware/hh439399.aspx) do driver `GpioClx`.
+A propriedade **PinCount** deve corresponder ao valor retornado pela propriedade **TotalPins** no retorno de chamada [CLIENT_QueryControllerBasicInformation](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/nc-gpioclx-gpio_client_query_controller_basic_information) do driver `GpioClx`.
 
 Escolha o esquema de numeração mais compatível com a documentação existente publicada de sua placa. Por exemplo, Raspberry Pi usa numeração de pino nativa porque muitos diagramas de pinos existentes usam a numeração de pino BCM2835. MinnowBoardMax usa a numeração de pino sequencial porque existem poucos diagramas de pinos existentes, e a numeração de pinos sequencial simplifica a experiência do desenvolvedor porque apenas 10 pinos são expostos dentre mais de 200 pinos. A decisão de usar a numeração de pino sequencial ou nativa deve ter como finalidade mostrar clareza para desenvolvedor.
 
@@ -331,9 +331,9 @@ Isso atribui o nome amigável "UART2" para o controlador, que é o identificador
 
 Multiplexação de pino é a capacidade de usar o mesmo pino físico para funções diferentes. Vários periféricos no chip diferentes, como um controlador I2C, controlador SPI e controlador GPIO, podem ser encaminhados para o mesmo pino físico em um SOC. O bloco do multiplexador controla qual função está ativa no pino a qualquer momento. Tradicionalmente, o firmware é responsável por estabelecer atribuições de função na inicialização, e essa atribuição permanece estática durante a sessão de inicialização. A multiplexação de pino no tempo de execução adiciona a capacidade de reconfigurar atribuições de função de pino no tempo de execução. Permitir que os usuários escolham a função do pino no tempo de execução agiliza o desenvolvimento, pois permite que os usuários reconfigurem rapidamente os pinos de uma placa, e possibilita ao hardware dar suporte a uma gama maior de aplicativos do que uma configuração estática daria.
 
-Os usuários consomem o suporte à multiplexação para GPIO, I2C, SPI e UART sem ter que escrever código adicional. Quando um usuário abre um GPIO ou barramento usando [OpenPin()](https://msdn.microsoft.com/library/dn960157.aspx) ou [FromIdAsync()](https://msdn.microsoft.com/windows.devices.i2c.i2cdevice.fromidasync), os pinos físicos subjacentes são multiplexados automaticamente para a função solicitada. Se os pinos já estiverem sendo usados por uma função diferente, a chamada a OpenPin() ou FromIdAsync() falhará. Quando o usuário fecha o dispositivo descartando o objeto [GpioPin](https://msdn.microsoft.com/library/windows/apps/windows.devices.gpio.gpiopin.aspx), [I2cDevice](https://msdn.microsoft.com/library/windows/apps/windows.devices.i2c.i2cdevice.aspx), [SpiDevice](https://msdn.microsoft.com/library/windows/apps/windows.devices.spi.spidevice.aspx) ou [SerialDevice](https://msdn.microsoft.com/library/windows/apps/windows.devices.serialcommunication.serialdevice.aspx), os pinos são liberados, o que permite que eles sejam abertos mais tarde para uma função diferente.
+Os usuários consomem o suporte à multiplexação para GPIO, I2C, SPI e UART sem ter que escrever código adicional. Quando um usuário abre um GPIO ou barramento usando [OpenPin()](https://docs.microsoft.com/uwp/api/windows.devices.gpio.gpiocontroller.openpin) ou [FromIdAsync()](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2cdevice.fromidasync), os pinos físicos subjacentes são multiplexados automaticamente para a função solicitada. Se os pinos já estiverem sendo usados por uma função diferente, a chamada a OpenPin() ou FromIdAsync() falhará. Quando o usuário fecha o dispositivo descartando o objeto [GpioPin](https://docs.microsoft.com/uwp/api/windows.devices.gpio.gpiopin), [I2cDevice](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2cdevice), [SpiDevice](https://docs.microsoft.com/uwp/api/windows.devices.spi.spidevice) ou [SerialDevice](https://docs.microsoft.com/uwp/api/windows.devices.serialcommunication.serialdevice), os pinos são liberados, o que permite que eles sejam abertos mais tarde para uma função diferente.
 
-O Windows contém suporte integrado à multiplexação de pino nas estruturas [GpioClx](https://msdn.microsoft.com/library/windows/hardware/hh439515.aspx), [SpbCx](https://msdn.microsoft.com/library/windows/hardware/hh406203.aspx) e [SerCx](https://msdn.microsoft.com/library/windows/hardware/dn265349.aspx). Essas estruturas funcionam juntas para alternar automaticamente um pino para a função correta quando um pino ou barramento GPIO é acessado. O acesso aos pinos é arbitrado para evitar conflitos entre vários clientes. Além desse suporte integrado, as interfaces e os protocolos de multiplexação de pino são de finalidade geral e podem ser estendidos para dar suporte a cenários e dispositivos adicionais.
+O Windows contém suporte integrado à multiplexação de pino nas estruturas [GpioClx](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/index), [SpbCx](https://docs.microsoft.com/windows-hardware/drivers/spb/spb-framework-extension) e [SerCx](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/index). Essas estruturas funcionam juntas para alternar automaticamente um pino para a função correta quando um pino ou barramento GPIO é acessado. O acesso aos pinos é arbitrado para evitar conflitos entre vários clientes. Além desse suporte integrado, as interfaces e os protocolos de multiplexação de pino são de finalidade geral e podem ser estendidos para dar suporte a cenários e dispositivos adicionais.
 
 Este documento descreve primeiro as interfaces e os protocolos subjacentes envolvidos no muxing de pino e, em seguida, descreve como adicionar suporte a muxing de pino aos drivers de controlador GpioClx, SpbCx e SerCx.
 
@@ -353,8 +353,8 @@ A sequência de operações envolvidas na multiplexação de pino é mostrada ab
 
 ![Interação entre servidor e cliente de multiplexação de pino](images/usermode-access-diagram-1.png)
 
-1. O cliente recebe recursos MsftFunctionConfig do firmware da ACPI no retorno de chamada [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx).
-2. O cliente usa a função auxiliar do hub de recursos `RESOURCE_HUB_CREATE_PATH_FROM_ID()` para criar um caminho a partir da ID do recurso, em seguida, abre um identificador para o caminho (usando [ZwCreateFile()](https://msdn.microsoft.com/library/windows/hardware/ff566424.aspx), [IoGetDeviceObjectPointer()](https://msdn.microsoft.com/library/windows/hardware/ff549198.aspx) ou [WdfIoTargetOpen()](https://msdn.microsoft.com/library/windows/hardware/ff548634.aspx)).
+1. O cliente recebe recursos MsftFunctionConfig do firmware da ACPI no retorno de chamada [EvtDevicePrepareHardware()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfdevice/nc-wdfdevice-evt_wdf_device_prepare_hardware).
+2. O cliente usa a função auxiliar do hub de recursos `RESOURCE_HUB_CREATE_PATH_FROM_ID()` para criar um caminho a partir da ID do recurso, em seguida, abre um identificador para o caminho (usando [ZwCreateFile()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ntifs/nf-ntifs-ntcreatefile), [IoGetDeviceObjectPointer()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdm/nf-wdm-iogetdeviceobjectpointer) ou [WdfIoTargetOpen()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfiotarget/nf-wdfiotarget-wdfiotargetopen)).
 3. O servidor extrai a ID do hub de recursos do caminho do arquivo usando as funções auxiliares do hub de recursos `RESOURCE_HUB_ID_FROM_FILE_NAME()`, em seguida, consulta o hub de recursos para obter o descritor do recurso.
 4. O servidor executa a arbitragem de compartilhamento em cada ponto no descritor e conclui a solicitação IRP_MJ_CREATE.
 5. O cliente emite uma solicitação *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* no identificador recebido.
@@ -369,7 +369,7 @@ Esta seção descreve como um cliente consome a funcionalidade de multiplexaçã
 
 #### <a name="parsing-resources"></a>Recursos de análise
 
-Um driver WDF recebe recursos `MsftFunctionConfig()` em sua rotina [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx). Os recursos MsftFunctionConfig podem ser identificados pelos campos a seguir:
+Um driver WDF recebe recursos `MsftFunctionConfig()` em sua rotina [EvtDevicePrepareHardware()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfdevice/nc-wdfdevice-evt_wdf_device_prepare_hardware). Os recursos MsftFunctionConfig podem ser identificados pelos campos a seguir:
 
 ```cpp
 CM_PARTIAL_RESOURCE_DESCRIPTOR::Type = CmResourceTypeConnection
@@ -504,7 +504,7 @@ NTSTATUS AcquireFunctionConfigResource (
 }
 ```
 
-O driver deve armazenar o WDFIOTARGET em uma das suas áreas de contexto para que ele possa ser fechado mais tarde. Quando o driver está pronto para liberar a configuração de multiplexação, ele deve fechar o identificador de recurso, chamando [WdfObjectDelete()](https://msdn.microsoft.com/library/windows/hardware/ff548734.aspx) ou [WdfIoTargetClose()](https://msdn.microsoft.com/library/windows/hardware/ff548586.aspx) se você pretende reutilizar o WDFIOTARGET.
+O driver deve armazenar o WDFIOTARGET em uma das suas áreas de contexto para que ele possa ser fechado mais tarde. Quando o driver está pronto para liberar a configuração de multiplexação, ele deve fechar o identificador de recurso, chamando [WdfObjectDelete()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfobject/nf-wdfobject-wdfobjectdelete) ou [WdfIoTargetClose()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfiotarget/nf-wdfiotarget-wdfiotargetclose) se você pretende reutilizar o WDFIOTARGET.
 
 ```cpp
     WdfObjectDelete(resourceHandle);
@@ -532,7 +532,7 @@ A arbitragem de compartilhamento terá êxito em geral se for bem-sucedida para 
 
 Se a arbitragem de compartilhamento falhar, a solicitação deverá ser concluída com *STATUS_GPIO_INCOMPATIBLE_CONNECT_MODE*. Se a arbitragem de compartilhamento tiver êxito, a solicitação deverá concluída com *STATUS_SUCCESS*.
 
-Observe que o modo de compartilhamento da solicitação de entrada deve ser extraído do descritor MsftFunctionConfig, não de [IrpSp -> Parameters.Create.ShareAccess](https://msdn.microsoft.com/library/windows/hardware/ff548630.aspx).
+Observe que o modo de compartilhamento da solicitação de entrada deve ser extraído do descritor MsftFunctionConfig, não de [IrpSp -> Parameters.Create.ShareAccess](https://docs.microsoft.com/windows-hardware/drivers/ifs/irp-mj-create).
 
 #### <a name="handling-ioctlgpiocommitfunctionconfigpins-requests"></a>Manipulando solicitações IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS
 
@@ -614,7 +614,7 @@ Além dos recursos de memória e de interrupção geralmente exigidos por um dri
 * CLIENT_ConnectFunctionConfigPins – chamada pelo `GpioClx` para forçar o driver de miniporta a aplicar a configuração de multiplexação especificada.
 * CLIENT_DisconnectFunctionConfigPins – chamada pelo `GpioClx` para forçar o driver de miniporta a reverter a configuração de multiplexação especificada.
 
-Consulte [Funções de retorno de chamada de evento GpioClx](https://msdn.microsoft.com/library/windows/hardware/hh439464.aspx) para obter uma descrição dessas rotinas.
+Consulte [Funções de retorno de chamada de evento GpioClx](https://docs.microsoft.com/previous-versions//hh439464(v=vs.85)) para obter uma descrição dessas rotinas.
 
 Além dessas duas novas DDIs, as DDIs existentes devem ser auditadas em relação à compatibilidade de multiplexação de pino:
 
@@ -633,11 +633,11 @@ O diagrama a seguir mostra as dependências entre cada um desses componentes. Co
 
 Durante o tempo de inicialização do dispositivo, as estruturas `SpbCx` e `SerCx` analisam todos os recursos `MsftFunctionConfig()` fornecidos como recursos de hardware para o dispositivo. SpbCx/SerCx, em seguida, adquire e libera os recursos de multiplexação de pino sob demanda.
 
-`SpbCx` aplica-se a configuração do pin muxing no seu *IRP_MJ_CREATE* manipulador, logo antes de chamar o driver do cliente [EvtSpbTargetConnect()](https://msdn.microsoft.com/library/windows/hardware/hh450818.aspx) retorno de chamada. Se não tiver sido possível aplicar a configuração de multiplexação, o retorno de chamada `EvtSpbTargetConnect()` do driver do controlador não será chamado. Portanto, um driver de controlador SPB pode pressupor que os pinos são multiplexados para a função SPB no momento em que `EvtSpbTargetConnect()` é chamado.
+`SpbCx` aplica-se a configuração do pin muxing no seu *IRP_MJ_CREATE* manipulador, logo antes de chamar o driver do cliente [EvtSpbTargetConnect()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_connect) retorno de chamada. Se não tiver sido possível aplicar a configuração de multiplexação, o retorno de chamada `EvtSpbTargetConnect()` do driver do controlador não será chamado. Portanto, um driver de controlador SPB pode pressupor que os pinos são multiplexados para a função SPB no momento em que `EvtSpbTargetConnect()` é chamado.
 
-`SpbCx` Reverte a configuração do pin muxing no seu *IRP_MJ_CLOSE* manipulador, depois de chamar o driver de controlador [EvtSpbTargetDisconnect()](https://msdn.microsoft.com/library/windows/hardware/hh450820.aspx) retorno de chamada. O resultado é que os pinos são multiplexados para a função SPB sempre que um driver periférico abre um identificador para o driver do controlador SPB, e são multiplexados de volta quando o driver periférico fecha seu identificador.
+`SpbCx` Reverte a configuração do pin muxing no seu *IRP_MJ_CLOSE* manipulador, depois de chamar o driver de controlador [EvtSpbTargetDisconnect()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_disconnect) retorno de chamada. O resultado é que os pinos são multiplexados para a função SPB sempre que um driver periférico abre um identificador para o driver do controlador SPB, e são multiplexados de volta quando o driver periférico fecha seu identificador.
 
-`SerCx` se comporta da mesma forma. `SerCx` adquire todas `MsftFunctionConfig()` recursos em seu *IRP_MJ_CREATE* manipulador antes de chamar o driver de controlador [EvtSerCx2FileOpen()](https://msdn.microsoft.com/library/windows/hardware/dn265209.aspx) retorno de chamada e libera todos os recursos em seu IRP_MJ_CLOSE o manipulador, depois de chamar o driver de controlador [EvtSerCx2FileClose](https://msdn.microsoft.com/library/windows/hardware/dn265208.aspx) retorno de chamada.
+`SerCx` se comporta da mesma forma. `SerCx` adquire todas `MsftFunctionConfig()` recursos em seu *IRP_MJ_CREATE* manipulador antes de chamar o driver de controlador [EvtSerCx2FileOpen()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) retorno de chamada e libera todos os recursos em seu IRP_MJ_CLOSE o manipulador, depois de chamar o driver de controlador [EvtSerCx2FileClose](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) retorno de chamada.
 
 A implicação da multiplexação de pino dinâmica para drivers de controlador `SerCx` e `SpbCx` é que eles devem ser capazes de tolerar que os pinos sejam multiplexados de volta da função SPB/UART em determinados momentos. Os drivers de controlador presumem que os pinos não serão multiplexados até que `EvtSpbTargetConnect()` ou `EvtSerCx2FileOpen()` seja chamado. Os pinos não precisam ser multiplexados para a função SPB/UART durante os retornos de chamada a seguir. A lista a seguir não está completa, mas representa as rotinas PNP mais comuns implementadas por drivers de controlador.
 
@@ -835,7 +835,7 @@ Clique em Run Selected (Executar Selecionado). Você encontrará mais documenta�
 
 ## <a name="resources"></a>Recursos
 
-| Destination | Link |
+| Destino | Link |
 |-------------|------|
 | Especificação ACPI 5.0 | http://acpi.info/spec.htm |
 | Asl.exe (compilação ASL da Microsoft) | https://msdn.microsoft.com/library/windows/hardware/dn551195.aspx |

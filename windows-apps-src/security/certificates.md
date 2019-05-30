@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ee96628fd90ec9eea998abf312c5da11bff3826
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 28419df1a37ff640db7246b54e50da5bfce9fedb
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624351"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372625"
 ---
 # <a name="intro-to-certificates"></a>Introdução a certificados
 
@@ -53,18 +53,18 @@ O padrão de certificado de chave pública X.509 foi revisado ao longo do tempo.
 
 ![Versões 1, 2 e 3 do certificado x.509](images/x509certificateversions.png)
 
-Alguns destes campos e extensões podem ser especificados diretamente quando você usa a classe [**CertificateRequestProperties**](https://msdn.microsoft.com/library/windows/apps/br212079) para criar uma solicitação de certificado. A maioria não pode. Esses campos podem ser preenchidos pela autoridade de emissão ou podem ser deixados em branco. Para saber mais sobre os campos, consulte as seguintes seções:
+Alguns destes campos e extensões podem ser especificados diretamente quando você usa a classe [**CertificateRequestProperties**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates.CertificateRequestProperties) para criar uma solicitação de certificado. A maioria não pode. Esses campos podem ser preenchidos pela autoridade de emissão ou podem ser deixados em branco. Para saber mais sobre os campos, consulte as seguintes seções:
 
 ### <a name="version-1-fields"></a>Campos da versão 1
 
 | Campo | Descrição |
 |-------|-------------|
-| Versão | Especifica o número de versão do certificado codificado. Atualmente, os possíveis valores desse campo são 0, 1 ou 2. |
+| Version | Especifica o número de versão do certificado codificado. Atualmente, os possíveis valores desse campo são 0, 1 ou 2. |
 | Número de Série | Contém um inteiro positivo único atribuído pela AC (autoridade de certificação) para o certificado. |
 | Algoritmo de assinatura | Contém um OID (identificador de objeto) que especifica o algoritmo usado pela AC para assinar o certificado. Por exemplo, 1.2.840.113549.1.1.5 especifica um algoritmo de hash SHA-1 combinado com o algoritmo de criptografia RSA da RSA Laboratories. |
 | Emissor | Contém o DN (nome diferenciado) X.500 da CA que criou e assinou o certificado. |
 | Validade | Especifica o intervalo de tempo durante o qual o certificado é válido. As datas até o final de 2049 usam o formato de Tempo Universal Coordenado (Hora de Greenwich) (yymmddhhmmssz). As datas a partir de 1º de janeiro de 2050 usam o formato de tempo genérico (yyyymmddhhmmssz). |
-| Assunto | Contém um nome diferenciado X.500 da entidade associada à chave pública contida no certificado. |
+| Subject | Contém um nome diferenciado X.500 da entidade associada à chave pública contida no certificado. |
 | Chave pública | Contém a chave pública e as informações de algoritmo associadas. |
 
 ### <a name="version-2-fields"></a>Campos da versão 2

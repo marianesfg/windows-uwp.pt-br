@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d1907be029254d99be9e6158c93c179baea1fb0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c635d0efad627734e0305c687e015ad183764717
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641081"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371049"
 ---
 # <a name="introduction-to-rasterization-rules"></a>Introdução às regras de rasterização
 
@@ -57,7 +57,7 @@ Para os dois retângulos, os mesmos pixels são afetados, conforme mostrado na i
 
 Os pontos são renderizados igual aos sprites de ponto, que são renderizado como quadrilaterais alinhado à tela e, portanto, seguem as mesmas regras de renderização do polígono.
 
-As regras de renderização de linha não as mesmas para [linhas de GDI](https://msdn.microsoft.com/library/windows/desktop/dd145027).
+As regras de renderização de linha não as mesmas para [linhas de GDI](https://docs.microsoft.com/windows/desktop/gdi/lines).
 
 ## <a name="span-idpointspriterulesspanspan-idpointspriterulesspanspan-idpointspriterulesspanpoint-sprite-rules"></a><span id="Point_Sprite_Rules"></span><span id="point_sprite_rules"></span><span id="POINT_SPRITE_RULES"></span>Regras de ponto de Sprite
 

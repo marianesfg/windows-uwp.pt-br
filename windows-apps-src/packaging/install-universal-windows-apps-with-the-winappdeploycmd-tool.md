@@ -6,12 +6,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 479c4410384613b22ba86bc976a360125bb73c3a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 06107691a4551ae2af05e63c1db810485273dc9b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632801"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372813"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Instalar apps usando a ferramenta WinAppDeployCmd.exe
 
@@ -20,7 +20,7 @@ Implantação de aplicativos do Windows (WinAppDeployCmd.exe) é uma ferramenta 
 
 Você precisa apenas o Windows 10 SDK instalado para executar a ferramenta de WinAppDeployCmd em um prompt de comando ou um arquivo de script. Quando você instala um aplicativo com WinAppDeployCmd.exe, usa o arquivo.appx/.msix ou AppxManifest (para arquivos flexíveis) para o sideload de seu aplicativo em um dispositivo Windows 10. Esse comando não instala o certificado necessário para o aplicativo. Para executar o aplicativo, o dispositivo Windows 10 deve estar no modo de desenvolvedor ou já tiver o certificado instalado.
 
-Para implementar em dispositivos móveis, você deve primeiro criar um pacote. Para obter mais informações, veja [aqui](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
+Para implementar em dispositivos móveis, você deve primeiro criar um pacote. Para obter mais informações, veja [aqui](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
 O **WinAppDeployCmd.exe** ferramenta está localizada aqui em seu computador Windows 10: **C:\\arquivos de programas (x86)\\Windows Kits\\10\\bin\\&lt;SDK versão&gt;\\x86\\WinAppDeployCmd.exe** ( com base em seu caminho de instalação do SDK). 
 > [!NOTE]
@@ -55,7 +55,7 @@ WinAppDeployCmd getcreds -credserver <server> -ip <address>
 WinAppDeployCmd deletecreds -credserver <server> -ip <address>
 ```
 
-É possível instalar ou desinstalar um aplicativo no dispositivo de destino, ou atualizar um aplicativo já instalado. Para manter dados ou configurações salvos por um aplicativo já instalado, use as opções **update** em vez de **install**.
+É possível instalar ou desinstalar um app no dispositivo de destino, ou você atualizar um app já instalado. Para manter dados ou configurações salvos por um aplicativo já instalado, use as opções **update** em vez de **install**.
 
 A tabela a seguir descreve os comandos de **WinAppDeployCmd.exe**.
 
@@ -63,9 +63,9 @@ A tabela a seguir descreve os comandos de **WinAppDeployCmd.exe**.
 | **Comando**  | **Descrição**                                                     |
 |--------------|---------------------------------------------------------------------|
 | dispositivos      | Mostre a lista de dispositivos de rede disponíveis.                         |
-| instalar      | Instale um pacote do aplicativo UWP para o dispositivo de destino.                     |
-| atualizar       | Atualize um aplicativo UWP que já esteja instalado no dispositivo de destino.    |
-| lista         | Mostre a lista de aplicativos UWP instalados no dispositivo de destino especificado. |
+| install      | Instale um pacote do aplicativo UWP para o dispositivo de destino.                     |
+| update       | Atualize um aplicativo UWP que já esteja instalado no dispositivo de destino.    |
+| list         | Mostre a lista de aplicativos UWP instalados no dispositivo de destino especificado. |
 | uninstall    | Desinstale o pacote do aplicativo especificado do dispositivo de destino.         |
 | deployfiles  | Copia arquivos soltos de aplicativo no caminho de destino para o caminho relativo remoto no dispositivo.|
 | registerfiles| Registra o aplicativo de arquivos soltos no diretório de implementação remota.         |
@@ -96,7 +96,7 @@ A tabela a seguir descreve as opções de **WinAppDeployCmd.exe**.
 
 A tabela a seguir descreve as opções de **WinAppDeployCmd.exe**.
 
-| **argumento**           | **Descrição**                                                              |
+| **Argumento**           | **Descrição**                                                              |
 |------------------------|------------------------------------------------------------------------------|
 | &lt;x&gt;              | Tempo limite em segundos. (O padrão é 10)                                          |
 | &lt;address&gt;        | Endereço IP ou identificador exclusivo do dispositivo de destino.                        |

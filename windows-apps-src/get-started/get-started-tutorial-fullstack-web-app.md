@@ -5,12 +5,12 @@ keywords: aplicativo web hospedado, HWA, API REST, aplicativo de página única,
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c76f0da8c3ac1d50ccd2d328dd321df9aa9bd3e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c38a7182cd27abcfb0de66c721f0e06b95b695d5
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624621"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366980"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Criar um app Web de página única com back-end da API REST
 
@@ -115,7 +115,7 @@ Usaremos o [Swagger](https://swagger.io/) para transformar o design da API de jo
 
 1. Crie uma nova pasta (no diretório local do *GitHub*, por exemplo) e baixe o arquivo [**api.json**](https://raw.githubusercontent.com/Microsoft/Windows-tutorials-web/master/Single-Page-App-with-REST-API/backend/api.json?token=ACEfklXAHTeLkHYaI5plV20QCGuqC31cks5ZFhVIwA%3D%3D) arquivo que contém as definições de API de jogo de memória. Assegure que o nome da pasta não contém espaços.
 
-2. Abra seu shell favorito ([ou use o terminal integrado do Visual Studio Code!](https://code.visualstudio.com/docs/editor/integrated-terminal)) para essa pasta e execute o seguinte comando do NPM (Gerenciador de Pacotes do Nó) para instalar a ferramenta de scaffolding de código [Yeoman](https://yeoman.io/) (yo) e o gerador Swagger para seu ambiente Node global (**-g**):
+2. Abra seu shell favorito ([ou use o terminal integrado do Visual Studio Code!](https://code.visualstudio.com/docs/editor/integrated-terminal)) para essa pasta e execute o seguinte comando do NPM (Gerenciador de Pacotes do Nó) para instalar a ferramenta de scaffolding de código [Yeoman](https://yeoman.io/) (yo) e o gerador Swagger para seu ambiente Node global ( **-g**):
 
     ```
     npm install -g yo
@@ -278,7 +278,7 @@ Os documentos do Azure conduzirão você pelo(a):
  - [Configuração da implantação do Git no aplicativo de API](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git) e
  - [Implantar o código do aplicativo de API no Azure](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git)
 
-Ao registrar o aplicativo, tente diferenciar seu *Nome de aplicativo* (para evitar conflitos de nomenclatura com outras pessoas que estão solicitando variações na URL *http://memorygameapi.azurewebsites.net*).
+Ao registrar o aplicativo, tente diferenciar seu *Nome de aplicativo* (para evitar conflitos de nomenclatura com outras pessoas que estão solicitando variações na URL *http://memorygameapi.azurewebsites.net* ).
 
 Se você fez isso e o Azure já está atendendo à interface do usuário do Swagger, há apenas uma etapa para o back-end do jogo de memória. No [Portal do Azure](https://portal.azure.com), selecione o *Serviço de Aplicativo* recém-criado e selecione ou procure a opção **CORS** (Compartilhamento de Recursos Entre Origens). Em **Origens Permitidas**, adicione um asterisco (`*`) e clique em **Salvar**. Isso lhe permite fazer chamadas entre origens para o serviço de API no front-end do jogo memória à medida que você o desenvolve no computador local. Depois que você finalizar o front-end do jogo de memória e implantá-lo no Azure, poderá substituir essa entrada com a URL específica do aplicativo Web.
 
@@ -626,7 +626,7 @@ Parabéns! Você concluiu a criação do aplicativo Web! Vamos testá-lo.
 
     Você também pode comparar seu código com o código fornecido na pasta Final.
 
-4. Para interromper o jogo, no prompt de comando digite: **CTRL + C**, **Y**. 
+4. Para interromper o jogo, no prompt de comando digite: **Ctrl + C**, **Y**. 
 
 ### <a name="going-further"></a>Aprofundamento
 
@@ -636,7 +636,7 @@ Estas são as etapas básicas para publicação na Microsoft Store:
 
  1. Criar uma conta de [Desenvolvedor do Windows](https://developer.microsoft.com/en-us/store/register).
  2. Usar a [lista de verificação](https://docs.microsoft.com/en-us/windows/uwp/publish/app-submissions) do envio de aplicativo.
- 3. Envie o aplicativo para [certificação](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process)
+ 3. Envie o aplicativo para [certificação](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process)
 
 Aqui estão alguns recursos úteis para aprofundamento:
 

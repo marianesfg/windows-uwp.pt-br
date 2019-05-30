@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de complemento, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: d3bf92e308d42b9dd93539ebbe44525067f23b6f
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: e6e75483ca6c01958a4b8bda2c5c3bb60e764eff
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335124"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372478"
 ---
 # <a name="manage-add-on-submissions"></a>Gerenciar envios de complemento
 
@@ -94,7 +94,7 @@ Para criar um envio de um complemento, siga este processo.
     > [!NOTE]
     > Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações sobre URIs de SAS e seu uso com o armazenamento de BLOBs do Azure, consulte [assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) e [assinaturas de acesso compartilhado, parte 2: Criar e usar uma SAS com o armazenamento de BLOBs](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
-4. Se você estiver adicionando novos ícones para o envio, [prepare os ícones](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon) e adicione-os a um arquivo ZIP.
+4. Se você estiver adicionando novos ícones para o envio, [prepare os ícones](https://docs.microsoft.com/windows/uwp/publish/create-iap-descriptions) e adicione-os a um arquivo ZIP.
 
 5. Atualize os dados de [envio de complemento](#add-on-submission-object) com as alterações necessárias para o novo envio e execute o método a seguir para atualizar o envio. Para saber mais, veja [Atualizar um envio de complemento](update-an-add-on-submission.md).
 
@@ -110,7 +110,7 @@ Para criar um envio de um complemento, siga este processo.
     * [Armazenamento do Azure SDK para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
     * [Armazenamento do Azure SDK para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
-    O exemplo de código em C# a seguir demonstra como carregar um arquivo ZIP no armazenamento do Blob do Azure usando a classe [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) na Biblioteca de Cliente do Armazenamento do Azure para .NET. Este exemplo pressupõe que o arquivo ZIP já tenha sido escrito para um objeto de fluxo.
+    O exemplo de código em C# a seguir demonstra como carregar um arquivo ZIP no armazenamento do Blob do Azure usando a classe [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob?redirectedfrom=MSDN) na Biblioteca de Cliente do Armazenamento do Azure para .NET. Este exemplo pressupõe que o arquivo ZIP já tenha sido escrito para um objeto de fluxo.
 
     ```csharp
     string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -253,7 +253,7 @@ Esse recurso contém [informações de listagem de um complemento](../publish/cr
 
 | Valor           | Tipo    | Descrição       |
 |-----------------|---------|------|
-|  descrição               |    cadeia de caracteres     |   A descrição da listagem do complemento.   |     
+|  description               |    cadeia de caracteres     |   A descrição da listagem do complemento.   |     
 |  ícone               |   objeto      |Um [recurso de ícone](#icon-object) que contém dados do ícone para a listagem de complemento.    |
 |  title               |     cadeia de caracteres    |   O título da listagem do complemento.   |  
 
@@ -276,10 +276,10 @@ Esse recurso contém informações de preço do complemento. Esse recurso tem os
 
 | Valor           | Tipo    | Descrição    |
 |-----------------|---------|------|
-|  marketSpecificPricings               |    objeto     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.     |     
+|  marketSpecificPricings               |    objeto     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.     |     
 |  sales               |   matriz      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do complemento.     |     
-|  priceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) do complemento.    |    
-|  isAdvancedPricingModel               |   booliano      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
+|  priceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability) do complemento.    |    
+|  isAdvancedPricingModel               |   boolean      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
 
 
 <span id="sale-object" />
@@ -297,11 +297,11 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição           |
 |-----------------|---------|------|
-|  nome               |    cadeia de caracteres     |   O nome da promoção.    |     
+|  name               |    cadeia de caracteres     |   O nome da promoção.    |     
 |  basePriceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
 |  startDate               |   cadeia de caracteres      |   A data de início da promoção no formato ISO 8601.  |     
 |  endDate               |   cadeia de caracteres      |  A data de término da promoção no formato ISO 8601.      |     
-|  marketSpecificPricings               |   objeto      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-pricess). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *basePriceId* para o mercado especificado.    |
+|  marketSpecificPricings               |   objeto      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *basePriceId* para o mercado especificado.    |
 
 <span id="status-details-object" />
 
@@ -352,7 +352,7 @@ Os seguintes valores representam as faixas de preço disponíveis no recurso [pr
 |  Base               |   A faixa de preço não está definida. Use o preço base para o complemento.      |     
 |  NotAvailable              |   O complemento não está disponível na região especificada.    |     
 |  Grátis              |   O complemento é gratuito.    |    
-|  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do complemento, no formato **Faixa<em>xxxx</em>**. No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para ver a tabela completa das camadas de preço que estão disponíveis para sua conta de desenvolvedor, incluindo os preços específicos do mercado que estão associados a cada camada, vá para o **preços e disponibilidade** página para qualquer um dos seus envios de aplicativo no Centro de parceiro e clique no **tabela de exibição** link na **mercados e preços personalizados** seção (para algumas contas de desenvolvedor, esse link está no **preços** seção).     |
+|  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do complemento, no formato **Faixa<em>xxxx</em>** . No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para ver a tabela completa das camadas de preço que estão disponíveis para sua conta de desenvolvedor, incluindo os preços específicos do mercado que estão associados a cada camada, vá para o **preços e disponibilidade** página para qualquer um dos seus envios de aplicativo no Centro de parceiro e clique no **tabela de exibição** link na **mercados e preços personalizados** seção (para algumas contas de desenvolvedor, esse link está no **preços** seção).     |
 
 <span id="submission-status-code" />
 
@@ -383,4 +383,4 @@ Os seguintes valores representam o código de status de um envio.
 
 * [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Gerenciar complementos usando a API de envio da Microsoft Store](manage-add-ons.md)
-* [Envios de complemento no Partner Center](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)
+* [Envios de complemento no Partner Center](https://docs.microsoft.com/windows/uwp/publish/iap-submissions)

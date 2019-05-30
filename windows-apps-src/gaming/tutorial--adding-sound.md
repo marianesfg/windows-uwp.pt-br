@@ -6,16 +6,16 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, sons
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d5a976ef65bee5efc3329afc98bf198d094b037
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 945270247b8a288554e1910ac1c6f8e5c1ec1619
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57589931"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367840"
 ---
 # <a name="add-sound"></a>Adicionar som
 
-Neste tópico, criamos um mecanismo simples de som usando [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) APIs. Se você for novo no __XAudio2__, incluímos uma breve introdução sob [conceitos de áudio](#audio-concepts).
+Neste tópico, criamos um mecanismo simples de som usando [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-introduction) APIs. Se você for novo no __XAudio2__, incluímos uma breve introdução sob [conceitos de áudio](#audio-concepts).
 
 >[!Note]
 >Se você ainda não tiver baixado o código de jogo mais recente para este exemplo, acesse [Jogo de exemplo em Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este exemplo faz parte de uma grande coleção de exemplos de recursos UWP. Para obter instruções sobre como baixar o exemplo, consulte [Obtenha os exemplos da Plataforma Universal do Windows (UWP) do GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
@@ -129,10 +129,10 @@ void Simple3DGame::Initialize(
 
 ## <a name="create-and-initialize-the-audio-resources"></a>Criar e inicializar os recursos de áudio
 
-* Use [XAudio2Create](https://msdn.microsoft.com/library/windows/desktop/ee419212), uma API XAudio2, para criar dois novos objetos XAudio2 que definem os mecanismos de efeito de música e som. Esse método retorna um ponteiro para o objeto [IXAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415908) interface que gerencia o mecanismo de áudio de todos os estados, o áudio de processamento de thread, o gráfico de voz e muito mais.
-* Depois que os mecanismos de tem sido instanciados, use [IXAudio2::CreateMasteringVoice](https://msdn.microsoft.com/library/windows/desktop/hh405048) para criar uma voz dominar para cada um dos objetos do mecanismo de som.
+* Use [XAudio2Create](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-xaudio2create), uma API XAudio2, para criar dois novos objetos XAudio2 que definem os mecanismos de efeito de música e som. Esse método retorna um ponteiro para o objeto [IXAudio2](https://docs.microsoft.com/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2) interface que gerencia o mecanismo de áudio de todos os estados, o áudio de processamento de thread, o gráfico de voz e muito mais.
+* Depois que os mecanismos de tem sido instanciados, use [IXAudio2::CreateMasteringVoice](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2-createmasteringvoice) para criar uma voz dominar para cada um dos objetos do mecanismo de som.
 
-Para obter mais informações, vá para [como: Inicializar o XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415779.aspx).
+Para obter mais informações, vá para [como: Inicializar o XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/how-to--initialize-xaudio2).
 
 ### <a name="audiocreatedeviceindependentresources-method"></a>Método Audio::CreateDeviceIndependentResources
 
@@ -172,29 +172,29 @@ No exemplo de jogo, o código para ler arquivos de formato de áudio é definido
 
 ### <a name="mediareaderloadmedia-method"></a>Método MediaReader::LoadMedia
 
-Esse método usa as APIs [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) para ler o arquivo de áudio .wav como um buffer de modulação por código de pulso (PCM).
+Esse método usa as APIs [Media Foundation](https://docs.microsoft.com/windows/desktop/medfound/microsoft-media-foundation-sdk) para ler o arquivo de áudio .wav como um buffer de modulação por código de pulso (PCM).
 
 #### <a name="set-up-the-source-reader"></a>Configurar o leitor de código-fonte
 
-1. Use [MFCreateSourceReaderFromURL](https://msdn.microsoft.com/library/windows/desktop/dd388110) para criar uma mídia de leitor de código-fonte ([IMFSourceReader](https://msdn.microsoft.com/library/windows/desktop/dd374655)).
-2. Use [MFCreateMediaType](https://msdn.microsoft.com/library/windows/desktop/ms693861) para criar um tipo de mídia ([IMFMediaType](https://msdn.microsoft.com/library/windows/desktop/ms704850)) objeto (_mediaType_). Ele representa uma descrição de um formato de mídia. 
+1. Use [MFCreateSourceReaderFromURL](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesourcereaderfromurl) para criar uma mídia de leitor de código-fonte ([IMFSourceReader](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nn-mfreadwrite-imfsourcereader)).
+2. Use [MFCreateMediaType](https://docs.microsoft.com/windows/desktop/api/mfapi/nf-mfapi-mfcreatemediatype) para criar um tipo de mídia ([IMFMediaType](https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)) objeto (_mediaType_). Ele representa uma descrição de um formato de mídia. 
 3. Especificar que o _mediaType_da saída de decodificado é áudio PCM, que é áudio de um tipo que __XAudio2__ pode usar.
-4. Conjuntos de mídia de saída decodificado de tipo para o leitor de código-fonte chamando [IMFSourceReader::SetCurrentMediaType](https://msdn.microsoft.com/library/windows/desktop/dd374667.aspx).
+4. Conjuntos de mídia de saída decodificado de tipo para o leitor de código-fonte chamando [IMFSourceReader::SetCurrentMediaType](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-setcurrentmediatype).
 
-Para obter mais informações sobre por que podemos usar o leitor de código-fonte, acesse [leitor de código-fonte](https://msdn.microsoft.com/library/windows/desktop/dd940436.aspx).
+Para obter mais informações sobre por que podemos usar o leitor de código-fonte, acesse [leitor de código-fonte](https://docs.microsoft.com/windows/desktop/medfound/source-reader).
 
 #### <a name="describe-the-data-format-of-the-audio-stream"></a>Descrever o formato de dados de fluxo de áudio
 
-1. Use [IMFSourceReader::GetCurrentMediaType](https://msdn.microsoft.com/library/windows/desktop/dd374660) para obter o tipo de mídia atual no fluxo.
-2. Use [IMFMediaType::MFCreateWaveFormatExFromMFMediaType](https://msdn.microsoft.com/library/windows/desktop/ms702177) para converter a mídia de áudio atual de tipo para um [WAVEFORMATEX](https://msdn.microsoft.com/library/windows/hardware/ff538799) do buffer, usando os resultados da operação anterior como entrada. Essa estrutura Especifica o formato de dados de fluxo de áudio wave é usado depois que o áudio é carregado. 
+1. Use [IMFSourceReader::GetCurrentMediaType](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-getcurrentmediatype) para obter o tipo de mídia atual no fluxo.
+2. Use [IMFMediaType::MFCreateWaveFormatExFromMFMediaType](https://docs.microsoft.com/windows/desktop/api/mfapi/nf-mfapi-mfcreatewaveformatexfrommfmediatype) para converter a mídia de áudio atual de tipo para um [WAVEFORMATEX](https://docs.microsoft.com/windows/desktop/api/mmreg/ns-mmreg-twaveformatex) do buffer, usando os resultados da operação anterior como entrada. Essa estrutura Especifica o formato de dados de fluxo de áudio wave é usado depois que o áudio é carregado. 
 
-O __WAVEFORMATEX__ formato pode ser usado para descrever o buffer PCM. Em comparação com o [WAVEFORMATEXTENSIBLE](https://msdn.microsoft.com/library/windows/hardware/ff538802) estrutura, ele só pode ser usado para descrever um subconjunto de formatos de áudio wave. Para obter mais informações sobre as diferenças entre __WAVEFORMATEX__ e __WAVEFORMATEXTENSIBLE__, consulte [extensível descritores de formato Wave](https://docs.microsoft.com/windows-hardware/drivers/audio/extensible-wave-format-descriptors).
+O __WAVEFORMATEX__ formato pode ser usado para descrever o buffer PCM. Em comparação com o [WAVEFORMATEXTENSIBLE](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ksmedia/ns-ksmedia-waveformatextensible) estrutura, ele só pode ser usado para descrever um subconjunto de formatos de áudio wave. Para obter mais informações sobre as diferenças entre __WAVEFORMATEX__ e __WAVEFORMATEXTENSIBLE__, consulte [extensível descritores de formato Wave](https://docs.microsoft.com/windows-hardware/drivers/audio/extensible-wave-format-descriptors).
 
 #### <a name="read-the-audio-stream"></a>Ler o fluxo de áudio
 
-1.  Obter a duração, em segundos, do fluxo de áudio, chamando [IMFSourceReader::GetPresentationAttribute](https://msdn.microsoft.com/library/windows/desktop/dd374662) e, em seguida, converte a duração em bytes.
-2.  Ler o arquivo de áudio no como um fluxo chamando [IMFSourceReader::ReadSample](https://msdn.microsoft.com/library/windows/desktop/dd374665). __ReadSample__ lê o próximo exemplo da fonte de mídia.
-3.  Use [IMFSample::ConvertToContiguousBuffer](https://msdn.microsoft.com/library/windows/desktop/ms698917.aspx) para copiar o conteúdo do buffer de amostra de áudio (_amostra_) em uma matriz (_mediaBuffer_).
+1.  Obter a duração, em segundos, do fluxo de áudio, chamando [IMFSourceReader::GetPresentationAttribute](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-getpresentationattribute) e, em seguida, converte a duração em bytes.
+2.  Ler o arquivo de áudio no como um fluxo chamando [IMFSourceReader::ReadSample](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample). __ReadSample__ lê o próximo exemplo da fonte de mídia.
+3.  Use [IMFSample::ConvertToContiguousBuffer](https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-converttocontiguousbuffer) para copiar o conteúdo do buffer de amostra de áudio (_amostra_) em uma matriz (_mediaBuffer_).
 
 ```cpp
 Platform::Array<byte>^ MediaReader::LoadMedia(_In_ Platform::String^ filename)
@@ -342,8 +342,8 @@ Em princípio, quando uma colisão ocorre, ele dispara o efeito de som a reprodu
 ### <a name="soundeffectplaysound-method"></a>Método SoundEffect::PlaySound
 
 * Usa o objeto de fonte de voz **m\_sourceVoice** para iniciar a reprodução do buffer de dados som **m\_soundData**
-* Cria uma [XAUDIO2\_BUFFER](https://msdn.microsoft.com/library/windows/desktop/ee419228), para que ele fornece uma referência ao buffer de dados de som e, em seguida, envia-o com uma chamada para [IXAudio2SourceVoice::SubmitSourceBuffer](https://msdn.microsoft.com/library/windows/desktop/ee418473). 
-* Com os dados do som em fila **SoundEffect::PlaySound** reproduzir começa chamando [IXAudio2SourceVoice::Start](https://msdn.microsoft.com/library/windows/desktop/ee418471).
+* Cria uma [XAUDIO2\_BUFFER](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer), para que ele fornece uma referência ao buffer de dados de som e, em seguida, envia-o com uma chamada para [IXAudio2SourceVoice::SubmitSourceBuffer](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-submitsourcebuffer). 
+* Com os dados do som em fila **SoundEffect::PlaySound** reproduzir começa chamando [IXAudio2SourceVoice::Start](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-start).
 
 ```cpp
 void SoundEffect::PlaySound(_In_ float volume)
@@ -457,9 +457,9 @@ Abordamos a UWP framework, elementos gráficos, controles, interface do usuário
 
 ## <a name="audio-concepts"></a>Conceitos de áudio
 
-Para o desenvolvimento de jogos do Windows 10, use o XAudio2 versão 2.9. Esta versão é fornecida com o Windows 10. Para obter mais informações, acesse [XAudio2 versões](https://msdn.microsoft.com/library/windows/desktop/ee415802.aspx).
+Para o desenvolvimento de jogos do Windows 10, use o XAudio2 versão 2.9. Esta versão é fornecida com o Windows 10. Para obter mais informações, acesse [XAudio2 versões](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-versions).
 
-__AudioX2__ é uma API de nível baixo que fornece processamento de sinais e misturar foundation. Para obter mais informações, consulte [conceitos principais do XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415764.aspx).
+__AudioX2__ é uma API de nível baixo que fornece processamento de sinais e misturar foundation. Para obter mais informações, consulte [conceitos principais do XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-key-concepts).
 
 ### <a name="xaudio2-voices"></a>Vozes XAudio2
 
@@ -473,13 +473,13 @@ Para obter mais informações, acesse [XAudio2 vozes](/windows/desktop/xaudio2/x
 
 ### <a name="audio-graph"></a>Gráfico de áudio
 
-Gráfico de áudio é uma coleção de [XAudio2 vozes](/windows/desktop/xaudio2/xaudio2-voices). Áudio começa em um dos lados de um gráfico de áudio em vozes de código-fonte, opcionalmente passa por um ou mais vozes de submix e termina em uma voz de dominar. Gráfico de áudio conterá uma voz de origem para cada reprodução do som no momento, vozes submix zero ou mais e uma voz de dominar. O gráfico de áudio mais simples e o mínimo necessário para fazer um barulho no XAudio2, é uma voz de fonte única saída diretamente para uma voz de dominar. Para obter mais informações, acesse [grafos de áudio](https://msdn.microsoft.com/library/windows/desktop/ee415739.aspx).
+Gráfico de áudio é uma coleção de [XAudio2 vozes](/windows/desktop/xaudio2/xaudio2-voices). Áudio começa em um dos lados de um gráfico de áudio em vozes de código-fonte, opcionalmente passa por um ou mais vozes de submix e termina em uma voz de dominar. Gráfico de áudio conterá uma voz de origem para cada reprodução do som no momento, vozes submix zero ou mais e uma voz de dominar. O gráfico de áudio mais simples e o mínimo necessário para fazer um barulho no XAudio2, é uma voz de fonte única saída diretamente para uma voz de dominar. Para obter mais informações, acesse [grafos de áudio](https://docs.microsoft.com/windows/desktop/xaudio2/audio-graphs).
 
 ### <a name="additional-reading"></a>Leitura adicional
 
-* [Como: Inicializar o XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415779.aspx)
+* [Como: Inicializar o XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/how-to--initialize-xaudio2)
 * [Como: Carregar arquivos de dados de áudio no XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415781(v=vs.85).aspx)
-* [Como: Reproduzir um som com XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415787.aspx)
+* [Como: Reproduzir um som com XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/how-to--play-a-sound-with-xaudio2)
 
 ## <a name="key-audio-h-files"></a>Arquivos de chave. h de áudio
 

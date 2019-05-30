@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, threads, pool de threads
 ms.localizationpriority: medium
-ms.openlocfilehash: 423f0efa9118f581d6e768a815dd2550801aa87e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ff47115c228e3cf6530e12aa4686c88660f16fcd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658011"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371556"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar um item de trabalho ao pool de threads
 
@@ -19,19 +19,19 @@ ms.locfileid: "57658011"
 
 <b>APIs importantes</b>
 
--   [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)
--   [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)
+-   [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync)
+-   [**IAsyncAction**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)
 
 Aprenda a trabalhar em um thread separado enviando um item de trabalho ao pool de threads. Use esta opção para manter uma interface de usuário responsiva enquanto realiza um trabalho que leva uma quantidade considerável de tempo e use-a para concluir várias tarefas em paralelo.
 
 ## <a name="create-and-submit-the-work-item"></a>Criar e enviar um item de trabalho
 
-Crie um item de trabalho chamando [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593). Forneça um representante para fazer o trabalho (você pode usar um lambda ou uma função de representante). Observe que **RunAsync** retorna um objeto [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580); armazene esse objeto para uso na próxima etapa.
+Crie um item de trabalho chamando [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync). Forneça um representante para fazer o trabalho (você pode usar um lambda ou uma função de representante). Observe que **RunAsync** retorna um objeto [**IAsyncAction**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction); armazene esse objeto para uso na próxima etapa.
 
-Três versões de [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) estão disponíveis para que, opcionalmente, você possa especificar a prioridade do item de trabalho e controlar se ele é executado simultaneamente com outros itens de trabalho.
+Três versões de [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync) estão disponíveis para que, opcionalmente, você possa especificar a prioridade do item de trabalho e controlar se ele é executado simultaneamente com outros itens de trabalho.
 
 >[!NOTE]
->Use [ **CoreDispatcher.RunAsync** ](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
+>Use [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
 
 O exemplo a seguir cria um item de trabalho e fornece um lambda para fazer o trabalho:
 
@@ -269,13 +269,13 @@ auto asyncAction = ThreadPool::RunAsync(workItem);
 m_workItem = asyncAction;
 ```
 
-Após a chamada ao [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593), o item de trabalho é enfileirado pelo pool de threads e é executado quando um thread está disponível. Os itens de trabalho do pool de threads são executados de forma assíncrona e podem ser executados em qualquer ordem, então verifique se seus itens de trabalho funcionam de forma independente.
+Após a chamada ao [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync), o item de trabalho é enfileirado pelo pool de threads e é executado quando um thread está disponível. Os itens de trabalho do pool de threads são executados de forma assíncrona e podem ser executados em qualquer ordem, então verifique se seus itens de trabalho funcionam de forma independente.
 
-Observe que o item de trabalho verifica a propriedade [**IAsyncInfo.Status**](https://msdn.microsoft.com/library/windows/apps/BR206593) e sai se o item de trabalho for cancelado.
+Observe que o item de trabalho verifica a propriedade [**IAsyncInfo.Status**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncinfo.status) e sai se o item de trabalho for cancelado.
 
 ## <a name="handle-work-item-completion"></a>Manipular a conclusão de item de trabalho
 
-Forneça um manipulador de conclusão definindo a propriedade [**IAsyncAction.Completed**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.completed.aspx) do item de trabalho. Forneça um representante (você pode usar um lambda ou uma função de representante) para lidar com a conclusão do item de trabalho. Por exemplo, use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar o thread de interface do usuário e mostrar o resultado.
+Forneça um manipulador de conclusão definindo a propriedade [**IAsyncAction.Completed**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction.completed) do item de trabalho. Forneça um representante (você pode usar um lambda ou uma função de representante) para lidar com a conclusão do item de trabalho. Por exemplo, use [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para acessar o thread de interface do usuário e mostrar o resultado.
 
 O seguinte exemplo atualiza a interface do usuário com o resultado do item de trabalho enviado na etapa 1:
 

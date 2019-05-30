@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 12f86c0d4f8980cea375b9a0a8a6876510c795b0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c552109b243688c2618425adce797c4d208eac31
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601591"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364783"
 ---
 # <a name="inverted-lists"></a>Listas invertidas
 
@@ -24,7 +24,7 @@ ms.locfileid: "57601591"
 
 Você pode usar uma exibição de lista para apresentar uma conversa de uma experiência de chat com itens que são visualmente distintos para representar o remetente/destinatário.  Usar cores diferentes e o alinhamento horizontal para separar mensagens do remetente/destinatário ajuda o usuário a se orientar rapidamente em uma conversa.
 
-> **APIs importantes**:  [Classe ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [classe ItemsStackPanel](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx), [ItemsUpdatingScrollMode propriedade](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx)
+> **APIs importantes**:  [Classe ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [classe ItemsStackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel), [ItemsUpdatingScrollMode propriedade](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode)
  
 Normalmente, você precisa apresentar a lista de modo que ela pareça crescer de baixo para cima, em vez de cima para baixo.  Quando uma nova mensagem chega e é acrescentada ao final, as mensagens anteriores deslizam para cima para liberar espaço chamando a atenção do usuário para a chegada mais recente.  No entanto, se um usuário tiver rolado a tela para cima para ver as respostas anteriores, a chegada de uma nova mensagem não deverá causar uma mudança de visual que possa atrapalhar seu foco.
 
@@ -32,7 +32,7 @@ Normalmente, você precisa apresentar a lista de modo que ela pareça crescer de
 
 ## <a name="create-an-inverted-list"></a>Criar uma lista invertida
 
-Para criar uma lista invertida, use uma exibição de lista com um [ItemsStackPanel](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx) como o painel de itens. Em ItemsStackPanel, defina [ItemsUpdatingScrollMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx) como [KeepLastItemInView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsupdatingscrollmode.aspx).
+Para criar uma lista invertida, use uma exibição de lista com um [ItemsStackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel) como o painel de itens. Em ItemsStackPanel, defina [ItemsUpdatingScrollMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode) como [KeepLastItemInView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsupdatingscrollmode).
 
 > [!IMPORTANT]
 > O valor de enumeração **KeepLastItemInView** está disponível desde o Windows 10, versão 1607. Você não pode usar esse valor quando seu aplicativo é executado em versões anteriores do Windows 10.

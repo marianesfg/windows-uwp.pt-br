@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b6290fba9d4194df78c39902b8d96e952134682
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: eb0e870aa467641f82d24f03278a199ab56d0c8d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607411"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370969"
 ---
 # <a name="streaming-resources-texture-sampling-features"></a>Recursos de exemplo de textura de recursos de streaming
 
@@ -27,12 +27,12 @@ Os recursos de amostragem de textura descritos aqui exigem o nível [Camada 2](t
 ## <a name="span-idshaderstatusfeedbackaboutmappedareasspanspan-idshaderstatusfeedbackaboutmappedareasspanspan-idshaderstatusfeedbackaboutmappedareasspanshader-status-feedback-about-mapped-areas"></a><span id="Shader_status_feedback_about_mapped_areas"></span><span id="shader_status_feedback_about_mapped_areas"></span><span id="SHADER_STATUS_FEEDBACK_ABOUT_MAPPED_AREAS"></span>Comentários de status de sombreador sobre áreas mapeadas
 
 
-Qualquer instrução do sombreador que lê e/ou grava em um recurso de streaming faz com que informações de status sejam registradas. Esse status é exposto como um valor de retorno extra opcional em cada instrução de acesso do recurso que entra em um registro temporário de 32 bits. O conteúdo do valor de retorno é opaco. Ou seja, leitura direta pelo programa de sombreador não é permitida. Mas, você pode usar a função [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083) para extrair as informações de status.
+Qualquer instrução do sombreador que lê e/ou grava em um recurso de streaming faz com que informações de status sejam registradas. Esse status é exposto como um valor de retorno extra opcional em cada instrução de acesso do recurso que entra em um registro temporário de 32 bits. O conteúdo do valor de retorno é opaco. Ou seja, leitura direta pelo programa de sombreador não é permitida. Mas, você pode usar a função [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) para extrair as informações de status.
 
 ## <a name="span-idfullymappedcheckspanspan-idfullymappedcheckspanspan-idfullymappedcheckspanfully-mapped-check"></a><span id="Fully_mapped_check"></span><span id="fully_mapped_check"></span><span id="FULLY_MAPPED_CHECK"></span>Seleção totalmente mapeada
 
 
-A função [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083) interpreta o status retornado de um acesso de memória e indica se todos os dados que estão sendo acessados foram mapeados no recurso. **CheckAccessFullyMapped** retorna true (0xFFFFFFFF) se os dados foram mapeados ou false (0x00000000) se os dados não foram não mapeados.
+A função [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) interpreta o status retornado de um acesso de memória e indica se todos os dados que estão sendo acessados foram mapeados no recurso. **CheckAccessFullyMapped** retorna true (0xFFFFFFFF) se os dados foram mapeados ou false (0x00000000) se os dados não foram não mapeados.
 
 Durante as operações de filtragem, às vezes, o peso de um determinado texel acaba sendo 0,0. Um exemplo é um exemplo de linear com as coordenadas de textura que se enquadram diretamente em um centro de texel: contribuir com 3 outros texels (quais são podem variar por hardware), o filtro, mas com peso de 0. Esses texels de peso 0 não contribuem em nada com o resultado do filtro, sendo assim, se eles se encontrarem em blocos **NULL**, eles não serão contados como um acesso não mapeado. Observe que a mesma garantia se aplica aos filtros de textura que incluem diversos níveis de mip; se os texels em um dos mipmaps não for mapeado mas o peso desses texels for 0, esses texels não serão contados como acesso não mapeado.
 
@@ -40,7 +40,7 @@ Durante a amostragem de um formato que tem menos de 4 componentes (como DXGI\_fo
 
 O sombreador pode verificar o status e buscar qualquer curso de ação desejado em caso de falha. Por exemplo, um curso de ação pode ser o registro de "erros" (por exemplo, via gravação UAV) e/ou a emissão de outra leitura fixada a um LOD áspero conhecido por estar mapeado. Um aplicativo pode querer controlar acessos bem-sucedidos também para obter uma noção de qual parte do conjunto de blocos mapeado foi acessado.
 
-Uma complicação para registrar em log é que não existe nenhum mecanismo para relatar o conjunto exato de blocos que teria sido acessado. O aplicativo pode fazer suposições conservadoras com base no conhecimento das coordenadas usadas para o acesso, bem como usando a instrução LOD; por exemplo, [**tex2Dlod**](https://msdn.microsoft.com/library/windows/desktop/bb509680)) retorna o cálculo de LOD de hardware.
+Uma complicação para registrar em log é que não existe nenhum mecanismo para relatar o conjunto exato de blocos que teria sido acessado. O aplicativo pode fazer suposições conservadoras com base no conhecimento das coordenadas usadas para o acesso, bem como usando a instrução LOD; por exemplo, [**tex2Dlod**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-tex2dlod)) retorna o cálculo de LOD de hardware.
 
 Outra complicação é que muitos acessos ocorrerão nos mesmos blocos, portanto, ocorrerão muitos registros em log redundantes e possivelmente uma contenção de memória. Ele pode ser conveniente se o hardware puder ter a opção de não precisar relatar os acessos de bloco se eles tiverem sido relatados em outro lugar antes. Talvez o estado de tal rastreamento pudesse ser redefinido na API (provavelmente nos limites do quadro).
 
@@ -49,11 +49,11 @@ Outra complicação é que muitos acessos ocorrerão nos mesmos blocos, portanto
 
 Para evitar os sombreadores de áreas de recursos de streaming mipmapped que são conhecidos por não estarem mapeados, a maioria das instruções do sombreador que envolvem o uso de uma amostra (filtragem) têm um modo que permite que o sombreador passe um parâmetro de clamp MinLOD float32 adicional para a amostra de textura. Esse valor encontra-se no espaço numérico do modo de exibição mipmap, em oposição ao recurso subjacente.
 
-O hardware executa` max(fShaderMinLODClamp,fComputedLOD) `no mesmo local no cálculo LOD onde ocorre o clamp de MinLOD por recurso, que também é um [**max**](https://msdn.microsoft.com/library/windows/desktop/bb509624)().
+O hardware executa` max(fShaderMinLODClamp,fComputedLOD) `no mesmo local no cálculo LOD onde ocorre o clamp de MinLOD por recurso, que também é um [**max**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-max)().
 
 Se o resultado da aplicação a clamp LOD por amostra e quaisquer outros clamps LOD definidos na amostra é um conjunto vazio, o resultado é o mesmo fora dos limites acesso resultado como o clamp de minLOD por recurso: 0 para componentes no formato de superfície e padrões para os componentes ausentes.
 
-A instrução LOD (por exemplo, [**tex2Dlod**](https://msdn.microsoft.com/library/windows/desktop/bb509680)), que antecede o clamp minLOD por amostra descrito aqui, retorna um LOD vinculado e não vinculado. O LOD vinculado retornado dessa instrução LOD reflete todas as vinculações, incluindo a vinculação por recurso, mas não uma vinculação por amostra. A vinculação por amostra é controlada e conhecida pelo sombreador de qualquer maneira, portanto, o autor do sombreador pode aplicar manualmente essa vinculação ao valor de retorno da instrução LOD, se desejado.
+A instrução LOD (por exemplo, [**tex2Dlod**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-tex2dlod)), que antecede o clamp minLOD por amostra descrito aqui, retorna um LOD vinculado e não vinculado. O LOD vinculado retornado dessa instrução LOD reflete todas as vinculações, incluindo a vinculação por recurso, mas não uma vinculação por amostra. A vinculação por amostra é controlada e conhecida pelo sombreador de qualquer maneira, portanto, o autor do sombreador pode aplicar manualmente essa vinculação ao valor de retorno da instrução LOD, se desejado.
 
 ## <a name="span-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>Filtragem de redução de Min/Max
 

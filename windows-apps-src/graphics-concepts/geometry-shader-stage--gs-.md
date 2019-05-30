@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 63c678f4b2dde1a5e35c0131b5154493c9703951
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0ea3e7ec73b042eeef560af3d88754afdfa5b441
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57623371"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370466"
 ---
 # <a name="geometry-shader-gs-stage"></a>Estágio de sombreador de geometria (GS)
 
@@ -28,7 +28,7 @@ O estágio do sombreador de geometria processa primitivos inteiros: triângulos 
 
 O sombreador de geometria também dá suporte à amplificação e cancelamento de amplificação de geometria. Dado um primitivo de entrada, o sombreador de geometria pode descartar o primitivo ou emitir um ou mais primitivos novos.
 
-O estágio de sombreador de geometria (GS) é um estágio de sombreador programável; ele é mostrado como um bloco arredondado no diagrama de [pipeline gráfico](graphics-pipeline.md). Esse estágio do sombreador expõe sua própria funcionalidade exclusiva, criada nos modelos de sombreador (veja [núcleo comum de sombreador](https://msdn.microsoft.com/library/windows/desktop/bb509580)).
+O estágio de sombreador de geometria (GS) é um estágio de sombreador programável; ele é mostrado como um bloco arredondado no diagrama de [pipeline gráfico](graphics-pipeline.md). Esse estágio do sombreador expõe sua própria funcionalidade exclusiva, criada nos modelos de sombreador (veja [núcleo comum de sombreador](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-common-core)).
 
 O estágio do sombreador de geometria é adequado para algoritmos incluindo:
 
@@ -62,7 +62,7 @@ Abreviações de vértice comuns:
 ## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Saída
 
 
-O estágio de sombreador de geometria (GS) é capaz de gerar vários vértices formando uma única topologia selecionada. As topologias de saída do sombreador de geometria disponíveis são **tristrip**, **linestrip**, e **pointlist**. O número de primitivos emitidos pode variar livremente dentro de qualquer chamada do sombreador de geometria, embora o número máximo de vértices que podem ser emitidos deva ser declarado estaticamente. Os tamanhos de faixa emitidos a partir de uma chamada de sombreador de geometria podem ser arbitrários, e novas faixas podem ser criadas por meio da função HLSL [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660).
+O estágio de sombreador de geometria (GS) é capaz de gerar vários vértices formando uma única topologia selecionada. As topologias de saída do sombreador de geometria disponíveis são **tristrip**, **linestrip**, e **pointlist**. O número de primitivos emitidos pode variar livremente dentro de qualquer chamada do sombreador de geometria, embora o número máximo de vértices que podem ser emitidos deva ser declarado estaticamente. Os tamanhos de faixa emitidos a partir de uma chamada de sombreador de geometria podem ser arbitrários, e novas faixas podem ser criadas por meio da função HLSL [RestartStrip](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-so-restartstrip).
 
 A execução de uma instância do sombreador de geometria é atômica das outras chamadas, exceto pelo fato dos dados adicionados aos fluxos serem seriais. As saídas de uma determinada chamada de um sombreador de geometria são independentes de outras chamadas (porém a ordem é respeitada). Um sombreador de geometria gerando faixas de triângulos iniciará uma faixa tira em cada chamada.
 

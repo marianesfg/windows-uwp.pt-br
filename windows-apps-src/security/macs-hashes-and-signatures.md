@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 6517241826d06b63fd88b45237552acffbdc62da
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 78b14023f61dd3f8c27bc31f5876407ff0ed0366
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651231"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371202"
 ---
 # <a name="macs-hashes-and-signatures"></a>MACs, hashes e assinaturas
 
@@ -34,11 +34,11 @@ Eva, que está secretamente atenta à conversa entre Bob e Alice, não pode mani
 
 Criar um MAC ajuda a garantir apenas que a mensagem original não foi alterada. Juntamente com o uso de uma chave secreta compartilhada, garante também que o hash de mensagem foi assinado por alguém com acesso a essa chave privada.
 
-Use o [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) para enumerar os algoritmos MAC disponíveis e gerar uma chave simétrica. Você pode usar métodos estáticos na classe [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) para executar a criptografia necessária à criação do valor MAC.
+Use o [**MacAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider) para enumerar os algoritmos MAC disponíveis e gerar uma chave simétrica. Você pode usar métodos estáticos na classe [**CryptographicEngine**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicEngine) para executar a criptografia necessária à criação do valor MAC.
 
 As assinaturas digitais são as chaves públicas equivalentes aos códigos de autenticação de mensagens de chaves (MACs). Os MACs usam chaves privadas (para que o destinatário da mensagem possa verificar se ela não foi alterada durante a transmissão), ao passo que as assinaturas usam um par de chaves privada/pública.
 
-Esse código de exemplo mostra como usar a classe [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) para criar um HMAC (código de autenticação de mensagens com hash).
+Esse código de exemplo mostra como usar a classe [**MacAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider) para criar um HMAC (código de autenticação de mensagens com hash).
 
 ```cs
 using Windows.Security.Cryptography;
@@ -137,11 +137,11 @@ Uma função hash criptográfica assume um bloco de dados arbitrariamente longo 
 
 Observe que Paula enviou uma mensagem não criptografada. Somente o hash foi criptografado. O procedimento garante somente que a mensagem original não foi alterada e, com o uso da chave pública de Alice, garante que o hash da mensagem foi assinado por alguém com acesso à chave particular de Alice, presumivelmente Alice.
 
-Você pode usar a classe [**HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) para enumerar os algoritmos de hash disponíveis e criar um valor [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498).
+Você pode usar a classe [**HashAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.HashAlgorithmProvider) para enumerar os algoritmos de hash disponíveis e criar um valor [**CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash).
 
 As assinaturas digitais são as chaves públicas equivalentes aos códigos de autenticação de mensagens de chaves (MACs). Enquanto MACs utilizam chaves particulares para habilitar um destinatário de mensagem a verificar se uma mensagem não foi alterada durante a transmissão, as assinaturas usam um par de chaves privada/pública.
 
-O objeto [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) pode ser usado para fazer hash repetidamente de diversos dados sem necessidade de recriar o objeto para cada uso. O método [**Append**](https://msdn.microsoft.com/library/windows/apps/br241499) adiciona dados novos a um buffer para hash. O método [**GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) faz hash dos dados e reinicializa o objeto para outro uso. Isso é demonstrado no exemplo a seguir.
+O objeto [**CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) pode ser usado para fazer hash repetidamente de diversos dados sem necessidade de recriar o objeto para cada uso. O método [**Append**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.core.cryptographichash.append) adiciona dados novos a um buffer para hash. O método [**GetValueAndReset**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.core.cryptographichash.getvalueandreset) faz hash dos dados e reinicializa o objeto para outro uso. Isso é demonstrado no exemplo a seguir.
 
 ```cs
 public void SampleReusableHash()
@@ -191,4 +191,4 @@ Como a maioria das operações de assinaturas de chaves públicas, geralmente é
 
 A assinatura garante somente que a mensagem original não foi alterada e, ao usar a chave pública do remetente, assegura também que o hash da mensagem foi assinado por alguém com acesso à chave particular.
 
-Você pode usar um objeto [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) para enumerar os algoritmos de assinaturas disponíveis e gerar ou importar um par de chaves. É possível usar métodos estáticos na classe [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) para assinar uma mensagem ou verificar uma assinatura.
+Você pode usar um objeto [**AsymmetricKeyAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider) para enumerar os algoritmos de assinaturas disponíveis e gerar ou importar um par de chaves. É possível usar métodos estáticos na classe [**CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) para assinar uma mensagem ou verificar uma assinatura.

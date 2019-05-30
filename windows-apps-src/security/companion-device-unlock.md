@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: fb1ff6431b3ccf609b7362db819569c2f6cebc48
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0ddadde2502e8512ba38dc30c6ac24d22631d62c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57657011"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372641"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueio do Windows com dispositivos complementares (IoT) do Windows Hello
 
@@ -50,7 +50,7 @@ A estrutura de dispositivo complementar do Windows Hello é implementada como um
 
 A integração com a Estrutura de dispositivo complementar do Windows Hello requer:
 
-- Um aplicativo de dispositivo complementar [UPW (Plataforma Universal do Windows)](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) para o dispositivo complementar do Windows Hello, baixado na Windows Store. 
+- Um aplicativo de dispositivo complementar [UPW (Plataforma Universal do Windows)](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) para o dispositivo complementar do Windows Hello, baixado na Windows Store. 
 - A capacidade de criar duas chaves HMAC de 256 bits no dispositivo complementar do Windows Hello e de gerar a HMAC com ele (usando SHA-256).
 - Configurações de segurança na área de trabalho do Windows 10 corretamente definidas. O Serviço de Autenticação Complementar exigirá que esse PIN seja configurado antes que qualquer dispositivo complementar do Windows Hello possa ser conectado a ele. Os usuários devem configurar um PIN via Configurações > Contas > Opções de entrada.
 
@@ -346,7 +346,7 @@ namespace SecondaryAuthFactorSample
 }
 ```
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Autenticação
 
 A autenticação requer duas chamadas de API para o serviço de autenticação complementares: StartAuthenticationAsync e FinishAuthencationAsync.
 

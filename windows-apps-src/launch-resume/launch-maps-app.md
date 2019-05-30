@@ -6,25 +6,25 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 021e3142a4e94f762cc48dbc86905dcf0b658772
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 20a57e4bbd4784d67fc711f78d6c59493c5b435f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645231"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371732"
 ---
 # <a name="launch-the-windows-maps-app"></a>Iniciar o app Mapas do Windows
 
 
 
 
-Saiba como iniciar o app Mapas do Windows a partir de seu app. Este tópico descreve o **bingmaps:, *ms-unidade-to:, movimentação da ms para:**  e **ms-configurações:** Esquemas de Uniform Resource Identifier (URI). Use esses esquemas de URI para iniciar o aplicativo Mapas do Windows para ver mapas, trajetos e resultados de pesquisa específicos ou para baixar mapas offline de Mapas do Windows no aplicativo Configurações.
+Saiba como iniciar o app Mapas do Windows a partir de seu app. Este tópico descreve o **bingmaps:, *ms-unidade-to:, movimentação da ms para:* * e **ms-configurações:** Esquemas de Uniform Resource Identifier (URI). Use esses esquemas de URI para iniciar o aplicativo Mapas do Windows para ver mapas, trajetos e resultados de pesquisa específicos ou para baixar mapas offline de Mapas do Windows no aplicativo Configurações.
 
 **Dica** Para saber mais sobre como iniciar o aplicativo Mapas do Windows a partir de seu aplicativo, baixe a [amostra de mapas da Plataforma Universal do Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977) do [repositório de amostras universais do Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
 ## <a name="introducing-uris"></a>Apresentando URIs
 
-Os esquemas de URI permitem que você abra aplicativos clicando em hiperlinks (ou programaticamente, em seu aplicativo). Assim como você pode iniciar um novo email usando **mailto:** ou abrir um navegador da Web usando **http:**, é possível abrir o aplicativo Mapas do Windows usando **bingmaps:**, **ms-drive-to:** e **ms-walk-to:**.
+Os esquemas de URI permitem que você abra aplicativos clicando em hiperlinks (ou programaticamente, em seu aplicativo). Assim como você pode iniciar um novo email usando **mailto:** ou abrir um navegador da Web usando **http:** , é possível abrir o aplicativo Mapas do Windows usando **bingmaps:** , **ms-drive-to:** e **ms-walk-to:** .
 
 -   O **bingmaps:** URI fornece mapas para locais, os resultados da pesquisa, instruções e tráfego.
 -   O **unidade ms para:** URI fornece indicações de ativar a curva do seu local atual.
@@ -40,18 +40,18 @@ Por exemplo, o URI a seguir abre o aplicativo Mapas do Windows e exibe um mapa c
 
 Esta é uma descrição do esquema de URI:
 
-**bingmaps:? consulta**
+**bingmaps:?query**
 
 Neste esquema de URI, *query* é uma série de pares de parâmetro nome/valor:
 
-**& param1 = param2 & de valor1 = valor2...**
+**&param1=value1&param2=value2 …**
 
 Para obter uma lista completa dos parâmetros disponíveis, consulte a referência de parâmetro [bingmaps:](#bingmaps-param-reference), [ms-drive-to:](#ms-drive-to-param-reference)e [ms-walk-to:](#ms-walk-to-param-reference). Também há exemplos mais adiante neste tópico.
 
 ## <a name="launch-a-uri-from-your-app"></a>Iniciar um URI a partir de seu aplicativo
 
 
-Para iniciar o aplicativo de mapas do Windows do seu aplicativo, chame o [ **LaunchUriAsync** ](https://msdn.microsoft.com/library/windows/apps/hh701476) método com um **bingmaps:**, **ms-unidade-to:**, ou  **movimentação da MS para:** URI. O exemplo a seguir inicia o mesmo URI do exemplo anterior. Para saber mais sobre como iniciar aplicativos via URI, consulte [Iniciar o aplicativo padrão para um URI](launch-default-app.md).
+Para iniciar o aplicativo de mapas do Windows do seu aplicativo, chame o [ **LaunchUriAsync** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) método com um **bingmaps:** , **ms-unidade-to:** , ou  **movimentação da MS para:** URI. O exemplo a seguir inicia o mesmo URI do exemplo anterior. Para saber mais sobre como iniciar aplicativos via URI, consulte [Iniciar o aplicativo padrão para um URI](launch-default-app.md).
 
 ```cs
 // Center on New York City
@@ -63,7 +63,7 @@ launcherOptions.TargetApplicationPackageFamilyName = "Microsoft.WindowsMaps_8wek
 var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherOptions);
 ```
 
-Neste exemplo, a classe [**LauncherOptions**](https://msdn.microsoft.com/library/windows/apps/hh701435) é usada para ajudar a garantir que o aplicativo Mapas do Windows seja iniciado.
+Neste exemplo, a classe [**LauncherOptions**](https://docs.microsoft.com/uwp/api/Windows.System.LauncherOptions) é usada para ajudar a garantir que o aplicativo Mapas do Windows seja iniciado.
 
 ## <a name="display-known-locations"></a>Exibir locais conhecidos
 
@@ -77,9 +77,9 @@ Para controlar o tipo de exibição, use os parâmetros *sty* (estilo) e *ss* (S
 | bingmaps:?                                                                 | Abre o aplicativo Mapas.                                                                                                                                                                            |
 | bingmaps:?cp=40.726966~-74.006076                                          | Exibe um mapa centralizado na cidade de Nova York.                                                                                                                                                    |
 | bingmaps:?cp=40.726966~-74.006076&lvl=10                                   | Exibe um mapa centralizado na cidade de Nova York com um nível de zoom 10.                                                                                                                            |
-| bingmaps:? bb = 39.719\_-74.52 ~ 41.71\_-73.5                                   | Exibe um mapa da cidade de Nova York, que é a área específica no argumento **bb**.                                                                                                           |
-| bingmaps:? bb = 39.719\_-74.52 ~ 41.71\_-73.5 & cp = 47 ~-122                        | Exibe um mapa da cidade de Nova York, que é a área especifica no argumento de caixa delimitadora. O ponto central de Seattle especificado no argumento **cp** é ignorado porque *bb* é especificado. |
-| bingmaps:?Collection=Point.36.116584\_-115.176753\_Caesars % 20Palace & lvl = 16 | Exibe um mapa com um ponto denominado Caesars Palace (em Las Vegas) e define o nível de zoom para 16.                                                                                                 |
+| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5                                   | Exibe um mapa da cidade de Nova York, que é a área específica no argumento **bb**.                                                                                                           |
+| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&cp=47~-122                        | Exibe um mapa da cidade de Nova York, que é a área especifica no argumento de caixa delimitadora. O ponto central de Seattle especificado no argumento **cp** é ignorado porque *bb* é especificado. |
+| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16 | Exibe um mapa com um ponto denominado Caesars Palace (em Las Vegas) e define o nível de zoom para 16.                                                                                                 |
 | bingmaps:?Collection=Point.40.726966\_-74.006076\_alguns 255FBusiness %        | Exibe um mapa com um ponto de chamada alguns\_comerciais (em Las Vegas).                                                                                                                               |
 | bingmaps:?cp=40.726966~-74.006076&trfc=1&sty=a                             | Exibe um mapa da cidade de Nova York com tráfego e estilo de mapa aéreo.                                                                                                                          |
 | bingmaps:?cp=47.6204~-122.3491&sty=3d                                      | Mostra a exibição 3D do Space Needle.                                                                                                                                                        |
@@ -108,10 +108,10 @@ Use o parâmetro *collection* para mostrar um conjunto personalizado de pontos n
 | URI de Exemplo | Resultados                                                                                                                   |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | bingmaps:?Collection=Point.36.116584\_-115.176753\_Caesars % 20Palace                                                                                                | Pesquisa por Caesar's Palace em Las Vegas e exibe os resultados em um mapa na melhor exibição de mapa.                         |
-| bingmaps:?Collection=Point.36.116584\_-115.176753\_Caesars % 20Palace & lvl = 16                                                                                         | Exibe um pino denominado Caesars Palace em Las Vegas e define o zoom para nível 16.                                               |
+| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16                                                                                         | Exibe um pino denominado Caesars Palace em Las Vegas e define o zoom para nível 16.                                               |
 | bingmaps:?Collection=Point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_a % 20Bellagio & lvl = 16 & cp = 36.114902 ~-115.176669                   | Exibe um pino denominado Caesars Palace e um pino denominado The Bellagio em Las Vegas e define o zoom para nível 16.              |
-| bingmaps:?Collection=Point.40.726966\_-74.006076\_forjar % 255FBusiness % 255Fwith % 255FUnderscore                                                                        | Nova York é exibido com um pino chamado falsificação\_comerciais\_com\_sublinhado.                                                  |
-| bingmaps:? coleção = name. Hotel%20List~Point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_a % 20Bellagio & lvl = 16 & cp = 36.114902 ~-115.176669 | Exibe uma lista denominada Lista de Hotéis e dois pinos para Caesars Palace e The Bellagio em Las Vegas, e define o zoom para nível 16. |
+| bingmaps:?collection=point.40.726966\_-74.006076\_Fake%255FBusiness%255Fwith%255FUnderscore                                                                        | Nova York é exibido com um pino chamado falsificação\_comerciais\_com\_sublinhado.                                                  |
+| bingmaps:?collection=name.Hotel%20List~point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669 | Exibe uma lista denominada Lista de Hotéis e dois pinos para Caesars Palace e The Bellagio em Las Vegas, e define o zoom para nível 16. |
 
  
 
@@ -124,10 +124,10 @@ Você pode exibir o trajeto entre dois pontos usando o parâmetro *rtp*. Esses p
 
 | URI de Exemplo                                                                                                              | Resultados                                                                                                                                                         |
 |-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:?RTP=POS.44.9160\_-110.4158 ~ POS 45.0475\_-109.4187                                                             | Exibe um mapa com trajeto ponto a ponto. Como *mode* não é especificado, o trajeto será fornecido usando o modo de preferência de transporte do usuário. |
+| bingmaps:?rtp=pos.44.9160\_-110.4158~pos.45.0475\_-109.4187                                                             | Exibe um mapa com trajeto ponto a ponto. Como *mode* não é especificado, o trajeto será fornecido usando o modo de preferência de transporte do usuário. |
 | bingmaps:?cp=43.0332~-87.9167&trfc=1                                                                                    | Exibe um mapa centralizado na cidade de Milwaukee, WI, com tráfego.                                                                                                        |
 | bingmaps:? rtp = adr. One Microsoft Way, Redmond, WA 98052~pos.39.0731\_-108.7238                                           | Exibe um mapa com o trajeto do endereço especificado para o local especificado.                                                                            |
-| bingmaps:?RTP=ADR.1%20Microsoft%20Way,%20Redmond,%20WA,%2098052~POS.36.1223\_-111.9495\_% Grand 20Canyon % 20northern % 20rim | Exibe o trajeto de 1 Microsoft Way, Redmond, WA, 98052 até a borda norte do Grand Canyon.                                                                |
+| bingmaps:?rtp=adr.1%20Microsoft%20Way,%20Redmond,%20WA,%2098052~pos.36.1223\_-111.9495\_Grand%20Canyon%20northern%20rim | Exibe o trajeto de 1 Microsoft Way, Redmond, WA, 98052 até a borda norte do Grand Canyon.                                                                |
 | bingmaps:?rtp=adr.Davenport, CA~adr.Yosemite Village                                                                    | Exibe um mapa com trajetos para dirigir com endereço especificado para o ponto de referência especificado.                                                                   |
 | bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=d                      | Exibe com trajetos de carro de Mountain View, CA para o San Francisco International Airport, CA.                                                                  |
 | bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=w                      | Exibe trajetos a pé de Mountain View, CA para o San Francisco International Airport, CA.                                                                  |
@@ -179,7 +179,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><b>CP</b></p></td>
+<td align="left"><p><b>cp</b></p></td>
 <td align="left"><p>Ponto central</p></td>
 <td align="left"><p>cp = "cp=" cpval</p>
 <p>cpval = degreeslat "~" degreeslon</p>
@@ -194,7 +194,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <tr class="even">
 <td align="left"><p><b>bb</b></p></td>
 <td align="left"><p>Caixa delimitadora</p></td>
-<td align="left"><p>bb = "bb=" southlatitude "_" westlongitude "~" northlatitude "_" eastlongitude</p>
+<td align="left"><p>bb = "bb=" southlatitude " _" westlongitude "~" northlatitude "_ " eastlongitude</p>
 <p>southlatitude = degreeslat</p>
 <p>northlatitude = degreeslat</p>
 <p>westlongitude = degreeslon</p>
@@ -208,16 +208,16 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>Os valores válidos de latitude estão entre -90 e +90, inclusive.</p><p>Os parâmetros cp e lvl são ignorados quando uma caixa delimitadora é fornecida.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>onde</b></p></td>
+<td align="left"><p><b>where</b></p></td>
 <td align="left"><p>Location</p></td>
 <td align="left"><p>where = "where=" whereval</p>
-<p>whereval = 1 *( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "*" / "+" / "," / ";" / ":" / "@" / "/" / "?")</p>
+<p>whereval = 1 *( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "* " / "+" / "," / ";" / ":" / "@" / "/" / "?")</p>
 <p>Exemplo:</p>
 <p>where=1600%20Pennsylvania%20Ave,%20Washington,%20DC</p></td>
 <td align="left"><p>Termo de pesquisa de um local, ponto de referência ou lugar específico.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>Q</b></p></td>
+<td align="left"><p><b>q</b></p></td>
 <td align="left"><p>Termo da consulta</p></td>
 <td align="left"><p>q = "q="</p>
 <p>whereval</p>
@@ -228,7 +228,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <tr class="odd">
 <td align="left"><p><b>lvl</b></p></td>
 <td align="left"><p>Nível de zoom</p></td>
-<td align="left"><p>lvl = "lvl =" 1<i>2DIGIT ["." 1</i>2DIGIT]</p>
+<td align="left"><p>lvl = "lvl=" 1<i>2DIGIT ["." 1</i>2DIGIT]</p>
 <p>Exemplo:</p>
 <p>lvl=10.50</p></td>
 <td align="left"><p>Define o nível de zoom do modo de exibição de mapa. Os valores válidos são de 1 a 20, onde 1 é totalmente sem zoom.</p></td>
@@ -241,9 +241,9 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>sty=a</p></td>
 <td align="left"><p>Define o estilo de mapa. Os valores válidos para esse parâmetro incluem:</p>
 <ul>
-<li>**um**: Exibe uma vista aérea do mapa.</li>
-<li>**R**: Exiba um modo de exibição do mapa rodoviário.</li>
-<li>**3D**: Exiba um modo de exibição 3D do mapa. Use em conjunto com o parâmetro **cp** e, opcionalmente, com o parâmetro **rad**.</li>
+<li>**a**: Exibe uma vista aérea do mapa.</li>
+<li>**r**: Exiba um modo de exibição do mapa rodoviário.</li>
+<li>**3d**: Exiba um modo de exibição 3D do mapa. Use em conjunto com o parâmetro **cp** e, opcionalmente, com o parâmetro **rad**.</li>
 </ul>
 <p>No Windows 10, os estilos de vista aérea e exibição 3D são os mesmos.</p>
 <div class="alert">
@@ -254,7 +254,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>RAD</b></p></td>
+<td align="left"><p><b>rad</b></p></td>
 <td align="left"><p>Radius</p></td>
 <td align="left"><p>rad = "rad=" 1*8DIGIT</p>
 <p>Exemplo:</p>
@@ -262,7 +262,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <td align="left"><p>Uma área circular que especifica o modo de exibição de mapa desejado. O valor do raio é medido em metros.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>PIT</b></p></td>
+<td align="left"><p><b>pit</b></p></td>
 <td align="left"><p>Rotação sobre o eixo x</p></td>
 <td align="left"><p>pit = "pit=" pitch</p>
 <p>Exemplo:</p>
@@ -270,7 +270,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <td align="left"><p>Indica o ângulo no qual o mapa é exibido, onde 90 está voltado para o horizonte (máximo) e 0 está voltado diretamente para baixo (mínimo).</p><p>Os valores válidos de rotação sobre o eixo x estão entre 0 e 90, inclusive.</td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>HDG</b></p></td>
+<td align="left"><p><b>hdg</b></p></td>
 <td align="left"><p>Direcionamento</p></td>
 <td align="left"><p>hdg = "hdg=" heading</p>
 <p>Exemplo:</p>
@@ -278,7 +278,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <td align="left"><p>Indica a direção que o mapa está tomando em graus, onde 0 ou 360 = Norte, 90 = Leste, 180 = Sul e 270 = Oeste.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>SS</b></p></td>
+<td align="left"><p><b>ss</b></p></td>
 <td align="left"><p>Streetside</p></td>
 <td align="left"><p>ss = "ss=" BIT</p>
 <p>Exemplo:</p>
@@ -306,7 +306,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 </div></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>RTP</b></p></td>
+<td align="left"><p><b>rtp</b></p></td>
 <td align="left"><p>Rota</p></td>
 <td align="left"><p>rtp = "rtp=" (waypoint "~" [waypoint]) / ("~" waypoint)</p>
 <p>waypoint = ("pos." point ) / ("adr." whereval)</p>
@@ -335,14 +335,14 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>Modo</b></p></td>
+<td align="left"><p><b>mode</b></p></td>
 <td align="left"><p>Modo de transporte</p></td>
 <td align="left"><p>mode = "mode=" ("d" / "t" / "w")</p>
 <p>Exemplo:</p>
 <p>mode=d</p></td>
 <td align="left"><p>Define o modo de transporte. Os valores válidos para esse parâmetro incluem:</p>
 <ul>
-<li>**1!d**: Visão geral de rota exibe para referências de local</li>
+<li>**d**: Visão geral de rota exibe para referências de local</li>
 <li>**t**: Visão geral de instruções de trânsito de rota exibe</li>
 <li>**w**: Visão geral para percorrer as direções de rota exibe</li>
 </ul>
@@ -365,7 +365,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>Exemplo:</p>
 <p>collection=name.My%20Trip%20Stops~point.36.116584_-115.176753_Las%20Vegas~point.37.8268_-122.4798_Golden%20Gate%20Bridge</p></td>
 <td align="left"><p>Coleção de pontos a ser adicionada ao mapa e à lista. A coleção de pontos pode ser nomeada usando o parâmetro name. Um ponto é especificado usando latitude, longitude e título opcional.</p>
-<p>Separe o nome e vários pontos com tils (**~**).</p>
+<p>Separe o nome e vários pontos com tils ( **~** ).</p>
 <p>Se o item que você especificar contiver um til, verifique se o til está codificado como <code>%7E</code>. Se não estiver acompanhada dos parâmetros de Ponto central e de Nível de zoom, a coleção fornecerá o melhor modo de exibição de mapa.</p>
 
 <p>**Importante** Se o item que você especificar contiver um sublinhado, verifique se o sublinhado está codificado duplamente como %255F.</p></td>
@@ -387,9 +387,9 @@ O URI para iniciar uma solicitação de trajetos de automóvel curva a curva nã
 
 | Parâmetro | Definição | Exemplo | Detalhes |
 |------------|-----------|---------|---------|
-| **Destination.Latitude** | Latitude do destino | Exemplo: destination.latitude=47.6451413797194 | A latitude do destino. Os valores válidos de latitude estão entre -90 e +90, inclusive. |
-| **Destination.longitude** | Longitude do destino | Exemplo: destination.longitude=-122.141964733601 | A longitude do destino. Os valores válidos de longitude estão entre -180 e +180, inclusive. |
-| **Destination.Name** | Nome do destino | Exemplo: destination.name=Redmond, WA | O nome do destino. Você não precisa codificar o valor de **destination.name**. |
+| **destination.latitude** | Latitude do destino | Exemplo: destination.latitude=47.6451413797194 | A latitude do destino. Os valores válidos de latitude estão entre -90 e +90, inclusive. |
+| **destination.longitude** | Longitude do destino | Exemplo: destination.longitude=-122.141964733601 | A longitude do destino. Os valores válidos de longitude estão entre -180 e +180, inclusive. |
+| **destination.name** | Nome do destino | Exemplo: destination.name=Redmond, WA | O nome do destino. Você não precisa codificar o valor de **destination.name**. |
 
  
 <span id="ms-walk-to-param-reference"/>
@@ -404,9 +404,9 @@ O URI para iniciar uma solicitação de trajetos a pé curva a curva não precis
 
 | Parâmetro | Definição | Exemplo | Detalhes |
 |-----------|------------|---------|----------|
-| **Destination.Latitude** | Latitude do destino | Exemplo: destination.latitude=47.6451413797194 | A latitude do destino. Os valores válidos de latitude estão entre -90 e +90, inclusive. |
-| **Destination.longitude** | Longitude do destino | Exemplo: destination.longitude=-122.141964733601 | A longitude do destino. Os valores válidos de longitude estão entre -180 e +180, inclusive. |
-| **Destination.Name** | Nome do destino | Exemplo: destination.name=Redmond, WA | O nome do destino. Você não precisa codificar o valor de **destination.name**. |
+| **destination.latitude** | Latitude do destino | Exemplo: destination.latitude=47.6451413797194 | A latitude do destino. Os valores válidos de latitude estão entre -90 e +90, inclusive. |
+| **destination.longitude** | Longitude do destino | Exemplo: destination.longitude=-122.141964733601 | A longitude do destino. Os valores válidos de longitude estão entre -180 e +180, inclusive. |
+| **destination.name** | Nome do destino | Exemplo: destination.name=Redmond, WA | O nome do destino. Você não precisa codificar o valor de **destination.name**. |
 
 ## <a name="ms-settings-parameter-reference"></a>Referência de parâmetro ms-settings:
 

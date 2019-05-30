@@ -6,24 +6,24 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 973091926ddff312b20002f7b535d34a3b7d2bc4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: bbb40dc9fa65515a2b01d7a2c92145b27e04f075
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57650331"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372560"
 ---
 # <a name="fingerprint-biometrics"></a>Biometria por impressão digital
 
 
 
 
-Este artigo explica como adicionar a biometria de impressão digital em seu aplicativo UWP (Plataforma Universal do Windows). Incluir um pedido de autenticação por impressão digital quando o usuário precisar autorizar uma determinada ação aprimora a segurança do seu aplicativo. Por exemplo, você pode exigir autenticação por impressão digital antes de autorizar uma compra realizada em aplicativo ou acessar recursos restritos. A autenticação por impressão digital é gerenciada com o uso da classe [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134) no namespace [**Windows.Security.Credentials.UI**](https://msdn.microsoft.com/library/windows/apps/hh701356).
+Este artigo explica como adicionar a biometria de impressão digital em seu aplicativo UWP (Plataforma Universal do Windows). Incluir um pedido de autenticação por impressão digital quando o usuário precisar autorizar uma determinada ação aprimora a segurança do seu aplicativo. Por exemplo, você pode exigir autenticação por impressão digital antes de autorizar uma compra realizada em aplicativo ou acessar recursos restritos. A autenticação por impressão digital é gerenciada com o uso da classe [**UserConsentVerifier**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier) no namespace [**Windows.Security.Credentials.UI**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI).
 
 ## <a name="check-the-device-for-a-fingerprint-reader"></a>Verifique se o dispositivo tem um leitor de impressão digital
 
 
-Para saber se o dispositivo tem um leitor de impressão digital, chame [**UserConsentVerifier.CheckAvailabilityAsync**](https://msdn.microsoft.com/library/windows/apps/dn279138). Mesmo que um dispositivo dê suporte à autenticação por impressão digital, o aplicativo ainda deverá fornecer aos usuários uma opção nas Configurações para habilitá-la ou desabilitá-la.
+Para saber se o dispositivo tem um leitor de impressão digital, chame [**UserConsentVerifier.CheckAvailabilityAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.ui.userconsentverifier.checkavailabilityasync). Mesmo que um dispositivo dê suporte à autenticação por impressão digital, o aplicativo ainda deverá fornecer aos usuários uma opção nas Configurações para habilitá-la ou desabilitá-la.
 
 ```cs
 public async System.Threading.Tasks.Task<string> CheckFingerprintAvailability()
@@ -70,9 +70,9 @@ public async System.Threading.Tasks.Task<string> CheckFingerprintAvailability()
 ## <a name="request-consent-and-return-results"></a>Solicitar consentimento e retornar resultados
 
 
-Para solicitar o consentimento do usuário a partir de uma digitalização de impressão digital, chame o método [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139). Para a autenticação por impressão digital funcionar, o usuário deve ter adicionado anteriormente uma "assinatura" de impressão digital ao banco de dados de impressões digitais.
+Para solicitar o consentimento do usuário a partir de uma digitalização de impressão digital, chame o método [**UserConsentVerifier.RequestVerificationAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.ui.userconsentverifier.requestverificationasync). Para a autenticação por impressão digital funcionar, o usuário deve ter adicionado anteriormente uma "assinatura" de impressão digital ao banco de dados de impressões digitais.
 
-Quando você chamar o [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139), o usuário verá uma caixa de diálogo modal solicitando uma digitalização de impressão digital. Você pode fornecer uma mensagem para o método **UserConsentVerifier.RequestVerificationAsync** que será exibida ao usuário como parte da caixa de diálogo modal, conforme mostrado na imagem a seguir.
+Quando você chamar o [**UserConsentVerifier.RequestVerificationAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.ui.userconsentverifier.requestverificationasync), o usuário verá uma caixa de diálogo modal solicitando uma digitalização de impressão digital. Você pode fornecer uma mensagem para o método **UserConsentVerifier.RequestVerificationAsync** que será exibida ao usuário como parte da caixa de diálogo modal, conforme mostrado na imagem a seguir.
 
 ```cs
 private async System.Threading.Tasks.Task<string> RequestConsent(string userMessage)

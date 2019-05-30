@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ae76111f6feefa0bb63fd18516e033050cc06fc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3aeb30fca8e9fbad21f274162aab3106afcf2e45
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57589881"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370845"
 ---
 # <a name="tier-1"></a>Nível 1
 
@@ -52,7 +52,7 @@ Os recursos de streaming com qualquer mipmap que não seja um múltiplo do taman
 
 Para alternar entre referenciando blocos em um pool de bloco por meio de um [Buffer](introduction-to-buffers.md) recurso para referenciar os mesmos blocos por meio de uma [textura](introduction-to-textures.md) recurso, ou vice-versa, o mais recente atualização de mapeamentos de bloco ou a cópia mapeamentos de bloco que define os mapeamentos para esses lado a lado de blocos de pool devem ser para a mesma dimensão de recurso (Buffer versus textura\*) como a dimensão de recurso que será usada para acessar os blocos. Caso contrário, o comportamento será indefinido, incluindo a chance de restauração do dispositivo.
 
-Por exemplo, é inválido atualizar os mapeamentos de blocos para defini-los para um Buffer e depois atualizar os mapeamentos de blocos para os mesmos blocos no pool via [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) e, em seguida, acessar os blocos via Buffer. As operações alternativas são redefinir os mapeamentos de blocos para um recurso ao alternar entre Buffer e Texture (ou vice-versa) compartilhando os blocos ou simplesmente nunca compartilhar blocos de um pool entre recursos Buffer e recursos Texture.
+Por exemplo, é inválido atualizar os mapeamentos de blocos para defini-los para um Buffer e depois atualizar os mapeamentos de blocos para os mesmos blocos no pool via [**Texture2D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d) e, em seguida, acessar os blocos via Buffer. As operações alternativas são redefinir os mapeamentos de blocos para um recurso ao alternar entre Buffer e Texture (ou vice-versa) compartilhando os blocos ou simplesmente nunca compartilhar blocos de um pool entre recursos Buffer e recursos Texture.
 
 ### <a name="span-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>Filtragem de redução de Min/Max
 

@@ -6,12 +6,12 @@ ms.date: 10/04/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano, serviço de aplicativo, dispositivos conectados, sistemas remotos
 ms.localizationpriority: medium
-ms.openlocfilehash: d12113329381c6602edf87a11fc1cc6b822dab4e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 79f3f1d28294527d6987540a159baa31d663db4c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57582151"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371718"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>Início, retomada e tarefas em segundo plano
 
@@ -95,7 +95,7 @@ A seção [Tarefas em segundo plano](support-your-app-with-background-tasks.md) 
 | Tópico | Descrição |
 |-------|-------------|
 | [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)                                       | Verifique se seu aplicativo atende aos requisitos para executar tarefas em segundo plano. |
-| [Acessar sensores e dispositivos de uma tarefa em segundo plano](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando seu aplicativo em primeiro plano estiver suspenso. |
+| [Acessar sensores e dispositivos de uma tarefa em segundo plano](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) permite que seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando seu aplicativo em primeiro plano estiver suspenso. |
 | [Criar e registrar uma tarefa em segundo plano em processo](create-and-register-an-inproc-background-task.md)       | Crie e registre uma tarefa em segundo plano que é executada no mesmo processo de seu aplicativo em primeiro plano. |
 | [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)           | Crie e registre uma tarefa em segundo plano que é executada em um processo separado do seu aplicativo e registre-a para ser executada quando o aplicativo não estiver em primeiro plano. |
 | [Fazer a portabilidade de uma tarefa em segundo plano fora do processo para uma tarefa em segundo plano no processo](convert-out-of-process-background-task.md) | Saiba como portar uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo que é executada no mesmo processo do seu aplicativo em primeiro plano.|
@@ -106,14 +106,14 @@ A seção [Tarefas em segundo plano](support-your-app-with-background-tasks.md) 
 | [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)       | Saiba como o aplicativo pode reconhecer o progresso e a conclusão de uma tarefa em segundo plano. |
 | [Otimizar a atividade em segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) |Saiba como reduzir a energia usada no segundo plano e interagir com as configurações do usuário para atividade de segundo plano. |
 | [Registrar uma tarefa em segundo plano](register-a-background-task.md)                                                 | Aprenda a criar uma função que pode ser reutilizada para registrar com segurança a maioria das tarefas em segundo plano. |
-| [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)         | Saiba como criar uma tarefa em segundo plano que responde a eventos de [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839). |
+| [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)         | Saiba como criar uma tarefa em segundo plano que responde a eventos de [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType). |
 | [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)                                    | Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa periódica em segundo plano. |
 | [Executar em segundo plano indefinidamente](run-in-the-background-indefinetly.md)                                    | Usar uma funcionalidade para executar uma tarefa de segundo plano ou estender a seção de execução no segundo plano indefinidamente. |
 | [Disparar uma tarefa em segundo plano no seu aplicativo](trigger-background-task-from-app.md) | Saiba como usar o [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger) para ativar uma tarefa em segundo plano de dentro de seu aplicativo.|
 | [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)             | Saiba como definir condições que controlam quando a sua tarefa em segundo plano será executada. |
-| [Transferir dados em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt280377)                 | Use a API de transferência em segundo plano para copiar arquivos em segundo plano. |
+| [Transferir dados em segundo plano](https://docs.microsoft.com/windows/uwp/networking/background-transfers)                 | Use a API de transferência em segundo plano para copiar arquivos em segundo plano. |
 | [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)                   | Use uma tarefa em segundo plano para atualizar o bloco dinâmico de seu aplicativo com novo conteúdo. |
-| [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)                                                   | Saiba como usar a classe [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) para executar um código leve em segundo plano enquanto o dispositivo estiver conectado. |
+| [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)                                                   | Saiba como usar a classe [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) para executar um código leve em segundo plano enquanto o dispositivo estiver conectado. |
 
 ## <a name="remote-systems"></a>Sistemas remotos
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8eb1238499355cf37b3f5113dbb10c456de55961
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: dcda1677a8b5d289fd4c5e86db69212004f00824
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624761"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371098"
 ---
 # <a name="xclass-attribute"></a>Atributo x:Class
 
@@ -36,7 +36,7 @@ Configura a compilação XAML para associar classes parciais entre marcação e 
 
 ## <a name="remarks"></a>Comentários
 
-**x:Class** pode ser declarado como um atributo para qualquer elemento que seja raiz de um arquivo/árvore de objetos XAML e esteja sendo compilado por ações de compilação, ou para a raiz [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) na definição de um aplicativo compilado. A declaração **x:Class** em qualquer elemento que não seja um nó raiz e, sob qualquer circunstância, para um arquivo XAML não compilado com a ação de compilação **Page** gerará um erro de tempo de compilação.
+**x:Class** pode ser declarado como um atributo para qualquer elemento que seja raiz de um arquivo/árvore de objetos XAML e esteja sendo compilado por ações de compilação, ou para a raiz [**Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) na definição de um aplicativo compilado. A declaração **x:Class** em qualquer elemento que não seja um nó raiz e, sob qualquer circunstância, para um arquivo XAML não compilado com a ação de compilação **Page** gerará um erro de tempo de compilação.
 
 A classe usada como **x:Class** não pode ser aninhada.
 

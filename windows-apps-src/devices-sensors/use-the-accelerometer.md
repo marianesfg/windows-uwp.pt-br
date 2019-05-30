@@ -6,20 +6,20 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 77ee3191bc41fca672a055a708523578390860b4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b2fe6fe4c7fe22d71e2154be2db082bb43cc4ed1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57623701"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369689"
 ---
 # <a name="use-the-accelerometer"></a>Usar o acelerômetro
 
 
 **APIs importantes**
 
--   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**acelerômetro**](https://msdn.microsoft.com/library/windows/apps/BR225687)
+-   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**Accelerometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer)
 
 **Exemplo**
 
@@ -41,7 +41,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
 
 ### <a name="instructions"></a>Instruções
 
--   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#**.
+-   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#** .
 
 -   Abra o arquivo MainPage.xaml.cs do projeto e substitua o código existente pelo exemplo abaixo.
 

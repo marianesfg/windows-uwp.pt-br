@@ -8,29 +8,29 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d2c80fd30d158f0890ed70311cdf83dce2058e5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: aef21bc72c7458aecc3ea8f0a3cae275a22d9f08
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644901"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365611"
 ---
 # <a name="manage-issues-with-audio-input"></a>Gerenciar problemas com entrada de áudio
 
 
 Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio.
 
-> **APIs importantes**: [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), [ **RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243), [ **SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
+> **APIs importantes**: [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer), [**RecognitionQualityDegrading**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognitionqualitydegrading), [**SpeechRecognitionAudioProblem**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionAudioProblem)
 
 
 ## <a name="assess-audio-input-quality"></a>Avaliar a qualidade de entrada de áudio
 
 
-Quando o reconhecimento de fala estiver ativo, use o evento [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) de seu reconhecedor de fala para determinar se um ou mais problemas de áudio podem estar interferindo na entrada de fala. O argumento do evento ([**SpeechRecognitionQualityDegradingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn631430)) fornece a propriedade [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431), que descreve os problemas detectados com a entrada de áudio.
+Quando o reconhecimento de fala estiver ativo, use o evento [**RecognitionQualityDegrading**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognitionqualitydegrading) de seu reconhecedor de fala para determinar se um ou mais problemas de áudio podem estar interferindo na entrada de fala. O argumento do evento ([**SpeechRecognitionQualityDegradingEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs)) fornece a propriedade [**Problem**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionqualitydegradingeventargs.problem), que descreve os problemas detectados com a entrada de áudio.
 
 O reconhecimento pode ser afetado por excesso de ruído de fundo, um microfone mudo e o volume ou a velocidade do alto-falante.
 
-Aqui, configuramos um reconhecedor de fala e começamos a escutar o evento [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243).
+Aqui, configuramos um reconhecedor de fala e começamos a escutar o evento [**RecognitionQualityDegrading**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognitionqualitydegrading).
 
 ```CSharp
 private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
@@ -65,9 +65,9 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 ## <a name="manage-the-speech-recognition-experience"></a>Gerenciar a experiência de reconhecimento de fala
 
 
-Use a descrição fornecida pela propriedade [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) para ajudar o usuário a melhorar condições para o reconhecimento.
+Use a descrição fornecida pela propriedade [**Problem**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionqualitydegradingeventargs.problem) para ajudar o usuário a melhorar condições para o reconhecimento.
 
-Aqui, criamos um manipulador para o evento [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) que verifica se há um nível de volume baixo. Em seguida, usamos um objeto [**SpeechSynthesizer**](https://msdn.microsoft.com/library/windows/apps/dn298152) para sugerir que o usuário tente falar mais alto.
+Aqui, criamos um manipulador para o evento [**RecognitionQualityDegrading**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognitionqualitydegrading) que verifica se há um nível de volume baixo. Em seguida, usamos um objeto [**SpeechSynthesizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechSynthesis.SpeechSynthesizer) para sugerir que o usuário tente falar mais alto.
 
 ```CSharp
 private async void speechRecognizer_RecognitionQualityDegrading(

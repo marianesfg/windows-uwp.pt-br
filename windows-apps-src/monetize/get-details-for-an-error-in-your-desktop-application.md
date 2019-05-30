@@ -5,16 +5,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, detalhes, aplicativo da área de trabalho
 ms.localizationpriority: medium
-ms.openlocfilehash: 1451d0196b1bffa6b49f44c556502c1e086aeff0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 986e4a0c11430517872e6f0b21e429ef168529b7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646961"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372676"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a>Obter detalhes de um erro em seu aplicativo da área de trabalho
 
-Use este método na API de análise da Microsoft Store para obter dados detalhados de um erro específico do seu app no formato JSON. Este método só pode recuperar detalhes dos erros que ocorreram nos últimos 30 dias. Dados de erro detalhadas também estão disponíveis na [relatório de integridade](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicativos da área de trabalho no Partner Center.
+Use este método na API de análise da Microsoft Store para obter dados detalhados de um erro específico do seu app no formato JSON. Este método só pode recuperar detalhes dos erros que ocorreram nos últimos 30 dias. Dados de erro detalhadas também estão disponíveis na [relatório de integridade](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) para aplicativos da área de trabalho no Partner Center.
 
 Antes de usar este método, primeiro você deve usar o método [obter dados de relatório de erros](get-error-reporting-data.md) para recuperar a ID do erro para o qual você deseja obter informações detalhadas.
 
@@ -34,7 +34,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Método | URI da solicitação                                                          |
 |--------|----------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/failuredetails``` |
+| OBTER    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/failuredetails``` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -48,14 +48,14 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | cadeia de caracteres | A ID de produto do aplicativo da área de trabalho para o qual você deseja recuperar os detalhes do erro. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise para seu aplicativo da área de trabalho no Partner Center](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **relatório de integridade**) e recupere a ID do produto da URL. |  Sim  |
+| applicationId | cadeia de caracteres | A ID de produto do aplicativo da área de trabalho para o qual você deseja recuperar os detalhes do erro. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise para seu aplicativo da área de trabalho no Partner Center](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) (como o **relatório de integridade**) e recupere a ID do produto da URL. |  Sim  |
 | failureHash | cadeia de caracteres | A ID exclusiva do erro para o qual você deseja obter informações detalhadas. Para obter esse valor para o erro no qual você está interessado, use o método [obter dados de relatório de erros](get-error-reporting-data.md) e o valor **failureHash** no corpo da resposta desse método. |  Sim  |
-| startDate | date | A data de início no intervalo de datas dos dados de erros detalhados a serem recuperados. O padrão é 30 dias antes da data atual.<p/><p/>**Observação:**&nbsp;&nbsp;esse método só pode recuperar detalhes de erros que ocorreram nos últimos 30 dias. |  Não  |
+| startDate | date | A data de início no intervalo de datas dos dados de erros detalhados a serem recuperados. O padrão é 30 dias antes da data atual.<p/><p/>**Observação:** &nbsp;&nbsp;esse método só pode recuperar detalhes de erros que ocorreram nos últimos 30 dias. |  Não  |
 | endDate | date | A data de término no intervalo de datas dos dados de erros detalhados a serem recuperados. O padrão é a data atual. |  Não  |
 | top | int | O número de linhas de dados a serem retornadas na solicitação. O valor máximo e o valor padrão; se não forem especificados, será 10.000. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
 | skip | int | O número de linhas a serem ignoradas na consulta. Use este parâmetro para percorrer grandes conjuntos de dados. Por exemplo, top=10 e skip=0 recuperam as primeiras 10 linhas de dados, top=10 e skip=10 recuperam as próximas 10 linhas de dados e assim por diante. |  Não  |
-| filter |cadeia de caracteres  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>mercado</strong></li><li><strong>Data</strong></li><li><strong>cabIdHash</strong></li><li><strong>cabExpirationTime</strong></li><li><strong>deviceType</strong></li><li><strong>deviceModel</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li><li><strong>applicationVersion</strong></li><li><strong>osBuild</strong></li><li><strong>Nome de arquivo</strong></li></ul> | Não   |
-| orderby | cadeia de caracteres | Uma instrução que ordena os valores dos dados de resultado. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser uma das seguintes cadeias de caracteres:<ul><li><strong>mercado</strong></li><li><strong>Data</strong></li><li><strong>cabIdHash</strong></li><li><strong>cabExpirationTime</strong></li><li><strong>deviceType</strong></li><li><strong>deviceModel</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li><li><strong>applicationVersion</strong></li><li><strong>osBuild</strong></li><li><strong>Nome de arquivo</strong></li></ul><p>O parâmetro <em>order</em> é opcional, e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p><p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p> |  Não  |
+| filter |cadeia de caracteres  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>market</strong></li><li><strong>date</strong></li><li><strong>cabIdHash</strong></li><li><strong>cabExpirationTime</strong></li><li><strong>deviceType</strong></li><li><strong>deviceModel</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li><li><strong>applicationVersion</strong></li><li><strong>osBuild</strong></li><li><strong>fileName</strong></li></ul> | Não   |
+| orderby | cadeia de caracteres | Uma instrução que ordena os valores dos dados de resultado. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser uma das seguintes cadeias de caracteres:<ul><li><strong>market</strong></li><li><strong>date</strong></li><li><strong>cabIdHash</strong></li><li><strong>cabExpirationTime</strong></li><li><strong>deviceType</strong></li><li><strong>deviceModel</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li><li><strong>applicationVersion</strong></li><li><strong>osBuild</strong></li><li><strong>fileName</strong></li></ul><p>O parâmetro <em>order</em> é opcional, e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p><p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p> |  Não  |
 
 
 ### <a name="request-example"></a>Exemplo de solicitação

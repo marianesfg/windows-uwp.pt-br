@@ -6,12 +6,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dd23603df1f1c3fac151da2aea2f8435b3ee423
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4787b6c14408dc8ee35e26764caafc5b6e7fbdc9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633411"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371883"
 ---
 # <a name="connect-devices-through-remote-sessions"></a>Conectar dispositivos por meio de sessões remotas
 
@@ -21,7 +21,7 @@ Sessões remotas podem ser criadas por qualquer dispositivo Windows, e qualquer 
 
 ## <a name="preliminary-setup"></a>Configuração preliminar
 
-### <a name="add-the-remotesystem-capability"></a>Adicionar a funcionalidade remoteSystem
+### <a name="add-the-remotesystem-capability"></a>Adicionar funcionalidade remoteSystem
 
 Para seu app iniciar um app em um dispositivo remoto, você deve adicionar a funcionalidade `remoteSystem` ao manifesto do pacote do aplicativo. Você pode usar o designer de manifesto de pacote para adicioná-lo selecionando Sistema Remoto na guia **Remote System** em **Funcionalidades**, ou adicionar manualmente a linha a seguir ao arquivo _Package.appxmanifest_ do projeto.
 
@@ -57,7 +57,7 @@ using Windows.System.RemoteSystems;
 
 ## <a name="create-a-remote-session"></a>Criar uma sessão remota
 
-Para criar uma instância de sessão remota, você deve começar com um objeto **[RemoteSystemSessionController](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioncontroller)**. Use a seguinte estrutura para criar uma nova sessão e manipular solicitações de associação de outros dispositivos.
+Para criar uma instância de sessão remota, você deve começar com um objeto **[RemoteSystemSessionController](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioncontroller)** . Use a seguinte estrutura para criar uma nova sessão e manipular solicitações de associação de outros dispositivos.
 
 ```csharp
 public async void CreateSession() {
@@ -107,7 +107,7 @@ public async void CreateSession() {
 
 Se você quiser manter sua sessão remota oculta publicamente, você pode torná-la aparente apenas por convite. Somente os dispositivos que recebem um convite serão capazes de enviar solicitações de associação. 
 
-O procedimento é basicamente o mesmo acima, mas ao construir a instância **[RemoteSystemSessionController](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioncontroller)**, você passará em um objeto **[RemoteSystemSessionOptions](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.RemoteSystemSessionOptions)** configurado.
+O procedimento é basicamente o mesmo acima, mas ao construir a instância **[RemoteSystemSessionController](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioncontroller)** , você passará em um objeto **[RemoteSystemSessionOptions](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.RemoteSystemSessionOptions)** configurado.
 
 ```csharp
 // define the session options with the invite-only designation
@@ -195,7 +195,7 @@ Um dispositivo pode ingressar em várias sessões ao mesmo tempo. Por esse motiv
 
 ### <a name="receive-messages"></a>Receber mensagens
 
-Você pode trocar mensagens e dados com outros dispositivos participantes na sessão usando uma instância **[RemoteSystemSessionMessageChannel](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionmessagechannel)**, que representa um canal de comunicação de nível de sessão única. Assim que ele é inicializado, ele começa a escutar mensagens de entrada.
+Você pode trocar mensagens e dados com outros dispositivos participantes na sessão usando uma instância **[RemoteSystemSessionMessageChannel](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionmessagechannel)** , que representa um canal de comunicação de nível de sessão única. Assim que ele é inicializado, ele começa a escutar mensagens de entrada.
 
 >[!NOTE]
 >Mensagens devem ser serializadas e desserializadas das matrizes de bytes após enviar e receber mensagens. Essa funcionalidade está incluída nos exemplos a seguir, mas ela pode ser implementada separadamente para melhor modularidade de código. Veja o [aplicativo de amostra](https://github.com/microsoft/Windows-appsample-remote-system-sessions)) para um exemplo disso.
@@ -322,4 +322,4 @@ public async void SendMessageToListAsync(RemoteSystemSessionMessageChannel messa
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Aplicativos conectados e dispositivos (projeto Roma)](connected-apps-and-devices.md)
-* [Referência da API de sistemas remota](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)
+* [Referência da API de sistemas remota](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems)

@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 43ffd28c-c4df-405c-bf5c-29c94e0d142b
 keywords: windows 10, uwp, temporizador, threads
 ms.localizationpriority: medium
-ms.openlocfilehash: f11207a774b1ffcebde95e316634592020e6ed49
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3afa1720ede9728e9cc25af434a431300faf26d6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631211"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371215"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usando objetos do Windows Runtime em um ambiente multithread
 Este artigo discute a maneira como o .NET Framework lida com chamadas de códigos C# e Visual Basic para objetos fornecidos pelo Windows Runtime ou pelo Componentes do Tempo de Execução do Windows.
@@ -20,7 +20,7 @@ No .NET Framework, você pode acessar qualquer objeto de vários threads por pad
 
 Sempre que possível, o common language runtime (CLR) lida com objetos de outras fontes, como o Windows Runtime, como se fossem objetos do .NET Framework:
 
-- Se o objeto implementa a interface [IAgileObject](https://msdn.microsoft.com/library/Hh802476.aspx), ou possui o atributo [MarshalingBehaviorAttribute](https://go.microsoft.com/fwlink/p/?LinkId=256022) com [MarshalingType.Agile](https://go.microsoft.com/fwlink/p/?LinkId=256023), o CLR o trata como ágil.
+- Se o objeto implementa a interface [IAgileObject](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject), ou possui o atributo [MarshalingBehaviorAttribute](https://go.microsoft.com/fwlink/p/?LinkId=256022) com [MarshalingType.Agile](https://go.microsoft.com/fwlink/p/?LinkId=256023), o CLR o trata como ágil.
 
 - Se o CLR puder fazer uma chamada do thread onde foi feita para o contexto de threading do objeto alvo, ele faz isso de forma transparente.
 
@@ -34,7 +34,7 @@ Todos os tipos no componente que podem ser ativados são ágeis por padrão.
 > [!NOTE]
 >  Agilidade não implica a segurança do thread. Tanto no Windows Runtime como no .NET Framework, a maioria das classes não são seguras porque a segurança do segmento tem um custo de desempenho e a maioria dos objetos nunca é acessada por múltiplos segmentos. É mais eficiente sincronizar o acesso a objetos individuais (ou usar classes seguras) apenas conforme necessário.
 
-Quando você autoriza um componente do Tempo de Execução do Windows, você pode substituir o padrão. Consulte as interfaces [ICustomQueryInterface](/dotnet/api/system.runtime.interopservices.icustomqueryinterface) e [IAgileObject](https://msdn.microsoft.com/library/Hh802476.aspx).
+Quando você autoriza um componente do Tempo de Execução do Windows, você pode substituir o padrão. Consulte as interfaces [ICustomQueryInterface](/dotnet/api/system.runtime.interopservices.icustomqueryinterface) e [IAgileObject](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject).
 
 ## <a name="objects-from-the-windows-runtime"></a>Objeto do Windows Runtime
 A maioria das classes no Windows Runtime são ágeis, e o CLR as trata como ágil. A documentação para essas classes lista "MarshalingBehaviorAttribute(Agile)" entre os atributos da classe. No entanto, os membros de algumas dessas classes ágeis, como os controles XAML, lançam exceções se não forem chamados no segmento da interface de usuário. Por exemplo, o código a seguir tenta usar uma linha de fundo para definir uma propriedade do botão que foi clicado. A propriedade [Conteúdo](https://go.microsoft.com/fwlink/p/?LinkId=256025) do botão lança uma exceção.

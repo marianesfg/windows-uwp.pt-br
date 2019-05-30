@@ -6,12 +6,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 5563b8281a713b57f98c48ae04153b19062f2f12
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: e899b203a21f8c29c9c95973871881cc618b5d55
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334934"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371226"
 ---
 # <a name="create-an-app-submission"></a>Criar um envio de aplicativo
 
@@ -25,7 +25,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
-* Verifique se o aplicativo já tem pelo menos um envio com as informações de [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
+* Verifique se o aplicativo já tem pelo menos um envio com as informações de [classificações etárias](https://docs.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
 
 ## <a name="request"></a>Solicitação
 
@@ -45,7 +45,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um envio. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um envio. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 
 ### <a name="request-body"></a>Corpo da solicitação
 

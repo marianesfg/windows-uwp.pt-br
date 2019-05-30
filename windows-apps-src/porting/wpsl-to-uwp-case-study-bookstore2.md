@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ae1b0c272af5939deba73ff7a07797207d7caaa4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e3b6ab53e5e9f0b36e6bdeb047b48766cda7a2a5
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651001"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372396"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore2"></a>Windows Phone Silverlight, a UWP estudo de caso: Bookstore2
 
@@ -58,7 +58,7 @@ No MainPage.xaml, estas alterações iniciais de portabilidade são necessárias
 -   Mude "clr-namespace" para "using" na declaração de prefixo de namespace restante.
 -   Exclua `SupportedOrientations="Portrait"`e `Orientation="Portrait"`, e configure **Retrato** no manifesto do pacote do aplicativo no novo projeto.
 -   Exclua `shell:SystemTray.IsVisible="True"`.
--   Os tipos dos conversores de itens da lista de atalhos (que estão presentes na marcação como recursos) foram movidos para o namespace [**Windows.UI.Xaml.Controls.Primitives**](https://msdn.microsoft.com/library/windows/apps/br209818). Portanto, adicione a declaração do prefixo do namespace Windows\_IU\_Xaml\_controles\_primitivos e mapeá-la para **Primitives**. Nos recursos de conversores de item de lista de atalhos, mude o prefixo de `phone:` para `Windows_UI_Xaml_Controls_Primitives:`.
+-   Os tipos dos conversores de itens da lista de atalhos (que estão presentes na marcação como recursos) foram movidos para o namespace [**Windows.UI.Xaml.Controls.Primitives**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives). Portanto, adicione a declaração do prefixo do namespace Windows\_IU\_Xaml\_controles\_primitivos e mapeá-la para **Primitives**. Nos recursos de conversores de item de lista de atalhos, mude o prefixo de `phone:` para `Windows_UI_Xaml_Controls_Primitives:`.
 -   Assim como fizemos para o [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), substitua todas as referências ao estilo  `PhoneTextExtraLargeStyle` **TextBlock** por uma referência a `SubtitleTextBlockStyle`, substitua `PhoneTextSubtleStyle` por `SubtitleTextBlockStyle`, substitua `PhoneTextNormalStyle` por `CaptionTextBlockStyle` e substitua `PhoneTextTitle1Style` por `HeaderTextBlockStyle`.
 -   Há uma exceção em `BookTemplate`. O estilo do segundo **TextBlock** deve fazer referência a `CaptionTextBlockStyle`.
 -   Remova o atributo FontFamily do **TextBlock** dentro de `AuthorGroupHeaderTemplate` e defina o plano de fundo da **Border** para fazer referência a `SystemControlBackgroundAccentBrush`, em vez de `PhoneAccentBrush`.
@@ -67,7 +67,7 @@ No MainPage.xaml, estas alterações iniciais de portabilidade são necessárias
 ## <a name="replacing-the-longlistselector"></a>Substituindo o LongListSelector
 
 
-A substituição do **LongListSelector** por um controle [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) tem várias etapas, portanto, vamos começar. Um **LongListSelector** associa-se diretamente à fonte de dados agrupados, mas um **SemanticZoom** contém controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) ou [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705), que associam-se indiretamente aos dados por meio de um adaptador [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833). O **CollectionViewSource** precisa estar presente na marcação como um recurso, por isso vamos começar adicionando isso à marcação no MainPage.xaml dentro de `<Page.Resources>`.
+A substituição do **LongListSelector** por um controle [**SemanticZoom**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom) tem várias etapas, portanto, vamos começar. Um **LongListSelector** associa-se diretamente à fonte de dados agrupados, mas um **SemanticZoom** contém controles [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) ou [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), que associam-se indiretamente aos dados por meio de um adaptador [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource). O **CollectionViewSource** precisa estar presente na marcação como um recurso, por isso vamos começar adicionando isso à marcação no MainPage.xaml dentro de `<Page.Resources>`.
 
 ```xml
     <CollectionViewSource
@@ -142,7 +142,7 @@ A largura mínima de janela de 548 epx é apropriada para este caso porque esse 
 
 Antes de abordar a parte adaptável do Gerenciador de Estado Visual, precisamos primeiro criar o estado amplo, e isso significa a adição de novos elementos visuais e modelos à nossa marcação. Estas etapas descrevem como fazer isso. Por meio de convenções de nomenclatura para modelos e elementos visuais, incluiremos a palavra "wide" no nome de qualquer elemento ou modelo destinado ao estado largo. Se um elemento ou modelo não contiver a palavra "wide", você poderá assumir que ele se destina a um estado estreito, que é o estado padrão, e seus valores de propriedade serão definidos como valores locais em elementos visuais na página. Apenas os valores de propriedade para o estado largo serão definidos por meio de um Estado visual real na marcação.
 
--   Faça uma cópia do controle [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) na marcação e defina `x:Name="narrowSeZo"` na cópia. No original, defina `x:Name="wideSeZo"` e `Visibility="Collapsed"` para que o estado largo não fique visível por padrão.
+-   Faça uma cópia do controle [**SemanticZoom**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom) na marcação e defina `x:Name="narrowSeZo"` na cópia. No original, defina `x:Name="wideSeZo"` e `Visibility="Collapsed"` para que o estado largo não fique visível por padrão.
 -   Em `wideSeZo`, altere as **ListView**s para **GridView**s nas exibições ampliada e reduzida.
 -   Faça uma cópia desses três recursos `AuthorGroupHeaderTemplate`, `ZoomedOutAuthorTemplate` e `BookTemplate` e acrescente a palavra `Wide` às chaves das cópias. Também atualize `wideSeZo` para que faça referência às chaves desses novos recursos.
 -   Substitua o conteúdo de `AuthorGroupHeaderTemplateWide` por `<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Text="{Binding Name}"/>`.
@@ -220,7 +220,7 @@ O que resta são alguns ajustes de estilo final.
 
 -   Em `AuthorGroupHeaderTemplate`, defina `Foreground="White"` no **TextBlock** para que ele tenha a aparência correta quando for ser executado na família de dispositivos móveis.
 -   Adicione `FontWeight="SemiBold"` ao **TextBlock** em `AuthorGroupHeaderTemplate` e `ZoomedOutAuthorTemplate`.
--   Em `narrowSeZo`, os cabeçalhos de grupo e os autores na exibição reduzida são alinhados à esquerda, em vez de alongados, portanto vamos trabalhar nisso. Criaremos um [**HeaderContainerStyle**](https://msdn.microsoft.com/library/windows/apps/dn251841) para a exibição ampliada com [**HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/br209417) definido como `Stretch`. E criaremos um [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/br242817) para a exibição reduzida contendo esse mesmo [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817). Veja aqui como ficou a aparência.
+-   Em `narrowSeZo`, os cabeçalhos de grupo e os autores na exibição reduzida são alinhados à esquerda, em vez de alongados, portanto vamos trabalhar nisso. Criaremos um [**HeaderContainerStyle**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.groupstyle.headercontainerstyle) para a exibição ampliada com [**HorizontalContentAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.horizontalcontentalignment) definido como `Stretch`. E criaremos um [**ItemContainerStyle**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) para a exibição reduzida contendo esse mesmo [**Setter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter). Veja aqui como ficou a aparência.
 
 ```xml
    <Style x:Key="AuthorGroupHeaderContainerStyle" TargetType="ListViewHeaderItem">
@@ -272,7 +272,7 @@ Esta seção contém um exemplo das facilidades criadas por termos mudado nosso 
 
 Quando associamos **CollectionViewSource.Source** a Authors, a única coisa que estamos comunicando é que cada Author em Authors é um grupo de *alguma coisa*. Deixamos que o **CollectionViewSource** determine que Author é, nesse caso, um grupo de BookSku. Isso funciona: mas não é flexível. E se quisermos que Author seja *tanto* um grupo de BookSku *quanto* um grupo dos endereços de onde o autor morou? Não é possível que Author *seja* esses dois grupos. Mas Author pode *ter* qualquer número de grupos. E esta é a solução: use o padrão *tem-um-grupo* em vez de, ou em conjunto com o padrão *é-um-grupo* que estamos usando no momento. Este é o procedimento:
 
--   Altere Author de forma que não derive mais de **List&lt;T&gt;**.
+-   Altere Author de forma que não derive mais de **List&lt;T&gt;** .
 -   Adiciona esse campo à 
 -   Adicione essa propriedade para 
 -   E, é claro, podemos repetir as duas etapas acima para adicionar quantos grupos precisarmos a Author.

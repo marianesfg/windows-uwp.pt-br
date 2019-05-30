@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, pacote
 ms.localizationpriority: medium
-ms.openlocfilehash: 631ba2c278c72f406a0fdd8a6d6d8d8a14c9eb05
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 27ea422982ce991de20e67649bc0925a60547cd8
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635401"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368310"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Empacotar seu jogo em DirectX da Plataforma Universal do Windows (UWP)
 
@@ -22,7 +22,7 @@ Além do modelo de pacote de aplicativo, o Windows 10 dá suporte a pacotes de a
 -   Pacotes de aplicativos que contêm arquivos executáveis e bibliotecas específicos da plataforma. Tipicamente, um jogo UWP pode ter até três pacotes de aplicativo: um para cada arquitetura x86, x64 e CPU ARM. Todos os códigos e dados específicos da plataforma de hardware em questão deverão estar incluídos nesse pacote do aplicativo. O pacote do aplicativo também deve conter todos os principais ativos para que o jogo seja executado com um nível básico de fidelidade e desempenho.
 -   Os pacotes de recursos contêm dados opcionais ou expandidos independentes do tipo de plataforma, como ativos do jogo (texturas, malhas, som, texto). Um jogo UWP pode ter um ou mais pacotes de recurso, incluindo pacotes de recurso para ativos ou texturas de alta definição, nível de recursos 11+ do DirectX ou ativos e recursos específicos de idioma.
 
-Para obter mais informações sobre lotes e pacotes de aplicativos, leia [Definição dos recursos do aplicativo](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321).
+Para obter mais informações sobre lotes e pacotes de aplicativos, leia [Definição dos recursos do aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh965321(v=win.10)).
 
 Embora seja possível colocar todo o conteúdo nos pacotes de aplicativos, isso é ineficiente e redundante. Por que reproduzir três vezes o mesmo arquivo grande de textura para cada plataforma, principalmente para plataformas ARM que podem não usá-lo? Uma boa meta é tentar minimizar o que seu cliente precisa baixar, para que ele possa começar a jogar logo o jogo, economizar espaço no dispositivo dele e evitar possíveis custos de largura de banda limitada.
 
@@ -83,7 +83,7 @@ Ao configurar seu aplicativo para dar suporte a ativos localizados para vários 
 
      
 
--   Use as APIs em [**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022) e [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) para especificar e carregar os recursos específicos de localidade para seu aplicativo. Além disso, use referências de ativo que não incluam a localidade específica, já que essas APIs determinam a localidade correta com base nas configurações do usuário e recuperam o recurso certo para ele.
+-   Use as APIs em [**Windows.ApplicationModel.Resources**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources) e [**Windows.ApplicationModel.Resources.Core**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core) para especificar e carregar os recursos específicos de localidade para seu aplicativo. Além disso, use referências de ativo que não incluam a localidade específica, já que essas APIs determinam a localidade correta com base nas configurações do usuário e recuperam o recurso certo para ele.
 -   No Microsoft Visual Studio 2015, selecione **projeto -> Store -> Criar pacote do aplicativo...**  e criar o pacote.
 
 ## <a name="defining-scaling-factor-resource-packs"></a>Definição do fator de dimensionamento dos pacotes de recursos
@@ -100,7 +100,7 @@ Quando estiver configurando seu aplicativo para oferecer suporte a pacotes de re
 
      
 
--   Use as APIs em [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) para carregar os ativos. As referências a ativos devem ser generalizadas (sem sufixo), omitindo a variação de escala específica. O sistema irá recuperar o recurso de escala apropriado para a exibição e as configurações do usuário.
+-   Use as APIs em [**Windows.ApplicationModel.Resources.Core**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core) para carregar os ativos. As referências a ativos devem ser generalizadas (sem sufixo), omitindo a variação de escala específica. O sistema irá recuperar o recurso de escala apropriado para a exibição e as configurações do usuário.
 -   No Visual Studio 2015, selecione **projeto -> Store -> Criar pacote do aplicativo...**  e criar o pacote.
 
 ## <a name="defining-directx-feature-level-resource-packs"></a>Definição do nível de recursos do DirectX dos pacotes de recursos
@@ -110,7 +110,7 @@ Os níveis de recursos do DirectX correspondem a configurações de recursos de 
 
 Seu pacote de aplicativo de linha de base deve usar os formatos de compactação de textura de linha de base: BC1, BC2 ou BC3. Esses formatos podem ser consumidos por qualquer dispositivo UWP, desde plataformas ARM inferiores até estações de trabalho multi-GPU dedicadas e computadores de mídia.
 
-O suporte ao formato de textura no nível de recursos 10 do DirectX ou superior deve ser adicionado em um pacote de recursos para conservar espaço em disco local e largura de banda para download. Isso possibilita o uso dos esquemas de compactação mais avançados para 11, como BC6H e BC7. (Para obter mais detalhes, consulte [compactação de bloco de textura em Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh308955).) Esses formatos são mais eficientes para os ativos de textura de alta resolução com suporte pelo GPUs modernas e usá-los melhora a aparência, desempenho e requisitos de espaço de seu jogo em plataformas high-end.
+O suporte ao formato de textura no nível de recursos 10 do DirectX ou superior deve ser adicionado em um pacote de recursos para conservar espaço em disco local e largura de banda para download. Isso possibilita o uso dos esquemas de compactação mais avançados para 11, como BC6H e BC7. (Para obter mais detalhes, consulte [compactação de bloco de textura em Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/texture-block-compression-in-direct3d-11).) Esses formatos são mais eficientes para os ativos de textura de alta resolução com suporte pelo GPUs modernas e usá-los melhora a aparência, desempenho e requisitos de espaço de seu jogo em plataformas high-end.
 
 | Nível de recursos do DirectX | Compactação de textura suportada |
 |-----------------------|-------------------------------|
@@ -163,7 +163,7 @@ Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferente
     );
     ```
 
--   Use as APIs em [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) para carregar os recursos. As referências a ativos devem ser generalizadas (sem sufixo), omitindo o nível de recursos. Entretanto, ao contrário de idioma e escala, o sistema não determina automaticamente qual nível de recurso é ideal para uma determinada exibição; cabea você determinar com base na lógica do código. Depois de fazer essa determinação, use as APIs para informar ao sistema operacional sobre o nível de recurso preferencial. Assim, o sistema poderá recuperar o recurso correto com base nessa preferência. Aqui está um exemplo de código que mostra como informar seu aplicativo sobre o nível de recursos do DirectX atual para a plataforma:
+-   Use as APIs em [**Windows.ApplicationModel.Resources.Core**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core) para carregar os recursos. As referências a ativos devem ser generalizadas (sem sufixo), omitindo o nível de recursos. Entretanto, ao contrário de idioma e escala, o sistema não determina automaticamente qual nível de recurso é ideal para uma determinada exibição; cabea você determinar com base na lógica do código. Depois de fazer essa determinação, use as APIs para informar ao sistema operacional sobre o nível de recurso preferencial. Assim, o sistema poderá recuperar o recurso correto com base nessa preferência. Aqui está um exemplo de código que mostra como informar seu aplicativo sobre o nível de recursos do DirectX atual para a plataforma:
     
     ```cpp
     // Set the current UI thread's MRT ResourceContext's DXFeatureLevel with the right DXFL. 
@@ -191,7 +191,7 @@ Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferente
 
      
 
--   Agora, use o [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/br206078) para localizar o arquivo que corresponda ao nível de recursos de DirectX atual. O **ResourceManager** retorna um [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/br206089), que você consulta com [**ResourceMap:: GetValue**](https://msdn.microsoft.com/library/windows/apps/br206098) (ou [**ResourceMap:: TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj655438)) e um [**ResourceContext**](https://msdn.microsoft.com/library/windows/apps/br206064) fornecido. Isso retorna um [**ResourceCandidate**](https://msdn.microsoft.com/library/windows/apps/br206051) que corresponde mais proximamente ao nível de recursos de DirectX que foi especificando chamando [**SetGlobalQualifierValue**](https://msdn.microsoft.com/library/windows/apps/mt622101).
+-   Agora, use o [**ResourceManager**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceManager) para localizar o arquivo que corresponda ao nível de recursos de DirectX atual. O **ResourceManager** retorna um [**ResourceMap**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap), que você consulta com [**ResourceMap:: GetValue**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcemap.getvalue) (ou [**ResourceMap:: TryGetValue**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcemap.trygetvalue)) e um [**ResourceContext**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceContext) fornecido. Isso retorna um [**ResourceCandidate**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceCandidate) que corresponde mais proximamente ao nível de recursos de DirectX que foi especificando chamando [**SetGlobalQualifierValue**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue).
     
     ```cpp
     // An explicit ResourceContext is needed to match the DirectX feature level for the display on which the current view is presented.
@@ -216,9 +216,9 @@ Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferente
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Definindo recursos do aplicativo](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321)
-* [Empacotando aplicativos](https://msdn.microsoft.com/library/windows/apps/mt270969)
-* [Empacotador de aplicativo (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767)
+* [Definindo recursos do aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh965321(v=win.10))
+* [Empacotando aplicativos](https://docs.microsoft.com/windows/uwp/packaging/index)
+* [Empacotador de aplicativo (MakeAppx.exe)](https://docs.microsoft.com/windows/desktop/appxpkg/make-appx-package--makeappx-exe-)
 
  
 

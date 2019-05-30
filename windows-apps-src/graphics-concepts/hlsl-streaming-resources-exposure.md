@@ -7,35 +7,35 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 00d6c16ecaa64abf7d83154fdb864671dbff3eae
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: db8a368f6cd9e0b6d38fb16d81dbc31a0f8a615f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643481"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370607"
 ---
 # <a name="hlsl-streaming-resources-exposure"></a>Exposição de recursos de streaming HLSL
 
 
-Uma sintaxe específica da Microsoft HLSL High Level Shader Language (HLSL) é necessária para dar suporte a recursos de streaming no [Modelo de sombreador 5](https://msdn.microsoft.com/library/windows/desktop/ff471356).
+Uma sintaxe específica da Microsoft HLSL High Level Shader Language (HLSL) é necessária para dar suporte a recursos de streaming no [Modelo de sombreador 5](https://docs.microsoft.com/windows/desktop/direct3dhlsl/d3d11-graphics-reference-sm5).
 
 A sintaxe HLSL para o Modelo de Sombreador 5 é permitida apenas em dispositivos com suporte a recursos de streaming. Cada método HLSL relevante para streaming de recursos na tabela a seguir aceita um (feedback) ou dois (vinculação e feedback nesta ordem) parâmetros opcionais adicionais. Por exemplo, um método de **Amostra** é:
 
 **Exemplo (amostra, localização \[, deslocamento \[, clamp \[, comentários\] \] \])**
 
-Um exemplo de um método de **Amostra** é [**Texture2D.Sample(S,float,int,float,uint)**](https://msdn.microsoft.com/library/windows/desktop/dn393787).
+Um exemplo de um método de **Amostra** é [**Texture2D.Sample(S,float,int,float,uint)** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/t2darray-sample-s-float-int-float-uint-).
 
 Os parâmetros de deslocamento, vinculação e feedback são opcionais. Você deve especificar todos os parâmetros opcionais até aquele que você precisa, que é consistente com as regras do C++ para argumentos de função padrão. Por exemplo, se for necessário o status de feedback, parâmetros de compensação e vinculação precisam ser fornecidos explicitamente à **Amostra**, mesmo que eles talvez não sejam logicamente necessários.
 
 O parâmetro de vinculação é um valor flutuante escalar. O valor literal de vinculação = 0.0f indica que a operação de vinculação não é executada.
 
-O parâmetro de feedback é uma variável **uint** que você pode fornecer para o acesso à memória consultando a função intrínseca [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083). Você não deve modificar ou interpretar o valor do parâmetro de feedback; porém, o compilador não fornece qualquer análise avançada e diagnóstico para detectar se você modificou o valor.
+O parâmetro de feedback é uma variável **uint** que você pode fornecer para o acesso à memória consultando a função intrínseca [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped). Você não deve modificar ou interpretar o valor do parâmetro de feedback; porém, o compilador não fornece qualquer análise avançada e diagnóstico para detectar se você modificou o valor.
 
-Veja aqui a sintaxe de [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083):
+Veja aqui a sintaxe de [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped):
 
-**bool CheckAccessFullyMapped (em uint FeedbackVar);**
+**bool CheckAccessFullyMapped(in uint FeedbackVar);**
 
-[**CheckAccessFullyMapped** ](https://msdn.microsoft.com/library/windows/desktop/dn292083) interpreta o valor de *FeedbackVar* e retorna true se todos os dados que está sendo acessados foi mapeada no recurso; caso contrário, **CheckAccessFullyMapped**retorna false.
+[**CheckAccessFullyMapped** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) interpreta o valor de *FeedbackVar* e retorna true se todos os dados que está sendo acessados foi mapeada no recurso; caso contrário, **CheckAccessFullyMapped**retorna false.
 
 Se o parâmetro de feedback ou vinculação estiver presente, o compilador emite uma variante de instrução básica. Por exemplo, o exemplo de um recurso de streaming gera a instrução `sample_cl_s`.
 
@@ -56,7 +56,7 @@ Esta é a tabela resumida dos métodos HLSL que são alterados para dar suporte 
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><a href="https://msdn.microsoft.com/library/windows/desktop/ff471359">Objetos HLSL</a> </th>
+<th align="left"><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/d3d11-graphics-reference-sm5-objects">Objetos HLSL</a> </th>
 <th align="left">Métodos intrínsecos com opção de feedback (*) - também tem a opção de vinculação</th>
 </tr>
 </thead>

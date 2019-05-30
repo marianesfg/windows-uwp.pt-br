@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 210cca8a4b17b77e8c1f9cb490a79bcd1a53b6c7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6c8cc237dec082096eb235237490e4f5d29cc6dd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627611"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364314"
 ---
 # <a name="semantic-zoom"></a>Zoom Semântico
 
@@ -29,7 +29,7 @@ Zoom Semântico permite que o usuário alterne duas exibições diferentes do me
 
 Por exemplo, ao exibir um catálogo de endereços, o usuário pode reduzir a fim de ir rapidamente para a letra "W" e ampliar essa letra para ver os nomes associados a ela. 
 
-> **APIs importantes**: [Classe SemanticZoom](https://msdn.microsoft.com/library/windows/apps/hh702601), [classe ListView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx), [classe GridView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)
+> **APIs importantes**: [Classe SemanticZoom](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom), [classe ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [classe GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
 
 **Recursos**:
 
@@ -41,7 +41,7 @@ Por exemplo, ao exibir um catálogo de endereços, o usuário pode reduzir a fim
 
 Use um controle **SemanticZoom** quando precisar mostrar um conjunto de dados agrupado que seja suficientemente grande para que ele não possa ser todo mostrado em uma ou duas páginas.
 
-Não confunda zoom semântico com zoom óptico. Apesar deles compartilharem a mesma interação e o mesmo comportamento básico (exibindo mais ou menos detalhes baseados em um fator de zoom), o zoom óptico se refere ao ajuste da ampliação para uma área de conteúdo ou objeto como uma fotografia. Para obter informações sobre um controle que executa ampliação óptica, veja o controle [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx).
+Não confunda zoom semântico com zoom óptico. Apesar deles compartilharem a mesma interação e o mesmo comportamento básico (exibindo mais ou menos detalhes baseados em um fator de zoom), o zoom óptico se refere ao ajuste da ampliação para uma área de conteúdo ou objeto como uma fotografia. Para obter informações sobre um controle que executa ampliação óptica, veja o controle [ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer).
 
 ## <a name="examples"></a>Exemplos
 
@@ -73,7 +73,7 @@ Um catálogo de endereços é outro exemplo de conjunto de dados que pode ser mu
 
 ## <a name="create-a-semantic-zoom"></a>Criar um Zoom Semântico
 
-O controle **SemanticZoom** não tem nenhuma representação visual dele próprio. Ele é um controle de host que gerencia a transição entre 2 outros controles que fornecem as exibição do conteúdo, normalmente os controles **ListView** ou **GridView**.  Você define os controles de exibição como as propriedades [ZoomedInView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedinview.aspx) e [ZoomedOutView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedoutview.aspx) do SemanticZoom.
+O controle **SemanticZoom** não tem nenhuma representação visual dele próprio. Ele é um controle de host que gerencia a transição entre 2 outros controles que fornecem as exibição do conteúdo, normalmente os controles **ListView** ou **GridView**.  Você define os controles de exibição como as propriedades [ZoomedInView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.zoomedinview) e [ZoomedOutView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.zoomedoutview) do SemanticZoom.
 
 Os 3 elementos de que você precisa para um Zoom Semântico são:
 - Uma fonte de dados agrupados
@@ -82,7 +82,7 @@ Os 3 elementos de que você precisa para um Zoom Semântico são:
 
 Antes de usar um Zoom Semântico, você deve entender como usar uma exibição de lista com dados agrupados. Para obter mais informações, consulte [exibição de lista e exibição de grade](listview-and-gridview.md). 
 
-> **Observação**&nbsp;&nbsp;Para definir as exibições ampliada e reduzida do controle SemanticZoom, você pode usar qualquer um dos controles que implementam a interface [ISemanticZoomInformation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.isemanticzoominformation.aspx). A estrutura XAML fornece 3 controles que implementam esta interface: ListView, GridView e Hub.
+> **Observação**&nbsp;&nbsp;Para definir as exibições ampliada e reduzida do controle SemanticZoom, você pode usar qualquer um dos controles que implementam a interface [ISemanticZoomInformation](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ISemanticZoomInformation). A estrutura XAML fornece 3 controles que implementam esta interface: ListView, GridView e Hub.
  
  Esta XAML mostra a estrutura do controle SemanticZoom. Você atribui outros os controles às propriedades ZoomedInView e ZoomedOutView.
  
@@ -163,11 +163,11 @@ Esta XAML define um controle ListView para a exibição reduzida. Este exemplo m
 
 **Sincronizar os modos de exibição**
 
-As exibições ampliadas e reduzidas devem ser sincronizadas, de forma que se um usuário selecionar um grupo na exibição reduzida, os detalhes desse mesmo grupo sejam mostrados na exibição ampliada. Você pode usar um [CollectionViewSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx) ou adicionar código para sincronizar as exibições.
+As exibições ampliadas e reduzidas devem ser sincronizadas, de forma que se um usuário selecionar um grupo na exibição reduzida, os detalhes desse mesmo grupo sejam mostrados na exibição ampliada. Você pode usar um [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) ou adicionar código para sincronizar as exibições.
 
-Quaisquer controles associados ao mesmo CollectionViewSource sempre terão o mesmo item atual. Se as duas exibições usarem o mesmo CollectionViewSource como fonte de dados, o CollectionViewSource sincronizará as exibições automaticamente. Para saber mais, consulte a [CollectionViewSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx).
+Quaisquer controles associados ao mesmo CollectionViewSource sempre terão o mesmo item atual. Se as duas exibições usarem o mesmo CollectionViewSource como fonte de dados, o CollectionViewSource sincronizará as exibições automaticamente. Para saber mais, consulte a [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource).
 
-Se você não usar um CollectionViewSource para sincronizar as exibições, será preciso manipular o evento [ViewChangeStarted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.viewchangestarted.aspx) e sincronizar os itens no manipulador de eventos como esse, conforme mostrado aqui.
+Se você não usar um CollectionViewSource para sincronizar as exibições, será preciso manipular o evento [ViewChangeStarted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.viewchangestarted) e sincronizar os itens no manipulador de eventos como esse, conforme mostrado aqui.
 
 ```xaml
 <SemanticZoom x:Name="semanticZoom" ViewChangeStarted="SemanticZoom_ViewChangeStarted">

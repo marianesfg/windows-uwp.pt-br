@@ -6,12 +6,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, acessibilidade, jogos
 ms.localizationpriority: medium
-ms.openlocfilehash: 38060d0a6bead360ef8a682902a433670c79b495
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: a3ef82db2d0ddb7883179279fd7e48c1acf38dd3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162774"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369170"
 ---
 #  <a name="making-games-accessible"></a>Tronando os jogos acessíveis
 
@@ -35,7 +35,7 @@ Número de usuários que podem jogar o jogo x grandiosidade do jogo = vendas do 
 
 Se tiver feito um jogo incrível muito complicado ou intrincado e que apenas algumas pessoas podem jogá-lo, você limitará as vendas. Da mesma forma, se tiver feito um jogo que não possa ser jogado por pessoas com deficiências física, sensorial ou cognitiva, você perderá vendas em potencial. Considerando que, por exemplo, [19% da população apenas nos Estados Unidos têm alguma forma de deficiência](https://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), [uma estimativa de que 14% dos adultos nos EUA têm dificuldade de leitura](https://nces.ed.gov/naal/estimates/overview.aspx) e [uma estimativa de que 10% dos homens têm alguma forma de deficiência visual de cores](https://www.aao.org/eye-health/diseases/color-blindness-risk), isso pode ter um grande impacto na receita do título. 
 
-Para mais justificativas comerciais, consulte [Criando videogames acessíveis](https://msdn.microsoft.com/library/windows/desktop/ee415219).
+Para mais justificativas comerciais, consulte [Criando videogames acessíveis](https://docs.microsoft.com/windows/desktop/DxTechArts/accessibility-best-practices).
 
 ### <a name="better-games"></a>Jogos melhores
 
@@ -185,7 +185,7 @@ Aqui estão algumas diretrizes básicas a serem consideradas durante o design de
 
 *   Selecione uma fonte legível simples.
 *   Selecione um tamanho de fonte suficientemente grande pense em ter uma opção de tamanho de fonte ajustável para mais flexibilidade. (O tamanho de fonte ideal depende do tamanho da tela, da distância da tela na exibição etc.)
-*   Crie alto contraste entre as cores de fundo e da fonte. Use contorno forte e sombras no texto. Use uma sobreposição de tela de fundo nas legendas e lembre-se de fornecer opções para que ela seja ativada ou desativada. (Para obter mais informações, consulte [Informações sobre o índice de contraste](https://msdn.microsoft.com/windows/uwp/accessibility/accessible-text-requirements).)
+*   Crie alto contraste entre as cores de fundo e da fonte. Use contorno forte e sombras no texto. Use uma sobreposição de tela de fundo nas legendas e lembre-se de fornecer opções para que ela seja ativada ou desativada. (Para obter mais informações, consulte [Informações sobre o índice de contraste](https://docs.microsoft.com/windows/uwp/accessibility/accessible-text-requirements).)
 * Exiba sentenças curtas na tela, máximo de 38 caracteres por linha e máximo de 2-3 linhas de cada vez. (Lembre-se não revelar o jogo exibindo o texto antes do evento ocorrer.)
 *   Diferencie o que está fazendo o som ou quem está falando. (Exemplo: "Daniel: Olá!")
 *   Dê a opção para ativar e desativar legendas ocultas e legendas. (Recurso adicional: Capacidade de selecionar a quantidade de informações som é exibida com base na importância.)
@@ -271,5 +271,5 @@ Aqui estão alguns sites externos que fornecem informações adicionais sobre ac
 ## <a name="related-links"></a>Links relacionados
 * [Design inclusivo](https://www.microsoft.com/design/inclusive)
 * [Hub do desenvolvedor de acessibilidade da Microsoft](https://developer.microsoft.com/windows/accessible-apps)
-* [Desenvolvimento de aplicativos da UWP acessíveis](https://msdn.microsoft.com/windows/uwp/accessibility/accessibility)
+* [Desenvolvimento de aplicativos da UWP acessíveis](https://docs.microsoft.com/windows/uwp/accessibility/accessibility)
 * [Livro eletrônico de Software para acessibilidade de engenharia](https://www.microsoft.com/download/details.aspx?id=19262)

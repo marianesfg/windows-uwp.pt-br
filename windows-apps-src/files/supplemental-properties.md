@@ -5,12 +5,12 @@ ms.date: 01/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, API do WinRT, indexador, pesquisa
 localizationpriority: medium
-ms.openlocfilehash: b2ac43c9aa2d27f8745e9075abc13d8feaba2370
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2a77bfc37d853efd28bde9bc3043d072888822f2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592681"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369260"
 ---
 # <a name="using-supplemental-properties"></a>Usando propriedades complementares  
 
@@ -27,7 +27,7 @@ Tornando esses metadados pesquisáveis instantaneamente permite que os usuários
 Há décadas, a solução para a pesquisa rápida no Windows tem sido o indexador e na atualização para criadores ele foi atualizado para dar suporte a esses novos cenários. Aplicativos agora são capazes de arquivos de marca com propriedades adicionais além daqueles que são extraídas pelo sistema. Essas propriedades são tratadas como cidadãos de primeira classe  
 
 ## <a name="windows-properties"></a>Propriedades do Windows 
-O [sistema de propriedades do Windows](https://msdn.microsoft.com/library/windows/desktop/ff728898) tem sido uma parte fundamental de interagir com arquivos por anos. Ele permite que os aplicativos ler as propriedades de arquivos sem precisar compreender as partes internas de todos os formatos de arquivo diferentes ou linguagens de que um arquivo pode ser no. Tudo o que é abstraído para você como desenvolvedor, tudo o que você precisa fazer é perguntar para obter uma lista e especifique em ordem crescente ou decrescente.  
+O [sistema de propriedades do Windows](https://docs.microsoft.com/windows/desktop/properties/windows-properties-system) tem sido uma parte fundamental de interagir com arquivos por anos. Ele permite que os aplicativos ler as propriedades de arquivos sem precisar compreender as partes internas de todos os formatos de arquivo diferentes ou linguagens de que um arquivo pode ser no. Tudo o que é abstraído para você como desenvolvedor, tudo o que você precisa fazer é perguntar para obter uma lista e especifique em ordem crescente ou decrescente.  
 
 O sistema de propriedades está entremeado com o indexador do Windows – ele lê todas as propriedades de arquivos dentro de seu escopo e armazena-os. Mais tarde quando um aplicativo solicita uma lista de todos os. docx em uma pasta a ser classificada por data de modificação, exceto aquelas criadas por John Smith, o indexador pode retornar a lista instantaneamente.  
 

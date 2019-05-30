@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f0b42a10c2cdd61aef84e08d6bd4f6408a978c3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8a280d07ab7d715adaa7da941be641cd54e24443
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617311"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371011"
 ---
 # <a name="lost-devices"></a>Dispositivos perdidos
 
@@ -21,7 +21,7 @@ Um dispositivo Direct3D pode estar em um estado operacional ou um estado perdido
 
 Por padrão, o conjunto completo de cenários que pode provocar a perda do dispositivo não é especificado. Alguns exemplos típicos incluem perda do foco, como quando o usuário pressionar ALT + TAB ou quando uma caixa de diálogo do sistema é inicializada. Os dispositivos também podem ser perdidos devido a um evento de gerenciamento de energia ou quando outro app assume a operação de tela inteira. Além disso, qualquer falha de redefinição de dispositivo o coloca em um estado perdido.
 
-Todos os métodos derivados de [**IDesconhecido**](https://msdn.microsoft.com/library/windows/desktop/ms680509) têm garantia de funcionar depois que um dispositivo é perdido. Após a perda de dispositivo, cada função geralmente tem três opções:
+Todos os métodos derivados de [**IDesconhecido**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) têm garantia de funcionar depois que um dispositivo é perdido. Após a perda de dispositivo, cada função geralmente tem três opções:
 
 -   Falhar com um erro "dispositivo perdido": isso significa que o app precisa reconhecer que o dispositivo foi perdido para que o app identifique que algo não está funcionando como o esperado.
 -   Falhar em modo silencioso, retornando S\_Okey ou qualquer outro código de retorno - se uma função silenciosamente falhar, o aplicativo geralmente não é possível distinguir entre o resultado de "êxito" e "Falha silenciosa".

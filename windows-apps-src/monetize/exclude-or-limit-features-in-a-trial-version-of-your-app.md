@@ -6,19 +6,19 @@ keywords: windows 10, uwp, compra no aplicativo, avaliação, IAP, Windows.Appli
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 38590282a95e29ab240486e9c4a3f9cb9afe229c
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 868f9f5742122df861f5c7c62bc147372307033f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335093"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371800"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>Excluir ou limitar recursos em uma versão de avaliação
 
 Se você permitir que os clientes usem seu app gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do app excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que seu aplicativo permita que eles funcionem apenas após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
 
 > [!IMPORTANT]
-> Este artigo demonstra como usar os membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para implementar a funcionalidade de demonstração. Esse namespace não está sendo atualizado com os novos recursos e recomendamos que você use o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) em vez disso. O **Windows.Services.Store** namespace oferece suporte a tipos de complemento mais recente, como gerenciado pelo Store consumíveis complementos e assinaturas e é projetado para ser compatível com tipos futuros de produtos e recursos suportados pelo parceiro Centro e a Store. O namespace **Windows.Services.Store** foi introduzido no Windows 10, versão 1607 e pode ser usada somente em projetos para **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio. Para obter informações sobre como implementar a funcionalidade de demonstração usando o namespace **Windows.Services.Store**, consulte [este artigo](implement-a-trial-version-of-your-app.md).
+> Este artigo demonstra como usar os membros do namespace [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) para implementar a funcionalidade de demonstração. Esse namespace não está sendo atualizado com os novos recursos e recomendamos que você use o namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) em vez disso. O **Windows.Services.Store** namespace oferece suporte a tipos de complemento mais recente, como gerenciado pelo Store consumíveis complementos e assinaturas e é projetado para ser compatível com tipos futuros de produtos e recursos suportados pelo parceiro Centro e a Store. O namespace **Windows.Services.Store** foi introduzido no Windows 10, versão 1607 e pode ser usada somente em projetos para **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio. Para obter informações sobre como implementar a funcionalidade de demonstração usando o namespace **Windows.Services.Store**, consulte [este artigo](implement-a-trial-version-of-your-app.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -26,7 +26,7 @@ Um aplicativo do Windows no qual devem ser adicionados os recursos que os client
 
 ## <a name="step-1-pick-the-features-you-want-to-enable-or-disable-during-the-trial-period"></a>Etapa 1: Escolher os recursos que você deseja habilitar ou desabilitar durante o período de avaliação
 
-O estado da licença atual de seu app é armazenado como propriedades da classe [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157). Geralmente, você coloca as funções que dependem do estado da licença em um bloco condicional, conforme descrito na próxima etapa. Ao considerar esses recursos, verifique se você pode implementá-los de maneira que funcionem em todos os estados de licença.
+O estado da licença atual de seu app é armazenado como propriedades da classe [LicenseInformation](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.LicenseInformation). Geralmente, você coloca as funções que dependem do estado da licença em um bloco condicional, conforme descrito na próxima etapa. Ao considerar esses recursos, verifique se você pode implementá-los de maneira que funcionem em todos os estados de licença.
 
 Decida também como você gostaria de habilitar as alterações na licença do aplicativo durante sua execução. O aplicativo de avaliação pode conter todos os recursos, mas ter faixas de anúncios no aplicativo que a versão paga não tem. O aplicativo de avaliação também pode desabilitar determinados recursos ou exibir mensagens regulares solicitando a compra.
 
@@ -61,9 +61,9 @@ Se quiser detectar a mudança de licença e tomar alguma providência no seu apl
 
 ## <a name="step-2-initialize-the-license-info"></a>Etapa 2: Inicializar as informações de licença
 
-Quando seu app estiver sendo inicializado, obtenha o objeto [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157) do app, conforme mostrado neste exemplo. Pressupomos que **licenseInformation** seja uma variável global ou um campo global do tipo **LicenseInformation**.
+Quando seu app estiver sendo inicializado, obtenha o objeto [LicenseInformation](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.LicenseInformation) do app, conforme mostrado neste exemplo. Pressupomos que **licenseInformation** seja uma variável global ou um campo global do tipo **LicenseInformation**.
 
-Por enquanto, você receberá informações de licença simuladas usando [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766), em vez de [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765). Antes de enviar a versão do seu app à **Loja**, você deve substituir todas as referências a **CurrentAppSimulator** em seu código por **CurrentApp**.
+Por enquanto, você receberá informações de licença simuladas usando [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator), em vez de [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp). Antes de enviar a versão do seu app à **Loja**, você deve substituir todas as referências a **CurrentAppSimulator** em seu código por **CurrentApp**.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTest)]
@@ -111,14 +111,14 @@ Depois de testar seu app com o servidor de licenças simuladas, e antes de envi�
 
 Lembre-se de explicar como o app se comportará durante e após o período de avaliação gratuita, assim os clientes não serão surpreendidos pelo comportamento do app.
 
-Para saber mais sobre a descrição de seu aplicativo, consulte [Criar descrições de aplicativos](https://msdn.microsoft.com/library/windows/apps/mt148529).
+Para saber mais sobre a descrição de seu aplicativo, consulte [Criar descrições de aplicativos](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplo de Store (demonstra as avaliações e compras no aplicativo)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
-* [Disponibilidade e preços do conjunto de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt148548)
-* [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765)
-* [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766)
+* [Disponibilidade e preços do conjunto de aplicativo](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)
+* [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp)
+* [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator)
  
 
  

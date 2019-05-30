@@ -6,22 +6,22 @@ ms.date: 07/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 11f68d9dd912c92ff7de8b861f576e8f0c4b4dde
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4029bcdd554b05363397f6a6946b8ebc2bbdd1de
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658701"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371657"
 ---
 # <a name="handle-app-prelaunch"></a>Tratar a pré-inicialização do aplicativo
 
-Saiba como manipular a pré-inicialização de aplicativos substituindo o método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
+Saiba como manipular a pré-inicialização de aplicativos substituindo o método [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched).
 
 ## <a name="introduction"></a>Introdução
 
 Ao permitir que os recursos de sistema disponíveis, o desempenho da inicialização de aplicativos UWP em dispositivos de família do dispositivo de desktop é aprimorado iniciando proativamente os aplicativos do usuário usados com mais frequência em segundo plano. Um aplicativo pré-lançado é colocado no estado suspenso pouco depois de ser iniciado. Depois, quando o usuário invoca o aplicativo, o aplicativo é retomado com a saída do estado suspenso para o estado em execução – que é mais rápido do que iniciar o aplicativo a frio. A experiência do usuário é que o aplicativo simplesmente iniciou muito rapidamente.
 
-Antes do Windows 10, os aplicativos não usufruíam automaticamente de pré-inicialização. No Windows 10, versão 1511, todos os aplicativos da plataforma Universal do Windows (UWP) eram candidatos para sendo pré-inicializado. No Windows 10, versão 1607, você deve ativar o comportamento de pré-inicialização chamando [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx). Um bom lugar para colocar essa chamada é em `OnLaunched()`, perto do local em que a verificação `if (e.PrelaunchActivated == false)` feita.
+Antes do Windows 10, os aplicativos não usufruíam automaticamente de pré-inicialização. No Windows 10, versão 1511, todos os aplicativos da plataforma Universal do Windows (UWP) eram candidatos para sendo pré-inicializado. No Windows 10, versão 1607, você deve ativar o comportamento de pré-inicialização chamando [CoreApplication.EnablePrelaunch(true)](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enableprelaunch). Um bom lugar para colocar essa chamada é em `OnLaunched()`, perto do local em que a verificação `if (e.PrelaunchActivated == false)` feita.
 
 A pré-inicialização do aplicativo depende de recursos do sistema. Se o sistema estiver enfrentando pressão dos recursos, os aplicativos não serão pré-inicializados.
 
@@ -35,7 +35,7 @@ Assim que é pré-inicializado, um aplicativo entra no estado suspenso. (Consult
 
 ## <a name="detect-and-handle-prelaunch"></a>Detectar e manipular a pré-inicialização
 
-Os aplicativos recebem o sinalizador [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) durante a ativação. Use esse sinalizador para executar o código execute somente quando o usuário explicitamente inicia o aplicativo, como mostra a seguinte modificação [ **Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
+Os aplicativos recebem o sinalizador [**LaunchActivatedEventArgs.PrelaunchActivated**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.prelaunchactivated) durante a ativação. Use esse sinalizador para executar o código execute somente quando o usuário explicitamente inicia o aplicativo, como mostra a seguinte modificação [ **Application.OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched).
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -116,7 +116,7 @@ Há também código no exemplo acima que você pode remover o comentário se seu
 
 ## <a name="use-the-visibilitychanged-event"></a>Usar o evento VisibilityChanged
 
-Os aplicativos ativados pela pré-inicialização não são visíveis ao usuário. Eles ficam visíveis quando o usuário os alterna. Você poderá adiar determinadas operações até que a janela principal do aplicativo esteja visível. Por exemplo, se o aplicativo exibir uma lista de itens de novidades de um feed, você poderá atualizar a lista durante o evento [**VisibilityChanged**](https://msdn.microsoft.com/library/windows/apps/hh702458), em vez de usar a lista que foi criada quando o aplicativo foi pré-inicializado, pois ela pode estar obsoleta no momento em que o usuário ativa o aplicativo. O código a seguir manipula o evento **VisibilityChanged** de **MainPage**:
+Os aplicativos ativados pela pré-inicialização não são visíveis ao usuário. Eles ficam visíveis quando o usuário os alterna. Você poderá adiar determinadas operações até que a janela principal do aplicativo esteja visível. Por exemplo, se o aplicativo exibir uma lista de itens de novidades de um feed, você poderá atualizar a lista durante o evento [**VisibilityChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.visibilitychanged), em vez de usar a lista que foi criada quando o aplicativo foi pré-inicializado, pois ela pode estar obsoleta no momento em que o usuário ativa o aplicativo. O código a seguir manipula o evento **VisibilityChanged** de **MainPage**:
 
 ```csharp
 public sealed partial class MainPage : Page
@@ -138,7 +138,7 @@ public sealed partial class MainPage : Page
 
 ## <a name="directx-games-guidance"></a>Diretrizes de jogos em DirectX
 
-Os jogos em DirectX geralmente não devem permitir pré-inicialização porque muitos jogos em DirectX fazem a inicialização antes de a pré-inicialização ser detectada. A partir do Windows 1607, a edição de aniversário, seu jogo não será pré-inicializado por padrão.  Se você quiser que seu jogo tire proveito da pré-inicialização, chame [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx).
+Os jogos em DirectX geralmente não devem permitir pré-inicialização porque muitos jogos em DirectX fazem a inicialização antes de a pré-inicialização ser detectada. A partir do Windows 1607, a edição de aniversário, seu jogo não será pré-inicializado por padrão.  Se você quiser que seu jogo tire proveito da pré-inicialização, chame [CoreApplication.EnablePrelaunch(true)](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enableprelaunch).
 
 Se seu jogo direcionar uma versão anterior do Windows 10, você poderá manipular a condição de pré-inicialização para sair do aplicativo:
 
@@ -180,7 +180,7 @@ void ViewProvider::OnActivated(CoreApplicationView^ appView,IActivatedEventArgs^
 
 ## <a name="winjs-app-guidance"></a>Diretrizes de aplicativos WinJS
 
-Se seu aplicativo WinJS direciona uma versão anterior do Windows 10, você pode manipular a pré-inicialização condição no manipulador [onactivated](https://msdn.microsoft.com/library/windows/apps/br212679.aspx):
+Se seu aplicativo WinJS direciona uma versão anterior do Windows 10, você pode manipular a pré-inicialização condição no manipulador [onactivated](https://docs.microsoft.com/previous-versions/windows/apps/br212679(v=win.10)):
 
 ```javascript
     app.onactivated = function (args) {
@@ -196,7 +196,7 @@ Se seu aplicativo WinJS direciona uma versão anterior do Windows 10, você pode
 ## <a name="general-guidance"></a>Orientações gerais
 
 -   Os aplicativos não devem executar operações de longa duração durante a pré-inicialização porque o aplicativo será encerrado se não puder ser suspenso rapidamente.
--   Os aplicativos não devem iniciar a reprodução de áudio de [**Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) quando o aplicativo for pré-inicializado, pois o aplicativo não estará visível e ele não ficará aparente porque o áudio está sendo reproduzido.
+-   Os aplicativos não devem iniciar a reprodução de áudio de [**Application.OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) quando o aplicativo for pré-inicializado, pois o aplicativo não estará visível e ele não ficará aparente porque o áudio está sendo reproduzido.
 -   Os aplicativos não devem executar operações durante a inicialização que pressuponham que o aplicativo esteja visível para o usuário ou que o aplicativo tenha sido iniciado explicitamente pelo usuário. Como um aplicativo agora pode ser iniciado em segundo plano sem ação explícita do usuário, os desenvolvedores devem levar em consideração a privacidade, a experiência do usuário e as implicações sobre o desempenho.
     -   Um exemplo de consideração de privacidade acontece quando um aplicativo de rede social deve alterar o estado do usuário para online. Ele deve aguardar até que o usuário alterne para o aplicativo, em vez de alterar o status quando o aplicativo é pré-inicializado.
     -   Um exemplo de consideração de experiência do usuário é que, se você tiver um aplicativo, como um jogo, que exiba uma sequência introdutória quando é iniciado, você poderá atrasar a sequência introdutória até o usuário alternar para o aplicativo.
@@ -208,4 +208,4 @@ Se seu aplicativo WinJS direciona uma versão anterior do Windows 10, você pode
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Ciclo de vida do aplicativo](app-lifecycle.md)
-* [CoreApplication.EnablePrelaunch](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)
+* [CoreApplication.EnablePrelaunch](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enableprelaunch)

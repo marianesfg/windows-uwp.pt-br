@@ -5,17 +5,17 @@ ms.date: 03/01/2018
 ms.topic: article
 keywords: Windows 10, instala o aplicativo da área de trabalho, programa de aplicativo de área de trabalho do Windows
 localizationpriority: medium
-ms.openlocfilehash: f9beb73dafa96c489b8a4c9dddecf59d8a047109
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 27ee2f0b6977c551d50fce9dec26c864e3858413
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612971"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372130"
 ---
 # <a name="get-desktop-application-installs"></a>Obter instalações de aplicativo da área de trabalho
 
 
-Usar esse URI de REST para obter dados de agregação de instalação no formato JSON para um aplicativo da área de trabalho que você adicionou para a [programa de aplicativo de área de trabalho do Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Esse URI permite que você obtenha dados de instalação durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis na [instala o relatório](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicativos da área de trabalho no Partner Center.
+Usar esse URI de REST para obter dados de agregação de instalação no formato JSON para um aplicativo da área de trabalho que você adicionou para a [programa de aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Esse URI permite que você obtenha dados de instalação durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis na [instala o relatório](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) para aplicativos da área de trabalho no Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -32,7 +32,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Método | URI da solicitação       |
 |--------|----------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/installbasedaily```|
+| OBTER    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/installbasedaily```|
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -46,14 +46,14 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | cadeia de caracteres | A ID do aplicativo da área de trabalho para o qual você deseja recuperar os dados de instalação do produto. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise para seu aplicativo da área de trabalho no Partner Center](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **instala relatório**) e recupere a ID do produto da URL. |  Sim  |
+| applicationId | cadeia de caracteres | A ID do aplicativo da área de trabalho para o qual você deseja recuperar os dados de instalação do produto. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise para seu aplicativo da área de trabalho no Partner Center](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) (como o **instala relatório**) e recupere a ID do produto da URL. |  Sim  |
 | startDate | date | A data de início no intervalo de datas dos dados de instalação a serem recuperados. O padrão é de 90 dias antes da data atual. |  Não  |
 | endDate | date | A data final no intervalo de datas de dados de instalação a serem recuperados. O padrão é a data atual. |  Não  |
 | top | int | O número de linhas de dados a serem retornadas na solicitação. O valor máximo e o valor padrão; se não forem especificados, será 10.000. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
 | skip | int | O número de linhas a serem ignoradas na consulta. Use este parâmetro para percorrer grandes conjuntos de dados. Por exemplo, top=10000 e skip=0 recuperam as primeiras 10.000 linhas de dados, top=10000 e skip=10000 recuperam as próximas 10.000 linhas de dados e assim por diante. |  Não  |
-| filter | cadeia de caracteres  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>applicationVersion</strong></li><li><strong>deviceType</strong></li><li><strong>mercado</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li></ul> | Não   |
-| orderby | cadeia de caracteres | Uma instrução que classifica os valores dos dados resultantes de cada instalação. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser um dos seguintes campos do corpo da resposta:<p/><ul><li><strong>ProductName</strong></li><li><strong>Data</strong><li><strong>applicationVersion</strong></li><li><strong>deviceType</strong></li><li><strong>mercado</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li><li><strong>installBase</strong></li></ul><p>O parâmetro <em>order</em> é opcional, e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p><p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p> |  Não  |
-| groupby | cadeia de caracteres | Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>applicationVersion</strong></li><li><strong>deviceType</strong></li><li><strong>mercado</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li></ul><p>As linhas de dados retornados conterão os campos especificados no parâmetro <em>groupby</em>, bem como o seguinte:</p><ul><li><strong>applicationId</strong></li><li><strong>Data</strong></li><li><strong>ProductName</strong></li><li><strong>installBase</strong></li></ul></p> |  Não  |
+| filter | cadeia de caracteres  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>applicationVersion</strong></li><li><strong>deviceType</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li></ul> | Não   |
+| orderby | cadeia de caracteres | Uma instrução que classifica os valores dos dados resultantes de cada instalação. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser um dos seguintes campos do corpo da resposta:<p/><ul><li><strong>productName</strong></li><li><strong>date</strong><li><strong>applicationVersion</strong></li><li><strong>deviceType</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li><li><strong>installBase</strong></li></ul><p>O parâmetro <em>order</em> é opcional, e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p><p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p> |  Não  |
+| groupby | cadeia de caracteres | Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>applicationVersion</strong></li><li><strong>deviceType</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li></ul><p>As linhas de dados retornados conterão os campos especificados no parâmetro <em>groupby</em>, bem como o seguinte:</p><ul><li><strong>applicationId</strong></li><li><strong>date</strong></li><li><strong>productName</strong></li><li><strong>installBase</strong></li></ul></p> |  Não  |
 
 
 ### <a name="request-example"></a>Exemplo de solicitação
@@ -121,4 +121,4 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Programa de aplicativo de área de trabalho do Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504)
+* [Programa de aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)

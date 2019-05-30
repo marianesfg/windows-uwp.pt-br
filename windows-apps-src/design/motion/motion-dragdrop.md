@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c12acd2148c8c85d69354a71c016d7a7230e590b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 07707160846f3d63c7d0c097fb7b84def08be9e7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605451"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366689"
 ---
 # <a name="drag-animations"></a>Animações da operação arrastar
 
@@ -22,7 +22,7 @@ ms.locfileid: "57605451"
 
 Use animações de arrastar e soltar quando os usuários moverem objetos, como ao mover um item dentro de uma lista ou ao soltar um item em cima de outro.
 
-> **APIs importantes**: [**Classe DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243174)
+> **APIs importantes**: [**Classe DragItemThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation.)
 
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
@@ -57,12 +57,12 @@ Use animações de arrastar e soltar quando os usuários moverem objetos, como a
 ## <a name="related-articles"></a>Artigos relacionados
 
 **Para desenvolvedores**
-* [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Animando as sequências de arrastar e soltar](https://msdn.microsoft.com/library/windows/apps/xaml/jj649427)
-* [Guia de início rápido: Animando sua interface do usuário usando animações de biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
-* [**Classe DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243174)
-* [**Classe DropTargetItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243186)
-* [**Classe DragOverThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243180)
+* [Visão geral de animações](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
+* [Animando as sequências de arrastar e soltar](https://docs.microsoft.com/previous-versions/windows/apps/jj649427(v=win.10))
+* [Guia de início rápido: Animando sua interface do usuário usando animações de biblioteca](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
+* [**Classe DragItemThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation.)
+* [**Classe DropTargetItemThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.droptargetitemthemeanimation.)
+* [**Classe DragOverThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragoverthemeanimation.)
 
 
  

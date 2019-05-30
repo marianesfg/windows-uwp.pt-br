@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 156c4cc62e1997f5d647c06c87e226fe519de168
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: abe151bd78a0340b91aa1600ad34282b94b6d216
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57650361"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372591"
 ---
 # <a name="cryptography"></a>Criptografia
 
@@ -93,7 +93,7 @@ A interface de programação de aplicativo simplificada disponível para aplicat
 
 ### <a name="cryptography-support"></a>Suporte à criptografia
 
-Você pode executar as seguintes tarefas criptográficas. Para obter mais informações, consulte o namespace [**Windows.Security.Cryptography.Core**](https://msdn.microsoft.com/library/windows/apps/br241547).
+Você pode executar as seguintes tarefas criptográficas. Para obter mais informações, consulte o namespace [**Windows.Security.Cryptography.Core**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core).
 
 -   Criar chaves simétricas
 -   Executar criptografia simétrica
@@ -104,18 +104,18 @@ Você pode executar as seguintes tarefas criptográficas. Para obter mais inform
 -   Conteúdo de hash
 -   Conteúdo assinado digitalmente
 
-O SDK também fornece uma interface simplificada para proteção de dados baseada em senha. Você pode usá-la para executar estas tarefas. Para obter mais informações, consulte o namespace [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585).
+O SDK também fornece uma interface simplificada para proteção de dados baseada em senha. Você pode usá-la para executar estas tarefas. Para obter mais informações, consulte o namespace [**Windows.Security.Cryptography.DataProtection**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection).
 
 -   Proteção assíncrona de dados estáticos
 -   Proteção assíncrona de um fluxo de dados
 
 ### <a name="encoding-support"></a>Suporte à codificação
 
-Um aplicativo pode codificar dados criptográficos para transmissão por uma rede e decodificar dados recebidos de uma fonte de rede. Para obter mais informações, consulte os métodos estáticos disponíveis no namespace [**Windows.Security.Cryptography**](https://msdn.microsoft.com/library/windows/apps/br241404).
+Um aplicativo pode codificar dados criptográficos para transmissão por uma rede e decodificar dados recebidos de uma fonte de rede. Para obter mais informações, consulte os métodos estáticos disponíveis no namespace [**Windows.Security.Cryptography**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography).
 
 ### <a name="pki-support"></a>Suporte a PKI
 
-Os aplicativos podem executar as seguintes tarefas PKI. Para obter mais informações, consulte o namespace [**Windows.Security.Cryptography.Certificates**](https://msdn.microsoft.com/library/windows/apps/br241476).
+Os aplicativos podem executar as seguintes tarefas PKI. Para obter mais informações, consulte o namespace [**Windows.Security.Cryptography.Certificates**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates).
 
 -   Criar um certificado
 -   Criar um certificado autoassinado
@@ -143,7 +143,7 @@ Os artigos a seguir fornecem mais detalhes sobre cenários de segurança:
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Certificados](certificates.md)                                               | Este artigo aborda o uso de certificados em aplicativos UWP. Os certificados digitais são usados na criptografia de chave pública para associar uma chave pública a uma pessoa, um computador ou uma organização. As identidades associadas são usadas com mais frequência para autenticar uma entidade em outra. Por exemplo, os certificados são geralmente usados para autenticar um servidor Web em um usuário e um usuário em um servidor Web. É possível criar solicitações de certificados e instalar ou importar os certificados emitidos. Também é possível inscrever um certificado em uma hierarquia de certificados. |
 | [Chaves criptográficas](cryptographic-keys.md)                                   | Este artigo mostra como usar funções de derivação de chaves padrão para derivar chaves e como criptografar conteúdo usando chaves simétricas e assimétricas.                                                                                                                                                                                                                                                                                                                                                                             |
-| [Proteção de dados](data-protection.md)                                         | Este artigo explica como usar a classe [DataProtectionProvider](https://msdn.microsoft.com/library/windows/apps/br241559) no [Windows.Security.Cryptography.DataProtection](https://msdn.microsoft.com/library/windows/apps/br241585) para criptografar e descriptografar dados digitais em um aplicativo UWP.                                                                                                                                                                                                                  |
+| [Proteção de dados](data-protection.md)                                         | Este artigo explica como usar a classe [DataProtectionProvider](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider) no [Windows.Security.Cryptography.DataProtection](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection) para criptografar e descriptografar dados digitais em um aplicativo UWP.                                                                                                                                                                                                                  |
 | [MACs, hashes e assinaturas](macs-hashes-and-signatures.md)               | Este artigo aborda como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em aplicativos UWP para detectar adulteração de mensagem.                                                                                                                                                                                                                                                                                                                                                                                |
 | [Restrições de exportação na criptografia](export-restrictions-on-cryptography.md) | Use esta informação para determinar se seu aplicativo usa criptografia de forma que pode impedir que ele seja listado na Microsoft Store.                                                                                                                                                                                                                                                                                                                                                                                            |
 | [Tarefas comuns de criptografia](common-cryptography-tasks.md)                     | Estes artigos fornecem código de amostra para tarefas de criptografia comuns da UWP, como criar números aleatórios, comparar buffers, converter entre cadeias de caracteres e dados binários, copiar de e para matrizes de bytes e codificar e decodificar dados.                                                                                                                                                                                                                                                                                    |

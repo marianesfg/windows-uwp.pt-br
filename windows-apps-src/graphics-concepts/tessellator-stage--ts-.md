@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7768d63405281d3155affc6c9f09c62568761718
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b8960d9723460fcbb8cec71da0998958cac8a6e8
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607391"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370938"
 ---
 # <a name="tessellator-ts-stage"></a>Estágio de tessellator (TS)
 
@@ -52,7 +52,7 @@ Benefícios do mosaico:
 
 O pipeline de elementos gráficos do Direct3D implementa o mosaico em hardware, suavizando o trabalho da CPU para a GPU. Isso pode levar a melhorias de desempenho muito grandes se um aplicativo implementar um grande número de destinos que mudam de forma e/ou modelos de aplicação de capas/deformação mais sofisticados.
 
-O mosaico é um estágio de funções fixas inicializado associando um [sombreador hull](hull-shader-stage--hs-.md) ao pipeline. (consulte [How To: Inicializar o estágio de Tessellator](https://msdn.microsoft.com/library/windows/desktop/ff476341)). O objetivo do estágio de mosaico é subdividir um domínio (quad, tri ou linha) em muitos objetos menores (triângulos, pontos ou linhas). O mosaico organiza um domínio canônico em um sistema de coordenadas normalizado (zero-para-um). Por exemplo, um domínio quadrupleto é transformado em um quadrado de unidade.
+O mosaico é um estágio de funções fixas inicializado associando um [sombreador hull](hull-shader-stage--hs-.md) ao pipeline. (consulte [How To: Inicializar o estágio de Tessellator](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-advanced-stages-tessellator-initialize)). O objetivo do estágio de mosaico é subdividir um domínio (quad, tri ou linha) em muitos objetos menores (triângulos, pontos ou linhas). O mosaico organiza um domínio canônico em um sistema de coordenadas normalizado (zero-para-um). Por exemplo, um domínio quadrupleto é transformado em um quadrado de unidade.
 
 ### <a name="span-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanphases-in-the-tessellator-ts-stage"></a><span id="Phases_in_the_Tessellator__TS__stage"></span><span id="phases_in_the_tessellator__ts__stage"></span><span id="PHASES_IN_THE_TESSELLATOR__TS__STAGE"></span>Fases no estágio de Tessellator (TS)
 
@@ -63,7 +63,7 @@ O estágio de mosaico (TS) funciona em duas fases:
 
     | Tipo de particionamento | Intervalo                       |
     |----------------------|-----------------------------|
-    | Fracionários\_ímpar      | \[1... 63\]                  |
+    | Fracionários\_ímpar      | \[1...63\]                  |
     | Fracionários\_até mesmo     | Intervalo de TessFactor: \[2..64\] |
     | Inteiro              | Intervalo de TessFactor: \[1..64\] |
     | Pow2                 | Intervalo de TessFactor: \[1..64\] |

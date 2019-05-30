@@ -5,12 +5,12 @@ ms.date: 01/03/2019
 ms.topic: article
 keywords: windows 10 s, sempre conectado, aplicativos ARM32 no ARM, windows 10 no ARM, solução de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 3431b12fc6f6b6ba2d870400ec4f6684f8290a61
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: ddf28627838ebc8cb2df620c398f3803c026cb17
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63815283"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366832"
 ---
 # <a name="troubleshooting-arm-uwp-apps"></a>Solução de problemas de ARM aplicativos UWP
 
@@ -33,7 +33,7 @@ Aplicativos universais do Windows Platform (UWP) que não são compilados corret
 
 Esses problemas podem ser resolvidos por: Removendo as dependências não está disponíveis e recompilar o aplicativo usando as versões mais recentes do Microsoft Visual Studio e SDK de UWP; ou como um último recurso, remover o aplicativo do ARM da Microsoft Store, para que a versão do aplicativo (se disponível) é baixado para os computadores dos usuários de x86.
 
-Para saber mais sobre as APIs .NET disponíveis para aplicativos UWP, consulte [.NET para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)
+Para saber mais sobre as APIs .NET disponíveis para aplicativos UWP, consulte [.NET para aplicativos UWP](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0)
 
 ### <a name="compiling-an-app-with-an-older-version-of-visual-studio-and-sdk"></a>Compilando um aplicativo com uma versão anterior do Visual Studio e do SDK
 Se você tiver problemas, use as versões mais recentes do Microsoft Visual Studio e do SDK do Windows para compilar seu aplicativo. Os aplicativos compilados com uma versão anterior do Visual Studio e do SDK podem ter problemas que foram corrigidos em versões posteriores.

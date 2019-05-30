@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, fone de ouvido
 ms.localizationpriority: medium
-ms.openlocfilehash: b3de68cc59c9928a52eba5caeb840e9e825eecf0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 73815fb3f1b732537e9f08932639a1eccd7ed1b0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627951"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368621"
 ---
 # <a name="headset"></a>Headset
 
-Esta página descreve as noções básicas de programação para fones de ouvido que usam [Windows.Gaming.Input.Headset][fone de ouvido] e APIs relacionadas para a Plataforma Universal do Windows (UWP).
+Esta página descreve as noções básicas de programação para fones de ouvido que usam [Windows.Gaming.Input.Headset][headset] e APIs relacionadas para a Plataforma Universal do Windows (UWP).
 
 Ao ler esta página, você saberá como:
 * Acessar um fone de ouvido conectado a um dispositivo de entrada ou de navegação
@@ -63,9 +63,9 @@ inputDevice.HeadsetDisconnected += ref new TypedEventHandler<IGameController^, H
 
 ## <a name="using-the-headset"></a>Como usar o fone de ouvido
 
-A classe [Fone de ouvido][] é composta de duas cadeias de caracteres que representam IDs de ponto de extremidade XAudio – uma para captura de áudio (gravação do fone de ouvido com microfone) e uma para renderização de áudio (reprodução por meio do fone de ouvido).
+A classe [Headset][] é composta de duas cadeias de caracteres que representam IDs de ponto de extremidade XAudio – uma para captura de áudio (gravação do fone de ouvido com microfone) e uma para renderização de áudio (reprodução por meio do fone de ouvido).
 
-Os detalhes do trabalho com XAudio não são abordados aqui. Para obter mais informações, consulte o [Guia de programação do XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415737.aspx) e a [Referência de API do XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415899.aspx).
+Os detalhes do trabalho com XAudio não são abordados aqui. Para obter mais informações, consulte o [Guia de programação do XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/programming-guide) e a [Referência de API do XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/programming-reference).
 
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
@@ -73,4 +73,4 @@ Os detalhes do trabalho com XAudio não são abordados aqui. Para obter mais inf
 [igamecontroller.headset]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headset.aspx
 [igamecontroller.headsetconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetconnected.aspx
 [igamecontroller.headsetdisconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetdisconnected.aspx
-[Fone de ouvido]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx
+[headset]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx

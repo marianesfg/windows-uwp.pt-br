@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, blocos de aplicativo da área de trabalho, o programa de aplicativo de área de trabalho do Windows
 localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 08c3265fd0ff908c210a6586f561aba62ba9155a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4bd57d61a3d0ee942742ab1688849ab181c8c71d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641101"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372100"
 ---
 # <a name="get-upgrade-blocks-for-your-desktop-application"></a>Obter bloqueios de upgrade para seu aplicativo da área de trabalho
 
@@ -33,7 +33,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Método | URI da solicitação       |
 |--------|----------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/blockhits```|
+| OBTER    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/blockhits```|
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -47,14 +47,14 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | cadeia de caracteres | A ID do produto do aplicativo da área de trabalho para o qual você deseja recuperar os dados de bloco. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise para seu aplicativo da área de trabalho no Partner Center](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **bloqueia relatório**) e recupere a ID do produto da URL. |  Sim  |
+| applicationId | cadeia de caracteres | A ID do produto do aplicativo da área de trabalho para o qual você deseja recuperar os dados de bloco. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise para seu aplicativo da área de trabalho no Partner Center](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) (como o **bloqueia relatório**) e recupere a ID do produto da URL. |  Sim  |
 | startDate | date | A data de início no intervalo de datas dos blocos de dados para recuperar. O padrão é de 90 dias antes da data atual. |  Não  |
 | endDate | date | A data final no intervalo de datas dos blocos de dados para recuperar. O padrão é a data atual. |  Não  |
 | top | int | O número de linhas de dados a serem retornadas na solicitação. O valor máximo e o valor padrão; se não forem especificados, será 10.000. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
 | skip | int | O número de linhas a serem ignoradas na consulta. Use este parâmetro para percorrer grandes conjuntos de dados. Por exemplo, top=10000 e skip=0 recuperam as primeiras 10.000 linhas de dados, top=10000 e skip=10000 recuperam as próximas 10.000 linhas de dados e assim por diante. |  Não  |
-| filter | cadeia de caracteres  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>applicationVersion</strong></li><li><strong>Arquitetura</strong></li><li><strong>blockType</strong></li><li><strong>deviceType</strong></li><li><strong>Nome de arquivo</strong></li><li><strong>mercado</strong></li><li><strong>osRelease</strong></li><li><strong>osVersion</strong></li><li><strong>ProductName</strong></li><li><strong>targetOs</strong></li></ul> | Não   |
-| orderby | cadeia de caracteres | Uma instrução que ordena o resultado de valores de dados para cada bloco. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser um dos seguintes campos do corpo da resposta:<p/><ul><li><strong>applicationVersion</strong></li><li><strong>Arquitetura</strong></li><li><strong>blockType</strong></li><li><strong>Data</strong><li><strong>deviceType</strong></li><li><strong>Nome de arquivo</strong></li><li><strong>mercado</strong></li><li><strong>osRelease</strong></li><li><strong>osVersion</strong></li><li><strong>ProductName</strong></li><li><strong>targetOs</strong></li><li><strong>deviceCount</strong></li></ul><p>O parâmetro <em>order</em> é opcional, e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p><p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p> |  Não  |
-| groupby | cadeia de caracteres | Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>applicationVersion</strong></li><li><strong>Arquitetura</strong></li><li><strong>blockType</strong></li><li><strong>deviceType</strong></li><li><strong>Nome de arquivo</strong></li><li><strong>mercado</strong></li><li><strong>osRelease</strong></li><li><strong>osVersion</strong></li><li><strong>targetOs</strong></li></ul><p>As linhas de dados retornados conterão os campos especificados no parâmetro <em>groupby</em>, bem como o seguinte:</p><ul><li><strong>applicationId</strong></li><li><strong>Data</strong></li><li><strong>ProductName</strong></li><li><strong>deviceCount</strong></li></ul></p> |  Não  |
+| filter | cadeia de caracteres  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>applicationVersion</strong></li><li><strong>architecture</strong></li><li><strong>blockType</strong></li><li><strong>deviceType</strong></li><li><strong>fileName</strong></li><li><strong>market</strong></li><li><strong>osRelease</strong></li><li><strong>osVersion</strong></li><li><strong>productName</strong></li><li><strong>targetOs</strong></li></ul> | Não   |
+| orderby | cadeia de caracteres | Uma instrução que ordena o resultado de valores de dados para cada bloco. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser um dos seguintes campos do corpo da resposta:<p/><ul><li><strong>applicationVersion</strong></li><li><strong>architecture</strong></li><li><strong>blockType</strong></li><li><strong>date</strong><li><strong>deviceType</strong></li><li><strong>fileName</strong></li><li><strong>market</strong></li><li><strong>osRelease</strong></li><li><strong>osVersion</strong></li><li><strong>productName</strong></li><li><strong>targetOs</strong></li><li><strong>deviceCount</strong></li></ul><p>O parâmetro <em>order</em> é opcional, e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p><p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p> |  Não  |
+| groupby | cadeia de caracteres | Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>applicationVersion</strong></li><li><strong>architecture</strong></li><li><strong>blockType</strong></li><li><strong>deviceType</strong></li><li><strong>fileName</strong></li><li><strong>market</strong></li><li><strong>osRelease</strong></li><li><strong>osVersion</strong></li><li><strong>targetOs</strong></li></ul><p>As linhas de dados retornados conterão os campos especificados no parâmetro <em>groupby</em>, bem como o seguinte:</p><ul><li><strong>applicationId</strong></li><li><strong>date</strong></li><li><strong>productName</strong></li><li><strong>deviceCount</strong></li></ul></p> |  Não  |
 
 
 ### <a name="request-example"></a>Exemplo de solicitação

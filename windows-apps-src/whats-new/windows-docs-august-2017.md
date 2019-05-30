@@ -5,12 +5,12 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: edf81f0474855c868ea1fb50afa683523aedcd07
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 53bd11950d30e3924d6d196e911fa05208d0f5ec
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57614861"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371913"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Novidades dos documentos de desenvolvedor do Windows em agosto de 2017
 
@@ -32,7 +32,7 @@ Agora você pode visualizar [XAML condicional](../debug-test-perf/conditional-xa
 
 ### <a name="game-mode"></a>Modo de Jogo
 
-As APIs de [Modo de Jogo](https://msdn.microsoft.com/library/windows/desktop/mt808808) para a Plataforma Universal do Windows (UWP) permitem produzir a experiência de jogos mais otimizada, aproveitando o modo de jogo no Windows 10. Essas APIs são localizadas no cabeçalho **&lt;expandedresources.h&gt;**.
+As APIs de [Modo de Jogo](https://docs.microsoft.com/previous-versions/windows/desktop/gamemode/game-mode-portal) para a Plataforma Universal do Windows (UWP) permitem produzir a experiência de jogos mais otimizada, aproveitando o modo de jogo no Windows 10. Essas APIs são localizadas no cabeçalho **&lt;expandedresources.h&gt;** .
 
 ![Modo de Jogo](images/game-mode.png)
 
@@ -45,7 +45,7 @@ A [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-us
 
 ### <a name="data-schemas-for-store-products"></a>Esquemas de dados de produtos da Loja
 
-Adicionamos o artigo [Esquemas de dados de produtos da Loja](../monetize/data-schemas-for-store-products.md). Este artigo fornece esquemas para os dados relacionados à Loja disponíveis para vários objetos no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx), incluindo [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) e [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense).
+Adicionamos o artigo [Esquemas de dados de produtos da Loja](../monetize/data-schemas-for-store-products.md). Este artigo fornece esquemas para os dados relacionados à Loja disponíveis para vários objetos no namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store), incluindo [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) e [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense).
 
 ### <a name="desktop-bridge"></a>Ponte de Desktop
 

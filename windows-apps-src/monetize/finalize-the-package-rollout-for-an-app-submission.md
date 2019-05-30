@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pacote, envio do aplicativo, finalizar
 ms.assetid: c7dd39e6-5162-455a-b03b-1ed76bffcf6e
 ms.localizationpriority: medium
-ms.openlocfilehash: 7271d5892c4abbe94945a34787fbbf6b020149da
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: bfab2a56c3b8c7508042091f16a33d45b3272106
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334554"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371770"
 ---
 # <a name="finalize-the-rollout-for-an-app-submission"></a>Finalizar a distribuição para um envio de app
 
@@ -47,7 +47,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo que contém o envio com a distribuição de pacote que você deseja finalizar. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo que contém o envio com a distribuição de pacote que você deseja finalizar. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 | submissionId | cadeia de caracteres | Obrigatório. A ID do envio com a distribuição de pacote que você deseja finalizar. Esse ID está disponível nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL para a página de envio no Partner Center.  |
 
 

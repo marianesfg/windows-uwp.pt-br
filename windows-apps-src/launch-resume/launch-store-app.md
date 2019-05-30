@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cda37ee9964a3e7e02f4e4ce3829a8b55e823692
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fd0e7137f31a8f1620f7937b52efe1ca84a6b99a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660891"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370781"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Iniciar o aplicativo da Microsoft Store
 
 
 
-Este tópico descreve o **ms-windows-store:** Esquema de URI. O aplicativo pode usar este esquema URI para iniciar o aplicativo Microsoft Store para páginas específicas no repositório usando o [ **LaunchUriAsync** ](https://msdn.microsoft.com/library/windows/apps/hh701476) método.
+Este tópico descreve o **ms-windows-store:** Esquema de URI. O aplicativo pode usar este esquema URI para iniciar o aplicativo Microsoft Store para páginas específicas no repositório usando o [ **LaunchUriAsync** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) método.
 
 Este exemplo mostra como abrir a Microsoft Store para a página de Jogos:
 
@@ -25,7 +25,7 @@ Este exemplo mostra como abrir a Microsoft Store para a página de Jogos:
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
 ```
 
-## <a name="ms-windows-store-uri-scheme-reference"></a>MS-windows-store: Referência de esquema URI
+## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows-store: Referência de esquema URI
 
 <table>
 <tr><th>Descrição</th><th></th><th>Esquema de URI</th></tr>
@@ -41,10 +41,10 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 <tr>
 <td rowspan="4">Inicia a página de detalhes (PDP) de um produto. <p>ID de Store é recomendada para os clientes no Windows 10 e funcionarão em todas as versões de sistema operacional, mas as formas anteriores de fazê-lo (por exemplo: PFN) ainda é suportado.</p>
-<p>Esses valores podem ser encontrados na <a href="https://partner.microsoft.com/dashboard">Partner Center</a> sobre o <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">identidade de aplicativo</a> página na seção de gerenciamento de aplicativo para cada aplicativo.</p>
+<p>Esses valores podem ser encontrados na <a href="https://partner.microsoft.com/dashboard">Partner Center</a> sobre o <a href="https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details">identidade de aplicativo</a> página na seção de gerenciamento de aplicativo para cada aplicativo.</p>
 </td>
 <td>
-ID da Store <p>(Recomendado)</p>
+ID da Loja <p>(Recomendado)</p>
 </td>
 <td>
 <p>ms-windows-store://pdp/?ProductId=9WZDNCRFHVJL</p>
@@ -66,7 +66,7 @@ ID da Store <p>(Recomendado)</p>
 </tr>
 <tr>
 <td rowspan="4">Inicia a gravação de uma experiência de revisão para um produto.</td>
-<td>ID da Store <p>(Recomendado)</p></td>
+<td>ID da Loja <p>(Recomendado)</p></td>
 <td>ms-windows-store://review/?ProductId=9WZDNCRFHVJL </td>
 </tr>
 <tr>

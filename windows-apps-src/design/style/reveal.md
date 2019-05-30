@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f6a4fef72206058874edf845d5fbbe0768c53ec
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 5cb076de6cd9c44280bf7030a59c645f601487bd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984217"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370429"
 ---
 # <a name="reveal-highlight"></a>Revelar realce
 
@@ -288,7 +288,7 @@ Quando você habilita a revelação em um controle personalizado ou re-modelo ou
 
 - [Classe RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush)
 - [Tinta acrílica](acrylic.md)
-- [Efeitos de composição](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
+- [Efeitos de composição](https://docs.microsoft.com/windows/uwp/graphics/composition-effects)
 - [Design Fluent para UWP](/windows/apps/fluent-design-system)
 - [Ciência no sistema: Profundidade e Design Fluent](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [Ciência no sistema: Luz e Design Fluent](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

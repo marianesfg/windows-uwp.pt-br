@@ -6,25 +6,25 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 ms.localizationpriority: medium
-ms.openlocfilehash: a8d94f43edbdc3ec410ae7f878b38d41cddf5145
-ms.sourcegitcommit: f15cf141c299bde9cb19965d8be5198d7f85adf8
+ms.openlocfilehash: 1476410c96900eff7ba4b8d0ad34c9d7b5599434
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58358601"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372730"
 ---
 # <a name="create-a-certificate-for-package-signing"></a>Criar um certificado para a assinatura de pacote
 
 
-Este artigo explica como criar e exportar um certificado para a assinatura de pacote de apps usando as ferramentas do PowerShell. É recomendável que você use o Visual Studio para [Empacotar apps UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps), mas você ainda pode empacotar um app da Loja pronto manualmente se você não usou o Visual Studio para desenvolver seu app.
+Este artigo explica como criar e exportar um certificado para a assinatura de pacote de apps usando as ferramentas do PowerShell. É recomendável que você use o Visual Studio para [Empacotar apps UWP](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps), mas você ainda pode empacotar um app da Loja pronto manualmente se você não usou o Visual Studio para desenvolver seu app.
 
 > [!IMPORTANT] 
-> Se você usou o Visual Studio para desenvolver seu app, é recomendável que você use o Assistente do Visual Studio para importar um certificado e assinar seu pacote de app. Para obter mais informações, consulte [Empacotar um aplicativo UWP com Visual Studio](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
+> Se você usou o Visual Studio para desenvolver seu app, é recomendável que você use o Assistente do Visual Studio para importar um certificado e assinar seu pacote de app. Para obter mais informações, consulte [Empacotar um aplicativo UWP com Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - **Um aplicativo compactado ou descompactado**  
-Um app que contém um arquivo AppxManifest.xml. Você precisará fazer referência ao arquivo de manifesto ao criar o certificado que será usado para assinar o pacote do app final. Para obter detalhes sobre como empacotar manualmente um app, consulte [Criar um pacote de apps com a ferramenta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool).
+Um app que contém um arquivo AppxManifest.xml. Você precisará fazer referência ao arquivo de manifesto ao criar o certificado que será usado para assinar o pacote do app final. Para obter detalhes sobre como empacotar manualmente um app, consulte [Criar um pacote de apps com a ferramenta MakeAppx.exe](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool).
 
 - **Cmdlets de infraestrutura de chave pública (PKI)**  
 Você precisa de cmdlets de PKI para criar e exportar o certificado de assinatura. Para obter mais informações, consulte [Cmdlets da Infraestrutura de Chave Pública](https://docs.microsoft.com/powershell/module/pkiclient/).
@@ -32,6 +32,9 @@ Você precisa de cmdlets de PKI para criar e exportar o certificado de assinatur
 ## <a name="create-a-self-signed-certificate"></a>Criar um certificado autoassinado
 
 Um certificado autoassinado é útil para testar seu aplicativo antes que você está pronto para publicá-lo para a Store. Siga as etapas descritas nesta seção para criar um certificado autoassinado.
+
+> [!NOTE]
+> Os certificados autoassinados são estritamente para teste. Quando estiver pronto para publicar seu aplicativo para o armazenamento ou de outros locais, alterne o certificado para a fonte com boa reputação. Falha ao fazer isso pode resultar na incapacidade do aplicativo instalado por seus clientes.
 
 ### <a name="determine-the-subject-of-your-packaged-app"></a>Determine o assunto do seu app empacotado  
 
@@ -63,9 +66,9 @@ Observe os seguintes detalhes sobre alguns dos parâmetros:
 
 - **TextExtension**: Esse parâmetro inclui configurações para as seguintes extensões:
 
-  - Uso estendido de chave (EKU): Essa extensão indica fins adicionais para o qual a chave pública certificada pode ser usada. Para obter um certificado autoassinado, esse parâmetro deve incluir a cadeia de caracteres de extensão **"2.5.29.37={text}1.3.6.1.5.5.7.3.3"**, que indica que o certificado deve ser usado para assinatura de código.
+  - Uso estendido de chave (EKU): Essa extensão indica fins adicionais para o qual a chave pública certificada pode ser usada. Para obter um certificado autoassinado, esse parâmetro deve incluir a cadeia de caracteres de extensão **"2.5.29.37={text}1.3.6.1.5.5.7.3.3"** , que indica que o certificado deve ser usado para assinatura de código.
 
-  - Restrições básicas: Essa extensão indica se é ou não o certificado de uma autoridade de certificação (CA). Para obter um certificado autoassinado, esse parâmetro deve incluir a cadeia de caracteres de extensão **"2.5.29.19={text}"**, que indica que o certificado é uma entidade final (não uma autoridade de certificação).
+  - Restrições básicas: Essa extensão indica se é ou não o certificado de uma autoridade de certificação (CA). Para obter um certificado autoassinado, esse parâmetro deve incluir a cadeia de caracteres de extensão **"2.5.29.19={text}"** , que indica que o certificado é uma entidade final (não uma autoridade de certificação).
 
 Depois de executar esse comando, o certificado será adicionado ao repositório de certificados local, conforme especificado no parâmetro "-CertStoreLocation". O resultado do comando também produzirá a impressão digital do certificado.  
 
@@ -97,8 +100,8 @@ Export-PfxCertificate -cert "Cert:\LocalMachine\My\<Certificate Thumbprint>" -Fi
 Export-PfxCertificate -cert Cert:\LocalMachine\My\<Certificate Thumbprint> -FilePath <FilePath>.pfx -ProtectTo <Username or group name>
 ```
 
-Depois de criar e exportar o certificado, você está pronto para assinar seu pacote de apps com **SignTool**. Para a próxima etapa no processo de empacotamento manual, consulte [Assinar um pacote de apps usando a SignTool](https://msdn.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool).
+Depois de criar e exportar o certificado, você está pronto para assinar seu pacote de apps com **SignTool**. Para a próxima etapa no processo de empacotamento manual, consulte [Assinar um pacote de apps usando a SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool).
 
 ## <a name="security-considerations"></a>Considerações sobre segurança
 
-Ao adicionar um certificado em [repositórios de certificados do computador local](https://msdn.microsoft.com/windows/hardware/drivers/install/local-machine-and-current-user-certificate-stores), você afetará a confiança do certificado de todos os usuários no computador. É recomendável que você remova esses certificados quando eles não são mais necessários para evitar que eles sejam usados para comprometer a confiança do sistema.
+Ao adicionar um certificado em [repositórios de certificados do computador local](https://docs.microsoft.com/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores), você afetará a confiança do certificado de todos os usuários no computador. É recomendável que você remova esses certificados quando eles não são mais necessários para evitar que eles sejam usados para comprometer a confiança do sistema.

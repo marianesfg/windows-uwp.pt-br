@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
-ms.openlocfilehash: a382fd879ce656a81e1de4ae2d91180f622cd730
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 40cf41df4ccf15206e5855f989bc46c599baa473
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334735"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372074"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Recursos do sistema para jogos e aplicativos UWP no Xbox One
 
@@ -23,7 +23,7 @@ Aplicativos UWP em execução no Xbox One compartilham recursos com o sistema e 
 
 A memória máxima disponível para um aplicativo em execução em segundo plano é 128 MB. O modo de tela de fundo só se aplica a aplicativos simultâneos, como players de música na tela de fundo.  Jogos serão suspenso e encerrados na tela de fundo.
 
-Exceder essas limitações causará falhas de alocação de memória. Para obter mais informações sobre monitoramento de uso de memória, consulte a referência [classe MemoryManager](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx).
+Exceder essas limitações causará falhas de alocação de memória. Para obter mais informações sobre monitoramento de uso de memória, consulte a referência [classe MemoryManager](https://docs.microsoft.com/uwp/api/windows.system.memorymanager).
     
     > [!NOTE]
     > When running your app or game from the Visual Studio debugger, these memory constraints do not apply. This limit is only applicable when not running in debugging mode.
@@ -55,5 +55,5 @@ Para obter mais informações sobre recursos do sistema para aplicativos UWP no 
 ## <a name="see-also"></a>Consulte também
 - [UWP no Xbox One](index.md)
 - [Comece com o programa de criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/creators-program)
-- [O DirectX e UWP no Xbox One](https://blogs.msdn.microsoft.com/chuckw/2017/12/15/directx-and-uwp-on-xbox-one/)
+- [O DirectX e UWP no Xbox One](https://walbourn.github.io/)
 

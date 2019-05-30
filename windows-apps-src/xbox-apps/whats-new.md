@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
 ms.localizationpriority: medium
-ms.openlocfilehash: aff65e5f1b4771cbb33bc8b8219224042b7bf7e2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 27810fb850a54b70e620f06ea033b7c362792bfc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660681"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372966"
 ---
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>Novidades para desenvolvedores na atualização mais recente da UWP em Xbox One
 
@@ -21,7 +21,7 @@ A atualização mais recente da UWP (Plataforma Universal do Windows) no Xbox On
 Xbox não dá mais suporte ao desenvolvimento de aplicativos x86 ou envios de aplicativos x86 para a loja.
 
 ## <a name="apps-can-now-support-navigating-back-to-the-previous-app"></a>Agora, os aplicativos agora podem oferecer suporte à navegação para o aplicativo anterior 
-Os aplicativos UWP no Xbox One agora oferecem suporte à navegação de volta para o aplicativo anterior. Para fazer isso, assine o evento [**Windows.UI.Core.SystemNavigationManager.BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893595) e defina a propriedade **Handled** como **false** no manipulador de eventos.
+Os aplicativos UWP no Xbox One agora oferecem suporte à navegação de volta para o aplicativo anterior. Para fazer isso, assine o evento [**Windows.UI.Core.SystemNavigationManager.BackRequested**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager) e defina a propriedade **Handled** como **false** no manipulador de eventos.
 
 > [!NOTE]
 > Por motivos de compatibilidade, essa funcionalidade está disponível somente para aplicativos criados com a versão mais recente do UWP no Xbox One. 

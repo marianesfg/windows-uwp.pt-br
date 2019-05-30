@@ -10,20 +10,20 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 1feffac4d9b616c2fadff0080c3282e4200f3be7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 832a13f8b1f4a6e6e221b4fa0ce328b5edabac7d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625571"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371671"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Tratar uma tarefa em segundo plano cancelada
 
 **APIs importantes**
 
--   [**BackgroundTaskCanceledEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224775)
--   [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797)
--   [**ApplicationData.Current**](https://msdn.microsoft.com/library/windows/apps/br241619)
+-   [**BackgroundTaskCanceledEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcanceledeventhandler)
+-   [**IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)
+-   [**ApplicationData.Current**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.current)
 
 Saiba como criar uma tarefa em segundo plano que reconhece uma solicitação de cancelamento e interrompe o trabalho, relatando o cancelamento ao aplicativo usando armazenamento persistente.
 
@@ -177,7 +177,7 @@ else
 ```
 
 > [!NOTE]
-> O exemplo de código mostrado acima usa o [ **IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[ **Progresso** ](https://msdn.microsoft.com/library/windows/apps/br224800) propriedade que está sendo usada para registrar o andamento da tarefa em segundo plano. O progresso é relatado para o aplicativo usando a classe [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782).
+> O exemplo de código mostrado acima usa o [ **IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance).[ **Progresso** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress) propriedade que está sendo usada para registrar o andamento da tarefa em segundo plano. O progresso é relatado para o aplicativo usando a classe [**BackgroundTaskProgressEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs).
 
 Modificar a **executar** método, portanto, depois que o trabalho foi interrompido, ele registra se a tarefa concluída ou cancelada. Esta etapa é válida para tarefas em segundo plano fora do processo porque você precisa de uma maneira de comunicação entre processos quando a tarefa em segundo plano foi cancelada. Para tarefas em segundo plano dentro do processo, você pode simplesmente compartilhar o estado com o aplicativo para indicar que a tarefa foi cancelada.
 

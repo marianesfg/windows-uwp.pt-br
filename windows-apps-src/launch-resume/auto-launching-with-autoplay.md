@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f49d70ceadad8309419846aa26cb9f97df1c82ff
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d1f139ca4cf134ff8515a4da1134da16c338a4a8
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620891"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371330"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>A inicialização automática com a execução automática
 
@@ -37,7 +37,7 @@ Quando arquivos são compartilhados usando proximidade, a propriedade **Files** 
 
 ### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>Etapa 1: Criar um novo projeto e adicione as declarações de reprodução automática
 
-1.  Abra o Microsoft Visual Studio e selecione **Novo Projeto** no menu **Arquivo**. Na seção **Visual C#**, em **Windows**, selecione **Aplicativo em Branco (Universal do Windows)**. Nomeie o aplicativo **AutoPlayDisplayOrCopyImages** e clique em **OK**.
+1.  Abra o Microsoft Visual Studio e selecione **Novo Projeto** no menu **Arquivo**. Na seção **Visual C#** , em **Windows**, selecione **Aplicativo em Branco (Universal do Windows)** . Nomeie o aplicativo **AutoPlayDisplayOrCopyImages** e clique em **OK**.
 2.  Abra o arquivo Package.appxmanifest e selecione a guia **Recursos**. Selecione os recursos **Armazenamento Removível** e **Biblioteca de Imagens**. Essa seleção lhe proporciona acesso de aplicativo aos dispositivos de armazenamento removível como memória de câmera e acesso às imagens locais.
 3.  No arquivo de manifesto, selecione a guia **Declarações**. Na lista suspensa **Declarações Disponíveis**, selecione **Conteúdo da Reprodução Automática** e clique em **Adicionar**. Selecione o novo item **Conteúdo da Reprodução Automática** que foi adicionado à lista **Declarações Suportadas**.
 4.  Uma declaração **Conteúdo de Reprodução Automática** identifica seu aplicativo como uma opção quando a Reprodução Automática gera um evento de conteúdo. O evento é baseado no conteúdo de um dispositivo de volume como um DVD ou um pen drive. A Reprodução Automática examina o conteúdo do dispositivo de volume e determina qual evento de conteúdo gerar. Se a raiz do volume contiver um DCIM, AVCHD ou PRIVADO\\pasta ACHD, ou se um usuário tiver habilitado **escolher o que fazer com cada tipo de mídia** no painel de controle de reprodução automática e imagens são encontrados na raiz do volume, em seguida, Reprodução automática gera o **ShowPicturesOnArrival** eventos. Na seção **Ações de Inicialização**, insira os valores da Tabela 1 abaixo para a primeira ação de inicialização.
@@ -225,15 +225,15 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 Você pode registrar aplicativos como opções de eventos de dispositivo de **Reprodução Automática**. Os eventos de dispositivo de **Reprodução Automática** são gerados quando um dispositivo é conectado a um computador.
 
-Nesta seção, mostramos como identificar seu aplicativo como uma opção **Reprodução Automática** quando uma câmera é conectada a um computador. O aplicativo registra como um manipulador para o **WPD\\ImageSourceAutoPlay** eventos. Esse é um evento comum que o sistema Dispositivo Portátil do Windows (WPD) gera quando câmeras e outros dispositivos de imagem o notifica que são uma ImageSource usando MTP. Para saber mais, consulte [Dispositivos portáteis do Windows](https://msdn.microsoft.com/library/windows/hardware/ff597729).
+Nesta seção, mostramos como identificar seu aplicativo como uma opção **Reprodução Automática** quando uma câmera é conectada a um computador. O aplicativo registra como um manipulador para o **WPD\\ImageSourceAutoPlay** eventos. Esse é um evento comum que o sistema Dispositivo Portátil do Windows (WPD) gera quando câmeras e outros dispositivos de imagem o notifica que são uma ImageSource usando MTP. Para saber mais, consulte [Dispositivos portáteis do Windows](https://docs.microsoft.com/previous-versions//ff597729(v=vs.85)).
 
-**Importante**  as [**Windows.Devices.Portable.StorageDevice** ](https://msdn.microsoft.com/library/windows/apps/br225654) APIs fazem parte do [família de dispositivos da área de trabalho](https://msdn.microsoft.com/library/windows/apps/dn894631). Aplicativos podem usar essas APIs somente em dispositivos Windows 10 desktop família do dispositivo, como computadores.
+**Importante**  as [**Windows.Devices.Portable.StorageDevice** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice) APIs fazem parte do [família de dispositivos da área de trabalho](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide). Aplicativos podem usar essas APIs somente em dispositivos Windows 10 desktop família do dispositivo, como computadores.
 
  
 
 ### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>Etapa 1: Criar um novo projeto e adicione as declarações de reprodução automática
 
-1.  Abra o Visual Studio e selecione **Novo Projeto** no menu **Arquivo**. Na seção **Visual C#**, em **Windows**, selecione **Aplicativo em Branco (Universal do Windows)**. Nomeie o aplicativo **AutoPlayDevice\_câmera** e clique em **Okey.**
+1.  Abra o Visual Studio e selecione **Novo Projeto** no menu **Arquivo**. Na seção **Visual C#** , em **Windows**, selecione **Aplicativo em Branco (Universal do Windows)** . Nomeie o aplicativo **AutoPlayDevice\_câmera** e clique em **Okey.**
 2.  Abra o arquivo Package.appxmanifest e selecione a guia **Recursos**. Selecione o recurso **Armazenamento Removível**. Isso dá ao aplicativo acesso aos dados na câmera como um dispositivo de volume de armazenamento removível.
 3.  No arquivo de manifesto, selecione a guia **Declarações**. Na lista suspensa **Declarações Disponíveis**, selecione **Dispositivo de Reprodução Automática** e clique em **Adicionar**. Selecione o novo item **Dispositivo de Reprodução Automática** que foi adicionado à lista **Declarações com Suporte**.
 4.  Uma declaração **Dispositivo de Reprodução Automática** identifica o aplicativo como uma opção quando a Reprodução Automática gera um evento de dispositivo para eventos conhecidos. Na seção **Ações de Inicialização**, insira os valores na tabela abaixo para a primeira ação de inicialização.
@@ -250,9 +250,9 @@ A configuração **Nome de exibição da ação** identifica a cadeia de caracte
 
 ### <a name="step-2-add-assembly-reference-for-the-desktop-extensions"></a>Etapa 2: Adicionar referência de assembly para as extensões da área de trabalho
 
-As APIs necessárias para acessar o armazenamento em um Dispositivo Portátil do Windows, [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654), fazem parte da [família de dispositivos da área de trabalho](https://msdn.microsoft.com/library/windows/apps/dn894631). Isso significa que um assembly especial é necessário para usar as APIs e essas chamadas funcionarão somente em um dispositivo na família de dispositivos da área de trabalho (como um computador).
+As APIs necessárias para acessar o armazenamento em um Dispositivo Portátil do Windows, [**Windows.Devices.Portable.StorageDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice), fazem parte da [família de dispositivos da área de trabalho](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide). Isso significa que um assembly especial é necessário para usar as APIs e essas chamadas funcionarão somente em um dispositivo na família de dispositivos da área de trabalho (como um computador).
 
-1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** em **Adicionar Referência...**.
+1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** em **Adicionar Referência...** .
 2.  Expanda **Universal do Windows** e clique em **Extensões**.
 3.  Em seguida, selecione **Extensões de Área de Trabalho do Windows para a UWP** e clique em **OK**.
 
@@ -286,7 +286,7 @@ Abra o arquivo MainPage.xaml e adicione o seguinte XAML à seção &lt;Grade&gt;
 
 ### <a name="step-4-add-activation-code"></a>Etapa 4: Adicione o código de ativação
 
-O código nesta etapa referencia a câmera como um [**StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) passando a ID de informações de dispositivo da câmera para o método [**FromId**](https://msdn.microsoft.com/library/windows/apps/br225655). A ID de informações de dispositivo da câmera é obtida primeiro pela transmissão dos argumentos de evento, como [**DeviceActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224710), e em seguida obtendo o valor da propriedade [**DeviceInformationId**](https://msdn.microsoft.com/library/windows/apps/br224711).
+O código nesta etapa referencia a câmera como um [**StorageDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice) passando a ID de informações de dispositivo da câmera para o método [**FromId**](https://docs.microsoft.com/uwp/api/windows.devices.portable.storagedevice.fromid). A ID de informações de dispositivo da câmera é obtida primeiro pela transmissão dos argumentos de evento, como [**DeviceActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.DeviceActivatedEventArgs), e em seguida obtendo o valor da propriedade [**DeviceInformationId**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.deviceactivatedeventargs.deviceinformationid).
 
 Abra o arquivo App.xaml.cs e adicione o código a seguir à classe **App**.
 
@@ -340,7 +340,7 @@ protected override void OnActivated(IActivatedEventArgs args)
 
 ### <a name="step-5-add-code-to-display-device-information"></a>Etapa 5: Adicione código para exibir informações do dispositivo
 
-Você pode obter informações sobre a câmera nas propriedades da classe [**StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654). O código nesta etapa exibe o nome do dispositivo e outras informações para o usuário quando o aplicativo é executado. Em seguida, o código chama os métodos GetImageList e GetThumbnail, que você vai adicionar na próxima etapa, para exibir miniaturas das imagens armazenadas na câmera.
+Você pode obter informações sobre a câmera nas propriedades da classe [**StorageDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice). O código nesta etapa exibe o nome do dispositivo e outras informações para o usuário quando o aplicativo é executado. Em seguida, o código chama os métodos GetImageList e GetThumbnail, que você vai adicionar na próxima etapa, para exibir miniaturas das imagens armazenadas na câmera.
 
 No arquivo MainPage.xaml.cs, adicione o código a seguir à classe **MainPage**.
 
@@ -415,7 +415,7 @@ Você pode identificar um dispositivo de volume, como um cartão de memória ou 
 
 Este exemplo mostra como identificar seu dispositivo de volume como um dispositivo de **Reprodução Automática**.
 
-Para identificar seu dispositivo de volume como um dispositivo de **Reprodução Automática**, adicione um arquivo autorun.inf à unidade raiz do dispositivo. No arquivo autorun.inf, adicione uma chave **CustomEvent** à seção **AutoRun**. Quando o dispositivo de volume se conectar a um computador, a **Reprodução Automática** encontrará o arquivo autorun.inf e tratará o volume como um dispositivo. A **Reprodução Automática** criará um evento de **Reprodução Automática** usando o nome que você forneceu na chave **CustomEvent**. Em seguida, você pode criar um aplicativo e registrá-lo como manipulador desse evento de **Reprodução Automática**. Quando o dispositivo se conectar ao computador, a **Reprodução Automática** mostrar o aplicativo como manipulador do dispositivo de volume. Para obter mais informações sobre arquivos autorun.inf, consulte [entradas de autorun.inf](https://msdn.microsoft.com/library/windows/desktop/cc144200).
+Para identificar seu dispositivo de volume como um dispositivo de **Reprodução Automática**, adicione um arquivo autorun.inf à unidade raiz do dispositivo. No arquivo autorun.inf, adicione uma chave **CustomEvent** à seção **AutoRun**. Quando o dispositivo de volume se conectar a um computador, a **Reprodução Automática** encontrará o arquivo autorun.inf e tratará o volume como um dispositivo. A **Reprodução Automática** criará um evento de **Reprodução Automática** usando o nome que você forneceu na chave **CustomEvent**. Em seguida, você pode criar um aplicativo e registrá-lo como manipulador desse evento de **Reprodução Automática**. Quando o dispositivo se conectar ao computador, a **Reprodução Automática** mostrar o aplicativo como manipulador do dispositivo de volume. Para obter mais informações sobre arquivos autorun.inf, consulte [entradas de autorun.inf](https://docs.microsoft.com/windows/desktop/shell/autorun-cmds).
 
 ### <a name="step-1-create-an-autoruninf-file"></a>Etapa 1: Criar um arquivo Autorun.
 
@@ -428,7 +428,7 @@ CustomEvent=AutoPlayCustomEventQuickstart
 
 ### <a name="step-2-create-a-new-project-and-add-autoplay-declarations"></a>Etapa 2: Criar um novo projeto e adicione as declarações de reprodução automática
 
-1.  Abra o Visual Studio e selecione **Novo Projeto** no menu **Arquivo**. Na seção **Visual C#**, em **Windows**, selecione **Aplicativo em Branco (Universal do Windows)**. Nomeie o aplicativo **AutoPlayCustomEvent** e clique em **OK**.
+1.  Abra o Visual Studio e selecione **Novo Projeto** no menu **Arquivo**. Na seção **Visual C#** , em **Windows**, selecione **Aplicativo em Branco (Universal do Windows)** . Nomeie o aplicativo **AutoPlayCustomEvent** e clique em **OK**.
 2.  Abra o arquivo Package.appxmanifest e selecione a guia **Recursos**. Selecione o recurso **Armazenamento Removível**. Isso dá ao aplicativo acesso aos arquivos e pastas em dispositivos de armazenamento removíveis.
 3.  No arquivo de manifesto, selecione a guia **Declarações**. Na lista suspensa **Declarações Disponíveis**, selecione **Conteúdo da Reprodução Automática** e clique em **Adicionar**. Selecione o novo item **Conteúdo da Reprodução Automática** que foi adicionado à lista **Declarações Suportadas**.
 
@@ -534,9 +534,9 @@ O sistema de **Reprodução Automática** permite que os aplicativos se registre
 | Manipular discos ópticos graváveis                                     | **HandleCDBurningOnArrival** <br />**HandleDVDBurningOnArrival** <br />**HandleBDBurningOnArrival** | Quando um disco é inserido na unidade óptica, a Reprodução Automática examina os arquivos para determinar o tipo de conteúdo. Quando um disco gravável é encontrado, o evento correspondente ao tipo de disco óptico é acionado. |
 | Manipular qualquer outra conexão de dispositivo ou volume                       | **UnknownContentOnArrival**        | Gerado para todos os eventos, caso seja encontrado conteúdo que não corresponda nenhum dos eventos de conteúdo de Reprodução Automática. O uso desse evento não é recomendado. Você só deve registrar o seu aplicativo para os eventos de Reprodução Automática específicos que ele possa manipular. |
 
-É possível especificar que a Reprodução Automática gere um evento de conteúdo de Reprodução Automática personalizado usando a entrada **CustomEvent** no arquivo autorun.inf de um volume. Para obter mais informações, consulte [entradas de Autorun.inf](https://msdn.microsoft.com/library/windows/desktop/cc144200).
+É possível especificar que a Reprodução Automática gere um evento de conteúdo de Reprodução Automática personalizado usando a entrada **CustomEvent** no arquivo autorun.inf de um volume. Para obter mais informações, consulte [entradas de Autorun.inf](https://docs.microsoft.com/windows/desktop/shell/autorun-cmds).
 
-Você pode registrar seu aplicativo como um conteúdo de Reprodução Automática ou um manipulador de evento de dispositivo de Reprodução Automática adicionando uma extensão ao arquivo package.appxmanifest para seu aplicativo. Se estiver usando o Visual Studio, você poderá adicionar uma declaração de **Conteúdo de Reprodução Automática** ou **Dispositivo de Reprodução Automática** na guia **Declarações**. Se você estiver editando diretamente o arquivo package.appxmanifest para seu aplicativo, adicione um elemento [**Extension**](https://msdn.microsoft.com/library/windows/apps/br211400) ao manifesto do pacote que especifique **windows.autoPlayContent** ou **windows.autoPlayDevice** como **Category**. Por exemplo, a entrada a seguir no manifesto do pacote adiciona uma extensão de **Conteúdo de Reprodução Automática** para registrar o aplicativo como manipulador do evento **ShowPicturesOnArrival**.
+Você pode registrar seu aplicativo como um conteúdo de Reprodução Automática ou um manipulador de evento de dispositivo de Reprodução Automática adicionando uma extensão ao arquivo package.appxmanifest para seu aplicativo. Se estiver usando o Visual Studio, você poderá adicionar uma declaração de **Conteúdo de Reprodução Automática** ou **Dispositivo de Reprodução Automática** na guia **Declarações**. Se você estiver editando diretamente o arquivo package.appxmanifest para seu aplicativo, adicione um elemento [**Extension**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-1-extension) ao manifesto do pacote que especifique **windows.autoPlayContent** ou **windows.autoPlayDevice** como **Category**. Por exemplo, a entrada a seguir no manifesto do pacote adiciona uma extensão de **Conteúdo de Reprodução Automática** para registrar o aplicativo como manipulador do evento **ShowPicturesOnArrival**.
 
 ```xml
   <Applications>

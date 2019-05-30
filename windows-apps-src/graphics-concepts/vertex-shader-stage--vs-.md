@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ca3b5e230270b46b7cb2709d4bfa06c4c51d0224
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5893719e43314eb15c684948a31de5a025a926fc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598151"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370835"
 ---
 # <a name="vertex-shader-vs-stage"></a>Estágio do sombreador de vértice (VS)
 
@@ -29,7 +29,7 @@ O estágio de sombreador de vértice (VS) é usado para processamento de vértic
 -   Metamorfose
 -   Iluminação por vértice
 
-O estágio de sombreador de vértice é um estágio de sombreador programável; ele é mostrado como um bloco arredondado no diagrama de [pipeline gráfico](graphics-pipeline.md). Esse estágio de sombreador usa o modelo de sombreador 4.0 [núcleo comum de sombreador](https://msdn.microsoft.com/library/windows/desktop/bb509580).
+O estágio de sombreador de vértice é um estágio de sombreador programável; ele é mostrado como um bloco arredondado no diagrama de [pipeline gráfico](graphics-pipeline.md). Esse estágio de sombreador usa o modelo de sombreador 4.0 [núcleo comum de sombreador](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-common-core).
 
 O estágio de sombreador de vértice (VS) processa vértices de assembler de entrada. Os sombreadores de vértice sempre operam em um vértice de entrada único e produzem um vértice de saída único. O estágio do sombreador de vértice sempre deve estar ativo para que o pipeline seja executado. Se nenhuma modificação de vértice ou transformação for necessária, um sombreador de vértice de passagem deve ser criado e definido para o pipeline.
 
@@ -39,7 +39,7 @@ O estágio de sombreador de vértices pode consumir os dois valores gerados pelo
 
 Os sombreadores de vértice sempre são executados em todos os vértices, incluindo vértices adjacentes nas topologias primitivas de entrada com adjacência. O número de vezes que o sombreador de vértice foi executado pode ser consultado na CPU usando a estatística de pipeline VSInvocations.
 
-Um sombreador de vértice pode executar operações de amostragem de textura e de carga onde derivados do espaço de tela não são necessários (usando funções intrínsecas do HLSL: [Exemplo (objeto de textura do DirectX HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509695), [SampleCmpLevelZero (objeto de textura do DirectX HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509697), e [SampleGrad (objeto de textura do DirectX HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509698)).
+Um sombreador de vértice pode executar operações de amostragem de textura e de carga onde derivados do espaço de tela não são necessários (usando funções intrínsecas do HLSL: [Exemplo (objeto de textura do DirectX HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-sample), [SampleCmpLevelZero (objeto de textura do DirectX HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmplevelzero), e [SampleGrad (objeto de textura do DirectX HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplegrad)).
 
 ## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
 

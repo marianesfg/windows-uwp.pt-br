@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ac5ca785eab39612bb3a9c6ccd58779c6241059
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e30140a60906cb350940cc5ebd87347878845986
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596861"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365882"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>Código gerado pelo assistente de notificação por push
  
@@ -216,20 +216,20 @@ A função sendNotifications envia uma única notificação como notificação d
 
 O Windows dá suporte a notificações que não são notificações por push. Para obter informações gerais sobre notificações, veja [Escolher um método de entrega de notificação](choosing-a-notification-delivery-method.md).
 
-As notificações do sistema são fáceis de usar e você pode revisar um exemplo no código Insert.js na tabela de canais que é gerada para você. Se pretender usar notificações de bloco ou de selo, precisará criar um modelo XML para o bloco e selo, além de precisar especificar a codificação das informações de pacote no modelo. Consulte [Trabalhando com blocos, selos e notificações do sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259).
+As notificações do sistema são fáceis de usar e você pode revisar um exemplo no código Insert.js na tabela de canais que é gerada para você. Se pretender usar notificações de bloco ou de selo, precisará criar um modelo XML para o bloco e selo, além de precisar especificar a codificação das informações de pacote no modelo. Consulte [Trabalhando com blocos, selos e notificações do sistema](https://docs.microsoft.com/previous-versions/windows/apps/hh868259(v=win.10)).
 
 Como o Windows responde a notificações por push, ele pode manipular a maioria dessas notificações quando o aplicativo está sendo executado. Por exemplo, uma notificação por push poderia avisar um usuário quando uma nova mensagem estivesse disponível mesmo quando o aplicativo de email local não estivesse em execução. O Windows manipula uma notificação do sistema exibindo uma mensagem, como a primeira linha de uma mensagem de texto. O Windows manipula uma notificação de bloco ou notificação simples atualizando o bloco dinâmico de um aplicativo para refletir a quantidade de novas mensagens de email. Dessa maneira, você pode solicitar aos usuários do seu aplicativo que verifiquem se há novas informações. O aplicativo pode receber notificações brutas quando está em execução, e você pode usá-las para enviar dados ao seu aplicativo. Se o aplicativo não estiver em execução, você poderá configurar uma tarefa de segundo plano para monitorar as notificações por push.
 
-Você deve usar as notificações por push de acordo com as diretrizes para os aplicativos da Plataforma Universal do Windows (UWP), porque essas notificações consomem os recursos de um usuário e podem ser traiçoeiras se usadas em excesso. Veja [Diretrizes e lista de verificação de notificações por push](https://msdn.microsoft.com/library/windows/apps/hh761462).
+Você deve usar as notificações por push de acordo com as diretrizes para os aplicativos da Plataforma Universal do Windows (UWP), porque essas notificações consomem os recursos de um usuário e podem ser traiçoeiras se usadas em excesso. Veja [Diretrizes e lista de verificação de notificações por push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview).
 
-Se você estiver atualizando blocos dinâmicos com notificações por push, também deverá seguir as diretrizes em [Diretrizes e lista de verificação de blocos e notificações](https://msdn.microsoft.com/library/windows/apps/hh465403).
+Se você estiver atualizando blocos dinâmicos com notificações por push, também deverá seguir as diretrizes em [Diretrizes e lista de verificação de blocos e notificações](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles).
 
 ## <a name="next-steps"></a>Próximas etapas
 
 
 ### <a name="using-the-windows-push-notification-services-wns"></a>Usando o WNS (Serviços de Notificação por Push do Windows)
 
-Você poderá chamar os Serviços de Notificação por Push do Windows (WNS) diretamente se os Serviços Móveis não oferecerem flexibilidade suficiente, se quiser escrever o código do servidor em C# ou Visual Basic ou se já tiver um serviço de nuvem e quiser enviar notificações por push a partir dele. Chamando o WNS diretamente, é possível enviar notificações por push de seu próprio serviço de nuvem, como uma função do funcionário que monitora dados de um banco de dados ou de outro serviço da Web. Seu serviço de nuvem precisa se autenticar com WNS para enviar notificações por push aos seus aplicativos. Consulte [Como se autenticar com o Serviço de Notificação por Push do Windows (JavaScript)](https://msdn.microsoft.com/library/windows/apps/hh465407) ou [(C#/C++/VB)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868206).
+Você poderá chamar os Serviços de Notificação por Push do Windows (WNS) diretamente se os Serviços Móveis não oferecerem flexibilidade suficiente, se quiser escrever o código do servidor em C# ou Visual Basic ou se já tiver um serviço de nuvem e quiser enviar notificações por push a partir dele. Chamando o WNS diretamente, é possível enviar notificações por push de seu próprio serviço de nuvem, como uma função do funcionário que monitora dados de um banco de dados ou de outro serviço da Web. Seu serviço de nuvem precisa se autenticar com WNS para enviar notificações por push aos seus aplicativos. Consulte [Como se autenticar com o Serviço de Notificação por Push do Windows (JavaScript)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10)) ou [(C#/C++/VB)](https://docs.microsoft.com/previous-versions/windows/apps/hh868206(v=win.10)).
 
 Você também pode enviar notificações por push executando uma tarefa agendada em seu serviço móvel. Consulte [Agendar trabalhos recorrentes em Serviços Móveis](https://go.microsoft.com/fwlink/p/?linkid=301694).
 
@@ -242,9 +242,9 @@ Você também pode enviar notificações por push executando uma tarefa agendada
 
 * [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
 * [Visão geral de notificação de dados brutos](raw-notification-overview.md)
-* [Conectar-se ao Windows serviços móveis do Azure (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263160)
-* [Conectar-se ao Windows serviços móveis do Azure (C#/C+ c++ /CLI VB)](https://msdn.microsoft.com/library/windows/apps/xaml/dn263175)
-* [Guia de início rápido: Adicionar notificações por push para um serviço móvel (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263163)
+* [Conectar-se ao Windows serviços móveis do Azure (JavaScript)](https://docs.microsoft.com/previous-versions/windows/apps/dn263160(v=win.10))
+* [Conectar-se ao Windows serviços móveis do Azure (C#/C+ c++ /CLI VB)](https://docs.microsoft.com/previous-versions/windows/apps/dn263175(v=win.10))
+* [Guia de início rápido: Adicionar notificações por push para um serviço móvel (JavaScript)](https://docs.microsoft.com/previous-versions/windows/apps/dn263163(v=win.10))
  
 
  

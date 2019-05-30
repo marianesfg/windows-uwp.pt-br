@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
 ms.localizationpriority: medium
-ms.openlocfilehash: 293c755ecaf81ce80fab148a8aca92a7e3a8fa48
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 78ed118ba15f38f8914cf2046344d782cd0df71b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618581"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370792"
 ---
 # <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>Escolher e salvar tons usando o esquema de URI ms-tonepicker
 
@@ -23,7 +23,7 @@ Este tópico descreve como usar o **tonepicker ms:** Esquema de URI. Esse esquem
 
 ## <a name="ms-tonepicker-uri-scheme-reference"></a>ms-tonepicker: Referência de esquema URI
 
-Esse esquema de URI não passa argumentos via cadeia de caracteres de esquema URI, mas passa argumentos por meio de um [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx). Todas as cadeias de caracteres diferenciam maiúsculas de minúsculas.
+Esse esquema de URI não passa argumentos via cadeia de caracteres de esquema URI, mas passa argumentos por meio de um [ValueSet](https://docs.microsoft.com/uwp/api/windows.foundation.collections.valueset). Todas as cadeias de caracteres diferenciam maiúsculas de minúsculas.
 
 As seções a seguir indicam quais argumentos devem ser transmitidos para realizar a tarefa especificada.
 
@@ -49,7 +49,7 @@ Os argumentos que você pode passar para exibir o seletor de tom são os seguint
 | CurrentToneFilePath | cadeia de caracteres | não | Um token de tom existente. | O tom a ser exibido como o tom atual no seletor de tom. Se esse valor não for definido, o tom primeiro na lista será selecionado por padrão.<br>Não, estritamente falando, isso é um caminho de arquivo. Você pode obter um valor adequado para `CurrenttoneFilePath` do valor `ToneToken` retornado do seletor de tom.  |
 | TypeFilter | cadeia de caracteres | não | "Toques", "Notificações", "Alarmes", "None" | Seleciona quais tons serão adicionados ao seletor. Se nenhum filtro for especificado, todos os tons serão exibidos. |
 
-Valores que são retornados em [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx):
+Valores que são retornados em [LaunchUriResults.Result](https://docs.microsoft.com/uwp/api/windows.system.launchuriresult.result):
 
 | Valores de retorno | Tipo | Valores possíveis | Descrição |
 |--------------|------|-------|-------------|
@@ -93,10 +93,10 @@ Os argumentos que você pode passar para exibir o protetor de tom são os seguin
 | Parâmetro | Tipo | Obrigatório | Valores possíveis | Descrição |
 |-----------|------|----------|-------|-------------|
 | Ação | cadeia de caracteres | sim | "SaveRingtone" | Abre o seletor para salvar um toque. |
-| ToneFileSharingToken | cadeia de caracteres | sim | Token de compartilhamento de arquivo [SharedStorageAccessManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.aspx) para o arquivo de toque a ser salvo. | Salva um arquivo de som específico como um toque. Os tipos de conteúdo com suporte para o arquivo são áudio mpeg e áudio x-ms-wma. |
+| ToneFileSharingToken | cadeia de caracteres | sim | Token de compartilhamento de arquivo [SharedStorageAccessManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager) para o arquivo de toque a ser salvo. | Salva um arquivo de som específico como um toque. Os tipos de conteúdo com suporte para o arquivo são áudio mpeg e áudio x-ms-wma. |
 | DisplayName | cadeia de caracteres | não | Nome amigável do tom especificado. | Define o nome de exibição a ser usado ao salvar o toque especificado. |
 
-Valores que são retornados em [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx):
+Valores que são retornados em [LaunchUriResults.Result](https://docs.microsoft.com/uwp/api/windows.system.launchuriresult.result):
 
 | Valores de retorno | Tipo | Valores possíveis | Descrição |
 |--------------|------|-------|-------------|
@@ -159,7 +159,7 @@ Os argumentos que você pode passar para obter o nome amigável de um tom são o
 | Ação | cadeia de caracteres | sim | "GetToneName" | Indica que você deseja obter o nome amigável de um tom. |
 | ToneToken | cadeia de caracteres | sim | O token de tom | O token de tom de onde obter um nome de exibição. |
 
-Valores que são retornados em [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx):
+Valores que são retornados em [LaunchUriResults.Result](https://docs.microsoft.com/uwp/api/windows.system.launchuriresult.result):
 
 | Retornar valor | Tipo | Valores possíveis | Descrição |
 |--------------|------|-------|-------------|

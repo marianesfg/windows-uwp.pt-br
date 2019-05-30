@@ -6,26 +6,26 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a93d59a00630c240e74049a9fd98d50f285b0dd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 21e902daac01d8ed2645625320dec27bf7805fba
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634671"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370309"
 ---
 # <a name="calibrate-sensors"></a>Calibrar sensores
 
 
 **APIs importantes**
 
--   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Windows.Devices.Sensors.Custom**](https://msdn.microsoft.com/library/windows/apps/Dn895032)
+-   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**Windows.Devices.Sensors.Custom**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Custom)
 
-Sensores em um dispositivo baseado no magnetômetro (bússola, inclinômetro e sensor de orientação) podem precisar de calibragem devido a fatores ambientais. A enumeração [**MagnetometerAccuracy**](https://msdn.microsoft.com/library/windows/apps/Dn297552) pode ajudar a determinar um curso de ação quando seu dispositivo precisar de calibração.
+Sensores em um dispositivo baseado no magnetômetro (bússola, inclinômetro e sensor de orientação) podem precisar de calibragem devido a fatores ambientais. A enumeração [**MagnetometerAccuracy**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.MagnetometerAccuracy) pode ajudar a determinar um curso de ação quando seu dispositivo precisar de calibração.
 
 ## <a name="when-to-calibrate-the-magnetometer"></a>Quando calibrar o magnetômetro
 
-A enumeração [**MagnetometerAccuracy**](https://msdn.microsoft.com/library/windows/apps/Dn297552) tem quatro valores que ajudam a determinar se o dispositivo no qual o seu aplicativo está em execução precisa ser calibrado. Se um dispositivo precisar ser calibrado, você deve informar ao usuário que uma calibragem é necessária. No entanto, você não deve enviar prompts de calibragem com muita frequência para o usuário. Recomendamos não mais do que uma vez a cada 10 minutos.
+A enumeração [**MagnetometerAccuracy**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.MagnetometerAccuracy) tem quatro valores que ajudam a determinar se o dispositivo no qual o seu aplicativo está em execução precisa ser calibrado. Se um dispositivo precisar ser calibrado, você deve informar ao usuário que uma calibragem é necessária. No entanto, você não deve enviar prompts de calibragem com muita frequência para o usuário. Recomendamos não mais do que uma vez a cada 10 minutos.
 
 | Valor           | Descrição    |
 | ----------------- | ------------------- |

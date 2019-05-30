@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, interface do usuário, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 09005eb12997126a9cad68c388beb0473b19fda3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ef966901534302c505ddad37bd277d9141b512a1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57609051"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367858"
 ---
 # <a name="add-a-user-interface"></a>Adicionar uma interface do usuário
 
@@ -31,7 +31,7 @@ Usando o Direct2D, adicione um número de elementos gráficos de interface do us
 ## <a name="the-user-interface-overlay"></a>A sobreposição da interface do usuário
 
 
-Embora haja várias maneiras de exibir os elementos da interface do usuário e o texto em um jogo do DirectX, vamos nos concentrar em usando [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx). Também utilizaremos [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) para os elementos de texto.
+Embora haja várias maneiras de exibir os elementos da interface do usuário e o texto em um jogo do DirectX, vamos nos concentrar em usando [Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal). Também utilizaremos [DirectWrite](https://docs.microsoft.com/windows/desktop/DirectWrite/direct-write-portal) para os elementos de texto.
 
 
 Direct2D é que um conjunto de APIs de desenho 2D é usado para desenhar os efeitos e primitivos de pixel. Ao começar a usar o Direct2D, é melhor manter as coisas simples. Layouts e comportamentos de interface complexos exigem tempo e planejamento. Se o seu jogo requer uma interface de usuário complexas, como as encontradas no simulação e jogos de estratégia, considere usar o XAML em vez disso.
@@ -53,7 +53,7 @@ A imagem a seguir mostra a exibição de alerta para o exemplo do jogo. É simpl
 ![uma captura de tela da sobreposição do jogo](images/simple-dx-game-ui-overlay.png)
 
 A sobreposição consiste nos seguintes primitivos básicos.
-- [**O DirectWrite** ](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368038) texto no canto superior direito que informa o player de 
+- [**O DirectWrite** ](https://docs.microsoft.com/windows/desktop/DirectWrite/direct-write-portal) texto no canto superior direito que informa o player de 
     - Acertos bem-sucedida
     - Número de capturas que fez o player
     - Tempo restante no nível
@@ -64,12 +64,12 @@ A sobreposição consiste nos seguintes primitivos básicos.
 
 O estado do jogo HUD da sobreposição é desenhado na [ **GameHud::Render** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.cpp#L234-L358) método da [ **GameHud** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.h) classe. Dentro desse método, a sobreposição do Direct2D que representa a nossa interface do usuário é atualizada para refletir as alterações no número de ocorrências, número de nível e restantes do tempo.
 
-Se o jogo foi inicializado, adicionamos `TotalHits()`, `TotalShots()`, e `TimeRemaining()` para um [ **swprintf_s** ](https://docs.microsoft.com/cpp/c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l) armazenar em buffer e especificar o formato de impressão. Em seguida, podemos pode desenhá-lo usando o [ **DrawText** ](https://msdn.microsoft.com/en-us/library/windows/desktop/dd742848) método. Vamos fazer o mesmo para o indicador de nível atual de desenho vazios números para Mostrar níveis não concluídos como ➀ e preenchidos números como ➊ para mostrar que o nível específico foi concluído.
+Se o jogo foi inicializado, adicionamos `TotalHits()`, `TotalShots()`, e `TimeRemaining()` para um [ **swprintf_s** ](https://docs.microsoft.com/cpp/c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l) armazenar em buffer e especificar o formato de impressão. Em seguida, podemos pode desenhá-lo usando o [ **DrawText** ](https://docs.microsoft.com/windows/desktop/Direct2D/id2d1rendertarget-drawtext) método. Vamos fazer o mesmo para o indicador de nível atual de desenho vazios números para Mostrar níveis não concluídos como ➀ e preenchidos números como ➊ para mostrar que o nível específico foi concluído.
 
 
 O trecho de código a seguir explica os **GameHud::Render** processo do método para 
-- Criar um Bitmap usando [* * ID2D1RenderTarget::DrawBitmap * *](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371880)
-- Seccionamento desativar áreas da interface do usuário em retângulos usando [ **D2D1::RectF**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368184)
+- Criar um Bitmap usando [* * ID2D1RenderTarget::DrawBitmap * *](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-drawbitmap(id2d1bitmap_constd2d1_rect_f__float_d2d1_bitmap_interpolation_mode_constd2d1_rect_f_))
+- Seccionamento desativar áreas da interface do usuário em retângulos usando [ **D2D1::RectF**](https://docs.microsoft.com/windows/desktop/api/dcommon/ns-dcommon-d2d_rect_f)
 - Usando o **DrawText** para tornar os elementos de texto
 
 ```cpp
@@ -171,7 +171,7 @@ void GameHud::Render(_In_ Simple3DGame^ game)
 }
 ```
 
-Quebrar o método de busca Além disso, essa informação a [ **GameHud::Render** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.cpp#L320-L358) método desenha nossa mudança e acionar retângulos com [ **ID2D1RenderTarget::DrawRectangle** ](https://msdn.microsoft.com/library/windows/desktop/dd371902)e uma cruz usando duas chamadas para [ **ID2D1RenderTarget::DrawLine**](https://msdn.microsoft.com/library/windows/desktop/dd371895).
+Quebrar o método de busca Além disso, essa informação a [ **GameHud::Render** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.cpp#L320-L358) método desenha nossa mudança e acionar retângulos com [ **ID2D1RenderTarget::DrawRectangle** ](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-drawrectangle(constd2d1_rect_f__id2d1brush_float_id2d1strokestyle))e uma cruz usando duas chamadas para [ **ID2D1RenderTarget::DrawLine**](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-drawline).
 
 ```cpp
         // Check if game is playing
@@ -219,7 +219,7 @@ No **GameHud::Render** método armazenamos o tamanho lógico da janela do jogo n
 auto windowBounds = m_deviceResources->GetLogicalSize();
 ```
 
- Obter o tamanho da janela do jogo é essencial para a programação da interface do usuário. O tamanho da janela é fornecido em uma medida chamada DIPs (pixels independentes de dispositivo), onde um DIP é definido como 1/96 de polegada. Direct2D dimensiona as unidades de desenho para pixels reais quando ocorre o desenho, fazer isso usando os Windows configuração pontos por polegada (DPI). Da mesma forma, ao desenhar texto usando [ **DirectWrite**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368038), especifique quedas em vez de pontos para o tamanho da fonte. Os DIPs são expressos como números de ponto flutuante.
+ Obter o tamanho da janela do jogo é essencial para a programação da interface do usuário. O tamanho da janela é fornecido em uma medida chamada DIPs (pixels independentes de dispositivo), onde um DIP é definido como 1/96 de polegada. Direct2D dimensiona as unidades de desenho para pixels reais quando ocorre o desenho, fazer isso usando os Windows configuração pontos por polegada (DPI). Da mesma forma, ao desenhar texto usando [ **DirectWrite**](https://docs.microsoft.com/windows/desktop/DirectWrite/direct-write-portal), especifique quedas em vez de pontos para o tamanho da fonte. Os DIPs são expressos como números de ponto flutuante.
 
  
 
@@ -271,11 +271,11 @@ O exemplo do jogo tem quatro métodos que entram em jogo ao criar a sobreposiç�
  
 
 #### <a name="gameinfooverlaygameinfooverlay"></a>GameInfoOverlay::GameInfoOverlay
-O [ **GameInfoOverlay::GameInfoOverlay** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L30-L78) construtor inicializa a sobreposição, mantendo a superfície de bitmap que usaremos para exibir informações para o player no. O construtor obtém uma fábrica do [ **ID2D1Device** ](https://msdn.microsoft.com/library/windows/desktop/hh404478) objeto passado a ele, ele usa para criar um [ **ID2D1DeviceContext** ](https://msdn.microsoft.com/library/windows/desktop/hh404479) Se o próprio objeto de sobreposição pode desenhar. [IDWriteFactory::CreateTextFormat](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368203) 
+O [ **GameInfoOverlay::GameInfoOverlay** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L30-L78) construtor inicializa a sobreposição, mantendo a superfície de bitmap que usaremos para exibir informações para o player no. O construtor obtém uma fábrica do [ **ID2D1Device** ](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1device) objeto passado a ele, ele usa para criar um [ **ID2D1DeviceContext** ](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) Se o próprio objeto de sobreposição pode desenhar. [IDWriteFactory::CreateTextFormat](https://docs.microsoft.com/windows/desktop/api/dwrite/nf-dwrite-idwritefactory-createtextformat) 
 
 
 #### <a name="gameinfooverlaycreatedevicedependentresources"></a>GameInfoOverlay::CreateDeviceDependentResources
-[**GameInfoOverlay::CreateDeviceDependentResources** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L82-L104) é o nosso método para criação de pincéis que será usado para desenhar o nosso texto. Para fazer isso, obtemos uma [ **ID2D1DeviceContext2** ](https://msdn.microsoft.com/en-us/library/windows/desktop/dn890789) object que permite a criação e o desenho de geometria, além de funcionalidades, como reconhecimento de gradiente de renderização de malha. Em seguida, criamos uma série de pincéis coloridos usando [ **ID2D1SolidColorBrush** ](https://msdn.microsoft.com/en-us/library/windows/desktop/dd372207) para desenhar os elementos de interface do usuário folling.
+[**GameInfoOverlay::CreateDeviceDependentResources** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L82-L104) é o nosso método para criação de pincéis que será usado para desenhar o nosso texto. Para fazer isso, obtemos uma [ **ID2D1DeviceContext2** ](https://docs.microsoft.com/windows/desktop/api/d2d1_3/nn-d2d1_3-id2d1devicecontext2) object que permite a criação e o desenho de geometria, além de funcionalidades, como reconhecimento de gradiente de renderização de malha. Em seguida, criamos uma série de pincéis coloridos usando [ **ID2D1SolidColorBrush** ](https://docs.microsoft.com/windows/desktop/api/d2d1/nn-d2d1-id2d1solidcolorbrush) para desenhar os elementos de interface do usuário folling.
 - Pincel preto para planos de fundo do retângulo
 - Pincel de branco para texto de status
 - Pincel de laranja para texto de ação
@@ -309,9 +309,9 @@ O [ **GameInfoOverlay::CreateWindowsSizeDependentResources** ](https://github.co
     ```
 
 - Um Bitmap é criado e denominado `m_levelBitmap`, considerando o DPI atual conta usando **CreateBitmap**.
-- `m_levelBitmap` é definido como o nosso destino de renderização 2D usando [ **ID2D1DeviceContext::SetTarget**](https://msdn.microsoft.com/en-us/library/windows/desktop/hh404533).
-- O Bitmap é limpo com cada pixel feita preto usando [ **ID2D1RenderTarget::Clear**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371772).
-- [**ID2D1RenderTarget::BeginDraw** ](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371768) é chamado para iniciar o desenho. 
+- `m_levelBitmap` é definido como o nosso destino de renderização 2D usando [ **ID2D1DeviceContext::SetTarget**](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-settarget).
+- O Bitmap é limpo com cada pixel feita preto usando [ **ID2D1RenderTarget::Clear**](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-clear).
+- [**ID2D1RenderTarget::BeginDraw** ](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) é chamado para iniciar o desenho. 
 - **DrawText** é chamado para desenhar o texto armazenado no `m_titleString`, `m_bodyString`, e `m_actionString` no retângulo approperiate usando correspondente **ID2D1SolidColorBrush**.
 - [**ID2D1RenderTarget::EndDraw** ](ID2D1RenderTarget::EndDraw) é chamado para interromper todas as operações de desenho no `m_levelBitmap`.
 - Outro Bitmap é criado usando **CreateBitmap** denominado `m_tooSmallBitmap` para usar como um fallback, mostrando apenas se a configuração de exibição é muito pequena para o jogo.

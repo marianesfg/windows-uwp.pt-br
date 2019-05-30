@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6def088b3e7f6410f12d1b2e411bcb547c90a09a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: dc1ec762e5c6f69db608805ac58cfb9469114beb
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613281"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372271"
 ---
 # <a name="xphase-attribute"></a>atributo x:Phase
 
 
-Use **x:Phase** com a [extensão de marcação {x:Bind}](x-bind-markup-extension.md) para renderizar os itens [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) de maneira incremental e melhorar a experiência de movimento panorâmico. **x:Phase** oferece uma maneira declarativa de conseguir o mesmo efeito que o uso do evento [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) para controlar manualmente a renderização de itens de lista. Consulte também [Atualizar os itens GridView e ListView de forma incremental](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
+Use **x:Phase** com a [extensão de marcação {x:Bind}](x-bind-markup-extension.md) para renderizar os itens [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) e [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) de maneira incremental e melhorar a experiência de movimento panorâmico. **x:Phase** oferece uma maneira declarativa de conseguir o mesmo efeito que o uso do evento [**ContainerContentChanging**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) para controlar manualmente a renderização de itens de lista. Consulte também [Atualizar os itens GridView e ListView de forma incremental](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
 
 ## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
@@ -69,15 +69,15 @@ O modelo de dados descreve 4 fases:
 3.  Mostra os blocos de texto prettyFileSize e prettyImageSize.
 4.  Mostra a imagem.
 
-O atributo Phase é um recurso do [{x: Bind}](x-bind-markup-extension.md) que funciona com controles derivados de [**ListViewBase**](https://msdn.microsoft.com/library/windows/apps/br242879) e que processa incrementalmente o modelo de item para vinculação de dados. Durante a renderização de itens da lista, **ListViewBase** renderiza uma única fase para todos os itens no modo de exibição, antes de passar para a próxima fase. O trabalho de renderização é realizado em lotes de subconjuntos de tempo para que, conforme a lista é rolada, o trabalho necessário possa ser avaliado novamente, e não realizado para itens que não estão mais visíveis.
+O atributo Phase é um recurso do [{x: Bind}](x-bind-markup-extension.md) que funciona com controles derivados de [**ListViewBase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase) e que processa incrementalmente o modelo de item para vinculação de dados. Durante a renderização de itens da lista, **ListViewBase** renderiza uma única fase para todos os itens no modo de exibição, antes de passar para a próxima fase. O trabalho de renderização é realizado em lotes de subconjuntos de tempo para que, conforme a lista é rolada, o trabalho necessário possa ser avaliado novamente, e não realizado para itens que não estão mais visíveis.
 
-O atributo **x:Phase** pode ser especificado em qualquer elemento num modelo de dados que usa [{x:Bind}](x-bind-markup-extension.md). Quando um elemento tem uma fase diferente de 0, o elemento ficará oculto no modo de exibição (via **Opacity**, não **Visibility**) até que essa fase seja processada e as associações atualizadas. Quando um controle derivado [**ListViewBase**](https://msdn.microsoft.com/library/windows/apps/br242879) é rolado, haverá reciclagem dos modelos de item, a partir de itens que não estão mais na tela para renderizar os itens visíveis recentemente. Os elementos de interface do usuário dentro do modelo manterão seus valores antigos até que sejam associados a dados novamente. O atributo Phase faz com que essa etapa de vinculação de dados seja atrasada e, portanto, Phase precisa ocultar os elementos da interface do usuário, caso estejam obsoletos.
+O atributo **x:Phase** pode ser especificado em qualquer elemento num modelo de dados que usa [{x:Bind}](x-bind-markup-extension.md). Quando um elemento tem uma fase diferente de 0, o elemento ficará oculto no modo de exibição (via **Opacity**, não **Visibility**) até que essa fase seja processada e as associações atualizadas. Quando um controle derivado [**ListViewBase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase) é rolado, haverá reciclagem dos modelos de item, a partir de itens que não estão mais na tela para renderizar os itens visíveis recentemente. Os elementos de interface do usuário dentro do modelo manterão seus valores antigos até que sejam associados a dados novamente. O atributo Phase faz com que essa etapa de vinculação de dados seja atrasada e, portanto, Phase precisa ocultar os elementos da interface do usuário, caso estejam obsoletos.
 
 Cada elemento de interface do usuário pode ter apenas uma fase especificada. Em caso afirmativo, isso se aplicará a todas as associações no elemento. Se uma fase não for especificada, é considerada fase 0.
 
-Números de fase não precisam ser contíguos e são os mesmos do valor de [**ContainerContentChangingEventArgs.Phase**](https://msdn.microsoft.com/library/windows/apps/dn298493). O evento [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) será gerado para cada fase antes de as associações **x:Phase** serem processadas.
+Números de fase não precisam ser contíguos e são os mesmos do valor de [**ContainerContentChangingEventArgs.Phase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.containercontentchangingeventargs.phase). O evento [**ContainerContentChanging**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) será gerado para cada fase antes de as associações **x:Phase** serem processadas.
 
 O atributo Phase afeta apenas associações [{x: Bind}](x-bind-markup-extension.md), não associações [{Binding}](binding-markup-extension.md).
 
-O atributo Phase será aplicado somente quando o modelo de item for renderizado, usando um controle que está ciente do atributo Phase. Para Windows 10, que significa [ **ListView** ](https://msdn.microsoft.com/library/windows/apps/br242878) e [ **GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). O atributo Phase não será aplicado aos modelos de dados usados em outros controles de item, ou para outros cenários, como as seções [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) ou [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843), nesses casos, todos os elementos de interface do usuário serão dados associados ao mesmo tempo.
+O atributo Phase será aplicado somente quando o modelo de item for renderizado, usando um controle que está ciente do atributo Phase. Para Windows 10, que significa [ **ListView** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) e [ **GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView). O atributo Phase não será aplicado aos modelos de dados usados em outros controles de item, ou para outros cenários, como as seções [**ContentTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.contenttemplate) ou [**Hub**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Hub), nesses casos, todos os elementos de interface do usuário serão dados associados ao mesmo tempo.
 

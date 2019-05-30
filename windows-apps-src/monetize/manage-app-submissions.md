@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 474abc2ec43b7f8eab408bd75cca33653d27d932
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 65e8599a73a196ebb72fe3cc45ea984f82057741
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63789671"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371505"
 ---
 # <a name="manage-app-submissions"></a>Gerenciar envios de aplicativo
 
@@ -85,7 +85,7 @@ Para criar um envio de um aplicativo, siga este processo.
 
 1. Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
     > [!NOTE]
-    > Verifique se o aplicativo já tem pelo menos um envio concluído com as informações de [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
+    > Verifique se o aplicativo já tem pelo menos um envio concluído com as informações de [classificações etárias](https://docs.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
 
 2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Microsoft Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
@@ -100,7 +100,7 @@ Para criar um envio de um aplicativo, siga este processo.
     > [!NOTE]
     > Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações sobre URIs de SAS e seu uso com o armazenamento de BLOBs do Azure, consulte [assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) e [assinaturas de acesso compartilhado, parte 2: Criar e usar uma SAS com o armazenamento de BLOBs](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
-4. Se você estiver adicionando novos pacotes, imagens de listagem ou arquivos de trailer para o envio, [prepare os pacotes de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) e [prepare as imagens, os trailers e as capturas de tela do app](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Adicione todos esses arquivos a um arquivo ZIP.
+4. Se você estiver adicionando novos pacotes, imagens de listagem ou arquivos de trailer para o envio, [prepare os pacotes de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements) e [prepare as imagens, os trailers e as capturas de tela do app](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Adicione todos esses arquivos a um arquivo ZIP.
 
 5. Revise os dados de [envio de aplicativo](#app-submission-object) com as alterações necessárias para o novo envio e execute o método a seguir para [atualizar o envio de aplicativo](update-an-app-submission.md).
 
@@ -116,7 +116,7 @@ Para criar um envio de um aplicativo, siga este processo.
     * [Armazenamento do Azure SDK para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
     * [Armazenamento do Azure SDK para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
-    O exemplo de código em C# a seguir demonstra como carregar um arquivo ZIP no armazenamento do Blob do Azure usando a classe [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) na Biblioteca de Cliente do Armazenamento do Azure para .NET. Este exemplo pressupõe que o arquivo ZIP já tenha sido escrito para um objeto de fluxo.
+    O exemplo de código em C# a seguir demonstra como carregar um arquivo ZIP no armazenamento do Blob do Azure usando a classe [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob?redirectedfrom=MSDN) na Biblioteca de Cliente do Armazenamento do Azure para .NET. Este exemplo pressupõe que o arquivo ZIP já tenha sido escrito para um objeto de fluxo.
 
     ```csharp
     string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -338,28 +338,28 @@ Esse recurso tem os valores a seguir.
 | Valor      | Tipo   | Descrição      |
 |------------|--------|-------------------|
 | id            | cadeia de caracteres  | A ID do envio. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md), [obter todos os apps](get-all-apps.md) e [obter um app](get-an-app.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL para a página de envio no Partner Center.  |
-| applicationCategory           | cadeia de caracteres  |   Uma cadeia de caracteres que especifica a [categoria e/ou subcategoria](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) para o aplicativo. Categorias e subcategorias são combinadas em uma única cadeia de caracteres com o caractere de sublinhado '_', como **BooksAndReference_EReader**.      |  
+| applicationCategory           | cadeia de caracteres  |   Uma cadeia de caracteres que especifica a [categoria e/ou subcategoria](https://docs.microsoft.com/windows/uwp/publish/category-and-subcategory-table) para o aplicativo. Categorias e subcategorias são combinadas em uma única cadeia de caracteres com o caractere de sublinhado '_', como **BooksAndReference_EReader**.      |  
 | pricing           |  objeto  | Um [recurso de preço](#pricing-object) que contém informações de preço para o aplicativo.        |   
 | visibilidade           |  cadeia de caracteres  |  A visibilidade do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
 | targetPublishMode           | cadeia de caracteres  | O modo de publicação do envio. Isso pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | cadeia de caracteres  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |  
 | listings           |   objeto  |  Um dicionário de pares de chave e valor, em que cada chave é um código de país e cada valor é um [recurso de listagem](#listing-object) que contém informações de listagem do aplicativo.       |   
-| hardwarePreferences           |  matriz  |   Uma matriz de cadeias de caracteres que definem as [preferências de hardware](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Touch</li><li>Teclado</li><li>Mouse</li><li>Câmera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonia</li></ul>     |   
-| automaticBackupEnabled           |  boolean  |   Indica se o Windows pode incluir dados do aplicativo em backups automáticos no OneDrive. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
-| canInstallOnRemovableMedia           |  boolean  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| hardwarePreferences           |  matriz  |   Uma matriz de cadeias de caracteres que definem as [preferências de hardware](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties) do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Touch</li><li>Teclado</li><li>Mouse</li><li>Câmera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonia</li></ul>     |   
+| automaticBackupEnabled           |  boolean  |   Indica se o Windows pode incluir dados do aplicativo em backups automáticos no OneDrive. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).   |   
+| canInstallOnRemovableMedia           |  boolean  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | isGameDvrEnabled           |  boolean |   Indica se o DVR de jogos está habilitado para o aplicativo.    |   
 | gamingOptions           |  matriz |   Uma matriz que contém um [recurso de opções de jogo](#gaming-options-object) que define as configurações relacionadas a jogos para o app.     |   
-| hasExternalInAppProducts           |     boolean          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Microsoft Store. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
-| meetAccessibilityGuidelines           |    boolean           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
-| notesForCertification           |  cadeia de caracteres  |   Contém [observações de certificação](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
+| hasExternalInAppProducts           |     boolean          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Microsoft Store. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| meetAccessibilityGuidelines           |    boolean           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).      |   
+| notesForCertification           |  cadeia de caracteres  |   Contém [observações de certificação](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
 | status           |   cadeia de caracteres  |  O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   objeto  | Um [recurso de detalhes do status](#status-details-object) que contém detalhes adicionais sobre o status do envio, inclusive informações sobre eventuais erros.       |    
 | fileUploadUrl           |   cadeia de caracteres  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes, imagens de listagem ou arquivos de trailer para o envio, carregue o arquivo ZIP que contém os pacotes e imagens para este URI. Para obter mais informações, consulte [Criar um envio de aplicativo](#create-an-app-submission).       |    
 | applicationPackages           |   matriz  | Uma matriz de [recursos do pacote de aplicativos](#application-package-object) que dão detalhes sobre cada pacote no envio. |    
 | packageDeliveryOptions    | objeto  | Um [recurso de opções de entrega do pacote](#package-delivery-options-object) que contém configurações da distribuição de pacote gradual e da atualização obrigatória para o envio.  |
 | enterpriseLicensing           |  cadeia de caracteres  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
-| allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
-| allowTargetFutureDeviceFamilies           | objeto   |  Um dicionário de pares de chave e valor, onde cada chave é uma [família de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) e cada valor é um valor booliano que indica se seu aplicativo tem permissão para segmentar a família de dispositivos especificadas.     |    
+| allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability).    |    
+| allowTargetFutureDeviceFamilies           | objeto   |  Um dicionário de pares de chave e valor, onde cada chave é uma [família de dispositivos Windows 10](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) e cada valor é um valor booliano que indica se seu aplicativo tem permissão para segmentar a família de dispositivos especificadas.     |    
 | friendlyName           |   cadeia de caracteres  |  O nome amigável do envio, conforme mostrado no Partner Center. Esse valor é gerado para você ao criar o envio.       |  
 | trailers           |  matriz |   Uma matriz que contém até 15 [recursos de trailer](#trailer-object) que representam trailers de vídeo para a listagem de apps.<br/><br/>   |  
 
@@ -373,9 +373,9 @@ Esse recurso contém informações de preço do aplicativo. Esse recurso tem os 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
 |  trialPeriod               |    cadeia de caracteres     |  Uma cadeia de caracteres que especifica o período de avaliação do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
-|  marketSpecificPricings               |    objeto     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.      |     
+|  marketSpecificPricings               |    objeto     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.      |     
 |  sales               |   matriz      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do aplicativo.   |     
-|  priceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) do aplicativo.   |     
+|  priceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection) do aplicativo.   |     
 |  isAdvancedPricingModel               |   boolean      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
 
 
@@ -398,7 +398,7 @@ Esse recurso tem os valores a seguir.
 |  basePriceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
 |  startDate               |   cadeia de caracteres      |   A data de início da promoção no formato ISO 8601.  |     
 |  endDate               |   cadeia de caracteres      |  A data de término da promoção no formato ISO 8601.      |     
-|  marketSpecificPricings               |   objeto      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *basePriceId* para o mercado especificado.    |
+|  marketSpecificPricings               |   objeto      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *basePriceId* para o mercado especificado.    |
 
 
 <span id="listing-object" />
@@ -420,15 +420,15 @@ Esse recurso contém informações de listagem base de um aplicativo. Esse recur
 
 | Valor           | Tipo    | Descrição       |
 |-----------------|---------|------|
-|  copyrightAndTrademarkInfo                |   cadeia de caracteres      |  Informações opcionais de [direitos autorais e/ou marca comercial](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info).  |
-|  keywords                |  matriz       |  Uma matriz de [palavra-chave](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords) para ajudar seu aplicativo a aparecer nos resultados de pesquisa.    |
-|  licenseTerms                |    cadeia de caracteres     | Os [termos de licença](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) opcionais do seu aplicativo.     |
+|  copyrightAndTrademarkInfo                |   cadeia de caracteres      |  Informações opcionais de [direitos autorais e/ou marca comercial](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions).  |
+|  keywords                |  matriz       |  Uma matriz de [palavra-chave](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) para ajudar seu aplicativo a aparecer nos resultados de pesquisa.    |
+|  licenseTerms                |    cadeia de caracteres     | Os [termos de licença](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) opcionais do seu aplicativo.     |
 |  privacyPolicy                |   cadeia de caracteres      |   Este valor está obsoleto. Para definir ou alterar a URL da política de privacidade para o seu aplicativo, você deve fazer isso na [propriedades](../publish/enter-app-properties.md#privacy-policy-url) página no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.       |
 |  supportContact                |   cadeia de caracteres      |  Este valor está obsoleto. Para definir ou alterar o suporte de contato URL ou endereço de email para seu aplicativo, você deve fazer isso na [propriedades](../publish/enter-app-properties.md#support-contact-info) página no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.        |
 |  websiteUrl                |   cadeia de caracteres      |  Este valor está obsoleto. Para definir ou alterar a URL da página da web para seu aplicativo, você deve fazer isso na [propriedades](../publish/enter-app-properties.md#website) página no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.      |    
-|  description               |    cadeia de caracteres     |   A [descrição](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) dos detalhes do aplicativo.   |     
-|  features               |    matriz     |  Uma matriz de até 20 cadeias de caracteres que lista os [recursos](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) do seu aplicativo.     |
-|  releaseNotes               |  cadeia de caracteres       |  As [notas de versão](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) do aplicativo.    |
+|  description               |    cadeia de caracteres     |   A [descrição](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) dos detalhes do aplicativo.   |     
+|  features               |    matriz     |  Uma matriz de até 20 cadeias de caracteres que lista os [recursos](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) do seu aplicativo.     |
+|  releaseNotes               |  cadeia de caracteres       |  As [notas de versão](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) do aplicativo.    |
 |  images               |   matriz      |  Uma matriz de recursos de [imagem e ícone](#image-object) para a listagem do aplicativo.  |
 |  recommendedHardware               |   matriz      |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware recomendadas](../publish/create-app-store-listings.md#additional-information) para o aplicativo.     |
 |  minimumHardware               |     cadeia de caracteres    |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware mínimas](../publish/create-app-store-listings.md#additional-information) para o app.    |  
@@ -572,10 +572,10 @@ Esse recurso tem os valores a seguir.
 | fileName   |   cadeia de caracteres      |  O nome do pacote.    |  
 | fileStatus    | cadeia de caracteres    |  O status do pacote. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
 | id    |  cadeia de caracteres   |  Uma ID que identifica exclusivamente o pacote. Esse valor é fornecido pelo Centro de parceiros.   |     
-| version    |  cadeia de caracteres   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
+| version    |  cadeia de caracteres   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
 | architecture    |  cadeia de caracteres   |  A arquitetura do pacote (por exemplo, ARM).   |     
-| languages    | matriz    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas com suporte](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
-| capabilities    |  matriz   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
+| languages    | matriz    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas com suporte](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
+| capabilities    |  matriz   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
 | minimumDirectXVersion    |  cadeia de caracteres   |  A versão mínima do DirectX que é compatível com o pacote do aplicativo. Isso pode ser definido apenas para apps destinados ao Windows 8.x. Para aplicativos destinados a outras versões do sistema operacional, esse valor deve estar presente ao chamar o método [atualizar um envio de aplicativo](update-an-app-submission.md), mas o valor especificado será ignorado. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
 | minimumSystemRam    | cadeia de caracteres    |  A RAM mínima necessária para o pacote do aplicativo. Isso pode ser definido apenas para apps destinados ao Windows 8.x. Para aplicativos destinados a outras versões do sistema operacional, esse valor deve estar presente ao chamar o método [atualizar um envio de aplicativo](update-an-app-submission.md), mas o valor especificado será ignorado. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Memory2GB</li></ul>   |       
 | targetDeviceFamilies    | matriz    |  Uma matriz de cadeias de caracteres que representam as famílias de dispositivos que o pacote segmenta. Esse valor é usado somente para pacotes destinados ao Windows 10; para pacotes destinados a versões anteriores, esse valor tem o valor **Nenhum**. As seguintes sequências de família de dispositivos atualmente têm suporte para pacotes do Windows 10, onde *{0}* é uma sequência de versão do Windows 10, como 10.0.10240.0, 10.0.10586.0 ou 10.0.14393.0: <ul><li>Versão mínima do Windows.Universal *{0}*</li><li>Versão mínima do Windows.Desktop *{0}*</li><li>Versão mínima do Windows.Mobile *{0}*</li><li>Versão mínima do Windows.Xbox *{0}*</li><li>Versão mínima de Windows.Holographic *{0}*</li></ul>   |    
@@ -678,7 +678,7 @@ Esse recurso tem os valores a seguir.
 |  id               |    cadeia de caracteres     |   A ID do trailer. Esse valor é fornecido pelo Centro de parceiros.   |
 |  videoFileName               |    cadeia de caracteres     |    O nome do arquivo de vídeo de trailer no arquivo ZIP que contém arquivos para o envio.    |     
 |  videoFileId               |   cadeia de caracteres      |  A ID do arquivo de vídeo de trailer. Esse valor é fornecido pelo Centro de parceiros.   |     
-|  trailerAssets               |   objeto      |  Um dicionário de pares de chave e valor, onde cada chave é um código de idioma e cada valor é um [recurso de ativos de trailer](#trailer-assets-object) que contém outros ativos específicos da localidade para o trailer. Para saber mais sobre os códigos de idioma com suporte, consulte [Idiomas com suporte](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
+|  trailerAssets               |   objeto      |  Um dicionário de pares de chave e valor, onde cada chave é um código de idioma e cada valor é um [recurso de ativos de trailer](#trailer-assets-object) que contém outros ativos específicos da localidade para o trailer. Para saber mais sobre os códigos de idioma com suporte, consulte [Idiomas com suporte](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
 
 > [!NOTE]
 > O recurso *trailers* foi adicionado em maio de 2017, depois que a API de envio da Microsoft Store foi lançada pela primeira vez para desenvolvedores. Se você tiver criado um envio para um app por meio da API de envio antes da introdução desse recurso e se esse envio ainda estiver em andamento, esse recurso será nulo para envios para o app até que você confirme com êxito o envio ou o exclua. Se o recurso *trailers* não estiver disponível para envios para um app, o campo *hasAdvancedListingPermission* do [recurso Application](get-app-data.md#application_object) retornado pelo método [obter um app](get-an-app.md) será falso.
@@ -724,14 +724,14 @@ Os seguintes valores representam as faixas de preço disponíveis no recurso [pr
 |  Base               |   A faixa de preço não está definida. Use o preço base para o aplicativo.      |     
 |  NotAvailable              |   O aplicativo não está disponível na região especificada.    |     
 |  Grátis              |   O aplicativo é gratuito.    |    
-|  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do app, no formato **Faixa<em>xxxx</em>**. No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para ver a tabela completa das camadas de preço que estão disponíveis para sua conta de desenvolvedor, incluindo os preços específicos do mercado que estão associados a cada camada, vá para o **preços e disponibilidade** página para qualquer um dos seus envios de aplicativo no Centro de parceiro e clique no **tabela de exibição** link na **mercados e preços personalizados** seção (para algumas contas de desenvolvedor, esse link está no **preços** seção).    |
+|  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do app, no formato **Faixa<em>xxxx</em>** . No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para ver a tabela completa das camadas de preço que estão disponíveis para sua conta de desenvolvedor, incluindo os preços específicos do mercado que estão associados a cada camada, vá para o **preços e disponibilidade** página para qualquer um dos seus envios de aplicativo no Centro de parceiro e clique no **tabela de exibição** link na **mercados e preços personalizados** seção (para algumas contas de desenvolvedor, esse link está no **preços** seção).    |
 
 
 <span id="enterprise-licensing" />
 
 ### <a name="enterprise-licensing-values"></a>Valores de licenciamento da empresa
 
-Os seguintes valores representam o comportamento de licenciamento organizacional do app. Para obter mais informações sobre essas opções, consulte [Opções de licenciamento organizacional](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing).
+Os seguintes valores representam o comportamento de licenciamento organizacional do app. Para obter mais informações sobre essas opções, consulte [Opções de licenciamento organizacional](https://docs.microsoft.com/windows/uwp/publish/organizational-licensing).
 
 > [!NOTE]
 > Embora você possa configurar as opções de licenciamento organizacional para um envio de aplicativo por meio da API de envio, você não pode usar essa API para publicar os envios de [compras de volume por meio da Microsoft Store para Empresas e da Microsoft Store para Educação](../publish/organizational-licensing.md). Para publicar envios para a Microsoft Store para empresas e a Microsoft Store para educação, você deve usar o Partner Center.
@@ -773,4 +773,4 @@ Os seguintes valores representam o código de status de um envio.
 
 * [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obter dados de aplicativo usando a API de envio da Microsoft Store](get-app-data.md)
-* [Envios de aplicativo no Partner Center](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
+* [Envios de aplicativo no Partner Center](https://docs.microsoft.com/windows/uwp/publish/app-submissions)

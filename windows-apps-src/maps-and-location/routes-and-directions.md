@@ -6,12 +6,12 @@ ms.date: 09/20/2017
 ms.topic: article
 keywords: windows 10, uwp, rota, mapa, localização, direções
 ms.localizationpriority: medium
-ms.openlocfilehash: 218ca052a3e525a1f7cfc2ce18542a5a30c61e5e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 196cb4801436e8094dae4ead363ff86cc746034e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646681"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371688"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>Exibir rotas e trajetos em um mapa
 
@@ -21,7 +21,7 @@ Solicite rotas e trajeto e os exiba no aplicativo.
 
 >[!Note]
 >Para saber mais sobre como usar mapas em seu app, baixe a [amostra de mapa da Plataforma Universal do Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
->Caso o mapeamento não seja um dos principais recursos do app, considere iniciar o app Mapas do Windows em vez disso. Você pode usar os esquemas de URI `bingmaps:`, `ms-drive-to:` e `ms-walk-to:` para iniciar o aplicativo Mapas do Windows para mapas específicos e trajetos curva a curva. Para saber mais, consulte [Iniciar o aplicativo Mapas do Windows](https://msdn.microsoft.com/library/windows/apps/mt228341).
+>Caso o mapeamento não seja um dos principais recursos do app, considere iniciar o app Mapas do Windows em vez disso. Você pode usar os esquemas de URI `bingmaps:`, `ms-drive-to:` e `ms-walk-to:` para iniciar o aplicativo Mapas do Windows para mapas específicos e trajetos curva a curva. Para saber mais, consulte [Iniciar o aplicativo Mapas do Windows](https://docs.microsoft.com/windows/uwp/launch-resume/launch-maps-app).
 
  
 ## <a name="an-intro-to-maproutefinder-results"></a>Uma introdução aos resultados de MapRouteFinder
@@ -29,15 +29,15 @@ Solicite rotas e trajeto e os exiba no aplicativo.
 
 Aqui está como as classes de rotas e trajetos estão relacionadas:
 
-* A classe [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) tem métodos que obtêm rotas e trajetos. Esses métodos retornam um [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939).
+* A classe [**MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder) tem métodos que obtêm rotas e trajetos. Esses métodos retornam um [**MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult).
 
-* O [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) contém um objeto [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937). Acesse esse objeto por meio da propriedade [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) do **MapRouteFinderResult**.
+* O [**MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult) contém um objeto [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute). Acesse esse objeto por meio da propriedade [**Route**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinderresult.route) do **MapRouteFinderResult**.
 
-* [  **MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) contém uma coleção de objetos [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955). Acesse essa coleção por meio da propriedade [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973) do **MapRoute**.
+* [  **MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) contém uma coleção de objetos [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg). Acesse essa coleção por meio da propriedade [**Legs**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproute.legs) do **MapRoute**.
 
-* Cada [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) contém uma coleção de objetos [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961). Acesse essa coleção por meio da propriedade [**Maneuvers**](https://msdn.microsoft.com/library/windows/apps/dn636959) do **MapRouteLeg**.
+* Cada [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) contém uma coleção de objetos [**MapRouteManeuver**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteManeuver). Acesse essa coleção por meio da propriedade [**Maneuvers**](https://docs.microsoft.com/uwp/api/windows.services.maps.maprouteleg.maneuvers) do **MapRouteLeg**.
 
-Obtenha rotas e trajetos ao dirigir ou caminhar chamando os métodos da classe [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938). Por exemplo, [**GetDrivingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636943) ou [**GetWalkingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636953).
+Obtenha rotas e trajetos ao dirigir ou caminhar chamando os métodos da classe [**MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder). Por exemplo, [**GetDrivingRouteAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getdrivingrouteasync) ou [**GetWalkingRouteAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getwalkingrouteasync).
 
 Ao solicitar uma rota, você pode especificar o seguinte:
 
@@ -53,9 +53,9 @@ Ao solicitar uma rota, você pode especificar o seguinte:
 
 ## <a name="display-directions"></a>Exibir trajetos
 
-O objeto [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) contém um objeto [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) que você pode acessar por meio da propriedade [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940).
+O objeto [**MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult) contém um objeto [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) que você pode acessar por meio da propriedade [**Route**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinderresult.route).
 
-O [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) calculado possui propriedades que fornecem o tempo de finalização da rota, a distância da rota e a coleção de objetos [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) que contêm as etapas da rota. Cada objeto **MapRouteLeg** contém uma coleção de objetos [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961). O objeto **MapRouteManeuver** contém trajetos que é possível acessar por meio da propriedade [**InstructionText**](https://msdn.microsoft.com/library/windows/apps/dn636964).
+O [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) calculado possui propriedades que fornecem o tempo de finalização da rota, a distância da rota e a coleção de objetos [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) que contêm as etapas da rota. Cada objeto **MapRouteLeg** contém uma coleção de objetos [**MapRouteManeuver**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteManeuver). O objeto **MapRouteManeuver** contém trajetos que é possível acessar por meio da propriedade [**InstructionText**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutemaneuver.instructiontext).
 
 >[!IMPORTANT]
 >Você deve especificar uma chave de autenticação de mapas para poder usar os serviços de mapa. Para obter mais informações, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md).
@@ -138,7 +138,7 @@ You have reached your destination.
 ## <a name="display-routes"></a>Exibir rotas
 
 
-Para exibir um [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) em um [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004), construa um [**MapRouteView**](https://msdn.microsoft.com/library/windows/apps/dn637122) com o **MapRoute**. Em seguida, adicione o **MapRouteView** à coleção [**Routes**](https://msdn.microsoft.com/library/windows/apps/dn637047) do **MapControl**.
+Para exibir um [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) em um [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl), construa um [**MapRouteView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapRouteView) com o **MapRoute**. Em seguida, adicione o **MapRouteView** à coleção [**Routes**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.routes) do **MapControl**.
 
 >[!IMPORTANT]
 >Você deve especificar uma chave de autenticação de mapas para usar serviços de mapa ou o controle de mapa. Para obter mais informações, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md).
@@ -190,7 +190,7 @@ private async void ShowRouteOnMap()
 }
 ```
 
-Esse exemplo exibe o seguinte em um [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) chamado **MapWithRoute**.
+Esse exemplo exibe o seguinte em um [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) chamado **MapWithRoute**.
 
 ![controle de mapa com rota exibida.](images/routeonmap.png)
 
@@ -243,6 +243,6 @@ private async void ShowRouteOnMap()
 
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Diretrizes de design para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
 * [Vídeo da Build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Exemplo de aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: a0a16ac9a2d810f7f4cbe2be403713b5cec4997b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f20179b03461f2b7746cc6d0f4330bbf45c10427
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641021"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371950"
 ---
 # <a name="web-account-manager"></a>Gerenciador de Contas da Web
 
@@ -76,7 +76,7 @@ Se você executar o aplicativo e clicar no botão "Fazer logon", uma janela vazi
 O painel está vazio porque o sistema fornece somente um shell de interface do usuário - cabe ao desenvolvedor popular o painel de forma programática com os provedores de identidade. 
 
 > [!TIP]
-> Opcionalmente, você pode usar **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** em vez de  **[Mostrar](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)**, que retornará um  **[ IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)**, para consultar o status da operação. 
+> Opcionalmente, você pode usar **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** em vez de  **[Mostrar](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)** , que retornará um  **[ IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)** , para consultar o status da operação. 
 
 ## <a name="register-for-accountcommandsrequested"></a>Registro para AccountCommandsRequested
 
@@ -174,7 +174,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 
 Neste exemplo, passamos a cadeia de caracteres ""wl.basic" para o parâmetro de _escopo_. Escopo representa o tipo de informação que você está solicitando do serviço em um usuário específico. Determinados escopos fornecem acesso somente a informações básicas do usuário, como nome e email, enquanto outros escopos podem conceder acesso a informações confidenciais, como as fotos do usuário ou a caixa de entrada de email. Em geral, seu app deve usar o escopo menos permissivo necessário para obter sua função. Os provedores de serviço fornecerão documentação sobre quais escopos são necessários para obter tokens para uso com os serviços. 
 
-* Para os escopos do Office 365 e do Outlook.com, consulte [Autenticar APIs do Office 365 e do Outlook.com usando o ponto de extremidade de autenticação v 2.0](https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2). 
+* Para os escopos do Office 365 e do Outlook.com, consulte [Autenticar APIs do Office 365 e do Outlook.com usando o ponto de extremidade de autenticação v 2.0](https://developer.microsoft.com/graph/docs/concepts/auth_overview). 
 * Para escopos do OneDrive, consulte [Autenticação e credenciais no OneDrive](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes). 
 
 > [!TIP]
@@ -214,7 +214,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 > [!NOTE]
 > Se você receber um erro ao solicitar um token, verifique se associou seu app à Store, conforme descrito na etapa um. Seu aplicativo não conseguirá obter um token se você ignorou essa etapa. 
 
-Quando você tiver um token, poderá usá-lo para chamar a API do provedor. No código abaixo, chamaremos a [API do Microsoft Live de informações do usuário](https://msdn.microsoft.com/library/hh826533.aspx) para obter informações básicas sobre o usuário e exibi-las em nossa interface do usuário. Observe, porém, que na maioria dos casos é recomendável que você armazene o token obtido uma vez e depois o utilize em um método separado.
+Quando você tiver um token, poderá usá-lo para chamar a API do provedor. No código abaixo, chamaremos a [API do Microsoft Live de informações do usuário](https://docs.microsoft.com/office/) para obter informações básicas sobre o usuário e exibi-las em nossa interface do usuário. Observe, porém, que na maioria dos casos é recomendável que você armazene o token obtido uma vez e depois o utilize em um método separado.
 
 ```csharp
 private async void GetMsaTokenAsync(WebAccountProviderCommand command)
@@ -250,7 +250,7 @@ O modo como você chama diversas APIs REST varia de acordo com o provedor; consu
 
 Tokens são úteis para obter imediatamente informações sobre um usuário, mas eles geralmente têm tempo de vida variável - os tokens MSA, por exemplo, são válidos por algumas horas apenas. Felizmente, não é necessário mostrar novamente o **AccountsSettingsPane** sempre que um token expirar. Quando um usuário autoriza seu aplicativo uma vez, você pode armazenar as informações da conta do usuário para uso futuro. 
 
-Para fazer isso, use a classe **[WebAccount](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount)**. A **WebAccount** é retornada pelo mesmo método usado para solicitar o token:
+Para fazer isso, use a classe **[WebAccount](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount)** . A **WebAccount** é retornada pelo mesmo método usado para solicitar o token:
 
 ```csharp
 private async void GetMsaTokenAsync(WebAccountProviderCommand command)
@@ -398,7 +398,7 @@ Não exagere com texto de cabeçalho; seja conciso e direto. Se o processo de lo
 
 Você pode adicionar comandos personalizados ao AccountsSettingsPane, que aparecem como links abaixo de seu WebAccountProviders com suporte. Comandos personalizados são ótimos para tarefas simples relacionadas a contas de usuário, como exibir uma política de privacidade ou iniciar uma página de suporte para os usuários que estão com problemas. 
 
-Aqui está um exemplo: 
+Veja um exemplo: 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCommandsRequestedEventArgs e)
@@ -422,11 +422,11 @@ Teoricamente, você pode usar comandos de configurações para tudo. No entanto,
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace Windows.Security.Authentication.Web.Core](https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.web.core.aspx)
+[Namespace Windows.Security.Authentication.Web.Core](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core)
 
-[Namespace Windows.Security.Credentials](https://msdn.microsoft.com/library/windows/apps/windows.security.credentials.aspx)
+[Namespace Windows.Security.Credentials](https://docs.microsoft.com/uwp/api/windows.security.credentials)
 
-[Classe AccountsSettingsPane](https://msdn.microsoft.com/library/windows/apps/windows.ui.applicationsettings.accountssettingspane)
+[Classe AccountsSettingsPane](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane)
 
 [Agente de autenticação na Web](web-authentication-broker.md)
 

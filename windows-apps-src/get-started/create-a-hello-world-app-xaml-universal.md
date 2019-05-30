@@ -6,12 +6,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, uwp, primeiro app, Olá, mundo
 ms.localizationpriority: medium
-ms.openlocfilehash: 433536673efb9d2f17d822599051030b219ed02f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d9a7f0302dfdc9f9fa980f0fe93a3371328f9e5c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642151"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367431"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Criar um aplicativo "Hello, world" (XAML)
 
@@ -19,7 +19,7 @@ Este tutorial ensina como usar o XAML e C# para criar um simples "Hello, world" 
 
 Aqui, você aprenderá a:
 
--   Criar um novo **Visual Studio 2017** projeto que tem como alvo **Windows 10** e o **UWP**.
+-   Criar um novo **Visual Studio** projeto que tem como alvo **Windows 10** e o **UWP**.
 -   Escreva o XAML para alterar a interface do usuário em sua página inicial.
 -   Executar o projeto na área de trabalho local no Visual Studio.
 -   Use um SpeechSynthesizer para fazer o aplicativo falar quando você pressiona um botão.
@@ -42,7 +42,7 @@ Aqui, você aprenderá a:
 
 ## <a name="step-1-create-a-new-project-in-visual-studio"></a>Etapa 1: Crie um novo projeto no Visual Studio.
 
-1.  Inicie o Visual Studio 2017.
+1.  Inicie o Visual Studio.
 
 2.  Do **arquivo** menu, selecione **New > Project** para abrir o *novo projeto* caixa de diálogo.
 
@@ -52,7 +52,7 @@ Aqui, você aprenderá a:
 
     ![Como repetir o processo de instalação](images/win10-cs-install.png)
 
-4.  Escolha o modelo **Aplicativo em branco (Universal Windows)** e insira "HelloWorld" como **nome**. Clique em **OK**.
+4.  Escolha o modelo **Aplicativo em branco (Universal Windows)** e insira "HelloWorld" como **nome**. Selecione **OK**.
 
     ![A janela Novo projeto](images/win10-cs-01.png)
 
@@ -76,7 +76,7 @@ Apesar de ser um modelo básico, **Aplicativo em Branco (Universal do Windows)**
 
 Para exibir e editar um arquivo no projeto, clique duas vezes no arquivo no **Gerenciador de Soluções**. Expanda um arquivo XAML como se fosse uma pasta para ver o arquivo de código associado. Os arquivos XAML são abertos em um modo divisão que mostra a área de design e o editor de XAML.
 > [!NOTE]
-> O que é XAML? Extensible Application Markup Language (XAML) é a linguagem usada para definir a interface do usuário do seu aplicativo. Ela pode ser inserida manualmente ou criada usando as ferramentas de design do Visual Studio. Um arquivo .xaml tem um arquivo .xaml.cs code-behind que contém a lógica. Juntos, o XAML e o code-behind compõem uma classe completa. Para saber mais, consulte [Visão geral de XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595).
+> O que é XAML? Extensible Application Markup Language (XAML) é a linguagem usada para definir a interface do usuário do seu aplicativo. Ela pode ser inserida manualmente ou criada usando as ferramentas de design do Visual Studio. Um arquivo .xaml tem um arquivo .xaml.cs code-behind que contém a lógica. Juntos, o XAML e o code-behind compõem uma classe completa. Para saber mais, consulte [Visão geral de XAML](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-overview).
 
 *App. XAML e App.xaml.cs*
 
@@ -89,9 +89,9 @@ Para exibir e editar um arquivo no projeto, clique duas vezes no arquivo no **Ge
 
 -   Em MainPage.xaml, você define a interface do usuário do aplicativo. É possível adicionar elementos usando diretamente a marcação XAML ou usar as ferramentas de design fornecidas pelo Visual Studio.
 -   MainPage.xaml.cs é a página code-behind de MainPage.xaml. É onde você adiciona a lógica e os manipuladores de eventos do aplicativo.
--   Juntos, esses dois arquivos definem uma nova classe chamada `MainPage`, que herda de [**Page**](https://msdn.microsoft.com/library/windows/apps/BR227503), no namespace `HelloWorld`.
+-   Juntos, esses dois arquivos definem uma nova classe chamada `MainPage`, que herda de [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page), no namespace `HelloWorld`.
 
-*Package. appxmanifest*
+*Package.appxmanifest*
 -   Um arquivo de manifesto que descreve seu aplicativo: nome, descrição, bloco, página de início, etc.
 -   Inclui uma lista de dependências, recursos e arquivos que contém seu aplicativo.
 
@@ -226,7 +226,7 @@ Verifique se a assinatura de método agora inclui o **async** palavra-chave, ou 
 
 ### <a name="what-did-we-just-do"></a>O que acabamos de fazer?
 
-Esse código usa algumas APIs do Windows para criar um objeto de síntese de fala e concede a ele algum texto a ser dito. (Para obter mais informações sobre como usar SpeechSynthesis, consulte os [documentos de namespace SpeechSynthesis](https://msdn.microsoft.com/library/windows/apps/windows.media.speechsynthesis.aspx).)
+Esse código usa algumas APIs do Windows para criar um objeto de síntese de fala e concede a ele algum texto a ser dito. (Para obter mais informações sobre como usar SpeechSynthesis, consulte os [documentos de namespace SpeechSynthesis](https://docs.microsoft.com/uwp/api/windows.media.speechsynthesis).)
 
 Quando você executar o aplicativo e clicar no botão, seu computador (ou telefone) dirá literalmente "Hello, World!".
 

@@ -5,12 +5,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1fa0f12779ad56d57c92f667443644851dc3d5e5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d85051aabdb7631c5bdb84e08d6d10a0f70d6ede
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57629361"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372290"
 ---
 # <a name="xload-attribute"></a>Atributo x:Load
 
@@ -36,16 +36,16 @@ O rastreamento de elementos diferidos pela estrutura XAML adiciona cerca de 600 
 Existem várias maneiras de carregar os elementos:
 
 - Use uma expressão [x: Bind](x-bind-markup-extension.md) para especificar o estado de carregamento. A expressão deve retornar **true** para carregar e **falso** para descarregar o elemento.
-- Chame [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) com o nome definido no elemento.
-- Chame [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/br209416) com o nome definido no elemento.
-- Em um [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), use uma animação [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) ou **Storyboard** que segmenta o elemento x:Load.
+- Chame [**FindName**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.findname) com o nome definido no elemento.
+- Chame [**GetTemplateChild**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.gettemplatechild) com o nome definido no elemento.
+- Em um [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState), use uma animação [**Setter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter) ou **Storyboard** que segmenta o elemento x:Load.
 - Segmente o elemento descarregado em qualquer **Storyboard**.
 
 > OBSERVAÇÃO: Depois que a instanciação de um elemento for iniciado, ele será criado no thread da interface do usuário, portanto, pode fazer com que a interface do usuário reamostragem se for muito que grande parte é criado ao mesmo tempo.
 
 Depois que um elemento adiado for criado por um dos métodos listados acima, várias coisas acontecerão:
 
-- O evento [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) no elemento será acionado.
+- O evento [**Loaded**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.loaded) no elemento será acionado.
 - O campo para X:Name é definido.
 - Todas as associações x:Bind no elemento serão avaliadas.
 - Se o aplicativo tiver se registrado para receber notificações de alteração feita na propriedade sobre a propriedade que contém os elementos adiados, a notificação será acionada.
@@ -67,21 +67,21 @@ Quando um elemento é descarregado, todo o estado associado ao elemento será de
 As restrições para usar **x:Load** são:
 
 - Você deve definir um [X:Name](x-name-attribute.md) para o elemento, pois não há precisa ser uma maneira de localizar o elemento mais tarde.
-- Você só pode usar x:Load em tipos derivados de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) ou [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249).
-- Você não pode usar x:Load nos elementos raiz em uma [**Página**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), um [**UserControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol), ou um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
-- Você não pode usar x:Load em elementos em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794).
-- Você não pode usar x:Load em XAML flexível carregado com [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048).
+- Você só pode usar x:Load em tipos derivados de [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) ou [**FlyoutBase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase).
+- Você não pode usar x:Load nos elementos raiz em uma [**Página**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page), um [**UserControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol), ou um [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate).
+- Você não pode usar x:Load em elementos em um [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary).
+- Você não pode usar x:Load em XAML flexível carregado com [**XamlReader.Load**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.markup.xamlreader.load).
 - Mover um elemento-pai apagará todos os elementos que não tenham sido carregados.
 
 ## <a name="remarks"></a>Comentários
 
 Você pode usar x:Load em elementos aninhados, no entanto, eles devem ser realizados a partir do elemento mais externo.  Se você tentar observar um elemento filho antes que o pai tenha sido percebido, uma exceção será gerada.
 
-Normalmente, recomendamos que você adie elementos que não são visíveis no primeiro quadro. Uma boa diretriz para encontrar candidatos a serem adiados é procurar elementos que estejam sendo criados com recolhida [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992). Além disso, a UI que é desencadeada pela interação do usuário é um bom lugar para procurar elementos que você pode adiar.
+Normalmente, recomendamos que você adie elementos que não são visíveis no primeiro quadro. Uma boa diretriz para encontrar candidatos a serem adiados é procurar elementos que estejam sendo criados com recolhida [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility). Além disso, a UI que é desencadeada pela interação do usuário é um bom lugar para procurar elementos que você pode adiar.
 
-Seja cauteloso ao adiar elementos em um [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878), pois o tempo de inicialização será menor, mas também o desempenho do movimento panorâmico pode ser reduzido, dependendo do que você está criando. Se você estiver procurando melhorar o desempenho de movimento panorâmico, consulte a documentação sobre [extensão de marcação {x: Bind}](x-bind-markup-extension.md) e [atributo x:Phase](x-phase-attribute.md).
+Seja cauteloso ao adiar elementos em um [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), pois o tempo de inicialização será menor, mas também o desempenho do movimento panorâmico pode ser reduzido, dependendo do que você está criando. Se você estiver procurando melhorar o desempenho de movimento panorâmico, consulte a documentação sobre [extensão de marcação {x: Bind}](x-bind-markup-extension.md) e [atributo x:Phase](x-phase-attribute.md).
 
-Se o [atributo x:Phase](x-phase-attribute.md) for usado em conjunto com **x:Load** quando um elemento ou uma árvore de elementos for realizado, as associações serão aplicadas até e incluindo a fase atual. A fase especificada para **x:Phase** não afeta ou controla o estado de carga do elemento. Quando um item de lista é reciclado como parte de movimento panorâmico, os elementos realizados da mesma forma que outros elementos ativos e as associações compiladas (associações **{x:Bind}**) serão processados usando as mesmas regras, incluindo fases.
+Se o [atributo x:Phase](x-phase-attribute.md) for usado em conjunto com **x:Load** quando um elemento ou uma árvore de elementos for realizado, as associações serão aplicadas até e incluindo a fase atual. A fase especificada para **x:Phase** não afeta ou controla o estado de carga do elemento. Quando um item de lista é reciclado como parte de movimento panorâmico, os elementos realizados da mesma forma que outros elementos ativos e as associações compiladas (associações **{x:Bind}** ) serão processados usando as mesmas regras, incluindo fases.
 
 Uma diretriz geral é avaliar o desempenho do aplicativo antes e depois, para garantir que você obtenha o desempenho que deseja.
 

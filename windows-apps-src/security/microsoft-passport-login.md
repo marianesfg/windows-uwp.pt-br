@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 8319d4a0975e209edea7cb70b22910e8124f16c1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 72b7f168c9f4e812b1cfb459ebea91f61a988122
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593971"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371301"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Criar um app de logon do Windows Hello
 
@@ -415,7 +415,7 @@ Neste exercício, você aprenderá como verificar se o Windows Hello está confi
     }
     ```
 
--   Você deve ter notado o código comentado que estava fazendo referência a um método no MicrosoftPassportHelper. No MicrosoftPassportHelper.cs, adicione em um novo método chamado CreatePassportKeyAsync. Esse método usa a API do Windows Hello API no [**KeyCredentialManager**](https://msdn.microsoft.com/library/windows/apps/dn973043). Chamar [**RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048) criará uma chave do Passport que é específica para *accountId* e o computador local. Observe os comentários na instrução switch se você estiver interessado em implementar isso em um cenário do mundo real.
+-   Você deve ter notado o código comentado que estava fazendo referência a um método no MicrosoftPassportHelper. No MicrosoftPassportHelper.cs, adicione em um novo método chamado CreatePassportKeyAsync. Esse método usa a API do Windows Hello API no [**KeyCredentialManager**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredentialManager). Chamar [**RequestCreateAsync**](https://docs.microsoft.com/previous-versions/windows/dn973048(v=win.10)) criará uma chave do Passport que é específica para *accountId* e o computador local. Observe os comentários na instrução switch se você estiver interessado em implementar isso em um cenário do mundo real.
 
     ```cs
     /// <summary>
@@ -624,7 +624,7 @@ Neste exercício, você continuará do exercício anterior. Quando um usuário f
 
     ![Tela de boas-vindas do Windows Hello](images/passport-login-9.png)
 
--   Na pasta Views, crie uma nova página em branco chamada "UserSelection.xaml" e adicione o seguinte XAML para definir a interface do usuário. Esta página conterá uma [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) que exibe todos os usuários na lista de contas locais e um botão que navegará para a página de logon para permitir que o usuário adicione outra conta.
+-   Na pasta Views, crie uma nova página em branco chamada "UserSelection.xaml" e adicione o seguinte XAML para definir a interface do usuário. Esta página conterá uma [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) que exibe todos os usuários na lista de contas locais e um botão que navegará para a página de logon para permitir que o usuário adicione outra conta.
 
     ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">

@@ -7,19 +7,19 @@ ms.date: 01/11/2018
 ms.topic: article
 keywords: o Windows 10, uwp, tarefas em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 0148be96d9c5994d2fe16e7a0adedee16c8469de
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 280f2253fda7de816ee753798dcab754d58ae847
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63816891"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370550"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>Atualizar um bloco dinâmico de uma tarefa em segundo plano
 
 **APIs importantes**
 
--   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
--   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
+-   [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
 
 Use uma tarefa em segundo plano para atualizar o bloco dinâmico de seu aplicativo com novo conteúdo.
 
@@ -39,7 +39,7 @@ Para habilitar um bloco dinâmico para seu aplicativo, adicione um novo projeto 
 ## <a name="implement-the-background-task"></a>Implementar a tarefa em segundo plano
 
 
-Implemente a interface de [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) para criar uma classe que atualize o bloco dinâmico de seu aplicativo. A operação em segundo plano ocorre no método Run. Neste caso, a tarefa obtém um feed de sindicalização para os blogs do MSDN. Para impedir que a tarefa feche antecipadamente enquanto o código assíncrono ainda está em execução, obtenha um adiamento.
+Implemente a interface de [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) para criar uma classe que atualize o bloco dinâmico de seu aplicativo. A operação em segundo plano ocorre no método Run. Neste caso, a tarefa obtém um feed de sindicalização para os blogs do MSDN. Para impedir que a tarefa feche antecipadamente enquanto o código assíncrono ainda está em execução, obtenha um adiamento.
 
 1.  No Gerenciador de Soluções, renomeie o arquivo gerado automaticamente, Class1.cs, para BlogFeedBackgroundTask.cs.
 2.  Em BlogFeedBackgroundTask.cs, substitua o código gerado automaticamente pelo código do stub para a classe **BlogFeedBackgroundTask**.
@@ -159,7 +159,7 @@ Para configurar o manifesto do pacote, abra-o e adicione uma nova declaração d
 ## <a name="register-the-background-task"></a>Registrar a tarefa em segundo plano
 
 
-Crie um [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) para registrar a tarefa.
+Crie um [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para registrar a tarefa.
 
 > **Observação**  a partir do Windows 8.1, parâmetros de registro de tarefa em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Seu aplicativo deve ser capaz de manipular cenários em que o registro de tarefas em segundo plano apresenta falha, por exemplo, use uma instrução condicional para verificar se há erros de registro e tente novamente o registro com falha usando valores de parâmetros diferentes.
  
@@ -256,11 +256,11 @@ Para depurar a tarefa em segundo plano, defina um ponto de interrupção no mét
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
-* [**TileUpdateManager**](https://msdn.microsoft.com/library/windows/apps/br208622)
-* [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616)
+* [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+* [**TileUpdateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdateManager)
+* [**TileNotification**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileNotification)
 * [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md)
-* [Diretrizes e lista de verificação de blocos e notificações](https://msdn.microsoft.com/library/windows/apps/hh465403)
+* [Diretrizes e lista de verificação de blocos e notificações](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)
 
  
 

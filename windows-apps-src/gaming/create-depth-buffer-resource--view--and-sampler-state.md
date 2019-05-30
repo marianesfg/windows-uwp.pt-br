@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, direct3d, buffer de profundidade
 ms.localizationpriority: medium
-ms.openlocfilehash: f5ce1ec522a194111e175e41f82c4275cda4fbf5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: dfd45f620addcf7a3f6292ed2257bdfccc862cd3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613691"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368889"
 ---
 # <a name="create-depth-buffer-device-resources"></a>Criar recursos de dispositivo de buffer de profundidade
 
@@ -38,7 +38,7 @@ Observe que a criação desses recursos deve se incluída em uma rotina de cria�
 ## <a name="check-feature-support"></a>Verificar o suporte ao recurso
 
 
-Antes de criar o mapa de profundidade, chame o [ **CheckFeatureSupport** ](https://msdn.microsoft.com/library/windows/desktop/ff476497) método no dispositivo Direct3D, solicitar **D3D11\_recurso\_D3D9\_ SOMBRA\_suporte**e fornecer uma [ **D3D11\_recurso\_dados\_D3D9\_sombra\_suporte** ](https://msdn.microsoft.com/library/windows/desktop/jj247569) estrutura.
+Antes de criar o mapa de profundidade, chame o [ **CheckFeatureSupport** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) método no dispositivo Direct3D, solicitar **D3D11\_recurso\_D3D9\_ SOMBRA\_suporte**e fornecer uma [ **D3D11\_recurso\_dados\_D3D9\_sombra\_suporte** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_feature_data_d3d9_shadow_support) estrutura.
 
 ```cpp
 D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT isD3D9ShadowSupported;
@@ -82,7 +82,7 @@ HRESULT hr = pD3DDevice->CreateTexture2D(
     );
 ```
 
-Em seguida, crie as exibições de recursos. Defina o tamanho de mip como zero na exibição de estêncil de profundidade; defina também os níveis de mip como 1 na exibição de recurso de sombreador. Ambos têm uma dimensão de textura de TEXTURE2D e ambos precisam usar uma correspondência [ **DXGI\_formato**](https://msdn.microsoft.com/library/windows/desktop/bb173059).
+Em seguida, crie as exibições de recursos. Defina o tamanho de mip como zero na exibição de estêncil de profundidade; defina também os níveis de mip como 1 na exibição de recurso de sombreador. Ambos têm uma dimensão de textura de TEXTURE2D e ambos precisam usar uma correspondência [ **DXGI\_formato**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format).
 
 ```cpp
 D3D11_DEPTH_STENCIL_VIEW_DESC depthStencilViewDesc;

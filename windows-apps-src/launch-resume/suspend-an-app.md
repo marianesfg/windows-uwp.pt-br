@@ -11,24 +11,24 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: e440812861cf853810f9fee597c807b439dda426
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6d1b97e76dc1bf15bded6f44c38a67f40babf7b6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599041"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370530"
 ---
 # <a name="handle-app-suspend"></a>Tratar a suspensão do aplicativo
 
 **APIs importantes**
 
-- [**A suspensão**](https://msdn.microsoft.com/library/windows/apps/br242341)
+- [**A suspensão**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending)
 
-Saiba como salvar dados importantes quando o sistema suspende o seu aplicativo. O exemplo registra um manipulador de eventos para o evento [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) e salva uma cadeia de caracteres em um arquivo.
+Saiba como salvar dados importantes quando o sistema suspende o seu aplicativo. O exemplo registra um manipulador de eventos para o evento [**Suspending**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending) e salva uma cadeia de caracteres em um arquivo.
 
 ## <a name="register-the-suspending-event-handler"></a>Registrar o manipulador de eventos de suspensão
 
-Registre-se para manipular o evento [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341), que indica que o aplicativo deve salvar seus dados antes de ser suspenso pelo sistema.
+Registre-se para manipular o evento [**Suspending**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending), que indica que o aplicativo deve salvar seus dados antes de ser suspenso pelo sistema.
 
 ```csharp
 using System;
@@ -82,7 +82,7 @@ MainPage::MainPage()
 
 ## <a name="save-application-data-before-suspension"></a>Salvar os dados do aplicativo antes da suspensão
 
-Quando manipula o evento [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341), o aplicativo tem uma oportunidade de salvar seus dados importantes na função do manipulador. O aplicativo deve usar a API de armazenamento [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para salvar dados simples do aplicativo de maneira síncrona.
+Quando manipula o evento [**Suspending**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending), o aplicativo tem uma oportunidade de salvar seus dados importantes na função do manipulador. O aplicativo deve usar a API de armazenamento [**LocalSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localsettings) para salvar dados simples do aplicativo de maneira síncrona.
 
 ```csharp
 partial class MainPage
@@ -133,11 +133,11 @@ Você deve liberar recursos e identificadores de arquivo exclusivos para que out
 
 O sistema suspende o aplicativo sempre que o usuário alternar para outro aplicativo, para a área de trabalho ou para a tela inicial. O sistema retoma o seu aplicativo sempre que o usuário alterna de volta para ele. Quando o sistema retoma o aplicativo, o conteúdo das variáveis e estruturas de dados é o mesmo de antes da suspensão do aplicativo pelo sistema. O sistema restaura o aplicativo exatamente como ele havia parado, de maneira que o usuário tem impressão de que ele estava sendo executado em tela de fundo.
 
-O sistema tenta manter o aplicativo e seus dados na memória enquanto ele está suspenso. Entretanto, caso não tenha recursos suficientes para manter o aplicativo na memória, o sistema encerra o aplicativo. Quando o usuário alterna de volta para um aplicativo suspenso que foi encerrado, o sistema envia um evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) e deve restaurar os dados do aplicativo em seu método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
+O sistema tenta manter o aplicativo e seus dados na memória enquanto ele está suspenso. Entretanto, caso não tenha recursos suficientes para manter o aplicativo na memória, o sistema encerra o aplicativo. Quando o usuário alterna de volta para um aplicativo suspenso que foi encerrado, o sistema envia um evento [**Activated**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) e deve restaurar os dados do aplicativo em seu método [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched).
 
 O sistema não notifica um aplicativo quando ele está encerrado, por isso seu aplicativo deve salvar seus dados de aplicativo e liberar identificadores de arquivo e recursos exclusivos quando suspenso e restaurá-los quando ativado após o encerramento.
 
-Se você fizer uma chamada assíncrona no manipulador, o controle será retornado imediatamente daquela chamada assíncrona. Isso significa que a execução pode retornar do manipulador de eventos e o aplicativo mudará para o próximo estado, mesmo que a chamada assíncrona ainda não tenha sido concluída. Use o método [**GetDeferral**](https://aka.ms/Kt66iv) no objeto [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) que é passado para o manipulador de eventos para atrasar a suspensão até depois que você chamar o método [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) no objeto [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) retornado.
+Se você fizer uma chamada assíncrona no manipulador, o controle será retornado imediatamente daquela chamada assíncrona. Isso significa que a execução pode retornar do manipulador de eventos e o aplicativo mudará para o próximo estado, mesmo que a chamada assíncrona ainda não tenha sido concluída. Use o método [**GetDeferral**](https://aka.ms/Kt66iv) no objeto [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) que é passado para o manipulador de eventos para atrasar a suspensão até depois que você chamar o método [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete) no objeto [**Windows.Foundation.Deferral**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral) retornado.
 
 Um adiamento não aumenta a quantidade de código que precisa ser executado antes que o aplicativo seja encerrado. Ele somente atrasa o encerramento até que o método *Complete* do adiamento seja chamado ou o prazo termine, *o que ocorrer primeiro*. Para estender o tempo em que o estado Suspending usa [**ExtendedExecutionSession**](run-minimized-with-extended-execution.md)
 
@@ -151,7 +151,7 @@ Um adiamento não aumenta a quantidade de código que precisa ser executado ante
 * [Ciclo de vida do aplicativo](app-lifecycle.md)
 * [Tratar a ativação do aplicativo](activate-an-app.md)
 * [Tratar a retomada do aplicativo](resume-an-app.md)
-* [Diretrizes de experiência do usuário para iniciar, suspender e retomar](https://msdn.microsoft.com/library/windows/apps/dn611862)
+* [Diretrizes de experiência do usuário para iniciar, suspender e retomar](https://docs.microsoft.com/windows/uwp/launch-resume/index)
 * [Execução estendida](run-minimized-with-extended-execution.md)
 
  

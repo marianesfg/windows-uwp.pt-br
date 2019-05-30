@@ -6,12 +6,12 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, aplicativo de demonstração varejo
 ms.localizationpriority: medium
-ms.openlocfilehash: 39b1323f048c1b420a2cf0b239cd9f1a9fb63ff7
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 4c9f31da8e2509c41715a13fbc0bb0322782340a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334874"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366534"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>Adicionar recursos de demonstração (RDX) do varejo ao seu aplicativo
 
@@ -45,11 +45,11 @@ Isso pode ser usado como uma lista de verificação para ajudá-lo a se preparar
 
 Aplicativos com reconhecimento em RDX que não atendem a esses requisitos críticos serão removidos de todos os dispositivos de demonstração de varejo assim que possível.
 
-* **Não solicitar informações de identificação pessoal (PII)**. Isso inclui informações de logon, informações de conta da Microsoft ou entre em contato com detalhes.
+* **Não solicitar informações de identificação pessoal (PII)** . Isso inclui informações de logon, informações de conta da Microsoft ou entre em contato com detalhes.
 
 * **Experiência livre de erro**. O aplicativo deve ser executado sem erros. Além disso, nenhum pop-up de erro ou notificação deve ser mostrado para clientes que usem os dispositivos de demonstração de revenda. Erros negativamente refletem no aplicativo em si, sua marca, marca do dispositivo, marca do fabricante do dispositivo e da marca da Microsoft.
 
-* **Aplicativos pagos devem ter um modo de avaliação**. Seu aplicativo também precisa ser um livre ou incluir um [modo de avaliação](https://msdn.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app). Os clientes não esperam pagar por uma experiência em uma loja de revenda.
+* **Aplicativos pagos devem ter um modo de avaliação**. Seu aplicativo também precisa ser um livre ou incluir um [modo de avaliação](https://docs.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app). Os clientes não esperam pagar por uma experiência em uma loja de revenda.
 
 ### <a name="high-priority-requirements"></a>Requisitos de alta prioridade
 
@@ -359,7 +359,7 @@ namespace MyCompany.MyApp
 
 ## <a name="related-links"></a>Links relacionados
 
-* [Store e recuperar dados de aplicativo](https://msdn.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
-* [Como criar e consumir um serviço de aplicativo](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
-* [Localização de conteúdo do aplicativo](https://msdn.microsoft.com/windows/uwp/globalizing/globalizing-portal)
+* [Store e recuperar dados de aplicativo](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
+* [Como criar e consumir um serviço de aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
+* [Localização de conteúdo do aplicativo](https://docs.microsoft.com/windows/uwp/globalizing/globalizing-portal)
 * [Experiência de demonstração de varejo (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience)

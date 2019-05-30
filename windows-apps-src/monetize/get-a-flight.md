@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, versão de pré-lançamento, pacote de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: e4f96d503d52abe71cff6fcdd1295c862e551e09
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 3a02a299682610cd516067acefc795df9512a268
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334384"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371761"
 ---
 # <a name="get-a-package-flight"></a>Obter um pacote de pré-lançamento
 
@@ -40,7 +40,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 | Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
 
-### <a name="request-parameters"></a>Parâmetros solicitados
+### <a name="request-parameters"></a>Parâmetros de solicitação
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -90,10 +90,10 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | flightId            | cadeia de caracteres  | A ID do pacote de pré-lançamento. Esse valor é fornecido pelo Centro de parceiros.  |
 | friendlyName           | cadeia de caracteres  | O nome do pacote de pré-lançamento, conforme especificado pelo desenvolvedor.   |  
-| lastPublishedFlightSubmission       | objeto | Um objeto que fornece informações sobre o último envio publicado do pacote de pré-lançamento. Para saber mais, consulte a seção [Objeto de envio](#submission_object) a seguir.  |
-| pendingFlightSubmission        | objeto  |  Um objeto que fornece informações sobre o envio pendente atual do pacote de pré-lançamento. Para saber mais, consulte a seção [Objeto de envio](#submission_object) a seguir.  |   
-| groupIds           | matriz  | Uma matriz de cadeias de caracteres que contêm as IDs dos grupos de versão de pré-lançamento que estão associados ao pacote de pré-lançamento. Para saber mais sobre grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
-| rankHigherThan           | cadeia de caracteres  | O nome amigável do pacote de pré-lançamento que ficou imediatamente abaixo do pacote de pré-lançamento atual. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
+| lastPublishedFlightSubmission       | object | Um objeto que fornece informações sobre o último envio publicado do pacote de pré-lançamento. Para saber mais, consulte a seção [Objeto de envio](#submission_object) a seguir.  |
+| pendingFlightSubmission        | object  |  Um objeto que fornece informações sobre o envio pendente atual do pacote de pré-lançamento. Para saber mais, consulte a seção [Objeto de envio](#submission_object) a seguir.  |   
+| groupIds           | array  | Uma matriz de cadeias de caracteres que contêm as IDs dos grupos de versão de pré-lançamento que estão associados ao pacote de pré-lançamento. Para saber mais sobre grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://docs.microsoft.com/windows/uwp/publish/package-flights).   |
+| rankHigherThan           | cadeia de caracteres  | O nome amigável do pacote de pré-lançamento que ficou imediatamente abaixo do pacote de pré-lançamento atual. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://docs.microsoft.com/windows/uwp/publish/package-flights).  |
 
 
 <span id="submission_object" />

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, serviços de Store, API, insights de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5545d27668b23e5b7ae91201421dfa4c92f9c8ed
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8f6f4b2df1cda14bc1f363a1f9100e416f26489b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618131"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372459"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>Obter dados de insights do seu aplicativo da área de trabalho
 
@@ -31,7 +31,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Método | URI da solicitação       |
 |--------|----------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/insights``` |
+| OBTER    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/insights``` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -45,10 +45,10 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | cadeia de caracteres | A ID do produto do aplicativo da área de trabalho para o qual você deseja obter dados do insights. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise para seu aplicativo da área de trabalho no Partner Center](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **relatório de integridade**) e recupere a ID do produto da URL. Se você não especificar esse parâmetro, o corpo da resposta conterá dados para todos os aplicativos registrados para sua conta do insights.  |  Não  |
+| applicationId | cadeia de caracteres | A ID do produto do aplicativo da área de trabalho para o qual você deseja obter dados do insights. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise para seu aplicativo da área de trabalho no Partner Center](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) (como o **relatório de integridade**) e recupere a ID do produto da URL. Se você não especificar esse parâmetro, o corpo da resposta conterá dados para todos os aplicativos registrados para sua conta do insights.  |  Não  |
 | startDate | date | A data de início no intervalo de datas de dados do insights para recuperar. O padrão é 30 dias antes da data atual. |  Não  |
 | endDate | date | A data final no intervalo de datas de dados do insights para recuperar. O padrão é a data atual. |  Não  |
-| filter | cadeia de caracteres  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Por exemplo, *filtro = eq 'aquisição de tipo de dados'*. <p/><p/>Atualmente, este método só aceita o filtro **integridade**.  | Não   |
+| filter | cadeia de caracteres  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Por exemplo, *filtro = eq 'aquisição de tipo de dados'* . <p/><p/>Atualmente, este método só aceita o filtro **integridade**.  | Não   |
 
 ### <a name="request-example"></a>Exemplo de solicitação
 
@@ -77,7 +77,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 |---------------------|--------|-------------------------------------------|
 | applicationId       | cadeia de caracteres | A ID do produto do aplicativo da área de trabalho para o qual você recuperou dados do insights.     |
 | insightDate                | cadeia de caracteres | A data em que nós identificamos que a alteração em uma métrica específica. Essa data representa o fim da semana em que foi detectado um aumento significativo ou diminuir em uma métrica em comparação com a semana antes disso. |
-| Tipo de dados     | cadeia de caracteres | Uma cadeia de caracteres que especifica a área de análise geral que informa a esse insight. Atualmente, este método só aceita **integridade**.    |
+| dataType     | cadeia de caracteres | Uma cadeia de caracteres que especifica a área de análise geral que informa a esse insight. Atualmente, este método só aceita **integridade**.    |
 | insightDetail          | matriz | Um ou mais [InsightDetail valores](#insightdetail-values) que representam os detalhes para o insight atual.    |
 
 
@@ -91,8 +91,8 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | DimensionName           | cadeia de caracteres |  O nome da métrica descrito na dimensão atual. Os exemplos incluem **EventType**, **mercado**, **DeviceType**, e **PackageVersion**.   |
 | DimensionValue              | cadeia de caracteres | O valor da métrica que é descrito na dimensão atual. Por exemplo, se **DimensionName** é **EventType**, **DimensionValue** pode ser **falha** ou **travar** .   |
 | FactValue     | cadeia de caracteres | O valor absoluto da métrica na data em que a análise foi detectado.  |
-| Direção | cadeia de caracteres |  A direção da alteração (**positivo** ou **negativo**).   |
-| Data              | cadeia de caracteres |  A data em que nós identificamos que a alteração relacionada à percepção atual ou a dimensão atual.   |
+| Direction | cadeia de caracteres |  A direção da alteração (**positivo** ou **negativo**).   |
+| Date              | cadeia de caracteres |  A data em que nós identificamos que a alteração relacionada à percepção atual ou a dimensão atual.   |
 
 ### <a name="response-example"></a>Exemplo de resposta
 

@@ -6,12 +6,12 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, dados do aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 23e392e2064a2a48089d1efadd1461c146e0d343
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cfbe8df46f51b41ccdd840f609caf2c593735e1f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598891"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372143"
 ---
 # <a name="get-app-data"></a>Obter dados de app
 
@@ -21,10 +21,10 @@ Antes de usar esses métodos, o aplicativo já deve existir na sua conta no Part
 
 | Método | URI                                                                                             | Descrição                                                 |
 |------- |------------------------------------------------------------------------------------------------ |------------------------------------------------------------ |
-| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [Obter dados para todos os seus aplicativos](get-all-apps.md)               |
-| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [Obter dados para um aplicativo específico](get-an-app.md)                |
-| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [Obter complementos para um aplicativo](get-add-ons-for-an-app.md)         |
-| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [Obter voos de pacote para um aplicativo](get-flights-for-an-app.md) |
+| OBTER    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [Obter dados para todos os seus aplicativos](get-all-apps.md)               |
+| OBTER    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [Obter dados para um aplicativo específico](get-an-app.md)                |
+| OBTER    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [Obter complementos para um aplicativo](get-add-ons-for-an-app.md)         |
+| OBTER    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [Obter voos de pacote para um aplicativo](get-flights-for-an-app.md) |
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -64,15 +64,15 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição       |
 |-----------------|---------|---------------------|
-| id            | cadeia de caracteres  | A ID da Loja do aplicativo. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
+| id            | cadeia de caracteres  | A ID da Loja do aplicativo. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
 | primaryName   | cadeia de caracteres  | O nome principal do aplicativo.      |
 | packageFamilyName | cadeia de caracteres  | O nome da família de pacotes do aplicativo.      |
 | packageIdentityName          | cadeia de caracteres  | O nome da identidade do pacote do aplicativo.                       |
-| publisherName       | cadeia de caracteres  | A ID de fornecedor do Windows que está associada ao aplicativo. Isso corresponde à **identidade/pacote/Publisher** valor que aparece na [identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) página para o aplicativo no Partner Center.       |
+| publisherName       | cadeia de caracteres  | A ID de fornecedor do Windows que está associada ao aplicativo. Isso corresponde à **identidade/pacote/Publisher** valor que aparece na [identidade de aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details) página para o aplicativo no Partner Center.       |
 | firstPublishedDate      | cadeia de caracteres  | A data em que o app foi publicado pela primeira vez, no formato ISO 8601.   |
 | lastPublishedApplicationSubmission       | objeto | Um [recurso de envio](#submission_object) que fornece informações sobre o último envio publicado do app.    |
 | pendingApplicationSubmission        | objeto  |  Um [recurso de envio](#submission_object) que fornece informações sobre o envio atual pendente do app.   |   
-| hasAdvancedListingPermission        | booliano  |  Indica se você pode configurar [gamingOptions](manage-app-submissions.md#gaming-options-object) ou [trailers](manage-app-submissions.md#trailer-object) para envios para o app. Este valor é verdadeiro para envios criados depois de maio de 2017. |  |
+| hasAdvancedListingPermission        | boolean  |  Indica se você pode configurar [gamingOptions](manage-app-submissions.md#gaming-options-object) ou [trailers](manage-app-submissions.md#trailer-object) para envios para o app. Este valor é verdadeiro para envios criados depois de maio de 2017. |  |
 
 
 <span id="add-on-object" />
@@ -127,8 +127,8 @@ Esse recurso tem os valores a seguir.
 | friendlyName           | cadeia de caracteres  | O nome do pacote de pré-lançamento, conforme especificado pelo desenvolvedor.   |
 | lastPublishedFlightSubmission       | objeto | Um [recurso de envio](#submission_object) que fornece informações sobre o último envio publicado do pacote de pré-lançamento.   |
 | pendingFlightSubmission        | objeto  |  Um [recurso de envio](#submission_object) que fornece informações sobre o envio atual pendente do pacote de pré-lançamento.  |    
-| groupIds           | matriz  | Uma matriz de cadeias de caracteres que contêm as IDs dos grupos de versão de pré-lançamento que estão associados ao pacote de pré-lançamento. Para saber mais sobre grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
-| rankHigherThan           | cadeia de caracteres  | O nome amigável do pacote de pré-lançamento que ficou imediatamente abaixo do pacote de pré-lançamento atual. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
+| groupIds           | matriz  | Uma matriz de cadeias de caracteres que contêm as IDs dos grupos de versão de pré-lançamento que estão associados ao pacote de pré-lançamento. Para saber mais sobre grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://docs.microsoft.com/windows/uwp/publish/package-flights).   |
+| rankHigherThan           | cadeia de caracteres  | O nome amigável do pacote de pré-lançamento que ficou imediatamente abaixo do pacote de pré-lançamento atual. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://docs.microsoft.com/windows/uwp/publish/package-flights).  |
 
 
 <span id="submission_object" />

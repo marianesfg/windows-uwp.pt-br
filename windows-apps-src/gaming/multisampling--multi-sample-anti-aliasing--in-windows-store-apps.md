@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, várias amostras, direct3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c1634af8589a97f5070ff85909fe12ab16bf8d6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b547e47b7d896ab818349dcc70ee9dc3c7078847
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610851"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368380"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Multisampling no Windows Universal aplicativos UWP (plataforma)
 
 
 
-Saiba como utilizar o multisampling em aplicativos da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D. O multisampling, também conhecido como suavização de múltipla amostra, é uma técnica de elementos gráficos usada para reduzir a aparição de bordas suavizadas. Essa técnica desenha mais pixels do que o que realmente existe no destino de renderização e, depois, faz uma média dos valores para manter a aparência de uma borda "parcial" em determinados pixels. Para uma descrição detalhada sobre como o multisampling funciona no Direct3D, consulte [Regras de rasterização para suavização de várias amostras](https://msdn.microsoft.com/library/windows/desktop/cc627092#Multisample).
+Saiba como utilizar o multisampling em aplicativos da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D. O multisampling, também conhecido como suavização de múltipla amostra, é uma técnica de elementos gráficos usada para reduzir a aparição de bordas suavizadas. Essa técnica desenha mais pixels do que o que realmente existe no destino de renderização e, depois, faz uma média dos valores para manter a aparência de uma borda "parcial" em determinados pixels. Para uma descrição detalhada sobre como o multisampling funciona no Direct3D, consulte [Regras de rasterização para suavização de várias amostras](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-rasterizer-stage-rules).
 
 ## <a name="multisampling-and-the-flip-model-swap-chain"></a>Várias amostras e a cadeia de troca do modelo de virar a página
 
@@ -28,9 +28,9 @@ Os aplicativos UWP em DirectX devem usar cadeias de troca do modelo de inversão
 
 Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específicas de contagem mínima de amostras e garantem que determinados formatos de buffer que dão suporte a várias amostras estarão disponíveis. Os dispositivos gráficos costumam dar suporte a um número maior do que o mínimo necessário de formatos e contagens de amostras. O suporte ao multisampling pode ser determinado no tempo de execução verificando o suporte ao recurso de multisampling para formatos DXGI específicos e, em seguida, verificando o número de amostras que podem ser usadas com cada formato com suporte.
 
-1.  Chame [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) para descobrir quais formatos DXGI podem ser usados com o multisampling. Forneça os formatos de destino de renderização que seu jogo pode usar. O destino de renderização e a resolução de destino deve usar o mesmo formato, portanto, verifique para ambos [ **D3D11\_formato\_suporte\_MULTISAMPLE\_RENDERTARGET** ](https://msdn.microsoft.com/library/windows/desktop/ff476134) e **D3D11\_formato\_suporte\_MULTISAMPLE\_RESOLVER**.
+1.  Chame [**ID3D11Device::CheckFeatureSupport**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) para descobrir quais formatos DXGI podem ser usados com o multisampling. Forneça os formatos de destino de renderização que seu jogo pode usar. O destino de renderização e a resolução de destino deve usar o mesmo formato, portanto, verifique para ambos [ **D3D11\_formato\_suporte\_MULTISAMPLE\_RENDERTARGET** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ne-d3d11-d3d11_format_support) e **D3D11\_formato\_suporte\_MULTISAMPLE\_RESOLVER**.
 
-    **9 de nível de recurso:  ** Embora o recurso de nível 9 dispositivos [garantir suporte para formatos de destino de renderização de texturas](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), não há garantia de suporte para destinos de multisample resolver. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
+    **9 de nível de recurso:  ** Embora o recurso de nível 9 dispositivos [garantir suporte para formatos de destino de renderização de texturas](https://docs.microsoft.com/previous-versions//ff471324(v=vs.85)), não há garantia de suporte para destinos de multisample resolver. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
 
     O código a seguir verifica o suporte ao multisampling para todos os o DXGI\_valores de formato:
 
@@ -55,7 +55,7 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
     }
     ```
 
-2.  Para cada formato com suporte, consulte o suporte a contagem de amostras chamando [**ID3D11Device::CheckMultisampleQualityLevels**](https://msdn.microsoft.com/library/windows/desktop/ff476499).
+2.  Para cada formato com suporte, consulte o suporte a contagem de amostras chamando [**ID3D11Device::CheckMultisampleQualityLevels**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkmultisamplequalitylevels).
 
     O código a seguir verifica o suporte a tamanho da amostra para todos os formatos DXGI com suporte:
 
@@ -82,7 +82,7 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
     }
     ```
 
-    > **Observação**    uso [ **ID3D11Device2::CheckMultisampleQualityLevels1** ](https://msdn.microsoft.com/library/windows/desktop/dn280494) em vez disso, se você precisar verificar multisample suporte para buffers de recursos lado a lado.
+    > **Observação**    uso [ **ID3D11Device2::CheckMultisampleQualityLevels1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_2/nf-d3d11_2-id3d11device2-checkmultisamplequalitylevels1) em vez disso, se você precisar verificar multisample suporte para buffers de recursos lado a lado.
 
      
 
@@ -179,7 +179,7 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
     m_d3dContext->RSSetViewports(1, &m_screenViewport);
     ```
 
-6.  Renderize cada quadro como um destino de renderização de várias amostras. Quando a renderização estiver concluída, chame [**ID3D11DeviceContext::ResolveSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476474) antes de apresentar o quadro. Isso instrui o Direct3D a realizar a operação de multisampling, calculando o valor de cada pixel para exibição e colocando o resultado no buffer de fundo. O buffer de fundo contém então a imagem de suavização final e pode ser apresentado.
+6.  Renderize cada quadro como um destino de renderização de várias amostras. Quando a renderização estiver concluída, chame [**ID3D11DeviceContext::ResolveSubresource**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-resolvesubresource) antes de apresentar o quadro. Isso instrui o Direct3D a realizar a operação de multisampling, calculando o valor de cada pixel para exibição e colocando o resultado no buffer de fundo. O buffer de fundo contém então a imagem de suavização final e pode ser apresentado.
 
     O código a seguir resolve o sub-recurso antes de apresentar o quadro:
 
