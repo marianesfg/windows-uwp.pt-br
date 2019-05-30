@@ -6,12 +6,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b2d402bca61fc271b6d1e2e972cca280693f9ce3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 36ebabbfd8f7e5f40e31be44d6dc7e4483a199ee
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658121"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363710"
 ---
 # <a name="guidelines-for-cross-slide"></a>Diretrizes de deslizamento transversal
 
@@ -20,9 +20,9 @@ ms.locfileid: "57658121"
 
 **APIs importantes**
 
--   [**CrossSliding**](https://msdn.microsoft.com/library/windows/apps/br241942)
--   [**CrossSlideThresholds**](https://msdn.microsoft.com/library/windows/apps/br241941)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
+-   [**CrossSliding**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.crosssliding)
+-   [**CrossSlideThresholds**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.crossslidethresholds)
+-   [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
 
 Use o deslizamento transversal para dar suporte à seleção com o gesto de deslizar e a interações de arrastar (mover) com o gesto de deslizar.
 
@@ -54,7 +54,7 @@ Esta imagem mostra como um usuário toca um elemento da interface do usuário, m
 
 Aqui estão algumas diretrizes a serem consideradas ao incluir a funcionalidade de deslizamento transversal em seu aplicativo.
 
-Use o deslizamento transversal para listas ou coleções que rolam em uma única direção. Para obter mais informações, consulte [Adicionando controles ListView](https://msdn.microsoft.com/library/windows/apps/hh465382).
+Use o deslizamento transversal para listas ou coleções que rolam em uma única direção. Para obter mais informações, consulte [Adicionando controles ListView](https://docs.microsoft.com/previous-versions/windows/apps/hh465382(v=win.10)).
 
 **Observação**  em casos em que a área de conteúdo pode ser estendida em duas direções, como navegadores da web ou leitores eletrônicos, a interação com tempo de pressionar e manter pressionado deve ser usada para invocar o menu de contexto para objetos, como imagens e hiperlinks.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogo, directx, carregar, rasterizar, malha, bitmap, 2D, 3D
 ms.localizationpriority: medium
-ms.openlocfilehash: afd08d62182bd0980f43ce1c4578c1181f8a6d2f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 942a775fca262903b1ee72831b4eae6612d25786
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613741"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368862"
 ---
 # <a name="fundamentals-of-directx-programming"></a>Conceitos básicos da programação no DirectX
 
@@ -42,7 +42,7 @@ O tópico sobre carregar recursos em seu jogo DirectX orienta você pelas etapas
 <td align="left"><p>Crie elementos gráficos 2D usando o DirectX.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/windows/uwp/graphics-concepts/index">Guia de aprendizado de gráficos do Direct3D</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/uwp/graphics-concepts/index">Guia de aprendizado de gráficos do Direct3D</a></p></td>
 <td align="left"><p>Entenda os conceitos de elementos gráficos do Direct3D.</p></td>
 </tr>
 <tr class="odd">

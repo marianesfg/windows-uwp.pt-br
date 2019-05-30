@@ -6,12 +6,12 @@ ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c7a60de3440106e446f6c3e896cd747741e4db2
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: b6474c566795043a435e70b2b41d4f5b59280c15
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334684"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371987"
 ---
 # <a name="create-a-package-flight-submission"></a>Criar um envio de pacote de pré-lançamento
 
@@ -50,7 +50,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um envio do pacote de pré-lançamento. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um envio do pacote de pré-lançamento. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 | flightId | cadeia de caracteres | Obrigatório. A ID do pacote de pré-lançamento para o qual você deseja adicionar o envio. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md).  |
 
 

@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0b8ffbebdca920bc6cc584dd735062a364d1d9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fad621eb9b6ef9ef863240644ae0fa46d41baacc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627931"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371600"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Tempo de execução do Windows 8.x para a UWP estudo de caso: Bookstore1
 
 
-Este tópico apresenta um estudo de caso de portabilidade de um aplicativo Universal 8.1 muito simple para um aplicativo do Windows 10 Universal Windows Platform (UWP). Um aplicativo Universal 8.1 é aquele que cria um pacote do aplicativo para Windows 8.1 e um pacote de aplicativo diferente para o Windows Phone 8.1. Com o Windows 10, você pode criar um pacote de aplicativo único que os clientes podem instalar em uma ampla variedade de dispositivos, e que é o que vamos fazer este estudo de caso. Consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Este tópico apresenta um estudo de caso de portabilidade de um aplicativo Universal 8.1 muito simple para um aplicativo do Windows 10 Universal Windows Platform (UWP). Um aplicativo Universal 8.1 é aquele que cria um pacote do aplicativo para Windows 8.1 e um pacote de aplicativo diferente para o Windows Phone 8.1. Com o Windows 10, você pode criar um pacote de aplicativo único que os clientes podem instalar em uma ampla variedade de dispositivos, e que é o que vamos fazer este estudo de caso. Consulte [Guia para aplicativos UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
 
 O aplicativo que portaremos consiste em uma **ListBox** associada a um modelo de exibição. O modelo de exibição tem uma lista de livros que mostra o título, o autor e a capa do livro. As imagens da capa do livro têm **Build Action** definida como **Content** e **Copy to Output Directory** definida como **Do not copy**.
 

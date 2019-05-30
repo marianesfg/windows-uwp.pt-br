@@ -6,22 +6,22 @@ ms.date: 05/24/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a4c7f1ad75e1e0544486049f9bd721d8a82edf03
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8e75ab94c6f1c8c4560854fd4f5264c313657ba9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57623051"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369897"
 ---
 # <a name="sensor-orientation"></a>Orientação do sensor
 
 
 **APIs importantes**
 
--   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Windows.Devices.Sensors.Custom**](https://msdn.microsoft.com/library/windows/apps/Dn895032)
+-   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**Windows.Devices.Sensors.Custom**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Custom)
 
-Os dados do sensor das classes [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687), [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718), [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705), [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766) e [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) são definidos por seus eixos de referência. Esses eixos são definidos pelo quadro de referência do dispositivo e giram com o dispositivo conforme o usuário o vira. Caso seu aplicativo dê suporte à rotação automática e se reoriente para acomodar o dispositivo conforme o usuário o gira, você deve ajustar os dados do sensor para a rotação antes de usá-lo.
+Os dados do sensor das classes [**Accelerometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer), [**Gyrometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer), [**Compass**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Compass), [**Inclinometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer) e [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) são definidos por seus eixos de referência. Esses eixos são definidos pelo quadro de referência do dispositivo e giram com o dispositivo conforme o usuário o vira. Caso seu aplicativo dê suporte à rotação automática e se reoriente para acomodar o dispositivo conforme o usuário o gira, você deve ajustar os dados do sensor para a rotação antes de usá-lo.
 
 ## <a name="display-orientation-vs-device-orientation"></a>Orientação de exibição x orientação do dispositivo
 
@@ -37,7 +37,7 @@ A próxima imagem exibe a orientação de exibição em Paisagem, enquanto que a
 
 ![Orientação de exibição em Paisagem, enquanto que a orientação do dispositivo é LandscapeFlipped.](images/sensor-orientation-c.PNG)
 
-Você pode consultar os valores de orientação por meio da classe [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258) usando o método [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx) com a propriedade [**CurrentOrientation**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx). Em seguida, você pode criar lógica comparando com a enumeração [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142). Lembre-se de que para cada orientação com suporte, é necessário dar suporte a uma conversão dos eixos de referência para essa orientação.
+Você pode consultar os valores de orientação por meio da classe [**DisplayInformation**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayInformation) usando o método [**GetForCurrentView**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.getforcurrentview) com a propriedade [**CurrentOrientation**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.currentorientation). Em seguida, você pode criar lógica comparando com a enumeração [**DisplayOrientations**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations). Lembre-se de que para cada orientação com suporte, é necessário dar suporte a uma conversão dos eixos de referência para essa orientação.
 
 ## <a name="landscape-first-vs-portrait-first-devices"></a>Dispositivos de prioridade paisagem x prioridade retrato
 
@@ -159,7 +159,7 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 ## <a name="display-orientation-and-device-orientation"></a>Orientação de exibição e do dispositivo
 
-Os dados de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) devem ser alterados de maneira diferente. Pense nessas diferentes orientações como rotações no sentido anti-horário para o eixo Z, portanto, precisamos inverter a rotação para obter a orientação do usuário de volta. Para dados quatérnion, podemos usar a fórmula de Euler para definir uma rotação com um quatérnion de referência e também podemos usar uma matriz de rotação de referência.
+Os dados de [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) devem ser alterados de maneira diferente. Pense nessas diferentes orientações como rotações no sentido anti-horário para o eixo Z, portanto, precisamos inverter a rotação para obter a orientação do usuário de volta. Para dados quatérnion, podemos usar a fórmula de Euler para definir uma rotação com um quatérnion de referência e também podemos usar uma matriz de rotação de referência.
 
 ![Fórmula de Euler](images/eulers-formula.png)
 
@@ -175,5 +175,5 @@ Na expressão anterior, o objeto absoluto é retornado pelos dados do sensor.
 | **Paisagem**        | 0                                  | 1 + 0i + 0j + 0k                        | \[1 0 0<br/> 0 1 0<br/> 0 0 1\]               |
 | **Retrato**         | 90                                 | cos(-45⁰) + (i + j + k)*sen(-45⁰)       | \[0 1 0<br/>-1 0 0<br/>0 0 1]              |
 | **LandscapeFlipped** | 180                                | 0 - i - j - k                           | \[1 0 0<br/> 0 1 0<br/> 0 0 1]               |
-| **PortraitFlipped**  | 270                                | cos(-135⁰) + (i + j + k)*sen(-135⁰)     | \[-1 0 0<br/> 1  0 0<br/> 0  0 1]             |
+| **PortraitFlipped**  | 270                                | cos(-135⁰) + (i + j + k)*sen(-135⁰)     | \[0 -1 0<br/> 1  0 0<br/> 0  0 1]             |
 

@@ -11,23 +11,23 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: eaf6118720ab77931decf93113a13341ab4f51d0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 28188acfd3999c0b384326f013a0ba1bdf71a34f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642171"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370750"
 ---
 # <a name="handle-file-activation"></a>Tratar a ativação do arquivo
 
 **APIs importantes**
 
--   [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
--   [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
+-   [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
+-   [**Windows.UI.Xaml.Application.OnFileActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)
 
 Seu aplicativo pode se registrar para se tornar o manipulador padrão para um determinado tipo de arquivo. Os aplicativos da área de trabalho do Windows e os aplicativos da Plataforma Universal do Windows (UWP) podem ser registrados como um manipulador de arquivo padrão. Se o usuário escolher seu aplicativo como o manipulador padrão de um determinado tipo de arquivo, seu aplicativo será ativado quando esse tipo de arquivo for iniciado.
 
-Recomendamos que você só se registre para um tipo de arquivo se quiser manipular todas as inicializações desse tipo de arquivo. Se o seu aplicativo precisar usar o tipo de arquivo apenas internamente, então você não precisará se registrar para ser o manipulador padrão. Se você decidir se registrar para um tipo de arquivo, você deve fornecer ao usuário a funcionalidade esperada quando o seu aplicativo é ativado para esse tipo de arquivo. Por exemplo, um aplicativo de visualização de imagens pode se registrar para exibir um arquivo .jpg. Para mais informações sobre associações de arquivos, consulte [Diretrizes de tipos de arquivos e URIs](https://msdn.microsoft.com/library/windows/apps/hh700321).
+Recomendamos que você só se registre para um tipo de arquivo se quiser manipular todas as inicializações desse tipo de arquivo. Se o seu aplicativo precisar usar o tipo de arquivo apenas internamente, então você não precisará se registrar para ser o manipulador padrão. Se você decidir se registrar para um tipo de arquivo, você deve fornecer ao usuário a funcionalidade esperada quando o seu aplicativo é ativado para esse tipo de arquivo. Por exemplo, um aplicativo de visualização de imagens pode se registrar para exibir um arquivo .jpg. Para mais informações sobre associações de arquivos, consulte [Diretrizes de tipos de arquivos e URIs](https://docs.microsoft.com/windows/uwp/files/index).
 
 Estas etapas mostram como registrar um tipo de arquivo personalizado, o .alsdk, e como ativar seu aplicativo quando o usuário inicia um arquivo .alsdk.
 
@@ -37,15 +37,15 @@ Estas etapas mostram como registrar um tipo de arquivo personalizado, o .alsdk, 
 
 O aplicativo recebe os eventos de ativação somente para as extensões de arquivo listadas no manifesto do pacote. Veja como indicar se seu aplicativo manipula os arquivos com a extensão `.alsdk`.
 
-1.  No **Gerenciador de Soluções**, clique duas vezes em package.appxmanifest para abrir o designer de manifesto. Selecione a guia **Declarações** no menu suspenso **Declarações disponíveis**, selecione **Associações de tipo de arquivo** e clique em **Adicionar**. Consulte [Identificadores programáticos](https://msdn.microsoft.com/library/windows/desktop/cc144152) para obter mais detalhes sobre os identificadores usados por associações de arquivo.
+1.  No **Gerenciador de Soluções**, clique duas vezes em package.appxmanifest para abrir o designer de manifesto. Selecione a guia **Declarações** no menu suspenso **Declarações disponíveis**, selecione **Associações de tipo de arquivo** e clique em **Adicionar**. Consulte [Identificadores programáticos](https://docs.microsoft.com/windows/desktop/shell/fa-progids) para obter mais detalhes sobre os identificadores usados por associações de arquivo.
 
     Esta é uma breve descrição de cada um dos campos que você pode preencher no designer de manifesto:
 
 | Campo | Descrição |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome de exibição** | Especifique o nome de exibição para um grupo de tipos de arquivos. O nome de exibição é usado para identificar o tipo de arquivo em [Definir Programas Padrão](https://msdn.microsoft.com/library/windows/desktop/cc144154) no **Painel de Controle**. |
-| **Logotipo** | Especifique o logotipo que é usado para identificar o tipo de arquivo na área de trabalho e em [Definir Programas Padrão](https://msdn.microsoft.com/library/windows/desktop/cc144154) no **Painel de Controle**. Se nenhum logotipo for especificado, o logotipo pequeno do aplicativo será usado. |
-| **Dica de informações** | Especifique a [dica de informações](https://msdn.microsoft.com/library/windows/desktop/cc144152) para um grupo de tipos de arquivo. O texto dessa dica de ferramenta é exibido quando o usuário passa o mouse sobre o ícone de um arquivo desse tipo. |
+| **Nome de exibição** | Especifique o nome de exibição para um grupo de tipos de arquivos. O nome de exibição é usado para identificar o tipo de arquivo em [Definir Programas Padrão](https://docs.microsoft.com/windows/desktop/shell/default-programs) no **Painel de Controle**. |
+| **Logotipo** | Especifique o logotipo que é usado para identificar o tipo de arquivo na área de trabalho e em [Definir Programas Padrão](https://docs.microsoft.com/windows/desktop/shell/default-programs) no **Painel de Controle**. Se nenhum logotipo for especificado, o logotipo pequeno do aplicativo será usado. |
+| **Dica de informações** | Especifique a [dica de informações](https://docs.microsoft.com/windows/desktop/shell/fa-progids) para um grupo de tipos de arquivo. O texto dessa dica de ferramenta é exibido quando o usuário passa o mouse sobre o ícone de um arquivo desse tipo. |
 | **Nome** | Escolha o nome de um grupo de tipos de arquivos que compartilham o mesmo nome de exibição, logotipo, dica de informações e sinalizadores de edição. Escolha um nome de grupo que se mantenha igual entre atualizações de aplicativos. **Observação**  O nome precisa estar completamente em letras minúsculas. |
 | **Tipo de conteúdo** | Especifique o tipo de conteúdo MIME, como **image/jpeg**, para um tipo de arquivo específico. **Observação importante sobre os tipos de conteúdo permitidos:** Aqui está uma lista alfabética de tipos de conteúdo MIME que você não pode inserir no manifesto do pacote porque eles são reservados ou proibidos: **aplicativo/force-download**, **application/octet-stream**, **aplicativo/desconhecido**, **application/x-msdownload**. |
 | **Tipo de arquivo** | Especifique o tipo de arquivo para o qual registrar, precedido por um ponto, por exemplo, ".jpeg". **Tipos de arquivo reservado e proibidos:** Ver [nomes de esquema de URI reservadas e tipos de arquivo](reserved-uri-scheme-names.md) para uma lista alfabética de tipos de arquivo para aplicativos internos que você não pode se registrar para seus aplicativos UWP porque eles são reservados ou proibidos. |
@@ -55,7 +55,7 @@ O aplicativo recebe os eventos de ativação somente para as extensões de arqui
 4.  Insira "imagens\\icon. png" como o logotipo.
 5.  Pressione Ctrl+S para salvar a alteração no package.appxmanifest.
 
-As etapas acima adicionam um elemento [**Extension**](https://msdn.microsoft.com/library/windows/apps/br211400) semelhante a este ao manifesto do pacote. A categoria **windows.fileTypeAssociation** indica se o aplicativo manipula arquivos com a extensão `.alsdk`.
+As etapas acima adicionam um elemento [**Extension**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-1-extension) semelhante a este ao manifesto do pacote. A categoria **windows.fileTypeAssociation** indica se o aplicativo manipula arquivos com a extensão `.alsdk`.
 
 ```xml
       <Extensions>
@@ -83,7 +83,7 @@ Inclua um ícone 44x44 com seu projeto para que seu logotipo apareça nesses loc
 
 ## <a name="step-3-handle-the-activated-event"></a>Etapa 3: Manipular o evento ativado
 
-O manipulador de eventos [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331) recebe todos os eventos de ativação de arquivos.
+O manipulador de eventos [**OnFileActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated) recebe todos os eventos de ativação de arquivos.
 
 ```csharp
 protected override void OnFileActivated(FileActivatedEventArgs args)
@@ -129,7 +129,7 @@ Quando seu aplicativo é iniciado por meio da ativação de arquivo, você deve 
 
 ## <a name="remarks"></a>Comentários
 
-Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que você valide o conteúdo de um arquivo antes de processá-lo. Para obter mais informações sobre a validação de entrada, consulte [Escrevendo código seguro](https://go.microsoft.com/fwlink/p/?LinkID=142053)
+Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que você valide o conteúdo de um arquivo antes de processá-lo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -139,8 +139,8 @@ Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que v
 
 ### <a name="concepts"></a>Conceitos
 
-* [Programas padrão](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [Tipo de arquivo e o modelo de associações de protocolo](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+* [Programas padrão](https://docs.microsoft.com/windows/desktop/shell/default-programs)
+* [Tipo de arquivo e o modelo de associações de protocolo](https://docs.microsoft.com/windows/desktop/w8cookbook/file-type-and-protocol-associations-model)
 
 ### <a name="tasks"></a>Tarefas
 
@@ -149,8 +149,8 @@ Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que v
 
 ### <a name="guidelines"></a>Diretrizes
 
-* [Diretrizes para tipos de arquivo e URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
+* [Diretrizes para tipos de arquivo e URIs](https://docs.microsoft.com/windows/uwp/files/index)
 
 ### <a name="reference"></a>Referência
-* [Windows.ApplicationModel.Activation.FileActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/br224716)
-* [Windows.UI.Xaml.Application.OnFileActivated](https://msdn.microsoft.com/library/windows/apps/br242331)
+* [Windows.ApplicationModel.Activation.FileActivatedEventArgs](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
+* [Windows.UI.Xaml.Application.OnFileActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)

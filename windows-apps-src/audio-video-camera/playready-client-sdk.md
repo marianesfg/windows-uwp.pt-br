@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 40df746d89757b481a47cefeaeda3f8a34091014
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e82a0ffc0ddcf2ac1973ba446ec50dfc61a7cd1a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636841"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361567"
 ---
 # <a name="playready-drm"></a>DRM do PlayReady
 
@@ -34,7 +34,7 @@ A lista a seguir descreve os novos recursos e as alterações feitas em DRM do P
 
     Suporte de proteção de conteúdo baseado em hardware permite a reprodução segura de conteúdo em alta definição (HD) e ultra-alta definição (UHD) em vários dispositivos. O material de chave (incluindo chaves privadas, chaves de conteúdo e qualquer outro material de chave usado para derivar ou desbloquear essas chaves) e amostras de vídeo compactadas e não compactadas descriptografadas são protegidos ao aproveitar a segurança do hardware. Quando o DRM de Hardware está sendo usado, nenhum ativador desconhecido (reproduzir para desconhecido / reproduzir para desconhecido com downres) tem significado, pois o pipeline HWDRM sempre conhece a saída que está sendo usada. Para obter mais informações, consulte [DRM de hardware](hardware-drm.md).
 
--   O PlayReady não é mais um componente de estrutura appX, mas um componente nativo do sistema operacional. O namespace foi alterado de **Microsoft.Media.PlayReadyClient** para [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454).
+-   O PlayReady não é mais um componente de estrutura appX, mas um componente nativo do sistema operacional. O namespace foi alterado de **Microsoft.Media.PlayReadyClient** para [**Windows.Media.Protection.PlayReady**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady).
 -   Os cabeçalhos a seguir define os códigos de erro PlayReady agora fazem parte do Windows Software Development Kit (SDK): Windows.Media.Protection.PlayReadyErrors.h e Windows.Media.Protection.PlayReadyResults.h.
 -   Fornece aquisição proativa de licenças não persistentes.
 
@@ -69,13 +69,13 @@ A lista a seguir descreve os novos recursos e as alterações feitas em DRM do P
 
 As novas interfaces, classes e enumerações a seguir foram adicionadas ao DRM do PlayReady:
 
--   [**IPlayReadyLicenseAcquisitionServiceRequest** ](https://msdn.microsoft.com/library/windows/apps/dn986077) interface
--   [**IPlayReadyLicenseSession** ](https://msdn.microsoft.com/library/windows/apps/dn986080) interface
--   [**IPlayReadySecureStopServiceRequest** ](https://msdn.microsoft.com/library/windows/apps/dn986090) interface
--   [**PlayReadyLicenseSession** ](https://msdn.microsoft.com/library/windows/apps/dn986309) classe
--   [**PlayReadySecureStopIterable** ](https://msdn.microsoft.com/library/windows/apps/dn986371) classe
--   [**PlayReadySecureStopIterator** ](https://msdn.microsoft.com/library/windows/apps/dn986375) classe
--   [**PlayReadyHardwareDRMFeatures** ](https://msdn.microsoft.com/library/windows/apps/dn986265) enumerador
+-   [**IPlayReadyLicenseAcquisitionServiceRequest**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest) interface
+-   [**IPlayReadyLicenseSession**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession) interface
+-   [**IPlayReadySecureStopServiceRequest**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest) interface
+-   [**PlayReadyLicenseSession** ](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyLicenseSession) classe
+-   [**PlayReadySecureStopIterable** ](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadySecureStopIterable) classe
+-   [**PlayReadySecureStopIterator** ](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator) classe
+-   [**PlayReadyHardwareDRMFeatures**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyHardwareDRMFeatures) enumerator
 
 Uma nova amostra foi criada para demonstrar como usar os novos recursos DRM do PlayReady. A amostra pode ser baixada de [https://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](https://go.microsoft.com/fwlink/p/?linkid=331670).
 
@@ -397,7 +397,7 @@ A tabela a seguir descreve a implementação do DRM do PlayReady para Windows 10
 
 Antes de começar a criar seu aplicativo UWP protegido pelo PlayReady, o seguinte software deve ser instalado no sistema:
 
--   Windows 10.
+-   Windows 10.
 -   Se você estiver compilando qualquer um dos exemplos para PlayReady DRM para aplicativos UWP, você deve usar o Microsoft Visual Studio 2015 ou posterior para compilar os exemplos. Você ainda pode usar o Microsoft Visual Studio 2013 para compilar qualquer um dos exemplos do PlayReady DRM para aplicativos do Windows 8.1 Store.
 
 <!--This is no longer available-->
@@ -407,7 +407,7 @@ Antes de começar a criar seu aplicativo UWP protegido pelo PlayReady, o seguint
 
 Esta seção inclui informações sobre como migrar seus aplicativos existentes do PlayReady Windows 8.x Store para Windows 10.
 
-O namespace para aplicativos da UWP do PlayReady no Windows 10 foi alterado de **Microsoft.Media.PlayReadyClient** à [ **Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454). Isso significa que você precisará pesquisar e substituir o namespace antigo pelo novo em seu código. Você ainda fará referência a um arquivo winmd. Ele faz parte do windows.media.winmd no sistema operacional Windows 10. Ele está em windows.winmd como parte do SDK do Windows do TH. Para UWP, ele está referenciado em windows.foundation.univeralappcontract.winmd.
+O namespace para aplicativos da UWP do PlayReady no Windows 10 foi alterado de **Microsoft.Media.PlayReadyClient** à [ **Windows.Media.Protection.PlayReady**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady). Isso significa que você precisará pesquisar e substituir o namespace antigo pelo novo em seu código. Você ainda fará referência a um arquivo winmd. Ele faz parte do windows.media.winmd no sistema operacional Windows 10. Ele está em windows.winmd como parte do SDK do Windows do TH. Para UWP, ele está referenciado em windows.foundation.univeralappcontract.winmd.
 
 Para reproduzir conteúdo HD (alta definição) (1080p) e UHD (ultra-alta definição) protegido por PlayReady, será necessário implementar o DRM de hardware do PlayReady. Para obter mais informações sobre como implementar o DRM de hardware do PlayReady, consulte [DRM de hardware](hardware-drm.md).
 
@@ -435,7 +435,7 @@ Esta seção descreve como adquirir licenças não persistentes de forma proativ
 
 Em versões anteriores do PlayReady DRM, as licenças não persistentes eram adquiridas somente de forma reativa durante a reprodução. Nesta versão, você pode adquirir licenças não persistentes de forma proativa antes do início da reprodução.
 
-1.  Crie de forma proativa uma sessão de reprodução em que a licença não persistente possa ser armazenada. Por exemplo:
+1.  Crie de forma proativa uma sessão de reprodução em que a licença não persistente possa ser armazenada. Por exemplo: 
 
     ```cs
     var cpsystems = new Windows.Foundation.Collections.PropertySet();       
@@ -447,7 +447,7 @@ Em versões anteriores do PlayReady DRM, as licenças não persistentes eram adq
     var pmpServer = new Windows.Media.Protection.MediaProtectionPMPServer( pmpSystemInfo );
     ```
 
-2.  Vincule a sessão de reprodução à classe de aquisição de licença. Por exemplo:
+2.  Vincule a sessão de reprodução à classe de aquisição de licença. Por exemplo: 
 
     ```cs
     var licenseSessionProperties = new Windows.Foundation.Collections.PropertySet();
@@ -519,7 +519,7 @@ Para usar o PlayReady DRM em um aplicativo UWP no Xbox One, você primeiro preci
 Depois de receber a autorização, você precisará incluir um `<DeviceCapability>` adicional ao manifesto do aplicativo. Você precisará adicioná-lo manualmente porque não há configuração disponível no momento no Designer de Manifesto do Aplicativo. Siga estas etapas para configurá-lo:
 
 1. Com o projeto aberto no Visual Studio, abra o **Gerenciador de Soluções** e clique com o botão direito do mouse em **Package. appxmanifest**.
-2. Selecione **Abrir Com...**, escolha **Editor (Texto) de XML**e clique em **OK**.
+2. Selecione **Abrir Com...** , escolha **Editor (Texto) de XML**e clique em **OK**.
 3. Entre as marcas `<Capabilities>`, adicione o seguinte `<DeviceCapability>`:
 
     ```xml

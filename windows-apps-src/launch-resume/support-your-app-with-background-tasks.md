@@ -6,12 +6,12 @@ ms.date: 08/21/2017
 ms.topic: article
 keywords: o Windows 10, uwp, tarefas em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 71026762933267e1cad9a1cd9b6581eed1dadbb8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 73d279ca0afe67fa6c7d2240fb62c91d1ab3c4c3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618021"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370568"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Dar suporte a seu app com tarefas em segundo plano
 
@@ -20,7 +20,7 @@ Os tópicos nesta seção mostram como fazer um código leve funcionar em segund
 
 ## <a name="playing-media-in-the-background"></a>Execução de mídia no segundo plano
 
-Desde o Windows 10, versão 1607, a execução de áudio no segundo plano está muito mais fácil. Consulte [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio) para obter mais informações.
+Desde o Windows 10, versão 1607, a execução de áudio no segundo plano está muito mais fácil. Consulte [Reproduzir mídia em segundo plano](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio) para obter mais informações.
 
 ## <a name="in-process-and-out-of-process-background-tasks"></a>Tarefas em segundo plano dentro do processo e fora do processo
 
@@ -33,7 +33,7 @@ O suporte em segundo plano dentro do processo foi introduzido no Windows 10, ver
 
 As tarefas em segundo plano fora do processo são mais resilientes, pois o processo em segundo plano não consegue anular o processo do aplicativo se algo der errado. Mas a resiliência vem com o preço de complexidade maior para gerenciar a comunicação dos processos entre o aplicativo e a tarefa em segundo plano.
 
-As tarefas em segundo plano fora do processo são implementadas como classes leves implementadas na interface de [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) pelo sistema operacional em um processo à parte (backgroundtaskhost.exe). Registre uma tarefa em segundo plano usando a classe [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). O nome de classe é usado para especificar o ponto de entrada quando você registra a tarefa em segundo plano.
+As tarefas em segundo plano fora do processo são implementadas como classes leves implementadas na interface de [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) pelo sistema operacional em um processo à parte (backgroundtaskhost.exe). Registre uma tarefa em segundo plano usando a classe [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder). O nome de classe é usado para especificar o ponto de entrada quando você registra a tarefa em segundo plano.
 
 No Windows 10, versão 1607, você pode habilitar a atividade em segundo plano sem criar uma tarefa em segundo plano. Em vez disso, você pode executar o código em segundo plano diretamente no processo do aplicativo em primeiro plano.
 
@@ -46,7 +46,7 @@ Para começar rapidamente tarefas em segundo plano fora do processo, consulte [C
 
 ## <a name="background-tasks-for-system-events"></a>Tarefas em segundo plano de eventos do sistema
 
-O aplicativo pode responder a eventos gerados pelo sistema registrando uma tarefa em segundo plano com a classe [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838). Um aplicativo pode usar qualquer um dos gatilhos de eventos do sistema a seguir (definidos em [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839))
+O aplicativo pode responder a eventos gerados pelo sistema registrando uma tarefa em segundo plano com a classe [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTrigger). Um aplicativo pode usar qualquer um dos gatilhos de eventos do sistema a seguir (definidos em [**SystemTriggerType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType))
 
 | Nome do gatilho                     | Descrição                                                                                                    |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -60,7 +60,7 @@ Para obter mais informações, consulte o tópico sobre [Responder a eventos do 
 
 ## <a name="conditions-for-background-tasks"></a>Condições para tarefas em segundo plano
 
-Você pode controlar quando a tarefa em segundo plano é executada, mesmo depois que for disparado, adicionando a condição. Depois de disparada, a tarefa em segundo plano não será executada até que todas as suas condições sejam atendidas. As seguintes condições (representadas pela enumeração [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)) podem ser usadas.
+Você pode controlar quando a tarefa em segundo plano é executada, mesmo depois que for disparado, adicionando a condição. Depois de disparada, a tarefa em segundo plano não será executada até que todas as suas condições sejam atendidas. As seguintes condições (representadas pela enumeração [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)) podem ser usadas.
 
 | Nome da condição           | Descrição                       |
 |--------------------------|-----------------------------------|
@@ -86,21 +86,21 @@ Os gatilhos em tempo real a seguir podem ser usados para executar código person
 
 | Gatilho em tempo real  | Descrição |
 |--------------------|-------------|
-| **Canal de controle** | As tarefas em segundo plano podem manter a conexão ativada e receber mensagens no canal de controle usando o [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Se seu aplicativo estiver ouvindo um soquete, você poderá usar o Agente de Soquete em vez do **ControlChannelTrigger**. Para obter mais detalhes sobre como usar o Agente de Soquete, consulte [SocketActivityTrigger](https://msdn.microsoft.com/library/windows/apps/dn806009). O **ControlChannelTrigger** não é compatível com o Windows Phone. |
-| **Temporizador** | É possível executar tarefas em segundo plano a cada 15 minutos, e elas podem ser configuradas para execução em um horário específico com [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). Para obter mais informações, consulte [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md). |
-| **Notificação por push** | As tarefas em segundo plano respondem ao [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) para receber notificações por push brutas. |
+| **Canal de controle** | As tarefas em segundo plano podem manter a conexão ativada e receber mensagens no canal de controle usando o [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger). Se seu aplicativo estiver ouvindo um soquete, você poderá usar o Agente de Soquete em vez do **ControlChannelTrigger**. Para obter mais detalhes sobre como usar o Agente de Soquete, consulte [SocketActivityTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger). O **ControlChannelTrigger** não é compatível com o Windows Phone. |
+| **Temporizador** | É possível executar tarefas em segundo plano a cada 15 minutos, e elas podem ser configuradas para execução em um horário específico com [**TimeTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.TimeTrigger). Para obter mais informações, consulte [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md). |
+| **Notificação por push** | As tarefas em segundo plano respondem ao [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger) para receber notificações por push brutas. |
 
 **Observação**  
 
-Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
+Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) antes de registrar qualquer tipo de gatilho em segundo plano.
 
-Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para obter mais informações, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
+Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) e, em seguida, chame [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) quando seu aplicativo for iniciado após a atualização. Para obter mais informações, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
-**Limites no número de instâncias de gatilho:** Há limites para quantas instâncias de alguns gatilhos de um aplicativo pode se registrar. Um aplicativo pode registrar somente [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger), [MediaProcessingTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger) e [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396) uma vez a cada instância do aplicativo. Se um aplicativo ultrapassa esse limite, o registro emite uma exceção.
+**Limites no número de instâncias de gatilho:** Há limites para quantas instâncias de alguns gatilhos de um aplicativo pode se registrar. Um aplicativo pode registrar somente [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger), [MediaProcessingTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger) e [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.deviceusetrigger?f=255&MSPPError=-2147217396) uma vez a cada instância do aplicativo. Se um aplicativo ultrapassa esse limite, o registro emite uma exceção.
 
 ## <a name="system-event-triggers"></a>Gatilhos de eventos do sistema
 
-A enumeração [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839) representa os gatilhos de eventos do sistema a seguir:
+A enumeração [**SystemTriggerType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) representa os gatilhos de eventos do sistema a seguir:
 
 | Nome do gatilho            | Descrição                                                       |
 |-------------------------|-------------------------------------------------------------------|
@@ -128,11 +128,11 @@ As tarefas em segundo plano estão limitadas a 30 segundos de uso do relógio.
 
 Devido às restrições de recurso para dispositivos de baixa memória, as tarefas em segundo plano podem ter um limite de memória que determina a quantidade máxima de memória que as tarefas em segundo plano podem usar. Se a tarefa em segundo plano tentar uma operação que exceda esse limite, a operação falhará e poderá gerar uma exceção de falta de memória que a tarefa pode manipular. Se a tarefa não manipular a exceção de falta de memória, ou a natureza da operação não tenha gerado uma exceção de falta de memória, a tarefa será encerrada imediatamente.  
 
-Você pode usar as APIs [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831) para consultar o uso atual da memória e o limite para descobrir seu limite (se houver), bem como para monitorar o uso de memória contínuo de sua tarefa em segundo plano.
+Você pode usar as APIs [**MemoryManager**](https://docs.microsoft.com/uwp/api/Windows.System.MemoryManager) para consultar o uso atual da memória e o limite para descobrir seu limite (se houver), bem como para monitorar o uso de memória contínuo de sua tarefa em segundo plano.
 
 ### <a name="per-device-limit-for-apps-with-background-tasks-for-low-memory-devices"></a>Limite por dispositivo para aplicativos com tarefas em segundo plano para dispositivos de pouca memória
 
-Em dispositivos com memória restrita, existe um limite quanto ao número de aplicativos que podem ser instalados em um dispositivo e usam tarefas em segundo plano em um determinado tempo. Se esse número for excedido, a chamada para [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485), que é necessária para todas as tarefas em segundo plano, falhará.
+Em dispositivos com memória restrita, existe um limite quanto ao número de aplicativos que podem ser instalados em um dispositivo e usam tarefas em segundo plano em um determinado tempo. Se esse número for excedido, a chamada para [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync), que é necessária para todas as tarefas em segundo plano, falhará.
 
 ### <a name="battery-saver"></a>Economia de Bateria
 
@@ -142,9 +142,9 @@ No entanto, para aplicativos empresariais e aplicativos que não serão publicad
 
 ## <a name="background-task-resource-guarantees-for-real-time-communication"></a>O recurso de tarefa em segundo plano garante a comunicação em tempo real
 
-Para evitar que as cotas de recursos interfiram na funcionalidade de comunicação em tempo real, as tarefas em segundo plano que usam o [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) e o [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) recebem cotas de recursos da CPU garantidas para cada execução de tarefa. As cotas de recursos são conforme mencionadas acima e permanecem constantes para essas tarefas em segundo plano.
+Para evitar que as cotas de recursos interfiram na funcionalidade de comunicação em tempo real, as tarefas em segundo plano que usam o [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger) e o [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger) recebem cotas de recursos da CPU garantidas para cada execução de tarefa. As cotas de recursos são conforme mencionadas acima e permanecem constantes para essas tarefas em segundo plano.
 
-O aplicativo não precisa fazer nada além de obter as cotas de recursos garantidas para as tarefas em segundo plano [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) e [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543). O sistema sempre trata essas tarefas em segundo plano como essenciais.
+O aplicativo não precisa fazer nada além de obter as cotas de recursos garantidas para as tarefas em segundo plano [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger) e [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger). O sistema sempre trata essas tarefas em segundo plano como essenciais.
 
 ## <a name="maintenance-trigger"></a>Gatilho de manutenção
 
@@ -152,12 +152,12 @@ As tarefas de manutenção são executadas apenas quando o dispositivo está con
 
 ## <a name="background-tasks-for-sensors-and-devices"></a>Tarefas em segundo plano para sensores e dispositivos
 
-Seu aplicativo pode acessar sensores e dispositivos periféricos a partir de uma tarefa em segundo plano com a classe [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Você pode usar esse gatilho para operações de longa duração, como sincronização ou monitoramento de dados. Ao contrário das tarefas para eventos de sistema, uma tarefa **DeviceUseTrigger** só pode ser disparada enquanto o aplicativo está sendo executado em primeiro plano e nenhuma condição pode ser definida nele.
+Seu aplicativo pode acessar sensores e dispositivos periféricos a partir de uma tarefa em segundo plano com a classe [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger). Você pode usar esse gatilho para operações de longa duração, como sincronização ou monitoramento de dados. Ao contrário das tarefas para eventos de sistema, uma tarefa **DeviceUseTrigger** só pode ser disparada enquanto o aplicativo está sendo executado em primeiro plano e nenhuma condição pode ser definida nele.
 
 > [!IMPORTANT]
 > O **DeviceUseTrigger** e o **DeviceServicingTrigger** não podem ser usados com tarefas em segundo plano dentro do processo.
 
-Algumas operações críticas de dispositivos, como atualizações de firmware de longa execução não podem ser executadas com o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Elas podem ser executadas somente no computador por um aplicativo privilegiado que usa o [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Um *aplicativo privilegiado* é um aplicativo que o fabricante do dispositivo autorizou a executar tais operações. Os metadados do dispositivo são usados para especificar qual aplicativo, se houver, foi designado como o aplicativo privilegiado para um dispositivo. Para obter mais informações, consulte [sincronização de dispositivo e de atualização para aplicativos de dispositivo do Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkId=306619)
+Algumas operações críticas de dispositivos, como atualizações de firmware de longa execução não podem ser executadas com o [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger). Elas podem ser executadas somente no computador por um aplicativo privilegiado que usa o [**DeviceServicingTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceServicingTrigger). Um *aplicativo privilegiado* é um aplicativo que o fabricante do dispositivo autorizou a executar tais operações. Os metadados do dispositivo são usados para especificar qual aplicativo, se houver, foi designado como o aplicativo privilegiado para um dispositivo. Para obter mais informações, consulte [sincronização de dispositivo e de atualização para aplicativos de dispositivo do Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkId=306619)
 
 ## <a name="managing-background-tasks"></a>Gerenciando tarefas em segundo plano
 
@@ -187,7 +187,7 @@ Verifique o registro de tarefa em segundo plano durante a inicialização do apl
 * [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Como disparar suspender, continuar e eventos em aplicativos UWP do plano de fundo (durante a depuração)](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
-* [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
+* [Reproduzir mídia em segundo plano](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)

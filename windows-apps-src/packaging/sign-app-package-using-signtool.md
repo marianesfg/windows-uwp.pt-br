@@ -6,28 +6,28 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
-ms.openlocfilehash: 7748ff7d5acf8a94c92e2b51953299131910d63e
-ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.openlocfilehash: 71544129480cb55432c222a0481c2a49934cb658
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320569"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372339"
 ---
 # <a name="sign-an-app-package-using-signtool"></a>Assinar um pacote do aplicativo usando a SignTool
 
 **SignTool** é uma ferramenta de linha de comando usada para assinar digitalmente um pacote ou lote de aplicativos com um certificado. O certificado pode ser criado pelo usuário (para fins de teste) ou emitido por uma empresa (para distribuição). Assinar um pacote do aplicativo fornece ao usuário uma verificação de que os dados do aplicativo não foram modificados depois que ele foi assinado enquanto também confirma a identidade do usuário ou empresa que assinou. **SignTool** pode assinar pacotes e lotes de aplicativos criptografados ou não criptografados.
 
 > [!IMPORTANT] 
-> Se você usou o Visual Studio para desenvolver seu aplicativo, é recomendável que você use o Assistente do Visual Studio para criar e assinar seu pacote de aplicativo. Para obter mais informações, consulte [Empacotar um aplicativo UWP com Visual Studio](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
+> Se você usou o Visual Studio para desenvolver seu aplicativo, é recomendável que você use o Assistente do Visual Studio para criar e assinar seu pacote de aplicativo. Para obter mais informações, consulte [Empacotar um aplicativo UWP com Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-Para obter mais informações sobre assinatura de código e certificados em geral, consulte [Introdução à Assinatura de Código](https://msdn.microsoft.com/library/windows/desktop/aa380259.aspx#introduction_to_code_signing).
+Para obter mais informações sobre assinatura de código e certificados em geral, consulte [Introdução à Assinatura de Código](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 - **Um aplicativo empacotado**  
-    Para saber mais sobre como criar manualmente um pacote de aplicativos, consulte [Criar um pacote do aplicativo com a ferramenta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). 
+    Para saber mais sobre como criar manualmente um pacote de aplicativos, consulte [Criar um pacote do aplicativo com a ferramenta MakeAppx.exe](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). 
 
 - **Um certificado de assinatura válido**  
-    Para obter mais informações sobre como criar ou importar um certificado válido de assinatura, consulte [Criar ou importar um certificado de assinatura de pacote](https://msdn.microsoft.com/windows/uwp/packaging/create-certificate-package-signing).
+    Para obter mais informações sobre como criar ou importar um certificado válido de assinatura, consulte [Criar ou importar um certificado de assinatura de pacote](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing).
 
 - **SignTool.exe**  
     Dependendo do seu caminho de instalação do SDK, a **SignTool** é instalada no computador Windows 10 nos seguintes locais:
@@ -36,12 +36,12 @@ Para obter mais informações sobre assinatura de código e certificados em gera
 
 ## <a name="using-signtool"></a>Usando o SignTool
 
-**SignTool** pode ser usado para assinar arquivos, verificar assinaturas ou carimbos de data e hora, remover assinaturas e muito mais. Para a finalidade de assinar um pacote de aplicativos, destacaremos o comando **sign**. Para obter informações completas sobre o **SignTool**, consulte a página de referência do [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx). 
+**SignTool** pode ser usado para assinar arquivos, verificar assinaturas ou carimbos de data e hora, remover assinaturas e muito mais. Para a finalidade de assinar um pacote de aplicativos, destacaremos o comando **sign**. Para obter informações completas sobre o **SignTool**, consulte a página de referência do [SignTool](https://docs.microsoft.com/windows/desktop/SecCrypto/signtool). 
 
 ### <a name="determine-the-hash-algorithm"></a>Determinar o algoritmo de hash
 Ao usar o **SignTool** para assinar seu pacote ou lote de aplicativos, o algoritmo de hash usado em **SignTool** deve ser o mesmo algoritmo usado para empacotar seu aplicativo. Por exemplo, se você usou o **MakeAppx.exe** para criar o pacote de aplicativos com as configurações padrão, você deve especificar SHA256 ao usar o **SignTool** já que é o algoritmo padrão usado pelo **MakeAppx.exe**.
 
-Para descobrir qual algoritmo de hash foi usado durante o empacotamento de seu aplicativo, extraia o conteúdo do pacote de aplicativos e inspecione o arquivo AppxBlockMap.xml. Para saber como descompactar/extrair um pacote de aplicativos, consulte [Extrair arquivos de um pacote ou lote](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool#extract-files-from-a-package-or-bundle). O método de hash está no elemento BlockMap e tem este formato:
+Para descobrir qual algoritmo de hash foi usado durante o empacotamento de seu aplicativo, extraia o conteúdo do pacote de aplicativos e inspecione o arquivo AppxBlockMap.xml. Para saber como descompactar/extrair um pacote de aplicativos, consulte [Extrair arquivos de um pacote ou lote](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). O método de hash está no elemento BlockMap e tem este formato:
 
 ```xml
 <BlockMap xmlns="http://schemas.microsoft.com/appx/2010/blockmap" 
@@ -106,7 +106,7 @@ SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.msix
 
 Observe que alguns certificados não usam uma senha. Se o certificado não tiver uma senha, omita "/p &lt;Sua Senha&gt;" dos comandos de amostra.
 
-Depois que o pacote de aplicativos é assinado com um certificado válido, você está pronto para carregar o pacote para a Loja. Para obter mais orientações sobre como carregar e enviar aplicativos para a Loja, consulte [Envios de aplicativos](https://msdn.microsoft.com/windows/uwp/publish/app-submissions).
+Depois que o pacote de aplicativos é assinado com um certificado válido, você está pronto para carregar o pacote para a Loja. Para obter mais orientações sobre como carregar e enviar aplicativos para a Loja, consulte [Envios de aplicativos](https://docs.microsoft.com/windows/uwp/publish/app-submissions).
 
 ## <a name="common-errors-and-troubleshooting"></a>Erros comuns e solução de problemas
 Os tipos mais comuns de erros ao usar o **SignTool** são internos e normalmente se parecem com isso:
@@ -137,4 +137,4 @@ O erro interno 0x8007000B geralmente corresponde a um destes valores:
 |--------------|--------------------------|----------------|
 | 150          | error 0x8007000B: O nome do Editor de manifesto de aplicativo (CN = Contoso) deve corresponder ao nome da entidade do certificado de autenticação (CN = Contoso, C = US). | O nome do editor de manifesto de aplicativo deve corresponder exatamente ao nome do assunto após a assinatura.               |
 | 151          | error 0x8007000B: O método de hash de assinatura especificado (SHA512) deve corresponder o método de hash usado no mapa de bloco de pacote de aplicativo (SHA256).     | O hashAlgorithm especificado no parâmetro /fd está incorreto. Execute o **SignTool** usando o hashAlgorithm que corresponda ao mapa de blocos do pacote de aplicativos (usado para criar o pacote de aplicativos)  |
-| 152          | error 0x8007000B: O conteúdo do pacote de aplicativo deve validar em relação ao seu mapa de bloco.                                                           | O pacote de aplicativos está corrompido e precisa ser recompilado para gerar um novo mapa de blocos. Para saber mais sobre como criar um pacote de aplicativos, consulte [Criar um pacote de aplicativos com a ferramenta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). |
+| 152          | error 0x8007000B: O conteúdo do pacote de aplicativo deve validar em relação ao seu mapa de bloco.                                                           | O pacote de aplicativos está corrompido e precisa ser recompilado para gerar um novo mapa de blocos. Para saber mais sobre como criar um pacote de aplicativos, consulte [Criar um pacote de aplicativos com a ferramenta MakeAppx.exe](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). |

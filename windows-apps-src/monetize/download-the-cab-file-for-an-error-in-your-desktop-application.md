@@ -5,16 +5,16 @@ ms.date: 03/06/2018
 ms.topic: article
 keywords: windows 10, uwp, API de análise da Microsoft Store, baixar CAB, aplicativo da área de trabalho
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e3535f18b8127ea18bca234cdcc9b695e89ebfd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7a0c6203b3a55ecf8ca5e9473a41a7e6fb233000
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607781"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371291"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-desktop-application"></a>Baixar o arquivo CAB de um erro em seu aplicativo da área de trabalho
 
-Use este método na da API de análise da Microsoft Store para baixar o arquivo CAB associado a um determinado erro para um aplicativo da área de trabalho que você adicionou ao [programa do aplicativo de área de trabalho do Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Este método pode apenas baixar o arquivo CAB de um erro de app que ocorreu nos últimos 30 dias. Downloads de arquivos CAB também estão disponíveis na [relatório de integridade](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicativos da área de trabalho no Partner Center.
+Use este método na da API de análise da Microsoft Store para baixar o arquivo CAB associado a um determinado erro para um aplicativo da área de trabalho que você adicionou ao [programa do aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Este método pode apenas baixar o arquivo CAB de um erro de app que ocorreu nos últimos 30 dias. Downloads de arquivos CAB também estão disponíveis na [relatório de integridade](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) para aplicativos da área de trabalho no Partner Center.
 
 Antes de usar esse método, primeiro você deverá usar o método [obter detalhes de um erro em seu aplicativo da área de trabalho](get-details-for-an-error-in-your-desktop-application.md) para recuperar o hash de ID do arquivo CAB que deseja baixar.
 
@@ -34,7 +34,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Método | URI da solicitação                                                          |
 |--------|----------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/cabdownload``` |
+| OBTER    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/cabdownload``` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -48,7 +48,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  |
 |---------------|--------|---------------|------|
-| applicationId | cadeia de caracteres | A ID do produto do aplicativo da área de trabalho para o qual você deseja baixar um arquivo CAB. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [para seu aplicativo da área de trabalho de relatório de análise do Partner Center](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **relatório de integridade**) e recupere a ID do produto da URL. |  Sim  |
+| applicationId | cadeia de caracteres | A ID do produto do aplicativo da área de trabalho para o qual você deseja baixar um arquivo CAB. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [para seu aplicativo da área de trabalho de relatório de análise do Partner Center](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) (como o **relatório de integridade**) e recupere a ID do produto da URL. |  Sim  |
 | cabIdHash | cadeia de caracteres | O hash da ID exclusiva do arquivo CAB que você deseja baixar. Para obter esse valor, use o método [obter detalhes de um erro em seu aplicativo da área de trabalho](get-details-for-an-error-in-your-desktop-application.md) para recuperar os detalhes de um erro específico em seu aplicativo, e use o valor de **cabIdHash** no corpo da resposta desse método. |  Sim  |
 
 

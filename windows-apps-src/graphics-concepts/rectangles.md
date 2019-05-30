@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ce91b47d2846f945a0e4a15f705491ab22e9dea
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: 9d6a3b1eb64c89f231d0334a3cbe8e58d11c58ae
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291664"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370950"
 ---
 # <a name="rectangles"></a>Retângulos
 
@@ -21,7 +21,7 @@ Em toda a programação do Direct3D e do Windows, os objetos na tela são referi
 ## <a name="span-idboundingrectanglesspanspan-idboundingrectanglesspanspan-idboundingrectanglesspanbounding-rectangles"></a><span id="Bounding_rectangles"></span><span id="bounding_rectangles"></span><span id="BOUNDING_RECTANGLES"></span>Retângulos delimitadores
 
 
-A maioria dos apps usam a estrutura [**RECT**](https://msdn.microsoft.com/library/windows/desktop/dd162897) (ou um alias typedef para ela) para transmitir informações sobre um retângulo delimitador para usar ao transferir para a tela ou ao executar a detecção de visitas. No C++, a estrutura **RECT** tem a seguinte definição.
+A maioria dos apps usam a estrutura [**RECT**](https://docs.microsoft.com/previous-versions//dd162897(v=vs.85)) (ou um alias typedef para ela) para transmitir informações sobre um retângulo delimitador para usar ao transferir para a tela ou ao executar a detecção de visitas. No C++, a estrutura **RECT** tem a seguinte definição.
 
 ```cpp
 typedef struct tagRECT { 

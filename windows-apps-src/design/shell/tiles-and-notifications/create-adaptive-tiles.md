@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 524cc15dbb7a3264d8476210f727508ea41ace87
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 08a7ca0b08a9df57d3c496f33f963fcd9d0ebfe2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639601"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367276"
 ---
 # <a name="create-adaptive-tiles"></a>Criar blocos adaptáveis
 
 Modelos de bloco adaptável são um novo recurso no Windows 10, permitindo que você crie seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapta a diferentes densidades de tela. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo da Plataforma Universal do Windows (UWP). Para obter a lista completa de elementos e atributos adaptáveis, consulte o [Esquema de blocos adaptáveis](../tiles-and-notifications/tile-schema.md).
 
-(Se você desejar, você ainda poderá usar os modelos predefinidos do [catálogo de modelos do Windows 8 lado a lado](https://msdn.microsoft.com/library/windows/apps/hh761491) durante a criação de notificações para o Windows 10.)
+(Se você desejar, você ainda poderá usar os modelos predefinidos do [catálogo de modelos do Windows 8 lado a lado](https://docs.microsoft.com/previous-versions/windows/apps/hh761491(v=win.10)) durante a criação de notificações para o Windows 10.)
 
 
 ## <a name="getting-started"></a>Introdução
@@ -284,7 +284,7 @@ Se você não especificar a identidade visual no conteúdo da notificação, as 
 
  
 
-## <a name="display-name"></a>Nome de exibição
+## <a name="display-name"></a>Display name
 
 
 Você pode substituir o nome de exibição de uma notificação digitando a cadeia de caracteres de texto de sua escolha com o atributo **displayName**. Assim como na identidade visual, você pode especificar isso no elemento [TileVisual](../tiles-and-notifications/tile-schema.md#tilevisual), que afeta todo o conteúdo da notificação, ou no elemento [TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding), que afeta somente blocos individuais.
@@ -335,7 +335,7 @@ TileContent content = new TileContent()
 
 ![nome de exibição de blocos adaptáveis](images/adaptive-tiles-displayname.png)
 
-## <a name="text"></a>Texto
+## <a name="text"></a>Text
 
 
 O elemento [AdaptiveText](../tiles-and-notifications/tile-schema.md#adaptivetext) é usado para exibir texto. Você pode usar dicas para modificar a aparência do texto.
@@ -414,7 +414,7 @@ new AdaptiveText()
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
-| &lt;texto de dica-style = "\*" /&gt; | Altura da fonte               | Espessura da fonte |
+| &lt;text hint-style="\*" /&gt; | Altura da fonte               | Espessura da fonte |
 | caption                        | 12 pixels efetivos (epx) | Regular     |
 | body                           | 15 epx                    | Regular     |
 | base                           | 15 epx                    | Semibold    |

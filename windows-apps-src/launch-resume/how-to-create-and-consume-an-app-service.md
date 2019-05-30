@@ -6,12 +6,12 @@ keywords: um aplicativo para comunicação, comunicação entre processos, IPC, 
 ms.date: 01/16/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 96ecad8494ad82dc4927b3675ad322f07a8ca7f3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 21e1b409406cf03d83ff10b04d96d7ff9f0413dd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643571"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370741"
 ---
 # <a name="create-and-consume-an-app-service"></a>Criar e consumir um serviço de app
 
@@ -27,7 +27,7 @@ Nestas instruções, criaremos tudo em uma única solução por questão de simp
 
 1. No Visual Studio 2015 ou posterior, crie um novo projeto de aplicativo UWP e denomine **AppServiceProvider**.
     1. Selecione **arquivo > Novo > projeto...** 
-    2. No **novo projeto** caixa de diálogo, selecione **instalado > Visual C# > aplicativo em branco (Universal Windows)**. Esse será o aplicativo que disponibilizará o serviço de aplicativo para outros aplicativos UWP.
+    2. No **novo projeto** caixa de diálogo, selecione **instalado > Visual C# > aplicativo em branco (Universal Windows)** . Esse será o aplicativo que disponibilizará o serviço de aplicativo para outros aplicativos UWP.
     3. Nomeie o projeto **AppServiceProvider**, escolha um local para ele e clique em **Okey**.
 
 2. Quando solicitado a selecionar um **alvo** e **versão mínima** para o projeto, selecione pelo menos **10.0.14393**. Se você quiser usar o novo **SupportsMultipleInstances** atributo, você deve estar usando o Visual Studio 2017 e destino **10.0.15063** (**atualização do Windows 10 para criadores**) ou superior.
@@ -40,7 +40,7 @@ No **AppServiceProvider** projeto, abra o **Package. appxmanifest** em um editor
 
 1. Clique com botão direito no **Gerenciador de soluções**. 
 2. Selecione **abrir com**. 
-3. Selecione **Editor de XML (texto)**. 
+3. Selecione **Editor de XML (texto)** . 
 
 Adicione o seguinte `AppService` extensão entre o `<Application>` elemento. Este exemplo anuncia o serviço `com.microsoft.inventory` e é o que identifica esse aplicativo como um provedor de serviços de aplicativo. O serviço real será implementado como uma tarefa em segundo plano. O projeto do serviço de aplicativo expõe o serviço a outros aplicativos. Recomendamos usar um estilo de nome de domínio reverso para o nome do serviço.
 
@@ -75,7 +75,7 @@ O `SupportsMultipleInstances` atributo indica que cada vez que o serviço de apl
 
 ## <a name="create-the-app-service"></a>Criar o serviço de aplicativo
 
-1.  Um serviço de aplicativo pode ser implementado como uma tarefa em segundo plano. Isso permite que um aplicativo em primeiro plano invoque um serviço de aplicativo em outro aplicativo. Para criar um serviço de aplicativo como uma tarefa em segundo plano, adicione um novo projeto de componente de tempo de execução do Windows para a solução (**arquivo &gt; Add &gt; novo projeto**) denominada **MyAppService**. No **adicionar novo projeto** diálogo caixa, escolha **instalado > Visual C# > componente de tempo de execução do Windows (Windows Universal)**.
+1.  Um serviço de aplicativo pode ser implementado como uma tarefa em segundo plano. Isso permite que um aplicativo em primeiro plano invoque um serviço de aplicativo em outro aplicativo. Para criar um serviço de aplicativo como uma tarefa em segundo plano, adicione um novo projeto de componente de tempo de execução do Windows para a solução (**arquivo &gt; Add &gt; novo projeto**) denominada **MyAppService**. No **adicionar novo projeto** diálogo caixa, escolha **instalado > Visual C# > componente de tempo de execução do Windows (Windows Universal)** .
 2.  No **AppServiceProvider** do projeto, adicione uma referência de projeto a projeto para o novo **MyAppService** projeto (no **Gerenciador de soluções**, clique com botão direito no  **AppServiceProvider** projeto > **Add** > **referência** > **projetos**  >   **Solução**, selecione **MyAppService** > **Okey**). Esta etapa é fundamental porque, se você não adicionar a referência, o serviço de aplicativo não se conectará em tempo de execução.
 3.  No **MyAppService** do projeto, adicione o seguinte **usando** instruções na parte superior do **Class1.cs**:
     ```cs
@@ -133,7 +133,7 @@ O `SupportsMultipleInstances` atributo indica que cada vez que o serviço de apl
     * Se o chamador estiver em primeiro plano, o tempo de vida do serviço de aplicativo é o mesmo que o chamador.
     * Se o chamador estiver no plano de fundo, o serviço de aplicativo obtém 30 segundos para ser executado. Um adiamento fornece 5 segundos adicionais, uma vez.
 
-    **OnTaskCanceled** é chamado quando a tarefa é cancelada. A tarefa é cancelada quando o aplicativo cliente descarta o [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/dn921704), o aplicativo cliente está suspenso, o sistema operacional for desligado ou entra em suspensão ou o sistema operacional fica sem recursos para executar a tarefa.
+    **OnTaskCanceled** é chamado quando a tarefa é cancelada. A tarefa é cancelada quando o aplicativo cliente descarta o [AppServiceConnection](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService.AppServiceConnection), o aplicativo cliente está suspenso, o sistema operacional for desligado ou entra em suspensão ou o sistema operacional fica sem recursos para executar a tarefa.
 
 ## <a name="write-the-code-for-the-app-service"></a>Escrever o código para o serviço de aplicativo
 
@@ -202,15 +202,15 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 }
 ```
 
-Observe que **OnRequestReceived** é **async** porque podemos fazer com que um método de awaitable chamar [SendResponseAsync](https://msdn.microsoft.com/library/windows/apps/dn921722) neste exemplo.
+Observe que **OnRequestReceived** é **async** porque podemos fazer com que um método de awaitable chamar [SendResponseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appservicerequest.sendresponseasync) neste exemplo.
 
-Um adiamento é necessário para que o serviço pode usar **async** métodos na **OnRequestReceived** manipulador. Isso garante que a chamada para **OnRequestReceived** não seja concluída até que o processamento da mensagem seja concluído.  [SendResponseAsync](https://msdn.microsoft.com/library/windows/apps/dn921722) envia o resultado ao chamador. **SendResponseAsync** não sinaliza a conclusão da chamada. É a conclusão do adiamento que sinalize ao [SendMessageAsync](https://msdn.microsoft.com/library/windows/apps/dn921712) que **OnRequestReceived** foi concluída. A chamada para **SendResponseAsync** é encapsulado em um bloco try/finally, porque você deve concluir o mesmo se adiamento **SendResponseAsync** gera uma exceção.
+Um adiamento é necessário para que o serviço pode usar **async** métodos na **OnRequestReceived** manipulador. Isso garante que a chamada para **OnRequestReceived** não seja concluída até que o processamento da mensagem seja concluído.  [SendResponseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appservicerequest.sendresponseasync) envia o resultado ao chamador. **SendResponseAsync** não sinaliza a conclusão da chamada. É a conclusão do adiamento que sinalize ao [SendMessageAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appserviceconnection.sendmessageasync) que **OnRequestReceived** foi concluída. A chamada para **SendResponseAsync** é encapsulado em um bloco try/finally, porque você deve concluir o mesmo se adiamento **SendResponseAsync** gera uma exceção.
 
-Uso de serviços de aplicativos [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131) objetos para trocar informações. O tamanho dos dados que você pode passar é limitado apenas pelos recursos do sistema. Não há chaves predefinidas para uso em **ValueSet**. Você deve determinar quais valores de chave serão usados para definir o protocolo do serviço de aplicativo. O chamador deve ser escrito considerando esse protocolo. Neste exemplo, escolhemos uma chave chamada `Command` que contém um valor que indica se desejamos que o serviço de aplicativo forneça o nome do item de estoque ou seu preço. O índice do nome do estoque é armazenado na chave `ID`. O valor retornado é armazenado na chave `Result`.
+Uso de serviços de aplicativos [ValueSet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet) objetos para trocar informações. O tamanho dos dados que você pode passar é limitado apenas pelos recursos do sistema. Não há chaves predefinidas para uso em **ValueSet**. Você deve determinar quais valores de chave serão usados para definir o protocolo do serviço de aplicativo. O chamador deve ser escrito considerando esse protocolo. Neste exemplo, escolhemos uma chave chamada `Command` que contém um valor que indica se desejamos que o serviço de aplicativo forneça o nome do item de estoque ou seu preço. O índice do nome do estoque é armazenado na chave `ID`. O valor retornado é armazenado na chave `Result`.
 
-Uma [AppServiceClosedStatus](https://msdn.microsoft.com/library/windows/apps/dn921703) enum é retornado ao chamador para indicar se a chamada para o serviço de aplicativo foi bem-sucedida ou falhou. Um exemplo de como a chamada para o serviço de aplicativo pode falhar é se o sistema operacional anular o ponto de extremidade de serviço porque os recursos foram excedidos. Você pode retornar informações de erro adicionais por meio de [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131). Neste exemplo, usamos uma chave chamada `Status` para retornar informações de erro mais detalhadas para o chamador.
+Uma [AppServiceClosedStatus](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService.AppServiceClosedStatus) enum é retornado ao chamador para indicar se a chamada para o serviço de aplicativo foi bem-sucedida ou falhou. Um exemplo de como a chamada para o serviço de aplicativo pode falhar é se o sistema operacional anular o ponto de extremidade de serviço porque os recursos foram excedidos. Você pode retornar informações de erro adicionais por meio de [ValueSet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet). Neste exemplo, usamos uma chave chamada `Status` para retornar informações de erro mais detalhadas para o chamador.
 
-A chamada para [SendResponseAsync](https://msdn.microsoft.com/library/windows/apps/dn921722) retorna o [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131) ao chamador.
+A chamada para [SendResponseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appservicerequest.sendresponseasync) retorna o [ValueSet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet) ao chamador.
 
 ## <a name="deploy-the-service-app-and-get-the-package-family-name"></a>Implantar o aplicativo de serviço e obter o nome da família de pacotes
 
@@ -302,9 +302,9 @@ Você também será necessário o nome de família do pacote do provedor de serv
 
     O código primeiro estabelece uma conexão com o serviço de aplicativo. A conexão permanecerá aberta até que você descarte `this.inventoryService`. O nome do serviço de aplicativo deve corresponder a `AppService` do elemento `Name` atributo que você adicionou à **AppServiceProvider** do projeto **Package. appxmanifest** arquivo. Neste exemplo, é `<uap3:AppService Name="com.microsoft.inventory"/>`.
 
-    Um [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131) denominado `message` é criada para especificar o comando que desejamos enviar para o serviço de aplicativo. O serviço de aplicativo de exemplo espera que um comando indique qual das duas ações deve ser tomada. Podemos obter o índice da caixa de texto no aplicativo cliente e, em seguida, chamar o serviço com o `Item` comando para obter a descrição do item. Em seguida, fazemos a chamada com o comando `Price` para obter o preço do item. O texto do botão é definido como o resultado.
+    Um [ValueSet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet) denominado `message` é criada para especificar o comando que desejamos enviar para o serviço de aplicativo. O serviço de aplicativo de exemplo espera que um comando indique qual das duas ações deve ser tomada. Podemos obter o índice da caixa de texto no aplicativo cliente e, em seguida, chamar o serviço com o `Item` comando para obter a descrição do item. Em seguida, fazemos a chamada com o comando `Price` para obter o preço do item. O texto do botão é definido como o resultado.
 
-    Porque [AppServiceResponseStatus](https://msdn.microsoft.com/library/windows/apps/dn921724) só indica se o sistema operacional foi capaz de se conectar a chamada para o serviço de aplicativo, verificamos a `Status` chave no [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131) que recebemos do aplicativo serviço para garantir que tenha sido capaz de atender à solicitação.
+    Porque [AppServiceResponseStatus](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService.AppServiceResponseStatus) só indica se o sistema operacional foi capaz de se conectar a chamada para o serviço de aplicativo, verificamos a `Status` chave no [ValueSet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet) que recebemos do aplicativo serviço para garantir que tenha sido capaz de atender à solicitação.
 
 6. Defina a **ClientApp** projeto como o projeto de inicialização (com o botão direito no **Gerenciador de soluções** > **definir como projeto de inicialização**) e executar a solução. Insira o número 1 na caixa de texto e clique no botão. Você deve obter "cadeira: Preço = 88.99" resposta do serviço.
 
@@ -329,7 +329,7 @@ Se a chamada de serviço de aplicativo falhar, verifique o seguinte na **ClientA
 
 1.  Siga as instruções na etapa anterior para depurar o cliente que chama o serviço de aplicativo.
 2.  Inicie **ClientApp** no menu Iniciar.
-3.  Anexar o depurador para o **ClientApp.exe** processo (não o **ApplicationFrameHost.exe** processo). (No Visual Studio, escolha **Depurar &gt; Anexar ao Processo...**.)
+3.  Anexar o depurador para o **ClientApp.exe** processo (não o **ApplicationFrameHost.exe** processo). (No Visual Studio, escolha **Depurar &gt; Anexar ao Processo...** .)
 4.  No **ClientApp** do projeto, defina um ponto de interrupção na **botão\_clique**.
 5.  Os pontos de interrupção no cliente e o serviço de aplicativo agora serão atingidos quando você insere o número 1, na caixa de texto de **ClientApp** e clique no botão.
 
@@ -359,7 +359,7 @@ Este exemplo fornece uma introdução para criar um serviço de aplicativo que s
 * Adicione a `windows.appService` extensão para o provedor de serviço de aplicativo **Package. appxmanifest** arquivo.
 * Obtenha o nome de família do pacote do provedor de serviços de aplicativo para que podemos nos conectar a ele do aplicativo cliente.
 * Adicione uma referência de projeto a projeto do projeto de provedor de serviço de aplicativo ao projeto de serviço de aplicativo.
-* Use [Windows.ApplicationModel.AppService.AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/dn921704) para chamar o serviço.
+* Use [Windows.ApplicationModel.AppService.AppServiceConnection](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService.AppServiceConnection) para chamar o serviço.
 
 ## <a name="full-code-for-myappservice"></a>Código completo para MyAppService
 

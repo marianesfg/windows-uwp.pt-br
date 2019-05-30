@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: af5ffe0dd72f0c3aae21a2dc522b469358626bab
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0c71dfc05bf2f283652087620848396b731871cd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603451"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371960"
 ---
 # <a name="create-a-package-flight"></a>Criar um pacote de pré-lançamento
 
@@ -33,7 +33,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights``` |
+| POSTAR    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights``` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -43,11 +43,11 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 | Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
 
-### <a name="request-parameters"></a>Parâmetros solicitados
+### <a name="request-parameters"></a>Parâmetros de solicitação
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um pacote de pré-lançamento. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um pacote de pré-lançamento. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -57,8 +57,8 @@ O corpo da solicitação tem os parâmetros a seguir.
 |  Parâmetro  |  Tipo  |  Descrição  |  Obrigatório  |
 |------|------|------|------|
 |  friendlyName  |  cadeia de caracteres  |  O nome do pacote de pré-lançamento, conforme especificado pelo desenvolvedor.  |  Não  |
-|  groupIds  |  matriz  |  Uma matriz de cadeias de caracteres que contêm as IDs dos grupos de versão de pré-lançamento que estão associados ao pacote de pré-lançamento. Para saber mais sobre grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |  Não  |
-|  rankHigherThan  |  cadeia de caracteres  |  O nome amigável do pacote de pré-lançamento que ficou imediatamente abaixo do pacote de pré-lançamento atual. Se você não definir este parâmetro, o novo pacote de pré-lançamento terá a classificação mais alta de todos os pacotes de pré-lançamento. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).    |  Não  |
+|  groupIds  |  array  |  Uma matriz de cadeias de caracteres que contêm as IDs dos grupos de versão de pré-lançamento que estão associados ao pacote de pré-lançamento. Para saber mais sobre grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://docs.microsoft.com/windows/uwp/publish/package-flights).  |  Não  |
+|  rankHigherThan  |  cadeia de caracteres  |  O nome amigável do pacote de pré-lançamento que ficou imediatamente abaixo do pacote de pré-lançamento atual. Se você não definir este parâmetro, o novo pacote de pré-lançamento terá a classificação mais alta de todos os pacotes de pré-lançamento. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://docs.microsoft.com/windows/uwp/publish/package-flights).    |  Não  |
 
 
 ### <a name="request-example"></a>Exemplo de solicitação
@@ -100,8 +100,8 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | flightId            | cadeia de caracteres  | A ID do pacote de pré-lançamento. Esse valor é fornecido pelo Centro de parceiros.  |
 | friendlyName           | cadeia de caracteres  | O nome do pacote de pré-lançamento, conforme especificado na solicitação.   |  
-| groupIds           | matriz  | Uma matriz de cadeias de caracteres que contêm os IDs dos grupos de versão de pré-lançamento que estão associados ao pacote de pré-lançamento, conforme especificado na solicitação. Para saber mais sobre grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
-| rankHigherThan           | cadeia de caracteres  | O nome amigável do pacote de pré-lançamento que foi classificado imediatamente abaixo do pacote de pré-lançamento atual, conforme especificado na solicitação. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
+| groupIds           | array  | Uma matriz de cadeias de caracteres que contêm os IDs dos grupos de versão de pré-lançamento que estão associados ao pacote de pré-lançamento, conforme especificado na solicitação. Para saber mais sobre grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://docs.microsoft.com/windows/uwp/publish/package-flights).   |
+| rankHigherThan           | cadeia de caracteres  | O nome amigável do pacote de pré-lançamento que foi classificado imediatamente abaixo do pacote de pré-lançamento atual, conforme especificado na solicitação. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://docs.microsoft.com/windows/uwp/publish/package-flights).  |
 
 
 ## <a name="error-codes"></a>Códigos de erro

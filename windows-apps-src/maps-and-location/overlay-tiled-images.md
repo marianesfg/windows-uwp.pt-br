@@ -6,12 +6,12 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: windows 10, uwp, mapa, local, imagens, sobreposição
 ms.localizationpriority: medium
-ms.openlocfilehash: c0c2f07a364980b67a34a519eb5dd8b4da1a18f0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e9b4d439958e6cfbf0845aaf5bcd31644ff39432
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57663081"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371680"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Sobrepor imagens lado a lado em um mapa
 
@@ -23,11 +23,11 @@ Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fo
 
 ## <a name="tiled-image-overview"></a>Visão geral da imagem lado a lado
 
-Serviços de mapa como Nokia Maps e Bing Mapas cortam mapas em blocos quadrados para recuperação e exibição rápidas. Esses blocos têm 256 pixels por 256 pixels de tamanho e são previamente renderizados em vários níveis de detalhes. Vários serviços de terceiros também oferecem dados baseados em mapa cortados em blocos. Use fontes de blocos para recuperar blocos de terceiros ou criar seus próprios blocos personalizados e os sobreponha no mapa exibido no [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+Serviços de mapa como Nokia Maps e Bing Mapas cortam mapas em blocos quadrados para recuperação e exibição rápidas. Esses blocos têm 256 pixels por 256 pixels de tamanho e são previamente renderizados em vários níveis de detalhes. Vários serviços de terceiros também oferecem dados baseados em mapa cortados em blocos. Use fontes de blocos para recuperar blocos de terceiros ou criar seus próprios blocos personalizados e os sobreponha no mapa exibido no [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl).
 
-**Importante**    quando você usa fontes de bloco, você não precisa escrever código para solicitar ou posicionar blocos individuais. O [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) solicita blocos conforme a necessidade. Cada solicitação especifica as coordenadas X e Y e o nível de zoom para o bloco individual. Você simplesmente especifica o formado do Uri ou do nome de arquivo para usar para recuperar os blocos na propriedade **UriFormatString**. Ou seja, você deve inserir parâmetros substituíveis no Uri ou nome de arquivo de base para indicar para onde passar as coordenadas X e Y e o nível de zoom para cada bloco.
+**Importante**    quando você usa fontes de bloco, você não precisa escrever código para solicitar ou posicionar blocos individuais. O [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) solicita blocos conforme a necessidade. Cada solicitação especifica as coordenadas X e Y e o nível de zoom para o bloco individual. Você simplesmente especifica o formado do Uri ou do nome de arquivo para usar para recuperar os blocos na propriedade **UriFormatString**. Ou seja, você deve inserir parâmetros substituíveis no Uri ou nome de arquivo de base para indicar para onde passar as coordenadas X e Y e o nível de zoom para cada bloco.
 
-Aqui está um exemplo da propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) para um [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) que mostra os parâmetros substituíveis para as coordenadas X e Y e o nível de zoom.
+Aqui está um exemplo da propriedade [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring) para um [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource) que mostra os parâmetros substituíveis para as coordenadas X e Y e o nível de zoom.
 
 ```syntax
 http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
@@ -39,39 +39,39 @@ Para obter mais informações sobre o sistema de blocos usado pelos serviços de
 
 ### <a name="overlay-tiles-from-a-tile-source"></a>Sobreponha blocos de uma fonte de blocos
 
-Sobreponha imagens lado a lado de uma fonte de blocos em um mapa usando a [**MapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn637141).
+Sobreponha imagens lado a lado de uma fonte de blocos em um mapa usando a [**MapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileDataSource).
 
-1.  Instancie uma das três classes de fontes de dados de blocos que herdam da [**MapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn637141).
+1.  Instancie uma das três classes de fontes de dados de blocos que herdam da [**MapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileDataSource).
 
-    -   [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)
-    -   [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994)
-    -   [**CustomMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636983)
+    -   [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource)
+    -   [**LocalMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource)
+    -   [**CustomMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource)
 
     Configure o **UriFormatString** para usar para solicitar os blocos inserindo parâmetros substituíveis no Uri ou no nome do arquivo de base.
 
-    O exemplo a seguir instancia um [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986). Este exemplo especifica o valor do [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) no construtor do **HttpMapTileDataSource**.
+    O exemplo a seguir instancia um [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource). Este exemplo especifica o valor do [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring) no construtor do **HttpMapTileDataSource**.
 
     ```csharp
         HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
           "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
     ```
 
-2.  Instancie e configure um [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144). Especifique o [**MapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn637141) que você configurou no passo anterior como o [**DataSource**](https://msdn.microsoft.com/library/windows/apps/dn637149) do **MapTileSource**.
+2.  Instancie e configure um [**MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource). Especifique o [**MapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileDataSource) que você configurou no passo anterior como o [**DataSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.datasource) do **MapTileSource**.
 
-    O exemplo a seguir especifica o [**DataSource**](https://msdn.microsoft.com/library/windows/apps/dn637149) no construtor do [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144).
+    O exemplo a seguir especifica o [**DataSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.datasource) no construtor do [**MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource).
 
     ```csharp
         MapTileSource tileSource = new MapTileSource(dataSource);
     ```
 
-    Você pode restringir as condições em que os blocos são exibidos usando propriedades do [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144).
+    Você pode restringir as condições em que os blocos são exibidos usando propriedades do [**MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource).
 
-    -   Exiba blocos somente em uma área geográfica específica fornecendo um valor para a propriedade [**Bounds**](https://msdn.microsoft.com/library/windows/apps/dn637147).
-    -   Exiba blocos somente em determinados níveis de detalhe fornecendo um valor para a propriedade [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171).
+    -   Exiba blocos somente em uma área geográfica específica fornecendo um valor para a propriedade [**Bounds**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.bounds).
+    -   Exiba blocos somente em determinados níveis de detalhe fornecendo um valor para a propriedade [**ZoomLevelRange**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.zoomlevelrange).
 
-    Opcionalmente, configure outras propriedades do [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144) que afetam o carregamento ou a exibição dos blocos, como [**Layer**](https://msdn.microsoft.com/library/windows/apps/dn637157), [**AllowOverstretch**](https://msdn.microsoft.com/library/windows/apps/dn637145), [**IsRetryEnabled**](https://msdn.microsoft.com/library/windows/apps/dn637153) e [**IsTransparencyEnabled**](https://msdn.microsoft.com/library/windows/apps/dn637155).
+    Opcionalmente, configure outras propriedades do [**MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource) que afetam o carregamento ou a exibição dos blocos, como [**Layer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.layer), [**AllowOverstretch**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.allowoverstretch), [**IsRetryEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.isretryenabled) e [**IsTransparencyEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.istransparencyenabled).
 
-3.  Adicione o [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144) para a coleção [**TileSources**](https://msdn.microsoft.com/library/windows/apps/dn637053) do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+3.  Adicione o [**MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource) para a coleção [**TileSources**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.tilesources) do [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl).
 
     ```csharp
          MapControl1.TileSources.Add(tileSource);
@@ -80,20 +80,20 @@ Sobreponha imagens lado a lado de uma fonte de blocos em um mapa usando a [**Map
 ## <a name="overlay-tiles-from-a-web-service"></a>Sobreponha blocos de um serviço Web
 
 
-Sobreponha imagens lado a lado recuperadas de um serviço Web usando o [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986).
+Sobreponha imagens lado a lado recuperadas de um serviço Web usando o [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource).
 
-1.  Instancie um [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986).
-2.  Especifique o formado do Uri que o serviço Web espera como o valor da propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992). Para criar esse valor, insira parâmetros substituíveis no Uri base. Por exemplo, no exemplo de código a seguir, o valor do **UriFormatString** é:
+1.  Instancie um [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource).
+2.  Especifique o formado do Uri que o serviço Web espera como o valor da propriedade [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring). Para criar esse valor, insira parâmetros substituíveis no Uri base. Por exemplo, no exemplo de código a seguir, o valor do **UriFormatString** é:
 
     ``` syntax
     http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
     ```
 
-    O serviço Web precisar oferecer suporte para um Uri que contenha os parâmetros substituíveis {x}, {y} e {zoomlevel}. A maioria dos serviços Web (por exemplo, Nokia, Bing e Google) oferece suporte a URIs nesse formato. Se o serviço Web exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#customuri) posteriormente neste tópico.
+    O serviço Web precisar oferecer suporte para um Uri que contenha os parâmetros substituíveis {x}, {y} e {zoomlevel}. A maioria dos serviços Web (por exemplo, Nokia, Bing e Google) oferece suporte a URIs nesse formato. Se o serviço Web exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.urirequested). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#customuri) posteriormente neste tópico.
 
 3.  Em seguida, siga as etapas restantes descritas anteriormente na seção [Visão geral da imagem lado a lado](#tileintro).
 
-O exemplo a seguir sobrepõe blocos de um serviço Web fictício em um mapa da América do Norte. O valor da [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) é especificado no construtor do [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986). Neste exemplo, os blocos são exibidos apenas nos limites geográficos especificados pela propriedade [**Bounds**](https://msdn.microsoft.com/library/windows/apps/dn637147) opcional.
+O exemplo a seguir sobrepõe blocos de um serviço Web fictício em um mapa da América do Norte. O valor da [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring) é especificado no construtor do [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource). Neste exemplo, os blocos são exibidos apenas nos limites geográficos especificados pela propriedade [**Bounds**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.bounds) opcional.
 
 ```csharp
 private void AddHttpMapTileSource()
@@ -167,16 +167,16 @@ void MainPage::AddHttpMapTileSource()
 ## <a name="overlay-tiles-from-local-storage"></a>Sobreponha blocos de um armazenamento local
 
 
-Sobreponha imagens lado a lado armazenadas como arquivos em armazenamento local usando o [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Tipicamente, você empacota e distribui esses arquivos com seu aplicativo.
+Sobreponha imagens lado a lado armazenadas como arquivos em armazenamento local usando o [**LocalMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource). Tipicamente, você empacota e distribui esses arquivos com seu aplicativo.
 
-1.  Instancie um [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994).
-2.  Especifique o formado dos nomes dos arquivos como o valor da propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998). Para criar esse valor, insira parâmetros substituíveis no nome de arquivo base. Por exemplo, no exemplo de código a seguir, o valor do [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) é:
+1.  Instancie um [**LocalMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource).
+2.  Especifique o formado dos nomes dos arquivos como o valor da propriedade [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.localmaptiledatasource.uriformatstring). Para criar esse valor, insira parâmetros substituíveis no nome de arquivo base. Por exemplo, no exemplo de código a seguir, o valor do [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring) é:
 
     ``` syntax
         Tile_{zoomlevel}_{x}_{y}.png
     ```
 
-    Se o formato dos nomes dos arquivos exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#customuri) posteriormente neste tópico.
+    Se o formato dos nomes dos arquivos exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.localmaptiledatasource.uriformatstring), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.localmaptiledatasource.urirequested). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#customuri) posteriormente neste tópico.
 
 3.  Em seguida, siga as etapas restantes descritas anteriormente na seção [Visão geral da imagem lado a lado](#tileintro).
 
@@ -185,15 +185,15 @@ Você pode usar os seguintes protocolos e locais para carregar blocos do armazen
 | Uri | Mais informações |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | ms-appx:/// | Aponta para a raiz da pasta de instalação do aplicativo. |
-|  | Esse é o local referenciado pela propriedade [Package.InstalledLocation](https://msdn.microsoft.com/library/windows/apps/br224681). |
+|  | Esse é o local referenciado pela propriedade [Package.InstalledLocation](https://docs.microsoft.com/uwp/api/windows.applicationmodel.package.installedlocation). |
 | ms-appdata:///local | Aponta para a raiz do armazenamento local do aplicativo. |
-|  | Este é o local referenciado pela propriedade [ApplicationData.LocalFolder](https://msdn.microsoft.com/library/windows/apps/br241621). |
+|  | Este é o local referenciado pela propriedade [ApplicationData.LocalFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder). |
 | ms-appdata:///temp | Aponta para a pasta temporária do aplicativo. |
-|  | Este é o local referenciado pela propriedade [ApplicationData.TemporaryFolder](https://msdn.microsoft.com/library/windows/apps/br241629). |
+|  | Este é o local referenciado pela propriedade [ApplicationData.TemporaryFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.temporaryfolder). |
 
  
 
-O exemplo a seguir carrega blocos que são armazenados como arquivos na pasta de instalação do aplicativo usando o protocolo `ms-appx:///`. O valor da [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) é especificado no construtor do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Neste exemplo, os blocos são exibidos apenas quando o nível de zoom do mapa está dentro da margem especificada pela propriedade [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171) opcional.
+O exemplo a seguir carrega blocos que são armazenados como arquivos na pasta de instalação do aplicativo usando o protocolo `ms-appx:///`. O valor da [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.localmaptiledatasource.uriformatstring) é especificado no construtor do [**LocalMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource). Neste exemplo, os blocos são exibidos apenas quando o nível de zoom do mapa está dentro da margem especificada pela propriedade [**ZoomLevelRange**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.zoomlevelrange) opcional.
 
 ```csharp
         void AddLocalMapTileSource()
@@ -219,10 +219,10 @@ O exemplo a seguir carrega blocos que são armazenados como arquivos na pasta de
 
 ## <a name="provide-a-custom-uri"></a>Forneça um URI personalizado
 
-Se os parâmetros substituíveis disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) do [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) ou a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994) não são suficientes para recuperar seus blocos, você deve criar um Uri personalizado. Crie e retorne um Uri personalizado fornecendo um manipulador personalizado para o evento **UriRequested**. O evento **UriRequested** é gerado para cada bloco individual.
+Se os parâmetros substituíveis disponíveis com a propriedade [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring) do [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource) ou a propriedade [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.localmaptiledatasource.uriformatstring) do [**LocalMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource) não são suficientes para recuperar seus blocos, você deve criar um Uri personalizado. Crie e retorne um Uri personalizado fornecendo um manipulador personalizado para o evento **UriRequested**. O evento **UriRequested** é gerado para cada bloco individual.
 
-1.  Em seu manipulador personalizado para o evento **UriRequested**, junte os argumentos personalizados exigidos com as propriedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn610743), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn610744) e [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn610745) do [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177) para criar o Uri personalizado.
-2.  Retorne o Uri personalizado na propriedade [**Uri**](https://msdn.microsoft.com/library/windows/apps/dn610748) do [**MapTileUriRequest**](https://msdn.microsoft.com/library/windows/apps/dn637173), que está contido na propriedade [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637179) do [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177).
+1.  Em seu manipulador personalizado para o evento **UriRequested**, junte os argumentos personalizados exigidos com as propriedades [**X**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequestedeventargs.x), [**Y**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequestedeventargs.y) e [**ZoomLevel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequestedeventargs.zoomlevel) do [**MapTileUriRequestedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs) para criar o Uri personalizado.
+2.  Retorne o Uri personalizado na propriedade [**Uri**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequest.uri) do [**MapTileUriRequest**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileUriRequest), que está contido na propriedade [**Request**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequestedeventargs.request) do [**MapTileUriRequestedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs).
 
 O exemplo a seguir mostra como fornecer um Uri personalizado criando um manipulador personalizado para o evento **UriRequested**. Ele também mostra como implementar o padrão de adiamento se você tiver que fazer algo assincronamente para criar o Uri personalizado.
 
@@ -264,14 +264,14 @@ using System.Threading.Tasks;
 
 ## <a name="overlay-tiles-from-a-custom-source"></a>Sobreponha blocos de uma fonte personalizada
 
-Sobreponha blocos personalizados usando o [**CustomMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636983). Crie blocos programaticamente na memória em tempo real ou escreva seu próprio código para carregar blocos existentes de outra fonte.
+Sobreponha blocos personalizados usando o [**CustomMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource). Crie blocos programaticamente na memória em tempo real ou escreva seu próprio código para carregar blocos existentes de outra fonte.
 
-Para criar ou carregar blocos personalizados. forneça um manipulador personalizado para o evento [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984). O evento **BitmapRequested** é gerado para cada bloco individual.
+Para criar ou carregar blocos personalizados. forneça um manipulador personalizado para o evento [**BitmapRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.custommaptiledatasource.bitmaprequested). O evento **BitmapRequested** é gerado para cada bloco individual.
 
-1.  Em seu manipulador personalizado para o evento [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984), junte os argumentos personalizados exigidos com as propriedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn637135), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637136) e [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637137) do [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132) para criar ou recuperar um bloco personalizado.
-2.  Retorne o bloco personalizado na propriedade [**PixelData**](https://msdn.microsoft.com/library/windows/apps/dn637140) do [**MapTileBitmapRequest**](https://msdn.microsoft.com/library/windows/apps/dn637128), que está contido na propriedade [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637134) do [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132). A propriedade **PixelData** é do tipo [**IRandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701664).
+1.  Em seu manipulador personalizado para o evento [**BitmapRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.custommaptiledatasource.bitmaprequested), junte os argumentos personalizados exigidos com as propriedades [**X**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.x), [**Y**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.y) e [**ZoomLevel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.zoomlevel) do [**MapTileBitmapRequestedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs) para criar ou recuperar um bloco personalizado.
+2.  Retorne o bloco personalizado na propriedade [**PixelData**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequest.pixeldata) do [**MapTileBitmapRequest**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequest), que está contido na propriedade [**Request**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.request) do [**MapTileBitmapRequestedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs). A propriedade **PixelData** é do tipo [**IRandomAccessStreamReference**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IRandomAccessStreamReference).
 
-O exemplo a seguir mostra como fornecer blocos personalizados criando um manipulador personalizado para o evento **BitmapRequested**. Este exemplo cria blocos vermelhos idênticos que são parcialmente opacos. O exemplo ignora as propriedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn637135), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637136) e [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637137) do [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132). Embora esse não seja um exemplo do mundo real, ele demonstra como você pode criar blocos personalizados na memória em tempo real. O exemplo também mostra como implementar o padrão de adiamento se você tiver de fazer algo assincronamente para criar os blocos personalizados.
+O exemplo a seguir mostra como fornecer blocos personalizados criando um manipulador personalizado para o evento **BitmapRequested**. Este exemplo cria blocos vermelhos idênticos que são parcialmente opacos. O exemplo ignora as propriedades [**X**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.x), [**Y**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.y) e [**ZoomLevel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.zoomlevel) do [**MapTileBitmapRequestedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs). Embora esse não seja um exemplo do mundo real, ele demonstra como você pode criar blocos personalizados na memória em tempo real. O exemplo também mostra como implementar o padrão de adiamento se você tiver de fazer algo assincronamente para criar os blocos personalizados.
 
 ```csharp
 using Windows.UI.Xaml.Controls.Maps;
@@ -415,13 +415,13 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessStream::get()
 
 Para substituir o mapa padrão inteiramente com blocos de terceiros ou personalizados:
 
--   Especifique [**MapTileLayer**](https://msdn.microsoft.com/library/windows/apps/dn637143).**BackgroundReplacement** como o valor da propriedade [**Layer**](https://msdn.microsoft.com/library/windows/apps/dn637157) do [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144).
--   Especifique [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127).**None** como o valor da propriedade [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+-   Especifique [**MapTileLayer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileLayer).**BackgroundReplacement** como o valor da propriedade [**Layer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.layer) do [**MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource).
+-   Especifique [**MapStyle**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapStyle).**None** como o valor da propriedade [**Style**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.style) do [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Diretrizes de design para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
 * [Vídeo da Build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Exemplo de aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)

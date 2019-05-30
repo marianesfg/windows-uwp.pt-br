@@ -6,12 +6,12 @@ ms.date: 08/21/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: b74cb2b23b5fbfc7487d18be0531ff26170cbe3f
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 48a19b2fc32733e13cb9a7b730bad7741307c328
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334504"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372804"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Envolver os clientes com o Microsoft Store Services SDK
 
@@ -31,7 +31,7 @@ Atualmente, o Microsoft Store Services SDK dá suporte aos seguintes cenários p
 |  [Execute testes no seu aplicativo UWP com um teste a / B](run-app-experiments-with-a-b-testing.md)    |  Execute testes A/B em seu aplicativo UWP (Plataforma Universal do Windows) para medir a eficácia de recursos em alguns clientes antes de liberar os recursos para todos. Depois de definir um experimento no Partner Center, use o [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) de classe para obter variações para seu experimento em seu aplicativo, use esses dados para modificar o comportamento do recurso que você está testando e, em seguida, use o [LogForVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation) método para enviar eventos de exibição e eventos de conversão ao Partner Center. Por fim, use o Centro de parceiros para exibir os resultados e gerenciar o experimento.  |
 |  [Inicie o Hub de comentários do aplicativo UWP](launch-feedback-hub-from-your-app.md)    |  Use a classe [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) em seu aplicativo UWP para direcionar os clientes do Windows 10 ao Hub de Feedback, onde eles podem enviar problemas, sugestões e aprovações. Em seguida, gerencie esses comentários em [Relatório de comentários](../publish/feedback-report.md) no Partner Center. |
 |  [Configurar seu aplicativo UWP para receber notificações de push do Partner Center](configure-your-app-to-receive-dev-center-notifications.md)    |  Use o [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) classe em seu aplicativo UWP para registrar seu aplicativo para receber notificações por push direcionadas que enviam para seus clientes usando o Partner Center.  |
-|   [Registrar eventos personalizados em seu aplicativo UWP para o relatório de uso no Partner Center](log-custom-events-for-dev-center.md)   |  Use o [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) classe em seu aplicativo UWP para registrar eventos personalizados que estão associados a seu aplicativo no Partner Center. Em seguida, examine o total de ocorrências para seus eventos personalizados na **eventos personalizados** seção o [relatório de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) no Partner Center.  |
+|   [Registrar eventos personalizados em seu aplicativo UWP para o relatório de uso no Partner Center](log-custom-events-for-dev-center.md)   |  Use o [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) classe em seu aplicativo UWP para registrar eventos personalizados que estão associados a seu aplicativo no Partner Center. Em seguida, examine o total de ocorrências para seus eventos personalizados na **eventos personalizados** seção o [relatório de uso](https://docs.microsoft.com/windows/uwp/publish/usage-report) no Partner Center.  |
 
 <span id="prerequisites" />
 
@@ -113,7 +113,7 @@ Para instalar as bibliotecas de SDK da Microsoft Store Services por meio do NuGe
 
 Depois de instalar o Microsoft Store Services SDK por meio do instalador MSI ou NuGet, siga estas instruções para consultar o assembly do SDK em seu projeto UWP.
 
-1. Abra o projeto no Visual Studio.
+1. Abra seu projeto no Visual Studio.
     > [!NOTE]
     > Se seu projeto for um aplicativo JavaScript que tem direcionamento **Any CPU**, atualize-o para usar uma saída de compilação de arquitetura específica (por exemplo, **x86**).
 

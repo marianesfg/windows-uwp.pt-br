@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, chave de autenticação de mapa, controle de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 620566036dc5aa9357d10e60ec92067ba0faf130
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8f62ecfab5bd8d09092e5264831327b8c63666bc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649551"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370508"
 ---
 # <a name="request-a-maps-authentication-key"></a>Solicitar uma chave de autenticação de mapas
 
 
 
 
-Seu [aplicativo Universal do Windows](https://msdn.microsoft.com/library/windows/apps/dn894631) deve ser autenticado para que possa usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este tópico descreve como solicitar uma chave de autenticação de mapas a partir da [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo.
+Seu [aplicativo Universal do Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) deve ser autenticado para que possa usar o [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este tópico descreve como solicitar uma chave de autenticação de mapas a partir da [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo.
 
 **Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe a amostra a seguir do [repositório Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
 
@@ -59,11 +59,11 @@ Para criar uma nova chave
 ## <a name="add-the-key-to-your-app"></a>Adicionar a chave ao aplicativo
 
 
-A chave de autenticação de mapa é obrigada a usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa ([**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)) no aplicativo Universal do Windows. Adicione-o ao controle de mapa e mapeie objetos de serviço, conforme aplicável.
+A chave de autenticação de mapa é obrigada a usar o [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) e os serviços de mapa ([**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps)) no aplicativo Universal do Windows. Adicione-o ao controle de mapa e mapeie objetos de serviço, conforme aplicável.
 
 ### <a name="to-add-the-key-to-a-map-control"></a>Para adicionar a chave a um controle de mapa
 
-Para autenticar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004), defina a propriedade [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036) como o valor da chave de autenticação. Você pode definir essa propriedade no código ou na marcação XAML, dependendo das suas preferências. Para obter mais informações sobre o uso de **MapControl**, consulte [Exibir mapas com modos de exibição 2D, 3D e Streetside](display-maps.md).
+Para autenticar o [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl), defina a propriedade [**MapServiceToken**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken) como o valor da chave de autenticação. Você pode definir essa propriedade no código ou na marcação XAML, dependendo das suas preferências. Para obter mais informações sobre o uso de **MapControl**, consulte [Exibir mapas com modos de exibição 2D, 3D e Streetside](display-maps.md).
 
 -   Este exemplo define **MapServiceToken** como o valor da chave de autenticação no código.
 
@@ -79,7 +79,7 @@ Para autenticar o [**MapControl**](https://msdn.microsoft.com/library/windows/ap
 
 ### <a name="to-add-the-key-to-map-services"></a>Para adicionar a chave a serviços de mapa
 
-Para usar serviços no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979), defina a propriedade [**ServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn636977) como o valor da chave de autenticação. Para obter mais informações sobre como usar serviços de mapa, consulte [Exibir rotas e trajetos](routes-and-directions.md) e [Executar geocodificação e geocodificação reversa](geocoding.md).
+Para usar serviços no namespace [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps), defina a propriedade [**ServiceToken**](https://docs.microsoft.com/uwp/api/windows.services.maps.mapservice.servicetoken) como o valor da chave de autenticação. Para obter mais informações sobre como usar serviços de mapa, consulte [Exibir rotas e trajetos](routes-and-directions.md) e [Executar geocodificação e geocodificação reversa](geocoding.md).
 
 -   Este exemplo define **ServiceToken** como o valor da chave de autenticação no código.
 
@@ -91,6 +91,6 @@ Para usar serviços no namespace [**Windows.Services.Maps**](https://msdn.micros
 
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Diretrizes de design para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
 * [Vídeo da Build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Exemplo de aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)

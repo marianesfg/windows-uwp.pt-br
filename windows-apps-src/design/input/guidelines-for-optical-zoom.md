@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fcbaa0a3db826ef971878acd6a553dd7a836508
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b63c9191489ecae54b17cb75b8aa1af32f09fcb8
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594961"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363595"
 ---
 # <a name="optical-zoom-and-resizing"></a>Zoom óptico e redimensionamento
 
@@ -21,7 +21,7 @@ ms.locfileid: "57594961"
 
 Este artigo descreve o zoom e o redimensionamento de elementos do Windows e fornece as diretrizes da experiência do usuário para o uso desses mecanismos de interação em seus aplicativos.
 
-> **APIs importantes**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [ **entrada (XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **APIs importantes**: [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [ **entrada (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
 
 O zoom óptico permite que os usuários ampliem o modo de exibição do conteúdo em uma área de conteúdo (isso é executado na própria área de conteúdo), enquanto o redimensionamento permite que alterem o tamanho relativo de um ou mais objetos sem alterar o modo de exibição da área de conteúdo (isso é executado em objetos na área de conteúdo).
 
@@ -33,7 +33,7 @@ Os diagramas a seguir demonstram as diferenças entre redimensionamento e zoom �
 
 ![juntar os dedos aumenta o zoom e afastar os dedos o diminui](images/areazoom.png)
 
-**Redimensionar**: Usuário seleciona um objeto dentro de uma área e redimensiona esse objeto.
+**Resize**: Usuário seleciona um objeto dentro de uma área e redimensiona esse objeto.
 
 ![juntar os dedos reduz um objeto e separá-los o aumenta](images/objectresize.png)
 
@@ -49,7 +49,7 @@ Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento o
 -   Se forem definidas restrições ou limites de tamanho máximo e mínimo, use o retorno visual para demonstrar quando o usuário atingiu ou excedeu esses limites.
 -   Use pontos de ajuste para influenciar o comportamento de zoom e de redimensionamento fornecendo pontos lógicos em que é necessário parar a manipulação e garantir que um subconjunto de conteúdo específico seja exibido no visor. Forneça pontos de ajuste para níveis de zoom comuns ou modos de exibição lógicos para que seja mais fácil para um usuário escolher esses níveis. Por exemplo, aplicativos de fotos podem fornecer um ponto de ajuste a 100% para o redimensionamento ou, no caso de aplicativos de mapas, os pontos de ajuste podem ser úteis para modos de exibição de cidade, estado e país.
 
-    Pontos de ajuste permitem que os usuários sejam imprecisos e ainda atinjam suas metas. Se estiver usando XAML, veja as propriedades dos pontos de ajuste do [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527). Para JavaScript e HTML, use [**-ms-content-zoom-snap-points**](https://msdn.microsoft.com/library/hh771895).
+    Pontos de ajuste permitem que os usuários sejam imprecisos e ainda atinjam suas metas. Se estiver usando XAML, veja as propriedades dos pontos de ajuste do [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer). Para JavaScript e HTML, use [ **-ms-content-zoom-snap-points**](https://msdn.microsoft.com/library/hh771895).
 
     Existem dois tipos de pontos de ajuste:
 

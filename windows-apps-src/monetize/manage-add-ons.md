@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, complementos, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 51c940fffde3c770f397999e566570410528a1e8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8e06f8e915466f116692c63df5c53c2a0f97447f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617821"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372490"
 ---
 # <a name="manage-add-ons"></a>Gerenciar complementos
 
@@ -34,17 +34,17 @@ Esses métodos só podem ser usados para obter, criar ou excluir os complementos
 </thead>
 <tbody>
 <tr>
-<td align="left">GET</td>
+<td align="left">OBTER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts</td>
 <td align="left"><a href="get-all-add-ons.md">Obter todos os complementos para seus aplicativos</a></td>
 </tr>
 <tr>
-<td align="left">GET</td>
+<td align="left">OBTER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}</td>
 <td align="left"><a href="get-an-add-on.md">Obter um complemento específico</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts</td>
 <td align="left"><a href="create-an-add-on.md">Criar um complemento</a></td>
 </tr>
@@ -101,7 +101,7 @@ Esse recurso tem os valores a seguir.
 |------------|--------|--------------|
 | applications      | matriz  | Uma matriz que contém um [recurso de aplicativo](#application-object) que representa o aplicativo ao qual esse complemento está associado. Somente um item é compatível nessa matriz.  |
 | id | cadeia de caracteres  | A ID da Loja do complemento. Esse valor é fornecido pela Loja. Uma ID da Loja de exemplo é 9NBLGGH4TNMP.  |
-| productId | cadeia de caracteres  | A ID do produto do complemento. Essa é a ID que foi fornecida pelo desenvolvedor quando o complemento foi criado. Para obter mais informações, consulte [Definir seu tipo de produto e a ID do produto](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id). |
+| productId | cadeia de caracteres  | A ID do produto do complemento. Essa é a ID que foi fornecida pelo desenvolvedor quando o complemento foi criado. Para obter mais informações, consulte [Definir seu tipo de produto e a ID do produto](https://docs.microsoft.com/windows/uwp/publish/set-your-iap-product-id). |
 | productType | cadeia de caracteres  | O tipo de produto do complemento. Há suporte para os seguintes valores: **Durável** e **consumível**.  |
 | lastPublishedInAppProductSubmission       | objeto | Um [recurso de envio](#submission-object) que fornece informações sobre o envio publicado mais recentemente para o complemento.         |
 | pendingInAppProductSubmission        | objeto  |  Um [recurso de envio](#submission-object) que fornece informações sobre o envio pendente atual para o complemento.  |   |
@@ -130,7 +130,7 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|-----------|
-| value            | objeto  |  Um objeto que contém os seguintes valores: <br/><br/> <ul><li>*id*. A ID da Loja do aplicativo. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</li><li>*resourceLocation*. Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do aplicativo.</li></ul>   |
+| value            | objeto  |  Um objeto que contém os seguintes valores: <br/><br/> <ul><li>*id*. A ID da Loja do aplicativo. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).</li><li>*resourceLocation*. Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do aplicativo.</li></ul>   |
 | totalCount   | int  | O número de objetos de aplicativo na matriz *applications* do corpo da resposta.                                                                                                                                                 |
 
 <span id="submission-object" />

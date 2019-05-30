@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 473b7ef9f4efacbbe78e1fdb5563695f8211bca8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c8130c6a8e4d8441fdf8ff60c702bd1ae30bae6e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606741"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372259"
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticação da Web
 
 
 
 
-Este artigo explica como conectar seu aplicativo da Plataforma Universal do Windows (UWP) a um provedor de identidade online que use protocolos de autenticação como OpenID ou OAuth, como Facebook, Twitter, Flickr, Instagram e assim por diante. O método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) envia uma solicitação ao provedor de identidade online e obtém um token de acesso que descreve os recursos do provedor aos quais o aplicativo tem acesso.
+Este artigo explica como conectar seu aplicativo da Plataforma Universal do Windows (UWP) a um provedor de identidade online que use protocolos de autenticação como OpenID ou OAuth, como Facebook, Twitter, Flickr, Instagram e assim por diante. O método [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) envia uma solicitação ao provedor de identidade online e obtém um token de acesso que descreve os recursos do provedor aos quais o aplicativo tem acesso.
 
 >[!NOTE]
 >Para obter uma amostra de código funcional completa, clone o [Repo WebAuthenticationBroker em GitHub](https://go.microsoft.com/fwlink/p/?LinkId=620622).
@@ -35,7 +35,7 @@ Você deve registrar o aplicativo junto ao provedor de identidade online ao qual
 
 O URI de solicitação é composto pelo endereço para onde você envia a solicitação de autenticação para o seu provedor de identidade online junto com outras informações necessárias, como ID ou chave secreta do aplicativo, um URI de redirecionamento para o qual o usuário é enviado após concluir a autenticação e o tipo de resposta esperado. Seu provedor deverá informar quais são os parâmetros necessários.
 
-O URI de solicitação é enviado como o parâmetro *requestUri* do método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066). Ele deve ser um endereço seguro (deve começar com `https://`)
+O URI de solicitação é enviado como o parâmetro *requestUri* do método [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync). Ele deve ser um endereço seguro (deve começar com `https://`)
 
 O exemplo a seguir mostra como criar o URI de solicitação.
 
@@ -50,7 +50,7 @@ System.Uri endURI = new System.Uri(endURL);
 ## <a name="connect-to-the-online-provider"></a>Conectar ao provedor online
 
 
-Chame o método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) para se conectar ao provedor de identidade online e obter um token de acesso. O método transmite o URI construído na etapa anterior como o parâmetro *requestUri* e um URI ao qual você deseja que o usuário seja redirecionado como o parâmetro *callbackUri*.
+Chame o método [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) para se conectar ao provedor de identidade online e obter um token de acesso. O método transmite o URI construído na etapa anterior como o parâmetro *requestUri* e um URI ao qual você deseja que o usuário seja redirecionado como o parâmetro *callbackUri*.
 
 ```cs
 string result;
@@ -87,14 +87,14 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->Além do [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066), o namespace [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) contém um método [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425). Não chame esse método. Ele foi projetado para aplicativos destinados ao Windows Phone 8.1 apenas e foi preterido a partir do Windows 10.
+>Além do [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync), o namespace [**Windows.Security.Authentication.Web**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web) contém um método [**AuthenticateAndContinue**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.WebAuthenticationBroker#methods). Não chame esse método. Ele foi projetado para aplicativos destinados ao Windows Phone 8.1 apenas e foi preterido a partir do Windows 10.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>Conectando-se com logon único (SSO)
 
 
-Por padrão, o agente de autenticação da Web não permite cookies persistentes. Por isso, mesmo se o usuário do aplicativo indicar que deseja permanecer conectado (por exemplo, marcando uma caixa de seleção na caixa de diálogo de login do provedor), ele terá que efetuar login cada vez que quiser acessar os recursos desse provedor. Para efetuar login com SSO, o provedor de identidade online deve ter o modo SSO habilitado para o agente de autenticação da Web e seu aplicativo deve chamar a sobrecarga de [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212068) que não transmite um parâmetro *callbackUri*. Isso permitirá que os cookies persistentes sejam armazenados pelo agente de autenticação da Web para que as chamadas de autenticação futuras do mesmo aplicativo não precisem de conexão repetida pelo usuário (o usuário é efetivamente "conectado" até o token de acesso expirar).
+Por padrão, o agente de autenticação da Web não permite cookies persistentes. Por isso, mesmo se o usuário do aplicativo indicar que deseja permanecer conectado (por exemplo, marcando uma caixa de seleção na caixa de diálogo de login do provedor), ele terá que efetuar login cada vez que quiser acessar os recursos desse provedor. Para efetuar login com SSO, o provedor de identidade online deve ter o modo SSO habilitado para o agente de autenticação da Web e seu aplicativo deve chamar a sobrecarga de [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) que não transmite um parâmetro *callbackUri*. Isso permitirá que os cookies persistentes sejam armazenados pelo agente de autenticação da Web para que as chamadas de autenticação futuras do mesmo aplicativo não precisem de conexão repetida pelo usuário (o usuário é efetivamente "conectado" até o token de acesso expirar).
 
-Para oferecer suporte ao modo SSO, o provedor online deve permitir que você registre um URI de redirecionamento na forma `ms-app://<appSID>`, onde `<appSID>` é a SID do aplicativo. Você pode localizar o SID do seu aplicativo na página do desenvolvedor de aplicativo para seu aplicativo ou chamando o método [**GetCurrentApplicationCallbackUri**](https://msdn.microsoft.com/library/windows/apps/br212069).
+Para oferecer suporte ao modo SSO, o provedor online deve permitir que você registre um URI de redirecionamento na forma `ms-app://<appSID>`, onde `<appSID>` é a SID do aplicativo. Você pode localizar o SID do seu aplicativo na página do desenvolvedor de aplicativo para seu aplicativo ou chamando o método [**GetCurrentApplicationCallbackUri**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.getcurrentapplicationcallbackuri).
 
 ```cs
 string result;
@@ -146,7 +146,7 @@ Geralmente é possível determinar o que não está funcionando usando logs oper
     -   Início de navegação: Logs quando o AuthHost é iniciado e contém informações sobre as URLs de início e término.
     -   ![ilustra os detalhes do início da navegação](images/wab-event-viewer-2.png)
     -   Navegação completa: Registra a conclusão do carregamento de uma página da web.
-    -   Marca meta: Logs quando uma marca meta é encontrada, incluindo os detalhes.
+    -   Meta Tag: Logs quando uma marca meta é encontrada, incluindo os detalhes.
     -   Encerrar a navegação: Navegação encerrada pelo usuário.
     -   Erro de navegação: AuthHost encontra um erro de navegação em uma URL incluindo HttpStatusCode.
     -   Fim de navegação: Encerrando a URL é encontrado.

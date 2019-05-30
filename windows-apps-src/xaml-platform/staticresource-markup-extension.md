@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f8c723dee8e943351d268ac678c8acc77efcbf4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: abce9127b44249c3f021858b68784de79a18b197
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57659551"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371129"
 ---
 # <a name="staticresource-markup-extension"></a>Extensão de marcação {StaticResource}
 
 
-Fornece um valor para qualquer atributo XAML analisando uma referência a um recurso já definido. Recursos são definidos em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), e o uso de **StaticResource** faz referência à chave desse recurso no **ResourceDictionary**.
+Fornece um valor para qualquer atributo XAML analisando uma referência a um recurso já definido. Recursos são definidos em um [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary), e o uso de **StaticResource** faz referência à chave desse recurso no **ResourceDictionary**.
 
 ## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
@@ -28,7 +28,7 @@ Fornece um valor para qualquer atributo XAML analisando uma referência a um rec
 
 | Termo | Descrição |
 |------|-------------|
-| key | A chave para o recurso solicitado. Essa chave é inicialmente atribuída pelo [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794). Uma chave de recurso pode ser qualquer cadeia de caracteres definida na gramática de XamlName. |
+| key | A chave para o recurso solicitado. Essa chave é inicialmente atribuída pelo [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary). Uma chave de recurso pode ser qualquer cadeia de caracteres definida na gramática de XamlName. |
 
 ## <a name="remarks"></a>Comentários
 
@@ -36,13 +36,13 @@ Fornece um valor para qualquer atributo XAML analisando uma referência a um rec
 
 **StaticResource** obtém um argumento, que especifica a chave para o recurso solicitado. Uma chave de recurso sempre é uma cadeia de caracteres no XAML de Tempo de Execução do Windows. Para obter mais informações sobre como a chave de recurso é especificada inicialmente, consulte [atributo x:Key](x-key-attribute.md).
 
-As regras pelas quais **StaticResource** é resolvido para um item em um dicionário de recursos não estão descritas neste tópico. Isso depende de a referência e o recurso existirem ou não em um modelo, de os dicionários de recursos mesclados serem usados ou não e assim por diante. Para obter mais informações sobre como definir recursos e como usar adequadamente um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), incluindo o exemplo de código, consulte [Referências aos recursos ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
+As regras pelas quais **StaticResource** é resolvido para um item em um dicionário de recursos não estão descritas neste tópico. Isso depende de a referência e o recurso existirem ou não em um modelo, de os dicionários de recursos mesclados serem usados ou não e assim por diante. Para obter mais informações sobre como definir recursos e como usar adequadamente um [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary), incluindo o exemplo de código, consulte [Referências aos recursos ResourceDictionary e XAML](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references).
 
 **Importante**    um **StaticResource** não deve tentar fazer uma referência direta a um recurso que está definido lexicalmente mais à frente no arquivo XAML. Não é possível fazer isso. Mesmo se a referência de encaminhamento não falhar, tentar fazê-la acarreta uma penalidade de desempenho. Para obter melhores resultados, ajuste a composição dos seus dicionários de recursos de maneira que seja possível evitar referências de encaminhamento.
 
 Tentar especificar um **StaticResource** para uma chave incapaz de resolver gera uma exceção de análise de XAML em tempo de execução. As ferramentas de design também podem apresentar avisos ou erros.
 
-Na implementação do processador XAML do Windows Runtime XAML, não há uma representação de classe de suporte para a funcionalidade **StaticResource**. **StaticResource** é exclusivamente para ser usado em marcação XAML. O equivalente mais próximo em código é usar a API de coleção de um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), chamando, por exemplo, [**Contains**](https://msdn.microsoft.com/library/windows/apps/jj635925) ou [**TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj603139).
+Na implementação do processador XAML do Windows Runtime XAML, não há uma representação de classe de suporte para a funcionalidade **StaticResource**. **StaticResource** é exclusivamente para ser usado em marcação XAML. O equivalente mais próximo em código é usar a API de coleção de um [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary), chamando, por exemplo, [**Contains**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.contains) ou [**TryGetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.trygetvalue).
 
 A [extensão de marcação {ThemeResource}](themeresource-markup-extension.md) é uma extensão de marcação similar que faz referência a recursos nomeados em outro local. A diferença é que a extensão de marcação {ThemeResource} tem a capacidade de retornar recursos diferentes, dependendo do tema do sistema que estiver ativo. Para obter mais informações, consulte [Extensão de marcação {ThemeResource}](themeresource-markup-extension.md).
 
@@ -67,7 +67,7 @@ Este exemplo de XAML foi obtido do [exemplo de vinculação de dados XAML](https
 </StackPanel> 
 ```
 
-Este exemplo específico cria um objeto com suporte em uma classe personalizada e cria-o como um recurso em [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794). Para ser um recurso válido, esse elemento `local:S2Formatter` também deve ter um valor de atributo **x:Key**. O valor do atributo está definido como "GradeConverter".
+Este exemplo específico cria um objeto com suporte em uma classe personalizada e cria-o como um recurso em [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary). Para ser um recurso válido, esse elemento `local:S2Formatter` também deve ter um valor de atributo **x:Key**. O valor do atributo está definido como "GradeConverter".
 
 O recurso é solicitado apenas um pouco mais no XAML, em que você vê `{StaticResource GradeConverter}`.
 
@@ -75,14 +75,14 @@ Observe como o uso da extensão de marcação {StaticResource} está definindo u
 
 ## <a name="design-time-tools-support-for-the-staticresource-markup-extension"></a>Suporte de ferramentas de tempo de design para a extensão de marcação **{StaticResource}**
 
-Microsoft Visual Studio 2013 pode incluir possíveis valores de chave nas listas suspensas Microsoft IntelliSense quando você usa o **{StaticResource}** extensão de marcação em uma página XAML. Por exemplo, assim que você digita "{StaticResource", as chaves de recurso do escopo de pesquisa são exibidas nos menus suspensos IntelliSense. Além dos recursos típicos, você estaria no nível da página ([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) e no nível do aplicativo ([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338)), e também veria os [recursos de temas XAML](https://msdn.microsoft.com/library/windows/apps/mt187274), e recursos de qualquer extensão que seu projeto esteja usando.
+Microsoft Visual Studio 2013 pode incluir possíveis valores de chave nas listas suspensas Microsoft IntelliSense quando você usa o **{StaticResource}** extensão de marcação em uma página XAML. Por exemplo, assim que você digita "{StaticResource", as chaves de recurso do escopo de pesquisa são exibidas nos menus suspensos IntelliSense. Além dos recursos típicos, você estaria no nível da página ([**FrameworkElement.Resources**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.resources)) e no nível do aplicativo ([**Application.Resources**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resources)), e também veria os [recursos de temas XAML](https://docs.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources), e recursos de qualquer extensão que seu projeto esteja usando.
 
-Como uma chave de recurso existe como parte de qualquer uso de **{StaticResource}**, o recurso **Ir para Definição** (F12) pode resolver esse recurso e mostrar a você o dicionário em que ele está definido. Para os recursos de tema, ele vai para generic.xaml do tempo de design.
+Como uma chave de recurso existe como parte de qualquer uso de **{StaticResource}** , o recurso **Ir para Definição** (F12) pode resolver esse recurso e mostrar a você o dicionário em que ele está definido. Para os recursos de tema, ele vai para generic.xaml do tempo de design.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Referências de recurso de ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
-* [**Dicionário de recurso**](https://msdn.microsoft.com/library/windows/apps/br208794)
+* [Referências de recurso de ResourceDictionary e XAML](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references)
+* [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)
 * [atributo X:Key](x-key-attribute.md)
 * [Extensão de marcação {ThemeResource}](themeresource-markup-extension.md)
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, elementos gráficos
 ms.localizationpriority: medium
-ms.openlocfilehash: fc93111d48f71a6ca8acad8191a2afb535fad2f0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 68d2c6ec250286b9820ff218f9b35637f49f3b97
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660931"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368757"
 ---
 # <a name="draw-to-the-screen"></a>Desenhar na tela
 
@@ -20,24 +20,24 @@ ms.locfileid: "57660931"
 
 **APIs importantes**
 
--   [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)
--   [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582)
--   [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)
+-   [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d)
+-   [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview)
+-   [**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1)
 
 Por fim, compatibilizamos o código que desenha o cubo giratório na tela.
 
 No OpenGL ES 2.0, o contexto de desenho é definido como um tipo EGLContext, que contém os parâmetros de janela e superfície, além dos recursos necessários para desenhar em destinos de renderização que serão usados para compor a imagem final exibida na janela. Use esse contexto para configurar os recursos gráficos e apresentar corretamente os resultados do pipeline do sombreador na exibição. Um dos recursos principais é o "buffer de fundo" (ou "objeto de buffer de quadros"), que contém os destinos de renderização finais (compostos), prontos para apresentação na exibição.
 
-Com o Direct3D, o processo de configuração dos recursos gráficos para desenhar na tela é mais didático e requer bem menos APIs. (Um modelo do Microsoft Visual Studio Direct3D pode simplificar significativamente esse processo, porém!) Para obter um contexto (chamado de um contexto de dispositivo de Direct3D), você deve primeiro obter um [ **ID3D11Device1** ](https://msdn.microsoft.com/library/windows/desktop/hh404575) de objeto e usá-lo para criar e configurar um [ **ID3D11DeviceContext1**  ](https://msdn.microsoft.com/library/windows/desktop/hh404598) objeto. Esses dois objetos são usados em conjunto para configurar recursos específicos de desenho na exibição.
+Com o Direct3D, o processo de configuração dos recursos gráficos para desenhar na tela é mais didático e requer bem menos APIs. (Um modelo do Microsoft Visual Studio Direct3D pode simplificar significativamente esse processo, porém!) Para obter um contexto (chamado de um contexto de dispositivo de Direct3D), você deve primeiro obter um [ **ID3D11Device1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) de objeto e usá-lo para criar e configurar um [ **ID3D11DeviceContext1**  ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) objeto. Esses dois objetos são usados em conjunto para configurar recursos específicos de desenho na exibição.
 
 Resumindo: as APIs da DXGI contêm principalmente recursos de gerenciamento relacionados diretamente ao adaptador gráfico, e o Direct3D contém APIs que permitem a interação entre a GPU e o programa principal executado na CPU.
 
 Para fins de comparação nesta amostra, consulte os tipos relevantes de APIs:
 
--   [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575): fornece uma representação virtual do dispositivo de gráficos e seus recursos.
--   [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598): fornece a interface para configurar buffers e emitir comandos de renderização.
--   [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631): a cadeia de troca é análoga ao buffer de fundo em OpenGL ES 2.0. No adaptador gráfico, corresponde à região da memória que contém as imagens finais renderizadas para exibição. Ela é chamada de "cadeia de troca" porque tem diversos buffers que podem ser gravados e "trocados" para apresentar o renderizador mais recente na tela.
--   [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582): ele contém o buffer de bitmap 2D que o contexto do dispositivo Direct3D desenha na e qual é apresentado pela cadeia de troca. Assim como no OpenGL ES 2.0, você pode ter vários destinos de renderização, alguns não vinculados à cadeia de troca, mas usados para técnicas de sombreamento com passagem múltipla.
+-   [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1): fornece uma representação virtual do dispositivo de gráficos e seus recursos.
+-   [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1): fornece a interface para configurar buffers e emitir comandos de renderização.
+-   [**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1): a cadeia de troca é análoga ao buffer de fundo em OpenGL ES 2.0. No adaptador gráfico, corresponde à região da memória que contém as imagens finais renderizadas para exibição. Ela é chamada de "cadeia de troca" porque tem diversos buffers que podem ser gravados e "trocados" para apresentar o renderizador mais recente na tela.
+-   [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview): ele contém o buffer de bitmap 2D que o contexto do dispositivo Direct3D desenha na e qual é apresentado pela cadeia de troca. Assim como no OpenGL ES 2.0, você pode ter vários destinos de renderização, alguns não vinculados à cadeia de troca, mas usados para técnicas de sombreamento com passagem múltipla.
 
 No modelo, o objeto de renderizador contém os seguintes campos:
 
@@ -63,7 +63,7 @@ m_d3dDevice->CreateRenderTargetView(
   &m_d3dRenderTargetViewWin);
 ```
 
-O tempo de execução do Direct3D cria implicitamente uma [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/ff471343) para a [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635), que representa a textura como um "buffer de fundo" que a cadeia de troca pode usar para exibição.
+O tempo de execução do Direct3D cria implicitamente uma [**IDXGISurface1**](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgisurface1) para a [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d), que representa a textura como um "buffer de fundo" que a cadeia de troca pode usar para exibição.
 
 A inicialização e a configuração do dispositivo Direct3D e de seu respectivo contexto, bem como dos destinos de renderização, podem ser encontradas nos métodos personalizados **CreateDeviceResources** e **CreateWindowSizeDependentResources** no modelo do Direct3D.
 
@@ -123,15 +123,15 @@ void Render(GraphicsContext *drawContext)
 
 No Direct3D 11, o processo é muito parecido (supomos que você esteja usando a configuração de destino de renderização e visor do modelo Direct3D).
 
--   Atualize os buffers constantes (a matriz modelo-exibição-projeção, neste caso) com chamadas para [**ID3D11DeviceContext1::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/hh446790).
--   Defina o buffer de vértice com [**ID3D11DeviceContext1::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456).
--   Defina o buffer de índice com [**ID3D11DeviceContext1::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453).
--   Defina a topologia de triângulos específica (uma lista de triângulos) com [**ID3D11DeviceContext1::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455).
--   Defina o layout de entrada do buffer de vértice com [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454).
--   Vincule o sombreador de vértice com [**ID3D11DeviceContext1::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493).
--   Vincule o sombreador de fragmento com [**ID3D11DeviceContext1::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472).
--   Envie os vértices indexados pelos sombreadores e gere os resultados de cores no buffer de destino de renderização com [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409).
--   Exiba o buffer de destino de renderização com [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797).
+-   Atualize os buffers constantes (a matriz modelo-exibição-projeção, neste caso) com chamadas para [**ID3D11DeviceContext1::UpdateSubresource**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-updatesubresource1).
+-   Defina o buffer de vértice com [**ID3D11DeviceContext1::IASetVertexBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers).
+-   Defina o buffer de índice com [**ID3D11DeviceContext1::IASetIndexBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetindexbuffer).
+-   Defina a topologia de triângulos específica (uma lista de triângulos) com [**ID3D11DeviceContext1::IASetPrimitiveTopology**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology).
+-   Defina o layout de entrada do buffer de vértice com [**ID3D11DeviceContext1::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout).
+-   Vincule o sombreador de vértice com [**ID3D11DeviceContext1::VSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vssetshader).
+-   Vincule o sombreador de fragmento com [**ID3D11DeviceContext1::PSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader).
+-   Envie os vértices indexados pelos sombreadores e gere os resultados de cores no buffer de destino de renderização com [**ID3D11DeviceContext1::DrawIndexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed).
+-   Exiba o buffer de destino de renderização com [**IDXGISwapChain1::Present1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1).
 
 Direct3D 11: Renderização de um quadro para exibição
 
@@ -196,7 +196,7 @@ void RenderObject::Render()
 
 ```
 
-Depois que você chama [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797), seu quadro é gerado na exibição configurada.
+Depois que você chama [**IDXGISwapChain1::Present1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1), seu quadro é gerado na exibição configurada.
 
 ## <a name="previous-step"></a>Etapa anterior
 

@@ -6,12 +6,12 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, app
 ms.localizationpriority: medium
-ms.openlocfilehash: c6f4a4cb86bb5cf23e84e75ad99750dd6cff9539
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 96efc6145d382d4f6a996e541d638f2a1d896e80
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334535"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372658"
 ---
 # <a name="get-an-app"></a>Obter um app
 
@@ -44,7 +44,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo a ser recuperada. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo a ser recuperada. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação

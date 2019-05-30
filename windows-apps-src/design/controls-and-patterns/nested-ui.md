@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8edb38b8ae91d836e283a8eb37830850bf504db4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: aa672c99dc83e7955c4d4f91b5bc34620c48ed01
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661301"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364545"
 ---
 # <a name="nested-ui-in-list-items"></a>Interface do usuário aninhada em itens de lista
 
@@ -26,9 +26,9 @@ Interface do usuário aninhada é uma interface do usuário (IU) que expõe cont
 
 Você pode usar a interface do usuário aninhada para apresentar ao usuário opções adicionais que ajudam a acelerar a execução de ações importantes. No entanto, quanto mais ações você expõe, mais complicada sua interface do usuário se torna. Você precisa tomar mais cuidado ao optar por usar esse padrão de interface do usuário. Este artigo fornece diretrizes para ajudar você a determinar o melhor curso de ação para sua interface do usuário específica.
 
-> **APIs importantes**: [Classe ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [classe GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
+> **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [classe GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview)
 
-Neste artigo, vamos falar sobre a criação da interface do usuário aninhada em itens [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) e [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx). Embora esta seção não fale sobre outros casos de interface do usuário aninhada, esses conceitos são transferíveis. Antes de começar, você deve estar familiarizado com as diretrizes gerais para usar controles ListView ou GridView em sua interface do usuário, que são encontradas nos artigos [Listas](lists.md) e [Exibição de lista e exibição de grade](listview-and-gridview.md).
+Neste artigo, vamos falar sobre a criação da interface do usuário aninhada em itens [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) e [GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview). Embora esta seção não fale sobre outros casos de interface do usuário aninhada, esses conceitos são transferíveis. Antes de começar, você deve estar familiarizado com as diretrizes gerais para usar controles ListView ou GridView em sua interface do usuário, que são encontradas nos artigos [Listas](lists.md) e [Exibição de lista e exibição de grade](listview-and-gridview.md).
 
 Neste artigo, usamos os termos *lista*, *item de lista* e *interface do usuário aninhada* conforme definido aqui:
 - *Lista* refere-se a uma coleção de itens contidos em uma exibição de lista ou exibição de grade.
@@ -37,7 +37,7 @@ Neste artigo, usamos os termos *lista*, *item de lista* e *interface do usuário
 
 ![Partes da interface do usuário aninhada](images/nested-ui-example-1.png)
 
-> OBSERVAÇÃO&nbsp;&nbsp; Os controles ListView e GridView são derivados da classe [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), portanto, eles têm a mesma funcionalidade, mas exibem dados de modo diferente. Neste artigo, ao falarmos sobre listas, as informações se aplicam aos controles ListView e GridView.
+> OBSERVAÇÃO&nbsp;&nbsp; Os controles ListView e GridView são derivados da classe [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase), portanto, eles têm a mesma funcionalidade, mas exibem dados de modo diferente. Neste artigo, ao falarmos sobre listas, as informações se aplicam aos controles ListView e GridView.
 
 ## <a name="primary-and-secondary-actions"></a>Ações principais e secundárias
 
@@ -137,7 +137,7 @@ Quando a entrada é de um teclado, esta é a experiência que o usuário tem:
 - Do elemento de interface do usuário à esquerda do item de lista, a tecla tab coloca o foco em **A**.
 - Do elemento de interface do usuário à direita do item de lista, as teclas shift e tab colocam o foco em **C**.
 
-Para chegar a essa interface do usuário, defina [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) como **true** em sua lista. [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) pode ter qualquer valor.
+Para chegar a essa interface do usuário, defina [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled) como **true** em sua lista. [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) pode ter qualquer valor.
 
 Para saber o código para implementar isso, consulte a seção [Exemplo](#example) deste artigo.
 
@@ -151,9 +151,9 @@ Esse tipo de interface do usuário tende a ser muito mais complicado do que os e
 
 
 Para chegar a essa interface do usuário, defina as propriedades a seguir em sua lista:
-- [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) como **None**.
-- [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) como **false**.
-- [IsFocusEngagementEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isfocusengagementenabled.aspx) como **true**.
+- [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) como **None**.
+- [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled) como **false**.
+- [IsFocusEngagementEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isfocusengagementenabled) como **true**.
 
 ```xaml
 <ListView SelectionMode="None" IsItemClickEnabled="False" >

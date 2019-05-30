@@ -1,19 +1,19 @@
 ---
 ms.assetid: F45E6F35-BC18-45C8-A8A5-193D528E2A4E
 description: Saiba como habilitar compras no aplicativo e avaliações em aplicativos UWP.
-title: Compras no aplicativo e avaliações
+title: Compras e avaliações no aplicativo
 ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, avaliações, consumível, durável, assinatura
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a8bad5207c5907beb91e5664b4bc7e140ab036b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b42fcbac34f45b0af0003470f937642af3332c67
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57656951"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372715"
 ---
-# <a name="in-app-purchases-and-trials"></a>Compras no aplicativo e avaliações
+# <a name="in-app-purchases-and-trials"></a>Compras e avaliações no aplicativo
 
 O SDK do Windows fornece APIs que você pode usar para implementar os seguintes recursos para ganhar mais dinheiro com seu aplicativo da Plataforma Universal do Windows (UWP):
 
@@ -29,9 +29,9 @@ Este artigo fornece uma visão geral de como as compras no aplicativo e as avali
 
 Há dois namespaces diferentes que você pode usar para adicionar compras no aplicativo e funcionalidade de avaliação aos seus aplicativos UWP, dependendo da versão do Windows 10 à qual seus aplicativos se destinam. Embora as APIs nesses namespaces tenha os mesmos objetivos, elas foram criadas de forma bem diferente, e o código não é compatível entre as duas APIs.
 
-* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;começando no Windows 10, versão 1607, aplicativos podem usar a API nesse namespace para implementar a compras no aplicativo e as avaliações. Recomendamos que você use os membros nesse namespace se o projeto do aplicativo for voltado para o **Windows 10 Anniversary Edition (10.0, Compilação 14393)** ou uma versão posterior no Visual Studio. Esse namespace oferece suporte a tipos de complemento mais recente, como complementos consumíveis Store gerenciados e é projetado para ser compatível com tipos futuras dos produtos e recursos com suporte do Partner Center e o Store. Para obter mais informações sobre esse namespace, consulte a seção [Compras no aplicativo e avaliações que usam o namespace Windows.Services.Store](#api_intro) neste artigo.
+* **[Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store)** &nbsp;&nbsp;começando no Windows 10, versão 1607, aplicativos podem usar a API nesse namespace para implementar a compras no aplicativo e as avaliações. Recomendamos que você use os membros nesse namespace se o projeto do aplicativo for voltado para o **Windows 10 Anniversary Edition (10.0, Compilação 14393)** ou uma versão posterior no Visual Studio. Esse namespace oferece suporte a tipos de complemento mais recente, como complementos consumíveis Store gerenciados e é projetado para ser compatível com tipos futuras dos produtos e recursos com suporte do Partner Center e o Store. Para obter mais informações sobre esse namespace, consulte a seção [Compras no aplicativo e avaliações que usam o namespace Windows.Services.Store](#api_intro) neste artigo.
 
-* **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;todas as versões do Windows 10 também dão suporte a uma API mais antiga para compras no aplicativo e as avaliações neste namespace. Para obter informações sobre o namespace **Windows.ApplicationModel.Store**, consulte [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+* **[Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store)** &nbsp;&nbsp;todas as versões do Windows 10 também dão suporte a uma API mais antiga para compras no aplicativo e as avaliações neste namespace. Para obter informações sobre o namespace **Windows.ApplicationModel.Store**, consulte [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 > [!IMPORTANT]
 > O namespace **Windows.ApplicationModel.Store** não está sendo atualizado com os novos recursos e recomendamos que você use o namespace **Windows.Services.Store** em vez disso, se possível para seu app. O **Windows.ApplicationModel.Store** não há suporte para o namespace em aplicativos da área de trabalho do Windows que usam o [ponte de Desktop](https://developer.microsoft.com/windows/bridges/desktop) ou em aplicativos ou jogos que usam uma área restrita para desenvolvimento no Partner Center (para exemplo, esse é o caso para qualquer jogo que se integra com o Xbox Live).
@@ -40,7 +40,7 @@ Há dois namespaces diferentes que você pode usar para adicionar compras no apl
 
 ## <a name="basic-concepts"></a>Conceitos básicos
 
-Cada item que é oferecido na Loja é geralmente chamado de *produto*. A maioria dos desenvolvedores só trabalha com os seguintes tipos de produtos: *apps* e *complementos*.
+Cada item que é oferecido na Store é geralmente chamado de *produto*. A maioria dos desenvolvedores só trabalha com os seguintes tipos de produtos: *apps* e *complementos*.
 
 Um complemento é um produto ou recurso que você disponibiliza para os clientes no contexto do aplicativo: por exemplo, a moeda a ser usada em um aplicativo ou jogo, novos mapas ou armas para um jogo, a possibilidade de usar o aplicativo sem anúncios ou conteúdo digital, como músicas ou vídeos, para aplicativos que tenham a possibilidade de oferecer esse tipo de conteúdo. Todos os aplicativos e complementos têm uma licença associada que indica se o usuário tem direito de usar o aplicativo ou complemento. Se o usuário tiver direito de usar o aplicativo ou complemento como avaliação, a licença também fornece informações adicionais sobre a avaliação.
 
@@ -52,7 +52,7 @@ Aplicativos UWP podem oferecer os seguintes tipos de complementos.
 |---------|-------------------|
 | Durável  |  Um complemento que persiste o tempo de vida que você [especificar no Partner Center](../publish/enter-iap-properties.md). <p/><p/>Por padrão, os complementos duráveis nunca expiram, podendo ser adquiridos somente uma vez. Se você especificar uma duração específica para o complemento, o usuário poderá comprar novamente o complemento depois que ele expirar. |
 | Consumível gerenciado pelo desenvolvedor  |  Um complemento que pode ser comprado, usado e comprado novamente após o consumo. Você é responsável por controlar o saldo de itens do usuário que o complemento representa.<p/><p/>Quando o usuário consome qualquer item associado ao complemento, você é responsável pela manutenção do saldo do usuário e por relatar a compra do complemento como providenciada para a Store depois que o usuário consome todos os itens. O usuário não pode comprar o complemento novamente até que seu aplicativo tenha informado a compra anterior do complemento como providenciada. <p/><p/>Por exemplo, se o seu complemento representar 100 moedas em um jogo e o usuário consumir 10 moedas, seu aplicativo ou o serviço deverá manter o novo saldo restante de 90 moedas para o usuário. Depois que o usuário tiver consumido todas as 100 moedas, seu aplicativo deverá declarar o complemento como providenciado e, em seguida, o usuário poderá comprar o complemento de 100 moedas novamente.    |
-| Consumível gerenciado pela Loja  |  Um complemento que pode ser comprado, usado e comprado a qualquer momento. A Store mantém o controle do saldo de itens do usuário que o complemento representa.<p/><p/>Quando o usuário consome todos os itens associados ao complemento, você é responsável por relatar esses itens como providenciados para a Store, e esta atualiza o saldo do usuário. O usuário pode adquirir o complemento quantas vezes desejar (não é necessário consumir os itens primeiro). Seu aplicativo pode consultar o saldo atual para o usuário a qualquer momento. <p/><p/> Por exemplo, se o complemento representar uma quantidade inicial de 100 moedas em um jogo e o usuário consumir 50 moedas, o aplicativo relatará para a Store que 50 unidades do complemento foram providenciadas, e a Store atualizará o saldo restante. Se o usuário comprar o complemento novamente para adquirir mais 100 moedas, ele agora terá 150 moedas no total. <p/><p/>**Observação**&nbsp;&nbsp;Para usar consumíveis gerenciados pela Microsoft Store, o aplicativo deve ser direcionado ao **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio, e deve usar o namespace **Windows.Services.Store** em vez do namespace **Windows.ApplicationModel.Store**.  |
+| Consumível gerenciado pela Store  |  Um complemento que pode ser comprado, usado e comprado a qualquer momento. A Store mantém o controle do saldo de itens do usuário que o complemento representa.<p/><p/>Quando o usuário consome todos os itens associados ao complemento, você é responsável por relatar esses itens como providenciados para a Store, e esta atualiza o saldo do usuário. O usuário pode adquirir o complemento quantas vezes desejar (não é necessário consumir os itens primeiro). Seu aplicativo pode consultar o saldo atual para o usuário a qualquer momento. <p/><p/> Por exemplo, se o complemento representar uma quantidade inicial de 100 moedas em um jogo e o usuário consumir 50 moedas, o aplicativo relatará para a Store que 50 unidades do complemento foram providenciadas, e a Store atualizará o saldo restante. Se o usuário comprar o complemento novamente para adquirir mais 100 moedas, ele agora terá 150 moedas no total. <p/><p/>**Observação**&nbsp;&nbsp;Para usar consumíveis gerenciados pela Microsoft Store, o aplicativo deve ser direcionado ao **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio, e deve usar o namespace **Windows.Services.Store** em vez do namespace **Windows.ApplicationModel.Store**.  |
 | Assinatura | Um complemento durável em que o cliente continua a ser cobrado em intervalos recorrentes para continuar usando o complemento. O cliente pode cancelar a assinatura a qualquer momento para evitar cobranças futuras. <p/><p/>**Observação**&nbsp;&nbsp;Para usar complementos de assinatura, o aplicativo deve ser direcionado ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior no Visual Studio, e deve usar o namespace **Windows.Services.Store** em vez do namespace **Windows.ApplicationModel.Store**.  |
 
 <span />
@@ -64,7 +64,7 @@ Aplicativos UWP podem oferecer os seguintes tipos de complementos.
 
 ## <a name="in-app-purchases-and-trials-using-the-windowsservicesstore-namespace"></a>Compras no aplicativo e avaliações usando o namespace Windows.Services.Store
 
-Esta seção fornece uma visão geral das tarefas e dos conceitos importantes para o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx). Esse namespace está disponível somente para aplicativos destinados ao **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio (isso corresponde ao Windows 10, versão 1607). Recomendamos que os aplicativos usem o namespace **Windows.Services.Store** em vez do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx), se possível. Para obter informações sobre o namespace **Windows.ApplicationModel.Store**, consulte [este artigo](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+Esta seção fornece uma visão geral das tarefas e dos conceitos importantes para o namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store). Esse namespace está disponível somente para aplicativos destinados ao **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio (isso corresponde ao Windows 10, versão 1607). Recomendamos que os aplicativos usem o namespace **Windows.Services.Store** em vez do namespace [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store), se possível. Para obter informações sobre o namespace **Windows.ApplicationModel.Store**, consulte [este artigo](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 **Nesta seção**
 
@@ -82,7 +82,7 @@ Esta seção fornece uma visão geral das tarefas e dos conceitos importantes pa
 
 ### <a name="video"></a>Vídeo
 
-Assista ao vídeo a seguir para obter uma visão geral de como implementar compras no aplicativo em seu app usando o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx).
+Assista ao vídeo a seguir para obter uma visão geral de como implementar compras no aplicativo em seu app usando o namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store).
 <br/>
 <br/>
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Adding-In-App-Purchases-to-Your-UWP-App/player]
@@ -91,7 +91,7 @@ Assista ao vídeo a seguir para obter uma visão geral de como implementar compr
 
 ### <a name="get-started-with-the-storecontext-class"></a>Introdução à classe StoreContext
 
-O ponto de entrada principal para o namespace **Windows.Services.Store** é a classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Essa classe fornece métodos que você pode usar para obter informações do aplicativo atual e seus complementos disponíveis, obter informações de licença do aplicativo atual ou seus complementos, comprar um aplicativo ou um complemento para o usuário atual e realizar outras tarefas. Para obter um objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx), siga um destes procedimentos:
+O ponto de entrada principal para o namespace **Windows.Services.Store** é a classe [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext). Essa classe fornece métodos que você pode usar para obter informações do aplicativo atual e seus complementos disponíveis, obter informações de licença do aplicativo atual ou seus complementos, comprar um aplicativo ou um complemento para o usuário atual e realizar outras tarefas. Para obter um objeto [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext), siga um destes procedimentos:
 
 * Em um app de usuário único (ou seja, um app executado apenas no contexto do usuário que iniciou o app), use o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getdefault) estático para obter um objeto **StoreContext** que seja possível usar para acessar dados relacionados à Microsoft Store para o usuário. A maioria dos aplicativos da Plataforma Universal do Windows (UWP) é um aplicativo de usuário único.
 
@@ -107,9 +107,9 @@ O ponto de entrada principal para o namespace **Windows.Services.Store** é a cl
   ```
 
 > [!NOTE]
-> Os aplicativos da área de trabalho do Windows que usam o [Ponte de Desktop](https://developer.microsoft.com/windows/bridges/desktop) devem realizar etapas adicionais para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para poder usar esse objeto. Para obter mais informações, consulte [esta seção](#desktop).
+> Os aplicativos da área de trabalho do Windows que usam o [Ponte de Desktop](https://developer.microsoft.com/windows/bridges/desktop) devem realizar etapas adicionais para configurar o objeto [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) para poder usar esse objeto. Para obter mais informações, consulte [esta seção](#desktop).
 
-Depois que tiver um objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx), você poderá começar a chamar métodos desse objeto para obter informações da Loja sobre o aplicativo atual e os complementos, recuperar informações de licença para o aplicativo atual e os complementos, comprar um aplicativo ou um complemento para o usuário atual e realizar outras tarefas. Para obter mais informações sobre tarefas comuns que você pode realizar usando esse objeto, consulte os seguintes artigos:
+Depois que tiver um objeto [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext), você poderá começar a chamar métodos desse objeto para obter informações da Store sobre o aplicativo atual e os complementos, recuperar informações de licença para o aplicativo atual e os complementos, comprar um aplicativo ou um complemento para o usuário atual e realizar outras tarefas. Para obter mais informações sobre tarefas comuns que você pode realizar usando esse objeto, consulte os seguintes artigos:
 
 * [Obter informações sobre produtos para os aplicativos e complementos](get-product-info-for-apps-and-add-ons.md)
 * [Obter informações de licença para aplicativos e complementos](get-license-info-for-apps-and-add-ons.md)
@@ -118,7 +118,7 @@ Depois que tiver um objeto [StoreContext](https://msdn.microsoft.com/library/win
 * [Habilitar complementos de assinaturas para seu aplicativo](enable-subscription-add-ons-for-your-app.md)
 * [Implementar uma versão de avaliação do seu aplicativo](implement-a-trial-version-of-your-app.md)
 
-Para obter um aplicativo de exemplo que demonstre como usar **StoreContext** e outros tipos no namespace **Windows.Services.Store**, consulte o [exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Para obter um aplicativo de exemplo que demonstre como usar **StoreContext** e outros tipos no namespace **Windows.Services.Store**, consulte o [exemplo da Store](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 <span id="implement-iap" />
 
@@ -126,7 +126,7 @@ Para obter um aplicativo de exemplo que demonstre como usar **StoreContext** e o
 
 Para oferecer uma compra no aplicativo aos clientes em seu aplicativo usando o namespace **Windows.Services.Store**:
 
-1. Se seu aplicativo oferece os complementos que os clientes podem comprar, [criar envios de complemento para seu aplicativo no Partner Center ](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
+1. Se seu aplicativo oferece os complementos que os clientes podem comprar, [criar envios de complemento para seu aplicativo no Partner Center ](https://docs.microsoft.com/windows/uwp/publish/add-on-submissions).
 
 2. Escreva um código em seu aplicativo para [recuperar informações de produto para o aplicativo ou um complemento oferecido pelo aplicativo](get-product-info-for-apps-and-add-ons.md) e [determinar se a licença está ativa](get-license-info-for-apps-and-add-ons.md) (ou seja, se o usuário tiver uma licença para usar o aplicativo ou um complemento). Se a licença não estiver ativa, exiba uma interface do usuário que ofereça o aplicativo ou complemento para venda ao usuário como uma compra no aplicativo.
 
@@ -136,7 +136,7 @@ Para oferecer uma compra no aplicativo aos clientes em seu aplicativo usando o n
     * Se o usuário estiver comprando um complemento consumível, siga as instruções em [Habilitar compras de complementos consumíveis](enable-consumable-add-on-purchases.md).
     * Se o usuário estiver comprando um complemento de assinatura, siga as instruções em [Habilitar complementos de assinatura para seu app](enable-subscription-add-ons-for-your-app.md).
 
-4. Teste a implementação seguindo as [diretrizes de teste](#testing) neste artigo.
+4. Teste sua implementação seguindo as [diretrizes de teste](#testing) neste artigo.
 
 <span id="implement-trial" />
 
@@ -150,7 +150,7 @@ Para excluir ou limitar recursos em uma versão de avaliação do seu aplicativo
 
 3. Exclua ou limite determinados recursos no aplicativo caso ela seja uma versão de avaliação e habilite os recursos quando o usuário comprar uma licença completa. Para obter mais informações e um exemplo de código, consulte [Implementar uma versão de avaliação do aplicativo](implement-a-trial-version-of-your-app.md).
 
-4. Teste a implementação seguindo as [diretrizes de teste](#testing) neste artigo.
+4. Teste sua implementação seguindo as [diretrizes de teste](#testing) neste artigo.
 
 <span id="testing" />
 
@@ -158,24 +158,24 @@ Para excluir ou limitar recursos em uma versão de avaliação do seu aplicativo
 
 Se seu app usa APIs no namespace **Windows.Services.Store** para implementar compras no aplicativo ou a funcionalidade de avaliação, você deve publicar seu aplicativo na Microsoft Store e baixá-lo em seu dispositivo de desenvolvimento para usar sua licença de teste. Siga este processo para testar seu código:
 
-1. Se seu aplicativo ainda não está publicada e disponibilizada na Store, verifique se seu aplicativo atende aos requisitos [Kit de certificação de aplicativos do Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) requisitos [enviar seu aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center e verifique se seu aplicativo passa o processo de certificação. Você pode [configurar seu app para que ele não possa ser descoberto na Store](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) durante os testes. Observe que a configuração adequada de [empacotar voos](../publish/package-flights.md). Incorretamente pacote configurado voos podem não ser poderá ser baixado.
+1. Se seu aplicativo ainda não está publicada e disponibilizada na Store, verifique se seu aplicativo atende aos requisitos [Kit de certificação de aplicativos do Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) requisitos [enviar seu aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center e verifique se seu aplicativo passa o processo de certificação. Você pode [configurar seu app para que ele não possa ser descoberto na Store](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) durante os testes. Observe que a configuração adequada de [empacotar voos](../publish/package-flights.md). Incorretamente pacote configurado voos podem não ser poderá ser baixado.
 
 2. Em seguida, certifique-se de que você tenha concluído o seguinte:
 
-    * Escreva um código no aplicativo que use a classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) e outros tipos relacionados no namespace **Windows.Services.Store** para implementar [compras no aplicativo](#implement-iap) ou [a funcionalidade de avaliação](#implement-trial).
-    * Se seu aplicativo oferece um complemento que os clientes podem comprar, [criar um envio de complemento para seu aplicativo no Partner Center](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
+    * Escreva um código no aplicativo que use a classe [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) e outros tipos relacionados no namespace **Windows.Services.Store** para implementar [compras no aplicativo](#implement-iap) ou [a funcionalidade de avaliação](#implement-trial).
+    * Se seu aplicativo oferece um complemento que os clientes podem comprar, [criar um envio de complemento para seu aplicativo no Partner Center](https://docs.microsoft.com/windows/uwp/publish/add-on-submissions).
     * Se você quiser excluir ou limitar a alguns recursos em uma versão de avaliação do seu aplicativo, [configurar seu aplicativo como uma avaliação gratuita no Partner Center](../publish/set-app-pricing-and-availability.md#free-trial).
 
-3. Com seu projeto aberto no Visual Studio, clique no **menu Projeto**, aponte para **Loja** e clique em **Associar Aplicativo à Loja**. Conclua as instruções no Assistente para associar o projeto de aplicativo com o aplicativo em sua conta no Partner Center que você deseja usar para teste.
+3. Com seu projeto aberto no Visual Studio, clique no **menu Projeto**, aponte para **Store** e clique em **Associar Aplicativo à Store**. Conclua as instruções no Assistente para associar o projeto de aplicativo com o aplicativo em sua conta no Partner Center que você deseja usar para teste.
     > [!NOTE]
-    > Se você não associar seu projeto a um aplicativo na Store, os métodos [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) definirão a propriedade **ExtendedError** dos valores de retorno como o valor de código de erro 0x803F6107. Esse valor indica que a Loja desconhece o aplicativo.
-4. Se você não tiver feito isso ainda, instale o aplicativo da Loja que você especificou na etapa anterior, execute-o uma vez e, em seguida, feche-o. Isso garante que uma licença válida para o aplicativo seja instalada em seu dispositivo de desenvolvimento.
+    > Se você não associar seu projeto a um aplicativo na Store, os métodos [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) definirão a propriedade **ExtendedError** dos valores de retorno como o valor de código de erro 0x803F6107. Esse valor indica que a Store desconhece o aplicativo.
+4. Se você não tiver feito isso ainda, instale o aplicativo da Store que você especificou na etapa anterior, execute-o uma vez e, em seguida, feche-o. Isso garante que uma licença válida para o aplicativo seja instalada em seu dispositivo de desenvolvimento.
 
-5. No Visual Studio, comece a executar ou depurar seu projeto. Seu código deverá recuperar dados do aplicativo e do complemento do aplicativo da Loja que você associou ao seu projeto local. Se for solicitada a reinstalação do aplicativo, siga as instruções e execute ou depure o projeto.
+5. No Visual Studio, comece a executar ou depurar seu projeto. Seu código deverá recuperar dados do aplicativo e do complemento do aplicativo da Store que você associou ao seu projeto local. Se for solicitada a reinstalação do aplicativo, siga as instruções e execute ou depure o projeto.
     > [!NOTE]
-    > Depois de concluir essas etapas, você poderá continuar atualizando o código do aplicativo e, em seguida, depurar o projeto atualizado no computador de desenvolvimento sem enviar novos pacotes de aplicativos para a Store. Você só precisa baixar a versão da Loja do aplicativo no computador de desenvolvimento uma vez para obter a licença local que será usada para teste. Você só precisará enviar novos pacotes de aplicativos para a Loja depois de concluir o teste e se quiser disponibilizar os recursos relacionados à avaliação ou à compra no aplicativo no aplicativo para os clientes.
+    > Depois de concluir essas etapas, você poderá continuar atualizando o código do aplicativo e, em seguida, depurar o projeto atualizado no computador de desenvolvimento sem enviar novos pacotes de aplicativos para a Store. Você só precisa baixar a versão da Store do aplicativo no computador de desenvolvimento uma vez para obter a licença local que será usada para teste. Você só precisará enviar novos pacotes de aplicativos para a Store depois de concluir o teste e se quiser disponibilizar os recursos relacionados à avaliação ou à compra no aplicativo no aplicativo para os clientes.
 
-Se o seu app usa o namespace **Windows.ApplicationModel.Store**, você pode usar a classe [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) em seu app para simular as informações de licença durante o teste antes de enviar seu app para a Store. Para obter mais informações, consulte [começar com as classes CurrentApp e CurrentAppSimulator](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#get-started-with-the-currentapp-and-currentappsimulator-classes).  
+Se o seu app usa o namespace **Windows.ApplicationModel.Store**, você pode usar a classe [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) em seu app para simular as informações de licença durante o teste antes de enviar seu app para a Store. Para obter mais informações, consulte [começar com as classes CurrentApp e CurrentAppSimulator](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#get-started-with-the-currentapp-and-currentappsimulator-classes).  
 
 > [!NOTE]
 > O namespace **Windows.Services.Store** não fornece uma classe que seja possível usar para simular informações de licença durante o teste. Se você usar o namespace **Windows.Services.Store** para implementar compras ou avaliações no aplicativo, deverá publicar seu app na Store e baixá-lo em seu dispositivo de desenvolvimento para usar sua licença de teste como descrito acima.
@@ -192,15 +192,15 @@ Se você implementar compras no aplicativo usando o namespace **Windows.Services
 
 ### <a name="using-the-storecontext-class-with-the-desktop-bridge"></a>Como usar a classe StoreContext com o Desktop Bridge
 
-Os aplicativos da área de trabalho que usam o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop) podem utilizar a classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para implementar compras no aplicativo e avaliações. No entanto, se você tiver um aplicativo da área de trabalho Win32 ou um aplicativo da área de trabalho que tenha um identificador de janela (HWND) associado à estrutura de renderização (por exemplo, um aplicativo WPF), seu aplicativo deve configurar o objeto **StoreContext** para especificar qual janela do aplicativo é a janela do proprietário para caixas de diálogo modais que são mostradas pelo objeto.
+Os aplicativos da área de trabalho que usam o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop) podem utilizar a classe [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) para implementar compras no aplicativo e avaliações. No entanto, se você tiver um aplicativo da área de trabalho Win32 ou um aplicativo da área de trabalho que tenha um identificador de janela (HWND) associado à estrutura de renderização (por exemplo, um aplicativo WPF), seu aplicativo deve configurar o objeto **StoreContext** para especificar qual janela do aplicativo é a janela do proprietário para caixas de diálogo modais que são mostradas pelo objeto.
 
-Muitos membros do **StoreContext** (e membros de outros tipos relacionados que são acessados por meio do objeto **StoreContext**) exibem uma caixa de diálogo modal para o usuário para operações relacionadas à Loja, como comprar um produto. Se um aplicativo de desktop não configura o objeto **StoreContext** para especificar a janela do proprietário para caixas de diálogo modais, esse objeto retornará dados imprecisos ou erros.
+Muitos membros do **StoreContext** (e membros de outros tipos relacionados que são acessados por meio do objeto **StoreContext**) exibem uma caixa de diálogo modal para o usuário para operações relacionadas à Store, como comprar um produto. Se um aplicativo de desktop não configura o objeto **StoreContext** para especificar a janela do proprietário para caixas de diálogo modais, esse objeto retornará dados imprecisos ou erros.
 
 Para configurar um objeto **StoreContext** em um aplicativo da área de trabalho que use o Desktop Bridge, siga estas etapas.
 
-1. Siga um destes procedimentos para permitir que o aplicativo acesse a interface [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx):
+1. Siga um destes procedimentos para permitir que o aplicativo acesse a interface [IInitializeWithWindow](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow):
 
-    * Se o aplicativo estiver escrito em uma linguagem gerenciada, como C# ou Visual Basic, declare a interface **IInitializeWithWindow** no código do aplicativo com o atributo [ComImport](https://msdn.microsoft.com/library/system.runtime.interopservices.comimportattribute.aspx) conforme mostrado no exemplo em C# a seguir. Este exemplo pressupõe que o arquivo de código tenha uma declaração **using** para o namespace **InteropServices**.
+    * Se o aplicativo estiver escrito em uma linguagem gerenciada, como C# ou Visual Basic, declare a interface **IInitializeWithWindow** no código do aplicativo com o atributo [ComImport](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comimportattribute?redirectedfrom=MSDN) conforme mostrado no exemplo em C# a seguir. Este exemplo pressupõe que o arquivo de código tenha uma declaração **using** para o namespace **InteropServices**.
 
         ```csharp
         [ComImport]
@@ -212,9 +212,9 @@ Para configurar um objeto **StoreContext** em um aplicativo da área de trabalho
         }
         ```
 
-    * Se o aplicativo estiver escrito em C++, adicione uma referência ao arquivo de cabeçalho shobjidl.h no código. Este arquivo de cabeçalho contém a declaração da interface **IInitializeWithWindow**.
+    * Se o aplicativo estiver escrito em C++, adicione uma referência ao arquivo de cabeçalho shobjidl.h no código. Esse arquivo de cabeçalho contém a declaração da interface **IInitializeWithWindow**.
 
-2. Obtenha um objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) usando o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getdefault) (ou [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getforuser) caso o aplicativo seja um [aplicativo multiusuário](../xbox-apps/multi-user-applications.md)) conforme descrito anteriormente neste artigo, e converta esse objeto em um objeto [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx). Em seguida, chame o método [IInitializeWithWindow.Initialize](https://msdn.microsoft.com/library/windows/desktop/hh706982.aspx) e passe o identificador da janela da qual você deseja ser o proprietário para eventuais caixas de diálogo modais mostradas por métodos **StoreContext**. O exemplo em C# a seguir mostra como passar o identificador da janela principal do aplicativo para o método.
+2. Obtenha um objeto [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) usando o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getdefault) (ou [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getforuser) caso o aplicativo seja um [aplicativo multiusuário](../xbox-apps/multi-user-applications.md)) conforme descrito anteriormente neste artigo, e converta esse objeto em um objeto [IInitializeWithWindow](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow). Em seguida, chame o método [IInitializeWithWindow.Initialize](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) e passe o identificador da janela da qual você deseja ser o proprietário para eventuais caixas de diálogo modais mostradas por métodos **StoreContext**. O exemplo em C# a seguir mostra como passar o identificador da janela principal do aplicativo para o método.
     ```csharp
     StoreContext context = StoreContext.GetDefault();
     IInitializeWithWindow initWindow = (IInitializeWithWindow)(object)context;
@@ -225,32 +225,32 @@ Para configurar um objeto **StoreContext** em um aplicativo da área de trabalho
 
 ### <a name="products-skus-and-availabilities"></a>Produtos, SKUs e disponibilidades
 
-Cada produto na Loja tem pelo menos uma *SKU*, e cada SKU tem pelo menos uma *disponibilidade*. Esses conceitos são abstraídos a maioria dos desenvolvedores no Partner Center e a maioria dos desenvolvedores nunca irá definir SKUs ou disponibilidades para seus aplicativos ou complementos. No entanto, como o objeto de modelo para produtos da Store no namespace **Windows.Services.Store** inclui disponibilidades e SKUs, um entendimento básico sobre esses conceitos pode ser útil para alguns cenários.
+Cada produto na Store tem pelo menos uma *SKU*, e cada SKU tem pelo menos uma *disponibilidade*. Esses conceitos são abstraídos a maioria dos desenvolvedores no Partner Center e a maioria dos desenvolvedores nunca irá definir SKUs ou disponibilidades para seus aplicativos ou complementos. No entanto, como o objeto de modelo para produtos da Store no namespace **Windows.Services.Store** inclui disponibilidades e SKUs, um entendimento básico sobre esses conceitos pode ser útil para alguns cenários.
 
-| Objeto |  Descrição  |
+| Object |  Descrição  |
 |---------|-------------------|
-| Produto  |  Um *produto* refere-se a qualquer tipo de produto que esteja disponível na Store, incluindo um app ou um complemento. <p/><p/> Cada produto na Store tem um objeto [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) correspondente. Essa classe fornece propriedades que você pode usar para acessar dados, como a ID da Loja do produto, as imagens e os vídeos para a listagem da Loja e informações de preços. Também fornece métodos que você pode usar para comprar o produto. |
-| SKU |  A *SKU* é uma versão específica de um produto com sua própria descrição, preço e outros detalhes exclusivos do produto. Cada aplicativo ou complemento tem uma SKU padrão. O único momento em que a maioria dos desenvolvedores terá várias SKUs para um aplicativo é se publicarem uma versão completa do aplicativo e uma versão de avaliação (no catálogo da Loja, cada uma dessas versões é uma SKU diferente do mesmo aplicativo). <p/><p/> Alguns fornecedores podem definir suas próprias SKUs. Por exemplo, um grande fornecedor de jogos pode lançar um jogo com uma SKU que mostre sangue verde em mercados que não permitem sangue vermelho e outra SKU que mostre sangue vermelho nos demais mercados. Como alternativa, um fornecedor que vende conteúdo em vídeo digital pode publicar duas SKUs para um vídeo, uma SKU para a versão em alta definição e outra SKU para a versão em definição padrão. <p/><p/> Cada SKU na Store tem um objeto [StoreSku](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.aspx) correspondente. Cada [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) tem uma propriedade [Skus](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.skus) que você pode usar para acessar as SKUs para o produto. |
-| Disponibilidade  |  Uma *disponibilidade* é uma versão específica de uma SKU com suas próprias informações de preço. Cada SKU tem uma disponibilidade padrão. Alguns fornecedores podem definir suas próprias disponibilidade para apresentar opções de preço diferentes para determinada SKU. <p/><p/> Cada disponibilidade na Store tem um objeto [StoreAvailability](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeavailability.aspx) correspondente. Cada [StoreSku](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.aspx) tem uma propriedade [Availabilities](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.availabilities) que você pode usar para acessar as disponibilidades para a SKU. Para a maioria dos desenvolvedores, cada SKU tem uma única disponibilidade padrão.  |
+| Produto  |  Um *produto* refere-se a qualquer tipo de produto que esteja disponível na Store, incluindo um app ou um complemento. <p/><p/> Cada produto na Store tem um objeto [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) correspondente. Essa classe fornece propriedades que você pode usar para acessar dados, como a ID da Store do produto, as imagens e os vídeos para a listagem da Store e informações de preços. Também fornece métodos que você pode usar para comprar o produto. |
+| SKU |  A *SKU* é uma versão específica de um produto com sua própria descrição, preço e outros detalhes exclusivos do produto. Cada aplicativo ou complemento tem uma SKU padrão. O único momento em que a maioria dos desenvolvedores terá várias SKUs para um aplicativo é se publicarem uma versão completa do aplicativo e uma versão de avaliação (no catálogo da Store, cada uma dessas versões é uma SKU diferente do mesmo aplicativo). <p/><p/> Alguns fornecedores podem definir suas próprias SKUs. Por exemplo, um grande fornecedor de jogos pode lançar um jogo com uma SKU que mostre sangue verde em mercados que não permitem sangue vermelho e outra SKU que mostre sangue vermelho nos demais mercados. Como alternativa, um fornecedor que vende conteúdo em vídeo digital pode publicar duas SKUs para um vídeo, uma SKU para a versão em alta definição e outra SKU para a versão em definição padrão. <p/><p/> Cada SKU na Store tem um objeto [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) correspondente. Cada [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) tem uma propriedade [Skus](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.skus) que você pode usar para acessar as SKUs para o produto. |
+| Disponibilidade  |  Uma *disponibilidade* é uma versão específica de uma SKU com suas próprias informações de preço. Cada SKU tem uma disponibilidade padrão. Alguns fornecedores podem definir suas próprias disponibilidade para apresentar opções de preço diferentes para determinada SKU. <p/><p/> Cada disponibilidade na Store tem um objeto [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) correspondente. Cada [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) tem uma propriedade [Availabilities](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.availabilities) que você pode usar para acessar as disponibilidades para a SKU. Para a maioria dos desenvolvedores, cada SKU tem uma única disponibilidade padrão.  |
 
 <span id="store_ids" />
 
-### <a name="store-ids"></a>IDs da Loja
+### <a name="store-ids"></a>IDs da Store
 
 Cada app, complemento ou outro produto na Store tenha uma **ID da Store** associada (que às vezes também é chamada de *ID da Store do produto*). Muitas APIs exigem a ID da LOja para executar uma operação em um app ou complemento.
 
-A ID da Loja de qualquer produto na Loja é uma cadeia de 12 caracteres alfanuméricos, como ```9NBLGGH4R315```. Há várias maneiras diferentes de se obter a ID da Store para um produto na Store:
+A ID da Store de qualquer produto na Store é uma cadeia de 12 caracteres alfanuméricos, como ```9NBLGGH4R315```. Há várias maneiras diferentes de se obter a ID da Store para um produto na Store:
 
 * Para um aplicativo, você pode obter a ID de Store sobre o [página de aplicativo de identidade](../publish/view-app-identity-details.md) no Partner Center.
 * Para um complemento, você pode obter a ID de Store na página de visão geral do add-on no Partner Center.
-* Para qualquer produto, você também pode obter a ID da Store programaticamente usando a propriedade [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.storeid) do objeto [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) que representa o produto.
+* Para qualquer produto, você também pode obter a ID da Store programaticamente usando a propriedade [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.storeid) do objeto [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) que representa o produto.
 
 Para produtos com SKUs e disponibilidades, as SKUs e as disponibilidades também têm suas próprias IDs da Store com formatos diferentes.
 
-| Objeto |  Formato da ID da Loja  |
+| Object |  Formato da ID da Store  |
 |---------|-------------------|
-| SKU |  A ID da Store para uma SKU tem o formato ```<product Store ID>/xxxx```, onde ```xxxx``` é uma cadeia de 4 caracteres alfanuméricos que identifica uma SKU do produto. Por exemplo, ```9NBLGGH4R315/000N```. Essa ID é retornada pela propriedade [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.storeid) de um objeto [StoreSku](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.aspx) e é chamada, às vezes, de *ID da Loja para a SKU*. |
-| Disponibilidade  |  A ID da Store para uma disponibilidade tem o formato ```<product Store ID>/xxxx/yyyyyyyyyyyy```, onde ```xxxx``` é uma cadeia de 4 caracteres alfanuméricos que identifica uma SKU do produto e ```yyyyyyyyyyyy``` é uma cadeia de 12 caracteres alfanuméricos que identifica uma disponibilidade para a SKU. Por exemplo, ```9NBLGGH4R315/000N/4KW6QZD2VN6X```. Essa ID é retornada pela propriedade [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability.storeid) de um objeto [StoreAvailability](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeavailability.aspx) e é chamada, às vezes, de *ID da Loja para a disponibilidade*.  |
+| SKU |  A ID da Store para uma SKU tem o formato ```<product Store ID>/xxxx```, onde ```xxxx``` é uma cadeia de 4 caracteres alfanuméricos que identifica uma SKU do produto. Por exemplo, ```9NBLGGH4R315/000N```. Essa ID é retornada pela propriedade [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.storeid) de um objeto [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) e é chamada, às vezes, de *ID da Store para a SKU*. |
+| Disponibilidade  |  A ID da Store para uma disponibilidade tem o formato ```<product Store ID>/xxxx/yyyyyyyyyyyy```, onde ```xxxx``` é uma cadeia de 4 caracteres alfanuméricos que identifica uma SKU do produto e ```yyyyyyyyyyyy``` é uma cadeia de 12 caracteres alfanuméricos que identifica uma disponibilidade para a SKU. Por exemplo, ```9NBLGGH4R315/000N/4KW6QZD2VN6X```. Essa ID é retornada pela propriedade [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability.storeid) de um objeto [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) e é chamada, às vezes, de *ID da Store para a disponibilidade*.  |
 
 <span id="product-ids" />
 

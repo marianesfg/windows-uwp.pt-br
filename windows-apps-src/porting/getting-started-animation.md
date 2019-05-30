@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dc5e107fd343798698f5957c26d87a0d3ffe6625
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b30f2e9d08fd36686045523c54180829570cbd2d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608621"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372868"
 ---
 # <a name="getting-started-animation"></a>Introdução: Animação
 
@@ -22,7 +22,7 @@ No iOS, a maioria dos efeitos de animação são criados de forma programática.
 
 Crie um novo aplicativo da Plataforma Universal do Windows (UWP) e dê um nome como "SimpleAnimation". Neste projeto, vamos mover um retângulo, aplicar um efeito de esmaecimento e trazê-lo de volta à visualização. Animações em XAML são baseadas em conceito de *storyboards* (não para ser confundido com iOS storyboards). As storyboards usam *quadros-chave* para animar as alterações da propriedade.
 
-Com seu projeto aberto, no **Gerenciador de Soluções**, clique com o botão direito do mouse sobre o nome do projeto e selecione **Abrir no Blend** ou **Abrir no Blend…**, como mostrado na imagem a seguir. O Visual Studio continuará a ser executado em segundo plano.
+Com seu projeto aberto, no **Gerenciador de Soluções**, clique com o botão direito do mouse sobre o nome do projeto e selecione **Abrir no Blend** ou **Abrir no Blend…** , como mostrado na imagem a seguir. O Visual Studio continuará a ser executado em segundo plano.
 
 ![comando de menu abrir no blend](images/ios-to-uwp/vs-open-in-blend.png)
 
@@ -124,9 +124,9 @@ Se você abrir o arquivo MainPage.xaml, no modo de exibição **XAML**, verá qu
 ...
 ```
 
-Você pode editar esse XAML manualmente ou retornar ao Blend para continuar a trabalhar com ele lá. O Blend torna divertida a criação de interfaces do usuário interessantes e permite animá-las usando uma ferramenta gráfica pode acelerar drasticamente o tempo de desenvolvimento. Para saber mais sobre animações, consulte [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350).
+Você pode editar esse XAML manualmente ou retornar ao Blend para continuar a trabalhar com ele lá. O Blend torna divertida a criação de interfaces do usuário interessantes e permite animá-las usando uma ferramenta gráfica pode acelerar drasticamente o tempo de desenvolvimento. Para saber mais sobre animações, consulte [Visão geral de animações](https://docs.microsoft.com/windows/uwp/graphics/animations-overview).
 
-**Observação**  para obter informações sobre animações para <span class="legacy-term">aplicativos UWP usando JavaScript e HTML</span>, consulte [animando sua interface do usuário (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
+**Observação**  para obter informações sobre animações para <span class="legacy-term">aplicativos UWP usando JavaScript e HTML</span>, consulte [animando sua interface do usuário (HTML)](https://docs.microsoft.com/previous-versions/windows/apps/hh465165(v=win.10)).
 
 ### <a name="next-step"></a>Próximas etapas
 

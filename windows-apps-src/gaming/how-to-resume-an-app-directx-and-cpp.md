@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, retomar, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: f0aa60061ae9fc14392bfe4beb0693ba50fda0df
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b1506351dd06563386154ac35938cbd17f5ced32
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601601"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368610"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a>Como retomar um aplicativo (DirectX e C++)
 
@@ -22,9 +22,9 @@ Este tópico mostra como restaurar dados importantes do aplicativo quando o sist
 ## <a name="register-the-resuming-event-handler"></a>Registrar o manipulador de eventos de retomada
 
 
-Registre para manipular o evento [**CoreApplication::Resuming**](https://msdn.microsoft.com/library/windows/apps/br205859) que indica que o usuário alternou para outro aplicativo que não o seu e, depois, retornou.
+Registre para manipular o evento [**CoreApplication::Resuming**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.resuming) que indica que o usuário alternou para outro aplicativo que não o seu e, depois, retornou.
 
-Adicione este código à sua implementação do método [**IFrameworkView::Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495) de seu provedor de exibição:
+Adicione este código à sua implementação do método [**IFrameworkView::Initialize**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.initialize) de seu provedor de exibição:
 
 ```cpp
 // The first method is called when the IFrameworkView is being created.
@@ -43,7 +43,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## <a name="refresh-displayed-content-after-suspension"></a>Atualizar o conteúdo exibido após a suspensão
 
 
-Quando seu aplicativo manipula o evento Resuming, ele tem a oportunidade de atualizar o conteúdo exibido. Restaure qualquer aplicativo que você tenha salvo com seu manipulador para [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860) e reinicie o processamento. Desenvolvedores de jogos: se você suspendeu seu mecanismo de áudio, agora é o momento de reiniciá-lo.
+Quando seu aplicativo manipula o evento Resuming, ele tem a oportunidade de atualizar o conteúdo exibido. Restaure qualquer aplicativo que você tenha salvo com seu manipulador para [**CoreApplication::Suspending**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.suspending) e reinicie o processamento. Desenvolvedores de jogos: se você suspendeu seu mecanismo de áudio, agora é o momento de reiniciá-lo.
 
 ```cpp
 void App::OnResuming(Platform::Object^ sender, Platform::Object^ args)
@@ -56,7 +56,7 @@ void App::OnResuming(Platform::Object^ sender, Platform::Object^ args)
 }
 ```
 
-Essa chamada de retorno ocorre como uma mensagem de evento processada pelo [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) para o [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do aplicativo. Essa chamada de retorno não será solicitada se você não chamar o [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) no loop principal do aplicativo (implementado no método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) de seu provedor de visualização).
+Essa chamada de retorno ocorre como uma mensagem de evento processada pelo [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) para o [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) do aplicativo. Essa chamada de retorno não será solicitada se você não chamar o [**CoreDispatcher::ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) no loop principal do aplicativo (implementado no método [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run) de seu provedor de visualização).
 
 ``` syntax
 // This method is called after the window becomes active.

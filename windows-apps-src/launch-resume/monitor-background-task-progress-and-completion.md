@@ -10,20 +10,20 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 5417a2cded6dab98747569acc4e6e92356361482
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d8e4a84b0e927be8e1b89e6189e80acd2d3e4266
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595811"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371316"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>Monitorar o progresso e a conclusão de tarefas em segundo plano
 
 **APIs importantes**
 
-- [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786)
-- [**BackgroundTaskProgressEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224785)
-- [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
+- [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration)
+- [**BackgroundTaskProgressEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskprogresseventhandler)
+- [**BackgroundTaskCompletedEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcompletedeventhandler)
 
 Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por uma tarefa em segundo plano executada em um processo à parte. (Para tarefas em segundo plano no processo, você pode definir variáveis compartilhadas para indicar o andamento e a conclusão.)
 
@@ -34,7 +34,7 @@ O progresso e a conclusão da tarefa em segundo plano podem ser monitorados pelo
 ## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>Criar um manipulador de eventos para gerenciar as tarefas em segundo plano concluídas
 
 ### <a name="step-1"></a>Etapa 1
-Crie uma função de manipulador de eventos para gerenciar as tarefas em segundo plano concluídas. Esse código deve seguir um volume específico, o que leva um [ **IBackgroundTaskRegistration** ](https://msdn.microsoft.com/library/windows/apps/br224803) objeto e uma [ **BackgroundTaskCompletedEventArgs** ](https://msdn.microsoft.com/library/windows/apps/br224778) objeto.
+Crie uma função de manipulador de eventos para gerenciar as tarefas em segundo plano concluídas. Esse código deve seguir um volume específico, o que leva um [ **IBackgroundTaskRegistration** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskRegistration) objeto e uma [ **BackgroundTaskCompletedEventArgs** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs) objeto.
 
 Use o seguinte volume para o **OnCompleted** método do manipulador de eventos de tarefa do plano de fundo.
 
@@ -92,7 +92,7 @@ auto completed = [this](BackgroundTaskRegistration^ task, BackgroundTaskComplete
 ## <a name="create-an-event-handler-function-to-handle-background-task-progress"></a>Criar uma função de manipulador de eventos para gerenciar o andamento das tarefas em segundo plano
 
 ### <a name="step-1"></a>Etapa 1
-Crie uma função de manipulador de eventos para gerenciar as tarefas em segundo plano concluídas. Este código deve seguir um volume de memória específico, que tenha um objeto [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) e um objeto [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782):
+Crie uma função de manipulador de eventos para gerenciar as tarefas em segundo plano concluídas. Este código deve seguir um volume de memória específico, que tenha um objeto [**IBackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskRegistration) e um objeto [**BackgroundTaskProgressEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs):
 
 Use o seguinte volume de memória para o método manipulador de eventos de tarefa em segundo plano OnProgress:
 
@@ -215,7 +215,7 @@ void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskReg
 ```
 
 ### <a name="step-2"></a>Etapa 2
-Quando o aplicativo é iniciado ou navega para uma nova página onde o status da tarefa em segundo plano é irrelevante, ele deve obter uma lista das tarefas em segundo plano atualmente registradas e associá-las às funções do manipulador de eventos de progresso e conclusão. A lista das tarefas em segundo plano atualmente registradas pelo aplicativo é mantida na propriedade [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).[**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787).
+Quando o aplicativo é iniciado ou navega para uma nova página onde o status da tarefa em segundo plano é irrelevante, ele deve obter uma lista das tarefas em segundo plano atualmente registradas e associá-las às funções do manipulador de eventos de progresso e conclusão. A lista das tarefas em segundo plano atualmente registradas pelo aplicativo é mantida na propriedade [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration).[**AllTasks**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.alltasks).
 
 Por exemplo, o [exemplo de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) usa o seguinte código para anexar manipuladores de eventos quando a página SampleBackgroundTask é navegada para:
 

@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b9f8de488ad0baea1de9aea5c911f2519385d25
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 02337d02472b7215f0fb9be47419caf52420e0f2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653861"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372414"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore1"></a>Windows Phone Silverlight, a UWP estudo de caso: Bookstore1
 
 
-Este tópico apresenta um estudo de caso de portabilidade de um aplicativo muito simple do Windows Phone Silverlight para um aplicativo do Windows 10 Universal Windows Platform (UWP). Com o Windows 10, você pode criar um pacote de aplicativo único que os clientes podem instalar em uma ampla variedade de dispositivos, e que é o que vamos fazer este estudo de caso. Consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Este tópico apresenta um estudo de caso de portabilidade de um aplicativo muito simple do Windows Phone Silverlight para um aplicativo do Windows 10 Universal Windows Platform (UWP). Com o Windows 10, você pode criar um pacote de aplicativo único que os clientes podem instalar em uma ampla variedade de dispositivos, e que é o que vamos fazer este estudo de caso. Consulte [Guia para aplicativos UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
 
 O aplicativo que portaremos consiste em uma **ListBox** associada a um modelo de exibição. O modelo de exibição tem uma lista de livros que mostra o título, o autor e a capa do livro. As imagens da capa do livro têm **Build Action** definida como **Content** e **Copy to Output Directory** definida como **Do not copy**.
 
@@ -104,7 +104,7 @@ Em Bookstore1WPSL8, fizemos isto:
     return new BitmapImage(new Uri(this.CoverImagePath, UriKind.Relative));
 ```
 
-No Bookstore1Universal, usamos o [esquema de URI](https://msdn.microsoft.com/library/windows/apps/jj655406) ms-appx. Assim, podemos manter o restante do código, usar uma sobrecarga diferente do construtor **System.Uri** para colocar o esquema URI ms-appx em um URI base e acrescentar o restante do caminho a ele. Desta forma:
+No Bookstore1Universal, usamos o [esquema de URI](https://docs.microsoft.com/previous-versions/windows/apps/jj655406(v=win.10)) ms-appx. Assim, podemos manter o restante do código, usar uma sobrecarga diferente do construtor **System.Uri** para colocar o esquema URI ms-appx em um URI base e acrescentar o restante do caminho a ele. Desta forma:
 
 ```csharp
     // this.BookCoverImagePath contains a path of the form "/Assets/CoverImages/one.png".

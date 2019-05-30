@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, impressão
 ms.localizationpriority: medium
-ms.openlocfilehash: 3783105c054e5d956ab64aabe9971bb952d6cae6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 68f8f990209a66a8677afbd1913c95bfd2fce187
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643971"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370289"
 ---
 # <a name="customize-the-print-preview-ui"></a>Personalizar a interface do usuário para visualização de impressão
 
@@ -19,9 +19,9 @@ ms.locfileid: "57643971"
 
 **APIs importantes**
 
--   [**Windows.Graphics.Printing**](https://msdn.microsoft.com/library/windows/apps/BR226489)
--   [**Windows.UI.Xaml.Printing**](https://msdn.microsoft.com/library/windows/apps/BR243325)
--   [**PrintManager**](https://msdn.microsoft.com/library/windows/apps/BR226426)
+-   [**Windows.Graphics.Printing**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing)
+-   [**Windows.UI.Xaml.Printing**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Printing)
+-   [**PrintManager**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.PrintManager)
 
 Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização da impressão. Para obter mais informações sobre a impressão, consulte [Imprimir no aplicativo](print-from-your-app.md).
 
@@ -31,20 +31,20 @@ Esta seção descreve como personalizar as opções de impressão e as configura
 
 ## <a name="customize-print-options"></a>Personalizar opções de impressão
 
-Por padrão, a Interface do Usuário para visualização de impressão mostra as opções de impressão [**ColorMode**](https://msdn.microsoft.com/library/windows/apps/BR226478), [**Copies**](https://msdn.microsoft.com/library/windows/apps/BR226479) e [**Orientation**](https://msdn.microsoft.com/library/windows/apps/BR226486): Além delas, há várias outras opções de impressora comuns que você pode adicionar à interface do usuário para visualização de impressão:
+Por padrão, a Interface do Usuário para visualização de impressão mostra as opções de impressão [**ColorMode**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.colormode), [**Copies**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.copies) e [**Orientation**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.orientation): Além delas, há várias outras opções de impressora comuns que você pode adicionar à interface do usuário para visualização de impressão:
 
--   [**Associação**](https://msdn.microsoft.com/library/windows/apps/BR226476)
--   [**Agrupamento**](https://msdn.microsoft.com/library/windows/apps/BR226477)
--   [**Duplex**](https://msdn.microsoft.com/library/windows/apps/BR226480)
--   [**HolePunch**](https://msdn.microsoft.com/library/windows/apps/BR226481)
--   [**InputBin**](https://msdn.microsoft.com/library/windows/apps/BR226482)
--   [**MediaSize**](https://msdn.microsoft.com/library/windows/apps/BR226483)
--   [**Tipo de mídia**](https://msdn.microsoft.com/library/windows/apps/BR226484)
--   [**Mpeza**](https://msdn.microsoft.com/library/windows/apps/BR226485)
--   [**PrintQuality**](https://msdn.microsoft.com/library/windows/apps/BR226487)
--   [**Grampeamento**](https://msdn.microsoft.com/library/windows/apps/BR226488)
+-   [**Associação**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.binding)
+-   [**Agrupamento**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.collation)
+-   [**Duplex**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.duplex)
+-   [**HolePunch**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.holepunch)
+-   [**InputBin**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.inputbin)
+-   [**MediaSize**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.mediasize)
+-   [**MediaType**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.mediatype)
+-   [**NUp**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.nup)
+-   [**PrintQuality**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.printquality)
+-   [**Staple**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.staple)
 
-Essas opções são definidas na classe [**StandardPrintTaskOptions**](https://msdn.microsoft.com/library/windows/apps/BR226475). Você pode adicionar ou remover opções na lista de opções exibida na interface do usuário para visualização de impressão. Também pode mudar a ordem de exibição dessas opções e definir as configurações padrão que são apresentadas para o usuário.
+Essas opções são definidas na classe [**StandardPrintTaskOptions**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.StandardPrintTaskOptions). Você pode adicionar ou remover opções na lista de opções exibida na interface do usuário para visualização de impressão. Também pode mudar a ordem de exibição dessas opções e definir as configurações padrão que são apresentadas para o usuário.
 
 No entanto, as modificações feitas com o uso desse método só afetam a interface do usuário para visualização de impressão. O usuário sempre pode acessar todas as opções com suporte na impressora tocando em **Mais configurações** na interface do usuário para visualização de impressão.
 
@@ -56,7 +56,7 @@ No entanto, as modificações feitas com o uso desse método só afetam a interf
 
 Quando a tela do aplicativo estiver carregada, ela se registrará para o contrato do botão Imprimir. Parte desse registro inclui definir o manipulador de eventos [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597). O código para personalizar as opções exibidas na interface de usuário para visualização da impressão é adicionado ao manipulador de eventos **PrintTaskRequested**.
 
-Modifique o manipulador de eventos [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) para incluir as instruções [**printTask.options**](https://msdn.microsoft.com/library/windows/apps/BR226469) que configuram os parâmetros de impressão que você deseja exibir na interface do usuário para visualização de impressão. Para a tela em seu aplicativo para o qual você quer mostrar uma lista personalizada de opções de impressão, substitua o manipulador de eventos **PrintTaskRequested** na classe auxiliar para incluir o código que especifica as opções a serem exibidas quando a tela for impressa.
+Modifique o manipulador de eventos [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) para incluir as instruções [**printTask.options**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtask.options) que configuram os parâmetros de impressão que você deseja exibir na interface do usuário para visualização de impressão. Para a tela em seu aplicativo para o qual você quer mostrar uma lista personalizada de opções de impressão, substitua o manipulador de eventos **PrintTaskRequested** na classe auxiliar para incluir o código que especifica as opções a serem exibidas quando a tela for impressa.
 
 ``` csharp
 protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequestedEventArgs e)
@@ -96,11 +96,11 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**Importante**  chamando [ **displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)() remove todas as opções de impressa de visualização de impressão da interface do usuário, incluindo o **mais configurações** link. Não deixe de acrescentar as opções que você quer mostrar na interface de usuário para visualização de impressão.
+**Importante**  chamando [ **displayedOptions.clear**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtaskoptions.displayedoptions)() remove todas as opções de impressa de visualização de impressão da interface do usuário, incluindo o **mais configurações** link. Não deixe de acrescentar as opções que você quer mostrar na interface de usuário para visualização de impressão.
 
 ### <a name="specify-default-options"></a>Especificar opções padrão
 
-Você também pode definir os valores padrão das opções na interface de usuário para visualização de impressão. A linha de código a seguir, obtida do último exemplo, define o valor padrão da opção [**MediaSize**](https://msdn.microsoft.com/library/windows/apps/BR226483).
+Você também pode definir os valores padrão das opções na interface de usuário para visualização de impressão. A linha de código a seguir, obtida do último exemplo, define o valor padrão da opção [**MediaSize**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.mediasize).
 
 ``` csharp
          // Preset the default value of the printer option
@@ -111,7 +111,7 @@ Você também pode definir os valores padrão das opções na interface de usuá
 
 Esta seção mostra como criar uma nova opção de impressão, definir uma lista de valores aceitos por essa opção e adicionar a opção à visualização de impressão. Como na seção anterior, adicione a nova opção de impressão no manipulador de eventos [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597).
 
-Primeiro, obtenha um objeto [**PrintTaskOptionDetails**](https://msdn.microsoft.com/library/windows/apps/Hh701256). Isso é usado para adicionar a nova opção à interface do usuário para visualização de impressão. Depois, limpe a lista de opções que são apresentadas na interface do usuário para visualização de impressão e adicione as opções que você quer exibir quando o usuário quiser imprimir a partir do aplicativo. Após isso, crie a nova opção de impressão e inicialize a lista de valores da opção. Por fim, adicione a nova opção e atribua um manipulador para o evento **OptionChanged**.
+Primeiro, obtenha um objeto [**PrintTaskOptionDetails**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails). Isso é usado para adicionar a nova opção à interface do usuário para visualização de impressão. Depois, limpe a lista de opções que são apresentadas na interface do usuário para visualização de impressão e adicione as opções que você quer exibir quando o usuário quiser imprimir a partir do aplicativo. Após isso, crie a nova opção de impressão e inicialize a lista de valores da opção. Por fim, adicione a nova opção e atribua um manipulador para o evento **OptionChanged**.
 
 ``` csharp
 protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequestedEventArgs e)
@@ -161,7 +161,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 
 As opções aparecem na interface do usuário para visualização de impressão na mesma ordem em que foram acrescentadas, com a primeira exibida no topo da janela. Neste exemplo, a opção personalizada é acrescentada por último e, portanto, aparece no final da lista de opções. Porém, você pode colocá-la em qualquer lugar na lista. Opções de impressão personalizadas não precisam ser adicionadas por último.
 
-Quando o usuário mudar a opção selecionada na sua opção personalizada, atualize a imagem de visualização de impressão. Chame o método [**InvalidatePreview**](https://msdn.microsoft.com/library/windows/apps/Hh702146) para redesenhar a imagem na interface do usuário para visualização de impressão, como mostrado abaixo.
+Quando o usuário mudar a opção selecionada na sua opção personalizada, atualize a imagem de visualização de impressão. Chame o método [**InvalidatePreview**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.printing.printdocument.invalidatepreview) para redesenhar a imagem na interface do usuário para visualização de impressão, como mostrado abaixo.
 
 ``` csharp
 async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, PrintTaskOptionChangedEventArgs args)
@@ -185,6 +185,6 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Diretrizes de design para impressão](https://msdn.microsoft.com/library/windows/apps/Hh868178)
+* [Diretrizes de design para impressão](https://docs.microsoft.com/windows/uwp/devices-sensors/printing-and-scanning)
 * [Vídeo da Build 2015: Desenvolvimento de aplicativos que são impressas no Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [Exemplo de impressão de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619984)

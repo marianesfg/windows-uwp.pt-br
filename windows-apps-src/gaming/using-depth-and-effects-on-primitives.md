@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, profundidade, efeitos, primitivos, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 02911338da858e3718235736cee7969a7bdebae2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 63af04475e897dfade3afec91b2a0fa0d9790f84
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646581"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367498"
 ---
 # <a name="use-depth-and-effects-on-primitives"></a>Usar efeitos e profundidade em primitivas
 
@@ -34,7 +34,7 @@ Também supomos que você leu [Guia de início rápido: configurando recursos Di
 ------------
 ### <a name="1-defining-cube-variables"></a>1. Definindo variáveis de cubo
 
-Primeiro, precisamos definir as estruturas **SimpleCubeVertex** e **ConstantBuffer** para o cubo. Essas estruturas especificam a posição de vértice e as cores do cubo e como o cubo será exibido. Declaramos [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) e [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) com [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) e declaramos uma instância do **ConstantBuffer**.
+Primeiro, precisamos definir as estruturas **SimpleCubeVertex** e **ConstantBuffer** para o cubo. Essas estruturas especificam a posição de vértice e as cores do cubo e como o cubo será exibido. Declaramos [**ID3D11DepthStencilView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11depthstencilview) e [**ID3D11Buffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11buffer) com [**ComPtr**](https://docs.microsoft.com/cpp/windows/comptr-class) e declaramos uma instância do **ConstantBuffer**.
 
 ```cpp
 struct SimpleCubeVertex
@@ -66,7 +66,7 @@ private:
 
 ### <a name="2-creating-a-depth-stencil-view"></a>2. Criando um modo de exibição de estêncil de profundidade
 
-Além de criar o modo de exibição de destino de renderização, também criamos um modo de exibição de estêncil de profundidade. O modo de exibição de estêncil de profundidade permite que o Direct3D renderiza de forma eficiente os objetos mais próximos à câmera na frente dos objetos mais longe da câmera. Antes de podemos criar um modo de exibição para um buffer de estêncil de profundidade, devemos criar o buffer de estêncil de profundidade. Podemos preencher uma [ **D3D11\_TEXTURE2D\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476253) para descrever o buffer de estêncil de profundidade e, em seguida, chamar [ **ID3D11Device::CreateTexture2D**  ](https://msdn.microsoft.com/library/windows/desktop/ff476521) para criar o buffer de estêncil de profundidade. Para criar o modo de exibição de estêncil de profundidade, podemos preencher uma [ **D3D11\_PROFUNDIDADE\_ESTÊNCIL\_exibição\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476112) para descrever o modo de exibição de estêncil de profundidade e passar a descrição do modo de exibição de estêncil de profundidade e o buffer de estêncil de profundidade [ **ID3D11Device::CreateDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476507).
+Além de criar o modo de exibição de destino de renderização, também criamos um modo de exibição de estêncil de profundidade. O modo de exibição de estêncil de profundidade permite que o Direct3D renderiza de forma eficiente os objetos mais próximos à câmera na frente dos objetos mais longe da câmera. Antes de podemos criar um modo de exibição para um buffer de estêncil de profundidade, devemos criar o buffer de estêncil de profundidade. Podemos preencher uma [ **D3D11\_TEXTURE2D\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_texture2d_desc) para descrever o buffer de estêncil de profundidade e, em seguida, chamar [ **ID3D11Device::CreateTexture2D**  ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createtexture2d) para criar o buffer de estêncil de profundidade. Para criar o modo de exibição de estêncil de profundidade, podemos preencher uma [ **D3D11\_PROFUNDIDADE\_ESTÊNCIL\_exibição\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_depth_stencil_view_desc) para descrever o modo de exibição de estêncil de profundidade e passar a descrição do modo de exibição de estêncil de profundidade e o buffer de estêncil de profundidade [ **ID3D11Device::CreateDepthStencilView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createdepthstencilview).
 
 ```cpp
         // Once the render target view is created, create a depth stencil view.  This
@@ -148,15 +148,15 @@ Atualizamos os parâmetros de projeção de perspectiva para o buffer constante,
 
 Neste aplicativo, criamos sombreadores de vértice e pixel mais complexos do que o que descrevemos no tutorial anterior, [Criando sombreadores e desenhando primitivas](creating-shaders-and-drawing-primitives.md). O sombreador de vértice deste aplicativo transforma cada posição de vértice no espaço de projeção e passa a cor de vértice para o sombreador de pixel.
 
-A matriz do aplicativo de [ **D3D11\_entrada\_elemento\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) estruturas que descrevem o layout do código de sombreador de vértice tem dois elementos de layout: um elemento Define a posição de vértice e o outro elemento define a cor.
+A matriz do aplicativo de [ **D3D11\_entrada\_elemento\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_input_element_desc) estruturas que descrevem o layout do código de sombreador de vértice tem dois elementos de layout: um elemento Define a posição de vértice e o outro elemento define a cor.
 
 Podemos criar buffers de vértice, índice e constante para definir um cubo em órbita.
 
 **Para definir um cubo em órbita**
 
 1.  Primeiro, definimos o cubo. Atribuímos a cada vértice uma cor, além de uma posição. Isso permite que o sombreador de pixels colora cada face de forma diferente, para que a face possa ser distinguida.
-2.  Em seguida, descreveremos os buffers de índice e vértice ([**D3D11\_BUFFER\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) e [ **D3D11\_SUBRESOURCE\_Dados**](https://msdn.microsoft.com/library/windows/desktop/ff476220)) usando a definição do cubo. Chamamos [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) uma vez para cada buffer.
-3.  Em seguida, criamos um buffer de constantes ([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092)) para passar matrizes de modelo, exibição e projeção para o sombreador de vértices. Mais tarde, podemos usar o buffer constante para girar o cubo e aplicar uma projeção de perspectiva a ele. Chamamos [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) para criar o buffer constante.
+2.  Em seguida, descreveremos os buffers de índice e vértice ([**D3D11\_BUFFER\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc) e [ **D3D11\_SUBRESOURCE\_Dados**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data)) usando a definição do cubo. Chamamos [**ID3D11Device::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer) uma vez para cada buffer.
+3.  Em seguida, criamos um buffer de constantes ([**D3D11\_BUFFER\_DESC**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc)) para passar matrizes de modelo, exibição e projeção para o sombreador de vértices. Mais tarde, podemos usar o buffer constante para girar o cubo e aplicar uma projeção de perspectiva a ele. Chamamos [**ID3D11Device::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer) para criar o buffer constante.
 4.  Em seguida, podemos especificar a transformação da exibição que corresponde a uma posição de câmera de X = 0, Y = 1, Z = 2.
 5.  Finalmente, declaramos uma variável de *grau* que usaremos para animar o cubo, girando cada quadro dele.
 
@@ -336,20 +336,20 @@ Podemos criar buffers de vértice, índice e constante para definir um cubo em �
 
 ### <a name="5-rotating-and-drawing-the-cube-and-presenting-the-rendered-image"></a>5. Girando e desenhar o cubo e apresentar a imagem renderizada
 
-Entramos em um loop infinito para processar e exibir a cena continuamente. Chamamos a função em linha (BasicMath.h) **rotationY** com uma quantidade de rotação para definir valores que vão girar a matriz de modelo do cubo em torno do eixo Y. Em seguida, chamamos [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) para atualizar o buffer constante e girar o modelo de cubo. Chamamos [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar o destino de renderização como o destino de saída. Nesta chamada a **OMSetRenderTargets**, passamos o modo de exibição de estêncil de profundidade. Chamamos [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) para limpar o destino de renderização para uma cor azul sólida e chamamos [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387) para limpar o buffer de profundidade.
+Entramos em um loop infinito para processar e exibir a cena continuamente. Chamamos a função em linha (BasicMath.h) **rotationY** com uma quantidade de rotação para definir valores que vão girar a matriz de modelo do cubo em torno do eixo Y. Em seguida, chamamos [**ID3D11DeviceContext::UpdateSubresource**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-updatesubresource) para atualizar o buffer constante e girar o modelo de cubo. Chamamos [**ID3D11DeviceContext::OMSetRenderTargets**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-omsetrendertargets) para especificar o destino de renderização como o destino de saída. Nesta chamada a **OMSetRenderTargets**, passamos o modo de exibição de estêncil de profundidade. Chamamos [**ID3D11DeviceContext::ClearRenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-clearrendertargetview) para limpar o destino de renderização para uma cor azul sólida e chamamos [**ID3D11DeviceContext::ClearDepthStencilView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-cleardepthstencilview) para limpar o buffer de profundidade.
 
 No loop sem fim, também desenhamos o cubo na superfície azul.
 
 **Para desenhar o cubo**
 
-1.  Primeiro, chamamos [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) para descrever como os dados de buffer de vértices são transmitidos para o estágio de assembler de entrada.
-2.  Em seguida, chamamos [**ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) e [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453) para associar os buffers de vértice e índice para o estágio de assembler de entrada.
-3.  Em seguida, chamamos [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) com o [ **D3D11\_PRIMITIVO\_topologia\_ TRIANGLESTRIP** ](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) valor a ser especificado para o estágio do assembler de entrada interpretar os dados de vértice como uma faixa de triângulo.
-4.  Chamamos [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) para iniciar o estágio de sombreador de vértice com o código de sombreador de vértice e [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472) para iniciar o estágio de sombreador de pixel com o código de sombreador de pixel.
-5.  Chamamos [**ID3D11DeviceContext::VSSetConstantBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476491) para definir o buffer constante que é usado pelo estágio de pipeline do sombreador de vértice.
-6.  Finalmente, chamamos [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) para desenhar o cubo e enviá-lo para a pipeline de renderização.
+1.  Primeiro, chamamos [**ID3D11DeviceContext::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout) para descrever como os dados de buffer de vértices são transmitidos para o estágio de assembler de entrada.
+2.  Em seguida, chamamos [**ID3D11DeviceContext::IASetVertexBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers) e [**ID3D11DeviceContext::IASetIndexBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetindexbuffer) para associar os buffers de vértice e índice para o estágio de assembler de entrada.
+3.  Em seguida, chamamos [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology) com o [ **D3D11\_PRIMITIVO\_topologia\_ TRIANGLESTRIP** ](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ff476189(v=vs.85)) valor a ser especificado para o estágio do assembler de entrada interpretar os dados de vértice como uma faixa de triângulo.
+4.  Chamamos [**ID3D11DeviceContext::VSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vssetshader) para iniciar o estágio de sombreador de vértice com o código de sombreador de vértice e [**ID3D11DeviceContext::PSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader) para iniciar o estágio de sombreador de pixel com o código de sombreador de pixel.
+5.  Chamamos [**ID3D11DeviceContext::VSSetConstantBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vssetconstantbuffers) para definir o buffer constante que é usado pelo estágio de pipeline do sombreador de vértice.
+6.  Finalmente, chamamos [**ID3D11DeviceContext::DrawIndexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed) para desenhar o cubo e enviá-lo para a pipeline de renderização.
 
-Como nos tutoriais anteriores, chamamos [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) para apresentar a imagem renderizada para a janela.
+Como nos tutoriais anteriores, chamamos [**IDXGISwapChain::Present**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-present) para apresentar a imagem renderizada para a janela.
 
 ```cpp
             // Update the constant buffer to rotate the cube model.

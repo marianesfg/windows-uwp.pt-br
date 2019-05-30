@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: de4d8fc797efe2a0dde7340f42208a97bccf0b10
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 98251ecba05dd27cbe3112a94b6cfcd36440d380
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645101"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371237"
 ---
 # <a name="create-a-windows-hello-login-service"></a>Criar um serviço de logon do Windows Hello
 
@@ -51,7 +51,7 @@ Neste exercício, você começará com o app Windows Hello criado no primeiro la
     }
     ```
 
-    Você deve ter notado a lista comentada de PassportDevices. Esta é uma modificação que você precisará fazer em um modelo de usuário existente na sua implementação atual. A lista de PassportDevices conterá uma deviceID, a chave pública criada no Windows Hello e uma [**KeyCredentialAttestationResult**](https://msdn.microsoft.com/library/windows/apps/dn973034). Neste laboratório prático, você precisará implementar a keyAttestationResult, já que ele é fornecida pelo Windows Hello apenas em dispositivos que possuem um chip TPM (Trusted Platform Modules). A **KeyCredentialAttestationResult** é uma combinação de várias propriedades e precisa ser dividida para ser salva e carregada em um banco de dados.
+    Você deve ter notado a lista comentada de PassportDevices. Esta é uma modificação que você precisará fazer em um modelo de usuário existente na sua implementação atual. A lista de PassportDevices conterá uma deviceID, a chave pública criada no Windows Hello e uma [**KeyCredentialAttestationResult**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredentialAttestationResult). Neste laboratório prático, você precisará implementar a keyAttestationResult, já que ele é fornecida pelo Windows Hello apenas em dispositivos que possuem um chip TPM (Trusted Platform Modules). A **KeyCredentialAttestationResult** é uma combinação de várias propriedades e precisa ser dividida para ser salva e carregada em um banco de dados.
 
 -   Crie uma nova classe na pasta AuthService chamada "PassportDevice.cs". Este é o modelo para os dispositivos do Windows Hello conforme discutido acima. Altere a definição de classe para pública e adicione as propriedades seguintes.
 

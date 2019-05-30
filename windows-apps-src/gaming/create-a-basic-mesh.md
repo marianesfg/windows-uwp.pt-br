@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, jogos, malha, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: d3b6717c0b2d9d85e9c81e78fcaa1df1abbea23b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9b5aa00b5beb7c80a903fbf17d432f73f16561a2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595641"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368980"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>Criar e exibir uma malha básica
 
@@ -28,7 +28,7 @@ Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos 
 
 ### <a name="technologies"></a>Tecnologias
 
--   [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh769064)
+-   [Direct3D](https://docs.microsoft.com/windows/desktop/getting-started-with-direct3d)
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
@@ -77,7 +77,7 @@ Portanto, você tem 8 vértices, cada um com uma cor específica. Cada vértice/
 
 ### <a name="step-2-set-up-the-input-layout"></a>Etapa 2: Configurar o layout de entrada
 
-Agora, os vértices estão na memória. O dispositivo gráfico, porém, tem sua própria memória e você usa o Direct3D para acessá-la. Para que os seus dados sejam disponibilizados no dispositivo gráfico para processamento, é preciso limpar o caminho e deixá-lo como era: declare como os dados de vértice são organizados para que o dispositivo gráfico possa interpretá-los quando eles forem obtidos do seu jogo. Para isso, use [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575).
+Agora, os vértices estão na memória. O dispositivo gráfico, porém, tem sua própria memória e você usa o Direct3D para acessá-la. Para que os seus dados sejam disponibilizados no dispositivo gráfico para processamento, é preciso limpar o caminho e deixá-lo como era: declare como os dados de vértice são organizados para que o dispositivo gráfico possa interpretá-los quando eles forem obtidos do seu jogo. Para isso, use [**ID3D11InputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11inputlayout).
 
 Declare e defina o layout de entrada para o buffer de vértices.
 
@@ -106,21 +106,21 @@ Nesse código, você define um layout para os vértices; especificamente, quais 
 
     "Porém, o valor de enumeração indica RGB, não XYZ!" você observa. Muito bem! Nos dois casos de dados de cor e dados de coordenada, você geralmente usa 3 ou 4 valores de componentes, então, por que não usar o mesmo formato em ambos? A semântica HLSL, não o nome do formato, indica como o sombreador trata os dados.
 
--   **COR**: Essa é um semântica para dados de cores do HLSL. Como em **POSITION**, ela consiste em três valores de ponto de flutuação de 32 bits (DirectX::XMFLOAT3). Cada valor contém um componente de cor: vermelho (r), azul (b) ou verde (g), expressos como um número flutuante entre 0 e 1.
+-   **COLOR**: Essa é um semântica para dados de cores do HLSL. Como em **POSITION**, ela consiste em três valores de ponto de flutuação de 32 bits (DirectX::XMFLOAT3). Cada valor contém um componente de cor: vermelho (r), azul (b) ou verde (g), expressos como um número flutuante entre 0 e 1.
 
     Os valores **COLOR** são tipicamente retornados como um valor RGBA de componente 4 no final do pipeline de sombreador. Para esse exemplo, você definirá o valor alfabético "A" como 1.0 (opacidade máxima) no pipeline de sombreador para todos os pixels.
 
-Para obter uma lista completa de formatos, consulte [ **DXGI\_formato**](https://msdn.microsoft.com/library/windows/desktop/bb173059). Para ver uma lista completa de semânticas HLSL, consulte [Semânticas](https://msdn.microsoft.com/library/windows/desktop/bb509647).
+Para obter uma lista completa de formatos, consulte [ **DXGI\_formato**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format). Para ver uma lista completa de semânticas HLSL, consulte [Semânticas](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics).
 
-Chame [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) e crie o layout de entrada no dispositivo Direct3D. Agora, você precisa criar um buffer que possa realmente manter os dados.
+Chame [**ID3D11Device::CreateInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout) e crie o layout de entrada no dispositivo Direct3D. Agora, você precisa criar um buffer que possa realmente manter os dados.
 
 ### <a name="step-3-populate-the-vertex-buffers"></a>Etapa 3: Popule os buffers de vértice
 
 Os buffers de vértices contêm a lista de vértices de cada triângulo da malha. Cada vértice deve ser exclusivo nessa lista. Em nosso exemplo, há 8 vértices para o cubo. O sombreador de vértice é executado no dispositivo gráfico e lê o buffer de vértices, e interpreta os dados com base no layout de entrada especificado na etapa anterior.
 
-No próximo exemplo, você fornecerá uma descrição e um sub-recurso para o buffer, o que informará o Direct3D sobre vários aspectos do mapeamento físico dos dados de vértice e como tratá-lo na memória, no dispositivo gráfico. Isso é necessário porque você usa um [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) genérico, que pode conter qualquer coisa! O [ **D3D11\_BUFFER\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) e [ **D3D11\_SUBRESOURCE\_dados** ](https://msdn.microsoft.com/library/windows/desktop/ff476220)estruturas são fornecidas para garantir que o Direct3D compreenda o layout de memória física do buffer, incluindo o tamanho de cada elemento de vértice no buffer, bem como o tamanho máximo da lista de vértice. Aqui, também é possível controlar o acesso à memória do buffer e a forma como ela é partilhada, mas isso está um pouco além do escopo deste tutorial.
+No próximo exemplo, você fornecerá uma descrição e um sub-recurso para o buffer, o que informará o Direct3D sobre vários aspectos do mapeamento físico dos dados de vértice e como tratá-lo na memória, no dispositivo gráfico. Isso é necessário porque você usa um [**ID3D11Buffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11buffer) genérico, que pode conter qualquer coisa! O [ **D3D11\_BUFFER\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc) e [ **D3D11\_SUBRESOURCE\_dados** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data)estruturas são fornecidas para garantir que o Direct3D compreenda o layout de memória física do buffer, incluindo o tamanho de cada elemento de vértice no buffer, bem como o tamanho máximo da lista de vértice. Aqui, também é possível controlar o acesso à memória do buffer e a forma como ela é partilhada, mas isso está um pouco além do escopo deste tutorial.
 
-Depois de configurar o buffer, você chama [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) para criá-lo efetivamente. Claro, se você tiver mais de um objeto, crie buffers para cada modelo exclusivo.
+Depois de configurar o buffer, você chama [**ID3D11Device::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer) para criá-lo efetivamente. Claro, se você tiver mais de um objeto, crie buffers para cada modelo exclusivo.
 
 Declare e crie o buffer de vértices.
 
@@ -187,9 +187,9 @@ unsigned short cubeIndices[] =
     0, 4, 7 };
 ```
 
-Trinta e seis elementos de índice no buffer indicam redundância em excesso, pois há apenas 8 vértices. Se você optar por eliminar alguns das redundâncias e usar um tipo de lista de vértice diferentes, como uma faixa ou um ventilador, você deve especificar esse tipo quando você fornece um determinado [ **D3D11\_PRIMITIVO\_topologia** ](https://msdn.microsoft.com/library/windows/desktop/ff476189) de valor para a [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) método.
+Trinta e seis elementos de índice no buffer indicam redundância em excesso, pois há apenas 8 vértices. Se você optar por eliminar alguns das redundâncias e usar um tipo de lista de vértice diferentes, como uma faixa ou um ventilador, você deve especificar esse tipo quando você fornece um determinado [ **D3D11\_PRIMITIVO\_topologia** ](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ff476189(v=vs.85)) de valor para a [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology) método.
 
-Para obter mais informações sobre as diferentes técnicas de lista de índices, consulte [Topologias primitivas](https://msdn.microsoft.com/library/windows/desktop/bb205124).
+Para obter mais informações sobre as diferentes técnicas de lista de índices, consulte [Topologias primitivas](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-primitive-topologies).
 
 ### <a name="step-5-create-a-constant-buffer-for-your-transformation-matrices"></a>Etapa 5: Criar um buffer de constantes para suas matrizes de transformação
 
@@ -289,7 +289,7 @@ m_constantBufferData.projection = DirectX::XMFLOAT4X4(
             );
 ```
 
-Enquanto está aqui, defina os buffers de vértices e índices no  [ID3D11DeviceContext](https://msdn.microsoft.com/library/windows/desktop/ff476149) e também a topologia que está usando.
+Enquanto está aqui, defina os buffers de vértices e índices no  [ID3D11DeviceContext](https://docs.microsoft.com/windows/desktop/direct3d11/d3d11-graphics-reference-10level9-context) e também a topologia que está usando.
 
 ```cpp
 // Set the vertex and index buffers, and specify the way they define geometry.
@@ -412,7 +412,7 @@ Coloque esse código em um arquivo HLSL separado do HLSL de sombreador de vérti
 
 ### <a name="step-8-rasterizing-and-displaying-the-mesh"></a>Etapa 8: Rasterização e exibindo a malha
 
-Vamos executar o pipeline. É fácil: chame [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/bb173565).
+Vamos executar o pipeline. É fácil: chame [**ID3D11DeviceContext::DrawIndexed**](https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-drawindexed).
 
 Desenhe o cubo.
 

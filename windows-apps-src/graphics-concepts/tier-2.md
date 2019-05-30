@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f9f9a69c0e30459929d1e31084ea88b3f7ebbd0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c48b02de34bd37acced8ef65859708f31fd78ca2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612881"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370866"
 ---
 # <a name="tier-2"></a>Nível 2
 
@@ -42,7 +42,7 @@ As gravações em blocos não mapeados são impedidas de chegar à memória, mas
 
 A filtragem de textura com um volume que abrange blocos **NULOS** e não **NULOS** contribui para 0 (com padrões para componentes de formato ausentes) de texels em blocos **NULOS** na operação de filtragem geral. Alguns hardwares mais antigos não atender a esse requisito e retornam 0 (com padrões para componentes de formato ausentes) para o resultado de filtro completo se quaisquer texels (com peso diferente de zero) se enquadrarem em um bloco **NULO**. Nenhum outro hardware terá permissão para não atender ao requisito de incluir todos os texels (peso diferente de zero) na operação de filtragem.
 
-Os acessos a texels **NULOS** fazem com que a operação [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083) no feedback de status de uma leitura de textura retorne false. Isso não depende de como o resultado do acesso à textura pode fazer com que a gravação seja mascarada no sombreador e de quantos componentes estão no formato da textura (a combinação deles pode dar a impressão de que a textura não precisa ser acessada).
+Os acessos a texels **NULOS** fazem com que a operação [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) no feedback de status de uma leitura de textura retorne false. Isso não depende de como o resultado do acesso à textura pode fazer com que a gravação seja mascarada no sombreador e de quantos componentes estão no formato da textura (a combinação deles pode dar a impressão de que a textura não precisa ser acessada).
 
 ## <a name="span-idalignmentconstraintsspanspan-idalignmentconstraintsspanspan-idalignmentconstraintsspanalignment-constraints"></a><span id="Alignment_constraints"></span><span id="alignment_constraints"></span><span id="ALIGNMENT_CONSTRAINTS"></span>Restrições de alinhamento
 

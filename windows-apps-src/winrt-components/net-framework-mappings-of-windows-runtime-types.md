@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ef98f3f4a9d20e836d5f9bddbc111a232f864bf5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: dc9d71f6f02ec62fdf96161c397f7d2d7363b506
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602611"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372517"
 ---
 # <a name="net-framework-mappings-of-windows-runtime-types"></a>Mapeamentos do .NET Framework dos tipos do Windows Runtime
 
 
 
-A tabela a seguir lista os mapeamentos que o .NET Framework faz entre os tipos da Plataforma Universal do Windows (UWP) e os tipos do .NET Framework. Em um aplicativo Universal do Windows escrito com código gerenciado, o IntelliSense mostra o tipo do .NET Framework, em vez do tipo UWP. Por exemplo, caso um método do Windows Runtime utilize um parâmetro do tipo IVector&lt;string&gt;, o IntelliSense mostra um parâmetro do tipo IList&lt;string&gt;. Da mesma forma, em um componente do Tempo de Execução do Windows escrito com código gerenciado, você usa o tipo do .NET Framework em assinaturas de membro. Quando a [Ferramenta de Exportação de Metadados do Tempo de Execução do Windows (Winmdexp.exe)](https://msdn.microsoft.com/library/hh925576.aspx) gera o componente do Tempo de Execução do Windows, o tipo do .NET Framework se torna o tipo UWP correspondente.
+A tabela a seguir lista os mapeamentos que o .NET Framework faz entre os tipos da Plataforma Universal do Windows (UWP) e os tipos do .NET Framework. Em um aplicativo Universal do Windows escrito com código gerenciado, o IntelliSense mostra o tipo do .NET Framework, em vez do tipo UWP. Por exemplo, caso um método do Windows Runtime utilize um parâmetro do tipo IVector&lt;string&gt;, o IntelliSense mostra um parâmetro do tipo IList&lt;string&gt;. Da mesma forma, em um componente do Tempo de Execução do Windows escrito com código gerenciado, você usa o tipo do .NET Framework em assinaturas de membro. Quando a [Ferramenta de Exportação de Metadados do Tempo de Execução do Windows (Winmdexp.exe)](https://docs.microsoft.com/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool) gera o componente do Tempo de Execução do Windows, o tipo do .NET Framework se torna o tipo UWP correspondente.
 
 ## <a name="mapping-tables"></a>Tabelas de mapeamento
 
@@ -71,7 +71,7 @@ Tabela 2: Tipos de UWP que são mapeados para tipos do .NET Framework com o mesm
 | Windows.UI.Xaml                     | DurationType       | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml                     | GridLength         | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml                     | GridUnitType       | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml                     | Thickness          | System.Runtime.WindowsRuntime.UI.Xaml.dll |
+| Windows.UI.Xaml                     | Espessura          | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml.Controls.Primitives | GeneratorPosition  | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml.Media               | Matrix             | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml.Media.Animation     | KeyTime            | System.Runtime.WindowsRuntime.UI.Xaml.dll |

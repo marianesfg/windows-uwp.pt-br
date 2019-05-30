@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4138fd7275f7e1f9addb7685ff0846e756701003
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9712b4498b03460568d20d4c8e27172ad5c14360
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661981"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362213"
 ---
 # <a name="resource-types"></a>Tipos de recurso
 
@@ -110,12 +110,12 @@ Cada estágio de sombreador permite até 15 buffers constantes de sombreador; ca
 
 Use um buffer constante para armazenar os resultados da fase de fluxo de saída.
 
-Consulte [Constantes de sombreador (DirectX HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581) para obter um exemplo de declaração de um buffer constante em um sombreador.
+Consulte [Constantes de sombreador (DirectX HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants) para obter um exemplo de declaração de um buffer constante em um sombreador.
 
 ## <a name="span-idtextureresourcesspanspan-idtextureresourcesspanspan-idtextureresourcesspanspan-idtexture-resourcesspantexture-resources"></a><span id="Texture_Resources"></span><span id="texture_resources"></span><span id="TEXTURE_RESOURCES"></span><span id="texture-resources"></span>Recursos de textura
 
 
-Um recurso de textura é uma coleção estruturada de dados projetada para armazenar texels. Diferente dos buffers, as texturas podem ser filtradas por amostras de texturas à medida que são lidas por unidades de sombreador. O tipo de textura afeta como a textura é filtrada. Um texel representa a menor unidade de uma textura que pode ser lida ou gravada pelo pipeline. Cada texel contém componentes de 1 a 4, organizados em um dos formatos DXGI (consulte [ **DXGI\_formato**](https://msdn.microsoft.com/library/windows/desktop/bb173059)).
+Um recurso de textura é uma coleção estruturada de dados projetada para armazenar texels. Diferente dos buffers, as texturas podem ser filtradas por amostras de texturas à medida que são lidas por unidades de sombreador. O tipo de textura afeta como a textura é filtrada. Um texel representa a menor unidade de uma textura que pode ser lida ou gravada pelo pipeline. Cada texel contém componentes de 1 a 4, organizados em um dos formatos DXGI (consulte [ **DXGI\_formato**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)).
 
 Texturas são criadas como um recurso estruturado para que seu tamanho seja conhecido. Entretanto, cada textura pode ter tipos ou não no momento em que recurso é criado, contanto que o tipo seja especificado usando um modo de exibição quando a textura está vinculada ao pipeline.
 

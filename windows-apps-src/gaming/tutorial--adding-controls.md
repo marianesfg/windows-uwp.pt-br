@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, controles, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 369aa076184f79aa1e43c3aac11706982a6be268
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0ff7088ec4062973d0b9d1ff6d20d7992e4135c3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595411"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367952"
 ---
 # <a name="add-controls"></a>Adicionar controles
 
@@ -43,11 +43,11 @@ Ao ser inicializada, a classe **MoveLookController** no jogo de exemplo é regis
 
 Evento | Descrição
 :------ | :-------
-[**CoreWindow::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) | O botão esquerdo ou direito do mouse foi pressionado (e mantido nessa posição) ou a superfície sensível ao toque foi tocada.
-[**CoreWindow::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) |O mouse foi movido ou uma ação de arrastar foi executada na superfície sensível ao toque.
-[**CoreWindow::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) |O botão esquerdo do mouse foi liberado ou o objeto em contato com a superfície sensível ao toque foi erguido.
-[**CoreWindow::PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208275) |O ponteiro moveu-se para fora da janela principal.
-[**Windows::Devices::Input::MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356) | O mouse se moveu em uma determinada distância. Lembre-se de que só estamos interessados nos valores delta de movimento do mouse e não na atual posição X-Y.
+[**CoreWindow::PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed) | O botão esquerdo ou direito do mouse foi pressionado (e mantido nessa posição) ou a superfície sensível ao toque foi tocada.
+[**CoreWindow::PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) |O mouse foi movido ou uma ação de arrastar foi executada na superfície sensível ao toque.
+[**CoreWindow::PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) |O botão esquerdo do mouse foi liberado ou o objeto em contato com a superfície sensível ao toque foi erguido.
+[**CoreWindow::PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerexited) |O ponteiro moveu-se para fora da janela principal.
+[**Windows::Devices::Input::MouseMoved**](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved) | O mouse se moveu em uma determinada distância. Lembre-se de que só estamos interessados nos valores delta de movimento do mouse e não na atual posição X-Y.
 
 
 Esses manipuladores de eventos são definidos para iniciar a escuta de entrada do usuário assim que o **MoveLookController** é inicializado na janela do aplicativo.
@@ -86,7 +86,7 @@ Estado | Descrição
 :----- | :-------
 **Nenhum** | Esse é o estado inicializado para o controlador. Todas as entradas são ignoradas desde que o jogo não esteja esperando nenhuma entrada do controlador.
 **WaitForInput** | O controlador está esperando que o player confirme uma mensagem do jogo usando um clique esquerdo do mouse, um evento por toque ou o botão do mouse em um gamepad.
-**Active Directory** | O controlador está no modo de reprodução do jogo ativo.
+**Active** | O controlador está no modo de reprodução do jogo ativo.
 
 
 
@@ -105,7 +105,7 @@ Durante o estado **Ativo**, a instância **MoveLookController** está processand
 
 
 Todas as entradas do ponteiro são rastreadas no estado **Ativo** com diferentes IDs de ponteiro correspondendo a diferentes ações do ponteiro.
-Quando um evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) é recebido, o **MoveLookController** obtém o valor do ID do ponteiro criado pela janela. O ID do ponteiro representa um tipo específico de entrada. Por exemplo, em um dispositivo multitoque, pode haver várias entradas ativas diferentes ao mesmo tempo. Os IDs são usados para rastrear a entrada que o jogador está usando. Se um dos eventos está no retângulo de movimento na tela sensível ao toque, uma ID de ponteiro é atribuída para rastrear qualquer evento de ponteiro no retângulo de movimento. Outros eventos de ponteiro no retângulo de tiro são rastreados separadamente, com um ID de ponteiro separado.
+Quando um evento [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed) é recebido, o **MoveLookController** obtém o valor do ID do ponteiro criado pela janela. O ID do ponteiro representa um tipo específico de entrada. Por exemplo, em um dispositivo multitoque, pode haver várias entradas ativas diferentes ao mesmo tempo. Os IDs são usados para rastrear a entrada que o jogador está usando. Se um dos eventos está no retângulo de movimento na tela sensível ao toque, uma ID de ponteiro é atribuída para rastrear qualquer evento de ponteiro no retângulo de movimento. Outros eventos de ponteiro no retângulo de tiro são rastreados separadamente, com um ID de ponteiro separado.
 
 
 > [!NOTE]
@@ -160,7 +160,7 @@ Agora examinaremos a implementação de cada um dos três tipos de controle com 
 
 Se for detectado o movimento do mouse, usaremos esse movimento para determinar a nova arfagem e guinada da câmera. Fazemos isso implementando os controles relativos do mouse, onde manipulamos a distância relativa na qual o mouse se moveu (o delta entre o início do movimento e a parada) ao contrário da gravação das coordenadas de pixel x-y absolutas do movimento.
 
-Para fazer isso, obtemos as alterações nas coordenadas X (o movimento horizontal) e Y (o movimento vertical) examinando os campos [**MouseDelta::X**](https://msdn.microsoft.com/library/windows/apps/hh758353) e **MouseDelta::Y** no objeto de argumento [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://msdn.microsoft.com/library/windows/apps/hh758358) retornado pelo evento [**MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356).
+Para fazer isso, obtemos as alterações nas coordenadas X (o movimento horizontal) e Y (o movimento vertical) examinando os campos [**MouseDelta::X**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDelta) e **MouseDelta::Y** no objeto de argumento [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://docs.microsoft.com/uwp/api/windows.devices.input.mouseeventargs.mousedelta) retornado pelo evento [**MouseMoved**](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved).
 
 ```cpp
 void MoveLookController::OnMouseMoved(
@@ -220,8 +220,8 @@ Toque fora do retângulo de movimento e tiro | Altere a rotação (a inclinaçã
 
 O **MoveLookController** verifica a ID do ponteiro para determinar onde o evento ocorreu e executa uma das seguintes ações:
 
--   Se o evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) ocorreu no retângulo de movimento ou de tiro, atualizar a posição do ponteiro do controlador.
--   Se o evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) ocorreu em algum lugar do restante da tela (definido como a região dos controles de visão), calcular a alteração de rotação sobre o eixo x e rotação sobre o eixo y do vetor de direção do olhar.
+-   Se o evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) ocorreu no retângulo de movimento ou de tiro, atualizar a posição do ponteiro do controlador.
+-   Se o evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) ocorreu em algum lugar do restante da tela (definido como a região dos controles de visão), calcular a alteração de rotação sobre o eixo x e rotação sobre o eixo y do vetor de direção do olhar.
 
 
 Após a implementação de nossos controles de toque, os retângulos que desenhamos anteriormente usando o Direct2D vão indicar aos players onde estão as zonas de movimento, tiro e observação.
@@ -401,7 +401,7 @@ Se o evento **MoveLookController::OnPointerPressed** for acionado em um disposit
 
 Aqui o **MoveLookController** atribui a ID de ponteiro do ponteiro que acionou o evento a uma variável específica correspondente à região de observação. No caso de um toque que ocorrem na região de aparência, o **m\_lookPointerID** variável é definida como a ID de ponteiro que disparou o evento. Uma variável boolean, **m\_lookInUse**, também é definida para indicar que o controle tem não ainda foi lançado.
 
-Agora examinaremos como o exemplo de jogo processa o evento de tela sensível ao toque [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276).
+Agora examinaremos como o exemplo de jogo processa o evento de tela sensível ao toque [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved).
 
 
 No método **MoveLookController::OnPointerMoved**, verificamos qual tipo de ID do ponteiro foi atribuído ao evento. Se for **m_lookPointerID**, calculamos a alteração na posição do ponteiro.
@@ -435,9 +435,9 @@ Depois usamos esse delta para calcular o quanto a rotação deve mudar. Finalmen
 
 
 
-Finalmente, examinaremos como o exemplo de jogo processa o evento de tela sensível ao toque [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279).
+Finalmente, examinaremos como o exemplo de jogo processa o evento de tela sensível ao toque [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased).
 Após o usuário ter finalizado o gesto de toque e removido o dedo da tela, [**MoveLookController::OnPointerReleased**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L441-L500) é iniciado.
-Se a ID do ponteiro que disparou o evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) é a ID do ponteiro de movimento registrado anteriormente, o **MoveLookController** define a velocidade como `0` porque o jogador parou de tocar a área da observação.
+Se a ID do ponteiro que disparou o evento [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) é a ID do ponteiro de movimento registrado anteriormente, o **MoveLookController** define a velocidade como `0` porque o jogador parou de tocar a área da observação.
 
 ```cpp
     else if (pointerID == m_lookPointerID)
@@ -469,7 +469,7 @@ Movimento do mouse | Alterar a rotação (a inclinação e o eixo) do ponto de v
 Botão do mouse esquerdo | Disparar uma esfera
 
 
-Para usar o teclado, o exemplo do jogo registra dois novos eventos, [**CoreWindow::KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271) e [**CoreWindow::KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270), no método [**MoveLookController::InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L84-L88). Esses eventos controlam o pressionamento e a liberação de uma tecla.
+Para usar o teclado, o exemplo do jogo registra dois novos eventos, [**CoreWindow::KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keyup) e [**CoreWindow::KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keydown), no método [**MoveLookController::InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L84-L88). Esses eventos controlam o pressionamento e a liberação de uma tecla.
 
 ```cpp
 window->KeyDown +=

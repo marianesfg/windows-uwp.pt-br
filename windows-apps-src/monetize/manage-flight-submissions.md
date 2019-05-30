@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 74d93c700ecbfe3db39bf1ffc4c90e107b80f5a5
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: f89251a8bb19b01e2fbb8e4df104b3c08700d1a3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335065"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371469"
 ---
 # <a name="manage-package-flight-submissions"></a>Gerenciar envios de pacote de pré-lançamento
 
@@ -24,7 +24,7 @@ A API de envio da Microsoft Store oferece métodos que é possível usar para ge
 
 ## <a name="methods-for-managing-package-flight-submissions"></a>Métodos para gerenciar envios do pacote de pré-lançamento
 
-Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de pacote de pré-lançamento. Antes de usar esses métodos, o voo de pacote já deve existir no Partner Center. Você pode criar um voo de pacote [no Partner Center](https://msdn.microsoft.com/windows/uwp/publish/package-flights) ou usando os métodos de API de envio da Microsoft Store no descrito em [gerenciar pacote voos](manage-flights.md).
+Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de pacote de pré-lançamento. Antes de usar esses métodos, o voo de pacote já deve existir no Partner Center. Você pode criar um voo de pacote [no Partner Center](https://docs.microsoft.com/windows/uwp/publish/package-flights) ou usando os métodos de API de envio da Microsoft Store no descrito em [gerenciar pacote voos](manage-flights.md).
 
 <table>
 <colgroup>
@@ -94,7 +94,7 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
     > [!NOTE]
     > Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações sobre URIs de SAS e seu uso com o armazenamento de BLOBs do Azure, consulte [assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) e [assinaturas de acesso compartilhado, parte 2: Criar e usar uma SAS com o armazenamento de BLOBs](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
-4. Se você estiver adicionando novos pacotes para o envio, [prepare os pacotes](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) e adicione-os a um arquivo ZIP.
+4. Se você estiver adicionando novos pacotes para o envio, [prepare os pacotes](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements) e adicione-os a um arquivo ZIP.
 
 5. Revise os dados de [envio de versão de pré-lançamento](#flight-submission-object) com as alterações necessárias para o novo envio e execute o método a seguir para [atualizar o envio de pacote de pré-lançamento](update-a-flight-submission.md).
 
@@ -110,7 +110,7 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
     * [Armazenamento do Azure SDK para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
     * [Armazenamento do Azure SDK para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
-    O exemplo de código em C# a seguir demonstra como carregar um arquivo ZIP no armazenamento do Blob do Azure usando a classe [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) na Biblioteca de Cliente do Armazenamento do Azure para .NET. Este exemplo pressupõe que o arquivo ZIP já tenha sido escrito para um objeto de fluxo.
+    O exemplo de código em C# a seguir demonstra como carregar um arquivo ZIP no armazenamento do Blob do Azure usando a classe [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob?redirectedfrom=MSDN) na Biblioteca de Cliente do Armazenamento do Azure para .NET. Este exemplo pressupõe que o arquivo ZIP já tenha sido escrito para um objeto de fluxo.
 
     ```csharp
     string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -266,7 +266,7 @@ Esse recurso tem os valores a seguir.
 | fileUploadUrl           | cadeia de caracteres  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP que contém os pacotes para essa URI. Para saber mais, veja [Criar um envio de pacote de pré-lançamento](#create-a-package-flight-submission).  |
 | targetPublishMode           | cadeia de caracteres  | O modo de publicação do envio. Isso pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | cadeia de caracteres  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
-| notesForCertification           | cadeia de caracteres  |  Fornece informações adicionais para os testadores de certificação, como credenciais da conta de teste e as etapas para acessar e confirmar recursos. Para obter mais informações, consulte [Notas para certificação](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification). |
+| notesForCertification           | cadeia de caracteres  |  Fornece informações adicionais para os testadores de certificação, como credenciais da conta de teste e as etapas para acessar e confirmar recursos. Para obter mais informações, consulte [Notas para certificação](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification). |
 
 <span id="status-details-object" />
 
@@ -338,10 +338,10 @@ Esse recurso tem os valores a seguir.
 | fileName   |   cadeia de caracteres      |  O nome do pacote.    |  
 | fileStatus    | cadeia de caracteres    |  O status do pacote. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
 | id    |  cadeia de caracteres   |  Uma ID que identifica exclusivamente o pacote. Esse valor é usado pelo Centro de parceiros.   |     
-| version    |  cadeia de caracteres   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
+| version    |  cadeia de caracteres   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
 | architecture    |  cadeia de caracteres   |  A arquitetura do pacote de aplicativo (por exemplo, ARM).   |     
-| languages    | matriz    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas suportados](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
-| capabilities    |  matriz   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
+| languages    | matriz    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas suportados](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
+| capabilities    |  matriz   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
 | minimumDirectXVersion    |  cadeia de caracteres   |  A versão mínima do DirectX que é compatível com o pacote do aplicativo. Isso pode ser definido apenas para aplicativos que visam o Windows 8.x; isso é ignorado para aplicativos destinados a outras versões. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
 | minimumSystemRam    | cadeia de caracteres    |  A RAM mínima necessária para o pacote do aplicativo. Isso pode ser definido apenas para aplicativos que visam o Windows 8.x; isso é ignorado para aplicativos destinados a outras versões. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Memory2GB</li></ul>   |    
 
@@ -372,7 +372,7 @@ Esse recurso tem os valores a seguir.
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
 | packageRollout   |   objeto      |   Um [recurso de distribuição de pacote](#package-rollout-object) que contém configurações da distribuição de pacote gradual para o envio.    |  
-| isMandatoryUpdate    | booliano    |  Indica se você deseja tratar os pacotes nesse envio como obrigatórios para instalar automaticamente atualizações de aplicativo. Para obter mais informações sobre pacotes obrigatórios para instalar automaticamente as atualizações de aplicativos, consulte [Baixar e instalar atualizações de pacote para seu app](../packaging/self-install-package-updates.md).    |  
+| isMandatoryUpdate    | boolean    |  Indica se você deseja tratar os pacotes nesse envio como obrigatórios para instalar automaticamente atualizações de aplicativo. Para obter mais informações sobre pacotes obrigatórios para instalar automaticamente as atualizações de aplicativos, consulte [Baixar e instalar atualizações de pacote para seu app](../packaging/self-install-package-updates.md).    |  
 | mandatoryUpdateEffectiveDate    |  date   |  A data e hora em que os pacotes nesse envio se tornam obrigatórios, em formato ISO 8601 e fuso horário UTC.   |        
 
 <span id="package-rollout-object" />
@@ -383,7 +383,7 @@ Esse recurso contém [configurações de distribuição de pacote](#manage-gradu
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
-| isPackageRollout   |   booliano      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
+| isPackageRollout   |   boolean      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
 | packageRolloutPercentage    | flutuante    |  O percentual de usuários que receberão os pacotes na distribuição gradual.    |  
 | packageRolloutStatus    |  cadeia de caracteres   |  Uma das seguintes sequências que indicam o status da distribuição de pacote gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
 | fallbackSubmissionId    |  cadeia de caracteres   |  A ID do envio que será recebida por clientes que não recebem os pacotes de distribuição gradual.   |          

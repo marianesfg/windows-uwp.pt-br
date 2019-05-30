@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, 2d, elementos gráficos
 ms.localizationpriority: medium
-ms.openlocfilehash: 1154abc4305307d87f15fbe0c0e5461e3a15e27e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7e3a843c00d28d83157cf35a0bd9527be8c6b62f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632651"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367350"
 ---
 # <a name="2d-graphics-for-directx-games"></a>Elementos gráficos 2D para jogos DirectX
 
@@ -21,7 +21,7 @@ Falaremos sobre o uso de elementos gráficos e efeitos de bitmap 2D e como usá-
 
 Os gráficos 2D são um subconjunto dos gráficos 3D que lidam com primitivas ou bitmaps 2D. De modo mais geral, eles não usam uma coordenada z do modo como ocorre em um jogo 3D, pois a jogabilidade está normalmente restrita ao plano x-y. Às vezes, eles usam técnicas de gráficos 3D para criar seus componentes visuais e, geralmente, são mais simples de desenvolver. Se você é novo na criação de jogos, um jogo 2D é um ótimo ponto para começar, e o desenvolvimento de gráficos 2D pode ser um bom modo de aprender a lidar com DirectX.
 
-Você pode desenvolver gráficos para jogos 2D em DirectX usando Direct2D, Direct3D ou uma combinação deles. Muitas das classes mais úteis para o desenvolvimento de jogos 2D são criadas em Direct3D, como a classe [**Sprite**](https://msdn.microsoft.com/library/windows/desktop/bb205601). Direct2D é um conjunto de APIs direcionado principalmente a interfaces de usuário e aplicativos que exigem suporte a primitivas de desenho (como círculos, linhas e formas poligonais planas). Tendo isso em mente, ele também fornece um conjunto de classes e métodos avançado e de bom desempenho para criar gráficos de jogos, especialmente na criação de sobreposições, interfaces e HUDs do jogo, ou na criação de diversos jogos 2D, desde os mais simples até alguns consideravelmente detalhados. Porém, a abordagem mais eficiente na criação de jogos 2D é usar elementos dos dois binários, e é desse modo que veremos o desenvolvimento de gráficos 2D neste tópico.
+Você pode desenvolver gráficos para jogos 2D em DirectX usando Direct2D, Direct3D ou uma combinação deles. Muitas das classes mais úteis para o desenvolvimento de jogos 2D são criadas em Direct3D, como a classe [**Sprite**](https://docs.microsoft.com/windows/desktop/direct3d10/id3dx10sprite). Direct2D é um conjunto de APIs direcionado principalmente a interfaces de usuário e aplicativos que exigem suporte a primitivas de desenho (como círculos, linhas e formas poligonais planas). Tendo isso em mente, ele também fornece um conjunto de classes e métodos avançado e de bom desempenho para criar gráficos de jogos, especialmente na criação de sobreposições, interfaces e HUDs do jogo, ou na criação de diversos jogos 2D, desde os mais simples até alguns consideravelmente detalhados. Porém, a abordagem mais eficiente na criação de jogos 2D é usar elementos dos dois binários, e é desse modo que veremos o desenvolvimento de gráficos 2D neste tópico.
 
 ## <a name="concepts-at-a-glance"></a>Conceitos básicos
 
@@ -56,6 +56,6 @@ Com relação ao visual, um trabalho de arte bem feito será seu maior trunfo. E
 ## <a name="reference"></a>Referência
 
 
--   [Visão geral do Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987)
--   [Início rápido do Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd535473)
--   [Visão geral sobre interoperabilidade Direct2D e do Direct3D](https://msdn.microsoft.com/library/windows/desktop/dd370966)
+-   [Visão geral do Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-overview)
+-   [Início rápido do Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/getting-started-with-direct2d)
+-   [Visão geral sobre interoperabilidade Direct2D e do Direct3D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-and-direct3d-interoperation-overview)

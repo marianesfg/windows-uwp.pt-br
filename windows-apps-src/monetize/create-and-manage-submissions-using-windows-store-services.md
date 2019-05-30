@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: c2f2638e93ecbe346cc5dccb503d94d926ddcdae
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: e8e7653174eaf31f11341a5c8e21b69ec54a6189
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335144"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371286"
 ---
 # <a name="create-and-manage-submissions"></a>Criar e gerenciar envios
 
@@ -46,15 +46,15 @@ Antes de começar a escrever o código para chamar a API de envio da Microsoft S
 
 * Prepare seu aplicativo para uso com a API de envio da Microsoft Store:
 
-  * Se seu aplicativo ainda não existir no Partner Center, você deve [crie seu aplicativo ao reservar o nome no Partner Center](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name). Você não pode usar a API de envio da Microsoft Store para criar um aplicativo no Partner Center; Você deve trabalhar no Partner Center para criá-lo e, em seguida, depois que você pode usar a API para acessar o aplicativo e criar programaticamente os envios para ele. No entanto, você pode usar a API para criar complementos e pacotes de pré-lançamento programaticamente antes de criar envios para eles.
+  * Se seu aplicativo ainda não existir no Partner Center, você deve [crie seu aplicativo ao reservar o nome no Partner Center](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name). Você não pode usar a API de envio da Microsoft Store para criar um aplicativo no Partner Center; Você deve trabalhar no Partner Center para criá-lo e, em seguida, depois que você pode usar a API para acessar o aplicativo e criar programaticamente os envios para ele. No entanto, você pode usar a API para criar complementos e pacotes de pré-lançamento programaticamente antes de criar envios para eles.
 
-  * Antes de criar um envio para um determinado aplicativo usando essa API, você deve primeiro [criar um envio para o aplicativo no Centro de parceiro](https://msdn.microsoft.com/windows/uwp/publish/app-submissions), incluindo resposta o [idade classificações](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) questionário. Depois que você fizer isso, você poderá criar novos envios para este aplicativo usando a API programaticamente. Você não precisa criar um envio de complemento nem o envio de versão de pré-lançamento do pacote antes de usar a API para esses tipos de envios.
+  * Antes de criar um envio para um determinado aplicativo usando essa API, você deve primeiro [criar um envio para o aplicativo no Centro de parceiro](https://docs.microsoft.com/windows/uwp/publish/app-submissions), incluindo resposta o [idade classificações](https://docs.microsoft.com/windows/uwp/publish/age-ratings) questionário. Depois que você fizer isso, você poderá criar novos envios para este aplicativo usando a API programaticamente. Você não precisa criar um envio de complemento nem o envio de versão de pré-lançamento do pacote antes de usar a API para esses tipos de envios.
 
-  * Se você estiver criando ou atualizando um envio de aplicativo e você precisar incluir um pacote do aplicativo, [prepare o pacote do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements).
+  * Se você estiver criando ou atualizando um envio de aplicativo e você precisar incluir um pacote do aplicativo, [prepare o pacote do aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
 
-  * Se você estiver criando ou atualizando um envio de aplicativo e você precisar incluir capturas de tela ou imagens para a listagem da Loja, [prepare as imagens e capturas de tela do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images).
+  * Se você estiver criando ou atualizando um envio de aplicativo e você precisar incluir capturas de tela ou imagens para a listagem da Loja, [prepare as imagens e capturas de tela do aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images).
 
-  * Se você estiver criando ou atualizando um envio de complemento e você precisar incluir um ícone, [prepare o ícone](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon).
+  * Se você estiver criando ou atualizando um envio de complemento e você precisar incluir um ícone, [prepare o ícone](https://docs.microsoft.com/windows/uwp/publish/create-iap-descriptions).
 
 <span id="associate-an-azure-ad-application-with-your-windows-partner-center-account" />
 

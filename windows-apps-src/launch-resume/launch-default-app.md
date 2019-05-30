@@ -6,25 +6,25 @@ ms.date: 06/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c5c8b99ec3646d1eebbb922557f97c9e9304ed4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d80cb18fc502df5f6d51d2b7bdc719e860730534
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658361"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370886"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Iniciar o app padrão para um URI
 
 
 **APIs importantes**
 
-- [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)
-- [**PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482)
-- [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)
+- [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)
+- [**PreferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
+- [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview)
 
 Saiba como iniciar o app padrão para um URI (Uniform Resource Identifier). Os URIs permitem iniciar outro aplicativo para realizar uma tarefa específica. Este tópico também apresenta uma visão geral dos muitos esquemas de URI compilados no Windows. Você também pode iniciar URIs personalizados. Para obter mais informações sobre como registrar um esquema de URI personalizado e identificar a ativação de URI, consulte [Identificar ativação de URI](handle-uri-activation.md).
 
-Os esquemas de URI permitem que você abra aplicativos clicando em hiperlinks. Assim como você pode iniciar um novo email usando **mailto:**, também é possível abrir o navegador da Web padrão usando **http:**
+Os esquemas de URI permitem que você abra aplicativos clicando em hiperlinks. Assim como você pode iniciar um novo email usando **mailto:** , também é possível abrir o navegador da Web padrão usando **http:**
 
 Este tópico descreve os seguintes esquemas de URI integrados ao Windows:
 
@@ -33,14 +33,14 @@ Este tópico descreve os seguintes esquemas de URI integrados ao Windows:
 |[bingmaps: unidade ms para: e a movimentação da ms para: ](#maps-app-uri-schemes) | Aplicativo Mapas |
 |[http:](#http-uri-scheme) | Navegador da Web padrão |
 |[mailto:](#email-uri-scheme) | Aplicativo de email padrão |
-|[chamada de MS:](#call-app-uri-scheme) |  Aplicativo de chamada |
-|[MS-bate-papo:](#messaging-app-uri-scheme) | Aplicativo de mensagens |
-|[MS-pessoas:](#people-app-uri-scheme) | Aplicativo Pessoas |
-|[MS-fotos:](#photos-app-uri-scheme) | Aplicativo Fotos |
-|[configurações de MS:](#settings-app-uri-scheme) | Aplicativo Configurações |
-|[MS-store:](#store-app-uri-scheme)  | Aplicativo da Loja |
-|[MS-tonepicker:](#tone-picker-uri-scheme) | Seletor de tom |
-|[MS-yellowpage:](#nearby-numbers-app-uri-scheme) | Aplicativo Números nas Proximidades |
+|[ms-call:](#call-app-uri-scheme) |  Aplicativo de chamada |
+|[ms-chat:](#messaging-app-uri-scheme) | Aplicativo de mensagens |
+|[ms-people:](#people-app-uri-scheme) | Aplicativo Pessoas |
+|[ms-photos:](#photos-app-uri-scheme) | Aplicativo Fotos |
+|[ms-settings:](#settings-app-uri-scheme) | Aplicativo Configurações |
+|[ms-store:](#store-app-uri-scheme)  | Aplicativo da Loja |
+|[ms-tonepicker:](#tone-picker-uri-scheme) | Seletor de tom |
+|[ms-yellowpage:](#nearby-numbers-app-uri-scheme) | Aplicativo Números nas Proximidades |
 |[msnweather:](#weather-app-uri-scheme) | Aplicativo meteorológico |
 
 <br>
@@ -48,15 +48,15 @@ Por exemplo, o URI a seguir abre o navegador padrão e exibe o site do Bing.
 
 `https://bing.com`
 
-Você também pode iniciar esquemas de URI personalizados. Se não houver aplicativo instalado para manipular esse URI, você poderá recomendar um aplicativo para o usuário instalar. Para obter mais informações, consulte [Recomendar um app se nenhum estiver disponível para manipular o URI](#recommend-an-app-if-one-is-not-available-to-handle-the-uri).
+Você também pode iniciar esquemas de URI personalizados. Se não houver app instalado para manipular esse URI, você poderá recomendar um app para o usuário instalar. Para obter mais informações, consulte [Recomendar um app se nenhum estiver disponível para manipular o URI](#recommend-an-app-if-one-is-not-available-to-handle-the-uri).
 
-Em geral, seu aplicativo não pode selecionar o aplicativo que foi iniciado. O usuário determina o aplicativo que é iniciado. Mais de um aplicativo pode registrar para manipular o mesmo esquema de URI. A exceção a isso é para esquemas de URI reservados. Os registros de esquemas de URI reservados são ignorados. Para obter a lista completa de esquemas de URI reservados, consulte [Manipular a ativação do URI](handle-uri-activation.md). Em casos onde mais de um aplicativo pode ter registrado o mesmo esquema de URI, seu aplicativo pode recomendar um aplicativo específico para ser iniciado. Para obter mais informações, consulte [Recomendar um app se nenhum estiver disponível para manipular o URI](#recommend-an-app-if-one-is-not-available-to-handle-the-uri).
+Em geral, seu app não pode selecionar o app que foi iniciado. O usuário determina o aplicativo que é iniciado. Mais de um aplicativo pode registrar para manipular o mesmo esquema de URI. A exceção a isso é para esquemas de URI reservados. Os registros de esquemas de URI reservados são ignorados. Para obter a lista completa de esquemas de URI reservados, consulte [Manipular a ativação do URI](handle-uri-activation.md). Em casos onde mais de um aplicativo pode ter registrado o mesmo esquema de URI, seu aplicativo pode recomendar um aplicativo específico para ser iniciado. Para obter mais informações, consulte [Recomendar um app se nenhum estiver disponível para manipular o URI](#recommend-an-app-if-one-is-not-available-to-handle-the-uri).
 
 ### <a name="call-launchuriasync-to-launch-a-uri"></a>Chamar LaunchUriAsync para iniciar um URI
 
-Use o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar um URI. Ao chamar esse método, seu aplicativo precisa estar em primeiro plano, ou seja, visível para o usuário. Essa exigência ajuda a garantir que o usuário permaneça no controle. Para que essa exigência seja atendida, você deve vincular todas as inicializações de URI diretamente à interface do usuário do seu aplicativo. O usuário sempre deve executar alguma ação para iniciar uma inicialização de URI. Se você tentar iniciar um URI e seu aplicativo não estiver em primeiro plano, a inicialização falhará e o retorno de chamada de erro será invocado.
+Use o método [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) para iniciar um URI. Ao chamar esse método, seu aplicativo precisa estar em primeiro plano, ou seja, visível para o usuário. Essa exigência ajuda a garantir que o usuário permaneça no controle. Para que essa exigência seja atendida, você deve vincular todas as inicializações de URI diretamente à interface do usuário do seu aplicativo. O usuário sempre deve executar alguma ação para iniciar uma inicialização de URI. Se você tentar iniciar um URI e seu aplicativo não estiver em primeiro plano, a inicialização falhará e o retorno de chamada de erro será invocado.
 
-Primeiro, crie um objeto [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/system.uri.aspx) para representar o URI e passe-o para o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476). Use o resultado de retorno para ver se a chamada foi bem-sucedida, conforme mostrado no exemplo a seguir.
+Primeiro, crie um objeto [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) para representar o URI e passe-o para o método [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync). Use o resultado de retorno para ver se a chamada foi bem-sucedida, conforme mostrado no exemplo a seguir.
 
 ```cs
 private async void launchURI_Click(object sender, RoutedEventArgs e)
@@ -82,7 +82,7 @@ Em alguns casos, o sistema operacional perguntará ao usuário se ele realmente 
 
 ![uma caixa de diálogo de aviso é sobreposta em um plano de fundo esmaecido do aplicativo. a caixa de diálogo pergunta ao usuário se ele quer alternar entre aplicativos e tem botões 'sim' e 'não' na parte inferior direita. o botão 'não' está realçado.](images/warningdialog.png)
 
-Se você quiser que esse aviso sempre apareça, use a propriedade [**Windows.System.LauncherOptions.TreatAsUntrusted**](https://msdn.microsoft.com/library/windows/apps/hh701442) para informar o sistema operacional de que deseja exibi-lo.
+Se você quiser que esse aviso sempre apareça, use a propriedade [**Windows.System.LauncherOptions.TreatAsUntrusted**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.treatasuntrusted) para informar o sistema operacional de que deseja exibi-lo.
 
 ```cs
 // The URI to launch
@@ -102,7 +102,7 @@ Em alguns casos, pode ser que o usuário não tenha um aplicativo instalado para
 
 Recomendações também são úteis quando mais de um aplicativo é registrado para manipular um esquema de URI. Ao recomendar um aplicativo específico, o Windows abrirá esse aplicativo se ele já estiver instalado.
 
-Para fazer uma recomendação, chame o método [**Windows.System.Launcher.LaunchUriAsync(Uri, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701484) com [**LauncherOptions.preferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482) definido como o nome da família do pacote do aplicativo na loja que você quer recomendar. O sistema operacional usará essas informações para substituir a opção geral de pesquisar um aplicativo na loja por uma opção específica para adquirir o aplicativo recomendado na loja.
+Para fazer uma recomendação, chame o método [**Windows.System.Launcher.LaunchUriAsync(Uri, LauncherOptions)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.) com [**LauncherOptions.preferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname) definido como o nome da família do pacote do aplicativo na loja que você quer recomendar. O sistema operacional usará essas informações para substituir a opção geral de pesquisar um aplicativo na loja por uma opção específica para adquirir o aplicativo recomendado na loja.
 
 ```cs
 // Set the recommended app
@@ -117,9 +117,9 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="set-remaining-view-preference"></a>Definir a preferência de exibição restante
 
-Os aplicativos de origem que chamam [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) podem solicitar que eles permaneçam na tela após a inicialização de um arquivo. Por padrão, o Windows tenta compartilhar todo o espaço disponível igualmente entre o aplicativo de origem e o aplicativo de destino que manipula o URI. Aplicativos de origem podem usar a propriedade [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar ao sistema operacional que eles preferem que sua janela de aplicativo ocupe mais ou menos espaço disponível. O **DesiredRemainingView** também pode ser usado para indicar que o aplicativo de origem não precisa permanecer na tela depois da inicialização do URI e pode ser completamente substituído pelo aplicativo de destino. Esta propriedade especifica somente o tamanho da janela preferido do aplicativo de chamada. Ele não especifica o comportamento de outros aplicativos que podem acontecer de também estar na tela ao mesmo tempo.
+Os aplicativos de origem que chamam [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) podem solicitar que eles permaneçam na tela após a inicialização de um arquivo. Por padrão, o Windows tenta compartilhar todo o espaço disponível igualmente entre o aplicativo de origem e o aplicativo de destino que manipula o URI. Aplicativos de origem podem usar a propriedade [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview) para indicar ao sistema operacional que eles preferem que sua janela de aplicativo ocupe mais ou menos espaço disponível. O **DesiredRemainingView** também pode ser usado para indicar que o aplicativo de origem não precisa permanecer na tela depois da inicialização do URI e pode ser completamente substituído pelo aplicativo de destino. Esta propriedade especifica somente o tamanho da janela preferido do aplicativo de chamada. Ele não especifica o comportamento de outros aplicativos que podem acontecer de também estar na tela ao mesmo tempo.
 
-**Observação**  Windows leva em consideração vários fatores diferentes quando ele determina o tamanho de janela final do código-fonte do aplicativo, por exemplo, a preferência do aplicativo de origem, o número de aplicativos em tela, a orientação da tela e assim por diante. Definindo [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314), você não garante um comportamento de janelas específico para o aplicativo de origem.
+**Observação**  Windows leva em consideração vários fatores diferentes quando ele determina o tamanho de janela final do código-fonte do aplicativo, por exemplo, a preferência do aplicativo de origem, o número de aplicativos em tela, a orientação da tela e assim por diante. Definindo [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview), você não garante um comportamento de janelas específico para o aplicativo de origem.
 
 ```cs
 // Set the desired remaining view.
@@ -161,13 +161,13 @@ Use o **http:** Esquema URI para iniciar o navegador da web padrão.
 
 ### <a name="maps-app-uri-schemes"></a>Esquemas de URI do aplicativo Mapas
 
-Use o **bingmaps:**, **ms-unidade-to:**, e **movimentação da ms para:** Esquemas de URI para [inicie o aplicativo Windows mapeia](launch-maps-app.md) específicos mapas, direções e os resultados da pesquisa. Por exemplo, o URI a seguir abre o aplicativo Mapas do Windows e exibe um mapa centralizado na cidade de Nova York.
+Use o **bingmaps:** , **ms-unidade-to:** , e **movimentação da ms para:** Esquemas de URI para [inicie o aplicativo Windows mapeia](launch-maps-app.md) específicos mapas, direções e os resultados da pesquisa. Por exemplo, o URI a seguir abre o aplicativo Mapas do Windows e exibe um mapa centralizado na cidade de Nova York.
 
 `bingmaps:?cp=40.726966~-74.006076`
 
 ![um exemplo do aplicativo mapas do windows.](images/mapnyc.png)
 
-Para saber mais, consulte [Iniciar o aplicativo Mapas do Windows](launch-maps-app.md). Para usar o controle de mapa em seu próprio aplicativo, consulte [Exibir mapas em modos de exibição 2D, 3D e Streetside](https://msdn.microsoft.com/library/windows/apps/mt219695).
+Para saber mais, veja [Iniciar o app Mapas do Windows](launch-maps-app.md). Para usar o controle de mapa em seu próprio aplicativo, consulte [Exibir mapas em modos de exibição 2D, 3D e Streetside](https://docs.microsoft.com/windows/uwp/maps-and-location/display-maps).
 
 ### <a name="messaging-app-uri-scheme"></a>Esquema de URI do aplicativo de mensagens
 
@@ -189,7 +189,7 @@ Use o **tonepicker ms:** Esquema URI para escolher a toques, alarmes e tons de s
 |------------|---------|
 | ms-tonepicker: | Escolha toques, alarmes e tons de sistema. |
 
-Os parâmetros são transmitidos por meio de um [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx) para a API LaunchURI. Consulte [Escolher e salvar tons usando o esquema de URI ms-tonepicker](launch-ringtone-picker.md) para obter detalhes.
+Os parâmetros são transmitidos por meio de um [ValueSet](https://docs.microsoft.com/uwp/api/windows.foundation.collections.valueset) para a API LaunchURI. Consulte [Escolher e salvar tons usando o esquema de URI ms-tonepicker](launch-ringtone-picker.md) para obter detalhes.
 
 ### <a name="nearby-numbers-app-uri-scheme"></a>Esquema de URI do aplicativo Números nas Proximidades
 
@@ -217,7 +217,7 @@ Ou para editar um vídeo: `ms-photos:videoedit?InputToken=123abc&Action=Trim&Sta
 |------------|--------|
 | ms-photos:viewer?fileName={filename} | Inicia o aplicativo Fotos para exibir a imagem especificada onde {filename} é um nome de caminho totalmente qualificado. Por exemplo: `c:\users\userName\Pictures\ImageToView.jpg` |
 | ms-photos:videoedit?InputToken={input token} | Inicia o aplicativo Fotos no modo de edição de vídeo para o arquivo representado pelo token de arquivo. **InputToken** é necessária. Use o [SharedStorageAccessManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) para obter um token para um arquivo. |
-| ms-photos:videoedit?Action={action} | Um parâmetro opcional que abre o aplicativo de fotos no modo de edição especificado vídeo onde {action} é um dos: **SlowMotion**, **FrameExtraction**, **cortar**, **exibição**, **tinta**. Se não especificado, usa o padrão **View** |
+| ms-photos:videoedit?Action={action} | Um parâmetro opcional que abre o aplicativo de fotos no modo de edição especificado vídeo onde {action} é um dos: **SlowMotion**, **FrameExtraction**, **Trim**, **View**, **Ink**. Se não especificado, usa o padrão **View** |
 | ms-photos:videoedit?StartTime={timespan} | Um parâmetro opcional que especifica o local iniciar a reprodução do vídeo. `{timespan}` deve estar no formato `"hh:mm:ss.ffff"`. Se não for especificado, assume como padrão `00:00:00.0000` |
 
 ### <a name="settings-app-uri-scheme"></a>Esquema de URI do aplicativo Configurações
@@ -228,9 +228,9 @@ Use o **ms-configurações:** Esquema de URI para [iniciar o aplicativo de confi
 
 ![configurações de privacidade da câmera.](images/privacyawarenesssettingsapp.png)
 
-Para obter mais informações, consulte [Iniciar o aplicativo Configurações do Windows](launch-settings-app.md) e [Diretrizes de aplicativos com reconhecimento de privacidade](https://msdn.microsoft.com/library/windows/apps/hh768223).
+Para obter mais informações, consulte [Iniciar o aplicativo Configurações do Windows](launch-settings-app.md) e [Diretrizes de aplicativos com reconhecimento de privacidade](https://docs.microsoft.com/windows/uwp/security/index).
 
-### <a name="store-app-uri-scheme"></a>Esquema de URI do aplicativo da Loja
+### <a name="store-app-uri-scheme"></a>Esquema de URI do aplicativo da Store
 
 Use o **ms-windows-store:** Esquema de URI para [inicie o aplicativo UWP](launch-store-app.md). Abra as páginas de detalhes do produto, páginas de revisão do produto e páginas de pesquisa, etc. Por exemplo, o URI a seguir abre o aplicativo UWP e inicia a home page do Store.
 
@@ -244,4 +244,4 @@ Use o **msnweather:** Esquema URI para iniciar o aplicativo de clima.
 
 | Esquema de URI | Resultados |
 |------------|---------|
-| msnweather://Forecast?la=\[latitude\]& lo =\[longitude\] | Inicia o aplicativo de clima na página de previsão com base em um coordenadas da localização geográfica.<br>`latitude` refere-se a latitude da localização.<br> `longitude` refere-se a longitude do local.<br> |
+| msnweather://forecast?la=\[latitude\]&lo=\[longitude\] | Inicia o aplicativo de clima na página de previsão com base em um coordenadas da localização geográfica.<br>`latitude` refere-se a latitude da localização.<br> `longitude` refere-se a longitude do local.<br> |

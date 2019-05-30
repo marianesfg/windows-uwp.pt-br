@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: fb16f682e5e1f57196737a6e15a9ffbadbfd0e84
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e262a647e8c37d088c3a5b081076275a52cb8071
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626981"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363734"
 ---
 # <a name="make-your-app-localizable"></a>Torne seu app localizável
 
@@ -135,14 +135,14 @@ Depois que as cadeias de caracteres forem separadas nos arquivos de recurso, ela
 Considere essas opções.
 
 - **Os arquivos de recurso podem ser traduzidos abrindo-os diretamente no projeto.** Essa abordagem funciona bem para um projeto com um volume pequeno de cadeias de caracteres que precisa ser traduzido para dois ou três idiomas. Ela pode ser adequada para um cenário em que um desenvolvedor fale mais de um idioma e esteja disposto a se envolver no processo de tradução. Essa abordagem é vantajosa por ser rápida, não exigir ferramentas e minimizar o risco de traduções incorretas. Mas não é escalável. Em particular, os recursos em idiomas diferentes podem facilmente ficar fora de sincronia, causando experiências ruins para o usuário e dores de cabeça para executar a manutenção.
-- **Os arquivos de recurso de cadeia de caracteres estão em XML ou ResJSON formato de texto, portanto, pode ser entregue para a conversão usando qualquer editor de texto. Os arquivos traduzidos, em seguida, seriam copiados novamente no projeto.** Essa abordagem tem o risco de os tradutores editarem acidentalmente as marcações XML, mas permite que o trabalho ocorra fora do projeto do Microsoft Visual Studio. Tal abordagem pode funcionar bem para projetos que precisam ser traduzidos para poucos idiomas. O formato XLIFF é um formato XML especificamente projetado para o uso em localização e tem um bom suporte de alguns fornecedores de localização ou de ferramentas de localização. Você pode usar o [Kit de Ferramentas de Aplicativo Multilíngue](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx) para gerar arquivos XLIFF de outros arquivos de recursos, como. resw ou .resjson.
+- **Os arquivos de recurso de cadeia de caracteres estão em XML ou ResJSON formato de texto, portanto, pode ser entregue para a conversão usando qualquer editor de texto. Os arquivos traduzidos, em seguida, seriam copiados novamente no projeto.** Essa abordagem tem o risco de os tradutores editarem acidentalmente as marcações XML, mas permite que o trabalho ocorra fora do projeto do Microsoft Visual Studio. Tal abordagem pode funcionar bem para projetos que precisam ser traduzidos para poucos idiomas. O formato XLIFF é um formato XML especificamente projetado para o uso em localização e tem um bom suporte de alguns fornecedores de localização ou de ferramentas de localização. Você pode usar o [Kit de Ferramentas de Aplicativo Multilíngue](https://docs.microsoft.com/previous-versions/windows/apps/jj572370(v=win.10)) para gerar arquivos XLIFF de outros arquivos de recursos, como. resw ou .resjson.
 
 > [!NOTE]
 > Localização também pode ser necessária para outros ativos, incluindo imagens e arquivos de áudio.
 
 Você também deve considerar o seguinte:
 
-- **Ferramentas de localização** um número de ferramentas de localização está disponível para analisar arquivos de recursos e permitindo que apenas traduzíveis cadeias de caracteres a ser editado por tradutores. Essa abordagem reduz o risco de um tradutor editar acidentalmente as marcas de XML. A desvantagem é que é preciso introduzir uma nova ferramenta e um novo processo à localização. Uma ferramenta de localização é boa para projetos com grande volume de cadeias de caracteres e poucos idiomas. Para saber mais, consulte [Como usar o Kit de Ferramentas de Aplicativo Multilíngue](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx).
+- **Ferramentas de localização** um número de ferramentas de localização está disponível para analisar arquivos de recursos e permitindo que apenas traduzíveis cadeias de caracteres a ser editado por tradutores. Essa abordagem reduz o risco de um tradutor editar acidentalmente as marcas de XML. A desvantagem é que é preciso introduzir uma nova ferramenta e um novo processo à localização. Uma ferramenta de localização é boa para projetos com grande volume de cadeias de caracteres e poucos idiomas. Para saber mais, consulte [Como usar o Kit de Ferramentas de Aplicativo Multilíngue](https://docs.microsoft.com/previous-versions/windows/apps/jj572370(v=win.10)).
 - **Fornecedores de localização** considere o uso de um fornecedor de localização se seu aplicativo contiver as cadeias de caracteres amplo que precisam ser convertidas em um grande número de idiomas. Um fornecedor de localização pode recomendar ferramentas e processos, bem como traduzir seus arquivos de recurso. Essa é a solução ideal, mas também é a opção mais dispendiosa, e pode aumentar o tempo de retorno do conteúdo traduzido.
 
 ## <a name="keep-access-keys-and-labels-consistent"></a>Mantenha teclas de acesso e rótulos consistentes

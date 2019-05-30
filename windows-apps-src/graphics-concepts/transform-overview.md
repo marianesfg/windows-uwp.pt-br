@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a01814729e38668e05201b4b7c8876dc150c488e
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: fe97d689711202511dcfec023b718cd1ba9b0b1d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291764"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370928"
 ---
 # <a name="transform-overview"></a>Visão geral da transformação
 
@@ -60,7 +60,7 @@ Matrizes são escritas na ordem das colunas de linha. Uma matriz que dimensiona 
 
 ![equação de uma matriz de dimensionamento uniforme](images/matrix.png)
 
-No C++, o Direct3D declara matrizes como uma matriz bidimensional, usando uma estrutura de matriz. O exemplo a seguir mostra como inicializar uma estrutura [**D3DMATRIX**](https://msdn.microsoft.com/library/windows/desktop/bb172573) para atuar como uma matriz de dimensionamento uniforme (fator de escala "s").
+No C++, o Direct3D declara matrizes como uma matriz bidimensional, usando uma estrutura de matriz. O exemplo a seguir mostra como inicializar uma estrutura [**D3DMATRIX**](https://docs.microsoft.com/windows/desktop/direct3d9/d3dmatrix) para atuar como uma matriz de dimensionamento uniforme (fator de escala "s").
 
 ```cpp
 D3DMATRIX scale = {

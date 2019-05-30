@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4de5ba146c8241598527dd268d604fcc9bb97d6d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a29fbe49e45b819ddf4ffc3172445996d3622360
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662351"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370623"
 ---
 # <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span id="direct3dconcepts.floating-point_rules"></span>Regras de ponto flutuantes
 
@@ -37,7 +37,7 @@ Algumas dessas regras são uma única opção onde a IEEE-754 oferece opções.
     A exceção é - 0; sqrt(-0) produz - 0 e rsq(-0) produz -INF.
 -   INF - INF = NaN
 -   (+/-)INF / (+/-)INF = NaN
--   (+/-) INF \* 0 = NaN
+-   (+/-)INF \* 0 = NaN
 -   Qualquer valor NaN (qualquer OP) = NaN
 -   As comparações EQ, GT, GE, LT e LE, quando um ou ambos operandos for NaN retornará **FALSE**.
 -   As comparações ignoram o sinal de 0 (sendo assim, +0 igual -0).
@@ -59,7 +59,7 @@ Algumas dessas regras são uma única opção onde a IEEE-754 oferece opções.
 -   A entrada NaN para uma operação sempre produz NaN na saída. Mas o padrão de bit exato do NaN não é necessário para manter o mesmo (a menos que a operação seja uma instrução de movimento bruta - que não altera os dados.)
 -   As operações de mínimo ou máximo para as quais somente um operando é NaN retornam o outro operando como resultado (ao contrário das regras de comparação que vimos anteriormente). Isso é uma regra de IEEE 754R.
 
-    A especificação IEEE 754R para operações de mínimo e máximo de ponto flutuante diz que se uma das entradas para mínimo ou máximo for um valor de QNaN silencioso, o resultado da operação será outro parâmetro. Por exemplo:
+    A especificação IEEE 754R para operações de mínimo e máximo de ponto flutuante diz que se uma das entradas para mínimo ou máximo for um valor de QNaN silencioso, o resultado da operação será outro parâmetro. Por exemplo: 
 
     ```ManagedCPlusPlus
     min(x,QNaN) == min(QNaN,x) == x (same for max)
@@ -82,13 +82,13 @@ Algumas dessas regras são uma única opção onde a IEEE-754 oferece opções.
 -   x +/- 0.0f sempre resulta em x (exceto denorm liberados). Mas -0 + 0 = +0.
 -   As operações fundidas (como mad, dp3) produzem resultados que não são menos precisos do que a pior ordem serial possível da avaliação da expansão não fundida da operação. A definição de pior ordem possível, para fins de tolerância, não é uma definição fixa para uma determinada operação fundida; depende dos valores específicos das entradas. As etapas individuais na expansão não fundida têm tolerância de 1 ULP (ou para qualquer instrução que o Direct3D chamar com uma tolerância lax maior que 1 ULP, mais a tolerância lax será permitida).
 -   As operações fundidas cumprem as mesmas regras NaN que as operações não fundidas.
--   sqrt e rcp têm tolerância de 1 ULP. As instruções de raiz quadrada recíproca e recíproca de sombreador, [**rcp**](https://msdn.microsoft.com/library/windows/desktop/hh447205) e [**rsq**](https://msdn.microsoft.com/library/windows/desktop/hh447221), têm seu próprios requisitos separados de precisão relaxada.
+-   sqrt e rcp têm tolerância de 1 ULP. As instruções de raiz quadrada recíproca e recíproca de sombreador, [**rcp**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/hh447205(v=vs.85)) e [**rsq**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/rsq--sm4---asm-), têm seu próprios requisitos separados de precisão relaxada.
 -   Multiplique e divide cada operação no nível de precisão de ponto flutuante de 32 bits (precisão de até 0,5 ULP para multiplicação e 1,0 ULP para recíproca). Se x/y é implementado diretamente, os resultados devem ter precisão maior ou igual à de um método de duas etapas.
 
 ## <a name="span-iddoubleprec64bitspanspan-iddoubleprec64bitspan64-bit-double-precision-floating-point-rules"></a><span id="double_prec_64_bit"></span><span id="DOUBLE_PREC_64_BIT"></span>64-bit (precisão dupla) regras de ponto flutuantes
 
 
-Drivers de hardware e exibição opcionalmente suportam ponto flutuante de precisão dupla. Para indicar o suporte, quando você chama [ **ID3D11Device::CheckFeatureSupport** ](https://msdn.microsoft.com/library/windows/desktop/ff476497) com [ **D3D11\_recurso\_DUPLOS** ](https://msdn.microsoft.com/library/windows/desktop/ff476124#d3d11-feature-doubles), os conjuntos de driver **DoublePrecisionFloatShaderOps** de [ **D3D11\_recurso\_dados\_DUPLOS** ](https://msdn.microsoft.com/library/windows/desktop/ff476127) como TRUE. Em seguida, o driver e o hardware devem dar suporte a todas as instruções de ponto flutuante de precisão dupla.
+Drivers de hardware e exibição opcionalmente suportam ponto flutuante de precisão dupla. Para indicar o suporte, quando você chama [ **ID3D11Device::CheckFeatureSupport** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) com [ **D3D11\_recurso\_DUPLOS** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ne-d3d11-d3d11_feature), os conjuntos de driver **DoublePrecisionFloatShaderOps** de [ **D3D11\_recurso\_dados\_DUPLOS** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_feature_data_doubles) como TRUE. Em seguida, o driver e o hardware devem dar suporte a todas as instruções de ponto flutuante de precisão dupla.
 
 As instruções de precisão dupla seguem os requisitos de comportamento IEEE 754R.
 
@@ -148,9 +148,9 @@ As regras de ponto flutuante de 32 bits também esperam por números de ponto fl
 
 [Apêndices](appendix.md)
 
-[Recursos](https://msdn.microsoft.com/library/windows/desktop/ff476894)
+[Recursos](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources)
 
-[Texturas](https://msdn.microsoft.com/library/windows/desktop/ff476902)
+[Texturas](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-textures)
 
  
 

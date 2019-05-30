@@ -8,19 +8,19 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a4eadb82de2035b931d75ff2eefa6f8bd6652c94
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.openlocfilehash: 0692207046c999dc55a56bd3f0948f3f5b93fecd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343265"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365226"
 ---
 # <a name="speech-recognition"></a>Reconhecimento de fala
 
 
 Use o reconhecimento de fala para fornecer entrada, especificar uma ação ou um comando e realizar tarefas.
 
-> **APIs importantes**: [**Windows.Media.SpeechRecognition**](https://msdn.microsoft.com/library/windows/apps/dn653262)
+> **APIs importantes**: [**Windows.Media.SpeechRecognition**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition)
 
 O reconhecimento de fala é realizado em um tempo de execução de fala, APIs de reconhecimento para programação do tempo de execução, gramáticas prontas para usar ditado e pesquisa na Web e uma interface do usuário do sistema padrão que auxilia os usuários a descobrir e usar recursos de reconhecimento de fala.
 
@@ -216,7 +216,7 @@ Você pode usar os seguintes tipos de restrições para reconhecer a entrada de 
 
 Ditado predefinido e gramáticas de pesquisa na Web fornecem o reconhecimento de fala de seu aplicativo sem precisar que você crie uma gramática. Ao utilizar essas gramáticas, o reconhecimento de fala é realizado por um serviço Web remoto, e os resultados são retornados ao dispositivo.
 
-A gramática de ditado de texto livre padrão pode reconhecer a maioria das palavras e frases que um usuário pode dizer em um determinado idioma e é otimizada para reconhecer frases curtas. A gramática de ditado predefinida será usada se você não especificar uma restrição para seu objeto [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226). O ditado de texto livre é útil quando você não deseja limitar os tipos de coisas que um usuário pode dizer. Os usos típicos incluem criação de notas ou ditado de conteúdo para uma mensagem.
+A gramática de ditado de texto livre padrão pode reconhecer a maioria das palavras e frases que um usuário pode dizer em um determinado idioma e é otimizada para reconhecer frases curtas. A gramática de ditado predefinida será usada se você não especificar uma restrição para seu objeto [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer). O ditado de texto livre é útil quando você não deseja limitar os tipos de coisas que um usuário pode dizer. Os usos típicos incluem criação de notas ou ditado de conteúdo para uma mensagem.
 
 A gramática de pesquisa na Web, assim como uma gramática de ditado, contém um grande número de palavras e frases que um usuário pode dizer. No entanto, ela é otimizada para reconhecer termos que as pessoas normalmente usam ao pesquisar na Web.
 
@@ -228,13 +228,13 @@ Para usar restrições de serviço Web, você deve habilitar o suporte à entrad
 
 Aqui, nós mostramos como testar se a entrada de fala está habilitada. Caso não esteja, abra página Configurações -> Privacidade -> Fala, escrita à tinta e digitação.
 
-Primeiro, inicializamos uma variável global (HResultPrivacyStatementDeclined) para o valor HResult de 0x80045509. Ver [tratamento de exceção para em C\# ou o Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
+Primeiro, inicializamos uma variável global (HResultPrivacyStatementDeclined) para o valor HResult de 0x80045509. Ver [tratamento de exceção para em C\# ou o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/dn532194(v=win.10)).
 
 ```csharp
 private static uint HResultPrivacyStatementDeclined = 0x80045509;
 ```
 
-Em seguida, pegamos quaisquer exceções padrão durante o reconhecimento e testamos se o valor [**HResult**](https://msdn.microsoft.com/library/windows/apps/br206579) é igual ao valor da variável HResultPrivacyStatementDeclined. Se for, exibimos um aviso e chamamos `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` para abrir a página Configurações.
+Em seguida, pegamos quaisquer exceções padrão durante o reconhecimento e testamos se o valor [**HResult**](https://docs.microsoft.com/uwp/api/Windows.Foundation.HResult) é igual ao valor da variável HResultPrivacyStatementDeclined. Se for, exibimos um aviso e chamamos `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` para abrir a página Configurações.
 
 ```csharp
 catch (Exception exception)
@@ -257,7 +257,7 @@ catch (Exception exception)
 }
 ```
 
-Ver [ **SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446).
+Ver [ **SpeechRecognitionTopicConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint).
 
 ### <a name="programmatic-list-constraints"></a>Restrições de lista através de programação 
 
@@ -265,19 +265,19 @@ Restrições de lista programática fornecem uma abordagem leve para criar gram�
 
 Uma restrição de lista consiste em uma matriz de cadeia de caracteres que representa a entrada de fala que seu aplicativo aceitará para uma operação de reconhecimento. Você pode criar uma restrição de lista em seu aplicativo criando um objeto de restrição de lista de reconhecimento de fala e passando uma matriz de cadeias de caracteres. Em seguida, adicione o objeto à coleção de restrições do reconhecedor. O reconhecimento é bem-sucedido quando o reconhecedor de fala reconhece qualquer uma das sequências de caracteres na matriz.
 
-Ver [ **SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421).
+Ver [ **SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint).
 
 ### <a name="srgs-grammars"></a>Gramáticas SRGS
 
 Uma gramática SRGS (Especificação de Gramática de Reconhecimento de Fala) é um documento estático que, ao contrário de uma restrição de lista programática, usa o formato XML definido pela [SRGS Versão 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302). Uma gramática SRGS oferece maior controle sobre a experiência de reconhecimento de fala, permitindo a você capturar diversos significados semânticos em um único reconhecimento.
 
- Ver [ **SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412).
+ Ver [ **SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint).
 
 ### <a name="voice-command-constraints"></a>Restrições de comando de voz
 
 Use um arquivo XML de Definição de comando de voz (VCD) para definir os comandos que o usuário pode usar para iniciar ações ao ativar seu aplicativo. Para obter mais detalhes, consulte [ativar um aplicativo de primeiro plano com comandos de voz por meio da Cortana](https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana).
 
-Ver [ **SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220)/
+Ver [ **SpeechRecognitionVoiceCommandDefinitionConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint)/
 
 **Observação**  o tipo do tipo de restrição que você usa depende da complexidade da experiência de reconhecimento que você deseja criar. Qualquer tipo pode ser a melhor escolha para uma tarefa específica de reconhecimento, e você pode encontrar usos para todos os tipos de restrição em seu aplicativo.
 Para começar a usar restrições, consulte [Definir restrições de reconhecimento personalizadas](define-custom-recognition-constraints.md).
@@ -288,7 +288,7 @@ Neste exemplo, você verá como:
 
 - Crie um reconhecedor de fala.
 - Compile as restrições padrão do Aplicativo Universal do Windows (nenhuma gramática foi adicionada ao conjunto de gramáticas do reconhecedor de fala).
-- Inicie a escuta da fala usando a interface do usuário de reconhecimento básica e o comentário TTS fornecido pelo método [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245). Use o método [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) se a interface do usuário padrão não for necessária.
+- Inicie a escuta da fala usando a interface do usuário de reconhecimento básica e o comentário TTS fornecido pelo método [**RecognizeWithUIAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizewithuiasync). Use o método [**RecognizeAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizeasync) se a interface do usuário padrão não for necessária.
 
 ```CSharp
 private async void StartRecognizing_Click(object sender, RoutedEventArgs e)
@@ -311,7 +311,7 @@ private async void StartRecognizing_Click(object sender, RoutedEventArgs e)
 ## <a name="customize-the-recognition-ui"></a>Personalizar o reconhecimento da interface do usuário
 
 
-Quando seu aplicativo tenta o reconhecimento de fala chamando [**SpeechRecognizer.RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245), várias telas são mostradas na ordem a seguir.
+Quando seu aplicativo tenta o reconhecimento de fala chamando [**SpeechRecognizer.RecognizeWithUIAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizewithuiasync), várias telas são mostradas na ordem a seguir.
 
 Se estiver usando uma restrição baseada em uma gramática predefinida (ditado ou pesquisa na Web):
 
@@ -333,7 +333,7 @@ A imagem a seguir mostra um exemplo do fluxo entre telas de um reconhecedor de f
 
 ![tela de reconhecimento final para uma restrição baseada em um arquivo de gramática sgrs](images/speech-listening-complete.png)
 
-A tela **Ouvindo** pode fornecer exemplos de palavras ou frases que o aplicativo pode reconhecer. Aqui, mostramos como usar as propriedades da classe [**SpeechRecognizerUIOptions**](https://msdn.microsoft.com/library/windows/apps/dn653234) (obtida chamando a propriedade [**SpeechRecognizer.UIOptions**](https://msdn.microsoft.com/library/windows/apps/dn653254) para personalizar o conteúdo na tela **Ouvindo**.
+A tela **Ouvindo** pode fornecer exemplos de palavras ou frases que o aplicativo pode reconhecer. Aqui, mostramos como usar as propriedades da classe [**SpeechRecognizerUIOptions**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions) (obtida chamando a propriedade [**SpeechRecognizer.UIOptions**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.uioptions) para personalizar o conteúdo na tela **Ouvindo**.
 
 ```CSharp
 private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
@@ -371,7 +371,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 **Desenvolvedores**
 * [Interações de fala](speech-interactions.md)
 **Designers**
-* [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+* [Diretrizes para design de controle por voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
 **Exemplos**
 * [Reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  

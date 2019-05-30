@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 175009773f7969adbaf36a036e733443f593467f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 940de8c00dc2639785ae82e87d63f4994b1b6b2e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620551"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367745"
 ---
 #  <a name="define-the-uwp-app-framework"></a>Definir a estrutura do aplicativo UWP
 
@@ -25,8 +25,8 @@ Você precisará implementar esses cinco métodos que o singleton do aplicativo 
 * [__inicializar__](#initialize-the-view-provider)
 * [__SetWindow__](#configure-the-window-and-display-behaviors)
 * [__Carga__](#load-method-of-the-view-provider)
-* [__executar__](#run-method-of-the-view-provider)
-* [__Cancelar inicialização__](#uninitialize-method-of-the-view-provider)
+* [__Run__](#run-method-of-the-view-provider)
+* [__Uninitialize__](#uninitialize-method-of-the-view-provider)
 
 O método __Initialize__ é chamado na inicialização do aplicativo. O método __SetWindow__ é chamado após __Initialize__. E depois o método __Load__ é chamado. O método __Run__ é chamado quando o jogo está sendo executado. Quando o jogo chega ao fim, o método __Uninitialize__ é chamado. Para obter mais informações, consulte a [Referência de API __IFrameworkView__](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview). 
 
@@ -71,7 +71,7 @@ IFrameworkView^ DirectXApplicationSource::CreateView()
 
 ## <a name="initialize-the-view-provider"></a>Inicializar o provedor de visualização
 
-Após a criação do objeto do provedor de exibição, o singleton do aplicativo chama o método [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495) na inicialização do aplicativo. Por isso, é essencial que esse método manipule a maioria dos comportamentos fundamentais de um jogo UWP; por exemplo, manipular a ativação da janela principal e garantir que o jogo possa lidar com um evento de suspensão repentina (e, posteriormente, com uma possível retomada).
+Após a criação do objeto do provedor de exibição, o singleton do aplicativo chama o método [**Initialize**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.initialize) na inicialização do aplicativo. Por isso, é essencial que esse método manipule a maioria dos comportamentos fundamentais de um jogo UWP; por exemplo, manipular a ativação da janela principal e garantir que o jogo possa lidar com um evento de suspensão repentina (e, posteriormente, com uma possível retomada).
 
 Neste ponto, o aplicativo de jogo pode manipular uma mensagem de suspensão (ou retomada). Contudo, ainda não há janela com a qual trabalhar e o jogo não foi iniciado. Há mais algumas coisas que devem ser feitas.
 
@@ -105,11 +105,11 @@ void App::Initialize(
 
 ## <a name="configure-the-window-and-display-behaviors"></a>Configurar os comportamentos da janela e de exibição
 
-Agora vamos analisar a implementação de [__SetWindow__](https://msdn.microsoft.com/library/windows/apps/hh700509). No método __SetWindow__, você configura os comportamentos da janela e de exibição.
+Agora vamos analisar a implementação de [__SetWindow__](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.setwindow). No método __SetWindow__, você configura os comportamentos da janela e de exibição.
 
 ### <a name="appsetwindow-method"></a>Método App::SetWindow
 
-O singleton do aplicativo fornece um objeto [__CoreWindow__](https://msdn.microsoft.com/library/windows/apps/br208225) que representa a janela principal do jogo, disponibilizando os recursos e eventos para o jogo. Agora que há uma janela com a qual trabalhar, o jogo pode começar a adicionar os eventos e os componentes básicos de interface do usuário.
+O singleton do aplicativo fornece um objeto [__CoreWindow__](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) que representa a janela principal do jogo, disponibilizando os recursos e eventos para o jogo. Agora que há uma janela com a qual trabalhar, o jogo pode começar a adicionar os eventos e os componentes básicos de interface do usuário.
 
 Em seguida, crie um ponteiro usando o método __CoreCursor__ que pode ser usado por controles de mouse e toque.
 
@@ -162,7 +162,7 @@ void App::SetWindow(
 
 ## <a name="load-method-of-the-view-provider"></a>Método Load do provedor de visualização
 
-Após a janela principal ser definida, o singleton do aplicativo chama [__Load__](https://msdn.microsoft.com/library/windows/apps/hh700501). Um conjunto de tarefas assíncronas é usado nesse método para criar os objetos do jogo, carregar os recursos de gráficos e iniciar a máquina de estado do jogo. Se você quiser pré-extrair dados ou ativos do jogo, este é um lugar melhor para isso, em vez de **SetWindow** ou **Initialize**. 
+Após a janela principal ser definida, o singleton do aplicativo chama [__Load__](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.load). Um conjunto de tarefas assíncronas é usado nesse método para criar os objetos do jogo, carregar os recursos de gráficos e iniciar a máquina de estado do jogo. Se você quiser pré-extrair dados ou ativos do jogo, este é um lugar melhor para isso, em vez de **SetWindow** ou **Initialize**. 
 
 Como o Windows impõe restrições ao tempo que um jogo pode levar antes que precise começar a processar a entrada, usando o padrão de tarefa assíncrona, você precisa criar o método __Load__ a ser completado rapidamente para que possa iniciar o processamento da entrada. Se o carregamento levar algum tempo, ou se houver muitos recursos, forneça aos usuários uma barra de progresso atualizada regularmente. Esse método também é usado para fazer todas as preparações necessárias antes do início do jogo, como definir os estados iniciais ou valores globais.
 
@@ -308,9 +308,9 @@ O código de exemplo transita para um dos dois estados na máquina de estado do 
     * __Desativado__: A janela do jogo é desativada ou (perde o foco) ou ajustada. Quando isso acontece, o jogo suspende o processamento de eventos e aguarda a janela focar ou desajustar.
     * __TooSmall__: O jogo atualiza seu próprio estado e renderiza os elementos gráficos para exibição.
 
-Quando seu jogo tem foco, você deve lidar com todos os eventos na fila de mensagens conforme eles chegam. Por isso, é preciso chamar [**CoreWindowDispatch.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) com a opção **ProcessAllIfPresent**. Outras opções podem causar atrasos no processamento de eventos de mensagens, que podem fazer com que o jogo pareça não responder, ou resultar em comportamentos de toque lentos, e não "fluidos".
+Quando seu jogo tem foco, você deve lidar com todos os eventos na fila de mensagens conforme eles chegam. Por isso, é preciso chamar [**CoreWindowDispatch.ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) com a opção **ProcessAllIfPresent**. Outras opções podem causar atrasos no processamento de eventos de mensagens, que podem fazer com que o jogo pareça não responder, ou resultar em comportamentos de toque lentos, e não "fluidos".
 
-Quando o jogo não estiver visível, suspenso ou encaixado, você não quer que ele consuma ciclos de recursos para enviar mensagens que nunca chegarão. Nesse caso, o jogo precisa usar o **ProcessOneAndAllPending**, que é bloqueado até receber um evento e processa esse evento e todos os outros que chegam na fila do processo durante o processamento da primeira. [**ProcessEvents** ](https://msdn.microsoft.com/library/windows/apps/br208215) , em seguida, retorna imediatamente depois que a fila foi processada.
+Quando o jogo não estiver visível, suspenso ou encaixado, você não quer que ele consuma ciclos de recursos para enviar mensagens que nunca chegarão. Nesse caso, o jogo precisa usar o **ProcessOneAndAllPending**, que é bloqueado até receber um evento e processa esse evento e todos os outros que chegam na fila do processo durante o processamento da primeira. [**ProcessEvents** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) , em seguida, retorna imediatamente depois que a fila foi processada.
 
 ```cpp
 void App::Run()

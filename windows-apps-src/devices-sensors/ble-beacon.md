@@ -6,19 +6,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
-ms.openlocfilehash: b1c8271c8066304dce355cf50afd4509173eed3e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3deb5aca27b4f33d0492bae9fd4ddbce4f52d065
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653261"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370366"
 ---
 # <a name="bluetooth-le-advertisements"></a>Anúncios de Bluetooth LE
 
 
 **APIs importantes**
 
--   [**Windows.Devices.Bluetooth.Advertisement**](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.aspx)
+-   [**Windows.Devices.Bluetooth.Advertisement**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement)
 
 Este artigo fornece uma visão geral dos beacons de anúncios de Bluetooth de baixa energia (LE) para aplicativos UWP (Plataforma Universal do Windows).  
 
@@ -26,8 +26,8 @@ Este artigo fornece uma visão geral dos beacons de anúncios de Bluetooth de ba
 
 Há duas funções principais que um desenvolvedor pode executar usando as APIs de anúncio LE:
 
--   [Inspetor de anúncio](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): escuta beacons nas proximidades e filtra com base na carga ou proximidade.  
--   [Fornecedor de anúncio](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): define uma carga para o Windows anunciar em nome de um desenvolvedor.  
+-   [Inspetor de anúncio](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher): escuta beacons nas proximidades e filtra com base na carga ou proximidade.  
+-   [Fornecedor de anúncio](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher): define uma carga para o Windows anunciar em nome de um desenvolvedor.  
 
 O código de exemplo completo está disponível no [Exemplo de anúncio de Bluetooth](https://go.microsoft.com/fwlink/p/?LinkId=619990) no Github
 
@@ -43,7 +43,7 @@ Para usar a funcionalidade Bluetooth LE básica em um aplicativo da Plataforma U
 
 Anúncios de Bluetooth LE permitem que seu dispositivo envie constantemente beacons de uma carga específica, chamada de anúncio. Esse anúncio pode ser visto por qualquer dispositivo compatível com Bluetooth LE nas proximidades, se estiver configurado para escutar esse anúncio específico.
 
-> **Observação**: Para a privacidade do usuário, o tempo de vida do seu anúncio é ligado do seu aplicativo. Você pode criar BluetoothLEAdvertisementPublisher e chamar Start em uma tarefa em segundo plano para o anúncio em segundo plano. Para obter mais informações sobre tarefas em segundo plano, consulte [Início, retomada e tarefas em segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
+> **Observação**: Para a privacidade do usuário, o tempo de vida do seu anúncio é ligado do seu aplicativo. Você pode criar BluetoothLEAdvertisementPublisher e chamar Start em uma tarefa em segundo plano para o anúncio em segundo plano. Para obter mais informações sobre tarefas em segundo plano, consulte [Início, retomada e tarefas em segundo plano](https://docs.microsoft.com/windows/uwp/launch-resume/index).
 
 ### <a name="basic-publishing"></a>Publicação básica
 

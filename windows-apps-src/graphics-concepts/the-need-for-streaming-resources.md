@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e0354b0e727e84d562bf63779e74be72f87198f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f5b44e60e3490f39a91724bf038aa8066de11bf0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632171"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370897"
 ---
 # <a name="the-need-for-streaming-resources"></a>A necessidade de recursos de streaming
 
@@ -33,7 +33,7 @@ Em um sistema gráfico (ou seja, o sistema operacional, driver de vídeo e hardw
 
 Para um [buffer](introduction-to-buffers.md), todo o buffer é o sub-recurso.
 
-Para uma [textura](textures.md) (por exemplo, [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525)), cada nível de mip é um sub-recurso; para uma matriz de texturas (por exemplo, [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526)), cada nível de mip em uma determinada fatia da matriz é um sub-recurso. O sistema gráfico expõe apenas a capacidade de gerenciar o mapeamento de alocações nessa granularidade de sub-recursos. No contexto de recursos de streaming, "mapeamento" refere-se a tornar os dados visíveis para a GPU.
+Para uma [textura](textures.md) (por exemplo, [**Texture2D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d)), cada nível de mip é um sub-recurso; para uma matriz de texturas (por exemplo, [**Texture2DArray**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2darray)), cada nível de mip em uma determinada fatia da matriz é um sub-recurso. O sistema gráfico expõe apenas a capacidade de gerenciar o mapeamento de alocações nessa granularidade de sub-recursos. No contexto de recursos de streaming, "mapeamento" refere-se a tornar os dados visíveis para a GPU.
 
 ## <a name="span-idwithouttilingcantaccessonlyasmallportionofmipmapchainspanspan-idwithouttilingcantaccessonlyasmallportionofmipmapchainspanspan-idwithouttilingcantaccessonlyasmallportionofmipmapchainspanwithout-tiling-cant-access-only-a-small-portion-of-mipmap-chain"></a><span id="Without_tiling__can_t_access_only_a_small_portion_of_mipmap_chain"></span><span id="without_tiling__can_t_access_only_a_small_portion_of_mipmap_chain"></span><span id="WITHOUT_TILING__CAN_T_ACCESS_ONLY_A_SMALL_PORTION_OF_MIPMAP_CHAIN"></span>Sem disposição lado a lado, não é possível acessar apenas uma pequena parte da cadeia de mipmap
 
@@ -47,7 +47,7 @@ Na realidade, sem o suporte para recursos de streaming, o sistema gráfico pode 
 
 A paginação de software pode ser usada para dividir a superfície em blocos que sejam pequenos o suficiente para o hardware processar.
 
-O Direct3D dá suporte para superfícies [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) com até 16384 pixels em um determinado lado. Uma imagem de 16384 de largura por 16384 de altura e 4 bytes por pixel consumiria 1 GB de memória de vídeo (e adicionar mipmaps duplicaria essa quantidade). Na prática, raramente seria necessário referenciar o volume todo de 1 GB em uma única operação de renderização.
+O Direct3D dá suporte para superfícies [**Texture2D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d) com até 16384 pixels em um determinado lado. Uma imagem de 16384 de largura por 16384 de altura e 4 bytes por pixel consumiria 1 GB de memória de vídeo (e adicionar mipmaps duplicaria essa quantidade). Na prática, raramente seria necessário referenciar o volume todo de 1 GB em uma única operação de renderização.
 
 Alguns desenvolvedores de jogos modelam superfícies de terreno grandes de até 128 K por 128 K. Eles fazem isso funcionar nas GPUs existentes dividindo a superfície em blocos que sejam pequenos o suficiente para o hardware processar. O aplicativo deve descobrir quais blocos podem ser necessário e carregá-los em um cache de texturas na GPU – um sistema de paginação de software.
 

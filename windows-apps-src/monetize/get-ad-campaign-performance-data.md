@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
-ms.openlocfilehash: 1190ec43c5b98eabd897a3bed3788aaf6eb0cb7d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d1b76184f70c796ad3b6e89b119dd56670ed028f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594571"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372167"
 ---
 # <a name="get-ad-campaign-performance-data"></a>Obter dados de desempenho da campanha publicitária
 
@@ -36,7 +36,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Método | URI da solicitação                                                              |
 |--------|--------------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/promotion``` |
+| OBTER    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/promotion``` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
@@ -59,8 +59,8 @@ Para recuperar dados de desempenho da campanha publicitária de um aplicativo es
 | skip   | int    |  O número de linhas a serem ignoradas na consulta. Use este parâmetro para percorrer grandes conjuntos de dados. Por exemplo, top=10000 e skip=0 recuperam as primeiras 10.000 linhas de dados, top=10000 e skip=10000 recuperam as próximas 10.000 linhas de dados e assim por diante.   |   Não    |
 | filter   |  cadeia de caracteres   |  Uma ou mais instruções que filtram as linhas na resposta. O único filtro compatível é **campaignId**. Cada instrução pode usar os operadores **eq** ou **ne**, e as instruções podem ser combinadas usando **and** ou **or**.  Aqui está um parâmetro *filter* de exemplo: ```filter=campaignId eq '100023'```.   |   Não    |
 |  aggregationLevel  |  cadeia de caracteres   | Especifica o intervalo de tempo para o qual recuperar dados agregados. Pode ser uma das seguintes cadeias de caracteres: <strong>day</strong>, <strong>week</strong> ou <strong>month</strong>. Se não for especificado, o padrão será <strong>day</strong>.    |   Não    |
-| orderby   |  cadeia de caracteres   |  <p>Uma instrução que ordena os valores de dados do resultado dos dados de desempenho da campanha publicitária. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser uma das seguintes cadeias de caracteres:</p><ul><li><strong>Data</strong></li><li><strong>campaignId</strong></li></ul><p>O parâmetro <em>order</em> é opcional, e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p><p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,campaignId</em></p>   |   Não    |
-|  groupby  |  cadeia de caracteres   |  <p>Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir:</p><ul><li><strong>campaignId</strong></li><li><strong>applicationId</strong></li><li><strong>Data</strong></li><li><strong>currencyCode</strong></li></ul><p>O parâmetro <em>groupby</em> pode ser usado com o parâmetro <em>aggregationLevel</em>. Por exemplo: <em>&amp;groupby = applicationId&amp;aggregationLevel = week</em></p>   |   Não    |
+| orderby   |  cadeia de caracteres   |  <p>Uma instrução que ordena os valores de dados do resultado dos dados de desempenho da campanha publicitária. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser uma das seguintes cadeias de caracteres:</p><ul><li><strong>date</strong></li><li><strong>campaignId</strong></li></ul><p>O parâmetro <em>order</em> é opcional, e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p><p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,campaignId</em></p>   |   Não    |
+|  groupby  |  cadeia de caracteres   |  <p>Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir:</p><ul><li><strong>campaignId</strong></li><li><strong>applicationId</strong></li><li><strong>date</strong></li><li><strong>currencyCode</strong></li></ul><p>O parâmetro <em>groupby</em> pode ser usado com o parâmetro <em>aggregationLevel</em>. Por exemplo: <em>&amp;groupby = applicationId&amp;aggregationLevel = week</em></p>   |   Não    |
 
 
 ### <a name="request-example"></a>Exemplo de solicitação
@@ -150,6 +150,6 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar uma campanha publicitária para seu aplicativo](https://msdn.microsoft.com/windows/uwp/publish/create-an-ad-campaign-for-your-app)
+* [Criar uma campanha publicitária para seu aplicativo](https://docs.microsoft.com/windows/uwp/publish/create-an-ad-campaign-for-your-app)
 * [Executar campanhas publicitárias usando os serviços da Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
 * [Dados de análise de acesso usando os serviços da Microsoft Store](access-analytics-data-using-windows-store-services.md)

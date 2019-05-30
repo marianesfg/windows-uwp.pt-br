@@ -6,23 +6,23 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b5312614c7060118fdb4678aa80ae51d6734486
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a9d3b4b9b404ab2c0828ea302f0c564ae1c8e7b4
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660301"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372781"
 ---
 # <a name="rssatom-feeds"></a>Feeds RSS/Atom
 
 
 **APIs importantes**
 
--   [**Windows.Data.Xml.Dom**](https://msdn.microsoft.com/library/windows/apps/br240819)
--   [**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609)
--   [**Windows**](https://msdn.microsoft.com/library/windows/apps/br243632)
+-   [**Windows.Data.Xml.Dom**](https://docs.microsoft.com/uwp/api/Windows.Data.Xml.Dom)
+-   [**Windows.Web.AtomPub**](https://docs.microsoft.com/uwp/api/Windows.Web.AtomPub)
+-   [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication)
 
-Recupere ou crie o conteúdo da Web mais atual e popular usando feeds sindicalizados gerados de acordo com os padrões RSS e Atom, usando os recursos no namespace [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632).
+Recupere ou crie o conteúdo da Web mais atual e popular usando feeds sindicalizados gerados de acordo com os padrões RSS e Atom, usando os recursos no namespace [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication).
 
 ## <a name="what-is-a-feed"></a>O que é um feed?
 
@@ -30,11 +30,11 @@ Um web feed é um documento que contém qualquer número de entradas individuais
 
 ## <a name="which-feed-format-standards-are-supported"></a>Que padrões de formato de feed são compatíveis?
 
-A UWP (Plataforma Universal do Windows) dá suporte à recuperação de feed nos padrões de formato RSS, de 0.91 a RSS 2.0, e nos padrões Atom, de 0.3 a 1.0. As classes no namespace [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) podem definir feeds e itens de feed capazes de representar elementos de RSS e Atom.
+A UWP (Plataforma Universal do Windows) dá suporte à recuperação de feed nos padrões de formato RSS, de 0.91 a RSS 2.0, e nos padrões Atom, de 0.3 a 1.0. As classes no namespace [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication) podem definir feeds e itens de feed capazes de representar elementos de RSS e Atom.
 
-Adicionalmente, os formatos Atom 1.0 e RSS 2.0 permitem que seus documentos de feed contenham elementos ou atributos não definidos nas especificações oficiais. Ao longo do tempo, esses elementos e atributos personalizados se tornaram uma forma de definir informações específicas de domínios consumidas por outros formatos de dados de serviços Web, como GData e OData. Para ter suporte desse recurso adicional, a classe [**SyndicationNode**](https://msdn.microsoft.com/library/windows/apps/br243585) representa elementos XML genéricos. O uso de **SyndicationNode** com classes no namespace [**Windows.Data.Xml.Dom**](https://msdn.microsoft.com/library/windows/apps/br240819) permite que os aplicativos acessem atributos, extensões e qualquer conteúdo contido neles.
+Adicionalmente, os formatos Atom 1.0 e RSS 2.0 permitem que seus documentos de feed contenham elementos ou atributos não definidos nas especificações oficiais. Ao longo do tempo, esses elementos e atributos personalizados se tornaram uma forma de definir informações específicas de domínios consumidas por outros formatos de dados de serviços Web, como GData e OData. Para ter suporte desse recurso adicional, a classe [**SyndicationNode**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationNode) representa elementos XML genéricos. O uso de **SyndicationNode** com classes no namespace [**Windows.Data.Xml.Dom**](https://docs.microsoft.com/uwp/api/Windows.Data.Xml.Dom) permite que os aplicativos acessem atributos, extensões e qualquer conteúdo contido neles.
 
-Observe que, para a publicação de conteúdo sindicalizado, a implementação da UWP do Protocolo Atom Publication ([**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609)) só é compatível com operações de conteúdo de feed de acordo com os padrões Atom e Atom Publication.
+Observe que, para a publicação de conteúdo sindicalizado, a implementação da UWP do Protocolo Atom Publication ([**Windows.Web.AtomPub**](https://docs.microsoft.com/uwp/api/Windows.Web.AtomPub)) só é compatível com operações de conteúdo de feed de acordo com os padrões Atom e Atom Publication.
 
 ## <a name="using-syndicated-content-with-network-isolation"></a>Usando conteúdo sindicalizado com isolamento de rede
 
@@ -42,7 +42,7 @@ O recurso de isolamento de rede na UWP permite que o desenvolvedor controle e li
 
 O isolamento de rede permite que um desenvolvedor defina o escopo necessário de acesso à rede para cada aplicativo. Um aplicativo sem o escopo apropriado definido não consegue acessar o tipo especificado de rede e o tipo específico de solicitação de rede (solicitações de saída iniciadas pelo cliente ou solicitações de entrada não solicitadas e de saída iniciadas pelo cliente). A capacidade de definir e impor o isolamento de rede garante que, se um aplicativo não ficar comprometido, ele só poderá acessar as redes às quais o aplicativo recebeu acesso explicitamente. Isto reduz significativamente o âmbito do impacto sobre outros aplicativos e sobre o Windows.
 
-O isolamento de rede afeta todos os elementos de classe nos namespaces [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) e [**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609) que tentem acessar a rede. O Windows impõe ativamente o isolamento de rede. Uma chamada a um elemento de classe no namespace **Windows.Web.Syndication** ou **Windows.Web.AtomPub** que resulta em acesso à rede pode falhar por causa do isolamento de rede se o recurso de rede adequado não for ativado.
+O isolamento de rede afeta todos os elementos de classe nos namespaces [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication) e [**Windows.Web.AtomPub**](https://docs.microsoft.com/uwp/api/Windows.Web.AtomPub) que tentem acessar a rede. O Windows impõe ativamente o isolamento de rede. Uma chamada a um elemento de classe no namespace **Windows.Web.Syndication** ou **Windows.Web.AtomPub** que resulta em acesso à rede pode falhar por causa do isolamento de rede se o recurso de rede adequado não for ativado.
 
 Os recursos de rede para um aplicativo são configurados no manifesto do aplicativo quando o aplicativo é compilado. Recursos de rede geralmente são adicionados usando o Microsoft Visual Studio 2015 ao desenvolver o aplicativo. Os recursos de rede também podem ser definidos manualmente no arquivo manifesto do aplicativo usando um editor de texto.
 
@@ -50,7 +50,7 @@ Para saber mais sobre o isolamento de rede e as funcionalidades de rede, consult
 
 ## <a name="how-to-access-a-web-feed"></a>Como acessar um web feed
 
-Esta seção mostra como recuperar e exibir um feed da Web usando classes no namespace [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) em seu aplicativo UWP escrito em C# ou Javascript.
+Esta seção mostra como recuperar e exibir um feed da Web usando classes no namespace [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication) em seu aplicativo UWP escrito em C# ou Javascript.
 
 **Pré-requisitos**
 
@@ -58,9 +58,9 @@ Para garantir que o aplicativo UWP esteja pronto para a rede, defina alguns recu
 
 **Recuperando conteúdo agregado de um web feed**
 
-Agora iremos revisar alguns códigos que demonstram como recuperar um feed e, depois, exibir cada item individual que o feed contém. Antes de configurar e enviar a solicitação, iremos definir algumas variáveis que usaremos durante a operação, e inicializar uma instância de [**SyndicationClient**](https://msdn.microsoft.com/library/windows/apps/br243456), que define os métodos e propriedades que usaremos para recuperar e exibir o feed.
+Agora iremos revisar alguns códigos que demonstram como recuperar um feed e, depois, exibir cada item individual que o feed contém. Antes de configurar e enviar a solicitação, iremos definir algumas variáveis que usaremos durante a operação, e inicializar uma instância de [**SyndicationClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationClient), que define os métodos e propriedades que usaremos para recuperar e exibir o feed.
 
-O construtor [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017) lança uma exceção se o *uriString* passado para o construtor não for um URI válido. Portanto, validamos o *uriString* usando um bloco try/catch.
+O construtor [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) lança uma exceção se o *uriString* passado para o construtor não for um URI válido. Portanto, validamos o *uriString* usando um bloco try/catch.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -93,13 +93,13 @@ try {
 }
 ```
 
-Em seguida, configuraremos a solicitação definindo as credenciais do Servidor (a propriedade [**ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243461)), as credenciais do proxy (a propriedade [**ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243459)) e os cabeçalhos HTTP (o método [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br243462)) necessários. Com os parâmetros de solicitação básicos configurados, um objeto [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017) válido, criado usando uma cadeia de caracteres URI do feed fornecida pelo aplicativo. O objeto **Uri** é então passado para a função [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) para solicitar o feed.
+Em seguida, configuraremos a solicitação definindo as credenciais do Servidor (a propriedade [**ServerCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.servercredential)), as credenciais do proxy (a propriedade [**ProxyCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.proxycredential)) e os cabeçalhos HTTP (o método [**SetRequestHeader**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.setrequestheader)) necessários. Com os parâmetros de solicitação básicos configurados, um objeto [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) válido, criado usando uma cadeia de caracteres URI do feed fornecida pelo aplicativo. O objeto **Uri** é então passado para a função [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) para solicitar o feed.
 
 Pressupondo que o conteúdo de feed desejado foi retornado, o exemplo de código itera cada item do feed, chamando **displayCurrentItem** (que definiremos em seguida), para exibir itens e seu conteúdo como uma lista na IU.
 
 É necessário escrever um código para tratar exceções quando você chama a maioria dos métodos de rede assíncronos. Seu manipulador de exceção recupera informações mais detalhadas sobre a causa da exceção para entender melhor a falha e tomar as medidas adequadas.
 
-O método [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) lança uma exceção se uma conexão não puder ser estabelecida com o servidor HTTP ou o objeto [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017) não apontar para um AtomPub ou RSS feed válido. O código de exemplo Javascript usa uma função **onError** para capturar quaisquer exceções e imprime mais informações detalhadas sobre a exceção, se ocorrer um erro.
+O método [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) lança uma exceção se uma conexão não puder ser estabelecida com o servidor HTTP ou o objeto [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) não apontar para um AtomPub ou RSS feed válido. O código de exemplo Javascript usa uma função **onError** para capturar quaisquer exceções e imprime mais informações detalhadas sobre a exceção, se ocorrer um erro.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -157,7 +157,7 @@ function retreiveFeed(uri) {
 }
 ```
 
-Na etapa anterior, [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) retornou o conteúdo de feed solicitado e o código de exemplo teve que trabalhar iterando através dos itens de feed disponíveis. Cada um desses itens é representado através de um objeto [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533) que contém todas as propriedades e conteúdo do item suportado pelo padrão de sindicalização relevante (RSS ou Atom). No exemplo a seguir, observamos a função **displayCurrentItem** trabalhando em cada item e exibindo seu conteúdo através de vários elementos de IU indicados.
+Na etapa anterior, [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) retornou o conteúdo de feed solicitado e o código de exemplo teve que trabalhar iterando através dos itens de feed disponíveis. Cada um desses itens é representado através de um objeto [**SyndicationItem**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationItem) que contém todas as propriedades e conteúdo do item suportado pelo padrão de sindicalização relevante (RSS ou Atom). No exemplo a seguir, observamos a função **displayCurrentItem** trabalhando em cada item e exibindo seu conteúdo através de vários elementos de IU indicados.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -199,7 +199,7 @@ function displayCurrentItem() {
                 //displayCurrentItem is continued below.
 ```
 
-Como sugerido anteriormente, o tipo de conteúdo representado por um objeto [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533) diferirá dependendo do padrão de feed (RSS ou Atom) empregado para publicar o feed. Por exemplo, um feed Atom é capaz de fornecer uma lista de [**Contributors**](https://msdn.microsoft.com/library/windows/apps/br243540), mas um feed RSS não é. No entanto, elementos de extensão incluídos em um feed que não são aceitos por nenhum padrão (por exemplo, elementos de extensão Dublin Core) podem ser acessados com a propriedade [**SyndicationItem.ElementExtensions**](https://msdn.microsoft.com/library/windows/apps/br243543) e, depois, exibidos como demonstrado no seguinte exemplo de código.
+Como sugerido anteriormente, o tipo de conteúdo representado por um objeto [**SyndicationItem**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationItem) diferirá dependendo do padrão de feed (RSS ou Atom) empregado para publicar o feed. Por exemplo, um feed Atom é capaz de fornecer uma lista de [**Contributors**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationitem.contributors), mas um feed RSS não é. No entanto, elementos de extensão incluídos em um feed que não são aceitos por nenhum padrão (por exemplo, elementos de extensão Dublin Core) podem ser acessados com a propriedade [**SyndicationItem.ElementExtensions**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationitem.elementextensions) e, depois, exibidos como demonstrado no seguinte exemplo de código.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp

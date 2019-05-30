@@ -6,12 +6,12 @@ ms.date: 06/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e04170fb8952ecd5802b6190816d44012f56d8a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f9dba57d8e75ba105a2154be5add5b101a4a6aa4
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661431"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369330"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos
 
@@ -24,7 +24,7 @@ Uma biblioteca é uma coleção virtual de pastas, que contém uma pasta conheci
 
 -   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
 
-    Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
+    Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 -   **Permissões de acesso para o local**
 
@@ -42,11 +42,11 @@ Uma biblioteca é uma coleção virtual de pastas, que contém uma pasta conheci
 > Lembre-se de declarar a funcionalidade apropriada. Veja [Declarações de funcionalidade de app](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) para saber mais.
  
 
-Para obter uma referência à biblioteca Música, Imagens ou Vídeo do usuário, chame o método [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725). Forneça o valor correspondente da enumeração [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399).
+Para obter uma referência à biblioteca Música, Imagens ou Vídeo do usuário, chame o método [**StorageLibrary.GetLibraryAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.getlibraryasync). Forneça o valor correspondente da enumeração [**KnownLibraryId**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownLibraryId).
 
--   [**KnownLibraryId.Music**](https://msdn.microsoft.com/library/windows/apps/br227155)
--   [**KnownLibraryId.Pictures**](https://msdn.microsoft.com/library/windows/apps/br227156)
--   [**KnownLibraryId.Videos**](https://msdn.microsoft.com/library/windows/apps/br227159)
+-   [**KnownLibraryId.Music**](https://docs.microsoft.com/uwp/api/windows.storage.knownfolders.musiclibrary)
+-   [**KnownLibraryId.Pictures**](https://docs.microsoft.com/uwp/api/windows.storage.knownfolders.pictureslibrary)
+-   [**KnownLibraryId.Videos**](https://docs.microsoft.com/uwp/api/windows.storage.knownfolders.videoslibrary)
 
 ```cs
 var myPictures = await Windows.Storage.StorageLibrary.GetLibraryAsync(Windows.Storage.KnownLibraryId.Pictures);
@@ -55,7 +55,7 @@ var myPictures = await Windows.Storage.StorageLibrary.GetLibraryAsync(Windows.St
 ## <a name="get-the-list-of-folders-in-a-library"></a>Obter a lista de pastas em uma biblioteca
 
 
-Para obter a lista de pastas em uma biblioteca, obtenha o valor da propriedade [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724).
+Para obter a lista de pastas em uma biblioteca, obtenha o valor da propriedade [**StorageLibrary.Folders**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders).
 
 ```cs
 using Windows.Foundation.Collections;
@@ -65,7 +65,7 @@ IObservableVector<Windows.Storage.StorageFolder> myPictureFolders = myPictures.F
 ## <a name="get-the-folder-in-a-library-where-new-files-are-saved-by-default"></a>Obter a pasta em uma biblioteca onde os novos arquivos são salvos por padrão
 
 
-Para obter a pasta em uma biblioteca onde os novos arquivos são salvos por padrão, obtenha o valor da propriedade [**StorageLibrary.SaveFolder**](https://msdn.microsoft.com/library/windows/apps/dn251728).
+Para obter a pasta em uma biblioteca onde os novos arquivos são salvos por padrão, obtenha o valor da propriedade [**StorageLibrary.SaveFolder**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.savefolder).
 
 ```cs
 Windows.Storage.StorageFolder savePicturesFolder = myPictures.SaveFolder;
@@ -73,7 +73,7 @@ Windows.Storage.StorageFolder savePicturesFolder = myPictures.SaveFolder;
 
 ## <a name="add-an-existing-folder-to-a-library"></a>Adicionar uma pasta existente a uma biblioteca
 
-Para adicionar uma pasta a uma biblioteca, chame [**StorageLibrary.RequestAddFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251726). Considerando a biblioteca Imagens como um exemplo, chamar esse método faz com que um seletor de pasta seja mostrado para o usuário com um botão **Adicionar essa pasta a Imagens** . Se o usuário seleciona uma pasta, essa pasta permanecerá em seu local original no disco e se tornará um item na propriedade [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) (e no aplicativo Fotos nativo), mas a pasta não aparecerá como filho da pasta Imagens no Explorador de Arquivos.
+Para adicionar uma pasta a uma biblioteca, chame [**StorageLibrary.RequestAddFolderAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestaddfolderasync). Considerando a biblioteca Imagens como um exemplo, chamar esse método faz com que um seletor de pasta seja mostrado para o usuário com um botão **Adicionar essa pasta a Imagens** . Se o usuário seleciona uma pasta, essa pasta permanecerá em seu local original no disco e se tornará um item na propriedade [**StorageLibrary.Folders**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) (e no aplicativo Fotos nativo), mas a pasta não aparecerá como filho da pasta Imagens no Explorador de Arquivos.
 
 
 ```cs
@@ -82,11 +82,11 @@ Windows.Storage.StorageFolder newFolder = await myPictures.RequestAddFolderAsync
 
 ## <a name="remove-a-folder-from-a-library"></a>Remover uma pasta de uma biblioteca
 
-Para remover uma pasta de uma biblioteca, chame o método [**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727) e especifique a pasta a ser removida. Você pode usar [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) e um controle [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) (ou semelhante) para o usuário selecionar uma pasta para remover.
+Para remover uma pasta de uma biblioteca, chame o método [**StorageLibrary.RequestRemoveFolderAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestremovefolderasync) e especifique a pasta a ser removida. Você pode usar [**StorageLibrary.Folders**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) e um controle [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) (ou semelhante) para o usuário selecionar uma pasta para remover.
 
-Quando você chama [**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727), o usuário vê uma caixa de diálogo de confirmação dizendo que a pasta "não aparecerá mais em Imagens, mas não será excluída". Isso significa que a pasta permanece em seu local original no disco, é removida da propriedade [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) e não será mais incluída no aplicativo Fotos nativo.
+Quando você chama [**StorageLibrary.RequestRemoveFolderAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestremovefolderasync), o usuário vê uma caixa de diálogo de confirmação dizendo que a pasta "não aparecerá mais em Imagens, mas não será excluída". Isso significa que a pasta permanece em seu local original no disco, é removida da propriedade [**StorageLibrary.Folders**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) e não será mais incluída no aplicativo Fotos nativo.
 
-O exemplo a seguir supõe que o usuário selecionou a pasta a ser removida em um [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) controle chamado **lvPictureFolders**.
+O exemplo a seguir supõe que o usuário selecionou a pasta a ser removida em um [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) controle chamado **lvPictureFolders**.
 
 
 ```cs
@@ -96,7 +96,7 @@ bool result = await myPictures.RequestRemoveFolderAsync(folder);
 ## <a name="get-notified-of-changes-to-the-list-of-folders-in-a-library"></a>Receber notificações sobre mudanças na lista de pastas de uma biblioteca
 
 
-Para ser notificado sobre mudanças na lista de pastas de uma biblioteca, registre um manipulador para o evento [**StorageLibrary.DefinitionChanged**](https://msdn.microsoft.com/library/windows/apps/dn251723) da biblioteca.
+Para ser notificado sobre mudanças na lista de pastas de uma biblioteca, registre um manipulador para o evento [**StorageLibrary.DefinitionChanged**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.definitionchanged) da biblioteca.
 
 
 ```cs
@@ -158,7 +158,7 @@ private async void getSongs()
 
 Os usuários podem escolher armazenar arquivos de forma padrão no cartão SD opcional. Os aplicativos, entretanto, podem optar por não permitir que os arquivos sejam armazenados no cartão SD. Com isso, as bibliotecas de mídia podem ficar divididas entre o armazenamento interno do dispositivo e o cartão SD.
 
-Não é necessário gravar código adicional para ter essa possibilidade. Os métodos no namespace [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) que consultam pastas conhecidas, combinam de forma transparente os resultados da consulta dos dois locais. Você também não precisa especificar o recurso **removableStorage** no arquivo de manifesto do aplicativo para obter esses resultados combinados.
+Não é necessário gravar código adicional para ter essa possibilidade. Os métodos no namespace [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage) que consultam pastas conhecidas, combinam de forma transparente os resultados da consulta dos dois locais. Você também não precisa especificar o recurso **removableStorage** no arquivo de manifesto do aplicativo para obter esses resultados combinados.
 
 Considere o estado do armazenamento do dispositivo mostrado na imagem a seguir:
 
@@ -175,7 +175,7 @@ As Imagens da câmera e a pasta Imagens salvas não oferecem suporte a consultas
 
 **Abrindo uma foto no aplicativo que capturou isso**
 
-Se quiser permitir que o usuário abra novamente uma foto no aplicativo em que foi capturada, você pode salvar a **CreatorAppId** com os metadados da foto usando um código similar ao exemplo seguinte. Neste exemplo, **testPhoto** é um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
+Se quiser permitir que o usuário abra novamente uma foto no aplicativo em que foi capturada, você pode salvar a **CreatorAppId** com os metadados da foto usando um código similar ao exemplo seguinte. Neste exemplo, **testPhoto** é um [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile).
 
 ```cs
 IDictionary<string, object> propertiesToSave = new Dictionary<string, object>();

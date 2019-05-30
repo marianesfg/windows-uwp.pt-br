@@ -6,20 +6,20 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7aeb60d67f0cdee77772797816e45fdd9bdc41b4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 04d75d4c854a407fd733c6ecdfb3cabac84faef6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57623611"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369603"
 ---
 # <a name="use-the-light-sensor"></a>Usar o sensor de luz
 
 
 **APIs importantes**
 
--   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**LightSensor**](https://msdn.microsoft.com/library/windows/apps/BR225790)
+-   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**LightSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.LightSensor)
 
 **Exemplo**
 
@@ -41,7 +41,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
 
 ###  <a name="instructions"></a>Instruções
 
--   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#**.
+-   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#** .
 
 -   Abra o arquivo BlankPage.xaml.cs do projeto e substitua o código existente pelo exemplo abaixo.
 

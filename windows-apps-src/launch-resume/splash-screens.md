@@ -1,19 +1,19 @@
 ---
-title: Telas iniciais
-description: Esta seção descreve como definir e configurar a tela inicial do app.
+title: Telas de abertura
+description: Esta seção descreve como definir e configurar a tela inicial do aplicativo.
 ms.assetid: 6b954bb3-e5b0-46d1-8afc-fb805536cf6d
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: df3fc8f54a4174006fd28f319d7cab09142a81fd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 09eadb8467725cbf40f3fb54d32741960fc89321
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630191"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371858"
 ---
-# <a name="splash-screens"></a>Telas iniciais
+# <a name="splash-screens"></a>Telas de abertura
 
 Todos os aplicativos UWP devem ter uma tela inicial composta de uma imagem e uma cor da tela de fundo, e ambas podem ser personalizadas.
 
@@ -27,7 +27,7 @@ Essa tela inicial foi criada combinando uma cor da tela de fundo verde com uma i
 
 Uma imagem simples com uma cor de fundo parece boa independentemente do dispositivo em que seu aplicativo esteja sendo executado. Somente o tamanho do plano de fundo muda para compensar uma variedade de tamanhos de tela. A imagem permanece sempre intacta.
 
-Além disso, você pode usar a classe [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) para personalizar a experiência de inicialização do seu aplicativo. Você pode posicionar uma tela inicial estendida, criada por você, para dar ao aplicativo mais tempo para concluir tarefas adicionais, como a preparação da interface do usuário do aplicativo ou a conclusão de operações de rede. Você também pode usar a classe **SplashScreen** como notificação para quando a tela inicial for ignorada, para que você possa dar início às animações de entrada.
+Além disso, você pode usar a classe [**SplashScreen**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen) para personalizar a experiência de inicialização do seu aplicativo. Você pode posicionar uma tela inicial estendida, criada por você, para dar ao aplicativo mais tempo para concluir tarefas adicionais, como a preparação da interface do usuário do aplicativo ou a conclusão de operações de rede. Você também pode usar a classe **SplashScreen** como notificação para quando a tela inicial for ignorada, para que você possa dar início às animações de entrada.
 
 | Tópico | Descrição |
 |-------|-------------|

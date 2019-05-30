@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: 464aa35aa8362049042ad23a6816c4de21b25634
-ms.sourcegitcommit: 559d3387d5929431212d147d9e085895e162916a
+ms.openlocfilehash: c638eb843528cc17a3f02233ef5f238264eb58a0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66184525"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370523"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Permitir aplicativos para sites que usam manipuladores de URI do aplicativo
 
@@ -100,7 +100,7 @@ Caminhos excluídos são verificados primeiro e se houver uma correspondência, 
 
 ## <a name="handle-links-on-activation-to-link-to-content"></a>Manipular links na ativação para vincular ao conteúdo
 
-Navegue até **App.xaml.cs** na solução do Visual Studio do seu aplicativo e em **OnActivated ()**, adicione manipulação para conteúdo vinculado. No exemplo a seguir, a página que é aberta no aplicativo depende do caminho URI:
+Navegue até **App.xaml.cs** na solução do Visual Studio do seu aplicativo e em **OnActivated ()** , adicione manipulação para conteúdo vinculado. No exemplo a seguir, a página que é aberta no aplicativo depende do caminho URI:
 
 ``` CS
 protected override void OnActivated(IActivatedEventArgs e)
@@ -179,7 +179,7 @@ Feche o aplicativo para verificar se ele é ativado quando você clica em um lin
 
 Verifique se seu aplicativo é fechado. Pressione a **tecla Windows + R** para abrir a caixa de diálogo **Executar** e cole o link na janela. Seu aplicativo deve ser iniciado em vez do navegador da Web.
 
-Além disso, você pode testar seu aplicativo iniciando-o em outro aplicativo com a API [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx). Você pode usar essa API para testar em telefones também.
+Além disso, você pode testar seu aplicativo iniciando-o em outro aplicativo com a API [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync). Você pode usar essa API para testar em telefones também.
 
 Se você quiser seguir a lógica de ativação de protocolo, defina um ponto de interrupção no manipulador de eventos **OnActivated**.
 
@@ -191,11 +191,11 @@ Se você quiser seguir a lógica de ativação de protocolo, defina um ponto de 
 - Seu arquivo JSON deve ser carregado para um servidor https.
 - Se você precisar alterar os caminhos aos quais deseja dar suporte, você pode republicar seu arquivo JSON sem precisar republicar seu aplicativo. Os usuários verão as alterações em 1 a 8 dias.
 - Todos os aplicativos de sideload com AppUriHandlers terão links validados para o host na instalação. Você não precisa ter um arquivo JSON carregado para testar o recurso.
-- Esse recurso funciona sempre que seu aplicativo é iniciado com um aplicativo UWP [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) ou um aplicativo da área de trabalho do Windows iniciado com [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx). Se a URL corresponder a um manipulador de URI do aplicativo registrado, o aplicativo será iniciado em vez do navegador.
+- Esse recurso funciona sempre que seu aplicativo é iniciado com um aplicativo UWP [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) ou um aplicativo da área de trabalho do Windows iniciado com [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx). Se a URL corresponder a um manipulador de URI do aplicativo registrado, o aplicativo será iniciado em vez do navegador.
 
 ## <a name="see-also"></a>Consulte também
 
 [Projeto de exemplo de aplicativo para Web](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
-[registro do windows.protocol](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
-[Manipular a ativação de URI](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+[registro do windows.protocol](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-protocol)
+[Manipular a ativação de URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 [Amostra de execução de associação](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) ilustra como usar a API LaunchUriAsync ().

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, entrada, amostra
 ms.localizationpriority: medium
-ms.openlocfilehash: d545f696a93bfa8416e1a772ecc015867a3615c2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8daada2424dfc7a1bbe0a227449911f1fbb3b34d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611811"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369178"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Adicionando entrada e interatividade ao exemplo do Marble Maze
 
@@ -28,7 +28,7 @@ Seguem alguns dos pontos principais discutidos neste documento para quando você
 
 -   Quando possível, dê suporte a vários dispositivos de entrada para permitir que o seu jogo acomode uma ampla variedade de preferências e recursos entre seus clientes. Embora o uso do controlador de jogo e do sensor seja opcional, recomendamos-o para melhorar a experiência do jogador. Nós projetamos as APIs do controlador de jogo e do sensor para ajudá-lo a integrar mais facilmente esses dispositivos de entrada.
 
--   Para inicializar o touch, você deve se registrar para eventos de janela como quando o ponteiro estiver ativado, liberado e movido. Para inicializar o acelerômetro, crie um objeto [Windows::Devices::Sensors::Accelerometer](https://msdn.microsoft.com/library/windows/apps/br225687) quando inicializar o aplicativo. O controle do Xbox não exige inicialização.
+-   Para inicializar o touch, você deve se registrar para eventos de janela como quando o ponteiro estiver ativado, liberado e movido. Para inicializar o acelerômetro, crie um objeto [Windows::Devices::Sensors::Accelerometer](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer) quando inicializar o aplicativo. O controle do Xbox não exige inicialização.
 
 -   Para jogos de um jogador, considere a possibilidade de combinar a entrada de todos os controladores possíveis do Xbox. Desta forma, você não precisa acompanhar a entrada que vem de cada controlador. Ou basta acompanhar a entrada apenas do controlador adicionado mais recentemente, como mostrado neste exemplo.
 
@@ -56,7 +56,7 @@ O Marble Maze aceita o controlador do Xbox, mouse e toque para selecionar itens 
 ## <a name="initializing-input-devices"></a>Inicializando dispositivos de entrada
 
 
-O controlador do Xbox não precisa ser inicializado. Para inicializar o touch, você deve se registrar para eventos de janela como quando o ponteiro estiver ativado (por exemplo, o player pressiona o botão do mouse ou toca a rela), liberado e movido. Para inicializar o acelerômetro, você deve criar um objeto [Windows::Devices::Sensors::Accelerometer](https://msdn.microsoft.com/library/windows/apps/br225687) quando inicializar o aplicativo.
+O controlador do Xbox não precisa ser inicializado. Para inicializar o touch, você deve se registrar para eventos de janela como quando o ponteiro estiver ativado (por exemplo, o player pressiona o botão do mouse ou toca a rela), liberado e movido. Para inicializar o acelerômetro, você deve criar um objeto [Windows::Devices::Sensors::Accelerometer](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer) quando inicializar o aplicativo.
 
 O exemplo a seguir mostra como o método **App::SetWindow** registra para os eventos de ponteiro [Windows::UI::Core::CoreWindow::PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.PointerPressed), [Windows::UI::Core::CoreWindow::PointerReleased](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.PointerReleased) e [Windows::UI::Core::CoreWindow::PointerMoved](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.PointerMoved). Esses eventos são registrados durante a inicialização do aplicativo e antes do loop do jogo.
 
@@ -490,7 +490,7 @@ for (TouchMap::const_iterator iter = m_touches.cbegin();
 
 ### <a name="processing-accelerometer-input"></a>Processando a entrada do acelerômetro
 
-Para processar a entrada do acelerômetro, o método **MarbleMazeMain::Update** chama o método [Windows::Devices::Sensors::Accelerometer::GetCurrentReading](https://msdn.microsoft.com/library/windows/apps/br225699). Esse método devolve um objeto [Windows::Devices::Sensors::AccelerometerReading](https://msdn.microsoft.com/library/windows/apps/br225688), que representa uma leitura de acelerador. As propriedades **Windows::Devices::Sensors::AccelerometerReading::AccelerationX** e **Windows::Devices::Sensors::AccelerometerReading::AccelerationY** armazenam a aceleração da força-g ao longo dos eixos X e Y, respectivamente.
+Para processar a entrada do acelerômetro, o método **MarbleMazeMain::Update** chama o método [Windows::Devices::Sensors::Accelerometer::GetCurrentReading](https://docs.microsoft.com/uwp/api/windows.devices.sensors.accelerometer.getcurrentreading). Esse método devolve um objeto [Windows::Devices::Sensors::AccelerometerReading](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.AccelerometerReading), que representa uma leitura de acelerador. As propriedades **Windows::Devices::Sensors::AccelerometerReading::AccelerationX** e **Windows::Devices::Sensors::AccelerometerReading::AccelerationY** armazenam a aceleração da força-g ao longo dos eixos X e Y, respectivamente.
 
 O exemplo a seguir mostra como o método **MarbleMazeMain::Update** pesquisa o acelerômetro e atualiza os valores de entrada combinados. À medida que você inclina o aparelho, a gravidade faz com que a bolinha se mova mais rápido.
 
@@ -548,7 +548,7 @@ Os dispositivos relatam valores de entrada de diferentes maneiras. Por exemplo, 
 
  
 
-Depois de o método **MarbleMazeMain::Update** processar a entrada, ele cria um vetor que representa o efeito da inclinação do labirinto na bola de gude. O exemplo a seguir mostra como o Marble Maze usa a função [XMVector3Normalize](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.geometric.xmvector3normalize) para criar um vetor de gravidade normalizado. A variável **maxTilt** impulsiona a quantia que faz o labirinto inclinar e evita que ele se incline para o lado.
+Depois de o método **MarbleMazeMain::Update** processar a entrada, ele cria um vetor que representa o efeito da inclinação do labirinto na bola de gude. O exemplo a seguir mostra como o Marble Maze usa a função [XMVector3Normalize](https://docs.microsoft.com/windows/desktop/api/directxmath/nf-directxmath-xmvector3normalize) para criar um vetor de gravidade normalizado. A variável **maxTilt** impulsiona a quantia que faz o labirinto inclinar e evita que ele se incline para o lado.
 
 ```cpp
 const float maxTilt = 1.0f / 8.0f;

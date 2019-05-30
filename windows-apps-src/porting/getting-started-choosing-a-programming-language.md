@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 48cea8c1a3a3c35a53a3376c48e3192c94caf709
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f5605c115c409771ce8dc9ddfeb1a4922e04aece
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620771"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372840"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a>Introdução: Escolhendo uma linguagem de programação
 
 
 ## <a name="choosing-a-programming-language"></a>Escolhendo uma linguagem de programação
 
-Antes de seguirmos adiante, você deve conhecer as linguagens de programação que poderá escolher quando for desenvolver aplicativos da Plataforma Universal do Windows (UWP). Embora as orientações passo a passo deste artigo usem C#, é possível desenvolver aplicativos UWP usando uma ou mais linguagens de programação (veja [Linguagens, ferramentas e estruturas](https://msdn.microsoft.com/library/windows/apps/dn465799)).
+Antes de seguirmos adiante, você deve conhecer as linguagens de programação que poderá escolher quando for desenvolver aplicativos da Plataforma Universal do Windows (UWP). Embora as orientações passo a passo deste artigo usem C#, é possível desenvolver aplicativos UWP usando uma ou mais linguagens de programação (veja [Linguagens, ferramentas e estruturas](https://docs.microsoft.com/previous-versions/windows/apps/dn465799(v=win.10))).
 
 Você pode desenvolver usando C++, C#, Microsoft Visual Basic e JavaScript. O JavaScript usa uma marcação HTML5 para o layout da interface do usuário, e as outras linguagens usam uma linguagem de marcação chamada *Linguagem (XAML, Extensible Application Markup Language)* para descrever sua interface de usuário.
 
@@ -30,9 +30,9 @@ Apesar de nosso foco ser a linguagem C# neste artigo, as outras linguagens ofere
 
 **Observação**  para aplicativos que usam elementos gráficos 3D, os padrões de OpenGL e OpenGL ES não estão disponíveis nativamente para aplicativos UWP. Caso prefira não reescrever seu código OpenGL ES no Microsoft DirectX, talvez se interesse em aprender sobre o **Angle**. O Angle é um projeto em andamento criado para converter OpenGL para DirectX traduzindo as chamadas à API OpenGL em chamadas à API DirectX. Para saber mais, consulte o seguinte:
 -   [ângulo](https://code.google.com/p/angleproject/)
--   [Criar seu primeiro aplicativo UWP usando o DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
+-   [Criar seu primeiro aplicativo UWP usando o DirectX](https://docs.microsoft.com/previous-versions/windows/apps/br229580(v=win.10))
 -   [Exemplos de aplicativos UWP que usam DirectX](https://go.microsoft.com/fwlink/p/?LinkId=263603)
--   [Onde está o SDK do DirectX?](https://msdn.microsoft.com/library/windows/desktop/ee663275)
+-   [Onde está o SDK do DirectX?](https://docs.microsoft.com/windows/desktop/directx-sdk--august-2009-)
 
 ## <a name="giving-c-a-go"></a>Dando uma chance para C#
 
@@ -40,7 +40,7 @@ Como desenvolvedor do iOS, você está habituado ao Objective-C e Swift. A lingu
 
 -   [Criar seu primeiro aplicativo de UWP usando C# ou o Visual Basic](../get-started/create-a-hello-world-app-xaml-universal.md)
 -   [Exemplos de aplicativos UWP que usamC#](https://go.microsoft.com/fwlink/p/?LinkId=263453)
--   [Visual c#](https://go.microsoft.com/fwlink/p/?LinkId=263450)
+-   [Visual C#](https://go.microsoft.com/fwlink/p/?LinkId=263450)
 
 A seguir, há uma classe escrita em Objective-C e C#. A versão Objective-C é exibida primeiro, seguida pela versão C#.
 
