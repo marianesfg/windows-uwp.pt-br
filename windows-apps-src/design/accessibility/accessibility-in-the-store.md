@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a9991cd4a0a3fce630b1c7be64650c79daf74e6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8f00bb9449d9e48518d16e08fa6b6665eecd2f85
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597401"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359743"
 ---
 # <a name="accessibility-in-the-store"></a>Acessibilidade na Loja  
 
@@ -40,7 +40,7 @@ Você deverá declarar seu aplicativo como acessível se o tiver compilado e tes
     * Use atalhos do teclado para acessar a funcionalidade principal do aplicativo.
     * Use os gestos de toque do Narrador para equivalência de guia e seta para dispositivos sem teclado.
 * Garanta que a interface do usuário do seu aplicativo é acessível visualmente: tem um índice de contraste de texto mínimo de 4.5:1, não depende de cores para passar informações e assim por diante.
-* Uso de ferramentas de teste de acessibilidade como [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) e [**UIAVerify**](https://msdn.microsoft.com/library/windows/desktop/Hh920986) para verificar a sua implementação de acessibilidade e resolução de todos os erros de prioridade 1 reportados por elas.
+* Uso de ferramentas de teste de acessibilidade como [**Inspect**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) e [**UIAVerify**](https://docs.microsoft.com/windows/desktop/WinAuto/ui-automation-verify) para verificar a sua implementação de acessibilidade e resolução de todos os erros de prioridade 1 reportados por elas.
 * Verificou os cenários principais do seu aplicativo, de ponta a ponta, usando o Narrador, a Lupa, o Teclado Virtual, um tema de alto contraste e configurações de dpi ajustadas.
 
 Consulte [Accessibility checklist](accessibility-checklist.md) para ver uma análise desses procedimentos e links para recursos que ajudarão você a cumpri-los.

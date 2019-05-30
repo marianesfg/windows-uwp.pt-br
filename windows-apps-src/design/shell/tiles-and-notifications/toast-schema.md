@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bf89810f67e16bcfabfc80de48d2dee82c9e0f92
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 30aba6c796d86662795d1c1f86ef7d76cc62925c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631401"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363367"
 ---
 # <a name="toast-content-schema"></a>Esquema de conteúdo de notificação do sistema
 
@@ -40,7 +40,7 @@ ToastContent é o objeto de nível superior que descreve o conteúdo da notifica
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **Iniciar**| cadeia de caracteres | false | Uma cadeia de caracteres que é passada para o aplicativo quando ele é ativado pela Notificação do sistema. O formato e o conteúdo dessa cadeia de caracteres são definidos pelo aplicativo para seu uso próprio. Quando o usuário toca ou clica na Notificação do sistema para iniciar o aplicativo associado, a cadeia de caracteres de inicialização fornece o contexto ao aplicativo que o permite mostrar ao usuário uma exibição relevante para o conteúdo da Notificação do sistema em vez de inicializar de modo padrão. |
+| **Launch**| cadeia de caracteres | false | Uma cadeia de caracteres que é passada para o aplicativo quando ele é ativado pela Notificação do sistema. O formato e o conteúdo dessa cadeia de caracteres são definidos pelo aplicativo para seu uso próprio. Quando o usuário toca ou clica na Notificação do sistema para iniciar o aplicativo associado, a cadeia de caracteres de inicialização fornece o contexto ao aplicativo que o permite mostrar ao usuário uma exibição relevante para o conteúdo da Notificação do sistema em vez de inicializar de modo padrão. |
 | **Visual** | [ToastVisual](#toastvisual) | verdadeiro | Descreve a parte visual de notificação do sistema. |
 | **Ações** | [IToastActions](#itoastactions) | false | Opcionalmente, crie ações personalizadas com botões e entradas. |
 | **Áudio** | [ToastAudio](#toastaudio) | false | Descreve a parte de áudio da notificação do sistema. |
@@ -56,7 +56,7 @@ Especifica qual cenário representa a notificação do sistema.
 
 | Valor | Significado |
 |---|---|
-| **Padrão** | O comportamento normal do sistema. |
+| **Default** | O comportamento normal do sistema. |
 | **Lembrete** | Uma notificação de lembrete. Isso será exibido previamente expandido e permanece na tela do usuário até ser ignorado. |
 | **Alarme** | Uma notificação de alarmes. Isso será exibido previamente expandido e permanece na tela do usuário até ser ignorado. O áudio fará um loop por padrão e usará o áudio de alarme. |
 | **IncomingCall** | Uma notificação de chamada de entrada. Isso será exibido previamente expandido em um formato de chamada especial e permanece na tela do usuário até ser ignorado. O áudio fará um loop por padrão e usará o áudio de toque. |
@@ -78,7 +78,7 @@ A associação genérica é a associação padrão para notificações do sistem
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **Filhos** | IList<[IToastBindingGenericChild](#itoastbindinggenericchild)> | false | O conteúdo do corpo da Notificação do sistema, que pode incluir texto, imagens e grupos (adicionados na Atualização de aniversário). Os elementos de texto devem vir antes de quaisquer outros elementos e há suporte apenas para três elementos de texto. Se um elemento de texto é colocado após qualquer outro elemento, ele será puxado até a parte superior ou removido. Por fim, determinadas propriedades de texto como HintStyle não têm suporte nos elementos de texto filho de raiz e funcionam somente em um AdaptiveSubgroup. Se você usar AdaptiveGroup em dispositivos sem a Atualização de aniversário, o conteúdo do grupo é simplesmente ignorado. |
+| **Children** | IList<[IToastBindingGenericChild](#itoastbindinggenericchild)> | false | O conteúdo do corpo da Notificação do sistema, que pode incluir texto, imagens e grupos (adicionados na Atualização de aniversário). Os elementos de texto devem vir antes de quaisquer outros elementos e há suporte apenas para três elementos de texto. Se um elemento de texto é colocado após qualquer outro elemento, ele será puxado até a parte superior ou removido. Por fim, determinadas propriedades de texto como HintStyle não têm suporte nos elementos de texto filho de raiz e funcionam somente em um AdaptiveSubgroup. Se você usar AdaptiveGroup em dispositivos sem a Atualização de aniversário, o conteúdo do grupo é simplesmente ignorado. |
 | **AppLogoOverride** | [ToastGenericAppLogo](#toastgenericapplogo) | false | Um logotipo opcional para substituir o logotipo do aplicativo. |
 | **HeroImage** | [ToastGenericHeroImage](#toastgenericheroimage) | false | Uma imagem opcional de "herói" em destaque que é exibida na notificação e na Central de Ações. |
 | **Atribuição** | [ToastGenericAttributionText](#toastgenericattributiontext) | false | Texto de atribuição opcional que será exibido na parte inferior da notificação do sistema. |
@@ -117,7 +117,7 @@ Um valor de associação para sequências.
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **bindingName** | cadeia de caracteres | verdadeiro | Obtém ou define o nome que mapeado para o valor de dados de associação. |
+| **BindingName** | cadeia de caracteres | verdadeiro | Obtém ou define o nome que mapeado para o valor de dados de associação. |
 
 
 ### <a name="adaptivetextstyle"></a>AdaptiveTextStyle
@@ -125,24 +125,24 @@ O estilo de texto controla o tamanho, a espessura e opacidade da fonte. A opacid
 
 | Valor | Significado |
 |---|---|
-| **Padrão** | Valor padrão. O estilo é determinado pelo renderizador. |
+| **Default** | Valor padrão. O estilo é determinado pelo renderizador. |
 | **Legenda** | Tamanho menor do que a fonte de parágrafo. |
-| **captionSubtle** | Mesmo que Caption, mas com opacidade sutil. |
+| **CaptionSubtle** | Mesmo que Caption, mas com opacidade sutil. |
 | **Corpo** | Tamanho da fonte de parágrafo. |
-| **bodySubtle** | Mesmo que Body, mas com opacidade sutil. |
-| **Base de dados de** | Tamanho da fonte de parágrafo, a espessura é negrito. Essencialmente a versão em negrito do corpo. |
-| **baseSubtle** | Mesmo que Base, mas com opacidade sutil. |
+| **BodySubtle** | Mesmo que Body, mas com opacidade sutil. |
+| **Base** | Tamanho da fonte de parágrafo, a espessura é negrito. Essencialmente a versão em negrito do corpo. |
+| **BaseSubtle** | Mesmo que Base, mas com opacidade sutil. |
 | **Subtítulo** | Tamanho da fonte H4. |
-| **subtitleSubtle** | Mesmo que Subtitle, mas com opacidade sutil. |
+| **SubtitleSubtle** | Mesmo que Subtitle, mas com opacidade sutil. |
 | **Título** | Tamanho da fonte H3. |
-| **titleSubtle** | Mesmo que Title, mas com opacidade sutil. |
-| **titleNumeral** | Igual a Title, mas com preenchimento superior ou inferior removido. |
-| **Subcabeçalho** | Tamanho da fonte H2. |
-| **subheaderSubtle** | Mesmo que Subheader, mas com opacidade sutil. |
-| **subheaderNumeral** | Igual a Subheader, mas com preenchimento superior ou inferior removido. |
+| **TitleSubtle** | Mesmo que Title, mas com opacidade sutil. |
+| **TitleNumeral** | Igual a Title, mas com preenchimento superior ou inferior removido. |
+| **Subheader** | Tamanho da fonte H2. |
+| **SubheaderSubtle** | Mesmo que Subheader, mas com opacidade sutil. |
+| **SubheaderNumeral** | Igual a Subheader, mas com preenchimento superior ou inferior removido. |
 | **Cabeçalho** | Tamanho da fonte H1. |
-| **headerSubtle** | Mesmo que Header, mas com opacidade sutil. |
-| **headerNumeral** | Igual a Header, mas com preenchimento superior ou inferior removido. |
+| **HeaderSubtle** | Mesmo que Header, mas com opacidade sutil. |
+| **HeaderNumeral** | Igual a Header, mas com preenchimento superior ou inferior removido. |
 
 
 ### <a name="adaptivetextalign"></a>AdaptiveTextAlign
@@ -150,10 +150,10 @@ Controla o alinhamento horizontal de texto.
 
 | Valor | Significado |
 |---|---|
-| **Padrão** | Valor padrão. O alinhamento é determinado automaticamente pelo renderizador. |
+| **Default** | Valor padrão. O alinhamento é determinado automaticamente pelo renderizador. |
 | **Automático** | O alinhamento é determinado por idioma e cultura atual. |
-| **À esquerda** | Alinha o texto horizontalmente à esquerda. |
-| **Centro** | Alinha o texto horizontalmente no centro. |
+| **Left** | Alinha o texto horizontalmente à esquerda. |
+| **Center** | Alinha o texto horizontalmente no centro. |
 | **Certo** | Alinha o texto horizontalmente à direita. |
 
 
@@ -175,9 +175,9 @@ Especifica o recorte desejado da imagem.
 
 | Valor | Significado |
 |---|---|
-| **Padrão** | Valor padrão. Comportamento de corte determinado pelo renderizador. |
+| **Default** | Valor padrão. Comportamento de corte determinado pelo renderizador. |
 | **Nenhum** | A imagem não é cortada. |
-| **Círculo** | A imagem é cortada na forma de círculo. |
+| **Circle** | A imagem é cortada na forma de círculo. |
 
 
 ### <a name="adaptiveimagealign"></a>AdaptiveImageAlign
@@ -185,10 +185,10 @@ Especifica o alinhamento horizontal de uma imagem.
 
 | Valor | Significado |
 |---|---|
-| **Padrão** | Valor padrão. Comportamento de alinhamento determinado pelo renderizador. |
+| **Default** | Valor padrão. Comportamento de alinhamento determinado pelo renderizador. |
 | **Stretch** | A imagem é esticada para preencher a largura disponível (e a altura possivelmente disponível também, dependendo de onde a imagem é colocada). |
-| **À esquerda** | Alinhe a imagem à esquerda, exibindo a imagem na resolução nativa. |
-| **Centro** | Alinhe a imagem horizontalmente no centro, exibindo a imagem na resolução nativa. |
+| **Left** | Alinhe a imagem à esquerda, exibindo a imagem na resolução nativa. |
+| **Center** | Alinhe a imagem horizontalmente no centro, exibindo a imagem na resolução nativa. |
 | **Certo** | Alinhe a imagem à direita, exibindo a imagem na resolução nativa. |
 
 
@@ -197,7 +197,7 @@ Novo na atualização de aniversário: Os grupos identificam semanticamente que 
 
 | Propriedade | Tipo | Obrigatório |Descrição |
 |---|---|---|---|
-| **Filhos** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | false | Subgrupos são exibidos como colunas verticais. Você deve usar subgrupos para fornecer qualquer conteúdo em um AdaptiveGroup. |
+| **Children** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | false | Subgrupos são exibidos como colunas verticais. Você deve usar subgrupos para fornecer qualquer conteúdo em um AdaptiveGroup. |
 
 
 ## <a name="adaptivesubgroup"></a>AdaptiveSubgroup
@@ -205,7 +205,7 @@ Novo na atualização de aniversário: Os subgrupos são colunas verticais que p
 
 | Propriedade | Tipo | Obrigatório |Descrição |
 |---|---|---|---|
-| **Filhos** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | false | [AdaptiveText](#adaptivetext) e [AdaptiveImage](#adaptiveimage) são filhos válidos de subgrupos. |
+| **Children** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | false | [AdaptiveText](#adaptivetext) e [AdaptiveImage](#adaptiveimage) são filhos válidos de subgrupos. |
 | **HintWeight** | int? | false | Controle a largura da coluna do subgrupo ao especificar a espessura em relação aos outros subgrupos. |
 | **HintTextStacking** | [AdaptiveSubgroupTextStacking](#adaptivesubgrouptextstacking) | false | Controle o alinhamento vertical do conteúdo deste subgrupo. |
 
@@ -224,9 +224,9 @@ TextStacking especifica o alinhamento vertical do conteúdo.
 
 | Valor | Significado |
 |---|---|
-| **Padrão** | Valor padrão. O renderizador selecionará automaticamente o alinhamento vertical padrão. |
-| **Início** | Alinhamento vertical com a parte superior. |
-| **Centro** | Alinhamento vertical com o centro. |
+| **Default** | Valor padrão. O renderizador selecionará automaticamente o alinhamento vertical padrão. |
+| **Top** | Alinhamento vertical com a parte superior. |
+| **Center** | Alinhamento vertical com o centro. |
 | **parte inferior** | Alinhamento vertical com a parte inferior. |
 
 
@@ -255,7 +255,7 @@ Um valor de barra de progresso associável.
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **bindingName** | cadeia de caracteres | verdadeiro | Obtém ou define o nome que mapeado para o valor de dados de associação. |
+| **BindingName** | cadeia de caracteres | verdadeiro | Obtém ou define o nome que mapeado para o valor de dados de associação. |
 
 
 ## <a name="toastgenericapplogo"></a>ToastGenericAppLogo
@@ -274,9 +274,9 @@ Controla o recorte da imagem de logotipo do aplicativo.
 
 | Valor | Significado |
 |---|---|
-| **Padrão** | O corte usa o comportamento padrão do renderizador. |
+| **Default** | O corte usa o comportamento padrão do renderizador. |
 | **Nenhum** | A imagem não é cortada, exibida em um quadrado. |
-| **Círculo** | A imagem é cortada em círculo. |
+| **Circle** | A imagem é cortada em círculo. |
 
 
 ## <a name="toastgenericheroimage"></a>ToastGenericHeroImage
@@ -335,7 +335,7 @@ Um controle de caixa de texto na qual o usuário pode digitar texto.
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **ID** | cadeia de caracteres | verdadeiro | A Id é obrigatória e é usada para mapear o texto inserido pelo usuário em um par chave-valor de id/valor que o aplicativo consome posteriormente. |
+| **Id** | cadeia de caracteres | verdadeiro | A Id é obrigatória e é usada para mapear o texto inserido pelo usuário em um par chave-valor de id/valor que o aplicativo consome posteriormente. |
 | **Título** | cadeia de caracteres | false | O texto do título que será exibido acima da caixa de texto. |
 | **PlaceholderContent** | cadeia de caracteres | false | Texto do espaço reservado a ser exibido na caixa de texto quando o usuário ainda não tinha digitado qualquer texto. |
 | **DefaultInput** | cadeia de caracteres | false | O texto inicial para colocar na caixa de texto. Deixe este nulo para uma caixa de texto em branco. |
@@ -348,8 +348,8 @@ Um controle de caixa de seleção, que permite aos usuários selecionar a partir
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **ID** | cadeia de caracteres | verdadeiro | A Id é obrigatória. Se o usuário selecionou este item, essa Id será passada para o código do aplicativo, representando a seleção escolhida. |
-| **Conteúdo** | cadeia de caracteres | verdadeiro | O conteúdo é necessário e é uma cadeia de caracteres exibida no item da seleção. |
+| **Id** | cadeia de caracteres | verdadeiro | A Id é obrigatória. Se o usuário selecionou este item, essa Id será passada para o código do aplicativo, representando a seleção escolhida. |
+| **Content** | cadeia de caracteres | verdadeiro | O conteúdo é necessário e é uma cadeia de caracteres exibida no item da seleção. |
 
 
 ### <a name="toastselectionboxitem"></a>ToastSelectionBoxItem
@@ -357,7 +357,7 @@ Um item de caixa de seleção (um item que o usuário pode selecionar na lista s
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **ID** | cadeia de caracteres | verdadeiro | A Id é obrigatória e é usada para mapear o texto inserido pelo usuário em um par chave-valor de id/valor que o aplicativo consome posteriormente. |
+| **Id** | cadeia de caracteres | verdadeiro | A Id é obrigatória e é usada para mapear o texto inserido pelo usuário em um par chave-valor de id/valor que o aplicativo consome posteriormente. |
 | **Título** | cadeia de caracteres | false | O texto do título que será exibido acima da caixa de seleção. |
 | **DefaultSelectionBoxItemId** | cadeia de caracteres | false | Isso controla qual item é selecionado por padrão e refere-se à propriedade da Id de [ToastSelectionBoxItem](#toastselectionboxitem). Se você não fornecer essas informações, a seleção padrão ficará vazia (o usuário vê nada). |
 | **Itens** | IList<[ToastSelectionBoxItem](#toastselectionboxitem)> | false | Os itens de seleção que o usuário pode selecionar na SelectionBox. Apenas cinco itens podem ser adicionados. |
@@ -380,7 +380,7 @@ Um botão que o usuário pode clicar.
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **Conteúdo** | cadeia de caracteres | verdadeiro | Obrigatório. O texto a ser exibido no botão. |
+| **Content** | cadeia de caracteres | verdadeiro | Obrigatório. O texto a ser exibido no botão. |
 | **Argumentos** | cadeia de caracteres | verdadeiro | Obrigatório. Cadeia de caracteres de argumentos definida pelo aplicativo e ele receberá posteriormente se o usuário clicar neste botão. |
 | **ActivationType** | [ToastActivationType](#toastactivationtype) | false | Controla o tipo de ativação que o botão usará quando for clicado. O padrão é o Primeiro plano. |
 | **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | Novo no Creators Update: Obtém ou define as opções adicionais relacionados à ativação do botão de notificação do sistema. |
@@ -391,7 +391,7 @@ Decide o tipo de ativação que será usada quando o usuário interage com uma a
 
 | Valor | Significado |
 |---|---|
-| **Em primeiro plano** | Valor padrão. O aplicativo em primeiro plano é iniciado. |
+| **Foreground** | Valor padrão. O aplicativo em primeiro plano é iniciado. |
 | **Em segundo plano** | A tarefa em segundo plano correspondente (supondo que você configure tudo) é acionada e você pode executar o código em segundo plano (como enviar uma mensagem de resposta rápida do usuário) sem interromper o usuário. |
 | **Protocolo** | Inicie um aplicativo diferente usando a ativação de protocolo. |
 
@@ -410,7 +410,7 @@ Especifica o comportamento que a notificação do sistema deve usar quando o usu
 
 | Valor | Significado |
 |---|---|
-| **Padrão** | Comportamento padrão. A notificação do sistema será ignorada quando o usuário executar ações referentes à notificação do sistema. |
+| **Default** | Comportamento padrão. A notificação do sistema será ignorada quando o usuário executar ações referentes à notificação do sistema. |
 | **PendingUpdate** | Depois que o usuário clica em um botão da notificação do sistema, ela permanecerá presente, em um estado visual de "atualização pendente". Você deve atualizar imediatamente a notificação do sistema de uma tarefa em segundo plano para que o usuário não veja esse estado visual de "atualização pendente" por muito tempo. |
 
 
@@ -449,7 +449,7 @@ Uma entrada de item de menu de contexto.
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **Conteúdo** | cadeia de caracteres | verdadeiro | Obrigatório. O texto a ser exibido. |
+| **Content** | cadeia de caracteres | verdadeiro | Obrigatório. O texto a ser exibido. |
 | **Argumentos** | cadeia de caracteres | verdadeiro | Obrigatório. Cadeia de caracteres de argumentos definida pelo aplicativo que o aplicativo pode recuperar posteriormente depois que é ativada quando o usuário clica no item de menu. |
 | **ActivationType** | [ToastActivationType](#toastactivationtype) | false | Controla o tipo de ativação que o item de menu usará quando for clicado. O padrão é o Primeiro plano. |
 | **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | Novo no Creators Update: Opções adicionais relacionados à ativação do item de menu de contexto do sistema. |
@@ -461,8 +461,8 @@ Especifique o áudio que será reproduzido quando a Notificação do sistema for
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
 | **src** | uri | false | O arquivo de mídia para reprodução em vez do som padrão. Suporte apenas para ms-appx e ms-appdata. |
-| **loop** | booliano | false | Defina como true se o som deve repetir enquanto a Notificação do sistema for exibida; false para reproduzir apenas uma vez (padrão). |
-| **Silenciosa** | booliano | false | True para desativar o som; false para permitir que o som da notificação do sistema seja reproduzido (padrão). |
+| **Loop** | boolean | false | Defina como true se o som deve repetir enquanto a Notificação do sistema for exibida; false para reproduzir apenas uma vez (padrão). |
+| **Silent** | boolean | false | True para desativar o som; false para permitir que o som da notificação do sistema seja reproduzido (padrão). |
 
 
 ## <a name="toastheader"></a>ToastHeader
@@ -470,7 +470,7 @@ Novo no Creators Update: Um cabeçalho personalizado que agrupa várias notifica
 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---|---|---|---|
-| **ID** | cadeia de caracteres | verdadeiro | Um identificador criado por desenvolvedores e que identifica exclusivamente este cabeçalho. Se duas notificações têm a mesma id de cabeçalho, elas serão exibidas sob o mesmo cabeçalho na Central de Ações. |
+| **Id** | cadeia de caracteres | verdadeiro | Um identificador criado por desenvolvedores e que identifica exclusivamente este cabeçalho. Se duas notificações têm a mesma id de cabeçalho, elas serão exibidas sob o mesmo cabeçalho na Central de Ações. |
 | **Título** | cadeia de caracteres | verdadeiro | Um título para o cabeçalho. |
 | **Argumentos**| cadeia de caracteres | verdadeiro | Obtém ou define uma sequência de argumentos definida pelo desenvolvedor e que é retornada para o aplicativo quando o usuário clica nesse cabeçalho. Não pode ser nula. |
 | **ActivationType** | [ToastActivationType](#toastactivationtype) | false | Obtém ou define o tipo de ativação que o cabeçalho usará quando for clicado. O padrão é o Primeiro plano. Observe que apenas o Primeiro plano e o Protocolo são compatíveis. |
@@ -479,5 +479,5 @@ Novo no Creators Update: Um cabeçalho personalizado que agrupa várias notifica
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Guia de início rápido: Enviar uma ativação de notificação do sistema e o identificador de local](https://blogs.msdn.com/b/tiles_and_toasts/archive/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10.aspx)
+* [Guia de início rápido: Enviar uma ativação de notificação do sistema e o identificador de local](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/)
 * [Biblioteca de notificações no GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)

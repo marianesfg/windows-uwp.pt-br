@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, contatos, cartão de contato, anotação
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a3485635a49b1690116e7cb271435e63bee2151
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 506f0d2c778a934c3f8861493f4a512a39fe66fc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616431"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360463"
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>Conectar seu app a ações em um cartão de contato
 
@@ -181,13 +181,13 @@ Assim como o cartão de contato, cada guia lembra o aplicativo que o usuário us
 
 ## <a name="perform-operations-when-users-select-your-app-in-a-contact-card"></a>Executar operações quando os usuários selecionam seu aplicativo em um cartão de contato
 
-Substitua o método [Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330) em seu arquivo **App.cs** e direcione os usuários a uma página em seu aplicativo. O [Exemplo de integração de cartão de contato](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration) mostra uma maneira de fazer isso.
+Substitua o método [Application.OnActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) em seu arquivo **App.cs** e direcione os usuários a uma página em seu aplicativo. O [Exemplo de integração de cartão de contato](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration) mostra uma maneira de fazer isso.
 
-No arquivo code-behind da página, substitua o método [Page.OnNavigatedTo](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.onnavigatedto.aspx). O cartão de contato passa o nome da operação e a ID do usuário para esse método.
+No arquivo code-behind da página, substitua o método [Page.OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto). O cartão de contato passa o nome da operação e a ID do usuário para esse método.
 
-Para iniciar uma chamada de áudio ou vídeo, consulte este exemplo: [Exemplo de VoIP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP). Você encontrará a API completa no namespace [WIndows.ApplicationModel.Calls](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.calls.aspx).
+Para iniciar uma chamada de áudio ou vídeo, consulte este exemplo: [Exemplo de VoIP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP). Você encontrará a API completa no namespace [WIndows.ApplicationModel.Calls](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls).
 
-Para facilitar a troca de mensagens, veja o namespace [Windows.ApplicationModel.Chat](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.aspx).
+Para facilitar a troca de mensagens, veja o namespace [Windows.ApplicationModel.Chat](https://docs.microsoft.com/uwp/api/windows.applicationmodel.chat).
 
 Você também pode iniciar outro aplicativo. É isso que este código faz.
 

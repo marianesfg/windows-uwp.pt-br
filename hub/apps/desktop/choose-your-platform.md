@@ -7,12 +7,12 @@ ms.date: 03/18/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ece6c5eea6cc05a966a7eae4cd16958dddee4d4
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 996bbaf4dd05ce5b24e536459c6d7d009a53fa19
+ms.sourcegitcommit: f167775291cbc566b72b0859ae6b426d848c5c89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215045"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266403"
 ---
 # <a name="choose-your-app-platform"></a>Escolha sua plataforma de aplicativo
 
@@ -29,7 +29,10 @@ Todas essas plataformas de aplicativo permitem que você crie aplicativos da ár
 
 * **API do Win32**. A API do Win32 (também chamada de API do Windows) é a plataforma original para nativo C /C++ aplicativos do Windows que exigem acesso direto ao hardware e do Windows. Ele fornece uma experiência de desenvolvimento de primeira classe sem dependendo de um ambiente de tempo de execução gerenciado, como .NET e do WinRT. Isso torna a API do Win32 para a plataforma ideal para aplicativos que precisam de mais alto nível de desempenho e acesso direto ao hardware do sistema.
 
-Este artigo descreve essas plataformas mais detalhadamente e ajuda você a determinar a melhor para seu aplicativo.
+Este artigo descreve essas plataformas mais detalhadamente e ajuda você a determinar a melhor para seu aplicativo. 
+
+> [!NOTE]
+> Não importa qual plataforma de aplicativo que você escolher, você pode usar muitos recursos do Universal Windows Platform (UWP) para fornecer uma experiência moderna em seu aplicativo no Windows 10. Por exemplo, mesmo que seu aplicativo de área de trabalho é criado usando a API do Win32, Windows Forms ou WPF, ainda pode usar muitos recursos, introduzido pela primeira vez com a UWP, como implantação de pacote MSIX e controles UWP XAML. Para obter mais informações, consulte [modernizar seus aplicativos de desktop](modernize/index.md).
 
 ## <a name="uwp"></a>UWP
 

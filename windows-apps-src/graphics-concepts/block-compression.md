@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f6a1277dbb2d756f0d3a4ffc1fd545f892a2096
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2ac7f0785894849cffe09cd902f459015f1f7b6b
+ms.sourcegitcommit: ea15237291ae3ade0bf22e38bd292c3a23947a03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596501"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377318"
 ---
 # <a name="block-compression"></a>Compactação de bloco
 
@@ -73,7 +73,7 @@ Se você tiver o código do app que usa um ponteiro de memória para percorrer a
 
 O lado esquerdo do diagrama mostra os tamanhos de nível de mipmap que são gerados para uma textura de 60 × 40 não compactada. O tamanho de nível superior é retirado da chamada de API que gera a textura; cada nível subsequente é metade do tamanho do nível anterior. Para uma textura descompactada, não há nenhuma diferença entre o tamanho virtual (declarado) e o tamanho físico (real).
 
-O lado direito do diagrama mostra os tamanhos de nível de mipmap que são gerados para a mesma textura de 60 × 40 com compactação. Observe que o segundo e o terceiro nível possuem preenchimento de memória para gerar os fatores de tamanho 4 em cada nível. Isso é necessário para que os algoritmos possam operar em blocos de 4 × 4 texel. Isso é evidente se você considerar os níveis de mipmap menores que 4 × 4; o tamanho desses níveis muito pequenos de mipmap será arredondado para cima para o fator mais próximo de 4 quando a memória de textura for alocada.
+O lado direito do diagrama mostra os tamanhos de nível de mipmap que são gerados para a mesma textura de 60 × 40 com compactação. Observe que o segundo e o terceiro nível possuem preenchimento de memória para gerar os fatores de tamanho 4 em cada nível. Isso é necessário para que os algoritmos possam operar em blocos de 4 × 4 texel. Isso é especialmente evidente se você considerar os níveis de mipmap menores que 4 × 4; o tamanho desses níveis de mipmap muito pequena será arredondado para o fator mais próximo de 4 quando a memória de textura é alocada.
 
 O hardware de amostragem usa o tamanho virtual; quando é feito uma amostragem da textura, o preenchimento de memória é ignorado. Para níveis de mipmap menores que 4 × 4, somente os quatro primeiros texels são usados para um mapa 2 x 2, e apenas o primeiro texel é usado por um bloco 1 × 1. No entanto, não há nenhuma estrutura de API que expõe o tamanho físico (incluindo o preenchimento de memória).
 
@@ -346,13 +346,13 @@ FLOAT32 f = 1.0f;
 UINT32 u;
 ```
 
-Para reinterpretar 'f' como o tipo de 'u', use [memcpy](https://msdn.microsoft.com/library/dswaw1wk.aspx):
+Para reinterpretar 'f' como o tipo de 'u', use [memcpy](https://docs.microsoft.com/cpp/c-runtime-library/reference/memcpy-wmemcpy):
 
 ```cpp
 memcpy( &u, &f, sizeof( f ) ); // 'u' becomes equal to 0x3F800000.
 ```
 
-Na reinterpretação anterior, o valor subjacente dos dados não muda; [memcpy](https://msdn.microsoft.com/library/dswaw1wk.aspx) reinterpreta o flutuante como um inteiro sem sinal.
+Na reinterpretação anterior, o valor subjacente dos dados não muda; [memcpy](https://docs.microsoft.com/cpp/c-runtime-library/reference/memcpy-wmemcpy) reinterpreta o flutuante como um inteiro sem sinal.
 
 Para executar o tipo mais comum de conversão, use a atribuição:
 

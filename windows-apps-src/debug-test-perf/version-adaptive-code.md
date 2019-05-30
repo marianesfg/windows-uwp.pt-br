@@ -6,22 +6,22 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 ms.localizationpriority: medium
-ms.openlocfilehash: d62ce9abd84a0769a2393db169b8198d3d9f6cec
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f542c76d879881af296351ce51a803aa9986ecbb
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616401"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359706"
 ---
 # <a name="version-adaptive-code"></a>Código adaptável de versão
 
-Você pode pensar em escrever código adaptável da mesma forma que pensa em [criar uma interface do usuário adaptável](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml). Você pode projetar a interface do usuário básica para ser executada na tela menor e então mover ou adicionar elementos ao detectar que o aplicativo está sendo executado em uma tela maior. Com código adaptável, você escreve o código base para ser executado na versão mais baixa do sistema operacional e pode adicionar recursos selecionados a mão quando você detecta que o aplicativo está sendo executado em uma versão mais recente em que o novo recurso está disponível.
+Você pode pensar em escrever código adaptável da mesma forma que pensa em [criar uma interface do usuário adaptável](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml). Você pode projetar a interface do usuário básica para ser executada na tela menor e então mover ou adicionar elementos ao detectar que o aplicativo está sendo executado em uma tela maior. Com código adaptável, você escreve o código base para ser executado na versão mais baixa do sistema operacional e pode adicionar recursos selecionados a mão quando você detecta que o aplicativo está sendo executado em uma versão mais recente em que o novo recurso está disponível.
 
 Para obter informações de apoio importantes sobre ApiInformation e contratos de API e sobre como configurar o Visual Studio, consulte [Aplicativos adaptáveis de versão](version-adaptive-apps.md).
 
 ### <a name="runtime-api-checks"></a>Verificações de API de tempo de execução
 
-Você usa a classe [Windows.Foundation.Metadata.ApiInformation](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx) em uma condição no código para testar a presença da API que você deseja chamar. Essa condição será avaliada onde quer que seu aplicativo seja executado, mas só será avaliada como **true** em dispositivos em que a API esteja presente e, portanto, disponível para ser chamada. Isso permite que você escreva código adaptável de versão para criar aplicativos que usam APIs que estão disponíveis somente em determinadas versões do sistema operacional.
+Você usa a classe [Windows.Foundation.Metadata.ApiInformation](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation) em uma condição no código para testar a presença da API que você deseja chamar. Essa condição será avaliada onde quer que seu aplicativo seja executado, mas só será avaliada como **true** em dispositivos em que a API esteja presente e, portanto, disponível para ser chamada. Isso permite que você escreva código adaptável de versão para criar aplicativos que usam APIs que estão disponíveis somente em determinadas versões do sistema operacional.
 
 Neste artigo, analisaremos exemplos específicos para o direcionamento de novos recursos do Windows Insider Preview. Para obter uma visão geral do uso de **ApiInformation**, consulte [Visão geral das famílias de dispositivos](https://docs.microsoft.com/en-us/uwp/extension-sdks/device-families-overview#writing-code) e a postagem do blog [Detectando dinamicamente recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) (em inglês).
 
@@ -34,7 +34,7 @@ Na maioria dos casos, você pode manter a versão mínima do aplicativo configur
 
 Você deve aumentar a versão Mínima do seu aplicativo se você usar:
 - uma nova API que exija uma funcionalidade que não esteja disponível em uma versão anterior. Você deve aumentar a versão mínima com suporte para uma que inclua essa funcionalidade. Para saber mais, consulte [Declarações de funcionalidades do aplicativo](../packaging/app-capability-declarations.md).
-- chaves de recurso nova adicionadas a generic.xaml e não disponíveis em uma versão anterior. A versão do generic.xaml usada no tempo de execução será determinada pela versão do sistema operacional que dispositivo estiver executando. Não é possível usar verificações de API do tempo de execução para determinar a presença de recursos XAML. Portanto, você deve usar somente as chaves de recurso que estão disponíveis na versão mínima à qual o aplicativo dá suporte ou [XAMLParseException](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.markup.xamlparseexception.aspx) causará uma falha do aplicativo no tempo de execução.
+- chaves de recurso nova adicionadas a generic.xaml e não disponíveis em uma versão anterior. A versão do generic.xaml usada no tempo de execução será determinada pela versão do sistema operacional que dispositivo estiver executando. Não é possível usar verificações de API do tempo de execução para determinar a presença de recursos XAML. Portanto, você deve usar somente as chaves de recurso que estão disponíveis na versão mínima à qual o aplicativo dá suporte ou [XAMLParseException](https://docs.microsoft.com/uwp/api/windows.ui.xaml.markup.xamlparseexception) causará uma falha do aplicativo no tempo de execução.
 
 ### <a name="adaptive-code-options"></a>Opções de código adaptável
 
@@ -73,14 +73,14 @@ Nesta seção, mostraremos vários exemplos de código adaptável que usam APIs 
 
 ### <a name="example-1-new-enum-value"></a>Exemplo 1: Novo valor de enum
 
-Windows 10, versão 1607 adiciona um novo valor para o [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx) enumeração: **ChatWithoutEmoji**. Esse novo escopo de entrada tem o mesmo comportamento de entrada que o escopo de entrada **Chat** (verificação ortográfica, preenchimento automático, uso de maiúsculas automático), mas ele é mapeado para um teclado virtual sem um botão emoji. Isso é útil se você criar seu próprio seletor de emoji e quiser desabilitar o botão emoji interno no teclado virtual. 
+Windows 10, versão 1607 adiciona um novo valor para o [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue) enumeração: **ChatWithoutEmoji**. Esse novo escopo de entrada tem o mesmo comportamento de entrada que o escopo de entrada **Chat** (verificação ortográfica, preenchimento automático, uso de maiúsculas automático), mas ele é mapeado para um teclado virtual sem um botão emoji. Isso é útil se você criar seu próprio seletor de emoji e quiser desabilitar o botão emoji interno no teclado virtual. 
 
-Este exemplo mostra como verificar se o valor de enumeração **ChatWithoutEmoji** está presente e define a propriedade [InputScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.inputscope.aspx) de um **TextBox** se estiver presente. Se não estiver presente no sistema em que o aplicativo for executado, a propriedade **InputScope** será definida como **Chat** em vez disso. O código mostrado poderia ser colocado em um construtor de página ou em um manipulador de eventos Page.Loaded.
+Este exemplo mostra como verificar se o valor de enumeração **ChatWithoutEmoji** está presente e define a propriedade [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) de um **TextBox** se estiver presente. Se não estiver presente no sistema em que o aplicativo for executado, a propriedade **InputScope** será definida como **Chat** em vez disso. O código mostrado poderia ser colocado em um construtor de página ou em um manipulador de eventos Page.Loaded.
 
 > [!TIP]
 > Quando você verificar uma API, use cadeias estáticas em vez de usar recursos de linguagem .NET. Caso contrário, o aplicativo pode tentar acessar um tipo que não esteja definido e falhar no tempo de execução.
 
-**EM C#**
+**C#**
 ```csharp
 // Create a TextBox control for sending messages 
 // and initialize an InputScope object.
@@ -125,7 +125,7 @@ No exemplo anterior, um controle TextBox é criada e todas as propriedades são 
          Loaded="messageBox_Loaded"/>
 ```
 
-**EM C#**
+**C#**
 ```csharp
 private void messageBox_Loaded(object sender, RoutedEventArgs e)
 {
@@ -156,20 +156,20 @@ Se você usar o valor de ChatWithoutEmoji em XAML ou no código sem uma verifica
 
 ### <a name="example-2-new-control"></a>Exemplo 2: Novo controle
 
-Uma nova versão do Windows normalmente traz novos controles para a superfície de API da UWP que traz novas funcionalidades à plataforma. Para aproveitar a presença de um novo controle, use o método [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx).
+Uma nova versão do Windows normalmente traz novos controles para a superfície de API da UWP que traz novas funcionalidades à plataforma. Para aproveitar a presença de um novo controle, use o método [ApiInformation.IsTypePresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.istypepresent).
 
-O Windows 10, versão 1607 introduz um novo controle de mídia chamado [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). Esse controle complementa a classe [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx), para que ele ofereça recursos como a capacidade de enquadrar-se facilmente ao áudio em segundo plano, e faz uso de melhorias arquiteturais na pilha de mídia.
+O Windows 10, versão 1607 introduz um novo controle de mídia chamado [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement). Esse controle complementa a classe [MediaPlayer](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer), para que ele ofereça recursos como a capacidade de enquadrar-se facilmente ao áudio em segundo plano, e faz uso de melhorias arquiteturais na pilha de mídia.
 
-No entanto, se o aplicativo for executado em um dispositivo que estiver executando uma versão mais antiga do que a versão 1607 do Windows 10, você deve usar o controle [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx) em vez do novo controle **MediaPlayerElement**. Você pode usar o método [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) para verificar a presença do controle MediaPlayerElement no tempo de execução e carregar qualquer controle que seja adequado ao sistema em que o aplicativo esteja sendo executado.
+No entanto, se o aplicativo for executado em um dispositivo que estiver executando uma versão mais antiga do que a versão 1607 do Windows 10, você deve usar o controle [**MediaElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaelement) em vez do novo controle **MediaPlayerElement**. Você pode usar o método [**ApiInformation.IsTypePresent**](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.istypepresent) para verificar a presença do controle MediaPlayerElement no tempo de execução e carregar qualquer controle que seja adequado ao sistema em que o aplicativo esteja sendo executado.
 
-Este exemplo mostra como criar um aplicativo que usa o novo MediaPlayerElement ou o antigo MediaElement dependendo se o tipo de MediaPlayerElement estiver presente. Nesse código, você usa a classe [UserControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol.aspx) para separar em componentes os controles, a interface do usuário e o código relacionados a eles para que você possa alterná-los com base na versão do sistema operacional. Como alternativa, você pode usar um controle personalizado que fornece mais funcionalidades e comportamento personalizado do que é necessário para este exemplo simples.
+Este exemplo mostra como criar um aplicativo que usa o novo MediaPlayerElement ou o antigo MediaElement dependendo se o tipo de MediaPlayerElement estiver presente. Nesse código, você usa a classe [UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) para separar em componentes os controles, a interface do usuário e o código relacionados a eles para que você possa alterná-los com base na versão do sistema operacional. Como alternativa, você pode usar um controle personalizado que fornece mais funcionalidades e comportamento personalizado do que é necessário para este exemplo simples.
  
 **MediaPlayerUserControl** 
 
 O `MediaPlayerUserControl` encapsula um **MediaPlayerElement** e vários botões que são usados para examinar a mídia quadro a quadro. O UserControl permite tratar esses controles como uma única entidade e facilita a alternância com um MediaElement em sistemas mais antigos. Esse controle de usuário deve ser usado somente em sistemas em que o MediaPlayerElement estiver presente, portanto você não usa verificações de ApiInformation no código dentro desse controle de usuário.
 
 > [!NOTE]
-> Para manter este exemplo simples e específico, os botões de avanço de quadros estão colocados fora do media player. Para uma melhor experiência de usuário, você deve personalizar o MediaTransportControls para incluir seus botões personalizados. Consulte [Criar controles personalizados de transporte](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/custom-transport-controls) para saber mais. 
+> Para manter este exemplo simples e específico, os botões de avanço de quadros estão colocados fora do media player. Para uma melhor experiência de usuário, você deve personalizar o MediaTransportControls para incluir seus botões personalizados. Consulte [Criar controles personalizados de transporte](https://docs.microsoft.com/windows/uwp/controls-and-patterns/custom-transport-controls) para saber mais. 
 
 **XAML**
 ```xaml
@@ -198,7 +198,7 @@ O `MediaPlayerUserControl` encapsula um **MediaPlayerElement** e vários botões
 </UserControl>
 ```
 
-**EM C#**
+**C#**
 ```csharp
 using System;
 using Windows.Media.Core;
@@ -271,7 +271,7 @@ O `MediaElementUserControl` encapsula um controle **MediaElement**.
 
 No tempo de execução, você chama **ApiInformation.IsTypePresent** para verificar se há o MediaPlayerElement. Se ele estiver presente, você carrega `MediaPlayerUserControl`. Se não estiver, você carrega `MediaElementUserControl`.
 
-**EM C#**
+**C#**
 ```csharp
 public MainPage()
 {
@@ -305,9 +305,9 @@ Você deve usar gatilhos de estado para código adaptável somente quando tiver 
 
 ### <a name="example-1-new-property"></a>Exemplo 1: Nova propriedade
 
-A primeira etapa na configuração de um gatilho de estado extensível é subclassificar a classe [StateTriggerBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.statetriggerbase.aspx) para criar um gatilho personalizado que será acionado com base na presença de uma API. Este exemplo mostra um gatilho que é acionado se a presença da propriedade corresponder à variável `_isPresent` definida em XAML.
+A primeira etapa na configuração de um gatilho de estado extensível é subclassificar a classe [StateTriggerBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.statetriggerbase) para criar um gatilho personalizado que será acionado com base na presença de uma API. Este exemplo mostra um gatilho que é acionado se a presença da propriedade corresponder à variável `_isPresent` definida em XAML.
 
-**EM C#**
+**C#**
 ```csharp
 class IsPropertyPresentTrigger : StateTriggerBase
 {
@@ -339,7 +339,7 @@ class IsPropertyPresentTrigger : StateTriggerBase
 
 A próxima etapa é configurar o gatilho de estado visual em XAML para que resultem dois diferentes estados visuais com base na presença da API. 
 
-O Windows 10, versão 1607 apresenta uma nova propriedade na classe [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) chamada [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx), que determina se um controle recebe o foco quando um usuário interage com ele. Isso é útil se você quiser manter o foco em uma caixa de texto para entrada de dados (e manter o teclado virtual habilitado) enquanto o usuário clica em um botão.
+O Windows 10, versão 1607 apresenta uma nova propriedade na classe [FrameworkElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement) chamada [AllowFocusOnInteraction](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.allowfocusoninteraction), que determina se um controle recebe o foco quando um usuário interage com ele. Isso é útil se você quiser manter o foco em uma caixa de texto para entrada de dados (e manter o teclado virtual habilitado) enquanto o usuário clica em um botão.
 
 O gatilho neste exemplo verifica se a propriedade está presente. Se a propriedade estiver presente, ele define a propriedade **AllowFocusOnInteraction** em um botão para **false**. Se a propriedade não estiver presente, o botão manterá seu estado original. A caixa de texto é incluída para facilitar a visualização dessa propriedade quando você executa o código.
 
@@ -375,7 +375,7 @@ O gatilho neste exemplo verifica se a propriedade está presente. Se a proprieda
 
 Este exemplo mostra como definir valores de enumeração diferentes com base em se um valor estiver presente. Ele usa um gatilho de estado personalizado para obter o mesmo resultado conforme o exemplo anterior de chat. Neste exemplo, você usa o novo escopo de entrada ChatWithoutEmoji se o dispositivo estiver executando o Windows 10, versão 1607. Caso contrário, o escopo de entrada **Chat** é usado. Os estados visuais que usam esse gatilho são configurados em estilo *if-else* em que o escopo de entrada é escolhido com base na presença do novo valor de enumeração.
 
-**EM C#**
+**C#**
 ```csharp
 class IsEnumPresentTrigger : StateTriggerBase
 {

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f474ec0c3017c3834d3eadb6f1caa989fc188a7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8dda866c877eb166c38949cfff5cec504103fd30
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653331"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359598"
 ---
 # <a name="accessible-text-requirements"></a>Requisitos de texto acessível  
 
@@ -46,21 +46,21 @@ Use as ferramentas de contraste de cores para verificar se a taxa de contraste d
 ## <a name="text-element-roles"></a>Funções de elementos de texto  
 Um aplicativo UWP pode usar esses elementos padrão (usualmente chamados de *text elements* or *textedit controls*):
 
-* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652): função é [ **texto**](https://msdn.microsoft.com/library/windows/apps/BR209182)
-* [**Caixa de texto**](https://msdn.microsoft.com/library/windows/apps/BR209683): função é [ **editar**](https://msdn.microsoft.com/library/windows/apps/BR209182)
-* [**RichTextBlock** ](https://msdn.microsoft.com/library/windows/apps/BR227565) (e a classe de estouro [ **RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.richtextblockoverflow)): função é [ **texto**](https://msdn.microsoft.com/library/windows/apps/BR209182)
-* [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/BR227548): função é [ **editar**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock): função é [ **texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**Caixa de texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox): função é [ **editar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**RichTextBlock** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) (e a classe de estouro [ **RichTextBlockOverflow**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblockoverflow)): função é [ **texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**RichEditBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox): função é [ **editar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
 
-Quando um controle reporta sua função como [**Editar**](https://msdn.microsoft.com/library/windows/apps/BR209182), tecnologias adaptativas supõem que haja formas de os usuários mudarem os valores. Então, se você colocar texto estático em um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683), reportando o papel e, portanto, a estrutura de forma errônea do aplicativo para o usuário de acessibilidade.
+Quando um controle reporta sua função como [**Editar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType), tecnologias adaptativas supõem que haja formas de os usuários mudarem os valores. Então, se você colocar texto estático em um [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), reportando o papel e, portanto, a estrutura de forma errônea do aplicativo para o usuário de acessibilidade.
 
-Nos modelos de texto de XAML, há dois elementos que são principalmente usados para texto estático, [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) e [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565). Nenhum deles é uma subclasse [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) e, assim, nenhum deles é focalizável no teclado ou pode aparecer na ordem da guia. Mas isso não significa que as tecnologias adaptativas não podem ou não conseguem lê-los. Os leitores de tela são normalmente concebidos para suportar vários modos de leitura de conteúdo em um aplicativo, incluindo um modo de leitura dedicado ou padrões de navegação que vão além do foco e da ordem de tabulação, como um “cursor virtual”. Então, não coloque o seu texto estático em contêineres focalizáveis para a sua ordem de guia leve o usuário até lá. Os usuários de tecnologia adaptativa esperam que qualquer coisa na ordem de guia seja interativa e se encontrarem o texto estático ali, ficarão confusos. Você deve testar isso com o Narrador para ter uma noção da experiência do usuário com seu aplicativo ao usar um leitor de tela para examinar o texto estático do seu aplicativo.
+Nos modelos de texto de XAML, há dois elementos que são principalmente usados para texto estático, [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) e [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock). Nenhum deles é uma subclasse [**Control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) e, assim, nenhum deles é focalizável no teclado ou pode aparecer na ordem da guia. Mas isso não significa que as tecnologias adaptativas não podem ou não conseguem lê-los. Os leitores de tela são normalmente concebidos para suportar vários modos de leitura de conteúdo em um aplicativo, incluindo um modo de leitura dedicado ou padrões de navegação que vão além do foco e da ordem de tabulação, como um “cursor virtual”. Então, não coloque o seu texto estático em contêineres focalizáveis para a sua ordem de guia leve o usuário até lá. Os usuários de tecnologia adaptativa esperam que qualquer coisa na ordem de guia seja interativa e se encontrarem o texto estático ali, ficarão confusos. Você deve testar isso com o Narrador para ter uma noção da experiência do usuário com seu aplicativo ao usar um leitor de tela para examinar o texto estático do seu aplicativo.
 
 <span id="Auto-suggest_accessibility"/>
 <span id="auto-suggest_accessibility"/>
 <span id="AUTO-SUGGEST_ACCESSIBILITY"/>
 
 ## <a name="auto-suggest-accessibility"></a>Acessibilidade de sugestão automática  
-Quando um usuário digita em um campo de entrada e uma lista de sugestões é exibida, esse tipo de cenário é chamado de sugestão automática. Isso é comum na linha **Para:** de um email, na caixa de pesquisa da Cortana no Windows, no campo de entrada de URL no Microsoft Edge, no campo de entrada de localização no aplicativo Clima, etc. Se você estiver usando um XAML [**AutosuggestBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.autosuggestbox) ou os controles HTML intrínsecos, essa experiência já estará disponível para você por padrão. Para tornar essa experiência acessível, o campo de entrada e a lista devem estar associados. Isso é explicado na seção [Implementando a sugestão automática](#implementing_auto-suggest) seção.
+Quando um usuário digita em um campo de entrada e uma lista de sugestões é exibida, esse tipo de cenário é chamado de sugestão automática. Isso é comum na linha **Para:** de um email, na caixa de pesquisa da Cortana no Windows, no campo de entrada de URL no Microsoft Edge, no campo de entrada de localização no aplicativo Clima, etc. Se você estiver usando um XAML [**AutosuggestBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox) ou os controles HTML intrínsecos, essa experiência já estará disponível para você por padrão. Para tornar essa experiência acessível, o campo de entrada e a lista devem estar associados. Isso é explicado na seção [Implementando a sugestão automática](#implementing_auto-suggest) seção.
 
 O Narrador foi atualizado para tornar esse tipo de experiência acessível por meio de um modo de sugestões especial. Em um nível alto, quando o campo de edição e a lista estão conectados corretamente, o usuário final:
 
@@ -78,24 +78,24 @@ _Exemplo de uma lista de sugestões_
 <span id="IMPLEMENTING_AUTO-SUGGEST"/>
 
 ### <a name="implementing-auto-suggest"></a>Implementando a sugestão automática  
-Para tornar essa experiência acessível, o campo de entrada e a lista devem ser associados na árvore de UIA. Essa associação é feita com a propriedade [UIA_ControllerForPropertyId](https://msdn.microsoft.com/windows/desktop/ee684017) em aplicativos de desktop ou com a propriedade [ControlledPeers](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) em aplicativos UWP.
+Para tornar essa experiência acessível, o campo de entrada e a lista devem ser associados na árvore de UIA. Essa associação é feita com a propriedade [UIA_ControllerForPropertyId](https://msdn.microsoft.com/windows/desktop/ee684017) em aplicativos de desktop ou com a propriedade [ControlledPeers](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) em aplicativos UWP.
 
 Em um nível alto, há dois tipos de experiências de sugestão automática.
 
 **Seleção padrão**  
-Se uma seleção padrão é feita na lista, o Narrador procura um evento [**UIA_SelectionItem_ElementSelectedEventId**](https://msdn.microsoft.com/library/windows/desktop/ee671223) em um aplicativo de desktop, ou o evento [**AutomationEvents.SelectionItemPatternOnElementSelected**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) para ser gerado em um aplicativo UWP. Sempre que a seleção é alterada, quando o usuário digita outra letra e as sugestões foram atualizadas ou quando um usuário navega pela lista, o evento **ElementSelected** deve ser disparado.
+Se uma seleção padrão é feita na lista, o Narrador procura um evento [**UIA_SelectionItem_ElementSelectedEventId**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-event-ids) em um aplicativo de desktop, ou o evento [**AutomationEvents.SelectionItemPatternOnElementSelected**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) para ser gerado em um aplicativo UWP. Sempre que a seleção é alterada, quando o usuário digita outra letra e as sugestões foram atualizadas ou quando um usuário navega pela lista, o evento **ElementSelected** deve ser disparado.
 
 ![Lista com uma seleção padrão](images/autosuggest-default-selection.png)<br/>
 _Exemplo em que há uma seleção padrão_
 
 **Nenhuma seleção padrão**  
-Se não houver nenhuma seleção padrão, como na caixa de local do aplicativo Clima, o Narrador procurará o evento [**UIA_LayoutInvalidatedEventId**](https://msdn.microsoft.com/library/windows/desktop/ee671223 ) de área de trabalho ou o evento [**LayoutInvalidated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) UWP para ser disparado na lista sempre que a lista for atualizada.
+Se não houver nenhuma seleção padrão, como na caixa de local do aplicativo Clima, o Narrador procurará o evento [**UIA_LayoutInvalidatedEventId**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-event-ids) de área de trabalho ou o evento [**LayoutInvalidated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) UWP para ser disparado na lista sempre que a lista for atualizada.
 
 ![Lista com nenhuma seleção padrão](images/autosuggest-no-default-selection.png)<br/>
 _Exemplo em que não há nenhuma seleção padrão_
 
 ### <a name="xaml-implementation"></a>Implementação de XAML  
-Se você estiver usando [**AutosuggestBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.autosuggestbox) de XAML padrão, tudo já estará disponível para você. Se estiver criando sua própria experiência de sugestão automática com um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox) e uma lista, você precisará definir a lista como [**AutomationProperties.ControlledPeers**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) no **TextBox**. Você deverá disparar o evento **AutomationPropertyChanged** para a propriedade [**ControlledPeers**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) sempre que adicionar ou remover essa propriedade e também disparar seu próprio evento [**SelectionItemPatternOnElementSelected**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) ou [**LayoutInvalidated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) dependendo do tipo de cenário, que foi explicado anteriormente neste artigo.
+Se você estiver usando [**AutosuggestBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox) de XAML padrão, tudo já estará disponível para você. Se estiver criando sua própria experiência de sugestão automática com um [**TextBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) e uma lista, você precisará definir a lista como [**AutomationProperties.ControlledPeers**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) no **TextBox**. Você deverá disparar o evento **AutomationPropertyChanged** para a propriedade [**ControlledPeers**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) sempre que adicionar ou remover essa propriedade e também disparar seu próprio evento [**SelectionItemPatternOnElementSelected**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) ou [**LayoutInvalidated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) dependendo do tipo de cenário, que foi explicado anteriormente neste artigo.
 
 ### <a name="html-implementation"></a>Implementação de HTML  
 Se você estiver usando os controles intrínsecos em HTML, a implementação de UIA já foi mapeada para você. Veja a seguir um exemplo de implementação que já está disponível para você:
@@ -116,7 +116,7 @@ Se você estiver usando os controles intrínsecos em HTML, a implementação de 
 
 ## <a name="text-in-graphics"></a>Texto em elementos gráficos
 
-Sempre que possível, evite incluir texto em um elemento gráfico. Por exemplo, qualquer texto que você inclua no arquivo de origem da imagem exibido no aplicativo como um elemento [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) não é automaticamente acessível e não pode ser lido por tecnologias adaptativas. Se você tiver que usar texto em elementos gráficos, assegure que o valor [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) que você fornecer como equivalente de "alt text" inclua o texto ou um resumo do significado do texto. Aplicam-se considerações semelhantes se você estiver criando caracteres de testo de vetores como parte de um [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) ou usando [**Glyphs**](https://msdn.microsoft.com/library/windows/apps/BR209921).
+Sempre que possível, evite incluir texto em um elemento gráfico. Por exemplo, qualquer texto que você inclua no arquivo de origem da imagem exibido no aplicativo como um elemento [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) não é automaticamente acessível e não pode ser lido por tecnologias adaptativas. Se você tiver que usar texto em elementos gráficos, assegure que o valor [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name?view=netframework-4.8) que você fornecer como equivalente de "alt text" inclua o texto ou um resumo do significado do texto. Aplicam-se considerações semelhantes se você estiver criando caracteres de testo de vetores como parte de um [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) ou usando [**Glyphs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Glyphs).
 
 <span id="Text_font_size"/>
 <span id="text_font_size"/>
@@ -172,12 +172,12 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 O valor de **TextScaleFactor** é um double no intervalo \[1,2.25\]. O menor texto está dimensionado para esse valor. Você pode usar o valor para dimensionar elementos gráficos para ajustar ao texto. Mas lembre-se de que nem todo texto é ampliado pelo mesmo fator. Em geral, quanto maior o texto for, menos ele é afetado pelo dimensionamento.
 
 Esses tipos têm uma propriedade **IsTextScaleFactorEnabled**:  
-* [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378)
-* [**Controle** ](https://msdn.microsoft.com/library/windows/apps/BR209390) e as classes derivadas
-* [**FontIcon**](https://msdn.microsoft.com/library/windows/apps/Dn279514)
-* [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)
-* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)
-* [**TextElement** ](https://msdn.microsoft.com/library/windows/apps/BR209967) e as classes derivadas
+* [**ContentPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentPresenter)
+* [**Controle** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) e as classes derivadas
+* [**FontIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FontIcon)
+* [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock)
+* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
+* [**TextElement** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.TextElement) e as classes derivadas
 
 <span id="related_topics"/>
 

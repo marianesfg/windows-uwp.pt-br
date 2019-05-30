@@ -6,24 +6,24 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: adaf1bc4b3cc70c3ceb22eb561d9782520415c4a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 15e0d39a4139cad71f51b4edf9aa6f76d60e95d2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630481"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359773"
 ---
 # <a name="tools-for-profiling-and-performance"></a>Ferramentas de criação de perfil e de desempenho
 
 
 A Microsoft oferece várias ferramentas para ajudar a melhorar o desempenho do aplicativo da Plataforma Universal do Windows (UWP). Siga estes links para saber como usar essas ferramentas.
 
-**Ferramenta Capacidade de Resposta da Interface do Usuário XAML no Visual Studio**. Uma das melhores ferramentas para medir o impacto do desempenho no app é a ferramenta Capacidade de Resposta da Interface do Usuário XAML. Esse componente foi [atualizado](https://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) para oferecer suporte a ainda mais cenários.
+**Ferramenta Capacidade de Resposta da Interface do Usuário XAML no Visual Studio**. Uma das melhores ferramentas para medir o impacto do desempenho no app é a ferramenta Capacidade de Resposta da Interface do Usuário XAML. Esse componente foi [atualizado](https://devblogs.microsoft.com/wpf/new-ui-performance-analysis-tool-for-wpf-applications/) para oferecer suporte a ainda mais cenários.
 
 Consulte também:
 
 |           |             |
 |-----------|-------------|
-| [Analisar o desempenho de aplicativos UWP usando as ferramentas de diagnóstico do Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh696636.aspx) | Ao mostrar onde o código do aplicativo perde tempo conforme o programa é executado, os criadores de perfis do Visual Studio podem ajudá-lo a encontrar os obstáculos ao desempenho em seus aplicativos, funções e algoritmos. |
+| [Analisar o desempenho de aplicativos UWP usando as ferramentas de diagnóstico do Visual Studio](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015) | Ao mostrar onde o código do aplicativo perde tempo conforme o programa é executado, os criadores de perfis do Visual Studio podem ajudá-lo a encontrar os obstáculos ao desempenho em seus aplicativos, funções e algoritmos. |
 | [Desempenho de XAML: Técnicas para maximizar a experiências de aplicativo Universal do Windows criados com XAML](https://channel9.msdn.com/Events/Build/2015/3-698) | Nesta sessão //build, você aprenderá sobre os novos recursos da plataforma, novos recursos de ferramentas e novas técnicas para aumentar significativamente o desempenho do seu Aplicativo Universal do Windows baseado em XAML. |
 | [Novas ferramentas XAML no Visual Studio](https://channel9.msdn.com/Events/Build/2015/2-697) | Nesta sessão //build, você aprenderá sobre alguns dos novos recursos no Visual Studio 2015, incluindo a experiência do Blend reprojetada, as ferramentas de depuração de interface do usuário e as melhorias no editor XAML. Essas ferramentas também estão disponíveis no Visual Studio 2017 |

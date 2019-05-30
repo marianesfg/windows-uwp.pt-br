@@ -6,16 +6,16 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c78e16a50bdca09f474d5016fdc86b6d27702d5b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 60abc29ad4f9e16dc9d37e99f94c9f30039c0087
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598581"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360697"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Processar quadros de áudio com o MediaFrameReader
 
-Este artigo mostra como usar um [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) com [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) para obter dados de áudio de uma fonte de quadro de mídia. Para saber como usar um **MediaFrameReader** para obter dados de imagem, como cor, infravermelho ou profundidade da câmera, consulte [Processar quadros de mídia com o MediaFrameReader](process-media-frames-with-mediaframereader.md). Esse artigo fornece uma visão geral do padrão de uso do leitor de quadros e descreve alguns recursos adicionais da classe **MediaFrameReader**, como o uso de **MediaFrameSourceGroup** para recuperar os quadros de várias fontes ao mesmo tempo. 
+Este artigo mostra como usar um [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) com [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) para obter dados de áudio de uma fonte de quadro de mídia. Para saber como usar um **MediaFrameReader** para obter dados de imagem, como cor, infravermelho ou profundidade da câmera, consulte [Processar quadros de mídia com o MediaFrameReader](process-media-frames-with-mediaframereader.md). Esse artigo fornece uma visão geral do padrão de uso do leitor de quadros e descreve alguns recursos adicionais da classe **MediaFrameReader**, como o uso de **MediaFrameSourceGroup** para recuperar os quadros de várias fontes ao mesmo tempo. 
 
 > [!NOTE] 
 > Os recursos abordados neste artigo só estão disponíveis a partir do Windows 10, versão 1803.
@@ -37,7 +37,7 @@ O processo de aquisição dos quadros de áudio é basicamente o mesmo para outr
 
 ## <a name="select-frame-sources-and-frame-source-groups"></a>Selecionar origens de quadro e grupos de origens de quadro
 
-A primeira etapa na captura de quadros de áudio é inicializar um [**MediaFrameSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSource), que representa a origem dos dados de áudio, como um microfone ou outro dispositivo de captura de áudio. Para fazer isso, você deve criar uma nova instância do objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture). Nesse exemplo, a única configuração de inicialização do **MediaCapture** é [**StreamingCaptureMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.streamingcapturemode) para indicar que queremos fazer o streaming de áudio do dispositivo de captura. 
+A primeira etapa na captura de quadros de áudio é inicializar um [**MediaFrameSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSource), que representa a origem dos dados de áudio, como um microfone ou outro dispositivo de captura de áudio. Para fazer isso, você deve criar uma nova instância do objeto [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture). Nesse exemplo, a única configuração de inicialização do **MediaCapture** é [**StreamingCaptureMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.streamingcapturemode) para indicar que queremos fazer o streaming de áudio do dispositivo de captura. 
 
 Depois de chamar [**MediaCapture.InitializeAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.initializeasync), você pode obter a lista de fontes de quadros de mídia acessíveis com a propriedade [**FrameSources**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.framesources). Esse exemplo usa uma consulta Linq para selecionar todas as fontes de quadros em que [**MediaFrameSourceInfo**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo) descrevendo a fonte de quadros tem um  [**MediaStreamType**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.mediastreamtype) de **Áudio**, indicando que a fonte de mídia produz dados de áudio.
 

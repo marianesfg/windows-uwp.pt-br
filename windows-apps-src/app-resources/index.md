@@ -7,12 +7,12 @@ ms.date: 10/20/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: a5af904c099b92e399f169221cae3122f358be19
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f40a68b6e07a90bcb1ce1d646bdfc0dfb4553495
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57581958"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359416"
 ---
 # <a name="app-resources-and-the-resource-management-system"></a>Os recursos de aplicativo e o Sistema de Gerenciamento de Recursos
 
@@ -36,7 +36,7 @@ Para obter mais informações sobre a proposta de valor de localização do apli
 | [Esquemas de URI](uri-schemes.md) | Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar para fazer referência aos arquivos que vêm no conjunto de aplicativo, nas pastas de dados do seu aplicativo ou na nuvem. Você também pode usar um esquema de URI para fazer referência a cadeias de caracteres carregadas dos arquivos de recursos (.resw) do aplicativo. |
 | [Especificar os recursos padrão usados pelo aplicativo](specify-default-resources-installed.md) | Se o aplicativo não tiver recursos que correspondam às configurações específicas de um dispositivo de cliente, os recursos padrão do aplicativo serão usados. Este tópico explica como especificar quais são esses recursos padrão. |
 | [Crie recursos no pacote do aplicativo, não em um pacote de recursos](build-resources-into-app-package.md) | Alguns tipos de aplicativos (dicionários multilíngues, ferramentas de tradução etc.) precisam substituir o comportamento padrão de um lote de aplicativo e criar recursos no pacote do aplicativo, em vez de tê-los em pacotes de recursos separados. Este tópico explica como fazer isso. |
-| [APIs de PRI (índice de recurso do pacote) e sistemas de build personalizados](pri-apis-custom-build-systems.md) | Com as [APIs de PRI (índice de recurso do pacote)](https://msdn.microsoft.com/library/windows/desktop/mt845690), você pode desenvolver um sistema de build personalizado para recursos do aplicativo UWP. O sistema de build será capaz de criar, controlar a versão e despejar os arquivos de PRI (índice de recurso do pacote) (como XML) em qualquer nível de complexidade exigido pelo aplicativo UWP. |
+| [APIs de PRI (índice de recurso do pacote) e sistemas de build personalizados](pri-apis-custom-build-systems.md) | Com as [APIs de PRI (índice de recurso do pacote)](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference), você pode desenvolver um sistema de build personalizado para recursos do aplicativo UWP. O sistema de build será capaz de criar, controlar a versão e despejar os arquivos de PRI (índice de recurso do pacote) (como XML) em qualquer nível de complexidade exigido pelo aplicativo UWP. |
 | [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md) | O MakePri.exe é uma ferramenta de linha de comando que você pode usar para criar e despejar arquivos PRI. Ele é integrado como parte do MSBuild no Microsoft Visual Studio, mas pode ser útil para criar pacotes manualmente ou com um sistema de build personalizado. |
 | [Use o Sistema de Gerenciamento de Recursos do Windows 10 em um aplicativo ou jogo herdado](using-mrt-for-converted-desktop-apps-and-games.md) | Empacotando o aplicativo ou jogo .NET ou Win32 como um pacote AppX, você pode aproveitar o Sistema de Gerenciamento de Recursos para carregar recursos de aplicativo personalizados para o contexto de tempo de execução. Este tópico detalhado descreve as técnicas. |
 

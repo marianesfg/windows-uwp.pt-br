@@ -9,12 +9,12 @@ dev_langs:
 - vb
 keywords: windows 10, uwp, captura de tela
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bbe52de6e148ff86f492ee2c490e5dda388ffa1
-ms.sourcegitcommit: 703f23f0cd2037997b6540335d32d344d5604974
+ms.openlocfilehash: 5d61e5bb8e5f00a2ac5743ed1a91c470f455c9c6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58867882"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361447"
 ---
 # <a name="screen-capture"></a>Captura de tela
 
@@ -216,15 +216,15 @@ End Sub
 
 Como alternativa, você pode puxar quadros manualmente com o método **Direct3D11CaptureFramePool.TryGetNextFrame** até obter todos os quadros que você precisa.
 
-O objeto **Direct3D11CaptureFrame** contém as propriedades **ContentSize**, **Surface** e **SystemRelativeTime**. O **SystemRelativeTime** é o tempo QPC ([QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904)) que pode ser usado para sincronizar outros elementos de mídia.
+O objeto **Direct3D11CaptureFrame** contém as propriedades **ContentSize**, **Surface** e **SystemRelativeTime**. O **SystemRelativeTime** é o tempo QPC ([QueryPerformanceCounter](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancecounter)) que pode ser usado para sincronizar outros elementos de mídia.
 
 ## <a name="processing-capture-frames"></a>Processamento de quadros de captura
 
-Cada quadro do **Direct3D11CaptureFramePool** é verificado ao chamar **TryGetNextFrame** de acordo com o tempo de vida do objeto **Direct3D11CaptureFrame**. Para aplicativos nativos, a liberação do objeto **Direct3D11CaptureFrame** é suficiente para verificar o quadro novamente no pool de quadros. Para aplicativos gerenciados, é recomendável usar o método **Direct3D11CaptureFrame.Dispose** (**Fechar** em C++). **Direct3D11CaptureFrame** implementa a interface [IFechável](https://docs.microsoft.com/uwp/api/Windows.Foundation.IClosable), que é projetada como [IDescartável](https://msdn.microsoft.com/library/system.idisposable.aspx) para chamadas de C#.
+Cada quadro do **Direct3D11CaptureFramePool** é verificado ao chamar **TryGetNextFrame** de acordo com o tempo de vida do objeto **Direct3D11CaptureFrame**. Para aplicativos nativos, a liberação do objeto **Direct3D11CaptureFrame** é suficiente para verificar o quadro novamente no pool de quadros. Para aplicativos gerenciados, é recomendável usar o método **Direct3D11CaptureFrame.Dispose** (**Fechar** em C++). **Direct3D11CaptureFrame** implementa a interface [IFechável](https://docs.microsoft.com/uwp/api/Windows.Foundation.IClosable), que é projetada como [IDescartável](https://docs.microsoft.com/dotnet/api/system.idisposable?redirectedfrom=MSDN) para chamadas de C#.
 
 Os aplicativos não deve salvar referências em objetos **Direct3D11CaptureFrame** nem devem salvar referências na superfície Direct3D subjacente depois que o quadro foi verificado novamente.
 
-Ao processar um quadro, é recomendável que aplicativos usem o bloqueio [ID3D11Multithread](https://msdn.microsoft.com/library/windows/desktop/mt644886) no mesmo dispositivo associado ao objeto **Direct3D11CaptureFramePool**.
+Ao processar um quadro, é recomendável que aplicativos usem o bloqueio [ID3D11Multithread](https://docs.microsoft.com/windows/desktop/api/d3d11_4/nn-d3d11_4-id3d11multithread) no mesmo dispositivo associado ao objeto **Direct3D11CaptureFramePool**.
 
 A superfície Direct3D subjacente sempre terá o tamanho especificado ao criar (ou recriar) o **Direct3D11CaptureFramePool**. Se o conteúdo for maior do que o quadro, então é cortado para se adequado ao tamanho do quadro. Se o conteúdo for menor do que o quadro, o restante deste contém dados indefinidos. É recomendável que os aplicativos copiem uma sub-retângulo usando a propriedade **ContentSize** desse **Direct3D11CaptureFrame** para evitar a exibição de conteúdo indefinido.
 

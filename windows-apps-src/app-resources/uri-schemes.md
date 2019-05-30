@@ -6,12 +6,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d66d717d77d2797e8a483871b8d3369befb5b6b
-ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.openlocfilehash: f199d70fc9194f211533820a7b23e20de929752d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320579"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359336"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
@@ -249,11 +249,11 @@ ms-resource://john:password@contoso.myapp:8080/Resources/String1
 
 ### <a name="path-ms-resource"></a>Caminho (ms-resource)
 
-O caminho identifica a localização hierárquica da subárvore [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap?branch=live) (veja [Sistema de Gerenciamento de Recursos](https://msdn.microsoft.com/library/windows/apps/jj552947)) e o [NamedResource](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live) presente nela. Geralmente, isso corresponde ao nome do arquivo (excluindo a extensão) de Arquivos de Recursos (.resw) e o identificador de um recurso de cadeia de caracteres dentro dele.
+O caminho identifica a localização hierárquica da subárvore [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap?branch=live) (veja [Sistema de Gerenciamento de Recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10))) e o [NamedResource](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live) presente nela. Geralmente, isso corresponde ao nome do arquivo (excluindo a extensão) de Arquivos de Recursos (.resw) e o identificador de um recurso de cadeia de caracteres dentro dele.
 
 Para obter exemplos e mais informações, consulte [Localizar cadeias de caracteres em sua IU e manifesto do pacote de aplicativo](localize-strings-ui-manifest.md) e [Suporte à notificação de bloco e notificações do sistema para o idioma, escala e alto contraste](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md).
 
-O componente de caminho de `ms-resource` diferencia maiúsculas de minúsculas, como os URIs genéricos. No entanto, a recuperação subjacente faz um [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) com *ignoreCase* definido como `true`.
+O componente de caminho de `ms-resource` diferencia maiúsculas de minúsculas, como os URIs genéricos. No entanto, a recuperação subjacente faz um [CompareStringOrdinal](https://docs.microsoft.com/windows/desktop/api/winstring/nf-winstring-windowscomparestringordinal) com *ignoreCase* definido como `true`.
 
 O formato normalizado do URI mantém a capitalização e faz a decodificação (um símbolo de "%" seguido pela representação hexadecimal de dois dígitos) RFC 3986 dos caracteres. Os caracteres "?", "#", "/", "*" e '”' (o caractere de aspas duplas) devem ter codificação por percentual em um caminho para representar dados como um arquivo ou nomes de pasta. Todos os caracteres codificados percentuais são decodificados antes da recuperação. Portanto, para recuperar um recurso de cadeia de caracteres de um arquivo de recursos chamado `Hello#World.resw`, usar este URI.
 
@@ -274,5 +274,5 @@ Os desenvolvedores de componentes específicos dispostos em camadas acima desta 
 * [Fazer referência a uma imagem ou outros ativos de código e marcação XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [Armazene e recupere configurações e outros dados de aplicativo](../design/app-settings/store-and-retrieve-app-data.md)
 * [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](localize-strings-ui-manifest.md)
-* [Sistema de Gerenciamento de Recursos](https://msdn.microsoft.com/library/windows/apps/jj552947)
+* [Sistema de Gerenciamento de Recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10))
 * [Suporte à notificação de bloco e notificação do sistema para o idioma, escala e alto contraste](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

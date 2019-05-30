@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
-ms.openlocfilehash: ecb7cb68b57e3d9b30a25237a63410d3bfa319b3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0a7cf1e89c91f9ad53777aa21af1d43e070c4fc8
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645081"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362227"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Testes do Kit de Certificação de Aplicativos Windows
 
@@ -34,7 +34,7 @@ Aplicativos não devem listar DLLs para carregar no HKEY\-LOCAL\-máquina\\Softw
 
 Testamos a resiliência e a estabilidade do aplicativo por meio do teste de certificação.
 
-O Kit de Certificação de Aplicativos Windows chama [**IApplicationActivationManager::ActivateApplication**](https://msdn.microsoft.com/library/windows/desktop/Hh706903) para iniciar os aplicativos. Para que o **ActivateApplication** inicie um aplicativo, o UAC (Controle de Conta de Usuário) deve estar habilitado, e a resolução da tela deve ser de pelo menos 1024 x 768 ou 768 x 1024. Se nenhuma condição for atendida, o aplicativo falhará nesse teste.
+O Kit de Certificação de Aplicativos Windows chama [**IApplicationActivationManager::ActivateApplication**](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication) para iniciar os aplicativos. Para que o **ActivateApplication** inicie um aplicativo, o UAC (Controle de Conta de Usuário) deve estar habilitado, e a resolução da tela deve ser de pelo menos 1024 x 768 ou 768 x 1024. Se nenhuma condição for atendida, o aplicativo falhará nesse teste.
 
 ### <a name="corrective-actions"></a>Ações corretivas
 
@@ -42,7 +42,7 @@ Verifique se o UAC está habilitado no computador de teste.
 
 Verifique se você está executando o teste em um computador com uma tela grande o suficiente.
 
-Se o aplicativo falhar para iniciar e sua plataforma de teste satisfizer os pré-requisitos do [**ActivateApplication**](https://msdn.microsoft.com/library/windows/desktop/Hh706903), você poderá solucionar o problema analisando o log de eventos de ativação. Para encontrar essas entradas no log de eventos:
+Se o aplicativo falhar para iniciar e sua plataforma de teste satisfizer os pré-requisitos do [**ActivateApplication**](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication), você poderá solucionar o problema analisando o log de eventos de ativação. Para encontrar essas entradas no log de eventos:
 
 1.  Abra eventvwr.exe e navegue até o aplicativo e o Log de serviços\\Microsoft\\Windows\\folder do Shell Immersive.
 2.  Filtre a exibição para mostrar as identificações de evento: 5900-6000.
@@ -64,7 +64,7 @@ O Kit de Certificação de Aplicativos Windows usa a HighVersionLie para detecta
 
 ### <a name="corrective-action"></a>Ação corretiva
 
-Os aplicativos devem usar as funções auxiliares da API de versão para verificar isso. Consulte [Versão do sistema operacional](https://msdn.microsoft.com/library/windows/desktop/ms724832) para saber mais.
+Os aplicativos devem usar as funções auxiliares da API de versão para verificar isso. Consulte [Versão do sistema operacional](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version) para saber mais.
 
 ## <a name="background-tasks-cancellation-handler-validation"></a>Validação do manipulador de cancelamento de tarefas em segundo plano
 
@@ -80,7 +80,7 @@ O aplicativo é iniciado, suspenso e a parte que não está em segundo plano do 
 
 ### <a name="corrective-action"></a>Ação corretiva
 
-Adicione o manipulador de cancelamento ao seu aplicativo. Para obter mais informações, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](https://msdn.microsoft.com/library/windows/apps/Mt299103).
+Adicione o manipulador de cancelamento ao seu aplicativo. Para obter mais informações, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks).
 
 ## <a name="app-count"></a>Contagem de aplicativo
 
@@ -110,7 +110,7 @@ Os aplicativos devem ter um manifesto corretamente formatado.
 
 ### <a name="test-details"></a>Detalhes do teste
 
-Analisa o manifesto do aplicativo para verificar se o conteúdo está correto, conforme descrito em [Requisitos do pacote do aplicativo](https://msdn.microsoft.com/library/windows/apps/Mt148525).
+Analisa o manifesto do aplicativo para verificar se o conteúdo está correto, conforme descrito em [Requisitos do pacote do aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
 
 -   **Extensões de arquivo e protocolos**
 
@@ -124,11 +124,11 @@ Analisa o manifesto do aplicativo para verificar se o conteúdo está correto, c
 
 -   **Verificação de comunicação (IPC) entre processos**
 
-    Esse teste impõe o requisito de que os aplicativos UWP não se comunicam fora do contêiner de aplicativo para os componentes da área de trabalho. A comunicação entre processos é destinada apenas a aplicativos de sideload. Os aplicativos que especificam o [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) com nome igual a "DesktopApplicationPath" falham nesse teste.
+    Esse teste impõe o requisito de que os aplicativos UWP não se comunicam fora do contêiner de aplicativo para os componentes da área de trabalho. A comunicação entre processos é destinada apenas a aplicativos de sideload. Os aplicativos que especificam o [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute) com nome igual a "DesktopApplicationPath" falham nesse teste.
 
 ### <a name="corrective-action"></a>Ação corretiva
 
-Analise o manifesto do aplicativo em relação aos requisitos descritos em [Requisitos do pacote do aplicativo](https://msdn.microsoft.com/library/windows/apps/Mt148525).
+Analise o manifesto do aplicativo em relação aos requisitos descritos em [Requisitos do pacote do aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
 
 ## <a name="windows-security-features-test"></a>Teste dos recursos de segurança do Windows
 
@@ -224,11 +224,11 @@ Esse teste apenas é realizado em aplicativos gravados em linguagens não gerenc
 
 **Mensagem de erro do Kit de certificação de aplicativos do Windows:** Falha no teste de SharedSectionsCheck.
 
-Arquivos binários com seções graváveis marcadas como compartilhadas são uma ameaça à segurança. Não compile aplicativos com seções graváveis compartilhadas, a não ser que isso seja realmente necessário. Use [**CreateFileMapping**](https://msdn.microsoft.com/library/windows/desktop/Aa366537) ou [**MapViewOfFile**](https://msdn.microsoft.com/library/windows/desktop/Aa366761) para criar um objeto de memória compartilhado devidamente protegido.
+Arquivos binários com seções graváveis marcadas como compartilhadas são uma ameaça à segurança. Não compile aplicativos com seções graváveis compartilhadas, a não ser que isso seja realmente necessário. Use [**CreateFileMapping**](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-createfilemappinga) ou [**MapViewOfFile**](https://docs.microsoft.com/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile) para criar um objeto de memória compartilhado devidamente protegido.
 
 **O que fazer se seu aplicativo falhar esse teste**
 
-Remova todas as seções compartilhadas do aplicativo e crie objetos de memória compartilhados chamando [**CreateFileMapping**](https://msdn.microsoft.com/library/windows/desktop/Aa366537) ou [**MapViewOfFile**](https://msdn.microsoft.com/library/windows/desktop/Aa366761) com os devidos atributos de segurança e depois recompile seu aplicativo.
+Remova todas as seções compartilhadas do aplicativo e crie objetos de memória compartilhados chamando [**CreateFileMapping**](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-createfilemappinga) ou [**MapViewOfFile**](https://docs.microsoft.com/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile) com os devidos atributos de segurança e depois recompile seu aplicativo.
 
 **Comentários**
 
@@ -315,9 +315,9 @@ Aplicativos devem usar as APIs para aplicativos UWP (tempo de execução do Wind
 
 Verifique se o aplicativo foi compilado como uma compilação de versão e não como uma compilação de depuração.
 
-> **Observação**  o build de depuração de um aplicativo falhará esse teste, mesmo que o aplicativo usa apenas [APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
+> **Observação**  o build de depuração de um aplicativo falhará esse teste, mesmo que o aplicativo usa apenas [APIs para aplicativos UWP](https://docs.microsoft.com/uwp/).
 
-Examine as mensagens de erro para identificar a API que não seja o aplicativo usa um [API para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
+Examine as mensagens de erro para identificar a API que não seja o aplicativo usa um [API para aplicativos UWP](https://docs.microsoft.com/uwp/).
 
 > **Observação**  aplicativos C++ que são criados em uma configuração de depuração falhará nesse teste, mesmo se a configuração usa apenas APIs do SDK do Windows para aplicativos UWP. Consulte, [alternativas para APIs do Windows em aplicativos UWP](https://go.microsoft.com/fwlink/p/?LinkID=244022) para obter mais informações.
 
@@ -412,7 +412,7 @@ Use a tabela a seguir como guia.
 <tr><td>
 <p>A imagem deve definir pelo menos uma variante, sem um qualificador TargetSize. Ela deve definir um qualificador Scale ou deixar Scale e TargetSize não especificados, que tem o padrão Scale-100.</p>
 </td><td>
-<p>Para obter mais informações, consulte <a href="https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx">Design responsivo 101 para aplicativos UWP</a> e <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">Diretrizes para recursos de aplicativos</a>.</p>
+<p>Para obter mais informações, consulte <a href="https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design">Design responsivo 101 para aplicativos UWP</a> e <a href="https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data">Diretrizes para recursos de aplicativos</a>.</p>
 </td></tr>
 <tr><td>
 <p>O pacote tem um arquivo "resources.pri" ausente.</p>
@@ -434,7 +434,7 @@ Use a tabela a seguir como guia.
 <tr><td>
 <p>A cadeia de caracteres {string} falhou na restrição de comprimento máximo de {number} caracteres.</p>
 </td><td>
-<p>Consulte os <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt148525.aspx">Requisitos do pacote do aplicativo</a>.</p>
+<p>Consulte os <a href="https://docs.microsoft.com/windows/uwp/publish/app-package-requirements">Requisitos do pacote do aplicativo</a>.</p>
 <p>Na mensagem real, {string} é substituído pela cadeia de caracteres com o erro e {number} contém o comprimento máximo.</p>
 </td></tr>
 <tr><td>
@@ -447,12 +447,12 @@ Use a tabela a seguir como guia.
 <tr><td>
 <p>A cadeia de caracteres não pode estar vazia (o comprimento deve ser maior que zero)</p>
 </td><td>
-<p>Para obter mais informações, consulte <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt148525.aspx">Requisitos do pacote do aplicativo</a>.</p>
+<p>Para obter mais informações, consulte <a href="https://docs.microsoft.com/windows/uwp/publish/app-package-requirements">Requisitos do pacote do aplicativo</a>.</p>
 </td></tr>
 <tr><td>
 <p>Não há recurso padrão especificado no arquivo "resources.pri".</p>
 </td><td>
-<p>Para obter mais informações, consulte <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">Diretrizes de recursos de aplicativos</a>.</p>
+<p>Para obter mais informações, consulte <a href="https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data">Diretrizes de recursos de aplicativos</a>.</p>
 <p>Na configuração de compilação padrão, o Visual Studio inclui apenas os recursos de imagem de escala 200 no pacote do aplicativo quando gera pacotes, colocando outros recursos no pacote de recursos. Inclua recursos de imagem de escala 200 ou configure seu projeto para incluir os recursos que você tem.</p>
 </td></tr>
 <tr><td>
@@ -551,15 +551,15 @@ Certifique-se de que seu aplicativo seja renderizado corretamente no nível de r
 
 ### <a name="background"></a>Histórico
 
-Se o aplicativo não chamar [**Trim**](https://msdn.microsoft.com/library/windows/desktop/Dn280346) no dispositivo Direct3D, ele não liberará a memória alocada para seu trabalho 3D anterior. Isso aumenta o risco de os aplicativos serem encerrados devido à demanda de memória do sistema.
+Se o aplicativo não chamar [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) no dispositivo Direct3D, ele não liberará a memória alocada para seu trabalho 3D anterior. Isso aumenta o risco de os aplicativos serem encerrados devido à demanda de memória do sistema.
 
 ### <a name="test-details"></a>Detalhes do teste
 
-Verifica a conformidade dos aplicativos com os requisitos d3d e garante que os aplicativos chamem uma nova API [**Trim**](https://msdn.microsoft.com/library/windows/desktop/Dn280346) após o retorno de chamada no modo suspenso.
+Verifica a conformidade dos aplicativos com os requisitos d3d e garante que os aplicativos chamem uma nova API [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) após o retorno de chamada no modo suspenso.
 
 ### <a name="corrective-action"></a>Ação corretiva
 
-O aplicativo deve chamar a API [**Trim**](https://msdn.microsoft.com/library/windows/desktop/Dn280346) em sua interface [**IDXGIDevice3**](https://msdn.microsoft.com/library/windows/desktop/Dn280345) a qualquer momento que esteja prestes a ser suspenso.
+O aplicativo deve chamar a API [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) em sua interface [**IDXGIDevice3**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3) a qualquer momento que esteja prestes a ser suspenso.
 
 ## <a name="app-capabilities-test"></a>Teste de capacidade do aplicativo
 
@@ -668,5 +668,5 @@ Atualize o código JavaScript em segundo plano para chamar Close() corretamente.
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Testes de aplicativo de ponte de Desktop do Windows](windows-desktop-bridge-app-tests.md)
-* [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies)
  

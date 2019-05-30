@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: d72a8d3fcaf337973f585ab19370140cd80f3826
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5aee0ed5969d87cd5a9d8ef7a621b383d4078d38
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640171"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360591"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Use a Biblioteca de visão do computador do código-fonte aberto (OpenCV) com MediaFrameReader
 
-Este artigo mostra como usar a Biblioteca de visão do computador do código-fonte aberto (OpenCV), uma biblioteca de código nativo que fornece diversos algoritmos de processamento de imagem, com a classe [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) que pode ler diversos quadros de mídia de várias fontes simultaneamente. O código de exemplo neste artigo orienta você pelas etapas de criação de um aplicativo simples que obtém os quadros de um sensor de cor, desfoca cada quadro usando a biblioteca OpenCV e depois exibe a imagem processada em um controle de **imagem** XAML. 
+Este artigo mostra como usar a Biblioteca de visão do computador do código-fonte aberto (OpenCV), uma biblioteca de código nativo que fornece diversos algoritmos de processamento de imagem, com a classe [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) que pode ler diversos quadros de mídia de várias fontes simultaneamente. O código de exemplo neste artigo orienta você pelas etapas de criação de um aplicativo simples que obtém os quadros de um sensor de cor, desfoca cada quadro usando a biblioteca OpenCV e depois exibe a imagem processada em um controle de **imagem** XAML. 
 
 >[!NOTE]
 >OpenCV.Win.Core e OpenCV.Win. ImgProc não são atualizadas regularmente, mas ainda são recomendados para a criação de um OpenCVHelper conforme descrito nesta página.
@@ -35,7 +35,7 @@ Para começar a desenvolver rapidamente, você pode incluir a biblioteca OpenCV 
 Siga as etapas em [Processar bitmaps de software com OpenCV](process-software-bitmaps-with-opencv.md) para criar o componente do tempo de execução do Windows auxiliar OpenCV e adicionar uma referência para o projeto de componente à sua solução de aplicativo UWP.
 
 ## <a name="find-available-frame-source-groups"></a>Localizar grupos de origem de quadro disponíveis
-Primeiro, você deve encontrar um grupo de origem do quadro de mídia a partir do qual os quadros de mídia serão obtidos. Obtenha a lista de grupos de origem disponíveis no dispositivo atual chamando **[MediaFrameSourceGroup.FindAllAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.FindAllAsync)**. Em seguida, selecione os grupos de origem que fornecem os tipos de sensores necessários para o cenário do aplicativo. Neste exemplo, precisamos somente de um grupo de origem que fornece os quadros de uma câmera RGB.
+Primeiro, você deve encontrar um grupo de origem do quadro de mídia a partir do qual os quadros de mídia serão obtidos. Obtenha a lista de grupos de origem disponíveis no dispositivo atual chamando **[MediaFrameSourceGroup.FindAllAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.FindAllAsync)** . Em seguida, selecione os grupos de origem que fornecem os tipos de sensores necessários para o cenário do aplicativo. Neste exemplo, precisamos somente de um grupo de origem que fornece os quadros de uma câmera RGB.
 
 [!code-cs[OpenCVFrameSourceGroups](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameSourceGroups)]
 
@@ -45,20 +45,20 @@ Em seguida, é necessário inicializar o objeto **MediaCapture** para usar o gru
 > [!NOTE] 
 > A técnica usada pelo componente OpenCVHelper, descrita em detalhes em [Processar bitmaps de software com OpenCV](process-software-bitmaps-with-opencv.md), exige que os dados da imagem a ser processada estejam na memória da CPU em vez da GPU. Assim, você deve especificar **MemoryPreference.CPU** para o campo **[MemoryPreference](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.MemoryPreference)** de **MediaCaptureInitializationSettings**.
 
-Depois de inicializar o objeto **MediaCapture**, obtenha uma referência para a origem de quadro RGB acessando a propriedade **[MediaCapture.FrameSources](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.FrameSources)**.
+Depois de inicializar o objeto **MediaCapture**, obtenha uma referência para a origem de quadro RGB acessando a propriedade **[MediaCapture.FrameSources](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.FrameSources)** .
 
 [!code-cs[OpenCVInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVInitMediaCapture)]
 
 ## <a name="initialize-the-mediaframereader"></a>Inicializar o MediaFrameReader
-Em seguida, crie um [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) para a origem de quadro RGB recuperado na etapa anterior. Para manter uma taxa de quadros ideal, você pode querer processar quadros com uma resolução menor do que a do sensor. Este exemplo fornece o argumento opcional **[BitmapSize](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapsize)** para o método **[MediaCapture.CreateFrameReaderAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync)** a fim de solicitar que os quadros fornecidos pelo leitor de quadros seja redimensionado para 640 x 480 pixels.
+Em seguida, crie um [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) para a origem de quadro RGB recuperado na etapa anterior. Para manter uma taxa de quadros ideal, você pode querer processar quadros com uma resolução menor do que a do sensor. Este exemplo fornece o argumento opcional **[BitmapSize](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapsize)** para o método **[MediaCapture.CreateFrameReaderAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync)** a fim de solicitar que os quadros fornecidos pelo leitor de quadros seja redimensionado para 640 x 480 pixels.
 
-Depois de criar o leitor de quadros, registre um manipulador para o evento **[FrameArrived](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.FrameArrived)**. Em seguida, crie um novo objeto **[SoftwareBitmapSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource)**, que a classe auxiliar **FrameRenderer** usará para apresentar a imagem processada. Em seguida, chame o construtor para o **FrameRenderer**. Inicialize a instância da classe **OpenCVHelper** definida no componente de tempo de execução do Windows OpenCVBridge. Essa classe auxiliar é usada no manipulador **FrameArrived** para processar cada quadro. Por fim, inicie o leitor de quadros ao chamar **[StartAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.StartAsync)**.
+Depois de criar o leitor de quadros, registre um manipulador para o evento **[FrameArrived](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.FrameArrived)** . Em seguida, crie um novo objeto **[SoftwareBitmapSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource)** , que a classe auxiliar **FrameRenderer** usará para apresentar a imagem processada. Em seguida, chame o construtor para o **FrameRenderer**. Inicialize a instância da classe **OpenCVHelper** definida no componente de tempo de execução do Windows OpenCVBridge. Essa classe auxiliar é usada no manipulador **FrameArrived** para processar cada quadro. Por fim, inicie o leitor de quadros ao chamar **[StartAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.StartAsync)** .
 
 [!code-cs[OpenCVFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameReader)]
 
 
 ## <a name="handle-the-framearrived-event"></a>Manipular o evento FrameArrived
-O evento **FrameArrived** é acionado sempre que um novo quadro está disponível no leitor de quadros. Chame **[TryAcquireLatestFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** para obter o quadro, se ele existir. Obtenha o **SoftwareBitmap** do **[MediaFrameReference](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference)**. Observe que a classe **CVHelper** usada neste exemplo exige imagens para usar o formato de pixels BRGA8 com alfa pré-multiplicado. Se o quadro passado para o evento tem um formato diferente, converta o **SoftwareBitmap** para o formato correto. Em seguida, crie um **SoftwareBitmap** para ser usado como o destino da operação de desfoque. As propriedades da imagem de origem são usadas como argumentos para o construtor criar um bitmap com o formato de correspondência. Chame o método de classe auxiliar **Desfocar** para processar o quadro. Por fim, passe a imagem de saída da operação de desfoque para **PresentSoftwareBitmap**, o método da classe auxiliar **FrameRenderer** que exibe a imagem no controle de **imagem** XAML com o qual foi inicializado.
+O evento **FrameArrived** é acionado sempre que um novo quadro está disponível no leitor de quadros. Chame **[TryAcquireLatestFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** para obter o quadro, se ele existir. Obtenha o **SoftwareBitmap** do **[MediaFrameReference](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference)** . Observe que a classe **CVHelper** usada neste exemplo exige imagens para usar o formato de pixels BRGA8 com alfa pré-multiplicado. Se o quadro passado para o evento tem um formato diferente, converta o **SoftwareBitmap** para o formato correto. Em seguida, crie um **SoftwareBitmap** para ser usado como o destino da operação de desfoque. As propriedades da imagem de origem são usadas como argumentos para o construtor criar um bitmap com o formato de correspondência. Chame o método de classe auxiliar **Desfocar** para processar o quadro. Por fim, passe a imagem de saída da operação de desfoque para **PresentSoftwareBitmap**, o método da classe auxiliar **FrameRenderer** que exibe a imagem no controle de **imagem** XAML com o qual foi inicializado.
 
 [!code-cs[OpenCVFrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameArrived)]
 

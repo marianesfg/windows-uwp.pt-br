@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, standard, c + +, cpp, winrt, projeção, notícias, o que do, new
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b84736e41e039d350a849c55fead008cbab5fdea
-ms.sourcegitcommit: bc64db47b6ff326f15cac15fc2cfd709fa7f877b
+ms.openlocfilehash: a84e118d988d8bf6a7d26eba7d5dd009c7ad44f3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626210"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360140"
 ---
 # <a name="whats-new-in-cwinrt"></a>O que há de novo no C++/WinRT
 
@@ -302,7 +302,7 @@ Se você deixou anteriormente para C++/WinRT para incluir quaisquer cabeçalhos 
 
 Atualmente, as únicas exceções para o isolamento de arquivo de cabeçalho do SDK do Windows são intrínsecos e numéricos. Não há nenhum problema conhecido com essas últimas dependências restantes.
 
-Em seu projeto, você pode habilitar novamente a interoperabilidade com os cabeçalhos do SDK do Windows se você precisar. Por exemplo, convém implementar uma interface COM (como raiz [ **IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)). Para este exemplo, incluir `unknwn.h` antes de incluir qualquer C++/WinRT cabeçalhos. Fazendo isso faz com que o C++biblioteca de base /WinRT para habilitar vários ganchos dar suporte a interfaces do COM clássico. Para obter um exemplo de código, consulte [componentes COM do autor com C++/WinRT](author-coclasses.md). Da mesma forma, inclua explicitamente outros cabeçalhos de SDK do Windows que declarar tipos de e/ou funções que você deseja chamar.
+Em seu projeto, você pode habilitar novamente a interoperabilidade com os cabeçalhos do SDK do Windows se você precisar. Por exemplo, convém implementar uma interface COM (como raiz [ **IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)). Para este exemplo, incluir `unknwn.h` antes de incluir qualquer C++/WinRT cabeçalhos. Fazendo isso faz com que o C++biblioteca de base /WinRT para habilitar vários ganchos dar suporte a interfaces do COM clássico. Para obter um exemplo de código, consulte [componentes COM do autor com C++/WinRT](author-coclasses.md). Da mesma forma, inclua explicitamente outros cabeçalhos de SDK do Windows que declarar tipos de e/ou funções que você deseja chamar.
 
 ### <a name="how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>Como redirecionar seu C++projeto /WinRT para uma versão posterior do SDK do Windows
 
@@ -315,7 +315,7 @@ No entanto, há duas outras maneiras de redirecionar seu projeto no Visual Studi
 
 Se você encontrar qualquer compilador ou erros de vinculador depois de usar qualquer um desses dois métodos, você pode testar a solução de limpeza (**construir** > **limpar solução** e/ou exclua manualmente todos os arquivos e pastas temporárias) antes de tentar compilar novamente.
 
-Se o compilador C++ produz "*erro C2039: 'IUnknown': não é um membro de '\`namespace global '*", em seguida, adicione `#include <unknwn.h>` na parte superior do seu `pch.h` arquivo (antes de incluir qualquer C++/WinRT cabeçalhos).
+Se o compilador C++ produz "*erro C2039: 'IUnknown': não é um membro de '\`namespace global '* ", em seguida, adicione `#include <unknwn.h>` na parte superior do seu `pch.h` arquivo (antes de incluir qualquer C++/WinRT cabeçalhos).
 
 Você também precisará adicionar `#include <hstring.h>` depois disso.
 

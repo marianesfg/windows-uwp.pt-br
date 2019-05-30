@@ -8,30 +8,30 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a83cbc547ede1977f0222298bf451611905fad50
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.openlocfilehash: 4bb24002e3738213ba3e784e6b91ff55d970a26a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343255"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363625"
 ---
 # <a name="define-custom-recognition-constraints"></a>Definir restrições de reconhecimento personalizadas
 
 Saiba como definir e usar restrições personalizadas para reconhecimento de fala.
 
-> **APIs importantes**: [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446), [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421), [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
+> **APIs importantes**: [**SpeechRecognitionTopicConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint), [**SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint), [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint)
 
 O reconhecimento de fala requer pelo menos uma restrição para definir um vocabulário reconhecível. Se nenhuma restrição for especificada, será usada a gramática de ditado predefinida de Aplicativos Universais do Windows. Consulte [Reconhecimento de fala](speech-recognition.md).
 
 ## <a name="add-constraints"></a>Adicionar restrições
 
-Use a propriedade [**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) para adicionar restrições a um reconhecedor de fala.
+Use a propriedade [**SpeechRecognizer.Constraints**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.constraints) para adicionar restrições a um reconhecedor de fala.
 
 Aqui, abordamos os três tipos de restrições de reconhecimento de fala usados de dentro de um aplicativo. (Para restrições de comando de voz Cortana, consulte [inicie um aplicativo de primeiro plano com comandos de voz na Cortana](https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana).)
 
-- [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)— uma restrição com base em uma gramática predefinida (pesquisa de ditado ou web).
-- [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)— uma restrição com base em uma lista de palavras ou frases.
-- [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)— uma restrição definida em um arquivo de especificação de gramática de reconhecimento de fala (SRGS).
+- [**SpeechRecognitionTopicConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint)— uma restrição com base em uma gramática predefinida (pesquisa de ditado ou web).
+- [**SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint)— uma restrição com base em uma lista de palavras ou frases.
+- [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint)— uma restrição definida em um arquivo de especificação de gramática de reconhecimento de fala (SRGS).
 
 Cada reconhecedor de fala pode ter uma coleção de restrição. Somente essas combinações de restrições são válidas:
 
@@ -40,7 +40,7 @@ Cada reconhecedor de fala pode ter uma coleção de restrição. Somente essas c
 - Uma combinação da lista de restrições e/ou restrições de arquivo de gramática.
 
 > [!Important]
-> Chame o método **[SpeechRecognizer.CompileConstraintsAsync](https://msdn.microsoft.com/library/windows/apps/dn653240)** para compilar as restrições antes de iniciar o processo de reconhecimento.
+> Chame o método **[SpeechRecognizer.CompileConstraintsAsync](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync)** para compilar as restrições antes de iniciar o processo de reconhecimento.
 
 ## <a name="specify-a-web-search-grammar-speechrecognitiontopicconstraint"></a>Especifique uma gramática de pesquisa na Web (SpeechRecognitionTopicConstraint)
 
@@ -212,15 +212,15 @@ Aqui, escutamos as variantes de "sim" e "não".
 
 ## <a name="manage-constraints"></a>Gerenciar restrições
 
-Depois que uma coleção de restrições for carregada para reconhecimento, seu aplicativo poderá gerenciar quais restrições são permitidas para operações de reconhecimento definindo a propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402) de uma restrição como **true** ou **false**. A configuração padrão é **true**.
+Depois que uma coleção de restrições for carregada para reconhecimento, seu aplicativo poderá gerenciar quais restrições são permitidas para operações de reconhecimento definindo a propriedade [**IsEnabled**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.ispeechrecognitionconstraint.isenabled) de uma restrição como **true** ou **false**. A configuração padrão é **true**.
 
-Geralmente, é mais eficaz carregar restrições uma vez e, em seguida, habilitá-las ou desabilitá-las conforme necessário, em vez de carregar, descarregar e compilar restrições para cada operação de reconhecimento. Use a propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402), conforme necessário.
+Geralmente, é mais eficaz carregar restrições uma vez e, em seguida, habilitá-las ou desabilitá-las conforme necessário, em vez de carregar, descarregar e compilar restrições para cada operação de reconhecimento. Use a propriedade [**IsEnabled**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.ispeechrecognitionconstraint.isenabled), conforme necessário.
 
 Restringir o número de restrições para limitar a quantidade de dados que o reconhecedor de fala precisa pesquisar para localizar uma correspondência para entrada de fala. Isso pode melhorar o desempenho e a precisão do reconhecimento de fala.
 
 Decida quais restrições são habilitadas com base nas frases que seu aplicativo espera no contexto da operação de reconhecimento atual. Por exemplo, se o contexto do aplicativo atual for exibir uma cor, você poderá não precisar habilitar uma restrição que reconheça os nomes de animais.
 
-Para avisar o usuário sobre o que pode ser falado, use as propriedades [**SpeechRecognizerUIOptions.AudiblePrompt**](https://msdn.microsoft.com/library/windows/apps/dn653235) e [**SpeechRecognizerUIOptions.ExampleText**](https://msdn.microsoft.com/library/windows/apps/dn653236), que é possível definir usando a propriedade [**SpeechRecognizer.UIOptions**](https://msdn.microsoft.com/library/windows/apps/dn653254). Preparar usuários sobre o que eles podem dizer durante a operação de reconhecimento aumenta a probabilidade deles falarem uma frase que possa ser correspondida a uma restrição ativa.
+Para avisar o usuário sobre o que pode ser falado, use as propriedades [**SpeechRecognizerUIOptions.AudiblePrompt**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizeruioptions.audibleprompt) e [**SpeechRecognizerUIOptions.ExampleText**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizeruioptions.exampletext), que é possível definir usando a propriedade [**SpeechRecognizer.UIOptions**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.uioptions). Preparar usuários sobre o que eles podem dizer durante a operação de reconhecimento aumenta a probabilidade deles falarem uma frase que possa ser correspondida a uma restrição ativa.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

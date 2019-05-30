@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c2280fd7234fc41ee02dc17909bda8d7af0e1b9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d8695a385dbc6d550a8002a5f64b7d777e95594e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602071"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360026"
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Associar dados hierárquicos e criar um modo de exibição mestre/detalhes
 
@@ -19,9 +19,9 @@ ms.locfileid: "57602071"
 
 > **Observação**  Consulte também a [amostra de mestre/detalhes](https://go.microsoft.com/fwlink/p/?linkid=619991).
 
-Você pode criar um modo de exibição mestre/detalhes de vários níveis (também conhecido como lista/detalhes) de dados hierárquicos, associando controles de itens a instâncias [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) que são associadas em uma cadeia. Neste tópico, usamos a [extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) onde possível, e a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) mais flexível (mas menos eficiente) onde necessário.
+Você pode criar um modo de exibição mestre/detalhes de vários níveis (também conhecido como lista/detalhes) de dados hierárquicos, associando controles de itens a instâncias [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) que são associadas em uma cadeia. Neste tópico, usamos a [extensão de marcação {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) onde possível, e a [extensão de marcação {Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) mais flexível (mas menos eficiente) onde necessário.
 
-Uma estrutura comum dos aplicativos da Plataforma Universal do Windows (UWP) é navegar em diferentes páginas de detalhes quando um usuário faz uma seleção em uma lista mestra. Isso é útil quando você quiser providenciar uma representação visual detalhada de cada item em cada nível da hierarquia. Outra opção é exibir vários níveis de dados em uma única página. Isso é útil quando você deseja exibir algumas listas simples que permitem que o usuário explore rapidamente um item de interesse. Este tópico descreve como implementar essa interação. As instâncias de [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) controlam a seleção atual em cada nível hierárquico.
+Uma estrutura comum dos aplicativos da Plataforma Universal do Windows (UWP) é navegar em diferentes páginas de detalhes quando um usuário faz uma seleção em uma lista mestra. Isso é útil quando você quiser providenciar uma representação visual detalhada de cada item em cada nível da hierarquia. Outra opção é exibir vários níveis de dados em uma única página. Isso é útil quando você deseja exibir algumas listas simples que permitem que o usuário explore rapidamente um item de interesse. Este tópico descreve como implementar essa interação. As instâncias de [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) controlam a seleção atual em cada nível hierárquico.
 
 Criaremos um modo de exibição de hierarquia de esportes em equipe que é organizado em listas de ligas, divisões e times e inclui um modo de exibição detalhado dos times. Quando você seleciona um item de qualquer lista, os modos de exibição subsequentes são automaticamente atualizados.
 
@@ -29,11 +29,11 @@ Criaremos um modo de exibição de hierarquia de esportes em equipe que é organ
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Este tópico pressupõe que você saiba como criar um aplicativo UWP básico. Para obter instruções para criar seu primeiro aplicativo UWP, consulte [Criar seu primeiro aplicativo UWP em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/Hh974581).
+Este tópico pressupõe que você saiba como criar um aplicativo UWP básico. Para obter instruções para criar seu primeiro aplicativo UWP, consulte [Criar seu primeiro aplicativo UWP em C# ou Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh974581(v=win.10)).
 
 ## <a name="create-the-project"></a>Criar o projeto
 
-Crie um novo projeto **Aplicativo em branco (universal do Windows)**. Chame-o de "MasterDetailsBinding".
+Crie um novo projeto **Aplicativo em branco (universal do Windows)** . Chame-o de "MasterDetailsBinding".
 
 ## <a name="create-the-data-model"></a>Criar o modelo de dados
 
@@ -130,7 +130,7 @@ namespace MasterDetailsBinding
 }
 ```
 
-Por fim, substitua o conteúdo do arquivo MainPage.xaml pela marcação a seguir, que declara três instâncias de [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) e as associa em uma cadeia. Os controles subsequentes podem então ser associados ao **CollectionViewSource** apropriado, dependendo do seu nível na hierarquia.
+Por fim, substitua o conteúdo do arquivo MainPage.xaml pela marcação a seguir, que declara três instâncias de [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) e as associa em uma cadeia. Os controles subsequentes podem então ser associados ao **CollectionViewSource** apropriado, dependendo do seu nível na hierarquia.
 
 ```xml
 <Page
@@ -220,7 +220,7 @@ Por fim, substitua o conteúdo do arquivo MainPage.xaml pela marcação a seguir
 </Page>
 ```
 
-Observe que ao associar diretamente o [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833), você está indicando que deseja associar ao item atual em associações onde o caminho não pode ser encontrado na própria coleção. Não é necessário especificar a propriedade **CurrentItem** como o caminho para a associação, embora você possa fazer isso se houver ambiguidade. Por exemplo, o [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365) que representa o modo de exibição do time tem sua propriedade [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) associada ao `Teams`**CollectionViewSource**. No entanto, os controles no [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) associam a propriedades da classe `Team` porque o **CollectionViewSource** fornece automaticamente o time selecionado no momento na lista de times quando necessário.
+Observe que ao associar diretamente o [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource), você está indicando que deseja associar ao item atual em associações onde o caminho não pode ser encontrado na própria coleção. Não é necessário especificar a propriedade **CurrentItem** como o caminho para a associação, embora você possa fazer isso se houver ambiguidade. Por exemplo, o [**ContentControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl) que representa o modo de exibição do time tem sua propriedade [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) associada ao `Teams`**CollectionViewSource**. No entanto, os controles no [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) associam a propriedades da classe `Team` porque o **CollectionViewSource** fornece automaticamente o time selecionado no momento na lista de times quando necessário.
 
  
 

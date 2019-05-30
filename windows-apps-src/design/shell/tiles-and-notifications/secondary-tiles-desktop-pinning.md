@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, ponte de desktop, blocos secundários, fixar, fixando, guia de início rápido, exemplo de código, exemplo, secondarytile, aplicativo da área de trabalho, win32, winforms, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e713f37cd5e5fbf4b2771e76fb7e132b5976629
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7ca6471122ee1870a94ef0834a5eed8f83a4d4a7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57609621"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362615"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>Fixar blocos secundários do aplicativo da área de trabalho
 
@@ -34,7 +34,7 @@ Se você não tiver empacotado o aplicativo com a Ponte de Desktop, [deverá faz
 
 ## <a name="enable-access-to-iinitializewithwindow-interface"></a>Habilitar acesso à interface IInitializeWithWindow
 
-Se o aplicativo estiver escrito em uma linguagem gerenciada, como C# ou Visual Basic, declare a interface IInitializeWithWindow no código do aplicativo com o atributo [ComImport](https://msdn.microsoft.com/library/system.runtime.interopservices.comimportattribute.aspx) e Guid conforme mostrado no exemplo em C# a seguir. Esse exemplo pressupõe que o arquivo de código tenha uma instrução using para o namespace System.Runtime.InteropServices
+Se o aplicativo estiver escrito em uma linguagem gerenciada, como C# ou Visual Basic, declare a interface IInitializeWithWindow no código do aplicativo com o atributo [ComImport](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comimportattribute?redirectedfrom=MSDN) e Guid conforme mostrado no exemplo em C# a seguir. Esse exemplo pressupõe que o arquivo de código tenha uma instrução using para o namespace System.Runtime.InteropServices
 
 ```csharp
 [ComImport]
@@ -66,7 +66,7 @@ SecondaryTile tile = new SecondaryTile(
 
 ## <a name="assign-the-window-handle"></a>Atribuir o identificador de janela
 
-Esta é a etapa principal para aplicativos da área de trabalho. Converta o objeto em um objeto [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx). Em seguida, chame o método [IInitializeWithWindow.Initialize](https://msdn.microsoft.com/library/windows/desktop/hh706982.aspx) e passe o identificador da janela da qual você deseja ser o proprietário para a caixa de diálogo modal. O exemplo em C# a seguir mostra como passar o identificador da janela principal do aplicativo para o método.
+Esta é a etapa principal para aplicativos da área de trabalho. Converta o objeto em um objeto [IInitializeWithWindow](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow). Em seguida, chame o método [IInitializeWithWindow.Initialize](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) e passe o identificador da janela da qual você deseja ser o proprietário para a caixa de diálogo modal. O exemplo em C# a seguir mostra como passar o identificador da janela principal do aplicativo para o método.
 
 ```csharp
 // Assign the window handle

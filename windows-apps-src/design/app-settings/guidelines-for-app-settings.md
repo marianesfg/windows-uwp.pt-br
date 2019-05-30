@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a31464d208e8d9abe68703560552c99e5d957463
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0e5c5e19c6e23f4c0094220a735a0c2a48c1cc34
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57638231"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362061"
 ---
 # <a name="guidelines-for-app-settings"></a>Diretrizes para configurações de aplicativos
 
@@ -30,7 +30,7 @@ Aqui estão exemplos de opções do aplicativo que pertencem a uma página de co
 -   Opções que dependem das preferências do usuário, como músicas, efeitos sonoros ou temas de cores.
 -   Informações sobre o aplicativo que não são acessadas com frequência, como a política de privacidade, a ajuda, a versão do aplicativo ou as informações de direitos autorais.
 
-Os comandos que fazem parte do fluxo de trabalho normal do aplicativo (por exemplo, alterar o tamanho do pincel em um aplicativo de desenho) não devem estar na página de configurações. Para saber mais sobre o posicionamento de comandos, consulte [Noções básicas de design de comandos](https://msdn.microsoft.com/library/windows/apps/dn958433).
+Os comandos que fazem parte do fluxo de trabalho normal do aplicativo (por exemplo, alterar o tamanho do pincel em um aplicativo de desenho) não devem estar na página de configurações. Para saber mais sobre o posicionamento de comandos, consulte [Noções básicas de design de comandos](https://docs.microsoft.com/windows/uwp/layout/commanding-basics).
 
 ## <a name="general-recommendations"></a>Recomendações gerais
 
@@ -135,17 +135,17 @@ Assim que você tiver uma lista de itens que deseja incluir na página de config
     -   [Hiperlinks](../controls-and-patterns/hyperlinks.md): Para levar o usuário para outra página dentro do aplicativo ou para um site externo. Quando um usuário clicar em um hiperlink, o submenu Configurações será ignorado.
     -   [Botões](../controls-and-patterns/buttons.md): Para permitir que usuários iniciem uma ação imediata sem fechar o submenu de configurações atual.
 -   Adicione uma mensagem descritiva se um dos controles estiver desativado. Coloque esta mensagem acima do controle desativado.
--   Anime o conteúdo e os controles como um bloco único depois que o submenu Configurações e o cabeçalho forem animados. Anime o conteúdo usando a animação [**enterPage**](https://msdn.microsoft.com/library/windows/apps/br212672) ou [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288) com um deslocamento à esquerda de 100px.
+-   Anime o conteúdo e os controles como um bloco único depois que o submenu Configurações e o cabeçalho forem animados. Anime o conteúdo usando a animação [**enterPage**](https://docs.microsoft.com/previous-versions/windows/apps/br212672(v=win.10)) ou [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) com um deslocamento à esquerda de 100px.
 -   Use cabeçalhos de seção, parágrafos e rótulos para ajudar a organizar e esclarecer conteúdo, se necessário.
 -   Se for necessário repetir configurações, use um nível adicional da interface do usuário ou um modelo expandir/recolher, mas evite hierarquias com mais de dois níveis. Por exemplo, um aplicativo de previsão do tempo que disponibiliza configurações por cidade pode listar as cidades e deixar que o usuário toque na cidade para abrir um novo submenu ou expandir para mostrar as opções de configurações.
--   Se o carregamento de controles ou de conteúdo da Web for demorado, use um controle de progresso indeterminado para indicar aos usuários que as informações estão sendo carregadas. Para obter mais informações, consulte [Diretrizes de controles de progresso](https://msdn.microsoft.com/library/windows/apps/hh465469).
+-   Se o carregamento de controles ou de conteúdo da Web for demorado, use um controle de progresso indeterminado para indicar aos usuários que as informações estão sendo carregadas. Para obter mais informações, consulte [Diretrizes de controles de progresso](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls).
 -   Não use botões para navegação ou para confirmar alterações. Use hiperlinks para navegar para outras páginas e, em vez de usar um botão para confirmar as mudanças, salve-as automaticamente nas configurações do aplicativo quando um usuário ignorar o submenu Configurações.
 
 
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Noções básicas sobre o design de comando](https://msdn.microsoft.com/library/windows/apps/dn958433)
-* [Diretrizes para controles de andamento](https://msdn.microsoft.com/library/windows/apps/hh465469)
-* [Store e recuperar dados de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt299098)
-* [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
+* [Noções básicas sobre o design de comando](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
+* [Diretrizes para controles de andamento](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls)
+* [Store e recuperar dados de aplicativo](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
+* [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition)

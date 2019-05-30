@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 24e994435a2ff7a01e5c77a0043e7a3fb8bc3f33
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: 2c7332a3e1097a8e62576ae5920eb82c2bd5d2a6
+ms.sourcegitcommit: 423ff8f1fd791445e21cca534bcefe407251acf1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065423"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251609"
 ---
 ![Noções básicas de design](../images/downloads-2x.png)
 
@@ -27,44 +27,44 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
 
 :::row:::
     :::column:::
-        ![hero image](images/figma.png)
-        <b>Figma toolkit</b><br>
-        v1810, October 2018<br>
-        <a href="https://aka.ms/figmatoolkit">Download</a>
+![imagem hero](images/figma.png)
+<b>Kit de ferramentas do Figma</b><br>
+v1810, outubro de 2018<br>
+<a href="https://aka.ms/figmatoolkit">Baixar</a>
     :::column-end:::
     :::column:::
-        ![hero image](images/sketch.png)
-        <b>Sketch toolkit</b><br>
-        v1810, October 2018<br>
-        <a href="https://aka.ms/sketchtoolkit">Download</a>
+![imagem hero](images/sketch.png)
+<b>Kit de ferramentas do Sketch</b><br>
+v1810, outubro de 2018<br>
+<a href="https://aka.ms/sketchtoolkit">Baixar</a>
     :::column-end:::    
     :::column:::
-        ![hero image](images/adobe-xd.png)
-        <b>Adobe XD toolkit</b><br>
-        v1901, January 2019<br>
-        <a href="https://aka.ms/adobexdtoolkit">Download</a>
+![imagem hero](images/adobe-xd.png)
+<b>Kit de ferramentas do Adobe XD</b><br>
+v1901, janeiro de 2019<br>
+<a href="https://aka.ms/adobexdtoolkit">Baixar</a>
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![hero image](images/adobe-illustrator.png)
-        <b>Adobe Illustrator toolkit</b><br>
-        v1806, June 2018<br>
-        <a href="https://aka.ms/adobeillustratortoolkit">Download</a>
+![imagem hero](images/adobe-illustrator.png)
+<b>Kit de ferramentas do Adobe Illustrator</b><br>
+v1806, junho de 2018<br>
+<a href="https://aka.ms/adobeillustratortoolkit">Baixar</a>
     :::column-end:::
     :::column:::
-        ![hero image](images/adobe-photoshop.png)
-        <b>Adobe Photoshop toolkit</b><br>
-        v1705, May 2017<br>
-        <a href="https://aka.ms/adobephotoshoptoolkit">Download</a>
+![imagem hero](images/adobe-photoshop.png)
+<b>Kit de ferramentas do Adobe Photoshop</b><br>
+v1705, maio de 2017<br>
+<a href="https://aka.ms/adobephotoshoptoolkit">Baixar</a>
     :::column-end:::
     :::column:::
-        ![hero image](images/framer.png)
-        <b>Framer toolkit</b><br>
-        (This toolkit is no longer supported.)<br/>
-        v1806, June 2018<br>
-        <a href="https://aka.ms/framertoolkit">Download</a>
+![imagem hero](images/framer.png)
+<b>Kit de ferramentas do Framer</b><br>
+(Não há mais suporte para o kit de ferramentas.)<br/>
+v1806, junho de 2018<br>
+<a href="https://aka.ms/framertoolkit">Baixar</a>
     :::column-end:::
 :::row-end:::
 
@@ -72,16 +72,16 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
 
 :::row:::
     :::column:::
-        ![WinUI library thumbnail](images/WinUI-library.png)
-        <b>Windows UI Library</b><br>
-        Controls and other UI elements for UWP apps.<br/>
-        <a href="/uwp/toolkits/winui/getting-started">Installation instructions</a><br/>
+![Imagem em miniatura da biblioteca WinUI](images/WinUI-library.png)
+<b>Biblioteca de interface do usuário do Windows</b><br>
+Controles e outros elementos de interface do usuário para aplicativos UWP.<br/>
+<a href="/uwp/toolkits/winui/getting-started">Instruções de instalação</a><br/>
     :::column-end:::
     :::column:::
-        ![Windows community thumbnail](images/Windows-community-toolkit.png)
-        <b>Windows Community Toolkit</b><br>
-        Helper functions, custom controls, and app services.<br />
-        <a href="/windows/uwpcommunitytoolkit/getting-started">Installation instructions</a>
+![Imagem em miniatura da comunidade do Windows](images/Windows-community-toolkit.png)
+<b>Kit de ferramentas da Comunidade do Windows</b><br>
+Funções auxiliares, controles personalizados e serviços de aplicativos.<br />
+<a href="/windows/uwpcommunitytoolkit/getting-started">Instruções de instalação</a>
     :::column-end:::
     :::column:::
     :::column-end:::

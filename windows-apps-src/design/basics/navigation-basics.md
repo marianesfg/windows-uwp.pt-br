@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3d516343798b7d8c221a5af12210a4897a3124a9
-ms.sourcegitcommit: 358abe22243da4592c30e18d6fc322778f091c8d
+ms.openlocfilehash: 1c764eeb57ec8046a93e7fb58e156fa68daea8df
+ms.sourcegitcommit: 13fe5d04bdb43c75d0fc4de18c2c3d4ae58ff982
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58362946"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "64564516"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -29,17 +29,17 @@ Há várias opções de navegação. É possível:
     :::column:::
         ![navigation example 1](images/nav/nav-1.svg)
 
-        Require users to go through a series of pages in order.
+Exigir que os usuários a passar por uma série de páginas em ordem.
     :::column-end:::
     :::column:::
         ![navigation example 2](images/nav/nav-2.svg)
 
-        Provide a menu that allows users to jump directly to any page.
+Fornece um menu que permite aos usuários ir diretamente para qualquer página.
     :::column-end:::
     :::column:::
         ![navigation example 3](images/nav/nav-3.svg)
 
-        Place everything on a single page and provide filtering mechanisms for viewing content.
+Coloque tudo em uma única página e fornecem mecanismos de filtragem para visualizar o conteúdo.
     :::column-end:::
 :::row-end:::
 
@@ -71,14 +71,14 @@ Menos itens de navegação simplificam a tomada de decisão para os usuários. F
 
         ![navview good](images/nav/navview-good.svg)
 
-        Present navigation items in a familiar navigation menu.
+Itens de navegação presentes em um menu de navegação familiar.
     :::column-end:::
     :::column:::
         ![don't example](images/nav/dont.svg)
 
         ![navview bad](images/nav/navview-bad.svg)
 
-        Overwhelm users with many navigation options.
+Sobrecarregar os usuários com várias opções de navegação.
     :::column-end:::
 :::row-end:::
 
@@ -111,14 +111,14 @@ Agora que você está familiarizado com os princípios gerais de navegação, co
     :::column span="2":::
         ### Flat/lateral
 
-        In a flat/lateral structure, pages exist side-by-side. You can go from one page to another in any order.
+Em uma estrutura simples/lateral, as páginas são dispostas lado a lado. Você pode ir de uma página para outra em qualquer ordem.
 
-        We recommend using a flat structure when:
+Recomendamos o uso de uma estrutura simples quando:
 
-        - As páginas podem ser vistas em qualquer ordem.
-        - As páginas são claramente distintas umas das outros e não têm uma relação pai/filho óbvia.
-        - Há menos de 8 páginas no grupo. <br>
-        (Quando há mais páginas, talvez seja difícil para os usuários compreender como as páginas são únicas ou entender sua localização atual dentro do grupo. Se você não achar que isso é um problema para seu aplicativo, vá em frente e torne as páginas pares. Caso contrário, considere a possibilidade de usar uma estrutura hierárquica para quebrar as páginas em dois ou mais grupos menores.)
+- As páginas podem ser vistas em qualquer ordem.
+- As páginas são claramente distintas umas das outros e não têm uma relação pai/filho óbvia.
+- Há menos de 8 páginas no grupo. <br>
+(Quando há mais páginas, talvez seja difícil para os usuários compreender como as páginas são únicas ou entender sua localização atual dentro do grupo. Se você não achar que isso é um problema para seu aplicativo, vá em frente e torne as páginas pares. Caso contrário, considere a possibilidade de usar uma estrutura hierárquica para quebrar as páginas em dois ou mais grupos menores.)
 
     :::column-end:::
 :::row-end:::
@@ -130,15 +130,15 @@ Agora que você está familiarizado com os princípios gerais de navegação, co
     :::column span="2":::
         ### Hierarchical
 
-        In a hierarchical structure, pages are organized into a tree-like structure. Each child page has one parent, but a parent can have one or more child pages. To reach a child page, you travel through the parent.
+Em uma estrutura hierárquica, as páginas são organizadas em uma estrutura de árvore. Cada página filho tem um pai, mas um pai pode ter uma ou mais páginas filho. Para acessar uma página filho, você passa pela página pai.
 
-        Hierarchical structures are good for organizing complex content that spans lots of pages. The downside is some navigation overhead: the deeper the structure, the more clicks it takes to get from page to page.
+Estruturas hierárquicas são adequadas para organizar conteúdo complexo que abrange várias páginas. A desvantagem é um pouco de sobrecarga de navegação: quanto mais profunda for a estrutura, mais cliques serão necessários para os usuários passarem de uma página para outra.
 
-        We recommend a hierarchical structure when:
+É recomendável um hierárquica estrutura quando:
         
-        - As páginas devem ser percorridas em uma ordem específica.
-        - Há uma relação de pai-filho clara entre as páginas.
-        - Existem mais de sete páginas no grupo.
+- As páginas devem ser percorridas em uma ordem específica.
+- Há uma relação de pai-filho clara entre as páginas.
+- Existem mais de sete páginas no grupo.
         
     :::column-end:::
 :::row-end:::
@@ -150,12 +150,12 @@ Agora que você está familiarizado com os princípios gerais de navegação, co
     :::column span="2":::
         ### Combining structures
 
-        You don't have choose to one structure or the other; many well-design apps use both. An app can use flat structures for top-level pages that can be viewed in any order, and hierarchical structures for pages that have more complex relationships.
+Você não tem escolha para uma estrutura ou outro; Muitos aplicativos de design bem usam ambos. Um aplicativo pode usar estruturas simples em páginas de nível superior que podem ser exibidas em qualquer ordem e estruturas hierárquicas em páginas que têm relações mais complexas.
 
-        If your navigation structure has multiple levels, we recommend that peer-to-peer navigation elements only link to the peers within their current subtree. Consider the adjacent illustration, which shows a navigation structure that has two levels:
+Se a sua estrutura de navegação tiver vários níveis, recomendamos que elementos de navegação ponto a ponto sejam vinculados apenas aos pares em sua subárvore atual. Considere a ilustração adjacente, que mostra uma estrutura de navegação que tem dois níveis:
 
-        - No nível 1, o elemento de navegação ponto a ponto deve fornecer acesso às páginas A, B, C e D.
-        - No nível 2, os elementos de navegação ponto a ponto para as páginas A2 só devem vincular a outras páginas A2. Eles não devem vincular a páginas do nível 2 páginas na subárvore C.
+- No nível 1, o elemento de navegação ponto a ponto deve fornecer acesso às páginas A, B, C e D.
+- No nível 2, os elementos de navegação ponto a ponto para as páginas A2 só devem vincular a outras páginas A2. Eles não devem vincular a páginas do nível 2 páginas na subárvore C.
     :::column-end:::
 :::row-end:::
 
@@ -170,7 +170,7 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
     :::column span="2":::
         [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
-        With few exceptions, any app that has multiple pages uses a frame. Typically, an app has a main page that contains the frame and a primary navigation element, such as a navigation view control. When the user selects a page, the frame loads and displays it.
+Com algumas exceções, qualquer aplicativo com várias páginas usa um quadro. Geralmente, um aplicativo tem uma página principal que contém o quadro e um elemento de navegação principal, como um controle de modo de exibição de navegação. Quando o usuário seleciona uma página, o quadro é carregado e o exibe.
 :::row-end:::
 
 :::row:::
@@ -180,18 +180,18 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
     :::column span="2":::
         [**Top navigation and tabs**](../controls-and-patterns/navigationview.md)
 
-        Displays a horizontal list of links to pages at the same level. The [NavigationView](../controls-and-patterns/navigationview.md) control implements the top navigation and tabs patterns.
+Exibe uma lista horizontal de links para páginas no mesmo nível. O [NavigationView](../controls-and-patterns/navigationview.md) controle implementa o painel de navegação superior e padrões de guias.
         
-        Use top navigation when:
+Use o painel de navegação superior quando:
 
-        - Você deseja mostrar todas as opções de navegação na tela.
-        - Você deseja obter mais espaço para o conteúdo do seu aplicativo.
-        - Ícones não é possível descrever claramente suas categorias de navegação.
+- Você deseja mostrar todas as opções de navegação na tela.
+- Você deseja obter mais espaço para o conteúdo do seu aplicativo.
+- Ícones não é possível descrever claramente suas categorias de navegação.
         
-        Use guias quando:
+Use guias quando:
 
-        - Você deseja preservar o estado da página e o histórico de navegação.
-        - Você espera que os usuários alternem entre as guias com frequência.
+- Você deseja preservar o estado da página e o histórico de navegação.
+- Você espera que os usuários alternem entre as guias com frequência.
 
 :::row-end:::
 
@@ -202,11 +202,12 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
         :::column span="2":::
     [**Pivot**](../controls-and-patterns/pivot.md)
     
-    Semelhante ao [exibição de navegação](../controls-and-patterns/navigationview.md), mas com suporte adicional para toque e o comportamento de navegação de um pouco diferente.
+Semelhante ao [exibição de navegação](../controls-and-patterns/navigationview.md), mas com suporte adicional para toque e o comportamento de navegação de um pouco diferente.
     
-    Usar uma tabela dinâmica quando:-você quiser que seu aplicativo para permitir que o dedo para toque entre categorias
-        - Você deseja que as opções de navegação para infintely carrossel
-        - Não é necessário controle abrangente sobre o comportamento de navegação entre as categorias
+Usar uma tabela dinâmica quando:
+- Você quiser que seu aplicativo para permitir que o dedo para toque entre categorias
+- Você deseja que as opções de navegação para infintely carrossel
+- Não é necessário controle abrangente sobre o comportamento de navegação entre as categorias
 
 :::row-end:::
 
@@ -217,11 +218,11 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
     :::column span="2":::
         [**Left navigation**](../controls-and-patterns/navigationview.md)
 
-        Displays a vertical list of links to top-level pages. Use when:
+Exibe uma lista vertical de links para páginas de nível superior. Use quando:
         
-        - As páginas existirem no nível superior.
-        - Há muitos itens de navegação (mais de 5)
-        - Você não espera que os usuários alternem entre as páginas com frequência.
+- As páginas existirem no nível superior.
+- Há muitos itens de navegação (mais de 5)
+- Você não espera que os usuários alternem entre as páginas com frequência.
 
 :::row-end:::
         
@@ -232,12 +233,12 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
     :::column span="2":::
         [**Master/details**](../controls-and-patterns/master-details.md)
 
-        Displays a list (master view) of items. Selecting an item displays its corresponding page in the details section. Use when:
+Exibe uma lista (exibição mestre) de itens. Selecionar um item exibe a página correspondente na seção de detalhes. Use quando:
         
-        - Você espera que os usuários alternem entre os itens filho com frequência.
-        - Você quer permitir que o usuário execute operações de alto nível, como excluir ou classificar, em itens individuais ou grupos de itens, e também deseja permitir que o usuário exiba ou atualize os detalhes de cada item.
+- Você espera que os usuários alternem entre os itens filho com frequência.
+- Você quer permitir que o usuário execute operações de alto nível, como excluir ou classificar, em itens individuais ou grupos de itens, e também deseja permitir que o usuário exiba ou atualize os detalhes de cada item.
 
-        Mestre/detalhes é adequado para caixas de entrada de email, listas de contatos e entrada de dados.
+Mestre/detalhes é adequado para caixas de entrada de email, listas de contatos e entrada de dados.
 :::row-end:::
 
 :::row:::
@@ -247,7 +248,7 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
     :::column span="2":::
         [**Hyperlinks**](../controls-and-patterns/hyperlinks.md)
 
-        Embedded navigation elements can appear in a page's content. Unlike other navigation elements, which should be consistent across the pages, content-embedded navigation elements are unique from page to page.
+Elementos de navegação de conteúdo inserido podem aparecer no conteúdo de uma página. Diferente de outros elementos de navegação, que devem ser consistentes em todas as páginas, os elementos de navegação de conteúdo inserido são exclusivos de uma página para outra.
 :::row-end:::
 
 ## <a name="next-add-navigation-code-to-your-app"></a>Avançar: Adicione o código de navegação ao seu aplicativo

@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ac80888019044beabc44335290bc6ad59cf377c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0e5ba7ddb6ef37b4aa54584602fc890bbabc8998
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608131"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359348"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores
 
@@ -114,7 +114,7 @@ Dependendo das ferramentas e do fluxo de trabalho usado na criação de ativos o
 
 ## <a name="alternateform"></a>AlternateForm
 
-O qualificador `alternateform` é usado para oferecer uma forma alternativa de recurso para uma finalidade específica. Isso normalmente é usado apenas por desenvolvedores de apps japoneses para fornecer uma cadeia de caracteres furigana cujo valor `msft-phonetic` seja reservado (consulte a seção "Suporte a Furigana em cadeias de caracteres japonesas que podem ser classificadas" em [Como se preparar para a localização](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)).
+O qualificador `alternateform` é usado para oferecer uma forma alternativa de recurso para uma finalidade específica. Isso normalmente é usado apenas por desenvolvedores de apps japoneses para fornecer uma cadeia de caracteres furigana cujo valor `msft-phonetic` seja reservado (consulte a seção "Suporte a Furigana em cadeias de caracteres japonesas que podem ser classificadas" em [Como se preparar para a localização](https://docs.microsoft.com/previous-versions/windows/apps/hh967762(v=win.10))).
 
 O sistema de destino ou o app deve fornecer um valor que servirá de base para a correspondência dos qualificadores `alternateform`. Não use o prefixo `msft-` em seus próprios valores de qualificador `alternateform` personalizados.
 
@@ -250,7 +250,7 @@ Para obter informações sobre qualificar um recurso para `scale` e `targetsize`
 
 ## <a name="targetsize"></a>TargetSize
 
-O qualificador `targetsize` é usado basicamente para especificar [ícones de associação de tipo de arquivo](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh127427) ou [ícones de protocolo](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/bb266530) a serem exibidos no Explorador de Arquivos. O valor do qualificador representa o comprimento do lado de uma imagem quadrada em pixels brutos (físicos). O recurso cujo valor coincide com a configuração de exibição no Explorador de Arquivos é carregado ou, na ausência de uma correspondência exata, o recurso com o próximo valor maior é carregado.
+O qualificador `targetsize` é usado basicamente para especificar [ícones de associação de tipo de arquivo](https://docs.microsoft.com/windows/desktop/shell/how-to-assign-a-custom-icon-to-a-file-type) ou [ícones de protocolo](https://docs.microsoft.com/windows/desktop/search/-search-3x-wds-ph-ui-extensions) a serem exibidos no Explorador de Arquivos. O valor do qualificador representa o comprimento do lado de uma imagem quadrada em pixels brutos (físicos). O recurso cujo valor coincide com a configuração de exibição no Explorador de Arquivos é carregado ou, na ausência de uma correspondência exata, o recurso com o próximo valor maior é carregado.
 
 Você pode definir os ativos que representam os vários tamanhos do valor de qualificador `targetsize` para o ícone do app (`/Assets/Square44x44Logo.png`) na guia Ativos Visuais do designer de manifesto do pacote do app.
 
@@ -259,6 +259,21 @@ Para obter informações sobre qualificar um recurso para `scale` e `targetsize`
 ## <a name="theme"></a>Tema
 
 O qualificador `theme` é usado para fornecer os recursos que melhor correspondem à configuração de modo de app padrão ou a substituição do app usando [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme).
+
+
+## <a name="shell-light-theme-and-unplated-resources"></a>Tema claro do shell e recursos unplated
+O *atualização do Windows 10 podem 2019* introduziu um novo tema "light" para o Shell do Windows. Como resultado, alguns ativos de aplicativo que foram mostrados anteriormente em um plano de fundo escuro agora aparecerá na tela de fundo clara. Para aplicativos que aplicativos que fornecida altform unplated ativos para as barra de tarefas e a janela alternadores (Alt + Tab, modo de exibição de tarefas, etc.), você deve verificar se eles têm contraste aceitável no plano de fundo claro.
+
+### <a name="providing-light-theme-specific-assets"></a>Fornecendo ativos específicos do tema claro
+Aplicativos que desejam fornecer um recurso sob medido para o tema claro do shell pode usar um novo qualificador de recurso de forma alternativa: `altform-lightunplated`. Este qualificador espelha o qualificador altform unplated existente. 
+
+### <a name="downlevel-considerations"></a>Considerações de nível inferior
+Aplicativos não devem usar o `theme-light` qualificador com a `altform-unplated` qualificador. Isso causará um comportamento imprevisível em RS5 e versões anteriores do Windows devido a recursos de forma são carregadas para a barra de tarefas. Em versões anteriores do windows, a versão do tema claro pode ser usada incorretamente. O `altform-lightunplated` qualificador evita esse problema. 
+
+### <a name="compatibility-behavior"></a>Comportamento de compatibilidade
+Para versões anteriores compatibilidade, o Windows inclui lógica para detectar uma ícones monocromática e verificar se ela contrasta com a tela de fundo pretendida. Se o ícone de não atender aos requisitos de contraste, o Windows procurará uma versão de branco de contraste do ativo. Se não estiver disponível, Windows fará o fallback para usar a versão folheada do ativo.
+
+
 
 ## <a name="important-apis"></a>APIs Importantes
 
@@ -269,7 +284,7 @@ O qualificador `theme` é usado para fornecer os recursos que melhor corresponde
 
 * [Pixels efetivos e o fator de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
 * [Sistema de Gerenciamento de Recursos](resource-management-system.md)
-* [Como se preparar para localização](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
+* [Como se preparar para localização](https://docs.microsoft.com/previous-versions/windows/apps/hh967762(v=win.10))
 * [Detectar a plataforma de seu aplicativo está sendo executado](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
 * [Visão geral de famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
 * [Localizar suas cadeias de caracteres da interface do usuário](localize-strings-ui-manifest.md)

@@ -6,12 +6,12 @@ ms.date: 10/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: db481fac1bdcb9e79762f52aee48574e987c4cbb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8a846aab77fad6f087057fe930d11ac781ed7171
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601011"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362195"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Testar aplicativos Surface Hub usando o Visual Studio
 O simulador do Visual Studio fornece um ambiente onde você pode projetar, desenvolver, depurar e testar os aplicativos de Plataforma Universal do Windows (UWP), incluindo os aplicativos que você criou para o Microsoft Surface Hub. O simulador não usa a mesma interface de usuário como o Surface Hub, mas é útil para testar como seu aplicativo pareça e se comporta com tamanho de tela do Surface Hub e a resolução.
@@ -90,7 +90,7 @@ Por padrão, o Surface Hub instala somente aplicativos da Microsoft Store. Para 
 3. Escolha **Modo de desenvolvedor** e aceite o prompt de aviso.
 
 ### <a name="deploy-your-app-from-visual-studio"></a>Implantar seu aplicativo no Visual Studio
-Para obter mais informações sobre o processo de implantação em geral, consulte [implantar e depurar aplicativos UWP](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
+Para obter mais informações sobre o processo de implantação em geral, consulte [implantar e depurar aplicativos UWP](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
 
    > [!NOTE]
    > Este recurso requer o Visual Studio 2015 atualização 1 ou posterior, no entanto, recomendamos que você use a versão mais atualizada mais recente do Visual Studio. Uma instância do Visual Studio atualizada será gibe você todo o desenvolvimento mais recente e atualizações de segurança.

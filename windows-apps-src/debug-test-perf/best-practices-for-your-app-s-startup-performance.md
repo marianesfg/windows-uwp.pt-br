@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e50d3613e5f7058e99f2e71ba023fb4191e5c734
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9ecb325566733e57c1ae9d1a13c68b25794e9e87
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644531"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360034"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu aplicativo
 
@@ -60,7 +60,7 @@ Para melhorar o tempo de inicialização de seu aplicativo, faça apenas o traba
 
 Seu aplicativo pode ser interativo mesmo que haja partes do aplicativo que não estão totalmente funcionais. Por exemplo, se o seu aplicativo exibe dados que levam algum tempo para serem recuperados, você poderá fazer com que o código seja executado de forma independente do código de inicialização do aplicativo, recuperando os dados de forma assíncrona. Quando os dados estiverem disponíveis, preencha a interface do usuário do aplicativo com os dados.
 
-Muitas das APIs da Plataforma Universal do Windows (UWP) que recuperam dados são assíncronas, então você provavelmente vai recuperar dados de forma assíncrona de todo o modo. Para saber mais sobre APIs assíncronas, consulte [Chamar APIs assíncronas em C# ou no Visual Basic](https://msdn.microsoft.com/library/windows/apps/Mt187337). Se o seu trabalho não usar APIs assíncronas, poderá usar a classe Task para fazer trabalhos de execução longa, a fim de não bloquear a interação do usuário com o aplicativo. Isso manterá seu aplicativo responsivo para o usuário enquanto os dados são carregados.
+Muitas das APIs da Plataforma Universal do Windows (UWP) que recuperam dados são assíncronas, então você provavelmente vai recuperar dados de forma assíncrona de todo o modo. Para saber mais sobre APIs assíncronas, consulte [Chamar APIs assíncronas em C# ou no Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Se o seu trabalho não usar APIs assíncronas, poderá usar a classe Task para fazer trabalhos de execução longa, a fim de não bloquear a interação do usuário com o aplicativo. Isso manterá seu aplicativo responsivo para o usuário enquanto os dados são carregados.
 
 Se o seu aplicativo leva um tempo especialmente longo para carregar parte de sua interface do usuário, considere a adição de uma cadeia de caracteres nesta área que diga algo como "Obtendo dados mais recentes", para que o usuário saiba que o aplicativo ainda está sendo processado.
 
@@ -103,11 +103,11 @@ O desempenho de inicialização em um aplicativo XAML é correlacionado diretame
 -   UserControls e modelos de controle serão expandidos, então, eles também devem ser levados em consideração.
 -   Se você criar qualquer XAML que não apareça na tela, deverá justificar se essas partes do XAML devem ser criadas durante a inicialização.
 
-A janela [Live Visual Tree no Visual Studio](https://blogs.msdn.com/b/visualstudio/archive/2015/02/24/introducing-the-ui-debugging-tools-for-xaml.aspx) mostra a quantidade de elementos filho para cada nó na árvore.
+A janela [Live Visual Tree no Visual Studio](https://devblogs.microsoft.com/visualstudio/introducing-the-ui-debugging-tools-for-xaml/) mostra a quantidade de elementos filho para cada nó na árvore.
 
 ![Live Visual Tree.](images/live-visual-tree.png)
 
-**Use o adiamento**. Recolher um elemento ou definir sua opacidade para 0 não impede que o elemento seja criado. Usando x:Load ou x:DeferLoadStrategy, você pode atrasar o carregamento de uma parte da interface do usuário e carregá-la quando necessário. Essa é uma boa maneira de atrasar o processamento da interface do usuário que não é visível durante a tela de inicialização, para que você possa carregá-la quando necessário, ou como parte de uma definição de lógica atrasada. Para disparar o carregamento, você só precisa chamar FindName para o elemento. Para obter um exemplo e mais informações, veja [Atributo x:Load](../xaml-platform/x-load-attribute.md) e [Atributo x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785).
+**Use o adiamento**. Recolher um elemento ou definir sua opacidade para 0 não impede que o elemento seja criado. Usando x:Load ou x:DeferLoadStrategy, você pode atrasar o carregamento de uma parte da interface do usuário e carregá-la quando necessário. Essa é uma boa maneira de atrasar o processamento da interface do usuário que não é visível durante a tela de inicialização, para que você possa carregá-la quando necessário, ou como parte de uma definição de lógica atrasada. Para disparar o carregamento, você só precisa chamar FindName para o elemento. Para obter um exemplo e mais informações, veja [Atributo x:Load](../xaml-platform/x-load-attribute.md) e [Atributo x:DeferLoadStrategy](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute).
 
 **Virtualização**. Se houver conteúdo em lista ou de repetição em sua interface do usuário, é altamente recomendável que você use a virtualização da interface do usuário. Se a interface do usuário de lista não for virtualizada, você pagará o preço de criar todos os elementos com antecedência, e isso pode retardar a inicialização. Consulte [Otimização das interfaces do usuário ListView e GridView](optimize-gridview-and-listview.md).
 
@@ -146,13 +146,13 @@ Antes de um aplicativo iniciar, ele precisa dizer ao sistema o que ele quer exib
 </Package>
 ```
 
-Para saber mais, veja [Adicionar uma tela inicial](https://msdn.microsoft.com/library/windows/apps/Mt187306).
+Para saber mais, veja [Adicionar uma tela inicial](https://docs.microsoft.com/windows/uwp/launch-resume/add-a-splash-screen).
 
 Use o construtor do aplicativo apenas para inicializar estruturas de dados que sejam críticas para o aplicativo. O construtor é chamado apenas na primeira vez em que o aplicativo é executado e não necessariamente toda vez que ele é ativado. Por exemplo, o construtor não é chamado para um aplicativo que foi executado, colocado em segundo plano e depois ativado por meio do contrato de pesquisa.
 
 ### <a name="phase-2"></a>Fase 2
 
-Há inúmeros motivos para um aplicativo ser ativado, sendo que cada um deve ser manipulado de modo diferente. Você pode substituir os métodos [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/BR242330), [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/BR242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701801), [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/BR242335), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/BR242336) e [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701806) para manipular cada motivo de ativação. Uma das coisas que um aplicativo deve fazer nesses métodos é criar uma IU, atribui-la a [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/BR209051) e, então, chamar [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) Nesse ponto, a tela inicial é substituída pela IU que o aplicativo criou. Esse elemento visual poderá carregar a tela ou a interface do usuário do aplicativo se houver informação disponível suficiente na ativação para criá-la.
+Há inúmeros motivos para um aplicativo ser ativado, sendo que cada um deve ser manipulado de modo diferente. Você pode substituir os métodos [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated), [**OnCachedFileUpdaterActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.oncachedfileupdateractivated), [**OnFileActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated), [**OnFileOpenPickerActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileopenpickeractivated), [**OnFileSavePickerActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfilesavepickeractivated), [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched), [**OnSearchActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsearchactivated) e [**OnShareTargetActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsharetargetactivated) para manipular cada motivo de ativação. Uma das coisas que um aplicativo deve fazer nesses métodos é criar uma IU, atribui-la a [**Window.Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content) e, então, chamar [**Window.Activate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.activate) Nesse ponto, a tela inicial é substituída pela IU que o aplicativo criou. Esse elemento visual poderá carregar a tela ou a interface do usuário do aplicativo se houver informação disponível suficiente na ativação para criá-la.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -267,9 +267,9 @@ Há inúmeros motivos para um aplicativo ser ativado, sendo que cada um deve ser
 > End Class 
 > ```
 
-Os aplicativos que exibem uma página de carregamento no manipulador de carregamento começam a trabalhar para criar a IU em segundo plano. Após esse elemento ter sido criado, seu evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) ocorre. No manipulador de evento, você substitui o conteúdo da janela, que, no momento, é a tela de carregamento, com a home page recém-criada.
+Os aplicativos que exibem uma página de carregamento no manipulador de carregamento começam a trabalhar para criar a IU em segundo plano. Após esse elemento ter sido criado, seu evento [**FrameworkElement.Loaded**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.loaded) ocorre. No manipulador de evento, você substitui o conteúdo da janela, que, no momento, é a tela de carregamento, com a home page recém-criada.
 
-É crucial que um aplicativo com um período de inicialização prolongado mostre uma página de carregamento. Além de fornecer ao usuário feedback garantido sobre o processo de ativação, o processo será finalizado se [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) não for chamado dentro de 15 segundos após a inicialização do processo de ativação.
+É crucial que um aplicativo com um período de inicialização prolongado mostre uma página de carregamento. Além de fornecer ao usuário feedback garantido sobre o processo de ativação, o processo será finalizado se [**Window.Activate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.activate) não for chamado dentro de 15 segundos após a inicialização do processo de ativação.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -339,7 +339,7 @@ Como exatamente o aplicativo vai reagir a cada fase da inicialização é você 
 
 Os códigos reutilizáveis costumam vir na forma da inclusão de módulos (dlls) inclusos em um projeto. O carregamento desses módulos requer acesso ao disco e, como você pode imaginar, o custo de fazê-lo pode aumentar. Isso tem mais impacto na inicialização a frio, mas pode ter impacto na inicialização a quente, também. No caso do C# e do Visual Basic, o CLR tenta adiar esse custo o máximo possível carregando assemblies sob demanda. Ou seja, o CLR não carrega um módulo até que um método executado faça referência a ele. Portanto, faça referência apenas a assemblies necessários para a inicialização do aplicativo no código de inicialização, para que o CLR não carregue módulos desnecessários. Se tiver caminhos de código não utilizados em seu caminho de inicialização com referências desnecessárias, você poderá migrar esses caminhos de código para outros métodos, a fim de evitar as cargas desnecessárias.
 
-Uma outra maneira de reduzir as cargas de módulos é combinar os módulos do seu aplicativo. Carregar um assembly grande geralmente leva menos tempo do que carregar dois pequenos. Isso nem sempre é possível, e você deverá combinar módulos somente se isso não fizer uma diferença relevante para a produtividade do desenvolvedor ou a capacidade de reutilização do código. Você pode usar ferramentas como o [PerfView](https://go.microsoft.com/fwlink/p/?linkid=251609) ou o [Windows Performance Analyzer (WPA)](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx) para descobrir quais módulos são carregados na inicialização.
+Uma outra maneira de reduzir as cargas de módulos é combinar os módulos do seu aplicativo. Carregar um assembly grande geralmente leva menos tempo do que carregar dois pequenos. Isso nem sempre é possível, e você deverá combinar módulos somente se isso não fizer uma diferença relevante para a produtividade do desenvolvedor ou a capacidade de reutilização do código. Você pode usar ferramentas como o [PerfView](https://go.microsoft.com/fwlink/p/?linkid=251609) ou o [Windows Performance Analyzer (WPA)](https://docs.microsoft.com/previous-versions/windows/desktop/xperf/windows-performance-analyzer--wpa-) para descobrir quais módulos são carregados na inicialização.
 
 ### <a name="make-smart-web-requests"></a>Faça solicitações da Web inteligentes
 

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ad64c2a0d4d7569ec2c0c0a44f9236fc4b2819f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5e0148e1a997cf97942fbbb80eff2b42b1c71d4e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602061"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359526"
 ---
 # <a name="keyboard-accessibility"></a>Acessibilidade do teclado  
 
@@ -30,7 +30,7 @@ Para usar o teclado com um controle, o controle precisa ter foco e, para receber
 
 Na maioria dos casos, a ordem padrão baseada em como você define os controles no XAML é a melhor ordem, principalmente porque é a ordem de leitura dos leitores de tela. Contudo, a ordem padrão não corresponde necessariamente à ordem visual. A posição de exibição real poderia depender do contêiner de layout pai e de certas propriedades que você pode definir nos elementos filho para influenciar o layout. Para ter certeza de que seu aplicativo tem uma boa ordem de tabulação, teste esse comportamento. Principalmente se você tiver uma metáfora de grade ou de tabela em seu layout, a ordem de leitura dos usuários poderá ser diferente da ordem de tabulação. Nem sempre isso é um problema. No entanto, convém testar a funcionalidade do aplicativo como interface do usuário tanto de toque quanto acessível por teclado e verificar se ela responde igual para ambas as formas.
 
-Você pode fazer com que a ordem de tabulação corresponda à ordem visual ajustando o XAML. Ou pode substituir a ordem de tabulação padrão definindo a propriedade [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461), conforme mostrado no exemplo a seguir de um layout de [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) que usa a navegação por guia de primeira coluna.
+Você pode fazer com que a ordem de tabulação corresponda à ordem visual ajustando o XAML. Ou pode substituir a ordem de tabulação padrão definindo a propriedade [**TabIndex**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.tabindex), conforme mostrado no exemplo a seguir de um layout de [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) que usa a navegação por guia de primeira coluna.
 
 XAML
 ```xml
@@ -52,34 +52,34 @@ XAML
 </Grid>
 ```
 
-Você pode desejar excluir um controle da ordem de tabulação. Você normalmente faz isso apenas tornando o controle não interativo, por exemplo, definindo sua propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209419) como **false**. Um controle desabilitado é automaticamente excluído da ordem de tabulação. Às vezes, você pode precisar excluir um controle da ordem de tabulação, mesmo que ele não esteja desabilitado. Nesse caso, você pode definir a propriedade [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) como **false**.
+Você pode desejar excluir um controle da ordem de tabulação. Você normalmente faz isso apenas tornando o controle não interativo, por exemplo, definindo sua propriedade [**IsEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) como **false**. Um controle desabilitado é automaticamente excluído da ordem de tabulação. Às vezes, você pode precisar excluir um controle da ordem de tabulação, mesmo que ele não esteja desabilitado. Nesse caso, você pode definir a propriedade [**IsTabStop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istabstop) como **false**.
 
-Todos os elementos que podem ter o foco estão geralmente na ordem de tabulação por padrão. A exceção é que determinados tipos de exibição de texto, como [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), podem ter foco para serem acessados pela área de transferência para seleção de texto; no entanto, eles não estão na ordem de tabulação porque elementos de texto estáticos não costumam estar na ordem de tabulação. Normalmente, eles não são interativos (não podem ser invocados nem requerem entrada de texto, mas dão suporte ao [Padrão de controle de texto](https://msdn.microsoft.com/library/windows/desktop/Ee671194) que aceita a localização e o ajuste de pontos de seleção no texto). O texto não deve ter a conotação de que a definição de um foco para ele ativará alguma ação que seja possível. Os elementos de texto ainda serão detectados por tecnologias adaptativas, e lerão em voz alta em leitores de tela, mas isso depende de técnicas diferentes da busca desses elementos na ordem de tabulação prática.
+Todos os elementos que podem ter o foco estão geralmente na ordem de tabulação por padrão. A exceção é que determinados tipos de exibição de texto, como [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), podem ter foco para serem acessados pela área de transferência para seleção de texto; no entanto, eles não estão na ordem de tabulação porque elementos de texto estáticos não costumam estar na ordem de tabulação. Normalmente, eles não são interativos (não podem ser invocados nem requerem entrada de texto, mas dão suporte ao [Padrão de controle de texto](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-controlpatternsoverview) que aceita a localização e o ajuste de pontos de seleção no texto). O texto não deve ter a conotação de que a definição de um foco para ele ativará alguma ação que seja possível. Os elementos de texto ainda serão detectados por tecnologias adaptativas, e lerão em voz alta em leitores de tela, mas isso depende de técnicas diferentes da busca desses elementos na ordem de tabulação prática.
 
-Independentemente de você ajustar os valores de [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) ou usar a ordem padrão, estas regras são aplicáveis:
+Independentemente de você ajustar os valores de [**TabIndex**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.tabindex) ou usar a ordem padrão, estas regras são aplicáveis:
 
-* Elementos da interface do usuário com [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) igual a 0 são adicionados à ordem de tabulação com base na ordem de declaração no XAML ou nas coleções filhas.
-* Elementos da interface do usuário com [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) maior que 0 são adicionados à ordem de tabulação com base no valor de **TabIndex**.
-* Os elementos da interface do usuário com [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) menor que 0 são adicionados à ordem de tabulação e aparecem antes de qualquer valor zero. Isso é bem diferente de como o HTML manipula seu atributo **tabindex** (e não havia suporte a **tabindex** negativo nas especificações HTML antigas).
+* Elementos da interface do usuário com [**TabIndex**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.tabindex) igual a 0 são adicionados à ordem de tabulação com base na ordem de declaração no XAML ou nas coleções filhas.
+* Elementos da interface do usuário com [**TabIndex**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.tabindex) maior que 0 são adicionados à ordem de tabulação com base no valor de **TabIndex**.
+* Os elementos da interface do usuário com [**TabIndex**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.tabindex) menor que 0 são adicionados à ordem de tabulação e aparecem antes de qualquer valor zero. Isso é bem diferente de como o HTML manipula seu atributo **tabindex** (e não havia suporte a **tabindex** negativo nas especificações HTML antigas).
 
 <span id="keyboard_navigation_within_a_UI_element"/>
 <span id="keyboard_navigation_within_a_ui_element"/>
 <span id="KEYBOARD_NAVIGATION_WITHIN_A_UI_ELEMENT"/>
 
 ## <a name="keyboard-navigation-within-a-ui-element"></a>Navegação de teclado entre elementos de interface do usuário  
-Para os elementos compostos, é importante garantir uma navegação interior adequada entre os elementos contidos. Um elemento composto pode gerenciar seu filho ativo atual para reduzir a sobrecarga de ter todas os elementos filhos com capacidade de foco. Esse elemento composto é incluído na ordem de guias e trata os eventos de navegação de teclado sozinho. Muitos dos controles compostos já têm alguma lógica de navegação interna incorporada à manipulação de eventos do controle. Por exemplo, a passagem por seta-chave de itens é habilitada por padrão nos controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview), [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) e [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678).
+Para os elementos compostos, é importante garantir uma navegação interior adequada entre os elementos contidos. Um elemento composto pode gerenciar seu filho ativo atual para reduzir a sobrecarga de ter todas os elementos filhos com capacidade de foco. Esse elemento composto é incluído na ordem de guias e trata os eventos de navegação de teclado sozinho. Muitos dos controles compostos já têm alguma lógica de navegação interna incorporada à manipulação de eventos do controle. Por exemplo, a passagem por seta-chave de itens é habilitada por padrão nos controles [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [**GridView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [**ListBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox) e [**FlipView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView).
 
 <span id="keyboard_activation"/>
 <span id="KEYBOARD_ACTIVATION"/>
 
 ## <a name="keyboard-alternatives-to-pointer-actions-and-events-for-specific-control-elements"></a>Alternativas de teclado para ações do ponteiro e eventos para elementos de controle específico  
-Permita que os elementos de interface de usuário que podem ser clicados também possam ser invocados usando o teclado. Para usar o teclado com um elemento da interface do usuário, o elemento deve ter foco. Somente as classes que derivam de [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) suportam o foco e a navegação de guias.
+Permita que os elementos de interface de usuário que podem ser clicados também possam ser invocados usando o teclado. Para usar o teclado com um elemento da interface do usuário, o elemento deve ter foco. Somente as classes que derivam de [**Control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) suportam o foco e a navegação de guias.
 
 Para os elementos de interface do usuário que podem ser invocados, implemente manipuladores de eventos de teclado para as teclas de barra de espaço e Enter. Isso torna o suporte de acessibilidade básica de teclado completo e permite que os usuários utilizem cenários básicos de aplicativos apenas com o teclado, ou seja, os usuários podem acessar todos os elementos interativos da interface do usuário e ativar a funcionalidade padrão.
 
-Em casos em que um elemento que você deseja usar na interface do usuário não pode ter foco, você pode criar seu próprio controle personalizado. Você deve definir a propriedade [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) como **true** para habilitar o foco e deve fornecer uma indicação visual do estado do foco criando um estado visual que decora a interface do usuário com um indicador de foco. Contudo, é frequentemente mais fácil usar a composição de controle, para que o suporte para paradas de tabulação, foco e pares e padrões de Automação de Interface do Usuário da Microsoft possa ser tratados pelo controle no qual você escolhe compor o seu conteúdo.
+Em casos em que um elemento que você deseja usar na interface do usuário não pode ter foco, você pode criar seu próprio controle personalizado. Você deve definir a propriedade [**IsTabStop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istabstop) como **true** para habilitar o foco e deve fornecer uma indicação visual do estado do foco criando um estado visual que decora a interface do usuário com um indicador de foco. Contudo, é frequentemente mais fácil usar a composição de controle, para que o suporte para paradas de tabulação, foco e pares e padrões de Automação de Interface do Usuário da Microsoft possa ser tratados pelo controle no qual você escolhe compor o seu conteúdo.
 
-Por exemplo, em vez de tratar um evento pressionado por ponteiro em um [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752), você poderia encapsular esse elemento em um [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) para conseguir suporte ao ponteiro, teclado e foco.
+Por exemplo, em vez de tratar um evento pressionado por ponteiro em um [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image), você poderia encapsular esse elemento em um [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) para conseguir suporte ao ponteiro, teclado e foco.
 
 XAML
 ```xml
@@ -103,7 +103,7 @@ Um *atalho* é uma combinação de teclas que aumenta a produtividade, fornecend
 
 É fundamental oferecer aos usuários que dependem de leitores de tela e outras tecnologias assistenciais uma maneira fácil de descobrir as teclas de atalho do seu aplicativo. Comunique as teclas de atalho usando dicas de ferramentas, nomes acessíveis, descrições acessíveis ou alguma outra forma de comunicação na tela. No mínimo, as teclas de atalho devem ser bem documentadas no conteúdo de Ajuda do seu aplicativo.
 
-Você pode documentar as teclas de acesso pelos leitores de tela definindo a propriedade anexada [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) para uma cadeia de caracteres que descreve a tecla de atalho. Há também uma propriedade anexada [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) para documentar teclas de atalho não mnemônicas, apesar de leitores de tela geralmente tratarem as duas propriedades da mesma forma. Tente documentar as teclas de atalho de várias formas, usando dicas de ferramentas, propriedades de automação e documentação de Ajuda escrita.
+Você pode documentar as teclas de acesso pelos leitores de tela definindo a propriedade anexada [**AutomationProperties.AccessKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) para uma cadeia de caracteres que descreve a tecla de atalho. Há também uma propriedade anexada [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.acceleratorkey?view=netframework-4.8) para documentar teclas de atalho não mnemônicas, apesar de leitores de tela geralmente tratarem as duas propriedades da mesma forma. Tente documentar as teclas de atalho de várias formas, usando dicas de ferramentas, propriedades de automação e documentação de Ajuda escrita.
 
 O seguinte exemplo demonstra como documentar as teclas de atalho dos botões de reproduzir, pausar e parar mídia.
 
@@ -144,7 +144,7 @@ XAML
 ```
 
 > [!IMPORTANT]
-> A definição de [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) ou [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) não habilita a funcionalidade de teclado. Ela só relata à estrutura de Automação da IU quais teclas devem ser usadas, para que essas informações possam ser repassadas aos usuários através de tecnologias assistivas. A implementação referente à manipulação de teclas ainda precisa ser feita em código, e não em XAML. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/BR208941) ou [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/BR208942) no controle relevante para realmente implementar o comportamento de atalhos de teclado em seu aplicativo. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://msdn.microsoft.com/library/windows/apps/BR209982) embutida se desejar mostrar texto sublinhado na interface do usuário.
+> A definição de [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.acceleratorkey?view=netframework-4.8) ou [**AutomationProperties.AccessKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) não habilita a funcionalidade de teclado. Ela só relata à estrutura de Automação da IU quais teclas devem ser usadas, para que essas informações possam ser repassadas aos usuários através de tecnologias assistivas. A implementação referente à manipulação de teclas ainda precisa ser feita em código, e não em XAML. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) ou [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) no controle relevante para realmente implementar o comportamento de atalhos de teclado em seu aplicativo. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Underline) embutida se desejar mostrar texto sublinhado na interface do usuário.
 
 Para fins de simplicidade, o exemplo anterior omite o uso de recursos para cadeias de caracteres, como "Ctrl+A". Contudo, considere também as teclas de atalho durante o processo de localização. A localização de teclas de atalho é relevante porque a escolha da chave a ser usada como a chave de atalho normalmente depende do rótulo de texto visível para o elemento.
 
@@ -157,7 +157,7 @@ Para saber mais sobre as diretrizes de implementação de teclas de atalho, cons
 ### <a name="implementing-a-key-event-handler"></a>Implementando um manipulador de eventos de chave  
 Os eventos de entrada, como eventos de chave, usam um conceito de evento denominado *eventos roteados*. Um evento roteado pode emergir por meio de elementos filho de um controle composto, de tal forma que um pai de controle comum possa manipular eventos para vários elementos filhos. Esse modelo de evento é conveniente para definir ações de teclas de atalho para um controle que contém várias partes compostas que não podem ter foco ou fazer parte da ordem de tabulação.
 
-Para obter um código de exemplo que mostra como escrever um manipulador de eventos de tecla que inclui a verificação de modificadores como a tecla Ctrl, consulte [Interações por teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607).
+Para obter um código de exemplo que mostra como escrever um manipulador de eventos de tecla que inclui a verificação de modificadores como a tecla Ctrl, consulte [Interações por teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions).
 
 <span id="Keyboard_navigation_for_custom_controls"/>
 <span id="keyboard_navigation_for_custom_controls"/>
@@ -166,18 +166,18 @@ Para obter um código de exemplo que mostra como escrever um manipulador de even
 ## <a name="keyboard-navigation-for-custom-controls"></a>Navegação de teclado para controles personalizados  
 Recomendamos o uso de teclas de direção como atalhos de teclado para navegar entre os elementos filho, nos casos onde os elementos filho têm uma relação espacial entre si. Se os nós de exibição de árvore tiverem subelementos separados para lidar com expansão e recolhimento e ativação de nós, use as teclas de seta para esquerda e direita para obter a funcionalidade de expansão e recolhimento. Se você tem um controle orientado que oferece suporte à passagem direcional dentro do conteúdo de controle, use as teclas de direção adequadas.
 
-Geralmente, você implementa a manipulação de chave personalizada para controles personalizados incluindo uma substituição dos métodos [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982.aspx) e [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983.aspx) como parte da lógica da classe.
+Geralmente, você implementa a manipulação de chave personalizada para controles personalizados incluindo uma substituição dos métodos [**OnKeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.onkeydown) e [**OnKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.onkeyup) como parte da lógica da classe.
 
 <span id="An_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="an_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="AN_EXAMPLE_OF_A_VISUAL_STATE_FOR_A_FOCUS_INDICATOR"/>
 
 ## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>Um exemplo do estado visual de um indicador de foco  
-Mencionamos anteriormente que qualquer controle personalizado que habilita o usuário a focá-lo deve ter um indicador de foco visual. Normalmente esse indicador de foco é tão simples quanto desenhar uma forma de retângulo imediatamente ao redor do retângulo delimitador normal do controle. O [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) de foco visual é um elemento de par no restante da composição do controle em um modelo de controle, mas é definido inicialmente com um [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) valor de **Collapsed** porque o controle não tem foco ainda. Depois, quando o controle obtém o foco, é invocado um estado visual que define especificamente a **Visibility** do foco visual como **Visible**. Depois que o foco é movido para outro lugar, outro estado visual é chamado, e a **Visibility** se torna **Collapsed**.
+Mencionamos anteriormente que qualquer controle personalizado que habilita o usuário a focá-lo deve ter um indicador de foco visual. Normalmente esse indicador de foco é tão simples quanto desenhar uma forma de retângulo imediatamente ao redor do retângulo delimitador normal do controle. O [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) de foco visual é um elemento de par no restante da composição do controle em um modelo de controle, mas é definido inicialmente com um [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) valor de **Collapsed** porque o controle não tem foco ainda. Depois, quando o controle obtém o foco, é invocado um estado visual que define especificamente a **Visibility** do foco visual como **Visible**. Depois que o foco é movido para outro lugar, outro estado visual é chamado, e a **Visibility** se torna **Collapsed**.
 
 Todos os controles XAML padrão exibem um indicador de foco visual adequado quando estão em foco (se puderem ser focalizados). Também há aparências potencialmente diferentes dependendo do tema selecionado do usuário (especialmente se o usuário estiver usando um modo de alto contraste). Se você estiver usando os controles XAML em sua interface do usuário e não substituir os modelos de controle, você não precisa fazer nada adicional para obter os indicadores de foco visual em controles que se comportam e exibem corretamente. Mas se você pretende criar um novo modelo para um controle ou se tiver curiosidade para saber como os controles XAML fornecem os indicadores de foco visual, o restante desta seção explica como isso é feito no XAML e na lógica de controle.
 
-Aqui estão alguns exemplos de XAML provenientes do modelo XAML padrão para um [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265).
+Aqui estão alguns exemplos de XAML provenientes do modelo XAML padrão para um [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button).
 
 XAML
 ```xml
@@ -203,7 +203,7 @@ XAML
 </ControlTemplate>
 ```
 
-Até o momento, essa é apenas a composição. Para controlar a visibilidade do indicador do foco, defina os estados visuais que alternam a propriedade [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992). Para fazer isso, use a propriedade anexada [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/Hh738505), conforme aplicada ao elemento raiz que define a composição.
+Até o momento, essa é apenas a composição. Para controlar a visibilidade do indicador do foco, defina os estados visuais que alternam a propriedade [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility). Para fazer isso, use a propriedade anexada [**VisualStateManager.VisualStateGroups**](https://docs.microsoft.com/dotnet/api/system.windows.visualstatemanager?view=netframework-4.8), conforme aplicada ao elemento raiz que define a composição.
 
 XAML
 ```xml
@@ -232,7 +232,7 @@ XAML
 </ControlTemplate>
 ```
 
-Observe como somente um dos estados nomeados ajusta a [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) diretamente, enquanto os outros estão aparentemente vazios. A maneira como os estados visuais funcionam é que, tão logo o controle use outro estado da mesma classe [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/BR209014), todas as animações aplicadas pelo estado anterior são canceladas imediatamente. Como a **Visibility** padrão da composição é **Collapsed**, isso significa que o retângulo não aparecerá. A lógica de controle controla isso escutando eventos de foco como [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/BR208927) e mudando os estados com [**GoToState**](https://msdn.microsoft.com/library/windows/apps/BR209025). Muitas vezes, isso já está manipulado para você, se você estiver usando um controle padrão ou personalizando com base em um controle que já tem esse comportamento.
+Observe como somente um dos estados nomeados ajusta a [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) diretamente, enquanto os outros estão aparentemente vazios. A maneira como os estados visuais funcionam é que, tão logo o controle use outro estado da mesma classe [**VisualStateGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateGroup), todas as animações aplicadas pelo estado anterior são canceladas imediatamente. Como a **Visibility** padrão da composição é **Collapsed**, isso significa que o retângulo não aparecerá. A lógica de controle controla isso escutando eventos de foco como [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus) e mudando os estados com [**GoToState**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstatemanager.gotostate). Muitas vezes, isso já está manipulado para você, se você estiver usando um controle padrão ou personalizando com base em um controle que já tem esse comportamento.
 
 <span id="Keyboard_accessibility_and_Windows_Phone"/>
 <span id="keyboard_accessibility_and_windows_phone"/>
@@ -247,7 +247,7 @@ Os atalhos do teclado não são normalmente relevantes para os aplicativos no Wi
 
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [Acessibilidade](accessibility.md)
-* [Interações de teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607)
+* [Interações de teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
 * [Exemplo de teclado de toque](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
 * [Exemplo de acessibilidade do XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 

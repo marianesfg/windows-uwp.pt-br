@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 063106362a36aa32d0874be15dd589b5fb573409
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 291c16d14428f8c6476b12fbadf00f84c26a4235
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66214943"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359477"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Integrar seu aplicativo empacotado de desktop com Windows 10 e UWP
 
@@ -99,7 +99,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 Você pode ter certeza de que os usuários abram o novo aplicativo empacotado por padrão para tipos específicos de arquivos em vez de abrir a versão da área de trabalho do seu aplicativo.
 
-Para fazer isso, você especifica o [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) de cada aplicativo do qual você deseja herdar associações de arquivos.
+Para fazer isso, você especifica o [identificador programático (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) de cada aplicativo do qual você deseja herdar associações de arquivos.
 
 #### <a name="xml-namespaces"></a>Namespaces do XML
 
@@ -123,8 +123,8 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 |Nome |Descrição |
 |-------|-------------|
 |Category |Sempre ``windows.fileTypeAssociation``.
-|Nome |Uma Id exclusiva para o seu aplicativo. Essa Id é usada internamente para gerar um [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) com hash associado à sua associação de tipo de arquivo. Você pode usar essa Id para gerenciar as alterações em versões futuras do seu aplicativo. |
-|MigrationProgId |O [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que descreve o aplicativo, o componente e a versão do aplicativo da área de trabalho do qual você deseja herdar as associações de arquivo.|
+|Nome |Uma Id exclusiva para o seu aplicativo. Essa Id é usada internamente para gerar um [identificador programático (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) com hash associado à sua associação de tipo de arquivo. Você pode usar essa Id para gerenciar as alterações em versões futuras do seu aplicativo. |
+|MigrationProgId |O [identificador programático (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) que descreve o aplicativo, o componente e a versão do aplicativo da área de trabalho do qual você deseja herdar as associações de arquivo.|
 
 #### <a name="example"></a>Exemplo
 
@@ -182,7 +182,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 |Nome |Descrição |
 |-------|-------------|
 |Category |Sempre ``windows.fileTypeAssociation``.
-|Nome |Uma Id exclusiva para o seu aplicativo. Essa Id é usada internamente para gerar um [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) com hash associado à sua associação de tipo de arquivo. Você pode usar essa Id para gerenciar as alterações em versões futuras do seu aplicativo.   |
+|Nome |Uma Id exclusiva para o seu aplicativo. Essa Id é usada internamente para gerar um [identificador programático (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) com hash associado à sua associação de tipo de arquivo. Você pode usar essa Id para gerenciar as alterações em versões futuras do seu aplicativo.   |
 |FileType |A extensão de arquivo suportada por seu aplicativo. |
 
 #### <a name="example"></a>Exemplo
@@ -410,7 +410,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 Use uma extensão para identificar essas pastas. Dessa forma, o sistema pode localizar e carregar os arquivos que você colocar nelas. Pense nessa extensão como um substituto da variável de ambiente _%PATH%_ .
 
-Se você não usar essa extensão, o sistema pesquisará o gráfico de dependência de pacote do processo, a pasta raiz do pacote e o diretório do sistema ( _%SystemRoot%\system32_) nessa ordem. Para saber mais, consulte [Ordem de pesquisa de aplicativos do Windows](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx#_search_order_for_windows_store_apps).
+Se você não usar essa extensão, o sistema pesquisará o gráfico de dependência de pacote do processo, a pasta raiz do pacote e o diretório do sistema ( _%SystemRoot%\system32_) nessa ordem. Para saber mais, consulte [Ordem de pesquisa de aplicativos do Windows](https://docs.microsoft.com/windows/desktop/Dlls/dynamic-link-library-search-order).
 
 Cada pacote pode conter apenas uma dessas extensões. Isso significa que você pode adicionar uma delas ao pacote principal e, em seguida, adicionar uma a cada um dos [pacotes opcionais e conjuntos relacionados](https://docs.microsoft.com/windows/uwp/packaging/optional-packages).
 
@@ -673,7 +673,7 @@ Você pode associar um ou mais valores predefinidos para seus tipos de arquivo c
 
 No Explorador de Arquivos, os usuários podem agrupar esses arquivos usando esse campo. Componentes do sistema também usam esse campo para várias finalidades, como de indexação.
 
-Para obter mais informações sobre o campo **Tipo** e os valores que você pode usar para esse campo, consulte [usando nomes de tipo](https://msdn.microsoft.com/library/windows/desktop/cc144136.aspx).
+Para obter mais informações sobre o campo **Tipo** e os valores que você pode usar para esse campo, consulte [usando nomes de tipo](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names).
 
 #### <a name="xml-namespaces"></a>Namespaces do XML
 
@@ -702,7 +702,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 |Category |Sempre ``windows.fileTypeAssociation``.
 |Nome |Uma Id exclusiva para o seu aplicativo. |
 |FileType |As extensões de arquivo relevante. |
-|value |Um [valor de tipo](https://msdn.microsoft.com/en-us/library/windows/desktop/cc144136.aspx#kind_hierarchy) válido |
+|value |Um [valor de tipo](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names) válido |
 
 #### <a name="example"></a>Exemplo
 
@@ -1069,8 +1069,8 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 |DropTargetHandler |A ID de classe do aplicativo que implementa o [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) interface. Arquivos da mídia removível são transmitidos para o método [Soltar](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) da implementação [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017).  |
 |Parâmetros |Você não precisa implementar a interface [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) para todos os eventos de conteúdo. Para qualquer um dos eventos de conteúdo, você pode fornecer parâmetros de linha de comando em vez de implementar a interface [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017). Para esses eventos, a reprodução automática iniciará o aplicativo usando esses parâmetros de linha de comando. Você pode analisar esses parâmetros no código de inicialização do seu aplicativo para determinar se ele foi iniciado por reprodução automática e, em seguida, fornecer sua implementação personalizada. |
 |DeviceEvent |O nome de um evento de dispositivo que faz com que os usuários sejam avisados com ``ActionDisplayName`` e ``ProviderDisplayName``. Um evento de dispositivo é gerado quando um dispositivo é conectado ao computador. Eventos de dispositivo começam com a cadeia de caracteres ``WPD`` e você pode encontrá-los listados [aqui](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference). |
-|HWEventHandler |A ID de classe do aplicativo que implementa o [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) interface. |
-|InitCmdLine |O parâmetro de cadeia de caracteres que você deseja transmitir para o método [Inicializar](https://msdn.microsoft.com/en-us/library/windows/desktop/bb775495.aspx) da interface [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx). |
+|HWEventHandler |A ID de classe do aplicativo que implementa o [IHWEventHandler](https://docs.microsoft.com/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler) interface. |
+|InitCmdLine |O parâmetro de cadeia de caracteres que você deseja transmitir para o método [Inicializar](https://docs.microsoft.com/windows/desktop/api/shobjidl/nf-shobjidl-ihweventhandler-initialize) da interface [IHWEventHandler](https://docs.microsoft.com/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler). |
 
 ### <a name="example"></a>Exemplo
 
@@ -1101,14 +1101,14 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
 Se seu aplicativo estiver aberto quando os usuários instalarem uma atualização a ele, o aplicativo é fechado.
 
-Se você quiser que esse aplicativo reiniciar após a atualização for concluída, chame o [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) função em cada processo que você deseja reiniciar.
+Se você quiser que esse aplicativo reiniciar após a atualização for concluída, chame o [RegisterApplicationRestart](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-registerapplicationrestart) função em cada processo que você deseja reiniciar.
 
-Cada janela ativa no seu aplicativo recebe um [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) mensagem. Neste ponto, seu aplicativo pode chamar o [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) função novamente para atualizar a linha de comando, se necessário.
+Cada janela ativa no seu aplicativo recebe um [WM_QUERYENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-queryendsession) mensagem. Neste ponto, seu aplicativo pode chamar o [RegisterApplicationRestart](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-registerapplicationrestart) função novamente para atualizar a linha de comando, se necessário.
 
-Quando cada janela ativa no seu aplicativo recebe o [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) mensagem, seu aplicativo deve salvar os dados e desligar.
+Quando cada janela ativa no seu aplicativo recebe o [WM_ENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-endsession) mensagem, seu aplicativo deve salvar os dados e desligar.
 
 >[!NOTE]
-As janelas ativas também recebem o [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) da mensagem, caso o aplicativo não lida com o [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) mensagem.
+As janelas ativas também recebem o [WM_CLOSE](https://docs.microsoft.com/windows/desktop/winmsg/wm-close) da mensagem, caso o aplicativo não lida com o [WM_ENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-endsession) mensagem.
 
 Neste ponto, seu aplicativo tem 30 segundos para fechar a seus próprios processos ou a plataforma encerrá-los de modo forçado.
 

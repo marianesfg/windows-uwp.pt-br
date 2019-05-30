@@ -6,12 +6,12 @@ ms.date: 04/18/2017
 ms.topic: article
 keywords: windows 10, uwp, metadados, indicação, controle por voz, capítulo
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b3753e92524e300252930f48433f91e175353c9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 92f8826729bb2374b87267d27b961d74eb72e928
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635851"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360548"
 ---
 # <a name="system-supported-timed-metadata-cues"></a>Indicações de metadados programados com suporte do sistema
 Este artigo descreve como tirar proveito dos vários formatos de metadados programados podem ser inseridos em arquivos de mídia ou em fluxos. Os aplicativos UWP podem se registrar em eventos gerados pelo pipeline de mídia durante a reprodução sempre que essas indicações de metadados forem encontradas. Usando a classe [**DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue), os apps podem implementar suas próprias indicações de metadados personalizados, mas este artigo se concentra em vários padrões de metadados detectados automaticamente pelo pipeline de mídia, incluindo:
@@ -24,7 +24,7 @@ Este artigo descreve como tirar proveito dos vários formatos de metadados progr
 * Caixas de mensagens de evento mp4 fragmentadas
 
 
-Este artigo se baseia em conceitos discutidos no artigo [Itens de mídia, playlists e faixas](media-playback-with-mediasource.md), que inclui as noções básicas de trabalhar com as classes [**MediaSource**](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource), [**MediaPlaybackItem**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackitem), e [**TimedMetadataTrack**](https://msdn.microsoft.com/library/windows/apps/dn956580) e as diretrizes gerais para usar metadados programados em seu aplicativo.
+Este artigo se baseia em conceitos discutidos no artigo [Itens de mídia, playlists e faixas](media-playback-with-mediasource.md), que inclui as noções básicas de trabalhar com as classes [**MediaSource**](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource), [**MediaPlaybackItem**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackitem), e [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.TimedMetadataTrack) e as diretrizes gerais para usar metadados programados em seu aplicativo.
 
 As etapas de implementação básicas são as mesmas para todos os diferentes tipos de metadados programados descritos neste artigo:
 
@@ -172,7 +172,7 @@ No método auxiliar **RegisterMetadataHandlerForEmsgCues**, obtenha uma instânc
 [!code-cs[RegisterMetadataHandlerForEmsgCues](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForEmsgCues)]
 
 
-No manipulador para o evento **CueEntered**, converta a indicação de dados contida na propriedade **Cue** de [**MediaCueEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.core.mediacueeventargs) em uma [**DataCue**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue).  Verifique se o objeto **DataCue** não é nulo. As propriedades da caixa de mensagens de evento são fornecidas pelo pipeline de mídia como propriedades personalizadas na coleção [**Properties**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue.Properties) do objeto DataCue. Este exemplo tenta extrair diversos valores de propriedade diferentes usando o método **[TryGetValue](https://docs.microsoft.com/uwp/api/windows.foundation.collections.propertyset.trygetvalue)**. Se esse método retornar nulo, isso significa que a propriedade solicitada não está presente na caixa de mensagens de evento e, portanto, será definido um valor padrão.
+No manipulador para o evento **CueEntered**, converta a indicação de dados contida na propriedade **Cue** de [**MediaCueEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.core.mediacueeventargs) em uma [**DataCue**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue).  Verifique se o objeto **DataCue** não é nulo. As propriedades da caixa de mensagens de evento são fornecidas pelo pipeline de mídia como propriedades personalizadas na coleção [**Properties**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue.Properties) do objeto DataCue. Este exemplo tenta extrair diversos valores de propriedade diferentes usando o método **[TryGetValue](https://docs.microsoft.com/uwp/api/windows.foundation.collections.propertyset.trygetvalue)** . Se esse método retornar nulo, isso significa que a propriedade solicitada não está presente na caixa de mensagens de evento e, portanto, será definido um valor padrão.
 
 A próxima parte do exemplo ilustra o cenário em que a reprodução de anúncio é disparada, que é o caso quando a propriedade *scheme_id_uri*, obtida na etapa anterior, tem um valor "urn: scte:scte35:2013:xml" (veja [http://dashif.org/identifiers/event-schemes/](https://dashif.org/identifiers/event-schemes/)). Observe que o padrão recomenda enviar essa mensagem de evento várias vezes para redundância, portanto, este exemplo mantém uma lista de IDs mensagens de evento que já foram processadas e processa somente as novas mensagens. Crie um novo **DataReader** para ler os dados de indicação ao chamar [**DataReader.FromBuffer**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.FromBuffer) e defina a codificação como UTF-8 ao configurar a propriedade [**UnicodeEncoding**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.UnicodeEncoding), então leia os dados. Neste exemplo, a carga da mensagem é gravada na saída de depuração. Um app real usaria os dados de carga para agendar a reprodução de um anúncio.
 

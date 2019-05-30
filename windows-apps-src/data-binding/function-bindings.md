@@ -5,17 +5,17 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: Windows 10, uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: b85777c254c36cc7bf5b156569c7cef267a6c567
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 879be9591bae36a1dbcd485387fbb4ac7f502fea
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626211"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360080"
 ---
 # <a name="functions-in-xbind"></a>Funções em x: Bind
 
 > [!NOTE]
-> Para obter informações gerais sobre como usar a vinculação de dados em seu aplicativo com **{X:Bind}** (e para obter uma comparação de todo o entre **{X:Bind}** e **{Binding}**), consulte [dados vinculação profunda](data-binding-in-depth.md).
+> Para obter informações gerais sobre como usar a vinculação de dados em seu aplicativo com **{X:Bind}** (e para obter uma comparação de todo o entre **{X:Bind}** e **{Binding}** ), consulte [dados vinculação profunda](data-binding-in-depth.md).
 
 Desde o Windows 10, versão 1607, **{x: Bind}** dá suporte ao uso de uma função como a etapa de folha do caminho de associação. Isso permite:
 
@@ -23,7 +23,7 @@ Desde o Windows 10, versão 1607, **{x: Bind}** dá suporte ao uso de uma funç�
 - Uma maneira para associações dependerem de mais de um parâmetro
 
 > [!NOTE]
-> Para usar funções com **{x:Bind}**, a versão do SDK de alvo mínima do aplicativo deve ser 14393 ou posterior. Você não poderá usar funções quando o aplicativo se destinar a versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> Para usar funções com **{x:Bind}** , a versão do SDK de alvo mínima do aplicativo deve ser 14393 ou posterior. Você não poderá usar funções quando o aplicativo se destinar a versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 No exemplo a seguir, o primeiro e o segundo planos do item estão associados a funções para fazer uma conversão com base no parâmetro de cor
 
@@ -108,7 +108,7 @@ A função associada precisa:
 - Os tipos de argumento precisam corresponder aos dados passados – não fazemos conversões de restrição
 - O tipo de retorno da função precisa corresponder ao tipo da propriedade que está usando a associação
 
-O mecanismo de associação reage a alteração da propriedade notificações acionado com o nome da função e reavaliar associações conforme necessário. Por exemplo:
+O mecanismo de associação reage a alteração da propriedade notificações acionado com o nome da função e reavaliar associações conforme necessário. Por exemplo: 
 
 ```xaml
 <DataTemplate x:DataType="local:Person">

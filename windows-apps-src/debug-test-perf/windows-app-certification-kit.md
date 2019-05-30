@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
-ms.openlocfilehash: b480e96621e143e283a2556bdbef394aaf7dbc07
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ea84d57fbfba9666a2553500dc94275bd8b4d209
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597431"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359747"
 ---
 # <a name="windows-app-certification-kit"></a>Kit de Certificação de Aplicativos Windows
 
 
 
-Para obter seu aplicativo [Windows Certified](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) ou prepará-lo para [publicação para a Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062), você deve validar e testá-lo localmente primeiro. Este tópico mostra como instalar e executar o [Kit de certificação de aplicativos do Windows](https://go.microsoft.com/fwlink/p/?LinkID=309666) para garantir que seu aplicativo está seguro e eficiente.
+Para obter seu aplicativo [Windows Certified](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) ou prepará-lo para [publicação para a Microsoft Store](https://docs.microsoft.com/windows/uwp/publish/app-submissions), você deve validar e testá-lo localmente primeiro. Este tópico mostra como instalar e executar o [Kit de certificação de aplicativos do Windows](https://go.microsoft.com/fwlink/p/?LinkID=309666) para garantir que seu aplicativo está seguro e eficiente.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -36,7 +36,7 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( https://go.
 
 1.  No menu **Iniciar**, procure por **Aplicativos**, localize **Kits do Windows** e clique em **Kit de Certificação de Aplicativos Windows**.
 
-2.  No Kit de Certificação de Aplicativos Windows, selecione a categoria de validação que você deseja executar. Por exemplo: Se você está validando um aplicativo do Windows, selecione **validar um aplicativo do Windows**.
+2.  No Kit de Certificação de Aplicativos Windows, selecione a categoria de validação que você deseja executar. Por exemplo:  Se você está validando um aplicativo do Windows, selecione **validar um aplicativo do Windows**.
 
     Você pode navegar diretamente para o aplicativo em teste ou escolher o aplicativo em uma lista na interface do usuário. Quando o Kit de Certificação de Aplicativos Windows é executado pela primeira vez, a interface do usuário lista todos os aplicativos do Windows instalados no computador. Nas execuções subsequentes, a interface do usuário exibirá os aplicativos do Windows que você validou. Se o aplicativo que você deseja testar não estiver listado, clique em **Meu aplicativo não está na lista** para obter uma lista completa de todos os aplicativos instalados no sistema.
 
@@ -52,7 +52,7 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( https://go.
 
 6.  Abra o arquivo de relatório e examine os resultados do teste.
 
-**Observação**  se você estiver usando o Visual Studio, você pode executar o Kit de certificação de aplicativos do Windows quando você cria seu pacote do aplicativo. Consulte [Empacotando aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/Mt627715) para saber como.
+**Observação**  se você estiver usando o Visual Studio, você pode executar o Kit de certificação de aplicativos do Windows quando você cria seu pacote do aplicativo. Consulte [Empacotando aplicativos UWP](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps) para saber como.
 
  
 
@@ -86,14 +86,14 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( https://go.
 
 O limites do teste de desempenho do Kit de Certificação de Aplicativos Windows são baseados no desempenho de um computador com baixo consumo de energia.
 
-As características do computador em que o teste é realizado podem afetar os resultados do teste. Para determinar se o desempenho do seu aplicativo atende a [Microsoft Store políticas](https://msdn.microsoft.com/library/windows/apps/Dn764944), recomendamos que você teste seu aplicativo em um computador de baixa energia, como um computador baseado no processador do Intel Atom com uma resolução de tela de 1366 x 768 (ou superior) e um disco rígido rotatório (em vez de um disco rígido de estado sólido).
+As características do computador em que o teste é realizado podem afetar os resultados do teste. Para determinar se o desempenho do seu aplicativo atende a [Microsoft Store políticas](https://docs.microsoft.com/legal/windows/agreements/store-policies), recomendamos que você teste seu aplicativo em um computador de baixa energia, como um computador baseado no processador do Intel Atom com uma resolução de tela de 1366 x 768 (ou superior) e um disco rígido rotatório (em vez de um disco rígido de estado sólido).
 
-As características de desempenho podem mudar ao longo do tempo para acompanhar a evolução dos computadores com baixo consumo de energia. Consulte as mais atuais [Microsoft Store políticas](https://msdn.microsoft.com/library/windows/apps/Dn764944) e testar seu aplicativo com a versão mais atual do Kit de certificação de aplicativo Windows para certificar-se de que seu aplicativo está em conformidade com os requisitos de desempenho mais recentes.
+As características de desempenho podem mudar ao longo do tempo para acompanhar a evolução dos computadores com baixo consumo de energia. Consulte as mais atuais [Microsoft Store políticas](https://docs.microsoft.com/legal/windows/agreements/store-policies) e testar seu aplicativo com a versão mais atual do Kit de certificação de aplicativo Windows para certificar-se de que seu aplicativo está em conformidade com os requisitos de desempenho mais recentes.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Testes do Kit de certificação de aplicativos do Windows](windows-app-certification-kit-tests.md)
-* [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies)
  
 
  

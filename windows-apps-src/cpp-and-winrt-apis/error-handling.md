@@ -1,20 +1,20 @@
 ---
 description: Este tópico aborda as estratégias para processar erros ao programar com C++/WinRT.
 title: Processamento de erros com C++/WinRT
-ms.date: 05/21/2018
+ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, erro, processamento, exceção
 ms.localizationpriority: medium
-ms.openlocfilehash: c6f7135e85ab63ddfe92bd0de8c656b58fb1a020
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3ec6feb34307e0b7c17387d0127cb7d29098e6a6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626571"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361064"
 ---
 # <a name="error-handling-with-cwinrt"></a>Processamento de erros com C++/WinRT
 
-Este tópico discute estratégias de tratamento de erros durante a programação com [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Para obter informações gerais e o histórico, veja [Processamento de erros e exceções (C++ moderno)](/cpp/cpp/errors-and-exception-handling-modern-cpp).
+Este tópico discute estratégias de tratamento de erros durante a programação com [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Para obter informações gerais e o histórico, veja [Processamento de erros e exceções (C++ moderno)](/cpp/cpp/errors-and-exception-handling-modern-cpp).
 
 ## <a name="avoid-catching-and-throwing-exceptions"></a>Evitar a captura e a geração de exceções
 Recomendamos que você continue a criar [código à prova de exceções](/cpp/cpp/how-to-design-for-exception-safety), mas evite a captura e a geração de exceções sempre que possível. Se não houver nenhum manipulador para uma exceção, o Windows gera automaticamente um relatório de erros (incluindo um minidespejo da pane), que ajudará você a detectar onde está o problema.
@@ -30,11 +30,16 @@ A geração de exceções tende a ser mais lenta do que usar códigos de erro. C
 Mas um impacto mais provável no desempenho envolve a sobrecarga do tempo de execução ao garantir que os destruidores apropriados sejam chamados no evento improvável de geração da exceção. O custo dessa garantia é detectado quando uma exceção é gerada ou não. Assim, você deve garantir que o compilador tenha uma boa noção sobre quais funções podem potencialmente gerar exceções. Se o compilador pode provar que não haverá qualquer exceção de funções específicas (a especificação `noexcept`), é possível otimizar o código gerado.
 
 ## <a name="catching-exceptions"></a>Capturar exceções
-Uma condição de erro que surge na camada [ABI do Windows Runtime](interop-winrt-abi.md#what-is-the-windows-runtime-abi-and-what-are-abi-types) é retornada na forma de um valor HRESULT. Mas você não precisa processar HRESULTs em seu código. O código de projeção do C++/WinRT gerado a partir de uma API no lado de consumo detecta um código de erro de HRESULT na camada ABI e converte o código em uma exceção [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error), que você pode capturar e processar.
+Uma condição de erro que surge na camada [ABI do Windows Runtime](interop-winrt-abi.md#what-is-the-windows-runtime-abi-and-what-are-abi-types) é retornada na forma de um valor HRESULT. Mas você não precisa processar HRESULTs em seu código. O código de projeção do C++/WinRT gerado a partir de uma API no lado de consumo detecta um código de erro de HRESULT na camada ABI e converte o código em uma exceção [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error), que você pode capturar e processar. Se você *fazer* deseja manipular HRESULTS e, em seguida, usar o **winrt::hresult** tipo.
 
 Por exemplo, se o usuário excluir uma imagem da biblioteca de imagens enquanto o aplicativo está iterando dessa coleção, a projeção gera uma exceção. Nesse caso, é necessário capturar e processar essa exceção. Veja um exemplo de código mostrando esse caso.
 
 ```cppwinrt
+#include <winrt/Windows.Foundation.Collections.h>
+#include <winrt/Windows.Storage.h>
+#include <winrt/Windows.UI.Xaml.Media.Imaging.h>
+#include <winrt/coroutine.h>
+
 using namespace winrt;
 using namespace Windows::Foundation;
 using namespace Windows::Storage;
@@ -54,7 +59,7 @@ IAsyncAction MakeThumbnailsAsync()
         }
         catch (winrt::hresult_error const& ex)
         {
-            HRESULT hr = ex.to_abi(); // HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND).
+            winrt::hresult hr = ex.to_abi(); // HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND).
             winrt::hstring message = ex.message(); // The system cannot find the file specified.
         }
     }
@@ -64,7 +69,7 @@ IAsyncAction MakeThumbnailsAsync()
 Se o mesmo padrão em uma corrotina ao chamar uma função `co_await`-ed. Outro exemplo dessa conversão de HRESULT para exceção é que, quando uma API de componente retorna E_OUTOFMEMORY, isso gera um **std::bad_alloc**.
 
 ## <a name="throwing-exceptions"></a>Acionamento de exceções
-Há casos em que você deve decidir que, em caso de falha na chamada para uma função específica, o aplicativo não será capaz de se recuperar (não é possível confiar no funcionamento previsível). O exemplo de código a seguir usa um valor de [**winrt::handle**](/uwp/cpp-ref-for-winrt/handle) como um wrapper identificador retornado por [**CreateEvent**](https://msdn.microsoft.com/library/windows/desktop/ms682396). Em seguida, passa o identificador (criando um valor `bool` dele) para o modelo de função [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool). **winrt::check_bool** funciona com um `bool` ou com qualquer valor convertido para `false` (uma condição de erro) ou `true` (uma condição de sucesso).
+Há casos em que você deve decidir que, em caso de falha na chamada para uma função específica, o aplicativo não será capaz de se recuperar (não é possível confiar no funcionamento previsível). O exemplo de código a seguir usa um valor de [**winrt::handle**](/uwp/cpp-ref-for-winrt/handle) como um wrapper identificador retornado por [**CreateEvent**](https://docs.microsoft.com/windows/desktop/api/synchapi/nf-synchapi-createeventa). Em seguida, passa o identificador (criando um valor `bool` dele) para o modelo de função [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool). **winrt::check_bool** funciona com um `bool` ou com qualquer valor convertido para `false` (uma condição de erro) ou `true` (uma condição de sucesso).
 
 ```cppwinrt
 winrt::handle h{ ::CreateEvent(nullptr, false, false, nullptr) };
@@ -75,15 +80,15 @@ winrt::check_bool(::SetEvent(h.get()));
 Se o valor que você passa para [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool) é false, a seguinte sequência de ações ocorre.
 
 - **winrt::check_bool** chama a função [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error).
-- **WinRT::throw_last_error** chamadas [ **GetLastError** ](https://msdn.microsoft.com/library/windows/desktop/ms679360) para recuperar o thread de chamada valor do código de erro da última e, em seguida, chama o [ **winrt::throw_ HRESULT** ](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) função.
+- **WinRT::throw_last_error** chamadas [ **GetLastError** ](https://docs.microsoft.com/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) para recuperar o thread de chamada valor do código de erro da última e, em seguida, chama o [ **winrt::throw_ HRESULT** ](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) função.
 - **winrt::throw_hresult** gera uma exceção usando um objeto [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) (ou um objeto padrão) que representa esse código de erro.
 
 Como as APIs do Windows relatam erros no tempo de execução usando vários tipos de valor de retorno, existem algumas outras funções auxiliares úteis além de **winrt::check_bool** para verificar os valores e gerar exceções.
 
-- [**WinRT::check_hresult**](/uwp/cpp-ref-for-winrt/error-handling/check-hresult). Verifica se o código HRESULT representa um erro e, em caso afirmativo, chama **winrt::throw_hresult**.
-- [**WinRT::check_nt**](/uwp/cpp-ref-for-winrt/error-handling/check-nt). Verifica se um código representa um erro e, em caso afirmativo, chama **winrt::throw_hresult**.
-- [**WinRT::check_pointer**](/uwp/cpp-ref-for-winrt/error-handling/check-pointer). Verifica se um ponteiro é nulo e, em caso afirmativo, chama **winrt::throw_last_error**.
-- [**WinRT::check_win32**](/uwp/cpp-ref-for-winrt/error-handling/check-win32). Verifica se um código representa um erro e, em caso afirmativo, chama **winrt::throw_hresult**.
+- [**winrt::check_hresult**](/uwp/cpp-ref-for-winrt/error-handling/check-hresult). Verifica se o código HRESULT representa um erro e, em caso afirmativo, chama **winrt::throw_hresult**.
+- [**winrt::check_nt**](/uwp/cpp-ref-for-winrt/error-handling/check-nt). Verifica se um código representa um erro e, em caso afirmativo, chama **winrt::throw_hresult**.
+- [**winrt::check_pointer**](/uwp/cpp-ref-for-winrt/error-handling/check-pointer). Verifica se um ponteiro é nulo e, em caso afirmativo, chama **winrt::throw_last_error**.
+- [**winrt::check_win32**](/uwp/cpp-ref-for-winrt/error-handling/check-win32). Verifica se um código representa um erro e, em caso afirmativo, chama **winrt::throw_hresult**.
 
 Você pode usar essas funções auxiliares para tipos comuns de código de retorno ou você pode responder a qualquer condição de erro e chamar [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error) ou [**winrt::throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult). 
 
@@ -130,10 +135,10 @@ WINRT_VERIFY_(TRUE, ::CloseHandle(value));
 * [modelo de função WinRT::check_pointer](/uwp/cpp-ref-for-winrt/error-handling/check-pointer)
 * [modelo de função WinRT::check_win32](/uwp/cpp-ref-for-winrt/error-handling/check-win32)
 * [struct WinRT::Handle](/uwp/cpp-ref-for-winrt/handle)
-* [struct WinRT::hresult_error](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
+* [winrt::hresult_error struct](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
 * [função WinRT::throw_hresult](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult)
-* [função WinRT::throw_last_error](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error)
-* [função WinRT::to_hresult](/uwp/cpp-ref-for-winrt/error-handling/to-hresult)
+* [winrt::throw_last_error function](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error)
+* [winrt::to_hresult function](/uwp/cpp-ref-for-winrt/error-handling/to-hresult)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Erros e tratamento de exceções (C++ moderno)](/cpp/cpp/errors-and-exception-handling-modern-cpp)

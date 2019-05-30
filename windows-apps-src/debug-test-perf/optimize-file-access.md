@@ -6,21 +6,21 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cacd915530bb599936730ec404a6e524fef0105d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: bc42fecf0a29784c8abe6e61a328d6e5024cc532
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597261"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362265"
 ---
 # <a name="optimize-file-access"></a>Otimizar o acesso a arquivos
 
 
 Crie aplicativos da Plataforma Universal do Windows (UWP) que acessem o sistema de arquivos de modo eficiente, evitando problemas de desempenho devido à latência de disco e aos ciclos de memória/CPU.
 
-Quando quiser acessar uma grande coleção de arquivos e desejar acessar valores de propriedade que não as propriedades típicas Name, FileType e Path, acesse-os criando [**QueryOptions**](https://msdn.microsoft.com/library/windows/apps/BR207995) e chamando [**SetPropertyPrefetch**](https://msdn.microsoft.com/library/windows/apps/hh973319). O método **SetPropertyPrefetch** pode melhorar bastante o desempenho de aplicativos que exibem uma coleção de itens obtidos do sistema de arquivos, como uma coleção de imagens. O próximo grupo de exemplos mostra algumas maneiras de acessar vários arquivos.
+Quando quiser acessar uma grande coleção de arquivos e desejar acessar valores de propriedade que não as propriedades típicas Name, FileType e Path, acesse-os criando [**QueryOptions**](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) e chamando [**SetPropertyPrefetch**](https://docs.microsoft.com/uwp/api/windows.storage.search.queryoptions.setpropertyprefetch). O método **SetPropertyPrefetch** pode melhorar bastante o desempenho de aplicativos que exibem uma coleção de itens obtidos do sistema de arquivos, como uma coleção de imagens. O próximo grupo de exemplos mostra algumas maneiras de acessar vários arquivos.
 
-O primeiro exemplo usa [**Windows.Storage.StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/BR227273) para recuperar as informações de nome para um conjunto de arquivos. Essa abordagem proporciona um bom desempenho, porque o exemplo acessa apenas a propriedade de nome.
+O primeiro exemplo usa [**Windows.Storage.StorageFolder.GetFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync) para recuperar as informações de nome para um conjunto de arquivos. Essa abordagem proporciona um bom desempenho, porque o exemplo acessa apenas a propriedade de nome.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -44,7 +44,7 @@ O primeiro exemplo usa [**Windows.Storage.StorageFolder.GetFilesAsync**](https:/
 > Next i
 > ```
 
-O segundo exemplo usa [**Windows.Storage.StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/BR227273) e depois recupera as propriedades de imagem para cada arquivo. Essa abordagem proporciona um desempenho ruim.
+O segundo exemplo usa [**Windows.Storage.StorageFolder.GetFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync) e depois recupera as propriedades de imagem para cada arquivo. Essa abordagem proporciona um desempenho ruim.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -70,7 +70,7 @@ O segundo exemplo usa [**Windows.Storage.StorageFolder.GetFilesAsync**](https://
 > Next i
 > ```
 
-O terceiro exemplo usa [**QueryOptions**](https://msdn.microsoft.com/library/windows/apps/BR207995) para obter informações sobre um conjunto de arquivos. Essa abordagem proporciona um desempenho muito melhor do que o exemplo anterior.
+O terceiro exemplo usa [**QueryOptions**](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) para obter informações sobre um conjunto de arquivos. Essa abordagem proporciona um desempenho muito melhor do que o exemplo anterior.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -133,7 +133,7 @@ Se você estiver realizando várias operações em objetos Windows.Storage, como
 
 ### <a name="buffering-between-uwp-and-net-streams"></a>Buffer entre fluxos UWP e .NET
 
-Há muitos cenários em que você pode converter um fluxo UWP (como um [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) ou [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728)) em fluxo .NET ([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx)). Isso é útil quando você está escrevendo um aplicativo UWP e quer usar um código .NET existente que funcione em fluxos com o sistema de arquivo UWP, por exemplo. Para habilitar isso, as APIs do .NET para aplicativos UWP fornece métodos de extensão que permitem converter entre tipos de fluxo do .NET e UWP. Para obter mais informações, consulte [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx).
+Há muitos cenários em que você pode converter um fluxo UWP (como um [**Windows.Storage.Streams.IInputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IInputStream) ou [**IOutputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IOutputStream)) em fluxo .NET ([**System.IO.Stream**](https://docs.microsoft.com/dotnet/api/system.io.stream?redirectedfrom=MSDN)). Isso é útil quando você está escrevendo um aplicativo UWP e quer usar um código .NET existente que funcione em fluxos com o sistema de arquivo UWP, por exemplo. Para habilitar isso, as APIs do .NET para aplicativos UWP fornece métodos de extensão que permitem converter entre tipos de fluxo do .NET e UWP. Para obter mais informações, consulte [**WindowsRuntimeStreamExtensions**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN).
 
 Quando você converte um fluxo UWP em um fluxo .NET, você cria efetivamente um adaptador para o fluxo UWP subjacente. Em algumas circunstâncias, há um custo de tempo de execução associado à invocação de métodos em fluxos UWP. Esse fator pode afetar a velocidade do seu aplicativo, especialmente em cenários em que você executa muitas operações pequenas e frequentes de leitura ou gravação.
 
@@ -194,7 +194,7 @@ Esse comportamento de buffer padrão é desejável na maioria dos cenários em q
 
 ### <a name="working-with-large-data-sets"></a>Trabalhando com grandes conjuntos de dados
 
-Quando estiver lendo ou gravando conjuntos de dados maiores, você talvez consiga aumentar o rendimento de sua leitura ou gravação fornecendo um tamanho de buffer maior para os métodos de extensão [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) e [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx). Isso dá ao adaptador de fluxo um tamanho de buffer interno maior. Por exemplo, na transferência do fluxo de um arquivo grande para um analisador XML, o analisador pode executar várias leituras pequenas e sequenciais do fluxo. Um buffer grande pode reduzir a quantidade de chamadas para o fluxo UWP subjacente e impulsionar o desempenho.
+Quando estiver lendo ou gravando conjuntos de dados maiores, você talvez consiga aumentar o rendimento de sua leitura ou gravação fornecendo um tamanho de buffer maior para os métodos de extensão [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN), [**AsStreamForWrite**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN) e [**AsStream**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN). Isso dá ao adaptador de fluxo um tamanho de buffer interno maior. Por exemplo, na transferência do fluxo de um arquivo grande para um analisador XML, o analisador pode executar várias leituras pequenas e sequenciais do fluxo. Um buffer grande pode reduzir a quantidade de chamadas para o fluxo UWP subjacente e impulsionar o desempenho.
 
 > **Observação**    você deve ter cuidado ao definir um tamanho de buffer que é maior do que aproximadamente 80 KB, pois isso pode causar fragmentação no heap do coletor de lixo (consulte [melhorar o desempenho de coleta de lixo](improve-garbage-collection-performance.md) ). O exemplo de código a seguir cria um adaptador de fluxo gerenciado com um buffer de 81.920 bytes.
 
@@ -208,7 +208,7 @@ Stream managedStream = nativeStream.AsStreamForRead(bufferSize: 81920);
 Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 ```
 
-Os métodos [**Stream.CopyTo**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copyto.aspx) e [**CopyToAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copytoasync.aspx) também alocam um buffer local para copiar entre os fluxos. Como com o método de extensão [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx), você pode ser capaz de obter melhor desempenho para copias de fluxo grandes anulando o tamanho de buffer padrão. O exemplo de código a seguir demonstra a alteração no tamanho de buffer padrão de uma chamada **CopyToAsync**.
+Os métodos [**Stream.CopyTo**](https://docs.microsoft.com/dotnet/api/system.io.stream.copyto?redirectedfrom=MSDN#overloads) e [**CopyToAsync**](https://docs.microsoft.com/dotnet/api/system.io.stream.copytoasync?redirectedfrom=MSDN#overloads) também alocam um buffer local para copiar entre os fluxos. Como com o método de extensão [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN), você pode ser capaz de obter melhor desempenho para copias de fluxo grandes anulando o tamanho de buffer padrão. O exemplo de código a seguir demonstra a alteração no tamanho de buffer padrão de uma chamada **CopyToAsync**.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -236,6 +236,6 @@ Quando você está trabalhando com uma grande quantidade de fluxos simultaneamen
 
 Você também pode querer evitar o buffer se preferir leituras e gravações de baixa latência e não quiser ler em blocos grandes do fluxo UWP adjacente. Por exemplo, leituras e gravações de baixa latência podem ser desejáveis, se você está usando o fluxo para comunicações em rede.
 
-Em um aplicativo de chat, é possível usar um fluxo por uma interface de rede para enviar e receber mensagens. Nesse caso, você quer enviar mensagens assim que estiverem prontas, e não esperar até o buffer ficar cheio. Se você definir o tamanho do buffer para 0 quando chamar os métodos de extensão [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) e [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), o adaptador resultante não alocará um buffer e todas as chamadas manipularão o fluxo UWP subjacente diretamente.
+Em um aplicativo de chat, é possível usar um fluxo por uma interface de rede para enviar e receber mensagens. Nesse caso, você quer enviar mensagens assim que estiverem prontas, e não esperar até o buffer ficar cheio. Se você definir o tamanho do buffer para 0 quando chamar os métodos de extensão [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN), [**AsStreamForWrite**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN) e [**AsStream**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN), o adaptador resultante não alocará um buffer e todas as chamadas manipularão o fluxo UWP subjacente diretamente.
 
 

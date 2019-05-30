@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, educação
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
-ms.openlocfilehash: 7696cd785b4a8720f6eefb7bc897d13ffb0c7115
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8c2333d960ba91b1d1c3d3030481108407909594
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57582060"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359212"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>Desenvolver aplicativos Universais do Windows para educação
 ![captura de tela do aplicativo “fazer um teste”](images/take-a-test-screen-small.png)
@@ -38,7 +38,7 @@ A plataforma do Windows Ink pode promover aplicativos de educação ajustando-os
 
 
 ### <a name="microsoft-store"></a>Microsoft Store
-Os aplicativos de educação geralmente são lançados em circunstâncias especiais para uma organização específica. Consulte [Distribuir aplicativos de linha de negócios para empresas](https://msdn.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) para obter informações sobre isso.
+Os aplicativos de educação geralmente são lançados em circunstâncias especiais para uma organização específica. Consulte [Distribuir aplicativos de linha de negócios para empresas](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) para obter informações sobre isso.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 - [Windows 10 para educação](https://technet.microsoft.com/edu/windows/index) no Centro de TI do Windows

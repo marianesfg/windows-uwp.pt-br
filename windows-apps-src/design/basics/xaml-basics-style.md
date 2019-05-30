@@ -5,12 +5,12 @@ keywords: XAML, UWP, Introdução
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a1eacc42720e7bce4290476676b0864fbd8a3694
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d540b41620110a41676d08f5e6239efd0ef4ca46
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592951"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361228"
 ---
 # <a name="tutorial-create-custom-styles"></a>Tutorial: Crie estilos personalizados
 
@@ -60,7 +60,8 @@ O controle deslizante de exposição ajusta a exposição da imagem: deslize-o p
 
     O [namespace do Windows.XAML.Ui.Shapes](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Shapes) oferece sete formas para você escolher. Há uma elipse, um retângulo e um elemento chamado Path, que pode criar qualquer tipo de forma; sim, até mesmo um unicórnio! 
     
-    <!-- TODO reduce size --> ![Um unicórnio](../basics/images/xaml-basics/unicorn.png)
+    <!-- TODO reduce size -->
+    ![Um unicórnio](../basics/images/xaml-basics/unicorn.png)
     
     > **Leia sobre ele:** O [desenhar formas](https://docs.microsoft.com/en-us/windows/uwp/graphics/drawing-shapes) artigo informa tudo o que você precisa saber sobre formas XAML. 
     
@@ -179,7 +180,7 @@ Parabéns, você concluiu a Parte 1! Se você não conseguiu mais avançar ou qu
 
 Uma das vantagens dos estilos XAML é que ele pode reduzir significativamente a quantidade de código que você precisa escrever e pode facilitar muito a atualização da aparência do seu app.
 
-Para definir um estilo, adicione um elemento [Estilo](https://msdn.microsoft.com/library/windows/apps/br208849) à propriedade [Resources](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.Resources) de um elemento que contém o controle cujo estilo você deseja definir.  Se você adicionar o estilo à propriedade **Page. Resources** , seus estilos poderão ser acessados na página inteira. Se você adicionar o estilo à propriedade **Application.Resources** no arquivo App.xaml, o estilo poderá ser acessado em todo o app.
+Para definir um estilo, adicione um elemento [Estilo](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) à propriedade [Resources](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.Resources) de um elemento que contém o controle cujo estilo você deseja definir.  Se você adicionar o estilo à propriedade **Page. Resources** , seus estilos poderão ser acessados na página inteira. Se você adicionar o estilo à propriedade **Application.Resources** no arquivo App.xaml, o estilo poderá ser acessado em todo o app.
 
 Você pode criar estilos gerais e estilos nomeados. Um estilo nomeado deve ser aplicado explicitamente a controles específicos; um estilo geral é aplicado a qualquer controle que corresponda ao **TargetType** especificado. 
 
@@ -337,7 +338,8 @@ Analise os outros blocos de texto; observe que essas mesmas propriedades estão 
 
 6. Compile e execute o app. Ele ficará com a mesma aparência. Mas você terá aquela sensação maravilhosa de satisfação e realização por ter escrito um código eficiente e sustentável.
 
-<!-- TODO add new start/end points --> Parabéns, você concluiu a parte 2!
+<!-- TODO add new start/end points -->
+Parabéns, você concluiu a Parte 2!
 
 
 ## <a name="part-3-use-a-control-template-to-make-a-fancy-slider"></a>Parte 3: Usar um modelo de controle para fazer um controle deslizante decorativo
@@ -858,4 +860,5 @@ Bem, conseguimos concluir o trabalho, mas há uma forma melhor de obter o mesmo 
     
     Como você pode ver, nossas atualizações aprimoraram o posicionamento do polígono; agora a parte inferior do polígono está alinhada à parte inferior da miniatura de controle deslizante.
     
-<!-- TODO correct folder --> Parabéns, você concluiu o tutorial! Se você não conseguiu mais avançar e quer ver a solução final, localize o exemplo completo no [repositório de exemplos do aplicativo UWP](https://github.com/Microsoft/Windows-universal-samples).
+<!-- TODO correct folder -->
+Parabéns, você concluiu o tutorial! Se você não conseguiu mais avançar e quer ver a solução final, localize o exemplo completo no [repositório de exemplos do aplicativo UWP](https://github.com/Microsoft/Windows-universal-samples).

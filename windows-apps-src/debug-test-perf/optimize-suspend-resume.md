@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 06af6241bdd75efdd3ff71e02f74252d60540669
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f94fcdf33267ab352f5cdc274e07373952b0939b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653651"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362162"
 ---
 # <a name="optimize-suspendresume"></a>Otimizar suspensão/retomada
 
@@ -54,17 +54,17 @@ Um aplicativo pode ser suspenso quando o usuário o move para a tela de fundo ou
 
 ### <a name="serialize-only-when-necessary"></a>Serialize somente quando for necessário
 
-Muitos aplicativos serializam todos os dados durante a suspensão. Contudo, se você precisa armazenar apenas uma pequena quantidade de dados de configuração de aplicativo, deve usar o armazenamento [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/BR241622) em vez de seriar os dados. Use a serialização para quantidades maiores de dados e para dados que não sejam de configuração.
+Muitos aplicativos serializam todos os dados durante a suspensão. Contudo, se você precisa armazenar apenas uma pequena quantidade de dados de configuração de aplicativo, deve usar o armazenamento [**LocalSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localsettings) em vez de seriar os dados. Use a serialização para quantidades maiores de dados e para dados que não sejam de configuração.
 
 Depois de serializar seus dados, evite serializá-los novamente, se não foram alterados. Serializar e salvar os dados custa tempo extra, além do tempo adicional para ler e desserializar os dados quando o aplicativo é ativado outra vez. Em vez disso, recomendamos que o aplicativo determine se o seu estado realmente mudou e, se assim for, serialize e desserialize somente os dados alterados. Uma boa maneira de garantir que isso aconteça é serializar os dados periodicamente, em segundo plano, quando eles são alterados. Quando você usa essa técnica, tudo o que precisar ser serializado em suspensão já terá sido salvo, e não haverá trabalho a ser feito, fazendo com que o aplicativo seja suspenso rapidamente.
 
 ### <a name="serializing-data-in-c-and-visual-basic"></a>Serializando dados em C# e Visual Basic
 
-As opções disponíveis de tecnologia de serialização para aplicativos .NET são as classes [**System.Xml.Serialization.XmlSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx), [**System.Runtime.Serialization.DataContractSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) e [**System.Runtime.Serialization.Json.DataContractJsonSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.json.datacontractjsonserializer.aspx).
+As opções disponíveis de tecnologia de serialização para aplicativos .NET são as classes [**System.Xml.Serialization.XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer?redirectedfrom=MSDN), [**System.Runtime.Serialization.DataContractSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer?redirectedfrom=MSDN) e [**System.Runtime.Serialization.Json.DataContractJsonSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json.datacontractjsonserializer?redirectedfrom=MSDN).
 
-A partir de uma perspectiva de desempenho, é recomendável usar a classe [**XmlSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx). O **XmlSerializer** tem os menores tempos de serialização e desserialização, além de manter um baixo volume de memória. O **XmlSerializer** tem poucas dependências na estrutura .NET, o que significa que comparado a outras tecnologias de serialização, menos módulos precisam ser carregados em seu aplicativo para usar o **XmlSerializer**.
+A partir de uma perspectiva de desempenho, é recomendável usar a classe [**XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer?redirectedfrom=MSDN). O **XmlSerializer** tem os menores tempos de serialização e desserialização, além de manter um baixo volume de memória. O **XmlSerializer** tem poucas dependências na estrutura .NET, o que significa que comparado a outras tecnologias de serialização, menos módulos precisam ser carregados em seu aplicativo para usar o **XmlSerializer**.
 
-[**DataContractSerializer** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) torna mais fácil serializar classes personalizadas, embora ele tenha um impacto de desempenho maior que **XmlSerializer**. Caso precise de desempenho melhor, considere mudar. No geral, você não deve carregar mais do que um serializador e deve preferir **XmlSerializer**, a menos que precise dos recursos de outro serializador.
+[**DataContractSerializer** ](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer?redirectedfrom=MSDN) torna mais fácil serializar classes personalizadas, embora ele tenha um impacto de desempenho maior que **XmlSerializer**. Caso precise de desempenho melhor, considere mudar. No geral, você não deve carregar mais do que um serializador e deve preferir **XmlSerializer**, a menos que precise dos recursos de outro serializador.
 
 ### <a name="reduce-memory-footprint"></a>Reduzir o volume de memória
 
@@ -81,11 +81,11 @@ Determinados objetos, como arquivos e dispositivos, ocupam uma grande quantidade
 
 Um aplicativo de suspensão pode ser retomado quando o usuário o move para o primeiro plano ou quando o sistema sai de um estado de baixo consumo de energia. Quando um aplicativo é retomado do estado suspenso, ele continua de onde estava quando foi suspenso. Não há perda de dados de aplicativo porque eles foram armazenados na memória, mesmo que o aplicativo tenha sido suspenso por um longo período de tempo.
 
-A maioria dos aplicativos precisa manipular o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/BR205859). Quando seu aplicativo é retomado, variáveis e objetos têm exatamente o mesmo estado que tinham quando o aplicativo foi suspenso. Manipule o evento **Resuming** apenas se precisar atualizar dados ou objetos que possam ter sido alterados entre o tempo que seu aplicativo foi suspenso e quando ele foi retomado, como: conteúdo (por exemplo, dados de feed atualizados), conexões de rede que possam ter ficado obsoletas ou se você precisar readquirir acesso a um dispositivo (por exemplo, uma webcam).
+A maioria dos aplicativos precisa manipular o evento [**Resuming**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.resuming). Quando seu aplicativo é retomado, variáveis e objetos têm exatamente o mesmo estado que tinham quando o aplicativo foi suspenso. Manipule o evento **Resuming** apenas se precisar atualizar dados ou objetos que possam ter sido alterados entre o tempo que seu aplicativo foi suspenso e quando ele foi retomado, como: conteúdo (por exemplo, dados de feed atualizados), conexões de rede que possam ter ficado obsoletas ou se você precisar readquirir acesso a um dispositivo (por exemplo, uma webcam).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Diretrizes para aplicativo suspender e retomar](https://msdn.microsoft.com/library/windows/apps/Hh465088)
+* [Diretrizes para aplicativo suspender e retomar](https://docs.microsoft.com/windows/uwp/launch-resume/index)
  
 
  

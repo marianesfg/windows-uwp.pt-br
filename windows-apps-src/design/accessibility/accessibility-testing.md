@@ -8,12 +8,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d84683544628a9b6df0eafb2999fabb134465ea8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8af03b32453bcdacb3da95678cf23a988c375f1b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635561"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359638"
 ---
 # <a name="accessibility-testing"></a>Testes de acessibilidade  
 
@@ -23,7 +23,7 @@ Os procedimentos de teste a serem seguidos para garantir que o seu aplicativo da
 <span id="RUN_ACCESSIBILITY_TESTING_TOOLS"/>
 
 ## <a name="run-accessibility-testing-tools"></a>Executar as ferramentas de teste de acessibilidade  
-O Software Development Kit do Windows (SDK do Windows) inclui várias ferramentas de teste, como [**AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239), [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) e [**UI Accessibility Checker**](https://msdn.microsoft.com/library/windows/desktop/Hh920985). Essas ferramentas podem ajudar você a identificar a acessibilidade do seu aplicativo. Lembre-se de verificar todos os cenários e elementos da interface do usuário do aplicativo.
+O Software Development Kit do Windows (SDK do Windows) inclui várias ferramentas de teste, como [**AccScope**](https://docs.microsoft.com/windows/desktop/WinAuto/accscope), [**Inspect**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) e [**UI Accessibility Checker**](https://docs.microsoft.com/windows/desktop/WinAuto/ui-accessibility-checker). Essas ferramentas podem ajudar você a identificar a acessibilidade do seu aplicativo. Lembre-se de verificar todos os cenários e elementos da interface do usuário do aplicativo.
 
 Você pode iniciar as ferramentas de teste de acessibilidade a partir de um prompt de comando do Microsoft Visual Studio ou de uma pasta de ferramentas do SDK do Windows (o subdiretório bin de onde o SDK do Windows está instalado na sua máquina de desenvolvimento).
   
@@ -35,16 +35,16 @@ Você pode iniciar as ferramentas de teste de acessibilidade a partir de um prom
 
 ### <a name="accscope"></a>**AccScope**  
 
-A ferramenta [**AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239) permite que desenvolvedores e testadores avaliem a acessibilidade do aplicativo durante a criação e o desenvolvimento do mesmo, potencialmente em fases iniciais de protótipo em vez de fases finais de teste de um ciclo de desenvolvimento de aplicativo. Isso é requisitado, especialmente, para testar cenários de acessibilidade do Narrador com o seu aplicativo.
+A ferramenta [**AccScope**](https://docs.microsoft.com/windows/desktop/WinAuto/accscope) permite que desenvolvedores e testadores avaliem a acessibilidade do aplicativo durante a criação e o desenvolvimento do mesmo, potencialmente em fases iniciais de protótipo em vez de fases finais de teste de um ciclo de desenvolvimento de aplicativo. Isso é requisitado, especialmente, para testar cenários de acessibilidade do Narrador com o seu aplicativo.
 
 <span id="inspect"/>
 <span id="INSPECT"/>
 
 ### <a name="inspect"></a>**Inspect**  
 
-[**Inspecionar** ](https://msdn.microsoft.com/library/windows/desktop/Dd318521) permite que você selecione qualquer elemento de interface do usuário e exibir seus dados de acessibilidade. Você pode visualizar as propriedades e padrões de controle Automação da Interface do Usuário da Microsoft e testar a estrutura navegacional dos elementos de automação na árvore de automação da IU. Use **Inspect** conforme desenvolve a interface do usuário para verificar como os tributos de acessibilidade estão expostos na Automação da Interface do Usuário. Em alguns casos, os atributos vêm do suporte à Automação da Interface do Usuário que já está implementado para os controles XAML padrão. Em outros casos, os atributos vêm de valores específicos que você definiu na sua marcação XAML, como as propriedades anexadas [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties).
+[**Inspecionar** ](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) permite que você selecione qualquer elemento de interface do usuário e exibir seus dados de acessibilidade. Você pode visualizar as propriedades e padrões de controle Automação da Interface do Usuário da Microsoft e testar a estrutura navegacional dos elementos de automação na árvore de automação da IU. Use **Inspect** conforme desenvolve a interface do usuário para verificar como os tributos de acessibilidade estão expostos na Automação da Interface do Usuário. Em alguns casos, os atributos vêm do suporte à Automação da Interface do Usuário que já está implementado para os controles XAML padrão. Em outros casos, os atributos vêm de valores específicos que você definiu na sua marcação XAML, como as propriedades anexadas [**AutomationProperties**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties).
 
-A imagem a seguir mostra a ferramenta [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) consultando as propriedades de Automação da Interface do Usuário no elemento do menu **Edit** no Bloco de Notas.
+A imagem a seguir mostra a ferramenta [**Inspect**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) consultando as propriedades de Automação da Interface do Usuário no elemento do menu **Edit** no Bloco de Notas.
 
 ![Captura de tela da ferramenta Inspect.](./images/inspect.png)
 
@@ -64,7 +64,7 @@ O **UI Automation Verify (UIA Verify)** é uma estrutura automatizada de testes 
 <span id="ACCESSIBLE_EVENT_WATCHER"/>
 
 ### <a name="accessible-event-watcher"></a>**Accessible Event Watcher**  
-[**Detector de eventos acessível (AccEvent)** ](https://msdn.microsoft.com/library/windows/desktop/Dd317979) testa se os elementos de interface do usuário do aplicativo disparar eventos de automação de interface do usuário e acessibilidade ativa da Microsoft de adequada quando ocorrem alterações de interface do usuário. As alterações na interface do usuário podem ocorrer quando o foco muda ou quando um elemento de interface do usuário é chamado, selecionado ou sofre uma mudança de estado ou propriedade.
+[**Detector de eventos acessível (AccEvent)** ](https://docs.microsoft.com/windows/desktop/WinAuto/accessible-event-watcher) testa se os elementos de interface do usuário do aplicativo disparar eventos de automação de interface do usuário e acessibilidade ativa da Microsoft de adequada quando ocorrem alterações de interface do usuário. As alterações na interface do usuário podem ocorrer quando o foco muda ou quando um elemento de interface do usuário é chamado, selecionado ou sofre uma mudança de estado ou propriedade.
 
 > [!NOTE]
 > A maioria das ferramentas de teste de acessibilidade mencionadas na documentação é executada em um computador, não em um telefone. Você pode executar algumas das ferramentas enquanto desenvolve e utiliza um emulador, mas a maioria dessas ferramentas não pode expor a árvore de Automação da IU dentro do emulador.
@@ -95,7 +95,7 @@ Use o aplicativo com um tema de alto contraste ativo para verificar se todos os 
 
 ## <a name="verify-your-app-with-display-settings"></a>Verificar o aplicativo com configurações de exibição  
 
-Use as opções de exibição do sistema que ajustam o valor de pontos por polegada (dpi) da exibição, e garanta que a interface de usuário de seu aplicativo seja dimensionada corretamente quando o valor de dpi mudar. (Alguns usuários alterem valores de dpi como uma opção de acessibilidade, está disponível no **facilidade de acesso** , bem como exibir as propriedades.) Se você encontrar problemas, execute as [diretrizes de colocação de layout em](https://msdn.microsoft.com/library/windows/apps/Dn611863) e fornecer recursos adicionais para diferente fatores de dimensionamento.
+Use as opções de exibição do sistema que ajustam o valor de pontos por polegada (dpi) da exibição, e garanta que a interface de usuário de seu aplicativo seja dimensionada corretamente quando o valor de dpi mudar. (Alguns usuários alterem valores de dpi como uma opção de acessibilidade, está disponível no **facilidade de acesso** , bem como exibir as propriedades.) Se você encontrar problemas, execute as [diretrizes de colocação de layout em](https://developer.microsoft.com/windows/design) e fornecer recursos adicionais para diferente fatores de dimensionamento.
 
 <span id="verify_main_app_scenarios_by_using_narrator"/>
 <span id="VERIFY_MAIN_APP_SCENARIOS_BY_USING_NARRATOR"/>
@@ -142,9 +142,9 @@ A partir da versão 1607 do Windows 10, apresentamos um novo modo de desenvolved
 
     Alguns controles fornecem ações adicionais. Para exibir a lista completa, basta um único toque com quatro dedos.
 
-    Se um controle responder ao mouse ou teclado, mas não responder à interação touch principal, ele pode precisar implementar padrões de controle [UI Automation](https://msdn.microsoft.com/library/windows/desktop/Ee684009) adicionais.
+    Se um controle responder ao mouse ou teclado, mas não responder à interação touch principal, ele pode precisar implementar padrões de controle [UI Automation](https://docs.microsoft.com/windows/desktop/WinAuto/entry-uiauto-win32) adicionais.
 
-Você também deve considerar o uso da ferramenta [**AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239) para testar os cenários de acessibilidade do Narrador com o seu aplicativo. O [**tópico da ferramenta AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239) descreve como configurar **AccScope** para testar cenários do Narrador.
+Você também deve considerar o uso da ferramenta [**AccScope**](https://docs.microsoft.com/windows/desktop/WinAuto/accscope) para testar os cenários de acessibilidade do Narrador com o seu aplicativo. O [**tópico da ferramenta AccScope**](https://docs.microsoft.com/windows/desktop/WinAuto/accscope) descreve como configurar **AccScope** para testar cenários do Narrador.
 
 <span id="Examine_the_UI_Automation_representation_for_your_app"/>
 <span id="examine_the_ui_automation_representation_for_your_app"/>
@@ -153,15 +153,15 @@ Você também deve considerar o uso da ferramenta [**AccScope**](https://msdn.mi
 ## <a name="examine-the-ui-automation-representation-for-your-app"></a>Examine a representação de Automação da Interface do Usuário de seu aplicativo  
 Várias das ferramentas de teste de Automação da Interface do Usuário mencionadas antes fornecem uma forma de visualizar seu aplicativo não considerando a aparência dele. Em vez disso, elas representam o aplicativo como uma estrutura de elementos de automação da IU. É assim que os clientes de Automação da Interface do Usuário, principalmente tecnologias adaptativas, interagirão com o seu aplicativo em cenários de acessibilidade.
 
-A ferramenta [**AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239) fornece uma exibição particularmente interessante do seu aplicativo porque é possível ver os elementos de automação da IU como representação visual ou como lista. Se você usar a visualização, será possível analisar as peças de maneira que poderá correlacionar com a aparência visual da interface de usuário do aplicativo. Você mesmo pode testar a acessibilidade de seus primeiros protótipos da interface do usuário antes de atribuir toda a lógica à interface do usuário, certificando-se de que a interação visual e a navegação de acessibilidade do cenário de seu aplicativo está em equilíbrio.
+A ferramenta [**AccScope**](https://docs.microsoft.com/windows/desktop/WinAuto/accscope) fornece uma exibição particularmente interessante do seu aplicativo porque é possível ver os elementos de automação da IU como representação visual ou como lista. Se você usar a visualização, será possível analisar as peças de maneira que poderá correlacionar com a aparência visual da interface de usuário do aplicativo. Você mesmo pode testar a acessibilidade de seus primeiros protótipos da interface do usuário antes de atribuir toda a lógica à interface do usuário, certificando-se de que a interação visual e a navegação de acessibilidade do cenário de seu aplicativo está em equilíbrio.
 
-Um aspecto que você pode testar é se há elementos aparecendo na exibição do elemento de Automação da IU que você não quer que apareçam lá. Se você encontrar elementos que queria omitir da exibição, ou, de forma contrária, se houver elementos faltando, você pode usar a propriedade anexada XAML [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.accessibilityview) para ajustar a forma como os controles XAML aparecem nas exibições de acessibilidade. Depois de ter verificado as exibições de acessibilidade básicas, é uma boa oportunidade de verificar novamente as sequências de guia ou navegação espacial habilitadas pelas teclas de setas para garantir que os usuários possam chegar a todas as partes que interativas e expostas na exibição de controle.
+Um aspecto que você pode testar é se há elementos aparecendo na exibição do elemento de Automação da IU que você não quer que apareçam lá. Se você encontrar elementos que queria omitir da exibição, ou, de forma contrária, se houver elementos faltando, você pode usar a propriedade anexada XAML [**AutomationProperties.AccessibilityView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accessibilityview) para ajustar a forma como os controles XAML aparecem nas exibições de acessibilidade. Depois de ter verificado as exibições de acessibilidade básicas, é uma boa oportunidade de verificar novamente as sequências de guia ou navegação espacial habilitadas pelas teclas de setas para garantir que os usuários possam chegar a todas as partes que interativas e expostas na exibição de controle.
 
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [Acessibilidade](accessibility.md)
 * [Práticas a serem evitadas](practices-to-avoid.md)
-* [Automação da Interface do Usuário](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
+* [Automação da Interface do Usuário](https://docs.microsoft.com/windows/desktop/WinAuto/entry-uiauto-win32)
 * [Acessibilidade no Windows](https://go.microsoft.com/fwlink/p/?LinkId=320802)
 * [Introdução ao Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)
