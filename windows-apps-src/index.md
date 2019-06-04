@@ -9,12 +9,12 @@ ms.date: 08/04/2017
 keywords: uwp do windows, plataforma universal do windows, APIs do Windows Runtime, api do windows, ref. de api do windows, api do winrt, referência de api do windows, api uwp, referência de api uwp, desenvolver uwp, criar uwp, publicar uwp
 ms.localizationpriority: medium
 ms.technology: uwp-conceptual-docs
-ms.openlocfilehash: ebc8d3c8602a5a67816f0817af0d2f7851a82d68
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 04adb7de9fa52988329bd8b5739b6bc315ddf786
+ms.sourcegitcommit: a4fe508e62827a10471e2359e81e82132dc2ac5a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984148"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66468338"
 ---
 # <a name="universal-windows-platform-documentation"></a>Documentação da Plataforma Universal do Windows
 
@@ -230,7 +230,7 @@ A UWP (Plataforma Universal do Windows) permite criar aplicativos para qualquer 
                 <div class="card">
                     <div class="cardText">
                         <h3>Docs relacionados</h3>
-                        <p><a href="/windows/msix/desktop/desktop-to-uwp-root">Empacotamento e implantação do MSIX</a></p>
+                        <p><a href="/windows/msix">Empacotamento e implantação do MSIX</a></p>
                         <p><a href="https://docs.microsoft.com/dotnet/csharp/index">Guia de C#</a></p>
                         <p><a href="https://docs.microsoft.com/visualstudio/ide/">Visual Studio</a></p>
                     </div>
