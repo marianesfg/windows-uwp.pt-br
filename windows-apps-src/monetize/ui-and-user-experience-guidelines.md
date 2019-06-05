@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, diretrizes, práticas recomendadas
 ms.localizationpriority: medium
-ms.openlocfilehash: 78f044890e49f4631abf710764bc2f9746a1306f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7bb187092158386c503b91973d8d63ce291b4760
+ms.sourcegitcommit: c62b260eecd373e57b19a623bae77e29180e0f3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639141"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66565511"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Diretrizes para a interface do usuário e experiência do usuário para anúncios
 
@@ -76,6 +76,8 @@ Esta seção fornece exemplos de cenários de anúncios em faixa que violam a [p
 * Escrever ou distribuir um código que chame serviços de anúncios por meios que não sejam as bibliotecas do Microsoft Advertising em execução no contexto de seu app.
 
 * Interagir com interfaces não documentadas ou objetos filho criados pelas bibliotecas do Microsoft Advertising, como **WebView** ou **MediaElement**.
+
+* Colocar anúncios em uma caixa de exibição para reduzir o tamanho dos anúncios para permitir que mais anúncios em uma página que o normal.
 
 <span id="interstitialbestpractices10" />
 
@@ -173,7 +175,7 @@ Há duas sobrecargas para o método **RegisterAdContainer** que você pode usar:
 
 * Se você quiser que o contêiner inteiro para todos os elementos de anúncio nativo individuais seja clicável, chame o método **RegisterAdContainer(FrameworkElement)** e passe o controle de contêiner para o método. Por exemplo, se você exibir todos os elementos de anúncio nativo em controles separados hospedados em um **StackPanel** e se quiser que todo o **StackPanel** seja clicável, passe o **StackPanel** para esse método.
 
-* Se você quiser que somente determinados elementos de anúncio nativo sejam clicáveis, chave o método **RegisterAdContainer (FrameworkElement, IVector(FrameworkElement))**. Somente os controles que você passa para o segundo parâmetro serão clicáveis.
+* Se você quiser que somente determinados elementos de anúncio nativo sejam clicáveis, chave o método **RegisterAdContainer (FrameworkElement, IVector(FrameworkElement))** . Somente os controles que você passa para o segundo parâmetro serão clicáveis.
 
 ### <a name="required-native-ad-elements"></a>Elementos de anúncio nativo necessários
 
