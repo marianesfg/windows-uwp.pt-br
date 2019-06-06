@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, solução de problemas, HRESULT, erro
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fe67fd0593c9c1f605a5d1cc7418c348b6ca9c3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 563545e8a819ab6af5bbc0604c18b4833d76bebb
+ms.sourcegitcommit: 1f39b67f2711b96c6b4e7ed7107a9a47127d4e8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360094"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66721669"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>Solucionando problemas de C++/WinRT
 
@@ -51,7 +51,6 @@ Se o app for encerrado e tudo o que você sabe é que uma exceção sem tratamen
 | O compilador C++ produz "*erro C2039: 'IUnknown': não é um membro de '\`namespace global '* ". | Ver [como redirecionar seu C++projeto /WinRT para uma versão posterior do SDK do Windows](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
 | O vinculador C++ gera "*erro LNK2019: símbolo externo não resolvido _WINRT_CanUnloadNow@0 referenciado na função _VSDesignerCanUnloadNow@0* " | Ver [como redirecionar seu C++projeto /WinRT para uma versão posterior do SDK do Windows](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
 | O processo de compilação gera a mensagem de erro *o c++ /CLI VSIX WinRT não fornece suporte de build do projeto.  Adicione uma referência de projeto para o pacote Microsoft.Windows.CppWinRT Nuget*. | Instalar o **Microsoft.Windows.CppWinRT** pacote do NuGet em seu projeto. Para obter detalhes, consulte [versões anteriores da extensão do VSIX](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension). |
-| O C++ compilador produz uma mensagem de erro que menciona *'std:: experimental'* , e/ou um erro no formato *erro c3861:: 'resume_background': identificador não encontrado*. | Desde [ C++2.0 WinRT](news.md#news-and-changes-in-cwinrt-20), para qualquer suporte de corrotina (incluindo auxiliares de corrotina, como **winrt::resume_background**, **winrt::resume_foreground**e **winrt::resume_on_signal**), você precisará `#include <winrt/coroutine.h>`. |
 | O C++ vinculador produz *LNK2019 do erro: símbolo externo não resolvido*, com uma menção *winrt::impl::consume_Windows_Foundation_Collections_IVector*. | Desde [ C++2.0 WinRT](news.md#news-and-changes-in-cwinrt-20), se você estiver usando um baseado em intervalo `for` em uma coleção de tempo de execução do Windows, em seguida, você agora precisará `#include <winrt/Windows.Foundation.Collections.h>`. |
 
 > [!NOTE]

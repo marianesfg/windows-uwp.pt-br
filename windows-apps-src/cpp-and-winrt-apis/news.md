@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, standard, c + +, cpp, winrt, projeção, notícias, o que do, new
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a84e118d988d8bf6a7d26eba7d5dd009c7ad44f3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 11249335f9d29d37bb0824fa779d3ae151c74799
+ms.sourcegitcommit: 1f39b67f2711b96c6b4e7ed7107a9a47127d4e8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360140"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66721646"
 ---
 # <a name="whats-new-in-cwinrt"></a>O que há de novo no C++/WinRT
 
@@ -160,13 +160,17 @@ Essa otimização evita o #include dependências no `module.g.cpp` , de modo que
 
 O `module.g.cpp` arquivo agora também contém dois auxiliares combináveis adicionais, chamados **winrt_can_unload_now**, e **winrt_get_activation_factory**. Eles foram criados para projetos maiores em que uma DLL é composta de um número de bibliotecas, cada um com suas próprias classes de tempo de execução. Nessa situação, você precisa fixá manualmente a DLL **DllGetActivationFactory** e **DllCanUnloadNow**. Esses auxiliares torná-lo muito mais fácil para fazer isso, evitando erros de empréstimos artificiais. O `cppwinrt.exe` da ferramenta `-lib` sinalizador também pode ser usado para fornecer seu próprio Preâmbulo de cada lib individual (em vez de `winrt_xxx`) para que funções da biblioteca para cada podem ser chamadas individualmente e, portanto, combinadas de maneira não ambígua.
 
-#### <a name="new-winrtcoroutineh-header"></a>Novo `winrt/coroutine.h` cabeçalho
+#### <a name="coroutine-support"></a>Suporte de corrotina
 
-O `winrt/coroutine.h` cabeçalho é o novo lar para todos os C++suporte de corrotina do /WinRT. Anteriormente, esse suporte residia em alguns lugares, que acreditamos que era muito limitado. Uma vez que as interfaces de async de tempo de execução do Windows agora são geradas, em vez de manuscritas, que residem em `winrt/Windows.Foundation.h`. Além de ser mais fácil de manter e com suporte, isso significa que corrotina auxiliares, como [ **resume_foreground** ](/uwp/cpp-ref-for-winrt/resume-foreground) não precisa ser incluídas ao final de um cabeçalho de namespace específico. Em vez disso, eles podem incluir mais naturalmente suas dependências. Isso ainda permite **resume_foreground** para dar suporte à retomada não apenas em um determinado [ **Windows::UI::Core::CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher), mas ele pode também dão suporte a retomada em um determinado [ **Windows::System::DispatcherQueue**](/uwp/api/windows.system.dispatcherqueue). Anteriormente, somente um pode ter suporte; mas não ambos, desde que a definição apenas pode residir em um namespace.
+Suporte de corrotina é incluído automaticamente. Anteriormente, o suporte residia em vários lugares, que acreditamos que era muito limitado. E, em seguida, temporariamente para v 2.0, um `winrt/coroutine.h` arquivo de cabeçalho era necessário, mas que não é mais necessário. Uma vez que as interfaces de async de tempo de execução do Windows agora são geradas, em vez de manuscritas, que residem em `winrt/Windows.Foundation.h`. Além de ser mais fácil de manter e com suporte, isso significa que corrotina auxiliares, como [ **resume_foreground** ](/uwp/cpp-ref-for-winrt/resume-foreground) não precisa ser incluídas ao final de um cabeçalho de namespace específico. Em vez disso, eles podem incluir mais naturalmente suas dependências. Isso ainda permite **resume_foreground** para dar suporte à retomada não apenas em um determinado [ **Windows::UI::Core::CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher), mas ele pode também dão suporte a retomada em um determinado [ **Windows::System::DispatcherQueue**](/uwp/api/windows.system.dispatcherqueue). Anteriormente, somente um pode ter suporte; mas não ambos, desde que a definição apenas pode residir em um namespace.
 
 Aqui está um exemplo de como o **DispatcherQueue** dão suporte.
 
 ```cppwinrt
+...
+#include <winrt/Windows.System.h>
+using namespace Windows::System;
+...
 fire_and_forget Async(DispatcherQueueController controller)
 {
     bool queued = co_await resume_foreground(controller.DispatcherQueue());

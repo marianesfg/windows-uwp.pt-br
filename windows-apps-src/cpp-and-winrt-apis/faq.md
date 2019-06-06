@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ac7f8e46974b7c12b42f6d6f94052e61902b240
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 914cf884b97d14af523cc61b0fcce719104783ba
+ms.sourcegitcommit: 1f39b67f2711b96c6b4e7ed7107a9a47127d4e8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360245"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66721692"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 Respostas para perguntas que você provavelmente tem sobre a criação e consumo de APIs de tempo de execução do Windows com [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -22,7 +22,7 @@ Respostas para perguntas que você provavelmente tem sobre a criação e consumo
 Ver [como redirecionar seu C++projeto /WinRT para uma versão posterior do SDK do Windows](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk).
 
 ## <a name="why-wont-my-new-project-compile-now-that-ive-moved-to-cwinrt-20"></a>Por que não será meu novo projeto compilado, agora que migrei para C++WinRT 2.0?
-Para o conjunto completo de alterações (incluindo alterações significativas), consulte [notícias, as alterações e, em C++2.0 WinRT](news.md#news-and-changes-in-cwinrt-20). Por exemplo, para suporte de corrotina (incluindo auxiliares de corrotina, como **winrt::resume_background**, **winrt::resume_foreground**, e **winrt::resume_on_signal** ), você precisará `#include <winrt/coroutine.h>`. Se você estiver usando um intervalo baseado `for` em uma coleção de tempo de execução do Windows, em seguida, você agora precisará `#include <winrt/Windows.Foundation.Collections.h>`.
+Para o conjunto completo de alterações (incluindo alterações significativas), consulte [notícias, as alterações e, em C++2.0 WinRT](news.md#news-and-changes-in-cwinrt-20). Por exemplo, se você estiver usando um intervalo baseado `for` em uma coleção de tempo de execução do Windows, em seguida, você agora precisará `#include <winrt/Windows.Foundation.Collections.h>`.
 
 ## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>Por que meu novo projeto não será compilado? Usando o Visual Studio 2017 (versão 15.8.0 ou superior) e o SDK versão 17134
 Se você estiver usando o Visual Studio 2017 (versão 15.8.0 ou superior) e direcionados ao SDK do Windows versão 10.0.17134.0 (Windows 10, versão 1803), em seguida, um recém-criado C++/projeto WinRT pode falhar ao compilar com o erro "*erro c3861:: 'from_abi': Identificador não encontrado*"e com outros erros originados no *base.h*. A solução é o destino um posterior (mais compatível) versão do SDK do Windows, ou defina a propriedade de projeto **C/C++**  > **idioma** > **modo de conformidade: Não** (Além disso, se **/permissive--** é exibido na propriedade do projeto **C/C++**  > **linha de comando** sob **opções adicionais** , em seguida, excluí-lo).
