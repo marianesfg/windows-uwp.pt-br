@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, código promocional, códigos promocionais, token, tokens
 ms.localizationpriority: medium
-ms.openlocfilehash: db4cde6f8c195101ec31de26c00ffa7325e08d71
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 931b3abfe13a3834d991ee1a0a38c752b9e3f719
+ms.sourcegitcommit: 7da28cf4f4e8390bc9a21a9488b03af39271cbbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605391"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64745035"
 ---
 # <a name="generate-promotional-codes"></a>Gerar códigos promocionais
 
@@ -31,8 +31,13 @@ Você pode gerar códigos de uso único (e distribuir um para cada cliente), ou 
 Lembre-se das seguintes políticas para códigos promocionais:
 
 -   Você pode gerar códigos promocionais para qualquer app ou complemento (exceto complementos de assinatura) que você tenha publicado na Microsoft Store. Os clientes podem resgatar os códigos em qualquer versão do Windows que seja compatível com o app ou o complemento.
--   Os códigos promocionais expiram seis meses após a data do pedido (a menos que você escolha uma data de expiração anterior).
--   Para cada um dos aplicativos ou complementos, você pode gerar códigos que permitam até 1600 resgates a cada seis meses. O período de seis meses começa quando o primeiro pedido de código promocional é enviado, mesmo se você escolher uma data de expiração anterior. O total de 1600 resgates por produto se aplica a códigos de uso único e códigos que podem ser usados várias vezes.
+-   Para jogos:
+    - Você pode gerar códigos promocionais até 5.000 por jogo.
+    - Os códigos promocionais gerados para jogos nunca expirarem.
+- Para todos os outros tipos de aplicativos ou complementos:
+    - Em um período de seis meses, você pode gerar códigos promocionais de uso único até 1600 ou qualquer número de vários códigos de uso, de modo que o total permitido resgates não exceder 1600.
+    - O período de 6 meses começa quando você gerar o primeiro código promocional é criado e dura por 6 meses, independentemente se deseja ou não definir uma data de vencimento anterior sobre os códigos.
+    - Todos os códigos criados durante um período de seis meses existente será contam para o número de códigos gerados dentro desse período, mesmo que elas expirarão após o término do período (por exemplo, se você gerar um código no último dia da janela de seis meses, ele será será ser ainda  ser válido para um total de seis meses desde sua criação.)
 -   Você deve seguir os requisitos definidos na [contrato de desenvolvedor do aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), incluindo a seção **3 k. Códigos promocionais**.
 
 > [!NOTE]
@@ -70,7 +75,7 @@ Para baixar um pedido atendido de códigos promocionais e distribuir os códigos
 
     -   **Nome do produto**: O nome do aplicativo ou complemento que o código está associado.
     -   **Nome do pedido**: O nome da ordem em que esse código foi gerado.
-    -   **O código promocional**: O próprio código. Consiste em uma sequência 5x5 de caracteres alfanuméricos separados por hífens. Por exemplo: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
+    -   **O código promocional**: O próprio código. Consiste em uma sequência 5x5 de caracteres alfanuméricos separados por hífens. Por exemplo:  DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
     -   **A URL pode ser trocada**: A URL que um cliente pode usar para resgatar o código e instalar seu aplicativo ou o complemento. A URL tem o seguinte formato: https://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt; promotional_code >
     -   **Data de início**: A data em que esse código se tornaram ativo.
     -   **Expirar data**: A data em que esse código expira.
