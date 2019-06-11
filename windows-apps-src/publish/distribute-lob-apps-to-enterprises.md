@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, lob, linha de negócios, aplicativos corporativos, store para empresas, store para educação, empresa
 ms.localizationpriority: medium
-ms.openlocfilehash: b379762ba3d3ea11b974a84119280247b85bc19e
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: d44d2b248ddc2bff6ffa91860621fe315fb22c47
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787072"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826144"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir os aplicativos LOB para empresas
 
@@ -39,7 +39,7 @@ Para confirmar a associação, clique em **Aceitar**. Sua conta estará, em segu
 
 ## <a name="submit-lob-apps"></a>Enviar aplicativos LOB
 
-Quando você estiver pronto para publicar um aplicativo para uso exclusivo de uma empresa, o processo será semelhante ao processo de envio do aplicativo. O aplicativo passa pelo mesmo [processo de certificação](the-app-certification-process.md) e deve estar em conformidade com todas as [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies). Apenas poucas partes do processo são diferentes.
+Quando você estiver pronto para publicar um aplicativo para uso exclusivo de uma empresa, o processo será semelhante ao processo de envio do aplicativo. O aplicativo passa pelo mesmo [processo de certificação](the-app-certification-process.md) e deve estar em conformidade com todas as [Políticas da Microsoft Store](store-policies.md). Apenas poucas partes do processo são diferentes.
 
 
 ### <a name="visibility"></a>Visibilidade
@@ -56,7 +56,7 @@ Você deve selecionar pelo menos uma empresa para publicar um aplicativo como li
 
 Por padrão, a caixa para **licenciamento por volume gerenciado pela Loja (online)** é marcada quando você envia um aplicativo. Na publicação de aplicativos LOB, essa caixa permanecer marcada, para que a empresa possa adquirir seu aplicativo em volume. Isso não tornará o aplicativo disponível para qualquer pessoa fora das empresas que você selecionou na seção **Distribuição e visibilidade**.
 
-Se você quiser disponibilizar o aplicativo para a empresa por meio de licenciamento desconectado (offline), poderá marcar também a caixa **Licenciamento desconectado (offline)**.
+Se você quiser disponibilizar o aplicativo para a empresa por meio de licenciamento desconectado (offline), poderá marcar também a caixa **Licenciamento desconectado (offline)** .
 
 Para obter mais informações, consulte [Opções de licenciamento para organizações](organizational-licensing.md).
 

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: 0eb5a03a2a6de8624e8b414fa31c6eec51c04bbc
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9b34f88d198ec80c67e5aac7b57001e42fe5c516
+ms.sourcegitcommit: aa5a055e3ff9ee9defc73ed9567196d59f59542a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66364885"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66825023"
 ---
 # <a name="inking-controls"></a>Controles de escrita à tinta
 
@@ -84,7 +84,7 @@ Adicionar um InkCanvas ao aplicativo requer apenas uma linha de marcação:
 ```
 
 > [!NOTE]
-> Para obter uma personalização do InkCanvas detalhada usando o InkPresenter, consulte o artigo ["Interações com caneta em aplicativos UWP"](https://windowsstyleguide/input/pen-and-stylus-interactions/).
+> Personalização de InkCanvas detalhadas usando o InkPresenter, consulte o ["Windows Ink em aplicativos UWP e interações de caneta"](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions) artigo.
 
 O controle InkToolbar deve ser usado em conjunto com um InkCanvas. A incorporação de um InkToolbar (com todas as ferramentas internas) ao seu aplicativo requer uma linha de marcação adicional:
 
@@ -170,6 +170,6 @@ A borracha também tem um submenu que fornece o comando **Apagar Toda a Tinta**.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Interações de caneta e caneta em aplicativos UWP](https://windowsstyleguide/input/pen-and-stylus-interactions/)
-- [Reconhecer traços de tinta](https://windowsstyleguide/input/convert-ink-to-text/)
-- [Store e recuperar os traços de tinta](https://windowsstyleguide/input/save-and-load-ink/)
+- [Interações com caneta e tinta do Windows em aplicativos UWP](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions)
+- [Reconhecer traços de tinta do Windows como texto e formas](https://docs.microsoft.com/windows/uwp/design/input/convert-ink-to-text)
+- [Store e recuperar dados do traço de tinta do Windows](https://docs.microsoft.com/windows/uwp/design/input/save-and-load-ink)

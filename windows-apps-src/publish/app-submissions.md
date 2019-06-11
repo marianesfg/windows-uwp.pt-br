@@ -6,12 +6,12 @@ keywords: lista de verificação, windows, uwp, envio, enviar, jogo, app, envio
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b98ea7f1d28c4fcd63cd2d4706905578b240e126
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 24d3c99636009ebf65f3e24d39d657297b105150
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643281"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826121"
 ---
 # <a name="app-submissions"></a>Envios de aplicativos
 
@@ -56,7 +56,7 @@ Os itens que você será solicitado a fornecer ou especificar são indicados aba
 | Nome do campo                    | Observações                                       | Para obter mais informações                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **Categoria e subcategoria**  | Obrigatório                                    | [Tabela de categoria e subcategoria](category-and-subcategory-table.md)       |
-| **URL da política de privacidade**            | Obrigatório para muitos apps. Consulte o [Contrato de Desenvolvedor de Aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e as [Políticas da Microsoft Store](https://docs.microsoft.com/en-us/legal/windows/agreements/store-policies#105-personal-information) | [URL da política de privacidade](enter-app-properties.md#privacy-policy-url)        |
+| **URL da política de privacidade**            | Obrigatório para muitos apps. Consulte o [Contrato de Desenvolvedor de Aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e as [Políticas da Microsoft Store](store-policies.md#105-personal-information) | [URL da política de privacidade](enter-app-properties.md#privacy-policy-url)        |
 | **Site**                   | Opcional                                    | [Site](enter-app-properties.md#website)                   |
 | **Informações de contato de suporte**      | Obrigatório se seu produto estiver disponível no Xbox; caso contrário, opcional (mas recomendado)                                   | [Informações de contato de suporte](enter-app-properties.md#support-contact-info)              |
 | **Configurações de jogo**             | Opcional (aplicável somente a jogos)         | [Configurações de jogo](enter-app-properties.md#game-settings) |
@@ -96,10 +96,10 @@ Você precisará de todas as informações obrigatórias para pelo menos um dos 
 | **Capturas de tela**               | Obrigatório (pelo menos uma captura de tela; recomenda-se quatro ou mais)          | [Capturas de tela](app-screenshots-and-images.md#screenshots)          |
 | **Logotipos da Store**               | Recomendado; necessário em algumas versões do sistema operacional | [Logotipos da Store](app-screenshots-and-images.md#store-logos)             |
 | **Trailers**                  | Opcional                                    | [Trailers](app-screenshots-and-images.md#trailers)                | 
-| **Imagem do Windows 10 e Xbox (arte de Super hero 16: 9)**     | Recomendações        | [Windows 10 e Xbox imagem (arte de Super hero 16: 9)
-] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+| **Imagem do Windows 10 e Xbox (arte de Super hero 16: 9)**     | Recomendado        | [Windows 10 e Xbox imagem (arte de Super hero 16: 9)
+](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
 | **Imagens do Xbox**     | Necessário para a exibição correta, se você publicar em Xbox        | [Xbox imagens
-] (#xbox – imagens de aplicativo capturas de tela e images.md) |
+](app-screenshots-and-images.md#xbox-images) |
 | **Campos complementares**  | Opcional                                    | [Campos complementares](create-app-store-listings.md#supplemental-fields) 
 | **Termos de pesquisa**              | Opcional                                    | [Termos de pesquisa](create-app-store-listings.md#search-terms)         |
 | **Informações de direitos autorais e marcas** | Opcional                                 | [Informações de direitos autorais e marcas](create-app-store-listings.md#copyright-and-trademark-info) |
@@ -114,7 +114,7 @@ Você precisará de todas as informações obrigatórias para pelo menos um dos 
 | Nome do campo                    | Observações                                       | Para obter mais informações                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Opções de retenção de publicação**     | Default: Publicar esse envio assim que ele for aprovado na certificação (ou por datas que você selecionou na seção de agendamento)      | [Opções de retenção de publicação](manage-submission-options.md#publishing-hold-options)    
-| **Notas para certificação**     | Recomendações          | [Notas para certificação](notes-for-certification.md)             |
+| **Notas para certificação**     | Recomendado          | [Notas para certificação](notes-for-certification.md)             |
 | **Recursos restritos**     | Necessário se o seu produto declara que qualquer [somente recursos restritos](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Recursos restritos](manage-submission-options.md#publishing-hold-options)       
 
 <span/>

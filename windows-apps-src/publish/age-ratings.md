@@ -6,12 +6,12 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp, classificação etária, classificação de jogos, iarc, classificação, questionário, conselho de classificação, classificação de conteúdo
 ms.localizationpriority: medium
-ms.openlocfilehash: fc079cd0c3fb75444a8ac8c6f8376c3ed5a992b4
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 55592f2d16807e2ad359a21977bd483db0b2e089
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787303"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826180"
 ---
 # <a name="age-ratings"></a>Classificações etárias
 
@@ -59,4 +59,4 @@ Antes, os desenvolvedores especificavam a classificação etária para seu aplic
 | 7+ (Adequado a partir de 7 anos)   | Os aplicativos com esta classificação etária têm os mesmos critérios que os aplicativos 3+, exceto pelo fato de que esses aplicativos podem incluir conteúdo capaz de assustar um público mais jovem e podem conter nudez parcial, desde que a nudez não se refira à atividade sexual. Esta classificação só deve ser usada para aplicativos onde o conteúdo é adequado para crianças.                                                                                   |
 | 12+ (Adequado a partir de 12 anos) | Os aplicativos com essa classificação etária podem conter nudez de natureza não sexual, violência gráfica leve em relação a personagens não realistas ou violência não gráfica em relação a personagens humanos ou animais realistas. Essa classificação etária também pode incluir profanação, mas não de natureza sexual. Além disso, os aplicativos com essa classificação etária ou superior podem permitir: (i) o acesso não controlado a redes sociais online ou o (ii) compartilhamento não controlado de informações pessoais com terceiros, inclusive outros jogadores ou contatos online. (Para que essa atividade seja considerada controlada, o aplicativo deve incluir recursos de controle dos pais, que exigem a permissão dos pais para usar esses recursos de compartilhamento, e você deve identificá-los e explicar sua funcionalidade nas [Notas para certificação](notes-for-certification.md).) |
 | 16+ (Adequado a partir de 16 anos) | Aplicativos com esta classificação etária podem retratar a violência realista com sangue mínimo e podem retratar a atividade sexual. Eles também podem conter atividades criminosas e de uso de drogas ou tabaco, e mais profanação do que seria permitido em um aplicativo 12+, dentro dos limites apresentados nas Políticas da Loja.                                                                                                                           |
-| 18+ (Adequado a adultos)            | Os jogos com essa classificação etária podem conter violência intensa, bruta ou específica, sangue ou mutilação, o que só é adequado para um público adulto. Todo o conteúdo deve atender aos critérios das [políticas de conteúdo](https://docs.microsoft.com/legal/windows/agreements/store-policies).                                                                                                                                                            |
+| 18+ (Adequado a adultos)            | Os jogos com essa classificação etária podem conter violência intensa, bruta ou específica, sangue ou mutilação, o que só é adequado para um público adulto. Todo o conteúdo deve atender aos critérios das [políticas de conteúdo](store-policies.md).                                                                                                                                                            |

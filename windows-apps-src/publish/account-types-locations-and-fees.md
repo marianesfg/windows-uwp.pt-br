@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b35f95556a13d880992a12d7434af76feed4334
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 7556ca526ecfa28b1d97346501ec1875f938ca35
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63770890"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826220"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
@@ -31,9 +31,9 @@ Aqui estão as principais diferenças entre os dois tipos de conta.
 
 | Conta individual | Conta empresarial |
 |--------------------|-----------------|
-| <ul><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type))</li></ul> |
+| <ul><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
 
-As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Pela [Store políticas](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), informações de conta de aplicativos com algumas funcionalidades, como aqueles que acessam financeiros ou que exigem a autenticação para acessar a funcionalidade principal (sem usar um terceiro dedicado e seguro provedor de autenticação), só podem ser publicados por contas da empresa.
+As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Pela [Store políticas](store-policies.md#1014-account-type), informações de conta de aplicativos com algumas funcionalidades, como aqueles que acessam financeiros ou que exigem a autenticação para acessar a funcionalidade principal (sem usar um terceiro dedicado e seguro provedor de autenticação), só podem ser publicados por contas da empresa.
 
 ## <a name="account-verification"></a>Verificação da conta
 
@@ -252,4 +252,4 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 | Zâmbia                            | 19 USD              | 99 USD           | ZMK pago ao banco | Não     |  
 | Zimbábue                          | 19 USD              | 99 USD           | USD pago ao banco | Não     |
 
-\*  PayPal pode ser usado como um método de pagamento para contas de pagamento nesse mercado, mas não pode ser usado para pagar fo são a taxa de registro de conta de desenvolvedor.
+\*  PayPal pode ser usado como um método de pagamento para contas de pagamento nesse mercado, mas não pode ser usado para pagar a taxa de registro de conta de desenvolvedor.

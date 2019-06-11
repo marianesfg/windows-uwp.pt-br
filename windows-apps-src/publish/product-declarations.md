@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bab1d6bd629aa85351e28a907d4b5ad705fb377
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 47011a22353f26361a392690d857bde1fc180c03
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788370"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826107"
 ---
 # <a name="product-declarations"></a>Declarações de produto
 
@@ -21,7 +21,7 @@ As seções a seguir descrevem algumas das declarações e o que você precisa c
 
 ## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Esse aplicativo permite que os usuários fazer compras, mas não usa o sistema de comércio do Microsoft Store.
 
-Para quase todos envio, você deve deixar essa caixa desmarcada, desde aplicativos que oferecem oportunidades para comprar os itens que são ou podem ser consumidos ou usados dentro de seu aplicativo devem usar a API as compras no aplicativo Microsoft Store para criar e enviar os complementos. Pela [contrato de desenvolvedor do aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), aplicativos que foram criados e enviados antes de 29 de junho de 2015, foi possível continuar a oferecer a funcionalidade de compra no aplicativo sem usar o mecanismo de comércio da Microsoft, como a funcionalidade de compra, desde está em conformidade com o [Microsoft Store políticas](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Se isso se aplica ao seu aplicativo, você deve marcar esta caixa. Caso contrário, deixe-a desmarcada.
+Para quase todos envio, você deve deixar essa caixa desmarcada, desde aplicativos que oferecem oportunidades para comprar os itens que são ou podem ser consumidos ou usados dentro de seu aplicativo devem usar a API as compras no aplicativo Microsoft Store para criar e enviar os complementos. Pela [contrato de desenvolvedor do aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), aplicativos que foram criados e enviados antes de 29 de junho de 2015, foi possível continuar a oferecer a funcionalidade de compra no aplicativo sem usar o mecanismo de comércio da Microsoft, como a funcionalidade de compra, desde está em conformidade com o [Microsoft Store políticas](store-policies.md#108-financial-transactions). Se isso se aplica ao seu aplicativo, você deve marcar esta caixa. Caso contrário, deixe-a desmarcada.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>Este aplicativo foi testado para atender às diretrizes de acessibilidade.
 

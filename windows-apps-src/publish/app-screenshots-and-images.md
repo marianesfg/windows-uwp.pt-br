@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
 ms.localizationpriority: medium
-ms.openlocfilehash: a27763d76d2be65c7e0d2c6ccaeb0cd13123bdae
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 3f1931a15b5517264cd11dca8d8086dda7094b93
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244302"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826160"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do aplicativo
 
@@ -128,7 +128,7 @@ Siga estas recomendações para que seus trailers sejam eficazes:
 
 Você também deve cumprir os requisitos listados a seguir.
 
-**Para adicionar trailers à listagem:**
+**Para adicionar trechos para sua listagem:**
 1. Carregue o **arquivo de vídeo** do trailer na caixa indicada. Uma caixa suspensa também é mostrada caso você queira reutilizar um trailer que já tenha sido carregado (talvez para uma listagem da Loja em outro idioma).
 2. Após carregar o trailer, você precisará carregar uma **imagem em miniatura** para acompanhá-lo. Essa imagem deve ser um arquivo .png de 1920 x 1080 pixels e é geralmente uma imagem estática obtida a partir do trailer.
 3. Clique no ícone de lápis para adicionar um **título** para o trailer (255 caracteres ou menos).
@@ -152,7 +152,7 @@ Ao fornecer os trailers, verifique estes requisitos estão sendo cumpridos:
 - O título não pode exceder 255 caracteres. 
 - Não inclua classificações etárias em seus trailers.
 
-Assim como os outros campos na página de listagem da Store, os trailers devem passar na certificação para que você possa publicá-los na Microsoft Store. Verifique se os trailers estão em conformidade com as [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
+Assim como os outros campos na página de listagem da Store, os trailers devem passar na certificação para que você possa publicá-los na Microsoft Store. Verifique se os trailers estão em conformidade com as [Políticas da Microsoft Store](store-policies.md).
 
 Há requisitos adicionais dependendo do tipo de arquivo.
 
@@ -223,7 +223,7 @@ A imagem **2:1 (2400 x 1200)** só será usada se o seu app for compatível com 
 
 Se seu aplicativo enviados anteriormente dá suporte a versões anteriores do sistema operacional (Windows 8.x e/ou Windows Phone 8. x), essas imagens devem ser fornecidas em ordem para que possamos considerar que contam com o seu aplicativo em layouts promocionais (embora eles não garantem que seu aplicativo será apresentado). Se seu aplicativo não oferece suporte a essas versões anteriores do sistema operacional, ignore esta seção. (Esta seção anteriormente era chamada de **Imagens promocionais opcionais**).
 
-**Para Windows Phone 8.1 e versões anteriores**, dois tamanhos de imagem podem ser usados em layouts promocionais: **1000 x 800 pixels (5:4)** e **358 x 358 pixels (1:1)**. Se seu aplicativo for executado no Windows Phone 8.1 ou anteriores, é recomendável fornecer imagens em ambos esses tamanhos.  
+**Para Windows Phone 8.1 e versões anteriores**, dois tamanhos de imagem podem ser usados em layouts promocionais: **1000 x 800 pixels (5:4)** e **358 x 358 pixels (1:1)** . Se seu aplicativo for executado no Windows Phone 8.1 ou anteriores, é recomendável fornecer imagens em ambos esses tamanhos.  
 
 > [!TIP]
 > Forneça uma imagem Ícone do bloco de aplicativo 300 x 300 na seção [Logotipos da Loja](#store-logos) para qualquer envio compatível com o Windows Phone 8.1 ou anterior. Isso garantirá que o aplicativo não aparecerá na Loja com um ícone em branco.  

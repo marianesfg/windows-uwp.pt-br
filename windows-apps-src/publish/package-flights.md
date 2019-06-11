@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp, liberação de versões de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c0d299ba5b3a37b2f80a5e3c9b4456d63c3e0d4
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: abd4b26d0943bf032f93f62719959ef6650e0d65
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788479"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826141"
 ---
 # <a name="package-flights"></a>Pacotes de pré-lançamento
 
@@ -60,7 +60,7 @@ Lembre-se também que sua Store informações sobre a listagem e disponibilidade
 
 ## <a name="gradual-package-rollout"></a>Distribuição de pacote gradual
 
-Por padrão, os pacotes no envio serão disponibilizados para todos no grupo de versão de pré-lançamento ao mesmo tempo. Para alterar isso, você pode marcar a caixa que diz **Roll out update gradually after this submission is published (to Windows 10 customers only)**. Você pode escolher uma porcentagem de pessoas no grupo de versão de pré-lançamento para receber os pacotes do envio novo, de maneira que possa monitorar comentários e dados analíticos para se certificar da atualização antes de implantá-la mais amplamente no resto do grupo de versão de pré-lançamento. Você pode aumentar a porcentagem (ou parar a atualização) sempre sem precisar criar um novo envio para o pacote de pré-lançamento. 
+Por padrão, os pacotes no envio serão disponibilizados para todos no grupo de versão de pré-lançamento ao mesmo tempo. Para alterar isso, você pode marcar a caixa que diz **Roll out update gradually after this submission is published (to Windows 10 customers only)** . Você pode escolher uma porcentagem de pessoas no grupo de versão de pré-lançamento para receber os pacotes do envio novo, de maneira que possa monitorar comentários e dados analíticos para se certificar da atualização antes de implantá-la mais amplamente no resto do grupo de versão de pré-lançamento. Você pode aumentar a porcentagem (ou parar a atualização) sempre sem precisar criar um novo envio para o pacote de pré-lançamento. 
 
 > [!IMPORTANT]
 > Ao distribuir gradualmente os pacotes em um voo de pacote, as pessoas que não estão incluídas na porcentagem que obtém seus novos pacotes obterá os pacotes do envio de voo de pacote anterior (a menos que haja um voo com classificação mais alta disponível para eles).
@@ -75,7 +75,7 @@ Por padrão, seu pacote de pré-lançamento será publicado e disponibilizado pa
 
 ## <a name="submit-your-package-flight-to-the-store"></a>Enviar seu pacote de pré-lançamento para a Loja
 
-Quando tiver especificado os pacotes e configurado todas as opções necessárias, clique em **Enviar para a Loja**. Seu pacote de pré-lançamento passará, então, pelo [processo de certificação de aplicativo](the-app-certification-process.md). Observe que os pacotes incluídos no seu voo de pacote devem ser compatíveis com o [Microsoft Store políticas](https://docs.microsoft.com/legal/windows/agreements/store-policies), assim como acontece com todos os envios.
+Quando tiver especificado os pacotes e configurado todas as opções necessárias, clique em **Enviar para a Loja**. Seu pacote de pré-lançamento passará, então, pelo [processo de certificação de aplicativo](the-app-certification-process.md). Observe que os pacotes incluídos no seu voo de pacote devem ser compatíveis com o [Microsoft Store políticas](store-policies.md), assim como acontece com todos os envios.
 
 As pessoas em seus grupos de versão de pré-lançamento associados a esse pacote de pré-lançamento que já possuem seu aplicativo receberão agora uma atualização usando os pacotes incluídos em seu pacote de pré-lançamento. Se essas pessoas ainda não tiverem seu aplicativo, elas receberão os pacotes de seu pacote de pré-lançamento quando o instalarem. 
 
