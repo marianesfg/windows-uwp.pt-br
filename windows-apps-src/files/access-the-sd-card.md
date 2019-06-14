@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp, cartão sd, armazenamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 4573e0959cf9d4af9b3cef8ffbbce14847a9e521
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369491"
 ---
 # <a name="access-the-sd-card"></a>Acessar o cartão SD
@@ -56,7 +56,7 @@ Para acessar arquivos no cartão SD, costuma ser necessário especificar o segui
 
 Também use o método anterior para acessar arquivos de mídia no cartão SD sem fazer referência a uma pasta conhecida como **KnownFolders.MusicLibrary**, ou para acessar arquivos de mídia fora dos arquivos da Biblioteca de mídia.
 
-Para acessar arquivos de mídia depositados nas Bibliotecas de mídia—Música, Fotos ou Vídeos—usando pastas conhecidas, você só precisa especificar a funcionalidade associada no arquivo de manifesto do aplicativo—**musicLibrary**, **picturesLibrary**, or **videoLibrary**. Você não precisa especificar a funcionalidade de **removableStorage**. Consulte também [Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md).
+Para acessar arquivos de mídia depositados nas Bibliotecas de mídia—Música, Fotos ou Vídeos—usando pastas conhecidas, você só precisa especificar a funcionalidade associada no arquivo de manifesto do aplicativo—**musicLibrary**, **picturesLibrary**, or **videoLibrary**. Você não precisa especificar a funcionalidade de **removableStorage**. Para obter mais informações, consulte [arquivos e pastas nas bibliotecas de música, imagens e vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md).
 
 ## <a name="accessing-files-on-the-sd-card"></a>Acessando arquivos no cartão SD
 

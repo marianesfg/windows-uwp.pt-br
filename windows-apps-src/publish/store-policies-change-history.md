@@ -8,10 +8,10 @@ keywords: contrato de políticas da store
 ms.localizationpriority: high
 ms.assetid: D451D271-A6CA-4B46-AE99-C2269E8A078C
 ms.openlocfilehash: a846b48565a6029656ecfdd21763931df74b5375
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66826453"
 ---
 # <a name="change-history-for-microsoft-store-policies"></a>Histórico de alterações das Políticas da Microsoft Store
@@ -25,7 +25,7 @@ ms.locfileid: "66826453"
 </colgroup>
 <thead>
 <tr class="header">
-<th>Date</th>
+<th>Data</th>
 <th>Versão do documento</th>
 <th>Descrição das alterações</th>
 </tr>
