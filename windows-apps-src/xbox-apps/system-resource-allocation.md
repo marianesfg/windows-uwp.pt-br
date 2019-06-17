@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
-ms.openlocfilehash: 40cf41df4ccf15206e5855f989bc46c599baa473
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8cc6ca24453be83f5c10cc6c86c508a5a3f99c4c
+ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372074"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67131929"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Recursos do sistema para jogos e aplicativos UWP no Xbox One
 
@@ -24,9 +24,9 @@ Aplicativos UWP em execução no Xbox One compartilham recursos com o sistema e 
 A memória máxima disponível para um aplicativo em execução em segundo plano é 128 MB. O modo de tela de fundo só se aplica a aplicativos simultâneos, como players de música na tela de fundo.  Jogos serão suspenso e encerrados na tela de fundo.
 
 Exceder essas limitações causará falhas de alocação de memória. Para obter mais informações sobre monitoramento de uso de memória, consulte a referência [classe MemoryManager](https://docs.microsoft.com/uwp/api/windows.system.memorymanager).
-    
-    > [!NOTE]
-    > When running your app or game from the Visual Studio debugger, these memory constraints do not apply. This limit is only applicable when not running in debugging mode.
+
+> [!NOTE]
+> Ao executar seu aplicativo ou jogo do depurador do Visual Studio, essas restrições de memória não se aplicam. Esse limite é aplicável apenas quando não está em execução no modo de depuração.
 
 * CPU
     * Aplicativos: compartilhamento de 2 a 4 núcleos de CPU dependendo do número de aplicativos e jogos executados no sistema.
@@ -46,14 +46,7 @@ Para **desenvolvimento de aplicativos**, os recursos disponíveis podem ser limi
 
 Para **desenvolvimento de jogos**, o Xbox One, como outros consoles de jogos, é um componente especializado de hardware que exige um kit de desenvolvimento baseado em hardware específico para acessar todo o seu potencial. Se você estiver trabalhando em um jogo que requeira acesso ao potencial máximo do hardware do Xbox One, considere registrar com o programa [ID@Xbox](https://www.xbox.com/Developers/id) para obter acesso a um kit de desenvolvimento do Xbox One.
 
-
-Para obter mais informações sobre recursos do sistema para aplicativos UWP no Xbox One, veja a primeira parte deste vídeo.
-</br>
-</br>
-<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developing-xbox-one-applications-16860/Video-What-s-Unique--vk0fOPf9C_2006218965" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
-
 ## <a name="see-also"></a>Consulte também
 - [UWP no Xbox One](index.md)
 - [Comece com o programa de criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/creators-program)
 - [O DirectX e UWP no Xbox One](https://walbourn.github.io/)
-

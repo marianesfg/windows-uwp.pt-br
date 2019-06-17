@@ -8,12 +8,12 @@ ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e1aa424fe038a50a5e29364c7f8246e324dc07c
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 45d298aca60155915900f494654dce8e89fb1ee0
+ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215005"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67131901"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>Distribuir seu aplicativo empacotado de área de trabalho
 
@@ -57,12 +57,6 @@ Se você criar um certificado, você precisa instalá-lo na loja de certificados
 Para assinar seu aplicativo usando um certificado, consulte [assinar um pacote de aplicativo usando o SignTool](/windows/uwp/packaging/sign-app-package-using-signtool).
 
 Para fazer sideload de seu aplicativo em outros dispositivos, consulte [aplicativos de LOB de Sideload no Windows 10](/windows/application-management/sideload-apps-in-windows-10).
-
-**Vídeos**
-
-|Publicar seu aplicativo para a Microsoft Store |Distribuir um aplicativo empresarial  |
-|---|---|
-|<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Windows-Store-Publication-3cWyG5WhD_5506218965"      width="426" height="472" allowFullScreen frameBorder="0"></iframe>|<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Video-Distribution-for-Enterprise-Apps-XJ5Hd5WhD_1106218965" width="426" height="472" allowFullScreen frameBorder="0"></iframe>|
 
 <a id="transition-users" />
 
@@ -167,10 +161,6 @@ private void RemoveDesktopApp()
 
 }
 ```
-
-### <a name="video"></a>Vídeo
-
-<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Transition-Taskbar-Pins-Start-Tiles-File-Type-Associations-and-Protocol-Handlers-MD5mv5WhD_2406218965" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
 
 ## <a name="next-steps"></a>Próximas etapas
 
