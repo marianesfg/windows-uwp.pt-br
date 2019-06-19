@@ -6,12 +6,12 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f979edbd49699447040880964dd1378bc7c94c0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 38c9a40dbe1a46aa125c76cd1fcc88a84685c8cc
+ms.sourcegitcommit: 280193dfe5a106fc6b4c85df3ac40535547b855c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362078"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67235171"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Testes de app de Ponte de Desktop do Windows
 
@@ -30,7 +30,7 @@ Este teste verifica que todos os arquivos executáveis portáteis (PE) contêm u
 O teste verifica todos os arquivos executáveis portáteis no pacote e verifica seus cabeçalhos em busca de uma assinatura. É recomendável assinar digitalmente todos os arquivos PE. Um aviso será gerado se qualquer um dos arquivos PE não estiver assinado.
  
 **Ações corretivas**  
-Sempre é recomendável ter arquivos assinados digitalmente. Para saber mais, veja [Introdução à assinatura de código](https://msdn.microsoft.com/en-us/library/ms537361(v=vs.85).aspx).
+Sempre é recomendável ter arquivos assinados digitalmente. Para saber mais, veja [Introdução à assinatura de código](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85)).
 
 ### <a name="2-file-association-verbs"></a>2. Verbos de associação de arquivo 
 **Em segundo plano**  
