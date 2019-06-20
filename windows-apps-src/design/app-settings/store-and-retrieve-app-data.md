@@ -8,12 +8,12 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2848b22c69960075297546d401689d4c51c637aa
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: dc13b53450c97ffcd3d44b58d564c813344abf0a
+ms.sourcegitcommit: ed32219e04f814a12ea018348e9cf678fcfd5e3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361924"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67253049"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Armazenar e recuperar configurações e outros dados de aplicativo
 
@@ -430,7 +430,7 @@ localSettings.DeleteContainer("exampleContainer");
 ## <a name="versioning-your-app-data"></a>Controlar a versão de seus dados de aplicativo
 
 
-Como opção, você pode converter os dados do aplicativo para seu aplicativo. Isso permite que você crie uma versão futura de seu aplicativo que altere o formato de seus dados de aplicativo sem causar problemas de compatibilidade com a versão anterior do aplicativo. O aplicativo verifica a versão dos dados de aplicativo no armazenamento de dados e, caso a versão seja inferior à versão esperada, o aplicativo deverá atualizar os dados do aplicativo para o novo formato e atualizar a versão. Para obter mais informações, consulte a propriedade [**Application.Version**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.version) e o método [**ApplicationData.SetVersionAsync**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.).
+Como opção, você pode converter os dados do aplicativo para seu aplicativo. Isso permite que você crie uma versão futura de seu aplicativo que altere o formato de seus dados de aplicativo sem causar problemas de compatibilidade com a versão anterior do aplicativo. O aplicativo verifica a versão dos dados de aplicativo no armazenamento de dados e, caso a versão seja inferior à versão esperada, o aplicativo deverá atualizar os dados do aplicativo para o novo formato e atualizar a versão. Para obter mais informações, consulte a propriedade [**Application.Version**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.version) e o método [**ApplicationData.SetVersionAsync**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.setversionasync).
 
 ## <a name="related-articles"></a>Artigos relacionados
 

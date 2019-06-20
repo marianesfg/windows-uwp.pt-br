@@ -8,12 +8,12 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fb292ad5cba892275709fbc89d5d53fa136144f3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ef8cdad247a57ce5fab461e70c2725fda4231efd
+ms.sourcegitcommit: ed32219e04f814a12ea018348e9cf678fcfd5e3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365295"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67253066"
 ---
 # <a name="speech-interactions"></a>Interações de controle por voz
 
@@ -58,7 +58,7 @@ Pare o reconhecimento se for detectada entrada de um dispositivo que não seja o
 
 Especifique o período de tempo durante o qual a ausência de entrada de fala indica que o reconhecimento terminou. Não reinicie automaticamente o reconhecimento após esse período de tempo, pois ele geralmente indica que o usuário parou de interagir com seu aplicativo.
 
-Desabilite todas as interfaces do usuário de reconhecimento contínuo e encerre a sessão de reconhecimento se uma conexão de rede não estiver disponível. O reconhecimento contínuo requer uma conexão de rede.
+Desabilite todas as interfaces do usuário de reconhecimento contínuo e encerre a sessão de reconhecimento se uma conexão de rede não estiver disponível. Reconhecimento contínuo requer uma conexão de rede.
 
 ## <a name="commanding"></a>Execução de comandos
 
@@ -200,7 +200,7 @@ Você deve ouvir todas as cadeias de caracteres da TTS para garantir que sejam i
 -   Encadear uma sequência incomum de palavras ou falar números de peças ou pontuação podem tornar uma frase inteligível.
 -   A fala pode parecer artificial quando a prosódia ou a cadência é diferente de como um falante nativo diria a frase.
 
-Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação como entrada para o sintetizador de voz. Para obter mais informações sobre SSML, consulte [Usar SSML para controlar a fala sintetizada](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) e [Referência da linguagem de marcação da sintetização de voz](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14)).
+Os dois problemas podem ser tratados usando SSML em vez de texto sem formatação como entrada para o sintetizador de fala. Para obter mais informações sobre SSML, consulte [Usar SSML para controlar a fala sintetizada](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) e [Referência da linguagem de marcação da sintetização de voz](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14)).
 
 ## <a name="other-articles-in-this-section"></a>Outros artigos nesta seção 
 
