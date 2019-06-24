@@ -5,12 +5,12 @@ ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10 s, sempre conectado, emulação x86 no ARM, solução de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 396bb0bf2c5ba5236e0e46e7b474867ffacb8c75
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5f40c53c70a457057f678cdc227a98fc694e2273
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57589851"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319669"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>Solução de problemas de aplicativos de área de trabalho x86
 >[!IMPORTANT]
@@ -22,7 +22,7 @@ Se um aplicativo de área de trabalho x86 não funcionar como faz em um computad
 |-----|--------|
 | Seu aplicativo depende de um driver que não foi projetado para ARM. | Recompile seu driver x86 para ARM64. Consulte [Criando drivers ARM64 com o WDK](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers). |
 | Seu aplicativo está disponível somente para x64. | Se você desenvolver para a Microsoft Store, envie uma versão para ARM do seu aplicativo. Para obter mais informações, consulte [Arquiteturas do pacote do aplicativo](../packaging/device-architecture.md). Se você for um desenvolvedor do Win32, recomendamos que você recompile seu aplicativo para ARM64. Para obter mais informações, veja [Visualização antecipada de suporte do Visual Studio para Windows 10 no desenvolvimento do ARM](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/). |
-| Seu aplicativo usa uma versão de OpenGL posterior à 1.1 ou requer OpenGL acelerado por hardware. | Use o modo DirectX do aplicativo, se estiver disponível. Aplicativos x86 que usam DirectX 9, DirectX 10, DirectX 11 e DirectX 12 funcionarão em ARM. Para obter mais informações, consulte [Elementos gráficos e jogos do DirectX](https://msdn.microsoft.com/en-us/library/windows/desktop/ee663274(v=vs.85).aspx). |
+| Seu aplicativo usa uma versão de OpenGL posterior à 1.1 ou requer OpenGL acelerado por hardware. | Use o modo DirectX do aplicativo, se estiver disponível. Aplicativos x86 que usam DirectX 9, DirectX 10, DirectX 11 e DirectX 12 funcionarão em ARM. Para obter mais informações, consulte [Elementos gráficos e jogos do DirectX](https://docs.microsoft.com/windows/desktop/directx). |
 | Seu aplicativo x86 não funciona como esperado. | Tente usar a solução de problemas de compatibilidade seguindo a orientação em [Solução de problemas de compatibilidade de programas no ARM](apps-on-arm-program-compat-troubleshooter.md). Para algumas outras etapas de solução de problemas, consulte o artigo [Solução de problemas de aplicativos x86 no ARM](apps-on-arm-troubleshooting-x86.md). |
 
 ## <a name="best-practices-for-wow"></a>Práticas recomendadas para WOW
@@ -34,7 +34,7 @@ Um problema comum ocorre quando um aplicativo descobre que está em execução e
 
 Em geral, um aplicativo não deve fazer suposições sobre o sistema host quando é constatado que está sendo executado em WOW. Evite interagir com componentes nativos do SO o máximo possível.
 
-Um aplicativo pode colocar chaves de registro na exibição do registro nativo ou executar as funções com base na presença de WOW. O **IsWow64Process** original indica apenas se o aplicativo está em execução em um computador x64. Agora os aplicativos devem usar [IsWow64Process2](https://msdn.microsoft.com/en-us/library/windows/desktop/mt804318(v=vs.85).aspx) para determinar se estão em execução em um sistema com suporte para WOW. 
+Um aplicativo pode colocar chaves de registro na exibição do registro nativo ou executar as funções com base na presença de WOW. O **IsWow64Process** original indica apenas se o aplicativo está em execução em um computador x64. Agora os aplicativos devem usar [IsWow64Process2](https://docs.microsoft.com/windows/desktop/api/wow64apiset/nf-wow64apiset-iswow64process2) para determinar se estão em execução em um sistema com suporte para WOW. 
 
 ## <a name="drivers"></a>Drivers 
 Todos os drivers de modo kernel, drivers [Estrutura de Driver em Modo de Usuário (UMDF)](https://docs.microsoft.com/windows-hardware/drivers/wdf/overview-of-the-umdf) e drivers de impressão devem ser compilados para corresponder à arquitetura do SO. Se um aplicativo x86 tiver um driver, esse driver deverá ser recompilado para ARM64. O aplicativo x86 pode ser executado sem problemas em emulação. No entanto, seu driver precisa ser recompilado para ARM64 e nenhuma experiência de aplicativo que dependa do driver estará disponível. Para obter mais informações sobre a compilação do seu driver para ARM64, consulte [Criando drivers ARM64 com o WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers).

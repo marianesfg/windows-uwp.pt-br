@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 733ce75942a05482ade88c1510e788f1cbd515d4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c23de238a0004066b44cfe962e2de72216eb7a6d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602201"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318474"
 ---
 # <a name="using-lights-in-windows-ui"></a>Usando as luzes na interface do usuário do Windows
 
@@ -38,7 +38,7 @@ Iluminação de composição dá suporte a três conceitos principais: **Luz**, 
 | [AmbientLight](/uwp/api/windows.ui.composition.ambientlight) | Uma fonte de luz que emite luz não-direcional que aparece refletido por tudo na cena. |
 | [DistantLight](/uwp/api/windows.ui.composition.distantlight) | Uma infinitamente grande fonte de luz distante que emite luz em uma única direção. Como o sol. |
 | [PointLight](/uwp/api/windows.ui.composition.pointlight) | Uma fonte de ponto de luz que emite luz em todas as direções. Como uma lâmpada. |
-| [Em destaque](/uwp/api/windows.ui.composition.spotlight) | Uma fonte de luz que emite cones internas e externas da luz. Como uma lanterna. |
+| [SpotLight](/uwp/api/windows.ui.composition.spotlight) | Uma fonte de luz que emite cones internas e externas da luz. Como uma lanterna. |
 
 ## <a name="targets"></a>Destinos
 
@@ -63,7 +63,7 @@ Adicionando animação ao deslocamento do ponto de luz, um efeito cintilante é 
 _pointLight.Offset = new Vector3(-(float)TextBlock.ActualWidth, (float)TextBlock.ActualHeight / 2, (float)TextBlock.FontSize);
 ```
 
-Ver todos os [tremido texto](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2014393/TextShimmer) exemplo no material de cozinha WindowUIDevLabs exemplo para saber mais.
+Ver todos os [tremido texto](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 14393/TextShimmer) exemplo no material de cozinha WindowUIDevLabs exemplo para saber mais.
 
 ## <a name="restrictions"></a>Restrições
 
@@ -87,7 +87,7 @@ Propriedade | Descrição
 **Direção** | A direção da luz. A direção na qual a luz está apontando for especificada, relativo ao seu [CoordinateSpace](/uwp/api/windows.ui.composition.distantlight.coordinatespace) Visual.
 **Espaço de coordenadas** | Cada Visual tem um espaço de coordenadas 3D implícito. Direção de X é da esquerda para a direita. Direção de Y é de cima para baixo. Direção Z é um ponto fora do plano. O ponto original essa coordenada é o canto superior esquerdo do visual e a unidade é o Pixel independente do dispositivo (DIP). Deslocamento de uma luz definido nessa coordenada.
 **Cones internos e externos** | Destaques emitem um cone de luz com duas partes: um cone interno brilhante e um cone externo. Composição permite que você controle sobre a cor e os ângulos de cone interno e externo.
-**deslocamento** | Deslocamento da fonte de luz em relação ao seu espaço de coordenadas Visual.
+**Offset** | Deslocamento da fonte de luz em relação ao seu espaço de coordenadas Visual.
 
 > [!NOTE]
 > Quando várias luzes atingir o mesmo elemento Visual, ou sempre que o valor de cor da luz um fica grande o suficiente para exceder 1.0, a cor da luz pode mudar devido a fixação de um canal de cor luzes.
@@ -167,4 +167,4 @@ CompositionBrush CreateNormalMapBrush(ICompositionSurface normalMapImage)
 - [CompositionCapabilities API](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositioncapabilities)
 - [Cálculos de iluminação](https://docs.microsoft.com/windows/uwp/graphics-concepts/mathematics-of-lighting)
 - [SceneLightingEffect](https://docs.microsoft.com/uwp/api/windows.ui.composition.effects.scenelightingeffect)
-- [Repositório do GitHub WindowsUIDevLabs](https://github.com/Microsoft/WindowsUIDevLabs)
+- [Repositório do GitHub WindowsUIDevLabs](https://github.com/microsoft/WindowsCompositionSamples)

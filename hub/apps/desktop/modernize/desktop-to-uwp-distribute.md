@@ -8,12 +8,12 @@ ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 45d298aca60155915900f494654dce8e89fb1ee0
-ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
+ms.openlocfilehash: 2d10836da46cce4d862f7f727890b0c9c107df5a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67131901"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317070"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>Distribuir seu aplicativo empacotado de área de trabalho
 
@@ -26,7 +26,7 @@ Se você decidir [empacotar seu aplicativo da área de trabalho em um pacote MSI
 
 A [Microsoft Store](https://www.microsoft.com/store/apps) é uma maneira conveniente para que seus clientes obtenham o aplicativo.
 
-Publica seu aplicativo para a Microsoft Store para alcançar o público mais amplo. Além disso, os clientes organizacionais podem adquirir seu aplicativo para distribuir internamente para suas organizações por meio de [Microsoft Store para empresas](https://www.microsoft.com/business-store).
+Publica seu aplicativo para a Microsoft Store para alcançar o público mais amplo. Além disso, os clientes organizacionais podem adquirir seu aplicativo para distribuir internamente para suas organizações por meio de [Microsoft Store para empresas](https://businessstore.microsoft.com/store).
 
 Caso planeje publicar na Microsoft Store, você verá algumas perguntas adicionais como parte do processo de envio. Isso ocorre porque o manifesto do pacote declara uma funcionalidade restrita denominada **runFullTrust** e precisamos aprovar o uso desse recurso pelo aplicativo. Você pode ler mais sobre este requisito aqui: [Somente recursos restritos e](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 

@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d1aa710485d38f20433e842b3d6418f911252e2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 819f0b4a5ba17a866eb50539f5138460eefd0eec
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361805"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318399"
 ---
 # <a name="custom-video-effects"></a>Efeitos de vídeo personalizados
 
@@ -79,7 +79,7 @@ A propriedade [**IsReadOnly**](https://docs.microsoft.com/uwp/api/windows.media.
 
 ### <a name="setencodingproperties-method"></a>Método SetEncodingProperties
 
-O sistema chama [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties.windows) o efeito para permitir que você conheça as propriedades de codificação do fluxo de vídeo no qual o efeito está operando. Esse método também fornece uma referência para o dispositivo Direct3D usado para renderização de hardware. O uso desse dispositivo é mostrado no exemplo de processamento de hardware mais adiante neste artigo.
+O sistema chama [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties) o efeito para permitir que você conheça as propriedades de codificação do fluxo de vídeo no qual o efeito está operando. Esse método também fornece uma referência para o dispositivo Direct3D usado para renderização de hardware. O uso desse dispositivo é mostrado no exemplo de processamento de hardware mais adiante neste artigo.
 
 [!code-cs[SetEncodingProperties](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetSetEncodingProperties)]
 
@@ -154,7 +154,7 @@ Adicione o código a seguir ao namespace para que o efeito importe a interface p
 
 Agora você pode adicionar a implementação do método **ProcessFrame**. Primeiro, esse método obtém um objeto [**BitmapBuffer**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBuffer) a partir dos bitmaps de software de entrada e de saída. Observe que o quadro de saída é aberto para gravação e o de entrada para leitura. Em seguida, um [**IMemoryBufferReference**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IMemoryBufferReference) é obtido para cada buffer, chamando-se [**CreateReference**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.createreference). Em seguida, o buffer de dados real é obtido, transmitindo os objetos **IMemoryBufferReference** como a interface de interoperabilidade COM definida acima, **IMemoryByteAccess**, e chamando **GetBuffer**.
 
-Agora que os buffers de dados foram obtidos, você pode ler o buffer de entrada e gravar no buffer de saída. O layout do buffer é obtido chamando [**GetPlaneDescription**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.getplanedescription), que fornece informações sobre a largura, a distância e o deslocamento inicial do buffer. Os bits por pixel são determinados pelas propriedades de codificação definidas anteriormente com o método [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties.windows). As informações de formato do buffer são usadas para encontrar o índice de cada pixel no buffer. O valor de pixel do buffer de origem é copiado para o buffer de destino, com os valores de cores sendo multiplicados pela propriedade FadeValue definida para esse efeito escurecê-las pelo valor especificado.
+Agora que os buffers de dados foram obtidos, você pode ler o buffer de entrada e gravar no buffer de saída. O layout do buffer é obtido chamando [**GetPlaneDescription**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.getplanedescription), que fornece informações sobre a largura, a distância e o deslocamento inicial do buffer. Os bits por pixel são determinados pelas propriedades de codificação definidas anteriormente com o método [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties). As informações de formato do buffer são usadas para encontrar o índice de cada pixel no buffer. O valor de pixel do buffer de origem é copiado para o buffer de destino, com os valores de cores sendo multiplicados pela propriedade FadeValue definida para esse efeito escurecê-las pelo valor especificado.
 
 [!code-cs[ProcessFrameSoftwareBitmap](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetProcessFrameSoftwareBitmap)]
 
@@ -190,7 +190,7 @@ Defina as propriedades de codificação com as quais o efeito será compatível 
 [!code-cs[SupportedEncodingPropertiesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSupportedEncodingPropertiesWin2D)]
 
 
-Use o método [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties.windows) para criar um novo objeto **CanvasDevice** Win2D do [**IDirect3DDevice**](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice) passado para o método.
+Use o método [**SetEncodingProperties**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert) para criar um novo objeto **CanvasDevice** Win2D do [**IDirect3DDevice**](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice) passado para o método.
 
 [!code-cs[SetEncodingPropertiesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSetEncodingPropertiesWin2D)]
 

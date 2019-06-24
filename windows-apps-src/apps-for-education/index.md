@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, educação
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c2333d960ba91b1d1c3d3030481108407909594
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3d68fd78a7da3f1b98f61225f3aad8ca1590140e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359212"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317604"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>Desenvolver aplicativos Universais do Windows para educação
 ![captura de tela do aplicativo “fazer um teste”](images/take-a-test-screen-small.png)
@@ -23,7 +23,7 @@ Os aplicativos de educação precisam ser acessíveis. Consulte [Desenvolvendo a
 
 
 ### <a name="secure-assessments"></a>Avaliações seguras
-Aplicativos de avaliação/teste geralmente precisam produzir um ambiente *bloqueado* para impedir que os alunos usem outros computadores ou recursos de Internet durante um teste. Essa funcionalidade está disponível por meio da [API Fazer um Teste](take-a-test-api.md). Consulte o aplicativo Web [Fazer um Teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) no Centro de TI do Windows para obter um exemplo de um ambiente de teste com acesso online bloqueado para testes de alto interesse.
+Aplicativos de avaliação/teste geralmente precisam produzir um ambiente *bloqueado* para impedir que os alunos usem outros computadores ou recursos de Internet durante um teste. Essa funcionalidade está disponível por meio da [API Fazer um Teste](take-a-test-api.md). Consulte o aplicativo Web [Fazer um Teste](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) no Centro de TI do Windows para obter um exemplo de um ambiente de teste com acesso online bloqueado para testes de alto interesse.
 
 ### <a name="user-input"></a>Entrada do usuário
 A entrada do usuário é uma parte essencial dos aplicativos de educação; os controles de interface do usuário devem ser responsivos e intuitivos para não distrair os usuários. Para obter uma visão geral das opções de entrada disponíveis em um aplicativo Universal do Windows, consulte a [Cartilha de entrada](https://docs.microsoft.com/windows/uwp/design/input/input-primer) e os tópicos abaixo na seção Design e interface do usuário. Além disso, os seguintes aplicativos de amostra mostram a manipulação básica da interface do usuário na Plataforma Universal do Windows.
@@ -41,4 +41,4 @@ A plataforma do Windows Ink pode promover aplicativos de educação ajustando-os
 Os aplicativos de educação geralmente são lançados em circunstâncias especiais para uma organização específica. Consulte [Distribuir aplicativos de linha de negócios para empresas](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) para obter informações sobre isso.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-- [Windows 10 para educação](https://technet.microsoft.com/edu/windows/index) no Centro de TI do Windows
+- [Windows 10 para educação](https://docs.microsoft.com/education/windows/index) no Centro de TI do Windows

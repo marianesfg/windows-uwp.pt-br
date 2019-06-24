@@ -6,17 +6,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
 ms.localizationpriority: medium
-ms.openlocfilehash: 019db8c93b61f84dde400f7be9f98bf82b1466e8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: afebfd089b80b7402929bd85ea482b86aca0e694
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660321"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320214"
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Trazendo jogos HTML para o UWP no Xbox
-O Xbox One é uma plataforma excelente para jogos HTML 5. Jogos HTML 5 são executados no mecanismo do navegador [Edge](https://developer.microsoft.com/microsoft-edge/). O Microsoft Edge é rápido e totalmente compatível com recursos HTML 5 e CSS 3 como WebGL e canvas.
+O Xbox One é uma plataforma excelente para jogos HTML 5. Jogos HTML 5 são executados no mecanismo do navegador [Edge](https://developer.microsoft.com/microsoft-edge). O Microsoft Edge é rápido e totalmente compatível com recursos HTML 5 e CSS 3 como WebGL e canvas.
 
-Mecanismos de jogos populares, como [Construct 2](https://www.scirra.com/blog/176/announcing-xbox-one-export-beta) têm suporte para Xbox One. Não testamos todas as estruturas e mecanismos HTML, mas pelo que vimos até agora acreditamos que a maioria deles funcionará no Xbox One.
+Mecanismos de jogos populares, como [Construct 2](https://www.construct.net/en/blogs/construct-official-blog-1/announcing-xbox-one-export-beta-857) têm suporte para Xbox One. Não testamos todas as estruturas e mecanismos HTML, mas pelo que vimos até agora acreditamos que a maioria deles funcionará no Xbox One.
 
 Jogos HTML estão no mesmo nível que qualquer outro tipo de jogo. Os desenvolvedores podem obter acesso completo à APIs nativas como entrada do controlador, Kinect e muito mais.
 

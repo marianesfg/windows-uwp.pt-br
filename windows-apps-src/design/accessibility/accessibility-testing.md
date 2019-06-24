@@ -8,12 +8,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8af03b32453bcdacb3da95678cf23a988c375f1b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 60be53bfcb351866a0cf124fe4ef6f21ff889f88
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359638"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318962"
 ---
 # <a name="accessibility-testing"></a>Testes de acessibilidade  
 
@@ -95,7 +95,7 @@ Use o aplicativo com um tema de alto contraste ativo para verificar se todos os 
 
 ## <a name="verify-your-app-with-display-settings"></a>Verificar o aplicativo com configurações de exibição  
 
-Use as opções de exibição do sistema que ajustam o valor de pontos por polegada (dpi) da exibição, e garanta que a interface de usuário de seu aplicativo seja dimensionada corretamente quando o valor de dpi mudar. (Alguns usuários alterem valores de dpi como uma opção de acessibilidade, está disponível no **facilidade de acesso** , bem como exibir as propriedades.) Se você encontrar problemas, execute as [diretrizes de colocação de layout em](https://developer.microsoft.com/windows/design) e fornecer recursos adicionais para diferente fatores de dimensionamento.
+Use as opções de exibição do sistema que ajustam o valor de pontos por polegada (dpi) da exibição, e garanta que a interface de usuário de seu aplicativo seja dimensionada corretamente quando o valor de dpi mudar. (Alguns usuários alterem valores de dpi como uma opção de acessibilidade, está disponível no **facilidade de acesso** , bem como exibir as propriedades.) Se você encontrar problemas, execute as [diretrizes de colocação de layout em](https://developer.microsoft.com/windows/apps/design) e fornecer recursos adicionais para diferente fatores de dimensionamento.
 
 <span id="verify_main_app_scenarios_by_using_narrator"/>
 <span id="VERIFY_MAIN_APP_SCENARIOS_BY_USING_NARRATOR"/>
@@ -164,4 +164,4 @@ Um aspecto que você pode testar é se há elementos aparecendo na exibição do
 * [Práticas a serem evitadas](practices-to-avoid.md)
 * [Automação da Interface do Usuário](https://docs.microsoft.com/windows/desktop/WinAuto/entry-uiauto-win32)
 * [Acessibilidade no Windows](https://go.microsoft.com/fwlink/p/?LinkId=320802)
-* [Introdução ao Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)
+* [Introdução ao Narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

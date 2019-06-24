@@ -6,12 +6,12 @@ ms.date: 01/3/2019
 ms.topic: article
 keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 2561f18e2ac054c8b378b0c7c0a9689bebcc4140
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3b25283dbe8feff74ba994efba31c542f59171d9
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611251"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317887"
 ---
 # <a name="device-portal-for-hololens"></a>Device Portal para HoloLens
 
@@ -21,12 +21,12 @@ ms.locfileid: "57611251"
 ### <a name="enable-device-portal"></a>Habilitar o Device Portal
 
 1. Ligue seu HoloLens e coloque o dispositivo.
-2. Faça o gesto [bloom](https://dev.windows.com/holographic/Gestures.html#Bloom) para iniciar o menu principal.
-3. Fixe o olhar no bloco **Configurações** e faça o gesto [air tap](https://dev.windows.com/holographic/Gestures.html#Press_and_release). Faça um segundo air tap para colocar o aplicativo em seu ambiente. O aplicativo Configurações será iniciado depois disso.
+2. Faça o gesto [bloom](https://developer.microsoft.com/mixed-reality#Bloom) para iniciar o menu principal.
+3. Fixe o olhar no bloco **Configurações** e faça o gesto [air tap](https://developer.microsoft.com/mixed-reality#Press_and_release). Faça um segundo air tap para colocar o aplicativo em seu ambiente. O aplicativo Configurações será iniciado depois disso.
 4. Selecione item de menu **Atualização**.
 5. Selecione o item de menu **Para desenvolvedores**.
 6. Habilite o **Modo de Desenvolvedor**.
-7. [Role para baixo](https://dev.windows.com/holographic/Gestures.html#Navigation) e habilite o Device Portal.
+7. [Role para baixo](https://developer.microsoft.com/mixed-reality#Navigation) e habilite o Device Portal.
 
 
 ### <a name="pair-your-device"></a>Emparelhar seu dispositivo
@@ -51,7 +51,7 @@ ms.locfileid: "57611251"
 #### <a name="connect-to-an-emulator"></a>Conectar-se a um emulador 
 
 Você também pode usar o Device Portal com seu emulador. Para se conectar ao Device Portal, use a barra de ferramentas. Clique neste ícone:
-- Abra o Portal do dispositivo: Abra o Windows Device Portal para o sistema de operacional HoloLens no emulador.
+- Abra o Portal do dispositivo: Abre o Portal de Dispositivos do Windows para o sistema operacional HoloLens no emulador.
 
 #### <a name="create-a-username-and-password"></a>Criar um nome de usuário e senha 
 
@@ -89,12 +89,12 @@ Cada HoloLens gera um certificado autoassinado exclusivo para sua conexão SSL. 
 A sessão do Device Portal é iniciada na home page. Acesse outras páginas a partir da barra de navegação no lado esquerdo da página inicial.
 
 A barra de ferramentas na parte superior da página fornece acesso a recursos e status normalmente usados.
-- **On-line**: Indica se o dispositivo está conectado ao Wi-Fi.
+- **Online**: Indica se o dispositivo está conectado ao Wi-Fi.
 - **Desligamento**: Desativa o dispositivo.
 - **Reiniciar**: Os ciclos de energia no dispositivo.
 - **Segurança**: Abre a página de segurança do dispositivo.
 - **Legal**: Indica a temperatura do dispositivo.
-- **CA**: Indica se o dispositivo está conectado e cobrança.
+- **A/C**: Indica se o dispositivo está conectado e cobrança.
 - **Ajudar a**: Abre a página de documentação de interface REST.
 
 A página inicial mostra as seguintes informações:

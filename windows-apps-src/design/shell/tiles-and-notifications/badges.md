@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b41069f1ca964f978ba0cff73f5c34a9db133a10
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7e0c3802f0b6163ad5f0e179d90148bae543aeab
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649081"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320852"
 ---
 # <a name="badge-notifications-for-uwp-apps"></a>Notificações de selo para aplicativos UWP
 
@@ -196,7 +196,7 @@ private void clearBadge()
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-* [Exemplo de notificações](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> Mostra como criar blocos dinâmicos, enviar atualizações de selo e exibir notificações do sistema. 
+* [Exemplo de notificações](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)<br/> Mostra como criar blocos dinâmicos, enviar atualizações de selo e exibir notificações do sistema. 
 
 ## <a name="related-articles"></a>Artigos relacionados
 

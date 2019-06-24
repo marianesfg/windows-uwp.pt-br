@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, codec, codificador, decodificador, consulta
 ms.localizationpriority: medium
-ms.openlocfilehash: 4241aad5a01617d6a002c6f5d6da0a4bb1455616
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e447f39258a4a0439bcbd3cca7aeb4407a9b1d26
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593861"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318609"
 ---
 # <a name="query-for-codecs-installed-on-a-device"></a>Consulta de codecs instalados em um dispositivo
 A classe **[CodecQuery](https://docs.microsoft.com/uwp/api/windows.media.core.codecquery)** permite que você consulte os codecs instalados no dispositivo atual. A lista de codecs incluídos no Windows 10 para diferentes famílias de dispositivos é mostrada no artigo [Codecs compatíveis](supported-codecs.md), mas já que os usuários e os aplicativos podem instalar codecs adicionais em um dispositivo, talvez você queira consultar o suporte ao codec em tempo de execução para determinar quais codecs estão disponíveis no dispositivo atual.
@@ -32,7 +32,7 @@ Especifique uma cadeia de caracteres vazia ou nula para o valor de subtipo retor
 
 [!code-cs[FindAllEncoders](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetFindAllEncoders)]
 
-A cadeia de caracteres de subtipo passada para **FindAllAsync** pode ser uma representação de cadeia de caracteres do GUID de subtipo, que é definido pelo sistema, ou um código FOURCC para o subtipo. O conjunto de GUIDs de subtitpo de mídia com suporte é mostrado nos artigos [GUIDs de subtipo de áudio](https://msdn.microsoft.com/library/windows/desktop/aa372553(v=vs.85).aspx) e [GUIDs de subtipo de vídeo](https://msdn.microsoft.com/library/windows/desktop/aa370819(v=vs.85).aspx), mas a classe **[CodecSubtypes](https://docs.microsoft.com/uwp/api/windows.media.core.codecsubtypes)** fornece propriedades que retornam os valores de GUID para cada tipo compatível. Para saber mais sobre códigos FOURCC, veja [Códigos FOURCC](https://msdn.microsoft.com/library/windows/desktop/dd375802(v=vs.85).aspx) 
+A cadeia de caracteres de subtipo passada para **FindAllAsync** pode ser uma representação de cadeia de caracteres do GUID de subtipo, que é definido pelo sistema, ou um código FOURCC para o subtipo. O conjunto de GUIDs de subtitpo de mídia com suporte é mostrado nos artigos [GUIDs de subtipo de áudio](https://docs.microsoft.com/windows/desktop/medfound/audio-subtype-guids) e [GUIDs de subtipo de vídeo](https://docs.microsoft.com/windows/desktop/medfound/video-subtype-guids), mas a classe **[CodecSubtypes](https://docs.microsoft.com/uwp/api/windows.media.core.codecsubtypes)** fornece propriedades que retornam os valores de GUID para cada tipo compatível. Para saber mais sobre códigos FOURCC, veja [Códigos FOURCC](https://docs.microsoft.com/windows/desktop/DirectShow/fourcc-codes) 
 
 O exemplo a seguir especifica o código FOURCC "H264" para determinar se há um decodificador de vídeo H.264 instalado no dispositivo. Você também pode executar essa consulta antes de tentar reproduzir conteúdo de vídeo H.264. Você também pode manipular codecs sem suporte ao tempo de reprodução. Para saber mais, veja [Manipular erros desconhecidos e de codecs sem suporte ao abrir itens de mídia](https://docs.microsoft.com/windows/uwp/audio-video-camera/media-playback-with-mediasource#handle-unsupported-codecs-and-unknown-errors-when-opening-media-items).
 

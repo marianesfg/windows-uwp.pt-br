@@ -6,12 +6,12 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: c6dc07ff35cdd90deaddff06f89aa585aa63156a
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 49f03a1ae5ed0ea1a602103e2181c252c8c29c2f
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335024"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319326"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>Use o Kit de Ferramentas de Aplicativo Multilíngue 4.0
 
@@ -58,7 +58,7 @@ Na janela de saída (mostrando a saída do Kit de Ferramentas de Aplicativo Mult
 Siga estas etapas para adicionar idiomas ao seu projeto.
 
 1. Clique com o botão direito no nó do projeto, em Gerenciador de Soluções.
-2. Clique em **Kit de Ferramentas de Aplicativo Multilíngue** > **Adicionar idiomas de tradução...**.
+2. Clique em **Kit de Ferramentas de Aplicativo Multilíngue** > **Adicionar idiomas de tradução...** .
 3. No diálogo Idiomas de Tradução, selecione o(s) idioma(s) aos quais deseja oferecer suporte e clique em OK.
 
 O kit de ferramentas faz isso em resposta.
@@ -115,7 +115,7 @@ Você também pode iniciar o Editor Multilíngue da seguinte forma. Ir até o In
 
 #### <a name="option-2-send-the-xlf-files-to-a-third-party-for-translation"></a>Opção 2. Envie os arquivos .xlf para um terceiro para serem traduzidos
 
-Para terceirizar o trabalho de tradução e edição aos tradutores, selecione os arquivos .xlf desejados no Gerenciador de Soluções, clique neles com o botão direito do mouse e em **Kit de Ferramentas de Aplicativo Multilíngue** > **Exportar traduções...**.
+Para terceirizar o trabalho de tradução e edição aos tradutores, selecione os arquivos .xlf desejados no Gerenciador de Soluções, clique neles com o botão direito do mouse e em **Kit de Ferramentas de Aplicativo Multilíngue** > **Exportar traduções...** .
 
 Selecione **saída: Destinatário do email** na caixa de diálogo de recursos de cadeia de caracteres exportação e em Okey e seus arquivos serão ser compactado e anexado a um novo email. Selecione **saída: Local da pasta do arquivo**navegador para uma pasta e clique em Okey, opcionalmente escolha para os arquivos a ser compactado, Okey novamente e em seus arquivos serão (compactado e) salvo no local que você escolheu, dentro de uma nova pasta chamada para o seu projeto.
 
@@ -127,11 +127,11 @@ Faça a compilação do seu projeto novamente para que as cadeias de caracteres 
 
 Estes provedores de terceiros oferecem serviços de localização e podem ajudar você.
 
-- [Elanex](https://www.elanex.com/)
+- [Elanex](https://www.strakertranslations.com/)
 - [Keywords Studios](https://www.keywordsstudios.com/)
 - [Lionbridge](https://www.lionbridge.com)
-- [Moravia](https://www.moravia.com/)
-- [SDL](https://www.sdl.com/languagecloud/managed-translation/ilp/instantquote)
+- [Moravia](https://www.rws.com/what-we-do/rws-moravia/)
+- [SDL](https://www.sdl.com/translate/get-started/instant-quote.html)
 - [Welocalize](https://www.welocalize.com/)
 
 > [!NOTE]

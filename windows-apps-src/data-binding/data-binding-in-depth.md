@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 972556a3d8d46dce11b251fc11d209fa96d3b751
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 150ea5fc9f5e91171f29cc985351856487e91d4a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362587"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318764"
 ---
 # <a name="data-binding-in-depth"></a>Vinculação de dados em detalhes
 
@@ -43,7 +43,7 @@ Independentemente do modo, há dois tipos de associação, e elas são ambos nor
 **Aplicativos de exemplo que demonstram {X:Bind}**
 
 -   [Amostra de {x:Bind}](https://go.microsoft.com/fwlink/p/?linkid=619989).
--   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame).
+-   [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper).
 -   [Amostra de noções básicas de interface do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=619992).
 
 **Aplicativos de exemplo que demonstram {Binding}**
@@ -199,7 +199,7 @@ void HostViewModel::PropertyChanged(winrt::event_token const& token) noexcept
 
 Agora a propriedade **NextButtonText** é observável. Quando você cria uma associação unidirecional ou bidirecional com essa propriedade (mostraremos posteriormente), o objeto de associação resultante assina o evento **PropertyChanged**. Quando esse evento é acionado, o manipulador do objeto de associação recebe um argumento que contém o nome da propriedade que foi alterada. É assim que o objeto de associação sabe qual valor de propriedade usar e ler novamente.
 
-Para que você não precisa implementar o padrão mostrado acima várias vezes, se você estiver usando o C# e em seguida, você pode simplesmente derivar do **BindableBase** classe grave que você encontrará o [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) exemplo (em a pasta "Comum"). Consulte um exemplo de como fica.
+Para que você não precisa implementar o padrão mostrado acima várias vezes, se você estiver usando o C# e em seguida, você pode simplesmente derivar do **BindableBase** classe grave que você encontrará o [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper) exemplo (em a pasta "Comum"). Consulte um exemplo de como fica.
 
 ```csharp
 public class HostViewModel : BindableBase
@@ -604,7 +604,7 @@ Click="{x:Bind RootFrame.GoForward}"/>
 
 Métodos sobrecarregados não podem ser usados para manipular um evento com essa técnica. Além disso, se o método que manipula o evento tem parâmetros, eles devem ser atribuíveis dos tipos de todos os parâmetros do evento, respectivamente. Nesse caso, [**Frame.GoForward**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goforward) não é sobrecarregado e não tem parâmetros (mas ainda seria válido mesmo se tivesse dois parâmetros **object**). [**Frame.GoBack** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goback) está sobrecarregado, no entanto, para que possamos não é possível usar esse método com essa técnica.
 
-A técnica de associação de eventos é semelhante a implementar e consumir comandos (um comando é uma propriedade que retorna um objeto que implementa a interface [**ICommand**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand)). [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) e [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) funcionam com comandos. Para que você não precise implementar o padrão de comando várias vezes, pode usar a classe auxiliar **DelegateCommand** que encontrará na amostra [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (na pasta "Comum").
+A técnica de associação de eventos é semelhante a implementar e consumir comandos (um comando é uma propriedade que retorna um objeto que implementa a interface [**ICommand**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand)). [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) e [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) funcionam com comandos. Para que você não precise implementar o padrão de comando várias vezes, pode usar a classe auxiliar **DelegateCommand** que encontrará na amostra [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper) (na pasta "Comum").
 
 ## <a name="binding-to-a-collection-of-folders-or-files"></a>Associando a uma coleção de pastas ou arquivos
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d5d4e7b71ea0fcc6f18106ee1d11c3dead1438c7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d25cd3f8a963d85f704e32482475827462ddba58
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360667"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318259"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>Reproduzir áudio e vídeo com o MediaPlayer
 
@@ -161,7 +161,7 @@ O próximo exemplo mostra como usar um controle **Slider** para mostrar a posiç
 
 [!code-cs[CreateSourceWithOpenCompleted](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetCreateSourceWithOpenCompleted)]
 
-O manipulador **OpenOperationCompleted** é usado como uma oportunidade de descobrir a duração do conteúdo da origem da mídia. Depois de determinar a duração, o valor máximo do controle **Slider** é definido como o número total de segundos do item de mídia. O valor é definido em uma chamada para [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para garantir que ele seja executado no thread da interface do usuário.
+O manipulador **OpenOperationCompleted** é usado como uma oportunidade de descobrir a duração do conteúdo da origem da mídia. Depois de determinar a duração, o valor máximo do controle **Slider** é definido como o número total de segundos do item de mídia. O valor é definido em uma chamada para [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para garantir que ele seja executado no thread da interface do usuário.
 
 [!code-cs[DeclareDuration](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareDuration)]
 

@@ -5,19 +5,19 @@ ms.date: 06/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 865c95fe5453a038a73b397fdcf32f77f9e8defb
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: aa8bec12ca3920b1e273d8f2d98186f62a340016
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63828070"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321528"
 ---
 # <a name="supported-point-of-service-peripherals"></a>Periféricos de ponto de serviço compatíveis
 
 ## <a name="barcode-scanner"></a>Scanner de código de barras
 | Conectividade | Suporte |
 | -------------|-------------|
-| USB          | <p>Windows contém um driver de classe de caixa de entrada para scanners de código de barras USB conectado que se baseia na especificação HID POS Scanner tabela de uso (8C) definida pela [site USB.org](https://www.usb.org/developers/hidpage/). Veja a tabela abaixo para obter uma lista de dispositivos compatíveis conhecidos.  Consulte o manual do scanner de código de barras ou entre em contato com o fabricante para determinar como configurar o scanner no modo **Scanner USB.HID.POS** </p><p>O Windows também é compatível com a implementação de drivers específicos do fornecedor para dar suporte a scanners de código de barras adicionais que não dão suporte ao padrão de Scanner USB.HID.POS. Entre em contato com o fabricante do scanner de código de barras para ver a disponibilidade de drivers específicos do fornecedor.</p><p>Fabricantes de scanner de código de barras, consultem o [Guia de design de driver de scanner de código de barras](https://aka.ms/pointofservice-drv) para obter informações sobre como criar um driver de scanner de código de barras personalizado</p> |
+| USB          | <p>Windows contém um driver de classe de caixa de entrada para scanners de código de barras USB conectado que se baseia na especificação HID POS Scanner tabela de uso (8C) definida pela [site USB.org](https://www.usb.org/hid). Veja a tabela abaixo para obter uma lista de dispositivos compatíveis conhecidos.  Consulte o manual do scanner de código de barras ou entre em contato com o fabricante para determinar como configurar o scanner no modo **Scanner USB.HID.POS** </p><p>O Windows também é compatível com a implementação de drivers específicos do fornecedor para dar suporte a scanners de código de barras adicionais que não dão suporte ao padrão de Scanner USB.HID.POS. Entre em contato com o fabricante do scanner de código de barras para ver a disponibilidade de drivers específicos do fornecedor.</p><p>Fabricantes de scanner de código de barras, consultem o [Guia de design de driver de scanner de código de barras](https://aka.ms/pointofservice-drv) para obter informações sobre como criar um driver de scanner de código de barras personalizado</p> |
 | Bluetooth    | <p>O Windows oferece suporte ao protocolo SPP SSI com base em scanners de código de barras Bluetooth. Veja a tabela abaixo para obter uma lista de dispositivos compatíveis conhecidos. Consulte o manual do scanner de código de barras ou entre em contato com o fabricante para determinar como configurar o scanner no modo **SPP-SSI**</p> |
 | Webcam       | <p>A partir do Windows 10, versão 1803, você pode ler códigos de barras por meio de uma lente de câmera padrão de um aplicativo universal do Windows. Recomenda-se o uso de uma câmera compatível com o foco automático e uma resolução mínima de 1920 x 1440.  Algumas câmeras de resolução inferior podem ler códigos de barras padrão se o código de barras for impresso de forma grande o suficiente.  Os códigos de barras com elementos mais finos podem exigir câmeras com maior resolução.</p>| 
 |
@@ -68,8 +68,8 @@ ms.locfileid: "63828070"
 
 
 ¹ Upgradable para dar suporte a códigos de barras 2D por meio de Honeywell <br/>
-Firmware de mínimo ² 009 (2018.07.09) necessário. Atualizável usando Zebra [123Scan](http://www.zebra.com/123Scan).<br/>
-Firmware de mínimo ³ 016 (2018.01.18) necessário. Atualizável usando Zebra [123Scan](http://www.zebra.com/123Scan). 
+Firmware de mínimo ² 009 (2018.07.09) necessário. Atualizável usando Zebra [123Scan](http://www.zebra.com/123scan).<br/>
+Firmware de mínimo ³ 016 (2018.01.18) necessário. Atualizável usando Zebra [123Scan](http://www.zebra.com/123scan). 
 
 
 <hr>

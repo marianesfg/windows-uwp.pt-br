@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, várias amostras, direct3d
 ms.localizationpriority: medium
-ms.openlocfilehash: b547e47b7d896ab818349dcc70ee9dc3c7078847
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 976cdfb5f1dc92f693f7296d6e33d7ccc4c4d6e7
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368380"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318940"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Multisampling no Windows Universal aplicativos UWP (plataforma)
 
@@ -30,7 +30,7 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
 
 1.  Chame [**ID3D11Device::CheckFeatureSupport**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) para descobrir quais formatos DXGI podem ser usados com o multisampling. Forneça os formatos de destino de renderização que seu jogo pode usar. O destino de renderização e a resolução de destino deve usar o mesmo formato, portanto, verifique para ambos [ **D3D11\_formato\_suporte\_MULTISAMPLE\_RENDERTARGET** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ne-d3d11-d3d11_format_support) e **D3D11\_formato\_suporte\_MULTISAMPLE\_RESOLVER**.
 
-    **9 de nível de recurso:  ** Embora o recurso de nível 9 dispositivos [garantir suporte para formatos de destino de renderização de texturas](https://docs.microsoft.com/previous-versions//ff471324(v=vs.85)), não há garantia de suporte para destinos de multisample resolver. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
+    **9 de nível de recurso:  ** Embora o recurso de nível 9 dispositivos [garantir suporte para formatos de destino de renderização de texturas](https://docs.microsoft.com/previous-versions/ff471324(v=vs.85)), não há garantia de suporte para destinos de multisample resolver. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
 
     O código a seguir verifica o suporte ao multisampling para todos os o DXGI\_valores de formato:
 

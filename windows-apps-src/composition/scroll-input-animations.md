@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, animação
 ms.localizationpriority: medium
-ms.openlocfilehash: 118b3f6e306e60d1d8d569f0d58f2d77ea30d9a8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 25b0732b7c29653d18f0e018698ab4b6398d402a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635061"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318069"
 ---
 # <a name="enhance-existing-scrollviewer-experiences"></a>Aprimorar as experiências existentes do ScrollViewer
 
@@ -61,7 +61,7 @@ Etapas gerais para começar:
 
 ## <a name="example"></a>Exemplo
 
-Vamos analisar como o paralaxe de exemplo mostrada acima é combinado. Para referência, todo o código-fonte do app é encontrado no [repositório de laboratórios de desenvolvimento de interface do usuário do Windows no GitHub](https://github.com/Microsoft/WindowsUIDevLabs).
+Vamos analisar como o paralaxe de exemplo mostrada acima é combinado. Para referência, todo o código-fonte do app é encontrado no [repositório de laboratórios de desenvolvimento de interface do usuário do Windows no GitHub](https://github.com/microsoft/WindowsCompositionSamples).
 
 A primeira providência a ser tomada é obter uma referência ao ScrollManipulationPropertySet.
 

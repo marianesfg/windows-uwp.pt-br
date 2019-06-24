@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp, proteção de informações do Windows, dados corporativos, proteção de dados corporativos, edp, aplicativos habilitados
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
-ms.openlocfilehash: f6938118b3a9041eea27367c3916e94ce34d468e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 42f08127567704b1c8623ac64857cc5afe0ef882
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595471"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321389"
 ---
 # <a name="windows-information-protection-wip"></a>Proteção de Informações do Windows (WIP)
 
@@ -42,8 +42,8 @@ Se os usuários cancelarem o registro de seus dispositivos no sistema MDM da org
 ![Ciclo de vida do Wip](images/wip-lifecycle.png)
 
 > **Leia mais sobre WIP** <br>
-* [Apresentando a proteção de informações do Windows](https://blogs.technet.microsoft.com/windowsitpro/2016/06/29/introducing-windows-information-protection/)
-* [Proteger seus dados empresariais usando a proteção de informações do Windows (WIP)](https://technet.microsoft.com/library/dn985838(v=vs.85).aspx)
+* [Apresentando a proteção de informações do Windows](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/bg-p/Windows10Blog)
+* [Proteger seus dados empresariais usando a proteção de informações do Windows (WIP)](https://docs.microsoft.com/windows/whats-new/edp-whats-new-overview)
 
 Se seu aplicativo estiver na lista de permissões, todos os dados produzidos por seu aplicativo estarão sujeitos às restrições de política. Isso significa que, se os administradores revogarem o acesso do usuário aos dados corporativos, esses usuários perderão acesso a todos os dados produzidos por seu aplicativo.
 

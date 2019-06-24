@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d2d1b2b4e6875730d5a6bfa8dd711e11ac5d049c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 81f50625d3af6728adcc6c377a249410354489dd
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642911"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322353"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Tempo de execução do Windows 8.x para a UWP estudo de caso: Aplicativo de exemplo QuizGame
 
@@ -40,7 +40,7 @@ O aplicativo utiliza padrões que usam modos e modelos de exibição. Como resul
 
 [Aplicativo do Windows 10 download o QuizGame10](https://go.microsoft.com/fwlink/?linkid=532954). Esse é o estado do aplicativo depois da portabilidade. 
 
-[Veja a versão mais recente deste exemplo no GitHub](https://github.com/Microsoft/Windows-appsample-quizgame).
+[Veja a versão mais recente deste exemplo no GitHub](https://github.com/microsoft/Windows-appsample-networkhelper).
 
 ## <a name="the-winrt-81-solution"></a>A solução do WinRT 8.1
 
@@ -94,7 +94,7 @@ Com base nessas opções, podemos realizará a portabilidade QuizGame.Windows pa
 
 **P2PHelper**
 
--   Na solução, crie um novo projeto de biblioteca de classes do Windows 10 (**novo projeto** &gt; **Windows Universal** &gt; **biblioteca de classes (Windows Universal)**) e nomeie-o P2PHelper.
+-   Na solução, crie um novo projeto de biblioteca de classes do Windows 10 (**novo projeto** &gt; **Windows Universal** &gt; **biblioteca de classes (Windows Universal)** ) e nomeie-o P2PHelper.
 -   Exclua Class1.cs do novo projeto.
 -   Copie P2PSession.cs, P2PSessionClient.cs e P2PSessionHost.cs para a pasta do novo projeto e inclua os arquivos copiados no novo projeto.
 -   O projeto será compilado sem precisar de outras alterações.
@@ -106,7 +106,7 @@ Com base nessas opções, podemos realizará a portabilidade QuizGame.Windows pa
 
 **QuizGameHost**
 
--   Criar um novo projeto de aplicativo do Windows 10 (**Add** &gt; **novo projeto** &gt; **Windows Universal** &gt; **em branco Aplicativo (Windows Universal)**) e nomeie-o QuizGameHost.
+-   Criar um novo projeto de aplicativo do Windows 10 (**Add** &gt; **novo projeto** &gt; **Windows Universal** &gt; **em branco Aplicativo (Windows Universal)** ) e nomeie-o QuizGameHost.
 -   Adicione uma referência ao P2PHelper (**adicionar referência** &gt; **projetos** &gt; **solução** &gt; **P2PHelper**).
 -   No **Gerenciador de Soluções**, crie uma nova pasta para cada uma das pastas compartilhadas no disco. Em seguida, clique em cada pasta que você acabou de criar e clique em **Add** &gt; **Item existente** e navegar de uma pasta. Abra a pasta compartilhada apropriada, selecione todos os arquivos e clique em **Adicionar como Link**.
 -   Copiar MainPage. XAML da \\QuizGame.Windows\\ à \\QuizGameHost\\ e altere o namespace para QuizGameHost.
@@ -133,7 +133,7 @@ por:
 
 **QuizGameClient**
 
--   Criar um novo projeto de aplicativo do Windows 10 (**Add** &gt; **novo projeto** &gt; **Windows Universal** &gt; **em branco Aplicativo (Windows Universal)**) e nomeie-o QuizGameClient.
+-   Criar um novo projeto de aplicativo do Windows 10 (**Add** &gt; **novo projeto** &gt; **Windows Universal** &gt; **em branco Aplicativo (Windows Universal)** ) e nomeie-o QuizGameClient.
 -   Adicione uma referência ao P2PHelper (**adicionar referência** &gt; **projetos** &gt; **solução** &gt; **P2PHelper**).
 -   No **Gerenciador de Soluções**, crie uma nova pasta para cada uma das pastas compartilhadas no disco. Em seguida, clique em cada pasta que você acabou de criar e clique em **Add** &gt; **Item existente** e navegar de uma pasta. Abra a pasta compartilhada apropriada, selecione todos os arquivos e clique em **Adicionar como Link**.
 -   Copiar MainPage. XAML da \\QuizGame.WindowsPhone\\ à \\QuizGameClient\\ e altere o namespace para QuizGameClient.

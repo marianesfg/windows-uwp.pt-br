@@ -5,12 +5,12 @@ keywords: atividade do usuário, atividades do usuário, linha do tempo, cortana
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2756231b067176da66c6dbcedf7a1452d5d109f4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ed268dd4ba07604db468ee24e5ea348acf806b39
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641151"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321806"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Continue a atividade do usuário, mesmo entre dispositivos
 
@@ -73,7 +73,7 @@ A primeira linha no método `GenerateActivityAsync()` acima obtém um [UserActiv
 
 Depois de obter ou criar a **UserActivity**, especifique os outros dois campos obrigatórios: `UserActivity.VisualElements.DisplayText`e `UserActivity.ActivationUri`.
 
-Em seguida, salve os metadados de **UserActivity** chamando [SaveAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.saveasync) e, finalmente, [CreateSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.createsession), que retorna uma [UserActivitySession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitysession). A **UserActivitySession** é o objeto que podemos usar para gerenciar quando o usuário realmente está envolvido com a **UserActivity**. Por exemplo, devemos chamar `Dispose()` na **UserActivitySession** quando o usuário sai da página. No exemplo acima, também chamamos `Dispose()` em `_currentActivity` antes de chamar `CreateSession()`. Isso ocorre porque fizemos `_currentActivity` um campo de membro de nossa página, e queremos parar qualquer atividade existente antes de começar uma nova (observação: o `?` é o [operador null-conditional](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operators) que testa para null antes de executar o acesso de membro).
+Em seguida, salve os metadados de **UserActivity** chamando [SaveAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.saveasync) e, finalmente, [CreateSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.createsession), que retorna uma [UserActivitySession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitysession). A **UserActivitySession** é o objeto que podemos usar para gerenciar quando o usuário realmente está envolvido com a **UserActivity**. Por exemplo, devemos chamar `Dispose()` na **UserActivitySession** quando o usuário sai da página. No exemplo acima, também chamamos `Dispose()` em `_currentActivity` antes de chamar `CreateSession()`. Isso ocorre porque fizemos `_currentActivity` um campo de membro de nossa página, e queremos parar qualquer atividade existente antes de começar uma nova (observação: o `?` é o [operador null-conditional](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-) que testa para null antes de executar o acesso de membro).
 
 Como, nesse caso, o `ActivationUri` é um esquema personalizado, também precisamos registrar o protocolo no manifesto do aplicativo. Isso é feito no arquivo XML Package.appmanifest ou usando o designer.
 
@@ -149,8 +149,8 @@ Windows.UI.Shell.AdaptiveCardBuilder.CreateAdaptiveCardFromJson(jsonCardText); /
 
 ## <a name="cross-platform-and-service-to-service-integration"></a>Integração de plataforma cruzada e serviço para serviço
 
-Se seu aplicativo é executado em várias plataformas (por exemplo, no Android e iOS), ou mantém o estado do usuário na nuvem, você pode publicar UserActivities via [Microsoft Graph](https://developer.microsoft.com/graph/).
-Depois que seu aplicativo ou serviço está autenticado com uma conta da Microsoft, é preciso apenas duas chamadas REST simples para gerar objetos de [Atividade](https://developer.microsoft.com/graph/docs/api-reference/beta/api/projectrome_put_activity) e [Histórico](https://developer.microsoft.com/graph/docs/api-reference/beta/resources/projectrome_historyitem), usando os mesmos dados como descrito acima.
+Se seu aplicativo é executado em várias plataformas (por exemplo, no Android e iOS), ou mantém o estado do usuário na nuvem, você pode publicar UserActivities via [Microsoft Graph](https://developer.microsoft.com/graph).
+Depois que seu aplicativo ou serviço está autenticado com uma conta da Microsoft, é preciso apenas duas chamadas REST simples para gerar objetos de [Atividade](https://docs.microsoft.com/graph/api/resources/projectrome-activity) e [Histórico](https://docs.microsoft.com/graph/api/resources/projectrome-historyitem), usando os mesmos dados como descrito acima.
 
 ## <a name="summary"></a>Resumo
 
@@ -158,7 +158,7 @@ Você pode usar a API [UserActivity](https://docs.microsoft.com/uwp/api/windows.
 * Saiba mais sobre o [ **UserActivity** API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 * Confira o [exemplo de código](https://github.com/Microsoft/project-rome).
 * Consulte [Cartões Adaptáveis mais sofisticados](https://adaptivecards.io/).
-* Publique uma **UserActivity** do iOS, Android ou seu serviço Web via [Microsoft Graph](https://developer.microsoft.com/graph/).
+* Publique uma **UserActivity** do iOS, Android ou seu serviço Web via [Microsoft Graph](https://developer.microsoft.com/graph).
 * Saiba mais sobre o [Project Rome no GitHub](https://github.com/Microsoft/project-rome).
 
 ## <a name="key-apis"></a>APIs-chave
@@ -172,4 +172,4 @@ Você pode usar a API [UserActivity](https://docs.microsoft.com/uwp/api/windows.
 * [Visualizador de cartões adaptáveis, exemplos](https://adaptivecards.io/)
 * [Tratar a ativação do URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 * [Interação com seus clientes em qualquer plataforma usando o Microsoft Graph, o Feed de atividades e os cartões adaptáveis](https://channel9.msdn.com/Events/Connect/2017/B111)
-* [Microsoft Graph](https://developer.microsoft.com/graph/)
+* [Microsoft Graph](https://developer.microsoft.com/graph)

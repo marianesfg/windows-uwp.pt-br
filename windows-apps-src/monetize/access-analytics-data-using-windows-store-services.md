@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 14a1b73a2c82beea746d40c25bfa18ddf6171203
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5514ea3a0e416ad2a0b7b75084bc66ad057c1a73
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372006"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320976"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Store
 
@@ -106,7 +106,7 @@ Os métodos de análise a seguir estão disponíveis para uso por contas de dese
 
 ### <a name="methods-for-xbox-live-services"></a>Métodos para serviços Xbox Live
 
-Os métodos adicionais a seguir estão disponíveis para uso por contas de desenvolvedor com jogos que usam os [serviços Xbox Live](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md).
+Os métodos adicionais a seguir estão disponíveis para uso por contas de desenvolvedor com jogos que usam os [serviços Xbox Live](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md).
 
 | Cenário       | Métodos      |
 |---------------|--------------------|

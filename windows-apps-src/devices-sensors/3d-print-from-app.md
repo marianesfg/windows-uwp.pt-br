@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 3dprinting, impressão 3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 712efde0293edff6134309ac2d6d9105413a2877
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e2ed99720afdccef297d46853d4a2445b497195e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370420"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321693"
 ---
 # <a name="3d-printing-from-your-app"></a>Impressão 3D a partir de seu aplicativo
 
@@ -54,7 +54,7 @@ Insira um **TextBlock** para feedback de interface do usuário.
 ## <a name="get-the-3d-data"></a>Obtenha os dados 3D
 
 
-O método pelo qual o seu aplicativo obtém dados de geometria 3D varia. Seu aplicativo pode recuperar dados de uma varredura 3D, baixar dados de modelo de um recurso da web ou gerar uma malha 3D de forma programática usando fórmulas matemáticas ou entrada do usuário. Por questões de simplicidade, este guia mostrará como carregar um arquivo de dados 3D (de qualquer um dos vários tipos de arquivo comuns) em memória de programa do armazenamento do dispositivo. A [biblioteca de modelos 3D Builder](https://developer.microsoft.com/windows/hardware/3d-builder-model-library) fornece uma variedade de modelos que você pode baixar facilmente em seu dispositivo.
+O método pelo qual o seu aplicativo obtém dados de geometria 3D varia. Seu aplicativo pode recuperar dados de uma varredura 3D, baixar dados de modelo de um recurso da web ou gerar uma malha 3D de forma programática usando fórmulas matemáticas ou entrada do usuário. Por questões de simplicidade, este guia mostrará como carregar um arquivo de dados 3D (de qualquer um dos vários tipos de arquivo comuns) em memória de programa do armazenamento do dispositivo. A [biblioteca de modelos 3D Builder](https://developer.microsoft.com/windows/hardware/3d-print/windows-3d-printing) fornece uma variedade de modelos que você pode baixar facilmente em seu dispositivo.
 
 Em seu método `OnLoadClick`, use a classe [**FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) para carregar um único arquivo na memória do seu aplicativo.
 

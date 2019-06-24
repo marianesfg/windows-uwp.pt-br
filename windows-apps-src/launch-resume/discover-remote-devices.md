@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma
 ms.localizationpriority: medium
-ms.openlocfilehash: 665a40cf69b7518643390abddc3895be07c63c5c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 83230e17548f022767dcdde6b17fa9a93d6d9304
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366191"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320962"
 ---
 # <a name="discover-remote-devices"></a>Descobrir dispositivos remotos
 O aplicativo pode usar a rede sem fio, Bluetooth e uma conexão na nuvem para descobrir dispositivos Windows conectados com a mesma conta da Microsoft que o dispositivo de descoberta. Os dispositivos remotos não precisam ter nenhum software especial instalado para ser descoberto.
@@ -48,7 +48,7 @@ Quando o método [**Start**](https://docs.microsoft.com/uwp/api/windows.system.r
 A partir daí, o procedimento para tratar eventos, recuperar objetos [**RemoteSystem**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem) e se conectar a dispositivos remotos é exatamente o mesmo descrito em [Iniciar um aplicativo remoto](launch-a-remote-app.md). Ou seja, os objetos **RemoteSystem** são armazenados como propriedades dos objetos [**RemoteSystemAddedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystemAddedEventArgs), que são passados em cada evento **RemoteSystemAdded**.
 
 ## <a name="discover-devices-by-address-input"></a>Descobrir dispositivos por entrada de endereço
-Alguns dispositivos podem não estar associados um usuário nem ser detectáveis com uma verificação, mas eles ainda poderão ser acessados se o aplicativo descoberto usar um endereço direto. A classe [**HostName**](https://docs.microsoft.com/uwp/api/windows.networking.hostname) é usada para representar o endereço de um dispositivo remoto. Isso geralmente é armazenado na forma de um endereço IP, mas vários outros formatos são permitidos (consulte o [**Construtor HostName**](https://docs.microsoft.com/uwp/api/windows.networking.hostname.) para obter detalhes).
+Alguns dispositivos podem não estar associados um usuário nem ser detectáveis com uma verificação, mas eles ainda poderão ser acessados se o aplicativo descoberto usar um endereço direto. A classe [**HostName**](https://docs.microsoft.com/uwp/api/windows.networking.hostname) é usada para representar o endereço de um dispositivo remoto. Isso geralmente é armazenado na forma de um endereço IP, mas vários outros formatos são permitidos (consulte o [**Construtor HostName**](https://docs.microsoft.com/uwp/api/windows.networking.hostname.-ctor) para obter detalhes).
 
 Um objeto **RemoteSystem** será recuperado se o objeto **HostName** válido for fornecido. Se os dados de endereço forem inválidos, uma referência ao objeto `null` será retornada.
 

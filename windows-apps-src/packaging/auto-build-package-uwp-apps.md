@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: cb21573dac0c4cc4fc2d6aa2e2345c56631fde87
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 61525e2a4a088e37184bb93526722e0bf23fbd56
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372759"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319817"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu aplicativo UWP
 
@@ -119,7 +119,7 @@ O pipeline UWP padrão não salva os artefatos gerados. Para adicionar os recurs
 
 Você pode ver os artefatos gerados na **artefatos** página resultados da opção de compilação.
 
-![artefatos](images/building-screen6.png)
+![artifacts](images/building-screen6.png)
 
 Porque definimos os `UapAppxPackageBuildMode` argumento para `StoreUpload`, a pasta de artefatos inclui o pacote para o envio para a Store (.msixupload/.appxupload). Observe que você também pode enviar um pacote de aplicativo regular (.msix/.appx) ou um pacote de aplicativos (.msixbundle/.appxbundle/) para a Store. Para os fins deste artigo, vamos usar o arquivo .appxupload.
 
@@ -140,7 +140,7 @@ Em seguida, remova o `AppxBundle` argumento de MSBuild da etapa de compilação.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Compilar seu aplicativo .NET para Windows](https://www.visualstudio.com/docs/build/get-started/dot-net)
+- [Compilar seu aplicativo .NET para Windows](https://docs.microsoft.com/vsts/build-release/get-started/dot-net)
 - [Empacotando aplicativos da UWP](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
-- [Aplicativos LOB de sideload no Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
+- [Aplicativos LOB de sideload no Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10)
 - [Criar um certificado de assinatura do pacote](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)

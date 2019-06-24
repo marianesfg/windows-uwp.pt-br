@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 91d88dc78fd02ae3f16e1d980aa207d1dd458417
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9d0f6cdf4818743e3b5a3cc7c5a6b13f69f40afa
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597821"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318456"
 ---
 # <a name="my-people-sharing"></a>Compartilhamento de Minhas Pessoas
 
@@ -29,7 +29,7 @@ Há três etapas que você deve seguir para habilitar seu aplicativo como destin
 
 1. [Declare suporte para o contrato de ativação shareTarget no manifesto do aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
 2. [Anote os contatos que os usuários podem compartilhar a usar seu aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
-3. Dê suporte a várias instâncias do aplicativo em execução ao mesmo tempo.  Os usuários devem poder interagir com a versão completa de seu aplicativo enquanto também o usam para compartilhar com outras pessoas. Eles podem usá-lo em várias janelas de compartilhamento ao mesmo tempo. Para dar suporte a isso, seu aplicativo precisa ser capaz de executar várias exibições simultaneamente. Para saber como fazer isso, consulte o artigo ["Mostrar vários modos de exibição para um aplicativo"](https://docs.microsoft.com/en-us/windows/uwp/layout/show-multiple-views).
+3. Dê suporte a várias instâncias do aplicativo em execução ao mesmo tempo.  Os usuários devem poder interagir com a versão completa de seu aplicativo enquanto também o usam para compartilhar com outras pessoas. Eles podem usá-lo em várias janelas de compartilhamento ao mesmo tempo. Para dar suporte a isso, seu aplicativo precisa ser capaz de executar várias exibições simultaneamente. Para saber como fazer isso, consulte o artigo ["Mostrar vários modos de exibição para um aplicativo"](https://docs.microsoft.com/windows/uwp/design/layout/show-multiple-views).
 
 Feito isso, seu aplicativo será exibido como destino de compartilhamento na janela de compartilhamento de Minhas Pessoas, que pode ser iniciada de duas maneiras:
 1. Um contato é escolhido pelo botão compartilhar.

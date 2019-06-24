@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: f20179b03461f2b7746cc6d0f4330bbf45c10427
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5c1a7de0e9e6817fc4b0bf1ada113f49e798641e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371950"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320542"
 ---
 # <a name="web-account-manager"></a>Gerenciador de Contas da Web
 
@@ -192,7 +192,7 @@ private async void GetAadTokenAsync(WebAccountProviderCommand command)
 }
 ```
 
-O restante deste artigo continua descrevendo o cenário MSA, mas o código para AAD é muito semelhante. Para saber mais sobre AAD/Graph, incluindo um exemplo completo no GitHub, consulte a [Documentação do Microsoft Graph](https://graph.microsoft.io/docs/platform/get-started).
+O restante deste artigo continua descrevendo o cenário MSA, mas o código para AAD é muito semelhante. Para saber mais sobre AAD/Graph, incluindo um exemplo completo no GitHub, consulte a [Documentação do Microsoft Graph](https://developer.microsoft.com/graph).
 
 ## <a name="use-the-token"></a>Usar o token
 

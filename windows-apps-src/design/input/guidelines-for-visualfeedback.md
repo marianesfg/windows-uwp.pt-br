@@ -8,12 +8,12 @@ keywords: feedback visual, feedback de foco, feedback de toque, visualização d
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f716b930a4d8b96a55a5741e5a520be624526fa
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9ab5d8b12539b7669f3459e62159177bfd95269d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363537"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317152"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Diretrizes de feedback visual
 
@@ -112,7 +112,7 @@ Para alterar as cores em uma base por controle, edite as propriedades dos elemen
 * [Diretrizes de movimento panorâmico](guidelines-for-panning.md)
 
 **Para desenvolvedores**
-* [Interações personalizadas do usuário](https://developer.microsoft.com/windows/design/inputs-devices)
+* [Interações personalizadas do usuário](https://docs.microsoft.com/windows/uwp/design/layout/index)
 
 **Exemplos**
 * [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)

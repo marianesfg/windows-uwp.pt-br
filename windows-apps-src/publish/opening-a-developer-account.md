@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 205ccd6a8a2424d96f2c18068f5bf4c15596fdcb
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: fb8bdb2d2052bb50ee9bc2c9c719f102ac1d9aa0
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63785007"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319985"
 ---
 # <a name="opening-a-developer-account"></a>Abrindo uma conta de desenvolvedor
 
@@ -72,7 +72,7 @@ Se você precisar ter acesso a várias pessoas, a conta da empresa entrando com 
 
 Usamos as informações de segurança que você forneceu para aumentar o nível de segurança da sua conta da Microsoft ao associá-la a várias formas de identificação. Isso dificulta bastante o acesso não autorizado à conta da Microsoft (e à conta de desenvolvedor). Além disso, se você se esquecer da senha ou se alguém tentar acessar a sua conta, poderemos entrar em contato para confirmar se você é o proprietário e/ou restabelecer o controle adequado da conta.
 
-Você deve ter no mínimo dois endereços de email ou números de telefone na sua conta da Microsoft. Recomendamos a adição do máximo possível. Lembre-se de que algumas informações de segurança precisam ser confirmadas antes de se tornarem válidas. Também revise suas informações de segurança com frequência e assegure que estejam atualizadas. Você pode gerenciar suas informações de segurança acessando https://account.microsoft.com/security e entrar com sua conta da Microsoft. Ver [informações de segurança e códigos de segurança](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) para obter mais informações.
+Você deve ter no mínimo dois endereços de email ou números de telefone na sua conta da Microsoft. Recomendamos a adição do máximo possível. Lembre-se de que algumas informações de segurança precisam ser confirmadas antes de se tornarem válidas. Também revise suas informações de segurança com frequência e assegure que estejam atualizadas. Você pode gerenciar suas informações de segurança acessando https://account.microsoft.com/security e entrar com sua conta da Microsoft. Ver [informações de segurança e códigos de segurança](https://support.microsoft.com/help/12428/microsoft-account-security-info-verification-codes) para obter mais informações.
 
 Quando você entrar no Centro de parceiros usando sua conta da Microsoft, o sistema pode solicitar que você verifique sua identidade por meio do envio de um código de segurança que você deve fornecer para concluir o processo de logon. É recomendável designar computadores que você usa com frequência, como *dispositivos confiáveis*. Quando você entrar em um dispositivo confiável, você normalmente não será solicitado para um código, embora, ocasionalmente, pode ser solicitado em situações específicas ou se você ainda não tiver entrado no dispositivo em muito tempo. Ver [adicionar um dispositivo confiável para sua conta da Microsoft](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) para obter mais informações.
 

@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d4150e7296badd3d31a9aacc7becd3d849f6affd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4cfd970b3ca070218adcea86612016e567df3879
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360417"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318017"
 ---
 # <a name="my-people-notifications"></a>Notificações de Minhas Pessoas
 
@@ -76,7 +76,7 @@ Além disso, o nó de nível superior da notificação do sistema deve incluir o
 
 > [!NOTE]
 > Se seu app utiliza as [APIs de ContactStore](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) e utiliza a propriedade [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para associar contatos armazenados no computador com contatos armazenados remotamente, é fundamental que o valor para a propriedade RemoteId seja estável e exclusivo. Isso significa que a ID remota deve identificar de modo consistente uma única conta de usuário e deve manter uma única marca para garantir que ela não entrará em conflito com as IDs remotas de outros contatos no computador, incluindo contatos que são de propriedade de outros apps.
-> Se as IDs remotas usadas por seu app não forem com certeza estáveis e exclusivas, você poderá usar a [classe RemoteIdHelper](https://msdn.microsoft.com/en-us/library/windows/apps/jj207024(v=vs.105).aspx#BKMK_UsingtheRemoteIdHelperclass) para adicionar uma marca exclusiva a todas as IDs remotas antes de adicioná-las ao sistema. Como alternativa, você pode optar por não usar a propriedade RemoteId e criar uma propriedade estendida personalizada na qual armazenará as IDs remotas de seus contatos.
+> Se as IDs remotas usadas por seu app não forem com certeza estáveis e exclusivas, você poderá usar a [classe RemoteIdHelper](https://docs.microsoft.com/previous-versions/windows/apps/jj207024(v=vs.105)#BKMK_UsingtheRemoteIdHelperclass) para adicionar uma marca exclusiva a todas as IDs remotas antes de adicioná-las ao sistema. Como alternativa, você pode optar por não usar a propriedade RemoteId e criar uma propriedade estendida personalizada na qual armazenará as IDs remotas de seus contatos.
 
 Além da segunda associação e conteúdo, você deve incluir outra conteúdo na primeira associação para a notificação do sistema de fallback. A notificação usará isso se precisar voltar a ser uma notificação do sistema regular (esse assunto será abordado em detalhes no [final deste artigo](/windows/uwp/contacts-and-calendar/my-people-notifications#falling-back-to-toast)).
 

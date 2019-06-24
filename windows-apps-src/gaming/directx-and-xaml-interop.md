@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, interoperabilidade com xaml
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a7b9800bbcc9746db03eae50a99b701bfbfa815
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ad03a86ba18f11d8d63c2c98649e7f159f3d4f52
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368876"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321296"
 ---
 # <a name="directx-and-xaml-interop"></a>Interoperabilidade entre DirectX e XAML
 
@@ -32,7 +32,7 @@ DirectX fornece duas bibliotecas eficientes para gráficos 2D e 3D: Direct2D e M
 Se estiver implementando interoperabilidade personalizada entre XAML e DirectX, você precisa conhecer estes dois conceitos:
 
 -   As superfícies compartilhadas são regiões do tamanho da tela, definidas por XAML, em que você pode usar o DirectX para desenhar indiretamente, usando os tipos  [Windows::UI::Xaml::Media::ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagesource). Para superfícies compartilhadas, você não controla o tempo preciso para quando o novo conteúdo é exibido na tela. Em vez disso, as atualizações para a superfície compartilhada são sincronizadas para atualizar a estrutura do XAML.
--   [Cadeias de troca](https://msdn.microsoft.com/library/windows/desktop/bb206356(v=vs.85).aspx) representam uma coleção de buffers usados para exibir elementos gráficos com latência mínima. Normalmente, as cadeias de troca são atualizadas em 60 quadros por segundo separadamente do thread da interface do usuário. No entanto, as cadeias de troca usam mais memória e recursos da CPU para dar suporte a atualizações rápidas e são mais difíceis de usar, pois é necessário gerenciar vários threads.
+-   [Cadeias de troca](https://docs.microsoft.com/windows/desktop/direct3d9/what-is-a-swap-chain-) representam uma coleção de buffers usados para exibir elementos gráficos com latência mínima. Normalmente, as cadeias de troca são atualizadas em 60 quadros por segundo separadamente do thread da interface do usuário. No entanto, as cadeias de troca usam mais memória e recursos da CPU para dar suporte a atualizações rápidas e são mais difíceis de usar, pois é necessário gerenciar vários threads.
 
 Reflita sobre porque você está usando o DirectX. Ele será usado para compor ou animar um único controle que se encaixa dentro das dimensões da janela de exibição? Ela conterá a saída que precisa ser renderizada e controlada em tempo real, como em um jogo? Em caso afirmativo, você provavelmente precisará implementar uma cadeia de troca. Caso contrário, deve ser recomendado usando uma superfície compartilhada.
 
@@ -53,7 +53,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [SurfaceImage
 
 1.  Defina o tamanho da superfície compartilhada transmitindo a altura e a largura ao construtor [SurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource). Você também pode indicar se a superfície precisa de suporte alfa (opacidade).
 
-    Por exemplo: 
+    Por exemplo:
 
     `SurfaceImageSource^ surfaceImageSource = ref new SurfaceImageSource(400, 300);`
 
@@ -72,7 +72,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [SurfaceImage
         (void **)&m_sisNativeWithD2D);
     ```
 
-3.  Crie os dispositivos DXGI e D2D ao chamar primeiro [D3D11CreateDevice](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) e [D2D1CreateDevice](https://msdn.microsoft.com/library/windows/desktop/hh404272(v=vs.85).aspx) e então passe o dispositivo e o contexto para [ISurfaceImageSourceNativeWithD2D::SetDevice](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-setdevice). 
+3.  Crie os dispositivos DXGI e D2D ao chamar primeiro [D3D11CreateDevice](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) e [D2D1CreateDevice](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nf-d2d1_1-d2d1createdevice) e então passe o dispositivo e o contexto para [ISurfaceImageSourceNativeWithD2D::SetDevice](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-setdevice). 
 
     > [!NOTE]
     > Se for desenhar em sua **SurfaceImageSource** de um thread em segundo plano, você também precisará garantir que o dispositivo DXGI tenha habilitado o acesso com multithread. Isso só deverá ser feito se você pretende desenhar de um thread em segundo plano, por motivos de desempenho.

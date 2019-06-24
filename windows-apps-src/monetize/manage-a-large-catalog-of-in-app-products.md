@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, catálogo, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: b2292bbbe735d9121955d93407a53456176dbbee
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e297c01aa19449691e775c4d7d2c33028b234cfa
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371029"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320178"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>Gerenciar um catálogo abrangente de produtos no aplicativo
 
@@ -32,7 +32,7 @@ A Loja usará somente a *offerId* da solicitação de compra nos [PurchaseResult
 
 ## <a name="make-the-purchase-request-for-the-in-app-product"></a>Fazer a solicitação de compra para o produto no aplicativo
 
-A solicitação de compra para um produto específico em um catálogo abrangente é efetuada da mesma maneira como qualquer outra solicitação de compra em um aplicativo. Quando o aplicativo chama a nova sobrecarga do método [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), o aplicativo fornece *OfferId* e um objeto [ProductPurchaseDisplayProperties](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productpurchasedisplayproperties.) populado com o nome do produto no aplicativo.
+A solicitação de compra para um produto específico em um catálogo abrangente é efetuada da mesma maneira como qualquer outra solicitação de compra em um aplicativo. Quando o aplicativo chama a nova sobrecarga do método [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), o aplicativo fornece *OfferId* e um objeto [ProductPurchaseDisplayProperties](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productpurchasedisplayproperties) populado com o nome do produto no aplicativo.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-csharp[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#MakePurchaseRequest)]

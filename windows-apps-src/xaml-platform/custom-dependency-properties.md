@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: c4aa46f38b7b98f8dc4963938082aa1dd9ed8973
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ba56464cb30a8bacecae8a2347332c0c36be55ea
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366458"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322118"
 ---
 # <a name="custom-dependency-properties"></a>Propriedades de dependência personalizadas
 
@@ -441,7 +441,7 @@ Você pode usar construtores de classe para definir os valores iniciais de uma p
 
 As propriedades de dependência de tipo de coleção têm alguns aspectos adicionais a serem considerados.
 
-Propriedades de dependência de tipo de coleção são relativamente raras na API do Tempo de Execução do Windows. Na maioria dos casos, é possível usar coleções em que os itens são uma subclasse [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject), mas a propriedade de coleção propriamente dita é implementada como uma propriedade convencional de CLR ou C++. Isso porque as coleções não são necessariamente adequadas a alguns cenários típicos envolvendo propriedades de dependência. Por exemplo: 
+Propriedades de dependência de tipo de coleção são relativamente raras na API do Tempo de Execução do Windows. Na maioria dos casos, é possível usar coleções em que os itens são uma subclasse [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject), mas a propriedade de coleção propriamente dita é implementada como uma propriedade convencional de CLR ou C++. Isso porque as coleções não são necessariamente adequadas a alguns cenários típicos envolvendo propriedades de dependência. Por exemplo:
 
 - Você normalmente não anima uma coleção.
 - Você geralmente não popula antecipadamente os itens de uma coleção com estilos ou um modelo.
@@ -472,7 +472,7 @@ Há um princípio geral de que os construtores de classe não devem chamar méto
 
 ### <a name="registering-the-dependency-properties-for-ccx-apps"></a>Registrando as propriedades de dependência para aplicativos C++/CX
 
-A implementação para registrar uma propriedade em C++/CX é mais complicada que em C#, devido à separação em cabeçalho e arquivo de implementação, e também porque a inicialização no escopo raiz do arquivo de implementação não é uma prática recomendada. (Visual C++ extensões de componentes (C++/CX) coloca o código de inicializador estático do escopo diretamente na raiz **DllMain**, enquanto C# compiladores atribuir os inicializadores de estáticos para classes e, portanto, evite  **DllMain** carregar problemas de bloqueio.). A melhor prática aqui é declarar uma função auxiliar que faz todo o registro de propriedade de dependência para uma classe, uma função por classe. Então, para cada classe personalizada que seu aplicativo consumir, será necessário fazer referência à função de registro auxiliar que é exposta por cada classe personalizada que deseja usar. Chame cada função de registro auxiliar uma vez, como parte do [**Application constructor**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.) (`App::App()`), antes de `InitializeComponent`. Esse construtor só é executado quando o aplicativo é realmente referenciado pela primeira vez. Ele não será executado novamente se um aplicativo suspenso for retomado, por exemplo. Além disso, como pode ser visto no exemplo de registro anterior de C++, a verificação do **nullptr** em torno de cada chamada de [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) é importante: é a segurança de que nenhum chamador da função pode registrar a propriedade duas vezes. Uma segunda chamada de registro, provavelmente, travaria o aplicativo sem essa verificação, porque o nome da propriedade seria uma duplicação. Você pode ver esse padrão de implementação nos exemplos de controle personalizado e de usuário [XAML](https://go.microsoft.com/fwlink/p/?linkid=238581) se analisar o código para a versão C++/CX do exemplo.
+A implementação para registrar uma propriedade em C++/CX é mais complicada que em C#, devido à separação em cabeçalho e arquivo de implementação, e também porque a inicialização no escopo raiz do arquivo de implementação não é uma prática recomendada. (Visual C++ extensões de componentes (C++/CX) coloca o código de inicializador estático do escopo diretamente na raiz **DllMain**, enquanto C# compiladores atribuir os inicializadores de estáticos para classes e, portanto, evite  **DllMain** carregar problemas de bloqueio.). A melhor prática aqui é declarar uma função auxiliar que faz todo o registro de propriedade de dependência para uma classe, uma função por classe. Então, para cada classe personalizada que seu aplicativo consumir, será necessário fazer referência à função de registro auxiliar que é exposta por cada classe personalizada que deseja usar. Chame cada função de registro auxiliar uma vez, como parte do [**Application constructor**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.-ctor) (`App::App()`), antes de `InitializeComponent`. Esse construtor só é executado quando o aplicativo é realmente referenciado pela primeira vez. Ele não será executado novamente se um aplicativo suspenso for retomado, por exemplo. Além disso, como pode ser visto no exemplo de registro anterior de C++, a verificação do **nullptr** em torno de cada chamada de [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) é importante: é a segurança de que nenhum chamador da função pode registrar a propriedade duas vezes. Uma segunda chamada de registro, provavelmente, travaria o aplicativo sem essa verificação, porque o nome da propriedade seria uma duplicação. Você pode ver esse padrão de implementação nos exemplos de controle personalizado e de usuário [XAML](https://go.microsoft.com/fwlink/p/?linkid=238581) se analisar o código para a versão C++/CX do exemplo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

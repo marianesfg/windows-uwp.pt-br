@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fc43d5229ecd2bd9502fd74fef7f5197f758c62
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 01754d94cf413317cf204d04f8590028eeabcfc8
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363587"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317317"
 ---
 # <a name="guidelines-for-panning"></a>Diretrizes de movimento panorâmico
 
@@ -171,7 +171,7 @@ Essa diretriz também é útil para aplicativos como, por exemplo, álbuns de fo
 ## <a name="related-articles"></a>Artigos relacionados
 
 
-* [Interações personalizadas do usuário](https://developer.microsoft.com/windows/design/inputs-devices)
+* [Interações personalizadas do usuário](https://docs.microsoft.com/windows/uwp/design/layout/index)
 * [Otimizar o ListView e GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)
 * [Acessibilidade do teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
 

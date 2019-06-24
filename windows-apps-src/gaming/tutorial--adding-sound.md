@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, sons
 ms.localizationpriority: medium
-ms.openlocfilehash: 945270247b8a288554e1910ac1c6f8e5c1ec1619
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 06c06e1ffe52cae37a000f748076d78ebf6afff4
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367840"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318858"
 ---
 # <a name="add-sound"></a>Adicionar som
 
@@ -478,7 +478,7 @@ Gráfico de áudio é uma coleção de [XAudio2 vozes](/windows/desktop/xaudio2/
 ### <a name="additional-reading"></a>Leitura adicional
 
 * [Como: Inicializar o XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/how-to--initialize-xaudio2)
-* [Como: Carregar arquivos de dados de áudio no XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415781(v=vs.85).aspx)
+* [Como: Carregar arquivos de dados de áudio no XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/how-to--load-audio-data-files-in-xaudio2)
 * [Como: Reproduzir um som com XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/how-to--play-a-sound-with-xaudio2)
 
 ## <a name="key-audio-h-files"></a>Arquivos de chave. h de áudio

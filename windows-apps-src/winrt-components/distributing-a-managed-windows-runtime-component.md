@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b4e05a1f24e6192d25c80c043cdb4a51e7ac61ec
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b9fcdff5b8648822bb5cc22771daded23f6d52a5
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372361"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322226"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a>Distribuição de um componente do Tempo de Execução do Windows gerenciado
 
@@ -53,7 +53,7 @@ Um componente complexo normalmente inclui recursos do Windows, mas consulte a ob
 
 **Para criar um SDK de extensão**
 
-1.  Assegure-se de que você tenha o SDK do Visual Studio instalado. É possível baixar o SDK do Visual Studio na página [Downloads do Visual Studio](https://www.visualstudio.com/downloads/download-visual-studio-vs).
+1.  Assegure-se de que você tenha o SDK do Visual Studio instalado. É possível baixar o SDK do Visual Studio na página [Downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/download-visual-studio-vs).
 2.  Crie um novo projeto usando o modelo de projeto VSIX. É possível encontrar o modelo em Visual C# ou Visual Basic, na categoria de extensibilidade. Esse modelo é instalado como parte do SDK do Visual Studio. ([Passo a passo: Criar um SDK usando C# ou Visual Basic](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic?view=vs-2015) ou [passo a passo: Criar um SDK usando C++](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-creating-an-sdk-using-cpp?view=vs-2015), demonstra o uso desse modelo em um cenário muito simples. ) simples
 3.  Determine a estrutura de pastas do SDK. A estrutura de pastas começa no nível raiz do projeto VSIX, com as pastas **References**, **Redist** e **DesignTime**.
 

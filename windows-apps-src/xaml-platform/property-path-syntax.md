@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 63656fc545596fc045dc536167313c0c8e3f6ad2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 57532c45bdf6c2b8feb2af1277be74a0f8b2c759
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371165"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320297"
 ---
 # <a name="property-path-syntax"></a>Sintaxe de Property-path
 
@@ -58,7 +58,7 @@ Por exemplo, considere um objeto comercial em que haja uma lista de "Times" (lis
 
 ### <a name="attached-properties"></a>Propriedades anexadas
 
-Os caminhos de propriedade podem incluir referências a propriedades anexadas. Como o nome que identifica uma propriedade anexada já inclui um ponto, todos os nomes de propriedades anexadas devem estar entre parênteses para que o ponto não seja tratado como uma etapa de objeto-propriedade. Por exemplo, a cadeia de caracteres em que você quer usar [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v%3Dvs.95)) como caminho de associação é "(Canvas.ZIndex)". Para saber mais sobre as propriedades anexadas, consulte [Visão geral das propriedades anexadas](attached-properties-overview.md).
+Os caminhos de propriedade podem incluir referências a propriedades anexadas. Como o nome que identifica uma propriedade anexada já inclui um ponto, todos os nomes de propriedades anexadas devem estar entre parênteses para que o ponto não seja tratado como uma etapa de objeto-propriedade. Por exemplo, a cadeia de caracteres em que você quer usar [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95)) como caminho de associação é "(Canvas.ZIndex)". Para saber mais sobre as propriedades anexadas, consulte [Visão geral das propriedades anexadas](attached-properties-overview.md).
 
 ### <a name="combining-property-path-syntax"></a>Combinando a sintaxe de caminho de propriedade
 
@@ -70,7 +70,7 @@ Por um caminho de propriedade ser interpretado por um mecanismo de associação 
 
 ## <a name="property-path-for-animation-targeting"></a>Caminho de propriedade para direcionamento da animação
 
-As animações dependem do direcionamento de uma propriedade de dependência onde valores de storyboard são aplicados quando a animação é reproduzida. Para identificar o objeto no qual a propriedade que deve ser animada existe, a animação direciona um ele por nome ([atributo x:Name](x-name-attribute.md)). Costuma ser necessário definir um caminho de propriedade que inicia com o objeto identificado como [**Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname?view=netframework-4.8) e termina com o valor de propriedade de dependência particular em que a animação deve ser aplicada. Tal caminho de propriedade é usada como o valor de [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v%3Dvs.95)).
+As animações dependem do direcionamento de uma propriedade de dependência onde valores de storyboard são aplicados quando a animação é reproduzida. Para identificar o objeto no qual a propriedade que deve ser animada existe, a animação direciona um ele por nome ([atributo x:Name](x-name-attribute.md)). Costuma ser necessário definir um caminho de propriedade que inicia com o objeto identificado como [**Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname?view=netframework-4.8) e termina com o valor de propriedade de dependência particular em que a animação deve ser aplicada. Tal caminho de propriedade é usada como o valor de [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v=vs.95)).
 
 Para saber mais sobre como definir animações em XAML, consulte [Animações de storyboard](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations).
 
@@ -107,7 +107,7 @@ A classe [**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.P
 
 Na maioria das vezes, é possível aplicar um [**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath) em XAML sem usar nenhum código. Mas, em alguns casos, pode ser que você queria definir um objeto **PropertyPath** usando um código e atribuí-lo a uma propriedade em tempo de execução.
 
-[**PropertyPath** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath) tem um [ **PropertyPath(String)** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.) construtor e não tem um construtor padrão. A cadeia de caracteres que você passa para esse construtores é definida usando uma sintaxe de caminho de propriedade, como explicado anteriormente. Ela também é a mesma cadeia de caracteres que você usaria para atribuir [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) como atributo XAML. O único outro API da classe **PropertyPath** na propriedade [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.path), que é somente para leitura. Você poderia usar essa propriedade como a cadeia de caracteres de construção para outra instância **PropertyPath**.
+[**PropertyPath** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath) tem um [ **PropertyPath(String)** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.-ctor) construtor e não tem um construtor padrão. A cadeia de caracteres que você passa para esse construtores é definida usando uma sintaxe de caminho de propriedade, como explicado anteriormente. Ela também é a mesma cadeia de caracteres que você usaria para atribuir [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) como atributo XAML. O único outro API da classe **PropertyPath** na propriedade [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.path), que é somente para leitura. Você poderia usar essa propriedade como a cadeia de caracteres de construção para outra instância **PropertyPath**.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -116,6 +116,6 @@ Na maioria das vezes, é possível aplicar um [**PropertyPath**](https://docs.mi
 * [Extensão de marcação {binding}](binding-markup-extension.md)
 * [**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath)
 * [**Associação**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding)
-* [**Construtor de associação**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.)
+* [**Construtor de associação**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.-ctor)
 * [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)
 

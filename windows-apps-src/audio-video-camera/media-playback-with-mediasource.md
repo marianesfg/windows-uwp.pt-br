@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 472e163344c8cc2fdea3dd639383bb1dac84a2f4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0ea4376b36d72da552da7269e691cfacb31fffd6
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361588"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318238"
 ---
 # <a name="media-items-playlists-and-tracks"></a>Itens de mídia, playlists e faixas
 
@@ -96,7 +96,7 @@ O evento [**VideoTracksChanged**](https://docs.microsoft.com/uwp/api/windows.med
 
 [!code-xml[VideoComboBox](./code/MediaSource_RS1/cs/MainPage.xaml#SnippetVideoComboBox)]
 
-No manipulador **VideoTracksChanged**, execute um loop por todas as faixas na lista [**VideoTracks**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackitem.videotracks) do item de reprodução. Para cada faixa, um novo [**ComboBoxItem**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBoxItem) é criado. Se a faixa ainda não tiver um rótulo, um rótulo será gerado do índice de faixas. A propriedade [**Tag**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.tag) do item da caixa de combinação é definida como o índice de faixas para que ele possa ser identificado mais tarde. Por fim, o item é adicionado à caixa de combinação. Observe que essas operações serão executadas em uma chamada [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows), pois todas as alterações da interface do usuário devem ser feitas no thread da interface do usuário, e esse evento é lançado em um thread diferente.
+No manipulador **VideoTracksChanged**, execute um loop por todas as faixas na lista [**VideoTracks**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackitem.videotracks) do item de reprodução. Para cada faixa, um novo [**ComboBoxItem**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBoxItem) é criado. Se a faixa ainda não tiver um rótulo, um rótulo será gerado do índice de faixas. A propriedade [**Tag**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.tag) do item da caixa de combinação é definida como o índice de faixas para que ele possa ser identificado mais tarde. Por fim, o item é adicionado à caixa de combinação. Observe que essas operações serão executadas em uma chamada [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync), pois todas as alterações da interface do usuário devem ser feitas no thread da interface do usuário, e esse evento é lançado em um thread diferente.
 
 [!code-cs[VideoTracksChanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetVideoTracksChanged)]
 
@@ -206,7 +206,7 @@ Para habilitar a reprodução da sua lista, defina a origem da reprodução do *
 
 [!code-cs[PlayMediaPlaybackList](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetPlayMediaPlaybackList)]
 
-No manipulador de eventos **CurrentItemChanged**, atualize a interface do usuário para refletir o item atualmente em reprodução, que pode ser recuperado usando a propriedade [**NewItem**](https://docs.microsoft.com/uwp/api/windows.media.playback.currentmediaplaybackitemchangedeventargs.newitem) do objeto [**CurrentMediaPlaybackItemChangedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs) passado para o evento. Lembre-se: se você atualizar a interface do usuário a partir desse evento, deverá fazer isso chamando [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para que as atualizações sejam feitas no thread da interface do usuário.
+No manipulador de eventos **CurrentItemChanged**, atualize a interface do usuário para refletir o item atualmente em reprodução, que pode ser recuperado usando a propriedade [**NewItem**](https://docs.microsoft.com/uwp/api/windows.media.playback.currentmediaplaybackitemchangedeventargs.newitem) do objeto [**CurrentMediaPlaybackItemChangedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs) passado para o evento. Lembre-se: se você atualizar a interface do usuário a partir desse evento, deverá fazer isso chamando [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para que as atualizações sejam feitas no thread da interface do usuário.
 
 A partir do Windows 10, versão 1703, você pode marcar a propriedade [CurrentMediaPlaybackItemChangedEventArgs.Reason](https://docs.microsoft.com/uwp/api/windows.media.playback.currentmediaplaybackitemchangedeventargs.Reason) para obter um valor que indica o motivo pelo qual que o item foi alterado, como o app alternar itens de maneira programática, o item anterior chegar ao seu final ou um erro ocorrer.
 

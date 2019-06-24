@@ -7,12 +7,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, uwp, notificação, coleção, grupo, experiência do usuário, diretrizes de experiência do usuário, diretrizes, ação, do sistema, a Central de ações, noninterruptive, notificações efetivas, notificações não intrusivas, acionáveis, gerencie, organize
 ms.localizationpriority: medium
-ms.openlocfilehash: 878df85db9ab0e33db06a86ddb726f07dc28f013
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 327a2add84343be3b972f7bb1f232298e7ef92ad
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615761"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320726"
 ---
 # <a name="toast-notification-ux-guidance"></a>Diretrizes de experiência do usuário de notificação do sistema
 As notificações são uma parte necessária de vida moderna; eles ajudam os usuários sejam mais produtivos e envolvidos com aplicativos e sites, bem como mantenha-se atualizado com todas as atualizações. No entanto, as notificações podem se transformar rapidamente de útil opressivas e intrusiva se eles não forem criados de forma centrado no usuário. As notificações são um botão direito do mouse para longe de ser desligada e é improvável que depois que eles são desativados, elas serão ativadas novamente.  Portanto, certifique-se de que suas notificações são respeita de espaço na tela do usuário e a hora, para que você mantenha esse canal engagement aberto.
@@ -65,4 +65,4 @@ Se você enviar notificações para seu aplicativo UWP hoje em dia, você pode e
 * [Conteúdo de notificação do sistema](adaptive-interactive-toasts.md)
 * [Notificações brutas](raw-notification-overview.md)
 * [Atualização pendente](toast-pending-update.md)
-* [Biblioteca de notificações no GitHub (parte do Kit de ferramentas de comunidade do Windows)](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [Biblioteca de notificações no GitHub (parte do Kit de ferramentas de comunidade do Windows)](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)

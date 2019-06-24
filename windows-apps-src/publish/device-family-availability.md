@@ -5,12 +5,12 @@ ms.date: 03/21/2019
 ms.topic: article
 keywords: windows 10, uwp, pacotes, carregar, disponibilidade da família de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: af2152eb8d174f6d2e40e20c8cdaccd0e87605bb
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 088fb859ae38e608182b22b94300b9c27063054e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787095"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320015"
 ---
 # <a name="device-family-availability"></a>Disponibilidade da família de dispositivos
 
@@ -30,7 +30,7 @@ Pacotes destinados à família de dispositivos Windows.Universal podem ser execu
 
 Você poderá desmarcar a caixa de seleção de qualquer família de dispositivos Windows 10, se não quiser oferecer o envio para clientes desse tipo de dispositivo. Se caixa de uma família de dispositivos estiver desmarcada, os novos clientes nesse tipo de dispositivo não conseguirão adquirir o aplicativo (embora os clientes que já tenham o aplicativo ainda possam usá-lo e recebam todas as atualizações enviadas).
 
-Se seu aplicativo oferece suportem a eles, recomendamos deixar todas as caixas marcadas, a menos que você tenha um motivo específico para limitar os tipos de dispositivos do Windows 10 que podem adquirir o seu aplicativo. Por exemplo, se você sabe que seu aplicativo não oferece uma boa experiência em [Surface Hub](https://developer.microsoft.com/windows/surfacehub) e/ou [Microsoft HoloLens](https://developer.microsoft.com/windows/mixed-reality), você pode desmarcar a caixa **Windows 10 Team** e/ou **Windows 10 Holographic**. Isso impede que novos clientes adquiram o aplicativo nesses dispositivos. Se você decidir mais tarde que está pronto para oferecê-lo a esses clientes, você pode criar um novo envio com as caixas marcadas.
+Se seu aplicativo oferece suportem a eles, recomendamos deixar todas as caixas marcadas, a menos que você tenha um motivo específico para limitar os tipos de dispositivos do Windows 10 que podem adquirir o seu aplicativo. Por exemplo, se você sabe que seu aplicativo não oferece uma boa experiência em [Surface Hub](https://developer.microsoft.com/windows/surfacehub) e/ou [Microsoft HoloLens](https://developer.microsoft.com/mixed-reality), você pode desmarcar a caixa **Windows 10 Team** e/ou **Windows 10 Holographic**. Isso impede que novos clientes adquiram o aplicativo nesses dispositivos. Se você decidir mais tarde que está pronto para oferecê-lo a esses clientes, você pode criar um novo envio com as caixas marcadas.
 
 <span id="xbox" />
 

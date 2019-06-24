@@ -8,12 +8,12 @@ ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, uwp, notificações do sistema, notificações do sistema interativas, notificações do sistema adaptáveis, conteúdo de notificação do sistema, conteúdo da notificação do sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: 75e5ea7e83a1a274b90b14588f7d809a4aa91269
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7bef6874b7855a321c4e5a9153faa96d432d2dea
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366873"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320927"
 ---
 # <a name="toast-content"></a>Conteúdo da notificação do sistema
 
@@ -880,5 +880,5 @@ Para saber como manipular ativações de notificações do sistema (o usuário c
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Enviar uma ativação de notificação do sistema e o identificador de local](send-local-toast.md)
-* [Biblioteca de notificações no GitHub (parte do Kit de ferramentas de comunidade UWP)](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [Biblioteca de notificações no GitHub (parte do Kit de ferramentas de comunidade UWP)](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
 * [Suporte à notificação de bloco e notificação do sistema para o idioma, escala e alto contraste](tile-toast-language-scale-contrast.md)

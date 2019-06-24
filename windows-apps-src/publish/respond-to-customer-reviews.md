@@ -6,19 +6,19 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: o Windows 10, uwp, responder, respostas, examine
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d45b5144bb13e66c506c4a55115bf252288064d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fa73c8f43c449e8cf7b1c5aa67574f6ff00e7a15
+ms.sourcegitcommit: 7effecb544952b493250337fc622848232fa5995
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633961"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67325858"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder às avaliações de clientes
 
 
 Você pode responder a revisões de seu aplicativo para permitir que os clientes saibam que você está ouvindo seus comentários. Com uma resposta às críticas, você pode informar aos clientes os recursos que foram adicionados ou os bugs que foram corrigidos com base nos comentários deles, ou obter um feedback mais específico sobre como melhorar seu aplicativo. Suas respostas serão exibidas em que a Microsoft Store para todos os clientes do Windows 10 ver. Você também pode optar por enviar sua resposta por email para o cliente (se eles ainda não tiverem recusado e estiver usando um dispositivo que executa o Windows 10, versão 1803 ou superior).
 
-Para exibir as revisões do seu aplicativo e fornecer respostas, encontre o aplicativo no [Partner Center](https://partner.microsoft.com/dashboard). No menu de navegação esquerdo, expanda *Analytics** e, em seguida, clique em **revisões** para exibir o [examina relatório](reviews-report.md). Selecione **responder a examinar** para fornecer sua resposta.
+Para exibir as revisões do seu aplicativo e fornecer respostas, encontre o aplicativo no [Partner Center](https://partner.microsoft.com/dashboard). No menu de navegação para a esquerda, expanda **Análises** e, em seguida, clique em **Avaliações** para exibir o [Relatório de avaliações](reviews-report.md). Selecione **responder a examinar** para fornecer sua resposta.
 
 > [!TIP]
 > Além de usar o Partner Center para responder às revisões, você pode responder a revisões [programaticamente](../monetize/submit-responses-to-app-reviews.md).

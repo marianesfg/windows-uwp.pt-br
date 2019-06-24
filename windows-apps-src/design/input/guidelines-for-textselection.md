@@ -8,12 +8,12 @@ keywords: teclado, texto, entrada, interações do usuário
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fc227904e57577a30eb2d171a060fb69d39b71f0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8dab8d26436d312601b749bed7e97048ed5805bb
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363494"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317282"
 ---
 # <a name="selecting-text-and-images"></a>Selecionando texto e imagens
 
@@ -109,7 +109,7 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 
 
 **Para desenvolvedores**
-* [Interações personalizadas do usuário](https://developer.microsoft.com/windows/design/inputs-devices)
+* [Interações personalizadas do usuário](https://docs.microsoft.com/windows/uwp/design/layout/index)
 
 **Exemplos**
 * [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)

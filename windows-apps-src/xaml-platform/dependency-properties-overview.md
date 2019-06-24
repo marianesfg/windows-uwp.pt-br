@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bdd859a922cf3252f5896da2652a0b73e20a079
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a07fae7920bbcddd4c68b052aa82c072312b4995
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371191"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322148"
 ---
 # <a name="dependency-properties-overview"></a>Visão geral das propriedades de dependência
 
@@ -25,7 +25,7 @@ Para dar suporte a uma propriedade de dependência, o objeto que define a propri
 
 A finalidade das propriedades de dependência é oferecer uma forma sistêmica de computar o valor de uma propriedade com base em outras entradas (outras propriedades, eventos e estados que ocorrem em seu aplicativo enquanto ele é executado). Essas outras entradas podem incluir:
 
--  Entrada externa; por exemplo, preferência do usuário
+- Entrada externa; por exemplo, preferência do usuário
 - Mecanismos de determinação de propriedade just-in-time; por exemplo, vinculação de dados, animações e storyboards.
 - Padrões de modelagem para múltiplos usos; por exemplo, recursos e estilos
 - Valores conhecidos por meio das relações pai-filho com outros elementos da árvore de objetos
@@ -76,13 +76,13 @@ public bool IsSpinning
 > [!NOTE]
 > O exemplo anterior não se destina como o exemplo completo de como criar uma propriedade de dependência personalizada. Ele tem a finalidade de mostrar os conceitos de propriedade de dependência para qualquer um que prefira conceitos de aprendizagem através de código. Para um exemplo mais complexo, consulte [Propriedades de dependência personalizada](custom-dependency-properties.md).
 
-## <a name="dependency-property-value-precedence"></a>Precedência do valor da propriedade de dependência 
+## <a name="dependency-property-value-precedence"></a>Precedência do valor da propriedade de dependência
 
 Quando você obtém o valor de uma propriedade de dependência, está obtendo um valor que foi definido para essa propriedade por meio de qualquer uma das entradas que participam do sistema de propriedades do Tempo de execução do Windows. A precedência do valor de propriedade de dependência existe de forma que o sistema de propriedades do Tempo de Execução do Windows possa calcular valores de uma forma previsível, e é importante que você também esteja familiarizado com a ordem de precedência básica. Caso contrário, você pode se encontrar em uma situação em que esteja tentando definir uma propriedade em um nível, mas algo (o sistema, chamadores de terceiros, parte de seu próprio código) a está definindo em outro nível, e você ficará frustrado tentando descobrir qual valor da propriedade é usado e de onde esse valor veio.
 
 Por exemplo, os estilos e modelos destinam-se a ser um ponto de partida compartilhado para estabelecer valores de propriedade e, assim, a aparência de um controle. Mas, em uma ocorrência específica do controle, pode ser preciso alterar esse valor em relação ao valor de modelo comum, como aplicar a esse controle uma cor da tela de fundo diferente ou uma cadeia de caracteres de texto diferente como conteúdo. O sistema de propriedades do Tempo de execução do Windows considera valores locais em precedência maior que os valores fornecidos por estilos e modelos. Isso permite que o cenário de valores específicos do aplicativo substituam os modelos, de modo que os controles sejam úteis para o próprio uso deles na interface do usuário do aplicativo.
 
-### <a name="dependency-property-precedence-list"></a>Lista de precedência das propriedades de dependência 
+### <a name="dependency-property-precedence-list"></a>Lista de precedência das propriedades de dependência
 
 A seguir está a ordem definitiva que o sistema de propriedades usa ao atribuir o valor do tempo de execução de uma propriedade de dependência. A maior precedência é listada primeiro. Você encontrará explicações mais detalhadas logo após essa lista.
 
@@ -194,7 +194,7 @@ Você pode definir deliberadamente uma propriedade para o valor padrão, mesmo d
 
 ## <a name="dependencyobject-and-threading"></a>**DependencyObject** e threading
 
-Todas as instâncias de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) devem ser criadas no thread da interface do usuário que está associado à [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) mostrada por um aplicativo do Tempo de Execução do Windows. Embora seja necessário que cada **DependencyObject** seja criada no thread da interface do usuário principal, os objetos podem ser acessados usando uma referência de dispatcher de outros threads acessando a propriedade [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.dispatcher). Em seguida, você pode chamar métodos como [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) no objeto [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) e executar o código dentro das regras de restrições de thread no thread de interface do usuário.
+Todas as instâncias de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) devem ser criadas no thread da interface do usuário que está associado à [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) mostrada por um aplicativo do Tempo de Execução do Windows. Embora seja necessário que cada **DependencyObject** seja criada no thread da interface do usuário principal, os objetos podem ser acessados usando uma referência de dispatcher de outros threads acessando a propriedade [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.dispatcher). Em seguida, você pode chamar métodos como [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) no objeto [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) e executar o código dentro das regras de restrições de thread no thread de interface do usuário.
 
 Os aspectos de threading de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) são relevantes porque em geral isso significa que somente o código que é executado no thread da interface do usuário pode mudar ou até mesmo ler o valor de uma propriedade de dependência. Em geral, é possível evitar os problemas com threading em códigos de interface do usuário típicos que usam corretamente padrões **async** e threads de trabalho em segundo plano. Normalmente, você tem problemas de threading relacionados a **DependencyObject** somente quando define seus próprios tipos de **DependencyObject** e tenta usá-los para fontes de dados ou outros cenários em que um **DependencyObject** não é necessariamente apropriado.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 68260cadd4322d51c528bf6c6af7f5c8472f2199
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 23cb51ec6b2c6c2560c0a1f6d583ba916768254c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361856"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318559"
 ---
 # <a name="create-schedule-and-manage-media-breaks"></a>Criar, programar e gerenciar pausas de mídia
 
@@ -66,7 +66,7 @@ Há vários eventos relacionados a pausas de mídia que você pode assinar para 
 
 [!code-cs[RegisterMediaBreakEvents](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetRegisterMediaBreakEvents)]
 
-O [**BreakStarted**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakmanager.breakstarted) é acionado quando uma pausa de mídia é iniciada. É possível atualizar sua interface do usuário para informar o usuário que o conteúdo de pausa de mídia será reproduzido. Este exemplo usa o [**MediaBreakStartedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaBreakStartedEventArgs) transmitido para o manipulador para obter uma referência da pausa de mídia iniciada. A propriedade [**CurrentItemIndex**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacklist.currentitemindex) é usada para determinar qual item de mídia na playlist da pausa está sendo reproduzido. Em seguida, a interface do usuário é atualizada para mostrar ao usuário o índice de anúncios atual e o número de anúncios restantes na pausa. Lembre-se de que as atualizações da interface do usuário devem ser feitas no thread da interface do usuário, portanto, a chamada deve ser feita dentro de uma chamada para [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows). 
+O [**BreakStarted**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakmanager.breakstarted) é acionado quando uma pausa de mídia é iniciada. É possível atualizar sua interface do usuário para informar o usuário que o conteúdo de pausa de mídia será reproduzido. Este exemplo usa o [**MediaBreakStartedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaBreakStartedEventArgs) transmitido para o manipulador para obter uma referência da pausa de mídia iniciada. A propriedade [**CurrentItemIndex**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacklist.currentitemindex) é usada para determinar qual item de mídia na playlist da pausa está sendo reproduzido. Em seguida, a interface do usuário é atualizada para mostrar ao usuário o índice de anúncios atual e o número de anúncios restantes na pausa. Lembre-se de que as atualizações da interface do usuário devem ser feitas no thread da interface do usuário, portanto, a chamada deve ser feita dentro de uma chamada para [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync). 
 
 [!code-cs[BreakStarted](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakStarted)]
 

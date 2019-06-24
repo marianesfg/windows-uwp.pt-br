@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f5605c115c409771ce8dc9ddfeb1a4922e04aece
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 926c811c7ded47d0d97759a9c9658c5e0203d280
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372840"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319640"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a>Introdução: Escolhendo uma linguagem de programação
 
@@ -29,7 +29,7 @@ Apesar de nosso foco ser a linguagem C# neste artigo, as outras linguagens ofere
 -   [Criar seu primeiro aplicativo UWP usando JavaScript](../get-started/create-a-hello-world-app-js-uwp.md)
 
 **Observação**  para aplicativos que usam elementos gráficos 3D, os padrões de OpenGL e OpenGL ES não estão disponíveis nativamente para aplicativos UWP. Caso prefira não reescrever seu código OpenGL ES no Microsoft DirectX, talvez se interesse em aprender sobre o **Angle**. O Angle é um projeto em andamento criado para converter OpenGL para DirectX traduzindo as chamadas à API OpenGL em chamadas à API DirectX. Para saber mais, consulte o seguinte:
--   [ângulo](https://code.google.com/p/angleproject/)
+-   [ângulo](https://bugs.chromium.org/p/angleproject/)
 -   [Criar seu primeiro aplicativo UWP usando o DirectX](https://docs.microsoft.com/previous-versions/windows/apps/br229580(v=win.10))
 -   [Exemplos de aplicativos UWP que usam DirectX](https://go.microsoft.com/fwlink/p/?LinkId=263603)
 -   [Onde está o SDK do DirectX?](https://docs.microsoft.com/windows/desktop/directx-sdk--august-2009-)

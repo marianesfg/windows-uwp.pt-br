@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 30aba6c796d86662795d1c1f86ef7d76cc62925c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 57ddb366964c259fccddc3f905c6a03a382d0f17
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363367"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320740"
 ---
 # <a name="toast-content-schema"></a>Esquema de conteúdo de notificação do sistema
 
@@ -480,4 +480,4 @@ Novo no Creators Update: Um cabeçalho personalizado que agrupa várias notifica
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Guia de início rápido: Enviar uma ativação de notificação do sistema e o identificador de local](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/)
-* [Biblioteca de notificações no GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
+* [Biblioteca de notificações no GitHub](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/dev/Notifications)

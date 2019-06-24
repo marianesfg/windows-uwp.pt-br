@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1be694be412bbf0a4e076e8ac5753eefda74c55
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: be6780851c05f59abc373318f0746c8e436b74ac
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360907"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318413"
 ---
 # <a name="detect-faces-in-images-or-videos"></a>Detectar rostos em imagens ou vídeos
 
@@ -45,7 +45,7 @@ Use a classe [**BitmapDecoder**](https://docs.microsoft.com/uwp/api/Windows.Grap
 
 [!code-cs[Decode](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDecode)]
 
-Na versão atual, a classe **FaceDetector** dá suporte somente a imagens em Gray8 ou Nv12. A classe **SoftwareBitmap** fornece o método [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows), que converte um bitmap de um formato em outro. Este exemplo converterá a imagem de origem no formato de pixel Gray8 caso ainda não esteja nesse formato. Se você quiser, poderá usar os métodos [**GetSupportedBitmapPixelFormats**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facedetector.getsupportedbitmappixelformats) e [**IsBitmapPixelFormatSupported**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facedetector.isbitmappixelformatsupported) para determinar, em tempo de execução, se há suporte para um formato de pixel, caso o conjunto de formatos com suporte seja expandido em futuras versões.
+Na versão atual, a classe **FaceDetector** dá suporte somente a imagens em Gray8 ou Nv12. A classe **SoftwareBitmap** fornece o método [**Convert**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert), que converte um bitmap de um formato em outro. Este exemplo converterá a imagem de origem no formato de pixel Gray8 caso ainda não esteja nesse formato. Se você quiser, poderá usar os métodos [**GetSupportedBitmapPixelFormats**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facedetector.getsupportedbitmappixelformats) e [**IsBitmapPixelFormatSupported**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facedetector.isbitmappixelformatsupported) para determinar, em tempo de execução, se há suporte para um formato de pixel, caso o conjunto de formatos com suporte seja expandido em futuras versões.
 
 [!code-cs[Format](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFormat)]
 
@@ -91,7 +91,7 @@ A classe [**FaceTracker**](https://docs.microsoft.com/uwp/api/Windows.Media.Face
 
 Assim como acontece com **FaceDetector**, **FaceTracker** dá suporte a um conjunto limitado de formatos de pixel. Este exemplo abandonará a detecção de rostos se o quadro fornecido não estiver no formato Nv12.
 
-Chame [**ProcessNextFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facetracker.processnextframeasync) para recuperar uma lista de objetos [**DetectedFace**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.DetectedFace) que representam os rostos no quadro. Depois que você tiver a lista de rostos, poderá exibi-los da mesma maneira descrita acima para detecção de rostos. Observe que, como o método auxiliar de acompanhamento facial não é chamado no thread da interface do usuário, você deve fazer as atualizações da interface do usuário dentro de uma chamada [**CoredDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows).
+Chame [**ProcessNextFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facetracker.processnextframeasync) para recuperar uma lista de objetos [**DetectedFace**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.DetectedFace) que representam os rostos no quadro. Depois que você tiver a lista de rostos, poderá exibi-los da mesma maneira descrita acima para detecção de rostos. Observe que, porque o método auxiliar de controle de face não for chamado no thread da interface do usuário, você deve fazer atualizações na interface do usuário dentro de uma chamada [ **CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync).
 
 [!code-cs[ProcessCurrentVideoFrame](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetProcessCurrentVideoFrame)]
 

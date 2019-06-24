@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: fae6caf73cb8a5b569193a17e65e5d8b4f582ff2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4b6bc87c4d1694b47823a92619e6ec9d1e91bb69
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57652221"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319908"
 ---
 # <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>Como usar o Fiddler com o Xbox One ao desenvolver para UWP
 
@@ -19,14 +19,14 @@ Fiddler é uma Web proxy de depuração que registra todo o tráfego HTTP e HTTP
 
 Em operação normal, um console que se comunica por meio de um proxy está em risco de ter suas comunicações modificadas por proxy, possivelmente permitindo que os jogadores trapaceiem. Assim, os consoles são projetados para não permitir a comunicação através de um proxy. Usar o Fiddler com o kit de desenvolvimento do Xbox One requer que você execute algumas etapas de configuração especiais no kit de desenvolvimento para permitir que ele use o proxy do Fiddler. 
 
-Fiddler é gratuito e pode ser baixado no [próprio site](https://www.fiddler2.com/fiddler2/). 
+Fiddler é gratuito e pode ser baixado no [próprio site](https://www.telerik.com/download/fiddler). 
 
 Fiddler pode impactar no status de rede relatado pelo console. Se uma conexão upstream é desativada da máquina executando o Fiddler, o console não pode detectar essa desconexão até que a autenticação do console expire. Se você estiver usando o Fiddler, certifique-se de desconectar a conexão entre o console e o computador executando o Fiddler, em vez de usar o Fiddler para simular uma desconexão.
 
 ### <a name="to-install-and-enable-fiddler-on-your-development-pc"></a>Para instalar e habilitar o Fiddler no seu computador de desenvolvimento
 Siga estas etapas para instalar e habilitar o Fiddler para monitorar o tráfego do seu kit de desenvolvimento:
 
-1. Instale o Fiddler no seu computador de desenvolvimento seguindo as instruções do [site do Fiddler](https://www.fiddler2.com/fiddler2/). 
+1. Instale o Fiddler no seu computador de desenvolvimento seguindo as instruções do [site do Fiddler](https://www.telerik.com/download/fiddler). 
 2. Inicie o Fiddler e selecione **Opções do Fiddler** a partir do menu **Ferramentas**. 
 3. Selecione a aba **Conexões** e garanta que a opção **Permitir que os computadores remotos se conectem** esteja selecionada. 
 4. Clique em **OK** para aceitar a alteração das configurações. Você verá uma caixa de diálogo afirmando que o Fiddler deve ser reiniciado para que a alteração entre em vigor e que talvez você precise configurar seu firewall manualmente. Clique em **OK** nesta caixa de diálogo, mas *não reinicie o Fiddler*.
@@ -37,13 +37,13 @@ Siga estas etapas para instalar e habilitar o Fiddler para monitorar o tráfego 
   | Nome              | FiddlerProxy                   |
   | Grupo             | *Nenhum valor* |
   | Perfil           | Todas                            |
-  | Habilitado           | Sim                            |
+  | Enabled           | Sim                            |
   | Ação            | Permitir                          |
   | Substituição          | Não                             |
   | Programa           | *Caminho para fiddler.exe*          |
   | LocalAddress      | Qualquer                            |
   | RemoteAddress     | Qualquer                            |
-  | Protocolo          | TCP                            |
+  | Protocol          | TCP                            |
   | LocalPort         | Qualquer                            |
   | RemotePort        | Qualquer                            |
   | AllowedUsers      | Qualquer                            |

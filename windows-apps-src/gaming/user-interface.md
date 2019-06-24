@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, modelos
 ms.localizationpriority: medium
-ms.openlocfilehash: 5eb36b66cc067111e2749ebd51a05994a011ba01
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 668a41a69c2b7dab338d251d95e23e801fa85cf6
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367473"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321137"
 ---
 # <a name="directx-game-project-templates"></a>Modelos de projeto de jogo DirectX
 
@@ -24,7 +24,7 @@ Os modelos DirectX e UWP (Plataforma Universal do Windows) permitem criar rapida
 
 Para criar o projeto, você precisa:
 
--   [Baixe o Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions). Visual Studio 2015 tem as ferramentas de programação, como as ferramentas de depuração de gráficos. Para uma visão geral dos recursos e das ferramentas de elementos gráficos e jogos em DirectX, veja [Ferramentas do Visual Studio para desenvolvimento de jogos em DirectX](set-up-visual-studio-for-game-development.md).
+-   [Baixe o Microsoft Visual Studio 2015](https://visualstudio.microsoft.com/vs/). Visual Studio 2015 tem as ferramentas de programação, como as ferramentas de depuração de gráficos. Para uma visão geral dos recursos e das ferramentas de elementos gráficos e jogos em DirectX, veja [Ferramentas do Visual Studio para desenvolvimento de jogos em DirectX](set-up-visual-studio-for-game-development.md).
 
 ## <a name="choosing-a-template"></a>Escolhendo um modelo
 

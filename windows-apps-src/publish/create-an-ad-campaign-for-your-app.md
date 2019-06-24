@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, campanhas, promover
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d38d47c1b5e228e984faa4657cd12735e98bcf9
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 1dc06a2977832e659220b133ba42a99bad982291
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215229"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320100"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Criar uma campanha publicitária para seu app
 
@@ -90,7 +90,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 
 12.  Se você tiver uma [conta premium](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign), pode usar a caixa **URL de destino** para controlar o que acontece quando um cliente clica em seu anúncio.
     * Se você deixar a caixa vazia, quando um cliente clicar em seu anúncio, a listagem da Loja do seu app será exibida.
-    * Se você estiver usando Vungle, Kochava, ajustar ou ajuste para medir a análise de instalação para seu aplicativo, insira a URL de rastreamento de instalação. Quando você salvar a campanha, a URL de rastreamento será validada para garantir que ela seja resolvida como a página de listagem para seu app na Microsoft Store. Para obter mais informações sobre o controle de instalação com esses serviços, consulte a [ajustar](https://docs.adjust.com/en/), [Kochava](https://support.kochava.com/), [ajustar](https://help.tune.com/), e [Vungle](https://support.vungle.com/) documentação .
+    * Se você estiver usando Vungle, Kochava, ajustar ou ajuste para medir a análise de instalação para seu aplicativo, insira a URL de rastreamento de instalação. Quando você salvar a campanha, a URL de rastreamento será validada para garantir que ela seja resolvida como a página de listagem para seu app na Microsoft Store. Para obter mais informações sobre o controle de instalação com esses serviços, consulte a [ajustar](https://docs.adjust.com/en/), [Kochava](https://support.kochava.com/), [ajustar](https://help.tune.com/hasoffers/), e [Vungle](https://support.vungle.com/hc/en-us) documentação .
     * Se você escolheu **Aumentar o envolvimento do app** como objetivo da campanha, pode especificar um [URI de um link profundo](../launch-resume/handle-uri-activation.md) para redirecionar os clientes no segmento selecionado para uma página específica em seu app.
     * Se você especificar um destino que não seja a página de descrição do seu app ou uma página dentro de seu app, sua campanha será pausada automaticamente.
 

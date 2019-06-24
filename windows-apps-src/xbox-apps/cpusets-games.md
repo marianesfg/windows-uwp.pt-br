@@ -4,12 +4,12 @@ description: Este artigo fornece uma visão geral da API CPUSets nova na Platafo
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
-ms.openlocfilehash: 49662d476d6d022ca05d53e9358fc547fda92a32
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 693abe68fcc7e4a341d773c6fa1af0d777c60c15
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625661"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322162"
 ---
 # <a name="cpusets-for-game-development"></a>CPUSets para desenvolvimento de jogos
 
@@ -191,7 +191,7 @@ O layout do cache ilustrado na Figura 1 é um exemplo do tipo de layout que voc�
 A API CPUSets disponível para desenvolvimento de UWP fornece uma quantidade considerável de informações e controle sobre as opções de multithreading. As complexidades adicionadas comparadas às APIs de multithread anteriores para desenvolvimento do Windows oferecem uma certa curva de aprendizado, mas, em última análise, a maior flexibilidade permite um melhor desempenho em uma ampla variedade de computadores de clientes e outros destinos de hardware.
 
 ## <a name="additional-resources"></a>Recursos adicionais
-- [Conjuntos de CPU (MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
+- [Conjuntos de CPU (MSDN)](https://docs.microsoft.com/windows/desktop/ProcThread/cpu-sets)
 - [Exemplo de CPUSets fornecido pelo ATG](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
 - [UWP no Xbox One](index.md)
 

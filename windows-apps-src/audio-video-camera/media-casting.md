@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2318d873a55b4134cf36eda91b57866e14b6b3a7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 50f588caaf36d9a2a74222029e17785663cf3953
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361727"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318302"
 ---
 # <a name="media-casting"></a>Transmissão de mídia
 
@@ -66,14 +66,14 @@ No seu arquivo XAML, adicione um botão para permitir que o usuário inicie o se
 
 [!code-xml[CastPickerButton](./code/MediaCasting_RS1/cs/MainPage.xaml#SnippetCastPickerButton)]
 
-No manipulador de eventos **Click** para o botão, chame [**TransformToVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.) para obter a transformação de um elemento de interface do usuário em relação a outro. Neste exemplo, a transformação é a posição do botão do seletor de conversão em relação à raiz visual da janela do aplicativo. Chame o método [**Show**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevicepicker.show) do objeto [**CastingDevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Media.Casting.CastingDevicePicker) para iniciar a caixa de diálogo do seletor de transmissão. Especifique o local e as dimensões do botão do seletor de conversão para que o sistema possa fazer a caixa de diálogo sair do botão que o usuário pressionou.
+No manipulador de eventos **Click** para o botão, chame [**TransformToVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.transformtovisual) para obter a transformação de um elemento de interface do usuário em relação a outro. Neste exemplo, a transformação é a posição do botão do seletor de conversão em relação à raiz visual da janela do aplicativo. Chame o método [**Show**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevicepicker.show) do objeto [**CastingDevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Media.Casting.CastingDevicePicker) para iniciar a caixa de diálogo do seletor de transmissão. Especifique o local e as dimensões do botão do seletor de conversão para que o sistema possa fazer a caixa de diálogo sair do botão que o usuário pressionou.
 
 [!code-cs[CastPickerButtonClick](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetCastPickerButtonClick)]
 
 No manipulador de eventos do **CastingDeviceSelected**, chame o método [**CreateCastingConnection**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevice.createcastingconnection) da propriedade [**SelectedCastingDevice**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdeviceselectedeventargs.selectedcastingdevice) dos argumentos do evento, que representa o dispositivo de transmissão selecionado pelo usuário. Registre manipuladores para os eventos [**ErrorOccurred**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.erroroccurred) e [**StateChanged**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.statechanged). Por fim, chame [**RequestStartCastingAsync**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.requeststartcastingasync) para começar a conversão, passando o resultado para o controle **MediaPlayerElement**, objeto **MediaPlayer**, método [**GetAsCastingSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaelement.getascastingsource), para especificar que a mídia a ser convertida é o conteúdo do **MediaPlayer** associado ao **MediaPlayerElement**.
 
 > [!NOTE] 
-> A conexão de transmissão deve ser iniciada no thread da interface do usuário. Como o **CastingDeviceSelected** não é chamado no thread da interface do usuário, você deve colocar essas chamadas dentro de uma chamada para [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows), o que faz com que elas sejam chamadas no thread da interface do usuário.
+> A conexão de transmissão deve ser iniciada no thread da interface do usuário. Como o **CastingDeviceSelected** não é chamado no thread da interface do usuário, você deve colocar essas chamadas dentro de uma chamada para [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync), o que faz com que elas sejam chamadas no thread da interface do usuário.
 
 [!code-cs[CastingDeviceSelected](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetCastingDeviceSelected)]
 
@@ -112,7 +112,7 @@ Por fim, registre manipuladores de eventos para os eventos [**Added**](https://d
 
 O evento **Added** é acionado quando um novo dispositivo é descoberto pelo inspetor. No manipulador para este evento, crie um novo objeto [**CastingDevice**](https://docs.microsoft.com/uwp/api/Windows.Media.Casting.CastingDevice) chamando [**CastingDevice.FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevice.fromidasync) e passando a ID do dispositivo descoberto para transmissão, que está contido no objeto **DeviceInformation** passado para o manipulador.
 
-Adicione o **CastingDevice** para o dispositivo de transmissão **ListBox** para que o usuário possa selecioná-lo. Devido ao [**ItemTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) definido em XAML, a propriedade [**FriendlyName**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevice.friendlyname) será usada como o texto do item na caixa de listagem. Como esse manipulador de eventos não é chamado no thread da interface do usuário, você deve atualizar a interface do usuário de dentro de uma chamada para [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows).
+Adicione o **CastingDevice** para o dispositivo de transmissão **ListBox** para que o usuário possa selecioná-lo. Devido ao [**ItemTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) definido em XAML, a propriedade [**FriendlyName**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevice.friendlyname) será usada como o texto do item na caixa de listagem. Como esse manipulador de eventos não é chamado no thread da interface do usuário, você deve atualizar a interface do usuário de dentro de uma chamada para [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync).
 
 [!code-cs[WatcherAdded](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetWatcherAdded)]
 
@@ -149,7 +149,7 @@ No manipulador para o evento **ErrorOccurred**, atualize sua interface do usuár
 
 [!code-cs[ErrorOccurred](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetErrorOccurred)]
 
-Por fim, implemente o manipulador para o botão desconectar. Pare a transmissão de mídia e desconecte o dispositivo de transmissão chamando o método **CastingConnection** do objeto [**DisconnectAsync**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.disconnectasync). Essa chamada deve ser enviada para o thread da interface do usuário chamando [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows).
+Por fim, implemente o manipulador para o botão desconectar. Pare a transmissão de mídia e desconecte o dispositivo de transmissão chamando o método **CastingConnection** do objeto [**DisconnectAsync**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.disconnectasync). Essa chamada deve ser enviada para o thread da interface do usuário chamando [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync).
 
 [!code-cs[DisconnectButton](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetDisconnectButton)]
 

@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, diretrizes, práticas recomendadas
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bb187092158386c503b91973d8d63ce291b4760
-ms.sourcegitcommit: c62b260eecd373e57b19a623bae77e29180e0f3d
+ms.openlocfilehash: cf7f61f427ef0b1a0ff5b6f3b66d02d13d02e4ab
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66565511"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320679"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Diretrizes para a interface do usuário e experiência do usuário para anúncios
 
@@ -25,10 +25,10 @@ Este artigo fornece diretrizes para proporcionar ótimas experiências com anún
 Antes de examinar nossas diretrizes para tipos diferentes de anúncios neste artigo, primeiro examine estas práticas recomendadas gerais para melhorar sua receita de anúncios.
 
 * [Planeje cuidadosamente a veiculação dos anúncios](https://blogs.windows.com/buildingapps/2017/04/10/monetizing-app-advertisement-placement/). Veja as instruções relacionadas sobre como [otimizar a visualização de suas unidades de anúncio](optimize-ad-unit-viewability.md).
-* [Usar anúncios de faixa como um fallback para anúncios intersticiais em vídeo](https://blogs.windows.com/buildingapps/2017/04/17/monetizing-app-use-interstitial-banner-fallback-interstitial-video).
+* [Usar anúncios de faixa como um fallback para anúncios intersticiais em vídeo](https://blogs.windows.com/buildingapps/2017/04/17/monetizing-app-use-interstitial-banner-fallback-interstitial-video/).
 * [Conheça os usuários para veicular anúncios segmentados melhores](https://blogs.windows.com/buildingapps/2017/05/17/monetize-app-know-user-serve-better-targeted-ads/).
 * [Use as bibliotecas de publicidade mais recentes](https://blogs.windows.com/buildingapps/2017/05/22/earn-money-moving-latest-advertising-libraries/).
-* [Defina as configurações de COPPA corretas para seu aplicativo](https://blogs.windows.com/buildingapps/2017/06/21/monetizing-app-set-coppa-settings-app).
+* [Defina as configurações de COPPA corretas para seu aplicativo](https://blogs.windows.com/buildingapps/2017/06/21/monetizing-app-set-coppa-settings-app/).
 
 
 ## <a name="guidelines-for-banner-ads"></a>Diretrizes para anúncios em faixa
@@ -39,7 +39,7 @@ As seções a seguir fornecem recomendações sobre como implementar [anúncios 
 
 Recomendamos que você siga estas práticas recomendadas ao implementar anúncios em faixa em seu app:
 
-* [Use tamanhos de anúncios interativos](https://blogs.windows.com/buildingapps/2017/04/03/monetizing-app-use-interactive-advertising-bureau-ad-sizes) que se encaixem no layout do dispositivo.
+* [Use tamanhos de anúncios interativos](https://blogs.windows.com/buildingapps/2017/04/03/monetizing-app-use-interactive-advertising-bureau-ad-sizes/) que se encaixem no layout do dispositivo.
 
 * Dedique a maior parte da interface do usuário de seu app a conteúdo e controles funcionais.
 

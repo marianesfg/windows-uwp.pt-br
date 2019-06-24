@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, importar listagens da store, exportar listagens da store, importação/exportação, csv de listagens da store
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d98795d6ab43f92ad2927553b037524e2fc1ec7
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: b45f12a9ef7212ddb23b647894189491bfa73549
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63784776"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320632"
 ---
 # <a name="import-and-export-store-listings"></a>Importar e exportar as listagens da Loja
 
@@ -27,7 +27,7 @@ Tenha em mente que você sempre pode criar ou atualizar programação diretament
 
 Na página de visão geral do envio de um aplicativo, clique em **Exportar listagem** (na seção **Listagens da loja**) para gerar um arquivo .csv codificado em UTF-8. Salve esse arquivo em um local no seu computador.
 
-Você pode usar o Microsoft Excel ou outro editor para editar o arquivo. Observe que as versões do Excel para o Office 365 permitem que você salve um arquivo .csv como **UTF-8 CSV (delimitado por vírgula) (*.csv)**, mas outras versões podem não oferecer suporte a isso. Você pode encontrar detalhes sobre quais versões do Excel oferecem suporte a esse recurso no [Boletim de novos recursos do Excel 2016](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73) e saber mais sobre como codificar UTF-8 em vários editores de codificação [aqui](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
+Você pode usar o Microsoft Excel ou outro editor para editar o arquivo. Observe que as versões do Excel para o Office 365 permitem que você salve um arquivo .csv como **UTF-8 CSV (delimitado por vírgula) (*.csv)** , mas outras versões podem não oferecer suporte a isso. Você pode encontrar detalhes sobre quais versões do Excel oferecem suporte a esse recurso no [Boletim de novos recursos do Excel 2016](https://support.office.com/article/what-s-new-in-excel-for-office-365-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-001&ad=US) e saber mais sobre como codificar UTF-8 em vários editores de codificação [aqui](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
       
 Se você ainda não criou todas as listagem para seu produto, o arquivo .CSV exportado não conterá todos os dados personalizados. Você verá colunas para **Campo**, **ID**, **Tipo** e **Padrão**, além de linhas que correspondem a todos os itens que podem ser exibidos em um repositório de listagem.
 
@@ -36,7 +36,7 @@ Se você já criou listagens (ou se já tiver carregado pacotes), também é pos
 Veja uma visão geral do que está contido em cada uma das colunas no arquivo .CSV exportado:
 - A coluna **Campo** contém um nome associado a cada parte de uma listagem da Store. Esses correspondem aos mesmos itens que você pode fornecer durante a criação de listagens da Store no Partner Center, embora alguns dos nomes são ligeiramente diferentes. Para itens que você pode inserir mais de um do mesmo tipo, é possível ver diversas linhas, até o número máximo que você pode fornecer. Por exemplo, para **Recursos do aplicativo**, você verá **Recurso1**, **Recurso2** etc. até **Recurso20** (desde que você possa fornecer até 20 recursos do aplicativo).
 - O **ID** coluna contém um número que associa o Partner Center com cada campo. 
-- O **tipo** coluna fornece diretrizes gerais sobre o tipo de informações a ser fornecida para esse campo, como **texto** ou **caminho relativo (ou a URL para o arquivo no Partner Center)**. 
+- O **tipo** coluna fornece diretrizes gerais sobre o tipo de informações a ser fornecida para esse campo, como **texto** ou **caminho relativo (ou a URL para o arquivo no Partner Center)** . 
 - A coluna **Padrão** (e qualquer outra coluna identificada com códigos de idioma-localidade) representam o texto ou ativos associados a cada parte da listagem da loja. Você pode editar os campos nessas colunas para fazer atualizações em suas listagens da Store.
 
 >[!IMPORTANT]
@@ -65,7 +65,7 @@ A exclusão das informações em um campo para um idioma, sem remover a linha in
 
 Diversos campos em suas listagens exportadas exigem a entrada de texto, como aqueles no exemplo acima, **Descrição** e **Notas de versão**. Para esses tipos de campos, digite o texto apropriado no campo para cada idioma. Certifique-se de seguir o tamanho e outros requisitos de cada campo. Para saber mais sobre esses requisitos, consulte [Criar listagens da Store do aplicativo](create-app-store-listings.md).
 
-O fornecimento de informações para os campos que correspondem aos ativos, como imagens e trailers, é um pouco mais complicado. Em vez de **texto**, o **tipo** para esses ativos é **caminho relativo (ou a URL para o arquivo no Partner Center)**. 
+O fornecimento de informações para os campos que correspondem aos ativos, como imagens e trailers, é um pouco mais complicado. Em vez de **texto**, o **tipo** para esses ativos é **caminho relativo (ou a URL para o arquivo no Partner Center)** . 
      
 Se você já tiver carregado ativos para a listagem da Store, esses ativos serão representados por uma URL. Essas URLs podem ser reutilizadas em várias descrições de um produto ou mesmo em produtos diferentes na mesma conta de desenvolvedor, portanto, você pode copiar essas URLs para reutilizá-las em um campo diferente, se desejar.
 
@@ -84,7 +84,7 @@ Por exemplo, se a pasta raiz for **my_folder** e você quiser usar uma imagem ch
 
 ## <a name="import-listings"></a>Importar listagens
 
-Depois de inserir todas as alterações no arquivo .csv (e incluir quaisquer ativos que você deseja carregar), é necessário salvar o arquivo antes de carregá-lo. Se você estiver usando uma versão do Microsoft Excel com suporte à codificação UTF-8, certifique-se de selecionar **Salvar como** e usar o formato **UTF-8 CSV (delimitado por vírgula) (*.csv)**. Se você usar um editor diferente para exibir e editar o arquivo .csv, verifique se que o arquivo está codificado em UTF-8 antes de carregar.
+Depois de inserir todas as alterações no arquivo .csv (e incluir quaisquer ativos que você deseja carregar), é necessário salvar o arquivo antes de carregá-lo. Se você estiver usando uma versão do Microsoft Excel com suporte à codificação UTF-8, certifique-se de selecionar **Salvar como** e usar o formato **UTF-8 CSV (delimitado por vírgula) (*.csv)** . Se você usar um editor diferente para exibir e editar o arquivo .csv, verifique se que o arquivo está codificado em UTF-8 antes de carregar.
 
 Quando você estiver pronto para carregar o arquivo .csv atualizado e importar seus dados de listagem, selecione **Importar listagens** na página de visão geral do envio. Se você estiver importando apenas um arquivo .csv, escolha **Importar. csv**, navegue até o arquivo e clique em **Abrir**. Se você estiver importando uma pasta com arquivos de imagem, escolha Importar pasta, navegue até a pasta e clique em **Selecionar pasta**. Verifique se há apenas um arquivo .csv na pasta, juntamente com quaisquer ativos que estiver carregando. 
 

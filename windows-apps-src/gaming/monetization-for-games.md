@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, monetização
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ef957700f6554ccece9d0c3bf51ccf4244a4b74
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4c84c42da0e2653f0e5958583ad0ee9b9babe3bc
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368411"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318948"
 ---
 #  <a name="monetization-for-games"></a>Monetização para jogos
 
@@ -195,7 +195,7 @@ Estas são outras redes de publicidade que fornecem SDKs para veiculação de an
 
 #### <a name="vungle"></a>Vungle
 
-O SDK do Vungle para Windows oferece anúncios em vídeo em aplicativos e jogos. Para baixar o SDK, vá até [SDK do Vungle](https://v.vungle.com/sdk).
+O SDK do Vungle para Windows oferece anúncios em vídeo em aplicativos e jogos. Para baixar o SDK, vá até [SDK do Vungle](https://publisher.vungle.com/sdk/).
 
 #### <a name="smaato"></a>Smaato
 

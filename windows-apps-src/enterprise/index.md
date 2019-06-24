@@ -6,12 +6,12 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a44a1adb8685ad182620b4c68024176628b9204d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 087192160fd098d63042f3d1ad16fe7a811de337
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369662"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321506"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -156,8 +156,8 @@ Você tem opções para distribuir aplicativos aos usuários da sua organizaçã
 | Tópico | Descrição |
 |-------|-------------|
 | [Distribua aplicativos LOB às empresas](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) | Você pode publicar aplicativos de linha de negócios diretamente para as empresas por meio da Microsoft Store para Empresas, para aquisição por volume, sem tornar os aplicativos amplamente disponíveis ao público. |
-| [Sideload de apps](https://technet.microsoft.com/library/mt269549) | Ao fazer sideload de um aplicativo, você implanta um pacote do aplicativo assinado em um dispositivo. Você mantém a assinatura, a hospedagem e a implantação desses aplicativos. O processo de sideload de aplicativos é simplificado para Windows 10.             |
-| [Publicar aplicativos para a Microsoft Store](https://dev.windows.com/publish) | A Microsoft Store unificada permite que você publique e gerencie todos os seus aplicativos para todos os dispositivos Windows. Personalize a disponibilidade de seu aplicativo com o preço por mercado, controles de distribuição e visibilidade além de outras opções. |
+| [Sideload de apps](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) | Ao fazer sideload de um aplicativo, você implanta um pacote do aplicativo assinado em um dispositivo. Você mantém a assinatura, a hospedagem e a implantação desses aplicativos. O processo de sideload de aplicativos é simplificado para Windows 10.             |
+| [Publicar aplicativos para a Microsoft Store](https://developer.microsoft.com/store/publish-apps) | A Microsoft Store unificada permite que você publique e gerencie todos os seus aplicativos para todos os dispositivos Windows. Personalize a disponibilidade de seu aplicativo com o preço por mercado, controles de distribuição e visibilidade além de outras opções. |
 
 ## <a name="enterprise-uwp-samples"></a>Amostras da UWP corporativa
 

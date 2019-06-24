@@ -4,12 +4,12 @@ description: Os desenvolvedores podem usar a ativação de protocolos e a ativa�
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
-ms.openlocfilehash: f61fcfcef549295b8f3c9004572a74043a2917a2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: abc0b40178dc9b7c386342af6a6d85c6fb61945a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365823"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320268"
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Automatizar o lançamento de aplicativos UWP do Windows 10
 
@@ -136,7 +136,7 @@ Essa opção não dá suporte a argumentos de linha de comando.
 
 ### <a name="launcher-application"></a>Aplicativo inicializador
 
-Você pode criar um aplicativo separado que dê suporte ao uso de COM na inicialização. O exemplo a seguir mostra o código C++ a ser iniciado com a ativação de inicialização em um programa inicializador. Com esse código, você pode criar um objeto **ApplicationActivationManager** e chamar **ActivateApplication** passando a AUMID encontrada anteriormente e quaisquer argumentos. Para obter mais informações sobre os outros parâmetros, consulte[Método IApplicationActivationManager::ActivateApplication (MSDN)](https://msdn.microsoft.com/library/windows/desktop/hh706903(v=vs.85).aspx).
+Você pode criar um aplicativo separado que dê suporte ao uso de COM na inicialização. O exemplo a seguir mostra o código C++ a ser iniciado com a ativação de inicialização em um programa inicializador. Com esse código, você pode criar um objeto **ApplicationActivationManager** e chamar **ActivateApplication** passando a AUMID encontrada anteriormente e quaisquer argumentos. Para obter mais informações sobre os outros parâmetros, consulte[Método IApplicationActivationManager::ActivateApplication (MSDN)](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication).
 
 ```
 #include <ShObjIdl.h>

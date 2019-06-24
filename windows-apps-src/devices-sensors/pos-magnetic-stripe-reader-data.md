@@ -5,12 +5,12 @@ ms.date: 10/04/2018
 ms.topic: article
 keywords: o Windows 10, uwp, do ponto de serviço, pos, leitor magnética
 ms.localizationpriority: medium
-ms.openlocfilehash: 1805213c7c30ccbc67fb96098f11480703589bb4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 12b88d942e4b5a9c90880f6bd362ba9e7e011186
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651601"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321548"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>Obter e compreender os dados de tarja magnética
 
@@ -24,8 +24,7 @@ Sempre que o leitor reconhece um cartão swiped, ele irá gerar um dos três eve
 * [Evento BankCardDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): Ocorre quando passar o cartão bancário.
 * [Evento VendorSpecificDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.vendorspecificdatareceived): Ocorre quando passar o cartão específicas do fornecedor.
 
-Seu aplicativo precisa apenas assinar os eventos que são suportados pelo leitor magnética. Você pode ver quais tipos de cartões são compatíveis com [MagneticStripeReader.SupportedCardTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.supportedcardtypes
-).
+Seu aplicativo precisa apenas assinar os eventos que são suportados pelo leitor magnética. Você pode ver quais tipos de cartões são compatíveis com [MagneticStripeReader.SupportedCardTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.supportedcardtypes).
 
 O código a seguir demonstra a inscrever-se em três ***DataReceived** eventos:
 

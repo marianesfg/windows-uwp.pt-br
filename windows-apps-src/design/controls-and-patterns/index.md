@@ -8,12 +8,12 @@ ms.date: 11/16/2017
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ffed5cdc063a35b4693aa4a9323e2143b69e4fc
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: 2ecf82294614114e711483dfdc58cfad36591369
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065334"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319556"
 ---
 # <a name="controls-for-uwp-apps"></a>Controles para aplicativos UWP 
 
@@ -133,6 +133,6 @@ Obtenha o _XAML Controls Gallery_ aplicativo da Microsoft Store para ver esses c
 
 ## <a name="additional-controls"></a>Controles adicionais
 
-Controles adicionais para o desenvolvimento UWP estão disponíveis de empresas como <a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/products/uwp">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> e <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>. Esses controles fornecem suporte adicional para empresas e desenvolvedores .NET aumentando os controles padrão do sistema com os serviços e controles personalizados.  
+Controles adicionais para o desenvolvimento UWP estão disponíveis de empresas como <a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/uwp-ui-controls">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> e <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>. Esses controles fornecem suporte adicional para empresas e desenvolvedores .NET aumentando os controles padrão do sistema com os serviços e controles personalizados.  
 
 Se você tiver interesse em aprender mais sobre esses controles, confira o exemplo de <a href="https://github.com/Microsoft/Windows-appsample-customers-orders-database">Banco de dados de pedidos de clientes</a> no GitHub. Este exemplo usa o controle de grade de dados e a validação de entrada de dados da Telerik, que é parte da sua interface do usuário para o pacote UWP. A interface do usuário para o pacote UWP é uma coleção de mais de 20 controles que está disponível como um projeto de software livre pela fundação .NET.

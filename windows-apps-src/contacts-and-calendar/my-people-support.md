@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08acb2972469a84e6a37d7293ed00cae8df94dfb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 58bf8df4551c8bcfc663d2c832bef3a879ff6350
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611531"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317972"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Adicionando o suporte para Minhas Pessoas a um aplicativo
 
@@ -29,7 +29,7 @@ Há três coisas que você precisa fazer para permitir que seu aplicativo use o 
 
 1. [Declare suporte para o contrato de ativação shareTarget no manifesto do aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
 2. [Anote os contatos que os usuários podem compartilhar a usar seu aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
-3.  Dê suporte a várias instâncias do seu aplicativo em execução ao mesmo tempo. Os usuários devem poder interagir com a versão completa de seu aplicativo enquanto o usam em um painel de contato.  Eles podem até usá-lo em vários painéis de contato ao mesmo tempo.  Para dar suporte a isso, seu aplicativo precisa ser capaz de executar várias exibições simultaneamente. Para saber como fazer isso, consulte o artigo ["Mostrar vários modos de exibição para um aplicativo"](https://docs.microsoft.com/en-us/windows/uwp/layout/show-multiple-views).
+3.  Dê suporte a várias instâncias do seu aplicativo em execução ao mesmo tempo. Os usuários devem poder interagir com a versão completa de seu aplicativo enquanto o usam em um painel de contato.  Eles podem até usá-lo em vários painéis de contato ao mesmo tempo.  Para dar suporte a isso, seu aplicativo precisa ser capaz de executar várias exibições simultaneamente. Para saber como fazer isso, consulte o artigo ["Mostrar vários modos de exibição para um aplicativo"](https://docs.microsoft.com/windows/uwp/design/layout/show-multiple-views).
 
 Feito isso, seu aplicativo será exibido no painel de contato para os contatos anotados.
 
@@ -179,7 +179,7 @@ O objeto ContactPanel também permite que você defina a cor de fundo do cabeça
 
 ## <a name="supporting-notification-badging"></a>Suporte a selos de notificação
 
-Se você deseja fixar contatos na barra de tarefas para marcação quando chegam novas notificações do aplicativo relacionados à pessoa, você deve incluir o parâmetro **hint-people** nas [notificações do sistema](https://docs.microsoft.com/en-us/windows/uwp/shell/tiles-and-notifications/adaptive-interactive-toasts) e [Notificações expressivas de Minhas Pessoas](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications).
+Se você deseja fixar contatos na barra de tarefas para marcação quando chegam novas notificações do aplicativo relacionados à pessoa, você deve incluir o parâmetro **hint-people** nas [notificações do sistema](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts) e [Notificações expressivas de Minhas Pessoas](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications).
 
 ![Selos de notificações de pessoas](images/my-people-badging.png)
 

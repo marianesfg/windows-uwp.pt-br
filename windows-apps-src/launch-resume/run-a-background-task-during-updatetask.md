@@ -5,12 +5,12 @@ ms.date: 04/21/2017
 ms.topic: article
 keywords: Windows 10, uwp, update, tarefa em segundo plano, updatetask, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 3683595926f20fdd9f9af5929db65396b0001bcc
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d943623a9978d39fd3930edc07e7524fe1cadf55
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371482"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321787"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>Executar uma tarefa em segundo plano quando o aplicativo UWP é atualizado
 
@@ -27,7 +27,7 @@ Assim como em outros tipos de tarefas em segundo plano, você implementa a Taref
 - Adicionar um projeto do Componente do Tempo de Execução do Windows para sua solução.
 - Criar uma referência do aplicativo para o componente.
 - Criação de uma classe público e selada no componente que implementa [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask).
-- Implementação do método [**Executar**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.), que é o ponto de entrada obrigatório chamado quando a Tarefa de atualização é executada. Se você pretende fazer chamadas assíncronas de sua tarefa em segundo plano, [Criar e registrar uma tarefa em segundo plano fora do processo](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task) explica como usar um adiamento no método **Executar**.
+- Implementação do método [**Executar**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run), que é o ponto de entrada obrigatório chamado quando a Tarefa de atualização é executada. Se você pretende fazer chamadas assíncronas de sua tarefa em segundo plano, [Criar e registrar uma tarefa em segundo plano fora do processo](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task) explica como usar um adiamento no método **Executar**.
 
 Você não precisa registrar essa tarefa em segundo plano (a seção "Registrar a tarefa em segundo plano para execução" no tópico **Criar e registrar uma tarefa em segundo plano fora do processo**) para usar a tarefa de atualização. Isso é o principal motivo para usar uma tarefa de atualização, pois você não precisa adicionar nenhum código ao aplicativo para registrar a tarefa e o aplicativo não precisa ser executado pelo menos uma vez antes de ser atualizado a fim de registrar a tarefa em segundo plano.
 

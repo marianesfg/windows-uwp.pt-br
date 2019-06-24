@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9541ea1c00d473bc4881a80d8597625592e278f9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4a47a5f8ffca1d9ca2ddab05fe0baf2f85977d7f
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630831"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318189"
 ---
 # <a name="shadows-in-windows-ui"></a>Sombras na interface do usuário do Windows
 
@@ -113,9 +113,9 @@ shadow.StartAnimation("BlurRadius", blurAnimation);
 
 Se você quiser adicionar uma sombra para os elementos de estrutura mais complexos, há duas maneiras para fornecer interoperabilidade com sombras entre XAML e composição:
 
-1. Use o [DropShadowPanel](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.Properties.cs) disponíveis no Kit de ferramentas de comunidade do Windows. Consulte a [DropShadowPanel documentação](https://docs.microsoft.com/windows/uwpcommunitytoolkit/controls/DropShadowPanel) para obter detalhes sobre como usá-lo.
+1. Use o [DropShadowPanel](https://github.com/windows-toolkit/WindowsCommunityToolkit/blob/master/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.Properties.cs) disponíveis no Kit de ferramentas de comunidade do Windows. Consulte a [DropShadowPanel documentação](https://docs.microsoft.com/windows/uwpcommunitytoolkit/controls/DropShadowPanel) para obter detalhes sobre como usá-lo.
 1. Crie um Visual para usar como host do sombra e vinculá-lo para o Visual de folheto do XAML.
-1. Usar a Galeria de exemplos de composição [SamplesCommon](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SamplesCommon/SamplesCommon) controle personalizado de CompositionShadow. Consulte o exemplo para uso.
+1. Usar a Galeria de exemplos de composição [SamplesCommon](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SamplesCommon/SamplesCommon) controle personalizado de CompositionShadow. Consulte o exemplo para uso.
 
 ## <a name="performance"></a>Desempenho
 
@@ -132,4 +132,4 @@ Animar o raio de desfoque | Alto
 ## <a name="additional-resources"></a>Recursos adicionais
 
 - [API de DropShadow de composição](/uwp/api/Windows.UI.Composition.DropShadow)
-- [Repositório do GitHub WindowsUIDevLabs](https://github.com/Microsoft/WindowsUIDevLabs)
+- [Repositório do GitHub WindowsUIDevLabs](https://github.com/microsoft/WindowsCompositionSamples)

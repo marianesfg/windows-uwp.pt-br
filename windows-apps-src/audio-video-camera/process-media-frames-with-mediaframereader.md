@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e9db0960070c77485fbe8b2f3231f7ce8035b5c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2b77fb147ab614b19993700d5d99572f0247d54e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361488"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318277"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Processar quadros de mídia com o MediaFrameReader
 
@@ -93,7 +93,7 @@ Chame [**InitializeAsync**](https://docs.microsoft.com/uwp/api/windows.media.cap
 ## <a name="set-the-preferred-format-for-the-frame-source"></a>Definir o formato preferencial para a origem de quadros
 Para definir o formato preferencial para uma origem de quadros, você precisa obter um objeto [**MediaFrameSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSource) que represente a origem. Para obter esse objeto, acesse o dicionário [**Frames**](https://docs.microsoft.com/previous-versions/windows/apps/phone/jj207578(v=win.10)) do objeto **MediaCapture** inicializado especificando o identificador da origem de quadros que você deseja usar. Foi por essa razão que salvamos o objeto [**MediaFrameSourceInfo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceInfo) quando selecionamos um grupo de origens de quadro.
 
-A propriedade [**MediaFrameSource.SupportedFormats**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesource.supportedformats) contém uma lista de objetos [**MediaFrameFormat**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameFormat) que descrevem os formatos com suporte para a origem de quadros. Use o método de extensão Linq **Where** para selecionar um formato com base nas propriedades desejadas. Neste exemplo, é selecionado um formato que tem uma largura de 1080 pixels e pode fornecer quadros no formato RGB de 32 bits. O método de extensão **FirstOrDefault** seleciona a primeira entrada na lista. Se o formato selecionado for nulo, o formato solicitado não será compatível com a origem de quadros. Se o formato for compatível, você poderá solicitar que a origem use esse formato chamando [**SetFormatAsync**](https://developer.microsoft.com/windows/apps/develop).
+A propriedade [**MediaFrameSource.SupportedFormats**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesource.supportedformats) contém uma lista de objetos [**MediaFrameFormat**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameFormat) que descrevem os formatos com suporte para a origem de quadros. Use o método de extensão Linq **Where** para selecionar um formato com base nas propriedades desejadas. Neste exemplo, é selecionado um formato que tem uma largura de 1080 pixels e pode fornecer quadros no formato RGB de 32 bits. O método de extensão **FirstOrDefault** seleciona a primeira entrada na lista. Se o formato selecionado for nulo, o formato solicitado não será compatível com a origem de quadros. Se o formato for compatível, você poderá solicitar que a origem use esse formato chamando [**SetFormatAsync**](https://docs.microsoft.com/windows/uwp/develop/).
 
 [!code-cs[GetPreferredFormat](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetGetPreferredFormat)]
 
@@ -127,11 +127,11 @@ Como os quadros chegarão como objetos **SoftwareBitmap**, você precisa criar u
 
 Agora é hora de implementar o manipulador de eventos **FrameArrived**. Quando o manipulador é chamado, o parâmetro *sender* contém uma referência ao objeto **MediaFrameReader** que gerou o evento. Chame [**TryAcquireLatestFrame**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.tryacquirelatestframe) nesse objeto para tentar obter o quadro mais recente. Como o nome indica, **TryAcquireLatestFrame** pode não ter êxito no retorno de um quadro. Dessa forma, ao acessar as propriedades VideoMediaFrame e SoftwareBitmap, certifique-se de testar quanto ao valor nulo. Neste exemplo, o operador condicional nulo ? é usado para acessar o **SoftwareBitmap** e, em seguida, o objeto recuperado é verificado quanto ao valor nulo.
 
-O controle **Image** só pode exibir imagens em formato BRGA8 com um valor pré-multiplicado ou nenhum alfa. Se o quadro de chegada não estiver nesse formato, o método estático [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows) será usado para converter o bitmap de software no formato correto.
+O controle **Image** só pode exibir imagens em formato BRGA8 com um valor pré-multiplicado ou nenhum alfa. Se o quadro de chegada não estiver nesse formato, o método estático [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.convert) será usado para converter o bitmap de software no formato correto.
 
 Em seguida, o método [**Interlocked.Exchange**](https://docs.microsoft.com/dotnet/api/system.threading.interlocked.exchange?redirectedfrom=MSDN#System_Threading_Interlocked_Exchange__1___0____0_) é usado para trocar a referência do bitmap de chegada pelo bitmap de buffer de fundo. Esse método troca essas referências em uma operação atômica thread-safe. Após a troca, a imagem antiga do buffer de fundo, agora na variável *softwareBitmap*, é descartada para limpar seus recursos.
 
-Em seguida, o [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) associado ao elemento **Image** é usado para criar uma tarefa que será executada no thread da interface do usuário chamando [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows). Como as tarefas assíncronas serão executadas dentro da tarefa, a expressão lambda transmitida para **RunAsync** é declarada com a palavra-chave *async*.
+Em seguida, o [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) associado ao elemento **Image** é usado para criar uma tarefa que será executada no thread da interface do usuário chamando [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync). Como as tarefas assíncronas serão executadas dentro da tarefa, a expressão lambda transmitida para **RunAsync** é declarada com a palavra-chave *async*.
 
 Na tarefa, a variável *_taskRunning* é verificada para garantir que apenas uma instância da tarefa seja executada por vez. Se a tarefa já não estiver em execução, *_taskRunning* será definido como true para impedir que a tarefa seja executada novamente. Em um loop *while*, **Interlocked.Exchange** é chamado para copiar do buffer de fundo em um **SoftwareBitmap** temporário até que a imagem de buffer de fundo seja nula. Para cada vez que o bitmap temporário for preenchido, a propriedade **Source** da **Image** será convertida em um **SoftwareBitmapSource** e, em seguida, [**SetBitmapAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.setbitmapasync) será chamado para definir a origem da imagem.
 

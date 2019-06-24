@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ac96354fa1752f655307a5dfd18678233e59c724
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a72a4e7349a5d72b7081873814389c0924ca9308
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372442"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322285"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Portabilidade de interface do usuário para a UWP e Windows Phone Silverlight XAML
 
@@ -201,7 +201,7 @@ Aplicativos do Windows Phone Silverlight usam controles definidos os **Phone** n
 
 **Observação**    PointerOver o estado de visual é relevante em estilos/modelos personalizados em aplicativos do Windows 10, mas não em aplicativos do Windows Phone Silverlight. Há outros motivos por que os estilos/modelos em existentes personalizados pode não ser adequados para aplicativos do Windows 10, incluindo chaves de recurso do sistema estiver usando, as alterações aos conjuntos de estados visuais usados e melhorias de desempenho feitas nos estilos de padrão do Windows 10 / modelos. É recomendável que você edite uma nova cópia do modelo de padrão de um controle para o Windows 10 e, em seguida, reaplicar sua personalização de estilo e modelo para que.
 
-Para saber mais sobre controles da UWP, consulte [Controles por função](https://docs.microsoft.com/windows/uwp/controls-and-patterns/controls-by-function), [Lista de controles](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/) e [Diretrizes para controles](https://developer.microsoft.com/windows/design/controls-patterns).
+Para saber mais sobre controles da UWP, consulte [Controles por função](https://docs.microsoft.com/windows/uwp/controls-and-patterns/controls-by-function), [Lista de controles](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/) e [Diretrizes para controles](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/index).
 
 ##  <a name="design-language-in-windows10"></a>Linguagem de design no Windows 10
 
@@ -211,7 +211,7 @@ Há algumas diferenças na linguagem de design entre aplicativos do Windows Phon
 
 Para cadeias de caracteres localizadas, você pode usar novamente o arquivo. resx do seu projeto do Windows Phone Silverlight no seu projeto de aplicativo UWP. Copie o arquivo, adicione-o ao projeto e renomeie-o para Resources.resw de forma que o mecanismo de pesquisa o encontre por padrão. Defina **Ação de Compilação** como **PRIResource** e **Copiar para Diretório de Saída** como **Não copiar**. Você pode usar as cadeias de caracteres na marcação especificando o atributo **X:UID** em seus elementos XAML. Consulte [guia de início rápido: Usando recursos de cadeia de caracteres](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10)).
 
-Uso de aplicativos do Windows Phone Silverlight a **CultureInfo** classe para ajudar a globalizar um aplicativo. Os aplicativos UWP usam MRT (Modern Resource Technology), que permite o carregamento dinâmico de recursos do aplicativo (localização, escala e tema) no tempo de execução e na superfície de design do Visual Studio. Para saber mais, veja [Diretrizes para arquivos, dados e globalização](https://developer.microsoft.com/windows/design/usability).
+Uso de aplicativos do Windows Phone Silverlight a **CultureInfo** classe para ajudar a globalizar um aplicativo. Os aplicativos UWP usam MRT (Modern Resource Technology), que permite o carregamento dinâmico de recursos do aplicativo (localização, escala e tema) no tempo de execução e na superfície de design do Visual Studio. Para saber mais, veja [Diretrizes para arquivos, dados e globalização](https://docs.microsoft.com/windows/uwp/design/usability/index).
 
 O tópico [**ResourceContext.QualifierValues**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues) descreve como carregar recursos específicos à família de dispositivos com base no fator de seleção de recurso de família de dispositivos.
 

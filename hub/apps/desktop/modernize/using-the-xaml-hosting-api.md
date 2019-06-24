@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 545e1e1b220de9edf444ca06c3b21140227e8284
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 16f61c1f950583ee0fef7f30b7e17939df7ea538
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215146"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317763"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Usando o XAML UWP API de hospedagem em um aplicativo da área de trabalho
 
@@ -71,7 +71,7 @@ A maneira de você usar o XAML UWP API de hospedagem em seu código depende do t
 
 ### <a name="c-win32"></a>C++ Win32
 
-[C++Exemplo do Win32](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island). Este exemplo demonstra uma implementação completa de hospedando um controle de usuário do UWP em um desagrupadas C++ aplicativo do Win32 (ou seja, um aplicativo que não é compilado em um pacote MSIX).
+[C++Exemplo do Win32](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island). Este exemplo demonstra uma implementação completa de hospedando um controle de usuário do UWP em um desagrupadas C++ aplicativo do Win32 (ou seja, um aplicativo que não é compilado em um pacote MSIX).
 
 ### <a name="wpf-and-windows-forms"></a>WPF e Windows Forms
 
@@ -162,7 +162,7 @@ Aqui estão as etapas principais para usar o XAML UWP API de hospedagem para hos
 
 Para obter exemplos completos que demonstram essas tarefas no contexto de um aplicativo de exemplo funcional, consulte os arquivos de código a seguir:
 
-  * **C++ Win32:** Consulte a [XamlBridge.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/XamlBridge.cpp) arquivo na [ C++ Win32 sample](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island).
+  * **C++ Win32:** Consulte a [XamlBridge.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/XamlBridge.cpp) arquivo na [ C++ Win32 sample](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island).
 
   * **WPF:** Consulte a [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.cs) e [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHost.cs) arquivos no Kit de ferramentas de comunidade do Windows.  
 
@@ -176,7 +176,7 @@ Há várias coisas que seu aplicativo precisa fazer para lidar adequadamente com
 
 Para tratar corretamente a entrada do teclado para cada ilha de XAML, seu aplicativo deve passar todas as mensagens do Windows para a estrutura XAML UWP para que determinadas mensagens podem ser processadas corretamente. Para fazer isso, em algum lugar no seu aplicativo que possa acessar o loop de mensagem, converta a **DesktopWindowXamlSource** objeto para cada ilha de XAML para um **IDesktopWindowXamlSourceNative2** interface COM. Em seguida, chame o **PreTranslateMessage** método dessa interface e passe a mensagem atual.
 
-  * Um C++ aplicativo do Win32 pode chamar **PreTranslateMessage** diretamente em seu loop de mensagem principal. Por exemplo, consulte o [SampleApp.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/SampleApp.cpp#L61) arquivo de código na [ C++ Win32 sample](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island).
+  * Um C++ aplicativo do Win32 pode chamar **PreTranslateMessage** diretamente em seu loop de mensagem principal. Por exemplo, consulte o [SampleApp.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/SampleApp.cpp#L61) arquivo de código na [ C++ Win32 sample](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island).
 
   * Um aplicativo WPF pode chamar **PreTranslateMessage** do manipulador de eventos para o [ **ComponentDispatcher.ThreadFilterMessage** ](https://docs.microsoft.com/dotnet/api/system.windows.interop.componentdispatcher.threadfiltermessage?view=netframework-4.7.2) eventos. Por exemplo, consulte o [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs#L177) arquivo no Kit de ferramentas de comunidade do Windows.
 
@@ -202,15 +202,15 @@ Para obter exemplos que demonstram como fazer isso no contexto de um aplicativo 
 
 Quando o usuário altera o tamanho do elemento pai da interface do usuário, você precisará lidar com as alterações de layout necessárias para garantir que os controles UWP exibir conforme o esperado. Aqui estão alguns cenários importantes a considerar.
 
-* Em um C++ aplicativo do Win32, quando seu aplicativo lida com a mensagem WM_SIZE que ele pode reposicionar a ilha de XAML hospedado usando o [SetWindowPos](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-setwindowpos) função. Por exemplo, consulte o [SampleApp.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/SampleApp.cpp#L191) arquivo de código na [ C++ Win32 sample](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island).
+* Em um C++ aplicativo do Win32, quando seu aplicativo lida com a mensagem WM_SIZE que ele pode reposicionar a ilha de XAML hospedado usando o [SetWindowPos](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-setwindowpos) função. Por exemplo, consulte o [SampleApp.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/SampleApp.cpp#L191) arquivo de código na [ C++ Win32 sample](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island).
 
-* Quando o elemento pai da interface do usuário precisa obter o tamanho da área retangular necessário para se ajustarem a **Windows.UI.Xaml.UIElement** que você estiver hospedando na **DesktopWindowXamlSource**, chame o [ **Medida** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) método da **Windows.UI.Xaml.UIElement**. Por exemplo: 
+* Quando o elemento pai da interface do usuário precisa obter o tamanho da área retangular necessário para se ajustarem a **Windows.UI.Xaml.UIElement** que você estiver hospedando na **DesktopWindowXamlSource**, chame o [ **Medida** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) método da **Windows.UI.Xaml.UIElement**. Por exemplo:
 
     * Em um aplicativo WPF, você pode fazer isso a partir de [ **MeasureOverride** ](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.measureoverride) método do [ **HwndHost** ](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) que hospeda o  **DesktopWindowXamlSource**. Por exemplo, consulte o [WindowsXamlHostBase.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Layout.cs) arquivo no Kit de ferramentas de comunidade do Windows.
 
     * Em um aplicativo Windows Forms, você pode fazer isso a partir de [ **GetPreferredSize** ](https://docs.microsoft.com/dotnet/api/system.windows.forms.control.getpreferredsize) método da [ **controle** ](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) que hospeda o **DesktopWindowXamlSource**. Por exemplo, consulte o [WindowsXamlHostBase.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.Layout.cs) arquivo no Kit de ferramentas de comunidade do Windows.
 
-* Quando altera o tamanho do elemento pai da interface do usuário, chame o [ **Arrange** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) método da raiz **Windows.UI.Xaml.UIElement** que você estiver hospedando no  **DesktopWindowXamlSource**. Por exemplo: 
+* Quando altera o tamanho do elemento pai da interface do usuário, chame o [ **Arrange** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) método da raiz **Windows.UI.Xaml.UIElement** que você estiver hospedando no  **DesktopWindowXamlSource**. Por exemplo:
 
     * Em um aplicativo WPF, você pode fazer isso a partir de [ **ArrangeOverride** ](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.arrangeoverride) método da [ **HwndHost** ](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) objeto que hospeda o **DesktopWindowXamlSource**. Por exemplo, consulte o [WindowsXamlHost.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Layout.cs) arquivo no Kit de ferramentas de comunidade do Windows.
 
@@ -245,11 +245,11 @@ Se você quiser hospedar um controle XAML UWP personalizado (um controle que voc
 2. Chame o [ **GetXamlType** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.markup.ixamlmetadataprovider.getxamltype) método do seu provedor de metadados raiz quando o nome do tipo do controle XAML UWP é atribuído (Isso pode ser atribuído no código em tempo de execução, ou você pode optar por habilitá-lo para ser atribuído na janela Propriedades do Visual Studio).
 
     Para obter exemplos, consulte os arquivos de código a seguir:
-      * **C++ Win32:** Consulte a [XamlApplication.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/Microsoft.UI.Xaml.Markup/XamlApplication.cpp) arquivo de código na [ C++ Win32 sample](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island).
+      * **C++ Win32:** Consulte a [XamlApplication.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/Microsoft.UI.Xaml.Markup/XamlApplication.cpp) arquivo de código na [ C++ Win32 sample](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island).
 
       * **WPF e Windows Forms**: Consulte a [XamlApplication.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Win32.UI.XamlHost/XamlApplication.cs) e [UWPTypeFactory.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Win32.UI.XamlHost/UWPTypeFactory.cs) arquivos no Kit de ferramentas de comunidade do Windows de código. Esses arquivos fazem parte da implementação de compartilhado a **WindowsXamlHost** classes para o WPF e Windows Forms, que ajudam a ilustrar como usar o XAML UWP API nesses tipos de aplicativos de hospedagem.
 
-3. Integrar o código-fonte para o controle personalizado do UWP XAML em sua solução de aplicativo de host, criar o controle personalizado e usá-lo em seu aplicativo. Para obter instruções para um aplicativo WPF ou Windows Forms, consulte [estas instruções](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost#add-a-custom-uwp-control). Para obter um exemplo de um C++ aplicativo Win32, consulte o [Microsoft.UI.Xaml.Markup](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island/Microsoft.UI.Xaml.Markup) e [MyApp](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island/MyApp) projetos no [ C++ Win32 sample](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island).
+3. Integrar o código-fonte para o controle personalizado do UWP XAML em sua solução de aplicativo de host, criar o controle personalizado e usá-lo em seu aplicativo. Para obter instruções para um aplicativo WPF ou Windows Forms, consulte [estas instruções](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost#add-a-custom-uwp-control). Para obter um exemplo de um C++ aplicativo Win32, consulte o [Microsoft.UI.Xaml.Markup](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island/Microsoft.UI.Xaml.Markup) e [MyApp](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island/MyApp) projetos no [ C++ Win32 sample](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island).
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
@@ -274,4 +274,4 @@ Se você quiser hospedar um controle XAML UWP personalizado (um controle que voc
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Controles da UWP em aplicativos da área de trabalho](xaml-islands.md)
-* [C++Exemplo de ilhas de XAML do Win32](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island)
+* [C++Exemplo de ilhas de XAML do Win32](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island)

@@ -7,18 +7,18 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2c7332a3e1097a8e62576ae5920eb82c2bd5d2a6
-ms.sourcegitcommit: 423ff8f1fd791445e21cca534bcefe407251acf1
+ms.openlocfilehash: 20980562f73bca2087d4c0a6ee049c848404d6a6
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251609"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319409"
 ---
 ![Noções básicas de design](../images/downloads-2x.png)
 
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Projetar kits de ferramentas e amostras para aplicativos UWP
  
-Downloads relacionados à interface do usuário e design para aplicativos de Design Fluente/UWP. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/downloads">nossa página principal de downloads</a>. 
+Downloads relacionados à interface do usuário e design para aplicativos de Design Fluente/UWP. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/windows/downloads">nossa página principal de downloads</a>. 
 
 
 ## <a name="design-toolkits"></a>Kits de ferramentas de design
@@ -131,4 +131,4 @@ Essa amostra fornece uma demonstração interativa de todos os controles XAML. E
 
 ## <a name="want-more-code"></a>Quer mais código?
 
-Confira a página de exemplo do Windows para obter uma lista completa de todos as nossas amostras de aplicativos UWP. <a href="https://developer.microsoft.com/samples">Acesse o portal de amostras</a>
+Confira a página de exemplo do Windows para obter uma lista completa de todos as nossas amostras de aplicativos UWP. <a href="https://developer.microsoft.com/windows/samples">Acesse o portal de amostras</a>

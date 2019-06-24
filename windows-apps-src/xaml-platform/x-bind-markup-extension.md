@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c32fee5d9cbe5d40b9fe324eb8d6bad6d87eb9b3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4a6f182ab5f34f7bbb99e54626001126b3741522
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371086"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320282"
 ---
 # <a name="xbind-markup-extension"></a>Extensão de marcação {x:Bind}
 
@@ -29,7 +29,7 @@ Os objetos de associação criados por **{x:Bind}** e **{Binding}** são em gran
 **Aplicativos de exemplo que demonstram {X:Bind}**
 
 -   [exemplo de {X:Bind}](https://go.microsoft.com/fwlink/p/?linkid=619989)
--   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)
+-   [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper)
 -   [Exemplo de Noções básicas de interface do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=619992)
 
 ## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
@@ -115,7 +115,7 @@ Desde o Windows 10, versão 1607, **{x: Bind}** dá suporte ao uso de uma funç�
 
 ## <a name="event-binding"></a>Associação de evento
 
-Associação de evento é um recurso exclusivo para associação compilada. Permite que você especifique o manipulador para um evento usando uma associação, em vez de ele ter de ser um método no code-behind. Por exemplo:  **Clique em = "{X:Bind rootFrame.GoForward}"** .
+Associação de evento é um recurso exclusivo para associação compilada. Permite que você especifique o manipulador para um evento usando uma associação, em vez de ele ter de ser um método no code-behind. Por exemplo: **Clique em = "{X:Bind rootFrame.GoForward}"** .
 
 Para eventos, o método de destino não deve ser sobrecarregado e também deve:
 

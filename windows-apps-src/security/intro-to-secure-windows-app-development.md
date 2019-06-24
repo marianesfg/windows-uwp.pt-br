@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: ee386199fbee7d2f9b839d6b1805c6181e4d70a9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c9b4060fbd2e59a545451c9c8ebe103c9bb527a0
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371392"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320600"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Introdução ao desenvolvimento de aplicativos seguros do Windows
 
@@ -175,7 +175,7 @@ O fluxo de trabalho de registro de um aplicativo pode ter a seguinte aparência:
 
 As informações de registro que você coleta podem incluir muito mais informações de identificação do que são utilizadas neste cenário simples. Por exemplo, se seu aplicativo acessa um serviço protegido, como para bancos, você precisará solicitar comprovação de identidade e outros itens como parte do processo de inscrição. Depois que todas as condições forem atendidas, a chave pública do usuário será armazenada no back-end e usada para validar na próxima vez em que o usuário utilizar o serviço.
 
-Para obter mais informações sobre o Windows Hello, consulte o [Guia do Windows Hello](https://technet.microsoft.com/itpro/windows/keep-secure/microsoft-passport-guide) e o [Guia do desenvolvedor do Windows Hello](microsoft-passport.md).
+Para obter mais informações sobre o Windows Hello, consulte o [Guia do Windows Hello](https://docs.microsoft.com/windows/keep-secure/microsoft-passport-guide) e o [Guia do desenvolvedor do Windows Hello](microsoft-passport.md).
 
 ## <a name="3-data-in-flight-security-methods"></a>3 Métodos de segurança de dados em voo
 
@@ -478,14 +478,14 @@ Quando os dados chegam no dispositivo, o modelo de aplicativo do Windows fornece
 
 ### <a name="62-code-samples"></a>6.2 Exemplos de código
 
--   [Cofre de credenciais](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/PasswordVault)
--   [Seletor de credencial](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CredentialPicker)
--   [Bloqueio de dispositivo com o logon do Azure](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DeviceLockdownAzureLogin)
--   [Proteção de dados corporativos](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/EnterpriseDataProtection)
--   [KeyCredentialManager](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/KeyCredentialManager)
--   [Cartões inteligentes](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SmartCard)
--   [Gerenciamento de contas da Web](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/WebAccountManagement)
--   [WebAuthenticationBroker](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/WebAuthenticationBroker)
+-   [Cofre de credenciais](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PasswordVault)
+-   [Seletor de credencial](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CredentialPicker)
+-   [Bloqueio de dispositivo com o logon do Azure](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceLockdownAzureLogin)
+-   [Proteção de dados corporativos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/EnterpriseDataProtection)
+-   [KeyCredentialManager](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/KeyCredentialManager)
+-   [Cartões inteligentes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SmartCard)
+-   [Gerenciamento de contas da Web](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement)
+-   [WebAuthenticationBroker](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)
 
 ### <a name="63-api-reference"></a>6.3 Referência de API
 

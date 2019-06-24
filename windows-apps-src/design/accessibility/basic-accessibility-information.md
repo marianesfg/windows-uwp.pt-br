@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c4b796c8af493508328730c2b958a0beb38bf60c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a50ca6eaeecd2528eaa0d8558ef70552ae49944a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361954"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317298"
 ---
 # <a name="expose-basic-accessibility-information"></a>Expor informações básicas de acessibilidade  
 
@@ -97,7 +97,7 @@ XAML
 <span id="LABELS"/>
 
 ## <a name="labels-and-labeledby"></a>Rótulos e LabeledBy  
-A melhor maneira de associar um rótulo a um elemento de formulário é usar um [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) com um **x:Name** para texto de rótulo e, então, configurar a propriedade anexada [**AutomationProperties.LabeledBy**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v%3Dvs.95)) no elemento de formulário para fazer referência ao **TextBlock** rotulador pelo seu nome XAML. Se você usar esse padrão, quando o usuário clicar no rótulo, o foco se moverá para o controle associado e as tecnologias adaptativas poderão usar o texto de rótulo como o nome acessível para o campo de formulário. Aqui está um exemplo que mostra essa técnica.
+A melhor maneira de associar um rótulo a um elemento de formulário é usar um [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) com um **x:Name** para texto de rótulo e, então, configurar a propriedade anexada [**AutomationProperties.LabeledBy**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v=vs.95)) no elemento de formulário para fazer referência ao **TextBlock** rotulador pelo seu nome XAML. Se você usar esse padrão, quando o usuário clicar no rótulo, o foco se moverá para o controle associado e as tecnologias adaptativas poderão usar o texto de rótulo como o nome acessível para o campo de formulário. Aqui está um exemplo que mostra essa técnica.
 
 XAML
 ```xml

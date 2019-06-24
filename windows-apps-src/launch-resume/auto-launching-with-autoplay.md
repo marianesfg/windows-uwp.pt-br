@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d1f139ca4cf134ff8515a4da1134da16c338a4a8
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1cc13470c1f07d1ee420253c8a147ff7a5c3fc40
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371330"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318768"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>A inicialização automática com a execução automática
 
@@ -225,7 +225,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 Você pode registrar aplicativos como opções de eventos de dispositivo de **Reprodução Automática**. Os eventos de dispositivo de **Reprodução Automática** são gerados quando um dispositivo é conectado a um computador.
 
-Nesta seção, mostramos como identificar seu aplicativo como uma opção **Reprodução Automática** quando uma câmera é conectada a um computador. O aplicativo registra como um manipulador para o **WPD\\ImageSourceAutoPlay** eventos. Esse é um evento comum que o sistema Dispositivo Portátil do Windows (WPD) gera quando câmeras e outros dispositivos de imagem o notifica que são uma ImageSource usando MTP. Para saber mais, consulte [Dispositivos portáteis do Windows](https://docs.microsoft.com/previous-versions//ff597729(v=vs.85)).
+Nesta seção, mostramos como identificar seu aplicativo como uma opção **Reprodução Automática** quando uma câmera é conectada a um computador. O aplicativo registra como um manipulador para o **WPD\\ImageSourceAutoPlay** eventos. Esse é um evento comum que o sistema Dispositivo Portátil do Windows (WPD) gera quando câmeras e outros dispositivos de imagem o notifica que são uma ImageSource usando MTP. Para saber mais, consulte [Dispositivos portáteis do Windows](https://docs.microsoft.com/previous-versions/ff597729(v=vs.85)).
 
 **Importante**  as [**Windows.Devices.Portable.StorageDevice** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice) APIs fazem parte do [família de dispositivos da área de trabalho](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide). Aplicativos podem usar essas APIs somente em dispositivos Windows 10 desktop família do dispositivo, como computadores.
 

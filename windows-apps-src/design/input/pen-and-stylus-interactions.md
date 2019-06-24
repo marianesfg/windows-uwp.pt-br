@@ -8,12 +8,12 @@ keywords: Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, Ink
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d60c85efe8f0a959ac66ffbd3dc8a05f312d0f2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 427d359676bd064e577ab4f13f7b0a17f61d7e3e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365645"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317164"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Interações com caneta e Windows Ink em aplicativos UWP
 
@@ -64,8 +64,7 @@ Por padrão, o [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xam
 Neste exemplo, um [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) sobrepõe uma imagem em segundo plano.
 
 > [!NOTE]
-> Um InkCanvas possui padrão [ **altura** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) e [ **largura** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) propriedades de zero, a menos que ele seja o filho de um elemento que automaticamente dimensiona seus elementos filho, como [StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel
-) ou [grade](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) controles.
+> Um InkCanvas possui padrão [ **altura** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) e [ **largura** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) propriedades de zero, a menos que ele seja o filho de um elemento que automaticamente dimensiona seus elementos filho, como [StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel) ou [grade](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) controles.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">

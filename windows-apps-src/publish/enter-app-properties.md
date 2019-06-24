@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, configurações de jogo, modo de exibição, requisitos do sistema, requisitos de hardware, hardware mínimo, hardware recomendado, política de privacidade, informações de contato de suporte, site do app, informações de suporte
 ms.localizationpriority: medium
-ms.openlocfilehash: ec3b78da4e56ab5994155c41505bbdde42b44e12
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 5bc1283560334d2eac97fd358feabfca0f411014
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63774048"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320037"
 ---
 # <a name="enter-app-properties"></a>Insira as propriedades do aplicativo
 
@@ -67,7 +67,7 @@ Se o jogo oferecer suporte a qualquer uma das opções multijogador, indique o n
 
 ## <a name="display-mode"></a>Modo de exibição
 
-Esta seção permite que você indique se o seu produto foi projetado para ser executado em uma exibição imersiva (não em 2D) do [Windows Mixed Reality](https://developer.microsoft.com/windows/mixed-reality) em computadores e/ou dispositivos HoloLens. Se você indicar que sim, também precisará:
+Esta seção permite que você indique se o seu produto foi projetado para ser executado em uma exibição imersiva (não em 2D) do [Windows Mixed Reality](https://developer.microsoft.com/mixed-reality) em computadores e/ou dispositivos HoloLens. Se você indicar que sim, também precisará:
 - Selecionar a opção **Hardware mínimo** ou **Hardware recomendado** para **Headset imersivo do Windows Mixed Reality** na seção [Requisitos do sistema](#system-requirements) que é exibida na parte inferior da página **Propriedades**.
 - Especificar a **Configuração do marco de delimitação** (se o computador estiver selecionado) para que os usuários saibam se ele deve ser usado apenas em uma posição sentada ou em pé ou se ele permite (ou requer) que o usuário se mova ao usá-lo. 
 

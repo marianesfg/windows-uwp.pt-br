@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d3530861175c8d9b70683926393b5adfdd59407
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 992648c8c90a8ad62b772d417b2b1beeb6087c53
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361555"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318535"
 ---
 # <a name="process-media-files-in-the-background"></a>Processar arquivos de mídia em segundo plano
 
@@ -55,7 +55,7 @@ Adicione as variáveis de membro a seguir à sua classe:
 
 [!code-cs[BackgroundMembers](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundMembers)]
 
-O sistema chama o método [**Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.) de uma tarefa em segundo plano quando a tarefa é inicializada. Defina o objeto [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) passado pelo método para a variável de membro correspondente. Registre um manipulador para o evento [**Canceled**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.canceled), que será gerado se o sistema precisar desligar a tarefa em segundo plano. Então, defina a propriedade [**Progress**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress) para zero.
+O sistema chama o método [**Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) de uma tarefa em segundo plano quando a tarefa é inicializada. Defina o objeto [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) passado pelo método para a variável de membro correspondente. Registre um manipulador para o evento [**Canceled**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.canceled), que será gerado se o sistema precisar desligar a tarefa em segundo plano. Então, defina a propriedade [**Progress**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress) para zero.
 
 Em seguida, chame o método do objeto de tarefa de segundo plano [**GetDeferral**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.getdeferral) para obter um adiamento. Isso informa o sistema a não desligar sua tarefa porque você está executando operações assíncronas.
 

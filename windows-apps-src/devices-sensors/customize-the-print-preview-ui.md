@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, impressão
 ms.localizationpriority: medium
-ms.openlocfilehash: 68f8f990209a66a8677afbd1913c95bfd2fce187
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8d13f67ecff5c670707ca1832ea44b85ca8319d9
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370289"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321561"
 ---
 # <a name="customize-the-print-preview-ui"></a>Personalizar a interface do usuário para visualização de impressão
 
@@ -54,9 +54,9 @@ No entanto, as modificações feitas com o uso desse método só afetam a interf
 
 ### <a name="define-the-options-to-display"></a>Definir as opções para exibição
 
-Quando a tela do aplicativo estiver carregada, ela se registrará para o contrato do botão Imprimir. Parte desse registro inclui definir o manipulador de eventos [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597). O código para personalizar as opções exibidas na interface de usuário para visualização da impressão é adicionado ao manipulador de eventos **PrintTaskRequested**.
+Quando a tela do aplicativo estiver carregada, ela se registrará para o contrato do botão Imprimir. Parte desse registro inclui definir o manipulador de eventos [**PrintTaskRequested**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_#Windows_Foundation_IAsyncOperationWithProgress_2_Progress). O código para personalizar as opções exibidas na interface de usuário para visualização da impressão é adicionado ao manipulador de eventos **PrintTaskRequested**.
 
-Modifique o manipulador de eventos [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) para incluir as instruções [**printTask.options**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtask.options) que configuram os parâmetros de impressão que você deseja exibir na interface do usuário para visualização de impressão. Para a tela em seu aplicativo para o qual você quer mostrar uma lista personalizada de opções de impressão, substitua o manipulador de eventos **PrintTaskRequested** na classe auxiliar para incluir o código que especifica as opções a serem exibidas quando a tela for impressa.
+Modifique o manipulador de eventos [**PrintTaskRequested**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_#Windows_Foundation_IAsyncOperationWithProgress_2_Progress) para incluir as instruções [**printTask.options**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtask.options) que configuram os parâmetros de impressão que você deseja exibir na interface do usuário para visualização de impressão. Para a tela em seu aplicativo para o qual você quer mostrar uma lista personalizada de opções de impressão, substitua o manipulador de eventos **PrintTaskRequested** na classe auxiliar para incluir o código que especifica as opções a serem exibidas quando a tela for impressa.
 
 ``` csharp
 protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequestedEventArgs e)
@@ -109,7 +109,7 @@ Você também pode definir os valores padrão das opções na interface de usuá
 
 ## <a name="add-new-print-options"></a>Adicionar novas opções de impressão
 
-Esta seção mostra como criar uma nova opção de impressão, definir uma lista de valores aceitos por essa opção e adicionar a opção à visualização de impressão. Como na seção anterior, adicione a nova opção de impressão no manipulador de eventos [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597).
+Esta seção mostra como criar uma nova opção de impressão, definir uma lista de valores aceitos por essa opção e adicionar a opção à visualização de impressão. Como na seção anterior, adicione a nova opção de impressão no manipulador de eventos [**PrintTaskRequested**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_#Windows_Foundation_IAsyncOperationWithProgress_2_Progress).
 
 Primeiro, obtenha um objeto [**PrintTaskOptionDetails**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails). Isso é usado para adicionar a nova opção à interface do usuário para visualização de impressão. Depois, limpe a lista de opções que são apresentadas na interface do usuário para visualização de impressão e adicione as opções que você quer exibir quando o usuário quiser imprimir a partir do aplicativo. Após isso, crie a nova opção de impressão e inicialize a lista de valores da opção. Por fim, adicione a nova opção e atribua um manipulador para o evento **OptionChanged**.
 

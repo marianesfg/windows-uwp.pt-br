@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 21743f588fa26fcab424a67d6befdd720a891688
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 47134c951fe0351966a34b4a58fe657a6aeeb602
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359107"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317576"
 ---
 # <a name="basic-photo-video-and-audio-capture-with-mediacapture"></a>Captura básica de fotos, áudio e vídeo com MediaCapture
 
@@ -113,7 +113,7 @@ Você pode pausar uma gravação de vídeo e depois retomá-la sem criar um arqu
 
 [!code-cs[ResumeRecordingSimple](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetResumeRecordingSimple)]
 
-A partir do Windows 10, versão 1607, você pode pausar uma gravação de vídeo e receber o último quadro capturado antes da gravação ter sido pausada. Você pode sobrepor esse quadro na visualização de câmera para permitir que o usuário alinhe a câmera com o quadro pausado antes de continuar a gravação. Chamar [**PauseWithResultAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.lowlagmediarecording.pausewithresultasync) retorna um objeto [**MediaCapturePauseResult**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapturePauseResult). A propriedade [**LastFrame**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapturepauseresult.lastframe) é um objeto [**VideoFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.VideoFrame) que representa o último quadro. Para exibir o quadro em XAML, obtenha a representação **SoftwareBitmap** do quadro do vídeo. No momento, somente imagens no formato BGRA8 com canal alfa pré-multiplicado ou vazio são compatíveis, portanto, chame [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows) para obter o formato correto, se necessário.  Crie um novo objeto [**SoftwareBitmapSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource) e chame [**SetBitmapAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.setbitmapasync) para inicializá-lo. Por fim, defina a propriedade **Source** de um controle [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) de XAML para exibir a imagem. Para que esse truque funcione, sua imagem deve estar alinhada ao controle **CaptureElement** e deve ter um valor de opacidade menor do que um. Não se esqueça de que você pode modificar apenas a interface do usuário no thread da interface do usuário, portanto faça essa chamada dentro de [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows).
+A partir do Windows 10, versão 1607, você pode pausar uma gravação de vídeo e receber o último quadro capturado antes da gravação ter sido pausada. Você pode sobrepor esse quadro na visualização de câmera para permitir que o usuário alinhe a câmera com o quadro pausado antes de continuar a gravação. Chamar [**PauseWithResultAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.lowlagmediarecording.pausewithresultasync) retorna um objeto [**MediaCapturePauseResult**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapturePauseResult). A propriedade [**LastFrame**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapturepauseresult.lastframe) é um objeto [**VideoFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.VideoFrame) que representa o último quadro. Para exibir o quadro em XAML, obtenha a representação **SoftwareBitmap** do quadro do vídeo. No momento, somente imagens no formato BGRA8 com canal alfa pré-multiplicado ou vazio são compatíveis, portanto, chame [**Convert**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert) para obter o formato correto, se necessário.  Crie um novo objeto [**SoftwareBitmapSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource) e chame [**SetBitmapAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.setbitmapasync) para inicializá-lo. Por fim, defina a propriedade **Source** de um controle [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) de XAML para exibir a imagem. Para que esse truque funcione, sua imagem deve estar alinhada ao controle **CaptureElement** e deve ter um valor de opacidade menor do que um. Não se esqueça de que você pode modificar apenas a interface do usuário no thread da interface do usuário, portanto faça essa chamada dentro de [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync).
 
 **PauseWithResultAsync** também retorna a duração do vídeo que foi gravado no segmento precedente, caso seja necessário monitorar o tempo total de gravação.
 

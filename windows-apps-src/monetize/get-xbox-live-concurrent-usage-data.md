@@ -5,20 +5,20 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, uso simultâneo
 ms.localizationpriority: medium
-ms.openlocfilehash: e4ac2208ca5eca02e3007a88209aa26735e29612
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: a1ceef92a533a230c2dca54a835578b56ceb809f
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162862"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321760"
 ---
 # <a name="get-xbox-live-concurrent-usage-data"></a>Obter dados de uso simultâneo do Xbox Live
 
 
-Use este método na API de análise da Microsoft Store para obter dados de uso quase em tempo real (com latência de 5 a 15 minutos) sobre o número médio de clientes jogando seu [jogo habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live//index.md) a cada minuto, hora ou dia durante um intervalo de tempo especificado. Essas informações também estão disponíveis na [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
+Use este método na API de análise da Microsoft Store para obter dados de uso quase em tempo real (com latência de 5 a 15 minutos) sobre o número médio de clientes jogando seu [jogo habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live/index.md) a cada minuto, hora ou dia durante um intervalo de tempo especificado. Essas informações também estão disponíveis na [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
 
 > [!IMPORTANT]
-> Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -71,8 +71,8 @@ O corpo da resposta contém uma matriz de objetos, cada um com um conjunto de da
 
 | Valor      | Tipo   | Descrição                  |
 |------------|--------|-------------------------------------------------------|
-| Contagem      | number  | O número médio de clientes jogando seu jogo habilitado para Xbox Live pelo minuto, hora ou dia especificado. <p/><p/>**Observação**&nbsp;&nbsp;O valor 0 indica que não houve nenhum usuário simultâneo durante o intervalo especificado, ou que ocorreu uma falha durante a coleta de dados de usuários simultâneos para o jogo durante o intervalo especificado. |
-| Data  | cadeia de caracteres | A data e hora que especifica o minuto, hora ou dia durante o qual os dados de uso simultâneo ocorreram.  |
+| Count      | number  | O número médio de clientes jogando seu jogo habilitado para Xbox Live pelo minuto, hora ou dia especificado. <p/><p/>**Observação**&nbsp;&nbsp;O valor 0 indica que não houve nenhum usuário simultâneo durante o intervalo especificado, ou que ocorreu uma falha durante a coleta de dados de usuários simultâneos para o jogo durante o intervalo especificado. |
+| Date  | cadeia de caracteres | A data e hora que especifica o minuto, hora ou dia durante o qual os dados de uso simultâneo ocorreram.  |
 | SeriesName | cadeia de caracteres    | Isso sempre tem o valor **UserConcurrency**. |
 
 

@@ -6,16 +6,16 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
-ms.openlocfilehash: 38c9a40dbe1a46aa125c76cd1fcc88a84685c8cc
-ms.sourcegitcommit: 280193dfe5a106fc6b4c85df3ac40535547b855c
+ms.openlocfilehash: a28c344ed7c8645f3788719185aac71c7a036d5c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67235171"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317412"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Testes de app de Ponte de Desktop do Windows
 
-[Aplicativos de ponte de desktop](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) são Windows, aplicativos da área de trabalho são convertidos em aplicativos da plataforma Universal do Windows (UWP) usando o [ponte de Desktop](https://developer.microsoft.com/en-us/windows/bridges/desktop). Após a conversão, o aplicativo da área de trabalho do Windows é empacotado, reparado e implantado na forma de um pacote de aplicativo UWP (.appx ou .appxbundle) na área de trabalho do Windows 10.
+[Aplicativos de ponte de desktop](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) são Windows, aplicativos da área de trabalho são convertidos em aplicativos da plataforma Universal do Windows (UWP) usando o [ponte de Desktop](https://developer.microsoft.com/en-us/windows/bridges/desktop). Após a conversão, o aplicativo da área de trabalho do Windows é empacotado, reparado e implantado na forma de um pacote de aplicativo UWP (.appx ou .appxbundle) na área de trabalho do Windows 10.
 
 ## <a name="required-versus-optional-tests"></a>Testes obrigatórios versus opcionais
 Testes opcionais para aplicativos de ponte de Desktop do Windows são apenas informativos e não serão usados para avaliar o seu aplicativo durante a integração da Microsoft Store. É recomendável investigar esses resultados para produzir os melhores aplicativos de qualidade de teste. Os critérios gerais de aprovação/reprovação para a a integração à loja são determinados pelos testes obrigatórios e não por esses testes opcionais.
@@ -40,7 +40,7 @@ Esse teste examina o registro do pacote para verificar se qualquer verbo de asso
 Os apps da área de trabalho convertidos podem ser aprimorados com uma ampla gama de APIs da Plataforma Universal do Windows. Este teste verifica se os binários da UWP no app não chamam APIs que não sejam da UWP. Os binários UWP têm o sinalizador **AppContainer** definido.
 
 **Ações corretivas**  
-Consulte [da área de trabalho ao Bridge UWP: Extensões de aplicativo](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-extensions) para uma explicação sobre essas extensões e como usá-los corretamente. 
+Consulte [da área de trabalho ao Bridge UWP: Extensões de aplicativo](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions) para uma explicação sobre essas extensões e como usá-los corretamente. 
 
 ### <a name="3-debug-configuration-test"></a>3. Teste de configuração de depuração
 Esse teste verifica se o appx não é um build de depuração.
@@ -118,14 +118,14 @@ A imagem {image name} está ausente no pacote.  | Uma imagem necessária está a
 A imagem {image name} não é um arquivo de imagem válido.  | Verifique se todas as imagens do aplicativo atendem às restrições adequadas de tipo de formato de arquivo. Na mensagem real, {image name} contém o nome da imagem que não é válida. 
 A imagem "BadgeLogo" tem um valor ABGR {value} na posição (x, y) que não é válido. O pixel deve ser branco (##FFFFFF) ou transparente (00######)  | O logotipo de selo é uma imagem mostrada ao lado da notificação de selo para identificar o aplicativo na tela de bloqueio. Essa imagem deve ser monocromática (pode conter somente pixels brancos ou transparentes). Na mensagem real, {value} contém o valor da cor na imagem que não é válido. 
 A imagem "BadgeLogo" tem um valor ABGR {value} na posição (x, y) que não é válido para a imagem branca de alto contraste. O pixel deve ser (##2A2A2A) ou mais escuro, ou transparente (00######).  | O logotipo de selo é uma imagem mostrada ao lado da notificação de selo para identificar o aplicativo na tela de bloqueio. Como o logotipo do selo é mostrado em uma tela de fundo branca quando está em branco de alto contraste, ele deve ser uma versão mais escura do logotipo padrão do selo. No banco de alto contraste, o logotipo do selo pode conter somente pixels que são mais escuros que (##2A2A2A) ou transparentes. Na mensagem real, {value} contém o valor da cor na imagem que não é válido. 
-A imagem deve definir pelo menos uma variante, sem um qualificador TargetSize. Ela deve definir um qualificador Scale ou deixar Scale e TargetSize não especificados, que tem o padrão Scale-100.  | Para saber mais, veja os guias sobre [design responsivo](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) e [recursos do app](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data). 
+A imagem deve definir pelo menos uma variante, sem um qualificador TargetSize. Ela deve definir um qualificador Scale ou deixar Scale e TargetSize não especificados, que tem o padrão Scale-100.  | Para saber mais, veja os guias sobre [design responsivo](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) e [recursos do app](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data). 
 O pacote tem um arquivo "resources.pri" ausente.  | Se você tiver conteúdo localizável no manifesto do aplicativo, verifique se o pacote do aplicativo inclui um arquivo resources.pri válido. 
 O arquivo "resources.pri" deve conter um mapa de recursos com um nome que corresponda ao nome do pacote {package full name}  | Você pode obter esse erro quando o manifesto é alterado e o nome do mapa de recursos no resources.pri não corresponde mais ao nome do pacote no manifesto. Na mensagem real, {package full name} contém o nome do pacote que resources.pri deve conter. Para corrigir isso, você precisa recompilar o resources.pri e a maneira mais fácil de fazer isso é recompilando o pacote do app. 
 O arquivo "resources.pri" não deve ter o AutoMerge habilitado.  | O MakePRI.exe oferece suporte a uma opção denominada AutoMerge. O valor padrão de AutoMerge é desativar. Quando está habilitado, o AutoMerge mescla os recursos de pacote de idiomas do app em um único resources.pri no tempo de execução. Não recomendamos isso para aplicativos que você pretende distribuir por meio do Microsoft Store. O resources.pri de um aplicativo que é distribuído por meio do Microsoft Store deve estar na raiz do pacote do aplicativo e contêm todas as referências de linguagem que o aplicativo é compatível. 
 A cadeia de caracteres {string} falhou na restrição de comprimento máximo de {number} caracteres.  | Consulte os [Requisitos do pacote do aplicativo](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). Na mensagem real, {string} é substituído pela cadeia de caracteres com o erro e {number} contém o comprimento máximo. 
 A cadeia de caracteres {string} não pode ser espaço inicial/final.  | O esquema dos elementos no manifesto do aplicativo não permite caracteres de espaço iniciais ou finais. Na mensagem real, {string} é substituído pela cadeia de caracteres com o erro. Verifique se algum dos valores localizados nos campos do manifesto no resources.pri contém caracteres de espaço iniciais ou finais. 
 A cadeia de caracteres não pode estar vazia (o comprimento deve ser maior que zero)  | Para obter mais informações, consulte [Requisitos do pacote do aplicativo](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). 
-Não há recurso padrão especificado no arquivo "resources.pri".  | Para saber mais, veja o guia sobre [recursos do app](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data). Na configuração de compilação padrão, o Visual Studio inclui apenas os recursos de imagem de escala 200 no pacote do app quando gera pacotes, colocando outros recursos no pacote de recursos. Inclua recursos de imagem de escala 200 ou configure seu projeto para incluir os recursos que você tem. 
+Não há recurso padrão especificado no arquivo "resources.pri".  | Para saber mais, veja o guia sobre [recursos do app](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data). Na configuração de compilação padrão, o Visual Studio inclui apenas os recursos de imagem de escala 200 no pacote do app quando gera pacotes, colocando outros recursos no pacote de recursos. Inclua recursos de imagem de escala 200 ou configure seu projeto para incluir os recursos que você tem. 
 Não há valor de recurso especificado no arquivo "resources.pri".  | Verifique se o manifesto do aplicativo tem recursos válidos definidos no resources.pri. 
 O arquivo de imagem {filename} deve ter menos de 204.800 bytes.  | Reduza o tamanho das imagens indicadas. 
 O arquivo {filename} não deve conter uma seção de mapa reverso.  | Apesar do mapa reverso ser gerado durante a "depuração F5" do Visual Studio durante a chamada no makepri.exe, ele pode ser removido. Basta executar makepri.exe sem o parâmetro /m ao gerar um arquivo pri. 

@@ -6,18 +6,18 @@ ms.date: 08/08/2018
 ms.topic: article
 keywords: windows 10, uwp, educação
 ms.localizationpriority: medium
-ms.openlocfilehash: bee8a04e3b4d57caf7da3e21f2be3c789d83be90
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 31672ff989da7d72f751a33ec3df3d8d528e22ec
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627591"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317819"
 ---
 # <a name="take-a-test-javascript-api"></a>API JavaScript Fazer um Teste
 
-[Fazer um teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) é um aplicativo UWP baseado em navegador que renderiza bloqueada avaliações de online para teste de alto risco, permitindo que os educadores para se concentrar na avaliação do conteúdo em vez de como fornecer um seguro ambiente de teste. Para conseguir isso, ele usa uma API JavaScript que qualquer aplicativo Web pode utilizar. A API Fazer um Teste oferece suporte ao [padrão da API do navegador SBAC](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para testes decisivos comuns importantes.
+[Fazer um teste](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) é um aplicativo UWP baseado em navegador que renderiza bloqueada avaliações de online para teste de alto risco, permitindo que os educadores para se concentrar na avaliação do conteúdo em vez de como fornecer um seguro ambiente de teste. Para conseguir isso, ele usa uma API JavaScript que qualquer aplicativo Web pode utilizar. A API Fazer um Teste oferece suporte ao [padrão da API do navegador SBAC](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para testes decisivos comuns importantes.
 
-Consulte a [Referência técnica do app Fazer um Teste](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) para obter mais informações sobre o próprio app. Para a solução de problemas, consulte [Solução de problemas com Fazer um Teste da Microsoft com o visualizador de eventos](troubleshooting.md).
+Consulte a [Referência técnica do app Fazer um Teste](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) para obter mais informações sobre o próprio app. Para a solução de problemas, consulte [Solução de problemas com Fazer um Teste da Microsoft com o visualizador de eventos](troubleshooting.md).
 
 ## <a name="reference-documentation"></a>Documentação de referência
 A API Fazer um Teste existe nos seguintes namespaces. Observe que todas as APIs dependem de um objeto `SecureBrowser` global.
@@ -32,11 +32,11 @@ O namespace de segurança permite que você bloquear o dispositivo, verifique a 
 
 | Método | Descrição   |
 |--------|---------------|
-|[bloqueio de segurança](#lockDown) | Bloqueia o dispositivo para teste. |
+|[lockDown](#lockDown) | Bloqueia o dispositivo para teste. |
 |[isEnvironmentSecure](#isEnvironmentSecure) | Determina se o contexto de bloqueio continua aplicado ao dispositivo. |
 |[getDeviceInfo](#getDeviceInfo) | Obtém detalhes sobre a plataforma em que o aplicativo de teste é executado. |
 |[examineProcessList](#examineProcessList)|Obtém a lista de processos de usuário e sistema em execução.|
-|[Fechar](#close) | Fecha o navegador e desbloqueia o dispositivo. |
+|[close](#close) | Fecha o navegador e desbloqueia o dispositivo. |
 |[getPermissiveMode](#getPermissiveMode)|Verifica se o modo permissivo está ativado ou desativado.|
 |[setPermissiveMode](#setPermissiveMode)|Ativa ou desativa o modo permissivo.|
 |[emptyClipBoard](#emptyClipBoard)|Limpa a área de transferência do sistema.|
@@ -58,7 +58,7 @@ Bloqueia o dispositivo. Também usado para desbloquear o dispositivo. O aplicati
 `void SecureBrowser.security.lockDown(Boolean enable, Function onSuccess, Function onError);`
 
 **Parâmetros**  
-* `enable` - **Verdadeiro** para executar o aplicativo fazer um teste acima da tela de bloqueio e aplicar políticas abordadas neste [documento](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). **false** interrompe a execução de Fazer um Teste acima da tela de bloqueio e o fecha, a menos que o app não esteja bloqueado; nesse caso, não haverá nenhum efeito.  
+* `enable` - **Verdadeiro** para executar o aplicativo fazer um teste acima da tela de bloqueio e aplicar políticas abordadas neste [documento](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). **false** interrompe a execução de Fazer um Teste acima da tela de bloqueio e o fecha, a menos que o app não esteja bloqueado; nesse caso, não haverá nenhum efeito.  
 * `onSuccess` -[opcional] a função a ser chamada após o bloqueio tem sido habilitado ou desabilitado com êxito. Ela deve estar no formato `Function(Boolean currentlockdownstate)`.  
 * `onError` -[opcional] a função ser chamada se a operação de bloqueio falhou. Ela deve estar no formato `Function(Boolean currentlockdownstate)`.  
 
@@ -101,7 +101,7 @@ Obtém detalhes sobre a plataforma em que o aplicativo de teste é executado. É
 **Parâmetros**  
 * `callback` -A função para chamar quando esta função é concluída. Ela deve estar no formato `Function(String infoObj)`, em que `infoObj` é uma cadeia de caracteres JSON que contém vários campos. Há suporte para os seguintes campos:
     * `os` representa o tipo de sistema operacional (por exemplo: Windows, macOS, Linux, iOS, Android, etc.)
-    * `name` representa o nome de versão do sistema operacional, se houver (por exemplo: Serra, Ubuntu).
+    * `name` representa o nome de versão do sistema operacional, se houver (por exemplo: Sierra, Ubuntu).
     * `version` representa a versão do sistema operacional (por exemplo: 10.1, 10 pro, etc.)
     * `brand` representa a identidade visual do navegador seguro (por exemplo: OAKS, CA, SmarterApp, etc.)
     * `model` representa o modelo do dispositivo para dispositivos móveis. /não utilizados para navegadores de desktop.

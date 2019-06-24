@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 65e8599a73a196ebb72fe3cc45ea984f82057741
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 52aeb590e7672ccfd3fe74232575f008c132d9fd
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371505"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320168"
 ---
 # <a name="manage-app-submissions"></a>Gerenciar envios de aplicativo
 
@@ -98,7 +98,7 @@ Para criar um envio de um aplicativo, siga este processo.
     O corpo da resposta contém um recurso [envio de complemento](#app-submission-object) que inclui a ID do novo envio, o URI da SAS (assinatura de acesso compartilhado) para o upload de todos os arquivos relacionados para o envio para o armazenamento de Blobs do Azure (como pacotes de aplicativo, imagens de listagem e arquivos de trailer) e todos os dados do novo envio (como as listagens e as informações sobre preços).
 
     > [!NOTE]
-    > Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações sobre URIs de SAS e seu uso com o armazenamento de BLOBs do Azure, consulte [assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) e [assinaturas de acesso compartilhado, parte 2: Criar e usar uma SAS com o armazenamento de BLOBs](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+    > Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações sobre URIs de SAS e seu uso com o armazenamento de BLOBs do Azure, consulte [assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) e [assinaturas de acesso compartilhado, parte 2: Criar e usar uma SAS com o armazenamento de BLOBs](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
 4. Se você estiver adicionando novos pacotes, imagens de listagem ou arquivos de trailer para o envio, [prepare os pacotes de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements) e [prepare as imagens, os trailers e as capturas de tela do app](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Adicione todos esses arquivos a um arquivo ZIP.
 
@@ -344,24 +344,24 @@ Esse recurso tem os valores a seguir.
 | targetPublishMode           | cadeia de caracteres  | O modo de publicação do envio. Isso pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | cadeia de caracteres  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |  
 | listings           |   objeto  |  Um dicionário de pares de chave e valor, em que cada chave é um código de país e cada valor é um [recurso de listagem](#listing-object) que contém informações de listagem do aplicativo.       |   
-| hardwarePreferences           |  matriz  |   Uma matriz de cadeias de caracteres que definem as [preferências de hardware](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties) do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Touch</li><li>Teclado</li><li>Mouse</li><li>Câmera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonia</li></ul>     |   
+| hardwarePreferences           |  array  |   Uma matriz de cadeias de caracteres que definem as [preferências de hardware](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties) do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Touch</li><li>Teclado</li><li>Mouse</li><li>Câmera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonia</li></ul>     |   
 | automaticBackupEnabled           |  boolean  |   Indica se o Windows pode incluir dados do aplicativo em backups automáticos no OneDrive. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).   |   
 | canInstallOnRemovableMedia           |  boolean  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | isGameDvrEnabled           |  boolean |   Indica se o DVR de jogos está habilitado para o aplicativo.    |   
-| gamingOptions           |  matriz |   Uma matriz que contém um [recurso de opções de jogo](#gaming-options-object) que define as configurações relacionadas a jogos para o app.     |   
+| gamingOptions           |  array |   Uma matriz que contém um [recurso de opções de jogo](#gaming-options-object) que define as configurações relacionadas a jogos para o app.     |   
 | hasExternalInAppProducts           |     boolean          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Microsoft Store. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | meetAccessibilityGuidelines           |    boolean           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).      |   
 | notesForCertification           |  cadeia de caracteres  |   Contém [observações de certificação](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
 | status           |   cadeia de caracteres  |  O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   objeto  | Um [recurso de detalhes do status](#status-details-object) que contém detalhes adicionais sobre o status do envio, inclusive informações sobre eventuais erros.       |    
 | fileUploadUrl           |   cadeia de caracteres  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes, imagens de listagem ou arquivos de trailer para o envio, carregue o arquivo ZIP que contém os pacotes e imagens para este URI. Para obter mais informações, consulte [Criar um envio de aplicativo](#create-an-app-submission).       |    
-| applicationPackages           |   matriz  | Uma matriz de [recursos do pacote de aplicativos](#application-package-object) que dão detalhes sobre cada pacote no envio. |    
+| applicationPackages           |   array  | Uma matriz de [recursos do pacote de aplicativos](#application-package-object) que dão detalhes sobre cada pacote no envio. |    
 | packageDeliveryOptions    | objeto  | Um [recurso de opções de entrega do pacote](#package-delivery-options-object) que contém configurações da distribuição de pacote gradual e da atualização obrigatória para o envio.  |
 | enterpriseLicensing           |  cadeia de caracteres  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
 | allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability).    |    
 | allowTargetFutureDeviceFamilies           | objeto   |  Um dicionário de pares de chave e valor, onde cada chave é uma [família de dispositivos Windows 10](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) e cada valor é um valor booliano que indica se seu aplicativo tem permissão para segmentar a família de dispositivos especificadas.     |    
 | friendlyName           |   cadeia de caracteres  |  O nome amigável do envio, conforme mostrado no Partner Center. Esse valor é gerado para você ao criar o envio.       |  
-| trailers           |  matriz |   Uma matriz que contém até 15 [recursos de trailer](#trailer-object) que representam trailers de vídeo para a listagem de apps.<br/><br/>   |  
+| trailers           |  array |   Uma matriz que contém até 15 [recursos de trailer](#trailer-object) que representam trailers de vídeo para a listagem de apps.<br/><br/>   |  
 
 
 <span id="pricing-object" />
@@ -374,7 +374,7 @@ Esse recurso contém informações de preço do aplicativo. Esse recurso tem os 
 |-----------------|---------|------|
 |  trialPeriod               |    cadeia de caracteres     |  Uma cadeia de caracteres que especifica o período de avaliação do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
 |  marketSpecificPricings               |    objeto     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.      |     
-|  sales               |   matriz      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do aplicativo.   |     
+|  sales               |   array      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do aplicativo.   |     
 |  priceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection) do aplicativo.   |     
 |  isAdvancedPricingModel               |   boolean      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
 
@@ -421,16 +421,16 @@ Esse recurso contém informações de listagem base de um aplicativo. Esse recur
 | Valor           | Tipo    | Descrição       |
 |-----------------|---------|------|
 |  copyrightAndTrademarkInfo                |   cadeia de caracteres      |  Informações opcionais de [direitos autorais e/ou marca comercial](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions).  |
-|  keywords                |  matriz       |  Uma matriz de [palavra-chave](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) para ajudar seu aplicativo a aparecer nos resultados de pesquisa.    |
+|  keywords                |  array       |  Uma matriz de [palavra-chave](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) para ajudar seu aplicativo a aparecer nos resultados de pesquisa.    |
 |  licenseTerms                |    cadeia de caracteres     | Os [termos de licença](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) opcionais do seu aplicativo.     |
 |  privacyPolicy                |   cadeia de caracteres      |   Este valor está obsoleto. Para definir ou alterar a URL da política de privacidade para o seu aplicativo, você deve fazer isso na [propriedades](../publish/enter-app-properties.md#privacy-policy-url) página no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.       |
 |  supportContact                |   cadeia de caracteres      |  Este valor está obsoleto. Para definir ou alterar o suporte de contato URL ou endereço de email para seu aplicativo, você deve fazer isso na [propriedades](../publish/enter-app-properties.md#support-contact-info) página no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.        |
 |  websiteUrl                |   cadeia de caracteres      |  Este valor está obsoleto. Para definir ou alterar a URL da página da web para seu aplicativo, você deve fazer isso na [propriedades](../publish/enter-app-properties.md#website) página no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.      |    
 |  description               |    cadeia de caracteres     |   A [descrição](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) dos detalhes do aplicativo.   |     
-|  features               |    matriz     |  Uma matriz de até 20 cadeias de caracteres que lista os [recursos](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) do seu aplicativo.     |
+|  features               |    array     |  Uma matriz de até 20 cadeias de caracteres que lista os [recursos](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) do seu aplicativo.     |
 |  releaseNotes               |  cadeia de caracteres       |  As [notas de versão](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) do aplicativo.    |
-|  images               |   matriz      |  Uma matriz de recursos de [imagem e ícone](#image-object) para a listagem do aplicativo.  |
-|  recommendedHardware               |   matriz      |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware recomendadas](../publish/create-app-store-listings.md#additional-information) para o aplicativo.     |
+|  images               |   array      |  Uma matriz de recursos de [imagem e ícone](#image-object) para a listagem do aplicativo.  |
+|  recommendedHardware               |   array      |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware recomendadas](../publish/create-app-store-listings.md#additional-information) para o aplicativo.     |
 |  minimumHardware               |     cadeia de caracteres    |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware mínimas](../publish/create-app-store-listings.md#additional-information) para o app.    |  
 |  title               |     cadeia de caracteres    |   O título da listagem do aplicativo.   |  
 |  shortDescription               |     cadeia de caracteres    |  Usado somente para jogos. Essa descrição é exibida na seção **Informações** do Hub de Jogos no Xbox One e ajuda os clientes a entender mais sobre o seu jogo.   |  
@@ -488,7 +488,7 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
-|  gêneros               |    matriz     |  Uma matriz de uma ou mais das seguintes cadeias de caracteres que descrevem os gêneros do jogo: <ul><li>Games_ActionAndAdventure</li><li>Games_CardAndBoard</li><li>Games_Casino</li><li>Games_Educational</li><li>Games_FamilyAndKids</li><li>Games_Fighting</li><li>Games_Music</li><li>Games_Platformer</li><li>Games_PuzzleAndTrivia</li><li>Games_RacingAndFlying</li><li>Games_RolePlaying</li><li>Games_Shooter</li><li>Games_Simulation</li><li>Games_Sports</li><li>Games_Strategy</li><li>Games_Word</li></ul>    |
+|  gêneros               |    array     |  Uma matriz de uma ou mais das seguintes cadeias de caracteres que descrevem os gêneros do jogo: <ul><li>Games_ActionAndAdventure</li><li>Games_CardAndBoard</li><li>Games_Casino</li><li>Games_Educational</li><li>Games_FamilyAndKids</li><li>Games_Fighting</li><li>Games_Music</li><li>Games_Platformer</li><li>Games_PuzzleAndTrivia</li><li>Games_RacingAndFlying</li><li>Games_RolePlaying</li><li>Games_Shooter</li><li>Games_Simulation</li><li>Games_Sports</li><li>Games_Strategy</li><li>Games_Word</li></ul>    |
 |  isLocalMultiplayer               |    boolean     |  Indica se o jogo dá suporte a multijogador local.      |     
 |  isLocalCooperative               |   boolean      |  Indica se o jogo dá suporte a cooperação local.    |     
 |  isOnlineMultiplayer               |   boolean      |  Indica se o jogo dá suporte a multijogador online.    |     
@@ -574,11 +574,11 @@ Esse recurso tem os valores a seguir.
 | id    |  cadeia de caracteres   |  Uma ID que identifica exclusivamente o pacote. Esse valor é fornecido pelo Centro de parceiros.   |     
 | version    |  cadeia de caracteres   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
 | architecture    |  cadeia de caracteres   |  A arquitetura do pacote (por exemplo, ARM).   |     
-| languages    | matriz    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas com suporte](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
-| capabilities    |  matriz   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
+| languages    | array    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas com suporte](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
+| capabilities    |  array   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
 | minimumDirectXVersion    |  cadeia de caracteres   |  A versão mínima do DirectX que é compatível com o pacote do aplicativo. Isso pode ser definido apenas para apps destinados ao Windows 8.x. Para aplicativos destinados a outras versões do sistema operacional, esse valor deve estar presente ao chamar o método [atualizar um envio de aplicativo](update-an-app-submission.md), mas o valor especificado será ignorado. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
 | minimumSystemRam    | cadeia de caracteres    |  A RAM mínima necessária para o pacote do aplicativo. Isso pode ser definido apenas para apps destinados ao Windows 8.x. Para aplicativos destinados a outras versões do sistema operacional, esse valor deve estar presente ao chamar o método [atualizar um envio de aplicativo](update-an-app-submission.md), mas o valor especificado será ignorado. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Memory2GB</li></ul>   |       
-| targetDeviceFamilies    | matriz    |  Uma matriz de cadeias de caracteres que representam as famílias de dispositivos que o pacote segmenta. Esse valor é usado somente para pacotes destinados ao Windows 10; para pacotes destinados a versões anteriores, esse valor tem o valor **Nenhum**. As seguintes sequências de família de dispositivos atualmente têm suporte para pacotes do Windows 10, onde *{0}* é uma sequência de versão do Windows 10, como 10.0.10240.0, 10.0.10586.0 ou 10.0.14393.0: <ul><li>Versão mínima do Windows.Universal *{0}*</li><li>Versão mínima do Windows.Desktop *{0}*</li><li>Versão mínima do Windows.Mobile *{0}*</li><li>Versão mínima do Windows.Xbox *{0}*</li><li>Versão mínima de Windows.Holographic *{0}*</li></ul>   |    
+| targetDeviceFamilies    | array    |  Uma matriz de cadeias de caracteres que representam as famílias de dispositivos que o pacote segmenta. Esse valor é usado somente para pacotes destinados ao Windows 10; para pacotes destinados a versões anteriores, esse valor tem o valor **Nenhum**. As seguintes sequências de família de dispositivos atualmente têm suporte para pacotes do Windows 10, onde *{0}* é uma sequência de versão do Windows 10, como 10.0.10240.0, 10.0.10586.0 ou 10.0.14393.0: <ul><li>Versão mínima do Windows.Universal *{0}*</li><li>Versão mínima do Windows.Desktop *{0}*</li><li>Versão mínima do Windows.Mobile *{0}*</li><li>Versão mínima do Windows.Xbox *{0}*</li><li>Versão mínima de Windows.Holographic *{0}*</li></ul>   |    
 
 <span/>
 
@@ -632,7 +632,7 @@ Esse recurso contém [configurações de distribuição de pacote](#manage-gradu
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
 | isPackageRollout   |   boolean      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
-| packageRolloutPercentage    | flutuante    |  O percentual de usuários que receberão os pacotes na distribuição gradual.    |  
+| packageRolloutPercentage    | float    |  O percentual de usuários que receberão os pacotes na distribuição gradual.    |  
 | packageRolloutStatus    |  cadeia de caracteres   |  Uma das seguintes sequências que indicam o status da distribuição de pacote gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
 | fallbackSubmissionId    |  cadeia de caracteres   |  A ID do envio que será recebida por clientes que não recebem os pacotes de distribuição gradual.   |          
 
@@ -692,7 +692,7 @@ Esse recurso contém outros ativos específicos da localidade para um trailer de
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
 | title   |   cadeia de caracteres      |  O título localizado do trailer. O título é exibido quando o usuário reproduz o trailer em modo de tela inteira.     |  
-| imageList    | matriz    |   Uma matriz que contém um recurso de [imagem](#image-for-trailer-object) que fornece a imagem em miniatura do trailer. Você só pode incluir um recurso de [imagem](#image-for-trailer-object) nessa matriz.  |   
+| imageList    | array    |   Uma matriz que contém um recurso de [imagem](#image-for-trailer-object) que fornece a imagem em miniatura do trailer. Você só pode incluir um recurso de [imagem](#image-for-trailer-object) nessa matriz.  |   
 
 
 <span id="image-for-trailer-object" />

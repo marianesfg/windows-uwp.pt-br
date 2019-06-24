@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, animação
 ms.localizationpriority: medium
-ms.openlocfilehash: 834f631cd5c4b8696e75f83f194b95f809b1cf8a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 87e4eb90b4801d01ecb85c91b5e64ccc9155d199
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649861"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318093"
 ---
 # <a name="pull-to-refresh-with-source-modifiers"></a>Puxar para atualizar com modificadores de origem
 
@@ -48,7 +48,7 @@ Para a experiência de usuário final, queremos criar o efeito de "resistência"
 
 ![Lista com puxar para atualizar](images/animation/city-list.gif)
 
-O código de trabalho dessa experiência pode ser encontrado no [repositório de laboratórios de desenvolvimento de interface do usuário do Windows no GitHub](https://github.com/Microsoft/WindowsUIDevLabs). Esta é a instrução passo a passo de como criar essa experiência.
+O código de trabalho dessa experiência pode ser encontrado no [repositório de laboratórios de desenvolvimento de interface do usuário do Windows no GitHub](https://github.com/microsoft/WindowsCompositionSamples). Esta é a instrução passo a passo de como criar essa experiência.
 No código de marcação XAML, você terá o seguinte:
 
 ```xaml

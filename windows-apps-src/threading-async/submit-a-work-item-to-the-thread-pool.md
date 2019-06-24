@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, threads, pool de threads
 ms.localizationpriority: medium
-ms.openlocfilehash: ff47115c228e3cf6530e12aa4686c88660f16fcd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0ff0eca18eeab72dbf0a2f9a539e452a5923392d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371556"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322023"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar um item de trabalho ao pool de threads
 
@@ -31,7 +31,7 @@ Crie um item de trabalho chamando [**RunAsync**](https://docs.microsoft.com/uwp/
 Três versões de [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync) estão disponíveis para que, opcionalmente, você possa especificar a prioridade do item de trabalho e controlar se ele é executado simultaneamente com outros itens de trabalho.
 
 >[!NOTE]
->Use [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
+>Use [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
 
 O exemplo a seguir cria um item de trabalho e fornece um lambda para fazer o trabalho:
 
@@ -195,7 +195,7 @@ const unsigned int n = 9999;
 // A shared pointer to the result.
 // We use a shared pointer to keep the result alive until the
 // thread is done.
-std::shared_ptr<unsigned long> nthPrime = make_shared<unsigned long int>(0);
+std::shared_ptr<unsigned long> nthPrime = std::make_shared<unsigned long int>(0);
 
 // Simulates work by searching for the nth prime number. Uses a
 // naive algorithm and counts 2 as the first prime number.
@@ -275,7 +275,7 @@ Observe que o item de trabalho verifica a propriedade [**IAsyncInfo.Status**](ht
 
 ## <a name="handle-work-item-completion"></a>Manipular a conclusão de item de trabalho
 
-Forneça um manipulador de conclusão definindo a propriedade [**IAsyncAction.Completed**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction.completed) do item de trabalho. Forneça um representante (você pode usar um lambda ou uma função de representante) para lidar com a conclusão do item de trabalho. Por exemplo, use [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para acessar o thread de interface do usuário e mostrar o resultado.
+Forneça um manipulador de conclusão definindo a propriedade [**IAsyncAction.Completed**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction.completed) do item de trabalho. Forneça um representante (você pode usar um lambda ou uma função de representante) para lidar com a conclusão do item de trabalho. Por exemplo, use [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para acessar o thread de interface do usuário e mostrar o resultado.
 
 O seguinte exemplo atualiza a interface do usuário com o resultado do item de trabalho enviado na etapa 1:
 

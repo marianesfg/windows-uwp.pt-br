@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e177f4715d549ce3ef64534e0fc28d2fc3a9fe0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: aacf51cc320a0835f906e91806b686a88907640e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359945"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317615"
 ---
 # <a name="optimize-your-xaml-markup"></a>Otimizar sua marcação XAML
 
@@ -350,7 +350,7 @@ Se o [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) pr
 
 ### <a name="borders"></a>Bordas
 
-Use um elemento [Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.) para desenhar uma borda em torno de um objeto. Nesse exemplo, um [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) é usado como uma borda provisória em torno de um [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox). Mas todos os pixels na célula central se excedem.
+Use um elemento [Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border) para desenhar uma borda em torno de um objeto. Nesse exemplo, um [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) é usado como uma borda provisória em torno de um [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox). Mas todos os pixels na célula central se excedem.
 
 **Ineficiente.**
 

@@ -5,12 +5,12 @@ ms.date: 08/24/2017
 ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, códigos de erro
 ms.localizationpriority: medium
-ms.openlocfilehash: ba505b30076c356a39ae195e1d187cbc49d8a66a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e887e5fec2a2e04658332a25a3a6c8e23fe2550c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662871"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321723"
 ---
 # <a name="error-codes-for-store-operations"></a>Códigos de erro para operações da Microsoft Store
 
@@ -53,7 +53,7 @@ Os códigos de erro a seguir estão relacionados às operações de licenciament
 | 0x803F8009<br/>0x803F800A   | O período de avaliação do aplicativo expirou.   |
 | 0x803F8190   |  A licença não permite que o produto seja usado no país ou na região atual do seu dispositivo.  |
 | 0x803F81F5<br/>0x803F81F6<br/>0x803F81F7<br/>0x803F81F8<br/>0x803F81F9   |  Você atingiu o número máximo de dispositivos que podem ser usados com jogos e aplicativos da Microsoft Store. Para usar esse jogo ou o aplicativo no dispositivo atual, primeiro remova outro dispositivo de sua conta.  |
-| 0x803F9000<br/>0x803F9001    |  A licença está expirada ou corrompida. Para ajudar a resolver esse erro, tente executar o [solução de problemas para aplicativos do Windows](https://support.microsoft.com/help/4027498/windows-run-the-troubleshooter-for-windows-apps) para redefinir o cache de Store.     |
+| 0x803F9000<br/>0x803F9001    |  A licença está expirada ou corrompida. Para ajudar a resolver esse erro, tente executar o [solução de problemas para aplicativos do Windows](https://support.microsoft.com/help/4027498/microsoft-store-fix-problems-with-apps) para redefinir o cache de Store.     |
 | 0x803F9006    |  A operação não pôde ser concluída, pois o usuário que está qualificado para este produto não está registrado no dispositivo com sua conta da Microsoft.            |
 | 0x803F9008<br/>0x803F9009    |  O dispositivo está offline. O dispositivo deve estar online para usar esse produto.            |
 | 0x803F900A    |  A assinatura expirou.            |

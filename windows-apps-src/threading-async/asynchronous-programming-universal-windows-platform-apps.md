@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp, assíncrona
 ms.localizationpriority: medium
-ms.openlocfilehash: 26378473803b8963c0ca85eb414bae798f9607e4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 63772a4ee9ea98ca6a45dde45b728d4fedd988d7
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371572"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320494"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 Este tópico descreve a programação assíncrona no Universal Windows Platform (UWP) e sua representação de C#, Microsoft Visual Basic .NET, C++ e JavaScript.
@@ -71,5 +71,5 @@ Em muitos casos, chamar uma função assíncrona é quase tão simples quando ch
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Chamar APIs assíncronas no Visual Basic ou C#](call-asynchronous-apis-in-csharp-or-visual-basic.md)
-* [Programação assíncrona com Async e Await (c# e Visual Basic)](https://msdn.microsoft.com/library/hh191443(vs.110).aspx)
+* [Programação assíncrona com Async e Await (c# e Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh191443(v=vs.110))
 * [Cenários de exemplo de recursos de Reversi: código assíncrono](https://docs.microsoft.com/previous-versions/windows/apps/jj712233(v=win.10))

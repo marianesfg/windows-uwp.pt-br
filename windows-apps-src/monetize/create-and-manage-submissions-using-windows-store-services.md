@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: e8e7653174eaf31f11341a5c8e21b69ec54a6189
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0a926b9383231e7cec9dc168afe8d0a0b34136a2
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371286"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318591"
 ---
 # <a name="create-and-manage-submissions"></a>Criar e gerenciar envios
 
@@ -136,7 +136,7 @@ Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub]
 
 | Problema      | Resolução                                          |
 |---------------|---------------------------------------------|
-| Depois de chamar a API de envio da Microsoft Store do PowerShell, os dados de resposta da API ficarão corrompidos se você convertê-la do formato JSON para um objeto do PowerShell usando o cmdlet [ConvertFrom-Json](https://technet.microsoft.com/library/hh849898.aspx) e depois voltar para o formato JSON usando o cmdlet [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx). |  Por padrão, o parâmetro *-Depth* para o cmdlet [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) é definido como dois níveis de objetos, que é muito superficial para a maioria dos objetos JSON que são retornados pela API de envio da Microsoft Store. Quando você chamar o cmdlet [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx), defina o parâmetro *-Depth* como um número maior, como 20. |
+| Depois de chamar a API de envio da Microsoft Store do PowerShell, os dados de resposta da API ficarão corrompidos se você convertê-la do formato JSON para um objeto do PowerShell usando o cmdlet [ConvertFrom-Json](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertFrom-Json) e depois voltar para o formato JSON usando o cmdlet [ConvertTo Json](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json). |  Por padrão, o parâmetro *-Depth* para o cmdlet [ConvertTo Json](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) é definido como dois níveis de objetos, que é muito superficial para a maioria dos objetos JSON que são retornados pela API de envio da Microsoft Store. Quando você chamar o cmdlet [ConvertTo Json](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json), defina o parâmetro *-Depth* como um número maior, como 20. |
 
 ## <a name="additional-help"></a>Ajuda adicional
 

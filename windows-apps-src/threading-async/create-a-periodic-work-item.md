@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, item de trabalho periódico, threading, temporizadores
 ms.localizationpriority: medium
-ms.openlocfilehash: cf3a5817e459c7089eafb8f2c38d58b0e8eef03c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8e045c12f96cc9404abb4ba9be395eb49b1ab850
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371559"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321995"
 ---
 # <a name="create-a-periodic-work-item"></a>Criar um item de trabalho periódico
 
@@ -31,7 +31,7 @@ Use o método [**CreatePeriodicTimer**](https://docs.microsoft.com/uwp/api/windo
 
 > **Observação**  Evite especificar um valor de zero (ou qualquer valor menor que um milissegundo) para o intervalo. Isso faz com que o temporizador periódico se comporte como um temporizador de disparo único.
 
-> **Observação**  você pode usar [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
+> **Observação**  você pode usar [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
 
 O seguinte exemplo cria um item de trabalho que é executado a cada 60 segundos:
 

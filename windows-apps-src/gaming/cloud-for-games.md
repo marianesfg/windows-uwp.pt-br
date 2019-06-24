@@ -6,12 +6,12 @@ ms.date: 03/27/2018
 ms.topic: article
 keywords: windows 10, uwp, jogos, serviços de nuvem
 ms.localizationpriority: medium
-ms.openlocfilehash: 15a7e3bed746a31ce2d8f458045cdd1126b71b8c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b1b63c6eb3c803b26ead85332affe1fc4f20e314
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368989"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321330"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>Usando serviços de nuvem para jogos UWP
 
@@ -85,7 +85,7 @@ Saiba como outros desenvolvedores implementaram soluções de nuvem em seus jogo
         <td>A Illyriad Games criou o <b>Age of Ascent</b>, um jogo épico de espaço 3D MMO (multijogador massivo online) que pode ser executado em dispositivos com navegadores modernos. Portanto, esse jogo pode ser executado em computadores, notebooks, telefones celulares e outros dispositivos móveis sem plug-ins. O jogo usa o ASP.NET Core, o HTML5, o WebGL e o Azure.</td>
         <td>
             <ul>
-                <li>Jogo baseado em navegador de plataforma cruzada <li>Grande mundo único, aberto e persistente <li>Manipula intensos cálculos de jogo em tempo real <li>É dimensionado com base no número de jogadores </ul>
+                <li>Jogo baseado em navegador de plataforma cruzada <li>Grande mundo único, aberto e persistente <li>Manipula intensos cálculos de jogo em tempo real <li>É escalonado com o número de jogadores </ul>
         </td>
         <td>
             <ul>
@@ -111,7 +111,7 @@ Saiba como outros desenvolvedores implementaram soluções de nuvem em seus jogo
         </td>
     </tr>
     <tr>
-        <td><a href="https://www.crimecoast.com/">Esquadrão de pixel</a></td>
+        <td><a href="http://www.crimecoast.com/">Esquadrão de pixel</a></td>
         <td>A Pixel Squad desenvolveu <b>Crime Coast</b> usando o mecanismo de jogo Unity e o Azure. <b>Crime Coast</b> é um jogo de estratégia social disponível nas plataformas Android, iOS e Windows. O Armazenamento de Blobs do Azure, o Cache Redis do Azure Gerenciado, uma matriz VMs IIS de carga balanceada e o Hub de Notificação da Microsoft foram usados no jogo. Saiba como eles gerenciaram o escalonamento e lidaram com o inesperado número de 5.000 jogadores simultâneos.
         </td>
         <td>
@@ -136,7 +136,7 @@ Saiba como outros desenvolvedores implementaram soluções de nuvem em seus jogo
 
 ## <a name="how-to-design-your-cloud-backend"></a>Como projetar seu back-end de nuvem
 
-Enquanto produtores e designers de jogos discutem quais recursos e funcionalidades são necessários no jogo, é bom começar a considerar como você deseja projetar sua infraestrutura de jogo. O Azure pode ser usado como back-end de jogo quando você quer desenvolver jogos para vários dispositivos e em diferentes plataformas importantes.
+Enquanto produtores e designers de jogos discutem quais recursos e funcionalidades são necessários no jogo, é bom começar a considerar como você deseja projetar sua infraestrutura de jogo. O Azure pode ser usado como seu back-end de jogo quando você quer desenvolver jogos para vários dispositivos e em diferentes plataformas importantes.
 
 ### <a name="understanding-iaas-paas-or-saas"></a>Noções básicas de IaaS, PaaS ou SaaS
 
@@ -155,7 +155,7 @@ Primeiro, você precisa pensar no nível de serviço que é mais adequado para s
     O SaaS (software como serviço) permite que os usuários se conectem a apps baseados na nuvem pela Internet e os utilizem. Ele fornece uma solução de software completa que você comprar de um provedor de serviços de nuvem conforme o uso.  Exemplos comuns são ferramentas de email, calendário e ferramentas do Office (como o Microsoft Office 365). Você aluga um app para uso de sua organização e os usuários se conectam a ele pela Internet, geralmente com um navegador da Web. Toda a infraestrutura subjacente, middleware, software do app e dados do app estão localizados no data center do provedor de serviços. O provedor de serviços gerencia o hardware e o software, e com o contrato de serviço apropriado, garantirá a disponibilidade e a segurança do jogo e de seus dados. O SaaS permite que sua organização comece a funcionar rapidamente com um app a um custo inicial mínimo.
 
 
-### <a name="design-your-game-infrastructure-using-azure"></a>Criar sua infraestrutura de jogo usando o Azure
+### <a name="design-your-game-infrastructure-using-azure"></a>Projetar sua infraestrutura de jogo usando o Azure
 
 A seguir estão algumas maneiras de usar as ofertas de nuvem do Azure para um jogo. O Azure funciona com Windows, Linux e tecnologias conhecidas de software livre, como Ruby, Python, Java e PHP. Para saber mais, consulte [Azure para jogos](https://azure.microsoft.com/solutions/gaming/).
 
@@ -164,14 +164,14 @@ A seguir estão algumas maneiras de usar as ofertas de nuvem do Azure para um jo
 | Hospedar seu domínio na nuvem     | Responder a consultas do DNS com eficiência            | [Azure DNS](https://azure.microsoft.com/services/dns/) | Hospedar seu domínio com alto desempenho e disponibilidade  |
 | Entrada, verificação de identidade      | O jogador entra e sua identidade é autenticada  | [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) | Logon único em qualquer aplicativo da Web local e na nuvem com autenticação multifator            | 
 | Jogo usando o modelo IaaS (infraestrutura como serviço)      | O jogo é hospedado em máquinas virtuais na nuvem       | [VMs do Azure](https://azure.microsoft.com/services/virtual-machines/) | Escala de uma a milhares de instâncias de máquina virtual como servidores de jogo com redes virtuais internas e balanceamento de carga; consistência híbrida com sistemas locais           |
-| Jogos na Web ou em dispositivos móveis usando PaaS (plataforma como serviço)            | O jogo é hospedado em uma plataforma gerenciada                | [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/) | O PaaS para sites ou jogos em dispositivos móveis (o que significa VMs do Azure com middleware/ferramentas de desenvolvimento/BI/gerenciamento de banco de dados)   |
+| Jogos na Web ou em dispositivos móveis usando PaaS (plataforma como serviço)            | O jogo é hospedado em uma plataforma gerenciada                | [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/) | PaaS para sites ou jogos em dispositivos móveis (o que significa VMs do Azure com middleware/ferramentas de desenvolvimento/BI/gerenciamento de banco de dados)   |
 | Jogo de nuvem de n camadas altamente disponível e escalonável com maior controle do SO (PaaS)        | O jogo é hospedado em uma plataforma gerenciada                | [Serviço de nuvem do Azure](https://azure.microsoft.com/services/app-service/) | O PaaS foi projetado para oferecer suporte a aplicativos escalonáveis, confiáveis e baratos   |
 | Balanceamento de carga entre regiões para melhor desempenho e a disponibilidade | Encaminha as solicitações de jogo recebidas. Pode atuar como primeiro nível do balanceamento de carga.       | [Gerenciador de tráfego do Azure](https://azure.microsoft.com/en-us/services/traffic-manager/) | Oferece várias opções de failover automático e capacidade de distribuir o tráfego igualmente ou com valores ponderados. Combina perfeitamente sistemas de nuvem e locais. |
 | Armazenamento em nuvem para dados de jogo       | Os dados de jogo mais recentes são armazenados na nuvem e enviados a dispositivos cliente | [Armazenamento de BLOBs do Azure](https://azure.microsoft.com/services/storage/blobs/)| Nenhuma restrição nos tipos de arquivo que podem ser armazenados; armazenamento de objetos para grandes volumes de dados não estruturados, como imagens, áudio, vídeo e muito mais.  |
 | Tabelas de armazenamento de dados temporários| Transações do jogo (mudanças em estados do jogo) são armazenadas temporariamente em tabelas | [Armazenamento de tabelas do Azure](https://azure.microsoft.com/services/storage/tables/)| Os dados do jogo podem ser armazenados em um esquema flexível de acordo com as necessidades do jogo |
 | Transações/solicitações do jogo em fila| As transações do jogo são processadas na forma de uma fila | [Armazenamento de filas do Azure](https://azure.microsoft.com/services/storage/queues/)| As filas absorvem aumentos súbitos de tráfego e podem impedir que os servidores sejam sobrecarregados por uma inundação repentina de solicitações durante o jogo   |
 | Banco de dados de jogo relacional escalonável| Armazenamento estruturado de dados relacionais como transações no jogo no banco de dados | [Banco de dados SQL do Azure](https://azure.microsoft.com/services/sql-database/)| Banco de dados SQL como serviço ([Comparação com o SQL em uma VM](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/))  |
-| Banco de dados de jogos de baixa latência distribuído e escalonável| Leitura, gravação e consulta rápidas dos dados de jogo e de jogadores com flexibilidade de esquema | [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)| Banco de dados de documentos NoSQL de baixa latência como um serviço   |
+| Banco de dados de jogos de baixa latência distribuído e escalonável| Leitura, gravação e consulta de dados de jogo e jogadores rápidas com flexibilidade de esquema | [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)| Banco de dados como serviço de documentos NoSQL de baixa latência   |
 | Usar o próprio datacenter com serviços do Azure | O jogo é recuperado de seu próprio datacenter e enviado aos dispositivos cliente | [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) | Permite que sua organização forneça serviços do Azure no próprio datacenter para ajudá-lo a obter mais  |
 | Transferência de blocos de dados grandes| Arquivos grandes, como imagem, áudio e vídeo de jogos, podem ser enviados aos usuários a partir do local POP da CDN (Rede de Distribuição de Conteúdo) mais próxima com a CDN do Azure    | [Rede de distribuição de conteúdo do Azure](https://azure.microsoft.com/services/cdn/) | Criada em uma topologia de rede moderna de nós centralizados grandes, a CDN do Azure manipula picos súbitos de tráfego e cargas pesadas para aumentar drasticamente a velocidade e a disponibilidade, o que resulta em melhorias significativas na experiência do usuário  |
 | Baixa latência               | Executa o armazenamento em cache para criar jogos rápidos e escalonáveis com mais controle e isolamento garantido de dados; também pode ser usada para aprimorar o recurso de correspondência do jogo. | [Cache Redis do Azure](https://azure.microsoft.com/services/cache/) | Acesso a dados de baixa latência e alta taxa de transferência para ativar aplicativos do Azure rápidos e escalonáveis.  |
@@ -179,10 +179,10 @@ A seguir estão algumas maneiras de usar as ofertas de nuvem do Azure para um jo
 | Capacidade de coletar milhões de eventos por segundo de dispositivos                         | Log de milhões de eventos por segundo de dispositivos | [Hubs de eventos do Azure](https://azure.microsoft.com/services/event-hubs/) | Ingestão de telemetria em escala de nuvem de jogos, sites, aplicativos e dispositivos  |
 | Processamento de dados de jogos em tempo real  | Executar a análise de dados de jogadores em tempo real para melhorar o jogo| [Azure Stream Analytics](https://azure.microsoft.com/services/stream-analytics/) | Processamento de fluxo em tempo real na nuvem  |
 | Desenvolver jogo preditivo         | Criar um jogo dinâmico personalizado com base nos dados do jogador  | [Azure Machine Learning](https://azure.microsoft.com/services/machine-learning/) | Um serviço de nuvem totalmente gerenciado que permite que você compile, implante e compartilhe soluções de análise preditiva  |
-| Coletar e analisar dados de jogos| Intenso processamento de dados paralelo de bancos de dados relacionais e não relacionais | [Azure Data Warehouse](https://azure.microsoft.com/services/sql-data-warehouse/)| Data warehouse elástico como um serviço com recursos de classe empresarial   |
+| Coletar e analisar dados de jogos| Intenso processamento de dados paralelo de bancos de dados relacionais e não relacionais | [Azure Data Warehouse](https://azure.microsoft.com/services/sql-data-warehouse/)| Depósito de dados como serviço elástico com recursos de classe empresarial   |
 | Envolver os usuários para aumentar o uso e a retenção| Enviar notificações por push direcionadas a qualquer plataforma a partir de qualquer back-end para gerar interesse e incentivar ações específicas do jogo | [Hubs de notificação do Azure](https://azure.microsoft.com/services/notification-hubs/)| Envio de difusão sem solicitação rápido para atingir milhões de dispositivos móveis nas principais plataformas &mdash; iOS, Android, Windows, Kindle, Baidu. Seu jogo pode ser hospedado em qualquer back-end &mdash; nuvem ou local.|
 | Streaming de conteúdo de mídia para público nacional e internacional com proteção de conteúdo| Trailers de jogo e clipes cinematográficos com qualidade de transmissão podem assistidos de todos os dispositivos| [Serviços de mídia do Azure](https://azure.microsoft.com/services/media-services/)| Streaming de vídeo ao vivo e sob demanda com recursos de rede de distribuição de conteúdo integrados. Use um jogador para todas as suas necessidades de reprodução, inclui criptografia e proteção de conteúdo.| 
-| Desenvolvimento, distribuição e teste beta de seus apps móveis | Testar e distribuir o app móvel. Desempenho do app e gerenciamento da experiência do usuário. | [HockeyApp](https://azure.microsoft.com/services/hockeyapp/)| Integra métricas de usuário e relatórios de falhas a uma plataforma de distribuição de app e feedback do usuário. Oferece suporte a apps Android, Cordova, iOS, OS X, Unity, Windows e Xamarin. Além disso, considere [Visual Studio Mobile Center](https://www.visualstudio.com/vs/mobile-center/) &mdash; controle da missão para aplicativos que combina análises avançadas, falhas de emissão de relatórios, enviar por push notificações, distribuição de aplicativos e muito mais. |
+| Desenvolvimento, distribuição e teste beta de seus apps móveis | Testar e distribuir o app móvel. Desempenho do app e gerenciamento da experiência do usuário. | [HockeyApp](https://azure.microsoft.com/services/hockeyapp/)| Integra métricas de usuário e relatórios de falhas a uma plataforma de distribuição de app e feedback do usuário. Oferece suporte a apps Android, Cordova, iOS, OS X, Unity, Windows e Xamarin. Além disso, considere [Visual Studio Mobile Center](https://visualstudio.microsoft.com/app-center/) &mdash; controle da missão para aplicativos que combina análises avançadas, falhas de emissão de relatórios, enviar por push notificações, distribuição de aplicativos e muito mais. |
 | Criar campanhas de marketing para aumentar o uso e a retenção  | Enviar notificações por push a jogadores direcionados para gerar interesse e incentivar ações específicas do jogo de acordo com a análise de dados | [Mobile Engagement](https://azure.microsoft.com/services/mobile-engagement/) – será retirado em março de 2018 e só estará disponível para os clientes existentes no momento |  Aumentar o tempo de jogo e a retenção de usuários em todas as principais plataformas — iOS, Android, Windows, Windows Phone |
 
 
@@ -206,7 +206,7 @@ A seguir estão algumas maneiras de usar as ofertas de nuvem do Azure para um jo
 ## <a name="tools-and-other-useful-links"></a>Ferramentas e outros links úteis
 
 * [Fóruns do MSDN &mdash; plataforma Windows Azure](https://social.msdn.microsoft.com/Forums/azure/home?category=windowsazureplatform)
-* [Ferramenta de teste de carga com base em nuvem](https://www.visualstudio.com/team-services/cloud-load-testing/)
+* [Ferramenta de teste de carga com base em nuvem](https://visualstudio.microsoft.com/team-services/cloud-load-testing/)
 * [SDKs e ferramentas de linha de comando](https://azure.microsoft.com/downloads/)
     
 ## <a name="software-as-a-service-for-game-backend"></a>Software como serviço para back-end de jogo

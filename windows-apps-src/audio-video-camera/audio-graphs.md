@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 75066b566fde3f25ea4feb2ed82358b106ffcf7c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ff067729e71ed4d4a49a082adf9fc754804836a6
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359117"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317597"
 ---
 # <a name="audio-graphs"></a>Gráficos de áudio
 
@@ -48,7 +48,7 @@ As APIs de gráfico de áudio do Windows Runtime:
 
 ## <a name="audiograph-class"></a>Classe AudioGraph
 
-A classe [**AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph) é pai de todos os nós que compõem o gráfico. Use esse objeto para criar instâncias de todos os tipos de nós de áudio. Crie uma instância da classe **AudioGraph** inicializando um objeto [**AudioGraphSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraphSettings) contendo definições de configuração para o gráfico e chame [**AudioGraph.CreateAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.). O [**CreateAudioGraphResult**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.CreateAudioGraphResult) retornado dá acesso ao gráfico de áudio criado ou fornece um valor de erro em caso de falha na criação do gráfico de áudio.
+A classe [**AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph) é pai de todos os nós que compõem o gráfico. Use esse objeto para criar instâncias de todos os tipos de nós de áudio. Crie uma instância da classe **AudioGraph** inicializando um objeto [**AudioGraphSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraphSettings) contendo definições de configuração para o gráfico e chame [**AudioGraph.CreateAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createasync). O [**CreateAudioGraphResult**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.CreateAudioGraphResult) retornado dá acesso ao gráfico de áudio criado ou fornece um valor de erro em caso de falha na criação do gráfico de áudio.
 
 [!code-cs[DeclareAudioGraph](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareAudioGraph)]
 
@@ -168,7 +168,7 @@ O código a seguir mostra um exemplo de implementação de um método auxiliar *
 -   Como esse método acessa o buffer bruto subjacente aos tipos do Windows Runtime, ele deve ser declarado usando a palavra-chave **unsafe**. Você também deve configurar seu projeto no Microsoft Visual Studio para permitir a compilação de código não seguro. Para fazer isso, abra a página **Propriedades** do projeto, clique na página de propriedade **Build** e selecione a caixa de seleção **Permitir Código Não Seguro**.
 -   Inicialize uma nova instância de [**AudioFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioFrame), no namespace **Windows.Media**, passando o tamanho de buffer desejado para o construtor. O tamanho do buffer é o número de amostras multiplicado pelo tamanho de cada exemplo.
 -   Obtenha o [**AudioBuffer**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioBuffer) do quadro de áudio chamando [**LockBuffer**](https://docs.microsoft.com/uwp/api/windows.media.audioframe.lockbuffer).
--   Obtenha uma instância da interface COM [**IMemoryBufferByteAccess**](https://docs.microsoft.com/previous-versions//mt297505(v=vs.85)) do buffer de áudio chamando [**CreateReference**](https://docs.microsoft.com/uwp/api/windows.media.audiobuffer.createreference).
+-   Obtenha uma instância da interface COM [**IMemoryBufferByteAccess**](https://docs.microsoft.com/previous-versions/mt297505(v=vs.85)) do buffer de áudio chamando [**CreateReference**](https://docs.microsoft.com/uwp/api/windows.media.audiobuffer.createreference).
 -   Obtenha um ponteiro para dados de buffer de áudio bruto chamando [**IMemoryBufferByteAccess.GetBuffer**](https://docs.microsoft.com/windows/desktop/WinRT/imemorybufferbyteaccess-getbuffer) e transmita-o para o tipo de dados de amostra dos dados de áudio.
 -   Preencha o buffer com dados e retorne o [**AudioFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioFrame) para envio para o gráfico de áudio.
 
@@ -241,7 +241,7 @@ A API do gráfico de áudio permite que você adicione efeitos de áudio a cada 
 ## <a name="spatial-audio"></a>Áudio espacial
 A partir do Windows 10, versão 1607, **AudioGraph** oferece suporte ao áudio espacial, que permite que você especifique o local no espaço 3D do qual o audio de qualquer entrada ou nó de submixagem seja emitido. Você também pode especificar uma forma e a direção em que o áudio é emitido, uma velocidade que será usada para fazer a mudança de Doppler do áudio do nó e definir um modelo de decaimento que descreve como o áudio é atenuado com a distância. 
 
-Para criar um emissor, primeiro você pode criar uma forma na qual o som é projetado a partir do emissor, que pode ser um cone ou unidirecional. A classe [**AudioNodeEmitterShape**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioNodeEmitterShape) fornece métodos estáticos para criar cada uma dessas formas. Em seguida, crie um modelo de decaimento. Isso define como o volume do áudio do emissor diminui à medida que a distância do ouvinte aumenta. O método [**CreateNatural**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitterdecaymodel.createnatural) cria um modelo de decaimento que emula o decaimento natural de som usando um modelo de queda do quadrado da distância. Por fim, crie um objeto [**AudioNodeEmitterSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioNodeEmitterSettings). Atualmente, esse objeto é usado somente para habilitar e desabilitar atenuações de Doppler baseadas na velocidade do áudio do emissor. Chame o construtor [**AudioNodeEmitter**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitter.), transmitindo os objetos de inicialização que você acabou de criar. Por padrão, o emissor é colocado na origem, mas você pode definir a posição do emissor com a propriedade [**Position**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitter.position).
+Para criar um emissor, primeiro você pode criar uma forma na qual o som é projetado a partir do emissor, que pode ser um cone ou unidirecional. A classe [**AudioNodeEmitterShape**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioNodeEmitterShape) fornece métodos estáticos para criar cada uma dessas formas. Em seguida, crie um modelo de decaimento. Isso define como o volume do áudio do emissor diminui à medida que a distância do ouvinte aumenta. O método [**CreateNatural**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitterdecaymodel.createnatural) cria um modelo de decaimento que emula o decaimento natural de som usando um modelo de queda do quadrado da distância. Por fim, crie um objeto [**AudioNodeEmitterSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioNodeEmitterSettings). Atualmente, esse objeto é usado somente para habilitar e desabilitar atenuações de Doppler baseadas na velocidade do áudio do emissor. Chame o construtor [**AudioNodeEmitter**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitter.-ctor), transmitindo os objetos de inicialização que você acabou de criar. Por padrão, o emissor é colocado na origem, mas você pode definir a posição do emissor com a propriedade [**Position**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitter.position).
 
 > [!NOTE]
 > Os emissores de nó de áudio somente podem processar o áudio formatado em mono com uma taxa de amostragem de 48 kHz. A tentativa de usar o áudio estéreo ou o áudio com uma taxa de amostragem diferente resultará em uma exceção.

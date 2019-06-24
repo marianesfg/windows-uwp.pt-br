@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 855c629e961df36970886b4076e5091726d07c93
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8d6f77c92efdd5ebe93a32514513747174ab9e9c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372932"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322193"
 ---
 # <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript
 
@@ -398,7 +398,7 @@ Além de retornar tipos de Tempo de Execução do Windows que você criou no com
 
 Observe que o dicionário deve ser retornado como uma interface implementada por [Dictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2?redirectedfrom=MSDN) e mapeada para uma interface do Windows Runtime. Nesse caso, a interface é IDictionary&lt;int, string&gt; (IDictionary(Of Integer, String) no Visual Basic). Quando o tipo de Windows Runtime IMap&lt;int, string&gt; é passado para o código gerenciado, ele é exibido como IDictionary&lt;int, string&gt;, e o inverso é verdadeiro quando o tipo gerenciado é passado para JavaScript.
 
-**Importante**  quando um tipo gerenciado implementa várias interfaces, o JavaScript usa a interface que aparece primeira na lista. Por exemplo, se você retornar Dictionary&lt;int, string&gt; ao código JavaScript, ele será exibido como IDictionary&lt;int, string&gt;, independentemente de qual interface você especificar como o tipo de retorno. Isso significa que, caso a primeira interface não inclua um membro exibido em interfaces posteriores, esse membro não permanece visível para JavaScript.
+**Importante**  quando um tipo gerenciado implementa várias interfaces, o JavaScript usa a interface que aparece primeira na lista. Por exemplo, se você retornar Dictionary&lt;int, string&gt; ao código JavaScript, ele será exibido como IDictionary&lt;int, string&gt;, independentemente de qual interface você especificar como o tipo de retorno. Isso significa que, se a primeira interface não incluir um membro exibido em interfaces posteriores, esse membro não permanecerá visível para JavaScript.
 
  
 
@@ -530,7 +530,7 @@ Você pode declarar eventos usando o padrão de eventos do .NET Framework ou out
 
 Quando você expõe um evento em Tempo de Execução do Windows, a classe de argumento do evento é herdada de System.Object. Ele não herda de System.EventArgs, como aconteceria no .NET Framework, porque EventArgs não é um tipo de Windows Runtime.
 
-Caso declare acessadores de eventos personalizados para o evento (palavra-chave **Custom** no Visual Basic), você deve usar o padrão de evento de Windows Runtime. Consulte [Eventos personalizados e acessadores de evento em componentes do Windows Runtime](custom-events-and-event-accessors-in-windows-runtime-components.md).
+Caso declare acessadores de eventos personalizados para o evento (palavra-chave **Custom** no Visual Basic), você deve usar o padrão de evento de Windows Runtime. Consulte [Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows](custom-events-and-event-accessors-in-windows-runtime-components.md).
 
 Para manipular o evento Test, adicione a função events1 a default. js. A função events1 cria uma função do manipulador de eventos para o evento Test e invoca imediatamente o método OnTest para acionar o evento. Se colocar um ponto de interrupção no corpo do manipulador de eventos, você poderá ver que o objeto passado para o parâmetro único inclui o objeto de origem e ambos os membros de TestEventArgs.
 
@@ -557,7 +557,7 @@ events1Button.addEventListener("click", events1, false);
 ## <a name="exposing-asynchronous-operations"></a>Exposição de operações assíncronas
 
 
-O .NET Framework tem um conjunto avançado de ferramentas para processamento assíncrono e processamento em paralelo, com base na tarefa e nas classes genéricas [Task&lt;TResult&gt;](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1?redirectedfrom=MSDN). Para expor um processamento assíncrono baseado em tarefa em um componente do Tempo de Execução do Windows, use as interfaces do Windows Runtime [IAsyncAction](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [IAsyncActionWithProgress&lt;TProgress&gt;](https://docs.microsoft.com/previous-versions//br205784(v=vs.85)), [IAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/previous-versions//br205802(v=vs.85)) e [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://docs.microsoft.com/previous-versions//br205807(v=vs.85)). (No Windows Runtime, as operações retornam resultados, mas as ações, não.)
+O .NET Framework tem um conjunto avançado de ferramentas para processamento assíncrono e processamento em paralelo, com base na tarefa e nas classes genéricas [Task&lt;TResult&gt;](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1?redirectedfrom=MSDN). Para expor um processamento assíncrono baseado em tarefa em um componente do Tempo de Execução do Windows, use as interfaces do Windows Runtime [IAsyncAction](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [IAsyncActionWithProgress&lt;TProgress&gt;](https://docs.microsoft.com/previous-versions/br205784(v=vs.85)), [IAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/previous-versions/br205802(v=vs.85)) e [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://docs.microsoft.com/previous-versions/br205807(v=vs.85)). (No Windows Runtime, as operações retornam resultados, mas as ações, não.)
 
 Esta seção demonstra uma operação assíncrona cancelável que relata progresso e retorna resultados. O método GetPrimesInRangeAsync usa a classe [AsyncInfo](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime?redirectedfrom=MSDN) para gerar uma tarefa e conectar os recursos de relatório de progresso e cancelamento com um objeto WinJS.Promise. Comece adicionando o método GetPrimesInRangeAsync à classe de exemplo:
 

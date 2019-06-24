@@ -4,12 +4,12 @@ title: Simplificar pagamentos com a API de Solicitação de Pagamento
 ms.date: 09/26/2017
 ms.topic: article
 keywords: Windows 10, uwp, solicitação de pagamento
-ms.openlocfilehash: a40b8265e3445319bd7baa530df0f9e9eaae0f31
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: f055bacbddae88cdbd100b460d933682b3c78a13
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63804478"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320058"
 ---
 # <a name="simplify-payments-with-the-payment-request-api"></a>Simplificar pagamentos com a API de Solicitação de Pagamento
 A API de solicitação de pagamento para aplicativos UWP se baseia a [especificações de API de solicitação de pagamento de W3C](https://w3c.github.io/browser-payment-api/). Ele fornece a capacidade de simplificar o processo de check-out em seus aplicativos UWP. Os usuários podem acelerar por meio do check-out, usando as opções de pagamento e já salvos com a respectiva conta da Microsoft de endereços para entrega. Você pode aumentar sua taxa de conversão e reduzir o risco de violações de dados, pois as informações de pagamento são indexadas. Começando com o Windows 10 Creators Update, os usuários podem usar suas opções de pagamento salvo para pagar com facilidade entre as experiências em aplicativos UWP.
@@ -18,7 +18,7 @@ A API de solicitação de pagamento para aplicativos UWP se baseia a [especifica
 Antes de começar a usar a API de solicitação de pagamento, há algumas coisas que você deve fazer ou estar atento.
 
 ### <a name="getting-a-merchant-id"></a>Obter uma ID do comerciante
-Como parte do processo de solicitação de pagamento, a Microsoft solicitar tokens de pagamento em seu nome de seu provedor de serviços. Portanto, antes de começar a usar a API, precisamos que sua autorização para solicitar esses tokens.  Você deve seguir algumas etapas para se registrar para uma conta de vendedor e forneça a autorização necessária. Para fazer isso, vá para [Microsoft Seller Center](https://seller.microsoft.com/en-us/dashboard/registration/seller/?accountprogram=uwp). Assim que tiver feito isso, copie o comerciante resultante ID do Partner Center em seu aplicativo ao construir a solicitação de pagamento. Em seguida, quando seu aplicativo envia uma solicitação de pagamento, você receberá um token de pagamento do seu processador que você precisará enviar seu pagamento.
+Como parte do processo de solicitação de pagamento, a Microsoft solicitar tokens de pagamento em seu nome de seu provedor de serviços. Portanto, antes de começar a usar a API, precisamos que sua autorização para solicitar esses tokens.  Você deve seguir algumas etapas para se registrar para uma conta de vendedor e forneça a autorização necessária. Para fazer isso, vá para [Microsoft Seller Center](https://partner.microsoft.com/dashboard/registration/seller?accountprogram=uwp). Assim que tiver feito isso, copie o comerciante resultante ID do Partner Center em seu aplicativo ao construir a solicitação de pagamento. Em seguida, quando seu aplicativo envia uma solicitação de pagamento, você receberá um token de pagamento do seu processador que você precisará enviar seu pagamento.
 
 ### <a name="geographic-restrictions-and-language-support"></a>As restrições geográficas e suporte a idiomas
 A API de solicitação de pagamento pode ser usada somente por empresas baseado nos EUA para processar as transações nos Estados Unidos.
@@ -80,5 +80,5 @@ Depois que o pagamento for concluído, o usuário é apresentado com uma **ordem
 - [Documentação de referência Windows.ApplicationModel.Payments](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.payments)
 - [Exemplo de aplicativo UWP em compras no GitHub](https://github.com/Microsoft/Windows-appsample-shopping)
 - [Especificação da API de solicitação de pagamento do W3C](https://www.w3.org/TR/payment-request/)
-- [Solicitação de pagamento de API ](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/device/payment-request-api)
+- [Solicitação de pagamento de API ](https://docs.microsoft.com/microsoft-edge/dev-guide/windows-integration/payment-request-api)
 

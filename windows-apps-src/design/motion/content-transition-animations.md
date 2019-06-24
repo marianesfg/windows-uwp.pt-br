@@ -10,12 +10,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ec8778f590ba9b50c67209eaf4b80e2cbed2f16
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7703f2dfac2eed6df1f59b8e1cdfa6371e240eb4
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66364808"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317108"
 ---
 # <a name="content-transition-animations"></a>Animações de transição de conteúdo
 
@@ -23,7 +23,7 @@ ms.locfileid: "66364808"
 
 Animações de transição de conteúdo permitem que você mude o conteúdo de uma área da tela enquanto mantém constante o contêiner ou o plano de fundo. O novo conteúdo aparece. Se houver conteúdo existente para ser substituído, esse conteúdo desaparecerá.
 
-> **APIs importantes**: [**Classe ContentThemeTransition (XAML)** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.contentthemetransition.)
+> **APIs importantes**: [**Classe ContentThemeTransition (XAML)** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.contentthemetransition)
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
@@ -44,7 +44,7 @@ Animações de transição de conteúdo permitem que você mude o conteúdo de u
 * [Visão geral de animações](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
 * [Animando as transições de conteúdo](https://docs.microsoft.com/previous-versions/windows/apps/jj649426(v=win.10))
 * [Guia de início rápido: Animando sua interface do usuário usando animações de biblioteca](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
-* [**Classe ContentThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.contentthemetransition.)
+* [**Classe ContentThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.contentthemetransition)
 
  
 

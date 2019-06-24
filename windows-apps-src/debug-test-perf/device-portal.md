@@ -6,12 +6,12 @@ ms.date: 4/9/2019
 ms.topic: article
 keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 39715dc3f4b88a2e9a91a7cb659208f8370f16f2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 59e7e46ea68f6bb5fe7fd63e6ac35b9256103c38
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362423"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317897"
 ---
 # <a name="windows-device-portal-overview"></a>Visão geral do Windows Device Portal
 
@@ -212,7 +212,7 @@ T | lista de cadeias de caracteres delineadas de caracteres nulos | Marcas aplic
 
 ### <a name="csrf-protection-and-scripting"></a>Proteção contra CSRF e scripts
 
-Para proteger-se contra [ataques CSRF](https://wikipedia.org/wiki/Cross-site_request_forgery), um token exclusivo é necessário em todas as solicitações não GET. Esse token, o cabeçalho de solicitação X-CSRF-Token, é derivado de um cookie de sessão, o CSRF-Token. Na interface do usuário Web do Device Portal, o cookie CSRF-Token é copiado no cabeçalho X-CSRF-Token em cada solicitação.
+Para proteger-se contra [ataques CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery), um token exclusivo é necessário em todas as solicitações não GET. Esse token, o cabeçalho de solicitação X-CSRF-Token, é derivado de um cookie de sessão, o CSRF-Token. Na interface do usuário Web do Device Portal, o cookie CSRF-Token é copiado no cabeçalho X-CSRF-Token em cada solicitação.
 
 > [!IMPORTANT]
 > Essa proteção impede que as APIs REST de um cliente autônomo (por exemplo, utilitários de linha de comando) do. Isso pode ser resolvido de três modos:

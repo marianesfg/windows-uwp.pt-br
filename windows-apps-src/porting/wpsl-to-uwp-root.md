@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c9088f695fb70d171f0b9d5474a4a0f2a63cae05
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d611c57ff6d8382a70bcc5078e04e9af8b6fd4ca
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372421"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322268"
 ---
 #  <a name="move-from-windowsphone-silverlight-to-uwp"></a>Mover do Windows Phone Silverlight para UWP
 
 
 Se você for um desenvolvedor com um aplicativo do Windows Phone Silverlight, você pode fazer bom uso do seu conjunto de habilidades e seu código-fonte na mudança para o Windows 10. Com o Windows 10, você pode criar um aplicativo de plataforma Universal do Windows (UWP), que é um pacote de aplicativo único que os clientes podem instalar em todos os tipos de dispositivo. Para obter mais informações sobre o Windows 10, aplicativos da UWP e os conceitos de código adaptável e interface do usuário adaptável que mencionaremos neste guia de portabilidade, consulte o [guia para aplicativos da plataforma Universal do Windows (UWP)](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
 
-Ao portar seu aplicativo do Windows Phone Silverlight para um aplicativo do Windows 10, você poderá acompanhar os recursos móveis que foram [introduzido no Windows Phone 8.1](https://docs.microsoft.com/previous-versions/windows/apps/ff402535(v%3dvs.105))e que vão muito além deles usem a Universal Windows Platform (UWP) cujo aplicativo modelo e estrutura de interface do usuário são universais em todos os dispositivos Windows 10. Isso possibilita o suporte a computadores, tablets, telefones e vários outros tipos de dispositivos, de uma base de código e com um pacote do aplicativo. E isso multiplicará o público-alvo potencial do seu aplicativo e criará novas possibilidades com dados compartilhados, produtos consumíveis comprados etc. Para obter mais informações sobre os novos recursos, consulte [quais são as novidades para desenvolvedores no Windows 10](https://dev.windows.com/getstarted/whats-new-windows-10).
+Ao portar seu aplicativo do Windows Phone Silverlight para um aplicativo do Windows 10, você poderá acompanhar os recursos móveis que foram [introduzido no Windows Phone 8.1](https://docs.microsoft.com/previous-versions/windows/apps/ff402535(v=vs.105))e que vão muito além deles usem a Universal Windows Platform (UWP) cujo aplicativo modelo e estrutura de interface do usuário são universais em todos os dispositivos Windows 10. Isso possibilita o suporte a computadores, tablets, telefones e vários outros tipos de dispositivos, de uma base de código e com um pacote do aplicativo. E isso multiplicará o público-alvo potencial do seu aplicativo e criará novas possibilidades com dados compartilhados, produtos consumíveis comprados etc. Para obter mais informações sobre os novos recursos, consulte [quais são as novidades para desenvolvedores no Windows 10](https://docs.microsoft.com/windows/uwp/whats-new/windows-10-version-latest).
 
 Se você optar por, a versão do Windows Phone Silverlight do seu aplicativo e o Windows 10 versão dele podem ambos ser disponíveis para clientes ao mesmo tempo.
 
@@ -79,7 +79,7 @@ No nível do recurso, a boa notícia é que há poucos itens sem suporte na UWP.
 ## <a name="related-topics"></a>Tópicos relacionados
 
 **Documentação**
-* [O que há de novo para desenvolvedores no Windows 10](https://dev.windows.com/getstarted/whats-new-windows-10)
+* [O que há de novo para desenvolvedores no Windows 10](https://docs.microsoft.com/windows/uwp/whats-new/windows-10-version-latest)
 * [Guia para aplicativos da Plataforma Universal do Windows (UWP)](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
 * [Roteiro para aplicativos de plataforma Universal do Windows (UWP) usando o C# ou o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))
 * [O que mais aguarda os desenvolvedores do Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/dn655121(v=vs.105))

@@ -5,19 +5,19 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, clubes
 ms.localizationpriority: medium
-ms.openlocfilehash: aef7f17a2c6371a13a2eeb57b5f3dc4ee4889435
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: e5fc116c2b868ddf093aabea09d59934301f49ec
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162661"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321863"
 ---
 # <a name="get-xbox-live-club-data"></a>Obter dados de clube do Xbox Live
 
-Use este método na API de análise da Microsoft Store para obter dados de clube para seu [jogo habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live//index.md). Essas informações também estão disponíveis na [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
+Use este método na API de análise da Microsoft Store para obter dados de clube para seu [jogo habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live/index.md). Essas informações também estão disponíveis na [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
 
 > [!IMPORTANT]
-> Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -69,7 +69,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descrição                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | matriz  | Uma matriz que contém um objeto [ProductData](#productdata) que contém dados de clubes relacionados ao seu jogo e um objeto [XboxwideData](#xboxwidedata) que contém dados de clube para todos os clientes do Xbox Live. Esses dados são incluídos para fins de comparação com os dados para o seu jogo.  |
+| Valor      | array  | Uma matriz que contém um objeto [ProductData](#productdata) que contém dados de clubes relacionados ao seu jogo e um objeto [XboxwideData](#xboxwidedata) que contém dados de clube para todos os clientes do Xbox Live. Esses dados são incluídos para fins de comparação com os dados para o seu jogo.  |
 | @nextLink  | cadeia de caracteres | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 10000, mas houver mais de 10000 linhas de dados para a consulta. |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta. |
 
@@ -84,7 +84,7 @@ Esse recurso contém dados de clube para seu jogo.
 |  applicationId               |    cadeia de caracteres     |  A [ID da Store](in-app-purchases-and-trials.md#store-ids) do jogo para o qual você recuperou dados de clube.   |
 |  clubsWithTitleActivity               |    int     |  O número de clubes que estão socialmente envolvidos com seu jogo.   |     
 |  clubsExclusiveToGame               |   int      |  O número de clubes que estão socialmente envolvidos exclusivamente com seu jogo.   |     
-|  clubFacts               |   matriz      |   Contém um ou mais objetos [ClubFacts](#clubfacts) sobre cada um dos clubes socialmente envolvidos com seu jogo.   |
+|  clubFacts               |   array      |   Contém um ou mais objetos [ClubFacts](#clubfacts) sobre cada um dos clubes socialmente envolvidos com seu jogo.   |
 
 
 ### <a name="xboxwidedata"></a>XboxwideData
@@ -106,7 +106,7 @@ No objeto **ProductData**, este objeto contém os dados de um clube específico 
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|--------------------|
-|  nome            |  cadeia de caracteres  |   No objeto **ProductData**, este é o nome do clube. No objeto **XboxwideData**, sempre terá o valor **XBOXWIDE**.           |
+|  name            |  cadeia de caracteres  |   No objeto **ProductData**, este é o nome do clube. No objeto **XboxwideData**, sempre terá o valor **XBOXWIDE**.           |
 |  memberCount               |    int     | No objeto **ProductData**, este é o número de membros no clube, excluindo não membros que estejam apenas visitando o clube. No objeto **XboxwideData**, sempre será 0.    |
 |  titleSocialActionsCount               |    int     |  No objeto **ProductData**, este é o número de ações sociais que os membros do clube executaram em relação ao seu jogo. No objeto **XboxwideData**, sempre será 0   |
 |  isExclusiveToGame               |    Booliano     |  No objeto **ProductData**, indica se o clube atual está socialmente envolvido de forma exclusiva com seu jogo. No objeto **XboxwideData**, sempre será verdadeiro.  |

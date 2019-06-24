@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e4f7b0469ae8c50e6da40fb248678a69a2827931
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5bdd090b380160952dfbb8b5f04b95b6c84b75b7
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57663821"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322340"
 ---
 # <a name="setting-up-your-mac-with-windows-10"></a>Configurando o seu Mac com o Windows 10
 
@@ -22,7 +22,7 @@ Use seu computador Mac atual para desenvolver aplicativos para Windows.
 
 Você está pronto para começar a desenvolver aplicativos Universais do Windows, mas não tem um computador disponível? Tudo bem. Você pode usar o seu Mac! Com soluções de terceiros populares, como Apple Boot Camp, Oracle VirtualBox, VMware Fusion e o Parallels Desktop, você pode instalar o Windows 10 e Microsoft Visual Studio em um computador Apple.
 
-**Observação**  você precisará de uma imagem inicializável do Windows 10 no disco ou unidade flash USB. Se você for um assinante do MSDN, poderá baixar a imagem da instalação do Centro de Desenvolvimento do MSDN Subscriber. Se você não for um assinante, o instalador pode ser adquirido do [Microsoft Store](https://apps.microsoft.com/windows/app). Você também pode baixá-lo [deste local](https://go.microsoft.com/fwlink/?LinkId=623906), o que é útil se você já estiver executando o Windows e deseja atualizar.
+**Observação**  você precisará de uma imagem inicializável do Windows 10 no disco ou unidade flash USB. Se você for um assinante do MSDN, poderá baixar a imagem da instalação do Centro de Desenvolvimento do MSDN Subscriber. Se você não for um assinante, o instalador pode ser adquirido do [Microsoft Store](https://www.microsoft.com/store/apps). Você também pode baixá-lo [deste local](https://go.microsoft.com/fwlink/?LinkId=623906), o que é útil se você já estiver executando o Windows e deseja atualizar.
 
 Uma vez que a execução do Windows, você pode instalar a versão mais recente do Visual Studio de [downloads de desenvolvedor para Windows 10](https://developer.microsoft.com/en-us/windows/downloads) e comece a escrever aplicativos!
 

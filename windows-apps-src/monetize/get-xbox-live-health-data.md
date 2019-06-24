@@ -5,20 +5,20 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, integridade, erros de cliente
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a311550541391d9aa5dc035bc73130274dc9e0e
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 052b8befc1540c3c2eae58e406db77e431ce6729
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162902"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321752"
 ---
 # <a name="get-xbox-live-health-data"></a>Obter dados de integridade do Xbox Live
 
 
-Use este método na API de análise da Microsoft Store para obter dados de integridade para seu [jogo habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live//index.md). Essas informações também estão disponíveis na [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
+Use este método na API de análise da Microsoft Store para obter dados de integridade para seu [jogo habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live/index.md). Essas informações também estão disponíveis na [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
 
 > [!IMPORTANT]
-> Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -73,7 +73,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descrição                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | matriz  | Uma matriz de objetos que contêm dados de integridade. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir.                                                                                                                      |
+| Valor      | array  | Uma matriz de objetos que contêm dados de integridade. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir.                                                                                                                      |
 | @nextLink  | cadeia de caracteres | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 10000, mas houver mais de 10000 linhas de dados para a consulta. |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.   |
 
@@ -96,7 +96,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 |------------|--------|-------------------------------------------------------|
 | serviço      | cadeia de caracteres  |   O nome do serviço Xbox Live aos quais os dados de integridade estão relacionados.       |
 | endpoint      | cadeia de caracteres  |   O ponto de extremidade do serviço Xbox Live aos quais os dados de integridade estão relacionados.        |
-| httpStatusCode      | cadeia de caracteres  |  O código de status HTTP para este conjunto de dados de integridade.<p/><p/>**Observação**&nbsp;&nbsp;O código de status **429E** indica que a chamada de serviço foi bem-sucedida somente porque o [limite de taxa bem granular](https://docs.microsoft.com/gaming/xbox-live//using-xbox-live/best-practices/fine-grained-rate-limiting.md) foi isento durante a chamada. Uma taxa bem granular limitada pode ser imposta no futuro caso o serviço experimente um alto volume e, nesse caso, a chamada resultaria em um [código de status HTTP 429](https://docs.microsoft.com/gaming/xbox-live//using-xbox-live/best-practices/fine-grained-rate-limiting.md#http-429-response-object).         |
+| httpStatusCode      | cadeia de caracteres  |  O código de status HTTP para este conjunto de dados de integridade.<p/><p/>**Observação**&nbsp;&nbsp;O código de status **429E** indica que a chamada de serviço foi bem-sucedida somente porque o [limite de taxa bem granular](https://docs.microsoft.com/gaming/xbox-live/using-xbox-live/best-practices/fine-grained-rate-limiting.md) foi isento durante a chamada. Uma taxa bem granular limitada pode ser imposta no futuro caso o serviço experimente um alto volume e, nesse caso, a chamada resultaria em um [código de status HTTP 429](https://docs.microsoft.com/gaming/xbox-live/using-xbox-live/best-practices/fine-grained-rate-limiting.md#http-429-response-object).         |
 | serviceResponses      | number  | O número de respostas de serviço que retornaram o código de status especificado.         |
 | uniqueDevices      | number  |  O número de dispositivos exclusivos que chamaram o serviço e receberam o código de status especificado.       |
 | uniqueUsers      | number  |   O número de usuários exclusivos que receberam o código de status especificado.       |

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 829755f6ccba7a076096e4a03555458b98a4b670
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5fcc4312cd238279e01e275d2525c9ac8df98190
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372242"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322362"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Portabilidade do Windows Runtime 8.x XAML e da interface do usuário para a UWP
 
@@ -110,7 +110,7 @@ Veja alguns exemplos mais específicos de mudanças nos controles.
 | **ListPickerFlyout**, **PickerFlyout**  | **ListPickerFlyout** e **PickerFlyout** foram preteridos em um aplicativo do Windows 10. Para um menu suspenso de seleção única, use [**MenuFlyout**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyout); para obter experiências mais complexas, use [**Flyout**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout). |
 | [**PasswordBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox) | O [ **PasswordBox.IsPasswordRevealButtonEnabled** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.ispasswordrevealbuttonenabled) propriedade foi preterida em um aplicativo do Windows 10 e defini-la não tem nenhum efeito. Use [ **PasswordBox.PasswordRevealMode** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode) em vez disso, cujo padrão é **inspecionar** (no qual um glifo de olho é exibido, como em um aplicativo do Windows Runtime 8.x). Além disso, consulte [Diretrizes para caixas de senha](https://docs.microsoft.com/windows/uwp/controls-and-patterns/password-box). |
 | [**Pivot**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) | O controle [**Pivot**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) agora é universal e não tem mais o uso limitado a dispositivos móveis. |
-| [**SearchBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SearchBox) | Embora [**SearchBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.searchbox.) seja implementado na família de dispositivos Universal, não é totalmente funcional em dispositivos móveis. Veja [SearchBox preterido em favor do AutoSuggestBox](#searchbox-deprecated-in-favor-of-autosuggestbox). |
+| [**SearchBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SearchBox) | Embora [**SearchBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.searchbox) seja implementado na família de dispositivos Universal, não é totalmente funcional em dispositivos móveis. Veja [SearchBox preterido em favor do AutoSuggestBox](#searchbox-deprecated-in-favor-of-autosuggestbox). |
 | **SemanticZoom** | Para **SemanticZoom**, consulte [alterações em SemanticZoom changes](#semanticzoom-changes). |
 | [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)  | Algumas propriedades padrão do [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) mudaram. [**HorizontalScrollMode** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode) é **automática**, [ **VerticalScrollMode** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollmode) é **automática**e [ **ZoomMode** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.zoommode) está **desabilitado**. Caso os novos valores padrão não sejam apropriados para o aplicativo, você pode alterá-los em um estilo ou como valores locais no próprio controle.  |
 | [**Caixa de texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Em um aplicativo do tempo de execução do Windows 8.x, verificação ortográfica está desativado por padrão para um [ **TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox). Em um aplicativo do Windows Phone Store, em um aplicativo do Windows 10, ela é ativada por padrão. |
@@ -118,7 +118,7 @@ Veja alguns exemplos mais específicos de mudanças nos controles.
 | [**Caixa de texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | O valor padrão de [**TextBox.TextReadingOrder**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.textreadingorder) foi alterado de **Default** para **DetectFromContent**. Se não for esta a sua vontade, use **UseFlowDirection**. **Default** é preterido. |
 | Vários | Cor de ênfase se aplica aos aplicativos do Windows Phone Store e para aplicativos do Windows 10, mas não para aplicativos do Windows Runtime 8.x.  |
 
-Para saber mais sobre controles do aplicativo UWP, consulte [Controles por função](https://docs.microsoft.com/windows/uwp/controls-and-patterns/controls-by-function), [Lista de controles](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/) e [Diretrizes para controles](https://developer.microsoft.com/windows/design/controls-patterns).
+Para saber mais sobre controles do aplicativo UWP, consulte [Controles por função](https://docs.microsoft.com/windows/uwp/controls-and-patterns/controls-by-function), [Lista de controles](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/) e [Diretrizes para controles](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/index).
 
 ##  <a name="design-language-in-windows10"></a>Linguagem de design no Windows 10
 
@@ -410,7 +410,7 @@ Esta é uma lista completa das chaves que não têm suporte.
 
 ## <a name="searchbox-deprecated-in-favor-of-autosuggestbox"></a>SearchBox preterido em favor do AutoSuggestBox
 
-Embora [**SearchBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.searchbox.) seja implementado na família de dispositivos Universal, não é totalmente funcional em dispositivos móveis. Use [**AutoSuggestBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox) para a sua experiência de pesquisa universal. Aqui está como normalmente implementar uma experiência de pesquisa com **AutoSuggestBox**.
+Embora [**SearchBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.searchbox) seja implementado na família de dispositivos Universal, não é totalmente funcional em dispositivos móveis. Use [**AutoSuggestBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox) para a sua experiência de pesquisa universal. Aqui está como normalmente implementar uma experiência de pesquisa com **AutoSuggestBox**.
 
 Depois que o usuário começa a digitar, o **TextChanged** evento é acionado, com um motivo de **UserInput**. Você então preenche a lista de sugestões e define o **ItemsSource** do [**AutoSuggestBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox). Conforme o usuário navega na lista, o evento **SuggestionChosen** é acionado (e, se você tiver definido **TextMemberDisplayPath**, a caixa de texto é preenchida automaticamente com a propriedade especificada). Quando o usuário envia uma opção com a tecla Enter, o **QuerySubmitted** evento é gerado, no ponto em que você pode executar uma ação naquela sugestão (neste caso, provavelmente navegar para outra página com mais detalhes sobre o conteúdo especificado). Observe que as propriedades **LinguisticDetails** e **Language** do **SearchBoxQuerySubmittedEventArgs** não são mais suportadas (há APIs equivalentes para dar suporte a essa funcionalidade). E para **KeyModifiers** não há mais suporte.
 

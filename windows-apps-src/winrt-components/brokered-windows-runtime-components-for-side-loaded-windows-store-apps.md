@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: a9b6c6fc7a7e3ddfab70fe289a41bb4d436e9722
-ms.sourcegitcommit: ea15237291ae3ade0bf22e38bd292c3a23947a03
+ms.openlocfilehash: 24878d3c63de7df9c55f48571984b7d60d1ea240
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377311"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320368"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes do Tempo de Execução do Windows agenciados para um aplicativo UWP de sideload
 
@@ -19,7 +19,7 @@ Este artigo aborda um recurso voltados para o enterprise com suporte pelo Window
 
 ## <a name="introduction"></a>Introdução
 
->**Observação**  o código de exemplo que acompanha este documento pode ser baixado para o [Visual Studio 2015 e 2017](https://aka.ms/brokeredsample). O modelo do Microsoft Visual Studio para criar componentes de tempo de execução Windows Agenciado pode ser baixado aqui: [Modelo do Visual Studio 2015 direcionamento Universal Windows aplicativos para Windows 10](https://marketplace.visualstudio.com/vsgallery/10be07b3-67ef-4e02-9243-01b78cd27935)
+>**Observação**  o código de exemplo que acompanha este documento pode ser baixado para o [Visual Studio 2015 e 2017](https://aka.ms/brokeredsample). O modelo do Microsoft Visual Studio para criar componentes de tempo de execução Windows Agenciado pode ser baixado aqui: [Modelo do Visual Studio 2015 direcionamento Universal Windows aplicativos para Windows 10](https://marketplace.visualstudio.com/items?itemName=vs-publisher-713547.VS2015TemplateBrokeredComponents)
 
 Windows inclui um novo recurso chamado *orientadas componentes do tempo de execução do Windows para aplicativos de sideload*. Usamos o termo IPC (comunicação entre processos) para descrever a capacidade de executar ativos de software de desktop existentes em um processo (componente de desktop) ao interagir com esse código em um aplicativo UWP. Este é um modelo familiar aos desenvolvedores corporativos, já que aplicativos de banco de dados e aplicativos que utilizam serviços NT no Windows compartilham uma arquitetura de vários processos semelhante.
 
@@ -164,7 +164,7 @@ Isso será feito pelos scripts a seguir. Adicione os scripts à linha de comando
 Depois que a referência **winmd** for criada (na pasta "referência" na pasta de destino do projeto), ela será levada (copiada) para cada projeto de aplicativo de sideload de consumo e referenciada. Isso será descrito ainda na próxima seção. A estrutura de projeto incorporada nas regras de compilação acima garante que a implementação e o **winmd** de referência estejam em diretórios claramente distinguidos na hierarquia de compilação, para evitar confusão.
 
 ## <a name="side-loaded-applications-in-detail"></a>Aplicativos de sideload em detalhes
-Conforme mencionado anteriormente, o aplicativo de sideload é criado como qualquer outro aplicativo UWP, mas com um detalhe adicional: a declaração da disponibilidade da(s) RuntimeClass(es) no manifesto do aplicativo de sideload. Isso permite que o aplicativo simplesmente escreva algo novo para acessar a funcionalidade do componente de desktop. Uma nova entrada de manifesto na seção <Extension> descreve a RuntimeClass implementada no componente de desktop e informações sobre onde ela está localizada. Esse conteúdo da declaração no manifesto do aplicativo é o mesmo para aplicativos que segmentam o Windows 10. Por exemplo: 
+Conforme mencionado anteriormente, o aplicativo de sideload é criado como qualquer outro aplicativo UWP, mas com um detalhe adicional: a declaração da disponibilidade da(s) RuntimeClass(es) no manifesto do aplicativo de sideload. Isso permite que o aplicativo simplesmente escreva algo novo para acessar a funcionalidade do componente de desktop. Uma nova entrada de manifesto na seção <Extension> descreve a RuntimeClass implementada no componente de desktop e informações sobre onde ela está localizada. Esse conteúdo da declaração no manifesto do aplicativo é o mesmo para aplicativos que segmentam o Windows 10. Por exemplo:
 
 ```XML
 <Extension Category="windows.activatableClass.inProcessServer">
@@ -553,7 +553,7 @@ Aqui está uma lista não exaustiva das coisas a serem consideradas:
 
 -   A transferência em massa dos resultados reduz a quantidade de conversas do processo cruzado. Isso normalmente é realizado pelo uso do constructo de matriz do Windows Runtime.
 
--   Retornando *lista<T>*  onde *T* é um objeto de uma busca de operação ou a propriedade async, fará com que muita conversa entre processos. Por exemplo, suponha que você retornar um*lista&lt;pessoas&gt;*  objetos. Cada passe de iteração será uma chamada de processo cruzado. Cada *pessoas* objeto retornado é representado por um proxy e cada chamada para um método ou propriedade no objeto individual resultará em uma chamada de processo cruzado. Portanto, "inocente" *lista&lt;pessoas&gt;*  objeto onde *contagem* é grande fará com que um grande número de chamadas lentas. Um melhor desempenho resulta da transferência em massa de estruturas do conteúdo em uma matriz. Por exemplo: 
+-   Retornando *lista<T>*  onde *T* é um objeto de uma busca de operação ou a propriedade async, fará com que muita conversa entre processos. Por exemplo, suponha que você retornar um*lista&lt;pessoas&gt;*  objetos. Cada passe de iteração será uma chamada de processo cruzado. Cada *pessoas* objeto retornado é representado por um proxy e cada chamada para um método ou propriedade no objeto individual resultará em uma chamada de processo cruzado. Portanto, "inocente" *lista&lt;pessoas&gt;*  objeto onde *contagem* é grande fará com que um grande número de chamadas lentas. Um melhor desempenho resulta da transferência em massa de estruturas do conteúdo em uma matriz. Por exemplo:
 
 ```csharp
 struct PersonStruct
@@ -590,7 +590,7 @@ A lista de módulo para um servidor do agente deve listar *clrhost.dll* em sua
 
 ## <a name="resources"></a>Recursos
 
--   [Modelos de projeto de componente do WinRT orientadas para Windows 10 e o VS 2015](https://marketplace.visualstudio.com/vsgallery/10be07b3-67ef-4e02-9243-01b78cd27935)
+-   [Modelos de projeto de componente do WinRT orientadas para Windows 10 e o VS 2015](https://marketplace.visualstudio.com/items?itemName=vs-publisher-713547.VS2015TemplateBrokeredComponents)
 
 -   [Exemplo de componente do WinRT orientadas NorthwindRT](https://go.microsoft.com/fwlink/p/?LinkID=397349)
 

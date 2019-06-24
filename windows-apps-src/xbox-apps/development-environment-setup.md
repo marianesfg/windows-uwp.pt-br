@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c1d8c6a33bd7d9249b5000767ece154ab7f8776
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 02c33e0dbe1209f3c31937df800ceecb354475f5
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603871"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322130"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Configurar seu ambiente de desenvolvimento da UWP no Xbox
 
@@ -23,7 +23,7 @@ Este artigo discute as etapas para configurar e testar seu ambiente de desenvolv
 
 ## <a name="visual-studio-setup"></a>Instalação do Visual Studio
 
-1. Instale o Visual Studio 2017, Visual Studio 2015 atualização 3 ou a versão mais recente do Visual Studio. Para saber mais e obter informações de instalação, consulte [Downloads e ferramentas para o Windows 10](https://dev.windows.com/downloads). É recomendável que você use a versão mais recente do Visual Studio para que você possa receber as atualizações mais recentes para desenvolvedores e segurança.
+1. Instale o Visual Studio 2017, Visual Studio 2015 atualização 3 ou a versão mais recente do Visual Studio. Para saber mais e obter informações de instalação, consulte [Downloads e ferramentas para o Windows 10](https://developer.microsoft.com/windows/downloads). É recomendável que você use a versão mais recente do Visual Studio para que você possa receber as atualizações mais recentes para desenvolvedores e segurança.
 
 2. Se estiver instalando o Visual Studio 2017, escolha a carga de trabalho **Desenvolvimento da Plataforma Universal do Windows**. Se você for um desenvolvedor de C++, marque também a caixa de seleção **Ferramentas C++ da Plataforma Universal do Windows** no painel **Resumo** à direita, em **Desenvolvimento da Plataforma Universal do Windows**. Não faz parte da instalação padrão.
 
@@ -56,7 +56,7 @@ Para que você possa implantar um aplicativo em seu Xbox One, precisa ter um usu
 
 4. No computador de desenvolvimento, no Visual Studio, selecione **Novo / Projeto**.
 
-5. Na janela **Novo projeto**, selecione **Windows Universal / Aplicativo em branco (Universal Windows)**.
+5. Na janela **Novo projeto**, selecione **Windows Universal / Aplicativo em branco (Universal Windows)** .
 
 ### <a name="starting-a-c-project"></a>Iniciando um projeto C#
 
@@ -74,7 +74,7 @@ Para que você possa implantar um aplicativo em seu Xbox One, precisa ter um usu
 
     d. Em **Computador remoto**, insira o endereço IP do sistema ou o nome do host do console Xbox One. Para saber mais sobre como obter o endereço IP ou o nome do host, consulte [Introdução às ferramentas do Xbox One](introduction-to-xbox-tools.md).
 
-    e. Na lista suspensa **Modo de Autenticação**, selecione **Universal (Protocolo Descriptografado)**.
+    e. Na lista suspensa **Modo de Autenticação**, selecione **Universal (Protocolo Descriptografado)** .
 
     ![Páginas de Propriedades de BlankApp em C#](images/vs_remote.jpg)
 
@@ -92,7 +92,7 @@ Para que você possa implantar um aplicativo em seu Xbox One, precisa ter um usu
 
    c. Em **Nome do Computador**, insira o endereço IP do sistema ou o nome do host do console Xbox One. Para saber mais sobre como obter o endereço IP ou o nome do host, consulte [Introdução às ferramentas do Xbox One](introduction-to-xbox-tools.md).
 
-   d. Na lista suspensa **Tipo de Autenticação**, selecione **Universal (Protocolo Descriptografado)**.
+   d. Na lista suspensa **Tipo de Autenticação**, selecione **Universal (Protocolo Descriptografado)** .
 
    e. Na lista suspensa **Plataforma**, selecione **x64**.
 
@@ -122,7 +122,7 @@ Parabéns! Você criou e implantou com êxito o seu primeiro aplicativo UWP no X
 
 ## <a name="see-also"></a>Consulte também
 - [Ativação do Modo de Desenvolvedor do Xbox One](devkit-activation.md)  
-- [Downloads e ferramentas para Windows 10](https://dev.windows.com/downloads)  
+- [Downloads e ferramentas para Windows 10](https://developer.microsoft.com/windows/downloads)  
 - [Programa Windows Insider](https://go.microsoft.com/fwlink/?LinkId=780552)  
 - [Introdução às ferramentas Xbox One](introduction-to-xbox-tools.md) 
 - [UWP no Xbox One](index.md)

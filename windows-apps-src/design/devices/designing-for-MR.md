@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: df81348dee781d1c329562d558ed8df30fd40bc5
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 0e8cee688cbfbda0fe3822017b769560fc0fffe3
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244112"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319382"
 ---
 # <a name="designing-for-mixed-reality"></a>Desenvolvendo para realidade misturada
 
@@ -38,7 +38,7 @@ Tanto as HoloLens quanto os headsets do Windows Mixed Reality oferecem suporte a
 
 Um aplicativo imersivo assume a tela inteira visível ao usuário, posicionando-o no centro de uma visualização criada pelo aplicativo. Por exemplo, um jogo imersivo pode colocar o usuário na superfície de um planeta alienígena ou um aplicativo de tour guia pode colocar o usuário em uma vila da América do Sul. Criar um aplicativo imersivo requer elementos gráficos 3D ou vídeo estereográfico capturado. Aplicativos imersivos geralmente são desenvolvidos usando um mecanismo de jogo de terceiros como Unity ou com DirectX.
 
-Se você estiver criando aplicativos imersivos, você deve visitar o [Centro de desenvolvimento do Windows Mixed Reality](https://developer.microsoft.com/windows/mixed-reality) para obter mais informações.
+Se você estiver criando aplicativos imersivos, você deve visitar o [Centro de desenvolvimento do Windows Mixed Reality](https://developer.microsoft.com/mixed-reality) para obter mais informações.
 
 Um aplicativo 2D é executado como uma janela tradicional simples em modo de exibição do usuário. Nas HoloLens, isso significa uma exibição fixada na parede ou em um ponto no espaço na sala de estar ou escritório dos usuários. Em um headset do Windows Mixed Reality, o aplicativo está fixado em uma parede no [ambiente de realidade misturada](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home) (às vezes chamado de *Casa no Penhasco*).
 
@@ -82,7 +82,7 @@ Vários métodos de entrada novos foram projetados principalmente para uso com d
 * [Gestos de mão](https://developer.microsoft.com/windows/mixed-reality/gestures) (HoloLens somente, mas apenas usado para iniciar aplicativos 2D)
 * [Suporte de Gamepad](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories) (ambos ambientes)
 * [Dispositivo clicker](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories) (HoloLens somente)
-* [Controladores de movimento](https://developer.microsoft.com/windows/mixed-reality/motion_controllers) (dispositivos de realidade misturada somente, mostrados acima.)
+* [Controladores de movimento](https://docs.microsoft.com/windows/mixed-reality/motion-controllers) (dispositivos de realidade misturada somente, mostrados acima.)
 
 Esses controladores fazem a interação com objetos virtuais se tornar natural e precisa. Algumas das interações você obtém gratuitamente. Por exemplo, os HoloLens selecione gesto ou clicando na tecla do Windows do controlador de animação ou gatilho irá gerar a resposta de entrada que você esperaria, novamente, sem nenhuma codificação de sua parte.
 
@@ -98,7 +98,7 @@ Ao criar um aplicativo UWP que possivelmente será usado em uma plataforma de re
 
 * Arrastar e soltar podem não funcionar bem quando usados com controladores de movimento, consoles ou gestos. Se seu aplicativo depende muito de arrastar e soltar, você precisará fornecer um método alternativo para dar suporte a essa ação, como apresentar uma caixa de diálogo confirmando se objetos devem ser movidos para um novo local.
 
-* Fique atento com a mudança de som. Se seu aplicativo gera efeitos de som, a origem do som aparecerá como sendo a localização fixa do seu aplicativo no mundo virtual. Conforme o usuário move para fora do aplicativo, o som reduzirá. Consulte [Som espacial](https://developer.microsoft.com/windows/mixed-reality/spatial_sound) para obter mais informações.
+* Fique atento com a mudança de som. Se seu aplicativo gera efeitos de som, a origem do som aparecerá como sendo a localização fixa do seu aplicativo no mundo virtual. Conforme o usuário move para fora do aplicativo, o som reduzirá. Consulte [Som espacial](https://docs.microsoft.com/windows/mixed-reality/spatial-sound) para obter mais informações.
 
 * Considere o campo de visão e forneça funcionalidades. Nem todos os dispositivo fornecerão um campo tão grande de visualização quanto um monitor de computador. Consulte [Quadro holográfico](https://developer.microsoft.com/windows/mixed-reality/holographic_frame) para obter detalhes completos. Além disso, o usuário pode estar distante de um aplicativo em execução. Ou seja, o aplicativo pode aparecer fixo na parede em um local diferente do mundo (real ou virtual). Seu aplicativo pode precisar chamar a atenção dos usuários ou levar em consideração que a exibição completa não está visível em todos os momentos. Notificações do sistema estão disponíveis, mas outra maneira de obter a atenção do usuário pode ser gerar um som ou alerta de [fala](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpeechRecognitionAndSynthesis/cs/Scenario_SynthesizeText.xaml.cs).
 

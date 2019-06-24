@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
-ms.openlocfilehash: f34b2cdbb538d121c1c6182b2c02042d6c0047ed
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6bebf9533ab045822902d44f87f68eec55c11074
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360925"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318570"
 ---
 # <a name="custom-audio-effects"></a>Efeitos de áudio personalizados
 
@@ -51,7 +51,7 @@ O sistema verifica a propriedade [**SupportedEncodingProperties**](https://docs.
 
 ### <a name="setencodingproperties-method"></a>Método SetEncodingProperties
 
-O sistema chama [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties.windows) o efeito para permitir que você conheça as propriedades de codificação do fluxo de áudio no qual o efeito está operando. Para implementar um efeito de eco, este exemplo usa um buffer para armazenar um segundo de dados de áudio. Esse método fornece a oportunidade de inicializar o tamanho do buffer para o número de amostras em um segundo de áudio, com base na taxa de exemplo em que o áudio é codificado. O efeito de atraso também usa um contador de inteiro para acompanhar a posição atual no buffer de atraso. Como **SetEncodingProperties** é chamado sempre que o efeito é adicionado ao pipeline de áudio, este é um bom momento para inicializar esse valor como 0. Você também pode capturar o objeto **AudioEncodingProperties** passado para esse método para usar em outro lugar no seu efeito.
+O sistema chama [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties) o efeito para permitir que você conheça as propriedades de codificação do fluxo de áudio no qual o efeito está operando. Para implementar um efeito de eco, este exemplo usa um buffer para armazenar um segundo de dados de áudio. Esse método fornece a oportunidade de inicializar o tamanho do buffer para o número de amostras em um segundo de áudio, com base na taxa de exemplo em que o áudio é codificado. O efeito de atraso também usa um contador de inteiro para acompanhar a posição atual no buffer de atraso. Como **SetEncodingProperties** é chamado sempre que o efeito é adicionado ao pipeline de áudio, este é um bom momento para inicializar esse valor como 0. Você também pode capturar o objeto **AudioEncodingProperties** passado para esse método para usar em outro lugar no seu efeito.
 
 [!code-cs[DeclareEchoBuffer](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetDeclareEchoBuffer)]
 [!code-cs[SetEncodingProperties](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetSetEncodingProperties)]

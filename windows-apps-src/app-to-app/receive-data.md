@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bfd84d5e0e41f07b53be0c0afce4b881a8a75d59
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4a171df5312d6c4613dfca1215f5ddd948153a8f
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359215"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317868"
 ---
 # <a name="receive-data"></a>Receber dados
 
@@ -47,7 +47,7 @@ Para definir os formatos de dados:
 
 ## <a name="handle-share-activation"></a>Manipular a ativação de compartilhamento
 
-Quando um usuário seleciona seu aplicativo (geralmente selecionando-o em uma lista de aplicativos de destino disponíveis na interface do usuário de compartilhamento), um evento [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Application.OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs)) é gerado. Seu aplicativo precisa manipular esse evento para processar os dados que o usuário deseja compartilhar.
+Quando um usuário seleciona seu aplicativo (geralmente selecionando-o em uma lista de aplicativos de destino disponíveis na interface do usuário de compartilhamento), um evento [**OnShareTargetActivated**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application#Windows_UI_Xaml_Application_OnShareTargetActivated_Windows_ApplicationModel_Activation_ShareTargetActivatedEventArgs_) é gerado. Seu aplicativo precisa manipular esse evento para processar os dados que o usuário deseja compartilhar.
 
 <!-- For some reason, the snippets in this file are all inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
@@ -87,7 +87,7 @@ Com um compartilhamento estendido, é possível que o usuário ignore o aplicati
 shareOperation.ReportSubmittedBackgroundTask(); 
 ```
 
-Se algo der errado, chame [**ReportError**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportError(System.String)) para enviar uma mensagem de erro ao sistema. O usuário verá a mensagem quando verificar o status do compartilhamento. Nesse ponto, o aplicativo é desligado e o compartilhamento é encerrado. O usuário precisará iniciar novamente para compartilhar o conteúdo com seu aplicativo. Dependendo do cenário, você pode considerar que um determinado erro não é tão sério assim para finalizar a operação de compartilhamento. Nesse caso, opte por não chamar **ReportError** e continue com o compartilhamento.
+Se algo der errado, chame [**ReportError**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation#Windows_ApplicationModel_DataTransfer_ShareTarget_ShareOperation_ReportError_System_String_) para enviar uma mensagem de erro ao sistema. O usuário verá a mensagem quando verificar o status do compartilhamento. Nesse ponto, o aplicativo é desligado e o compartilhamento é encerrado. O usuário precisará iniciar novamente para compartilhar o conteúdo com seu aplicativo. Dependendo do cenário, você pode considerar que um determinado erro não é tão sério assim para finalizar a operação de compartilhamento. Nesse caso, opte por não chamar **ReportError** e continue com o compartilhamento.
 
 ```cs
 shareOperation.ReportError("Could not reach the server! Try again later."); 

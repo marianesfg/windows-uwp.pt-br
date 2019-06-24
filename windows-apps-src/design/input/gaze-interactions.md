@@ -11,12 +11,12 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 77e39b9c7440fab491b3d7ef85baa757d299fff8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3fb07dd9aec475566940dbf98ae6bd1c5f9c1337
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604391"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317332"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a>Interações de foco e rastreamento de olhos em aplicativos UWP
 
@@ -27,7 +27,7 @@ Forneça o suporte para o rastreamento do foco, da atenção e da presença do u
 > [!NOTE]
 > Para entrada por foco no [Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/),veja [Foco](https://docs.microsoft.com/windows/mixed-reality/gaze).
 
-**APIs importantes**: [Eye](https://docs.microsoft.com/uwp/api/windows.devices.input.preview), [GazeDevicePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicepreview), [GazePointPreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview), [GazeInputSourcePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview)
+**APIs importantes**: [Windows.Devices.Input.Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview), [GazeDevicePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicepreview), [GazePointPreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview), [GazeInputSourcePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview)
 
 ## <a name="overview"></a>Visão geral
 
@@ -66,7 +66,7 @@ Para usar as APIs de entrada por foco no aplicativo UWP você deve:
 
 Neste exemplo, demonstramos como acompanhar o foco do usuário em um aplicativo UWP e usar uma função de tempo com teste de ocorrência básico para indicar quanto eles podem manter o foco em um elemento específico.
 
-Uma elipse pequena é usada para mostrar onde o ponto de foco está no visor do aplicativo enquanto um [RadialProgressBar](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/controls/radialprogressbar) do [Kit de ferramentas da comunidade do Windows](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/) é colocado aleatoriamente na tela. Quando o foco é detectado na barra de progresso, um temporizador é iniciado e a barra de progresso é realocada aleatoriamente na tela quando a barra de progresso atinge 100%.
+Uma elipse pequena é usada para mostrar onde o ponto de foco está no visor do aplicativo enquanto um [RadialProgressBar](https://docs.microsoft.com/windows/communitytoolkit/controls/radialprogressbar) do [Kit de ferramentas da comunidade do Windows](https://docs.microsoft.com/windows/communitytoolkit/) é colocado aleatoriamente na tela. Quando o foco é detectado na barra de progresso, um temporizador é iniciado e a barra de progresso é realocada aleatoriamente na tela quando a barra de progresso atinge 100%.
 
 ![Rastreamento de foco com amostra de temporizador](images/gaze/gaze-input-timed2.gif)
 
@@ -405,7 +405,7 @@ Uma elipse pequena é usada para mostrar onde o ponto de foco está no visor do 
 
     É possível exibir e ocultar a elipse de rastreamento de foco em `GazeEntered`e `GazeExited`, respectivamente.
 
-    Em `GazeMoved`, movemos nossa elipse de rastreamento do foco com base em [EyeGazePosition](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview.eyegazeposition) fornecido pelo [CurrentPoint](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs.currentpoint) do [GazeEnteredPreviewEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs). Também gerenciamos o temporizador de foco no [RadialProgressBar](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/controls/radialprogressbar), que dispara o reposicionando da barra de progresso. Veja a próxima etapa para obter mais detalhes.
+    Em `GazeMoved`, movemos nossa elipse de rastreamento do foco com base em [EyeGazePosition](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview.eyegazeposition) fornecido pelo [CurrentPoint](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs.currentpoint) do [GazeEnteredPreviewEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs). Também gerenciamos o temporizador de foco no [RadialProgressBar](https://docs.microsoft.com/windows/communitytoolkit/controls/radialprogressbar), que dispara o reposicionando da barra de progresso. Veja a próxima etapa para obter mais detalhes.
 
     ```csharp
     /// <summary>
@@ -600,7 +600,7 @@ Uma elipse pequena é usada para mostrar onde o ponto de foco está no visor do 
 
 ### <a name="resources"></a>Recursos
 
-- [Biblioteca de olhares de kit de ferramentas de comunidade do Windows](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/gaze/gazeinteractionlibrary)
+- [Biblioteca de olhares de kit de ferramentas de comunidade do Windows](https://docs.microsoft.com/windows/communitytoolkit/gaze/gazeinteractionlibrary)
 
 ### <a name="topic-samples"></a>Exemplos de tópico
 

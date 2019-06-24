@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c61a35f0ad35cf85afcba564eb676aa171b0243
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c25fc09d606c0f143f357dd7f89026fa94b80922
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360838"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318353"
 ---
 # <a name="create-edit-and-save-bitmap-images"></a>Criar, editar e salvar imagens de bitmap
 
@@ -65,7 +65,7 @@ Para exibir uma imagem em uma página XAML usando o controle [**Image**](https:/
 
 [!code-xml[ImageControl](./code/ImagingWin10/cs/MainPage.xaml#SnippetImageControl)]
 
-Atualmente, o controle **Image** só dá suporte a imagens que usam a codificação BGRA8 e canal alfa pré-multiplicado ou nenhum. Antes de tentar exibir uma imagem, teste para verificar se ele tem o formato correto e, se não tiver, use o método [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows) estático de **SoftwareBitmap** para converter a imagem no formato com suporte.
+Atualmente, o controle **Image** só dá suporte a imagens que usam a codificação BGRA8 e canal alfa pré-multiplicado ou nenhum. Antes de tentar exibir uma imagem, teste para verificar se ele tem o formato correto e, se não tiver, use o método [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.convert) estático de **SoftwareBitmap** para converter a imagem no formato com suporte.
 
 Crie um novo objeto [**SoftwareBitmapSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource). Defina o conteúdo dos objetos de origem chamando [**SetBitmapAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.setbitmapasync) e passando um **SoftwareBitmap**. Em seguida, você pode definir a propriedade [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) do controle **Image** para o **SoftwareBitmapSource** recém-criado.
 
@@ -89,7 +89,7 @@ Para usar interoperabilidade COM, você deve incluir uma referência ao namespac
 
 [!code-cs[InteropNamespace](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetInteropNamespace)]
 
-Inicialize a interface COM [**IMemoryBufferByteAccess**](https://docs.microsoft.com/previous-versions//mt297505(v=vs.85)) adicionando o seguinte código em seu namespace.
+Inicialize a interface COM [**IMemoryBufferByteAccess**](https://docs.microsoft.com/previous-versions/mt297505(v=vs.85)) adicionando o seguinte código em seu namespace.
 
 [!code-cs[COMImport](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCOMImport)]
 
@@ -111,7 +111,7 @@ Chame [**CreateCopyFromSurfaceAsync**](https://docs.microsoft.com/uwp/api/window
 
 ## <a name="convert-a-softwarebitmap-to-a-different-pixel-format"></a>Converter um SoftwareBitmap em um formato de pixel diferente
 
-A classe **SoftwareBitmap** fornece o método estático [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows) que permite criar facilmente um novo **SoftwareBitmap** que usa o formato de pixel e o modo alfa especificados de um **SoftwareBitmap** existente. Observe que o bitmap recém-criado tem uma cópia separada dos dados de imagem. As modificações no novo bitmap não afetarão o bitmap de origem.
+A classe **SoftwareBitmap** fornece o método estático [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.convert) que permite criar facilmente um novo **SoftwareBitmap** que usa o formato de pixel e o modo alfa especificados de um **SoftwareBitmap** existente. Observe que o bitmap recém-criado tem uma cópia separada dos dados de imagem. As modificações no novo bitmap não afetarão o bitmap de origem.
 
 [!code-cs[Convert](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetConvert)]
 

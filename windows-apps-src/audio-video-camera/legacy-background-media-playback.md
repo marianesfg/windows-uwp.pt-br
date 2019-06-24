@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: da18981a2be03c40e15df666f58d60ac91b6f130
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: dee2bcb05b9d30177c68b1beac468ac19f4a1be9
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360767"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318340"
 ---
 # <a name="legacy-background-media-playback"></a>Reprodução de mídia em segundo plano herdada
 
@@ -64,7 +64,7 @@ Os dados podem ser passados como um argumento para os métodos de mensagem de en
 
 O tempo de vida de uma tarefa em segundo plano está estreitamente relacionado ao status de reprodução atual do seu aplicativo. Por exemplo, quando o usuário pausa a reprodução de áudio, o sistema pode encerrar ou cancelar seu aplicativo, dependendo das circunstâncias. Após um período de tempo sem reprodução de áudio, o sistema pode desligar automaticamente a tarefa em segundo plano.
 
-O método [**IBackgroundTask.Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.) é chamado na primeira vez que seu aplicativo acessa [**BackgroundMediaPlayer.Current**](https://docs.microsoft.com/uwp/api/windows.media.playback.backgroundmediaplayer.current) do código sendo executado no aplicativo em primeiro plano ou quando você registra um manipulador para o evento [**MessageReceivedFromBackground**](https://docs.microsoft.com/uwp/api/windows.media.playback.backgroundmediaplayer.messagereceivedfrombackground), o que quer que aconteça primeiro. É recomendável que você se registre para o manipulador de mensagem recebida antes de chamar **BackgroundMediaPlayer.Current** pela primeira vez, para que o aplicativo em primeiro plano não perca nenhuma mensagem enviada do processo em segundo plano.
+O método [**IBackgroundTask.Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) é chamado na primeira vez que seu aplicativo acessa [**BackgroundMediaPlayer.Current**](https://docs.microsoft.com/uwp/api/windows.media.playback.backgroundmediaplayer.current) do código sendo executado no aplicativo em primeiro plano ou quando você registra um manipulador para o evento [**MessageReceivedFromBackground**](https://docs.microsoft.com/uwp/api/windows.media.playback.backgroundmediaplayer.messagereceivedfrombackground), o que quer que aconteça primeiro. É recomendável que você se registre para o manipulador de mensagem recebida antes de chamar **BackgroundMediaPlayer.Current** pela primeira vez, para que o aplicativo em primeiro plano não perca nenhuma mensagem enviada do processo em segundo plano.
 
 Para manter a tarefa em segundo plano viva, seu aplicativo deve solicitar um [**BackgroundTaskDeferral**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskDeferral) de dentro do método **Run** e chamar [**BackgroundTaskDeferral.Complete**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskdeferral.complete) quando a instância de tarefa receber os eventos [**Canceled**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.canceled) ou [**Completed**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.completed). Não faça um loop nem espere no método **Run**, porque isso consome recursos e pode fazer com que a tarefa em segundo plano de seu aplicativo seja finalizada pelo sistema.
 
