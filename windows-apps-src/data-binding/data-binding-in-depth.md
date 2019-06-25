@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 150ea5fc9f5e91171f29cc985351856487e91d4a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f3cdb9cbb1aa3f62fb711be747c44a0df10fb1ee
+ms.sourcegitcommit: f7e3782e24d46b2043023835c5b59d12d3b4ed4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318764"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345718"
 ---
 # <a name="data-binding-in-depth"></a>Vinculação de dados em detalhes
 
@@ -526,6 +526,18 @@ Se você associar um controle de texto a um valor que não seja uma cadeia, o me
 {x: Bind} permite que a etapa final em um caminho de associação seja uma função. Isso pode ser usado para realizar conversões e realizar associações que dependem de mais de uma propriedade. Ver [ **funções em X:Bind**](function-bindings.md)
 
 <span id="resource-dictionaries-with-x-bind"/>
+
+## <a name="element-to-element-binding"></a>Elemento a elemento associação
+
+Você pode associar a propriedade de um elemento XAML para a propriedade de outro elemento XAML. Aqui está um exemplo de como isso fica na marcação.
+
+```xaml
+<TextBox x:Name="myTextBox" />
+<TextBlock Text="{x:Bind myTextBox.Text, Mode=OneWay}" />
+```
+
+> [!IMPORTANT]
+> Para o fluxo de trabalho necessário para usar o elemento a elemento associação C++/WinRT, consulte [associação de elemento ao elemento](/windows/uwp/cpp-and-winrt-apis/binding-property#element-to-element-binding).
 
 ## <a name="resource-dictionaries-with-xbind"></a>Dicionários de recursos com {x:Bind}
 
