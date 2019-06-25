@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e26908839204c67a4746f602acc08c6776e889c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7223123ef6f71a45acc967aa60feffa1003b66d1
+ms.sourcegitcommit: 58d35b89662d4ad240650933e43fee0b00e9a962
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370250"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344533"
 ---
 # <a name="device-information-properties"></a>Propriedades de informações do dispositivo
 
@@ -101,6 +101,15 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 
  
 
+## <a name="devicepanel-properties"></a>Propriedades de DevicePanel
+
+| Nome                                            | Tipo    | Descrição                                                                                                      |
+|-------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------|
+| **System.Devices.Panel.PanelId**                | String  | O identificador do **DevicePanel** objeto.                                                                    |
+| **System.Devices.Panel.PanelGroup**             | String  | O identificador do pai **PanelGroup**.                                                                      |
+ 
+ 
+ 
 ## <a name="associationendpoint-properties"></a>Propriedades de AssociationEndpoint
 
 | Nome                                  | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -155,9 +164,3 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 | **System.Devices.AepService.ServiceClassId**    | GUID    | Identidade do serviço representado por esse dispositivo.                                                             |
 | **System.Devices.AepService.ServiceId**         | String  | Identidade desse serviço. Também é o valor de [**DeviceInformation.Id**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id). |
 | **System.ItemNameDisplay**                      | String  | O melhor nome de exibição para esse serviço.                                                                           |
-
- 
-
- 
-
- 
