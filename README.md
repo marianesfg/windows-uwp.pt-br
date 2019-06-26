@@ -1,18 +1,18 @@
 ---
 ms.openlocfilehash: f36ab1f90c36d87f710ddb02dd078363bdb896dd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603081"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63770148"
 ---
 ## <a name="legal-notices"></a>Avisos legais
-A Microsoft e qualquer colaborador concede a você uma licença para a documentação da Microsoft e outros conteúdos neste repositório em [Licença pública internacional da Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/legalcode), consulte o arquivo [LICENÇA](LICENSE), and e concede a você uma licença para qualquer código no repositório em [Licença de MIT](https://opensource.org/licenses/MIT), consulte o arquivo [CÓDIGO DE LICENÇA](LICENSE-CODE).
+A Microsoft e qualquer colaborador concede a você uma licença para a documentação da Microsoft e outros conteúdos neste repositório em [Licença pública internacional da Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/legalcode) (consulte o arquivo [LICENÇA](LICENSE)) e concede a você uma licença para qualquer código no repositório em [Licença de MIT](https://opensource.org/licenses/MIT) (consulte o arquivo [CÓDIGO DE LICENÇA](LICENSE-CODE)).
 
-Microsoft, Windows, Microsoft Azure e/ou outros produtos e serviços da Microsoft mencionados na documentação podem ser marcas comerciais ou registradas da Microsoft nos Estados Unidos e/ou em outros países/regiões.
+Microsoft, Windows, Microsoft Azure e/ou outros produtos e serviços da Microsoft mencionados na documentação podem ser marcas ou marcas registradas da Microsoft nos Estados Unidos e/ou em outros países.
 As licenças deste projeto não concedem direitos de uso de quaisquer qualquer nomes, logotipos ou marcas registradas da Microsoft.
-As diretrizes gerais de marca comercial da Microsoft podem ser encontradas em https://go.microsoft.com/fwlink/?LinkID=254653.
+As diretrizes gerais de marca da Microsoft podem ser encontradas em https://go.microsoft.com/fwlink/?LinkID=254653.
 
-Informações de privacidade podem ser encontradas em https://privacy.microsoft.com/en-us/
+As informações sobre privacidade podem ser encontradas em https://privacy.microsoft.com/en-us/
 
-A Microsoft e qualquer colaborador se reserva todos os demais direitos, sob seus respectivos direitos autorais, patentes e marcas comerciais, seja por dedução, preclusão ou de outra forma.
+A Microsoft e qualquer colaborador se reserva todos os demais direitos, sob seus respectivos direitos autorais, patentes e marcas, seja por dedução, preclusão ou de outra forma.

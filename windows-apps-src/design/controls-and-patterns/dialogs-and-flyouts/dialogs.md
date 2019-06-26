@@ -13,15 +13,15 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1277d9089e900451ac4c537805079ff479f808fa
-ms.sourcegitcommit: f47620e72ff8127fae9b024c70ddced3a5c45d91
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66748452"
 ---
 # <a name="dialog-controls"></a>Controles de caixa de diálogo
 
-Controles de caixa de diálogo são sobreposições da interface do usuário modais que fornecem informações contextuais de aplicativo. Eles bloqueiam as interações com a janela do aplicativo até que seja explicitamente descartado. Elas muitas vezes solicitam algum tipo de ação do usuário.
+Controles de caixas de diálogo são sobreposições de interface do usuário modais que fornecem informações contextuais do aplicativo. Eles bloqueiam interações com a janela do aplicativo até que sejam explicitamente ignorados. Elas muitas vezes solicitam algum tipo de ação do usuário.
 
 ![Exemplo de uma caixa de diálogo](../images/dialogs/dialog_RS2_delete_file.png)
 
@@ -30,9 +30,9 @@ Controles de caixa de diálogo são sobreposições da interface do usuário mod
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-Use caixas de diálogo para notificar os usuários sobre informações importantes ou para solicitar a confirmação ou informações adicionais antes de uma ação ser concluída.
+Use caixas de diálogo para notificar os usuários sobre informações importantes, ou para solicitar a confirmação ou informações adicionais antes de uma ação ser concluída.
 
-Para obter recomendações sobre quando usar uma caixa de diálogo versus quando usar um submenu (um controle semelhante), consulte [caixas de diálogo e submenus](index.md). 
+Para ver recomendações sobre quando usar uma caixa de diálogo e quando usar um submenu (um controle semelhante), confira [Caixas de diálogo e submenus](index.md). 
 
 ## <a name="examples"></a>Exemplos
 
@@ -61,11 +61,11 @@ Para obter recomendações sobre quando usar uma caixa de diálogo versus quando
     -   Apresente a mensagem, o erro ou a pergunta de bloqueio da maneira mais simples possível.
     -   Se um título da caixa de diálogo for usado, use a área de conteúdo para fornecer mais detalhes ou definir a terminologia. Não repita o título com palavras ligeiramente diferentes.
 -   Pelo menos um botão da caixa de diálogo deve aparecer.
-    -   Certifique-se de que a caixa de diálogo tem pelo menos um botão correspondente para uma ação segura e não destrutiva como "Acertou!", "Fechar" ou "Cancelar". Use a API CloseButton para adicionar esse botão.
+    -   Certifique-se de que a caixa de diálogo tenha pelo menos um botão correspondente para uma ação segura e não destrutiva como "Pronto!", "Fechar" ou "Cancelar". Use a API CloseButton para adicionar esse botão.
     -   Use respostas específicas para a instrução ou o conteúdo principal como texto do botão. Um exemplo é "Você permite que NomeDoAplicativo acesse o sua localização?", seguido pelos botões "Permitir" e "Bloquear". Respostas específicas podem ser entendidas mais rapidamente, resultando na tomada de decisão eficiente.
     - Verifique se o texto dos botões de ação é conciso. Cadeias de caracteres curtas permitem que o usuário faça uma escolha de modo rápido e seguro.
-    - Além da ação segura e não destrutiva, você pode, opcionalmente, apresentar ao usuário um ou dois botões de ação relacionados à instrução principal. Esses botões de confirmam o ponto principal da caixa de diálogo. Use as APIs PrimaryButton e SecondaryButton para adicionar essas ações.
-    - Os botões de ação devem aparecer como os botões mais à esquerda. A ação segura e não destrutiva deve aparecer como o botão mais à direita.
+    - Além da ação segura e não destrutiva, você pode, opcionalmente, apresentar ao usuário um ou dois botões de ação relacionados à instrução principal. Esses botões de ação "faça isso" confirmam o ponto principal da caixa de diálogo. Use as APIs PrimaryButton e SecondaryButton para adicionar essas ações "faça isso".
+    - Os botões de ação "faça isso" devem aparecer como os botões da extrema esquerda. A ação segura e não destrutiva deve aparecer como o botão da extrema direita.
     - Como opção, você pode optar por diferenciar um dos três botões como botão padrão da caixa de diálogo. Use a API DefaultButton para diferenciar um dos botões.  
 -   Não use caixas de diálogo para erros que são contextuais a um local específico da página, como erros de validação (em campos de senha, por exemplo). Use a própria tela do aplicativo para mostrar erros embutidos.
 - Use a [classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog) para criar sua experiência de caixa de diálogo. Não use a API MessageDialog preterida.
@@ -118,8 +118,8 @@ private async void DisplayDeleteFileDialog()
 }
 ```
 
-## <a name="provide-a-safe-action"></a>Fornecer uma ação de segurança
-Como caixas de diálogo bloqueiam a interação do usuário e como os botões são o mecanismo principal para os usuários ignorarem a caixa de diálogo, certifique-se de que a caixa de diálogo contém pelo menos um botão de ação "segura" e não destrutiva, como "Fechar" ou "Acertou!". **Todas as caixas de diálogo devem conter pelo menos um botão de ação de segurança para fechar a caixa de diálogo.** Isso garante que o usuário possa fechar a caixa de diálogo sem executar uma ação.<br>![Uma caixa de diálogo de um botão](../images/dialogs/dialog_RS2_one_button.png)
+## <a name="provide-a-safe-action"></a>Fornecer uma ação segura
+Como caixas de diálogo bloqueiam a interação do usuário e como os botões são o mecanismo principal para os usuários ignorarem a caixa de diálogo, certifique-se de que a caixa de diálogo contenha pelo menos um botão de ação "segura" e não destrutiva, como "Fechar" ou "Pronto!". **Todas as caixas de diálogo devem conter pelo menos um botão de ação segura para fechar a caixa de diálogo.** Isso garante que o usuário possa fechar a caixa de diálogo com segurança sem executar uma ação.<br>![Uma caixa de diálogo de um botão](../images/dialogs/dialog_RS2_one_button.png)
 
 ```csharp
 private async void DisplayNoWifiDialog()
@@ -135,7 +135,7 @@ private async void DisplayNoWifiDialog()
 }
 ```
 
-Quando as caixas de diálogo são usadas para exibir uma pergunta de bloqueio, sua caixa de diálogo deve apresentar ao usuário botões de ação relacionados à pergunta. O botão de ação "segura" e não destrutiva pode ser acompanhado por um ou dois botões de ação. Ao apresentar para o usuário várias opções, certifique-se de que os botões expliquem claramente as ações de "fazer" seguras/"não fazer" relacionadas à pergunta proposta.
+Quando as caixas de diálogo são usadas para exibir uma pergunta de bloqueio, sua caixa de diálogo deve apresentar ao usuário botões de ação relacionados à pergunta. O botão de ação "segura" e não destrutiva pode ser acompanhado por um ou dois botões de ação "faça isso". Ao apresentar para o usuário várias opções, certifique-se de que os botões expliquem claramente as ações "faça isso" seguras/"não faça isso" relacionadas à pergunta proposta.
 
 ![Uma caixa de diálogo de dois botões](../images/dialogs/dialog_RS2_two_button.png)
 
@@ -154,7 +154,7 @@ private async void DisplayLocationPromptDialog()
 }
 ```
 
-As caixas de diálogo de três botões são usadas quando você apresenta ao usuário duas ações do tipo "fazer" e "não fazer isso". As caixas de diálogo de três botões devem ser usadas com moderação com diferenças claras entre a ação secundária e a ação segura/fechar.
+As caixas de diálogo de três botões são usadas quando você apresenta ao usuário duas ações do tipo "faça isso" e "não faça isso". As caixas de diálogo de três botões devem ser usadas com moderação com diferenças claras entre a ação secundária e a ação segura/fechar.
 
 ![Uma caixa de diálogo de três botões](../images/dialogs/dialog_RS2_three_button.png)
 
@@ -175,31 +175,31 @@ private async void DisplaySubscribeDialog()
 ```
 
 ## <a name="the-three-dialog-buttons"></a>Os três botões da caixa de diálogo
-ContentDialog tem três tipos diferentes de botões que você pode usar para criar uma experiência de caixa de diálogo.
+ContentDialog tem três tipos diferentes de botão que você pode usar para criar uma experiência de caixa de diálogo.
 
-- **CloseButton** - Obrigatório - Representa a ação segura e não destrutiva que permite ao usuário sair da caixa de diálogo. Aparece como o botão mais à direita.
-- **PrimaryButton** - Opcional – Representa a primeira ação de "fazer". Aparece como o botão mais à esquerda.
-- **SecondaryButton** - Opcional – Representa a segunda ação de "fazer". Aparece como o botão do meio.
+- **CloseButton** – obrigatório – representa a ação segura e não destrutiva que permite ao usuário sair da caixa de diálogo. Aparece como o botão à extrema direita.
+- **PrimaryButton** – opcional – representa a primeira ação "faça isso". Aparece como o botão à extrema esquerda.
+- **SecondaryButton** – opcional – representa a segunda ação "faça isso". Aparece como o botão do meio.
 
-Ao usar os botões internos eles são posicionados adequadamente, portanto, certifique-se de que eles respondam corretamente a eventos do teclado, verifique se a área de comando permanece visível mesmo quando o teclado virtual aparece e deixa a caixa de diálogo com aparência consistente a de outras caixas de diálogo.
+O uso de botões internos posicionará os botões adequadamente, garantirá que eles respondam corretamente aos eventos de teclado, garantirá que a área de comando permaneça visível quando o teclado virtual estiver ativo e tornará a caixa de diálogo consistente com outras caixas de diálogo.
 
 ### <a name="closebutton"></a>CloseButton
-Cada caixa de diálogo deve conter um botão de ação segura e não destrutiva que permite ao usuário sair da caixa de diálogo com confiança.
+Cada caixa de diálogo deve conter um botão de ação segura e não destrutiva que permita ao usuário sair da caixa de diálogo com confiança.
 
-Use a API ContentDialog.CloseButton para criar esse botão. Isso permite que você crie a experiência do usuário adequado para todas as entradas incluindo mouse, teclado, toque e gamepad. Essa experiência acontecerá quando:
+Use a API ContentDialog.CloseButton para criar esse botão. Isso permite que você crie a experiência do usuário certa para todas as entradas, incluindo mouse, teclado, toque e gamepad. Essa experiência acontecerá quando:
 <ol>
-    <li>O usuário clica ou toca em CloseButton </li>
-    <li>O usuário pressiona o botão de voltar do sistema. </li>
-    <li>O usuário pressiona o botão ESC no teclado </li>
-    <li>O usuário pressiona o Gamepad B </li>
+    <li>O usuário clicar ou tocar em CloseButton </li>
+    <li>O usuário pressionar o botão Voltar do sistema </li>
+    <li>O usuário pressionar o botão ESC no teclado </li>
+    <li>O usuário pressionar o botão B do Gamepad </li>
 </ol>
 
-Quando o usuário clica em um botão de caixa de diálogo, o método [ShowAsync](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog.ShowAsync) retorna um [ContentDialogResult](/uwp/api/Windows.UI.Xaml.Controls.ContentDialogResult) para informar em qual botão o usuário clica. Pressionar em CloseButton retorna ContentDialogResult.None.
+Quando o usuário clica em um botão de caixa de diálogo, o método [ShowAsync](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog.ShowAsync) retorna um [ContentDialogResult](/uwp/api/Windows.UI.Xaml.Controls.ContentDialogResult) para informar em qual botão o usuário clica. Pressionar CloseButton retorna ContentDialogResult.None.
 
 ### <a name="primarybutton-and-secondarybutton"></a>PrimaryButton e SecondaryButton
 Além de CloseButton, como opção, você pode apresentar ao usuário um ou dois botões de ação relacionados à instrução principal.
-Aproveite PrimaryButton como a primeira ação de "fazer" e SecondaryButton como a segunda ação de "fazer". Em caixas de diálogo de três botões, o PrimaryButton geralmente representa a ação de "fazer" afirmativa, enquanto o SecondaryButton geralmente representa uma ação de "fazer" neutra ou secundária.
-Por exemplo, um aplicativo pode solicitar ao usuário para assinar um serviço. O PrimaryButton como ação de "fazer" afirmativa pode hospedar o texto Assinar, enquanto o SecondaryButton como a ação de "fazer" neutra pode hospedar o texto Tentar. O CloseButton permitiria ao usuário cancelar sem executar qualquer ação.
+Aproveite PrimaryButton para a primeira ação "faça isso" e SecondaryButton para a segunda ação "faça isso". Em caixas de diálogo de três botões, o PrimaryButton geralmente representa a ação "faça isso" afirmativa, enquanto o SecondaryButton geralmente representa uma ação "faça isso" neutra ou secundária.
+Por exemplo, um aplicativo pode solicitar que o usuário assine para receber um serviço. O PrimaryButton como ação "faça isso" afirmativa pode hospedar o texto Assinar, enquanto o SecondaryButton como a ação "faça isso" neutra pode hospedar o texto Experimentar. O CloseButton permitiria ao usuário cancelar sem executar qualquer ação.
 
 Quando o usuário clica em PrimaryButton, o método [ShowAsync](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog.ShowAsync) retorna ContentDialogResult.Primary.
 Quando o usuário clica em SecondaryButton, o método [ShowAsync](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog.ShowAsync) retorna ContentDialogResult.Secondary.
@@ -207,12 +207,12 @@ Quando o usuário clica em SecondaryButton, o método [ShowAsync](/uwp/api/Windo
 ![Uma caixa de diálogo de três botões](../images/dialogs/dialog_RS2_three_button.png)
 
 ### <a name="defaultbutton"></a>DefaultButton
-Como opção, você pode optar por diferenciar um dos três botões como botão padrão. A especificação do botão padrão faz resulta em:
-- O botão recebe o tratamento visual de Botão de destaque
+Como opção, você pode optar por diferenciar um dos três botões como o botão padrão. A especificação do botão padrão resulta em:
+- O botão recebe o tratamento visual de Botão de Destaque
 - O botão responderá à tecla ENTER automaticamente
-    - Quando o usuário pressiona a tecla ENTER no teclado, o manipulador de cliques associado ao botão padrão será acionado e o ContentDialogResult retornará o valor associado ao Botão padrão
-    - Se o usuário tiver colocado o Foco do teclado em um controle que manipula ENTER, o Botão padrão não responderá ao pressionar ENTER
-- O botão receberá o foco automaticamente quando a Caixa de diálogo é aberta, exceto quando o conteúdo da caixa de diálogo contém a interface do usuário focalizável
+    - Quando o usuário pressiona a tecla ENTER no teclado, o manipulador de cliques associado ao Botão Padrão será acionado e o ContentDialogResult retornará o valor associado ao Botão Padrão
+    - Se o usuário tiver colocado o Foco do Teclado em um controle que manipula ENTER, o Botão Padrão não responderá ao pressionamento de ENTER
+- O botão receberá o foco automaticamente quando a caixa de diálogo for aberta, exceto quando o conteúdo da caixa de diálogo apresentar a interface do usuário focalizável
 
 Use a propriedade ContentDialog.DefaultButton para indicar o botão padrão. Por padrão, nenhum botão padrão está definido.
 
@@ -250,13 +250,13 @@ Uma caixa de diálogo de confirmação típica tem dois botões: um botão de af
 
 > Algumas plataformas colocam o botão de afirmação à direita em vez de à esquerda. Por que é recomendável colocá-lo no lado esquerdo?  Se você considerar que a maioria dos usuários é destra e eles seguram o telefone com essa mão, é realmente mais confortável pressionar o botão de afirmação quando ele está à esquerda, pois o botão tem mais chances de estar dentro do raio do polegar do usuário. Botões no lado direito da tela exigem que o usuário puxe o polegar para dentro até uma posição mais confortável.
 
-## <a name="contentdialog-in-appwindow-or-xaml-islands"></a>ContentDialog em AppWindow ou ilhas de Xaml
+## <a name="contentdialog-in-appwindow-or-xaml-islands"></a>ContentDialog em AppWindow ou Ilhas Xaml
 
-> OBSERVAÇÃO: Esta seção se aplica somente aos aplicativos destinados ao Windows 10, versão 1903 ou posterior. Ilhas de XAML e AppWindow não estão disponíveis em versões anteriores. Para obter mais informações sobre controle de versão, consulte [versão dos aplicativos adaptáveis](../../../debug-test-perf/version-adaptive-apps.md).
+> OBSERVAÇÃO: esta seção se aplica somente a aplicativos direcionados ao Windows 10, versão 1903 ou posterior. AppWindow e Ilhas XAML não estão disponíveis em versões anteriores. Para saber mais sobre controle de versão, consulte [Aplicativos adaptáveis à versão](../../../debug-test-perf/version-adaptive-apps.md).
 
-Por padrão, o conteúdo de caixas de diálogo exibem restrito relativo à raiz [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview). Quando você usa ContentDialog dentro de qualquer um uma [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) ou um [XAML Ilha](/apps/desktop/modernize/xaml-islands), você precisará definir manualmente a [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) na caixa de diálogo para a raiz do host do XAML.
+Por padrão, as caixas de diálogo de conteúdo são exibidas modalmente em relação à [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview) raiz. Quando você usa ContentDialog em [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) ou [Ilha XAML](/apps/desktop/modernize/xaml-islands), é preciso definir manualmente [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) na caixa de diálogo para a raiz do host do XAML.
 
-Para fazer isso, defina propriedade de XamlRoot do ContentDialog para o mesmo XamlRoot como um elemento já no AppWindow ou ilha de XAML, como mostrado aqui.
+Para fazer isso, defina a propriedade XamlRoot de ContentDialog para o mesmo XamlRoot como um elemento já em AppWindow ou Ilha XAML, como mostrado aqui.
 
 ```csharp
 private async void DisplayNoWifiDialog()
@@ -280,14 +280,14 @@ private async void DisplayNoWifiDialog()
 ```
 
 > [!WARNING]
-> Só pode haver um ContentDialog abrir por thread por vez. Ao tentar abrir duas ContentDialogs lançará uma exceção, mesmo se eles estiverem tentando abrir no AppWindows separado.
+> Só pode haver uma ContentDialog aberta por thread de cada vez. A tentativa de abrir duas ContentDialogs lançará uma exceção, mesmo que estejam tentando abrir em AppWindows separadas.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 - [Dicas de ferramentas](../tooltips.md)
-- [Menus e menus de contexto](../menus.md)
-- [Classe de submenu](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+- [Menus e menu de contexto](../menus.md)
+- [Classe Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 - [Classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)

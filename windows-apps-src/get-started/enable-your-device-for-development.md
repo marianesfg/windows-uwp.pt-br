@@ -7,10 +7,10 @@ ms.date: 4/9/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f927d8bce1e59ba9a8ed9b0f3f08ce3575c6d7bd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66367027"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
@@ -19,28 +19,28 @@ ms.locfileid: "66367027"
 
 ![Habilitar seus dispositivos para desenvolvimento](images/developer-poster.png)
 
-Se você estiver usando o computador para atividades diárias comuns, como jogos, navegação na Web, email ou aplicativos do Office, você *não* precisa ativar o Modo de Desenvolvedor, na verdade, você não deve ativá-lo. As informações contidas nesta página não serão úteis para você, portanto, não é necessário prosseguir. Agradecemos pela visita!
+Se você estiver usando o computador para atividades diárias comuns, como jogos, navegação na Web, email ou aplicativos do Office, *não* é necessário ativar o Modo de Desenvolvedor. Na verdade, você não deve ativá-lo. As informações contidas nesta página não serão úteis para você, portanto, não é necessário prosseguir. Agradecemos pela visita!
 
-No entanto, se estiver escrevendo software com o Visual Studio em um computador pela primeira vez, você *precisará* habilitar o Modo de Desenvolvedor no computador de desenvolvimento e nos dispositivos que serão usados para testar o código. Abrir um projeto UWP quando o Modo de Desenvolvedor não está habilitado abrirá a página de configurações **Para desenvolvedores** ou fará com que essa caixa de diálogo apareça no Visual Studio:
+No entanto, se estiver escrevendo software com o Visual Studio em um computador pela primeira vez, você *precisará* habilitar o Modo de Desenvolvedor no computador de desenvolvimento e nos dispositivos que serão usados para testar o código. Abrir um projeto UWP quando o Modo de Desenvolvedor não está habilitado abrirá a página de configurações **Para desenvolvedores** ou fará com que esta caixa de diálogo apareça no Visual Studio:
 
 ![Habilitar a caixa de diálogo do modo de desenvolvedor exibida no Visual Studio](images/latestenabledialog.png)
 
-Quando você vir essa caixa de diálogo, clique em **configurações para desenvolvedores** para abrir a página de configurações **Para desenvolvedores**.
+Quando você visualizar essa caixa de diálogo, clique em **configurações para desenvolvedores** para abrir a página de configurações **Para desenvolvedores**.
 
 > [!NOTE]
 > Você pode ir para a página **Para desenvolvedores** a qualquer momento para habilitar ou desabilitar o Modo de Desenvolvedor: basta inserir "para desenvolvedores" na caixa de pesquisa da Cortana na barra de tarefas.
 
-## <a name="accessing-settings-for-developers"></a>Acessar configurações para desenvolvedores
+## <a name="accessing-settings-for-developers"></a>Acessando configurações para desenvolvedores
 
 Para habilitar o Modo de desenvolvedor ou acessar outras configurações:
 
-1.  Na caixa de diálogo de configurações **Para desenvolvedores**, escolha o nível de acesso de que você precisa.
+1.  Na caixa de diálogo de configurações **Para desenvolvedores**, escolha o nível de acesso necessário.
 2.  Leia o aviso de isenção da configuração escolhida e clique em **Sim** para aceitar a alteração.
 
 > [!NOTE]
-> Você precisa de acesso de administrador para habilitar o modo de desenvolvedor. Se o dispositivo pertencer a uma organização, essa opção pode ter sido desabilitada.
+> Você precisa de acesso de administrador para habilitar o Modo de desenvolvedor. Se o dispositivo pertencer a uma organização, essa opção pode ter sido desabilitada.
 
-Aqui está a página de configurações na família de dispositivos de desktop:
+Veja a seguir a página de configurações na família de dispositivos de desktop:
 
 ![Vá para Configurações, escolha Atualização e segurança e Para desenvolvedores para exibir suas opções](images/devmode-pc-options.png)
 
@@ -48,27 +48,27 @@ Aqui está a página de configurações na família de dispositivos de desktop:
 
  Você pode habilitar um dispositivo para desenvolvimento ou apenas para sideload.
 
--   *Aplicativos da Microsoft Store* é a configuração padrão. Se você não estiver desenvolvendo aplicativos ou estiver usando aplicativos de desenvolvimento emitidos pela sua empresa, mantenha essa configuração ativa.
--   *Sideload* significa instalar e executar ou testar um app que não foi certificado pela Microsoft Store. Por exemplo, um aplicativo que é interno somente para sua empresa.
+-   *Aplicativos da Windows Store* é a configuração padrão. Se você não estiver desenvolvendo aplicativos ou estiver usando aplicativos de desenvolvimento emitidos pela sua empresa, mantenha essa configuração ativa.
+-   *Sideload* significa instalar e executar ou testar um aplicativo que não foi certificado pela Microsoft Store. Por exemplo, um aplicativo que é interno somente para sua empresa.
 -   *Modo de desenvolvedor* permite o sideload de aplicativos e também executar aplicativos no Visual Studio no modo de depuração.
 
-Por padrão, você só pode instalar aplicativos da Plataforma Universal do Windows (UWP) da Microsoft Store. A alteração dessas configurações para usar recursos de desenvolvedor pode alterar o nível de segurança do seu dispositivo. Você não deve instalar aplicativos de fontes não verificadas.
+Por padrão, você só pode instalar aplicativos UWP (Plataforma Universal do Windows) da Microsoft Store. A alteração dessas configurações para usar recursos de desenvolvedor pode alterar o nível de segurança do seu dispositivo. Você não deve instalar aplicativos de fontes não verificadas.
 
 ### <a name="sideload-apps"></a>Fazer o sideload de aplicativos
 
-A configuração de Sideload de aplicativos normalmente é usado por empresas ou escolas que precisa para instalar aplicativos personalizados em dispositivos gerenciados sem passar pelo Microsoft Store ou qualquer outra pessoa que precisa para executar aplicativos de fontes não são da Microsoft. Nesse caso, é comum para a organização impor uma política que desabilita a configuração *Aplicativos UWP*, como mostrado anteriormente na imagem da página de configurações. A organização também fornece o certificado necessário e o local de instalação para o sideload de aplicativos. Para saber mais, veja os artigos do TechNet [Sideload de aplicativos no Windows 10](https://technet.microsoft.com/library/mt269549.aspx) e [Introdução à implantação de aplicativo no Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
+A configuração Sideload de aplicativos normalmente é usada por empresas ou escolas que precisam instalar aplicativos personalizados em dispositivos gerenciados sem passar pela Microsoft Store, ou por alguém que precisa executar aplicativos de outras fontes, que não a Microsoft. Nesse caso, é comum para a organização impor uma política que desabilita a configuração *Aplicativos UWP*, como mostrado anteriormente na imagem da página de configurações. A organização também fornece o certificado necessário e o local de instalação para o sideload de aplicativos. Para saber mais, veja os artigos do TechNet [Sideload de aplicativos no Windows 10](https://technet.microsoft.com/library/mt269549.aspx) e [Introdução à implantação de aplicativo no Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
 
 Informações específicas à família de dispositivos
 
--   Na família de dispositivos de desktop: Você pode instalar um pacote do aplicativo (. AppX) e qualquer certificado que é necessário para executar o aplicativo, executando o script do Windows PowerShell que é criado com o pacote ("Add-AppDevPackage.ps1"). Para obter mais informações, consulte [Empacotando aplicativos UWP](../packaging/packaging-uwp-apps.md).
+-   Na família de dispositivos de desktop: Você pode instalar um pacote de aplicativo (.appx) e qualquer certificado que seja necessário para executar o aplicativo executando o script do Windows PowerShell que é criado com o pacote ("Add-AppDevPackage.ps1"). Para obter mais informações, consulte [Empacotando aplicativos UWP](../packaging/packaging-uwp-apps.md).
 
--   Na família de dispositivos móveis: Se o certificado necessário já estiver instalado, você pode tocar no arquivo para instalar qualquer. AppX enviado a você por email ou em um cartão SD.
+-   Na família de dispositivos móveis: Se o certificado necessário já estiver instalado, você poderá tocar no arquivo para instalar qualquer .appx enviado a você por email ou em um cartão SD.
 
 
 **O sideload de aplicativos** é uma opção mais segura que o Modo de Desenvolvedor, pois você não pode instalar aplicativos no dispositivo sem um certificado confiável.
 
 > [!NOTE]
-> Se você fizer o sideload de aplicativos, ainda deverá instalar aplicativos somente de fontes confiáveis. Ao instalar um app de sideload que não foi certificado pela Microsoft Store, você concorda que obteve todos os direitos necessários para fazer sideload do app e que é o único responsável por qualquer dano resultante da instalação e da execução do app. Veja a seção Windows &gt; Microsoft Store desta [política de privacidade](https://go.microsoft.com/fwlink/?LinkId=521839).
+> Se você fizer o sideload de aplicativos, ainda deverá instalar aplicativos somente de fontes confiáveis. Ao instalar um aplicativo de sideload que não foi certificado pela Microsoft Store, você concorda que obteve todos os direitos necessários para fazer sideload do aplicativo e que é o único responsável por qualquer dano resultante da instalação e da execução do aplicativo. Veja a seção Windows &gt; Microsoft Store desta [política de privacidade](https://go.microsoft.com/fwlink/?LinkId=521839).
 
 
 ### <a name="developer-mode"></a>Modo de Desenvolvedor
@@ -77,7 +77,7 @@ O Modo de Desenvolvedor substitui os requisitos do Windows 8.1 de uma licença d
 
 Quando você habilita o Modo de Desenvolvedor no desktop, é instalado um pacote de recursos que inclui:
 - Portal de Dispositivos do Windows. O Device Portal está habilitado e regras de firewall são definidas para ele somente quando a opção **Habilitar o Device Portal** está ativada.
-- Instala e configura as regras de firewall para serviços SSH que permitem a instalação remota de apps. Habilitar a **Descoberta de Dispositivo** ativará o servidor SSH.
+- Instala e configura as regras de firewall para serviços SSH que permitem a instalação remota de aplicativos. Habilitar a **Descoberta de Dispositivo** ativará o servidor SSH.
 
 
 ## <a name="additional-developer-mode-features"></a>Recursos adicionais do Modo de Desenvolvedor
@@ -86,20 +86,20 @@ Para cada família de dispositivos, recursos de desenvolvedor adicionais podem e
 
 Esta imagem mostra os recursos de desenvolvedor para o Windows 10:
 
-![Opções do modo de desenvolvedor](images/devmode-mob-options.png)
+![Opções do Modo de desenvolvedor](images/devmode-mob-options.png)
 
-### <a name="span-iddevice-discovery-and-pairingspandevice-portal"></a><span id="device-discovery-and-pairing"></span>Portal do dispositivo
+### <a name="span-iddevice-discovery-and-pairingspandevice-portal"></a><span id="device-discovery-and-pairing"></span>Portal de Dispositivos
 
-Para saber mais sobre o Device Portal, consulte [Visão geral do Windows Device Portal](../debug-test-perf/device-portal.md).
+Para saber mais sobre o Portal de Dispositivos, consulte [Visão geral do Portal de Dispositivos do Windows](../debug-test-perf/device-portal.md).
 
 Para obter instruções de instalação específicas ao dispositivo, consulte:
-- [Portal do dispositivo para a área de trabalho](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [Portal de dispositivo para HoloLens](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
-- [Portal do dispositivo para IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
-- [Portal do dispositivo para dispositivos móveis](../debug-test-perf/device-portal-mobile.md)
-- [Portal do dispositivo para Xbox](../xbox-apps/device-portal-xbox.md)
+- [Portal de Dispositivos para Desktop](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
+- [Portal de Dispositivos para HoloLens](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
+- [Portal de Dispositivos para IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
+- [Portal de Dispositivos para celulares](../debug-test-perf/device-portal-mobile.md)
+- [Portal de Dispositivos para Xbox](../xbox-apps/device-portal-xbox.md)
 
-Se você tiver problemas para habilitar o Modo de Desenvolvedor ou o Device Portal, consulte o fórum dos [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para encontrar soluções alternativas para esses problemas ou visite [Falha ao instalar o pacote do Modo de Desenvolvedor](#failure-to-install-developer-mode-package) para obter detalhes adicionais e saber quais KBs WSUS você deve permitir para desbloquear o pacote do Modo de Desenvolvedor.
+Se você tiver problemas para habilitar o Modo de Desenvolvedor ou o Portal de Dispositivos, consulte o fórum dos [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) a fim de encontrar soluções alternativas para esses problemas ou visite [Falha ao instalar o pacote do Modo de Desenvolvedor](#failure-to-install-developer-mode-package) para obter detalhes adicionais e saber quais KBs WSUS você deve permitir para desbloquear o pacote do Modo de Desenvolvedor.
 
 ### <a name="ssh"></a>SSH
 
@@ -110,10 +110,10 @@ Os serviços SSH são habilitados quando você habilita a Descoberta de Disposit
 
 Para aproveitar os serviços SSH, você pode habilitar a descoberta de dispositivos e permitir que o emparelhamento de PIN. Se você pretende executar outro serviço SSH, configure-o em uma porta diferente ou desative os serviços SSH do Modo de Desenvolvedor. Para desativar os serviços SSH, desative a Descoberta de Dispositivo.  
 
-O logon SSH é feito por meio da conta "DevToolsUser", que aceita uma senha para autenticação.  Essa senha é o PIN exibido no dispositivo depois de pressionar o botão "Emparelhar" de descoberta de dispositivo e só é válida enquanto o PIN é exibido.  Um subsistema SFTP também é habilitado, para o gerenciamento manual da pasta DevelopmentFiles onde são instaladas as implantações flexíveis de arquivo do Visual Studio.
+O logon SSH é feito por meio da conta "DevToolsUser", que aceita uma senha para autenticação.  Essa senha é o PIN exibido no dispositivo depois de pressionar o botão "Emparelhar" da descoberta de dispositivo e só é válida enquanto o PIN é exibido.  Um subsistema SFTP também é habilitado, para o gerenciamento manual da pasta DevelopmentFiles onde são instaladas as implantações flexíveis de arquivo do Visual Studio.
 
 #### <a name="caveats-for-ssh-usage"></a>Restrições de uso de SSH
-O servidor SSH existente usado no Windows ainda não é compatível com protocolo, portando o uso de um cliente SFTP ou SSH poderá exigir configuração especial.  Em particular, o subsistema SFTP é executado na versão 3 ou inferior, de forma que qualquer cliente conectado deve ser configurado para esperar um servidor antigo.  O servidor SSH em dispositivos mais antigos usa `ssh-dss` para autenticação de chave pública, que o OpenSSH substituiu.  Para se conectar a tais dispositivos, o cliente SSH cliente deve ser configurado manualmente para aceitar `ssh-dss`.  
+O servidor SSH existente usado no Windows ainda não é compatível com protocolo, portando o uso de um cliente SFTP ou SSH poderá exigir configuração especial.  Em particular, o subsistema SFTP é executado na versão 3 ou inferior, de forma que qualquer cliente conectado deve ser configurado para esperar um servidor antigo.  O servidor SSH em dispositivos mais antigos usa `ssh-dss` para autenticação de chave pública, que o OpenSSH preteriu.  Para se conectar a tais dispositivos, o cliente SSH cliente deve ser configurado manualmente para aceitar `ssh-dss`.  
 
 ### <a name="device-discovery"></a>Descoberta de dispositivos
 
@@ -129,20 +129,20 @@ Você deve habilitar a descoberta de dispositivos somente se pretender transform
 
 
 ## <a name="notes"></a>Observações
-Em versões anteriores do Windows 10 Mobile, uma opção Despejos de Memória estava presente no menu Configurações de Desenvolvedor.  Isso foi movido para o [Portal de Dispositivos](../debug-test-perf/device-portal.md) para que ele possa ser usado remotamente em vez de apenas por USB.  
+Em versões anteriores do Windows 10 Mobile, uma opção Despejos de Memória estava presente no menu Configurações de Desenvolvedor.  Ela foi transferida para o [Portal de Dispositivos](../debug-test-perf/device-portal.md) de modo que possa ser usada remotamente em vez de apenas por USB.  
 
-Há várias ferramentas que você pode usar para implantar um app de um computador Windows 10 para um dispositivo Windows 10. Ambos os dispositivos devem estar conectados à mesma sub-rede da rede por uma conexão com ou sem fio, ou eles devem estar conectados por USB. Ambas as maneiras listadas instalam somente o pacote do aplicativo (.appx/.appxbundle); elas não instalam certificados.
+Há várias ferramentas que você pode usar para implantar um aplicativo de um computador Windows 10 para um dispositivo Windows 10. Ambos os dispositivos devem estar conectados à mesma sub-rede da rede por uma conexão com ou sem fio, ou eles devem estar conectados por USB. Ambas as maneiras listadas instalam somente o pacote do aplicativo (.appx/.appxbundle); elas não instalam certificados.
 
 -   Use a ferramenta de implantação de aplicativos do Windows 10 (WinAppDeployCmd). Saiba mais sobre [a ferramenta WinAppDeployCmd](https://docs.microsoft.com/previous-versions/windows/apps/mt203806(v=vs.140)).
--   Você pode usar o [Portal de Dispositivos](../debug-test-perf/device-portal.md) para implantar do seu navegador para um dispositivo móvel executando o Windows 10, versão 1511 ou posterior. Use a página **[Aplicativos](../debug-test-perf/device-portal.md#apps-manager)** no Device Portal para carregar um pacote de aplicativo (.appx) e instalá-lo no dispositivo.
+-   Você pode usar o [Portal de Dispositivos](../debug-test-perf/device-portal.md) para implantar usando o navegador em um dispositivo móvel executando o Windows 10, versão 1511 ou posterior. Use a página **[Aplicativos](../debug-test-perf/device-portal.md#apps-manager)** no Device Portal para carregar um pacote de aplicativo (.appx) e instalá-lo no dispositivo.
 
 ## <a name="failure-to-install-developer-mode-package"></a>Falha ao instalar o pacote do Modo de Desenvolvedor
-Às vezes, devido a problemas de rede ou de ordem administrativa, o Modo de Desenvolvedor não é instalado corretamente. O pacote do Modo de Desenvolvedor é necessário para implantação **remota** neste computador, usando o Device Portal em um navegador ou a descoberta de dispositivos para habilitar SSH, mas não para o desenvolvimento local.  Mesmo que você encontre esses problemas, você ainda pode implantar seu aplicativo localmente por meio do Visual Studio ou deste dispositivo para outro.
+Às vezes, devido a problemas de rede ou de ordem administrativa, o Modo de Desenvolvedor não é instalado corretamente. O pacote do Modo de Desenvolvedor é necessário para implantação **remota** neste computador, usando o Portal de Dispositivos em um navegador ou a Descoberta de Dispositivo para habilitar SSH, mas não para o desenvolvimento local.  Mesmo que encontre esses problemas, você ainda pode implantar seu aplicativo localmente por meio do Visual Studio ou deste dispositivo para outro.
 
 Consulte o fórum [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para encontrar soluções alternativas para esses problemas e muito mais.
 
 > [!NOTE]
-> Se o modo de desenvolvedor não instala corretamente, é recomendável fazer uma solicitação de comentários. No **Hub de comentários** aplicativo, selecione **adicionar novos comentários**e escolha o **plataforma de desenvolvedores** categoria e o **modo de desenvolvedor** subcategoria. Enviar seus comentários ajudarão a Microsoft a resolver o problema encontrado.
+> Se o Modo de Desenvolvedor não for instalado corretamente, é recomendável registrar uma solicitação nos comentários. No aplicativo **Hub de Feedback**, selecione **Adicionar novo comentário** e escolha a categoria **Plataforma do Desenvolvedor** e a subcategoria **Modo de Desenvolvedor**. O envio de comentários ajudará a Microsoft a resolver o problema encontrado.
 
 ### <a name="failed-to-locate-the-package"></a>Falha ao localizar o pacote
 
@@ -154,8 +154,8 @@ Para resolver este problema:
 
 1. Certifique-se de que o computador esteja conectado à Internet.
 2. Se você estiver em um computador associado a um domínio, fale com o administrador de rede. O pacote do Modo de Desenvolvedor, como todos os Recursos sob Demanda, é bloqueado por padrão no WSUS.
-2.1. Para desbloquear o pacote de modo de desenvolvedor nas versões atuais e anteriores, os seguintes KBs devem ser permitidos no WSUS: 4016509, 3180030, 3197985  
-3. Verifique se existem atualizações do Windows em Configurações > Atualizações e Segurança > Atualizações do Windows.
+2.1. Para desbloquear o pacote do Modo de Desenvolvedor nas versões atuais e anteriores, os seguintes KBs devem ser permitidos no WSUS: 4016509, 3180030, 3197985  
+3. Verifique se existem atualizações do Windows em Configurações > Atualizações e Segurança > Windows Update.
 4. Verifique se o pacote do Modo de Desenvolvedor do Windows está presente em Configurações > Sistema > Aplicativos e Recursos > Gerenciar recursos opcionais > Adicionar um recurso. Se ele estiver ausente, o Windows não poderá encontrar o pacote correto para o seu computador.
 
 Depois de realizar qualquer uma das etapas acima, desabilite e habilite novamente o Modo de Desenvolvedor para verificar a correção.
@@ -163,13 +163,13 @@ Depois de realizar qualquer uma das etapas acima, desabilite e habilite novament
 
 ### <a name="failed-to-install-the-package"></a>Falha ao instalar o pacote
 
-"Falha ao instalar o pacote do Modo de Desenvolvedor. Código de erro 0x80004005  Saiba mais"
+"Falha ao instalar o pacote do Modo de Desenvolvedor. Código de erro 0x80004005 Saiba mais"
 
 Esse erro pode ocorrer devido à incompatibilidade entre a compilação do Windows e o pacote do Modo de Desenvolvedor.
 
 Para resolver este problema:
 
-1. Verifique se existem atualizações do Windows em Configurações > Atualizações e Segurança > Atualizações do Windows.
+1. Verifique se existem atualizações do Windows em Configurações > Atualizações e Segurança > Windows Update.
 2. Reinicialize o computador para garantir que todas as atualizações sejam aplicadas.
 
 
@@ -179,7 +179,7 @@ Para a maioria dos desenvolvedores, convém usar o aplicativo Configurações pa
 
 Você pode usar gpedit.msc para definir as políticas de grupo para habilitar seu dispositivo, a menos que você tenha o Windows 10 Home. Se você tiver o Windows 10 Home, será necessário usar regedit ou comandos do PowerShell para definir as chaves do Registro diretamente para habilitar seu dispositivo.
 
-**Use gpedit para habilitar seu dispositivo**
+**Usar gpedit para habilitar seu dispositivo**
 
 1.  Execute **Gpedit.msc**.
 2.  Vá para Política do Computador Local &gt; Configuração do Computador &gt; Modelos Administrativos &gt; Componentes do Windows &gt; App Package Deployment
@@ -192,11 +192,11 @@ Você pode usar gpedit.msc para definir as políticas de grupo para habilitar se
     Para habilitar o modo de desenvolvedor, edite as políticas para habilitar estas duas opções:
 
     -   **Permitir que todos os aplicativos confiáveis sejam instalados**
-    -   **Permite o desenvolvimento de aplicativos da UWP e instalá-los de um ambiente de desenvolvimento integrado (IDE)**
+    -   **Permite o desenvolvimento de aplicativos UWP e a instalação deles de um IDE (ambiente de desenvolvimento integrado)**
 
 4.  Reinicialize o computador.
 
-**Use regedit para habilitar seu dispositivo**
+**Usar regedit para habilitar seu dispositivo**
 
 1.  Execute **regedit**.
 2.  Para habilitar o sideload, defina o valor deste DWORD como 1:
@@ -220,7 +220,7 @@ Você pode usar gpedit.msc para definir as políticas de grupo para habilitar se
 
     Para habilitar o modo de desenvolvedor, execute este comando:
 
-    -   **PS c:\\WINDOWS\\system32&gt; reg adicionar "HKEY\_LOCAL\_máquina\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ /T AppModelUnlock"REG\_DWORD /f /v"AllowDevelopmentWithoutDevLicense"/d"1"**
+    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"**
 
 ## <a name="upgrade-your-device-from-windows-81-to-windows-10"></a>Atualizar seu dispositivo do Windows 8.1 para Windows 10
 
@@ -233,13 +233,13 @@ Ao criar ou fazer sideload de aplicativos em seu dispositivo Windows 8.1, você 
 
 Depois disso, você precisa habilitar seu dispositivo para o desenvolvimento, conforme descrito neste tópico, para que possa continuar a desenvolver nele. Se não fizer isso, poderá ocorrer um erro quando você depurar seu aplicativo ou tentar criar um pacote para ele. Aqui está um exemplo desse erro:
 
-Erro: DEP0700 : Falha no registro do aplicativo.
+Erro : DEP0700 : Falha no registro do aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 
 * [Seu primeiro aplicativo](your-first-app.md)
-* [Como publicar seu aplicativo UWP](https://developer.microsoft.com/store/publish-apps).
+* [Publicando seu aplicativo UWP](https://developer.microsoft.com/store/publish-apps).
 * [Artigos de instruções sobre como desenvolver aplicativos UWP](https://developer.microsoft.com/windows/apps/develop)
-* [Exemplos de código para os desenvolvedores da UWP](https://developer.microsoft.com/windows/samples)
+* [Amostras de código para desenvolvedores da UWP](https://developer.microsoft.com/windows/samples)
 * [O que é um aplicativo UWP?](universal-application-platform-guide.md)
-* [Inscrever-se a conta do Windows](sign-up.md)
+* [Criar uma conta do Windows](sign-up.md)

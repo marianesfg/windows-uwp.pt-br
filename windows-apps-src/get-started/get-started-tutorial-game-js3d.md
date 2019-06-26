@@ -1,34 +1,34 @@
 ---
-title: Tutorial de Introdução - um jogo 3D UWP em JavaScript
-description: Um jogo para a Microsoft Store, escrito em JavaScript com o Three. js UWP
+title: Tutorial de Introdução – um jogo 3D UWP em JavaScript
+description: Um jogo UWP para a Microsoft Store, escrito em JavaScript com three.js
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e1eba68d1046892a67d779d353fd9b2e6bf224e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66366939"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Criar um jogo 3D em JavaScript usando three.js
 
 ## <a name="introduction"></a>Introdução
 
-Para os desenvolvedores da web ou para quem é hábil com JavaScript, desenvolver aplicativos UWP com JavaScript é uma maneira fácil para levar os seus apps para o mundo. Não é preciso se preocupar em aprender uma linguagem como C# ou C++!
+Para os desenvolvedores da Web ou para quem é hábil com JavaScript, desenvolver aplicativos UWP com JavaScript é uma maneira fácil para levar os seus aplicativos para o mundo. Não é preciso se preocupar em aprender uma linguagem como C# ou C++!
 
-Para este exemplo, vamos aproveitar a biblioteca do **three.js**. Essa biblioteca segue o WebGL, uma API que é usada para renderizar gráficos 2D e 3D para navegadores da web. O **three.js** pega essa API complicada e a simplifica, tornando muito mais fácil o desenvolvimento em 3D. 
+Para este exemplo, vamos aproveitar a biblioteca do **three.js**. Essa biblioteca segue o WebGL, uma API que é usada para renderizar gráficos 2D e 3D para navegadores da Web. O **three.js** pega essa API complicada e a simplifica, tornando muito mais fácil o desenvolvimento em 3D. 
 
 
-Quer ter uma prévia do app que faremos antes de continuar a ler? Confira em CodePen!
+Quer ter uma prévia do aplicativo que faremos antes de continuar a ler? Veja na CodePen!
 
-<iframe height='300' scrolling='no' title='Jogo de Dino final' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpKejy/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpKejy/'>Jogo final do dinossauro</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Jogo final do dinossauro' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpKejy/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja na Caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpKejy/'>Jogo final do dinossauro</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) na <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 > [!NOTE] 
-> Isso não é um jogo completo; ele é projetado para demonstrar o uso do JavaScript e uma biblioteca de terceiros para fazer com que um aplicativo pronto para publicar o Microsoft Store.
+> Observação: este não é um jogo completo; ele foi projetado para demonstrar o uso de JavaScript e uma biblioteca de terceiros para deixar um aplicativo pronto para ser publicado na Microsoft Store.
 
 
 ## <a name="requirements"></a>Requisitos
@@ -36,39 +36,39 @@ Quer ter uma prévia do app que faremos antes de continuar a ler? Confira em Cod
 Para jogar com este projeto, você precisará do seguinte:
 -   Um computador com Windows (ou uma máquina virtual) executando a versão atual do Windows 10.
 -   Uma cópia do Visual Studio. O Visual Studio Community Edition gratuito pode ser baixado na [home page do Visual Studio](https://visualstudio.com/).
-Este projeto usa a biblioteca do **three.js** do JavaScript. **three.js** é lançada sob licença do MIT. Essa biblioteca já está presente no projeto (procure `js/libs` no modo de exibição do Gerenciador de soluções). Mais informações sobre essa biblioteca podem ser encontradas na página inicial do [**three.js**](https://threejs.org/).
+Este projeto usa a biblioteca do **three.js** do JavaScript. **three.js** é lançada sob licença do MIT. Essa biblioteca já está presente no projeto (procure `js/libs` no modo de exibição do Gerenciador de Soluções). Mais informações sobre essa biblioteca podem ser encontradas na página inicial do [**three.js**](https://threejs.org/).
 
 ## <a name="getting-started"></a>Introdução
 
-O código-fonte completo para o app está armazenado em [GitHub](https://github.com/Microsoft/Windows-appsample-get-started-js3d).
+O código-fonte completo para o aplicativo está armazenado no [GitHub](https://github.com/Microsoft/Windows-appsample-get-started-js3d).
 
-O modo mais simples de começar é visitar GitHub, clicar no botão verde Clone ou no botão baixar e selecionar Abrir no Visual Studio. 
+O modo mais simples de começar é visitar o GitHub, clicar no botão verde Clone ou no botão baixar e selecionar Abrir no Visual Studio. 
 
 ![botão clone ou botão baixar](images/3dclone.png)
 
 Se não quiser clonar o projeto, você poderá baixá-lo como um arquivo zip.
 Depois que a solução tiver sido carregada no Visual Studio, você verá vários arquivos, inclusive:
--   Imagens / - uma pasta que contém os diversos ícones exigidos pelos aplicativos UWP.
-- css / - uma pasta que contém o CSS a ser usado.
--   js / - uma pasta que contém os arquivos JavaScript. O arquivo main.js é nosso jogo enquanto os outros arquivos são as bibliotecas de terceiros.
--   modelos / - uma pasta que contém os modelos 3D. Para esse jogo, só temos um modelo para o dinossauro.
+-   Imagens/ - uma pasta que contém os diversos ícones exigidos pelos aplicativos UWP.
+- css/ - uma pasta que contém o CSS a ser usado.
+-   js/ - uma pasta que contém os arquivos JavaScript. O arquivo main.js é o nosso jogo enquanto os outros arquivos são as bibliotecas de terceiros.
+-   modelos/ - uma pasta que contém os modelos 3D. Para esse jogo, só temos um modelo para o dinossauro.
 -   index.html - a página da Web que hospeda o renderizador do jogo.
 
 Agora você pode executar o jogo!
 
-Pressione F5 para iniciar o app. Uma janela deve se abrir, solicitando que você clique na tela. Você também verá um dinossauro se movendo em segundo plano. Vá em frente e feche o jogo, e vamos começar examinando o app e seus principais componentes.
+Pressione F5 para iniciar o aplicativo. Uma janela deve se abrir, solicitando que você clique na tela. Você também verá um dinossauro se movendo em segundo plano. Vá em frente e feche o jogo, e vamos começar examinando o aplicativo e seus principais componentes.
 
 > [!NOTE] 
-> Algo deu errado? Verifique se você instalou o Visual Studio com suporte para web. Você pode verificar criando um novo projeto - se não houver suporte para JavaScript, você precisará instalar o Visual Studio novamente e verificar a caixa de Microsoft Web Developer Tools.
+> Algo deu errado? Verifique se você instalou o Visual Studio com suporte para Web. Você pode verificar criando um novo projeto – se não houver suporte para JavaScript, você precisará instalar o Visual Studio novamente e verificar a caixa de Microsoft Web Developer Tools.
 
 ## <a name="walkthrough"></a>visão geral
 
-Ao iniciar esse jogo, você verá um prompt para clicar na tela. A [API de bloqueio de ponteiro](https://developer.mozilla.org/docs/Web/API/Pointer_Lock_API) é usada para permitir que você possa examinar ao redor com o mouse. A movimentação é obtida pressionando-se as teclas W, A, S, D ou as teclas de setas.
+Ao iniciar esse jogo, você verá um aviso para clicar na tela. A [API de bloqueio de ponteiro](https://developer.mozilla.org/docs/Web/API/Pointer_Lock_API) é usada para permitir que você possa examinar ao redor com o mouse. A movimentação é obtida pressionando-se as teclas W, A, S, D ou as teclas de setas.
 O objetivo deste jogo é ficar longe do dinossauro. Quando o dinossauro estiver próximo o suficiente de você, ele vai começar a caçá-lo até que saia do raio de alcance ou fique perto demais e perca o jogo.
 
 ### <a name="1-setting-up-your-initial-html-file"></a>1. Configurar seu arquivo HTML inicial
 
-Você precisará adicionar um pouco de HTML dentro de **index** para começar. Esse arquivo é a página da Web padrão que contém o nosso app.
+Você precisará adicionar um pouco de HTML dentro de **index.html** para começar. Esse arquivo é a página da Web padrão que contém o nosso aplicativo.
 
 Agora, vamos configurá-lo com as bibliotecas que usaremos e o `div` (denominado `container`) que usaremos para renderizar os gráficos. Nós também vamos defini-lo para apontar para nosso **main.js** (nosso código de jogo).
 
@@ -92,15 +92,15 @@ Agora, vamos configurá-lo com as bibliotecas que usaremos e o `div` (denominado
 ```
 
 
-Agora que temos nosso iniciador HTML pronto para ser usado, vamos para **main.js** fazer alguns elementos gráficos!
+Agora que temos nosso iniciador HTML pronto para ser usado, vamos para **main.js** criar alguns elementos gráficos!
 
-### <a name="2-creating-your-scene"></a>2. Criando sua cena
+### <a name="2-creating-your-scene"></a>2. Criar sua cena
 
 Na seção do passo a passo, vamos adicionar a base do jogo.
 
-Começaremos elaborando um `scene`. Um `scene` em **three.js** é onde sua câmera, objetos e luzes serão adicionados. Você também precisará de um renderizador que vai pegar o que a sua câmera vê na cena e exibi-lo.
+Começaremos elaborando um `scene`. Um `scene` em **three.js** é onde sua câmera, objetos e luzes serão adicionados. Você também precisará de um renderizador que vai capturar o que a sua câmera vê na cena e exibir.
 
-Em **main.js** faremos uma função que faz tudo isso chamada `init()` que chama algumas funções adicionais:
+Em **main.js**, faremos uma função que faz tudo isso chamada `init()` que chama algumas funções adicionais:
 
 ```javascript
 var UNITWIDTH = 90; // Width of a cubes in the maze
@@ -158,7 +158,7 @@ Outras funções que precisamos criar incluem:
 
 #### <a name="createmazecubes"></a>createMazeCubes()
 
-A função `createMazeCubes()` adicionará um cubo simple à nossa cena. Mais tarde, faremos a função adicionar muitos cubos para fazer nosso labirinto.
+A função `createMazeCubes()` adicionará um cubo simples à nossa cena. Posteriormente, usaremos a função para adicionar muitos cubos e criar o nosso labirinto.
 
 ```javascript
 function createMazeCubes() {
@@ -205,7 +205,7 @@ function addLights() {
 
 #### <a name="onwindowresize"></a>onWindowResize()
 
-A função `onWindowResize` é chamada sempre que nosso ouvinte de eventos ouvir que um evento `resize` foi disparado. Isso ocorre sempre que o usuário ajusta o tamanho da janela. Se isso acontecer, queremos garantir que a imagem permaneça proporcional e possa ser visto em toda a janela.
+A função `onWindowResize` é chamada sempre que nosso ouvinte de eventos ouvir que um evento `resize` foi disparado. Isso ocorre sempre que o usuário ajusta o tamanho da janela. Se isso acontecer, queremos garantir que a imagem permaneça proporcional e possa ser vista em toda a janela.
 
 ```javascript
 function onWindowResize() {
@@ -219,7 +219,7 @@ function onWindowResize() {
 
 #### <a name="animate"></a>animate()
 
-A última coisa de que precisaremos é nossa função `animate()`, que também chamará a função `render()`. A função [`requestAnimationFrame()`](https://developer.mozilla.org/docs/Web/API/window/requestAnimationFrame) é usada para atualizar constantemente nosso renderizador. Mais tarde no, usaremos essas funções para atualizar nosso renderizador com animações interessantes como movimentar o labirinto.
+A última coisa de que precisaremos é nossa função `animate()`, que também chamará a função `render()`. A função [`requestAnimationFrame()`](https://developer.mozilla.org/docs/Web/API/window/requestAnimationFrame) é usada para atualizar constantemente nosso renderizador. Posteriormente, usaremos essas funções para atualizar nosso renderizador com animações interessantes como a movimentação do labirinto.
 
 ```javascript
 function animate() {
@@ -235,7 +235,7 @@ function render() {
 
 #### <a name="unit-conversion-functions"></a>Funções de conversão de unidade
 
-Em **three.js** as rotações são medidas em radianos. Para facilitar as coisas para nós, adicionaremos algumas funções para podermos converter facilmente entre graus e radianos. 
+Em **three.js**, as rotações são medidas em radianos. Para facilitar as coisas para nós, adicionaremos algumas funções para podermos converter facilmente entre graus e radianos. 
 
 
 ```javascript
@@ -248,27 +248,27 @@ function radiansToDegrees(radians) {
 }
 ```
 
-Quem pode lembrar que 30 graus correspondem a 0,523 radianos? É muito mais simples fazer `degreesToRadians(30)` para obter o valor de rotação que é usado em nossa função `createMazeCubes()`.
+Quem se lembra de que 30 graus correspondem a 0,523 radianos? É muito mais simples empregar `degreesToRadians(30)` para obter o valor de rotação que é usado na função `createMazeCubes()`.
 
 ___
 
-Isso foi um pouco de código para absorver, mas agora temos um belo cubo que é renderizado para nosso `container`! Confira os resultados na CodePen.
+Foi bastante código para absorver, mas agora temos um belo cubo que é renderizado para o `container`! Veja os resultados na CodePen.
 
-Você pode copiar e colar todo o JavaScript nesse CodePen para ficar preso se encontrou problemas ou pode editá-lo para ajustar algumas luzes e alterar algumas cores. 
+Você pode copiar e colar todo o JavaScript neste CodePen como apoio no caso de encontrar problemas ou editá-lo para ajustar algumas luzes e alterar algumas cores. 
 
-<iframe height='300' scrolling='no' title='As luzes, câmera, cubo!' src='//codepen.io/MicrosoftEdgeDocumentation/embed/YZWygZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulte a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/YZWygZ/'>luzes, câmera, o cubo!</a> por Docs do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) no <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Luz, câmera, cubo!' src='//codepen.io/MicrosoftEdgeDocumentation/embed/YZWygZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Confira a Caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/YZWygZ/'>Luz, câmera, cubo!</a> por Documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) na <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
-### <a name="3-making-the-maze"></a>3. Tornando o Labirinto
+### <a name="3-making-the-maze"></a>3. Criar o labirinto
 
-Embora olhar para um cubo seja de tirar o fôlego, o que é ainda melhor é um labirinto inteiro feito de cubos! É um segredo bem conhecido da comunidade de jogos que uma das maneiras mais rápidas de criar um nível é inserindo cubos em toda parte com uma matriz de 2D.
+Embora olhar para um cubo seja de tirar o fôlego, um labirinto inteiro feito de cubos é ainda melhor! É um segredo bem conhecido da comunidade de jogos que uma das maneiras mais rápidas de criar um nível é inserindo cubos em toda parte com uma matriz de 2D.
  
 ![labirinto feito com uma matriz de 2D](images/dinomap.png)
 
-Colocar 1 onde estão os cubos e 0 onde há espaço vazio permite uma maneira simples e manual para você criar e ajustar o labirinto.
+Colocar 1 onde estão os cubos e 0 onde há espaço vazio permite uma maneira simples e manual de criar e ajustar o labirinto.
 
-Nós conseguir isso, substituindo nossa antiga função `createMazeCubes()` por uma que usa um loop aninhado para criar e colocar vários cubos. Vamos também criar um nome de matriz `collidableObjects` e adicionar os cubos a ela para detecção de colisão mais tarde neste tutorial:
+Conseguimos isso substituindo nossa antiga função `createMazeCubes()` por uma que usa um loop aninhado para criar e posicionar vários cubos. Também criaremos um nome de matriz `collidableObjects` e adicionaremos os cubos a ele para detecção de colisão posteriormente neste tutorial:
 
 ```javascript
 var totalCubesWide; // How many cubes wide the maze will be
@@ -338,7 +338,7 @@ function createMazeCubes() {
 
 ```
 
-Agora que sabemos quantos cubos estão sendo usados (e qual é o tamanho deles), podemos usar a variável `mapSize` calculada para definir as dimensões do plano horizontal:
+Agora que sabemos quantos cubos estão sendo usados ​​(e qual o tamanho deles), podemos usar a variável `mapSize` ​​calculada para definir as dimensões do plano horizontal:
 
 ```javascript
 var mapSize;    // The width/depth of the maze
@@ -356,7 +356,7 @@ function createGround() {
 }
 ```
 
-A última parte do labirinto que vamos adicionar são as paredes do perímetro para conter tudo. Usaremos um loop para fazer dois planos (nossas paredes) ao mesmo tempo, usando a variável `mapSize` que calculamos em `createGround()` para determinar qual largura elas devem ter. As novas paredes também serão adicionadas à nossa matriz `collidableObjects` para detecção futura de colisão:
+A última parte do labirinto que vamos adicionar são as paredes do perímetro para encaixar tudo. Usaremos um loop para criar dois planos (nossas paredes) ao mesmo tempo, usando a variável `mapSize` que calculamos em `createGround()` para determinar qual largura elas devem ter. As novas paredes também serão adicionadas à nossa matriz `collidableObjects` para detecção futura de colisão:
 
 ```javascript
 function createPerimWalls() {
@@ -394,15 +394,15 @@ function createPerimWalls() {
 Não se esqueça de adicionar uma chamada para `createGround()` e `createPerimWalls` depois de `createMazeCubes()` na sua função `init()` para que sejam compilados!
 ___
 
-Agora vamos ter um belo labirinto para olhar, mas realmente não é possível perceber como ele é interessante porque nossa câmera está parada em um só lugar. É hora de subir este jogo de nível e adicionar alguns controles de câmera.
+Agora vamos ter um belo labirinto para olhar, mas realmente não é possível perceber como ele é interessante, pois nossa câmera está parada em um só lugar. É hora de subir este jogo de nível e adicionar alguns controles de câmera.
 
-Fique à vontade para testar as coisas em CodePen como alterar as cores dos cubos ou remover o chão, comentando `createGround()` na função `init()`.
+Fique à vontade para testar tudo no CodePen, como alterar as cores dos cubos ou remover o chão, comentando `createGround()` na função `init()`.
 
 
-<iframe height='300' scrolling='no' title='Construção de Labirinto' src='//codepen.io/MicrosoftEdgeDocumentation/embed/JWKYzG/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/JWKYzG/'>Construção de labirinto</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Compilar labirintos' src='//codepen.io/MicrosoftEdgeDocumentation/embed/JWKYzG/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a Caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/JWKYzG/'>Compilar labirintos</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) na <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### <a name="4-allowing-the-player-to-look-around"></a>4. Permitindo que o player olhar em volta
+### <a name="4-allowing-the-player-to-look-around"></a>4. Permitir que o jogador olhe ao redor
 
 Agora é hora de entrar nesse labirinto e começar a olhar ao redor. Para fazer isso, usaremos a biblioteca **PointerLockControls.js** e nossa câmera.
 
@@ -420,9 +420,9 @@ Primeiro vamos adicionar alguns novos elementos ao nosso arquivo **index**:
 <script src="main.js"></script>
 ```
 
-Você também precisará todo o CSS no CodePen na parte inferior desta seção. Ele deve ser colado no seu arquivo **stylesheet.css**.
+Você também precisará de todo o CSS na CodePen na parte inferior desta seção. Ele deve ser colado no seu arquivo **stylesheet.css**.
 
-Voltando para o **main.js**, adicione algumas novas variáveis globais; `controls` para armazenar o controlador, `controlsEnabled` para rastrear o estado do controlador, e `blocker` para capturar o elemento `blocker` no **index**:
+Voltando para o **main.js**, adicione algumas novas variáveis globais; `controls` para armazenar o controlador, `controlsEnabled` para rastrear o estado do controlador, e `blocker` para capturar o elemento `blocker` no **index.html**:
 
 ```javascript
 var controls;
@@ -440,9 +440,9 @@ controls = new THREE.PointerLockControls(camera);
 scene.add(controls.getObject());
 ```
 
-A câmera agora está conectada, mas precisamos de alguma forma permitir que o mouse e controlador interajam para que poder olhar ao redor. 
+A câmera está agora conectada, mas precisamos de alguma forma deixar o mouse e o controlador interagirem para que possamos olhar em volta. 
 
-Nessa situação, a [API de bloqueio de ponteiro](https://docs.microsoft.com/microsoft-edge/dev-guide/dom/pointer-lock) entra em ação, permitindo que conectemos os movimentos do mouse com a nossa câmera. A API de bloqueio de ponteiro também faz o mouse desaparecer para uma experiência mais imersiva. Pressionando ESC, nós interrompemos a conexão entre o mouse e a câmera e fazemos o mouse reaparecer. Adicionar as funções `getPointerLock()` e `lockChange()` vai nos ajudar a fazer exatamente isso.
+Nessa situação, a [API de bloqueio de ponteiro](https://docs.microsoft.com/microsoft-edge/dev-guide/dom/pointer-lock) entra em ação, permitindo que conectemos os movimentos do mouse com a nossa câmera. A API de bloqueio de ponteiro também faz o mouse desaparecer para uma experiência mais imersiva. Ao pressionar Esc, nós interrompemos a conexão entre o mouse e a câmera e fazemos o mouse reaparecer. Adicionar as funções `getPointerLock()` e `lockChange()` vai nos ajudar a fazer exatamente isso.
 
 A função `getPointerLock()` escuta quando ocorre um clique do mouse. Após o clique, nosso jogo renderizado (no elemento `container`) tenta obter o controle do mouse. Também adicionamos um ouvinte de eventos para detectar quando o jogador ativa ou desativa o bloqueio que, em seguida, chama `lockChange()`. 
 
@@ -456,7 +456,7 @@ function getPointerLock() {
 
 ```
 
-Nossa função `lockChange()` precisa desativar ou ativar os controles e o elemento `blocker`. Podemos determinar o estado do bloqueio de ponteiro, verificando se o destino da propriedade [`pointerLockElement`](https://developer.mozilla.org/docs/Web/API/Document/pointerLockElement) para eventos de mouse está definido como nosso `container`.
+Nossa função `lockChange()` precisa desativar ou ativar os controles e o elemento `blocker`. Podemos determinar o estado do bloqueio do ponteiro verificando se o destino da propriedade [`pointerLockElement`](https://developer.mozilla.org/docs/Web/API/Document/pointerLockElement) para os eventos do mouse está definido para o nosso `container`.
 
 ```javascript
 function lockChange() {
@@ -474,7 +474,7 @@ function lockChange() {
 }
 ```
 
-Agora podemos adicionar uma chamada para `getPointerLock()` logo antes da nossa função `init()`.
+Agora, podemos adicionar uma chamada para `getPointerLock()` logo antes da nossa função `init()`.
 ```javascript
 // Get the pointer lock state
 getPointerLock();
@@ -486,15 +486,15 @@ animate();
 
 Neste ponto, temos a capacidade de **olhar** ao redor, mas o fator real de 'assombro' é a capacidade de nos **movermos**. As coisas vão ficar um pouco matemáticas com vetores, mas o que são os elementos gráficos 3D sem um pouco de matemática?
 
-<iframe height='300' scrolling='no' title='Olhar em volta' src='//codepen.io/MicrosoftEdgeDocumentation/embed/gmwbMo/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/gmwbMo/'>Olhar ao redor</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Olhar ao redor' src='//codepen.io/MicrosoftEdgeDocumentation/embed/gmwbMo/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a Caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/gmwbMo/'>Olhar ao redor</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) na <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
-### <a name="5-adding-player-movement"></a>5. Adicionando o movimento do jogador
+### <a name="5-adding-player-movement"></a>5. Adicionar movimento do jogador
 
-Para descobrir como fazer nosso jogador se mover, temos de voltar às nossas aulas de cálculo. Queremos aplicar velocidade (movimento) a `camera` ao longo de um determinado vetor (direção).
+Para descobrir como fazer nosso jogador se mover, temos que voltar às nossas aulas de cálculo. Queremos aplicar velocidade (movimento) a `camera` ao longo de um determinado vetor (direção).
 
-Vamos adicionar algumas outras variáveis globais para rastrear em qual direção o jogador está se movendo e definir um vetor de velocidade inicial:
+Vamos adicionar mais algumas variáveis ​​globais para saber em qual direção o jogador está se movendo e definir um vetor de velocidade inicial:
 
 ```javascript
 // Flags to determine which direction the player is moving
@@ -519,9 +519,9 @@ clock = new THREE.Clock();
 listenForPlayerMovement();
 ```
 
-Nossa função `listenForPlayerMovement()` é o que vai inverter nossos estados de direção. Na parte inferior da função, temos dois ouvintes de eventos que estão aguardando que as teclas sejam pressionadas e liberadas. Depois que um desses eventos é disparado, vamos verificar em seguida se é uma chave que queremos para disparar ou parar o movimento.
+Nossa função `listenForPlayerMovement()` é o que vai inverter nossos estados de direção. Na parte inferior da função, temos dois ouvintes de eventos que aguardam que as teclas sejam pressionadas e liberadas. Depois que um desses eventos é disparado, vamos verificar em seguida se é uma chave que queremos para disparar ou interromper o movimento.
 
-Para esse jogo, nós o configuramos para que o jogador possa se movimentar com as teclas W, A, S, D ou as teclas de seta.
+Para esse jogo, nós configuramos para que o jogador possa se movimentar com as teclas W, A, S, D ou as teclas de seta.
 
 ```javascript
 function listenForPlayerMovement() {
@@ -588,7 +588,7 @@ function listenForPlayerMovement() {
 
 Agora que podemos determinar em qual direção o usuário deseja ir (que agora está armazenada como `true` em um dos sinalizadores de direção global), é hora de alguma ação. Essa ação acontece na forma da função `animatePlayer()`.
 
-Essa função será chamada de dentro de `animate()`, passando para `delta` para obter a alteração de tempo entre quadros para que nosso movimento não pareça fora de sincronia durante as mudanças na taxa de quadros:
+Essa função será chamada de dentro de `animate()`, passando em `delta` para obter a alteração de tempo entre quadros para que nosso movimento não pareça fora de sincronia durante as mudanças na taxa de quadros:
 
 ```javascript
 function animate() {
@@ -600,9 +600,9 @@ function animate() {
 }
 ```
 
-Agora é hora da parte divertida! Nosso vetor impulso (`playerVeloctiy`) tem três parâmetros, `(x, y, z)`, com `y` sendo o impulso vertical. Como não vamos fazer nenhum salto neste jogo, só vamos trabalhar com os parâmetros `x`e `z`. Inicialmente, esse vetor é definido como (0, 0, 0).
+Agora é hora da parte divertida! Nosso vetor de impulso (`playerVeloctiy`) tem três parâmetros, `(x, y, z)`, com `y` sendo o impulso vertical. Como não vamos fazer nenhum salto neste jogo, só vamos trabalhar com os parâmetros `x` e `z`. Inicialmente, esse vetor é definido como (0, 0, 0).
 
-Conforme visto no código a seguir, uma série de verificações são feitas para ver qual sinalizador de direção é invertido para `true`. Assim que tivermos a direção, podemos adicionar ou subtrair de `x` e `y` para aplicar impulso nessa direção. Se nenhuma chave de movimento estiver sendo pressionada, o vetor será definido para `(0, 0, 0)`.
+Como visto no código abaixo, uma série de verificações é feita para ver qual sinalizador de direção é invertido para `true`. Assim que tivermos a direção, adicionamos ou subtraímos de `x` e `y` para aplicar o impulso nessa direção. Se nenhuma chave de movimento estiver sendo pressionada, o vetor será definido para `(0, 0, 0)`.
 
 
 ```javascript
@@ -638,20 +638,20 @@ Por fim, aplicamos quaisquer que sejam os valores atualizados de `x` e `y` à c�
 
 ---
 
-Parabéns! Agora, você tem uma câmera de jogador controlada que pode se movimentar e olhar ao redor. Nós ainda vamos passar direto pelas paredes, mas isso é algo preocupar depois. Em seguida, adicionaremos nosso dinossauro.
+Parabéns! Agora, você tem uma câmera de jogador controlada que pode se movimentar e olhar ao redor. Nós ainda passamos direto pelas paredes, mas isso é algo para nos preocuparmos mais tarde. Em seguida, adicionaremos nosso dinossauro.
 
-<iframe height='300' scrolling='no' title='Mover-se' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulte a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>mover ao redor</a> por Docs do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Mover-se' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a Caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>Mover-se</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) na <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 > [!NOTE]
-> Se usar esses controles em seu aplicativo UWP, você pode enfrentar latência de movimento e eventos `keyUp` não registrados. Estamos investigando isso e espero corrigir essa parte do exemplo em breve!
+> Se você usar esses controles em seu aplicativo UWP, poderá experimentar um atraso de movimento e eventos `keyUp` não registrados. Estamos analisando isso e esperamos corrigir essa parte do exemplo em breve!
 
-### <a name="6-load-that-dino"></a>6. Carregar esse dino!
+### <a name="6-load-that-dino"></a>6. Carregar o dinossauro!
 
-Se clonou ou baixou este repo de projetos, você verá uma pasta `models` com `dino.json` dentro dele. Este arquivo JSON é um modelo 3D de dinossauro que foi feito e exportado do Mesclador.
+Se você clonou ou baixou este repositório de projetos, verá uma pasta `models` com `dino.json` dentro. Esse arquivo JSON é um modelo de dinossauro 3D que foi feito e exportado do Blender.
 
 
-Teremos de adicionar mais variáveis globais para carregar esse dinossauro:
+Teremos que adicionar mais variáveis ​​globais para carregar esse dinossauro:
 
 ```javascript
 var DINOSCALE = 20;  // How big our dino is scaled to
@@ -663,7 +663,7 @@ var loader = new THREE.JSONLoader();
 var instructions = document.getElementById('instructions');
 ```
 
-Agora que criamos nosso `JSONLoader`, passaremos o caminho para nosso **dino.json** e um retorno de chamada com a geometria e materiais coletados do arquivo.
+Agora que temos nosso `JSONLoader` criado, passaremos para o nosso **dino.json** e um retorno de chamada com a geometria e os materiais reunidos do arquivo.
 Carregar o dinossauro é uma tarefa assíncrona, ou seja, nada será renderizado até que o dinossauro esteja completamente carregado. Em nosso **index.html**, alteramos a cadeia de caracteres no elemento `instructions` para `"Loading..."` para informar o jogador de que as coisas estão em andamento.
 
 Depois que o dinossauro for carregado, atualize o elemento `instructions` com as instruções reais do jogo e mova a função `animate()` do fim de `init()` para o final da função retorno de chamada visto abaixo:
@@ -698,12 +698,12 @@ Depois que o dinossauro for carregado, atualize o elemento `instructions` com as
 
 Agora nosso modelo de dinossauro está carregado. Veja só isso!
 
-<iframe height='300' scrolling='no' title='Adicionando o dino' src='//codepen.io/MicrosoftEdgeDocumentation/embed/xqOwBw/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/xqOwBw/'>Adicionar o dinossauro</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Adicionar o dinossauro' src='//codepen.io/MicrosoftEdgeDocumentation/embed/xqOwBw/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a Caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/xqOwBw/'>Adicionar o dinossauro</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) na <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### <a name="7-move-that-dino"></a>7. Mova esse dino!
+### <a name="7-move-that-dino"></a>7. Mover o dinossauro!
 
-Criar IA para um jogo poder ser extremamente complexo, então, para este exemplo, vamos fazer esse dinossauro ter um comportamento de movimento simples. Nosso dino vai se mover em linha reta, passando pelas paredes e sumindo na neblina distante.
+Criar IA para um jogo pode se tornar extremamente complexo, então, neste exemplo, faremos com que esse dinossauro tenha um comportamento de movimento simples. Nosso dinossauro vai se mover em linha reta, passando pelas paredes e sumindo na neblina distante.
 
 Para fazer isso, primeiro adicione a variável global `dinoVelocity`.
 
@@ -729,12 +729,12 @@ function animateDino(delta) {
 
 Observar o dinossauro sumir na distância não é muito divertido, mas depois de adicionarmos a detecção de colisão, as coisas ficarão mais interessantes.
 
-<iframe height='300' scrolling='no' title='Movendo o dino - nenhuma colisão' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/jBMbbL/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/jBMbbL/'>Movendo dinossauro - nenhuma colisão</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Mover o dinossauro - nenhuma colisão' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/jBMbbL/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a Caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/jBMbbL/'>Mover o dinossauro - nenhuma colisão</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) na <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### <a name="8-collision-detection-for-the-player"></a>8. Detecção de colisão para o player
+### <a name="8-collision-detection-for-the-player"></a>8. Detecção de colisão para o jogador
 
-Agora temos o jogador e o dinossauro se movimentando, mas ainda tem o problema irritante de que todos atravessam paredes. Quando começamos adicionando nossos cubos e paredes no início deste tutorial, nós os enviamos para a matriz `collidableObjects`. Essa matriz é o que usaremos para saber se um jogador está perto demais de algo que não pode atravessar.
+Agora temos o jogador e o dinossauro se movimentando, mas ainda há aquele problema chato de que todos passam pelas paredes. Quando começamos a adicionar nossos cubos e paredes anteriormente neste tutorial, nós os enviamos para a matriz `collidableObjects`. Essa matriz é o que usaremos para saber se um jogador está perto demais de algo que não pode atravessar.
 
 Vamos usar raycasters para determinar quando um cruzamento está prestes a ocorrer. Você pode imaginar um raycaster como um feixe de laser que sai da câmera em alguma direção especificada, relatando de volta se bateu em um objeto e exatamente a qual distância ele está.
 
@@ -742,8 +742,8 @@ Vamos usar raycasters para determinar quando um cruzamento está prestes a ocorr
 var PLAYERCOLLISIONDISTANCE = 20;
 ```
 
-Vamos fazer uma nova função chamada `detectPlayerCollision()` que retornará `true` se o jogador estiver próximo demais de um objeto colidente.
-Para o jogador, vamos aplicar uma raycaster, alterando a direção para que aponta dependendo de em qual direção ele está indo.
+Vamos criar uma nova função chamada `detectPlayerCollision()` que retornará `true` se o jogador estiver próximo demais de um objeto colidente.
+Para o jogador, vamos aplicar um raycaster, alterando a direção para a qual ele está apontando dependendo de em qual direção ele está indo.
 
 Para fazer isso, nós criamos `rotationMatrix`, uma matriz indefinida. Como podemos verificar em qual direção estamos indo, vamos acabar com uma `rotationMatrix` definida, ou indefinida se você estiver indo em frente.
 Se definida, a `rotationMatrix` será aplicada à direção dos controles. 
@@ -791,7 +791,7 @@ function detectPlayerCollision() {
 }
 ```
 
-Nossa `detectPlayerCollision()`função depende da função auxiliar `rayIntersect()`.
+Nossa função `detectPlayerCollision()` depende da função auxiliar `rayIntersect()`.
 Isso levará um raycaster e um valor que representa a proximidade a que podemos chegar de um objeto na matriz `collidableObjects` antes de determinar que ocorreu uma colisão.
 
 ```javascript
@@ -807,7 +807,7 @@ function rayIntersect(ray, distance) {
 }
 ```
 
-Agora que podemos determinar quando uma colisão está prestes a ocorrer, nós podemos enfeitar nossa função `animatePlayer()`:
+Agora que podemos determinar quando uma colisão está prestes a ocorrer, nós podemos aprimorar nossa função `animatePlayer()`:
 
 ```javascript
 function animatePlayer(delta) {
@@ -844,15 +844,15 @@ function animatePlayer(delta) {
 
 Agora nós temos uma detecção de colisão do jogador, então vá em frente e tente atravessar alguma parede!
 
-<iframe height='300' scrolling='no' title='Mover o jogador - colisão' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/qraOeO/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qraOeO/'>Movendo jogador - colisão</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Mover o jogador - colisão' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/qraOeO/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a Caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qraOeO/'>Mover o jogador - colisão</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) na <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
-### <a name="9-collision-detection-and-animation-for-dino"></a>9. Detecção de colisão e animação para dino
+### <a name="9-collision-detection-and-animation-for-dino"></a>9. Detecção de colisão e animação para o dinossauro
 
 Está na hora impedir nosso dinossauro de passar pelas paredes, e em vez disso, fazê-lo ir em uma direção aleatória quando estiver próximo demais um objeto colidente.
 
-Primeiro vamos descobrir quando nosso dinossauro tem uma colisão. 
+Primeiro, vamos descobrir quando nosso dinossauro está prestes a colidir. 
 
 Será necessário definir outra variável global para a distância de colisão:
 
@@ -860,7 +860,7 @@ Será necessário definir outra variável global para a distância de colisão:
 var DINOCOLLISIONDISTANCE = 55;     
 ```
 
-Agora que especificamos a que distância queremos que nosso dino colida, vamos adicionar uma função semelhante à `detectPlayerCollision()`, mas um pouco mais simples.
+Agora que especificamos a que distância queremos que nosso dinossauro colida, vamos adicionar uma função semelhante à `detectPlayerCollision()`, mas um pouco mais simples.
 A função `detectDinoCollision` é simples porque sempre temos um raycaster saindo diretamente da frente do dinossauro. Não há necessidade de girá-lo como para a colisão do jogador.
 
 ```javascript
@@ -912,7 +912,7 @@ function animateDino(delta) {
 }
 ```
 
-Queremos que nosso dino gire -90, 90 ou 180 graus. Para fazer isso direto, acima fizemos a matriz `directionMultiples` que produzirá esses números quando multiplicada por 90.
+Queremos que nosso dinossauro gire -90, 90 ou 180 graus. Para fazer isso direto, criamos acima a matriz `directionMultiples` que produzirá esses números quando multiplicada por 90.
 Para tornar aleatória a seleção dos graus de rotação, adicionamos a função auxiliar `getRandomInt()` para obter um valor de 0, 1 ou 2, que representará um índice aleatório da matriz.
 
 ```javascript
@@ -929,16 +929,16 @@ A adição desse valor para a rotação `y` do dinossauro com `dino.rotation.y +
 
 ---
 
-Nós conseguimos! Agora temos um dino com IA que pode se mover em torno de nosso Labirinto!
+Nós conseguimos! Agora temos um dinossauro com IA que pode se mover pelo nosso labirinto!
 
-<iframe height='300' scrolling='no' title='Movendo o dino - colisão' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/bqwMXZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulte a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/bqwMXZ/'>movendo dino - colisão</a> pelo Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Mover o dinossauro - colisão' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/bqwMXZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a Caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/bqwMXZ/'>Mover o dinossauro - colisão</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) na <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### <a name="10-starting-the-chase"></a>10. Iniciando a perseguição
+### <a name="10-starting-the-chase"></a>10. Começar a caçada
 
-Quando o dinossauro estiver a uma determinada distância do jogador, queremos que comece a caçá-lo. Como este é apenas um exemplo, não existe nenhum algoritmo avançado aplicado para o dinossauro rastrear o jogador. Em vez disso, o dinossauro vai olhar para o jogador e andar na direção dele. Isso funciona muito bem em uma parte aberta do labirinto, mas o dinossauro fica preso quando tem uma parede no caminho.
+Quando o dinossauro estiver a uma determinada distância do jogador, queremos que comece a caçá-lo. Como este é apenas um exemplo, não existe nenhum algoritmo avançado aplicado para o dinossauro rastrear o jogador. Em vez disso, o dinossauro vai olhar para o jogador e andar na direção dele. Isso funciona muito bem em uma parte aberta do labirinto, mas o dinossauro fica preso quando há uma parede no caminho.
 
-Na nossa função `animate()`, adicionaremos uma variável booleana que é determinada pelo que é retornado por `triggerChase()`:
+Na nossa função `animate()`, adicionaremos uma variável booliana que é determinada pelo que é retornado por `triggerChase()`:
 
 ```javascript
 function animate() {
@@ -956,7 +956,7 @@ function animate() {
 }
 ```
 
-Nossa função `triggerChase` vai confirmar se o jogador está no alcance de caça do dinossauro e, depois fazer o dinossauro sempre ficar de frente para o jogador, o que permite que ele se movimente na direção do jogador. 
+Nossa função `triggerChase` vai confirmar se o jogador está ao alcance de caça do dinossauro e, depois fazer o dinossauro sempre ficar de frente para o jogador, o que permite que ele se movimente na direção do jogador. 
 
 ```javascript
 function triggerChase() {
@@ -997,25 +997,25 @@ dinoAlert.style.display = 'none';
 ---
 
 Neste ponto, temos um dinossauro selvagem que começa a seguir o jogador quando você se aproxima demais e que não para até sua posição ser em cima do jogador.
-A etapa final é adicionar algumas condições de fim de jogo assim que o dino esteja a `CATCHOFFSET` unidades de distância.
+A etapa final é adicionar algumas condições de fim de jogo assim que o dinossauro estiver a `CATCHOFFSET` unidades de distância.
 
-<iframe height='300' scrolling='no' title='A perseguição' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpRBqR/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpRBqR/'>A caça</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='A perseguição' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpRBqR/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a Caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpRBqR/'>A caça</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) na <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
 ### <a name="11-ending-the-game"></a>11. Finalizar o jogo
 
 
-Percorremos um longo caminho desde um cubo simples, e agora é a hora de terminar.
+Percorremos um longo caminho desde um cubo simples, e agora é a hora de finalizar.
 
-Vamos definir primeiro uma variável para rastrear se o jogo é acabou ou não.
+Vamos primeiro definir uma variável para acompanhar se o jogo acabou ou não:
 
 ```javascript
 var gameOver = false;
 ```
 
 Agora precisamos atualizar nossa função `animate()` pela última vez para verificar se o dinossauro está perto demais do jogador.
-Se o dinossauro estiver muito próximo, vamos começar uma nova função chamada `caught()` e ela interromperá o movimento do jogador e do dinossauro, se não, vamos continuar com sempre e deixar o jogador e o dinossauro se movimentando.
+Se o dinossauro estiver muito próximo, iniciaremos uma nova função chamada `caught()` e impediremos que o jogador e o dinossauro se movam. Se não, continuaremos como usual e deixaremos o jogador e o dinossauro se movimentarem.
 
 ```javascript
 function animate() {
@@ -1041,7 +1041,7 @@ function animate() {
 ```
 
 Se o dinossauro capturar o jogador, `caught()` vai exibir nosso elemento `blocker` e atualizar o texto para indicar que o jogo foi perdido.
-A variável `gameOver` também é definida como `true`, o que agora nos avisa que o jogo terminou.  
+A variável `gameOver` ​​também está definida para `true`, o que agora nos permite saber que o jogo acabou.  
 
 
 ```javascript
@@ -1056,7 +1056,7 @@ function caught() {
 
 
 Agora que sabemos se o jogo acabou ou não, podemos adicionar uma verificação de fim de jogo à nossa função `lockChange()`.
-Agora, quando o usuário pressiona ESC depois que o jogo é encerrado, podemos adicionar `location.reload` para reiniciar o jogo.
+Quando o usuário pressiona Esc depois que o jogo é encerrado, podemos adicionar `location.reload` para reiniciar o jogo.
 
 ```javascript
 function lockChange() {
@@ -1075,16 +1075,16 @@ function lockChange() {
 
 ---
 
-É só isso! Foi uma longa jornada, mas agora temos um jogo feito com **three.js**.
+Pronto! Foi uma jornada e tanto, mas agora temos um jogo feito com **three.js**.
 
-Volte para o topo da página para ver o [CodePen final](#introduction)!
+Volte para o topo da página para conferir a [CodePen final](#introduction)!
 
 
-## <a name="publishing-to-the-microsoft-store"></a>Publicação para a Microsoft Store
-Agora você tem um aplicativo UWP, é possível publicá-lo para a Microsoft Store (supondo que você o melhoraram pela primeira vez!) Há algumas etapas para o processo.
+## <a name="publishing-to-the-microsoft-store"></a>Publicar na Microsoft Store
+Agora que você tem um aplicativo UWP, é possível publicá-lo na Microsoft Store (supondo que você o aperfeiçoou primeiro!) Há algumas etapas no processo.
 
-1.  Você precisa estar [registrado](https://developer.microsoft.com/store/register) como desenvolvedor no Windows.
-2.  Você deve usar a [lista de verificação](https://docs.microsoft.com/windows/uwp/publish/app-submissions) do envio de aplicativo.
-3.  O app deve ser enviado para [certificação](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process).
-Para obter mais detalhes, consulte [publicando seu aplicativo UWP](https://developer.microsoft.com/store/publish-apps).
+1.  É preciso estar [registrado](https://developer.microsoft.com/store/register) como Desenvolvedor do Windows.
+2.  É preciso usar a [lista de verificação](https://docs.microsoft.com/windows/uwp/publish/app-submissions) de envio de aplicativo.
+3.  O aplicativo deve ser enviado para [certificação](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process).
+Para obter mais detalhes, confira [Publicar seu aplicativo UWP](https://developer.microsoft.com/store/publish-apps).
 

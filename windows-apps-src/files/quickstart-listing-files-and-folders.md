@@ -12,37 +12,37 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: b561e08227664f723802ffc0ee3f0e16bc34a5cc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613921"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63810726"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Enumerar e consultar arquivos e pastas
 
 Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta.
 
-Para obter orientações detalhadas sobre como armazenar os dados do app da Plataforma Universal do Windows, veja a classe [ApplicationData](/uwp/api/windows.storage.applicationdata).
+Para obter orientações sobre como armazenar os dados do seu aplicativo da Plataforma Universal do Windows, confira a classe [ApplicationData](/uwp/api/windows.storage.applicationdata).
 
 > [!NOTE]
-> Para obter um exemplo completo, consulte o [exemplo de enumeração de pasta](https://go.microsoft.com/fwlink/p/?linkid=619993).
+> Para obter um exemplo completo, consulte o [Exemplo de enumeração de pasta](https://go.microsoft.com/fwlink/p/?linkid=619993).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
--   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
+-   **Entender a programação assíncrona para aplicativos UWP (Plataforma Universal do Windows)**
 
-    Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para aprender a escrever aplicativos assíncronos no C + + c++ /CLI WinRT, consulte [simultaneidade e operações assíncronas com C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency). Para aprender a escrever aplicativos assíncronos no C + + c++ /CLI CX, consulte [programação assíncrona em C + + c++ /CLI CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
+    Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para aprender a escrever aplicativos assíncronos em C++/WinRT, consulte [Simultaneidade e operações assíncronas com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency). Para saber como escrever aplicativos assíncronos em C++/CX, consulte [Programação assíncrona em C++/CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
--   **Permissões de acesso para o local**
+-   **Permissões de acesso ao local**
 
     Por exemplo, o código nesses exemplos exige a funcionalidade **picturesLibrary**, mas o local talvez exija outra funcionalidade ou até mesmo nenhuma funcionalidade. Para saber mais, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
 ## <a name="enumerate-files-and-folders-in-a-location"></a>Enumerar arquivos e pastas em um local
 
 > [!NOTE]
-> Lembre-se de declarar o **picturesLibrary** funcionalidade.
+> Lembre-se de declarar a funcionalidade **picturesLibrary**.
 
-Neste exemplo, primeiro use o [ **Getfilesasync** ](/uwp/api/windows.storage.storagefolder.getfilesasync) método para obter todos os arquivos na pasta raiz do [ **KnownFolders.PicturesLibrary** ](/uwp/api/windows.storage.knownfolders.pictureslibrary) (não em subpastas) e o nome de cada arquivo de lista. Em seguida, usamos o [ **StorageFolder.GetFoldersAsync** ](/uwp/api/windows.storage.storagefolder.getfoldersasync) método para obter todas as subpastas no **PicturesLibrary** e lista o nome de cada subpasta.
+Neste exemplo, usamos primeiro o método [**StorageFolder.GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) para obter todos os arquivos na pasta raiz da [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) (não em subpastas) e listar o nome de cada arquivo. Em seguida, usamos o método [**StorageFolder.GetFoldersAsync**](/uwp/api/windows.storage.storagefolder.getfoldersasync) para obter todas as subpastas na **PicturesLibrary** e listar o nome de cada subpasta.
 
 ```csharp
 StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
@@ -175,9 +175,9 @@ Next folder
 ```
 
 > [!NOTE]
-> No C# ou no Visual Basic, lembre-se de colocar a palavra-chave **async** na declaração de qualquer método no qual você utilize o operador **await**.
+> No C# ou Visual Basic, lembre-se de colocar a palavra-chave **async** na declaração de qualquer método no qual você use o operador **await**.
 
-Como alternativa, você pode usar o [ **Getitemsasync** ](/uwp/api/windows.storage.storagefolder.getitemsasync) método para obter todos os itens (arquivos e subpastas) em um local específico. O exemplo a seguir usa o **GetItemsAsync** método para obter todos os arquivos e subpastas na pasta raiz do [ **KnownFolders.PicturesLibrary** ](/uwp/api/windows.storage.knownfolders.pictureslibrary) (não em subpastas). Em seguida, o exemplo lista o nome de cada arquivo e subpasta. Se o item é uma subpasta, o exemplo anexa `"folder"` ao nome.
+Como alternativa, você pode usar o método [**StorageFolder.GetItemsAsync**](/uwp/api/windows.storage.storagefolder.getitemsasync) para obter todos os itens (arquivos e subpastas) em um local específico. O exemplo a seguir usa o método **GetItemsAsync** para obter todos os arquivos e subpastas na pasta raiz da [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) (e não em subpastas). Em seguida, o exemplo lista o nome de cada arquivo e subpasta. Se o item é uma subpasta, o exemplo anexa `"folder"` ao nome.
 
 ```csharp
 StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
@@ -280,7 +280,7 @@ Next item
 
 ## <a name="query-files-in-a-location-and-enumerate-matching-files"></a>Consultar arquivos em um local e enumerar os arquivos correspondentes
 
-Neste exemplo nós consultamos todos os arquivos a [ **KnownFolders.PicturesLibrary** ](/uwp/api/windows.storage.knownfolders.pictureslibrary) agrupados por mês e, dessa vez os recurses de exemplo em subpastas. Primeiro, chamamos [**StorageFolder.CreateFolderQuery**](/uwp/api/windows.storage.storagefolder.createfolderquery) e passamos o valor [**CommonFolderQuery.GroupByMonth**](/uwp/api/windows.storage.search.commonfolderquery) para o método. Isso nos dá um objeto [**StorageFolderQueryResult**](/uwp/api/windows.storage.search.storagefolderqueryresult).
+Neste exemplo, consultamos todos os arquivos na [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) agrupados por mês e, desta vez, o exemplo retorna em subpastas. Primeiro, chamamos [**StorageFolder.CreateFolderQuery**](/uwp/api/windows.storage.storagefolder.createfolderquery) e passamos o valor [**CommonFolderQuery.GroupByMonth**](/uwp/api/windows.storage.search.commonfolderquery) para o método. Isso nos dá um objeto [**StorageFolderQueryResult**](/uwp/api/windows.storage.search.storagefolderqueryresult).
 
 Em seguida, chamamos [**StorageFolderQueryResult.GetFoldersAsync**](/uwp/api/windows.storage.search.storagefolderqueryresult.getfoldersasync), que retorna objetos [**StorageFolder**](/uwp/api/windows.storage.storagefolder) que representam pastas virtuais. Nesse caso, estamos agrupando por mês, para que as pastas virtuais representem um grupo de arquivos com o mesmo mês.
 

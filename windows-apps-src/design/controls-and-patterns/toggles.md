@@ -13,19 +13,19 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: a23a7a7da9605c0ffb5a537c75d63e3f06705881
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625461"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63775168"
 ---
 # <a name="toggle-switches"></a>Switches de alternância
 
-A opção de ativar/desativar representa um comutador físico que permite aos usuários ativar coisas ativado ou desativado, como um comutador de luz. Use os controles de botão de alternância para apresentar aos usuários duas opções mutuamente excludentes (como ligar/desligar), em que a escolha de uma opção apresenta resultados imediatos.
+O botão de alternância representa um comutador físico que permite aos usuários ativar ou desativar itens, como um interruptor. Use os controles do botão de alternância para apresentar aos usuários duas opções mutuamente excludentes (como ligar/desligar), em que a escolha de uma opção apresenta resultados imediatos.
 
 Para criar um controle de botão de alternância, use a [classe ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch).
 
-> **APIs importantes**: [Classe ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [propriedade estiver ativado](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [evento Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
+> **APIs importantes**: [classe ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [propriedade IsOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [evento Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -44,7 +44,7 @@ Para tornar o botão de alternância fácil de entender, rotule-o com uma ou dua
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abrir o aplicativo para ver o <a href="xamlcontrolsgallery:/item/ToggleSwitch">ToggleSwitch</a> ou <a href="xamlcontrolsgallery:/item/ToggleButton">ToggleButton</a> em ação.</p>
+    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abrir o aplicativo e ver o <a href="xamlcontrolsgallery:/item/ToggleSwitch">ToggleSwitch</a> ou <a href="xamlcontrolsgallery:/item/ToggleButton">ToggleButton</a> em ação.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -67,9 +67,9 @@ Para algumas ações, uma caixa de seleção ou um switch de alternância pode f
 - Use uma caixa de seleção quando o usuário precisar executar etapas extras para que as alterações sejam efetivadas. Por exemplo, se o usuário precisar clicar no botão "enviar" ou "avançar" para aplicar as alterações, use uma caixa de seleção.
 - Use caixas de seleção quando o usuário pode selecionar vários itens que estão relacionados a uma única configuração ou recurso.
 
-## <a name="toggle-switches-in-the-windows-ui"></a>Comutadores de alternância na interface do usuário do Windows
+## <a name="toggle-switches-in-the-windows-ui"></a>Botões de alternância na interface do usuário do Windows
 
-Essas imagens mostram como a interface do usuário do Windows usa os botões de alternância. Aqui está como a tela de Configurações de armazenamento inteligente usam os botões de alternância:
+Essas imagens mostram como a interface do usuário do Windows usa os botões de alternância. Veja como a tela de Configurações de armazenamento inteligente usam os botões de alternância:
 
 ![Botões de alternância no Armazenamento inteligente](images/SmartStorageToggle.png)
 
@@ -152,7 +152,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 ### <a name="onoff-labels"></a>Rótulos Ligar/desligar
 
-Por padrão, o switch de alternância inclui rótulos Ligar/desligar literais, que são localizados automaticamente. Você pode substituir esses rótulos ao definir as propriedades [OnContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontent) e [OffContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontent).
+Por padrão, o switch de alternância inclui rótulos Ligar/desligar literais, que são localizados automaticamente. Você pode substituir esses rótulos definindo as propriedades [OnContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontent) e [OffContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontent).
 
 Este exemplo substitui os rótulos Ligar/desligar por rótulos Mostrar/ocultar.
 
@@ -162,20 +162,20 @@ Este exemplo substitui os rótulos Ligar/desligar por rótulos Mostrar/ocultar.
               Toggled="ToggleSwitch_Toggled"/>
 ```
 
-Você também pode usar conteúdo mais complexo, ao definir as propriedades [OnContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontenttemplate) e [OffContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontenttemplate).
+Você também pode usar conteúdo mais complexo, definindo as propriedades [OnContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontenttemplate) e [OffContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontenttemplate).
 
 ## <a name="recommendations"></a>Recomendações
 
-- Use os rótulos padrão de Ligado e Desligado quando possível; somente substitua-os quando é necessário para o botão de alternância fazer sentido. Se você substituí-los, use uma única palavra que descreve com mais precisão a alternância. Em geral, se as palavras "Ligado" e "Desligado" não descrevem a ação vinculada a um botão de alternância, talvez seja necessário um controle diferente.
+- Use os rótulos padrão de Ligado e Desligado quando possível. Somente substitua-os quando necessário para o botão de alternância fazer sentido. Se você substituí-los, use uma única palavra que descreve com mais precisão a alternância. Em geral, se as palavras "Ligado" e "Desligado" não descrevem a ação vinculada a um botão de alternância, talvez seja necessário um controle diferente.
 - Evite substituir os rótulos Ligar e Desligar a menos que seja necessário; use os rótulos padrão a menos que a situação peça rótulos personalizados.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – Veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Classe ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)
 - [Botões de opção](radio-button.md)
-- [Comutadores de alternância](toggles.md)
+- [Botões de alternância](toggles.md)
 - [Caixas de seleção](checkbox.md)

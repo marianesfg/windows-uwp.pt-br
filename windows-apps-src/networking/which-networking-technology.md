@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: db2e444b9f13ba41127b362483774c92d45f1f77
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66372752"
 ---
 # <a name="which-networking-technology"></a>Qual tecnologia de rede?
@@ -22,7 +22,7 @@ Uma rápida visão geral das tecnologias de rede disponíveis para um desenvolve
 
 Use [soquetes](sockets.md) quando você se comunicar com outro dispositivo e desejar usar seu próprio protocolo.
 
-Duas implementações de soquetes estão disponíveis para os desenvolvedores da plataforma Universal do Windows (UWP): [**Windows.Networking.Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets), e [Winsock](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2). Se você estiver escrevendo código novo, Windows.Networking.Sockets tem a vantagem de ser uma API moderna, desenvolvida para uso por desenvolvedores UWP. Se você estiver usando bibliotecas de rede de plataforma cruzada ou outro código Winsock existente, ou se preferir a API Winsock, use essa.
+Há duas implementações de soquetes disponíveis para desenvolvedores da UWP (Plataforma Universal do Windows): [**Windows.Networking.Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) e [Winsock](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2). Se você estiver escrevendo código novo, Windows.Networking.Sockets tem a vantagem de ser uma API moderna, desenvolvida para uso por desenvolvedores UWP. Se você estiver usando bibliotecas de rede de plataforma cruzada ou outro código Winsock existente, ou se preferir a API Winsock, use essa.
 
 ### <a name="when-to-use-sockets"></a>Quando usar soquetes
 
@@ -69,7 +69,7 @@ Use [HttpClient](httpclient.md) (e o restante da API namespace [**Windows.Web.Ht
 
 Use a [API de transferência em segundo plano](background-transfers.md) quando desejar transferir arquivos de forma confiável pela rede. A API de transferência em segundo plano fornece recursos avançados de upload e download que são executados em segundo plano durante a suspensão do aplicativo e persistem após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de download se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. Esses recursos são essenciais quando o aplicativo é executado em dispositivos móveis ou alimentados por bateria. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para downloads.
 
-Um novo recurso de transferência em segundo plano no Windows 10 é a capacidade de disparar após o processamento quando uma transferência de arquivos for concluído, para que você pode atualizar catálogos locais, ativar outros aplicativos ou notificar o usuário quando um download for concluído.
+Um novo recurso de transferência em segundo plano no Windows 10 é a capacidade de disparar pós-processamento após a conclusão de uma transferência de arquivo, para que você possa atualizar catálogos locais, ativar outros aplicativos ou notificar o usuário após a conclusão de um download.
 
 ### <a name="when-to-use-background-transfers"></a>Quando usar transferências em segundo plano
 
@@ -127,7 +127,7 @@ A API [**Windows.Devices.WiFiDirect.Services**](https://docs.microsoft.com/uwp/a
 
 ### <a name="mobile-operators"></a>Operadoras móveis
 
-Windows 10 expõe a um público de desenvolvedores ampla algumas APIs que anteriormente só foram expostos para fabricantes de dispositivos e operadoras de celular. Embora estejam expostas agora, essas APIs também são limitadas por recursos de aplicativo específicos que devem ser aprovados pela Microsoft para que um aplicativo possa ser publicado. O uso real dessas APIs continuará limitado principalmente a fabricantes de dispositivos e operadoras móveis.
+O Windows 10 expõe para um público-alvo de desenvolvedores abrangente algumas APIs que só eram expostas a fabricantes de dispositivos e operadoras móveis. Embora estejam expostas agora, essas APIs também são limitadas por recursos de aplicativo específicos que devem ser aprovados pela Microsoft para que um aplicativo possa ser publicado. O uso real dessas APIs continuará limitado principalmente a fabricantes de dispositivos e operadoras móveis.
 
 ### <a name="network-operations"></a>Operações de rede
 

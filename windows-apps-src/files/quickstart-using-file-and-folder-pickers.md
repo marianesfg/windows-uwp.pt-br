@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5d45c907215f21977b0a59acede5a8314d6ed168
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369320"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a>Abrir arquivos e pastas com um seletor
@@ -24,16 +24,16 @@ ms.locfileid: "66369320"
 Acesse arquivos e pastas permitindo que o usuário interaja com um seletor. É possível usar as classes [**FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) e [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) para obter acesso a arquivos e [**FolderPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FolderPicker) para obter acesso a uma pasta.
 
 > [!NOTE]
-> Para obter um exemplo completo, consulte o [exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994).
+> Para obter um exemplo completo, veja o [Exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 
--   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
+-   **Entender a programação assíncrona para aplicativos UWP (Plataforma Universal do Windows)**
 
     Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
--   **Permissões de acesso para o local**
+-   **Permissões de acesso ao local**
 
     Consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
@@ -103,9 +103,9 @@ Usar um seletor de arquivos envolve criar e personalizar um objeto de seletor de
     ```
     Defina propriedades no objeto do seletor de arquivos relevantes para os usuários e o aplicativo.
 
-    Este exemplo cria uma exibição avançada, o visual de imagens em um único local conveniente que o usuário pode escolher, configurando três propriedades: [**ViewMode**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode), [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation), and [**FileTypeFilter**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter).
+    Este exemplo cria uma exibição visual de qualidade das imagens em um local conveniente que o usuário pode escolher configurando três propriedades: [**ViewMode**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode), [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation) e [**FileTypeFilter**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter).
 
-    -   Definindo [ **ViewMode** ](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode) para o [ **PickerViewMode** ](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode) **miniatura** valor de enumeração cria uma avançada exibição visual usando miniaturas de imagem para representar arquivos no seletor de arquivos. Faça isso para selecionar arquivos visuais, como imagens ou vídeos. Caso contrário, use [**PickerViewMode.List**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode). Um aplicativo de email hipotético com os recursos **Anexar Foto ou Vídeo** e **Anexar Documento** configuraria o **ViewMode** apropriado para o recurso antes de mostrar o seletor de arquivos.
+    -   A configuração de [**ViewMode**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode) como o valor de enumeração [**PickerViewMode**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode) **Thumbnail** cria uma exibição visual de qualidade usando miniaturas de imagem para representar arquivos no seletor de arquivos. Faça isso para selecionar arquivos visuais, como imagens ou vídeos. Caso contrário, use [**PickerViewMode.List**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode). Um aplicativo de email hipotético com os recursos **Anexar Foto ou Vídeo** e **Anexar Documento** configuraria o **ViewMode** apropriado para o recurso antes de mostrar o seletor de arquivos.
 
     -   Configurar [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation) para Imagens usando [**PickerLocationId.PicturesLibrary**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerLocationId) permite que o usuário inicie em um local onde provavelmente encontrará imagens. Configure **SuggestedStartLocation** para um local apropriado para o tipo de arquivo selecionado, como Música, Imagens, Vídeos ou Documentos. A partir do local inicial, o usuário pode navegar para outros locais.
 
@@ -113,7 +113,7 @@ Usar um seletor de arquivos envolve criar e personalizar um objeto de seletor de
 
 2.  **Mostrar o FileOpenPicker**
 
-    - **Para escolher um único arquivo**
+    - **Para selecionar um único arquivo**
 
         ```cs
         Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
@@ -173,4 +173,4 @@ else
 ```
 
 > [!TIP]
-> Sempre que o app acessar um arquivo ou uma pasta por meio de um seletor, adicione-o a [**FutureAccessList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.futureaccesslist) ou [**MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist) do seu app para rastreá-lo. Você pode saber mais sobre o uso dessas listas em [Como rastrear arquivos e pastas usados recentemente](how-to-track-recently-used-files-and-folders.md).
+> Sempre que o aplicativo acessar um arquivo ou uma pasta por meio de um seletor, adicione-o a [**FutureAccessList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.futureaccesslist) ou [**MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist) do seu aplicativo para rastreá-lo. Você pode saber mais sobre o uso dessas listas em [Como rastrear arquivos e pastas usados recentemente](how-to-track-recently-used-files-and-folders.md).

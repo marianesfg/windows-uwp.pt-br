@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b9d8d8a381c0fce186b39853f57d35c1dce4b8f8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601251"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63773337"
 ---
 # <a name="masterdetails-pattern"></a>Padrão mestre/detalhes
 
@@ -21,7 +21,7 @@ ms.locfileid: "57601251"
 
 O padrão mestre/detalhes tem um painel mestre (geralmente com uma [exibição de lista](lists.md)) e um painel de detalhes para o conteúdo. Quando um item na lista mestra é selecionado, o painel de detalhes é atualizado. Esse padrão é usado com frequência para email e catálogos de endereços.
 
-> **APIs importantes**: [Classe ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView classe](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+> **APIs importantes**: [classe ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [classe SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![Exemplo do padrão mestre/detalhes](images/HIGSecOne_MasterDetail.png)
 
@@ -57,11 +57,11 @@ Uma maneira de criar o padrão mestre/detalhes empilhado é usar páginas separa
 
 ![Partes do mestre/detalhes no estilo empilhado](images/patterns-md-stacked-parts.png)
 
-Para página de visualização mestre, um controle de [exibição de lista](lists.md) funciona bem para apresentar listas que podem conter imagens e texto. 
+Para a página de visualização mestre, um controle de [exibição de lista](lists.md) funciona bem para apresentar listas que podem conter imagens e texto. 
 
-Para o painel de detalhes, use o  [content element](../layout/layout-panels.md) que faz mais sentido. Se tiver muitos campos separados, considere o uso de um layout de **Grid** para organizar os elementos em um formulário.
+Para a página de visualização de detalhes, use o [content element](../layout/layout-panels.md) que faz mais sentido. Se tiver muitos campos separados, considere o uso de um layout de **grade** para organizar os elementos em um formulário.
 
-Para navegação entre páginas, consulte [histórico de navegação e navegação regressiva para aplicativos UWP](../basics/navigation-history-and-backwards-navigation.md).
+Para navegação entre páginas, confira [Histórico de navegação e navegação regressiva para aplicativos UWP](../basics/navigation-history-and-backwards-navigation.md).
 
 ## <a name="side-by-side-style"></a>Estilo lado a lado
 
@@ -79,30 +79,30 @@ Uma maneira de criar um padrão mestre/detalhes lado a lado é usar o controle [
 
 Para o painel mestre, um controle de [exibição de lista](lists.md) funciona bem para apresentar listas que podem conter imagens e texto.
 
-Para o conteúdo de detalhes, use o [content element](../layout/layout-panels.md) que faz mais sentido. Se tiver muitos campos separados, considere o uso de um layout de **Grid** para organizar os elementos em um formulário.
+Para o conteúdo de detalhes, use o [content element](../layout/layout-panels.md) que faz mais sentido. Se tiver muitos campos separados, considere o uso de um layout de **grade** para organizar os elementos em um formulário.
 
 ## <a name="adaptive-layout"></a>Layout adaptável
 
-Para implementar um padrão de mestre/detalhes para qualquer tamanho de tela, crie uma interface do usuário responsiva com um [layout adaptável ](../layout/layouts-with-xaml.md).
+Para implementar um padrão de mestre/detalhes para qualquer tamanho de tela, crie uma interface do usuário responsiva com um [layout adaptável](../layout/layouts-with-xaml.md).
 
 ![layout de detalhe mestre adaptável](images/patterns_masterdetail.png)
 
-### <a name="create-an-adaptive-masterdetails-pattern"></a>Criar um mestre adaptável/padrão de detalhes
-Para criar um layout adaptável, definir diferentes [**VisualStates**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.visualstate) para sua interface do usuário e declare pontos de interrupção para os estados diferentes com [**AdaptiveTriggers** ](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.AdaptiveTrigger).
+### <a name="create-an-adaptive-masterdetails-pattern"></a>Criar um padrão mestre/detalhes adaptável
+Para criar um layout adaptável, defina diferentes [**VisualStates**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.visualstate) para a interface do usuário e declare pontos de interrupção para os estados diferentes com [**AdaptiveTriggers**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.AdaptiveTrigger).
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-Os exemplos a seguir implementam o padrão de mestre/detalhes com layouts adaptáveis e demonstram a vinculação de dados para estático, banco de dados e recursos online: 
-- [Exemplo de mestre/detalhes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
-- [Exemplo de seleção + mestre/detalhes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
-- [Exemplo de modelo do Windows \ Studio mestre/detalhes](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
+Os exemplos a seguir implementam o padrão de mestre/detalhes com layouts adaptáveis e demonstram a vinculação de dados para recursos estáticos, de banco de dados e online: 
+- [Amostra de mestre/detalhes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
+- [Mestre/detalhes e seleção](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
+- [Exemplo de mestre/detalhes do Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
 - [Exemplo de banco de dados de pedidos do cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
-- [Amostra de leitor de RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
+- [Exemplo de leitor RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Listas](lists.md)
 - [Pesquisa](search.md)
-- [Barras de comando e de aplicativo](app-bars.md)
-- [Classe de ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [Aplicativo e barras de comandos](app-bars.md)
+- [Classe ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)
 - [Classe SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)

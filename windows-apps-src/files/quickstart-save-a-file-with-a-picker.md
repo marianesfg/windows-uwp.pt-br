@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c1480c17d97cb8b5e227cc44b384f13095bfd469
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369249"
 ---
 # <a name="save-a-file-with-a-picker"></a>Salvar um arquivo com um seletor
@@ -23,18 +23,18 @@ ms.locfileid: "66369249"
 Use o [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) para permitir que os usuários especifiquem o nome e o local onde desejam que o aplicativo salve um aplicativo.
 
 > [!NOTE]
-> Para obter um exemplo completo, consulte o [exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994).
+> Para obter um exemplo completo, veja o [Exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994).
 
  
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 
--   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
+-   **Entender a programação assíncrona para aplicativos UWP (Plataforma Universal do Windows)**
 
     Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
--   **Permissões de acesso para o local**
+-   **Permissões de acesso ao local**
 
     Consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
@@ -54,21 +54,21 @@ Use um [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.P
     savePicker.SuggestedFileName = "New Document";
     ```
 
-Defina propriedades no objeto do seletor de arquivos que forem relevantes para seus usuários e seu aplicativo. Este exemplo define três propriedades: [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker.suggestedstartlocation), [ **FileTypeChoices** ](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker.filetypechoices) e [ **SuggestedFileName**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker.suggestedfilename).
+Defina propriedades no objeto do seletor de arquivos que forem relevantes para seus usuários e seu aplicativo. Este exemplo define três propriedades: [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker.suggestedstartlocation), [**FileTypeChoices**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker.filetypechoices) e [**SuggestedFileName**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker.suggestedfilename).
      
 - Como nosso usuário está salvando um documento ou arquivo de texto, a amostra define [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker.suggestedstartlocation) como a pasta local do aplicativo usando [**LocalFolder**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder). Configure [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation) para um local apropriado para o tipo de arquivo que será salvo, como Música, Imagens, Vídeos ou Documentos. A partir do local inicial, o usuário pode navegar para outros locais.
 
 - Como desejamos que nosso aplicativo abra o arquivo depois dele ser salvo, usamos [**FileTypeChoices**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker.filetypechoices) para especificar os tipos de arquivos que a amostra suporta (documentos do Microsoft Word e arquivos de texto). Certifique-se de que todos os tipos de arquivos sejam suportados por seu aplicativo. Os usuários poderão salvar seus arquivos como qualquer tipo de arquivo que você especificar. Eles também podem alterar o tipo de arquivo selecionando outro tipo de arquivo que você especificou. A primeira opção de tipo de arquivo na lista será selecionada por padrão: para controlar isso, configure a propriedade [**DefaultFileExtension**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker.defaultfileextension).
 
     > [!NOTE]
-    > O seletor de arquivos também usa o tipo de arquivo selecionado no momento para filtrar quais arquivos que ele exibe, de modo que somente os tipos de arquivos que correspondem aos tipos de arquivos selecionados são exibidos ao usuário.
+    > O seletor de arquivos também usa o tipo de arquivo atualmente selecionado para filtrar quais arquivos são exibidos, de forma que somente os tipos de arquivo que correspondam aos tipos de arquivo selecionados sejam exibidos para o usuário.
 
 - Para poupar o usuário da digitação, o exemplo define um [**SuggestedFileName**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker.suggestedfilename). Torne seu nome de arquivo sugerido relevante para o arquivo que está sendo salvo. Por exemplo, como no Word, você pode sugerir o nome de arquivo existente se houver um, ou a primeira linha de um documento se o usuário estiver salvando um arquivo que ainda não possui nome.
 
 > [!NOTE]
-> [**FileSavePicker** ](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) objetos de exibem o seletor de arquivo usando o [ **PickerViewMode.List** ](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode) modo de exibição.
+>Os objetos  [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) exibem o seletor de arquivos usando o modo de exibição [**PickerViewMode.List**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode).
 
-2.  **Mostrar o FileSavePicker e salve o arquivo separado**
+2.  **Mostrar o FileSavePicker e salvar no arquivo selecionado**
 
     Exiba o seletor de arquivos chamando [**PickSaveFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.filesavepicker.picksavefileasync). Depois que o usuário especifica o nome, o tipo de arquivo e o local e confirma o arquivo a ser salvo, **PickSaveFileAsync** retorna um objeto [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) que representa o arquivo salvo. Você pode capturar e processar esse arquivo agora que tem acesso de leitura e gravação a ele.
 
@@ -104,4 +104,4 @@ Defina propriedades no objeto do seletor de arquivos que forem relevantes para s
 O exemplo verifica se o arquivo é válido e grava seu próprio nome de arquivo nele. Consulte também [Criando, escrevendo e lendo um arquivo](quickstart-reading-and-writing-files.md).
 
 > [!TIP]
-> Você sempre deve verificar o arquivo salvo para garantir que ele é válido antes de executar qualquer outro processamento. Depois disso, você poderá salvar o conteúdo no arquivo, conforme apropriado ao seu aplicativo, e fornecer o comportamento adequado se o arquivo selecionado não for válido.
+> Sempre verifique o arquivo salvo para ter certeza de sua validade antes de executar qualquer outro processamento. Depois disso, você poderá salvar o conteúdo no arquivo, conforme apropriado ao seu aplicativo, e fornecer o comportamento adequado se o arquivo selecionado não for válido.

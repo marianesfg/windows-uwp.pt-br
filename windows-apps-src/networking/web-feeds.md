@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a9d3b4b9b404ab2c0828ea302f0c564ae1c8e7b4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66372781"
 ---
 # <a name="rssatom-feeds"></a>Feeds RSS/Atom
@@ -44,7 +44,7 @@ O isolamento de rede permite que um desenvolvedor defina o escopo necessário de
 
 O isolamento de rede afeta todos os elementos de classe nos namespaces [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication) e [**Windows.Web.AtomPub**](https://docs.microsoft.com/uwp/api/Windows.Web.AtomPub) que tentem acessar a rede. O Windows impõe ativamente o isolamento de rede. Uma chamada a um elemento de classe no namespace **Windows.Web.Syndication** ou **Windows.Web.AtomPub** que resulta em acesso à rede pode falhar por causa do isolamento de rede se o recurso de rede adequado não for ativado.
 
-Os recursos de rede para um aplicativo são configurados no manifesto do aplicativo quando o aplicativo é compilado. Recursos de rede geralmente são adicionados usando o Microsoft Visual Studio 2015 ao desenvolver o aplicativo. Os recursos de rede também podem ser definidos manualmente no arquivo manifesto do aplicativo usando um editor de texto.
+Os recursos de rede para um aplicativo são configurados no manifesto do aplicativo quando o aplicativo é compilado. Geralmente, os recursos de rede são adicionados usando o Microsoft Visual Studio 2015 ao desenvolver o aplicativo. Os recursos de rede também podem ser definidos manualmente no arquivo manifesto do aplicativo usando um editor de texto.
 
 Para saber mais sobre o isolamento de rede e as funcionalidades de rede, consulte a seção "Funcionalidades" no tópico [Noções básicas de rede](networking-basics.md).
 
@@ -56,7 +56,7 @@ Esta seção mostra como recuperar e exibir um feed da Web usando classes no nam
 
 Para garantir que o aplicativo UWP esteja pronto para a rede, defina alguns recursos de rede necessários no arquivo **Package.appxmanifest** do projeto. Se o aplicativo precisa ser capaz de se conectar como um cliente aos serviços remotos na Internet, a funcionalidade **internetClient** é necessária. Para obter mais informações, consulte a seção "Funcionalidades" no tópico [Noções básicas de rede](networking-basics.md).
 
-**Recuperando conteúdo agregado de um web feed**
+**Recuperar conteúdo sindicalizado de um web feed**
 
 Agora iremos revisar alguns códigos que demonstram como recuperar um feed e, depois, exibir cada item individual que o feed contém. Antes de configurar e enviar a solicitação, iremos definir algumas variáveis que usaremos durante a operação, e inicializar uma instância de [**SyndicationClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationClient), que define os métodos e propriedades que usaremos para recuperar e exibir o feed.
 

@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f9dba57d8e75ba105a2154be5add5b101a4a6aa4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369330"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos
@@ -22,24 +22,24 @@ Uma biblioteca é uma coleção virtual de pastas, que contém uma pasta conheci
 ## <a name="prerequisites"></a>Pré-requisitos
 
 
--   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
+-   **Entender a programação assíncrona para aplicativos UWP (Plataforma Universal do Windows)**
 
     Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
--   **Permissões de acesso para o local**
+-   **Permissões de acesso ao local**
 
     No Visual Studio, abra o arquivo de manifesto do aplicativo no Designer de Manifesto. Na página **Recursos**, selecione as bibliotecas que seu aplicativo gerencia.
 
-    -   **Biblioteca de música**
-    -   **Biblioteca de imagens**
-    -   **Biblioteca de vídeos**
+    -   **Biblioteca de Músicas**
+    -   **Biblioteca de Imagens**
+    -   **Biblioteca de Vídeos**
 
     Para saber mais, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
 ## <a name="get-a-reference-to-a-library"></a>Obtenha uma referência a uma biblioteca
 
 > [!NOTE]
-> Lembre-se de declarar a funcionalidade apropriada. Veja [Declarações de funcionalidade de app](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) para saber mais.
+> Lembre-se de declarar a funcionalidade apropriada. Veja [Declarações de funcionalidade de aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) para saber mais.
  
 
 Para obter uma referência à biblioteca Música, Imagens ou Vídeo do usuário, chame o método [**StorageLibrary.GetLibraryAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.getlibraryasync). Forneça o valor correspondente da enumeração [**KnownLibraryId**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownLibraryId).
@@ -173,7 +173,7 @@ Nos dispositivos em que a câmera salva imagens de baixa resolução e de alta r
 
 As Imagens da câmera e a pasta Imagens salvas não oferecem suporte a consultas avançadas.
 
-**Abrindo uma foto no aplicativo que capturou isso**
+**Abrindo uma foto no aplicativo em que ela foi capturada**
 
 Se quiser permitir que o usuário abra novamente uma foto no aplicativo em que foi capturada, você pode salvar a **CreatorAppId** com os metadados da foto usando um código similar ao exemplo seguinte. Neste exemplo, **testPhoto** é um [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile).
 

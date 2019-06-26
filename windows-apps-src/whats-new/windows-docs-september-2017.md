@@ -1,22 +1,22 @@
 ---
-title: Novidades do Windows Docs em setembro de 2017 - Desenvolver aplicativos UWP
-description: Novos recursos, vídeos e diretrizes para desenvolvedores foram adicionados à documentação do desenvolvedor do Windows 10 referente a setembro de 2017.
+title: Novidades do Windows Docs em setembro de 2017 – Desenvolver aplicativos UWP
+description: Novos recursos, vídeos e diretrizes para desenvolvedores foram adicionados à documentação do desenvolvedor do Windows 10 referente a setembro de 2017
 keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, Windows 10, 1709
 ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ae5001e907d7d38cbf05fd6863b192337fe365f
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162881"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63801081"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>Novidades dos documentos de desenvolvedor do Windows em setembro de 2017
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. Disponibilizaram-se as visões gerais de recurso, as diretrizes para desenvolvedores e amostrar a seguir, contendo informações novas e atualizadas para desenvolvedores do Windows.
+A Documentação do Desenvolvedor Windows recebe atualizações constantes com informações sobre novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. Disponibilizaram-se as visões gerais de recurso, as diretrizes para desenvolvedores e amostras a seguir, contendo informações novas e atualizadas para desenvolvedores do Windows.
 
-A Atualização de criadores do segundo semestre também está chegando, portanto, fique atento para uma grande variedade de documentações no próximo mês.
+O Fall Creators Update também está chegando, portanto, fique atento a uma grande variedade de documentações no próximo mês.
 
 [Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/your-first-app.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -24,30 +24,30 @@ A Atualização de criadores do segundo semestre também está chegando, portant
 
 ### <a name="xbox-live-creators-program"></a>Programa de Criadores do Xbox Live
 
-O programa de criadores do Xbox Live agora é dinâmico, permitindo que você crie e publique facilmente jogos UWP que podem ser executados em computadores com Windows 10 e consoles Xbox One. Para obter mais informações, consulte [Introdução ao Programa de Criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
+O Programa de Criadores do Xbox Live agora é dinâmico, permitindo que você crie e publique facilmente jogos UWP que podem ser executados em computadores com Windows 10 e consoles Xbox One. Para obter mais informações, consulte [Introdução ao Programa de Criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
 
-## <a name="developer-guidance"></a>Diretrizes para desenvolvedor
+## <a name="developer-guidance"></a>Diretrizes do desenvolvedor
 
 ### <a name="xaml-basics-tutorials"></a>Tutoriais sobre noções básicas de XAML
 
-Escrevemos quatro [tutoriais de noções básicas de XAML](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-intro) para acompanhar a nova [amostra do PhotoLab](https://github.com/Microsoft/Windows-appsample-photo-lab), abordando quatro aspectos essenciais da programação em XAML: interfaces do usuário, vinculação de dados, estilos personalizados e layouts adaptáveis. Cada tutorial inicia com uma versão parcialmente completa da Amostra do PhotoLab e aproveita um componente faltando do passo a passo do aplicativo final. 
+Escrevemos quatro [tutoriais sobre noções básicas de XAML](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-intro) para acompanhar a nova [amostra do PhotoLab](https://github.com/Microsoft/Windows-appsample-photo-lab), abordando quatro aspectos essenciais da programação em XAML: interfaces do usuário, vinculação de dados, estilos personalizados e layouts adaptáveis. Cada tutorial é iniciado com uma versão parcialmente completa da Amostra do PhotoLab e mostra a criação, passo a passo, de um componente ausente do aplicativo final. 
 
 ![Captura de tela da amostra do PhotoLab mostrando a página da galeria de fotos](images/PhotoLab-gallery-page.png)  
 
-Visão geral rápida dos novos artigos:
+Esta é uma visão geral rápida dos novos artigos:
 
-+ [**Criar interfaces do usuário** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-ui) mostra como criar a interface de galeria de foto básico.
-+ [**Criar associações de dados** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-data-binding) mostra como adicionar associações de dados para a Galeria de fotos, populá-lo com dados de imagem real.
-+ [**Criar estilos personalizados** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-style) mostra como adicionar estilos personalizados sofisticados para a menu de edição de fotos.
-+ [**Criar layouts adaptáveis** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-adaptive-layout) mostra como fazer o layout da Galeria adaptável, para que fique bem em todos os tamanhos de tela e de dispositivo.
++ [**Criar interfaces do usuário**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-ui) mostra como criar a interface básica da galeria de fotos.
++ [**Criar vinculações de dados**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-data-binding) mostra como adicionar vinculações de dados à galeria de fotos, preenchendo-a usando dados de imagens reais.
++ [**Criar estilos personalizados**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-style) mostra como adicionar estilos personalizados sofisticados ao menu de edição de fotos.
++ [**Criar layouts adaptáveis**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-adaptive-layout) mostra como tornar o layout de galeria adaptável para que tenha uma boa aparência em todos os tamanhos de dispositivo e tela.
 
 ### <a name="get-started-tutorials"></a>Tutoriais de introdução
 
-A seção Introdução dos documentos UWP foi atualizada com uma [nova página de aterrissagem da seção de tutoriais](https://docs.microsoft.com/windows/uwp/get-started/create-uwp-apps). Esta seção fornece uma estrutura nova e aprimorada para a experiência de Introdução, ajudando os usuários a encontrar e usar facilmente os tutoriais adequados para eles, incluindo os tutoriais de noções básicas de XAML mencionados acima.
+A seção Introdução dos documentos da UWP foi atualizada com uma [nova página de aterrissagem da seção de tutoriais](https://docs.microsoft.com/windows/uwp/get-started/create-uwp-apps). Esta seção fornece uma estrutura nova e aprimorada para a experiência de Introdução, ajudando os usuários a encontrar e usar facilmente os tutoriais adequados para eles, incluindo os tutoriais de noções básicas de XAML mencionados acima.
 
 ### <a name="voice-and-tone"></a>Voz e tom
 
-Adicionamos novas [orientações de voz em tom em aplicativos UWP](https://docs.microsoft.com/windows/uwp/in-app-help/voice-and-tone) a fim de fornecer recomendações para a criação de textos em seu aplicativo. Independentemente do que estiver criando, é importante que a linguagem usada seja acessível, amigável e informativa.
+Adicionamos novas [diretrizes sobre voz e tom em aplicativos UWP](https://docs.microsoft.com/windows/uwp/in-app-help/voice-and-tone) para fornecer orientações para a produção de texto em seu aplicativo. Independentemente do que você estiver criando, é importante que a linguagem usada seja acessível, amigável e informativa.
 
 ## <a name="samples"></a>Exemplos
 
