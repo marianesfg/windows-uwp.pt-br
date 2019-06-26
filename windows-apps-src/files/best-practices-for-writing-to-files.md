@@ -1,15 +1,15 @@
 ---
 title: Práticas recomendadas para gravar em arquivos
-description: Aprenda as práticas recomendadas para usar vários arquivos escrever métodos das classes FileIO e PathIO.
+description: Conheça as melhores práticas para usar os vários métodos de gravação de arquivos das classes FileIO e PathIO.
 ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a6a1d93b1deaad084ff25db946199b678b35703c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369508"
 ---
 # <a name="best-practices-for-writing-to-files"></a>Práticas recomendadas para gravar em arquivos
@@ -19,141 +19,141 @@ ms.locfileid: "66369508"
 * [**Classe FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO)
 * [**Classe PathIO**](https://docs.microsoft.com/uwp/api/windows.storage.pathio)
 
-Os desenvolvedores, às vezes, são executados em um conjunto de problemas comuns ao usar o **escrever** métodos das [ **FileIO** ](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) e [ **PathIO** ](https://docs.microsoft.com/uwp/api/windows.storage.pathio) classes para executar operações de e/s do sistema de arquivos. Por exemplo, problemas comuns incluem:
+Às vezes, os desenvolvedores enfrentam um conjunto de problemas comuns ao usar os métodos **Write** das classes [**FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) e [**PathIO**](https://docs.microsoft.com/uwp/api/windows.storage.pathio) para executar operações de E/S do sistema de arquivos. Por exemplo, problemas comuns incluem:
 
-* Um arquivo parcialmente é gravado.
+* Um arquivo parcialmente gravado.
 * O aplicativo recebe uma exceção ao chamar um dos métodos.
-* As operações de deixar para trás. Arquivos TMP com um nome de arquivo semelhante ao nome do arquivo de destino.
+* As operações deixam para trás arquivos .TMP com um nome de arquivo semelhante ao nome do arquivo de destino.
 
-O **escrever** métodos das [ **FileIO** ](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) e [ **PathIO** ](https://docs.microsoft.com/uwp/api/windows.storage.pathio) classes incluem o seguinte:
+Os métodos **Write** das classes [**FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) e [**PathIO**](https://docs.microsoft.com/uwp/api/windows.storage.pathio) incluem o seguinte:
 
 * **WriteBufferAsync**
 * **WriteBytesAsync**
 * **WriteLinesAsync**
 * **WriteTextAsync**
 
- Este artigo fornece detalhes sobre como esses métodos funcionam para que os desenvolvedores melhor entendem quando e como usá-los. Este artigo fornece diretrizes e não tenta fornecer uma solução para todos os problemas de e/s de arquivo possíveis. 
+ Este artigo fornece detalhes de como esses métodos funcionam para que os desenvolvedores entendam quando e como usá-los. Este artigo fornece diretrizes e não tem objetivo de fornecer uma solução para todos os problemas de E/S de arquivo possíveis. 
 
 > [!NOTE]
-> Este artigo enfoca os **FileIO** métodos em exemplos e discussões. No entanto, o **PathIO** métodos seguem um padrão semelhante e a maioria das diretrizes neste artigo aplica-se também a esses métodos. 
+> Este artigo concentra-se nos métodos da **FileIO** nos exemplos e discussões. No entanto, os métodos da **PathIO** seguem um padrão semelhante e a maioria das diretrizes deste artigo aplica-se também a esses métodos. 
 
-## <a name="convenience-vs-control"></a>Conveniência x controle
+## <a name="convenience-vs-control"></a>Conveniência versus controle
 
-Um [ **StorageFile** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) objeto não é um identificador de arquivo, como o modelo de programação nativo do Win32. Em vez disso, uma [ **StorageFile** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) é uma representação de um arquivo com métodos para manipular seu conteúdo.
+Um objeto [**StorageFile**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) não é um identificador de arquivo, como o modelo de programação nativo do Win32. Em vez disso, um [**StorageFile**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) é uma representação de um arquivo com métodos para manipular seu conteúdo.
 
-Noções básicas sobre esse conceito é útil ao executar e/s com uma **StorageFile**. Por exemplo, o [gravando em um arquivo](quickstart-reading-and-writing-files.md#writing-to-a-file) seção apresenta três maneiras de gravar em um arquivo:
+Entender esse conceito é útil ao realizar E/S com um **StorageFile**. Por exemplo, a seção [Gravando em um arquivo](quickstart-reading-and-writing-files.md#writing-to-a-file) apresenta três maneiras de gravar em um arquivo:
 
-* Usando o [ **FileIO.WriteTextAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.fileio.writetextasync) método.
-* Criando um buffer e, em seguida, chamando o [ **FileIO.WriteBufferAsync** ](https://docs.microsoft.com/en-us/uwp/api/windows.storage.fileio.writebufferasync) método.
+* Usando o método [**FileIO.WriteTextAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileio.writetextasync).
+* Criando um buffer e, em seguida, chamando o método [**FileIO.WriteBufferAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.storage.fileio.writebufferasync).
 * O modelo de quatro etapas usando um fluxo:
   1. [Abra](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.openasync) o arquivo para obter um fluxo.
-  2. [Obter](https://docs.microsoft.com/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) um fluxo de saída.
-  3. Criar uma [ **DataWriter** ](https://docs.microsoft.com/uwp/api/windows.storage.streams.datawriter) do objeto e chame correspondente **gravar** método.
-  4. [Confirmar](https://docs.microsoft.com/uwp/api/windows.storage.streams.datawriter.storeasync) os dados no gravador de dados e [flush](https://docs.microsoft.com/uwp/api/windows.storage.streams.ioutputstream.flushasync) no fluxo de saída.
+  2. [Obtenha](https://docs.microsoft.com/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) um fluxo de saída.
+  3. Crie um objeto [**DataWriter**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datawriter) e chame o método **Write** correspondente.
+  4. [Faça commit](https://docs.microsoft.com/uwp/api/windows.storage.streams.datawriter.storeasync) dos dados no gravador de dados e [libere](https://docs.microsoft.com/uwp/api/windows.storage.streams.ioutputstream.flushasync) o fluxo de saída.
 
-Os dois primeiros cenários são os mais comumente usados por aplicativos. Gravação no arquivo em uma única operação é mais fácil de codificar e manter, e também remove a responsabilidade do aplicativo de lidar com muitas das complexidades de e/s de arquivo. No entanto, essa conveniência gera um custo: a perda de controle sobre toda a operação e a capacidade de detectar erros em pontos específicos.
+Os dois primeiros cenários são os mais comumente usados por aplicativos. Gravar no arquivo em uma única operação é mais fácil para escrever código e dar manutenção, além de remover a responsabilidade do aplicativo de lidar com muitas das complexidades de E/S de arquivo. No entanto, essa conveniência gera um custo: a perda de controle sobre toda a operação e da capacidade de detectar erros em pontos específicos.
 
 ## <a name="the-transactional-model"></a>O modelo transacional
 
-O **escrever** métodos das [ **FileIO** ](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) e [ **PathIO** ](https://docs.microsoft.com/uwp/api/windows.storage.pathio) classes envolvem as etapas de gravação de terceiro modelo descrito acima, com uma camada adicional. Essa camada é encapsulada em uma transação de armazenamento.
+Os métodos **Write** das classes [**FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) e [**PathIO**](https://docs.microsoft.com/uwp/api/windows.storage.pathio) encapsulam as etapas no terceiro modelo de gravação descrito acima, com uma camada adicional. Essa camada é encapsulada em uma transação de armazenamento.
 
-Para proteger a integridade do arquivo original no caso de algo der errado durante a gravação de dados, o **escrever** métodos usam um modelo transacional, abrindo o arquivo usando [ **OpenTransactedWriteAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.opentransactedwriteasync). Esse processo cria uma [ **StorageStreamTransaction** ](https://docs.microsoft.com/uwp/api/windows.storage.storagestreamtransaction) objeto. Depois que esse objeto de transação é criado, as APIs de gravar os dados a seguir de modo semelhante de [acesso a arquivos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) amostra ou o exemplo de código a [ **StorageStreamTransaction** ](https://docs.microsoft.com/uwp/api/windows.storage.storagestreamtransaction) artigo.
+Para proteger a integridade do arquivo original no caso de algo dar errado durante a gravação dos dados, os métodos **Write** usam um modelo transacional, abrindo o arquivo usando [**OpenTransactedWriteAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.opentransactedwriteasync). Esse processo cria um objeto [**StorageStreamTransaction**](https://docs.microsoft.com/uwp/api/windows.storage.storagestreamtransaction). Depois que esse objeto de transação é criado, as APIs gravam os dados seguindo um modo semelhante ao exemplo [Acesso a Arquivos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) ou o exemplo de código no artigo [**StorageStreamTransaction**](https://docs.microsoft.com/uwp/api/windows.storage.storagestreamtransaction).
 
-O diagrama a seguir ilustra as subjacentes tarefas executadas pelo a **WriteTextAsync** método em uma operação de gravação com êxito. Esta ilustração fornece uma exibição simplificada da operação. Por exemplo, ele ignora etapas, como preenchimento automático de codificação e async do texto em threads diferentes.
+O diagrama a seguir ilustra as tarefas subjacentes executadas pelo método **WriteTextAsync** em uma operação de gravação com êxito. Esta ilustração oferece uma exibição simplificada da operação. Por exemplo, ela ignora etapas como codificação e de texto e conclusão assíncrona em threads diferentes.
 
-![Diagrama de sequência de chamada de API de UWP para gravar em um arquivo](images/file-write-call-sequence.svg)
+![Diagrama de sequência de chamada à API da UWP para gravar em um arquivo](images/file-write-call-sequence.svg)
 
-As vantagens de usar o **escrever** métodos das [ **FileIO** ](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) e [ **PathIO** ](https://docs.microsoft.com/uwp/api/windows.storage.pathio) classes em vez disso o modelo de quatro etapas mais complexo usando um fluxo são:
+As vantagens de usar os métodos **Write** das classes [**FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) e [**PathIO**](https://docs.microsoft.com/uwp/api/windows.storage.pathio) em vez do modelo de quatro etapas mais complexo que usa um fluxo são:
 
-* Uma chamada à API para lidar com todas as etapas intermediárias, incluindo erros.
-* O arquivo original é mantido se algo der errado.
-* O estado do sistema tentará ser mantidas tão limpo quanto possível.
+* Uma chamada à API para manipular todas as etapas intermediárias, incluindo erros.
+* O arquivo original será mantido se algo der errado.
+* O estado do sistema tentará ser mantido tão limpo quanto possível.
 
-No entanto, com muitos pontos intermediários de possíveis de falha, há uma maior possibilidade de falha. Quando ocorre um erro pode ser difícil de entender em que o processo falhou. As seções a seguir apresentam algumas das falhas, você pode encontrar ao usar o **gravar** métodos e fornecem soluções possíveis.
+No entanto, com tantos pontos intermediários possíveis de falha, há uma maior possibilidade de falha. Quando ocorrer um erro poderá ser difícil de entender o local em que o processo falhou. As seções a seguir apresentam algumas das falhas que você poderá encontrar ao usar os métodos **Write** e oferecem as soluções possíveis.
 
-## <a name="common-error-codes-for-write-methods-of-the-fileio-and-pathio-classes"></a>Códigos de erro comuns para os métodos de gravação das classes FileIO e PathIO
+## <a name="common-error-codes-for-write-methods-of-the-fileio-and-pathio-classes"></a>Códigos de erro comuns para os métodos Write das classes FileIO e PathIO
 
-Esta tabela apresenta os códigos de erro comuns que os desenvolvedores de aplicativos encontram ao usar o **gravar** métodos. As etapas na tabela correspondem às etapas no diagrama anterior.
+Esta tabela apresenta códigos de erro comuns que os desenvolvedores de aplicativos encontram ao usar os métodos **Write**. As etapas na tabela correspondem às etapas no diagrama anterior.
 
-|  Erro de nome (valor)  |  Etapas  |  Causas  |  Soluções  |
+|  Nome do erro (valor)  |  Etapas  |  Causas  |  Soluções  |
 |----------------------|---------|----------|-------------|
-|  ERROR_ACCESS_DENIED (0X80070005)  |  5  |  O arquivo original pode ser marcado para exclusão, possivelmente a partir de uma operação anterior.  |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
-|  ERROR_SHARING_VIOLATION (0x80070020)  |  5  |  O arquivo original é aberto por outro gravação exclusivo.   |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
-|  ERROR_UNABLE_TO_REMOVE_REPLACED (0x80070497)  |  19-20  |  Não foi possível substituir o arquivo original (arquivo. txt), porque ele está em uso. Outro processo ou operação obteve acesso ao arquivo antes que ele pode ser substituído.  |  Repita a operação.</br>Certifique-se de que o acesso para o arquivo é sincronizado.  |
-|  ERROR_DISK_FULL (0x80070070)  |  7, 14, 16, 20  |  O modelo transacionado cria um arquivo extra e isso consome armazenamento extra.  |    |
-|  ERROR_OUTOFMEMORY (0X8007000E)  |  14, 16  |  Isso pode acontecer devido a várias operações de e/s pendentes ou tamanhos de arquivos grandes.  |  Uma abordagem mais granular, controlando o fluxo pode resolver o erro.  |
-|  E_FAIL (0x80004005) |  Qualquer  |  Diversos  |  Repita a operação. Se ele ainda falhar, ele pode ser um erro de plataforma e o aplicativo deve ser interrompido porque ele está em um estado inconsistente. |
+|  ERROR_ACCESS_DENIED (0X80070005)  |  5  |  O arquivo original pode estar marcado para exclusão, possivelmente devido a uma operação anterior.  |  Repita a operação.</br>Certifique-se de que o acesso ao arquivo seja sincronizado.  |
+|  ERROR_SHARING_VIOLATION (0x80070020)  |  5  |  O arquivo original é aberto por outra gravação exclusiva.   |  Repita a operação.</br>Certifique-se de que o acesso ao arquivo seja sincronizado.  |
+|  ERROR_UNABLE_TO_REMOVE_REPLACED (0x80070497)  |  19-20  |  Não foi possível substituir o arquivo original (arquivo.txt), porque ele está em uso. Outro processo ou operação obteve acesso ao arquivo antes que ele fosse substituído.  |  Repita a operação.</br>Certifique-se de que o acesso ao arquivo seja sincronizado.  |
+|  ERROR_DISK_FULL (0x80070070)  |  7, 14, 16, 20  |  O modelo transacionado cria um arquivo extra e isso consome armazenamento adicional.  |    |
+|  ERROR_OUTOFMEMORY (0x8007000E)  |  14, 16  |  Isso pode acontecer devido a várias operações de E/S pendentes ou tamanhos de arquivos grandes.  |  Uma abordagem mais granular, controlando o fluxo, pode resolver o erro.  |
+|  E_FAIL (0x80004005) |  Qualquer  |  Diversos  |  Repita a operação. Se ainda falhar, poderá ser devido a um erro de plataforma e o aplicativo deverá ser interrompido porque está em um estado inconsistente. |
 
-## <a name="other-considerations-for-file-states-that-might-lead-to-errors"></a>Outras considerações para estados de arquivo que podem levar a erros
+## <a name="other-considerations-for-file-states-that-might-lead-to-errors"></a>Outras considerações de estados de arquivo que podem levar a erros
 
-Além dos erros retornados pelo **gravar** métodos, aqui estão algumas diretrizes sobre o que um aplicativo pode esperar ao gravar em um arquivo.
+Além dos erros retornados pelos métodos **Write**, aqui estão algumas diretrizes sobre o que um aplicativo pode esperar ao gravar em um arquivo.
 
-### <a name="data-was-written-to-the-file-if-and-only-if-operation-completed"></a>Dados foram gravados para o arquivo somente se a operação foi concluída
+### <a name="data-was-written-to-the-file-if-and-only-if-operation-completed"></a>Dados foram gravados no arquivo se e somente se a operação foi concluída
 
-Seu aplicativo não deve fazer qualquer suposição sobre os dados no arquivo enquanto uma operação de gravação está em andamento. Tentativa de acessar o arquivo antes de uma operação é concluída pode levar a dados inconsistentes. Seu aplicativo deve ser responsável de acompanhamento e/SS pendentes.
+Seu aplicativo não deverá fazer nenhuma suposição sobre os dados no arquivo enquanto uma operação de gravação estiver em andamento. Tentar acessar o arquivo antes da conclusão de uma operação poderá gerar dados inconsistentes. Seu aplicativo deve ser responsável por acompanhar operações de E/S pendentes.
 
 ### <a name="readers"></a>Leitores
 
-Se o arquivo que também está sendo gravada no que está sendo usado por um leitor cortês (ou seja, é aberto com [ **FileAccessMode.Read**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode), as leituras subsequentes falhará com um erro ERROR_OPLOCK_HANDLE_CLOSED (0x80070323). Às vezes, aplicativos repetir a abertura do arquivo para leitura novamente enquanto o **gravar** operação está em andamento. Isso pode resultar em uma condição de corrida em que o **gravar** finalmente falha ao tentar substituir o arquivo original, porque ele não pode ser substituído.
+Se o arquivo que está sendo gravado também estiver sendo usado por um leitor cortês (ou seja, aberto com [**FileAccessMode.Read**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode)), as leituras subsequentes falharão com um erro ERROR_OPLOCK_HANDLE_CLOSED (0x80070323). Às vezes, os aplicativos repetem a abertura do arquivo para leitura enquanto a operação **Write** está em andamento. Isso pode resultar em uma condição de corrida em que o **Write** acaba falhando ao tentar substituir o arquivo original, porque ele não pode ser substituído.
 
 ### <a name="files-from-knownfolders"></a>Arquivos de KnownFolders
 
-Seu aplicativo pode não ser o único aplicativo que está tentando acessar um arquivo que reside em qualquer um dos [ **KnownFolders**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders). Não há nenhuma garantia de que, se a operação for bem-sucedida, o conteúdo de que um aplicativo escrito para o arquivo permanecerá constante na próxima vez que ele tenta ler o arquivo. Além disso, compartilhamento ou acesso negado erros se tornar mais comuns nessa situação.
+Seu aplicativo pode não ser o único aplicativo que está tentando acessar um arquivo que reside em qualquer uma das [**KnownFolders**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders). Não há nenhuma garantia de que, se a operação for bem-sucedida, o conteúdo que um aplicativo gravar no arquivo permanecerá constante na próxima vez que ele tentar ler o arquivo. Além disso, erros de compartilhamento ou de acesso negado se tornam mais comuns nessa situação.
 
-### <a name="conflicting-io"></a>Conflito de e/s
+### <a name="conflicting-io"></a>Conflito de E/S
 
-As chances de erros de simultaneidade podem ser reduzidas se nosso aplicativo usa o **gravar** métodos para arquivos em seus dados locais, mas algum cuidado ainda é necessária. Se vários **gravar** operações estão sendo enviados simultaneamente para o arquivo, não há nenhuma garantia sobre quais dados acabam no arquivo. Para atenuar isso, é recomendável que seu aplicativo serializa **gravar** operações para o arquivo.
+As chances de erros de simultaneidade podem ser reduzidas se o aplicativo usa os métodos **Write** para arquivos em seus dados locais, mas ainda é necessário algum cuidado. Se várias operações **Write** estiverem sendo enviadas simultaneamente para o arquivo, não haverá nenhuma garantia de quais dados acabarão no arquivo. Para atenuar isso, é recomendável que seu aplicativo serialize as operações **Write** no arquivo.
 
-### <a name="tmp-files"></a>~ Arquivos TMP
+### <a name="tmp-files"></a>Arquivos ~TMP
 
-Ocasionalmente, se a operação de modo forçado foi cancelada (por exemplo, se o aplicativo foi suspenso ou encerrado pelo sistema operacional), a transação não está confirmada ou fechada adequadamente. Isso pode deixar para trás arquivos com um (. ~ TMP) extensão. Considere a exclusão desses arquivos temporários (se existirem os dados do aplicativo local) ao lidar com a ativação do aplicativo.
+Ocasionalmente, se a operação for cancelada de modo forçado (por exemplo, se o aplicativo for suspenso ou encerrado pelo sistema operacional), a transação não será confirmada nem fechada adequadamente. Isso poderá deixar para trás arquivos com uma extensão (.~TMP). Considere a exclusão desses arquivos temporários (se existirem nos dados locais do aplicativo) ao lidar com a ativação do aplicativo.
 
 ## <a name="considerations-based-on-file-types"></a>Considerações com base nos tipos de arquivo
 
-Alguns erros podem ser mais prevalentes dependendo do tipo de arquivos, a frequência na qual são acessados e tamanho do arquivo. Em geral, há três categorias de arquivos de que seu aplicativo pode acessar:
+Alguns erros podem ser mais predominantes dependendo do tipo dos arquivos, da frequência com que são acessados e do tamanho do arquivo. Em geral, há três categorias de arquivos que seu aplicativo pode acessar:
 
-* Arquivos criados e editados pelo usuário na pasta de dados local do seu aplicativo. Eles são criados e editados somente durante o uso de seu aplicativo, e existem somente dentro do aplicativo.
+* Arquivos criados e editados pelo usuário na pasta de dados local do seu aplicativo. Eles são criados e editados somente durante o uso de seu aplicativo e existem somente dentro do aplicativo.
 * Metadados do aplicativo. Seu aplicativo usa esses arquivos para controlar seu próprio estado.
-* Outros arquivos em locais do sistema de arquivos em que seu aplicativo declarou recursos para acessar. Geralmente, eles estão localizados em um dos [ **KnownFolders**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders).
+* Outros arquivos em locais do sistema de arquivos em que seu aplicativo declarou recursos para acessar. Geralmente, eles estão localizados em uma das [**KnownFolders**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders).
 
-Seu aplicativo tem controle total sobre as duas primeiras categorias de arquivos, pois elas são parte dos arquivos de pacote do seu aplicativo e são acessadas exclusivamente pelo seu aplicativo. Para arquivos em que a última categoria, seu aplicativo deve estar ciente de que outros aplicativos e serviços do sistema operacional podem estar acessando os arquivos simultaneamente.
+Seu aplicativo tem controle total sobre as duas primeiras categorias de arquivos, pois elas fazem parte dos arquivos do pacote do aplicativo e são acessadas exclusivamente pelo aplicativo. Quanto aos arquivos da última categoria, seu aplicativo deve estar ciente de que outros aplicativos e serviços do sistema operacional podem acessar os arquivos simultaneamente.
 
 Dependendo do aplicativo, o acesso aos arquivos pode variar na frequência:
 
-* Muito baixa. Geralmente, esses são arquivos que são abertos depois que quando o aplicativo é iniciado e são salvos quando o aplicativo está suspenso.
-* Baixa. Esses são arquivos que o usuário é especificamente assumir uma ação (como salvar ou carregar).
-* Média ou alta. Esses são arquivos em que o aplicativo deve atualizar constantemente dados (por exemplo, recursos de salvamento automático ou constante metadados de controle).
+* Muito baixa. Geralmente, esses são arquivos que são abertos uma vez quando o aplicativo é iniciado e são salvos quando o aplicativo é suspenso.
+* Baixa. Esses são arquivos em que o usuário está especificamente realizando uma ação (como salvar ou carregar).
+* Média ou alta. Esses são arquivos em que o aplicativo deve atualizar dados constantemente (por exemplo, recursos de salvamento automático ou acompanhamento constante de metadados).
 
-Para o tamanho do arquivo, considere os dados de desempenho no gráfico a seguir para o **WriteBytesAsync** método. Este gráfico compara o tempo para concluir um tamanho de arquivo do vs de operação, ao longo de um desempenho médio de operações de 10000 por tamanho do arquivo em um ambiente controlado.
+Em relação ao tamanho do arquivo, considere os dados de desempenho no gráfico a seguir para o método **WriteBytesAsync**. Este gráfico compara o tempo para concluir uma operação em relação ao tamanho do arquivo, considerando o desempenho médio de 10 mil operações por tamanho de arquivo em um ambiente controlado.
 
-![Desempenho WriteBytesAsync](images/writebytesasync-performance.png)
+![Desempenho do WriteBytesAsync](images/writebytesasync-performance.png)
 
-Os valores de tempo no eixo y são omitidos intencionalmente nesse gráfico porque as configurações e um hardware diferente produzirá valores diferentes de tempo absoluto. No entanto, temos consistentemente observado essas tendências em nossos testes:
+Os valores de tempo no eixo y foram omitidos intencionalmente nesse gráfico porque as configurações e hardware diferentes produzirão valores diferentes de tempo absoluto. No entanto, temos observado consistentemente essas tendências em nossos testes:
 
-* Para arquivos muito pequenos (< = 1 MB): O tempo para concluir as operações é consistentemente rápido.
+* Para arquivos muito pequenos (<= 1 MB): O tempo para concluir as operações é consistentemente rápido.
 * Para arquivos maiores (> 1 MB): O tempo para concluir as operações começa a aumentar exponencialmente.
 
-## <a name="io-during-app-suspension"></a>E/s durante a suspensão de aplicativos
+## <a name="io-during-app-suspension"></a>E/S durante a suspensão do aplicativo
 
-Seu aplicativo devem ser criados para lidar com a suspensão se você quiser manter informações de estado ou de metadados para uso em sessões posteriores. Para obter informações sobre a suspensão de aplicativos, consulte [ciclo de vida do aplicativo](../launch-resume/app-lifecycle.md) e [nesta postagem de blog](https://blogs.windows.com/buildingapps/2016/04/28/the-lifecycle-of-a-uwp-app/#qLwdmV5zfkAPMEco.97).
+Seu aplicativo deverá ser projetado para lidar com a suspensão se você quiser manter informações de estado ou metadados para uso em sessões posteriores. Para obter informações básicas sobre a suspensão de aplicativos, consulte [Ciclo de vida do aplicativo](../launch-resume/app-lifecycle.md) e [esta postagem no blog](https://blogs.windows.com/buildingapps/2016/04/28/the-lifecycle-of-a-uwp-app/#qLwdmV5zfkAPMEco.97).
 
-A menos que o sistema operacional concede execução estendida ao seu aplicativo, quando seu aplicativo é suspenso, ele tem cinco segundos para liberar todos os seus recursos e salvar seus dados. Para a confiabilidade e o usuário a melhor experiência, sempre supor que a hora em que você precisa lidar com tarefas de suspensão é limitada. Tenha em mente as seguintes diretrizes durante os período de tempo para lidar com tarefas de suspensão de 5 segundos:
+A menos que o sistema operacional conceda execução estendida ao aplicativo, quando seu aplicativo é suspenso, ele tem cinco segundos para liberar todos os recursos e salvar os dados. Para uma melhor confiabilidade e experiência do usuário, sempre presuma que o tempo que você tem para lidar com as tarefas de suspensão é limitado. Tenha em mente as seguintes diretrizes durante o período de tempo de 5 segundos para lidar com tarefas de suspensão:
 
-* Tente manter a e/s mínima para evitar condições de corrida causadas por operações de liberação e versão.
-* Evite gravar arquivos que exigem a centenas de milissegundos ou mais para escrever.
-* Se seu aplicativo usa o **gravar** métodos, tenha em mente que todas as etapas intermediárias que esses métodos exigem.
+* Tente manter a E/S ao mínimo para evitar condições de corrida causadas por operações de liberação.
+* Evite gravação arquivos que exigem centenas de milissegundos ou mais para gravar.
+* Se seu aplicativo usa os métodos **Write**, tenha em mente todas as etapas intermediárias que esses métodos exigem.
 
-Se seu aplicativo opera em uma pequena quantidade de dados de estado durante a suspensão, a maioria dos casos você pode usar o **gravar** métodos para liberar os dados. No entanto, se seu aplicativo usa uma grande quantidade de dados de estado, considere usar fluxos diretamente armazenar seus dados. Isso pode ajudar a reduzir o atraso introduzido pelo modelo transacional do **gravar** métodos. 
+Se seu aplicativo opera em uma pequena quantidade de dados de estado durante a suspensão, na maioria dos casos você pode usar os métodos **Write** para liberar os dados. No entanto, se seu aplicativo usa uma grande quantidade de dados de estado, considere usar fluxos para armazenar diretamente seus dados. Isso pode ajudar a reduzir o atraso introduzido pelo modelo transacional dos métodos **Write**. 
 
-Por exemplo, consulte o [BasicSuspension](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicSuspension) exemplo.
+Por exemplo, consulte a amostra [BasicSuspension](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicSuspension).
 
 ## <a name="other-examples-and-resources"></a>Outros exemplos e recursos
 
 Aqui estão vários exemplos e outros recursos para cenários específicos.
 
-### <a name="code-example-for-retrying-file-io-example"></a>Exemplo de código para repetir exemplo de arquivo e/s
+### <a name="code-example-for-retrying-file-io-example"></a>Exemplo de código para repetir a E/S de arquivo
 
-A seguir está um exemplo de pseudocódigo sobre como repetir uma gravação (C#), supondo que a gravação deve ser feito depois que o usuário seleciona um arquivo para gravação:
+A seguir está um exemplo de pseudocódigo de como repetir uma gravação (C#), supondo que a gravação deve ser feita depois que o usuário seleciona um arquivo para salvar:
 
 ```csharp
 Windows.Storage.Pickers.FileSavePicker savePicker = new Windows.Storage.Pickers.FileSavePicker();
@@ -190,9 +190,9 @@ else
 }
 ```
 
-### <a name="synchronize-access-to-the-file"></a>Sincronizar o acesso ao arquivo
+### <a name="synchronize-access-to-the-file"></a>Sincronizar acesso ao arquivo
 
-O [.NET blog Parallel Programming with](https://devblogs.microsoft.com/pfxteam/) é um excelente recurso para obter orientações sobre programação paralela. Em particular, o [postagens sobre AsyncReaderWriterLock](https://devblogs.microsoft.com/pfxteam/building-async-coordination-primitives-part-7-asyncreaderwriterlock/) descreve como manter o acesso exclusivo a um arquivo para gravações, permitindo que o acesso simultâneo de leitura. Tenha em mente serializando que e/s terá impacto sobre desempenho.
+O [blog Programação Paralela com .NET](https://devblogs.microsoft.com/pfxteam/) é um excelente recurso para obter diretrizes sobre programação paralela. Em particular, a [postagens sobre AsyncReaderWriterLock](https://devblogs.microsoft.com/pfxteam/building-async-coordination-primitives-part-7-asyncreaderwriterlock/) descreve como manter o acesso exclusivo a um arquivo para gravações, permitindo o acesso simultâneo de leitura. Tenha em mente que serializar a E/S afetará o desempenho.
 
 ## <a name="see-also"></a>Consulte também
 

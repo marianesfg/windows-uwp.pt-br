@@ -12,25 +12,25 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 52de0933bf51adaae6b0923868e12eb92ced4a1a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625011"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63793801"
 ---
 # <a name="flyouts"></a>Submenus
 
-Um submenu é um contêiner de ignorar aberto que pode mostrar uma interface do usuário arbitrária como conteúdo. Os submenus podem conter outros submenus ou menus de contexto para criar uma experiência aninhada.
+Um submenu é um contêiner de light dismiss que pode mostrar uma interface do usuário arbitrária como conteúdo. Os submenus podem conter outros submenus ou menus de contexto para criar uma experiência aninhada.
 
 ![Menu de contexto aninhado em um submenu](../images/flyout-nested.png)
 
-> **APIs importantes**: [Classe de submenu](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+> **APIs importantes**: [Classe Flyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 * Não use um submenu no lugar de [tooltip](../tooltips.md) ou [menu de contexto](../menus.md). Use tooltip para mostrar uma breve descrição que fica oculta depois de um determinado tempo. Use um menu de contexto para ações contextuais relacionadas a um elemento da interface do usuário, como copiar e colar.
 
-Para obter recomendações sobre quando usar um submenu versus quando usar uma caixa de diálogo (um controle semelhante), consulte [caixas de diálogo e submenus](index.md). 
+Para ver recomendações sobre quando usar um submenu e quando usar uma caixa de diálogo (um controle semelhante), confira [Caixas de diálogo e submenus](index.md). 
 
 ## <a name="examples"></a>Exemplos
 
@@ -51,7 +51,7 @@ Para obter recomendações sobre quando usar um submenu versus quando usar uma c
 ##  <a name="how-to-create-a-flyout"></a>Como criar um submenu
 
 
-Submenus são anexados a controles específicos. Você pode usar o [posicionamento](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.Placement) propriedade para especificar onde um submenu é exibido: Parte superior, esquerda, inferior, direita ou completo. Se você selecionar o [Modo de posicionamento completo](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode), o aplicativo se estende o submenu e centraliza na janela do aplicativo. Alguns controles, como [Button](/uwp/api/Windows.UI.Xaml.Controls.Button), fornecem uma propriedade [Flyout](/uwp/api/Windows.UI.Xaml.Controls.Button.Flyout) que você pode usar para associar a um submenu ou um [menu de contexto](../menus.md).
+Submenus são anexados a controles específicos. É possível usar a propriedade [Placement](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.Placement) para especificar onde o submenu será exibido: parte superior, esquerda, parte inferior, direita ou completo. Se você selecionar o [Modo de posicionamento completo](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode), o aplicativo se estende o submenu e centraliza na janela do aplicativo. Alguns controles, como [Button](/uwp/api/Windows.UI.Xaml.Controls.Button), fornecem uma propriedade [Flyout](/uwp/api/Windows.UI.Xaml.Controls.Button.Flyout) que você pode usar para associar a um submenu ou um [menu de contexto](../menus.md).
 
 Este exemplo cria um submenu simples que exibe algum texto quando o botão é pressionado.
 ````xaml
@@ -145,9 +145,9 @@ Para estilizar um submenu, modifique o [FlyoutPresenterStyle](https://docs.micro
 </Flyout>
 ````
 
-## <a name="styling-flyouts-for-10-foot-experiences"></a>Submenus de estilo para experiências de 10 pés
+## <a name="styling-flyouts-for-10-foot-experiences"></a>Definição de estilo de submenus para a experiência de 3 metros
 
-Ignore rapidamente os controles, como teclado de interceptação de submenu e foco de gamepad na interface do usuário transitória, até serem ignorados. Para fornecer uma indicação visual desse comportamento, ao ignorar rapidamente os controles de ignorar no Xbox para desenhar uma sobreposição que esmaece o contraste e visibilidade da interface do usuário fora do escopo. Esse comportamento pode ser modificado com a propriedade [`LightDismissOverlayMode`](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.LightDismissOverlayMode). Por padrão, os submenus desenham a sobreposição de ignorar rapidamente no Xbox, mas não em outras famílias de dispositivos, mas os aplicativos podem optar por forçar a sobreposição para estar sempre **Ativada** ou **Desativada**.
+Faça o light dismiss dos controles, como teclado de interceptação de submenu e foco de gamepad na interface do usuário transitória, até serem ignorados. Para fornecer uma indicação visual desse comportamento, faça light dismiss dos controles no Xbox para desenhar uma sobreposição que esmaece o contraste e a visibilidade da interface do usuário fora do escopo. Esse comportamento pode ser modificado com a propriedade [`LightDismissOverlayMode`](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.LightDismissOverlayMode). Por padrão, os submenus desenham a sobreposição de light dismiss no Xbox, mas não em outras famílias de dispositivos. No entanto, os aplicativos podem optar por forçar a sobreposição para estar sempre **Ativada** ou **Desativada**.
 
 ![Submenu com sobreposição de esmaecimento](../images/flyout-smoke.png)
 
@@ -155,20 +155,20 @@ Ignore rapidamente os controles, como teclado de interceptação de submenu e fo
 <MenuFlyout LightDismissOverlayMode="On">
 ```
 
-## <a name="light-dismiss-behavior"></a>Ignorar rapidamente comportamento
-Submenus podem ser fechados com uma ação de ignorar rápida, incluindo
+## <a name="light-dismiss-behavior"></a>Comportamento de light dismiss
+Os submenus podem ser fechados com uma ação light dismiss rápida, incluindo
 -   Tocar fora do submenu
 -   Pressionar a tecla Escape no teclado
 -   Pressionar o botão de Voltar do sistema de hardware ou software
--   Pressionar o botão do gamepad B
+-   Pressionar o botão B do gamepad
 
-Quando ignorar com um toque, esse gesto é normalmente absorvido e não passado para a interface do usuário abaixo. Por exemplo, se houver um botão visível por trás de um submenu aberto, o primeiro toque do usuário fecha o submenu, mas não ativa esse botão. Pressionar o botão requer um segundo toque.
+Ao ignorar com um toque, esse gesto é normalmente absorvido e não passado para a interface do usuário abaixo. Por exemplo, se houver um botão visível por trás de um submenu aberto, o primeiro toque do usuário fechará o submenu, mas não ativará esse botão. Pressionar o botão requer um segundo toque.
 
-Você pode alterar esse comportamento ao especificar o botão como um elemento de entrada de passagem para o submenu. O submenu fechará como resultado da ação de ignorar descrita acima e passará o evento de toque para o `OverlayInputPassThroughElement` designado. Considere adotar esse comportamento para acelerar as interações do usuário em itens com funcionalidade semelhante. Se o aplicativo tem uma coleção de favoritos e cada item na coleção inclui um submenu anexado, é razoável que os usuários possam querer interagir com diversos submenus em sucessão rápida.
+É possível alterar esse comportamento ao especificar o botão como um elemento de entrada de passagem para o submenu. O submenu fechará como resultado da ação de light dismiss descrita acima e passará o evento de toque para o `OverlayInputPassThroughElement` designado. Considere adotar esse comportamento para acelerar as interações do usuário em itens com funcionalidade semelhante. Se o aplicativo tem uma coleção de favoritos e cada item na coleção inclui um submenu anexado, é razoável esperar que os usuários queiram interagir com diversos submenus em sucessão rápida.
 
-[!NOTE] Tenha cuidado para não designar um sobreposição de elemento de passagem de entrada que resulta em uma ação destrutiva. Os usuários se acostumaram às ações de ignorar rápidas que não ativam a interface do usuário principal. Fechar, Excluir ou botões destrutivos semelhantes não devem ser ativados ao ignorar rapidamente para evitar o comportamento inesperado e interrupções.
+[!NOTE] Tenha cuidado para não designar uma sobreposição de elemento de passagem de entrada que resulta em uma ação destrutiva. Os usuários se acostumaram às ações de light dismiss rápidas que não ativam a interface do usuário principal. Fechar, Excluir ou botões destrutivos semelhantes não devem ser ativados ao fazer light dismiss rapidamente para evitar o comportamento inesperado e interrupções.
 
-No exemplo a seguir, todos os três botões dentro FavoritesBar serão ativados no primeiro toque.
+No exemplo a seguir, todos os três botões dentro de FavoritesBar serão ativados no primeiro toque.
 
 ````xaml
 <Page>
@@ -210,10 +210,10 @@ private void Folder2_Click(object sender, RoutedEventArgs e)
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – Veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 - [Dicas de ferramentas](../tooltips.md)
-- [Menus e menus de contexto](../menus.md)
-- [Classe de submenu](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+- [Menus e menu de contexto](../menus.md)
+- [Classe Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 - [Classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)

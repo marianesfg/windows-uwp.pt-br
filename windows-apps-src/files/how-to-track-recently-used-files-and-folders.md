@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 97ad2485abab0bd4733699bc4ffcf29e17a22844
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369445"
 ---
 # <a name="track-recently-used-files-and-folders"></a>Rastrear arquivos e pastas usados recentemente
@@ -25,15 +25,15 @@ Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à li
 Os itens recém-usados do aplicativo são representados pela classe [**StorageItemMostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList) que você obtém da propriedade estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist). Os itens recém-usados são armazenados como objetos [**IStorageItem**](https://docs.microsoft.com/uwp/api/Windows.Storage.IStorageItem), portanto, os objetos [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) (que representam arquivos) e [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) (que representam pastas) podem ser adicionados aos itens recém-usados.
 
 > [!NOTE]
-> Para obter exemplos completos, consulte a [exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994) e o [amostra de acesso de arquivo](https://go.microsoft.com/fwlink/p/?linkid=619995).
+> Para exemplos completos, consulte o [Exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994) e o [Exemplo de acesso a arquivos](https://go.microsoft.com/fwlink/p/?linkid=619995).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
--   **Compreender a programação assíncrona para aplicativos da plataforma Universal do Windows (UWP)**
+-   **Entender a programação assíncrona para aplicativos UWP (Plataforma Universal do Windows)**
 
     Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
--   **Permissões de acesso para o local**
+-   **Permissões de acesso ao local**
 
     Consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
@@ -52,10 +52,10 @@ Os itens recém-usados do aplicativo são representados pela classe [**StorageIt
     string mruToken = mru.Add(file, "profile pic");
     ```
 
-    [**StorageItemMostRecentlyUsedList.Add** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add) está sobrecarregado. No exemplo, usamos [**Add(IStorageItem, String)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add) para podermos associar metadados ao arquivo. A configuração de metadados permite que você registre a finalidade do item, por exemplo, "profile pic". Você também pode adicionar o arquivo à lista de itens recém-usados sem metadados chamando [**Add(IStorageItem)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add). Quando você adiciona um item à lista de itens recém-usados, o método retorna uma cadeia de caracteres de identificação exclusiva, denominada token, que é usada para recuperar o item.
+    [**StorageItemMostRecentlyUsedList.Add**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add) está sobrecarregado. No exemplo, usamos [**Add(IStorageItem, String)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add) para podermos associar metadados ao arquivo. A configuração de metadados permite que você registre a finalidade do item, por exemplo, "profile pic". Você também pode adicionar o arquivo à lista de itens recém-usados sem metadados chamando [**Add(IStorageItem)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add). Quando você adiciona um item à lista de itens recém-usados, o método retorna uma cadeia de caracteres de identificação exclusiva, denominada token, que é usada para recuperar o item.
 
 > [!TIP]
-> Você precisará do token para recuperar um item da lista MRU, portanto, mantenha-o em algum lugar. Para saber mais sobre dados de aplicativos, consulte [Gerenciando dados do aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh465109(v=win.10)).
+> Você precisará do token para recuperar um item da lista de itens recém-usados, portanto, mantenha-o em algum lugar. Para saber mais sobre dados de aplicativos, consulte [Gerenciando dados do aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh465109(v=win.10)).
 
 ## <a name="use-a-token-to-retrieve-an-item-from-the-mru"></a>Usar um token para recuperar um item da lista MRU
 

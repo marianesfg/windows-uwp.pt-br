@@ -3,34 +3,34 @@ title: Salvar e carregar configurações em um aplicativo UWP
 description: Saiba como salvar e carregar configurações do aplicativo em aplicativos da Plataforma Universal do Windows.
 ms.date: 05/07/2018
 ms.topic: article
-keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, configurações, salvar configurações, carregar configurações
+keywords: introdução, uwp, windows 10, caminho de aprendizagem, configurações, salvar configurações, carregar configurações
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 490dd8f0f3841fae089626ec9c283d54cc0d8cd9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66370491"
 ---
 # <a name="save-and-load-settings-in-a-uwp-app"></a>Salvar e carregar configurações em um aplicativo UWP
 
-Este tópico abrange o que você precisa saber para começar a carregar, salvar configurações em um aplicativo da UWP (Plataforma Universal do Windows). As APIs principais são introduzidas, e os links são fornecidos para ajudar você a saber mais.
+Este tópico aborda o que você precisa saber para começar a carregar, salvar configurações em um aplicativo UWP (Plataforma Universal do Windows). As APIs principais são introduzidas e os links são fornecidos para ajudar você a aprender mais.
 
-Use as configurações para lembrar os aspectos personalizáveis de seu aplicativo. Por exemplo, um leitor de notícias pode usar as configurações do aplicativo para salvar as fontes de notícias para exibição e qual fonte será usada para ler artigos.
+Use as configurações para lembrar os aspectos personalizáveis pelo usuário de seu aplicativo. Por exemplo, um leitor de notícias pode usar as configurações do aplicativo para salvar as fontes de notícias para exibição e qual fonte será usada para ler artigos.
 
-Vamos examinar o código para salvar e carregar as configurações do aplicativo, incluindo as configurações de locais e em roaming.
+Vamos examinar o código para salvar e carregar as configurações do aplicativo, incluindo as configurações locais e em roaming.
 
 ## <a name="what-do-you-need-to-know"></a>O que você precisa saber
 
-Use as configurações do aplicativo para armazenar dados de configuração, como as preferências do usuário e o estado do aplicativo.  Configurações específicas do dispositivo são armazenadas localmente. Configurações que se aplicam a qualquer dispositivo no qual o aplicativo está instalado são armazenadas no repositório de dados de roaming. Configurações fazem roaming entre os dispositivos nos quais o usuário está conectado com a mesma conta da Microsoft e têm a mesma versão do aplicativo instalado.
+Use as configurações do aplicativo para armazenar dados de configuração, como as preferências do usuário e o estado do aplicativo.  Configurações específicas do dispositivo são armazenadas localmente. Configurações que se aplicam a qualquer dispositivo no qual o aplicativo está instalado são armazenadas no armazenamento de dados de roaming. Configurações fazem roaming entre os dispositivos nos quais o usuário está conectado com a mesma Conta Microsoft e têm a mesma versão do aplicativo instalado.
 
-Os seguintes tipos de dados podem ser usados com as configurações: inteiros, duplicatas, flutuações, caracteres, cadeias de caracteres, pontos, DateTimes e muito mais. Você também pode armazenar as instâncias da classe [ApplicationDataCompositeValue](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCompositeValue), que é útil quando há várias configurações que devem ser tratadas como uma unidade. Por exemplo, um nome de fonte e um tamanho de ponto para exibir texto no painel de leitura do aplicativo deve ser salvo/restaurado como uma única unidade. Isso impede que uma configuração fique fora de sincronia com a outra devido a atrasos de roaming de uma configuração antes da outra.
+Os seguintes tipos de dados podem ser usados com as configurações: inteiros, duplicatas, flutuações, caracteres, cadeias de caracteres, pontos, DateTimes e muito mais. Você também pode armazenar instâncias da classe [ApplicationDataCompositeValue](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCompositeValue), o que é útil quando há várias configurações que devem ser tratadas como uma unidade. Por exemplo, um nome de fonte e um tamanho de ponto para exibir texto no painel de leitura do aplicativo deve ser salvo/restaurado como uma única unidade. Isso impede que uma configuração fique fora de sincronia com a outra devido a atrasos de roaming de uma configuração antes da outra.
 
-Veja as principais APIs que você conhecer para salvar ou carregar configurações do aplicativo:
+Veja as principais APIs que você precisa conhecer para salvar ou carregar configurações do aplicativo:
 
-- [Windows.Storage.ApplicationData.Current.LocalSettings](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData#Windows_Storage_ApplicationData_LocalSettings) obtém o contêiner de configurações do aplicativo do repositório de dados de aplicativo local. Armazene aqui as configurações que não são adequadas para roaming entre dispositivos, pois representam o estado específico do dispositivo ou são muito grandes.
-- [Windows.Storage.ApplicationData.Current.RoamingSettings](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingsettings#Windows_Storage_ApplicationData_RoamingSettings) obtém o contêiner de configurações do aplicativo do repositório de dados do aplicativo em roaming. Esses dados são movidos entre dispositivos.
+- [Windows.Storage.ApplicationData.Current.LocalSettings](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData#Windows_Storage_ApplicationData_LocalSettings) obtém o contêiner de configurações do aplicativo do armazenamento de dados de aplicativo local. Armazene aqui as configurações que não podem ser compartilhadas entre dispositivos, pois representam o estado específico do dispositivo ou são muito grandes.
+- [Windows.Storage.ApplicationData.Current.RoamingSettings](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingsettings#Windows_Storage_ApplicationData_RoamingSettings) obtém o contêiner de configurações do aplicativo do armazenamento de dados do aplicativo em roaming. Esses dados passam em roaming entre dispositivos.
 - [Windows.Storage.ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) é um contêiner que representa as configurações de aplicativo como pares chave/valor. Use essa classe para criar e recuperar os valores de configuração.
 - [Windows.Storage.ApplicationDataCompositeValue](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCompositeValue) representa diversas configurações de aplicativo que devem ser serializadas como uma unidade. Isso é útil quando uma configuração não deve ser atualizada independentemente de outra.
 
@@ -51,11 +51,11 @@ composite["FontSize"] = 11;
 roamingSettings.Values["RoamingFontInfo"] = composite;
  ```
 
-Salve uma configuração no dispositivo local obtendo um **ApplicationDataContainer** do repositório de dados de configurações local `Windows.Storage.ApplicationData.Current.LocalSettings`. Os pares de dicionário de chave/valor que você atribuir a essa instância são salvos no armazenamento de dados de configuração do dispositivo local.
+Salve uma configuração no dispositivo local obtendo primeiro um **ApplicationDataContainer** para o armazenamento de dados de configurações local com `Windows.Storage.ApplicationData.Current.LocalSettings`. Os pares de dicionário de chave/valor que você atribuir a essa instância serão salvos no armazenamento de dados de configuração do dispositivo local.
 
-Salve uma configuração de roaming usando um padrão semelhante. Primeiro obtenha **ApplicationDataContainer** para o armazenamento de dados de configurações de roaming com `Windows.Storage.ApplicationData.Current.RoamingSettings`. Em seguida, atribua pares de chave/valor a essa instância.  Os pares chave/valor passarão automaticamente entre dispositivos.
+Salve uma configuração de roaming usando um padrão semelhante. Primeiro obtenha **ApplicationDataContainer** para o armazenamento de dados de configurações de roaming com `Windows.Storage.ApplicationData.Current.RoamingSettings`. Em seguida, atribua pares de chave/valor a essa instância.  Os pares chave/valor serão compartilhados automaticamente entre dispositivos.
 
-No trecho de código acima, uma **ApplicationDataCompositeValue** armazena vários pares chave/valor. Valores de composição são úteis quando você tem várias configurações que não devem ficar fora de sincronia entre si. Ao salvar um **ApplicationDataCompositeValue**, os valores são salvos e carregados como uma unidade ou atomicamente. Assim, as configurações relacionadas não ficam fora de sincronia, pois fazem roaming como uma unidade em vez de individualmente.
+No snippet de código acima, uma **ApplicationDataCompositeValue** armazena vários pares chave/valor. Valores de composição são úteis quando você tem várias configurações que não devem ficar fora de sincronia entre si. Ao salvar um **ApplicationDataCompositeValue**, os valores são salvos e carregados como uma unidade ou atomicamente. Assim, as configurações relacionadas não ficam fora de sincronia, pois fazem roaming como uma unidade em vez de individualmente.
 
 ## <a name="load-app-settings"></a>Carregar configurações de aplicativo
 
@@ -74,32 +74,32 @@ if (composite != null)
 }
 ```
 
-Carregue uma configuração pelo dispositivo local obtendo uma instância **ApplicationDataContainer** do repositório de dados de configurações local `Windows.Storage.ApplicationData.Current.LocalSettings`. Em seguida, usá-a para recuperar pares chave/valor.
+Carregue uma configuração usando o dispositivo local obtendo primeiro uma instância **ApplicationDataContainer** do armazenamento de dados de configurações locais com `Windows.Storage.ApplicationData.Current.LocalSettings`. Em seguida, use- a para recuperar pares chave/valor.
 
-Carregue uma configuração de roaming seguindo um padrão semelhante. Primeiro obtenha uma instância **ApplicationDataContainer** para o armazenamento de dados de configurações de roaming com `Windows.Storage.ApplicationData.Current.RoamingSettings`. Acesse pares de chave/valor da instância. Se os dados ainda não foram movidos para o dispositivo usado para acessar as configurações, você receberá um **ApplicationDataContainer**  nulo. Por isso há uma marcação `if (composite != null)` no código de exemplo acima.
+Carregue uma configuração de roaming seguindo um padrão semelhante. Primeiro obtenha uma instância **ApplicationDataContainer** para o armazenamento de dados de configurações de roaming com `Windows.Storage.ApplicationData.Current.RoamingSettings`. Acesse pares de chave/valor dessa instância. Se os dados ainda não foram movidos para o dispositivo usado para acessar as configurações, você receberá um **ApplicationDataContainer** nulo. Por isso há uma verificação `if (composite != null)` no código de exemplo acima.
 
 ## <a name="useful-apis-and-docs"></a>APIs e documentos úteis
 
-Veja um resumo rápido de APIs e outras documentações úteis para ajudar você a começar a salvar e carregar configurações de aplicativos.
+Veja um resumo rápido de APIs e outras documentações úteis para ajudar você a começar a salvar e carregar configurações de aplicativo.
 
 ### <a name="useful-apis"></a>APIs úteis
 
 | API | Descrição |
 |------|---------------|
-| [ApplicationData.LocalSettings](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.temporaryfolder) | Obtém o contêiner do aplicativo do armazenamento de dados do aplicativo local. |
+| [ApplicationData.LocalSettings](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.temporaryfolder) | Obtém o contêiner de configurações do aplicativo do armazenamento de dados do aplicativo local. |
 | [ApplicationData.RoamingSettings](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingsettings) | Obtém o contêiner de configurações do aplicativo do armazenamento de dados do aplicativo em roaming. |
-| [ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) | Um contêiner de configurações de aplicativo que oferece suporte para criar, excluir, enumerar e percorrer a hierarquia do contêiner. |
+| [ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) | Um contêiner para configurações de aplicativo que dê suporte para criar, excluir, enumerar e percorrer a hierarquia do contêiner. |
 | [Namespace Windows.UI.ApplicationSettings](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings) | Fornece classes que você usará para definir as configurações do aplicativo que aparecem no painel configurações do Shell do Windows. |
 
 ### <a name="useful-docs"></a>Documentos úteis
 
 | Tópico | Descrição |
 |-------|----------------|
-| [Diretrizes para configurações de aplicativo](https://docs.microsoft.com/windows/uwp/design/app-settings/guidelines-for-app-settings) | Descreve as práticas recomendadas para criar e exibir configurações de aplicativo. |
-| [Armazene e recupere configurações e outros dados de aplicativo](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#create-and-read-a-local-file) | Noções básicas para salvar e recuperar configurações, incluindo configurações de roaming. |
+| [Diretrizes para configurações de aplicativos](https://docs.microsoft.com/windows/uwp/design/app-settings/guidelines-for-app-settings) | Descreve as melhores práticas para criar e exibir configurações de aplicativo. |
+| [Armazene e recupere configurações e outros dados de aplicativo](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#create-and-read-a-local-file) | Passo a passo para salvar e recuperar configurações, incluindo configurações de roaming. |
 
 ## <a name="useful-code-samples"></a>Exemplos de código úteis
 
 | Exemplo de código | Descrição |
 |-----------------|---------------|
-| [Exemplo de dados de aplicativo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData) | Cenários 2 a 4: foco em configurações |
+| [Amostra de dados de aplicativos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData) | Cenários 2 a 4: foco em configurações |

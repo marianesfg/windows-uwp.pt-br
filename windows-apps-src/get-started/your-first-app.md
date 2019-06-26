@@ -1,83 +1,77 @@
 ---
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
 title: Criar seu primeiro aplicativo
-description: Crie um aplicativo de plataforma Universal do Windows (UWP) para Windows 10 usando sua linguagem de programação favorita.
+description: Crie um aplicativo da UWP (Plataforma Universal do Windows) para Windows 10 usando sua linguagem de programação favorita.
 ms.date: 01/25/2017
 ms.topic: article
-keywords: Windows 10, uwp, primeiro app, c#, c + +, JavaScript
+keywords: Windows 10, uwp, primeiro aplicativo, c#, c + +, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 4627a3cfd2bad5f3c9740a1345b5e020ce7981fc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.openlocfilehash: 9e42f627624cb559a84b7da73958f7aa93b0fee2
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57657131"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "64564551"
 ---
 # <a name="create-your-first-app"></a>Criar seu primeiro aplicativo
 
 Bem-vindo à [plataforma UWP](universal-application-platform-guide.md)! Estes tutoriais o ajudarão a criar seu primeiro aplicativo UWP na linguagem de sua preferência.
 
-Para começar, escolha sua linguagem favorita!
+Para começar, escolha sua linguagem favorita.
 
 ## <a name="c-and-xaml"></a>C# e XAML
 
 Use seus conhecimentos sobre .NET, WPF ou Silverlight para criar aplicativos usando XAML com C#.
 
-* [Criar um "Olá, mundo" aplicativo usando XAML comC#](create-a-hello-world-app-xaml-universal.md)
+* [Criar um aplicativo "Olá, Mundo" usando XAML com C#](create-a-hello-world-app-xaml-universal.md)
 
-Se você quiser aprender as noções básicas, ou apenas refrescar sua memória, tente ler estes:
+Se quiser aprender as noções básicas ou apenas refrescar sua memória, leia:
 
-* [C#Conceitos básicos para iniciantes absolutos](https://go.microsoft.com/fwlink/?linkid=850801)
+* [Conceitos básicos do C# para iniciantes](https://go.microsoft.com/fwlink/?linkid=850801)
 * [Conceitos básicos do VB para iniciantes](https://go.microsoft.com/fwlink/?linkid=850802)
 * [Guia do desenvolvedor para o Windows 10](https://go.microsoft.com/fwlink/?linkid=850804)
-* [Microsoft Virtual Academy](https://www.microsoftvirtualacademy.com/)
 
 Se você está pronto para tentar algo um pouco mais divertido do que "Olá, Mundo", experimente estes tutoriais:
 
-* [XAML e associação de dados na UWP](xaml-basics-intro.md)
-* [Um UWP 2D simple jogo para a Microsoft Store, escrito em C# e o MonoGame](get-started-tutorial-game-mg2d.md)
+* [XAML e vinculação de dados na UWP](xaml-basics-intro.md)
+* [Um jogo UWP simples em 2D para a Microsoft Store, escrito em C# e MonoGame](get-started-tutorial-game-mg2d.md)
 
 
-## <a name="visualc-component-extensions-ccx-and-xaml"></a>Extensões de componentes do Visual C++ (C + + c++ /CX) e XAML
+## <a name="visualc-component-extensions-ccx-and-xaml"></a>Extensões de componentes do Visual C++ (C++/CX) e XAML
 
-Aproveite sua experiência de programação do C++ para compilar aplicativos usando extensões de componentes do Visual C++ (C + + c++ /CX) com XAML.
+Tire proveito de seus conhecimentos sobre programação em C++ para criar aplicativos utilizando as extensões de componente Visual C++ (C++/CX) com XAML.
 
-* [Criar um "Olá, mundo" usando XAML com C + + do aplicativo c++ /CX](create-a-basic-windows-10-app-in-cpp.md)
+* [Criar um aplicativo "Olá, Mundo" usando XAML com C++/CX](create-a-basic-windows-10-app-in-cpp.md)
 
 Saiba mais sobre C++ aqui:
 
-* [C++: Início rápido de uma linguagem de finalidade geral e a biblioteca](https://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
-* [Microsoft Virtual Academy](https://go.microsoft.com/fwlink/p/?LinkID=389916)
+* [C++ para aplicativos UWP](https://docs.microsoft.com/cpp/cppcx/universal-windows-apps-cpp?view=vs-2019)
+* [C++ para aplicativos da área de trabalho](https://docs.microsoft.com/cpp/windows/desktop-applications-visual-cpp?view=vs-2019)
 
 Se você está pronto para tentar algo um pouco mais divertido do que "Olá, Mundo", experimente estes tutoriais:
 
-* [XAML e associação de dados na UWP](xaml-basics-intro.md)
+* [XAML e vinculação de dados na UWP](xaml-basics-intro.md)
 
 ## <a name="javascript-and-html"></a>JavaScript e HTML
 
 Usufrua de seus conhecimentos sobre a Web para criar aplicativos usando HTML5, CSS3 e JavaScript.
 
-* [Criar um "Olá, mundo" aplicativo usando HTML e JavaScript](create-a-hello-world-app-js-uwp.md)
+* [Criar um aplicativo "Olá, Mundo" usando HTML e JavaScript](create-a-hello-world-app-js-uwp.md)
 
-Amplie suas habilidades em JavaScript e HTML para além da UWP para criar aplicativos Web ou explore a realidade virtual na Web com a WebVR
+Amplie suas habilidades em JavaScript e HTML para além da UWP para criar aplicativos Web ou explore a realidade virtual na Web com WebVR
 
 * [Documentação do desenvolvedor do Microsoft Edge](https://docs.microsoft.com/microsoft-edge/)
-* [Usar WebVR com o Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/webvr/)
+* [Usar WebVR com Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/webvr/)
 
-Os aplicativos Web podem ser empacotados facilmente na estrutura UWP como aplicativos Web hospedados e promovidos na Microsoft Store.
+Aplicativos Web podem ser empacotados facilmente na estrutura da UWP como aplicativos Web hospedados e promovidos na Microsoft Store.
 
 * [Aplicativos Web hospedados](https://developer.microsoft.com/windows/bridges/hosted-web-apps)
-* [Converter seu aplicativo web para um aplicativo UWP](../porting/hwa-create-windows.md)
+* [Converter seu aplicativo Web em um aplicativo UWP](../porting/hwa-create-windows.md)
 
-Precisa aprimorar suas habilidades na Web?
-
-* [Conceitos básicos de JavaScript para iniciantes](https://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
-* [HTML5 e CSS3 fundamentos para iniciantes absolutos](https://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
-* [Microsoft Virtual Academy](https://go.microsoft.com/fwlink/p/?LinkID=389916)
 
 ## <a name="see-also"></a>Consulte também
 
 * [Comece a codificar](create-uwp-apps.md)
 * [O que é um aplicativo UWP?](universal-application-platform-guide.md)
 * [Prepare-se para começar](get-set-up.md)
-* [Inscrever-se a conta do Windows](sign-up.md)
+* [Inscrever-se em uma conta do Windows](sign-up.md)

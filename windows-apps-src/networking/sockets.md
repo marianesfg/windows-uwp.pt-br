@@ -7,39 +7,39 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8278e02de4d0f9a0efa301051a57bf59bce8d520
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363296"
 ---
 # <a name="sockets"></a>Soquetes
 Soquetes são uma tecnologia de transferência de dados de baixo nível sobre o qual muitos protocolos de rede são implementados. UWP oferece classes de soquete de TCP e UDP para o cliente-servidor ou aplicativos ponto a ponto, se as conexões tiverem vida longa ou se uma conexão estabelecida não for necessária.
 
-Este tópico se concentra em como usar as classes de soquete da Plataforma Universal do Windows (UWP) que estão no namespace [**Windows.Networking.Networking**](/uwp/api/Windows.Networking.Sockets). Mas você também pode usar [Windows Sockets 2 (Winsock)](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2) em um aplicativo UWP.
+Este tópico se concentra em como usar as classes de soquete da UWP (Plataforma Universal do Windows) que estão no namespace [**Windows.Networking.Sockets**](/uwp/api/Windows.Networking.Sockets). Mas você também pode usar [Windows Sockets 2 (Winsock)](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2) em um aplicativo UWP.
 
 > [!NOTE]
-> Como consequência do [isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)), o Windows não permite estabelecer conexões de soquete (soquetes ou WinSock) entre dois aplicativos UWP em execução no mesmo computador, seja um endereço de loopback local (127.0.0.0) ou especificando explicitamente o endereço IP local. Para obter detalhes sobre mecanismos pelo qual os aplicativos UWP podem se comunicar uns com os outros, consulte [Comunicação entre aplicativos](/windows/uwp/app-to-app/index).
+> Como consequência do [isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)), o Windows não permite estabelecer conexões de soquete (Sockets ou WinSock) entre dois aplicativos UWP em execução no mesmo computador, seja usando um endereço de loopback local (127.0.0.0) ou especificando explicitamente o endereço IP local. Para obter detalhes sobre mecanismos pelos quais aplicativos UWP podem se comunicar uns com os outros, consulte [Comunicação entre aplicativos](/windows/uwp/app-to-app/index).
 
-## <a name="build-a-basic-tcp-socket-client-and-server"></a>Crie um cliente de soquete TCP básico e servidor
+## <a name="build-a-basic-tcp-socket-client-and-server"></a>Criar um cliente e um servidor de soquete TCP básico
 Um soquete TCP (protocolo TCP) fornece transferências de dados de rede em baixo nível em qualquer direção para conexões de longa duração. Os soquetes TCP são o recurso subjacente usado pela maioria dos protocolos de rede disponíveis na Internet. Para demonstrar as operações básicas de TCP, o código de exemplo abaixo mostra um [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) e um [**StreamSocketListener**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener) enviando e recebendo dados por TCP para formar um cliente de eco e o servidor.
 
-Para começar com menos partes móveis possível&mdash;e para evitar problemas de isolamento de rede para o presente&mdash;crie um novo projeto e coloque o cliente e o código de servidor abaixo no mesmo projeto.
+Para começar com o menor número de partes móveis possível (e para evitar problemas de isolamento de rede no momento), crie um projeto e coloque o código de cliente e do servidor abaixo no mesmo projeto.
 
-Você precisará [declarar uma funcionalidade do aplicativo](../packaging/app-capability-declarations.md) em seu projeto. Abra o arquivo de origem do manifesto do pacote do aplicativo (o arquivo `Package.appxmanifest`) e, na guia Funcionalidades, marque **Redes Privadas (Cliente e Servidor)** . Isso é o que é exibido na marcação `Package.appxmanifest`.
+Você precisará [declarar uma funcionalidade do aplicativo](../packaging/app-capability-declarations.md) em seu projeto. Abra o arquivo de origem do manifesto do pacote do aplicativo (o arquivo `Package.appxmanifest`) e, na guia Funcionalidades, marque **Redes Privadas (Cliente e Servidor)** . Na marcação `Package.appxmanifest`, isso se parece com o seguinte.
 
 ```xml
 <Capability Name="privateNetworkClientServer" />
 ```
 
-Em vez de `privateNetworkClientServer`, você pode declarar `internetClientServer` se estiver se conectando pela Internet. **StreamSocket** e **StreamSocketListener** precisam que uma ou outra destas funcionalidades sejam declaradas.
+Em vez de `privateNetworkClientServer`, você pode declarar `internetClientServer` se está se conectando pela Internet. **StreamSocket** e **StreamSocketListener** precisam que uma ou outra destas funcionalidades de aplicativo sejam declaradas.
 
 ### <a name="an-echo-client-and-server-using-tcp-sockets"></a>Um cliente de eco e o servidor, usando soquetes TCP
-Construa um [**StreamSocketListener**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener) e inicie a escuta de conexões TCP de entrada. O evento [**StreamSocketListener.Connectionreceived**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener.ConnectionReceived) é acionado sempre que um cliente estabelece uma conexão com o **StreamSocketListener**.
+Construa um [**StreamSocketListener**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener) e comece a escutar conexões TCP de entrada. O evento [**StreamSocketListener.ConnectionReceived**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener.ConnectionReceived) é acionado sempre que um cliente estabelece uma conexão com o **StreamSocketListener**.
 
-Também construa um [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket), estabeleça uma conexão com o servidor, envie uma solicitação e receba uma resposta.
+Além disso, construa um [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket), estabeleça uma conexão com o servidor, envie uma solicitação e receba uma resposta.
 
-Crie uma nova **Página** chamada `StreamSocketAndListenerPage`. Coloque a marcação XAML no `StreamSocketAndListenerPage.xaml` e o coloque a necessidade de código dentro da classe `StreamSocketAndListenerPage`.
+Crie uma nova **Página** chamada `StreamSocketAndListenerPage`. Coloque a marcação XAML no `StreamSocketAndListenerPage.xaml` e coloque o código imperativo dentro da classe `StreamSocketAndListenerPage`.
 
 ```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -501,13 +501,13 @@ private:
     }
 ```
 
-## <a name="references-to-streamsockets-in-c-ppl-continuations-applies-to-ccx-primarily"></a>Referências a StreamSockets em continuações do PPL em C++ (aplicável a C++/CX, primariamente)
+## <a name="references-to-streamsockets-in-c-ppl-continuations-applies-to-ccx-primarily"></a>Referências a StreamSockets em continuações de PPL em C++ (aplicável a C++/CX, primariamente)
 > [!NOTE]
-> Se você usar corrotinas C++/WinRT e passar parâmetros por valor, esse problema não se aplica. Para ver recomendações de passagem de parâmetros, consulte [Operações de concorrência e assíncrona com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing).
+> Se você usa corrotinas C++/WinRT e passar parâmetros por valor, esse problema não se aplica. Para ver recomendações de passagem de parâmetros, consulte [Simultaneidade e operações assíncronas com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing).
 
-Um [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket?branch=live) permanece ativo, desde que seja uma leitura/gravação ativa em seu fluxo de entrada/saída (por exemplo o [**StreamSocketListenerConnectionReceivedEventArgs.Socket**](/uwp/api/windows.networking.sockets.streamsocketlistenerconnectionreceivedeventargs.Socket) que você tem acesso em seu manipulador de eventos [**StreamSocketListener.ConnectionReceived**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener.ConnectionReceived)). Ao chamar [**DataReader.LoadAsync**](/uwp/api/windows.storage.streams.datareader.loadasync) (ou `ReadAsync/WriteAsync/StoreAsync`), então, ele mantém uma referência para o soquete (por meio do fluxo de entrada do soquete) até que o identificador do evento **Concluído** (se houver) do **LoadAsync** tenha terminado a execução.
+Um [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket?branch=live) permanece ativo desde que haja uma leitura/gravação ativa em seu fluxo de entrada/saída (por exemplo, o [**StreamSocketListenerConnectionReceivedEventArgs.Socket**](/uwp/api/windows.networking.sockets.streamsocketlistenerconnectionreceivedeventargs.Socket) a que você tem acesso em seu manipulador de eventos [**StreamSocketListener.ConnectionReceived**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener.ConnectionReceived)). Ao chamar [**DataReader.LoadAsync**](/uwp/api/windows.storage.streams.datareader.loadasync) (ou `ReadAsync/WriteAsync/StoreAsync`), ele mantém uma referência ao soquete (por meio do fluxo de entrada do soquete) até que o manipulador de eventos **Concluído** (se houver) de **LoadAsync** tenha terminado a execução.
 
-O Padrão PPL (PPL) não agenda continuações de tarefa embutidas por padrão. Em outras palavras, adicionar uma tarefa de continuação (com `task::then()`) não garante que a tarefa de continuação será executada embutida como o manipulador de conclusão.
+O Padrão PPL (Parallel Patterns Library) não agenda continuações de tarefa embutidas por padrão. Em outras palavras, adicionar uma tarefa de continuação (com `task::then()`) não garante que a tarefa de continuação será executada embutida como o manipulador de conclusão.
 
 ```cpp
 void StreamSocketListener_ConnectionReceived(Windows::Networking::Sockets::StreamSocketListener^ sender, Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs^ args)
@@ -521,9 +521,9 @@ void StreamSocketListener_ConnectionReceived(Windows::Networking::Sockets::Strea
 }
 ```
 
-Da perspectiva do **StreamSocket**, o manipulador de conclusão é feito em execução (e o soquete está qualificado para descarte) antes do corpo de continuação ser executado. Portanto, para fazer com que o soquete não seja descartado se você quiser usá-lo dentro dessa continuação, você precisa referenciar o soquete diretamente (através da captura de lambda) e usá-lo, ou indiretamente (continuando a acessar `args->Socket` dentro das continuações), ou forçando as tarefas de continuação para ser embutido. Você pode ver a primeira técnica (captura de lambda) em ação no [StreamSocket sample](https://go.microsoft.com/fwlink/p/?LinkId=620609). O código C++/CX na seção [Criar um cliente de soquete TCP básico e servidor](#build-a-basic-tcp-socket-client-and-server) acima usa a segunda técnica&mdash;ela exibe a solicitação de volta como resposta, e ele acessa `args->Socket` de dentro de uma das mais internas continuações.
+Da perspectiva do **StreamSocket**, o manipulador de conclusão termina de ser executado (e o soquete é qualificado para descarte) antes do corpo de continuação ser executado. Portanto, para fazer com que o soquete não seja descartado se você quiser usá-lo dentro dessa continuação, você precisará referenciar o soquete diretamente (por meio da captura de lambda) e usá-lo, indiretamente (continuando a acessar `args->Socket` dentro das continuações) ou forçar que as tarefas de continuação sejam embutidas. Você pode ver a primeira técnica (captura de lambda) em ação na [Amostra de StreamSocket](https://go.microsoft.com/fwlink/p/?LinkId=620609). O código C++/CX na seção [Criar um cliente e um servidor de soquete TCP básico](#build-a-basic-tcp-socket-client-and-server) acima usa a segunda técnica – ela exibe a solicitação de volta como resposta e acessa `args->Socket` de dentro de uma das continuações mais internas.
 
-A terceira técnica é apropriada quando você não estiver exibindo uma resposta de volta. Você usa a opção `task_continuation_context::use_synchronous_execution()` para forçar o PPL a executar a continuação do corpo embutido. Aqui está um exemplo de código mostrando como fazê-lo.
+A terceira técnica é apropriada quando você não está ecoando uma resposta de volta. Você usa a opção `task_continuation_context::use_synchronous_execution()` para forçar o PPL a executar o corpo de continuação embutido. Aqui está um exemplo de código mostrando como fazê-lo.
 
 ```cpp
 void StreamSocketListener_ConnectionReceived(Windows::Networking::Sockets::StreamSocketListener^ sender, Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs^ args)
@@ -550,19 +550,19 @@ void StreamSocketListener_ConnectionReceived(Windows::Networking::Sockets::Strea
 }
 ```
 
-Este comportamento se aplica a todos os soquetes e classes WebSockets no namespace [**Networking**](/uwp/api/Windows.Networking.Sockets?branch=live). Mas cenários do lado do cliente geralmente armazenam soquetes em variáveis membro, portanto, o problema é mais aplicável ao cenário [**StreamSocketListener.ConnectionReceived**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener.ConnectionReceived), conforme ilustrado acima.
+Este comportamento se aplica a todos os soquetes e classes WebSockets no namespace [**Windows.Networking.Sockets**](/uwp/api/Windows.Networking.Sockets?branch=live). No entanto, cenários do lado do cliente geralmente armazenam soquetes em variáveis membro, portanto, o problema é mais aplicável ao cenário [**StreamSocketListener.ConnectionReceived**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener.ConnectionReceived), conforme ilustrado acima.
 
-## <a name="build-a-basic-udp-socket-client-and-server"></a>Criar um cliente de soquete UDP básico e servidor
-Um soquete UDP (User Datagram Protocol) é semelhante a um soquete TCP que também fornece transferências de dados de rede de baixo nível em qualquer direção. Porém, enquanto um soquete TCP é usado para conexões de longa duração, um soquete UDP é usado para aplicativos em que não é necessária uma conexão estabelecida. Como os soquetes UDP não mantêm conexão nos dois pontos de extremidade, eles fornecem uma solução rápida e simples de rede entre computadores remotos. Porém, os soquetes UDP não garantem a integridade dos pacotes de rede ou se eles são recebidos no destino remoto. Então, seu aplicativo precisa ser projetado para tolerar isso. Alguns exemplos de aplicativos que usam soquetes UDP são a descoberta de rede local e clientes de chat local.
+## <a name="build-a-basic-udp-socket-client-and-server"></a>Criar um cliente e um servidor de soquete UDP básico
+Um soquete do protocolo UDP é semelhante a um soquete TCP porque também fornece transferências de dados de rede de baixo nível em qualquer direção. Porém, enquanto um soquete TCP é usado para conexões de longa duração, um soquete UDP é usado para aplicativos em que não é necessário ter uma conexão estabelecida. Como os soquetes UDP não mantêm a conexão nos dois pontos de extremidade, eles fornecem uma solução rápida e simples de rede entre computadores remotos. Porém, os soquetes UDP não garantem a integridade dos pacotes de rede nem garantem se eles são recebidos no destino remoto. Sendo assim, seu aplicativo precisará ser projetado para tolerar isso. Alguns exemplos de aplicativos que usam soquetes UDP são a descoberta de rede local e clientes de chat local.
 
-Para demonstrar as operações básicas de UDP, o código de exemplo abaixo mostra a classe [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) sendo usada tanto para enviar como para receber dados por UDP para formar um cliente de eco e o servidor. Crie um novo projeto e coloque o cliente e o código do servidor abaixo no mesmo projeto. Assim como acontece com um soquete TCP, será necessário declarar a funcionalidade de aplicativo **Redes Privadas (Cliente & Servidor)** .
+Para demonstrar as operações básicas de UDP, o código de exemplo abaixo mostra a classe [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) sendo usada tanto para enviar quanto para receber dados por UDP para formar um cliente de eco e o servidor. Crie um projeto e coloque o cliente e o código do servidor abaixo no mesmo projeto. Assim como acontece com um soquete TCP, será necessário declarar a funcionalidade de aplicativo **Redes Privadas (Cliente & Servidor)** .
 
 ### <a name="an-echo-client-and-server-using-udp-sockets"></a>Um cliente de eco e o servidor, usando soquetes UDP
-Construa um [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) para reproduzir a função do servidor de eco, associá-lo a um número de porta específico, e escutar uma mensagem de UDP de entrada e reproduzi-la de volta. O evento [**DatagramSocket.MessageReceived**](/uwp/api/Windows.Networking.Sockets.DatagramSocket.MessageReceived) é acionado quando uma mensagem é recebida no soquete.
+Construa um [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) para reproduzir a função do servidor de eco, associá-lo a um número de porta específico, escutar uma mensagem de UDP de entrada e reproduzi-la de volta. O evento [**DatagramSocket.MessageReceived**](/uwp/api/Windows.Networking.Sockets.DatagramSocket.MessageReceived) é acionado quando uma mensagem é recebida no soquete.
 
-Construa um outro **DatagramSocket** para reproduzir a função do cliente de eco, associe-o a um número de porta específico, envie uma mensagem de UDP de entrada e receba a resposta.
+Construa outro **DatagramSocket** para reproduzir a função do cliente de eco, associá-la a um número de porta específico, envie uma mensagem de UDP e receber a resposta.
 
-Crie uma nova **Página** chamada `DatagramSocketPage`. Coloque a marcação XAML no `DatagramSocketPage.xaml` e o coloque a necessidade de código dentro da classe `DatagramSocketPage`.
+Crie uma nova **Página** chamada `DatagramSocketPage`. Coloque a marcação XAML no `DatagramSocketPage.xaml` e coloque o código imperativo dentro da classe `DatagramSocketPage`.
 
 ```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -997,12 +997,12 @@ private:
 ```
 
 ## <a name="background-operations-and-the-socket-broker"></a>Operações em segundo plano e o agente de soquete
-Você pode usar o agente de soquete e gatilhos de canal, para garantir que seu aplicativo receba corretamente dados ou conexões em soquetes quando ele não estiver em primeiro plano. Para obter mais informações, consulte [Comunicações de rede em segundo plano](network-communications-in-the-background.md).
+Você pode usar o agente de soquete e os gatilhos de canal de controle para garantir que seu aplicativo receba corretamente dados ou conexões em soquetes quando não estiver em primeiro plano. Para obter mais informações, consulte [Comunicações de rede em segundo plano](network-communications-in-the-background.md).
 
 ## <a name="batched-sends"></a>Envios em lote
-Sempre que você gravar no fluxo associado a um soquete, uma transição ocorre do modo de usuário (seu código) para o modo de kernel (onde a pilha de rede está). Se você estiver escrevendo vários buffers de cada vez, então estas transições repetidas irão compor em considerável sobrecarga. Envios em lote é uma maneira de enviar vários buffers de dados juntos e evitar essa sobrecarga. Isso é especialmente útil se seu aplicativo está fazendo VoIP, VPN ou outras tarefas que envolvem mover uma grande quantidade de dados de forma mais eficiente possível.
+Sempre que você gravar no fluxo associado a um soquete, uma transição ocorrerá do modo de usuário (seu código) para o modo kernel (no qual a pilha de rede está). Se você estiver escrevendo vários buffers de cada vez, estas transições repetidas gerarão uma sobrecarga considerável. Fazer os envios em lote é uma maneira de enviar vários buffers de dados juntos e evitar essa sobrecarga. Isso é especialmente útil se seu aplicativo está fazendo VoIP, VPN ou outras tarefas que envolvem mover uma grande quantidade de dados da forma mais eficiente possível.
 
-Esta seção demonstra algumas técnicas envios em lote que você pode usar com um [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) ou um [**DatagramSocket** ](/uwp/api/Windows.Networking.Sockets.DatagramSocket) conectado.
+Esta seção demonstra algumas técnicas de envios em lote que você pode usar com um [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) ou um [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) conectado.
 
 Para obter uma linha de base, vamos ver como enviar um grande número de buffers de forma ineficiente. Aqui está uma demonstração mínima, usando um **StreamSocket**.
 
@@ -1179,7 +1179,7 @@ private:
     }
 ```
 
-Esse primeiro exemplo de uma técnica mais eficiente só é adequado se você estiver usando C#. Altere `OnNavigatedTo` para chamar `BatchedSendsCSharpOnly`, ao invés de `SendMultipleBuffersInefficiently` ou `SendMultipleBuffersInefficientlyAsync`.
+Esse primeiro exemplo de uma técnica mais eficiente só é adequado quando você está usando C#. Altere `OnNavigatedTo` para chamar `BatchedSendsCSharpOnly`, em vez de `SendMultipleBuffersInefficiently` ou `SendMultipleBuffersInefficientlyAsync`.
 
 ```csharp
 // A C#-only technique for batched sends.
@@ -1202,7 +1202,7 @@ private async void BatchedSendsCSharpOnly(Windows.Networking.Sockets.StreamSocke
 }
 ```
 
-O exemplo a seguir é adequado para qualquer linguagem UWP, não apenas para C#. Ele depende do comportamento em [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) e [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream) que envia em lotes juntos. As chamadas de técnica [ **FlushAsync** ](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) naquele fluxo de saída que, a partir do Windows 10, é garantido para retornar somente depois de concluíram todas as operações no fluxo de saída.
+O exemplo a seguir é adequado para qualquer linguagem UWP, não apenas para C#. Ele depende do comportamento em [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) e [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream) que faz os envios em lote. A técnica chama [**FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) nesse fluxo de saída que, desde o Windows 10, garante que o retorno ocorrerá somente depois que todas as operações no fluxo de saída forem concluídas.
 
 ```csharp
 // An implementation of batched sends suitable for any UWP language.
@@ -1272,20 +1272,20 @@ private:
     }
 ```
 
-Existem algumas limitações importantes impostas por usar envios em lote no seu código.
+Algumas limitações importantes são impostas ao usar envios em lote em seu código.
 
 -   Você não pode modificar o conteúdo das instâncias **IBuffer** que estão sendo gravadas até que a gravação assíncrona seja concluída.
 -   O padrão **FlushAsync** só funciona em **StreamSocket.OutputStream** e **DatagramSocket.OutputStream**.
--   O **FlushAsync** padrão só funciona no Windows 10 em diante.
+-   O padrão **FlushAsync** só funciona do Windows 10 em diante.
 -   Em outros casos, use [**Task.WaitAll**](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___), em vez do padrão **FlushAsync**.
 
 ## <a name="port-sharing-for-datagramsocket"></a>Compartilhamento de DatagramSocket de porta
-Você pode configurar um [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) para coexistir com outros soquetes multicast do Win32 ou UWP associados ao mesmo endereço/porta. Você faz isso definindo [**DatagramSocketControl.MulticastOnly**](/uwp/api/Windows.Networking.Sockets.DatagramSocketControl.MulticastOnly) para `true` antes da associação ou conexão do soquete. Acessar uma instância do **DatagramSocketControl** a partir do próprio objeto **DatagramSocket** por meio de sua propriedade [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.datagramsocket.Control).
+Você pode configurar um [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) para coexistir com outros soquetes multicast do Win32 ou UWP associados ao mesmo endereço/porta. Você faz isso definindo [**DatagramSocketControl.MulticastOnly**](/uwp/api/Windows.Networking.Sockets.DatagramSocketControl.MulticastOnly) como `true` antes da associação ou conexão do soquete. Acesse uma instância de **DatagramSocketControl** do próprio objeto **DatagramSocket** por meio de sua propriedade [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.datagramsocket.Control).
 
 ## <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Fornecendo um certificado cliente com a classe StreamSocket
-[**StreamSocket** ](/uwp/api/Windows.Networking.Sockets.StreamSocket) dá suporte ao uso de SSL/TLS para autenticar o servidor que está se comunicando com o aplicativo cliente. Em certos casos, o aplicativo cliente também precisa autenticar-se ao servidor usando um certificado cliente SSL/TLS. Você pode fornecer um certificado de cliente com a propriedade [**StreamSocketControl.ClientCertificate**](/uwp/api/windows.networking.sockets.streamsocketcontrol.ClientCertificate) antes da associação ou conexão do soquete (ele deve ser definido antes do handshake SSL/TLS ser iniciado). Acessar uma instância do **StreamSocketControl** a partir do próprio objeto **StreamSocket** por meio de sua propriedade [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.streamsocket.Control). Se o servidor solicitar o certificado cliente, então o Windows responderá com o certificado cliente fornecido.
+[ **StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) dá suporte ao uso de SSL/TLS para autenticar o servidor com o qual o aplicativo cliente se comunica. Em alguns casos, o aplicativo cliente também precisa se autenticar no servidor usando um certificado cliente SSL/TLS. Você pode fornecer a um certificado de cliente a propriedade [**StreamSocketControl.ClientCertificate**](/uwp/api/windows.networking.sockets.streamsocketcontrol.ClientCertificate) antes da associação ou conexão do soquete (ele precisa ser definido antes do handshake SSL/TLS ser iniciado). Acesse uma instância de **StreamSocketControl** do próprio objeto **StreamSocket** por meio de sua propriedade [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.streamsocket.Control). Se o servidor solicitar o certificado do cliente, o Windows responderá com o certificado cliente fornecido por você.
 
-Use uma substituição dos [**StreamSocket.ConnectAsync**](/uwp/api/windows.networking.sockets.streamsocket.connectasync) que leva um [**SocketProtectionLevel**](/uwp/api/windows.networking.sockets.socketprotectionlevel), conforme mostrado neste exemplo mínimo de código.
+Use uma substituição de [**StreamSocket.ConnectAsync**](/uwp/api/windows.networking.sockets.streamsocket.connectasync) que usa um [**SocketProtectionLevel**](/uwp/api/windows.networking.sockets.socketprotectionlevel), conforme mostrado neste exemplo mínimo de código.
 
 > [!IMPORTANT]
 > Conforme indicado pelo comentário nos exemplos de código abaixo, seu projeto precisa declarar a funcionalidade de aplicativo sharedUserCertificates para que esse código funcione.
@@ -1341,14 +1341,14 @@ Concurrency::create_task(Windows::Security::Cryptography::Certificates::Certific
 });
 ```
 
-## <a name="handling-exceptions"></a>Tratando exceções
+## <a name="handling-exceptions"></a>Como tratar exceções
 Um erro encontrado em uma operação [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket), [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) ou [**StreamSocketListener**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener) é retornado como um valor **HRESULT**. Você pode passar o valor **HRESULT** para o método [**SocketError.GetStatus**](/uwp/api/windows.networking.sockets.socketerror.getstatus) convertê-lo em um valor de enumeração [**SocketErrorStatus**](/uwp/api/Windows.Networking.Sockets.SocketErrorStatus).
 
-A maioria dos valores de enumeração **SocketErrorStatus** correspondem a um erro retornado pela operação nativa do Windows Sockets. Seu aplicativo pode alternar um valor específico de enumeração **SocketErrorStatus** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
+A maioria dos valores de enumeração **SocketErrorStatus** correspondem a um erro retornado pela operação nativa do Windows Sockets. Seu aplicativo pode acionar valores de enumeração de **SocketErrorStatus** para modificar o comportamento do aplicativo dependendo da causa da exceção.
 
-Para erros de validação de parâmetro, é possível usar o **HRESULT** baseado na exceção para obter informações mais detalhadas sobre o erro. Possíveis valores de **HRESULT** são listados em `Winerror.h`, que podem ser encontrado em sua instalação do SDK (por exemplo, na pasta `C:\Program Files (x86)\Windows Kits\10\Include\<VERSION>\shared`). Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E_INVALIDARG**.
+Para erros de validação de parâmetro, é possível usar o **HRESULT** baseado na exceção para obter informações mais detalhadas sobre o erro. Possíveis valores de **HRESULT** são listados em `Winerror.h`, que pode ser encontrado em sua instalação do SDK (por exemplo, na pasta `C:\Program Files (x86)\Windows Kits\10\Include\<VERSION>\shared`). Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E_INVALIDARG**.
 
-O construtor [**HostName**](/uwp/api/Windows.Networking.HostName) pode gerar uma exceção se a sequência passada não for um nome do host válido. Por exemplo, ele contém caracteres que não são permitidos, que é provável que se o nome do host é digitado em seu aplicativo pelo usuário. Construir um **HostName** dentro de um bloco try/catch. Desta forma, se uma exceção for gerada, o aplicativo poderá notificar o usuário e solicitar um novo nome do host.
+O construtor [**HostName**](/uwp/api/Windows.Networking.HostName) poderá gerar uma exceção se a sequência passada não for um nome do host válido. Por exemplo, ela contém caracteres que não são permitidos, o que é provável se o nome do host foi digitado em seu aplicativo pelo usuário. Construa um **HostName** dentro de um bloco try/catch. Dessa forma, se uma exceção for gerada, o aplicativo poderá notificar o usuário e solicitar um novo nome do host.
 
 ## <a name="important-apis"></a>APIs Importantes
 * [CertificateQuery](/uwp/api/windows.security.cryptography.certificates.certificatequery)
@@ -1381,7 +1381,7 @@ O construtor [**HostName**](/uwp/api/Windows.Networking.HostName) pode gerar uma
 * [Comunicação de aplicativo a aplicativo](/windows/uwp/app-to-app/index)
 * [Simultaneidade e operações assíncronas com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)
 * [Como definir recursos de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-* [Windows Sockets (Winsock) de 2](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)
+* [Windows Sockets 2 (Winsock)](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)
 
 ## <a name="samples"></a>Exemplos
 * [Exemplo do StreamSocket](https://go.microsoft.com/fwlink/p/?LinkId=620609)

@@ -1,20 +1,20 @@
 ---
-title: O que há de novo nos documentos do Windows em setembro de 2018 – desenvolva aplicativos UWP
-description: Foram adicionados novos recursos, vídeos, exemplos e orientações para desenvolvedores para a documentação do desenvolvedor do Windows 10 de setembro de 2018.
-keywords: o que há de novo, update, recursos, diretrizes para desenvolvedores, Windows 10 de setembro
+title: Novidades do Windows Docs em setembro de 2018 – Desenvolver aplicativos UWP
+description: Novos recursos, vídeos, amostras e diretrizes para desenvolvedores foram adicionados à documentação do desenvolvedor Windows 10 de setembro de 2018.
+keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, Windows 10, setembro
 ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0876b2d9b65143cde2387a42e221460cc617cf0b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618251"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63800486"
 ---
-# <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>O que há de novo nos documentos de desenvolvedor do Windows em setembro de 2018
+# <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novidades dos documentos de desenvolvedor do Windows em setembro de 2018
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. Visões gerais de recursos, diretrizes para desenvolvedores e vídeos a seguir estavam disponíveis no mês de setembro.
+A Documentação do Desenvolvedor Windows recebe atualizações constantes com informações sobre novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As visões gerais de recursos, as diretrizes para desenvolvedores e os vídeos a seguir foram disponibilizados em setembro.
 
 [Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -22,41 +22,41 @@ A documentação do desenvolvedor do Windows está sendo constantemente atualiza
 
 ### <a name="windows-machine-learning"></a>Windows Machine Learning
 
-[Os documentos de aprendizado de máquina do Windows](https://docs.microsoft.com/windows/ai/) agora residem em seu próprio site e são atualizados para o SDK mais recente do Windows Insider. Há tutoriais UWP em C++ e área de trabalho e C# para ajudar você a começar a adicionar WinML ao seu aplicativo.
+[Os documentos do Windows Machine Learning](https://docs.microsoft.com/windows/ai/) agora residem em seu próprio site e são atualizados para o SDK mais recente do Windows Insider. Há tutoriais de área de trabalho e da UWP em C++ e C# para ajudar você a começar a adicionar WinML ao seu aplicativo.
 
-[A referência de API Windows.AI.MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) foi atualizado para o SDK mais recente do Windows Insider.
+[A referência de API Windows.AI.MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) foi atualizada para o SDK mais recente do Windows Insider.
 
-[O repositório do GitHub do Windows-Machine-Learning](https://github.com/Microsoft/Windows-Machine-Learning) foi atualizada com novos exemplos que funcionam com o SDK mais recente.
+[O repositório do GitHub do Windows-Machine-Learning](https://github.com/Microsoft/Windows-Machine-Learning) foi atualizado com novos exemplos que funcionam com o SDK mais recente.
 
-![Gráfico de aprendizado de máquina do Windows](images/winml-graphic.png)
+![Gráfico do Windows Machine Learning](images/winml-graphic.png)
 
 ### <a name="windows-ui-library"></a>Biblioteca de Interface do Usuário do Windows
 
-[A biblioteca de interface do usuário do Windows](https://aka.ms/winui-docs) é um conjunto de pacotes do NuGet que fornecem elementos de interface de outro usuário e controles para aplicativos UWP. Esses pacotes também são compatíveis com versões anteriores do Windows 10, para que seu aplicativo funciona mesmo se os usuários não tiverem a versão mais recente do sistema operacional.
+[A biblioteca de interface do usuário do Windows](https://aka.ms/winui-docs) é um conjunto de pacotes NuGet que fornecem controles e outros elementos de interface do usuário para aplicativos UWP. Esses pacotes também são compatíveis com versões anteriores do Windows 10 para que seu aplicativo funcione mesmo que os usuários não tenham a versão do sistema operacional mais recente.
 
-Para obter mais informações sobre a biblioteca de interface do usuário do Windows, consulte [esta lista de namespaces de API incluídos no pacote do NuGet.](https://docs.microsoft.com/uwp/api/overview/winui/)
+Para obter mais informações sobre a biblioteca de interface do usuário do Windows, consulte [esta lista de namespaces de API inclusos no pacote do NuGet.](https://docs.microsoft.com/uwp/api/overview/winui/)
 
-## <a name="developer-guidance"></a>Diretrizes para desenvolvedor
+## <a name="developer-guidance"></a>Diretrizes do desenvolvedor
 
-### <a name="how-blur-effects-work"></a>Como o trabalho de efeitos de desfoque
+### <a name="how-blur-effects-work"></a>Como efeitos de desfoque funcionam
 
-Um dos nossos escritores, Mike Jacobs a isso, começou uma série de artigos em meio sobre desfoque, de visão e fotografia ao design de aplicativos e jogos. Se você estiver interessado em aprender mais sobre esse efeito visual onipresente, fazer check-out [o primeiro artigo sobre visão e fotografia](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) e [a segunda de suavização em gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+Um de nossos escritores, o estimado Mike Jacobs, começou uma série de artigos no Medium sobre desfoque, da visão à fotografia e ao design de aplicativos e jogos. Se estiver interessado em saber mais sobre esse efeito visual onipresente, confira [o primeiro artigo sobre visão e fotografia](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) e [o segundo sobre suavização em gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
-![Ação de desfoque](images/blur-example.jpg)
+![Desfoque em ação](images/blur-example.jpg)
 
 ### <a name="contributing-guidance"></a>Diretrizes de contribuição
 
-Nós atualizamos [nossas diretrizes de contribuição](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) para nossa documentação da UWP. Esta nova diretriz esclarece o fluxo de trabalho e as expectativas para contribuições externas aos nossos documentos.
+Atualizamos [nossas diretrizes de contribuição](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) para nossa documentação da UWP. Esta nova diretriz esclarece o fluxo de trabalho e as expectativas para contribuições externas aos nossos documentos.
 
 ## <a name="videos"></a>Vídeos
 
-### <a name="one-dev-question"></a>Uma pergunta de desenvolvimento
+### <a name="one-dev-question"></a>Uma pergunta sobre desenvolvimento
 
-A série de vídeos de uma pergunta de desenvolvimento, os desenvolvedores da Microsoft há muito tempo abrangem uma série de perguntas sobre desenvolvimento Windows, a cultura da equipe e o histórico. Eis aqui as perguntas mais recente que podemos ter respondido!
+Na série de vídeos Uma pergunta sobre desenvolvimento, os desenvolvedores experientes da Microsoft respondem a uma série de perguntas sobre desenvolvimento, cultura de equipe e história do Windows. Aqui estão as perguntas mais recentes que podemos ter respondido!
 
 Aaron Gustafson:
 
-* [6 vídeos sobre aplicativos de Web progressivo](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
+* [6 vídeos sobre Aplicativos Web Progressivos](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
 
 Chris Heilmann
 
@@ -64,4 +64,4 @@ Chris Heilmann
 
 Larry Osterman:
 
-* [Quais partes de COM são em tempo de execução do Windows?](https://youtu.be/_nsMjHqRn1w)
+* [Quais partes do COM estão no Windows Runtime?](https://youtu.be/_nsMjHqRn1w)
