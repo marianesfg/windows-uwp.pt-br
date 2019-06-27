@@ -6,12 +6,12 @@ ms.date: 07/06/2018
 ms.topic: article
 keywords: o Windows 10, uwp, tarefas em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 08f163fb660ad158694f925467711e4d62bf8217
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4eaff7142c3c14f04b780b93a7e98e1447f068d8
+ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371448"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399607"
 ---
 # <a name="run-a-background-task-on-a-timer"></a>Executar uma tarefa em segundo plano em um temporizador
 
@@ -33,7 +33,7 @@ O temporizador interno para aplicativos da Plataforma Universal do Windows (UWP)
 
 > [!NOTE]
 > Se *FreshnessTime* for definido como menor que 15 minutos, uma exceção é lançada ao tentar registrar a tarefa em segundo plano.
- 
+
 Por exemplo, esse gatilho fará com que uma tarefa em segundo plano executar uma vez por hora.
 
 ```cs

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 72b7f168c9f4e812b1cfb459ebea91f61a988122
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 24ae3fb7442ac955b5edf4127dfdf66176c81a43
+ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371301"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399628"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Criar um app de logon do Windows Hello
 
@@ -224,10 +224,14 @@ Neste exercício, você aprenderá como verificar se o Windows Hello está confi
     }
     ```
 
--   Você precisará de uma maneira de lidar com contas. Para este laboratório prático, como não há servidor ou um banco de dados, uma lista de usuários será salva e carregada localmente. Clique com o botão direito do mouse na pasta Utils e adicione uma nova classe chamada "AccountHelper.cs". Altere a definição de classe para estática pública. A AccountHelper é uma classe estática que conterá todos os métodos necessários para salvar e carregar a lista de contas localmente. Salvar e carregar funcionarão usando um XmlSerializer. Você também precisará se lembrar do arquivo salvo e onde você o salvou. Namespaces adicionais precisarão ser referenciados.
+-   Você precisará de uma maneira de lidar com contas. Para este laboratório prático, como não há servidor ou um banco de dados, uma lista de usuários será salva e carregada localmente. Clique com o botão direito do mouse na pasta Utils e adicione uma nova classe chamada "AccountHelper.cs". Altere a definição de classe para estática pública. A AccountHelper é uma classe estática que conterá todos os métodos necessários para salvar e carregar a lista de contas localmente. Salvar e carregar funcionarão usando um XmlSerializer. Você também precisará se lembrar do arquivo salvo e onde você o salvou.
     
     ```cs
+    using System;
+    using System.Collections.Generic;
     using System.IO;
+    using System.Text;
+    using System.Threading.Tasks;
     using System.Xml.Serialization;
     using Windows.Storage;
     using PassportLogin.Models;
