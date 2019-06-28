@@ -12,10 +12,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5996fb15c0d7302c7360c2e45613f0da2720d415
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364648"
 ---
 # <a name="labels"></a>Rótulos
@@ -24,9 +24,9 @@ ms.locfileid: "66364648"
 
 Rótulo é o nome ou o título de um controle ou de um grupo de controles relacionados.
 
-> **APIs importantes**: Propriedade de cabeçalho, [classe TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
+> **APIs importantes**: Propriedade Header, [Classe TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
-No XAML, muitos controles têm uma propriedade Header interna que é usada para especificar o rótulo. Para os controles sem uma propriedade Header ou para rotular grupos de controles, você pode utilizar um [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock).
+No XAML, muitos controles têm uma propriedade Header interna que é usada para especificar o rótulo. Para controles que não tenham uma propriedade Header ou para rotular grupos de controles, utilize um [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock).
 
 ![uma captura de tela que ilustra o controle de rótulo padrão](images/label-standard.png)
 
@@ -39,7 +39,7 @@ No XAML, muitos controles têm uma propriedade Header interna que é usada para 
 
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
-* [Exemplo de Noções básicas de XAML UI](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Controles de texto](text-controls.md)
@@ -51,7 +51,7 @@ No XAML, muitos controles têm uma propriedade Header interna que é usada para 
 * [Propriedade Slider.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider.header)
 * [Propriedade ComboBox.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox.header)
 * [Propriedade RichEditBox.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.header)
-* [Classe de TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
+* [Classe TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
  
 

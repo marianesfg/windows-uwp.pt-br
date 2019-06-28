@@ -13,10 +13,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: d41590914fb66cb8061298f77f24e5efcdd03bf5
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364632"
 ---
 # <a name="password-box"></a>Caixa de senha
@@ -25,7 +25,7 @@ ms.locfileid: "66364632"
 
 Caixa de senha é uma caixa de entrada de texto que oculta os caracteres digitados nela, para fins de privacidade. Uma caixa de senha se parece com uma caixa de texto, exceto que ela renderiza caracteres de espaço reservado no lugar do texto que foi inserido. Você pode configurar o caractere de espaço reservado.
 
-> **APIs importantes**: [Classe PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox), [propriedade Password](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.password), [propriedade PasswordChar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar), [propriedade PasswordRevealMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode), [PasswordChanged evento](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged)
+> **APIs importantes**: [Classe PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox), [Propriedade Password](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.password), [Propriedade PasswordChar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar), [Propriedade PasswordRevealMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode), [Evento PasswordChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged)
 
 Por padrão, a caixa de senha oferece uma maneira para o usuário visualizar a senha pressionando um botão de revelar. Você pode desabilitar o botão de revelação ou fornecer um mecanismo alternativo para revelar a senha, como uma caixa de seleção.
 
@@ -42,7 +42,7 @@ Para obter mais informações sobre como escolher o controle de texto certo, con
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/PasswordBox">abrir o aplicativo e ver o PasswordBox em ação</a>.</p>
+    <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/PasswordBox">abri-lo e ver o PasswordBox em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -192,15 +192,15 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 [Controles de texto](text-controls.md)
 
 - [Diretrizes para verificação ortográfica](text-controls.md)
-- [Adicionando uma pesquisa](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
-- [Diretrizes para a entrada de texto](text-controls.md)
-- [Classe de caixa de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
-- [Classe PasswordBox Windows](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [Propriedade String. Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+- [Adicionando pesquisa](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
+- [Diretrizes para entrada de texto](text-controls.md)
+- [Classe TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Classe Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+- [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

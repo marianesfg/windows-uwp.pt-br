@@ -12,10 +12,10 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: aa672c99dc83e7955c4d4f91b5bc34620c48ed01
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364545"
 ---
 # <a name="nested-ui-in-list-items"></a>Interface do usuário aninhada em itens de lista
@@ -26,7 +26,7 @@ Interface do usuário aninhada é uma interface do usuário (IU) que expõe cont
 
 Você pode usar a interface do usuário aninhada para apresentar ao usuário opções adicionais que ajudam a acelerar a execução de ações importantes. No entanto, quanto mais ações você expõe, mais complicada sua interface do usuário se torna. Você precisa tomar mais cuidado ao optar por usar esse padrão de interface do usuário. Este artigo fornece diretrizes para ajudar você a determinar o melhor curso de ação para sua interface do usuário específica.
 
-> **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [classe GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview)
+> **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [Classe GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview)
 
 Neste artigo, vamos falar sobre a criação da interface do usuário aninhada em itens [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) e [GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview). Embora esta seção não fale sobre outros casos de interface do usuário aninhada, esses conceitos são transferíveis. Antes de começar, você deve estar familiarizado com as diretrizes gerais para usar controles ListView ou GridView em sua interface do usuário, que são encontradas nos artigos [Listas](lists.md) e [Exibição de lista e exibição de grade](listview-and-gridview.md).
 
@@ -37,7 +37,7 @@ Neste artigo, usamos os termos *lista*, *item de lista* e *interface do usuário
 
 ![Partes da interface do usuário aninhada](images/nested-ui-example-1.png)
 
-> OBSERVAÇÃO&nbsp;&nbsp; Os controles ListView e GridView são derivados da classe [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase), portanto, eles têm a mesma funcionalidade, mas exibem dados de modo diferente. Neste artigo, ao falarmos sobre listas, as informações se aplicam aos controles ListView e GridView.
+> OBSERVAÇÃO&nbsp;&nbsp; ListView e GridView são derivados da classe [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase), portanto, eles têm a mesma funcionalidade, mas exibem dados de modo diferente. Neste artigo, ao falarmos sobre listas, as informações se aplicam aos controles ListView e GridView.
 
 ## <a name="primary-and-secondary-actions"></a>Ações principais e secundárias
 

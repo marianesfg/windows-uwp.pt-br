@@ -14,10 +14,10 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e0a7d1732833f8e6fc750f8ee481fa3c1116b50
-ms.sourcegitcommit: 0d6110cd3d868612bee347566f5b85b724cb57df
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66823598"
 ---
 # <a name="date-picker"></a>Seletor de data
@@ -26,7 +26,7 @@ ms.locfileid: "66823598"
 
 O seletor de data oferece uma maneira padronizada de permitir que os usuários escolham um valor de data localizado usando entrada por toque, mouse ou teclado. 
 
-> **APIs importantes**: [Classe de DatePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.DatePicker), [propriedade de data](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.datepicker.date)
+> **APIs importantes**: [classe DatePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.DatePicker), [propriedade Date](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.datepicker.date)
 
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
@@ -71,11 +71,11 @@ O seletor de data resultante tem esta aparência:
 
 ![Exemplo de seletor de data](images/date-picker-closed.png)
 
-> **Observação**&nbsp;&nbsp;Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os controles de Data e Hora.
+> **Observação**&nbsp;&nbsp;Para obter informações importantes sobre valores de data, confira [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os controles de Data e Hora.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

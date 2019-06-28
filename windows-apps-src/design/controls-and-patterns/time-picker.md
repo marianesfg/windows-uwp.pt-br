@@ -13,10 +13,10 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 58321c6c32536c07d3a56a05ce26b353ec32a982
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364154"
 ---
 # <a name="time-picker"></a>Seletor de hora
@@ -24,7 +24,7 @@ ms.locfileid: "66364154"
 
 O seletor de hora oferece uma maneira padronizada de permitir que os usuários escolham um valor usando entrada por toque, mouse ou teclado. 
 
-> **APIs importantes**: [Classe TimePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TimePicker), [propriedade de tempo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepicker.time)
+> **APIs importantes**: [classe TimePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TimePicker), [propriedade Time](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepicker.time)
 
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
@@ -39,7 +39,7 @@ Para obter mais informações sobre como escolher o controle correto, consulte o
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/TimePicker">abrir o aplicativo e ver o TimePicker em ação</a>.</p>
+    <p>Se você tiver um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/TimePicker">abri-lo e ver o TimePicker em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -74,7 +74,7 @@ O seletor de hora resultante tem esta aparência:
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
