@@ -3,23 +3,23 @@ description: O Windows Runtime é um sistema de contagem de referência; e, em u
 title: Referências fracas em C++/WinRT
 ms.date: 05/16/2019
 ms.topic: article
-keywords: Windows 10, uwp, padrão e c++, cpp, winrt, projeção, forte e fraca, de referência
+keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, forte, fraca, referência
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 46a0e21295ba430671be4e36ab213e182c2b1737
-ms.sourcegitcommit: 1f39b67f2711b96c6b4e7ed7107a9a47127d4e8f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66721631"
 ---
-# <a name="strong-and-weak-references-in-cwinrt"></a>Referências fortes e fracas no C++/WinRT
+# <a name="strong-and-weak-references-in-cwinrt"></a>Referências fortes e fracas em C++/WinRT
 
-O tempo de execução do Windows é um sistema de contagem de referência; e, em um sistema desse tipo é importante que você conheça o significado de e a distinção entre, referências fortes e fracas (e as referências que são nenhum, como o implícita *isso* ponteiro). Como você verá neste tópico, a saber como gerenciar essas referências corretamente pode significar a diferença entre um sistema confiável que é executado sem problemas e outro que falha de forma imprevisível. Ao fornecer funções auxiliares que têm suporte de profundidade na projeção de linguagem, [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) atende você na metade do seu trabalho de criação de sistemas mais complexos simples e corretamente.
+O Windows Runtime é um sistema de contagem de referência; e, em um sistema desse tipo, é importante que você conheça o significado e a distinção entre referências fortes e fracas (e as referências que não se enquadram em nenhum dos dois casos, como o ponteiro *this* implícito). Como você verá neste tópico, saber como gerenciar essas referências corretamente pode significar a diferença entre um sistema confiável que é executado sem problemas e outro que falha de forma imprevisível. Ao fornecer funções auxiliares com amplo suporte na projeção de linguagem, o [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e você alcançam um meio-termo para seu trabalho de criar sistemas mais complexos de maneira simples e correta.
 
-## <a name="safely-accessing-the-this-pointer-in-a-class-member-coroutine"></a>Acessar com segurança os *isso* ponteiro em uma corrotina de membro de classe
+## <a name="safely-accessing-the-this-pointer-in-a-class-member-coroutine"></a>Acessar com segurança o ponteiro *this* em uma corrotina de membro de classe
 
-Listagem de códigos abaixo mostra um exemplo típico de uma co-rotina que é uma função de membro de uma classe. Você pode copiar e colar esse exemplo para os arquivos especificados em uma nova **aplicativo de Console do Windows (C++/WinRT)** projeto.
+A listagem de códigos abaixo mostra um exemplo típico de uma corrotina que é uma função de membro de uma classe. Você pode copiar e colar esse exemplo para os arquivos especificados em um novo projeto de **aplicativo de console do Windows (C++/WinRT)** .
 
 ```cppwinrt
 // pch.h
@@ -57,18 +57,18 @@ int main()
 }
 ```
 
-**MyClass::RetrieveValueAsync** gasta algum tempo trabalhando e, eventualmente, ele retorna uma cópia do `MyClass::m_value` membro de dados. Chamando **RetrieveValueAsync** faz com que um objeto assíncrono deve ser criada, e esse objeto tem implícito *isso* ponteiro (por meio do qual, por fim, `m_value` é acessado).
+**MyClass::RetrieveValueAsync** passa algum tempo trabalhando e, eventualmente, retorna uma cópia do membro de dados `MyClass::m_value`. Chamar **RetrieveValueAsync** faz com que um objeto assíncrono seja criado, contendo um ponteiro *this* implícito (por meio do qual, por fim, `m_value` é acessado).
 
 Aqui está a sequência completa de eventos.
 
-1. Na **principal**, uma instância do **MyClass** é criado (`myclass_instance`).
-2. O `async` objeto é criado, que aponta para a (por meio de seu *isso*) para `myclass_instance`.
-3. O **winrt::Windows::Foundation::IAsyncAction::get** função bloqueia por alguns segundos e, em seguida, retorna o resultado da **RetrieveValueAsync**.
+1. Em **main**, uma instância de **MyClass** é criada (`myclass_instance`).
+2. O objeto `async` é criado, que aponta para (por meio de seu *this*) para `myclass_instance`.
+3. A função **winrt::Windows::Foundation::IAsyncAction::get** bloqueia por alguns segundos e, em seguida, retorna o resultado de **RetrieveValueAsync**.
 4. **RetrieveValueAsync** retorna o valor de `this->m_value`.
 
-Etapa 4 é segura, desde *isso* é válido.
+A etapa 4 é segura, desde que *this* seja válido.
 
-Mas e se a instância da classe é destruída antes que a operação assíncrona seja concluída? Há todos os tipos de maneiras que a instância da classe poderia saem do escopo antes do método assíncrono é concluído. Mas, é possível simulá-lo definindo a instância da classe como `nullptr`.
+Mas e se a instância da classe for destruída antes que a operação assíncrona seja concluída? Há todos os tipos de maneiras em que a instância da classe poderia sair do escopo antes do método assíncrono ser concluído. No entanto, é possível simulá-la definindo a instância da classe como `nullptr`.
 
 ```cppwinrt
 int main()
@@ -84,13 +84,13 @@ int main()
 }
 ```
 
-Após o ponto onde podemos destruir a instância da classe, parece que estamos não diretamente consultá-lo novamente. Mas certamente objeto assíncrono tem um *isso* ponteiro para ele e tenta usá-la para copiar o valor armazenado dentro da instância de classe. A co-rotina é uma função de membro, e ele espera que seja capaz de usar suas *isso* ponteiro com impunity.
+Após o ponto em que podemos destruir a instância da classe, parece que não fazemos mais referência a ela diretamente. É claro que o objeto assíncrono tem um ponteiro *this* para ele e tenta usá-lo para copiar o valor armazenado dentro da instância de classe. A corrotina é uma função de membro e ela espera ser capaz de usar o respectivo ponteiro *this* livremente.
 
-Com essa alteração no código, nos deparamos um problema na etapa 4, porque a instância da classe foi destruída, e *isso* não é mais válido. Assim que o objeto assíncrono tenta acessar a variável dentro da instância de classe, ela será falhar (ou fazer algo totalmente indefinido).
+Com essa alteração no código, nos deparamos um problema na etapa 4, porque a instância da classe foi destruída, e *this* não é mais válido. Assim que o objeto assíncrono tenta acessar a variável dentro da instância de classe, ele falha (ou faz algo totalmente indefinido).
 
-A solução é fornecer a operação assíncrona&mdash;co-rotina&mdash;sua própria referência forte para a instância da classe. Como está escrito atualmente, a co-rotina contém efetivamente um brutos *isso* ponteiro para a instância de classe, mas que não é suficiente para manter a instância da classe ativa.
+A solução é fornecer à operação assíncrona &mdash; corrotina &mdash; sua própria referência forte para a instância da classe. Como está escrito atualmente, a corrotina contém efetivamente um ponteiro *this* bruto para a instância de classe, mas que não é suficiente para manter a instância da classe ativa.
 
-Para manter a instância da classe de funcionamento, alterar a implementação de **RetrieveValueAsync** à mostrada abaixo.
+Para manter a instância da classe de funcionamento, altere a implementação de **RetrieveValueAsync** para aquela mostrada abaixo.
 
 ```cppwinrt
 IAsyncOperation<winrt::hstring> RetrieveValueAsync()
@@ -101,14 +101,14 @@ IAsyncOperation<winrt::hstring> RetrieveValueAsync()
 }
 ```
 
-Um C++/WinRT classe direta ou indiretamente deriva de [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) modelo. Por causa disso, o C++/objeto WinRT pode chamar seu [ **implements.get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) protegido a função de membro para recuperar uma referência forte a seu *isso* ponteiro. Observe que não há necessidade de usar, na verdade, o `strong_this` variável no código de exemplo acima; simplesmente chamar **get_strong** incrementos a C++objeto /WinRT mantém seu implícita e da contagem de referência *este* ponteiro válido.
+Uma classe C++/WinRT deriva direta ou indiretamente do modelo [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements). Por causa disso, o objeto C++/WinRT pode chamar sua função de membro protegido [**implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) para recuperar uma referência forte a seu ponteiro *this*. Observe que não há necessidade real de usar a variável `strong_this` no código de exemplo acima; apenas chamar **get_strong** incrementa a contagem de referências do objeto C++/WinRT e mantém seu ponteiro *this* implícito válido.
 
 > [!IMPORTANT]
-> Porque **get_strong** é uma função de membro da **winrt::implements** struct de modelo, você pode chamá-lo apenas de uma classe que deriva de direta ou indiretamente de **winrt::implements**, como um C++classe /WinRT. Para obter mais informações sobre derivando **winrt::implements**, e exemplos, consulte [autor APIs com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis).
+> Devido a **get_strong** ser uma função de membro do modelo de struct **winrt::implements**, você pode chamá-lo apenas de uma classe que deriva direta ou indiretamente de **winrt::implements**, tal como uma classe C++/WinRT. Para obter mais informações sobre derivação de **winrt::implements** e exemplos, consulte [Criar APIs com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis).
 
-Isso resolve o problema que usamos anteriormente quando temos para a etapa 4. Mesmo se todas as outras referências para a instância da classe desaparecerem, a co-rotina apresentou cuidado para garantir que suas dependências sejam estáveis.
+Isso resolve o problema que tivemos anteriormente quando passamos para a etapa 4. Mesmo que todas as outras referências para a instância da classe desapareçam, a corrotina tomará o cuidado de garantir que suas dependências estejam estáveis.
 
-Se uma referência forte não é apropriada e, em seguida, em vez disso, você pode chamar [ **implements::get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) para recuperar uma referência fraca para *isso*. Confirmar que você pode recuperar uma referência forte antes de acessar *isso*. Novamente, **get_weak** é uma função de membro da **winrt::implements** struct de modelo.
+Se uma referência forte não for apropriada, você poderá, em vez disso, chamar [**implements::get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) para recuperar uma referência fraca para *this*. Apenas confirme que você pode recuperar uma referência forte antes de acessar *this*. Novamente, **get_weak** é uma função de membro do modelo de struct **winrt::implements**.
 
 ```cppwinrt
 IAsyncOperation<winrt::hstring> RetrieveValueAsync()
@@ -128,19 +128,19 @@ IAsyncOperation<winrt::hstring> RetrieveValueAsync()
 }
 ```
 
-No exemplo acima, a referência fraca não manter a instância da classe sejam destruídos quando nenhuma referência forte permanecem. Mas ele oferece uma maneira de verificar se uma referência forte pode ser adquirida antes de acessar a variável de membro.
+No exemplo acima, a referência fraca não impede que a instância da classe seja destruída quando não resta nenhuma referência forte. Mas ela oferece uma maneira de verificar se uma referência forte pode ser adquirida antes de acessar a variável de membro.
 
-## <a name="safely-accessing-the-this-pointer-with-an-event-handling-delegate"></a>Acessar com segurança os *isso* ponteiro com um representante de manipulação de eventos
+## <a name="safely-accessing-the-this-pointer-with-an-event-handling-delegate"></a>Acessar com segurança o ponteiro *this* com um delegado de manipulação de eventos
 
 ### <a name="the-scenario"></a>O cenário
 
-Para obter informações gerais sobre a manipulação de eventos, consulte [manipular eventos usando delegados no C++/WinRT](handle-events.md).
+Para obter informações gerais sobre manipulação de eventos, consulte [Manipular eventos usando delegados em C++/WinRT](handle-events.md).
 
-A seção anterior realçou possíveis problemas de tempo de vida nas áreas de co-rotinas e simultaneidade. Mas, se você manipular um evento com a função de membro de um objeto ou de uma função lambda dentro da função de membro de um objeto, em seguida, você precisa pensar sobre os tempos de vida relativos do destinatário de evento (o objeto manipulando o evento) e a origem do evento (o objeto Gerando o evento). Vamos examinar alguns exemplos de código.
+A seção anterior realçou possíveis problemas de tempo de vida nas áreas de corrotinas e simultaneidade. No entanto, se você manipular um evento com uma função de membro de um objeto de dentro de uma função lambda dentro da função de membro de um objeto, precisará pensar sobre os tempos de vida relativos do destinatário do evento (o objeto manipulando o evento) e a origem do evento (o objeto acionando o evento). Vamos examinar alguns exemplos de código.
 
-Listagem de códigos abaixo primeiro define uma simples **EventSource** classe, que dispara um evento genérico que é tratado por quaisquer delegados que foram adicionados a ele. Esse evento de exemplo ocorre ao usar o [ **Windows::Foundation::EventHandler** ](/uwp/api/windows.foundation.eventhandler) tipo delegado, mas os problemas e soluções aqui se aplicam a tipos de delegado toda e qualquer.
+A listagem de códigos abaixo primeiro define uma classe **EventSource** simples, que dispara um evento genérico que é manipulado por quaisquer delegados que foram adicionados a ele. Esse evento de exemplo ocorre ao usar o tipo de delegado [**Windows::Foundation::EventHandler**](/uwp/api/windows.foundation.eventhandler), mas os problemas e soluções aqui se aplicam a todos e quaisquer tipos de delegado.
 
-Em seguida, o **EventRecipient** classe fornece um manipulador para o **EventSource::Event** eventos na forma de uma função lambda.
+Em seguida, a classe **EventRecipient** fornece um manipulador para os eventos **EventSource::Event** na forma de uma função lambda.
 
 ```cppwinrt
 // pch.h
@@ -193,16 +193,16 @@ int main()
 }
 ```
 
-O padrão é que o destinatário de evento tem um manipulador de eventos de lambda com dependências seu *isso* ponteiro. Sempre que o destinatário de evento é maior que a origem do evento, ela dura mais do que essas dependências. E, nesses casos, o que são comuns, o padrão funciona bem. Alguns desses casos são óbvios, como quando uma página de interface do usuário manipula um evento gerado por um controle que está na página. A página é maior que o botão&mdash;dessa forma, o manipulador também é maior que o botão. Isso mantém verdadeiro qualquer momento que o destinatário possui a origem (como um membro de dados, por exemplo), ou sempre que o destinatário e a origem são irmãos e diretamente pertencentes a algum outro objeto. Se você tiver certeza que tem um caso onde o manipulador não sobrepõem a *isso* no qual ele depende, então você pode capturar *isso* normalmente, sem consideração para tempo de vida forte ou fraco.
+O padrão é que o destinatário do evento tenha um manipulador de eventos de lambda com dependências seu ponteiro *this*. Sempre que o destinatário do evento durar mais que a origem do evento, ela durará mais do que essas dependências. E nesses casos, que são comuns, o padrão funciona bem. Alguns desses casos são óbvios, como quando uma página de interface do usuário manipula um evento gerado por um controle que está na página. A página dura mais que o botão &mdash; dessa forma, o manipulador também dura mais que o botão. Isso permanece sendo verdadeiro sempre que o destinatário é proprietário da origem (como um membro de dados, por exemplo), ou sempre que o destinatário e a origem são irmãos e diretamente pertencentes a algum outro objeto. Se tiver certeza de que tem um caso no qual o manipulador não durará mais que o *this* do qual ele depende, então você poderá capturar *this* normalmente, sem se preocupar com tempo de vida forte ou fraco.
 
-Mas ainda há casos em que *isso* não sobreviver além de seu uso em um manipulador (incluindo manipuladores de eventos de conclusão e o progresso gerados pelas ações e operações assíncronas), e é importante saber como lidar com eles.
+Mas ainda há casos em que *this* não dura até cumprir sua função em um manipulador (incluindo os manipuladores de eventos de progresso e de conclusão gerados por ações e operações assíncronas) e é importante saber como lidar com eles.
 
-- Se você estiver criando um rotina concomitante para implementar um método assíncrono, então é possível.
-- Em casos raros com objetos de estrutura de interface de usuário do XAML ([**SwapChainPanel**](/uwp/api/windows.ui.xaml.controls.swapchainpanel), por exemplo), então é possível, se o destinatário for finalizado sem cancelar o registro da fonte de evento.
+- Se você estiver criando uma corrotina para implementar um método assíncrono, então isso será possível.
+- Em casos raros com objetos de estrutura de interface de usuário XAML ([**SwapChainPanel**](/uwp/api/windows.ui.xaml.controls.swapchainpanel), por exemplo), então será possível, se o destinatário for finalizado sem cancelar o registro da fonte de evento.
 
 ### <a name="the-issue"></a>O problema
 
-Nesta próxima versão dos **principal** função simula o que acontece quando o destinatário do evento é destruído (talvez ele sai do escopo) enquanto a origem do evento ainda está gerando eventos.
+Esta próxima versão da função **main** simula o que acontece quando o destinatário do evento é destruído (ou talvez sai do escopo) enquanto a origem do evento ainda está gerando eventos.
 
 ```cppwinrt
 int main()
@@ -217,14 +217,14 @@ int main()
 }
 ```
 
-O destinatário do evento é destruído, mas o manipulador de eventos de lambda dentro dele ainda está inscrito para o **evento** evento. Quando esse evento é gerado, o lambda tenta cancelar a referência a *isso* ponteiro, que nesse momento é inválido. Dessa forma, os resultados de uma violação de acesso do código no manipulador (ou em continuação de uma co-rotina) tentar usá-lo.
+O destinatário do evento é destruído, mas o manipulador de eventos lambda dentro dele ainda está inscrito no evento **Evento**. Quando esse evento é gerado, o lambda tenta desreferenciar o ponteiro *this*, que nesse momento é inválido. Assim, uma violação de acesso resulta de código no manipulador (ou em uma tentativa de continuação de corrotina) tentando usá-lo.
 
 > [!IMPORTANT]
-> Se você encontrar uma situação como essa, você precisará pensar sobre a vida útil do *isso* do objeto; e ou não capturado *isso* objeto é maior que a captura. Caso contrário, em seguida, capturá-la com uma forte ou uma referência fraca, como demonstraremos abaixo.
+> Se você encontrar uma dessas situações, precisará pensar sobre o tempo de vida do objeto *this* e considerar se o objeto *this* capturado sobrevive ou não à captura. Se não sobreviver, então capture-o com uma referência forte ou fraca, conforme demonstraremos abaixo.
 >
-> Ou&mdash;se faz sentido para seu cenário e threading considerações possibilitam até mesmo&mdash;e em seguida, outra opção é revogar o manipulador depois que o destinatário é feito com o evento, ou no destruidor do destinatário. Ver [revogar um delegado registrado](handle-events.md#revoke-a-registered-delegate).
+> Ou &mdash; se fizer sentido para seu cenário e se as considerações de conversa o possibilitarem &mdash; então, outra opção é revogar o manipulador depois que o destinatário termina de usar o evento ou no destruidor do destinatário. Veja [Revogar um delegado registrado](handle-events.md#revoke-a-registered-delegate).
 
-Isso é como podemos estiver registrando o manipulador.
+É assim que estamos registrando o manipulador.
 
 ```cppwinrt
 event_source.Event([&](auto&& ...)
@@ -242,14 +242,14 @@ event_source.Event([this](auto&& ...)
 });
 ```
 
-Em ambos os casos, podemos apenas está capturando o raw *isso* ponteiro. E que não tem nenhum efeito na contagem de referência, para que nada está impedindo que o objeto atual que está sendo destruído.
+Em ambos os casos, estamos apenas capturando o ponteiro *this* bruto. E isso não tem nenhum efeito na contagem de referências, então nada está impedindo que o objeto atual seja destruído.
 
 ### <a name="the-solution"></a>A solução
 
-A solução é capturar uma referência forte. Uma referência forte *faz* incrementar a contagem de referência e ele *faz* manter ativa o objeto atual. Basta declarar uma variável de captura (chamado `strong_this` neste exemplo) e inicializá-lo com uma chamada para [ **implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function), que recupera uma referência forte para nosso  *Isso* ponteiro.
+A solução é capturar uma referência forte. Uma referência forte *incrementa* a contagem de referências e *mantém* o objeto atual ativo. Basta declarar uma variável de captura (chamada `strong_this` neste exemplo) e inicializá-la com uma chamada para [**implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function), que recupera uma referência forte para nosso ponteiro *this*.
 
 > [!IMPORTANT]
-> Porque **get_strong** é uma função de membro da **winrt::implements** struct de modelo, você pode chamá-lo apenas de uma classe que deriva de direta ou indiretamente de **winrt::implements**, como um C++classe /WinRT. Para obter mais informações sobre derivando **winrt::implements**, e exemplos, consulte [autor APIs com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis).
+> Devido a **get_strong** ser uma função de membro do modelo de struct **winrt::implements**, você pode chamá-lo apenas de uma classe que deriva direta ou indiretamente de **winrt::implements**, tal como uma classe C++/WinRT. Para obter mais informações sobre derivação de **winrt::implements** e exemplos, consulte [Criar APIs com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis).
 
 ```cppwinrt
 event_source.Event([this, strong_this { get_strong()}](auto&& ...)
@@ -258,7 +258,7 @@ event_source.Event([this, strong_this { get_strong()}](auto&& ...)
 });
 ```
 
-Você ainda pode omitir a captura automática do objeto atual e acessar o membro de dados por meio da variável de captura em vez de por meio de implícito *isso*.
+Você ainda pode omitir a captura automática do objeto atual e acessar o membro de dados por meio da variável de captura em vez de por meio do *this* implícito.
 
 ```cppwinrt
 event_source.Event([strong_this { get_strong()}](auto&& ...)
@@ -267,7 +267,7 @@ event_source.Event([strong_this { get_strong()}](auto&& ...)
 });
 ```
 
-Se uma referência forte não é apropriada e, em seguida, em vez disso, você pode chamar [ **implements::get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) para recuperar uma referência fraca para *isso*. Confirme que você ainda pode recuperar uma referência forte dele antes de acessar membros.
+Se uma referência forte não for apropriada, você poderá, em vez disso, chamar [**implements::get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) para recuperar uma referência fraca para *this*. Apenas confirme que você ainda pode recuperar uma referência forte dele antes de acessar membros.
 
 ```cppwinrt
 event_source.Event([weak_this{ get_weak() }](auto&& ...)
@@ -281,7 +281,7 @@ event_source.Event([weak_this{ get_weak() }](auto&& ...)
 
 ### <a name="if-you-use-a-member-function-as-a-delegate"></a>Se você usar uma função de membro como um delegado
 
-Como as funções lambda, esses princípios também se aplicam ao uso de uma função de membro como seu delegado. A sintaxe é diferente, portanto, vamos examinar alguns códigos. Primeiro, aqui está o manipulador de eventos de função de membro potencialmente não seguros, usando um brutos *isso* ponteiro.
+Assim como as funções lambda, esses princípios também se aplicam ao uso de uma função de membro como seu delegado. A sintaxe é diferente, portanto, vamos examinar alguns códigos. Primeiro, aqui está o manipulador de eventos de função de membro potencialmente não seguros, usando um ponteiro *this* bruto.
 
 ```cppwinrt
 struct EventRecipient : winrt::implements<EventRecipient, IInspectable>
@@ -300,15 +300,15 @@ struct EventRecipient : winrt::implements<EventRecipient, IInspectable>
 };
 ```
 
-Essa é a maneira convencional, padrão para se referir a um objeto e sua função de membro. Para que isso seja seguro, você pode&mdash;a partir da versão 10.0.17763.0 (Windows 10, versão 1809) do SDK do Windows&mdash;estabelecer um forte ou uma referência fraca no ponto em que o manipulador é registrado. Nesse ponto, o objeto de destinatário do evento é conhecido por ser ainda ativa.
+Essa é a maneira convencional/padrão para se referir a um objeto e sua função de membro. Para que isso seja seguro, você pode &mdash; da versão 10.0.17763.0 (Windows 10, versão 1809) do SDK do Windows em diante &mdash; estabelecer uma referência forte ou fraca no ponto em que o manipulador é registrado. Nesse ponto, sabe-se que o objeto de destinatário do evento ainda está ativo.
 
-Para obter uma referência forte, basta chamar [ **get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) no lugar bruto *isso* ponteiro. C++/ WinRT garante que o delegado resultante contém uma referência forte para o objeto atual.
+Para obter uma referência forte, basta chamar [**get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) no lugar do ponteiro *this* bruto. O C++/WinRT garante que o delegado resultante contenha uma referência forte para o objeto atual.
 
 ```cppwinrt
 event_source.Event({ get_strong(), &EventRecipient::OnEvent });
 ```
 
-Para obter uma referência fraca, chame [ **get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function). C++/ WinRT garante que o delegado resultante contém uma referência fraca. No último minuto e segundo plano, o delegado tenta resolver a referência fraca para um forte e chama a função de membro apenas se for bem-sucedido.
+Para obter uma referência fraca, chame [**get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function). O C++/ WinRT garante que o delegado resultante contenha uma referência fraca. No último momento e em segundo plano, o delegado tentará resolver a referência fraca para uma forte e chamará a função de membro apenas se for bem-sucedido.
 
 ```cppwinrt
 event_source.Event({ get_weak(), &EventRecipient::OnEvent });
@@ -316,7 +316,7 @@ event_source.Event({ get_weak(), &EventRecipient::OnEvent });
 
 ### <a name="a-weak-reference-example-using-swapchainpanelcompositionscalechanged"></a>Um exemplo de referência fraca usando **SwapChainPanel::CompositionScaleChanged**
 
-Este exemplo de código, usamos o [ **SwapChainPanel::CompositionScaleChanged** ](/uwp/api/windows.ui.xaml.controls.swapchainpanel.compositionscalechanged) eventos por meio de outra ilustração de referências fracas. O código registra um manipulador de eventos usando um lambda que captura uma referência fraca para o destinatário.
+Neste exemplo de código, usamos o evento [**SwapChainPanel::CompositionScaleChanged**](/uwp/api/windows.ui.xaml.controls.swapchainpanel.compositionscalechanged) por meio de outra ilustração de referências fracas. O código registra um manipulador de eventos usando um lambda que captura uma referência fraca para o destinatário.
 
 ```cppwinrt
 winrt::Windows::UI::Xaml::Controls::SwapChainPanel m_swapChainPanel;
@@ -342,23 +342,23 @@ void OnCompositionScaleChanged(Windows::UI::Xaml::Controls::SwapChainPanel const
 }
 ```
 
-Na cláusula de captura lambda, é criada uma variável temporária, que representa uma referência fraca a *isso*. No corpo do lambda, se uma referência forte a *isso* puder ser obtida, então a função **OnCompositionScaleChanged** é chamada. Dessa forma, dentro de **OnCompositionScaleChanged**, *isso* pode ser usado com segurança.
+Na cláusula de captura lambda, é criada uma variável temporária, que representa uma referência fraca a *this*. No corpo do lambda, se uma referência forte a *this* puder ser obtida, então a função **OnCompositionScaleChanged** será chamada. Dessa forma, dentro de **OnCompositionScaleChanged**, *this* pode ser usado com segurança.
 
 ## <a name="weak-references-in-cwinrt"></a>Referências fracas em C++/WinRT
 
-Acima, nós vimos referências fracas que está sendo usadas. Em geral, eles são bons para quebrar as referências cíclicas. Por exemplo, para a implementação nativa da estrutura de interface do usuário baseada em XAML&mdash;por causa do design histórico do framework&mdash;o mais fraco de referência mecanismo no C++/WinRT é necessário lidar com referências cíclicas. Fora do XAML, no entanto, você provavelmente não precisará usar referências fracas (não há nada inerentemente XAML-específicas sobre eles). Em vez disso, você deve, mais frequência, poderá criar sua própria C++APIs do WinRT na forma como para evitar a necessidade de referências cíclicas e referências fracas. 
+Acima, nós vimos referências fracas sendo usadas. Em geral, eles são bons para quebrar referências cíclicas. Por exemplo, quando se trata da implementação nativa da estrutura da IU baseada em XAML &mdash; devido ao design histórico da estrutura &mdash; o mecanismo de referência fraca em C++/WinRT é necessário para tratar as referências cíclicas. Fora do XAML, no entanto, você provavelmente não precisará usar referências fracas (não há nada nelas inerentemente específico a XAML). Ao contrário, você deve ser capaz na maioria das vezes de criar suas próprias APIs C++/WinRT, de modo a evitar a necessidade de referências cíclicas e referências fracas. 
 
-Em qualquer tipo declarado, não fica imediatamente óbvio para o C++/WinRT se ou quando são necessárias referências fracas. Portanto, o C++/WinRT oferece suporte a referência fraca automaticamente no modelo de struct [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements), do qual são derivados direta ou indiretamente seus próprios tipos C++/WinRT. Ele é pago pelo uso, o que significa que você só pagará se o objeto for consultado em busca de [**IWeakReferenceSource**](/windows/desktop/api/weakreference/nn-weakreference-iweakreferencesource). Você pode optar explicitamente por [recusar esse suporte](#opting-out-of-weak-reference-support).
+Em qualquer tipo declarado, não fica imediatamente óbvio para o C++/WinRT se ou quando são necessárias referências fracas. Portanto, o C++/WinRT dá suporte a referência fraca automaticamente no modelo de struct [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements), do qual são derivados direta ou indiretamente seus próprios tipos C++/WinRT. Ele é pago pelo uso, o que significa que você só pagará se o objeto for consultado em busca de [**IWeakReferenceSource**](/windows/desktop/api/weakreference/nn-weakreference-iweakreferencesource). E você pode optar explicitamente por [recusar esse suporte](#opting-out-of-weak-reference-support).
 
 ### <a name="code-examples"></a>Exemplos de código
-O modelo de struct [**winrt::weak_ref**](/uwp/cpp-ref-for-winrt/weak-ref) é uma opção para obter uma referência fraca em uma instância de classe.
+O modelo de struct [**winrt::weak_ref**](/uwp/cpp-ref-for-winrt/weak-ref) é uma opção para obter uma referência fraca para uma instância de classe.
 
 ```cppwinrt
 Class c;
 winrt::weak_ref<Class> weak{ c };
 ```
 
-Ou você pode usar a função auxiliar [**winrt::make_weak**](/uwp/cpp-ref-for-winrt/make-weak).
+Ou então, você pode usar a função auxiliar [**winrt::make_weak**](/uwp/cpp-ref-for-winrt/make-weak).
 
 ```cppwinrt
 Class c;
@@ -374,10 +374,10 @@ if (Class strong = weak.get())
 }
 ```
 
-Desde que ainda existe alguma outra referência forte, a chamada de [**weak_ref::get**](/uwp/cpp-ref-for-winrt/weak-ref#weak_refget-function) incrementará a contagem de referências e retornará a referência forte ao chamador.
+Desde que ainda exista alguma outra referência forte, a chamada de [**weak_ref::get**](/uwp/cpp-ref-for-winrt/weak-ref#weak_refget-function) incrementará a contagem de referências e retornará a referência forte ao autor da chamada.
 
 ### <a name="opting-out-of-weak-reference-support"></a>Recusando o suporte a referência fraca
-Os suporte a referência fraca é automático. Mas você pode optar explicitamente por recusar esse suporte passando o struct de marcador [**winrt::no_weak_ref**](/uwp/cpp-ref-for-winrt/no-weak-ref) como um argumento de modelo para a classe base.
+O suporte a referência fraca é automático. Mas você pode optar explicitamente por recusar esse suporte passando o struct de marcador [**winrt::no_weak_ref**](/uwp/cpp-ref-for-winrt/no-weak-ref) como um argumento de modelo para a classe base.
 
 Se você derivar diretamente de **winrt::implements**.
 
@@ -400,7 +400,7 @@ struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, no_weak_ref>
 Não importa onde o struct de marcador apareça no pacote de parâmetros variadic. Se você solicitar uma referência fraca para um tipo recusado, o compilador ajudará você com "*This is only for weak ref support*".
 
 ## <a name="important-apis"></a>APIs Importantes
-* [função Implements::get_weak](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)
-* [modelo de função WinRT::make_weak](/uwp/cpp-ref-for-winrt/make-weak)
+* [implements::get_weak function](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)
+* [winrt::make_weak function template](/uwp/cpp-ref-for-winrt/make-weak)
 * [winrt::no_weak_ref marker struct](/uwp/cpp-ref-for-winrt/no-weak-ref)
-* [WinRT::weak_ref struct modelo](/uwp/cpp-ref-for-winrt/weak-ref)
+* [winrt::weak_ref struct template](/uwp/cpp-ref-for-winrt/weak-ref)

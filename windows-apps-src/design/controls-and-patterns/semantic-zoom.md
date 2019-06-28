@@ -12,10 +12,10 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c8cc237dec082096eb235237490e4f5d29cc6dd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364314"
 ---
 # <a name="semantic-zoom"></a>Zoom Semântico
@@ -29,7 +29,7 @@ Zoom Semântico permite que o usuário alterne duas exibições diferentes do me
 
 Por exemplo, ao exibir um catálogo de endereços, o usuário pode reduzir a fim de ir rapidamente para a letra "W" e ampliar essa letra para ver os nomes associados a ela. 
 
-> **APIs importantes**: [Classe SemanticZoom](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom), [classe ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [classe GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
+> **APIs importantes**: [classe SemanticZoom](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom), [classe ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [classe GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
 
 **Recursos**:
 
@@ -41,7 +41,7 @@ Por exemplo, ao exibir um catálogo de endereços, o usuário pode reduzir a fim
 
 Use um controle **SemanticZoom** quando precisar mostrar um conjunto de dados agrupado que seja suficientemente grande para que ele não possa ser todo mostrado em uma ou duas páginas.
 
-Não confunda zoom semântico com zoom óptico. Apesar deles compartilharem a mesma interação e o mesmo comportamento básico (exibindo mais ou menos detalhes baseados em um fator de zoom), o zoom óptico se refere ao ajuste da ampliação para uma área de conteúdo ou objeto como uma fotografia. Para obter informações sobre um controle que executa ampliação óptica, veja o controle [ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer).
+Não confunda zoom semântico com zoom óptico. Apesar deles compartilharem a mesma interação e o mesmo comportamento básico (exibindo mais ou menos detalhes baseados em um fator de zoom), o zoom óptico se refere ao ajuste da ampliação para uma área de conteúdo ou objeto como uma fotografia. Para obter informações sobre um controle que executa ampliação óptica, confira o controle [ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer).
 
 ## <a name="examples"></a>Exemplos
 
@@ -59,7 +59,7 @@ Não confunda zoom semântico com zoom óptico. Apesar deles compartilharem a me
 </tr>
 </table>
 
-**Aplicativo de fotos**
+**Aplicativo Fotos**
 
 Eis um zoom semântico usado no aplicativo Fotos. As fotos são agrupadas por mês. A seleção do cabeçalho de um mês na exibição em grade padrão é reduzida para a exibição de lista do mês para uma navegação mais rápida.
 
@@ -80,9 +80,9 @@ Os 3 elementos de que você precisa para um Zoom Semântico são:
 - Uma exibição ampliada que mostre os dados no nível do item.
 - Uma exibição reduzida que mostre os dados no nível do grupo.
 
-Antes de usar um Zoom Semântico, você deve entender como usar uma exibição de lista com dados agrupados. Para obter mais informações, consulte [exibição de lista e exibição de grade](listview-and-gridview.md). 
+Antes de usar um Zoom Semântico, você deve entender como usar uma exibição de lista com dados agrupados. Para saber mais, confira [Exibição de lista e exibição de grade](listview-and-gridview.md). 
 
-> **Observação**&nbsp;&nbsp;Para definir as exibições ampliada e reduzida do controle SemanticZoom, você pode usar qualquer um dos controles que implementam a interface [ISemanticZoomInformation](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ISemanticZoomInformation). A estrutura XAML fornece 3 controles que implementam esta interface: ListView, GridView e Hub.
+> **Observação**&nbsp;&nbsp;Para definir as exibições ampliada e reduzida do controle SemanticZoom, você pode usar qualquer um dos controles que implementam a interface [ISemanticZoomInformation](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ISemanticZoomInformation). A estrutura XAML fornece três controles que implementam essa interface: ListView, GridView e Hub.
  
  Esta XAML mostra a estrutura do controle SemanticZoom. Você atribui outros os controles às propriedades ZoomedInView e ZoomedOutView.
  
@@ -98,7 +98,7 @@ Antes de usar um Zoom Semântico, você deve entender como usar uma exibição d
 </SemanticZoom>
  ```
  
-Os exemplos aqui foram tirados da página SemanticZoom da [Amostra de noções básicas de interface do usuário XAML](https://go.microsoft.com/fwlink/p/?LinkId=619992). Você pode baixar a amostra para ver o código completo, inclusive a origem de dados. O Zoom Semântico usa um GridView para fornecer a exibição ampliada e um ListView para a exibição reduzida.
+Os exemplos aqui foram tirados da página SemanticZoom da [Amostra de noções básicas de interface do usuário XAML](https://go.microsoft.com/fwlink/p/?LinkId=619992). Você pode baixar a amostra para conferir o código completo, inclusive a origem de dados. O Zoom Semântico usa um GridView para fornecer a exibição ampliada e um ListView para a exibição reduzida.
   
 **Definir a exibição ampliada**
 
@@ -140,7 +140,7 @@ A aparência dos cabeçalhos de grupo é definida no recurso `ZoomedInGroupHeade
 </DataTemplate>
 ```
 
-**Definir a exibição**
+**Definir a exibição reduzida**
 
 Esta XAML define um controle ListView para a exibição reduzida. Este exemplo mostra como exibir os cabeçalhos de grupo como texto em uma lista.
 
@@ -161,11 +161,11 @@ Esta XAML define um controle ListView para a exibição reduzida. Este exemplo m
 </DataTemplate>
 ```
 
-**Sincronizar os modos de exibição**
+**Sincronizar as exibições**
 
 As exibições ampliadas e reduzidas devem ser sincronizadas, de forma que se um usuário selecionar um grupo na exibição reduzida, os detalhes desse mesmo grupo sejam mostrados na exibição ampliada. Você pode usar um [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) ou adicionar código para sincronizar as exibições.
 
-Quaisquer controles associados ao mesmo CollectionViewSource sempre terão o mesmo item atual. Se as duas exibições usarem o mesmo CollectionViewSource como fonte de dados, o CollectionViewSource sincronizará as exibições automaticamente. Para saber mais, consulte a [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource).
+Quaisquer controles associados ao mesmo CollectionViewSource sempre terão o mesmo item atual. Se as duas exibições usarem o mesmo CollectionViewSource como fonte de dados, o CollectionViewSource sincronizará as exibições automaticamente. Para saber mais, confira [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource).
 
 Se você não usar um CollectionViewSource para sincronizar as exibições, será preciso manipular o evento [ViewChangeStarted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.viewchangestarted) e sincronizar os itens no manipulador de eventos como esse, conforme mostrado aqui.
 
@@ -195,14 +195,14 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
 
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Noções básicas sobre o design de navegação](../basics/navigation-basics.md)
-- [Exibição de lista e o modo de exibição de grade](listview-and-gridview.md)
-- [Modelos e contêineres de itens](item-containers-templates.md)
+- [Noções básicas de design de navegação](../basics/navigation-basics.md)
+- [Exibição de lista e exibição de grade](listview-and-gridview.md)
+- [Contêineres e modelos de itens](item-containers-templates.md)
 
 
 

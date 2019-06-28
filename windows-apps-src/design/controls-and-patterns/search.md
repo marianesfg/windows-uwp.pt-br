@@ -12,10 +12,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c6eb22fbe0488fa9a36160ce9e704d10727e4c9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364478"
 ---
 # <a name="search-and-find-in-page"></a>Pesquisar e localizar na página
@@ -29,21 +29,21 @@ A pesquisa é uma das principais maneiras para os usuários encontrarem conteúd
 ## <a name="elements-of-the-search-experience"></a>Elementos da experiência de pesquisa
 
 
-**Entrada.**    é o modo mais comum de entrada de pesquisa de texto e é o foco deste guia. Outros modos de entrada comuns incluem voz e câmera, mas eles geralmente exigem a capacidade de interface com o hardware do dispositivo e podem exigir outros controles ou interface do usuário personalizada no aplicativo.
+**Entrada.**   Texto é o modo mais comum de entrada de pesquisa e o foco destas diretrizes. Outros modos de entrada comuns incluem voz e câmera, mas eles geralmente exigem a capacidade de interface com o hardware do dispositivo e podem exigir outros controles ou interface do usuário personalizada no aplicativo.
 
-**Zero entrada.**    Depois que o usuário ativou o campo de entrada, mas antes que o usuário inseriu texto, você pode exibir o que é chamado uma "zero entrada tela." A tela de entrada zero normalmente aparecerá na tela do aplicativo para que a [sugestão automática](auto-suggest-box.md) substitua esse conteúdo quando o usuário começar a inserir a consulta. Histórico de pesquisa recente, pesquisas mais populares, sugestões de pesquisa contextual e dicas são todos bons candidatos para o estado de entrada zero.
+**Entrada zero.**   Depois que o usuário tiver ativado o campo de entrada, mas antes de ter inserido texto, você pode exibir o que é chamado de "tela de entrada zero". A tela de entrada zero normalmente aparecerá na tela do aplicativo para que a [sugestão automática](auto-suggest-box.md) substitua esse conteúdo quando o usuário começar a inserir a consulta. Histórico de pesquisa recente, pesquisas mais populares, sugestões de pesquisa contextual e dicas são todos bons candidatos para o estado de entrada zero.
 
 ![exemplo da Cortana em uma tela de entrada zero](images/search-cortana-example.png)
 
  
 
-**Consultar a formulação /-sugestão automática.**    Formulação substitui nenhum conteúdo de entrada, assim que o usuário começa a inserir a entrada de consulta. Conforme o usuário insere uma cadeia de caracteres de consulta, é fornecido um conjunto atualizado continuamente de sugestões de consulta ou opções de desambiguação para ajudar a acelerar o processo de entrada e formular uma consulta eficiente. Esse comportamento de sugestões de consulta é incorporado ao [controle de sugestão automática](auto-suggest-box.md), e também é uma maneira de mostrar o ícone dentro da pesquisa (como um ícone de microfone ou de confirmação). Qualquer comportamento que não se enquadre é atribuído ao aplicativo.
+**Formulação de consulta/sugestão automática.**   A formulação de consulta substitui o conteúdo de entrada zero assim que o usuário começa a inserir a entrada. Conforme o usuário insere uma cadeia de caracteres de consulta, é fornecido um conjunto atualizado continuamente de sugestões de consulta ou opções de desambiguação para ajudar a acelerar o processo de entrada e formular uma consulta eficiente. Esse comportamento de sugestões de consulta é incorporado ao [controle de sugestão automática](auto-suggest-box.md), e também é uma maneira de mostrar o ícone dentro da pesquisa (como um ícone de microfone ou de confirmação). Qualquer comportamento que não se enquadre é atribuído ao aplicativo.
 
 ![example of query/formulation sugestão automática](images/search-autosuggest-example.png)
 
  
 
-**Conjunto de resultados.**    Os resultados da pesquisa normalmente são exibidos diretamente sob o campo de entrada de pesquisa. Embora isso não seja um requisito, a justaposição de entrada e resultados mantém o contexto e fornece acesso imediato ao usuário para editar a consulta anterior ou inserir uma nova consulta. Essa conexão pode ser ainda mais comunicada substituindo o texto de dica pela consulta que criou o conjunto de resultados.
+**Conjunto de resultados.**   Os resultados de pesquisa normalmente aparecem diretamente abaixo do campo de entrada de pesquisa. Embora isso não seja um requisito, a justaposição de entrada e resultados mantém o contexto e fornece acesso imediato ao usuário para editar a consulta anterior ou inserir uma nova consulta. Essa conexão pode ser ainda mais comunicada substituindo o texto de dica pela consulta que criou o conjunto de resultados.
 
 Um método para permitir acesso eficiente para editar a consulta anterior e inserir uma nova consulta é realçar a consulta anterior quando o campo for reativado. Dessa forma, qualquer pressionamento de tecla substituirá a cadeia de caracteres anterior, mas a cadeia de caracteres será mantida para que o usuário possa posicionar o cursor para editar ou acrescentar a cadeia de caracteres anterior.
 
@@ -56,11 +56,11 @@ A pesquisa é um recurso comum, e os usuários encontrarão interface do usuári
 
 Alguns escopos comuns da pesquisa incluem:
 
-**Global** e **contextuais/refinar.**   Pesquisa em várias fontes de nuvem e locais de conteúdo. Resultados variados incluem URLs, documentos, mídia, ações, aplicativos e muito mais.
+**Global** e **contextual/refinado.**   Pesquisa várias origens de nuvem e conteúdo local. Resultados variados incluem URLs, documentos, mídia, ações, aplicativos e muito mais.
 
-**Web.**    Pesquisar um índice de web. Os resultados incluem páginas, entidades e respostas.
+**Web.**   Pesquisa um índice da Web. Os resultados incluem páginas, entidades e respostas.
 
-**Minhas coisas.**    Pesquisa nos dispositivos, nuvem, gráficos sociais e muito mais. Os resultados variam, mas são restringidos pela conexão à(s) conta(s) de usuário.
+**Meu conteúdo.**   Pesquisa dispositivo(s), nuvem, gráficos de redes sociais e muito mais. Os resultados variam, mas são restringidos pela conexão à(s) conta(s) de usuário.
 
 Use o texto de dica para comunicar o escopo da pesquisa. Os exemplos incluem:
 
@@ -200,7 +200,7 @@ Localizar na página tem um contador de correspondência:
 
 
 
-## <a name="implementing-find-in-page"></a>**Implementando a localizar na página**
+## <a name="implementing-find-in-page"></a>**Implementar a localização na página**
 
 -   Visualizadores de documentos, leitores e navegadores, os tipos de aplicativo mais prováveis para fornecer localizar na página, permitem que o usuário tenha uma experiência de visualização/leitura em tela inteira.
 -   A funcionalidade de localização na página é secundária e deve estar localizada em uma barra de comando.

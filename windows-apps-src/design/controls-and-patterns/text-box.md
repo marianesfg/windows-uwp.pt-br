@@ -12,10 +12,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 2db08cc577a82ddf6973cb33e41f9bdb39fdffde
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364228"
 ---
 # <a name="text-box"></a>Caixa de texto
@@ -24,7 +24,7 @@ O controle TextBox permite que um usuário digite texto em um aplicativo. Em ger
 
 O controle TextBox tem vários recursos que podem simplificar a entrada de texto. Ele é fornecido com um menu de contexto familiar, integrado, com suporte para copiar e colar texto. O botão "Limpar tudo" permite que um usuário exclua rapidamente todo o texto que foi digitado. Ele também tem recursos de verificação ortográfica integrados e habilitados por padrão.
 
-> **APIs importantes**: [Classe de caixa de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), [propriedade Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text)
+> **APIs importantes**: [classe de caixa de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), [propriedade Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -36,7 +36,7 @@ Use o controle [PasswordBox](password-box.md) para receber uma senha ou outros d
 
 Use o controle [AutoSuggestBox](auto-suggest-box.md) para permitir que o usuário insira termos de pesquisa ou para mostrar ao usuário uma lista de sugestões das quais escolher ao digitarem.
 
-Use uma [RichEditBox](rich-edit-box.md) para exibir e editar arquivos Rich Text.
+Use [RichEditBox](rich-edit-box.md) para exibir e editar arquivos Rich Text.
 
 Para obter mais informações sobre como escolher o controle de texto certo, consulte o artigo [Controles de texto](text-controls.md).
 
@@ -47,7 +47,7 @@ Para obter mais informações sobre como escolher o controle de texto certo, con
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/TextBox">abrir o aplicativo e ver o TextBox em ação</a>.</p>
+    <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/TextBox">abrir o aplicativo e conferir o TextBox em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -139,7 +139,7 @@ IsEnabled
 Há duas propriedades que você pode usar para determinar se a caixa de texto exibe texto em mais de uma linha. Em geral, as duas propriedades são definidas para fazer uma caixa de texto de várias linhas.
 
 - Para que a caixa de texto permita e exiba os caracteres newline ou return, defina a propriedade [AcceptsReturn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.acceptsreturn) como **true**.
-- Para habilitar a disposição do texto, defina a propriedade [TextWrapping](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textwrapping) como **Wrap**. Isso faz com que o texto seja encapsulado ao atingir a borda da caixa de texto, independente dos caracteres separadores de linha.
+- Para habilitar o encapsulamento de texto, defina a propriedade [TextWrapping](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textwrapping) como **Wrap**. Isso faz com que o texto seja encapsulado ao atingir a borda da caixa de texto, independente dos caracteres separadores de linha.
 
 > **Observação**&nbsp;&nbsp;TextBox e RichEditBox não dão suporte ao valor **WrapWholeWords** para suas propriedades TextWrapping. Se você tentar usar WrapWholeWords como um valor para TextBox.TextWrapping ou RichEditBox.TextWrapping, será gerada uma exceção de argumento inválido.
 
@@ -309,14 +309,14 @@ Para obter mais informações e exemplos, consulte [Usar o escopo de entrada par
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – Confira todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Controles de texto](text-controls.md)
 - [Diretrizes para verificação ortográfica](text-controls.md)
-- [Adicionando uma pesquisa](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
-- [Diretrizes para a entrada de texto](text-controls.md)
-- [Classe de caixa de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Como adicionar pesquisa](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
+- [Diretrizes para entrada de texto](text-controls.md)
+- [Classe TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 - [Classe PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [Propriedade String. Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+- [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

@@ -12,10 +12,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 78f6fe36fb8955b6234cdf3cb42e4db02a602f4a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364353"
 ---
 # <a name="rich-edit-box"></a>Caixa de edição com formato
@@ -24,7 +24,7 @@ ms.locfileid: "66364353"
 
 É possível usar um controle RichEditBox para inserir e editar documentos rich text que contenham texto formatado, hiperlinks e imagens. Você pode tornar um RichEditBox somente leitura definindo sua propriedade IsReadOnly como **true**.
 
-> **APIs importantes**: [Classe RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [propriedade de documento](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.document), [propriedade IsReadOnly](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [IsSpellCheckEnabled propriedade](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
+> **APIs importantes**: [classe RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [propriedade Document](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.document), [propriedade IsReadOnly](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [propriedade IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -218,13 +218,13 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – Confira todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Controles de texto](text-controls.md)
 - [Diretrizes para verificação ortográfica](text-controls.md)
-- [Adicionando uma pesquisa](search.md)
-- [Diretrizes para a entrada de texto](text-controls.md)
-- [Classe de caixa de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
-- [Classe PasswordBox Windows](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+- [Como adicionar pesquisa](search.md)
+- [Diretrizes para entrada de texto](text-controls.md)
+- [Classe TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Classe Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)

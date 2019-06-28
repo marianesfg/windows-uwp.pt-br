@@ -12,10 +12,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e671c61058ec1c048fbb1b547cc79060a7cd0d0a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364341"
 ---
 # <a name="rich-text-block"></a>Bloco rich text
@@ -24,7 +24,7 @@ ms.locfileid: "66364341"
 
 Blocos Rich Text fornecem vários recursos para layout de texto avançado que você pode usar quando precisa de suporte para parágrafos, elementos de interface do usuário embutidos ou layouts de texto complexos.
 
-> **APIs importantes**: [Classe RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [classe RichTextBlockOverflow](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlockOverflow), [classe de parágrafo](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph), [classe de tipografia](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Typography)
+> **APIs importantes**: [classe RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [classe RichTextBlockOverflow](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlockOverflow), [classe Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph), [classe Typography](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Typography)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -61,7 +61,7 @@ RichTextBlock oferece suporte a:
 
 ### <a name="paragraphs"></a>Parágrafos
 
-Você usa os elementos [Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph) para definir os blocos de texto a serem exibidos dentro de um controle RichTextBlock. Cada RichTextBlock deve incluir pelo menos um Paragraph. 
+Use elementos [Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph) para definir os blocos de texto a serem exibidos dentro de um controle RichTextBlock. Cada RichTextBlock deve incluir pelo menos um Paragraph. 
 
 Você pode definir o valor de recuo para todos os parágrafos em RichTextBlock definindo a propriedade [RichTextBlock.TextIndent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.textindent). Você pode substituir essa configuração para parágrafos específicos em RichTextBlock definindo a propriedade [Paragraph.TextIndent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.paragraph.textindent) como um valor diferente.
 
@@ -151,7 +151,7 @@ Consulte Tipografia e Diretrizes para fontes.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
@@ -159,13 +159,13 @@ Consulte Tipografia e Diretrizes para fontes.
 
 **Para designers**
 - [Diretrizes para verificação ortográfica](text-controls.md)
-- [Adicionando uma pesquisa](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
-- [Diretrizes para a entrada de texto](text-controls.md)
+- [Como adicionar pesquisa](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
+- [Diretrizes para entrada de texto](text-controls.md)
 
 **Para desenvolvedores (XAML)**
-- [Classe de caixa de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
-- [Classe PasswordBox Windows](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+- [Classe TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Classe Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
 
 
-**Para desenvolvedores (outro)**
-- [Propriedade String. Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+**Para desenvolvedores (outros)**
+- [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

@@ -13,10 +13,10 @@ dev-contact: tpaine
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 7381d8d99f47a69ba7398366762a7dbb4088e04a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364183"
 ---
 # <a name="split-view-control"></a>Controle de modo de exibição dividido
@@ -36,7 +36,7 @@ Veja a seguir um exemplo do aplicativo Microsoft Edge usando SplitView para most
 
     O painel ficará oculto até que seja aberto. Quando aberto, o painel se sobrepõe à área de conteúdo.
 
--   **embutido**
+-   **Embutido**
 
     O painel está sempre visível e não sobrepõe-se à área de conteúdo. As áreas do painel e de conteúdo dividem o espaço real disponível na tela.
 
@@ -95,9 +95,9 @@ Eis um controle SplitView com um painel aberto sendo exibido embutido ao lado do
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 - [Padrão do painel de navegação](navigationview.md)
-- [Exibição de lista](lists.md)
+- [Modo de exibição de lista](lists.md)
 - [Mestre/detalhes](master-details.md)
