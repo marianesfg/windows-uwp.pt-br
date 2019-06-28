@@ -8,18 +8,18 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 62dc89b9e17f1ae9c2394629100e0bd54606594b
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: e6074202a05c80a9dc759cdf81b2c20c7cc17d07
+ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215120"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414096"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>Controles de host UWP XAML em aplicativos da área de trabalho (Ilhas de XAML)
 
 A partir do Windows 10, versão 1903, você pode hospedar controles UWP em aplicativos de área de trabalho não UWP usando um recurso chamado *XAML Ilhas*. Esse recurso permite que você aprimorar a aparência, a aparência e a funcionalidade dos seus aplicativos de área de trabalho existentes com os recursos mais recentes de interface do usuário do Windows 10 que só estão disponíveis por meio de controles da UWP. Isso significa que você pode usar os recursos UWP, como [Windows Ink](/windows/uwp/design/input/pen-and-stylus-interactions) e os controles que dão suporte a [Fluent Design System](/windows/uwp/design/fluent-design-system/index) em existentes do WPF, Windows Forms e aplicativos do Win32 em C++.
 
-Fornecemos várias maneiras de usar ilhas de XAML no seu WPF, Windows Forms, e C++ aplicativos do Win32, dependendo da tecnologia ou estrutura que você está usando.
+Fornecemos várias maneiras de usar ilhas de XAML no seu WPF, Windows Forms, e C++ aplicativos do Win32, dependendo da tecnologia ou estrutura que você está usando. 
 
 > [!NOTE]
 > Se você tiver comentários sobre ilhas de XAML, crie um novo problema nos [Microsoft.Toolkit.Win32 repositório](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/issues) e deixe seus comentários lá. Se você preferir a enviar seus comentários em particular, você pode enviá-lo para XamlIslandsFeedback@microsoft.com. Seus insights e os cenários são extremamente importantes para nós.
@@ -35,7 +35,7 @@ A partir do Windows 10, versão 1903, fornecemos dois modos de usar ilhas de XAM
 > [!NOTE]
 > Aplicativos de desktop do Win32 em C++ devem usar o XAML UWP API de hospedagem para hospedar controles da UWP. Os controles da ilha de XAML no Kit de ferramentas de comunidade do Windows não estão disponíveis para C++ aplicativos da área de trabalho do Win32.
 
-Há dois tipos de controles da ilha de XAML fornecidos pelo Kit de ferramentas de comunidade do Windows para aplicativos WPF e Windows Forms: *encapsulado controles* e *hospedar controles*.
+Há dois tipos de controles da ilha de XAML fornecidos pelo Kit de ferramentas de comunidade do Windows para aplicativos WPF e Windows Forms: *encapsulado controles* e *hospedar controles*. 
 
 ### <a name="wrapped-controls"></a>Controles encapsulados
 
@@ -67,14 +67,6 @@ Veja como esses controles são organizados na arquitetura.
 ![Arquitetura de controle de host](images/xaml-islands/host-controls.png)
 
 As APIs que aparecem na parte inferior do diagrama com o SDK do Windows. Os controles de host e controles encapsulados estão disponíveis por meio de pacotes do Nuget no Kit de ferramentas de comunidade do Windows.
-
-## <a name="feature-roadmap"></a>Roteiro de recursos
-
-A partir da versão do Windows 10, versão 1903, os controles de host no Kit de ferramentas de comunidade do Windows e encapsulados controles ainda estão na visualização do desenvolvedor até o lançamento da versão 1.0 dos controles está disponível.
-
-* A versão 1.0 dos controles para o .NET Framework 4.6.2 e posterior são planejados para ser lançado na [versão 6.0 do Kit de ferramentas](https://github.com/windows-toolkit/WindowsCommunityToolkit/milestones).
-* A versão 1.0 dos controles do .NET Core 3 são planejados para uma versão posterior do Kit de ferramentas.
-* Se você quiser experimentar mais recentes visualizações das versões desses controles versão 1.0 para o .NET Framework e .NET Core 3, consulte o **6.0.0-preview3** de pacotes NuGet na [UWP Community Toolkit](https://dotnet.myget.org/gallery/uwpcommunitytoolkit) Galeria.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -112,8 +104,19 @@ Se você não quiser empacotar o aplicativo em um pacote MSIX, você pode adicio
     </assembly>
     ```
 
+## <a name="feature-roadmap"></a>Roteiro de recursos
+
+A partir da versão do Windows 10, versão 1903, os controles de host no Kit de ferramentas de comunidade do Windows e encapsulados controles ainda estão na visualização do desenvolvedor até o lançamento da versão 1.0 dos controles está disponível.
+
+* A versão 1.0 dos controles para o .NET Framework 4.6.2 e posterior são planejados para ser lançado na [versão 6.0 do Kit de ferramentas](https://github.com/windows-toolkit/WindowsCommunityToolkit/milestones).
+* A versão 1.0 dos controles do .NET Core 3 são planejados para uma versão posterior do Kit de ferramentas.
+* Se você quiser experimentar mais recentes visualizações das versões desses controles versão 1.0 para o .NET Framework e .NET Core 3, consulte o **6.0.0-preview3** de pacotes NuGet na [UWP Community Toolkit](https://dotnet.myget.org/gallery/uwpcommunitytoolkit) Galeria.
+
+Para obter mais detalhes, consulte [esta postagem de blog](https://blogs.windows.com/windowsdeveloper/2019/06/13/xaml-islands-v1-updates-and-roadmap).
+
 ## <a name="additional-resources"></a>Recursos adicionais
 
 Para obter mais informações em segundo plano e tutoriais sobre como usar ilhas de XAML, consulte os artigos e recursos a seguir:
 
-* [Ilhas de XAML laboratório](https://github.com/Microsoft/Windows-AppConsult-XAMLIslandsLab/tree/microsoftlearn). Este laboratório abrangente fornece instruções passo a passo para usar os controles de host e controles encapsulados no Kit de ferramentas de comunidade do Windows para adicionar controles UWP para um aplicativo de linha de negócios existente do WPF. Este laboratório inclui o [o código completo para o aplicativo do WPF](https://github.com/Microsoft/Windows-AppConsult-XAMLIslandsLab/tree/microsoftlearn/Lab) , bem como [instruções detalhadas](https://github.com/Microsoft/Windows-AppConsult-XAMLIslandsLab/blob/microsoftlearn/Manual/README.md) para cada etapa no processo.
+* [Modernize um tutorial de aplicativo do WPF](modernize-wpf-tutorial.md): Este tutorial fornece instruções passo a passo para usar os controles de host e controles encapsulados no Kit de ferramentas de comunidade do Windows para adicionar controles UWP para um aplicativo de linha de negócios existente do WPF. Este tutorial inclui o código completo para o aplicativo do WPF, bem como instruções detalhadas para cada etapa no processo.
+* [Ilhas de XAML v1 - atualizações e roteiro](https://blogs.windows.com/windowsdeveloper/2019/06/13/xaml-islands-v1-updates-and-roadmap): Esta postagem de blog aborda muitas perguntas comuns sobre ilhas de XAML e fornece um roteiro de desenvolvimento detalhadas.
