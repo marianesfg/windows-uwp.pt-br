@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bf71e5f6dd77da025a50866d32caca2870d3525b
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: cfab93064cf2fa2edd91798167a2c2fbc368ecb1
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788431"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468895"
 ---
 # <a name="package-version-numbering"></a>Numeração de versão do pacote
 
@@ -64,7 +64,7 @@ Para corrigir o problema para os clientes que já receberam o pacote problemáti
 ## <a name="version-numbering-for-windows81-and-earlier-and-windows-phone-81-packages"></a>Versão de numeração para Windows 8.1 (e anterior) e pacotes do Windows Phone 8.1
 
 > [!IMPORTANT]
-> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 Para pacotes .appx destinados ao Windows Phone 8.1, o número da versão do pacote em um novo envio deve sempre ser maior do que o pacote incluído no último envio (ou qualquer envio anterior).
 

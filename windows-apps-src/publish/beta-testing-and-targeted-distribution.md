@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, teste beta, distribuição limitada, beta, betas, teste, testadores
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c0a4d1053c35a831458c832131659b9cb888259
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 6cf7fb20129c0b616fcdb537ff8e612aec9b94a4
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787181"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468926"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Teste beta e distribuição direcionada
 
@@ -65,12 +65,12 @@ Para usar esta opção:
 Ao contrário das opções descritas acima, essa opção funciona para clientes no Windows Phone 8.1, bem como no Windows 10 (mas não no Windows 8. x). Nenhum cliente conseguirá encontrar o aplicativo pesquisando ou navegando na Store, mas qualquer pessoa com o link direto para a listagem da Store poderá baixá-lo em um dispositivo com o Windows Phone 8.1 ou anteriores ou o Windows 10. Tenha em mente que, para que os testadores possam baixar o aplicativo gratuitamente, você terá de definir o preço como **Gratuito**.
 
 Para usar esta opção:
-- Na seção **Visibilidade** da página **Preço e disponibilidade**, em [Detectabilidade](choose-visibility-options.md#discoverability), selecione **Disponibilizar este produto mas não torná-lo detectável na Store**. Escolha a opção para **link direto apenas: Qualquer cliente com um link direto para a listagem do produto pode baixá-lo, exceto no Windows 8. x.**.
+- Na seção **Visibilidade** da página **Preço e disponibilidade**, em [Detectabilidade](choose-visibility-options.md#discoverability), selecione **Disponibilizar este produto mas não torná-lo detectável na Store**. Escolha a opção para **link direto apenas: Qualquer cliente com um link direto para a listagem do produto pode baixá-lo, exceto no Windows 8. x.** .
 - Depois que seu produto tiver sido publicado, distribua o link (a **URL** na [Página de identidade do app](view-app-identity-details.md)) para os testadores para que eles possam experimentá-lo.
 - Quando você estiver pronto para disponibilizar o aplicativo para o público, crie um novo envio e altere a opção **Visibilidade** para **Disponibilizar este produto e torná-lo detectável na Store** (juntamente com quaisquer outras alterações que você queira fazer).
 
 > [!IMPORTANT]
-> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir pacotes de direcionamento do Windows Phone 8. x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir pacotes de direcionamento do Windows Phone 8. x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 ## <a name="targeted-distribution-to-windows-phone-customers-with-specified-email-addresses"></a>Distribuição direcionada a clientes do Windows Phone com endereços de email especificados
 

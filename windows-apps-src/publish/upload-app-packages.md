@@ -6,19 +6,19 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: Windows 10, uwp, pacotes, carregamento, upload do pacote
 ms.localizationpriority: medium
-ms.openlocfilehash: 07643b42a4c897c3af1865b895fb174e0eee4a3e
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 97735a8e860f7c941cc35d77a21496696683640f
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787932"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468876"
 ---
 # <a name="upload-app-packages"></a>Carregue os pacotes do aplicativo
 
 O **pacotes** página é onde você carrega todos os arquivos de pacote (.msix, .msixupload, .msixbundle,. AppX,. appxupload e/ou. appxbundle) para o aplicativo que você está enviando. Você pode carregar todos os seus pacotes para o mesmo aplicativo nesta página, e quando um cliente baixa o seu aplicativo, a Store fornecerá automaticamente cada cliente com o pacote que funciona melhor para seu dispositivo. Depois de carregar os pacotes, você verá uma tabela indicando [quais pacotes serão oferecidos para famílias de dispositivos Windows 10 específicas](#device-family-availability) (e versões anteriores do sistema operacional, se aplicável) na ordem de classificação.
 
 > [!IMPORTANT]
-> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 Para obter detalhes sobre o que um pacote inclui e como ele deve ser estruturado, veja [Requisitos do pacote do aplicativo](app-package-requirements.md). Você também vai querer saber mais sobre [como números de versão impacto quais pacotes são entregues aos clientes específicos](package-version-numbering.md) e [como gerenciar pacotes para vários cenários](guidance-for-app-package-management.md).
 
@@ -58,7 +58,7 @@ Quando detectarmos que você tem pacotes redundantes, forneceremos uma opção p
 
 ## <a name="gradual-package-rollout"></a>Distribuição de pacote gradual
 
-Se o envio for uma atualização para um aplicativo publicado anteriormente, você verá uma caixa de seleção que diz **Roll out update gradually after this submission is published (to Windows 10 customers only)**. Isso permite escolher um percentual de clientes que receberão os pacotes do envio, de maneira que você possa monitorar comentários e dados analíticos para se certificar da atualização antes de implantá-la mais amplamente. Você pode aumentar a porcentagem (ou parar a atualização) a qualquer tempo sem precisar criar um novo envio. 
+Se o envio for uma atualização para um aplicativo publicado anteriormente, você verá uma caixa de seleção que diz **Roll out update gradually after this submission is published (to Windows 10 customers only)** . Isso permite escolher um percentual de clientes que receberão os pacotes do envio, de maneira que você possa monitorar comentários e dados analíticos para se certificar da atualização antes de implantá-la mais amplamente. Você pode aumentar a porcentagem (ou parar a atualização) a qualquer tempo sem precisar criar um novo envio. 
 
 Para obter mais informações, consulte [Distribuição gradual de pacote](gradual-package-rollout.md).
 

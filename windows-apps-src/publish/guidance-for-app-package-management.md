@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c75eb1a4b28b015b83557f74957a3370f478a26e
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: f514177ad5de7774e6926165435fd3b2d7b5e1f7
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63790781"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468945"
 ---
 # <a name="guidance-for-app-package-management"></a>Orientação para gerenciamento do pacote de aplicativo
 
@@ -31,7 +31,7 @@ Diferentes sistemas operacionais podem executar diferentes tipos de pacotes. Se 
 De modo geral, as versões posteriores do sistema operacional podem executar pacotes para versões anteriores do sistema operacional para a mesma família de dispositivos. Dispositivos Windows 10 podem executar todas as versões do sistema operacional de com suporte anteriores (por família de dispositivos). Dispositivos de área de trabalho do Windows 10 podem executar aplicativos que foram criados para Windows 8.1 ou Windows 8; Dispositivos móveis Windows 10 podem executar aplicativos que foram criados para Windows Phone 8.1, Windows Phone 8 e até mesmo do Windows Phone 7. x. No entanto, os clientes no Windows 10 só receberá esses pacotes se o aplicativo não incluir pacotes UWP visando a família do dispositivo aplicáveis.
 
 > [!IMPORTANT]
-> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/).
+> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 
 ## <a name="removing-an-app-from-the-store"></a>Removendo um aplicativo da Loja

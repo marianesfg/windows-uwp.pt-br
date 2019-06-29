@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, personalizar, listagem, descrição, anteriormente
 ms.localizationpriority: medium
-ms.openlocfilehash: 50c14ed3fa7f7f5f7d1b4c80bb8165b3f27e522a
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 2d9a9e86397ca5e85697543f99481b43f438a063
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63777704"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468973"
 ---
 # <a name="create-platform-specific-store-listings"></a>Criar listagens específicas de plataforma da Loja
 
@@ -21,7 +21,7 @@ Se seu aplicativo publicado anteriormente tiver pacotes destinados a diferentes 
 Os clientes no Windows 10 (incluindo Xbox) sempre verão o padrão [listagem Store](create-app-store-listings.md). Você não verá a opção de criar as listagens de Store específicas da plataforma, a menos que você já tenha publicado seu aplicativo com pacotes que dão suporte a uma ou mais versões anteriores do sistema operacional. 
 
 > [!IMPORTANT]
-> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 Listagens de Store específicas da plataforma podem ser útil se você deseja mencionar os recursos que são exibidos apenas em uma versão de sistema operacional, ou deseja fornecer capturas de tela são específicas para um sistema operacional específico (independente do tipo de dispositivo).
 

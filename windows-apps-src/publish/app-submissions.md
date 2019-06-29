@@ -6,12 +6,12 @@ keywords: lista de verificação, windows, uwp, envio, enviar, jogo, app, envio
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 24d3c99636009ebf65f3e24d39d657297b105150
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
+ms.openlocfilehash: 2fe5d44823821208a2384aec9d66037c4da3865f
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66826121"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468929"
 ---
 # <a name="app-submissions"></a>Envios de aplicativos
 
@@ -29,7 +29,7 @@ Depois que o aplicativo for publicado, você pode publicar uma versão atualizad
 > Esta seção da documentação descreve como criar um envio de aplicativo no Partner Center. Opcionalmente, você poderá usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de apps.
 
 > [!IMPORTANT]
-> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 ## <a name="app-submission-checklist"></a>Lista de verificação de envio de aplicativo
 
@@ -114,7 +114,7 @@ Você precisará de todas as informações obrigatórias para pelo menos um dos 
 | Nome do campo                    | Observações                                       | Para obter mais informações                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Opções de retenção de publicação**     | Default: Publicar esse envio assim que ele for aprovado na certificação (ou por datas que você selecionou na seção de agendamento)      | [Opções de retenção de publicação](manage-submission-options.md#publishing-hold-options)    
-| **Notas para certificação**     | Recomendado          | [Notas para certificação](notes-for-certification.md)             |
+| **Notas para certificação**     | Recomendações          | [Notas para certificação](notes-for-certification.md)             |
 | **Recursos restritos**     | Necessário se o seu produto declara que qualquer [somente recursos restritos](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Recursos restritos](manage-submission-options.md#publishing-hold-options)       
 
 <span/>

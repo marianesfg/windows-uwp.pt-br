@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 749466e8ebce798f68295df28ad9f11a15e46702
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 69facfe9b1cdac408fe1fd63dfa144de072dfdfd
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365018"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468974"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Layouts dinâmicos com o XAML
 
@@ -22,7 +22,7 @@ A base de um layout dinâmico é o uso apropriado de propriedades e painéis de 
 
 O sistema de layout XAML dá suporte a layouts estáticos e fluidos. Em um layout estático, você pode dar posições e tamanhos de pixel explícitos aos controles. Quando o usuário altera a resolução ou a orientação de seu dispositivo, a interface do usuário não é alterada. Layouts estáticos podem ser recortados em diferentes fatores forma e tamanhos de tela. Por outro lado, os layouts fluidos reduzem, crescem e refluem para responderem ao espaço visual disponível em um dispositivo. 
 
-Na prática, você usa uma combinação de elementos estáticos e fluidos para criar sua interface do usuário. Você ainda usa elementos e valores estáticos em alguns lugares, mas verifique se a interface do usuário geral responde a diferentes resoluções, tamanhos de tela e modos de exibição.
+Na prática, você usa uma combinação de elementos estáticos e fluidos para criar sua interface do usuário. Você ainda use elementos estáticos e os valores em alguns locais, mas certifique-se de que a interface do usuário geral está respondendo a resoluções diferentes, tamanhos de tela e modos de exibição.
 
 Discutiremos aqui como usar painéis de layout e propriedades XAML para criar um layout fluido.
 

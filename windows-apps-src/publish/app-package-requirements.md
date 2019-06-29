@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, requisitos do pacote, pacotes, formato de pacote, versão com suporte, enviar
 ms.localizationpriority: medium
-ms.openlocfilehash: 6baa25668ec805328fb556f39474d9656bd9f825
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 8502c477e3e1202ecf97c6081f4cd87b4d681081
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787192"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468957"
 ---
 # <a name="app-package-requirements"></a>Requisitos do pacote do aplicativo
 
@@ -73,7 +73,7 @@ Os pacotes de seu aplicativo devem atender a estes requisitos.
 | Hashes do mapa de blocos     | Algoritmo SHA2-256                                                   |
 
 > [!IMPORTANT]
-> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 ## <a name="supported-versions"></a>Versões com suporte
 
