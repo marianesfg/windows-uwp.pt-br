@@ -6,18 +6,18 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 6153a0a094d03081388c15ec31696ef277ef7081
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 47cb292b1f5aeed9473cac0f27074f449dc67032
+ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215209"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414103"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernize seus aplicativos da área de trabalho
 
 O Windows 10 e a UWP (Plataforma Universal do Windows) oferecem muitos recursos que você pode usar para fornecer uma experiência moderna em seus aplicativos da área de trabalho. A maioria desses recursos está disponível como componentes modulares que você pode adotar em seus aplicativos da área de trabalho em seu próprio ritmo, sem reescrever seu aplicativo para uma plataforma diferente. Você pode aprimorar seus aplicativos da área de trabalho existentes, escolhendo quais partes do Windows 10 e da UWP adotar.
 
-Este artigo descreve os recursos do Windows 10 e da UWP que você pode usar em seus aplicativos da área de trabalho atualmente.
+Este artigo descreve os recursos do Windows 10 e da UWP que você pode usar em seus aplicativos da área de trabalho atualmente. Para ver um tutorial que demonstra como modernizar um aplicativo existente a fim de usar muitos dos recursos descritos neste artigo, consulte o tutorial [Modernizar um aplicativo WPF](modernize-wpf-tutorial.md).
 
 > [!NOTE]
 > Você precisa de assistência para migrar os aplicativos da área de trabalho para o Windows 10? O serviço [Garantia de Aplicativo da Área de Trabalho](https://docs.microsoft.com/FastTrack/win-10-desktop-app-assure) fornece suporte direto e sem custos para os desenvolvedores que estão compatibilizando seus aplicativos com o Windows 10. Esse programa está disponível para todos os ISVs e empresas qualificadas. Para obter mais detalhes sobre qualificação e sobre o programa propriamente dito, visite [https://aka.ms/DesktopAppAssure](https://aka.ms/DesktopAppAssure). Para começar agora mesmo, [envie sua solicitação](https://aka.ms/DesktopAppAssureRequest).

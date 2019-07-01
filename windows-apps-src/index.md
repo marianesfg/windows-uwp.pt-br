@@ -1,7 +1,7 @@
 ---
 author: mijacobs
 layout: LandingPage
-description: A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer dispositivo Windows — computadores, telefones, Xbox One, HoloLens e muito mais — e publicá-los na Store.
+description: A UWP (Plataforma Universal do Windows) permite criar aplicativos para qualquer dispositivo Windows – computadores, Xbox One, HoloLens e muito mais – e publicá-los na Store.
 title: Documentação da UWP – desenvolvedor de aplicativo UWP | Microsoft Docs
 ms.topic: landing-page
 ms.author: mijacobs
@@ -9,12 +9,12 @@ ms.date: 08/04/2017
 keywords: uwp do windows, plataforma universal do windows, APIs do Windows Runtime, api do windows, ref. de api do windows, api do winrt, referência de api do windows, api uwp, referência de api uwp, desenvolver uwp, criar uwp, publicar uwp
 ms.localizationpriority: medium
 ms.technology: uwp-conceptual-docs
-ms.openlocfilehash: 7b89ef27fb83ff12fc2d65e622975ca5dd4f1510
-ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
+ms.openlocfilehash: 06a06ca78532a26dd45480e451d9541efe38c496
+ms.sourcegitcommit: e0471306399e11200252361fa36cc8e6a2add31f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67131912"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67409979"
 ---
 # <a name="universal-windows-platform-documentation"></a>Documentação da Plataforma Universal do Windows
 
