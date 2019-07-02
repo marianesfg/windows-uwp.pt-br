@@ -6,18 +6,18 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: f653ebe874bfa4d4ad8bb608acf9495f02191de7
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 8bba51627445c553c67b2c02bd66d65486f9caf6
+ms.sourcegitcommit: 68051d2adcf3facc036c9f4c76d82bb4d342a75f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320621"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67498906"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueio do Windows com dispositivos complementares (IoT) do Windows Hello
 
 Dispositivo complementar do Windows Hello é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a estrutura de dispositivo complementar do Windows Hello, um dispositivo complementar pode fornecer uma experiência avançada para o Windows Hello mesmo quando a biometria não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo leitor de impressão digital, por exemplo).
 
-> **Observação** Microsoft será substituída a estrutura do dispositivo de complementar Windows Hello no futuro e publicará a data no início para garantir que os clientes têm um prazo adequado para implantar soluções alternativas.
+> **Observação** Microsoft será substituída a API para o Windows Hello complementar dispositivo framework no primeiro semestre de 2020.
 
 > **Observação** A estrutura de dispositivo complementar do Windows Hello é um recurso especializado não disponível para todos os desenvolvedores de aplicativos. Para usar essa estrutura, seu aplicativo deve ser especificamente provisionado pela Microsoft e listar a funcionalidade restrita *secondaryAuthenticationFactor* em seu manifesto. Para obter aprovação, entre em contato com [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
 

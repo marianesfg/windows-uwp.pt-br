@@ -6,24 +6,23 @@ ms.date: 03/13/2019
 ms.topic: article
 keywords: windows 10, uwp, listagem, descrição, página da store, notas de versão, título
 ms.localizationpriority: medium
-ms.openlocfilehash: 91031f8442f43753a04b958692c851b1f16eb1a0
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 0e9c7f56dd799b568e12a887355ec19561f207ea
+ms.sourcegitcommit: 35a511c2b29ae3d5008612a5fc13d3eb6370d2d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63811884"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67495722"
 ---
 # <a name="create-app-store-listings"></a>Criar listagens de aplicativos da Loja
-
 
 A seção **Listagens da Store** do [processo de envio de aplicativo](app-submissions.md) é onde você fornece o texto e as [imagens](app-screenshots-and-images.md) que os clientes verão na listagem do seu app na Microsoft Store.
 
 Muitos dos campos da seção **listagem da Loja** são opcionais, mas sugerimos o fornecimento de várias imagens e tantas informações quanto possível para fazer a sua listagem se destacar. O mínimo necessário para a etapa **listagens da Loja** ser considerada completa é uma descrição de texto e pelo menos uma [captura de tela](app-screenshots-and-images.md#screenshots).
 
 > [!TIP]
-> Você pode opcionalmente [importação e exportação de listagens de Store](import-and-export-store-listings.md) se você preferir a inserir suas informações de listagem offline em um arquivo. csv, em vez de fornecer informações e carregar arquivos diretamente no Partner Center. O uso da opção de importar e exportar pode ser especialmente útil se você tiver listagens em vários idiomas, já que ele permite fazer várias atualizações ao mesmo tempo. 
+> Você pode opcionalmente [importação e exportação de listagens de Store](import-and-export-store-listings.md) se você preferir a inserir suas informações de listagem offline em um arquivo. csv, em vez de fornecer informações e carregar arquivos diretamente no Partner Center. O uso da opção de importar e exportar pode ser especialmente útil se você tiver listagens em vários idiomas, já que ele permite fazer várias atualizações ao mesmo tempo.
 
-Se seu aplicativo publicado anteriormente dá suporte ao Windows 8.x e/ou Windows Phone 8. x ou anterior, você pode [criar listagens de Store específicas da plataforma](create-platform-specific-store-listings.md) para mostrar aos clientes. 
+Se seu aplicativo publicado anteriormente dá suporte ao Windows 8.x e/ou Windows Phone 8. x ou anterior, você pode [criar listagens de Store específicas da plataforma](create-platform-specific-store-listings.md) para mostrar aos clientes.
 
 ## <a name="store-listing-languages"></a>Idiomas de listagem da Loja
 
@@ -36,7 +35,7 @@ Para adicionar ou remover idiomas das listagens da Loja, clique em **Adicionar/r
 
 Na seção **Idiomas adicionais da listagem da Loja**, você pode clicar em **Gerenciar idiomas adicionais** para adicionar ou remover idiomas *não* incluídos nos seus pacotes. Marque as caixas de seleção dos idiomas que você deseja adicionar e depois clique em **Atualizar**. Os idiomas selecionados serão exibidos na seção **Idiomas adicionais da listagem da Loja**. Para remover um ou mais desses idiomas, clique em **Remover** (ou clique em **Gerenciar idiomas adicionais** e desmarque a caixa de idiomas que você deseja remover).
 
-Quando terminar de fazer suas seleções, clique em **Salvar** para retornar à página de visão geral do envio. 
+Quando terminar de fazer suas seleções, clique em **Salvar** para retornar à página de visão geral do envio.
 
 ## <a name="add-and-edit-store-listing-info"></a>Adicionar e editar informações sobre a listagem de Store
 
@@ -80,16 +79,14 @@ Uma captura de tela é necessária para enviar seu aplicativo. Recomendamos que 
 
 Para saber mais, consulte [Capturas de tela e imagens do aplicativo](app-screenshots-and-images.md#screenshots).
 
-
-## <a name="store-logos"></a>Logotipos da Loja 
+## <a name="store-logos"></a>Logotipos da Loja
 
 Os logotipos da Loja são imagens opcionais que você pode carregar para melhorar a forma como o aplicativo será exibido para os clientes. Você também pode especificar que somente as imagens carregadas aqui deverão ser usadas na listagem da Store do app para clientes no Windows 10 (incluindo o Xbox), em vez de permitir que a Store use as imagens de logotipo dos pacotes do app.
 
 > [!IMPORTANT]
-> Se o aplicativo oferecer suporte ao Xbox ou for compatível com Windows Phone 8.1 ou anterior, forneça determinadas imagens aqui para que a listagem apareça corretamente na Loja. 
+> Se o aplicativo oferecer suporte ao Xbox ou for compatível com Windows Phone 8.1 ou anterior, forneça determinadas imagens aqui para que a listagem apareça corretamente na Loja.
 
 Para obter mais informações, consulte [Logotipos da Loja](app-screenshots-and-images.md#store-logos).
-
 
 ## <a name="trailers-and-additional-assets"></a>Trailers e ativos adicionais
 
@@ -109,20 +106,17 @@ Uma versão mais curta do nome do seu produto. Se fornecido, esse nome mais curt
 
 Este campo tem um limite de 50 caracteres.
 
-
 ### <a name="sort-title"></a>Título curto
 
-Se seu produto puder ser colocado em ordem alfabética ou escrito de maneiras diferentes, você poderá inserir outra versão aqui. Isso permite que os clientes encontrem seu produto com mais rapidez se eles digitarem essa versão durante a pesquisa. 
+Se seu produto puder ser colocado em ordem alfabética ou escrito de maneiras diferentes, você poderá inserir outra versão aqui. Isso permite que os clientes encontrem seu produto com mais rapidez se eles digitarem essa versão durante a pesquisa.
 
 Este campo tem um limite de 255 caracteres.
-
 
 ### <a name="voice-title"></a>Título de voz
 
 Um nome alternativo para seu produto que, se fornecido, pode ser usado na experiência de áudio no Xbox One ao usar o Kinect ou um headset.
 
 Este campo tem um limite de 255 caracteres.
-
 
 ### <a name="short-description"></a>Descrição breve
 
@@ -132,16 +126,14 @@ Para jogos, a descrição curta também pode aparecer na seção Informações d
 
 Para obter melhores resultados, mantenha a breve descrição em 270 caracteres. O campo tem um limite de 1000 caracteres, mas em alguns modos de exibição, somente os caracteres primeiro 270 serão mostrados (com um link disponível para exibir o resto da descrição curta).
 
-
 ### <a name="additional-system-requirements"></a>Requisitos adicionais do sistema
 
-Se necessário, você poderá descrever as configurações de hardware necessárias para que o aplicativo funcione corretamente (além das informações fornecidas na seção **Requisitos do sistema** em [Propriedades do aplicativo](enter-app-properties.md#system-requirements). Essas informações são especialmente importantes se o aplicativo exigir um hardware que possa não estar disponível em todo computador. Por exemplo, se o aplicativo funciona corretamente somente com o hardware USB externo, como uma impressora 3D ou microcontrolador, sugerimos que você os insira aqui. As informações que você insere aqui serão mostradas aos clientes que estão exibindo a listagem da Store do aplicativo no Windows 10, versão 1607 ou posterior (incluindo o Xbox), juntamente com os requisitos que você indicou na página de propriedades do produto. 
+Se necessário, você poderá descrever as configurações de hardware necessárias para que o aplicativo funcione corretamente (além das informações fornecidas na seção **Requisitos do sistema** em [Propriedades do aplicativo](enter-app-properties.md#system-requirements). Essas informações são especialmente importantes se o aplicativo exigir um hardware que possa não estar disponível em todo computador. Por exemplo, se o aplicativo funciona corretamente somente com o hardware USB externo, como uma impressora 3D ou microcontrolador, sugerimos que você os insira aqui. As informações que você insere aqui serão mostradas aos clientes que estão exibindo a listagem da Store do aplicativo no Windows 10, versão 1607 ou posterior (incluindo o Xbox), juntamente com os requisitos que você indicou na página de propriedades do produto.
 
 Você pode inserir até 11 itens tanto para **Hardware mínimo** quanto para **Hardware recomendado**. Eles são exibidos para o cliente na forma de uma lista com marcadores na listagem da Microsoft Store. Deixe-os resumidos, com apenas algumas palavras (e não mais que 200 caracteres) por item.
 
 > [!NOTE]
 > Os requisitos de sistema adicionais serão exibidos com marcadores na listagem da Store; portanto, não adicione marcadores próprios.
-
 
 <span id="shared-fields" />
 
@@ -159,7 +151,6 @@ Ao adicionar termos de pesquisa, pense nas palavras que os clientes podem usam a
 
 Se quiser fornecer informações adicionais sobre direitos autorais e/ou marca comercial, digite-as aqui. Este campo tem um limite de 200 caracteres.
 
-
 ### <a name="additional-license-terms"></a>Termos de licença adicionais
 
 Deixe este campo em branco se quiser que seu aplicativo seja licenciado para os seus clientes sob os **Termos de Licença de Aplicativo Padrão** (associados ao [Contrato do Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)).
@@ -170,16 +161,13 @@ Se você inserir uma única URL para este campo, ela será exibido para os clien
 
 Você também pode inserir até 10.000 caracteres de texto neste campo. Se você fizer isso, os clientes verão esses termos de licença adicionais exibidos como texto sem formatação.
 
-
 ### <a name="developed-by"></a>Desenvolvido por
 
 Digite o texto aqui se você quiser incluir um campo **Desenvolvido por** na listagem da loja do seu aplicativo. (O campo **Publicado por** listará o nome de exibição do fornecedor associado à conta, independentemente de você fornecer um valor para o campo **Desenvolvido por**.)
 
 Este campo tem um limite de 255 caracteres.
  
-
 <span id="privacy-policy" />
 
 > [!NOTE]
 > Os campos **Política de privacidade**, **Site** e **Informações de contato de suporte** agora estão localizados na página [Propriedades](enter-app-properties.md).
-

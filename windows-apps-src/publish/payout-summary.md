@@ -6,69 +6,173 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, resumo de pagamentos, extrato, pagamentos, lucros, pagamentos, pagamento, receita
 ms.localizationpriority: medium
-ms.openlocfilehash: c6f1a5f514c1fbba222790aee158d81fa8cd0fd8
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 90238360ecc48beb974546dc5b49ac09c01407eb
+ms.sourcegitcommit: 35a511c2b29ae3d5008612a5fc13d3eb6370d2d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788402"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67495731"
 ---
 # <a name="payout-summary"></a>Resumo do pagamento
 
-O **Resumo de pagamentos** mostra detalhes do dinheiro que você ganhou com os seus aplicativos e complementos. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
+O **resumo de pagamento** mostra detalhes sobre o dinheiro ganhou com a Microsoft. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
 
-Caso ganhe dinheiro com anúncios, você verá informações de pagamento sobre receita gerada por anúncios no **Resumo de pagamentos**. Mostraremos o aplicativo no qual essas receitas foram ganhas ou "não mapeado" para unidades utilizadas em vários aplicativos ou que não podem ser mapeadas para um aplicativo específico. 
-
-Se você vender produtos no Azure Marketplace, também verá informações sobre pagamentos bem-sucedidos em **Resumo de pagamento**. Para saber mais sobre o pagamento do Azure Marketplace, consulte [Políticas de Participação do Microsoft Azure Marketplace](https://go.microsoft.com/fwlink/p/?LinkId=722436) e [Microsoft Azure Marketplace Publisher Agreement](https://go.microsoft.com/fwlink/p/?LinkID=699560 ). Mais informações sobre os relatórios de pagamento do Azure Marketplace podem ser encontradas [aqui](https://go.microsoft.com/fwlink/p/?LinkID=722439).
+Se você vender produtos no Azure Marketplace, também verá informações sobre pagamentos bem-sucedidos em **Resumo de pagamento**. Para saber mais sobre o pagamento do Azure Marketplace, consulte [Políticas de Participação do Microsoft Azure Marketplace](https://go.microsoft.com/fwlink/p/?LinkId=722436) e [Microsoft Azure Marketplace Publisher Agreement](https://go.microsoft.com/fwlink/p/?LinkID=699560 ).
 
 > [!NOTE]
-> Para se qualificar ao pagamento, sua receita deve atingir o [limite de pagamentos](payment-thresholds-methods-and-timeframes.md) aplicável. Se a receita for inferior ao limite de pagamento, ela permanecerá na categoria **Reservado** até que o limite seja atingido. Para obter mais detalhes sobre o limite de pagamento para receita do aplicativo, consulte o [Contrato de Desenvolvedor de Aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Para receita gerada por anúncios, o limite de pagamento é US$ 50 (ou o equivalente em moeda local). 
->
-> Os pagamentos são feitos mensalmente (desde que tenha sido atingido um limite de pagamento aplicável). Normalmente, enviaremos qualquer pagamento devido em um determinado mês até o 15º dia do mês. Observe que os pagamentos geralmente levam entre 3 e 10 dias úteis adicionais para alcançar sua conta de pagamento. Para obter mais informações, consulte [Limites, métodos e prazos de pagamento](payment-thresholds-methods-and-timeframes.md).
+> Para se qualificar para o pagamento, sua receita deve atingir o [limite de pagamento](payment-thresholds-methods-and-timeframes.md) de US $50. Para obter detalhes sobre o limite de pagamento, consulte esta página e examine o contrato de desenvolvedor do aplicativo.
 
-Para exibir sua **resumo de pagamento**, clique no **pagamento** ícone que aparece próximo ao canto superior direito no Partner Center, em seguida, selecione **resumo do pagamento**.
+## <a name="access-the-payout-summary-pages"></a>Acessar as páginas de resumo de pagamento
 
-## <a name="current-proceeds-and-payments"></a>Receita e pagamentos atuais
+Para abrir uma das páginas de resumo de pagamento:
 
-Próximo à parte superior da página, você encontrará sua **prossegue atual e pagamentos**, que contém três seções: **Reservado**, **futuros pagamentos**, e **pagamento mais recente**.
+1. Selecione o ícone de dinheiro no canto superior direito.
+2. Selecione os pagamentos, histórico de transações, ou exportar dados.
 
-- **Reservado** mostra a quantidade de dinheiro que sua conta acumulou, mas que ainda não foi agendada para pagamento, incluindo receita de publicidade. (Receita do Marketplace do azure não aparecem na **reservado** seção; se você participar apenas no Azure Marketplace, você verá $0,00 aqui.) Continua a partir de seu aplicativo mais recente vendas permanecem em um estado pendente por cerca de 30 dias antes que eles se tornarão elegíveis para pagamento. Depois disso, a receita será programada para pagamento no mês seguinte (supondo que o [limite de pagamento](payment-thresholds-methods-and-timeframes.md) foi atingido). Quando se tenta fazer um pagamento, o valor do pagamento é diminuído do o saldo reservado, e você vê o valor refletido em **Próximo pagamento**. Observe que o valor mostrado em **Reservado** é uma estimativa, porque as taxas de câmbio para vendas em outras moedas podem flutuar antes da geração do pagamento. Você pode notar que seu saldo reservado muda um pouco no início de cada mês. Seu saldo reservado é atualizado mensalmente para refletir as taxas de câmbio mensais, de modo que ele represente uma estimativa mais precisa. Você pode clicar em **Exibir detalhes** para ver informações adicionais ou no link **Baixar as transações reservadas** para exibir um arquivo .csv de todas as suas transações **Reservadas**.
-- **Pagamentos futuros** mostra o número de pagamentos futuros, o valor do(s) próximo(s) pagamento(s) e a(s) data(s) de criação do pagamento. Se a receita qualificada ainda não tiver alcançado o [limite de pagamento](payment-thresholds-methods-and-timeframes.md), nenhum pagamento futuro será mostrado aqui. Selecione **Exibir detalhes** para ver informações adicionais, incluindo os valores dos pagamentos e os respectivos códigos de receita. Quando um valor for mostrado na seção **Pagamento futuro**, você verá um link temporário para **Baixar transações**.  Se clicar no link, você poderá exibir um arquivo .csv de todas as transações que constituem os pagamentos futuros.  Observação: quando o valor **Pagamento futuro** passar para **Pagamento mais recente**, o link **Baixar transações** deixará de ser exibido.
-- **Pagamento mais recente** mostra o valor da última tentativa de pagamento. Se o pagamento foi bem-sucedido, o link **Exibir detalhes** estará azul, e você pode clicar nele para ver os detalhes de cada pagamento. Observe que se tentarmos fazer vários pagamentos e apenas um deles for bem-sucedido, apenas o valor do pagamento bem-sucedido será mostrado aqui. Se ocorrer falha em um ou mais pagamentos, o link **Exibir detalhes** estará vermelho e o número de pagamentos com falha serão exibidos. Você pode clicar em **Exibir detalhes** para ver mais detalhes sobre o problema a fim de corrigir a situação.
+## <a name="payments-page"></a>Página de pagamentos
 
-## <a name="proceeds-by-app-and-adjustments"></a>Receita por aplicativo e ajustes
+Os totais nesta página representam todos os programas que você participa. Você pode filtrar por ID de participante, o programa, o ID de pagamento e o tipo de Earning. Valores são fornecidos em dólares americanos. O valor pago também é exibido no pagamento em moeda.
 
-Esta seção divide as informações do resumo para permitir que você veja detalhes específicos por aplicativo. Se você ganhou dinheiro com anúncios, a quantidade total da receita de publicidade será mostrada aqui como um item de linha único.
+| Área                   | Descrição                                                                                  |
+|------------------------|----------------------------------------------------------------------------------------------|
+| Total pago neste ano   | O total combinado paga para você neste ano, em dólares americanos, para todos os seus programas.       |
+| Próximo pagamento estimado | O único pagamento próxima chegando (mesmo se houver outras pessoas em breve), em dólares americanos. |
+| Último pagamento           | O valor (em dólares americanos), o nome do programa e o programa do pagamento mais recente.           |
+| Pagamentos por origem     | Quantidade de pagamentos em dólares americanos, representado pelo programa nos últimos 12 meses.           |
+| Pagamentos               | Selecione pago ou pendente e, em seguida, classificar como desejar. Para obter detalhes adicionais de um pagamento específico, selecione modo de exibição. Para baixar uma cópia da instrução de remessa de pagamento, selecione o Download. Observe que os dados de histórico de transação podem levar até 24 horas para serem exibidas, portanto, você não poderá ver os ganhos associados imediatamente. |
 
-Ao examinar esta seção, você poderá determinar quais aplicativos geraram dinheiro que está atualmente nas categorias **Reservado** ou **Pagamento mais recente**. Você também poderá ver o valor total recebido por cada aplicativo. Caso seja necessário fazer [ajustes](#proceeds-by-app-and-adjustments) no saldo de sua conta, também é possível exibi-los aqui. (Os ajustes da receita gerada por anúncios não são mostrados aqui no momento.)
+Para exportar os dados nessa página, selecione Exportar e, em seguida, siga instruções na página de dados de exportação.
 
-## <a name="payment-statements"></a>Demonstrativos de pagamento
+## <a name="transaction-history-page"></a>Página de histórico de transação
 
-Nesta seção, você pode exibir os demonstrativos de todos os pagamentos mensais bem-sucedidos e ver a quantidade total de dinheiro pago.
+Esta página exibe todos os seus ganhos individuais, incluindo a data, tipo e a obtenção de cada um. Você pode selecionar um período de tempo, e você também pode filtrar por ID de registro, programa, ID de pagamento, tipo Earning, alavanca e Status. Dados estão disponíveis para o ano fiscal atual (1º de julho – 30 de junho) e os dois anos fiscais anteriores.
 
-A seção **Total pago até a data** mostra o valor total pago por todas as suas vendas. Clique em **Exibir detalhes** para ver os valores oriundos de cada fonte de receita.
+Para ver mais detalhes sobre um ganhar, selecione a seta para baixo no lado direito da página. Isso exibirá a alavanca, o valor de receita e o produto. Se por alguma razão, qualquer um dos dados não estão disponíveis, mas você precisa ter acesso a ele, entre em contato com [suporte](https://developer.microsoft.com/en-us/windows/support)]. Se a ganhar é o resultado de um ajuste e não uma transação, os campos de produto não serão exibidos.
 
-Abaixo da seção **Total pago até a data**, você verá seus três últimos demonstrativos por padrão. Para ver o demonstrativo completo (para pagamentos bem-sucedidos), clique em **Exibir**. Você pode acessar seus demonstrativos de pagamento históricos por meio da caixa de lista suspensa.
+Para exportar os dados de transação nesta página, selecione Exportar e, em seguida, siga instruções na página de dados de exportação. Os arquivos exportados da página de histórico de transações mostram dados na moeda da transação, ganhos na moeda da transação e dólares americanos, e o valor pago em pagar para moeda.
 
-Na parte superior de cada demonstrativo, você verá o valor total de seu pagamento mensal. Logo abaixo, na área de **pagamentos efetuados**, você verá um resumo da forma como o valor dos pagamentos foi calculado.
+## <a name="payment-status"></a>Status do pagamento
 
-Abaixo, na seção **Divisão de receitas**, você pode ver detalhes sobre quanto dinheiro foi ganho por mercado e por fonte de receita (por exemplo, Microsoft Store, Windows Store 8, Loja do Windows Phone etc.) por app. Você também verá detalhes sobre quaisquer [ajustes](#proceeds-by-app-and-adjustments) feitos, inclusive a data, o valor e o motivo do ajuste.
+| A obtenção de status           | Reason                                                                                                                                      | Ação de parceiro necessária?                                   |
+|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
+| Não processado              | A ganhar é elegível para pagamento. Ela permanece nesse estado por um período de resfriamento conforme definido na guia de programação para o programa de incentivo. | Não                                                         |
+| Futuros                 | Ordem de pagamento gerado pendentes revisões internas antes que o pagamento é processado.                                                               | Não                                                         |
+| Nota fiscal de imposto pendente      | Sua fatura de imposto está incompleta ou inválida.                                                                                                  | Você precisa atualizar sua fatura de imposto antes que você pode ser pago |
+| Rejeitada durante a revisão   | O pagamento foi rejeitado durante a revisão.                                                                                                     | Entre em contato com [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
+| Failed (Falha)                   | O pagamento falhou devido a um erro de sistema do Microsoft.                                                                                         | Entre em contato com [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
+| Em andamento              | O pagamento está em andamento.                                                                                                                 | Não                                                         |
+| Pagamento incorreto        | O pagamento recouping está em andamento.                                                                                                       | Não                                                         |
+| enviado                     | O pagamento foi enviado ao seu banco.                                                                                                     | Não                                                         |
+| Reprocessamento             | O pagamento encontrou um erro de sistema do Microsoft e está sendo reprocessado.                                                                  | Não                                                         |
+| Inversão                 | O pagamento foi revertido pelo banco e será enviado novamente no próximo ciclo de pagamento.                                                     | Não                                                         |
+| Nota fiscal de impostos rejeitada     | Sua fatura de imposto foi rejeitada durante a revisão. Todos os pagamentos pendentes serão em espera até que a revisão de nota fiscal de imposto seja concluída.                 | Entre em contato com [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
+| Nota fiscal de impostos sob revisão | Sua fatura de imposto está sendo revisada. O pagamento será liberado após aprovação de nota fiscal de imposto.                                   | Não                                                         |
+| Rejeitado                 | O pagamento foi rejeitado pelo banco.                                                                                                      | Entre em contato com seu banco para obter detalhes.                             |
 
-As seções mencionadas acima mostram apenas informações sobre sua receita (e ajustes) de vendas do aplicativo. Se ganhar dinheiro com publicidade, você verá uma seção separada da Microsoft Advertising com detalhes sobre os pagamentos e as conversões de moeda.
+## <a name="export-data-page"></a>Página de dados de exportação
 
-## <a name="adjustments"></a>Ajustes
+Siga as instruções nesta página para exportar os dados desejados.
 
-| Categoria de ajuste     | Descrição                                                                                                |
-|-------------------------|------------------------------------------------------------------------------------------------------------|
-| Ajuste compensatório | Qualquer ajuste feito em seu saldo de pagamento que não pertença a outras categorias de ajuste listadas |
-| Saldo histórico        | Saldos de pagamento de um sistema de pagamento histórico                                                             |
-| Transferência de impostos              | Ajuste de imposto relacionado a vendas na Coreia                                                                   |
+Observações:
 
-## <a name="downloading-payment-transactions"></a>Baixando transações de pagamento
+- Quando você acessa esta página de ambos os pagamentos ou a página de histórico de transações, não carregam seus filtros por meio do. Você precisará refazê-los na página de dados de exportação.
+- A página de dados de exportação não atualiza por conta própria. Talvez você precise atualizar a página manualmente para ver os dados mais recentes.
+- O filtro pode resultar em erro de não dados disponível. Isso significa que provavelmente você Mantive o padrão de período de tempo selecionado em três meses e, em seguida, selecionado uma ID de pagamento de ganhos fora esse período. Expanda seu período de tempo e tente novamente.
 
-Na parte superior de cada demonstrativo, você verá um link para **Baixar transações**. Clique neste link para obter um arquivo .csv com informações detalhadas sobre cada uma das transações incluídas em seu pagamento.
+## <a name="payment-download-export"></a>Exportação de download de pagamento
 
-A tabela a seguir descreve os campos que aparecem no arquivo .csv. Observe que os campos exatos que você verá podem variar conforme o relatório for atualizado.
+Essa opção fornece um download dos pagamentos recebidas em seu banco para determinado programa, o imposto associado e agregados quantidade ganhando. Esse relatório é usado para muitos programas do Partner Center, portanto, algumas colunas podem ser não aplicáveis ao seu relatório. Essas colunas são marcadas abaixo.
+
+| Nome da coluna              | Descrição                                                                                                                             |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| participantID            | A identidade primária do parceiro ganhar sob o programa                                                                           |
+| participantIDType        | Normalmente, id do programa para programas de incentivo e ID do vendedor para programas de Store                                                              |
+| participantName          | Nome do parceiro de rendimentos                                                                                                             |
+| programName              | Nome do programa de incentivo/armazenamento                                                                                                            |
+| acumulado                   | Valor acumulado na moeda de pagamento para esse programa/participantID                                                                     |
+| earnedUSD                | Valor acumulado para a ID do participante do programa, em dólares americanos                                                                                    |
+| withheldTax              | Valor do imposto retido na moeda de pagamento para o programa/participantID                                                             |
+| salesTax                 | Quantidade total de imposto sobre vendas a pagar para moeda para o programa/participantID                                                          |
+| totalPayment             | Pagamento total na moeda local, exceto a retenção de imposto e incluindo o imposto sobre vendas (se aplicável) para o programa/participantID |
+| currencyCode             | Pagar para o código de moeda                                                                                                                    |
+| paymentMethod            | O método usado para pagar o parceiro (transferência eletrônica bancária, nota de crédito)                                                              |
+| paymentID                | Identificador exclusivo para o pagamento. Esse número é normalmente visível no seu extrato bancário.                                               |
+| paymentStatus            | Status do pagamento                                                                                                                          |
+| paymentStatusDescription | Descrição amigável do status de pagamento                                                                                                  |
+| paymentDate              | Data de pagamento foi enviado da Microsoft                                                                                                    |
+
+## <a name="transaction-history-download-export"></a>Exportação de download do histórico de transação
+
+Essa opção fornece um download de cada item de linha de rendimentos que você vê na página de histórico de transação, a obtenção de tipo, data, o valor da transação associada, cliente, produto e outros detalhes transacionais aplicáveis aos seus programas.
+
+| Nome da coluna                    | Descrição                                                                                                                              |
+|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| earningId                      | Identificador exclusivo para cada ganhar                                                                                                       |
+| participantId                  | A identidade primária do parceiro ganhar sob o programa                                                                            |
+| participantIdType              | ID do vendedor                                                                                                                                |
+| participantName                | Nome do parceiro de rendimentos                                                                                                              |
+| partnerCountryCode             | Local/país do parceiro rendimentos                                                                                                  |
+| programName                    | Nome do programa de incentivo/armazenamento                                                                                                             |
+| transactionId                  | Identificador exclusivo da transação                                                                                                    |
+| transactionCurrency            | Moeda na qual ocorreu a transação original do cliente                                                                             |
+| transactionDate                | Data da transação. Útil para programas onde muitas transações contribuem para a obtenção de um                                           |
+| transactionExchangeRate        | Data de taxa de câmbio usada para mostrar a quantidade USD correspondente                                                                             |
+| transactionAmount              | Valor da transação na moeda da transação original, com base na qual a obtenção de é gerada.                                              |
+| transactionAmountUSD           | Quantidade de transações em USD                                                                                                                |
+| Alavanca                          | Indica a regra de negócio para a ganhar                                                                                                  |
+| earningRate                    | Taxa de incentivo aplicada na quantidade de transações para gerar ganhos                                                                      |
+| quantity                       | Varia com base no programa. Indica a quantidade de cobrado para programas transacionais                                                            |
+| earningType                    | Indica se é taxas, descontos, coop, sell etc.                                                                                          |
+| earningAmount                  | A obtenção de valor na moeda da transação original                                                                                      |
+| earningAmountUSD               | A obtenção de valor em dólares americanos                                                                                                                    |
+| earningDate                    | Data da ganhar                                                                                                                      |
+| calculationDate                | Data que de ganhar foi calculada no sistema                                                                                            |
+| earningExchangeRate            | Taxa de câmbio usada para mostrar a quantidade USD correspondente                                                                                  |
+| exchangeRateDate               | Data de taxa de câmbio usada para calcular EarningAmount USD                                                                                   |
+| claimId                        | Sempre será em branco                                                                                                                     |
+| paymentId                      | Identificador exclusivo para o pagamento. Esse número é normalmente visível no seu extrato bancário                                                 |
+| paymentStatus                  | Status do pagamento                                                                                                                           |
+| paymentStatusDescription       | Descrição amigável do status de pagamento                                                                                                   |
+| customerId                     | Sempre será em branco                                                                                                                     |
+| customerName                   | Sempre será em branco                                                                                                                     |
+| partNumber                     | Sempre será em branco                                                                                                                     |
+| productName                    | Nome do produto vinculado à transação                                                                                                       |
+| productId                      | Identificador exclusivo do produto                                                                                                                |
+| parentProductId                | Identificador exclusivo do produto pai. Observação: se não houver um produto pai para a transação, então ID do produto pai = ID do produto (Product ID). |
+| parentProductName              | Nome do produto pai. Observação: se não houver um produto pai para a transação, então Nome do produto pai = Nome do produto.   |
+| productType                    | Tipo de produto (por exemplo, app, complemento, jogo, etc.)                                                                                        |
+| invoiceNumber                  | Sempre será em branco                                                                                                                     |
+| subscriptionId                 | Sempre será em branco                                                                                                                     |
+| subscriptionStartDate          | Sempre será em branco                                                                                                                     |
+| subscriptionEndDate            | Sempre será em branco                                                                                                                     |
+| resellerId                     | Sempre será em branco                                                                                                                     |
+| resellerName                   | Sempre será em branco                                                                                                                     |
+| distributorId                  | Sempre será em branco                                                                                                                     |
+| distributorName                | Sempre será em branco                                                                                                                     |
+| agreementNumber                | Sempre será em branco                                                                                                                     |
+| agreementStartDate             | Sempre será em branco                                                                                                                     |
+| agreementEndDate               | Sempre será em branco                                                                                                                     |
+| Carga de trabalho                       | Sempre será em branco                                                                                                                     |
+| transactionType                | Tipo de transação (por exemplo, compra, reembolso, estorno, etc.)                                                               |
+| localProviderSeller            | Vendedor ou provedor local do registro                                                                                                          |
+| taxRemitted                    | Valor do imposto remetido (vendas, uso ou impostos IVA/GST).                                                                                   |
+| taxRemitModel                  | Parte responsável por remeter impostos (vendas, uso ou impostos IVA/GST).                                                                    |
+| storeFee                       | O valor mantido pela Microsoft como uma taxa por disponibilizar o aplicativo ou o complemento da Store.                                           |
+| transactionPaymentMethod       | A forma de pagamento do cliente usada na transação (por exemplo, cartão de crédito, conta de celular, PayPal, etc)                                |
+| tpan                           | Indica a rede de anúncios de produtos de terceiros                                                                                                     |
+| purchaseTypeCode               | Sempre será em branco                                                                                                                     |
+| purchaseOrderType              | Sempre será em branco                                                                                                                     |
+| purchaseOrderCoverageStartDate | Sempre será em branco                                                                                                                     |
+| purchaseOrderCoverageEndDate   | Sempre será em branco                                                                                                                     |
+| externalReferenceId            | Sempre será em branco                                                                                                                     |
+| externalReferenceIdLabel       | Sempre será em branco                                                                                                                     |
+
+## <a name="payout-statement-download-export-legacy"></a>Exportação de download de instrução de pagamento (herdado)
+
+Por um período limitado na página de resumo de pagamento antigo, instruções de pagamento serão disponibilizado para download. Esse relatório contém os campos a seguir.
+
+> [!NOTE]
+> Histórico de transações herdadas tem uma coluna chamada "Reservados", que corresponde à coluna "Ganhos" no histórico de moderno, exceto que ele exclui todos os ganhos com status = "Pagamento enviado".
 
 | Nome do campo              | Descrição                                                                                                                                                             |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -100,13 +204,3 @@ A tabela a seguir descreve os campos que aparecem no arquivo .csv. Observe que o
 | Modelo de remessa de imposto         | Parte responsável por remeter impostos (vendas, uso ou impostos IVA/GST).                                                                                                   |
 | Data e hora da qualificação   | A data e a hora quando a receita da transação se qualificou para pagamento (UTC). Quando criado, um pagamento inclui a receita da transação com uma data e hora de qualificação anterior à data de criação do pagamento. (Incluído apenas no arquivo .csv **Reservado**.) |
 | Encargos                 | Mostra uma divisão de todos os detalhes de cobrança agregados na coluna Valor da Transação. (Incluído apenas para Azure Marketplace; não incluído no arquivo .csv **Reservado**.) |
-
- 
-
- 
-
- 
-
-
-
-

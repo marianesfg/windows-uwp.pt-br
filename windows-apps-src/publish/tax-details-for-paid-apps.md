@@ -6,12 +6,12 @@ ms.date: 03/05/2019
 ms.topic: article
 keywords: windows 10, uwp, impostos, impostos do aplicativo, requisitos fiscais, expansão do comércio, taxa de imposto
 ms.localizationpriority: medium
-ms.openlocfilehash: 82f10abe57d9d5542286183180012b26478f88cf
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 3c23189df3daf71090493c6080308749c632f871
+ms.sourcegitcommit: 35a511c2b29ae3d5008612a5fc13d3eb6370d2d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788155"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67495751"
 ---
 # <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Detalhes de imposto para os desenvolvedores de aplicativo e de jogos do Windows e do Azure Marketplace
 
@@ -275,7 +275,7 @@ O seguinte se aplica somente a editores de Marketplace do Azure, não obstante q
 ## <a name="mixed-remittance-countriesregions-for-windows-appgame-developers"></a>Países/regiões de remessa misto para desenvolvedores de aplicativo e de jogos do Windows
 
 
-Determinados parceiros de cobrança da Microsoft podem coletar e pagar impostos sobre vendas, uso, bens e serviços, valor agregado ou similares, se houver, aplicáveis à aquisição pelos Clientes seus Aplicativos e/ou Produtos no Aplicativo por meio da Loja nos seguintes países/regiões: Os [relatórios](payout-summary.md#downloading-payment-transactions) que a Microsoft disponibiliza para você identificarão as transações nas quais o parceiro de cobrança cobrou vendas, utilização, bens e serviços, valor agregado e outros impostos semelhantes aplicáveis à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo por meio da Store. Com exceção de transações descritas em tais relatórios, nem a Microsoft nem seus provedores de serviços de cobrança remeterão quaisquer vendas, uso, bens e serviços, valor agregado ou outra semelhante em relação à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo nesses países/regiões. Você é responsável por analisar o relatório fornecido e por determinar e cumprir quaisquer obrigações, se houver, para registrar, cobrar e remeter impostos relacionados às transações envolvendo seus Aplicativos ou Produtos no Aplicativo.
+Determinados parceiros de cobrança da Microsoft podem coletar e pagar impostos sobre vendas, uso, bens e serviços, valor agregado ou similares, se houver, aplicáveis à aquisição pelos Clientes seus Aplicativos e/ou Produtos no Aplicativo por meio da Loja nos seguintes países/regiões: Os [relatórios](payout-summary.md#transaction-history-download-export) que a Microsoft disponibiliza para você identificarão as transações nas quais o parceiro de cobrança cobrou vendas, utilização, bens e serviços, valor agregado e outros impostos semelhantes aplicáveis à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo por meio da Store. Com exceção de transações descritas em tais relatórios, nem a Microsoft nem seus provedores de serviços de cobrança remeterão quaisquer vendas, uso, bens e serviços, valor agregado ou outra semelhante em relação à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo nesses países/regiões. Você é responsável por analisar o relatório fornecido e por determinar e cumprir quaisquer obrigações, se houver, para registrar, cobrar e remeter impostos relacionados às transações envolvendo seus Aplicativos ou Produtos no Aplicativo.
 
 | Países/regiões de remessa misturados |
 |------------------------------------|

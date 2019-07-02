@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 5498480e0dbe2c8be96d92df766b15676a3e6b7b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ff17facbb22e4e336b302415b0b64d0dffda93e0
+ms.sourcegitcommit: 68051d2adcf3facc036c9f4c76d82bb4d342a75f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371931"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67498892"
 ---
 # <a name="smart-cards"></a>Cartões inteligentes
 
@@ -82,6 +82,9 @@ SmartCardProvisioning provisioning = await
 ```
 
 Depois que [**RequestVirtualSmartCardCreationAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcardcreationasync) tiver retornado o objeto [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) associado, o cartão inteligente virtual será provisionado e estará pronto para o uso.
+
+>[!NOTE]
+>Para criar um cartão inteligente virtual usando um aplicativo UWP, o usuário que executa o aplicativo deve ser um membro do grupo Administradores. Se o usuário não for um membro do grupo Administradores, haverá falha na criação do cartão inteligente virtual.
 
 ## <a name="handle-authentication-challenges"></a>Trate os desafios da autenticação
 
