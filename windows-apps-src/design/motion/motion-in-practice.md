@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bc879e43d7e117a4e61e8b6de4bb5437d126e84b
-ms.sourcegitcommit: 7effecb544952b493250337fc622848232fa5995
+ms.openlocfilehash: 8cf010533d2d62559bb8dc0d214e04ab917e62bd
+ms.sourcegitcommit: d534f81590d881a18d677a648c59913029837a84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67325849"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535431"
 ---
 # <a name="bringing-it-together"></a>Reunião
 
@@ -26,16 +26,13 @@ Veja três maneiras de aplicar os conceitos básicos de movimento fluente em seu
 
 :::row:::
     :::column:::
-        **Implicit animation**
-        Automatic tween and timing between values in a parameter change to achieve very simple Fluent motion using the standardized values.
+**Animação implícito** interpolação automática e o intervalo entre os valores em uma alteração de parâmetro para alcançar o movimento de Fluent muito simple usando os valores padronizados.
     :::column-end:::
     :::column:::
-        **Built-in animation**
-        System components, such as common controls and shared motion, are "Fluent by default". Fundamentals have been applied in a manner consistent with their implied usage.
+**Animação interno** componentes do sistema, como controles comuns e compartilhados de movimento, são "Fluent por padrão". Conceitos básicos foram aplicados de maneira consistente com o seu uso implícito.
     :::column-end:::
     :::column:::
-        **Custom animation following guidance recommendations**
-        There may be times when the system does not yet provide an exact motion solution for your scenario. In those cases, use the baseline fundamental recommendations as a starting point for your experiences.
+**Seguindo as recomendações de diretrizes de animação personalizada** pode haver ocasiões quando o sistema ainda fornece uma solução de movimento exata para seu cenário. Nesses casos, use as recomendações de fundamentais de linha de base como ponto de partida para suas experiências.
     :::column-end:::
 :::row-end:::
 
@@ -45,16 +42,14 @@ Veja três maneiras de aplicar os conceitos básicos de movimento fluente em seu
 
 :::row:::
     :::column:::
-        <b>Direction Forward Out:</b><br>
-        Fade out: 150m; Easing: Default Accelerate
-        <b>Direction Forward In:</b><br>
-        Slide up 150px: 300ms; Easing: Default Decelerate
+<b>Limite de encaminhamento de direção:</b><br>
+Esmaecer: 150 milhões; Atenuação: Acelere padrão <b>direção para frente em:</b><br>
+Deslize para cima 150px: 300 MS; Atenuação: Desacelerar padrão
     :::column-end:::
     :::column:::
-         <b>Direction Backward Out:</b><br>
-        Slide down 150px: 150ms; Easing: Default Accelerate
-        <b>Direction Backward In:</b><br>
-        Fade in: 300ms; Easing: Default Decelerate
+<b>Direção para trás Out:</b><br>
+Deslizar para baixo de 150px: 150 ms; Atenuação: Acelere padrão <b>direção para trás no:</b><br>
+Aplicar fade-in: 300 MS; Atenuação: Desacelerar padrão
     :::column-end:::
 :::row-end:::
 
@@ -64,12 +59,12 @@ Veja três maneiras de aplicar os conceitos básicos de movimento fluente em seu
 
 :::row:::
     :::column:::
-        <b>Direction Expand:</b><br>
-        Grow: 300ms; Easing: Standard
+<b>Expanda a direção:</b><br>
+Crescimento: 300 MS; Atenuação: Standard
     :::column-end:::
     :::column:::
-        <b>Direction Contract:</b><br>
-        Grow: 150ms; Easing: Default Accelerate
+<b>Direção de contrato:</b><br>
+Crescimento: 150 ms; Atenuação: Acelerar o padrão
     :::column-end:::
 :::row-end:::
 
@@ -103,7 +98,7 @@ Implicitamente, você pode animar as alterações para as seguintes propriedades
   - **Tradução**
 
 - [Borda](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter), ou [painel](/uwp/api/windows.ui.xaml.controls.panel)
-  - **Em segundo plano**
+  - **Tela de fundo**
 
 Cada propriedade que pode ter alterações animadas implicitamente tem um correspondente _transição_ propriedade. Para animar a propriedade, você deve atribuir um tipo de transição para os respectivos _transição_ propriedade. Esta tabela mostra os _transição_ propriedades e o tipo de transição a ser usado para cada um deles.
 
