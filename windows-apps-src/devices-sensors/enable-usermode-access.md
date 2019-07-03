@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dbb06f53f760724da312e00f545d799d6a24200
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 991d86dd61c660553e5b0a3fdbbdec0336c7fb8b
+ms.sourcegitcommit: d63e5a4fd24434068067cae5b8fb3bed4931247e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321568"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67515154"
 ---
 # <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>Habilitar o acesso de modo do usuário para GPIO, I2C, SPI
 
@@ -268,7 +268,7 @@ Se o sinal de um GPIO passar por um comutador de nível antes de atingir um cabe
 O Windows oferece suporte a dois esquemas de numeração de pino:
 
 * Numeração de pino sequencial: os usuários veem números como 0, 1, 2... até o número de pinos expostos. 0 é o primeiro recurso GpioIo declarado no ASL, 1 é o segundo recurso GpioIo declarado no ASL e assim por diante.
-* Numeração de pino nativa: os usuários veem os números de pino especificados nos descritores de GpioIo, por exemplo, 4, 5, 12, 13, ... .
+* Numeração de Pin nativa – os usuários veem os números do pin especificado nos descritores de GpioIo, por exemplo, 4, 5, 12, 13,...
 
 ```cpp
 Package (2) { “GPIO-UseDescriptorPinNumbers”, 1 },
