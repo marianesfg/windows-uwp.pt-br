@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: 20cb1e3162f0c852a60c620be92afd37ad9f8232
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: eef1c3dd50f06d38023102122cc7fc63a36df25c
+ms.sourcegitcommit: 3ec8c1d0ea3798cdb2745e7a941a025cf3cf21c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317270"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650791"
 ---
 # <a name="keyboard-interactions"></a>Interações por teclado
 
@@ -278,7 +278,7 @@ Teclas de acesso têm as seguintes características:
 
 A tabela a seguir é uma pequena amostra dos atalhos de teclado usados com frequência. 
 
-| Ação                               | Comando de tecla                                      |
+| Action                               | Comando de tecla                                      |
 |--------------------------------------|--------------------------------------------------|
 | Selecionar tudo                           | Ctrl+A                                           |
 | Selecionar continuamente                  | Shift+Tecla de cursor                                  |
@@ -369,7 +369,7 @@ O Narrador é uma ferramenta de acessibilidade da interface de usuário voltada 
 Algumas das diferenças entre os comportamentos de teclado UWP e aqueles suportados pelo Narrador incluem:
 -   Combinações extras de teclas para a navegação, para elementos da interface de usuário que não são expostos através da navegação por teclado padrão, como o Caps lock + teclas de seta para leitura dos rótulos dos controles.
 -   Navegação para itens desativados. Por padrão, os itens desativados não são expostos através da navegação por teclado padrão.
-    -   Controle "visualizações" para navegação mais rápida com base na granularidade da interface de usuário. Os usuários podem navegar para itens, caracteres, palavras, linhas, parágrafos, links, títulos, tabelas, marcos e sugestões. A navegação por teclado padrão expõe esses objetos como uma lista simples, o que pode tornar a navegação complicada, a menos que você ofereça teclas de atalho.
+-   Controle "visualizações" para navegação mais rápida com base na granularidade da interface de usuário. Os usuários podem navegar para itens, caracteres, palavras, linhas, parágrafos, links, títulos, tabelas, marcos e sugestões. A navegação por teclado padrão expõe esses objetos como uma lista simples, o que pode tornar a navegação complicada, a menos que você ofereça teclas de atalho.
 
 #### <a name="case-study--autosuggestbox-control"></a>Estudo de caso – controle AutoSuggestBox
 
@@ -485,16 +485,21 @@ Na ordem coluna-principal (onde os itens preenchem de cima para baixo, da esquer
 
 Conforme mencionado, você deve tentar garantir que a navegação direcional corresponde à ordem visual dos controles na interface de usuário do seu aplicativo.
 
-Alguns controles, como o menu de contexto, AppBarOverflowMenu e sugestão automática, incluem um menu pop-up que é exibido em um local e a direção relativa ao controle primário (com base no espaço disponível na tela). Por exemplo, quando não há espaço suficiente para que o menu seja aberto em baixo (a direção padrão), ele é aberto em cima. Não há nenhuma garantia de que o menu será aberto sempre na mesma direção.
+Alguns controles (por exemplo, o menu de contexto, o menu de estouro da barra de comandos e o menu de sugestão automática) exibem um menu pop-up em um local e a direção (para baixo por padrão) em relação ao que o controle principal e o espaço disponível na tela. Observe que a direção de abertura pode ser afetada por uma variedade de fatores em tempo de execução.
 
 <table>
   <td><img src="images/keyboard/command-bar-open-down.png" alt="command bar opens down with down arrow key" /></td>
   <td><img src="images/keyboard/command-bar-open-up.png" alt="command bar opens up with down arrow key" /></td>
 </table>
 
-Para esses controles, quando o menu for aberto pela primeira vez (e nenhum item foi selecionado pelo usuário), a seta Para baixo sempre define o foco no primeiro item e a seta Para cima sempre define o foco no último item do menu. Da mesma forma, quando o último item é selecionado e a seta Para baixo é pressionada, o foco é movido para o primeiro item do menu e quando o primeiro item é selecionado e a seta Para cima é pressionada, o foco é movido para o último item do menu.
+Para esses controles, quando o menu é aberto pela primeira vez (e nenhum item foi selecionado pelo usuário), a tecla de seta para baixo sempre define foco para o primeiro item enquanto a tecla de seta para cima sempre define o foco para o último item no menu. 
 
-Você deve tentar imitar esses mesmos comportamentos em seus controles personalizados. Exemplo de código sobre como implementar esse comportamento pode ser encontrado no [navegação de foco por programação](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) documentação.
+Se o último item tem o foco e a tecla de seta para baixo é pressionada, o foco move para o primeiro item no menu. Da mesma forma, se o primeiro item tem o foco e a tecla de seta para cima é pressionada, foco é movido para o último item no menu. Esse comportamento é conhecido como *circulando* e é útil para navegação em menus pop-up que podem ser abertos em direções imprevisíveis.
+
+> [!NOTE]
+> Capacete deve ser evitada nas interfaces do usuário não pop-up em que os usuários podem vir a sentir presas em um loop infinito. 
+
+É recomendável que você emula esses mesmos comportamentos em seus controles personalizados. Exemplo de código sobre como implementar esse comportamento pode ser encontrado no [navegação de foco por programação](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) documentação.
 
 ## <a name="test-your-app"></a>Teste seu aplicativo
 
