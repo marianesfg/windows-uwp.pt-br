@@ -3,16 +3,16 @@ Description: Saiba como usar cabeçalhos para agrupar visualmente as notificaç�
 title: Cabeçalhos de notificação do sistema
 label: Toast headers
 template: detail.hbs
-ms.date: 12/7/2017
+ms.date: 12/07/2017
 ms.topic: article
 keywords: windows 10, uwp, notificação do sistema, cabeçalho, cabeçalhos de notificação do sistema, notificação, notificações de grupo, central de ações
 ms.localizationpriority: medium
-ms.openlocfilehash: 361b161b8cf323596a3b07665819300c78f1dcc5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c7d1e3ce0a012d36bea671f87efb8df3a5d49b5f
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612101"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714082"
 ---
 # <a name="toast-headers"></a>Cabeçalhos de notificação do sistema
 

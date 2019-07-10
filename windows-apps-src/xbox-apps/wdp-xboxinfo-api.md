@@ -1,16 +1,16 @@
 ---
 title: Referência de API de informações do Xbox do Portal do dispositivo
 description: Saiba como acessar as informações de dispositivo do Xbox.
-ms.date: 11/072017
+ms.date: 04/18/2019
 ms.topic: article
 keywords: Windows 10, uwp, xbox, portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 7aa8b11bc439266d36fbb27a7eaa7b07e924a17c
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: c6a8e595be9a0846df2af81ea0b7fc1605f62e5f
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244032"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714080"
 ---
 # <a name="xbox-info-api-reference"></a>Referência de API de informações do Xbox   
 Você pode acessar as informações de dispositivo do Xbox One usando essa API.
@@ -25,7 +25,7 @@ Método      | URI da solicitação
 :------     | :-----
 OBTER | /ext/xbox/info
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 - Nenhuma
 

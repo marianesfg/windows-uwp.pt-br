@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: e6074202a05c80a9dc759cdf81b2c20c7cc17d07
-ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
+ms.openlocfilehash: 8ceb314424ae2611e141ef866a84c08e55b0ba2d
+ms.sourcegitcommit: f9a30bfd1e8eab50d0b1db97dd2f650ce66b5d34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414096"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690883"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>Controles de host UWP XAML em aplicativos da área de trabalho (Ilhas de XAML)
 
@@ -86,10 +86,10 @@ Instale o Windows 10, versão SDK 1903 (ou uma versão posterior). Em seguida, e
 
 #### <a name="option-2-set-the-maxversiontested-value-in-your-assembly-manifest"></a>Opção 2: Defina o valor de maxVersionTested no manifesto do assembly
 
-Se você não quiser empacotar o aplicativo em um pacote MSIX, você pode adicionar um [manifesto do assembly lado a lado](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests) ao seu projeto e adicione o **maxVersionTested** valor para o manifesto para especificar que seu aplicativo é compatível com o Windows 10, versão 1903 ou posterior.
+Se você não quiser empacotar o aplicativo em um pacote MSIX, você pode adicionar um [manifesto do aplicativo](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests) ao seu projeto e adicione o **maxVersionTested** elemento para o manifesto para especificar que seu aplicativo é compatível com o Windows 10, versão 1903 ou posterior.
 
-1. Se você ainda não tiver um assembly do manifesto em seu projeto, adicionar um novo arquivo XML ao seu projeto e nomeie- **manifest**. Para um aplicativo WPF ou Windows Forms, verifique se você também atribuir a **manifesto** propriedade a ser **. manifest** no **aplicativo** página do seu [projeto propriedades](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp?view=vs-2019#resources).
-2. Em seu manifesto do assembly, incluir a **compatibilidade** elemento e os elementos filho mostrados no exemplo a seguir. Substitua os **Id** atributo da **maxVersionTested** elemento com o número de versão de destino do Windows 10 (deve ser Windows 10, versão 1903 ou uma versão posterior). 
+1. Se você ainda não tiver um aplicativo em seu projeto de manifesto, adicionar um novo arquivo XML ao seu projeto e nomeie- **manifest**. Para um aplicativo WPF ou Windows Forms, verifique se você também atribuir a **manifesto** propriedade a ser **. manifest** no **aplicativo** página do seu [projeto propriedades](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp?view=vs-2019#resources).
+2. No manifesto do aplicativo, inclua o **compatibilidade** elemento e os elementos filho mostrados no exemplo a seguir. Substitua os **Id** atributo da **maxVersionTested** elemento com o número de versão de destino do Windows 10 (deve ser Windows 10, versão 1903 ou uma versão posterior).
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -103,6 +103,9 @@ Se você não quiser empacotar o aplicativo em um pacote MSIX, você pode adicio
         </compatibility>
     </assembly>
     ```
+
+> [!NOTE]
+> Quando você adiciona um **maxVersionTested** elemento para um manifesto de aplicativo em um C++ Win32 project (usando um modelo de projeto de aplicativo de área de trabalho do Windows no Visual Studio), talvez você veja o seguinte aviso de compilação em seu projeto: `manifest authoring warning 81010002: Unrecognized Element "maxversiontested" in namespace "urn:schemas-microsoft-com:compatibility.v1"` . Esse aviso não indica que algo está errado em seu projeto, e pode ser ignorado.
 
 ## <a name="feature-roadmap"></a>Roteiro de recursos
 

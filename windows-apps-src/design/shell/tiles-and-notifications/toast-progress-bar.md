@@ -3,16 +3,16 @@ Description: Saiba como usar uma barra de progresso dentro de sua notificação 
 title: Barra de progresso de notificação do sistema e associação de dados
 label: Toast progress bar and data binding
 template: detail.hbs
-ms.date: 12/7/2017
+ms.date: 12/07/2017
 ms.topic: article
 keywords: windows 10, uwp, notificação do sistema, barra de progresso, barra de progresso de notificação do sistema, notificação, associação de dados do sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: f955f2a71fed6444c65f9550e1f4fa3baeabe092
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 742270a4cdc6cbbc9eed0879e30b3e7066722f05
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624821"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714109"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>Barra de progresso de notificação do sistema e associação de dados
 
@@ -32,7 +32,7 @@ A imagem abaixo mostra uma barra de progresso determinada com todas as proprieda
 
 <img alt="Toast with progress bar properties labeled" src="images/toast-progressbar-annotated.png" width="626"/>
 
-| Propriedade | Tipo | Obrigatório | Descrição |
+| Propriedade | type | Obrigatório | Descrição |
 |---|---|---|---|
 | **Título** | sequência ou [BindableString](toast-schema.md#bindablestring) | false | Obtém ou define uma sequência de título opcional. Suporte à associação de dados. |
 | **Valor** | dobro ou [AdaptiveProgressBarValue](toast-schema.md#adaptiveprogressbarvalue) ou [BindableProgressBarValue](toast-schema.md#bindableprogressbarvalue) | false | Obtém ou define o valor da barra de progresso. Suporte à associação de dados. Assume 0 como valor padrão. Pode ser um duplo entre 0,0 e 1,0; `AdaptiveProgressBarValue.Indeterminate` ou `new BindableProgressBarValue("myProgressValue")`. |

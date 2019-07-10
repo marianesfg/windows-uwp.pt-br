@@ -2,16 +2,16 @@
 title: Dados do Registro para controladores de jogo
 description: Saiba mais sobre os dados que você pode adicionar ao Registro do computador para permitir que o controlador seja usado em jogos UWP.
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
-ms.date: 4/8/2019
+ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp, jogos, entrada, registro, personalizado
 ms.localizationpriority: medium
-ms.openlocfilehash: 5578faeb5a35ae909e590741de759c2597b9c7ed
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 30c1f0d8c9fac09d071d158563c964c6a598e073
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244392"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714056"
 ---
 # <a name="registry-data-for-game-controllers"></a>Dados do Registro para controladores de jogo
 
@@ -31,7 +31,7 @@ A tabela a seguir explica os valores esperados no local raiz do dispositivo:
 <table>
     <tr>
         <th>Nome</th>
-        <th>Tipo</th>
+        <th>type</th>
         <th>Necessário?</th>
         <th>Info</th>
     </tr>
@@ -555,7 +555,7 @@ A tabela a seguir lista os valores que são necessários para mapear um botão. 
 
 <table>
     <tr>
-        <th>Origem</th>
+        <th>Source</th>
         <th>Nome do valor</th>
         <th>Tipo de valor</th>
         <th>Necessário?</th>
@@ -635,7 +635,7 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
 
 <table>
     <tr>
-        <th>Origem</th>
+        <th>Source</th>
         <th>Nome do valor</th>
         <th>Tipo de valor</th>
         <th>Necessário?</th>
@@ -806,7 +806,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
 
 <table>
     <tr>
-        <th>Origem</th>
+        <th>Source</th>
         <th>Nome do valor</th>
         <th>Tipo de valor</th>
         <th>Informações do valor</th>
@@ -820,7 +820,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
     <tr>
         <td>SwitchKind</td>
         <td>REG_SZ</td>
-        <td><b>TwoWay</b>, <b>FourWay</b> ou <b>EightWay</b>
+        <td><b>TwoWay</b>, <b>FourWay</b>, ou <b>EightWay</b>
     </tr>
     <tr>
         <td>UpButtonIndex</td>
@@ -1347,6 +1347,6 @@ Windows Registry Editor Version 5.00
 
 ## <a name="see-also"></a>Consulte também
 
-* [Namespace Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)
+* [Windows.Gaming.Input Namespace](https://docs.microsoft.com/uwp/api/windows.gaming.input)
 * [Namespace Windows.Gaming.Input.Custom](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
 * [Arquivos INF](https://docs.microsoft.com/windows-hardware/drivers/install/inf-files)

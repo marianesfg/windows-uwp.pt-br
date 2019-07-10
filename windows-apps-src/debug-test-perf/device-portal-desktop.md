@@ -2,16 +2,16 @@
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Portal de Dispositivos para desktop Windows
 description: Saiba como o Windows Device Portal abre diagnósticos e automação em sua área de trabalho do Windows.
-ms.date: 02/6/2019
+ms.date: 02/06/2019
 ms.topic: article
 keywords: Windows 10, uwp, o portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fe1f2a51199dd12cd1d285c17c5d48c9a25b969
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 00cf497d5d57f5a3cdc5c52ecfeead7885ff7d56
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654521"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713805"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de Dispositivos para desktop Windows
 
@@ -115,9 +115,9 @@ Você pode obter esse erro ao tentar instalar os pacotes de desenvolvedor em uma
 
 1. Navegue até **Configurações > atualização e segurança > Windows Insider Program** e confirme se o **conta de Windows Insider** seção tem suas informações de conta correta. Se você não vir essa seção, selecione **vincular uma conta do Windows Insider**, adicione sua conta de email e confirmar que ele aparece sob o **conta do Windows Insider** título (talvez você precise selecionar **Vincular uma conta do Windows Insider** um segundo tempo para o link, na verdade, uma conta adicionada recentemente).
  
-2. Sob **que tipo de conteúdo você gostaria de receber?**, verifique se **desenvolvimento ativo do Windows** está selecionado.
+2. Sob **que tipo de conteúdo você gostaria de receber?** , verifique se **desenvolvimento ativo do Windows** está selecionado.
  
-3. Sob **o ritmo você deseja obter novas compilações?**, verifique se **Windows Insider Fast** está selecionado.
+3. Sob **o ritmo você deseja obter novas compilações?** , verifique se **Windows Insider Fast** está selecionado.
  
 4. Agora, você poderá instalar o FoDs. Se você confirmou que você está no Windows Insider rápida e ainda não é possível instalar o FoDs, por favor, fornecer comentários e anexar os arquivos de log em **c:\Windows\Logs\CBS**.
 

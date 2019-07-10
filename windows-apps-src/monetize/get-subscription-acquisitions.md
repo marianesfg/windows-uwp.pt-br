@@ -1,15 +1,15 @@
 ---
 description: Use esse método na API de análise de Microsoft Store para obter dados de aquisição para uma assinatura de complemento durante um determinado intervalo de datas e outros filtros opcionais.
 title: Obter aquisições de complemento de assinatura
-ms.date: 01/25/18
+ms.date: 01/25/2018
 ms.topic: article
 keywords: Windows 10, uwp, serviços de Store, API, as assinaturas de análise da Microsoft Store
-ms.openlocfilehash: e33a3ded219fb4d223137b40ebe871f66589addf
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c77cab76aa070e21288e93e5264e70325bb4d616
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594771"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714095"
 ---
 # <a name="get-subscription-add-on-acquisitions"></a>Obter aquisições de complemento de assinatura
 
@@ -29,19 +29,19 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Método | URI da solicitação                                                                |
 |--------|----------------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/subscriptions``` |
+| OBTER    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/subscriptions``` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
 
-| Cabeçalho        | Tipo   | Descrição          |
+| Cabeçalho        | type   | Descrição          |
 |---------------|--------|--------------|
-| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
+| Authorization | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
-| Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
+| Parâmetro        | type   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
 | applicationId | cadeia de caracteres | O [Store ID](in-app-purchases-and-trials.md#store-ids) do aplicativo para o qual você deseja recuperar os dados de aquisição de complemento de assinatura. |  Sim  |
 | subscriptionProductId  | cadeia de caracteres | O [Store ID](in-app-purchases-and-trials.md#store-ids) do complemento de assinatura para o qual você deseja recuperar os dados de aquisição. Se você não especificar esse valor, esse método retorna dados de aquisição para todos os complementos de assinatura para o aplicativo especificado.  | Não  |
@@ -49,10 +49,10 @@ Para usar este método, primeiro você precisa do seguinte:
 | endDate | date | Data final no intervalo de datas de dados de aquisição de complemento de assinatura a recuperar. O padrão é a data atual. |  Não  |
 | top | int | O número de linhas de dados a serem retornadas na solicitação. O valor máximo e o valor padrão se não especificado é 100. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
 | skip | int | O número de linhas a serem ignoradas na consulta. Use este parâmetro para percorrer grandes conjuntos de dados. Por exemplo, top=100 e skip=0 recuperam as primeiras 100 linhas de dados, top=100 e skip=100 recuperam as próximas 100 linhas de dados e assim por diante. |  Não  |
-| filter | cadeia de caracteres  | Uma ou mais instruções que filtram o corpo da resposta. Cada instrução pode usar os operadores **eq** ou **ne**, e as instruções podem ser combinadas usando **and** ou **or**. Você pode especificar as seguintes cadeias de caracteres nas instruções de filtro (esses correspondem aos [valores no corpo da resposta](#subscription-acquisition-values)): <ul><li><strong>Data</strong></li><li><strong>subscriptionProductName</strong></li><li><strong>ApplicationName</strong></li><li><strong>SkuId</strong></li><li><strong>mercado</strong></li><li><strong>deviceType</strong></li></ul><p>Aqui está um exemplo *filtro* parâmetro: <em>filtro = Data eq ' 2017-07-08'</em>.</p> | Não   |
+| filter | cadeia de caracteres  | Uma ou mais instruções que filtram o corpo da resposta. Cada instrução pode usar os operadores **eq** ou **ne**, e as instruções podem ser combinadas usando **and** ou **or**. Você pode especificar as seguintes cadeias de caracteres nas instruções de filtro (esses correspondem aos [valores no corpo da resposta](#subscription-acquisition-values)): <ul><li><strong>date</strong></li><li><strong>subscriptionProductName</strong></li><li><strong>applicationName</strong></li><li><strong>skuId</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li></ul><p>Aqui está um exemplo *filtro* parâmetro: <em>filtro = Data eq ' 2017-07-08'</em>.</p> | Não   |
 | aggregationLevel | cadeia de caracteres | Especifica o intervalo de tempo para o qual recuperar dados agregados. Pode ser uma das seguintes cadeias de caracteres: <strong>day</strong>, <strong>week</strong> ou <strong>month</strong>. Se não for especificado, o padrão será <strong>day</strong>. | Não |
-| orderby | cadeia de caracteres | Uma instrução que ordena o resultado de valores de dados para a aquisição de complemento cada assinatura. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser uma das seguintes cadeias de caracteres:<ul><li><strong>Data</strong></li><li><strong>subscriptionProductName</strong></li><li><strong>ApplicationName</strong></li><li><strong>SkuId</strong></li><li><strong>mercado</strong></li><li><strong>deviceType</strong></li></ul><p>O parâmetro <em>order</em> é opcional, e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p><p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p> |  Não  |
-| groupby | cadeia de caracteres | Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir:<ul><li><strong>Data</strong></li><li><strong>subscriptionProductName</strong></li><li><strong>ApplicationName</strong></li><li><strong>SkuId</strong></li><li><strong>mercado</strong></li><li><strong>deviceType</strong></li></ul><p>O parâmetro <em>groupby</em> pode ser usado com o parâmetro <em>aggregationLevel</em>. Por exemplo: <em>groupby = mercado&amp;aggregationLevel = semana</em></p> |  Não  |
+| orderby | cadeia de caracteres | Uma instrução que ordena o resultado de valores de dados para a aquisição de complemento cada assinatura. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser uma das seguintes cadeias de caracteres:<ul><li><strong>date</strong></li><li><strong>subscriptionProductName</strong></li><li><strong>applicationName</strong></li><li><strong>skuId</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li></ul><p>O parâmetro <em>order</em> é opcional, e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p><p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p> |  Não  |
+| groupby | cadeia de caracteres | Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir:<ul><li><strong>date</strong></li><li><strong>subscriptionProductName</strong></li><li><strong>applicationName</strong></li><li><strong>skuId</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li></ul><p>O parâmetro <em>groupby</em> pode ser usado com o parâmetro <em>aggregationLevel</em>. Por exemplo: <em>groupby = mercado&amp;aggregationLevel = semana</em></p> |  Não  |
 
 
 ### <a name="request-example"></a>Exemplo de solicitação
@@ -69,9 +69,9 @@ Authorization: Bearer <your access token>
 
 ### <a name="response-body"></a>Corpo da resposta
 
-| Valor      | Tipo   | Descrição         |
+| Valor      | type   | Descrição         |
 |------------|--------|------------------|
-| Valor      | matriz  | Uma matriz de objetos que contêm dados de assinatura de agregação de aquisição de complemento. Para obter mais informações sobre os dados em cada objeto, consulte a [valores de aquisição da assinatura](#subscription-acquisition-values) seção abaixo.             |
+| Valor      | array  | Uma matriz de objetos que contêm dados de assinatura de agregação de aquisição de complemento. Para obter mais informações sobre os dados em cada objeto, consulte a [valores de aquisição da assinatura](#subscription-acquisition-values) seção abaixo.             |
 | @nextLink  | cadeia de caracteres | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se a **superior** parâmetro da solicitação for definido como 100, mas há mais de 100 linhas de dados de aquisição de complemento de assinatura para a consulta. |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.       |
 
@@ -82,7 +82,7 @@ Authorization: Bearer <your access token>
 
 Os elementos na matriz *Value* contêm os valores a seguir.
 
-| Valor               | Tipo    | Descrição        |
+| Valor               | type    | Descrição        |
 |---------------------|---------|---------------------|
 | date                | cadeia de caracteres  | A primeira data no intervalo de datas dos dados de aquisição. Se a solicitação especificou um único dia, o valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas. |
 | subscriptionProductId      | cadeia de caracteres  | O [Store ID](in-app-purchases-and-trials.md#store-ids) do complemento de assinatura para o qual você está recuperando dados de aquisição.    |
@@ -93,21 +93,21 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | deviceType          | cadeia de caracteres  |  Uma das sequências a seguir que especifica o tipo de dispositivo que concluiu a aquisição:<ul><li><strong>PC</strong></li><li><strong>Telefone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconhecido</strong></li></ul>       |
 | market           | cadeia de caracteres  | O código de país ISO 3166 do mercado onde ocorreu a aquisição.     |
 | currencyCode         | cadeia de caracteres  | O código de moeda no formato ISO 4217 para vendas brutas antes dos impostos.       |
-| grossSalesBeforeTax           | número inteiro  | As vendas brutas na moeda local especificada pelo *currencyCode* valor.     |
-| totalActiveCount             | número inteiro  | O número de assinaturas ativas total durante o período de tempo especificado. Isso é equivalente à soma do *goodStandingActiveCount*, *pendingGraceActiveCount*, *graceActiveCount*, e *lockedActiveCount* valores.  |
-| totalChurnCount              | número inteiro  | A contagem total de assinaturas que foram desativadas durante o período de tempo especificado. Isso é equivalente à soma do *billingChurnCount*, *nonRenewalChurnCount*, *refundChurnCount*, *chargebackChurnCount*, *earlyChurnCount*, e *otherChurnCount* valores.   |
-| newCount            | número inteiro  | O número de novas aquisições de assinatura durante o período de tempo especificado, incluindo avaliações.    |
-| renewCount     | número inteiro  | O número de renovações de assinaturas durante o período de tempo especificado, incluindo renovações iniciada pelo usuário e renovações automáticas.        |
-| goodStandingActiveCount | número inteiro | O número de assinaturas que estavam ativas durante o período de tempo especificado e em que a data de validade é > = a *endDate* valor para a consulta.    |
-| pendingGraceActiveCount | número inteiro | O número de assinaturas que estavam ativas durante o período de tempo especificado, mas teve uma falha de cobrança e em que a data de validade da assinatura é > = a *endDate* valor para a consulta.     |
-| graceActiveCount | número inteiro | O número de assinaturas que estavam ativas durante o período de tempo especificado, mas teve uma falha de cobrança, e, em que:<ul><li>É a data de validade da assinatura < a *endDate* valor para a consulta.</li><li>O fim do período de carência é > = a *endDate* valor.</li></ul>        |
-| lockedActiveCount | número inteiro | O número de assinaturas que estavam em *dunning* (ou seja, a assinatura está prestes a expirar e Microsoft está tentando adquirir fundos para renovar automaticamente a assinatura) especificado durante o tempo e do período em que:<ul><li>É a data de validade da assinatura < a *endDate* valor para a consulta.</li><li>O fim do período de carência é < = a *endDate* valor.</li></ul>        |
-| billingChurnCount | número inteiro | O número de assinaturas que foram desativadas durante o período de tempo especificado devido a uma falha ao processar uma tarifa de cobrança e em que as assinaturas foram previamente no dunning.        |
-| nonRenewalChurnCount | número inteiro | O número de assinaturas que foram desativadas durante o período de tempo especificado, porque eles não foram renovados.        |
-| refundChurnCount | número inteiro | O número de assinaturas que foram desativadas durante o período de tempo especificado, porque eles foram reembolsados.        |
-| chargebackChurnCount | número inteiro | O número de assinaturas que foram desativadas durante o período de tempo especificado devido a um estorno.        |
-| earlyChurnCount | número inteiro | O número de assinaturas que foram desativadas durante o período de tempo especificado enquanto eram válidas.        |
-| otherChurnCount | número inteiro | O número de assinaturas que foram desativadas durante o período de tempo especificado por outros motivos.        |
+| grossSalesBeforeTax           | integer  | As vendas brutas na moeda local especificada pelo *currencyCode* valor.     |
+| totalActiveCount             | integer  | O número de assinaturas ativas total durante o período de tempo especificado. Isso é equivalente à soma do *goodStandingActiveCount*, *pendingGraceActiveCount*, *graceActiveCount*, e *lockedActiveCount* valores.  |
+| totalChurnCount              | integer  | A contagem total de assinaturas que foram desativadas durante o período de tempo especificado. Isso é equivalente à soma do *billingChurnCount*, *nonRenewalChurnCount*, *refundChurnCount*, *chargebackChurnCount*, *earlyChurnCount*, e *otherChurnCount* valores.   |
+| newCount            | integer  | O número de novas aquisições de assinatura durante o período de tempo especificado, incluindo avaliações.    |
+| renewCount     | integer  | O número de renovações de assinaturas durante o período de tempo especificado, incluindo renovações iniciada pelo usuário e renovações automáticas.        |
+| goodStandingActiveCount | integer | O número de assinaturas que estavam ativas durante o período de tempo especificado e em que a data de validade é > = a *endDate* valor para a consulta.    |
+| pendingGraceActiveCount | integer | O número de assinaturas que estavam ativas durante o período de tempo especificado, mas teve uma falha de cobrança e em que a data de validade da assinatura é > = a *endDate* valor para a consulta.     |
+| graceActiveCount | integer | O número de assinaturas que estavam ativas durante o período de tempo especificado, mas teve uma falha de cobrança, e, em que:<ul><li>É a data de validade da assinatura < a *endDate* valor para a consulta.</li><li>O fim do período de carência é > = a *endDate* valor.</li></ul>        |
+| lockedActiveCount | integer | O número de assinaturas que estavam em *dunning* (ou seja, a assinatura está prestes a expirar e Microsoft está tentando adquirir fundos para renovar automaticamente a assinatura) especificado durante o tempo e do período em que:<ul><li>É a data de validade da assinatura < a *endDate* valor para a consulta.</li><li>O fim do período de carência é < = a *endDate* valor.</li></ul>        |
+| billingChurnCount | integer | O número de assinaturas que foram desativadas durante o período de tempo especificado devido a uma falha ao processar uma tarifa de cobrança e em que as assinaturas foram previamente no dunning.        |
+| nonRenewalChurnCount | integer | O número de assinaturas que foram desativadas durante o período de tempo especificado, porque eles não foram renovados.        |
+| refundChurnCount | integer | O número de assinaturas que foram desativadas durante o período de tempo especificado, porque eles foram reembolsados.        |
+| chargebackChurnCount | integer | O número de assinaturas que foram desativadas durante o período de tempo especificado devido a um estorno.        |
+| earlyChurnCount | integer | O número de assinaturas que foram desativadas durante o período de tempo especificado enquanto eram válidas.        |
+| otherChurnCount | integer | O número de assinaturas que foram desativadas durante o período de tempo especificado por outros motivos.        |
 
 
 ### <a name="response-example"></a>Exemplo de resposta
